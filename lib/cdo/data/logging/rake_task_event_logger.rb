@@ -1,13 +1,14 @@
 require lib_dir 'cdo/data/logging/timed_task_with_logging'
 class RakeTaskEventLogger
   STUDY_TABLE = 'rake_performance'.freeze
-  CURRENT_LOGGING_VERSION = 'v0'.freeze
+  CURRENT_LOGGING_VERSION = 'v1'.freeze
 
   def initialize(rake_task)
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    @enabled = !([:development, :test].include?(rack_env))
+    @enabled_firehose = !([:development, :test].include?(rack_env))
+    @enable_cloudwatch = true
   end
 
   def start_task_logging
@@ -18,16 +19,16 @@ class RakeTaskEventLogger
 
   def exception_task_logging(exception)
     @end_time = Time.new
-    duration = @end_time.to_i - @start_time.to_i
+    duration_ms = ((@end_time - @start_time).to_f * 1000).to_i
     event = 'exception'.freeze
-    log_event(event, duration, exception)
+    log_event(event, duration_ms, exception)
   end
 
   def end_task_logging
     @end_time = Time.new
-    duration = @end_time.to_i - @start_time.to_i
+    duration_ms = ((@end_time - @start_time).to_f * 1000).to_i
     event = 'end'.freeze
-    log_event(event, duration)
+    log_event(event, duration_ms)
   end
 
   def task_chain
@@ -35,13 +36,13 @@ class RakeTaskEventLogger
     unless pre_requisites_split.empty?
       return pre_requisites_split[1]
     end
-    return nil
   end
 
-  def log_event(event, duration = nil, exception = nil)
-    if @enabled == false
+  def log_firehose(event, duration_ms, exception)
+    if @enabled_firehose == false
       return
     end
+
     begin
       FirehoseClient.instance.put_record(
         :analysis,
@@ -52,7 +53,7 @@ class RakeTaskEventLogger
             task_name: @rake_task.name,
             pid: Process.pid,
             invocation_chain: task_chain,
-            duration: duration,
+            duration_ms: duration_ms,
             exception: exception&.to_s,
             exception_backtrace: exception&.backtrace,
             version: CURRENT_LOGGING_VERSION,
@@ -62,11 +63,56 @@ class RakeTaskEventLogger
     rescue => e
       Honeybadger.notify(
         e,
-        error_message: "Failed to log rake task information",
+        error_message: "Failed to log rake task information in firehose",
         context: {
           event: event
         }
       )
     end
+  end
+
+  def log_cloud_formation(event, duration_ms, exception = nil)
+    unless @enable_cloudwatch
+      return
+    end
+
+    puts "about to log metric"
+    ChatClient.log "about to start logging", color: 'green'
+    begin
+      metrics = {
+        metric_name: event,
+        value: duration_ms.nil? ? 1 : duration_ms,
+        dimensions: {name: "Environment",
+                     task_name: @rake_task.name,
+                     pid: Process.pid,
+                     invocation_chain: task_chain,
+                     duration_ms: duration_ms,
+                     exception: exception&.to_s,
+                     exception_backtrace: exception&.backtrace,
+                     version: CURRENT_LOGGING_VERSION}
+      }
+      Cdo::Metrics.push(STUDY_TABLE, metrics)
+      ChatClient.log 'Metrics logged', color: 'green'
+      ChatClient.log event, color: 'green'
+      ChatClient.log (duration_ms.nil? ? 1 : duration_ms), color: 'green'
+      puts "Metrics logged"
+      puts event
+      puts duration_ms.nil? ? 1 : duration_ms
+    rescue => e
+      puts "Exception"
+      puts e
+      Honeybadger.notify(
+        e,
+        error_message: "Failed to log rake task information in cloudwatch",
+        context: {
+          event: event
+        }
+      )
+    end
+  end
+
+  def log_event(event, duration = nil, exception = nil)
+    log_firehose(event, duration, exception)
+    log_cloud_formation(event, duration, exception)
   end
 end
