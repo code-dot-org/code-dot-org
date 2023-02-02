@@ -2,6 +2,18 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Parameters:
+  BaseDomainName:
+    Type: String
+    Default: code.org
+    Description: Base domain name.
+  DashboardSubDomainName:
+    Type: String
+    Default: !Sub "<%=rack_env?(:production) ? 'studio' : 'studio-${AWS::StackName}' %>"
+    Description: Sub domain name for learning platform ("Dashboard").
+  PegasusSubDomainName:
+    Type: String
+    Default: !Sub "<%=rack_env?(:production) ? '' : '${AWS::StackName}' %>"
+    Description: Sub domain name for corporate web site ("Pegasus").
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>
@@ -31,6 +43,8 @@ Parameters:
   ConsoleInstanceType:
     Type: String
 <% end -%>
+Conditions:
+  IsProductionCondition: !And [!Equals [!Ref BaseDomainName, "code.org"], !Equals [!Ref DashboardSubDomainName, "studio"]]
 Resources:
   # Stack-specific IAM permissions applied to both daemon and frontends.
   CDOPolicy:
