@@ -169,7 +169,7 @@ module SignUpTracking
     )
   end
 
-  def self.log_gender_input_type_account_created(session, gender, gender_input_type, locale, flow, user_type)
+  def self.log_gender_input_type_account_created(session, gender, gender_input_type, locale, flow, user)
     # Limit the gender to 100 characters, this should be sufficient for all languages.
     gender = gender&.truncate(100, omission: '')
     FirehoseClient.instance.put_record(
@@ -184,7 +184,8 @@ module SignUpTracking
           gender: gender,
           locale: locale,
           flow: flow,
-          user_type: user_type
+          user_type: user&.user_type,
+          age: user&.age
         }.to_json
       }
     )
