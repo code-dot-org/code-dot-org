@@ -119,18 +119,11 @@ class Hamburger
           title: I18n.t("#{loc_prefix}professional_learning"),
           url: CDO.studio_url("/my-professional-learning"),
         }
+      end
 
-        teacher_entries << {
-          title: I18n.t("#{loc_prefix}incubator"),
-          url: CDO.studio_url("/incubator"),
-        }
-      elsif options[:user_type] == "student"
-        student_entries << {
-          title: I18n.t("#{loc_prefix}incubator"),
-          url: CDO.studio_url("/incubator"),
-        }
-      else
-        signed_out_entries << {
+      entries = [teacher_entries, student_entries, signed_out_entries]
+      entries.each do |entry|
+        entry << {
           title: I18n.t("#{loc_prefix}incubator"),
           url: CDO.studio_url("/incubator"),
         }
