@@ -157,7 +157,7 @@ module SignUpTracking
       :analysis,
       {
         study: 'gender-input-type',
-        study_group: 'v1',
+        study_group: 'v2',
         event: 'input_seen',
         data_string: session[:gender_input_uid],
         data_json: {
@@ -176,7 +176,7 @@ module SignUpTracking
       :analysis,
       {
         study: 'gender-input-type',
-        study_group: 'v1',
+        study_group: 'v2',
         event: 'account_created',
         data_string: session[:gender_input_uid],
         data_json: {
