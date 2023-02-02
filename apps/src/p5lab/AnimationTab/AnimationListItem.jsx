@@ -12,7 +12,7 @@ import {
   setAnimationLooping,
   isNameUnique
 } from '../redux/animationList';
-import {selectAnimation} from '../redux/animationTab';
+import {selectAnimation, selectBackground} from '../redux/animationTab';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 import _ from 'lodash';
@@ -29,8 +29,10 @@ class AnimationListItem extends React.Component {
     animationList: shapes.AnimationList.isRequired,
     columnWidth: PropTypes.number.isRequired,
     cloneAnimation: PropTypes.func.isRequired,
+    currentAnimationType: PropTypes.string.isRequired,
     deleteAnimation: PropTypes.func.isRequired,
     selectAnimation: PropTypes.func.isRequired,
+    selectBackground: PropTypes.func.isRequired,
     setAnimationName: PropTypes.func.isRequired,
     setAnimationLooping: PropTypes.func.isRequired,
     setAnimationFrameDelay: PropTypes.func.isRequired,
@@ -80,15 +82,28 @@ class AnimationListItem extends React.Component {
     }, 200);
   }
 
-  onSelect = () => this.props.selectAnimation(this.props.animationKey);
+  onSelect = () => {
+    if (this.props.currentAnimationType === 'background') {
+      this.props.selectBackground(this.props.animationKey);
+    } else {
+      this.props.selectAnimation(this.props.animationKey);
+    }
+  };
 
   cloneAnimation = evt => {
-    this.props.cloneAnimation(this.props.animationKey);
+    this.props.cloneAnimation(
+      this.props.animationKey,
+      this.props.currentAnimationType
+    );
     evt.stopPropagation();
   };
 
   deleteAnimation = () => {
-    this.props.deleteAnimation(this.props.animationKey, this.props.isSpriteLab);
+    this.props.deleteAnimation(
+      this.props.animationKey,
+      this.props.isSpriteLab,
+      this.props.currentAnimationType
+    );
   };
 
   setAnimationLooping = looping => {
@@ -292,14 +307,17 @@ export default connect(
   }),
   dispatch => {
     return {
-      cloneAnimation(animationKey) {
-        dispatch(cloneAnimation(animationKey));
+      cloneAnimation(animationKey, type) {
+        dispatch(cloneAnimation(animationKey, type));
       },
-      deleteAnimation(animationKey, isSpriteLab) {
-        dispatch(deleteAnimation(animationKey, isSpriteLab));
+      deleteAnimation(animationKey, isSpriteLab, type) {
+        dispatch(deleteAnimation(animationKey, isSpriteLab, type));
       },
       selectAnimation(animationKey) {
         dispatch(selectAnimation(animationKey));
+      },
+      selectBackground(animationKey) {
+        dispatch(selectBackground(animationKey));
       },
       setAnimationName(animationKey, newName) {
         dispatch(setAnimationName(animationKey, newName));

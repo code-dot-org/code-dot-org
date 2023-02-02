@@ -30,6 +30,7 @@ class PiskelEditor extends React.Component {
     // Provided by Redux
     animationList: shapes.AnimationList.isRequired,
     currentAnimations: shapes.CurrentAnimations,
+    currentAnimationType: PropTypes.string.isRequired,
     channelId: PropTypes.string.isRequired,
     editAnimation: PropTypes.func.isRequired,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
@@ -81,21 +82,23 @@ class PiskelEditor extends React.Component {
 
   UNSAFE_componentWillReceiveProps(newProps) {
     if (
-      newProps.currentAnimations.default !==
-      this.props.currentAnimations.default
+      newProps.currentAnimations[newProps.currentAnimationType] !==
+      this.props.currentAnimations[this.props.currentAnimationType]
     ) {
       this.loadSelectedAnimation_(newProps);
     }
     if (
       newProps.pendingFrames &&
-      newProps.currentAnimations.default === newProps.pendingFrames.key
+      newProps.currentAnimations[newProps.currentAnimationType] ===
+        newProps.pendingFrames.key
     ) {
       this.sendPendingFramesToPiskel(newProps.pendingFrames);
     }
   }
 
   sendPendingFramesToPiskel(animationProps) {
-    const key = this.props.currentAnimations.default;
+    const {currentAnimations, currentAnimationType} = this.props;
+    const key = currentAnimations[currentAnimationType];
     if (!animationProps) {
       throw new Error('No props present for animation with key ' + key);
     }
@@ -115,7 +118,7 @@ class PiskelEditor extends React.Component {
           this.props.removePendingFrames();
 
           // If the selected animation changed out from under us, load again.
-          if (this.props.currentAnimations.default !== key) {
+          if (currentAnimations[currentAnimationType] !== key) {
             this.loadSelectedAnimation_(this.props);
           }
         }
@@ -124,7 +127,7 @@ class PiskelEditor extends React.Component {
   }
 
   loadSelectedAnimation_(props) {
-    const key = props.currentAnimations.default;
+    const key = props.currentAnimations[props.currentAnimationType];
     if (!this.isPiskelReady_) {
       return;
     }
@@ -178,7 +181,10 @@ class PiskelEditor extends React.Component {
           this.isLoadingAnimation_ = false;
 
           // If the selected animation changed out from under us, load again.
-          if (this.props.currentAnimations.default !== key) {
+          if (
+            this.props.currentAnimations[this.props.currentAnimationType] !==
+            key
+          ) {
             this.loadSelectedAnimation_(this.props);
           }
         }
