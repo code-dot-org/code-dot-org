@@ -65,7 +65,7 @@ function TeacherDashboard({
     );
     if (newTab === 'progress') {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-        sectionId: this.props.sectionId
+        sectionId: sectionId
       });
     }
   });
