@@ -185,12 +185,14 @@ module SignUpTracking
           locale: locale,
           flow: flow,
           user_type: user&.user_type,
-          age: user&.age
+          age: user&.age,
+          user_id: user&.id
         }.to_json
       }
     )
     # This is the last event for creating an account, so delete the tracking information.
     session.delete(:gender_input_uid)
     session.delete(:gender_input_uid_expiration)
+    session.delete(:gender_input_type)
   end
 end
