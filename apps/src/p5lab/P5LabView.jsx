@@ -187,23 +187,19 @@ class P5LabView extends React.Component {
       // Navigate to the backgrounds animation category.
       defaultQuery.categoryQuery = 'backgrounds';
     }
+    const isBackgroundMode = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     return allowAnimationMode &&
       (interfaceMode === P5LabInterfaceMode.ANIMATION ||
         interfaceMode === P5LabInterfaceMode.BACKGROUND) ? (
       <AnimationTab
         channelId={this.getChannelId()}
+        currentAnimationType={isBackgroundMode ? 'background' : 'default'}
         defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.shouldHideAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
-        hideBackgrounds={
-          this.props.isBlockly &&
-          interfaceMode !== P5LabInterfaceMode.BACKGROUND
-        }
-        hideCostumes={
-          this.props.isBlockly &&
-          interfaceMode === P5LabInterfaceMode.BACKGROUND
-        }
+        hideBackgrounds={this.props.isBlockly && !isBackgroundMode}
+        hideCostumes={isBackgroundMode}
         labType={this.props.labType}
         pickerType={
           this.props.isBackground

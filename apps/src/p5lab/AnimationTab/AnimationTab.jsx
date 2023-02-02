@@ -20,6 +20,7 @@ import experiments from '@cdo/apps/util/experiments';
 class AnimationTab extends React.Component {
   static propTypes = {
     channelId: PropTypes.string.isRequired,
+    currentAnimationType: PropTypes.string.isRequired,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
@@ -44,6 +45,7 @@ class AnimationTab extends React.Component {
     const {
       channelId,
       columnSizes,
+      currentAnimationType,
       defaultQuery,
       hideAnimationNames,
       hideBackgrounds,
@@ -56,7 +58,7 @@ class AnimationTab extends React.Component {
       currentAnimations
     } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
-    if (currentAnimations.default) {
+    if (currentAnimations[currentAnimationType]) {
       hidePiskelStyle = {visibility: 'hidden'};
     }
     const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
@@ -74,13 +76,17 @@ class AnimationTab extends React.Component {
           <div style={animationsColumnStyle}>
             <P5LabVisualizationHeader labType={labType} />
             <AnimationList
+              currentAnimationType={currentAnimationType}
               hideBackgrounds={hideBackgrounds}
               hideCostumes={hideCostumes}
               labType={labType}
             />
           </div>
           <div style={styles.editorColumn}>
-            <PiskelEditor style={styles.piskelEl} />
+            <PiskelEditor
+              currentAnimationType={currentAnimationType}
+              style={styles.piskelEl}
+            />
             <div style={{...hidePiskelStyle, ...styles.emptyPiskelEl}}>
               <div style={styles.helpText}> {i18n.addNewAnimation()} </div>
             </div>

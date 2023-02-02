@@ -17,6 +17,7 @@ class AnimationList extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
     currentAnimations: shapes.CurrentAnimations,
+    currentAnimationType: PropTypes.string.isRequired,
     onNewItemClick: PropTypes.func.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
@@ -32,7 +33,8 @@ class AnimationList extends React.Component {
       labType,
       onNewItemClick,
       spriteLab,
-      currentAnimations
+      currentAnimations,
+      currentAnimationType
     } = this.props;
     let newAnimationLabel;
     if (spriteLab) {
@@ -67,7 +69,11 @@ class AnimationList extends React.Component {
             key={key}
             animationKey={key}
             animationProps={animationList.propsByKey[key]}
-            isSelected={key === currentAnimations.default}
+            currentAnimationType={currentAnimationType}
+            isSelected={
+              key === currentAnimations.default ||
+              key === currentAnimations.background
+            }
             animationList={animationList}
             labType={labType}
           />
