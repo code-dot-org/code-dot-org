@@ -250,8 +250,8 @@ export const assignToSection = (
     // Only log if the assignment is changing.
     // We need an OR here because unitId will be null for standalone units
     if (
-      section.courseOfferingId !== courseOfferingId ||
-      section.unitId !== unitId
+      (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||
+      (unitId && section.unitId !== unitId)
     ) {
       analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
         sectionName: section.name,
@@ -287,20 +287,7 @@ export const unassignSection = (sectionId, location) => (
   getState
 ) => {
   dispatch(beginEditingSection(sectionId, true));
-  const {initialCourseId, initialUnitId, sections} = getState().teacherSections;
-  const section = sections[sectionId];
-  // Only log if the section had something assigned
-  if (!!section.courseOfferingId) {
-    analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
-      sectionName: section.name,
-      sectionId,
-      sectionLoginType: section.loginType,
-      previousUnitId: section.unitId,
-      previousCourseId: section.courseOfferingId,
-      newUnitId: null,
-      newCourseId: null
-    });
-  }
+  const {initialCourseId, initialUnitId} = getState().teacherSections;
 
   dispatch(
     editSectionProperties({
