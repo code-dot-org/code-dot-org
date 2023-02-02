@@ -24,6 +24,7 @@ import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {START_BLOCKS, START_SOURCES} from '../../constants';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -51,11 +52,12 @@ export function setupApp(appOptions) {
     }
   }
 
-  // if this level has a template level and we are in edit mode, the workspace should
-  // be read only. The start blocks for a level with a project template are the start blocks
-  // of the template.
+  // if this level has a template level and we are in edit start blocks/sources mode,
+  // the workspace should be read only. The start blocks or sources for a level with a project
+  // template are the start blocks or sources of the template.
   if (
-    appOptions.level.editBlocks &&
+    (appOptions.level.editBlocks === START_BLOCKS ||
+      appOptions.level.editBlocks === START_SOURCES) &&
     appOptions.level.projectTemplateLevelName
   ) {
     appOptions.readonlyWorkspace = true;

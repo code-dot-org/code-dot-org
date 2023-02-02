@@ -193,3 +193,4 @@ export const BlocklyVersion = {
 };
 
 export const START_BLOCKS = 'start_blocks';
+export const START_SOURCES = 'start_sources';
