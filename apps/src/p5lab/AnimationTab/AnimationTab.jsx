@@ -13,6 +13,7 @@ import * as shapes from '../shapes';
 import i18n from '@cdo/locale';
 import {P5LabInterfaceMode, P5LabType} from '../constants.js';
 import experiments from '@cdo/apps/util/experiments';
+import {CURRENT_ANIMATION_TYPE} from '../constants';
 
 /**
  * Root of the animation editor interface mode for GameLab
@@ -20,7 +21,8 @@ import experiments from '@cdo/apps/util/experiments';
 class AnimationTab extends React.Component {
   static propTypes = {
     channelId: PropTypes.string.isRequired,
-    currentAnimationType: PropTypes.string.isRequired,
+    currentAnimationType: PropTypes.oneOf(Object.values(CURRENT_ANIMATION_TYPE))
+      .isRequired,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,

@@ -16,6 +16,7 @@ import {selectAnimation, selectBackground} from '../redux/animationTab';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 import _ from 'lodash';
+import {CURRENT_ANIMATION_TYPE} from '../constants';
 
 /**
  * A single list item representing an animation.  Displays an animated
@@ -29,7 +30,8 @@ class AnimationListItem extends React.Component {
     animationList: shapes.AnimationList.isRequired,
     columnWidth: PropTypes.number.isRequired,
     cloneAnimation: PropTypes.func.isRequired,
-    currentAnimationType: PropTypes.string.isRequired,
+    currentAnimationType: PropTypes.oneOf(Object.values(CURRENT_ANIMATION_TYPE))
+      .isRequired,
     deleteAnimation: PropTypes.func.isRequired,
     selectAnimation: PropTypes.func.isRequired,
     selectBackground: PropTypes.func.isRequired,
