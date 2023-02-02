@@ -84,6 +84,7 @@ class RakeTaskEventLogger
         value: duration_ms.nil? ? 1 : duration_ms,
         dimensions: {name: "Environment",
                      task_name: @rake_task.name,
+                     file_name: __FILE__,
                      pid: Process.pid,
                      invocation_chain: task_chain,
                      duration_ms: duration_ms,
@@ -96,6 +97,7 @@ class RakeTaskEventLogger
       ChatClient.log event, color: 'green'
       ChatClient.log @rake_task.name, color: 'green'
       ChatClient.log (duration_ms.nil? ? 1 : duration_ms), color: 'green'
+      ChatClient.log task_chain
 
       puts "Metrics logged"
       puts event
