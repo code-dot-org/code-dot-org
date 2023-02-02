@@ -32,11 +32,8 @@ class RakeTaskEventLogger
   end
 
   def task_chain
-    pre_requisites_split = @rake_task.inspect.split('=>')
-    unless pre_requisites_split.empty?
-      return pre_requisites_split
-      #.trim('[', '').trim(']', '').trim('>', '').strip
-    end
+    #pre_requisites_split = @rake_task.inspect.split('=>')
+    @rake_task.prerequisites.join(', ')
   end
 
   def log_firehose(event, duration_ms, exception)
@@ -84,7 +81,9 @@ class RakeTaskEventLogger
         metric_name: event,
         value: duration_ms.nil? ? 1 : duration_ms,
         dimensions: {name: "Environment",
+                     environment: rack_env,
                      task_name: @rake_task.name,
+                     file_name: __FILE__,
                      pid: Process.pid,
                      invocation_chain: task_chain,
                      duration_ms: duration_ms,
@@ -97,6 +96,8 @@ class RakeTaskEventLogger
       ChatClient.log event, color: 'green'
       ChatClient.log @rake_task.name, color: 'green'
       ChatClient.log (duration_ms.nil? ? 1 : duration_ms), color: 'green'
+      ChatClient.log __FILE__, color: 'green'
+      ChatClient.log rack_env, color: 'green'
       ChatClient.log task_chain
 
       puts "Metrics logged"
