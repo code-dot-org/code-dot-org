@@ -428,3 +428,11 @@ p {
   // Overwrite global full-resource-block styling for phase1 styles
   color: $neutral_dark !important;
 }
+
+.featured-project {
+  > a {
+    > div {
+      background-color: $neutral_light;
+    }
+  }
+}
