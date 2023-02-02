@@ -1458,9 +1458,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     assert_equal 0, SurveyResult.where(user_id: teacher_a.id).count
     assert_equal 1, SurveyResult.where(user_id: teacher_b.id).count
-    refute SurveyResult.where(id: survey_result_a.id).exists?
-    refute SurveyResult.where(id: survey_result_b.id).exists?
-    assert SurveyResult.where(id: survey_result_c.id).exists?
+    refute SurveyResult.exists?(id: survey_result_a.id)
+    refute SurveyResult.exists?(id: survey_result_b.id)
+    assert SurveyResult.exists?(id: survey_result_c.id)
   end
 
   #
@@ -2136,7 +2136,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # even if the user doesn't have the related permission.
     program_manager.delete_permission UserPermission::PROGRAM_MANAGER
 
-    assert RegionalPartnerProgramManager.where(program_manager_id: program_manager.id).exists?
+    assert RegionalPartnerProgramManager.exists?(program_manager_id: program_manager.id)
     refute program_manager.permission? UserPermission::PROGRAM_MANAGER
 
     err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
@@ -2160,7 +2160,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # even if the user doesn't have the related permission.
     program_manager.delete_permission UserPermission::PROGRAM_MANAGER
 
-    assert RegionalPartnerProgramManager.where(program_manager_id: program_manager.id).exists?
+    assert RegionalPartnerProgramManager.exists?(program_manager_id: program_manager.id)
     refute program_manager.permission? UserPermission::PROGRAM_MANAGER
 
     unsafe_purge_user program_manager
