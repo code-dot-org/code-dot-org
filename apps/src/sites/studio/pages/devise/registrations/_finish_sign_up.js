@@ -90,7 +90,7 @@ $(document).ready(() => {
     }
 
     alreadySubmitted = true;
-    // Clean up school data, log if school was not specified, and set age for teachers.
+    // Clean up school data and set age for teachers.
     if (user_type === 'teacher') {
       cleanSchoolInfo();
       $('#user_age').val('21+');

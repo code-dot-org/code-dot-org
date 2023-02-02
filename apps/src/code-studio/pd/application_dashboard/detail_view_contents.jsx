@@ -230,10 +230,6 @@ export class DetailViewContents extends React.Component {
       this.setState({
         status: event.target.value
       });
-      analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
-        'application id': this.props.applicationId,
-        'application status': event.target.value
-      });
     }
   };
 
