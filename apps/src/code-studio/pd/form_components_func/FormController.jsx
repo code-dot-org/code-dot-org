@@ -9,6 +9,7 @@ import usePrevious from '@cdo/apps/util/usePrevious';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {useRegionalPartner} from '../components/useRegionalPartner';
 
 const defaultSubmitButtonText = i18n.submit();
 
@@ -94,6 +95,7 @@ const FormController = props => {
     ...getInitialStored(sessionStorageKey, 'data'),
     ...getInitialData()
   }));
+  const [regionalPartner] = useRegionalPartner(data);
   const [submitting, setSubmitting] = useState(false);
   const [saving, setSaving] = useState(false);
   const [savedData, setSavedData] = useState(getInitialData());
@@ -439,6 +441,19 @@ const FormController = props => {
     const handleSuccessfulSubmit = data => {
       sessionStorage.removeItem(sessionStorageKey);
       onSuccessfulSubmit(data);
+
+      // Log application status change upon submission for Teacher Applications
+      if (window.location.href.includes('teacher')) {
+        const rp_requires_admin_approval =
+          regionalPartner.applications_principal_approval ===
+          'all_teachers_required';
+        analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+          'application id': data.id,
+          'application status': rp_requires_admin_approval
+            ? 'awaiting_admin_approval'
+            : 'unreviewed'
+        });
+      }
     };
 
     makeRequest(false)
