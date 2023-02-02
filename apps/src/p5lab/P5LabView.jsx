@@ -12,7 +12,8 @@ import {
   P5LabInterfaceMode,
   P5LabType,
   APP_WIDTH,
-  APP_HEIGHT
+  APP_HEIGHT,
+  CURRENT_ANIMATION_TYPE
 } from './constants';
 import P5LabVisualizationHeader from './P5LabVisualizationHeader';
 import P5LabVisualizationColumn from './P5LabVisualizationColumn';
@@ -24,7 +25,6 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
-
 /**
  * Top-level React wrapper for GameLab
  */
@@ -193,7 +193,11 @@ class P5LabView extends React.Component {
         interfaceMode === P5LabInterfaceMode.BACKGROUND) ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        currentAnimationType={isBackgroundMode ? 'background' : 'default'}
+        currentAnimationType={
+          isBackgroundMode
+            ? CURRENT_ANIMATION_TYPE.background
+            : CURRENT_ANIMATION_TYPE.default
+        }
         defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.shouldHideAnimationUpload()}

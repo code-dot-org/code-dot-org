@@ -9,7 +9,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as shapes from '../shapes';
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
-
+import {CURRENT_ANIMATION_TYPE} from '../constants';
 /**
  * @const {string} domain-relative URL to Piskel index.html
  * In special environment builds, append ?debug flag to get Piskel to load its own debug mode.
@@ -30,7 +30,8 @@ class PiskelEditor extends React.Component {
     // Provided by Redux
     animationList: shapes.AnimationList.isRequired,
     currentAnimations: shapes.CurrentAnimations,
-    currentAnimationType: PropTypes.string.isRequired,
+    currentAnimationType: PropTypes.oneOf(Object.values(CURRENT_ANIMATION_TYPE))
+      .isRequired,
     channelId: PropTypes.string.isRequired,
     editAnimation: PropTypes.func.isRequired,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,

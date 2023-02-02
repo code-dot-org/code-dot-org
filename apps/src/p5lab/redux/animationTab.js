@@ -1,13 +1,18 @@
 /** @file Redux actions and reducer for the AnimationTab */
 
+import {CURRENT_ANIMATION_TYPE} from '../constants';
+
 const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
 const SELECT_BACKGROUND = 'AnimationTab/SELECT_BACKGROUND';
 const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
 
 const initialState = {
-  currentAnimations: {default: '', background: ''},
+  currentAnimations: {},
   columnSizes: [150, undefined]
 };
+
+initialState.currentAnimations[CURRENT_ANIMATION_TYPE.default] = '';
+initialState.currentAnimations[CURRENT_ANIMATION_TYPE.background] = '';
 
 export default (state = initialState, action) => {
   if (action.type === SELECT_ANIMATION) {
