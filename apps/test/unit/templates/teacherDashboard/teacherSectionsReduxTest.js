@@ -6,6 +6,7 @@ import {
   registerReducers,
   getStore
 } from '@cdo/apps/redux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import reducer, {
   __testInterface__,
   setAuthProviders,
@@ -38,6 +39,7 @@ import reducer, {
   getSectionRows,
   sortedSectionsList,
   sortSectionsList,
+  assignToSection,
   NO_SECTION
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
@@ -68,8 +70,10 @@ const sections = [
     pairing_allowed: true,
     sharing_disabled: false,
     course_offering_id: 2,
+    courseOfferingId: 2,
     course_version_id: 3,
     unit_id: null,
+    unitId: null,
     createdAt: createdAt,
     studentCount: 10,
     hidden: false,
@@ -90,8 +94,10 @@ const sections = [
     pairing_allowed: true,
     sharing_disabled: false,
     course_offering_id: 1,
+    courseOfferingId: 1,
     course_version_id: 1,
     unit_id: null,
+    unitId: null,
     createdAt: createdAt,
     studentCount: 1,
     hidden: false,
@@ -112,8 +118,10 @@ const sections = [
     pairing_allowed: false,
     sharing_disabled: false,
     course_offering_id: 3,
+    courseOfferingId: 3,
     course_version_id: 5,
     unit_id: 7,
+    unitId: 7,
     createdAt: createdAt,
     studentCount: 0,
     hidden: false,
@@ -1697,6 +1705,62 @@ describe('teacherSectionsRedux', () => {
     it('sorts an array of sections by descending id', () => {
       const expected = sections.reverse();
       assert.deepEqual(sortSectionsList(sections), expected);
+    });
+  });
+
+  describe('AnalyticsReporter events', () => {
+    let analyticsSpy;
+
+    beforeEach(() => {
+      store.dispatch(setSections(sections));
+      analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    });
+
+    afterEach(() => {
+      analyticsSpy.restore();
+    });
+
+    it('sends an event when course offering is assigned', () => {
+      const testSection = getState().teacherSections.sections[11];
+      store.dispatch(assignToSection(testSection.id, 100, 101, 102, 103));
+      expect(analyticsSpy).to.be.called.once;
+      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+        sectionName: testSection.name,
+        sectionId: testSection.id,
+        sectionLoginType: testSection.loginType,
+        previousUnitId: testSection.unitId,
+        previousCourseId: testSection.courseOfferingId,
+        newUnitId: 103,
+        newCourseId: 101
+      });
+    });
+
+    it('sends an event when unit is changed', () => {
+      const testSection = getState().teacherSections.sections[11];
+      store.dispatch(
+        assignToSection(
+          testSection.id,
+          testSection.courseId,
+          testSection.courseOfferingId,
+          testSection.courseVersionId,
+          7
+        )
+      );
+      expect(analyticsSpy).to.be.called.once;
+      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+        sectionName: testSection.name,
+        sectionId: testSection.id,
+        sectionLoginType: testSection.loginType,
+        previousUnitId: testSection.unitId,
+        previousCourseId: testSection.courseOfferingId,
+        newUnitId: 7,
+        newCourseId: testSection.courseOfferingId
+      });
+    });
+
+    it('doesnt send an event when course offering is unchanged', () => {
+      store.dispatch(assignToSection(11, 2, 2, 102, null));
+      expect(analyticsSpy).to.not.be.called;
     });
   });
 });
