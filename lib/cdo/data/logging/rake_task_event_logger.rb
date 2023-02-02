@@ -34,7 +34,7 @@ class RakeTaskEventLogger
   def task_chain
     pre_requisites_split = @rake_task.inspect.split('=>')
     unless pre_requisites_split.empty?
-      return pre_requisites_split.tr('[', '').tr(']', '').tr('>', '').strip
+      return pre_requisites_split.trim('[', '').trim(']', '').trim('>', '').strip
     end
   end
 
