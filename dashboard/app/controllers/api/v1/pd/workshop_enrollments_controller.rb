@@ -56,9 +56,10 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     elsif workshop_full?
       render_unsuccessful RESPONSE_MESSAGES[:FULL]
     else
-      enrollment = ::Pd::Enrollment.new workshop: @workshop
-      enrollment.school_info_attributes = school_info_params
-      if enrollment.update enrollment_params
+      ActiveRecord::Base.transaction do
+        enrollment = ::Pd::Enrollment.new workshop: @workshop
+        enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
+
         user&.update_school_info(enrollment.school_info)
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
@@ -69,7 +70,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
           sign_up_url: url_for('/users/sign_up'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
-      else
+      rescue ActiveRecord::ActiveRecordError
         render_unsuccessful RESPONSE_MESSAGES[:ERROR]
       end
     end
