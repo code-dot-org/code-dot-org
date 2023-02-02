@@ -130,6 +130,26 @@ module Pd::Application
       )
     end
 
+    def complete_application_initial_reminder(teacher_application)
+      @application = teacher_application
+
+      mail(
+        from: 'Code.org <teacher@code.org>',
+        to: @application.formatted_applicant_email,
+        subject: "Reminder: Complete your application for Code.org’s Professional Learning Program"
+      )
+    end
+
+    def complete_application_final_reminder(teacher_application)
+      @application = teacher_application
+
+      mail(
+        from: 'Code.org <teacher@code.org>',
+        to: @application.formatted_applicant_email,
+        subject: "Follow Up: Complete your application for Code.org’s Professional Learning Program"
+      )
+    end
+
     def declined(teacher_application)
       @application = teacher_application
 

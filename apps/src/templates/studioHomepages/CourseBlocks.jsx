@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
-import CourseBlocksTools from './CourseBlocksTools';
 import SpecialAnnouncement from './SpecialAnnouncement';
-import CourseBlocksInternationalGradeBands from './CourseBlocksInternationalGradeBands';
+import CourseBlocksWrapper from './CourseBlocksWrapper';
 import {NotificationResponsive} from '@cdo/apps/templates/Notification';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {
+  InternationalGradeBandCards,
+  ToolsCards,
+  ToolsWidgetsCard
+} from '@cdo/apps/util/courseBlockCardsConstants';
 
 class ModernCsfCourses extends Component {
   componentDidMount() {
@@ -74,9 +78,9 @@ class CoursesAToF extends Component {
 
 const LegacyCSFNotification = () => (
   <NotificationResponsive
-    type="bullhorn"
-    notice={i18n.courseBlocksLegacyNotificationHeading()}
-    details={i18n.courseBlocksLegacyNotificationBody()}
+    type="bullhorn_yellow"
+    notice={i18n.courseBlocksLegacyNotificationSupportEndedHeading()}
+    details={i18n.courseBlocksLegacyNotificationSupportEndedBody()}
     detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
     detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
     detailsLinkNewWindow={true}
@@ -84,7 +88,7 @@ const LegacyCSFNotification = () => (
     buttons={[
       {
         text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
-        link: pegasus('/educate/curriculum/cs-fundamentals-international'),
+        link: pegasus('/educate/curriculum/elementary-school'),
         newWindow: true
       },
       {
@@ -241,9 +245,19 @@ export class CourseBlocksIntl extends Component {
 
         {modernCsf && <LegacyCSFNotification />}
 
-        <CourseBlocksInternationalGradeBands />
+        <CourseBlocksWrapper
+          heading={i18n.courseBlocksInternationalGradeBandsContainerHeading()}
+          description={i18n.courseBlocksInternationalGradeBandsContainerDescription()}
+          cards={InternationalGradeBandCards}
+        />
 
-        <CourseBlocksTools isEnglish={false} />
+        <div id="uitest-course-blocks-tools">
+          <CourseBlocksWrapper
+            heading={i18n.courseBlocksToolsTitleNonEn()}
+            description={i18n.standaloneToolsDescription()}
+            cards={ToolsCards.concat(ToolsWidgetsCard)}
+          />
+        </div>
       </div>
     );
   }

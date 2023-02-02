@@ -168,6 +168,11 @@
           "name": "Modyfikacje wirtualnej lekcji ",
           "url": "https://docs.google.com/document/d/1X139Yy8C3WPxE3g1j2LlE89hzeREex8QVPzKITDSuF4/view"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "url": "https://code.org/maker/csf-microbit",
+          "type": "Zasoby"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Włączanie hasła: Jeśli... wtedy... Scenariusze",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -412,6 +417,11 @@
           "name": "Modyfikacje wirtualnej lekcji ",
           "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "url": "https://code.org/maker/csf-microbit",
+          "type": "Zasoby"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Potęga słów: quiz",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -600,6 +610,11 @@
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Modyfikacje wirtualnej lekcji ",
           "url": "https://docs.google.com/document/d/1WDr-KRGUThXMzL1ppDIkbueQrJfF0lwrwFhEsO6ET5s/view"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "url": "https://code.org/maker/csf-microbit",
+          "type": "Zasoby"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
@@ -1344,6 +1359,11 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Modyfikacje wirtualnej lekcji ",
           "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "url": "https://code.org/maker/csf-microbit",
+          "type": "Zasoby"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Wprowadzenie STOP do podłości online: Slajdy lekcji",

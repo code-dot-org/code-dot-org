@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ theme: responsive
 | **인터넷 시뮬레이터를 사용하기 위해**                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **웹 랩을 사용하기 위해**                      | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Classroom 공유 버튼을 사용하기 위해**   | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**           | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## 모바일 및 태블릿 지원 세부사항
 

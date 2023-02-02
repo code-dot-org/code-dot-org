@@ -632,6 +632,13 @@ Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected
   }
 end
 
+Then /^I wait to see a modal containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see a ".modal"
+    And element ".modal" contains text "#{expected_text}"
+  }
+end
+
 Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".congrats"
@@ -1116,7 +1123,7 @@ def press_keys(element, key)
 end
 
 def convert_keys(keys)
-  return keys[1..-1].to_sym if keys.start_with?(':')
+  return keys[1..].to_sym if keys.start_with?(':')
   keys.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
   keys.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
   # Convert newlines to :enter keys.

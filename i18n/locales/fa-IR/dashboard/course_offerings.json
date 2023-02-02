@@ -11,6 +11,8 @@
   "course2": "دوره 2",
   "course3": "دورۀ 3",
   "course4": "دوره 4",
+  "dance-2019": "میهمانی رقص (2019)",
+  "dance-extras-2019": "به رقص ادامه دهید (2019)",
   "frozen": "کدنویسی با آنا و السا",
   "gumball": "آزمایشگاه بازی Gumball",
   "hero": "ماینکرافت: سفر قهرمان",
@@ -23,6 +25,7 @@
   "ai-ethics": "فعالیت اخلاقی هوش مصنوعی",
   "counting-csc": "فعالیت شمارش",
   "explore-data-1": "فعالیت مربوط به داده‌ها",
+  "outbreak-csc": "شیوع",
   "spelling-bee": "فعالیت هجی کردن",
   "poetry": "ماژول شاعری",
   "k5-onlinepd": "آموزش اصول علوم کامپیوتر",
@@ -254,5 +257,6 @@
   "csd4": "csd4",
   "hello-world-space": "hello-world-space",
   "hello-world-soccer": "سلام دنیا: فوتبال",
-  "playground": "زمين بازي"
+  "playground": "زمين بازي",
+  "devices": "دستگاه ها"
 }

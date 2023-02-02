@@ -142,6 +142,7 @@ class NewProjectButtons extends React.Component {
               {projectTypesRow.map((projectType, index) => (
                 <a key={index} href={'/projects/' + projectType + '/new'}>
                   <div
+                    className="newProject-button-tile"
                     style={[
                       styles.tile,
                       index < TILES_PER_ROW - 1 && styles.tilePadding
@@ -150,7 +151,7 @@ class NewProjectButtons extends React.Component {
                     <img
                       style={thumbnailStyle}
                       src={PROJECT_INFO[projectType].thumbnail}
-                      alt={PROJECT_INFO[projectType].label}
+                      alt=""
                     />
                     <div style={styles.label}>
                       {PROJECT_INFO[projectType].label}
@@ -179,13 +180,13 @@ const styles = {
   tile: {
     width: 214,
     height: 70,
-    border: '1px solid ' + color.lighter_gray,
+    border: '1px solid ' + color.neutral_dark20,
     borderRadius: 2,
     float: 'left',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    backgroundColor: color.white
+    backgroundColor: color.neutral_light
   },
   tilePadding: {
     marginRight: 35
@@ -202,14 +203,14 @@ const styles = {
   },
   label: {
     paddingRight: 5,
-    color: color.teal
+    color: color.neutral_dark
   },
   description: {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 14,
     fontFamily: '"Gotham 5r"',
-    color: color.charcoal
+    color: color.neutral_dark
   }
 };
 

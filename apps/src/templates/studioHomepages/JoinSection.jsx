@@ -122,10 +122,9 @@ class JoinSection extends React.Component {
             placeholder={i18n.joinSectionPlaceholder()}
           />
           <Button
-            __useDeprecatedTag
             onClick={this.joinSection}
             className="ui-test-join-section"
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.brandSecondaryDefault}
             disabled={this.state.sectionCode.length === 0}
             text={i18n.joinSection()}
             style={styles.button}
@@ -142,10 +141,9 @@ const styles = {
     display: 'flex',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.border_gray,
+    borderColor: color.neutral_dark20,
     width: styleConstants['content-width'],
-    backgroundColor: color.white,
-    marginTop: 25
+    backgroundColor: color.white
   },
   mainDashed: {
     borderWidth: 5,
@@ -158,13 +156,13 @@ const styles = {
     fontSize: 20,
     fontWeight: 'bold',
     backgroundColor: color.white,
-    color: color.teal
+    color: color.neutral_dark
   },
   details: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     marginTop: 5,
-    color: color.charcoal
+    color: color.neutral_dark
   },
   wordBox: {
     width: styleConstants['content-width'] - 475,

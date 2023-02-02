@@ -461,6 +461,8 @@ fa:
           COSTUME:
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
+            '"CAT"': گربه ها
+            '"DOG"': سگ ها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
@@ -961,8 +963,8 @@ fa:
         options:
           INPUT1:
             '1': آب لیمو
-            '3': baking soda
-            '5': both
+            '3': جوش شیرین
+            '5': هر دو
       DansBlocks_setForegroundEffect2:
         text: اجرای افکت [EFFECT][0]
         options:
@@ -976,17 +978,40 @@ fa:
             '"glass"': شیشه شکسته (افکت)
             '"twinkling"': چشمک زن (افکت)
       DansBlocks_setMicroscope:
+        text: میکروسکوپ را روی [0][INPUT1] تنظیم کنید
         options:
           INPUT1:
             '1': آب لیمو
-            '3': baking soda
-            '5': both
+            '3': جوش شیرین
+            '5': هر دو
+      DansBlocks_testRectangle:
+        text: 'ایجاد مستطیل x: [X][0] y: [Y][1] w: [W][2] h: [H][3] رنگ: [COLOR][4]'
+      FunctionBlocks_addEightBlock:
+        text: 8 واحد اضافه کنید
+      FunctionBlocks_addFiveBlock:
+        text: 5 واحد اضافه کنید
+      FunctionBlocks_addFourBlock:
+        text: 4 واحد اضافه کنید
+      FunctionBlocks_addNineBlock:
+        text: 9 واحد اضافه کنید
+      FunctionBlocks_addOneBlock:
+        text: 1 واحد اضافه کنید
+      FunctionBlocks_addSevenBlock:
+        text: 7 واحد اضافه کنید
+      FunctionBlocks_addSixBlock:
+        text: 6 واحد اضافه کنید
+      FunctionBlocks_addThreeBlock:
+        text: 3 واحد اضافه کنید
+      FunctionBlocks_addTwoBlock:
+        text: 2 واحد اضافه کنید
       FunctionBlocks_communicate:
         text: ارتباط [VAR1][0] با [SPRITE1COSTUME][1]
       FunctionBlocks_makeManipulative2:
         text: ایجاد [NUM][0] اسپرایت جدید که [BEHAVIOR][2]
       FunctionBlocks_representManipulative:
         text: نماینده [BEHAVIOR][2] [NUM][0] اسپرایت [ANIMATION_NAME][1] جدید
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] نشان دهنده[0][NUM] جدید[1][ANIMATION_NAME] اسپرایتها"
       FunctionBlocks_spriteSayVar:
         text: "[SPRITE][0] میگوید: [TEXT1][1]"
       gamelab_addBehaviorSimple:
@@ -1975,14 +2000,15 @@ fa:
         options:
           INPUT1:
             '1': آب لیمو
-            '3': baking soda
-            '5': both
+            '3': جوش شیرین
+            '5': هر دو
       ParticlesBlocks_setMicroscope:
+        text: میکروسکوپ را روی [0][INPUT1] تنظیم کنید
         options:
           INPUT1:
             '1': آب لیمو
-            '3': baking soda
-            '5': both
+            '3': جوش شیرین
+            '5': هر دو
       ParticlesBlocks_statesOfMatter:
         text: "[BEHAVIOR][0]"
         options:
@@ -1998,6 +2024,7 @@ fa:
             '"liquid"': ذرات مایع
             '"gas"': ذرات گاز
       ParticlesBlocks_statesOfMatter_testing:
+        text: "[Testing] تنظیم [0][COSTUME] به [1][BEHAVIOR] رفتار"
         options:
           BEHAVIOR:
             '"solid"': 'ذرات جامد '

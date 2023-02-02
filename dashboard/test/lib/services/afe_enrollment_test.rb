@@ -11,7 +11,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     CDO.unstub(:afe_pardot_form_handler_url)
     CDO.stubs(:afe_pardot_form_handler_url).returns(nil)
     Net::HTTP.expects(:post_form).never
-    Services::AFEEnrollment.submit(valid_test_params)
+    Services::AFEEnrollment.submit(**valid_test_params)
   end
 
   test 'submit posts to Pardot with the expected format' do
@@ -32,15 +32,13 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
           'csta-plus' => '1',
           'aws-educate' => '1',
           'amazon-terms' => '1',
-          'primary-professional-role' => 'test role with space',
-          'grades-teaching' => 'K-5',
           'new-code-account' => '1',
           'registration-date-time' => Time.now.iso8601
         }
       end
       expected_request.returns(fake_success_response)
 
-      Services::AFEEnrollment.submit(valid_test_params)
+      Services::AFEEnrollment.submit(**valid_test_params)
     end
   end
 
@@ -79,21 +77,21 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
   test 'raises without submitting if amazon_terms is not true' do
     Net::HTTP.expects(:post_form).never
     assert_raises_matching /AFE submission skipped: Terms and conditions were not accepted/ do
-      Services::AFEEnrollment.submit(valid_test_params.merge(amazon_terms: false))
+      Services::AFEEnrollment.submit(**valid_test_params.merge(amazon_terms: false))
     end
   end
 
   test 'submit raises when Pardot response is a failure status' do
     Net::HTTP.stubs(:post_form).returns(fake_unavailable_response)
     assert_raises_matching /AFE submission failed with HTTP 503/ do
-      Services::AFEEnrollment.submit(valid_test_params)
+      Services::AFEEnrollment.submit(**valid_test_params)
     end
   end
 
   test 'submit raises when Pardot response is a validation failure' do
     Net::HTTP.stubs(:post_form).returns(fake_validation_failure_response)
     assert_raises_matching /AFE submission failed with a validation error/ do
-      Services::AFEEnrollment.submit(valid_test_params)
+      Services::AFEEnrollment.submit(**valid_test_params)
     end
   end
 
@@ -122,7 +120,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     end
     expected_request.returns(fake_success_response)
 
-    Services::AFEEnrollment.submit(valid_test_params.merge(input_params))
+    Services::AFEEnrollment.submit(**valid_test_params.merge(input_params))
 
     refute_nil captured_params
     expected_params.each do |key, expected_value|
@@ -145,8 +143,6 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
       csta_plus: true,
       aws_educate: true,
       amazon_terms: true,
-      primary_professional_role: 'test role with space',
-      grades_teaching: 'K-5',
       new_code_account: true
     }
   end

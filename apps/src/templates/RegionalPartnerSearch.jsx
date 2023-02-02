@@ -10,9 +10,12 @@ import Notification from '@cdo/apps/templates/Notification';
 import * as color from '../util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {currentLocation} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const WorkshopCard = props => {
   return (
@@ -45,9 +48,9 @@ class RegionalPartnerSearch extends Component {
     let error = false;
     let loading = false;
 
-    const partnerId = queryString.parse(window.location.search).partner;
-    const zip = queryString.parse(window.location.search).zip;
-    const nominated = queryString.parse(window.location.search).nominated;
+    const partnerId = queryString.parse(currentLocation().search).partner;
+    const zip = queryString.parse(currentLocation().search).zip;
+    const nominated = queryString.parse(currentLocation().search).nominated;
 
     if (partnerId) {
       if (partnerId === '0') {
@@ -152,38 +155,18 @@ class RegionalPartnerSearch extends Component {
   render() {
     const partnerInfo = this.state.partnerInfo;
 
-    let workshopCollections = [
-      {
-        key: 'CSD',
-        name: ActiveCourseWorkshops.CSD,
-        heading: `${ActiveCourseWorkshops.CSD} Workshops`,
-        workshops:
-          partnerInfo &&
-          partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === ActiveCourseWorkshops.CSD
-          )
-      },
-      {
-        key: 'CSP',
-        name: ActiveCourseWorkshops.CSP,
-        heading: `${ActiveCourseWorkshops.CSP} Workshops`,
-        workshops:
-          partnerInfo &&
-          partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === ActiveCourseWorkshops.CSP
-          )
-      },
-      {
-        key: 'CSA',
-        name: ActiveCourseWorkshops.CSA,
-        heading: `${ActiveCourseWorkshops.CSA} Workshops`,
-        workshops:
-          partnerInfo &&
-          partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === ActiveCourseWorkshops.CSA
-          )
-      }
-    ];
+    let courseWorkshops = [];
+    Object.keys(ActiveCourseWorkshops).forEach(courseKey => {
+      courseWorkshops.push({
+        key: courseKey,
+        name: ActiveCourseWorkshops[courseKey],
+        heading: `${ActiveCourseWorkshops[courseKey]} Workshops`,
+        isOffered: partnerInfo?.pl_programs_offered?.includes(courseKey),
+        summerWorkshops: partnerInfo?.summer_workshops?.filter(
+          workshop => workshop.course === ActiveCourseWorkshops[courseKey]
+        )
+      });
+    });
 
     const workshopCollectionStyle =
       this.props.responsiveSize === 'lg' ? styles.halfWidth : styles.fullWidth;
@@ -320,83 +303,86 @@ class RegionalPartnerSearch extends Component {
                 )}
             </div>
 
-            {appState !== WorkshopApplicationStates.now_closed && (
-              <div>
-                <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
-                {workshopCollections.map((collection, collectionIndex) => {
-                  if (collection.workshops.length === 0) {
-                    // If no current workshops for a course
-                    if (
-                      partnerInfo.pl_programs_offered.includes(collection.key)
-                    ) {
-                      // If a program is offered but a workshop hasn't been scheduled yet
+            {appState !== WorkshopApplicationStates.now_closed &&
+              partnerInfo.pl_programs_offered?.length > 0 && (
+                <div>
+                  <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
+                  {courseWorkshops.map((currCourse, currCourseIndex) => {
+                    if (currCourse.summerWorkshops.length === 0) {
+                      // If no current workshops for the given course
+                      if (currCourse.isOffered) {
+                        // If a program is offered but a workshop hasn't been scheduled yet
+                        return (
+                          <WorkshopCard
+                            key={currCourseIndex}
+                            style={workshopCollectionStyle}
+                            content={
+                              <>
+                                <h4>
+                                  {currCourse.name} Workshop details are coming
+                                  soon!
+                                </h4>
+                                <div>
+                                  The Regional Partner is hard at work locking
+                                  down the details of the workshops for this
+                                  program. You can still apply and the Regional
+                                  Partner will inform you when the workshop
+                                  details are available.
+                                </div>
+                              </>
+                            }
+                          />
+                        );
+                      } else {
+                        // If a program is not offered
+                        return (
+                          <WorkshopCard
+                            key={currCourseIndex}
+                            style={workshopCollectionStyle}
+                            content={
+                              <>
+                                <h4>{currCourse.heading}</h4>
+                                <div>
+                                  This Regional Partner is not offering{' '}
+                                  {currCourse.name} workshops at this time.
+                                  Code.org will review your application and
+                                  contact you with options for joining the
+                                  program hosted by a Regional Partner from a
+                                  different region.
+                                </div>
+                              </>
+                            }
+                          />
+                        );
+                      }
+                    } else if (currCourse.summerWorkshops.length > 0) {
+                      // If workshops present for the given course
                       return (
                         <WorkshopCard
-                          key={collectionIndex}
+                          key={currCourseIndex}
                           style={workshopCollectionStyle}
                           content={
                             <>
-                              <h4>
-                                {collection.name} Workshop details are coming
-                                soon!
-                              </h4>
-                              <div>
-                                The Regional Partner is hard at work locking
-                                down the details of the workshops for this
-                                program. You can still apply and the Regional
-                                Partner will inform you when the workshop
-                                details are available.
-                              </div>
-                            </>
-                          }
-                        />
-                      );
-                    } else {
-                      // If a program is not offered
-                      return (
-                        <WorkshopCard
-                          key={collectionIndex}
-                          style={workshopCollectionStyle}
-                          content={
-                            <>
-                              <h4>{collection.heading}</h4>
-                              <div>
-                                This Regional Partner is not offering{' '}
-                                {collection.name} workshops at this time.
-                                Code.org will review your application and
-                                contact you with options for joining the program
-                                hosted by a Regional Partner from a different
-                                region.
-                              </div>
+                              <h4>{currCourse.heading}</h4>
+                              {currCourse.summerWorkshops.map(
+                                (workshop, index) => (
+                                  <div key={index} style={styles.workshop}>
+                                    <div>
+                                      {workshop.workshop_date_range_string}
+                                    </div>
+                                    <div>{workshop.location_name}</div>
+                                    <div>{workshop.location_address}</div>
+                                  </div>
+                                )
+                              )}
                             </>
                           }
                         />
                       );
                     }
-                  } else if (collection.workshops.length > 0) {
-                    // If workshops present for the given course
-                    return (
-                      <WorkshopCard
-                        key={collectionIndex}
-                        style={workshopCollectionStyle}
-                        content={
-                          <>
-                            <h4>{collection.heading}</h4>
-                            {collection.workshops.map((workshop, index) => (
-                              <div key={index} style={styles.workshop}>
-                                <div>{workshop.workshop_date_range_string}</div>
-                                <div>{workshop.location_name}</div>
-                                <div>{workshop.location_address}</div>
-                              </div>
-                            ))}
-                          </>
-                        }
-                      />
-                    );
-                  }
-                })}
-              </div>
-            )}
+                  })}
+                </div>
+              )}
 
             <div style={styles.clear} />
 
@@ -608,6 +594,10 @@ const StartApplicationButton = ({
     ? "Apply on partner's site"
     : 'Start application';
 
+  const logStartApplication = () => {
+    analyticsReporter.sendEvent(EVENTS.TEACHER_APP_STARTED_EVENT);
+  };
+
   let notificationHeading, notificationText;
   if (priorityDeadlineDate) {
     notificationHeading = `Priority deadline for your region is ${priorityDeadlineDate}`;
@@ -620,7 +610,11 @@ const StartApplicationButton = ({
 
   const button = (
     <a className={className} id={id} target={target} href={link}>
-      <button type="button" style={styles.bigButton}>
+      <button
+        type="button"
+        style={styles.bigButton}
+        onClick={logStartApplication}
+      >
         {buttonText}
       </button>
     </a>

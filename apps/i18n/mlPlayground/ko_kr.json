@@ -1,0 +1,20 @@
+{
+  "navigateForward": "계속하기",
+  "navigateBack": "뒤로",
+  "tryAgain": "다시 시도",
+  "navigateDone": "마침",
+  "saveProgress": "저장",
+  "correctAnswer": "정답",
+  "incorrectAnswer": "틀림",
+  "modelCardLabel": "라벨",
+  "modelCardPossibleValuesMinimum": "최소",
+  "modelCardPossibleValuesMaximum": "최대",
+  "modelCardFeatures": "특징",
+  "columnInspectorDescription": "설명",
+  "columnDetailsMinimumValue": "최소",
+  "columnDetailsMaximumValue": "최대",
+  "dataCardLastUpdated": "최종 수정일",
+  "trainModelHeading": "교육",
+  "resultsTableFeatureHeader": "특징",
+  "predictButton": "예측"
+}

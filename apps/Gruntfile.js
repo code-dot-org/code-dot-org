@@ -585,6 +585,7 @@ describe('entry tests', () => {
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
+    'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
@@ -613,6 +614,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_small_footer.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'layouts/_initial_section_creation_interstitial':
+      './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -736,6 +739,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
+    'sections/new': './src/sites/studio/pages/sections/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -758,6 +762,8 @@ describe('entry tests', () => {
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
+    'code.org/public/educate/weblab-test':
+      './src/sites/code.org/pages/public/educate/weblab-test.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':
@@ -795,8 +801,6 @@ describe('entry tests', () => {
   var professionalDevelopmentEntries = {
     'code.org/public/learn/local':
       './src/sites/code.org/pages/public/learn/local.js',
-    'code.org/views/professional_learning_apply_banner':
-      './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
@@ -811,8 +815,6 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/teachercon_survey/new.js',
     'pd/application_dashboard/index':
       './src/sites/studio/pages/pd/application_dashboard/index.js',
-    'pd/application/facilitator_application/new':
-      './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new':
       './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new':

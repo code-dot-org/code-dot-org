@@ -127,6 +127,10 @@ ko:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: 아워오브코드 라이브
   hoc_live_sign_up_title: 아워오브코드 라이브 가입
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -472,6 +476,10 @@ ko:
     읽어 학급을 위한 이벤트를 계획하세요.
   signup_registration_closed: 그래서 매년 12월 여러분의 학급은 전 세계 수백만 명의 학생들과 아워오브코드를 함께하며 컴퓨터
     과학 교육 주간을 기념할 수 있습니다. 연례 행사 참가 신청은 10월에 시작합니다.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{campaign_date} 아워 오브 코드(Hour of Code)를 운영하시려면, 여기서 등록하세요."
   signup_name_label: 이름
   signup_name_error: 이름은 필수기재항목입니다.
@@ -878,6 +886,10 @@ ko:
   footer_menu_terms: 이용약관
   footer_menu_privacy: Privacy Policy(개인정보보호정책)
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: 45개 이상의 언어로 제공되는 모든 연령대를 위한 한 시간 분량의 튜토리얼을 사용해보세요. 180개 이상의
     국가에서 수 백만 명의 학생과 교사가 가입하여 아워오브코드로 시작하고 있습니다.
@@ -5578,7 +5590,7 @@ ko:
   tutorial_irobotphone_string_platforms: 모든 최신 브라우저
   tutorial_codeguppydraw_string_platforms: 모든 최신 브라우저
   tutorial_codejumper_string_platforms: 언플러그드, 스크린 리더
-  tutorial_meeempathy_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
+  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: 치비트로틱스 치비 칩과 회로 스티커 LED
@@ -7972,10 +7984,12 @@ ko:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -8300,8 +8314,7 @@ ko:
   tutorial_microsoftforest_string_platforms: 모든 최신 브라우저
   tutorial_blackbirdscreen_string_platforms: 크롬
   tutorial_toxicodecompute2_string_platforms: 모든 최신 브라우저
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: Windows, iPad, MacOS
   tutorial_blackbirdtether_string_platforms: 크롬
   tutorial_ob_string_platforms: 최신 웹 브라우저
   tutorial_codeartportrait_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
@@ -8690,6 +8703,10 @@ ko:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -9025,6 +9042,18 @@ ko:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: 프리 리더 - 5학년
   tutorial_rpledfirefly_string_detail_grades: 6-8학년(11-13세)
   tutorial_rpcharting_string_detail_grades: 9학년 이상
@@ -9117,6 +9146,10 @@ ko:
   tutorial_nasapackage_string_detail_grades: 6-8학년(11-13세)
   tutorial_nasalunar_string_detail_grades: 6-8학년(11-13세)
   tutorial_meeestate_string_detail_grades: 초등 2학년 이상
+  tutorial_imagipixelart_string_detail_grades: 2-8 학년
+  tutorial_kcjhealth_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_msftwakanda_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_nafbrand_string_detail_grades: 9학년 이상
   tutorial_rpccw_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드 폰, 아이폰
   tutorial_rpledfirefly_string_platforms: 모든 최신 브라우저
   tutorial_rpcharting_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
@@ -9233,8 +9266,13 @@ ko:
   tutorial_nasaorbit_string_platforms: 모든 최신 브라우저
   tutorial_nasapackage_string_platforms: 모든 최신 브라우저
   tutorial_nasalunar_string_platforms: 모든 최신 브라우저, 아이패드, 아이폰
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: 모든 최신 브라우저
+  tutorial_msftwakanda_string_platforms: 모든 최신 브라우저
+  tutorial_nafbrand_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드 폰,
+    아이폰
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -9328,6 +9366,10 @@ ko:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: 블록
   tutorial_rpledfirefly_string_detail_programming_languages: 파이썬
   tutorial_rpcharting_string_detail_programming_languages: 파이썬
@@ -9426,29 +9468,10 @@ ko:
   tutorial_nasapackage_string_detail_programming_languages: 블록
   tutorial_nasalunar_string_detail_programming_languages: 블록, 자바스크립트
   tutorial_meeestate_string_detail_programming_languages: 블록, 파이썬
-  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
-    animations in this 1 hour crash course!
-  tutorial_imagipixelart_name: Code your own pixel art!
-  tutorial_imagipixelart_string_detail_grades: 2-8 학년
-  tutorial_imagipixelart_string_detail_platforms: ''
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
-    Windows phone, Android phone, iPhone
-  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
-    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
-  tutorial_kcjhealth_name: The Health & Well-Being Challenge
-  tutorial_kcjhealth_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
-  tutorial_kcjhealth_string_platforms: 모든 최신 브라우저
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
-    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
-    ''Black Panther: Wakanda Forever''!'
-  tutorial_msftwakanda_name: Long Live Wakanda
-  tutorial_msftwakanda_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
-  tutorial_msftwakanda_string_platforms: 모든 최신 브라우저
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: 블록
+  tutorial_msftwakanda_string_detail_programming_languages: 블록
+  tutorial_nafbrand_string_detail_programming_languages: 파이썬
   school_not_found_heading: 귀하의 학교를 찾을 수 없습니다. 더 자세한 정보를 입력하시기 바랍니다.
   school_name: 학교 이름
   school_name_error: 학교 이름은 필수입력항목입니다.
@@ -9497,6 +9520,13 @@ ko:
   all: 모두
   dont_know: 잘 모르겠음
   language_label: 언어
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

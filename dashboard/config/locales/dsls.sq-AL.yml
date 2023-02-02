@@ -1049,6 +1049,26 @@ sq-AL:
         content1: përshkrimi këtu
       New Challenge Introduction:
         content1: përshkrimi këtu
+        markdown: "### Sfida e re: Prisni një shifër zëvendësimi të rastësishëm...
+          me një widget të ri\n\nPo sikur në vend të zhvendosjes së tërë alfabetit,
+          ne mapped çdo letër të alfabetit në një letër të rastit të ndryshme të alfabetit?
+          Kjo quhet një shifër zëvendësimi i rastësishëm.**\n\n! [] (https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nTani,
+          në vend që mesazhi sekret të kodohet me një ndryshim të thjeshtë alfabetik,
+          do të përballeni me mesazhe të koduara me **zëvendësim të rastit**.  \n\n\n\nKjo
+          është shumë më e vështirë për të goditur dhe kërkon një mjet më të sofistikuar,
+          kështu që...\n\nKur klikoni vazhdo, do të shihni një **version të ri dhe
+          më të sofistikuar të veglës së enkriptimit** që ju tregon shumë gjëra të
+          ndryshme.\n\nPor ajo që bën është pak e një mister!  \n\n### Detyra juaj:\n\n
+          * KUPTO se çfarë po ndodh në këtë version të ri të mjetit\n * Çfarë informacioni
+          po ju paraqitet?\n * KUPTOJ SE çfarë mjet ju lejon të bëni\n * Si zakonisht:
+          ju nuk mund ta thyejnë atë. Pra, klikoni mbi gjërat, thithni rreth.\n *
+          Nëse ju kuptoj se ju mund të jetë në gjendje për të goditur një mesazh koduar
+          me zëvendësim të rastit.\n \n### Hint\n\n* A e dini se **E** është letra
+          më e zakonshme e përdorur në gjuhën angleze?\n\n### Rivendosni dhe diskutoni\n
+          Pas disa kohësh duke luajtur me të, duhet të merrni së bashku me dikë -
+          partner, grup i vogël, klasë e tërë - për të diskutuar atë që keni gjetur
+          dhe për të verifikuar se ju e dini se çfarë po ndodh dhe mënyra të ndryshme
+          që ju mund të përdorni mjet.\n\n\n"
       OPD-K5 Reviewing Reflections:
         content1: përshkrimi këtu
       OPD-K5 Stage3aGo:
@@ -1115,6 +1135,20 @@ sq-AL:
         content1: përshkrimi këtu
       Terminology Recap:
         content1: përshkrimi këtu
+        markdown: "# Pause dhe Rikapitullo\n\nMesazhet e koduara me shifrën **Cezar
+          janë shumë të lehtë për t'u goditur, veçanërisht me një mjet kompjuterik.
+          Tani që ju keni pasur një praktikë të vogël plasaritje një shifër alfabetik
+          ndryshim (shumë e lehtë, huh?) le të provojmë diçka më të vështirë.\n\n**Terminologjia
+          e radhitjes: **\n\n* **Encryption** - një proces i kodimit të mesazheve
+          për t'i mbajtur ato sekrete, kështu që vetëm palët “të autorizuara” mund
+          ta lexojnë atë.\n* **Decryption** - një proces që përmbyset encryption,
+          duke marrë një mesazh të fshehtë dhe riprodhimin e tekstit origjinal të
+          thjeshtë\n* **Cipher** - një term i përgjithshëm për një teknikë (ose algoritmi)
+          që kryen encryption\n* **Cezarit Cipher** - një teknikë për encryption që
+          zhvendos alfabetin me disa numër karakteresh.\n* **Plasaritje encryption**
+          - Kur përpiqeni të deshifroni një mesazh sekret *pa* duke ditur të gjitha
+          specifikat e shifrës, po përpiqeni të **plasarit** encryption. \n\n\nKliko
+          Vazhdo për të parë **Sfida e ardhshme**...\n\n \n"
       behaviors 1 predict:
         answers:
         - {}
@@ -9357,3 +9391,43 @@ sq-AL:
         - {}
         questions:
         - {}
+      Dance_Party_extras_intro:
+        markdown: "#Vazhdo te kercesh! \n\nNe pjesen e dyte, do te krijosh projektin
+          tend. Keu nuk ka puzzle - ne vend te tyre jane disa projekte te cilat mundesojne
+          krijimin e festave te vallezimit me komplekse. \n\nMund t'i perfundosh ketop
+          nivele ne cfardo rendi. Zgjedh permes niveleve qe te shohesh nese dicka
+          eshte bere ne nivelin paraprak, ose kombino koncepte permes projekteve.
+          Provoji te gjitha, zgjedh te preferuaren tende, dhe shpenzo kohe duke e
+          bere kete projekt tendin. \n\n<div class=\"clearfix\"></div>\n\n<div style=\"float:
+          left; margin: 10px\">\n<a href=\"2\">\n<h2>\nHyr ne rradhe\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n\nKu shkuan?
+          \n\n</h2>\n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\n\nGrupet e Vallezimit
+          \n\n</h2>\n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\n\nQuarter Notes
+          \n</h2>\n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\n\nBasa, Mid,
+          Treble \n\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nShpejtoje, Ngadalsoje\n\n</h2>\n\n<img
+          src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: "#Vazhdo te kercesh! \n\nNe pjesen e dyte, do te krijosh projektin
+          tend. Keu nuk ka puzzle - ne vend te tyre jane disa projekte te cilat mundesojne
+          krijimin e festave te vallezimit me komplekse. \n\nMund t'i perfundosh ketop
+          nivele ne cfardo rendi. Zgjedh permes niveleve qe te shohesh nese dicka
+          eshte bere ne nivelin paraprak, ose kombino koncepte permes projekteve.
+          Provoji te gjitha, zgjedh te preferuaren tende, dhe shpenzo kohe duke e
+          bere kete projekt tendin. \n\n<div class=\"clearfix\"></div>\n\n<div style=\"float:
+          left; margin: 10px\">\n<a href=\"2\">\n<h2>\nHyr ne rradhe\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n\nKu shkuan?
+          \n\n</h2>\n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\n\nGrupet e Vallezimit
+          \n\n</h2>\n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\n\nQuarter Notes
+          \n</h2>\n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\n\nBasa, Mid,
+          Treble \n\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nShpejtoje, Ngadalsoje\n\n</h2>\n\n<img
+          src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"

@@ -43,7 +43,8 @@ import {
   KeyCodes,
   TestResults,
   TOOLBOX_EDIT_MODE,
-  NOTIFICATION_ALERT_TYPE
+  NOTIFICATION_ALERT_TYPE,
+  START_BLOCKS
 } from './constants';
 import {assets as assetsApi} from './clientApi';
 import {
@@ -93,7 +94,7 @@ var copyrightStrings;
 /**
  * The minimum width of a playable whole blockly game.
  */
-const MIN_WIDTH = 1200;
+const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
@@ -2443,7 +2444,7 @@ StudioApp.prototype.handleEditCode_ = function(config) {
         this.editor.enablePalette(!this.editor.session.paletteEnabled);
         showToolboxHeader.style.display = this.editor.session.paletteEnabled
           ? 'none'
-          : 'inline-block';
+          : 'flex';
         hideToolboxIcon.style.display = !this.editor.session.paletteEnabled
           ? 'none'
           : 'inline-block';
@@ -3345,6 +3346,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       showNextHint: this.showNextHint.bind(this),
       locale: config.locale,
       assetUrl: this.assetUrl,
+      inStartBlocksMode: level.edit_blocks === START_BLOCKS,
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),

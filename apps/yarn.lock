@@ -1334,10 +1334,10 @@
   resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.5.tgz#0872991761e8f4458c73ba3b7f288b2e747af240"
   integrity sha512-Wr4zQgSpBh/Pus0+91Cshl93efew051PfVM4BBzcf0hqNGMVGj8Pztgvtqew07AnMrjxBVDITSlLzCfhHmyBQw==
 
-"@code-dot-org/johnny-five@2.1.0-cdo.1":
-  version "2.1.0-cdo.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-2.1.0-cdo.1.tgz#6042ea1ca0dcea42d45a620df39846946d321887"
-  integrity sha512-zaoX0bO4X6QS2X1N7LCpjpHwhrWm/37ertP0HJzibTsVSqBJRu931gYNO/3G1Gi/jpHxMGeaPJWARIFbrPJhfg==
+"@code-dot-org/johnny-five@2.1.0-cdo.3":
+  version "2.1.0-cdo.3"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-2.1.0-cdo.3.tgz#57e3ddb006d1874903e55208bba6175733d38ee0"
+  integrity sha512-MLNqeRMMWIx1fNUDSf+XT5flqOAjekWFv/20pTYbKhtkJsBDoEjZfWv5x+YIpeHsVjiI8xGcC1+9gIw38tXoPQ==
   dependencies:
     chalk "2.1.0"
     color-convert "~1.2.2"
@@ -1389,10 +1389,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.41.tgz#6fb1322ca30df85934bac35b76fd6d0611f9ca73"
-  integrity sha512-Yfn5VepU+0m0Phop4nBiP4dQpicI5/tjAgQ3RQOrTvCGePoRaBNd7cCL48ClTQYspP3+22FM4V9pUXTKMHaVAw==
+"@code-dot-org/ml-playground@0.0.44":
+  version "0.0.44"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.44.tgz#39d8bf3b1387744512fe04bf0e529fdb5737645f"
+  integrity sha512-2AhxnUGErm3Vb4x4OU389CqvgxmikAs2vEHw2hyuRaQE6zVzvTM04JKN3hLjAbtShSRxSqZzpNoVeEPrJxMeAA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"
@@ -7977,7 +7977,7 @@ firmata-io@^2.3.0:
   resolved "https://registry.yarnpkg.com/firmata-io/-/firmata-io-2.3.0.tgz#6811563e75af4e876a789285b30d6d8a803c45c8"
   integrity sha512-OQ1Q0TInQ23ogI61kVwf3WJUD+viPbDI6uLN99yGLe6GioN3EbRSDSZVn1gEXyQLNjD2ZFVKnTbpiQ2t3VoecA==
 
-firmata@>=0.11.3, firmata@^2.2.0:
+firmata@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/firmata/-/firmata-2.3.0.tgz#9e3ea3c00db73c1c670502389b43e2377b244640"
   integrity sha512-6zl27bHtIlRFM2n5GnU7YeTM5qhRTHQDJ0Zgs8/O/KrbLz3BXIsJFs5Ek2QD6gMG3wgPPQGNaegbTZcj+mo84A==
@@ -13531,12 +13531,12 @@ pkg-up@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
-playground-io@code-dot-org/playground-io#v0.6.0-cdo.0:
-  version "0.6.0-cdo.0"
-  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/bcd92896945c2615926b4cc6b3d3f395bc080b38"
+playground-io@code-dot-org/playground-io#v0.6.0-cdo.2:
+  version "0.6.0-cdo.1"
+  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/6ce2d559579b9d671e4fef9855c884560f9c8013"
   dependencies:
     buffer "^4.6.0"
-    firmata ">=0.11.3"
+    firmata "^2.2.0"
     lodash.debounce "^4.0.3"
 
 pluralize@^7.0.0:

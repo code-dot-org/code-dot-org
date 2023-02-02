@@ -295,9 +295,9 @@ class AssetsTest < FilesApiTestBase
       Custom/ListRequests/AssetBucket/BucketHelper.list
     )
 
-    src_api.delete_object(URI.encode(image_filename))
+    src_api.delete_object(CGI.escape(image_filename))
     src_api.delete_object(sound_filename)
-    dest_api.delete_object(URI.encode(image_filename))
+    dest_api.delete_object(CGI.escape(image_filename))
     dest_api.delete_object(sound_filename)
     delete_channel(dest_channel_id)
   end
@@ -344,9 +344,9 @@ class AssetsTest < FilesApiTestBase
       Custom/ListRequests/AssetBucket/BucketHelper.list
     )
 
-    src_api.delete_object(URI.encode(image_filename))
+    src_api.delete_object(CGI.escape(image_filename))
     src_api.delete_object(sound_filename)
-    dest_api.delete_object(URI.encode(image_filename))
+    dest_api.delete_object(CGI.escape(image_filename))
     dest_api.delete_object(sound_filename)
     delete_channel(dest_channel_id)
   end
@@ -468,7 +468,7 @@ class AssetsTest < FilesApiTestBase
     FilesApi.any_instance.stubs(:max_app_size).returns(2000)
 
     # gradient.png's file size is 1559. Upload should only be successful if it is downsampled.
-    _, filetodelete1 = post_asset_file(@api, "existingFile.jpg", File.open("./test/fixtures/gradient.png").read, 'image/png')
+    _, filetodelete1 = post_asset_file(@api, "existingFile.jpg", File.read("./test/fixtures/gradient.png"), 'image/png')
     assert successful?, "Downsampled file upload is successful."
     @api.delete_object(filetodelete1)
 

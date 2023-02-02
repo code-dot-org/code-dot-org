@@ -165,6 +165,10 @@ ro:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -556,6 +560,10 @@ ro:
     alătura milioanelor de studenți din întreaga lume pentru a sărbători Săptămâna
     Educației în Informatică cu Ora de Cod. Vom deschide înregistrarea pentru celebrarea
     anuală în luna octombrie.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organizeaza un eveniment Hour of Code in perioada %{campaign_date}
     şi înregistreaza-l aici.
   signup_name_label: Numele tău
@@ -701,12 +709,12 @@ ro:
     in fiecare in an pentru a celebra ziua in care s-a nascut un pionier important
     in domeniul tehnologiei.<a href='%{grace_hopper}'>Admirarul Grace Murray Hopper</a>(Decembrie
     9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: Hour of Code are loc are loc în fiecare an în timpul
-    [Săptămâna de Educație în Informatică](%{csedweek_url}). %{campaign_date_year}
+  hoc_faq_when_is_hoc_a_markdown: Hour of Code are loc are loc în fiecare an pe parcursul
+    [Săptămânii de Educație în Informatică](%{csedweek_url}). %{campaign_date_year}
     Săptămâna de Educație în Informatică va fi %{campaign_date_full}, dar puteți găzdui
-    Hour of Code tot anul. Săptămâna de Educație în Informatică se ține anual în semn
-    de apreciere a zilei de naștere a pionierului în calculatoare [Amiral Grace Murray
-    Hopper](%{grace_hopper}) (9 decembrie 1906).
+    Hour of Code in orice perioadă a anului. Săptămâna de Educație în Informatică
+    se ține anual în semn de apreciere a zilei de naștere a pionierului în calculatoare
+    [Amiral Grace Murray Hopper](%{grace_hopper}) (9 decembrie 1906).
   hoc_faq_why_cs_q: De ce tehnologia computerelor si programare?
   hoc_faq_why_cs_a: "<i>Fiecare</i> elev ar trebui să aibă posibilitatea de a învata
     tehnologia computerelor. Ajută la dezvoltarea abilităților de rezolvare a problemelor,
@@ -730,16 +738,16 @@ ro:
     non-profit sau, de ce nu, la muncă. Sau, incearca-l chiar tu cand%{campaign_date}
     \ este organizat de altcineva."
   hoc_faq_behind_hoc_q: Cine este în spatele Hour of Code?
-  hoc_faq_behind_hoc_a: Hour of Code este coordonată de Săptămâna Hour of Code și
-    Educație în domeniul științei calculatoarelor - <a href='%{partner_url}'>Comitetele
-    de Consultanță și Analiză</a> - precum și de o coaliție de parteneri fără precedent,
-    care s-au alăturat pentru a sprijini Hour of Code - inclusiv Microsoft, Apple,
-    Amazon, Boys and Girls Clubs of America și Comisia pentru Educație.
-  hoc_faq_behind_hoc_a_markdown: Hour of Code este coordonată de Săptămâna Hour of
-    Code și Educație în domeniul științei calculatoarelor [Comitetele de Consultanță
-    și Analiză](%{partner_url}) precum și de o coaliție de parteneri fără precedent,
-    care s-au alăturat pentru a sprijini Hour of Code - inclusiv Microsoft, Apple,
-    Amazon, Boys and Girls Clubs of America și Comisia pentru Educație.
+  hoc_faq_behind_hoc_a: Hour of Code este organizată de Code.orgsi și este ținută
+    atât de Hour of Code Review Committee cât și de o grupare de  - <a href='%{partner_url}'>Comitete
+    de Consultanță și Analiză</a> - care s-a alăturat pentru a sprijini Hour of Code
+    - printre care Microsoft, Apple, Amazon, Boys and Girls Clubs of America și Comisia
+    pentru Educație.
+  hoc_faq_behind_hoc_a_markdown: Hour of Code este organizată de Code.org si ținută
+    atât de Hour of Code Review Committee[Comitetele de Consultanță și Analiză](%{partner_url})
+    precum și de o mulțime de parteneri, care s-au alăturat pentru a sprijini Hour
+    of Code - inclusiv Microsoft, Apple, Amazon, Boys and Girls Clubs of America și
+    Comisia pentru Educație.
   hoc_faq_host_q: Nu ştiu nimic despre programare. Pot să organizez un eveniment?
   hoc_faq_host_a: Desigur. Activităţile Hour of Code sunt autodidacte si pot fi realizate
     individual. Tot ce trebuie să faceţi este <a href='%{codeorg_url}/learn'> să accesaţi
@@ -748,10 +756,10 @@ ro:
     de la grădiniţă in sus. Începeți planificarea evenimentului dumneavoastră citind
     <a href='/resources/how-to'>ghidul de organizare</a>.
   hoc_faq_host_a_markdown: Bineînțeles. Activitățile Hour of Code sunt autoghidate.
-    Tot ce trebuie să faci este să [încerci tutorialele noastre actuale](%{codeorg_url}/learn),
-    alege tutorialul pe care îl dorești, alege o oră - noi avem grijă de restul. Avem
-    de asemenea opțiuni pentru fiecare vârstă și nivel de experiență, de la grădiniță
-    în sus. Începe să îți planifici evenimentul prin a citi [cum să te ghidezi](%{howto}).
+    Tot ce trebuie să faci este să [încerci tutorialele noastre prezente](%{codeorg_url}/learn),
+    alege tutorialul pe care îl dorești, alege o oră și noi vom avea  grijă de restul.
+    Avem de asemenea opțiuni pentru fiecare vârstă și nivel de experiență, de la grădiniță
+    în sus. Începe să îți planifici evenimentul prin a citi [cum să  ghidezi](%{howto}).
   hoc_faq_devices_q: Ce dispozitive ar trebui să utilizez pentru elevii mei?
   hoc_faq_devices_a: Tutorialele Code.org funcționează pe toate dispozitivele și în
     toate browserele. Puteți vedea mai multe informații referitoare la cerințele de
@@ -765,8 +773,9 @@ ro:
     și browserele. Poți vedea mai multe informații despre necesitățile tehnice ale
     tutorialelor Code.org [here](%{codeorg_url}/educate/it). Necesitățile tehnice
     ale tutorialelor non-Code.org pot fi găsite la [%{partner_url}/learn](%{codeorg_url}/learn)
-    în descrierea specifică a tutorialului. Nu uita că oferim de asemenea [activități
-    deconectate](%{unplugged_url}) dacă școala nu poate găzdui tutorialele!
+    în descrierea specifică a tutorialului. Nu uita că oferim inclusiv [activități
+    ce nu necesită conectarea la internet](%{unplugged_url}) dacă școala nu poate
+    găzdui tutorialele!
   hoc_faq_need_computers_q: Am nevoie de calculator pentru fiecare participant?
   hoc_faq_need_computers_a: Nu. Avem Tutoriale Hour of Code care funcționează pe PC-uri,
     smartphone-uri, tablete şi chiar unele care nu necesită nici un calculator! Puteţi
@@ -1086,6 +1095,10 @@ ro:
   footer_menu_terms: Termeni
   footer_menu_privacy: Politică de Confidenţialitate
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Încearcă un tutorial de o oră conceput pentru toate vârstele
     în peste 45 de limbi.  Alătură-te milioanelor de elevi și profesori din peste
@@ -7412,8 +7425,8 @@ ro:
   tutorial_irobotphone_string_platforms: Toate browserele moderne
   tutorial_codeguppydraw_string_platforms: Toate browserele moderne
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: Toate browserele moderne, tableta Android,
-    iPad
+  tutorial_meeempathy_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -9482,7 +9495,8 @@ ro:
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: Toate browserele moderne
   tutorial_rpisensehat_string_platforms: Toate browserele moderne
-  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_mee_string_platforms: All modern browsers, Mac, Windows, Chromebook, iPhone,
+    iPad, Android phone, Android tablet
   tutorial_kuborobo_string_platforms: Unplugged
   tutorial_ai-oceans_string_platforms: |2-
 
@@ -9991,10 +10005,12 @@ ro:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10324,8 +10340,8 @@ ro:
   tutorial_microsoftforest_string_platforms: Toate browserele moderne
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Toate browserele moderne
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: All modern browsers, Mac, Windows,
+    Chromebook, iPhone, iPad, Android phone, Android tablet
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: Toate browserele moderne
   tutorial_codeartportrait_string_platforms: Toate browserele moderne, tableta Android,
@@ -10715,6 +10731,10 @@ ro:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -11058,6 +11078,18 @@ ro:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Grades 2-5
   tutorial_rpledfirefly_string_detail_grades: Clasele 6-8 (vârste 11-13)
   tutorial_rpcharting_string_detail_grades: Clasele IX+
@@ -11150,6 +11182,10 @@ ro:
   tutorial_nasapackage_string_detail_grades: Clasele 6-8 (vârste 11-13)
   tutorial_nasalunar_string_detail_grades: Clasele 6-8 (vârste 11-13)
   tutorial_meeestate_string_detail_grades: Clasele II+
+  tutorial_imagipixelart_string_detail_grades: Grades 2-8
+  tutorial_kcjhealth_string_detail_grades: Gradul 6 și peste
+  tutorial_msftwakanda_string_detail_grades: Gradul 6 și peste
+  tutorial_nafbrand_string_detail_grades: Clasele IX+
   tutorial_rpccw_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_rpledfirefly_string_platforms: Toate browserele moderne
@@ -11269,8 +11305,14 @@ ro:
   tutorial_nasaorbit_string_platforms: Toate browserele moderne
   tutorial_nasapackage_string_platforms: Toate browserele moderne
   tutorial_nasalunar_string_platforms: All modern browsers, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: Toate browserele moderne
+  tutorial_msftwakanda_string_platforms: Toate browserele moderne
+  tutorial_nafbrand_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11364,6 +11406,10 @@ ro:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Blocuri
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11462,29 +11508,10 @@ ro:
   tutorial_nasapackage_string_detail_programming_languages: Blocuri
   tutorial_nasalunar_string_detail_programming_languages: Blocuri, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Blocks, Python
-  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
-    animations in this 1 hour crash course!
-  tutorial_imagipixelart_name: Code your own pixel art!
-  tutorial_imagipixelart_string_detail_grades: Grades 2-8
-  tutorial_imagipixelart_string_detail_platforms: ''
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
-    Windows phone, Android phone, iPhone
-  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
-    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
-  tutorial_kcjhealth_name: The Health & Well-Being Challenge
-  tutorial_kcjhealth_string_detail_grades: Gradul 6 și peste
-  tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
-  tutorial_kcjhealth_string_platforms: Toate browserele moderne
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
-    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
-    ''Black Panther: Wakanda Forever''!'
-  tutorial_msftwakanda_name: Long Live Wakanda
-  tutorial_msftwakanda_string_detail_grades: Gradul 6 și peste
-  tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
-  tutorial_msftwakanda_string_platforms: Toate browserele moderne
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: Blocuri
+  tutorial_msftwakanda_string_detail_programming_languages: Blocuri
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
@@ -11541,6 +11568,13 @@ ro:
   all: All
   dont_know: I don't know
   language_label: Language
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

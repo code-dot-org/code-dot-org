@@ -1,5 +1,6 @@
 # Controller actions used only to facilitate UI tests.
 class TestController < ApplicationController
+  include Pd::Application::ActiveApplicationModels
   layout false
 
   def levelbuilder_access
@@ -26,6 +27,20 @@ class TestController < ApplicationController
   def facilitator_access
     return unless (user = current_user)
     user.permission = UserPermission::FACILITATOR
+    user.save!
+    head :ok
+  end
+
+  def program_manager_access
+    return unless (user = current_user)
+    user.permission = UserPermission::PROGRAM_MANAGER
+    user.save!
+    head :ok
+  end
+
+  def workshop_admin_access
+    return unless (user = current_user)
+    user.permission = UserPermission::WORKSHOP_ADMIN
     user.save!
     head :ok
   end
@@ -173,6 +188,129 @@ class TestController < ApplicationController
   def destroy_level
     level = Level.find(params[:id])
     level.destroy
+    head :ok
+  end
+
+  # Use the same data from pd_teacher_application_hash_common
+  # We can't use the factory directly because FactoryGirl is not available on prod
+  def teacher_form_data
+    {
+      school: School.first.id,
+      country: 'United States',
+      first_name: 'First',
+      last_name: 'Last',
+      alternate_email: 'ilovepotions@gmail.com',
+      phone: '5558675309',
+      gender_identity: 'Male',
+      race: ['Other'],
+      street_address: '333 Hogwarts Place',
+      city: 'Magic City',
+      state: 'Washington',
+      zip_code: '98101',
+      principal_role: 'Headmaster',
+      principal_first_name: 'Albus',
+      principal_last_name: 'Dumbledore',
+      principal_title: 'Dr.',
+      principal_email: 'socks@hogwarts.edu',
+      principal_confirm_email: 'socks@hogwarts.edu',
+      principal_phone_number: '5555882300',
+      current_role: 'Teacher',
+      committed: 'Yes',
+      willing_to_travel: 'Up to 50 miles',
+      agree: 'Yes',
+      completing_on_behalf_of_someone_else: 'No',
+      previous_yearlong_cdo_pd: ['CS in Science'],
+      enough_course_hours: Pd::Application::TeacherApplication.options[:enough_course_hours].first,
+      program: 'csp',
+      csp_which_grades: ['11', '12'],
+      csp_how_offer: 'As an AP course',
+      csd_which_grades: ['6', '7'],
+      csa_which_grades: ['11', '12'],
+      csa_how_offer: 'As an AP course',
+      csa_phone_screen: 'Yes',
+      csa_already_know: 'Yes',
+      replace_existing: 'No, this course will be added to the schedule in addition to an existing computer science course'
+    }
+  end
+
+  def create_teacher_application
+    return unless (user = current_user)
+    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}")
+
+    RegionalPartnerProgramManager.create!(program_manager_id: user.id, regional_partner_id: regional_partner.id)
+
+    teacher_name = "teacher#{Time.now.to_i}-#{rand(1_000_000)}"
+    teacher_email = "teacher#{Time.now.to_i}-#{rand(1_000_000)}@test.xx"
+    password = teacher_name + "password"
+    attributes = {
+      name: teacher_name,
+      email: teacher_email,
+      password: password,
+      user_type: "teacher",
+      age: "21+"
+    }
+    teacher = User.create!(attributes)
+
+    form_data = teacher_form_data.merge(
+      first_name: teacher_name,
+      last_name: 'Test',
+      program: Pd::Application::TeacherApplication::PROGRAMS[:csp]
+    ).to_json
+    application = Pd::Application::TeacherApplication.create!(
+      user: teacher,
+      form_data: form_data,
+      regional_partner_id: regional_partner.id,
+      course: 'csp',
+      status: 'unreviewed'
+    )
+
+    render json: {rp_id: regional_partner.id, teacher_id: teacher.id, application_id: application.id}
+  end
+
+  def create_applications
+    %w(csd csp csa).each do |course|
+      (Pd::Application::TeacherApplication.statuses).each do |status|
+        teacher_email = "#{course}_#{status}@code.org"
+        teacher = User.find_or_create_teacher(
+          {name: "#{course} #{status}", email: teacher_email}, nil, nil
+        )
+        next if Pd::Application::TeacherApplication.find_by(
+          application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR,
+          user_id: teacher.id
+        )
+
+        form_data = teacher_form_data.merge(
+          first_name: course,
+          last_name: status,
+          program: Pd::Application::TeacherApplication::PROGRAMS[course.to_sym]
+        ).to_json
+
+        if status == 'incomplete'
+          Pd::Application::TeacherApplication.create!(
+            form_data: form_data,
+            user: teacher,
+            course: course,
+            status: 'incomplete'
+          )
+        else
+          application = Pd::Application::TeacherApplication.create!(
+            form_data: form_data,
+            user: teacher,
+            course: course,
+            status: 'unreviewed'
+          )
+          application.update!(status: status)
+        end
+      end
+    end
+    head :ok
+  end
+
+  def delete_rp_pm_teacher_application
+    RegionalPartner.find(params[:rp_id].to_i).destroy
+    Pd::Application::TeacherApplication.find(params[:application_id].to_i).destroy
+    User.find(params[:teacher_id].to_i).destroy
+    User.find_by(name: params[:pm_name]).destroy
     head :ok
   end
 end

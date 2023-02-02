@@ -712,7 +712,7 @@ class FilesApi < Sinatra::Base
     #     }
     #   ]
     # }
-    {"filesVersionId": result[:version_id], "files": JSON.parse(result[:body].read)}.to_json
+    {filesVersionId: result[:version_id], files: JSON.parse(result[:body].read)}.to_json
   end
 
   #
@@ -749,12 +749,12 @@ class FilesApi < Sinatra::Base
         new_entry_json = copy_file(
           'files',
           encrypted_channel_id,
-          URI.encode(unescaped_filename_downcased),
-          URI.encode(unescaped_src_filename_downcased)
+          CGI.escape(unescaped_filename_downcased),
+          CGI.escape(unescaped_src_filename_downcased)
         )
       end
     else
-      new_entry_json = put_file('files', encrypted_channel_id, URI.encode(unescaped_filename_downcased), body)
+      new_entry_json = put_file('files', encrypted_channel_id, CGI.escape(unescaped_filename_downcased), body)
     end
     new_entry_hash = JSON.parse new_entry_json
     # Replace downcased filename with original filename (to preserve case in the manifest)
@@ -793,7 +793,7 @@ class FilesApi < Sinatra::Base
 
     # delete a file if requested (same as src file in a rename operation)
     if deleting_separate_file
-      bucket.delete(encrypted_channel_id, URI.encode(unescaped_delete_filename_downcased))
+      bucket.delete(encrypted_channel_id, CGI.escape(unescaped_delete_filename_downcased))
     end
 
     # return the new entry info
@@ -941,7 +941,7 @@ class FilesApi < Sinatra::Base
     manifest_json = manifest.to_json
     result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json, nil, abuse_score)
 
-    {"filesVersionId": result[:version_id], "files": manifest}.to_json
+    {filesVersionId: result[:version_id], files: manifest}.to_json
   end
 
   #

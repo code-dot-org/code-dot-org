@@ -31,8 +31,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -87,8 +87,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -149,8 +149,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -173,8 +173,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -323,8 +323,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -351,8 +351,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -478,8 +478,8 @@ fr:
           COSTUME:
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -607,8 +607,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -681,8 +681,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -717,8 +717,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -744,8 +744,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -761,8 +761,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -786,8 +786,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -821,8 +821,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -866,8 +866,8 @@ fr:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
             '"BEAR"': les ours
-            '"CAT"': tous les chats
-            '"DOG"': tous les chiens
+            '"CAT"': les chats
+            '"DOG"': les chiens
             '"DUCK"': les canards
             '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
@@ -1082,7 +1082,7 @@ fr:
           BEHAVIOR:
             new Behavior(spinning_right, []): tournoyer à droite
             new Behavior(spinning_left, []): tournoyer à gauche
-            new Behavior(fluttering, []): flotter
+            new Behavior(fluttering, []): voleter
             new Behavior(jittering, []): gigoter
             new Behavior(wobbling, []): chanceler
             new Behavior(wandering, []): se balader
@@ -1552,7 +1552,7 @@ fr:
             '"I''m so hungry."': J'ai tellement faim.
             '"I''m a visitor in this town."': Je suis un visiteur dans cette ville.
             '"If we share, we''ll all have something to eat. "': Si on partage, on aura tous quelque chose à manger.
-            '"I''ll trick everyone into giving me their food."': Je vais faire un tour à tout le monde pour les amener à me donner leur nourriture.
+            '"I''ll trick everyone into giving me their food."': Je vais jouer un tour à tout le monde pour les faire me donner leur nourriture.
       gamelab_startAvoiding:
         text: "{SPRITE} se met à éviter {TARGET}"
       gamelab_startFollowing:
@@ -1856,11 +1856,11 @@ fr:
           TEXT1:
             '"Balancing on the "': '"Balancing on the"'
             '"A chubby cat "': '"A chubby cat"'
-            '"The "': '"The "'
+            '"The "': "\"The « "
           TEXT2:
-            '" fence"': '" fence"'
+            '" fence"':  » fence"
             '""': '""'
-            '" breeze blows"': '" breeze blows"'
+            '" breeze blows"':  » breeze blows"
       Mikelab_randomColor:
         text: couleur aléatoire
       Mikelab_removeBehaviorSimple:
@@ -1945,7 +1945,7 @@ fr:
         text: en appuyant sur {KEY}
         options:
           KEY:
-            '"up"': flèche « vers le haut »
+            '"up"': flèche « vers le haut »
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
@@ -1957,7 +1957,7 @@ fr:
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': flèche « vers le haut »
+            '"up"': flèche « vers le haut »
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
@@ -1977,7 +1977,7 @@ fr:
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': flèche « vers le haut »
+            '"up"': flèche « vers le haut »
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
@@ -2209,7 +2209,7 @@ fr:
         text: 'Le lutin {ANIMATION_NAME} commence {BEHAVIOR}. '
         options:
           BEHAVIOR:
-            '"fluttering"': flotter
+            '"fluttering"': voleter
             '"growing"': grandir
             '"jittering"': gigoter
             '"shrinking"': se rétrécir
@@ -2222,7 +2222,7 @@ fr:
         text: 'Le lutin {ANIMATION_NAME} arrête {BEHAVIOR}. '
         options:
           BEHAVIOR:
-            '"fluttering"': flotter
+            '"fluttering"': voleter
             '"growing"': grandir
             '"jittering"': gigoter
             '"shrinking"': se rétrécir

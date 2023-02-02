@@ -37,7 +37,8 @@ function initializeEditPage(defaultSprites) {
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
-    typeHints: true
+    typeHints: true,
+    isBlockEditMode: true
   });
 
   const blockConfigElement = document.getElementById('block_config');

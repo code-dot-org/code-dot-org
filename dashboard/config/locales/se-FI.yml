@@ -693,22 +693,14 @@ se:
         ja de juoge app:a jođánit.
       audience: Agit 13+
       cta: Oahpa movt
-    hoc:
-      title: Klassikalaš Labirynta
-      body: Geahččal vuođđoDihtorDiehtaga. Millijovnnat leat juo geahččalan.
+    aquatic:
+      title: Minecraft
     flappy:
       title: Flappy Koda
       body: Háliidat go čállit iežat spealu 10 minuvttas? Geahččal min Flappy Koda
         neavvaga!
-    20-hour:
-      title: Akselerejuvvon Kursa
-      body: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema vuođđodoahpagiid
-        kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča kurssaid 2-4 vai beasat
-        oažžut ollislaš vásáhusa!
-      body_short: Oahpa vuođđodihtordiehtaga akselerejuvvon veršuvnnain kurssain 2-4.
-    hoc2014:
-      try_new_tutorial: Geahččal min ođđa KodenDiimmu neavvaga beta hámis
-      try_frozen: Dáiddár Annain ja Elsain, Jikŋon filmmas
+    frozen:
+      title: Jikŋon
     gallery:
       title: Galleriija
       body: Geahča app:a ja dáiddárgovvagalleriijas maid min geavaheaddjit leat ráhkadan
@@ -717,18 +709,16 @@ se:
         ja spealuid main leat objeavttat ja speallanfigurat mat doibmet nubbi nuppiin.
       audience: Agit 13+
       cta: Oahpa movt
+    hero:
+      title: Minecraft
     hoc-encryption:
       body: Oahppit ohppet teknihkaid ráhkadit ja čoavdit krypterejuvvon dieđuid.
-    weblab:
-      title: Web Lab (beta)
-      body: Web Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis  neahttasiidduid
-        geavahemiin HTML ja CSS. Ráhkat iežat neahttasiiddu ja juoge dan jođánit.
-      audience: Agit 13+
-      cta: Oahpa movt
-    frozen:
-      title: Jikŋon
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Klassikalaš Labirynta
+      body: Geahččal vuođđoDihtorDiehtaga. Millijovnnat leat juo geahččalan.
+    hoc2014:
+      try_new_tutorial: Geahččal min ođđa KodenDiimmu neavvaga beta hámis
+      try_frozen: Dáiddár Annain ja Elsain, Jikŋon filmmas
     infinity:
       title: Infinitiija Speallan-lab
       body: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija
@@ -739,16 +729,30 @@ se:
     minecraft2016:
       title: Minecraft
       body: Programmere elliid dahje eará Minecraft heakkalaččaid du iežat Minecraft-veršuvnnas.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
     sports:
       body: Ráhkat Gorespábba-spealu dahje seagut falástallansurggiid.
+    starwars:
+      title: Star Wars
     text-compression:
       title: TeakstaKomprimeren
       body: Dán lekšuvnnas oahppit geavahit Teakstakomprimeren Modula komprimeret
         teavstta molsumiin minstariid ja symbolaid.
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis  neahttasiidduid
+        geavahemiin HTML ja CSS. Ráhkat iežat neahttasiiddu ja juoge dan jođánit.
+      audience: Agit 13+
+      cta: Oahpa movt
+    widgets:
+      title: Modulat
+      body: Oahppit sáhttet suokkardallat konseaptaid dihtodiehtaga prinsihppakurssas,
+        ja geavahit dáid digitála reaidduid. Geavat modulaid ieš, dahje ráhkat okta-konsepta
+        lekšuvnna du klássii.
+      audience: Agit 14+
+      cta: Oahpa movt
+    unplugged_conditionals:
+      body: Oahpa algoritmmaid dahje  evttolaš dadjamiid dán “neahtahaga” doaimmas
+        go geavahat speallankoarttaid.
     unplugged:
       title: Neahtahaga lekšuvnnat
       audience: Agit 4+
@@ -758,16 +762,12 @@ se:
         dievasmahtton lekšuvdnan juohke DihtorDiehtaga kursii.
       body_short: Jus dus eai leat dihtorat, geahččal dáid neahtahaga lekšuvnnaid
         du klássalanjas.
-    unplugged_conditionals:
-      body: Oahpa algoritmmaid dahje  evttolaš dadjamiid dán “neahtahaga” doaimmas
-        go geavahat speallankoarttaid.
-    widgets:
-      title: Modulat
-      body: Oahppit sáhttet suokkardallat konseaptaid dihtodiehtaga prinsihppakurssas,
-        ja geavahit dáid digitála reaidduid. Geavat modulaid ieš, dahje ráhkat okta-konsepta
-        lekšuvnna du klássii.
-      audience: Agit 14+
-      cta: Oahpa movt
+    20-hour:
+      title: Akselerejuvvon Kursa
+      body: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema vuođđodoahpagiid
+        kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča kurssaid 2-4 vai beasat
+        oažžut ollislaš vásáhusa!
+      body_short: Oahpa vuođđodihtordiehtaga akselerejuvvon veršuvnnain kurssain 2-4.
   landing:
     prerelease_tutorial: Dát neava lea ** beta **. Dán geahččaladdame ja dát rievdaduvvo
       go oažžut vástádusaid.

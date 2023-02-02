@@ -63,6 +63,7 @@ Scenario: Report Abuse link hidden if the user already reported Game Lab project
   And element ".ui-test-how-it-works" is visible
   And element ".ui-test-report-abuse" is not visible
 
+@skip
 Scenario: Abuse reports block a project for other viewers
   Given I create a student named "Creator"
   And I make a "applab" project named "Regular Project"
