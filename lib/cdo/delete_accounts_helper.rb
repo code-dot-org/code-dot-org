@@ -125,7 +125,7 @@ class DeleteAccountsHelper
     ActiveRecord::Base.connection.exec_query(
       sql_query_to_anonymize_field(
         "pd_teachercon1819_registrations",
-        {'form_data' => '""', 'user_id' => "NULL"},
+        {'form_data' => '""'},
         {'user_id' => user_id}
       )
     )
