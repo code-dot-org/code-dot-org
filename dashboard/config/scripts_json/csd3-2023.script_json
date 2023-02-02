@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-02-01 00:58:26 UTC",
+    "serialized_at": "2023-02-01 18:17:44 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -17078,7 +17078,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "Additional information provided as input to a block to customize it's functionality",
+      "definition": "Additional information provided as input to a block to customize its functionality",
       "properties": {
       },
       "seeding_key": {
