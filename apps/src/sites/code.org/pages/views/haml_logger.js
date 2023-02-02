@@ -20,7 +20,7 @@ const page_to_event_map = {
 };
 
 $(document).ready(() => {
-  const haml_logger = $('#haml-logger');
-  const sourcePageId = haml_logger.data('page-visited');
+  const haml_logger = document.getElementById('haml-logger');
+  const sourcePageId = haml_logger.dataset.pageVisited;
   analyticsReporter.sendEvent(page_to_event_map[sourcePageId]);
 });
