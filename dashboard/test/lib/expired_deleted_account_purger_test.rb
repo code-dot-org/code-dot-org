@@ -274,7 +274,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     refute_nil autoretryable.purged_at
 
     # The autoretryable queued account purge record should be gone
-    refute QueuedAccountPurge.where(id: qap.id).exists?
+    refute QueuedAccountPurge.exists?(id: qap.id)
   end
 
   test 'moves account to queue when purge fails' do
