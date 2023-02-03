@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {
   FormGroup,
@@ -24,6 +24,8 @@ import {
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
@@ -36,6 +38,8 @@ const FindYourRegion = props => {
   const hasNoProgramSelected = data.program === undefined;
   const resetCountry = () => onChange({country: US});
   const [regionalPartner] = useRegionalPartner(data);
+  const [lastRPLogged, setLastRPLogged] = useState(regionalPartner?.name);
+
   useEffect(() => {
     onChange({
       regionalPartnerId: regionalPartner?.id,
@@ -44,7 +48,27 @@ const FindYourRegion = props => {
         workshop => workshop.id
       )
     });
-  }, [regionalPartner, onChange]);
+
+    // If Regional Partner changes, log their name:
+    if (!regionalPartner?.name && lastRPLogged !== 'No Partner') {
+      // Before school data is modified, log that they are not yet associated
+      // with a Regional Partner.
+      logRegionalPartnerFound('No Partner');
+    } else if (
+      regionalPartner?.name &&
+      regionalPartner?.name !== lastRPLogged
+    ) {
+      // On a Regional Partner change, log the new Regional Partner's name.
+      logRegionalPartnerFound(regionalPartner?.name);
+    }
+  }, [regionalPartner, data, lastRPLogged, onChange]);
+
+  const logRegionalPartnerFound = name => {
+    setLastRPLogged(name);
+    analyticsReporter.sendEvent(EVENTS.RP_FOUND_EVENT, {
+      'regional partner': name
+    });
+  };
 
   const renderInternationalModal = () => {
     return (
@@ -82,6 +106,11 @@ const FindYourRegion = props => {
       school: selectedSchool?.value,
       schoolZipCode: selectedSchool?.school?.zip
     });
+    if (selectedSchool) {
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_ID_CHANGED_EVENT, {
+        'school id': selectedSchool.value
+      });
+    }
   };
 
   const renderRegionalPartnerInfo = () => {

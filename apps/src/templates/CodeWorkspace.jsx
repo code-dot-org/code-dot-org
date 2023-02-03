@@ -24,6 +24,7 @@ class CodeWorkspace extends React.Component {
   static propTypes = {
     displayNotStartedBanner: PropTypes.bool,
     displayOldVersionBanner: PropTypes.bool,
+    inStartBlocksMode: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -266,6 +267,11 @@ class CodeWorkspace extends React.Component {
             {i18n.oldVersionWarning()}
           </div>
         )}
+        {!this.props.editCode && this.props.inStartBlocksMode && (
+          <div id="startBlocksBanner" style={styles.startBlocksBanner}>
+            {i18n.inStartBlocksMode()}
+          </div>
+        )}
         {props.showDebugger && (
           <JsDebugger
             onSlideShut={this.onDebuggerSlide}
@@ -304,6 +310,14 @@ const styles = {
     opacity: 0.9,
     position: 'relative'
   },
+  startBlocksBanner: {
+    zIndex: 99,
+    backgroundColor: color.lighter_yellow,
+    height: 20,
+    padding: 5,
+    opacity: 0.9,
+    position: 'relative'
+  },
   chevronButton: {
     padding: 0,
     margin: 0,
@@ -331,6 +345,7 @@ export default connect(
     displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
     displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
     editCode: state.pageConstants.isDroplet,
+    inStartBlocksMode: state.pageConstants.inStartBlocksMode,
     isRtl: state.isRtl,
     readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     isRunning: !!state.runState.isRunning,
