@@ -1730,8 +1730,10 @@ describe('teacherSectionsRedux', () => {
         sectionLoginType: testSection.loginType,
         previousUnitId: testSection.unitId,
         previousCourseId: testSection.courseOfferingId,
+        previousCourseVersionId: testSection.courseVersionId,
         newUnitId: 103,
-        newCourseId: 101
+        newCourseId: 101,
+        newCourseVersionId: 102
       });
     });
 
@@ -1753,13 +1755,15 @@ describe('teacherSectionsRedux', () => {
         sectionLoginType: testSection.loginType,
         previousUnitId: testSection.unitId,
         previousCourseId: testSection.courseOfferingId,
+        previousCourseVersionId: testSection.courseVersionId,
         newUnitId: 7,
-        newCourseId: testSection.courseOfferingId
+        newCourseId: testSection.courseOfferingId,
+        newCourseVersionId: testSection.courseVersionId
       });
     });
 
     it('doesnt send an event when course offering is unchanged', () => {
-      store.dispatch(assignToSection(11, 2, 2, 102, null));
+      store.dispatch(assignToSection(11, 2, 2, 3, null));
       expect(analyticsSpy).to.not.be.called;
     });
   });
