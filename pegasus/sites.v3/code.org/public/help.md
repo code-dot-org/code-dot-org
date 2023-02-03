@@ -22,13 +22,6 @@ style_min: true
     width: 75px !important;
     margin: 7px -10px;
   }
-
-  .button {
-    paddingLeft: 0;
-    paddingRight: 0;
-    width: 100%;
-    margin: 5px 0px 0px 0px
-  }
 </style>
 
 # How to Help
@@ -36,9 +29,7 @@ style_min: true
 ## Make a generous donation
 We're working to give every student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. For every dollar you donate, one child will be introduced to computer science.
 
-<button onclick="window.location.href='https://donate.code.org/give/172233/#!/donation/checkout';">Donate now</button> <button onclick="window.location.href='https://donate.code.org/campaign/computer-science-education/c142257';">Start a fundraiser</button>
-<a href=https://donate.code.org/give/172233/#!/donation/checkout class="button">Donate now</a>
-
+[<button>Donate now</button>](https://donate.code.org/give/172233/#!/donation/checkout)     [<button>Start a fundraiser</button>](https://donate.code.org/campaign/computer-science-education/c142257)
 
 ## Have Amazon make a donation for you
 If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
