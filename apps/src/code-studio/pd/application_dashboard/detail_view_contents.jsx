@@ -101,8 +101,6 @@ export class DetailViewContents extends React.Component {
       pd_workshop_name: PropTypes.string,
       pd_workshop_url: PropTypes.string,
       application_guid: PropTypes.string,
-      registered_teachercon: PropTypes.bool,
-      attending_teachercon: PropTypes.bool,
       school_stats: PropTypes.object,
       status_change_log: PropTypes.arrayOf(PropTypes.object),
       scholarship_status: PropTypes.string,

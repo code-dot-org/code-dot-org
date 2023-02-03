@@ -37,7 +37,6 @@ describe('DetailViewContents', () => {
     application_year: '2019-2020',
     course_name: 'CS Discoveries',
     course: 'csd',
-    registered_teachercon: false,
     form_data: {
       firstName: 'First Name',
       lastName: 'Last Name',
@@ -231,22 +230,6 @@ describe('DetailViewContents', () => {
         .first();
 
       expect(deleteApplicationMenuitem).to.have.length(1);
-    });
-
-    it('Does not have delete registration menu items if there are not registrations', () => {
-      const detailView = mountDetailView({
-        isWorkshopAdmin: true
-      });
-      detailView
-        .find('button#admin-edit')
-        .first()
-        .simulate('click');
-      const deleteTeacherconRegistrationMenuitem = detailView
-        .find('.dropdown.open a')
-        .findWhere(a => a.text() === 'Delete Teachercon Registration')
-        .first();
-
-      expect(deleteTeacherconRegistrationMenuitem).to.have.length(0);
     });
   });
 
