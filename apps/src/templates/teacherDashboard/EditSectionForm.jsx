@@ -187,6 +187,9 @@ class EditSectionForm extends Component {
         (section.unitId && section.unitId !== initialUnitId))
     ) {
       analyticsReporter.sendEvent(CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
         previousUnitId: initialUnitId,
         previousCourseId: initialCourseOfferingId,
         previousVersionYear: initialVersionYear,
