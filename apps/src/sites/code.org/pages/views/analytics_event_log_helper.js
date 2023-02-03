@@ -9,7 +9,7 @@ document.addEventListener('customLogEvent', e => {
 
 // Log visits to .erb file pages on document.ready.
 $(document).ready(() => {
-  const eventLogger = document.getElementById('haml-logger');
+  const eventLogger = document.getElementById('analytics-event-log-helper');
   const pageVisitEventName = eventLogger?.dataset?.eventName;
   if (pageVisitEventName) {
     logEvent(pageVisitEventName);
