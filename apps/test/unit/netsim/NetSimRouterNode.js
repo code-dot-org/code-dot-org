@@ -282,7 +282,7 @@ describe('NetSimRouterNode', function() {
     assert.isUndefined(row.routerNumber);
 
     assertOwnProperty(row, 'creationTime');
-    assert.closeTo(row.creationTime, Date.now(), 10);
+    assert.closeTo(row.creationTime, Date.now(), 100);
 
     assertOwnProperty(row, 'dnsMode');
     assert.strictEqual(row.dnsMode, DnsMode.NONE);

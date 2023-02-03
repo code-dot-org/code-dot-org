@@ -170,15 +170,6 @@ def main
   )
 
   generate_shared_js_file(
-    generate_multiple_constants(
-      %w(TEACHER_SEAT_ACCEPTANCE_OPTIONS TEXT_FIELDS),
-      source_module: Pd::Teachercon1819RegistrationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/teachercon1819RegistrationConstants.js"
-  )
-
-  generate_shared_js_file(
     generate_constants(
       'COURSE_SPECIFIC_SCHOLARSHIP_DROPDOWN_OPTIONS',
       source_module: Pd::ScholarshipInfoConstants,
