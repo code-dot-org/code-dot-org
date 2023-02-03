@@ -1,0 +1,130 @@
+@import 'color', 'font';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 14px !important;
+  color: $neutral-dark;
+}
+
+h2 {
+  margin-bottom: .5em;
+}
+
+h4 {
+  color: $neutral-dark;
+}
+
+h5 {
+  font-family: $gotham-bold, sans-serif;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.4;
+
+  &.text-small {
+    font-size: .875em;
+  }
+}
+
+strong {
+  font-family: $gotham-bold, sans-serif;
+}
+
+// Links & Buttons
+p a,
+p a:visited,
+p a:link,
+a,
+a:visited,
+a:link {
+  font-family: $gotham-bold, sans-serif;
+  color: $brand_secondary_default;
+  text-decoration: underline;
+  transition: all ease-in-out .2s;
+
+  &:hover {
+    color: $brand_secondary_dark;
+    text-decoration: underline;
+  }
+}
+
+a.link-button,
+button,
+.btn {
+  height: unset;
+  display: inline-block;
+  color: white;
+  background-color: $brand_secondary_default;
+  border: 2px solid $brand_secondary_default;
+  border-radius: 4px;
+  padding: .5em 1em;
+  margin: 0.5em 0;
+  font-size: 1em;
+  font-family: 'Gotham 5r', sans-serif;
+  text-decoration: none;
+  transition: all ease-in-out .2s;
+
+  &:hover {
+    color: white;
+    background-color: $brand_secondary_dark;
+    border-color: $brand_secondary_dark;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: $brand_primary_default solid 2px;
+    outline-offset: 2px;
+  }
+}
+
+a.link-button {
+  &.secondary {
+    background: none;
+    border-color: $neutral-dark;
+    color: $neutral-dark;
+
+    &:hover {
+      background: $neutral_dark10;
+    }
+  }
+}
+
+
+// Lists
+ul {
+  line-height: 1.6;
+  margin: 1em;
+
+  li:before {
+    color: $neutral-dark;
+  }
+}
+
+// FAQs
+details {
+  margin-bottom: 1.5em;
+
+  summary {
+    font-family: $gotham-bold, sans-serif;
+    font-size: 1.125em;
+    margin-bottom: .5em;
+  }
+}
+
+// Two column action block
+.two-col-action-block {
+  background: $neutral_light;
+  border: 1px solid $neutral_dark20;
+  display: flex;
+  align-items: top;
+
+  .text-wrapper {
+    padding: 1em 1.5em;
+  }
+}
