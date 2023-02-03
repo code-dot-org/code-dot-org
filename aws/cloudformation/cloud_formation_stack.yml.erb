@@ -43,8 +43,6 @@ Parameters:
   ConsoleInstanceType:
     Type: String
 <% end -%>
-Conditions:
-  IsProductionCondition: !And [!Equals [!Ref BaseDomainName, "code.org"], !Equals [!Ref DashboardSubDomainName, "studio"]]
 Resources:
   # Stack-specific IAM permissions applied to both daemon and frontends.
   CDOPolicy:
