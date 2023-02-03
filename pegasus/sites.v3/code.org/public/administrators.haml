@@ -6,10 +6,18 @@ theme: responsive_full_width
 %link{href: 'shared/css/phase1-design-system.css', rel: 'stylesheet'}
 %link{href: 'shared/css/phase1-design-system-supplement.css', rel: 'stylesheet'}
 
+-# Import FontAwesome Pro
+%script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
+
+-# FontAwesome icons
+- icon_rocket = "fa-regular fa-rocket"
+- icon_futbol = "fa-regular fa-futbol"
+- icon_paint = "fa-regular fa-paintbrush-pencil"
+
 %section
   .wrapper
     %h1 Code.org District Partner Program
-    %p Bring computer science to your district.
+    %h2 Bring computer science to your district.
     %p Learn how you can partner with Code.org to teach your students about the careers of the future.
 
 %section
@@ -28,12 +36,33 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2 Benefits of Code.org District Partnership
-
+    %ul.icon-bullet-list
+      %li
+        %i{class: "#{icon_rocket}"}
+        .text-wrapper
+          %h5 Turnkey K-12 computer science curriculum
+          %p Get a complete, free open source K-12 program to introduce computer science at any grade. Read more about our curriculum values.
+      %li
+        %i{class: "#{icon_rocket}"}
+        .text-wrapper
+          %h5 Turnkey K-12 computer science curriculum
+          %p Get a complete, free open source K-12 program to introduce computer science at any grade. Read more about our curriculum values.
+      %li
+        %i{class: "#{icon_rocket}"}
+        .text-wrapper
+          %h5 Turnkey K-12 computer science curriculum
+          %p Get a complete, free open source K-12 program to introduce computer science at any grade. Read more about our curriculum values.
+      %li
+        %i{class: "#{icon_rocket}"}
+        .text-wrapper
+          %h5 Turnkey K-12 computer science curriculum
+          %p Get a complete, free open source K-12 program to introduce computer science at any grade. Read more about our curriculum values.
     %a{href: '#email-signup-form', class: 'link-button'} Become a Code.org District Partner
 
 %section
   .wrapper
     %h2 What Districts are Saying
+    QUOTE HERE
 
 %a{id: 'email-signup-form'}
 %section
