@@ -37,7 +37,6 @@ describe('DetailViewContents', () => {
     application_year: '2019-2020',
     course_name: 'CS Discoveries',
     course: 'csd',
-    registered_fit_weekend: false,
     registered_teachercon: false,
     form_data: {
       firstName: 'First Name',
@@ -234,24 +233,6 @@ describe('DetailViewContents', () => {
       expect(deleteApplicationMenuitem).to.have.length(1);
     });
 
-    it('Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration', () => {
-      const overrides = {
-        isWorkshopAdmin: true,
-        applicationData: {registered_fit_weekend: true}
-      };
-      const detailView = mountDetailView(overrides);
-      detailView
-        .find('button#admin-edit')
-        .first()
-        .simulate('click');
-      const deleteFitWeekendRegistrationMenuitem = detailView
-        .find('.dropdown.open a')
-        .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
-        .first();
-
-      expect(deleteFitWeekendRegistrationMenuitem).to.have.length(1);
-    });
-
     it('Does not have delete registration menu items if there are not registrations', () => {
       const detailView = mountDetailView({
         isWorkshopAdmin: true
@@ -264,13 +245,8 @@ describe('DetailViewContents', () => {
         .find('.dropdown.open a')
         .findWhere(a => a.text() === 'Delete Teachercon Registration')
         .first();
-      const deleteFitWeekendRegistrationMenuitem = detailView
-        .find('.dropdown.open a')
-        .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
-        .first();
 
       expect(deleteTeacherconRegistrationMenuitem).to.have.length(0);
-      expect(deleteFitWeekendRegistrationMenuitem).to.have.length(0);
     });
   });
 
