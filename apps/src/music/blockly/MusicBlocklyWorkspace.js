@@ -8,7 +8,8 @@ import AppConfig from '../appConfig';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
-  PLAY_MULTI_MUTATOR
+  PLAY_MULTI_MUTATOR,
+  TRIGGER_FIELD
 } from './constants';
 import {
   dynamicTriggerExtension,
@@ -16,6 +17,10 @@ import {
   playMultiMutator
 } from './extensions';
 
+/**
+ * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
+ * workspace view, execute code, and save/load projects from local storage.
+ */
 export default class MusicBlocklyWorkspace {
   constructor() {
     this.codeHooks = {};
@@ -23,23 +28,26 @@ export default class MusicBlocklyWorkspace {
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
 
+  /**
+   * Initialize the Blockly workspace
+   * @param {*} container HTML element to inject the workspace into
+   * @param {*} onBlockSpaceChange callback fired when any block space change events occur
+   * @param {*} player reference to a {@link MusicPlayer}
+   */
   init(container, onBlockSpaceChange, player) {
     this.container = container;
 
-    Blockly.blockly_.Extensions.register(
+    Blockly.Extensions.register(
       DYNAMIC_TRIGGER_EXTENSION,
       dynamicTriggerExtension
     );
 
-    Blockly.blockly_.Extensions.register(
+    Blockly.Extensions.register(
       DEFAULT_TRACK_NAME_EXTENSION,
       getDefaultTrackNameExtension(player)
     );
 
-    Blockly.blockly_.Extensions.registerMutator(
-      PLAY_MULTI_MUTATOR,
-      playMultiMutator
-    );
+    Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
 
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
@@ -51,7 +59,7 @@ export default class MusicBlocklyWorkspace {
       Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
     }
 
-    Blockly.blockly_.fieldRegistry.register('field_sounds', FieldSounds);
+    Blockly.fieldRegistry.register('field_sounds', FieldSounds);
 
     this.workspace = Blockly.inject(container, {
       toolbox: getToolbox(),
@@ -91,6 +99,13 @@ export default class MusicBlocklyWorkspace {
     Blockly.svgResize(this.workspace);
   }
 
+  /**
+   * Generates executable code for all blocks in the workspace, then executes
+   * code only for events that are triggered when the play button is clicked
+   * (e.g. "When Run", "New Track").
+   *
+   * @param {*} scope Global scope to provide the execution runtime
+   */
   executeSong(scope) {
     Blockly.getGenerator().init(this.workspace);
 
@@ -122,7 +137,7 @@ export default class MusicBlocklyWorkspace {
           BlockTypes.NEW_TRACK_ON_TRIGGER
         ].includes(block.type)
       ) {
-        const id = block.getFieldValue('trigger');
+        const id = block.getFieldValue(TRIGGER_FIELD);
         events[this.triggerIdToEvent(id)] = {
           code: Blockly.JavaScript.blockToCode(block)
         };
@@ -148,6 +163,14 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
+  /**
+   * Executes code for the specific trigger referenced by the ID. It is
+   * assumed that {@link executeSong()} has already been called and all event
+   * hooks have already been generated, as triggers cannot be played until
+   * the song has started.
+   *
+   * @param {} id ID of the trigger
+   */
   executeTrigger(id) {
     const hook = this.codeHooks[this.triggerIdToEvent(id)];
     if (hook) {
@@ -175,17 +198,14 @@ export default class MusicBlocklyWorkspace {
     const existingCode = localStorage.getItem(this.getLocalStorageKeyName());
     if (existingCode) {
       const exitingCodeJson = JSON.parse(existingCode);
-      Blockly.blockly_.serialization.workspaces.load(
-        exitingCodeJson,
-        this.workspace
-      );
+      Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
     } else {
       this.resetCode();
     }
   }
 
   saveCode() {
-    const code = Blockly.blockly_.serialization.workspaces.save(this.workspace);
+    const code = Blockly.serialization.workspaces.save(this.workspace);
     const codeJson = JSON.stringify(code);
     localStorage.setItem(this.getLocalStorageKeyName(), codeJson);
   }
@@ -200,7 +220,7 @@ export default class MusicBlocklyWorkspace {
       defaultCodeFilename = 'defaultCodeTracks';
     }
     const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
-    Blockly.blockly_.serialization.workspaces.load(defaultCode, this.workspace);
+    Blockly.serialization.workspaces.load(defaultCode, this.workspace);
     this.saveCode();
   }
 
