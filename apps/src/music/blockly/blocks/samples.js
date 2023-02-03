@@ -7,7 +7,8 @@ import {
   EXTRA_SAMPLE_FIELD_PREFIX,
   FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
-  TRACK_NAME_FIELD
+  TRACK_NAME_FIELD,
+  TRIGGER_FIELD
 } from '../constants';
 
 // Examine chain of parents to see if one is 'when_run'.
@@ -197,7 +198,7 @@ export const newTrackOnTrigger = {
       },
       {
         type: 'input_dummy',
-        name: 'trigger'
+        name: TRIGGER_FIELD
       }
     ],
     inputsInline: true,
