@@ -27,10 +27,13 @@ const EVENTS = {
   HOMEPAGE_VISITED_EVENT: 'Homepage Visited',
   ADMIN_PAGE_VISITED_EVENT: 'Administrator Page Visited',
   TEACH_PAGE_VISITED_EVENT: 'Teach Page Visited',
+  AI_PAGE_VISIT_EVENT: 'AI Page Visited',
   CSA_CURRICULUM_PAGE_VISITED_EVENT: 'CSA Curriculum Page Visited',
+  CSC_CURRICULUM_PAGE_VISITED_EVENT: 'CSC Curriculum Page Visited',
   CSD_CURRICULUM_PAGE_VISITED_EVENT: 'CSD Curriculum Page Visited',
   CSF_CURRICULUM_PAGE_VISITED_EVENT: 'CSF Curriculum Page Visited',
   CSP_CURRICULUM_PAGE_VISITED_EVENT: 'CSP Curriculum Page Visited',
+  PHYSICAL_COMPUTING_PAGE_VISITED_EVENT: 'Physical Computing Page Visited',
   ELEMENTARY_CURRICULUM_PAGE_VISITED_EVENT:
     'Elementary School Curriculum Page Visited',
   MIDDLE_SCHOOL_CURRICULUM_PAGE_VISITED_EVENT:

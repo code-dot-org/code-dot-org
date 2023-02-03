@@ -1,0 +1,22 @@
+<%= view :haml_logger, event_name: nil %>
+
+<script type='text/javascript'>
+  // Log visits to the following pages found in .md.partial files.
+  const partialUrlToEventMap = {
+    '/ai': 'AI_PAGE_VISIT_EVENT',
+    '/educate/csc': 'CSC_CURRICULUM_PAGE_VISITED_EVENT',
+    '/maker': 'PHYSICAL_COMPUTING_PAGE_VISITED_EVENT'
+  };
+  const currHref = window.location.href;
+  Object.keys(partialUrlToEventMap).forEach(key => {
+    if (currHref.includes(key)) {
+      const visitEvent = new CustomEvent('logVisitInPartial', {
+        detail: {
+          eventName: partialUrlToEventMap[key]
+        }
+      });
+      document.dispatchEvent(visitEvent);
+      return;
+    }
+  });
+</script>
