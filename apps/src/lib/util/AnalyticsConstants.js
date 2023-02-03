@@ -46,6 +46,13 @@ const EVENTS = {
     'Middle And High School Professional Learning Page Visited',
   PICK_PL_PAGE_VISITED_EVENT: 'Pick Your Professional Learning Page Visited',
   RP_LANDING_PAGE_VISITED_EVENT: 'Regional Partner Landing Page Visited'
+
+  // Sections
+  CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
+  PROGRESS_VIEWED: 'Section Progress Viewed',
+  PROGRESS_TOGGLE: 'Section Progress Toggled',
+  PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
+  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson'
 };
 
 export {EVENTS};

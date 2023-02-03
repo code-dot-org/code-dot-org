@@ -98,7 +98,7 @@
         = f.select :age, age_options, include_blank: true
 
     - if ask_gender_experiment?(request, session.id.to_s)
-      - gender_input_type = gender_input_type?(request, session.id.to_s)
+      - gender_input_type = gender_input_type?(request, session)
       - SignUpTracking.log_gender_input_type_started(session, gender_input_type, request.locale, 'email_signup')
       - if gender_input_type != User::GenderExperimentHelper::GENDER_INPUT_TYPE_NONE
         .row#gender-dropdown{style: "display: none;"}
