@@ -10,7 +10,7 @@
   const currHref = window.location.href;
   Object.keys(partialUrlToEventMap).forEach(key => {
     if (currHref.includes(key)) {
-      const visitEvent = new CustomEvent('logVisitInPartial', {
+      const visitEvent = new CustomEvent('customLogEvent', {
         detail: {
           eventName: partialUrlToEventMap[key]
         }
