@@ -19,6 +19,11 @@ import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 
 $(document).ready(showHomepage);
 
@@ -36,6 +41,19 @@ function showHomepage() {
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
   store.dispatch(setLocaleCode(homepageData.localeCode));
+
+  // Send one analytics event when a teacher logs in. Use session storage to determine
+  // whether they've just logged in.
+  if (
+    isTeacher &&
+    tryGetLocalStorage(LOGGED_TEACHER_SESSION, 'false') !== 'true'
+  ) {
+    trySetLocalStorage(LOGGED_TEACHER_SESSION, 'true');
+
+    analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
+      'user id': homepageData.currentUserId
+    });
+  }
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));
