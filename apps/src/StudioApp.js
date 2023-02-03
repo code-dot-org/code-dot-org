@@ -1528,16 +1528,16 @@ StudioApp.prototype.resizeToolboxHeader = function() {
     const isRtl = getStore().getState().isRtl;
     const categories = document.querySelector('.droplet-palette-wrapper');
 
-    if (this.editor.session.paletteEnabled) {
-      // If in the droplet editor, set toolboxWidth based on the block palette width:
-      toolboxWidth = categories.getBoundingClientRect().width;
-    }
-
     if (isRtl) {
       // If Rtl - handle show/hide toolbox functionality
       categories.style.zIndex = this.editor.session.paletteEnabled
         ? 'inherit'
         : '0';
+    }
+
+    if (this.editor.session.paletteEnabled) {
+      // If in the droplet editor, set toolboxWidth based on the block palette width:
+      toolboxWidth = categories.getBoundingClientRect().width;
     }
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
