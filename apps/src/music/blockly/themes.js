@@ -19,7 +19,7 @@ export const musicLabDarkTheme = GoogleBlockly.Theme.defineTheme(
     componentStyles,
     fontStyle: {
       family: '"Gotham 4r", sans-serif',
-      size: 10.5
+      size: 16
     }
   }
 );
