@@ -12,7 +12,7 @@ BRANCH=${Branch}
 BASE_DOMAIN_NAME=${BaseDomainName}
 DASHBOARD_SUB_DOMAIN_NAME=${DashboardSubDomainName}
 PEGASUS_SUB_DOMAIN_NAME=${PegasusSubDomainName}
-# Bash and CloudFormation use the same string interpolation syntax. Escape "${" with "!" to ensure CloudFormation
+# Bash and CloudFormation use the same string interpolation syntax. Escape with "!" to ensure CloudFormation
 # does not modify the bash syntax.
 DASHBOARD_DOMAIN_NAME="${!DASHBOARD_SUB_DOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
 # In production the fully qualified Pegasus domain name is just "code.org"; detect if the Pegasus sub domain is empty.
