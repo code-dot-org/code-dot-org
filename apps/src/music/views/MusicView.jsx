@@ -183,7 +183,7 @@ class UnconnectedMusicView extends React.Component {
     // A subsequent non-drag event should arrive and the blocks will be
     // usable then.
     // It's possible that other events should similarly be ignored here.
-    if (e.type === Blockly.blockly_.Events.BLOCK_DRAG) {
+    if (e.type === Blockly.Events.BLOCK_DRAG) {
       this.player.stopAndCancelPreviews();
       return;
     }
@@ -387,7 +387,9 @@ class UnconnectedMusicView extends React.Component {
             getCurrentMeasure: () => this.player.getCurrentMeasure(),
             convertMeasureToSeconds: measure =>
               this.player.convertMeasureToSeconds(measure),
-            getTracksMetadata: () => this.player.getTracksMetadata()
+            getTracksMetadata: () => this.player.getTracksMetadata(),
+            getLengthForId: id => this.player.getLengthForId(id),
+            getTypeForId: id => this.player.getTypeForId(id)
           }}
         >
           <div id="music-lab-container" className={moduleStyles.container}>
