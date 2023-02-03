@@ -48,6 +48,8 @@ import {
   PROGRAM_CSA,
   getProgramInfo
 } from '../application/teacher/TeacherApplicationConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const NA = 'N/A';
 
@@ -145,6 +147,7 @@ export class DetailViewContents extends React.Component {
     return {
       editing: false,
       status: this.props.applicationData.status,
+      last_logged_status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
       notes_2: this.props.applicationData.notes_2,
@@ -326,6 +329,17 @@ export class DetailViewContents extends React.Component {
       // The parent is responsible for passing it back in as props.
       if (this.props.onUpdate) {
         this.props.onUpdate(applicationData);
+      }
+
+      // Log if the application status changed
+      if (this.state.status !== this.state.last_logged_status) {
+        analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+          'application id': this.props.applicationId,
+          'application status': this.state.status
+        });
+        this.setState({
+          last_logged_status: this.state.status
+        });
       }
     });
   };
@@ -810,6 +824,12 @@ export class DetailViewContents extends React.Component {
     this.setState({principalApproval});
     this.setState({
       principalApprovalIsRequired: !this.state.principalApprovalIsRequired
+    });
+    analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+      'application id': this.props.applicationId,
+      'application status': this.state.principalApprovalIsRequired
+        ? 'awaiting_admin_approval'
+        : 'unreviewed'
     });
   };
 

@@ -43,7 +43,8 @@ import {
   KeyCodes,
   TestResults,
   TOOLBOX_EDIT_MODE,
-  NOTIFICATION_ALERT_TYPE
+  NOTIFICATION_ALERT_TYPE,
+  START_BLOCKS
 } from './constants';
 import {assets as assetsApi} from './clientApi';
 import {
@@ -3347,6 +3348,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       showNextHint: this.showNextHint.bind(this),
       locale: config.locale,
       assetUrl: this.assetUrl,
+      inStartBlocksMode: level.edit_blocks === START_BLOCKS,
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),

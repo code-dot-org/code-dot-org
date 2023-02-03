@@ -34,6 +34,7 @@ import GetVerifiedBanner from './GetVerifiedBanner';
 
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
+const CURRICULUM_ASSIGNED = 'Section Curriculum Assigned';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -47,6 +48,8 @@ class EditSectionForm extends Component {
     //Comes from redux
     initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
+    initialCourseOfferingId: PropTypes.number,
+    initialCourseVersionId: PropTypes.number,
     courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
       .isRequired,
     section: sectionShape.isRequired,
@@ -142,22 +145,57 @@ class EditSectionForm extends Component {
 
   // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
   recordSectionSetupExitEvent = eventName => {
-    const {section, courseOfferings, isNewSection} = this.props;
-
+    const {
+      section,
+      courseOfferings,
+      isNewSection,
+      initialUnitId,
+      initialCourseOfferingId,
+      initialCourseVersionId
+    } = this.props;
+    const versionYear = section.courseOfferingId
+      ? courseOfferings[section.courseOfferingId].course_versions[
+          section.courseVersionId
+        ].key
+      : null;
+    const initialVersionYear = initialCourseOfferingId
+      ? courseOfferings[initialCourseOfferingId].course_versions[
+          initialCourseVersionId
+        ].key
+      : null;
     const course = courseOfferings.hasOwnProperty(section.courseOfferingId)
       ? courseOfferings[section.courseOfferingId]
       : null;
     const courseName = course ? course.display_name : null;
     const courseId = course ? course.id : null;
-
     if (isNewSection) {
       analyticsReporter.sendEvent(eventName, {
+        sectionUnitId: section.unitId,
         sectionCurriculumLocalizedName: courseName,
-        sectionCurriculum: courseId,
+        sectionCurriculum: courseId, //this is course Offering id
+        sectionCurriculumVersionYear: versionYear,
         sectionGrade: section.grade,
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
         sectionPairProgramSelection: section.pairingAllowed
+      });
+    }
+    if (
+      eventName === COMPLETED_EVENT &&
+      ((section.courseOfferingId &&
+        section.courseOfferingId !== initialCourseOfferingId) ||
+        (section.unitId && section.unitId !== initialUnitId))
+    ) {
+      analyticsReporter.sendEvent(CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
+        previousUnitId: initialUnitId,
+        previousCourseId: initialCourseOfferingId,
+        previousVersionYear: initialVersionYear,
+        newUnitId: section.unitId,
+        newCourseId: section.courseOfferingId,
+        newVersionYear: versionYear
       });
     }
   };
@@ -585,6 +623,8 @@ YesNoDropdown.propTypes = FieldProps;
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
   initialUnitId: state.teacherSections.initialUnitId,
+  initialCourseOfferingId: state.teacherSections.initialCourseOfferingId,
+  initialCourseVersionId: state.teacherSections.initialCourseVersionId,
   courseOfferings: state.teacherSections.courseOfferings,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
