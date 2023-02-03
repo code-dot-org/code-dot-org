@@ -656,7 +656,8 @@ export function deleteAnimation(key, isSpriteLab = false, type = 'default') {
     let keyToSelect =
       currentSelectionIndex === 0 ? 1 : currentSelectionIndex - 1;
     const selector = type === 'background' ? selectBackground : selectAnimation;
-    dispatch(selector(orderedKeys[keyToSelect] || null));
+    console.log(orderedKeys, keyToSelect, orderedKeys[keyToSelect]);
+    dispatch(selector(orderedKeys[keyToSelect] || ''));
 
     dispatch({type: DELETE_ANIMATION, key});
     projectChanged();
