@@ -228,6 +228,7 @@ class RosterDialog extends React.Component {
         </div>
         <div style={styles.footer}>
           <button
+            id="cancel-button"
             type="button"
             onClick={this.cancel}
             style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
@@ -235,6 +236,7 @@ class RosterDialog extends React.Component {
             {locale.dialogCancel()}
           </button>
           <button
+            id="import-button"
             type="button"
             onClick={this.importClassroom}
             style={Object.assign(
