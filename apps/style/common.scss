@@ -401,16 +401,28 @@ html[dir="rtl"] {
       left: 0 !important;
     }
 
+    .ace_gutter,
+    .droplet-gutter {
+      left: unset !important;
+      right: 270px;
+    }
+
+    .ace_scroller,
+    .droplet-main-canvas {
+      left: 0 !important;
+    }
+
     .droplet-palette-wrapper {
       right: 0 !important;
       left: unset !important;
       z-index: 1;
     }
 
-    .droplet-palette-header,
-    .droplet-palette-scroller {
-      border-left: 2px solid #ddd;
-    }
+    // TODO: delete this if we move gutter to the right
+    //.droplet-palette-header,
+    //.droplet-palette-scroller {
+    //  border-left: 2px solid #ddd;
+    //}
   }
 }
 
