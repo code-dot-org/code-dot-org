@@ -403,20 +403,6 @@ button {
   margin-top: 10px;
 }
 
-.link-button {
-  color: white;
-  display: inline-block;
-  background-color: #ffa400;
-  border-radius: 5px;
-  padding: 7px 14px;
-  font-size: 14px;
-  line-height: 20px;
-  box-sizing: border-box;
-  float: left;
-  cursor: pointer;
-  margin-top: -6px;
-}
-
 #map .mapboxgl-popup-close-button {
   margin-top: 0px;
   background-color: #ffa400;
