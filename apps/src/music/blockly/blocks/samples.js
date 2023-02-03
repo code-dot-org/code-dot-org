@@ -1,5 +1,14 @@
 import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
+import {
+  DEFAULT_SOUND,
+  DEFAULT_TRACK_NAME_EXTENSION,
+  DYNAMIC_TRIGGER_EXTENSION,
+  EXTRA_SAMPLE_FIELD_PREFIX,
+  FIELD_SOUNDS_TYPE,
+  PLAY_MULTI_MUTATOR,
+  TRACK_NAME_FIELD
+} from '../constants';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -39,13 +48,13 @@ export const playSound = {
     message0: 'play %1 at measure %2',
     args0: [
       {
-        type: 'field_sounds',
+        type: FIELD_SOUNDS_TYPE,
         name: 'sound',
         getLibrary: () => Globals.getLibrary(),
         playPreview: (id, onStop) => {
           Globals.getPlayer().previewSound(id, onStop);
         },
-        currentValue: 'pop/cafe_beat'
+        currentValue: DEFAULT_SOUND
       },
       {
         type: 'input_value',
@@ -78,13 +87,13 @@ export const playSoundAtCurrentLocation = {
     message0: 'play %1',
     args0: [
       {
-        type: 'field_sounds',
+        type: FIELD_SOUNDS_TYPE,
         name: 'sound',
         getLibrary: () => Globals.getLibrary(),
         playPreview: (id, onStop) => {
           Globals.getPlayer().previewSound(id, onStop);
         },
-        currentValue: 'pop/cafe_beat'
+        currentValue: DEFAULT_SOUND
       }
     ],
     inputsInline: true,
@@ -125,7 +134,7 @@ export const newTrackAtStart = {
     args0: [
       {
         type: 'field_input',
-        name: 'trackName',
+        name: TRACK_NAME_FIELD,
         text: 'my track'
       }
     ],
@@ -134,11 +143,11 @@ export const newTrackAtStart = {
     style: 'setup_blocks',
     tooltip: 'new track',
     helpUrl: '',
-    extensions: ['default_track_name_extension']
+    extensions: [DEFAULT_TRACK_NAME_EXTENSION]
   },
   generator: ctx => {
     return `MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
-      'trackName'
+      TRACK_NAME_FIELD
     )}", 1, true);\n`;
   }
 };
@@ -150,7 +159,7 @@ export const newTrackAtMeasure = {
     args0: [
       {
         type: 'field_input',
-        name: 'trackName',
+        name: TRACK_NAME_FIELD,
         text: 'my track'
       },
       {
@@ -163,11 +172,11 @@ export const newTrackAtMeasure = {
     style: 'setup_blocks',
     tooltip: 'new track',
     helpUrl: '',
-    extensions: ['default_track_name_extension']
+    extensions: [DEFAULT_TRACK_NAME_EXTENSION]
   },
   generator: ctx => {
     return `MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
-      'trackName'
+      TRACK_NAME_FIELD
     )}", ${Blockly.JavaScript.valueToCode(
       ctx,
       'measure',
@@ -183,7 +192,7 @@ export const newTrackOnTrigger = {
     args0: [
       {
         type: 'field_input',
-        name: 'trackName',
+        name: TRACK_NAME_FIELD,
         text: 'my track'
       },
       {
@@ -196,13 +205,13 @@ export const newTrackOnTrigger = {
     style: 'event_blocks',
     tooltip: 'new track',
     helpUrl: '',
-    extensions: ['default_track_name_extension', 'dynamic_trigger_extension']
+    extensions: [DEFAULT_TRACK_NAME_EXTENSION, DYNAMIC_TRIGGER_EXTENSION]
   },
   generator: ctx => {
     return `MusicPlayer.createTrack("${
       ctx.id
     }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
-      'trackName'
+      TRACK_NAME_FIELD
     )}", Math.ceil(MusicPlayer.getPlayheadPosition()), false);\n`;
   }
 };
@@ -213,26 +222,31 @@ export const playSoundInTrack = {
     message0: 'play %1',
     args0: [
       {
-        type: 'field_sounds',
+        type: FIELD_SOUNDS_TYPE,
         name: 'sound',
         getLibrary: () => Globals.getLibrary(),
         playPreview: (id, onStop) => {
           Globals.getPlayer().previewSound(id, onStop);
         },
-        currentValue: 'pop/cafe_beat'
+        currentValue: DEFAULT_SOUND
       }
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
+    mutator: PLAY_MULTI_MUTATOR,
     style: 'music_blocks',
     tooltip: 'play sound',
     helpUrl: ''
   },
   generator: ctx => {
-    return `MusicPlayer.addSoundToTrack(${getCurrentTrackId(
+    const allSounds = [`"${ctx.getFieldValue('sound')}"`];
+    for (let i = 0; i < ctx.extraSampleCount_; i++) {
+      allSounds.push(`"${ctx.getFieldValue(EXTRA_SAMPLE_FIELD_PREFIX + i)}"`);
+    }
+    return `MusicPlayer.addSoundsToTrack(${getCurrentTrackId(
       ctx
-    )}, "${ctx.getFieldValue('sound')}");\n`;
+    )}, ${allSounds.join(',')});\n`;
   }
 };
 

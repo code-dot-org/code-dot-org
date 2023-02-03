@@ -3,9 +3,18 @@ import {BlockTypes} from './blockTypes';
 import {MUSIC_BLOCKS} from './musicBlocks';
 import {musicLabDarkTheme} from './themes';
 import {getToolbox} from './toolbox';
-import {Triggers} from '../constants';
 import FieldSounds from './FieldSounds';
 import AppConfig from '../appConfig';
+import {
+  DEFAULT_TRACK_NAME_EXTENSION,
+  DYNAMIC_TRIGGER_EXTENSION,
+  PLAY_MULTI_MUTATOR
+} from './constants';
+import {
+  dynamicTriggerExtension,
+  getDefaultTrackNameExtension,
+  playMultiMutator
+} from './extensions';
 
 export default class MusicBlocklyWorkspace {
   constructor() {
@@ -18,24 +27,18 @@ export default class MusicBlocklyWorkspace {
     this.container = container;
 
     Blockly.blockly_.Extensions.register(
-      'dynamic_trigger_extension',
-      function() {
-        this.getInput('trigger').appendField(
-          new Blockly.FieldDropdown(function() {
-            return Triggers.map(trigger => [trigger.dropdownLabel, trigger.id]);
-          }),
-          'trigger'
-        );
-      }
+      DYNAMIC_TRIGGER_EXTENSION,
+      dynamicTriggerExtension
     );
 
     Blockly.blockly_.Extensions.register(
-      'default_track_name_extension',
-      function() {
-        this.getField('trackName').setValue(
-          `track ${Object.keys(player.getTracksMetadata()).length + 1}`
-        );
-      }
+      DEFAULT_TRACK_NAME_EXTENSION,
+      getDefaultTrackNameExtension(player)
+    );
+
+    Blockly.blockly_.Extensions.registerMutator(
+      PLAY_MULTI_MUTATOR,
+      playMultiMutator
     );
 
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
