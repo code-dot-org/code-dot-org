@@ -780,7 +780,7 @@ module Pd::Application
       return false if reminder_emails.any?
 
       # Only if we've sent at least one principal approval email before.
-      return false unless emails.where(email_type: 'admin_approval').exists?
+      return false unless emails.exists?(email_type: 'admin_approval')
 
       # If it's valid to send another principal email at this time.
       return allow_sending_principal_email?
