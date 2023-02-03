@@ -8,11 +8,11 @@ Parameters:
     Description: Base domain name.
   DashboardSubDomainName:
     Type: String
-    Default: !Sub "<%=rack_env?(:production) ? 'studio' : 'studio-${AWS::StackName}' %>"
+    Default: !Sub "<%=rack_env?(:production) ? 'studio' : '#{stack_name}-studio' %>"
     Description: Sub domain name for learning platform ("Dashboard").
   PegasusSubDomainName:
     Type: String
-    Default: !Sub "<%=rack_env?(:production) ? '' : '${AWS::StackName}' %>"
+    Default: !Sub "<%=rack_env?(:production) ? '' : stack_name %>"
     Description: Sub domain name for corporate web site ("Pegasus").
   InstanceType:
     Type: String
@@ -23,7 +23,7 @@ Parameters:
 <% if database -%>
   DatabaseUsername:
     Type: String
-    Default: master
+    Default: masterzoom
     MaxLength: 16
   DBInstanceType:
     Type: String
