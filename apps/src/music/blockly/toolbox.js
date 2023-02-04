@@ -35,9 +35,9 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER
   },
-  [BlockTypes.PLAY_SOUNDS_SEPARATE]: {
+  [BlockTypes.PLAY_SOUNDS_SEQUENTIAL]: {
     kind: 'block',
-    type: BlockTypes.PLAY_SOUNDS_SEPARATE
+    type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL
   },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
     kind: 'block',
@@ -276,14 +276,14 @@ function generateToolbox(categoryBlocksMap, includeVariables) {
 export function getToolbox() {
   if (AppConfig.getValue('blocks') === 'simple') {
     return generateToolbox({
-      Events: [BlockTypes.TRIGGERED_AT_SIMPLE],
+      //Events: [BlockTypes.TRIGGERED_AT_SIMPLE],
       Simple: [
         BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
-        BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
+        //BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
         'controls_repeat_ext',
         BlockTypes.PLAY_SOUNDS_TOGETHER,
-        BlockTypes.PLAY_SOUNDS_SEPARATE,
-        'procedures_defnoreturn',
+        BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+        //'procedures_defnoreturn',
         'procedures_callnoreturn'
       ]
     });

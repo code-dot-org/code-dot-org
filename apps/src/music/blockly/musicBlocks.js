@@ -5,7 +5,7 @@ import {
   playSound,
   playSoundAtCurrentLocation,
   playSoundsTogether,
-  playSoundsSeparate,
+  playSoundsSequential,
   playSoundInTrack,
   restInTrack,
   setCurrentLocationNextMeasure
@@ -22,7 +22,7 @@ const blockList = [
   playSoundAtCurrentLocation,
   setCurrentLocationNextMeasure,
   playSoundsTogether,
-  playSoundsSeparate,
+  playSoundsSequential,
   forLoop,
   newTrackAtStart,
   newTrackAtMeasure,

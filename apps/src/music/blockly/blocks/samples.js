@@ -166,10 +166,10 @@ export const playSoundsTogether = {
     `
 };
 
-export const playSoundsSeparate = {
+export const playSoundsSequential = {
   definition: {
-    type: BlockTypes.PLAY_SOUNDS_SEPARATE,
-    message0: 'play separate',
+    type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+    message0: 'play sequential',
     args0: [],
     message1: '%1',
     args1: [
@@ -182,7 +182,7 @@ export const playSoundsSeparate = {
     previousStatement: null,
     nextStatement: null,
     colour: 230,
-    tooltip: 'play sounds separately',
+    tooltip: 'play sounds sequentially',
     helpUrl: ''
   },
   generator: ctx =>

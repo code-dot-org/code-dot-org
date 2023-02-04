@@ -7,7 +7,7 @@ export const BlockTypes = {
   PLAY_SOUND_AT_CURRENT_LOCATION: 'play_sound_at_current_location',
   SET_CURRENT_LOCATION_NEXT_MEASURE: 'set_current_location_next_measure',
   PLAY_SOUNDS_TOGETHER: 'play_sounds_together',
-  PLAY_SOUNDS_SEPARATE: 'play_sounds_separate',
+  PLAY_SOUNDS_SEQUENTIAL: 'play_sounds_sequential',
   NEW_TRACK_AT_START: 'new_track_at_start',
   NEW_TRACK_AT_MEASURE: 'new_track_at_measure',
   NEW_TRACK_ON_TRIGGER: 'new_track_on_trigger',
