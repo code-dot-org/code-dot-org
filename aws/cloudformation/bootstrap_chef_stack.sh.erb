@@ -17,9 +17,6 @@ PEGASUS_SUBDOMAIN_NAME=${PegasusSubdomainName}
 DASHBOARD_DOMAIN_NAME="${!DASHBOARD_SUBDOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
 # In production the fully qualified Pegasus domain name is just "code.org"; detect if the Pegasus sub domain is empty.
 [ -z "$PEGASUS_SUBDOMAIN_NAME" ] && PEGASUS_DOMAIN_NAME=$BASE_DOMAIN_NAME || PEGASUS_DOMAIN_NAME="${!PEGASUS_SUBDOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
-# TODO: Remove these debug statements.
-echo $PEGASUS_DOMAIN_NAME
-echo $DASHBOARD_DOMAIN_NAME
 
 # These environment variables are NOT set with CloudFormation string substitution.
 CHEF_VERSION=<%=CHEF_VERSION%>
