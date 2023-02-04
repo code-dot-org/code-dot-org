@@ -165,11 +165,13 @@ export default class MusicBlocklyWorkspace {
       this.callUserGeneratedCode(this.codeHooks.whenRunButton);
     }
 
+    /*
     if (AppConfig.getValue('blocks') === 'simple2') {
       if (this.codeHooks.functions) {
         this.callUserGeneratedCode(this.codeHooks.functions);
       }
     }
+    */
 
     if (this.codeHooks.tracks) {
       this.callUserGeneratedCode(this.codeHooks.tracks);
