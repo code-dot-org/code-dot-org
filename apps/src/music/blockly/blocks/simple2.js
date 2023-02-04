@@ -4,6 +4,11 @@ import Globals from '../../globals';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
+  // Since this model doesn't currently support triggered code, then
+  // everything is ultimately called from under when_run.
+  return true;
+
+  /*
   let block = ctx;
   while ((block = block.getParent())) {
     if (
@@ -14,6 +19,7 @@ const isBlockInsideWhenRun = ctx => {
   }
 
   return false;
+  */
 };
 
 export const whenRunSimple2 = {
