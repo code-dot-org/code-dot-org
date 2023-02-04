@@ -48,8 +48,6 @@ export default class MusicBlocklyWorkspace {
       Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
     }
 
-    // Blockly.mainWorkspace.getBlocksByType('procedures_defnoreturn')
-
     Blockly.blockly_.fieldRegistry.register('field_sounds', FieldSounds);
 
     this.workspace = Blockly.inject(container, {
@@ -93,30 +91,35 @@ export default class MusicBlocklyWorkspace {
     const events = {};
 
     this.workspace.getTopBlocks().forEach(block => {
-      if (block.type === BlockTypes.WHEN_RUN) {
-        if (!events.whenRunButton) {
-          events.whenRunButton = {code: ''};
-        }
-        events.whenRunButton.code += Blockly.JavaScript.blockToCode(block);
-      }
-
-      if (block.type === 'procedures_defnoreturn') {
-        if (!events.whenRunButton) {
-          events.whenRunButton = {code: ''};
-        }
-
-        //events.functions.code += Blockly.JavaScript.blockToCode(block);
-        const functionCode = Blockly.JavaScript.blockToCode(
-          block.getChildren()[0]
-        );
-        events.whenRunButton.code += `function ${block.getFieldValue(
-          'NAME'
-        )}() {
-            play_sequential();
-            ${functionCode}
-            end_sequential();
+      if (AppConfig.getValue('blocks') !== 'simple2') {
+        events.whenRunButton = {
+          code: Blockly.JavaScript.blockToCode(block)
+        };
+      } else {
+        if (block.type === BlockTypes.WHEN_RUN_SIMPLE2) {
+          if (!events.whenRunButton) {
+            events.whenRunButton = {code: ''};
           }
-          `;
+          events.whenRunButton.code += Blockly.JavaScript.blockToCode(block);
+        }
+
+        if (block.type === 'procedures_defnoreturn') {
+          if (!events.whenRunButton) {
+            events.whenRunButton = {code: ''};
+          }
+
+          const functionCode = Blockly.JavaScript.blockToCode(
+            block.getChildren()[0]
+          );
+          events.whenRunButton.code += `function ${block.getFieldValue(
+            'NAME'
+          )}() {
+              play_sequential();
+              ${functionCode}
+              end_sequential();
+            }
+            `;
+        }
       }
 
       if (
@@ -159,8 +162,10 @@ export default class MusicBlocklyWorkspace {
       this.callUserGeneratedCode(this.codeHooks.whenRunButton);
     }
 
-    if (this.codeHooks.functions) {
-      this.callUserGeneratedCode(this.codeHooks.functions);
+    if (AppConfig.getValue('blocks') === 'simple2') {
+      if (this.codeHooks.functions) {
+        this.callUserGeneratedCode(this.codeHooks.functions);
+      }
     }
 
     if (this.codeHooks.tracks) {

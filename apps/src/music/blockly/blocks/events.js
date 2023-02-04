@@ -10,62 +10,7 @@ export const whenRun = {
     tooltip: 'when run',
     helpUrl: ''
   },
-  generator: () => `
-
-  var stack = [];
-
-  function play_sequential() {
-    var measure = stack.length == 0 ? 1 : stack[stack.length-1].measure;
-    stack.push({measure: measure, together: false});
-  }
-
-  function end_sequential() {
-    var nextMeasure = stack[stack.length-1].measure;
-    stack.pop();
-
-    if (stack.length > 0) {
-      // now the frame we are returning to has to absorb this information.
-      if (stack[stack.length-1].together) {
-        stack[stack.length-1].lastMeasures.push(nextMeasure);
-      } else {
-        stack[stack.length-1].measure = nextMeasure;
-      }
-    } else {
-      console.log("done");
-    }
-  }
-
-  function play_together() {
-    var nextMeasure = stack[stack.length-1].measure;
-    stack.push({measure: nextMeasure, together: true, lastMeasures: [nextMeasure]});
-  }
-
-  function end_together() {
-    var nextMeasure = Math.max.apply(Math, stack[stack.length-1].lastMeasures);
-
-    // we are returning to the previous stack frame.
-    stack.pop();
-
-    // now the frame we are returning to has to absorb this information.
-    if (stack[stack.length-1].together) {
-      stack[stack.length-1].lastMeasures.push(nextMeasure);
-    } else {
-      stack[stack.length-1].measure = nextMeasure;
-    }
-  }
-
-  function play_sound(id, length) {
-    var playMeasure = stack[stack.length-1].measure;
-    console.log('sound:', id, 'at', playMeasure, 'length', length);
-    if (stack[stack.length-1].together) {
-      stack[stack.length-1].lastMeasures.push(playMeasure + length);
-    } else {
-      stack[stack.length-1].measure += length;
-    }
-  }
-
-  play_sequential();
-  `
+  generator: () => 'var currentMeasureLocation = 1;\n'
 };
 
 export const triggeredAt = {

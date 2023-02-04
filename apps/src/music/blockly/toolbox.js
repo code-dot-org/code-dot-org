@@ -229,10 +229,6 @@ const toolboxBlocks = {
       }
     }
   },
-  ['procedures_defnoreturn']: {
-    kind: 'block',
-    type: 'procedures_defnoreturn'
-  },
   ['procedures_callnoreturn']: {
     kind: 'block',
     type: 'procedures_callnoreturn',
@@ -276,15 +272,25 @@ function generateToolbox(categoryBlocksMap, includeVariables) {
 export function getToolbox() {
   if (AppConfig.getValue('blocks') === 'simple') {
     return generateToolbox({
-      //Events: [BlockTypes.TRIGGERED_AT_SIMPLE],
+      Events: [BlockTypes.TRIGGERED_AT_SIMPLE],
       Simple: [
         BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
-        //BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
-        'controls_repeat_ext',
+        BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
+        'controls_repeat_ext'
+      ]
+    });
+  }
+
+  if (AppConfig.getValue('blocks') === 'simple2') {
+    return generateToolbox({
+      //Events: [BlockTypes.TRIGGERED_AT_SIMPLE],
+      Simple2: [
+        BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
         BlockTypes.PLAY_SOUNDS_TOGETHER,
         BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
         //'procedures_defnoreturn',
-        'procedures_callnoreturn'
+        'procedures_callnoreturn',
+        'controls_repeat_ext'
       ]
     });
   }
