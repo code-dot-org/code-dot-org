@@ -92,9 +92,11 @@ export default class MusicBlocklyWorkspace {
 
     this.workspace.getTopBlocks().forEach(block => {
       if (AppConfig.getValue('blocks') !== 'simple2') {
-        events.whenRunButton = {
-          code: Blockly.JavaScript.blockToCode(block)
-        };
+        if (block.type === BlockTypes.WHEN_RUN) {
+          events.whenRunButton = {
+            code: Blockly.JavaScript.blockToCode(block)
+          };
+        }
       } else {
         if (block.type === BlockTypes.WHEN_RUN_SIMPLE2) {
           if (!events.whenRunButton) {
@@ -220,6 +222,9 @@ export default class MusicBlocklyWorkspace {
     let defaultCodeFilename = 'defaultCode';
     if (blockMode === 'simple') {
       defaultCodeFilename = 'defaultCodeSimple';
+    }
+    if (blockMode === 'simple2') {
+      defaultCodeFilename = 'defaultCodeSimple2';
     }
     if (blockMode === 'tracks') {
       defaultCodeFilename = 'defaultCodeTracks';

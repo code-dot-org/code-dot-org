@@ -1,5 +1,6 @@
 import {BlockTypes} from '../blockTypes';
 import {getLengthForId} from '../../player/helpers';
+import Globals from '../../globals';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -86,6 +87,23 @@ export const whenRunSimple2 = {
 export const playSoundAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: 'play %1',
+    args0: [
+      {
+        type: 'field_sounds',
+        name: 'sound',
+        getLibrary: () => Globals.getLibrary(),
+        playPreview: (id, onStop) => {
+          Globals.getPlayer().previewSound(id, onStop);
+        },
+        currentValue: 'pop/cafe_beat'
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    colour: 230,
+    tooltip: 'play sound',
     helpUrl: ''
   },
   generator: ctx =>
@@ -103,7 +121,7 @@ export const playSoundAtCurrentLocationSimple2 = {
       stack[stack.length-1].measure += ${getLengthForId(
         ctx.getFieldValue('sound')
       )};
-    }x
+    }
     `
 };
 
