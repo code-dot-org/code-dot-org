@@ -1,12 +1,13 @@
 import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
-const DEFAULT_GROUP_NAME = 'all';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
   let block = ctx;
   while ((block = block.getParent())) {
-    if (block.type === 'when_run') {
+    if (
+      [BlockTypes.WHEN_RUN, BlockTypes.WHEN_RUN_SIMPLE2].includes(block.type)
+    ) {
       return true;
     }
   }
@@ -73,32 +74,6 @@ export const playSound = {
     ');\n'
 };
 
-const getCurrentGroup = () => {
-  const library = Globals.getLibrary();
-
-  const currentGroup = library?.groups.find(
-    group => group.id === DEFAULT_GROUP_NAME
-  );
-
-  return currentGroup;
-};
-
-const getCurrentGroupSounds = () => {
-  return getCurrentGroup()?.folders;
-};
-
-const getLengthForId = id => {
-  const splitId = id.split('/');
-  const path = splitId[0];
-  const src = splitId[1];
-
-  const sounds = getCurrentGroupSounds();
-  const folder = sounds.find(folder => folder.path === path);
-  const sound = folder.sounds.find(sound => sound.src === src);
-
-  return sound.length;
-};
-
 export const playSoundAtCurrentLocation = {
   definition: {
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
@@ -122,74 +97,13 @@ export const playSoundAtCurrentLocation = {
     helpUrl: ''
   },
   generator: ctx =>
-    `MusicPlayer.playSoundAtMeasureById(
-      "${ctx.getFieldValue('sound')}",
-      stack[stack.length - 1].measure,
-      ${isBlockInsideWhenRun(ctx) ? 'true' : 'false'}
-    );
-    if (stack[stack.length-1].together) {
-      stack[stack.length-1].lastMeasures.push(
-        stack[stack.length-1].measure +
-        ${getLengthForId(ctx.getFieldValue('sound'))}
-      );
-    } else {
-      stack[stack.length-1].measure += ${getLengthForId(
-        ctx.getFieldValue('sound')
-      )};
-    }
-    `
-};
-
-export const playSoundsTogether = {
-  definition: {
-    type: BlockTypes.PLAY_SOUNDS_TOGETHER,
-    message0: 'play together',
-    args0: [],
-    message1: '%1',
-    args1: [
-      {
-        type: 'input_statement',
-        name: 'code'
-      }
-    ],
-    inputsInline: true,
-    previousStatement: null,
-    nextStatement: null,
-    colour: 230,
-    tooltip: 'play sounds together',
-    helpUrl: ''
-  },
-  generator: ctx =>
-    `play_together();
-    ${Blockly.JavaScript.statementToCode(ctx, 'code')}
-    end_together();
-    `
-};
-
-export const playSoundsSequential = {
-  definition: {
-    type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
-    message0: 'play sequential',
-    args0: [],
-    message1: '%1',
-    args1: [
-      {
-        type: 'input_statement',
-        name: 'code'
-      }
-    ],
-    inputsInline: true,
-    previousStatement: null,
-    nextStatement: null,
-    colour: 230,
-    tooltip: 'play sounds sequentially',
-    helpUrl: ''
-  },
-  generator: ctx =>
-    `play_sequential();
-    ${Blockly.JavaScript.statementToCode(ctx, 'code')}
-    end_sequential();
-    `
+    'MusicPlayer.playSoundAtMeasureById("' +
+    ctx.getFieldValue('sound') +
+    '", ' +
+    'currentMeasureLocation' +
+    ', ' +
+    (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
+    ');\n'
 };
 
 export const setCurrentLocationNextMeasure = {

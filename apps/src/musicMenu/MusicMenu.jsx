@@ -9,6 +9,11 @@ const optionsList = [
     values: [
       {value: 'advanced', description: 'The default set of advanced blocks.'},
       {value: 'simple', description: 'A simple set of blocks.'},
+      {
+        value: 'simple2',
+        description:
+          'A simple set of blocks, with together/sequential and functions.'
+      },
       {value: 'tracks', description: 'A tracks-based model set of blocks.'}
     ]
   },
