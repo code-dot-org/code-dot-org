@@ -6,11 +6,11 @@ Parameters:
     Type: String
     Default: code.org
     Description: Base domain name.
-  DashboardSubDomainName:
+  DashboardSubdomainName:
     Type: String
     Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
     Description: Sub domain name for learning platform ("Dashboard").
-  PegasusSubDomainName:
+  PegasusSubdomainName:
     Type: String
     Default: <%=rack_env?(:production) ? '' : stack_name %>
     Description: Sub domain name for corporate web site ("Pegasus").
