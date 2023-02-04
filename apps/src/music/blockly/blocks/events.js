@@ -37,7 +37,7 @@ export const whenRun = {
 
   function play_together() {
     var nextMeasure = stack[stack.length-1].measure;
-    stack.push({measure: nextMeasure, together: true, lastMeasures: []});
+    stack.push({measure: nextMeasure, together: true, lastMeasures: [nextMeasure]});
   }
 
   function end_together() {
