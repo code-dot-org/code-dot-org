@@ -6,6 +6,7 @@ import {getToolbox} from './toolbox';
 import {Triggers} from '../constants';
 import FieldSounds from './FieldSounds';
 import AppConfig from '../appConfig';
+import {defaultWhenRunSimple2Code} from './blocks/simple2';
 
 export default class MusicBlocklyWorkspace {
   constructor() {
@@ -91,7 +92,36 @@ export default class MusicBlocklyWorkspace {
 
     const events = {};
 
-    this.workspace.getTopBlocks().forEach(block => {
+    const topBlocks = this.workspace.getTopBlocks();
+
+    if (AppConfig.getValue('blocks') === 'simple2') {
+      // If there's no when_run block, then we'll generate
+      // some custom code that calls all the functions
+      // together, simulating tracks mode.
+
+      if (
+        !topBlocks.some(block => block.type === BlockTypes.WHEN_RUN_SIMPLE2)
+      ) {
+        events.whenRunButton = {
+          code:
+            defaultWhenRunSimple2Code +
+            `
+          play_together();
+          `
+        };
+
+        topBlocks.forEach(functionBlock => {
+          if (functionBlock.type === 'procedures_defnoreturn') {
+            events.whenRunButton.code += `${functionBlock.getFieldValue(
+              'NAME'
+            )}();
+            `;
+          }
+        });
+      }
+    }
+
+    topBlocks.forEach(block => {
       if (AppConfig.getValue('blocks') !== 'simple2') {
         if (block.type === BlockTypes.WHEN_RUN) {
           events.whenRunButton = {
@@ -164,14 +194,6 @@ export default class MusicBlocklyWorkspace {
     if (this.codeHooks.whenRunButton) {
       this.callUserGeneratedCode(this.codeHooks.whenRunButton);
     }
-
-    /*
-    if (AppConfig.getValue('blocks') === 'simple2') {
-      if (this.codeHooks.functions) {
-        this.callUserGeneratedCode(this.codeHooks.functions);
-      }
-    }
-    */
 
     if (this.codeHooks.tracks) {
       this.callUserGeneratedCode(this.codeHooks.tracks);

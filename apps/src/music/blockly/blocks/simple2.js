@@ -7,20 +7,61 @@ const isBlockInsideWhenRun = ctx => {
   // Since this model doesn't currently support triggered code, then
   // everything is ultimately called from under when_run.
   return true;
+};
 
-  /*
-  let block = ctx;
-  while ((block = block.getParent())) {
-    if (
-      [BlockTypes.WHEN_RUN, BlockTypes.WHEN_RUN_SIMPLE2].includes(block.type)
-    ) {
-      return true;
+export const defaultWhenRunSimple2Code = `
+  var stack = [];
+
+  function play_sequential() {
+    var measure = stack.length == 0 ? 1 : stack[stack.length-1].measure;
+    stack.push({measure: measure, together: false});
+  }
+
+  function end_sequential() {
+    var nextMeasure = stack[stack.length-1].measure;
+    stack.pop();
+
+    if (stack.length > 0) {
+      // now the frame we are returning to has to absorb this information.
+      if (stack[stack.length-1].together) {
+        stack[stack.length-1].lastMeasures.push(nextMeasure);
+      } else {
+        stack[stack.length-1].measure = nextMeasure;
+      }
+    } else {
+      console.log("done");
     }
   }
 
-  return false;
-  */
-};
+  function play_together() {
+    var nextMeasure = stack.length == 0 ? 1 : stack[stack.length-1].measure;
+    stack.push({measure: nextMeasure, together: true, lastMeasures: [nextMeasure]});
+  }
+
+  function end_together() {
+    var nextMeasure = Math.max.apply(Math, stack[stack.length-1].lastMeasures);
+
+    // we are returning to the previous stack frame.
+    stack.pop();
+
+    // now the frame we are returning to has to absorb this information.
+    if (stack[stack.length-1].together) {
+      stack[stack.length-1].lastMeasures.push(nextMeasure);
+    } else {
+      stack[stack.length-1].measure = nextMeasure;
+    }
+  }
+
+  function play_sound(id, length) {
+    var playMeasure = stack[stack.length-1].measure;
+    console.log('sound:', id, 'at', playMeasure, 'length', length);
+    if (stack[stack.length-1].together) {
+      stack[stack.length-1].lastMeasures.push(playMeasure + length);
+    } else {
+      stack[stack.length-1].measure += length;
+    }
+  }
+`;
 
 export const whenRunSimple2 = {
   definition: {
@@ -32,60 +73,9 @@ export const whenRunSimple2 = {
     tooltip: 'when run',
     helpUrl: ''
   },
-  generator: () => `
-
-    var stack = [];
-
-    function play_sequential() {
-      var measure = stack.length == 0 ? 1 : stack[stack.length-1].measure;
-      stack.push({measure: measure, together: false});
-    }
-
-    function end_sequential() {
-      var nextMeasure = stack[stack.length-1].measure;
-      stack.pop();
-
-      if (stack.length > 0) {
-        // now the frame we are returning to has to absorb this information.
-        if (stack[stack.length-1].together) {
-          stack[stack.length-1].lastMeasures.push(nextMeasure);
-        } else {
-          stack[stack.length-1].measure = nextMeasure;
-        }
-      } else {
-        console.log("done");
-      }
-    }
-
-    function play_together() {
-      var nextMeasure = stack[stack.length-1].measure;
-      stack.push({measure: nextMeasure, together: true, lastMeasures: [nextMeasure]});
-    }
-
-    function end_together() {
-      var nextMeasure = Math.max.apply(Math, stack[stack.length-1].lastMeasures);
-
-      // we are returning to the previous stack frame.
-      stack.pop();
-
-      // now the frame we are returning to has to absorb this information.
-      if (stack[stack.length-1].together) {
-        stack[stack.length-1].lastMeasures.push(nextMeasure);
-      } else {
-        stack[stack.length-1].measure = nextMeasure;
-      }
-    }
-
-    function play_sound(id, length) {
-      var playMeasure = stack[stack.length-1].measure;
-      console.log('sound:', id, 'at', playMeasure, 'length', length);
-      if (stack[stack.length-1].together) {
-        stack[stack.length-1].lastMeasures.push(playMeasure + length);
-      } else {
-        stack[stack.length-1].measure += length;
-      }
-    }
-
+  generator: () =>
+    defaultWhenRunSimple2Code +
+    `
     play_sequential();
     `
 };
