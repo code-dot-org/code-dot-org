@@ -56,7 +56,10 @@ export default class MusicBlocklyWorkspace {
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: musicLabDarkTheme,
       renderer: 'cdo_renderer_zelos',
-      noFunctionBlockFrame: true
+      noFunctionBlockFrame: true,
+      zoom: {
+        startScale: 0.675
+      }
     });
 
     Blockly.setInfiniteLoopTrap();
