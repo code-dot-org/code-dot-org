@@ -133,6 +133,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
   blocklyWrapper.wrapReadOnlyProperty('Events');
+  blocklyWrapper.wrapReadOnlyProperty('Extensions');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleTextInput');
@@ -143,6 +144,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
+  blocklyWrapper.wrapReadOnlyProperty('fieldRegistry');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -173,6 +175,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('RTL');
   blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
   blocklyWrapper.wrapReadOnlyProperty('selected');
+  blocklyWrapper.wrapReadOnlyProperty('serialization');
   blocklyWrapper.wrapReadOnlyProperty('SPRITE');
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');

@@ -19,8 +19,16 @@ const EVENTS = {
   RP_FOUND_EVENT: 'Regional Partner Found',
   APPLICATION_SAVED_EVENT: 'Application Saved',
   APPLICATION_SUBMITTED_EVENT: 'Application Submitted',
+  APP_STATUS_CHANGE_EVENT: 'Application Status Changed',
   ADMIN_APPROVAL_RECEIVED_EVENT: 'Administrator Approval Received',
-  SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form'
+  SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
+
+  // Sections
+  CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
+  PROGRESS_VIEWED: 'Section Progress Viewed',
+  PROGRESS_TOGGLE: 'Section Progress Toggled',
+  PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
+  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson'
 };
 
 export {EVENTS};
