@@ -5590,7 +5590,7 @@ ko:
   tutorial_irobotphone_string_platforms: 모든 최신 브라우저
   tutorial_codeguppydraw_string_platforms: 모든 최신 브라우저
   tutorial_codejumper_string_platforms: 언플러그드, 스크린 리더
-  tutorial_meeempathy_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
+  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: 치비트로틱스 치비 칩과 회로 스티커 LED
@@ -8314,8 +8314,7 @@ ko:
   tutorial_microsoftforest_string_platforms: 모든 최신 브라우저
   tutorial_blackbirdscreen_string_platforms: 크롬
   tutorial_toxicodecompute2_string_platforms: 모든 최신 브라우저
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: Windows, iPad, MacOS
   tutorial_blackbirdtether_string_platforms: 크롬
   tutorial_ob_string_platforms: 최신 웹 브라우저
   tutorial_codeartportrait_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
@@ -9267,8 +9266,7 @@ ko:
   tutorial_nasaorbit_string_platforms: 모든 최신 브라우저
   tutorial_nasapackage_string_platforms: 모든 최신 브라우저
   tutorial_nasalunar_string_platforms: 모든 최신 브라우저, 아이패드, 아이폰
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
   tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
     Windows phone, Android phone, iPhone
   tutorial_kcjhealth_string_platforms: 모든 최신 브라우저

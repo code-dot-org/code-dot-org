@@ -6,7 +6,7 @@
   "collect": "ಸಂಗ್ರಹಿಸಿ",
   "collectiblePresent": "ಅಲ್ಲಿ ಸ್ವಲ್ಪ ನಿಧಿ ಇದೆ",
   "collectorCollectTooltip": "ಒಂದು ವಸ್ತುವನ್ನು ಸಂಗ್ರಹಿಸಿ",
-  "collectorCollectedEverything": "ಅಭಿನಂದನೆಗಳು! ನೀವು {count, plural, one {ಐಟಂ} other {ಎಲ್ಲ # ಐಟಂಗಳು}}! ಸಂಗ್ರಹಿಸಿದ್ದೀರಿ!",
+  "collectorCollectedEverything": "ಅಭಿನಂದನೆಗಳು! ನೀವು {count, plural, one {ಐಟಂ} other {ಎಲ್ಲ # ಐಟಂಗಳನ್ನು}}! ಸಂಗ್ರಹಿಸಿದ್ದೀರಿ!",
   "collectorCollectedNothing": "ಕೋಡಿಂಗ್ ಇರಿಸಿಕೊಳ್ಳಿ! ನೀವು ಎಷ್ಟು ಸಾಧ್ಯವೋ ಅಷ್ಟು ವಸ್ತುಗಳನ್ನು ನೀವು ಸಂಗ್ರಹಿಸಬೇಕಾಗಿದೆ.",
   "collectorCollectedSome": "ಉತ್ತಮ ಕೆಲಸ! ನೀವು {count, plural, one {1 ಐಟಂ ಅನ್ನು} other {# ಐಟಂಗಳನ್ನು}} ಸಂಗ್ರಹಿಸಿದ್ದೀರಿ!",
   "collectorCollectedNotEnough": "ಕೋಡಿಂಗ್ ಮಾಡುತ್ತಿರಿ! ನೀವು ಕನಿಷ್ಠ {goal, plural, one {1 ಐಟಂ} other {# ಐಟಂಗಳನ್ನು}} ಸಂಗ್ರಹಿಸಬಹುದು.",

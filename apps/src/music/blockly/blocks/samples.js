@@ -37,6 +37,7 @@ const getCurrentTrackId = ctx => {
 export const playSound = {
   definition: {
     type: BlockTypes.PLAY_SOUND,
+    style: 'music_blocks',
     message0: 'play %1 at measure %2',
     args0: [
       {
@@ -56,7 +57,6 @@ export const playSound = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
     tooltip: 'play sound',
     helpUrl: ''
   },
@@ -113,8 +113,8 @@ export const setCurrentLocationNextMeasure = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 95,
-    tooltip: 'play sound',
+    style: 'music_blocks',
+    tooltip: 'go to next measure',
     helpUrl: ''
   },
   generator: ctx => 'currentMeasureLocation++\n'
@@ -133,7 +133,7 @@ export const newTrackAtStart = {
     ],
     inputsInline: true,
     nextStatement: null,
-    colour: 150,
+    style: 'setup_blocks',
     tooltip: 'new track',
     helpUrl: '',
     extensions: ['default_track_name_extension']
@@ -162,7 +162,7 @@ export const newTrackAtMeasure = {
     ],
     inputsInline: true,
     nextStatement: null,
-    colour: 150,
+    style: 'setup_blocks',
     tooltip: 'new track',
     helpUrl: '',
     extensions: ['default_track_name_extension']
@@ -195,7 +195,7 @@ export const newTrackOnTrigger = {
     ],
     inputsInline: true,
     nextStatement: null,
-    colour: 150,
+    style: 'event_blocks',
     tooltip: 'new track',
     helpUrl: '',
     extensions: ['default_track_name_extension', 'dynamic_trigger_extension']
@@ -227,7 +227,7 @@ export const playSoundInTrack = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
+    style: 'music_blocks',
     tooltip: 'play sound',
     helpUrl: ''
   },
@@ -251,7 +251,7 @@ export const restInTrack = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 50
+    style: 'music_blocks'
   },
   generator: ctx =>
     `MusicPlayer.addRestToTrack(${getCurrentTrackId(
