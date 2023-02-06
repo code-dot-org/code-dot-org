@@ -21,7 +21,7 @@ import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCa
 import Button from '@cdo/apps/templates/Button';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import IncubatorBanner from './IncubatorBanner';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -159,9 +159,9 @@ export const UnconnectedTeacherHomepage = ({
   // whether they've just logged in.
   if (
     !!currentUserId &&
-    tryGetLocalStorage(LOGGED_TEACHER_SESSION, 'false') !== 'true'
+    tryGetSessionStorage(LOGGED_TEACHER_SESSION, 'false') !== 'true'
   ) {
-    trySetLocalStorage(LOGGED_TEACHER_SESSION, 'true');
+    trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
     analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
       'user id': currentUserId

@@ -60,7 +60,7 @@ describe('StudentHomepage', () => {
     });
   });
 
-  it('does not log an Amplitude event for teacher signing-in', () => {
+  it('does not log an Amplitude event for student signing-in', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     shallow(<StudentHomepage {...TEST_PROPS} />);
 
