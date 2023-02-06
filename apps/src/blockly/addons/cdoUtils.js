@@ -20,7 +20,7 @@ export function getToolboxType() {
     return;
   }
   // True is passed so we only get the flyout directly owned by the workspace.
-  // Otherwise getFlyout will return the flout for the toolbox if it has categories.
+  // Otherwise getFlyout will return the flyout for the toolbox if it has categories.
   if (workspace.getFlyout(true)) {
     return ToolboxType.UNCATEGORIZED;
   } else if (workspace.getToolbox()) {
