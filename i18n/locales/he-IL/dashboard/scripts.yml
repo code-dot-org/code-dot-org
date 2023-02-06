@@ -2448,3 +2448,8 @@ he:
         vpl-csd6-ayw-pilot-2022: {}
         self-paced-pl-csa4-2023: {}
         katies-playground: {}
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        microbit-temp: {}
