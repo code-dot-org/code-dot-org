@@ -40,6 +40,7 @@ export const playMultiMutator = {
   addSound_: function() {
     this.appendDummyInput(EXTRA_SAMPLE_INPUT_PREFIX + this.extraSampleCount_)
       .setAlign(Blockly.Input.Align.RIGHT)
+      .appendField('and')
       .appendField(
         new FieldSounds({
           type: FIELD_SOUNDS_TYPE,
