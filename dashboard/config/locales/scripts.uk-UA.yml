@@ -3309,3 +3309,7 @@ uk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Глава 2: Побудова фізичних прототипів'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
