@@ -31,7 +31,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "start_in_animation_tab": "false",
@@ -66,15 +66,16 @@
     "display_name": "Dolphin Pods",
     "thumbnail_url": "https://images.code.org/239662fcb0e6bf3a8c588f6d8b70adc1-image-1650394330084.49.35 AM.png",
     "encrypted_examples": "KqCFW/mPQBYd2llilvgs+brK6qYR6cCFdQMiefHF53sdRkVnSbUznAonRYb0\nqxeEZRSbYF0p6rmVPoAy+f32iQ==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "spritelab"
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-11-01T23:04:48.000Z",
-  "user_id": 182,
   "published": true,
+  "created_at": "2022-11-01T23:04:48.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:48.176+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_dolphins_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_dolphins_2022\"},{\"changed_at\":\"2022-11-30 19:28:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:48.176+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_dolphins_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_dolphins_2022\"},{\"changed_at\":\"2022-11-30 19:28:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:10:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
