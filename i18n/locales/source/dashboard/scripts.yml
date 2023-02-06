@@ -7658,6 +7658,8 @@ en:
               name: Intro to Sprites
             lesson-8:
               name: Physical Computing PSP
+            lesson-9:
+              name: Microbit Playground
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
@@ -8259,6 +8261,8 @@ en:
               name: 'Module 8 post-work: Preparing students for the AP Exam'
             lesson-8:
               name: 'Module 8 post-work: Preparing students for the AP Exam'
+            lesson-9:
+              name: Module X
           lesson_groups: {}
           name: csa-draft-pl
           title: ''
@@ -8537,14 +8541,46 @@ en:
           description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to write no-argument constructors to assign default values and parameterized constructors to assign specific values to an object's instance variables. They explore how the `this` keyword can be used to reduce ambiguity and redundancies in their program and how the `super` keyword can be used to call a superclass constructor or method. Students also learn how to work with variables and write expressions using arithmetic and compound assignment operators and practice tracing code segments to determine the output. After working with instance variables and constructors, they write accessor and mutator methods to work with the values assigned to an object's instance variables and `toString()` methods to display information about an object to the console. Throughout this unit, students continue to develop software engineering skills as they learn to make design decisions and use inheritance to create class hierarchies.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, students will be able to . . ._\n\n-   Represent attributes of an object using instance variables\n\n-   Write no-argument and parameterized constructors to set the state of an object\n\n-   Use the `super` keyword to refer to the superclass in constructors and methods\n\n-   Write expressions using arithmetic operators and compound assignment operators with variables and object data\n\n-   Write accessor and mutator methods to obtain and modify object data\n\n-   Write `toString()` methods and use escape sequences to display and format information about an object to the console\n    :::\n     \n\n::: details [**✅ AP Classroom Personal Progress Checks**]\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 1\n\n-   Personal Progress Check 5\n\n-   Personal Progress Check 9\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
           student_description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, you will be able to . . ._\n\n-   Represent attributes of an object using instance variables\n\n-   Write no-argument and parameterized constructors to set the state of an object\n\n-   Use the `super` keyword to refer to the superclass in constructors and methods\n\n-   Write expressions using arithmetic operators and compound assignment operators with variables and object data\n\n-   Write accessor and mutator methods to obtain and modify object data\n\n-   Write `toString()` methods and use escape sequences to display and format information about an object to the console\n    :::"
         csa3-2023:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: One-Dimensional (1D) Arrays
+            lesson-2:
+              name: Modifying Elements
+            lesson-3:
+              name: For Loops
+            lesson-4:
+              name: Preconditions and Postconditions
+            lesson-5:
+              name: Enhanced For Loops
+            lesson-6:
+              name: Static Variables and Constants
+            lesson-7:
+              name: Polymorphism
+            lesson-8:
+              name: Array Algorithms
+            lesson-9:
+              name: Finding Duplicates
+            lesson-10:
+              name: Data for Social Good Project
+            lesson-11:
+              name: FRQ Practice
+            lesson-12:
+              name: Unit 3 Assessment
+            lesson-13:
+              name: Data for Social Good Project [1-Day Version]
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Alternate Lessons
           name: csa3-2023
           title: Arrays and Algorithms
           description_audience: ''
           description_short: Students use one-dimensional (1D) arrays to store lists of primitive values and object references.
-          description: "This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to represent lists of data while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, students identify the preconditions and postconditions that an algorithm must satisfy. Additionally, students learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 4\n-   Personal Progress Check 6\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
-          student_description: This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to represent lists of data while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, you identify the preconditions and postconditions that an algorithm must satisfy. Additionally, you learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
+          description: "This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to store multiple related values while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, students identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. Students continue to develop software engineering skills as they learn to make design decisions and use 1D arrays to store and analyze data.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, students will be able to . . ._\n\n-   Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n-   Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n-   Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n-   Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n-   Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n-   Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n    :::\n     \n\n::: details [**✅ AP Classroom Personal Progress Checks**]\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 4\n-   Personal Progress Check 6\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to store multiple related values while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, you identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. You continue to develop software engineering skills as you learn to make design decisions and use 1D arrays to store and analyze data.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, you will be able to . . ._\n\n-   Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n-   Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n-   Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n-   Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n-   Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n-   Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n    :::"
         csa4-2023:
           lessons: {}
           lesson_groups: {}
@@ -8917,6 +8953,8 @@ en:
               name: Particles Lesson 4
             lesson-6:
               name: Katie Testing
+            lesson-7:
+              name: Maze functions
           lesson_groups: {}
           name: csc-playground
           title: CSC Playground
@@ -8954,6 +8992,12 @@ en:
               name: Emma's Stuff
             lesson-2:
               name: NEW- Function Machines
+            lesson-3:
+              name: NEW- Function Machines - Lesson 2
+            lesson-4:
+              name: NEW- Function Machines - Lesson 3
+            lesson-5:
+              name: NEW- Function Machines - Lesson 4
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -9047,7 +9091,7 @@ en:
               display_name: Post-Course Survey
             lessonGroup-6:
               display_name: Pre-Unit Survey
-          title: Data ('22-'23)
+          title: Data ('23-'24)
           description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
           description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
@@ -9070,7 +9114,7 @@ en:
               display_name: Traversals
             lessonGroup-5:
               display_name: Project
-          title: Lists, Loops, and Traversals ('22-'23)
+          title: Lists, Loops, and Traversals ('23-'24)
           description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           description_short: Learn how to build apps that use lists, loops, and traversals to store and process large amounts of information.
@@ -9096,7 +9140,7 @@ en:
               display_name: 'Unit 8: Cybersecurity and Global Impacts'
             lessonGroup-3:
               display_name: Post-Course Survey
-          title: Cybersecurity and Global Impacts ('22-'23)
+          title: Cybersecurity and Global Impacts ('23-'24)
           description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
           student_description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
           description_short: 'Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact. '
@@ -9106,10 +9150,10 @@ en:
         csp9-2023:
           lesson_groups:
             csp_unit9_2020:
-              display_name: 'Unit 9: Data'
+              display_name: 'Unit 9: Create PT'
             lessonGroup-2:
               display_name: Post-Course Survey
-          title: Create PT Prep ('22-'23)
+          title: Create PT Prep ('23-'24)
           description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           student_description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           description_short: Practice and complete the Create Performance Task (PT).
@@ -9122,7 +9166,7 @@ en:
               display_name: 'Unit 10: Algortihms'
             lessonGroup-2:
               display_name: Post-Course Survey
-          title: Algorithms ('22-'23)
+          title: Algorithms ('23-'24)
           description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           description_short: Design and analyze algorithms to understand how they work and why some are considered better than others.
@@ -9413,3 +9457,40 @@ en:
             -   Build confidence and skill in core computer science concepts.
             -   Reflect on your role in supporting student learning.
             -   Practice your responses to common classroom scenarios.
+        self-paced-pl-csa4-2023:
+          lessons:
+            lesson-1:
+              name: Creating and using objects
+            lesson-2:
+              name: Exploring the Painter class
+          lesson_groups: {}
+          name: self-paced-pl-csa4-2023
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: |-
+            This module is for any teacher who is:
+
+            -   Experienced in using variables, conditionals, loops and arrays in other programming languages
+            -   Has finished Module 3 in this set of Modules
+            -   Is new to Java
+
+            **You will:**
+
+            -   Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            -   Call methods from the `Painter` class
+            -   Instantiate an object
+
+            **Estimated Time:** ~2 hours
+        katies-playground:
+          lessons:
+            lesson-1:
+              name: FM Ideas
+          lesson_groups: {}
+          name: katies-playground
+          title: Katie's Place To Do Stuff
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

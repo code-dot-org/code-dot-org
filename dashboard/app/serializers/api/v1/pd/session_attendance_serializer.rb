@@ -30,8 +30,8 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
   end
 
   def attended?(enrollment)
-    return true if enrollment && object.attendances.where(pd_enrollment_id: enrollment.id).exists?
-    return true if enrollment.user && object.attendances.where(teacher_id: enrollment.user.id).exists?
+    return true if enrollment && object.attendances.exists?(pd_enrollment_id: enrollment.id)
+    return true if enrollment.user && object.attendances.exists?(teacher_id: enrollment.user.id)
     false
   end
 end

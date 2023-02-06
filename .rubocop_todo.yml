@@ -185,11 +185,6 @@ Performance/Detect:
 Performance/MethodObjectAsBlock:
   Enabled: false
 
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-Performance/TimesMap:
-  Enabled: false
-
 # Offense count: 7
 # This cop supports safe auto-correction (--auto-correct).
 Rails/ApplicationMailer:
@@ -291,13 +286,6 @@ Rails/TimeZone:
 Rails/WhereEquals:
   Enabled: false
 
-# Offense count: 25
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: exists, where
-Rails/WhereExists:
-  Enabled: false
-
 # Offense count: 2
 Security/MarshalLoad:
   Enabled: false
@@ -375,16 +363,6 @@ Style/ExplicitBlockArgument:
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowedVars.
 Style/FetchEnvVar:
-  Enabled: false
-
-# Offense count: 4
-# This cop supports safe auto-correction (--auto-correct).
-Style/FileRead:
-  Enabled: false
-
-# Offense count: 30
-# This cop supports safe auto-correction (--auto-correct).
-Style/FileWrite:
   Enabled: false
 
 # Offense count: 2

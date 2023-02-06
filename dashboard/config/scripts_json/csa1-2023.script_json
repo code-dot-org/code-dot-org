@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-18 00:30:46 UTC",
+    "serialized_at": "2023-01-18 16:11:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9192,7 +9192,7 @@
       }
     },
     {
-      "name": "FRQ Practice",
+      "name": "SpiralPainter FRQ",
       "url": "https://docs.google.com/presentation/d/1vdfMoR8X4eqfVKsWLJ1JIDprNAJmDhdJL9V-NSGQz9s/edit?usp=sharing",
       "key": "frq_practice",
       "properties": {

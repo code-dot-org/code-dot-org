@@ -18,3 +18,7 @@ for (int index = nums.length; index >= 0; index--) {
 }
 ```
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Since the loop control variable is initialized to the length of the 1D array `nums`, the first value used as the index is `5`, but the last valid index in the 1D array is `4`. This will result in an `ArrayIndexOutOfBoundsException`.
+MARKDOWN

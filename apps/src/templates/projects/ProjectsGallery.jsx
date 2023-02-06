@@ -75,7 +75,7 @@ class ProjectsGallery extends Component {
 const styles = {
   container: {
     marginBottom: 20,
-    backgroundColor: color.lightest_gray,
+    backgroundColor: color.neutral_light,
     borderRadius: 5,
     borderStyle: 'solid',
     borderWidth: 1,
@@ -85,14 +85,14 @@ const styles = {
   },
   pill: {
     ':hover': {
-      color: color.teal
+      color: color.brand_primary_default
     },
     border: 'none',
     borderRadius: 50,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 20,
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
+    backgroundColor: color.neutral_light,
+    color: color.neutral_dark,
     margin: '0 0 0 20px',
     boxShadow: 'none',
     outline: 'none',
@@ -102,10 +102,10 @@ const styles = {
   },
   selectedPill: {
     ':hover': {
-      color: color.white
+      color: color.neutral_white
     },
-    backgroundColor: color.teal,
-    color: color.white,
+    backgroundColor: color.brand_primary_default,
+    color: color.neutral_white,
     border: 'none'
   }
 };
