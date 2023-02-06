@@ -1083,6 +1083,10 @@ hr:
           lessons:
             lesson-4:
               name: Varijable
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Petlja brojača
         hello-world-space-2022:
           title: 'Hello World: Prostor'
         hello-world-soccer-2022:
@@ -1101,7 +1105,11 @@ hr:
               display_name: Funkcije
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Liste
             csp_loops:
+              display_name: Petlje
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
               display_name: Petlje

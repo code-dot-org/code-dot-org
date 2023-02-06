@@ -1186,14 +1186,48 @@
         "csd5-2022/Problem Solving and Data": {
           "name": "Risoluzione dei problemi con i dati"
         },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi",
+          "overview": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**\n\nIn questa lezione, gli studenti lavorano in gruppo per progettare barche in carta di alluminio che sostengano il maggior numero possibile di centesimi. I gruppi hanno a disposizione due turni per lavorare sulle proprie barche, con l'obiettivo di vincere più centesimi rispetto al primo round. La struttura dell'attività prevede diverse fasi del processo di risoluzione dei problemi, sulle quali gli studenti verranno istruiti con maggiori dettagli nella lezione successiva. Alla fine della lezione gli studenti riflettono sulla propria esperienza con l'attività e creano collegamenti con le tipologie di risoluzione dei problemi da utilizzare per il resto del corso\n\n**Sono disponibili anche versioni alternative di questa lezione.** \n\n-   [Tavolo di giornali](/s/csd1-2022/lessons/9/)\n-   [Ponte di spaghetti](/s/csd1-2022/lessons/10/)\n-   [Torre di carta](/s/csd1-2022/lessons/11/)",
+          "purpose": "Questa lezione è una divertente introduzione alla risoluzione di problemi, in modalità aperta, collaborativa e creativa, che sarà utile per gli studenti nel resto di questa unità e del corso. Il problema delle barche in alluminio potrebbe essere facilmente sostituito da qualsiasi altro problema che richieda agli studenti di definire i propri obiettivi, elaborare un piano, sperimentare una soluzione, valutare i risultati e da qui migliorare di volta in volta. Il fatto che il problema scelto sia «non computazionale» è intenzionale. L'informatica è fondamentalmente una disciplina che risolve problemi e, in questa fase, astenersi dai tradizionali problemi informatici aiuta a impostare questa classe come una classe focalizzata sulla risoluzione dei problemi in generale, in cui l'informatica è un nuovo «strumento» per aiutare ad affrontare determinati tipi di problemi. "
+        },
         "csd1-2022/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi",
+          "overview": "**Domanda del giorno: quali sono alcuni dei comuni passaggi che possiamo percorrere per risolvere diversi tipi di problemi?**\n\nQuesta lezione introduce il processo formale di risoluzione dei problemi che gli studenti utilizzeranno nel corso dell'anno, Definisci - Prepara - Prova - Rifletti. La lezione ha inizio con la richiesta agli studenti di riflettere su tutti i diversi tipi di problemi incontrati nella vita quotidiana. Agli studenti vengono quindi mostrate le quattro fasi del processo di risoluzione dei problemi; essi lavorano insieme per mettere in relazione queste fasi astratte con le loro effettive esperienze di risoluzione dei problemi. Gli studenti mettono prima in relazione questi passaggi con le attività problematiche della lezione precedente, poi con un problema che sono bravi a risolvere, quindi con un problema che vogliono migliorare. Alla fine della lezione la classe raccoglie un elenco di strategie generalmente utili per ogni fase del processo da apporre sui cartelloni che verranno utilizzati durante l'unità e durante l'anno.",
+          "purpose": "Questa lezione mira a mettere in relazione il processo formale di risoluzione dei problemi che gli studenti utilizzeranno durante il corso, con alcune esperienze di vita reale in cui hanno già messo in pratica la risoluzione dei problemi. Le unità future di CS Discoveries presenteranno problemi in contesti che possono essere familiari o meno. Un processo strutturato di risoluzione dei problemi sarà uno strumento importante per aiutare gli studenti ad andare avanti di fronte a sfide nuove e complesse."
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi"
         },
         "csd1-2022/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Ingressi e uscite"
+        },
+        "csd1-2022/Processing": {
+          "name": "Elaborazione"
         },
         "csd1-2022/Storage": {
           "name": "Archiviazione"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
+        },
+        "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Tavolo di giornali (Lezione alternativa 1)"
+        },
+        "csd1-2022/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Ponte di spaghetti (Lezione alternativa 1)"
+        },
+        "csd1-2022/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Torre di carta (Lezione alternativa 1)"
+        },
+        "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema degli animali (Lezione alternativa 3)"
+        },
+        "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema dei giochi (lezione alternativa 3)"
         },
         "csd3-2022/Drawing in Game Lab": {
           "name": "Disegnare in Sviluppo Giochi"
@@ -1822,11 +1856,26 @@
         "csd2-2018/Lists": {
           "name": "Liste"
         },
+        "csd1-2018/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi"
+        },
         "csd1-2018/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi"
+        },
+        "csd1-2018/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi"
         },
         "csd1-2018/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?"
+        },
+        "csd1-2018/Input and Output": {
+          "name": "Ingressi e uscite"
+        },
+        "csd1-2018/Processing": {
+          "name": "Elaborazione"
+        },
+        "csd1-2018/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Cittadinanza digitale - Il mio quartiere digitale"
@@ -2260,11 +2309,26 @@
         "csd6-2019/Functions with Parameters": {
           "name": "Funzioni con parametri"
         },
+        "csd1-2019/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi"
+        },
         "csd1-2019/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi"
+        },
+        "csd1-2019/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi"
         },
         "csd1-2019/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?"
+        },
+        "csd1-2019/Input and Output": {
+          "name": "Ingressi e uscite"
+        },
+        "csd1-2019/Processing": {
+          "name": "Elaborazione"
+        },
+        "csd1-2019/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
         },
         "csd2-2019/Digital Footprint": {
           "name": "Orme digitali"
@@ -2791,14 +2855,29 @@
         "csd2-2017/Lists": {
           "name": "Liste"
         },
+        "csd1-2017/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi"
+        },
         "csd1-2017/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi"
+        },
+        "csd1-2017/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi"
         },
         "csd1-2017/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?"
+        },
+        "csd1-2017/Input and Output": {
+          "name": "Ingressi e uscite"
+        },
+        "csd1-2017/Processing": {
+          "name": "Elaborazione"
         },
         "csd1-2017/Storage": {
           "name": "Archiviazione"
+        },
+        "csd1-2017/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Pixellazione Bianco e Nero Tutorial"
@@ -4182,14 +4261,50 @@
         "csd3-2021/Functions": {
           "name": "Funzioni"
         },
+        "csd1-2021/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi",
+          "overview": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**\n\nIn questa lezione, gli studenti lavorano in gruppo per progettare barche in carta di alluminio che sostengano il maggior numero possibile di centesimi. I gruppi hanno a disposizione due turni per lavorare sulle proprie barche, con l'obiettivo di vincere più centesimi rispetto al primo round. La struttura dell'attività prevede diverse fasi del processo di risoluzione dei problemi, sulle quali gli studenti verranno istruiti con maggiori dettagli nella lezione successiva. Alla fine della lezione gli studenti riflettono sulla propria esperienza con l'attività e creano collegamenti con le tipologie di risoluzione dei problemi da utilizzare per il resto del corso\n\n**Sono disponibili anche versioni alternative di questa lezione.** \n\n-   [Tavolo di giornali](/s/csd1-2021/lessons/9/)\n-   [Ponte di spaghetti](/s/csd1-2021/lessons/10/)\n-   [Torre di carta](/s/csd1-2021/lessons/11/)",
+          "preparation": "**Per ciascun gruppo**\n\n-   2 fogli quadrati di carta di alluminio da 12/13 cm di lato\n-   1 contenitore che può contenere 7-13 cm di acqua \n-   Diversi asciugamani di carta o stracci che possono essere posizionati sotto il contenitore \n-   15 monetine (centesimi)\n-   Una copia della guida alle attività\n\n**Per l'insegnante**\n\n-   1 contenitore che può contenere 7-13 cm di acqua \n-   50 monetine (centesimi)\n-   Asciugamani o stracci di carta extra ",
+          "purpose": "Questa lezione è una divertente introduzione alla risoluzione di problemi, in modalità aperta, collaborativa e creativa, che sarà utile per gli studenti nel resto di questa unità e del corso. Il problema delle barche in alluminio potrebbe essere facilmente sostituito da qualsiasi altro problema che richieda agli studenti di definire i propri obiettivi, elaborare un piano, sperimentare una soluzione, valutare i risultati e da qui migliorare di volta in volta. Il fatto che il problema scelto sia «non computazionale» è intenzionale. L'informatica è fondamentalmente una disciplina che risolve problemi e, in questa fase, astenersi dai tradizionali problemi informatici aiuta a impostare questa classe come una classe focalizzata sulla risoluzione dei problemi in generale, in cui l'informatica è un nuovo «strumento» per aiutare ad affrontare determinati tipi di problemi. "
+        },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Il Processo di Risoluzione dei Problemi"
+          "name": "Il processo di risoluzione dei problemi",
+          "overview": "**Domanda del giorno: quali sono alcuni dei comuni passaggi che possiamo percorrere per risolvere diversi tipi di problemi?**\n\nQuesta lezione introduce il processo formale di risoluzione dei problemi che gli studenti utilizzeranno nel corso dell'anno, Definisci - Prepara - Prova - Rifletti. La lezione ha inizio con la richiesta agli studenti di riflettere su tutti i diversi tipi di problemi incontrati nella vita quotidiana. Agli studenti vengono quindi mostrate le quattro fasi del processo di risoluzione dei problemi; essi lavorano insieme per mettere in relazione queste fasi astratte con le loro effettive esperienze di risoluzione dei problemi. Gli studenti mettono prima in relazione questi passaggi con le attività problematiche della lezione precedente, poi con un problema che sono bravi a risolvere, quindi con un problema che vogliono migliorare. Alla fine della lezione la classe raccoglie un elenco di strategie generalmente utili per ogni fase del processo da apporre sui cartelloni che verranno utilizzati durante l'unità e durante l'anno.",
+          "preparation": "Per ogni studente \n\n-   Stampa una copia della Guida alle attività\n\nPer la classe\n\n-   Cartellone\n-   Pennarelli/matite colorate",
+          "purpose": "Questa lezione mira a mettere in relazione il processo formale di risoluzione dei problemi che gli studenti utilizzeranno durante il corso, con alcune esperienze di vita reale in cui hanno già messo in pratica la risoluzione dei problemi. Le unità future di CS Discoveries presenteranno problemi in contesti che possono essere familiari o meno. Un processo strutturato di risoluzione dei problemi sarà uno strumento importante per aiutare gli studenti ad andare avanti di fronte a sfide nuove e complesse."
+        },
+        "csd1-2021/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi"
         },
         "csd1-2021/What is a Computer?": {
-          "name": "Cos'è un Computer?"
+          "name": "Cos'è un computer?"
+        },
+        "csd1-2021/Input and Output": {
+          "name": "Ingressi e uscite"
+        },
+        "csd1-2021/Processing": {
+          "name": "Elaborazione"
         },
         "csd1-2021/Storage": {
           "name": "Archiviazione"
+        },
+        "csd1-2021/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app"
+        },
+        "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Tavolo di giornali (Lezione alternativa 1)"
+        },
+        "csd1-2021/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Ponte di spaghetti (Lezione alternativa 1)"
+        },
+        "csd1-2021/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Torre di carta (Lezione alternativa 1)"
+        },
+        "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema degli animali (Lezione alternativa 3)"
+        },
+        "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema dei giochi (lezione alternativa 3)"
         },
         "csd2-2021/Digital Footprint": {
           "name": "Orme digitali"

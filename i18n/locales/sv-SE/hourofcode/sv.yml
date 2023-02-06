@@ -142,6 +142,10 @@ sv:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -1032,6 +1036,10 @@ sv:
   footer_menu_terms: Villkor
   footer_menu_privacy: Sekretesspolicy
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Prova en timmes handledning avsedd för alla åldrar på över 45
     språk.  Gör som miljontals elever och lärare i över 180 länder och börja med Hour
@@ -7279,8 +7287,7 @@ sv:
   tutorial_irobotphone_string_platforms: Alla moderna webbläsare
   tutorial_codeguppydraw_string_platforms: Alla moderna webbläsare
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: Alla moderna webbläsare, Android-surfplatta,
-    iPad
+  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -10191,8 +10198,7 @@ sv:
   tutorial_microsoftforest_string_platforms: Alla moderna webbläsare
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Alla moderna webbläsare
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: Windows, iPad, MacOS
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: Alla moderna webbläsare
   tutorial_codeartportrait_string_platforms: Alla moderna webbläsare, Android-surfplatta,
@@ -10585,6 +10591,10 @@ sv:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -10926,6 +10936,18 @@ sv:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Grades 2-5
   tutorial_rpledfirefly_string_detail_grades: Åk 6-8 (ålder 11-13)
   tutorial_rpcharting_string_detail_grades: Årskurs 9 och uppåt
@@ -11018,6 +11040,10 @@ sv:
   tutorial_nasapackage_string_detail_grades: Åk 6-8 (ålder 11-13)
   tutorial_nasalunar_string_detail_grades: Åk 6-8 (ålder 11-13)
   tutorial_meeestate_string_detail_grades: Årskurs 2 och uppåt
+  tutorial_imagipixelart_string_detail_grades: Årskurs 2-8
+  tutorial_kcjhealth_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_msftwakanda_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_nafbrand_string_detail_grades: Årskurs 9 och uppåt
   tutorial_rpccw_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_rpledfirefly_string_platforms: Alla moderna webbläsare
@@ -11138,8 +11164,13 @@ sv:
   tutorial_nasaorbit_string_platforms: Alla moderna webbläsare
   tutorial_nasapackage_string_platforms: Alla moderna webbläsare
   tutorial_nasalunar_string_platforms: Alla moderna webbläsare, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: Alla moderna webbläsare
+  tutorial_msftwakanda_string_platforms: Alla moderna webbläsare
+  tutorial_nafbrand_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11233,6 +11264,10 @@ sv:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Block
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11331,29 +11366,10 @@ sv:
   tutorial_nasapackage_string_detail_programming_languages: Block
   tutorial_nasalunar_string_detail_programming_languages: Block, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Block, Python
-  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
-    animations in this 1 hour crash course!
-  tutorial_imagipixelart_name: Code your own pixel art!
-  tutorial_imagipixelart_string_detail_grades: Årskurs 2-8
-  tutorial_imagipixelart_string_detail_platforms: ''
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
-    Windows phone, Android phone, iPhone
-  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
-    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
-  tutorial_kcjhealth_name: The Health & Well-Being Challenge
-  tutorial_kcjhealth_string_detail_grades: Klass 6+ (11 eller fler)
-  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
   tutorial_kcjhealth_string_detail_programming_languages: Block
-  tutorial_kcjhealth_string_platforms: Alla moderna webbläsare
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
-    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
-    ''Black Panther: Wakanda Forever''!'
-  tutorial_msftwakanda_name: Long Live Wakanda
-  tutorial_msftwakanda_string_detail_grades: Klass 6+ (11 eller fler)
-  tutorial_msftwakanda_string_detail_platforms: ''
   tutorial_msftwakanda_string_detail_programming_languages: Block
-  tutorial_msftwakanda_string_platforms: Alla moderna webbläsare
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
@@ -11410,6 +11426,13 @@ sv:
   all: Alla
   dont_know: Jag vet inte
   language_label: Language
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

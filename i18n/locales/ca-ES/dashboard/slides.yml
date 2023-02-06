@@ -140,10 +140,8 @@ ca:
       4:
         text: "La definició resta en l'àrea de treball, però el nostre agricultor no executarà la funció fins que haguem arrossegat el nostre bloc funció \"omplir 5\" fora de la categoria de funcions."
       5:
-        text: "Let's put the \"fun\" back in \"FUNction!\""
     loop_while:
       1:
-        text: "Hi, I'm Makinde! Let's learn about the \"while block.\""
       2:
         text: "El \"bloc mentre\" farà tot el que posem a l'interior durant l'estona que l'expressió que l'encapçala sigui certa."
       3:
@@ -258,6 +256,13 @@ ca:
       2:
         text: "Si volem que l'actor faci alguna cosa repetidament, sense que el jugador hagi de fer res, posarem els blocs dins del bloc \"repetir per sempre\"."
       3:
+    C2_maze_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+        text: "Si en algun moment vols eliminar un bloc, separa'l de la pila i arrossega'l a les escombraries. Després de fer clic a \"Executar\", sempre pots fer clic al botó de reiniciar per portar la gallina al principi. I ara, anem a buscar els porquets!"
     C2_playlab_createstory:
       1:
         text: "Fins ara heu estat fent una animació o una història que fa exactament la mateixa cosa cada vegada que s'executa. Ara podeu fer un joc interactiu que de fet podeu jugar."
@@ -266,6 +271,13 @@ ca:
       1:
         text: "Fins ara heu estat fent una animació o una història que fa exactament la mateixa cosa cada vegada que s'executa. Ara podeu fer un joc interactiu que de fet podeu jugar."
       2:
+    C4_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+        text: "Si en algun moment vols eliminar un bloc, separa'l de la pila i arrossega'l a les escombraries. Després de fer clic a \"Executar\", sempre pots fer clic al botó de reiniciar per portar la gallina al principi. I ara, anem a buscar els porquets!"
     starwars_events:
       1:
       2:
@@ -377,6 +389,122 @@ ca:
       7:
       8:
       9:
+    mc_2016_intro:
+      1:
+        text: "Hola, em dic Jens i sóc el dissenyador creatiu principal de Minecraft. En aquesta hora, crearàs el teu propi joc de Minecraft. Això sembla Minecraft, però el món s'ha aturat. Les ovelles no es mouen, les gallines no ponen ous i els zombis estan quiets. Hauràs d'afegir el codi que faci funcionar el món de Minecraft."
+      2:
+        text: "Em dic Melissa i soc investigadora d'usuaris a Minecraft. (Voleu que facin tot això per sempre? Sí). M'interessa molt com la gent pensa i interactua amb la tecnologia. Aquesta feina és la feina perfecta per a mi, perquè puc combinar l'enginyeria informàtica i la psicologia, és a dir, com pensen i es comporten les persones."
+      3:
+        text: "Veureu que la pantalla es divideix en tres parts principals. A l'esquerra hi ha el joc de Minecraft. Ara mateix, el món està aturat, però ara ho arreglarem amb el codi."
+      4:
+        text: "Aquesta part central és la caixa d'eines. Cadascun d'aquests blocs és una ordre que les gallines, les ovelles i les altres criatures de Minecraft poden entendre."
+      5:
+        text: "L'espai de la dreta es diu espai de treball, i és on construirem el nostre programa."
+      6:
+        text: "Si no recordes què has de fer, trobaràs les instruccions de cada nivell a la part superior."
+      7:
+        text: "Per començar, programarem una gallina. Arrossego l'ordre \"avançar\" a l'espai de treball. Quan faig clic a \"Executar\", la gallina avança un pas. Perquè segueixi avançant, afegiré un altre bloc \"avançar\" sota el primer bloc \"avançar\", fins que aparegui el requadre. Llavors, el deixo anar i els dos blocs s'uneixen. Si torno a fer clic a \"Executar\", la gallina fa dos passos."
+      8:
+      9:
+        text: "Després de fer clic a \"Executar\", sempre pots fer clic al botó de reiniciar per tornar a començar. Ara, et toca a tu crear la teva pròpia versió de Minecraft. Passa-t'ho molt bé!"
+    mc_2017_agent_intro:
+      1:
+        text: "Stacy: Stampy, Lizzy, Preston, gràcies per acompanyar-me. El que us vull ensenyar està just passat aquest altiplà. Crec que us encantarà!"
+      2:
+        text: "Un moment... hi ha un forat a la via! (cridant)"
+      3:
+        text: "Esteu tots bé? Stampy: Ah, ja veig quin és el problema Mireu! Hi havia un forat a la via. Stacy: Ah sí, Stampy? Lizzy: Potser hauríem de recollir alguns blocs per arreglar-lo. Preston: Fem una carrera. El primer que arribi al cim, guanya. Stacy: D’acord. Preparats, llestos... JA! Vaig a agafar una mica d’argila. Ep, nois, no puc excavar! Preston: Jo tampoc. Lizzy: Ni jo! Stacy: És ben estrany. Stampy, tu pots excavar? Stampy: No, no puc! Stacy: D’acord, no perdem la calma. Stampy: I si s’ha trencat el joc? Stacy: Si s’ha trencat, com l’arreglem? Lizzy: No ho sé... Stampy: Algú sap escriure codi a Minecraft?"
+      4:
+        text: "(puf!) Preston: Què és això? Stampy: No he vist mai res semblant. Lizzy: Quina monada! Stacy: Creieu que el podem domesticar? Preston: A veure, què passa? Algú ha de tornar al món real i arreglar tot això. Tots: Jo no! Stacy: Jo n... (suspira) Molt bé, ja hi vaig jo!"
+      5:
+        text: "D'acord, ara soc al món real. A veure si trobo l'oficina de Minecraft."
+      6:
+        text: "Però necessitaré la vostra ajuda. Comenceu a fer el tutorial i a aprendre a programar, i ens veiem passats uns nivells, d'acord? Desitgeu-me sort! Crec que és per aquí... Ai, un cactus! Tranquils, estic bé!"
+      7:
+        text: "Per completar el codi de l'Hora del Codi, haureu d'escriure codi per programar l'Agent. Treballareu amb l'Agent per apartar els obstacles del camí perquè pugueu recollir els objectes que necessitareu pel vostre viatge. Només l'Agent pot posar i destruir blocs, i només vosaltres podeu recollir els objectes. La pantalla està dividida en tres parts. A la dreta hi ha Minecraft."
+      8:
+        text: "A la part central hi ha la caixa d'eines amb les ordres que l'Agent és capaç d'entendre."
+      9:
+        text: "I a la dreta hi ha l'espai de treball. Aquí apilareu les ordres per construir el programa per controlar l'Agent."
+      10:
+        text: "L'Agent pot caminar, girar i activar plaques de pressió. També pot destruir i posar blocs. Quan posa un bloc com aquestes vies de vagoneta, el col·loca a sota d'on es troba."
+      11:
+        text: "Si no recordes què has de fer, trobaràs les instruccions de cada nivell a la part superior."
+      12:
+        text: "Si voleu tornar a provar-ho, podeu fer clic al botó blau de reiniciar per tornar al punt de partida. I si voleu eliminar un bloc de codi, arrossegeu-lo de l'espai de treball cap a la caixa d'eines. Recordeu fer clic a \"Executar\" per fer que l'Agent comenci a moure's. Vinga, proveu els primers nivells. Bona sort!"
+    hoc_dance_warmup:
+      1:
+      2:
+        text: "Hola, em dic Miral Kotb i soc ballarina, desenvolupadora de software i creadora d'iLuminate."
+      3:
+      4:
+        text: "Durant la pròxima hora, us endinsareu en la informàtica i programareu la vostra pròpia festa de ball. Hem triat cançons famoses i un grup de ballarins fantàstics perquè pugueu jugar-hi."
+      5:
+        text: "Fareu servir blocs de codi per triar ballarins diferents, canviar els passos de ball que fan, fer que segueixin la música i fer-los interactius."
+      6:
+        text: "Veureu que la pantalla està dividida en tres parts. A l'esquerra hi ha la zona de joc, que és on apareixeran els ballarins."
+      7:
+        text: "Aquesta part central és la caixa d'eines. Aquí apareixeran blocs nous de codi a mesura que aneu fent les lliçons."
+      8:
+        text: "L'espai de la dreta és l'espai de treball. Pots arrossegar-hi blocs des de la caixa d'eines per construir el teu programa."
+      9:
+        text: "Les instruccions per cada nivell apareixeran a la part superior de la pantalla. Si necessites una pista, fes clic a la bombeta."
+      10:
+        text: "Per començar, farem un ballarí nou amb aquest bloc vermell. Primer, arrossega'l des de la caixa d'eines i connecta'l al bloc taronja de \"configuració\". Aquest ballarí és un gat que es diu \"el_meu_primer_ballarí\". Li pots canviar el nom fent clic aquí."
+      11:
+        text: "També pots canviar on apareix el ballarí a la zona de joc, amb això."
+      12:
+        text: "Sobre la zona de joc hi ha un menú per triar la música. Hi ha un munt de cançons, diverteix-te triant les que més t'agradin! Sota la zona de joc hi ha el botó d'executar. Quan hi facis clic, veuràs aparèixer els ballarins del teu programa a la zona de joc, i sonarà la música."
+      13:
+    mc_2018_intro:
+      1:
+        text: "Hola! Arribeu just a temps. Benvinguts al Viatge Aquàtic. Estic a punt d'embarcar-me en una missió per trobar un tresor que hi ha al fons del mar, i estic molt content que hagueu vingut a ajudar-me. Qui sap què ens trobarem a les misteriores profunditats marines! Se suposa que en aquest moll havíem de conèixer el nostre guia..."
+      2:
+        text: "Benvinguts, aventurers! Per completar el Viatge Aquàtic, haureu de resoltes una sèrie de trencaclosques amb codi. Funciona d'aquesta manera. La pantalla es dividirà en tres parts principals."
+      3:
+        text: "A l'esquerra, veuràs el món de Minecraft."
+      4:
+        text: "La part central és la caixa d'eines, on trobaràs les ordres per programar."
+      5:
+        text: "I la part més gran, a la dreta, és l'espai de treball. Aquí és on apilaràs les ordres per fer el teu programa i controlar els teus moviments."
+      6:
+        text: "Les instruccions de cada nivell són a la part superior de la pàgina. Fes clic al signe de més per passar de les instruccions breus a les llargues."
+      7:
+        text: "Prova d'arrossegar blocs de la caixa d'eines a l'espai de treball, apila'ls i després fes clic al botó \"Executar\" per posar en pràctica les teves ordres."
+      8:
+        text: "És possible que ho hagis de provar algunes vegades perquè et surti, i alguns dels trencaclosques tenen més d'una solució. Experimenta per veure què funciona!"
+      9:
+        text: "Si vols tornar a provar-ho, fes clic al botó de reiniciar per tornar al punt de partida."
+      10:
+        text: "Si vols eliminar una ordre, arrossega el bloc de l'espai de treball cap a la caixa d'eines. I recorda fer clic a \"Executar\" per veure el teu codi en acció."
+      11:
+        text: "Molt bé, prou de xerrameca, aventurer! Comencem a programar per trobar el tresor submarí."
+    hoc_dance_warmup_2019:
+      1:
+      2:
+        text: "Hola, em dic Miral Kotb i soc ballarina, desenvolupadora de software i creadora d'iLuminate."
+      3:
+        text: "La informàtica i la creativitat estan relacionades de moltes maneres. Són impossibles de comptar! Perquè un cop tens l'habilitat d'escriure codi, pots convertir les teves idees en el que vulguis. Jo ho faig amb vestits de llum. Quan tens els recursos necessaris per escriure codi, pots fer moltíssimes coses, i les possibilitats són inifites."
+      4:
+        text: "Durant la pròxima hora, us endinsareu en la informàtica i programareu la vostra pròpia festa de ball. Hem triat cançons famoses i un grup de ballarins fantàstics perquè pugueu jugar-hi."
+      5:
+        text: "Fareu servir blocs de codi per triar ballarins diferents, canviar els passos de ball que fan, fer que segueixin la música i fer-los interactius."
+      6:
+        text: "Veureu que la pantalla està dividida en tres parts. A l'esquerra hi ha la zona de joc, que és on apareixeran els ballarins."
+      7:
+        text: "La part central és la caixa d'eines. Aquí aniran apareixent blocs nous de codi a mesura que avances per les lliçons."
+      8:
+        text: "L'espai de la dreta és l'espai de treball. Pots arrossegar-hi blocs des de la caixa d'eines per construir el teu programa."
+      9:
+        text: "Les instruccions per cada nivell apareixeran a la part superior de la pantalla. Si necessites una pista, fes clic a la bombeta."
+      10:
+        text: "Per començar, farem un ballarí nou amb aquest bloc vermell. Primer, arrossegueu-lo per treure'l de la caixa d'eines i connecteu-lo amb aquest bloc taronja de \"configuració\". Aquest ballarí és un gat."
+      11:
+        text: "També pots canviar on apareix el ballarí a la zona de joc, amb això."
+      12:
+        text: "Sobre la zona de joc hi ha un menú per triar la música. Hi ha un munt de cançons, diverteix-te triant les que més t'agradin! Sota la zona de joc hi ha el botó d'executar. Quan hi facis clic, veuràs aparèixer els ballarins del teu programa a la zona de joc, i sonarà la música."
+      13:
+        text: "Ara, proveu-ho vosaltres! I si us encalleu, no passa res, seguiu endavant! I abans del que creieu, haureu creat la vosatra festa de ball. I doncs, què creareu?"
     hoc_dance_events_2019:
       1:
       2:
@@ -387,3 +515,30 @@ ca:
       6:
       7:
       8:
+    poemart_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Aquesta part central és la caixa d'eines. Aquí apareixeran blocs nous de codi a mesura que aneu fent la lliçó."
+      7:
+        text: "L'espai de la dreta és l'espai de treball. Pots arrossegar-hi blocs des de la caixa d'eines per construir el teu programa."
+      8:
+      9:
+      10:
+      11:
+    hello_world_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+        text: "Aquesta part central és la caixa d'eines. Aquí apareixeran blocs nous de codi a mesura que aneu fent la lliçó."
+      6:
+        text: "L'espai de la dreta és l'espai de treball. Pots arrossegar-hi blocs des de la caixa d'eines per construir el teu programa."
+      7:
+      8:
+      9:
+      10:

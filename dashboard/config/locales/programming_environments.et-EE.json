@@ -8,11 +8,71 @@
             "game_lab": {
               "name": "Game Lab"
             },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiraal"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Värv"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Värv"
+                    }
+                  }
+                }
+              }
+            },
             "drawing": {
-              "name": "Joonistus"
+              "name": "Joonistus",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Täht"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matemaatika"
+              "name": "Matemaatika",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Väikseim tagastatav number"
+                    },
+                    "max": {
+                      "description": "Suurim tagastatav number"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Väikseim tagastatav number"
+                    },
+                    "max": {
+                      "description": "Suurim tagastatav number"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Muutujad"
@@ -26,11 +86,71 @@
           "name": "App Lab",
           "description": "App Lab on programmeerimise keskkond, milles saab teha lihtsamaid rakendusi. Kujunda rakendus, programmeeri see plokkide või JavaScriptiga, et rakendus toimiks. Seejärel jaga oma rakendust mõne sekundiga.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktsioon"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktsioon"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktsioon"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Matemaatika"
+              "name": "Matemaatika",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Väikseim tagastatav number"
+                    },
+                    "max": {
+                      "description": "Suurim tagastatav number"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Väikseim tagastatav number"
+                    },
+                    "max": {
+                      "description": "Suurim tagastatav number"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Muutujad"
+              "name": "Muutujad",
+              "expressions": {
+                "addPair": {
+                  "return_value": "Mitte ükski"
+                }
+              }
             },
             "functions": {
               "name": "Funktsioonid"

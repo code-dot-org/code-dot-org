@@ -2178,7 +2178,12 @@ class UserTest < ActiveSupport::TestCase
     end
 
     user.reload
-    assert_equal original_primary_contact_info, user.primary_contact_info
+    if original_primary_contact_info.nil?
+      # starting in Minitest 6, don't use assert_equal to compare nil values
+      assert_nil user.primary_contact_info
+    else
+      assert_equal original_primary_contact_info, user.primary_contact_info
+    end
   end
 
   def upgrade_to_personal_login_params(**args)
@@ -3379,11 +3384,11 @@ class UserTest < ActiveSupport::TestCase
           'script' => {
             'name' => {
               'other' => {
-                'title': 'Unit Other',
+                title: 'Unit Other',
                 'description_short' => 'other-description'
               },
               'pl-other' => {
-                'title': 'PL Unit Other',
+                title: 'PL Unit Other',
                 'description_short' => 'pl-other-description'
               }
             }
@@ -4747,7 +4752,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'section attempts last reset value resets if more than 24 hours has passed' do
     user = create :user
-    user.properties = {'section_attempts': 5, 'section_attempts_last_reset': DateTime.now - 1}
+    user.properties = {section_attempts: 5, section_attempts_last_reset: DateTime.now - 1}
     # invoking display_captcha? will return false without causing section_attempts values to be reset
     assert_equal false, user.display_captcha?
     # now we mimic joining a section, which should reset attempts and then increment

@@ -245,6 +245,10 @@ class User < ApplicationRecord
 
   before_destroy :soft_delete_channels
 
+  before_validation on: :create, if: -> {gender.present?} do
+    self.gender = Policies::Gender.normalize gender
+  end
+
   def save_email_preference
     if teacher?
       EmailPreference.upsert!(

@@ -18205,25 +18205,18 @@ de-DE:
         answers:
         - text: Scrat wird die Eichel erreichen. Es gibt keine Fehler in diesem Code.
           correct: true
-          feedback: Falsch. Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
-            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
         - text: Scrat wird die Eichel nicht erreichen, da er sich in die falsche Richtung
             dreht.
           correct: true
-          feedback: Richtig! Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
-            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
         - text: Scrat wird die Eichel nicht erreichen, da es nicht genug 'vorwärts
             bewegen' Blöcke gibt.
           correct: true
-          feedback: Richtig! Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
-            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
         - text: 'Scrat bewegt sich nicht vom ersten Block weg.
 
 '
           correct: true
-          feedback: In diesem Code befinden sich zwei Fehler. Zunächst dreht sich
-            Scrat in die falsche Richtung. Anschließend bewegt sich Scrat nicht oft
-            genug vorwärts, um die Eichel zu erreichen.
+          feedback: Scrat wird die Eichel nicht erreichen, da er sich in die falsche
+            Richtung dreht.
         questions:
         - text: Suche nach Fehlern in diesem Code. Wird Scrat die Eichel erreichen
             oder gibt es ein Problem?
@@ -18488,15 +18481,23 @@ de-DE:
             klickst?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - correct: true
+        - text: Der Zombie wird den richtigen Weg gehen und am Ende für immer hin
+            und her gehen.
+          correct: true
           feedback: Richtig!
         - text: Der Zombie wird es bis zur Sonnenblume schaffen.
           correct: true
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
         - text: Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
             im Kreis herumlaufen.
           correct: true
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
         - text: Der Zombie bleibt am Ende des Weges vor ihm stecken.
           correct: true
+          feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
+            Ende für immer hin und her gehen.
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
             "Ausführen" klickst?
@@ -18754,20 +18755,45 @@ de-DE:
         display_name: Text und Eingabeaufforderungen üben
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Der Hase wird „5" sagen.
+          correct: true
+          feedback: Richtig! Die Zahl 5 wird in der Variablen gespeichert und dann
+            erneut verwendet, wenn das Sprite spricht.
+        - text: Der Hasen-Sprite sagt, welche Zahl auch immer eingegeben wurde.
+          correct: true
+          feedback: Falsch. In diesem Programm gibt es keine Eingabe. Die Nummer ist
+            direkt im Code festgelegt.
+        - text: Der Hase wird „zähle“ sagen.
+          correct: true
+          feedback: Falsch. `count` ist eine Variable. Wenn dieser Block ausgeführt
+            wird, erhält er die Nummer, die gespeichert ist. Der Hase wird „5" sagen.
+        - text: Nichts wird passieren, weil `count` keine Zahl ist.
+          correct: true
+          feedback: Richtig! Die Zahl 5 wird in der Variablen gespeichert und dann
+            erneut verwendet, wenn das Sprite spricht.
         questions:
-        - {}
+        - text: 'Mache eine Vorhersage: Was wird der Hase sagen?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Das Programm zeigt die eingegebene Zahl an.
+          correct: true
+          feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
+            um Möhren Sprites zu erstellen.
+        - text: Der Hasen-Sprite sagt, welche Zahl auch immer eingegeben wurde.
+          correct: true
+          feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
+            um Möhren Sprites zu erstellen.
+        - text: Das Programm wird so viele neue Möhrensprites machen.
+          correct: true
+          feedback: Richtig! Die Anzahl der erstellten Sprites ist die in der Variablen
+            gespeicherte Zahl.
+        - text: Nichts wird passieren, weil `count` keine Zahl ist.
+          correct: true
+          feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
+            um Möhren Sprites zu erstellen.
         questions:
-        - {}
+        - text: 'Mach eine Vorhersage: Was passiert, nachdem Du eine Zahl in das Eingabefeld
+            eingegeben hast?'
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: Das Programm wird "Hallo Name!" ausgeben

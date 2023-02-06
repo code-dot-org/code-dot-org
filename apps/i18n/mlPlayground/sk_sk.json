@@ -1,0 +1,3278 @@
+{
+  "navigateForward": "Pokračovať",
+  "navigateBack": "Naspäť",
+  "tryAgain": "Skúsiť znova",
+  "navigateDone": "Dokončiť",
+  "saveProgress": "Uložiť",
+  "correctAnswer": "Správne",
+  "incorrectAnswer": "Nesprávne",
+  "modelCardLabel": "Označenie",
+  "modelCardPossibleValuesMinimum": "min",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardFeatures": "Vlastnosti",
+  "columnInspectorDescription": "Popis",
+  "columnDetailsMinimumValue": "min",
+  "columnDetailsMaximumValue": "max",
+  "dataCardLastUpdated": "Naposledy aktualizované",
+  "trainModelHeading": "Trénovanie",
+  "resultsTableFeatureHeader": "Vlastnosti",
+  "predictButton": "Predpoveď",
+  "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "vek",
+          "description": "Vekové rozpätie pacienta."
+        },
+        "gender": {
+          "id": "pohlavie",
+          "description": "Pohlavie pacienta."
+        },
+        "race": {
+          "id": "rasový pôvod",
+          "description": "Rasové informácie o pacientovi."
+        },
+        "bleeding": {
+          "id": "krvácanie",
+          "description": "Či pacient krvácal alebo nie."
+        },
+        "shortness_of_breath": {
+          "id": "dýchavičnosť",
+          "description": "Či pacient trpel dýchavičnosťou alebo nie."
+        },
+        "weight": {
+          "id": "hmotnosť",
+          "description": "Rozpätie hmotnosti pacienta."
+        },
+        "area_of_pain": {
+          "id": "oblasť bolesti",
+          "description": "Kde bola bolesť lokalizovaná."
+        },
+        "decision": {
+          "id": "rozhodnutie",
+          "description": "Ako rýchlo pacient dostal liečbu."
+        }
+      },
+      "card": {
+        "description": "Údaje zozbierané nemocnicou o všetkých pacientoch, ktorí prišli na pohotovosť v priebehu jedného mesiaca.",
+        "context": {
+          "potentialUses": "Pomôž určiť prioritu ľudí prichádzajúcich na pohotovosť, aby lekári a zdravotné sestry mohli lepšie pomôcť ľuďom s potenciálne vážnymi zraneniami.",
+          "potentialMisuses": "Tento model by sa nemal používať spôsobom, ktorý by mohol obmedziť starostlivosť o ľudí prichádzajúcich na pohotovosť."
+        }
+      }
+    },
+    "exoplanets": {
+      "fields": {
+        "Star host name": {
+          "id": "Názov hostiteľskej hviezdy",
+          "description": "Názov hviezdy, okolo ktorej táto exoplanéta obieha."
+        },
+        "Number of stars": {
+          "id": "Počet hviezd",
+          "description": "Počet hviezd v systéme exoplanéty."
+        },
+        "Number of planets": {
+          "id": "Počet planét",
+          "description": "Počet planét v systéme exoplanéty."
+        },
+        "Discovery year": {
+          "id": "Rok objavenia",
+          "description": "Rok objavenia tejto exoplanéty."
+        },
+        "Orbit length in earth days": {
+          "id": "Dĺžka obežnej dráhy v pozemských dňoch",
+          "description": "Ako dlho trvá, kým táto planéta obehne okolo svojej hostiteľskej hviezdy, merané v pozemských dňoch."
+        },
+        "Size in earths": {
+          "id": "Veľkosť v porovnaní so Zemou",
+          "description": "Relatívna veľkosť tejto exoplanéty v porovnaní so Zemou."
+        },
+        "Mass in earths": {
+          "id": "Hmotnosť v porovnaní so Zemou",
+          "description": "Relatívna hmotnosť tejto exoplanéty v porovnaní so Zemou."
+        },
+        "Star temperature in kelvin": {
+          "id": "Teplota hviezdy v stupňoch Kelvina",
+          "description": "Teplota hostiteľskej hviezdy v stupňoch Kelvina."
+        },
+        "Star size in suns": {
+          "id": "Veľkosť hviezdy v porovnaní so Slnkom",
+          "description": "Relatívna veľkosť hostiteľskej hviezdy v porovnaní so Slnkom."
+        },
+        "Star mass in suns": {
+          "id": "Hmotnosť hviezdy v porovnaní so Slnkom",
+          "description": "Relatívna hmotnosť hostiteľskej hviezdy v porovnaní so Slnkom."
+        },
+        "Star age in billions of years": {
+          "id": "Vek hviezdy v miliardách rokov",
+          "description": "Vek hostiteľskej hviezdy."
+        }
+      },
+      "card": {
+        "description": "Táto množina údajov je zoznamom exoplanét, teda planét obiehajúcich okolo iných hviezd. Pomocou týchto údajov je možné odhadnúť veľkosť exoplanéty, ako aj ďalšie charakteristiky.",
+        "context": {
+          "potentialUses": "Skús odhadnúť veľkosť alebo hmotnosť exoplanéty na základe veľkosti, veku alebo iných aspektov hviezdy, okolo ktorej obieha.",
+          "potentialMisuses": "Skús odhadnúť, či by na planéte mohol existovať život."
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "spend time": {
+          "id": "trávenie času",
+          "description": "Kde budeš dnes tráviť najviac času?"
+        },
+        "weather": {
+          "id": "počasie",
+          "description": "Aké je dnes počasie?"
+        },
+        "socks": {
+          "id": "ponožky",
+          "description": "Budeš mať na nohách ponožky?"
+        },
+        "day": {
+          "id": "deň",
+          "description": "Ako môžeš opísať svoj dnešný deň?"
+        },
+        "notice shoes": {
+          "id": "všímanie si topánok",
+          "description": "Záleží ti na tom, či si ľudia všimnú tvoje topánky?"
+        },
+        "shoe": {
+          "id": "topánka",
+          "description": "Aké topánky si dnes plánuješ obuť?"
+        }
+      },
+      "card": {
+        "description": "Prieskum zameraný na tvoje preferencie, ktorý ti pomôže odporučiť, aké topánky si máš obuť.",
+        "context": {
+          "potentialUses": "Odporúč pár topánok na základe osobných otázok.",
+          "potentialMisuses": "Čokoľvek iné ako zamýšľané použitie."
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "cilantro": {
+          "id": "koriander",
+          "description": "Obsahuje salsa koriander?"
+        },
+        "onion": {
+          "id": "cibuľa",
+          "description": "Obsahuje salsa cibuľu?"
+        },
+        "cumin": {
+          "id": "rasca",
+          "description": "Obsahuje salsa rascu?"
+        },
+        "vinegar": {
+          "id": "ocot",
+          "description": "Obsahuje salsa ocot?"
+        },
+        "avocado": {
+          "id": "avokádo",
+          "description": "Obsahuje salsa avokádo?"
+        },
+        "corn": {
+          "id": "kukurica",
+          "description": "Obsahuje salsa kukuricu?"
+        },
+        "beans": {
+          "id": "fazuľa",
+          "description": "Obsahuje salsa fazuľu?"
+        },
+        "garlic": {
+          "id": "cesnak",
+          "description": "Obsahuje salsa cesnak?"
+        },
+        "lime": {
+          "id": "limetka",
+          "description": "Obsahuje salsa limetku?"
+        },
+        "preference": {
+          "id": "preferencia",
+          "description": "Chutí ti salsa?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v taco reštaurácii o tom, či im chutia určité kombinácie salsy.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh salsy by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania týkajúce sa salsy."
+        }
+      }
+    },
+    "auto_mpg": {
+      "fields": {
+        "mpg": {
+          "id": "mpg",
+          "description": "Počet míľ na galón."
+        },
+        "cylinders": {
+          "id": "valce",
+          "description": "Počet valcov motora."
+        },
+        "displacement": {
+          "id": "objem",
+          "description": "Miera objemu valca."
+        },
+        "horsepower": {
+          "id": "výkon (konské sily)",
+          "description": "Výkon vozidla."
+        },
+        "weight": {
+          "id": "hmotnosť",
+          "description": "Hmotnosť vozidla v librách."
+        },
+        "acceleration": {
+          "id": "zrýchlenie",
+          "description": "Zrýchlenie vozidla."
+        },
+        "model year": {
+          "id": "modelový rok",
+          "description": "Rok uvedenia vozidla na trh."
+        },
+        "car name": {
+          "id": "názov vozidla",
+          "description": "Názov vozidla: všetky hodnoty sú jedinečné."
+        }
+      },
+      "card": {
+        "description": "Malá množina štatistických údajov o rôznych automobiloch, pôvodne z roku 1983, ktorá sa používa na predpovedanie ich spotreby (míle na galón). Táto množina údajov pravdepodobne nedosiahne veľké skóre presnosti pri regresii KNN, ale napriek tomu by z nej mohol byť užitočný model: ako sa dá prevziať všeobecný vzor v modeli a použiť ho na určenie toho, ktoré vlastnosti prispievajú k vyššiemu počtu míľ na galón? Ako by sa dala zmeniť množina údajov na získanie presnejšieho modelu – napríklad zmenou mpg z číselného stĺpca na kategorický s intervalmi 5 mpg?",
+        "context": {
+          "potentialUses": "Urči spotrebu vozidla (v mpg) na základe rôznych vlastností, ako je hmotnosť a výkon.",
+          "potentialMisuses": "Keďže je množina údajov 30 rokov stará, nemusí odrážať technologický pokrok – nekupujte si auto podľa nej!"
+        }
+      }
+    },
+    "bike_sharing": {
+      "fields": {
+        "index": {
+          "description": "Jedinečný index alebo kľúč záznamu. Nemal by sa používať ako vlastnosť."
+        },
+        "Date": {
+          "id": "Dátum",
+          "description": "Dátum vyhotovenia záznamov."
+        },
+        "Season": {
+          "id": "Ročné obdobie",
+          "description": "Ročné obdobie: jar, leto, jeseň alebo zima."
+        },
+        "Year": {
+          "id": "Rok",
+          "description": "Rok (2011 alebo 2012)."
+        },
+        "Month": {
+          "id": "Mesiac",
+          "description": "Mesiac: 1 (január) až 12 (december)."
+        },
+        "Holiday": {
+          "id": "Voľný deň",
+          "description": "Či je deň voľný deň alebo nie."
+        },
+        "Day of Week": {
+          "id": "Deň v týždni",
+          "description": "Deň v týždni: 0 (nedeľa) až 6 (sobota)."
+        },
+        "Workday": {
+          "id": "Pracovný deň",
+          "description": "Či je deň pracovný deň alebo nie."
+        },
+        "Weather Description": {
+          "id": "Popis počasia",
+          "description": "Popis počasia počas dňa, od niekoľkých mrakov až po slabé sneženie alebo dážď."
+        },
+        "Average Temperature (Celsius)": {
+          "id": "Priemerná teplota (v stupňoch Celzia)",
+          "description": "Priemerná teplota v stupňoch Celzia, normalizovaná na stupnici od 0 do 1, kde 0 = -8 stupňov Celzia a 1 sa rovná 39 stupňom Celzia."
+        },
+        "Average \"Feels Like\" Temperature": {
+          "id": "Priemerná pocitová teplota",
+          "description": "Priemerná pocitová teplota v stupňoch Celzia, normalizovaná na stupnici od 0 do 1, kde 0 = -16 stupňov Celzia a 1 sa rovná 50 stupňom Celzia."
+        },
+        "Humidity (0 - 1)": {
+          "id": "Vlhkosť (0 – 1)",
+          "description": "Vlhkosť normalizovaná na 0 (0 % vlhkosť) až 1 (100 % vlhkosť)."
+        },
+        "Wind Speed": {
+          "id": "Rýchlosť vetra",
+          "description": "Rýchlosť vetra."
+        },
+        "Number of Casual Users": {
+          "id": "Počet príležitostných používateľov",
+          "description": "Počet používateľov bez účtu."
+        },
+        "Number of Registered Users": {
+          "id": "Počet registrovaných používateľov",
+          "description": "Počet používateľov s účtom."
+        },
+        "Total Users": {
+          "id": "Spolu používateľov",
+          "description": "Celkový počet používateľov."
+        }
+      },
+      "card": {
+        "description": "Údaje o denných prenájmoch zo systému Capital Bikeshare vo Washingtone z rokov 2011 a 2012 spolu s údajmi o počasí v týchto dňoch.",
+        "context": {
+          "potentialUses": "Predpokladaj, koľko bicyklov sa bude požičiavať na základe poveternostných podmienok alebo ročného obdobia."
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "mushrooms": {
+          "id": "huby",
+          "description": "Obsahuje poutine aj huby?"
+        },
+        "lobster": {
+          "id": "homár",
+          "description": "Obsahuje poutine aj homára?"
+        },
+        "pork": {
+          "id": "bravčové",
+          "description": "Obsahuje poutine aj bravčové?"
+        },
+        "bacon": {
+          "id": "slanina",
+          "description": "Obsahuje poutine aj slaninu?"
+        },
+        "cheese": {
+          "id": "syr",
+          "description": "Obsahuje poutine aj syrovú polevu?"
+        },
+        "gravy": {
+          "id": "omáčka",
+          "description": "Obsahuje poutine aj omáčku?"
+        },
+        "scallions": {
+          "id": "šalotky",
+          "description": "Obsahuje poutine aj šalotku?"
+        },
+        "meat": {
+          "id": "mäso",
+          "description": "Obsahuje poutine aj mäso?"
+        },
+        "bell peppers": {
+          "id": "paprika",
+          "description": "Obsahuje poutine aj papriku?"
+        },
+        "preference": {
+          "id": "preferencia",
+          "description": "Chutí ti poutine?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v reštaurácii o tom, či im chutia určité kombinácie poutine.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh poutine by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania."
+        }
+      }
+    },
+    "club_biased_toy": {
+      "fields": {
+        "activity": {
+          "id": "aktivita",
+          "description": "Ktorá z týchto činností sa ti páči najviac?"
+        },
+        "free time": {
+          "id": "voľný čas",
+          "description": "Koľko voľného času máš po škole?"
+        },
+        "personality": {
+          "id": "osobnosť",
+          "description": "Ako najradšej tráviš čas?"
+        },
+        "element": {
+          "id": "prvok",
+          "description": "Ktorý z týchto prvkov je tvoj naobľúbenejší?"
+        },
+        "school minutes": {
+          "id": "cesta do školy (minúty)",
+          "description": "Ako dlho ti trvá cesta do školy?"
+        },
+        "make build": {
+          "id": "ručná práca",
+          "description": "Čo si myslíš o nasledujúcom výroku: „Páči sa mi robiť a tvoriť veci vlastnými rukami.“?"
+        },
+        "meet people": {
+          "id": "spoznávanie ľudí",
+          "description": "Čo si myslíš o nasledujúcom výroku: „Páči sa mi učiť sa novým veciam a spoznávať nových ľudí.“?"
+        },
+        "club": {
+          "id": "krúžok",
+          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+        }
+      },
+      "card": {
+        "description": "Nicov otec je v kapele a poslal e-mail všetkým, ktorí sú na zozname ich fanklubu. Väčšina ľudí na e-mailovom zozname vyplnila formulár.",
+        "context": {
+          "potentialUses": "Otázky pomôžu odporučiť krúžok, na ktorý sa máš prihlásiť, na základe tvojich záujmov a osobnosti.",
+          "potentialMisuses": "Údaje pochádzajú len od ľudí z našej školy a komunity – používaj ich obozretne v iných školách."
+        }
+      }
+    },
+    "loneliness_phobias": {
+      "fields": {
+        "Loneliness": {
+          "id": "Osamelosť",
+          "description": "Cítim sa osamelo."
+        },
+        "Flying": {
+          "id": "Lietanie",
+          "description": "Bojím sa lietania"
+        },
+        "Storm": {
+          "id": "Búrka",
+          "description": "Bojím sa búrok"
+        },
+        "Darkness": {
+          "id": "Tma",
+          "description": "Bojím sa tmy"
+        },
+        "Heights": {
+          "id": "Výška",
+          "description": "Bojím sa výšky"
+        },
+        "Spiders": {
+          "id": "Pavúky",
+          "description": "Bojím sa pavúkov"
+        },
+        "Snakes": {
+          "id": "Hady",
+          "description": "Bojím sa hadov"
+        },
+        "Rats": {
+          "id": "Potkany",
+          "description": "Bojím sa potkanov"
+        },
+        "Ageing": {
+          "id": "Starnutie",
+          "description": "Bojím sa starnutia"
+        },
+        "Dangerous dogs": {
+          "id": "Nebezpečné psy",
+          "description": "Bojím sa nebezpečných psov"
+        },
+        "Fear of public speaking": {
+          "id": "Strach z verejného vystupovania",
+          "description": "Bojím sa vystupovania na verejnosti"
+        }
+      },
+      "card": {
+        "description": "Množina údajov z prieskumu zozbieraných slovenskými študentmi vo veku 18 – 21 rokov na FSEV UK. Väčšina odpovedí je hodnotená na stupnici od 1 do 5. Napríklad: „Ohodnoťte od 1 (rozhodne nesúhlasím) do 5 (rozhodne súhlasím): Často študujem alebo pracujem aj vo voľnom čase“. Ide o podmnožinu väčšej množiny údajov, ktorá sa zameriava len na hudbu.",
+        "context": {
+          "potentialUses": "Napríklad predpovedať osobnostné črty niekoho na základe iných vlastností.",
+          "potentialMisuses": "Používanie demografických informácií z obmedzenej množiny údajov na vytváranie predpokladov o podskupinách ľudí: napríklad otázky týkajúce sa predpovedí o tom, ktoré pohlavie má väčšiu pravdepodobnosť, že sa niečoho bude báť."
+        }
+      }
+    },
+    "cookies_toy": {
+      "fields": {
+        "chocolate chips": {
+          "id": "čokoládové lupienky",
+          "description": "Obsahuje sušienka čokoládové lupienky?"
+        },
+        "raisins": {
+          "id": "hrozienka",
+          "description": "Obsahuje sušienka hrozienka?"
+        },
+        "oatmeal": {
+          "id": "ovsené vločky",
+          "description": "Obsahuje sušienka ovsené vločky?"
+        },
+        "m and ms": {
+          "id": "M&M's",
+          "description": "Obsahuje sušienka M&M's?"
+        },
+        "ice cream on top": {
+          "id": "zmrzlina na vrchu",
+          "description": "Má sušienka zmrzlinu na vrchu?"
+        },
+        "frosting": {
+          "id": "poleva",
+          "description": "Má sušienka polevu?"
+        },
+        "preference": {
+          "id": "preferencia",
+          "description": "Chutí ti táto sušienka?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v obchode so sušienkami o tom, či im chutia určité kombinácie šalátu.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh sušienok by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania týkajúce sa sušienok."
+        }
+      },
+      "name": "Sušienky"
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "farba",
+          "description": "Ktorá z týchto farieb sa ti páči najviac?"
+        },
+        "music": {
+          "id": "hudba",
+          "description": "Ktorý z týchto hudobných žánrov máš najradšej?"
+        },
+        "food": {
+          "id": "jedlo",
+          "description": "Ktoré z týchto druhov jedál máš najradšej?"
+        },
+        "read vs tv": {
+          "id": "čítanie alebo TV",
+          "description": "Čo si myslíš o nasledujúcom výroku: „Radšej budem čítať ako pozerať televíziu.“?"
+        },
+        "club": {
+          "id": "krúžok",
+          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+        }
+      },
+      "card": {
+        "description": "Isaac a jeho štyria súrodenci požiadali všetkých vo svojich triedach, aby vyplnili dotazník. Získali tak množstvo údajov od ľudí z rôznych skupín.",
+        "context": {
+          "potentialUses": "Otázky pomôžu odporučiť krúžok, na ktorý sa máš prihlásiť, na základe tvojich záujmov a osobnosti.",
+          "potentialMisuses": "Údaje pochádzajú len od ľudí z našej školy a komunity – používaj ich obozretne v iných školách."
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "vek",
+          "description": "Vek primárneho poistenca."
+        },
+        "sex": {
+          "id": "pohlavie",
+          "description": "Pohlavie poistenca: žena, muž."
+        },
+        "bmi": {
+          "id": "bmi",
+          "description": "Index telesnej hmotnosti."
+        },
+        "children": {
+          "id": "deti",
+          "description": "Počet detí, na ktoré sa vzťahuje zdravotné poistenie."
+        },
+        "smoker": {
+          "id": "fajčiar",
+          "description": "Či osoba fajčí alebo nie."
+        },
+        "region": {
+          "id": "oblasť",
+          "description": "Rezidenčná oblasť poistenca v USA (severovýchod, juhovýchod, juhozápad, severozápad)."
+        },
+        "charges": {
+          "id": "poplatky",
+          "description": "Individuálne náklady na zdravotnú starostlivosť účtované zdravotnou poisťovňou."
+        }
+      },
+      "card": {
+        "description": "Náklady na poistenie spolu s faktormi, ako je počet detí, lokalita, stav fajčiar/nefajčiar, vek, pohlavie, BMI.",
+        "context": {
+          "potentialUses": "Môže sa použiť na predpovedanie, či je niekto fajčiar, na základe iných informácií o poistení."
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Kategória",
+          "description": "Všeobecná kategória potravín, do ktorej položka patrí."
+        },
+        "Description": {
+          "id": "Opis",
+          "description": "Podrobný opis položky."
+        },
+        "Ash": {
+          "id": "Popoloviny",
+          "description": "Obsah popolovín predstavuje celkový obsah minerálnych látok v potravinách. Meria sa v gramoch (g)."
+        },
+        "Beta Carotene": {
+          "id": "Beta karotén",
+          "description": "Typ molekuly lipidov meraný v miligramoch (mg)."
+        },
+        "Carbohydrate": {
+          "id": "Sacharidy",
+          "description": "Vláknina alebo hrubá zložka potravy je nestráviteľná časť potravy pochádzajúca z rastlín. Má dve hlavné zložky: rozpustnú a nerozpustnú vlákninu. Meria sa v gramoch (g)."
+        },
+        "Cholesterol": {
+          "id": "Cholesterol",
+          "description": "Celkový počet kilokalórií v tejto potravine. Kilokalória je jednotka energie 1000 kalórií (rovná sa 1 veľkej kalórii)."
+        },
+        "Fiber": {
+          "id": "Vláknina"
+        },
+        "Kilocalories": {
+          "id": "Kilokalórie"
+        },
+        "Lutein and Zeaxanthin": {
+          "id": "Luteín a zeaxantín"
+        },
+        "Lycopene": {
+          "id": "Lykopén"
+        },
+        "Manganese": {
+          "id": "Mangán"
+        },
+        "Niacin": {
+          "id": "Niacín"
+        },
+        "Protein": {
+          "id": "Proteín"
+        },
+        "Retinol": {
+          "id": "Retinol"
+        },
+        "Riboflavin": {
+          "id": "Riboflavín"
+        },
+        "Selenium": {
+          "id": "Selén"
+        },
+        "Sugar Total": {
+          "id": "Cukor celkom"
+        },
+        "Thiamin": {
+          "id": "Tiamín"
+        },
+        "Water": {
+          "id": "Voda"
+        },
+        "Fat: Monosaturated Fat": {
+          "id": "Tuk: mononenasýtený tuk"
+        },
+        "Fat: Polysaturated Fat": {
+          "id": "Tuk: polynenasýtený tuk"
+        },
+        "Fat: Saturated Fat": {
+          "id": "Tuk: nasýtený tuk"
+        },
+        "Fat: Total Lipid": {
+          "id": "Tuk: celkové lipidy"
+        },
+        "Major Minerals: Calcium": {
+          "id": "Hlavné minerály: vápnik"
+        },
+        "Major Minerals: Copper": {
+          "id": "Hlavné minerály: meď"
+        },
+        "Major Minerals: Iron": {
+          "id": "Hlavné minerály: železo"
+        },
+        "Major Minerals: Magnesium": {
+          "id": "Hlavné minerály: horčík"
+        },
+        "Major Minerals: Phosphorus": {
+          "id": "Hlavné minerály: fosfor"
+        },
+        "Major Minerals: Potassium": {
+          "id": "Hlavné minerály: draslík"
+        },
+        "Major Minerals: Sodium": {
+          "id": "Hlavné minerály: sodík"
+        },
+        "Major Minerals: Zinc": {
+          "id": "Hlavné minerály: zinok"
+        },
+        "Vitamins: Vitamin A - IU": {
+          "id": "Vitamíny: vitamín A – IU"
+        },
+        "Vitamins: Vitamin A - RAE": {
+          "id": "Vitamíny: vitamín A – RAE"
+        },
+        "Vitamins: Vitamin B12": {
+          "id": "Vitamíny: vitamín B12"
+        },
+        "Vitamins: Vitamin B6": {
+          "id": "Vitamíny: vitamín B6"
+        },
+        "Vitamins: Vitamin C": {
+          "id": "Vitamíny: vitamín C"
+        },
+        "Vitamins: Vitamin E": {
+          "id": "Vitamíny: vitamín E"
+        },
+        "Vitamins: Vitamin K": {
+          "id": "Vitamíny: vitamín K"
+        }
+      },
+      "card": {
+        "description": "Množina údajov o rôznych potravinách a ich nutričnom obsahu: kalórie, minerály, vitamíny a mnoho ďalšieho, ktorú zostavilo Americké ministerstvo poľnohospodárstva.",
+        "context": {
+          "potentialUses": "Určite napríklad, koľko kalórií má potravina z jej nutričného obsahu."
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "pecan": {
+          "id": "pekanové orechy",
+          "description": "Obsahuje raspado aj polevu z pekanových orechov?"
+        },
+        "strawberry": {
+          "id": "jahoda",
+          "description": "Obsahuje raspado aj jahodovú polevu?"
+        },
+        "vanilla": {
+          "id": "vanilka",
+          "description": "Obsahuje raspado aj vanilkovú polevu?"
+        },
+        "mango": {
+          "id": "mango",
+          "description": "Obsahuje raspado aj mangovú polevu?"
+        },
+        "lime": {
+          "id": "limetka",
+          "description": "Obsahuje raspado aj limetkovú polevu?"
+        },
+        "chili en polbo": {
+          "id": "chili en polvo",
+          "description": "Obsahuje raspado aj polevu z chili en polvo?"
+        },
+        "lechera": {
+          "id": "lechera",
+          "description": "Obsahuje raspado aj polevu z lechery?"
+        },
+        "coconut": {
+          "id": "kokos",
+          "description": "Obsahuje raspado aj kokosovú polevu?"
+        },
+        "preference": {
+          "id": "preferencia",
+          "description": "Chutí ti raspado?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v predajni s raspado o tom, či im chutia určité kombinácie raspado.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh raspado by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania."
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "Strany",
+          "description": "Počet strán, ktoré má tvar"
+        },
+        "symmetry": {
+          "id": "symetria",
+          "description": "Je tvar symetrický (napríklad keď ho preložíš na polovicu, získaš rovnaké tvary)"
+        },
+        "equal sides": {
+          "id": "rovnaké strany",
+          "description": "Má tvar všetky strany rovnaké?"
+        },
+        "equal angles": {
+          "id": "rovnaké uhly",
+          "description": "Má tvar všetky uhly rovnaké?"
+        },
+        "has corners": {
+          "id": "má rohy",
+          "description": "Má tvar rohy?"
+        },
+        "border color": {
+          "id": "farba ohraničenia",
+          "description": "Farba obrysu tvaru"
+        },
+        "fill color": {
+          "id": "farba výplne",
+          "description": "Farba vnútorného priestoru tvaru"
+        },
+        "background color": {
+          "id": "farba pozadia",
+          "description": "Farba pozadia za tvarom"
+        },
+        "size": {
+          "id": "veľkosť",
+          "description": "Buď veľké, alebo malé"
+        },
+        "shape": {
+          "id": "tvar",
+          "description": "Typ tvaru"
+        }
+      },
+      "card": {
+        "description": "Extrahované prvky z množiny vizuálnych údajov predstavujúcej rôzne tvary.",
+        "context": {
+          "potentialUses": "Používa sa na trénovanie AI Bota na klasifikáciu tvarov.",
+          "potentialMisuses": "Čokoľvek iné ako vyššie uvedený účel."
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "tomato": {
+          "id": "paradajka",
+          "description": "Obsahuje šalát paradajky?"
+        },
+        "avocado": {
+          "id": "avokádo",
+          "description": "Obsahuje šalát avokádo?"
+        },
+        "ranch": {
+          "id": "omáčka ranch",
+          "description": "Obsahuje šalát omáčku ranch?"
+        },
+        "italian dressing": {
+          "id": "taliansky dresing",
+          "description": "Obsahuje šalát taliansky dresing?"
+        },
+        "chicken": {
+          "id": "kurča",
+          "description": "Obsahuje šalát kuracie mäso?"
+        },
+        "seeds": {
+          "id": "semienka",
+          "description": "Obsahuje šalát semienka?"
+        },
+        "fruit": {
+          "id": "ovocie",
+          "description": "Obsahuje šalát ovocie?"
+        },
+        "beans": {
+          "id": "fazuľa",
+          "description": "Obsahuje šalát fazuľu?"
+        },
+        "cheese": {
+          "id": "syr",
+          "description": "Obsahuje šalát syr?"
+        },
+        "preference": {
+          "id": "preferencia",
+          "description": "Chutí ti šalát?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v reštaurácii o tom, či im chutia určité kombinácie šalátov.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh šalátu by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania."
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Rank": {
+          "id": "Hodnotenie",
+          "description": "Ich pozícia v rebríčku bohatstva v roku vydania tohto záznamu."
+        },
+        "Year": {
+          "id": "Rok",
+          "description": "Rok zostavenia rebríčka (1996, 2001 alebo 2014)."
+        },
+        "Company Founding Year": {
+          "id": "Rok založenia spoločnosti",
+          "description": "Rok, v ktorom bola ich spoločnosť založená."
+        },
+        "Company Name": {
+          "id": "Názov spoločnosti",
+          "description": "Názov ich spoločnosti."
+        },
+        "Company Relationship": {
+          "id": "Vzťah k spoločnosti",
+          "description": "Ich vzťah k spoločnosti (napríklad „zakladateľ“, „riaditeľ“ alebo „predseda predstavenstva“)."
+        },
+        "Company Sector": {
+          "id": "Odvetvie spoločnosti",
+          "description": "Sektor, v ktorom pôsobí ich spoločnosť, napr. „Financie“ alebo „Softvér“."
+        },
+        "Company Type": {
+          "id": "Typ spoločnosti",
+          "description": "Typ spoločnosti: či išlo o novú, privatizovanú spoločnosť alebo nadobudnutú spoločnosť."
+        },
+        "Age": {
+          "id": "Vek",
+          "description": "Ich vek."
+        },
+        "Gender": {
+          "id": "Pohlavie",
+          "description": "Ich pohlavie."
+        },
+        "Citizenship": {
+          "id": "Občianstvo",
+          "description": "Krajina, ktorej sú oficiálnymi občanmi."
+        },
+        "Country of Residence": {
+          "id": "Krajina trvalého pobytu ",
+          "description": "Krajina, v ktorej majú trvalý pobyt."
+        },
+        "Region": {
+          "id": "Oblasť",
+          "description": "Oblasť, v ktorej sa nachádza krajina, v ktorej majú trvalé bydlisko, napr. „Severná Amerika“ alebo „Východná Ázia“."
+        },
+        "Type Of Wealth": {
+          "id": "Druh bohatstva",
+          "description": "Ich druh bohatstva (napríklad: „zakladateľ, nefinančné“, „zdedené“, „vlastné financie“)."
+        },
+        "Net Worth In Billions": {
+          "id": "Čistý majetok v miliardách",
+          "description": "Ich čistý majetok v miliardách dolárov."
+        },
+        "Wealth Category": {
+          "id": "Kategória bohatstva",
+          "description": "Ich kategória bohatstva (napríklad „Finančné“, „Neobchodované“ alebo „Obchodované sektory“)."
+        },
+        "Wealth Industry": {
+          "id": "Odvetvie bohatstva",
+          "description": "Odvetvie, z ktorého pochádza ich bohatstvo."
+        },
+        "Wealth Inherited": {
+          "id": "Zdedené bohatstvo",
+          "description": "Či bolo ich bohatstvo zdedené a odkiaľ (napríklad „nezdedené“, „otec“, „3. generácia“)."
+        }
+      },
+      "card": {
+        "description": "Údaje za viacero desaťročí o jednotlivých miliardároch, zoradené za každý rok, s charakteristikami ako vek, odvetvie, rodinné bohatstvo a typ bohatstva (napríklad zakladateľ spoločnosti vo finančnom odvetví).",
+        "context": {
+          "potentialUses": "Predpovedaj typ miliardárovho majetku na základe iných vlastností.",
+          "potentialMisuses": "Napríklad určenie, či sa mužom „darí“ stať sa miliardármi lepšie ako ženám. Ženy sú medzi miliardármi menej zastúpené, ale existuje veľa dôvodov, ktoré údaje neodrážajú."
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "school": {
+          "id": "škola",
+          "description": "Skratka ich školy, GP alebo MS."
+        },
+        "sex": {
+          "id": "pohlavie",
+          "description": "Pohlavie študenta (binárne)."
+        },
+        "age": {
+          "id": "vek",
+          "description": "Vek študenta."
+        },
+        "address": {
+          "id": "adresa",
+          "description": "Typ adresy bydliska študenta: U (mesto) alebo R (vidiek)."
+        },
+        "family size": {
+          "id": "veľkosť rodiny",
+          "description": "Veľkosť rodiny: LE3 (menej ako 3) a GT3 (viac ako 3)"
+        },
+        "parent cohabitation status": {
+          "id": "stav spolužitia rodičov",
+          "description": "Či ich rodičia žijú spolu (T) alebo oddelene (A)"
+        },
+        "mother's education": {
+          "id": "vzdelanie matky",
+          "description": "Vzdelanie matky od 0 (žiadne) do 4 (vysokoškolské vzdelanie)."
+        },
+        "father's education": {
+          "id": "vzdelanie otca",
+          "description": "Vzdelanie otca od 0 (žiadne) do 4 (vysokoškolské vzdelanie)"
+        },
+        "mother's job": {
+          "id": "zamestnanie matky",
+          "description": "Typ zamestnania matky."
+        },
+        "father's job": {
+          "id": "zamestnanie otca",
+          "description": "Typ zamestnania otca."
+        },
+        "reason": {
+          "id": "dôvod",
+          "description": "Dôvod výberu tejto školy."
+        },
+        "guardian": {
+          "id": "opatrovník",
+          "description": "Opatrovník študenta."
+        },
+        "traveltime": {
+          "id": "čas dochádzky",
+          "description": "Čas dochádzania študenta do školy v hodinách."
+        },
+        "studytime": {
+          "id": "študijný čas",
+          "description": "Týždenný čas štúdia študenta od 1 do 10 hodín."
+        },
+        "failures": {
+          "id": "neúspechy",
+          "description": "Počet predchádzajúcich neúspechov na hodinách (0 až 4)."
+        },
+        "school support": {
+          "id": "podpora školy",
+          "description": "Dodatočná vzdelávacia podpora zo strany školy."
+        },
+        "family support": {
+          "id": "podpora rodiny",
+          "description": "Dodatočná vzdelávacia podpora zo strany rodiny."
+        },
+        "paid": {
+          "id": "platené",
+          "description": "Dodatočné platené kurzy."
+        },
+        "activities": {
+          "id": "aktivity",
+          "description": "Mimoškolské aktivity."
+        },
+        "nursery": {
+          "id": "škôlka",
+          "description": "Navštevovaná materská škola."
+        },
+        "higher": {
+          "id": "vyššie vzdelanie",
+          "description": "Chce pokračovať na vysokej škole."
+        },
+        "internet": {
+          "id": "internet",
+          "description": "Prístup na internet doma."
+        },
+        "romantic": {
+          "id": "romantický vzťah",
+          "description": "Je v romantickom vzťahu."
+        },
+        "family relationships": {
+          "id": "rodinné vzťahy",
+          "description": "Kvalita rodinných vzťahov: 1 (veľmi zlé) až 5 (výborné)."
+        },
+        "freetime": {
+          "id": "voľný čas",
+          "description": "Voľný čas po škole: 1 (veľmi málo) až 5 (veľmi veľa)."
+        },
+        "go out": {
+          "id": "chodí von",
+          "description": "Ako často študenti chodia von s priateľmi: 1 (veľmi zriedka) až 5 (veľmi často)."
+        },
+        "daily alcohol": {
+          "id": "alkohol cez všedný deň",
+          "description": "Spotreba alkoholu vo všedný deň: 1 (veľmi nízka) až 5 (veľmi vysoká)."
+        },
+        "weekend alcohol": {
+          "id": "alkohol cez víkend",
+          "description": "Spotreba alkoholu cez víkend: 1 (veľmi nízka) až 5 (veľmi vysoká)"
+        },
+        "health": {
+          "id": "zdravie",
+          "description": "Zdravotný stav: 1 (veľmi zlý) až 5 (veľmi dobrý)"
+        },
+        "absences": {
+          "id": "absencie",
+          "description": "Počet absencií v škole."
+        },
+        "G1": {
+          "id": "G1",
+          "description": "Známka za prvý semester."
+        },
+        "G2": {
+          "id": "G2",
+          "description": "Známka za druhý semester."
+        },
+        "G3": {
+          "id": "G3",
+          "description": "Výsledná známka"
+        }
+      },
+      "card": {
+        "description": "Obsahuje individuálne odpovede na sociálny prieskum medzi portugalskými stredoškolákmi, v ktorom sa sledovali sociálne informácie, informácie o pohlaví a štúdiu."
+      }
+    },
+    "icecream_toppings_toy": {
+      "fields": {
+        "Hot Fudge": {
+          "id": "Horúci fondán",
+          "description": "Bola na zmrzline horúca poleva?"
+        },
+        "Sprinkles": {
+          "id": "Posyp",
+          "description": "Bol na zmrzline posyp?"
+        },
+        "Whipped Cream": {
+          "id": "Šľahačka",
+          "description": "Bola na zmrzline šľahačka?"
+        },
+        "Cherry": {
+          "id": "Čerešňa",
+          "description": "Bola na zmrzline čerešňa?"
+        },
+        "Waffle Cone": {
+          "id": "Kornútok",
+          "description": "Bola zmrzlina v kornútku?"
+        },
+        "Preference": {
+          "id": "Preferencia",
+          "description": "Chutila ti zmrzlina?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v zmrzlinárni o tom, či im chutia určité kombinácie zmrzliny.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh zmrzliny by si mal kúpiť.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania týkajúce sa zmrzliny."
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "kurča",
+          "description": "Je v naane zapečené kuracie mäso?"
+        },
+        "lamb": {
+          "id": "jahňa",
+          "description": "Je v naane zapečené jahňacie mäso?"
+        },
+        "onion": {
+          "id": "cibuľa",
+          "description": "Je v naane zapečená cibuľa?"
+        },
+        "potatoes": {
+          "id": "zemiaky",
+          "description": "Sú v naane zapečené zemiaky?"
+        },
+        "nuts": {
+          "id": "orechy",
+          "description": "Sú v naane zapečené orechy?"
+        },
+        "cherries": {
+          "id": "čerešne",
+          "description": "Sú v naane zapečené čerešne?"
+        },
+        "shaved coconut": {
+          "id": "strúhaný kokos",
+          "description": "Je v naane zapečený strúhaný kokos?"
+        },
+        "garlic": {
+          "id": "cesnak",
+          "description": "Je v naane zapečený cesnak?"
+        },
+        "cheese": {
+          "id": "syr",
+          "description": "Je v naane zapečený syr?"
+        },
+        "preference": {
+          "id": "preferencia",
+          "description": "Chutí ti naan?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v indickej reštaurácii o tom, či im chutia určité kombinácie naanu.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh naanu by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania."
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "vek",
+          "description": "Vek osoby."
+        },
+        "type of employment": {
+          "id": "typ zamestnania",
+          "description": "Typ zamestnania: verejná správa, súkromná spoločnosť, živnostník."
+        },
+        "estimated number of people represented": {
+          "id": "odhadovaný počet zastúpených osôb",
+          "description": "Odhad, koľko ľudí v USA táto osoba reprezentuje."
+        },
+        "education level": {
+          "id": "úroveň vzdelania",
+          "description": "Úroveň vzdelania osoby."
+        },
+        "marital status": {
+          "id": "rodinný stav",
+          "description": "Rodinný stav (ženatý, vydatá, slobodný/-á, rozvedený/-á)."
+        },
+        "occupation": {
+          "id": "zamestnanie",
+          "description": "Čím sa živí."
+        },
+        "relationship": {
+          "id": "vzťah",
+          "description": "Opis rodinného stavu osoby."
+        },
+        "race": {
+          "id": "rasový pôvod",
+          "description": "Rasa (používa rasové kategórie z roku 1994, ktoré vylučujú viaceré špecifiká)."
+        },
+        "gender": {
+          "id": "pohlavie",
+          "description": "Pohlavie (používa možnosti sčítania ľudu z roku 1994, ktoré sú binárne)."
+        },
+        "capital gains": {
+          "id": "kapitálové zisky",
+          "description": "Vykázané kapitálové zisky osoby za daný rok (ide o peňažné zisky z predaja akcií namiesto príjmu zo zamestnania)."
+        },
+        "capital losses": {
+          "id": "kapitálové straty",
+          "description": "Vykázané kapitálové straty (napríklad ak predali akcie, ktoré im priniesli stratu)."
+        },
+        "hours of work per week": {
+          "id": "počet hodín práce za týždeň",
+          "description": "Hodiny, ktoré odpracujú za týždeň."
+        },
+        "native-country": {
+          "id": "rodná krajina",
+          "description": "Krajina pôvodu."
+        },
+        "income": {
+          "id": "príjem",
+          "description": "Príjem: binárne číslo, ktoré určuje, či je príjem vyšší alebo nižší ako 50 000 USD."
+        }
+      },
+      "card": {
+        "description": "Údaje zo sčítania obyvateľov USA z roku 1994 s údajmi o príjmoch, osobách a pracovných miestach. Používa sa na predpovedanie, či príjem osoby presahuje 50 000 USD.",
+        "context": {
+          "potentialUses": "Skús predpovedať, či je príjem osoby vyšší alebo nižší ako 50 000 USD, na základe jej vzdelania a veku. Poukáž na rasovú a rodovú nerovnosť v príjmoch.",
+          "potentialMisuses": "Používať to na niečo také, ako je rozhodovanie o tom, či niekomu poskytnúť pôžičku, by mohlo byť veľmi nespravodlivé."
+        }
+      }
+    },
+    "loneliness_movies": {
+      "fields": {
+        "Loneliness": {
+          "id": "Osamelosť",
+          "description": "Cítim sa osamelo."
+        },
+        "Movies": {
+          "id": "Filmy",
+          "description": "Baví ma pozerať filmy"
+        },
+        "Horror": {
+          "id": "Horor",
+          "description": "Páčia sa mi horory"
+        },
+        "Thriller": {
+          "id": "Thriller",
+          "description": "Páčia sa mi thrillery"
+        },
+        "Comedy": {
+          "id": "Komédia",
+          "description": "Páčia sa mi komédie"
+        },
+        "Romantic": {
+          "id": "Romantický film",
+          "description": "Páčia sa mi romantické filmy"
+        },
+        "Sci-fi": {
+          "id": "Sci-fi",
+          "description": "Páčia sa mi Sci-fi filmy"
+        },
+        "War": {
+          "id": "Vojnový",
+          "description": "Páčia sa mi vojnové filmy"
+        },
+        "Fantasy/Fairy tales": {
+          "id": "Fantasy/rozprávky",
+          "description": "Páčia sa mi fantasy/rozprávkové filmy"
+        },
+        "Animated": {
+          "id": "Animované",
+          "description": "Páčia sa mi animované filmy"
+        },
+        "Documentary": {
+          "id": "Dokumentárne",
+          "description": "Páčia sa mi dokumentárne filmy"
+        },
+        "Western": {
+          "id": "Western",
+          "description": "Páčia sa mi westerny"
+        },
+        "Action": {
+          "id": "Akčné",
+          "description": "Páčia sa mi akčné filmy"
+        }
+      },
+      "card": {
+        "description": "Množina údajov z prieskumu zozbieraných slovenskými študentmi vo veku 18 – 21 rokov na FSEV UK. Väčšina odpovedí je hodnotená na stupnici od 1 do 5. Napríklad: „Ohodnoťte od 1 (rozhodne nesúhlasím) do 5 (rozhodne súhlasím): Často študujem alebo pracujem aj vo voľnom čase“. Ide o podmnožinu väčšej množiny údajov, ktorá sa zameriava len na filmy.",
+        "context": {
+          "potentialUses": "Napríklad predpovedať osobnostné črty niekoho na základe iných vlastností.",
+          "potentialMisuses": "Používanie demografických informácií z obmedzenej množiny údajov na vytváranie predpokladov o podskupinách ľudí: napríklad otázky týkajúce sa predpovedí o tom, ktoré pohlavie má väčšiu pravdepodobnosť, že sa niečoho bude báť."
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Loneliness": {
+          "id": "Osamelosť",
+          "description": "Cítim sa osamelo."
+        },
+        "History": {
+          "id": "História",
+          "description": "Páči sa mi história"
+        },
+        "Psychology": {
+          "id": "Psychológia",
+          "description": "Páči sa mi psychológia"
+        },
+        "Politics": {
+          "id": "Politika",
+          "description": "Páči sa mi politika"
+        },
+        "Mathematics": {
+          "id": "Matematika",
+          "description": "Páči sa mi matematika"
+        },
+        "Physics": {
+          "id": "Fyzika",
+          "description": "Páči sa mi fyzika"
+        },
+        "Internet": {
+          "id": "Internet",
+          "description": "Páči sa mi surfovanie na internete"
+        },
+        "PC": {
+          "id": "Počítače",
+          "description": "Páči sa mi používanie počítača"
+        },
+        "Economy Management": {
+          "id": "Ekonomický manažment",
+          "description": "Páči sa mi ekonomický manažment"
+        },
+        "Biology": {
+          "id": "Biológia",
+          "description": "Páči sa mi biológia"
+        },
+        "Chemistry": {
+          "id": "Chémia",
+          "description": "Páči sa mi chémia"
+        },
+        "Reading": {
+          "id": "Čítanie",
+          "description": "Páči sa mi čítanie"
+        },
+        "Geography": {
+          "id": "Geografia",
+          "description": "Páči sa mi geografia"
+        },
+        "Foreign languages": {
+          "id": "Cudzie jazyky",
+          "description": "Páči sa mi učenie cudzích jazykov "
+        },
+        "Medicine": {
+          "id": "Medicína",
+          "description": "Páči sa mi medicína"
+        },
+        "Law": {
+          "id": "Právo",
+          "description": "Páči sa mi právo"
+        },
+        "Cars": {
+          "id": "Autá",
+          "description": "Páčia sa mi autá "
+        },
+        "Art exhibitions": {
+          "id": "Výstavy umeleckých diel",
+          "description": "Páčia sa mi výstavy umeleckých diel"
+        },
+        "Religion": {
+          "id": "Náboženstvo",
+          "description": "Páči sa mi náboženstvo"
+        },
+        "Countryside, outdoors": {
+          "id": "Život na vidieku, outdoorové aktivity",
+          "description": "Páči sa mi život na vidieku, outdoorové aktivity"
+        },
+        "Dancing": {
+          "id": "Tanec",
+          "description": "Páči sa mi tanec"
+        },
+        "Musical instruments": {
+          "id": "Hudobné nástroje",
+          "description": "Páčia sa mi hudobné nástroje"
+        },
+        "Writing": {
+          "id": "Písanie",
+          "description": "Písanie"
+        },
+        "Passive sport": {
+          "id": "Pasívne športy",
+          "description": "Páčia sa mi pasívne športy"
+        },
+        "Active sport": {
+          "id": "Aktívne športovanie",
+          "description": "Páči sa mi aktívne športovanie"
+        },
+        "Gardening": {
+          "id": "Práce na záhrade",
+          "description": "Páčia sa mi práce na záhrade"
+        },
+        "Celebrities": {
+          "id": "Celebrity",
+          "description": "Páčia sa mi celebrity"
+        },
+        "Shopping": {
+          "id": "Nakupovanie",
+          "description": "Páči sa mi nakupovanie"
+        },
+        "Science and technology": {
+          "id": "Veda a technológie",
+          "description": "Páčia sa mi veda a technológie"
+        },
+        "Theatre": {
+          "id": "Divadlo",
+          "description": "Páči sa mi divadlo"
+        },
+        "Fun with friends": {
+          "id": "Zábava s priateľmi",
+          "description": "Páči sa mi zábava s priateľmi"
+        },
+        "Adrenaline sports": {
+          "id": "Adrenalínové športy",
+          "description": "Páčia sa mi adrenalínové športy"
+        },
+        "Pets": {
+          "id": "Domáce zvieratá",
+          "description": "Páčia sa mi domáce zvieratá"
+        }
+      },
+      "card": {
+        "description": "Množina údajov z prieskumu zozbieraných slovenskými študentmi vo veku 18 – 21 rokov na FSEV UK. Väčšina odpovedí je hodnotená na stupnici od 1 do 5. Napríklad: „Ohodnoťte od 1 (rozhodne nesúhlasím) do 5 (rozhodne súhlasím): Často študujem alebo pracujem aj vo voľnom čase“. Ide o podmnožinu väčšej množiny údajov, ktorá sa zameriava len na osobné záujmy",
+        "context": {
+          "potentialUses": "Napríklad predpovedať osobnostné črty niekoho na základe iných vlastností.",
+          "potentialMisuses": "Používanie demografických informácií z obmedzenej množiny údajov na vytváranie predpokladov o podskupinách ľudí: napríklad otázky týkajúce sa predpovedí o tom, ktoré pohlavie má väčšiu pravdepodobnosť, že sa niečoho bude báť."
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Budget": {
+          "id": "Rozpočet",
+          "description": "Rozpočet filmu v USD. Filmy bez údajov o rozpočte tu majú hodnotu 0."
+        },
+        "Gross": {
+          "id": "Hrubé tržby",
+          "description": "Tržby filmu v USD."
+        },
+        "Runtime": {
+          "id": "Dĺžka",
+          "description": "Ako dlho trvá film v minútach."
+        },
+        "Score": {
+          "id": "Skóre",
+          "description": "Hodnotenie filmu používateľmi IMDb."
+        },
+        "Company": {
+          "id": "Spoločnosť",
+          "description": "Produkčná spoločnosť."
+        },
+        "Country": {
+          "id": "Krajina",
+          "description": "Krajina pôvodu filmu."
+        },
+        "Director": {
+          "id": "Režisér",
+          "description": "Režisér filmu."
+        },
+        "Genre": {
+          "id": "Žáner",
+          "description": "Žáner filmu."
+        },
+        "Name": {
+          "id": "Meno",
+          "description": "Názov filmu."
+        },
+        "Rating": {
+          "id": "Rating",
+          "description": "Rating MPAA od G (pre všetky vekové kategórie) po NC-17 (nevhodné pre deti do 17 rokov)."
+        },
+        "Released": {
+          "id": "Vydaný",
+          "description": "Mesiac, v ktorom bol vydaný."
+        },
+        "Star": {
+          "id": "Star",
+          "description": "Herec alebo herečka v hlavnej úlohe."
+        },
+        "Votes": {
+          "id": "Hlasy",
+          "description": "Počet hlasov, ktoré film získal na IMDB."
+        },
+        "Writer": {
+          "id": "Scenár",
+          "description": "Scenárista filmu."
+        },
+        "Year": {
+          "id": "Rok",
+          "description": "Rok, v ktorom bol vydaný."
+        }
+      },
+      "card": {
+        "description": "Množina údajov o filmoch vydaných v rokoch 1986 – 2016 s údajmi o tržbách, hodnoteniach, hodnotení na IMDB a ďalšími údajmi.",
+        "context": {
+          "potentialUses": "Urči napríklad tržby filmu podľa jeho rozpočtu alebo žánru."
+        }
+      }
+    },
+    "club_specific_toy": {
+      "fields": {
+        "activity": {
+          "id": "aktivita",
+          "description": "Ktoré z týchto aktivít si vykonával/a v priebehu posledného mesiaca?"
+        },
+        "pet you own": {
+          "id": "tvoje domáce zvieratko",
+          "description": "Ktoré z týchto domácich zvierat vlastníš?"
+        },
+        "favorite movie": {
+          "id": "obľúbený film",
+          "description": "Ktorý z týchto filmov sa ti páči najviac?"
+        },
+        "lunch food": {
+          "id": "jedlo na obed",
+          "description": "Ktoré z týchto jedál by ti chutilo na obed?"
+        },
+        "club": {
+          "id": "krúžok",
+          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+        }
+      },
+      "card": {
+        "description": "Kim sa spýtala svojej staršej sestry, aké otázky by mala do prieskumu zahrnúť, a potom ho poslala e-mailom priateľom svojej sestry na súkromnej univerzite, na ktorú chodí.",
+        "context": {
+          "potentialUses": "Otázky pomôžu odporučiť krúžok, na ktorý sa máš prihlásiť, na základe tvojich záujmov a osobnosti.",
+          "potentialMisuses": "Údaje pochádzajú len od ľudí z našej školy a komunity – používaj ich obozretne v iných školách."
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Genre": {
+          "id": "Žáner",
+          "description": "Žáner skladby."
+        },
+        "Artist": {
+          "id": "Umelec",
+          "description": "Meno interpreta."
+        },
+        "Title": {
+          "id": "Názov",
+          "description": "Názov skladby."
+        },
+        "Loudness score": {
+          "id": "Hodnotenie hlasitosti",
+          "description": "Hodnotenie hlasitosti skladby, kde nízke záporné čísla ako -13 znamenajú relatívne tichý zvuk a vysoké záporné čísla ako -5 znamenajú relatívne hlasný zvuk."
+        },
+        "Tempo in beats per minute": {
+          "id": "Tempo v úderoch za minútu",
+          "description": "Tempo skladby v úderoch za minútu (BPM). Vyššie čísla znamenajú rýchlejšie a energickejšie skladby."
+        },
+        "Duration in seconds": {
+          "id": "Trvanie v sekundách",
+          "description": "Dĺžka skladby v sekundách."
+        },
+        "Year": {
+          "id": "Rok",
+          "description": "Rok vydania skladby."
+        },
+        "Weeks on the Billboard Top 100": {
+          "id": "Týždne v rebríčku Billboard Top 100",
+          "description": "Celkový počet týždňov, počas ktorých sa skladba nachádzala v rebríčku Billboard Top 100."
+        },
+        "Billboard rank peak": {
+          "id": "Najvyššia priečka v rebríčku Billboard",
+          "description": "Najvyššia pozícia, ktorú skladba dosiahla v rebríčku Billboard Top 100."
+        }
+      },
+      "card": {
+        "description": "Náhodný výber populárnych piesní s informáciami o rebríčku Billboard Top 100 a ďalšími charakteristikami.",
+        "context": {
+          "potentialUses": "Predpovedaj, akým veľkým hitom sa skladba stala na základe jej žánru a ďalších faktorov."
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "lions": {
+          "id": "levy",
+          "description": "Počet levov pozorovaných počas návštevy."
+        },
+        "temperature": {
+          "id": "teplota",
+          "description": "Teplota počas návštevy."
+        },
+        "people": {
+          "id": "ľudia",
+          "description": "Počet všetkých ľudí na safari počas návštevy."
+        },
+        "dayOfMonth": {
+          "id": "deň",
+          "description": "Deň v mesiaci (1 – 31) návštevy."
+        },
+        "ticketRevenue": {
+          "id": "príjmyZoVstupeniek",
+          "description": "Zisk safari spoločnosti v deň návštevy."
+        },
+        "antelope": {
+          "id": "antilopa",
+          "description": "Počet antilop pozorovaných počas návštevy."
+        },
+        "rhino": {
+          "id": "nosorožec",
+          "description": "Počet nosorožcov pozorovaných počas návštevy."
+        },
+        "elephant": {
+          "id": "slon",
+          "description": "Počet slonov pozorovaných počas návštevy."
+        },
+        "alligator": {
+          "id": "aligátor",
+          "description": "Počet aligátorov pozorovaných počas návštevy."
+        },
+        "trees": {
+          "id": "stromy",
+          "description": "Množstvo porastov a stromov poskytujúcich tieň, ktoré boli pozorované počas návštevy."
+        },
+        "mosquitos": {
+          "id": "komáre",
+          "description": "Počet komárov pozorovaných počas návštevy."
+        },
+        "overgrowthPercent": {
+          "id": "percentoPorastu",
+          "description": "Percento územia, na ktorom sa počas návštevy nachádza tráva, kríky a kroviny."
+        }
+      },
+      "card": {
+        "description": "Údaje získané od spoločnosti African Safari Tours, ktorá ponúka výlety po pláňach Serengeti v Afrike.",
+        "context": {
+          "potentialUses": "Môže sa použiť na určenie najlepšieho času na návštevu safari, aby ste videli čo najviac voľne žijúcich zvierat.",
+          "potentialMisuses": "Sledujú sa len určité druhy zvierat, preto sa vyhnite unáhleným záverom o zvieratách, ktoré nie sú súčasťou tejto množiny (napríklad zebry alebo hrochy)."
+        }
+      },
+      "name": "Safari"
+    },
+    "abalone": {
+      "fields": {
+        "Sex": {
+          "id": "Pohlavie",
+          "description": "Pohlavie lastúrnika: M, F alebo I (mláďa)."
+        },
+        "Length": {
+          "id": "Trvanie",
+          "description": "Jeho dĺžka v najdlhšom bode v milimetroch."
+        },
+        "Diameter": {
+          "id": "Priemer",
+          "description": "Jeho priemer v milimetroch."
+        },
+        "Height": {
+          "id": "Výška",
+          "description": "Jeho výška s ulitníkom v ulite v milimetroch."
+        },
+        "Whole weight": {
+          "id": "Celková hmotnosť",
+          "description": "Celková hmotnosť lastúrnika v gramoch."
+        },
+        "Shucked weight": {
+          "id": "Hmotnosť po vylúpaní",
+          "description": "Hmotnosť lastúrnika bez ulity v gramoch."
+        },
+        "Viscera weight": {
+          "id": "Hmotnosť vnútorností",
+          "description": "Hmotnosť vnútorností v gramoch."
+        },
+        "Shell weight": {
+          "id": "Hmotnosť ulity",
+          "description": "Hmotnosť ulity po vysušení v gramoch."
+        },
+        "Rings": {
+          "id": "Prstence",
+          "description": "Vek v rokoch."
+        }
+      },
+      "card": {
+        "description": "Táto množina údajov obsahuje rôzne atribúty rôznych druhov lastúrnikov. Cieľom je predpovedať počet letokruhov v ulite, čo je ukazovateľ veku.",
+        "context": {
+          "potentialUses": "Zisti vek lastúrnika."
+        }
+      }
+    },
+    "basketball_shots": {
+      "fields": {
+        "Away team alias": {
+          "id": "Alias hosťujúceho tímu",
+          "description": "Skratka názvu hosťujúceho tímu."
+        },
+        "Home team alias": {
+          "id": "Alias domáceho tímu",
+          "description": "Skratka názvu domáceho tímu."
+        },
+        "Time in seconds": {
+          "id": "Čas v sekundách",
+          "description": "Uplynulý čas na hodinách hry v sekundách."
+        },
+        "Jersey number": {
+          "id": "Číslo dresu",
+          "description": "Číslo hráča, ktorý vystrelil."
+        },
+        "Inches from left baseline": {
+          "id": "Vzdialenosť od ľavej základnej čiary",
+          "description": "Vzdialenosť od ľavej základnej čiary (čiara za košom)."
+        },
+        "Inches from bottom sideline": {
+          "id": "Palce od spodnej postrannej čiary",
+          "description": "Vzdialenosť od spodnej postrannej čiary (čiara pozdĺž ihriska)."
+        },
+        "Made or miss": {
+          "id": "Zásah alebo neúspech",
+          "description": "Či bol trojbodový hod úspešný alebo nie."
+        }
+      },
+      "card": {
+        "description": "Táto množina údajov obsahuje každý trojbodový pokus počas turnaja NCAA 2017. Na základe týchto údajov je možné predpovedať, či bol pokus úspešný alebo nie.",
+        "context": {
+          "potentialUses": "Predpovedaj, či bol trojbodový hod úspešný alebo nie."
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Animal Name": {
+          "id": "Meno zvieraťa",
+          "description": "Pomenuj zviera."
+        },
+        "Hair": {
+          "id": "Srsť",
+          "description": "Má zviera srsť?"
+        },
+        "Feathers": {
+          "id": "Perie",
+          "description": "Má zviera perie?"
+        },
+        "Eggs": {
+          "id": "Vajcia",
+          "description": "Znáša toto zviera vajcia?"
+        },
+        "Milk": {
+          "id": "Mlieko",
+          "description": "Dáva toto zviera mlieko?"
+        },
+        "Airborne": {
+          "id": "Lietanie",
+          "description": "Lieta toto zviera?"
+        },
+        "Aquatic": {
+          "id": "Vodný",
+          "description": "Žije toto zviera vo vode?"
+        },
+        "Predator": {
+          "id": "Dravec",
+          "description": "Je toto zviera dravec?"
+        },
+        "Toothed": {
+          "id": "Zuby",
+          "description": "Má toto zviera zuby?"
+        },
+        "Backbone": {
+          "id": "Chrbtica",
+          "description": "Má toto zviera chrbticu?"
+        },
+        "Breathes": {
+          "id": "Dýchanie",
+          "description": "Dýcha toto zviera?"
+        },
+        "Venomous": {
+          "id": "Jedovatosť",
+          "description": "Je toto zviera jedovaté?"
+        },
+        "Fins": {
+          "id": "Plutvy",
+          "description": "Má toto zviera plutvy?"
+        },
+        "Legs": {
+          "id": "Nohy",
+          "description": "Koľko nôh má toto zviera?"
+        },
+        "Tail": {
+          "id": "Chvost",
+          "description": "Má toto zviera chvost?"
+        },
+        "Domestic": {
+          "id": "Zdomácnenosť",
+          "description": "Je toto zviera zdomácnené?"
+        },
+        "Catsize": {
+          "id": "Mačacia veľkosť",
+          "description": "Je toto zviera veľké asi ako mačka?"
+        },
+        "Class": {
+          "id": "Trieda",
+          "description": "O aký druh zvieraťa ide?"
+        }
+      },
+      "card": {
+        "description": "Malá množina údajov s rôznymi atribútmi zvierat (či majú srsť, perie, zuby a iné), ktorá sa používa na účely klasifikácie. Takmer všetky vlastnosti sú typu áno/nie okrem mena zvieraťa, triedy a počtu nôh.",
+        "context": {
+          "potentialUses": "Existuje veľa možných označení, ale jedným z jednoduchých spôsobov, ako začať, je pokúsiť sa zistiť, ktoré vlastnosti súvisia s tým, že zviera je jedovaté.",
+          "potentialMisuses": "Táto množina údajov zahŕňa len 100 zvierat, takže môže existovať veľa zvierat, ktoré sa v údajoch nezobrazujú. Ber to s rezervou!"
+        }
+      }
+    },
+    "club_sparse_toy": {
+      "fields": {
+        "activity": {
+          "id": "aktivita",
+          "description": "Ktorá z týchto činností sa ti páči najviac?"
+        },
+        "personality": {
+          "id": "osobnosť",
+          "description": "Ako najradšej tráviš čas?"
+        },
+        "element": {
+          "id": "prvok",
+          "description": "Ktorý z týchto prvkov je tvoj naobľúbenejší?"
+        },
+        "make build": {
+          "id": "ručná práca",
+          "description": "Čo si myslíš o nasledujúcom výroku: „Páči sa mi robiť a tvoriť veci vlastnými rukami.“?"
+        },
+        "meet people": {
+          "id": "spoznávanie ľudí",
+          "description": "Čo si myslíš o nasledujúcom výroku: „Páči sa mi učiť sa novým veciam a spoznávať nových ľudí.“?"
+        },
+        "club": {
+          "id": "krúžok",
+          "description": "Na aký krúžok sa chcš prihlásiť alebo na aký už chodíš?"
+        }
+      },
+      "card": {
+        "description": "Zoey požiadala všetkých na hodine angličtiny, aby vyplnili dotazník, a všetci ho vyplnili!",
+        "context": {
+          "potentialUses": "Otázky pomôžu odporučiť krúžok, na ktorý sa máš prihlásiť, na základe tvojich záujmov a osobnosti.",
+          "potentialMisuses": "Údaje pochádzajú len od ľudí z našej školy a komunity – používaj ich obozretne v iných školách."
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokádo",
+          "description": "Obsahuje šalát aj avokádo?"
+        },
+        "onion": {
+          "id": "cibuľa",
+          "description": "Obsahuje šalát aj cibuľu?"
+        },
+        "masago": {
+          "id": "masago",
+          "description": "Obsahuje šalát aj masago?"
+        },
+        "wasabi": {
+          "id": "wasabi",
+          "description": "Obsahuje šalát aj wasabi?"
+        },
+        "ginger": {
+          "id": "ryšavý",
+          "description": "Obsahuje šalát aj zázvor?"
+        },
+        "seaweed": {
+          "id": "morské riasy",
+          "description": "Obsahuje šalát aj morské riasy?"
+        },
+        "furikake": {
+          "id": "furikake",
+          "description": "Obsahuje šalát aj korenie furikake?"
+        },
+        "surimi": {
+          "id": "surimi",
+          "description": "Obsahuje šalát aj surimi?"
+        },
+        "chili": {
+          "id": "chilli",
+          "description": "Obsahuje šalát aj chilli?"
+        },
+        "preference": {
+          "id": "preferencia",
+          "description": "Chutí ti tento šalát?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v šalátovej reštaurácii o tom, či im chutia určité kombinácie šalátu.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh šalátu by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania."
+        }
+      }
+    },
+    "housing_data": {
+      "fields": {
+        "Per Capita Crime Rate": {
+          "id": "Miera kriminality na obyvateľa",
+          "description": "Miera kriminality na obyvateľa podľa obce."
+        },
+        "Proportion of Residental Land Zoned for >25Kft": {
+          "id": "Podiel rezidenčných pozemkov s rozlohou väčšou ako 2300 m²",
+          "description": "Podiel obytných pozemkov s rozlohou väčšou ako 2300 m²."
+        },
+        "Proportion of non-retail business acres": {
+          "id": "Podiel nemaloobchodných obchodných výmer",
+          "description": "Podiel nemaloobchodných obchodných výmer podľa obce."
+        },
+        "Bounds Charles River?": {
+          "id": "Ohraničuje ho rieka Charles?",
+          "description": "1, ak sa pozemok nachádza pri rieke Charles, inak 0. Niektoré obce majú označenie „NA“, ak je odpoveď nejednoznačná."
+        },
+        "Nitric Oxide Concentration (PPM)": {
+          "id": "Koncentrácia oxidu dusnatého (PPM)",
+          "description": "Koncentrácia oxidu dusnatého v časticiach na 10 miliónov."
+        },
+        "Rooms per dwelling": {
+          "id": "Izby na obydlie",
+          "description": "Priemerný počet izieb na obydlie."
+        },
+        "% of buildings pre-1940": {
+          "id": "% budov spred roku 1940",
+          "description": "Podiel jednotiek obývaných vlastníkmi postavených pred rokom 1940."
+        },
+        "Distance to employment centers": {
+          "id": "Vzdialenosť od centier zamestnanosti",
+          "description": "Vážená vzdialenosť do 5 hlavných bostonských centier zamestnanosti."
+        },
+        "Accessibility to highways": {
+          "id": "Dostupnosť diaľnic",
+          "description": "Vážená miera dostupnosti hlavných diaľnic."
+        },
+        "Property tax": {
+          "id": "Daň z nehnuteľností",
+          "description": "Sadzba dane z nehnuteľnosti na každých 10 000 USD."
+        },
+        "Student-teacher ratio": {
+          "id": "Pomer študentov a učiteľov",
+          "description": "Priemerný pomer počtu žiakov na učiteľa v jednotlivých mestách."
+        },
+        "Weighted black population": {
+          "id": "Vážená černošská populácia",
+          "description": "Vážený ukazovateľ počtu černošského obyvateľstva v jednotlivých mestách."
+        },
+        "Lower status population": {
+          "id": "Obyvateľstvo s nižším postavením",
+          "description": "Percento populácie označené ako „nižšie postavenie“."
+        },
+        "Median home value": {
+          "id": "Mediánová hodnota domu",
+          "description": "Mediánová hodnota domu v tisícoch dolárov."
+        }
+      },
+      "card": {
+        "description": "Široko používaná malá množina údajov o nehnuteľnostiach na bývanie v oblasti Bostonu v štáte Massachusetts.",
+        "context": {
+          "potentialUses": "Predpovedaj mediánovú hodnotu domu na základe černošskej populácie a pomeru rodičov a učiteľov.",
+          "potentialMisuses": "Ide o starú množinu údajov, takže je nepravdepodobné, že by odrážala súčasné hodnoty domov. Ide tiež o množinu údajov, ktorá odráža rasové a ekonomické predsudky: je správne alebo spravodlivé, že hodnoty domov mali tendenciu byť vyššie v oblastiach, kde bolo bohatšie obyvateľstvo alebo menej černošského obyvateľstva?"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Music": {
+          "id": "Hudba",
+          "description": "Baví ma počúvať hudbu"
+        },
+        "Slow songs or fast songs": {
+          "id": "Pomalé skladby alebo rýchle skladby",
+          "description": "Dávam prednosť rýchlej hudbe"
+        },
+        "Dance": {
+          "description": "Páči sa mi tanečná hudba"
+        },
+        "Folk": {
+          "id": "Folk",
+          "description": "Páči sa mi folková hudba"
+        },
+        "Country": {
+          "id": "Krajina",
+          "description": "Páči sa mi country"
+        },
+        "Classical music": {
+          "id": "Klasická hudba",
+          "description": "Páči sa mi klasická hudba"
+        },
+        "Musical": {
+          "id": "Muzikál",
+          "description": "Páčia sa mi muzikály"
+        },
+        "Pop": {
+          "id": "Pop",
+          "description": "Páči sa mi populárna hudba"
+        },
+        "Rock": {
+          "id": "Rock",
+          "description": "Páči sa mi rocková hudba"
+        },
+        "Metal or Hardrock": {
+          "id": "Metal alebo hard rock",
+          "description": "Páči sa mi metal alebo hard rock"
+        },
+        "Punk": {
+          "id": "Punk",
+          "description": "Páči sa mi punková hudba"
+        },
+        "Hiphop, Rap": {
+          "id": "Hip-hop, Rap",
+          "description": "Páči sa mi hip-hop alebo rap"
+        },
+        "Reggae, Ska": {
+          "id": "Reggae, ska",
+          "description": "Páči sa mi reggae alebo ska"
+        },
+        "Swing, Jazz": {
+          "id": "Swing, jazz",
+          "description": "Páči sa mi swing alebo jazz"
+        },
+        "Rock n roll": {
+          "id": "Rokenrol",
+          "description": "Páči sa mi rokenrol"
+        },
+        "Alternative": {
+          "id": "Alternatívna hudba",
+          "description": "Páči sa mi alternatívna hudba"
+        },
+        "Latino": {
+          "id": "Latinská hudba",
+          "description": "Páči sa mi latinská hudba"
+        },
+        "Techno, Trance": {
+          "id": "Techno, trance",
+          "description": "Páči sa mi techno alebo trance"
+        },
+        "Opera": {
+          "id": "Opera",
+          "description": "Páči sa mi opera"
+        },
+        "Movies": {
+          "id": "Filmy",
+          "description": "Baví ma pozerať filmy"
+        },
+        "Horror": {
+          "id": "Horor",
+          "description": "Páčia sa mi horory"
+        },
+        "Thriller": {
+          "id": "Thriller",
+          "description": "Páčia sa mi thrillery"
+        },
+        "Comedy": {
+          "id": "Komédia",
+          "description": "Páčia sa mi komédie"
+        },
+        "Romantic": {
+          "id": "Romantický film",
+          "description": "Páčia sa mi romantické filmy"
+        },
+        "Sci-fi": {
+          "id": "Sci-fi",
+          "description": "Páčia sa mi Sci-fi filmy"
+        },
+        "War": {
+          "id": "Vojnový",
+          "description": "Páčia sa mi vojnové filmy"
+        },
+        "Fantasy/Fairy tales": {
+          "id": "Fantasy/rozprávky",
+          "description": "Páčia sa mi fantasy/rozprávkové filmy"
+        },
+        "Animated": {
+          "id": "Animované",
+          "description": "Páčia sa mi animované filmy"
+        },
+        "Documentary": {
+          "id": "Dokumentárne",
+          "description": "Páčia sa mi dokumentárne filmy"
+        },
+        "Western": {
+          "id": "Western",
+          "description": "Páčia sa mi westerny"
+        },
+        "Action": {
+          "id": "Akčné",
+          "description": "Páčia sa mi akčné filmy"
+        },
+        "History": {
+          "id": "História",
+          "description": "Páči sa mi história"
+        },
+        "Psychology": {
+          "id": "Psychológia",
+          "description": "Páči sa mi psychológia"
+        },
+        "Politics": {
+          "id": "Politika",
+          "description": "Páči sa mi politika"
+        },
+        "Mathematics": {
+          "id": "Matematika",
+          "description": "Páči sa mi matematika"
+        },
+        "Physics": {
+          "id": "Fyzika",
+          "description": "Páči sa mi fyzika"
+        },
+        "Internet": {
+          "id": "Internet",
+          "description": "Páči sa mi surfovanie na internete"
+        },
+        "PC": {
+          "id": "Počítače",
+          "description": "Páči sa mi používanie počítača"
+        },
+        "Economy Management": {
+          "id": "Ekonomický manažment",
+          "description": "Páči sa mi ekonomický manažment"
+        },
+        "Biology": {
+          "id": "Biológia",
+          "description": "Páči sa mi biológia"
+        },
+        "Chemistry": {
+          "id": "Chémia",
+          "description": "Páči sa mi chémia"
+        },
+        "Reading": {
+          "id": "Čítanie",
+          "description": "Páči sa mi čítanie"
+        },
+        "Geography": {
+          "id": "Geografia",
+          "description": "Páči sa mi geografia"
+        },
+        "Foreign languages": {
+          "id": "Cudzie jazyky",
+          "description": "Páči sa mi učenie cudzích jazykov "
+        },
+        "Medicine": {
+          "id": "Medicína",
+          "description": "Páči sa mi medicína"
+        },
+        "Law": {
+          "id": "Právo",
+          "description": "Páči sa mi právo"
+        },
+        "Cars": {
+          "id": "Autá",
+          "description": "Páčia sa mi autá "
+        },
+        "Art exhibitions": {
+          "id": "Výstavy umeleckých diel",
+          "description": "Páčia sa mi výstavy umeleckých diel"
+        },
+        "Religion": {
+          "id": "Náboženstvo",
+          "description": "Páči sa mi náboženstvo"
+        },
+        "Countryside, outdoors": {
+          "id": "Život na vidieku, outdoorové aktivity",
+          "description": "Páči sa mi život na vidieku, outdoorové aktivity"
+        },
+        "Dancing": {
+          "id": "Tanec",
+          "description": "Páči sa mi tanec"
+        },
+        "Musical instruments": {
+          "id": "Hudobné nástroje",
+          "description": "Páčia sa mi hudobné nástroje"
+        },
+        "Writing": {
+          "id": "Písanie",
+          "description": "Písanie"
+        },
+        "Passive sport": {
+          "id": "Pasívne športy",
+          "description": "Páčia sa mi pasívne športy"
+        },
+        "Active sport": {
+          "id": "Aktívne športovanie",
+          "description": "Páči sa mi aktívne športovanie"
+        },
+        "Gardening": {
+          "id": "Práce na záhrade",
+          "description": "Páčia sa mi práce na záhrade"
+        },
+        "Celebrities": {
+          "id": "Celebrity",
+          "description": "Páčia sa mi celebrity"
+        },
+        "Shopping": {
+          "id": "Nakupovanie",
+          "description": "Páči sa mi nakupovanie"
+        },
+        "Science and technology": {
+          "id": "Veda a technológie",
+          "description": "Páčia sa mi veda a technológie"
+        },
+        "Theatre": {
+          "id": "Divadlo",
+          "description": "Páči sa mi divadlo"
+        },
+        "Fun with friends": {
+          "id": "Zábava s priateľmi",
+          "description": "Páči sa mi zábava s priateľmi"
+        },
+        "Adrenaline sports": {
+          "id": "Adrenalínové športy",
+          "description": "Páčia sa mi adrenalínové športy"
+        },
+        "Pets": {
+          "id": "Domáce zvieratá",
+          "description": "Páčia sa mi domáce zvieratá"
+        },
+        "Flying": {
+          "id": "Lietanie",
+          "description": "Bojím sa lietania"
+        },
+        "Storm": {
+          "id": "Búrka",
+          "description": "Bojím sa búrok"
+        },
+        "Darkness": {
+          "id": "Tma",
+          "description": "Bojím sa tmy"
+        },
+        "Heights": {
+          "id": "Výška",
+          "description": "Bojím sa výšky"
+        },
+        "Spiders": {
+          "id": "Pavúky",
+          "description": "Bojím sa pavúkov"
+        },
+        "Snakes": {
+          "id": "Hady",
+          "description": "Bojím sa hadov"
+        },
+        "Rats": {
+          "id": "Potkany",
+          "description": "Bojím sa potkanov"
+        },
+        "Ageing": {
+          "id": "Starnutie",
+          "description": "Bojím sa starnutia"
+        },
+        "Dangerous dogs": {
+          "id": "Nebezpečné psy",
+          "description": "Bojím sa nebezpečných psov"
+        },
+        "Fear of public speaking": {
+          "id": "Strach z verejného vystupovania",
+          "description": "Bojím sa vystupovania na verejnosti"
+        },
+        "Smoking": {
+          "id": "Fajčenie",
+          "description": "Fajčiarske návyky"
+        },
+        "Alcohol": {
+          "id": "Alkohol",
+          "description": "Konzumácia alkoholu"
+        },
+        "Healthy eating": {
+          "id": "Zdravé stravovanie",
+          "description": "Mám veľmi zdravý životný štýl"
+        },
+        "Daily events": {
+          "id": "Každodenné udalosti",
+          "description": "Všímam si, čo sa deje okolo mňa."
+        },
+        "Prioritising workload": {
+          "id": "Stanovenie priorít pri práci",
+          "description": "Snažím sa robiť úlohy čo najskôr a nenechávať ich na poslednú chvíľu."
+        },
+        "Writing notes": {
+          "id": "Zapisovanie poznámok",
+          "description": "Vždy si robím zoznam úloh, nech na nič nezabudnem."
+        },
+        "Workaholism": {
+          "id": "Workoholizmus",
+          "description": "Často študujem alebo pracujem aj vo voľnom čase."
+        },
+        "Thinking ahead": {
+          "id": "Myslenie do budúcnosti",
+          "description": "Skôr ako sa pustím do práce, pozriem sa na veci z rôznych uhlov pohľadu."
+        },
+        "Final judgement": {
+          "id": "Posledný súd",
+          "description": "Verím, že zlí ľudia budú jedného dňa trpieť a dobrí ľudia budú odmenení."
+        },
+        "Reliability": {
+          "id": "Spoľahlivosť",
+          "description": "V práci sa na mňa dá spoľahnúť a vždy splním všetky úlohy, ktoré dostanem."
+        },
+        "Keeping promises": {
+          "id": "Plnenie sľubov",
+          "description": "Svoje sľuby vždy dodržím."
+        },
+        "Loss of interest": {
+          "id": "Strata záujmu",
+          "description": "Môžem sa do niekoho veľmi rýchlo zamilovať a potom úplne stratiť záujem."
+        },
+        "Friends versus money": {
+          "id": "Priatelia a peniaze",
+          "description": "Radšej budem mať veľa priateľov ako veľa peňazí."
+        },
+        "Funniness": {
+          "id": "Zábavnosť",
+          "description": "Vždy sa snažím byť najzábavnejšou osobou."
+        },
+        "Fake": {
+          "id": "Falošnosť",
+          "description": "Občas sa správam neúprimne."
+        },
+        "Criminal damage": {
+          "id": "Trestné škody",
+          "description": "V minulosti som v hneve ničil/a veci."
+        },
+        "Decision making": {
+          "id": "Rozhodovanie",
+          "description": "S rozhodovaním si dávam načas."
+        },
+        "Elections": {
+          "id": "Voľby",
+          "description": "Vždy sa snažím voliť vo voľbách."
+        },
+        "Self-criticism": {
+          "id": "Sebakritika",
+          "description": "Často premýšľam o svojich rozhodnutiach a ľutujem ich."
+        },
+        "Judgment calls": {
+          "id": "Úsudky",
+          "description": "Keď sa s ľuďmi rozprávam, viem, či ma počúvajú alebo nie."
+        },
+        "Hypochondria": {
+          "id": "Hypochondria",
+          "description": "Som hypochonder."
+        },
+        "Empathy": {
+          "description": "Som empatický človek."
+        },
+        "Eating to survive": {
+          "id": "Jedenie na prežitie",
+          "description": "Jem, pretože musím. Z jedla nemám pôžitok a jem tak rýchlo, ako sa len dá."
+        },
+        "Giving": {
+          "id": "Dávanie",
+          "description": "Na Vianoce sa snažím darovať čo najviac iným ľuďom."
+        },
+        "Compassion to animals": {
+          "id": "Súcit so zvieratami",
+          "description": "Neznášam, keď zvieratá trpia."
+        },
+        "Borrowed stuff": {
+          "id": "Požičané veci",
+          "description": "Dávam pozor na veci, ktoré mi požičali iní."
+        },
+        "Loneliness": {
+          "id": "Osamelosť",
+          "description": "Cítim sa osamelo."
+        },
+        "Cheating in school": {
+          "id": "Podvádzanie v škole",
+          "description": "V škole sa mi stávalo, že som podvádzal/a."
+        },
+        "Health": {
+          "id": "Zdravie",
+          "description": "Mám obavy o svoje zdravie."
+        },
+        "Changing the past": {
+          "id": "Zmena minulosti",
+          "description": "Kiežby bolo možné zmeniť minulosť kvôli veciam, ktoré mám na svedomí."
+        },
+        "God": {
+          "id": "Boh",
+          "description": "Verím v Boha."
+        },
+        "Dreams": {
+          "id": "Sny",
+          "description": "Vždy mám dobré sny."
+        },
+        "Charity": {
+          "id": "Charita",
+          "description": "Vždy dávam na charitu."
+        },
+        "Number of friends": {
+          "id": "Počet priateľov",
+          "description": "Mám veľa priateľov."
+        },
+        "Punctuality": {
+          "id": "Dochvíľnosť",
+          "description": "Dodržiavanie časového rozvrhu."
+        },
+        "Lying": {
+          "id": "Lži",
+          "description": "Klameš druhým?"
+        },
+        "Waiting": {
+          "id": "Čakanie",
+          "description": "Mám veľkú trpezlivosť."
+        },
+        "New environment": {
+          "id": "Nové prostredie",
+          "description": "Dokážem sa rýchlo prispôsobiť novému prostrediu."
+        },
+        "Mood swings": {
+          "id": "Výkyvy nálady",
+          "description": "Moje nálady sa rýchlo menia."
+        },
+        "Appearence and gestures": {
+          "id": "Vzhľad a gestá",
+          "description": "Mám dobré správanie a dbám o svoj vzhľad."
+        },
+        "Socializing": {
+          "id": "Socializácia",
+          "description": "Baví ma spoznávať nových ľudí."
+        },
+        "Achievements": {
+          "id": "Výsledky",
+          "description": "O svojich úspechoch vždy informujem ostatných ľudí."
+        },
+        "Responding to a serious letter": {
+          "id": "Odpovedanie na závažný list",
+          "description": "Predtým, ako odpoviem na dôležité listy, si to dôkladne premyslím."
+        },
+        "Children": {
+          "id": "Deti",
+          "description": "Teším sa z detskej spoločnosti."
+        },
+        "Assertiveness": {
+          "id": "Asertivita",
+          "description": "Nebojím sa vyjadriť svoj názor, ak mi na niečom záleží."
+        },
+        "Getting angry": {
+          "id": "Rozčúlenie",
+          "description": "Dokážem sa veľmi ľahko rozčúliť."
+        },
+        "Knowing the right people": {
+          "id": "Poznanie správnych ľudí",
+          "description": "Vždy sa snažím nadviazať kontakt so správnymi ľuďmi."
+        },
+        "Public speaking": {
+          "id": "Verejné vystupovanie",
+          "description": "Pred verejným vystúpením sa musím dobre pripraviť."
+        },
+        "Unpopularity": {
+          "id": "Neobľúbenosť",
+          "description": "Nájdem na sebe chybu, ak ma ľudia nemajú radi."
+        },
+        "Life struggles": {
+          "id": "Životné ťažkosti",
+          "description": "Plačem, keď sa cítim skleslo alebo sa mi nedarí."
+        },
+        "Happiness in life": {
+          "id": "Životné šťastie",
+          "description": "Cítim stopercentnú spokojnosť so svojím životom."
+        },
+        "Energy levels": {
+          "id": "Úrovne energie",
+          "description": "Vždy oplývam životom a energiou."
+        },
+        "Small - big dogs": {
+          "id": "Malé či veľké psy",
+          "description": "Dávam prednosť veľkým nebezpečným psom pred menšími, pokojnejšími psami."
+        },
+        "Personality": {
+          "id": "Osobnosť",
+          "description": "Verím, že všetky moje osobnostné črty sú pozitívne."
+        },
+        "Finding lost valuables": {
+          "id": "Hľadanie stratených cenností",
+          "description": "Ak nájdem niečo, čo mi nepatrí, odovzdám to."
+        },
+        "Getting up": {
+          "id": "Vstávanie",
+          "description": "Ráno sa mi vstáva veľmi ťažko."
+        },
+        "Interests or hobbies": {
+          "id": "Záujmy alebo koníčky",
+          "description": "Mám veľa rôznych koníčkov a záujmov."
+        },
+        "Parents' advice": {
+          "id": "Rady rodičov",
+          "description": "Vždy dbám na rady svojich rodičov."
+        },
+        "Questionnaires or polls": {
+          "id": "Dotazníky alebo ankety",
+          "description": "Baví ma zúčastňovať sa na prieskumoch."
+        },
+        "Internet usage": {
+          "id": "Používanie internetu",
+          "description": "Koľko času tráviš na internete?"
+        },
+        "Finances": {
+          "id": "Financie",
+          "description": "Šetrím, koľko sa dá."
+        },
+        "Shopping centres": {
+          "id": "Nákupné centrá",
+          "description": "Baví ma chodiť do veľkých nákupných centier."
+        },
+        "Branded clothing": {
+          "id": "Značkové oblečenie",
+          "description": "Dávam prednosť značkovému oblečeniu pred neznačkovým."
+        },
+        "Entertainment spending": {
+          "id": "Výdavky na zábavu",
+          "description": "Míňam veľa peňazí na večierky a spoločenské akcie."
+        },
+        "Spending on looks": {
+          "id": "Výdavky na výzor",
+          "description": "Na svoj vzhľad míňam veľa peňazí."
+        },
+        "Spending on gadgets": {
+          "id": "Výdavky na hračky",
+          "description": "Míňam veľa peňazí na technické vychytávky."
+        },
+        "Spending on healthy eating": {
+          "id": "Výdavky na zdravé stravovanie",
+          "description": "Za dobré, kvalitné alebo zdravé potraviny ochotne zaplatím viac."
+        },
+        "Age": {
+          "id": "Vek",
+          "description": "Vek"
+        },
+        "Height": {
+          "id": "Výška",
+          "description": "Výška"
+        },
+        "Weight": {
+          "id": "Hmotnosť",
+          "description": "Hmotnosť"
+        },
+        "Number of siblings": {
+          "id": "Počet súrodencov",
+          "description": "Počet súrodencov"
+        },
+        "Gender": {
+          "id": "Pohlavie",
+          "description": "Pohlavie"
+        },
+        "Left - right handed": {
+          "id": "Ľavák – pravák",
+          "description": "Ľavák – pravák"
+        },
+        "Education": {
+          "id": "Vzdelanie",
+          "description": "Najvyššie dosiahnuté vzdelanie:"
+        },
+        "Only child": {
+          "id": "Jedináčik",
+          "description": "Som jediné dieťa"
+        },
+        "Village - town": {
+          "id": "Dedina – mesto",
+          "description": "Väčšinu svojho detstva som prežil/a: na dedine alebo v meste."
+        },
+        "House - block of flats": {
+          "id": "Dom – bytový dom",
+          "description": "Väčšinu svojho detstva som prežil/a v dome alebo v paneláku."
+        }
+      },
+      "card": {
+        "description": "Množina údajov z dotazníkových odpovedí zozbieraných slovenskými študentmi na FSEV UK. Otázky sa týkali hudby, kultúry, ich vlastných fóbií a demografických údajov. Väčšina odpovedí je hodnotená na stupnici od 1 do 5. Napríklad otázka „Baví ťa počúvať hudbu?“ ponúkala škálu od 1 (rozhodne nesúhlasím) do 5 (rozhodne súhlasím). Táto množina údajov obsahuje obrovské množstvo otázok na preskúmanie.",
+        "context": {
+          "potentialUses": "Napríklad určiť, či sa niekomu páči určitý typ hudby, na základe jeho ďalších preferencií.",
+          "potentialMisuses": "Používanie demografických informácií z obmedzenej množiny údajov na vytváranie predpokladov o podskupinách ľudí: napríklad otázky týkajúce sa predpovedí o tom, ktoré pohlavie má väčšiu pravdepodobnosť, že sa niečoho bude báť."
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "mango jelly": {
+          "id": "mangové želé",
+          "description": "Obsahuje bublinkový čaj mangové želé?"
+        },
+        "regular boba": {
+          "id": "bežná boba",
+          "description": "Obsahuje bublinkový čaj bežnú bobu?"
+        },
+        "lychee": {
+          "id": "liči",
+          "description": "Obsahuje bublinkový čaj liči?"
+        },
+        "herbal": {
+          "id": "bylinky",
+          "description": "Obsahuje bublinkový čaj bylinky?"
+        },
+        "red beans": {
+          "id": "červená fazuľa",
+          "description": "Obsahuje bublinkový čaj červenú fazuľu?"
+        },
+        "crystal boba": {
+          "id": "krištáľová boba",
+          "description": "Obsahuje bublinkový čaj krištáľovú bobu?"
+        },
+        "sea salt cream": {
+          "id": "krém s morskou soľou",
+          "description": "Obsahuje bublinkový čaj krém s morskou soľou?"
+        },
+        "vanilla": {
+          "id": "vanilka",
+          "description": "Obsahuje bublinkový čaj vanilku?"
+        },
+        "banana": {
+          "id": "banán",
+          "description": "Obsahuje bublinkový čaj banán?"
+        },
+        "preference": {
+          "id": "preferencia",
+          "description": "Chutí ti?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v predajni bublinkového čaju o tom, či im chutia určité kombinácie bublinkového čaju.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh bublinkového čaju by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania týkajúce sa bublinkového čaju."
+        }
+      }
+    },
+    "global_happiness_raw": {
+      "fields": {
+        "Country name": {
+          "id": "Názov krajiny",
+          "description": "Názov krajiny alebo regiónu."
+        },
+        "Year": {
+          "id": "Rok",
+          "description": "Rok výsledkov prieskumu."
+        },
+        "Life Ladder": {
+          "id": "Životný rebrík",
+          "description": "Skóre subjektívnej spokojnosti ako priemer odpovedí na otázku hodnotenia života: „Predstavte si rebrík, na ktorom sú stupne očíslované od 0 dole po 10 hore. Vrchol rebríka predstavuje najlepší možný život pre vás a spodok rebríka predstavuje najhorší možný život pre vás. Na ktorom stupni rebríka sa podľa vás momentálne nachádzate vy osobne?“"
+        },
+        "GDP per capita": {
+          "id": "HDP na obyvateľa",
+          "description": "HDP krajiny na obyvateľa v dolároch."
+        },
+        "Social support": {
+          "id": "Sociálna podpora",
+          "description": "Ide o národný priemer odpovedí 0 (nie) alebo 1 (áno) na otázku „Ak by ste sa dostali do ťažkostí, máte príbuzných alebo priateľov, na ktorých sa môžete spoľahnúť, že vám pomôžu, kedykoľvek ich budete potrebovať?“"
+        },
+        "Healthy life expectancy at birth": {
+          "id": "Predpokladaná dĺžka života v zdraví pri narodení",
+          "description": "Predpokladaná dĺžka života v zdraví pri narodení, na základe údajov z Globálneho zdravotníckeho observatória Svetovej zdravotníckej organizácie."
+        },
+        "Freedom to make life choices": {
+          "id": "Sloboda rozhodovať sa v živote",
+          "description": "Národný priemer odpovedí 0 (nie) až 1 (áno) na otázku „Pociťujete spokojnosť alebo nespokojnosť so slobodou rozhodovania o tom, čo budete robiť vo svojom živote?“"
+        },
+        "Generosity": {
+          "id": "Štedrosť",
+          "description": "Národný priemer odpovede na otázku „Darovali ste za posledný mesiac peniaze na charitu?“"
+        },
+        "Perceptions of corruption": {
+          "id": "Vnímanie korupcie",
+          "description": "Národný priemer odpovedí na dve otázky s hodnotou 0 alebo 1: „Je korupcia rozšírená v celej verejnej správe alebo nie?“ a „Je korupcia rozšírená v podnikoch alebo nie?“."
+        },
+        "Positive affect": {
+          "id": "Pozitívne emócie",
+          "description": "Priemer troch pozitívnych ukazovateľov, pričom sa respondentov pýtali, ako často pociťujú šťastie, ako často pociťujú radosť a ako často sa usmievajú alebo smejú."
+        },
+        "Negative affect": {
+          "id": "Negatívne emócie",
+          "description": "Priemer troch negatívnych ukazovateľov, pričom sa zisťuje, ako často respondenti pociťujú obavy, smútok alebo hnev."
+        }
+      },
+      "card": {
+        "description": "Rebríček globálneho šťastia za rok 2019, v ktorom sú krajiny hodnotené podľa rôznych atribútov, ktoré prispievajú k celkovému skóre šťastia a následne sú zoradené. Vlastnosti v tejto množine údajov pochádzajú z rokov 2008 až 2018, ktoré boli pre potreby štúdie spriemerované a vytvorili sa z nich skóre. Tieto „surové“ údaje obsahujú viac riadkov ako množina údajov „Global Happiness 2019“, ale môžu poskytovať odlišné výsledky.",
+        "context": {
+          "potentialUses": "Skús predpovedať skóre šťastia krajiny na základe ďalších vlastností, ako je HDP na obyvateľa a sloboda rozhodovania v živote.",
+          "potentialMisuses": "Predpovedať poradie je ťažké. Taktiež by sa to nemalo používať ako objektívny ukazovateľ toho, ktoré krajiny sú „najlepšie“ – aké faktory môžu prispieť k týmto výsledkom, ktoré nie sú zahrnuté v údajoch?"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Vek",
+          "description": "Vek pacienta."
+        },
+        "Sex": {
+          "id": "Pohlavie",
+          "description": "Biologické pohlavie pacienta."
+        },
+        "Chest Pain Type": {
+          "id": "Typ bolesti na hrudníku",
+          "description": "Typ bolesti na hrudníku."
+        },
+        "Resting Blood Pressure": {
+          "id": "Krvný tlak v pokoji",
+          "description": "Či má bolesť na hrudníku, a ak áno, či ide o anginóznu bolesť: pocit, akoby vám niekto stláčal srdce."
+        },
+        "Cholesterol": {
+          "id": "Cholesterol",
+          "description": "Cholesterol v krvi."
+        },
+        "Fasting Blood Sugar > 120mg/dl": {
+          "id": "Cukor v krvi nalačno > 120 mg/dl",
+          "description": "Či je hladina cukru v krvi nalačno vysoká (nad 120)."
+        },
+        "Resting ECG Results": {
+          "id": "Výsledky EKG v pokoji",
+          "description": "Výsledky echykardiogramu: či sa v srdci zistili abnormality."
+        },
+        "Maximum Heart Rate Achieved": {
+          "id": "Dosiahnutá maximálna srdcová frekvencia",
+          "description": "Najvyššia dosiahnutá srdcová frekvencia pacienta počas záťažového testu."
+        },
+        "Exercise Induced Angina": {
+          "id": "Cvičením vyvolaná angína pektoris",
+          "description": "Či cvičenie u pacienta vyvolalo alebo nevyvolalo angínu pectoris"
+        },
+        "ST Depression Induced By Exercise Relative To Rest": {
+          "id": "ST depresia vyvolaná cvičením v porovnaní s pokojovým stavom",
+          "description": "Miera ST depresie (problémy s tepnami) spôsobená cvičením, indikátor problémov so srdcom."
+        },
+        "Slope of Peak Exercise ST Segment": {
+          "id": "Sklon segmentu ST pri špičkovom výkone",
+          "description": "Sklon ich ST segmentu (meranej tepny) počas cvičenia."
+        },
+        "Number of Major Vessels Colored by Flourosopy": {
+          "id": "Počet hlavných ciev sfarbených pomocou fluroskopie",
+          "description": "Fluoroskopia je proces mapovania tepien k srdcu: ukazuje, koľko ciev bolo v tomto procese dobre viditeľných. Nízke alebo vysoké číslo môže znamenať ochorenie srdca."
+        },
+        "Diagnosis of Heart Disease": {
+          "id": "Diagnostika ochorenia srdca",
+          "description": "Či pacient má alebo nemá ochorenie srdca."
+        }
+      },
+      "card": {
+        "description": "Množina údajov o výsledkoch testov pacientov s ochorením srdca, ktorá sa používa na predpovedanie, či niekto môže mať alebo nemá ochorenie srdca.",
+        "context": {
+          "potentialUses": "Diagnostikuj, či je niekto ohrozený ochorením srdca na základe rôznych faktorov."
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "Strany",
+          "description": "Počet strán, ktoré má tvar"
+        },
+        "border color": {
+          "id": "farba ohraničenia",
+          "description": "Farba obrysu tvaru"
+        },
+        "fill color": {
+          "id": "farba výplne",
+          "description": "Farba vnútorného priestoru tvaru"
+        },
+        "size": {
+          "id": "veľkosť",
+          "description": "Buď veľké, alebo malé"
+        },
+        "background color": {
+          "id": "farba pozadia",
+          "description": "Farba pozadia za tvarom"
+        },
+        "shape": {
+          "id": "tvar",
+          "description": "Typ tvaru"
+        }
+      },
+      "card": {
+        "description": "Extrahované prvky z množiny vizuálnych údajov predstavujúcej rôzne tvary.",
+        "context": {
+          "potentialUses": "Používa sa na trénovanie AI Bota na klasifikáciu tvarov.",
+          "potentialMisuses": "Čokoľvek iné ako vyššie uvedený účel."
+        }
+      }
+    },
+    "pizza_toppings_toy": {
+      "fields": {
+        "Pepperoni": {
+          "id": "Pepperoni",
+          "description": "Bola na pizzi saláma pepperoni?"
+        },
+        "Extra Cheese": {
+          "id": "Syr navyše",
+          "description": "Bola pizza so syrom navyše?"
+        },
+        "Broccoli": {
+          "id": "Brokolica",
+          "description": "Bola na pizzi brokolica?"
+        },
+        "Olives": {
+          "id": "Olivy",
+          "description": "Boli na pizzi olivy?"
+        },
+        "Sausage": {
+          "id": "Klobása",
+          "description": "Bola na pizzi klobása?"
+        },
+        "Anchovies": {
+          "id": "Ančovičky",
+          "description": "Boli na pizzi ančovičky?"
+        },
+        "Fried Chicken": {
+          "id": "Vyprážané kurča",
+          "description": "Bolo na pizzi vyprážané kurča?"
+        },
+        "Peppers": {
+          "id": "Paprika",
+          "description": "Bola na pizzi paprika?"
+        },
+        "Ham": {
+          "id": "Šunka",
+          "description": "Bola na pizzi šunka?"
+        },
+        "Bacon": {
+          "id": "Slanina",
+          "description": "Bola na pizzi slanina?"
+        },
+        "Preference": {
+          "id": "Preferencia",
+          "description": "Chutila ti pizza?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v pizzerii o tom, či im chutia určité kombinácie prísad na pizzi.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh pizze by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania týkajúce sa pizze."
+        }
+      }
+    },
+    "car_evaluation": {
+      "fields": {
+        "Buying Price": {
+          "id": "Nákupná cena",
+          "description": "Nákupná cena vozidla, od veľmi vysokej po nízku."
+        },
+        "Maintenance Cost": {
+          "id": "Náklady na údržbu",
+          "description": "Náklady na údržbu vozidla, od veľmi vysokých po nízke."
+        },
+        "Number Of Doors": {
+          "id": "Počet dverí",
+          "description": "Počet dverí od 2 do 5 alebo viac."
+        },
+        "Number of Passengers": {
+          "id": "Počet cestujúcich",
+          "description": "Počet cestujúcich: 2, 4 alebo viac."
+        },
+        "Boot Size": {
+          "id": "Veľkosť batožinového priestoru",
+          "description": "Veľkosť batožinového priestoru: malý, stredný alebo veľký."
+        },
+        "Safety Rating": {
+          "id": "Hodnotenie bezpečnosti",
+          "description": "Hodnotenie bezpečnosti: vysoká, stredná alebo nízka."
+        },
+        "Car Acceptability": {
+          "id": "Prijateľnosť auta",
+          "description": "Hodnotenie prijateľnosti vozidla: neprijateľné, prijateľné, dobré alebo veľmi dobré."
+        }
+      },
+      "card": {
+        "description": "Množina údajov o vozidlách zoradených podľa „prijateľnosti“ podľa vlastností, ako sú cena, bezpečnosť a počet cestujúcich. Poradie pochádza z rozhodovacieho modelu, ktorý navrhol Marko Bohanec.",
+        "context": {
+          "potentialUses": "Urči hodnotenie prijateľnosti vozidla na základe určitej vlastnosti.",
+          "potentialMisuses": "Možno máš iné kritériá na auto ako tento systém hodnotenia – nemôže urobiť lepšie rozhodnutie o kúpe auta ako ty! Aj keď ti môže uľahčiť hľadanie."
+        }
+      }
+    },
+    "loneliness_personality": {
+      "fields": {
+        "Loneliness": {
+          "id": "Osamelosť",
+          "description": "Cítim sa osamelo."
+        },
+        "Prioritising workload": {
+          "id": "Stanovenie priorít pri práci",
+          "description": "Snažím sa robiť úlohy čo najskôr a nenechávať ich na poslednú chvíľu"
+        },
+        "Workaholism": {
+          "id": "Workoholizmus",
+          "description": "Často študujem alebo pracujem aj vo voľnom čase."
+        },
+        "Reliability": {
+          "id": "Spoľahlivosť",
+          "description": "V práci sa na mňa dá spoľahnúť a vždy splním všetky úlohy, ktoré dostanem."
+        },
+        "Friends versus money": {
+          "id": "Priatelia a peniaze",
+          "description": "Radšej budem mať veľa priateľov ako veľa peňazí."
+        },
+        "Funniness": {
+          "id": "Zábavnosť",
+          "description": "Vždy sa snažím byť najzábavnejšou osobou."
+        },
+        "Judgment calls": {
+          "id": "Úsudky",
+          "description": "Keď sa s ľuďmi rozprávam, viem, či ma počúvajú alebo nie."
+        },
+        "Number of friends": {
+          "id": "Počet priateľov",
+          "description": "Mám veľa priateľov."
+        },
+        "Waiting": {
+          "id": "Čakanie",
+          "description": "Mám veľkú trpezlivosť."
+        },
+        "Socializing": {
+          "id": "Socializácia",
+          "description": "Baví ma spoznávať nových ľudí."
+        },
+        "Assertiveness": {
+          "id": "Asertivita",
+          "description": "Nebojím sa vyjadriť svoj názor, ak mi na niečom záleží."
+        }
+      },
+      "card": {
+        "description": "Množina údajov z prieskumu zozbieraných slovenskými študentmi vo veku 18 – 21 rokov na FSEV UK. Väčšina odpovedí je hodnotená na stupnici od 1 do 5. Napríklad: „Ohodnoťte od 1 (rozhodne nesúhlasím) do 5 (rozhodne súhlasím): Často študujem alebo pracujem aj vo voľnom čase“. Ide o podmnožinu väčšej množiny údajov, ktorá sa zameriava len na povahové charakteristiky.",
+        "context": {
+          "potentialUses": "Napríklad predpovedať osobnostné črty niekoho na základe iných vlastností.",
+          "potentialMisuses": "Používanie demografických informácií z obmedzenej množiny údajov na vytváranie predpokladov o podskupinách ľudí: napríklad otázky týkajúce sa predpovedí o tom, ktoré pohlavie má väčšiu pravdepodobnosť, že sa niečoho bude báť."
+        }
+      }
+    },
+    "thanksgiving": {
+      "fields": {
+        "Main dish": {
+          "id": "Hlavné jedlo",
+          "description": "Hlavné jedlo, ktoré sa podáva. Pravdepodobne to bude morčacie."
+        },
+        "Main dish cooking method": {
+          "id": "Spôsob prípravy hlavného jedla",
+          "description": "Spôsob prípravy hlavného jedla, napr. pečenie, vyprážanie či smaženie."
+        },
+        "Stuffing base": {
+          "id": "Hlavná prísada plnky",
+          "description": "Ak sa podávala plnka, aká bola jej hlavná zložka, alebo „žiadna“, ak sa plnka nepodávala."
+        },
+        "Cranberry sauce": {
+          "id": "Brusnicová omáčka",
+          "description": "Druh podávanej brusnicovej omáčky."
+        },
+        "Gravy": {
+          "id": "Omáčka",
+          "description": "Či sa k jedlu podávala omáčka."
+        },
+        "Brussel sprouts": {
+          "id": "Ružičkový kel",
+          "description": "Či sa k jedlu podával ružičkový kel."
+        },
+        "Carrots": {
+          "id": "Mrkva",
+          "description": "Či sa k jedlu podávala mrkva."
+        },
+        "Cauliflower": {
+          "id": "Karfiol",
+          "description": "Či sa k jedlu podával karfiol"
+        },
+        "Corn": {
+          "id": "Kukurica",
+          "description": "Či sa k jedlu podávala kukurica."
+        },
+        "Cornbread": {
+          "id": "Kukuričný chlieb",
+          "description": "Či sa k jedlu podával kukuričný chlieb."
+        },
+        "Fruit salad": {
+          "id": "Ovocný šalát",
+          "description": "Či sa k jedlu podával ovocný šalát."
+        },
+        "Green beans/green bean casserole": {
+          "id": "Zelená fazuľka/dusená zelená fazuľka",
+          "description": "Či sa k jedlu podávala zelená fazuľka."
+        },
+        "Mac and cheese": {
+          "id": "Makaróny so syrom",
+          "description": "Či sa k jedlu podávali makaróny so syrom."
+        },
+        "Mashed potatoes": {
+          "id": "Zemiaková kaša",
+          "description": "Či sa k jedlu podávala zemiaková kaša."
+        },
+        "Rolls/biscuits": {
+          "id": "Rožky/pečivo",
+          "description": "Či sa k jedlu podávali rožky či iné pečivo."
+        },
+        "Squash": {
+          "id": "Pyré",
+          "description": "Či sa k jedlu podávalo pyré."
+        },
+        "Vegetable salad": {
+          "id": "Zeleninový šalát",
+          "description": "Či sa k jedlu podával zeleninový šalát."
+        },
+        "Yams/sweet potato casserole": {
+          "id": "Zapekané bataty/sladké zemiaky",
+          "description": "Či sa k jedlu podávali zapekané bataty/sladké zemiaky."
+        },
+        "Apple pie": {
+          "id": "Jablkový koláč",
+          "description": "Či sa ako dezert podával jablkový koláč."
+        },
+        "Buttermilk pie": {
+          "id": "Maslový koláč",
+          "description": "Či sa ako dezert podával maslový koláč."
+        },
+        "Cherry pie": {
+          "id": "Čerešňový koláč",
+          "description": "Či sa ako dezert podával čerešňový koláč."
+        },
+        "Chocolate pie": {
+          "id": "Čokoládový koláč",
+          "description": "Či sa ako dezert podával čokoládový koláč."
+        },
+        "Coconut cream pie": {
+          "id": "Kokosový krémový koláč",
+          "description": "Či sa ako dezert podával kokosový krémový koláč."
+        },
+        "Key lime pie": {
+          "id": "Limetkový koláč",
+          "description": "Či sa ako dezert podával limetkový koláč."
+        },
+        "Peach pie": {
+          "id": "Broskyňový koláč",
+          "description": "Či sa ako dezert podával broskyňový koláč."
+        },
+        "Pecan pie": {
+          "id": "Pekanový koláč",
+          "description": "Či sa ako dezert podával pekanový koláč."
+        },
+        "Pumpkin pie": {
+          "id": "Tekvicový koláč",
+          "description": "Či sa ako dezert podával tekvicový koláč."
+        },
+        "Sweet potato pie": {
+          "id": "Koláč zo sladkých zemiakov",
+          "description": "Či sa ako dezert podával koláč zo sladkých zemiakov."
+        },
+        "Apple cobbler": {
+          "id": "Jablkový zákusok",
+          "description": "Či sa ako dezert podával jablkový zákusok."
+        },
+        "Blondies": {
+          "id": "Koláčiky",
+          "description": "Či sa ako dezert podávali koláčiky."
+        },
+        "Brownies": {
+          "id": "Brownies",
+          "description": "Či sa ako dezert podávali brownies."
+        },
+        "Carrot cake": {
+          "id": "Mrkvový koláč",
+          "description": "Či sa ako dezert podával mrkvový koláč."
+        },
+        "Cheesecake": {
+          "id": "Tvarohový koláč",
+          "description": "Či sa ako dezert podával tvarohový koláč."
+        },
+        "Cookies": {
+          "id": "Sušienky",
+          "description": "Či sa ako dezert podávali sušienky."
+        },
+        "Fudge": {
+          "id": "Krehké koláčiky",
+          "description": "Či sa ako dezert podávali krehké koláčiky."
+        },
+        "Ice cream": {
+          "id": "Zmrzlina",
+          "description": "Či sa ako dezert podávala zmrzlina."
+        },
+        "Peach cobbler": {
+          "id": "Broskyňový zákusok",
+          "description": "Či sa ako dezert podával broskyňový zákusok."
+        },
+        "US region": {
+          "id": "Región USA",
+          "description": "Oblasť krajiny, z ktorej účastník pochádzal."
+        }
+      },
+      "card": {
+        "description": "Prieskum spoločnosti FiveThrityEight, v ktorom sa ľudí v Spojených štátoch pýtali, aké jedlá majú na večeru na Deň vďakyvzdania.",
+        "context": {
+          "potentialUses": "Predpovedajte, či niekto bude mať na Deň vďakyvzdania konkrétne jedlo, na základe oblasti krajiny, z ktorej pochádza.",
+          "potentialMisuses": "Pokúšať sa uhádnuť, z ktorej oblasti niekto pochádza, len na základe jedál, ktoré jedol na Deň vďakyvzdania."
+        }
+      }
+    },
+    "jeans": {
+      "fields": {
+        "Brand": {
+          "id": "Značka",
+          "description": "Značka džínsov."
+        },
+        "Style": {
+          "id": "Štýl",
+          "description": "Strih alebo štýl džínsov, napr. skinny alebo boot cut."
+        },
+        "Mens or womens": {
+          "id": "Pánske alebo dámske",
+          "description": "Či boli džínsy určené pre mužov alebo ženy."
+        },
+        "Cotton contents": {
+          "id": "Obsah bavlny",
+          "description": "Množstvo bavlny v materiáli, pričom 0 znamená, že neobsahuje žiadnu bavlnu, a 1 znamená 100 % bavlnu."
+        },
+        "Price in dollars": {
+          "id": "Cena v dolároch",
+          "description": "Cena džínsov v amerických dolároch."
+        },
+        "Max height of front pocket": {
+          "id": "Maximálna výška predného vrecka",
+          "description": "Výška predného vrecka od jeho najnižšej časti."
+        },
+        "Min height of front pocket": {
+          "id": "Minimálna výška predného vrecka",
+          "description": "Výška predného vrecka od jeho najvyššej časti."
+        },
+        "Front rivet height": {
+          "id": "Výška predného nitu",
+          "description": "Otvory predných vreciek sa smerom k boku nohavíc zahýbajú a sú zakončené nitom. Toto číslo udáva vzdialenosť od hornej časti vrecka po tento nit."
+        },
+        "Max width of front pocket": {
+          "id": "Maximálna šírka predného vrecka",
+          "description": "Šírka predného vrecka od jeho najširšej časti."
+        },
+        "Min width of front pocket": {
+          "id": "Minimálna šírka predného vrecka",
+          "description": "Šírka predného vrecka od jeho najužšej časti."
+        },
+        "Max width of back pocket": {
+          "id": "Maximálna šírka zadného vrecka",
+          "description": "Šírka zadného vrecka od jeho najširšej časti."
+        },
+        "Min width of back pocket": {
+          "id": "Minimálna šírka zadného vrecka",
+          "description": "Šírka zadného vrecka od jeho najužšej časti."
+        },
+        "Max height of back pocket": {
+          "id": "Maximálna výška zadného vrecka",
+          "description": "Výška zadného vrecka od jeho najhlbšej časti."
+        },
+        "Min height of back pocket": {
+          "id": "Minimálna výška zadného vrecka",
+          "description": "Výška zadného vrecka od jeho najplytšej časti."
+        }
+      },
+      "card": {
+        "description": "Táto množina údajov obsahuje údaje o meraniach populárnych značiek džínsov.",
+        "context": {
+          "potentialUses": "Skús predpovedať cenu džínsov na základe toho, pre koho sú určené, veľkosti vreciek atď."
+        }
+      }
+    },
+    "taco_toppings_toy": {
+      "fields": {
+        "Ground Beef": {
+          "id": "Mleté hovädzie",
+          "description": "Obsahovalo taco mleté hovädzie mäso?"
+        },
+        "Chicken": {
+          "id": "Kuracie",
+          "description": "Obsahovalo taco kuracie mäso?"
+        },
+        "Hot Sauce": {
+          "id": "Pikantná omáčka",
+          "description": "Obsahovalo taco pikantnú omáčku?"
+        },
+        "Sour Cream": {
+          "id": "Kyslá smotana",
+          "description": "Obsahovalo taco kyslú smotanu?"
+        },
+        "Cheese": {
+          "id": "Syr",
+          "description": "Obsahovalo taco syr?"
+        },
+        "Preference": {
+          "id": "Preferencia",
+          "description": "Chutilo ti taco?"
+        }
+      },
+      "card": {
+        "description": "Prieskum medzi zákazníkmi v taco reštaurácii o tom, či im chutia určité kombinácie taco.",
+        "context": {
+          "potentialUses": "Pomôž novému zákazníkovi vybrať, aký druh taco by si mal objednať.",
+          "potentialMisuses": "Čokoľvek iné ako odporúčania týkajúce sa taco."
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Loneliness": {
+          "id": "Osamelosť",
+          "description": "Cítim sa osamelo."
+        },
+        "Music": {
+          "id": "Hudba",
+          "description": "Baví ma počúvať hudbu"
+        },
+        "Slow songs or fast songs": {
+          "id": "Pomalé skladby alebo rýchle skladby",
+          "description": "Dávam prednosť rýchlej hudbe"
+        },
+        "Dance": {
+          "description": "Páči sa mi tanečná hudba"
+        },
+        "Folk": {
+          "id": "Folk",
+          "description": "Páči sa mi folková hudba"
+        },
+        "Country": {
+          "id": "Krajina",
+          "description": "Páči sa mi country"
+        },
+        "Classical music": {
+          "id": "Klasická hudba",
+          "description": "Páči sa mi klasická hudba"
+        },
+        "Musical": {
+          "id": "Muzikál",
+          "description": "Páčia sa mi muzikály"
+        },
+        "Pop": {
+          "id": "Pop",
+          "description": "Páči sa mi populárna hudba"
+        },
+        "Rock": {
+          "id": "Rock",
+          "description": "Páči sa mi rocková hudba"
+        },
+        "Metal or Hardrock": {
+          "id": "Metal alebo hard rock",
+          "description": "Páči sa mi metal alebo hard rock"
+        },
+        "Punk": {
+          "id": "Punk",
+          "description": "Páči sa mi punková hudba"
+        },
+        "Hiphop, Rap": {
+          "id": "Hip-hop, Rap",
+          "description": "Páči sa mi hip-hop alebo rap"
+        },
+        "Reggae, Ska": {
+          "id": "Reggae, ska",
+          "description": "Páči sa mi reggae alebo ska"
+        },
+        "Swing, Jazz": {
+          "id": "Swing, jazz",
+          "description": "Páči sa mi swing alebo jazz"
+        },
+        "Rock n roll": {
+          "id": "Rokenrol",
+          "description": "Páči sa mi rokenrol"
+        },
+        "Alternative": {
+          "id": "Alternatívna hudba",
+          "description": "Páči sa mi alternatívna hudba"
+        },
+        "Latino": {
+          "id": "Latinská hudba",
+          "description": "Páči sa mi latinská hudba"
+        },
+        "Techno, Trance": {
+          "id": "Techno, trance",
+          "description": "Páči sa mi techno alebo trance"
+        },
+        "Opera": {
+          "id": "Opera",
+          "description": "Páči sa mi opera"
+        }
+      },
+      "card": {
+        "description": "Množina údajov z prieskumu zozbieraných slovenskými študentmi vo veku 18 – 21 rokov na FSEV UK. Väčšina odpovedí je hodnotená na stupnici od 1 do 5. Napríklad: „Ohodnoťte od 1 (rozhodne nesúhlasím) do 5 (rozhodne súhlasím): Často študujem alebo pracujem aj vo voľnom čase“. Ide o podmnožinu väčšej množiny údajov, ktorá sa zameriava len na hudbu.",
+        "context": {
+          "potentialUses": "Napríklad predpovedať osobnostné črty niekoho na základe iných vlastností.",
+          "potentialMisuses": "Používanie demografických informácií z obmedzenej množiny údajov na vytváranie predpokladov o podskupinách ľudí: napríklad otázky týkajúce sa predpovedí o tom, ktoré pohlavie má väčšiu pravdepodobnosť, že sa niečoho bude báť."
+        }
+      }
+    }
+  }
+}

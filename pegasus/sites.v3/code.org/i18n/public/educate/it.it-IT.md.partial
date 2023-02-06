@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ Per avere la migliore esperienza con tutti i contenuti Code.org, consigliamo di 
 | **Per usare il simulatore di Internet**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Per usare lo sviluppo Web**                                      | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Per utilizzare il pulsante di condivisione di Google Classroom** | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                        | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Dettagli per il supporto di dispositivi mobili e tablet
 
