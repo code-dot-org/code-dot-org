@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../../../deployment'
+require 'eyes_selenium'
 
 ROOT = File.expand_path('../../../..', __FILE__)
 
