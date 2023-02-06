@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:32:05 UTC",
+    "serialized_at": "2023-02-01 18:20:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -17785,7 +17785,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "Additional information provided as input to a block to customize it's functionality",
+      "definition": "Additional information provided as input to a block to customize its functionality",
       "properties": {
       },
       "seeding_key": {

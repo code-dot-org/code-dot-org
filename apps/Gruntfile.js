@@ -614,6 +614,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_small_footer.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'layouts/_initial_section_creation_interstitial':
+      './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -737,6 +739,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
+    'sections/new': './src/sites/studio/pages/sections/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -816,8 +819,6 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new':
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-    'pd/fit_weekend_registration/new':
-      './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
     'pd/workshop_daily_survey/new_general_foorm':
       './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':

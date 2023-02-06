@@ -36,7 +36,7 @@ class Pd::SessionAttendanceController < ApplicationController
     enrollment_code = params.require(:enrollment_code)
 
     enrollment = Pd::Enrollment.find_by(code: enrollment_code)
-    if enrollment.nil? || Pd::Attendance.for_workshop(@session.workshop).where(enrollment: enrollment).exists?
+    if enrollment.nil? || Pd::Attendance.for_workshop(@session.workshop).exists?(enrollment: enrollment)
       # This has already been claimed
       flash[:error] = "#{params[:safe_name] || 'This name'} has been claimed. Please look again."
       redirect_to action: :attend, session_code: @session.code
