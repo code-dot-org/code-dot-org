@@ -2792,3 +2792,11 @@ cs:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Lab
