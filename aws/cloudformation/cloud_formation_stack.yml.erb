@@ -12,7 +12,7 @@ Parameters:
     Description: Subdomain name for learning platform ("Dashboard").
   PegasusSubdomainName:
     Type: String
-    Default: <%=rack_env?(:production) ? '' : stack_name %>
+    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
   InstanceType:
     Type: String
