@@ -293,39 +293,41 @@ class UnitGroup < ApplicationRecord
   end
 
   def summarize(user = nil, for_edit: false, locale_code: nil)
-    {
-      name: name,
-      id: id,
-      title: localized_title,
-      assignment_family_title: localized_assignment_family_title,
-      family_name: family_name,
-      version_year: version_year,
-      published_state: published_state,
-      instruction_type: instruction_type,
-      instructor_audience: instructor_audience,
-      participant_audience: participant_audience,
-      pilot_experiment: pilot_experiment,
-      description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
-      description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
-      description_teacher: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_teacher", default: '')),
-      version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
-      scripts: units_for_user(user).map do |unit|
-        include_lessons = false
-        unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
-      end,
-      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      is_migrated: has_migrated_unit?,
-      has_verified_resources: has_verified_resources?,
-      has_numbered_units: has_numbered_units?,
-      course_versions: summarize_course_versions(user, locale_code),
-      show_assign_button: course_assignable?(user),
-      announcements: announcements,
-      course_offering_id: course_version&.course_offering&.id,
-      course_version_id: course_version&.id,
-      course_path: link,
-      course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        name: name,
+        id: id,
+        title: localized_title,
+        assignment_family_title: localized_assignment_family_title,
+        family_name: family_name,
+        version_year: version_year,
+        published_state: published_state,
+        instruction_type: instruction_type,
+        instructor_audience: instructor_audience,
+        participant_audience: participant_audience,
+        pilot_experiment: pilot_experiment,
+        description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
+        description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
+        description_teacher: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_teacher", default: '')),
+        version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
+        scripts: units_for_user(user).map do |unit|
+          include_lessons = false
+          unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
+        end,
+        teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        is_migrated: has_migrated_unit?,
+        has_verified_resources: has_verified_resources?,
+        has_numbered_units: has_numbered_units?,
+        course_versions: summarize_course_versions(user, locale_code),
+        show_assign_button: course_assignable?(user),
+        announcements: announcements,
+        course_offering_id: course_version&.course_offering&.id,
+        course_version_id: course_version&.id,
+        course_path: link,
+        course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
+      }
+    end
   end
 
   def summarize_for_rollup(user = nil)
