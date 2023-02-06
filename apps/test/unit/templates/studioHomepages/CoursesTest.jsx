@@ -39,7 +39,7 @@ describe('Courses', () => {
         const wrapper = mountCourses({isEnglish, isTeacher: false});
         assertComponentsInOrder(wrapper, [
           'SpecialAnnouncement',
-          'CourseBlocksStudentGradeBands',
+          'CourseBlocksWrapper',
           'CourseBlocksHoc',
           'LocalClassActionBlock'
         ]);
@@ -49,9 +49,9 @@ describe('Courses', () => {
         const wrapper = mountCourses({isEnglish, isTeacher: true});
         assertComponentsInOrder(wrapper, [
           'CoursesTeacherEnglish',
-          'CourseBlocksTeacherGradeBands',
+          'CourseBlocksWrapper',
           'CourseBlocksHoc',
-          'CourseBlocksTools',
+          'CourseBlocksWrapper',
           'AdministratorResourcesActionBlock'
         ]);
       });
@@ -76,8 +76,8 @@ describe('Courses', () => {
               'SpecialAnnouncement',
               'CoursesAToF',
               'LegacyCSFNotification',
-              'CourseBlocksInternationalGradeBands',
-              'CourseBlocksTools'
+              'CourseBlocksWrapper',
+              'CourseBlocksWrapper'
             ]);
           });
 
@@ -92,8 +92,8 @@ describe('Courses', () => {
               'CourseBlocksHoc',
               'SpecialAnnouncement',
               'Courses1To4',
-              'CourseBlocksInternationalGradeBands',
-              'CourseBlocksTools'
+              'CourseBlocksWrapper',
+              'CourseBlocksWrapper'
             ]);
           });
         });
