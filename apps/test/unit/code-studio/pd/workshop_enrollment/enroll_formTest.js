@@ -26,6 +26,20 @@ describe('Enroll Form', () => {
     onSubmissionComplete: () => {}
   };
 
+  const school_info = {
+    school_name: 'Hogwarts School of Witchcraft and Wizardry',
+    school_state: 'Washington',
+    school_zip: '12345',
+    school_type: 'Private school'
+  };
+
+  const baseParams = {
+    first_name: 'Rubeus',
+    last_name: 'Hagrid',
+    email: props.email,
+    school_info: school_info
+  };
+
   describe('CSF Enroll Form', () => {
     let enrollForm;
     before(() => {
@@ -301,18 +315,10 @@ describe('Enroll Form', () => {
         school_type: 'Private school'
       };
 
-      const params = {
-        first_name: 'Rubeus',
-        last_name: 'Hagrid',
-        email: props.email,
-        school_info: school_info,
-        role: 'Librarian',
-        grades_teaching: ['Kindergarten']
-      };
-      enrollForm.setState(params);
+      enrollForm.setState(baseParams);
 
       const expectedSchoolInfo = {...school_info, school_type: 'private'};
-      let expectedData = {...params, school_info: expectedSchoolInfo};
+      let expectedData = {...baseParams, school_info: expectedSchoolInfo};
 
       enrollForm.find('#submit').simulate('click');
 
@@ -326,18 +332,14 @@ describe('Enroll Form', () => {
       renderForm();
 
       const params = {
-        first_name: 'Rubeus',
-        last_name: 'Hagrid',
-        email: props.email,
+        ...baseParams,
         school_info: {
           school_id: '60001411118',
           school_name: 'Summit Leadership Academy High Desert',
           school_state: 'CA',
           school_type: 'charter',
           school_zip: '92345'
-        },
-        role: 'Librarian',
-        grades_teaching: ['Kindergarten']
+        }
       };
       const expectedData = {...params, school_info: {school_id: '60001411118'}};
 
