@@ -134,6 +134,7 @@ module Pd::Application
       @application = teacher_application
 
       mail(
+        from: 'Code.org <teacher@code.org>',
         to: @application.formatted_applicant_email,
         subject: "Reminder: Complete your application for Code.org’s Professional Learning Program"
       )
@@ -143,6 +144,7 @@ module Pd::Application
       @application = teacher_application
 
       mail(
+        from: 'Code.org <teacher@code.org>',
         to: @application.formatted_applicant_email,
         subject: "Follow Up: Complete your application for Code.org’s Professional Learning Program"
       )

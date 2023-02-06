@@ -160,4 +160,15 @@ export default class SpriteLab extends P5Lab {
   getReinfFeedbackMsg(isFinalFreePlayLevel) {
     return isFinalFreePlayLevel ? null : this.getMsg().reinfFeedbackMsg();
   }
+
+  runValidationCode() {
+    // Skip validation code in 'editBlocks' mode (i.e., a levelbuilder is
+    // editing start blocks for the level).
+    if (this.level.editBlocks) {
+      this.onPuzzleComplete(false /* submit */);
+      return;
+    }
+
+    super.runValidationCode();
+  }
 }

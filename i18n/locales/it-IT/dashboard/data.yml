@@ -530,7 +530,7 @@ it:
         csd_gamelab_functions: Chiamare e Definire Funzioni
         csd_applab_parameters: Funzioni con parametri
         csd_applab_loops: Loop in Sviluppo App
-        csd_problem_solving_process: Il Processo di Risoluzione dei Problemi
+        csd_problem_solving_process: Il processo di risoluzione dei problemi
         CSF_Going_Places_Safely: Il mio quartiere digitale
         CSF_SpriteLab_Intro_v2: Introduzione al Laboratorio dei personaggi
         CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
@@ -556,7 +556,7 @@ it:
         csf_my_online_neighborhood_2020: Il mio quartiere digitale
         csf_follow_the_digital_trail: Segui le tue tracce digitali
         csf_private_and_personal_information: Dati personali e altri dati
-        csd_what_computers_are: Cos'è un Computer?
+        csd_what_computers_are: Cos'è un computer?
         codebreak_e01: 'Code Break 1.0: Algoritmi con Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototipi con Mark Cuban e Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Crittografia con Ashton Kutcher e Mia Gil Epner'
@@ -609,6 +609,7 @@ it:
         outbreak_scientist: 'Simulatore di focolaio - Pensa come uno scienziato'
         outbreak_outro: 'Simulatore di focolaio - Gioco libero'
         CSA-PL-debugging-temp: Introduzione al Debugging in Sviluppo Java - temp
+        csd_u6_input_output: Ingressi e uscite
         CSA-PL-variables: Creazione di variabili in Java
         PL_CS_Journeys_Overview: CS Journeys
         CSD_u6_variables_part1: 'CSD: Variabili'

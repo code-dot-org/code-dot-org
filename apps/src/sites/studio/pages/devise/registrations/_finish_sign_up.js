@@ -6,6 +6,8 @@ import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -15,6 +17,7 @@ const TEACHER_ONLY_FIELDS = [
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
+  '#gender-dropdown',
   '#age-dropdown',
   '#student-consent',
   '#parent-email-container',
@@ -92,6 +95,7 @@ $(document).ready(() => {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT);
   });
 
   function cleanSchoolInfo() {
@@ -195,6 +199,9 @@ $(document).ready(() => {
       study_group: 'experiment-v4',
       event: 'select-' + type,
       data_string: signUpUID
+    });
+    analyticsReporter.sendEvent(EVENTS.ACCOUNT_TYPE_PICKED_EVENT, {
+      'account type': type
     });
   }
 

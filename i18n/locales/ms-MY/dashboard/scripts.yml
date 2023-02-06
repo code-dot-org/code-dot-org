@@ -1894,6 +1894,10 @@ ms:
           lessons:
             lesson-4:
               name: Pemboleh ubah
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Tatasusunan Satu Dimensi (1D)
         hello-world-space-2022:
           title: 'Helo Dunia: Ruang'
         hello-world-soccer-2022:

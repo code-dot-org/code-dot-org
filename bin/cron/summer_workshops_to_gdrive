@@ -11,7 +11,7 @@ require 'cdo/google/sheet'
 # by our programs team.
 #
 
-WORKSHOP_YEAR = Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR.partition('-').last.to_i
+WORKSHOP_YEAR = Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR.partition('-').first.to_i
 EARLIEST_WORKSHOP_START_DATE = Date.new(WORKSHOP_YEAR, 5, 1)
 LATEST_WORKSHOP_START_DATE = Date.new(WORKSHOP_YEAR, 9, 16)
 

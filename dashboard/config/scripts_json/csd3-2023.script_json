@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2022-10-24 15:43:47 UTC",
+    "serialized_at": "2023-02-01 18:17:44 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,12 +60,10 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "assessment_opportunities": "1. **Identify how computer science is used in a field of entertainment**\r\n\r\n\tIn the activity guide, look at the \"Interesting Fact or Use\" section of the second page and make sure students have identified a use of computer science in their chosen fields.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How is computer science used in entertainment?**\r\n\r\nStudents are asked to consider the \"problems\" of boredom and self expression, and to reflect on how they approach those problems in their own lives. From there, students will explore how computer science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self expression.",
+        "overview": "This lesson is intended to kick off this programming unit in a way that engages students of all backgrounds and interests. Though the endpoint of this unit asks students to develop a game, we avoid starting out with a strong emphasis on _video_ games and instead, we attempt to broaden students' perspective about how programming is a relevant form of entertainment or self-expression that is personally engaging. Students are first asked to consider the \"problems\" of boredom and self-expression and to reflect on how they approach those problems in their own lives. From there, students will explore how computer science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self-expression.\n\n**Question of the Day:** How is computer science used in entertainment?\n",
         "preparation": "* Review the research resources linked in Code Studio\n* Print a copy of the activity guide for each group of three students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson is intended to kick off this programming unit in a way that engages students of all backgrounds and interests. Though the end point of this unit asks students to develop a game, you should avoid starting out with a strong emphasis on _video_ games. Instead, we attempt to broaden students' perspective about how programming is relevant to a form of entertainment or self expression that is personally engaging. This will provide an anchor for students to come back to throughout the unit as they consider the potential applications of the various programming skills that they learn.",
-        "student_overview": "student\n**Question of the Day: How is computer science used in entertainment?**\n\nIn this lesson, you will explore how Computer Science and specifically programming, plays a role in entertainment or as a vehicle for self-expression. \n\n"
+        "student_overview": "**Question of the Day:** How is computer science used in entertainment?\n\nIn this lesson, you will explore how Computer Science and specifically programming, plays a role in entertainment or as a vehicle for self-expression. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
@@ -81,12 +79,10 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "1. **Reason about locations on the Game Lab coordinate grid**\r\n\r\n\tSee the final reflection questions. This objective will also be assessed in the next lesson, within the context of programming in Game Lab.\r\n\r\n2. **Communicate how to draw an image in Game Lab, accounting for shape position, color, and order**\r\n\r\n\tSee the final reflection questions.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we clearly communicate how to draw something on a screen?**\r\n\r\nStudents explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity quickly demonstrates the challenges of communicating position without some shared reference point. In the main activity, students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. Students optionally create their own image to communicate before a debrief discussion.\r\n",
+        "overview": "The primary purpose of this lesson is to introduce students to the coordinate system they will use in Game Lab. Students begin by exploring the challenges of communicating how to draw with shapes and then transition to using a tool that introduces how this problem is approached in Game Lab. The warm-up activity quickly demonstrates the challenges of communicating position without some shared reference point. In the main activity, students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. Students optionally create their own images to communicate before a final debrief discussion.\n\n**Question of the Day:** How can we clearly communicate how to draw something on a screen?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "The primary purpose of this lesson is to introduce students to the coordinate system they will use in Game Lab. Students may have limited experience with using a coordinate grid or may struggle with the \"flipped\" y-axis in Game Lab. The drawing tool also forces students to think about other features of Game Lab students will see when they begin programming in the next lesson. These include the need to consider order while drawing, the need to specify color, and the fact that circles are positioned by their center and squares by their top-left corner. By the end of this activity, students should be ready to transfer what they have learned about communicating position to the programming they will do in the next lesson.",
-        "student_overview": "**Question of the Day: How can we clearly communicate how to draw something on a screen?**\n\nIn this lesson, you will explore the challenges of communicating clear instructions using a Game Lab tool to draw shapes on the Game Lab's grid!\n\n"
+        "student_overview": "**Question of the Day:** How can we clearly communicate how to draw something on a screen?\n\nIn this lesson, you will explore the challenges of communicating clear instructions using a Game Lab tool to draw shapes on the Game Lab's grid!\n\n"
       },
       "seeding_key": {
         "lesson.key": "Plotting Shapes",
@@ -102,12 +98,10 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "1. **Use a coordinate system to place elements on the screen.**\n\n\tSee level 9 in Code Studio, in particular the placement of the square in the picture.\n\n2. **Sequence code correctly to overlay shapes.**\n\n\tSee level 9 in Code Studio, in particular that the square is displayed in front of the circles.\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**\r\n\r\nStudents are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.",
+        "overview": "This lesson is designed to give students a chance to get used to the programming environment, as well as the basic sequencing and debugging that they will use throughout the unit. Students begin with an introduction to the GameLab interactive development environment (IDE), then learn the three commands ([`rect`(#4dd0e1)](/docs/gamelab/rect/), [`ellipse`(#4dd0e1)](/docs/gamelab/ellipse/), and [`fill`(#4dd0e1)](/docs/gamelab/fill/)) that they will need to code the same types of images that they created on paper in the previous lesson.  Challenge levels provide a chance for students who have more programming experience to further explore Game Lab.\n\n**Question of the Day:** How can we communicate to a computer how to draw shapes on the screen?\n",
         "preparation": "* Prepare projector or other means of showing videos if you wish to watch as a class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "The main purpose of this lesson is to give students a chance to get used to the programming environment, as well as the basic sequencing and debugging that they will use throughout the unit. Students begin with an introduction to the GameLab interactive development environment (IDE), then learn the three commands ([`rect`(#4dd0e1)](/docs/gamelab/rect/), [`ellipse`(#4dd0e1)](/docs/gamelab/ellipse/), and [`fill`(#4dd0e1)](/docs/gamelab/fill/)) that they will need to code the same types of images that they created on paper in the previous lesson.  Challenge levels provide a chance for students who have more programming experience to further explore Game Lab.",
-        "student_overview": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**\n\nIn this lesson, you will begin to use Game Lab to position shapes on the screen while working through the concepts of sequencing and debugging. \n\n"
+        "student_overview": "**Question of the Day:** How can we communicate to a computer how to draw shapes on the screen?\n\nIn this lesson, you will begin to use Game Lab to position shapes on the screen while working through the concepts of sequencing and debugging. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Drawing in Game Lab",
@@ -123,12 +117,10 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "1. **Use and reason about drawing commands with multiple parameters**\n\n\tSee level 7 in Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How can we use parameters to give the computer more specific instructions?**\r\n\r\nIn this lesson students continue to develop their familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or \"parameters\". Students learn to draw with versions of [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/) and [`rect()`(#4dd0e1)](/docs/gamelab/rect/) that include width and height parameters. They also learn to use the [`background()`(#4dd0e1)](/docs/gamelab/background/) block.",
+        "overview": "In this lesson, students continue to build skills and develop their familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or \"parameters\". Students learn to draw with versions of [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/) and [`rect()`(#4dd0e1)](/docs/gamelab/rect/) that include width and height parameters. They also learn to use the [`background()`(#4dd0e1)](/docs/gamelab/background/) block. Throughout the lesson, students will need to reason about the x-y coordinate plane, consider the order of their code, and slightly increase their programs' complexity.\n\n**Question of the Day:** How can we use parameters to give the computer more specific instructions?\n",
         "preparation": "* Review the level sequence in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson gives students a chance to slightly expand their drawing skills while continuing to develop general purpose programming skills. They will need to reason about the x-y coordinate plane, consider the order of their code, and slightly increase their programs' complexity.  This lesson should be focused primarily on skill-building.",
-        "student_overview": "**Question of the Day:  How can we use parameters to give the computer more specific instructions?**\n\nIn this lesson, you will continue working in Game Lab and increasing your familiarity with drawing shapes to the screen by manipulating the \"parameters\" of the shapes you are using to draw. \n\n"
+        "student_overview": "**Question of the Day:**  How can we use parameters to give the computer more specific instructions?\n\nIn this lesson, you will continue working in Game Lab and increasing your familiarity with drawing shapes to the screen by manipulating the \"parameters\" of the shapes you are using to draw. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Shapes and Parameters",
@@ -144,12 +136,10 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "1. **Identify a variable as a way to label and reference a value in a program**\n\n\tSee the reflection prompt in the Wrap Up.\n\n2. **Use variables in a program to store a piece of information that is used multiple times**\n\n\tSee Level 7 in Code Studio.\n\n\t",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How can we use variables to store information in our programs?**\r\n\r\nIn this lesson students learn how to use variables to label a number. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number.",
+        "overview": "In this lesson, students learn how to use variables to label a value. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number. Students should leave this lesson knowing that variables are a way to label a value in their programs so that they can be reused or referenced later. In the following lesson, students will be introduced to random numbers, in which they will see a more powerful use for variables, and in later lessons, students will continue to expand their understanding of variables and experience more advanced ways they can be used.\n\n**Question of the Day:**  How can we use variables to store information in our programs?\n",
         "preparation": "* Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson is the first time students will see variables in the course, and they are not expected to fully understand how variables work by its conclusion. Students should leave this lesson knowing that variables are a way to label a value in their programs so that they can be reused or referenced later. In the following lesson students will be introduced to random numbers, in which they will see a more powerful use for variables.  \r\n\r\nUsing variables to manipulate drawings is a surprisingly challenging skill that requires a great deal of forethought and planning. While students will use or modify many programs in this lesson, they are not expected to compose programs that use variables to modify the features of a drawing. In later lessons, students will expand their understanding of variables and more advanced ways they can be used.",
-        "student_overview": "**Question of the Day:  How can we use variables to store information in our programs?**\n\nIn this lesson, you will be introduced to variables - an important concept in programming used to store values for your programs!\n\n"
+        "student_overview": "**Question of the Day:**  How can we use variables to store information in our programs?\n\nIn this lesson, you will be introduced to variables - an important concept in programming used to store values for your programs!\n\n"
       },
       "seeding_key": {
         "lesson.key": "Variables",
@@ -165,12 +155,10 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "**1. Generate and use random numbers in a program**\n\nSee level 6 in Code Studio.\n\n**2. Update a value stored in a variable**\n\nSee level 4 in Code Studio. Check that students have updated the value of \"petalSize\" between drawing the two flowers.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the [`randomNumber()`(#FFB74D)](/docs/gamelab/randomNumber/) block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program.  Combining all of these skills, students draw randomized images.",
+        "overview": "This lesson introduces randomness, which is important both as a way to make programs more interesting and also to motivate the use of variables. Students are introduced to the [`randomNumber()`(#FFB74D)](/docs/gamelab/randomNumber/) block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program.  Combining all of these skills, students draw randomized images.\n\n**Question of the Day:** How can we make our programs behave differently each time they are run?\n",
         "preparation": "- Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson introduces randomness, which is important both as a way to make programs more interesting, but also to motivate the use of variables. In the middle of the activity, students are exposed to a variable that is updated multiple times in the program, expanding their understanding of how variables can be used.",
-        "student_overview": "**Question of the Day: How can we make our programs behave differently each time they are run?**\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n"
+        "student_overview": "**Question of the Day:** How can we make our programs behave differently each time they are run?\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n"
       },
       "seeding_key": {
         "lesson.key": "Random Numbers",
@@ -187,10 +175,9 @@
       "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\r\n\r\nIn order to create more interesting and detailed images, students are introduced to the sprite object. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information. Students then learn how to assign each sprite an image, which will greatly increase the complexity of what they can draw on the screen.",
+        "overview": "In order to create more interesting and detailed images, students are introduced to the sprite object which allows for one variable name to control both the shape and all its aspects. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information. Students then learn how to assign each sprite an image, which will greatly increase the complexity of what they can draw on the screen.\n\n**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "Keeping track of many shapes and the different variables that control aspects of those shapes can get very complex. There will be lots of variables with different variable names. Instead, computer scientists created something called an **object** which allows for one variable name to control both the shape and all its aspects. In Game Lab we use a certain type of object called a **sprite**. A sprite is just a rectangle with **properties** for controlling its look. Properties are the variables that are attached to a sprite. You can access them through **dot notation**. \r\n\r\nUsing the Animation Tab, students can create or import images to be used with their sprites. Later on, these sprites will become a useful tool for creating animations, as their properties can be changed and updated throughout the course of a program.\r\n",
-        "student_overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!"
+        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!"
       },
       "seeding_key": {
         "lesson.key": "Sprites",
@@ -207,10 +194,9 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**\r\n\r\nStudents extend their understanding of sprites by interacting with sprite properties.  Students start with a review of what a sprite is, then move on to Game Lab to practice more with sprites, using their properties to change their appearance. They then reflect on the connections between properties and variables.",
+        "overview": "In the last lesson, when students were introduced to sprites, they focused mainly on creating a sprite and assigning it an animation. This lesson starts to dig into what makes sprites such a powerful programming construct - that they have properties that can be modified as a program is _running_. This lays the foundation for much of what students will be doing in the rest of the unit in terms of accessing and manipulating sprite properties to create interesting behaviors in their programs. The lesson starts with a review of what a sprite is, then students move on to Game Lab to practice more with sprites, using their properties to change their appearance. They then reflect on the connections between properties and variables.\n\n**Question of the Day:** How can we use sprite properties to change their appearance on the screen?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "In the last lesson, when students were introduced to sprites, they focused mainly on creating a sprite and assigning it an animation. This lesson starts to dig into what makes sprites such a powerful programming construct--that they have properties that can be modified as a program is running. This lays the foundation for much of what students will be doing in the rest of the unit in terms of accessing and manipulating sprite properties to create interesting behaviors in their programs.",
-        "student_overview": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**\n\nIn this lesson, you will continue working with sprites, using their properties to change their appearance. \n"
+        "student_overview": "**Question of the Day:** How can we use sprite properties to change their appearance on the screen?\n\nIn this lesson, you will continue working with sprites, using their properties to change their appearance. \n"
       },
       "seeding_key": {
         "lesson.key": "Sprite Properties",
@@ -226,12 +212,10 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "**1. Add text**\n\nUse Level 5 as an assessment for students. Click inside the level to view a rubric.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we use text to improve our scenes and animations?**\r\n\r\nThis lesson introduces Game Lab's text commands, giving students more practice using the coordinate plane and parameters. At the beginning of the lesson, students are asked to caption a cartoon created in Game Lab. They then move onto Code Studio where they practice placing text on the screen and controlling other text properties, such as size.  Students who complete the assessment early may go on to learn more challenging blocks related to text properties. ",
+        "overview": "This lesson introduces Game Lab's text commands, giving students more practice using the coordinate plane and parameters. This is the last type of element that students will be placing on the screen - after this, students will focus on how they can control the movement and interactions of these elements. The lesson begins with asking students to caption a cartoon created in Game Lab. They then move on to Code Studio where they practice placing text on the screen and controlling other text properties, such as size. Students who complete the assessment early can go on to learn more challenging blocks related to text properties.  \n\n**Question of the Day:** How can we use text to improve our scenes and animations?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson introduces text, which students will need as they begin to build more complex programs (e.g. games with scoreboards). This is the last type of element that students will be placing on the screen. After this, students will focus on how they can control the movement and interactions of these elements.",
-        "student_overview": "**Question of the Day: How can we use text to improve our scenes and animations?**\n\nIn this lesson, you will learn how to use Game Lab's text commands to add captions to your scenes. "
+        "student_overview": "**Question of the Day:** How can we use text to improve our scenes and animations?\n\nIn this lesson, you will learn how to use Game Lab's text commands to add captions to your scenes. "
       },
       "seeding_key": {
         "lesson.key": "Text",
@@ -247,12 +231,10 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we use Game Lab to express our creativity?**\r\n\r\nAfter a quick review of the code they have learned so far, students are introduced to their first creative project of the unit. Using the problem-solving process as a model, students define the scene that they want to create, prepare by thinking of the different code they will need, try their plan in Game Lab, then reflect on what they have created. They also have a chance to share their creations with their peers.",
+        "overview": "After a quick review of the code they have learned so far, students are introduced to their first creative project of the unit. Using the problem-solving process as a model, students define the scene that they want to create, prepare by thinking of the different code they will need, try their plan in Game Lab, then reflect on what they have created. They also have a chance to share their creations with their peers. The open-ended nature of this lesson also provides flexibility for the teacher to decide how long students should spend on their work, depending on the scheduling demands of the particular course implementation.\n\n**Question of the Day:** How can we use Game Lab to express our creativity?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson is a chance for students to get more creative with what they have learned. Some students may spend more time in the animation tab drawing than programming. Encourage students to spend time on parts of the activity that interest them, as long as they meet the requirements of the assignment.\r\n\r\nThe open-ended nature of this lesson also provides flexibility for the teacher to decide how long students should spend on their work, depending on the scheduling demands of the particular course implementation.",
-        "student_overview": "**Question of the Day: How can we use Game Lab to express our creativity?**\n\nIn this lesson, you will get the opportunity to be creative by using the problem-solving process to design and program a scene of your choice. \n"
+        "student_overview": "**Question of the Day:** How can we use Game Lab to express our creativity?\n\nIn this lesson, you will get the opportunity to be creative by using the problem-solving process to design and program a scene of your choice. \n"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project - Captioned Scenes",
@@ -268,12 +250,10 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "assessment_opportunities": "1. **Explain how the draw loop allows for the creation of animations in Game Lab**\n\n\tIn the wrap up discussion, check that students mention that the code in the draw loop is run over and over, whereas code outside the draw loop is just run once, at the beginning of the program.\n\n2. **Use the draw loop in combination with the randomNumber() command, shapes, and sprites to make simple animations**\n\n\tSee level 8 in Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we animate our images in Game Lab?**\r\n\r\nIn this lesson students are introduced to the draw loop, one of the core programming paradigms in Game Lab. To begin the lesson students look at some physical flipbooks to see that having many frames with different images creates the impression of motion. Students then watch a video explaining how the draw loop in Game Lab helps to create this same impression in their programs. Students combine the draw loop with random numbers to manipulate some simple animations with dots and then with sprites.",
+        "overview": "In this lesson, students are introduced to the draw loop, one of the core programming paradigms in Game Lab. To begin the lesson students look at some physical flipbooks to see that having many frames with different images creates the impression of motion. Students then watch a video explaining how the draw loop in Game Lab helps to create this same impression in their programs. Students combine the draw loop with random numbers to manipulate some simple animations with dots and then with sprites. Students should leave the lesson understanding that the commands in the draw loop are called after all other code but are then called repeatedly to create animation. Students will have a chance to continue to develop an understanding of this behavior in the next two lessons, but laying a strong conceptual foundation in this lesson will serve them well for the rest of the unit.\n\n**Question of the Day:** How can we animate our images in Game Lab?\n",
         "preparation": "* Print and assemble the manipulatives\n* Prepare the video\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "The draw loop is a core component of Game Lab. The fact that the Game Lab environment repeatedly calls this function many times a second (by default 30) is what allows the tool to create animations. This lesson has two goals. The first is for students to see how animation in general depends on showing many slightly different images in a sequence. The second goal is for students to understand how the draw loop allows them to create this behavior in Game Lab. Students should leave the lesson understanding that the commands in the draw loop are called after all other code but are then called repeatedly to create animation. Students will have a chance to continue to develop an understanding of this behavior in the next two lessons, but laying a strong conceptual foundation in this lesson will serve them well for the rest of the unit.",
-        "student_overview": "**Question of the Day: How can we animate our images in Game Lab?**\n\nIn this lesson, you will learn how to use the draw loop with random numbers to create your first simple animations. \n"
+        "student_overview": "**Question of the Day:** How can we animate our images in Game Lab?\n\nIn this lesson, you will learn how to use the draw loop with random numbers to create your first simple animations. \n"
       },
       "seeding_key": {
         "lesson.key": "The Draw Loop",
@@ -289,12 +269,10 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "assessment_opportunities": "1. **Use the counter pattern to increment or decrement sprite properties**\r\n\r\n\tSee Level 8 in Code Studio.\r\n\r\n2. **Identify which sprite properties need to be changed, and in what way, to achieve a specific movement**\r\n\r\n\tSee Level 8 in Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we control sprite movement in Game Lab?**\r\n\r\nIn this lesson, students learn how to control sprite movement using a construct called the counter pattern, which incrementally changes a sprite's properties. Students first brainstorm different ways that they could animate sprites by controlling their properties, then explore the counter pattern in Code Studio. After examining working code, students try using the counter pattern to create various types of sprite movements.",
+        "overview": "This lesson builds on the draw loop that students learned previously to create programs with _purposeful_ motion. Students learn how to control sprite movement using a construct called the counter pattern, which incrementally changes a sprite's properties. Students first brainstorm different ways that they could animate sprites by controlling their properties, then explore the counter pattern in Code Studio. After examining working code, students try using the counter pattern to create various types of sprite movements. The skills that students build in this lesson lay the foundation for all of the animations and games that they will make throughout the rest of the unit.\n\n**Question of the Day:** How can we control sprite movement in Game Lab?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson builds on the draw loop that students learned previously to create programs with _purposeful_ motion. By either incrementing or decrementing sprite properties, such as [`sprite.x`(#f78183)](/docs/gamelab/sprite.x/), students can write programs that move sprites in expected patterns, instead of the randomization that they used in the past. The animations that students learn to create in this lesson lay the foundation for all of the animations and games that they will make throughout the rest of the unit.",
-        "student_overview": "**Question of the Day: How can we control sprite movement in Game Lab?**\n\nIn this lesson, you will learn how to control sprite movement using the counter pattern. \n\n"
+        "student_overview": "**Question of the Day:** How can we control sprite movement in Game Lab?\n\nIn this lesson, you will learn how to control sprite movement using the counter pattern. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Sprite Movement",
@@ -310,12 +288,10 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we combine different programming patterns to make a complete animation?**\r\n\r\nIn this lesson, students are asked to combine different methods that they have learned to create an animated scene. Students first review the types of movement and animation that they have learned, and brainstorm what types of scenes might need that movement. They then begin to plan out their own animated scenes, which they create in Game Lab.",
+        "overview": "This lesson is a chance for students to get more creative with what they have learned as students are asked to combine different methods that they have learned to create an animated scene. Students first review the types of movement and animation that they have learned and brainstorm what types of scenes might need that movement. They then begin to plan out their own animated scenes, which they create in Game Lab.\n\n**Question of the Day:** How can we combine different programming patterns to make a complete animation?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-animation-interactive-animations-and-games-lesson-13/36207) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This is a chance for students to get more creative with what they have learned. Some students may spend more time in the animation tab drawing than programming. Encourage students to spend time on parts of the activity that interest them, as long as they meet the requirements of the assignment.",
-        "student_overview": "**Question of the Day: How can we combine different programming patterns to make a complete animation?**\n\nIn this lesson, you will combine all the concepts you have learned in the previous lessons to create your first animated scene of your own design!\n\n"
+        "student_overview": "**Question of the Day:** How can we combine different programming patterns to make a complete animation?\n\nIn this lesson, you will combine all the concepts you have learned in the previous lessons to create your first animated scene of your own design!\n\n"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project - Animation",
@@ -331,12 +307,10 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "assessment_opportunities": "1. **Use conditionals to react to changes in variables and sprite properties**\n\n\tSee Level 9 in Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How can programs react to changes as they are running?**\r\n\r\nThis lesson introduces booleans and conditionals, which allow a program to run differently depending on whether a condition is true. Students start by playing a short game in which they respond according to whether particular conditions are met. They then move to Code Studio, where they learn how the computer evaluates Boolean expressions, and how they can be used to structure a program.",
+        "overview": "This lesson introduces booleans and conditionals, which allow a program to run differently depending on whether a condition is true. Students start by playing a short game in which they respond according to whether particular conditions are met. They then move to Code Studio, where they learn how the computer evaluates Boolean expressions, and how they can be used to structure a program.\n\n**Question of the Day:**  How can programs react to changes as they are running?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "We start with using booleans directly before using booleans to trigger _if_ statements. In the following lesson we will introduce some boolean producing blocks, such as [`keyDown()`(#fff176)](/docs/gamelab/keyDown/), which can be used in place of simple boolean comparisons to write programs that respond to user input.",
-        "student_overview": "**Question of the Day:  How can programs react to changes as they are running?**\n\nIn this lesson, you will learn about booleans and conditionals, which will allow you to create programs that run differently depending on whether a condition is true. \n"
+        "student_overview": "**Question of the Day:**  How can programs react to changes as they are running?\n\nIn this lesson, you will learn about booleans and conditionals, which will allow you to create programs that run differently depending on whether a condition is true. \n"
       },
       "seeding_key": {
         "lesson.key": "Conditionals",
@@ -352,12 +326,10 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "assessment_opportunities": "1. **Use conditionals to react to keyboard input**\n\n\tSee Level 6 in Code Studio.\n\n2. **Move sprites in response to keyboard input**\n\n\tSee Level 6 in Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can our programs react to user input?**\r\n\r\nFollowing the introduction to booleans and _if_ statements in the previous lesson, students are introduced to a new block called [`keyDown()`(#fff176)](/docs/gamelab/keyDown/) which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson, students will have written programs that take keyboard input from the user to control sprites on the screen.",
+        "overview": "One common way conditionals are used is to check for different types of user input, especially key presses. Following the introduction to booleans and _if_ statements in the previous lesson, students are introduced to a new block called [`keyDown()`(#fff176)](/docs/gamelab/keyDown/) which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson, students will have written programs that take keyboard input from the user to control sprites on the screen.\n\n**Question of the Day:** How can our programs react to user input?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "One common way conditionals are used is to check for different types of user input, especially key presses. Having a way for a user to interact with a program makes it more interesting and dynamic. Without interaction from the user it is very difficult to create a game. Therefore the introduction of conditionals and user inputs for decision making is a critical step toward creating games.",
-        "student_overview": "**Question of the Day: How can our programs react to user input?**\n\nIn this lesson, you will learn how to use the keyDown() block which will let your programs respond to user input. \n\n"
+        "student_overview": "**Question of the Day:** How can our programs react to user input?\n\nIn this lesson, you will learn how to use the keyDown() block which will let your programs respond to user input. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Keyboard Input",
@@ -373,12 +345,10 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "assessment_opportunities": "1. **Use an if-else statement to control the flow of a program.**\n\n\tSee Level 8 in Code Studio.\n\n2. **Respond to a variety of types of user input.**\n\n\tUse the wrap up discussion to check students' understanding of the different types of user input.  You may also informally check their ability to use them as they progress through the Code Studio lesson.\n\n\t",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: What are more ways that the computer can react to user input?**\r\n\r\nIn this lesson students continue to explore ways to use conditional statements to take user input. In addition to the keyboard commands learned yesterday, students will learn about several ways to take mouse input. They will also expand their understanding of conditionals to include `else`, which allows for the computer to run a certain section of code when a condition is true, and a different section of code when it is not.",
+        "overview": "In this lesson, students continue to explore ways to use conditional statements to take user input - this time with the mouse. They will also expand their understanding of conditionals to include _else_, which allows for the computer to run a certain section of code when a condition is true, and a different section of code when it is not. This concept is introduced alongside several new mouse input commands, allowing students to gradually build up programs that use input in different ways.\n\n**Question of the Day:** What are more ways that the computer can react to user input?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "Students have learned how to make simple decisions with conditionals. Sometimes, however, we want to make decisions based on whether the condition we asked about originally was false. That's where else statements come in. Else statements are a second statement which is attached to an if statement. Else statements execute when the conditions they are attached to are false.\r\n\r\nThis concept is introduced alongside several new mouse input commands, allowing students to gradually build up programs that use input in different ways.",
-        "student_overview": "**Question of the Day: What are more ways that the computer can react to user input?**\n\nIn this lesson, you will expand on what you have learned about if statements and explore if-else statements as well as learn about how to use the mouse to get input from your user that you can use in your conditional statements. "
+        "student_overview": "**Question of the Day:** What are more ways that the computer can react to user input?\n\nIn this lesson, you will expand on what you have learned about if statements and explore if-else statements as well as learn about how to use the mouse to get input from your user that you can use in your conditional statements. "
       },
       "seeding_key": {
         "lesson.key": "Mouse Input",
@@ -394,12 +364,10 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of the learning goals of this unit.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  What skills and practices are important when creating an interactive program?**\r\n\r\nIn this culminating project for Chapter 1, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point.",
+        "overview": "This end-of-chapter assessment is a good place for students to bring together all the pieces they have learned (drawing, variables, sprites, images, conditionals, user input) in one place. In this project, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point. Giving students the opportunity to really be creative after learning all these new concepts will help to engage them further as they head into Chapter 2.\n\n**Question of the Day:**  What skills and practices are important when creating an interactive program?\n",
         "preparation": "* Print out a copy of the project guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-interactive-card-interactive-animations-and-games-lesson-17/36208) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This end of chapter assessment is a good place for students to bring together all the pieces they have learned (drawing, variables, sprites, images, conditionals, user input) in one place. Students should still be working with code that is easily readable and doesn't involve very many high level abstractions. Giving students the opportunity to really be creative after learning all these new concepts will help to engage them further as they head into Chapter 2.",
-        "student_overview": "**Question of the Day:  What skills and practices are important when creating an interactive program?**\n\nIn this lesson, you will plan and develop an interactive greeting card using all the programming concepts and techniques you have learned so far!\n"
+        "student_overview": "**Question of the Day:**  What skills and practices are important when creating an interactive program?\n\nIn this lesson, you will plan and develop an interactive greeting card using all the programming concepts and techniques you have learned so far!\n"
       },
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
@@ -415,12 +383,10 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
-        "assessment_opportunities": "1. **Use the velocity and rotationSpeed blocks to create and change sprite movements**\n\n\tSee Level 9 in Code Studio. (Level 5 can be used to check rotationSpeed.)\n\n2. **Describe the advantages of simplifying code by using higher level blocks**\n\n\tIn the wrap up, check students' descriptions of the blocks that they would create and why they would want to create them.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How can programming languages hide complicated patterns so that it is easier to program?**\r\n\r\nAfter a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the idea of hiding those patterns in a single block.  Students then head to Code Studio to try out new blocks that set a sprite's velocity directly, and look at various ways that they are able to code more complex behaviors in their sprites.  ",
+        "overview": "This lesson launches a major theme of the chapter: that complex behavior can be represented in simpler ways to make it easier to write and reason about code. After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the idea of hiding those patterns in a single [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block.  Students then head to Code Studio to try out new blocks that set a sprite's velocity directly, and look at various ways that they are able to code more complex behaviors in their sprites. Over the next several lessons, students will see how this method of managing complexity allows them to produce more interesting sprite behaviors.\n\n**Question of the Day:**  How can programming languages hide complicated patterns so that it is easier to program?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson launches a major theme of the chapter: that complex behavior can be represented in simpler ways to make it easier to write and reason about code. \r\n\r\nIn this lesson students are taught to use the velocity blocks to simplify the code for moving a sprite across the screen. This marks a shift in how new blocks are introduced. Whereas previously blocks were presented as enabling completely new behaviors, they are now presented as simplifying code students could have written with the blocks previously available. Over the next several lessons, students will see how this method of managing complexity allows them to produce more interesting sprite behaviors.",
-        "student_overview": "**Question of the Day:  How can programming languages hide complicated patterns so that it is easier to program?**\n\nIn this lesson, you will learn how to set a sprite's velocity which uses the counter pattern to move your sprites. "
+        "student_overview": "**Question of the Day:**  How can programming languages hide complicated patterns so that it is easier to program?\n\nIn this lesson, you will learn how to set a sprite's velocity which uses the counter pattern to move your sprites. "
       },
       "seeding_key": {
         "lesson.key": "Velocity",
@@ -436,12 +402,10 @@
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
-        "assessment_opportunities": "1. **Detect when sprites are touching or overlapping, and change the program in response.**\r\n\r\n\tSee Level 7 in Code Studio.\r\n\r\n2. **Describe how abstractions help to manage the complexity of code**\r\n\r\n\tIn the Wrap Up discussion, make sure students can identify how more abstract blocks can help with creating larger or more complex programs.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can programming help make complicated problems more simple?**\r\n\r\nStudents learn about collision detection on the computer. Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching. They then use the [`isTouching()`(#f78183)](/docs/gamelab/isTouching/) block to create different effects when sprites collide, and practice using the block to model various interactions.",
+        "overview": "This lesson formally introduces the use of abstractions, simple ways of representing underlying complexity. In the last lesson, students were exposed to the idea of using one block to represent complex code. Working in pairs, students further explore this idea in the context of the intentionally complex mathematical challenge of determining whether two sprites are touching. Students then use a single block, the [`isTouching()`(#f78183)](/docs/gamelab/isTouching/) block, to represent this complexity and to create different effects when sprites collide. By the end of the lesson, students should understand that by using a single block to represent this complexity, it becomes much easier to write and reason about code and appreciate the value of using abstractions. \n\n**Question of the Day:** How can programming help make complicated problems more simple?\n",
         "preparation": "* Print copies of the activity guide such that each pair of students has a part A and a part B\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson formally introduces the use of abstractions, simple ways of representing underlying complexity. \r\n\r\nIn the last lesson, students were exposed to the idea of using one block to represent complex code. Students further explore this idea in the context of the intentionally complex mathematical challenge of determining whether two sprites are touching. By using a single block to represent this complexity, in this case the isTouching block, it becomes much easier to write and reason about code, and students can appreciate the value of using abstractions. In later lessons, students will continue to build on the [`isTouching()`(#f78183)](/docs/gamelab/isTouching/) abstraction to create more complex sprite interactions.\r\n",
-        "student_overview": "**Question of the Day: How can programming help make complicated problems more simple?**\n\nIn this lesson, you will learn about collision detection by exploring how a computer could use math, the sprite location, and size to detect whether sprites are touching. "
+        "student_overview": "**Question of the Day:** How can programming help make complicated problems more simple?\n\nIn this lesson, you will learn about collision detection by exploring how a computer could use math, the sprite location, and size to detect whether sprites are touching. "
       },
       "seeding_key": {
         "lesson.key": "Collision Detection",
@@ -457,12 +421,10 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**\r\n\r\nStudents use what they have learned about collision detection and setting velocity to create a simple side scroller game. After looking at a sample side scroller game, students brainstorm what sort of side scroller they would like to make, then use a structured process to program the game in Code Studio.",
+        "overview": "This lesson is another chance for students to get more creative with what they have learned. Students use what they have learned about collision detection and setting velocity to create a simple side-scroller game. After looking at a sample side-scroller game, students brainstorm what sort of side-scroller they would like to make, then use a structured process to program the game in Code Studio. This lesson can be shortened or lengthened depending on time constraints. \n\n**Question of the Day:**  How can the new types of sprite movement and collision detection be used to create a game?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-side-scroller-interactive-animations-and-games-lesson-20/36209) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson is a chance for students to get more creative with what they have learned.  Encourage students to spend time on parts of the activity that interest them, as long as they meet the requirements of the assignment. This lesson can be shortened or lengthened depending on time constraints. ",
-        "student_overview": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**\n\nIn this lesson, you will use what you have learned about collision detection and velocity to create a simple side scroller game!"
+        "student_overview": "**Question of the Day:** How can the new types of sprite movement and collision detection be used to create a game?\n\nIn this lesson, you will use what you have learned about collision detection and velocity to create a simple side-scroller game!"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project - Side Scroller",
@@ -478,12 +440,10 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
-        "assessment_opportunities": "1. **Use sprite velocity with the counter pattern to create different types of sprite movement**\n\n\tSee Level 6 in Code Studio.\n\n2. **Explain how individual programming constructs can be combined to create more complex behavior**\n\n\tIn the wrap up discussions, check that students can explain how they are creating new types of movement without new blocks.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can previous blocks be combined in new patterns to make interesting movements?**\r\n\r\nStudents learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. After reviewing the two concepts, they explore various scenarios in which velocity is used in the counter pattern, and observe the different types of movement that result. In particular, students learn how to simulate gravity. They then reflect on how they were able to get new behaviors by combining blocks and patterns that they already knew.",
+        "overview": "This lesson does not introduce any new blocks and in fact, only uses patterns students have seen in Chapter 1 and demonstrates how combining these patterns, in particular the abstractions students learned in the previous two lessons, allows them to build new behaviors for their sprites. Specifically, this lesson has students learn how to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. After reviewing the two concepts, they explore various scenarios in which velocity is used in the counter pattern and observe the different types of movement that result, such as simulating gravity. They then reflect on how they were able to get new behaviors by combining blocks and patterns that they already knew.\n\n**Question of the Day:** How can previous blocks be combined in new patterns to make interesting movements?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson does not introduce any new blocks and in fact only uses patterns students have seen in Chapter 1. Instead, it demonstrates how combining these tools, in particular the abstractions students learned in the previous two lessons, allows them to build new behaviors for their sprites. This highlights the broader point that abstractions not only simplify code, but also can themselves be used as building blocks of even more complex behavior.  ",
-        "student_overview": "**Question of the Day: How can previous blocks be combined in new patterns to make interesting movements?**\n\nIn this lesson, you will learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movements. \n"
+        "student_overview": "**Question of the Day:** How can previous blocks be combined in new patterns to make interesting movements?\n\nIn this lesson, you will learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movements. \n"
       },
       "seeding_key": {
         "lesson.key": "Complex Sprite Movement",
@@ -499,12 +459,10 @@
       "has_lesson_plan": true,
       "relative_position": 22,
       "properties": {
-        "assessment_opportunities": "1. **Model different types of interactions between sprites.**\n\n\tSee Level 7 in Code Studio.\n\n2. **Describe how abstractions can be built upon to develop even further abstractions**\n\n\tIn the wrap up, make sure students understand that blocks such as [`isTouching`(#f78183)](/docs/gamelab/isTouching/) hide the complexity or details of the code inside, allowing them to tackle more complex problems.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lessson, students program their sprites to interact in new ways. After a brief review of how they used the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, students brainstorm other ways that two sprites could interact. They then use [`isTouching`(#f78183)](/docs/gamelab/isTouching/) to make one sprite push another across the screen before practicing with the four collision blocks ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/)).",
+        "overview": "This lesson introduces collisions, another useful abstraction that will allow students to manipulate their sprites in entirely new ways. After a brief review of how they used the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, students brainstorm other ways that two sprites could interact. They then use [`isTouching`(#f78183)](/docs/gamelab/isTouching/) to make one sprite push another across the screen before practicing with the four collision blocks ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/)). This is the last time they will learn a new sprite behavior, and following this lesson students will transition to focusing on how they organize their increasingly complex code.\n\n**Question of the Day:** How can programmers build on abstractions to create further abstractions?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson introduces collisions, another useful abstraction that will allow students to manipulate their sprites in entirely new ways. While students could theoretically have written their own displace, collide, or bounce commands, the ability to ignore the details of this code allows them to focus their attention on the high level structure of the games they want to build.\r\n\r\nThis lesson is also intended to give students more practice using the new commands they have learned in the second chapter. This the last time they will learn a new sprite behavior, and following this lesson students will transition to focusing on how they organize their increasingly complex code.",
-        "student_overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\n\nIn this lesson, you will learn how to use the new collision blocks (collide, displace, bounce, and bounceOff) to make your sprite interact in new ways. "
+        "student_overview": "**Question of the Day:** How can programmers build on abstractions to create further abstractions?\n\nIn this lesson, you will learn how to use the new collision blocks (collide, displace, bounce, and bounceOff) to make your sprite interact in new ways. "
       },
       "seeding_key": {
         "lesson.key": "Collisions",
@@ -520,12 +478,10 @@
       "has_lesson_plan": true,
       "relative_position": 23,
       "properties": {
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\r\n\r\nStudents use what they have learned about simulating gravity and the different types of collisions to create simple flyer games. After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio.",
+        "overview": "This lesson is another chance for students to get more creative with what they have learned. Students use what they have learned about simulating gravity and the different types of collisions to create simple flyer games. After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio.\n\n**Question of the Day:**  How can the new types of collisions and modeling movement be used to create a game?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-flyer-game-interactive-animations-and-games-lesson-23/36210) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson is a chance for students to get more creative with what they have learned. Encourage students to spend time on parts of the activity that interest them, as long as they meet the requirements of the assignment.",
-        "student_overview": "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\n\nIn this lesson, you will use what you have learned about simulating gravity and the different types of collisions to create a simple flyer game!"
+        "student_overview": "**Question of the Day:**  How can the new types of collisions and modeling movement be used to create a game?\n\nIn this lesson, you will use what you have learned about simulating gravity and the different types of collisions to create a simple flyer game!"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project - Flyer Game",
@@ -541,12 +497,10 @@
       "has_lesson_plan": true,
       "relative_position": 24,
       "properties": {
-        "assessment_opportunities": "1. **Create and use functions for blocks of code that perform a single high-level task within a program**\n\n\tSee Level 9 in Code Studio.\n\n2. **Explain the advantages of using functions in a program.**\n\n\tIn the wrap up discussion, make sure students understand that functions can increase both the readability and organization of code.\n\n3. **Explain how functions allow programmers to reason about a program at a higher level**\n\n\tIn the wrap up, students should make the connection between functions and abstraction, that functions allow a programmer to name a bit of code so that they can think about it at that higher level, rather than worry about all the details.\n\n\t",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can programmers use functions to create their own abstractions?**\r\n\r\nStudents learn how to create functions to organize their code, make it more readable, and remove repeated blocks of code. Students first think about what sorts of new blocks they would like in Game Lab, and what code those blocks would contain inside. Afterwards students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function.",
+        "overview": "In previous lessons, students have learned to use a number of abstractions in their programs which have allowed them to build much more complex programs while ignoring the details of how that behavior is created. In this lesson, students learn to build abstractions of their own by creating functions that will serve to organize their code, make it more readable, and remove repeated blocks of code. Students first think about what sorts of new blocks they would like in Game Lab, and what code those blocks would contain inside. Afterward, students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function.\n\n**Question of the Day:** How can programmers use functions to create their own abstractions?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "In previous lessons students have learned to use a number of abstractions in their programs, including the velocity properties, isTouching, and collisions. These abstractions have allowed them to build much more complex programs while ignoring the details of how that behavior is created. In this lesson students learn to build abstractions of their own by creating functions.\r\n\r\n\r\nStudents will primarily use functions to break code into logical chunks that are easier to reason about. This foreshadows the chapter's transition from building technical skill to the organizational processes used to develop software.",
-        "student_overview": "**Question of the Day: How can programmers use functions to create their own abstractions?**\n\nIn this lesson, you will learn how to better organize your code using functions to make your program code more readable and remove repeated blocks of code. "
+        "student_overview": "**Question of the Day:** How can programmers use functions to create their own abstractions?\n\nIn this lesson, you will learn how to better organize your code using functions to make your program code more readable and remove repeated blocks of code. "
       },
       "seeding_key": {
         "lesson.key": "Functions",
@@ -562,12 +516,10 @@
       "has_lesson_plan": true,
       "relative_position": 25,
       "properties": {
-        "assessment_opportunities": "1. **Implement different features of a program by following a structured project guide**\r\n\r\n\tIn the Wrap Up discussion, make sure students are clear on how the project guide helps them to break their programming work into manageable chunks, and that they understand how listing the sprites and functions ahead of time can help them focus on specific bits of code rather than the entire program at once.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How does having a plan help to make a large project easier?**\r\n\r\nThis lesson introduces students to the process they will use to design games for the remainder of the unit. This process is centered around a project guide which asks students to define their sprites, variables, and functions before they begin programming their game. In this lesson students begin by playing a game on Game Lab where the code is hidden. They discuss what they think the sprites, variables, and functions would need to be to make the game. They are then given a completed project guide which shows one way to implement the game. Students are then walked through this process through a series of levels. At the end of the lesson, students have an opportunity to make improvements to the game to make it their own.",
+        "overview": "This lesson introduces students to the process they will use to design games for the remainder of the unit which is centered around a project guide that asks students to define their sprites, variables, and functions _before_ they begin programming their game. Students begin by playing a game on Game Lab where the code is hidden, discussing what they think the sprites, variables, and functions would need to be to make the game. For the purposes of heavily scaffolding the software development process, students are then given a completed project guide that provides starter code and shows one way to implement the game. Students are then walked through this implementation process through a series of levels and have an opportunity to make improvements to the game to make it their own in the final level. In the subsequent lessons, students will need to complete a greater portion of the guide independently, and for the final project, they will follow this process largely independently.\n\n**Question of the Day:**  How does having a plan help to make a large project easier?\n",
         "preparation": "* Print copies of the the project guide if you will be giving students physical copies.  Please note that this project guide is intentionally filled out. (See notes in Lesson Plan.)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson introduces multi-frame animations, and is the first in a sequence centered around the process of building software.\r\n\r\nWhile previous lessons focused on using abstractions to manage the complexity of the code, this lesson focuses on managing the complexity of the software development process. The lesson heavily scaffolds the software development process by providing students a completed project guide, providing starter code, and walking students through its implementation. In the subsequent lessons students will need to complete a greater portion of this guide independently, and for the final project they will follow this process largely independently.",
-        "student_overview": "**Question of the Day:  How does having a plan help to make a large project easier?**\n\nIn this lesson, you will explore the process you will use for the remainder of the unit when designing games. "
+        "student_overview": "**Question of the Day:**  How does having a plan help to make a large project easier?\n\nIn this lesson, you will explore the process you will use for the remainder of the unit when designing games. "
       },
       "seeding_key": {
         "lesson.key": "The Game Design Process",
@@ -583,12 +535,10 @@
       "has_lesson_plan": true,
       "relative_position": 26,
       "properties": {
-        "assessment_opportunities": "1. **Identify core programming constructs necessary to build different components of a game**\r\n\r\n\tIn the project guide, check that the student has identified key functions, sprites and variables needed in the program, and that the general description of the program is accurate.\r\n\r\n2. **Implement different features of a program by following a structured project guide**\r\n\r\n\tSee Level 20 in Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How can the problem solving process help programmers to manage large projects?**\r\n\r\nIn this multi-day lesson, students use the problem solving process from Unit 1 to create a platform jumper game. They start by looking at an example of a platform jumper, then define what their games will look like. Next, they use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game. After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.",
+        "overview": "In this multi-day lesson, students use the problem-solving process from Unit 1 to create a platform jumper game. This lesson also builds on the use of the Project Guide in the previous lesson by having students complete more of this project guide independently before using it to build a game. Students begin the lesson by looking at an example of a platform jumper, then define what their games will look like. Next, they use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game. After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.\n\n**Question of the Day:**  How can the problem-solving process help programmers to manage large projects?\n",
         "preparation": "* Print one copy of the project guide for each student or pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "Students have already learned all of the programming constructs that they need to make a game. This lesson reviews many of those concepts while introducing them to a structured process that will help them to manage the work. It builds on the use of the Project Guide in the previous lesson by having students complete more of this project guide independently before using it to build a game. This activity prepares students to write their own game from scratch for the final project.",
-        "student_overview": "**Question of the Day:  How can the problem-solving process help programmers to manage large projects?**\n\nIn this multi-day lesson, you will use the problem-solving process to create a platform jumper game!"
+        "student_overview": "**Question of the Day:**  How can the problem-solving process help programmers to manage large projects?\n\nIn this multi-day lesson, you will use the problem-solving process to create a platform jumper game!"
       },
       "seeding_key": {
         "lesson.key": "Using the Game Design Process",
@@ -615,12 +565,10 @@
             "buttonText": "Teacher Survey"
           }
         ],
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can the five CS practices (problem solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?**\r\n\r\nStudents will plan and build their own game using the project guide from the previous two lessons. Working individually or in pairs, students will first decide on the type of game they'd like to build, taking as inspiration a set of sample games. They will then complete a blank project guide where they will describe the game's behavior and scope out the variables, sprites, and functions they'll need to build. In Code Studio, a series of levels prompts them on a general sequence they can use to implement this plan. Partway through the process, students will share their projects for peer review and will incorporate feedback as they finish their game. At the end of the lesson, students will share their completed games with their classmates. This project will span multiple classes and can easily take anywhere from 3-5 class periods.",
+        "overview": "Students will plan and build their own game using the project guide from the previous two lessons. Working individually or in pairs, students will first decide on the type of game they'd like to build, taking as inspiration a set of sample games. They will then complete a blank project guide where they will describe the game's behavior and scope out the variables, sprites, and functions they'll need to build. In Code Studio, a series of levels prompts them on a general sequence they can use to implement this plan. Partway through the process, students will share their projects for peer review and will incorporate feedback as they finish their game. At the end of the lesson, students will share their completed games with their classmates. This project will span multiple classes and can easily take anywhere from 3-5 class periods.\n\n**Question of the Day:** How can the five CS practices (problem-solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?\n",
         "preparation": "* Print copies of the project guide, one for each student / pair of students\n* Print copies of the rubric, one for each student / pair of students\n* Print copies of the peer review guide, one for each student / pair of students\n* Review sample games in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-design-a-game-interactive-animations-and-games-lesson-27/36211) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "purpose": "This lesson is the culmination of Unit 3 and provides students an opportunity to build a Game Lab project of their own from the ground up. The scaffolding provided by the project guide and the practice they have using it are intended to assist students in scoping their projects and seeing their ideas through to completion. This project is an opportunity to showcase technical skills, but they will also need to collaborate with their partner, provide constructive peer feedback, and repeatedly use the problem solving process as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to this unit of CS Discoveries.",
-        "student_overview": "**Question of the Day: How can the five CS practices (problem-solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?**\n\nIn this lesson, you will use the problem-solving process to plan and build an original game!"
+        "student_overview": "**Question of the Day:** How can the five CS practices (problem-solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?\n\nIn this lesson, you will use the problem-solving process to plan and build an original game!"
       },
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
@@ -2332,8 +2280,7 @@
       "key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*",
-        "progression_name": "Video: Drawing in Game Lab - Part 1"
+        "description": "**Questions to Consider with Video:**\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n"
       },
       "seeding_key": {
         "activity_section.key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
@@ -2361,8 +2308,7 @@
       "key": "eae3f1fc-9263-4892-a141-6c50d1f3b3de",
       "position": 6,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.",
-        "progression_name": "Video: Drawing in Game Lab - Part 2"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_2/csd3/2023] video in the slides.\n**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.\n"
       },
       "seeding_key": {
         "activity_section.key": "eae3f1fc-9263-4892-a141-6c50d1f3b3de",
@@ -2412,6 +2358,10 @@
           {
             "type": "teachingTip",
             "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -2717,8 +2667,7 @@
       "key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What are variables used to do?\n- How do you create a variable and assign it a value?\n- What can go into a variable?",
-        "progression_name": "Video: Introduction to Variables"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are variables used to do?\n- How do you create a variable and assign it a value?\n- What can go into a variable?\n"
       },
       "seeding_key": {
         "activity_section.key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7",
@@ -3092,7 +3041,7 @@
       "key": "1cf25bad-898f-4920-9419-15d582df7747",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Introduction to Sprites video in the slides\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "1cf25bad-898f-4920-9419-15d582df7747",
@@ -3144,7 +3093,7 @@
       "key": "25bcbbd2-7a2f-4c98-9f61-a99686d91397",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Animations video in the slide deck.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_animation_tab/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\n",
         "progression_name": "Video: The Animation Tab",
         "tips": [
           {
@@ -3330,7 +3279,7 @@
       "key": "d86c69ad-d7d1-4015-bb86-0d34ade76e5e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Sprite Properties video in the slide deck\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_needs_updating_/csd3/2023] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3675,6 +3624,10 @@
           {
             "type": "teachingTip",
             "markdown": "You may choose to formalize this process by having each student write down one positive quality of each project, or having students \"draw names\" to comment on one particular classmate's work.\r\n\r\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the project rubric attached to this lesson to assess student mastery of learning goals."
           }
         ]
       },
@@ -3755,7 +3708,7 @@
       "key": "91af4e95-88e2-457c-b6df-1d704404f2c8",
       "position": 1,
       "properties": {
-        "description": "**Video:** Watch the video introducing the draw loop."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_the_draw_loop/csd3/2023] video in the slides.\n"
       },
       "seeding_key": {
         "activity_section.key": "91af4e95-88e2-457c-b6df-1d704404f2c8",
@@ -3766,8 +3719,7 @@
       "key": "8fc8adb0-d3f0-48c5-be42-85c520487ec3",
       "position": 2,
       "properties": {
-        "description": "**Question to Consider with Video:**\n- What does the draw function do?\n\n**Discussion Goal:** The draw function runs the same code over and over in a loop, which is why it's often called \"the draw loop\". This creates an animation effect by changing what is drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.\n\n**Misconception Alert!**\n\nWhen the draw loop runs, it does not \"clear\" out the previous drawing, so it will continue to show anything that has not been covered up by the new draw loop. If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously.",
-        "progression_name": "Video: Introduction to the Draw Loop"
+        "description": "**Question to Consider with Video:**\n- What does the draw function do?\n\n**Discussion Goal:** The draw function runs the same code over and over in a loop, which is why it's often called \"the draw loop\". This creates an animation effect by changing what is drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.\n\n**Misconception Alert!**\n\nWhen the draw loop runs, it does not \"clear\" out the previous drawing, so it will continue to show anything that has not been covered up by the new draw loop. If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously."
       },
       "seeding_key": {
         "activity_section.key": "8fc8adb0-d3f0-48c5-be42-85c520487ec3",
@@ -3980,7 +3932,7 @@
       "key": "ddf3d6d4-d7d5-454a-9458-e08be66ef5ef",
       "position": 3,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?\n\n**Discussion Goal:** \n- *What is the counter pattern?*\n  - Students may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. \n  - They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. \n  - This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n- *How does the counter pattern move sprites across the screen?*\n  - When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. \n  - Students should be able to explain that movement for an animation is just a change in position and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_movement/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?\n\n**Discussion Goal:** \n- *What is the counter pattern?*\n  - Students may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. \n  - They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. \n  - This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n- *How does the counter pattern move sprites across the screen?*\n  - When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. \n  - Students should be able to explain that movement for an animation is just a change in position and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.\n",
         "progression_name": "Video: Sprite Movement"
       },
       "seeding_key": {
@@ -4230,6 +4182,10 @@
           {
             "type": "teachingTip",
             "markdown": "You may choose to formalize this process by having each student write down one positive quality of each project, or having students \"draw names\" to comment on one particular classmate's work.\r\n\r\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the project rubric attached to this lesson to assess student mastery of learning goals."
           }
         ]
       },
@@ -4368,7 +4324,7 @@
       "key": "4a3fafce-b94e-4146-a883-b1a761edf661",
       "position": 3,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?\n\n**Discussion Goal:** \n- *What is a Boolean expression?*\n  - **Boolean Expression** - in programming, an expression that evaluates to True or False.\n  - Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. \n  - The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n- *What’s an expression that would evaluate to true?*\n  - Some examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n- *What’s an expression that would evaluate to false?*\n  - Some examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r boolean_expressions/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?\n\n**Discussion Goal:** \n- *What is a Boolean expression?*\n  - **Boolean Expression** - in programming, an expression that evaluates to True or False.\n  - Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. \n  - The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n- *What’s an expression that would evaluate to true?*\n  - Some examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n- *What’s an expression that would evaluate to false?*\n  - Some examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`.\n",
         "progression_name": "Video: Booleans"
       },
       "seeding_key": {
@@ -4402,7 +4358,7 @@
       "key": "23e30728-5bed-44bd-8c4b-1074b93e8239",
       "position": 6,
       "properties": {
-        "description": "**Question to Consider with Video:**\n- When would you want to use an if statement?\n\n**Discussion Goal:** The broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r conditional_statements/csd3/2023] video in the slides.\n\n**Question to Consider with Video:**\n- When would you want to use an if statement?\n\n**Discussion Goal:** The broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item.\n\n\n",
         "progression_name": "Video: Conditional Statements"
       },
       "seeding_key": {
@@ -4676,7 +4632,7 @@
       "key": "de342f84-bb35-4fc0-abaf-43d0865483b5",
       "position": 3,
       "properties": {
-        "description": "**Video:**  Watch the video as a class and review the discussion questions together.\n\n**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?\n\n**Discussion Goal:** Make sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an [`if()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block, and when an [`if()/else()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block is necessary.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**  Show students the [r if_else_statements/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?\n\n**Discussion Goal:** Make sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an [`if()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block, and when an [`if()/else()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block is necessary.\n",
         "progression_name": "Video: If/Else Statements"
       },
       "seeding_key": {
@@ -4943,7 +4899,13 @@
       "key": "7c0523e9-60fb-46ca-822b-639b7f0a1feb",
       "position": 10,
       "properties": {
-        "progression_name": "Reflection"
+        "progression_name": "Reflection",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the project rubric attached to this lesson to assess student mastery of the learning goals of this unit."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7c0523e9-60fb-46ca-822b-639b7f0a1feb",
@@ -5000,7 +4962,7 @@
       "key": "0ea7bbac-8309-49fa-bb28-334983982650",
       "position": 4,
       "properties": {
-        "description": "**Question of the Day:  How can programming languages hide complicated patterns so that it is easier to program?**"
+        "description": "**Question of the Day:  How can programming languages hide complicated patterns so that it is easier to program?**\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0ea7bbac-8309-49fa-bb28-334983982650",
@@ -5052,7 +5014,7 @@
       "key": "c2999695-82bf-4122-ad30-5d496c903195",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.\n\n**Discussion Goal:**\n- *Why might you want to use a velocity block instead of the counter pattern?*\n  - It may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). \n  - If students are having trouble thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n- *Give an example of a counter pattern and how you could use a velocity block instead.*\n  - As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r velocity/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.\n\n**Discussion Goal:**\n- *Why might you want to use a velocity block instead of the counter pattern?*\n  - It may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). \n  - If students are having trouble thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n- *Give an example of a counter pattern and how you could use a velocity block instead.*\n  - As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.\n",
         "progression_name": "Video: Velocity"
       },
       "seeding_key": {
@@ -5535,7 +5497,13 @@
       "key": "2f4d7386-2ead-4655-8393-ec856d6ba1ff",
       "position": 9,
       "properties": {
-        "progression_name": "Review Your Game"
+        "progression_name": "Review Your Game",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2f4d7386-2ead-4655-8393-ec856d6ba1ff",
@@ -6051,7 +6019,13 @@
       "key": "8132afd2-391e-4945-804c-75dc8a2a62d0",
       "position": 7,
       "properties": {
-        "progression_name": "Review Your Game"
+        "progression_name": "Review Your Game",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8132afd2-391e-4945-804c-75dc8a2a62d0",
@@ -6131,7 +6105,7 @@
       "key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c",
       "position": 2,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?\n\n**Discussion Goal:** Ensure students know the key vocabulary term **Function** and its definition as *a named bit of programming instructions.* Make sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program where the student wants that block of code to run.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r functions/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?\n\n**Discussion Goal:** Ensure students know the key vocabulary term **Function** and its definition as *a named bit of programming instructions.* Make sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program where the student wants that block of code to run.\n",
         "progression_name": "Video: Functions"
       },
       "seeding_key": {
@@ -6175,7 +6149,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Why Use Functions**\n\nLevel 5a, 5b, and 5c introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels."
+            "markdown": "**Why Use Functions**\n\nLevel 4a, 4b, and 4c introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels."
           }
         ]
       },
@@ -6203,7 +6177,11 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Level 7: Functions in Context**\n\nIn these levels, students will use functions to organize code within a simple game. While it is not identical to the side scroller, many of the skills and uses of functions in these levels can and should be used when they complete their side scroller."
+            "markdown": "**Level 6: Functions in Context**\n\nIn these levels, students will use functions to organize code within a simple game. While it is not identical to the side scroller, many of the skills and uses of functions in these levels can and should be used when they complete their side scroller."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -6546,7 +6524,13 @@
       "position": 3,
       "properties": {
         "description": "**Circulate:** Students should complete the project guide in the style of the one they saw in the previous lesson. They will likely want to keep the game up as they try to determine the behavior each of the sprites will have.\r\n\r\n**Share:** Students share out their plans for making the game.  Reassure them that there are many correct ways to make the same piece of software, and that they will have a chance to try out their ideas in code studio.",
-        "name": "Discuss Project Guide\r"
+        "name": "Discuss Project Guide\r",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Identify core programming constructs necessary to build different components of a game**\n\nYou can check that the student has identified key functions, sprites, and variables needed in the program and that the general description of the program is accurate in the Project Guide."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d4be4b63-fed5-4ded-b3e6-863987384d81",
@@ -6877,6 +6861,10 @@
           {
             "type": "teachingTip",
             "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit. \n\nYou may also choose to assign the post-project test through Code Studio."
           }
         ]
       },
@@ -7127,31 +7115,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD: Drawing in Game Lab 1_2023"
-        ],
-        "progression": "Video: Drawing in Game Lab - Part 1"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD: Drawing in Game Lab 1_2023"
-        ],
-        "lesson.key": "Drawing in Game Lab",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "e9a9c705-2850-44bc-a210-dc4b3466a353"
-      },
-      "level_keys": [
-        "CSD: Drawing in Game Lab 1_2023"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "CSD U3 Drawing Squares to Corners_2023"
         ],
         "progression": "Using the Grid"
@@ -7171,33 +7134,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD: Drawing in Game Lab 2_2023"
-        ],
-        "progression": "Video: Drawing in Game Lab - Part 2"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD: Drawing in Game Lab 2_2023"
-        ],
-        "lesson.key": "Drawing in Game Lab",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "eae3f1fc-9263-4892-a141-6c50d1f3b3de"
-      },
-      "level_keys": [
-        "CSD: Drawing in Game Lab 2_2023"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 5,
+      "chapter": 8,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7221,8 +7159,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 6,
+      "chapter": 9,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -7246,8 +7184,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 7,
+      "chapter": 10,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -7271,8 +7209,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 8,
+      "chapter": 11,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7296,8 +7234,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 9,
+      "chapter": 12,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -7321,8 +7259,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 10,
+      "chapter": 13,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7346,7 +7284,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7371,7 +7309,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7396,7 +7334,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7421,7 +7359,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7446,7 +7384,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7471,7 +7409,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -7496,7 +7434,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7521,7 +7459,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7546,7 +7484,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 22,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7571,7 +7509,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7596,33 +7534,8 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 24,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Introduction to Variables - Part 1_2023"
-        ],
-        "progression": "Video: Introduction to Variables"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Introduction to Variables - Part 1_2023"
-        ],
-        "lesson.key": "Variables",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7"
-      },
-      "level_keys": [
-        "Introduction to Variables - Part 1_2023"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7646,8 +7559,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 4,
+      "chapter": 25,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7671,8 +7584,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 5,
+      "chapter": 26,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -7696,8 +7609,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 6,
+      "chapter": 27,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -7721,8 +7634,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 7,
+      "chapter": 28,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7746,8 +7659,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 8,
+      "chapter": 29,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -7771,8 +7684,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 9,
+      "chapter": 30,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7796,7 +7709,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7821,7 +7734,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7846,7 +7759,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7871,7 +7784,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7896,7 +7809,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7921,7 +7834,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7946,7 +7859,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7971,7 +7884,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 38,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7996,11 +7909,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predict_test2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -8018,7 +7934,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8043,7 +7959,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8068,11 +7984,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8090,11 +8009,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8112,11 +8034,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8134,11 +8059,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8156,11 +8084,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -8178,7 +8109,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 47,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8203,7 +8134,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 48,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -8228,7 +8159,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 49,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8253,7 +8184,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8278,7 +8209,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8303,7 +8234,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8328,7 +8259,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8353,7 +8284,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8378,7 +8309,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8403,7 +8334,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8428,7 +8359,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8453,7 +8384,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8478,7 +8409,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8503,7 +8434,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8528,7 +8459,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8553,7 +8484,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8578,7 +8509,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8603,7 +8534,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8628,7 +8559,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8653,7 +8584,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8678,33 +8609,8 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 67,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD: Introduction to the Draw Loop_2023"
-        ],
-        "progression": "Video: Introduction to the Draw Loop"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD: Introduction to the Draw Loop_2023"
-        ],
-        "lesson.key": "The Draw Loop",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "8fc8adb0-d3f0-48c5-be42-85c520487ec3"
-      },
-      "level_keys": [
-        "CSD: Introduction to the Draw Loop_2023"
-      ]
-    },
-    {
-      "chapter": 71,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8728,8 +8634,8 @@
       ]
     },
     {
-      "chapter": 72,
-      "position": 3,
+      "chapter": 68,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8753,8 +8659,8 @@
       ]
     },
     {
-      "chapter": 73,
-      "position": 4,
+      "chapter": 69,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8778,8 +8684,8 @@
       ]
     },
     {
-      "chapter": 74,
-      "position": 5,
+      "chapter": 70,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8803,8 +8709,8 @@
       ]
     },
     {
-      "chapter": 75,
-      "position": 6,
+      "chapter": 71,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -8828,8 +8734,8 @@
       ]
     },
     {
-      "chapter": 76,
-      "position": 7,
+      "chapter": 72,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8853,8 +8759,8 @@
       ]
     },
     {
-      "chapter": 77,
-      "position": 8,
+      "chapter": 73,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -8878,8 +8784,8 @@
       ]
     },
     {
-      "chapter": 78,
-      "position": 9,
+      "chapter": 74,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8903,7 +8809,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8928,33 +8834,8 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 76,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD: Animating Sprite Movement_2023"
-        ],
-        "progression": "Video: Sprite Movement"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD: Animating Sprite Movement_2023"
-        ],
-        "lesson.key": "Sprite Movement",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "ddf3d6d4-d7d5-454a-9458-e08be66ef5ef"
-      },
-      "level_keys": [
-        "CSD: Animating Sprite Movement_2023"
-      ]
-    },
-    {
-      "chapter": 81,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8978,8 +8859,8 @@
       ]
     },
     {
-      "chapter": 82,
-      "position": 4,
+      "chapter": 77,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -9003,8 +8884,8 @@
       ]
     },
     {
-      "chapter": 83,
-      "position": 5,
+      "chapter": 78,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -9028,8 +8909,8 @@
       ]
     },
     {
-      "chapter": 84,
-      "position": 6,
+      "chapter": 79,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -9053,8 +8934,8 @@
       ]
     },
     {
-      "chapter": 85,
-      "position": 7,
+      "chapter": 80,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9078,8 +8959,8 @@
       ]
     },
     {
-      "chapter": 86,
-      "position": 8,
+      "chapter": 81,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -9103,8 +8984,8 @@
       ]
     },
     {
-      "chapter": 87,
-      "position": 9,
+      "chapter": 82,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9128,7 +9009,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9153,7 +9034,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9178,7 +9059,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9203,7 +9084,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 86,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9228,7 +9109,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 87,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9253,7 +9134,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 88,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9278,7 +9159,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 89,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9303,7 +9184,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9328,33 +9209,8 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 91,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U3 - Booleans Video_2023"
-        ],
-        "progression": "Video: Booleans"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 - Booleans Video_2023"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "4a3fafce-b94e-4146-a883-b1a761edf661"
-      },
-      "level_keys": [
-        "CSD U3 - Booleans Video_2023"
-      ]
-    },
-    {
-      "chapter": 97,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9378,8 +9234,8 @@
       ]
     },
     {
-      "chapter": 98,
-      "position": 4,
+      "chapter": 92,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9403,8 +9259,8 @@
       ]
     },
     {
-      "chapter": 99,
-      "position": 5,
+      "chapter": 93,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -9428,33 +9284,8 @@
       ]
     },
     {
-      "chapter": 100,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csd U3 conditional statements video_2023"
-        ],
-        "progression": "Video: Conditional Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csd U3 conditional statements video_2023"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "23e30728-5bed-44bd-8c4b-1074b93e8239"
-      },
-      "level_keys": [
-        "csd U3 conditional statements video_2023"
-      ]
-    },
-    {
-      "chapter": 101,
-      "position": 7,
+      "chapter": 94,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9478,8 +9309,8 @@
       ]
     },
     {
-      "chapter": 102,
-      "position": 8,
+      "chapter": 95,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9503,8 +9334,8 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 9,
+      "chapter": 96,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -9528,8 +9359,8 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 10,
+      "chapter": 97,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9553,7 +9384,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9578,7 +9409,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9603,7 +9434,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9628,7 +9459,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9653,7 +9484,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9678,7 +9509,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 103,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -9703,7 +9534,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 104,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9728,7 +9559,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9753,33 +9584,8 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 106,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U3 - Conditionals Video_2023"
-        ],
-        "progression": "Video: If/Else Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 - Conditionals Video_2023"
-        ],
-        "lesson.key": "Mouse Input",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "de342f84-bb35-4fc0-abaf-43d0865483b5"
-      },
-      "level_keys": [
-        "CSD U3 - Conditionals Video_2023"
-      ]
-    },
-    {
-      "chapter": 114,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9803,8 +9609,8 @@
       ]
     },
     {
-      "chapter": 115,
-      "position": 4,
+      "chapter": 107,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -9828,8 +9634,8 @@
       ]
     },
     {
-      "chapter": 116,
-      "position": 5,
+      "chapter": 108,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -9853,8 +9659,8 @@
       ]
     },
     {
-      "chapter": 117,
-      "position": 6,
+      "chapter": 109,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -9878,8 +9684,8 @@
       ]
     },
     {
-      "chapter": 118,
-      "position": 7,
+      "chapter": 110,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9903,8 +9709,8 @@
       ]
     },
     {
-      "chapter": 119,
-      "position": 8,
+      "chapter": 111,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -9928,8 +9734,8 @@
       ]
     },
     {
-      "chapter": 120,
-      "position": 9,
+      "chapter": 112,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9953,7 +9759,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9978,7 +9784,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 114,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10003,7 +9809,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 115,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10028,7 +9834,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 116,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -10053,7 +9859,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 117,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -10078,7 +9884,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 118,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10103,7 +9909,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 119,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -10128,7 +9934,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 120,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -10153,7 +9959,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10178,33 +9984,8 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 122,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD: Sprite Velocity_2023"
-        ],
-        "progression": "Video: Velocity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD: Sprite Velocity_2023"
-        ],
-        "lesson.key": "Velocity",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd3-2023",
-        "activity_section.key": "c2999695-82bf-4122-ad30-5d496c903195"
-      },
-      "level_keys": [
-        "CSD: Sprite Velocity_2023"
-      ]
-    },
-    {
-      "chapter": 131,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -10228,8 +10009,8 @@
       ]
     },
     {
-      "chapter": 132,
-      "position": 4,
+      "chapter": 123,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -10253,8 +10034,8 @@
       ]
     },
     {
-      "chapter": 133,
-      "position": 5,
+      "chapter": 124,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -10278,8 +10059,8 @@
       ]
     },
     {
-      "chapter": 134,
-      "position": 6,
+      "chapter": 125,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -10303,8 +10084,8 @@
       ]
     },
     {
-      "chapter": 135,
-      "position": 7,
+      "chapter": 126,
+      "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -10328,8 +10109,8 @@
       ]
     },
     {
-      "chapter": 136,
-      "position": 8,
+      "chapter": 127,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -10353,8 +10134,8 @@
       ]
     },
     {
-      "chapter": 137,
-      "position": 9,
+      "chapter": 128,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -10378,8 +10159,8 @@
       ]
     },
     {
-      "chapter": 138,
-      "position": 10,
+      "chapter": 129,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -10403,7 +10184,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 130,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10428,7 +10209,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 131,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10453,7 +10234,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 132,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10478,7 +10259,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 133,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10503,7 +10284,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 134,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10528,7 +10309,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 135,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10553,7 +10334,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 136,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10578,7 +10359,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 137,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10603,7 +10384,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10628,7 +10409,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 139,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10653,7 +10434,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 140,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10678,7 +10459,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 141,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10703,7 +10484,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 142,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10728,7 +10509,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 143,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10753,7 +10534,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 144,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10778,7 +10559,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 145,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10803,7 +10584,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 146,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10828,7 +10609,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 147,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10853,7 +10634,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 148,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10878,7 +10659,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 149,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10903,7 +10684,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 150,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10928,7 +10709,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 151,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -10953,7 +10734,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 152,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10978,7 +10759,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 153,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11003,7 +10784,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 154,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11028,7 +10809,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 155,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11053,7 +10834,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 156,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11078,7 +10859,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 157,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11103,7 +10884,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 158,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11128,7 +10909,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 159,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -11153,7 +10934,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 160,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11178,7 +10959,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 161,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11203,7 +10984,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 162,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11228,7 +11009,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 163,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11253,7 +11034,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 164,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11278,7 +11059,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 165,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11303,7 +11084,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 166,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11328,7 +11109,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 167,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11353,7 +11134,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 168,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11378,33 +11159,8 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 169,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U3 function video_2023"
-        ],
-        "progression": "Video: Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 function video_2023"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd3-2023",
-        "activity_section.key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c"
-      },
-      "level_keys": [
-        "CSD U3 function video_2023"
-      ]
-    },
-    {
-      "chapter": 179,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11428,8 +11184,8 @@
       ]
     },
     {
-      "chapter": 180,
-      "position": 3,
+      "chapter": 170,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -11453,8 +11209,8 @@
       ]
     },
     {
-      "chapter": 181,
-      "position": 4,
+      "chapter": 171,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11478,8 +11234,8 @@
       ]
     },
     {
-      "chapter": 182,
-      "position": 5,
+      "chapter": 172,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11503,8 +11259,8 @@
       ]
     },
     {
-      "chapter": 183,
-      "position": 6,
+      "chapter": 173,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11528,8 +11284,8 @@
       ]
     },
     {
-      "chapter": 184,
-      "position": 7,
+      "chapter": 174,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11553,8 +11309,8 @@
       ]
     },
     {
-      "chapter": 185,
-      "position": 8,
+      "chapter": 175,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -11578,8 +11334,8 @@
       ]
     },
     {
-      "chapter": 186,
-      "position": 9,
+      "chapter": 176,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
@@ -11603,8 +11359,8 @@
       ]
     },
     {
-      "chapter": 187,
-      "position": 10,
+      "chapter": 177,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11628,7 +11384,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 178,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11653,7 +11409,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 179,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11678,7 +11434,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 180,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11703,7 +11459,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 181,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11728,7 +11484,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 182,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11753,7 +11509,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 183,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -11778,7 +11534,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 184,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -11803,7 +11559,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 185,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11828,7 +11584,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 186,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -11853,7 +11609,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 187,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -11878,7 +11634,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 188,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -11903,7 +11659,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 189,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -11928,7 +11684,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 190,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -11953,7 +11709,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 191,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11978,7 +11734,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 192,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12003,7 +11759,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 193,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12028,7 +11784,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 194,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12053,7 +11809,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 195,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12078,7 +11834,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 196,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12103,7 +11859,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 197,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -12128,7 +11884,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 198,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -12153,7 +11909,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 199,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -12178,7 +11934,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 200,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12203,7 +11959,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 201,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12228,7 +11984,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 202,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12253,7 +12009,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 203,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12278,7 +12034,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 204,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12303,7 +12059,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 205,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -12328,7 +12084,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 206,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -12353,7 +12109,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 207,
       "position": 17,
       "activity_section_position": 1,
       "assessment": true,
@@ -12378,7 +12134,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 208,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -12403,7 +12159,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 209,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12428,7 +12184,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 210,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12453,7 +12209,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 211,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12478,7 +12234,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 212,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12503,7 +12259,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 213,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12528,7 +12284,7 @@
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 214,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12553,7 +12309,7 @@
       ]
     },
     {
-      "chapter": 225,
+      "chapter": 215,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12578,7 +12334,7 @@
       ]
     },
     {
-      "chapter": 226,
+      "chapter": 216,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12603,7 +12359,7 @@
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 217,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -12628,7 +12384,7 @@
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 218,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -12653,7 +12409,7 @@
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 219,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12678,7 +12434,7 @@
       ]
     },
     {
-      "chapter": 230,
+      "chapter": 220,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -12703,7 +12459,7 @@
       ]
     },
     {
-      "chapter": 231,
+      "chapter": 221,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12802,18 +12558,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD: Drawing in Game Lab 1_2023",
-        "script_level.level_keys": [
-          "CSD: Drawing in Game Lab 1_2023"
-        ],
-        "lesson.key": "Drawing in Game Lab",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "e9a9c705-2850-44bc-a210-dc4b3466a353"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD U3 Drawing Squares to Corners_2023",
         "script_level.level_keys": [
           "CSD U3 Drawing Squares to Corners_2023"
@@ -12822,18 +12566,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "43092a5a-ca50-4794-8818-894953630692"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD: Drawing in Game Lab 2_2023",
-        "script_level.level_keys": [
-          "CSD: Drawing in Game Lab 2_2023"
-        ],
-        "lesson.key": "Drawing in Game Lab",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "eae3f1fc-9263-4892-a141-6c50d1f3b3de"
       }
     },
     {
@@ -13026,18 +12758,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "2bcc9458-d216-47ec-844e-1d1bae3790a6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Introduction to Variables - Part 1_2023",
-        "script_level.level_keys": [
-          "Introduction to Variables - Part 1_2023"
-        ],
-        "lesson.key": "Variables",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7"
       }
     },
     {
@@ -13558,18 +13278,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD: Introduction to the Draw Loop_2023",
-        "script_level.level_keys": [
-          "CSD: Introduction to the Draw Loop_2023"
-        ],
-        "lesson.key": "The Draw Loop",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "8fc8adb0-d3f0-48c5-be42-85c520487ec3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD U3 Draw Loop Plugged predict 1_2023",
         "script_level.level_keys": [
           "CSD U3 Draw Loop Plugged predict 1_2023"
@@ -13674,18 +13382,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "6f17e31d-631c-4262-b853-f0556c4f20d5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD: Animating Sprite Movement_2023",
-        "script_level.level_keys": [
-          "CSD: Animating Sprite Movement_2023"
-        ],
-        "lesson.key": "Sprite Movement",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "ddf3d6d4-d7d5-454a-9458-e08be66ef5ef"
       }
     },
     {
@@ -13870,18 +13566,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 - Booleans Video_2023",
-        "script_level.level_keys": [
-          "CSD U3 - Booleans Video_2023"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "4a3fafce-b94e-4146-a883-b1a761edf661"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD U3 - conditionals - Matching_2018_2019_pilot_2023",
         "script_level.level_keys": [
           "CSD U3 - conditionals - Matching_2018_2019_pilot_2023"
@@ -13914,18 +13598,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "51e62f99-3a45-4c5a-ae5d-497b2fa80fda"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csd U3 conditional statements video_2023",
-        "script_level.level_keys": [
-          "csd U3 conditional statements video_2023"
-        ],
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "23e30728-5bed-44bd-8c4b-1074b93e8239"
       }
     },
     {
@@ -14070,18 +13742,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "ac20ce6e-2b90-439c-8387-d4075fb63710"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 - Conditionals Video_2023",
-        "script_level.level_keys": [
-          "CSD U3 - Conditionals Video_2023"
-        ],
-        "lesson.key": "Mouse Input",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "de342f84-bb35-4fc0-abaf-43d0865483b5"
       }
     },
     {
@@ -14274,18 +13934,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
         "activity_section.key": "abb8365c-303e-410d-a30b-a54115599db1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD: Sprite Velocity_2023",
-        "script_level.level_keys": [
-          "CSD: Sprite Velocity_2023"
-        ],
-        "lesson.key": "Velocity",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd3-2023",
-        "activity_section.key": "c2999695-82bf-4122-ad30-5d496c903195"
       }
     },
     {
@@ -14850,18 +14498,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
         "activity_section.key": "8132afd2-391e-4945-804c-75dc8a2a62d0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 function video_2023",
-        "script_level.level_keys": [
-          "CSD U3 function video_2023"
-        ],
-        "lesson.key": "Functions",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd3-2023",
-        "activity_section.key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c"
       }
     },
     {
@@ -17442,7 +17078,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "Additional information provided as input to a block to customize it's functionality",
+      "definition": "Additional information provided as input to a block to customize its functionality",
       "properties": {
       },
       "seeding_key": {
