@@ -24,7 +24,11 @@ const EVENTS = {
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
 
   // Sections
-  CURRICULUM_ASSIGNED: 'Section Curriculum Assigned'
+  CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
+  PROGRESS_VIEWED: 'Section Progress Viewed',
+  PROGRESS_TOGGLE: 'Section Progress Toggled',
+  PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
+  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson'
 };
 
 export {EVENTS};

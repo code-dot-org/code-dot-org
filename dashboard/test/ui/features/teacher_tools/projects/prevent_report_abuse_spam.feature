@@ -1,6 +1,7 @@
 @dashboard_db_access
 @no_mobile
 @no_firefox
+@no_safari
 Feature: Prevent Report Abuse Spam
 
 # If someone has already reported abuse on a specific project, we hide the
