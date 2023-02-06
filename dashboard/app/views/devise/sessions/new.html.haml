@@ -1,4 +1,5 @@
 %link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
+%script{src: webpack_asset_path('js/code.org/views/analytics_event_log_helper.js')}
 
 %h2= t('signin_form.title')
 
@@ -30,7 +31,7 @@
     / Not yet signed up? Sign up
     - if devise_mapping.registerable?
       = link_to new_user_registration_path, class: 'field-aligned' do
-        %button.neutral-button= t('nav.user.signup')
+        %button.neutral-button{:onClick => 'logCreateAccountEvent()'}= t('nav.user.signup')
 
   %div.vertical-or
     %hr
@@ -69,3 +70,12 @@
 
     dashboard.clientState.reset();
   });
+
+  function logCreateAccountEvent() {
+    const clickCreateAccountEvent = new CustomEvent('customLogEvent', {
+      detail: {
+        eventName: 'SIGN_UP_STARTED_EVENT'
+      }
+    });
+    document.dispatchEvent(clickCreateAccountEvent);
+  }
