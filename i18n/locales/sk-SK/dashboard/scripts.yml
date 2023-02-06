@@ -3440,3 +3440,15 @@ sk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Labu
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
