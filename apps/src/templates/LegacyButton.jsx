@@ -114,6 +114,9 @@ export const BUTTON_TYPES = {
   primary: {
     style: buttonStyle(color.orange)
   },
+  brandSecondary: {
+    style: buttonStyle(color.brand_secondary_default)
+  },
   danger: {
     style: buttonStyle(color.red)
   },
