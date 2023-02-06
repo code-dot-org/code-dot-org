@@ -1,12 +1,14 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai';
 import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import sinon from 'sinon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const DEFAULT_PROPS = {
   user: 5,
@@ -89,6 +91,18 @@ describe('EditableTeacherFeedback', () => {
       const keepWorkingComponent = wrapper.find(EditableReviewState);
       expect(keepWorkingComponent).to.have.length(1);
       expect(keepWorkingComponent.props().latestReviewState).to.equal(null);
+    });
+
+    it('sends analytics event when feedback submitted', () => {
+      const wrapper = setUp();
+      const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+      wrapper.find('Button[id="ui-test-submit-feedback"]').simulate('click');
+      assert(analyticsSpy.calledOnce);
+      assert.equal(
+        analyticsSpy.getCall(0).firstArg,
+        'Level Feedback Submitted'
+      );
     });
   });
 
