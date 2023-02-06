@@ -12,27 +12,9 @@ const numMeasures = 30;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
 
-const colorClasses = [
-  moduleStyles.timelineElementPurple,
-  moduleStyles.timelineElementBlue,
-  moduleStyles.timelineElementGreen,
-  moduleStyles.timelineElementYellow
-];
-
-const Timeline = ({isPlaying, currentAudioElapsedTime, sounds}) => {
+const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
   const playerUtils = useContext(PlayerUtilsContext);
   const currentMeasure = playerUtils.getCurrentMeasure();
-
-  const getLengthForId = id => {
-    const splitId = id.split('/');
-    const path = splitId[0];
-    const src = splitId[1];
-
-    const folder = sounds.find(folder => folder.path === path);
-    const sound = folder.sounds.find(sound => sound.src === src);
-
-    return sound.length;
-  };
 
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
@@ -60,9 +42,7 @@ const Timeline = ({isPlaying, currentAudioElapsedTime, sounds}) => {
   const timelineElementProps = {
     barWidth,
     eventVerticalSpace,
-    getLengthForId,
-    getEventHeight,
-    colorClasses
+    getEventHeight
   };
 
   return (
