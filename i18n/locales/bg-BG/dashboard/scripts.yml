@@ -2187,6 +2187,8 @@ bg:
               display_name: Съдържание
         csa3-2023:
           lessons:
+            lesson-1:
+              name: Едномерни (1D) Масиви
             lesson-3:
               name: За циклите
           lesson_groups:

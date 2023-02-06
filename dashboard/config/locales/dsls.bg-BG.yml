@@ -1959,9 +1959,10 @@ bg-BG:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Пирата би казал "Удоволствие е да се запознаем, Али" и това е всичко.
+          feedback: Правилно.
+        - text: Пирата би казал "Удоволствие е да се запознаем" и това е всичко.
+        - text: Пирата би казал "Али" и това е всичко.
         - {}
         questions:
         - {}
@@ -2169,7 +2170,7 @@ bg-BG:
         - {}
         - {}
         - {}
-        - {}
+        - text: Лаурел ще събере 1 парче съкровище, използвайки този код.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
@@ -2297,13 +2298,20 @@ bg-BG:
       csf_password_power-up_2021:
         content1: описание тук
       Unit 1 Lesson 1 Overview:
-        markdown: "# Общ Преглед\n\nТози клас работи в групи,  който ще проектират
-          кораби направени от алуминиево фолио с цел да могат да носият възможно най-много
-          стотинки. В края урока групите ще отразяват своя опит с упражненито и ще
-          правят връзки с другите видове проблеми който ще решават в следващтите уроци
-          на този курс. \n\n#E Ресурси \n\n*[Кораби  от А луминиево Фолио] (ttps://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
-          \ - \n\nИнструкции за Урока( копие \n[MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
-          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n\n"
+        markdown: "# Преглед\n\nКласът работи по групи, за да изработи лодки от алуминиево
+          фолио, които да издържат възможно най-много стотинки. В края на урока групите
+          обмислят опита си от тази дейност и правят връзка с видовете решаване на
+          проблеми, които ще правят през останалата част от курса. \n\n\n## Ресурси\n\n*
+          [Алуминиеви лодки](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Ръководство за Дейността (копирайте като [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))"
+        teacher_markdown: |-
+          [key]
+
+          * [Алуминиери лодки - Образец]
+          (https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Ръководство за Дейноста ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -9229,9 +9237,11 @@ bg-BG:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: Неправилно. Скрат няма да стигне жълъда, защото се обръща в грешната
+            посока.
+        - feedback: Правилно! Скрат се обръща в грешната посока и няма да стигне жълъда.
+        - feedback: Неправилно. Скрат няма да стигне жълъда, защото се обръща в грешната
+            посока.
         - {}
         questions:
         - {}
@@ -9459,6 +9469,125 @@ bg-BG:
         - {}
         - {}
         - {}
-        - {}
+        - text: Лаурел ще събере 1 парче съкровище, използвайки този код.
         questions:
         - {}
+      CSD U1 Lesson 5 Overview:
+        markdown: |-
+          # Преглед
+
+          В този урок ще научите за разилични видове входящи и изходящи устройства, използвани от компютри, и за видовете информация, която изпращат и получават.
+
+          ## Лексика
+
+          * **Входящо устройство** - Устройство или компонент, който позволява да се подава информация към компютъра
+          * **Изходящо устройство** - Всяко устройство или компонент, който получава информация от компютъра
+
+          ## Ресурси
+
+          * [Вход и Изход - Ръководство на Дейността]
+          (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+        teacher_markdown: |-
+          [Вход и Изход - Пример]
+          (https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing) - Ръководство на Дейността ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))
+      CSD U1 Lesson 6 Overview:
+        markdown: |-
+          # Преглед
+
+          В този урок ще научите как обработването се използва от хора и компютри за превръщане на входни данни в изходни.
+
+          ## Лексика
+
+          * **Алгоритъм** - Точна последователност от инстукции за процеси, които могат да бъдат изпълнени от компютър
+
+          ## Ресурси
+
+          * [Алгоритъм за Сортиране на Карти - Ръководство на Дейността]
+          (https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+        teacher_markdown: "* [Алгоритъм за Сортиране на Карти](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Пример ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))"
+      CSD U1 Lesson 7 Overview:
+        markdown: |-
+          # Преглед
+
+          В този урок ще научите за видовете информация, която компютрите съхраняват, и как съхраненението е критична част от обработването на информация.
+
+          ## Ресурси
+
+          * [Съхранение и Обработка - Ръководство на Дейността](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+        teacher_markdown: "* [Съхранение и Обработка - Пример](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          - Наръчник на Дейността ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))"
+      CSD U1 Lesson 8 Overview:
+        markdown: |-
+          # Преглед
+
+          В този урок ще се разгледате начините, по които приложенията обработват различни видове информация, за да решат проблеми.
+
+          ## Ресурси
+
+          * [Изследване на Приложение - Ръководство на Дейността](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+        teacher_markdown: "* [Изследване на Приложение КЛЮЧ](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          - Ръководство на Дейността ([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)"
+      CSD U1 Lesson 9 Overview:
+        markdown: |-
+          # Преглед
+
+          За този проект ще разработите собствено приложение, което решава проблем, определен от вас.
+
+          ## Ресурси
+
+          * [Приложения и Решаване на Проблеми - Ръководство на Дейността](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          * [Приложения и Решаване на Проблеми - Взаимна Проверка](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Приложения и Решаване на Проблеми - Рубрика](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+        teacher_markdown: |-
+          * [Приложения и Решаване на Проблеми]
+          (https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Пример за Ръководство на Проекта ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Приложения и Решаване на Проблеми]
+          (https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Пример за Взаимна Проверка ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+      CourseE_Lesson_11_Artist_Practice_2022:
+        description: Добра работа досега! Изберете следващата си дейност. Завършете
+          колко се може повече. Продължете да се упражнявате с функции и Художника!
+      CourseE_Lesson_7_Artist_Practice_2022:
+        description: Добра работа досега! Изберете следващата си дейност. Завършете
+          колко се може повече. Продължете да се упражнявате с вложени цикли и Художника!
+      Unit 1 Lesson 2 Overview:
+        markdown: |-
+          # Преглед
+
+          В този урок ще се запознаете с официален процес за решаване на проблеми, който ще ви помогне да структурирате подхода си към най-различни проблеми.
+
+
+          ## Ресурси
+
+          * [Процес на Решаване на Проблеми - Ръководство на Дейността](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: |-
+          * [Процеса на Решаване на Проблеми]
+          (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Ръководство на Дейността (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))[PDF]
+      Unit 1 Lesson 3 Overview:
+        markdown: |-
+          # Преглед
+          В този урок ще приложите процеса на решаване на проблеми към различни проблем, за да изследвате как всяка стъпка ви помага да разработвате е подобрявате решения на проблеми.
+
+          ## Ресурси
+
+          * [Решаване на Проблеми - Ръководство на Дейността]
+          (https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+        teacher_markdown: "[КЛЮЧ за Решаване на Проблеми](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Ръководство на Дейността [PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
+      Unit 1 Lesson 4 Overview:
+        markdown: |-
+          # Преглед
+
+          В този урок ще започнете да обмисляте как компютрите помагат за решаването на определен вид проблеми и ще научите ключовите характеристики на всеки компютър.
+
+          ## Ресурси
+
+          * [Какво е Компютър - Ръководство на Дейността]
+          (https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: |-
+          [Какво е Компютър - Пример]
+          (https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Ръководство на Дейността ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
