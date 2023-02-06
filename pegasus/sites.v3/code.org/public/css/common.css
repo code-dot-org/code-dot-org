@@ -403,6 +403,17 @@ button {
   margin-top: 10px;
 }
 
+a.link-button {
+  display: inline-block;
+  color: white;
+  background-color: #ffa400;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: 'Gotham 4r', sans-serif;
+  text-decoration: none;
+}
+
 #map .mapboxgl-popup-close-button {
   margin-top: 0px;
   background-color: #ffa400;
