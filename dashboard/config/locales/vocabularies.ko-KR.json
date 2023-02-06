@@ -58,10 +58,12 @@
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
         },
         "features/csd/2022": {
-          "word": "특징"
+          "word": "특징",
+          "definition": "모델이 의사 결정을 내리는 데 사용하는 입력"
         },
         "label/csd/2022": {
-          "word": "라벨"
+          "word": "라벨",
+          "definition": "모델을 사용하여 결정하거나 예측하려는 결과"
         },
         "model/csd/2022": {
           "word": "모델",
@@ -84,7 +86,8 @@
           "definition": "그룹으로 분리할 수 있는 데이터"
         },
         "classification/csd/2022": {
-          "word": "분류"
+          "word": "분류",
+          "definition": "다른 특징을 기반으로 카테고리 예측"
         },
         "bias/csd/2022": {
           "word": "편향"
@@ -102,10 +105,12 @@
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
         },
         "features/csd/2021": {
-          "word": "특징"
+          "word": "특징",
+          "definition": "모델이 의사 결정을 내리는 데 사용하는 입력"
         },
         "label/csd/2021": {
-          "word": "라벨"
+          "word": "라벨",
+          "definition": "모델을 사용하여 결정하거나 예측하려는 결과"
         },
         "model/csd/2021": {
           "word": "모델",
@@ -128,7 +133,8 @@
           "definition": "그룹으로 분리할 수 있는 데이터"
         },
         "classification/csd/2021": {
-          "word": "분류"
+          "word": "분류",
+          "definition": "다른 특징을 기반으로 카테고리 예측"
         },
         "bias/csd/2021": {
           "word": "편향"
@@ -140,6 +146,47 @@
         "ethics/csd/2021": {
           "word": "윤리",
           "definition": "좋은 행동을 위한 지침."
+        },
+        "for_loop/csd/2021": {
+          "word": "For 루프",
+          "definition": "사전에 결정된 시작 및 종류, 증분 (단계 간격)이 있는 루프."
+        },
+        "bug/csd/2021": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "debugging/csd/2021": {
+          "word": "디버깅",
+          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+        },
+        "program/csd/2021": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "variable/csd/2021": {
+          "word": "변수",
+          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
+        },
+        "sprite/csd/2021": {
+          "word": "스프라이트"
+        },
+        "condition/csd/2021": {
+          "word": "조건"
+        },
+        "conditionals/csd/2021": {
+          "word": "조건"
+        },
+        "abstraction/csd/2021": {
+          "word": "추상화"
+        },
+        "function/csd/2021": {
+          "word": "함수"
+        },
+        "input/csd/2021": {
+          "word": "입력"
+        },
+        "processing/csd/2021": {
+          "word": "프로세싱"
         }
       }
     }
