@@ -310,7 +310,7 @@ class ChannelsApi < Sinatra::Base
   #
   # Get an abuse score.
   #
-  # Moved to ChannelsApiController.
+  # Moved to ReportAbuseController.
   #
 
   #
@@ -318,7 +318,7 @@ class ChannelsApi < Sinatra::Base
   #
   # Increment an abuse score
   #
-  # Moved to ChannelsApiController.
+  # API endpoint removed. Functionality moved to ReportAbuseController.
   #
 
   #
@@ -346,7 +346,7 @@ class ChannelsApi < Sinatra::Base
   #
   # Clear an abuse score. Requires project_validator permission
   #
-  # Moved to ChannelsApiController.
+  # Moved to ReportAbuseController.
   #
 
   # This method is included here so that it can be stubbed in tests.

@@ -616,7 +616,7 @@ class FilesApi < Sinatra::Base
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  # Moved to FilesApiController.
+  # Endpoint removed. Functionality moved to ReportAbuseController.
   #
 
   #

@@ -25,7 +25,6 @@ class PublicThumbnailsTest < FilesApiTestBase
       # Response is cached for an hour
       assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-      # Abuse score functionality moved to Rails.
       # Flags the project as abusive.
       value = Projects.get_abuse(channel_id)
       assert_equal 15, value
@@ -53,7 +52,6 @@ class PublicThumbnailsTest < FilesApiTestBase
       # Response is cached for an hour
       assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-      # Abuse score functionality moved to Rails.
       # Flags the project as abusive.
       value = Projects.get_abuse(channel_id)
       assert_equal 15, value
@@ -83,7 +81,6 @@ class PublicThumbnailsTest < FilesApiTestBase
       assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
       assert_equal @thumbnail_body, last_response.body
 
-      # Abuse score functionality moved to Rails.
       # Does not flag the project as abusive
       value = Projects.get_abuse(channel_id)
       assert_equal 0, value
@@ -113,7 +110,6 @@ class PublicThumbnailsTest < FilesApiTestBase
       # Returns project_default.png instead of the actual image
       refute_equal @thumbnail_body, last_response.body
 
-      # Abuse score functionality moved to Rails.
       # Does not flag the project as abusive
       value = Projects.get_abuse(channel_id)
       assert_equal 0, value

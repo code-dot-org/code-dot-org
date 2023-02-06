@@ -85,14 +85,13 @@ class ReportAbuseController < ApplicationController
     }
   end
 
-  # TODO: clean up comments below
-  # MOVED ABUSE API STUFF
-
   # API routes, moved from legacy channels_api.rb.
 
   # GET /v3/channels/:channel_id/abuse
   # Get an abuse score.
   def show_abuse
+    return head :unauthorized unless project_validator?
+
     begin
       value = Projects.get_abuse(params[:channel_id])
     rescue ArgumentError, OpenSSL::Cipher::CipherError
