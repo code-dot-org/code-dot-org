@@ -33,8 +33,6 @@ const instructionPositionOrder = [
   InstructionsPositions.RIGHT
 ];
 
-const DEFAULT_GROUP_NAME = 'all';
-
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
     // populated by Redux
@@ -68,7 +66,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      library: null,
       instructions: null,
       isPlaying: false,
       startPlayingAudioTime: null,
@@ -98,7 +95,6 @@ class UnconnectedMusicView extends React.Component {
     document.body.addEventListener('keyup', this.handleKeyUp);
 
     this.loadLibrary().then(library => {
-      this.setState({library});
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
@@ -107,7 +103,7 @@ class UnconnectedMusicView extends React.Component {
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
 
-      Globals.setLibrary(this.state.library);
+      Globals.setLibrary(library);
       Globals.setPlayer(this.player);
     });
 
@@ -183,7 +179,7 @@ class UnconnectedMusicView extends React.Component {
     // A subsequent non-drag event should arrive and the blocks will be
     // usable then.
     // It's possible that other events should similarly be ignored here.
-    if (e.type === Blockly.blockly_.Events.BLOCK_DRAG) {
+    if (e.type === Blockly.Events.BLOCK_DRAG) {
       this.player.stopAndCancelPreviews();
       return;
     }
@@ -275,18 +271,6 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopAllSoundsStillToPlay();
   };
 
-  getCurrentGroup = () => {
-    const currentGroup =
-      this.state.library &&
-      this.state.library.groups.find(group => group.id === DEFAULT_GROUP_NAME);
-
-    return currentGroup;
-  };
-
-  getCurrentGroupSounds = () => {
-    return this.getCurrentGroup()?.folders;
-  };
-
   handleKeyUp = event => {
     // Don't handle a keyboard shortcut if the active element is an
     // input field, since the user is probably trying to type something.
@@ -369,7 +353,6 @@ class UnconnectedMusicView extends React.Component {
         <Timeline
           isPlaying={this.state.isPlaying}
           currentAudioElapsedTime={this.state.currentAudioElapsedTime}
-          sounds={this.getCurrentGroupSounds()}
         />
       </div>
     );
@@ -387,7 +370,9 @@ class UnconnectedMusicView extends React.Component {
             getCurrentMeasure: () => this.player.getCurrentMeasure(),
             convertMeasureToSeconds: measure =>
               this.player.convertMeasureToSeconds(measure),
-            getTracksMetadata: () => this.player.getTracksMetadata()
+            getTracksMetadata: () => this.player.getTracksMetadata(),
+            getLengthForId: id => this.player.getLengthForId(id),
+            getTypeForId: id => this.player.getTypeForId(id)
           }}
         >
           <div id="music-lab-container" className={moduleStyles.container}>
