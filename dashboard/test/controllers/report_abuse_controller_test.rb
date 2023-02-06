@@ -61,6 +61,41 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert_equal 0, Projects.get_abuse(@channel_id)
   end
 
+  test "get abuse score" do
+    response = get :show_abuse, params: {channel_id: @channel_id}
+    assert response.ok?
+    assert_equal 0, JSON.parse(response.body)['abuse_score']
+  end
+
+  test "delete abuse score" do
+    response = get :show_abuse, params: {channel_id: @channel_id}
+    assert response.ok?
+    assert_equal 0, JSON.parse(response.body)['abuse_score']
+
+    response = delete :destroy_abuse, params: {channel_id: @channel_id}
+    assert response.unauthorized?
+
+    user = create(:project_validator)
+    sign_in user
+
+    response = delete :destroy_abuse, params: {channel_id: @channel_id}
+    assert response.ok?
+    assert_equal 0, JSON.parse(response.body)['abuse_score']
+  end
+
+  test "base64 error" do
+    causes_argumenterror = "bT0zAyBvk"
+    causes_ciphererror = "IMALITTLETEAPOTSHORTANDSTOUT"
+
+    assert_raises(ActionController::BadRequest) do
+      get :show_abuse, params: {channel_id: causes_argumenterror}
+    end
+
+    assert_raises(ActionController::BadRequest) do
+      get :show_abuse, params: {channel_id: causes_ciphererror}
+    end
+  end
+
   # files
 
   test "set abuse score" do

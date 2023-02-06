@@ -310,16 +310,8 @@ class ChannelsApi < Sinatra::Base
   #
   # Get an abuse score.
   #
-  get %r{/v3/channels/([^/]+)/abuse$} do |id|
-    dont_cache
-    content_type :json
-    begin
-      value = Projects.get_abuse(id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {abuse_score: value}.to_json
-  end
+  # Moved to ChannelsApiController.
+  #
 
   #
   # POST /v3/channels/<channel-id>/abuse

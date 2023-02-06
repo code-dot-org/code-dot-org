@@ -87,11 +87,42 @@ class ReportAbuseController < ApplicationController
 
   # TODO: clean up comments below
   # MOVED ABUSE API STUFF
+
+  # API routes, moved from legacy channels_api.rb.
+
+  # GET /v3/channels/:channel_id/abuse
+  # Get an abuse score.
+  def show_abuse
+    begin
+      value = Projects.get_abuse(params[:channel_id])
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      raise ActionController::BadRequest.new, "Bad channel_id"
+    end
+    render json: {abuse_score: value}
+  end
+
+  # DELETE /v3/channels/:channel_id/abuse
+  # POST /v3/channels/:channel_id/abuse/delete
+  # Clear an abuse score. Requires project_validator permission
+  def destroy_abuse
+    return head :unauthorized unless project_validator?
+
+    channel_id = params[:channel_id]
+
+    begin
+      value = Projects.new(get_storage_id).reset_abuse(channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      raise ActionController::BadRequest.new, "Bad channel_id"
+    end
+    render json: {abuse_score: value}
+  end
+
+  # Non-actions, public methods so they can be tested easier.
   # The methods below are in this controller because they depend on the
   # storage_id helper, which has dependencies on current_user.
 
-  # POST /v3/channels/:channel_id/abuse
   # Increment an abuse score.
+  # Was POST /v3/channels/:channel_id/abuse
   def update_channel_abuse_score(channel_id)
     # Reports of abuse from verified teachers are more reliable than reports
     # from students so we increase the abuse score enough to block the project
@@ -116,8 +147,8 @@ class ReportAbuseController < ApplicationController
     value
   end
 
-  # PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=<abuse_score>
   # Update all assets for the given channelId to have the provided abuse score
+  # Was PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=<abuse_score>
   def update_file_abuse_score(endpoint, encrypted_channel_id, abuse_score)
     return if abuse_score.nil?
 
