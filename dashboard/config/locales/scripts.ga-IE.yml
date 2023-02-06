@@ -2848,3 +2848,11 @@ ga:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Buneolas ar an tSaotharlann Aipeanna
