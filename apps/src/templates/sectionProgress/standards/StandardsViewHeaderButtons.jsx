@@ -13,7 +13,11 @@ import {
 } from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../../lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {TeacherScores} from './standardsConstants';
+
+const STANDARDS = 'standards';
 
 class StandardsViewHeaderButtons extends Component {
   static propTypes = {
@@ -47,6 +51,11 @@ class StandardsViewHeaderButtons extends Component {
       },
       {includeUserId: true}
     );
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_TOGGLE, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+      newView: STANDARDS
+    });
   };
 
   closeLessonStatusDialog = () => {
