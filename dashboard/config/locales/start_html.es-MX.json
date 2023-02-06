@@ -742,16 +742,27 @@
           "blue: 128": "azul: 128"
         },
         "CSD U6 - Accelerometer - PA_2222": {
-          "Game Over": "Juego terminado"
+          "Game Over": "Juego terminado",
+          "Movement Meter:": "Medidor de Movimiento:",
+          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
         },
         "CSD U6 - Accelerometer - PB_2222": {
-          "0": "0"
+          "0": "0",
+          "Steps Taken:": "Pasos dados:",
+          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
+          "You Did It!": "¡Lo hiciste!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
-          "You did it!": "¡Lo hiciste!"
+          "You did it!": "¡Lo hiciste!",
+          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
         },
         "CSD U6 - Accelerometer - PF_2222": {
-          "0": "0"
+          "0": "0",
+          "Tilt the board left and right to change your number. Try to get it as close to the target number as possible!Your NumberTarget Number00Press the right button on the circuit playground to lock in your number!": "Inclina la placa hacia la izquierda y hacia la derecha para cambiar tu número. ¡Intenta acercarte lo más posible al número objetivo! Tu Número Objetivo Número 00 ¡Presiona el botón derecho en el Circuit Playground para fijar tu número!",
+          "Try to get it as close to the target number as possible!": "¡Intenta acercarte lo máximo posible al número objetivo!",
+          "Your Number": "Tu Número",
+          "Target Number": "Número Objetivo",
+          "Press the right button on the circuit playground to lock in your number!": "¡Pulsa el botón derecho del Circuit Playground para fijar tu número!"
         },
         "CSD U6 - Board Inputs - SB1_2222": {
           "Success!": "¡Éxito!",
@@ -828,7 +839,8 @@
           "Try the following:": "Prueba lo siguiente:",
           "Refresh this page and try again": "Actualiza esta página e inténtalo de nuevo",
           "Plug the board into a different USB": "Conecta la placa a otro puerto USB",
-          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup",
+          "Connect your board to an LED, then plug it in and press Run": "Conecta un LED a tu placa, enchúfala y pulsa Ejecutar"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "North": "Norte",
@@ -876,7 +888,14 @@
           "red": "rojo",
           "yellow": "amarillo",
           "green": "verde",
-          "purple": "morado"
+          "purple": "morado",
+          "Activate Traffic Signal": "Activar Señal de Tráfico",
+          "Traffic Control App": "Aplicación de Control del Tráfico",
+          "Use this app to control a traffic signal in the road so cars know to avoid construction. You can set the direction to guide traffic, along with the color and brightness of the lightsDirection:Color:Brightness:leftrightredyellowgreenpurple": "Utiliza esta aplicación para controlar una señal de tráfico en la carretera para que los coches sepan que deben evitar las obras. Puedes configurar la dirección para guiar el tráfico, junto con el color y el brillo de las luces, Dirección: Color: Brillo: izquierda, derecha, rojo, amarillo, verdepúrpura",
+          "You can set the direction to guide traffic, along with the color and brightness of the lights": "Puedes configurar la dirección para guiar el tráfico, junto con el color y el brillo de las luces",
+          "Direction:": "Dirección:",
+          "Color:": "Color:",
+          "Brightness:": "Brillo:"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "on": "activado",
@@ -890,7 +909,8 @@
           "Buzzer Controls": "Controles de zumbador",
           "Press the left buttonto control the buzzer": "Pulsa el botón izquierdo para controlar el zumbador",
           "blink": "parpadeo",
-          "pulse": "pulso"
+          "pulse": "pulso",
+          "Use the toggle switch to control the LED": "Utiliza el conmutador para controlar el LED"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Red": "Rojo",
@@ -953,10 +973,15 @@
           "Yellow": "Amarillo"
         },
         "CSD U6 - Functions - P_2222": {
-          "0": "0"
+          "0": "0",
+          "Happiness Tracker": "Rastreador de Felicidad",
+          "Press the buttons on your circuit playground to track how you're feeling. Based on your happiness value, the screen will change to reflect how you feel": "Pulsa los botones de tu Circuit Playground para hacer un seguimiento de cómo te sientes. En función de tu valor de felicidad, la pantalla cambiará para reflejar cómo te sientes.",
+          "Current Happiness Value": "Valor Actual de Felicidad"
         },
         "CSD U6 - Functions - SB7_2222": {
-          "0": "0"
+          "0": "0",
+          "Click An Alien To Increase Your Score!": "¡Pulsa sobre un alienígena para aumentar tu puntuación!",
+          "Score:": "Puntuación:"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "0": "0",
@@ -973,10 +998,17 @@
         },
         "CSD U6 - Music - A_2222": {
           "Happy": "Alegre",
-          "Sad": "Triste"
+          "Sad": "Triste",
+          "Musical Emojis": "Emojis musicales",
+          "Click the buttons below to change the emotion of the emoji. When you do, a song will play to match that emotion.HappySad": "Haz clic en los botones de abajo para cambiar la emoción del emoji. Cuando lo hagas, se reproducirá una canción que coincida con esa emoción.HappySad",
+          "When you do, a song will play to match that emotion.": "Cuando lo hagas, sonará una canción acorde con esa emoción."
         },
         "CSD U6 - Music - ChalC_2222": {
-          "Alarm Clock Settings": "Ajustes del Reloj Despertador"
+          "Alarm Clock Settings": "Ajustes del Reloj Despertador",
+          "Choose an alarm preference from the dropdown below": "Elige una preferencia de alarma en el menú desplegable",
+          "Alert": "Alerta",
+          "[Add your own style here]": "[Añade tu propio estilo aquí]",
+          "Test the Alarm": "Probar la alarma"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -985,7 +1017,9 @@
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G"
+          "G": "G",
+          "Play Song!": "¡Reproducir canción!",
+          "Clear Song": "Borrar canción"
         },
         "CSD U6 - Music - Piano_2222": {
           "C": "C",
@@ -995,7 +1029,13 @@
           "G": "G",
           "A": "A",
           "B": "B",
-          "Note:": "Nota:"
+          "Note:": "Nota:",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#",
+          "Frequency:": "Frecuencia:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "C",
@@ -1004,7 +1044,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSD U6 - Music - SB2.5_2222": {
           "C": "C",
@@ -1022,7 +1067,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "¡Éxito!",
@@ -1035,7 +1085,12 @@
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
-          "2": "2"
+          "2": "2",
+          "Escape Room!": "¡Escapa de la Habitación!",
+          "In order to escape, you need enter the correct 3-digit number!Find the buttons hidden around the room. When you press a button, one of the digits will be revealed!Once you've found all 3 digits, enter them in to escape the room!122You Won!": "Encuentra los botones escondidos por la habitación. Una vez que hayas encontrado los 3 dígitos, ¡introdúcelos para escapar de la habitación!122 ¡Ganaste!",
+          "Find the buttons hidden around the room. When you press a button, one of the digits will be revealed!": "Encuentra los botones escondidos por la habitación. Cuando pulses un botón, ¡se revelará uno de los dígitos!",
+          "Once you've found all 3 digits, enter them in to escape the room!": "Una vez que hayas encontrado los 3 dígitos, ¡introdúcelos para escapar de la habitación!",
+          "You Won!": "¡Has ganado!"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
           "Success!": "¡Éxito!",
@@ -1146,7 +1201,8 @@
           "Try the following:": "Prueba lo siguiente:",
           "Refresh this page and try again": "Actualiza esta página e inténtalo de nuevo",
           "Plug the board into a different USB": "Conecta la placa a otro puerto USB",
-          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup",
+          "Connect your board to an LED, then plug it in and press Run": "Conecta un LED a tu placa, enchúfala y pulsa Ejecutar"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "¡Éxito!",
@@ -1269,56 +1325,77 @@
           "Hello": "Hola"
         },
         "CSD U6 - Sensors - A_2222": {
-          "0": "0"
+          "0": "0",
+          "Room Monitor": "Monitor de habitación",
+          "Light Value": "Valor lumínico",
+          "Sound Value": "Valor sonoro",
+          "Temperature": "Temperatura"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "desactivado",
-          "on": "activado"
+          "on": "activado",
+          "The Theremin Is:": "El Theremin es:"
         },
         "CSD U6 - Sensors - P_2222": {
           "text": "texto",
           "high": "alta",
-          "low": "baja"
+          "low": "baja",
+          "Sensor 1": "Sensor 1",
+          "Sensor 2": "Sensor 2",
+          "Sensor 3": "Sensor 3"
         },
         "CSD U6 - Sensors - SB1_2222": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "value": "valor",
-          "Update": "Actualizar"
+          "Update": "Actualizar",
+          "Light Sensor Reading": "Lectura del sensor de luz"
         },
         "CSD U6 - Sensors - SB3_2222": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 - Sensors - SB4_2222": {
-          "value": "valor"
+          "value": "valor",
+          "Temp Sensor Reading": "Lectura del sensor de temperatura"
         },
         "CSD U6 Driver pt 2": {
-          "You did it!": "¡Lo hiciste!"
+          "You did it!": "¡Lo hiciste!",
+          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
         },
         "CSD U6 Driver pt 2_2018": {
-          "You did it!": "¡Lo hiciste!"
+          "You did it!": "¡Lo hiciste!",
+          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
         },
         "CSD U6 Driver pt 2_2019": {
-          "You did it!": "¡Lo hiciste!"
+          "You did it!": "¡Lo hiciste!",
+          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
         },
         "CSD U6 Driver pt 2_2021": {
-          "You did it!": "¡Lo hiciste!"
+          "You did it!": "¡Lo hiciste!",
+          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
         },
         "CSD U6 Driver pt1": {
-          "You did it!": "¡Lo hiciste!"
+          "You did it!": "¡Lo hiciste!",
+          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
         },
         "CSD U6 Driver pt1_2018": {
-          "You did it!": "¡Lo hiciste!"
+          "You did it!": "¡Lo hiciste!",
+          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
         },
         "CSD U6 Driver pt1_2019": {
-          "You did it!": "¡Lo hiciste!"
+          "You did it!": "¡Lo hiciste!",
+          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
         },
         "CSD U6 Driver pt1_2021": {
-          "You did it!": "¡Lo hiciste!"
+          "You did it!": "¡Lo hiciste!",
+          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
         },
         "CSD U6 LED all": {
           "on": "activado",
@@ -1377,16 +1454,28 @@
           "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 Pedometer": {
-          "0": "0"
+          "0": "0",
+          "Steps Taken:": "Pasos dados:",
+          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
+          "You Did It!": "¡Lo hiciste!"
         },
         "CSD U6 Pedometer_2018": {
-          "0": "0"
+          "0": "0",
+          "Steps Taken:": "Pasos dados:",
+          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
+          "You Did It!": "¡Lo hiciste!"
         },
         "CSD U6 Pedometer_2019": {
-          "0": "0"
+          "0": "0",
+          "Steps Taken:": "Pasos dados:",
+          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
+          "You Did It!": "¡Lo hiciste!"
         },
         "CSD U6 Pedometer_2021": {
-          "0": "0"
+          "0": "0",
+          "Steps Taken:": "Pasos dados:",
+          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
+          "You Did It!": "¡Lo hiciste!"
         },
         "CSD U6 add LED button": {
           "Success!": "¡Éxito!",
@@ -1429,56 +1518,72 @@
           "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 analog change": {
-          "value": "valor"
+          "value": "valor",
+          "Temp Sensor Reading": "Lectura del sensor de temperatura"
         },
         "CSD U6 analog change_2018": {
-          "value": "valor"
+          "value": "valor",
+          "Temp Sensor Reading": "Lectura del sensor de temperatura"
         },
         "CSD U6 analog change_2019": {
-          "value": "valor"
+          "value": "valor",
+          "Temp Sensor Reading": "Lectura del sensor de temperatura"
         },
         "CSD U6 analog change_2021": {
-          "value": "valor"
+          "value": "valor",
+          "Temp Sensor Reading": "Lectura del sensor de temperatura"
         },
         "CSD U6 analog data": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 analog data_2018": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 analog data_2019": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 analog data_2021": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 analog light": {
           "value": "valor",
-          "Update": "Actualizar"
+          "Update": "Actualizar",
+          "Light Sensor Reading": "Lectura del sensor de luz"
         },
         "CSD U6 analog light_2018": {
           "value": "valor",
-          "Update": "Actualizar"
+          "Update": "Actualizar",
+          "Light Sensor Reading": "Lectura del sensor de luz"
         },
         "CSD U6 analog light_2019": {
           "value": "valor",
-          "Update": "Actualizar"
+          "Update": "Actualizar",
+          "Light Sensor Reading": "Lectura del sensor de luz"
         },
         "CSD U6 analog light_2021": {
           "value": "valor",
-          "Update": "Actualizar"
+          "Update": "Actualizar",
+          "Light Sensor Reading": "Lectura del sensor de luz"
         },
         "CSD U6 analog sound": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 analog sound_2018": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 analog sound_2019": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 analog sound_2021": {
-          "value": "valor"
+          "value": "valor",
+          "Sound Sensor Reading": "Lectura del sensor de sonido"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1487,7 +1592,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSD U6 array piano_2018": {
           "C": "C",
@@ -1496,7 +1606,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSD U6 array piano_2019": {
           "C": "C",
@@ -1505,7 +1620,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSD U6 array piano_2021": {
           "C": "C",
@@ -1514,7 +1634,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSD U6 arrays select predict": {
           "first": "primero (a)",
@@ -1933,16 +2058,20 @@
           "Yellow": "Amarillo"
         },
         "CSD U6 params starchaser intro": {
-          "0": "0"
+          "0": "0",
+          "Score:": "Puntuación:"
         },
         "CSD U6 params starchaser intro_2018": {
-          "0": "0"
+          "0": "0",
+          "Score:": "Puntuación:"
         },
         "CSD U6 params starchaser intro_2019": {
-          "0": "0"
+          "0": "0",
+          "Score:": "Puntuación:"
         },
         "CSD U6 params starchaser intro_2021": {
-          "0": "0"
+          "0": "0",
+          "Score:": "Puntuación:"
         },
         "CSD U6 predict LED button": {
           "Success!": "¡Éxito!",
@@ -1983,22 +2112,34 @@
         "CSD U6 sensor experiment embedded": {
           "text": "texto",
           "high": "alta",
-          "low": "baja"
+          "low": "baja",
+          "Sensor 1": "Sensor 1",
+          "Sensor 2": "Sensor 2",
+          "Sensor 3": "Sensor 3"
         },
         "CSD U6 sensor experiment embedded_2018": {
           "text": "texto",
           "high": "alta",
-          "low": "baja"
+          "low": "baja",
+          "Sensor 1": "Sensor 1",
+          "Sensor 2": "Sensor 2",
+          "Sensor 3": "Sensor 3"
         },
         "CSD U6 sensor experiment embedded_2019": {
           "text": "texto",
           "high": "alta",
-          "low": "baja"
+          "low": "baja",
+          "Sensor 1": "Sensor 1",
+          "Sensor 2": "Sensor 2",
+          "Sensor 3": "Sensor 3"
         },
         "CSD U6 sensor experiment embedded_2021": {
           "text": "texto",
           "high": "alta",
-          "low": "baja"
+          "low": "baja",
+          "Sensor 1": "Sensor 1",
+          "Sensor 2": "Sensor 2",
+          "Sensor 3": "Sensor 3"
         },
         "CSD U6 setProperty predict app": {
           "title": "Título",
@@ -2045,16 +2186,24 @@
           "Choose the duration of the buzz with the slider, then click the left board button to turn it on.": "Elige la duración del zumbido con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para activarlo."
         },
         "CSD U6 stillness game predict code": {
-          "Game Over": "Juego terminado"
+          "Game Over": "Juego terminado",
+          "Movement Meter:": "Medidor de Movimiento:",
+          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
         },
         "CSD U6 stillness game predict code_2018": {
-          "Game Over": "Juego terminado"
+          "Game Over": "Juego terminado",
+          "Movement Meter:": "Medidor de Movimiento:",
+          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
         },
         "CSD U6 stillness game predict code_2019": {
-          "Game Over": "Juego terminado"
+          "Game Over": "Juego terminado",
+          "Movement Meter:": "Medidor de Movimiento:",
+          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
         },
         "CSD U6 stillness game predict code_2021": {
-          "Game Over": "Juego terminado"
+          "Game Over": "Juego terminado",
+          "Movement Meter:": "Medidor de Movimiento:",
+          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
         },
         "CSD U6 test LED": {
           "Success!": "¡Éxito!",
@@ -2446,7 +2595,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSDU6 circuit playground piano_2018": {
           "C": "C",
@@ -2455,7 +2609,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSDU6 circuit playground piano_2019": {
           "C": "C",
@@ -2464,7 +2623,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSDU6 circuit playground piano_2021": {
           "C": "C",
@@ -2473,7 +2637,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSDU6 piano with notes": {
           "C": "C",
@@ -2482,7 +2651,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSDU6 piano with notes_2018": {
           "C": "C",
@@ -2491,7 +2665,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSDU6 piano with notes_2019": {
           "C": "C",
@@ -2500,7 +2679,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "CSDU6 piano with notes_2021": {
           "C": "C",
@@ -2509,7 +2693,12 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C#": "C#",
+          "D#": "D#",
+          "F#": "F#",
+          "G#": "G#",
+          "A#": "A#"
         },
         "allthethings design mode elements": {
           "text": "texto",
@@ -3045,7 +3234,8 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
+          "Temperature": "Temperatura"
         },
         "ml-models in applab-choice if quotes_2022": {
           "3": "3",
@@ -3063,7 +3253,8 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
+          "Temperature": "Temperatura"
         },
         "ml-models in applab-choice if wrong place": {
           "3": "3",
@@ -3081,7 +3272,8 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
+          "Temperature": "Temperatura"
         },
         "ml-models in applab-choice if wrong place_2022": {
           "3": "3",
@@ -3099,7 +3291,8 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
+          "Temperature": "Temperatura"
         },
         "ml-models in applab-choice intended warnings": {
           "3": "3",
@@ -3121,7 +3314,8 @@
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
           "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
           "Intended Uses": "Finalidad de Uso",
-          "Limitations and Warnings": "Limitaciones y Advertencias"
+          "Limitations and Warnings": "Limitaciones y Advertencias",
+          "Temperature": "Temperatura"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "3": "3",
@@ -3143,7 +3337,8 @@
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
           "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
           "Intended Uses": "Finalidad de Uso",
-          "Limitations and Warnings": "Limitaciones y Advertencias"
+          "Limitations and Warnings": "Limitaciones y Advertencias",
+          "Temperature": "Temperatura"
         },
         "ml-models in applab-choice predict typos": {
           "3": "3",
@@ -3161,7 +3356,8 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
+          "Temperature": "Temperatura"
         },
         "ml-models in applab-choice predict typos_2022": {
           "3": "3",
@@ -3179,7 +3375,8 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
+          "Temperature": "Temperatura"
         },
         "ml-models in applab-zoo assessment": {
           "Yes": "Sí",
@@ -3391,7 +3588,8 @@
           "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "Esta función determina la temperatura actual mediante un sensor de temperatura. Si hace demasiado calor, el coche puede sobrecalentarse y averiarse. Si hace demasiado frío, las piezas del coche pueden congelarse o apretarse y funcionar mal.",
           "What time of day is it?": "¿Qué hora es?",
           "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "Esta función determina la hora del día mediante un sensor de luz. La conducción al atardecer y por la noche suele ser más peligrosa que a plena luz del día.",
-          "Predict!": "¡Predecir!"
+          "Predict!": "¡Predecir!",
+          "Alert": "Alerta"
         },
         "ml-use model card-example3A_2022": {
           "Driver Alert System": "Sistema de Alerta al Conductor",
@@ -3419,7 +3617,8 @@
           "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "Esta función determina la temperatura actual mediante un sensor de temperatura. Si hace demasiado calor, el coche puede sobrecalentarse y averiarse. Si hace demasiado frío, las piezas del coche pueden congelarse o apretarse y funcionar mal.",
           "What time of day is it?": "¿Qué hora es?",
           "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "Esta función determina la hora del día mediante un sensor de luz. La conducción al atardecer y por la noche suele ser más peligrosa que a plena luz del día.",
-          "Predict!": "¡Predecir!"
+          "Predict!": "¡Predecir!",
+          "Alert": "Alerta"
         },
         "CSD U6 Catch the Mouse": {
           "Click on the mouse!": "¡Haz clic en el ratón!"
@@ -3675,7 +3874,8 @@
         },
         "CSD U6 - Physical Output - PA_2222": {
           "On": "Encendido",
-          "Off": "Apagado"
+          "Off": "Apagado",
+          "Blink": "Parpadeo"
         },
         "CSD U6 - Screen Inputs - PracA_2222": {
           "image://bedroom.png": "imagen://bedroom.png",
@@ -4119,6 +4319,145 @@
           "blink": "parpadeo",
           "pulse": "pulso",
           "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "Elige tu estilo de LED y, a continuación, utiliza los botones izquierdo y derecho de tu Circuit Playground para apagar y encender el LED."
+        },
+        "CSD U6 - Accelerometer - A_2222": {
+          "Pioneers in Electronics": "Pioneros en Electrónica",
+          "Click on an image below to learn more about each person": "Pulsa en una de las imágenes siguientes para saber más sobre cada persona"
+        },
+        "CSD U6 - Accelerometer - ChalA_2222": {
+          "pitch:": "cabeceo:",
+          "roll:": "balanceo:"
+        },
+        "CSD U6 - Accelerometer - ChalC_2222": {
+          "Wheels Are Aligned": "Las ruedas están alineadas"
+        },
+        "CSD U6 - Accelerometer - P_2222": {
+          "roll:": "balanceo:",
+          "pitch:": "cabeceo:"
+        },
+        "CSD U6 - Accelerometer - SB1_2222": {
+          "pitch:": "cabeceo:",
+          "roll:": "balanceo:"
+        },
+        "CSD U6 - Accelerometer - SB3_2222": {
+          "????": "????"
+        },
+        "CSD U6 - Combine Inputs - ChalA_2222": {
+          "Mood Ring": "Anillo de Estado de Ánimo",
+          "Choose your mood from the dropdown below and the LED ring will update to reflect it": "Elige tu estado de ánimo en el menú desplegable y el anillo LED se actualizará para reflejarlo.",
+          "Excited": "Emocionado",
+          "Relaxed": "Relajado",
+          "(Add your mood here)": "(Añade aquí tu estado de ánimo)"
+        },
+        "CSD U6 - Combine Inputs - ChalC_2222": {
+          "Trivia Game!": "¡Juego de Trivial!",
+          "[Enter your trivia question here!]": "[¡Introduce aquí tu pregunta del trivial!]",
+          "Check Answer!": "¡Comprueba la respuesta!",
+          "Make sure to enter your answer in all lowercase!": "¡Asegúrate de escribir tu respuesta en minúsculas!"
+        },
+        "CSD U6 - Functions - SB6_2222": {
+          "Click ona food to offer it to the aliens!": "¡Pulsa sobre un alimento para ofrecérselo a los alienígenas!"
+        },
+        "CSD U6 - Functions - SB_2222": {
+          "Light Show!": "¡Espectáculo de luces!"
+        },
+        "CSD U6 - Music - ChalB_2222": {
+          "Happy Birthday": "Cumpleaños Feliz",
+          "My Song": "Mi canción"
+        },
+        "CSD U6 - Music - P_2222": {
+          "261": "261",
+          "329": "329",
+          "493": "493",
+          "392": "392",
+          "E4": "E4",
+          "B4": "B4",
+          "C4": "C4",
+          "G4": "G4"
+        },
+        "CSD U6 - Music - SB2.1_2022": {
+          "Click the buttons from top to bottom to hear a song!": "¡Pulsa los botones de arriba abajo para escuchar una canción!",
+          "Note 1": "Nota 1",
+          "Note 2": "Nota 2",
+          "Note 3": "Nota 3",
+          "Note 4": "Nota 4",
+          "Note 5": "Nota 5",
+          "Note 6": "Nota 6",
+          "Note 7": "Nota 7",
+          "Note 8": "Nota 8"
+        },
+        "CSD U6 - Music - SB2.2_2022": {
+          "Click the buttons from top to bottom to hear a song!": "¡Pulsa los botones de arriba abajo para escuchar una canción!",
+          "Note 1": "Nota 1",
+          "Note 2": "Nota 2",
+          "Note 3": "Nota 3",
+          "Note 4": "Nota 4",
+          "Note 5": "Nota 5",
+          "Note 6": "Nota 6",
+          "Note 7": "Nota 7",
+          "Note 8": "Nota 8"
+        },
+        "CSD U6 - Music - SB2_2222": {
+          "C1": "C1",
+          "C2": "C2",
+          "C3": "C3",
+          "C4": "C4",
+          "C5": "C5",
+          "C6": "C6",
+          "C7": "C7",
+          "C8": "C8",
+          "Press each button to hear the note in that octave!": "¡Pulsa cada botón para escuchar la nota de esa octava!"
+        },
+        "CSD U6 - Music - SB5_2222": {
+          "Press to Ring the Doorbell!": "¡Pulsa para llamar al timbre!"
+        },
+        "CSD U6 - Physical Output - A_2222": {
+          "Little Alien Friend": "Pequeño Amigo Extraterrestre",
+          "Wake Up": "Despertar",
+          "Listen": "Escuchar",
+          "Analyze": "Analizar",
+          "Use this app to communicate with the Little Alien Friend toy!": "¡Utiliza esta aplicación para comunicarte con el juguete Little Alien Friend!",
+          "Sleep": "Dormir"
+        },
+        "CSD U6 - Sensors - ChalC_2222": {
+          "Volume Meter!": "¡Medidor de Volumen!"
+        },
+        "CSD U6 - Sensors - PA_2222": {
+          "Current Temperature in Fahrenheit and Celsius": "Temperatura actual en grados Fahrenheit y Celsius"
+        },
+        "CSD U6 - Sensors - PB_2222": {
+          "Blow On The Circuit Playground to Blow Out the Candles!": "¡Sopla en el Circuit Playground para apagar las velas!"
+        },
+        "CSD U6 - Sensors - PD_2222": {
+          "Volume Meter!": "¡Medidor de Volumen!"
+        },
+        "CSD U6 directional LEDs roll": {
+          "????": "????"
+        },
+        "CSD U6 directional LEDs roll_2018": {
+          "????": "????"
+        },
+        "CSD U6 directional LEDs roll_2019": {
+          "????": "????"
+        },
+        "CSD U6 directional LEDs roll_2021": {
+          "????": "????"
+        },
+        "CSD U6 investigate orientation": {
+          "pitch:": "cabeceo:",
+          "roll:": "balanceo:"
+        },
+        "CSD U6 investigate orientation_2018": {
+          "pitch:": "cabeceo:",
+          "roll:": "balanceo:"
+        },
+        "CSD U6 investigate orientation_2019": {
+          "pitch:": "cabeceo:",
+          "roll:": "balanceo:"
+        },
+        "CSD U6 investigate orientation_2021": {
+          "pitch:": "cabeceo:",
+          "roll:": "balanceo:"
         }
       }
     }

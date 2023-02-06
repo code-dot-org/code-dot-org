@@ -6803,3 +6803,15 @@ es-MX:
               display_name: 'Parte 1: Sesión Sincrónica'
             lessonGroup-3:
               display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introducción al Laboratorio de aplicaciones
+            lessonGroup-3:
+              display_name: Entradas y salidas
