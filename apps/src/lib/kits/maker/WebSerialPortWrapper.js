@@ -30,20 +30,21 @@ export default class WebSerialPortWrapper extends EventEmitter {
    * this function may be removed logic added for the MB in the open() function below,
    * if appropriate.
    */
-  openMBPort() {
+  async openMBPort() {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
     }
     return this.port
       .open({baudRate: SERIAL_BAUD})
       .then(() => {
-        this.writer = this.port.writable.getWriter();
-        this.reader = this.port.readable.getReader();
-      })
-      .then(() => {
         this.portOpen = true;
         this.emit('open');
+        this.writer = this.port.writable.getWriter();
+        this.reader = this.port.readable.getReader();
+
+        this.readLoop();
       })
+      .then(() => this)
       .catch(error => Promise.reject('Failure to open port: ' + error));
   }
 
@@ -56,35 +57,39 @@ export default class WebSerialPortWrapper extends EventEmitter {
     this.port
       .open({baudRate: SERIAL_BAUD})
       .then(() => {
+        this.portOpen = true;
         this.writer = this.port.writable.getWriter();
         this.reader = this.port.readable.getReader();
-      })
-      .then(async () => {
-        this.portOpen = true;
         this.emit('open');
-        while (this.port.readable?.locked) {
-          try {
-            const {value, done} = await this.reader.read();
-            if (done) {
-              break;
-            }
-            this.emit('data', Buffer.from(value));
-          } catch (e) {
-            console.error(e);
-
-            if (e.code === DEVICE_LOST_ERROR_CODE) {
-              this.emit('disconnect');
-            }
-          }
-        }
+        this.readLoop();
       })
+      .then(() => this)
       .catch(error => Promise.reject('Failure to open port: ' + error));
+  }
+
+  async readLoop() {
+    try {
+      while (this.port.readable.locked && this.portOpen) {
+        const {value, done} = await this.reader.read();
+        if (done) {
+          this.reader.releaseLock();
+          break;
+        }
+        this.emit('data', Buffer.from(value));
+      }
+    } catch (e) {
+      console.error(e);
+      if (e.code === DEVICE_LOST_ERROR_CODE) {
+        this.emit('disconnect');
+      }
+    }
   }
 
   write(buffer, encoding, callback) {
     if (!this.portOpen) {
       throw new Error('Requested port cannot be written to until it is open');
     }
+    buffer = buffer instanceof ArrayBuffer ? buffer : new Uint8Array(buffer);
     return this.writer
       .write(buffer)
       .then(() => (callback ? callback() : null))

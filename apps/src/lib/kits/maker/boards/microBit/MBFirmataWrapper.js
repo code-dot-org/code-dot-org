@@ -8,17 +8,14 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
   constructor(portType) {
     super(portType);
     this.digitalCallbacks = [];
+    this.serialPortWebSerial = null;
   }
 
   connectBoard(port) {
     return Promise.resolve()
       .then(() => this.setSerialPort(port))
       .then(() => {
-        if (!isWebSerialPort(port)) {
-          // For now, we are NOT reading or writing to the port if in the WebSerial pathway.
-          // Only opening/closing the port.
-          return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
-        }
+        return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
       })
       .catch(() => {
         return Promise.reject("Couldn't connect to board");
@@ -28,6 +25,8 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
   // Used in setSerialPort, which is copied from setSerialPort in MBFirmataClient,
   // as a wrapper. Lifted into its own function because of linting.
   dataReceived(data) {
+    console.log('dataReceived function - data', data);
+    console.log('this', this);
     if (this.inbufCount + data.length < this.inbuf.length) {
       this.inbuf.set(data, this.inbufCount);
       this.inbufCount += data.length;
@@ -42,10 +41,37 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     } else {
       // Use the given port. Assume the port has been opened by the caller.
       // This branch is for WebSerial pathway - only opening/closing port for now.
-      this.myPort = port;
+      this.myPort = port; // port is a WebSerialPortWrapper
+      this.serialPortWebSerial = port.port;
       this.myPort.on('data', this.dataReceived.bind(this));
+      this.requestFirmataVersion();
+      this.requestFirmwareVersion();
 
       return Promise.resolve();
+    }
+  }
+
+  async disconnect() {
+    // Close and discard the serial port.
+    if (!isWebSerialPort(this.myPort)) {
+      super.disconnect();
+    } else {
+      return new Promise(resolve => {
+        // It can take a moment for the reset() command to reach the board, so defer
+        // closing the serialport for a moment.
+        setTimeout(() => {
+          // Close the serialport, cleaning it up properly so we can open it again
+          // on the next run.
+          if (
+            this.serialPortWebSerial &&
+            typeof this.serialPortWebSerial.close === 'function'
+          ) {
+            this.myPort.close();
+          }
+          this.webSerialSerialPort = null;
+          resolve();
+        }, 50);
+      });
     }
   }
 
