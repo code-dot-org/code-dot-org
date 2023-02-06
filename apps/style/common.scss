@@ -1073,8 +1073,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   #clear-puzzle-header:hover {
-    background-color: $red;
+    background-color: $product_negative_default;
+    color: $neutral_white;
   }
+
   .block-counter-overflow {
     color: $yellow;
   }
