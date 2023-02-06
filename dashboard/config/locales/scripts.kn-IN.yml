@@ -1522,3 +1522,7 @@ kn:
           description_audience: ಪಠ್ಯಕ್ರಮ ಬರಹಗಾರರು
           description_short: ಪಠ್ಯಕ್ರಮ ಆವೃತ್ತಿಗಳ ಮಧ್ಯೆ ಅಧ್ಯಾಯಗಳು ಅಥವಾ ಹಂತಗಳಿಗೆ ಸ್ಟೇಜಿಂಗ್‌
             ಅಪ್‌ಡೇಟ್‌ಗಳಿಗಾಗಿ
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
