@@ -1307,10 +1307,10 @@
   resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-2.0.2.tgz#61c531e4082f0424a8afccd9c87ebe5286744158"
   integrity sha512-wA0nTdhgNI4xGPcODOuQhB43LcvDtwWZcorlNtyuTFJcYHidYOyTkC5i99HpiUxo4qdrt0C3OqkLp1gmJPEBXA==
 
-"@blockly/keyboard-navigation@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@blockly/keyboard-navigation/-/keyboard-navigation-0.3.2.tgz#603daaa19b4a3122f44dfe2366da300f4eec09e3"
-  integrity sha512-+QWwhBEHRdDGgdhgBCHjDt+vyWfbpSOb2WIximzD1SxWvVTb5fKTBSjpQt1L57Vs/GGhQspRx2LzLMsel8tpWg==
+"@blockly/keyboard-navigation@0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@blockly/keyboard-navigation/-/keyboard-navigation-0.3.5.tgz#326cc5bd2065bf4c1f1b555c7f02934bed2226ac"
+  integrity sha512-GH69OnZUnK1ai8B5O+ADaXiowp1Y/KrZd50Bv39BwK8dd9SadgR5cHzSyPQhV5bUi0fQXlGt0zv5zpSUrn2uWQ==
 
 "@blockly/plugin-scroll-options@~3.0.3":
   version "3.0.3"
