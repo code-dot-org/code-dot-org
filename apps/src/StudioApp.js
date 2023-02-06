@@ -1198,9 +1198,11 @@ StudioApp.prototype.inject = function(div, options) {
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
 
-  // Allows Google Blockly labs to use the Zelos renderer instead of the default.
+  // Allows Google Blockly labs to use the Zelos or Thrasos renderer instead of the default.
   if (experiments.isEnabled('zelos')) {
     options.renderer = 'cdo_renderer_zelos';
+  } else if (experiments.isEnabled('thrasos')) {
+    options.renderer = 'cdo_renderer_thrasos';
   }
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };

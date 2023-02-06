@@ -16,6 +16,7 @@ import {
   getDefaultTrackNameExtension,
   playMultiMutator
 } from './extensions';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -65,7 +66,9 @@ export default class MusicBlocklyWorkspace {
       toolbox: getToolbox(),
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: musicLabDarkTheme,
-      renderer: 'cdo_renderer_zelos',
+      renderer: experiments.isEnabled('thrasos')
+        ? 'cdo_renderer_thrasos'
+        : 'cdo_renderer_zelos',
       zoom: {
         startScale: 0.675
       }
