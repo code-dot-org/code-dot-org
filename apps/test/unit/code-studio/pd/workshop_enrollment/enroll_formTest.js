@@ -18,6 +18,12 @@ describe('Enroll Form', () => {
   after(() => {
     server.restore();
   });
+  beforeEach(() => {
+    sinon.spy(jQuery, 'ajax');
+  });
+  afterEach(() => {
+    jQuery.ajax.restore();
+  });
 
   const props = {
     workshop_id: 1,
@@ -45,7 +51,8 @@ describe('Enroll Form', () => {
 
   const extraParams = {
     role: 'Classroom Teacher',
-    grades_teaching: ['Pre-K']
+    grades_teaching: ['Pre-K'],
+    csf_intro_intent: 'Yes'
   };
 
   describe('CSF Enroll Form', () => {
@@ -81,6 +88,12 @@ describe('Enroll Form', () => {
 
   describe('CSF Intro Enroll Form', () => {
     let enrollForm;
+    const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
+    const requiredParams = {
+      ...baseParams,
+      school_info: school_info,
+      ...pick(extraParams, extraRequiredParams)
+    };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
@@ -101,6 +114,15 @@ describe('Enroll Form', () => {
 
     it('displays other factors question', () => {
       assert(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
+    });
+
+    extraRequiredParams.forEach(requiredParam => {
+      it(`cannot submit when ${requiredParam} is missing`, () => {
+        enrollForm.setState(omit(requiredParams, requiredParam));
+        enrollForm.find('#submit').simulate('click');
+        expect(jQuery.ajax.called).to.be.false;
+        expect(enrollForm.state('errors')).to.have.property(requiredParam);
+      });
     });
   });
 
