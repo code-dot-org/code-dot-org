@@ -2,6 +2,8 @@ const EVENTS = {
   // Sign-up flow
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
+  SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
+  ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
 
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_EVENT: 'Course Overview Page Visited',
