@@ -177,7 +177,7 @@ class ReportAbuseController < ApplicationController
 
   def project_validator?
     return false unless current_user
-    return true if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
+    return true if current_user.project_validator?
     false
   end
 
