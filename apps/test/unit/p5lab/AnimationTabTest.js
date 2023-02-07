@@ -6,7 +6,8 @@ describe('AnimationTab', function() {
     var reducer = animationTab.default;
     var initialState = {
       columnSizes: [150, undefined],
-      currentAnimations: {default: '', background: ''}
+      currentAnimations: {default: '', background: ''},
+      currentAnimationType: 'default'
     };
 
     it('has expected initial state', function() {
