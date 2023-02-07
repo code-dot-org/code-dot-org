@@ -155,7 +155,7 @@ OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '' -e $ENV
 sudo -u ubuntu bash -c "aws s3 cp <%=bootstrap_script_path%> - | sudo bash -s -- $OPTIONS"
 
 # Ensure Chef Client is using an up to date TLS/SSL root certificate store from a trusted source (Mozilla via curl.se)
-sudo curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://curl.se/ca/cacert.pem
+sudo curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/production/cookbooks/cacert.pem
 
 CHEF_CDO_APP=<%=CdoApp::CHEF_BIN%>
 cat <<SH > $CHEF_CDO_APP
