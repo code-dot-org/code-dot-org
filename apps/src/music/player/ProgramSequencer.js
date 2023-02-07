@@ -1,5 +1,3 @@
-import Globals from '../globals';
-
 export default class ProgramSequencer {
   constructor() {
     this.stack = [];
@@ -10,12 +8,16 @@ export default class ProgramSequencer {
   }
 
   getCurrentStackEntry() {
-    return this.stack[this.stack.length - 1];
+    if (this.stack.length > 0) {
+      return this.stack[this.stack.length - 1];
+    } else {
+      return null;
+    }
   }
 
   playSequential() {
     const measure =
-      this.stack.length == 0 ? 1 : this.getCurrentStackEntry().measure;
+      this.stack.length === 0 ? 1 : this.getCurrentStackEntry().measure;
     this.stack.push({measure: measure, together: false});
   }
 
@@ -23,23 +25,24 @@ export default class ProgramSequencer {
     const currentStackEntry = this.getCurrentStackEntry();
 
     const nextMeasure = currentStackEntry.measure;
+
     this.stack.pop();
 
-    //if (this.stack.length > 0) {
-    // now the frame we are returning to has to absorb this information.
-    if (currentStackEntry.together) {
-      currentStackEntry.lastMeasures.push(nextMeasure);
-    } else {
-      currentStackEntry.measure = nextMeasure;
+    const nextStackEntry = this.getCurrentStackEntry();
+
+    if (nextStackEntry) {
+      // now the frame we are returning to has to absorb this information.
+      if (nextStackEntry.together) {
+        nextStackEntry.lastMeasures.push(nextMeasure);
+      } else {
+        nextStackEntry.measure = nextMeasure;
+      }
     }
-    //} else {
-    //  console.log('done');
-    //}
   }
 
   playTogether() {
     var nextMeasure =
-      this.stack.length == 0 ? 1 : this.getCurrentStackEntry().measure;
+      this.stack.length === 0 ? 1 : this.getCurrentStackEntry().measure;
     this.stack.push({
       measure: nextMeasure,
       together: true,
@@ -55,32 +58,29 @@ export default class ProgramSequencer {
     // we are returning to the previous stack frame.
     this.stack.pop();
 
-    // now the frame we are returning to has to absorb this information.
-    if (currentStackEntry.together) {
-      currentStackEntry.lastMeasures.push(nextMeasure);
-    } else {
-      currentStackEntry.measure = nextMeasure;
+    const nextStackEntry = this.getCurrentStackEntry();
+
+    if (nextStackEntry) {
+      // now the frame we are returning to has to absorb this information.
+      if (nextStackEntry.together) {
+        nextStackEntry.lastMeasures.push(nextMeasure);
+      } else {
+        nextStackEntry.measure = nextMeasure;
+      }
     }
   }
 
-  playSoundById(id, isBlockInsideWhenRun) {
+  getCurrentMeasure() {
+    return this.getCurrentStackEntry().measure;
+  }
+
+  updateMeasureForPlayByLength(length) {
     const currentStackEntry = this.getCurrentStackEntry();
 
-    const player = Globals.getPlayer();
-    const soundLength = Globals.getPlayer().getLengthForId(id);
-
-    player.playSoundAtMeasureById(
-      id,
-      currentStackEntry.measure,
-      isBlockInsideWhenRun
-    );
-
     if (currentStackEntry.together) {
-      currentStackEntry.lastMeasures.push(
-        currentStackEntry.measure + soundLength
-      );
+      currentStackEntry.lastMeasures.push(currentStackEntry.measure + length);
     } else {
-      currentStackEntry.measure += soundLength;
+      currentStackEntry.measure += length;
     }
   }
 }

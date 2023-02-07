@@ -48,9 +48,16 @@ export const playSoundAtCurrentLocationSimple2 = {
     helpUrl: ''
   },
   generator: ctx =>
-    ` ProgramSequencer.playSoundById(
+    `
+      MusicPlayer.playSoundAtMeasureById(
         "${ctx.getFieldValue('sound')}",
+        ProgramSequencer.getCurrentMeasure(),
         ${isBlockInsideWhenRun(ctx) ? 'true' : 'false'}
+      );
+      ProgramSequencer.updateMeasureForPlayByLength(
+        MusicPlayer.getLengthForId(
+          "${ctx.getFieldValue('sound')}"
+        )
       );
     `
 };
