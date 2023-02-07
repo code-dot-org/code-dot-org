@@ -9,17 +9,22 @@ body {
   color: $neutral-dark;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: $neutral-dark;
+}
+
 h2 {
   margin-bottom: .5em;
 }
 
-h4 {
-  color: $neutral-dark;
+h3 {
+  font-size: 1.75em;
 }
 
 h5 {
   font-family: $gotham-bold, sans-serif;
   font-size: 1.25em;
+  line-height: 1.2;
   margin-bottom: 0.5em;
 }
 
@@ -36,7 +41,23 @@ strong {
   font-family: $gotham-bold, sans-serif;
 }
 
+// Centers a text element
+.center-text { text-align: center !important; }
+
+// Removes the bottom margin
+.no-margin-bottom { margin-bottom: 0 !important;}
+
+// Use these classes to change a section's background color
 section.bg-neutral { background-color: $neutral_light; }
+section.bg-primary { background-color: $brand_primary_light; }
+section.bg-secondary { background-color: $brand_secondary_light; }
+
+// FontAwesome icon defaults
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
 
 // Links & Buttons
 p a,
@@ -113,6 +134,7 @@ ul {
       text-indent: 0 !important;
       display: flex;
       width: 48%;
+      margin: 1.5em 0;
 
       @media screen and (max-width: $width-sm) {
         width: 100%;
@@ -139,14 +161,65 @@ ul {
   }
 }
 
+// Step-by-step list
+ol.steps-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: unset;
+  padding: unset;
+
+  li {
+    padding-left: 0 !important;
+    text-indent: 0 !important;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 20%;
+    margin: 1.5em 0;
+  }
+
+  h4 {
+    width: 100%;
+  }
+}
+
 // FAQs
 details {
-  margin-bottom: 1.5em;
+  padding: 1.5em 1em 1em;
+  border-bottom: 1px solid $neutral_dark80;
+  transition: all ease-in-out .2s;
+
+  &:hover {
+    background: $neutral_light;
+  }
 
   summary {
     font-family: $gotham-bold, sans-serif;
     font-size: 1.125em;
     margin-bottom: .5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & > summary::marker {
+    content: "";
+  }
+
+  & > summary::after {
+    font: var(--fa-font-solid);
+    content: "\f107";
+  }
+
+  &[open] > summary::after {
+    font: var(--fa-font-solid);
+    content: "\f106";
   }
 }
 

@@ -4,11 +4,12 @@ figure.video-responsive {
   margin: unset;
 }
 
-figure.video-responsive > div{
+figure.video-responsive > div {
   position: relative;
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%;
+  border: 1px solid #EAEBEB;
 }
 
 figure.video-responsive > div iframe {
