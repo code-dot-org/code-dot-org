@@ -58,13 +58,19 @@ describe('Enroll Form', () => {
   const ensureFrontendValidation = (form, state, errorProperty) => {
     form.setState(state);
     form.find('#submit').simulate('click');
-    expect(jQuery.ajax.called).to.be.false;
     expect(form.state('errors')).to.have.property(errorProperty);
+    expect(jQuery.ajax.called).to.be.false;
   };
 
   describe('CSF Enroll Form', () => {
     let enrollForm;
-    before(() => {
+    const extraRequiredParams = ['grades_teaching', 'role'];
+    const requiredParams = {
+      ...baseParams,
+      school_info: school_info,
+      ...pick(extraParams, extraRequiredParams)
+    };
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -90,6 +96,23 @@ describe('Enroll Form', () => {
     it("doesn't display describe role question after normal teaching role answer", () => {
       enrollForm.setState({role: 'Librarian'});
       refute(enrollForm.exists('#describe_role'));
+    });
+
+    extraRequiredParams.forEach(requiredParam => {
+      it(`does not submit when ${requiredParam} is missing`, () => {
+        ensureFrontendValidation(
+          enrollForm,
+          omit(requiredParams, requiredParam),
+          requiredParam
+        );
+      });
+    });
+
+    it('submits when all required params are present', () => {
+      enrollForm.setState(requiredParams);
+      enrollForm.find('#submit').simulate('click');
+      expect(enrollForm.state('errors')).to.be.empty;
+      expect(jQuery.ajax.called).to.be.true;
     });
   });
 
@@ -124,13 +147,20 @@ describe('Enroll Form', () => {
     });
 
     extraRequiredParams.forEach(requiredParam => {
-      it(`cannot submit when ${requiredParam} is missing`, () => {
+      it(`does not submit when ${requiredParam} is missing`, () => {
         ensureFrontendValidation(
           enrollForm,
           omit(requiredParams, requiredParam),
           requiredParam
         );
       });
+    });
+
+    it('submits when all required params are present', () => {
+      enrollForm.setState(requiredParams);
+      enrollForm.find('#submit').simulate('click');
+      expect(enrollForm.state('errors')).to.be.empty;
+      expect(jQuery.ajax.called).to.be.true;
     });
   });
 
