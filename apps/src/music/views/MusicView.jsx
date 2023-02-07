@@ -155,7 +155,7 @@ class UnconnectedMusicView extends React.Component {
     try {
       instructions = await response.json();
     } catch (error) {
-      console.error(error);
+      console.error('Instructions load error.', error);
       instructions = null;
     }
     return instructions;

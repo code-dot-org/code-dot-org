@@ -5,6 +5,7 @@ import {musicLabDarkTheme} from './themes';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import {getBlockMode} from '../appConfig';
+import {BlockMode} from '../constants';
 import {defaultWhenRunSimple2Code} from './blocks/simple2';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
@@ -72,7 +73,7 @@ export default class MusicBlocklyWorkspace {
       renderer: experiments.isEnabled('thrasos')
         ? 'cdo_renderer_thrasos'
         : 'cdo_renderer_zelos',
-        noFunctionBlockFrame: true,
+      noFunctionBlockFrame: true,
       zoom: {
         startScale: 0.675
       }
@@ -120,7 +121,7 @@ export default class MusicBlocklyWorkspace {
 
     const topBlocks = this.workspace.getTopBlocks();
 
-    if (AppConfig.getValue('blocks') === 'simple2') {
+    if (getBlockMode() === BlockMode.SIMPLE2) {
       // If there's no when_run block, then we'll generate
       // some custom code that calls all the functions
       // together, simulating tracks mode.
@@ -148,7 +149,7 @@ export default class MusicBlocklyWorkspace {
     }
 
     topBlocks.forEach(block => {
-      if (AppConfig.getValue('blocks') !== 'simple2') {
+      if (getBlockMode() !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
           events.whenRunButton = {
             code: Blockly.JavaScript.blockToCode(block)
