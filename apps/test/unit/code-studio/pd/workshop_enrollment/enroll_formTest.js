@@ -52,7 +52,9 @@ describe('Enroll Form', () => {
   const extraParams = {
     role: 'Classroom Teacher',
     grades_teaching: ['Pre-K'],
-    csf_intro_intent: 'Yes'
+    csf_intro_intent: 'Yes',
+    attended_csf_intro_workshop: 'Yes',
+    csf_has_physical_curriculum_guide: 'Yes'
   };
 
   const ensureFrontendValidation = (form, state, errorProperty) => {
@@ -64,7 +66,7 @@ describe('Enroll Form', () => {
 
   describe('CSF Enroll Form', () => {
     let enrollForm;
-    const extraRequiredParams = ['grades_teaching', 'role'];
+    const extraRequiredParams = ['role', 'grades_teaching'];
     const requiredParams = {
       ...baseParams,
       school_info: school_info,
@@ -166,7 +168,13 @@ describe('Enroll Form', () => {
 
   describe('CSF District Enroll Form', () => {
     let enrollForm;
-    before(() => {
+    const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
+    const requiredParams = {
+      ...baseParams,
+      school_info: school_info,
+      ...pick(extraParams, extraRequiredParams)
+    };
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -187,11 +195,39 @@ describe('Enroll Form', () => {
     it('displays other factors question', () => {
       assert(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
     });
+
+    extraRequiredParams.forEach(requiredParam => {
+      it(`does not submit when ${requiredParam} is missing`, () => {
+        ensureFrontendValidation(
+          enrollForm,
+          omit(requiredParams, requiredParam),
+          requiredParam
+        );
+      });
+    });
+
+    it('submits when all required params are present', () => {
+      enrollForm.setState(requiredParams);
+      enrollForm.find('#submit').simulate('click');
+      expect(enrollForm.state('errors')).to.be.empty;
+      expect(jQuery.ajax.called).to.be.true;
+    });
   });
 
   describe('CSF Deep Dive Enroll Form', () => {
     let enrollForm;
-    before(() => {
+    const extraRequiredParams = [
+      'role',
+      'grades_teaching',
+      'attended_csf_intro_workshop',
+      'csf_has_physical_curriculum_guide'
+    ];
+    const requiredParams = {
+      ...baseParams,
+      school_info: school_info,
+      ...pick(extraParams, extraRequiredParams)
+    };
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
