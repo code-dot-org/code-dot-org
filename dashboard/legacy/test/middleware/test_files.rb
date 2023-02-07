@@ -712,8 +712,8 @@ class FilesTest < FilesApiTestBase
     assert_equal sound_body, last_response.body
 
     # abuse score didn't carry over
-    # note: this test doesn't actually work, since the abuse score functionality
-    # got moved to Rails.
+    # note: these assertions aren't verifying anything, since the abuse score functionality
+    # got moved to Rails, so we can't actually increase the abuse score in this test.
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, CGI.escape(image_filename.downcase))
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, escaped_sound_filename.downcase)
 
