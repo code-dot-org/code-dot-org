@@ -3,6 +3,7 @@
 $thumbnail-size: 105px;
 $thumbnail-border-width: 1px;
 $hover-plus-size: 24px;
+$icon-line-height: 70px;
 
 // Used for the width and height properties of AnimationPreview
 :export {
@@ -40,7 +41,7 @@ $hover-plus-size: 24px;
   background-color: $purple;
   border-color: $purple;
   font-size: calc($thumbnail-size / 2);
-  line-height: $thumbnail-size;
+  line-height: $icon-line-height;
   &:hover {
     background-color: $light_purple;
     border-color: $light_purple;
