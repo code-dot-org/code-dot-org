@@ -1,90 +1,76 @@
 import React from 'react';
 import Congrats from './Congrats';
+import {reduxStore} from '@cdo/storybook/decorators';
+import {Provider} from 'react-redux';
 
-const initialCertificateImageUrl = '/images/placeholder-hoc-image.jpg';
-const defaultProps = {
-  tutorial: 'other',
-  userType: 'signedOut',
-  language: 'en',
-  initialCertificateImageUrl
+export default {
+  title: 'Congrats',
+  component: Congrats
 };
 
-export default storybook => {
-  return storybook
-    .storiesOf('Congrats/Congrats', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Congrats - Applab, signed out',
-        description: `Congrats component if Applab tutorial completed`,
-        story: () => <Congrats {...defaultProps} tutorial="applab-intro" />
-      },
-      {
-        name: 'Congrats - Applab, student',
-        description: `Congrats component if Applab tutorial completed, student`,
-        story: () => (
-          <Congrats
-            {...defaultProps}
-            tutorial="applab-intro"
-            userType="student"
-          />
-        )
-      },
-      {
-        name: 'Congrats - pre-2017 Minecraft, signed out',
-        description: `Congrats component if either pre-2017 Minecraft tutorial completed`,
-        story: () => <Congrats {...defaultProps} tutorial="minecraft" />
-      },
-      {
-        name: 'Congrats - pre-2017 Minecraft, student',
-        description: `Congrats component if either pre-2017 Minecraft tutorial completed`,
-        story: () => (
-          <Congrats {...defaultProps} tutorial="minecraft" userType="student" />
-        )
-      },
-      {
-        name: 'Congrats - 2017 Minecraft, signed out',
-        description: `Congrats component if 2017 Minecraft tutorial completed`,
-        story: () => <Congrats {...defaultProps} tutorial="hero" />
-      },
-      {
-        name: 'Congrats - 2017 Minecraft, student',
-        description: `Congrats component if 2017 Minecraft tutorial completed`,
-        story: () => (
-          <Congrats {...defaultProps} tutorial="hero" userType="student" />
-        )
-      },
-      {
-        name: 'Congrats - 2017 Minecraft, student, Korean',
-        description: `Congrats component if 2017 Minecraft tutorial completed, in Korean`,
-        story: () => (
-          <Congrats
-            {...defaultProps}
-            tutorial="hero"
-            userType="student"
-            language="ko"
-          />
-        )
-      },
-      {
-        name: 'Congrats - 2018 Minecraft, signed out',
-        description: `Congrats component if 2018 Minecraft Aquatic tutorial completed`,
-        story: () => <Congrats {...defaultProps} tutorial="aquatic" />
-      },
-      {
-        name: 'Congrats - other, signed out',
-        description: `Congrats component if any other Code.org tutorial completed`,
-        story: () => <Congrats {...defaultProps} />
-      },
-      {
-        name: 'Congrats - other, student',
-        description: `Congrats component if any other Code.org tutorial completed`,
-        story: () => <Congrats {...defaultProps} userType="student" />
-      },
-      {
-        name: 'Congrats - other, teacher',
-        description: `Congrats component if any other Code.org tutorial completed`,
-        story: () => <Congrats {...defaultProps} userType="teacher" />
-      }
-    ]);
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <Congrats
+      language={'en'}
+      initialCertificateImageUrl={'/images/placeholder-hoc-image.jpg'}
+    />
+  </Provider>
+);
+
+export const CongratsAppLabSignedOut = Template.bind({});
+CongratsAppLabSignedOut.args = {
+  tutorial: 'applab-intro',
+  userType: 'signedOut'
+};
+
+export const CongratsAppLabStudent = Template.bind({});
+CongratsAppLabStudent.args = {
+  tutorial: 'applab-intro',
+  userType: 'student'
+};
+
+export const CongratsMinecraftPre2017SignedOut = Template.bind({});
+CongratsMinecraftPre2017SignedOut.args = {
+  tutorial: 'minecraft'
+};
+
+export const CongratsMinecraftPre2017Student = Template.bind({});
+CongratsMinecraftPre2017Student.args = {
+  tutorial: 'minecraft',
+  userType: 'student'
+};
+
+export const Congrats2017MinecraftSignedout = Template.bind({});
+Congrats2017MinecraftSignedout.args = {
+  tutorial: 'hero'
+};
+
+export const Congrats2017MinecraftStudent = Template.bind({});
+Congrats2017MinecraftStudent.args = {
+  tutorial: 'hero',
+  userType: 'student'
+};
+
+export const Congrats2017MinecraftStudentKorean = Template.bind({});
+Congrats2017MinecraftStudentKorean.args = {
+  tutorial: 'hero',
+  userType: 'student',
+  language: 'ko'
+};
+
+export const Congrats2018MinecraftSignedOut = Template.bind({});
+Congrats2018MinecraftSignedOut.args = {
+  tutorial: 'aquatic'
+};
+
+export const CongratsOtherSignedOut = Template.bind({});
+
+export const CongratsOtherStudent = Template.bind({});
+CongratsOtherSignedOut.args = {
+  userType: 'student'
+};
+
+export const CongratsOtherTeacher = Template.bind({});
+CongratsOtherTeacher.args = {
+  userType: 'teacher'
 };
