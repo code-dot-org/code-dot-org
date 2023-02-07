@@ -13,16 +13,12 @@ import * as shapes from '../shapes';
 import i18n from '@cdo/locale';
 import {P5LabInterfaceMode, P5LabType} from '../constants.js';
 import experiments from '@cdo/apps/util/experiments';
-import {CURRENT_ANIMATION_TYPE} from '../constants';
-
 /**
  * Root of the animation editor interface mode for GameLab
  */
 class AnimationTab extends React.Component {
   static propTypes = {
     channelId: PropTypes.string.isRequired,
-    currentAnimationType: PropTypes.oneOf(Object.values(CURRENT_ANIMATION_TYPE))
-      .isRequired,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
@@ -39,7 +35,7 @@ class AnimationTab extends React.Component {
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
-    currentAnimations: shapes.CurrentAnimations,
+    currentAnimation: shapes.AnimationKey,
     defaultQuery: PropTypes.object
   };
 
@@ -47,7 +43,7 @@ class AnimationTab extends React.Component {
     const {
       channelId,
       columnSizes,
-      currentAnimationType,
+      currentAnimation,
       defaultQuery,
       hideAnimationNames,
       hideBackgrounds,
@@ -56,11 +52,10 @@ class AnimationTab extends React.Component {
       labType,
       libraryManifest,
       onColumnWidthsChange,
-      pickerType,
-      currentAnimations
+      pickerType
     } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
-    if (currentAnimations[currentAnimationType]) {
+    if (currentAnimation) {
       hidePiskelStyle = {visibility: 'hidden'};
     }
     const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
@@ -158,9 +153,11 @@ const styles = {
 };
 export default connect(
   state => ({
-    currentAnimationType: state.animationTab.currentAnimationType,
-    columnSizes: state.animationTab.columnSizes,
-    currentAnimations: state.animationTab.currentAnimations
+    currentAnimation:
+      state.animationTab.currentAnimations[
+        state.animationTab.currentAnimationType
+      ],
+    columnSizes: state.animationTab.columnSizes
   }),
   dispatch => ({
     onColumnWidthsChange(widths) {
