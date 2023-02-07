@@ -14,7 +14,7 @@ export const whenRunSimple2 = {
     message0: 'when run',
     inputsInline: true,
     nextStatement: null,
-    colour: 230,
+    style: 'setup_blocks',
     tooltip: 'when run',
     helpUrl: ''
   },
@@ -43,7 +43,7 @@ export const playSoundAtCurrentLocationSimple2 = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
+    style: 'music_blocks',
     tooltip: 'play sound',
     helpUrl: ''
   },
@@ -77,7 +77,7 @@ export const playSoundsTogether = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
+    style: 'music_blocks',
     tooltip: 'play sounds together',
     helpUrl: ''
   },
@@ -103,7 +103,7 @@ export const playSoundsSequential = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
+    style: 'music_blocks',
     tooltip: 'play sounds sequentially',
     helpUrl: ''
   },
