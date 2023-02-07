@@ -13,7 +13,6 @@ import {
 } from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
-import DetailViewResponse from './detail_view_response';
 import {
   RegionalPartnerDropdown,
   UNMATCHED_PARTNER_VALUE,
@@ -48,6 +47,8 @@ import {
   PROGRAM_CSA,
   getProgramInfo
 } from '../application/teacher/TeacherApplicationConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const NA = 'N/A';
 
@@ -99,13 +100,7 @@ export class DetailViewContents extends React.Component {
       pd_workshop_id: PropTypes.number,
       pd_workshop_name: PropTypes.string,
       pd_workshop_url: PropTypes.string,
-      fit_workshop_id: PropTypes.number,
-      fit_workshop_name: PropTypes.string,
-      fit_workshop_url: PropTypes.string,
       application_guid: PropTypes.string,
-      registered_teachercon: PropTypes.bool,
-      registered_fit_weekend: PropTypes.bool,
-      attending_teachercon: PropTypes.bool,
       school_stats: PropTypes.object,
       status_change_log: PropTypes.arrayOf(PropTypes.object),
       scholarship_status: PropTypes.string,
@@ -145,6 +140,7 @@ export class DetailViewContents extends React.Component {
     return {
       editing: false,
       status: this.props.applicationData.status,
+      last_logged_status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
       notes_2: this.props.applicationData.notes_2,
@@ -166,7 +162,6 @@ export class DetailViewContents extends React.Component {
         this.props.applicationData.regional_partner_id ||
         UNMATCHED_PARTNER_VALUE,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
-      fit_workshop_id: this.props.applicationData.fit_workshop_id,
       scholarship_status: this.props.applicationData.scholarship_status,
       bonus_point_questions: this.scoreableQuestions['bonusPoints'],
       cantSaveStatusReason: '',
@@ -196,9 +191,7 @@ export class DetailViewContents extends React.Component {
   };
 
   handleStatusChange = event => {
-    const workshopAssigned =
-      this.props.applicationData.pd_workshop_id ||
-      this.props.applicationData.fit_workshop_id;
+    const workshopAssigned = this.props.applicationData.pd_workshop_id;
     if (
       !this.state.scholarship_status &&
       ScholarshipStatusRequiredStatuses.includes(event.target.value)
@@ -252,12 +245,6 @@ export class DetailViewContents extends React.Component {
   handleSummerWorkshopChange = selection => {
     this.setState({
       pd_workshop_id: selection ? selection.value : null
-    });
-  };
-
-  handleFitWorkshopChange = selection => {
-    this.setState({
-      fit_workshop_id: selection ? selection.value : null
     });
   };
 
@@ -327,6 +314,17 @@ export class DetailViewContents extends React.Component {
       if (this.props.onUpdate) {
         this.props.onUpdate(applicationData);
       }
+
+      // Log if the application status changed
+      if (this.state.status !== this.state.last_logged_status) {
+        analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+          'application id': this.props.applicationId,
+          'application status': this.state.status
+        });
+        this.setState({
+          last_logged_status: this.state.status
+        });
+      }
     });
   };
 
@@ -354,35 +352,6 @@ export class DetailViewContents extends React.Component {
           deleted: false,
           showDeleteApplicationConfirmation: false
         });
-      });
-  };
-
-  handleDeleteFitWeekendRegistrationClick = () => {
-    this.setState({showDeleteFitWeekendRegistrationConfirmation: true});
-  };
-
-  handleDeleteFitWeekendRegistrationCancel = () => {
-    this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
-  };
-
-  handleDeleteFitWeekendRegistrationConfirmed = () => {
-    $.ajax({
-      method: 'DELETE',
-      url: `/pd/fit_weekend_registration/${
-        this.props.applicationData.application_guid
-      }`
-    })
-      .done(() => {
-        this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
-        if (this.props.onUpdate) {
-          this.props.onUpdate({
-            ...this.props.applicationData,
-            registered_fit_weekend: false
-          });
-        }
-      })
-      .fail(() => {
-        this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
       });
   };
 
@@ -427,27 +396,6 @@ export class DetailViewContents extends React.Component {
         }}
         editing={!!this.state.editing}
         onChange={this.handleSummerWorkshopChange}
-      />
-    );
-  };
-
-  renderFitWeekendAnswer = () => {
-    return (
-      <DetailViewWorkshopAssignmentResponse
-        question="FIT Workshop"
-        courseName={this.props.applicationData.course_name}
-        subjectType="fit"
-        year={parseInt(
-          this.props.applicationData.application_year.split('-')[0],
-          10
-        )}
-        assignedWorkshop={{
-          id: this.state.fit_workshop_id,
-          name: this.props.applicationData.fit_workshop_name,
-          url: this.props.applicationData.fit_workshop_url
-        }}
-        editing={!!(this.state.editing && this.props.isWorkshopAdmin)}
-        onChange={this.handleFitWorkshopChange}
       />
     );
   };
@@ -520,24 +468,6 @@ export class DetailViewContents extends React.Component {
             >
               Delete Application
             </MenuItem>
-            {this.props.applicationData.registered_fit_weekend && (
-              <MenuItem
-                style={styles.delete}
-                onSelect={this.handleDeleteFitWeekendRegistrationClick}
-              >
-                Delete FiT Weekend Registration
-              </MenuItem>
-            )}
-            {this.props.applicationData.registered_fit_weekend && (
-              <ConfirmationDialog
-                show={this.state.showDeleteFitWeekendRegistrationConfirmation}
-                onOk={this.handleDeleteFitWeekendRegistrationConfirmed}
-                onCancel={this.handleDeleteFitWeekendRegistrationCancel}
-                headerText="Delete FiT Weekend Registration"
-                bodyText="Are you sure you want to delete this FiT Weekend registration? You will not be able to undo this."
-                okText="Delete"
-              />
-            )}
           </SplitButton>
         </div>
       );
@@ -678,36 +608,6 @@ export class DetailViewContents extends React.Component {
     );
   };
 
-  renderRegistrationLinks = () => {
-    const registrationLinks = [];
-
-    const buildRegistrationLink = urlKey => (
-      <a href={`/pd/${urlKey}/${this.props.applicationData.application_guid}`}>
-        {`${window.location.host}/pd/${urlKey}/${
-          this.props.applicationData.application_guid
-        }`}
-      </a>
-    );
-
-    if (
-      this.props.isWorkshopAdmin &&
-      this.props.applicationData.status === 'accepted' &&
-      this.props.applicationData.locked
-    ) {
-      if (this.props.applicationData.fit_workshop_id) {
-        registrationLinks.push(
-          <DetailViewResponse
-            question="FiT Weekend Registration Link"
-            layout="lineItem"
-            answer={buildRegistrationLink('fit_weekend_registration')}
-          />
-        );
-      }
-    }
-
-    return registrationLinks;
-  };
-
   renderNotes = () => {
     let notesFields = [];
     [
@@ -810,6 +710,12 @@ export class DetailViewContents extends React.Component {
     this.setState({principalApproval});
     this.setState({
       principalApprovalIsRequired: !this.state.principalApprovalIsRequired
+    });
+    analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+      'application id': this.props.applicationId,
+      'application status': this.state.principalApprovalIsRequired
+        ? 'awaiting_admin_approval'
+        : 'unreviewed'
     });
   };
 

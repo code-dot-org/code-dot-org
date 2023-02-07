@@ -9,7 +9,8 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: /.*code.org.*|.*hourofcode.com.*/ do
+  # This matches any host that is not the codeprojects hostname
+  constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
     get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
@@ -105,7 +106,7 @@ Dashboard::Application.routes.draw do
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
     # User-facing section routes
-    resources :sections, only: [:show] do
+    resources :sections, only: [:show, :new] do
       member do
         post 'log_in'
       end

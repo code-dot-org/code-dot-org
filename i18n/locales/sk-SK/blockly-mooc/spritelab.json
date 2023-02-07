@@ -77,7 +77,6 @@
   "didntMoveRight": "Tvoja postava sa nepohla doprava.",
   "didntMoveUp": "Tvoja postava sa nepohla hore.",
   "didntPressKey": "Nezabudni po spustení programu stlačiť šípku. Môžeš klikať na oranžové tlačidlá pod hracou plochou alebo tlačiť tlačidlá na klávesnici.",
-  "errorLoadingAnimation": "Vyzerá to, že sa tvoja animácia \"{animationName}\" nechce načítať. Uisti sa, že máš dobré internetové pripojenie, a vyskúšaj stránku znova načítať. Ak tento problém pokračuje, je možné, že táto animácia nefunguje. V takom prípade ju budeš musieť pred pokračovaním odstrániť.",
   "eventsOneChange": "Tvoja postava sa zmenila, ale iba raz. Otestuj svoj program tým, že tlačidlo ťukneš niekoľkokrát, a snaž sa použiť správny blok. \n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"veľkosť\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Tvoja postava by mala mať presne tri správania. Blok `zastaví všetko` skús presunúť na iné miesto vo svojom kóde. ",
   "foodNotTouchPet": "Posuň jedlo tak, aby sa dotklo tvojho zvieratka.",

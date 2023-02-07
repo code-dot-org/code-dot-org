@@ -162,6 +162,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Úpravy virtuálnych lekcií"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Zdroj"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Silnejšie heslá: situácie ak/tak",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
@@ -374,6 +377,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Úpravy virtuálnych lekcií"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Zdroj"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Objav silu slov: kvíz pre lekciu",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -548,6 +554,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Úpravy virtuálnych lekcií"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Zdroj"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Buď super digitálny občan: snímky pre lekciu",
@@ -908,7 +917,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprites_in_action/express/2022": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "Prezentácia"
         },
@@ -1234,6 +1243,9 @@
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Úpravy virtuálnych lekcií"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Zdroj"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "STOP zákernosti na internete: Prezentácia k lekcii",
@@ -1909,7 +1921,7 @@
           "type": "Príklad"
         },
         "plotting_shapes/csd/2022": {
-          "name": "Tvorba tvarov",
+          "name": "Kreslenie tvarov",
           "type": "Prezentácia"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
@@ -1991,12 +2003,12 @@
           "type": "Prezentácia"
         },
         "sprite_properties/csd/2022": {
-          "name": "Vlastnosti postáv",
+          "name": "Vlastnosti sprajtov",
           "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
           "type": "Zdroj"
         },
         "sprite_properties_1/csd/2022": {
-          "name": "Vlastnosti postáv",
+          "name": "Vlastnosti sprajtov",
           "type": "Prezentácia"
         },
         "text/csd/2022": {
@@ -2104,7 +2116,7 @@
           "type": "Prezentácia"
         },
         "keyboard_input/csd/2022": {
-          "name": "Stlačenie kláves ako vstup",
+          "name": "Vstup z klávesnice",
           "type": "Prezentácia"
         },
         "if-else_statements/csd/2022": {
@@ -2118,7 +2130,7 @@
           "type": "Video"
         },
         "mouse_input/csd/2022": {
-          "name": "Vstup myši",
+          "name": "Vstup pomocou myši",
           "type": "Prezentácia"
         },
         "extra_code_in_challenge_levels_1/csd/2022": {
@@ -2203,17 +2215,17 @@
           "type": "Príklad"
         },
         "side_scroller/csd/2022": {
-          "name": "Posúvačka (side-scroller)",
+          "name": "Plošinovka",
           "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
           "type": "Hodnotenie"
         },
         "side_scroller_1/csd/2022": {
-          "name": "Posúvačka (side-scroller)",
+          "name": "Plošinovka",
           "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
           "type": "Sprievodca projektom"
         },
         "mini-project_-_side_scroller/csd/2022": {
-          "name": "Miniprojekt – Side-scroller",
+          "name": "Miniprojekt – Plošinovka",
           "type": "Prezentácia"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
@@ -2266,7 +2278,7 @@
           "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit"
         },
         "the_game_design_process/csd/2022": {
-          "name": "Proces tvorby hry",
+          "name": "Proces návrhu hry",
           "type": "Prezentácia"
         },
         "planning_your_platform_game/csd/2022": {
@@ -2280,7 +2292,7 @@
           "type": "Sprievodca aktivitou"
         },
         "using_the_game_design_process/csd/2022": {
-          "name": "Využitie procesu na tvorbu hry",
+          "name": "Využitie procesu návrhu hry",
           "type": "Prezentácia"
         },
         "make_your_own_game/csd/2022": {
@@ -3267,7 +3279,7 @@
         },
         "classifying_fish/csd/2022": {
           "name": "Klasifikácia rýb",
-          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
+          "url": "https://docs.google.com/document/d/1xExZMqHs0IjK9UVexgfOcJ6Ifc-YgdSFUbYxhsVJixw/view",
           "type": "Sprievodca aktivitou"
         },
         "introduction_to_machine_learning/csd/2022": {
@@ -3280,7 +3292,7 @@
         },
         "types_of_machine_learning_1/csd/2022": {
           "name": "Typy strojového učenia",
-          "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
+          "url": "https://docs.google.com/document/d/1WgWI_zD_Hjji-dtWRNotvu3W6-jJNFhIvxR_DGw_XsE",
           "type": "Sprievodca aktivitou"
         },
         "types_of_machine_learning_2/csd/2022": {
@@ -4150,7 +4162,7 @@
           "type": "Zdroj"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "Prezentácia"
         },
@@ -5236,7 +5248,7 @@
           "type": "Zdroj"
         },
         "sprites_in_action/express/2021": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "Prezentácia"
         },
@@ -5572,7 +5584,7 @@
         },
         "classifying_fish/csd/2021": {
           "name": "Klasifikácia rýb",
-          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
+          "url": "https://docs.google.com/document/d/1xExZMqHs0IjK9UVexgfOcJ6Ifc-YgdSFUbYxhsVJixw/view",
           "type": "Sprievodca aktivitou"
         },
         "introduction_to_machine_learning/csd/2021": {
@@ -5592,7 +5604,7 @@
         },
         "types_of_machine_learning_1/csd/2021": {
           "name": "Typy strojového učenia",
-          "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
+          "url": "https://docs.google.com/document/d/1WgWI_zD_Hjji-dtWRNotvu3W6-jJNFhIvxR_DGw_XsE",
           "type": "Sprievodca aktivitou"
         },
         "types_of_machine_learning_2/csd/2021": {
@@ -6528,7 +6540,7 @@
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "name": "Objavujeme informatiku – Lekcia 3 - Interaktívne animácie a hry",
-          "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
+          "url": "https://docs.google.com/presentation/d/11PlPXbWqenlbu8dozL1tiLEyElDufkML60xLWigUc2I/",
           "type": "Prezentácia"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
@@ -6779,12 +6791,12 @@
           "type": "Príklad"
         },
         "side-scroller-1/csd/2021": {
-          "name": "Posúvačka (side-scroller)",
+          "name": "Plošinovka",
           "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
           "type": "Hodnotenie"
         },
         "side-scroller/csd/2021": {
-          "name": "Posúvačka (side-scroller)",
+          "name": "Plošinovka",
           "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
           "type": "Sprievodca projektom"
         },

@@ -167,9 +167,7 @@ def restore_redacted_files
         # data doesn't get lost
         restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
         translated_data = JSON.parse(File.read(translated_path))
-        File.open(translated_path, "w") do |file|
-          file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
-        end
+        File.write(translated_path, JSON.pretty_generate(translated_data.deep_merge(restored_data)))
       else
         # Everything else is differentiated only by the plugins used
         plugins = []
@@ -252,9 +250,7 @@ def sanitize_data_and_write(data, dest_path)
     end
 
   FileUtils.mkdir_p(File.dirname(dest_path))
-  File.open(dest_path, 'w+') do |f|
-    f.write(dest_data)
-  end
+  File.write(dest_path, dest_data)
 end
 
 # Wraps hash in correct format to be loaded by our i18n backend.
@@ -396,10 +392,20 @@ def distribute_translations(upload_manifests)
       sanitize_file_and_write(loc_file, destination)
     end
 
-    ### Merge ml-playground datasets into apps' ailab JSON
+    ### ml-playground strings to Apps directory
+    Dir.glob("#{locale_dir}/external-sources/ml-playground/mlPlayground.json") do |loc_file|
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      basename = File.basename(loc_file, '.json')
+      destination = "apps/i18n/#{basename}/#{js_locale}.json"
+      sanitize_file_and_write(loc_file, destination)
+    end
+
+    ### Merge ml-playground datasets into apps' mlPlayground JSON
     Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
-      ailab_path = "apps/i18n/ailab/#{js_locale}.json"
-      name = File.basename(loc_file, '.json')
+      ml_playground_path = "apps/i18n/mlPlayground/#{js_locale}.json"
+      dataset_id = File.basename(loc_file, '.json')
       relative_path = loc_file.delete_prefix(locale_dir)
       next unless file_changed?(locale, relative_path)
 
@@ -407,10 +413,10 @@ def distribute_translations(upload_manifests)
       next if external_translations.empty?
 
       # Merge new translations
-      existing_translations = JSON.parse(File.read(ailab_path))
+      existing_translations = JSON.parse(File.read(ml_playground_path))
       existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
-      existing_translations['datasets'][name] = external_translations
-      sanitize_data_and_write(existing_translations, ailab_path)
+      existing_translations['datasets'][dataset_id] = external_translations
+      sanitize_data_and_write(existing_translations, ml_playground_path)
     end
 
     ### Animation library

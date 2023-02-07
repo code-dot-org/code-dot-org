@@ -271,6 +271,7 @@ zh-TW:
   teacher_mailer:
     new_teacher_subject: '歡迎來到 Code.org ！'
     delete_teacher_subject: 'Code.org 通知：你的帳戶已被刪除'
+    verified_teacher_subject: 'Code.org 教師驗證 - 成功'
   section:
     your_section:
       one: '你的學習小組：'
@@ -610,6 +611,7 @@ zh-TW:
     store: '商店'
     cookie_notice: 'Cookie通知'
     view_code: '檢視程式碼'
+    locale_select: "選擇語言"
   reference_area:
     title: '需要幫忙？'
     subtitle: '看看這些影片和提示'
@@ -634,6 +636,8 @@ zh-TW:
       applab_unsupported_tablet: "在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
       gamelab_unsupported_tablet: "在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
       weblab_unsupported_locale_storage: "很抱歉，在這個瀏覽器上使用隱藏模式，會導致載入 Web Lab 時發生問題，請將瀏覽器切換回正常模式，造成不便請見諒。"
+  deprecation:
+    algebra_lab: "代數裡的 CS 課程和內容將被廢除。在未來幾個月內，將不再在這個 lab 裡提供。請轉往查看 [Bootstrap：代數](%{bootstrap_algebra_url}。[了解更多](%{cs_algebra_url})。"
   slow_loading: '請再等等，這次讀取的時間比較久一點.......'
   try_reloading: '請重新載入頁面'
   next_stage: '完成！繼續下個關卡'
@@ -672,29 +676,17 @@ zh-TW:
       body_short: "設計一個 App（應用程式），用積木或 JavaScript 來編程使它運作，然後在幾秒鐘內分享您的應用程式。 a"
       audience: '年齡 13+'
       cta: '學習如何做'
-    dance:
-      title: '舞蹈派對'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: '舞蹈派對'
-    hello-world:
-      title: '你好世界'
-      body: '從四個有趣的主題中選擇，在你創建的世界中為交互式角色編碼。'
-    poem-art:
-      title: '詩歌藝術'
-      body: '表達自己！使用代碼創建動畫詩歌。'
-    hoc:
-      title: '經典迷宮'
-      body: '試試數百萬人已經體驗過的計算機科學基礎課程。'
+    dance:
+      title: '舞蹈派對'
     flappy:
       title: '像素鳥程式'
       body: '想要在 10 分鐘內寫個你自己的遊戲嗎？試試我們的像素鳥程式教程！'
-    20-hour:
-      title: '速成課程'
-      body: '這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。'
-      body_short: '在速成課程的課程 2-4 中學習基本的計算機科學。'
-    hoc2014:
-      try_new_tutorial: '試試我們新的一小時玩程式教程（測試版）'
-      try_frozen: '來自冰雪奇緣的安娜及艾莎。'
+    frozen:
+      title: "冰雪奇緣"
     gallery:
       title: "藝廊"
       body: "觀看由用戶建立的應用程式及藝術畫作"
@@ -703,18 +695,21 @@ zh-TW:
       body: "Game Lab 這個編程環境可以讓你利用現成的一些物件、角色創作簡單能互動的動畫、遊戲，。"
       audience: "年齡 13+"
       cta: "學習如何做"
+    hello-world:
+      title: '你好世界'
+      body: '從四個有趣的主題中選擇，在你創建的世界中為交互式角色編碼。'
+    hero:
+      title: "Minecraft"
+      body: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
     hoc-encryption:
       title: "簡單加密"
       body: "學生將會學習建立和破解加密訊息的技術。"
-    weblab:
-      title: "Web Lab (beta)"
-      body: "Web Lab 是個編程環境，透過它，你可以用 HTML 和 CSS 來建立簡單的網頁，然後快速地把你設計好的網站發佈出去。"
-      audience: "年齡 13+"
-      cta: "學習如何做"
-    frozen:
-      title: "冰雪奇緣"
-    starwars:
-      title: "星際大戰"
+    hoc:
+      title: '經典迷宮'
+      body: '試試數百萬人已經體驗過的計算機科學基礎課程。'
+    hoc2014:
+      try_new_tutorial: '試試我們新的一小時玩程式教程（測試版）'
+      try_frozen: '來自冰雪奇緣的安娜及艾莎。'
     infinity:
       title: "迪士尼無限 Play Lab"
       body: "用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。"
@@ -724,30 +719,39 @@ zh-TW:
     minecraft2016:
       title: "Minecraft"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
+    poem-art:
+      title: '詩歌藝術'
+      body: '表達自己！使用代碼創建動畫詩歌。'
     sports:
       title: "運動"
       body: "製作一個籃球遊戲或是混合搭配多種不同的運動的遊戲。"
+    starwars:
+      title: "星際大戰"
     text-compression:
       title: "文字壓縮"
       body: "在本節課，學生會利用文字壓縮小工具，將圖型替換成符號來壓縮文字。"
-    unplugged:
-      title: "不插電的教學活動"
-      audience: "年齡 4+"
-      body: "我們已經編寫一系列的不插電教學內容，讓你能夠在課堂上使用。現在你可以教授計算機科學基礎，不管你的班級裡頭有沒有電腦！試著使用這些教學內容，不管是當作一門獨立課程，還是當作任何計算機課程的補充教材。"
-      body_short: "如果你沒有電腦，不妨試試這些不插電教學活動。"
-    unplugged_conditionals:
-      title: "條件判斷（Conditionals）"
-      body: "在這個「不插電」活動中使用一副撲克牌學習演算法和條件判斷式"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab 是個編程環境，透過它，你可以用 HTML 和 CSS 來建立簡單的網頁，然後快速地把你設計好的網站發佈出去。"
+      audience: "年齡 13+"
+      cta: "學習如何做"
     widgets:
       title: "視窗元件"
       body: "學生可以親身使用這些電子工具，探索計算機科學原理課程中會學到的概念。讓他們使用那些元件去學習，又或者為你的班級建立「單一概念」的課堂。"
       audience: "14 歲以上"
       cta: "學習如何做"
+    unplugged_conditionals:
+      title: "條件判斷（Conditionals）"
+      body: "在這個「不插電」活動中使用一副撲克牌學習演算法和條件判斷式"
+    unplugged:
+      title: "不插電的教學活動"
+      audience: "年齡 4+"
+      body: "我們已經編寫一系列的不插電教學內容，讓你能夠在課堂上使用。現在你可以教授計算機科學基礎，不管你的班級裡頭有沒有電腦！試著使用這些教學內容，不管是當作一門獨立課程，還是當作任何計算機課程的補充教材。"
+      body_short: "如果你沒有電腦，不妨試試這些不插電教學活動。"
+    20-hour:
+      title: '速成課程'
+      body: '這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。'
+      body_short: '在速成課程的課程 2-4 中學習基本的計算機科學。'
   landing:
     prerelease_tutorial: "這個教程仍在 **測試階段**，或會根據收到的意見、作出改善而有所修改。"
     report_bug: "臭蟲回報"
@@ -1047,6 +1051,8 @@ zh-TW:
         not_listed: '不在清單裡'
         none: '不想回答'
       school_country:
+        barbados: '巴巴多斯'
+        belize: '伯利茲'
         canada: 'Canada'
         chile: 'Chile'
         colombia: '哥倫比亞'
@@ -1161,4 +1167,21 @@ zh-TW:
       forbidden: "用戶無法更新學生的可鎖定狀態"
   reset_predict_progress_button: "刪除答案"
   pixelation:
+    raw_format: "原始格式"
+    raw_format_alt: "查看無任何格式的位元"
+    readable_format: "可讀格式"
+    readable_format_alt: "按像素分隔檢視位元"
+    save_image: "儲存圖片"
+    actual_size: "實際大小"
+    image_file_format_header: "圖片檔案格式"
+    image_file_format_width: "寬度：1 字節"
+    image_file_format_height: "高度：1 字節"
+    image_file_format_bits_per_pixel: "每像素位元數：1 字節"
+    image_file_format_data_a: "n 位元像素數據"
+    image_file_format_data_b: "n = 寬度 * 高度 * 每像素的位元"
+    image_width: "圖片寬度"
+    image_height: "圖片高度"
+    bits_per_pixel_header: "每像素位元數"
     binary: "二進制（Binary）"
+    hexadecimal: "十六進制"
+    pixel_format_header: "像素格式"

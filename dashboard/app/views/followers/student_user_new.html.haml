@@ -81,10 +81,17 @@
                 .labelblock
                   = t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-              .itemblock
-                .labelblock
-                  = t('signup_form.gender')
-                = f.select :gender, gender_options
+              - if ask_gender_experiment?(request, session.id.to_s)
+                - gender_input_type = gender_input_type?(request, session)
+                - SignUpTracking.log_gender_input_type_started(session, gender_input_type, request.locale, 'section_signup')
+                - if gender_input_type != User::GenderExperimentHelper::GENDER_INPUT_TYPE_NONE
+                  .itemblock
+                    .labelblock
+                      = t('signup_form.gender')
+                    - if gender_input_type == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
+                      = f.select :gender, gender_options
+                    - else
+                      = f.text_field :gender
             %br/
             = submit_tag 'Register', class: 'btn btn-primary'
 

@@ -602,7 +602,7 @@
         },
         "Course 4 SCF 1b": {
           "make honey up and over": {
-            "name": "solution \"simple\""
+            "name": "solution « simple\""
           }
         },
         "Course 4 SCF 2": {
@@ -1185,7 +1185,7 @@
         },
         "New Artist Project": {
           "draw a star": {
-            "name": "dessine une étoile",
+            "name": "dessiner une étoile",
             "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
@@ -1193,7 +1193,7 @@
             }
           },
           "draw a circle": {
-            "name": "dessine un cercle",
+            "name": "dessiner un cercle",
             "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
@@ -1208,7 +1208,7 @@
             }
           },
           "draw a triangle": {
-            "name": "dessine un triangle",
+            "name": "dessiner un triangle",
             "parameters": {
               "length": "longueur"
             }
@@ -1221,7 +1221,7 @@
             }
           },
           "draw a house": {
-            "name": "dessine une maison",
+            "name": "dessiner une maison",
             "parameters": {
               "length": "longueur"
             }
@@ -1298,7 +1298,7 @@
         },
         "course1_artist_loops_challenge1": {
           "\"simple\" solution": {
-            "name": "solution \"simple\""
+            "name": "solution « simple\""
           }
         },
         "course1_artist_loops_challenge2": {
@@ -1452,7 +1452,7 @@
         },
         "courseA_artist_loops_challenge1": {
           "\"simple\" solution": {
-            "name": "solution \"simple\""
+            "name": "solution « simple\""
           }
         },
         "courseB_artist_loops_challenge2": {
@@ -3920,7 +3920,7 @@
           },
           "draw a circle": {
             "name": "dessiner un cercle",
-            "description": "dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
@@ -3930,7 +3930,7 @@
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
-              "repeat": "repeat"
+              "repeat": "répéter"
             }
           },
           "draw a triangle": {
@@ -4253,7 +4253,7 @@
         },
         "courseE_artist_functions_challenge1_2021": {
           "my design": {
-            "name": "ma conception"
+            "name": "mon design"
           },
           "do something": {
             "name": "faire quelque chose"
@@ -4261,7 +4261,7 @@
         },
         "courseE_artist_functions_challenge2_2021": {
           "my design": {
-            "name": "ma conception"
+            "name": "mon design"
           },
           "do something": {
             "name": "faire quelque chose"
@@ -4398,7 +4398,7 @@
         },
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
-            "name": "déplace-toi et recueille le nectar avec le compteur"
+            "name": "se déplacer et recueillir le nectar avec le compteur"
           }
         },
         "CourseF_app_computer": {

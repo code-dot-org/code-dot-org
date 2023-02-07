@@ -110,7 +110,7 @@ const styles = {
     border: '1px solid #bbbbbb',
     borderRadius: 2,
     width: 214,
-    backgroundColor: color.white
+    backgroundColor: color.neutral_light
   },
   title: {
     paddingLeft: 15,
@@ -119,7 +119,7 @@ const styles = {
     paddingBottom: 5,
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.charcoal,
+    color: color.neutral_dark,
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
@@ -127,22 +127,23 @@ const styles = {
     boxSizing: 'content-box'
   },
   titleLink: {
-    color: color.charcoal
+    color: color.neutral_dark,
+    textDecoration: 'none'
   },
   lastEdit: {
-    paddingLeft: 30,
+    paddingLeft: 15,
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 11,
     fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
+    color: color.neutral_dark
   },
   ageRange: {
     paddingLeft: 10,
     paddingTop: 5,
     fontSize: 11,
     fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
+    color: color.neutral_dark
   },
   firstInitial: {
     paddingTop: 5,
@@ -150,7 +151,7 @@ const styles = {
     paddingLeft: 15,
     paddingRight: 15,
     fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
+    color: color.neutral_dark
   },
   thumbnail: {
     width: 214,

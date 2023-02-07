@@ -5,6 +5,7 @@ import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabDropdown from './components/JavalabDropdown';
 import {DisplayTheme} from './DisplayTheme';
+import i18n from '@cdo/locale';
 
 /**
  * A button that drops down to a set of clickable file names, and closes itself if
@@ -64,6 +65,7 @@ class JavalabFileExplorer extends Component {
     return (
       <div style={styles.main}>
         <button
+          aria-label={i18n.fileExplorer()}
           type="button"
           onClick={this.toggleDropdown}
           style={{

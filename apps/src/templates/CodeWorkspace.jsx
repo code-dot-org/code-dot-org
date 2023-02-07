@@ -24,6 +24,7 @@ class CodeWorkspace extends React.Component {
   static propTypes = {
     displayNotStartedBanner: PropTypes.bool,
     displayOldVersionBanner: PropTypes.bool,
+    inStartBlocksMode: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -125,6 +126,8 @@ class CodeWorkspace extends React.Component {
             id="hide-toolbox-icon"
             style={[commonStyles.hidden, chevronStyle]}
             type="button"
+            aria-label={i18n.toolboxHeaderDroplet()}
+            aria-expanded
           >
             <i className="fa fa-chevron-circle-right" />
           </button>
@@ -140,7 +143,13 @@ class CodeWorkspace extends React.Component {
         style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
       >
         <span id="show-toolbox-click-target">
-          <button id="show-toolbox-icon" style={chevronStyle} type="button">
+          <button
+            id="show-toolbox-icon"
+            style={chevronStyle}
+            type="button"
+            aria-label={i18n.toolboxHeaderDroplet()}
+            aria-expanded={false}
+          >
             <i className="fa fa-chevron-circle-right" />
           </button>
           <span className="show-toolbox-label">{i18n.showToolbox()}</span>
@@ -258,6 +267,11 @@ class CodeWorkspace extends React.Component {
             {i18n.oldVersionWarning()}
           </div>
         )}
+        {!this.props.editCode && this.props.inStartBlocksMode && (
+          <div id="startBlocksBanner" style={styles.startBlocksBanner}>
+            {i18n.inStartBlocksMode()}
+          </div>
+        )}
         {props.showDebugger && (
           <JsDebugger
             onSlideShut={this.onDebuggerSlide}
@@ -296,6 +310,14 @@ const styles = {
     opacity: 0.9,
     position: 'relative'
   },
+  startBlocksBanner: {
+    zIndex: 99,
+    backgroundColor: color.lighter_yellow,
+    height: 20,
+    padding: 5,
+    opacity: 0.9,
+    position: 'relative'
+  },
   chevronButton: {
     padding: 0,
     margin: 0,
@@ -323,6 +345,7 @@ export default connect(
     displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
     displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
     editCode: state.pageConstants.isDroplet,
+    inStartBlocksMode: state.pageConstants.inStartBlocksMode,
     isRtl: state.isRtl,
     readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     isRunning: !!state.runState.isRunning,

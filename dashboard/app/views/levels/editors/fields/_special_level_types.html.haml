@@ -41,6 +41,8 @@
       %p
         To learn how to make and use project templates
         =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-and-Using-Templates', target: '_blank'
+      - if local_assigns[:template_warning]
+        %p= "WARNING: #{template_warning}"
       = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
 
   - if (@level.is_a?(Blockly) || @level.is_a?(Javalab))
@@ -55,3 +57,13 @@
         = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
       #plusAnswerContainedLevel
         %i.fa.fa-plus-circle
+
+  -# Only show subtype for basic Sprite Lab, not Dance or Poetry. Poetry has a separate selector,
+  -# and Dance does not have a subtype concept.
+  - if @level.is_a?(GamelabJr) && !(@level.is_a?(Dancelab) || @level.is_a?(Poetry))
+    .field
+      = f.label :standalone_app_name, 'Level Subtype'
+      %p Select the subtype for the level. This will determine which blocks are available in the share/remix version of the level.
+      - if local_assigns[:subtype_warning]
+        %p= "WARNING: #{subtype_warning}"
+      = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name)

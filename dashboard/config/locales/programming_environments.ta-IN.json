@@ -7,17 +7,135 @@
         },
         "gamelab": {
           "categories": {
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "கருப்பு வெள்ளை"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "குறிப்பிட்ட URL இலிருந்து MP3 ஒலி கோப்பை இயக்குகிறது."
+                }
+              }
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "ஸ்பைரல்"
+                    }
+                  }
+                }
+              }
+            },
             "groups": {
-              "name": "குழுக்கள்"
+              "name": "குழுக்கள்",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "நிறம்"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "நிறம்"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "வரைதல்"
+              "name": "வரைதல்",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ஸ்டார்"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "கணிதம்"
+              "name": "கணிதம்",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "குறைந்தபட்ச எண் திரும்பியது"
+                    },
+                    "max": {
+                      "description": "அதிகபட்ச எண் திரும்பியது"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "குறைந்தபட்ச எண் திரும்பியது"
+                    },
+                    "max": {
+                      "description": "அதிகபட்ச எண் திரும்பியது"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "மாறிலிகள்"
+              "name": "மாறிலிகள்",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "ஏற்கெனவே விதிக்கப்பட்ட மாறினிக்கு ஒரு மதிப்பை வழங்குகிறது"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "வழங்கப்பட்ட பெயருடன் ஒரு மாறினியை அறிவிக்கும்."
+                },
+                "declareAssign_x": {
+                  "short_description": "ஒரு மாறினிக்கு தொடக்க மதிப்பை அறிவித்து ஒதுக்கீடு செய்யும்"
+                }
+              }
             },
             "functions": {
               "name": "செயல்பாடுகள்"
@@ -27,14 +145,93 @@
         "applab": {
           "description": "ஆப் லேப் என்பது நீங்கள் எளிமையான செயலிகளை செய்வதறகு ஏற்ற ஒரு புரோகிராமிங் சூழல் ஆகும். ஒரு செயலியை வடிவமைக்கவும், பிளாக்கு கோடுகள் உடன் அல்லது ஜாவாஸ்கிரிப்ட் கொண்டு அதை செயல்படுத்தவும், பின்பு சில நொடிகளில் அதை பகிரவும்.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "சுருக்கவும் மற்றும் வளரவும் "
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "இயக்கி"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "குறிப்பிட்ட URL இலிருந்து MP3 ஒலி கோப்பை இயக்குகிறது."
+                }
+              }
+            },
             "data": {
-              "name": "தகவல்கள்"
+              "name": "தகவல்கள்",
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "இயக்கி"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "இயக்கி"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "கணிதம்"
+              "name": "கணிதம்",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "குறைந்தபட்ச எண் திரும்பியது"
+                    },
+                    "max": {
+                      "description": "அதிகபட்ச எண் திரும்பியது"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "குறைந்தபட்ச எண் திரும்பியது"
+                    },
+                    "max": {
+                      "description": "அதிகபட்ச எண் திரும்பியது"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "மாறிலிகள்"
+              "name": "மாறிலிகள்",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "வழங்கப்பட்ட பெயருடன் ஒரு மாறினியை அறிவிக்கும்."
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "உங்கள் சொந்த சாகசத்தைத் தேர்ந்தெடுக்கவும்"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "ஒரு மாறினிக்கு தொடக்க மதிப்பை அறிவித்து ஒதுக்கீடு செய்யும்"
+                },
+                "addPair": {
+                  "return_value": "எதுவுமில்லை"
+                }
+              }
             },
             "functions": {
               "name": "செயல்பாடுகள்"

@@ -7,11 +7,93 @@
         },
         "gamelab": {
           "categories": {
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ URL ನಿಂದ MP3 ಧ್ವನಿ ಫೈಲ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡುತ್ತದೆ."
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ಬಣ್ಣ"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ಬಣ್ಣ"
+                    }
+                  }
+                }
+              }
+            },
             "drawing": {
               "name": "ಡ್ರಾಯಿಂಗ್‌"
             },
             "math": {
-              "name": "ಗಣಿತ"
+              "name": "ಗಣಿತ",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
+                    },
+                    "max": {
+                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
+                    },
+                    "max": {
+                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "ವೇರಿಯಬಲ್‌ಗಳು"
@@ -21,14 +103,87 @@
         "applab": {
           "description": "ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಸರವಾಗಿದ್ದು, ನೀವು ಸರಳವಾದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಮಾಡಬಹುದು. ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಿ, ಬ್ಲಾಕ್‌ಗಳೊಂದಿಗೆ ಕೋಡ್ ಅಥವಾ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಕೆಲಸ ಮಾಡಲು, ನಂತರ ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "ಸಂಕುಚಿಸಿ ಮತ್ತು ಬೆಳೆಯಿರಿ"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "ಫಂಕ್ಷನ್ "
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ URL ನಿಂದ MP3 ಧ್ವನಿ ಫೈಲ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡುತ್ತದೆ."
+                }
+              }
+            },
             "data": {
-              "name": "ಡೇಟಾ"
+              "name": "ಡೇಟಾ",
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ಫಂಕ್ಷನ್ "
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ಫಂಕ್ಷನ್ "
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "ಗಣಿತ"
+              "name": "ಗಣಿತ",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
+                    },
+                    "max": {
+                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
+                    },
+                    "max": {
+                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "ವೇರಿಯಬಲ್‌ಗಳು"
+              "name": "ವೇರಿಯಬಲ್‌ಗಳು",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "ನಿಮ್ಮ ಸ್ವಂತ ಸಾಹಸವನ್ನು ಆರಿಸಿ"
+                    }
+                  }
+                },
+                "addPair": {
+                  "return_value": "ಯಾವುದೂ ಅಲ್ಲ"
+                }
+              }
             }
           }
         },

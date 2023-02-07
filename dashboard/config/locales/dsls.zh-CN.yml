@@ -16892,8 +16892,10 @@ zh-CN:
         display_name: 艺术家练习
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: 艺术家练习
+        description: 到目前为止做得非常好！选择您的下一个活动。尽可能多地完成。继续练习函数的使用！
       CourseE_Lesson_7_Artist_Practice_2022:
         display_name: 艺术家练习
+        description: 到目前为止做得很好！选择您的下一个活动。尽可能多地完成。继续练习使用嵌套循环！
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: 描述
         markdown: "# 大爆发：创建你自己的模拟\n\n## 欢迎到怪物镇！\n怪物镇通常是一个开心和健康的地方。怪物们喜欢探索和访问朋友。 \n\n<img
@@ -17082,15 +17084,11 @@ zh-CN:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: 斯奎特会被橡子吸引，这说明了这个程序没有缺陷。
-          feedback: 不正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         - text: 因为斯奎特转向了错误的方向，所以斯奎特不会碰到橡子
           correct: true
-          feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         - text: 斯奎特不会碰到橡子因为没有足够的`向前移动`模块。
-          correct: true
-          feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         - text: 鼠奎特不会从第一个方块开始移动。
-          feedback: 这段代码中有两个缺陷。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
+          feedback: 因为斯奎特转向了错误的方向，所以斯奎特不会碰到橡子
         questions:
         - text: 在代码中寻找缺陷。斯奎特最终拿到了橡子还是中间出了问题？
       courseC_multi_maze_programming8_predict12022:
@@ -17544,3 +17542,16 @@ zh-CN:
           feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
         questions:
         - text: 仔细观察代码。你认为程序运行时会发生什么？
+      Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
+        teacher_markdown: |
+          **教师单元末调查：** 在你的学生完成调查之后，我们非常感谢你完成教师调查
+
+          ## [点击这里查看教师调查] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+      aiml-ch1-pulse-survey_2021:
+        title: 人工智能和机器学习快速调查！
+      aiml-ch1-pulse-survey_2022:
+        title: 人工智能和机器学习快速调查！
+      aiml-intro-pulse-survey_2021:
+        title: 人工智能和机器学习快速调查！
+      aiml-intro-pulse-survey_2022:
+        title: 人工智能和机器学习快速调查！
