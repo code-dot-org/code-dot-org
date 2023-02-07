@@ -1486,7 +1486,7 @@ body.iframe_embed_app_and_code {
 .qtip-content {
   font-size: 20px;
   line-height: 28px;
-  color: $purple;
+  color: $neutral_dark;
   font-family: $gotham-bold;
   font-weight: normal;
   padding-right: 25px;
@@ -3813,27 +3813,43 @@ html[dir=rtl] {
 
 .immersive-reader-button {
   /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
-  background-color: $lightest_purple !important;
+  background-color: $neutral_white !important;
   float: right;
+  border: 2px solid $neutral_dark;
   margin-top: 1px !important;
-  height: 16px !important;
-  padding: 8px !important;
-  border-radius: 4px !important;
+  margin-right: 2px;
+  height: 28px;
+  padding: 0 !important;
+  border-radius: 4px 0 0 4px !important;
+
+  i {
+    font-size: 20px;
+    padding-right: 8px;
+    padding-left: 8px;
+    line-height: 26px;
+    color: $neutral_dark;
+  }
 
   html[dir=rtl] & {
     float: left;
   }
 
   &:hover {
-    background-color: $cyan !important;
-    border-radius: 4px !important;
+    background-color: $brand_primary_default !important;
+    border-color: $brand_primary_default;
+    border-radius: 4px 0 0 4px !important;
 
     /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
     position: relative;
     z-index: 1000;
+
+    i {
+      color: $neutral_white;
+    }
   }
 
   img {
+    display: none;
     filter: grayscale(1);
   }
 }

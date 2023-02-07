@@ -212,7 +212,7 @@ const styles = {
   },
   arrowGlyph: {
     fontSize: 50,
-    color: color.purple,
+    color: color.neutral_dark,
     cursor: 'pointer'
   }
 };

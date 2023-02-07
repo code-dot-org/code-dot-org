@@ -50,7 +50,9 @@ class ImmersiveReaderButton extends Component {
           handleLaunchImmersiveReader(locale, title, text);
         }}
         onKeyDown={e => this.handleKeyDown(e, locale, title, text)}
-      />
+      >
+        <i className="fa fa-assistive-listening-systems" />
+      </div>
     );
   }
 
