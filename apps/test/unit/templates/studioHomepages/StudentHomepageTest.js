@@ -65,6 +65,7 @@ describe('StudentHomepage', () => {
     shallow(<StudentHomepage {...TEST_PROPS} />);
 
     expect(analyticsSpy).not.to.have.been.called;
+    analyticsSpy.restore();
   });
 
   it('shows the special announcement for English', () => {
