@@ -6,7 +6,6 @@ import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
-import {defaultWhenRunSimple2Code} from './blocks/simple2';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
@@ -130,11 +129,10 @@ export default class MusicBlocklyWorkspace {
         !topBlocks.some(block => block.type === BlockTypes.WHEN_RUN_SIMPLE2)
       ) {
         events.whenRunButton = {
-          code:
-            defaultWhenRunSimple2Code +
+          code: `
+              ProgramSequencer.init();
+              ProgramSequencer.playTogether();
             `
-          play_together();
-          `
         };
 
         topBlocks.forEach(functionBlock => {
@@ -174,9 +172,9 @@ export default class MusicBlocklyWorkspace {
           events.whenRunButton.code += `function ${block.getFieldValue(
             'NAME'
           )}() {
-              play_sequential();
+              ProgramSequencer.playSequential();
               ${functionCode}
-              end_sequential();
+              ProgramSequencer.endSequential();
             }
             `;
         }

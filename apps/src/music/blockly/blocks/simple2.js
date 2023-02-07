@@ -8,60 +8,6 @@ const isBlockInsideWhenRun = ctx => {
   return true;
 };
 
-export const defaultWhenRunSimple2Code = `
-  var stack = [];
-
-  function play_sequential() {
-    var measure = stack.length == 0 ? 1 : stack[stack.length-1].measure;
-    stack.push({measure: measure, together: false});
-  }
-
-  function end_sequential() {
-    var nextMeasure = stack[stack.length-1].measure;
-    stack.pop();
-
-    if (stack.length > 0) {
-      // now the frame we are returning to has to absorb this information.
-      if (stack[stack.length-1].together) {
-        stack[stack.length-1].lastMeasures.push(nextMeasure);
-      } else {
-        stack[stack.length-1].measure = nextMeasure;
-      }
-    } else {
-      console.log("done");
-    }
-  }
-
-  function play_together() {
-    var nextMeasure = stack.length == 0 ? 1 : stack[stack.length-1].measure;
-    stack.push({measure: nextMeasure, together: true, lastMeasures: [nextMeasure]});
-  }
-
-  function end_together() {
-    var nextMeasure = Math.max.apply(Math, stack[stack.length-1].lastMeasures);
-
-    // we are returning to the previous stack frame.
-    stack.pop();
-
-    // now the frame we are returning to has to absorb this information.
-    if (stack[stack.length-1].together) {
-      stack[stack.length-1].lastMeasures.push(nextMeasure);
-    } else {
-      stack[stack.length-1].measure = nextMeasure;
-    }
-  }
-
-  function play_sound(id, length) {
-    var playMeasure = stack[stack.length-1].measure;
-    console.log('sound:', id, 'at', playMeasure, 'length', length);
-    if (stack[stack.length-1].together) {
-      stack[stack.length-1].lastMeasures.push(playMeasure + length);
-    } else {
-      stack[stack.length-1].measure += length;
-    }
-  }
-`;
-
 export const whenRunSimple2 = {
   definition: {
     type: BlockTypes.WHEN_RUN_SIMPLE2,
@@ -73,9 +19,9 @@ export const whenRunSimple2 = {
     helpUrl: ''
   },
   generator: () =>
-    defaultWhenRunSimple2Code +
     `
-    play_sequential();
+      ProgramSequencer.init();
+      ProgramSequencer.playSequential();
     `
 };
 
@@ -102,21 +48,10 @@ export const playSoundAtCurrentLocationSimple2 = {
     helpUrl: ''
   },
   generator: ctx =>
-    `MusicPlayer.playSoundAtMeasureById(
-      "${ctx.getFieldValue('sound')}",
-      stack[stack.length - 1].measure,
-      ${isBlockInsideWhenRun(ctx) ? 'true' : 'false'}
-    );
-    if (stack[stack.length-1].together) {
-      stack[stack.length-1].lastMeasures.push(
-        stack[stack.length-1].measure +
-        ${Globals.getPlayer().getLengthForId(ctx.getFieldValue('sound'))}
+    ` ProgramSequencer.playSoundById(
+        "${ctx.getFieldValue('sound')}",
+        ${isBlockInsideWhenRun(ctx) ? 'true' : 'false'}
       );
-    } else {
-      stack[stack.length-1].measure += ${Globals.getPlayer().getLengthForId(
-        ctx.getFieldValue('sound')
-      )};
-    }
     `
 };
 
@@ -140,10 +75,10 @@ export const playSoundsTogether = {
     helpUrl: ''
   },
   generator: ctx =>
-    `play_together();
+    ` ProgramSequencer.playTogether();
       ${Blockly.JavaScript.statementToCode(ctx, 'code')}
-      end_together();
-      `
+      ProgramSequencer.endTogether();
+    `
 };
 
 export const playSoundsSequential = {
@@ -166,8 +101,8 @@ export const playSoundsSequential = {
     helpUrl: ''
   },
   generator: ctx =>
-    `play_sequential();
+    ` ProgramSequencer.playSequential();
       ${Blockly.JavaScript.statementToCode(ctx, 'code')}
-      end_sequential();
+      ProgramSequencer.endSequential();
       `
 };
