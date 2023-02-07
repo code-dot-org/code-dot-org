@@ -11,6 +11,7 @@ export default {
 const Template = args => (
   <Provider store={reduxStore()}>
     <Congrats
+      {...args}
       language={'en'}
       initialCertificateImageUrl={'/images/placeholder-hoc-image.jpg'}
     />
