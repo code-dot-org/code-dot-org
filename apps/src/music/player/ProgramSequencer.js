@@ -34,28 +34,12 @@ export default class ProgramSequencer {
 
   // End of a play_sequential block.
   endSequential() {
-    const currentStackEntry = this.getCurrentStackEntry();
-
-    const nextMeasure = currentStackEntry.measure;
-
-    // We are returning to the previous stack frame.
-    this.stack.pop();
-
-    const nextStackEntry = this.getCurrentStackEntry();
-
-    if (nextStackEntry) {
-      // now the frame we are returning to has to absorb this information.
-      if (nextStackEntry.together) {
-        nextStackEntry.lastMeasures.push(nextMeasure);
-      } else {
-        nextStackEntry.measure = nextMeasure;
-      }
-    }
+    this.endBlock(true);
   }
 
   // Beginning of a play_together block.
   playTogether() {
-    var nextMeasure =
+    const nextMeasure =
       this.stack.length === 0 ? 1 : this.getCurrentStackEntry().measure;
     this.stack.push({
       measure: nextMeasure,
@@ -66,9 +50,16 @@ export default class ProgramSequencer {
 
   // End of an play_together block.
   endTogether() {
+    this.endBlock(false);
+  }
+
+  // Internal function for the end of a play_sequential or play_together block.
+  endBlock(isSequential) {
     const currentStackEntry = this.getCurrentStackEntry();
 
-    var nextMeasure = Math.max.apply(Math, currentStackEntry.lastMeasures);
+    const nextMeasure = isSequential
+      ? currentStackEntry.measure
+      : Math.max.apply(Math, currentStackEntry.lastMeasures);
 
     // We are returning to the previous stack frame.
     this.stack.pop();
