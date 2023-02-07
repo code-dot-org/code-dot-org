@@ -159,7 +159,8 @@ export class EditableTeacherFeedback extends Component {
       });
     analyticsReporter.sendEvent(EVENTS.FEEDBACK_SUBMITTED, {
       sectionId: this.props.selectedSectionId,
-      unitId: this.props.serverScriptId
+      unitId: this.props.serverScriptId,
+      levelId: this.props.serverLevelId
     });
   };
 
