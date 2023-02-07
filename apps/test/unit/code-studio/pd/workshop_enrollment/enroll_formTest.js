@@ -80,7 +80,6 @@ describe('Enroll Form', () => {
     const extraRequiredParams = ['role', 'grades_teaching'];
     const requiredParams = {
       ...baseParams,
-      school_info: school_info,
       ...pick(extraParams, extraRequiredParams)
     };
     beforeEach(() => {
@@ -131,7 +130,6 @@ describe('Enroll Form', () => {
     const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
     const requiredParams = {
       ...baseParams,
-      school_info: school_info,
       ...pick(extraParams, extraRequiredParams)
     };
     beforeEach(() => {
@@ -176,7 +174,6 @@ describe('Enroll Form', () => {
     const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
     const requiredParams = {
       ...baseParams,
-      school_info: school_info,
       ...pick(extraParams, extraRequiredParams)
     };
     beforeEach(() => {
@@ -226,7 +223,6 @@ describe('Enroll Form', () => {
     ];
     const requiredParams = {
       ...baseParams,
-      school_info: school_info,
       ...pick(extraParams, extraRequiredParams)
     };
     beforeEach(() => {
@@ -269,8 +265,7 @@ describe('Enroll Form', () => {
   describe('CSP Enroll Form', () => {
     let enrollForm;
     const requiredParams = {
-      ...baseParams,
-      school_info: school_info
+      ...baseParams
     };
     beforeEach(() => {
       enrollForm = shallow(
@@ -316,7 +311,6 @@ describe('Enroll Form', () => {
     const extraRequiredParams = [];
     const requiredParams = {
       ...baseParams,
-      school_info: school_info,
       ...pick(extraParams, extraRequiredParams)
     };
     beforeEach(() => {
@@ -356,7 +350,6 @@ describe('Enroll Form', () => {
     ];
     const requiredParams = {
       ...baseParams,
-      school_info: school_info,
       ...pick(extraParams, extraRequiredParams)
     };
     beforeEach(() => {
@@ -416,8 +409,7 @@ describe('Enroll Form', () => {
   describe('Admin/Counselor Enroll Form', () => {
     let enrollForm;
     const requiredParams = {
-      ...baseParams,
-      school_info: school_info
+      ...baseParams
     };
     beforeEach(() => {
       enrollForm = shallow(
@@ -458,7 +450,6 @@ describe('Enroll Form', () => {
     let enrollForm;
     const requiredParams = {
       ...baseParams,
-      school_info: school_info,
       ...pick(extraParams, ['role', 'grades_teaching'])
     };
     beforeEach(() => {
