@@ -68,6 +68,13 @@ describe('Enroll Form', () => {
     expect(jQuery.ajax.called).to.be.false;
   };
 
+  const testSuccessfulSubmit = (form, params) => {
+    form.setState(params);
+    form.find('#submit').simulate('click');
+    expect(form.state('errors')).to.be.empty;
+    expect(jQuery.ajax.called).to.be.true;
+  };
+
   describe('CSF Enroll Form', () => {
     let enrollForm;
     const extraRequiredParams = ['role', 'grades_teaching'];
@@ -115,10 +122,7 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      enrollForm.setState(requiredParams);
-      enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.state('errors')).to.be.empty;
-      expect(jQuery.ajax.called).to.be.true;
+      testSuccessfulSubmit(enrollForm, requiredParams);
     });
   });
 
@@ -163,10 +167,7 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      enrollForm.setState(requiredParams);
-      enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.state('errors')).to.be.empty;
-      expect(jQuery.ajax.called).to.be.true;
+      testSuccessfulSubmit(enrollForm, requiredParams);
     });
   });
 
@@ -211,10 +212,7 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      enrollForm.setState(requiredParams);
-      enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.state('errors')).to.be.empty;
-      expect(jQuery.ajax.called).to.be.true;
+      testSuccessfulSubmit(enrollForm, requiredParams);
     });
   });
 
@@ -264,10 +262,7 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      enrollForm.setState(requiredParams);
-      enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.state('errors')).to.be.empty;
-      expect(jQuery.ajax.called).to.be.true;
+      testSuccessfulSubmit(enrollForm, requiredParams);
     });
   });
 
@@ -312,10 +307,7 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      enrollForm.setState(requiredParams);
-      enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.state('errors')).to.be.empty;
-      expect(jQuery.ajax.called).to.be.true;
+      testSuccessfulSubmit(enrollForm, requiredParams);
     });
   });
 
@@ -350,10 +342,7 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      enrollForm.setState(requiredParams);
-      enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.state('errors')).to.be.empty;
-      expect(jQuery.ajax.called).to.be.true;
+      testSuccessfulSubmit(enrollForm, requiredParams);
     });
   });
 
@@ -420,10 +409,7 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      enrollForm.setState(requiredParams);
-      enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.state('errors')).to.be.empty;
-      expect(jQuery.ajax.called).to.be.true;
+      testSuccessfulSubmit(enrollForm, requiredParams);
     });
   });
 
@@ -464,10 +450,7 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      enrollForm.setState(requiredParams);
-      enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.state('errors')).to.be.empty;
-      expect(jQuery.ajax.called).to.be.true;
+      testSuccessfulSubmit(enrollForm, requiredParams);
     });
   });
 
