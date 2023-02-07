@@ -14,6 +14,8 @@ import {
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
@@ -155,6 +157,11 @@ export class EditableTeacherFeedback extends Component {
           submitting: false
         });
       });
+    analyticsReporter.sendEvent(EVENTS.FEEDBACK_SUBMITTED, {
+      sectionId: this.props.selectedSectionId,
+      unitId: this.props.serverScriptId,
+      levelId: this.props.serverLevelId
+    });
   };
 
   didFeedbackChange = () => {
