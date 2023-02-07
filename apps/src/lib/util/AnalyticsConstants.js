@@ -29,7 +29,10 @@ const EVENTS = {
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
-  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson'
+  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
+
+  // Levels
+  FEEDBACK_SUBMITTED: 'Level Feedback Submitted'
 };
 
 export {EVENTS};
