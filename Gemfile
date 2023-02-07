@@ -19,7 +19,7 @@ gem 'rails', '6.0.6'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 gem 'sprockets', '4.0.3'
-gem 'sprockets-rails', '3.3.0'
+gem 'sprockets-rails', '3.4.0'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
