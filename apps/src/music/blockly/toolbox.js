@@ -1,6 +1,7 @@
 import moduleStyles from '../views/toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
-import AppConfig from '../appConfig';
+import {getBlockMode} from '../appConfig';
+import {BlockMode} from '../constants';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -274,53 +275,57 @@ function generateToolbox(categoryBlocksMap, includeVariables) {
 }
 
 export function getToolbox() {
-  if (AppConfig.getValue('blocks') === 'simple') {
-    return generateToolbox({
-      Events: [BlockTypes.TRIGGERED_AT_SIMPLE],
-      Simple: [
-        BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
-        BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
-        'controls_repeat_ext'
-      ]
-    });
+  switch (getBlockMode()) {
+    case BlockMode.SIMPLE:
+      return generateToolbox({
+        Events: [BlockTypes.TRIGGERED_AT_SIMPLE],
+        Simple: [
+          BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
+          BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
+          'controls_repeat_ext'
+        ]
+      });
+    case BlockMode.SIMPLE2:
+      return generateToolbox({
+        Simple2: [
+          BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+          BlockTypes.PLAY_SOUNDS_TOGETHER,
+          BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+          'procedures_callnoreturn',
+          'controls_repeat_ext'
+        ]
+      });
+    case BlockMode.TRACKS:
+      return generateToolbox({
+        Tracks: [
+          BlockTypes.NEW_TRACK_AT_START,
+          BlockTypes.NEW_TRACK_AT_MEASURE,
+          BlockTypes.NEW_TRACK_ON_TRIGGER
+        ],
+        Play: [BlockTypes.PLAY_SOUND_IN_TRACK, BlockTypes.REST_IN_TRACK],
+        Control: ['controls_repeat_ext'],
+        Math: ['math_arithmetic', 'math_random_int', 'math_modulo'],
+        Logic: ['controls_if', 'logic_compare']
+      });
+    case BlockMode.ADVANCED:
+      return generateToolbox(
+        {
+          Play: [BlockTypes.PLAY_SOUND],
+          Events: [BlockTypes.TRIGGERED_AT],
+          Control: [BlockTypes.FOR_LOOP],
+          Math: [
+            'math_round',
+            'math_arithmetic',
+            'math_random_int',
+            'math_modulo'
+          ],
+          Logic: ['controls_if', 'logic_compare']
+        },
+        true
+      );
   }
 
-  if (AppConfig.getValue('blocks') === 'simple2') {
-    return generateToolbox({
-      //Events: [BlockTypes.TRIGGERED_AT_SIMPLE],
-      Simple2: [
-        BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
-        BlockTypes.PLAY_SOUNDS_TOGETHER,
-        BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
-        //'procedures_defnoreturn',
-        'procedures_callnoreturn',
-        'controls_repeat_ext'
-      ]
-    });
-  }
-
-  if (AppConfig.getValue('blocks') === 'tracks') {
-    return generateToolbox({
-      Tracks: [
-        BlockTypes.NEW_TRACK_AT_START,
-        BlockTypes.NEW_TRACK_AT_MEASURE,
-        BlockTypes.NEW_TRACK_ON_TRIGGER
-      ],
-      Play: [BlockTypes.PLAY_SOUND_IN_TRACK, BlockTypes.REST_IN_TRACK],
-      Control: ['controls_repeat_ext'],
-      Math: ['math_arithmetic', 'math_random_int', 'math_modulo'],
-      Logic: ['controls_if', 'logic_compare']
-    });
-  }
-
-  return generateToolbox(
-    {
-      Play: [BlockTypes.PLAY_SOUND],
-      Events: [BlockTypes.TRIGGERED_AT],
-      Control: [BlockTypes.FOR_LOOP],
-      Math: ['math_round', 'math_arithmetic', 'math_random_int', 'math_modulo'],
-      Logic: ['controls_if', 'logic_compare']
-    },
-    true
+  console.warn(
+    `Could not find toolbox for unknown block mode: ${getBlockMode()}`
   );
 }
