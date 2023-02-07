@@ -103,6 +103,7 @@ function showHomepage() {
             specialAnnouncement={specialAnnouncement}
             hasFeedback={homepageData.hasFeedback}
             showIncubatorBanner={homepageData.showIncubatorBanner}
+            currentUserId={homepageData.currentUserId}
           />
         )}
         {!isTeacher && (
