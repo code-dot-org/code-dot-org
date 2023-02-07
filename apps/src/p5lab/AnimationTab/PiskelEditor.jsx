@@ -9,7 +9,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as shapes from '../shapes';
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
-import {CURRENT_ANIMATION_TYPE} from '../constants';
 /**
  * @const {string} domain-relative URL to Piskel index.html
  * In special environment builds, append ?debug flag to get Piskel to load its own debug mode.
@@ -29,9 +28,7 @@ class PiskelEditor extends React.Component {
     style: PropTypes.object,
     // Provided by Redux
     animationList: shapes.AnimationList.isRequired,
-    currentAnimations: shapes.CurrentAnimations,
-    currentAnimationType: PropTypes.oneOf(Object.values(CURRENT_ANIMATION_TYPE))
-      .isRequired,
+    currentAnimation: shapes.AnimationKey,
     channelId: PropTypes.string.isRequired,
     editAnimation: PropTypes.func.isRequired,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
@@ -82,24 +79,20 @@ class PiskelEditor extends React.Component {
   }
 
   UNSAFE_componentWillReceiveProps(newProps) {
-    if (
-      newProps.currentAnimations[newProps.currentAnimationType] !==
-      this.props.currentAnimations[this.props.currentAnimationType]
-    ) {
+    if (newProps.currentAnimation !== this.props.currentAnimation) {
       this.loadSelectedAnimation_(newProps);
     }
     if (
       newProps.pendingFrames &&
-      newProps.currentAnimations[newProps.currentAnimationType] ===
-        newProps.pendingFrames.key
+      newProps.currentAnimation === newProps.pendingFrames.key
     ) {
       this.sendPendingFramesToPiskel(newProps.pendingFrames);
     }
   }
 
   sendPendingFramesToPiskel(animationProps) {
-    const {currentAnimations, currentAnimationType} = this.props;
-    const key = currentAnimations[currentAnimationType];
+    const {currentAnimation} = this.props;
+    const key = currentAnimation;
     if (!animationProps) {
       throw new Error('No props present for animation with key ' + key);
     }
@@ -119,7 +112,7 @@ class PiskelEditor extends React.Component {
           this.props.removePendingFrames();
 
           // If the selected animation changed out from under us, load again.
-          if (currentAnimations[currentAnimationType] !== key) {
+          if (currentAnimation !== key) {
             this.loadSelectedAnimation_(this.props);
           }
         }
@@ -128,7 +121,7 @@ class PiskelEditor extends React.Component {
   }
 
   loadSelectedAnimation_(props) {
-    const key = props.currentAnimations[props.currentAnimationType];
+    const key = props.currentAnimation;
     if (!this.isPiskelReady_) {
       return;
     }
@@ -182,10 +175,7 @@ class PiskelEditor extends React.Component {
           this.isLoadingAnimation_ = false;
 
           // If the selected animation changed out from under us, load again.
-          if (
-            this.props.currentAnimations[this.props.currentAnimationType] !==
-            key
-          ) {
+          if (this.props.currentAnimation !== key) {
             this.loadSelectedAnimation_(this.props);
           }
         }
@@ -249,8 +239,10 @@ class PiskelEditor extends React.Component {
 }
 export default connect(
   state => ({
-    currentAnimations: state.animationTab.currentAnimations,
-    currentAnimationType: state.animationTab.currentAnimationType,
+    currentAnimation:
+      state.animationTab.currentAnimations[
+        state.animationTab.currentAnimationType
+      ],
     animationList: state.animationList,
     channelId: state.pageConstants.channelId,
     allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
