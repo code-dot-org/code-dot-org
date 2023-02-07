@@ -85,7 +85,7 @@ class ReportAbuseController < ApplicationController
     }
   end
 
-  # API routes, moved from legacy channels_api.rb.
+  # API routes, moved from legacy channels_api.rb and files_api.rb.
 
   # GET /v3/channels/:channel_id/abuse
   # Get an abuse score.
