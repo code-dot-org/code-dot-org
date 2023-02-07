@@ -103,6 +103,8 @@ describe('EditableTeacherFeedback', () => {
         analyticsSpy.getCall(0).firstArg,
         'Level Feedback Submitted'
       );
+
+      analyticsSpy.restore();
     });
   });
 
