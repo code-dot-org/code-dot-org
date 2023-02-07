@@ -16,7 +16,7 @@ import {AnalyticsContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import AppConfig from '../appConfig';
+import AppConfig, {getBlockMode} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -149,16 +149,13 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadInstructions = async () => {
-    const blockMode = AppConfig.getValue('blocks');
-    const instructionsFilename =
-      !blockMode || blockMode === 'advanced'
-        ? 'music-instructions.json'
-        : `music-instructions-${blockMode}.json`;
+    const instructionsFilename = `music-instructions-${getBlockMode().toLowerCase()}.json`;
     const response = await fetch(baseUrl + instructionsFilename);
     let instructions;
     try {
       instructions = await response.json();
     } catch (error) {
+      console.error(error);
       instructions = null;
     }
     return instructions;

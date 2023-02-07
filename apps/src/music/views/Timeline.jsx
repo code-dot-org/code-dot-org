@@ -4,8 +4,9 @@ import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
 import {PlayerUtilsContext} from '../context';
-import appConfig from '../appConfig';
+import {getBlockMode} from '../appConfig';
 import TimelineTrackEvents from './TimelineTrackEvents';
+import {BlockMode} from '../constants';
 
 const barWidth = 60;
 const numMeasures = 30;
@@ -69,7 +70,7 @@ const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
         </div>
 
         <div className={moduleStyles.soundsArea}>
-          {appConfig.getValue('blocks') === 'tracks' ? (
+          {getBlockMode() === BlockMode.TRACKS ? (
             <TimelineTrackEvents {...timelineElementProps} />
           ) : (
             <TimelineSampleEvents {...timelineElementProps} />

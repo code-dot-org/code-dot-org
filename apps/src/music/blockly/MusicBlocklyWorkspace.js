@@ -4,7 +4,7 @@ import {MUSIC_BLOCKS} from './musicBlocks';
 import {musicLabDarkTheme} from './themes';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
-import AppConfig from '../appConfig';
+import {getBlockMode} from '../appConfig';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
@@ -16,6 +16,7 @@ import {
   getDefaultTrackNameExtension,
   playMultiMutator
 } from './extensions';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -27,6 +28,8 @@ export default class MusicBlocklyWorkspace {
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
+
+  capitalizeFirst = str => str.replace(/^./, str => str.toUpperCase());
 
   /**
    * Initialize the Blockly workspace
@@ -65,7 +68,9 @@ export default class MusicBlocklyWorkspace {
       toolbox: getToolbox(),
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: musicLabDarkTheme,
-      renderer: 'cdo_renderer_zelos',
+      renderer: experiments.isEnabled('thrasos')
+        ? 'cdo_renderer_thrasos'
+        : 'cdo_renderer_zelos',
       zoom: {
         startScale: 0.675
       }
@@ -185,13 +190,8 @@ export default class MusicBlocklyWorkspace {
   getLocalStorageKeyName() {
     // Save code for each block mode in a different local storage item.
     // This way, switching block modes will load appropriate user code.
-    // The default is "Advanced".
 
-    const blockMode = AppConfig.getValue('blocks');
-    const blockModeUpperFirst = blockMode
-      ? blockMode.replace(/^./, str => str.toUpperCase())
-      : 'Advanced';
-    return 'musicLabSavedCode' + blockModeUpperFirst;
+    return 'musicLabSavedCode' + getBlockMode();
   }
 
   loadCode() {
@@ -211,14 +211,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   resetCode() {
-    const blockMode = AppConfig.getValue('blocks');
-    let defaultCodeFilename = 'defaultCode';
-    if (blockMode === 'simple') {
-      defaultCodeFilename = 'defaultCodeSimple';
-    }
-    if (blockMode === 'tracks') {
-      defaultCodeFilename = 'defaultCodeTracks';
-    }
+    const defaultCodeFilename = 'defaultCode' + getBlockMode();
     const defaultCode = require(`@cdo/static/music/${defaultCodeFilename}.json`);
     Blockly.serialization.workspaces.load(defaultCode, this.workspace);
     this.saveCode();
