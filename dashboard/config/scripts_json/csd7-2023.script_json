@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd7",
-    "serialized_at": "2022-10-14 22:35:53 UTC",
+    "serialized_at": "2023-02-03 18:55:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -69,7 +69,6 @@
             "visibility": "Teacher-only"
           }
         ],
-        "assessment_opportunities": "1. **Apply the Problem Solving Process to train a computer to solve a problem**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -98,7 +97,6 @@
             "visibility": "Teacher-only"
           }
         ],
-        "assessment_opportunities": "1) **Describe the differences between supervised and unsupervised learning.**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called \"Green Glass Door\" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.\n\n**Question of the Day:** What are different types of machine learning?",
         "preparation": "- Review all materials for today’s lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -147,7 +145,6 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "1) **Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)**\n\t\n\tUse class discussions as a way to assess how well students understand the different ways computers can make decisions\n\n2) **Look for patterns in data to help make a decision**\n\t\n\tSee the activity guide for this lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.\n\n**Question of the Day:** What strategies do computer models use to make decisions?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -167,7 +164,6 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "1) **Explain how computers can separate data to make a decision**\n\n\tSee the activity guide and the wrap-up response.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing “sweetness” to “easy to eat”, and then try to separate the data into groups - a fruit area, and a veggie area.\n\n**Question of the Day:** How do computers learn to classify data?",
         "preparation": "- Review all materials for today’s lesson.\n- Cut out fruit & veggie cards - one set of cards for each group\n- Ruler or straightedge for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -187,7 +183,6 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "1) **Use AI Lab to select features to train a model**\n\n\tEach level requires a minimum accuracy score to continue. Checking that students fully complete each level is enough to verify that they have met this objective.\n\n2) **Use data visualization tools to decide which features to include when training a model**\n\n\tCheck the free responses in the activity guide to assess this objective.\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.\n\n**Question of the Day:** How can we use machine learning to make recommendations?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Watch the two videos in this lesson and be familiar with AI Lab\n- Print or prepare to share online copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -207,7 +202,6 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "1) **Create an app that uses machine learning**\n\n\tLevel 6 in Code Studio has a mini-rubric that can be used to assess this objective\n\n2) **Add screens and events in App Lab**\n\n\tLevel 6 in Code Studio has a mini-rubric that can be used to assess this objective",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to importing their models into App Lab and linking their model to their screens. They help create a book recommendation app and learn how to add a welcome screen and events to their code. This lesson assumes students are already familiar with App Lab - for classrooms that have not seen App Lab before, consider extending this lesson and including additional videos or activities that are recommended in the lesson plan.\n\n**Question of the Day:** How can I create an app using machine learning?",
         "preparation": "- Review the Code Studio levels before the lesson so you will be familiar with importing a model into App Lab\n- Decide if you would like to provide additional resources for students to become familiar with App Lab, as outlined in the lesson plan.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -227,7 +221,6 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "1) **Read a model card and use it to evaluate a model**\n\n\tSee the activity guide for this lesson as a way to measure this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will investigate a model for bias and be introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. They will be investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. As students go through the activity, they realize that the app is biased based on personal information and examine how this could happen.\n\n**Question of the Day:** How can we evaluate machine learning models once they've been trained?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Anticipate how you will guide the discussion on racial and gender bias, considering that some students may have experiences similar to those discussed in this lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -247,7 +240,6 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "1) **Use data visualizations and feature iteration to train machine learning models**\n\n\tEach level in this lesson requires at least 75% accuracy before continuing. Students who have completed each level will have met this objective.\n\n2) **Create model cards in AI Lab to save machine learning models**\n\n\tCompleting level 4 satisfies this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also create a model card for their models in order to save them and import it into App Lab\n\n**Question of the Day:** How can I use Model Cards to document my decisions when training a machine learning model?",
         "preparation": "- Review the Code Studio levels before the lesson to be familiar with investigating columns in AI Lab and training their  model\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -267,7 +259,6 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "assessment_opportunities": "1) **Use a model card to update the user interface of an app**\n\n\tLevel 9 contains a mini-rubric that can be used to assess this objective.\n\n2) **Use if-statements to change the behavior of an app**\n\n\tLevel 9 contains a mini-rubric that can be used to assess this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. They will then learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience.\n\n**Question of the Day:** How can I use a Model Card to improve my app?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -287,7 +278,6 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "assessment_opportunities": "1) **Explain how computers can make decisions by comparing similarities in data**\n\n\tSee the Zombie Prediction activity guide for assessing this objective,\n\n2) **Explain how accuracy calculation for numerical data is different from categorical data**\n\n\tSee the Numerical Accuracy activity guide for assessing this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.\n\n**Question of the Day:** How do computers learn to make predictions with numerical data?",
         "preparation": "- Review all materials for today’s lesson.\n- Print or prepare to share online the activity guide - one per student or group.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -307,7 +297,6 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "assessment_opportunities": "1) **Use data visualizations to find patterns in numerical data**\n\n\tCompleting the Safari Model level satisfies this objective\n\n2) **Compare and contrast categorical data versus numerical data**\n\n\tUse the warm-up discussion and exit ticket to assess this objective",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will be introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.\n\n**Question of the Day:** How can we use AI Lab to predict numerical data?",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -327,7 +316,6 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "assessment_opportunities": "1) **Use the Model Card to create new input elements for a machine learning app**\n\n\tLevel 8 can be used to assess this objective.\n\n1) **Update the default model code to use new inputs in a machine learning app**\n\n\tLevel 8 can be used to assess this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will explore how to customize the code of their app to make additional changes to the design of their app. They will start by exploring a single-screen app and then practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.\n\n**Question of the Day:** How can I customize the code for a machine learning app?",
         "preparation": "- Review the Code Studio levels before the lesson to be familiar with changing the input element \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -366,7 +354,6 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "assessment_opportunities": "A rubric is provided to assess the mini-project",
         "overview": "In this one or two day project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.\n\n**Question of the Day:** Can I use real-world data to create an app that uses machine learning?",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-machine-learning-app-ai-and-machine-learning-lesson-15/36219) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Choose from several real-world datasets to train a model and create an app that uses machine learning"
@@ -385,7 +372,6 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "assessment_opportunities": "1) **Develop a problem observation into a core issue using brainstorming strategies**\n\n\tSee the activity guide for this lesson as a way to measure this objective.\n",
         "overview": "This is the first of a five-day sequence of lessons that prepare students for the final project. In this lesson, students meet a team of fictional students who want to use machine learning to address an issue in their community. Students participate in an issue brainstorm using the 5 Why's strategy, then they help evaluate the ideas that the other student team came up with. The steps students take in this lesson are identical to the steps students will take in their final project.\n\n**Question of the Day:** How can machine learning be used to address an issue in your community?\n\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Working with a team of students from another school, develop ideas for how machine learning can be used to address an issue in your community."
@@ -404,7 +390,6 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "assessment_opportunities": "1) **Develop survey questions that can be used to create a machine learning app**\n\n\tSee the activity guide for this lesson as a way to measure this objective\n\n2) **Use a template to create a Google Form survey**\n\n\tHave students submit their Google Form to you. Filling out the form can verify whether they used the template correctly to create the form.",
         "overview": "This is the second in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn that the other team of students would like to create a club recommender app based on the clubs at their school. Students imagine what questions would be most useful to help make this recommendation, then they learn how to use a Google Form template to create a survey. The steps students take in this lesson are identical to the steps students will take in their final project.\n\n**Question of the Day:** How can I create a survey to gather data for a machine learning app?",
         "preparation": "- Print copies of the activity guide for each student\n- Review the video on how to use a template to create a Google Form\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Help the other team of students develop questions that would be useful to create a machine learning app, then learn how to use Google Forms to create a survey to collect data."
@@ -423,7 +408,6 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
-        "assessment_opportunities": "1) **Download a csv file from Google Sheets**\n\n\tCompleting Level 3 satisfies this objective.\n\n2) **Upload a csv file to AI Lab**\n\n\tCompleting Level 3 satisfies this objective.\n\n3) **Analyze and clean data in Google Sheets**\n\n\tCompleting Level 5 satisfies this objective.",
         "overview": "This is the third in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn how to view survey data in Google Sheets and save the data to their computer as a csv file. Then, they upload the saved data to AI Lab and examine the survey results from one of the students to train a model using their data. Then, students use Google Sheets to examine data from another student where the data has errors and then try to fix the errors. The steps students take in this lesson are identical to the steps students will take in their final project, and the problem-solving strategies they develop will help them overcome challenges in their own final project.\n\n**Question of the Day**:  How can I import data into AI Lab to train a machine learning model?",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn how to download survey data and use it in AI Lab to train a model. The skills in this lesson are important for completing the final lesson in this unit."
@@ -442,7 +426,6 @@
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
-        "assessment_opportunities": "1) **Explain how choices in data collection can lead to issues when training a machine learning model**\n\n\tSee the activity guide for this lesson as a way to measure this objective",
         "overview": "This is the fourth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students examine survey data from other members of the student team and analyze why their models are not working correctly. In examining the data, students develop strategies for avoiding these issues in the future and strategies for coping with these issues should they happen again. These are skills students will use in the final project as they develop their own surveys and collect data.\n\n**Question of the Day**:  What are strategies to make sure our data generates an accurate model?",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Help students from the other team analyze their survey data and determine why they are unable to get accurate models _or_ they are unable to create usable models when tested."
@@ -461,7 +444,6 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
-        "assessment_opportunities": "1) **Create an app that uses machine learning**\n\n\tLevel 7 has a mini-rubric that can be used to assess this objective.",
         "overview": "This is the fifth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students import the club recommender app into App Lab and begin customizing the app. Students add a welcome screen and update the descriptions of each feature, then they can decide how they would like to further customize the app. The steps students take in this lesson are identical to the steps students will take in their final project.\n\n**Question of the Day**:  How can I create a friendly, easy-to-use machine learning app?",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "The model is finally ready! Now it's time to import the model into App Lab and build the final Club Recommender app!"
@@ -1559,7 +1541,7 @@
       "key": "53c187a6-d9c3-48f4-bcc3-64fd77c43b7a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the AI: What is Machine Learning? video in the slides\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r ai_what_is_machine_learning_/csd7/2023] video in the slides\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed\n"
       },
       "seeding_key": {
         "activity_section.key": "53c187a6-d9c3-48f4-bcc3-64fd77c43b7a",
@@ -1605,7 +1587,13 @@
       "key": "dc13d057-ef08-4f18-af39-32a4d669b0f6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Activity Guide for this lesson"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Activity Guide for this lesson",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "dc13d057-ef08-4f18-af39-32a4d669b0f6",
@@ -1971,6 +1959,10 @@
           {
             "type": "teachingTip",
             "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson."
           }
         ]
       },
@@ -2306,7 +2298,7 @@
       "key": "df1405e9-c528-4415-a56b-5a2e2fb03ea2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Display the [r seeing_ai/csd7/2023]. Prompt students with the Questions to Consider before starting the video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r seeing_ai/csd7/2023] video in the slides. Prompt students with the Questions to Consider before starting the video."
       },
       "seeding_key": {
         "activity_section.key": "df1405e9-c528-4415-a56b-5a2e2fb03ea2",
@@ -2693,7 +2685,13 @@
       "key": "bbc0c1b6-17cd-44d0-883d-c937539be55a",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Do you agree with the questions that were asked and how the shoes were assigned? Who do you think decided which shoes went with each answer?\n\n **Discussion Goal:** Students might notice that some selections are hidden behind other choices that may not be ideal - for example, this model only has you wear sneakers when it’s raining and sports cleats when it’s not raining. Students may suggest that the tree needs to be rearranged based on their own experiences for when to wear shoes, or that these decisions may not represent all people who may want to use the app. Try to highlight this idea of getting input from our users to help make our decision, rather than relying on your own personal experiences since they may not represent all situations. This helps transition to the next activity."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Do you agree with the questions that were asked and how the shoes were assigned? Who do you think decided which shoes went with each answer?\n\n **Discussion Goal:** Students might notice that some selections are hidden behind other choices that may not be ideal - for example, this model only has you wear sneakers when it’s raining and sports cleats when it’s not raining. Students may suggest that the tree needs to be rearranged based on their own experiences for when to wear shoes, or that these decisions may not represent all people who may want to use the app. Try to highlight this idea of getting input from our users to help make our decision, rather than relying on your own personal experiences since they may not represent all situations. This helps transition to the next activity.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use class discussions as a way to assess how well students understand the different ways computers can make decisions\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bbc0c1b6-17cd-44d0-883d-c937539be55a",
@@ -2916,6 +2914,10 @@
           {
             "type": "teachingTip",
             "markdown": "**Create a Class Graph:** If you have the classroom space available, we recommend adapting this activity to be completed physically as an entire class on a graph that has been created on the floor of the classroom. The flow of the activity remains the same, except each student takes a card and physically stands in their recommended spot on the graph. The class then decides on how to use string to divide the students into “fruit” and “vegetable” groups. Any remaining students then take on the role of the “test” foods and see how they would be classified as either a fruit or vegetable.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson."
           }
         ]
       },
@@ -3331,11 +3333,11 @@
       "key": "ca8c7c22-43b2-4d68-a73e-73f551b75328",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/csd7/2023] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training_a_model_in_ai_lab/csd7/2023] to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explore AI Lab to create models that can classify a shape. You should train multiple models from the same dataset and keep track of the accuracy by filling in the table on your activity guide\n\nOnce students have completed the table, regroup for a class discussion",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/csd7/2023] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training_a_model_in_ai_lab/csd7/2023] to each student.\n\n",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "**Widget Fluency:** For now, focus on helping students become fluent with AI Lab by making sure they can click columns and buttons, focus on appropriate panels, and navigate between screens. Students can also get help by reading the instructions, which update with each panel, or using the Help and Tips section to read help documents or re-watch the video.\n\n**Iterating on Features:** Students should remain in this same level and not press the Continue button until told to do so. This represents how students will typically use AI Lab with more complex datasets - training multiple models in the same level and comparing accuracy, rather than training a model just once and continuing.\n\n**Do We Really Need AI For This?** No - probably not for this particular problem. However, this exercise helps students become fluent with the flow of AI Lab while still cross-referencing with a visual dataset to confirm their understanding. This exercise also surfaces some important problems that will be important throughout the unit, such as when too much conflicting data can confuse AI Bot and lower accuracy or when AI Bot _thinks_ it knows something with high accuracy but with features that are not practical in the real-world."
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson."
           }
         ]
       },
@@ -3348,7 +3350,13 @@
       "key": "a545e48c-96a3-4424-97c9-dc3b68174274",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explore AI Lab to create models that can classify a shape. You should train multiple models from the same dataset and keep track of the accuracy by filling in the table on your activity guide\n\nOnce students have completed the table, regroup for a class discussion\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?_",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Widget Fluency:** For now, focus on helping students become fluent with AI Lab by making sure they can click columns and buttons, focus on appropriate panels, and navigate between screens. Students can also get help by reading the instructions, which update with each panel, or using the Help and Tips section to read help documents or re-watch the video.\n\n**Iterating on Features:** Students should remain in this same level and not press the Continue button until told to do so. This represents how students will typically use AI Lab with more complex datasets - training multiple models in the same level and comparing accuracy, rather than training a model just once and continuing.\n\n**Do We Really Need AI For This?** No - probably not for this particular problem. However, this exercise helps students become fluent with the flow of AI Lab while still cross-referencing with a visual dataset to confirm their understanding. This exercise also surfaces some important problems that will be important throughout the unit, such as when too much conflicting data can confuse AI Bot and lower accuracy or when AI Bot _thinks_ it knows something with high accuracy but with features that are not practical in the real-world."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a545e48c-96a3-4424-97c9-dc3b68174274",
@@ -4308,8 +4316,12 @@
         "progression_name": "Importing Your Model",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThis particular problem is addressed in later lessons, but if students encounter it here, there are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. "
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n"
           }
         ]
       },
@@ -4777,7 +4789,13 @@
       "key": "92851ec1-81e7-430b-89f0-c6153c03c4fe",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r zombie_prediction/csd7/2023] activity guide to each student."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r zombie_prediction/csd7/2023] activity guide to each student.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "92851ec1-81e7-430b-89f0-c6153c03c4fe",
@@ -4922,7 +4940,13 @@
       "key": "d3c71625-2f22-4f74-af43-4f45137a38ff",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the  to each student\n[r numerical_accuracy/csd7/2023]"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r numerical_accuracy/csd7/2023] to each student\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d3c71625-2f22-4f74-af43-4f45137a38ff",
@@ -5535,7 +5559,13 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue through the next several levels in Code Studio, where they will recreate this app.",
-        "progression_name": "Driver Alert System"
+        "progression_name": "Driver Alert System",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5a3bc922-3c92-4210-bdc2-c7345b013322",
@@ -5711,7 +5741,13 @@
       "key": "0a70d48a-473d-487f-a621-714ce2feefef",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/csd7/2023] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/csd7/2023] handout. \n\n#### AI Ethics Research Reflection\n\n**Work**: Have groups research their area with their fellow group members, answering questions on the handout along the way. Encourage students to skim longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/csd7/2023] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/csd7/2023] handout. \n\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0a70d48a-473d-487f-a621-714ce2feefef",
@@ -5719,8 +5755,19 @@
       }
     },
     {
-      "key": "e956a8d5-e978-4ee9-96d6-96f86bcf1267",
+      "key": "0b7c0e58-bf0e-447f-9c34-8061a8e5aeb7",
       "position": 5,
+      "properties": {
+        "description": "#### AI Ethics Research Reflection\n\n**Work**: Have groups research their area with their fellow group members, answering questions on the handout along the way. Encourage students to skim longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b7c0e58-bf0e-447f-9c34-8061a8e5aeb7",
+        "lesson_activity.key": "dcc09685-3ea4-4e78-9489-b3409b615b04"
+      }
+    },
+    {
+      "key": "e956a8d5-e978-4ee9-96d6-96f86bcf1267",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics similar to what they will be creating, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\r\n\r\n**Work**: Allow groups time to write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page). The format of the resource is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation, or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!",
         "name": "Draft “Our AI Code of Ethics” Resource \r"
@@ -5911,7 +5958,13 @@
       "position": 1,
       "properties": {
         "description": "Make sure students submit their projects in App Lab. Collect their project guides to review along with the project rubric.",
-        "name": "Submit Projects"
+        "name": "Submit Projects",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "A rubric is provided to assess the mini-project"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "658927aa-b10e-43dc-92c9-a374ccf0dda0",
@@ -6102,7 +6155,13 @@
       "key": "6d0d899c-5b42-43c6-912d-8aa6e4ad2785",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of [r 5_why_s_-_activity_guide/csd7/2023]. The first two boxes are filled out to match the slides. The remaining three boxes should be filled in by students.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out copies of [r 5_why_s_-_activity_guide/csd7/2023]. The first two boxes are filled out to match the slides. The remaining three boxes should be filled in by students.\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6d0d899c-5b42-43c6-912d-8aa6e4ad2785",
@@ -6695,7 +6754,7 @@
       "key": "71e374ca-dda6-42e3-9364-a3b32196d5f8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab.\n[r view_and_download_survey_data/csd7/2023]"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r view_and_download_survey_data/csd7/2023] video in the alides. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab.\n"
       },
       "seeding_key": {
         "activity_section.key": "71e374ca-dda6-42e3-9364-a3b32196d5f8",
@@ -6904,7 +6963,7 @@
       "key": "860a70be-6e28-4256-8976-9ccdd594592e",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r cleaning_survey_data/csd7/2023] video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r cleaning_survey_data/csd7/2023] video in the slides. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -7035,7 +7094,13 @@
       "key": "4d12300d-c18a-42f1-bfed-7a855f3c0f5f",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Pass out the [r troubleshooting_models_-_activity_guide/csd7/2023]. Students will record data from their investigation here."
+        "description": "**Distribute:** Pass out the [r troubleshooting_models_-_activity_guide/csd7/2023]. Students will record data from their investigation here.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The responses in the activity guide can be used to formatively assess how well students have met the objectives of the lesson. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4d12300d-c18a-42f1-bfed-7a855f3c0f5f",
