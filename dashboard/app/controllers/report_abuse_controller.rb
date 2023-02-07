@@ -90,8 +90,6 @@ class ReportAbuseController < ApplicationController
   # GET /v3/channels/:channel_id/abuse
   # Get an abuse score.
   def show_abuse
-    return head :unauthorized unless project_validator?
-
     begin
       value = Projects.get_abuse(params[:channel_id])
     rescue ArgumentError, OpenSSL::Cipher::CipherError

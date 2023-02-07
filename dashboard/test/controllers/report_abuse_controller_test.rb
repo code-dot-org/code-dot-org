@@ -63,29 +63,19 @@ class ReportAbuseControllerTest < ActionController::TestCase
 
   test "get abuse score" do
     response = get :show_abuse, params: {channel_id: @channel_id}
-    assert response.unauthorized?
-
-    user = create(:project_validator)
-    sign_in user
-
-    response = get :show_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
   end
 
   test "delete abuse score" do
-    user = create(:project_validator)
-    sign_in user
-
     response = get :show_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
 
-    sign_out user
-
     response = delete :destroy_abuse, params: {channel_id: @channel_id}
     assert response.unauthorized?
 
+    user = create(:project_validator)
     sign_in user
 
     response = delete :destroy_abuse, params: {channel_id: @channel_id}
@@ -96,9 +86,6 @@ class ReportAbuseControllerTest < ActionController::TestCase
   test "base64 error" do
     causes_argumenterror = "bT0zAyBvk"
     causes_ciphererror = "IMALITTLETEAPOTSHORTANDSTOUT"
-
-    user = create(:project_validator)
-    sign_in user
 
     assert_raises(ActionController::BadRequest) do
       get :show_abuse, params: {channel_id: causes_argumenterror}
