@@ -85,7 +85,7 @@ class AnimationListItem extends React.Component {
   }
 
   onSelect = () => {
-    if (this.props.currentAnimationType === 'background') {
+    if (this.props.currentAnimationType === CURRENT_ANIMATION_TYPE.background) {
       this.props.selectBackground(this.props.animationKey);
     } else {
       this.props.selectAnimation(this.props.animationKey);

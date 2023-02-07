@@ -7,12 +7,12 @@ const SELECT_BACKGROUND = 'AnimationTab/SELECT_BACKGROUND';
 const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
 
 const initialState = {
-  currentAnimations: {},
+  currentAnimations: {
+    [CURRENT_ANIMATION_TYPE.default]: '',
+    [CURRENT_ANIMATION_TYPE.background]: ''
+  },
   columnSizes: [150, undefined]
 };
-
-initialState.currentAnimations[CURRENT_ANIMATION_TYPE.default] = '';
-initialState.currentAnimations[CURRENT_ANIMATION_TYPE.background] = '';
 
 export default (state = initialState, action) => {
   if (action.type === SELECT_ANIMATION) {
