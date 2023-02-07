@@ -99,10 +99,9 @@ class ReportAbuseController < ApplicationController
   end
 
   # DELETE /v3/channels/:channel_id/abuse
-  # POST /v3/channels/:channel_id/abuse/delete
   # Clear an abuse score. Requires project_validator permission
   def destroy_abuse
-    return head :unauthorized unless project_validator?
+    return head :unauthorized unless can?(:destroy_abuse, nil)
 
     channel_id = params[:channel_id]
 
@@ -116,7 +115,7 @@ class ReportAbuseController < ApplicationController
 
   # PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=:abuse_score
   def update_file_abuse
-    return head :unauthorized unless project_validator?
+    return head :unauthorized unless can?(:update_file_abuse, nil)
 
     value = update_file_abuse_score(params[:endpoint], params[:encrypted_channel_id], params[:abuse_score])
 

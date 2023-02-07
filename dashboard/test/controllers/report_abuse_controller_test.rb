@@ -67,13 +67,19 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert_equal 0, JSON.parse(response.body)['abuse_score']
   end
 
-  test "delete abuse score" do
+  test "can't delete abuse score as normal user" do
     response = get :show_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
 
     response = delete :destroy_abuse, params: {channel_id: @channel_id}
     assert response.unauthorized?
+  end
+
+  test "can delete abuse score as project_validator" do
+    response = get :show_abuse, params: {channel_id: @channel_id}
+    assert response.ok?
+    assert_equal 0, JSON.parse(response.body)['abuse_score']
 
     user = create(:project_validator)
     sign_in user
@@ -158,6 +164,8 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "patch with permission gets unauthorized" do
+    FileBucket.any_instance.stubs(:get_abuse_score).returns(10)
+
     patch :update_file_abuse, params: {
       endpoint: 'files',
       abuse_score: 0,
