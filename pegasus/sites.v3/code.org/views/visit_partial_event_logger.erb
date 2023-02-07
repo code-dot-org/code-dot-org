@@ -2,6 +2,10 @@
 
 <script type='text/javascript'>
   // Log visits to the following pages found in .md.partial files.
+  // Since parameters can't be passed in to an .erb view from a .md.partial file,
+  // this solution of associating urls with events was opted for to be able to
+  // specify which event to trigger based on the page the user is on when
+  // '{{ visit_partial_event_logger }}' is present.
   const partialUrlToEventMap = {
     '/ai': 'AI_PAGE_VISIT_EVENT',
     '/educate/csc': 'CSC_CURRICULUM_PAGE_VISITED_EVENT',
