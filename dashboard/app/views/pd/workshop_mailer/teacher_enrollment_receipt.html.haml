@@ -14,7 +14,7 @@
     5-day Summer workshop on the Code.org
     = @workshop.course
     curriculum.
-- elsif @workshop.ayw? || ([Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course)
+- elsif [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   %p
     Thank you so much for enrolling in the School Leadership
     Program for 2023-2024! This program is part of the Equity
@@ -24,6 +24,14 @@
     state of computer science education at your school. To
     complete the survey prior to the Introduction Workshop, visit
     = link_to 'https://studio.code.org/form/2022_baseline_school_leadership.', 'https://studio.code.org/form/2022_baseline_school_leadership', target: "_blank", rel: "noopener noreferrer"
+- elsif @workshop.ayw?
+  %p
+    Thanks for enrolling in
+    = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
+    = @workshop.subject
+    on the Code.org
+    = @workshop.course
+    curriculum.
 - elsif Pd::Workshop::COURSE_FACILITATOR == @workshop.course
   %p
     Thanks for enrolling in your Facilitator workshop. We look
