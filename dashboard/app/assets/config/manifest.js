@@ -10,6 +10,10 @@
 // Then, include specific overrides that originally modified the
 // config.assets.precompile configuration variable:
 //
+//= link_directory ../../../public/blockly/js
+//= link_directory ../../../public/blockly/css .css
+//= link_directory ../stylesheets/levels .css
 //= link jquery.handsontable.full.css
 //= link emulate-print-media.js
 //= link jquery.handsontable.full.js
+//= link_directory ../../../public/blockly/video-js .css
