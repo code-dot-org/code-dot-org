@@ -45,6 +45,7 @@ class UnitOverviewTopRow extends React.Component {
     courseVersionId: PropTypes.number,
     isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
+    courseLink: PropTypes.string,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -248,6 +249,7 @@ class UnitOverviewTopRow extends React.Component {
               scriptId={scriptId}
               forceReload={true}
               buttonLocationAnalytics={'unit-overview-top'}
+              isStandAloneUnit={this.props.courseLink === null}
             />
             {unitAllowsHiddenLessons && (
               <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />

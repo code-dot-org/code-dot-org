@@ -1,11 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-//import PopUpMenu from '../../lib/ui/PopUpMenu';
-//import FontAwesome from './../FontAwesome';
 import color from '@cdo/apps/util/color';
 import {sectionForDropdownShape} from './teacherDashboard/shapes';
 
-// All this was borrowed from TeacherSectionSelector
 export default class TeacherSectionOption extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
@@ -26,20 +23,12 @@ export default class TeacherSectionOption extends Component {
   }
 
   renderCheckbox = () => {
-    const {section} = this.props;
-    console.log(section);
-    console.log(
-      `${section.name}  ${
-        section.isAssigned ? ' is assigned' : ' is NOT assigned'
-      }`
-    );
-    // const defaultValue = section.isAssigned;
-    console.log(this.state);
+    const {isChecked, onChange} = this.props;
     return (
       <input
         type="checkbox"
-        checked={this.props.isChecked}
-        onChange={this.props.onChange}
+        checked={isChecked}
+        onChange={onChange}
         style={styles.checkbox}
       />
     );
@@ -47,19 +36,14 @@ export default class TeacherSectionOption extends Component {
 
   render() {
     const {section} = this.props;
-    // const {section, onClick} = this.props;
-    // const checkMarkStyle = {
-    //   marginRight: 5,
-    //   color: color.level_perfect,
-    //   visibility: section.isAssigned ? 'visible' : 'hidden'
-    // };
-
-    // go to TeacherSectionSelectorMenuItem to see what they return
-    // I made this more simple
     return (
       <div>
-        <span>{this.renderCheckbox()}</span>
-        {section.name}
+        <span>
+          <div style={styles.sectionOptionContainer}>
+            <div>{this.renderCheckbox()}</div>
+            <label style={styles.sectionOptionLabel}>{section.name}</label>
+          </div>
+        </span>
       </div>
     );
   }
@@ -83,5 +67,12 @@ const styles = {
   checkbox: {
     height: 20,
     width: 20
+  },
+  sectionOptionContainer: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  sectionOptionLabel: {
+    padding: '7px'
   }
 };

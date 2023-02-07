@@ -27,6 +27,9 @@ class MultipleSectionsAssigner extends Component {
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     scriptId: PropTypes.number,
+    reassignConfirm: PropTypes.func,
+    buttonLocationAnalytics: PropTypes.string,
+    isStandAloneUnit: PropTypes.bool,
     // Redux
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     unassignSection: PropTypes.func.isRequired,
@@ -44,16 +47,32 @@ class MultipleSectionsAssigner extends Component {
 
     let initialSectionsAssignedToCourseList = [];
 
-    for (let i = 0; i < this.props.sections.length; i++) {
-      if (this.props.sections[i].isAssigned) {
-        initialSectionsAssignedToCourseList.push(this.props.sections[i]);
+    // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
+    if (this.props.buttonLocationAnalytics === 'unit-overview-top') {
+      if (this.props.isStandAloneUnit) {
+        for (let i = 0; i < this.props.sections.length; i++) {
+          if (
+            this.props.courseVersionId ===
+            this.props.sections[i].courseVersionId
+          ) {
+            initialSectionsAssignedToCourseList.push(this.props.sections[i]);
+          }
+        }
+      } else {
+        for (let i = 0; i < this.props.sections.length; i++) {
+          if (this.props.scriptId === this.props.sections[i].unitId) {
+            initialSectionsAssignedToCourseList.push(this.props.sections[i]);
+          }
+        }
+      }
+    } else if (this.props.buttonLocationAnalytics === 'course-overview-top') {
+      // checks to see if this is coming from the COURSE landing page
+      for (let i = 0; i < this.props.sections.length; i++) {
+        if (this.props.courseId === this.props.sections[i].courseId) {
+          initialSectionsAssignedToCourseList.push(this.props.sections[i]);
+        }
       }
     }
-
-    console.log(
-      'initialSectionsAssignedToCourseList is ' +
-        initialSectionsAssignedToCourseList
-    );
 
     this.state = {
       currentSectionsAssigned: initialSectionsAssignedToCourseList,
@@ -68,15 +87,15 @@ class MultipleSectionsAssigner extends Component {
     console.log(section + 'was clicked');
   };
 
-  //currentSection, currentCheckedStatus - old params
   handleChangedCheckbox = currentSection => {
-    console.log('The checkbox was toggled');
-    // // if it is checked, then add it to the list.
-    if (this.state.currentSectionsAssigned.includes(currentSection)) {
+    const isUnchecked = !!this.state.currentSectionsAssigned.some(
+      s => s.code === currentSection.code
+    );
+    if (isUnchecked) {
       // Remove it from the list
       this.setState(state => {
         let newList = state.currentSectionsAssigned.filter(
-          s => s !== currentSection
+          s => s.code !== currentSection.code
         );
         return {currentSectionsAssigned: newList};
       });
@@ -90,44 +109,64 @@ class MultipleSectionsAssigner extends Component {
   };
 
   reassignSections = () => {
+    const {
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      scriptId,
+      assignToSection
+    } = this.props;
     // This will assign any courses that need to be assigned
     for (let i = 0; i < this.state.currentSectionsAssigned.length; i++) {
-      if (
-        !this.state.initialSectionsAssigned.includes(
-          this.state.currentSectionsAssigned[i]
-        )
-      ) {
-        console.log(
-          this.state.currentSectionsAssigned[i].name + ' should be assigned'
-        );
-        this.unhideAndAssign(this.state.currentSectionsAssigned[i]);
+      const needsToBeAssigned = !this.state.initialSectionsAssigned.some(
+        s => s.code === this.state.currentSectionsAssigned[i].code
+      );
+      if (needsToBeAssigned) {
+        if (this.props.buttonLocationAnalytics === 'course-overview-top') {
+          const sectionId = this.state.currentSectionsAssigned[i].id;
+          assignToSection(
+            sectionId,
+            courseId,
+            courseOfferingId,
+            courseVersionId,
+            scriptId
+          );
+        } else {
+          this.unhideAndAssignUnit(this.state.currentSectionsAssigned[i]);
+          this.props.reassignConfirm();
+        }
       }
     }
 
     // Checks to see if any sections need to be removed from being assigned.
     for (let i = 0; i < this.state.initialSectionsAssigned.length; i++) {
-      console.log(this.state.initialSectionsAssigned[i]);
-      console.log(this.state.currentSectionsAssigned);
-      if (
-        !this.state.currentSectionsAssigned.includes(
-          this.state.initialSectionsAssigned[i]
-        )
-      ) {
-        this.props.unassignSection(
-          this.state.initialSectionsAssigned[i].id,
-          ''
-        );
-        console.log(
-          'This section needs to be removed from this course ' +
-            this.state.initialSectionsAssigned[i].name
-        );
+      const isSectionToBeRemoved = !this.state.currentSectionsAssigned.some(
+        s => s.code === this.state.initialSectionsAssigned[i].code
+      );
+
+      if (isSectionToBeRemoved) {
+        // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
+        // note, I don't know of a better way to check if it is on a course landing page
+        if (
+          this.props.buttonLocationAnalytics === 'course-overview-top' ||
+          this.props.isStandAloneUnit
+        ) {
+          this.props.unassignSection(
+            this.state.initialSectionsAssigned[i].id,
+            ''
+          );
+        } else {
+          // if on UNIT landing page, remove unit assignment but keep course assignment
+          this.assignCourseWithoutUnit(this.state.initialSectionsAssigned[i]);
+        }
       }
     }
     // close dialogue
+    this.props.reassignConfirm();
     this.props.onClose();
   };
 
-  unhideAndAssign = section => {
+  unhideAndAssignUnit = section => {
     const {
       courseId,
       courseOfferingId,
@@ -138,7 +177,6 @@ class MultipleSectionsAssigner extends Component {
       testingFunction
     } = this.props;
     const sectionId = section.id;
-    console.log('Trying to assign the section with id ' + sectionId);
     updateHiddenScript(sectionId, scriptId, false);
     assignToSection(
       sectionId,
@@ -156,14 +194,39 @@ class MultipleSectionsAssigner extends Component {
     );
   };
 
+  // this is the same as the above function but just has null as the scriptId
+  assignCourseWithoutUnit = section => {
+    const {
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      assignToSection,
+      testingFunction
+    } = this.props;
+    const sectionId = section.id;
+    assignToSection(
+      sectionId,
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      null
+    );
+    testingFunction(
+      sectionId,
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      null
+    );
+  };
+
   selectAllHandler = () => {
     for (let i = 0; i < this.props.sections.length; i++) {
       // if the section is NOT in currentSections assigned, assign it
-      if (
-        !this.state.currentSectionsAssigned.includes(
-          s => s.code === this.props.sections[i].code
-        )
-      ) {
+      const isSectionToBeAssigned = !this.state.currentSectionsAssigned.some(
+        s => s.code === this.props.sections[i].code
+      );
+      if (isSectionToBeAssigned) {
         this.setState(state => {
           let newList = [...state.currentSectionsAssigned];
           newList.push(this.props.sections[i]);
@@ -175,6 +238,7 @@ class MultipleSectionsAssigner extends Component {
 
   render() {
     const {sections, assignmentName, onClose} = this.props;
+    console.log('script id is ' + this.props.scriptId);
 
     return (
       <BaseDialog isOpen={true} handleClose={onClose}>
