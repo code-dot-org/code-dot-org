@@ -88,20 +88,6 @@ class HocRoutesTest < Minitest::Test
       assert_equal expected_url, @pegasus.last_response['Location']
     end
 
-    it 'redirects weblab test page to code studio' do
-      @pegasus.get CDO.code_org_url('/weblab-test')
-      assert_equal 302, @pegasus.last_response.status
-      expected_url = CDO.studio_url('/test/weblab', CDO.default_scheme)
-      assert_equal expected_url, @pegasus.last_response['Location']
-    end
-
-    it 'preserves url params when redirecting congrats page' do
-      @pegasus.get CDO.code_org_url('/weblab-test?i=foo&s=bar')
-      assert_equal 302, @pegasus.last_response.status
-      expected_url = CDO.studio_url('/test/weblab?i=foo&s=bar', CDO.default_scheme)
-      assert_equal expected_url, @pegasus.last_response['Location']
-    end
-
     it 'starts and ends given tutorial, tracking company and tutorial' do
       DB.transaction(rollback: :always) do
         with_test_company 'testcompany'
