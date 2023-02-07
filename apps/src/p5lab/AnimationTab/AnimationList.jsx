@@ -9,7 +9,6 @@ import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
 import i18n from '@cdo/locale';
-import {CURRENT_ANIMATION_TYPE} from '../constants';
 /**
  * Vertical scrolling list of animations associated with the project.
  */
@@ -17,8 +16,6 @@ class AnimationList extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
     currentAnimations: shapes.CurrentAnimations,
-    currentAnimationType: PropTypes.oneOf(Object.values(CURRENT_ANIMATION_TYPE))
-      .isRequired,
     onNewItemClick: PropTypes.func.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
@@ -34,8 +31,7 @@ class AnimationList extends React.Component {
       labType,
       onNewItemClick,
       spriteLab,
-      currentAnimations,
-      currentAnimationType
+      currentAnimations
     } = this.props;
     let newAnimationLabel;
     if (spriteLab) {
@@ -70,7 +66,6 @@ class AnimationList extends React.Component {
             key={key}
             animationKey={key}
             animationProps={animationList.propsByKey[key]}
-            currentAnimationType={currentAnimationType}
             isSelected={
               key === currentAnimations.default ||
               key === currentAnimations.background

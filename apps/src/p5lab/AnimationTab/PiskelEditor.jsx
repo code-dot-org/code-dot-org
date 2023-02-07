@@ -250,6 +250,7 @@ class PiskelEditor extends React.Component {
 export default connect(
   state => ({
     currentAnimations: state.animationTab.currentAnimations,
+    currentAnimationType: state.animationTab.currentAnimationType,
     animationList: state.animationList,
     channelId: state.pageConstants.channelId,
     allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
