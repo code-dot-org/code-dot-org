@@ -1,5 +1,6 @@
 import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
+import {DEFAULT_SOUND} from '../constants';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -37,7 +38,7 @@ export const playSoundAtCurrentLocationSimple2 = {
         playPreview: (id, onStop) => {
           Globals.getPlayer().previewSound(id, onStop);
         },
-        currentValue: 'pop/cafe_beat'
+        currentValue: DEFAULT_SOUND
       }
     ],
     inputsInline: true,
@@ -77,7 +78,7 @@ export const playSoundsTogether = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'flow_blocks',
     tooltip: 'play sounds together',
     helpUrl: ''
   },
@@ -103,7 +104,7 @@ export const playSoundsSequential = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    style: 'music_blocks',
+    style: 'flow_blocks',
     tooltip: 'play sounds sequentially',
     helpUrl: ''
   },
