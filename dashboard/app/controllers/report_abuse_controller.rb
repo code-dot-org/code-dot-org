@@ -114,6 +114,15 @@ class ReportAbuseController < ApplicationController
     render json: {abuse_score: value}
   end
 
+  # PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=:abuse_score
+  def update_file_abuse
+    return head :unauthorized unless project_validator?
+
+    value = update_file_abuse_score(params[:endpoint], params[:encrypted_channel_id], params[:abuse_score])
+
+    render json: {abuse_score: value}
+  end
+
   # Non-actions, public methods so they can be tested easier.
   # The methods below are in this controller because they depend on the
   # storage_id helper, which has dependencies on current_user.
