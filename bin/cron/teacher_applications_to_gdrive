@@ -39,6 +39,8 @@ def get_rows
       app.status,
       app.scholarship_status,
       app.school_type,
+      app.school_name,
+      app.district_name,
       pay_fee,
       app.email,
       app.created_at,
