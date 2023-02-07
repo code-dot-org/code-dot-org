@@ -11,7 +11,8 @@
 
 (function($, undefined) {
   var rkeyEvent = /^key/,
-    rmouseEvent = /^(?:mouse|contextmenu|touch|pointer|MSPointer)|click/;
+    rmouseEvent = /^(?:mouse|contextmenu|touch)|click/,
+    rpointerEvent = /^pointer/;
 
   $.fn.simulate = function(type, options) {
     return this.each(function() {
@@ -79,6 +80,23 @@
       if (rmouseEvent.test(type)) {
         return this.mouseEvent(type, options);
       }
+
+      if (rpointerEvent.test(type)) {
+        return this.pointerEvent(type, options);
+      }
+    },
+
+    pointerEvent: function(type, options) {
+      options = $.extend(
+        {
+          pointerType: 'mouse',
+          pointerId: 1,
+          isPrimary: true,
+        },
+        options
+      );
+      return new PointerEvent(type, options);
+
     },
 
     mouseEvent: function(type, options) {
@@ -329,7 +347,7 @@
           options.handle === "corner" ? findCorner(target) : findCenter(target),
         x = Math.floor(center.x),
         y = Math.floor(center.y),
-        eventOptions = { clientX: x, clientY: y, pointerType: 'mouse', pointerId: 1 },
+        eventOptions = { clientX: x, clientY: y },
         dx = options.dx || (options.x !== undefined ? options.x - x : 0),
         dy = options.dy || (options.y !== undefined ? options.y - y : 0),
         moves = options.moves || 3;
@@ -342,9 +360,7 @@
 
         eventOptions = {
           clientX: Math.round(x),
-          clientY: Math.round(y),
-          pointerType: 'mouse',
-          pointerId: 1
+          clientY: Math.round(y)
         };
 
         this.simulateEvent(target.ownerDocument, "pointermove", eventOptions);
