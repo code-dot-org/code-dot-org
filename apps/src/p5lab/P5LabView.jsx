@@ -12,8 +12,7 @@ import {
   P5LabInterfaceMode,
   P5LabType,
   APP_WIDTH,
-  APP_HEIGHT,
-  CURRENT_ANIMATION_TYPE
+  APP_HEIGHT
 } from './constants';
 import P5LabVisualizationHeader from './P5LabVisualizationHeader';
 import P5LabVisualizationColumn from './P5LabVisualizationColumn';
@@ -193,11 +192,6 @@ class P5LabView extends React.Component {
         interfaceMode === P5LabInterfaceMode.BACKGROUND) ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        currentAnimationType={
-          isBackgroundMode
-            ? CURRENT_ANIMATION_TYPE.background
-            : CURRENT_ANIMATION_TYPE.default
-        }
         defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.shouldHideAnimationUpload()}

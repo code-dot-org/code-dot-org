@@ -78,17 +78,13 @@ class AnimationTab extends React.Component {
           <div style={animationsColumnStyle}>
             <P5LabVisualizationHeader labType={labType} />
             <AnimationList
-              currentAnimationType={currentAnimationType}
               hideBackgrounds={hideBackgrounds}
               hideCostumes={hideCostumes}
               labType={labType}
             />
           </div>
           <div style={styles.editorColumn}>
-            <PiskelEditor
-              currentAnimationType={currentAnimationType}
-              style={styles.piskelEl}
-            />
+            <PiskelEditor style={styles.piskelEl} />
             <div style={{...hidePiskelStyle, ...styles.emptyPiskelEl}}>
               <div style={styles.helpText}> {i18n.addNewAnimation()} </div>
             </div>
@@ -162,6 +158,7 @@ const styles = {
 };
 export default connect(
   state => ({
+    currentAnimationType: state.animationTab.currentAnimationType,
     columnSizes: state.animationTab.columnSizes,
     currentAnimations: state.animationTab.currentAnimations
   }),

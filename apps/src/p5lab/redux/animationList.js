@@ -431,7 +431,7 @@ export function addBlankAnimation() {
 export function appendBlankFrame() {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
-    // so we don't need to worry about backgrounds (Sprite Lab only)
+    // so we don't need to worry about backgrounds (which are only in Sprite Lab)
     const currentAnimationKey = getState().animationTab.currentAnimations
       .default;
     dispatch(setPendingFramesAction(currentAnimationKey, {blankFrame: true}));

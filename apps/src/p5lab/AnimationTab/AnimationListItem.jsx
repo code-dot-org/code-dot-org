@@ -302,6 +302,7 @@ const styles = {
 };
 export default connect(
   state => ({
+    currentAnimationType: state.animationTab.currentAnimationType,
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
       state.pageConstants.allAnimationsSingleFrame || false,
