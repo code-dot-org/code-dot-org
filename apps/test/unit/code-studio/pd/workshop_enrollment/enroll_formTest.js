@@ -320,8 +320,7 @@ describe('Enroll Form', () => {
       school_info: school_info,
       ...pick(extraParams, ['role', 'grades_teaching'])
     };
-
-    function renderForm() {
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -332,11 +331,9 @@ describe('Enroll Form', () => {
           onSubmissionComplete={props.onSubmissionComplete}
         />
       );
-    }
+    });
 
     it('submits other school_info fields when no school_id', () => {
-      renderForm();
-
       const school_info_without_id = {
         school_name: 'Hogwarts School of Witchcraft and Wizardry',
         school_state: 'Washington',
@@ -362,8 +359,6 @@ describe('Enroll Form', () => {
     });
 
     it("doesn't submit other school_info fields when school_id is selected", () => {
-      renderForm();
-
       const expectedData = {
         ...requiredParams,
         school_info: {school_id: school_id}
@@ -379,8 +374,6 @@ describe('Enroll Form', () => {
     });
 
     it('disables submit button after submit', () => {
-      renderForm();
-
       enrollForm.setState(omit(requiredParams, 'role'));
 
       // Submit button should stay enabled if invalid data was provided.
@@ -420,6 +413,34 @@ describe('Enroll Form', () => {
       expect(jQuery.ajax.called).to.be.false;
       expect(enrollForm.state('errors')).to.have.property('email');
       expect(enrollForm.state('errors')).not.to.have.property('first_name');
+    });
+
+    it('does not submit when user sets blank first name', () => {
+      enrollForm.setState({...requiredParams, first_name: ''});
+      enrollForm.find('#submit').simulate('click');
+      expect(jQuery.ajax.called).to.be.false;
+      expect(enrollForm.state('errors')).to.have.property('first_name');
+    });
+
+    it('does not submit when user does not input last name', () => {
+      enrollForm.setState(omit(requiredParams, 'last_name'));
+      enrollForm.find('#submit').simulate('click');
+      expect(jQuery.ajax.called).to.be.false;
+      expect(enrollForm.state('errors')).to.have.property('last_name');
+    });
+
+    it('does not submit when user sets blank email', () => {
+      enrollForm.setState({...requiredParams, email: ''});
+      enrollForm.find('#submit').simulate('click');
+      expect(jQuery.ajax.called).to.be.false;
+      expect(enrollForm.state('errors')).to.have.property('email');
+    });
+
+    it('does not submit when user does not input school', () => {
+      enrollForm.setState(omit(requiredParams, 'school_info'));
+      enrollForm.find('#submit').simulate('click');
+      expect(jQuery.ajax.called).to.be.false;
+      expect(enrollForm.state('errors')).to.have.property('school_id');
     });
   });
 });
