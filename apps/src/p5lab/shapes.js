@@ -47,6 +47,16 @@ const Vector2 = PropTypes.shape({
 export const AnimationKey = PropTypes.string;
 
 /**
+ * @typedef {Object} CurrentAnimations
+ * @property {AnimationKey} default - The animation key for Animations (Game Lab) or Costumes (Sprite Lab)
+ * @property {AnimationKey} background - The animation key for Backgrounds (Sprite Lab)
+ */
+export const CurrentAnimations = PropTypes.shape({
+  default: AnimationKey.isRequired,
+  background: AnimationKey.isRequired
+});
+
+/**
  * A subset of AnimationProps that gets saved with the project JSON.
  * @typedef {Object} SerializedAnimationProps
  * @property {string} name
