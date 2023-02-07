@@ -4,6 +4,7 @@ const EVENTS = {
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
+  TEACHER_LOGIN_EVENT: 'Teacher Login',
 
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_EVENT: 'Course Overview Page Visited',
@@ -30,7 +31,10 @@ const EVENTS = {
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
-  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson'
+  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
+
+  // Levels
+  FEEDBACK_SUBMITTED: 'Level Feedback Submitted'
 };
 
 export {EVENTS};
