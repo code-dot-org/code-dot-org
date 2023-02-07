@@ -255,6 +255,10 @@ describe('Enroll Form', () => {
       assert(enrollForm.exists('#role'));
     });
 
+    it('does not display grades_teaching question', () => {
+      assert(!enrollForm.exists('#grades_teaching'));
+    });
+
     it('displays describe role question after answered as other', () => {
       enrollForm.setState({role: 'Other'});
       expect(enrollForm.find('#describe_role')).to.have.length(1);
