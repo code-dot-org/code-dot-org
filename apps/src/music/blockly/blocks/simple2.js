@@ -1,5 +1,4 @@
 import {BlockTypes} from '../blockTypes';
-import {getLengthForId} from '../../player/helpers';
 import Globals from '../../globals';
 
 // Examine chain of parents to see if one is 'when_run'.
@@ -111,10 +110,10 @@ export const playSoundAtCurrentLocationSimple2 = {
     if (stack[stack.length-1].together) {
       stack[stack.length-1].lastMeasures.push(
         stack[stack.length-1].measure +
-        ${getLengthForId(ctx.getFieldValue('sound'))}
+        ${Globals.getPlayer().getLengthForId(ctx.getFieldValue('sound'))}
       );
     } else {
-      stack[stack.length-1].measure += ${getLengthForId(
+      stack[stack.length-1].measure += ${Globals.getPlayer().getLengthForId(
         ctx.getFieldValue('sound')
       )};
     }
