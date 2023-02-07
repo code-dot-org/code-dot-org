@@ -16,7 +16,8 @@ export default class AnimationPickerListItem extends React.Component {
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
     category: PropTypes.string,
-    selected: PropTypes.bool
+    selected: PropTypes.bool,
+    isBackgroundsTab: PropTypes.bool
   };
 
   state = {
@@ -32,7 +33,8 @@ export default class AnimationPickerListItem extends React.Component {
       onClick,
       playAnimations,
       label,
-      selected
+      selected,
+      isBackgroundsTab
     } = this.props;
     const {loaded, hover} = this.state;
 
@@ -80,6 +82,11 @@ export default class AnimationPickerListItem extends React.Component {
               />
             )}
             {icon && <i className={'fa fa-' + icon} />}
+            {isBackgroundsTab && (
+              <p className={classNames(style.label, style.labelIcon)}>
+                {label}
+              </p>
+            )}
             {category && (
               <img
                 data-category={category}
@@ -99,7 +106,7 @@ export default class AnimationPickerListItem extends React.Component {
             />
           )}
         </button>
-        {label && (
+        {label && !isBackgroundsTab && (
           <div
             className={classNames(
               style.label,
