@@ -1,4 +1,6 @@
 /** @file Board controller for BBC micro:bit */
+/* global SerialPort */ // Provided by the Code.org Browser
+
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   createMicroBitComponents,
@@ -10,9 +12,21 @@ import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
-import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
-import {isWebSerialPort, SERIAL_BAUD} from '../../util/boardUtils';
+import LedScreen from './LedScreen';
+import {
+  MICROBIT,
+  MICROBIT_FIRMWARE_VERSION,
+  FIRMWARE_VERSION_TIMEOUT,
+  SQUARE_LEDS,
+  CHECKMARK_LEDS,
+  ALL_LEDS
+} from './MicroBitConstants';
+import {delayPromise} from '../../util/boardUtils';
+import {
+  SERIAL_BAUD,
+  isWebSerialPort
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {MAKER_TOOLKIT} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -30,12 +44,11 @@ export default class MicroBitBoard extends EventEmitter {
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
 
-    this.isChromeOS = isChromeOS();
-
-    let portType = serialPortType(true);
+    const portType = isWebSerialPort(port) ? navigator.serial : SerialPort;
 
     /** @private {MicrobitFirmataClient} serial port controller */
     this.boardClient_ = new MBFirmataWrapper(portType);
+    this.boardClientWithoutSerialPort = null;
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
@@ -59,8 +72,7 @@ export default class MicroBitBoard extends EventEmitter {
    */
   openSerialPort() {
     const portName = this.port ? this.port.comName : undefined;
-    const SerialPortType = serialPortType(false);
-    const serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
+    const serialPort = new SerialPort(portName, {baudRate: SERIAL_BAUD});
     return Promise.resolve(serialPort);
   }
 
@@ -70,9 +82,7 @@ export default class MicroBitBoard extends EventEmitter {
    * @return {Promise<SerialPort>}
    */
   openSerialPortWebSerial(port) {
-    return port.open().then(() => {
-      return port;
-    });
+    return port.openMBPort().then(() => port);
   }
 
   /**
@@ -84,44 +94,66 @@ export default class MicroBitBoard extends EventEmitter {
    * @returns {Promise<void>}
    */
   checkExpectedFirmware() {
-    console.log(
-      'inside checkExpectedFirmware in MicroBitBoard.js - print this.isChromeOS'
-    );
-    console.log(this.isChromeOS);
-    return Promise.resolve()
-      .then(() => {
-        if (isWebSerialPort(this.port)) {
-          return this.openSerialPortWebSerial(this.port);
-        } else {
-          return this.openSerialPort();
-        }
-      })
-      .then(port => this.boardClient_.connectBoard(port))
-      .then(() => {
-        // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
-        return delayPromise(250);
-      })
-      .then(() => {
-        if (
-          this.boardClient_.firmwareVersion.includes(MICROBIT_FIRMWARE_VERSION)
-        ) {
-          return Promise.resolve();
-        } else {
-          if (this.boardClient_.firmwareVersion === '') {
-            // Log if we were not able to determine the firmware version in time.
-            firehoseClient.putRecord({
-              study: 'maker-toolkit',
-              study_group: 'microbit',
-              event: 'firmwareVersionTimeout'
-            });
-            console.warn(
-              'Firmware version not detected in time. Try refreshing the page.'
-            );
+    if (!isWebSerialPort(this.port)) {
+      // maker app pathway
+      return Promise.resolve()
+        .then(() => this.openSerialPort())
+        .then(serialPort => this.boardClient_.connectBoard(serialPort))
+        .then(() => {
+          // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
+          return delayPromise(250);
+        })
+        .then(() => {
+          if (
+            this.boardClient_.firmwareVersion.includes(
+              MICROBIT_FIRMWARE_VERSION
+            )
+          ) {
+            return Promise.resolve();
+          } else {
+            if (this.boardClient_.firmwareVersion === '') {
+              // Log if we were not able to determine the firmware version in time.
+              firehoseClient.putRecord({
+                study: MAKER_TOOLKIT,
+                study_group: MICROBIT,
+                event: FIRMWARE_VERSION_TIMEOUT
+              });
+              console.warn(
+                'Firmware version not detected in time. Try refreshing the page.'
+              );
+            }
+            return Promise.reject('Incorrect firmware detected');
           }
-          return Promise.reject('Incorrect firmware detected');
-        }
-      })
-      .catch(err => Promise.reject(err));
+        })
+        .catch(err => Promise.reject(err));
+    } else {
+      // webserial pathway
+      return this.openSerialPortWebSerial(this.port)
+        .then(serialPort => {
+          return this.boardClient_.connectBoard(serialPort);
+        })
+        .then(() => {
+          // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
+          return delayPromise(250);
+        })
+        .then(() => {
+          if (
+            this.boardClient_.firmwareVersion.includes(
+              MICROBIT_FIRMWARE_VERSION
+            )
+          ) {
+            return Promise.resolve();
+          } else {
+            if (this.boardClient_.firmwareVersion === '') {
+              console.warn(
+                'Firmware version not detected in time. Try refreshing the page.'
+              );
+            }
+            return Promise.reject('Incorrect firmware detected');
+          }
+        })
+        .catch(err => Promise.reject(err));
+    }
   }
 
   /**
@@ -131,9 +163,13 @@ export default class MicroBitBoard extends EventEmitter {
    * @throws {Error} if called before connecting to firmware
    */
   initializeComponents() {
+    this.boardClientWithoutSerialPort = Object.assign({}, this.boardClient_);
+    delete this.boardClientWithoutSerialPort.serialPortWebSerial;
+    delete this.boardClientWithoutSerialPort.myPort;
+
     return createMicroBitComponents(this.boardClient_).then(components => {
       this.prewiredComponents_ = {
-        board: this.boardClient_,
+        board: this.boardClientWithoutSerialPort,
         ...components
       };
     });
@@ -153,6 +189,62 @@ export default class MicroBitBoard extends EventEmitter {
    */
   boardConnected() {
     return !!this.boardClient_.myPort;
+  }
+
+  /**
+   * Displays  to demonstrate successful connection
+   * A square is drawn in a spiral and then a checkmark flashes 3 times
+   * on the board.
+   * @returns {Promise} resolved when the animation is done.
+   */
+  celebrateSuccessfulConnection() {
+    function makeSquare(ledScreen, delay, timeInterval) {
+      return new Promise(resolve => {
+        SQUARE_LEDS.forEach((ledPair, i) => {
+          setTimeout(
+            () => ledScreen.on(ledPair[0], ledPair[1]),
+            delay * (i + 1)
+          );
+        });
+        setTimeout(resolve, delay * SQUARE_LEDS.length + timeInterval);
+      });
+    }
+
+    function makeCheckMark(ledScreen, delay) {
+      return new Promise(resolve => {
+        CHECKMARK_LEDS.forEach(ledPair => {
+          setTimeout(() => ledScreen.on(ledPair[0], ledPair[1]));
+        });
+        setTimeout(resolve, delay);
+      });
+    }
+
+    function turnOffAllLeds(ledScreen, delay) {
+      return new Promise(resolve => {
+        ALL_LEDS.forEach(ledPair => {
+          setTimeout(() => ledScreen.off(ledPair[0], ledPair[1]));
+        });
+        setTimeout(resolve, delay);
+      });
+    }
+
+    this.initializeComponents().then(() => {
+      const ledScreen = new LedScreen({
+        mb: this.boardClient_
+      });
+
+      const timeInterval = 200;
+      const squareTimeInterval = 70;
+
+      return Promise.resolve()
+        .then(() => makeSquare(ledScreen, squareTimeInterval, timeInterval))
+        .then(() => turnOffAllLeds(ledScreen, timeInterval))
+        .then(() => makeCheckMark(ledScreen, timeInterval))
+        .then(() => turnOffAllLeds(ledScreen, timeInterval))
+        .then(() => makeCheckMark(ledScreen, timeInterval))
+        .then(() => turnOffAllLeds(ledScreen, timeInterval))
+        .then(() => makeCheckMark(ledScreen, timeInterval));
+    });
   }
 
   pinMode(pin, modeConstant) {
@@ -236,6 +328,7 @@ export default class MicroBitBoard extends EventEmitter {
       this.boardClient_.reset();
     }
     this.boardClient_ = null;
+    this.boardClientWithoutSerialPort = null;
 
     return Promise.resolve();
   }
@@ -267,5 +360,3 @@ export default class MicroBitBoard extends EventEmitter {
     );
   }
 }
-
-const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));

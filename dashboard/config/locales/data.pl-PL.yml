@@ -972,6 +972,24 @@ pl:
         csc-event-short-intro: Krótkie wprowadzenie do zdarzeń.
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Przegląd jednostki Circuit
           Playground
+        csa-day-in-pm-pl: Co robi kierownik projektu?
+        csa-pl-intro-to-pm: Wprowadzenie do zarządzania projektami
+        PL_CSD_CircuitPlayground_Setup: Konfiguracja Circuit Playground
+        csa_object_oriented_programming: 'CSA: Programowanie obiektowe'
+        csa_creating_objects: 'CSA: Tworzenie obiektów'
+        csa_calling_methods: 'CSA: Wywołanie metod'
+        csa_while_loops: 'CSA: Pętle dopóki'
+        csa_inheritance: 'CSA: Dziedziczenie'
+        csa_writing_a_method: 'CSA: Pisanie metody'
+        csa_software_engineering_code_reviews: 'CSA: Inżynieria oprogramowania - Przegld
+          kodu'
+        csa_conditional_statements: 'CSA: Instrukcje warunkowe'
+        csa_printing_in_java: 'CSA: Drukowanie w Javie'
+        csa_two_way_selection_and_not: 'CSA: Wybór dwukierunkowy i NOT'
+        csa-pl-intro-to-oop: Wprowadzenie do programowania obiektowego
+        csa-pl-welcome-to-Neighborhood: Witamy w The Neighborhood
+        csa-pl-calling-methods: Wywołanie metod w Javie
+        csa-pl-creating-objects: Tworzenie obiektów
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

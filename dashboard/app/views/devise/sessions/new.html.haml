@@ -1,4 +1,6 @@
-%h1= t('signin_form.title')
+%link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
+
+%h2= t('signin_form.title')
 
 .flex-container
   #signin
@@ -28,7 +30,7 @@
     / Not yet signed up? Sign up
     - if devise_mapping.registerable?
       = link_to new_user_registration_path, class: 'field-aligned' do
-        %button.blue-button= t('nav.user.signup')
+        %button.neutral-button= t('nav.user.signup')
 
   %div.vertical-or
     %hr
@@ -37,7 +39,7 @@
 
   = render "devise/shared/oauth_links"
 
-%h2#code_without_signing_in= t('signin.try_heading')
+%h4#code_without_signing_in= t('signin.try_heading')
 
 .row
   - if @is_english

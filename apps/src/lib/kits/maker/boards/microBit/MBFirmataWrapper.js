@@ -5,9 +5,10 @@ import {isWebSerialPort} from '../../util/boardUtils';
 export const ACCEL_EVENT_ID = 13;
 
 export default class MicrobitFirmataWrapper extends MBFirmataClient {
-  constructor(SerialPort) {
-    super(SerialPort);
+  constructor(portType) {
+    super(portType);
     this.digitalCallbacks = [];
+    this.serialPortWebSerial = null;
   }
 
   connectBoard(port) {
@@ -32,25 +33,43 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
   }
 
   setSerialPort(port) {
-    if (!isWebSerialPort()) {
+    if (!isWebSerialPort(port)) {
+      // This branch is for Maker app pathway.
       return super.setSerialPort(port);
     } else {
       // Use the given port. Assume the port has been opened by the caller.
-
-      this.myPort = port;
+      // This branch is for WebSerial pathway - only opening/closing port for now.
+      this.myPort = port; // port is a WebSerialPortWrapper
+      this.serialPortWebSerial = port.port;
       this.myPort.on('data', this.dataReceived.bind(this));
       this.requestFirmataVersion();
       this.requestFirmwareVersion();
 
-      // get the board serial number (used to determine board version)
-      this.boardVersion = '';
-
-      // Above code is directly from setSerialPort in MBFirmataClient.
-      // Returning an empty promise below because Chrome Serial Port doesn't return
-      // .list() as a promise, as expected in MBFirmataClient. Because of the empty
-      // promise we don't set this.boardVersion. As of this edit, we do not use the
-      // boardVersion in our MB integration so no impact.
       return Promise.resolve();
+    }
+  }
+
+  async disconnect() {
+    // Close and discard the serial port.
+    if (!isWebSerialPort(this.myPort)) {
+      super.disconnect();
+    } else {
+      return new Promise(resolve => {
+        // It can take a moment for the reset() command to reach the board, so defer
+        // closing the serialport for a moment.
+        setTimeout(() => {
+          // Close the serialport, cleaning it up properly so we can open it again
+          // on the next run.
+          if (
+            this.serialPortWebSerial &&
+            typeof this.serialPortWebSerial.close === 'function'
+          ) {
+            this.myPort.close();
+          }
+          this.webSerialSerialPort = null;
+          resolve();
+        }, 50);
+      });
     }
   }
 

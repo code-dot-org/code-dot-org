@@ -36,17 +36,18 @@ hu-HU:
         title: Feleletválasztós
       2-3 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content2: A billentyűkombinációkat párosítása a táncmozdulatokhoz.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: Megfelelő
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
       2-3 Binary Match 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
@@ -162,13 +163,16 @@ hu-HU:
         title: Művész hibakeresés Többszörös választás 1
       2-3 artist functions multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         questions:
-        - text: Válassza ki, hogy az adott függvények használata esetén mely blokkokra
-            van szükség a kép megrajzolásához
-        title: Művészek Függvények Több választási lehetőség
+        - text: Válaszd ki a megfelelő blokkokat, amik a megadott függvények használatával
+            elkészítik a fenti képet
+        title: Művész függvények - válaszd ki a helyeset!
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
       2-3 artist loops match 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
@@ -193,7 +197,7 @@ hu-HU:
           500"
         questions:
         - text: Milyen alakzatot készít ez a ciklus?
-        title: Művész - ciklusok. Feleltválasztás
+        title: Művész ciklusok - feleletválasztás
       2-3 artist loops multi 2:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
@@ -205,7 +209,7 @@ hu-HU:
           500"
         questions:
         - text: Milyen alakzatot készít ez a program?
-        title: Művész - ciklusok. Feleltválasztás
+        title: Művész ciklusok - feleletválasztás
       2-3 artist match 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
@@ -252,7 +256,7 @@ hu-HU:
         content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: Melyik blokkok gyűjtik össze az összes nektárt?
-        title: 'Méh - ciklusok: válaszd ki a helyes megoldást'
+        title: Méh ciklusok - feleletválasztás
       2-3 maze match 1:
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
@@ -277,17 +281,17 @@ hu-HU:
         title: Labirintus, többszörös választás
       4-5 Algorithms Match 1:
         answers:
-        - text: "<h4>Az 1. Játékos pontszámának beállítása 0 pontra</h4>"
-        - text: "<h4>Az 1. Játékos dobja a dobókockát</h4>"
-        - text: "<h4>Add hozzá az 1. Játékos pontszámait az összpontszámhoz</h4>"
-        - text: "<h4>Hasonlítsd össze a játékosok pontszámait, hogy megtaláld a nyertest</h4>"
-        content1: Rendezd a kockázós vetélkedőjátékban szerepélő lépéseket úgy, ahogy
-          annak lennie kell az algoritmusban!
+        - text: "**Az 1. játékos pontszáma legyen 0**"
+        - text: "**Az 1. játékos dobja el a kockát**"
+        - text: "**Növeld az 1. játékos pontszámát a dobás értékével**"
+        - text: "**Hasonlítsd össze a játékosok pontszámait, hogy megtaláld a nyertest**"
+        content1: Rendezd a kockajátékban szereplő lépéseket úgy, ahogy azoknak az
+          algoritmusban megjelennek!
         questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
+        - text: "**1)**"
+        - text: "**2)**"
+        - text: "**3)**"
+        - text: "**4)**"
         title: Megfelelő
       4-5 Algorithms Multi 1:
         answers:
@@ -297,7 +301,7 @@ hu-HU:
         - text: Banán
           correct: true
         questions:
-        - text: Ezen elemek közül melyik írható le legnehezebben  egy algoritmussal?
+        - text: Ezen elemek közül melyik írható le legnehezebben egy algoritmussal?
         title: Feleletválasztós
       4-5 Computational Thinking Match 1:
         answers:
@@ -328,8 +332,9 @@ hu-HU:
         title: Feleletválasztós
       4-5 Crowdsourcing Multi 1:
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
         questions:
         - text: Ezen képek közül melyik ábrázolja leginkább a crowdsourcing-ot?
         title: Feleletválasztós
@@ -338,7 +343,7 @@ hu-HU:
         - text: A szobád kitakarítása
           correct: true
         - text: A desszerted megevése
-        - text: Fésülködés
+        - text: A hajad megfésülése
         - text: Az arcod megmosása
         questions:
         - text: Ezen tevékenységek közül melyik lenne a legjobb a crowdsourcing gyakorlására?
@@ -351,146 +356,180 @@ hu-HU:
         - text: Lakcímed
         - text: Szüleid bankkártyaszáma
         questions:
-        - text: Az alább felsorolt információból melyik részt szabad megosztani az
+        - text: Az alább felsorolt információk közül melyiket szabad megosztani az
             interneten?
         title: Feleletválasztós
       4-5 Internet Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+          correct: true
         questions:
-        - text: Amikor megpróbál bejelentkezni a code.org-ra, a DNS szerver melyik
-            IP-címre fogja legvalószínűbben elirányítani?
+        - text: Amikor megpróbálsz bejelentkezni a code.org-ra, a DNS szerver valószínűleg
+            melyik IP-címre fog elvinni?
         title: Feleletválasztós
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Internet Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: code.org
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+        - text: khanacademy.org
         questions:
         - text: Ha a DNS a 100.42.50.110 IP-címen található oldalra küldött, melyik
             weboldalon vagy?
         title: Feleletválasztós
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Songwriting Multi 1:
         answers:
-        - text: Lou, Lou, ugorj az én Lou-mhoz,
-        - text: Lou, Lou, ugorj az én Lou-mhoz, <br/> Lou, Lou, ugorj az én Lou-mhoz,
-            <br/>Lou, Lou, ugorj az én Lou-mhoz, <br/> Ugorj az én Lou-mhoz, drágám.
+        - text: Lou, Lou, skip to my Lou,
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin."
           correct: true
-        - {}
-        - {}
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,"
+        - text: "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,
+            \  \nSkip to my Lou, my darlin."
         questions:
-        - {}
+        - text: Jelöljünk ki a dalban egy részt a kórus számára, ami mindig pontosan
+            ugyanúgy ismétlődik! Mi legyen ez a kórusos rész, ha a lehető leghosszabb
+            részletet akarjuk kiválasztani?
         title: Feleletválasztós
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
       4-5 Suncatchers Match 1:
         answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        - text: "**STACK**"
+        - text: "**STAMP**"
+        - text: "**STAR**"
+        - text: "**RAMP**"
         content1: Párosíts minden egyes programot az általa létrehozott szóval, felhasználva
-          a megadott készségeket!
+          az eddig tudásodat!
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         title: Megfelelő
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
       4-5 Suncatchers Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         questions:
         - text: Az alábbi programok közül melyik<em>nem</em> végzi pontosan ugyanazt
             a sorrendet, amit az 1. Program?
         title: Feleletválasztós
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
       4-5 artist loops multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         questions:
         - text: Melyik blokkok fogják elkészíteni a mintát?
-        title: Művész - ciklusok. Feleltválasztás
+        title: Művész ciklusok - feleletválasztás
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
       4-5 artist multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         questions:
         - text: Melyik blokkok rajzolnak egy 100-as kerületű téglalapot?
-        title: Művész. Feleletválasztás
+        title: Művész - feleletválasztás
       4-5 artist multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         questions:
         - text: Melyik rajz szimmetrikus?
-        title: Művész. Feleletválasztás
+        title: Művész - feleletválasztás
       4-5 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         questions:
         - text: Válaszd ki a legmegfelelőbb blokkokat!
-        title: Méh Feltételes Többszörös választás
+        title: Méh feltételek - feleletválasztás
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        content2: A lila virágban 3, 2 vagy 1 adag nektár lehet, de előre nem tudhatod,
+          hogy pontosan mennyi. Melyik blokkok ellenőrzik és gyűjtik össze helyesen
+          a lila virág összes nektárját?
       4-5 bee debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         questions:
         - text: A függvény melyik verziója fog működni?
-        title: Méh Hibakeresés Többszörös választás
+        title: Méh hibakeresés - feleletválasztás
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
       4-5 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         questions:
         - text: Melyik blokkok fogják megoldani a rejtvényt?
-        title: Méh Ciklusok Többszörös választás
+        title: Méh ciklusok - feleletválasztás
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
       4-5 maze conditionals multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         questions:
         - text: Melyik blokkok oldják meg ezt a feladványt?
-        title: Labirintus Feltételes Többszörös választás
+        title: Labirintus feltételek - feleletválasztás
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
       4-5 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
         content1: Illeszd a blokkokhoz a feladványokat
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         title: Labirintus párosítás
       4-5 maze multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         questions:
         - text: Melyik blokkok oldják meg ezt a feladványt?
         title: Labirintus - válaszd ki
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
       Begin planning your project:
         content1: a leírás itt található
       Begin planning your project_2018:
@@ -1521,77 +1560,86 @@ hu-HU:
 
       K-1 Artist 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
         questions:
         - text: Melyik blokkok oldják meg ezt a rejtvényt?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
       K-1 Artist 1 Multi 2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         questions:
         - text: Melyik blokkok rajzolják le a négyzetet?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
       K-1 Artist 2 Match 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: Párosítsd az alakzatokat típusok szerint!
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Megfelelő
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
         - text: Hány adag nektár ez?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
         questions:
         - text: Hány adag nektár ez?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
       K-1 Bee Loops Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: Párosítsd a blokkokat!
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         title: Megfelelő
       K-1 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
         content2: A billentyűkombinációkat párosítása a táncmozdulatokhoz.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         title: Megfelelő
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
       K-1 Digital Footprint Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
@@ -1605,117 +1653,140 @@ hu-HU:
         content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
       K-1 Getting Loopy Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
         questions:
         - text: Hogyan egyszerűsítenéd ezeket a sorozatokat ciklusokkal?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
         questions:
         - text: Melyik nyíl vezeti Flurb-ot a kincshez?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
       K-1 Keep it Private Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         questions:
-        - text: Melyik információt <strong>nem</strong> kellene megosztanod online?
+        - text: Melyik információt **nem** szabad megosztanod online?
         title: Feleletválasztós
       K-1 Maze Debugging Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
         questions:
         - text: Melyik választás legyen az utolsó blokk?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
       K-1 Maze Loops Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
         questions:
-        - text: Melyik ismétlő blokk, azonos?
+        - text: Melyik ismétléses blokk csinálja ugyanezt?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
       K-1 Maze Loops Multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
         questions:
         - text: Válaszd ki a megfelelő ismétlő blokkot.
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
       K-1 Maze Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
         content2: Párosítsd a feladványokat a blokkokkal!
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: Megfelelő
       K-1 Maze Multiple Choice 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
         questions:
         - text: Melyik válasz oldja meg ezt a szintet?
         title: Labirintus
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
       K-1 Move It Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
         questions:
         - text: Melyik algoritmus vezeti Flurb-ot a virágokhoz?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
       K-1 Plant a Seed Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
         questions:
         - text: Milyen lépést kell tenni ennek az algoritmusnak az elején?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
       K-1 Plant a Seed Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         questions:
         - text: Milyen lépést kell tenni az algoritmus üresen hagyott részén?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
       K-1 Word Search Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
         questions:
         - text: Melyik blokk betűzi a "MOVE" szót?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
       K-1 Word Search Multi 3:
         answers:
-        - {}
-        - correct: true
-        - text: DÉL
+        - text: SET
+        - text: SQUARE
+          correct: true
+        - text: SOUTH
         questions:
-        - text: Melyik szó van betűzve?
+        - text: Melyik szó jön ki, ha követed az útvonalat?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
       Multi-Screen Apps:
         content1: a leírás itt található
       New Challenge Introduction:
@@ -3930,13 +4001,15 @@ hu-HU:
         - {}
       contained_Happy_Maps_Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
         questions:
         - text: Melyik nyíl vezeti Flurb-ot a kincshez?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
       test questionless single multi:
         answers:
         - {}
@@ -11637,3 +11710,5 @@ hu-HU:
           * Fontos, hogy a programozók megértsék a felhasználók igényeit, és ezeket szem előtt tartva tervezzenek alkalmazásokat!
 
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseF_groups_practice_2022_pilot_-2022-2:
+        display_name: Gyakorlás rengeteg sprite-tal

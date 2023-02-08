@@ -11,11 +11,19 @@ What is output by the following code?
 
 ```
 int total = 0;
-for (int i = 1; i <= 4; i++) {
-  for (int j = 1; j <= i; j++) {
-    total = total + i;
+
+for (int outer = 1; outer <= 4; outer++) {
+  for (int inner = 1; inner <= outer; inner++) {
+    total += outer;
   }
 }
-System.out.println (total);
+
+System.out.println(total);
 ```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The following demonstrates tracing through the code segment:
+
+![](https://images.code.org/b372383c3045a18e861d16bd1653b018-image-1674527204303.gif)
 MARKDOWN

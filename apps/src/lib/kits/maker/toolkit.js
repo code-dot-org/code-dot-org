@@ -164,34 +164,29 @@ function confirmSupportedBrowser() {
  * @returns {Promise.<MakerBoard>}
  */
 function getBoard() {
+  const boardConstructor =
+    project.getMakerAPIs() === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
+
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
-  } else {
-    if (project.getMakerAPIs() === MB_API) {
-      return findPortWithViableDevice().then(port => new MicroBitBoard(port));
-    } else {
-      if (shouldUseWebSerial()) {
-        return navigator.serial.getPorts().then(ports => {
-          // No previously connected port. Query user to select port.
-          if (!ports.length) {
-            return navigator.serial
-              .requestPort({filters: WEB_SERIAL_FILTERS})
-              .then(port => {
-                let wrappedPort = new WebSerialPortWrapper(port);
-                return new CircuitPlaygroundBoard(wrappedPort);
-              });
-          } else {
-            let port = ports[0];
+  } else if (shouldUseWebSerial()) {
+    return navigator.serial.getPorts().then(ports => {
+      // No previously connected port. Query user to select port.
+      if (!ports.length) {
+        return navigator.serial
+          .requestPort({filters: WEB_SERIAL_FILTERS})
+          .then(port => {
             let wrappedPort = new WebSerialPortWrapper(port);
-            return new CircuitPlaygroundBoard(wrappedPort);
-          }
-        });
+            return new boardConstructor(wrappedPort);
+          });
       } else {
-        return findPortWithViableDevice().then(
-          port => new CircuitPlaygroundBoard(port)
-        );
+        let port = ports[0];
+        let wrappedPort = new WebSerialPortWrapper(port);
+        return new boardConstructor(wrappedPort);
       }
-    }
+    });
+  } else {
+    return findPortWithViableDevice().then(port => new boardConstructor(port));
   }
 }
 

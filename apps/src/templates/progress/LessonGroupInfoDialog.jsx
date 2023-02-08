@@ -32,7 +32,6 @@ export default class LessonGroupInfoDialog extends Component {
         />
         <DialogFooter rightAlign>
           <Button
-            __useDeprecatedTag
             text={i18n.closeDialog()}
             onClick={this.props.closeDialog}
             color={Button.ButtonColor.orange}
