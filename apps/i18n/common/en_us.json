@@ -2072,6 +2072,7 @@
   "standardsReportHeader": "Class Standards Report",
   "standardsReportNoUnpluggedLessons": "There are no unplugged lessons in this course.",
   "standardsReportLessonLengthInfo": "*Lessons in this course offer between 45 and 65 minutes of instruction",
+  "startBlocksTemplateWarning": "WARNING: You are editing start blocks for a level with a template. Start blocks should be defined in the template level.",
   "startLearning": "Start learning",
   "startOver": "Start Over",
   "startOverTitle": "Are you sure you want to start over?",
