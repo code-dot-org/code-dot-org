@@ -58,8 +58,8 @@ describe('Enroll Form', () => {
     planning_to_teach_ap: 'Yes'
   };
 
-  const testValidateFields = (form, state, errorProperty) => {
-    form.setState(state);
+  const testValidateFields = (form, params, errorProperty) => {
+    form.setState(params);
     form.find('#submit').simulate('click');
     expect(form.state('errors')).to.have.property(errorProperty);
     expect(jQuery.ajax.called).to.be.false;
