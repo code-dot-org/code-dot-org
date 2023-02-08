@@ -14,29 +14,12 @@ window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 let webLab_;
 if (parent.getWebLab) {
   webLab_ = parent.getWebLab();
-} else if (!brambleConfig.skipFiles) {
-  console.error('ERROR: getWebLab() method not found on parent');
+} else {
+  brambleConfig.skipFiles ||
+    console.error('ERROR: getWebLab() method not found on parent');
 }
 
 function load(Bramble) {
-  if (brambleConfig.skipFiles) {
-    // Special case for checking that Bramble will load
-    // without actually passing data
-    Bramble.load(BRAMBLE_CONTAINER, {
-      url: `${BRAMBLE_BASE_URL}/index.html`
-    });
-    Bramble.on('readyStateChange', (_, newState) => {
-      if (Bramble.MOUNTABLE === newState) {
-        window.parent.postMessage(
-          JSON.stringify({type: 'bramble:readyToMount'}),
-          brambleConfig.studioUrl
-        );
-      }
-    });
-    Bramble.on('error', console.log);
-    return;
-  }
-
   const api = webLab_.brambleApi();
   const cdoBramble = new CdoBramble(
     Bramble,
@@ -53,6 +36,26 @@ function load(Bramble) {
     .init();
 }
 
+// "Minimal" load function does not pass files to Bramble; it's used by
+// the support verification page at studio.code.org/weblab/support-verification
+// to check that we can reach a ready state
+function loadMinimal(Bramble) {
+  Bramble.load(BRAMBLE_CONTAINER, {
+    url: `${BRAMBLE_BASE_URL}/index.html`
+  });
+
+  Bramble.on('readyStateChange', (_, newState) => {
+    if (Bramble.MOUNTABLE === newState) {
+      window.parent.postMessage(
+        JSON.stringify({type: 'bramble:readyToMount'}),
+        brambleConfig.studioUrl
+      );
+    }
+  });
+  Bramble.on('error', console.log);
+}
+
 // Load bramble.js
 const brambleClient = brambleConfig.devMode ? 'bramble/client/main' : 'bramble';
-requirejs([brambleClient], load);
+const callback = brambleConfig.skipFiles ? loadMinimal : load;
+requirejs([brambleClient], callback);
