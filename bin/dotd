@@ -293,6 +293,9 @@ def dotd_menu(dotd_name)
 
           Attempted to kill tests. See Slack#infra-test for more information.
 
+          If the test build does not restart, run the /restart-test-build
+          slack command to restart it.
+
         EOS
         @logger.info 'kills tests'
       end
