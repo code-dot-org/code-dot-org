@@ -36,7 +36,7 @@ export const triggeredAtSimple2 = {
     tooltip: 'at trigger',
     extensions: ['dynamic_trigger_extension']
   },
-  generator: ctx => {
+  generator: block => {
     const varName = Blockly.JavaScript.nameDB_.getDistinctName(
       'eventTime',
       Blockly.Names.NameType.VARIABLE
@@ -72,16 +72,16 @@ export const playSoundAtCurrentLocationSimple2 = {
     tooltip: 'play sound',
     helpUrl: ''
   },
-  generator: ctx =>
+  generator: block =>
     `
       MusicPlayer.playSoundAtMeasureById(
-        "${ctx.getFieldValue('sound')}",
+        "${block.getFieldValue('sound')}",
         ProgramSequencer.getCurrentMeasure(),
         __insideWhenRun
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
-          "${ctx.getFieldValue('sound')}"
+          "${block.getFieldValue('sound')}"
         )
       );
     `
@@ -106,9 +106,9 @@ export const playSoundsTogether = {
     tooltip: 'play sounds together',
     helpUrl: ''
   },
-  generator: ctx =>
+  generator: block =>
     ` ProgramSequencer.playTogether();
-      ${Blockly.JavaScript.statementToCode(ctx, 'code')}
+      ${Blockly.JavaScript.statementToCode(block, 'code')}
       ProgramSequencer.endTogether();
     `
 };
@@ -132,9 +132,9 @@ export const playSoundsSequential = {
     tooltip: 'play sounds sequentially',
     helpUrl: ''
   },
-  generator: ctx =>
+  generator: block =>
     ` ProgramSequencer.playSequential();
-      ${Blockly.JavaScript.statementToCode(ctx, 'code')}
+      ${Blockly.JavaScript.statementToCode(block, 'code')}
       ProgramSequencer.endSequential();
       `
 };
