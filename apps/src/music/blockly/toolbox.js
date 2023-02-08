@@ -92,6 +92,10 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.TRIGGERED_AT_SIMPLE
   },
+  [BlockTypes.TRIGGERED_AT_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.TRIGGERED_AT_SIMPLE2
+  },
   [BlockTypes.FOR_LOOP]: {
     kind: 'block',
     type: BlockTypes.FOR_LOOP,
@@ -288,6 +292,7 @@ export function getToolbox() {
     case BlockMode.SIMPLE2:
       return generateToolbox({
         Simple2: [
+          BlockTypes.TRIGGERED_AT_SIMPLE2,
           BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
           BlockTypes.PLAY_SOUNDS_TOGETHER,
           BlockTypes.PLAY_SOUNDS_SEQUENTIAL,

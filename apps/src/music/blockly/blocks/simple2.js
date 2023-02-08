@@ -1,13 +1,6 @@
 import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
-import {DEFAULT_SOUND} from '../constants';
-
-// Examine chain of parents to see if one is 'when_run'.
-const isBlockInsideWhenRun = ctx => {
-  // Since this model doesn't currently support triggered code, then
-  // everything is ultimately called from under when_run.
-  return true;
-};
+import {DEFAULT_SOUND, TRIGGER_FIELD} from '../constants';
 
 export const whenRunSimple2 = {
   definition: {
@@ -21,9 +14,40 @@ export const whenRunSimple2 = {
   },
   generator: () =>
     `
+      var __insideWhenRun = true;
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
     `
+};
+
+export const triggeredAtSimple2 = {
+  definition: {
+    type: BlockTypes.TRIGGERED_AT_SIMPLE2,
+    message0: '%1 triggered',
+    args0: [
+      {
+        type: 'input_dummy',
+        name: TRIGGER_FIELD
+      }
+    ],
+    inputsInline: true,
+    nextStatement: null,
+    style: 'event_blocks',
+    tooltip: 'at trigger',
+    extensions: ['dynamic_trigger_extension']
+  },
+  generator: ctx => {
+    const varName = Blockly.JavaScript.nameDB_.getDistinctName(
+      'eventTime',
+      Blockly.Names.NameType.VARIABLE
+    );
+    return `
+        var __insideWhenRun = false;
+        ${varName} = MusicPlayer.getPlayheadPosition();
+        currentMeasureLocation = Math.ceil(${varName});
+        ProgramSequencer.playSequentialWithMeasure(currentMeasureLocation);
+      `;
+  }
 };
 
 export const playSoundAtCurrentLocationSimple2 = {
@@ -53,7 +77,7 @@ export const playSoundAtCurrentLocationSimple2 = {
       MusicPlayer.playSoundAtMeasureById(
         "${ctx.getFieldValue('sound')}",
         ProgramSequencer.getCurrentMeasure(),
-        ${isBlockInsideWhenRun(ctx) ? 'true' : 'false'}
+        __insideWhenRun
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(

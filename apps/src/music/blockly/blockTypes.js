@@ -3,6 +3,7 @@ export const BlockTypes = {
   WHEN_RUN_SIMPLE2: 'when_run_simple2',
   TRIGGERED_AT: 'triggered_at',
   TRIGGERED_AT_SIMPLE: 'triggered_at_simple',
+  TRIGGERED_AT_SIMPLE2: 'triggered_at_simple2',
   PLAY_SOUND: 'play_sound',
   FOR_LOOP: 'for_loop',
   PLAY_SOUND_AT_CURRENT_LOCATION: 'play_sound_at_current_location',
