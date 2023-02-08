@@ -8,6 +8,7 @@ describe('Music program sequencer tests', function() {
     const programSequencer = new ProgramSequencer();
     programSequencer.init();
 
+    // prettier-ignore
     programSequencer.playSequential();
       assert(programSequencer.getCurrentMeasure() === 1);
       programSequencer.updateMeasureForPlayByLength(2);
