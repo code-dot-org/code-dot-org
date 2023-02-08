@@ -28,6 +28,10 @@ h5 {
   margin-bottom: 0.5em;
 }
 
+.callout-heading {
+  font-size: 1.5em;
+}
+
 p {
   font-size: 1em;
   line-height: 1.4;
@@ -41,16 +45,26 @@ strong {
   font-family: $gotham-bold, sans-serif;
 }
 
-// Centers a block-level element
-.centered { text-align: center !important; }
-
-// Removes the bottom margin
-.no-margin-bottom { margin-bottom: 0 !important;}
-
 // Use these classes to change a section's background color
 section.bg-neutral { background-color: $neutral_light; }
 section.bg-primary { background-color: $brand_primary_light; }
 section.bg-secondary { background-color: $brand_secondary_light; }
+
+// Centers a block-level element
+.centered { text-align: center !important; }
+
+// Removes the bottom margin
+// Often helpful on a last paragraph or list elements
+// to maintain consistent white space between sections
+.no-margin-bottom { margin-bottom: 0 !important;}
+
+// For use on a thin section w/ a single message and call-to-action
+.callout-strip {
+  p {
+    font-size: 1.25em;
+    font-family: $gotham-bold;
+  }
+}
 
 // FontAwesome icon defaults
 .icon::before {
@@ -144,9 +158,20 @@ ul {
         content: none;
       }
 
+      div > i {
+        width: 50px;
+        text-align: center;
+      }
+
       i {
         font-size: 3em;
         margin: 2px 16px 0 0;
+      }
+
+      h3 {
+        font-family: $gotham-bold, sans-serif;
+        font-size: 1.25em;
+        margin-bottom: 0.5em;
       }
     }
   }
@@ -182,7 +207,7 @@ ol.steps-list {
     margin: 3em 0 2.5em;
   }
 
-  h4 {
+  h3 {
     width: 100%;
 
     & > span {
@@ -197,6 +222,19 @@ ol.steps-list {
       outline: 0.25em solid $brand_primary_light;
     }
   }
+
+  h4 {
+    font-family: $gotham-bold, sans-serif;
+    font-size: 1.25em;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+  }
+}
+
+figcaption {
+  font-size: .875em;
+  font-family: $gotham-bold, sans-serif;
+  margin: .25em 0 1em;
 }
 
 // FAQs
