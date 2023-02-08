@@ -19,6 +19,7 @@ var errorDialogStack = require('./redux/errorDialogStack').default;
 var P5LabInterfaceMode = require('./constants').P5LabInterfaceMode;
 
 function interfaceMode(state, action) {
+  console.log(state, action);
   state = state || P5LabInterfaceMode.CODE;
 
   switch (action.type) {

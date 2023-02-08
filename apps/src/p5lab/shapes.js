@@ -1,6 +1,7 @@
 /** @file Type definitions (React and otherwise) specific to Gamelab */
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+import {P5LabInterfaceMode} from './constants';
 
 /**
  * @typedef {Object} Vector2
@@ -52,8 +53,8 @@ export const AnimationKey = PropTypes.string;
  * @property {AnimationKey} background - The animation key for Backgrounds (Sprite Lab)
  */
 export const CurrentAnimations = PropTypes.shape({
-  default: AnimationKey.isRequired,
-  background: AnimationKey.isRequired
+  [P5LabInterfaceMode.ANIMATION]: AnimationKey.isRequired,
+  [P5LabInterfaceMode.BACKGROUND]: AnimationKey.isRequired
 });
 
 /**

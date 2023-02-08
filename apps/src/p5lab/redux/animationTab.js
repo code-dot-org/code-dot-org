@@ -4,7 +4,6 @@ import {P5LabInterfaceMode} from '../constants';
 
 const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
 const SELECT_BACKGROUND = 'AnimationTab/SELECT_BACKGROUND';
-const SET_INTERFACE_MODE = 'AnimationTab/SET_INTERFACE_MODE';
 const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
 
 const initialState = {
@@ -12,7 +11,6 @@ const initialState = {
     [P5LabInterfaceMode.ANIMATION]: '',
     [P5LabInterfaceMode.BACKGROUND]: ''
   },
-  interfaceMode: P5LabInterfaceMode.CODE,
   columnSizes: [150, undefined]
 };
 
@@ -33,15 +31,6 @@ export default (state = initialState, action) => {
         ...state.currentAnimations,
         [P5LabInterfaceMode.BACKGROUND]: action.animationKey
       }
-    };
-  }
-  if (action.type === SET_INTERFACE_MODE) {
-    return {
-      ...state,
-      interfaceMode:
-        action.mode === 'BACKGROUND'
-          ? P5LabInterfaceMode.BACKGROUND
-          : P5LabInterfaceMode.ANIMATION
     };
   }
   if (action.type === SET_COLUMN_SIZES) {
@@ -66,14 +55,6 @@ export function selectAnimation(animationKey) {
  */
 export function selectBackground(animationKey) {
   return {type: SELECT_BACKGROUND, animationKey};
-}
-
-/**
- * Switch interace mode (CODE, ANIMATION, or BACKGROUND)
- * @returns {{type: string}}
- */
-export function setInterfaceMode(mode) {
-  return {type: SET_INTERFACE_MODE, mode};
 }
 
 /**

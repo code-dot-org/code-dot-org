@@ -302,7 +302,7 @@ const styles = {
 };
 export default connect(
   state => ({
-    interfaceMode: state.animationTab.interfaceMode,
+    interfaceMode: state.interfaceMode,
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
       state.pageConstants.allAnimationsSingleFrame || false,

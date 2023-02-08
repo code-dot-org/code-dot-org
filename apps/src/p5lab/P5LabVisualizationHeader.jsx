@@ -13,7 +13,6 @@ import PoemSelector from './poetry/PoemSelector';
 import * as utils from '../utils';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
-import {setInterfaceMode} from './redux/animationTab';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -31,8 +30,7 @@ class P5LabVisualizationHeader extends React.Component {
     isBlockly: PropTypes.bool.isRequired,
     numAllowedModes: PropTypes.number.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    setInterfaceMode: PropTypes.func.isRequired
+    isReadOnlyWorkspace: PropTypes.bool.isRequired
   };
 
   changeInterfaceMode = mode => {
@@ -49,7 +47,6 @@ class P5LabVisualizationHeader extends React.Component {
       mode === P5LabInterfaceMode.ANIMATION ||
       mode === P5LabInterfaceMode.BACKGROUND
     ) {
-      this.props.setInterfaceMode(mode);
       if (this.props.isBlockly) {
         Blockly.WidgetDiv.hide();
         Blockly.DropDownDiv?.hide();
@@ -150,9 +147,6 @@ export default connect(
     return {
       onInterfaceModeChange(mode) {
         dispatch(changeInterfaceMode(mode));
-      },
-      setInterfaceMode(mode) {
-        dispatch(setInterfaceMode(mode));
       }
     };
   }
