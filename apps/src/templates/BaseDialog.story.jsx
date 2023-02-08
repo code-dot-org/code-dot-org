@@ -8,12 +8,12 @@ const EXAMPLE_DIALOG_BODY = (
   </div>
 );
 
+// There isn't a clear abstraction for a template, so each is built separately
 export default {
   title: 'BaseDialog',
   component: BaseDialog
 };
 
-// There isn't a clear abstraction for a template, so each is built separately
 export const HidingTheBackdrop = () => (
   <BaseDialog hideBackdrop={true}>This is the dialog content!</BaseDialog>
 );
