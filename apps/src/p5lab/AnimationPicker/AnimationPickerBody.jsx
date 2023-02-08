@@ -37,7 +37,8 @@ export default class AnimationPickerBody extends React.Component {
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
-    pickerType: PropTypes.string.isRequired
+    pickerType: PropTypes.string.isRequired,
+    shouldRestrictAnimationUpload: PropTypes.bool.isRequired
   };
 
   state = {

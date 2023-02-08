@@ -24,6 +24,7 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Top-level React wrapper for GameLab
@@ -85,8 +86,23 @@ class P5LabView extends React.Component {
     });
   }
 
+  // TODO: When we remove the backgrounds_and_upload experiment we can get rid of hideUploadOption
   shouldHideAnimationUpload() {
-    // Teachers should always be allowed to upload animations.
+    // Teachers should always be allowed to upload animations, and we are currently
+    // enabling it for students under an experiment flag.
+    if (
+      this.props.currentUserType === 'teacher' ||
+      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
+    ) {
+      return false;
+    }
+
+    return this.props.isBlockly;
+  }
+
+  // Teachers and users of non-blockly labs should always be allowed to upload animations
+  // with no restrictions. Otherwise, if users upload animations we will disable publish and remix.
+  shouldRestrictAnimationUpload() {
     if (this.props.currentUserType === 'teacher') {
       return false;
     }
@@ -148,6 +164,7 @@ class P5LabView extends React.Component {
               channelId={this.getChannelId()}
               libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.shouldHideAnimationUpload()}
+              shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
               hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
@@ -195,6 +212,7 @@ class P5LabView extends React.Component {
         defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.shouldHideAnimationUpload()}
+        shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
         hideBackgrounds={
           this.props.isBlockly &&
