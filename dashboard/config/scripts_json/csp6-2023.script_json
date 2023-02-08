@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-11 20:16:32 UTC",
+    "serialized_at": "2023-02-07 21:09:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6369,16 +6369,172 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/copy",
-      "key": "csp_unit_5_-_lists_loops_and_traversals",
+      "name": "CSP Unit 6 - Lesson 10 - Traversals Investigate",
+      "url": "https://docs.google.com/presentation/d/1_dPufJF_PrHq2eB120VPqSdXmgz9EyuKRoj1Fht0WdI/copy",
+      "key": "csp_unit_6_-_lesson_10_-_traversals_investigate",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/export?format=pdf",
+        "download_url": "https://docs.google.com/presentation/d/1_dPufJF_PrHq2eB120VPqSdXmgz9EyuKRoj1Fht0WdI/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_10_-_traversals_investigate"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 11 - Traversals Practice",
+      "url": "https://docs.google.com/presentation/d/1_vz3lEMAK3NxvqpBKNYpymUjalX5E_zf40F9W1mj5k8/copy",
+      "key": "csp_unit_6_-_lesson_11_-_traversals_practice",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1_vz3lEMAK3NxvqpBKNYpymUjalX5E_zf40F9W1mj5k8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_11_-_traversals_practice"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 12 - Traversals Make",
+      "url": "https://docs.google.com/presentation/d/1fr7qTcakm9BZNMBieWv0afpZoC2_N4WZS_Rit2kNsIM/copy",
+      "key": "csp_unit_6_-_lesson_12_-_traversals_make",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1fr7qTcakm9BZNMBieWv0afpZoC2_N4WZS_Rit2kNsIM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_12_-_traversals_make"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 13-18 - Project & Assessment",
+      "url": "https://docs.google.com/presentation/d/1hCRryZ14scNu8mZ69eGNtOC0DX_OGlNiagGXiLD-o_k/copy",
+      "key": "csp_unit_6_-_lesson_13-18_-_project_assessment",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1hCRryZ14scNu8mZ69eGNtOC0DX_OGlNiagGXiLD-o_k/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_13-18_-_project_assessment"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 1 - Lists Explore",
+      "url": "https://docs.google.com/presentation/d/1U9lbG4gRCofChiqicYndwHSvIT_D70x-y7BpTWC9OtM/copy",
+      "key": "csp_unit_6_-_lesson_1_-_lists_explore",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1U9lbG4gRCofChiqicYndwHSvIT_D70x-y7BpTWC9OtM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_1_-_lists_explore"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 2 - Lists Investigate",
+      "url": "https://docs.google.com/presentation/d/1rr7G1XkSxefgc1iYqbNaOsYhTBNK5w820Ttdj85Sz-g/copy",
+      "key": "csp_unit_6_-_lesson_2_-_lists_investigate",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1rr7G1XkSxefgc1iYqbNaOsYhTBNK5w820Ttdj85Sz-g/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_2_-_lists_investigate"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 3 - Lists Practice",
+      "url": "https://docs.google.com/presentation/d/109AYo6rZWJMFUxT43iP2AtrEABDvXTM9yKhcSYs43U0/copy",
+      "key": "csp_unit_6_-_lesson_3_-_lists_practice",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/109AYo6rZWJMFUxT43iP2AtrEABDvXTM9yKhcSYs43U0/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_3_-_lists_practice"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 4 - Lists Make",
+      "url": "https://docs.google.com/presentation/d/1C_LoYjUYzUikNm38JDUMHHRCB90Sv9I1EtPa23T15Ls/copy",
+      "key": "csp_unit_6_-_lesson_4_-_lists_make",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1C_LoYjUYzUikNm38JDUMHHRCB90Sv9I1EtPa23T15Ls/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_4_-_lists_make"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 5 - Loops Explore",
+      "url": "https://docs.google.com/presentation/d/1qo_eKj9_agUwBE9tjflihYHrt4qYBvEOMS7R_naLhIo/copy",
+      "key": "csp_unit_6_-_lesson_5_-_loops_explore",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1qo_eKj9_agUwBE9tjflihYHrt4qYBvEOMS7R_naLhIo/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_5_-_loops_explore"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 6 - Loops Investigate",
+      "url": "https://docs.google.com/presentation/d/1x8OtZ0HNXODAidCB0rTAhxgremeQCXjQx2HboRFDuys/copy",
+      "key": "csp_unit_6_-_lesson_6_-_loops_investigate",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1x8OtZ0HNXODAidCB0rTAhxgremeQCXjQx2HboRFDuys/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_6_-_loops_investigate"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 7 - Loops Practice",
+      "url": "https://docs.google.com/presentation/d/1sUsUbetQ7Lh5rfkqyDEYIY6H2fcHvmQH2yMBYdnrmZA/copy",
+      "key": "csp_unit_6_-_lesson_7_-_loops_practice",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1sUsUbetQ7Lh5rfkqyDEYIY6H2fcHvmQH2yMBYdnrmZA/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_7_-_loops_practice"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 8 - Loops Make",
+      "url": "https://docs.google.com/presentation/d/1ftS169_ev9YM43pM_8M5cZiBN61gSelcbrCTVEDCmlM/copy",
+      "key": "csp_unit_6_-_lesson_8_-_loops_make",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1ftS169_ev9YM43pM_8M5cZiBN61gSelcbrCTVEDCmlM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_8_-_loops_make"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Lesson 9 - Traversals Explore",
+      "url": "https://docs.google.com/presentation/d/1yPlEXrE2VZcN1ZFr-u_N7KUU6CGtnG_cxfFAUI5iNhg/copy",
+      "key": "csp_unit_6_-_lesson_9_-_traversals_explore",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1yPlEXrE2VZcN1ZFr-u_N7KUU6CGtnG_cxfFAUI5iNhg/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_lesson_9_-_traversals_explore"
       }
     },
     {
@@ -6597,13 +6753,13 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_13-18_-_project_assessment"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Explore",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_1_-_lists_explore"
       }
     },
     {
@@ -6621,7 +6777,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lists Investigate",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_2_-_lists_investigate"
       }
     },
     {
@@ -6645,19 +6801,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lists Make",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_4_-_lists_make"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lists Practice",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_3_-_lists_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Explore",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_5_-_loops_explore"
       }
     },
     {
@@ -6675,7 +6831,7 @@
     {
       "seeding_key": {
         "lesson.key": "Loops Investigate",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_6_-_loops_investigate"
       }
     },
     {
@@ -6687,13 +6843,13 @@
     {
       "seeding_key": {
         "lesson.key": "Loops Make",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_8_-_loops_make"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops Practice",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_7_-_loops_practice"
       }
     },
     {
@@ -6711,7 +6867,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Hackathon Part 1",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_13-18_-_project_assessment"
       }
     },
     {
@@ -6759,7 +6915,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Hackathon Part 2",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_13-18_-_project_assessment"
       }
     },
     {
@@ -6771,7 +6927,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Hackathon Part 3",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_13-18_-_project_assessment"
       }
     },
     {
@@ -6783,7 +6939,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Hackathon Part 4",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_13-18_-_project_assessment"
       }
     },
     {
@@ -6807,7 +6963,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Hackathon Part 5",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_13-18_-_project_assessment"
       }
     },
     {
@@ -6849,7 +7005,7 @@
     {
       "seeding_key": {
         "lesson.key": "Traversals Explore",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_9_-_traversals_explore"
       }
     },
     {
@@ -6867,7 +7023,7 @@
     {
       "seeding_key": {
         "lesson.key": "Traversals Investigate",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_10_-_traversals_investigate"
       }
     },
     {
@@ -6885,13 +7041,13 @@
     {
       "seeding_key": {
         "lesson.key": "Traversals Make",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_12_-_traversals_make"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversals Practice",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_unit_6_-_lesson_11_-_traversals_practice"
       }
     }
   ],

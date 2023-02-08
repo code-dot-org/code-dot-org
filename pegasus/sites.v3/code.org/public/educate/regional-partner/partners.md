@@ -1,6 +1,7 @@
 ---
 title: Regional Partner
 nav: plc_regional_partner_nav
+theme: responsive
 ---
 
 ## <a name="locations"></a>Where does Code.org have partners?
