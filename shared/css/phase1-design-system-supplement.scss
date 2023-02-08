@@ -1,5 +1,9 @@
 @import 'color', 'font', 'breakpoints';
 
+// Variables
+$border-radius: 4px;
+
+// Start styles
 html {
   scroll-behavior: smooth;
 }
@@ -36,8 +40,16 @@ p {
   font-size: 1em;
   line-height: 1.4;
 
-  &.text-small {
+  // For use on course block descriptions or anywhere
+  // else that needs smaller paragraph text
+  &.p-two {
     font-size: .875em;
+  }
+
+  // For use on a section w/ a single message and call-to-action
+  &.callout {
+    font-size: 1.25em;
+    font-family: $gotham-bold;
   }
 }
 
@@ -57,14 +69,6 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 // Often helpful on a last paragraph or list elements
 // to maintain consistent white space between sections
 .no-margin-bottom { margin-bottom: 0 !important;}
-
-// For use on a thin section w/ a single message and call-to-action
-.callout-strip {
-  p {
-    font-size: 1.25em;
-    font-family: $gotham-bold;
-  }
-}
 
 // FontAwesome icon defaults
 .icon::before {
@@ -93,13 +97,14 @@ a:link {
 
 a.link-button,
 button,
-.btn {
+.btn,
+input[type=submit] {
   height: unset;
   display: inline-block;
   color: white;
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
-  border-radius: 4px;
+  border-radius: $border-radius;
   padding: .5em 1em;
   margin: 0.5em 0;
   font-size: 1em;
@@ -272,6 +277,36 @@ details {
   &[open] > summary::after {
     font: var(--fa-font-solid);
     content: "\f106";
+  }
+}
+
+// Forms
+form {
+
+  label {
+    display: block;
+    text-align: left;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin: .25em auto 1em;
+    padding: 0.5em;
+    border: 1px solid;
+    border-radius: $border-radius;
+    font-family: $gotham-regular, sans-serif;
+    font-size: 1em;
+    transition: all ease-in-out .2s;
+
+    &:focus {
+      outline: $brand_primary_default solid 2px;
+      outline-offset: 2px;
+    }
+
+    &[type=submit] {
+      max-width: 150px;
+    }
   }
 }
 
