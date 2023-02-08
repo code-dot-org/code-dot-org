@@ -32,10 +32,6 @@ export default class ReportAbuseForm extends React.Component {
     captchaSiteKey: PropTypes.string
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     // Add reCaptcha. https://developers.google.com/recaptcha/docs/display
     const script = document.createElement('script');
