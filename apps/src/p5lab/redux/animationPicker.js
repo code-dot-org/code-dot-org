@@ -160,6 +160,9 @@ export function handleUploadComplete(result) {
   });
 
   return function(dispatch, getState) {
+    console.log({getState: getState, uploadState: getState()});
+    const isBackgroundMode =
+      getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const {goal, uploadFilename} = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
@@ -171,7 +174,8 @@ export function handleUploadComplete(result) {
           name: uploadFilename,
           sourceUrl: sourceUrl,
           size: result.size,
-          version: result.versionId
+          version: result.versionId,
+          categories: [isBackgroundMode ? 'backgrounds' : '']
         });
 
         if (goal === Goal.NEW_ANIMATION) {
