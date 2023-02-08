@@ -277,14 +277,15 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
 
-      if course_version.content_root_type == 'UnitGroup'
+      case course_version.content_root_type
+      when 'UnitGroup'
         course_id = course_version.content_root_id
         @course = UnitGroup.get_from_cache(course_id)
         return head :bad_request unless @course
         return head :forbidden unless @course.course_assignable?(current_user)
         @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
         return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-      elsif course_version.content_root_type == 'Unit'
+      when 'Unit'
         unit_id = course_version.content_root_id
         @unit = Unit.get_from_cache(unit_id)
         return head :bad_request unless @unit
