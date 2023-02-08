@@ -14,7 +14,7 @@ class EducateRoutesTest < Minitest::Test
     it 'redirects the weblab test page to code studio' do
       @pegasus.get CDO.code_org_url('/educate/weblab-test')
       assert_equal 302, @pegasus.last_response.status
-      expected_url = CDO.studio_url('/weblab/test', CDO.default_scheme)
+      expected_url = CDO.studio_url('/weblab/support-verification', CDO.default_scheme)
       assert_equal expected_url, @pegasus.last_response['Location']
     end
   end

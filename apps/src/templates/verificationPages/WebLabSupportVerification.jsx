@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import ValidationStep, {Status} from '../../../src/lib/ui/ValidationStep';
+import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
 
 const WEBLAB_URL = '/weblab/host?skip_files=true';
@@ -20,7 +20,7 @@ const domainDependencies = [
   }
 ];
 
-class WebLabTest extends Component {
+class WebLabSupportVerification extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -107,6 +107,7 @@ class WebLabTest extends Component {
       () => {
         const webLabChecksComplete = Promise.all([
           ...domainDependencies.map(this.verifyDomainAccess),
+          // Polls for success every 500 ms; times out after 3 seconds
           this.verifyBrambleMountable({timeout: 3000, interval: 500})
         ]);
 
@@ -170,11 +171,12 @@ class WebLabTest extends Component {
           <h1>Web Lab Network Support Check</h1>
           <p>
             Use this page to test your school's network support for our Web Lab
-            modules. Web Lab communicates with domains which may be blocked by
-            some school systems’ networks or device policies. If the network
-            check is unsuccessful, you will need to reach out to your school's
-            IT department to update your school's firewall settings or device
-            policies.
+            modules. Web Lab has additional requirements that may be blocked by
+            some school systems' network or device policies. For example, it
+            requires access to browser storage, additional domains, and the use
+            of iframes. If the following network check is unsuccessful, you may
+            need to reach out to your school's IT department to update your
+            school's firewall settings or device policies.
           </p>
           <p>
             When checking network support, try to meet as many of these criteria
@@ -189,8 +191,8 @@ class WebLabTest extends Component {
             be successful.
           </p>
           <label htmlFor="connect">
-            Click "Connect" to check whether your school's network supports the
-            Web Lab tool
+            Click "Connect" to check whether your school's network and device
+            policies support the Web Lab tool.
           </label>
           <button
             type="submit"
@@ -244,4 +246,4 @@ const styles = {
   }
 };
 
-export default WebLabTest;
+export default WebLabSupportVerification;
