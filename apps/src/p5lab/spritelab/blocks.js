@@ -11,9 +11,7 @@ import {changeInterfaceMode} from '../actions';
 import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
-import experiments from '@cdo/apps/util/experiments';
-
-function animations(includeBackgrounds) {
+function animations(areBackgrounds) {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
@@ -22,12 +20,8 @@ function animations(includeBackgrounds) {
   let results = animationList.orderedKeys
     .filter(key => {
       const animation = animationList.propsByKey[key];
-      const animationIsBackground = (animation.categories || []).includes(
-        'backgrounds'
-      );
-      return includeBackgrounds
-        ? animationIsBackground
-        : !animationIsBackground;
+      const isBackground = (animation.categories || []).includes('backgrounds');
+      return areBackgrounds ? isBackground : !isBackground;
     })
     .map(key => {
       const animation = animationList.propsByKey[key];
@@ -42,16 +36,16 @@ function animations(includeBackgrounds) {
         return [url, `"${animation.name}"`];
       }
     });
-  // In case either all backgrounds or all costumes are missing and we request them, this allows blocks
-  // with backgroundPicker or costumePicker custom input types to continue working without crashing.
-  // When they are used without animations, the image dropdown for those blocks will be empty except
-  // for the "Costumes" or "Backgrounds" button
+  // In case either all backgrounds or all costumes are missing and we request them, this allows the "create
+  // new sprite" and "set background as" blocks to continue working without crashing.
+  // When they are used without sprites being set, the image dropdown for those blocks will be empty except
+  // for the "More" button. The user will have to add sprites/backgrounds to this dropdown one by one using the "More" button.
   if (results.length === 0) {
     return [['sprites missing', 'null']];
   }
   return results;
 }
-function costumeList() {
+function sprites() {
   return animations(false);
 }
 function backgroundList() {
@@ -201,7 +195,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(costumeList, 32, 32, buttons),
+          new Blockly.FieldImageDropdown(sprites, 32, 32, buttons),
           inputConfig.name
         );
     },
@@ -216,25 +210,14 @@ const customInputTypes = {
         getStore().getState().pageConstants &&
         getStore().getState().pageConstants.showAnimationMode
       ) {
-        buttons = experiments.isEnabled('backgroundsTab')
-          ? [
-              {
-                text: i18n.backgroundMode(),
-                action: () => {
-                  getStore().dispatch(
-                    changeInterfaceMode(P5LabInterfaceMode.BACKGROUND)
-                  );
-                }
-              }
-            ]
-          : [
-              {
-                text: i18n.more(),
-                action: () => {
-                  getStore().dispatch(showBackground(Goal.NEW_ANIMATION));
-                }
-              }
-            ];
+        buttons = [
+          {
+            text: i18n.more(),
+            action: () => {
+              getStore().dispatch(showBackground(Goal.NEW_ANIMATION));
+            }
+          }
+        ];
       }
       currentInputRow
         .appendField(inputConfig.label)
@@ -390,7 +373,7 @@ const customInputTypes = {
 };
 
 export default {
-  costumeList,
+  sprites,
   customInputTypes,
   install(blockly, blockInstallOptions) {
     // Legacy style block definitions :(
