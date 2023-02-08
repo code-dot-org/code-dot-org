@@ -34,8 +34,7 @@ class ReportAbuseController < ApplicationController
   def report_abuse
     unless protected_project?
 
-      # Project Validators can skip the captcha. Everyone else has to pass it.
-      unless verify_recaptcha || current_user.project_validator?
+      unless verify_recaptcha || !require_captcha?
         flash[:alert] = I18n.t('project.abuse.report_abuse_form.validation.captcha')
         redirect_to report_abuse_path
         return
@@ -90,7 +89,7 @@ class ReportAbuseController < ApplicationController
       name: current_user&.name,
       email: current_user&.email,
       age: current_user&.age,
-      projectValidator: current_user&.project_validator? || false,
+      requireCaptcha: require_captcha?,
       captchaSiteKey: CDO.recaptcha_site_key,
     }
   end
@@ -205,5 +204,10 @@ class ReportAbuseController < ApplicationController
     return true if current_user&.project_validator? || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
+  end
+
+  def require_captcha?
+    return false if current_user&.admin? || current_user&.project_validator?
+    true
   end
 end

@@ -28,7 +28,7 @@ export default class ReportAbuseForm extends React.Component {
     name: PropTypes.string,
     email: PropTypes.string,
     age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    projectValidator: PropTypes.bool,
+    requireCaptcha: PropTypes.bool,
     captchaSiteKey: PropTypes.string
   };
 
@@ -165,7 +165,7 @@ export default class ReportAbuseForm extends React.Component {
             ref="abuse_detail"
             id="uitest-abuse-detail"
           />
-          {this.props.projectValidator || (
+          {this.props.requireCaptcha && (
             <div>
               <p>{msg.verifyNotBot()}</p>
               <div
