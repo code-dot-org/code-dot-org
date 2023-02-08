@@ -24,12 +24,7 @@ export default class WebSerialPortWrapper extends EventEmitter {
     // TODO - not sure if this is used in Maker Toolkit yet
   }
 
-  /** Opens the serial port from Micro:Bit and starts reading from port.
-   * We are opening the port here and not reading from or writing to the port at this point in
-   * implementation. Later on when the entire Micro:WebSerial pathway is implemented,
-   * this function may be removed logic added for the MB in the open() function below,
-   * if appropriate.
-   */
+  // Opens the serial port from Micro:Bit and starts reading from port.
   async openMBPort() {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
@@ -49,11 +44,10 @@ export default class WebSerialPortWrapper extends EventEmitter {
   }
 
   // Opens the serial port from Circuit Playground and starts reading from port.
-  async open() {
+  async openCPPort() {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
     }
-
     this.port
       .open({baudRate: SERIAL_BAUD})
       .then(() => {

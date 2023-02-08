@@ -407,7 +407,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise<SerialPort>}
    */
   static openSerialPortWebSerial(port) {
-    return port.open().then(() => {
+    return port.openCPPort().then(() => {
       this.createPendingQueue(port);
       return port;
     });
