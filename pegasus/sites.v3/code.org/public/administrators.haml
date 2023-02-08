@@ -97,12 +97,6 @@ theme: responsive_full_width
         .text-wrapper
           %h3 Scholarships for schools serving underserved students
           %p Access to $1.5M in Professional Learning scholarships for teachers serving students traditionally underrepresented in CS.
-    %div.centered
-      %a{href: '#email-signup-form', class: 'link-button'} Become a Code.org District Partner
-
-%section.bg-primary
-  .wrapper
-    %p.callout.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool/accessreport">CS Access Report</a>!
 
 %section.bg-neutral
   .wrapper
@@ -135,6 +129,10 @@ theme: responsive_full_width
         %p Expand CS offerings in your schools.
     %div.centered
       %a{href: '#email-signup-form', class: 'link-button'} Become a Code.org District Partner
+
+%section.bg-primary
+  .wrapper
+    %p.callout.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool/accessreport">CS Access Report</a>!
 
 %a{id: 'email-signup-form'}
 %section
@@ -178,4 +176,15 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2 Additional Resources
-    PARTIALS?
+    .action-block__wrapper.action-block__wrapper--two-col
+      .action-block.action-block--one-col
+        %h3 Amazon Future Engineer
+        %img{src: "/images/marketing/fill-400x250/AFE-El-Paso-4.jpg", alt: ""}
+        %p Special support for teachers at underserved schools. Find out if your school is eligible.
+        %a.link-button{href: "/afe"} Learn more
+      .action-block.action-block--one-col
+        %h3 District case studies
+        %img{src: "/images/marketing/fill-400x250/2018_HoC-392.jpg", alt: ""}
+        %p See how three different districts are bringing CS to their students.
+        %a.link-button{href: "https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.9ub4frvyuqiy"} Learn more
+  .clear
