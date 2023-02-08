@@ -259,10 +259,14 @@ export function pickNewAnimation() {
     const state = getState();
     const goal = state.animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      if (state.interfaceMode !== P5LabInterfaceMode.ANIMATION) {
+      if (
+        ![P5LabInterfaceMode.ANIMATION, P5LabInterfaceMode.BACKGROUND].includes(
+          state.interfaceMode
+        )
+      ) {
         dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
       }
-      dispatch(addBlankAnimation());
+      dispatch(addBlankAnimation(state.interfaceMode));
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendBlankFrame());
     }
