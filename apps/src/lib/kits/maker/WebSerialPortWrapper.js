@@ -68,19 +68,19 @@ export default class WebSerialPortWrapper extends EventEmitter {
   }
 
   async readLoop() {
-    try {
-      while (this.port.readable.locked && this.portOpen) {
+    while (this.port.readable?.locked) {
+      try {
         const {value, done} = await this.reader.read();
         if (done) {
           this.reader.releaseLock();
           break;
         }
         this.emit('data', Buffer.from(value));
-      }
-    } catch (e) {
-      console.error(e);
-      if (e.code === DEVICE_LOST_ERROR_CODE) {
-        this.emit('disconnect');
+      } catch (e) {
+        console.error(e);
+        if (e.code === DEVICE_LOST_ERROR_CODE) {
+          this.emit('disconnect');
+        }
       }
     }
   }
