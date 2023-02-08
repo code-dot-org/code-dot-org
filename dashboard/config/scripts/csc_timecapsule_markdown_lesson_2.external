@@ -1,0 +1,14 @@
+name 'csc_timecapsule_markdown_lesson_2'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Plan Your Time Capsule
+
+Today you will write your own time capsule poem. As you plan, think about what someone in the future would want to learn about your life. 
+
+Imagine your future grandchildren asking you what it was like when you were young. They want to see life through your eyes. Next class you will code your time capsule poem. 
+
+Start thinking about what backgrounds, text effects, sounds, sprites and events you may use.
+
+MARKDOWN
