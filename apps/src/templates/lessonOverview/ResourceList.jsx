@@ -99,7 +99,8 @@ export default class ResourceList extends Component {
       resourceType: resource.type,
       resourceUrl: resource.url,
       resourceDownloadUrl: resource.download_url,
-      visitType: visitType
+      visitType: visitType,
+      path: document.location.pathname
     });
   };
 
