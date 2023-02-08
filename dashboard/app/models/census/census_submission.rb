@@ -113,7 +113,7 @@ class Census::CensusSubmission < ApplicationRecord
   def self.unresolved_reported_inaccuracies
     left_joins(:census_inaccuracy_investigations).
       where(inaccuracy_reported: true).
-      where('census_inaccuracy_investigations.id is null')
+      where(census_inaccuracy_investigations: {id: nil})
   end
 
   def submitter_email_address=(value)
