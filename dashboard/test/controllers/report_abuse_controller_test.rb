@@ -72,7 +72,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
 
-    response = delete :destroy_abuse, params: {channel_id: @channel_id}
+    response = delete :reset_abuse, params: {channel_id: @channel_id}
     assert response.unauthorized?
   end
 
@@ -84,7 +84,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     user = create(:project_validator)
     sign_in user
 
-    response = delete :destroy_abuse, params: {channel_id: @channel_id}
+    response = delete :reset_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
   end
