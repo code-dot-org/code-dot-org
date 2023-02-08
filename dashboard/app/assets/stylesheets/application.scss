@@ -1303,9 +1303,9 @@ body.iframe_embed_app_and_code {
 
 .reference_area {
   margin-top: 20px;
+  color: $neutral_dark;
 
   .help_title {
-    color: $dark_charcoal;
     font-family: $gotham-extra-bold;
     font-weight: normal;
     font-size: 17.5px;
@@ -1319,11 +1319,17 @@ body.iframe_embed_app_and_code {
 
   .video_link {
     display: inline-block;
-    margin: 6px;
+    margin: 6px 0;
+    color: $brand_secondary_default;
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand_secondary_dark;
+    }
   }
 
   .video_name {
-    text-align: center;
+    //text-align: center;
   }
 
   .help_subtitle {
@@ -1367,6 +1373,7 @@ body.iframe_embed_app_and_code {
       border-top-left-radius: 4px;
       border: 0;
       background: transparent;
+      margin-bottom: 2px;
 
       a {
         background: $brand_secondary_default;
@@ -1374,6 +1381,7 @@ body.iframe_embed_app_and_code {
         border-radius: 6px;
         color: $neutral_white;
         font-family: $gotham-bold;
+        cursor: pointer !important;
 
         &:hover {
           background-color: $brand_secondary_dark;
@@ -1530,7 +1538,7 @@ a.download-video {
   color: $neutral_dark;
   border: 2px solid $neutral_dark;
   padding: 0;
-  line-height: 42px;
+  line-height: 40px;
 
   &:hover {
     background: $neutral_dark20;
