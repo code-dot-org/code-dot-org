@@ -18,6 +18,7 @@ import {
   playMultiMutator
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
+import {GeneratorHelpersSimple2} from './blocks/simple2';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -142,14 +143,10 @@ export default class MusicBlocklyWorkspace {
           const functionCode = Blockly.JavaScript.blockToCode(
             functionBlock.getChildren()[0]
           );
-          functionImplementationsCode += `function ${functionBlock.getFieldValue(
-            'NAME'
-          )}() {
-              ProgramSequencer.playSequential();
-              ${functionCode}
-              ProgramSequencer.endSequential();
-            }
-            `;
+          functionImplementationsCode += GeneratorHelpersSimple2.getFunctionImplementation(
+            functionBlock.getFieldValue('NAME'),
+            functionCode
+          );
         }
       });
 
@@ -160,13 +157,10 @@ export default class MusicBlocklyWorkspace {
         !topBlocks.some(block => block.type === BlockTypes.WHEN_RUN_SIMPLE2)
       ) {
         events.whenRunButton = {
-          code: `
-              var __insideWhenRun = true;
-              ProgramSequencer.init();
-              ProgramSequencer.playTogether();
-              ${functionCallsCode}
-              ${functionImplementationsCode}
-            `
+          code: GeneratorHelpersSimple2.getDefaultWhenRunImplementation(
+            functionCallsCode,
+            functionImplementationsCode
+          )
         };
       }
     }
