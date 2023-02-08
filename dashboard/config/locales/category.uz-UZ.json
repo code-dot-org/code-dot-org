@@ -1,0 +1,44 @@
+{
+  "uz-UZ": {
+    "data": {
+      "category": {
+        "ccela/SL": {
+          "description": "Gapirish va tinglash"
+        },
+        "ccmath/MP": {
+          "description": "Matematik amaliyotlar"
+        },
+        "csta2011/CPP": {
+          "description": "Hisoblash amaliyoti va dasturlash"
+        },
+        "csta2011/CT": {
+          "description": "Dasturiy fikrlash"
+        },
+        "iste/1": {
+          "description": "Talabalar ijodiy fikrlashni namoyish etadilar, bilimlarini mustahkamlaydilar va texnologiyalar yordamida innovatsion mahsulotlar va jarayonlarni ishlab chiqadilar."
+        },
+        "iste/4": {
+          "description": "Talabalar tadqiqotlarni rejalashtirish va o‘tkazish, loyihalarni boshqarish, muammolarni hal qilish va tegishli raqamli vositalar va resurslardan foydalangan holda asosli qarorlar qabul qilishda tanqidiy fikrlash qobiliyatlaridan foydalanadilar."
+        },
+        "ccela/L": {
+          "description": "Til"
+        },
+        "ccela/RI": {
+          "description": "Axborotni o‘qish"
+        },
+        "ccela/W": {
+          "description": "Yozish"
+        },
+        "csta2011/CL": {
+          "description": "Hamkorlik"
+        },
+        "iste/2": {
+          "description": "Talabalar raqamli axborot vositalari va uskunalaridan muloqot qilish va birgalikda ishlash, shu jumladan masofadan turib, individual ta'limni qo‘llab-quvvatlash va boshqalarning o‘rganishiga hissa qo‘shish uchun foydalanadilar."
+        },
+        "csta/IC": {
+          "description": "Kompyuterlar ta'siri"
+        }
+      }
+    }
+  }
+}

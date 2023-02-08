@@ -515,7 +515,7 @@ sk:
         C1_moveitmoveit_unplugged: Pohni sa, pohni sa
         C1_bigevent_unplugged: Veľká udalosť
         C1_getting_loopy: Cykly sa zacykľujú
-        C1_pair_programming: Programovanie v páre
+        C1_pair_programming: Párové programovanie
         C1_maze_intro_sequencing: Úvod do bludiska
         C1_maze_debugging: 'Bludisko: ladenie'
         C1_bee_level_intro: Úlohy s včelami - Úvod
@@ -710,11 +710,11 @@ sk:
         CSF_loops_AB: Cykly
         csd_gamelab_booleans: Logické výrazy
         csd_gamelab_conditional_statements: Podmienkové výroky
-        csd_gamelab_if_else: Podmienkové výroky (if/else)
+        csd_gamelab_if_else: Podmienkové príkazy (if/else)
         CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
-        CDEF_Video_SpritesInAction: Postavy v akcii
-        CSF_SpriteLab_SpritesInAction_CDEF: Postavy v akcii
+        CDEF_Video_SpritesInAction: Sprajty v akcii
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprajty v akcii
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         mc_2018_intro: 'Minecraft: Vodné Dobrodružstvo - Úvod'
         MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj pokiaľ neplatí"'
@@ -742,15 +742,15 @@ sk:
         teaching_cs_pair_programming: 'Vyučujeme Základy informatiky: Párové programovanie'
         teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
         csd_applab_designmode: 'Objavujeme informatiku : App Lab - dizajnový mód'
-        csd_pair_programming: Programovanie v páre
+        csd_pair_programming: Párové programovanie
         csd_gamelab_functions: Volanie a definovanie funkcií
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
-        csd_problem_solving_process: Proces riešenia problémov
+        csd_problem_solving_process: Postup riešenia problémov
         CSF_Going_Places_Safely: Moja online štvrť
         CSF_SpriteLab_Intro_v2: Predstavenie Sprite Labu
         CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
-        CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
+        CSF_SpriteLab_SpritesInAction_v2: Sprajty v akcii
         csd_debugging: Ladenie
         csd_applab_designmode_short: App Lab  - Dizajnový mód
         csp-pd-welcome: Vitaj v rodine!
@@ -775,7 +775,7 @@ sk:
         csf_my_online_neighborhood_2020: Moja online štvrť
         csf_follow_the_digital_trail: Sleduj digitálnu stopu
         csf_private_and_personal_information: Súkromné a osobné údaje
-        csd_what_computers_are: Čo je počítač?
+        csd_what_computers_are: Čo je to počítač?
         codebreak_e01: 'Code Break 1.0: Algoritmy s Hill Harper'
         codebreak_e02: 'Code Break 2.0: Protoypy s Markom Cubanom a Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Šifrovanie s Ashtonom Kutcherom a Mia Gil
@@ -809,10 +809,11 @@ sk:
         csp_tutorial_libraries: Knižnice v App Labe
         PL-Video-21: Vitaj v profesionálnom vzdelávaní Code.org!
         csd_ml_intro_ai_lab_july2021: Úvod do UI Labu
+        csd_ml_numerical_ai_lab: Číselné údaje v AI Labe
         PL_CSD_TeacherTips_Advise: Tipy pre učiteľa – Rady pre nových učiteľov
         PL_CSD_TeacherTips_IntroToCSD: Tipy pre učiteľa – Úvod ku kurzu Objavujeme
           informatiku
-        PL_CSD_TeacherTips_ProblemSolvingProcess: Tipy pre učiteľa - Proces riešenia
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Tipy pre učiteľa - Postup riešenia
           problémov
         PL_CSD_TeacherTips_PairProgramming: Tipy pre učiteľa – Programovanie vo dvojici
         PL_CSD_TeacherTips_Debugging: Tipy pre učiteľa – Ladenie
@@ -835,6 +836,12 @@ sk:
           s poéziou
         poetry_module_conditionals: Podmienené - programovanie s poéziou
         poemart_intro: Úvod do umenia básne
+        CSA-PL-debugging-temp: Úvod do ladenia v Java Lab - dočasný
+        csd_u6_circuit_playground: Fyzické výpočty
+        csd_u6_input_output: Vstup a výstup
+        csp_applab_parameters: Funkcie s parametrami
+        CSA-PL-intro-to-arrays: Jednorozmerné (1D) polia
+        CS_Changing_Everything: Informatika mení svet okolo nás
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

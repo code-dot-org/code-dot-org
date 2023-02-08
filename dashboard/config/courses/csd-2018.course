@@ -16,20 +16,31 @@
   "properties": {
     "family_name": "csd",
     "has_verified_resources": true,
-    "teacher_resources": [
-      [
-        "curriculum",
-        "https://curriculum.code.org/csd-18/"
-      ],
-      [
-        "teacherForum",
-        "https://forum.code.org/c/csd"
-      ]
-    ],
     "version_year": "2018"
   },
   "resources": [
-
+    {
+      "name": "Curriculum",
+      "url": "https://curriculum.code.org/csd-18/",
+      "key": "curriculum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum_6",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_6"
+      }
+    }
   ],
   "student_resources": [
 

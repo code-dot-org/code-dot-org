@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 
 ##### **You have completed Lesson 13:  Variables.**
 
-You can go through lessons in Part II using one of two options: 
+You can go through lessons in Part II using one of two options:
 
 * **Option A** is best if you are limited on time and definitely know which course you will teach.
 
@@ -48,60 +48,58 @@ Use the table below to go on to the next lesson and computer science concept tha
   <tr>
     <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li> <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a> </li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
+        <li> <a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a> </li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals</a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects </a> </li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals</a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/8/levels/1" target="blank" >Lesson 8: Sequencing with Sprites </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
-         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/12/levels/1" target="blank" >Lesson 12: Functions  </a></li>
-       
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/8/levels/1" target="blank" >Lesson 8: Sequencing with Sprites </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
+         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/12/levels/1" target="blank" >Lesson 12: Functions  </a></li>
+       <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/8/levels/1" target="blank" >Lesson 8: Sequencing with Sprites </a></li>
-        <li> <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/13/levels/1" target="blank" >Lesson 13: Variables</a> </li>
-        <li> <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/14/levels/1" target="blank" >Lesson 14: For Loops</a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects </a> </li>
+         <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/8/levels/1" target="blank" >Lesson 8: Sequencing with Sprites </a></li>
+        <li> <a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/13/levels/1" target="blank" >Lesson 13: Variables</a> </li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2022/lessons/14/levels/1" target="blank" >Lesson 14: End of Course Projects</a> </li>
         </ul>
     </td>
 </table>
 <br/>
 
-## Option B 
+## Option B
 
-Go lesson by lesson for all concepts included in Computer Science Fundamentals courses.  Click "Continue" to go on to Lesson 14:  For Loops.
+Go lesson by lesson for all concepts included in Computer Science Fundamentals courses.  Click "Continue" to go on to Lesson 15:  Reviewing your reflections.
 
 MARKDOWN

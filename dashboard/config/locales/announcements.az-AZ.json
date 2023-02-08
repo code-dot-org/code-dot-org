@@ -1,0 +1,24 @@
+{
+  "az-AZ": {
+    "data": {
+      "announcements": {
+        "8f212dd2-169f-4a3d-9880-f76d3372b6c1": {
+          "buttonText": "Daha ətraflı"
+        },
+        "a3109564-513f-47c8-bdf3-d69a19f5149e": {
+          "buttonText": "Daha ətraflı"
+        },
+        "9b45f4aa-6b0a-44d7-9813-8e724baca343": {
+          "buttonText": "Daha ətraflı"
+        },
+        "26f29937-fd4e-4738-8dfe-459f286636f4": {
+          "buttonText": "Daha ətraflı"
+        },
+        "487af7e8-d3dd-46c2-a0fa-936a4e58d977": {
+          "notice": "AP imtahanına yazılmısınız?",
+          "details": "İndi AP CS Principles imtahanında iştirak etmək üçün qeydiyyatdan keçməyin vaxtıdır! Məktəbinizin son qeydiyyat tarixi haqqında müəlliminizdən soruşmağınızdan əmin olun və bu gün qeydiyyatdan keçin. Testdən keçmək istədiyinizə əmin deyilsiniz? Sizə lazım olan ALTI səbəbimiz var. Onları yoxlayın!"
+        }
+      }
+    }
+  }
+}

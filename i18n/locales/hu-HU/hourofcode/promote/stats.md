@@ -8,39 +8,39 @@ title: Ismertetők és hasznos statisztikák
 
 # Ismertetők és hasznos statisztikák
 
-### Használd az alábbi ismertetőket, ha a Kódolás óráját szeretnéd népszerűsíteni hírlevelekben és hírközlésekben.
+### Használd az alábbi ismertetőket, ha a Kódolás óráját szeretnéd népszerűsíteni hírlevelekben és közleményekben.
 
 * * *
 
 ## Használd az alábbi rövid leírást hírlevelekhez
 
-#### Hozd a számítástechnikát az iskoládba. Kezd a Kódolás órájával!
+#### Hozd be a számítástechnikát az iskoládba. Kezdj a Kódolás órájával!
 
-A technológia változásával a bolygó minden iparágában a számítógépes ismeretek az alapvető készségek részévé váltak. But just half of all schools offer computer science! A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon. Aki hallott a tavalyi Kódolás órája eseményről, az tudhatja, hogy az történelmi jelentőséggel bírt. 100 millió diák fedezte fel csupán egy Kódolás órája eseményen való részvétel során, hogy a számítástechnika nem is olyan bonyolult, sőt roppant élvezetes.
+A technológia változásával a bolygó minden iparágában a számítógépes ismeretek az alapvető készségek részévé váltak. De csak az iskolák felében folyik számítástechnikai oktatás! A jó hír az, hogy mi már dolgozunk a változáson. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
-A Kódolás órája egy órás bevezetést nyújt a számítástechnika világába, hogy demisztifikálja a programozás tevékenységét és bemutassa, hogy bárki megtanulhatja az alapokat. További hasznos információkat találsz a [http://HourOfCode.com](http://HourofCode.com) oldalon. Próbáld ki magad, vagy rendezz Kódolás órája eseményt, hogy megmutathasd másoknak is a számítástechnika világát!
+A Kódolás órája egy órás bevezetés a számítástechnika világába, demisztifikálja a programozást, és bemutatja, hogy bárki megtanulhatja az alapokat. További hasznos információkat találsz a [http://HourOfCode.com](http://HourofCode.com) oldalon. Próbáld ki magad, vagy rendezz Kódolás óráját, mutasd meg másoknak is a számítástechnika világát!
 
-## Gyakori kérdések
+## Üzenet küldése a Gyakori kérdésekhez
 
 #### Miért rendezzen az iskolád Kódolás órája eseményt?
 
-Bár mindannyian tudjuk, hogy a diákok számára fontos, hogy megtanulják, hogyan kell navigálni a mai technológiailag telített világban, sok tanárnak nincs tapasztalata a számítástechnikában és nem is tudja, hogyan kezdje. Ez az esemény mindenkinek lehetőséget ad arra, hogy megismerje a számítástechnikát.
+Bár mindannyian tudjuk, hogy a diákok számára fontos hogy el tudjanak igazodni a mai, technológiával telített világban, sok tanárnak nincs tapasztalata a számítástechnikában és nem is tudja, hogyan kezdjen neki. Ez az esemény mindenkinek lehetőséget ad arra, hogy megismerje a számítástechnikát.
 
-Reméljük, ez felkelti majd a diákok érdeklődését a továbbtanulás iránt. A kutatások azt is kimutatták, hogy a gyerekek már azelőtt rá tudnak érezni a programozási alapelvekre, mielőtt megtanulnák, hogyan kell írni vagy olvasni. Ugyanis az agyuk fiatalkorban érzékenyebben reagál a számítógépes nyelvezetre, akárcsak az idegen nyelvekre. <br /> <br />
+Reméljük, ez felkelti majd a diákok érdeklődését a továbbtanulás iránt. A kutatások azt is kimutatták, hogy a gyerekek már azelőtt ráéreznek a programozási alapelvekre, mielőtt megtanulnának írni vagy olvasni. Az agyuk ugyanis fiatalkorban érzékenyebben reagál a számítógépes nyelvezetre, akárcsak az idegen nyelvekre. <br /> <br />
 
 #### Miért fontos mindez?
 
-A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan üres állás volt Amerikában, amelyhez előny jelentett volna a programozási ismeret. But 49 percent of schools in the U.S. don't offer computer science. Ideje felzárkózni a 21. századhoz. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat és versenyképességet teremt számukra. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat ad és versenyképessé teszi őket. <br /> <br />
 
-#### Egy idézet, amelyet nyugodtan felhasználhatsz
+#### Egy idézet, amelyet az anyagokban felhasználhatsz
 
-"A Kódolás órája esemény célja a programozás demisztifikálása, és annak bemutatása, hogy a számítástechnika nem atomfizika - bárki megtanulhatja az alapokat" - mondta Hadi Partovi, a Code.org alapítója és vezérigazgatója. Világszerte több mint 100 millió diák próbálta már ki a Kódolás óráját. A 21. századi számítástechnika oktatás iránti kereslet nem ismer határokat." <br /> <br />
+"A Kódolás órájának célja a programozás demisztifikálása, és annak bemutatása, hogy a számítástechnika nem atomfizika - bárki megtanulhatja az alapokat" - mondta Hadi Partovi, a Code.org alapítója és vezérigazgatója. Világszerte már több mint 100 millió diák próbálta ki a Kódolás óráját. A releváns 21. századi számítástechnika oktatás iránti kereslet nem ismer határokat." <br /> <br />
 
 #### A Code.org-ról
 
-A Code.org egy 501c3 számú non-profit szervezet, amelynek célja a számítástechnikában való részvétel bővítése, valamint a nők és az alulreprezentált színesbőrű hallgatók felkarolása. Meglátása szerint, minden iskolában minden diáknak lehetőséget kell teremteni arra, hogy megtanulhassa a számítógépes programozást. A 2013-as elindulást követően a Code.org megszervezte a Kódolás órája kampányt, amely eddig több mint 100 millió diákot vezetett be a számítástechnika világába, és Amerika szerte 70 középiskolával együttműködve segíti a számítástechnikai programok bővítését. A Code.org-ot különböző társaságok, alapítványok és nagylelkű személyek jótékony felajánlásai támogatják, köztük a Microsoft, a Facebook, az Infosys Foundation USA, az Amazon és sokan mások. További információért látogass el a [code.org]({{ codeorg_link }}) weboldalra.
+A Code.org egy 501c3 számú közhasznú non-profit szervezet, amelynek célja a számítástechnikában való részvétel bővítése, valamint fiatal nők és az alulreprezentált csoportokba tartozó hallgatók részvételének növelése. A szervezet víziója az, hogy minden iskolában minden diáknak legyen lehetősége számítógépes programozást tanulni. A 2013-as elindulást követően a Code.org megszervezte a Kódolás órája kampányt, amely eddig több mint 100 millió diákot vezetett be a számítástechnika világába, és országszerte 70 iskolai körzettel együttműködve segíti a számítástechnikai programok bővítését. A Code.org vállalatok, alapítványok és nagylelkű magánszemélyek jótékony felajánlásai támogatják, köztük a Microsoft, a Facebook, az Infosys Foundation USA, az Amazon és sokan mások. További információért látogass el a [code.org]({{ codeorg_link }}) weboldalra.
 
-## Oszd meg ezeket a közösségi médiában vagy e-mailezd el barátaidnak
+## Oszd meg ezeket a közösségi médiában vagy küldd el e-mailben a barátaidnak
 
 [![kép](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 

@@ -2,7 +2,7 @@ get '/forms/uploads/*' do |uri|
   cache_file = cache_dir('fetch', request.site, request.path_info)
   unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
     FileUtils.mkdir_p File.dirname(cache_file)
-    IO.write(cache_file, AWS::S3.download_from_bucket('cdo-form-uploads', uri))
+    File.write(cache_file, AWS::S3.download_from_bucket('cdo-form-uploads', uri))
   end
   pass unless File.file?(cache_file)
 
@@ -16,7 +16,7 @@ post '/forms/:kind' do |kind|
     content_type :json
     cache_control :private, :must_revalidate, max_age: 0
     form = insert_or_upsert_form(kind, params)
-    data = JSON.load(form[:data]).merge(secret: form[:secret])
+    data = JSON.parse(form[:data]).merge(secret: form[:secret])
     if form[:kind] == "VolunteerContact2015"
       data.delete "volunteer_secret_s"
       data.delete "volunteer_email_s"

@@ -91,6 +91,11 @@ export default class TutorialDetail extends React.Component {
       },
       {
         key: 7,
+        title: i18n.filterAccessibility(),
+        body: getTagString('accessibility', this.props.item.tags_accessibility)
+      },
+      {
+        key: 8,
         title: i18n.tutorialDetailInternationalLanguages(),
         body: this.props.item.language
       }
@@ -271,6 +276,9 @@ export default class TutorialDetail extends React.Component {
                       )}
                   </tbody>
                 </table>
+                <div style={styles.tutorialDetailsAsReported}>
+                  {i18n.tutorialDetailAsReported()}
+                </div>
               </div>
             </div>
           </div>
@@ -335,16 +343,16 @@ const styles = {
     paddingBottom: 4
   },
   tutorialDetailPublisher: {
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 16
   },
   tutorialDetailSub: {
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 12,
     paddingBottom: 20
   },
   tutorialDetailDescription: {
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14
   },
   tutorialDetailDisabled: {
@@ -373,5 +381,8 @@ const styles = {
     padding: 5,
     border: '1px solid lightgrey',
     whiteSpace: 'pre-wrap'
+  },
+  tutorialDetailsAsReported: {
+    padding: 6
   }
 };

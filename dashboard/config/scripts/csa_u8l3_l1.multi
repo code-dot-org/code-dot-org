@@ -26,7 +26,7 @@ while (left <= right) {
    else if (a[mid] > target) {
         right = mid - 1;
     }
-    else 
+    else {
         return mid;
     }
 }

@@ -2,1537 +2,1787 @@
   "ko-KR": {
     "data": {
       "resources": {
-        "list_of_poems/poem-art/2021": {
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
-        },
-        "poem_art_celebration/poem-art/2021": {
-          "type": "비디오"
-        },
-        "poem_art_events/poem-art/2021": {
-          "type": "비디오"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "비디오"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "name": "시학 1 - 소개",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
-          "type": "비디오"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "type": "비디오"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "type": "비디오"
-        },
-        "ai-ml/oceans/unversioned": {
-          "type": "비디오"
-        },
-        "ai-societal/oceans/unversioned": {
-          "type": "비디오"
-        },
-        "ai-training/oceans/unversioned": {
-          "type": "비디오"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/courseb/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/courseb/2018": {
+        "teacher_forum/csd/2022": {
           "name": "교사용 포럼"
         },
-        "vocabulary/courseb/2018": {
-          "name": "어휘"
+        "meals_data/csd/2022": {
+          "type": "자료"
         },
-        "lesson_plans/coursea/2018": {
-          "name": "수업 계획"
+        "representation_matters/csd/2022": {
+          "name": "표현 문제"
         },
-        "standard_mappings/coursea/2018": {
-          "name": "표준 매핑"
+        "representation_matters_1/csd/2022": {
+          "name": "표현 문제"
         },
-        "teacher_forum/coursea/2018": {
-          "name": "교사용 포럼"
+        "representation_matters_2/csd/2022": {
+          "name": "표현 문제",
+          "type": "슬라이드"
         },
-        "vocabulary/coursea/2018": {
-          "name": "어휘"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/coursed/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/coursed/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/coursed/2018": {
-          "name": "어휘"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/coursef/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/coursef/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/coursef/2018": {
-          "name": "어휘"
-        },
-        "lesson_plans/express/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/express/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/express/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/express/2018": {
-          "name": "어휘"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/coursee/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/coursee/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/coursee/2018": {
-          "name": "어휘"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/coursec/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "어휘"
-        },
-        "code_introduced_1/csd/2018": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_2/csd/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_2/csd/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_2/csd/2018": {
-          "name": "어휘"
-        },
-        "code_introduced_3/csd/2018": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_5/csd/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_5/csd/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_5/csd/2018": {
-          "name": "어휘"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_4/csd/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "어휘"
-        },
-        "code_introduced_2/csd/2018": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_3/csd/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_3/csd/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "어휘"
-        },
-        "code_introduced/csd/2018": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_1/csd/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_1/csd/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "어휘"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/csd/2018": {
-          "name": "어휘"
-        },
-        "curriculum_guide/coursea/2019": {
-          "name": "커리큘럼 가이드"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/coursea/2019": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/coursea/2019": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/coursea/2019": {
-          "name": "어휘"
-        },
-        "curriculum_guide/courseb/2019": {
-          "name": "커리큘럼 가이드"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/courseb/2019": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/courseb/2019": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/courseb/2019": {
-          "name": "어휘"
-        },
-        "curriculum_guide/coursed/2019": {
-          "name": "커리큘럼 가이드"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/coursed/2019": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/coursed/2019": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/coursed/2019": {
-          "name": "어휘"
-        },
-        "curriculum_guide/coursef/2019": {
-          "name": "커리큘럼 가이드"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/coursef/2019": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/coursef/2019": {
-          "name": "어휘"
-        },
-        "curriculum_guide/coursee/2019": {
-          "name": "커리큘럼 가이드"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/coursee/2019": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/coursee/2019": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/coursee/2019": {
-          "name": "어휘"
-        },
-        "lesson_plans/express/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/express/2019": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/express/2019": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/express/2019": {
-          "name": "어휘"
-        },
-        "curriculum_guide/coursec/2019": {
-          "name": "커리큘럼 가이드"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/coursec/2019": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/coursec/2019": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/coursec/2019": {
-          "name": "어휘"
-        },
-        "teacher_forum/csd/2019": {
-          "name": "교사용 포럼"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_2/csd/2019": {
-          "name": "표준 매핑"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "어휘"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_5/csd/2019": {
-          "name": "표준 매핑"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "어휘"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "표준 매핑"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "어휘"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "표준 매핑"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "어휘"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "표준 매핑"
-        },
-        "vocabulary/csd/2019": {
-          "name": "어휘"
-        },
-        "code_introduced/csd/2019": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_1/csd/2019": {
-          "name": "표준 매핑"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "어휘"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_2/csd/2017": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_2/csd/2017": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "어휘"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_5/csd/2017": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_5/csd/2017": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "어휘"
-        },
-        "code_introduced/csd/2017": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_1/csd/2017": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_1/csd/2017": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "어휘"
-        },
-        "lesson_plans/csd/2017": {
-          "name": "수업 계획"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary/csd/2017": {
-          "name": "어휘"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "어휘"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "코드 소개됨"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "수업 계획"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "표준 매핑"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "교사용 포럼"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "어휘"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "시 목록",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
-        },
-        "introducing_sprite_lab/coursef/2021": {
-          "name": "스프라이트 랩 소개"
-        },
-        "exploring_apps/coursef/2021": {
-          "name": "앱 탐구"
-        },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "name": "스프라이트 랩 소개",
-          "type": "비디오"
-        },
-        "exploring_apps_1/coursef/2021": {
-          "name": "앱 탐구"
-        },
-        "making_sprites/coursef/2021": {
-          "name": "스프라이트 만들기"
-        },
-        "sprite_lab_documentation/coursef/2021": {
-          "name": "스프라이트 랩 문서화"
-        },
-        "sprites_in_action/coursef/2021": {
-          "name": "스프라이트 인 액션"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "type": "비디오"
-        },
-        "text_and_prompts/coursef/2021": {
-          "name": "텍스트 저장 및 검색"
-        },
-        "pause_and_think_online/coursef/2021": {
-          "name": "잠시 멈추고 생각하기 온라인",
-          "type": "비디오"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "재미있는 반복"
-        },
-        "flf-assessment-teacher-key/coursef/2021": {
-          "name": "For 루프 펀 - 평가 답안지"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "재미있는 반복"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "재미있는 반복"
-        },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "재미있는 반복"
-        },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "재미있는 반복",
-          "type": "평가"
-        },
-        "course-cf-blockly-blocks/coursef/2021": {
-          "name": "언플러그드 블록 (과정 C-F)"
-        },
-        "running-simulations/coursef/2021": {
-          "name": "시뮬레이션 실행"
-        },
-        "ai-ml/coursef/2021": {
-          "type": "비디오"
-        },
-        "ai-training/coursef/2021": {
-          "type": "비디오"
-        },
-        "ai-societal/coursef/2021": {
-          "type": "비디오"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "인터넷"
-        },
-        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "IP 주소 카드 및 배송 유형 카드"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "인터넷",
-          "type": "평가"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "인터넷"
-        },
-        "design-process/coursef/2021": {
-          "name": "설계 프로세스"
-        },
-        "final-project-design-worksheet/coursef/2021": {
-          "name": "최종 프로젝트 설계"
-        },
-        "rubric-csf-final-projects/coursef/2021": {
-          "name": "CS 기초 최종 프로젝트"
-        },
-        "implementation_guide/coursef/2021": {
-          "name": "수업 가이드"
-        },
-        "curriculum_guide_1/coursef/2021": {
-          "name": "커리큘럼 가이드"
-        },
-        "teacher_forum_1/coursef/2021": {
-          "name": "교사용 포럼"
-        },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "스프라이트 랩 문서화"
-        },
-        "virtual_lesson_modifications/coursef/2021": {
-          "name": "가상 레슨 수정",
-          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
-        },
-        "mimi-activity/courseb/2021": {
-          "name": "빨리 빨리 움직이자!"
-        },
-        "mimi-debugging/courseb/2021": {
-          "name": "빨리 빨리 움직이자!"
-        },
-        "mimi-teacher-puzzle/courseb/2021": {
-          "name": "빨리 빨리 움직이자!"
-        },
-        "teacher-video-move-it/courseb/2021": {
-          "name": "움직여 움직여"
-        },
-        "feeling-faces-image/courseb/2021": {
-          "name": "느낌 얼굴"
-        },
-        "jigsaw/courseb/2021": {
-          "name": "드래그 드롭 연습"
-        },
-        "class-section-video/courseb/2021": {
-          "name": "Code.org에서 학급 섹션 만드는 방법"
-        },
-        "course-ab-blockly-blocks/courseb/2021": {
-          "name": "언플러그드 블로클리 블록 (K-1학년)"
-        },
-        "pair-programming-vid/courseb/2021": {
-          "name": "페어 프로그래밍"
-        },
-        "wiggles_-_gonoodle/courseb/2021": {
-          "type": "비디오"
-        },
-        "happy-map-game-pieces/courseb/2021": {
-          "name": "해피 맵 게임 조각"
-        },
-        "compass-rose/courseb/2021": {
-          "name": "컴퍼스 로즈"
-        },
-        "stevie_and_the_big_project/courseb/2021": {
-          "name": "스티비와 큰 프로젝트"
-        },
-        "unspotted_bugs/courseb/2021": {
-          "name": "점이 없는 버그",
-          "type": "비디오"
-        },
-        "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "반복시키기"
-        },
-        "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "반복시키기"
-        },
-        "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "반복시키기",
-          "type": "평가"
-        },
-        "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "반복시키기"
-        },
-        "csf-lesson-recommend/courseb/2021": {
-          "name": "CS 기초 메인 활동 팁"
-        },
-        "common-sense-media-pause-think/courseb/2021": {
-          "name": "잠시 멈추고 생각하기 온라인",
-          "type": "비디오"
-        },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "큰 이벤트",
-          "type": "비디오"
-        },
-        "csf-the-big-event-assessment/courseb/2021": {
-          "name": "큰 이벤트",
-          "type": "평가"
-        },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "큰 이벤트"
-        },
-        "the_big_event_courses_a_b_/courseb/2021": {
-          "name": "빅 이벤트 (과정 A, B)"
-        },
-        "implementation_guide/courseb/2021": {
-          "name": "수업 가이드"
-        },
-        "lesson_type_guide/courseb/2021": {
-          "name": "레슨 타이프 가이드"
-        },
-        "debugging_guide/courseb/2021": {
-          "name": "디버깅 가이드"
-        },
-        "curriculum_guide_1/courseb/2021": {
-          "name": "커리큘럼 가이드"
-        },
-        "teacher_forum_1/courseb/2021": {
-          "name": "교사용 포럼"
-        },
-        "virtual_lesson_modifications/courseb/2021": {
-          "name": "가상 레슨 수정",
-          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "페어 프로그래밍"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "type": "비디오"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "type": "비디오"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "즐거운 맵"
-        },
-        "happy-map-cards/coursea/2021": {
-          "name": "해피 맵 카드"
-        },
-        "activity-answer-happy-maps/coursea/2021": {
-          "name": "해피 맵 카드"
-        },
-        "happy-map-game-pieces/coursea/2021": {
-          "name": "해피 맵 게임 조각"
-        },
-        "course-ab-blockly-blocks/coursea/2021": {
-          "name": "언플러그드 블로클리 블록 (K-1학년)"
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "type": "비디오"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "type": "비디오"
-        },
-        "happy-map-cards-xl/coursea/2021": {
-          "name": "해피 맵 카드 XL"
-        },
-        "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "해피 맵 게임 조각 보너스 팩"
-        },
-        "feeling-faces-image/coursea/2021": {
-          "name": "느낌 얼굴"
-        },
-        "pair-programming/coursea/2021": {
-          "type": "비디오"
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "name": "잠시 멈추고 생각하기 온라인",
-          "type": "비디오"
-        },
-        "unplugged-video-big-event/coursea/2021": {
-          "name": "큰 이벤트"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "큰 이벤트",
-          "type": "평가"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "큰 이벤트"
-        },
-        "the_big_event_courses_a_b_/coursea/2021": {
-          "name": "빅 이벤트 (과정 A, B)"
-        },
-        "csf-lesson-recommend/coursea/2021": {
-          "name": "CS 기초 메인 활동 팁"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "수업 가이드"
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "커리큘럼 가이드"
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "교사용 포럼"
-        },
-        "virtual_lesson_modifications/coursea/2021": {
-          "name": "가상 레슨 수정",
-          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
-        },
-        "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "내 로봇 친구"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "내 로봇 친구"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "내 로봇 친구"
-        },
-        "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "내 로봇 친구"
-        },
-        "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "내 로봇 친구"
-        },
-        "unplugged-maze-blocks/coursec/2021": {
-          "name": "언플러그드 미로 블록"
-        },
-        "pair-programming-vid/coursec/2021": {
-          "name": "페어 프로그래밍",
-          "type": "비디오"
-        },
-        "csf-lesson-recommend/coursec/2021": {
-          "name": "CS 기초 메인 활동 팁"
-        },
-        "course-cf-blockly-blocks/coursec/2021": {
-          "name": "언플러그드 블록 (과정 C-F)"
-        },
-        "unplugged-video-big-event/coursec/2021": {
-          "name": "큰 이벤트"
-        },
-        "csf-the-big-event-assessment/coursec/2021": {
-          "name": "큰 이벤트",
-          "type": "평가"
-        },
-        "assessment-answer-big-event/coursec/2021": {
-          "name": "큰 이벤트"
-        },
-        "the_big_event_course_c_/coursec/2021": {
-          "name": "빅 이벤트 (과정 C)"
-        },
-        "pause_and_think_online/coursec/2021": {
-          "name": "잠시 멈추고 생각하기 온라인",
-          "type": "비디오"
-        },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "비트 대 바이트"
-        },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "2진 팔찌"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "2진 팔찌"
-        },
-        "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "2진 팔찌"
-        },
-        "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "2진 팔찌",
-          "type": "평가"
-        },
-        "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "2진 팔찌"
-        },
-        "implementation_guide/coursec/2021": {
-          "name": "수업 가이드"
-        },
-        "curriculum_guide_1/coursec/2021": {
-          "name": "커리큘럼 가이드"
-        },
-        "teacher_forum_1/coursec/2021": {
-          "name": "교사용 포럼"
-        },
-        "virtual_lesson_modifications/coursec/2021": {
-          "name": "가상 레슨 수정",
-          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
-        },
-        "graph-paper-programming/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
-        },
-        "activity-answer-graph-paper/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "모눈 종이 프로그래밍",
-          "type": "평가"
-        },
-        "assessment-answer-graph-paper/coursed/2021": {
-          "name": "모눈 종이 프로그래밍"
-        },
-        "pair-programming-vid/coursed/2021": {
-          "name": "페어 프로그래밍"
-        },
-        "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "릴레이 프로그래밍"
-        },
-        "relay-assessment/coursed/2021": {
-          "name": "릴레이 프로그래밍"
-        },
-        "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "릴레이 프로그래밍"
-        },
-        "unplugged-video-relay-programming/coursed/2021": {
-          "name": "릴레이 프로그래밍"
-        },
-        "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "릴레이 프로그래밍"
-        },
-        "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "릴레이 프로그래밍"
-        },
-        "course-cf-blockly-blocks/coursed/2021": {
-          "name": "언플러그드 블록 (과정 C-F)"
-        },
-        "pause_and_think_online/coursed/2021": {
-          "name": "잠시 멈추고 생각하기 온라인",
-          "type": "비디오"
-        },
-        "feeling-faces-image/coursed/2021": {
-          "name": "느낌 얼굴"
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "name": "잠시 멈추고 생각하기 온라인",
-          "type": "비디오"
-        },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "조건선택 카드"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "조건선택 카드"
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "카드 조건문 샘플 프로그램"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "조건선택 카드",
-          "type": "평가"
-        },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "조건선택 카드"
-        },
-        "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "조건선택 카드"
-        },
-        "implementation_guide/coursed/2021": {
-          "name": "수업 가이드"
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "커리큘럼 가이드"
-        },
-        "teacher_forum_1/coursed/2021": {
-          "name": "교사용 포럼"
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "name": "가상 레슨 수정",
-          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
-        },
-        "unplugged_maze_blocks/express/2021": {
-          "name": "언플러그드 미로 블록"
-        },
-        "pair_programming/express/2021": {
-          "name": "페어 프로그래밍",
-          "type": "비디오"
-        },
-        "artist_introduction/express/2021": {
-          "type": "비디오"
-        },
-        "turns_angles/express/2021": {
-          "type": "비디오"
-        },
-        "sprite_lab_documentation/express/2021": {
-          "name": "스프라이트 랩 문서화"
-        },
-        "making_sprites/express/2021": {
-          "name": "스프라이트 만들기"
-        },
-        "sprite_lab_documentation_1/express/2021": {
-          "name": "스프라이트 랩 문서화"
-        },
-        "sprites_in_action/express/2021": {
-          "name": "스프라이트 인 액션"
-        },
-        "pause_and_think_online/express/2021": {
-          "name": "잠시 멈추고 생각하기 온라인",
-          "type": "비디오"
-        },
-        "pair_programming_video/express/2021": {
-          "type": "비디오"
-        },
-        "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": "언플러그드 블록 (과정 C-F)"
-        },
-        "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": "언플러그드 블록 (과정 C-F)"
-        },
-        "text_and_prompts/express/2021": {
-          "name": "텍스트 저장 및 검색"
-        },
-        "variables_video/express/2021": {
-          "name": "변수"
-        },
-        "rubric-csf-final-projects/express/2021": {
-          "name": "CS 기초 최종 프로젝트"
-        },
-        "teacher_forum_1/express/2021": {
-          "name": "교사용 포럼"
-        },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "페어 프로그래밍"
-        },
-        "class-section-video/pre-express/2021": {
-          "name": "Code.org에서 학급 섹션 만드는 방법"
-        },
-        "feeling-faces-image/pre-express/2021": {
-          "name": "느낌 얼굴"
-        },
-        "20_20_20_rule/pre-express/2021": {
-          "type": "비디오"
-        },
-        "wiggles_-_go_noodle/pre-express/2021": {
-          "type": "비디오"
-        },
-        "common-sense-media-pause-think/pre-express/2021": {
-          "name": "잠시 멈추고 생각하기 온라인",
-          "type": "비디오"
-        },
-        "csta_standards_mapping/pre-express/2021": {
-          "name": "CSTA 표준 매핑",
-          "url": "https://studio.code.org/s/pre-express-2021/standards"
-        },
-        "course_vocabulary/pre-express/2021": {
-          "url": "https://studio.code.org/s/pre-express-2021/vocab"
-        },
-        "teacher_forum_1/pre-express/2021": {
-          "name": "교사용 포럼"
-        },
-        "debugging_guide/pre-express/2021": {
-          "name": "디버깅 가이드"
-        },
-        "sprite_lab_documentation/coursee/2021": {
-          "name": "스프라이트 랩 문서화"
-        },
-        "common-sense-media-pause-think/coursee/2021": {
-          "name": "잠시 멈추고 생각하기 온라인",
-          "type": "비디오"
-        },
-        "digital-sharing-lesson/coursee/2021": {
-          "name": "디지털 공유 레슨 플랜"
-        },
-        "digital-sharing-video/coursee/2021": {
-          "name": "디지털 공유 윤리 (동영상)",
-          "type": "비디오"
-        },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "함수로 작사"
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
-          "name": "함수 언플러그드:작사"
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
-          "name": "함수 언플러그드:작사"
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "name": "함수 언플러그드:작사",
-          "type": "평가"
-        },
-        "assessment-answer-songwriting/coursee/2021": {
-          "name": "함수 언플러그드:작사"
-        },
-        "course-cf-blockly-blocks/coursee/2021": {
-          "name": "언플러그드 블록 (과정 C-F)"
-        },
-        "designing_for_accessibility_1/coursee/2021": {
-          "name": "접근가능성을 위한 설계"
-        },
-        "rubric-csf-final-projects/coursee/2021": {
-          "name": "CS 기초 최종 프로젝트"
-        },
-        "design-process/coursee/2021": {
-          "name": "설계 프로세스"
-        },
-        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "학생들이 그들이 알고 있는 내용을 보여주는 72가지 창의적인 방법"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "수업 가이드"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "커리큘럼 가이드"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "교사용 포럼"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "스프라이트 랩 문서화"
-        },
-        "virtual_lesson_modifications/coursee/2021": {
-          "name": "가상 레슨 수정",
-          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
-        },
-        "introduction_to_machine_learning/csd/2021": {
-          "name": "머신 러닝 소개"
-        },
-        "ai_what_is_machine_learning_/csd/2021": {
-          "type": "비디오"
-        },
-        "seeing_ai/csd/2021": {
-          "name": "시잉 AI",
-          "type": "비디오"
-        },
-        "finding_patterns_in_data/csd/2021": {
-          "type": "비디오"
-        },
-        "introduction_to_ai_lab_1/csd/2021": {
-          "type": "비디오"
-        },
-        "training_and_testing_in_ai_lab/csd/2021": {
-          "name": "AI 랩 교육 및 테스팅",
-          "type": "비디오"
-        },
-        "ai_training_data_bias/csd/2021": {
-          "type": "비디오"
-        },
-        "model_cards_in_ai_lab/csd/2021": {
-          "name": "AI 랩 모델 카드",
-          "type": "비디오"
-        },
-        "if-statements_in_app_lab/csd/2021": {
-          "type": "비디오"
-        },
-        "numerical_data_in_ai_lab_2/csd/2021": {
-          "type": "비디오"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "비디오"
-        },
-        "survey_planning/csd/2021": {
-          "name": "데이터 수집 설계"
-        },
-        "cleaning_survey_data/csd/2021": {
-          "type": "비디오"
-        },
-        "view_and_download_survey_data/csd/2021": {
-          "type": "비디오"
-        },
-        "the-design-thinking-process/csd/2021": {
-          "type": "비디오"
-        },
-        "computer-science-practices/csd/2021": {
-          "type": "성찰"
-        },
-        "paper-prototypes/csd/2021": {
-          "name": "종이 프로토타입"
-        },
-        "market-research/csd/2021": {
-          "name": "시장 조사"
-        },
-        "market_research/csd/2021": {
-          "name": "시장 조사"
-        },
-        "design_mode/csd/2021": {
-          "name": "디자인 모드"
-        },
-        "whats-for-lunch-testing/csd/2021": {
-          "type": "비디오"
-        },
-        "intro_to_design_mode/csd/2021": {
-          "type": "비디오"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "디자인 모드"
-        },
-        "bugs-and-features-planning/csd/2021": {
-          "name": "버그 및 특징"
-        },
-        "bugs_and_features/csd/2021": {
-          "name": "버그 및 특징"
-        },
-        "updating-your-prototype/csd/2021": {
-          "name": "프로토타입 업데이트"
-        },
-        "app-presentation/csd/2021": {
-          "name": "앱 프레젠테이션"
-        },
-        "app-presentation-exemplar/csd/2021": {
-          "name": "앱 프레젠테이션"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "교사용 포럼"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "name": "컴퓨터 작동 방법: 하드웨어 및 소프트웨어",
-          "type": "비디오"
-        },
-        "board_events/csd/2021": {
-          "name": "보드 이벤트"
-        },
-        "physical_input/csd/2021": {
-          "name": "물리적 인풋"
-        },
-        "analog-digital-video/csd/2021": {
-          "type": "비디오"
-        },
-        "functions_2/csd/2021": {
-          "name": "함수"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "name": "배열 소개",
-          "type": "비디오"
-        },
-        "playing_notes/csd/2021": {
-          "name": "플레잉 노트 "
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "반복을 위한",
-          "type": "비디오"
-        },
-        "for_loops/csd/2021": {
-          "name": "반복을 위한"
-        },
-        "accelerometer_events/csd/2021": {
-          "name": "가속도계 이벤트"
-        },
-        "circuits-logic-video/csd/2021": {
-          "name": "컴퓨터 작동 방법: 회로 및 로직",
-          "type": "비디오"
-        },
-        "representing-information-1/csd/2021": {
+        "representing_information/csd/2022": {
           "name": "정보 표현"
         },
-        "how-computers-work-data-and-binary/csd/2021": {
+        "patterns_and_representation/csd/2022": {
+          "name": "패턴과 표현",
+          "type": "슬라이드"
+        },
+        "ascii_challenges_1/csd/2022": {
+          "type": "답안지"
+        },
+        "ascii_text/csd/2022": {
+          "type": "자료"
+        },
+        "ascii_and_binary_representation/csd/2022": {
+          "name": "아스키와 바이너리 표현",
+          "type": "슬라이드"
+        },
+        "representing_images/csd/2022": {
+          "name": "이미지 표현",
+          "type": "슬라이드"
+        },
+        "binary_and_data/csd/2022": {
           "type": "비디오"
         },
-        "representing-numbers-exemplar-2019/csd/2021": {
+        "representing_numbers/csd/2022": {
           "name": "숫자 표현"
         },
-        "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "데이터 기밀 유지"
+        "representing_numbers_1/csd/2022": {
+          "name": "숫자 표현",
+          "type": "슬라이드"
         },
-        "create-a-representation-exemplar-2019/csd/2021": {
+        "combining_representations/csd/2022": {
+          "name": "표현 결합",
+          "type": "슬라이드"
+        },
+        "medical_records_1/csd/2022": {
+          "type": "답안지"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "데이터 기밀 유지",
+          "type": "슬라이드"
+        },
+        "computer_science_practices/csd/2022": {
+          "type": "성찰"
+        },
+        "create_a_representation/csd/2022": {
           "name": "표현 만들기"
         },
-        "encode-a-thing/csd/2021": {
+        "create_a_representation_1/csd/2022": {
           "name": "표현 만들기"
         },
-        "create_a_representation/csd/2021": {
-          "name": "표현 만들기"
+        "create_a_representation_2/csd/2022": {
+          "name": "표현 만들기",
+          "type": "채점판"
         },
-        "structuring_data/csd/2021": {
+        "create_a_representation_3/csd/2022": {
+          "name": "표현 만들기",
+          "type": "슬라이드"
+        },
+        "problem_solving_and_data/csd/2022": {
+          "type": "슬라이드"
+        },
+        "structuring_data/csd/2022": {
           "name": "데이터 구조"
         },
-        "interpreting-data-exemplar-2019/csd/2021": {
+        "structuring_data_1/csd/2022": {
+          "name": "데이터 구조",
+          "type": "슬라이드"
+        },
+        "interpreting_data/csd/2022": {
           "name": "데이터 해석"
         },
-        "interpreting-data/csd/2021": {
+        "interpreting_data_1/csd/2022": {
           "name": "데이터 해석"
         },
-        "interpreting-data-1/csd/2021": {
-          "name": "데이터 해석"
+        "interpreting_data_2/csd/2022": {
+          "name": "데이터 해석",
+          "type": "자료"
         },
-        "making-decisions-with-data/csd/2021": {
+        "interpreting_data_3/csd/2022": {
+          "name": "데이터 해석",
+          "type": "슬라이드"
+        },
+        "making_decisions_with_data_1/csd/2022": {
           "name": "데이터로 의사 결정"
         },
-        "automating-data-decisions-exemplar-2019/csd/2021": {
+        "problem_solving_process_with_data/csd/2022": {
+          "type": "자료"
+        },
+        "making_decisions_with_data_2/csd/2022": {
+          "name": "데이터로 의사 결정",
+          "type": "슬라이드"
+        },
+        "automating_data_decisions/csd/2022": {
           "name": "데이터 결정 자동화"
         },
-        "data-decisions-resource/csd/2021": {
+        "automating_data_decisions_1/csd/2022": {
+          "name": "데이터 결정 자동화",
+          "type": "자료"
+        },
+        "automating_data_decisions_2/csd/2022": {
           "name": "데이터 결정 자동화"
         },
-        "automating-data-decisions-1/csd/2021": {
-          "name": "데이터 결정 자동화"
+        "automating_data_decisions_3/csd/2022": {
+          "name": "데이터 결정 자동화",
+          "type": "슬라이드"
         },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+        "amazon_and_data/csd/2022": {
           "type": "비디오"
         },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "비디오"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "비디오"
-        },
-        "data-in-the-real-world-exemplar-2019/csd/2021": {
+        "data_in_the_real_world/csd/2022": {
           "name": "실세상에서 데이터"
         },
-        "data-in-the-real-world/csd/2021": {
+        "data_in_the_real_world_1/csd/2022": {
           "name": "실세상에서 데이터"
         },
-        "video_impact_on_society/csd/2021": {
+        "netflix_and_data/csd/2022": {
           "type": "비디오"
         },
-        "video_machine_learning/csd/2021": {
+        "waze_and_data/csd/2022": {
+          "type": "비디오"
+        },
+        "problem_solving_with_big_data/csd/2022": {
+          "name": "빅 데이터로 문제 해결",
+          "type": "슬라이드"
+        },
+        "video_impact_on_society/csd/2022": {
+          "name": "동영상: 사회에 미치는 영향",
+          "type": "비디오"
+        },
+        "video_machine_learning/csd/2022": {
           "name": "동영상: 머신러닝",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "비디오"
         },
-        "video_training_data_and_bias/csd/2021": {
+        "video_training_data_and_bias/csd/2022": {
+          "name": "동영상: 교육 데이터 및 편견",
           "type": "비디오"
         },
-        "make-a-recommendation-peer-review-2019/csd/2021": {
+        "data_and_machine_learning/csd/2022": {
+          "name": "데이터 및 머신러닝",
+          "type": "슬라이드"
+        },
+        "make_a_recommendation/csd/2022": {
           "type": "동료 검토"
         },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
+        "make_a_recommendation_1/csd/2022": {
+          "type": "채점판"
+        },
+        "make_a_recommendation_2/csd/2022": {
+          "type": "프로젝트 가이드"
+        },
+        "project_-_make_a_recommendation/csd/2022": {
+          "name": "프로젝트 - 추천 만들기",
+          "type": "슬라이드"
+        },
+        "intro_to_problem_solving/csd/2022": {
+          "name": "문제해결 소개",
+          "type": "슬라이드"
+        },
+        "problem_solving_process/csd/2022": {
+          "name": "문제 해결 프로세스"
+        },
+        "problem_solving_process_1/csd/2022": {
+          "name": "문제 해결 프로세스",
           "type": "비디오"
         },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
+        "problem_solving_process_2/csd/2022": {
+          "name": "문제 해결 프로세스"
+        },
+        "the_problem_solving_process/csd/2022": {
+          "name": "문제 해결 과정"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "문제 해결 과정",
+          "type": "슬라이드"
+        },
+        "solving_problems/csd/2022": {
+          "type": "답안지"
+        },
+        "exploring_problem_solving/csd/2022": {
+          "name": "문제해결 탐구",
+          "type": "슬라이드"
+        },
+        "what_is_a_computer/csd/2022": {
           "type": "비디오"
         },
-        "introduction-to-variables/csd/2021": {
-          "type": "비디오"
-        },
-        "variables_1/csd/2021": {
-          "name": "변수"
-        },
-        "introduction_to_sprites/csd/2021": {
-          "type": "비디오"
-        },
-        "the_animation_tab/csd/2021": {
-          "name": "애니메이션 탭",
-          "type": "비디오"
-        },
-        "sprites_1/csd/2021": {
-          "name": "스프라이트"
-        },
-        "sprite_properties/csd/2021": {
-          "name": "스프라이트 속성"
-        },
-        "youtube-flipbook/csd/2021": {
-          "type": "비디오"
-        },
-        "introduction_to_the_draw_loop/csd/2021": {
-          "type": "비디오"
-        },
-        "animating-sprites/csd/2021": {
-          "name": "스프라이트 이동",
-          "type": "비디오"
-        },
-        "boolean_expressions/csd/2021": {
-          "name": "불 연산식",
-          "type": "비디오"
-        },
-        "conditional_statements/csd/2021": {
-          "name": "조건문",
-          "type": "비디오"
-        },
-        "if_else_statements/csd/2021": {
-          "name": "If/Else 조건문",
-          "type": "비디오"
-        },
-        "interactive-card-1-2-3-4/csd/2021": {
-          "type": "동료 검토"
-        },
-        "velocity_1/csd/2021": {
-          "name": "속도",
-          "type": "비디오"
-        },
-        "velocity_2/csd/2021": {
-          "name": "속도"
-        },
-        "collision-detection-exemplar-2020/csd/2021": {
-          "name": "충돌 감지"
-        },
-        "collision_detection/csd/2021": {
-          "name": "충돌 감지"
-        },
-        "side-scroller-1/csd/2021": {
-          "name": "사이드 스크롤러"
-        },
-        "side-scroller/csd/2021": {
-          "name": "사이드 스크롤러"
-        },
-        "flyer-game-1/csd/2021": {
-          "name": "플라이어 게임"
-        },
-        "flyer-game/csd/2021": {
-          "name": "플라이어 게임"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "함수",
-          "type": "비디오"
-        },
-        "functions_1/csd/2021": {
-          "name": "함수"
-        },
-        "make-your-own-game-1-2-3/csd/2021": {
-          "type": "동료 검토"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "교사용 포럼"
-        },
-        "what-is-a-computer-2020/csd/2021": {
+        "what_is_a_computer_/csd/2022": {
           "name": "컴퓨터란?"
         },
-        "what-is-a-computer-1-2-3/csd/2021": {
-          "type": "비디오"
+        "what_is_a_computer_1/csd/2022": {
+          "type": "슬라이드"
         },
-        "input-and-output-2020/csd/2021": {
+        "input_and_output/csd/2022": {
           "name": "인풋 및 아웃풋"
         },
-        "input-and-output-1/csd/2021": {
+        "input_and_output_1/csd/2022": {
           "name": "인풋 및 아웃풋"
         },
-        "what-do-computers-do/csd/2021": {
+        "input_and_output_2/csd/2022": {
+          "name": "인풋 및 아웃풋",
+          "type": "슬라이드"
+        },
+        "apps_with_processing_2/csd/2022": {
+          "type": "슬라이드"
+        },
+        "what_do_computers_do/csd/2022": {
           "type": "비디오"
         },
-        "app-proposal-project/csd/2021": {
+        "apps_with_storage_2/csd/2022": {
+          "type": "슬라이드"
+        },
+        "apps_and_problem_solving/csd/2022": {
           "name": "앱과 문제해결"
         },
-        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+        "apps_and_problem_solving_-_student_checklist/csd/2022": {
+          "type": "자료"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
           "name": "앱과 문제해결",
           "type": "동료 검토"
         },
-        "apps_and_problem_solving/csd/2021": {
-          "name": "앱과 문제해결"
+        "apps_and_problem_solving_2/csd/2022": {
+          "name": "앱과 문제해결",
+          "type": "채점판"
         },
-        "html_tags/csd/2021": {
-          "name": "HTML 태그"
+        "project_-_propose_an_app/csd/2022": {
+          "name": "프로젝트 -앱 제안",
+          "type": "슬라이드"
         },
-        "intro_to_web_lab_part_2/csd/2021": {
+        "intro_to_problem_solving_newspapers_/csd/2022": {
+          "type": "슬라이드"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2022": {
+          "type": "슬라이드"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2022": {
+          "type": "슬라이드"
+        },
+        "tangrams/csd/2022": {
+          "type": "자료"
+        },
+        "exploring_problem_solving_animals_/csd/2022": {
+          "type": "슬라이드"
+        },
+        "exploring_problem_solving_games_/csd/2022": {
+          "type": "슬라이드"
+        },
+        "programming_for_entertainment/csd/2022": {
+          "name": "엔터테인먼트를 위한 프로그래밍",
+          "type": "슬라이드"
+        },
+        "plotting_shapes/csd/2022": {
+          "name": "모양 플롯팅",
+          "type": "슬라이드"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2022": {
           "type": "비디오"
         },
-        "video_intro_to_web_lab_part_1/csd/2021": {
+        "drawing_in_game_lab_-_part_2/csd/2022": {
           "type": "비디오"
         },
-        "video_pair_programming/csd/2021": {
+        "drawing_shapes_1/csd/2022": {
+          "type": "자료"
+        },
+        "drawing_in_game_lab/csd/2022": {
+          "name": "게임 랩 내 그리기",
+          "type": "슬라이드"
+        },
+        "shapes_and_parameters_1/csd/2022": {
+          "type": "자료"
+        },
+        "shapes_and_parameters_2/csd/2022": {
+          "type": "슬라이드"
+        },
+        "introduction_to_variables/csd/2022": {
           "type": "비디오"
         },
-        "video_debugging/csd/2021": {
+        "naming_variables/csd/2022": {
+          "type": "자료"
+        },
+        "variables/csd/2022": {
+          "name": "변수",
+          "type": "자료"
+        },
+        "variables_3/csd/2022": {
+          "name": "변수",
+          "type": "슬라이드"
+        },
+        "random_numbers/csd/2022": {
+          "type": "자료"
+        },
+        "random_numbers_2/csd/2022": {
+          "type": "슬라이드"
+        },
+        "animation_tab/csd/2022": {
+          "type": "자료"
+        },
+        "introduction_to_sprites/csd/2022": {
           "type": "비디오"
         },
-        "html-web-page/csd/2021": {
+        "sprites/csd/2022": {
+          "name": "스프라이트",
+          "type": "자료"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "애니메이션 탭",
+          "type": "비디오"
+        },
+        "sprites_1/csd/2022": {
+          "name": "스프라이트",
+          "type": "슬라이드"
+        },
+        "sprite_properties/csd/2022": {
+          "name": "스프라이트 속성",
+          "type": "자료"
+        },
+        "sprite_properties_1/csd/2022": {
+          "name": "스프라이트 속성",
+          "type": "슬라이드"
+        },
+        "text/csd/2022": {
+          "name": "문장",
+          "type": "슬라이드"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "채점판"
+        },
+        "mini-project_-_captioned_scenes/csd/2022": {
+          "name": "미니 프로젝트 - 자막이 있는 장면",
+          "type": "슬라이드"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "비디오"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "비디오"
+        },
+        "the_draw_loop/csd/2022": {
+          "type": "자료"
+        },
+        "the_draw_loop_1/csd/2022": {
+          "type": "슬라이드"
+        },
+        "sprite_movement/csd/2022": {
+          "name": "스프라이트 이동",
+          "type": "비디오"
+        },
+        "the_counter_pattern/csd/2022": {
+          "type": "자료"
+        },
+        "sprite_movement_1/csd/2022": {
+          "name": "스프라이트 이동",
+          "type": "슬라이드"
+        },
+        "animated_scene/csd/2022": {
+          "type": "채점판"
+        },
+        "mini-project_-_animation/csd/2022": {
+          "name": "미니 프로젝트 - 애니메이션",
+          "type": "슬라이드"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "불 연산식",
+          "type": "비디오"
+        },
+        "booleans_and_comparison_operators/csd/2022": {
+          "type": "자료"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "조건문",
+          "type": "비디오"
+        },
+        "if_statements/csd/2022": {
+          "type": "자료"
+        },
+        "conditionals/csd/2022": {
+          "name": "조건",
+          "type": "슬라이드"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "키보드 인풋",
+          "type": "슬라이드"
+        },
+        "if-else_statements/csd/2022": {
+          "type": "자료"
+        },
+        "if_else_statements/csd/2022": {
+          "name": "If/Else 조건문",
+          "type": "비디오"
+        },
+        "mouse_input/csd/2022": {
+          "name": "마우스 인풋",
+          "type": "슬라이드"
+        },
+        "extra_code_in_challenge_levels_1/csd/2022": {
+          "type": "자료"
+        },
+        "interactive_card_1/csd/2022": {
+          "type": "프로젝트 가이드"
+        },
+        "interactive_card_2/csd/2022": {
           "type": "동료 검토"
         },
-        "lists/csd/2021": {
-          "name": "리스트"
+        "interactive_card_3/csd/2022": {
+          "type": "채점판"
         },
-        "digital-footprint/csd/2021": {
-          "name": "디지털 발자국"
+        "project_-_interactive_card/csd/2022": {
+          "name": "프로젝트 - 인터랙티브 카드",
+          "type": "슬라이드"
         },
-        "intro_to_css_-_part_1/csd/2021": {
+        "velocity/csd/2022": {
+          "name": "속도",
+          "type": "비디오"
+        },
+        "velocity_1/csd/2022": {
+          "name": "속도",
+          "type": "자료"
+        },
+        "velocity_2/csd/2022": {
+          "name": "속도",
+          "type": "슬라이드"
+        },
+        "collision_detection/csd/2022": {
+          "name": "충돌 감지"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "충돌 감지",
+          "type": "자료"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "충돌 감지",
+          "type": "슬라이드"
+        },
+        "side_scroller/csd/2022": {
+          "name": "사이드 스크롤러",
+          "type": "채점판"
+        },
+        "side_scroller_1/csd/2022": {
+          "name": "사이드 스크롤러",
+          "type": "프로젝트 가이드"
+        },
+        "mini-project_-_side_scroller/csd/2022": {
+          "name": "미니 프로젝트 - 사이트 스크롤러",
+          "type": "슬라이드"
+        },
+        "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "속도 및 카운터 패턴",
+          "type": "자료"
+        },
+        "complex_sprite_movement/csd/2022": {
+          "name": "복잡한 스프라이트 이동",
+          "type": "슬라이드"
+        },
+        "collisions/csd/2022": {
+          "name": "충돌",
+          "type": "슬라이드"
+        },
+        "flyer_game/csd/2022": {
+          "name": "플라이어 게임",
+          "type": "채점판"
+        },
+        "flyer_game_1/csd/2022": {
+          "name": "플라이어 게임",
+          "type": "프로젝트 가이드"
+        },
+        "mini-project_-_flyer_game/csd/2022": {
+          "name": "미니 프로젝트 - 플라이어 게임",
+          "type": "슬라이드"
+        },
+        "functions/csd/2022": {
+          "name": "함수",
+          "type": "비디오"
+        },
+        "functions_1/csd/2022": {
+          "name": "함수",
+          "type": "자료"
+        },
+        "functions_4/csd/2022": {
+          "name": "함수",
+          "type": "슬라이드"
+        },
+        "the_game_design_process/csd/2022": {
+          "name": "게임 설계 프로세스",
+          "type": "슬라이드"
+        },
+        "using_the_game_design_process/csd/2022": {
+          "name": "게임 설계 프로세스 사용",
+          "type": "슬라이드"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "type": "프로젝트 가이드"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "동료 검토"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "채점판"
+        },
+        "project_-_design_a_game/csd/2022": {
+          "name": " 프로젝트 - 게임 설계",
+          "type": "슬라이드"
+        },
+        "exploring_web_pages/csd/2022": {
+          "name": "웹 페이지 탐구"
+        },
+        "exploring_web_pages_1/csd/2022": {
+          "name": "웹 페이지 탐구"
+        },
+        "exploring_web_pages_2/csd/2022": {
+          "name": "웹 페이지 탐구",
+          "type": "슬라이드"
+        },
+        "html_tags/csd/2022": {
+          "name": "HTML 태그",
+          "type": "자료"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "비디오"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "비디오"
+        },
+        "intro_to_html/csd/2022": {
+          "name": "HTML 소개",
+          "type": "슬라이드"
+        },
+        "headings_and_paragraphs/csd/2022": {
+          "type": "자료"
+        },
+        "video_debugging/csd/2022": {
+          "name": "동영상: 디버깅",
+          "type": "비디오"
+        },
+        "video_pair_programming/csd/2022": {
+          "name": "동영상: 페어 프로그래밍",
+          "type": "비디오"
+        },
+        "headings/csd/2022": {
+          "name": "제목",
+          "type": "슬라이드"
+        },
+        "formatting_html/csd/2022": {
+          "type": "자료"
+        },
+        "html_web_page/csd/2022": {
+          "type": "채점판"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "동료 검토"
+        },
+        "html_web_page_3/csd/2022": {
+          "type": "프로젝트 가이드"
+        },
+        "lists/csd/2022": {
+          "name": "리스트",
+          "type": "자료"
+        },
+        "mini-project_html_web_page/csd/2022": {
+          "name": "미니 프로젝트: HTML 웹 페이지",
+          "type": "슬라이드"
+        },
+        "digital_footprint/csd/2022": {
+          "name": "디지털 발자국",
+          "type": "슬라이드"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "소셜 탐정"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "소셜 탐정"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
           "name": "CSS(스타일시트) 소개 - 파트 1",
           "type": "비디오"
         },
-        "intro_to_css_-_part_2/csd/2021": {
+        "intro_to_css_-_part_2/csd/2022": {
           "name": "CSS(스타일시트) 소개 - 파트 2",
           "type": "비디오"
         },
-        "your-personal-style-1/csd/2021": {
+        "style_sheets/csd/2022": {
+          "type": "자료"
+        },
+        "text_properties/csd/2022": {
+          "type": "자료"
+        },
+        "styling_text_with_css/csd/2022": {
+          "name": "CSS로 텍스트 스타일링",
+          "type": "슬라이드"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "채점판"
+        },
+        "your_personal_style_1/csd/2022": {
           "type": "동료 검토"
         },
-        "creative-commons-video/csd/2021": {
+        "your_personal_style_2/csd/2022": {
+          "type": "프로젝트 가이드"
+        },
+        "mini-project_your_personal_style/csd/2022": {
+          "name": "미니 프로젝트: 개인 스타일",
+          "type": "슬라이드"
+        },
+        "creative_commons_overview/csd/2022": {
           "type": "비디오"
         },
-        "personal-web-page-1/csd/2021": {
+        "intellectual_property/csd/2022": {
+          "name": "지적 재산",
+          "type": "슬라이드"
+        },
+        "creative_commons_search/csd/2022": {
+          "type": "자료"
+        },
+        "images_in_html/csd/2022": {
+          "type": "자료"
+        },
+        "using_images/csd/2022": {
+          "name": "이미지 사용",
+          "type": "슬라이드"
+        },
+        "websites_for_expression/csd/2022": {
+          "type": "슬라이드"
+        },
+        "styling_elements_with_css/csd/2022": {
+          "name": "CSS로 구성요소 스타일링",
+          "type": "슬라이드"
+        },
+        "personal_web_page_-_prepare/csd/2022": {
+          "type": "프로젝트 가이드"
+        },
+        "your_web_page_prepare/csd/2022": {
+          "type": "슬라이드"
+        },
+        "extra_code_in_challenge_levels/csd/2022": {
+          "type": "자료"
+        },
+        "personal_web_page/csd/2022": {
           "type": "동료 검토"
         },
-        "publishing_your_website/csd/2021": {
+        "personal_web_page_-_reflect/csd/2022": {
+          "type": "프로젝트 가이드"
+        },
+        "personal_web_page_-_student_checklist/csd/2022": {
+          "type": "자료"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "채점판"
+        },
+        "publishing_your_website/csd/2022": {
+          "name": "웹사이트 출판",
           "type": "비디오"
         },
-        "websites-for-a-purpose-2020/csd/2021": {
+        "project_-_personal_web_page/csd/2022": {
+          "name": "프로젝트 - 퍼스널 웹 페이지",
+          "type": "슬라이드"
+        },
+        "websites_for_a_purpose/csd/2022": {
           "name": "목적을 위한 웹사이트"
         },
-        "websites-for-a-purpose/csd/2021": {
+        "websites_for_a_purpose_1/csd/2022": {
           "name": "목적을 위한 웹사이트"
         },
-        "teamwork-dealing-with-disagreement/csd/2021": {
+        "websites_for_a_purpose_2/csd/2022": {
+          "name": "목적을 위한 웹사이트",
+          "type": "슬라이드"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "name": "동영상: 의견 충돌 관리",
           "type": "비디오"
         },
-        "how-teamwork-works/csd/2021": {
+        "video_teamwork/csd/2022": {
+          "name": "동영상: 팀워크",
           "type": "비디오"
         },
-        "how-search-works-video/csd/2021": {
+        "team_problem_solving/csd/2022": {
+          "name": "팀 문제해결",
+          "type": "슬라이드"
+        },
+        "video_how_search_works/csd/2022": {
+          "name": "동영상: 검색 작동방법",
           "type": "비디오"
         },
-        "classes/csd/2021": {
-          "name": "클래스"
+        "sources_and_research/csd/2022": {
+          "name": "소스 및 리서치",
+          "type": "슬라이드"
         },
-        "website-for-a-purpose/csd/2021": {
+        "classes/csd/2022": {
+          "name": "클래스",
+          "type": "자료"
+        },
+        "css_classes/csd/2022": {
+          "type": "슬라이드"
+        },
+        "plan_a_multi-page_website/csd/2022": {
+          "type": "프로젝트 가이드"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "채점판"
+        },
+        "planning_a_multi-page_site/csd/2022": {
+          "type": "슬라이드"
+        },
+        "hyperlinks/csd/2022": {
+          "type": "자료"
+        },
+        "linking_pages/csd/2022": {
+          "name": "링크 페이지",
+          "type": "슬라이드"
+        },
+        "project_-_website_for_a_purpose/csd/2022": {
+          "name": "프로젝트 -목적을 위한 웹사이트",
+          "type": "슬라이드"
+        },
+        "website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "프로젝트 가이드"
+        },
+        "website_for_a_purpose_1/csd/2022": {
           "type": "동료 검토"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "수업 계획"
+        "peer_review_and_final_touches/csd/2022": {
+          "name": "또래 검토 및 최종 터치",
+          "type": "슬라이드"
         },
-        "standard_mappings/pre-express/2020": {
-          "name": "표준 매핑"
+        "designing_with_empathy_2/csd/2022": {
+          "name": "공감으로 설계하기",
+          "type": "슬라이드"
         },
-        "teacher_forum/pre-express/2020": {
-          "name": "교사용 포럼"
+        "understanding_your_user/csd/2022": {
+          "name": "사용자 이해",
+          "type": "슬라이드"
         },
-        "vocabulary/pre-express/2020": {
-          "name": "어휘"
+        "the_design_thinking_process/csd/2022": {
+          "type": "비디오"
         },
-        "lesson_plans/express/2020": {
-          "name": "수업 계획"
+        "user_centered_design_-_define_and_prepare/csd/2022": {
+          "type": "슬라이드"
         },
-        "standard_mappings/express/2020": {
-          "name": "표준 매핑"
+        "user_centered_design_-_try_and_reflect/csd/2022": {
+          "type": "슬라이드"
         },
-        "teacher_forum/express/2020": {
-          "name": "교사용 포럼"
+        "user_interface_screens/csd/2022": {
+          "type": "자료"
         },
-        "vocabulary/express/2020": {
-          "name": "어휘"
+        "user_interfaces/csd/2022": {
+          "name": "사용자 인터페이스",
+          "type": "슬라이드"
         },
-        "curriculum_guide/courseb/2020": {
-          "name": "커리큘럼 가이드"
+        "prototype_feedback/csd/2022": {
+          "type": "자료"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "수업 계획"
+        "feedback_and_testing/csd/2022": {
+          "name": "피드백 및 테스팅",
+          "type": "슬라이드"
         },
-        "standard_mappings/courseb/2020": {
-          "name": "표준 매핑"
+        "example_user_interviews/csd/2022": {
+          "type": "자료"
         },
-        "teacher_forum/courseb/2020": {
-          "name": "교사용 포럼"
+        "identifying_user_needs/csd/2022": {
+          "name": "사용자의 필요 식별",
+          "type": "슬라이드"
         },
-        "vocabulary/courseb/2020": {
-          "name": "어휘"
+        "paper_prototypes/csd/2022": {
+          "name": "종이 프로토타입",
+          "type": "채점판"
         },
-        "curriculum_guide/coursed/2020": {
-          "name": "커리큘럼 가이드"
+        "project_-_paper_prototype/csd/2022": {
+          "name": "프로젝트 - 종이 프로토타입",
+          "type": "슬라이드"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "수업 계획"
+        "designing_apps_for_good/csd/2022": {
+          "name": "선의를 위한 앱 설계",
+          "type": "슬라이드"
         },
-        "standard_mappings/coursed/2020": {
-          "name": "표준 매핑"
+        "market_research/csd/2022": {
+          "name": "시장 조사"
         },
-        "teacher_forum/coursed/2020": {
-          "name": "교사용 포럼"
+        "market_research_1/csd/2022": {
+          "name": "시장 조사"
         },
-        "vocabulary/coursed/2020": {
-          "name": "어휘"
+        "market_research_2/csd/2022": {
+          "name": "시장 조사",
+          "type": "슬라이드"
         },
-        "curriculum_guide/coursec/2020": {
-          "name": "커리큘럼 가이드"
+        "exploring_ui_elements/csd/2022": {
+          "name": "UI 구성요소 탐구",
+          "type": "슬라이드"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "수업 계획"
+        "design_mode/csd/2022": {
+          "name": "디자인 모드",
+          "type": "자료"
         },
-        "standard_mappings/coursec/2020": {
-          "name": "표준 매핑"
+        "design_mode_elements/csd/2022": {
+          "type": "자료"
         },
-        "teacher_forum/coursec/2020": {
-          "name": "교사용 포럼"
+        "build_a_paper_prototype/csd/2022": {
+          "name": "종이 프로토타입 만들기",
+          "type": "슬라이드"
         },
-        "vocabulary/coursec/2020": {
-          "name": "어휘"
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "비디오"
         },
-        "curriculum_guide/coursee/2020": {
-          "name": "커리큘럼 가이드"
+        "prototype_testing/csd/2022": {
+          "name": "프로토타입 테스팅 ",
+          "type": "슬라이드"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "수업 계획"
+        "intro_to_design_mode/csd/2022": {
+          "type": "비디오"
         },
-        "standard_mappings/coursee/2020": {
-          "name": "표준 매핑"
+        "model_screen_design/csd/2022": {
+          "type": "자료"
         },
-        "teacher_forum/coursee/2020": {
-          "name": "교사용 포럼"
+        "design_mode_in_app_lab/csd/2022": {
+          "name": "앱 랩 내 모드 설계",
+          "type": "슬라이드"
         },
-        "vocabulary/coursee/2020": {
-          "name": "어휘"
+        "build_a_digital_prototype/csd/2022": {
+          "name": "디지털 프로토타입 만들기",
+          "type": "슬라이드"
         },
-        "curriculum_guide/coursea/2020": {
-          "name": "커리큘럼 가이드"
+        "events_in_app_lab/csd/2022": {
+          "name": "앱 랩 내 이벤트 ",
+          "type": "슬라이드"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "수업 계획"
+        "events_in_app_lab_1/csd/2022": {
+          "name": "앱 랩 내 이벤트 ",
+          "type": "비디오"
         },
-        "standard_mappings/coursea/2020": {
-          "name": "표준 매핑"
+        "changing_screens/csd/2022": {
+          "type": "자료"
         },
-        "teacher_forum/coursea/2020": {
-          "name": "교사용 포럼"
+        "importing_screens/csd/2022": {
+          "type": "자료"
         },
-        "vocabulary/coursea/2020": {
-          "name": "어휘"
+        "multi-screen_apps/csd/2022": {
+          "type": "자료"
         },
-        "curriculum_guide/coursef/2020": {
-          "name": "커리큘럼 가이드"
+        "responding_to_user_input/csd/2022": {
+          "type": "자료"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "수업 계획"
+        "linking_prototype_screens/csd/2022": {
+          "name": "프로토타입 화면 링크",
+          "type": "슬라이드"
         },
-        "standard_mappings/coursef/2020": {
-          "name": "표준 매핑"
+        "testing_the_app/csd/2022": {
+          "name": "앱 테스팅",
+          "type": "슬라이드"
         },
-        "teacher_forum/coursef/2020": {
-          "name": "교사용 포럼"
+        "bugs_and_features/csd/2022": {
+          "name": "버그 및 특징"
         },
-        "vocabulary/coursef/2020": {
-          "name": "어휘"
+        "bugs_and_features_1/csd/2022": {
+          "name": "버그 및 특징"
+        },
+        "bugs_and_features_2/csd/2022": {
+          "name": "버그 및 특징",
+          "type": "슬라이드"
+        },
+        "updating_your_prototype/csd/2022": {
+          "name": "프로토타입 업데이트"
+        },
+        "updating_your_prototype_1/csd/2022": {
+          "name": "프로토타입 업데이트",
+          "type": "슬라이드"
+        },
+        "app_presentation/csd/2022": {
+          "name": "앱 프레젠테이션",
+          "type": "채점판"
+        },
+        "app_presentation_1/csd/2022": {
+          "name": "앱 프레젠테이션"
+        },
+        "project_-_app_presentation/csd/2022": {
+          "name": "프로젝트 - 앱 프레젠테이션",
+          "type": "슬라이드"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "컴퓨터 과학은 모든 것을 바꾸고 있습니다.  ",
+          "type": "비디오"
+        },
+        "computing_innovations_1/csd/2022": {
+          "name": "컴퓨팅 혁신"
+        },
+        "computing_innovations_research_areas/csd/2022": {
+          "type": "자료"
+        },
+        "innovations_in_computing/csd/2022": {
+          "type": "슬라이드"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "비디오"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "비디오"
+        },
+        "circuit_playground/csd/2022": {
+          "type": "자료"
+        },
+        "physical_output/csd/2022": {
+          "type": "자료"
+        },
+        "the_circuit_playground/csd/2022": {
+          "name": "써킷 플레이그라운드",
+          "type": "슬라이드"
+        },
+        "designing_screens_with_code/csd/2022": {
+          "type": "자료"
+        },
+        "random_numbers_1/csd/2022": {
+          "type": "자료"
+        },
+        "updating_screen_elements/csd/2022": {
+          "type": "슬라이드"
+        },
+        "board_events/csd/2022": {
+          "name": "보드 이벤트",
+          "type": "자료"
+        },
+        "board_events_1/csd/2022": {
+          "name": "보드 이벤트",
+          "type": "슬라이드"
+        },
+        "physical_input/csd/2022": {
+          "name": "물리적 인풋",
+          "type": "자료"
+        },
+        "if_statements_1/csd/2022": {
+          "type": "자료"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "비디오"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "비디오"
+        },
+        "the_counter_pattern_2/csd/2022": {
+          "type": "자료"
+        },
+        "variables_1/csd/2022": {
+          "name": "변수",
+          "type": "자료"
+        },
+        "variables_2/csd/2022": {
+          "name": "변수",
+          "type": "비디오"
+        },
+        "variables_and_if_statements/csd/2022": {
+          "type": "슬라이드"
+        },
+        "mini-project_on-the-go_app/csd/2022": {
+          "type": "슬라이드"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "채점판"
+        },
+        "color_leds/csd/2022": {
+          "name": "컬러 LED",
+          "type": "슬라이드"
+        },
+        "color_lights/csd/2022": {
+          "type": "자료"
+        },
+        "getting_screen_inputs/csd/2022": {
+          "type": "슬라이드"
+        },
+        "taking_input_with_getproperty/csd/2022": {
+          "type": "자료"
+        },
+        "combining_inputs_and_outputs/csd/2022": {
+          "type": "슬라이드"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "비디오"
+        },
+        "peer_review_-_human_device_interaction/csd/2022": {
+          "type": "자료"
+        },
+        "project_human_device_interaction/csd/2022": {
+          "type": "슬라이드"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "채점판"
+        },
+        "analog_sensors/csd/2022": {
+          "type": "자료"
+        },
+        "board_sensors/csd/2022": {
+          "type": "슬라이드"
+        },
+        "changing_sensor_scale/csd/2022": {
+          "type": "자료"
+        },
+        "date_and_change_events/csd/2022": {
+          "type": "자료"
+        },
+        "accelerometer/csd/2022": {
+          "name": "가속도 센서",
+          "type": "슬라이드"
+        },
+        "accelerometer_events/csd/2022": {
+          "name": "가속도계 이벤트",
+          "type": "자료"
+        },
+        "the_accelerometer/csd/2022": {
+          "type": "자료"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "배열 소개",
+          "type": "비디오"
+        },
+        "making_music/csd/2022": {
+          "type": "슬라이드"
+        },
+        "playing_notes/csd/2022": {
+          "name": "플레잉 노트 ",
+          "type": "자료"
+        },
+        "producing_output/csd/2022": {
+          "type": "자료"
+        },
+        "arrays/csd/2022": {
+          "type": "자료"
+        },
+        "modifying_arrays/csd/2022": {
+          "type": "자료"
+        },
+        "functions_2/csd/2022": {
+          "name": "함수",
+          "type": "슬라이드"
+        },
+        "functions_3/csd/2022": {
+          "name": "함수",
+          "type": "비디오"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "함수(값 전달)",
+          "type": "비디오"
+        },
+        "functions_5/csd/2022": {
+          "name": "함수",
+          "type": "자료"
+        },
+        "mini-project_interactive_art/csd/2022": {
+          "type": "슬라이드"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "채점판"
+        },
+        "student_example_projects/csd/2022": {
+          "type": "자료"
+        },
+        "circuits_and_leds/csd/2022": {
+          "type": "자료"
+        },
+        "physical_outputs_and_leds/csd/2022": {
+          "type": "슬라이드"
+        },
+        "circuits_and_buttons/csd/2022": {
+          "type": "자료"
+        },
+        "physical_inputs_and_buttons/csd/2022": {
+          "type": "슬라이드"
+        },
+        "project_prototype_an_innovation/csd/2022": {
+          "name": "프로젝트 - 혁신 프로토타입",
+          "type": "슬라이드"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "채점판"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "name": "AI: 머신 러닝이란?",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "비디오"
+        },
+        "classifying_fish/csd/2022": {
+          "name": "물고기 분류하기",
+          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view"
+        },
+        "introduction_to_machine_learning/csd/2022": {
+          "name": "머신 러닝 소개",
+          "type": "슬라이드"
+        },
+        "types_of_machine_learning/csd/2022": {
+          "name": "머신 러닝 유형",
+          "type": "슬라이드"
+        },
+        "types_of_machine_learning_1/csd/2022": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#"
+        },
+        "types_of_machine_learning_2/csd/2022": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
+          "type": "답안지"
+        },
+        "innovations_in_ai/csd/2022": {
+          "type": "슬라이드"
+        },
+        "innovations_in_ai_-_activity_guide/csd/2022": {
+          "url": "https://docs.google.com/document/d/1YBbNfg7H4dAGGANAESiX8cXcqbTX_ml-KiG8HjDatpE/edit#"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2022": {
+          "url": "https://docs.google.com/document/d/1l63nyHKHrONkgQY5u07tEGyjDuI661559EggvnyQftU/edit#"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "시잉 AI",
+          "url": "https://www.youtube.com/watch?v=DybczED-GKE",
+          "type": "비디오"
+        },
+        "_key_patterns_in_data/csd/2022": {
+          "name": "[KEY] 데이터에서의 패턴",
+          "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
+          "type": "답안지"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "name": "데이터에서 패턴 찾기",
+          "type": "비디오"
+        },
+        "patterns_in_data/csd/2022": {
+          "name": "데이터에서의 패턴",
+          "type": "슬라이드"
+        },
+        "patterns_in_data_1/csd/2022": {
+          "name": "데이터에서의 패턴",
+          "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view"
+        },
+        "shoe_survey/csd/2022": {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
+          "type": "자료"
+        },
+        "_key_classification_models/csd/2022": {
+          "name": "[KEY] 분류 모델",
+          "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
+          "type": "답안지"
+        },
+        "classification_models/csd/2022": {
+          "name": "분류 모델",
+          "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit"
+        },
+        "classification_models_1/csd/2022": {
+          "name": "분류 모델",
+          "type": "슬라이드"
+        },
+        "fruit_veggie_cards/csd/2022": {
+          "name": "과일 및 채소 카드",
+          "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
+          "type": "자료"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2022": {
+          "name": "[KEY] AI 랩에서 모델 교육",
+          "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
+          "type": "답안지"
+        },
+        "accuracy_in_ai_lab/csd/2022": {
+          "name": "AI 랩에서의 정확도",
+          "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
+          "type": "자료"
+        },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "AI 연구실 소개",
+          "type": "슬라이드"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI 연구실 소개",
+          "type": "비디오"
+        },
+        "selecting_features/csd/2022": {
+          "name": "특징 선택",
+          "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
+          "type": "자료"
+        },
+        "training_a_model_in_ai_lab/csd/2022": {
+          "name": "AI 랩에서 모델 교육",
+          "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "AI 랩 교육 및 테스팅",
+          "type": "비디오"
+        },
+        "using_data_with_categorical_features/csd/2022": {
+          "name": "범주형 특징이 있는 데이터 사용",
+          "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
+          "type": "자료"
+        },
+        "importing_a_model_in_app_lab/csd/2022": {
+          "name": "앱 랩에서 모델 가져오기",
+          "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
+          "type": "자료"
+        },
+        "importing_models_in_app_lab/csd/2022": {
+          "name": "앱 랩에서 모델 가져오기",
+          "type": "슬라이드"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "name": "AI: 교육 데이터 및 편견",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "비디오"
+        },
+        "model_cards/csd/2022": {
+          "name": "모델 카드",
+          "type": "슬라이드"
+        },
+        "model_cards_1/csd/2022": {
+          "name": "모델 카드"
+        },
+        "_key_zoo_models/csd/2022": {
+          "name": "[KEY] 동물원 모델",
+          "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
+          "type": "답안지"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI 랩 모델 카드",
+          "type": "비디오"
+        },
+        "saving_models_in_ai_lab/csd/2022": {
+          "name": "AI 랩에 모델 저장",
+          "type": "슬라이드"
+        },
+        "selecting_a_label/csd/2022": {
+          "name": "라벨 선택",
+          "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
+          "type": "자료"
+        },
+        "zoo_models/csd/2022": {
+          "name": "동물원 모델",
+          "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
+          "type": "비디오"
+        },
+        "model_cards_in_app_lab/csd/2022": {
+          "name": "앱 랩 모델 카드",
+          "type": "슬라이드"
+        },
+        "printable_model_cards/csd/2022": {
+          "type": "자료"
+        },
+        "_key_numerical_accuracy/csd/2022": {
+          "name": "[KEY] 수치 정확도",
+          "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
+          "type": "답안지"
+        },
+        "_key_zombie_prediction/csd/2022": {
+          "name": "[KEY] 좀비 예측",
+          "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit",
+          "type": "답안지"
+        },
+        "numerical_accuracy/csd/2022": {
+          "name": "수치 정확도",
+          "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#"
+        },
+        "numerical_models/csd/2022": {
+          "name": "수치 모델",
+          "type": "슬라이드"
+        },
+        "zombie_prediction/csd/2022": {
+          "name": "좀비 예측",
+          "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2022": {
+          "name": "[KEY] - AI 랩에서 수치 데이터",
+          "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
+          "type": "답안지"
+        },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "type": "슬라이드"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "비디오"
+        },
+        "using_data_with_numerical_features/csd/2022": {
+          "name": "수치적 특징이 있는 데이터 사용",
+          "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
+          "type": "자료"
+        },
+        "customizing_apps/csd/2022": {
+          "type": "슬라이드"
+        },
+        "ai_code_of_ethics/csd/2022": {
+          "name": "AI 윤리 강령",
+          "type": "슬라이드"
+        },
+        "ai_ethics_research_areas/csd/2022": {
+          "name": "AI 윤리 연구 분야",
+          "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit"
+        },
+        "ai_ethics_research_reflection/csd/2022": {
+          "name": "AI 윤리 연구 성찰",
+          "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
+          "type": "학생 유인물"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "name": "윤리 및 AI: 동등한 접속 및 알고리즘 편향",
+          "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
+          "type": "비디오"
+        },
+        "our_ai_code_of_ethics_template_/csd/2022": {
+          "name": "AI 윤리강령 [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
+          "type": "슬라이드"
+        },
+        "create_an_ml_app/csd/2022": {
+          "name": "ML 앱 만들기",
+          "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+          "type": "채점판"
+        },
+        "create_an_ml_app_-_project_guide/csd/2022": {
+          "name": "ML 앱 만들기 - 프로젝트 가이드",
+          "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
+        },
+        "make_a_machine_learning_app/csd/2022": {
+          "name": "머신 러닝 앱 만들기",
+          "type": "슬라이드"
+        },
+        "5_why_s_-_activity_guide/csd/2022": {
+          "name": "5가지 이유 - 활동 가이드",
+          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+        },
+        "app_brainstorm_-_activity_guide/csd/2022": {
+          "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
+        },
+        "issue_statements/csd/2022": {
+          "type": "슬라이드"
+        },
+        "creating_a_survey/csd/2022": {
+          "name": "설문조사 만들기",
+          "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
+          "type": "자료"
+        },
+        "survey_planning/csd/2022": {
+          "name": "데이터 수집 설계",
+          "type": "슬라이드"
+        },
+        "survey_planning_-_activity_guide/csd/2022": {
+          "name": "설문조사 계획 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
+        },
+        "survey_template_google_form_/csd/2022": {
+          "name": "설문조사 템플릿 [구글 양식]",
+          "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "비디오"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "비디오"
+        },
+        "isaac_s_survey_data_-_student_resource/csd/2022": {
+          "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy"
+        },
+        "kim_s_survey_data_-_student_resource/csd/2022": {
+          "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
+        },
+        "survey_data_in_ai_lab/csd/2022": {
+          "type": "슬라이드"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "비디오"
+        },
+        "troubleshooting_models/csd/2022": {
+          "type": "슬라이드"
+        },
+        "troubleshooting_models_-_activity_guide/csd/2022": {
+          "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
+        },
+        "creating_an_app/csd/2022": {
+          "type": "슬라이드"
+        },
+        "_template_5_why_s/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
+          "type": "자료"
+        },
+        "design_an_ai_app/csd/2022": {
+          "type": "슬라이드"
+        },
+        "design_an_ai_app_-_project_guide/csd/2022": {
+          "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+          "type": "채점판"
+        },
+        "exemplar_-_design_an_ai_app/csd/2022": {
+          "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit"
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2022": {
+          "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
+        },
+        "model_card_-_digital_template/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view",
+          "type": "자료"
+        },
+        "model_card_-_printable_template/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view",
+          "type": "자료"
+        },
+        "csd_curriculum_guide/csd/2021": {
+          "type": "자료"
+        },
+        "csd_implementation_guide/csd/2021": {
+          "type": "자료"
+        },
+        "classifying_fish/csd/2021": {
+          "name": "물고기 분류하기",
+          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view"
+        },
+        "introduction_to_machine_learning/csd/2021": {
+          "name": "머신 러닝 소개",
+          "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
+          "type": "슬라이드"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "name": "AI: 머신 러닝이란?",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "비디오"
+        },
+        "types_of_machine_learning/csd/2021": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/copy",
+          "type": "슬라이드"
+        },
+        "types_of_machine_learning_1/csd/2021": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#"
+        },
+        "types_of_machine_learning_2/csd/2021": {
+          "name": "머신 러닝 유형",
+          "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
+          "type": "답안지"
+        },
+        "innovations_in_ai/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
+          "type": "슬라이드"
+        },
+        "innovations_in_ai_-_activity_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1YBbNfg7H4dAGGANAESiX8cXcqbTX_ml-KiG8HjDatpE/edit#"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2021": {
+          "url": "https://docs.google.com/document/d/1l63nyHKHrONkgQY5u07tEGyjDuI661559EggvnyQftU/edit#"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "시잉 AI",
+          "url": "https://www.youtube.com/watch?v=DybczED-GKE",
+          "type": "비디오"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "name": "데이터에서 패턴 찾기",
+          "url": "https://www.youtube.com/watch?v=yTsspi6AQag",
+          "type": "비디오"
+        },
+        "patterns_in_data/csd/2021": {
+          "name": "데이터에서의 패턴",
+          "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/copy",
+          "type": "슬라이드"
+        },
+        "patterns_in_data_1/csd/2021": {
+          "name": "데이터에서의 패턴",
+          "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view"
+        },
+        "shoe_survey/csd/2021": {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
+          "type": "자료"
+        },
+        "patterns_in_data_3/csd/2021": {
+          "name": "[KEY] 데이터에서의 패턴",
+          "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
+          "type": "답안지"
+        },
+        "_key_classification_models/csd/2021": {
+          "name": "[KEY] 분류 모델",
+          "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
+          "type": "답안지"
+        },
+        "classification_models/csd/2021": {
+          "name": "분류 모델",
+          "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit"
+        },
+        "classification_models_1/csd/2021": {
+          "name": "분류 모델",
+          "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/copy",
+          "type": "슬라이드"
+        },
+        "fruit_veggie_cards/csd/2021": {
+          "name": "과일 및 채소 카드",
+          "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
+          "type": "자료"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI 연구실 소개",
+          "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy",
+          "type": "슬라이드"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI 연구실 소개",
+          "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
+          "type": "비디오"
+        },
+        "training_a_model_in_ai_lab/csd/2021": {
+          "name": "AI 랩에서 모델 교육",
+          "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "AI 랩 교육 및 테스팅",
+          "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
+          "type": "비디오"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2021": {
+          "name": "[KEY] AI 랩에서 모델 교육",
+          "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
+          "type": "답안지"
+        },
+        "accuracy_in_ai_lab/csd/2021": {
+          "name": "AI 랩에서의 정확도",
+          "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
+          "type": "자료"
+        },
+        "selecting_features/csd/2021": {
+          "name": "특징 선택",
+          "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
+          "type": "자료"
+        },
+        "using_data_with_categorical_features/csd/2021": {
+          "name": "범주형 특징이 있는 데이터 사용",
+          "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
+          "type": "자료"
+        },
+        "importing_models_in_app_lab/csd/2021": {
+          "name": "앱 랩에서 모델 가져오기",
+          "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/copy",
+          "type": "슬라이드"
+        },
+        "importing_a_model_in_app_lab/csd/2021": {
+          "name": "앱 랩에서 모델 가져오기",
+          "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
+          "type": "자료"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: 교육 데이터 및 편견",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "비디오"
+        },
+        "model_cards/csd/2021": {
+          "name": "모델 카드",
+          "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy",
+          "type": "슬라이드"
+        },
+        "model_cards_1/csd/2021": {
+          "name": "모델 카드",
+          "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI 랩 모델 카드",
+          "url": "https://www.youtube.com/watch?v=_iAGDFmZhYI",
+          "type": "비디오"
+        },
+        "saving_models_in_ai_lab/csd/2021": {
+          "name": "AI 랩에 모델 저장",
+          "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy",
+          "type": "슬라이드"
+        },
+        "zoo_models/csd/2021": {
+          "name": "동물원 모델",
+          "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit"
+        },
+        "_key_zoo_models/csd/2021": {
+          "name": "[KEY] 동물원 모델",
+          "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
+          "type": "답안지"
+        },
+        "selecting_a_label/csd/2021": {
+          "name": "라벨 선택",
+          "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
+          "type": "자료"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
+          "type": "비디오"
+        },
+        "model_cards_in_app_lab/csd/2021": {
+          "name": "앱 랩 모델 카드",
+          "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy",
+          "type": "슬라이드"
+        },
+        "numerical_accuracy_-_activity_guide/csd/2021": {
+          "name": "수치 정확도",
+          "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#"
+        },
+        "numerical_models/csd/2021": {
+          "name": "수치 모델",
+          "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+          "type": "슬라이드"
+        },
+        "zombie_prediction_-_activity_guide/csd/2021": {
+          "name": "좀비 예측",
+          "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#"
+        },
+        "zombie_prediction_-_answer_key/csd/2021": {
+          "name": "[KEY] 좀비 예측",
+          "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit",
+          "type": "답안지"
+        },
+        "_key_numerical_accuracy/csd/2021": {
+          "name": "[KEY] 수치 정확도",
+          "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
+          "type": "답안지"
+        },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+          "type": "슬라이드"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
+          "type": "비디오"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2021": {
+          "name": "[KEY] - AI 랩에서 수치 데이터",
+          "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
+          "type": "답안지"
+        },
+        "using_data_with_numerical_features/csd/2021": {
+          "name": "수치적 특징이 있는 데이터 사용",
+          "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
+          "type": "자료"
+        },
+        "customizing_apps/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/copy",
+          "type": "슬라이드"
+        },
+        "ai_code_of_ethics/csd/2021": {
+          "name": "AI 윤리 강령",
+          "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
+          "type": "슬라이드"
+        },
+        "ai_ethics_research_areas/csd/2021": {
+          "name": "AI 윤리 연구 분야",
+          "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "name": "AI 윤리 연구 성찰",
+          "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
+          "type": "학생 유인물"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "name": "윤리 및 AI: 동등한 접속 및 알고리즘 편향",
+          "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
+          "type": "비디오"
+        },
+        "our_ai_code_of_ethics_template_/csd/2021": {
+          "name": "AI 윤리강령 [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
+          "type": "슬라이드"
+        },
+        "create_an_ml_app_-_project_guide/csd/2021": {
+          "name": "ML 앱 만들기 - 프로젝트 가이드",
+          "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit"
+        },
+        "make_a_machine_learning_app/csd/2021": {
+          "name": "머신 러닝 앱 만들기",
+          "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/copy",
+          "type": "슬라이드"
+        },
+        "create_an_ml_app/csd/2021": {
+          "name": "ML 앱 만들기",
+          "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+          "type": "채점판"
+        },
+        "5_why_s_-_activity_guide/csd/2021": {
+          "name": "5가지 이유 - 활동 가이드",
+          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+        },
+        "app_brainstorm_-_activity_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
+        },
+        "issue_statements/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy",
+          "type": "슬라이드"
+        },
+        "survey_planning/csd/2021": {
+          "name": "데이터 수집 설계",
+          "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy",
+          "type": "슬라이드"
+        },
+        "survey_planning_-_activity_guide/csd/2021": {
+          "name": "설문조사 계획 - 활동 가이드",
+          "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view"
+        },
+        "survey_template_google_form_/csd/2021": {
+          "name": "설문조사 템플릿 [구글 양식]",
+          "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy"
+        },
+        "creating_a_survey/csd/2021": {
+          "name": "설문조사 만들기",
+          "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
+          "type": "자료"
+        },
+        "isaac_s_survey_data_-_student_resource/csd/2021": {
+          "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy"
+        },
+        "kim_s_survey_data_-_student_resource/csd/2021": {
+          "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
+        },
+        "survey_data_in_ai_lab/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy",
+          "type": "슬라이드"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
+          "type": "비디오"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
+          "type": "비디오"
+        },
+        "troubleshooting_models/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy",
+          "type": "슬라이드"
+        },
+        "troubleshooting_models_-_activity_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit"
+        },
+        "creating_an_app/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
+          "type": "슬라이드"
+        },
+        "_template_5_why_s/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
+          "type": "자료"
+        },
+        "design_an_ai_app/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
+          "type": "슬라이드"
+        },
+        "design_an_ai_app_-_project_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit"
+        },
+        "exemplar_-_design_an_ai_app/csd/2021": {
+          "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit"
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
+        },
+        "model_card_-_digital_template/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view",
+          "type": "자료"
+        },
+        "model_card_-_printable_template/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view",
+          "type": "자료"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+          "type": "채점판"
         }
       }
     }

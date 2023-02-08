@@ -2,59 +2,558 @@
 vi:
   data:
     progressions:
-      AI Machine Learning - Video: Tìm hiểu về máy AI - Video
-      'AI: Impact on Society - Video': 'AI: Tác động đối với xã hội - Video'
-      'AI: Training Data & Bias - Video': 'AI: Dữ liệu đào tạo & Định kiến - Video'
-      App Lab Intro - Video: Giới thiệu App Lab - Video
+      '"If/Else" with the Bee': "“If/Else” với chú ong"
+      8-Bit Binary Number Widget: Tiện ích số nhị phân 8 bit
+      AI Lab and Isaac's Data: AI Lab và Dữ liệu của Isaac
+      AI Lab and Kim's Data: AI Lab và Dữ liệu của Kim
+      AI Machine Learning - Video: Học máy AI – Video
+      'AI for Oceans: Fish vs Not Fish': 'Trí tuệ nhân tạo cho đại dương: Cá và Không
+        phải cá'
+      'AI for Oceans: Types of Fish': 'Trí tuệ nhân tạo cho Đại dương: Các loại cá'
+      'AI: Impact on Society - Video': 'AI: Tác động đến xã hội – Video'
+      'AI: Training Data & Bias - Video': 'AI: Dữ liệu đào tạo & Định kiến – Video'
+      Accelerometer Events: Sự kiện gia tốc kế
+      Add Content and HTML: Thêm nội dung và HTML
+      Add Content and Structure to Your Page: Thêm nội dung và cấu trúc vào trang
+        của bạn
+      Add Movement: Thêm chuyển động
+      Add Sprites: Thêm nhân vật
+      Add Style: Thêm định dạng
+      Add Style to Your Page: Thêm định dạng vào trang của bạn
+      Add Text: Thêm văn bản
+      Add a Welcome Screen: Thêm màn hình chào mừng
+      Adding Images: Thêm hình ảnh
+      Adding New Screens: Thêm màn hình mới
+      Adding Pages: Thêm trang
+      Adding Screens: Thêm màn hình
+      Alternative Datasets: Tập dữ liệu thay thế
+      Animate Your Scene: Tạo hình chuyển động cho cảnh của bạn
+      App Lab Intro - Video: Giới thiệu App Lab – Video
+      'App Project: Screen Design': 'Dự án ứng dụng: Thiết kế màn hình'
+      'App: Choose a Kid''s Movie': 'Ứng dụng: Chọn phim cho trẻ em'
+      'App: Friend Finder': 'Ứng dụng: Tìm bạn'
+      'App: Guess the Number': 'Ứng dụng: Đoán số'
+      'App: How Many Countries': 'Ứng dụng: Có bao nhiêu quốc gia'
+      'App: Improved Pet App': 'Ứng dụng: Ứng dụng thú cưng cải tiến'
+      'App: Is It Your Birthday?': 'Ứng dụng: Có phải sinh nhật của bạn không?'
+      'App: My Famous Birthday': 'Ứng dụng: Sinh nhật nổi tiếng của tôi'
+      'App: National Parks': 'Ứng dụng: Vườn quốc gia'
+      'App: Outfit Picker': 'Ứng dụng: Công cụ chọn trang phục'
+      'App: Pet Chooser': 'Ứng dụng: Công cụ chọn thú cưng'
+      'App: Stamp Notebook': 'Ứng dụng: Sổ tem'
+      'App: Story Creator': 'Ứng dụng: Công cụ sáng tác chuyện'
+      'App: The Fastest Finger': 'Ứng dụng: Ngón tay nhanh nhất'
+      'App: Where Should I Live?': 'Ứng dụng: Tôi nên sống ở đâu?'
+      Artist Intro with JR Hildebrand: Giới thiệu về họa sĩ với JR Hildebrand
+      Artist Intro with JR Hildebrande: Giới thiệu về họa sĩ với JR Hildebrand
       Artist Project: Dự án nghệ thuật
-      'Artist: Variables': 'Nghệ sĩ: biến'
+      'Artist: Variables': 'Họa sĩ: Biến'
       Assessment: Đánh giá
+      Attribution: Ghi công
       Back and Forth: Lặp đi lặp lại
+      Basic Conditionals: Lệnh điều kiện căn bản
       Bass, Mid, and Treble: Âm trầm, Âm Trung, Âm Cao
+      Be a Super Digital Citizen: Hãy trở thành siêu công dân số
+      Begin planning your project: Bắt đầu lập kế hoạch cho dự án của bạn
+      Begin planning your project_2018: Bắt đầu lập kế hoạch cho dự án của bạn_2018
+      Binary Bracelets - Unplugged Activity: Vòng tay nhị phân – Hoạt động không dùng
+        thiết bị điện tử
+      Binary Number Widget: Tiện ích số nhị phân
       Binary Numbers: Số nhị phân
+      Board Events: Sự kiện bảng mạch
+      Board Input and Output: Đầu vào và đầu ra của bảng mạch
+      Book Recommender App: Ứng dụng giới thiệu sách
+      Book Recommender Model Card: Thẻ mô hình giới thiệu sách
+      Boolean Comparison: So sánh Boolean
+      Build a Platform Jumper: Thiết kế trò chơi dạng nhảy trên bậc
+      Build a Screen: Thiết kế màn hình
+      Building a UI with Design Mode: Thiết kế giao diện người dùng với Chế độ thiết
+        kế
+      Building an App: Thiết kế ứng dụng
+      Button Circuits: Mạch nút bấm
+      CS Discoveries Post-Course Survey: Khám phá KHMT Khảo sát sau khóa học
+      CS Discoveries Post-course Survey: Khám phá KHMT Khảo sát sau khóa học
+      CSD U3 Interactive Card Exemplar: CSD U3 Ví dụ thẻ tương tác
+      CSD U3 platform intro: CSD U3 Giới thiệu nền tảng
+      'CSD: For Loop': 'CSD: Vòng lặp for'
+      Cake Defender: Người bảo vệ bánh
+      Cake Survey: Khảo sát về bánh
+      Challenge: Thử thách
+      Challenge Levels: Cấp độ thử thách
+      'Challenge: Lists': 'Thử thách: Danh sách'
+      'Challenge: RGB Colors': 'Thử thách: Màu RGB'
+      Challenges: Thử thách
+      Change: Đổi
+      Check Your Work: Kiểm tra công việc của bạn
+      Check-In Survey: Khảo sát đăng ký
+      Checking for a Winner: Kiểm tra người chiến thắng
+      'Choice Levels: Customize Your App': 'Cấp độ tùy chọn: Tùy chỉnh ứng dụng của
+        bạn'
+      Choose Your Own Adventure: Chọn cuộc phiêu lưu của riêng bạn
+      Choosing Good IDs: Chọn ID tốt
+      Club Datasets: Tập dữ liệu câu lạc bộ
+      Code Prediction: Dự đoán mã lệnh
       Code Your Own Flappy Game: Tự lập trình trò chơi dạng Flappy Bird của riêng
         bạn
+      Code Your Page: Lập trình trang của bạn
+      Collector Game: Trò chơi nhà sưu tầm
       Collision Detection: Phát hiện va chạm
       Collisions: Va chạm
+      Collisions in Games: Va chạm trong trò chơi
+      Color LEDs: Đèn LED màu
+      Combining Projects: Kết hợp các dự án
+      Combining Representations: Kết hợp các đại diện
+      Conditionals with Cards - Unplugged Activity: Lệnh điều kiện với lá bài – Hoạt
+        động không dùng thiết bị điện tử
+      'Conditionals: If Statements': 'Lệnh điều kiện: Câu lệnh If'
+      'Conditionals: If and If/Else Statements': 'Lệnh điều kiện: Câu lệnh If và If/Else'
+      Control Your Player: Điều khiển người chơi của bạn
+      'Course E: Play Lab Project': 'Khóa học E: Dự án Play Lab'
+      'Course F: Artist Project': 'Khóa học F: Dự án họa sĩ'
+      'Course F: Artist Project - Revise': 'Khóa học F: Dự án họa sĩ – Chỉnh sửa'
+      'Course F: Play Lab Project': 'Khóa học F: Dự án Play Lab'
+      'Course F: Play Lab Project - Revise': 'Khóa học F: Dự án Play Lab – Chỉnh sửa'
+      Crack Random Substitution: Giải mã ký tự thay thế ngẫu nhiên
+      Crack a Caesar Cipher: Giải mật mã Caesar
+      Create Your Own Animation: Tạo hình chuyển động của riêng bạn
+      Create Your Sprites: Tạo nhân vật
+      Create a Background: Tạo nền
+      Create a Google Form: Tạo biểu mẫu Google
+      Create a Story: Sáng tác chuyện
+      Create an App in App Lab: Tạo ứng dụng trong App Lab
+      Create your project: Tạo dự án
+      Customize: Tùy chỉnh
+      Customize Your App: Tùy chỉnh ứng dụng
       Dance Crews: Nhóm nhảy
+      Data Visualization: Trực quan hóa dữ liệu
+      De-bugging with the Step Button: Sửa lỗi bằng nút Bước
       Debugging: Sửa lỗi
+      Debugging with the Step Button: Sửa lỗi bằng nút Bước
+      'Demo App: Interactive Card': 'Ứng dụng demo: Thẻ tương tác'
+      Demo Apps: Ứng dụng demo
       Design Mode: Chế độ thiết kế
+      Design Your Game: Thiết kế game
+      Design Your Prototype: Thiết kế nguyên mẫu
+      Design a Screen for your App: Thiết kế màn hình cho ứng dụng của bạn
+      Design an AI App - AI Lab: Thiết kế ứng dụng AI – AI Lab
+      Design an AI App - App Lab: Thiết kế ứng dụng AI – App Lab
       Designing for Accessibility: Thiết kế cho trợ năng
+      Digital Sharing - Unplugged Activity: Chia sẻ nội dung số – Hoạt động không
+        dùng thiết bị điện tử
+      Draw Your Background: Vẽ nền của bạn
+      Draw a Background: Vẽ nền
       Drawing: Bản vẽ
+      Driver Alert System: Hệ thống cảnh báo tài xế
+      Escape Room Example: Ví dụ về Căn phòng tẩu thoát
       Events: Các sự kiện
+      Events and Linking Screens: Sự kiện và màn hình liên kết
+      Events and Properties: Sự kiện và Thuộc tính
       Example: Ví dụ
+      Example Animated Scene: Cảnh chuyển động mẫu
+      Example App Types: Các loại ứng dụng mẫu
+      'Example App: Zoo Classification': 'Ứng dụng mẫu: Phân loại vườn thú'
+      Example Apps: Ứng dụng mẫu
+      Example Projects: Dự án mẫu
+      Example projects: Các dự án mẫu
+      Exemplar Personal Websites: Trang web cá nhân mẫu
+      Expanding Personal Website: Mở rộng trang web cá nhân
+      Expanding Your Website: Mở rộng trang web của bạn
+      Experiment with Web Lab: Thử nghiệm với Web Lab
+      Exploration: Khám phá
+      'Exploration: For Loops': 'Khám phá: Vòng lặp for'
+      'Exploration: Rikki''s Poster': 'Khám phá: Poster của Rikki'
+      'Exploration: Sample Apps': 'Khám phá: Ứng dụng mẫu'
+      'Exploration: Sample Programs': 'Khám phá: Chương trình mẫu'
+      'Exploration: Sample Project': 'Khám phá: Dự án mẫu'
+      Exploring CS in Entertainment: Khám phá KHMT trong giải trí
+      Exploring more CSS: Khám phá thêm CSS
+      Extra Challenge: Thử thách bổ sung
+      'Extra Challenge: Sound Board': 'Thử thách bổ sung: Bảng mạch âm thanh'
+      Final Room Escape App: Ứng dụng Căn phòng tẩu thoát cuối cùng
+      Find the Wizard: Tìm Pháp sư
+      Finish a Screen: Kết thúc màn hình
+      Finish the Prototype: Hoàn thành Nguyên mẫu
+      Finishing Functions: Hoàn thành hàm
+      Finishing Touches: Hoàn thành lượt chạm
+      Flyer Game: Trò chơi Thú bay
+      Follow the Algorithm - Unplugged Activity: Làm theo thuật toán – Hoạt động không
+        dùng thiết bị điện tử
+      Follow the Mouse: Theo dõi chuột
+      Fonts and Style: Phông chữ và Định dạng
+      FoodFight: Cuộc chiến thức ăn
+      For Loop Fun - Unplugged Activity: Trò chơi Vòng lặp for - Hoạt động không dùng
+        thiết bị điện tử
       For Loops: Cho vòng lặp
-      Free Play: chơi miễn phí
+      For Loops and Color LEDs: Vòng lặp for và đèn LED màu
+      For Loops and Repeat Blocks: Vòng lặp for và khối lặp lại
+      Free Play: Chơi tự do
+      'Free Play: Make a Scene': 'Chơi tự do: Tạo cảnh'
+      'Free Play: Make an Interactive Scene': 'Chơi tự do: Tạo cảnh tương tác'
+      Fruit and Veggie Explorer: Người khám phá rau củ
       Functions: Các hàm
       Functions with Parameters: Hàm và tham số
       Get In Formation: Vào đội hình
+      Getting Properties: Lấy thuộc tính
+      Graph Paper Programming - Unplugged Activity: Lập trình trên giấy kẻ ô ly –
+        Hoạt động không dùng thiết bị điện tử
+      Green Glass Door: Cửa kính xanh lá
+      Guess The Number: Đoán số
+      Headings: Đề mục
       Hello World: Xin chào cả thế giới
+      How to Create a Simple Function: Cách tạo hàm đơn giản
+      Ice Age Loops: Vòng lặp kỷ băng hà
+      Images and Sounds: Hình ảnh và Âm thanh
       Images in HTML: Hình ảnh trong HTML
+      Import Your Model: Nhập mô hình của bạn
+      Import a Model: Nhập mô hình
+      Importing Your Model: Nhập mô hình của bạn
+      Improved Shoe Recommender: Công cụ đề xuất giày cải tiến
+      Incorporate Feedback: Phản hồi kết hợp
+      Innovation Research: Nghiên cứu đổi mới
+      Input Examples: Ví dụ về tín hiệu đầu vào
+      Input with If-Else: Tín hiệu đầu vào với If-Else
+      InspirationalArtwork: Tác phẩm truyền cảm hứng
+      Intro to Flyer Game: Giới thiệu trò chơi Thú bay
+      Intro to For Loops: Giới thiệu về Vòng lặp for
+      Intro to Side Scrollers: Giới thiệu về Game đi cảnh
+      Intro to Sprites: Giới thiệu về nhân vật
+      Intro to Variables: Giới thiệu về biến
       Introduction to Arrays: Giới thiệu Danh sách
-      Learning from Simulations: Học hỏi từ bản mô phỏng
+      Isaac's Survey Data: Dữ liệu khảo sát của Isaac
+      Iteration and Parameters: Phép lặp và thông số
+      Keep On Dancing!: Tiếp tục khiêu vũ nào!
+      Keeping Data Secret: Giữ bí mật dữ liệu
+      Keyboard Input: Tín hiệu đầu vào từ bàn phím
+      Kim's Survey: Khảo sát của Kim
+      Kim's Survey Data: Dữ liệu khảo sát của Kim
+      LED Apps: Ứng dụng LED
+      Layout with CSS: Bố cục với CSS
+      Learning from Simulations: Học từ mô phỏng
       Lesson Extras: Bài học mở rộng
+      Level Overview: Tổng quan về cấp độ
+      Levels: Cấp độ
+      Light Show: Màn trình diễn ánh sáng
+      Linking Pages: Liên kết trang
+      Linking Screens: Liên kết màn hình
       Lists: Danh sách
+      Looking for Patterns: Tìm kiếm mẫu
+      Looping: Lặp lại
+      Loops with the Artist: Vòng lặp với Họa sĩ
+      Make Your Sprites: Tạo nhân vật
+      Make a Prediction: Dự đoán
+      Make an Interactive Card: Tạo thẻ tương tác
+      Make it Interactive: Tạo tính tương tác
       Making Music: Tạo âm nhạc
+      Making Scenes: Tạo cảnh
+      Making Songs: Tạo bài hát
+      Making Sounds: Tạo âm thanh
+      Making an Interactive Card: Tạo thẻ tương tác
+      'Maze Intro: Programming with Blocks': 'Giới thiệu mê cung: Lập trình với các
+        khối'
       Measures: Nhịp
+      Medical Dataset Model Cards: Thẻ mẫu tập dữ liệu y tế
+      Medical Priority App: Ứng dụng ưu tiên y tế
       'Minecraft: Hero''s Journey': 'Minecraft: Hero''s Journey'
+      'Mini-Project: About Me': 'Dự án nhỏ: Giới thiệu bản thân'
+      'Mini-Project: Alien Dance Moves': 'Dự án nhỏ: Bước nhảy của người ngoài hành
+        tinh'
+      'Mini-Project: Alien Dance Party': 'Dự án nhỏ: Tiệc khiêu vũ của người ngoài
+        hành tinh'
+      'Mini-Project: Create a Virtual Pet': 'Dự án nhỏ: Tạo thú cưng ảo'
       'Mini-Project: Outbreak Simulator': 'Dự án nhỏ: Trình mô phỏng dịch bệnh bùng
         phát'
+      'Mini-Project: Royal Battle': 'Dự án nhỏ: Trận chiến hoàng gia'
+      'Mini-Project: Snowflake #1': 'Dự án nhỏ: Bông tuyết #1'
+      'Mini-Project: Snowflake #2': 'Dự án nhỏ: Bông tuyết #2'
+      'Mini-Project: Swimming Fish': 'Dự án nhỏ: Cá bơi'
+      'Mini-Project: Swimming Fish (continued)': 'Dự án nhỏ: Cá bơi (tiếp theo)'
+      'Mini-Project: User Input Programs': 'Dự án nhỏ: Chương trình nhập liệu của
+        người dùng'
+      'Mini-Project: Virtual Pet': 'Dự án nhỏ: Thú cưng ảo'
+      'Mini-project: Chase Game': 'Dự án nhỏ: Trò chơi đuổi bắt'
+      'Mini-project: Flappy Game': 'Dự án nhỏ: Trò chơi Flappy'
+      'Mini-project: Interactive Poster': 'Dự án nhỏ : Poster tương tác'
+      'Mini-project: Jorge the Dog': 'Dự án nhỏ: Chú chó Jorge'
+      'Mini-project: Sticker Art': 'Dự án nhỏ: Tác phẩm sticker'
+      'Mini-project: Sticker Design': 'Dự án nhỏ: Thiết kế sticker'
+      Modify simulation variables: Sửa biến trong bản mô phỏng
       More Buttons: Thêm nút
+      More Input: Thêm tín hiệu đầu vào
+      More Parameters: Thông số khác
+      Motorcycle: Xe máy
+      Move It Move it Video  - Unplugged Activity: Video Di chuyển nào – Hoạt động
+        không dùng thiết bị điện tử
+      Movement with the Counter Pattern: Chuyển động với Mẫu bộ đếm
+      Multi-Screen Apps: Ứng dụng đa màn hình
+      Multiframe Animations: Hình chuyển động nhiều khung hình
+      Musical Arrays: Mảng âm nhạc
+      My Loopy Robotic Friends - Unplugged Activity: Những người bạn robot Loopy của
+        tôi – Hoạt động không dùng thiết bị điện tử
+      My Robotic Friends - Unplugged Activity: Những người bạn robot của tôi – Hoạt
+        động không dùng thiết bị điện tử
+      Nested Loops with the Bee: Vòng lặp lồng nhau với Chú ong
+      New Challenge Introduction: Giới thiệu thử thách mới
+      New Shapes: Hình khối mới
+      Orientation: Hướng
       Overview: Tổng quan
+      'Overview: Design Mode': 'Tổng quan: Chế độ thiết kế'
+      'Overview: If Statements': 'Tổng quan: Câu lệnh If'
+      'Overview: Images': 'Tổng quan: Hình ảnh'
+      'Overview: onEvent': 'Tổng quan: onEvent'
+      'Overview: setPosition': 'Tổng quan: setPosition'
       Pair Programming: Lập trình đôi
-      Planning: Lên kế hoạch
+      Pet Recommender: Công cụ đề xuất thú cưng
+      Picturing Data: Dữ liệu ảnh
+      Pizza Party Data: Dữ liệu tiệc Pizza
+      Pizza Recommendations: Đề xuất Pizza
+      Plan Your Project: Lập kế hoạch cho dự án
+      Plan Your Scene: Lập kế hoạch cho cảnh
+      Planning: Lập kế hoạch
+      Platform Jumper - Background and Variables: Trò chơi dạng nhảy trên bậc – Nền
+        và biến
+      Platform Jumper - Items: Trò chơi dạng nhảy trên bậc – Vật phẩm
+      Platform Jumper - Platforms: Trò chơi dạng nhảy trên bậc – Bậc
+      Platform Jumper - Player: Trò chơi dạng nhảy trên bậc – Người chơi
+      Platform Jumper Review: Đánh giá Trò chơi dạng nhảy trên bậc
+      Player Controls: Cách điều khiển người chơi
+      Playing Notes: Ghi chú khi chơi
+      Playing with Notes: Chơi với ghi chú
+      Post-Course Survey Instructions: Hướng dẫn khảo sát sau khóa học
+      Practice: Thực tiễn
+      Predict: Dự đoán
+      Prediction: Dự đoán
+      Prepare for your presentation: Chuẩn bị cho bài thuyết trình
+      Prepare for your presentation_2018: Chuẩn bị cho bài thuyết trình_2018
+      Problem Solving: Giải quyết vấn đề
+      Problem Solving Process for Programming: Quy trình giải quyết vấn đề cho lập
+        trình
       Programming with Rey and BB-8: Lập trình cùng Rey và robot BB-8
+      Programs that Repeat: Chương trình lặp lại
+      Project: Dự án
+      Project - Background and Variables: Dự án – Nền và các biến
+      Project - Sprites and Interactions: Dự án – Nhân vật và tương tác
+      Project Guide: Hướng dẫn dự án
+      Project Work: Tác phẩm dự án
       Properties: Thuộc tính
+      Publishing Your Website: Xuất bản trang
       Quarter Notes: Nốt đen
-      Reflection: Phản ánh
+      Quick Check: Kiểm tra nhanh
+      RGB Exploration: Khám phá RGB
+      Raspado Recommender: Công cụ đề xuất đá bào
+      Reading Sensors: Đọc cảm biến
+      Recognizing Expressions: Nhận biết biểu cảm
+      Recognizing Fish: Nhận biết cá
+      Recognizing Fish Features: Nhận biết các đặc điểm của cá
+      Recognizing Shapes: Nhận biết hình khối
+      Reflection: Suy nghĩ
+      Relay Programming - Unplugged Activity: Lập trình chuyển tiếp – Hoạt động không
+        dùng thiết bị điện tử
+      Repeat Blocks: Khối lặp lại
+      Repeat Blocks with BB-8: Khối lặp lại với BB-8
+      Repeat Blocks with the Artist: Khối lặp lại với họa sĩ
+      Repeat Unit Statements: Lặp lại câu lệnh Until (đến khi)
+      Repeat Until Statements: Lặp lại câu lệnh Until (đến khi)
+      Representing Images: Hình ảnh đại diện
+      Review: Đánh giá
+      Review Your Animated Scene: Đánh giá cảnh chuyển động
+      Review Your App: Đánh giá ứng dụng
+      Review Your Game: Đánh giá trò chơi
+      Review Your Page: Đánh giá trang
+      Review Your Scene: Đánh giá cảnh
+      'Review: CSS': 'Đánh giá: CSS'
+      'Review: HTML': 'Đánh giá: HTML'
+      Run a simulation: Chạy mô phỏng
+      Safari App: Ứng dụng Safari
+      Safari Model: Mô hình Safari
+      Same Game: Cùng một trò chơi
+      Sample Apps for Good: Ứng dụng mẫu hiệu quả
+      Sample Games: Trò chơi mẫu
+      Sample Personal Web Pages: Trang web cá nhân mẫu
+      Sample Personal Websites: Trang web cá nhân mẫu
+      Sample Programs: Chương trình mẫu
+      Sample Web Page: Trang web mẫu
+      Sample Website: Trang web mẫu
+      Scoring & Scoreboard: Ghi điểm & Bảng điểm
+      Screen Design: Thiết kế màn hình
+      Sensor Events: Sự kiện cảm biến
+      Sensors to Colors: Cảm biến màu sắc
+      Set Up Sprites: Thiết lập nhân vật
+      Setting Properties: Đặt thuộc tính
+      Shapes and the Draw Loop: Hình khối và vòng lặp vẽ
+      Share Your App: Chia sẻ ứng dụng
+      Share Your Pages: Chia sẻ trang
+      Share Your Stylesheets: Chia sẻ bảng định dạng
+      Shoe Recommendation Survey: Khảo sát khuyến nghị về giày
+      Shoe Recommender: Công cụ đề xuất giày
+      Side Scroller: Game đi cảnh
+      Simple Circuits: Mạch đơn giản
+      Skill Building: Phát triển kĩ năng
+      Skill-Building: Phát triển kĩ năng
+      Sliders: Thanh trượt
+      Smart Bike - Blinkers: Xe đạp thông minh – Đèn nháy
+      Social Sleuth: Thám tử mạng xã hội
+      Songwriting - Functions Unplugged Activity: Sáng tác nhạc – Hàm Hoạt động không
+        dùng thiết bị điện tử
       Speed it Up, Slow it Down: Nhanh lên, chậm lại
-      Teach AI a New Word: Từ mới Giảng dạy về AI
+      Sprite Lab Project: Dự án Sprite Lab
+      Sprite Properties: Thuộc tính của nhân vật
+      Sprites and the Draw Loop: Nhân vật và vòng lặp vẽ
+      Star Chaser: Người bắt sao
+      Styling Text: Định dạng văn bản
+      Styling with Classes: Định dạng với lớp học
+      Styling your Website: Định dạng cho trang web
+      Teach A.I. a new word: Dạy cho AI một từ mới
+      Teach AI a New Word: Dạy cho AI một từ mới
+      'Technique: Frequency Analysis': 'Kỹ thuật: Phân tích tần số'
+      Terminology Recap: Bản tóm tắt thuật ngữ
       Text Compression: Nén văn bản
+      The Artist in Code Studio: Họa sĩ trong Code Studio
+      The Big Event - Unplugged Activity: Sự kiện lớn – Hoạt động không dùng thiết
+        bị điện tử
+      The Buzzer: Còi báo hiệu
+      The Collector: Nhà sưu tập
+      The Internet - Unplugged Activity: Internet – Hoạt động không dùng thiết bị
+        điện tử
+      The Power of Words - Unplugged Activity: Sức mạnh của ngôn từ – Hoạt động không
+        dùng thiết bị điện tử
+      The Right App - Unplugged Activity: Ứng dụng phù hợp – Hoạt động không dùng
+        thiết bị điện tử
+      Top Websites: Các trang web hàng đầu
+      Train AI to Clean the Ocean: Huấn luyện AI để làm sạch đại dương
+      Train a Model in AI Lab: Đào tạo mô hình trong AI Lab
+      Train an AI to Clean the Ocean: Huấn luyện AI để làm sạch đại dương
+      UI Element Properties: Thuộc tính phần tử giao diện người dùng
+      Ultimate Shoe Recommender: Công cụ đề xuất giày cuối cùng
+      Unit 5 Lesson 1 Overview: Học phần 5 Bài 1 Tổng quan
+      Upload Your Images: Tải lên hình
+      User Interface: Giao diện người dùng
+      Using Getters and Setters: Sử dụng Getter và Setter
+      Using HTML Tags: Sử dụng thẻ HTML
+      Using Random Numbers: Sử dụng số ngẫu nhiên
+      Using Training Data: Sử dụng dữ liệu đào tạo
+      Using the LED: Sử dụng đèn LED
+      Using the Switch: Sử dụng công tắc
       Variables: Các biến
+      Velocity and the Counter Pattern: Vận tốc và mẫu bộ đếm
       Video: Video
+      Video - Encryption and Public Keys: Video – Mã hóa và Khóa công khai
+      'Video - Maze Intro: Programming with Blocks': 'Video – Giới thiệu mê cung:
+        Lập trình với các khối'
+      'Video:  Debugging with the Step Button': 'Video: Sửa lỗi bằng nút Bước'
+      'Video:  Minecraft - The Agent': 'Video: Minecraft – Tác tử'
+      'Video:  Text  and Prompts': 'Video: Văn bản và Lời nhắc'
+      'Video: "If/Else"': 'Video: “If/Else”'
+      'Video: AI: What is Machine Learning?': 'Video: AI: Máy học là gì?'
+      'Video: Amazon and Data': 'Video: Amazon và Dữ liệu'
+      'Video: Artist Intro with JR Hildebrand': 'Video: Giới thiệu về họa sĩ với JR
+        Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'Video: Giới thiệu về họa sĩ với
+        JR Hildebrand'
+      'Video: Circuits and Logic': 'Video: Mạch và Logic'
+      'Video: Code Your Own Flappy Game': 'Video: Lập trình trò chơi Flappy của riêng
+        bạn'
+      'Video: Conditionals: If Statements': 'Video: Lệnh điều kiện: Câu lệnh If'
+      'Video: Conditionals: If and If/Else Statements': 'Video: Lệnh điều kiện: Câu
+        lệnh If và If/Else'
+      'Video: Dance Party Events': 'Video: Bữa tiệc khiêu vũ Sự kiện'
+      'Video: Dance Party Measures': 'Video: Bữa tiệc khiêu vũ Nhịp'
+      'Video: Dance Party Party On!': 'Video: Bữa tiệc khiêu vũ Quẩy lên nào!'
+      'Video: Dance Party Properties': 'Video: Bữa tiệc khiêu vũ Thuộc tính'
+      'Video: Dance Party Warm Up': 'Video: Bữa tiệc khiêu vũ Khởi động'
+      'Video: De-bugging with the Step Button': 'Video: Sửa lỗi bằng nút Bước'
+      'Video: Debugging': 'Video: Sửa lỗi'
+      'Video: Debugging with Scrat ': 'Video: Sửa lỗi với Scrat'
+      'Video: Debugging with the Step Button': 'Video: Sửa lỗi bằng nút Bước'
+      'Video: Events': 'Video: Sự kiện'
+      'Video: Follow The Digital Trail': 'Video: Lần theo dấu vết số'
+      'Video: Getting Loopy': 'Video: Bắt lấy Loopy'
+      'Video: Happy Maps - Unplugged Activity': 'Video: Bản đồ hạnh phúc – Hoạt động
+        không dùng thiết bị điện tử'
+      'Video: Harvesting with Conditionals': 'Video: Thu hoạch với lệnh điều kiện'
+      'Video: How Search Works': 'Video: Cách hoạt động của tính năng tìm kiếm'
+      'Video: How to Create a Simple Function': 'Video: Cách tạo hàm đơn giản'
+      'Video: How to Make a Sprite': 'Video: Cách tạo nhân vật'
+      'Video: IOSP Model': 'Video: Mô hình IOSP'
+      'Video: Ice Age Loops': 'Video: Vòng lặp Kỷ băng hà'
+      'Video: Impact on Society': 'Video: Tác động đến xã hội'
+      'Video: Impacts on Society': 'Video: Tác động đến xã hội'
+      'Video: Intro to CSS - Part 1': 'Video: Giới thiệu về CSS – Phần 1'
+      'Video: Intro to CSS - Part 2': 'Video: Giới thiệu về CSS – Phần 2'
+      'Video: Intro to Design Mode': 'Video: Giới thiệu về Chế độ thiết kế'
+      'Video: Introducing Sprite Lab': 'Video: Giới thiệu Sprite Lab'
+      'Video: Introduction to Play Lab': 'Video: Giới thiệu về Play Lab'
+      'Video: Introduction to Variables': 'Video: Giới thiệu về biến'
+      'Video: Loops in Artist': 'Video: Vòng lặp trong Họa sĩ'
+      'Video: Loops with the Artist': 'Video: Vòng lặp với Họa sĩ'
+      'Video: Managing Disagreement': 'Video: Xử lý sự bất đồng'
+      'Video: Maze Intro - Programming with Blocks': 'Video: Giới thiệu về mê cung
+        – Lập trình với các khối'
+      'Video: Maze Intro - Programming with Blocks ': 'Video: Giới thiệu về mê cung
+        – Lập trình với các khối'
+      'Video: Maze Intro: Programming with Blocks': 'Video: Giới thiệu mê cung: Lập
+        trình với các khối'
+      'Video: Measures': 'Video: Nhịp'
+      'Video: Minecraft - Congratulations': 'Video: Minecraft – Xin chúc mừng'
+      'Video: Minecraft - Functions': 'Video: Minecraft – Hàm'
+      'Video: Minecraft - Repeat Loops': 'Video: Minecraft - Vòng lặp lặp lại'
+      'Video: Minecraft - The Agent': 'Video: Minecraft – Tác tử'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Video: Minecraft: Chuyến du
+        hành dưới nước Lệnh điều kiện'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Chuyến
+        du hành dưới nước Chúc mừng'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Chuyến du
+        hành dưới nước Giới thiệu'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Chuyến du
+        hành dưới nước Lặp lại đến khi'
+      'Video: Nested Loops': 'Video: Vòng lặp lồng nhau'
+      'Video: Nested Loops with the Bee': 'Video: Vòng lặp lồng nhau với Chú ong'
+      'Video: Netflix and Data': 'Video: Netflix và Dữ liệu'
       'Video: Outbreak Simulator: Introduction': 'Video: Trình mô phỏng dịch bệnh
         bùng phát: Giới thiệu'
-      Welcome to Monster Town: Chào mừng đến với Thị Trấn Quái Vật
+      'Video: Pair Programming': 'Video: Lập trình theo cặp'
+      'Video: Pair Programming ': 'Video: Lập trình theo cặp'
+      'Video: Programming with Blocks': 'Video: Lập trình với khối'
+      'Video: Programming with Rey and BB-8': 'Video: Lập trình với Rey và BB-8'
+      'Video: Properties': 'Video: Thuộc tính'
+      'Video: Publishing Your Website': 'Video: Xuất bản trang web'
+      'Video: Repeat Blocks': 'Video: Khối lặp lại'
+      'Video: Repeat Blocks with BB-8': 'Video: Khối lặp lại với BB-8'
+      'Video: Repeat Blocks with the Artist': 'Video: Khối lặp lại với họa sĩ'
+      'Video: Repeat Until Blocks': 'Video: Khối lặp lại đến khi'
+      'Video: Repeat Until Statements': 'Video: Câu lệnh lặp lại đến khi'
+      'Video: Sprites in Action': 'Video: Nhân vật hành động'
+      'Video: Star Wars Project': 'Video: Dự án Star Wars (Chiến tranh các vì sao)'
+      'Video: Teamwork': 'Video: Làm việc theo nhóm'
+      'Video: Text and Prompts': 'Video: Văn bản và Lời nhắc'
+      'Video: The Artist in Code Studio': 'Video: Họa sĩ trong Code Studio'
+      'Video: The Big Event - Unplugged Activity': 'Video: Sự kiện lớn – Hoạt động
+        không dùng thiết bị điện tử'
+      'Video: The Collector': 'Video: Nhà sưu tập'
+      'Video: The Harvester': 'Video: Người thu hoạch'
+      'Video: Training Data & Bias': 'Video: Dữ liệu đào tạo & định kiến'
+      'Video: Training Data and Bias': 'Video: Dữ liệu đào tạo và Định kiến'
+      'Video: Unplugged Variables in Envelopes': 'Video: Các biến trong phong bì không
+        dùng thiết bị điện tử'
+      'Video: Using the Repeat Block': 'Video: Sử dụng Khối lặp lại'
+      'Video: Variables in Artist': 'Video: Biến trong Họa sĩ'
+      'Video: Warm Up': 'Video: Khởi động'
+      'Video: Waze and Data': 'Video: Waze và Dữ liệu'
+      'Video: What is Machine Learning?': 'Video: Máy học là gì?'
+      'Video: While Loops with the Farmer': 'Video: Vòng lặp while với Người nông
+        dân'
+      'Video: Wrap-up': 'Video: Tổng kết'
+      Warm Up: Khởi động
+      Website Project: Dự án trang web
+      Welcome to Monster Town: Chào mừng đến với Thị trấn quái vật
       Where'd They Go?: Họ sẽ đi đâu?
+      While Loops with the Farmer: Vòng lặp while với Người nông dân
+      'Widget: Text Compression': 'Widget: Nén văn bản'
       Wrap-up: Gói gọn
+      'You Choose: Improve Your App': 'Bạn chọn: Cải thiện ứng dụng'
+      'You Choose: Restaurant Recommendations': 'Bạn chọn: Đề xuất nhà hàng'
       Your Personal Website: Trang web cá nhân của bạn
+      Your Team Project: Dự án nhóm
+      Zoo Predictions: Dự đoán sở thú
+      getText vs getNumber: getText so với getNumber
+      isTouching: isTouching
+      setProperty: setProperty

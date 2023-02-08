@@ -2,6 +2,10 @@ class SectionsController < ApplicationController
   include UsersHelper
   before_action :load_section_by_code, only: [:log_in, :show]
 
+  def new
+    return head :forbidden unless current_user&.admin
+  end
+
   def show
     @secret_pictures = SecretPicture.all.shuffle
   end
@@ -22,7 +26,7 @@ class SectionsController < ApplicationController
 
   def redirect_to_section_script_or_course
     if @section.script
-      redirect_to @section.script
+      redirect_to script_path(@section.script)
     elsif @section.unit_group
       redirect_to course_path(@section.unit_group)
     else

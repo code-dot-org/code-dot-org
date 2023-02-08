@@ -5,3 +5,5 @@ description 'Try these new challenges with sprite properties'
 sublevels
 level 'CSD U3 properties tint_2022'
 level 'CSD U3 properties depth_2022'
+level 'CSD U3 properties alpha_2022'
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import {UnconnectedMultipleChoiceAssessmentsOverviewTable} from './MultipleChoiceAssessmentsOverviewTable';
+import {UnconnectedMultipleChoiceAssessmentsOverviewTable as MultipleChoiceAssessmentsOverviewTable} from './MultipleChoiceAssessmentsOverviewTable';
 import i18n from '@cdo/locale';
 
 const multipleChoiceData = [
@@ -152,39 +152,28 @@ const multipleChoiceData = [
   }
 ];
 
-export default storybook => {
-  return storybook
-    .storiesOf(
-      'SectionAssessments/MultipleChoiceAssessmentsOverviewTable',
-      module
-    )
-    .addStoryTable([
-      {
-        name: 'Assessment multiple choice with 7 answers',
-        description: 'Ability to see assessment overview for a section',
-        story: () => (
-          <UnconnectedMultipleChoiceAssessmentsOverviewTable
-            questionAnswerData={multipleChoiceData}
-            openDialog={() => {}}
-            setQuestionIndex={() => {}}
-          />
-        )
-      },
-      {
-        name: 'Assessment multiple choice with 3 answers',
-        description: 'Ability to see assessment overview for a section',
-        story: () => (
-          <UnconnectedMultipleChoiceAssessmentsOverviewTable
-            questionAnswerData={multipleChoiceData.map(question => {
-              return {
-                ...question,
-                answers: question.answers.slice(0, 2)
-              };
-            })}
-            openDialog={() => {}}
-            setQuestionIndex={() => {}}
-          />
-        )
-      }
-    ]);
+export default {
+  name: 'MultipleChoiceAssessmentsOverviewTable',
+  component: MultipleChoiceAssessmentsOverviewTable
 };
+
+const Template = args => (
+  <MultipleChoiceAssessmentsOverviewTable
+    openDialog={() => {}}
+    setQuestionIndex={() => {}}
+    {...args}
+  />
+);
+
+export const OverviewWith7Answers = Template.bind({});
+OverviewWith7Answers.args = {questionAnswerData: multipleChoiceData};
+
+const reducedMultipleChoiceData = multipleChoiceData.map(question => {
+  return {
+    ...question,
+    answers: question.answers.slice(0, 2)
+  };
+});
+
+export const OverviewWith3Answers = Template.bind({});
+OverviewWith3Answers.args = {questionAnswerData: reducedMultipleChoiceData};

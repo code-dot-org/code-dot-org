@@ -16,7 +16,7 @@
   n_have_learned_an_hoc: "<h1>Probieren Sie eine</h1><h2>Hour of Code</h2><h3># mal genutzt</h3>"
   try_hoc_num_served: "<h1>Versuche eine</h1><h2>Hour of Code</h2><h3>%{num} die angeboten wird</h3>"
   try_hoc_num_served_markdown: |-
-    # Veruche eine
+    # Versuche eine
 
     ## Hour of Code
 
@@ -38,9 +38,9 @@
   submit: "Absenden"
   twentyhours_heading: "Testen Sie unseren Kurs \"Einführung in die Informatik\""
   twentyhours_text: "Sie haben Ihre erste „Hour of Code“ beendet? Lernen Sie in diesem Folgekurs weitere Informatik- und Programmierkonzepte."
-  og_title: 'Jedes Kind verdient eine Gelegenheit'
+  og_title: 'Code.org: Jeder kann lernen'
   og_title_soon: "Stunde des Codes kommt bald"
-  og_title_here: "Die Stunde des Codes ist gekommen!"
+  og_title_here: "Die Stunde des Programmierens ist gekommen!"
   og_description: "In jeder Schule sollten Schüler die Gelegenheit erhalten, Informatik zu lernen."
   og_description_celeb: "Probiere die neuen Tutorials aus und gewinne einen Videochat mit einem Promi für dich oder deine Klasse!"
   csedweek_og_title: "Die Stunde des Codes ist hier"
@@ -342,6 +342,7 @@
   homepage_banner_40k_teachers_link: "Mehr erfahren"
   homepage_slot_text_title_hoc: "Stunde der Code"
   homepage_slot_text_blurb_hoc: "Jeder kann es lernen. Jetzt beginnen"
+  homepage_slot_text_blurb_hoc_2022: "Entdecken, spielen und erschaffen!"
   homepage_slot_text_link_hoc: "Probiere \"The Hour of Code\" aus"
   homepage_slot_text_link_about_hoc: "Über die Hour of Code"
   homepage_slot_text_link_host: "Hour of Code organisieren"
@@ -367,6 +368,7 @@
   homepage_slot_text_link_buy: "Mitmachen"
   homepage_slot_text_link_donate: "Spende"
   homepage_slot_text_link_shop: "T-shirts, Hüte & mehr"
+  homepage_slot_text_link_thebadguys: "Programmieren mit Die Gangster Gang"
   homepage_slot_text_link_administrators: "Bringem Sie Informatik in Ihre Schule"
   homepage_gallery_header: "Über %{project_count} Millionen erstellte Code.org Projekte"
   homepage_header_donors: "Code.org dankt seinen Unterstützern"
@@ -375,6 +377,7 @@
   homepage_below_hero_announcement_text: "Der Schutz deiner Daten ist uns wichtig, weshalb wir unsere Datenschutzerklärung mit Wirkung zum 25. Mai aktualisieren."
   homepage_below_hero_announcement_link_text: "Mehr erfahren"
   homepage_higher_power_body: "Programmiere einen Tanz zu „Higher Power“ Coldplay, dann kannst du die Band vielleicht live erleben!"
+  homepage_thebadguys_body: "Codiere ein Abenteuer mit Frau Tarantula, Herrn Wolf und den anderen Figuren aus dem Film **Die Gangster Gang**!"
   contact_form_topic_student: "Ich bin ein Schüler"
   contact_form_topic_parent: "Ich bin ein Elternteil"
   contact_form_topic_teacher: "Ich bin Lehrer/Pädagoge"
@@ -506,6 +509,8 @@
   video_title_marco_belinelli: "Hour of Code mit Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh über Informatik"
   video_title_my_name_is_aracely: "Mein Name ist Aracely"
+  video_title_change_face_of_cs: "Das Gesicht der Informatik verändern"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1 Minute"
   video_2min: "2 Minuten"
   video_3min: "3 Minuten"
@@ -582,6 +587,7 @@
   volunteer_engineer_submission_distance_16: "10 Meilen"
   volunteer_engineer_submission_distance_24: "15 Kilometer"
   volunteer_engineer_submission_distance_32: "20 Kilometer"
+  volunteer_engineer_submission_distance_80: "50 Meilen"
   volunteer_engineer_submission_num_volunteers_5: "5 Freiwillige"
   volunteer_engineer_submission_num_volunteers_10: "10 Freiwillige"
   volunteer_engineer_submission_num_volunteers_25: "25 Freiwillige"
@@ -970,6 +976,10 @@
   coursed-2021_name: Kurs D (2021)
   coursee-2021_name: Kurs E (2021)
   coursef-2021_name: Kurs F (2021)
+  coursea-2022_name: Kurs A (2021)
+  courseb-2022_name: Kurs B (2021)
+  coursec-2022_name: Kurs C (2021)
+  coursed-2022_name: Kurs D (2021)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
@@ -977,6 +987,7 @@
   express-2020_name: Expresskurs (2019)
   pre-express-2020_name: Leseanfänger-Expresskurs (2020)
   pre-express-2021_name: Leseanfänger-Expresskurs (2021)
+  pre-express-2022_name: Leseanfänger-Expresskurs (2022)
   csd2_name: 'Lerneinheit 2: Webentwicklung'
   csd3_name: 'Lerneinheit 3: Animation und Spiele'
   accelerated_name: "Beschleunigter Kurs"
@@ -1090,6 +1101,12 @@
   coursed-2021_gradelevel: Ab 8. Klasse
   coursee-2021_gradelevel: Alter 8-12
   coursef-2021_gradelevel: Alter 9-13
+  coursea-2022_gradelevel: Alter 4-7
+  courseb-2022_gradelevel: Alter 5-8
+  coursec-2022_gradelevel: Alter 6-10
+  coursed-2022_gradelevel: Ab 8. Klasse
+  coursee-2022_gradelevel: Alter 8-12
+  coursef-2022_gradelevel: Alter 9-13
   accelerated_gradelevel: "Alter: 10-18"
   codeorg_platformtext: "Moderne Browser, Smartphones, Tablets"
   codeintl_platformtext: "Moderne Browser, Smartphones, Tablets"
@@ -1227,6 +1244,12 @@
   coursed-2021_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen auch etwas über digitale Bürgerschaft.
   coursee-2021_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen, Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen. Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt, das du mit deinen Freunden und deiner Familie teilen kannst.
   coursef-2021_shortdescription_congrats: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+  coursea-2022_shortdescription_congrats: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+  courseb-2022_shortdescription_congrats: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+  coursec-2022_shortdescription_congrats: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
+  coursed-2022_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen auch etwas über digitale Bürgerschaft.
+  coursee-2022_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen, Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen. Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt, das du mit deinen Freunden und deiner Familie teilen kannst.
+  coursef-2022_shortdescription_congrats: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
   codeorg_longdescription: "Lerne die Grundlagen der Informatik mit Programmierbausteinen. Dies ist eine spielerische, selbstgesteuerte Einführung mit Videolektionen von Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. Lerne Wiederholungsschleifen, Wenn-Sonst-Anweisungen und einfache Algorithmen. In 34 Sprachen verfügbar."
   codeintl_longdescription: "Lerne die Grundlagen des Programmierens ganz einfach durch \"Drag & Drop\". Ganz spielerisch kannst Du dich selbst durch unseren Unterricht mit Videos von Bill Gates, Mark Zuckerberg, Angry Birds oder Plants vs. Zombies navigieren.\nLerne, Schleifen zu programmieren, Bedingungen einzusetzen und einfache Algorithmen zu entwickeln. Das Programm ist in 34 Sprachen verfügbar."
   thinkersmithspanish_longdescription: "Mit vordefiniertem \"Roboter-Vokabular\" finden Schüler heraus, wie sie einander führen können, um Aufgaben zu lösen, ohne diese vorher besprochen zu haben. Diese Lektion bringt Schülern die Verbindung zwischen Symbolen und Aktionen als auch die Fähigkeit des Code-Korrigerens bei."
@@ -1465,6 +1488,7 @@
   header_educate_beyond: "Jenseits von Code.org"
   header_educate_inspire: "Inspiriere einen Schüler/eine Schülerin"
   header_educate_community: "Online Community"
+  header_educate_requirements: "Technische Voraussetzungen"
   header_educate_tools: "Hilfsmittel und Videos"
   header_about_us: "Über uns "
   header_about_leadership: "Die Leitung"
@@ -1555,6 +1579,9 @@
   hoc_overview_dance_title: "Tanzparty"
   hoc_overview_dance_subtitle: "Programmiere eine Tanzparty, die du mit deinen Freunden teilen kannst. Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25 weiteren!"
   hoc_overview_dance_2019_subtitle: "Programmiere eine Tanzparty, die du mit deinen Freunden teilen kannst. Mit Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 weiteren!"
+  hoc_overview_dance_2022_subtitle: "Programmiere eine Tanzparty, die du mit deinen Freunden teilen kannst. Mit Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Musik aus „Encanto“ und mehr!"
+  hoc_overview_hello_world_2022_subtitle: "Wähle aus unseren lustigen Themen aus und programmiere interaktiver Charakter in einer Welt, die du erschaffen hast."
+  hoc_overview_hello_world_2022_alt_text: "Animierte Astronauten- und Tierfiguren schweben um eine Illustration der Erde."
   hoc_overview_title: "Hour of Code Aktivitäten von Code.org"
   hoc_overview_subtitle: "Die <a href=\"https://hourofcode.com\">Hour of Code</a> ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Länder erreicht. Jeder kann, egal wo, ein Hour of Code Veranstaltung organisieren oder eines der über 200 einstündigen Tutorials versuchen, verfügbar in über 45 Sprachen."
   hoc_overview_subtitle_markdown: "Die [Hour of Code] (https://hourofcode.com) ist eine globale Bewegung, die einige Millionen Studenten in über 180 Ländern erreicht. Jeder kann ein \"Hour of Code\"-Event organisieren oder eines der über 500 einstündigen Tutorials ausprobieren, die in über 45 Sprachen verfügbar sind."
@@ -1600,9 +1627,13 @@
   hoc2018_mc_educators_box3_title: "Teilnahme an einem kostenlosen Schülerworkshop"
   hoc2018_mc_educators_box3_desc: "Besuche einen Microsoft Store in Deiner Nähe für einen kostenlosen Hour of Code Workshop. Für Teilnehmer aller Leistungsstufen, ab sechs Jahren."
   hoc2018_mc_educators_box3_button: "Finde einen Workshop"
+  hoc2022_mc_educators_box3_desc_markdown: 'Nutzen Sie diesen On-Demand-Kurs [kostenloser Kurs](%{free_course_link}) oder melden Sie Ihre Klasse zur Teilnahme an einem Live-Workshop von Hour of Code mit einem Gastlehrer an. Der Workshop wird während der CSEW vom 6. bis 11. Dezember mehrfach angeboten.'
+  hoc2022_mc_educators_box3_button: "Jetzt anmelden"
   hoc2018_mc_educators_box4_title: "Zugriff auf mehr Computer Wissenschafts-Ressourcen"
   hoc2018_mc_educators_box4_desc: "Sorgen Sie für Veränderungen in Ihrer Community mit digitalen Fähigkeiten und den Ressourcen für die Informatikausbildung von Microsoft."
   hoc2018_mc_educators_box4_button: "Ressourcen erkunden"
+  hoc2022_mc_educators_box4_desc: "Wecken Sie die Leidenschaft von K-12-Schülern für STEM mit einem 200-stündigen Informatik-Lehrplan, der von Block bis Python reicht und durch professionelle Weiterbildung unterstützt wird."
+  hoc2022_mc_educators_box4_button: "Lernen fortsetzen"
   hoc2018_mc_watch_videos: "Bevor du loslegst, sieh dir eines dieser inspirierenden Videos an"
   hoc2018_mc_videos_more: "Mehr <a href='%{inspiring_videos_playlist}'>inspirative Videos</a> über Vorbilder und Prominente"
   hoc2018_mc_careers_more: "Mehr <a href='%{careers_url}' target='_blank'>inspirative Videos</a> mit Profis aus dem Technologiebereich"
@@ -1718,6 +1749,9 @@
   hoc2021_mc_mee_villages_description: 'Machen Sie sich mit den Grundlagen des Programmierens vertraut und erforschen Sie mit Ihren SchülerInnen in Minecraft Vielfalt und Integration: Alles in dieser Unterrichts-Edition.'
   hoc2021_mc_mee_ai_title: "KI für die Zukunft"
   hoc2021_mc_mee_ai_description: 'Erforschen Sie KI mit Ihren Schülern und lernen Sie programmieren mit Minecraft: Alles in dieser Unterrichts-Edition.'
+  hoc2022_mc_mee_title: "Minecraft Escape Estate"
+  hoc2022_mc_mee_description: 'Entkomme der mysteriösen Villa im Morgengrauen und verdiene eine Million Smaragde! Das neue Hour of Code-Tutorial Minecraft  ist jetzt in Minecraft: Education Edition für Windows, Mac, Chromebook, Ipad und Mobile verfügbar. Erste Schritte mit kostenlosen Ressourcen, Schulungen und Videos für Pädagogen. '
+  hoc2022_mc_mee_timecraft_description: 'Reise in die Vergangenheit, um die Zukunft zu retten, in dieser kostenlosen Programmierstunde in Minecraft: Education Edition.'
   footer_powered_by_aws: "Betrieben von Amazon Web Services"
   footer_built_on_github: "Gebaut auf GitHub von Microsoft"
   codebytes_skinny_banner_title: "Besuchen Sie uns vom 7. bis 11. Dezember für unsere CodeBytes Live-Mini-Lektionen!"
@@ -1783,3 +1817,23 @@
   outbreak_tile_title: "Ausbruch"
   outbreak_tile_subtitle: "Ein Virus hat Monster-Town infiziert! Programmieren Sie einen Ausbruchssimulator und prognostizieren Sie, was mit den Nachbarn von Monster-Town geschehen wird."
   outbreak_tile_alt: "Eine Simulation, wie ein Virus sich in einer Gruppe violetter Monster verbreitet."
+  footer_cookie_notice: "Cookie-Meldung"
+  top_hoc_tutorial_applab_alt_text: "Eine braune Hand berührt mit dem Zeigefinger ein Touchscreen-Tablet, das Sterne und Lichtstrahlen vor einem blauen Hintergrund aussendet"
+  minecraft_tile_alt: "Zwei Minecraft-Charaktere, Steve und Alex, vor einem Hintergrund, der eine Minecraft-Szene mit Korallen, Delfinen und Seetang zeigt"
+  hoc2022_banner_title: "Entdecken, spielen und erschaffen!"
+  hoc2022_banner_description: "Das Universum erforschen, Tore erzielen und loslegen, es gibt viele Möglichkeiten, Informatik auszuprobieren!"
+  hoc2022_cta_primary: "Das ist neu"
+  hoc2022_cta_secondary: "Mehr Aktivitäten"
+  hoc2022_landing_page_explore_title: "Entdecken"
+  hoc2022_landing_page_explore_description: "Mit Informatik Türen zu neuen Welten öffnen!"
+  hoc2022_landing_page_play_title: "Spielen"
+  hoc2022_landing_page_play_description: "Übernimm das Feld und sammle Punkte!"
+  hoc2022_landing_page_create_title: "Erschaffen"
+  hoc2022_landing_page_create_description: "Mach etwas Verrücktes und Wunderbares!"
+  hoc2022_landing_page_banner_alt_left: "Ein Außerirdischer tanzt neben Saturn im Weltraum"
+  hoc2022_landing_page_banner_alt_right: "Ein Roboter dribbelt vor einer startenden Rakete einen Fußball im Weltraum."
+  try_it_yourself: "Versuche es selbst!"
+  try_an_activity: "Aktivität"
+  see_more_activities: "Weitere Aktivitäten ansehen"
+  hoc2022_nasa_banner_heading: "Schließen Sie sich der NASA für einen speziellen Hour of Code-Beitrag über Computerwissenschaft im Weltraum an!"
+  hoc2022_nasa_banner_description: "kPremiere am 5. Dezember um 10 Uhr ET auf dem YouTube-Kanal von NASA STEM."

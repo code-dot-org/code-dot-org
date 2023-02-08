@@ -3,10 +3,12 @@ class LessonsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
+  before_action :disable_session_for_cached_pages, only: [:show]
 
   include LevelsHelper
+  include CachedUnitHelper
 
-  # Script levels which are not in activity sections will not show up on the
+  # Unit levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
   # script levels to be lost. Prevent this by disallowing editing in this case.
   # This helps avoid losing data from existing scripts by accidentally editing
@@ -18,7 +20,7 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1
   def show
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated
 
     @lesson = script.lessons.find do |l|
@@ -38,7 +40,7 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
 
     @lesson = script.lessons.find do |l|
@@ -53,7 +55,7 @@ class LessonsController < ApplicationController
 
   # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
   def edit_with_lesson_position
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
@@ -135,8 +137,6 @@ class LessonsController < ApplicationController
       # available to lessons in migrated scripts, which only need to be
       # serialized using the new json format.
       @lesson.script.write_script_json
-
-      Script.merge_and_write_i18n(@lesson.i18n_hash, @lesson.script.name)
     end
 
     render json: @lesson.summarize_for_lesson_edit
@@ -145,17 +145,24 @@ class LessonsController < ApplicationController
   end
 
   def clone
-    destination_script = Script.find_by_name(params[:destinationUnitName])
+    destination_script = Unit.find_by_name(params[:destinationUnitName])
     raise "Cannot find script #{params[:destinationUnitName]}" unless destination_script
     raise 'Destination script and lesson script must be in a course version' unless destination_script.get_course_version && @lesson.script.get_course_version
     raise 'Lessons current unit and destination unit must both use code studio lesson plans' unless !destination_script.use_legacy_lesson_plans && !@lesson.script.use_legacy_lesson_plans
     new_level_suffix = params[:newLevelSuffix].presence
     ActiveRecord::Base.transaction do
       copied_lesson = @lesson.copy_to_unit(destination_script, new_level_suffix)
-      render(status: 200, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
+      render(status: :ok, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
     end
   rescue => err
     render(json: {error: err.message}.to_json, status: :not_acceptable)
+  end
+
+  # Return true if request is one that can be publicly cached.
+  def cachable_request?(request)
+    script = Unit.get_from_cache(request.params[:script_id])
+    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
+      !ScriptConfig.uncached_script_level_path?(request.path)
   end
 
   private

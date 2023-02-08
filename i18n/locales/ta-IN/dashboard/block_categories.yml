@@ -2,12 +2,15 @@ ta:
   data:
     block_categories:
       Actions: செயல்கள்
+      Category: வகை
       Color: நிறம்
       Conditionals: நிபந்தனைகள்
       Dancers: நடனக்கலைஞர்கள்
+      Effects: விளைவுகள்
       Events: நிகழ்வுகள்
       Functions: செயல்பாடுகள்
       Groups: குழுக்கள்
+      Location: இடம்
       Logic: தர்க்கம்
       Loops: சுழற்சிகள்
       Math: கணிதம்

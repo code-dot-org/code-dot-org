@@ -2,6 +2,64 @@
   "se-FI": {
     "data": {
       "vocabularies": {
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "input/coursef/2022": {
+          "word": "Inputa"
+        },
+        "internet/coursef/2022": {
+          "word": "Interneahtta"
+        },
+        "copyright/coursee/2022": {
+          "word": "Dahkkivuoigatvuohta"
+        },
+        "drop/courseb/2022": {
+          "word": "Gahčá"
+        },
+        "drop/pre-express/2022": {
+          "word": "Gahčá"
+        },
+        "drop/coursea/2022": {
+          "word": "Gahčá"
+        },
+        "input/csd/2022": {
+          "word": "Inputa"
+        },
+        "processing/csd/2022": {
+          "word": "Gieđahallan"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Digitála Luodda"
+        },
+        "copyright/csd/2022": {
+          "word": "Dahkkivuoigatvuohta"
+        },
+        "code/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "input/coursef/2021": {
           "word": "Inputa"
         },

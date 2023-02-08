@@ -2,6 +2,22 @@
 sr:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': средње
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': средње
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -420,6 +436,11 @@ sr:
             '"space"': Простор
             '"x"': x
             '"y"': у
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': срца
+            '"rain"': киша
       gamelab_addTarget:
         options:
           OPT:
@@ -438,7 +459,7 @@ sr:
           CONDITION:
             '"when"': када
             '"while"': док је
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': секунде
@@ -485,6 +506,12 @@ sr:
             '90': доле
             '180': лево
             '270': горе
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': средње
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -788,3 +815,8 @@ sr:
         text: помери се напред
       craft_placeTorch:
         text: постави бакљу
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': срца
+            '"rain"': киша

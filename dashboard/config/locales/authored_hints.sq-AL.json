@@ -29,6 +29,1139 @@
         },
         "CourseE_HOC 2018 Level_9b_2021": {
           "voyage_aquatic_9a": "A i sheh blloqet e koraleve blu dhe të kuqe? Përdori si tabela udhëzuese për t'u kthyer majtas e djathtas në murin koralor."
+        },
+        "CourseE_HOC 2018 Level_7a2022": {
+          "aquatic7": "Mund ta përdorësh bllokun e shtegut Nëse, për të ndihmuar veten në marrjen e kthesave te duhura."
+        },
+        "CourseE_HOC 2018 Level_9b2022": {
+          "voyage_aquatic_9a": "A i sheh blloqet e koraleve blu dhe të kuqe? Përdori si tabela udhëzuese për t'u kthyer majtas e djathtas në murin koralor."
+        },
+        "CourseD_Dance_2020_01": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfidat opsionale**\n\n-   Zgjidhni një këngë tjetër për të luajtur.\n-   Leviz valltarin tuaj në një vend të ri.\n-   Bëni më shumë se një vallezues."
+        },
+        "CourseD_Dance_2020_012022": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfidat opsionale**\n\n-   Zgjidhni një këngë tjetër për të luajtur.\n-   Leviz valltarin tuaj në një vend të ri.\n-   Bëni më shumë se një vallezues."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfidat opsionale**\n\n-   Zgjidhni një këngë tjetër për të luajtur.\n-   Leviz valltarin tuaj në një vend të ri.\n-   Bëni më shumë se një vallezues."
+        },
+        "CourseD_Dance_2020_02": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Vallezuesi duhet të kryejë një lëvizje.\n-   Ju duhet të shtypni një shigjetë.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\nPërdorni më shumë se një <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bllok."
+        },
+        "CourseD_Dance_2020_022022": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Vallezuesi duhet të kryejë një lëvizje.\n-   Ju duhet të shtypni një shigjetë.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\nPërdorni më shumë se një <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bllok."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Vallezuesi duhet të kryejë një lëvizje.\n-   Ju duhet të shtypni një shigjetë.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\nPërdorni më shumë se një <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bllok."
+        },
+        "CourseD_Dance_2020_03": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Vallezuesi duhet të kryejë një lëvizje.\n-   Ju duhet të shtypni një shigjetë.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Bëni një vallezues t'i përgjigjet butonave të majtë dhe të djathtë të shigjetave."
+        },
+        "CourseD_Dance_2020_032022": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Vallezuesi duhet të kryejë një lëvizje.\n-   Ju duhet të shtypni një shigjetë.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Bëni një vallezues t'i përgjigjet butonave të majtë dhe të djathtë të shigjetave."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Vallezuesi duhet të kryejë një lëvizje.\n-   Ju duhet të shtypni një shigjetë.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Bëni një vallezues t'i përgjigjet butonave të majtë dhe të djathtë të shigjetave."
+        },
+        "CourseD_Dance_2020_04": {
+          "validation": "**Si mund ta kaloj kete nivel?**\n\n-   Vallezuesi duhet te kaloje ne nje levizje te re pas 4 masave. \n\n-   Niveli perfundon pas 7 masave. "
+        },
+        "CourseD_Dance_2020_042022": {
+          "validation": "**Si mund ta kaloj kete nivel?**\n\n-   Vallezuesi duhet te kaloje ne nje levizje te re pas 4 masave. \n\n-   Niveli perfundon pas 7 masave. "
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Si mund ta kaloj kete nivel?**\n\n-   Vallezuesi duhet te kaloje ne nje levizje te re pas 4 masave. \n\n-   Niveli perfundon pas 7 masave. "
+        },
+        "CourseD_Dance_2020_05": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Pas 6 masave, vallezuesi juaj duhet të bëjë një valle të ndryshme nga ajo që ishte pas 4 masave.\n\n\\_Niveli përfundon pas 11 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Ndryshoni sfondin sa herë që vallezuesi ndrron levizjet."
+        },
+        "CourseD_Dance_2020_052022": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Pas 6 masave, vallezuesi juaj duhet të bëjë një valle të ndryshme nga ajo që ishte pas 4 masave.\n\n\\_Niveli përfundon pas 11 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Ndryshoni sfondin sa herë që vallezuesi ndrron levizjet."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Pas 6 masave, vallezuesi juaj duhet të bëjë një valle të ndryshme nga ajo që ishte pas 4 masave.\n\n\\_Niveli përfundon pas 11 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Ndryshoni sfondin sa herë që vallezuesi ndrron levizjet."
+        },
+        "CourseD_Dance_2020_06": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Krijo nje vallezues kryesor dhe nje grup te vallezuesve rezerve brenda kater matjeve te para te kanges.\n\n-   Ky nivel perfundon pas 7 matjeve",
+          "challenges": "\\*\\* Sfida opsionale\\*\\*\n\n-   Krijo shume grupe te vallezuesve rezerve. "
+        },
+        "CourseD_Dance_2020_062022": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Krijo nje vallezues kryesor dhe nje grup te vallezuesve rezerve brenda kater matjeve te para te kanges.\n\n-   Ky nivel perfundon pas 7 matjeve",
+          "challenges": "\\*\\* Sfida opsionale\\*\\*\n\n-   Krijo shume grupe te vallezuesve rezerve. "
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Krijo nje vallezues kryesor dhe nje grup te vallezuesve rezerve brenda kater matjeve te para te kanges.\n\n-   Ky nivel perfundon pas 7 matjeve",
+          "challenges": "\\*\\* Sfida opsionale\\*\\*\n\n-   Krijo shume grupe te vallezuesve rezerve. "
+        },
+        "CourseD_Dance_2020_07": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ndrroni madhesine e se paku nje valletari.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Eksperimentoni duke ndryshuar veqantite e tjera (gjerësia, lartësia, rotacioni, etj."
+        },
+        "CourseD_Dance_2020_072022": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ndrroni madhesine e se paku nje valletari.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Eksperimentoni duke ndryshuar veqantite e tjera (gjerësia, lartësia, rotacioni, etj."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ndrroni madhesine e se paku nje valletari.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Eksperimentoni duke ndryshuar veqantite e tjera (gjerësia, lartësia, rotacioni, etj."
+        },
+        "CourseD_Dance_2020_08": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ndryshoni ngjyren e se paku nje valletari.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "tint_hint": "A keni verejtur se vallezuesit tuaj nuk ndryshojne ne ngjyren qe ju e zgjidhni? Kjo eshte per shkak se \"ngjyrat\" perzijne ngjyren qe ju keni zgjedhur me ngjyren e vallezuesit."
+        },
+        "CourseD_Dance_2020_082022": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ndryshoni ngjyren e se paku nje valletari.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "tint_hint": "A keni verejtur se vallezuesit tuaj nuk ndryshojne ne ngjyren qe ju e zgjidhni? Kjo eshte per shkak se \"ngjyrat\" perzijne ngjyren qe ju keni zgjedhur me ngjyren e vallezuesit."
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ndryshoni ngjyren e se paku nje valletari.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "tint_hint": "A keni verejtur se vallezuesit tuaj nuk ndryshojne ne ngjyren qe ju e zgjidhni? Kjo eshte per shkak se \"ngjyrat\" perzijne ngjyren qe ju keni zgjedhur me ngjyren e vallezuesit."
+        },
+        "CourseD_Dance_2020_09": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Thjesht shtypni butonin “Finish”!",
+          "repeat_every_ideas": "\\*\\*Keni nevojë për disa ide? \\*\\*\n\n-   Ndyrhosni madhesine e nje vallezuesi me shume se nje here ne menyre qe ta beni qe ai te rritet. \n-   Ndryshoni rotanicion e nje vallezuesi me shume se nje here ne menyre qe te beni te rrotullohet! \n\n\\_Ju gjithashtu mund të përdorni numra negativë për të krijuar një efekt të kundërt! \\_",
+          "next_previous": "**Sfide opsionale**\n\n-   Ju mund poashtu te perdorni kete event te bllokut qe te kaloni permes nje liste te levizjeve te vallezimit duke i vendosur levizjet ne \"(Random\\_\",\"(Next)\". ose \"(Previous)\n\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_092022": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Thjesht shtypni butonin “Finish”!",
+          "repeat_every_ideas": "\\*\\*Keni nevojë për disa ide? \\*\\*\n\n-   Ndyrhosni madhesine e nje vallezuesi me shume se nje here ne menyre qe ta beni qe ai te rritet. \n-   Ndryshoni rotanicion e nje vallezuesi me shume se nje here ne menyre qe te beni te rrotullohet! \n\n\\_Ju gjithashtu mund të përdorni numra negativë për të krijuar një efekt të kundërt! \\_",
+          "next_previous": "**Sfide opsionale**\n\n-   Ju mund poashtu te perdorni kete event te bllokut qe te kaloni permes nje liste te levizjeve te vallezimit duke i vendosur levizjet ne \"(Random\\_\",\"(Next)\". ose \"(Previous)\n\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Thjesht shtypni butonin “Finish”!",
+          "repeat_every_ideas": "\\*\\*Keni nevojë për disa ide? \\*\\*\n\n-   Ndyrhosni madhesine e nje vallezuesi me shume se nje here ne menyre qe ta beni qe ai te rritet. \n-   Ndryshoni rotanicion e nje vallezuesi me shume se nje here ne menyre qe te beni te rrotullohet! \n\n\\_Ju gjithashtu mund të përdorni numra negativë për të krijuar një efekt të kundërt! \\_",
+          "next_previous": "**Sfide opsionale**\n\n-   Ju mund poashtu te perdorni kete event te bllokut qe te kaloni permes nje liste te levizjeve te vallezimit duke i vendosur levizjet ne \"(Random\\_\",\"(Next)\". ose \"(Previous)\n\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1": {
+          "alternate": "Blloku alternativ është në kategorinë “Valltarë”."
+        },
+        "CourseD_Dance_2020_bonus12022": {
+          "alternate": "Blloku alternativ është në kategorinë “Valltarë”."
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Blloku alternativ është në kategorinë “Valltarë”."
+        },
+        "CourseD_Dance_2022_lessonextra1": {
+          "alternate": "Blloku alternativ është në kategorinë “Valltarë”."
+        },
+        "CourseD_Dance_2022_lessonextra10a": {
+          "alternate": "Blloku alternativ është në kategorinë “Valltarë”."
+        },
+        "CourseD_Dance_Party_01": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfidat opsionale**\n\n-   Zgjidhni një këngë tjetër për të luajtur.\n-   Riemërtoni balerin tuaj."
+        },
+        "CourseD_Dance_Party_02": {
+          "validation": "**Si mund ta kaloj kete nivel?**\n\n-   Vallezuesi duhet te kaloje ne nje levizje te re pas 4 masave. \n\n-   Niveli perfundon pas 7 masave. "
+        },
+        "CourseD_Dance_Party_03": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Pas 6 masave, vallezuesi juaj duhet të bëjë një valle të ndryshme nga ajo që ishte pas 4 masave.\n\n\\_Niveli përfundon pas 11 masave. \\_"
+        },
+        "CourseD_Dance_Party_04": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ju duhet të bëni ndryshimin e efektit të sfondit diku para masës së shtatë të këngës.\n\n\\_Ky nivel përfundon pas 9 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\nNdryshoni efektin e sfondit në pika të ndryshme gjatë këngës duke lidhur bllokun e ri nën ngjarjet <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> ."
+        },
+        "CourseD_Dance_Party_06": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 5 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Shto një balerin e tretë (ose sa më shumë që të doni!)\n-   Bëni të gjithë kërcimtarë tuaj të kryer lëvizje të ndryshme në pika të ndryshme në këngë."
+        },
+        "CourseD_Dance_Party_08": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 5 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Eksperimentoni duke ndryshuar veqantite e tjera (gjerësia, lartësia, rotacioni, etj.)"
+        },
+        "CourseD_Dance_Party_09": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 7 masave. \\_"
+        },
+        "CourseD_Dance_Party_10": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 7 masave. \\_"
+        },
+        "CourseD_Dance_Party_11": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 7 masave. \\_"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 7 masave. \\_"
+        },
+        "CourseE_HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Shihni **Fenerë Detit** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Si mund të përdorni një kushtëzuar me ta për të marrë përmes Monumentit të Oqeanit?"
+        },
+        "CourseE_HOC 2018 Level_102022": {
+          "voyage_aquatic_10a": "Shihni **Fenerë Detit** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Si mund të përdorni një kushtëzuar me ta për të marrë përmes Monumentit të Oqeanit?"
+        },
+        "CourseE_HOC 2018 Level_10_2020": {
+          "voyage_aquatic_10a": "Shihni **Fenerë Detit** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Si mund të përdorni një kushtëzuar me ta për të marrë përmes Monumentit të Oqeanit?"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Shihni **Fenerë Detit** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Si mund të përdorni një kushtëzuar me ta për të marrë përmes Monumentit të Oqeanit?"
+        },
+        "Dance_2019_01": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfidat opsionale**\n\n-   Zgjidhni një këngë tjetër për të luajtur.\n-   Leviz valltarin tuaj në një vend të ri.\n-   Bëni më shumë se një vallezues."
+        },
+        "Dance_2019_02": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Vallezuesi duhet të kryejë një lëvizje.\n-   Ju duhet të shtypni një shigjetë.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\nPërdorni më shumë se një <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> bllok."
+        },
+        "Dance_2019_03": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Vallezuesi duhet të kryejë një lëvizje.\n-   Ju duhet të shtypni një shigjetë.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Bëni një vallezues t'i përgjigjet butonave të majtë dhe të djathtë të shigjetave."
+        },
+        "Dance_2019_04": {
+          "validation": "**Si mund ta kaloj kete nivel?**\n\n-   Vallezuesi duhet te kaloje ne nje levizje te re pas 4 masave. \n\n-   Niveli perfundon pas 7 masave. "
+        },
+        "Dance_2019_05": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Pas 6 masave, vallezuesi juaj duhet të bëjë një valle të ndryshme nga ajo që ishte pas 4 masave.\n\n\\_Niveli përfundon pas 11 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Ndryshoni sfondin sa herë që vallezuesi ndrron levizjet."
+        },
+        "Dance_2019_06": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Krijo nje vallezues kryesor dhe nje grup te vallezuesve rezerve brenda kater matjeve te para te kanges.\n\n-   Ky nivel perfundon pas 7 matjeve",
+          "challenges": "\\*\\* Sfida opsionale\\*\\*\n\n-   Krijo shume grupe te vallezuesve rezerve. "
+        },
+        "Dance_2019_07": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ndrroni madhesine e se paku nje valletari.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Eksperimentoni duke ndryshuar veqantite e tjera (gjerësia, lartësia, rotacioni, etj."
+        },
+        "Dance_2019_08": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ndryshoni ngjyren e se paku nje valletari.\n\n\\_Ky nivel përfundon pas 6 masave. \\_",
+          "tint_hint": "A keni verejtur se vallezuesit tuaj nuk ndryshojne ne ngjyren qe ju e zgjidhni? Kjo eshte per shkak se \"ngjyrat\" perzijne ngjyren qe ju keni zgjedhur me ngjyren e vallezuesit."
+        },
+        "Dance_2019_09": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Thjesht shtypni butonin “Finish”!",
+          "repeat_every_ideas": "\\*\\*Keni nevojë për disa ide? \\*\\*\n\n-   Ndyrhosni madhesine e nje vallezuesi me shume se nje here ne menyre qe ta beni qe ai te rritet. \n-   Ndryshoni rotanicion e nje vallezuesi me shume se nje here ne menyre qe te beni te rrotullohet! \n\n\\_Ju gjithashtu mund të përdorni numra negativë për të krijuar një efekt të kundërt! \\_",
+          "next_previous": "**Sfide opsionale**\n\n-   Ju mund poashtu te perdorni kete event te bllokut qe te kaloni permes nje liste te levizjeve te vallezimit duke i vendosur levizjet ne \"(Random\\_\",\"(Next)\". ose \"(Previous)\n\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "Dance_Party_01": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 4 masave. \\_",
+          "challenges": "**Sfidat opsionale**\n\n-   Zgjidhni një këngë tjetër për të luajtur.\n-   Riemërtoni balerin tuaj."
+        },
+        "Dance_Party_02": {
+          "validation": "**Si mund ta kaloj kete nivel?**\n\n-   Vallezuesi duhet te kaloje ne nje levizje te re pas 4 masave. \n\n-   Niveli perfundon pas 7 masave. "
+        },
+        "Dance_Party_03": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Pas 6 masave, vallezuesi juaj duhet të bëjë një valle të ndryshme nga ajo që ishte pas 4 masave.\n\n\\_Niveli përfundon pas 11 masave. \\_"
+        },
+        "Dance_Party_04": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Ju duhet të bëni ndryshimin e efektit të sfondit diku para masës së shtatë të këngës.\n\n\\_Ky nivel përfundon pas 9 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\nNdryshoni efektin e sfondit në pika të ndryshme gjatë këngës duke lidhur bllokun e ri nën ngjarjet <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> ."
+        },
+        "Dance_Party_05": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   balerin juaj duhet të ciklit nëpër të paktën 4 lëviz të ndryshme valle para përfundon niveli.\n\n\\_Ky nivel përfundon pas 12 masave. \\_"
+        },
+        "Dance_Party_06": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 5 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Shto një balerin e tretë (ose sa më shumë që të doni!)\n-   Bëni të gjithë kërcimtarë tuaj të kryer lëvizje të ndryshme në pika të ndryshme në këngë."
+        },
+        "Dance_Party_08": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 5 masave. \\_",
+          "challenges": "**Sfida opsionale**\n\n-   Eksperimentoni duke ndryshuar veqantite e tjera (gjerësia, lartësia, rotacioni, etj.)"
+        },
+        "Dance_Party_09": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 7 masave. \\_"
+        },
+        "Dance_Party_10": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 7 masave. \\_"
+        },
+        "Dance_Party_11": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 7 masave. \\_"
+        },
+        "Dance_Party_11_5": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 7 masave. \\_"
+        },
+        "Dance_Party_11b": {
+          "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Përdorni `kur shigjeta e majtë të shtypur` bllok për ta bërë Robot të bëjë një veprim valle kur ju shtypni atë.\n\n\\_Ky nivel përfundon pas 7 masave. \\_"
+        },
+        "Dance_Party_extras_alternate_2019": {
+          "alternate": "Blloku alternativ është në kategorinë “Valltarë”."
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_b": "Nëse i aktivizoni funksionet saktë, kjo është rruga që do të udhëtoni...",
+          "Function_intro_Ryan_a": "Ju mund të aktivizoni një funksion shumë herë brenda programit tuaj! Provoni ta aktivizoni atë dy herë për të zgjidhur këtë mister."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_b": "Nëse i aktivizoni funksionet saktë, kjo është rruga që do të udhëtoni...",
+          "Function_intro_Ryan_a": "Ju mund të aktivizoni një funksion shumë herë brenda programit tuaj! Provoni ta aktivizoni atë dy herë për të zgjidhur këtë mister."
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_b": "Nëse i aktivizoni funksionet saktë, kjo është rruga që do të udhëtoni...",
+          "Function_intro_Ryan_a": "Ju mund të aktivizoni një funksion shumë herë brenda programit tuaj! Provoni ta aktivizoni atë dy herë për të zgjidhur këtë mister."
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_b": "Nëse i aktivizoni funksionet saktë, kjo është rruga që do të udhëtoni...",
+          "Function_intro_Ryan_a": "Ju mund të aktivizoni një funksion shumë herë brenda programit tuaj! Provoni ta aktivizoni atë dy herë për të zgjidhur këtë mister."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "Nëse i aktivizoni funksionet saktë, kjo është rruga që do të udhëtoni...",
+          "Function_intro_Ryan_a": "Ju mund të aktivizoni një funksion shumë herë brenda programit tuaj! Provoni ta aktivizoni atë dy herë për të zgjidhur këtë mister."
+        },
+        "HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Shihni **Fenerë Detit** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Si mund të përdorni një kushtëzuar me ta për të marrë përmes Monumentit të Oqeanit?"
+        },
+        "MC Agent Freeplay": {
+          "MC_HOC_2017_13_Cole_a": "Mundohuni të paturit e Agjentit të ndërtuar disa këngë minecart kështu që ju mund të eksplorojnë botën!"
+        },
+        "MC_HOC_2017_01_RETRY": {
+          "MC_HOC_2017_01_RETRY_a": "Terhiq një `move përpara` bllok nga kutia e veglave në hapësirën e punës, dhe kapeni atë në vend nën bllokun `kur drejtuar`.",
+          "MC_HOC_2017_01_RETRY_b": "Mos harroni të klikoni “Run” për të drejtuar kodin për Agjentin.",
+          "MC_HOC_2017_01_RETRY_c": "Pasi Agjenti ka drejtuar të gjithë kodin e saj, ju mund të lëvizin lojtar me arrow keys!"
+        },
+        "MC_HOC_2017_01_RETRY2022": {
+          "MC_HOC_2017_01_RETRY_a": "Terhiq një `move përpara` bllok nga kutia e veglave në hapësirën e punës, dhe kapeni atë në vend nën bllokun `kur drejtuar`.",
+          "MC_HOC_2017_01_RETRY_b": "Mos harroni të klikoni “Run” për të drejtuar kodin për Agjentin.",
+          "MC_HOC_2017_01_RETRY_c": "Pasi Agjenti ka drejtuar të gjithë kodin e saj, ju mund të lëvizin lojtar me arrow keys!"
+        },
+        "MC_HOC_2017_01_RETRY_2019": {
+          "MC_HOC_2017_01_RETRY_a": "Terhiq një `move përpara` bllok nga kutia e veglave në hapësirën e punës, dhe kapeni atë në vend nën bllokun `kur drejtuar`.",
+          "MC_HOC_2017_01_RETRY_b": "Mos harroni të klikoni “Run” për të drejtuar kodin për Agjentin.",
+          "MC_HOC_2017_01_RETRY_c": "Pasi Agjenti ka drejtuar të gjithë kodin e saj, ju mund të lëvizin lojtar me arrow keys!"
+        },
+        "MC_HOC_2017_01_RETRY_2020": {
+          "MC_HOC_2017_01_RETRY_a": "Terhiq një `move përpara` bllok nga kutia e veglave në hapësirën e punës, dhe kapeni atë në vend nën bllokun `kur drejtuar`.",
+          "MC_HOC_2017_01_RETRY_b": "Mos harroni të klikoni “Run” për të drejtuar kodin për Agjentin.",
+          "MC_HOC_2017_01_RETRY_c": "Pasi Agjenti ka drejtuar të gjithë kodin e saj, ju mund të lëvizin lojtar me arrow keys!"
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Terhiq një `move përpara` bllok nga kutia e veglave në hapësirën e punës, dhe kapeni atë në vend nën bllokun `kur drejtuar`.",
+          "MC_HOC_2017_01_RETRY_b": "Mos harroni të klikoni “Run” për të drejtuar kodin për Agjentin.",
+          "MC_HOC_2017_01_RETRY_c": "Pasi Agjenti ka drejtuar të gjithë kodin e saj, ju mund të lëvizin lojtar me arrow keys!"
+        },
+        "MC_HOC_2017_02_Cole": {
+          "MC_HOC_2017_02_Cole_a": "Lëvizni Agjentin përpara dy hapësira për të qëndruar në pllakën e presionit. Që do të hapë derën për lojtar tuaj.",
+          "MC_HOC_2017_02_Cole_b": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_02_Cole_c": "Pasi Agjenti ka hapur derën, përdorni arrow keys për të lëvizur lojtar në hartë!",
+          "MC_HOC_2017_02_Cole_d": "Sigurohuni që Agjenti është duke ndjekur rrugën e përshkruar në hartë!"
+        },
+        "MC_HOC_2017_02_Cole2022": {
+          "MC_HOC_2017_02_Cole_a": "Lëvizni Agjentin përpara dy hapësira për të qëndruar në pllakën e presionit. Që do të hapë derën për lojtar tuaj.",
+          "MC_HOC_2017_02_Cole_b": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_02_Cole_c": "Pasi Agjenti ka hapur derën, përdorni arrow keys për të lëvizur lojtar në hartë!",
+          "MC_HOC_2017_02_Cole_d": "Sigurohuni që Agjenti është duke ndjekur rrugën e përshkruar në hartë!"
+        },
+        "MC_HOC_2017_02_Cole_2019": {
+          "MC_HOC_2017_02_Cole_a": "Lëvizni Agjentin përpara dy hapësira për të qëndruar në pllakën e presionit. Që do të hapë derën për lojtar tuaj.",
+          "MC_HOC_2017_02_Cole_b": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_02_Cole_c": "Pasi Agjenti ka hapur derën, përdorni arrow keys për të lëvizur lojtar në hartë!",
+          "MC_HOC_2017_02_Cole_d": "Sigurohuni që Agjenti është duke ndjekur rrugën e përshkruar në hartë!"
+        },
+        "MC_HOC_2017_02_Cole_2020": {
+          "MC_HOC_2017_02_Cole_a": "Lëvizni Agjentin përpara dy hapësira për të qëndruar në pllakën e presionit. Që do të hapë derën për lojtar tuaj.",
+          "MC_HOC_2017_02_Cole_b": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_02_Cole_c": "Pasi Agjenti ka hapur derën, përdorni arrow keys për të lëvizur lojtar në hartë!",
+          "MC_HOC_2017_02_Cole_d": "Sigurohuni që Agjenti është duke ndjekur rrugën e përshkruar në hartë!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Lëvizni Agjentin përpara dy hapësira për të qëndruar në pllakën e presionit. Që do të hapë derën për lojtar tuaj.",
+          "MC_HOC_2017_02_Cole_b": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_02_Cole_c": "Pasi Agjenti ka hapur derën, përdorni arrow keys për të lëvizur lojtar në hartë!",
+          "MC_HOC_2017_02_Cole_d": "Sigurohuni që Agjenti është duke ndjekur rrugën e përshkruar në hartë!"
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_a": "Pasi të keni marrë Agjenti në pjatë presion, ju mund të përdorni arrow çelësat tuaj për të ecur lojtar në busull!",
+          "MC_HOC_2017_03_Cole_b": "A ndihet kodi pak i gjatë? Provoni të përdorni një lak `përsëritur` dhe shihni nëse mund ta kuptoni se si ta bëni atë më të shkurtër!"
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_a": "Pasi të keni marrë Agjenti në pjatë presion, ju mund të përdorni arrow çelësat tuaj për të ecur lojtar në busull!",
+          "MC_HOC_2017_03_Cole_b": "A ndihet kodi pak i gjatë? Provoni të përdorni një lak `përsëritur` dhe shihni nëse mund ta kuptoni se si ta bëni atë më të shkurtër!"
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_a": "Pasi të keni marrë Agjenti në pjatë presion, ju mund të përdorni arrow çelësat tuaj për të ecur lojtar në busull!",
+          "MC_HOC_2017_03_Cole_b": "A ndihet kodi pak i gjatë? Provoni të përdorni një lak `përsëritur` dhe shihni nëse mund ta kuptoni se si ta bëni atë më të shkurtër!"
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_a": "Pasi të keni marrë Agjenti në pjatë presion, ju mund të përdorni arrow çelësat tuaj për të ecur lojtar në busull!",
+          "MC_HOC_2017_03_Cole_b": "A ndihet kodi pak i gjatë? Provoni të përdorni një lak `përsëritur` dhe shihni nëse mund ta kuptoni se si ta bëni atë më të shkurtër!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Pasi të keni marrë Agjenti në pjatë presion, ju mund të përdorni arrow çelësat tuaj për të ecur lojtar në busull!",
+          "MC_HOC_2017_03_Cole_b": "A ndihet kodi pak i gjatë? Provoni të përdorni një lak `përsëritur` dhe shihni nëse mund ta kuptoni se si ta bëni atë më të shkurtër!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Përdorni bllokun `ana e djathtë` për të ndryshuar drejtimin e agjentit ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agjenti ka nevojë vetëm për të marrë në pjatë e parë presion për të lejuar Alex ose Steve deri në sëpatë."
+        },
+        "MC_HOC_2017_04POINT5_RYAN2022": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Përdorni bllokun `ana e djathtë` për të ndryshuar drejtimin e agjentit ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agjenti ka nevojë vetëm për të marrë në pjatë e parë presion për të lejuar Alex ose Steve deri në sëpatë."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2019": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Përdorni bllokun `ana e djathtë` për të ndryshuar drejtimin e agjentit ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agjenti ka nevojë vetëm për të marrë në pjatë e parë presion për të lejuar Alex ose Steve deri në sëpatë."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2020": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Përdorni bllokun `ana e djathtë` për të ndryshuar drejtimin e agjentit ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agjenti ka nevojë vetëm për të marrë në pjatë e parë presion për të lejuar Alex ose Steve deri në sëpatë."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Përdorni bllokun `ana e djathtë` për të ndryshuar drejtimin e agjentit ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agjenti ka nevojë vetëm për të marrë në pjatë e parë presion për të lejuar Alex ose Steve deri në sëpatë."
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti duhet të `ecë përpara` 7 herë. Si mund të përdorni një lak `përsëritur` për ta bërë këtë të ndodhë?",
+          "MC_HOC_2017_04_Cole_c": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_04_Cole_b": "Pasi Agjenti merr në pllakën e presionit, Agjenti do të hapë derën për lojtarin."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti duhet të `ecë përpara` 7 herë. Si mund të përdorni një lak `përsëritur` për ta bërë këtë të ndodhë?",
+          "MC_HOC_2017_04_Cole_c": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_04_Cole_b": "Pasi Agjenti merr në pllakën e presionit, Agjenti do të hapë derën për lojtarin."
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti duhet të `ecë përpara` 7 herë. Si mund të përdorni një lak `përsëritur` për ta bërë këtë të ndodhë?",
+          "MC_HOC_2017_04_Cole_c": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_04_Cole_b": "Pasi Agjenti merr në pllakën e presionit, Agjenti do të hapë derën për lojtarin."
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti duhet të `ecë përpara` 7 herë. Si mund të përdorni një lak `përsëritur` për ta bërë këtë të ndodhë?",
+          "MC_HOC_2017_04_Cole_c": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_04_Cole_b": "Pasi Agjenti merr në pllakën e presionit, Agjenti do të hapë derën për lojtarin."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti duhet të `ecë përpara` 7 herë. Si mund të përdorni një lak `përsëritur` për ta bërë këtë të ndodhë?",
+          "MC_HOC_2017_04_Cole_c": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_04_Cole_b": "Pasi Agjenti merr në pllakën e presionit, Agjenti do të hapë derën për lojtarin."
+        },
+        "MC_HOC_2017_05_Cole": {
+          "MC_HOC_2017_05_Cole_a": "A e dini se ju mund të vënë më shumë se një pjesë e kodit brenda një lak? Provoni të ecni përpara**dhe** vendosjen e një dërrasë brenda një `përsëritur` për të përfunduar këtë mister.",
+          "MC_HOC_2017_05_Cole_b": "Get Agjenti përtej lumit, ndërtimin e një urë si ju shkoni."
+        },
+        "MC_HOC_2017_05_Cole2022": {
+          "MC_HOC_2017_05_Cole_a": "A e dini se ju mund të vënë më shumë se një pjesë e kodit brenda një lak? Provoni të ecni përpara**dhe** vendosjen e një dërrasë brenda një `përsëritur` për të përfunduar këtë mister.",
+          "MC_HOC_2017_05_Cole_b": "Get Agjenti përtej lumit, ndërtimin e një urë si ju shkoni."
+        },
+        "MC_HOC_2017_05_Cole_2019": {
+          "MC_HOC_2017_05_Cole_a": "A e dini se ju mund të vënë më shumë se një pjesë e kodit brenda një lak? Provoni të ecni përpara**dhe** vendosjen e një dërrasë brenda një `përsëritur` për të përfunduar këtë mister.",
+          "MC_HOC_2017_05_Cole_b": "Get Agjenti përtej lumit, ndërtimin e një urë si ju shkoni."
+        },
+        "MC_HOC_2017_05_Cole_2020": {
+          "MC_HOC_2017_05_Cole_a": "A e dini se ju mund të vënë më shumë se një pjesë e kodit brenda një lak? Provoni të ecni përpara**dhe** vendosjen e një dërrasë brenda një `përsëritur` për të përfunduar këtë mister.",
+          "MC_HOC_2017_05_Cole_b": "Get Agjenti përtej lumit, ndërtimin e një urë si ju shkoni."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "A e dini se ju mund të vënë më shumë se një pjesë e kodit brenda një lak? Provoni të ecni përpara**dhe** vendosjen e një dërrasë brenda një `përsëritur` për të përfunduar këtë mister.",
+          "MC_HOC_2017_05_Cole_b": "Get Agjenti përtej lumit, ndërtimin e një urë si ju shkoni."
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_a": "Sa herë e bën këtë lak të ekzekutohet? Sa herë _should_ ajo të aktivizohet?",
+          "MC_HOC_2017_06_Cole_b": "Ndihmo Agjentin per te ndertuar nje ure permbi uje! "
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_a": "Sa herë e bën këtë lak të ekzekutohet? Sa herë _should_ ajo të aktivizohet?",
+          "MC_HOC_2017_06_Cole_b": "Ndihmo Agjentin per te ndertuar nje ure permbi uje! "
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_a": "Sa herë e bën këtë lak të ekzekutohet? Sa herë _should_ ajo të aktivizohet?",
+          "MC_HOC_2017_06_Cole_b": "Ndihmo Agjentin per te ndertuar nje ure permbi uje! "
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_a": "Sa herë e bën këtë lak të ekzekutohet? Sa herë _should_ ajo të aktivizohet?",
+          "MC_HOC_2017_06_Cole_b": "Ndihmo Agjentin per te ndertuar nje ure permbi uje! "
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Sa herë e bën këtë lak të ekzekutohet? Sa herë _should_ ajo të aktivizohet?",
+          "MC_HOC_2017_06_Cole_b": "Ndihmo Agjentin per te ndertuar nje ure permbi uje! "
+        },
+        "MC_HOC_2017_07_Cole": {
+          "MC_HOC_2017_07_Cole_c": "Të gjithë ju duhet të keni Agjenti të bëjë është të qartë rrugën për Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Për të zgjidhur këtë mister, kuptoj se çfarë funksioni `rruga e qartë` bën dhe e quajnë atë sa herë që keni nevojë duke përdorur bllokun e vogël të gjelbër `qartë rrugë` nga kutia e veglave.",
+          "MC_HOC_2017_07_Cole_b": "Provoni përzierjen blloqe funksion me blloqe të tjera nga toolbox për t'ju ndihmuar të zgjidhni këtë mister."
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "MC_HOC_2017_07_Cole_c": "Të gjithë ju duhet të keni Agjenti të bëjë është të qartë rrugën për Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Për të zgjidhur këtë mister, kuptoj se çfarë funksioni `rruga e qartë` bën dhe e quajnë atë sa herë që keni nevojë duke përdorur bllokun e vogël të gjelbër `qartë rrugë` nga kutia e veglave.",
+          "MC_HOC_2017_07_Cole_b": "Provoni përzierjen blloqe funksion me blloqe të tjera nga toolbox për t'ju ndihmuar të zgjidhni këtë mister."
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "MC_HOC_2017_07_Cole_c": "Të gjithë ju duhet të keni Agjenti të bëjë është të qartë rrugën për Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Për të zgjidhur këtë mister, kuptoj se çfarë funksioni `rruga e qartë` bën dhe e quajnë atë sa herë që keni nevojë duke përdorur bllokun e vogël të gjelbër `qartë rrugë` nga kutia e veglave.",
+          "MC_HOC_2017_07_Cole_b": "Provoni përzierjen blloqe funksion me blloqe të tjera nga toolbox për t'ju ndihmuar të zgjidhni këtë mister."
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "MC_HOC_2017_07_Cole_c": "Të gjithë ju duhet të keni Agjenti të bëjë është të qartë rrugën për Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Për të zgjidhur këtë mister, kuptoj se çfarë funksioni `rruga e qartë` bën dhe e quajnë atë sa herë që keni nevojë duke përdorur bllokun e vogël të gjelbër `qartë rrugë` nga kutia e veglave.",
+          "MC_HOC_2017_07_Cole_b": "Provoni përzierjen blloqe funksion me blloqe të tjera nga toolbox për t'ju ndihmuar të zgjidhni këtë mister."
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "Të gjithë ju duhet të keni Agjenti të bëjë është të qartë rrugën për Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Për të zgjidhur këtë mister, kuptoj se çfarë funksioni `rruga e qartë` bën dhe e quajnë atë sa herë që keni nevojë duke përdorur bllokun e vogël të gjelbër `qartë rrugë` nga kutia e veglave.",
+          "MC_HOC_2017_07_Cole_b": "Provoni përzierjen blloqe funksion me blloqe të tjera nga toolbox për t'ju ndihmuar të zgjidhni këtë mister."
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "MC_HOC_2017_10_Cole_b": "Nuk e di ku të shkosh? Shih nëse ju mund të gjeni vijën me pika!",
+          "MC_HOC_2017_10_Cole_a": "Përdorni funksionet për të bërë zgjidhjen e këtij mister më të lehtë!"
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "MC_HOC_2017_10_Cole_b": "Nuk e di ku të shkosh? Shih nëse ju mund të gjeni vijën me pika!",
+          "MC_HOC_2017_10_Cole_a": "Përdorni funksionet për të bërë zgjidhjen e këtij mister më të lehtë!"
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "MC_HOC_2017_10_Cole_b": "Nuk e di ku të shkosh? Shih nëse ju mund të gjeni vijën me pika!",
+          "MC_HOC_2017_10_Cole_a": "Përdorni funksionet për të bërë zgjidhjen e këtij mister më të lehtë!"
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "MC_HOC_2017_10_Cole_b": "Nuk e di ku të shkosh? Shih nëse ju mund të gjeni vijën me pika!",
+          "MC_HOC_2017_10_Cole_a": "Përdorni funksionet për të bërë zgjidhjen e këtij mister më të lehtë!"
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "Nuk e di ku të shkosh? Shih nëse ju mund të gjeni vijën me pika!",
+          "MC_HOC_2017_10_Cole_a": "Përdorni funksionet për të bërë zgjidhjen e këtij mister më të lehtë!"
+        },
+        "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_a": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_08_RY_b": "Ka shumë mënyra për të zgjidhur këtë mister. Provoni disa!",
+          "MC_HOC_2017_08_RY_c": "Provoni të ndiqni vijën me pika për një rrugë të thjeshtë përmes lavës."
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_a": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_08_RY_b": "Ka shumë mënyra për të zgjidhur këtë mister. Provoni disa!",
+          "MC_HOC_2017_08_RY_c": "Provoni të ndiqni vijën me pika për një rrugë të thjeshtë përmes lavës."
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "MC_HOC_2017_08_RY_a": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_08_RY_b": "Ka shumë mënyra për të zgjidhur këtë mister. Provoni disa!",
+          "MC_HOC_2017_08_RY_c": "Provoni të ndiqni vijën me pika për një rrugë të thjeshtë përmes lavës."
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_a": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_08_RY_b": "Ka shumë mënyra për të zgjidhur këtë mister. Provoni disa!",
+          "MC_HOC_2017_08_RY_c": "Provoni të ndiqni vijën me pika për një rrugë të thjeshtë përmes lavës."
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Shtypni “Run”!\n\nJu mund të kandidojë kodin tuaj edhe në qoftë se kjo nuk është e drejtë. Drejtoni dhe rivendosni kodin tuaj pa pushim derisa të kuptoni se çfarë po shkon keq.",
+          "MC_HOC_2017_08_RY_b": "Ka shumë mënyra për të zgjidhur këtë mister. Provoni disa!",
+          "MC_HOC_2017_08_RY_c": "Provoni të ndiqni vijën me pika për një rrugë të thjeshtë përmes lavës."
+        },
+        "MC_HOC_2017_FP20x20": {
+          "MC_HOC_2017_13_Cole_a": "Mundohuni të paturit e Agjentit të ndërtuar disa këngë minecart kështu që ju mund të eksplorojnë botën!"
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "MC_HOC_2017_13_Cole_a": "Mundohuni të paturit e Agjentit të ndërtuar disa këngë minecart kështu që ju mund të eksplorojnë botën!"
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "MC_HOC_2017_13_Cole_a": "Mundohuni të paturit e Agjentit të ndërtuar disa këngë minecart kështu që ju mund të eksplorojnë botën!"
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "MC_HOC_2017_13_Cole_a": "Mundohuni të paturit e Agjentit të ndërtuar disa këngë minecart kështu që ju mund të eksplorojnë botën!"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Mundohuni të paturit e Agjentit të ndërtuar disa këngë minecart kështu që ju mund të eksplorojnë botën!"
+        },
+        "Overworld Avoid Monsters": {
+          "mc_8_a": "Ka disa shtigje që mund të merrni. Cila është më e shkurtër?",
+          "mc_8_b": "Përdorni `përsëritur` sythe për të thjeshtuar kodin tuaj.",
+          "mc_8_c": "Qëllimi juaj është që të hyni në hyrje të shtëpisë në krye të ekranit."
+        },
+        "Overworld Avoid Monsters2022": {
+          "mc_8_a": "Ka disa shtigje që mund të merrni. Cila është më e shkurtër?",
+          "mc_8_b": "Përdorni `përsëritur` sythe për të thjeshtuar kodin tuaj.",
+          "mc_8_c": "Qëllimi juaj është që të hyni në hyrje të shtëpisë në krye të ekranit."
+        },
+        "Overworld Avoid Monsters_2019": {
+          "mc_8_a": "Ka disa shtigje që mund të merrni. Cila është më e shkurtër?",
+          "mc_8_b": "Përdorni `përsëritur` sythe për të thjeshtuar kodin tuaj.",
+          "mc_8_c": "Qëllimi juaj është që të hyni në hyrje të shtëpisë në krye të ekranit."
+        },
+        "Overworld Avoid Monsters_2020": {
+          "mc_8_a": "Ka disa shtigje që mund të merrni. Cila është më e shkurtër?",
+          "mc_8_b": "Përdorni `përsëritur` sythe për të thjeshtuar kodin tuaj.",
+          "mc_8_c": "Qëllimi juaj është që të hyni në hyrje të shtëpisë në krye të ekranit."
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "Ka disa shtigje që mund të merrni. Cila është më e shkurtër?",
+          "mc_8_b": "Përdorni `përsëritur` sythe për të thjeshtuar kodin tuaj.",
+          "mc_8_c": "Qëllimi juaj është që të hyni në hyrje të shtëpisë në krye të ekranit."
+        },
+        "Overworld Chop Tree": {
+          "mc_2_a": "Ju duhet të `lëvizni përpara` dy herë për të qëndruar para pemës.",
+          "mc_2_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld Chop Tree2022": {
+          "mc_2_a": "Ju duhet të `lëvizni përpara` dy herë për të qëndruar para pemës.",
+          "mc_2_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld Chop Tree_2019": {
+          "mc_2_a": "Ju duhet të `lëvizni përpara` dy herë për të qëndruar para pemës.",
+          "mc_2_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld Chop Tree_2020": {
+          "mc_2_a": "Ju duhet të `lëvizni përpara` dy herë për të qëndruar para pemës.",
+          "mc_2_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "Ju duhet të `lëvizni përpara` dy herë për të qëndruar para pemës.",
+          "mc_2_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld Chop Trees": {
+          "mc_4_a": "Ju mund të presni pemë në çdo mënyrë. Cila rrugë merr numrin më të vogël të blloqeve?",
+          "mc_4_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld Chop Trees2022": {
+          "mc_4_a": "Ju mund të presni pemë në çdo mënyrë. Cila rrugë merr numrin më të vogël të blloqeve?",
+          "mc_4_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld Chop Trees_2019": {
+          "mc_4_a": "Ju mund të presni pemë në çdo mënyrë. Cila rrugë merr numrin më të vogël të blloqeve?",
+          "mc_4_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld Chop Trees_2020": {
+          "mc_4_a": "Ju mund të presni pemë në çdo mënyrë. Cila rrugë merr numrin më të vogël të blloqeve?",
+          "mc_4_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "Ju mund të presni pemë në çdo mënyrë. Cila rrugë merr numrin më të vogël të blloqeve?",
+          "mc_4_b": "Komanda `shkatërrojë bllok` shkurton pemën para jush."
+        },
+        "Overworld House Frame Chosen": {
+          "mc_6_a": "Klikoni shigjetën në bllokun `vend` për të zgjedhur atë që dëshironi të vendosni.",
+          "mc_6_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende.",
+          "mc_6_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld House Frame Chosen2022": {
+          "mc_6_a": "Klikoni shigjetën në bllokun `vend` për të zgjedhur atë që dëshironi të vendosni.",
+          "mc_6_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende.",
+          "mc_6_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld House Frame Chosen_2019": {
+          "mc_6_a": "Klikoni shigjetën në bllokun `vend` për të zgjedhur atë që dëshironi të vendosni.",
+          "mc_6_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende.",
+          "mc_6_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld House Frame Chosen_2020": {
+          "mc_6_a": "Klikoni shigjetën në bllokun `vend` për të zgjedhur atë që dëshironi të vendosni.",
+          "mc_6_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende.",
+          "mc_6_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "Klikoni shigjetën në bllokun `vend` për të zgjedhur atë që dëshironi të vendosni.",
+          "mc_6_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende.",
+          "mc_6_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld Move to Sheep": {
+          "mc_1_a": "Blloku `move përpara` është në krye të kutisë së veglave.",
+          "mc_1_b": "Sigurohuni që të dy blloqet `lëvizin përpara` janë këputur në bllokun `kur drejtuar`."
+        },
+        "Overworld Move to Sheep2022": {
+          "mc_1_a": "Blloku `move përpara` është në krye të kutisë së veglave.",
+          "mc_1_b": "Sigurohuni që të dy blloqet `lëvizin përpara` janë këputur në bllokun `kur drejtuar`."
+        },
+        "Overworld Move to Sheep_2019": {
+          "mc_1_a": "Blloku `move përpara` është në krye të kutisë së veglave.",
+          "mc_1_b": "Sigurohuni që të dy blloqet `lëvizin përpara` janë këputur në bllokun `kur drejtuar`."
+        },
+        "Overworld Move to Sheep_2020": {
+          "mc_1_a": "Blloku `move përpara` është në krye të kutisë së veglave.",
+          "mc_1_b": "Sigurohuni që të dy blloqet `lëvizin përpara` janë këputur në bllokun `kur drejtuar`."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "Blloku `move përpara` është në krye të kutisë së veglave.",
+          "mc_1_b": "Sigurohuni që të dy blloqet `lëvizin përpara` janë këputur në bllokun `kur drejtuar`."
+        },
+        "Overworld Place Wall": {
+          "mc_5_a": "Përdorni bllokun `vend` së pari, dhe pastaj bllokun `ve`.",
+          "mc_5_b": "Sigurohuni që të dy blloqet janë brenda lak `përsëritur` për të drejtuar kodin më shumë se një herë.",
+          "mc_5_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Overworld Place Wall2022": {
+          "mc_5_a": "Përdorni bllokun `vend` së pari, dhe pastaj bllokun `ve`.",
+          "mc_5_b": "Sigurohuni që të dy blloqet janë brenda lak `përsëritur` për të drejtuar kodin më shumë se një herë.",
+          "mc_5_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Overworld Place Wall_2019": {
+          "mc_5_a": "Përdorni bllokun `vend` së pari, dhe pastaj bllokun `ve`.",
+          "mc_5_b": "Sigurohuni që të dy blloqet janë brenda lak `përsëritur` për të drejtuar kodin më shumë se një herë.",
+          "mc_5_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Overworld Place Wall_2020": {
+          "mc_5_a": "Përdorni bllokun `vend` së pari, dhe pastaj bllokun `ve`.",
+          "mc_5_b": "Sigurohuni që të dy blloqet janë brenda lak `përsëritur` për të drejtuar kodin më shumë se një herë.",
+          "mc_5_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "Përdorni bllokun `vend` së pari, dhe pastaj bllokun `ve`.",
+          "mc_5_b": "Sigurohuni që të dy blloqet janë brenda lak `përsëritur` për të drejtuar kodin më shumë se një herë.",
+          "mc_5_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Overworld Plant Crops": {
+          "mc_7_a": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar.",
+          "mc_7_b": "Të dy vija të tokës ngjyrë kafe të errët nga uji duhet të mbushet me kultura.",
+          "mc_7_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld Plant Crops2022": {
+          "mc_7_a": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar.",
+          "mc_7_b": "Të dy vija të tokës ngjyrë kafe të errët nga uji duhet të mbushet me kultura.",
+          "mc_7_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld Plant Crops_2019": {
+          "mc_7_a": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar.",
+          "mc_7_b": "Të dy vija të tokës ngjyrë kafe të errët nga uji duhet të mbushet me kultura.",
+          "mc_7_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld Plant Crops_2020": {
+          "mc_7_a": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar.",
+          "mc_7_b": "Të dy vija të tokës ngjyrë kafe të errët nga uji duhet të mbushet me kultura.",
+          "mc_7_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar.",
+          "mc_7_b": "Të dy vija të tokës ngjyrë kafe të errët nga uji duhet të mbushet me kultura.",
+          "mc_7_c": "Ju mund të vendosni më shumë se një bllok brenda një lak `përsëritur`."
+        },
+        "Overworld Powered Minecart": {
+          "mc_13_a": "Përdorni \\`vend hekurudhor për të hedhur hekurudhor në sheshin ju jeni duke qëndruar në.",
+          "mc_13_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër."
+        },
+        "Overworld Powered Minecart2022": {
+          "mc_13_a": "Përdorni \\`vend hekurudhor për të hedhur hekurudhor në sheshin ju jeni duke qëndruar në.",
+          "mc_13_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër."
+        },
+        "Overworld Powered Minecart_2019": {
+          "mc_13_a": "Përdorni \\`vend hekurudhor për të hedhur hekurudhor në sheshin ju jeni duke qëndruar në.",
+          "mc_13_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër."
+        },
+        "Overworld Powered Minecart_2020": {
+          "mc_13_a": "Përdorni \\`vend hekurudhor për të hedhur hekurudhor në sheshin ju jeni duke qëndruar në.",
+          "mc_13_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "Përdorni \\`vend hekurudhor për të hedhur hekurudhor në sheshin ju jeni duke qëndruar në.",
+          "mc_13_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër."
+        },
+        "Overworld Shear Sheep": {
+          "mc_3_a": "Blloku `qethur` merr delet para jush. A jeni duke u përballur me delet?",
+          "mc_3_b": "Nëse keni nevojë të ndryshoni mënyrën se si jeni duke u përballur, përdorni një bllok `kthesë`.",
+          "mc_3_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Overworld Shear Sheep2022": {
+          "mc_3_a": "Blloku `qethur` merr delet para jush. A jeni duke u përballur me delet?",
+          "mc_3_b": "Nëse keni nevojë të ndryshoni mënyrën se si jeni duke u përballur, përdorni një bllok `kthesë`.",
+          "mc_3_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Overworld Shear Sheep_2019": {
+          "mc_3_a": "Blloku `qethur` merr delet para jush. A jeni duke u përballur me delet?",
+          "mc_3_b": "Nëse keni nevojë të ndryshoni mënyrën se si jeni duke u përballur, përdorni një bllok `kthesë`.",
+          "mc_3_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Overworld Shear Sheep_2020": {
+          "mc_3_a": "Blloku `qethur` merr delet para jush. A jeni duke u përballur me delet?",
+          "mc_3_b": "Nëse keni nevojë të ndryshoni mënyrën se si jeni duke u përballur, përdorni një bllok `kthesë`.",
+          "mc_3_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "Blloku `qethur` merr delet para jush. A jeni duke u përballur me delet?",
+          "mc_3_b": "Nëse keni nevojë të ndryshoni mënyrën se si jeni duke u përballur, përdorni një bllok `kthesë`.",
+          "mc_3_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Underground Avoiding Lava": {
+          "mc_11_a": "Të gjitha të kodit është në vend për të kontrolluar për lavë dhe për t'u marrë me të. Të gjithë ju duhet të bëni është të shtoni një bllok për të lëvizur.",
+          "mc_11_b": "A duhet të hyjë komanda juaj `përpara përparë` brenda deklaratës `if` ose pas?"
+        },
+        "Underground Avoiding Lava2022": {
+          "mc_11_a": "Të gjitha të kodit është në vend për të kontrolluar për lavë dhe për t'u marrë me të. Të gjithë ju duhet të bëni është të shtoni një bllok për të lëvizur.",
+          "mc_11_b": "A duhet të hyjë komanda juaj `përpara përparë` brenda deklaratës `if` ose pas?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "mc_11_a": "Të gjitha të kodit është në vend për të kontrolluar për lavë dhe për t'u marrë me të. Të gjithë ju duhet të bëni është të shtoni një bllok për të lëvizur.",
+          "mc_11_b": "A duhet të hyjë komanda juaj `përpara përparë` brenda deklaratës `if` ose pas?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "mc_11_a": "Të gjitha të kodit është në vend për të kontrolluar për lavë dhe për t'u marrë me të. Të gjithë ju duhet të bëni është të shtoni një bllok për të lëvizur.",
+          "mc_11_b": "A duhet të hyjë komanda juaj `përpara përparë` brenda deklaratës `if` ose pas?"
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "Të gjitha të kodit është në vend për të kontrolluar për lavë dhe për t'u marrë me të. Të gjithë ju duhet të bëni është të shtoni një bllok për të lëvizur.",
+          "mc_11_b": "A duhet të hyjë komanda juaj `përpara përparë` brenda deklaratës `if` ose pas?"
+        },
+        "Underground If Statements": {
+          "mc_12_a": "Hapësirat me pika të kuqe janë aty ku do të gjeni Redstone.",
+          "mc_12_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër?",
+          "mc_12_c": "Përdorni një deklaratë `if` për të kontrolluar hapësirat për lavë, pastaj vendosni kalldrëm. "
+        },
+        "Underground If Statements2022": {
+          "mc_12_a": "Hapësirat me pika të kuqe janë aty ku do të gjeni Redstone.",
+          "mc_12_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër?",
+          "mc_12_c": "Përdorni një deklaratë `if` për të kontrolluar hapësirat për lavë, pastaj vendosni kalldrëm. "
+        },
+        "Underground If Statements_2019": {
+          "mc_12_a": "Hapësirat me pika të kuqe janë aty ku do të gjeni Redstone.",
+          "mc_12_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër?",
+          "mc_12_c": "Përdorni një deklaratë `if` për të kontrolluar hapësirat për lavë, pastaj vendosni kalldrëm. "
+        },
+        "Underground If Statements_2020": {
+          "mc_12_a": "Hapësirat me pika të kuqe janë aty ku do të gjeni Redstone.",
+          "mc_12_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër?",
+          "mc_12_c": "Përdorni një deklaratë `if` për të kontrolluar hapësirat për lavë, pastaj vendosni kalldrëm. "
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Hapësirat me pika të kuqe janë aty ku do të gjeni Redstone.",
+          "mc_12_b": "A mund të përdorni një lak `përsëritur` për ta bërë kodin tuaj më të shkurtër?",
+          "mc_12_c": "Përdorni një deklaratë `if` për të kontrolluar hapësirat për lavë, pastaj vendosni kalldrëm. "
+        },
+        "Underground Iron": {
+          "mc_10_a": "Blloqet e hekurit janë hapësirat me pishtarë pas pishtarit! Si do të arrini atje?",
+          "mc_10_b": "Kur ju jeni duke qëndruar në buzë të lavë, përdorni `vend kalldrëm përpara` për të bërë një rrugë të sigurt. Pastaj, ju mund të ecni mbi të!",
+          "mc_10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Underground Iron2022": {
+          "mc_10_a": "Blloqet e hekurit janë hapësirat me pishtarë pas pishtarit! Si do të arrini atje?",
+          "mc_10_b": "Kur ju jeni duke qëndruar në buzë të lavë, përdorni `vend kalldrëm përpara` për të bërë një rrugë të sigurt. Pastaj, ju mund të ecni mbi të!",
+          "mc_10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Underground Iron_2019": {
+          "mc_10_a": "Blloqet e hekurit janë hapësirat me pishtarë pas pishtarit! Si do të arrini atje?",
+          "mc_10_b": "Kur ju jeni duke qëndruar në buzë të lavë, përdorni `vend kalldrëm përpara` për të bërë një rrugë të sigurt. Pastaj, ju mund të ecni mbi të!",
+          "mc_10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Underground Iron_2020": {
+          "mc_10_a": "Blloqet e hekurit janë hapësirat me pishtarë pas pishtarit! Si do të arrini atje?",
+          "mc_10_b": "Kur ju jeni duke qëndruar në buzë të lavë, përdorni `vend kalldrëm përpara` për të bërë një rrugë të sigurt. Pastaj, ju mund të ecni mbi të!",
+          "mc_10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "Blloqet e hekurit janë hapësirat me pishtarë pas pishtarit! Si do të arrini atje?",
+          "mc_10_b": "Kur ju jeni duke qëndruar në buzë të lavë, përdorni `vend kalldrëm përpara` për të bërë një rrugë të sigurt. Pastaj, ju mund të ecni mbi të!",
+          "mc_10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "Underground Mining Coal": {
+          "mc_9_a": "A jeni duke u përballur me rrugën e duhur? `shkatërrojë blloko` minierat bllok para jush.",
+          "mc_9_b": "Pikat e zeza në mur janë qymyr! Përdorimi `shkatërrojë blloko` në këto të minave qymyr.",
+          "mc_9_c": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar."
+        },
+        "Underground Mining Coal2022": {
+          "mc_9_a": "A jeni duke u përballur me rrugën e duhur? `shkatërrojë blloko` minierat bllok para jush.",
+          "mc_9_b": "Pikat e zeza në mur janë qymyr! Përdorimi `shkatërrojë blloko` në këto të minave qymyr.",
+          "mc_9_c": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar."
+        },
+        "Underground Mining Coal_2019": {
+          "mc_9_a": "A jeni duke u përballur me rrugën e duhur? `shkatërrojë blloko` minierat bllok para jush.",
+          "mc_9_b": "Pikat e zeza në mur janë qymyr! Përdorimi `shkatërrojë blloko` në këto të minave qymyr.",
+          "mc_9_c": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar."
+        },
+        "Underground Mining Coal_2020": {
+          "mc_9_a": "A jeni duke u përballur me rrugën e duhur? `shkatërrojë blloko` minierat bllok para jush.",
+          "mc_9_b": "Pikat e zeza në mur janë qymyr! Përdorimi `shkatërrojë blloko` në këto të minave qymyr.",
+          "mc_9_c": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "A jeni duke u përballur me rrugën e duhur? `shkatërrojë blloko` minierat bllok para jush.",
+          "mc_9_b": "Pikat e zeza në mur janë qymyr! Përdorimi `shkatërrojë blloko` në këto të minave qymyr.",
+          "mc_9_c": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar."
+        },
+        "courseB_starWars_prog9": {
+          "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseB_starWars_prog92022": {
+          "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseB_starWars_prog9_2018": {
+          "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseB_starWars_prog9_2019": {
+          "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseB_starWars_prog9_2020": {
+          "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops1": {
+          "courseC_starWars_loops1_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops102022": {
+          "courseC_starWars_loops10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops10_2018": {
+          "courseC_starWars_loops10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops10_2019": {
+          "courseC_starWars_loops10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops10_2020": {
+          "courseC_starWars_loops10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops12022": {
+          "courseC_starWars_loops1_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops1_2018": {
+          "courseC_starWars_loops1_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops1_2019": {
+          "courseC_starWars_loops1_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops1_2020": {
+          "courseC_starWars_loops1_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_b": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops72022": {
+          "courseC_starWars_loops7_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops7_2018": {
+          "courseC_starWars_loops7_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops7_2019": {
+          "courseC_starWars_loops7_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops7_2020": {
+          "courseC_starWars_loops7_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops7_copy": {
+          "courseC_starWars_loops7_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_c": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "coursee_helloworld_say": {
+          "hello-world-first-solution-pizza": "Per te bere picen te thote dicka, lidhni blloqet e kodit ne kete menyre: \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_backgrounds": {
+          "hello_world_background": "Mund ta ndryshoni sfondin duke lidhur një bllok `sfond të caktuar` nën një bllok ngjarjeje `kur klikohet`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "Shenim: Per t'i dhene nje sprite nje sjellje, duhet te perdorni nje bllok 'sprite fillon' me nje nga blloqet te gjelberta te sjelljes te tilla si \"rrotullimi drejte\" \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_animals_click": {
+          "hw_click_sprites": "Klikoni ne sprites perderisa programi eshte aktiv ",
+          "hw_no_changes": "Nuk keni nevoje te ndryshoni ndonje pjese te kodit ne kete nivel. "
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_costumes": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "Për të ndryshuar vendndodhjen e një sprite, klikoni pin në bllokun e vendndodhjes, pastaj klikoni ku ju dëshironi që ajo të shkojë.\n\n\\[[0]]"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "Sigurohuni që kostumet të përputhen në çdo bllok.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "Për ta bërë ariun të thotë diçka, lidhni blloqet e kodit si kjo:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_sizes": {
+          "storyboard_setProp": "Per te vendosur madhesine e nje sprite vetem nje here, mund te perdorni bllokun: \n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "Nese keni deshire te ndryshoni madhesine e nje sprite kohe pas kohe perdorni kete bllok: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hello_world_background": "Mund ta ndryshoni sfondin duke lidhur një bllok `sfond të caktuar` nën një bllok ngjarjeje `kur klikohet`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "Shenim: Per t'i dhene nje sprite nje sjellje, duhet te perdorni nje bllok 'sprite fillon' me nje nga blloqet te gjelberta te sjelljes te tilla si \"rrotullimi drejte\" \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_emoji_click": {
+          "hw_click_sprites": "Klikoni ne sprites perderisa programi eshte aktiv.",
+          "hw_no_changes": "Nuk keni nevoje te ndryshoni ndonje pjese te kodit ne kete nivel. "
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_costumes": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_emoji_location": {
+          "location_pin_hint": "Per te ndryshuar lokacionin e nje sprite, klikoni ne pinin e bllokut te lokacionit, pastaj klikoni ne vendin se ku doni qe te shkoje ajo. \n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_emoji_multi": {
+          "storyboard_costume": "Sigurohuni qe kostumet te pershtaten me cdo sprite. \n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "Per te bere emojin te thote dicka, lidhni blloqet e kodit ne kete menyre: \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_emoji_sizes": {
+          "storyboard_setProp": "Per te vendosur madhesine e nje sprite vetem nje here, mund te perdorni bllokun: \n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "Nese keni deshire te ndryshoni madhesine e nje sprite kohe pas kohe perdorni kete bllok: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_backgrounds": {
+          "hello_world_background": "Mund ta ndryshoni sfondin duke lidhur një bllok `sfond të caktuar` nën një bllok ngjarjeje `kur klikohet`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hello_world_background": "Mund ta ndryshoni sfondin duke lidhur një bllok `sfond të caktuar` nën një bllok ngjarjeje `kur klikohet`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hello_world_background": "Mund ta ndryshoni sfondin duke lidhur një bllok `sfond të caktuar` nën një bllok ngjarjeje `kur klikohet`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "Shenim: Per t'i dhene nje sprite nje sjellje, duhet te perdorni nje bllok 'sprite fillon' me nje nga blloqet te gjelberta te sjelljes te tilla si \"rrotullimi drejte\" \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "storyboard_behavior_example": "Shenim: Per t'i dhene nje sprite nje sjellje, duhet te perdorni nje bllok 'sprite fillon' me nje nga blloqet te gjelberta te sjelljes te tilla si \"rrotullimi drejte\" \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "storyboard_behavior_example": "Shenim: Per t'i dhene nje sprite nje sjellje, duhet te perdorni nje bllok 'sprite fillon' me nje nga blloqet te gjelberta te sjelljes te tilla si \"rrotullimi drejte\" \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_click": {
+          "hw_click_sprites": "Klikoni ne sprites perderisa programi eshte aktiv.",
+          "hw_no_changes": "Nuk keni nevoje te ndryshoni ndonje pjese te kodit ne kete nivel. "
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "Klikoni ne sprites perderisa programi eshte aktiv.",
+          "hw_no_changes": "Nuk keni nevoje te ndryshoni ndonje pjese te kodit ne kete nivel. "
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "Klikoni ne sprites perderisa programi eshte aktiv.",
+          "hw_no_changes": "Nuk keni nevoje te ndryshoni ndonje pjese te kodit ne kete nivel. "
+        },
+        "helloworld_food_costumes": {
+          "hello_world_costumes": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_costumes": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_3\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_costumes": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"space_astronaut_2\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_events": {
+          "hello_world_click": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_location": {
+          "location_pin_hint": "Per te ndryshuar lokacionin e nje sprite, klikoni ne pinin e bllokut te lokacionit, pastaj klikoni ne vendin se ku doni qe te shkoje ajo. \n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "location_pin_hint": "Per te ndryshuar lokacionin e nje sprite, klikoni ne pinin e bllokut te lokacionit, pastaj klikoni ne vendin se ku doni qe te shkoje ajo. \n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_space-2022": {
+          "location_pin_hint": "Per te ndryshuar lokacionin e nje sprite, klikoni ne pinin e bllokut te lokacionit, pastaj klikoni ne vendin se ku doni qe te shkoje ajo. \n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi": {
+          "storyboard_costume": "Sigurohuni qe kostumet te pershtaten me cdo sprite. \n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "storyboard_costume": "Sigurohuni qe kostumet te pershtaten me cdo sprite. \n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_multi_space-2022": {
+          "storyboard_costume": "Sigurohuni qe kostumet te pershtaten me cdo sprite. \n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "Per te bere picen te thote dicka, lidhni blloqet e kodit ne kete menyre: \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Per te bere sprite te thote dicka, lidhni blloqet e kodit ne kete menyre: \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Per te bere sprite te thote dicka, lidhni blloqet e kodit ne kete menyre: \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_sizes": {
+          "storyboard_setProp": "Per te vendosur madhesine e nje sprite vetem nje here, mund te perdorni bllokun: \n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "Nese keni deshire te ndryshoni madhesine e nje sprite kohe pas kohe perdorni kete bllok: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "storyboard_setProp": "Per te vendosur madhesine e nje sprite vetem nje here, mund te perdorni bllokun: \n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "Nese keni deshire te ndryshoni madhesine e nje sprite kohe pas kohe perdorni kete bllok: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "storyboard_setProp": "Per te vendosur madhesine e nje sprite vetem nje here, mund te perdorni bllokun: \n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
+          "storyboard_changePropBy": "Nese keni deshire te ndryshoni madhesine e nje sprite kohe pas kohe perdorni kete bllok: \n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_retro_backgrounds": {
+          "hello_world_background": "Mund ta ndryshoni sfondin duke lidhur një bllok `sfond të caktuar` nën një bllok ngjarjeje `kur klikohet`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "Shenim: Per t'i dhene nje sprite nje sjellje, duhet te perdorni nje bllok 'sprite fillon' me nje nga blloqet te gjelberta te sjelljes te tilla si \"rrotullimi drejte\" \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_retro_click": {
+          "hw_click_sprites": "Klikoni ne sprites perderisa programi eshte aktiv.",
+          "hw_no_changes": "Nuk keni nevoje te ndryshoni ndonje pjese te kodit ne kete nivel. "
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_costumes": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click": "Lidhni nje bllok \"thua\" ne nje \"kur klikon\" bllok ngjarje: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "Per te ndryshuar lokacionin e nje sprite, klikoni ne pinin e bllokut te lokacionit, pastaj klikoni ne vendin se ku doni qe te shkoje ajo. \n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "Sigurohuni qe kostumet te pershtaten me cdo sprite. \n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Per te bere krijesen te thote dicka, lidhni blloqet e kodit ne kete menyre: \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_retro_sizes": {
+          "hw_retro_setProp": "Per te vendosur madhesine e nje sprite vetem nje here, mund te perdorni bllokun: \n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
+          "hw_retro_changePropBy": "Nese keni deshire te ndryshoni madhesine e nje sprite kohe pas kohe perdorni kete bllok: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "iceage_click_hello": {
+          "iceage_click_hello_a": "Shto nje ose me shume \"actor 1 say\" blloqe ne eventin \"when clicked\" per te kompletuar kete mister."
+        },
+        "iceage_free_play": {
+          "iceage_free_play_a": "A mund t'i beni Sid dhe Manny qe te kene nje beteje Ice Crystal?",
+          "iceage_free_play_b": "Beni Granny qe te ndjeke Diego. Perfundoni lojen si nje fitore pasi qe ajo e kape ate. ",
+          "iceage_free_play_c": "A mudn ta beni Sidin te gjuaj me fjolla debore Diegon dhe rrisni madhesine e Diegos sado here qe ajo goditet? Perfundoni lojen si fitore nese Diego goditet 5 here."
+        },
+        "iceage_hello1": {
+          "iceage_hello1_a": "Ju duhet te shtoni vetem nje bllok per te zgjedhur kete mister. Terhiqni bllokun \"say\" nga shiriti i veglave dhe lidheni ate me bllokun e eventit \"when run\" qe tashme eshte ne hapesiren e punes. Pastaj shkruani \"Pershendetje!\" brenda. "
+        },
+        "iceage_hello2": {
+          "iceage_hello2_a": "Per te zgjidhur kete mister, ju duhet ta beni Sidin te thote dicka duke perdorur \"actor 1 say\" bllokun. Ju poashtu duhet ta beni Mannin te thote dicka duke perdorur bllokun \"actor 2 say\"."
+        },
+        "iceage_move_events": {
+          "iceage_move_events_a": "Secila nga eventet \"when\\_\\_\\_\\_arrow\" do te duhet te kete nje tjeter 'veprim aktor 1' komande lidhur me te per te zgjidhur kete mister. "
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "Secila nga eventet \"when\\_\\_\\_\\_arrow\" do te duhet te kete nje tjeter 'veprim aktor 1' komande lidhur me te per te zgjidhur kete mister. "
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "Per kete mister, ju mundesh te levizesh Diegon poshte per 200 pixela, ose te levizesh Mannyn larte nga 200 pixela. ",
+          "iceage_move_to_actor_b": "Lidhni bllokun \"play**\\_**sound\" me eventin \"when actor 1 touches actor 2\" per te perfunduar kete sfide. "
+        },
+        "iceage_move_to_flag": {
+          "iceage_hello3_a": "Perdorni bllokun \"move actor 1 right by 200 pixels\" per te zgjidhur kete mister."
+        },
+        "iceage_repeat": {
+          "iceage_repeat_a": "Perdorni te dy blloqet \"leviz aktorin 1 ne te majte\" dhe \"leviz aktorin 1 ne te djathte\" per te zgjidhur kete mister."
+        },
+        "iceage_sound_and_points": {
+          "iceage_sound_and_points_a": "Duhet te shtosh dy blloqe nen eventin 'kur aktori 1 prek aktorin 2'.",
+          "iceage_sound_and_points_b": "Do te duhen te dy blloqet 'sheno nje pike' dhe 'play \\_\\_\\_\\_ sound' per te kaluar kete nivel. "
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "Duhet te shtosh dy blloqe nen eventin 'kur aktori 1 prek aktorin 2'.",
+          "iceage_sound_and_points_b": "Do te duhen te dy blloqet 'sheno nje pike' dhe 'play \\_\\_\\_\\_ sound' per te kaluar kete nivel. "
+        },
+        "iceage_throw_hearts": {
+          "iceage_throw_hearts_a": "Kur doni te hedhni zemrat tek gjyshja? Kur shtypet nje shigjete? Kur klikoni mbi Sidin? Kur klikoni mbi Granny? Zgjidhja eshte e juaja! ",
+          "iceage_throw_hearts_b": "Per te bere te lumtur granny kur ajo i merr zemrat, ju do tre duhet ta lidhni 'set aktor 2 humor ne te lumtur' bllokun nen 'kur aktori 2 prek projektilin'"
+        },
+        "iceage_warn_ice_age": {
+          "iceage_warn_ice_age_a": "Duhet te shtoni vetem dy blloqe per te derguar kete mister aty ku duhet te shkoje.",
+          "iceage_warn_ice_age_b": "Shto dy blloqe nen ngjarjen 'when run' qe te ekzekutohen menjehere pasi qe programi te filloje. "
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "Duhet te shtoni vetem dy blloqe per te derguar kete mister aty ku duhet te shkoje.",
+          "iceage_warn_ice_age_b": "Shto dy blloqe nen ngjarjen 'when run' qe te ekzekutohen menjehere pasi qe programi te filloje. "
         }
       }
     }

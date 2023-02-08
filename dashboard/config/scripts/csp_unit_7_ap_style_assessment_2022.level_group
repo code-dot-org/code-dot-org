@@ -5,14 +5,14 @@ anonymous 'false'
 
 page
 text 'csp_unit_assessment_overview_2021'
-level 'csp-7-exam1-mod-2020_2021'
-level 'csp-7-exam1-API-algorithms-2020_2021'
-level 'csp-7-exam1-API-parameters_2021'
-level 'csp-7-exam1-testing_2021'
-level 'csp-7-exam1-api-documentation_2021'
+level 'csp-7-exam1-mod2022'
+level 'csp-7-exam1-API-algorithms2022'
+level 'csp-7-exam1-API-parameters2022'
+level 'csp-7-exam1-testing2022'
+level 'csp-7-exam1-api-documentation2022'
 
 page
-level 'csp-7-exam1-return_2021'
+level 'csp-7-exam1-return2022'
 level 'csp-7-exam1-mod_2021'
 level 'csp-7-exam1-abstraction_2021'
 level 'csp-7-exam1-return-2_2021'

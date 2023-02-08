@@ -43,3 +43,13 @@ JsInterpreterLogger.prototype.log = function() {
     this.outputConsole_.log.apply(this.outputConsole_, arguments);
   }
 };
+
+/**
+ * Clear the console object we were constructed with
+ * @see Console.clear
+ */
+JsInterpreterLogger.prototype.clear = function() {
+  if (!IN_UNIT_TEST && this.outputConsole_ && this.outputConsole_.clear) {
+    this.outputConsole_.clear();
+  }
+};

@@ -23,7 +23,7 @@ if(num < 10){
   num++;
 }
 
-if(points != 3){
+if(num != 3){
   num = num + 2;
 } else {
   num = num % 3;

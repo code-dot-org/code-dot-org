@@ -2,6 +2,198 @@
   "sk-SK": {
     "data": {
       "standards": {
+        "ccela/3.RL.4": {
+          "description": "Určenie významu slov a slovných spojení použitých v texte a rozlíšenie doslovného a nedoslovného jazyka."
+        },
+        "ccela/4.RL.7": {
+          "description": "Vytvorenie prepojení medzi textom príbehu alebo drámy a vizuálnou alebo ústnou prezentáciou textu a určenie, kde každá verzia odráža špecifické opisy a pokyny v texte."
+        },
+        "ccela/5.RL.4": {
+          "description": "Určenie významu slov a slovných spojení použitých v texte vrátane obrazného jazyka, ako sú metafory a prirovnania."
+        },
+        "ccela/5.RL.7": {
+          "description": "Analýza toho, ako vizuálne a multimediálne prvky prispievajú k významu, tónu alebo kráse textu (napr. grafický román, multimediálna prezentácia beletrie, ľudovej rozprávky, mýtu, básne)."
+        },
+        "csta/1B-AP-10": {
+          "description": "Vytváranie programov, ktoré obsahujú postupnosti, udalosti, cykly a podmienky."
+        },
+        "csta/1B-AP-12": {
+          "description": "Úprava, opätovné použitie alebo začlenenie častí existujúceho programu do vlastnej práce s cieľom vytvoriť niečo nové alebo pridať pokročilejšie funkcie."
+        },
+        "csta/1B-AP-15": {
+          "description": "Testovanie a ladenie (identifikácia a oprava chýb) programu alebo algoritmu s cieľom zabezpečiť jeho správne fungovanie."
+        },
+        "ccela/6.SL.1": {
+          "description": "Efektívne zapájanie sa do rôznych spoločných diskusií (individuálne, v skupinách a pod vedením učiteľa) s rôznymi partnermi o témach a textoch pre 6. ročník, rozvíjanie myšlienok ostatných a jasné vyjadrovanie vlastných."
+        },
+        "ccela/7.SL.1": {
+          "description": "Efektívne zapájanie sa do rôznych spoločných diskusií (individuálne, v skupinách a pod vedením učiteľa) s rôznymi partnermi o témach a textoch pre 7. ročník, rozvíjanie myšlienok ostatných a jasné vyjadrovanie vlastných."
+        },
+        "ccmath/MP.1": {
+          "description": "Pochopenie problémov a vytrvalosť pri ich riešení"
+        },
+        "ccmath/MP.2": {
+          "description": "Abstraktné a kvantitatívne uvažovanie"
+        },
+        "ccmath/MP.5": {
+          "description": "Strategické používanie vhodných nástrojov"
+        },
+        "ccmath/MP.6": {
+          "description": "Dôraz na presnosť"
+        },
+        "ccmath/MP.7": {
+          "description": "Identifikácia štruktúry a jej využitie"
+        },
+        "ccmath/MP.8": {
+          "description": "Identifikácia a vyjadrenie pravidelnosti v opakovaných tvrdeniach"
+        },
+        "csta2011/CPP.L1:6-06": {
+          "description": "Realizácia riešení problémov pomocou vizuálneho programovacieho jazyka založeného na blokoch."
+        },
+        "csta2011/CT.L2:1": {
+          "description": "Použiť základné kroky algoritmického riešenia problémov na navrhovanie riešení (napr. zadefinovanie a preskúmanie problému, preskúmanie ukážkových prípadov, dizajn, realizácia riešenia, testovanie a vyhodnotenie)."
+        },
+        "csta2011/CT.L2:12": {
+          "description": "Používanie abstrakcie na rozklad problému na čiastkové problémy."
+        },
+        "csta2011/CT.L2:6": {
+          "description": "Opísanie a analýza sledu inštrukcií, ktorý prebieha (napr. opis správania postavy vo videohre, ktoré ovládajú pravidlá a algoritmy)."
+        },
+        "csta2011/CT.L2:7": {
+          "description": "Prezentácia údajov rôznymi spôsobmi vrátane textu, zvukov, obrázkov a čísel."
+        },
+        "csta2011/CT.L2:8": {
+          "description": "Používanie vizuálnej reprezentácie problémových stavov, štruktúr a dát (napr. grafy, schémy, sieťové diagramy, vývojové diagramy)."
+        },
+        "iste/1.a": {
+          "description": "Uplatňovanie existujúcich poznatkov na vytváranie nových koncepcií, produktov alebo procesov."
+        },
+        "iste/1.b": {
+          "description": "Vytváranie originálnych diel ako prostriedku osobného alebo skupinového vyjadrenia."
+        },
+        "iste/1.c": {
+          "description": "Používanie modelov a simulácií na skúmanie komplexných systémov a problémov."
+        },
+        "iste/4.b": {
+          "description": "Plánovanie a riadenie činností na vývoj riešenia alebo dokončenie projektu."
+        },
+        "iste/6.a": {
+          "description": "Pochopenie a používanie technologických systémov."
+        },
+        "iste/6.c": {
+          "description": "Riešenie problémov so systémami a aplikáciami."
+        },
+        "iste/6.d": {
+          "description": "Transfer súčasných vedomostí na osvojenie si nových technológií."
+        },
+        "ccela/1.L.6": {
+          "description": "Používanie slov a slovných spojení osvojených prostredníctvom rozhovorov, pri čítaní a počúvaní textov a pri reagovaní na ne, vrátane používania často sa vyskytujúcich spojok na označenie jednoduchých vzťahov (napr. pretože)."
+        },
+        "ccela/1.SL.1": {
+          "description": "Zapojenie do spoločných rozhovorov s rôznymi partnermi o témach a textoch pre 1. ročník s rovesníkmi a dospelými v malých a väčších skupinách."
+        },
+        "ccela/11-12.RI.4": {
+          "description": "Určenie významu slov a fráz použitých v texte vrátane obrazných, konotatívnych a technických významov; analyzovanie toho, ako autor používa a obmieňa význam kľúčového výrazy/výrazov v priebehu textu "
+        },
+        "ccela/2.L.6": {
+          "description": "Používanie slov a slovných spojení osvojených prostredníctvom rozhovorov, pri čítaní a počúvaní textov a pri reagovaní na ne, vrátane používania prídavných mien a prísloviek na opis (napr. Keď sú ostatné deti šťastné, som šťastný aj ja)."
+        },
+        "ccela/2.SL.1": {
+          "description": "Zapojenie do spoločných rozhovorov s rôznymi partnermi o témach a textoch pre 2. ročník s rovesníkmi a dospelými v malých a väčších skupinách."
+        },
+        "ccela/3.L.6": {
+          "description": "Osvojenie si a presné používanie konverzačných, všeobecných akademických a pre danú oblasť špecifických slov a slovných spojení vrátane tých, ktoré vyjadrujú priestorové a časové vzťahy (napr. Po večeri sme ich išli hľadať)."
+        },
+        "ccela/3.SL.1": {
+          "description": "Efektívne zapájanie sa do rôznych spoločných diskusií (individuálne, v skupinách a pod vedením učiteľa) s rôznymi partnermi o témach a textoch pre 3. ročník, rozvíjanie myšlienok ostatných a jasné vyjadrovanie vlastných."
+        },
+        "ccmath/1.OA.1": {
+          "description": "Používanie sčítania a odčítania do 20 na riešenie slovných úloh zahŕňajúcich situácie sčítania, odčítania, skladania, rozkladania a porovnávania s neznámymi vo všetkých pozíciách, napr. pomocou predmetov, nákresov a rovníc so symbolom"
+        },
+        "ccmath/2.OA.1": {
+          "description": "Používanie sčítania a odčítania do 100 na riešenie jedno a dvojkrokových slovných úloh zahŕňajúcich situácie sčítania, odčítania, skladania, rozkladania a porovnávania s neznámymi vo všetkých pozíciách, napr. pomocou predmetov, nákresov a rovníc so symbolom"
+        },
+        "ccmath/3.OA.3": {
+          "description": "Používanie násobenia a delenia do 100 na riešenie slovných úloh v situáciách, ktoré zahŕňajú rovnaké skupiny, polia a merané množstvá, napr. pomocou nákresov a rovníc so symbolom pre neznáme číslo na vyjadrenie problému."
+        },
+        "csta2011/CD.L1:3-01": {
+          "description": "Používanie štandardných vstupných a výstupných zariadení na úspešné ovládanie počítačov a súvisiacich technológií."
+        },
+        "csta2011/CI.L1:3-01": {
+          "description": "Uplatňovanie zásad zodpovedného digitálneho občianstva ( zákonné a etické správanie) pri používaní technologických systémov a softvéru."
+        },
+        "csta2011/CPP.L1:6-01": {
+          "description": "Používanie technologických pomôcok (ako sú kalkulačky, sondy na zber údajov, mobilné zariadenia, videá, vzdelávací softvér a webové nástroje) na riešenie problémov a samostatné učenie."
+        },
+        "ccela/11-12.L.6": {
+          "description": "Osvojiť si a presne používať všeobecné akademické aj špecializované slová a frázy potrebné na čítanie, písanie, rozprávanie a počúvanie na úrovni potrebnej na nástup na vysokú školu a vstup do kariérneho života; preukázať samostatnosť pri osvojovaní slovnej zásoby"
+        },
+        "ccela/4.L.6": {
+          "description": "Osvojenie si a presné používanie vekovo primeraných akademických a špecializovaných slov a fráz vrátane tých, ktoré vyjadrujú presné akcie, emócie alebo stavy (napr. nariekanie, koktanie) a ktoré sú základom pre konkrétnu tému"
+        },
+        "ccela/5.L.6": {
+          "description": "Osvojenie si a presné používanie vekovo primeraných akademických a špecializovaných slov a fráz vrátane tých, ktoré vyjadrujú rozdiely, sčítanie a iné logické vzťahy (napr. „avšak“, „hoci“, „napriek tomu, že“, „podobne“, „navyše“, „okrem toho“)."
+        },
+        "ccmath/4.MD.6": {
+          "description": "Meranie uhlov uvedených celým číslom pomocou uhlomera. Načrtnutie uhlov zadanej veľkosti."
+        },
+        "ccmath/4.NBT.4": {
+          "description": "Plynulé sčítavanie a odčítavanie viacciferných celých číel pomocou štandardného algoritmu"
+        },
+        "ccmath/4.NBT.5": {
+          "description": "Násobenie maximálne štvorciferného celého čísla iným jednociferným celým číslom a násobenie dvoch dvojciferných čísel pomocou stratégií založených na pozíciách cifier a vlastnostiach matematických operácií. Ilustrovanie a vysvetlenie výpočtu pomocou rovníc."
+        },
+        "ccmath/7.G.2": {
+          "description": "Kreslenie (voľnou rukou, s pravítkom a uhlomerom, pomocou technológií) geometrických útvarov so zadanými vlastnosťami, so zameraním na rysovanie trojuholníkov pomocou troch zadaných údajov (uhlov alebo dĺžok strán) a pozorovanie toho, kedy zo zadaných vlastností môže vzniknúť iba jeden trojuholník a kedy viacero."
+        },
+        "csta2011/CPP.L1:3-02": {
+          "description": "Používanie vývojovo primeraných multimediálnych zdrojov (napr. interaktívne knihy a vzdelávací softvér), ktoré podporujú vzdelávanie naprieč celými učebnými osnovami."
+        },
+        "csta2011/CPP.L1:3-04": {
+          "description": "Vytvorenie súboru príkazov, ktoré sa majú vykonať na dosiahnutie jednoduchej úlohy (napr. inštrukcie pre korytnačku)"
+        },
+        "ccela/11-12.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu, publikovanie a aktualizáciu individuálnych alebo spoločných písomných prác v reakcii na priebežnú spätnú väzbu vrátane nových argumentov alebo informácií."
+        },
+        "ccela/4.W.3": {
+          "description": "Písanie príbehov s cieľom spracovať skutočné alebo vymyslené zážitky alebo udalosti s použitím účinnej techniky, opisných informácií a jasných postupností udalostí."
+        },
+        "ccela/6.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu a publikovanie písomných prác, ako aj na komunikáciu a spoluprácu s ostatnými; preukázanie dostatočných zručností pri písaní na klávesnici na napísanie minimálne troch strán na jedno posedenie."
+        },
+        "ccela/7.W.3": {
+          "description": "Písanie príbehov s cieľom spracovať skutočné alebo vymyslené zážitky alebo udalosti s použitím účinnej techniky, podstatných opisných informácií a správne štruktúrovaných postupností udalostí."
+        },
+        "ccela/7.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu a publikovanie písomných prác, odkazovanie na zdroje a ich citovanie, ako aj na komunikáciu a spoluprácu s ostatnými vrátane odkazovania na zdroje a ich citovania."
+        },
+        "ccela/8.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu a publikovanie písomných prác a efektívnu prezentáciu vzťahov medzi informáciami a myšlienkami, ako aj na komunikáciu a spoluprácu s ostatnými."
+        },
+        "ccela/9-10.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu, publikovanie a aktualizáciu individuálnych alebo spoločných písomných prác s využitím schopnosti technológií prepojiť informácie s inými informáciami a flexibilne a dynamicky zobrazovať informácie."
+        },
+        "ccmath/MP.4": {
+          "description": "Modelovanie s matematikou"
+        },
+        "csta2011/CL.L1:6-02": {
+          "description": "Používanie online zdrojov (napr. e-mailu, online diskusií, webových prostredí na spoluprácu) na zapojenie sa do spoločných činností pri riešení problémov s cieľom vytvoriť riešenia alebo produkty."
+        },
+        "csta2011/CPP.L1:3-01": {
+          "description": "Používanie technologických zdrojov na vykonávanie výskumu primeraného veku."
+        },
+        "csta2011/CPP.L2:3": {
+          "description": "Návrh, vývoj, publikovanie a prezentácia produktov (napr. webových stránok, mobilných aplikácií, animácií) s využitím technologických zdrojov, ktoré názorne prezentujú a približujú koncepty učebných osnov."
+        },
+        "iste/2.a": {
+          "description": "Interakcia, spolupráca a publikovanie s rovesníkmi, odborníkmi alebo inými osobami prostredníctvom rozmanitých digitálnych prostredí a médií."
+        },
+        "iste/2.b": {
+          "description": "Účinné sprostredkovanie informácií a myšlienok viacerým skupinám používateľov s využitím rôznych médií a formátov."
+        },
+        "iste/4.d": {
+          "description": "Využívanie viacerých procesov a rôznych perspektív na skúmanie alternatívnych riešení."
+        },
         "csp2021/IOC-2.B.5": {
           "description": "Šifrovanie je proces kódovania údajov s cieľom zabrániť neoprávnenému prístupu k nim. Dekódovanie je proces dekódovania údajov. Dva bežné prístupy k šifrovaniu sú: ●       Šifrovanie so symetrickým kľúčom zahŕňa jeden kľúč na šifrovanie aj dešifrovanie. ●       Šifrovanie s verejným kľúčom spája verejný kľúč na šifrovanie a súkromný kľúč na dešifrovanie. Odosielateľ nepotrebuje súkromný kľúč príjemcu na zašifrovanie správy, ale súkromný kľúč príjemcu je potrebný na dešifrovanie správy. VYHLÁSENIE O VYLÚČENÍ(EKIOC-2.B.5): Špecifické matematické postupy šifrovania a dešifrovania sú mimo rozsahu tohto kurzu a skúšky AP."
         },
@@ -13,6 +205,519 @@
         },
         "csta/3B-NI-04": {
           "description": "Porovnajte spôsoby, akými vývojári softvéru chránia zariadenia a informácie pred neoprávneným prístupom."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "Kompresia údajov môže zmenšiť veľkosť (počet bitov) prenášaných alebo uložených údajov."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Menší počet bitov nemusí nevyhnutne znamenať menej informácií."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "Miera zmenšenia veľkosti v dôsledku kompresie závisí od množstva redundancie v pôvodnej reprezentácii údajov a od použitého kompresného algoritmu."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Bezstratové kompresné algoritmy zvyčajne dokážu znížiť počet uložených alebo prenášaných bitov, pričom zaručujú úplnú rekonštrukciu pôvodných údajov."
+        },
+        "csta/3A-DA-10": {
+          "description": "Posúďte kompromisy v tom, ako sú usporiadané prvky údajov a kde sú údaje uložené."
+        },
+        "csta/1B-CS-01": {
+          "description": "Opísanie toho, ako vnútorné a vonkajšie súčasti počítača vytvárajú systém."
+        },
+        "csta/1B-CS-02": {
+          "description": "Modelovanie toho, ako spolu počítačový hardvér a softvér fungujú ako systém, aby splnili úlohy."
+        },
+        "csta/1B-NI-05": {
+          "description": "Diskutovanie o problémoch kyberbezpečnosti z reálneho sveta a o tom, ako sa dajú chrániť osobné údaje."
+        },
+        "csta/1B-AP-11": {
+          "description": "Rozkladanie problémov na menšie, zvládnuteľné podproblémy s cieľom podporiť proces vývoja programov."
+        },
+        "csta/1B-AP-14": {
+          "description": "Dodržiavanie práv intelektuálneho vlastníctva a správne uvedenie zdroja pri vytváraní alebo remixovaní programov."
+        },
+        "csta/1B-IC-21": {
+          "description": "Používanie médií z verejného vlastníctva alebo s licenciou Creative Commons, vyhýbanie sa kopírovaniu alebo používaniu materiálov iných ľudí bez povolenia."
+        },
+        "csta/1B-IC-18": {
+          "description": "Diskusia o výpočtových technológiách, ktoré zmenili svet, a vysvetlenie, ako tieto technológie ovplyvňujú kultúrne zvyklosti a ako sú nimi ovplyvňované."
+        },
+        "csta/1B-AP-08": {
+          "description": "Porovnávanie a zdokonaľovanie viacerých algoritmov slúžiacich na tú istú úlohu a určenie toho, ktorý je najvhodnejší."
+        },
+        "csta/1B-DA-07": {
+          "description": "Používanie údajov na zdôraznenie alebo načrtnutie príčinných súvislostí, predpovedanie výsledkov alebo vyjadrenie myšlienky."
+        },
+        "csta/1B-AP-16": {
+          "description": "Schopnosť zaujať s pomocou učiteľa rôzne roly pri spolupráci s rovesníkmi počas dizajnovej, implementačnej a kontrolnej fázy vývoja programu."
+        },
+        "csta/1B-IC-20": {
+          "description": "Vyhľadávanie rozmanitých pohľadov s cieľom zlepšiť počítačové výtvory."
+        },
+        "csta/2-AP-10": {
+          "description": "Používanie vývojových diagramov alebo pseudokódu na riešenie zložitých problémov ako algoritmov."
+        },
+        "csta/2-AP-13": {
+          "description": "Rozloženie problémov a podproblémov na časti s cieľom uľahčiť návrh, implementáciu a testovanie programov."
+        },
+        "csta/2-IC-22": {
+          "description": "Spolupráca s množstvom prispievateľov prostredníctvom stratégií, ako sú crowdsourcing či dotazníky, pri vytváraní počítačového výtvoru."
+        },
+        "csta/2-IC-20": {
+          "description": "Porovnávanie výhod a nevýhod výpočtovej techniky, ktorá má vplyv na každodenné aktivity ľudí a ich kariérne možnosti. "
+        },
+        "csta/2-IC-23": {
+          "description": "Opísanie výhod a nevýhod toho, keď sa informácie zverejnia v porovnaní s tým, keď sa zachovajú súkromné a zabezpečené."
+        },
+        "csta/2-AP-15": {
+          "description": "Získavanie a zohľadňovanie spätnej väzby od členov tímu a používateľov s cieľom vylepšiť riešenie, ktoré spĺňa potreby používateľov."
+        },
+        "csta/2-AP-18": {
+          "description": "Rozdeľovanie úloh a dodržiavanie časového plánu projektu pri spoločnom vývoji počítačových artefaktov."
+        },
+        "csta/2-AP-17": {
+          "description": "Systematické testovanie a vylepšovanie programov pomocou rôznych testovacích prípadov."
+        },
+        "csta/2-CS-02": {
+          "description": "Navrhovanie projektov, ktoré spájajú hardvérové a softvérové súčasti na zbieranie a výmenu údajov."
+        },
+        "csta/2-IC-21": {
+          "description": "Diskutovanie o témach skreslenia a dostupnosti v dizajne existujúcich technológií."
+        },
+        "csta/2-AP-19": {
+          "description": "Dokumentovanie programov s cieľom uľahčiť ich sledovanie, testovanie a ladenie."
+        },
+        "csta/2-AP-11": {
+          "description": "Vytvorenie jasne pomenovaných premenných, ktoré reprezentujú rôzne typy údajov, a vykonávanie operácií s ich hodnotami."
+        },
+        "csta/2-AP-16": {
+          "description": "Začlenenie existujúceho kódu, médií a knižníc do pôvodných programov a uvedenie autora."
+        },
+        "csta/2-AP-12": {
+          "description": "Návrh a iteratívny vývoj programov, ktoré kombinujú riadiace štruktúry vrátane vnorených cyklov a zložených podmienok."
+        },
+        "csta/2-AP-14": {
+          "description": "Vytvorenie procedúr s parametrami na usporiadanie kódu a uľahčenie jeho opätovného použitia."
+        },
+        "csta/3A-AP-20": {
+          "description": "Vyhodnotenie licencií, ktoré obmedzujú použitie informatických produktov pri použití rozličných zdrojov, napríklad knižníc."
+        },
+        "ai4k12-2021/3-A-ii.3-5": {
+          "description": "Modelovanie toho, ako učenie pod dohľadom identifikuje vzory v označených údajoch."
+        },
+        "ai4k12-2021/3-A-iv.3-5": {
+          "description": "Prezentácia spôsobu označovania trénovacích údajov pri používaní nástroja strojového učenia."
+        },
+        "ai4k12-2021/3-A-i.6-8": {
+          "description": "Porovnanie jedinečných charakteristík ľudského učenia so spôsobmi, akými fungujú systémy strojového učenia."
+        },
+        "ai4k12-2021/3-A-i.9-12": {
+          "description": "Definovanie algoritmov učenia pod dohľadom, bez dohľadu a posilňovania a uvedenie príkladov ľudského učenia, ktoré sú podobné jednotlivým algoritmom."
+        },
+        "ai4k12-2021/3-A-ii.K-2": {
+          "description": "Identifikácia vzorov v označených údajoch a určenie vlastností, ktoré predpovedajú označenia."
+        },
+        "ai4k12-2021/3-C-i.K-2": {
+          "description": "Vytvorenie označenej množiny údajov s explicitnými funkciami na ilustráciu toho, ako sa počítače môžu naučiť klasifikovať veci, ako sú potraviny, filmy alebo hračky."
+        },
+        "ai4k12-2021/3-A-iii.6-8": {
+          "description": "Trénovanie a vyhodnotenie klasifikačného alebo predikčného modelu pomocou strojového učenia na tabuľkovej množine údajov"
+        },
+        "csta/3A-DA-12": {
+          "description": "Vytvorenie výpočtových modelov, ktoré znázorňujú vzťahy medzi rôznymi prvkami údajov získanými z určitého javu alebo procesu."
+        },
+        "ai4k12-2021/3-C-i.3-5": {
+          "description": "Vytvorenie označenej množiny údajov s explicitnými vlastnosťami niekoľkých typov a použitie nástroja strojového učenia na trénovanie klasifikátora na základe týchto údajov."
+        },
+        "ai4k12-2021/3-C-i.6-8": {
+          "description": "Vytvorenie množiny údajov na trénovanie klasifikátora alebo prediktora rozhodovacieho stromu a preskúmanie vplyvu rôznych kódovaní vlastností na rozhodovací strom."
+        },
+        "csta/3B-DA-05": {
+          "description": "Používanie nástrojov a techník analýzy údajov na identifikáciu vzorov v údajoch reprezentujúcich zložité systémy."
+        },
+        "ai4k12-2021/3-A-iii.3-5": {
+          "description": "Trénovanie klasifikačného modelu pomocou strojového učenia a následné preskúmanie presnosti modelu na nových vstupoch"
+        },
+        "ai4k12-2021/3-C-i.9-12": {
+          "description": "Porovnanie dvoch množín údajov z reálneho sveta z hľadiska vlastností, ktoré obsahujú, a spôsobu, akým sú tieto vlastnosti zakódované."
+        },
+        "ai4k12-2021/3-C-iii.3-5": {
+          "description": "Preskúmajte vlastnosti a označenia trénovacích údajov s cieľom odhaliť potenciálne zdroje skreslenia."
+        },
+        "ai4k12-2021/3-C-iii.6-8": {
+          "description": "Vysvetlenie, ako výber trénovacích údajov ovplyvňuje správanie klasifikátora a ako môže dôjsť k skresleniu, ak nie je trénovacia množina správne vyvážená."
+        },
+        "csta/3A-IC-25": {
+          "description": "Testovanie a zdokonaľovanie výpočtových artefaktov s cieľom znížiť skreslenie a obmedziť nerovnosť."
+        },
+        "csta/3A-IC-24": {
+          "description": "Zhodnoťte, ako informatika ovplyvňuje osobné, etické, sociálne, ekonomické a kultúrne zvyklosti."
+        },
+        "ai4k12-2021/3-A-ii.9-12": {
+          "description": "Použite algoritmus učenia s dohľadom alebo bez dohľadu na trénovanie modelu na údajoch z reálneho sveta a potom vyhodnoťte výsledky."
+        },
+        "ai4k12-2021/3-A-iv.9-12": {
+          "description": "Vysvetlenie, čo sa deje v každom z krokov potrebných pri použití strojového učenia na vytvorenie klasifikátora alebo prediktora."
+        },
+        "1B-AP-11": {
+          "description": "Rozkladanie problémov na menšie, zvládnuteľné podproblémy s cieľom podporiť proces vývoja programov."
+        },
+        "1B-AP-14": {
+          "description": "Dodržiavanie práv intelektuálneho vlastníctva a správne uvedenie zdroja pri vytváraní alebo remixovaní programov."
+        },
+        "1B-CS-01": {
+          "description": "Opísanie toho, ako vnútorné a vonkajšie súčasti počítača vytvárajú systém."
+        },
+        "1B-CS-02": {
+          "description": "Modelovanie toho, ako spolu počítačový hardvér a softvér fungujú ako systém, aby splnili úlohy."
+        },
+        "1B-DA-07": {
+          "description": "Používanie údajov na zdôraznenie alebo načrtnutie príčinných súvislostí, predpovedanie výsledkov alebo vyjadrenie myšlienky."
+        },
+        "1B-IC-18": {
+          "description": "Diskusia o výpočtových technológiách, ktoré zmenili svet, a vysvetlenie, ako tieto technológie ovplyvňujú kultúrne zvyklosti a ako sú nimi ovplyvňované."
+        },
+        "1B-IC-20": {
+          "description": "Vyhľadávanie rozmanitých pohľadov s cieľom zlepšiť počítačové výtvory."
+        },
+        "1B-IC-21": {
+          "description": "Používanie médií z verejného vlastníctva alebo s licenciou Creative Commons, vyhýbanie sa kopírovaniu alebo používaniu materiálov iných ľudí bez povolenia."
+        },
+        "1B-NI-05": {
+          "description": "Diskutovanie o problémoch kyberbezpečnosti z reálneho sveta a o tom, ako sa dajú chrániť osobné údaje."
+        },
+        "2-AP-10": {
+          "description": "Používanie vývojových diagramov alebo pseudokódu na riešenie zložitých problémov ako algoritmov."
+        },
+        "2-AP-11": {
+          "description": "Vytvorenie jasne pomenovaných premenných, ktoré reprezentujú rôzne typy údajov, a vykonávanie operácií s ich hodnotami."
+        },
+        "2-AP-12": {
+          "description": "Návrh a iteratívny vývoj programov, ktoré kombinujú riadiace štruktúry vrátane vnorených cyklov a zložených podmienok."
+        },
+        "2-AP-13": {
+          "description": "Rozloženie problémov a podproblémov na časti s cieľom uľahčiť návrh, implementáciu a testovanie programov."
+        },
+        "2-AP-15": {
+          "description": "Získavanie a zohľadňovanie spätnej väzby od členov tímu a používateľov s cieľom vylepšiť riešenie, ktoré spĺňa potreby používateľov."
+        },
+        "2-AP-16": {
+          "description": "Začlenenie existujúceho kódu, médií a knižníc do pôvodných programov a uvedenie autora."
+        },
+        "2-AP-17": {
+          "description": "Systematické testovanie a vylepšovanie programov pomocou rôznych testovacích prípadov."
+        },
+        "2-AP-18": {
+          "description": "Rozdeľovanie úloh a dodržiavanie časového plánu projektu pri spoločnom vývoji počítačových artefaktov."
+        },
+        "2-AP-19": {
+          "description": "Dokumentovanie programov s cieľom uľahčiť ich sledovanie, testovanie a ladenie."
+        },
+        "3A-AP-20": {
+          "description": "Vyhodnotenie licencií, ktoré obmedzujú použitie informatických produktov pri použití rozličných zdrojov, napríklad knižníc."
+        },
+        "2-CS-02": {
+          "description": "Navrhovanie projektov, ktoré spájajú hardvérové a softvérové súčasti na zbieranie a výmenu údajov."
+        },
+        "3A-DA-10": {
+          "description": "Posúďte kompromisy v tom, ako sú usporiadané prvky údajov a kde sú údaje uložené."
+        },
+        "3A-DA-12": {
+          "description": "Vytvorenie výpočtových modelov, ktoré znázorňujú vzťahy medzi rôznymi prvkami údajov získanými z určitého javu alebo procesu."
+        },
+        "3B-DA-05": {
+          "description": "Používanie nástrojov a techník analýzy údajov na identifikáciu vzorov v údajoch reprezentujúcich zložité systémy."
+        },
+        "2-IC-20": {
+          "description": "Porovnávanie výhod a nevýhod výpočtovej techniky, ktorá má vplyv na každodenné aktivity ľudí a ich kariérne možnosti. "
+        },
+        "2-IC-21": {
+          "description": "Diskutovanie o témach skreslenia a dostupnosti v dizajne existujúcich technológií."
+        },
+        "2-IC-22": {
+          "description": "Spolupráca s množstvom prispievateľov prostredníctvom stratégií, ako sú crowdsourcing či dotazníky, pri vytváraní počítačového výtvoru."
+        },
+        "2-IC-23": {
+          "description": "Opísanie výhod a nevýhod toho, keď sa informácie zverejnia v porovnaní s tým, keď sa zachovajú súkromné a zabezpečené."
+        },
+        "3A-IC-24": {
+          "description": "Zhodnoťte, ako informatika ovplyvňuje osobné, etické, sociálne, ekonomické a kultúrne zvyklosti."
+        },
+        "3A-IC-25": {
+          "description": "Testovanie a zdokonaľovanie výpočtových artefaktov s cieľom znížiť skreslenie a obmedziť nerovnosť."
+        },
+        "3A-NI-06": {
+          "description": "Odporúčanie bezpečnostných opatrení na riešenie rôznych scenárov na základe faktorov, ako sú účinnosť, uskutočniteľnosť a etické dôsledky."
+        },
+        "3A-NI-07": {
+          "description": "Porovnajte rôzne bezpečnostné opatrenia a zvážte kompromisy medzi použiteľnosťou a bezpečnosťou počítačového systému."
+        },
+        "3B-NI-04": {
+          "description": "Porovnajte spôsoby, akými vývojári softvéru chránia zariadenia a informácie pred neoprávneným prístupom."
+        },
+        "DAT-1.D.1": {
+          "description": "Kompresia údajov môže zmenšiť veľkosť (počet bitov) prenášaných alebo uložených údajov."
+        },
+        "DAT-1.D.2": {
+          "description": "Menší počet bitov nemusí nevyhnutne znamenať menej informácií."
+        },
+        "DAT-1.D.3": {
+          "description": "Miera zmenšenia veľkosti v dôsledku kompresie závisí od množstva redundancie v pôvodnej reprezentácii údajov a od použitého kompresného algoritmu."
+        },
+        "DAT-1.D.4": {
+          "description": "Bezstratové kompresné algoritmy zvyčajne dokážu znížiť počet uložených alebo prenášaných bitov, pričom zaručujú úplnú rekonštrukciu pôvodných údajov."
+        },
+        "IOC-2.B.5": {
+          "description": "Šifrovanie je proces kódovania údajov s cieľom zabrániť neoprávnenému prístupu k nim. Dekódovanie je proces dekódovania údajov. Dva bežné prístupy k šifrovaniu sú: ●       Šifrovanie so symetrickým kľúčom zahŕňa jeden kľúč na šifrovanie aj dešifrovanie. ●       Šifrovanie s verejným kľúčom spája verejný kľúč na šifrovanie a súkromný kľúč na dešifrovanie. Odosielateľ nepotrebuje súkromný kľúč príjemcu na zašifrovanie správy, ale súkromný kľúč príjemcu je potrebný na dešifrovanie správy. VYHLÁSENIE O VYLÚČENÍ(EKIOC-2.B.5): Špecifické matematické postupy šifrovania a dešifrovania sú mimo rozsahu tohto kurzu a skúšky AP."
+        },
+        "CD.L1:3-01": {
+          "description": "Používanie štandardných vstupných a výstupných zariadení na úspešné ovládanie počítačov a súvisiacich technológií."
+        },
+        "CI.L1:3-01": {
+          "description": "Uplatňovanie zásad zodpovedného digitálneho občianstva ( zákonné a etické správanie) pri používaní technologických systémov a softvéru."
+        },
+        "CL.L1:6-02": {
+          "description": "Používanie online zdrojov (napr. e-mailu, online diskusií, webových prostredí na spoluprácu) na zapojenie sa do spoločných činností pri riešení problémov s cieľom vytvoriť riešenia alebo produkty."
+        },
+        "CPP.L1:3-01": {
+          "description": "Používanie technologických zdrojov na vykonávanie výskumu primeraného veku."
+        },
+        "CPP.L1:3-02": {
+          "description": "Používanie vývojovo primeraných multimediálnych zdrojov (napr. interaktívne knihy a vzdelávací softvér), ktoré podporujú vzdelávanie naprieč celými učebnými osnovami."
+        },
+        "CPP.L1:3-04": {
+          "description": "Vytvorenie súboru príkazov, ktoré sa majú vykonať na dosiahnutie jednoduchej úlohy (napr. inštrukcie pre korytnačku)"
+        },
+        "CPP.L1:6-01": {
+          "description": "Používanie technologických pomôcok (ako sú kalkulačky, sondy na zber údajov, mobilné zariadenia, videá, vzdelávací softvér a webové nástroje) na riešenie problémov a samostatné učenie."
+        },
+        "CPP.L1:6-06": {
+          "description": "Realizácia riešení problémov pomocou vizuálneho programovacieho jazyka založeného na blokoch."
+        },
+        "CPP.L2:3": {
+          "description": "Návrh, vývoj, publikovanie a prezentácia produktov (napr. webových stránok, mobilných aplikácií, animácií) s využitím technologických zdrojov, ktoré názorne prezentujú a približujú koncepty učebných osnov."
+        },
+        "CT.L2:1": {
+          "description": "Použiť základné kroky algoritmického riešenia problémov na navrhovanie riešení (napr. zadefinovanie a preskúmanie problému, preskúmanie ukážkových prípadov, dizajn, realizácia riešenia, testovanie a vyhodnotenie)."
+        },
+        "CT.L2:12": {
+          "description": "Používanie abstrakcie na rozklad problému na čiastkové problémy."
+        },
+        "CT.L2:6": {
+          "description": "Opísanie a analýza sledu inštrukcií, ktorý prebieha (napr. opis správania postavy vo videohre, ktoré ovládajú pravidlá a algoritmy)."
+        },
+        "CT.L2:7": {
+          "description": "Prezentácia údajov rôznymi spôsobmi vrátane textu, zvukov, obrázkov a čísel."
+        },
+        "CT.L2:8": {
+          "description": "Používanie vizuálnej reprezentácie problémových stavov, štruktúr a dát (napr. grafy, schémy, sieťové diagramy, vývojové diagramy)."
+        },
+        "1.L.6": {
+          "description": "Používanie slov a slovných spojení osvojených prostredníctvom rozhovorov, pri čítaní a počúvaní textov a pri reagovaní na ne, vrátane používania často sa vyskytujúcich spojok na označenie jednoduchých vzťahov (napr. pretože)."
+        },
+        "11-12.L.6": {
+          "description": "Osvojiť si a presne používať všeobecné akademické aj špecializované slová a frázy potrebné na čítanie, písanie, rozprávanie a počúvanie na úrovni potrebnej na nástup na vysokú školu a vstup do kariérneho života; preukázať samostatnosť pri osvojovaní slovnej zásoby"
+        },
+        "2.L.6": {
+          "description": "Používanie slov a slovných spojení osvojených prostredníctvom rozhovorov, pri čítaní a počúvaní textov a pri reagovaní na ne, vrátane používania prídavných mien a prísloviek na opis (napr. Keď sú ostatné deti šťastné, som šťastný aj ja)."
+        },
+        "3.L.6": {
+          "description": "Osvojenie si a presné používanie konverzačných, všeobecných akademických a pre danú oblasť špecifických slov a slovných spojení vrátane tých, ktoré vyjadrujú priestorové a časové vzťahy (napr. Po večeri sme ich išli hľadať)."
+        },
+        "4.L.6": {
+          "description": "Osvojenie si a presné používanie vekovo primeraných akademických a špecializovaných slov a fráz vrátane tých, ktoré vyjadrujú presné akcie, emócie alebo stavy (napr. nariekanie, koktanie) a ktoré sú základom pre konkrétnu tému"
+        },
+        "5.L.6": {
+          "description": "Osvojenie si a presné používanie vekovo primeraných akademických a špecializovaných slov a fráz vrátane tých, ktoré vyjadrujú rozdiely, sčítanie a iné logické vzťahy (napr. „avšak“, „hoci“, „napriek tomu, že“, „podobne“, „navyše“, „okrem toho“)."
+        },
+        "9-10.L.6": {
+          "description": "Osvojiť si a presne používať všeobecné akademické aj špecializované slová a frázy potrebné na čítanie, písanie, rozprávanie a počúvanie na úrovni potrebnej na nástup na vysokú školu a vstup do kariérneho života; preukázať samostatnosť pri osvojovaní slovnej zásoby"
+        },
+        "11-12.RI.4": {
+          "description": "Určenie významu slov a fráz použitých v texte vrátane obrazných, konotatívnych a technických významov; analyzovanie toho, ako autor používa a obmieňa význam kľúčového výrazy/výrazov v priebehu textu "
+        },
+        "3.RL.4": {
+          "description": "Určenie významu slov a slovných spojení použitých v texte a rozlíšenie doslovného a nedoslovného jazyka."
+        },
+        "4.RL.7": {
+          "description": "Vytvorenie prepojení medzi textom príbehu alebo drámy a vizuálnou alebo ústnou prezentáciou textu a určenie, kde každá verzia odráža špecifické opisy a pokyny v texte."
+        },
+        "5.RL.4": {
+          "description": "Určenie významu slov a slovných spojení použitých v texte vrátane obrazného jazyka, ako sú metafory a prirovnania."
+        },
+        "5.RL.7": {
+          "description": "Analýza toho, ako vizuálne a multimediálne prvky prispievajú k významu, tónu alebo kráse textu (napr. grafický román, multimediálna prezentácia beletrie, ľudovej rozprávky, mýtu, básne)."
+        },
+        "1.SL.1": {
+          "description": "Zapojenie do spoločných rozhovorov s rôznymi partnermi o témach a textoch pre 1. ročník s rovesníkmi a dospelými v malých a väčších skupinách."
+        },
+        "2.SL.1": {
+          "description": "Zapojenie do spoločných rozhovorov s rôznymi partnermi o témach a textoch pre 2. ročník s rovesníkmi a dospelými v malých a väčších skupinách."
+        },
+        "3.SL.1": {
+          "description": "Efektívne zapájanie sa do rôznych spoločných diskusií (individuálne, v skupinách a pod vedením učiteľa) s rôznymi partnermi o témach a textoch pre 3. ročník, rozvíjanie myšlienok ostatných a jasné vyjadrovanie vlastných."
+        },
+        "6.SL.1": {
+          "description": "Efektívne zapájanie sa do rôznych spoločných diskusií (individuálne, v skupinách a pod vedením učiteľa) s rôznymi partnermi o témach a textoch pre 6. ročník, rozvíjanie myšlienok ostatných a jasné vyjadrovanie vlastných."
+        },
+        "7.SL.1": {
+          "description": "Efektívne zapájanie sa do rôznych spoločných diskusií (individuálne, v skupinách a pod vedením učiteľa) s rôznymi partnermi o témach a textoch pre 7. ročník, rozvíjanie myšlienok ostatných a jasné vyjadrovanie vlastných."
+        },
+        "11-12.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu, publikovanie a aktualizáciu individuálnych alebo spoločných písomných prác v reakcii na priebežnú spätnú väzbu vrátane nových argumentov alebo informácií."
+        },
+        "3.W.3": {
+          "description": "Písanie príbehov s cieľom spracovať skutočné alebo vymyslené zážitky alebo udalosti s použitím účinnej techniky, opisných informácií a jasných postupností udalostí."
+        },
+        "4.W.3": {
+          "description": "Písanie príbehov s cieľom spracovať skutočné alebo vymyslené zážitky alebo udalosti s použitím účinnej techniky, opisných informácií a jasných postupností udalostí."
+        },
+        "5.W.3": {
+          "description": "Písanie príbehov s cieľom spracovať skutočné alebo vymyslené zážitky alebo udalosti s použitím účinnej techniky, opisných informácií a jasných postupností udalostí."
+        },
+        "6.W.3": {
+          "description": "Písanie príbehov s cieľom spracovať skutočné alebo vymyslené zážitky alebo udalosti s použitím účinnej techniky, podstatných opisných informácií a správne štruktúrovaných postupností udalostí."
+        },
+        "6.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu a publikovanie písomných prác, ako aj na komunikáciu a spoluprácu s ostatnými; preukázanie dostatočných zručností pri písaní na klávesnici na napísanie minimálne troch strán na jedno posedenie."
+        },
+        "7.W.3": {
+          "description": "Písanie príbehov s cieľom spracovať skutočné alebo vymyslené zážitky alebo udalosti s použitím účinnej techniky, podstatných opisných informácií a správne štruktúrovaných postupností udalostí."
+        },
+        "7.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu a publikovanie písomných prác, odkazovanie na zdroje a ich citovanie, ako aj na komunikáciu a spoluprácu s ostatnými vrátane odkazovania na zdroje a ich citovania."
+        },
+        "8.W.3": {
+          "description": "Písanie príbehov s cieľom spracovať skutočné alebo vymyslené zážitky alebo udalosti s použitím účinnej techniky, podstatných opisných informácií a správne štruktúrovaných postupností udalostí."
+        },
+        "8.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu a publikovanie písomných prác a efektívnu prezentáciu vzťahov medzi informáciami a myšlienkami, ako aj na komunikáciu a spoluprácu s ostatnými."
+        },
+        "9-10.W.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu, publikovanie a aktualizáciu individuálnych alebo spoločných písomných prác s využitím schopnosti technológií prepojiť informácie s inými informáciami a flexibilne a dynamicky zobrazovať informácie."
+        },
+        "11-12.WHST.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu, publikovanie a aktualizáciu individuálnych alebo spoločných písomných prác v reakcii na priebežnú spätnú väzbu vrátane nových argumentov alebo informácií."
+        },
+        "9-10.WHST.6": {
+          "description": "Používanie technológií vrátane internetu na tvorbu, publikovanie a aktualizáciu individuálnych alebo spoločných písomných prác s využitím schopnosti technológií prepojiť informácie s inými informáciami a flexibilne a dynamicky zobrazovať informácie."
+        },
+        "7.G.2": {
+          "description": "Kreslenie (voľnou rukou, s pravítkom a uhlomerom, pomocou technológií) geometrických útvarov so zadanými vlastnosťami, so zameraním na rysovanie trojuholníkov pomocou troch zadaných údajov (uhlov alebo dĺžok strán) a pozorovanie toho, kedy zo zadaných vlastností môže vzniknúť iba jeden trojuholník a kedy viacero."
+        },
+        "4.MD.6": {
+          "description": "Meranie uhlov uvedených celým číslom pomocou uhlomera. Načrtnutie uhlov zadanej veľkosti."
+        },
+        "MP.1": {
+          "description": "Pochopenie problémov a vytrvalosť pri ich riešení"
+        },
+        "MP.2": {
+          "description": "Abstraktné a kvantitatívne uvažovanie"
+        },
+        "MP.4": {
+          "description": "Modelovanie s matematikou"
+        },
+        "MP.5": {
+          "description": "Strategické používanie vhodných nástrojov"
+        },
+        "MP.6": {
+          "description": "Dôraz na presnosť"
+        },
+        "MP.7": {
+          "description": "Identifikácia štruktúry a jej využitie"
+        },
+        "MP.8": {
+          "description": "Identifikácia a vyjadrenie pravidelnosti v opakovaných tvrdeniach"
+        },
+        "4.NBT.4": {
+          "description": "Plynulé sčítavanie a odčítavanie viacciferných celých číel pomocou štandardného algoritmu"
+        },
+        "4.NBT.5": {
+          "description": "Násobenie maximálne štvorciferného celého čísla iným jednociferným celým číslom a násobenie dvoch dvojciferných čísel pomocou stratégií založených na pozíciách cifier a vlastnostiach matematických operácií. Ilustrovanie a vysvetlenie výpočtu pomocou rovníc."
+        },
+        "1.OA.1": {
+          "description": "Používanie sčítania a odčítania do 20 na riešenie slovných úloh zahŕňajúcich situácie sčítania, odčítania, skladania, rozkladania a porovnávania s neznámymi vo všetkých pozíciách, napr. pomocou predmetov, nákresov a rovníc so symbolom"
+        },
+        "2.OA.1": {
+          "description": "Používanie sčítania a odčítania do 100 na riešenie jedno a dvojkrokových slovných úloh zahŕňajúcich situácie sčítania, odčítania, skladania, rozkladania a porovnávania s neznámymi vo všetkých pozíciách, napr. pomocou predmetov, nákresov a rovníc so symbolom"
+        },
+        "3.OA.3": {
+          "description": "Používanie násobenia a delenia do 100 na riešenie slovných úloh v situáciách, ktoré zahŕňajú rovnaké skupiny, polia a merané množstvá, napr. pomocou nákresov a rovníc so symbolom pre neznáme číslo na vyjadrenie problému."
+        },
+        "3-A-i.6-8": {
+          "description": "Porovnanie jedinečných charakteristík ľudského učenia so spôsobmi, akými fungujú systémy strojového učenia."
+        },
+        "3-A-i.9-12": {
+          "description": "Definovanie algoritmov učenia pod dohľadom, bez dohľadu a posilňovania a uvedenie príkladov ľudského učenia, ktoré sú podobné jednotlivým algoritmom."
+        },
+        "3-A-ii.K-2": {
+          "description": "Identifikácia vzorov v označených údajoch a určenie vlastností, ktoré predpovedajú označenia."
+        },
+        "3-A-ii.3-5": {
+          "description": "Modelovanie toho, ako učenie pod dohľadom identifikuje vzory v označených údajoch."
+        },
+        "3-A-ii.9-12": {
+          "description": "Použite algoritmus učenia s dohľadom alebo bez dohľadu na trénovanie modelu na údajoch z reálneho sveta a potom vyhodnoťte výsledky."
+        },
+        "3-A-iii.3-5": {
+          "description": "Trénovanie klasifikačného modelu pomocou strojového učenia a následné preskúmanie presnosti modelu na nových vstupoch"
+        },
+        "3-A-iii.6-8": {
+          "description": "Trénovanie a vyhodnotenie klasifikačného alebo predikčného modelu pomocou strojového učenia na tabuľkovej množine údajov"
+        },
+        "3-A-iv.3-5": {
+          "description": "Prezentácia spôsobu označovania trénovacích údajov pri používaní nástroja strojového učenia."
+        },
+        "3-A-iv.9-12": {
+          "description": "Vysvetlenie, čo sa deje v každom z krokov potrebných pri použití strojového učenia na vytvorenie klasifikátora alebo prediktora."
+        },
+        "3-C-i.K-2": {
+          "description": "Vytvorenie označenej množiny údajov s explicitnými funkciami na ilustráciu toho, ako sa počítače môžu naučiť klasifikovať veci, ako sú potraviny, filmy alebo hračky."
+        },
+        "3-C-i.3-5": {
+          "description": "Vytvorenie označenej množiny údajov s explicitnými vlastnosťami niekoľkých typov a použitie nástroja strojového učenia na trénovanie klasifikátora na základe týchto údajov."
+        },
+        "3-C-i.6-8": {
+          "description": "Vytvorenie množiny údajov na trénovanie klasifikátora alebo prediktora rozhodovacieho stromu a preskúmanie vplyvu rôznych kódovaní vlastností na rozhodovací strom."
+        },
+        "3-C-i.9-12": {
+          "description": "Porovnanie dvoch množín údajov z reálneho sveta z hľadiska vlastností, ktoré obsahujú, a spôsobu, akým sú tieto vlastnosti zakódované."
+        },
+        "3-C-iii.3-5": {
+          "description": "Preskúmajte vlastnosti a označenia trénovacích údajov s cieľom odhaliť potenciálne zdroje skreslenia."
+        },
+        "3-C-iii.6-8": {
+          "description": "Vysvetlenie, ako výber trénovacích údajov ovplyvňuje správanie klasifikátora a ako môže dôjsť k skresleniu, ak nie je trénovacia množina správne vyvážená."
+        },
+        "1.a": {
+          "description": "Uplatňovanie existujúcich poznatkov na vytváranie nových koncepcií, produktov alebo procesov."
+        },
+        "1.b": {
+          "description": "Vytváranie originálnych diel ako prostriedku osobného alebo skupinového vyjadrenia."
+        },
+        "1.c": {
+          "description": "Používanie modelov a simulácií na skúmanie komplexných systémov a problémov."
+        },
+        "2.a": {
+          "description": "Interakcia, spolupráca a publikovanie s rovesníkmi, odborníkmi alebo inými osobami prostredníctvom rozmanitých digitálnych prostredí a médií."
+        },
+        "2.b": {
+          "description": "Účinné sprostredkovanie informácií a myšlienok viacerým skupinám používateľov s využitím rôznych médií a formátov."
+        },
+        "4.b": {
+          "description": "Plánovanie a riadenie činností na vývoj riešenia alebo dokončenie projektu."
+        },
+        "4.d": {
+          "description": "Využívanie viacerých procesov a rôznych perspektív na skúmanie alternatívnych riešení."
+        },
+        "6.a": {
+          "description": "Pochopenie a používanie technologických systémov."
+        },
+        "6.c": {
+          "description": "Riešenie problémov so systémami a aplikáciami."
+        },
+        "6.d": {
+          "description": "Transfer súčasných vedomostí na osvojenie si nových technológií."
         }
       }
     }

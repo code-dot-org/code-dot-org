@@ -8,7 +8,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 /**
  * Wraps its children to display them in a flexbox layout.

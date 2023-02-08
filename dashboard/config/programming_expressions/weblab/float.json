@@ -3,7 +3,7 @@
   "name": "Float",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "#  Float\r\n\r\nThe `float` property places an element on the left or right side of the screen and allows text and other elements to wrap around it. \r\n",
+  "content": "#  Float\r\n\r\nThe [`Float`(#d3e965)](/docs/weblab/float/) property places an element on the left or right side of the screen and allows text and other elements to wrap around it. \r\n",
   "examples": [
     {
       "name": "",

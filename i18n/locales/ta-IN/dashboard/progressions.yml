@@ -1,44 +1,505 @@
 ta:
   data:
     progressions:
+      '"If/Else" with the Bee': 'தேனீயுடன் "இருந்தால்/வேறு"'
+      8-Bit Binary Number Widget: 8-பிட் பைனரி எண் விட்ஜெட்
+      AI Lab and Isaac's Data: AI ஆய்வகம் மற்றும் ஐசக்கின் தரவு
+      AI Lab and Kim's Data: AI ஆய்வகம் மற்றும் கிம்ஸ் தரவு
       AI Machine Learning - Video: AI இயந்திர கற்றல் - வீடியோ
+      'AI for Oceans: Fish vs Not Fish': 'கடல்களுக்கான AI: மீன் vs மீன் அல்ல'
+      'AI for Oceans: Types of Fish': 'கடல்களுக்கான AI: மீன் வகைகள்'
       'AI: Impact on Society - Video': 'AI: சமூகத்தின் மீதான தாக்கம் - வீடியோ'
       'AI: Training Data & Bias - Video': 'AI: பயிற்சி தரவு & சார்பு - வீடியோ'
+      Accelerometer Events: முடுக்கமானி நிகழ்வுகள்
+      Add Content and HTML: உள்ளடக்கம் மற்றும் HTML ஐச் சேர்க்கவும்
+      Add Content and Structure to Your Page: உங்கள் பக்கத்தில் உள்ளடக்கம் மற்றும் கட்டமைப்பைச் சேர்க்கவும்
+      Add Movement: இயக்கத்தைச் சேர்க்கவும்
+      Add Sprites: உருவங்களைச் சேர்க்கவும்
+      Add Style: ஸ்டைலை சேர்க்கவும்
+      Add Style to Your Page: உங்கள் பக்கத்திற்கு ஸ்டைலை சேர்க்கவும்
+      Add Text: ' டெக்ஸ் சேர்க்கவும்'
+      Add a Welcome Screen: வரவேற்புத் திரையைச் சேர்க்கவும்
+      Adding Images: படங்களைச் சேர்த்தல்
+      Adding New Screens: புதிய திரைகளைச் சேர்த்தல்
+      Adding Pages: பக்கங்களைச் சேர்த்தல்
+      Adding Screens: திரைகளைச் சேர்த்தல்
+      Alternative Datasets: மாற்று தரவுத்தொகுப்புகள்
+      Animate Your Scene: உங்கள் காட்சியை அனிமேட் செய்யுங்கள்
       App Lab Intro - Video: ஆப் லேப் அறிமுகம் - வீடியோ 
+      'App Project: Screen Design': 'பயன்பாட்டு திட்டம்: திரை வடிவமைப்பு'
+      'App: Choose a Kid''s Movie': 'பயன்பாட்டு: குழந்தைகளுக்கான திரைப்படத்தைத் தேர்வு செய்யவும்'
+      'App: Friend Finder': 'பயன்பாடு: நண்பர் கண்டுபிடிப்பான்'
+      'App: Guess the Number': 'பயன்பாடு: எண்ணை யூகிக்கவும்'
+      'App: How Many Countries': 'பயன்பாட்டு:எத்தனை நாடுகள்'
+      'App: Improved Pet App': 'பயன்பாடு: மேம்படுத்தப்பட்ட செல்லப்பிராணி பயன்பாடு'
+      'App: Is It Your Birthday?': 'பயன்பாடு: இது உங்கள் பிறந்தநாளா?'
+      'App: My Famous Birthday': 'பயன்பாடு:எனது பிரபலமான பிறந்தநாள்'
+      'App: National Parks': 'பயன்பாடு: தேசிய பூங்காக்கள்'
+      'App: Outfit Picker': 'பயன்பாடு: அவுட்ஃபிட் பிக்கர்'
+      'App: Pet Chooser': 'பயன்பாடு: செல்லப்பிராணிகளைத் தேர்ந்தெடுப்பவர்'
+      'App: Stamp Notebook': 'பயன்பாடு: முத்திரை நோட்புக்'
+      'App: Story Creator': 'பயன்பாடு: கதையை உருவாக்கியவர்'
+      'App: The Fastest Finger': 'பயன்பாடு: வேகமான விரல்'
+      'App: Where Should I Live?': 'பயன்பாடு: நான் எங்கே வாழ வேண்டும்?'
+      Artist Intro with JR Hildebrand: JR ஹில்டிபிரான்டுடன் கலைஞர் அறிமுகம்
+      Artist Intro with JR Hildebrande: JR ஹில்டெபிராண்டுடன் கலைஞர் அறிமுகம்
       Artist Project: கலைஞர் திட்டம்
       'Artist: Variables': 'கலைஞர்: மாறிகள்'
       Assessment: மதிப்பீடு
+      Attribution: பண்புக்கூறு
       Back and Forth: முன்னும் பின்னுமாக
+      Basic Conditionals: அடிப்படை நிபந்தனைகள்
       Bass, Mid, and Treble: பாஸ், மிட் மற்றும் டிரெபிள்
+      Be a Super Digital Citizen: சூப்பர் டிஜிட்டல் குடிமகனாக இருங்கள்
+      Begin planning your project: உங்கள் திட்டத்தைத் திட்டமிடத் தொடங்குங்கள்
+      Begin planning your project_2018: உங்கள் திட்டத்தைத் திட்டமிடத் தொடங்குங்கள்_2018
+      Binary Bracelets - Unplugged Activity: பைனரி வளையல்கள் - இணைக்கப்படாத செயல்பாடு
+      Binary Number Widget: பைனரி எண் விட்ஜெட்
+      Binary Numbers: பைனரி எண்கள்
+      Board Events: குழு நிகழ்வுகள்
+      Board Input and Output: பலகை உள்ளீடு மற்றும் வெளியீடு
+      Book Recommender App: புத்தக பரிந்துரை பயன்பாடு 
+      Book Recommender Model Card: புத்தகப் பரிந்துரையாளர் மாதிரி அட்டை
+      Boolean Comparison: பூலியன் மகரம்
+      Build a Platform Jumper: ஒரு பிளாட்ஃபார்ம் ஜம்பரை உருவாக்குங்கள்
+      Build a Screen: ஒரு திரையை உருவாக்கவும்
+      Building a UI with Design Mode: வடிவமைப்பு பயன்முறையுடன் UI ஐ உருவாக்குதல்
+      Building an App: ஒரு பயன்பாட்டை உருவாக்குதல்
+      Button Circuits: பொத்தான் சுற்றுகள்
+      CS Discoveries Post-Course Survey: CS டிஸ்கவரிஸ் போஸ்ட்-கோர்ஸ் சர்வே
+      CS Discoveries Post-course Survey: CS டிஸ்கவரிஸ் போஸ்ட்-கோர்ஸ் சர்வே
+      CSD U3 Interactive Card Exemplar: CSD U3 இன்டராக்டிவ் கார்டு எக்ம்ப்ளர் 
+      CSD U3 platform intro: CSD U3 மேடை அறிமுகம்
+      'CSD: For Loop': 'CSD: லூப்பிற்கு'
+      Cake Defender: கேக் டிஃபென்டர்
+      Cake Survey: கேக் சர்வே
+      Challenge: சவால் 
+      Challenge Levels: சவால் நிலைகள்
+      'Challenge: Lists': 'சவால்: பட்டியல்கள்'
+      'Challenge: RGB Colors': 'சவால்: RGB நிறங்கள்'
+      Challenges: சவால்கள்
+      Change: மாற்றம்
+      Check Your Work: உங்கள் வேலையைச் சரிபார்க்கவும்
+      Check-In Survey: செக்-இன் சர்வே
+      Checking for a Winner: வெற்றியாளரைத் தேடுகிறது
+      'Choice Levels: Customize Your App': 'தேர்வு நிலைகள்: உங்கள் பயன்பாட்டைத் தனிப்பயனாக்குங்கள்'
+      Choose Your Own Adventure: உங்கள் சொந்த சாகசத்தைத் தேர்ந்தெடுக்கவும்
+      Choosing Good IDs: நல்ல ஐடிகளைத் தேர்ந்தெடுப்பது
+      Club Datasets: கிளப் தரவுத்தொகுப்புகள்
+      Code Prediction: குறியீடு கணிப்பு
       Code Your Own Flappy Game: உங்கள் சொந்த ஃபிளாப்பி விளையாட்டைக் குறியிடவும்
+      Code Your Page: உங்கள் பக்கத்தை குறியிடவும்
+      Collector Game: கலெக்டர் விளையாட்டு
+      Collisions: மோதல்கள்
+      Collisions in Games: விளையாட்டுகளில் மோதல்கள்
+      Color LEDs: வண்ண LEDக்கல் 
+      Combining Projects: திட்டங்களை ஒருங்கிணைத்தல்
+      Combining Representations: பிரதிநிதித்துவங்களை இணைத்தல்
+      Conditionals with Cards - Unplugged Activity: கார்டுகளுடன் நிபந்தனைகள் - இணைக்கப்படாத செயல்பாடு
+      'Conditionals: If Statements': 'நிபந்தனைகள்: அறிக்கைகள் என்றால்'
+      'Conditionals: If and If/Else Statements': 'நிபந்தனைகள்: இருந்தால் மற்றும் இருந்தால்/வேறு அறிக்கைகள்'
+      Control Your Player: உங்கள் பிளேயரைக் கட்டுப்படுத்தவும்
+      'Course E: Play Lab Project': 'பாடநெறி E: ப்லே லேப் ப்ராஜெக்ட் '
+      'Course F: Artist Project': 'பாடநெறி F: ஆர்ட்டிஸ்ட் ப்ராஜெக்ட் '
+      'Course F: Artist Project - Revise': 'பாடநெறி F: ஆர்ட்டிஸ்ட் ப்ராஜெக்ட் ரிவைஸ் '
+      'Course F: Play Lab Project': 'பாடநெறி F:பிலே லேப் ப்ராஜெக்ட் '
+      'Course F: Play Lab Project - Revise': "பாடநெறி F: பிலே லேப் ப்ராஜெக்ட் - ரிவைஸ் \n"
+      Crack Random Substitution: கிராக் ரேண்டம் சப்சிடியூஷன் 
+      Crack a Caesar Cipher: சீசர் சைஃபரை உடைக்கவும்
+      Create Your Own Animation: உங்கள் சொந்த அனிமேஷனை உருவாக்கவும்
+      Create Your Sprites: உங்கள் உருவங்களை உருவாக்கவும்
+      Create a Background: ஒரு பின்னணியை உருவாக்கவும்
+      Create a Google Form: Google படிவத்தை உருவாக்கவும்
+      Create a Story: ஒரு கதையை உருவாக்கவும்
+      Create an App in App Lab: பயன்பாட்டு ஆய்வகத்தில் ஒரு பயன்பாட்டை உருவாக்கவும்
+      Create your project: உங்கள் திட்டத்தை உருவாக்கவும்
+      Customize: தனிப்பயனாக்கலாம்
+      Customize Your App: உங்கள் பயன்பாட்டைத் தனிப்பயனாக்குங்கள்
       Dance Crews: நடன அணிக்குழுக்கள்
+      Data Visualization: தரவு காட்சிப்படுத்தல்
+      De-bugging with the Step Button: ஸ்டெப் பட்டன் மூலம் பிழை நீக்கம்
       Debugging: பிழைத்திருத்தம்
+      Debugging with the Step Button: படி பொத்தானைக் கொண்டு பிழைத்திருத்தம்
+      'Demo App: Interactive Card': 'டெமோ பயன்பாடு: ஊடாடும் அட்டை'
+      Demo Apps: டெமோ பயன்பாடு 
+      Design Mode: வடிவமைப்பு முறை
+      Design Your Game: உங்கள் விளையாட்டை வடிவமைக்கவும்
+      Design Your Prototype: உங்கள் முன்மாதிரியை வடிவமைக்கவும்
+      Design a Screen for your App: உங்கள் பயன்பாட்டிற்கான திரையை வடிவமைக்கவும்
+      Design an AI App - AI Lab: AI செயலியை வடிவமைக்கவும் - AI ஆய்வகம்
+      Design an AI App - App Lab: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
+      Designing for Accessibility: AI செயலியை வடிவமைக்கவும் - பயன்பாட்டு ஆய்வகம்
+      Digital Sharing - Unplugged Activity: டிஜிட்டல் பகிர்வு - இணைக்கப்படாத செயல்பாடு
+      Draw Your Background: உங்கள் பின்னணியை வரையவும்
+      Draw a Background: ஒரு பின்னணியை வரையவும்
       Drawing: வரைதல்
+      Driver Alert System: டிரைவர் எச்சரிக்கை அமைப்பு
+      Escape Room Example: எஸ்கேப் ரூம் உதாரணம்
       Events: நிகழ்வுகள்
+      Events and Linking Screens: நிகழ்வுகள் மற்றும் இணைக்கும் திரைகள்
+      Events and Properties: நிகழ்வுகள் மற்றும் பண்புகள்
       Example: எடுத்துக்காட்டு
+      Example Animated Scene: உதாரணம் அனிமேஷன் காட்சி
+      Example App Types: எடுத்துக்காட்டு பயன்பாட்டு வகைகள்
+      'Example App: Zoo Classification': 'எடுத்துக்காட்டு பயன்பாடு: உயிரியல் பூங்கா வகைப்பாடு'
+      Example Apps: எடுத்துக்காட்டு பயன்பாடுகள்
+      Example Projects: எடுத்துக்காட்டு திட்டங்கள்
+      Example projects: எடுத்துக்காட்டு திட்டங்கள்
+      Exemplar Personal Websites: முன்மாதிரியான தனிப்பட்ட இணையதளங்கள்
+      Expanding Personal Website: தனிப்பட்ட இணையதளத்தை விரிவுபடுத்துகிறது
+      Expanding Your Website: உங்கள் இணையதளத்தை விரிவுபடுத்துகிறது
+      Experiment with Web Lab: இணைய ஆய்வகத்துடன் பரிசோதனை செய்யுங்கள்
+      Exploration: ஆய்வு
+      'Exploration: For Loops': 'ஆய்வு: சுழல்களுக்கு'
       'Exploration: Rikki''s Poster': 'ஆய்வு: ரிக்கியின் போஸ்டர்'
+      'Exploration: Sample Apps': 'ஆய்வு: மாதிரி பயன்பாடுகள்'
+      'Exploration: Sample Programs': 'ஆய்வு: மாதிரி நிகழ்ச்சிகள்'
+      'Exploration: Sample Project': 'ஆய்வு: மாதிரி திட்டம்'
+      Exploring CS in Entertainment: பொழுதுபோக்கில் CS ஐ ஆய்வு செய்தல்
+      Exploring more CSS: மேலும் CSS ஐ ஆராய்கிறது
+      Extra Challenge: கூடுதல் சவால்
+      'Extra Challenge: Sound Board': 'கூடுதல் சவால்: ஒலி பலகை'
+      Final Room Escape App: இறுதி அறை எஸ்கேப் பயன்பாடு 
+      Find the Wizard: வழிகாட்டியைக் கண்டுபிடி
+      Finish a Screen: ஒரு திரையை முடிக்கவும்
+      Finish the Prototype: முன்மாதிரியை முடிக்கவும்
+      Finishing Functions: முடித்தல் செயல்பாடுகள்
+      Finishing Touches: முடித்தல்
+      Flyer Game: ஃப்ளையர் கேம்
+      Follow the Algorithm - Unplugged Activity: அல்காரிதம் - Unplugged Activity -ஐப் பின்பற்றவும்
+      Follow the Mouse: மவுஸைப் பின்தொடரவும்
+      Fonts and Style: எழுத்துருக்கள் மற்றும் நடை
+      FoodFight: உணவுச்சண்டை
+      For Loop Fun - Unplugged Activity: லூப் வேடிக்கைக்காக - இணைக்கப்படாத செயல்பாடு
+      For Loops and Color LEDs: சுழல்கள் மற்றும் வண்ண LED களுக்கு
+      For Loops and Repeat Blocks: லூப்ஸ் மற்றும் ரிபீட் பிளாக்குகளுக்கு
+      Free Play: இலவசமாக விளையாடு 
+      'Free Play: Make a Scene': 'இலவச விளையாட்டு: ஒரு காட்சியை உருவாக்கு'
+      'Free Play: Make an Interactive Scene': 'இலவச விளையாட்டு: ஒரு ஊடாடும் காட்சியை உருவாக்குங்கள்'
+      Fruit and Veggie Explorer: பழம் மற்றும் காய்கறி எக்ஸ்ப்ளோரர்
       Functions: செயல்பாடுகள்
       Get In Formation: உருவாக்கத்திற்கு வருதல்
+      Getting Properties: சொத்துக்களை பெறுதல்
+      Graph Paper Programming - Unplugged Activity: வரைபட காகித நிரலாக்கம் - இணைக்கப்படாத செயல்பாடு
+      Green Glass Door: பச்சை கண்ணாடி கதவு
+      Guess The Number: எண்ணை யூகிக்கவும்
+      Headings: தலைப்புகள்
       Hello World: வணக்கம் உலகம்
+      How to Create a Simple Function: ஒரு எளிய செயல்பாட்டை எவ்வாறு உருவாக்குவது
+      Ice Age Loops: பனி யுக சுழல்கள்
+      Images and Sounds: படங்கள் மற்றும் ஒலிகள்
+      Import Your Model: உங்கள் மாதிரியை இறக்குமதி செய்யவும்
+      Import a Model: ஒரு மாதிரியை இறக்குமதி செய்யவும்
+      Importing Your Model: உங்கள் மாதிரியை இறக்குமதி செய்கிறது
+      Improved Shoe Recommender: மேம்படுத்தப்பட்ட ஷூ பரிந்துரையாளர்
+      Incorporate Feedback: கருத்துக்களை இணைத்துக்கொள்ளுங்கள்
+      Innovation Research: புதுமை ஆராய்ச்சி
+      Input Examples: உள்ளீட்டு எடுத்துக்காட்டுகள்
+      Input with If-Else: If-Else உடன் உள்ளீடு
+      InspirationalArtwork: ஊக்கமளிக்கும் கலைப்படைப்பு
+      Intro to Flyer Game: ஃப்ளையர் கேம் அறிமுகம்
+      Intro to For Loops: For Loops இன் அறிமுகம்
+      Intro to Side Scrollers: பக்க ஸ்க்ரோலர்களுக்கான அறிமுகம்
+      Intro to Sprites: ஸ்ப்ரிட்ஸ் அறிமுகம்
+      Intro to Variables: மாறிகள் அறிமுகம்
+      Isaac's Survey Data: ஐசக்கின் சர்வே தரவு
+      Iteration and Parameters: மறு செய்கை மற்றும் அளவுருக்கள்
+      Keep On Dancing!: ஆடிக்கொண்டே இரு!
+      Keeping Data Secret: தரவை ரகசியமாக வைத்திருத்தல்
+      Keyboard Input: விசைப்பலகை உள்ளீடு
+      Kim's Survey: கிம் சர்வே
+      Kim's Survey Data: கிம்ஸ் சர்வே டேட்டா
+      LED Apps: LED பயன்பாடுகள்
+      Layout with CSS: CSS உடன் தளவமைப்பு
       Learning from Simulations: உருவகப்படுத்துதல்களிலிருந்து கற்றல்
       Lesson Extras: கூடுதல் பாடங்கள்
+      Level Overview: நிலை கண்ணோட்டம்
       Levels: நிலைகள்
+      Light Show: ஒளி காட்சி
+      Linking Pages: பக்கங்களை இணைக்கிறது
+      Linking Screens: இணைக்கும் திரைகள்
       Lists: பட்டியல்கள்
+      Looking for Patterns: வடிவங்களைத் தேடுகிறது
+      Looping: லூப்பிங்
+      Loops with the Artist: கலைஞருடன் சுழல்கள்
+      Make Your Sprites: உங்கள் உருவங்களை உருவாக்குங்கள்
+      Make a Prediction: ஒரு கணிப்பு செய்யுங்கள்
+      Make an Interactive Card: ஊடாடும் அட்டையை உருவாக்கவும்
+      Make it Interactive: அதை ஊடாடச் செய்யுங்கள்
+      Making Scenes: காட்சிகளை உருவாக்குதல்
+      Making Songs: பாடல்களை உருவாக்குதல்
+      Making Sounds: ஒலிகளை உருவாக்குதல்
+      Making an Interactive Card: ஊடாடும் அட்டையை உருவாக்குதல்
+      'Maze Intro: Programming with Blocks': 'பிரமை அறிமுகம்: தொகுதிகளுடன் நிரலாக்கம்'
       Measures: அளவீடுகள்
+      Medical Dataset Model Cards: மருத்துவ தரவுத்தொகுப்பு மாதிரி அட்டைகள்
+      Medical Priority App: மருத்துவ முன்னுரிமை பயன்பாடு
+      'Minecraft: Hero''s Journey': 'Minecraft ஹீரோவின் பயணம்'
+      'Mini-Project: About Me': 'மினி-திட்டம்: என்னைப் பற்றி'
+      'Mini-Project: Alien Dance Moves': 'மினி-திட்டம்: ஏலியன் நடன நகர்வுகள்'
+      'Mini-Project: Alien Dance Party': 'மினி-திட்டம்: ஏலியன் டான்ஸ் பார்ட்டி'
+      'Mini-Project: Create a Virtual Pet': 'மினி-திட்டம்: ஒரு மெய்நிகர் செல்லப்பிராணியை உருவாக்கவும்'
       'Mini-Project: Outbreak Simulator': 'சிறு திட்டம்: அவுட்பிரேக் சிமுலேட்டர்'
+      'Mini-Project: Royal Battle': 'சிறு திட்டம்: ராயல் பாட்டில் '
+      "Mini-Project: Snowflake #1": "மினி-திட்டம்: ஸ்னோஃப்ளேக் #1"
+      "Mini-Project: Snowflake #2": "மினி-திட்டம்: ஸ்னோஃப்ளேக் #2"
+      'Mini-Project: Swimming Fish': 'மினி-திட்டம்: நீச்சல் மீன்'
+      'Mini-Project: Swimming Fish (continued)': 'மினி-திட்டம்: நீச்சல் மீன் (தொடரும்)'
+      'Mini-Project: User Input Programs': 'மினி-திட்டம்: பயனர் உள்ளீட்டு நிரல்கள்'
+      'Mini-Project: Virtual Pet': 'மினி-திட்டம்: விர்ச்சுவல் பெட்'
+      'Mini-project: Chase Game': 'சிறு திட்டம்: சேஸ் கேம்'
+      'Mini-project: Flappy Game': 'சிறு திட்டம்: பிளாப்பி கேம்'
+      'Mini-project: Interactive Poster': 'சிறு திட்டம்: ஊடாடும் சுவரொட்டி'
+      'Mini-project: Jorge the Dog': 'சிறு திட்டம்: ஜார்ஜ் தி டாக்'
+      'Mini-project: Sticker Art': 'சிறு திட்டம்: ஸ்டிக்கர் கலை'
+      'Mini-project: Sticker Design': 'சிறு திட்டம்: ஸ்டிக்கர் வடிவமைப்பு'
+      Modify simulation variables: உருவகப்படுத்துதல் மாறிகளை மாற்றவும்
       More Buttons: மேலும் பொத்தான்கள்
+      More Input: அதிக உள்ளீடு
+      More Parameters: அதிக அளவுருக்கள்
+      Motorcycle: மோட்டார் சைக்கிள்
+      Move It Move it Video  - Unplugged Activity: அதை நகர்த்த மூவ் இட் வீடியோ - அன்ப்ளக்ட் ஆக்டிவிட்டி
+      Movement with the Counter Pattern: எதிர் வடிவத்துடன் இயக்கம்
+      Multiframe Animations: மல்டிபிரேம் அனிமேஷன்கள்
+      Musical Arrays: இசை வரிசைகள்
+      My Loopy Robotic Friends - Unplugged Activity: மை லூப்பி ரோபோடிக் நண்பர்கள் - அன்பிளக் செய்யப்பட்ட செயல்பாடு
+      My Robotic Friends - Unplugged Activity: எனது ரோபோ நண்பர்கள் - இணைக்கப்படாத செயல்பாடு
+      Nested Loops with the Bee: தேனீயுடன் உள்ளமைக்கப்பட்ட சுழல்கள்
+      New Challenge Introduction: புதிய சவால் அறிமுகம்
+      New Shapes: புதிய வடிவங்கள்
+      Orientation: நோக்குநிலை
       Overview: கண்ணோட்டம்
+      'Overview: Design Mode': 'கண்ணோட்டம்: வடிவமைப்பு முறை'
+      'Overview: If Statements': 'கண்ணோட்டம்: அறிக்கைகள் என்றால்'
+      'Overview: Images': 'கண்ணோட்டம்: படங்கள்'
+      'Overview: onEvent': 'கண்ணோட்டம்: படங்கள்'
+      'Overview: setPosition': 'கண்ணோட்டம்: தொகுப்பு நிலை'
+      Pet Recommender: செல்லப்பிராணி பரிந்துரையாளர்
+      Picturing Data: படமாக்கல் தரவு
+      Pizza Party Data: பிஸ்ஸா பார்ட்டி தரவு
+      Pizza Recommendations: பீஸ்ஸா பரிந்துரைகள்
+      Plan Your Project: உங்கள் திட்டத்தை திட்டமிடுங்கள்
+      Plan Your Scene: உங்கள் காட்சியைத் திட்டமிடுங்கள்
+      Planning: திட்டமிடல்
+      Platform Jumper - Background and Variables: பிளாட்ஃபார்ம் ஜம்பர் - பின்னணி மற்றும் மாறிகள்
+      Platform Jumper - Items: பிளாட்ஃபார்ம் ஜம்பர் - பொருட்கள்
+      Platform Jumper - Platforms: மேடை ஜம்பர் - தளங்கள்
+      Platform Jumper - Player: பிளாட்ஃபார்ம் ஜம்பர் - பிளேயர்
+      Platform Jumper Review: பிளாட்ஃபார்ம் ஜம்பர் விமர்சனம்
+      Player Controls: பிளேயர் கட்டுப்பாடுகள்
+      Playing Notes: விளையாடும் குறிப்புகள்
+      Playing with Notes: குறிப்புகளுடன் விளையாடுதல்
+      Post-Course Survey Instructions: படிப்புக்குப் பிந்தைய கணக்கெடுப்பு வழிமுறைகள்
+      Practice: பயிற்சி
+      Predict: கணிக்கவும்
+      Prediction: கணிப்பு
+      Prepare for your presentation: உங்கள் விளக்கக்காட்சிக்குத் தயாராகுங்கள்
+      Prepare for your presentation_2018: உங்கள் விளக்கக்காட்சிக்கு தயாராகுங்கள்_2018
+      Problem Solving: பிரச்சனை தீர்வு
+      Problem Solving Process for Programming: நிரலாக்கத்திற்கான சிக்கல் தீர்க்கும் செயல்முறை
       Programming with Rey and BB-8: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம் 
+      Programs that Repeat: மீண்டும் நிகழும் நிரல்கள்
+      Project: திட்டம்
+      Project - Background and Variables: திட்டம் - பின்னணி மற்றும் மாறிகள்
+      Project - Sprites and Interactions: திட்டம் - உருவங்கள் மற்றும் தொடர்புகள்
+      Project Guide: திட்ட வழிகாட்டி
+      Project Work: திட்டப்பணி
+      Publishing Your Website: உங்கள் இணையதளத்தை வெளியிடுகிறது
       Quarter Notes: கால்வாசி குறிப்புகள்
+      Quick Check: விரைவு சோதனை
+      RGB Exploration: RGB ஆய்வு
+      Raspado Recommender: ராஸ்பாடோ பரிந்துரையாளர்
+      Reading Sensors: வாசிப்பு சென்சார்கள்
+      Recognizing Expressions: வெளிப்பாடுகளை அங்கீகரித்தல்
+      Recognizing Fish: மீன்களை அடையாளம் காணுதல்
+      Recognizing Fish Features: மீன் அம்சங்களை அங்கீகரித்தல்
+      Recognizing Shapes: வடிவங்களை அங்கீகரித்தல்
+      Reflection: பிரதிபலிப்பு
+      Relay Programming - Unplugged Activity: ரிலே புரோகிராமிங் - அன்ப்ளக் செய்யப்பட்ட செயல்பாடு
+      Repeat Blocks: மீண்டும் தொகுதிகள்
+      Repeat Blocks with BB-8: BB-8 உடன் தொகுதிகளை மீண்டும் செய்யவும்
+      Repeat Blocks with the Artist: கலைஞருடன் மீண்டும் மீண்டும் தொகுதிகள்
+      Repeat Unit Statements: அலகு அறிக்கைகளை மீண்டும் செய்யவும்
+      Repeat Until Statements: அறிக்கைகள் வரை மீண்டும் செய்யவும்
+      Representing Images: படங்களைக் குறிக்கும்
       Review: விமர்சனம்
+      Review Your Animated Scene: உங்கள் அனிமேஷன் காட்சியை மதிப்பாய்வு செய்யவும்
+      Review Your App: உங்கள் பயன்பாட்டை மதிப்பாய்வு செய்யவும்
+      Review Your Game: உங்கள் விளையாட்டை மதிப்பாய்வு செய்யவும்
+      Review Your Page: உங்கள் பக்கத்தை மதிப்பாய்வு செய்யவும்
+      Review Your Scene: உங்கள் காட்சியை மதிப்பாய்வு செய்யவும்
+      'Review: CSS': 'விமர்சனம்: CSS'
+      'Review: HTML': 'விமர்சனம்: HTML'
+      Run a simulation: ஒரு உருவகப்படுத்துதலை இயக்கவும்
+      Safari App: சஃபாரி ஆப்
+      Safari Model: சஃபாரி மாடல்
+      Same Game: உங்கள் காட்சியைத் திட்டமிடுங்கள்
+      Sample Apps for Good: நன்மைக்கான மாதிரி பயன்பாடுகள்
+      Sample Games: மாதிரி விளையாட்டுகள்
+      Sample Personal Web Pages: மாதிரி தனிப்பட்ட இணையப் பக்கங்கள்
+      Sample Personal Websites: மாதிரி தனிப்பட்ட இணையதளங்கள்
+      Sample Programs: மாதிரி திட்டங்கள்
+      Sample Web Page: மாதிரி இணையப் பக்கம்
+      Sample Website: மாதிரி இணையதளம்
+      Scoring & Scoreboard: "ஸ்கோரிங் & ஸ்கோர்போர்டு\n"
+      Screen Design: திரை வடிவமைப்பு
+      Sensor Events: சென்சார் நிகழ்வுகள்
+      Sensors to Colors: வண்ணங்களுக்கான சென்சார்கள்
+      Set Up Sprites: உருவங்களை அமைக்கவும்
+      Setting Properties: பண்புகள் அமைத்தல்
+      Shapes and the Draw Loop: வடிவங்கள் மற்றும் டிரா லூப்
+      Share Your App: உங்கள் பயன்பாட்டைப் பகிரவும்
+      Share Your Pages: உங்கள் பக்கங்களைப் பகிரவும்
+      Share Your Stylesheets: உங்கள் ஸ்டைல்ஷீட்களைப் பகிரவும்
+      Shoe Recommendation Survey: காலணி பரிந்துரை ஆய்வு
+      Shoe Recommender: "காலணி பரிந்துரையாளர்\n"
+      Side Scroller: பக்க ஸ்க்ரோலர்
+      Simple Circuits: எளிய சுற்றுகள்
+      Skill Building: திறன் கட்டிடம்
+      Skill-Building: திறன்-கட்டிடம்
+      Sliders: சறுக்கிகள்
+      Smart Bike - Blinkers: ஸ்மார்ட் பைக் - பிளிங்கர்கள்
+      Social Sleuth: சமூக துரோகம்
+      Songwriting - Functions Unplugged Activity: பாடல் எழுதுதல் - செயல்பாடுகள் இணைக்கப்படாத செயல்பாடு
       Speed it Up, Slow it Down: வேகப்படுத்தவும், வேகம் குறைக்கவும்
       Sprite Lab Project: ஸ்ப்ரைட் லேப் திட்டம்
+      Sprite Properties: ஸ்பிரைட் பண்புகள் 
+      Sprites and the Draw Loop: ஸ்ப்ரிட்ஸ் மற்றும் டிரா லூப்
+      Star Chaser: ஸ்டார் சேசர்
+      Styling Text: உரை நடை
+      Styling with Classes: வகுப்புகளுடன் ஸ்டைலிங்
+      Styling your Website: உங்கள் வலைத்தளத்தை ஸ்டைலிங் செய்தல்
+      Teach A.I. a new word: A.I ஒரு புதிய வார்த்தை கற்றுக்கொடுங்கள். 
       Teach AI a New Word: AIக்கு ஒரு புதிய வார்த்தையைக் கற்றுக்கொடுங்கள் 
+      'Technique: Frequency Analysis': 'நுட்பம்: அதிர்வெண் பகுப்பாய்வு'
+      Terminology Recap: சொற்களஞ்சியம் மறுபரிசீலனை
       Text Compression: உரை சுருக்க
+      The Artist in Code Studio: கோட் ஸ்டுடியோவில் கலைஞர்
+      The Big Event - Unplugged Activity: பெரிய நிகழ்வு - இணைக்கப்படாத செயல்பாடு
+      The Buzzer: தி பஸர்
+      The Collector: ஆட்சியா்
+      The Internet - Unplugged Activity: இணையம் - இணைக்கப்படாத செயல்பாடு
+      The Power of Words - Unplugged Activity: வார்த்தைகளின் சக்தி - இணைக்கப்படாத செயல்பாடு
+      The Right App - Unplugged Activity: சரியான பயன்பாடு - இணைக்கப்படாத செயல்பாடு
+      Top Websites: சிறந்த இணையதளங்கள்
+      Train AI to Clean the Ocean: கடலை சுத்தம் செய்ய AI க்கு பயிற்சி அளிக்கவும் 
+      Train a Model in AI Lab: AI ஆய்வகத்தில் ஒரு மாதிரியைப் பயிற்றுவிக்கவும்
+      Train an AI to Clean the Ocean: பெருங்கடலை சுத்தம் செய்ய AIக்கு பயிற்சி அளிக்கவும்
+      UI Element Properties: UI எலிமெண்ட் ப்ரொபேர்ட்டிஸ் 
+      Ultimate Shoe Recommender: அல்டிமேட் ஷூ பரிந்துரையாளர்
+      Unit 5 Lesson 1 Overview: அலகு 5 பாடம் 1 கண்ணோட்டம்
+      Upload Your Images: உங்கள் படங்களை பதிவேற்றவும்
+      User Interface: பயனர் இடைமுகம்
+      Using Getters and Setters: பெறுபவர்கள் மற்றும் செட்டர்களைப் பயன்படுத்துதல்
+      Using HTML Tags: HTML குறிச்சொற்களைப் பயன்படுத்துதல்
+      Using Random Numbers: ரேண்டம் எண்களைப் பயன்படுத்துதல்
+      Using Training Data: பயிற்சி தரவைப் பயன்படுத்துதல்
+      Using the LED: LED ஐப் பயன்படுத்துதல்
+      Using the Switch: சுவிட்சைப் பயன்படுத்துதல்
       Variables: மாறிலிகள்
+      Velocity and the Counter Pattern: வேகம் மற்றும் எதிர் முறை
       Video: காணொளி
+      Video - Encryption and Public Keys: வீடியோ - குறியாக்கம் மற்றும் பொது விசைகள்
+      'Video - Maze Intro: Programming with Blocks': 'வீடியோ: பிரமை அறிமுகம்: தொகுதிகளுடன் நிரலாக்கம்'
+      'Video:  Debugging with the Step Button': 'வீடியோ: ஸ்டெப் பட்டன் மூலம் பிழைதிருத்தம்'
+      'Video:  Minecraft - The Agent': 'வீடியோ: Minecraft - முகவர்'
+      'Video:  Text  and Prompts': 'வீடியோ: உரை மற்றும் தூண்டுதல்கள்'
       'Video: "If/Else"': 'வீடியோ: "என்றால்/வேறு"'
+      'Video: AI: What is Machine Learning?': 'வீடியோ: AI: இயந்திர கற்றல் என்றால் என்ன?'
+      'Video: Amazon and Data': 'வீடியோ: அமேசான் மற்றும் தரவு'
+      'Video: Artist Intro with JR Hildebrand': 'வீடியோ: ஜே.ஆர் ஹில்டிபிரான்டுடன் கலைஞர் அறிமுகம்'
+      'Video: Artist Intro with JR Hildebrande': 'வீடியோ: ஜே.ஆர் ஹில்டிபிரான்டுடன் கலைஞர் அறிமுகம்'
+      'Video: Circuits and Logic': 'வீடியோ: சுற்றுகள் மற்றும் தர்க்கம்'
+      'Video: Code Your Own Flappy Game': 'வீடியோ: உங்கள் சொந்த ஃபிளாப்பி கேம் குறியீடு'
+      'Video: Conditionals: If Statements': 'வீடியோ: நிபந்தனைகள்: அறிக்கைகள் என்றால்'
+      'Video: Conditionals: If and If/Else Statements': 'வீடியோ: நிபந்தனைகள்: இருந்தால் மற்றும் இருந்தால்/வேறு அறிக்கைகள்'
+      'Video: Dance Party Events': 'வீடியோ: நடன விருந்து நிகழ்வுகள்'
+      'Video: Dance Party Measures': 'வீடியோ: நடன விருந்து நடவடிக்கைகள்'
+      'Video: Dance Party Party On!': 'வீடியோ: டான்ஸ் பார்ட்டி!'
+      'Video: Dance Party Properties': 'வீடியோ: நடன விருந்து பண்புகள்'
+      'Video: Dance Party Warm Up': 'வீடியோ: டான்ஸ் பார்ட்டி வார்ம் அப்'
+      'Video: De-bugging with the Step Button': 'வீடியோ: ஸ்டெப் பட்டன் மூலம் பிழைதிருத்தம்'
+      'Video: Debugging': 'வீடியோ: பிழைத்திருத்தம்'
+      'Video: Debugging with Scrat ': 'வீடியோ: ஸ்க்ராட் மூலம் பிழைத்திருத்தம்'
+      'Video: Debugging with the Step Button': 'வீடியோ: ஸ்டெப் பட்டன் மூலம் பிழைத்திருத்தம்'
+      'Video: Events': 'வீடியோ: நிகழ்வுகள்'
+      'Video: Follow The Digital Trail': 'வீடியோ: டிஜிட்டல் டிரெயிலைப் பின்பற்றவும்'
+      'Video: For Loops': 'வீடியோ: சுழல்களுக்கு'
+      'Video: Getting Loopy': 'வீடியோ: லூப்பி பெறுதல்'
+      'Video: Happy Maps - Unplugged Activity': 'வீடியோ: மகிழ்ச்சியான வரைபடம் - இணைக்கப்படாத செயல்பாடு'
+      'Video: Harvesting with Conditionals': 'வீடியோ: நிபந்தனைகளுடன் அறுவடை'
+      'Video: How Search Works': 'வீடியோ: தேடல் எவ்வாறு செயல்படுகிறது'
+      'Video: How to Create a Simple Function': 'வீடியோ: ஒரு எளிய செயல்பாட்டை எவ்வாறு உருவாக்குவது'
+      'Video: How to Make a Sprite': 'வீடியோ: ஒரு ஸ்ப்ரைட்டை உருவாக்குவது எப்படி'
+      'Video: IOSP Model': 'வீடியோ: IOSP மாதிரி'
+      'Video: Ice Age Loops': 'வீடியோ: ஐஸ் ஏஜ் லூப்ஸ்'
+      'Video: Impact on Society': 'வீடியோ: சமூகத்தின் மீதான தாக்கம்'
+      'Video: Impacts on Society': 'வீடியோ: சமூகத்தின் மீதான தாக்கங்கள்'
+      'Video: Intro to CSS - Part 1': 'வீடியோ: CSS இன் அறிமுகம் - பகுதி 1'
+      'Video: Intro to CSS - Part 2': 'வீடியோ: CSS அறிமுகம் - பகுதி 2'
+      'Video: Intro to Design Mode': 'வீடியோ: வடிவமைப்பு பயன்முறைக்கான அறிமுகம்'
+      'Video: Introducing Sprite Lab': 'வீடியோ: ஸ்ப்ரைட் லேப் அறிமுகம்'
+      'Video: Introduction to Play Lab': 'வீடியோ: ப்ளே லேப் அறிமுகம்'
+      'Video: Introduction to Variables': 'வீடியோ: மாறிகள் அறிமுகம்'
+      'Video: Loops in Artist': 'வீடியோ: கலைஞரில் சுழல்கள்'
+      'Video: Loops with the Artist': 'வீடியோ: கலைஞருடன் சுழல்கள்'
+      'Video: Managing Disagreement': 'வீடியோ: கருத்து வேறுபாடுகளை நிர்வகித்தல்'
+      'Video: Maze Intro - Programming with Blocks': 'வீடியோ: பிரமை அறிமுகம் - தொகுதிகளுடன் நிரலாக்கம்'
+      'Video: Maze Intro - Programming with Blocks ': 'வீடியோ: பிரமை அறிமுகம் - தொகுதிகளுடன் நிரலாக்கம்'
+      'Video: Maze Intro: Programming with Blocks': 'வீடியோ: பிரமை அறிமுகம்: தொகுதிகளுடன் நிரலாக்கம்'
+      'Video: Measures': 'வீடியோ: நடவடிக்கைகள்'
+      'Video: Minecraft - Congratulations': 'வீடியோ: Minecraft - வாழ்த்துக்கள்'
+      'Video: Minecraft - Functions': 'வீடியோ: Minecraft - செயல்பாடுகள்'
+      'Video: Minecraft - Repeat Loops': 'வீடியோ: Minecraft - மீண்டும் சுழல்கள்'
+      'Video: Minecraft - The Agent': 'வீடியோ: Minecraft - முகவர்'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'வீடியோ: Minecraft: வொயஜ் ஆகுட்டிக் கண்டிஷனல்ஸ் '
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'வீடியோ: Minecraft: வொயஜ் ஆகுட்டிக் வாழ்த்துகள்'
+      'Video: Minecraft: Voyage Aquatic Introduction': "வீடியோ: Minecraft: வொயஜ் ஆகுட்டிக் \nஅறிமுகம்"
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'வீடியோ: Minecraft: வொயஜ் ஆகுட்டிக் வரை மீண்டும் செய்யவும்'
+      'Video: Nested Loops': 'வீடியோ: உள்ளமைக்கப்பட்ட சுழல்கள்'
+      'Video: Nested Loops with the Bee': 'வீடியோ: தேனீயுடன் உள்ளமைக்கப்பட்ட சுழல்கள்'
+      'Video: Netflix and Data': 'வீடியோ: நெட்ஃபிக்ஸ் மற்றும் டேட்டா'
       'Video: Outbreak Simulator: Introduction': 'வீடியோ: அவுட்பிரேக்  சிமுலேட்டர்: அறிமுகம்'
+      'Video: Pair Programming': 'வீடியோ: ஜோடி நிரலாக்கம்'
+      'Video: Pair Programming ': 'வீடியோ: ஜோடி நிரலாக்கம்'
+      'Video: Programming with Blocks': 'வீடியோ: தொகுதிகளுடன் நிரலாக்கம் '
       'Video: Programming with Rey and BB-8': 'வீடியோ: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம் '
+      'Video: Properties': 'வீடியோ: பண்புகள்'
+      'Video: Publishing Your Website': 'வீடியோ: உங்கள் வலைத்தளத்தை வெளியிடுதல்'
+      'Video: Repeat Blocks': 'வீடியோ: தொகுதிகளை மீண்டும் செய்யவும்'
+      'Video: Repeat Blocks with BB-8': 'வீடியோ: பிபி -8 உடன் தொகுதிகளை மீண்டும் செய்யவும்'
+      'Video: Repeat Blocks with the Artist': 'வீடியோ: கலைஞருடன் மீண்டும் மீண்டும் தொகுதிகள்'
+      'Video: Repeat Until Blocks': 'வீடியோ: பிளாக்ஸ் வரை மீண்டும் செய்யவும்'
+      'Video: Repeat Until Statements': 'வீடியோ: அறிக்கைகள் வரை மீண்டும் செய்யவும்'
+      'Video: Sprites in Action': 'வீடியோ: செயலில் உள்ள ஸ்பிரிட்ஸ்'
+      'Video: Star Wars Project': 'வீடியோ: ஸ்டார் வார்ஸ் திட்டம்'
+      'Video: Teamwork': 'வீடியோ: குழுப்பணி'
+      'Video: Text and Prompts': 'வீடியோ: உரை மற்றும் அறிவுறுத்தல்கள்'
+      'Video: The Artist in Code Studio': 'வீடியோ: கோட் ஸ்டுடியோவில் கலைஞர்'
+      'Video: The Big Event - Unplugged Activity': 'வீடியோ: பெரிய நிகழ்வு - இணைக்கப்படாத செயல்பாடு'
+      'Video: The Collector': 'காணொளி: ஆட்சியர்'
+      'Video: The Harvester': 'வீடியோ: ஹார்வெஸ்டர்'
+      'Video: Training Data & Bias': 'வீடியோ: பயிற்சி தரவு & சார்பு'
+      'Video: Training Data and Bias': 'வீடியோ: பயிற்சி தரவு மற்றும் சார்பு'
+      'Video: Unplugged Variables in Envelopes': 'வீடியோ: உறைகளில் இணைக்கப்படாத மாறிகள்'
+      'Video: Using the Repeat Block': 'வீடியோ: ரிபீட் பிளாக் பயன்படுத்துதல் '
+      'Video: Variables in Artist': 'காணொளி: கலைஞரின் மாறிகள்'
+      'Video: Warm Up': 'வீடியோ: வார்ம் அப்'
+      'Video: Waze and Data': 'வீடியோ: வஸி மற்றும் தரவு'
+      'Video: What is Machine Learning?': 'வீடியோ: இயந்திர கற்றல் என்றால் என்ன?'
+      'Video: While Loops with the Farmer': 'வீடியோ: விவசாயியுடன் சுழலும் போது'
+      'Video: Wrap-up': 'வீடியோ: ரேப் அப் '
+      Warm Up: தயார் ஆகு
+      Website Project: இணையதள திட்டம்
       Welcome to Monster Town: மான்ஸ்டர் டவுனுக்கு வரவேற்கிறோம்
       Where'd They Go?: அவர்கள் எங்கு செல்வார்கள்?
+      While Loops with the Farmer: விவசாயியுடன் சுழலும் போது
+      'Widget: Text Compression': 'விட்ஜெட்: உரை சுருக்கம்'
+      'You Choose: Improve Your App': 'நீங்கள் தேர்வு செய்க: உங்கள் பயன்பாட்டை மேம்படுத்தவும்'
+      'You Choose: Restaurant Recommendations': 'நீங்கள் தேர்வு செய்க: உணவகப் பரிந்துரைகள்'
+      Your Personal Website: உங்கள் தனிப்பட்ட இணையதளம்
+      Your Team Project: உங்கள் குழு திட்டம்
+      Zoo Predictions: உயிரியல் பூங்கா கணிப்புகள்
+      getText vs getNumber: getText vs getNumber
+      isTouching: தொடுகிறது
+      setProperty: தொகுப்பு சொத்து

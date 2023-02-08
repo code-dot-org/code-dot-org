@@ -16,7 +16,7 @@ title: Prezentări reclame și statistici utile
 
 #### Adu stiinta compitarelor la scoala ta. Incepe cu Ora de Cod!
 
-Având în vedere că tehnologia schimbă fiecare industrie de pe planetă, cunoștințele de informatică au devenit parte integrantă a unui set de competențe bine pus la punct. But just half of all schools offer computer science! Vestea bună e că suntem pe cale să schimbăm acest lucru. Dacă ați auzit de Ora de Programare anul trecut, probabil știți că a făcut istorie. 100 de milioane de studenţi au descoperit cât de accesibila şi distractiva poate fi stiinta computerului si programarea doar prin incercarea unei Ore de Programare.
+Având în vedere că tehnologia schimbă fiecare industrie de pe planetă, cunoștințele de informatică au devenit parte integrantă a unui set de competențe bine pus la punct. But just half of all schools offer computer science! Vestea bună e că suntem pe cale să schimbăm acest lucru. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 [ Hour of Code ](<%= hoc_uri('/') %>) este o introducere de o oră in programare, proiectata să desluseasca limbajul de programare şi sa arate că oricine poate învăţa elementele lui de bază. Aflați mai multe la [http://HourOfCode.com](http://HourofCode.com), încercați și dumneavoastră o oră sau găzduiți un eveniment Hour of Code pentru a-i introduce pe alții în lumea informaticii!
 
@@ -30,7 +30,7 @@ Sperăm că va trezi interesul elevilor si ca acestia vor continua învăţarea.
 
 #### De ce este important acest lucru?
 
-Tehnologia transformă fiecare industrie pe planeta. În 2015, 7 milioane de deschideri în Sua erau în ocupaţii — inclusiv de arta si design — acea valoare a aptitudinii de a programa. But 49 percent of schools in the U.S. don't offer computer science. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştrii atunci când cresc, indiferent dacă merg în domeniul medicinei, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologia, le va da încrederea şi un avantaj competitiv pentru a reuşi. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Ştim că indiferent ce fac elevii noştrii atunci când cresc, indiferent dacă merg în domeniul medicinei, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologia, le va da încrederea şi un avantaj competitiv pentru a reuşi. <br /> <br />
 
 #### Un citat pe care puteți să îl folosiți în materiale
 

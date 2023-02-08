@@ -1,0 +1,14 @@
+{
+  "sl-SI": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Računalniško razmišljanje"
+        },
+        "ccela/L": {
+          "description": "Jezik"
+        }
+      }
+    }
+  }
+}

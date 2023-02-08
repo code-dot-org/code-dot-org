@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 
 /**
@@ -49,10 +48,12 @@ const ThreeColumns = props => {
   };
 
   return (
-    <div style={[defaultStyles.container, styles.container]}>
-      <div style={[defaultStyles.middle, styles.middle]}>{children[1]}</div>
-      <div style={[defaultStyles.left, styles.left]}>{children[0]}</div>
-      <div style={[defaultStyles.right, styles.right]}>{children[2]}</div>
+    <div style={{...defaultStyles.container, ...styles.container}}>
+      <div style={{...defaultStyles.middle, ...styles.middle}}>
+        {children[1]}
+      </div>
+      <div style={{...defaultStyles.left, ...styles.left}}>{children[0]}</div>
+      <div style={{...defaultStyles.right, ...styles.right}}>{children[2]}</div>
     </div>
   );
 };
@@ -77,4 +78,4 @@ export default connect(state => {
   return {
     isRtl: state.isRtl
   };
-})(Radium(ThreeColumns));
+})(ThreeColumns);

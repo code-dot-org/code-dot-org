@@ -2,10 +2,11 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
-
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 namespace :build do
   desc 'Builds apps.'
-  task :apps do
+  timed_task_with_logging :apps do
     Dir.chdir(apps_dir) do
       # Only rebuild if any of the apps_build_trigger_paths have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
@@ -28,7 +29,7 @@ namespace :build do
   end
 
   desc 'Builds broken link checker.'
-  task :tools do
+  timed_task_with_logging :tools do
     Dir.chdir(File.join(tools_dir, "scripts", "brokenLinkChecker")) do
       ChatClient.log 'Installing <b>broken link checker</b> dependencies...'
       RakeUtils.npm_install
@@ -36,7 +37,7 @@ namespace :build do
   end
 
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
-  task dashboard: :package do
+  timed_task_with_logging dashboard: :package do
     Dir.chdir(dashboard_dir) do
       # Unless on production, serve UI test directory
       unless rack_env?(:production)
@@ -91,6 +92,13 @@ namespace :build do
           RakeUtils.system 'git', 'commit', '-m', '"Update dsls.en.yml"', dsls_file
           RakeUtils.git_push
         end
+
+        if rack_env?(:staging)
+          # This step will only complete successfully if we succeed in
+          # generating all curriculum PDFs.
+          ChatClient.log "Generating missing pdfs..."
+          RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
+        end
       end
 
       # Skip asset precompile in development.
@@ -116,7 +124,7 @@ namespace :build do
   end
 
   desc 'Builds pegasus (install gems, migrate/seed db).'
-  task :pegasus do
+  timed_task_with_logging :pegasus do
     Dir.chdir(pegasus_dir) do
       ChatClient.log 'Installing <b>pegasus</b> bundle...'
       RakeUtils.bundle_install
@@ -140,11 +148,11 @@ namespace :build do
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
-  task all: tasks
+  timed_task_with_logging all: tasks
 end
 
 desc 'Builds everything.'
-task :build do
+timed_task_with_logging :build do
   ChatClient.wrap('build') {Rake::Task['build:all'].invoke}
 end
 

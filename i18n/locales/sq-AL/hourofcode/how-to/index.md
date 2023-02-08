@@ -4,30 +4,28 @@ title: Udhëzuesi për Orën e Kodit
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# 7. Planifikoni Orën tuaj të Kodit
 
 ### Bashkohuni me lëvizjen dhe prezantojini studentët tuaj në shkencat kompjuterike me këto hapa.
 
-Të menduarit llogaritës ndihmon në rritjen e aftësive për zgjidhjen e problemeve, logjikës dhe krijimtarisë Teknologjia po transformon çdo industri në planet. Studentët sot duhet të mësojnë se si të krijojnë teknologji, jo vetëm ta përdorin atë. Duke filluar herët, ata do të kenë një themel për sukses në çdo rrugë karriere të shekullit 21.
+Studentët sot duhet të mësojnë se si të krijojnë teknologji, jo vetëm ta përdorin atë.
 
-Provimi i një Ore Kodi është një mënyrë e thjeshtë dhe argëtuese për të prezantuar studentët në shkencat kompjuterike, mbase për herë të parë, dhe përshtatet në mënyrë të përsosur si për mjediset në klasë ashtu edhe ato pas shkollës. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Provimi i ores se kodit eshte nje menyre e thjeshte dhe zbavitese t'i njoftoni studentet me shkencat kompjuterike, ndoshta edhe per heren e pare. Gjeni nje aktivitet i cili pershtatet me ju, qofte ne klas ose pas shkolles, fizikisht ose ne menyre virtuale. Hidhni nje sy, guides tone te pjesemarrjes nese keni ende pyetje
 
 - [Shikoni videon e orës së kodit si](#how-to-video)
 - [Eksploroni aktivitetet dhe udhëzimet](#explore-activities)
 - [Krijoni planin tuaj për atë ditë](#create-your-plan)
-- [Promote your Hour of Code](#promote-your-hour)
+- [Rreklamo oren tende te kodit](#promote-your-hour)
 - [Si ta filloni fuqishem Orën tuaj të Kodit t](#how-to-start)
 - [Vazhdo kodo](#code)
 - [Festoni suksesin e studentëve tuaj](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
-
-### Një orë kod mund të organizohet gjithashtu në distancë! Për të filluar, shikoni këshillat tona [ për mbajtjen e një ngjarjeje Hour of Code ](https://hourofcode.com/us/how-to/virtual).
+- [Burime te tjera te ores se kodimit per mesimdhenes](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Shikoni videon e orës së kodit si <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Shikoni videon e orës së kodit si <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -35,11 +33,11 @@ Provimi i një Ore Kodi është një mënyrë e thjeshtë dhe argëtuese për t�
 
 ## Eksploroni aktivitetet dhe udhëzimet
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+Ju sjellim një llojllojshmeri te tutorialeve te udhehequr nga instruktoret tane studentore, per te gjitha moshat dhe niveleve te eksperiences. Eshte e zakonshme per studentet te provojne tutoriale autodidakte, edhe pse shumica e aktiviteteve qe zhvillohen perfshijne plan mesimore per mesuesit, ne menyre qe ta udheheqin diskutimin poashtu. 
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+Eksploro aktivietet dhe vendos para kohe nese deshironi qe ta zgjedhni nje tutorial te vetem per te gjithe studentet, ose te mundesoj zgjedhjen qe secili femije te zgjidh te tijen.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -47,18 +45,18 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ## Krijoni planin tuaj për atë ditë
 
-### Think about your technology needs - computers are optional!
+### Mendo per nevojat e tuaja te cilat kane natyre teknologjike - kompjuterat jane opsional
 
-- Përvoja më e mirë e Orës së Kodimit përfshin kompjutera të lidhur me internet. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+- Përvoja më e mirë e Orës së Kodimit përfshin kompjutera të lidhur me internet. mirepo juve nuk ju duhen kompjutere per cdo femije, dhe mund poashtu te zhvilloni oren pa pasur nevoje per kompjuter fare! Per aktivitetet te cilat nuk kerkojne ndihmen kompjuterike, thjeshte filtroni Classroom Technology te tregoje opsione per "pa kompjuter ose pajisje"
+- Sigurohuni qe ti testoni tutoarialet paraprakisht ne kompjuterat e sutdeteve ose edhe pajsisjet e tyre ne menyre qe te siguroheni se ato funksionojne mire me ze dhe video ne shfletuesit e interenetit. Ke bandwith te vogel? Po planifikon ti tregosh te gjitha ato video para te gjithe klases, ne menyre qe secili student qe cdo studente nuk eshte duke i shkarkuar videot e tyre. Ose provoni tutorialet offline. 
 - Në rast se tutoriali juaj funksionon më mirë me zë, vini në dizpozicion kufje për klasën tuaj, ose kërkoni nga studentët t'i kenë me vete kufjet e tyre.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Kur pjesëmarrësit bashkëpunojnë, ata ndihmojnë njëri-tjetrin dhe mbështeten më pak tek mësuesi. Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
+- Nuk keni pajisje te mjaftueshme? Perdorni "pair programming" Kur pjesëmarrësit bashkëpunojnë, ata ndihmojnë njëri-tjetrin dhe mbështeten më pak tek mësuesi. Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
 
 <img src="/images/fit-600/group_ipad.jpg" />
 
-### Pick a day and time
+### Zgjedhni diten dhe kohen
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Njerezit rreth te gjithe botes, i jane bashkangjitur festimit te Hour of Code gjate CS Education Week (December 9-13) kur te publikohen tutorialeve dhe aktiviteteve. Mund ta Zhvilloni Oren e Kodit ne cdo dite te vitit! 
 
 * * *
 
@@ -66,23 +64,23 @@ People around the world join in the Hour of Code celebration during CS Education
 
 ## 3) Promovo Orën tënde të Kodimit
 
-Now that you've planned your event, it's time to start promoting it!
+Tani qe keni planifikuar oren tuaj te kodimit, eshte koha ta rreklamoni ate! 
 
-### Tell your School and Community
+### Tregoni shkolles ose bashkesise tuaj 
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+Rreklamo dhe rekomando, oren e kodit tek mesuesit e tjere qe mund te kene deshire te bashkangjiten! Kjo eshte poashtu mundesi e mire te arrini ne njoftime prinderori, ku do ti informoni se femijet e tyre mund te vijne ne shtepi duke dashur te provojne aktivitete te ndryshme dhe udhezues!
 
-### Let Volunteers Know by Registering Your Event
+### Njoftoni vullnetared duke e regjistruar eventin tuaj 
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Kur ju aplikoni per nje ngjarje te Ores se Kodit, you do te pranoni nje email me informata, lajme dhe kurozitete per te mbajtur nje Ore Kodimi te suksessshme. Eshte poashtu nje menyre e mire t'i njoftoni vullnetaret lokal se shkolla juaj po merr pjese! Vullnetaret jane nje burim i mire dhe mund te vijne per te folur ne klasen tuaj rreth shkencave kompjuterike, ose thjeshte t'i ndihmojne studentet me aktivitetet e tyre ne oren e kodimit. 
 
-### Get your Students Excited
+### Gezoni studentet tuaj!
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Paraprinimi lansimit te ngjarjes duke shperndare video inspiruese te cilat i japin theks te veqante njerzve nga vende te ndryshme te botes dhe menyrave kreative ku mund te perdoren shkencat kompjuterike. Ose porosisni postera inspirues per klasen tuaj! Studentet kane me shume deshire te marrin pjese ne nje teme kur shohin njerez qe duken si ata duke e enkurajuar kete. 
 
 {{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+Mesoni me shume rreth posterave, videove, stikerave, dhe menyrave te tjera se si mund ta rreklamoni eventin tuaj ne bashkesine tuaj. 
 
 * * *
 
@@ -90,18 +88,18 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 ## Si ta filloni fuqishem Orën tuaj të Kodit t
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+Menjehere pasi qe te kete arritur ora e juaj e kodimit, sigurohuni se e filloni eventin fuqishem me disa nga keto mjete dhe referenca.
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+Ftoni nje vullnetar lokal, te inspiroje studentet tuaj duke i treguar atyre per mundesite e shumeta qe ofrohen permes shkencave kompjuterike. Jane mijera vullnetare rreth botes te cilet jane gati te ju ndihmojne me oren tuaj te kodit, qofte permes nje vizite ne klasen tuaj ose lidhje online me studentet tuaj! 
 
 Trego një video frymëzuese:
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Videoja origjinale e lansimit te Code.org, e cila perfshine brenda saj BIll Gates, Mark Zuckerberg, dhe yllin e NBA Chris Bosh. Jane te qasshme dy versione te kesaj video, ajo me minutazhe 5 minuta dhe 9 minuta. 
+- Gjeni me shume burime inspiruese dhe video 
 
 Nuk ka problem në qoftë se jeni të rinj në fushën e shkencave kompjuterike. Këtu janë disa ide se si mund të prezantoni aktivitetin tuaj të Orës së Kodimit:
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
+- Shpjego menyrat se si teknologjia na ndikon ne jeten tone, me shembuj qe te gjinite do t'i interesojne (flisni per shpetimin e jetes, ndihmes se njerzve, lidhjes se njerzve me njeri-tjetrin, etj)
 - Si klasë, listoni gjëra që përdorin kod në jetë e përditshme.
 - Shihni [këtu](http://code.org/girls) udhëzime për t'ua bërë vajzave interesante shkencën kompjuterike
 
@@ -111,19 +109,19 @@ Nuk ka problem në qoftë se jeni të rinj në fushën e shkencave kompjuterike.
 
 ## Vazhdo kodo
 
-Direct students to the activity
+Drejtoni studentet rreth aktivitetit
 
 - Shkruaje në tabelë (dërrasë të zezë) linkun e tutorialit. Poshtë numrit të pjesëmarrësve gjeni të listuar linkun e [të dhëna rreth tutorialit të zgjedhur](http://<%= codeorg_url() %>/learn) nga ju.
 
-When your students come across difficulties it's okay to respond:
+Kur studentet tuaj hasin ne veshtiresi eshte ne rregull te pergjigjeni: 
 
 - "Nuk e di. Le ta zgjidhim së bashku."
 - "Teknologjia nuk punon gjithmon ashtu siç duam ne."
 - "Të mësuarit se si të programosh është si të mësosh një gjuhë të re; nuk do të jesh i rrjedhshëm menjëherë"
 
-What if a student finishes early?
+Cka nese nje student perfundon me heret?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- Studentet mund te shohin te gjithe tutorialet dhe te provojne nje aktivitet tjeter sa i perket ores se kodimit.
 - Ose, kërkoni nga studentët që mbarojnë më herët të ndihmojnë shokët e klasës që hasin vështirësi me punën.
 
 * * *
@@ -138,9 +136,8 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Porosit bluza ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)për shkollën tënde.
+- [Printo certifikata]({{ urls/certificates }}) per nxenesit tuaj. 
+- Printoni stikera me mbishkrimin "Kam perfunduar nje ore kodimi"
 - Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
 * * *

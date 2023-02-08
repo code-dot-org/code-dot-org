@@ -1,0 +1,61 @@
+{
+  "dv-MV": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "ކަޅާއި ހުދު"
+                    }
+                  }
+                }
+              }
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "ސްޕައިރަލް"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "ގްރޫޕުތައް"
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ސްޓަރ - ތަރި"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "ދުނިޔެ"
+            },
+            "events": {
+              "name": "އިވެންޓުތައް"
+            },
+            "logic": {
+              "name": "ލޮޖިކް"
+            }
+          }
+        }
+      }
+    }
+  }
+}

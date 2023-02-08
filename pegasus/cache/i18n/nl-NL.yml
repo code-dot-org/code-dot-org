@@ -460,6 +460,7 @@ nl-NL:
   homepage_banner_40k_teachers_link: Leer meer
   homepage_slot_text_title_hoc: Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
+  homepage_slot_text_blurb_hoc_2022: Ontdek, speel en creëer!
   homepage_slot_text_link_hoc: Probeer een Uur Code
   homepage_slot_text_link_about_hoc: Over Hour of Code
   homepage_slot_text_link_host: Organiseer een Uur Code
@@ -1430,6 +1431,12 @@ nl-NL:
   coursed-2021_gradelevel: Rang 8+
   coursee-2021_gradelevel: Leeftijden 8-12
   coursef-2021_gradelevel: Leeftijden 9-13
+  coursea-2022_gradelevel: Leeftijden 4-7
+  courseb-2022_gradelevel: Leeftijden 5-8
+  coursec-2022_gradelevel: Leeftijden van 6-10
+  coursed-2022_gradelevel: Rang 8+
+  coursee-2022_gradelevel: Leeftijden 8-12
+  coursef-2022_gradelevel: Leeftijden 9-13
   accelerated_gradelevel: Leeftijden 10 + (na cursus 3)
   codeorg_platformtext: Moderne browsers, smartphones, tablets
   codeintl_platformtext: Moderne browsers, smartphones, tablets
@@ -1649,6 +1656,27 @@ nl-NL:
     maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
     met je vrienden en familie.
   coursef-2021_shortdescription_congrats: Leer verschillende soorten loops, gebeurtenissen,
+    functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+    technieken en bespreek maatschappelijke gevolgen van computergebruik en internet.
+    Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je
+    kunt delen met vrienden en familie.
+  coursea-2022_shortdescription_congrats: Leer de basisprincipes van informatica en
+    internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal
+    dat je kunt delen.
+  courseb-2022_shortdescription_congrats: Leer de basisprincipes van informatica en
+    internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal
+    dat je kunt delen.
+  coursec-2022_shortdescription_congrats: Maak programma's met sequencing, loops en
+    gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+    technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van
+    de cursus je eigen spel of verhaal dat je kunt delen!
+  coursed-2022_shortdescription_congrats: Studenten ontwikkelen hun begrip van loops,
+    conditionals en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
+  coursee-2022_shortdescription_congrats: Begin met coderen met algoritmen, loops,
+    conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en
+    maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
+    met je vrienden en familie.
+  coursef-2022_shortdescription_congrats: Leer verschillende soorten loops, gebeurtenissen,
     functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
     technieken en bespreek maatschappelijke gevolgen van computergebruik en internet.
     Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je
@@ -2653,3 +2681,14 @@ nl-NL:
   outbreak_tile_title: Uitbraak
   outbreak_tile_subtitle: Een virus heeft Monster Town geïnfecteerd! Codeer een uitbraaksimulator
     en doe voorspellingen over wat er zal gebeuren met de buren van Monster Town.
+  outbreak_tile_alt: Een simulatie over hoe een virus verspreid door een groep van
+    paarse monsters.
+  footer_cookie_notice: Cookiebeleid
+  hoc2022_banner_title: Ontdek, speel en creëer!
+  hoc2022_landing_page_explore_description: Open deuren naar nieuwe werelden met informatica!
+  hoc2022_landing_page_play_title: Speel
+  hoc2022_landing_page_create_title: Creëer
+  hoc2022_nasa_banner_heading: Doe mee met NASA voor een speciale Hour of Code-functie
+    over computerwetenschap in de ruimte!
+  hoc2022_nasa_banner_description: Première 10AM ET, 5 december op NASA STEM's YouTube
+    kanaal.

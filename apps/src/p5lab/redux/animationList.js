@@ -236,7 +236,10 @@ function generateAnimationName(baseName, animationList) {
   // Match names with the form baseName_#
   for (let animation in animationList) {
     let animationName = animationList[animation].name;
-    if (animationName.substring(0, baseName.length) === baseName) {
+    if (
+      animationName &&
+      animationName.substring(0, baseName.length) === baseName
+    ) {
       animationName = animationName.replace(baseName, '');
       if (animationName[0] === '_') {
         const brokenUpString = animationName.split('_');
@@ -259,12 +262,12 @@ function generateAnimationName(baseName, animationList) {
 
 /**
  * @param {!SerializedAnimationList} serializedAnimationList
- * @param {object} spritesForV3Migration - optional - sprites passed to replace /v3/ sprites
+ * @param {object} animationsForV3Migration - optional - animations passed to replace /v3/ sprites
  * @returns {function()}
  */
 export function setInitialAnimationList(
   serializedAnimationList,
-  spritesForV3Migration,
+  animationsForV3Migration,
   isSpriteLab
 ) {
   // Set default empty animation list if none was provided
@@ -286,7 +289,8 @@ export function setInitialAnimationList(
   }
 
   // TODO (from 2020): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
-  if (spritesForV3Migration) {
+  // Migrate to v1 animation api for default animations in SpriteLab
+  if (isSpriteLab && animationsForV3Migration) {
     serializedAnimationList.orderedKeys.forEach(loadedKey => {
       let animation = serializedAnimationList.propsByKey[loadedKey];
       if (
@@ -300,10 +304,10 @@ export function setInitialAnimationList(
       if (animation.sourceUrl.includes('/v3/')) {
         // We want to replace this sprite with the /v1/ sprite
         let details = `name=${animation.name};key=${loadedKey}`;
-        if (spritesForV3Migration.propsByKey[loadedKey]) {
+        if (animationsForV3Migration.propsByKey[loadedKey]) {
           // The key is the same in the main.json and in default sprites. Do a simple replacement.
           serializedAnimationList.propsByKey[loadedKey] =
-            spritesForV3Migration.propsByKey[loadedKey];
+            animationsForV3Migration.propsByKey[loadedKey];
           trackEvent('Research', 'ReplacedSpriteByKey', details);
         } else {
           // We were unable to find a replacement for the /v3/ sprite
@@ -362,26 +366,29 @@ export function setInitialAnimationList(
       type: SET_INITIAL_ANIMATION_LIST,
       animationList: serializedAnimationList
     });
-    let index = 0;
+    let key = serializedAnimationList.orderedKeys[0];
     // If we're in spritelab, we need to make sure we don't set the selected animation to a background
     if (isSpriteLab) {
-      while (
-        index < serializedAnimationList.orderedKeys.length &&
-        (
-          serializedAnimationList.propsByKey[
-            serializedAnimationList.orderedKeys[index]
-          ].categories || []
-        ).includes('backgrounds')
-      ) {
-        index = index + 1;
-      }
+      const filteredOrderedKeys = getOrderedKeysWithoutBackgrounds(
+        serializedAnimationList
+      );
+      key = filteredOrderedKeys[0];
     }
-    dispatch(selectAnimation(serializedAnimationList.orderedKeys[index] || ''));
+    dispatch(selectAnimation(key || ''));
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
   };
 }
+
+const getOrderedKeysWithoutBackgrounds = serializedAnimationList => {
+  return serializedAnimationList.orderedKeys.filter(animKey => {
+    const animProps = serializedAnimationList.propsByKey[animKey];
+    return (
+      !animProps.categories || !animProps.categories.includes('backgrounds')
+    );
+  });
+};
 
 export function addBlankAnimation() {
   // To avoid special cases and saving tons of blank animations to our server,
@@ -608,9 +615,14 @@ export function editAnimation(key, props) {
  * @param {!AnimationKey} key
  * @returns {function}
  */
-export function deleteAnimation(key) {
+export function deleteAnimation(key, isSpriteLab = false) {
   return (dispatch, getState) => {
-    const orderedKeys = getState().animationList.orderedKeys;
+    const animationList = getState().animationList;
+    let orderedKeys = animationList.orderedKeys;
+    // If we're in spritelab, we need to make sure we don't set the selected animation to a background
+    if (isSpriteLab) {
+      orderedKeys = getOrderedKeysWithoutBackgrounds(animationList);
+    }
     const currentSelectionIndex = orderedKeys.indexOf(key);
     let keyToSelect =
       currentSelectionIndex === 0 ? 1 : currentSelectionIndex - 1;

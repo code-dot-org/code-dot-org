@@ -801,6 +801,12 @@
   coursed-2021_gradelevel: Razred 8+
   coursee-2021_gradelevel: Dob 8-12
   coursef-2021_gradelevel: Dob 9-13
+  coursea-2022_gradelevel: Dob 4-7
+  courseb-2022_gradelevel: Dob 5-8
+  coursec-2022_gradelevel: Dobi 6-10
+  coursed-2022_gradelevel: Razred 8+
+  coursee-2022_gradelevel: Dob 8-12
+  coursef-2022_gradelevel: Dob 9-13
   accelerated_gradelevel: "Dob 10+ (nakon Kursa 3)"
   codeorg_platformtext: "Savremeni browser-i, mobiteli, tableti"
   codeintl_platformtext: "Savremeni browser-i, mobiteli, tableti"
@@ -891,6 +897,8 @@
   courseb-2020_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
   coursea-2021_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
   courseb-2021_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+  coursea-2022_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+  courseb-2022_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
   codeorg_longdescription: "Nauči osnovne pojmove računarstva pomoću \"povuci-i-ispusti\" programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika."
   codeintl_longdescription: "Nauči osnovne pojmove računarstva pomoću \"povuci-i-ispusti\" programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika."
   thinkersmithspanish_longdescription: "Korištenjem ugrađenog \"Robotskog Rječnika\" učenici će otkriti kako navoditi jedan drugog ka izvršavanju određene zadaće bez prethodnog dogovaranja. Ova lekcija poučava djecu o nalaženju veze između simbola i akcije, kao i neprocjenjivo vrijednoj vještini ispravljanja grešaka."
@@ -1187,3 +1195,4 @@
   ai_in_partnership_with: "U partnerstvu sa"
   ai_activity: "Aktivnost"
   ai_description: "Opis"
+  hoc2022_landing_page_create_title: "Kreiraj"

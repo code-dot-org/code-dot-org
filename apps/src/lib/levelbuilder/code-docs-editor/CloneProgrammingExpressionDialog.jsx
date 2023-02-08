@@ -83,7 +83,7 @@ export function CloneFormDialog({
           >
             <option value="" />
             {categoriesForSelect
-              .filter(c => c.envName === destinationEnvironment)
+              .filter(c => c.environmentName === destinationEnvironment)
               .map(cat => (
                 <option key={cat.key} value={cat.key}>
                   {cat.formattedName}

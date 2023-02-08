@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:49:10.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -53,10 +49,14 @@
     "ai_enabled": "true",
     "project_template_level_name": "ml-data decisions-app template_2022",
     "long_instructions": "# Importing Your App\r\n\r\nLet’s import the model we just created in AI Lab!\r\n\r\n# Do This:\r\n- Click the gear icon and select “Manage AI Models”\r\n- Select the model you just saved in AI Lab\r\n- Run your code and verify that it works\r\n\r\nOnce you’ve verified that your code works, continue to the next step\r\n",
-    "map_reference": "/docs/concepts/ai-lab/importing-a-model-in-app-lab/",
+    "map_reference": "/courses/csd-2022/guides/importing-a-model-in-app-lab",
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:49:10.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:10.197+00:00\",\"changed\":[\"cloned from \\\"ml-data decisions- import app-2021\\\"\"],\"cloned_from\":\"ml-data decisions- import app-2021\"}]"

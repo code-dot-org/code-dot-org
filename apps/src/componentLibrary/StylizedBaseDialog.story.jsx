@@ -2,6 +2,11 @@ import React from 'react';
 import {action} from '@storybook/addon-actions';
 import StylizedBaseDialog from './StylizedBaseDialog';
 
+export default {
+  title: 'StylizedBaseDialog',
+  component: StylizedBaseDialog
+};
+
 const DEFAULT_PROPS = {
   title: 'Title',
   body: <div>body</div>,
@@ -10,63 +15,49 @@ const DEFAULT_PROPS = {
   hideBackdrop: true
 };
 
-export default storybook => {
-  return storybook
-    .storiesOf('Dialogs/StylizedBaseDialog', module)
-    .addStoryTable([
-      {
-        name: 'Default dialog',
-        story: () => <StylizedBaseDialog {...DEFAULT_PROPS} />
-      },
-      {
-        name: "'Simple' dialog",
-        description: 'Does not display <hr>',
-        story: () => <StylizedBaseDialog {...DEFAULT_PROPS} type="simple" />
-      },
-      {
-        name: 'Dialog without a title',
-        story: () => <StylizedBaseDialog {...DEFAULT_PROPS} title={null} />
-      },
-      {
-        name: 'Left-justified footer buttons',
-        story: () => (
-          <StylizedBaseDialog
-            {...DEFAULT_PROPS}
-            footerJustification="flex-start"
-          />
-        )
-      },
-      {
-        name: 'Custom footer button text',
-        story: () => (
-          <StylizedBaseDialog
-            {...DEFAULT_PROPS}
-            confirmationButtonText="Yes, please"
-            cancellationButtonText="No, thank you"
-          />
-        )
-      },
-      {
-        name: 'Custom footer with default buttons',
-        story: () => (
-          <StylizedBaseDialog
-            {...DEFAULT_PROPS}
-            footerJustification="space-between"
-            renderFooter={buttons => [
-              <div key="text">You can do it!</div>,
-              <div key="buttons">{buttons}</div>
-            ]}
-          />
-        )
-      },
-      {
-        name: 'Custom footer without default buttons',
-        story: () => (
-          <StylizedBaseDialog
-            {...DEFAULT_PROPS}
-            renderFooter={() => "I don't need your buttons!"}
-          />
-        )
-      }
-    ]);
+//
+// TEMPLATE
+//
+
+const Template = args => <StylizedBaseDialog {...DEFAULT_PROPS} {...args} />;
+
+//
+// STORIES
+//
+
+export const Default = Template.bind({});
+
+export const Simple = Template.bind({});
+Simple.args = {
+  type: 'simple'
+};
+
+export const NoTitle = Template.bind({});
+NoTitle.args = {
+  title: null
+};
+
+export const LeftJustifiedFooter = Template.bind({});
+LeftJustifiedFooter.args = {
+  footerJustification: 'flex-start'
+};
+
+export const CustomFooterButtonText = Template.bind({});
+CustomFooterButtonText.args = {
+  confirmationButtonText: 'Yes, please',
+  cancellationButtonText: 'No, thank you'
+};
+
+export const CustomFooterWithDefaultButtons = Template.bind({});
+CustomFooterWithDefaultButtons.args = {
+  footerJustification: 'space-between',
+  renderFooter: buttons => [
+    <div key="text">You can do it!</div>,
+    <div key="buttons">{buttons}</div>
+  ]
+};
+
+export const CustomFooterWithoutDefaultButtons = Template.bind({});
+CustomFooterWithoutDefaultButtons.args = {
+  renderFooter: () => "I don't need your buttons!"
 };

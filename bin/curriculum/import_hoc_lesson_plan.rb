@@ -84,7 +84,7 @@ end
 
 def main(options)
   options.unit_names.each do |unit_name|
-    unit = Script.find_by_name!(unit_name)
+    unit = Unit.find_by_name!(unit_name)
     if unit.lessons.count != 1
       raise "hoc unit #{unit.name.dump} must have only one lesson, but found: #{unit.lessons.map(&:name)}"
     end

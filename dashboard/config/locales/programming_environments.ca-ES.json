@@ -1,0 +1,247 @@
+{
+  "ca-ES": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "name": "Laboratori de jocs",
+          "categories": {
+            "game_lab": {
+              "name": "Laboratori de jocs",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Blanc i negre"
+                    }
+                  }
+                }
+              }
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Espiral"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Grups",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Color"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Color"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Dibuix",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Estrella"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matemàtiques",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "El nombre mínim de retornats"
+                    },
+                    "max": {
+                      "description": "El nombre màxim de retornats"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "El nombre mínim de retornats"
+                    },
+                    "max": {
+                      "description": "El nombre màxim de retornats"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variables",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Assigna el valor a una variable existent. Per exemple, x = 0;"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funcions"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratori d'aplicacions",
+          "description": "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Créixer i encongir-se"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funció"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funció"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funció"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matemàtiques",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "El nombre mínim de retornats"
+                    },
+                    "max": {
+                      "description": "El nombre màxim de retornats"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "El nombre mínim de retornats"
+                    },
+                    "max": {
+                      "description": "El nombre màxim de retornats"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variables",
+              "expressions": {
+                "addPair": {
+                  "return_value": "Cap"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funcions"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Laboratori de personatges",
+          "categories": {
+            "actions": {
+              "name": "Accions"
+            },
+            "events": {
+              "name": "Esdeveniments"
+            },
+            "loops": {
+              "name": "Bucles"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "Matemàtiques"
+            },
+            "logic": {
+              "name": "Lògic"
+            },
+            "functions": {
+              "name": "Funcions"
+            },
+            "text": {
+              "name": "Text"
+            }
+          }
+        }
+      }
+    }
+  }
+}

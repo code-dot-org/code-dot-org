@@ -2,6 +2,22 @@
 sl:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': srednje
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': srednje
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -353,6 +369,11 @@ sl:
             '"enter"': vnesi
             '"x"': x
             '"y"': y
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': srca
+            '"rain"': dež
       gamelab_atTime:
         options:
           UNIT:
@@ -369,7 +390,7 @@ sl:
           CONDITION:
             '"when"': ko
             '"while"': dokler
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': sekund(e)
@@ -418,6 +439,12 @@ sl:
             '90': dol
             '180': levo
             '270': gor
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': srednje
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -745,3 +772,8 @@ sl:
           DIR:
             right: desno↻
             left: levo↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': srca
+            '"rain"': dež

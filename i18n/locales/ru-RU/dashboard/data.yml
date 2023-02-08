@@ -591,6 +591,7 @@ ru:
         csd_ml_intro_ai_lab_july2021: Введение в AI лаборатории
         csd_ml_training_testing_ai_lan: Тренировка и Тесты в AI Lab
         csd_ml_model_cards_july2021: Карточки моделей в AI Lab
+        csd_ml_numerical_ai_lab: Числовые данные в ИИ лаборатории
         Gettting_Started_Progress: Прогресс, Обратная связь и оценка
         Gettting_Started_ClassSection: Создание Классной Сессии
         Gettting_Started_StudentExperience: Опыт студента
@@ -608,6 +609,7 @@ ru:
         hello_world_intro: Привет, мир - Добро пожаловать в Sprite Lab
         hello_world_events: Привет, мир - Программирование с событиями
         hello_world_congrats: Привет, мир - Делайте, что вам хочется
+        csp_global_vs_local: Отладка Глобальных Переменных в сравнении с Локальными
         rough_poemart_intro: v1 Poem Art Введение
         rough_poemart_events: v1 Poem Art События
         rough_poemart_imagery: v1 Poem Art Изображение
@@ -618,6 +620,59 @@ ru:
         poetry_module_multichoiceprompts: Подсказки с несколькими вариантами - Кодирование и поэзия
         poetry_module_conditionals: Условные операторы - Кодирование и поэзия
         poemart_intro: Введение в поэтическое искусство
+        poemart_events: События в Искустве Поэзии
+        poemart_imagery: Образ в Искустве Поэзии
+        poemart_celebration: Торжество в Искустве Поэзии
+        csd_u6_variables_part2: Переменные - Часть 2
+        csd_ml_ethics_ai: 'Этика и ИИ '
+        outbreak_intro: 'Симулятор Вспышки Эпидемии: Введение'
+        outbreak_events: 'Симулятор Вспышки Эпидемии: События'
+        outbreak_scientist: 'Симулятор Вспышки Эпидемии: Думай Как Ученый'
+        outbreak_outro: 'Симулятор Вспышки Эпидемии: Свободная Игра'
+        PL_overview_CSP: Что такое Принципы Информатики?
+        PL_CSP_EIPMOverview: Руководство по урокам EIPM
+        CSA-PL-debugging-temp: Введение в отладку в лаборатории Java - шаблон
+        csd_app_lab_design_mode: Лаборатория CSD приложений - Режим Разработки
+        csd_app_lab_events: Лаборатория CSD приложений - События
+        PL_CSD_Unit4_AppTesting: Бумажный Прототип - Тестирование
+        csd_u6_circuit_playground: Физические Вычисления
+        CSA-PL-for-loops: Для циклов в Java
+        CSA-PL-variables: Создание Переменных в Java
+        PL_CS_Journeys_Overview: Занятия по информатике
+        CSA-PL-intro-to-java-lab: Java Лаборатория - Основы
+        CSA-PL-first-program: Написание Программы на Java
+        CSD_u6_variables_part1: 'CSD: Переменные'
+        csd_u6_if_statements: 'CSD: Условные Выражения'
+        csc-poem-art-intro: Вступительное Видео
+        csc-poem-art-outro: Заключительное Видео
+        csd_u6_call_define_functions: 'CSD: Вызов и Определение Функций'
+        csp_applab_parameters: Процедуры с параметрами
+        starquilts_intro_artist: Вступление к "Звездным Одеялам"
+        CSA-PL-intro-to-arrays: Одномерные (1D) массивы
+        CSA-PL-1d-arrays-new-values: Ввод значений в одномерные массивы
+        CSA-PL-conditionals: Условные Выражения в Java
+        CSA-PL-two-way-selection: Двусторонний выбор
+        CSA-PL-Printing-in-Java: Печать на Java
+        CSA-PL-multi-selection-statements: Выражения Множественного выбора
+        PL_CSP_TeacherTips_Advice: 'Советы преподавателям: Консультация Новых Преподавателей Информатики'
+        PL_CSP_TeacherTips_IntroToCSP: 'Советы учителям: Введение в Принципы Информатики'
+        PL_CSP_TeacherTips_Debugging: 'Советы учителям: Помощь в Отладке'
+        PL_CSP_TeacherTips_LeadLearner: 'Советы учителям: Как стать Ведущим Учеником'
+        PL_CSP_TeacherTips_APExam: 'Советы учителям: Подготовка к экзамену AP'
+        PL_CSP_TeacherTips_EIPM: 'Советы учителям: Процесс EPM'
+        PL_CSD_CircuitPlayground_Overview: Обзор Окружной Игровой Площадки
+        CSA-PL-debugging-22: Отладка в Java Лаборатории
+        CSD_Unit6_InteractiveArtExemplar: Интерактивный Художественный Образец
+        CS_Changing_Everything: Информатика изменяет всё
+        csa-alias-video: Эквивалентности и Псевдонимы
+        csa-equals-video: Метод .equals()
+        csa-user-stories: Истории Пользователей в Разработке Программного Обеспечения
+        csa-pl-vpl-m1-unit-3: Разработка Программного Обеспечения в Модуле 3
+        csa-pl-intro-to-equality: Введение в Эквивалентность
+        csa-pl-intro-to-equals-method: Введение в метод .equals()
+        csa-pl-equals-book: Написание метода equals() для класса Book
+        csa-multi-select-pl: Операторы множественного выбора в Java
+        csc_timecapsule_intro: Введение Капсулы Времени
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

@@ -33,7 +33,6 @@ import {TestResults, KeyCodes} from './constants';
 import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-import clientState from '@cdo/apps/code-studio/clientState';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 // Types of blocks that do not count toward displayed block count. Used
@@ -799,9 +798,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
         break;
       case TestResults.BLOCK_LIMIT_FAIL:
         var exceededBlockType = this.hasExceededLimitedBlocks_();
-        var limit = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
-          exceededBlockType
-        );
+        var limit = Blockly.cdoUtils.getBlockLimit(exceededBlockType);
         var block = `<xml><block type='${exceededBlockType}'></block></xml>`;
         message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
@@ -1105,9 +1102,6 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   challenge = false
 ) {
   const numLinesWritten = this.getNumBlocksUsed();
-  // Use the response from the server if we have one. Otherwise use the client's data.
-  const totalLines =
-    (options.response && options.response.total_lines) || clientState.lines();
 
   const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription:
@@ -1117,7 +1111,6 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   return (
     <CodeWritten
       numLinesWritten={numLinesWritten}
-      totalNumLinesWritten={totalLines}
       useChallengeStyles={challenge}
     >
       <GeneratedCode
@@ -1495,7 +1488,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function() {
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
-    if (!Blockly.mainBlockSpace.isReadOnly()) {
+    if (!Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)) {
       blockValid = blockValid && block.isEditable();
     }
     return blockValid;
@@ -1959,8 +1952,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function(node, filter) {
  * Ensure that all limited toolbox blocks aren't exceeded.
  */
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function() {
-  const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
-  return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
+  return Blockly.cdoUtils.blockLimitExceeded();
 };
 
 /**

@@ -4,7 +4,7 @@
   "category": "Logic",
   "category_key": "logic",
   "block_name": "logic_operation",
-  "content": "Allows you to check if two different conditions are true or false at the same time. \r\n\r\nCommonly used to construct complex `if` statements.\r\n\r\nAnd: Returns true if both conditions are true.\r\n\r\nOr: Returns true if at least one condition is true.",
+  "content": "Allows you to check if two different conditions are true or false at the same time. \r\n\r\nCommonly used to construct complex [`if`(#64d5ff)](/docs/spritelab/codestudio_ifStatement/) statements.\r\n\r\nAnd: Returns true if both conditions are true.\r\n\r\nOr: Returns true if at least one condition is true.",
   "examples": [
     {
       "name": "Example 1",

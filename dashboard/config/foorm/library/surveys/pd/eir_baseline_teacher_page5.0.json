@@ -20,46 +20,41 @@
             {
               "type": "text",
               "name": "years_k12_work",
-              "title": "How many years have you been working in K-12 schools? (Please enter a number.)",
-              "requiredErrorText": "Please enter a number greater than 0.24.",
+              "title": "How many years have you been working in K-12 schools? (Please enter a number 0-90.)",
               "validators": [
                 {
                   "type": "numeric",
-                  "minValue": 0.25,
+                  "minValue": 0,
                   "maxValue": 90
                 }
               ],
               "inputType": "number",
-              "min": "0.25",
-              "max": "90",
-              "minErrorText": "Please enter a number greater than 0.24.",
-              "maxErrorText": "Wow, do you really have that many years of experience? Please check your answer."
+              "min": 0,
+              "max": 90,
+              "minErrorText": "Please enter a number 0-90.",
+              "maxErrorText": "Wow, do you really have that many years of experience? Please enter a number 0-90."
             },
             {
               "type": "text",
               "name": "years_k12teach_num",
-              "title": "How many years have you taught COMPUTER SCIENCE at the K-12 level? (Please enter a number.)",
-              "requiredErrorText": "Please enter a number (numeric character) greater than 0.",
+              "title": "How many years have you taught computer science at the K-12 level? (Please enter a number 0-90.)",
               "validators": [
                 {
                   "type": "numeric",
-                  "minValue": 0.25,
+                  "minValue": 0,
                   "maxValue": 90
-                },
-                {
-                  "type": "numeric",
-                  "minValue": 0
                 }
               ],
               "inputType": "number",
-              "min": "0.25",
-              "max": "90",
-              "minErrorText": "Please enter a number greater than 0.24."
+              "min": 0,
+              "max": 90,
+              "minErrorText": "Please enter a number 0-90.",
+              "maxErrorText": "Wow, do you really have that many years of experience? Please enter a number 0-90."
             },
             {
               "type": "checkbox",
               "name": "taught_ap_course",
-              "title": "What AP course(s) have you taught? (Check all that apply).",
+              "title": "What AP course(s) have you taught? (Check all that apply.)",
               "choices": [
                 {
                   "value": "ap_csa",
@@ -109,7 +104,7 @@
             {
               "type": "radiogroup",
               "name": "general_ed_level",
-              "title": "What is the highest educational degree you have earned? (Check one.)\n",
+              "title": "What is the highest educational degree you have earned? (Check one.)",
               "choices": [
                 {
                   "value": "1",
@@ -136,7 +131,7 @@
             {
               "type": "checkbox",
               "name": "highest_level_cs_education",
-              "title": "Which most accurately describes the highest level of formal computer science education you have completed? (Check all that apply.)\n",
+              "title": "Which most accurately describes the formal computer science education you have completed? (Check all that apply.)",
               "choices": [
                 {
                   "value": "1",

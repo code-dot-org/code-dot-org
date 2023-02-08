@@ -2,342 +2,56 @@
 bn:
   data:
     script:
-      category:
-        hoc_category_name: এক ঘন্টার কোড
-        math_category_name: গণিত
-        other_category_name: অন্যান্য
       name:
         course1:
           title: কোর্স ১
           description_audience: বয়স ৪-৬
-          lessons:
-            'Artist: Loops':
-              name: 'শিল্পী: লুপ'
-            'Bee: Loops':
-              name: 'মৌমাছি: লুপ'
-            'Bee: Sequence':
-              name: 'মৌমাছি: অনুক্রম'
-            Happy Maps:
-              name: আনন্দের মানচিত্র
-            'Maze: Debugging':
-              name: 'মেজ: ডিবাগিং'
-            'Maze: Loops':
-              name: 'মেজ: লুপ'
-            Spelling Bee:
-              name: বানান মৌমাছি
-            The Big Event:
-              name: বড় ঘটনা
         course2:
           title: কোর্স ২
           description_audience: বয়স ৬-১৮
-          lessons:
-            'Artist: Debugging':
-              name: 'শিল্পী: ডিবাগিং'
-            'Artist: Loops':
-              name: 'শিল্পী: লুপ'
-            'Bee: Debugging':
-              name: 'মৌমাছি: ডিবাগিং'
-            'Bee: Loops':
-              name: 'মৌমাছি: লুপ'
-            Conditionals:
-              name: শর্তযুক্ত
-            Flappy:
-              name: ফ্লাপি
-            Graph Paper Programming:
-              name: ছক-কাগজে প্রোগ্রামিং
-            'Maze: Loops':
-              name: 'মেজ: লুপ'
-            Relay programming:
-              name: রিলে-স্যুইচ প্রোগ্রামিং
-            The Big Event:
-              name: বড় ঘটনা
         course3:
           title: কোর্স ২
           description_audience: বয়স ৮-১৮
-          lessons:
-            Artist:
-              name: শিল্পী
-            'Bee: Debugging':
-              name: 'মৌমাছি: ডিবাগিং'
-            'Bee: Functions':
-              name: 'মৌমাছি: ফাংশন'
-            Bounce:
-              name: বল লাফানো
-            Computational Thinking:
-              name: গণিতিক চিন্তা-ভাবনা
-            Dice Race:
-              name: পাশার লড়াই
-            Internet:
-              name: ইন্টারনেট
-            Maze:
-              name: গোলকধাঁধা
-            Songwriting:
-              name: গান লিখা
         playlab:
           title: প্লে ল্যাব
-          lessons:
-            Play Lab:
-              name: প্লে ল্যাব
         artist:
           title: শিল্পী
-          lessons:
-            Artist:
-              name: শিল্পী
-        hourofcode:
-          lessons:
-            Maze:
-              name: গোলকধাঁধা
         frozen:
           description_short: চলুন কোড ব্যবহার করে আনা এবং এলসার বরফের জাদু ও সৌন্দর্য অনুসন্ধানে যোগ দেই।
         course4:
           title: কোর্স ৪
           description_audience: বয়স ১০-১৮
-          lessons:
-            Artist:
-              name: শিল্পী
-            Artist Binary:
-              name: শিল্পী দ্বিমিক
-            Maze and Bee:
-              name: মেজ এবং মৌমাছি
-        Course4pre:
-          lessons:
-            'Artist: Loops':
-              name: 'শিল্পী: লুপ'
-            'Bee: Debugging':
-              name: 'মৌমাছি: ডিবাগিং'
-        usability:
-          lessons:
-            Binary:
-              name: দ্বি-আঙ্কিক
-            For Loops:
-              name: ফর লুপ
-            Intro:
-              name: ভুমিকা
-            Variables:
-              name: চলকগুলো
         algebra:
           title: বীজগণিতে কম্পিউটার বিজ্ঞান
-          lessons:
-            'Eval: Conditionals':
-              name: শর্তযুক্ত
-        K5PD:
-          lessons:
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
         20-hour:
           description_audience: বয়স ১০-১৮
-          lessons:
-            Abstraction:
-              name: অপসারণ
-            Algorithms:
-              name: অ্যালগরিদম
-            Computational Thinking:
-              name: গণিতিক চিন্তা-ভাবনা
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-            Graph Paper Programming:
-              name: ছক-কাগজে প্রোগ্রামিং
-            Introduction to Computer Science:
-              name: কম্পিউটার বিজ্ঞান পরিচিতি
-            Relay Programming:
-              name: রিলে-স্যুইচ প্রোগ্রামিং
-            Song Writing:
-              name: গান লিখা
-            The Artist:
-              name: শিল্পী
-            The Artist 2:
-              name: চিত্রকর ২
-            The Artist 3:
-              name: পটুয়া ৩
-            The Artist 4:
-              name: চিত্রকর ৪
-            The Artist 5:
-              name: চিত্রকর ৫
-            The Farmer:
-              name: কৃষক
-            The Farmer 2:
-              name: কৃষক ২
-            The Farmer 3:
-              name: কৃষক ৩
-            The Internet:
-              name: ইন্টারনেট
-            The Maze:
-              name: গোলকধাঁধা
-            Wrap-up:
-              name: গুটিয়ে নেয়া
         edit-code:
           title: কোড সম্পাদনা করুন
           description: কোড সম্পাদনা করুন
           description_short: কোড সম্পাদনা করুন
-          lessons:
-            Play Lab:
-              name: প্লে ল্যাব
-            The Artist:
-              name: শিল্পী
-            The Maze:
-              name: গোলকধাঁধা
           student_description: কোড সম্পাদনা করুন
         events:
           title: ঘটনাবলী
           description: ঘটনাবলী
           description_short: ঘটনাবলী
-          lessons:
-            Bounce:
-              name: বল লাফানো
           student_description: ঘটনাবলী
         flappy:
           title: ফ্লাপি কোড
-          lessons:
-            Flappy Code:
-              name: ফ্লাপি কোড
         jigsaw:
           title: টুকরো কাঠের ধাঁধা
-          lessons:
-            Jigsaw:
-              name: টুকরো কাঠের ধাঁধা
         step:
           title: ধাপ
           description: ধাপ টিউটোরিয়াল
           description_short: ধাপ টিউটোরিয়াল
-          lessons:
-            Step:
-              name: ধাপ
           student_description: ধাপ টিউটোরিয়াল
-        algebraPD:
-          lessons:
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
-        algPDmiami:
-          lessons:
-            Booleans:
-              name: বুলিয়ান
-        cspunit3:
-          lessons:
-            While Loops:
-              name: হোয়াইল লুপ
-        algebraPD3:
-          lessons:
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
-        algebraPD-NexTech:
-          lessons:
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
-        algebraPD-iZone:
-          lessons:
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
-        sciencePD2:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
-        algebraPD2a:
-          lessons:
-            Booleans:
-              name: বুলিয়ান
-            Free Play:
-              name: বিনা পয়সায় খেলা
-        allthethings:
-          lessons:
-            Artist:
-              name: শিল্পী
-            Bee:
-              name: মৌমাছি
-            Bounce:
-              name: বল লাফানো
-            Flappy:
-              name: ফ্লাপি
-            Jigsaw:
-              name: টুকরো কাঠের ধাঁধা
-            Maze:
-              name: গোলকধাঁধা
-            Minecraft:
-              name: মাইনক্র্যাফট
-        algebraPD2b:
-          lessons:
-            Booleans:
-              name: বুলিয়ান
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
-        cspfacilitator:
-          lessons:
-            App Lab:
-              name: অ্যাপ ল্যাব
-            Welcome!:
-              name: স্বাগতম!
-        ECSPD2:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-up:
-              name: গুটিয়ে নেয়া
-        algebraPD2:
-          lessons:
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
-            Welcome!:
-              name: স্বাগতম!
-        sciencePD2b:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
-        science-PD2:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
-        sciencePD2b-iZone:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
-        ECSPD2-iZone:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-up:
-              name: গুটিয়ে নেয়া
-        ECSPD2-NexTech:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-up:
-              name: গুটিয়ে নেয়া
         asUnplugged:
           description_audience: বয়স 6-13
-          lessons:
-            Graph Paper Programming:
-              name: ছক-কাগজে প্রোগ্রামিং
-            Happy Maps:
-              name: আনন্দের মানচিত্র
-            Songwriting:
-              name: গান লিখা
-            The Big Event:
-              name: বড় ঘটনা
         afterschool1:
           description_audience: বয়স 7-13
-        ScienceP3OLPT2:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
         Special Fun:
           description_audience: বয়স ১০-১৮
         SpecialSeries:
           description_audience: বয়স ১০-১৮
-        cspunit3temp:
-          lessons:
-            While Loops:
-              name: হোয়াইল লুপ
         starwars:
           description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
           description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
@@ -349,45 +63,13 @@ bn:
         mc:
           title: মাইনক্র্যাফট এক ঘণ্টার কোড
           description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
-          lessons:
-            Hour of Code 2015:
-              name: মাইনক্র্যাফট এক ঘণ্টার কোড
           student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
-        ScienceP3OLPT3:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
-        algebraPD1:
-          lessons:
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
-        csp1-2017:
-          lessons:
-            The Internet:
-              name: ইন্টারনেট
-        csp4-2017:
-          lessons:
-            Simple Encryption:
-              name: সাধারণ এনক্রিপশন
-        csp5-2017:
-          lessons:
-            While Loops:
-              name: হোয়াইল লুপ
         CSDU3-Draft:
           description_short: প্রোগ্রামিং
-          lessons:
-            Functions:
-              name: ফাংশনগুলি
         TEMP CSD Unit 3:
           description_short: প্রোগ্রামিং
         CSF_Secret_Sample:
           description_audience: বয়স ৮-১৮
-        algebraFacilitator:
-          lessons:
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
         cspunit1-support:
           lesson_groups:
             required:
@@ -396,10 +78,6 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        CSDU4-Draft:
-          lessons:
-            Design Mode:
-              name: Design Mode
         CSF_Secret_Sample_Story:
           description_audience: বয়স ৮-১৮+
         MikeTest:
@@ -412,89 +90,20 @@ bn:
               display_name: সংক্ষিপ্ত বিবরণ
         gradeKinder:
           description_audience: বয়স 5-18
-          lessons:
-            Events:
-              name: ঘটনাবলী
-            Loops:
-              name: চক্র
-            Programming:
-              name: প্রোগ্রামিং
         grade4:
           description_audience: বয়স 9-99
-          lessons:
-            Songwriting:
-              name: গান লিখা
         grade1:
           description_audience: বয়স 5-18
-          lessons:
-            Events:
-              name: ঘটনাবলী
-            Loops:
-              name: চক্র
-            Programming:
-              name: প্রোগ্রামিং
         grade5:
           description_audience: বয়স 10-110
-        ecs-unit1:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-up:
-              name: গুটিয়ে নেয়া
         grade3:
           description_audience: বয়স 5-18
-          lessons:
-            Bee Debugging:
-              name: মৌমাছি ডিবাগিং
-            Bounce:
-              name: বল লাফানো
         alltheplcthings:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        csd3-2017:
-          lessons:
-            Functions:
-              name: ফাংশনগুলি
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
         grade2:
           description_audience: বয়স 5-18
-          lessons:
-            Flappy:
-              name: ফ্লাপি
-            The Big Event:
-              name: বড় ঘটনা
-        k5concepts:
-          lessons:
-            Binary:
-              name: দ্বি-আঙ্কিক
-            Conditionals:
-              name: শর্তযুক্ত
-            Events:
-              name: ঘটনাবলী
-            For Loops:
-              name: ফর লুপ
-            Functions:
-              name: ফাংশনগুলি
-            Functions with Parameters:
-              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
-            Loops:
-              name: চক্র
-            Nested Loops:
-              name: নেষ্টেড লুপ
-            Variables:
-              name: চলকগুলো
-            While Loops:
-              name: হোয়াইল লুপ
-        algebrapdnext:
-          lessons:
-            Teacher Dashboard:
-              name: শিক্ষক ড্যাশবোর্ড
-            Welcome!:
-              name: স্বাগতম!
         csp-online-test:
           lesson_groups:
             required:
@@ -503,58 +112,10 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        hoc-encryption:
-          lessons:
-            Simple Encryption:
-              name: সাধারণ এনক্রিপশন
-        csd2-2017:
-          lessons:
-            Lists:
-              name: তালিকা
         csp2-support:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        flappy-impact-study:
-          lessons:
-            Flappy Code:
-              name: ফ্লাপি কোড
-        coursed-draft:
-          lessons:
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            Artist Binary:
-              name: শিল্পী দ্বিমিক
-            Nested Loops:
-              name: নেষ্টেড লুপ
-            Introduction:
-              name: ভূমিকা
-        coursee-draft:
-          lessons:
-            Internet:
-              name: ইন্টারনেট
-            Introduction:
-              name: ভূমিকা
-            Conditionals:
-              name: শর্তযুক্ত
-        coursef-draft:
-          lessons:
-            Songwriting with Parameters:
-              name: গান লিখা
-            Introduction:
-              name: ভূমিকা
-        2016_sciencePD-phase2b:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
-        2016_sciencePD_phase2b:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
         csp3-support:
           lesson_groups:
             required:
@@ -563,98 +124,10 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        sciencepd4:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
-        science-pd-ol-pt-5:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
-        csf2harvey:
-          lessons:
-            Binary:
-              name: দ্বি-আঙ্কিক
-        sciencepd5:
-          lessons:
-            Welcome!:
-              name: স্বাগতম!
-            Wrap-Up:
-              name: গুটিয়ে ফেলা
         csp5-support:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        csd6-draft:
-          lessons:
-            Lists:
-              name: তালিকা
-            For Loops:
-              name: ফর লুপ
-            Functions with Parameters:
-              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
-        workshop-gamelab:
-          lessons:
-            Introduction:
-              name: ভূমিকা
-        coursed-ramp:
-          lessons:
-            Introduction:
-              name: ভূমিকা
-        coursee-ramp:
-          lessons:
-            Introduction:
-              name: ভূমিকা
-            Conditionals:
-              name: শর্তযুক্ত
-        csd6-2017:
-          lessons:
-            Lists:
-              name: তালিকা
-            For Loops:
-              name: ফর লুপ
-            Functions with Parameters:
-              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
-            Functions with Parameters_:
-              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
-        csd3-draft:
-          lessons:
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-        csd3-old:
-          lessons:
-            Functions:
-              name: ফাংশনগুলি
-        csd2-draft:
-          lessons:
-            Lists:
-              name: তালিকা
-        csd3-chapters:
-          lessons:
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-            'null':
-              name: শূন্য
-        coursef-ramp:
-          lessons:
-            Introduction:
-              name: ভূমিকা
-        artist-and-bb8:
-          lessons:
-            Bounce:
-              name: বল লাফানো
         coursea-2017:
           title: কোর্স A
           assignment_family_title: কোর্স A
@@ -667,17 +140,9 @@ bn:
         coursed-2017:
           title: কোর্স D
           assignment_family_title: কোর্স D
-          lessons:
-            Nested Loops:
-              name: নেষ্টেড লুপ
         coursee-2017:
           title: কোর্স E
           assignment_family_title: কোর্স E
-          lessons:
-            Songwriting with Parameters:
-              name: গান লিখা
-            Nested Loops:
-              name: নেষ্টেড লুপ
         coursef-2017:
           title: কোর্স F
           assignment_family_title: কোর্স F
@@ -729,197 +194,18 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        express-2017:
-          lessons:
-            Introduction:
-              name: ভূমিকা
-            Internet:
-              name: ইন্টারনেট
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            Songwriting with Parameters:
-              name: গান লিখা
-            Nested Loops:
-              name: নেষ্টেড লুপ
-        pre-express-2017:
-          lessons:
-            Spelling Bee:
-              name: বানান মৌমাছি
-        subgoal-labels-opt-in:
-          lessons:
-            Thanks:
-              name: ধন্যবাদ
-        e-f-ramp:
-          lessons:
-            Nested Loops:
-              name: নেষ্টেড লুপ
-            Conditionals:
-              name: শর্তযুক্ত
-            Internet:
-              name: ইন্টারনেট
-        new-d:
-          lessons:
-            Introduction:
-              name: ভূমিকা
-            Nested Loops:
-              name: নেষ্টেড লুপ
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            Artist Binary:
-              name: শিল্পী দ্বিমিক
-        new-express:
-          lessons:
-            Introduction:
-              name: ভূমিকা
-            Nested Loops:
-              name: নেষ্টেড লুপ
-        new-e:
-          lessons:
-            Conditionals:
-              name: শর্তযুক্ত
-            Internet:
-              name: ইন্টারনেট
-        new-f:
-          lessons:
-            Songwriting with Parameters:
-              name: গান লিখা
-        pwc:
-          lessons:
-            Simple Encryption:
-              name: সাধারণ এনক্রিপশন
-        course-e-2018:
-          lessons:
-            Nested Loops:
-              name: নেষ্টেড লুপ
-            Introduction:
-              name: ভূমিকা
-            Conditionals:
-              name: শর্তযুক্ত
-            Internet:
-              name: ইন্টারনেট
-        course-f-2018:
-          lessons:
-            Introduction:
-              name: ভূমিকা
-            Songwriting with Parameters:
-              name: গান লিখা
-        csd6-old:
-          lessons:
-            Lists:
-              name: তালিকা
-            For Loops:
-              name: ফর লুপ
-        csd3-1819draft:
-          lessons:
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-        csd3-2018:
-          lessons:
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-        csd2-2018:
-          lessons:
-            Lists:
-              name: তালিকা
         coursea-2018:
           assignment_family_title: কোর্স A
-          lessons:
-            'Programming: Happy Maps':
-              name: আনন্দের মানচিত্র
-        express-2018:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: ছক-কাগজে প্রোগ্রামিং
-            Introduction:
-              name: ভূমিকা
-            Nested Loops:
-              name: নেষ্টেড লুপ
-            'Events: The Big Event':
-              name: বড় ঘটনা
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            'Functions: Songwriting':
-              name: গান লিখা
-            'Unplugged: Binary':
-              name: দ্বিমিক ছবি
-            Internet:
-              name: ইন্টারনেট
-            Relay Programming:
-              name: রিলে-স্যুইচ প্রোগ্রামিং
-            Graph Paper Programming:
-              name: ছক-কাগজে প্রোগ্রামিং
         courseb-2018:
           assignment_family_title: কোর্স B
         coursed-2018:
           assignment_family_title: কোর্স D
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: ছক-কাগজে প্রোগ্রামিং
-            Introduction:
-              name: ভূমিকা
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            'Unplugged: Binary':
-              name: দ্বিমিক ছবি
-            Graph Paper Programming:
-              name: ছক-কাগজে প্রোগ্রামিং
-            Relay Programming:
-              name: রিলে-স্যুইচ প্রোগ্রামিং
         coursec-2018:
           assignment_family_title: কোর্স C
-          lessons:
-            'Events: The Big Event':
-              name: বড় ঘটনা
-        csd6-2018:
-          lessons:
-            Functions with Parameters:
-              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
         coursee-2018:
           assignment_family_title: কোর্স E
-          lessons:
-            'Programming: My Robotic Friends':
-              name: আমার রোবোটিক্স বন্ধুরা
-            Introduction:
-              name: ভূমিকা
-            'Functions: Songwriting':
-              name: গান লিখা
-            Internet:
-              name: ইন্টারনেট
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            Minecraft Hour of Code:
-              name: মাইনক্র্যাফট এক ঘণ্টার কোড
         coursef-2018:
           assignment_family_title: কোর্স F
-          lessons:
-            'Programming: My Robotic Friends':
-              name: আমার রোবোটিক্স বন্ধুরা
-            Introduction:
-              name: ভূমিকা
-            Songwriting with Parameters:
-              name: গান লিখা
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-        csp1-2018:
-          lessons:
-            The Internet:
-              name: ইন্টারনেট
-        csp4-2018:
-          lessons:
-            Simple Encryption:
-              name: সাধারণ এনক্রিপশন
-        csp5-2018:
-          lessons:
-            While Loops:
-              name: হোয়াইল লুপ
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -988,26 +274,10 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        pre-express-2018:
-          lessons:
-            Spelling Bee:
-              name: বানান মৌমাছি
         fit-test:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        frozen-2018:
-          lessons:
-            Artist:
-              name: শিল্পী
-        frozen-2018-test:
-          lessons:
-            Artist:
-              name: শিল্পী
-        frozen-2018-test-b:
-          lessons:
-            Artist:
-              name: শিল্পী
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -1024,13 +294,6 @@ bn:
               display_name: ফর লুপ
             csf_internet:
               display_name: ইন্টারনেট
-          lessons:
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            The Artist:
-              name: শিল্পী
-            Internet:
-              name: ইন্টারনেট
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -1041,32 +304,12 @@ bn:
               display_name: শর্তযুক্ত
             csf_binary:
               display_name: দ্বি-আঙ্কিক
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: ছক-কাগজে প্রোগ্রামিং
-            Relay Programming:
-              name: রিলে-স্যুইচ প্রোগ্রামিং
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            'Unplugged: Binary':
-              name: দ্বিমিক ছবি
         coursee-2019:
           lesson_groups:
             csf_nested_loops:
               display_name: নেষ্টেড লুপ
             csf_functions:
               display_name: ফাংশনগুলি
-          lessons:
-            Nested Loops:
-              name: নেষ্টেড লুপ
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            'Functions: Songwriting':
-              name: গান লিখা
-            Internet:
-              name: ইন্টারনেট
-            Songwriting:
-              name: গান লিখা
         express-2019:
           lesson_groups:
             csf_loops:
@@ -1079,22 +322,10 @@ bn:
               display_name: চলকগুলো
             csf_for_loops:
               display_name: ফর লুপ
-          lessons:
-            Relay Programming:
-              name: রিলে-স্যুইচ প্রোগ্রামিং
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            Artist Binary:
-              name: শিল্পী দ্বিমিক
-            Internet:
-              name: ইন্টারনেট
         andrea-test:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-          lessons:
-            'null':
-              name: শূন্য
         coursec-2019:
           lesson_groups:
             csf_binary:
@@ -1103,18 +334,12 @@ bn:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
-          lessons:
-            'Events: The Big Event':
-              name: বড় ঘটনা
         coursea-2019:
           lesson_groups:
             csf_loops:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
-          lessons:
-            'Programming: Happy Maps':
-              name: আনন্দের মানচিত্র
         courseb-2019:
           lesson_groups:
             csf_loops:
@@ -1127,25 +352,6 @@ bn:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
-          lessons:
-            Spelling Bee:
-              name: বানান মৌমাছি
-        csd2-2019:
-          lessons:
-            Lists:
-              name: তালিকা
-        csd3-2019:
-          lessons:
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-        csd6-2019:
-          lessons:
-            Functions with Parameters:
-              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -1156,26 +362,10 @@ bn:
               display_name: ফাংশনগুলি
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        csp1-2019:
-          lessons:
-            The Internet:
-              name: ইন্টারনেট
-        csp4-2019:
-          lessons:
-            Simple Encryption:
-              name: সাধারণ এনক্রিপশন
-        csp5-2019:
-          lessons:
-            While Loops:
-              name: হোয়াইল লুপ
         csp1-pilot:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        time4csdemo:
-          lessons:
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1239,10 +429,6 @@ bn:
               display_name: শর্তযুক্ত
             csp_functions:
               display_name: ফাংশনগুলি
-        express-2018-vn:
-          lessons:
-            Graph Paper Programming:
-              name: ছক-কাগজে প্রোগ্রামিং
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -1259,22 +445,6 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        csd2-pilot:
-          lessons:
-            Lists:
-              name: তালিকা
-        csd3-pilot:
-          lessons:
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-        maddie-test:
-          lessons:
-            stage 1:
-              name: ধাপ ১
         csp3-pilot:
           lesson_groups:
             required:
@@ -1289,9 +459,6 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-          lessons:
-            Focus Area 1:
-              name: পাঠ্যক্রম
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -1332,30 +499,10 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        peru-2019:
-          lessons:
-            Introduction:
-              name: ভূমিকা
-            Nested Loops:
-              name: নেষ্টেড লুপ
         csp6-pilot:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        k5-onlinepd-2019:
-          lessons:
-            Loops:
-              name: চক্র
-            Conditionals:
-              name: শর্তযুক্ত
-            Events:
-              name: ঘটনাবলী
-            Functions:
-              name: ফাংশনগুলি
-            Variables:
-              name: চলকগুলো
-            For Loops:
-              name: ফর লুপ
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -1364,10 +511,6 @@ bn:
               display_name: শর্তযুক্ত
             csp_functions:
               display_name: ফাংশনগুলি
-        time4cs-original-unit-1:
-          lessons:
-            Conditionals:
-              name: শর্তযুক্ত
         time4cs-control-unit-2:
           lesson_groups:
             csf_conditionals:
@@ -1376,9 +519,6 @@ bn:
               display_name: নেষ্টেড লুপ
             csf_functions:
               display_name: ফাংশনগুলি
-          lessons:
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -1387,9 +527,6 @@ bn:
               display_name: শর্তযুক্ত
             csf_events:
               display_name: ঘটনাবলী
-          lessons:
-            Conditionals:
-              name: শর্তযুক্ত
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -1398,9 +535,6 @@ bn:
               display_name: শর্তযুক্ত
             csf_events:
               display_name: ঘটনাবলী
-          lessons:
-            Conditionals:
-              name: শর্তযুক্ত
         csp7-pilot:
           lesson_groups:
             required:
@@ -1419,29 +553,12 @@ bn:
               display_name: তালিকা
             csp_loops:
               display_name: চক্র
-        csd6-2020:
-          lessons:
-            Functions with Parameters:
-              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
-        csd3-2020:
-          lessons:
-            Variables:
-              name: চলকগুলো
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-            Text:
-              name: পাঠ
         coursea-2020:
           lesson_groups:
             csf_loops:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
-          lessons:
-            'Programming: Happy Maps':
-              name: আনন্দের মানচিত্র
         courseb-2020:
           lesson_groups:
             csf_loops:
@@ -1456,9 +573,6 @@ bn:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
-          lessons:
-            'Events: The Big Event':
-              name: বড় ঘটনা
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -1469,33 +583,18 @@ bn:
               display_name: শর্তযুক্ত
             csf_binary:
               display_name: দ্বি-আঙ্কিক
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: ছক-কাগজে প্রোগ্রামিং
-            Relay Programming:
-              name: রিলে-স্যুইচ প্রোগ্রামিং
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-            'Unplugged: Binary':
-              name: দ্বিমিক ছবি
         coursee-2020:
           lesson_groups:
             csf_nested_loops:
               display_name: নেষ্টেড লুপ
             csf_functions:
               display_name: ফাংশনগুলি
-          lessons:
-            'Functions: Songwriting':
-              name: গান লিখা
         coursef-2020:
           lesson_groups:
             csf_variables:
               display_name: চলকগুলো
             csf_for_loops:
               display_name: ফর লুপ
-          lessons:
-            Internet:
-              name: ইন্টারনেট
         express-2020:
           lesson_groups:
             csf_loops:
@@ -1514,9 +613,6 @@ bn:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
-          lessons:
-            Spelling Bee:
-              name: বানান মৌমাছি
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -1525,85 +621,12 @@ bn:
           lesson_groups:
             csp_unit2_2020:
               display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
-        csp5-virtual:
-          lessons:
-            While Loops:
-              name: হোয়াইল লুপ
-            Variables:
-              name: চলকগুলো
-        virtual-holding-place:
-          lessons:
-            Functions:
-              name: ফাংশনগুলি
-        code-break:
-          lessons:
-            Algorithms:
-              name: অ্যালগরিদম
-            Events:
-              name: ঘটনাবলী
-        csp5-virtual-part2:
-          lessons:
-            While Loops:
-              name: হোয়াইল লুপ
-        k5-onlinepd-2020:
-          lessons:
-            Loops:
-              name: চক্র
-            Events:
-              name: ঘটনাবলী
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-            Variables:
-              name: চলকগুলো
-            For Loops:
-              name: ফর লুপ
-        csd3-virtual:
-          lessons:
-            Variables:
-              name: চলকগুলো
-            Text:
-              name: পাঠ
-            Conditionals:
-              name: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-        curriculum-sandbox-levels:
-          lessons:
-            Course A:
-              name: কোর্স A
-            Course B:
-              name: কোর্স B
-            Course E:
-              name: কোর্স E
-            Course F:
-              name: কোর্স F
         2021drafting:
           lesson_groups:
             introduction:
               display_name: ভূমিকা
             lessonGroup-3:
               display_name: চলকগুলো
-        csd3-2021:
-          lessons:
-            Variables:
-              key: চলকগুলো
-              name: চলকগুলো
-            Text:
-              key: পাঠ
-              name: পাঠ
-            Conditionals:
-              key: শর্তযুক্ত
-              name: শর্তযুক্ত
-            Functions:
-              key: ফাংশনগুলি
-              name: ফাংশনগুলি
-        csd6-2021:
-          lessons:
-            Functions with Parameters:
-              key: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
-              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
         csp1-2021:
           lesson_groups:
             csp_unit1_2020:
@@ -1631,9 +654,6 @@ bn:
             csp_unit6_2020:
               display_name: অ্যালগরিদম
         coursea-2021:
-          lessons:
-            'Programming: Happy Maps':
-              name: আনন্দের মানচিত্র
           lesson_groups:
             csf_loops:
               display_name: চক্র
@@ -1646,9 +666,6 @@ bn:
             csf_events:
               display_name: ঘটনাবলী
         coursec-2021:
-          lessons:
-            'Events: The Big Event':
-              name: বড় ঘটনা
           lesson_groups:
             csf_binary:
               display_name: দ্বি-আঙ্কিক
@@ -1657,19 +674,6 @@ bn:
             csf_events:
               display_name: ঘটনাবলী
         coursed-2021:
-          lessons:
-            'Algorithms: Graph Paper Programming':
-              name: ছক-কাগজে প্রোগ্রামিং
-            Relay Programming:
-              key: রিলে-স্যুইচ প্রোগ্রামিং
-              name: রিলে-স্যুইচ প্রোগ্রামিং
-            Conditionals with Cards:
-              key: কার্ড সঙ্গে শর্ত
-              name: কার্ড সঙ্গে শর্ত
-            'Unplugged: Binary':
-              name: দ্বিমিক ছবি
-            Artist Binary:
-              key: শিল্পী দ্বিমিক
           lesson_groups:
             csf_events:
               display_name: ঘটনাবলী
@@ -1680,11 +684,6 @@ bn:
             csf_binary:
               display_name: দ্বি-আঙ্কিক
         coursee-2021:
-          lessons:
-            Conditionals:
-              key: শর্তযুক্ত
-            'Functions: Songwriting':
-              name: গান লিখা
           lesson_groups:
             ramp_up:
               display_name: নেষ্টেড লুপ
@@ -1693,10 +692,6 @@ bn:
             csf_functions:
               display_name: ফাংশনগুলি
         coursef-2021:
-          lessons:
-            Internet:
-              key: ইন্টারনেট
-              name: ইন্টারনেট
           lesson_groups:
             csf_variables:
               display_name: ফর লুপ
@@ -1735,25 +730,6 @@ bn:
             variables:
               display_name: চলকগুলো
         k5-onlinepd-2021:
-          lessons:
-            Loops:
-              key: চক্র
-              name: চক্র
-            Events:
-              key: ঘটনাবলী
-              name: ঘটনাবলী
-            Conditionals:
-              key: শর্তযুক্ত
-              name: শর্তযুক্ত
-            Functions:
-              key: ফাংশনগুলি
-              name: ফাংশনগুলি
-            Variables:
-              key: চলকগুলো
-              name: চলকগুলো
-            For Loops:
-              key: ফর লুপ
-              name: ফর লুপ
           lesson_groups:
             k5_getting_started_1:
               display_name: ভূমিকা
@@ -1781,23 +757,8 @@ bn:
           lesson_groups:
             lessonGroup-2:
               description: পরীক্ষা
-        dlp21-csd-overview:
-          lessons:
-            lesson-1:
-              name: সংক্ষিপ্ত বিবরণ
-        dlp21-csp-overview:
-          lessons:
-            lesson-1:
-              name: সংক্ষিপ্ত বিবরণ
         spelling-bee:
-          lessons:
-            lesson-1:
-              name: বানান মৌমাছি
           title: বানান মৌমাছি
-        spelling-bee-2021:
-          lessons:
-            lesson-1:
-              name: বানান মৌমাছি
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -1806,16 +767,7 @@ bn:
           lesson_groups:
             lessonGroup-3:
               display_name: চলকগুলো
-        csd6-pilot-2022:
-          lessons:
-            Functions with Parameters:
-              name: ফাংশনগুলি
         coursea-2022:
-          lessons:
-            Happy Maps:
-              name: আনন্দের মানচিত্র
-            'Programming: Happy Maps':
-              name: আনন্দের মানচিত্র
           lesson_groups:
             csf_loops:
               display_name: চক্র
@@ -1864,28 +816,12 @@ bn:
             csf_events:
               display_name: ঘটনাবলী
         coursec-2022:
-          lessons:
-            The Big Event:
-              name: বড় ঘটনা
-            'Events: The Big Event':
-              name: বড় ঘটনা
           lesson_groups:
             csf_loops:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
         coursed-2022:
-          lessons:
-            Graph Paper Programming:
-              name: ছক-কাগজে প্রোগ্রামিং
-            Relay Programming:
-              name: রিলে-স্যুইচ প্রোগ্রামিং
-              key: রিলে-স্যুইচ প্রোগ্রামিং
-            Conditionals with Cards:
-              name: কার্ড সঙ্গে শর্ত
-              key: কার্ড সঙ্গে শর্ত
-            'Algorithms: Graph Paper Programming':
-              name: ছক-কাগজে প্রোগ্রামিং
           lesson_groups:
             csf_events:
               display_name: ঘটনাবলী
@@ -1894,13 +830,6 @@ bn:
             csf_conditionals:
               display_name: শর্তযুক্ত
         coursee-2022:
-          lessons:
-            Songwriting:
-              name: গান লিখা
-            'Functions: Songwriting':
-              name: গান লিখা
-            Conditionals:
-              key: শর্তযুক্ত
           lesson_groups:
             ramp_up:
               display_name: নেষ্টেড লুপ
@@ -1909,70 +838,56 @@ bn:
             csf_nested_loops:
               display_name: শর্তযুক্ত
         coursef-2022:
-          lessons:
-            The Internet:
-              name: ইন্টারনেট
-            Internet:
-              key: ইন্টারনেট
-              name: ইন্টারনেট
           lesson_groups:
             lessonGroup-8:
               display_name: চলকগুলো
-        csa1-2022:
-          lessons:
-            lesson-9:
-              name: চক্র
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
-        csa2-2022:
-          lessons:
-            lesson-6:
-              name: চলকগুলো
-        csa3-2022:
-          lessons:
-            lesson-5:
-              name: ফর লুপ
-        cs4all-invasive-species:
-          lessons:
-            lesson-12:
-              name: শর্তযুক্ত
-        csa1-2022-exemplars:
-          lessons:
-            lesson-9:
-              name: চক্র
         coursef-2022-pilot:
-          lessons:
-            The Internet:
-              name: ইন্টারনেট
-              key: ইন্টারনেট
           lesson_groups:
             lessonGroup-8:
               display_name: চলকগুলো
-        csa2-2022-exemplars:
+        soccer:
+          name: ফুটবল খেলা
+        csa1-2023:
           lessons:
-            lesson-1:
-              name: চলকগুলো
-        k5-onlinepd-2022:
-          lessons:
-            Loops:
+            lesson-6:
               name: চক্র
-              key: চক্র
-            Events:
-              name: ঘটনাবলী
-              key: ঘটনাবলী
-            Conditionals:
-              name: শর্তযুক্ত
-              key: শর্তযুক্ত
-            Functions:
-              name: ফাংশনগুলি
-              key: ফাংশনগুলি
-            Variables:
+        csa2-2023:
+          lessons:
+            lesson-4:
               name: চলকগুলো
-              key: চলকগুলো
-            For Loops:
+        csa3-2023:
+          lessons:
+            lesson-3:
               name: ফর লুপ
-              key: ফর লুপ
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: চক্র
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: তালিকা
+            lessonGroup-3:
+              display_name: চক্র

@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 nl:
   errors:
     messages:
@@ -355,6 +361,7 @@ nl:
       about: "Over"
       legal: "Privacy & juridisch"
       legal_privacy: "Privacybeleid"
+      legal_cookie_notice: "Cookiebeleid"
       legal_tos: "Gebruiksvoorwaarden"
     user:
       classroom: 'Startpagina voor de leerkracht'
@@ -409,7 +416,6 @@ nl:
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: 'Jouw voortgang'
-      lines: 'Totaal aantal regels code: %{lines}'
       close: 'SLUITEN'
       mastery: 'Begrippen'
       puzzle_map: 'Niveaus'
@@ -523,6 +529,7 @@ nl:
     choose_next_course: "Probeer een Code Studio cursus door er hier onder één te kiezen"
     print_certificate: "print certificaat"
   certificate_sponsor_message: "%{sponsor_name} gaf het gulle geschenk om je leren te sponsoren."
+  certificate_hour_of_code: "Uur Code"
   move_students:
     new_section_dne: "Sorry, maar de groep %{new_section_code} bestaat niet. Vul een andere groepscode in."
     section_code_cant_be_current_section: "Het huidige onderdeel kan niet hetzelfde zijn als het nieuwe onderdeel."
@@ -570,6 +577,7 @@ nl:
     how_it_works: 'Hoe het werkt'
     try_hour_of_code: 'Probeer een Hour of Code!'
     store: 'Winkel'
+    cookie_notice: 'Cookiebeleid'
   reference_area:
     title: 'Hulp nodig?'
     subtitle: 'Bekijk deze video''s en hints'
@@ -629,23 +637,17 @@ nl:
       body_short: "Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden."
       audience: 'Leeftijd 13+'
       cta: 'Leer hoe'
-    dance:
-      title: 'Dansfeest'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Dansfeest'
-    hoc:
-      title: 'Klassiek doolhof'
-      body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
+    dance:
+      title: 'Dansfeest'
     flappy:
       title: 'Flappy Code'
       body: 'Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy Code opdracht!'
-    20-hour:
-      title: 'versnelde cursus'
-      body: 'Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren.'
-      body_short: 'Leer eenvoudige informatica in een versnelde versie van de cursussen 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Probeer onze nieuwe Uur Code in beta'
-      try_frozen: 'Maak kunst met Anna en Elsa van Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galerij"
       body: "Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers"
@@ -654,18 +656,20 @@ nl:
       body: "Game Lab is een programmeeromgeving waarin je eenvoudige animaties en games kan maken met objecten en personages die met elkaar interageren."
       audience: "Leeftijd 13+"
       cta: "Leer hoe"
+    hello-world:
+      title: 'Hallo Wereld'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen."
     hoc-encryption:
       title: "Eenvoudige versleuteling"
       body: "Leerlingen willen technieken leren om versleutelde berichten te maken en te breken."
-    weblab:
-      title: "Web Lab (bèta)"
-      body: "Web Lab is een programmeeromgeving waarin je eenvoudige webpagina's gebruikmakend van HTML en CSS kan maken. Ontwerp je webpagina's en deel je site binnen enkele seconden."
-      audience: "Leeftijd 13+"
-      cta: "Leer hoe"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Klassiek doolhof'
+      body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
+    hoc2014:
+      try_new_tutorial: 'Probeer onze nieuwe Uur Code in beta'
+      try_frozen: 'Maak kunst met Anna en Elsa van Frozen'
     infinity:
       title: "Infinity Play Lab"
       body: "Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren in de hoofdrol."
@@ -675,27 +679,35 @@ nl:
     minecraft2016:
       title: "Minecraft"
       body: "Ga dieren en andere Minecraft wezens programmeren in je eigen Minecraft omgeving."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen."
+    poem-art:
+      title: 'Poëzie'
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Tekstcompressie"
       body: "In deze les zullen leerlingen de Tekstcompressiewidget gebruiken om tekst te comprimeren door patronen te vervangen door symbolen."
-    unplugged:
-      title: "'Unplugged' lessen"
-      audience: "Leeftijden 6+"
-      body: "We hebben een lijst van offline lessen gemaakt om te gebruiken in het klaslokaal. Vanaf nu kun je de beginselen van informatie onderwijzen, met of zonder computers! Probeer deze lessen als een aparte cursus of als aanvulling voor een informatica-vak."
-      body_short: "Als je geen computers hebt, probeer dan deze 'unplugged' lessen in je klaslokaal."
-    unplugged_conditionals:
-      title: "Voorwaardelijke instructies"
-      body: "Leer over algoritmes en conditionele statements in deze \"unplugged\" activiteit door gebruik te maken van een kaartspel."
+    weblab:
+      title: "Web Lab (bèta)"
+      body: "Web Lab is een programmeeromgeving waarin je eenvoudige webpagina's gebruikmakend van HTML en CSS kan maken. Ontwerp je webpagina's en deel je site binnen enkele seconden."
+      audience: "Leeftijd 13+"
+      cta: "Leer hoe"
     widgets:
       title: "Widgets"
       body: "Studenten kunnen concepten uit onze 'CW Principles cursus' diepgaand verkennen door gebruik te maken van deze digitale hulpmiddelen. Gebruik de widgets op zichzelf, of maak een één-concept-les."
       audience: "Leeftijd 14+"
       cta: "Leer hoe"
+    unplugged_conditionals:
+      title: "Voorwaardelijke instructies"
+      body: "Leer over algoritmes en conditionele statements in deze \"unplugged\" activiteit door gebruik te maken van een kaartspel."
+    unplugged:
+      title: "'Unplugged' lessen"
+      audience: "Leeftijden 6+"
+      body: "We hebben een lijst van offline lessen gemaakt om te gebruiken in het klaslokaal. Vanaf nu kun je de beginselen van informatie onderwijzen, met of zonder computers! Probeer deze lessen als een aparte cursus of als aanvulling voor een informatica-vak."
+      body_short: "Als je geen computers hebt, probeer dan deze 'unplugged' lessen in je klaslokaal."
+    20-hour:
+      title: 'versnelde cursus'
+      body: 'Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren.'
+      body_short: 'Leer eenvoudige informatica in een versnelde versie van de cursussen 2-4.'
   landing:
     report_bug: "Meld Bug"
     support: "Help"
@@ -778,13 +790,6 @@ nl:
     accept: "Accepteren"
     print: "Afdrukken"
     review_terms: "Herzie de aangepaste gebruiksvoorwaarden"
-  donor_interstitial:
-    title: "Je gratis informaticacursussen worden mogelijk gemaakt door..."
-    local_supporters: "Lokale ondersteuners"
-    global_supporters: "Globale ondersteuners"
-    support_codeorg_1: "Elke euro die Code.org ontvangt, geeft meer leerlingen kansen."
-    support_codeorg_2: "[Doneer nu](%{donate_url}) om Code.org te ondersteunen."
-    get_started: "Ga aan de slag op Code.org"
   school_info_interstitial:
     save: "Opslaan"
   race_interstitial:
@@ -919,14 +924,14 @@ nl:
         lightbot: 'LightBot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Anders:"
+        other: "Anders"
       robotics:
         kodable: 'Kodable'
         microbit: 'Microbit'
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
-        other: "Anders:"
+        other: "Anders"
       workshop_course:
         csp: 'CW Principes'
       email_opt_in:
@@ -949,3 +954,5 @@ nl:
     this_sprite: "deze sprite"
   unit_prefix: "Unit %{n}"
   teacher_feedback: "Docenten feedback"
+  pixelation:
+    binary: "Binaire"

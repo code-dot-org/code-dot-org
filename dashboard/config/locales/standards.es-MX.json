@@ -2,8 +2,941 @@
   "es-MX": {
     "data": {
       "standards": {
+        "ccela/3.RL.4": {
+          "description": "Determinar el significado de las palabras y frases que se utilizan en un texto, distinguiendo el lenguaje literal del no literal."
+        },
+        "ccela/4.RL.7": {
+          "description": "Establecer conexiones entre el texto de una historia o drama y una presentación visual u oral del texto, identificando dónde se reflejan en cada versión las descripciones e indicaciones específicas del texto."
+        },
+        "ccela/5.RL.4": {
+          "description": "Determinar el significado de las palabras y frases que se utilizan en un texto, incluyendo el lenguaje figurado como las metáforas y los símiles."
+        },
+        "ccela/5.RL.7": {
+          "description": "Analizar cómo los elementos visuales y multimedia contribuyen al significado, el tono o la belleza de un texto (por ejemplo, novela gráfica, presentación multimedia de ficción, cuento popular, mito, poema)."
+        },
+        "csta/1B-AP-10": {
+          "description": "Crear programas que incluyan secuencias, eventos, bucles y condicionales."
+        },
+        "csta/1B-AP-12": {
+          "description": "Modificar, mezclar o incorporar partes de un programa existente en el propio trabajo, para desarrollar algo nuevo o agregar funciones más avanzadas."
+        },
+        "csta/1B-AP-15": {
+          "description": "Probar y depurar (identificar y corregir errores) un programa o algoritmo para asegurarse de que se ejecuta según lo previsto."
+        },
+        "ccela/6.SL.1": {
+          "description": "Participa de manera efectiva en una variedad de debates colaborativos (uno a uno, en grupos y dirigidos por maestros) con diversos compañeros sobre temas, textos y problemas de sexto grado, aprovechando las ideas de los demás y expresando las suyas con claridad."
+        },
+        "ccela/7.SL.1": {
+          "description": "Participa de manera efectiva en una variedad de debates colaborativos (uno a uno, en grupos y dirigidos por maestros) con diversos compañeros sobre temas, textos y problemas de séptimo grado, aprovechando las ideas de los demás y expresando las suyas con claridad."
+        },
+        "ccmath/MP.1": {
+          "description": "Entender problemas y no parar hasta resolverlos"
+        },
+        "ccmath/MP.2": {
+          "description": "Razonar de manera abstracta y cuantitativa"
+        },
+        "ccmath/MP.5": {
+          "description": "Utilizar las herramientas adecuadas de manera estratégica"
+        },
+        "ccmath/MP.6": {
+          "description": "Estar atento a la precisión"
+        },
+        "ccmath/MP.7": {
+          "description": "Buscar y usar estructuras"
+        },
+        "ccmath/MP.8": {
+          "description": "Buscar y expresar regularidades en patrones de razonamiento"
+        },
+        "csta2011/CPP.L1:6-06": {
+          "description": "Implementa soluciones de problemas utilizando un lenguaje de programación visual basado en bloques."
+        },
+        "csta2011/CT.L2:1": {
+          "description": "Usa los pasos básicos en la resolución algorítmica de problemas para diseñar soluciones (por ejemplo, planteamiento y exploración de problemas, examen de instancias de muestra, diseño, implementación de una solución, prueba y evaluación)."
+        },
+        "csta2011/CT.L2:12": {
+          "description": "Usa la abstracción para descomponer un problema en subproblemas."
+        },
+        "csta2011/CT.L2:6": {
+          "description": "Describe y analiza una secuencia de instrucciones que se está siguiendo (por ejemplo, describir el comportamiento de un personaje en un videojuego como impulsado por reglas y algoritmos)."
+        },
+        "csta2011/CT.L2:7": {
+          "description": "Representa datos en una variedad de formas, incluyendo texto, sonidos, imágenes y números."
+        },
+        "csta2011/CT.L2:8": {
+          "description": "Usa representaciones visuales de estados de problemas, estructuras y datos (por ejemplo, gráficos, cuadros, diagramas de red, diagramas de flujo)."
+        },
+        "iste/1.a": {
+          "description": "Aplica el conocimiento existente para generar nuevas ideas, productos o procesos."
+        },
+        "iste/1.b": {
+          "description": "Crea obras originales como medio de expresión personal o grupal."
+        },
+        "iste/1.c": {
+          "description": "Utiliza modelos y simulaciones para explorar sistemas y problemas complejos."
+        },
+        "iste/4.b": {
+          "description": "Planifica y gestiona actividades para desarrollar una solución o completar un proyecto."
+        },
+        "iste/6.a": {
+          "description": "Comprende y utiliza sistemas tecnológicos."
+        },
+        "iste/6.c": {
+          "description": "Solucionar problemas de sistemas y aplicaciones."
+        },
+        "iste/6.d": {
+          "description": "Transfiera el conocimiento actual al aprendizaje de nuevas tecnologías."
+        },
+        "ccela/1.L.6": {
+          "description": "Usar palabras y frases aprendidas a través de conversaciones, lectura y escucha de lecturas, y respuestas a textos, incluido el uso de conjunciones que ocurren con frecuencia para señalar relaciones simples (por ejemplo, porque)."
+        },
+        "ccela/1.SL.1": {
+          "description": "Participar en conversaciones en conjunto con diversos socios sobre temas y textos de primer grado con compañeros y adultos en grupos pequeños y más grandes."
+        },
+        "ccela/11-12.RI.4": {
+          "description": "Determina el significado de palabras y frases a medida que se usan en un texto, incluidos los significados figurativos, connotativos y técnicos; analiza cómo un autor usa y refina el significado de un término o términos clave en el transcurso de un texto (por ejemplo, cómo define Madison define la facción en El Federalista No. 10)."
+        },
+        "ccela/2.L.6": {
+          "description": "Usar palabras y frases adquiridas a través de conversaciones, lecturas y escucha de lecturas, y respuestas a textos, incluido el uso de adjetivos y adverbios para describir (por ejemplo, cuando otros niños están felices, eso me hace feliz)."
+        },
+        "ccela/2.SL.1": {
+          "description": "Participar en conversaciones en conjunto con diversos socios sobre temas y textos de segundo grado con compañeros y adultos en grupos pequeños y más grandes."
+        },
+        "ccela/3.L.6": {
+          "description": "Obtener y utilizar palabras y frases de conversación, académicas generales y de un dominio específico, incluidas aquellas que contienen relaciones espaciales y temporales, de forma precisa y apropiadas para cada grado (por ejemplo, después de cenar esa noche, fuimos a buscarlos)."
+        },
+        "ccela/3.SL.1": {
+          "description": "Participar con efectividad en una variedad de debates en conjunto (individuales, en grupos y dirigidas por el docente) con distintos socios sobre temas y textos de tercer grado, retomando ideas de otros y expresando las suyas de forma clara."
+        },
+        "ccmath/1.OA.1": {
+          "description": "Usar la suma y resta en 20 para resolver problemas que involucran situaciones de agregar, sacar, elaborar, retirar y comparar, con incógnitas en todas las posiciones, por ejemplo, mediante objetos, dibujos y ecuaciones con un símbolo para "
+        },
+        "ccmath/2.OA.1": {
+          "description": "Usar la suma y resta dentro de 100 para resolver problemas de uno y dos pasos con palabras que involucran situaciones de agregar, sacar, elaborar, retirar y comparar, con incógnitas en todas las posiciones, por ejemplo, mediante dibujos y ecuaciones con un"
+        },
+        "ccmath/3.OA.3": {
+          "description": "Usar la multiplicación y división en 100 para resolver problemas con palabras que involucran grupos iguales, matrices y cantidades de medición, por ejemplo, mediante dibujos y ecuaciones con un símbolo para el número desconocido para representar el problema.1"
+        },
+        "csta2011/CD.L1:3-01": {
+          "description": "Usa dispositivos de entrada y salida estándares para operar con éxito computadoras y tecnologías relacionadas."
+        },
+        "csta2011/CI.L1:3-01": {
+          "description": "Practica la ciudadanía digital responsable (comportamientos legales y éticos) en el uso de sistemas tecnológicos y software."
+        },
+        "csta2011/CPP.L1:6-01": {
+          "description": "Use recursos tecnológicos (por ejemplo, calculadoras, sondas de recopilación de datos, dispositivos móviles, videos, software educativo y herramientas web) para la resolución de problemas y el aprendizaje autodirigido."
+        },
+        "ccela/11-12.L.6": {
+          "description": "Adquiere y usa con precisión palabras y frases académicas generales y específicas del dominio, suficientes para leer, escribir, hablar y escuchar a nivel universitario y profesional; demuestra independencia en la recopilación de conocimientos de vocabulario cuando se considera"
+        },
+        "ccela/4.L.6": {
+          "description": "Adquirir y usar palabras y frases académicas generales y de un ámbito específico de manera precisa y apropiada para cada grado, incluidas aquellas que indican acciones, emociones o estados de ánimo precisos (por ejemplo, cuestionar, quejarse, balbucear)"
+        },
+        "ccela/5.L.6": {
+          "description": "Adquirir y usar palabras y frases académicas generales y de un ámbito específico de manera precisa y apropiada para cada grado, incluidas aquellas que señalan diferencia, suma y otras relaciones lógicas (por ejemplo, sin embargo, aunque, de manera similar, asimismo, además)."
+        },
+        "ccmath/4.MD.6": {
+          "description": "Mide ángulos en grados de números enteros usando un transportador. Dibuja ángulos de medida especificada."
+        },
+        "ccmath/4.NBT.4": {
+          "description": "Sumar y restar números enteros de varios dígitos con fluidez mediante el algoritmo estándar."
+        },
+        "ccmath/4.NBT.5": {
+          "description": "Multiplicar un número entero de hasta cuatro dígitos por un número entero de un dígito, y multiplicar dos números de dos dígitos, mediante estrategias basadas en el valor posicional y las propiedades de las operaciones. Ilustrar y explicar el cálculo mediante ecuaciones"
+        },
+        "ccmath/7.G.2": {
+          "description": "Dibuja (a mano alzada, con regla y transportador, y con tecnología) formas geométricas con condiciones dadas. Concéntrate en construir triángulos a partir de tres medidas de ángulos o lados, y observa cuándo las condiciones determinan un triángulo único, más de un triángulo o ningún triángulo."
+        },
+        "csta2011/CPP.L1:3-02": {
+          "description": "Utiliza los recursos apropiados para el desarrollo multimedia (por ejemplo, libros interactivos y software educativo) para apoyar el aprendizaje a través del currículo."
+        },
+        "csta2011/CPP.L1:3-04": {
+          "description": "Construye un conjunto de declaraciones para realizar con el fin de llevar a cabo una tarea simple (por ejemplo, instrucciones de tortuga)."
+        },
+        "ccela/11-12.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir, publicar y actualizar productos de escritura individuales o compartidos en respuesta a comentarios continuos, incluidos nuevos argumentos o información."
+        },
+        "ccela/4.W.3": {
+          "description": "Escribe narrativas para desarrollar experiencias o eventos reales o imaginarios utilizando técnicas efectivas, detalles descriptivos y secuencias de eventos claras."
+        },
+        "ccela/6.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir y publicar escritos, así como para interactuar y colaborar con otros; demuestra un dominio suficiente de las habilidades de teclado para escribir un mínimo de tres páginas en una sola sesión."
+        },
+        "ccela/7.W.3": {
+          "description": "Escribe narrativas para desarrollar experiencias o eventos reales o imaginarios utilizando técnicas efectivas, detalles descriptivos relevantes y secuencias de eventos bien estructuradas."
+        },
+        "ccela/7.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir y publicar escritos, y vincular y citar fuentes, así como para interactuar y colaborar con otros, incluso para vincular y citar fuentes."
+        },
+        "ccela/8.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir y publicar escritos y presentar las relaciones entre información e ideas de manera eficiente, así como para interactuar y colaborar con otros."
+        },
+        "ccela/9-10.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir, publicar y actualizar productos de escritura individuales o compartidos mediante el aprovechamiento de la capacidad de la tecnología para vincular a otra información y mostrar información de manera flexible y dinámica."
+        },
+        "ccmath/MP.4": {
+          "description": "Modelar a través de las matemáticas"
+        },
+        "csta2011/CL.L1:6-02": {
+          "description": "Utiliza los recursos en línea (por ejemplo, correo electrónico, debates en línea, entornos web colaborativos) para participar en actividades colaborativas de resolución de problemas con el fin de desarrollar soluciones o productos."
+        },
+        "csta2011/CPP.L1:3-01": {
+          "description": "Utiliza los recursos tecnológicos para realizar investigaciones apropiadas para tu edad."
+        },
+        "csta2011/CPP.L2:3": {
+          "description": "Diseña, desarrolla, publica y presenta productos (por ejemplo, páginas web, aplicaciones móviles, animaciones) utilizando recursos tecnológicos que demuestren y comuniquen conceptos curriculares."
+        },
+        "iste/2.a": {
+          "description": "Interactúa, colabora y publica con colegas, expertos u otras personas que empleen una variedad de entornos y medios digitales."
+        },
+        "iste/2.b": {
+          "description": "Comunica información e ideas de manera efectiva a múltiples audiencias utilizando una variedad de medios y formatos."
+        },
+        "iste/4.d": {
+          "description": "Utiliza múltiples procesos y perspectivas diversas para explorar soluciones alternativas."
+        },
+        "csta/1A-AP-11": {
+          "description": "Descomponer (desglosar) los pasos necesarios para resolver un problema en una secuencia precisa de instrucciones."
+        },
+        "csta/1A-IC-17": {
+          "description": "Trabaja de forma respetuosa y responsable con los demás en línea."
+        },
+        "csta/1A-AP-09": {
+          "description": "Modelar la forma en que los programas almacenan y manipulan datos utilizando números u otros símbolos para representar información."
+        },
+        "csta/1A-AP-14": {
+          "description": "Depurar (identificar y corregir) errores en un algoritmo o programa que incluye secuencias y ciclos (bucles) simples."
+        },
+        "csp2021/IOC-2.B.5": {
+          "description": "El encriptado es el proceso de codificación de los datos para evitar el acceso no autorizado. El descifrado es el proceso de descodificación de los datos. Dos enfoques comunes de encriptación son: ● El cifrado de clave simétrica implica una clave para el cifrado y el descifrado.● El cifrado de clave pública empareja una clave pública para el cifrado y una clave privada para el descifrado. El emisor no necesita la clave privada del receptor para cifrar un mensaje, pero la clave privada del receptor es necesaria para descifrar el mensaje. DECLARACIÓN DE EXCLUSIÓN(EKIOC-2.B.5): Los procedimientos matemáticos específicos para el cifrado y el descifrado no están dentro del objetivo de este curso ni del examen AP."
+        },
+        "csta/3A-NI-06": {
+          "description": "Recomienda medidas de seguridad para hacer frente a diversos escenarios basándose en factores como la eficiencia, la viabilidad y los impactos éticos."
+        },
+        "csta/3A-NI-07": {
+          "description": "Compara diversas medidas de seguridad, teniendo en cuenta las compensaciones entre la usabilidad y la seguridad de un sistema informático."
+        },
+        "csta/3B-NI-04": {
+          "description": "Compara las formas en que los desarrolladores de software protegen los dispositivos y la información del acceso no autorizado."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "La compresión de datos puede reducir el tamaño (número de bits) de los datos transmitidos o almacenados."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Menos bits no significa necesariamente menos información."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "La cantidad de reducción de tamaño de la compresión depende tanto de la cantidad de redundancia en la representación de datos original como del algoritmo de compresión aplicado."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Los algoritmos de compresión de datos sin pérdidas suelen reducir el número de bits almacenados o transmitidos garantizando la reconstrucción completa de los datos originales."
+        },
+        "csta/3A-DA-10": {
+          "description": "Evalúa las ventajas y desventajas de cómo se organizan los elementos de los datos y dónde se almacenan."
+        },
+        "csta/1B-CS-01": {
+          "description": "Describir cómo funcionan las partes internas y externas de los dispositivos computacionales para formar un sistema."
+        },
+        "csta/1B-CS-02": {
+          "description": "Modelar cómo el hardware y el software del computador funcionan juntos como un sistema para realizar tareas."
+        },
+        "csta/1B-NI-05": {
+          "description": "Discutir problemas de ciberseguridad del mundo real y cómo se proteger la información personal."
+        },
+        "csta/1B-AP-11": {
+          "description": "Descomponer (desglosar) problemas en subproblemas más pequeños y manejables para facilitar el proceso de desarrollo del programa."
+        },
+        "csta/1B-AP-09": {
+          "description": "Crear programas que usen variables para almacenar y modificar datos."
+        },
+        "csta/1A-AP-10": {
+          "description": "Desarrollar programas con secuencias y ciclos (bucles) simples, para expresar ideas o abordar un problema."
+        },
+        "csta/1B-AP-14": {
+          "description": "Prestar atención a los derechos de propiedad intelectual y otorgar la atribución adecuada al crear o reutilizar programas."
+        },
+        "csta/1B-AP-17": {
+          "description": "Describir las deciciones tomadas durante el desarrollo del programa utilizando comentarios de código, presentaciones y demostraciones."
+        },
+        "csta/1B-IC-21": {
+          "description": "Usar medios de dominio público o creative commons y abstenerse de copiar o usar material creado por otros sin permiso."
+        },
+        "csta/1B-IC-18": {
+          "description": "Discute las tecnologías informáticas que han cambiado el mundo y expresa cómo esas tecnologías influyen y son influenciadas por las prácticas culturales."
+        },
+        "csta/1B-IC-19": {
+          "description": "Proponer formas de mejorar la accesibilidad y la facilidad de uso de los productos tecnológicos para las diversas necesidades y deseos de los usuarios."
+        },
+        "csta/1B-AP-08": {
+          "description": "Compara y perfecciona varios algoritmos para la misma tarea y determina cuál es el más adecuado."
+        },
+        "csta/1B-AP-13": {
+          "description": "Utiliza un proceso iterativo para planificar el desarrollo de un programa incluyendo las perspectivas de otros y considerando las preferencias de los usuarios."
+        },
+        "csta/1B-DA-06": {
+          "description": "Organizar y presentar visualmente los datos recogidos para destacar las relaciones y respaldar una reclamación."
+        },
+        "csta/1B-DA-07": {
+          "description": "Utilizar los datos para resaltar o proponer relaciones de causa y efecto, predecir resultados o comunicar una idea."
+        },
+        "csta/1B-NI-04": {
+          "description": "Hacer un ejemplo de cómo la información se divide en trozos más pequeños, se transmite en forma de paquetes a través de múltiples dispositivos en las redes e Internet y se vuelve a ensamblar en el destino."
+        },
+        "csta/1B-AP-16": {
+          "description": "Asume diversas funciones, con la orientación del profesor, al colaborar con tus compañeros durante las etapas de diseño, implementación y revisión del desarrollo del programa."
+        },
+        "csta/1B-CS-03": {
+          "description": "Determinar posibles soluciones para resolver problemas sencillos de hardware y software utilizando estrategias comunes de resolución de problemas."
+        },
+        "csta/1B-IC-20": {
+          "description": "Buscar diversas perspectivas con el fin de mejorar los dispositivos informáticos."
+        },
+        "csta/1A-IC-16": {
+          "description": "Comparar cómo viven y trabajan las personas antes y después de la implantación o adopción de una nueva tecnología informática."
+        },
+        "csta/1A-IC-18": {
+          "description": "Conserva la privacidad de los datos de acceso y cierra la sesión de los dispositivos de forma adecuada."
+        },
+        "csta/1A-NI-04": {
+          "description": "Explica qué son las contraseñas y por qué las usamos, así como el uso de contraseñas seguras para proteger los dispositivos y la información del acceso no autorizado."
+        },
+        "csta/1A-AP-08": {
+          "description": "Hacer un ejemplo de los procesos diarios creando y siguiendo algoritmos (conjuntos de instrucciones paso a paso) para completar las tareas."
+        },
+        "csta/1A-AP-12": {
+          "description": "Desarrolla planes que describan la secuencia de eventos, los objetivos y los resultados esperados de un programa."
+        },
+        "csta/1A-CS-01": {
+          "description": "Seleccionar y utilizar el software adecuado para realizar una serie de tareas y reconocer que los usuarios tienen diferentes necesidades y preferencias en cuanto a la tecnología que utilizan."
+        },
+        "csta/1A-CS-02": {
+          "description": "Utiliza la terminología adecuada para identificar y describir la función de los componentes físicos comunes de los sistemas informáticos (hardware)."
+        },
+        "csta/1A-CS-03": {
+          "description": "Describe problemas básicos de hardware y software usando la terminología adecuada."
+        },
+        "csta/1A-DA-05": {
+          "description": "Almacenar, copiar, buscar, recuperar, modificar y eliminar información mediante un dispositivo informático y definir la información almacenada como datos."
+        },
+        "csta/1A-DA-06": {
+          "description": "Recopilar y presentar los mismos datos en varios formatos visuales."
+        },
+        "csta/1A-DA-07": {
+          "description": "Identificar y describir patrones en visualizaciones de datos, como tablas o gráficos, para hacer predicciones."
+        },
+        "csta/1A-AP-13": {
+          "description": "Reconocer la autoría de las ideas y creaciones de otros en el desarrollo de los programas."
+        },
+        "csta/1A-AP-15": {
+          "description": "Utilizando una terminología correcta, describe los pasos dados y las decisiones tomadas durante el proceso iterativo de desarrollo del programa."
+        },
+        "csta/2-DA-07": {
+          "description": "Representar datos usando múltiples esquemas de codificación."
+        },
+        "csta/2-NI-05": {
+          "description": "Explicar cómo las medidas de la seguridad física y digital pueden proteger la información."
+        },
+        "csta/2-NI-06": {
+          "description": "Aplicar métodos de encriptado para ejemplificar la transferencia segura de datos."
+        },
+        "csta/2-AP-10": {
+          "description": "Utilizar diagramas de flujo y/o pseudocódigo para enfrentar problemas complejos como algoritmos."
+        },
+        "csta/2-AP-13": {
+          "description": "Descomponer problemas en subproblemas en distintas partes para facilitar el diseño, implementación, y revisión de programas."
+        },
+        "csta/2-DA-08": {
+          "description": "Recopilar datos utilizando herramientas computacionales y transformarlos para hacerlos más útiles y confiables."
+        },
+        "csta/2-IC-22": {
+          "description": "Colaborar con muchos colaboradores en estrategias como crowdsourcing o encuestas al crear un artefacto computacional."
+        },
+        "csta/2-IC-20": {
+          "description": "Comparar los intercambios asociados a las tecnologías de la computación que afectan a la vida diaria y opciones profesionales de las personas."
+        },
+        "csta/2-IC-23": {
+          "description": "Describa las compensaciones entre permitir que la información sea pública y mantener la información privada y segura."
+        },
         "csta/2-AP-15": {
           "description": "Buscar e incorporar los comentarios de sus compañeros de equipo y usuarios para refinar una solución que satisfaga las necesidades de los usuarios."
+        },
+        "csta/2-AP-18": {
+          "description": "Distribuir tareas y mantener una línea temporal del proyecto cuando se trabaja colaborativamente para diseñar artefactos computacionales."
+        },
+        "csta/2-AP-17": {
+          "description": "Probar y refinar programas sistemáticamente utilizando un rango de casos de prueba."
+        },
+        "csta/2-CS-02": {
+          "description": "Diseñar proyectos que combinen componentes de hardware y software para recolectar e intercambiar información."
+        },
+        "csta/2-IC-21": {
+          "description": "Analizar problemas de sesgo y accesibilidad en el diseño de tecnologías existentes."
+        },
+        "csta/2-AP-19": {
+          "description": "Documentar programas con el objetivo de hacerlos más simples de seguir, probar y depurar."
+        },
+        "csta/2-AP-11": {
+          "description": "Crear variables con nombres claros que representen distintos tipos de datos y realicen operaciones con sus valores."
+        },
+        "csta/2-AP-16": {
+          "description": "Incorporar el código existente, medios y bibliotecas en programas originales y dar atribuciones."
+        },
+        "csta/2-AP-12": {
+          "description": "Diseñar y desarrollar iterativamente  programas que combinen estructuras de control, incluyendo ciclos alojados y condicionales compuestas."
+        },
+        "csta/2-AP-14": {
+          "description": "Crear procedimientos con parámetros para organizar el código y hacer más fácil su reutilización."
+        },
+        "csta/3A-AP-20": {
+          "description": "Evaluar licencias que limiten o restrinjan el uso de artefactos computacionales al utilizar recursos tales como bibliotecas."
+        },
+        "csta/2-CS-01": {
+          "description": "Recomendar mejoras al diseño de dispositivos de computación, a partir del análisis de la interacción del usuario con los dispositivos."
+        },
+        "csta/2-DA-09": {
+          "description": "Perfeccionar modelos computacionales a partir de la información que generaron."
+        },
+        "csta/2-CS-03": {
+          "description": "Identifique y resuelva sistemáticamente problemas con los dispositivos computacionales y sus componentes."
+        },
+        "ai4k12-2021/3-A-ii.3-5": {
+          "description": "Modelar cómo el aprendizaje supervisado identifica patrones en datos etiquetados."
+        },
+        "ai4k12-2021/3-A-iv.3-5": {
+          "description": "Demostrar cómo los datos de entrenamiento son etiquetados al utilizar una herramienta de aprendizaje automático."
+        },
+        "ai4k12-2021/3-A-i.6-8": {
+          "description": "Contrastar las características únicas del aprendizaje humano con las formas en las que operan los sistemas de aprendizaje automático."
+        },
+        "ai4k12-2021/3-A-i.9-12": {
+          "description": "Definir los algoritmos de aprendizaje supervisado, no supervisado, y por refuerzo. Dar ejemplos de aprendizaje humano que sean similares a cada uno de los algoritmos."
+        },
+        "ai4k12-2021/3-A-ii.K-2": {
+          "description": "Identificar patrones en datos etiquetados y determinar las características que predicen etiquetas."
+        },
+        "ai4k12-2021/3-C-i.K-2": {
+          "description": "Crear un conjunto de datos etiquetados con características explícitas para ilustrar cómo las computadoras pueden aprender a clasificar cosas como alimentos, películas, o juguetes."
+        },
+        "ai4k12-2021/3-A-iii.6-8": {
+          "description": "Entrenar y evaluar un modelo de clasificación o predicción usando aprendizaje automático en un conjunto de datos tabulados."
+        },
+        "csta/3A-DA-12": {
+          "description": "Crear modelos computacionales que representen las relaciones entre diferentes elementos de datos recopilados de un fenómeno o proceso."
+        },
+        "ai4k12-2021/3-C-i.3-5": {
+          "description": "Crear un conjunto de datos etiquetados con características explícitas de varios tipos y utilizar una herramienta de aprendizaje automático para entrenar un clasificador con estos datos."
+        },
+        "ai4k12-2021/3-C-i.6-8": {
+          "description": "Crear un conjunto de datos para entrenar un clasificador o predictor de árbol de decisión y explorar el impacto que las diferentes codificaciones de características tienen en el árbol de decisión."
+        },
+        "csta/3B-DA-05": {
+          "description": "Utilizar herramientas y técnicas de análisis de datos para identificar patrones en datos que representan sistemas complejos."
+        },
+        "csta/3A-AP-16": {
+          "description": "Diseñar e iterativamente desarrollar artefactos computacionales con intenciones prácticas, como forma de demostrar la expresión personal, o para abordar un asunto social, utilizando eventos para iniciar instrucciones."
+        },
+        "ai4k12-2021/3-A-iii.3-5": {
+          "description": "Entrenar un modelo de clasificación utilizando el aprendizaje automático, y luego examine la precisión de este modelo con nuevas entradas"
+        },
+        "ai4k12-2021/3-C-i.9-12": {
+          "description": "Comparar dos conjuntos de datos del mundo real en función de las características que contienen y de cómo estas se codifican."
+        },
+        "ai4k12-2021/3-C-iii.3-5": {
+          "description": "Examinar las características y las etiquetas de los datos de entrenamiento para detectar posibles fuentes de sesgo."
+        },
+        "ai4k12-2021/3-C-iii.6-8": {
+          "description": "Explicar cómo la elección de los datos de entrenamiento determina el comportamiento del clasificador, y cómo puede introducirse un sesgo si el conjunto de datos de entrenamiento no está equilibrado correctamente."
+        },
+        "csta/3A-IC-25": {
+          "description": "Probar y perfeccionar los artefactos computacionales para reducir los sesgos y los déficits de equidad."
+        },
+        "csta/3A-IC-24": {
+          "description": "Evaluar el impacto de la computación en las prácticas personales, éticas, sociales, económicas, y culturales."
+        },
+        "ai4k12-2021/3-A-ii.9-12": {
+          "description": "Utilizar un algoritmo de aprendizaje supervisado o no supervisado para entrenar un modelo con datos del mundo real, y luego evaluar los resultados."
+        },
+        "ai4k12-2021/3-A-iv.9-12": {
+          "description": "Ilustre lo que sucede durante cada uno de los pasos necesarios cuando se utiliza el aprendizaje automático para construir un clasificador o predictor."
+        },
+        "1A-AP-08": {
+          "description": "Hacer un ejemplo de los procesos diarios creando y siguiendo algoritmos (conjuntos de instrucciones paso a paso) para completar las tareas."
+        },
+        "1A-AP-09": {
+          "description": "Modelar la forma en que los programas almacenan y manipulan datos utilizando números u otros símbolos para representar información."
+        },
+        "1A-AP-10": {
+          "description": "Desarrollar programas con secuencias y ciclos (bucles) simples, para expresar ideas o abordar un problema."
+        },
+        "1A-AP-11": {
+          "description": "Descomponer (desglosar) los pasos necesarios para resolver un problema en una secuencia precisa de instrucciones."
+        },
+        "1A-AP-12": {
+          "description": "Desarrolla planes que describan la secuencia de eventos, los objetivos y los resultados esperados de un programa."
+        },
+        "1A-AP-13": {
+          "description": "Reconocer la autoría de las ideas y creaciones de otros en el desarrollo de los programas."
+        },
+        "1A-AP-14": {
+          "description": "Depurar (identificar y corregir) errores en un algoritmo o programa que incluye secuencias y ciclos (bucles) simples."
+        },
+        "1A-AP-15": {
+          "description": "Utilizando una terminología correcta, describe los pasos dados y las decisiones tomadas durante el proceso iterativo de desarrollo del programa."
+        },
+        "1A-CS-01": {
+          "description": "Seleccionar y utilizar el software adecuado para realizar una serie de tareas y reconocer que los usuarios tienen diferentes necesidades y preferencias en cuanto a la tecnología que utilizan."
+        },
+        "1A-CS-02": {
+          "description": "Utiliza la terminología adecuada para identificar y describir la función de los componentes físicos comunes de los sistemas informáticos (hardware)."
+        },
+        "1A-CS-03": {
+          "description": "Describe problemas básicos de hardware y software usando la terminología adecuada."
+        },
+        "1A-DA-05": {
+          "description": "Almacenar, copiar, buscar, recuperar, modificar y eliminar información mediante un dispositivo informático y definir la información almacenada como datos."
+        },
+        "1A-DA-06": {
+          "description": "Recopilar y presentar los mismos datos en varios formatos visuales."
+        },
+        "1A-DA-07": {
+          "description": "Identificar y describir patrones en visualizaciones de datos, como tablas o gráficos, para hacer predicciones."
+        },
+        "1A-IC-16": {
+          "description": "Comparar cómo viven y trabajan las personas antes y después de la implantación o adopción de una nueva tecnología informática."
+        },
+        "1A-IC-17": {
+          "description": "Trabaja de forma respetuosa y responsable con los demás en línea."
+        },
+        "1A-IC-18": {
+          "description": "Conserva la privacidad de los datos de acceso y cierra la sesión de los dispositivos de forma adecuada."
+        },
+        "1A-NI-04": {
+          "description": "Explica qué son las contraseñas y por qué las usamos, así como el uso de contraseñas seguras para proteger los dispositivos y la información del acceso no autorizado."
+        },
+        "1B-AP-09": {
+          "description": "Crear programas que usen variables para almacenar y modificar datos."
+        },
+        "1B-AP-10": {
+          "description": "Crear programas que incluyan secuencias, eventos, bucles y condicionales."
+        },
+        "1B-AP-11": {
+          "description": "Descomponer (desglosar) problemas en subproblemas más pequeños y manejables para facilitar el proceso de desarrollo del programa."
+        },
+        "1B-AP-12": {
+          "description": "Modificar, mezclar o incorporar partes de un programa existente en el propio trabajo, para desarrollar algo nuevo o agregar funciones más avanzadas."
+        },
+        "1B-AP-14": {
+          "description": "Prestar atención a los derechos de propiedad intelectual y otorgar la atribución adecuada al crear o reutilizar programas."
+        },
+        "1B-AP-15": {
+          "description": "Probar y depurar (identificar y corregir errores) un programa o algoritmo para asegurarse de que se ejecuta según lo previsto."
+        },
+        "1B-AP-17": {
+          "description": "Describir las deciciones tomadas durante el desarrollo del programa utilizando comentarios de código, presentaciones y demostraciones."
+        },
+        "1B-CS-01": {
+          "description": "Describir cómo funcionan las partes internas y externas de los dispositivos computacionales para formar un sistema."
+        },
+        "1B-CS-02": {
+          "description": "\nModelar cómo el hardware y el software del computador funcionan juntos como un sistema para realizar tareas."
+        },
+        "1B-CS-03": {
+          "description": "Determinar posibles soluciones para resolver problemas sencillos de hardware y software utilizando estrategias comunes de resolución de problemas."
+        },
+        "1B-DA-06": {
+          "description": "Organizar y presentar visualmente los datos recogidos para destacar las relaciones y respaldar una reclamación."
+        },
+        "1B-DA-07": {
+          "description": "Utilizar los datos para resaltar o proponer relaciones de causa y efecto, predecir resultados o comunicar una idea."
+        },
+        "1B-IC-18": {
+          "description": "Discute las tecnologías informáticas que han cambiado el mundo y expresa cómo esas tecnologías influyen y son influenciadas por las prácticas culturales."
+        },
+        "1B-IC-19": {
+          "description": "Proponer formas de mejorar la accesibilidad y la facilidad de uso de los productos tecnológicos para las diversas necesidades y deseos de los usuarios."
+        },
+        "1B-IC-20": {
+          "description": "Buscar diversas perspectivas con el fin de mejorar los dispositivos informáticos."
+        },
+        "1B-IC-21": {
+          "description": "Usar medios de dominio público o creative commons y abstenerse de copiar o usar material creado por otros sin permiso."
+        },
+        "1B-NI-04": {
+          "description": "Hacer un ejemplo de cómo la información se divide en trozos más pequeños, se transmite en forma de paquetes a través de múltiples dispositivos en las redes e Internet y se vuelve a ensamblar en el destino."
+        },
+        "1B-NI-05": {
+          "description": "Discutir problemas de ciberseguridad del mundo real y cómo se proteger la información personal."
+        },
+        "2-AP-10": {
+          "description": "Utilizar diagramas de flujo y/o pseudocódigo para enfrentar problemas complejos como algoritmos."
+        },
+        "2-AP-11": {
+          "description": "Crear variables con nombres claros que representen distintos tipos de datos y realicen operaciones con sus valores."
+        },
+        "2-AP-12": {
+          "description": "Diseñar y desarrollar iterativamente  programas que combinen estructuras de control, incluyendo ciclos alojados y condicionales compuestas."
+        },
+        "2-AP-13": {
+          "description": "Descomponer problemas en subproblemas en distintas partes para facilitar el diseño, implementación, y revisión de programas."
+        },
+        "2-AP-15": {
+          "description": "Buscar e incorporar los comentarios de sus compañeros de equipo y usuarios para refinar una solución que satisfaga las necesidades de los usuarios."
+        },
+        "2-AP-16": {
+          "description": "Incorporar el código existente, medios y bibliotecas en programas originales y dar atribuciones."
+        },
+        "2-AP-17": {
+          "description": "Probar y refinar programas sistemáticamente utilizando un rango de casos de prueba."
+        },
+        "2-AP-18": {
+          "description": "Distribuir tareas y mantener una línea temporal del proyecto cuando se trabaja colaborativamente para diseñar artefactos computacionales."
+        },
+        "2-AP-19": {
+          "description": "Documentar programas con el objetivo de hacerlos más simples de seguir, probar y depurar."
+        },
+        "3A-AP-16": {
+          "description": "Diseñar e iterativamente desarrollar artefactos computacionales con intenciones prácticas, como forma de demostrar la expresión personal, o para abordar un asunto social, utilizando eventos para iniciar instrucciones."
+        },
+        "3A-AP-20": {
+          "description": "Evaluar licencias que limiten o restrinjan el uso de artefactos computacionales al utilizar recursos tales como bibliotecas."
+        },
+        "2-CS-01": {
+          "description": "Recomendar mejoras al diseño de dispositivos de computación, a partir del análisis de la interacción del usuario con los dispositivos."
+        },
+        "2-CS-02": {
+          "description": "Diseñar proyectos que combinen componentes de hardware y software para recolectar e intercambiar información."
+        },
+        "2-CS-03": {
+          "description": "Identifique y resuelva sistemáticamente problemas con los dispositivos computacionales y sus componentes."
+        },
+        "2-DA-07": {
+          "description": "Representar datos usando múltiples esquemas de codificación."
+        },
+        "2-DA-08": {
+          "description": "Recopilar datos utilizando herramientas computacionales y transformarlos para hacerlos más útiles y confiables."
+        },
+        "2-DA-09": {
+          "description": "Perfeccionar modelos computacionales a partir de la información que generaron."
+        },
+        "3A-DA-10": {
+          "description": "Evalúa las ventajas y desventajas de cómo se organizan los elementos de los datos y dónde se almacenan."
+        },
+        "3A-DA-12": {
+          "description": "Crear modelos computacionales que representen las relaciones entre diferentes elementos de datos recopilados de un fenómeno o proceso."
+        },
+        "3B-DA-05": {
+          "description": "Utilizar herramientas y técnicas de análisis de datos para identificar patrones en datos que representan sistemas complejos."
+        },
+        "2-IC-20": {
+          "description": "Comparar los intercambios asociados a las tecnologías de la computación que afectan a la vida diaria y opciones profesionales de las personas."
+        },
+        "2-IC-21": {
+          "description": "Analizar problemas de sesgo y accesibilidad en el diseño de tecnologías existentes."
+        },
+        "2-IC-22": {
+          "description": "Colaborar con muchos colaboradores en estrategias como crowdsourcing o encuestas al crear un artefacto computacional."
+        },
+        "2-IC-23": {
+          "description": "Describa las compensaciones entre permitir que la información sea pública y mantener la información privada y segura."
+        },
+        "3A-IC-24": {
+          "description": "Evaluar el impacto de la computación en las prácticas personales, éticas, sociales, económicas, y culturales."
+        },
+        "3A-IC-25": {
+          "description": "Probar y perfeccionar los artefactos computacionales para reducir los sesgos y los déficits de equidad."
+        },
+        "2-NI-05": {
+          "description": "Explicar cómo las medidas de la seguridad física y digital pueden proteger la información."
+        },
+        "2-NI-06": {
+          "description": "Aplicar métodos de encriptado para ejemplificar la transferencia segura de datos."
+        },
+        "3A-NI-06": {
+          "description": "Recomienda medidas de seguridad para hacer frente a diversos escenarios basándose en factores como la eficiencia, la viabilidad y los impactos éticos."
+        },
+        "3A-NI-07": {
+          "description": "Compara diversas medidas de seguridad, teniendo en cuenta las compensaciones entre la usabilidad y la seguridad de un sistema informático."
+        },
+        "3B-NI-04": {
+          "description": "Compara las formas en que los desarrolladores de software protegen los dispositivos y la información del acceso no autorizado."
+        },
+        "DAT-1.D.1": {
+          "description": "La compresión de datos puede reducir el tamaño (número de bits) de los datos transmitidos o almacenados."
+        },
+        "DAT-1.D.2": {
+          "description": "Menos bits no significa necesariamente menos información."
+        },
+        "DAT-1.D.3": {
+          "description": "La cantidad de reducción de tamaño de la compresión depende tanto de la cantidad de redundancia en la representación de datos original como del algoritmo de compresión aplicado."
+        },
+        "DAT-1.D.4": {
+          "description": "Los algoritmos de compresión de datos sin pérdidas suelen reducir el número de bits almacenados o transmitidos garantizando la reconstrucción completa de los datos originales."
+        },
+        "IOC-2.B.5": {
+          "description": "El encriptado es el proceso de codificación de los datos para evitar el acceso no autorizado. El descifrado es el proceso de descodificación de los datos. Dos enfoques comunes de encriptación son: ● El cifrado de clave simétrica implica una clave para el cifrado y el descifrado.● El cifrado de clave pública empareja una clave pública para el cifrado y una clave privada para el descifrado. El emisor no necesita la clave privada del receptor para cifrar un mensaje, pero la clave privada del receptor es necesaria para descifrar el mensaje. DECLARACIÓN DE EXCLUSIÓN(EKIOC-2.B.5): Los procedimientos matemáticos específicos para el cifrado y el descifrado no están dentro del objetivo de este curso ni del examen AP."
+        },
+        "CD.L1:3-01": {
+          "description": "Usa dispositivos de entrada y salida estándares para operar con éxito computadoras y tecnologías relacionadas."
+        },
+        "CI.L1:3-01": {
+          "description": "Practica la ciudadanía digital responsable (comportamientos legales y éticos) en el uso de sistemas tecnológicos y software."
+        },
+        "CL.L1:6-02": {
+          "description": "Utiliza los recursos en línea (por ejemplo, correo electrónico, debates en línea, entornos web colaborativos) para participar en actividades colaborativas de resolución de problemas con el fin de desarrollar soluciones o productos."
+        },
+        "CPP.L1:3-01": {
+          "description": "Utiliza los recursos tecnológicos para realizar investigaciones apropiadas para tu edad."
+        },
+        "CPP.L1:3-02": {
+          "description": "Utiliza los recursos apropiados para el desarrollo multimedia (por ejemplo, libros interactivos y software educativo) para apoyar el aprendizaje a través del currículo."
+        },
+        "CPP.L1:3-04": {
+          "description": "Construye un conjunto de declaraciones para realizar con el fin de llevar a cabo una tarea simple (por ejemplo, instrucciones de tortuga)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Use recursos tecnológicos (por ejemplo, calculadoras, sondas de recopilación de datos, dispositivos móviles, videos, software educativo y herramientas web) para la resolución de problemas y el aprendizaje autodirigido."
+        },
+        "CPP.L1:6-06": {
+          "description": "Implementa soluciones de problemas utilizando un lenguaje de programación visual basado en bloques."
+        },
+        "CPP.L2:3": {
+          "description": "Diseña, desarrolla, publica y presenta productos (por ejemplo, páginas web, aplicaciones móviles, animaciones) utilizando recursos tecnológicos que demuestren y comuniquen conceptos curriculares."
+        },
+        "CT.L2:1": {
+          "description": "Usa los pasos básicos en la resolución algorítmica de problemas para diseñar soluciones (por ejemplo, planteamiento y exploración de problemas, examen de instancias de muestra, diseño, implementación de una solución, prueba y evaluación)."
+        },
+        "CT.L2:12": {
+          "description": "Usa la abstracción para descomponer un problema en subproblemas."
+        },
+        "CT.L2:6": {
+          "description": "Describe y analiza una secuencia de instrucciones que se está siguiendo (por ejemplo, describir el comportamiento de un personaje en un videojuego como impulsado por reglas y algoritmos)."
+        },
+        "CT.L2:7": {
+          "description": "Representa datos en una variedad de formas, incluyendo texto, sonidos, imágenes y números."
+        },
+        "CT.L2:8": {
+          "description": "Usa representaciones visuales de estados de problemas, estructuras y datos (por ejemplo, gráficos, cuadros, diagramas de red, diagramas de flujo)."
+        },
+        "1.L.6": {
+          "description": "Usar palabras y frases aprendidas a través de conversaciones, lectura y escucha de lecturas, y respuestas a textos, incluido el uso de conjunciones que ocurren con frecuencia para señalar relaciones simples (por ejemplo, porque)."
+        },
+        "11-12.L.6": {
+          "description": "Adquiere y usa con precisión palabras y frases académicas generales y específicas del dominio, suficientes para leer, escribir, hablar y escuchar a nivel universitario y profesional; demuestra independencia en la recopilación de conocimientos de vocabulario cuando se considera"
+        },
+        "2.L.6": {
+          "description": "Usar palabras y frases adquiridas a través de conversaciones, lecturas y escucha de lecturas, y respuestas a textos, incluido el uso de adjetivos y adverbios para describir (por ejemplo, cuando otros niños están felices, eso me hace feliz)."
+        },
+        "3.L.6": {
+          "description": "Obtener y utilizar palabras y frases de conversación, académicas generales y de un dominio específico, incluidas aquellas que contienen relaciones espaciales y temporales, de forma precisa y apropiadas para cada grado (por ejemplo, después de cenar esa noche, fuimos a buscarlos)."
+        },
+        "4.L.6": {
+          "description": "Adquirir y usar palabras y frases académicas generales y de un ámbito específico de manera precisa y apropiada para cada grado, incluidas aquellas que indican acciones, emociones o estados de ánimo precisos (por ejemplo, cuestionar, quejarse, balbucear)"
+        },
+        "5.L.6": {
+          "description": "Adquirir y usar palabras y frases académicas generales y de un ámbito específico de manera precisa y apropiada para cada grado, incluidas aquellas que señalan diferencia, suma y otras relaciones lógicas (por ejemplo, sin embargo, aunque, de manera similar, asimismo, además)."
+        },
+        "9-10.L.6": {
+          "description": "Adquiere y usa con precisión palabras y frases académicas generales y específicas del dominio, suficientes para leer, escribir, hablar y escuchar a nivel universitario y profesional; demuestra independencia en la recopilación de conocimientos de vocabulario cuando se considera"
+        },
+        "11-12.RI.4": {
+          "description": "Determina el significado de palabras y frases a medida que se usan en un texto, incluidos los significados figurativos, connotativos y técnicos; analiza cómo un autor usa y refina el significado de un término o términos clave en el transcurso de un texto (por ejemplo, cómo define Madison define la facción en El Federalista No. 10)."
+        },
+        "3.RL.4": {
+          "description": "Determinar el significado de las palabras y frases que se utilizan en un texto, distinguiendo el lenguaje literal del no literal."
+        },
+        "4.RL.7": {
+          "description": "Establecer conexiones entre el texto de una historia o drama y una presentación visual u oral del texto, identificando dónde se reflejan en cada versión las descripciones e indicaciones específicas del texto."
+        },
+        "5.RL.4": {
+          "description": "Determinar el significado de las palabras y frases que se utilizan en un texto, incluyendo el lenguaje figurado como las metáforas y los símiles."
+        },
+        "5.RL.7": {
+          "description": "Analizar cómo los elementos visuales y multimedia contribuyen al significado, el tono o la belleza de un texto (por ejemplo, novela gráfica, presentación multimedia de ficción, cuento popular, mito, poema)."
+        },
+        "1.SL.1": {
+          "description": "Participar en conversaciones en conjunto con diversos socios sobre temas y textos de primer grado con compañeros y adultos en grupos pequeños y más grandes."
+        },
+        "2.SL.1": {
+          "description": "Participar en conversaciones en conjunto con diversos socios sobre temas y textos de segundo grado con compañeros y adultos en grupos pequeños y más grandes."
+        },
+        "3.SL.1": {
+          "description": "Participar con efectividad en una variedad de debates en conjunto (individuales, en grupos y dirigidas por el docente) con distintos socios sobre temas y textos de tercer grado, retomando ideas de otros y expresando las suyas de forma clara."
+        },
+        "6.SL.1": {
+          "description": "Participa de manera efectiva en una variedad de debates colaborativos (uno a uno, en grupos y dirigidos por maestros) con diversos compañeros sobre temas, textos y problemas de sexto grado, aprovechando las ideas de los demás y expresando las suyas con claridad."
+        },
+        "7.SL.1": {
+          "description": "Participa de manera efectiva en una variedad de debates colaborativos (uno a uno, en grupos y dirigidos por maestros) con diversos compañeros sobre temas, textos y problemas de séptimo grado, aprovechando las ideas de los demás y expresando las suyas con claridad."
+        },
+        "11-12.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir, publicar y actualizar productos de escritura individuales o compartidos en respuesta a comentarios continuos, incluidos nuevos argumentos o información."
+        },
+        "3.W.3": {
+          "description": "Escribe narrativas para desarrollar experiencias o eventos reales o imaginarios utilizando técnicas efectivas, detalles descriptivos y secuencias de eventos claras."
+        },
+        "4.W.3": {
+          "description": "Escribe narrativas para desarrollar experiencias o eventos reales o imaginarios utilizando técnicas efectivas, detalles descriptivos y secuencias de eventos claras."
+        },
+        "5.W.3": {
+          "description": "Escribe narrativas para desarrollar experiencias o eventos reales o imaginarios utilizando técnicas efectivas, detalles descriptivos y secuencias de eventos claras."
+        },
+        "6.W.3": {
+          "description": "Escribe narrativas para desarrollar experiencias o eventos reales o imaginarios utilizando técnicas efectivas, detalles descriptivos relevantes y secuencias de eventos bien estructuradas."
+        },
+        "6.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir y publicar escritos, así como para interactuar y colaborar con otros; demuestra un dominio suficiente de las habilidades de teclado para escribir un mínimo de tres páginas en una sola sesión."
+        },
+        "7.W.3": {
+          "description": "Escribe narrativas para desarrollar experiencias o eventos reales o imaginarios utilizando técnicas efectivas, detalles descriptivos relevantes y secuencias de eventos bien estructuradas."
+        },
+        "7.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir y publicar escritos, y vincular y citar fuentes, así como para interactuar y colaborar con otros, incluso para vincular y citar fuentes."
+        },
+        "8.W.3": {
+          "description": "Escribe narrativas para desarrollar experiencias o eventos reales o imaginarios utilizando técnicas efectivas, detalles descriptivos relevantes y secuencias de eventos bien estructuradas."
+        },
+        "8.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir y publicar escritos y presentar las relaciones entre información e ideas de manera eficiente, así como para interactuar y colaborar con otros."
+        },
+        "9-10.W.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir, publicar y actualizar productos de escritura individuales o compartidos mediante el aprovechamiento de la capacidad de la tecnología para vincular a otra información y mostrar información de manera flexible y dinámica."
+        },
+        "11-12.WHST.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir, publicar y actualizar productos de escritura individuales o compartidos en respuesta a comentarios continuos, incluidos nuevos argumentos o información."
+        },
+        "9-10.WHST.6": {
+          "description": "Utiliza la tecnología, incluida Internet, para producir, publicar y actualizar productos de escritura individuales o compartidos mediante el aprovechamiento de la capacidad de la tecnología para vincular a otra información y mostrar información de manera flexible y dinámica."
+        },
+        "3-5-ETS1-1": {
+          "description": "Definir un problema de diseño simple que refleje una necesidad o un requerimiento, que incluya criterios específicos de éxito y restricciones en los materiales, tiempo o costo."
+        },
+        "K-2-ETS1-1": {
+          "description": "Haz preguntas, realiza observaciones y reúne información sobre una situación que se quiera cambiar, para definir un problema simple que pueda ser solucionado a través del desarrollo de una herramienta u objeto nuevo o mejorado."
+        },
+        "K-2-ETS1-2": {
+          "description": "Desarrollar un esbozo, dibujo o modelo físico simple para ilustrar cómo la forma de un objeto lo ayuda a funcionar cuando sea necesario para resolver un determinado problema."
+        },
+        "7.G.2": {
+          "description": "Dibuja (a mano alzada, con regla y transportador, y con tecnología) formas geométricas con condiciones dadas. Concéntrate en construir triángulos a partir de tres medidas de ángulos o lados, y observa cuándo las condiciones determinan un triángulo único, más de un triángulo o ningún triángulo."
+        },
+        "2.MD.10": {
+          "description": "Realiza un gráfico de imágen y otro de barras (utilizándo la misma unidad de medida) para representar un grupo de datos con hasta cuatro categorías. Resuelve problemas sencillos de ensamblar, desarmar y comparar usando la información presentada en el gráfico de barras."
+        },
+        "4.MD.5.b": {
+          "description": "Un ángulo que gira n veces un grado, se dice que tiene una medida de ángulo de n grados."
+        },
+        "4.MD.6": {
+          "description": "Mide ángulos en grados de números enteros usando un transportador. Dibuja ángulos de medida especificada."
+        },
+        "MP.1": {
+          "description": "Entender problemas y no parar hasta resolverlos"
+        },
+        "MP.2": {
+          "description": "Razonar de manera abstracta y cuantitativa"
+        },
+        "MP.4": {
+          "description": "Modelar a través de las matemáticas"
+        },
+        "MP.5": {
+          "description": "Utilizar las herramientas adecuadas de manera estratégica"
+        },
+        "MP.6": {
+          "description": "Estar atento a la precisión"
+        },
+        "MP.7": {
+          "description": "Buscar y usar estructuras"
+        },
+        "MP.8": {
+          "description": "Buscar y expresar regularidades en patrones de razonamiento"
+        },
+        "4.NBT.4": {
+          "description": "Sumar y restar números enteros de varios dígitos con fluidez mediante el algoritmo estándar."
+        },
+        "4.NBT.5": {
+          "description": "Multiplicar un número entero de hasta cuatro dígitos por un número entero de un dígito, y multiplicar dos números de dos dígitos, mediante estrategias basadas en el valor posicional y las propiedades de las operaciones. Ilustrar y explicar el cálculo mediante ecuaciones"
+        },
+        "1.OA.1": {
+          "description": "Usar la suma y resta en 20 para resolver problemas que involucran situaciones de agregar, sacar, elaborar, retirar y comparar, con incógnitas en todas las posiciones, por ejemplo, mediante objetos, dibujos y ecuaciones con un símbolo para "
+        },
+        "2.OA.1": {
+          "description": "Usar la suma y resta dentro de 100 para resolver problemas de uno y dos pasos con palabras que involucran situaciones de agregar, sacar, elaborar, retirar y comparar, con incógnitas en todas las posiciones, por ejemplo, mediante dibujos y ecuaciones con un"
+        },
+        "3.OA.3": {
+          "description": "Usar la multiplicación y división en 100 para resolver problemas con palabras que involucran grupos iguales, matrices y cantidades de medición, por ejemplo, mediante dibujos y ecuaciones con un símbolo para el número desconocido para representar el problema.1"
+        },
+        "3-A-i.6-8": {
+          "description": "Contrastar las características únicas del aprendizaje humano con las formas en las que operan los sistemas de aprendizaje automático."
+        },
+        "3-A-i.9-12": {
+          "description": "Definir los algoritmos de aprendizaje supervisado, no supervisado, y por refuerzo. Dar ejemplos de aprendizaje humano que sean similares a cada uno de los algoritmos."
+        },
+        "3-A-ii.K-2": {
+          "description": "Identificar patrones en datos etiquetados y determinar las características que predicen etiquetas."
+        },
+        "3-A-ii.3-5": {
+          "description": "Modelar cómo el aprendizaje supervisado identifica patrones en datos etiquetados."
+        },
+        "3-A-ii.9-12": {
+          "description": "Utilizar un algoritmo de aprendizaje supervisado o no supervisado para entrenar un modelo con datos del mundo real, y luego evaluar los resultados."
+        },
+        "3-A-iii.3-5": {
+          "description": "Entrenar un modelo de clasificación utilizando el aprendizaje automático, y luego examine la precisión de este modelo con nuevas entradas"
+        },
+        "3-A-iii.6-8": {
+          "description": "Entrenar y evaluar un modelo de clasificación o predicción usando aprendizaje automático en un conjunto de datos tabulados."
+        },
+        "3-A-iv.3-5": {
+          "description": "Demostrar cómo los datos de entrenamiento son etiquetados al utilizar una herramienta de aprendizaje automático."
+        },
+        "3-A-iv.9-12": {
+          "description": "Ilustre lo que sucede durante cada uno de los pasos necesarios cuando se utiliza el aprendizaje automático para construir un clasificador o predictor."
+        },
+        "3-C-i.K-2": {
+          "description": "Crear un conjunto de datos etiquetados con características explícitas para ilustrar cómo las computadoras pueden aprender a clasificar cosas como alimentos, películas, o juguetes."
+        },
+        "3-C-i.3-5": {
+          "description": "Crear un conjunto de datos etiquetados con características explícitas de varios tipos y utilizar una herramienta de aprendizaje automático para entrenar un clasificador con estos datos."
+        },
+        "3-C-i.6-8": {
+          "description": "Crear un conjunto de datos para entrenar un clasificador o predictor de árbol de decisión y explorar el impacto que las diferentes codificaciones de características tienen en el árbol de decisión."
+        },
+        "3-C-i.9-12": {
+          "description": "Comparar dos conjuntos de datos del mundo real en función de las características que contienen y de cómo estas se codifican."
+        },
+        "3-C-iii.3-5": {
+          "description": "Examinar las características y las etiquetas de los datos de entrenamiento para detectar posibles fuentes de sesgo."
+        },
+        "3-C-iii.6-8": {
+          "description": "Explicar cómo la elección de los datos de entrenamiento determina el comportamiento del clasificador, y cómo puede introducirse un sesgo si el conjunto de datos de entrenamiento no está equilibrado correctamente."
+        },
+        "1.a": {
+          "description": "Aplica el conocimiento existente para generar nuevas ideas, productos o procesos."
+        },
+        "1.b": {
+          "description": "Crea obras originales como medio de expresión personal o grupal."
+        },
+        "1.c": {
+          "description": "Utiliza modelos y simulaciones para explorar sistemas y problemas complejos."
+        },
+        "2.a": {
+          "description": "Interactúa, colabora y publica con colegas, expertos u otras personas que empleen una variedad de entornos y medios digitales."
+        },
+        "2.b": {
+          "description": "Comunica información e ideas de manera efectiva a múltiples audiencias utilizando una variedad de medios y formatos."
+        },
+        "4.b": {
+          "description": "Planifica y gestiona actividades para desarrollar una solución o completar un proyecto."
+        },
+        "4.d": {
+          "description": "Utiliza múltiples procesos y perspectivas diversas para explorar soluciones alternativas."
+        },
+        "6.a": {
+          "description": "Comprende y utiliza sistemas tecnológicos."
+        },
+        "6.c": {
+          "description": "Solucionar problemas de sistemas y aplicaciones."
+        },
+        "6.d": {
+          "description": "Transfiera el conocimiento actual al aprendizaje de nuevas tecnologías."
         }
       }
     }

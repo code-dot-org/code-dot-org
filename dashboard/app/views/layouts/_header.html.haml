@@ -1,19 +1,16 @@
 :ruby
   require 'cdo/language_dir'
 
-  script = local_assigns[:script] || Script.twenty_hour_unit
+  script = local_assigns[:script] || Unit.twenty_hour_unit
   script_level = local_assigns[:script_level]
   level = local_assigns[:level]
   lesson = local_assigns[:lesson]
-  full_width = local_assigns[:full_width]
-
-  show_bug_links = script_level || (level && level.try(:is_project_level))
 
   user_type = nil
 
   header_class = 'header-wrapper'
-  header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
-  header_class = header_class + (script_level || level ? ' hide_on_mobile' : '')
+  header_class = header_class + (rack_env?(:levelbuilder) ? ' levelbuilder-header' : '')
+    header_class = header_class + (CDO.use_local_header_color ? ' local-header' : '')
 
   if current_user
     if current_user.teacher?
@@ -45,7 +42,7 @@
   header_contents_options[:loc_prefix] = "nav.header."
   header_contents_options[:page_mode] = request.cookies['pm']
 
-  should_show_progress = script_level || @lesson_extras
+  should_show_progress = (script_level || @lesson_extras) && !@is_code_reviewing
 
   sign_in_user = current_user || user_type && OpenStruct.new(
     id: nil,
@@ -94,7 +91,6 @@
             = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'user_header.haml')), type: :haml, locals: user_header_options
         = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'help_button.haml')), type: :haml, locals: hamburger_options
         = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'hamburger.haml')), type: :haml, locals: hamburger_options
-  }
 
 :ruby
   if should_show_progress
@@ -134,6 +130,12 @@
       href: script_path(@script, section_id: section_id, user_id: user_id),
       smallText: small_text
     }
+  elsif @is_code_reviewing
+    script_name_data = {
+      name: script_level.lesson.localized_title,
+      href: '#',  # When viewing peer code, link should do nothing
+      smallText: false
+    }
   end
 
 - if should_show_progress
@@ -152,6 +154,12 @@
       #{!script_level}
     )
     //]]>
+
+- elsif @is_code_reviewing
+  :javascript
+    dashboard.header.buildScriptNameOnly(
+      #{script_name_data.to_json}
+    )
 
 - elsif level
   :javascript

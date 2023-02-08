@@ -2,11 +2,12 @@
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
 import {castValue} from './dataUtils';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import classNames from 'classnames';
 import {WarningType} from '../constants';
+import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -73,32 +74,32 @@ class AddKeyRow extends React.Component {
 
   render() {
     return (
-      <tr id="uitest-addKeyValuePairRow" style={dataStyles.row}>
-        <td style={dataStyles.cell}>
+      <tr id="uitest-addKeyValuePairRow" className={dataStyles.row}>
+        <td className={dataStyles.cell}>
           <input
-            style={dataStyles.input}
+            className={dataStyles.input}
             onChange={this.handleKeyChange}
             onKeyUp={this.handleKeyUp}
-            placeholder="enter text"
+            placeholder={msg.enterText()}
             value={this.state.key || ''}
           />
         </td>
-        <td style={dataStyles.cell}>
+        <td className={dataStyles.cell}>
           <input
-            style={dataStyles.input}
+            className={dataStyles.input}
             onChange={this.handleValueChange}
             onKeyUp={this.handleKeyUp}
-            placeholder="enter text"
+            placeholder={msg.enterText()}
             value={this.state.value || ''}
           />
         </td>
-        <td style={dataStyles.addButtonCell}>
+        <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
           <PendingButton
             isPending={this.state.isAdding}
             onClick={this.handleAdd}
-            pendingText="Adding"
-            style={dataStyles.blueButton}
-            text="Add pair"
+            pendingText={msg.addingToTable()}
+            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
+            text={msg.addPairToTable()}
           />
         </td>
       </tr>
@@ -106,4 +107,4 @@ class AddKeyRow extends React.Component {
   }
 }
 
-export default Radium(AddKeyRow);
+export default AddKeyRow;

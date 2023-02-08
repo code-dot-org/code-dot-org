@@ -1,0 +1,23 @@
+{
+  "es-MX": {
+    "data": {
+      "opportunity_standards": {
+        "ngss/3-5-ETS1-1": {
+          "description": "Definir un problema de diseño simple que refleje una necesidad o un requerimiento, que incluya criterios específicos de éxito y restricciones en los materiales, tiempo o costo."
+        },
+        "ccmath/4.MD.5.b": {
+          "description": "Un ángulo que gira n veces un grado, se dice que tiene una medida de ángulo de n grados."
+        },
+        "ngss/K-2-ETS1-1": {
+          "description": "Haz preguntas, realiza observaciones y reúne información sobre una situación que se quiera cambiar, para definir un problema simple que pueda ser solucionado a través del desarrollo de una herramienta u objeto nuevo o mejorado."
+        },
+        "ngss/K-2-ETS1-2": {
+          "description": "Desarrollar un esbozo, dibujo o modelo físico simple para ilustrar cómo la forma de un objeto lo ayuda a funcionar cuando sea necesario para resolver un determinado problema."
+        },
+        "ccmath/2.MD.10": {
+          "description": "Realiza un gráfico de imágen y otro de barras (utilizándo la misma unidad de medida) para representar un grupo de datos con hasta cuatro categorías. Resuelve problemas sencillos de ensamblar, desarmar y comparar usando la información presentada en el gráfico de barras."
+        }
+      }
+    }
+  }
+}

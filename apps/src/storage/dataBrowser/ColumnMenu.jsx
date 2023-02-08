@@ -5,6 +5,7 @@ import {ColumnType} from './dataUtils';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
+import msg from '@cdo/locale';
 
 export default class ColumnMenu extends React.Component {
   static propTypes = {
@@ -26,24 +27,24 @@ export default class ColumnMenu extends React.Component {
         </a>
         <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={this.props.handleRename}>Rename</a>
+            <a onClick={this.props.handleRename}>{msg.rename()}</a>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={this.props.handleDelete}>Delete</a>
+            <a onClick={this.props.handleDelete}>{msg.delete()}</a>
           </li>
           <li style={{cursor: 'pointer'}}>
             <a onClick={() => this.props.coerceColumn(ColumnType.STRING)}>
-              Convert to string
+              {msg.dataTableConvertToString()}
             </a>
           </li>
           <li style={{cursor: 'pointer'}}>
             <a onClick={() => this.props.coerceColumn(ColumnType.NUMBER)}>
-              Convert to number
+              {msg.dataTableConvertToNumber()}
             </a>
           </li>
           <li style={{cursor: 'pointer'}}>
             <a onClick={() => this.props.coerceColumn(ColumnType.BOOLEAN)}>
-              Convert to boolean
+              {msg.dataTableConvertToBoolean()}
             </a>
           </li>
         </ul>

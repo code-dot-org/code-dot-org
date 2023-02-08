@@ -4,7 +4,7 @@
   "category": "Behaviors",
   "category_key": "behaviors",
   "block_name": "gamelab_removeAllBehaviors",
-  "content": "Sprite stops doing all its behaviors.\r\n\r\nIf a sprite has multiple behaviors, they can all be stopped at once using this block.  For more information see `Adding and Removing Behaviors`.",
+  "content": "Sprite stops doing all its behaviors.\r\n\r\nIf a sprite has multiple behaviors, they can all be stopped at once using this block.  For more information see [`Adding and Removing Behaviors`(#89eba4)](/docs/spritelab/spritelab_adding-and-removing-behaviors/).",
   "examples": [
     {
       "name": "",
@@ -26,5 +26,5 @@
   ],
   "short_description": "Sprite Lab - sprite begins (clone)",
   "syntax": "removeAllBehaviors",
-  "tips": "- Connect this block to events like `sprite clicked`. Code is executed quickly in Sprite Lab. If you tell a sprite to begin a behavior and then tell it to stop in the same sequence of code, there is not enough time to see the behavior in action.\r\n- This block can be used along with `set sprite property`, `jump to` and `change color` to restore a sprite to its initial state, which can be useful in games and simulations that can be “reset”.\r\n"
+  "tips": "- Connect this block to events like [`sprite clicked`(#62fc94)](/docs/spritelab/gamelab_spriteClicked/). Code is executed quickly in Sprite Lab. If you tell a sprite to begin a behavior and then tell it to stop in the same sequence of code, there is not enough time to see the behavior in action.\r\n- This block can be used along with [`set sprite property`(#5ef3ff)](/docs/spritelab/gamelab_setProp/), [`jump to`(#5ef3ff)](/docs/spritelab/gamelab_jumpTo/) and [`change color`(#5ef3ff)](/docs/spritelab/gamelab_setTint/) to restore a sprite to its initial state, which can be useful in games and simulations that can be “reset”.\r\n"
 }

@@ -1,0 +1,470 @@
+{
+  "zh-CN": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "网络实验室",
+          "description": "基于网络的HTML/CSS编辑器",
+          "categories": {
+            "html_tags": {
+              "name": "HTML 标签"
+            },
+            "css_properties": {
+              "name": "CSS属性"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "游戏实验室",
+          "description": "应用实验室是一个应用程序的编程环境，在这里，你可以创造游戏和动画。绘制你的角色，用代码块或 JavaScript来设计好玩的应用程序，然后分享你的应用程序。",
+          "categories": {
+            "game_lab": {
+              "name": "游戏实验室",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "黑白"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "制作音乐"
+                    }
+                  },
+                  "short_description": "从指定的链接播放 MP3 音频文件。"
+                }
+              }
+            },
+            "sprites": {
+              "name": "精灵图",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "螺旋"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "小组",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "颜色"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "颜色"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "绘画",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "踢腿"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "name": "控制"
+            },
+            "math": {
+              "name": "数学",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返回的最小值"
+                    },
+                    "max": {
+                      "description": "返回的最大值"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返回的最小值"
+                    },
+                    "max": {
+                      "description": "返回的最大值"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "变量",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "给已有变量指定一个值（赋值）。"
+                },
+                "declareAssign_x": {
+                  "short_description": "声明并给一个变量分派上初值。"
+                }
+              }
+            },
+            "functions": {
+              "name": "函数"
+            }
+          }
+        },
+        "applab": {
+          "name": "应用实验室",
+          "description": "应用实验室是一个可以让你使用简单的应用程序的编程环境。设计应用程序，代码块或 JavaScript 使它工作，然后马上分享您的应用程序。",
+          "categories": {
+            "ui_controls": {
+              "name": "UI控制",
+              "expressions": {
+                "button": {
+                  "short_description": "在屏幕上创建一个按钮，在默认位置 (0,0) 显示所提供的文本并引用所用的ID。"
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "收缩和放大"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "函数"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "制作音乐"
+                    }
+                  },
+                  "short_description": "从指定的链接播放 MP3 音频文件。"
+                }
+              }
+            },
+            "canvas": {
+              "name": "画布",
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "圆的半径，以像素为单位。"
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "数据",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "函数"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "对象"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "name": "海龟",
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "以平滑的圆弧向前和向左移动海龟。"
+                }
+              }
+            },
+            "control": {
+              "name": "控制",
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "函数"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "数学",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返回的最小值"
+                    },
+                    "max": {
+                      "description": "返回的最大值"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返回的最小值"
+                    },
+                    "max": {
+                      "description": "返回的最大值"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "变量",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "选择你自己的冒险"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "声明并给一个变量分派上初值。"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "声明数组并赋值给变量"
+                },
+                "addPair": {
+                  "return_value": "没有"
+                }
+              }
+            },
+            "functions": {
+              "name": "函数"
+            },
+            "advanced": {
+              "name": "高级"
+            },
+            "maker": {
+              "name": "制造"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "精灵图实验室",
+          "description": "角色实验室是一个模块化编程环境，在这里你可以创造交互性程序。",
+          "categories": {
+            "sprites": {
+              "name": "精灵图"
+            },
+            "world": {
+              "name": "世界"
+            },
+            "location": {
+              "name": "位置"
+            },
+            "actions": {
+              "name": "操作"
+            },
+            "events": {
+              "name": "事件"
+            },
+            "behaviors": {
+              "name": "行为"
+            },
+            "loops": {
+              "name": "循环"
+            },
+            "variables": {
+              "name": "变量"
+            },
+            "math": {
+              "name": "数学"
+            },
+            "logic": {
+              "name": "逻辑"
+            },
+            "functions": {
+              "name": "函数"
+            },
+            "text": {
+              "name": "文本"
+            },
+            "comments": {
+              "name": "评论"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java实验室",
+          "categories": {
+            "general": {
+              "name": "Java基础"
+            },
+            "control_structures": {
+              "name": "控制结构"
+            },
+            "data_structures": {
+              "name": "数据结构"
+            }
+          }
+        }
+      }
+    }
+  }
+}

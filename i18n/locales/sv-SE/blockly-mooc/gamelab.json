@@ -1,4 +1,9 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "bredd",
+  "dropletBlock_createSprite_param3": "höjd",
+  "dropletBlock_setCollider_param0": "typ",
+  "dropletBlock_setCollider_param4": "höjd",
+  "dropletBlock_setColliderEach_param0": "typ",
+  "dropletBlock_setColliderEach_param4": "höjd",
+  "shareGame": "Dela ditt spel:"
 }

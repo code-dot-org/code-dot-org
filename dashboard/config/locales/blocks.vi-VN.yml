@@ -2,8 +2,28 @@
 vi:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: nhắc người dùng {QUESTION} để lấy biến {VAR} có các lựa chọn {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}nói{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': cực nhỏ
+            '0.75': nhỏ
+            '1.00': trung bình
+            '2.00': lớn
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': cực nhỏ
+            '0.75': nhỏ
+            '1.00': trung bình
+            '2.00': lớn
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} luân phiên giữa \n{MOVE1} và {MOVE2} sau mỗi {N} nhịp"
         options:
@@ -212,20 +232,12 @@ vi:
             MOVES.XArmsUp: Kéo dãn
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-      Dancelab_everyMeasuresRange:
-        text: 'lặp lại sau mỗi {N} nhịp sau khi {START} '
       Dancelab_everySeconds:
         text: 'mỗi {N} {UNIT} '
         options:
           UNIT:
             '"measures"': nhịp
             '"seconds"': giây
-      Dancelab_everySecondsRange:
-        text: 'mỗi {N} {UNIT} từ {START} đến {STOP} '
-        options:
-          UNIT:
-            measures: Nhịp
-            seconds: Giây
       Dancelab_everyVerseChorus:
         text: 'mỗi {UNIT} '
         options:
@@ -909,6 +921,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -954,6 +967,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -976,6 +990,39 @@ vi:
         text: thiết lập
       Dancelab_whenSetup2:
         text: thiết lập
+      DansBlocks_getMicroscope:
+        text: Kính hiển vi có {INPUT1}
+        options:
+          INPUT1:
+            '1': nước chanh
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: làm hiệu ứng {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bong bóng
+            '"confetti"': Hoa giấy
+            '"hearts"': trái tim
+            '"emojis"': Biểu tượng cảm xúc vui vẻ
+            '"rain"': mưa
+            '"starburst"': Lóe sáng
+            '"glass"': Kính vỡ
+            '"twinkling"': Lấp lánh
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': nước chanh
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Giao tiếp {VAR1} với {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: tạo {NUM} nhân vật {ANIMATION_NAME} mới {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: giới thiệu {NUM} nhân vật {ANIMATION_NAME} mới [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}nói{TEXT1}"
       gamelab_addBehaviorSimple:
         text: nhân vật {SPRITE} bắt đầu {BEHAVIOR}
       gamelab_addTarget:
@@ -1056,7 +1103,7 @@ vi:
         text: vẽ đường {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: cạnh chặn {SPRITE} di chuyển
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'mỗi {N} {UNIT} '
         options:
           UNIT:
@@ -1146,6 +1193,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} đang chạm vào các cạnh"
@@ -1189,6 +1237,7 @@ vi:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'vị trí x: {X} y: {Y}'
@@ -1212,8 +1261,6 @@ vi:
           EFFECT:
             '"pop"': nổ
             '"rain"': mưa
-      gamelab_makeNewScaledSprite:
-        text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       gamelab_makeNumSprites:
@@ -1227,6 +1274,13 @@ vi:
             '90': xuống
             '180': trái
             '270': trên
+      gamelab_makeSpritesWithSize:
+        text: tạo {NUM} nhân vật {SIZE} {COSTUME} mới
+        options:
+          SIZE:
+            '30': nhỏ
+            '50': trung bình
+            '100': lớn
       gamelab_mirrorSprite:
         text: "{SPRITE} mặt {DIRECTION}"
         options:
@@ -1297,6 +1351,33 @@ vi:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tiếng bass
               vòng
             "'sound://category_digital/jump_7.mp3'": nhảy
+      gamelab_playSoundOptionsSoccer:
+        text: phát âm thanh {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": còi hơi
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": tiếng vỗ tay
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": tiếng hô đồng thanh
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": tiếng cổ vũ
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": tiếng đá bóng
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": hai tiếng còi
+            "'sound://category_sports/One_Whistle_SFX.mp3'": còi
+      gamelab_playSoundOptionsSpace:
+        text: phát âm thanh {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": tiếng hố đen
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": tiếng thiên hà va chạm
+            "'sound://category_space/Carina_SFX.mp3'": tiếng tinh vân thuyền để
+            "'sound://category_space/Cassiopeia_SFX.mp3'": tiếng chòm sao thiên hậu
+            "'sound://category_space/Crab_nebula_SFX.mp3'": tiếng tinh vân con cua
+            "'sound://category_space/Launch_SFX.mp3'": tiếng phóng tàu
+            "'sound://category_space/Lift_Off.mp3'": tiếng cất cánh
+            "'sound://category_space/Pillars_SFX.mp3'": tiếng cột sáng tạo
+            "'sound://category_space/Southern_ring_SFX.mp3'": tiếng tinh vân vòng
+              phương nam
+            "'sound://category_space/Supernova_SFX.mp3'": tiếng siêu tân tinh
+            "'sound://category_space/Tycho_SFX.mp3'": tiếng siêu tân tinh tycho
       gamelab_playSpeech:
         text: phát lời nói {SOUND}
       gamelab_playerBehaviors:
@@ -1459,6 +1540,40 @@ vi:
         text: "{SPRITE} nói {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE} nói {TEXT1} trong {NUM} giây"
+      gamelab_spriteThink:
+        text: "{SPRITE} nghĩ {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE} nghĩ {TEXT1} trong {NUM} giây"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"Time to make friends with the sheep."': Tới lúc làm bạn với con cừu
+              rồi.
+            '"She''ll never recognize me now."': Giờ nó sẽ không thể nào nhận ra ta.
+            '"This costume keeps me warm."': Bộ trang phục này giúp ta giữ ấm.
+            '"I am actually a wolf."': Thực ra ta là sói.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"I''m feeling sleepy."': Buồn ngủ ghê.
+            '"No one could ever beat me."': Không kẻ nào có thể đánh bại ta.
+            '"I''ve done this race before."': Đường đua này ta đã từng chinh phục.
+            '"My feet are bigger than Turtle''s feet."': Chân ta bự hơn chân Rùa.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} nghĩ {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hừm...
+            '"I''m so hungry."': Đói quá.
+            '"I''m a visitor in this town."': Ta là du khách của thị trấn này.
+            '"If we share, we''ll all have something to eat. "': Nếu chia nhau thì
+              cả hai chúng ta đều có đồ ăn.
+            '"I''ll trick everyone into giving me their food."': Ta sẽ lừa tất cả
+              mọi người đưa đồ ăn cho ta.
       gamelab_startAvoiding:
         text: "{SPRITE} bắt đầu né {TARGET}"
       gamelab_startFollowing:
@@ -1904,6 +2019,39 @@ vi:
         text: bố trí quái vật ngẫu nhiên
       Outbreak_stopMoving:
         text: quái vật ngừng di chuyển
+      ParticlesBlocks_getMicroscope:
+        text: Kính hiển vi có {INPUT1}
+        options:
+          INPUT1:
+            '1': nước chanh
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': nước chanh
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): rắn
+            new Behavior(liquid, []): lỏng
+            new Behavior(wandering, []): khí
+      ParticlesBlocks_statesOfMatter2:
+        text: Đặt {COSTUME} cho hành vi {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': hạt rắn
+            '"liquid"': hạt lỏng
+            '"gas"': hạt khí
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': hạt rắn
+            '"liquid"': hạt lỏng
+            '"gas"': hạt khí
       Poetry_addFrame:
         text: đặt khung thành {BRUSH}
         options:
@@ -1975,6 +2123,22 @@ vi:
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Xoay
               tròn
             '"sound://category_achievements/peaceful_win_6.mp3"': Chuông gió
+      Poetry_playSoundOptionsSpace:
+        text: phát âm thanh {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": tiếng hố đen
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": tiếng thiên hà va chạm
+            "'sound://category_space/Carina_SFX.mp3'": tiếng tinh vân thuyền để
+            "'sound://category_space/Cassiopeia_SFX.mp3'": tiếng chòm sao thiên hậu
+            "'sound://category_space/Crab_nebula_SFX.mp3'": tiếng tinh vân con cua
+            "'sound://category_space/Launch_SFX.mp3'": tiếng phóng tàu
+            "'sound://category_space/Lift_Off.mp3'": tiếng cất cánh
+            "'sound://category_space/Pillars_SFX.mp3'": tiếng cột sáng tạo
+            "'sound://category_space/Southern_ring_SFX.mp3'": tiếng tinh vân vòng
+              phương nam
+            "'sound://category_space/Supernova_SFX.mp3'": tiếng siêu tân tinh
+            "'sound://category_space/Tycho_SFX.mp3'": tiếng siêu tân tinh tycho
       Poetry_setAuthor:
         text: đặt tác giả {AUTHOR}
       Poetry_setBackground:
@@ -2102,6 +2266,11 @@ vi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: khi đã trả lời {VAR}
       RyanLab_moveForward:
@@ -2301,5 +2470,19 @@ vi:
           DIR:
             right: phải ↻
             left: trái ↺
+      storylab_setForegroundEffect2:
+        text: làm hiệu ứng {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bong bóng
+            '"confetti"': Hoa giấy
+            '"hearts"': trái tim
+            '"rain"': mưa
+            '"starburst"': Lóe sáng
+            '"twinkling"': Lấp lánh
+      storylab_setHeading:
+        text: đặt tiêu đề {HEADING}
+      storylab_setSubheading:
+        text: đặt tiêu đề phụ {SUBHEADING}
       validation_validatedBackground:
         text: đặt hình nền thành {IMG}

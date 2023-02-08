@@ -30,11 +30,11 @@ class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels
 
-  belongs_to :game
+  belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
-  belongs_to :user
+  belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
+  belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
@@ -51,7 +51,7 @@ class Level < ApplicationRecord
   # context on these categories and level keys, see:
   # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
-  validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+  validates_uniqueness_of :level_num, case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
 
   validate :validate_game, on: [:create, :update]
 
@@ -91,6 +91,7 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
+    start_html
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -150,7 +151,7 @@ class Level < ApplicationRecord
   end
 
   def unplugged?
-    game && game.unplugged?
+    game&.unplugged?
   end
 
   def finishable?
@@ -199,11 +200,11 @@ class Level < ApplicationRecord
 
   def available_callouts(script_level)
     if custom?
-      unless callout_json.blank?
+      if callout_json.present?
         return JSON.parse(callout_json).map do |callout_definition|
           i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
-          callout_text = should_localize? &&
-            I18n.t(i18n_key, default: nil) ||
+          callout_text = (should_localize? &&
+            I18n.t(i18n_key, default: nil)) ||
             callout_definition['callout_text']
 
           Callout.new(
@@ -379,7 +380,7 @@ class Level < ApplicationRecord
   ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
-    where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+    where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
     where('ideal_level_source_id is null').
     to_a.reject {|level| level.try(:free_play)}
   end
@@ -492,7 +493,7 @@ class Level < ApplicationRecord
   end
 
   def self.cache_find(id)
-    Script.cache_find_level(id)
+    Unit.cache_find_level(id)
   end
 
   def icon
@@ -637,16 +638,24 @@ class Level < ApplicationRecord
   #   name_suffix if one exists.
   # @param [String] editor_experiment Optional value to set the
   #   editor_experiment property to on the newly-created level.
-  def clone_with_suffix(new_suffix, editor_experiment: nil)
+  # @param [Boolean] allow_existing Whether to return an existing level if one
+  #   with a matching name is found. If false, the suffix will be modified to
+  #   make the new name unique.
+  def clone_with_suffix(new_suffix, editor_experiment: nil, allow_existing: true)
     # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
     return self if key.start_with?('blockly:')
 
     # Make sure we don't go over the 70 character limit.
     suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
     max_index = 70 - suffix.length - 1
-    new_name = "#{base_name[0..max_index]}#{suffix}"
+    prefix = base_name[0..max_index]
+    new_name = "#{prefix}#{suffix}"
 
-    return Level.find_by_name(new_name) if Level.find_by_name(new_name)
+    level = Level.find_by_name(new_name)
+    if level
+      return level if allow_existing
+      new_name = next_unused_name_for_copy(suffix)
+    end
 
     begin
       level = clone_with_name(new_name, editor_experiment: editor_experiment)
@@ -654,8 +663,13 @@ class Level < ApplicationRecord
       update_params = {name_suffix: suffix}
       update_params[:editor_experiment] = editor_experiment if editor_experiment
 
-      child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
-      update_params.merge!(child_params_to_update)
+      # Cloning of level group sublevels is handled by
+      # LevelGroup.clone_sublevels_with_suffix. In order to be able to customize
+      # that cloning logic, we must skip initially cloning child levels here.
+      unless is_a? LevelGroup
+        child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
+        update_params.merge!(child_params_to_update)
+      end
 
       level.update!(update_params)
 
@@ -667,7 +681,26 @@ class Level < ApplicationRecord
 
       level
     rescue Exception => e
-      raise e, "Failed to clone #{name} as #{new_name}. Message: #{e.message}"
+      raise e, "Failed to clone Level #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    end
+  end
+
+  COPY_SUFFIX_LENGTH = 8 # '_copy999'.length
+
+  # Returns the first level name of the form "<base_name>_copy<num>_<suffix>" which
+  # is not already used by another level.
+  # @param [String] suffix
+  def next_unused_name_for_copy(suffix)
+    # Make sure we don't go over the 70 character limit.
+    max_index = 70 - COPY_SUFFIX_LENGTH - suffix.length - 1
+    prefix = base_name[0..max_index]
+
+    i = 1
+    loop do
+      new_name = "#{prefix}_copy#{i}#{suffix}"
+      level = Level.find_by_name(new_name)
+      return new_name unless level
+      i += 1
     end
   end
 
@@ -693,6 +726,19 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_rubric_property(property)
+    if should_localize?
+      I18n.t(
+        property,
+        scope: [:data, :mini_rubric, name],
+        default: properties[property],
+        smart: true
+      )
+    else
+      properties[property]
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -709,11 +755,11 @@ class Level < ApplicationRecord
       ],
       scriptOptions: [
         ['All scripts', ''],
-        *Script.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
+        *Unit.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
       ],
       ownerOptions: [
         ['Any owner', ''],
-        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| !a[0].blank? && !a[1].blank?}.sort_by {|a| a[0]}
+        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| a[0].present? && a[1].present?}.sort_by {|a| a[0]}
       ]
     }
   end

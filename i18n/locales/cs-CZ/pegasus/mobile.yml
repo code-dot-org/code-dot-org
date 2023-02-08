@@ -354,6 +354,7 @@
   homepage_banner_40k_teachers_link: "Zjisti více"
   homepage_slot_text_title_hoc: "Hodina kódu"
   homepage_slot_text_blurb_hoc: "Každý se to může naučit. Začni dnes"
+  homepage_slot_text_blurb_hoc_2022: "Bádejte, hrajte, vytvářejte!"
   homepage_slot_text_link_hoc: "Vyzkoušej Hodinu Programování"
   homepage_slot_text_link_about_hoc: "O Hodině kódu"
   homepage_slot_text_link_host: "Uspořádejte Hodinu kódu"
@@ -379,6 +380,7 @@
   homepage_slot_text_link_buy: "Zapojte se"
   homepage_slot_text_link_donate: "Přispějte"
   homepage_slot_text_link_shop: "Trička, čepice a další"
+  homepage_slot_text_link_thebadguys: "Kódujte se Zlouny"
   homepage_slot_text_link_administrators: "Přineste informatiku do své školy"
   homepage_gallery_header: "Vytvořeno více než %{project_count} milionů projektů Code.org"
   homepage_header_donors: "Code.org děkuje svým příznivcům"
@@ -386,6 +388,11 @@
   homepage_donors_donate: "Přispějte"
   homepage_below_hero_announcement_text: "Vaše soukromí je pro nás důležité, a proto jsme provedli změny zásad ochrany osobních údajů, které jsou účinné od 25. května."
   homepage_below_hero_announcement_link_text: "Zjisti více"
+  homepage_higher_power_body: "Naprogramuj taneční večírek a budeš mít šanci vidět kapelu naživo."
+  homepage_thebadguys_body: "Naprogramuj dobrodružství paní Tarantule, pana Vlka a dalších postav z filmu **Zlouni**!"
+  homepage_csa_subhead: "Nový přístup k"
+  homepage_csa_title: "AP® Computer Science A"
+  homepage_csa_body: "Zpřístupněte studentům náš učební plán zaměřený na zrovnoprávnění a nechte je vyzkoušet si práci na tvůrčích projektech, které mají vazbu na reálný svět."
   contact_form_topic_student: "Jsem student"
   contact_form_topic_parent: "Jsem rodič"
   contact_form_topic_teacher: "Jsem učitel"
@@ -517,6 +524,8 @@
   video_title_marco_belinelli: "Hodina kódu s Marcem Belinelli"
   video_title_chris_bosh: "Chris Bosh o informatice"
   video_title_my_name_is_aracely: "Jmenuji se Aracely"
+  video_title_change_face_of_cs: "Změňte tvář informatiky"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas"
   video_1min: "1 minuta"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -593,6 +602,7 @@
   volunteer_engineer_submission_distance_16: "10 mil"
   volunteer_engineer_submission_distance_24: "15 mil"
   volunteer_engineer_submission_distance_32: "20 mil"
+  volunteer_engineer_submission_distance_80: "50 mil"
   volunteer_engineer_submission_num_volunteers_5: "5 dobrovolníků"
   volunteer_engineer_submission_num_volunteers_10: "10 dobrovolníků"
   volunteer_engineer_submission_num_volunteers_25: "25 dobrovolníků"
@@ -976,6 +986,7 @@
   coursee-2020_name: Kurz E (2019)
   coursef-2020_name: Kurz F (2019)
   coursed-2021_name: Kurz D (2021)
+  coursed-2022_name: Kurz D (2021)
   express-2018_name: Rychlý kurz (2018)
   pre-express-2018_name: Rychlý kurz pro předškoláky (2018)
   express-2019_name: Rychlý kurz (2019)
@@ -984,6 +995,8 @@
   pre-express-2020_name: Rychlokurz pro předškoláky (2020)
   express-2021_name: Rychlý kurz (2021)
   pre-express-2021_name: Rychlý kurz pro předškoláky (2021)
+  express-2022_name: Rychlý kurz (2021)
+  pre-express-2022_name: Rychlý kurz pro předškoláky (2022)
   csd2_name: 'Jednotka 2: Vývoj webových stránek'
   csd3_name: 'Jednotka 3: Animace a hry'
   accelerated_name: "Zrychlený kurz"
@@ -1097,6 +1110,12 @@
   coursed-2021_gradelevel: Známky 8+
   coursee-2021_gradelevel: Věk 8-12
   coursef-2021_gradelevel: Věk 9 - 13
+  coursea-2022_gradelevel: Věk 4 - 7
+  courseb-2022_gradelevel: Věk 5 - 8
+  coursec-2022_gradelevel: Věk 6-10
+  coursed-2022_gradelevel: Známky 8+
+  coursee-2022_gradelevel: Věk 8-12
+  coursef-2022_gradelevel: Věk 9 - 13
   accelerated_gradelevel: "Věk 10-18"
   codeorg_platformtext: "Moderní prohlížeče, smartphony, tablety"
   codeintl_platformtext: "Moderní prohlížeče, smartphony, tablety"
@@ -1233,6 +1252,12 @@
   coursed-2021_shortdescription_congrats: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
   coursee-2021_shortdescription_congrats: Začněte programovat s algoritmy, cykly, podmínkami a událostmi a pak přejděte k funkcím. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
   coursef-2021_shortdescription_congrats: Naučte se požívat různé druhy cyklů, událostí, funkcí a podmínek. Řešte různé techniky řešení problémů a diskutujte o vlivu počítačových věd a internetu na společnost. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
+  coursea-2022_shortdescription_congrats: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
+  courseb-2022_shortdescription_congrats: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
+  coursec-2022_shortdescription_congrats: Vytvářejte programy s posloupnostmi, cykly a událostmi. Převeďte své iniciály na binární kód, vyšetřete různé techniky řešení problémů a učte se reagovat na kybernetickou šikanu. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet!
+  coursed-2022_shortdescription_congrats: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
+  coursee-2022_shortdescription_congrats: Začněte programovat s algoritmy, cykly, podmínkami a událostmi a pak přejděte k funkcím. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
+  coursef-2022_shortdescription_congrats: Naučte se požívat různé druhy cyklů, událostí, funkcí a podmínek. Řešte různé techniky řešení problémů a diskutujte o vlivu počítačových věd a internetu na společnost. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
   codeorg_longdescription: "Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích."
   codeintl_longdescription: "Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích."
   thinkersmithspanish_longdescription: "Použitím předdefinovaného \"slovníkového Robota\" budou žáci vedeni k objevování tak, aby prováděli specifické úkoly bez předchozí instruktáže. Tato pasáž učí žáky spojení mezi symboly a akcí, jakož i cennou dovednost ladění."
@@ -1467,6 +1492,7 @@
   header_educate_beyond: "Nad rámec Code.org"
   header_educate_inspire: "Inspirujte studenta"
   header_educate_community: "Online komunita"
+  header_educate_requirements: "Technické požadavky"
   header_educate_tools: "Nástroje a videa"
   header_about_us: "O nás"
   header_about_leadership: "Koordinátoři"
@@ -1557,6 +1583,9 @@
   hoc_overview_dance_title: "Taneční večírek"
   hoc_overview_dance_subtitle: "Naprogramuj Dance Party a sdílej ji s kamarády. Vystupují Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara a dalších 25 umělců!"
   hoc_overview_dance_2019_subtitle: "Naprogramuj Dance Party a sdílej ji s kamarády. Vystupují Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj a dalších 34 umělců!"
+  hoc_overview_dance_2022_subtitle: "Naprogramujte si taneční párty ke sdílení se svými přáteli. K vidění a slyšení bude Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba z Disneyho „Encanto,“ a další!"
+  hoc_overview_hello_world_2022_subtitle: "Vyberte si jeden ze čtyř zábavných motivů a naprogramujte interaktivní postavičky ve světě, co si sami vytvoříte."
+  hoc_overview_hello_world_2022_alt_text: "Animovaní astronauti a zvířecí postavičky plovoucí kolem ilustrace země"
   hoc_overview_title: "Aktivity pro Hodinu kódu od Code.org"
   hoc_overview_subtitle: "Hodina <a href=\"https://hourofcode.com\">Hour of Code</a> je globální hnutí, které dosahuje desítek milionů studentů v 180 a více zemích. Každý, kdekoli, může uspořádat událost Hodina kódu nebo vyzkoušet některou z více než 500 hodinových výukových programů, které jsou k dispozici ve více než 45 jazycích."
   hoc_overview_subtitle_markdown: "[Hodina programování](https://hourofcode.com) je globální hnutí oslovující desítky milionů studentů ve více než 180 zemích. Každý a kdekoli může zorganizovat svou akci „Hodina programování“ nebo vyzkoušet některý z více než 500 hodinových kurzů dostupných ve více než 45 jazycích."
@@ -1602,9 +1631,13 @@
   hoc2018_mc_educators_box3_title: "Zúčastněte se bezplatné studentské dílny"
   hoc2018_mc_educators_box3_desc: "Navštivte obchod Microsoft ve své oblasti a získejte bezplatnou dílnu „Hodiny programování“. Pro účastníky na všech úrovních dovedností, od 6 let výše."
   hoc2018_mc_educators_box3_button: "Najdi workshop"
+  hoc2022_mc_educators_box3_desc_markdown: 'Použijte tento [bezplatný kurz](%{free_course_link}) na vyžádání nebo zaregistrujte celou svou třídu k účasti na živém workshopu Hodiny programování s pozvaným učitelem. Nabízeno několikrát během Týdne vzdělávání v počítačové vědě, od 6. do 11. prosince. '
+  hoc2022_mc_educators_box3_button: "Zaregistrujte se teď"
   hoc2018_mc_educators_box4_title: "Získejte přístup k dalším prostředkům pro počítačové vědy"
   hoc2018_mc_educators_box4_desc: "Vytvořte změny ve své komunitě pomocí digitálních dovedností a zdrojů pro vzdělávání informatiky od Microsoftu."
   hoc2018_mc_educators_box4_button: "Prozkoumávejte prostředky"
+  hoc2022_mc_educators_box4_desc: "Inspirujte u studentů K-12 vášeň pro STEM pomocí 200 hodin osnov počítačové vědy, od bloků po python, za podpory profesionálního rozvoje."
+  hoc2022_mc_educators_box4_button: "Pokračovat v učení"
   hoc2018_mc_watch_videos: "Než začnete, podívejte se na jedno z následujících inspirativních videí"
   hoc2018_mc_videos_more: "Více <a href='%{inspiring_videos_playlist}'> inspirativních videí </a>, které vyobrazují vzory a celebrity"
   hoc2018_mc_careers_more: "Více <a href='%{careers_url}' target='_blank'> inspirativních vídeí </a> zobrazujících odborníky v technologiích"
@@ -1689,6 +1722,8 @@
   hoc2018_dance_video2: "Taneční večírek  - Události"
   hoc2018_dance_video3: "Taneční večírek  - vlastnosti"
   hoc2018_dance_video4: "Taneční večírek - gratulujeme"
+  dance_box_higher_power_line_1: "Naprogramuj tanec ke skladbě Higher Power od Coldplay a budeš mít šanci vidět kapelu naživo!"
+  dance_box_higher_power_line_2: "Další informace najdeš na <a href=\"%{path}\">code.org/coldplay</a>."
   page_not_found_title: "Stránka nebyla nalezena"
   page_not_found_header: '404 - Stránka nebyla nalezena'
   page_not_found_description: "Stránka, kterou hledáte, na této adrese neexistuje. Zkontrolujte webovou adresu a znovu odešlete. Nebo se vraťte na naši domovskou stránku."
@@ -1718,6 +1753,9 @@
   hoc2021_mc_mee_villages_description: 'Naučte se základy kódování a prozkoumejte se svými studenty diverzitu a inkluzi ve hře Minecraft: Education Edition.'
   hoc2021_mc_mee_ai_title: "Umělá inteligence Pro Dobro"
   hoc2021_mc_mee_ai_description: 'Prozkoumejte se svými studenty umělou inteligenci a naučte se kódovat ve hře Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: "Minecraft Escape Estate"
+  hoc2022_mc_mee_description: 'Uprchněte před rozbřeskem ze záhadného sídla a vydělejte si milion smaragdů! Nový výukový kurz Hodiny programování Minecraft je teď k dostání na Minecraft: Education Edition pro Windows, Mac, Chromebook, iPad a mobily. Začněte s bezplatnými zdroji, školeními a videy pro vzdělavatele. '
+  hoc2022_mc_mee_timecraft_description: 'Cestujte zpět v čase, abyste zachránili budoucnost v této bezplatné lekci programování ve hře Minecraft: Education Edition.'
   footer_powered_by_aws: "Poháněn Amazon Web Services"
   footer_built_on_github: "Postavený na GitHubu od Microsoftu"
   codebytes_skinny_banner_title: "Přidejte se k nám 7.-11. prosince pro naše CodeBytes živé mini-lekce!"
@@ -1782,3 +1820,23 @@
   ai_try_activity: "Zkuste aktivitu"
   outbreak_tile_title: "Epidemie"
   outbreak_tile_subtitle: "Město příšer nakazil virus! Nakódujte simulátor šíření nákazy a pokuste se předpovědět, co se stane sousedům Města příšer."
+  outbreak_tile_alt: "Simulace šíření viru ve skupině fialových příšerek."
+  footer_cookie_notice: "Oznámení o souborech cookie"
+  top_hoc_tutorial_applab_alt_text: "Hnědá ruka, která se ukazováčkem dotýká tabletu s dotykovou obrazovkou, ze které vychází hvězdy a paprsky světla proti modrému pozadí"
+  minecraft_tile_alt: "Dvě postavičky z Minecraftu, Steve a Alex. Na pozadí se zobrazuje vodní scéna z Minecraftu s korály, delfíny a chaluhami."
+  hoc2022_banner_title: "Bádejte, hrajte si, tvořte!"
+  hoc2022_banner_description: "Probádejte vesmír, vstřelte branku, dejte ránu — je tolik způsobů, jak si vyzkoušet počítačovou vědu!"
+  hoc2022_cta_primary: "Podívejte se, co je nového"
+  hoc2022_cta_secondary: "Vyzkoušejte další aktivity"
+  hoc2022_landing_page_explore_title: "Bádejte"
+  hoc2022_landing_page_explore_description: "Otevřete dveře novým světům s počítačovou vědou!"
+  hoc2022_landing_page_play_title: "Hrát"
+  hoc2022_landing_page_play_description: "Převezměte pole a skórujte!"
+  hoc2022_landing_page_create_title: "Vytvořit"
+  hoc2022_landing_page_create_description: "Udělejte něco podivného a zázračného!"
+  hoc2022_landing_page_banner_alt_left: "Vetřelec tančící ve vesmíru poblíž Saturnu"
+  hoc2022_landing_page_banner_alt_right: "Robot driblující fotbalovým míčem ve vesmíru před odlétající raketou"
+  try_it_yourself: "Vyzkoušejte to sami!"
+  try_an_activity: "Vyzkoušejte nějakou aktivitu"
+  hoc2022_nasa_banner_heading: "Připojte se k NASA a zúčastněte se speciálního pořadu Hour of Code o počítačové vědě ve vesmíru!"
+  hoc2022_nasa_banner_description: "Premiéra 5. prosince v 10:00 SELČ na kanálu NASA STEM na YouTube."

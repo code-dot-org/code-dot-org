@@ -32,11 +32,10 @@ Alcuni suggerimenti:
 - [Linee guida generali per la creazione di un'attività dell'Ora del Codice](#guidelines)
 - [Come inviare](#submit)
 - [In che modo saranno valutate le attività](#inclusion)
-- [Linee guida per la presentazione di una prima revisione qualitativa NOVITÀ](#earlyreview)
-- [Suggerimenti per la progettazione della tua attività](#design)
-- [Linee guida sui Marchi Registrati](#tm)
-- [Pixel di Tracciamento](#pixel)
-- [Come promuovere le tue attività, la Settimana dell'Insegnamento dell'Informatica e l'Ora del Codice](#promote)
+- [Linee guida per la presentazione di una prima revisione qualitativa NOVITÀ](#design)
+- [Suggerimenti per la progettazione della tua attività](#tm)
+- [Linee guida sui Marchi Registrati](#pixel)
+- [Pixel di Tracciamento](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -184,96 +183,79 @@ Inoltre, per essere elencate, tutte le attività devono:
 - Essere appropriato per un'aula di una scuola pubblica (niente armi, nessun contenuto esplicito/maturo, nessun contenuto religioso, ecc.)
 - Non richiedono l'iscrizione 
 - Non richiedono alcun pagamento (eccezione per le attività di robotica che possono richiedere l'acquisto di robot/kit) Per le attività autogestite per nuovi insegnanti e studenti, il comitato di revisione cercherà di vedere se:
-- Gli insegnanti possono utilizzare il tutorial o l'attività senza alcuna formazione in informatica
-- Gli insegnanti possono riuscire nell'attività senza alcuna formazione in informatica
-- Gli studenti possono districarsi durante il tutorial senza la guida dei genitori o dell'insegnante
 
-Insegnanti e studenti potranno cercare e filtrare il nostro elenco di attività in base a filtri come voto, livello di esperienza, materia, hardware, ecc. Per impostazione predefinita, mostreremo prima i piani delle lezioni e le attività che:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Ricevono i voti più alti dal comitato di revisione
 - Sono attività autogestite di un'ora progettate per principianti (studenti e insegnanti)
 - Attraggono una vasta gamma di utenti (attraverso piattaforme, lingue ed età)
-- Non richiedono alcuna installazione
-- Sono nuove quest'anno
 
-[**Torna all'inizio**](#top)
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
-<a id="earlyreview"></a>
-
-## Linee guida per la presentazione di una revisione qualitativa anticipata (NOVITÀ)
-
-Qualsiasi attività inviata tra il 30 aprile e il 16 agosto riceverà una revisione qualitativa da almeno tre membri del [comitato di revisione delle attività dell'Ora del Codice](/review-comm Committee).
-
-I revisori si concentreranno sulla fornitura di quanto segue:
-
-* Feedback positivo: Cosa funziona bene?
-* Feedback critico: Cosa si potrebbe migliorare?
-* Anomalie o errori: sono presenti anomalie, errori di sintassi o errori grammaticali? In caso affermativo, in quale parte dell'attività?
-* Questa attività incoraggia gli studenti a creare qualcosa di unico?
-
-Nota: queste sono le linee guida generali per fornire un commento. La revisione anticipata della tua attività può includere commenti su tutte queste categorie oppure può includere commenti solo in una o due. Tra l'altro non esiste **nessuna garanzia che individueremo tutte le anomalie o problemi in un'attività**.
-
-**La revisione iniziale non è un'opportunità per raccogliere commenti su un'attività incompiuta. Qualsiasi attività che un revisore considera del tutto incompleta da valutare non verrà rivista.**
-
-Tutte le attività inviate per una revisione anticipata riceveranno un riscontro entro il 1 settembre. Forniremo anche un collegamento a un modulo che puoi utilizzare per spiegare modifiche specifiche apportate a un'attività in risposta ai commenti.
-
-Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, indipendentemente dal fatto che riceva una revisione anticipata o meno. Durante il periodo di revisione standard (settembre-ottobre), i revisori si concentreranno sulla valutazione delle attività secondo i criteri descritti nella sezione "Come verranno valutate le attività" sopra. A meno che non si notino modifiche specifiche a un'attività, i revisori possono e probabilmente faranno affidamento sui commenti delle revisioni anticipate per valutare le attività.
+- Feedback positivo: Cosa funziona bene?
+- Feedback critico: Cosa si potrebbe migliorare?
+- Appeal to a wide range of users (across platforms, languages, and ages)
+- Questa attività incoraggia gli studenti a creare qualcosa di unico?
+- Are new this year
 
 [**Torna all'inizio**](#top)
 
 <a id="design"></a>
 
-## Suggerimenti per la progettazione di tutorial autoguidati di un'ora
+## Linee guida per la presentazione di una revisione qualitativa anticipata (NOVITÀ)
 
-Puoi includere il [logo dell'Ora del Codice](https://hourofcode.com/us/promote/resources#logo) nel tuo tutorial, ma questo non è obbligatorio. Se si utilizza il logo dell'Ora del Codice vedi le linee guida sul marchio qui in basso. <u>In nessun caso è possibile utilizzare il logo e il nome Code.org.</u> Entrambi sono marchi registrati e non possono essere combinati con un marchio di terze parti senza espressa autorizzazione scritta.
+You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**Assicurati che uno studente medio possa finire comodamente in un'ora** Considera l'idea di aggiungere un'attività a tempo indeterminato alla fine per gli studenti che procedono più rapidamente durante la lezione. Ricorda che la maggior parte dei bambini saranno completamente a digiuno di informatica e programmazione.
+Nota: queste sono le linee guida generali per fornire un commento. La revisione anticipata della tua attività può includere commenti su tutte queste categorie oppure può includere commenti solo in una o due.
 
-**Includi le note dell'insegnante.** La maggior parte delle attività dovrebbe essere diretta dagli studenti, ma se un'attività è facilitata o gestita da un insegnante, includi istruzioni chiare e semplici per l'insegnante sotto forma di note dell'insegnante in un URL separato inviato con la tua attività. Non sono solo gli studenti ad essere principianti, lo sono anche alcuni insegnanti. Includi le informazioni utili come:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
 - Su quali piattaforme e browser funziona meglio il tutorial?
 - Funziona sugli smartphone? Sui Tablet?
 - Si consiglia la programmazione in coppia? 
 - Considerazioni per l'uso in una classe? Per esempio, se ci sono video, consiglia agli insegnanti di mostrare i video su uno schermo proiettato affinché l'intera classe possa vederli insieme
 
-**Aggiungi un feedback alla fine dell'attività.** (Per esempio: "Hai completato 10 livelli e hai imparato cosa sono i cicli! Ben fatto!")
+Tutte le attività inviate per una revisione anticipata riceveranno un riscontro entro il 1 settembre. Forniremo anche un collegamento a un modulo che puoi utilizzare per spiegare modifiche specifiche apportate a un'attività in risposta ai commenti.
 
-**Incoraggia gli studenti a condividere quanto fatto sui social media (se appropriato) quando hanno finito.** Ad esempio "ho fatto un'Ora di Codice con ________ E tu? #HourOfCode" oppure "Ho fatto #HourOfCode prendendo parte alla #CSEdWeek. E tu? @Scratch." Utilizza l'hashtag **#HourOfCode** (con lettere H, O e C maiuscole)
+Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, indipendentemente dal fatto che riceva una revisione anticipata o meno. Durante il periodo di revisione standard (settembre-ottobre), i revisori si concentreranno sulla valutazione delle attività secondo i criteri descritti nella sezione "Come verranno valutate le attività" sopra. A meno che non si notino modifiche specifiche a un'attività, i revisori possono e probabilmente faranno affidamento sui commenti delle revisioni anticipate per valutare le attività. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Crea la tua attività in Italiano o altre lingue oltre l'Inglese.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Spiega o collega l'attività a un contesto sociale significativo.** La programmazione di computer può diventare un superpotere se gli studenti si rendono conto di quanto può cambiare il mondo il meglio!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Assicurati che il tuo tutorial possa essere utilizzato in un paradigma di [Programmazione in coppia.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)** Ciò è particolarmente utile per l'Ora del Codice perché molte classi non dispongono di hardware 1: 1 per tutti gli studenti.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Torna all'inizio**](#top)
 
 <a id="tm"></a>
 
-## Linee guida sui Marchi Registrati
+## Suggerimenti per la progettazione di tutorial autoguidati di un'ora
 
-Molti dei nostri partner hanno utilizzato il nostro marchio "Hour of Code" sui loro siti web. Non vogliamo impedire questo uso, ma vogliamo verificare che esso rispetti alcuni vincoli:
+**Aggiungi un feedback alla fine dell'attività.** (Per esempio: "Hai completato 10 livelli e hai imparato cosa sono i cicli! Ben fatto!") We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. Qualsiasi riferimento a "Hour of Code" ("Ora del codice") deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune. Un esempio di uso corretto: "Partecipa all'Ora del Codice sul sito di ACMECorp.com". Un esempio di uso scorretto: "Prova l'Ora del Codice di ACME Corp".
-2. Utilizza un apice "TM" dove menzioni "Ora del Codice" o "Hour of Code", sia sul tuo sito web sia nelle descrizioni delle app.
-3. Includi una nota nella pagina (o nel piè di pagina), che contenga i collegamenti ai siti web CSEdWeek e Code.org e indichi quanto segue: “L'[Ora del Codice](http://hourofcode.com)™' è un'iniziativa a livello nazionale della [Settimana dell'educazione informatica](http://csedweek.org) e di [Code.org](http://code.org) per presentare a milioni di studenti un'ora di informatica e di programmazione dei computer ".
-4. Non è concesso alcun uso di "Ora del Codice" o "Hour of Code" nei nomi delle app.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**Torna all'inizio**](#top)
 
 <a id="pixel"></a>
 
-## Pixel di Tracciamento
+## Linee guida sui Marchi Registrati
 
-Per monitorare in modo più accurato la partecipazione, chiediamo a ogni partner del tutorial di includere un'immagine di monitoraggio di 1 pixel nella prima pagina dei tutorial dell'Ora del Codice. L'immagine pixel deve essere solo sulla pagina iniziale. Non includerla in nessuna pagina provvisoria del tuo tutorial.
+In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
-Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora del Codice. Porterà a conteggi di partecipazione più accurati per il tuo tutorial.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Se il tuo corso viene approvato e incluso nell'elenco finale dei corsi, Code.org ti fornirà uno specifico pixel di tracciamento che potrai integrare nel tuo corso. Vedi l'esempio in basso.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-NOTA: questo non è importante per le app installabili (app iOS/Android o app installate sul desktop)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Pixel di monitoraggio di esempio per Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -282,9 +264,9 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 <a id="promote"></a>
 
-## Come promuovere le tue attività, la Settimana dell'Insegnamento dell'Informatica e l'Ora del Codice
+## Pixel di Tracciamento
 
-Promuovi la tua attività nella tua rete! Indirizzali alla tua pagina dell'Ora del Codice. I tuoi utenti saranno molto più propensi ad iniziare l'attività ricevendo da te una messaggio di posta elettronica riguardante i tuoi corsi. Utilizza la campagna internazionale dell'Ora del Codice per la Settimana dell'Educazione Informatica come un pretesto per incoraggiare gli utenti a invitare altri a partecipare, aiutaci a raggiungere più studenti.
+Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora del Codice. Porterà a conteggi di partecipazione più accurati per il tuo tutorial. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Presenta l'Ora del Codice e la settimana dell'insegnamento dell'informatica sul tuo sito web. Esempio: <http://www.tynker.com/hour-of-code>
 - Promuovi l'Ora del Codice utilizzando i sociali network, i media tradizionali, le mailing list, ecc, usando l'hashtag #HourOfCode (con le lettere H, O e C maiuscole)
@@ -293,4 +275,4 @@ Promuovi la tua attività nella tua rete! Indirizzali alla tua pagina dell'Ora d
 
 [**Torna all'inizio**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+NOTA: questo non è importante per le app installabili (app iOS/Android o app installate sul desktop)<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

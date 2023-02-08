@@ -1,11 +1,11 @@
-@import "color";
+@import "color.scss";
 @import "mixins";
 @import "style-constants";
 
 div.editor-column {
   left: 0;
 }
-html[dir='rtl'] div.editor-column {
+html[dir="rtl"] div.editor-column {
   right: 0;
 }
 

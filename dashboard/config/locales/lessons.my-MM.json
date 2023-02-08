@@ -2,17 +2,71 @@
   "my-MM": {
     "data": {
       "lessons": {
-        "hoc-encryption/Simple Encryption": {
+        "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်"
+        },
+        "flappy/Flappy Code": {
+          "name": "ဖလပ်ပီ ကုပ်"
+        },
+        "starwars/Hour of Code 2015": {
+          "name": "Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း"
+        },
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code"
+        },
+        "outbreak/Outbreak": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "text-compression/Text Compression": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "k5-onlinepd-2019/Loops": {
+          "name": "Loops"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "ဖြစ်စဥ်များ"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "ကွန်ပျူတာသိပ္ပံအခြေခံ။"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "ကွန်ပျူတာသိပ္ပံအခြေခံ။"
+        },
+        "csd3-2022/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2022/Text": {
+          "name": "စာ"
+        },
+        "csd3-2018/Variables": {
+          "name": "Variables"
+        },
+        "csd2-2018/Lists": {
+          "name": "စာရင်းများ"
+        },
+        "csd3-2019/Variables": {
+          "name": "Variables"
+        },
+        "csd2-2019/Lists": {
+          "name": "စာရင်းများ"
+        },
+        "csd3-2017/Variables": {
+          "name": "Variables"
+        },
+        "csd2-2017/Lists": {
+          "name": "စာရင်းများ"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
+        },
+        "csd3-2021/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2021/Text": {
+          "name": "စာ"
         }
       }
     }

@@ -2,8 +2,28 @@
 in:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: crwdns3120262:0[QUESTION]crwdnd3120262:0[0]crwdnd3120262:0[VAR]crwdnd3120262:0[1]crwdnd3120262:0[A]crwdnd3120262:0[2]crwdnd3120262:0[B]crwdnd3120262:0[3]crwdnd3120262:0[C]crwdnd3120262:0[4]crwdne3120262:0
       BadGuys_makeNewBadGuysSprite:
         text: crwdns2887212:0[ANIMATION_NAME]crwdnd2887212:0[0]crwdnd2887212:0[LOCATION]crwdnd2887212:0[1]crwdne2887212:0
+      BadGuys_setSizeAll_dropdown:
+        text: crwdns2906000:0[SIZE]crwdnd2906000:0[0]crwdne2906000:0
+        options:
+          SIZE:
+            '0.50': crwdns2906002:0crwdne2906002:0
+            '0.75': crwdns2906004:0crwdne2906004:0
+            '1.00': crwdns2906006:0crwdne2906006:0
+            '2.00': crwdns2906008:0crwdne2906008:0
+            '3.00': crwdns2906010:0crwdne2906010:0
+      BadGuys_setSize_dropdown:
+        text: crwdns2906012:0[SPRITE]crwdnd2906012:0[0]crwdnd2906012:0[SIZE]crwdnd2906012:0[1]crwdne2906012:0
+        options:
+          SIZE:
+            '0.50': crwdns2906014:0crwdne2906014:0
+            '0.75': crwdns2906016:0crwdne2906016:0
+            '1.00': crwdns2906018:0crwdne2906018:0
+            '2.00': crwdns2906020:0crwdne2906020:0
+            '3.00': crwdns2906022:0crwdne2906022:0
       Dancelab_alternateMoves:
         text: crwdns2071154:0[GROUP]crwdnd2071154:0[0]crwdnd2071154:0[N]crwdnd2071154:0[1]crwdnd2071154:0[MOVE1]crwdnd2071154:0[2]crwdnd2071154:0[MOVE2]crwdnd2071154:0[3]crwdne2071154:0
         options:
@@ -1075,12 +1095,12 @@ in:
         text: crwdns2486178:0[COLOR]crwdnd2486178:0[0]crwdnd2486178:0[LOC1]crwdnd2486178:0[1]crwdnd2486178:0[LOC2]crwdnd2486178:0[2]crwdne2486178:0
       gamelab_edgesDisplace:
         text: crwdns169039:0[SPRITE]crwdnd169039:0[0]crwdne169039:0
-      gamelab_everySeconds:
-        text: crwdns2887214:0[N]crwdnd2887214:0[0]crwdnd2887214:0[UNIT]crwdnd2887214:0[1]crwdne2887214:0
+      gamelab_everyInterval:
+        text: crwdns2907926:0[N]crwdnd2907926:0[0]crwdnd2907926:0[UNIT]crwdnd2907926:0[1]crwdne2907926:0
         options:
           UNIT:
-            '"seconds"': crwdns2887216:0crwdne2887216:0
-            '"frames"': crwdns2887218:0crwdne2887218:0
+            '"seconds"': crwdns2907928:0crwdne2907928:0
+            '"frames"': crwdns2907930:0crwdne2907930:0
       gamelab_followingTargets:
         text: crwdns2478912:0crwdne2478912:0
       gamelab_getAllSprites:
@@ -1209,6 +1229,8 @@ in:
             '"x"': crwdns2658540:0crwdne2658540:0
             '"y"': crwdns2658542:0crwdne2658542:0
             '"z"': crwdns2658544:0crwdne2658544:0
+      gamelab_layoutGrid:
+        text: crwdns2929404:0crwdne2929404:0
       gamelab_locationAt:
         text: crwdns169063:0[X]crwdnd169063:0[0]crwdnd169063:0[Y]crwdnd169063:0[1]crwdne169063:0
       gamelab_locationModifier:
@@ -1233,8 +1255,6 @@ in:
             '"pop"': crwdns2692827:0crwdne2692827:0
             '"rain"': crwdns2692829:0crwdne2692829:0
             '"spiral"': crwdns2696057:0crwdne2696057:0
-      gamelab_makeNewScaledSprite:
-        text: crwdns2887220:0[ANIMATION_NAME]crwdnd2887220:0[0]crwdnd2887220:0[LOCATION]crwdnd2887220:0[1]crwdne2887220:0
       gamelab_makeNewSpriteAnon:
         text: crwdns401076:0[ANIMATION_NAME]crwdnd401076:0[0]crwdnd401076:0[LOCATION]crwdnd401076:0[1]crwdne401076:0
       gamelab_makeNumSprites:
@@ -1247,6 +1267,13 @@ in:
             '90': crwdns2693589:0crwdne2693589:0
             '180': crwdns2693591:0crwdne2693591:0
             '270': crwdns2693593:0crwdne2693593:0
+      gamelab_makeSpritesWithSize:
+        text: crwdns2917542:0[NUM]crwdnd2917542:0[0]crwdnd2917542:0[SIZE]crwdnd2917542:0[1]crwdnd2917542:0[COSTUME]crwdnd2917542:0[2]crwdne2917542:0
+        options:
+          SIZE:
+            '30': crwdns2917544:0crwdne2917544:0
+            '50': crwdns2917546:0crwdne2917546:0
+            '100': crwdns2917548:0crwdne2917548:0
       gamelab_mirrorSprite:
         text: crwdns169085:0[SPRITE]crwdnd169085:0[0]crwdnd169085:0[DIRECTION]crwdnd169085:0[1]crwdne169085:0
         options:
@@ -1458,6 +1485,37 @@ in:
         text: crwdns2572170:0[SPRITE]crwdnd2572170:0[0]crwdnd2572170:0[SPEECH]crwdnd2572170:0[1]crwdne2572170:0
       gamelab_spriteSayTime:
         text: crwdns2590328:0[SPRITE]crwdnd2590328:0[0]crwdnd2590328:0[TEXT1]crwdnd2590328:0[1]crwdnd2590328:0[NUM]crwdnd2590328:0[2]crwdne2590328:0
+      gamelab_spriteThink:
+        text: crwdns2917550:0[SPRITE]crwdnd2917550:0[0]crwdnd2917550:0[SPEECH]crwdnd2917550:0[1]crwdne2917550:0
+      gamelab_spriteThinkTime:
+        text: crwdns2917552:0[SPRITE]crwdnd2917552:0[0]crwdnd2917552:0[TEXT1]crwdnd2917552:0[1]crwdnd2917552:0[NUM]crwdnd2917552:0[2]crwdne2917552:0
+      gamelab_spriteThink_fables2:
+        text: crwdns2917566:0[SPRITE]crwdnd2917566:0[0]crwdnd2917566:0[THOUGHT]crwdnd2917566:0[1]crwdne2917566:0
+        options:
+          THOUGHT:
+            '"Hmm..."': crwdns2917568:0crwdne2917568:0
+            '"Time to make friends with the sheep."': crwdns2917570:0crwdne2917570:0
+            '"She''ll never recognize me now."': crwdns2917572:0crwdne2917572:0
+            '"This costume keeps me warm."': crwdns2917574:0crwdne2917574:0
+            '"I am actually a wolf."': crwdns2917576:0crwdne2917576:0
+      gamelab_spriteThink_fables3:
+        text: crwdns2917578:0[SPRITE]crwdnd2917578:0[0]crwdnd2917578:0[THOUGHT]crwdnd2917578:0[1]crwdne2917578:0
+        options:
+          THOUGHT:
+            '"Hmm..."': crwdns2917580:0crwdne2917580:0
+            '"I''m feeling sleepy."': crwdns2917582:0crwdne2917582:0
+            '"No one could ever beat me."': crwdns2917584:0crwdne2917584:0
+            '"I''ve done this race before."': crwdns2917586:0crwdne2917586:0
+            '"My feet are bigger than Turtle''s feet."': crwdns2917588:0crwdne2917588:0
+      gamelab_spriteThink_fables4:
+        text: crwdns2917590:0[SPRITE]crwdnd2917590:0[0]crwdnd2917590:0[THOUGHT]crwdnd2917590:0[1]crwdne2917590:0
+        options:
+          THOUGHT:
+            '"Hmm..."': crwdns2917592:0crwdne2917592:0
+            '"I''m so hungry."': crwdns2917594:0crwdne2917594:0
+            '"I''m a visitor in this town."': crwdns2917596:0crwdne2917596:0
+            '"If we share, we''ll all have something to eat. "': crwdns2917598:0crwdne2917598:0
+            '"I''ll trick everyone into giving me their food."': crwdns2917600:0crwdne2917600:0
       gamelab_startAvoiding:
         text: crwdns2547466:0[SPRITE]crwdnd2547466:0[0]crwdnd2547466:0[TARGET]crwdnd2547466:0[1]crwdne2547466:0
       gamelab_startFollowing:

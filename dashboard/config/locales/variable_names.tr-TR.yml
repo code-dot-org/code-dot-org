@@ -3,85 +3,97 @@ tr:
   data:
     variable_names:
       "???": "???"
-      Actor_1_Counter: Actor_1_Counter
-      Actor_2_Counter: Actor_2_Counter
+      Actor_1_Counter: Aktör_1_Sayaç
+      Actor_2_Counter: Aktör_2_Sayaç
       Blue: Mavi
       Green: Yeşil
       Red: Kırmızı
-      actor: aktör
+      actor: oyuncu
       age: yaş
-      animal1score: animal1score
-      animal1speed: animal1speed
-      animal2score: animal2score
-      animal2speed: animal2speed
+      animal1score: hayvan1skor
+      animal1speed: hayvan1hız
+      animal2score: hayvan2skor
+      animal2speed: hayvan2hız
       answer: cevap
+      armlength: Kol uzunluğu
       binary: ikili
       birds: kuşlar
       bit: bit
-      blue1: blue1
-      blue2: blue2
-      buttonHeight: buttonHeight
+      blue1: mavi1
+      blue2: mavi2
+      bodylength: vücut uzunluğu
+      buttonHeight: butonYüksekliği
       buttonMargin: buttonMargin
-      buttonWidth: buttonWidth
-      cat_score: cat_score
-      cat_speed: cat_speed
-      cats: tüm kediler
+      buttonWidth: butongenişliği
+      cat_score: kedi_skoru
+      cat_speed: kedi_hızı
+      cats: kediler
       centerToPadLeft: centerToPadLeft
       choice: Tercih
       circ: daire
-      codeName: 'Kod adı:'
+      codeName: kodAdı
       color: renk
-      controllerHeight: controllerHeight
-      controllerWidth: controllerWidth
+      controllerHeight: yükseklikkontrolü
+      controllerWidth: yükseklikgenişliği
       counter: sayaç
-      counter2: counter2
+      counter2: sayaç2
       currentActor: currentActor
-      dog_score: dog_score
-      dog_speed: dog_speed
-      dogs: tüm köpekler
-      dragons: dragons
-      enemy_speed: enemy_speed
+      direction: yön
+      dog_score: köpek_skoru
+      dog_speed: köpek_hızı
+      dogs: köpekler
+      dragons: ejderhalar
+      enemy_speed: düşman_hızı
       energy: enerji
-      firstName: firstName
-      footlength: footlength
-      gather: gather
-      green1: green1
-      green2: green2
-      guess: guess
+      firstName: isim
+      footlength: ayakuzunluğu
+      gather: toplamak
+      green1: yeşil1
+      green2: yeşil2
+      guess: tahmin
       height: Yükseklik
       honey: bal
       i: i
       left: sol
-      legangle: legangle
-      leglength: leglength
+      legangle: bacakaçısı
+      leglength: bacakuzunluğu
       length: uzunluk
       level: seviye
       marginX: marginX
       marginY: marginY
-      myName: myName
+      meal: yemek
+      myName: benimadım
       name: adı
       nectar: nektar
+      nectars: nektarlar
+      object: nesne
       padYOffset: padYOffset
       planet: gezegen
-      player_score: player_score
+      player_score: oyuncu_skoru
       points: Puanlar
       punchLine: punchLine
       random: gelişigüzel
-      red1: red1
-      red2: red2
+      red1: kırmızı1
+      red2: kırmızı2
       repeat: bu işlemleri
       repetitions: Tekrarlar
       right: sağ
       score: puan
-      screenHeight: screenHeight
-      screenWidth: screenWidth
+      score1: skor1
+      score2: skor2
+      screenHeight: ekranYüksekliği
+      screenWidth: ekrangenişliği
       set sides: genişliği ayarla
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
       shout: haykırmak
       sides: kenarlar
       size: boyut
       speed: hız
       startX: startX
       startY: startY
+      stopped-left: sol-durdu
+      type: yaz
       variable: değişken
       width: genişlik
       wizard: sihirbaz

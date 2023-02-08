@@ -11,7 +11,9 @@ th:
       Assessment: การประเมิน
       Back and Forth: เดินหน้าถอยหลัง
       Bass, Mid, and Treble: เสียงต่ำ เสียงกลาง เสียงสูง
+      Challenge: ความท้าทาย
       Code Your Own Flappy Game: เขียนโค้ดเกมนกน้อยตะลุยโลกกว้างของคุณเอง
+      Collector Game: เกมนักสะสม
       Dance Crews: ทีมเต้นรำ
       Debugging: การแก้ไขจุดบกพร่อง
       Design Mode: สถานะการออกแบบ
@@ -25,7 +27,8 @@ th:
       Functions Review: ทบทวนฟังก์ชั่น
       Functions with Parameters: ฟังก์ชันกับพารามิเตอร์
       Get In Formation: จัดรูปแบบกลุ่มนักเต้น
-      Hello World: Hello World
+      Hello World: สวัสดีชาวโลก
+      How to Make a Sprite: วิธีทำสไปรท์
       Learning from Simulations: เรียนรู้จากแบบจำลอง
       Lesson Extras: บทเรียนเพิ่มเติม
       Levels: เลเวล
@@ -42,9 +45,11 @@ th:
       Review: ตรวจสอบ
       Speed it Up, Slow it Down: เร่งจังหวะขึ้น ลดความเร็วลง
       Sprite Lab Project: โปรเจกต์สไปรท์แล็บ
+      Sprite Properties: คุณสมบัติของสไปร์ท
       Teach AI a New Word: สอนคำศัพท์ใหม่ให้ AI
       Text Compression: การบีบอัดข้อความ
       The Harvester: เกษตรกรผู้เก็บเกี่ยว
+      Train an AI to Clean the Ocean: ฝึกให้ AI ทำความสะอาดมหาสมุทร
       Variables: ตัวแปร
       Video: วิดีโอ
       'Video: Outbreak Simulator: Introduction': 'วิดีโอ: เครื่องจำลองการแพร่ระบาดของไวรัส:

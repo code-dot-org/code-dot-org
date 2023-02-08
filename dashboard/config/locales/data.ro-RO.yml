@@ -754,7 +754,7 @@ ro:
         csd_gamelab_booleans: Expresii booleene
         csd_gamelab_conditional_statements: Declarații condiționale
         csd_gamelab_if_else: Declarațiile Dacă/Altfel (if/else)
-        CSF_SpriteLabIntro_CDEF: Acesta este Sprite Lab (laboratorul de spiriduși)
+        CSF_SpriteLabIntro_CDEF: Acesta este Laboratorul cu sprite-uri
         CSF_Spritelab_MakeSprite_CDEF: Cum să faci un spiriduș în Sprite Lab
         CDEF_Video_SpritesInAction: Spiriduși în acțiune
         CSF_SpriteLab_SpritesInAction_CDEF: Spiriduși în acțiune
@@ -794,7 +794,7 @@ ro:
         csd_problem_solving_process: Procesul de Rezolvare a Problemei
         CSF_Going_Places_Safely: Cartierul meu online
         CSF_SpriteLab_Intro_v2: Prezentând Laboratorul de Desen
-        CSF_Spritelab_MakeSprite_v2: Cum să Faci un Desen
+        CSF_Spritelab_MakeSprite_v2: Cum se creează un Sprite
         CSF_SpriteLab_SpritesInAction_v2: Spiriduși în acțiune
         csd_debugging: Corectare erori
         csd_applab_designmode_short: Laborator de aplicații - mod de proiectare
@@ -870,6 +870,11 @@ ro:
         poetry_module_conditionals: Relații de condiționalitate - Programare cu ajutorul
           poeziei
         poemart_intro: Introducere În Arta Poemului
+        CSA-PL-debugging-temp: Introducere în Debugging în Java Lab - temp
+        PL_CS_Journeys_Overview: Călătorii CS
+        csp_applab_parameters: Funcții cu Parametrii
+        CSA-PL-intro-to-arrays: Matrice Uni-Dimensionale (1D)
+        CS_Changing_Everything: Știința calculatoarelor schimbă totul
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

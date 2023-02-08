@@ -39,7 +39,8 @@ it:
         personal_email_markdown: E-mail personale[(clicca qui se non hai un indirizzo
           e-mail)](%{url})
         username: Nome utente
-        password: password
+        password: Password
+        verified_teacher: Insegnante Verificato
         password_confirmation: Conferma della password
         current_password: Password attuale
         locale: Linguaggio
@@ -61,7 +62,7 @@ it:
         error:
           future: non può essere in futuro
   beta: versione provvisoria
-  hello: Ciao a tutti
+  hello: Ciao mondo
   welcome_back: Bentornato, %{name}
   your_professional_learning_plan: Your Professional Learning Plan
   see_your_learning_plan: Guarda il tuo piano di apprendimento
@@ -367,6 +368,8 @@ it:
       provider_managed_section: Questa sezione è gestita da un altro provider e non
         può essere unita. Chiedi al tuo insegnante di aggiungerti via %{provider}
         e risincronizza la loro sezione.
+      restricted_section: Non siamo riusciti ad aggiungerti alla sezione %{section_code}
+        perché é bloccata. Perfavore contatta il / la tua insegnante per aiuto.
       not_participant_type: Non siamo riusciti ad aggiungerti alla sezione %{section_code}
         perché non soddisfi la tipologia di partecipante per la sezione.
     mail:
@@ -408,7 +411,7 @@ it:
       project_gallery: Progetti
       sections: Classi
       help_support: Help and support
-      report_bug: Report a problem
+      report_bug: Segnala un errore
       report_abuse: Segnala abuso
       teacher_community: Teacher community
       professional_learning: Professional learning
@@ -430,6 +433,7 @@ it:
       educate_beyond: Dopo Code.org
       educate_inspire: Ispira uno studente
       educate_community: Comunità Online
+      educate_requirements: Requisiti Tecnici
       educate_tools: Strumenti e video
       about_us: Chi siamo
       about_leadership: Leadership
@@ -448,13 +452,14 @@ it:
       about: Informazioni
       legal: Privacy & Legale
       legal_privacy: Informativa sulla privacy
+      legal_cookie_notice: Informativa sui cookie
       legal_tos: Termini di servizio
     user:
       classroom: Cruscotto di Controllo dell'insegnante
       district_dashboard: Dashboard
       label: Ciao %{username}
       stats: Code Studio
-      my_projects: Collezione Privata
+      my_projects: I miei progetti
       settings: Il mio account
       logout: Esci
       signin: Accedi
@@ -503,7 +508,6 @@ it:
     popup:
       progress_for_user: "%{name} in corso"
       progress: I tuoi progressi
-      lines: 'Totale delle linee di codice:  %{lines}'
       close: CHIUDI
       mastery: Concetti
       puzzle_map: Fasi
@@ -669,6 +673,7 @@ it:
     print_certificate: Stampa l'attestato
   certificate_sponsor_message: "%{sponsor_name} ha fatto il generoso dono di sponsorizzare
     il tuo apprendimento."
+  certificate_hour_of_code: L'Ora del Codice
   move_students:
     new_section_dne: Ci dispiace, la classe col codice %{new_section_code} non esiste.
       Inserisci un codice di classe esistente.
@@ -687,8 +692,8 @@ it:
       le autorizzazioni a partecipare alla nuova sezione.
   share:
     title: Impara su Code Studio
-    description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
-      artistici con la programmazione.
+    description: Chiunque può imparare l'informatica. Crea giochi, app e lavori artistici
+      con la programmazione.
     try_hour_of_code: Prova l'Ora del Codice!
   gender:
     male: Maschile
@@ -702,32 +707,37 @@ it:
   footer:
     thank_you: Ringraziamo i nostri <a href="https://code.org/about/donors"> donatori</a>,
       <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team">
-      team</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors">
-      consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.
+      team allargato</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors">
+      consulenti di formazione</a> per il loro contributo nella realizzazione di Code
+      Studio.
     help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Amazon, Google
       e Microsoft che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Amazon, Google e Microsoft hanno contribuito
       a creare questi materiali.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i diritti
-      riservati.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm.
+      riservati.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Tutti i diritti riservati.<br />Frozen&#8482; &copy; %{current_year} Disney.
       Tutti i diritti riservati.<br />Ice Age&#8482; &copy; %{current_year} 20th Century
       Fox. Tutti i diritti riservati.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
       Rovio Entertainment Ltd. Tutti i diritti riservati.<br />Plants vs. Zombies&#8482;
-      &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />The
-      Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.
-    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
-      Reserved. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti
-      i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti
-      riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti
-      riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
-      Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy; %{current_year}
-      Electronic Arts Inc. Tutti i diritti riservati. The Amazing World of Gumball
-      è un marchio registrato e &copy; 2015 Cartoon Network.
+      &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />DreamWorks
+      The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. Tutti i diritti
+      riservati.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Tutti i
+      diritti riservati. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      Tutti i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti
+      i diritti riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Tutti i diritti riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. Tutti i diritti riservati. DreamWorks The
+      Bad Guys &copy; %{current_year} DreamWorks Animation LLC. Tutti i diritti riservati.
     code_from_html: Code.org usa p5.play, il quale è sotto licenza <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
-    powered_by_aws: Eseguito su Amazon Web Services
-    built_on_github: Costruito su GitHub di Microsoft
+    powered_by_aws: Amazon Web Services e il logo “Powered by AWS” sono marchi registrati
+      di Amazon.com, Inc. o delle sue consociate negli USA e/o in altri paesi.
+    built_on_github: Progettato su GitHub da Microsoft
+    google_copyright: "&copy; Google Inc. utilizzato previa autorizzazione. Google
+      Classroom è un marchio registrato di Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
       of Code&reg; sono marchi registrati di Code.org."
     copyright: Copyright
@@ -768,9 +778,8 @@ it:
   compatibility:
     upgrade:
       unsupported_message: Il tuo browser non è supportato. Si prega di aggiornare
-        il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei
-        nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati
-        qualche malfunzionamento.
+        il browser a [uno dei nostri browser supportati](%{supported_browsers_url}).
+        Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento.
       link: Ulteriori informazioni
       applab_unsupported_tablet: Sviluppo App funziona meglio su un PC o un portatile
         con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo
@@ -826,29 +835,18 @@ it:
         poi condividila.
       audience: Da 13 anni in su
       cta: Scopri come
-    dance:
-      title: Ballando col codice
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Ballando col codice
-    hoc:
-      title: Labirinto Classico
-      body: Impara i concetti base dell'informatica. Milioni di persone l'hanno già
-        fatto.
+    dance:
+      title: Ballando col codice
     flappy:
       title: Flappy
       body: Vuoi creare la tua versione del gioco "Flappy" in meno di 10 minuti? Prova
         questo corso!
-    20-hour:
-      title: Corso rapido
-      body: Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti
-        fondamentali dell'informatica e della programmazione. Il corso è pensato per
-        l'uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un
-        po' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in
-        modo più graduale ed approfondito.
-      body_short: Acquisisci le basi dell'informatica con una sintesi dei corsi 2-4.
-    hoc2014:
-      try_new_tutorial: Prova il nuovo corso dell'Ora del Codice in versione provvisoria
-      try_frozen: Artista con Anna ed Elsa, da Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: La tua collezione
       body: Guarda una collezione di app e immagini artistiche create dai nostri utenti
@@ -859,21 +857,25 @@ it:
         loro.
       audience: Da 13 anni in su
       cta: Scopri come
+    hello-world:
+      title: Ciao mondo
+      body: Scegli tra i seguenti quattro temi divertenti per programmare dei personaggi
+        interattivi in un mondo creato da te.
+    hero:
+      title: Minecraft
+      body: Minecraft è tornato per l'Ora del Codice con una nuovissima attività!
+        Viaggia attraverso Minecraft grazie al coding.
     hoc-encryption:
       title: Crittografia semplice
       body: Gli studenti imparano delle tecniche per creare e decodificare un messaggio
         cifrato.
-    weblab:
-      title: Sviluppo Web
-      body: Sviluppo Web è un ambiente di programmazione in cui si possono realizzare
-        semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi
-        il tuo sito in pochi secondi.
-      audience: Da 13 anni in su
-      cta: Scopri come
-    frozen:
-      title: Frozen
-    starwars:
-      title: Guerre Stellari
+    hoc:
+      title: Labirinto Classico
+      body: Impara i concetti base dell'informatica. Milioni di persone l'hanno già
+        fatto.
+    hoc2014:
+      try_new_tutorial: Prova il nuovo corso dell'Ora del Codice in versione provvisoria
+      try_frozen: Artista con Anna ed Elsa, da Frozen
     infinity:
       title: Laboratorio con Disney Infinity
       body: Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi
@@ -885,19 +887,36 @@ it:
       title: Minecraft
       body: Programma animali e altre creature di Minecraft nella tua versione di
         questo gioco.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft è tornato per l'Ora del Codice con una nuovissima attività!
-        Viaggia attraverso Minecraft grazie al coding.
+    poem-art:
+      title: L'arte della poesia
+      body: Esprimiti! Usa il codice per animare le poesie.
     sports:
       title: Sport
       body: Crea una partita di basket o abbina diversi sport.
+    starwars:
+      title: Guerre Stellari
     text-compression:
       title: Compressione del testo
       body: In questa lezione impari come comprimere un testo, sostituendo sequenze
         di caratteri ripetuti con simboli.
+    weblab:
+      title: Sviluppo Web
+      body: Sviluppo Web è un ambiente di programmazione in cui si possono realizzare
+        semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi
+        il tuo sito in pochi secondi.
+      audience: Da 13 anni in su
+      cta: Scopri come
+    widgets:
+      title: Componenti
+      body: Gli studenti possono esplorare concetti dal nostro corso Cs Principles
+        usando questi strumenti digitali sul campo. Possono utilizzare i componenti
+        per conto proprio o creare una lezione su un singolo concetto per la classe.
+      audience: Dai 14 anni in su
+      cta: Scopri come
+    unplugged_conditionals:
+      title: Istruzioni condizionali
+      body: Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali
+        usando un mazzo di carte.
     unplugged:
       title: Lezioni Tradizionali
       audience: Età 4+
@@ -907,17 +926,14 @@ it:
         lezioni tradizionali sia come un corso a sé stante che come complemento agli
         altri corsi.
       body_short: Se non hai un computer, prova queste lezioni tradizionali.
-    unplugged_conditionals:
-      title: Istruzioni condizionali
-      body: Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali
-        usando un mazzo di carte.
-    widgets:
-      title: Componenti
-      body: Gli studenti possono esplorare concetti dal nostro corso Cs Principles
-        usando questi strumenti digitali sul campo. Possono utilizzare i componenti
-        per conto proprio o creare una lezione su un singolo concetto per la classe.
-      audience: Dai 14 anni in su
-      cta: Scopri come
+    20-hour:
+      title: Corso rapido
+      body: Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti
+        fondamentali dell'informatica e della programmazione. Il corso è pensato per
+        l'uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un
+        po' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in
+        modo più graduale ed approfondito.
+      body_short: Acquisisci le basi dell'informatica con una sintesi dei corsi 2-4.
   landing:
     prerelease_tutorial: Questa esercitazione è in **versione provvisoria**. È soggetta
       a revisioni man mano che arrivano osservazioni, al fine di migliorarla.
@@ -1053,20 +1069,6 @@ it:
       potrebbero essere inaccessibili ai tuoi studenti prima di accettare esplicitamente
       i termini aggiornati.
     review_terms: Rivedi i termini dell'aggiornamento
-  donor_interstitial:
-    title: Questi corsi di informatica sono gratuiti grazie a...
-    subtitle: 'Ringraziamo i generosi finanziatori il cui sostegno ha reso possibile
-      il successo di Code.org. Ci impegniamo a mantenere Code.org gratuito sia per
-      le scuole sia per gli studenti, in tutto il mondo, grazie alla continua generosità
-      dei nostri [donors](%{donors_url})!
-
-'
-    local_supporters: Sostenitori locali
-    global_supporters: Sostenitori globali
-    support_codeorg_1: Ogni dollaro donato a Code.org permette di dare un'opportunità
-      a tantissimi studenti.
-    support_codeorg_2: "[Dona ora](%{donate_url}) per sostenere Code.org."
-    get_started: Inizia con Code.org
   school_info_interstitial:
     title: Vogliamo portare l'Informatica ad ogni studente - aiutaci a tenere traccia
       dei nostri progressi!
@@ -1357,6 +1359,7 @@ it:
         music: Musica
         art: Arte
         other: 'Altro:'
+        na: Non applicabile
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy - l'Accademia del Codice
@@ -1365,7 +1368,8 @@ it:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Altro:'
+        other: Altro
+        na: Non applicabile
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1375,7 +1379,8 @@ it:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Laboratorio di meraviglie
-        other: 'Altro:'
+        other: Altro
+        na: Non applicabile
       workshop_course:
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)
@@ -1458,3 +1463,12 @@ it:
   unit_prefix: Unità %{n}
   code_org_logo_alt: Code.org Home
   teacher_feedback: Commento dell'insegnante
+  lesson_lock:
+    error:
+      no_updates: Nessun aggiornamento da effettuare
+      missing_params: È necessario fornite gli ID utente, livello e unità
+      cannot_view_locked_answers: Impossibile visualizzare le risposte se bloccato
+      forbidden: L'utente non può aggiornare lo stato bloccabile dello studente
+  reset_predict_progress_button: Eliminare la risposta
+  pixelation:
+    binary: Binario

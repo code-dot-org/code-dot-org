@@ -46,8 +46,7 @@ describe('PrincipalApproval', () => {
   it('Requires more fields if the application is accepted and is replacing a csd course', () => {
     const expectedFields = [
       ...ALWAYS_REQUIRED_FIELDS,
-      ...REQUIRED_SCHOOL_INFO_FIELDS,
-      'replaceWhichCourseCsd'
+      ...REQUIRED_SCHOOL_INFO_FIELDS
     ].sort();
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
       {
@@ -62,8 +61,7 @@ describe('PrincipalApproval', () => {
   it('Requires more fields if the application is accepted and is replacing a csp course', () => {
     const expectedFields = [
       ...ALWAYS_REQUIRED_FIELDS,
-      ...REQUIRED_SCHOOL_INFO_FIELDS,
-      'replaceWhichCourseCsp'
+      ...REQUIRED_SCHOOL_INFO_FIELDS
     ].sort();
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
       {

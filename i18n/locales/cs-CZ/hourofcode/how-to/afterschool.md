@@ -6,17 +6,17 @@ title: Hodina programování na čas po škole
 
 # Jak realizovat Hodinu kódu při mimoškolní aktivitě
 
-### Přidejte se k hnutí a poskytněte svým studentům úvod do počítačových věd podle těchto kroků.
+### Přidejte se k hnutí a pomocí těchto kroků uveďte studenty do počítačových věd.
 
-Výpočetní myšlení pomáhá zlepšovat dovednosti v oblasti řešení problémů, logiky a kreativity. A technika mění veškerý průmysl na planetě. Studenti by se dnes měli naučit techniku vytvářet, nejen ji používat. Tím, že začnou brzy, získají základ k úspěchu na jakékoli kariérní dráze 21. století.
+Informatické myšlení pomáhá rozvíjet schopnost řešit problémy, logické uvažování a tvořivost. A technologie mění každý obor na planetě. Studenti by se dnes měli učit technologie nejen používat, ale také je vytvářet. Tím, že začnou brzy, dostanou základ pro úspěch v jakékoli budoucí kariérní dráze, která je ve 21. století čeká.
 
 Vyzkoušet „Hodinu programování“ je jednoduchý a zábavný způsob, jak dát svým studentům úvod do počítačových věd, možná i ten úplně první. Pokud potřebujete někoho na pomoc, můžete se spojit s [místním dobrovolníkem, ]({{ urls/volunteer_local }}) aby Vám pomohl zorganizovat Hodinu programování ve Vašich mimoškolních aktivitách nebo klubu.
 
-### Hodinu programování lze pořádat také dálkově! Chcete-li začít, podívejte se na naše [tipy k pořádání akce Hodina programování](https://hourofcode.com/us/how-to/virtual).
+### Hodinu kódu lze uspořádat také na dálku. Chcete-li začít, podívejte se na naše [tipy k pořádání virtuální Hodiny kódu](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Pusťte si toto video "jak na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Pusťte si toto video "jak na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## Vyberte si návod
 
@@ -65,7 +65,7 @@ Začněte s Hodinou kódu tím, že budete inspirovat účastníky a diskutovat 
 
 **Přímí účastníci aktivity** - Na tabuli napište odkaz na výukový kurz. Odkaz najdete mezi [informacemi o vybraném výukovém kurzu]({{ urls/learn }}) pod počtem účastníků.
 
-**Když někdo bude narážet na obtíže, je správné odpovědět:** - “Nevím. Vyřešme tohle společně.” - „Technika nefunguje vždy tak, jak chceme.“ - „Učit se programovat je jako učit se nový jazyk; nebudete to hned od začátku umět dokonale.“
+**Když někdo bude narážet na obtíže, je správné odpovědět:** - “Nevím. Vyřešme tohle společně.“ - „Technika nefunguje vždy tak, jak chceme.“ - „Učit se programovat je jako učit se nový jazyk; nebudete to hned od začátku umět dokonale.“
 
 **Co dělat, jestliže někdo skončí dříve?** - Vybídněte účastníky, aby zkusili jinou aktivitu Hodiny programování na adrese [hourofcode.com/learn]({{ urls/learn }}) - Nebo požádejte ty, kdo skončí dříve, aby pomohli ostatním, kterým to nejde.
 
@@ -81,7 +81,7 @@ Začněte s Hodinou kódu tím, že budete inspirovat účastníky a diskutovat 
 - Podívejte se na [osvědčené postupy](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) od organizátorů Hodiny programování z minula.
 - Sledujte záznam našeho [webináře Průvodce vzdělavatele Hodinou programování](https://youtu.be/EJeMeSW2-Mw).
 - Navštivte [Fórum Hodiny programování,](http://forum.code.org/c/plc/hour-of-code) kde získáte rady, náhled a podporu od jiných organizátorů.
-- Projděte si [Nejčastěji kladené otázky (FAQ) o Hodině kódu](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Projděte si [nejčastější dotazy (FAQ) k Hodině kódu](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Co následuje po Hodině kódu?
 

@@ -1,0 +1,17 @@
+{
+  "de-DE": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "Die Nutzung innovativer Computer-Tools kann mit Risiken für Ihre persönliche Sicherheit und Identität verbunden sein."
+        },
+        "csp2021/DAT-1": {
+          "description": "Der Computer stellt die Daten anders dar, als sie für den Benutzer interpretiert und ihm angezeigt. Die Daten des Computers werden von Programmen in eine Darstellung übersetzt, die für uns leicht verständlich ist."
+        },
+        "ngss/ETS": {
+          "description": "Konstruktion in der Wissenschaft"
+        }
+      }
+    }
+  }
+}

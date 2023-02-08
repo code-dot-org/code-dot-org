@@ -2,9 +2,6 @@
 en-GB:
   data:
     script:
-      category:
-        hoc_category_name: The Hour of Code
-        math_category_name: Mathematics
       name:
         course1:
           title: Course 1
@@ -14,36 +11,13 @@ en-GB:
         course3:
           title: Course 3
           description_audience: Ages 8-18
-          lessons:
-            Computational Thinking:
-              name: Computational Thinking
         course4:
           title: Course 4
           description_audience: Ages 9-18
-        usability:
-          lessons:
-            Variables:
-              name: Variables
         20-hour:
           description_audience: Ages 10-18
-          lessons:
-            Computational Thinking:
-              name: Computational Thinking
-            Introduction to Computer Science:
-              name: Introduction to Computer Science
-            Song Writing:
-              name: Song Writing
-            The Maze:
-              name: The Maze
-        edit-code:
-          lessons:
-            The Maze:
-              name: The Maze
         step:
           title: Step
-          lessons:
-            Step:
-              name: Step
         afterschool1:
           description_audience: Ages 7-13
         Special Fun:
@@ -60,74 +34,16 @@ en-GB:
           description_audience: Ages 8-18
         gradeKinder:
           description_audience: Ages 5-18
-          lessons:
-            Loops:
-              name: Loops
         grade4:
           description_audience: Ages 9-99
         grade1:
           description_audience: Ages 5-18
-          lessons:
-            Loops:
-              name: Loops
         grade5:
           description_audience: Ages 10-110
         grade3:
           description_audience: Ages 5-18
-        csd3-2017:
-          lessons:
-            Variables:
-              name: Variables
         grade2:
           description_audience: Ages 5-18
-        k5concepts:
-          lessons:
-            Loops:
-              name: Loops
-            Variables:
-              name: Variables
-        csd2-2017:
-          lessons:
-            Lists:
-              name: Lists
-        csd6-draft:
-          lessons:
-            Lists:
-              name: Lists
-        csd6-2017:
-          lessons:
-            Lists:
-              name: Lists
-        csd3-draft:
-          lessons:
-            Variables:
-              name: Variables
-        csd2-draft:
-          lessons:
-            Lists:
-              name: Lists
-        csd3-chapters:
-          lessons:
-            Variables:
-              name: Variables
-            'null':
-              name: 'null'
-        csd6-old:
-          lessons:
-            Lists:
-              name: Lists
-        csd3-1819draft:
-          lessons:
-            Variables:
-              name: Variables
-        csd3-2018:
-          lessons:
-            Variables:
-              name: Variables
-        csd2-2018:
-          lessons:
-            Lists:
-              name: Lists
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -146,10 +62,6 @@ en-GB:
               display_name: Loops
             csf_variables:
               display_name: Variables
-        andrea-test:
-          lessons:
-            'null':
-              name: 'null'
         coursec-2019:
           lesson_groups:
             csf_loops:
@@ -166,14 +78,6 @@ en-GB:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        csd2-2019:
-          lessons:
-            Lists:
-              name: Lists
-        csd3-2019:
-          lessons:
-            Variables:
-              name: Variables
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -218,28 +122,10 @@ en-GB:
               display_name: Lists
             csp_loops:
               display_name: Loops
-        csd2-pilot:
-          lessons:
-            Lists:
-              name: Lists
-        csd3-pilot:
-          lessons:
-            Variables:
-              name: Variables
-        maddie-test:
-          lessons:
-            stage 1:
-              name: stage 1
         csl-vn:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        k5-onlinepd-2019:
-          lessons:
-            Loops:
-              name: Loops
-            Variables:
-              name: Variables
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -262,12 +148,6 @@ en-GB:
               display_name: Lists
             csp_loops:
               display_name: Loops
-        csd3-2020:
-          lessons:
-            Variables:
-              name: Variables
-            Text:
-              name: Text
         coursea-2020:
           lesson_groups:
             csf_loops:
@@ -298,34 +178,10 @@ en-GB:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        csp5-virtual:
-          lessons:
-            Variables:
-              name: Variables
-        k5-onlinepd-2020:
-          lessons:
-            Loops:
-              name: Loops
-            Variables:
-              name: Variables
-        csd3-virtual:
-          lessons:
-            Variables:
-              name: Variables
-            Text:
-              name: Text
         2021drafting:
           lesson_groups:
             lessonGroup-3:
               display_name: Variables
-        csd3-2021:
-          lessons:
-            Variables:
-              key: Variables
-              name: Variables
-            Text:
-              key: Text
-              name: Text
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -374,14 +230,6 @@ en-GB:
               display_name: Variables
             variables:
               display_name: Variables
-        k5-onlinepd-2021:
-          lessons:
-            Loops:
-              key: Loops
-              name: Loops
-            Variables:
-              key: Variables
-              name: Variables
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-3:
@@ -434,35 +282,33 @@ en-GB:
           lesson_groups:
             lessonGroup-8:
               display_name: Variables
-        csa1-2022:
-          lessons:
-            lesson-9:
-              name: Loops
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        csa2-2022:
-          lessons:
-            lesson-6:
-              name: Variables
-        csa1-2022-exemplars:
-          lessons:
-            lesson-9:
-              name: Loops
         coursef-2022-pilot:
           lesson_groups:
             lessonGroup-8:
               display_name: Variables
-        csa2-2022-exemplars:
+        csa1-2023:
           lessons:
-            lesson-1:
-              name: Variables
-        k5-onlinepd-2022:
-          lessons:
-            Loops:
+            lesson-6:
               name: Loops
-              key: Loops
-            Variables:
+        csa2-2023:
+          lessons:
+            lesson-4:
               name: Variables
-              key: Variables
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Loops
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lists
+            lessonGroup-3:
+              display_name: Loops

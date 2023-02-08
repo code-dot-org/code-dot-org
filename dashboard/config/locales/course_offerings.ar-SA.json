@@ -53,11 +53,20 @@
         "starwarsblocks": "حرب النجوم: بناء مجرة باستعمال البرمجة",
         "text-compression": "ضغط النص",
         "csa-self-paced-pl": "تصفح موقع Code.org لمعلمي CSA التجريبيين",
-        "counting-csc": "العد مع لوريل",
-        "explore-data-1": "استكشاف المربعات الإحصائية والرسوم البيانية",
+        "outbreak-csc": "تفشي المرض",
         "poem-art": "فن القصيدة",
         "edit-code": "تعديل كود البرنامج",
-        "tesstest921": "tesstest921"
+        "tesstest921": "tesstest921",
+        "poetry-hoc3": "الشعر الخاص 3",
+        "csa-u8-dev": "csa-u8-dev",
+        "allthethingscourse": "الدورة الشاملة لكل شيء",
+        "halloween": "عيد الهالوين",
+        "step": "خطوة",
+        "csa5-exemplars": "csa5-exemplars",
+        "soccer": "كرة القدم",
+        "hello-world-space": "مرحبا بالعالم: الفضاء",
+        "hello-world-soccer": "مرحبا بالعالم: كرة القدم",
+        "playground": "ملعب"
       }
     }
   }

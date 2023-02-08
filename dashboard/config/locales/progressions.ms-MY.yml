@@ -2,44 +2,550 @@
 ms:
   data:
     progressions:
+      '"If/Else" with the Bee': '"Jika/Lain" dengan Lebah'
+      8-Bit Binary Number Widget: Widget Nombor Perduaan 8-Bit
+      AI Lab and Isaac's Data: Makmal AI dan Data Isaac
+      AI Lab and Kim's Data: AI Lab dan Data Kim
       AI Machine Learning - Video: Pembelajaran Mesin AI - Video
+      'AI for Oceans: Fish vs Not Fish': 'AI untuk Lautan: Ikan lwn Bukan Ikan'
+      'AI for Oceans: Types of Fish': 'AI untuk Lautan: Jenis Ikan'
       'AI: Impact on Society - Video': 'AI: Kesan kepada Masyarakat - Video'
       'AI: Training Data & Bias - Video': 'AI: Data Latihan & Bias - Video'
+      Accelerometer Events: Peristiwa Accelerometer
+      Add Content and HTML: Tambah Kandungan dan HTML
+      Add Content and Structure to Your Page: Tambahkan Kandungan dan Struktur pada
+        Halaman Anda
+      Add Movement: Tambah Pergerakan
+      Add Sprites: Tambahkan Sprites
+      Add Style: Tambah Gaya
+      Add Style to Your Page: Tambahkan Gaya pada Halaman Anda
+      Add Text: Tambah Teks
+      Add a Welcome Screen: Tambah Skrin Selamat Datang
+      Adding Images: Menambah Imej
+      Adding New Screens: Menambah Skrin Baharu
+      Adding Pages: Menambah Halaman
+      Adding Screens: Menambah Skrin
+      Alternative Datasets: Set Data Alternatif
+      Animate Your Scene: 'Animasikan Adegan Anda
+
+'
       App Lab Intro - Video: Pengenalan Makmal Apl - Video
+      'App Project: Screen Design': 'Projek Aplikasi: Reka Bentuk Skrin
+
+'
+      'App: Choose a Kid''s Movie': 'Apl: Pilih Filem Kanak-kanak'
+      'App: Friend Finder': 'Aplikasi: Pencari Rakan'
+      'App: Guess the Number': 'Aplikasi: Teka Nombor'
+      'App: How Many Countries': 'Aplikasi: Berapa Banyak Negara'
+      'App: Improved Pet App': 'Aplikasi: Aplikasi Haiwan Peliharaan yang Dipertingkatkan'
+      'App: Is It Your Birthday?': 'Apl: Adakah Hari Lahir Anda?'
+      'App: My Famous Birthday': 'Aplikasi: Hari Lahir Terkenal Saya'
+      'App: National Parks': 'Aplikasi: Taman Negara'
+      'App: Outfit Picker': 'Aplikasi: Pemilih Pakaian'
+      'App: Pet Chooser': 'Aplikasi: Pemilih Haiwan Peliharaan'
+      'App: Stamp Notebook': 'Aplikasi: Buku Nota Setem'
+      'App: Story Creator': 'Apl: Pencipta Cerita'
+      'App: The Fastest Finger': 'Apl: Jari Terpantas'
+      'App: Where Should I Live?': 'Apl: Di Mana Saya Harus Tinggal?'
+      Artist Intro with JR Hildebrand: Pengenalan Artis dengan JR Hildebrand
+      Artist Intro with JR Hildebrande: Pengenalan Artis dengan JR Hildebrand
       Artist Project: Projek Artis
       'Artist: Variables': 'Artis: Pemboleh Ubah'
       Assessment: Penilaian
+      Attribution: Atribut
       Back and Forth: Pergi ke depan dan ke belakang
+      Basic Conditionals: Syarat Asas
       Bass, Mid, and Treble: Bes, Julat Tengah dan Trebel
+      Be a Super Digital Citizen: Jadilah Warganegara Super Digital
+      Begin planning your project: Mula merancang projek anda
+      Begin planning your project_2018: Mula merancang project_2018 anda
+      Binary Bracelets - Unplugged Activity: Gelang Perduaan - Aktiviti Nirplag
+      Binary Number Widget: Widget Nombor Perduaan
+      Binary Numbers: Nombor Perduaan
+      Board Events: Acara Papan
+      Board Input and Output: Input dan Output Papan
+      Book Recommender App: Aplikasi Pengesyor Buku
+      Book Recommender Model Card: Kad Model Pengesyor Buku
+      Boolean Comparison: Perbandingan Boolean
+      Build a Platform Jumper: Bina Pelompat Platform
+      Build a Screen: Bina Skrin
+      Building a UI with Design Mode: Membina UI dengan Mod Reka Bentuk
+      Building an App: Membina Aplikasi
+      Button Circuits: Litar Butang
+      CS Discoveries Post-Course Survey: Kajian Pasca Kursus CS Discoveries
+      CS Discoveries Post-course Survey: Kajian Pasca Kursus CS Discoveries
+      CSD U3 Interactive Card Exemplar: Exemplar Kad Interaktif CSD U3
+      CSD U3 platform intro: Pengenalan platform CSD U3
+      'CSD: For Loop': 'CSD: Untuk Gelung'
+      Cake Defender: Pertahanan Kek
+      Cake Survey: Kaji Selidik Kek
+      Challenge: Cabaran
+      Challenge Levels: Tahap Cabaran
+      'Challenge: Lists': 'Cabaran: Senarai'
+      'Challenge: RGB Colors': 'Cabaran: Warna RGB'
+      Challenges: Cabaran
+      Change: Ubah
+      Check Your Work: Semak Kerja Anda
+      Check-In Survey: Kaji Selidik Daftar Masuk
+      Checking for a Winner: Menyemak Pemenang
+      'Choice Levels: Customize Your App': 'Tahap Pilihan: Sesuaikan Aplikasi Anda'
+      Choose Your Own Adventure: Pilih Pengembaraan Anda Sendiri
+      Choosing Good IDs: Memilih ID yang Baik
+      Club Datasets: Set Data Kelab
+      Code Prediction: Ramalan Kod
       Code Your Own Flappy Game: Kod Permainan Flappy Anda Sendiri
+      Code Your Page: Kod Halaman Anda
+      Collector Game: Permainan Pengumpul
+      Collisions: Perlanggaran
+      Collisions in Games: Perlanggaran dalam Permainan
+      Color LEDs: LED berwarna
+      Combining Projects: Menggabungkan Projek
+      Combining Representations: Menggabungkan Perwakilan
+      Conditionals with Cards - Unplugged Activity: Bersyarat dengan Kad - Aktiviti
+        Nirplag
+      'Conditionals: If Statements': 'Syarat: Penyata If'
+      'Conditionals: If and If/Else Statements': 'Syarat: Penyata If dan If/Else '
+      Control Your Player: Kawal Pemain Anda
+      'Course E: Play Lab Project': 'Kursus E: Projek Makmal Main'
+      'Course F: Artist Project': 'Kursus F: Projek Artis'
+      'Course F: Artist Project - Revise': 'Kursus F: Projek Artis - Semakan'
+      'Course F: Play Lab Project': 'Kursus F: Projek Makmal Main'
+      'Course F: Play Lab Project - Revise': 'Kursus F: Projek Play Lab - Semak semula'
+      Crack Random Substitution: Penggantian Rawak Retak
+      Crack a Caesar Cipher: Retakkan Caesar Cipher
+      Create Your Own Animation: Cipta Animasi Anda Sendiri
+      Create Your Sprites: Cipta Sprite Anda
+      Create a Background: Cipta Latar Belakang
+      Create a Google Form: Cipta Borang Google
+      Create a Story: Ciptakan Cerita
+      Create an App in App Lab: Cipta Aplikasi dalam App Lab
+      Create your project: Cipta projek anda
+      Customize: Menyesuaikan
+      Customize Your App: Sesuaikan Aplikasi Anda
       Dance Crews: Kru Tarian
+      Data Visualization: Visualisasi Data
+      De-bugging with the Step Button: Penyahpepijatan Dengan Butang Langkah
       Debugging: Penyahpepijatan
+      Debugging with the Step Button: Penyahpepijatan Dengan Butang Langkah
+      'Demo App: Interactive Card': 'Aplikasi Demo: Kad Interaktif'
+      Demo Apps: Aplikasi Demo
+      Design Mode: Mod Reka Bentuk
+      Design Your Game: Reka Bentuk Permainan Anda
+      Design Your Prototype: Reka Prototaip Anda
+      Design a Screen for your App: Reka Skrin untuk Aplikasi anda
+      Design an AI App - AI Lab: Reka Aplikasi AI - Makmal AI
+      Design an AI App - App Lab: Reka Aplikasi AI - Makmal Aplikasi
       Designing for Accessibility: Mereka Bentuk untuk Aksesibiliti
+      Digital Sharing - Unplugged Activity: Perkongsian Digital - Aktiviti Nirplag
+      Draw Your Background: Lukis Latar Belakang Anda
+      Draw a Background: Lukis Latar Belakang
       Drawing: Lukisan
+      Driver Alert System: Sistem Makluman Pemandu
+      Escape Room Example: Contoh Bilik Escape
       Events: Acara-acara
+      Events and Linking Screens: Acara dan Skrin Pemautan
+      Events and Properties: Peristiwa dan Hartanah
       Example: Contoh
+      Example Animated Scene: Contoh Adegan Animasi
+      Example App Types: Contoh Jenis Aplikasi
+      'Example App: Zoo Classification': 'Contoh Aplikasi: Klasifikasi Zoo'
+      Example Apps: Contoh Aplikasi
+      Example Projects: Contoh Projek
+      Example projects: Contoh Projek
+      Exemplar Personal Websites: Laman Web Peribadi Exemplar
+      Expanding Personal Website: Memperluas Laman Web Peribadi
+      Expanding Your Website: Memperluas Laman Web Anda
+      Experiment with Web Lab: Eksperimen dengan Makmal Web
+      Exploration: Penerokaan
+      'Exploration: For Loops': 'Penerokaan: Untuk Gelung'
       'Exploration: Rikki''s Poster': 'Penerokaan: Poster Rikki'
+      'Exploration: Sample Apps': 'Penerokaan: Aplikasi Sampel'
+      'Exploration: Sample Programs': 'Penerokaan: Atur Cara Sampel'
+      'Exploration: Sample Project': 'Penerokaan: Projek Sampel'
+      Exploring CS in Entertainment: Meneroka CS dalam Hiburan
+      Exploring more CSS: Meneroka lebih banyak CSS
+      Extra Challenge: Cabaran Tambahan
+      'Extra Challenge: Sound Board': 'Cabaran Tambahan: Papan Bunyi'
+      Final Room Escape App: Aplikasi Escape Bilik Akhir
+      Find the Wizard: Cari Wizard
+      Finish a Screen: Selesaikan Skrin
+      Finish the Prototype: Selesaikan Prototaip
+      Finishing Functions: Fungsi Penamat
+      Finishing Touches: Sentuhan Penamat
+      Flyer Game: Permainan Flyer
+      Follow the Algorithm - Unplugged Activity: Ikuti Algoritma - Aktiviti Nirplag
+      Follow the Mouse: Ikut Tetikus
+      Fonts and Style: Fonts dan Style
+      FoodFight: FoodFight
+      For Loop Fun - Unplugged Activity: Gelung Untuk yang Menyeronokkan - Aktiviti
+        Nirplag
+      For Loops and Color LEDs: Untuk Gelung dan LED Warna
+      For Loops and Repeat Blocks: Untuk Gelung dan Blok Berulang
+      Free Play: Permainan Bebas
+      'Free Play: Make a Scene': 'Permainan Bebas: Membuat Adegan'
+      'Free Play: Make an Interactive Scene': 'Permainan Bebas: Membuat Adegan yang
+        Berinteraktif'
+      Fruit and Veggie Explorer: Penjelajah Buah dan Sayuran
       Functions: Fungsi
       Functions with Parameters: Fungsi-fungsi dengan parameter
       Get In Formation: Berada dalam Formasi
+      Getting Properties: Mendapatkan Harta
+      Graph Paper Programming - Unplugged Activity: Pengaturcaraan Kertas Graf - Aktiviti
+        Nirplag
+      Green Glass Door: Pintu Kaca Hijau
+      Guess The Number: Teka Nombor
+      Headings: Headings
       Hello World: Helo Dunia
+      How to Create a Simple Function: Cara Mencipta Fungsi Mudah
+      How to Make a Sprite: Cara Membuat Peperi
+      Ice Age Loops: Gegelung Ice Age
+      Images and Sounds: Imej dan Bunyi
+      Import Your Model: Import Model Anda
+      Import a Model: Import Model
+      Importing Your Model: Mengimport Model Anda
+      Improved Shoe Recommender: Pengesyor Kasut yang Diperbaiki
+      Incorporate Feedback: Menggabungkan Maklum Balas
+      Innovation Research: Penyelidikan Inovasi
+      Input Examples: Contoh Input
+      Input with If-Else: Input dengan If-Else
+      InspirationalArtwork: InspirationalArtwork
+      Intro to Flyer Game: Pengenalan kepada Flyer Game
+      Intro to For Loops: Pengenalan kepada For Loops
+      Intro to Side Scrollers: Pengenalan kepada Side Scrollers
+      Intro to Sprites: Pengenalan kepada Sprite
+      Intro to Variables: Pengenalan kepada Variables
+      Isaac's Survey Data: Data Tinjauan Isaac
+      Iteration and Parameters: Lelaran dan Parameter
+      Keep On Dancing!: Teruskan Menari!
+      Keeping Data Secret: Menyimpan Rahsia Data
+      Keyboard Input: Input Papan Kekunci
+      Kim's Survey: Kaji Selidik Kim
+      Kim's Survey Data: Kaji Selidik Data Kim
+      LED Apps: Apl LED
+      Layout with CSS: Reka letak dengan CSS
       Learning from Simulations: Belajar dari simulasi
       Lesson Extras: Tambahan Pelajaran
+      Level Overview: Tahap Gambaran Keseluruhan
       Levels: Tahap
+      Light Show: Pertunjukan Cahaya
+      Linking Pages: Memautkan Halaman
+      Linking Screens: Memautkan Skrin
       Lists: Senarai
+      Looking for Patterns: Mencari Corak
+      Looping: Gelung
+      Loops with the Artist: Gelung dengan Artis
+      Make Your Sprites: Buat Sprite
+      Make a Prediction: Buat Ramalan
+      Make an Interactive Card: Membuat Kad Interaktif
+      Make it Interactive: Jadikannya Interaktif
+      Making Scenes: Membuat Adegan
+      Making Songs: Membuat Lagu
+      Making Sounds: Membuat Bunyi
+      Making an Interactive Card: Membuat Kad Interaktif
+      'Maze Intro: Programming with Blocks': 'Maze Intro: Pengaturcaraan dengan Blok'
       Measures: Corak Berirama
+      Medical Dataset Model Cards: Kad Model Set Data Perubatan
+      Medical Priority App: Aplikasi Keutamaan Perubatan
+      'Minecraft: Hero''s Journey': 'Minecraft: Hero''s Journey'
+      'Mini-Project: About Me': 'Projek Mini: Tentang Saya'
+      'Mini-Project: Alien Dance Moves': 'Projek Mini: Gerakan Tarian Alien'
+      'Mini-Project: Alien Dance Party': 'Projek Mini: Parti Tarian Alien'
+      'Mini-Project: Create a Virtual Pet': 'Projek Mini: Buat Haiwan Peliharaan Maya'
+      'Mini-Project: Outbreak Simulator': 'Projek Mini: Simulator Wabak'
+      'Mini-Project: Royal Battle': 'Projek Mini: Pertempuran Diraja'
+      'Mini-Project: Snowflake #1': 'Projek Mini: Kepingan Salji #1'
+      'Mini-Project: Snowflake #2': 'Projek Mini: Kepingan Salji #2'
+      'Mini-Project: Swimming Fish': 'Projek Mini: Ikan Berenang'
+      'Mini-Project: Swimming Fish (continued)': 'Projek Mini: Ikan Berenang (sambungan)'
+      'Mini-Project: User Input Programs': 'Projek Mini: Program Input Pengguna'
+      'Mini-Project: Virtual Pet': 'Projek Mini: Haiwan Peliharaan Maya'
+      'Mini-project: Chase Game': 'Projek mini: Permainan Chase'
+      'Mini-project: Flappy Game': 'Projek mini: Permainan Flappy'
+      'Mini-project: Interactive Poster': 'Projek mini: Poster Interaktif'
+      'Mini-project: Jorge the Dog': 'Projek mini: Jorge the Dog'
+      'Mini-project: Sticker Art': 'Projek mini: Seni Pelekat'
+      'Mini-project: Sticker Design': 'Projek mini: Reka Bentuk Pelekat'
+      Modify simulation variables: Ubah suai pembolehubah simulasi
       More Buttons: Lebih banyak butang
+      More Input: Lebih Banyak Input
+      More Parameters: Lebih Banyak Parameter
+      Motorcycle: Motosikal
+      Move It Move it Video  - Unplugged Activity: Video Move It Move it  - Aktiviti
+        Nirplag
+      Movement with the Counter Pattern: Pergerakan dengan Corak Kaunter
+      Multiframe Animations: |2-
+
+        Animasi Multiframe
+      Musical Arrays: Susunan Muzik
+      My Loopy Robotic Friends - Unplugged Activity: My Loopy Robotic Friends - Aktiviti
+        Nirplag
+      My Robotic Friends - Unplugged Activity: My Robotic Friends - Aktiviti Nirplag
+      Nested Loops with the Bee: Nested Loops with the Bee
+      New Challenge Introduction: Pengenalan Cabaran Baharu
+      New Shapes: Bentuk Baharu
+      Orientation: Orientasi
       Overview: Gambaran Keseluruhan
+      'Overview: Design Mode': 'Gambaran Keseluruhan: Mod Reka Bentuk'
+      'Overview: If Statements': 'Gambaran Keseluruhan: Penyata If'
+      'Overview: Images': 'Gambaran keseluruhan: Imej'
+      'Overview: onEvent': 'Gambaran keseluruhan: onEvent'
+      'Overview: setPosition': 'Gambaran keseluruhan: setPosition'
+      Pet Recommender: Pengesyor Haiwan Kesayangan
+      Picturing Data: Memotret Data
+      Pizza Party Data: Data Parti Pizza
+      Pizza Recommendations: Cadangan Pizza
+      Plan Your Project: Rancang Projek Anda
+      Plan Your Scene: Rancang Adegan Anda
+      Planning: Merancang
+      Platform Jumper - Background and Variables: Pelompat Platform - Latar Belakang
+        dan Pembolehubah
+      Platform Jumper - Items: Platform Jumper - Item
+      Platform Jumper - Platforms: Platform Jumper - Platform
+      Platform Jumper - Player: Platform Jumper - Pemain
+      Platform Jumper Review: Semakan Platform Jumper
+      Player Controls: Kawalan Pemain
+      Playing Notes: Bermain Nota
+      Playing with Notes: Bermain dengan Nota
+      Post-Course Survey Instructions: Arahan Kaji Selidik Selepas Kursus
+      Practice: Latihan
+      Predict: Ramalkan
+      Prediction: Ramalan
+      Prepare for your presentation: Bersedia untuk pembentangan anda
+      Prepare for your presentation_2018: Bersedia untuk pembentangan anda_2018
+      Problem Solving: Penyelesaian Masalah
+      Problem Solving Process for Programming: Proses Penyelesaian Masalah untuk Pengaturcaraan
       Programming with Rey and BB-8: Pengaturcaraan dengan Rey dan BB-8
+      Programs that Repeat: Atur cara yang Berulang
+      Project: Projek
+      Project - Background and Variables: Projek - Latar Belakang dan Pembolehubah
+      Project - Sprites and Interactions: Projek - Sprites dan Interaksi
+      Project Guide: Panduan Projek
+      Project Work: Kerja Projek
       Properties: Hartanah
+      Publishing Your Website: Menerbitkan Tapak Web Anda
       Quarter Notes: Not Perempat
+      Quick Check: Semakan Pantas
+      RGB Exploration: Penerokaan RGB
+      Raspado Recommender: Pengesyor Raspado
+      Reading Sensors: Penderia Membaca
+      Recognizing Expressions: Mengenali Ungkapan
+      Recognizing Fish: Mengenali Ikan
+      Recognizing Fish Features: Mengenali Ciri Ikan
+      Recognizing Shapes: Mengenal Bentuk
+      Reflection: Refleksi
+      Relay Programming - Unplugged Activity: Pengaturcaraan Geganti - Aktiviti Nirplag
+      Repeat Blocks: Ulangi Blok
+      Repeat Blocks with BB-8: Mengulangi Blok dengan BB-8
+      Repeat Blocks with the Artist: Mengulangi Blok dengan The Artist
+      Repeat Unit Statements: Ulang Unit Kenyataan
+      Repeat Until Statements: Ulang Sehingga Nyata
+      Representing Images: Mewakili Imej
       Review: Semakan
+      Review Your Animated Scene: Semak Adegan Animasi Anda
+      Review Your App: Semak Apl Anda
+      Review Your Game: Semak Permainan Anda
+      Review Your Page: Semak Halaman Anda
+      Review Your Scene: Semak Adegan Anda
+      'Review: CSS': 'Semak: CSS'
+      'Review: HTML': 'Semak: HTML'
+      Run a simulation: Jalankan simulasi
+      Safari App: Apl Safari
+      Safari Model: Model Safari
+      Same Game: Permainan yang Sama
+      Sample Apps for Good: Contoh Apl untuk Kebaikan
+      Sample Games: Contoh Permainan
+      Sample Personal Web Pages: |2-
+
+        Contoh Laman Web Peribadi
+      Sample Personal Websites: |2-
+
+        Contoh Laman Web Peribadi
+      Sample Programs: Contoh Program
+      Sample Web Page: Contoh Laman Web
+      Sample Website: Laman Web Contoh
+      Scoring & Scoreboard: Pemarkahan & Papan Skor
+      Screen Design: Reka Bentuk Skrin
+      Sensor Events: |2-
+
+        Peristiwa Penderia
+      Sensors to Colors: Penderia ke Warna
+      Set Up Sprites: Sediakan Sprite
+      Setting Properties: Menetapkan Sifat
+      Shapes and the Draw Loop: Bentuk dan Gelung Lukis
+      Share Your App: Kongsi Aplikasi Anda
+      Share Your Pages: Kongsi Halaman Anda
+      Share Your Stylesheets: Kongsi Helaian Gaya Anda
+      Shoe Recommendation Survey: Kaji Selidik Cadangan Kasut
+      Shoe Recommender: Pengesyor Kasut
+      Side Scroller: Skrol Sisi
+      Simple Circuits: Litar Mudah
+      Skill Building: Bangunan Kemahiran
+      Skill-Building: Bangunan Kemahiran
+      Sliders: Gelangsar
+      Smart Bike - Blinkers: Basikal Pintar - Berkelip
+      Social Sleuth: Sleuth Sosial
+      Songwriting - Functions Unplugged Activity: |2-
+
+        Penulisan Lagu - Fungsi Aktiviti Nirplag
       Speed it Up, Slow it Down: Percepatkannya, Perlahankannya
       Sprite Lab Project: Projek Lab Sprite
+      Sprite Properties: Sifat Peperi
+      Sprites and the Draw Loop: Sprites dan Gelung Lukis
+      Star Chaser: Pemburu Bintang
+      Styling Text: Teks Penggayaan
+      Styling with Classes: Penggayaan dengan Kelas
+      Styling your Website: Menggayakan Laman Web anda
+      Teach A.I. a new word: Ajar A.I. perkataan baru
       Teach AI a New Word: Ajar AI Perkataan Baharu
+      'Technique: Frequency Analysis': 'Teknik: Analisis Kekerapan'
+      Terminology Recap: Rakaman Terminologi
       Text Compression: Pemampatan Teks
-      Variables: Pembolehubah
+      The Artist in Code Studio: Artis dalam Studio Kod
+      The Big Event - Unplugged Activity: Acara Besar - Aktiviti Nirplag
+      The Buzzer: The Buzzer
+      The Collector: The Collector
+      The Internet - Unplugged Activity: Internet - Aktiviti Nirplag
+      The Power of Words - Unplugged Activity: Kuasa Kata-kata - Aktiviti Nirplag
+      The Right App - Unplugged Activity: Aplikasi The Right - Aktiviti Nirplag
+      Top Websites: Laman Web Teratas
+      Train AI to Clean the Ocean: Latih AI untuk Membersihkan Lautan
+      Train a Model in AI Lab: Latih Model di Makmal AI
+      Train an AI to Clean the Ocean: Latih AI untuk Membersihkan Lautan
+      UI Element Properties: Sifat Elemen UI
+      Ultimate Shoe Recommender: Pengesyor Kasut Muktamad
+      Unit 5 Lesson 1 Overview: Unit 5 Pelajaran 1 Gambaran Keseluruhan
+      Upload Your Images: Muat Naik Imej Anda
+      User Interface: Antaramuka Pengguna
+      Using Getters and Setters: Menggunakan Getters dan Setters
+      Using HTML Tags: Menggunakan Tag HTML
+      Using Random Numbers: Menggunakan Nombor Rawak
+      Using Training Data: Menggunakan Data Latihan
+      Using the LED: Menggunakan LED
+      Using the Switch: Menggunakan Switch
+      Variables: Pemboleh ubah
+      Velocity and the Counter Pattern: Halaju dan Corak Kaunter
       Video: Video
+      Video - Encryption and Public Keys: Video - Penyulitan dan Kunci Awam
+      'Video - Maze Intro: Programming with Blocks': 'Video - Pengenalan Pagar Sesat:
+        Pengaturcaraan dengan Blok'
+      'Video:  Debugging with the Step Button': 'Video: Penyahpepijatan dengan Butang
+        Langkah'
+      'Video:  Minecraft - The Agent': 'Video: Minecraft - Ejen'
+      'Video:  Text  and Prompts': 'Video: Teks dan Prom'
+      'Video: "If/Else"': 'Video: "If/Else"'
+      'Video: AI: What is Machine Learning?': 'Video: AI: Apakah Pembelajaran Mesin?'
+      'Video: Amazon and Data': |2-
+
+        Video: Amazon dan Data
+      'Video: Artist Intro with JR Hildebrand': 'Video: Pengenalan Artis dengan JR
+        Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'Video: Pengenalan Artis dengan JR
+        Hildebrande'
+      'Video: Circuits and Logic': 'Video: Litar dan Logik'
+      'Video: Code Your Own Flappy Game': 'Video: Kod Flappy Game Anda Sendiri'
+      'Video: Conditionals: If Statements': 'Video: Syarat: Penyata If'
+      'Video: Conditionals: If and If/Else Statements': 'Video: Syarat: Penyata If
+        dan If/Else '
+      'Video: Dance Party Events': 'Video: Majlis Tari-Menari '
+      'Video: Dance Party Measures': 'Video: Langkah Pesta Tarian'
+      'Video: Dance Party Party On!': 'Video: Majlis Tari-Menari Majlis Bermula!'
+      'Video: Dance Party Properties': 'Video: Ciri Majlis Tari-Menari '
+      'Video: Dance Party Warm Up': 'Video: Permulaan Majlis Tari-Menari '
+      'Video: De-bugging with the Step Button': 'Video: Penyahpepijatan dengan Butang
+        Langkah'
+      'Video: Debugging': 'Video: Menyahpepijat'
+      'Video: Debugging with Scrat ': 'Video: Penyahpepijatan dengan Scrat '
+      'Video: Debugging with the Step Button': 'Video: Penyahpepijatan dengan Butang
+        Langkah'
+      'Video: Events': 'Video: Peristiwa'
+      'Video: Follow The Digital Trail': 'Video: Ikuti Jejak Digital'
+      'Video: Getting Loopy': 'Video: Getting Loopy'
+      'Video: Happy Maps - Unplugged Activity': 'Video: Happy Maps - Aktiviti Nirplag'
+      'Video: Harvesting with Conditionals': 'Video: Harvesting with Conditionals'
+      'Video: How Search Works': 'Video: Cara Carian Berfungsi'
+      'Video: How to Create a Simple Function': 'Video: Cara Mencipta Fungsi Mudah'
+      'Video: How to Make a Sprite': 'Video: Cara Membuat Sprite'
+      'Video: IOSP Model': 'Video: Model IOSP'
+      'Video: Ice Age Loops': 'Video: Gelung Ice Age'
+      'Video: Impact on Society': 'Video: Kesan ke atas Masyarakat'
+      'Video: Impacts on Society': 'Video: Kesan ke atas Masyarakat'
+      'Video: Intro to CSS - Part 1': 'Video: Pengenalan kepada CSS - Bahagian 1'
+      'Video: Intro to CSS - Part 2': 'Video: Pengenalan kepada CSS - Bahagian 2'
+      'Video: Intro to Design Mode': 'Video: Pengenalan kepada Mod Reka Bentuk'
+      'Video: Introducing Sprite Lab': 'Video: Memperkenalkan Sprite Lab'
+      'Video: Introduction to Play Lab': 'Video: Pengenalan kepada Play Lab'
+      'Video: Introduction to Variables': 'Video: Pengenalan kepada Variables'
+      'Video: Loops in Artist': 'Video: Gelung dalam Artis'
+      'Video: Loops with the Artist': 'Video: Gelung dengan Artis'
+      'Video: Managing Disagreement': 'Video: Menguruskan Perselisihan faham'
+      'Video: Maze Intro - Programming with Blocks': 'Video: Pengenalan Pagar Sesat
+        - Pengaturcaraan dengan Blok'
+      'Video: Maze Intro - Programming with Blocks ': 'Video: Pengenalan Pagar Sesat
+        - Pengaturcaraan dengan Blok '
+      'Video: Maze Intro: Programming with Blocks': 'Video: Pengenalan Pagar Sesat
+        - Pengaturcaraan dengan Blok'
+      'Video: Measures': 'Video: Langkah-langkah'
+      'Video: Minecraft - Congratulations': 'Video: Minecraft - Tahniah'
+      'Video: Minecraft - Functions': 'Video: Minecraft - Fungsi'
+      'Video: Minecraft - Repeat Loops': 'Video: Minecraft - Gelung Ulang'
+      'Video: Minecraft - The Agent': 'Video: Minecraft - Ejen'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Video: Minecraft: Syarat Akuatik
+        Pelayaran'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Tahniah
+        Voyage Aquatic'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Pengenalan
+        Akuatik Voyage'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Voyage Aquatic
+        Berulang'
+      'Video: Nested Loops': 'Video: Gelung Bersarang'
+      'Video: Nested Loops with the Bee': 'Video: Nested Loops with the Bee'
+      'Video: Netflix and Data': 'Video: Netflix dan Data'
+      'Video: Pair Programming': 'Video: Pengaturcaraan Berpasangan'
+      'Video: Pair Programming ': 'Video: Pengaturcaraan Berpasangan'
+      'Video: Programming with Blocks': 'Video: Pengaturcaraan dengan Blok'
+      'Video: Programming with Rey and BB-8': 'Video: Pengaturcaraan dengan Rey dan
+        BB-8'
+      'Video: Properties': 'Video: Hartanah'
+      'Video: Publishing Your Website': 'Video: Menerbitkan Laman Web Anda'
+      'Video: Repeat Blocks': 'Video: Ulang Blok'
+      'Video: Repeat Blocks with BB-8': 'Video: Mengulangi Blok dengan BB-8'
+      'Video: Repeat Blocks with the Artist': 'Video: Mengulangi Blok dengan The Artist'
+      'Video: Repeat Until Blocks': 'Video: Ulang Sehingga Sekat'
+      'Video: Repeat Until Statements': 'Video: Ulang Sehingga Kenyataan'
+      'Video: Sprites in Action': 'Video: Sprite dalam Aksi'
+      'Video: Star Wars Project': 'Video: Projek Star Wars'
+      'Video: Teamwork': 'Video: Kerja berpasukan'
+      'Video: Text and Prompts': 'Video: Teks dan Prom'
+      'Video: The Artist in Code Studio': 'Video: Artis dalam Studio Kod'
+      'Video: The Big Event - Unplugged Activity': 'Video: Peristiwa Besar - Aktiviti
+        Nirplag'
+      'Video: The Collector': 'Video: Pengumpul'
+      'Video: The Harvester': 'Video: Penuai'
+      'Video: Training Data & Bias': 'Video: Data Latihan dan Bias'
+      'Video: Training Data and Bias': 'Video: Data Latihan dan Bias'
+      'Video: Unplugged Variables in Envelopes': 'Video: Pemboleh Ubah Nirplag dalam
+        Sampul Surat'
+      'Video: Using the Repeat Block': 'Video: Menggunakan Blok Berulang'
+      'Video: Variables in Artist': 'Video: Pemboleh Ubah dalam Artis'
+      'Video: Warm Up': 'Video: Mula Memanas'
+      'Video: Waze and Data': |2-
+
+        Video: Waze dan Data
+      'Video: What is Machine Learning?': 'Video: Apakah Pembelajaran Mesin?'
+      'Video: While Loops with the Farmer': 'Video: While Loops with the Farmer'
+      'Video: Wrap-up': 'Video: Penggulungan'
+      Warm Up: Mula Memanas
+      Website Project: Projek Tapak Web
       Welcome to Monster Town: Inilah Bandar Raksasa
       Where'd They Go?: Ke Manakah Mereka Akan Pergi?
+      While Loops with the Farmer: While Loops with the Farmer
+      'Widget: Text Compression': 'Widget: Mampatan Teks'
       Wrap-up: Wrap-up
+      'You Choose: Improve Your App': 'Anda Pilih: Tingkatkan Aplikasi Anda'
+      'You Choose: Restaurant Recommendations': 'Anda Pilih: Cadangan Restoran'
+      Your Personal Website: Tapak Web Peribadi
+      Your Team Project: Projek Pasukan Anda
+      Zoo Predictions: Ramalan Zoo
+      getText vs getNumber: getText lwn getNumber
+      isTouching: isTouching
+      setProperty: setProperty

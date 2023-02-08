@@ -9,9 +9,13 @@ module JavalabFilesHelper
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') do |http|
       http.request(upload_request)
     end
-    response.code == '200'
-  rescue StandardError
-    false
+    return response
+  rescue StandardError => e
+    event_details = {
+      error_details: e.to_json
+    }
+    NewRelic::Agent.record_custom_event("JavabuilderHttpConnectionError", event_details) if CDO.newrelic_logging
+    nil
   end
 
   # Get all files related to the project at the given channel id as a hash.
@@ -32,11 +36,7 @@ module JavalabFilesHelper
     all_files["sources"]["main.json"] = source_data[:body].string
 
     # get level assets
-    asset_bucket = AssetBucket.new
-    asset_list = asset_bucket.list(channel_id)
-    asset_list.each do |asset|
-      all_files["assetUrls"][asset[:filename]] = generate_asset_url(asset[:filename], channel_id)
-    end
+    get_assets_for_channel(channel_id, all_files)
 
     all_files
   end
@@ -51,9 +51,10 @@ module JavalabFilesHelper
   #   "validation": <all validation code for a project, in json format>
   # }
   # If the level doesn't have validation and/or a maze, those fields will not be present.
-  def self.get_project_files_with_override_sources(sources, level_id)
+  def self.get_project_files_with_override_sources(sources, level_id, channel_id)
     all_files = get_level_files(level_id)
     all_files["sources"]["main.json"] = {source: sources}.to_json
+    get_assets_for_channel(channel_id, all_files) if channel_id
     all_files
   end
 
@@ -120,12 +121,20 @@ module JavalabFilesHelper
 
   def self.generate_starter_asset_url(filename, level)
     prefix = get_dashboard_url_prefix
-    prefix + "/level_starter_assets/" + URI.encode(level.name) + "/" + filename
+    prefix + "/level_starter_assets/" + ERB::Util.url_encode(level.name) + "/" + filename
   end
 
   def self.get_dashboard_url_prefix
     rack_env?(:development) ?
       "http://" + CDO.dashboard_hostname + ":3000" :
       "https://" + CDO.dashboard_hostname
+  end
+
+  def self.get_assets_for_channel(channel_id, all_level_files)
+    asset_bucket = AssetBucket.new
+    asset_list = asset_bucket.list(channel_id)
+    asset_list.each do |asset|
+      all_level_files["assetUrls"][asset[:filename]] = generate_asset_url(asset[:filename], channel_id)
+    end
   end
 end

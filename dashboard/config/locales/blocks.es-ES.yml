@@ -2,8 +2,32 @@
 es:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: moviendo NESW con las teclas de flecha
+      AmysBlocks_setPromptWithChoices:
+        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}dice{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        text: configurar el tamaño de todos los sprites a {SIZE}
+        options:
+          SIZE:
+            '0.50': extra pequeño
+            '0.75': pequeño
+            '1.00': medio
+            '2.00': grande
+            '3.00': extra grande
+      BadGuys_setSize_dropdown:
+        text: configurar el tamaño de {SPRITE} a {SIZE}
+        options:
+          SIZE:
+            '0.50': extra pequeño
+            '0.75': pequeño
+            '1.00': medio
+            '2.00': grande
+            '3.00': extra grande
       Dancelab_alternateMoves:
         text: "{GROUP} alternar cada {N} compases \nentre {MOVE1} y {MOVE2}"
         options:
@@ -212,20 +236,12 @@ es:
             MOVES.XArmsUp: Estirar
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
-      Dancelab_everyMeasuresRange:
-        text: 'repetir cada {N} compaces después de {START} '
       Dancelab_everySeconds:
         text: 'repetir cada {N} {UNIT} '
         options:
           UNIT:
             '"measures"': compaces
             '"seconds"': segundos
-      Dancelab_everySecondsRange:
-        text: 'cada {N} {UNIT} desde {START} hasta {STOP} '
-        options:
-          UNIT:
-            measures: Compases
-            seconds: Segundos
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
         options:
@@ -985,6 +1001,39 @@ es:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: El microscopio tiene {INPUT1}
+        options:
+          INPUT1:
+            '1': jugo de limón
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: hacer efecto de {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Burbujas
+            '"confetti"': Confeti
+            '"hearts"': corazones
+            '"emojis"': Emoji Feliz
+            '"rain"': lluvia
+            '"starburst"': Explosión de estrellas
+            '"glass"': Rompiendo vidrio
+            '"twinkling"': Parpadeante
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': jugo de limón
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Comunicarse {VAR1} con {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: hacer {NUM} nuevos {ANIMATION_NAME} sprites  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: representar {NUM} nuevos {ANIMATION_NAME} sprites [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}dice{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_addTarget:
@@ -1065,7 +1114,7 @@ es:
         text: dibuja línea {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: limitacion de bloque {SPRITE} para moverse
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'repetir cada {N} {UNIT} '
         options:
           UNIT:
@@ -1201,6 +1250,8 @@ es:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutGrid:
+        text: diseño de sprites como una cuadrícula
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1225,8 +1276,6 @@ es:
             '"pop"': pop
             '"rain"': lluvia
             '"spiral"': espiral
-      gamelab_makeNewScaledSprite:
-        text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_makeNumSprites:
@@ -1241,6 +1290,13 @@ es:
             '90': abajo
             '180': izquierda
             '270': arriba
+      gamelab_makeSpritesWithSize:
+        text: hacer {NUM} nuevos sprites de {SIZE}
+        options:
+          SIZE:
+            '30': pequeño
+            '50': medio
+            '100': grande
       gamelab_mirrorSprite:
         text: "{SPRITE} hacia {DIRECTION}"
         options:
@@ -1315,6 +1371,34 @@ es:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccionar
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bajo peculiar
             "'sound://category_digital/jump_7.mp3'": salta
+      gamelab_playSoundOptionsSoccer:
+        text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": bocina
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": canto
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": patear
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dos silbatos
+            "'sound://category_sports/One_Whistle_SFX.mp3'": silbato
+      gamelab_playSoundOptionsSpace:
+        text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": agujero negro
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": cúmulo bala
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": casiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cangrejo
+            "'sound://category_space/Galactic_center_SFX.mp3'": centro galáctico
+            "'sound://category_space/Launch_SFX.mp3'": lanzar
+            "'sound://category_space/Lift_Off.mp3'": despegar
+            "'sound://category_space/Pillars_SFX.mp3'": pilares
+            "'sound://category_space/Southern_ring_SFX.mp3'": anillo del sur
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaxia espiral
       gamelab_playSpeech:
         text: reproducir grabación {SOUND}
       gamelab_playerBehaviors:
@@ -1415,6 +1499,8 @@ es:
             '100': grande
       gamelab_setPrompt:
         text: solicitar usuario {QUESTION} para la variable {VAR}
+      gamelab_setPromptWith2Choices:
+        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}
       gamelab_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
       gamelab_setProp:
@@ -1476,6 +1562,41 @@ es:
         text: "{SPRITE} dice {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE} dice {TEXT1} por {NUM} segundos"
+      gamelab_spriteThink:
+        text: "{SPRITE} piensa {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}piensa{TEXT1}en{NUM}segundos"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} piensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Es hora de hacerse amigo de
+              las ovejas.
+            '"She''ll never recognize me now."': Ahora ella no me reconocerá.
+            '"This costume keeps me warm."': Este disfraz me mantiene caliente.
+            '"I am actually a wolf."': Ahora soy un lobo.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} piensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Tengo sueño.
+            '"No one could ever beat me."': Nadie podría ganarme nunca.
+            '"I''ve done this race before."': Ya he hecho esta carrera antes.
+            '"My feet are bigger than Turtle''s feet."': Mis pies son más grandes
+              que los de Turtle.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} piensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Que hambre tengo.
+            '"I''m a visitor in this town."': Soy un turista en esta ciudad.
+            '"If we share, we''ll all have something to eat. "': Si compartimos, todos
+              tendremos algo que comer.
+            '"I''ll trick everyone into giving me their food."': Engañaré a todos
+              para que me den su comida.
       gamelab_startAvoiding:
         text: "{SPRITE} empieza a evitar {TARGET}"
       gamelab_startFollowing:
@@ -1955,6 +2076,39 @@ es:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
+      ParticlesBlocks_getMicroscope:
+        text: El microscopio tiene {INPUT1}
+        options:
+          INPUT1:
+            '1': jugo de limón
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': jugo de limón
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): sólido
+            new Behavior(liquid, []): líquido
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Establecer [COSTUME],[0] al comportamiento [BEHAVIOR],[1]
+        options:
+          BEHAVIOR:
+            '"solid"': 'partícula sólida '
+            '"liquid"': partícula líquida
+            '"gas"': partícula de gas
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'partícula sólida '
+            '"liquid"': partícula líquida
+            '"gas"': partícula de gas
       Poetry_addFrame:
         text: establecer marco {BRUSH}
         options:
@@ -2045,6 +2199,23 @@ es:
             '"sound://category_achievements/peaceful_win_1.mp3"': Ganar
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Remolino
             '"sound://category_achievements/peaceful_win_6.mp3"': Campanas al viento
+      Poetry_playSoundOptionsSpace:
+        text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": agujero negro
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": cúmulo bala
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": casiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cangrejo
+            "'sound://category_space/Galactic_center_SFX.mp3'": centro galáctico
+            "'sound://category_space/Launch_SFX.mp3'": lanzar
+            "'sound://category_space/Lift_Off.mp3'": despegar
+            "'sound://category_space/Pillars_SFX.mp3'": pilares
+            "'sound://category_space/Southern_ring_SFX.mp3'": anillo del sur
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaxia espiral
       Poetry_setAuthor:
         text: establecer autor {AUTHOR}
       Poetry_setBackground:
@@ -2182,6 +2353,11 @@ es:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: cuando {VAR} respondió
       RyanLab_moveForward:
@@ -2450,6 +2626,20 @@ es:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      storylab_setForegroundEffect2:
+        text: hacer efecto de {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Burbujas
+            '"confetti"': Confeti
+            '"hearts"': corazones
+            '"rain"': lluvia
+            '"starburst"': Explosión de estrellas
+            '"twinkling"': Parpadeante
+      storylab_setHeading:
+        text: establecer encabezado {HEADING}
+      storylab_setSubheading:
+        text: establecer sub-encabezado {SUBHEADING}
       validation_validatedBackground:
         text: establecer fondo a {IMG}
       validation_validatedSound:

@@ -4,7 +4,7 @@ nav: educate_nav
 theme: responsive
 ---
 # Code.org's partner school districts
-Our partner school districts teach almost **10%** of all U.S. students, and almost **15%** of the nation's Black and Latinx students. Learn how your district can [partner with Code.org](/educate/districts) to bring full computer science courses to every student. 
+Our partner school districts teach almost **10%** of all U.S. students, and almost **15%** of the nation's Black and Hispanic/Latino students. Learn how your district can [partner with Code.org](/educate/districts) to bring full computer science courses to every student.
 
 Click on a pin below to see more information about our partnership with the district, region or state.
 

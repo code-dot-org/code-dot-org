@@ -48,14 +48,14 @@ end
 Given(/^I view the temp unit edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
-    And I wait until element ".edit_script" is visible
+    And I wait until element ".edit_unit" is visible
   }
 end
 
 Given(/^I wait for the temp unit edit page to load$/) do
   steps %{
     And I wait until I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
-    And I wait until element ".edit_script" is visible
+    And I wait until element ".edit_unit" is visible
   }
 end
 
@@ -86,7 +86,7 @@ Given(/^I view the temp lesson edit page for lesson without lesson plan$/) do
   }
 end
 
-Given (/^I remove the temp unit from the cache$/) do
+Given(/^I remove the temp unit from the cache$/) do
   browser_request(
     url: '/api/test/invalidate_script',
     method: 'POST',
@@ -136,4 +136,51 @@ Given(/^I delete the temp level$/) do
     method: 'POST',
     body: {id: @temp_level_id}
   )
+end
+
+Given(/^I enter a temp data doc key and temp data doc name$/) do
+  @temp_data_doc_key = "temp-data-doc-#{Time.now.to_i}-#{rand(1_000_000)}"
+  @temp_data_doc_name = "A Name: #{@temp_data_doc_key}"
+  steps %{
+    And I wait until element "input[name='key']" is visible
+    And I press keys "#{@temp_data_doc_key}" for element "input[name='key']"
+    And I press keys "#{@temp_data_doc_name}" for element "input[name='name']"
+  }
+end
+
+Given(/^I wait for the temp data doc page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/data_docs/#{@temp_data_doc_key}"
+    And I wait until element "#view-data-doc" is visible
+  }
+end
+
+Given(/^element "([^"]*)" contains the name of the temp data doc$/) do |selector|
+  steps %{
+     And element "#{selector}" contains text "#{@temp_data_doc_name}"
+  }
+end
+
+Given(/^the element contains the path to the temp data doc$/) do
+  steps %{
+    And the href of selector "a:contains(#{@temp_data_doc_name})" contains "/data_docs/#{@temp_data_doc_key}"
+  }
+end
+
+Given(/^I click the icon to edit the temp data doc$/) do
+  steps %{
+    And I click selector "#edit_#{@temp_data_doc_key}"
+  }
+end
+
+Given(/^I click the icon to delete the temp data doc$/) do
+  steps %{
+    And I click selector "#delete_#{@temp_data_doc_key}"
+  }
+end
+
+Given(/^the temp data doc is not visible$/) do
+  steps %{
+    And element "a" does not contain text "#{@temp_data_doc_name}"
+  }
 end

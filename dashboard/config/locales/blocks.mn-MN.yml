@@ -4,6 +4,22 @@ mn:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': дундаж
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': дундаж
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP}-н төстэй бүр {N} арга хэмжээ \n{MOVE1} ба {MOVE2}-н хоорондох"
         options:
@@ -212,20 +228,12 @@ mn:
             MOVES.XArmsUp: Сунгах
             MOVES.ThisOrThat: Энэ эсвэл тэр
             MOVES.Rest: Байхгүй
-      Dancelab_everyMeasuresRange:
-        text: "{START}-н дараа {N} арга хэмжээ бүрийг давтах "
       Dancelab_everySeconds:
         text: "{N} {UNIT} бүрийг давтах "
         options:
           UNIT:
             '"measures"': арга хэмжээ
             '"seconds"': секундууд
-      Dancelab_everySecondsRange:
-        text: "{N} {UNIT} бүр нь {START}-с {STOP} хүртгэл байна"
-        options:
-          UNIT:
-            measures: Арга хэмжээ
-            seconds: Секунд
       Dancelab_everyVerseChorus:
         text: "{UNIT} бүр "
         options:
@@ -973,6 +981,14 @@ mn:
         text: тохиргоо
       Dancelab_whenSetup2:
         text: тохиргоо
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Хөөс
+            '"confetti"': Конфетти
+            '"hearts"': зүрхнүүд
+            '"rain"': бороотой
+            '"starburst"': Оддын тэсрэлт
       gamelab_addBehaviorSimple:
         text: шидтэн {SPRITE} нь {BEHAVIOR}-г эхлүүлнэ
       gamelab_allSpritesWithAnimation:
@@ -1014,7 +1030,7 @@ mn:
         text: татаж болохуйц
       gamelab_edgesDisplace:
         text: захууд {SPRITE}-г хөдлөхөөс сэргийлж байна
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: "{N} {UNIT} бүрийг давтах "
         options:
           UNIT:
@@ -1150,8 +1166,6 @@ mn:
         options:
           EFFECT:
             '"rain"': бороотой
-      gamelab_makeNewScaledSprite:
-        text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
       gamelab_makeProjectile:
@@ -1161,6 +1175,12 @@ mn:
             '90': доошоо
             '180': зүүн
             '270': дээшээ
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': дундаж
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} нь {DIRECTION} руу харж байна"
         options:
@@ -1200,6 +1220,10 @@ mn:
             "'sound://category_animals/dolphin.mp3'": далайн гахай
             "'sound://category_animals/dog.mp3'": нохой
             "'sound://category_digital/jump_7.mp3'": үсрэх
+      gamelab_playSoundOptionsSoccer:
+        text: хөгжимтоглох {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: хөгжимтоглох {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1685,6 +1709,8 @@ mn:
         options:
           SOUND:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': үсрэх
+      Poetry_playSoundOptionsSpace:
+        text: хөгжимтоглох {SOUND}
       Poetry_setBackground:
         text: суурь өнгийг тохируулах {COLOR}
       Poetry_setBackgroundEffect:
@@ -1729,6 +1755,11 @@ mn:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: урагш хөдлөх
       RyanLab_turnLeft:
@@ -1925,5 +1956,13 @@ mn:
           DIR:
             right: баруун гар тийш ↻
             left: зүүн гар тийш ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Хөөс
+            '"confetti"': Конфетти
+            '"hearts"': зүрхнүүд
+            '"rain"': бороотой
+            '"starburst"': Оддын тэсрэлт
       validation_validatedBackground:
         text: суурь өнгийг {IMG} руу тохируулах

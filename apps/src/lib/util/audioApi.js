@@ -1,5 +1,5 @@
 /* globals appOptions */
-/** @file Droplet-friendly command defintions for audio commands. */
+/** @file Droplet-friendly command definitions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
 import i18n from '@cdo/locale';

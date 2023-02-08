@@ -1,0 +1,119 @@
+{
+  "uk-UA": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/accelerometer-events": {
+          "display_name": "Події акселерометра"
+        },
+        "csd-2022/analog-sensors": {
+          "display_name": "Аналогові датчики"
+        },
+        "csd-2022/app-lab": {
+          "display_name": "App Lab"
+        },
+        "csd-2022/applab-overview": {
+          "display_name": "Огляд"
+        },
+        "csd-2022/booleans-and-comparison-operators": {
+          "display_name": "Булеві та оператори порівняння"
+        },
+        "csd-2022/changing-screens": {
+          "display_name": "Зміна екранів"
+        },
+        "csd-2022/classes": {
+          "display_name": "Класи"
+        },
+        "csd-2022/css-overview": {
+          "display_name": "Огляд"
+        },
+        "csd-2022/debugging-with-watchers": {
+          "display_name": "Налагодження з спостерігачами"
+        },
+        "csd-2022/design-mode": {
+          "display_name": "Режим проектування"
+        },
+        "csd-2022/drawing-shapes": {
+          "display_name": "Малювання фігур"
+        },
+        "csd-2022/editing-images": {
+          "display_name": "Редагування зображень"
+        },
+        "csd-2022/for-loops": {
+          "display_name": "Цикли For"
+        },
+        "csd-2022/formatting-html": {
+          "display_name": "Форматування HTML"
+        },
+        "csd-2022/functions": {
+          "display_name": "Функції"
+        },
+        "csd-2022/game-lab": {
+          "display_name": "Ігрова лабораторія"
+        },
+        "csd-2022/game-lab-overview": {
+          "display_name": "Огляд"
+        },
+        "csd-2022/headings-and-paragraphs": {
+          "display_name": "Заголовки та абзаци"
+        },
+        "csd-2022/html-overview": {
+          "display_name": "Огляд"
+        },
+        "csd-2022/html-tags": {
+          "display_name": "HTML Теги"
+        },
+        "csd-2022/hyperlinks": {
+          "display_name": "Гіперпосилання"
+        },
+        "csd-2022/importing-screens": {
+          "display_name": "Імпортування екранів"
+        },
+        "csd-2022/javascript": {
+          "display_name": "JavaScript"
+        },
+        "csd-2022/javascript-overview": {
+          "display_name": "Огляд"
+        },
+        "csd-2022/layout-properties": {
+          "display_name": "Властивості макета"
+        },
+        "csd-2022/lists": {
+          "display_name": "Списки"
+        },
+        "csd-2022/maker-toolkit": {
+          "display_name": "Maker Toolkit"
+        },
+        "csd-2022/maker-toolkit-overview": {
+          "display_name": "Огляд"
+        },
+        "csd-2022/modifying-arrays": {
+          "display_name": "Змінення та створення масивів"
+        },
+        "csd-2022/other": {
+          "display_name": "Інше"
+        },
+        "csd-2022/other-overview": {
+          "display_name": "Огляд"
+        },
+        "csd-2022/patterns-overview": {
+          "display_name": "Огляд"
+        },
+        "csd-2022/sprites": {
+          "display_name": "Спрайти"
+        },
+        "csd-2022/the-counter-pattern": {
+          "display_name": "Лічильник шаблону"
+        },
+        "csd-2022/the-counter-pattern-2": {
+          "display_name": "Лічильник шаблону"
+        },
+        "csd-2022/variables": {
+          "display_name": "Змінні"
+        },
+        "csd-2022/velocity": {
+          "display_name": "Швидкість"
+        }
+      }
+    }
+  }
+}

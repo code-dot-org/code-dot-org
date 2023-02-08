@@ -92,7 +92,7 @@ class CourseScript extends Component {
     const assignedByTeacher =
       viewAs === ViewType.Instructor &&
       selectedSection &&
-      selectedSection.scriptId === id;
+      selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
     return (
@@ -200,9 +200,9 @@ export default connect(
     selectedSectionId: state.teacherSections.selectedSectionId,
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
-      ownProps.id,
-      ownProps.courseId,
-      true
+      ownProps.courseOfferingId,
+      ownProps.courseVersionId,
+      ownProps.id
     ),
     hiddenLessonState: state.hiddenLesson,
     hasNoSections:

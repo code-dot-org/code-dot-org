@@ -47,7 +47,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
   ].each do |dotfile|
     template File.join(home_directory, dotfile) do
       action :create_if_missing
-      source "#{dotfile[1..-1]}.erb"
+      source "#{dotfile[1..]}.erb"
       #variables( )
       owner user_name
       group user_name
@@ -108,12 +108,12 @@ node['cdo-users'].each_pair do |user_name, user_data|
       next if instance.private_dns_name.nil? || instance.private_dns_name.empty?
 
       name = instance.tags.find {|tag| tag.key == "Name"}
-      next unless name && name.value
+      next unless name&.value
 
       # SSH requires that hostnames consist of zero or more non-whitespace
       # characters, with optional wildcards:
       # http://man.openbsd.org/OpenBSD-current/man5/ssh_config.5#PATTERNS
-      next unless name.value =~ /^\S*$/
+      next unless /^\S*$/.match?(name.value)
 
       hosts[name.value] = instance.private_dns_name
     end

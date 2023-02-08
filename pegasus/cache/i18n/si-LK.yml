@@ -662,7 +662,7 @@ si-LK:
   dashboard_hoc_courses: සියලුම වයස් කාණ්ඩ සඳහා Hour of Code
   dashboard_hoc_courses_desc: ඔබේ සිසුන් සමග මෙම ඕනෑම පැයේ කෙටි පාඩමක් කරන්න!
   dashboard_hoc_courses_desc_and_cta: කෙටියෙන් උත්සහ කරන්න,පැයක නිබන්දන ඔබගේ ශිෂ්‍යයන්
-    සමග <ahref="https://hourofcode.com">එකතුවන්න Hour of Code movement</a> පරිගණක
+    සමග <a href="https://hourofcode.com">එකතුවන්න Hour of Code movement</a> පරිගණක
     විද්‍යා අධ්‍යාපන සතිය තුළ.
   dashboard_k5_courses: පෙරපාසල් සිට 5 ශ්‍රේණිය සඳහා පැය 20 පාඨමාලා
   dashboard_k5_courses_desc: මෙහි ඇති  අන්තර්ජාල පාඨමාලා, ස්වයං මඟ පෙන්වීමෙන් හා "එළිදැක්වූ"
@@ -1153,6 +1153,12 @@ si-LK:
   coursed-2021_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee-2021_gradelevel: වයස 8-12
   coursef-2021_gradelevel: වයස අවුරුදු 9-13
+  coursea-2022_gradelevel: වයස 4-7
+  courseb-2022_gradelevel: වයස අවුරුදු 5-8
+  coursec-2022_gradelevel: අවුරුදු 6 සිට 10 දක්වා
+  coursed-2022_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2022_gradelevel: වයස 8-12
+  coursef-2022_gradelevel: වයස අවුරුදු 9-13
   accelerated_gradelevel: වයස අවුරුදු 10-18
   codeorg_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
   codeintl_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
@@ -1831,3 +1837,4 @@ si-LK:
   footer_terms: නියම
   ai_for_oceans_lesson_plan: පාඩම් සැලැස්ම
   ai_description: විස්තරය
+  hoc2022_landing_page_create_title: තනන්න

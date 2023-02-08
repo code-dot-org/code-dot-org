@@ -31,7 +31,7 @@
   level-body is used for some semi-strange DOM manipulation. When a teacher toggles to viewAs a student,
   in some cases we want to give them an entirely different rendering (i.e. hidden/locked lessons). We do
   this by hiding level-body and unhiding the other content.
-#level-body{style: params[:viewAs] ? 'visibility: hidden' : nil}
+#level-body{style: @script&.can_be_instructor?(@current_user) && params[:viewAs] ? 'visibility: hidden' : nil}
   -# Render the hidden lesson partial, but make it hidden so that client can unhide if needed
   = render partial: 'levels/hidden_lesson', locals: {hidden: true}
 
@@ -46,11 +46,9 @@
     -# anonymous users shouldn't ever see lockable lesson, but give them the locked_lesson message if they do
     = render 'levels/locked_lesson'
   - else
-    -# If we're a teacher, render the locked_lesson UI, which the client will conditionally hide based on Student/Teacher toggle
-    -# TODO(dmcavoy): Change this to check instructor instead of teacher
-    - if @script_level && @script_level.lesson.lockable? && current_user.try(:teacher?)
+    -# If we're a instructor, render the locked_lesson UI, which the client will conditionally hide based on Student/Teacher toggle
+    - if @script_level && @script_level.lesson.lockable? && @script_level.script.can_be_instructor?(current_user)
       = render 'levels/locked_lesson', hidden: true
-
     - if @game.unplugged?
       :javascript
         var appOptions = #{app_options.to_json};

@@ -2,6 +2,9 @@
   "ms-MY": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "event/dance-extras/unversioned": {
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
@@ -10,13 +13,12 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/minecraft/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/minecraft/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
-        },
-        "program/minecraft/unversioned": {
-          "word": "Atur Cara",
-          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "event/minecraft/unversioned": {
           "word": "Acara",
@@ -26,16 +28,24 @@
           "word": "Gelung",
           "definition": "Tindakan melakukan sesuatu secara berulang kali."
         },
+        "program/minecraft/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/hero/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
         },
+        "function/hero/unversioned": {
+          "word": "Fungsi",
+          "definition": "Sekeping kod yang boleh anda panggil berulang kali dengan mudah."
+        },
         "program/hero/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
-        },
-        "function/hero/unversioned": {
-          "word": "Fungsi"
         },
         "code/poem-art/2021": {
           "word": "Kod",
@@ -57,6 +67,10 @@
           "word": "Atur Cara",
           "definition": "Siri langkah yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/flappy/unversioned": {
+          "word": "kod",
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/flappy/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -64,6 +78,9 @@
         "program/flappy/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Penyahpepijatan",
@@ -73,6 +90,9 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/frozen/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/frozen/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -80,6 +100,9 @@
         "program/frozen/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/iceage/unversioned": {
           "word": "Penyahpepijatan",
@@ -90,7 +113,8 @@
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "code/artist/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/artist/unversioned": {
           "word": "Penyahpepijatan",
@@ -100,6 +124,9 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/gumball/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/gumball/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -107,6 +134,9 @@
         "program/gumball/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "event/dance/unversioned": {
           "word": "Acara",
@@ -116,20 +146,55 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/aquatic/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
+        },
         "debugging/aquatic/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
         },
         "program/aquatic/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
-        "conditionals/aquatic/unversioned": {
-          "word": "Bersyarat"
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Sifer Caesar",
+          "definition": "teknik untuk penyulitan yang mengubah abjad dengan beberapa bilangan aksara"
         },
-        "loops/aquatic/unversioned": {
-          "word": "Gelung",
-          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Sifer",
+          "definition": "istilah generik untuk teknik (atau algoritma) yang melakukan penyulitan"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Memecahkan penyulitan ",
+          "definition": "Apabila anda cuba mengenyahkod mesej rahsia tanpa mengetahui semua butiran sifer, anda cuba \"memecahkan\" penyulitan."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Penyahsulitan",
+          "definition": "proses yang membalikkan penyulitan, mengambil mesej rahsia dan menghasilkan semula teks biasa asal"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Penyulitan",
+          "definition": "satu proses pengekodan mesej untuk merahsiakannya, jadi hanya pihak \"yang diberi kuasa\" boleh membacanya."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Sifer Gantian Rawak",
+          "definition": "teknik penyulitan yang memetakan setiap huruf abjad kepada huruf lain abjad yang dipilih secara rawak."
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/starwars/unversioned": {
           "word": "Penyahpepijatan",
@@ -139,6 +204,9 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/mc/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/mc/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -146,6 +214,9 @@
         "program/mc/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/playlab/unversioned": {
           "word": "Penyahpepijatan",
@@ -155,6 +226,9 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "debugging/starwarsblocks/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
@@ -162,6 +236,10 @@
         "program/starwarsblocks/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Pemampatan Tanpa Kehilangan",
+          "definition": "algoritma pemampatan data yang membolehkan data asal dibina semula dengan sempurna daripada data dimampatkan. Paling biasa digunakan untuk pemampatan teks (cth. .mampatan zip)"
         },
         "event/outbreak/unversioned": {
           "word": "Acara",
@@ -171,20 +249,24 @@
           "word": "Model dan Simulasi",
           "definition": "program yang mereplikasi atau meniru ciri utama peristiwa dunia sebenar untuk menyiasat kelakuannya tanpa kos, masa atau bahaya menjalankan eksperimen dalam kehidupan sebenar."
         },
-        "event/sports/unversioned": {
-          "word": "Acara",
-          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
-        },
         "code/sports/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/sports/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
         },
+        "event/sports/unversioned": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
         "program/sports/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/infinity/unversioned": {
           "word": "Penyahpepijatan",
@@ -194,17 +276,23 @@
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
-        "event/basketball/unversioned": {
-          "word": "Acara",
-          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        "code/basketball/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "debugging/basketball/unversioned": {
           "word": "Penyahpepijatan",
           "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
         },
+        "event/basketball/unversioned": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
         "program/basketball/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "event/dance-extras-2019/unversioned": {
           "word": "Acara",
@@ -213,6 +301,9 @@
         "program/dance-extras-2019/unversioned": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
         },
         "event/dance-2019/unversioned": {
           "word": "Acara",
@@ -223,6 +314,561 @@
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "machine_learning/oceans/unversioned": {
+          "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
+        },
+        "algorithm/coursed/2022": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "program/coursed/2022": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "bug/coursed/2022": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "debugging/coursed/2022": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "loop/coursed/2022": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "programming/coursed/2022": {
+          "word": "Pengaturcaraan",
+          "definition": "Seni mencipta atur cara."
+        },
+        "frustrated/coursed/2022": {
+          "word": "Berasa Kecewa",
+          "definition": "Berasa sakit hati atau marah kerana sesuatu tidak berlaku seperti yang anda mahukan."
+        },
+        "persistence/coursed/2022": {
+          "word": "Ketabahan",
+          "definition": "Mencuba lagi dan lagi, walaupun apabila menghadapi sesuatu yang sukar."
+        },
+        "event/coursed/2022": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "code/coursed/2022": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
+        "repeat/coursed/2022": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "command/coursed/2022": {
+          "word": "Perintah",
+          "definition": "Arahan untuk komputer. Banyak perintah digabungkan bagi menghasilkan algoritma dan atur cara komputer. "
+        },
+        "conditionals/coursed/2022": {
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
+        },
+        "pseudocode/coursed/2022": {
+          "word": "pseudokod",
+          "definition": "Huraian bahasa biasa tentang langkah dalam algoritma"
+        },
+        "condition/coursed/2022": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
+        },
+        "while_loop/coursed/2022": {
+          "word": "Gelung Semasa",
+          "definition": "Gelung yang terus mengulangi semasa syarat adalah benar."
+        },
+        "until/coursed/2022": {
+          "word": "Sehingga",
+          "definition": "Perintah yang memberitahu anda untuk melakukan sesuatu hanya sehingga kepada peringkat sesuatu menjadi benar."
+        },
+        "sprite/coursef/2022": {
+          "word": "Peperi",
+          "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
+        },
+        "user/coursef/2022": {
+          "word": "Pengguna",
+          "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk melengkapkan tugas."
+        },
+        "behavior/coursef/2022": {
+          "word": "Tingkah laku"
+        },
+        "program/coursef/2022": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "event/coursef/2022": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "variable/coursef/2022": {
+          "word": "Pemboleh ubah",
+          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
+        },
+        "prompt/coursef/2022": {
+          "word": "Prom",
+          "definition": "Mesej pada skrin komputer yang menunggu input daripada pengguna."
+        },
+        "input/coursef/2022": {
+          "word": "Input",
+          "definition": "Maklumat yang berjaya dikumpulkan oleh komputer daripada pengguna."
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Model dan Simulasi",
+          "definition": "program yang mereplikasi atau meniru ciri utama peristiwa dunia sebenar untuk menyiasat kelakuannya tanpa kos, masa atau bahaya menjalankan eksperimen dalam kehidupan sebenar."
+        },
+        "machine_learning/coursef/2022": {
+          "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
+        },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "singkatan untuk Sistem Nama Domain, sistem ini menterjemah nama domain (seperti example.com) kepada alamat IP (seperti 93.184.216.34)"
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "DSL/Kabel",
+          "definition": "Kaedah menghantar maklumat dengan menggunakan kabel telefon atau televisyen."
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "Kabel Optik Gentian\t",
+          "definition": "Penyambungan yang menggunakan cahaya untuk menghantar maklumat"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet",
+          "definition": "Sekumpulan komputer dan pelayan yang disambungkan antara satu sama lain."
+        },
+        "ip_address/coursef/2022": {
+          "word": "Alamat IP",
+          "definition": "Nombor yang diberikan kepada mana-mana item yang disambungkan kepada Internet."
+        },
+        "packets/coursef/2022": {
+          "word": "Bingkisan",
+          "definition": "Sejumlah kecil maklumat yang telah dibentuk dengan teliti daripada sejumlah maklumat yang lebih besar."
+        },
+        "servers/coursef/2022": {
+          "word": "Pelayan",
+          "definition": "Komputer yang wujud hanya untuk menyediakan sesuatu kepada yang lain."
+        },
+        "url/coursef/2022": {
+          "word": "URL",
+          "definition": "Alamat yang mudah diingat untuk memanggil laman web (like www.code.org)."
+        },
+        "wi_fi/coursef/2022": {
+          "word": "Wi-Fi",
+          "definition": "Kaedah wayarles untuk menghantar maklumat dengan menggunakan gelombang radio."
+        },
+        "define/coursef/2022": {
+          "word": "Takrifkan",
+          "definition": "Mengenal pasti butiran masalah yang anda cuba selesaikan"
+        },
+        "prepare/coursef/2022": {
+          "word": "Sedia",
+          "definition": "Menyelidik, merancang dan memperoleh bahan untuk aktiviti yang akan anda lakukan"
+        },
+        "reflect/coursef/2022": {
+          "word": "Renungkan",
+          "definition": "Fikirkan kembali dengan teliti mengenai sesuatu yang bertujuan menambah baik hasilnya pada masa akan datang"
+        },
+        "try/coursef/2022": {
+          "word": "Cuba",
+          "definition": "Percubaan melakukan sesuatu"
+        },
+        "behavior/coursee/2022": {
+          "word": "Tingkah laku",
+          "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
+        },
+        "sprite/coursee/2022": {
+          "word": "Peperi",
+          "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
+        },
+        "loop/coursee/2022": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/coursee/2022": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "function/coursee/2022": {
+          "word": "Fungsi"
+        },
+        "condition/coursee/2022": {
+          "word": "Keadaan"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
+        },
+        "while_loop/coursee/2022": {
+          "word": "Gelung Semasa",
+          "definition": "Gelung yang terus mengulangi semasa syarat adalah benar."
+        },
+        "copyright/coursee/2022": {
+          "word": "Hak Cipta",
+          "definition": "hak undang-undang eksklusif untuk mencetak, menerbitkan, membuat persembahan, membuat filem, atau merakamkan bahan kesusasteraan, seni, atau muzik dan membenarkan yang lain melakukan perkara yang sama"
+        },
+        "define/coursee/2022": {
+          "word": "Takrifkan",
+          "definition": "Mengenal pasti butiran masalah yang anda cuba selesaikan"
+        },
+        "prepare/coursee/2022": {
+          "word": "Sedia",
+          "definition": "Menyelidik, merancang dan memperoleh bahan untuk aktiviti yang akan anda lakukan"
+        },
+        "reflect/coursee/2022": {
+          "word": "Renungkan",
+          "definition": "Fikirkan kembali dengan teliti mengenai sesuatu yang bertujuan menambah baik hasilnya pada masa akan datang"
+        },
+        "try/coursee/2022": {
+          "word": "Cuba",
+          "definition": "Percubaan melakukan sesuatu"
+        },
+        "algorithm/courseb/2022": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "bug/courseb/2022": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "debugging/courseb/2022": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "click/courseb/2022": {
+          "word": "Klik",
+          "definition": "Tekan butang tetikus"
+        },
+        "double_click/courseb/2022": {
+          "word": "Klik Dua Kali",
+          "definition": "Tekan butang tetikus dengan begitu pantas"
+        },
+        "drag/courseb/2022": {
+          "word": "Seret",
+          "definition": "Klik butang tetikus anda dan tahan semasa anda menggerakkan penunjuknya ke arah lokasi baharu"
+        },
+        "drop/courseb/2022": {
+          "word": "Gerakan Jatuh",
+          "definition": "Lepaskan butang tetikus anda untuk \"lepaskan\" item yang sedang anda seret"
+        },
+        "program/courseb/2022": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "programming/courseb/2022": {
+          "word": "Pengaturcaraan",
+          "definition": "Seni mencipta atur cara."
+        },
+        "persistence/courseb/2022": {
+          "word": "Ketabahan",
+          "definition": "Mencuba lagi dan lagi, walaupun apabila menghadapi sesuatu yang sukar."
+        },
+        "loop/courseb/2022": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/courseb/2022": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/courseb/2022": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "algorithm/express/2022": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "bug/express/2022": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "debugging/express/2022": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "sequencing/express/2022": {
+          "word": "Penjujukan",
+          "definition": "Meletakkan perintah dalam urutan yang betul supaya komputer boleh membaca perintah tersebut."
+        },
+        "program/express/2022": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "programming/express/2022": {
+          "word": "Pengaturcaraan",
+          "definition": "Seni mencipta atur cara."
+        },
+        "behavior/express/2022": {
+          "word": "Tingkah laku",
+          "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
+        },
+        "sprite/express/2022": {
+          "word": "Peperi",
+          "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
+        },
+        "event/express/2022": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "code/express/2022": {
+          "definition": "menulis kod, atau menulis arahan untuk komputer."
+        },
+        "loop/express/2022": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/express/2022": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "command/express/2022": {
+          "word": "Perintah",
+          "definition": "Arahan untuk komputer. Banyak perintah digabungkan bagi menghasilkan algoritma dan atur cara komputer. "
+        },
+        "condition/express/2022": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
+        },
+        "conditionals/express/2022": {
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
+        },
+        "while_loop/express/2022": {
+          "word": "Gelung Semasa",
+          "definition": "Gelung yang terus mengulangi semasa syarat adalah benar."
+        },
+        "until/express/2022": {
+          "word": "Sehingga",
+          "definition": "Perintah yang memberitahu anda untuk melakukan sesuatu hanya sehingga kepada peringkat sesuatu menjadi benar."
+        },
+        "function/express/2022": {
+          "word": "Fungsi",
+          "definition": "Sekeping kod yang boleh anda panggil berulang kali dengan mudah."
+        },
+        "prompt/express/2022": {
+          "word": "prom",
+          "definition": "Mesej pada skrin komputer yang menunggu input daripada pengguna."
+        },
+        "variable/express/2022": {
+          "word": "Pemboleh ubah",
+          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
+        },
+        "for_loop/express/2022": {
+          "word": "Gelung Untuk",
+          "definition": "Gelung yang mempunyai permulaan, akhir dan kenaikan yang telah ditentukan terlebih dahulu (selang langkah)."
+        },
+        "define/express/2022": {
+          "word": "Takrifkan",
+          "definition": "Mengenal pasti butiran masalah yang anda cuba selesaikan"
+        },
+        "prepare/express/2022": {
+          "word": "Sedia",
+          "definition": "Menyelidik, merancang dan memperoleh bahan untuk aktiviti yang akan anda lakukan"
+        },
+        "reflect/express/2022": {
+          "word": "Renungkan",
+          "definition": "Fikirkan kembali dengan teliti mengenai sesuatu yang bertujuan menambah baik hasilnya pada masa akan datang"
+        },
+        "try/express/2022": {
+          "word": "Cuba",
+          "definition": "Percubaan melakukan sesuatu"
+        },
+        "click/pre-express/2022": {
+          "word": "Klik",
+          "definition": "Tekan butang tetikus"
+        },
+        "double_click/pre-express/2022": {
+          "word": "Klik Dua Kali",
+          "definition": "Tekan butang tetikus dengan begitu pantas"
+        },
+        "drag/pre-express/2022": {
+          "word": "Seret",
+          "definition": "Klik butang tetikus anda dan tahan semasa anda menggerakkan penunjuknya ke arah lokasi baharu"
+        },
+        "drop/pre-express/2022": {
+          "word": "Gerakan Jatuh",
+          "definition": "Lepaskan butang tetikus anda untuk \"lepaskan\" item yang sedang anda seret"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "bug/pre-express/2022": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "debugging/pre-express/2022": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "program/pre-express/2022": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "programming/pre-express/2022": {
+          "word": "Pengaturcaraan",
+          "definition": "Seni mencipta atur cara."
+        },
+        "persistence/pre-express/2022": {
+          "word": "Ketabahan",
+          "definition": "Mencuba lagi dan lagi, walaupun apabila menghadapi sesuatu yang sukar."
+        },
+        "loop/pre-express/2022": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/pre-express/2022": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/pre-express/2022": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "algorithm/coursea/2022": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "debugging/coursea/2022": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "program/coursea/2022": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "click/coursea/2022": {
+          "word": "Klik",
+          "definition": "Tekan butang tetikus"
+        },
+        "double_click/coursea/2022": {
+          "word": "Klik Dua Kali",
+          "definition": "Tekan butang tetikus dengan begitu pantas"
+        },
+        "drag/coursea/2022": {
+          "word": "Seret",
+          "definition": "Klik butang tetikus anda dan tahan semasa anda menggerakkan penunjuknya ke arah lokasi baharu"
+        },
+        "drop/coursea/2022": {
+          "word": "Gerakan Jatuh",
+          "definition": "Lepaskan butang tetikus anda untuk \"lepaskan\" item yang sedang anda seret"
+        },
+        "bug/coursea/2022": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "programming/coursea/2022": {
+          "word": "Pengaturcaraan",
+          "definition": "Seni mencipta atur cara."
+        },
+        "loop/coursea/2022": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/coursea/2022": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/coursea/2022": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "bug/coursec/2022": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "debugging/coursec/2022": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "program/coursec/2022": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "sequencing/coursec/2022": {
+          "word": "Penjujukan",
+          "definition": "Meletakkan perintah dalam urutan yang betul supaya komputer boleh membaca perintah tersebut."
+        },
+        "persistence/coursec/2022": {
+          "word": "Ketabahan"
+        },
+        "programming/coursec/2022": {
+          "word": "Pengaturcaraan",
+          "definition": "Seni mencipta atur cara."
+        },
+        "loop/coursec/2022": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/coursec/2022": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/coursec/2022": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "data/coursec/2022": {
+          "word": "Data"
+        },
+        "binary/coursec/2022": {
+          "definition": "Cara mewakili maklumat dengan menggunakan hanya dua pilihan."
+        },
+        "input/csd/2022": {
+          "word": "Input"
+        },
+        "bug/csd/2022": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "debugging/csd/2022": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "program/csd/2022": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "variable/csd/2022": {
+          "word": "Pemboleh ubah",
+          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
+        },
+        "sprite/csd/2022": {
+          "word": "Peperi"
+        },
+        "condition/csd/2022": {
+          "word": "Keadaan"
+        },
+        "conditionals/csd/2022": {
+          "word": "Bersyarat"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraksi"
+        },
+        "function/csd/2022": {
+          "word": "Fungsi"
+        },
+        "copyright/csd/2022": {
+          "word": "Hak Cipta",
+          "definition": "hak undang-undang eksklusif untuk mencetak, menerbitkan, membuat persembahan, membuat filem, atau merakamkan bahan kesusasteraan, seni, atau muzik dan membenarkan yang lain melakukan perkara yang sama"
+        },
+        "user/csd/2022": {
+          "word": "Pengguna",
+          "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
+        },
+        "user_interface/csd/2022": {
+          "word": "Antaramuka Pengguna"
+        },
+        "machine_learning/csd/2022": {
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
         },
         "code/poem-art/unversioned": {
@@ -253,6 +899,10 @@
           "word": "Pengguna",
           "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
         },
+        "algorithm/coursef/2021": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk melengkapkan tugas."
+        },
         "behavior/coursef/2021": {
           "word": "Tingkah laku",
           "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
@@ -260,10 +910,6 @@
         "program/coursef/2021": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algoritma",
-          "definition": "Senarai langkah untuk melengkapkan tugas."
         },
         "event/coursef/2021": {
           "word": "Acara",
@@ -304,9 +950,21 @@
           "word": "DNS",
           "definition": "singkatan untuk Sistem Nama Domain, sistem ini menterjemah nama domain (seperti example.com) kepada alamat IP (seperti 93.184.216.34)"
         },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Kabel",
+          "definition": "Kaedah menghantar maklumat dengan menggunakan kabel telefon atau televisyen."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Kabel Optik Gentian\t",
+          "definition": "Penyambungan yang menggunakan cahaya untuk menghantar maklumat"
+        },
         "internet/coursef/2021": {
           "word": "Internet",
           "definition": "Sekumpulan komputer dan pelayan yang disambungkan antara satu sama lain."
+        },
+        "ip_address/coursef/2021": {
+          "word": "Alamat IP",
+          "definition": "Nombor yang diberikan kepada mana-mana item yang disambungkan kepada Internet."
         },
         "packets/coursef/2021": {
           "word": "Bingkisan",
@@ -319,18 +977,6 @@
         "url/coursef/2021": {
           "word": "URL",
           "definition": "Alamat yang mudah diingat untuk memanggil laman web (like www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Kabel",
-          "definition": "Kaedah menghantar maklumat dengan menggunakan kabel telefon atau televisyen."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Kabel Optik Gentian\t",
-          "definition": "Penyambungan yang menggunakan cahaya untuk menghantar maklumat"
-        },
-        "ip_address/coursef/2021": {
-          "word": "Alamat IP",
-          "definition": "Nombor yang diberikan kepada mana-mana item yang disambungkan kepada Internet."
         },
         "wi_fi/coursef/2021": {
           "word": "Wi-Fi",
@@ -368,6 +1014,10 @@
           "word": "Klik",
           "definition": "Tekan butang tetikus"
         },
+        "double_click/courseb/2021": {
+          "word": "Klik Dua Kali",
+          "definition": "Tekan butang tetikus dengan begitu pantas"
+        },
         "drag/courseb/2021": {
           "word": "Seret",
           "definition": "Klik butang tetikus anda dan tahan semasa anda menggerakkan penunjuknya ke arah lokasi baharu"
@@ -375,10 +1025,6 @@
         "drop/courseb/2021": {
           "word": "Gerakan Jatuh",
           "definition": "Lepaskan butang tetikus anda untuk \"lepaskan\" item yang sedang anda seret"
-        },
-        "double_click/courseb/2021": {
-          "word": "Klik Dua Kali",
-          "definition": "Tekan butang tetikus dengan begitu pantas"
         },
         "program/courseb/2021": {
           "word": "Atur Cara",
@@ -420,6 +1066,10 @@
           "word": "Klik",
           "definition": "Tekan butang tetikus"
         },
+        "double_click/coursea/2021": {
+          "word": "Klik Dua Kali",
+          "definition": "Tekan butang tetikus dengan begitu pantas"
+        },
         "drag/coursea/2021": {
           "word": "Seret",
           "definition": "Klik butang tetikus anda dan tahan semasa anda menggerakkan penunjuknya ke arah lokasi baharu"
@@ -427,10 +1077,6 @@
         "drop/coursea/2021": {
           "word": "Gerakan Jatuh",
           "definition": "Lepaskan butang tetikus anda untuk \"lepaskan\" item yang sedang anda seret"
-        },
-        "double_click/coursea/2021": {
-          "word": "Klik Dua Kali",
-          "definition": "Tekan butang tetikus dengan begitu pantas"
         },
         "bug/coursea/2021": {
           "word": "Pepijat",
@@ -527,6 +1173,9 @@
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
+        "code/coursed/2021": {
+          "definition": "(v) menulis kod, atau menulis arahan untuk komputer."
+        },
         "repeat/coursed/2021": {
           "word": "Ulang",
           "definition": "Untuk melakukan sesuatu lagi."
@@ -536,11 +1185,16 @@
           "definition": "Arahan untuk komputer. Banyak perintah digabungkan bagi menghasilkan algoritma dan atur cara komputer. "
         },
         "conditionals/coursed/2021": {
-          "word": "Bersyarat"
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
         },
         "pseudocode/coursed/2021": {
           "word": "pseudokod",
           "definition": "Huraian bahasa biasa tentang langkah dalam algoritma"
+        },
+        "condition/coursed/2021": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
         },
         "while_loop/coursed/2021": {
           "word": "Gelung Semasa",
@@ -601,8 +1255,13 @@
           "word": "Perintah",
           "definition": "Arahan untuk komputer. Banyak perintah digabungkan bagi menghasilkan algoritma dan atur cara komputer. "
         },
+        "condition/express/2021": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
+        },
         "conditionals/express/2021": {
-          "word": "Bersyarat"
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
         },
         "while_loop/express/2021": {
           "word": "Gelung Semasa",
@@ -613,15 +1272,16 @@
           "definition": "Perintah yang memberitahu anda untuk melakukan sesuatu hanya sehingga kepada peringkat sesuatu menjadi benar."
         },
         "function/express/2021": {
-          "word": "Fungsi"
-        },
-        "variable/express/2021": {
-          "word": "Pemboleh ubah",
-          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
+          "word": "Fungsi",
+          "definition": "Sekeping kod yang boleh anda panggil berulang kali dengan mudah."
         },
         "prompt/express/2021": {
           "word": "prom",
           "definition": "Mesej pada skrin komputer yang menunggu input daripada pengguna."
+        },
+        "variable/express/2021": {
+          "word": "Pemboleh ubah",
+          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
         },
         "for_loop/express/2021": {
           "word": "Gelung Untuk",
@@ -647,6 +1307,10 @@
           "word": "Klik",
           "definition": "Tekan butang tetikus"
         },
+        "double_click/pre-express/2021": {
+          "word": "Klik Dua Kali",
+          "definition": "Tekan butang tetikus dengan begitu pantas"
+        },
         "drag/pre-express/2021": {
           "word": "Seret",
           "definition": "Klik butang tetikus anda dan tahan semasa anda menggerakkan penunjuknya ke arah lokasi baharu"
@@ -654,10 +1318,6 @@
         "drop/pre-express/2021": {
           "word": "Gerakan Jatuh",
           "definition": "Lepaskan butang tetikus anda untuk \"lepaskan\" item yang sedang anda seret"
-        },
-        "double_click/pre-express/2021": {
-          "word": "Klik Dua Kali",
-          "definition": "Tekan butang tetikus dengan begitu pantas"
         },
         "algorithm/pre-express/2021": {
           "word": "Algoritma",
@@ -695,13 +1355,13 @@
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
-        "behavior/coursee/2021": {
-          "word": "Tingkah laku",
-          "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
-        },
         "algorithm/coursee/2021": {
           "word": "algoritma",
           "definition": "Senarai langkah untuk menyelesaikan tugas"
+        },
+        "behavior/coursee/2021": {
+          "word": "Tingkah laku",
+          "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
         },
         "sprite/coursee/2021": {
           "word": "Peperi",
@@ -724,10 +1384,16 @@
           "definition": "Untuk melakukan sesuatu lagi."
         },
         "function/coursee/2021": {
-          "word": "Fungsi"
+          "word": "Fungsi",
+          "definition": "Sekeping kod yang boleh anda panggil berulang kali dengan mudah."
+        },
+        "condition/coursee/2021": {
+          "word": "Keadaan",
+          "definition": "Sesuatu program menyemak untuk melihat sama ada tindakan itu benar sebelum membenarkan tindakan."
         },
         "conditionals/coursee/2021": {
-          "word": "Bersyarat"
+          "word": "Bersyarat",
+          "definition": "Kenyataan yang hanya berjalan dalam keadaan tertentu."
         },
         "while_loop/coursee/2021": {
           "word": "Gelung Semasa",
@@ -752,6 +1418,13 @@
         "machine_learning/csd/2021": {
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
         },
+        "user/csd/2021": {
+          "word": "Pengguna",
+          "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
+        },
+        "user_interface/csd/2021": {
+          "word": "Antaramuka Pengguna"
+        },
         "bug/csd/2021": {
           "word": "Pepijat",
           "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
@@ -774,6 +1447,9 @@
         },
         "sprite/csd/2021": {
           "word": "Peperi"
+        },
+        "condition/csd/2021": {
+          "word": "Keadaan"
         },
         "conditionals/csd/2021": {
           "word": "Bersyarat"

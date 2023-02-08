@@ -5,14 +5,14 @@ module Api::V1::Pd
     # GET /api/v1/pd/workshops/:id/foorm/generic_survey_report
     def generic_survey_report
       is_authorized, facilitator_id_filter = get_authorization_and_filter(current_user, params[:workshop_id])
-      return render json: {}, status: 401 unless is_authorized
+      return render json: {}, status: :unauthorized unless is_authorized
       report = Pd::Foorm::SurveyReporter.get_workshop_report(params[:workshop_id], facilitator_id_filter)
       render json: report
     end
 
     # GET /api/v1/pd/workshops/:id/foorm/csv_survey_report
     def csv_survey_report
-      return render json: {}, status: 401 unless current_user && current_user.workshop_admin?
+      return render json: {}, status: :unauthorized unless current_user&.workshop_admin?
       form_name = params[:name]
       form_version = params[:version]
       workshop_id = params[:workshop_id]

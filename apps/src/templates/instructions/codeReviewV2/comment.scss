@@ -1,0 +1,10 @@
+.comment-content {
+  & > * {
+    margin: 0;
+  }
+
+  // gray background for block formatted code comments
+  pre {
+    background-color: rgb(255 255 255 / 0.5);
+  }
+}

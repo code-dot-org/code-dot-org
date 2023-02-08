@@ -2,69 +2,43 @@
  * A button that opens our LessonLockDialog component, using our redesigned button.
  */
 
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import React from 'react';
-import {connect} from 'react-redux';
 import Button from '../Button';
 import i18n from '@cdo/locale';
-import LessonLockDialog from '@cdo/apps/code-studio/components/progress/LessonLockDialog';
-import {
-  openLockDialog,
-  closeLockDialog,
-  refetchSectionLockStatus
-} from '@cdo/apps/code-studio/lessonLockRedux';
-import {lessonType} from './progressTypes';
+import LessonLockDialog from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
 
-class LessonLock extends React.Component {
-  static propTypes = {
-    lesson: lessonType.isRequired,
+const LessonLock = ({unitId, lessonId, isHidden}) => {
+  const [dialogOpen, setDialogOpen] = useState(false);
 
-    // redux provided
-    sectionId: PropTypes.number,
-    sectionsAreLoaded: PropTypes.bool.isRequired,
-    saving: PropTypes.bool.isRequired,
-    scriptId: PropTypes.number.isRequired,
-    openLockDialog: PropTypes.func.isRequired,
-    closeLockDialog: PropTypes.func.isRequired,
-    refetchSectionLockStatus: PropTypes.func.isRequired
-  };
-
-  openLockDialog = () => {
-    const {
-      openLockDialog,
-      sectionId,
-      scriptId,
-      lesson,
-      refetchSectionLockStatus
-    } = this.props;
-    refetchSectionLockStatus(sectionId, scriptId);
-    openLockDialog(sectionId, lesson.id);
-  };
-
-  render() {
-    const {sectionsAreLoaded, saving, closeLockDialog} = this.props;
-
-    if (!sectionsAreLoaded) {
-      return <div>{i18n.loading()}</div>;
-    }
-
-    return (
-      <div style={styles.main}>
-        <div style={styles.buttonContainer} className="uitest-locksettings">
-          <Button
-            __useDeprecatedTag
-            onClick={this.openLockDialog}
-            color={Button.ButtonColor.gray}
-            text={saving ? i18n.saving() : i18n.lockSettings()}
-            icon="lock"
-            style={styles.button}
-          />
-        </div>
-        <LessonLockDialog handleClose={closeLockDialog} />
+  return (
+    <div style={styles.main}>
+      <div style={styles.buttonContainer} className="uitest-locksettings">
+        <Button
+          onClick={() => setDialogOpen(true)}
+          color={Button.ButtonColor.gray}
+          text={i18n.lockSettings()}
+          icon="lock"
+          style={styles.button}
+        />
       </div>
-    );
-  }
-}
+      {dialogOpen && (
+        <LessonLockDialog
+          unitId={unitId}
+          lessonId={lessonId}
+          lessonIsHidden={isHidden}
+          handleClose={() => setDialogOpen(false)}
+        />
+      )}
+    </div>
+  );
+};
+
+LessonLock.propTypes = {
+  unitId: PropTypes.number.isRequired,
+  lessonId: PropTypes.number.isRequired,
+  isHidden: PropTypes.bool
+};
 
 const styles = {
   main: {
@@ -74,20 +48,13 @@ const styles = {
     marginLeft: 15,
     marginRight: 15
   },
+  // Using 'margin' instead of 'marginTop' intentionally to override styling
   button: {
     paddingLeft: 0,
     paddingRight: 0,
-    width: '100%'
+    width: '100%',
+    margin: '5px 0px 0px 0px'
   }
 };
 
-export const UnconnectedLessonLock = LessonLock;
-export default connect(
-  state => ({
-    sectionId: state.teacherSections.selectedSectionId,
-    sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    saving: state.lessonLock.saving,
-    scriptId: state.progress.scriptId
-  }),
-  {openLockDialog, closeLockDialog, refetchSectionLockStatus}
-)(LessonLock);
+export default LessonLock;

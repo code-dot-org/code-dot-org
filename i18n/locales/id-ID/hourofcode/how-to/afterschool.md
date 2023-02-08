@@ -6,17 +6,17 @@ title: Hour of Code How-to Guide for After-school
 
 # Cara mengajar Hour of Code di kelas dan klub setelah sekolah
 
-### Bergabung dengan gerakan ini dan kenalkan siswa Anda ke bidang ilmu komputer dengan langkah-langkah ini.
+### Bergabunglah dengan gerakan ini dan kenalkan siswa Anda dengan ilmu komputer dengan langkah-langkah ini.
 
-Jalan pikiran komputasi membantu pengembangan keahlian memecahkan masalah, logika, dan kreativitas. Dan teknologi berhasil merombak setiap industri di planet ini. Siswa di masa ini harus belajar cara menciptakan teknologi, bukan hanya menggunakannya saja. Dengan dimulai sejak dini, anak-anak akan memiliki fondasi menuju kesuksesan karier pada abad 21 ini.
+Pemikirian komputasional membantu pengembangan keahlian memecahkan masalah, logika, dan kreativitas. Dan teknologi berhasil merombak setiap industri di planet ini. Siswa di masa ini harus belajar cara menciptakan teknologi, bukan hanya menggunakannya. Dengan memulai sejak dini, mereka akan memiliki pondasi menuju kesuksesan karier pada abad 21 ini.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### Hour of Code juga bisa diselenggarakan secara jarak jauh! Untuk memulai, lihat kiat [kami untuk menggelar acara Hour of Code virtual ](https://hourofcode.com/us/how-to/virtual).
+### Hour of Code juga bisa diselenggarakan secara jarak jauh! Untuk memulai, lihat kiat [kami untuk menggelar acara Hour of Code virtual](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Tonton video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Tonton video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Pilih tutorial
 
@@ -65,7 +65,7 @@ Mulai Hour of Code Anda dengan menginspirasi peserta dan diskusi bagaimana ilmu 
 
 **Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Ayo cari solusinya bersama-sama.” - “Teknologi tidak selalu bekerja sesuai keinginan kita” - “Belajar membuat program seperti mempelajari bahasa baru; kamu tidak akan langsung bisa melakukannya.”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
@@ -81,7 +81,7 @@ Mulai Hour of Code Anda dengan menginspirasi peserta dan diskusi bagaimana ilmu 
 - Periksa [ praktek-praktek terbaik](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) dari penyelenggara Hour of Code sebelumnya.
 - Tonton rekaman kami [ panduan pendidik untuk webinar Hour of Code](https://youtu.be/EJeMeSW2-Mw).
 - Kunjungi Forum Jam Pemrograman untuk mendapatkan petunjuk, wawasan dan dukungan dari penyelenggara lainnya.
-- Tinjau [FAQ Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Baca[Pertanyaan Umum tentang Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Apa yang diharapkan selanjutnya setelah Jam Pemrograman?
 

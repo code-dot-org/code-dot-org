@@ -573,9 +573,26 @@ zh-TW:
         poembot-pilot-prompts: 俳句機器人 - 含選擇的提示 [PILOT]
         poembot-pilot-text: 俳句機器人 - 儲存文字 [PILOT]
         poembot-pilot-haiku: 俳句機器人 - 展示你的俳句 [PILOT]
+        csd_ml_intro_to_ai_lab: AI Lab 的介紹
         csd_ml_import_model: 匯入 AI 模型
+        csf_lots_of_sprites: Sprite Lab：大量角色
         playlab_2021: Play Lab 的介紹
         playlab_2021_reader: Play Lab 的介紹
+        csp_defining_calling_functions: 定義和呼叫函式
+        csp_tutorial_datatab: App Lab 中的數據頁籤
+        csp_tutorial_libraries: App Lab 中的程式庫
+        PL-Video-21: 歡迎來到 Code.org 的專業學習！
+        csp_tutorial_datavis1: App Lab 中的數據視覺化工具 – 第一部分
+        csp_tutorial_datavis2: App Lab 中的數據視覺化工具 – 第二部分
+        csd_ml_intro_ai_lab_july2021: AI Lab 的介紹
+        csd_ml_training_testing_ai_lan: AI Lab 的訓練和測試
+        csd_ml_model_cards_july2021: AI Lab 的模型卡
+        csd_ml_numerical_ai_lab: AI Lab 的數字資料
+        Gettting_Started_Progress: 進度、回饋和評估
+        Gettting_Started_ClassSection: 建立班級學習小組
+        Gettting_Started_StudentExperience: 學生體驗
+        Getting_Started_BasicFeatures: Code.org 的基本功能
+        PL_overview_CSD: 甚麼是計算機科學探索？
         PL_CSD_TeacherTips_Advise: 教師提示 - 給新教師的建議
         PL_CSD_TeacherTips_IntroToCSD: 教師提示 - 電腦科學發現簡介
         PL_CSD_TeacherTips_ProblemSolvingProcess: 教師提示 - 解決問題的流程
@@ -588,6 +605,7 @@ zh-TW:
         hello_world_intro: 你好世界 - 歡迎來到精靈圖實驗室
         hello_world_events: 你好世界 - 使用事件進行程式設計
         hello_world_congrats: 你好世界 - 做你想做的
+        csp_global_vs_local: 全局除錯與本地變數
         rough_poemart_intro: v1 詩歌藝術入門
         rough_poemart_events: v1 詩歌藝術事件
         rough_poemart_imagery: v1 詩歌藝術意象
@@ -598,6 +616,55 @@ zh-TW:
         poetry_module_multichoiceprompts: 多選題提示 - 程式設計如寫詩
         poetry_module_conditionals: 條件陳述式 - 程式設計如寫詩
         poemart_intro: 詩歌藝術介紹
+        poemart_events: 詩歌藝術事件
+        poemart_imagery: 詩歌藝術意象
+        poemart_celebration: 詩歌藝術慶典
+        csd_u6_variables_part2: 變數 - 第二部分
+        csd_ml_ethics_ai: '倫理與人工智能 '
+        outbreak_intro: 疫情模擬器：簡介
+        outbreak_events: 疫情模擬器：事件
+        outbreak_scientist: 疫情模擬器：像科學家般思考
+        outbreak_outro: 疫情模擬器：自由遊玩
+        PL_overview_CSP: 甚麼是計算機科學原理？
+        PL_CSP_EIPMOverview: EIPM 課程指南
+        CSA-PL-debugging-temp: Java實驗室調試介紹 - 臨時
+        csd_app_lab_design_mode: CSD App Lab 設計模式
+        csd_app_lab_events: CSD App Lab 事件
+        PL_CSD_Unit4_AppTesting: 紙上原型測試
+        csd_u6_circuit_playground: 實體運算
+        csd_u6_input_output: 輸入與輸出
+        CSA-PL-for-loops: Java中的For循環
+        CSA-PL-variables: 在Java中創建變數
+        PL_CS_Journeys_Overview: 計算機科學的旅程
+        CSA-PL-intro-to-java-lab: Java實驗室基礎
+        CSA-PL-first-program: 在Java中編寫程式
+        CSD_u6_variables_part1: CSD：變數
+        csd_u6_if_statements: CSD：If语句
+        csc-poem-art-intro: 簡介視訊
+        csc-poem-art-outro: 結尾視訊
+        csd_u6_call_define_functions: CSD：調用和定義函數
+        csp_applab_parameters: 函式帶參數
+        starquilts_intro_artist: 星星被子簡介
+        CSA-PL-intro-to-arrays: 一維（1D）陣列
+        CSA-PL-1d-arrays-new-values: 在1維陣列中輸入值
+        CSA-PL-conditionals: Java中的條件語句
+        CSA-PL-two-way-selection: 雙向選擇
+        CSA-PL-Printing-in-Java: Java中的列印
+        CSA-PL-multi-selection-statements: 多重選擇語句
+        PL_CSP_TeacherTips_Advice: 教師提示：給新的 CS 教師的建議
+        PL_CSP_TeacherTips_IntroToCSP: 教師提示：CS 原理簡介
+        PL_CSP_TeacherTips_Debugging: 教師提示：幫忙除錯
+        PL_CSP_TeacherTips_LeadLearner: 教師提示：如何成為領先的學習者
+        PL_CSP_TeacherTips_APExam: 教師提示：為 AP 考試做準備
+        PL_CSP_TeacherTips_EIPM: 教師提示：EIPM 流程
+        PL_CSD_CircuitPlayground_Overview: 電路遊樂場概述
+        CSA-PL-debugging-22: 在 Java Lab 中除錯
+        CSD_Unit6_InteractiveArtExemplar: 互動藝術範例
+        CS_Changing_Everything: 計算機科學改變了一切
+        csa-equals-video: equals() 方法
+        csa-user-stories: 軟件工程中的使用者故事
+        csa-pl-vpl-m1-unit-3: 單元 3 中的軟件工程
+        csa-pl-intro-to-equals-method: ".equals() 方法簡介"
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

@@ -37,3 +37,11 @@ export default function initializeCdoConstants(blocklyWrapper) {
   // by multiplying a scale factor, so it's important that the default value matches what it was on our fork
   blocklyWrapper.SNAP_RADIUS = 15;
 }
+
+// Margins for SVG frames for unused blocks and functions
+export const frameSizes = {
+  MARGIN_SIDE: 15,
+  MARGIN_TOP: 10,
+  MARGIN_BOTTOM: 5,
+  HEADER_HEIGHT: 25
+};

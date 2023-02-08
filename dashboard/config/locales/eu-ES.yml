@@ -226,7 +226,6 @@ eu:
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: Zure aurrerapena
-      lines: 'Kode lerro kopuru osoa: %{lines}'
       close: ITXI
       mastery: Kontzeptuak
       puzzle_map: Mailak
@@ -320,6 +319,7 @@ eu:
     no_primary_course: Probatu Code Studioko ikastaro bat
     choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
     print_certificate: Inprimatu ziurtagiria
+  certificate_hour_of_code: Kode Ordua
   share:
     title: Ezagutu Code Studio
     description: Edonork ikas dezake informatika. Jokoak, aplikazioak eta artea sortu
@@ -427,33 +427,28 @@ eu:
   upsell:
     applab:
       title: App laborategia
-    hoc:
-      title: Labirinto klasikoa
-      body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
+    aquatic:
+      title: Minecraft
     flappy:
       title: Flappy Code
       body: Nahi al duzu zure jokoa idatzi 10 baino minutu gutxiagotan? Saiatu Flappy
         Code tutoriala!
-    20-hour:
-      title: Ikastaro Azeleratua
-      body: |-
-        20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
-        Gehiago ikasteko ikusi maila bereko gure ikastaroak!
-      body_short: Oinarrizko informatika ikasi 2-4 ikastaroen bertsio azeleratuen
-        bidez.
-    hoc2014:
-      try_new_tutorial: Probatu gure Kode Ordu berria beta bertsioan
-      try_frozen: Artista Frozeneko Anna eta Elsarekin
+    frozen:
+      title: Frozen
     gallery:
       title: Galeria
       body: Begira ezazu gure erabiltzaileek sortutako app eta irudi artistikoen bilduma
         bat
     gamelab:
       title: Jolas laborategia
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hero:
+      title: Minecraft
+    hoc:
+      title: Labirinto klasikoa
+      body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
+    hoc2014:
+      try_new_tutorial: Probatu gure Kode Ordu berria beta bertsioan
+      try_frozen: Artista Frozeneko Anna eta Elsarekin
     infinity:
       title: Infinity Jolas Laborategia
       body: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak
@@ -463,14 +458,19 @@ eu:
       body: Esploratu Minecraft mundu bat kodearen bitartez.
     minecraft2016:
       title: Minecraft
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-    unplugged_conditionals:
-      title: Baldintzak
+    starwars:
+      title: Star Wars
     widgets:
       audience: 14 urtetik aurrera
+    unplugged_conditionals:
+      title: Baldintzak
+    20-hour:
+      title: Ikastaro Azeleratua
+      body: |-
+        20 orduko ikastaro honek DBHko lehen mailetako programazio eta konputazio kontzeptuak lantzen ditu, dena den, 10 eta 18 urte bitartekoentzat da aproposa.
+        Gehiago ikasteko ikusi maila bereko gure ikastaroak!
+      body_short: Oinarrizko informatika ikasi 2-4 ikastaroen bertsio azeleratuen
+        bidez.
   landing:
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza
@@ -619,14 +619,19 @@ eu:
         math: Matematika
         science: Zientzia
         la: Hizkuntzalaritza
+        other: Beste bat
       resources:
         kodable: Kodable
         lightbot: Argibot
+        other: Beste bat
       robotics:
         kodable: Kodable
+        other: Beste bat
       email_opt_in:
         opt_in_yes: Bai
         opt_in_no: Ez
   cookie_banner:
     accept: Ados
   copy: Kopiatu
+  pixelation:
+    binary: Bitarra

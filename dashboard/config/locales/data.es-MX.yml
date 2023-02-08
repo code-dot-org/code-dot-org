@@ -626,11 +626,11 @@ es-MX:
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Bucles en el artista
         CSF_artist_angles: Ángulos en Artist
-        CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El
-          Recolector'
+        CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: La
+          Recolectora'
         CSF_collector_repeat_loops: Bucles de repetición del Recolector
         CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación:
-          El Recolector'
+          La Recolectora'
         CSF_create_functions: Crear funciones
         CSF_debugging_k1_blocks: Depuración
         CSF_debugging_text_blocks: Depuración
@@ -782,7 +782,7 @@ es-MX:
         csd_gamelab_booleans: Expresiones booleanas
         csd_gamelab_conditional_statements: Sentencias condicionales
         csd_gamelab_if_else: Sentencias `si/si no`
-        CSF_SpriteLabIntro_CDEF: Esto es Laboratorio de sprites
+        CSF_SpriteLabIntro_CDEF: Esto es Laboratorio de Sprite
         CSF_Spritelab_MakeSprite_CDEF: Cómo crear un sprite en el Laboratorio de sprites
         CDEF_Video_SpritesInAction: Sprites en acción
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acción
@@ -825,7 +825,7 @@ es-MX:
         csd_problem_solving_process: El proceso de resolución de problemas
         CSF_Going_Places_Safely: Mi barrio en línea
         CSF_SpriteLab_Intro_v2: Presentamos el Laboratorio de sprites
-        CSF_Spritelab_MakeSprite_v2: Cómo crear un sprite
+        CSF_Spritelab_MakeSprite_v2: Cómo Crear un Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en acción
         csd_debugging: Depuración
         csd_applab_designmode_short: Modo de diseño del Laboratorio de aplicaciones
@@ -847,7 +847,7 @@ es-MX:
         hoc_dance_congrats_2019: 'Fiesta de baile 2019: ¡Fiesta!'
         hoc_dance_warmup_2019: 'Fiesta de baile 2019: Precalentamiento'
         hoc_dance_events_2019: 'Fiesta de baile 2019: Eventos'
-        hoc_dance_measures_2019: 'Fiesta de Baile: Compaces'
+        hoc_dance_measures_2019: 'Fiesta de Baile: Compases'
         hoc_dance_properties_2019: 'Fiesta de baile 2019: Propiedades'
         csd_what_computers_do: "¿Qué hacen los ordenadores?"
         csf_my_online_neighborhood_2020: Mi barrio en línea
@@ -914,9 +914,7 @@ es-MX:
         PL_CSD_TeacherTips_PairProgramming: Consejos al Profesor - Programación en
           Parejas
         PL_CSD_TeacherTips_Debugging: Consejos al Profesor - Depuración
-        PL_CSD_TeacherTips_LeadLearner: 'Conseils aux enseignants - Délégué de classe
-
-'
+        PL_CSD_TeacherTips_LeadLearner: Consejos al Profesor - Aprendiz de Líder
         poembot-playtest-intro: PoemBot Prueba de Juego Introducción
         poembot-playtest-sprites: PoemBot Prueba del Juego Sprites
         poembot-playtest-events: PoemBot Prueba de Juego Eventos
@@ -948,10 +946,65 @@ es-MX:
         PL_overview_CSP: "¿Qué son los Principios de la Informática?"
         PL_CSP_EIPMOverview: Guía de Lecciones de EIPM
         tesstest: Prueba Tess
+        CSA-PL-debugging-temp: Introducción a la Depuración en Laboratorio Java -
+          temp
+        csd_app_lab_design_mode: CSD Laboratorio de Aplicaciones - Modo Diseño
+        csd_app_lab_events: CSD Laboratorio de Aplicaciones - Eventos
+        PL_CSD_Unit4_AppTesting: Pruebas de Prototipos en Papel
+        csd_u6_circuit_playground: Computación física
+        csd_u6_input_output: Entrada y salida
+        CSA-PL-for-loops: Bucles For en Java
+        CSA-PL-variables: Creando Variables en Java
+        PL_CS_Journeys_Overview: Jornadas CS
+        CSA-PL-intro-to-java-lab: Fundamentos de Laboratorio Java
+        CSA-PL-first-program: Escribiendo un Programa en Java
+        CSD_u6_variables_part1: 'CSD: Variables'
+        csd_u6_if_statements: CSD:Sentencias If
+        csc-poem-art-intro: Intro Video
+        csc-poem-art-outro: Outro Video
+        csd_u6_call_define_functions: 'CSD: Llamando y Definiendo Funciones'
+        csp_applab_parameters: Funciones con parámetros
+        starquilts_intro_artist: Introducción a las Colchas de Estrellas
+        CSA-PL-intro-to-arrays: Matrices Unidimensionales (1D)
+        CSA-PL-1d-arrays-new-values: Introducción de valores en arrays 1D
+        CSA-PL-conditionals: Sentencias Condicionales en Java
+        CSA-PL-two-way-selection: Selección bidireccional
+        CSA-PL-Printing-in-Java: Impresión en Java
+        CSA-PL-multi-selection-statements: Sentencias de Selección Múltiple
+        PL_CSP_TeacherTips_Advice: 'Consejos para Docentes: Asesoramiento a Nuevos
+          Profesores de Informática'
+        PL_CSP_TeacherTips_IntroToCSP: 'Consejos para Docentes: Introducción a los
+          Principios de Informática'
+        PL_CSP_TeacherTips_Debugging: 'Consejos para Docentes: Ayuda con la Depuración'
+        PL_CSP_TeacherTips_LeadLearner: 'Consejos para Docentes: Cómo ser un Alumno
+          Aventajado'
+        PL_CSP_TeacherTips_APExam: 'Consejos para Docentes: Preparación para el Examen
+          AP'
+        PL_CSP_TeacherTips_EIPM: 'Consejos para Docentes: El proceso de EIPM'
+        PL_CSD_CircuitPlayground_Overview: Circuit Playground - Vista Previa
+        CSA-PL-debugging-22: Depuración en el Laboratorio Java
+        CSD_Unit6_InteractiveArtExemplar: Arte Interactivo - Ejemplo
+        CS_Changing_Everything: Las Ciencias de la Computación lo están cambiando
+          todo
+        csa-alias-video: Igualdades y Alias
+        csa-equals-video: El método igualdad()
+        csa-user-stories: Historias de Usuario en Ingeniería de Software
+        csa-pl-vpl-m1-unit-3: Ingeniería de Software en la Unidad 3
+        csa-pl-intro-to-equality: Introducción a la Igualdad
+        csa-pl-intro-to-equals-method: Introducción al método .equals()
+        csa-pl-equals-book: Escribir el método equals() para la clase Libro
+        csa-multi-select-pl: Sentencias de selección múltiple en Java
+        csc_timecapsule_intro: Introducción a la Cápsula del Tiempo
+        PL_Equity_in_CS_Education: Igualdad en la Enseñanza de la Informática
+        csc_fm_pilot: Máquinas Funcionales (Piloto)
+        csc_fm_pilot_v2: Máquinas Funcionales (Introducción)
+        csc-sprite-lab-pixel-editor: Dibuja tu Propio Sprite
+        csa-pl-intro-to-strings: Introducción a las Cadenas en Java
+        csa-pl-compareTo: El método compareTo()
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque
-        run: Dale a "Ejecutar" para probar el programa.
+        run: Haz clic en "Ejecutar" para probar tu programa
         watch_again: Haz clic aquí para volver a ver el video
         gray_block_explanation: Los bloques que están de color gris no se pueden eliminar.
           ¿Puedes resolver el rompecabezas de todas formas?
@@ -1062,8 +1115,8 @@ es-MX:
           bloque.
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
         craft_inside_repeat: Coloca bloques aquí para repetir acciones.
-        craft_callout_preplaced_house: Este código empezará a construir tu casa. ¿Puedes
-          acabarlo?
+        craft_callout_preplaced_house: Este código comenzará a construir tu casa.
+          ¿Puedes terminarla?
         craft_what_is_iron: "¡Extrae este hierro!"
         craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir
           un comando para avanzar?

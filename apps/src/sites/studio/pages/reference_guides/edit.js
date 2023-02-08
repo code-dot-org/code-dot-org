@@ -5,10 +5,14 @@ import ReferenceGuideEditor from '@cdo/apps/lib/levelbuilder/reference-guide-edi
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+import reducers, {
+  initLevelSearching
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 $(() => {
   // instructionsDialog reducer is needed for the ExpandableImageDialog
   registerReducers({
+    ...reducers,
     instructionsDialog
   });
   const store = getStore();
@@ -17,6 +21,9 @@ $(() => {
   const referenceGuides = getScriptData('referenceGuides');
   const updateUrl = getScriptData('updateUrl');
   const editAllUrl = getScriptData('editAllUrl');
+  const levelSearchingInfo = getScriptData('levelSearchingInfo');
+  store.dispatch(initLevelSearching(levelSearchingInfo));
+
   ReactDOM.render(
     <Provider store={store}>
       <ReferenceGuideEditor

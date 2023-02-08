@@ -25,6 +25,7 @@ is:
       name: heiti
       nectar: blómasafi
       nectars: blómasafar
+      object: hlutur
       planet: pláneta
       points: stig
       random: eitthvað
@@ -37,6 +38,7 @@ is:
       speed: hraða
       startX: startX
       startY: startY
+      type: gerð
       variable: breyta
       width: breidd
       wizard: galdrakarl

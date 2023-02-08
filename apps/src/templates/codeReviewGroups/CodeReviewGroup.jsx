@@ -16,7 +16,7 @@ export default function CodeReviewGroup({
     onNameUpdate(droppableId, event.target.value);
   };
   return (
-    <div style={styles.groupContainer}>
+    <div style={styles.groupContainer} className="uitest-code-review-group">
       <div style={styles.headerContainer}>
         <input
           value={name}

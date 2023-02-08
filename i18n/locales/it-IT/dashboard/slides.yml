@@ -1571,7 +1571,7 @@ it:
         text: "I computer hanno la potenzialità di fare cose fantastiche.\nMa l'unica cosa che rende i computer intelligenti o utili, sei tu.\nQuando impari a programmare, devi definire il problema da risolvere e scrivere il software che trasforma queste idee in realtà."
     hoc_dance_warmup:
       1:
-        text: "Ora del Codice | Ballando col codice: Riscaldamento"
+        text: "Ora del Codice | Ballando col codice: preparazione"
       2:
         text: "Ciao! Mi chiamo Miral Kotb e sono una ballerina, una sviluppatrice di software e la creatrice di iLuminate."
       3:
@@ -1778,7 +1778,7 @@ it:
         text: "Le lezioni dei Fondamenti di Informatica iniziano con anteprime per farti capire cosa le lezioni copriranno."
       2:
         image: 'notes/lesson_planning_2.png'
-        text: "Le lezioni contengono riscaldamenti, attività e conclusioni. Se vuoi creare i tuoi piani di lezione, potresti voler tenere a mente questi suggerimenti."
+        text: "Le lezioni contengono attività preparatorie, attività comuni e attività conclusive. Se vuoi creare i tuoi piani di lezione, potresti voler tenere a mente questi suggerimenti."
       3:
         image: 'notes/lesson_planning_3.png'
         text: "1. Prova ad usare un design del curriculum a spirale. Introduci i concetti una volta e poi rivisitali."
@@ -1800,7 +1800,7 @@ it:
         text: "Dai un'occhiata alle risorse se ti serve più supporto: 1. forum.code.org 2. @teachcode su Twitter 3. studio.code.org "
     hoc_dance_warmup_2019:
       1:
-        text: "Ora del Codice | Ballando col codice: Riscaldamento"
+        text: "Ora del Codice | Ballando col codice: preparazione"
       2:
         text: "Ciao! Mi chiamo Miral Kotb e sono una ballerina, una sviluppatrice di software e la creatrice di iLuminate."
       3:

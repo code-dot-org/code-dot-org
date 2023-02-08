@@ -99,7 +99,7 @@ module ProxyHelper
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
 
     # If we've resolved to a path on this host/port, stop trying to redirect
-    if url.host === request.host && url.port === request.port
+    if url.host == request.host && url.port == request.port
       return 200, location
     end
 
@@ -125,7 +125,6 @@ module ProxyHelper
     else
       return response.code, response['location']
     end
-
   rescue URI::InvalidURIError
     return 400, "Invalid URI #{location}"
   rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => e

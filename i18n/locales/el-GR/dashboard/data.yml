@@ -503,7 +503,11 @@ el:
         mc_2018_conditionals: 'Minecraft: Υδάτινο Ταξίδι Συνθήκες'
         mc_2018_closing: 'Minecraft: Υδάτινο Ταξίδι Συγχαρητήρια'
         hoc_dance_warmup: Χορευτικό πάρτι- Προθέρμανση
+        hoc_dance_events: Χορευτικό πάρτι - Εκδηλώσεις
+        hoc_dance_properties: Χορευτικό πάρτι - Ιδιότητες
         hoc_dance_congrats: Χορευτικό πάρτι - Το πάρτι ξεκίνησε!
+        c_and_c_great_to_create: Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια
+        c_and_c_digital_sharing: Κοινοποίηση στον ψηφιακό κόσμο
         what_is_cs: Τι είναι η επιστήμη υπολογιστών;
         lesson_planning: Σχεδιασμός μαθημάτων
         csd_pair_programming: Προγραμματισμός κατά ζεύγη
@@ -517,8 +521,27 @@ el:
         hoc_dance_events_2019: Χορευτικό πάρτι 2019- Εκδηλώσεις
         hoc_dance_measures_2019: Χορευτικό πάρτι 2019- Μέτρα
         hoc_dance_properties_2019: Χορευτικό πάρτι 2019- Ιδιότητες
+        csf_private_and_personal_information: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
         playlab_2021: Εισαγωγή στο εργαστήριο παιχνιδιού
         playlab_2021_reader: Εισαγωγή στο εργαστήριο παιχνιδιού
+        CSA-PL-for-loops: Για βρόχους σε Java.
+        CSA-PL-variables: Δημιουργώντας μεταβλητές σε Java
+        PL_CS_Journeys_Overview: Ταξίδια CS
+        CSA-PL-intro-to-java-lab: Στοιχειώδη Εργαστηρίου Java
+        CSA-PL-first-program: Γράφοντας ένα Πρόγραμμα σε Java
+        CSD_u6_variables_part1: 'Ανακαλύψεις της Επιστήμης των Υπολογιστών: Μεταβλητές'
+        csd_u6_if_statements: 'Ανακαλύψεις της Επιστήμης των Υπολογιστών: Εντολές Αν'
+        csc-poem-art-intro: Εισαγωγικό Βίντεο
+        csc-poem-art-outro: Επιλογικό Βίντεο
+        csd_u6_call_define_functions: 'Ανακαλύψεις της Επιστήμης των Υπολογιστών: Ονομάζοντας και Ορίζοντας Λειτουργίες'
+        csp_applab_parameters: Συναρτήσεις με παραμέτρους
+        starquilts_intro_artist: Εισαγωγή στο Ψηφιδωτό Αστέρων
+        CSA-PL-1d-arrays-new-values: Εισάγοντας τιμές με 1D πίνακα
+        CSA-PL-conditionals: Συνθήκες Ελέγχου σε Java
+        CSA-PL-two-way-selection: Δυαδική επιλογή
+        CSA-PL-Printing-in-Java: Εκτύπωση σε Java
+        CSA-PL-multi-selection-statements: Εντολές πολλαπλής επιλογής
+        CS_Changing_Everything: H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

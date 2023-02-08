@@ -1,71 +1,71 @@
 ---
-title: Návodný průvodce „Hodinou programování“ pro virtuální akce
+title: Průvodce Hodinou kódu pro virtuální akce
 ---
 
 {{ signup_button }}
 
-# Tipy pro virtuální akci Hodina programování
+# Tipy pro virtuální akci Hodina kódu
 
-### Chcete-li pořádat úspěšnou hodinu programování, nemusíte u toho být osobně!
+### Chcete-li uspořádat úspěšnou Hodinu kódu, nemusíte ji prezentovat osobně.
 
 ***
 
-Ačkoli se Hodina programování na celém světě tradičně koná ve třídách, k tomu, abyste si užívali tu zábavu, u toho nemusíte být osobně! I tak můžete s využitím některých těchto doporučení dálkově pořádat interaktivní a inspirativní Hodinu programování pro studenty.  Jestliže stále máte nějaké dotazy, podívejte se do našeho [průvodce pro virtuální akce]({{ localized_files/participation_guide_virtual }}).
+I když se Hodina kódu po celém světě obvykle koná ve třídách, k tomu, abyste si užili zábavu, ji nemusíte prezentovat osobně. Když využijete tato doporučení, můžete studentům i na dálku uspořádat interaktivní a inspirativní Hodinu kódu.  Pokud máte nějaké dotazy, podívejte se do našeho [průvodce pro virtuální akce]({{ localized_files/participation_guide_virtual }}).
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## Možná jste navzájem vzdáleni, ale i tak můžete začít společně
-I když máte v plánu, aby studenti realizovali své aktivity samostatně, doporučujeme začínat událost virtuálním zahájením online, aby se účastníci vzrušili. Je několik zajímavých způsobů, jak můžete svou akci zahájit: 
+## I když nejste na stejném místě, můžete začít společně
+I když máte v plánu, aby studenti pracovali na aktivitách samostatně, doporučujeme začít událost jejím virtuálním zahájením online, abyste mohli v účastnících vzbudit nadšení. Existuje několik zajímavých způsobů, jak můžete událost zahájit:
 
 <ul>
-<li><b>Pozvěte zvaného mluvčího</b>: Tisíce dobrovolníků všech možných původů čekají, že se jim ozvete! Prostě použijte naši <a href="https://code.org/volunteer/local">mapu dobrovolníků</a> a vyhledejte je. S virtuální Hodinou programování nejste omezováni vzdáleností, takže bude-li třeba, uvažte vyhledání dobrovolníků, kteří nabízejí pomoc dálkově, i mimo Váš kraj. Když už se spojíte s dobrovolníkem, můžete se podívat do <a href="http://hourofcode.com/us/how-to/volunteers">Návodu pro dobrovolníky Hodiny programování</a> kde najdete návod k určování potenciálních témat, diskusních otázek a dalšího.</li> 
-<li><b>Přehrajte inspirační video</b>: Další spolehlivou možností, jak můžete svou akci zahájit, je ukázat účastníkům některé z mnoha našich <a href="http://hourofcode.com/us/promote/resources#videos">inspiračních videí</a>. Mnohá videa nejsou ani 5 minut dlouhá a je v nich inspirace a povzbuzení od celebrit, které už Vaši studenti znají.</li> 
-<li><b>Diskutujte o počítačové vědě pro dobro</b>: Přeměňte svou akci Hodina programování na hlubší chápání počítačových věd uvážením vlivu techniky na naše každodenní životy. Požádejte studenty o návodné otázky a udělejte ze zahajování své akce interaktivní diskuzi. Nápady na to, jak rozproudit konverzaci, najdete v těchto <a href="https://code.org/csforgood#prompts">diskusních otázkách</a>.</li>
+<li><b>Pozvěte si hosta</b>: Tisíce různorodých dobrovolníků čekají, až se jim ozvete. Najdete je jednoduše v naší <a href="https://code.org/volunteer/local">mapě dobrovolníků</a>. Při virtuální Hodině kódu nejste omezení vzdáleností, takže bude-li třeba, klidně hledejte dobrovolníky ze vzdálenějších míst, kteří nabízejí pomoc dálkově. Když už se spojíte s dobrovolníkem, můžete se podívat do <a href="http://hourofcode.com/us/how-to/volunteers">Návodu pro dobrovolníky Hodiny kódu</a>, který vám pomůže vybrat potenciální témata, diskusní otázky a další.</li>
+<li><b>Přehrajte inspirační video</b>: Další spolehlivou možností, jak zahájit událost, je pustit účastníkům některé z našich mnoha <a href="http://hourofcode.com/us/promote/resources#videos">inspiračních videí</a>. Mnohá videa nejsou ani 5 minut dlouhá a je v nich inspirace a povzbuzení od celebrit, které vaši studenti znají.</li>
+<li><b>Diskutujte o pozitivních přínosech počítačové vědy</b>: Využijte Hodinu kódu k hlubšímu zamyšlení nad počítačovými vědami a dopadem technologií na náš každodenní život. Položte studentům návodné otázky a zahajte událost interaktivní diskuzí. Náměty, jak rozproudit konverzaci, najdete v těchto <a href="https://code.org/csforgood#prompts">diskusních otázkách</a>.</li>
 </ul>
 
 ---
 
 ## Co udělat předem
 
-### 1. Určete svou videokonferenční platformu
-Dnes už jste pravděpodobně obeznámeni s platformami jako Cisco Webex, Google Meet, Microsoft Teams, Skype nebo Zoom. Ať už je Váš oblíbený nástroj jakýkoli, my Vás nabádáme jen, abyste se s ním obeznámili, vyzkoušeli si jeho schopnosti a před datem Vaší akce spustili svou agendu Hodiny programování.
+### 1. Zvolte si videokonferenční platformu
+Už jste pravděpodobně obeznámeni s platformami jako Cisco Webex, Google Meet, Microsoft Teams, Skype nebo Zoom. Ať už si zvolíte jakýkoli nástroj, doporučujeme, abyste se s ním obeznámili, vyzkoušeli si jeho možnosti a před datem udállsti spustili svoji agendu Hodiny kódu.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Naplánujte, jak se zapojí studenti
-**Samostatně vedená akce Hodiny programování**<br> Doporučujeme, abyste po zahájení studentům umožnili odejít z videokonference a pracovat na jejich <a href="https://hourofcode.com/us/learn">aktivitách Hodiny programování</a> samostatně a ne společně. To studentům umožní ponořit se do vlastních projektů a získat silnější chápání koncepcí počítačové vědy. Také se tím minimalizuje rozptylování a překážka vyplývající z nutnosti mít otevřené okno videokonference.
+### 2. Naplánujte, jak se studenti zapojí
+**Samostatná aktivita Hodiny kódu**<br> Doporučujeme, abyste po zahájení studenty vyzvali, ať se z videokonference odpojí a pracují na <a href="https://hourofcode.com/us/learn">aktivitách Hodiny kódu</a> samostatně, ne společně. To studentům umožní ponořit se do svých projektů a získat hlubší pochopení informatických konceptů. Navíc je nebude rozptylovat otevřené okno videokonference.
 
-Mohlo by být užitečné, abyste jim předem určili 1-3 možnosti výukových kurzů, z kterých si budou moci vybrat. To Vám umožní vybrat aktivity, které by co nejlépe odpovídaly jejich úrovni. Kromě toho, kdyby měli studenti nějaké otázky, které by vyžadovaly Vaši asistenci, pak lépe budete připraveni pomoci tehdy, když už budete obeznámeni s výukovými kurzy, na kterých budou pracovat.
+Může pomoct, když jim předem vyberete 1–3 možnosti výukových kurzů, ze kterých si budou moct vybrat. To vám umožní vybrat aktivity, které budou co možná nejlépe odpovídat jejich úrovni. Navíc když budou mít studenti nějaké otázky, které by vyžadovaly vaši asistenci, pak budete lépe připravení jim pomoct, pokud už budete obeznámení s výukovými kurzy, na kterých pracují.
 
-Jestliže se očekává, že se Vaše třída bude věnovat své aktivitě ihned po zahájení, můžete uvážit, že byste nechali otevřenou virtuální konferenční místnost, chatovací platformu nebo jiný komunikační prostředek, aby se na Vás mohli dle potřeby obracet s otázkami.
+Jestliže plánujete zadat třídě aktivitu hned po zahájení, můžete nechat otevřenou některou virtuální konferenční místnost, chatovací platformu nebo jiný komunikační prostředek, aby se na vás studenti mohli podle potřeby obracet s otázkami.
 
-**Společná online aktivita Hodiny programování**<br> Jestliže chcete mít své účastníky po celou dobu trvání Vaší akce na stejném videohovoru, pamatujte prosím, že za všech okolností budou muset mít otevřená dvě okna  - jedno na videokonferenční platformu a druhé, aby mohli studenti pracovat na své aktivitě.
+**Společná online aktivita Hodiny kódu**<br> Jestliže chcete mít účastníky po celou dobu trvání události připojené k videohovoru, pamatujte prosím, že budou muset mít trvale otevřená dvě okna – jedno okno videokonferenční platformy a druhé pro práci na aktivitě.
 
-**S rodiči**<br> Pro studenty, kteří jsou ve čtvrté nebo nižší třídě, uvažte, že byste vybídli jejich rodiče, aby zorganizovali Hodinu programování doma. Můžete je podpořit nějakými doporučenými výukovými kurzy, jakož i tímto užitečným <a href="https://hourofcode.com/us/how-to/parents">Návodem pro rodiče</a>.
+**S rodiči**<br> V případě studentů ve čtvrté nebo nižší třídě můžete doporučit rodičům, ať uspořádají Hodinu kódu doma. Můžete je podpořit tím, že jim doporučíte některé výukové kurzy, stejně jako tento užitečný <a href="https://hourofcode.com/us/how-to/parents">Návod pro rodiče</a>.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Najměte dobrovolníka
-Dobrovolníka vyhovujícího Vašim potřebám můžete najít na naší <a href="https://code.org/volunteer/local">mapě dobrovolníků</a>. Mnoho je jich dostupných pro dálkovou účast a jsou více než ochotni mluvit o svých zkušenostech s počítačovou vědou, o tom, jaký vliv má technika na jejich role, nebo Vám prostě jen pomoci s řešením problémů při dotazování studentů. Jak najdete dobrovolníka, zajistěte, abyste se s ním včas setkali a diskutovali o jeho roli na akci, vypracovali technické požadavky a založili logistiku online účasti.
+### 3. Najděte si dobrovolníka
+Dobrovolníka vyhovujícího vašim potřebám můžete najít na naší <a href="https://code.org/volunteer/local">mapě dobrovolníků</a>. Mnoho dobrovolníků se může účastnit na dálku a je víc než ochotných povědět něco o svých zkušenostech s počítačovou vědou a o tom, jak technologie ovlivňují jejich pracovní roli, nebo vám prostě jen pomůžou zodpovědět otázky studentů. Jakmile najdete dobrovolníka, domluvte si s ním předběžnou schůzku a proberte jeho úlohu při události, vyřešte technické požadavky a připravte online účast po logistické stránce.
 
-### 4. Vybavení na oslavu
-Níže najdete nápady na oslavení Vaší virtuální Hodiny programování. Někteří po Vás budou vyžadovat, abyste se připravili předem, jako například vytištěním <a href="https://code.org/certificates">certifikátů absolvování</a> pro všechny vaše účastníky.
+### 4. Materiály k oslavení
+Níže najdete nápady na oslavu vaší virtuální Hodiny kódu. Některé Hodiny kódu vyžadují přípravu, například vytištění <a href="https://code.org/certificates">certifikátů absolvování</a> pro všechny účastníky.
 
 ---
 
 ## Slavte společně
 
-Obdobně, jako když jste akci zahajovali, i po ní se sejděte a slavte! Tady je několik nápadů na to, jak udělat Vaši virtuální oslavu interaktivní a speciální:
+Podobně, jako jste událost zahájili, se spojte na jejím konci a oslavte ji. Tady je několik nápadů, jak uspořádat interaktivní, speciální virtuální oslavu:
 
-- Dovolte studentům sdílet jejich vyhotovené projekty se zbytkem třídy. Jestliže to bude umožňovat konferenční platforma, můžete studenty dokonce vyzvat, aby pořídili snímky svých projektů a nastavili si je jako virtuální pozadí!
-- Diskutujte o naučeném: Co se naučili o počítačové vědě nebo technice? Co udělali, když narazili na problém? Jak ho vyřešili?
-- <a href="https://code.org/certificates">Vytvořte a sdílejte certifikáty</a> pro své účastníky
-- Sdílejte fotografie a videa ze své virtuální „Hodiny programování“ na sociálních médiích. Použijte #HourOfCode a @codeorg, abychom mohli zveřejnit i Váš úspěch!
+- Nechte studenty, ať sdílejí své dokončené projekty se zbytkem třídy. Jestliže to konferenční platforma umožňuje, můžete studenty vyzvat, ať pořídí snímky obrazovky svých projektů a nastaví si je jako virtuální pozadí.
+- Diskuze o nabitých znalostech: Co se studenti naučili o počítačové vědě nebo technologiích? Co udělali, když narazili na problém? Jak ho vyřešili?
+- <a href="https://code.org/certificates">Vytvořte certifikáty a sdílejte je</a> s účastníky
+- Sdílejte fotografie a videa ze své virtuální Hodiny kódu na sociálních médiích. Použijte hashtag #HourOfCode a @codeorg, abychom i my mohli zveřejnit váš úspěch.
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-A konečně, jestliže jste akci nezahajovali s <a href="https://code.org/volunteer/local">pozvaným mluvčím</a>, <a href="https://hourofcode.com/us/promote/resources#">inspiračním videem</a>, ani s <a href="https://code.org/csforgood#prompts">diskusními otázkami</a>, pak toto by měla být další velká příležitost, jak jeden z těchto prožitků začlenit.
+A konečně, jestliže jste událost nezahájili <a href="https://code.org/volunteer/local">s pozvaným řečníkem</a>, <a href="https://hourofcode.com/us/promote/resources#">inspiračním videem</a> ani <a href="https://code.org/csforgood#prompts">diskusními otázkami</a>, pak je znovu dobrá příležitost něco z toho zařadit do programu.
 
 {{ signup_button }}

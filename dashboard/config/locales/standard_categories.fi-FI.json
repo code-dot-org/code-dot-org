@@ -1,0 +1,20 @@
+{
+  "fi-FI": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Laskennallinen ajattelu"
+        },
+        "L": {
+          "description": "Kieli"
+        },
+        "C": {
+          "description": "Ympyrät"
+        },
+        "F": {
+          "description": "Funktiot"
+        }
+      }
+    }
+  }
+}

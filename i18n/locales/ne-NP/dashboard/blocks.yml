@@ -2,6 +2,22 @@
 ne:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': medium
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': medium
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -177,8 +193,6 @@ ne:
             MOVES.Kick: तारा
             MOVES.XArmsUp: तन्काउनुहोस्
             MOVES.ThisOrThat: यो वा त्यो
-      Dancelab_everyMeasuresRange:
-        text: "{START}  पछि प्रत्येक {N} मापनहरु दोहो¥याउनुहोस् "
       Dancelab_everySeconds:
         text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
         options:
@@ -454,6 +468,10 @@ ne:
             '"right"': दाँया
             '"space"': space
             '"x"': x
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': hearts
       gamelab_atTime:
         options:
           UNIT:
@@ -470,7 +488,7 @@ ne:
           CONDITION:
             '"when"': when
             '"while"': while
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
         options:
           UNIT:
@@ -513,6 +531,12 @@ ne:
             '90': तल
             '180': बाँया
             '270': माथि
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': medium
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -768,3 +792,7 @@ ne:
         text: move forward
       craft_placeTorch:
         text: place torch
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': hearts

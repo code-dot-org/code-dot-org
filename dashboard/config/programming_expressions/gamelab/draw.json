@@ -3,7 +3,7 @@
   "name": "function draw() {}",
   "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "The lines of code contained inside its block are continuously executed until the program is stopped.\r\n\r\nYou can make your drawings come to life using animation with the draw() function. Think of it as a virtual flip book. The default rate of 30 frames per second can be reset by assigning a new value to `World.frameRate`.\r\n\r\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as `mouseDown()`.",
+  "content": "The lines of code contained inside its block are continuously executed until the program is stopped.\n\nYou can make your drawings come to life using animation with the draw() function. Think of it as a virtual flip book. The default rate of 30 frames per second can be reset by assigning a new value to [`World.frameRate`(#fff176)](/docs/gamelab/World.frameRate/).\n\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as [`mouseDown(button)`(#fff176)](/docs/gamelab/mouseDown/).",
   "examples": [
     {
       "name": "",

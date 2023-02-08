@@ -21,10 +21,12 @@
           "ed076287532e86365e841e92bfc50d8c": "ハローワールド！"
         },
         "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！"
+          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "こんにちは！"
         },
         "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！"
+          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "こんにちは！"
         },
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "青",
@@ -63,7 +65,9 @@
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力",
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "スコア ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "レベル \n"
         },
         "Guess The Number": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
@@ -167,15 +171,18 @@
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力",
+          "ae096fbf24d913754b01a1601672bf62": "同じです！"
         },
         "courseF_playlab_variables4b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "あなたは何才ですか？"
         },
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力",
+          "f6429fe0f1a76611670df7e1234af936": "あなたのお名前は？"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
@@ -316,10 +323,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん",
+          "f6429fe0f1a76611670df7e1234af936": "あなたのお名前は？"
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん",
+          "f6429fe0f1a76611670df7e1234af936": "あなたのお名前は？"
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
@@ -466,7 +475,7 @@
           "6cd3556deb0da54bca060b4c39479839": "ハローワールド！"
         },
         "helloworld_retro_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "世界の皆さん、こんにちは!"
+          "6cd3556deb0da54bca060b4c39479839": "ハローワールド！"
         },
         "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
@@ -476,6 +485,312 @@
           "6e41661ddc1edd50b00b7c607cdcec1a": "選択 1",
           "7fec9998c3e5a11f435dc6f2f8e399db": "選択 2\n",
           "c3787b1ed128fdeec3ad638c8ba547d3": "選択 3",
+          "6cd3556deb0da54bca060b4c39479839": "ハローワールド！"
+        },
+        "courseC_data wizard": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "イヌ！",
+          "336ad881e37e713ba0325500a8fa1f00": "イヌ！",
+          "27944770529dd15319a983bee8951560": "ネコ！",
+          "22f6f6821f4d6d0a08653935b466ac2f": "ネコ！",
+          "1c64ef29c853587fbe94f69f05272b79": "トリ！",
+          "5b402e6ea05e847a076e03ad74420c45": "トリ！",
+          "4b23c908b939eaf7918e07142b9e05e0": "ドラゴン！",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "ドラゴン！",
+          "71fc859f3abd22273bad5d0d8eda2173": "どうぶつをぜんぶ数えよう！",
+          "f62038e77820419cd978f7b722da560a": "何匹出てきたかな？",
+          "81a2909a24e4ca3b582ab9ee539c080c": "ペットを数えよう"
+        },
+        "courseC_data wizard_2020": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "イヌ！",
+          "336ad881e37e713ba0325500a8fa1f00": "イヌ！",
+          "27944770529dd15319a983bee8951560": "ネコ！",
+          "22f6f6821f4d6d0a08653935b466ac2f": "ネコ！",
+          "1c64ef29c853587fbe94f69f05272b79": "トリ！",
+          "5b402e6ea05e847a076e03ad74420c45": "トリ！",
+          "4b23c908b939eaf7918e07142b9e05e0": "ドラゴン！",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "ドラゴン！",
+          "71fc859f3abd22273bad5d0d8eda2173": "どうぶつをぜんぶ数えよう！",
+          "f62038e77820419cd978f7b722da560a": "何匹出てきたかな？",
+          "81a2909a24e4ca3b582ab9ee539c080c": "ペットを数えよう"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "それは私！リッキです！ 私はコードを書いたり、トゥイとブラブラしたり、アイスクリームを食べたりするのが大好き！",
+          "810896b14fc6615f0c76628b9b6a727e": "それは親友のトゥイ！ スポーツがとってもよくできます！",
+          "6f97975a0bda0c9219915161149cbb26": "それは私のコンピュータ！いつも、ここでコードを書いています！\n"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "それは私！リッキです！ 私はコードを書いたり、トゥイとブラブラしたり、アイスクリームを食べたりするのが大好き！",
+          "810896b14fc6615f0c76628b9b6a727e": "それは親友のトゥイ！ スポーツがとってもよくできます！",
+          "6f97975a0bda0c9219915161149cbb26": "それは私のコンピュータ！いつも、ここでコードを書いています！\n"
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "もう一度試してみてください.",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "ゲーム オーバー！"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "マスクを付けるにはSpritesをクリックします。",
+          "968c8b54671ab303d48320f86937c40b": "マスクはウイルスの拡散を遅らせるのに役立ちます！"
+        },
+        "CourseF_Project_SpriteLab_chatbot_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "選択 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "選択 2\n",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "選択 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "選択 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "選択 2\n",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "選択 3"
+        },
+        "CourseF_Project_SpriteLab_examples_-2022-2": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "選択 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "選択 2\n",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "選択 3"
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "fac94901e68fc1dea6e749c012e3efc0": "マスクを付けるにはSpritesをクリックします。",
+          "968c8b54671ab303d48320f86937c40b": "マスクはウイルスの拡散を遅らせるのに役立ちます！"
+        },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+        },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+        },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+        },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+        },
+        "courseC19_playLab_EOC52022": {
+          "5cec903c4d41c49412a70a94d54999ee": "何か書きましょう。",
+          "3e11a2dc6edb909c47778bed75a81769": "ここに書く"
+        },
+        "courseC19_playLab_EOC62022": {
+          "5cec903c4d41c49412a70a94d54999ee": "何か書きましょう。",
+          "3e11a2dc6edb909c47778bed75a81769": "ここに書く"
+        },
+        "courseC19_playLab_sample12022": {
+          "5cec903c4d41c49412a70a94d54999ee": "何か書きましょう。",
+          "3e11a2dc6edb909c47778bed75a81769": "ここに書く"
+        },
+        "courseC19_playLab_sample22022": {
+          "83db90f8846d091d3532256816f105d9": "これはネイラです。",
+          "0192cdc04916ec27aa11738bb6e48d6e": "ネイラはおうちをスペースボットから守ろうとしています。",
+          "df8312187449c70820d7c58229a6b17e": "スペースボットを他の生きものはこわがっています。",
+          "c084e152431f9116b9fdb3f7d465f13d": "ネイラは、スペースボットに優しくなってもらうお手伝いをしたいと思っています。",
+          "b2f02bf648ce32c4362afe1578d41f70": "やりました！ ネイラがスペースボットに、やさしさの持つパワーを見せてあげました。",
+          "2a28483f9f4f9ee44cec653a445d4c82": "他の生きものも、こわがらなくてすみます！",
+          "5cec903c4d41c49412a70a94d54999ee": "何か書きましょう。",
+          "3e11a2dc6edb909c47778bed75a81769": "ここに書く"
+        },
+        "courseC_PlayLab_eventsFP2022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ここにテキストを入力",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ここにタイトルを入力"
+        },
+        "courseC_data wizard2022": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "イヌ！",
+          "336ad881e37e713ba0325500a8fa1f00": "イヌ！",
+          "27944770529dd15319a983bee8951560": "ネコ！",
+          "22f6f6821f4d6d0a08653935b466ac2f": "ネコ！",
+          "1c64ef29c853587fbe94f69f05272b79": "トリ！",
+          "5b402e6ea05e847a076e03ad74420c45": "トリ！",
+          "4b23c908b939eaf7918e07142b9e05e0": "ドラゴン！",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "ドラゴン！",
+          "71fc859f3abd22273bad5d0d8eda2173": "どうぶつをぜんぶ数えよう！",
+          "f62038e77820419cd978f7b722da560a": "何匹出てきたかな？",
+          "81a2909a24e4ca3b582ab9ee539c080c": "ペットを数えよう"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！"
+        },
+        "courseE_aboutme_52022": {
+          "ed076287532e86365e841e92bfc50d8c": "ハローワールド！",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "こんにちは！"
+        },
+        "courseF_apps_aquarium2022": {
+          "f655df68ec33643278de7e69794e8d76": "バーチャル水族館",
+          "a1a2a07348784279a1e7a6f46dc7e353": "何をつけたしますか？",
+          "83e4a96aed96436c621b9809e258b309": "魚",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "生き物",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "その他",
+          "0d3e73168beb875063ea0f0302fe32bd": "どの魚ですか？\n",
+          "caaf8264ca397dba2d35ef902bbbd953": "どの生き物ですか？",
+          "78574118d153534fd0925a2f5ca25e79": "どれにしますか？"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "f655df68ec33643278de7e69794e8d76": "バーチャル水族館",
+          "a1a2a07348784279a1e7a6f46dc7e353": "何をつけたしますか？",
+          "83e4a96aed96436c621b9809e258b309": "魚",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "生き物",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "その他",
+          "0d3e73168beb875063ea0f0302fe32bd": "どの魚ですか？\n",
+          "caaf8264ca397dba2d35ef902bbbd953": "どの生き物ですか？",
+          "78574118d153534fd0925a2f5ca25e79": "どれにしますか？"
+        },
+        "courseF_apps_card2022": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "だれのお誕生日ですか？",
+          "d1210f945885351b13feb9bbb868aeef": "何才になるのですか？",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_apps_card_-2022-2": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "だれのお誕生日ですか？",
+          "d1210f945885351b13feb9bbb868aeef": "何才になるのですか？",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_apps_chatbot2022": {
+          "a72e7c5c68af0546e963e510297f5233": "こんにちは、X-9です！あなたのお名前は？",
+          "f0e5da70d264f312a1658d51c130b101": "あなたの名前を入力してください：",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "あなたは何才ですか？",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "あなたの年齢を入力してください：",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "私もです！",
+          "605f302ebc9f7fbacba60b15f551a633": "好きな色は何ですか？",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "好きな色を入力してください：",
+          "ae096fbf24d913754b01a1601672bf62": "同じです！",
+          "1f258d88a70309efc1435ef5daa277a0": "今日はおしゃべりしてくれてありがとう！"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "a72e7c5c68af0546e963e510297f5233": "こんにちは、X-9です！あなたのお名前は？",
+          "f0e5da70d264f312a1658d51c130b101": "あなたの名前を入力してください：",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "あなたは何才ですか？",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "あなたの年齢を入力してください：",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "私もです！",
+          "605f302ebc9f7fbacba60b15f551a633": "好きな色は何ですか？",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "好きな色を入力してください：",
+          "ae096fbf24d913754b01a1601672bf62": "同じです！",
+          "1f258d88a70309efc1435ef5daa277a0": "今日はおしゃべりしてくれてありがとう！"
+        },
+        "courseF_apps_collector2022": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "あなたの勝利！",
+          "077449fb290b51b9d70c9f2f3d3213bc": " 秒",
+          "490082498449bd20ff0199737dfa4916": "ゲームタイプを選択：",
+          "41f2b2212de0105c2a942ebb4a44e449": "最高のコレクターゲーム！"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "あなたの勝利！",
+          "077449fb290b51b9d70c9f2f3d3213bc": " 秒",
+          "490082498449bd20ff0199737dfa4916": "ゲームタイプを選択：",
+          "41f2b2212de0105c2a942ebb4a44e449": "最高のコレクターゲーム！"
+        },
+        "courseF_apps_madlib2022": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "パーティーゲーム",
+          "bf08dd3d1961874f13e77c936aad27e5": "ブランクスペースストーリー",
+          "514b8d5320196898a9ced3efe0d4c802": "形容詞を入力してください：",
+          "88794317e8c695bbc7bc7d2f35792c7f": "物体を入れましょう。",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "身体の部分を入力してください：",
+          "e522ee28f39133b45497637539ff429b": "数字を入力してください：",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "ゲーム。",
+          "5306eed2fd2c43fe033efd6016c0c38b": "脚レース！",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "パーティーゲーム",
+          "bf08dd3d1961874f13e77c936aad27e5": "ブランクスペースストーリー",
+          "514b8d5320196898a9ced3efe0d4c802": "形容詞を入力してください：",
+          "88794317e8c695bbc7bc7d2f35792c7f": "物体を入れましょう。",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "身体の部分を入力してください：",
+          "e522ee28f39133b45497637539ff429b": "数字を入力してください：",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "ゲーム。",
+          "5306eed2fd2c43fe033efd6016c0c38b": "脚レース！",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_editable_card_-2022-2": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "だれのお誕生日ですか？",
+          "d1210f945885351b13feb9bbb868aeef": "何才になるのですか？",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "a72e7c5c68af0546e963e510297f5233": "こんにちは、X-9です！あなたのお名前は？",
+          "f0e5da70d264f312a1658d51c130b101": "あなたの名前を入力してください：",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "あなたは何才ですか？",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "あなたの年齢を入力してください：",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "私もです！",
+          "605f302ebc9f7fbacba60b15f551a633": "好きな色は何ですか？",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "好きな色を入力してください：",
+          "ae096fbf24d913754b01a1601672bf62": "同じです！",
+          "1f258d88a70309efc1435ef5daa277a0": "今日はおしゃべりしてくれてありがとう！",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "パーティーゲーム",
+          "bf08dd3d1961874f13e77c936aad27e5": "ブランクスペースストーリー",
+          "514b8d5320196898a9ced3efe0d4c802": "形容詞を入力してください：",
+          "88794317e8c695bbc7bc7d2f35792c7f": "物体を入れましょう。",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "身体の部分を入力してください：",
+          "e522ee28f39133b45497637539ff429b": "数字を入力してください：",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "ゲーム。",
+          "5306eed2fd2c43fe033efd6016c0c38b": "脚レース！",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_label_predict_-2022-2": {
+          "f15045cb7e57652546d4a0b2c695356f": "何を食べますか？",
+          "937dc37c06cc5d89a7096eb048b73590": "すぐお持ちします！"
+        },
+        "courseF_text_answer_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_text_choice_events_-2022-2": {
+          "c529a06c3f8518b63ff6dfac482b335c": "この惑星に名前をつけてください：",
+          "44506356d48394cd903b579df9de9117": "、人間だ！",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "ロボット！",
+          "5bd698afd23bccde289bb0b4aa72a518": "ロボットに名前を付けましょう。"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "だれのお誕生日ですか？",
+          "d1210f945885351b13feb9bbb868aeef": "何才になるのですか？"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_text_concat_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "あなたのお名前は？",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "あなたのお名前は？",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_variables_madlib_finish_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "私のしつもん"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "あなたのお名前は？"
+        },
+        "coursee_helloworld_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "ハローワールド！"
         }
       }

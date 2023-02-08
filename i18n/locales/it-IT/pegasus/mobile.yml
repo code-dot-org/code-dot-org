@@ -358,6 +358,7 @@
   homepage_banner_40k_teachers_link: "Ulteriori informazioni"
   homepage_slot_text_title_hoc: "L'Ora del Codice"
   homepage_slot_text_blurb_hoc: "Chiunque può imparare. Inizia oggi"
+  homepage_slot_text_blurb_hoc_2022: "Esplora, gioca, crea!"
   homepage_slot_text_link_hoc: "Prova l'Ora del Codice"
   homepage_slot_text_link_about_hoc: "Informazioni sull'Ora del Codice"
   homepage_slot_text_link_host: "Organizza un'Ora del Codice"
@@ -383,6 +384,7 @@
   homepage_slot_text_link_buy: "Fatti coinvolgere"
   homepage_slot_text_link_donate: "Fai una donazione"
   homepage_slot_text_link_shop: "T-shirts, cappellini & altro"
+  homepage_slot_text_link_thebadguys: "Codice con The Bad Guys"
   homepage_slot_text_link_administrators: "Porta l'informatica nella tua scuola"
   homepage_gallery_header: "Oltre %{project_count} milioni di progetti creati in Code.org"
   homepage_header_donors: "Code.org ringrazia i suoi sostenitori"
@@ -390,6 +392,11 @@
   homepage_donors_donate: "Sostienici"
   homepage_below_hero_announcement_text: "Rispettiamo la tua privacy e stiamo apportando alcuni aggiornamenti alla Privacy policy che entreranno in vigore il 25 maggio."
   homepage_below_hero_announcement_link_text: "Ulteriori informazioni"
+  homepage_higher_power_body: "Crea con il Dance Party, ottieni la possibilità di vedere la band dal vivo."
+  homepage_thebadguys_body: "Codifica un'avventura con Ms. Tarantula, Mr. Wolf, e il resto dei personaggi del film,**I cattivi ragazzi**!"
+  homepage_csa_subhead: "Un nuovo approccio al"
+  homepage_csa_title: "AP® Computer Science A"
+  homepage_csa_body: "Potenzia studenti con creativi progetti connesi nel mondo reale nel nostro egualmente motivato curriculum."
   contact_form_topic_student: "Io sono uno studente"
   contact_form_topic_parent: "Io sono un genitore"
   contact_form_topic_teacher: "Io sono un insegnante"
@@ -521,6 +528,7 @@
   video_title_marco_belinelli: "Ora del Codice con Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh a proposito dell'Informatica"
   video_title_my_name_is_aracely: "Mi chiamo Aracely"
+  video_title_change_face_of_cs: "Cambia la faccia di Computer Science"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -597,6 +605,7 @@
   volunteer_engineer_submission_distance_16: "circa 15 chilometri"
   volunteer_engineer_submission_distance_24: "circa 25 chilometri"
   volunteer_engineer_submission_distance_32: "circa 30 chilometri"
+  volunteer_engineer_submission_distance_80: "50 miglia"
   volunteer_engineer_submission_num_volunteers_5: "5 volontari"
   volunteer_engineer_submission_num_volunteers_10: "10 volontari"
   volunteer_engineer_submission_num_volunteers_25: "25 volontari"
@@ -783,7 +792,7 @@
   dashboard_overview: "Panoramica"
   dashboard_sequence: "Sequenza"
   dashboard_framework: "Framework"
-  dashboard_standards: "Livelli di riferimento"
+  dashboard_standards: "Mappatura delle competenze"
   dashboard_implementation_guide: "Implementation Guide"
   dashboard_glossary: "Glossary"
   dashboard_classroom_strategies: "Classroom strategies for teachers"
@@ -979,18 +988,32 @@
   coursed-2020_name: Corso D (2020)
   coursee-2020_name: Corso E (2020)
   coursef-2020_name: Corso F (2020)
+  coursea-2021_name: Corso A (2021)
+  courseb-2021_name: Corso B (2021)
+  coursec-2021_name: Corso C (2021)
   coursed-2021_name: Corso D (2021)
+  coursee-2021_name: Corso E (2021)
+  coursef-2021_name: Corso F (2021)
+  coursea-2022_name: Corso A (2022)
+  courseb-2022_name: Corso B (2022)
+  coursec-2022_name: Corso C (2022)
+  coursed-2022_name: Corso D (2022)
+  coursee-2022_name: Corso E (2022)
+  coursef-2022_name: Corso F (2022)
   express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
-  express-2019_name: Corso Rapido (2017)
+  express-2019_name: Corso Rapido (2019)
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
-  express-2020_name: Corso Rapido (2017)
+  express-2020_name: Corso Rapido (2020)
   pre-express-2020_name: Corso Express Pre-lettore (2020)
+  express-2021_name: Corso Rapido (2021)
   pre-express-2021_name: Corso Rapido pre-scolare (2021)
+  express-2022_name: Corso Rapido (2022)
+  pre-express-2022_name: Corso Rapido pre-scolare (2022)
   csd2_name: 'Unità 2: Sviluppo Web'
   csd3_name: 'Unità 3: Animazioni e Giochi'
   accelerated_name: "Corso rapido"
-  express_name: "Corso Rapido (2018)"
+  express_name: "Corso Rapido"
   pre-express_name: Corso Rapido pre-scolare
   20-hour_name: Corso rapido
   algebra_name: "L'informatica in algebra"
@@ -1100,6 +1123,12 @@
   coursed-2021_gradelevel: Da 7 a 11 anni
   coursee-2021_gradelevel: Da 8 a 12 anni
   coursef-2021_gradelevel: Da 9 a 13 anni
+  coursea-2022_gradelevel: Da 4 a 7 anni
+  courseb-2022_gradelevel: Da 5 a 8 anni
+  coursec-2022_gradelevel: Da 6 a 10 anni
+  coursed-2022_gradelevel: Da 7 a 11 anni
+  coursee-2022_gradelevel: Da 8 a 12 anni
+  coursef-2022_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: "Da 10 anni in su (dopo il Corso 3)"
   codeorg_platformtext: "Browser moderni, smartphone, tablet"
   codeintl_platformtext: "Browser moderni, smartphone, tablet"
@@ -1236,6 +1265,12 @@
   coursed-2021_shortdescription_congrats: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
   coursee-2021_shortdescription_congrats: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
   coursef-2021_shortdescription_congrats: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursea-2022_shortdescription_congrats: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  courseb-2022_shortdescription_congrats: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursec-2022_shortdescription_congrats: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursed-2022_shortdescription_congrats: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursee-2022_shortdescription_congrats: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursef-2022_shortdescription_congrats: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
   codeorg_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
   codeintl_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
   thinkersmithspanish_longdescription: "Usando un \"Vocabolario per Robot\" pre-definito gli studenti capiscono come guidarsi a vicenda per svolgere compiti specifici senza essersi prima accordati. Questa lezione insegna ai bambini la connessione tra simboli e azioni, nonché la preziosa capacità di debugging (correzione dei programmi). La lezione \"I miei amici robotici\" funziona meglio se sviluppata in gruppo e include una guida per l'insegnante per l'uso in aula."
@@ -1452,6 +1487,7 @@
   compatibility_hide_this_warning: "Nascondi questo avviso"
   compatibility_unsupported_browser: "Il tuo browser non è supportato. Si prega di aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento."
   compatibility_unsupported_browser_markdown: "Il tuo browser non è supportato. Per favore aggiorna il browser ad [uno dei nostri browser supportati](%{supported_browsers_url}). Prova comunque a visualizzare la pagina, ma aspettati che qualcosa non funzioni."
+  hourofcode_shortcode: "programmare (to code)"
   flappy_shortcode: "sbatti le ali"
   header_home: "Home"
   header_my_dashboard: "Controllo"
@@ -1469,6 +1505,7 @@
   header_educate_beyond: "Dopo Code.org"
   header_educate_inspire: "Ispira uno studente"
   header_educate_community: "Comunità Online"
+  header_educate_requirements: "Requisiti Tecnici"
   header_educate_tools: "Strumenti e video"
   header_about_us: "Chi siamo"
   header_about_leadership: "Leadership"
@@ -1487,7 +1524,7 @@
   header_about: "Informazioni"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support'
-  header_report_bug: "Report a problem"
+  header_report_bug: "Segnala un errore"
   header_report_abuse: "Segnala abuso"
   header_legal: "Privacy & Legale"
   header_legal_privacy: "Informativa sulla privacy"
@@ -1504,7 +1541,7 @@
   header_documentation: "Documentazione"
   user_header_label: "Ciao %{username}"
   user_header_team: "Squadra"
-  user_header_my_projects: "Collezione Privata"
+  user_header_my_projects: "I miei progetti"
   user_header_settings: "Il mio account"
   user_header_logout: "Esci"
   user_header_signin: "Accedi"
@@ -1558,10 +1595,13 @@
   account_sign_up_child_accept_terms: "Confermo che i miei genitori o chi ne fa le veci mi hanno dato il permesso di utilizzare i servizi di Code.org."
   hoc_overview_dance_title: "Ballando col codice"
   hoc_overview_dance_subtitle: "Crea un progetto in \"Ballando col codice\" da condividere con i tuoi amici. Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara e altri 25!"
-  hoc_overview_dance_2019_subtitle: "Divertiti con i tuoi amici \"Ballando col codice\" con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj e molti altri!"
+  hoc_overview_dance_2019_subtitle: "Crea un progetto in \"Ballando col codice\" da condividere con i tuoi amici, con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj e molti altri!"
+  hoc_overview_dance_2022_subtitle: "Crea un progetto in \"Ballando col codice\" da condividere con i tuoi amici, con Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, la musica di \"Encanto\" della Disney e molto altri!"
+  hoc_overview_hello_world_2022_subtitle: "Scegli tra sei divertenti temi (tra cui lo spazio e il calcio!) per programmare personaggi interattivi in un mondo tutto creato da te."
+  hoc_overview_hello_world_2022_alt_text: "Personaggi animati di astronauti e animali che galleggiano intorno a un'illustrazione della terra"
   hoc_overview_title: "Attività dell'Ora del Codice di Code.org"
   hoc_overview_subtitle: "L'<a href=\"https://hourofcode.com\">Ora del Codice</a> è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni. Chiunque, in ogni parte del mondo, può organizzare un'Ora del Codice o provare una delle oltre 200 esercitazioni di un'ora, disponibili in oltre 45 lingue diverse."
-  hoc_overview_subtitle_markdown: "L'[Ora del Codice](https://hourofcode.com) è un movimento globale che raggiunge decine di milioni di studenti in oltre 180 paesi. Chiunque ed ovunque può organizzare un evento dell'Ora del Codice o provare uno qualsiasi degli oltre 500 tutorial da un'ora, disponibili in oltre 45 lingue."
+  hoc_overview_subtitle_markdown: "L'[Ora del Codice](https://hourofcode.com) è un movimento globale che raggiunge decine di milioni di studenti in oltre 180 paesi. Chiunque e ovunque può organizzare un evento dell'Ora del Codice o provare uno qualsiasi degli oltre 500 tutorial da un'ora, disponibili in oltre 45 lingue."
   hoc_overview_partner_activities_title: "Altre attività dei nostri partner"
   hoc_overview_partner_activities_body: "Il sito Web “The Hour of Code” offre più di 100 attività legate all’informatica adatte a tutte le età e a tutti livelli di esperienza, sviluppate da Code.org e dai suoi partner."
   hoc_overview_partner_activities_link: "Visualizza tutte le attività"
@@ -1604,9 +1644,13 @@
   hoc2018_mc_educators_box3_title: "Partecipa ad un seminario gratuito per studenti"
   hoc2018_mc_educators_box3_desc: "Visita un Microsoft Store nella tua zona per un'esercitazione gratuita dell'Ora del Codice. Per principianti ed esperti, dai sei anni in su. (Sono in USA.)"
   hoc2018_mc_educators_box3_button: "Trova un seminario"
+  hoc2022_mc_educators_box3_desc_markdown: 'Utilizzalo su richiesta [corso gratuito](%{free_course_link}) o registra l''intera classe per partecipare a un seminario dal vivo di Hour of Code con un insegnante ospite. Offerto più volte durante il CSEW, dal 6 all 11 dicembre. '
+  hoc2022_mc_educators_box3_button: "iscriviti ora"
   hoc2018_mc_educators_box4_title: "Accedi ad ulteriori risorse di informatica"
   hoc2018_mc_educators_box4_desc: "Contribuisci a migliorare la tua comunità diffondendo competenze digitali e risorse di formazione in informatica con Microsoft."
   hoc2018_mc_educators_box4_button: "Esplora le risorse disponibili"
+  hoc2022_mc_educators_box4_desc: "Ispira la passione per le discipline STEM tra gli studenti della scuola primaria e secondaria con 200 ore di curriculum in informatica, dal block al python, supportato dallo sviluppo professionale."
+  hoc2022_mc_educators_box4_button: "Continua a imparare"
   hoc2018_mc_watch_videos: "Prima di iniziare, guarda uno di questi video stimolanti"
   hoc2018_mc_videos_more: "Ulteriori<a href='%{inspiring_videos_playlist}'> video stimolanti</a> con modelli di ruolo e celebrità e <a href=\"https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro\" target=\"_blank\">un video in italiano di Programma il Futuro</a>"
   hoc2018_mc_careers_more: "Ulteriori <a href='%{careers_url}' target='_blank'> video stimolanti</a> con professionisti in settori tecnologici"
@@ -1720,8 +1764,11 @@
   hoc2021_mc_mee_villages_description: 'Impara le basi del coding ed esplora la diversità e l''inclusione con i tuoi studenti in Minecraft: Education Edition.'
   hoc2021_mc_mee_ai_title: "AI per sempre"
   hoc2021_mc_mee_ai_description: 'Esplora l''AI con i tuoi studenti e impara a codificare in Minecraft: Education Edition.'
-  footer_powered_by_aws: "Eseguito su Amazon Web Services"
-  footer_built_on_github: "Costruito su GitHub di Microsoft"
+  hoc2022_mc_mee_title: "Minecraft Escape Estate"
+  hoc2022_mc_mee_description: 'Fuggi dalla misteriosa villa entro l''alba e guadagna un milione di smeraldi! Il nuovo tutorial di Minecraft Hour of Code è ora disponibile in Minecraft: Education Edition per Windows, Mac, Chromebook, Ipad e dispositivi mobili. Inizia con risorse, corsi di formazione e video gratuiti per i docenti. '
+  hoc2022_mc_mee_timecraft_description: 'Viaggia indietro nel tempo per salvare il futuro con questa lezione gratuita di programmazione in Minecraft: Education Edition.'
+  footer_powered_by_aws: "Amazon Web Services e il logo “Powered by AWS” sono marchi registrati di Amazon.com, Inc. o delle sue consociate negli USA e/o in altri paesi."
+  footer_built_on_github: "Progettato su GitHub da Microsoft"
   codebytes_skinny_banner_title: "Unisciti a noi dal 7 all'11 dicembre per le nostre mini-lezioni dal vivo CodeBytes!"
   codebytes_skinny_banner_description: 'Unisciti a noi ogni giorno della CS Education Week for CodeBytes, lezioni interattive di informatica di 20 minuti. Streaming live due volte al giorno, CodeBytes è un ottimo modo per gli studenti di partecipare a un #HourOfCode virtuale!'
   codebytes_skinny_banner_english_only: "Solo in inglese"
@@ -1777,11 +1824,32 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Machine Learning per bambini'
   ai_ecs: 'ECS: Intelligenza artificiale (AI)'
   ai_ecs_description: "Una nuova unità di curriculum alternativa per il curriculum Exploring Computer Science (ECS)."
+  ai_aiedu_intro_description: "Intro to AI è un curriculum gratuito, innovativo e culturalmente rilevante in cui gli studenti sviluppano conoscenze concettuali su cos'è l'IA e come viene utilizzata nel mondo reale."
   ai_elements: "Elementi di AI"
   ai_elements_description: "Una serie di corsi online gratuiti creati da Reaktor e dall'Università di Helsinki."
   ai_cognimates: "Cognimates"
   ai_cognimates_description: "Una piattaforma di formazione AI per la creazione di giochi, la programmazione di robot e la formazione."
   ai_try_activity: "Prova l'attività"
-  outbreak_tile_title: "Epidemia"
-  outbreak_tile_subtitle: "Un virus ha infettato Monster Town! Codifica un simulatore di epidemia e fai previsioni su ciò che accadrà ai vicini di Monster Town."
+  outbreak_tile_title: "Simulazione di epidemia"
+  outbreak_tile_subtitle: "Un virus ha infettato la Città dei Mostri! Programma una simulazione dell'epidemia e fai delle previsioni su ciò che accadrà ai vicini della Città dei Mostri."
+  outbreak_tile_alt: "Una simulazione di come un virus si diffonde attraverso un gruppo di mostri viola."
   footer_cookie_notice: "Informativa sui cookie"
+  top_hoc_tutorial_applab_alt_text: "Una mano marrone con l'indice che tocca un tablet touch screen che emette stelle e raggi di luce su uno sfondo blu"
+  minecraft_tile_alt: "Due personaggi di Minecraft, Steve e Alex, su uno sfondo che mostra una scena acquatica di Minecraft con coralli, delfini e fuco"
+  hoc2022_banner_title: "Esplora, gioca, crea!"
+  hoc2022_banner_description: "Esplora l'universo, segna un gol, prendi il ritmo: ci sono così tanti modi per provare l'informatica!"
+  hoc2022_cta_primary: "Scopri le novità"
+  hoc2022_cta_secondary: "Prova altre attività"
+  hoc2022_landing_page_explore_title: "Esplora"
+  hoc2022_landing_page_explore_description: "Porte aperte per nuovi mondi grazie all'informatica!"
+  hoc2022_landing_page_play_title: "Gioca"
+  hoc2022_landing_page_play_description: "Domina il campo e fai gol!"
+  hoc2022_landing_page_create_title: "Crea"
+  hoc2022_landing_page_create_description: "Fai qualcosa di particolare e fantastico!"
+  hoc2022_landing_page_banner_alt_left: "Un alieno che danza accanto a Saturno nello spazio"
+  hoc2022_landing_page_banner_alt_right: "Un robot che dribbla un pallone da calcio nello spazio davanti a un razzo che decolla"
+  try_it_yourself: "Mettiti alla prova!"
+  try_an_activity: "Prova un'attività"
+  see_more_activities: "Prova altre attività"
+  hoc2022_nasa_banner_heading: "Unitevi alla NASA per uno speciale Ora del Codice sull'informatica nello spazio!"
+  hoc2022_nasa_banner_description: "In anteprima alle 10AM ET del 5 dicembre sul canale YouTube di NASA STEM."

@@ -20,8 +20,17 @@ module Cdo
       nil
     end
 
+    # Load a `.yml.erb` file
+    #
+    # Because ERB is already inherently unsafe (and because we never use this
+    # for anything user-facing), we can reasonably forego using
+    # `YAML.safe_load`. And because we do some complicated and potentially
+    # dangerous things in the various `config.yml.erb` files loaded by this
+    # method, we need to do so.
     def load_erb_file(path, binding=nil)
+      # rubocop:disable Security/YAMLLoad
       YAML.load(erb_file_to_string(path, binding), path)
+      # rubocop:enable Security/YAMLLoad
     rescue Errno::ENOENT
       nil
     end

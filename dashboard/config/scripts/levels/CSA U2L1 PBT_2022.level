@@ -8,7 +8,7 @@
     "csa_view_mode": "console",
     "start_sources": {
       "MyConsole.java": {
-        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // Level 2\n    // TO DO #1, 2, 3: Declare and initialize variables\n    // myInteger, myDouble, and myString.\n\n\n    \n    // TO DO #4: Print the values stored in each variable.\n\n\n\n    // Level 3\n    // TO DO #1, 2, 3: Set each variable to new values.\n\n\n    \n    // TO DO #4: Print the new values stored in each variable.\n\n\n    \n  }\n}",
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // Level 4\n    // TO DO #1, 2, 3: Declare and initialize variables\n    // myInteger, myDouble, and myString.\n\n\n    \n    // TO DO #4: Print the values stored in each variable.\n\n\n\n    // Level 5\n    // TO DO #1, 2, 3: Set each variable to new values.\n\n\n    \n    // TO DO #4: Print the new values stored in each variable.\n\n\n    \n  }\n}",
         "isVisible": true
       }
     }
@@ -18,6 +18,6 @@
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-05 17:16:45 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-05 17:27:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:13:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-05 17:16:45 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-05 17:27:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:13:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-07-28 18:14:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

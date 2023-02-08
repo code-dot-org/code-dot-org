@@ -17,7 +17,8 @@ class HeaderBanner extends React.Component {
     children: PropTypes.node,
     short: PropTypes.bool,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    backgroundUrl: PropTypes.string
+    backgroundUrl: PropTypes.string,
+    imageUrl: PropTypes.string
   };
 
   render() {
@@ -27,7 +28,8 @@ class HeaderBanner extends React.Component {
       subHeadingText,
       description,
       responsiveSize,
-      backgroundUrl
+      backgroundUrl,
+      imageUrl
     } = this.props;
 
     let headerBannerContainerStyle,
@@ -52,6 +54,10 @@ class HeaderBanner extends React.Component {
       backgroundImage: `url(${backgroundUrl})`
     };
 
+    const bannerContentImageStyle = short
+      ? styles.bannerContentImageShort
+      : styles.bannerContentImage;
+
     if (isSmallScreen) {
       return (
         <div>
@@ -61,7 +67,7 @@ class HeaderBanner extends React.Component {
               style={headerBannerContainerStyle}
             >
               <div className={'bannerContent'}>
-                <div style={headingStyle}>{headingText}</div>
+                <h1 style={headingStyle}>{headingText}</h1>
               </div>
             </div>
           </div>
@@ -86,7 +92,7 @@ class HeaderBanner extends React.Component {
             style={headerBannerContainerStyle}
           >
             <div className={'bannerContent'}>
-              <div style={headingStyle}>{headingText}</div>
+              <h1 style={headingStyle}>{headingText}</h1>
               {subHeadingText && (
                 <div style={subHeadingStyle}>{subHeadingText}</div>
               )}
@@ -95,6 +101,7 @@ class HeaderBanner extends React.Component {
                 <div className={'children'}>{this.props.children}</div>
               )}
             </div>
+            {imageUrl && <img style={bannerContentImageStyle} src={imageUrl} />}
           </div>
         </div>
       );
@@ -112,16 +119,16 @@ const styles = {
     maxWidth: styleConstants['content-width']
   },
   bannerHeading: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
     color: color.white,
-    fontSize: 32,
-    lineHeight: '40px'
+    fontSize: 48,
+    marginBottom: 0
   },
   bannerHeadingShort: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
     color: color.white,
-    fontSize: 32,
-    lineHeight: '40px'
+    fontSize: 48,
+    marginBottom: 0
   },
   bannerSubHeading: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -150,6 +157,12 @@ const styles = {
     fontSize: 16,
     lineHeight: '21px',
     marginTop: 16
+  },
+  bannerContentImage: {
+    maxHeight: 260
+  },
+  bannerContentImageShort: {
+    maxHeight: 140
   }
 };
 

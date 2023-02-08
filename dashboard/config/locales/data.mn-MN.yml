@@ -784,6 +784,10 @@ mn:
         csd_what_computers_are: Компьютер гэж юу вэ?
         playlab_2021: Тоглоомын лабораторийн танилцуулга
         playlab_2021_reader: Тоглоомын лабораторийн танилцуулга
+        csd_u6_circuit_playground: Биет тооцоолол
+        csd_u6_input_output: Оролт ба гаралт
+        csp_applab_parameters: Параметртэй функцүүд
+        CS_Changing_Everything: Компьютерийн шинжлэх ухаан бүх зүйлийг өөрчилж байна
     callout:
       text:
         drag_blocks: '"Шилжих" хэсгийг чирж, нөгөө блокийн доор байрлуулна уу'

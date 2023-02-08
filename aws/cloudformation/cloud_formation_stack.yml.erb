@@ -2,6 +2,18 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Parameters:
+  BaseDomainName:
+    Type: String
+    Default: code.org
+    Description: Base domain name.
+  DashboardSubdomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
+    Description: Subdomain name for learning platform ("Dashboard").
+  PegasusSubdomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
+    Description: Subdomain name for corporate web site ("Pegasus").
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>
@@ -13,6 +25,12 @@ Parameters:
     Type: String
     Default: master
     MaxLength: 16
+  DBInstanceType:
+    Type: String
+    Default: db.r5.2xlarge
+  DBBackupRetention:
+    Type: Number
+    Default: 5
 <% end -%>
 <% if frontends -%>
   DaemonInstanceType:
@@ -34,15 +52,24 @@ Resources:
       PolicyDocument:
         Version: 2012-10-17
         Statement:
-          # Read-only access to current secrets.
+          # Read-only access to current secrets that are used by all systems with the same environment-type ("staging", "test", etc.)
           - Effect: Allow
             Action: 'secretsmanager:GetSecretValue'
             Resource:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
               - !Ref ChefConfig
-<% if database -%>
+<% if database && !rack_env?(:production) -%>
               - !Ref DatabaseSecret
 <% end -%>
+            Condition:
+              StringEquals:
+                secretsmanager:VersionStage: AWSCURRENT
+          # Read-only access to current Stack-specific Secrets.
+          - Effect: Allow
+            Action: 'secretsmanager:GetSecretValue'
+            Resource:
+              - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/${AWS::StackName}/*"
+              - !Ref ChefConfig
             Condition:
               StringEquals:
                 secretsmanager:VersionStage: AWSCURRENT
@@ -143,7 +170,7 @@ Resources:
       Subnets: <%= public_subnets.to_json %>
       LoadBalancerAttributes:
         - Key: deletion_protection.enabled
-          Value: true
+          Value: <%=rack_env?(:adhoc) ? 'false' : 'true'%>
         - Key: access_logs.s3.enabled
           Value: true
         - Key: access_logs.s3.bucket
@@ -283,7 +310,7 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
-              # APIs used by ci:flush_cache task.
+              # APIs used by ci:flush_cloudfront_cache task.
               - Effect: Allow
                 Action:
                   - 'ec2:DescribeInstances'
@@ -447,7 +474,7 @@ Resources:
 <% end -%>
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT2H
+        Timeout: PT4H
     Properties:
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
@@ -494,7 +521,8 @@ Resources:
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
-<% if database %>
+# We don't yet provision the production database cluster/instances via CloudFormation.
+<% if database && !rack_env?(:production) %>
     DependsOn: Aurora1
 <% end -%>
 <%end-%>
@@ -509,6 +537,7 @@ Resources:
       InstanceType: !Ref ConsoleInstanceType
       IamInstanceProfile: !Ref FrontendInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
+      DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
       Tags:
         - {Key: Name, Value: <%=environment%>-console}
       BlockDeviceMappings:
@@ -536,7 +565,8 @@ Resources:
         - DeviceIndex: 0
           SubnetId: <%=subnets[1].to_json%>
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
-<%   if database %>
+# We don't yet provision the production database cluster/instances via CloudFormation.
+<%   if database && !rack_env?(:production)%>
     DependsOn: Aurora1
 <%   end -%>
 <% end-%>

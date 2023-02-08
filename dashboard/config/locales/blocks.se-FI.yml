@@ -197,19 +197,11 @@ se:
             MOVES.Kick: Násti
             MOVES.XArmsUp: Faŋut
             MOVES.ThisOrThat: Dát vai Duot
-      Dancelab_everyMeasuresRange:
-        text: gearddut juohke {N} távtta maŋŋil {START}
       Dancelab_everySeconds:
         text: gearddut juohke {N} {UNIT}
         options:
           UNIT:
             '"measures"': távttat
-      Dancelab_everySecondsRange:
-        text: juohke {N} {UNIT} dán rájes {START} dása {STOP}
-        options:
-          UNIT:
-            measures: Távttat
-            seconds: Sekunddat
       Dancelab_everyVerseChorus:
         text: juohke {UNIT}
         options:
@@ -888,6 +880,13 @@ se:
         text: setup
       Dancelab_whenSetup2:
         text: setup
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bulljarasat
+            '"confetti"': Konfetti
+            '"hearts"': váimmut
+            '"starburst"': Starburst
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} álgá {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -926,7 +925,7 @@ se:
         text: maid sáhttá gaikut
       gamelab_edgesDisplace:
         text: ravddat lássejit {SPRITE} sirdimis
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: gearddut juohke {N} {UNIT}
         options:
           UNIT:
@@ -1043,8 +1042,6 @@ se:
         text: sadji {SPRITE}:s
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_makeNewScaledSprite:
-        text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       gamelab_makeNumSprites:
@@ -1082,6 +1079,10 @@ se:
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": Strandstreifen
             "'sound://category_animals/bear.mp3'": guovža
             "'sound://category_animals/dolphin.mp3'": delfiidna
+      gamelab_playSoundOptionsSoccer:
+        text: čuojatJiena {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: čuojatJiena {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1435,6 +1436,8 @@ se:
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': njozet
       Poetry_playSound:
         text: čuojatJiena {SOUND}
+      Poetry_playSoundOptionsSpace:
+        text: čuojatJiena {SOUND}
       Poetry_setBackground:
         text: bija duogábeal-ivnni {COLOR}
       Poetry_setBackgroundEffect:
@@ -1471,6 +1474,11 @@ se:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       SpriteLab2Beta_spriteSay:
         text: sprite {SPRITE} dadjá {TEXT} {SECONDS} sekunddaid
       Vector_createSpriteWith:
@@ -1627,5 +1635,12 @@ se:
           DIR:
             right: olgeš ↻
             left: gurut ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bulljarasat
+            '"confetti"': Konfetti
+            '"hearts"': váimmut
+            '"starburst"': Starburst
       validation_validatedBackground:
         text: bija duogábeali dása {IMG}

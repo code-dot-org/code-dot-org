@@ -64,9 +64,7 @@ class ManifestBuilder
     output_file = @options[:spritelab] ? SPRITELAB_OUTPUT_FILE : DEFAULT_OUTPUT_FILE
 
     # Write result to file
-    File.open(output_file, 'w') do |file|
-      file.write(generate_json(animation_metadata, alias_map, category_map))
-    end
+    File.write(output_file, generate_json(animation_metadata, alias_map, category_map))
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
@@ -124,7 +122,7 @@ class ManifestBuilder
       if result.is_a? String
         @warnings.push result
       end
-      download_progress_bar.increment unless download_progress_bar.nil?
+      download_progress_bar&.increment
     end
 ) do |name|
       # This is the parallel block.  This block should return a string to
@@ -145,16 +143,16 @@ class ManifestBuilder
         verbose "Writing #{png_destination}"
         objects['png'].get(response_target: png_destination)
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving #{name}.json and #{name}.png from S3:
-#{service_error}
-The animation has been skipped.
+        next <<~WARN
+          There was an error retrieving #{name}.json and #{name}.png from S3:
+          #{service_error}
+          The animation has been skipped.
         WARN
       end
 
       true
     end
-    download_progress_bar.finish unless download_progress_bar.nil?
+    download_progress_bar&.finish
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
@@ -294,7 +292,7 @@ The animation has been skipped.
       else
         @warnings.push result
       end
-      metadata_progress_bar.increment unless metadata_progress_bar.nil?
+      metadata_progress_bar&.increment
     end
 ) do |name|
       # This is the parallel block.  This block should return a string to
@@ -324,16 +322,16 @@ The animation has been skipped.
         json_response = objects['json'].get
         metadata = JSON.parse(json_response.body.read)
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving #{name}.json from S3:
-#{service_error}
-The animation has been skipped.
+        next <<~WARN
+          There was an error retrieving #{name}.json from S3:
+          #{service_error}
+          The animation has been skipped.
         WARN
       rescue JSON::JSONError => json_error
-        next <<-WARN
-There was an error parsing #{name}.json:
-#{json_error}
-The animation has been skipped.
+        next <<~WARN
+          There was an error parsing #{name}.json:
+          #{json_error}
+          The animation has been skipped.
         WARN
       end
 
@@ -356,10 +354,10 @@ The animation has been skipped.
       begin
         metadata['version'] = objects['png'].object.version_id
       rescue Aws::Errors::ServiceError => service_error
-        next <<-WARN
-There was an error retrieving the version_id for #{name}.png from S3:
-#{service_error}
-The animation has been skipped.
+        next <<~WARN
+          There was an error retrieving the version_id for #{name}.png from S3:
+          #{service_error}
+          The animation has been skipped.
         WARN
       end
 
@@ -372,14 +370,14 @@ The animation has been skipped.
         metadata['sourceSize'] = PngUtils.dimensions_from_png(png_body)
       end
 
-      verbose <<-EOS
-#{bold name} @ #{metadata['version']}
-#{JSON.pretty_generate metadata}
+      verbose <<~EOS
+        #{bold name} @ #{metadata['version']}
+        #{JSON.pretty_generate metadata}
       EOS
 
       metadata
     end
-    metadata_progress_bar.finish unless metadata_progress_bar.nil?
+    metadata_progress_bar&.finish
     animation_metadata_by_name
   end
 
@@ -394,9 +392,9 @@ The animation has been skipped.
         # Push name into target array, deduplicate, and sort
         alias_map[aliaz] = (alias_map[aliaz] + [name]).uniq.sort
       end
-      alias_progress_bar.increment unless alias_progress_bar.nil?
+      alias_progress_bar&.increment
     end
-    alias_progress_bar.finish unless alias_progress_bar.nil?
+    alias_progress_bar&.finish
     alias_map.each {|k, v| verbose "#{bold k}: #{v.join(', ')}"} if @options[:verbose]
     alias_map
   end
@@ -411,9 +409,9 @@ The animation has been skipped.
         normalized_category = category.tr(' ', '_')
         category_map[normalized_category] = (category_map[normalized_category] + [name]).uniq.sort
       end
-      category_progress_bar.increment unless category_progress_bar.nil?
+      category_progress_bar&.increment
     end
-    category_progress_bar.finish unless category_progress_bar.nil?
+    category_progress_bar&.finish
     category_map
   end
 
@@ -430,13 +428,13 @@ The animation has been skipped.
         # Strip aliases from metadata - they're no longer needed since they
         #   are represented in the alias map.
         # Also sort for stable updates
-        'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+        metadata: animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
 
         # Sort category map for stable updates
-        'categories': category_map.sort.to_h,
+        categories: category_map.sort.to_h,
 
         # Sort alias map for stable updates
-        'aliases': alias_map.sort.to_h
+        aliases: alias_map.sort.to_h
       }
     )
   end

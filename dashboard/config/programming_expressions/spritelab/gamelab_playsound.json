@@ -34,5 +34,5 @@
   ],
   "short_description": "Plays the given sound once. This block connects to a menu of sounds to choose from. Once a sound is chosen, its file name appears in the block.",
   "syntax": "playSound",
-  "tips": "- Avoid using sounds when `Defining Behaviors` as it can cause the chosen sound to start over continuously as if it is stuck or frozen.\r\n- The sounds are organized by category. Quickly find a sound by exploring a category or using the search bar in the top right of the menu.\r\n"
+  "tips": "- Avoid using sounds when [`Defining Behaviors`(#89eba4)](/docs/spritelab/codestudio_defining-behaviors/) as it can cause the chosen sound to start over continuously as if it is stuck or frozen.\r\n- The sounds are organized by category. Quickly find a sound by exploring a category or using the search bar in the top right of the menu.\r\n"
 }

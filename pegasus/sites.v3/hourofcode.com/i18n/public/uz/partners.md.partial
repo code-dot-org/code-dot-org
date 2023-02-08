@@ -2,40 +2,38 @@
 title: Hamkorlar
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+Kod Soati, Kod Soati Nazorat Qo'mitasi tomonidan boshqariladi.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[Nazorat qo‘mitasi]({{ urls/review_committee }}) K-12 sinf to'plamlaridagi 12 nafar amaldagi va sobiq ta'lim beruvchilardan iborat bo‘lib, ular maslahat qo‘mitasi tomonidan tashkil etilgan bo'lim yordamida faoliyatni baholaydi va tavsiya qiladi. Ushbu ta'lim beruvchilar talabalar tomonidan boshqariladigan faoliyatlarni va yuzlab faoliyat hamkorlari tomonidan taqdim etilgan o'qituvchi tomonidan boshqariladigan dars rejalarini ko'rib chiqadilar, mashg'ulotlarning ta'lim ahamiyatini, o'rganuvchilarni jalb qilish qobiliyatini va turli xil talabalar guruhlarining murpjaat qilish qobiliyatini baholaydilar.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Qo'mita ish faoliyati va ihtisosi Dasturlash Soati muvaffaqiyatiga va har bir talaba uchun kompyuter fanlariga kirishni taklif qilish tasavvuriga hissa qo'shdi.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+# Asosiy Hamkorlar va Korporativ tarafdorlar
 
-# Major Partners and Corporate Supporters
-
-{{ partners/major_partners_corporate_supporters }}
+{{ hamkorlar/asosiy_hamkorlar_koporativ_tarafdorlar }}
 
 * * *
 
-# International Partners
+# Xalqaro Hamkorlar
 
-{{ partners/international_partners }}
-
-* * *
-
-# Curriculum and Tutorial Partners
-
-{{ partners/curriculum_tutorial_partners }}
+{{ hamkorlar/xalqaro_hamkorlar }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# O'quv rejasi va O'qitish bo'yicha Hamkorlar 
 
-{{ partners/infrastructure_partners_tools }}
+{{ hamkorlar/o'quv_rejasi_o'qiish_bo'yicha_hamkorlar }}
 
 * * *
 
-# Additional Partners
+# Infrastrukturaviy Hamkorlar va vositalar
 
-{{ partners/additional_partners }}
+{{ hamkorlar/infrastrukturaviy_hamkorlar_vositalar }}
 
-{{ signup_button }}
+* * *
+
+# Qo'shimcha Hamkorlar
+
+{{ hamkorlar/qo'shimcha_hamkorlar }}
+
+{{ roʻyxatdan_oʻtish_tugmasi }}

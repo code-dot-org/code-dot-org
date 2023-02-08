@@ -296,6 +296,30 @@ describe('ManageStudentsTable', () => {
         .false;
     });
 
+    it('displays notification for password reset length if state.showPasswordLengthFailure is true', () => {
+      const emailSection = {
+        ...fakeSection,
+        loginType: SectionLoginType.email
+      };
+      getStore().dispatch(setLoginType(SectionLoginType.email));
+      getStore().dispatch(setSections([emailSection]));
+
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+
+      const manageStudentsTable = wrapper.find('ManageStudentsTable');
+      manageStudentsTable.setState({showPasswordLengthFailure: true});
+
+      const passwordFailureNotificaton = wrapper.find('Notification');
+      expect(passwordFailureNotificaton).to.have.length(1);
+      expect(passwordFailureNotificaton.props().notice).to.equal(
+        i18n.passwordsMustBeSixChars()
+      );
+    });
+
     it('renders correctly if loginType is clever', () => {
       const cleverSection = {
         ...fakeSection,

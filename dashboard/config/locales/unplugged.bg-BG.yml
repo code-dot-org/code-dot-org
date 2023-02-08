@@ -493,6 +493,8 @@ bg:
       BuildingAFoundation_2019:
         title: 'превод липсва: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'превод липсва: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Моите Циклични Приятели Роботи
       Conditionals_2019:
         title: Условия
         desc: За да научат за условията, учениците играят на карти и трябва да създадат
@@ -524,6 +526,8 @@ bg:
           представена в различни варианти.  Този урок развива тази концепция с една
           стъпка напред, тъй като илюстрира как  компютърът може да съхранява още
           по-сложна информация (като изображения и цветове) с двоичен код.
+      courseE_unplugged_privateInformation_2019:
+        title: Лична Информация
       SongwritingParameters_2019:
         title: 'превод липсва: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'превод липсва: en-US.data.unplugged.SongwritingParameters_2018.desc'

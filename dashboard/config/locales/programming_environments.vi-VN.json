@@ -1,0 +1,407 @@
+{
+  "vi-VN": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Kho Web"
+        },
+        "gamelab": {
+          "name": "Phòng thí nghiệm trò chơi",
+          "categories": {
+            "game_lab": {
+              "name": "Phòng thí nghiệm trò chơi",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Đen và trắng"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Tạo âm nhạc"
+                    }
+                  },
+                  "short_description": "Bật tệp âm thanh MP3 từ một URL đã chỉ định."
+                }
+              }
+            },
+            "sprites": {
+              "name": "Nhân vật",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Xoắn ốc"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Nhóm",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Màu sắc"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Màu sắc"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Bản vẽ",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Ngôi sao"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Phép toán",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Số nhỏ nhất đã được trả về"
+                    },
+                    "max": {
+                      "description": "Số lớn nhất đã được trả về"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Số nhỏ nhất đã được trả về"
+                    },
+                    "max": {
+                      "description": "Số lớn nhất đã được trả về"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Các biến"
+            },
+            "functions": {
+              "name": "Các hàm"
+            }
+          }
+        },
+        "applab": {
+          "name": "Phòng thí nghiệm ứng dụng",
+          "description": "App Lab là một môi trường lập trình nơi bạn có thể tạo các ứng dụng đơn giản. Thiết kế một ứng dụng, mã với các khối hoặc JavaScript để làm cho nó hoạt động, sau đó chia sẻ ứng dụng của bạn trong vài giây.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Thu nhỏ và phóng to"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Hàm"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Tạo âm nhạc"
+                    }
+                  },
+                  "short_description": "Bật tệp âm thanh MP3 từ một URL đã chỉ định."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "đối tượng"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "Dữ liệu",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Hàm"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "đối tượng"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "đối tượng"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Hàm"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Phép toán",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Số nhỏ nhất đã được trả về"
+                    },
+                    "max": {
+                      "description": "Số lớn nhất đã được trả về"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Số nhỏ nhất đã được trả về"
+                    },
+                    "max": {
+                      "description": "Số lớn nhất đã được trả về"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Các biến",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Chọn cuộc phiêu lưu của riêng bạn"
+                    }
+                  }
+                },
+                "addPair": {
+                  "return_value": "Không có"
+                }
+              }
+            },
+            "functions": {
+              "name": "Các hàm"
+            },
+            "advanced": {
+              "name": "Nâng cao"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite Lab",
+          "categories": {
+            "sprites": {
+              "name": "Nhân vật"
+            },
+            "world": {
+              "name": "Thế giới"
+            },
+            "location": {
+              "name": "Địa điểm"
+            },
+            "actions": {
+              "name": "Hành động"
+            },
+            "events": {
+              "name": "Các sự kiện"
+            },
+            "behaviors": {
+              "name": "Hành vi"
+            },
+            "loops": {
+              "name": "Vòng lặp"
+            },
+            "variables": {
+              "name": "Các biến"
+            },
+            "math": {
+              "name": "Phép toán"
+            },
+            "logic": {
+              "name": "Logic"
+            },
+            "functions": {
+              "name": "Các hàm"
+            },
+            "text": {
+              "name": "Văn bản"
+            },
+            "comments": {
+              "name": "Bình luận"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java Lab"
+        }
+      }
+    }
+  }
+}

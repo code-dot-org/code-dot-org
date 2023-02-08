@@ -2,8 +2,28 @@
 th:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: ผู้ใช้พรอมต์ {QUESTION} สำหรับตัวแปร {VAR} พร้อมตัวเลือก {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}พูด{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': เล็กมาก
+            '0.75': เล็ก
+            '1.00': ปานกลาง
+            '2.00': ใหญ่
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': เล็กมาก
+            '0.75': เล็ก
+            '1.00': ปานกลาง
+            '2.00': ใหญ่
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} สลับทุกๆ {N} ห้องดนตรีร
@@ -214,20 +234,12 @@ th:
             MOVES.XArmsUp: กาง
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
-      Dancelab_everyMeasuresRange:
-        text: 'ซ้ำทุกๆ {N} ห้องดนตรีหลังจาก {START} '
       Dancelab_everySeconds:
         text: 'ทุกๆ {N} {UNIT} '
         options:
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
-      Dancelab_everySecondsRange:
-        text: 'ทุก {N} {UNIT} จาก {START} ถึง {STOP} '
-        options:
-          UNIT:
-            measures: ห้องดนตรี
-            seconds: ขั้นคู่สอง
       Dancelab_everyVerseChorus:
         text: ทุก {UNIT}
         options:
@@ -981,6 +993,39 @@ th:
         text: การตั้งค่า
       Dancelab_whenSetup2:
         text: การตั้งค่า
+      DansBlocks_getMicroscope:
+        text: กล้องจุลทรรศน์มี {INPUT1}
+        options:
+          INPUT1:
+            '1': น้ำมะนาว
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: ใช้เอฟเฟกต์ {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': ฟองสบู่
+            '"confetti"': กระดาษสี
+            '"hearts"': หัวใจ
+            '"emojis"': อีโมจิมีความสุข
+            '"rain"': มีฝน
+            '"starburst"': ดาวกระจาย
+            '"glass"': กระจกแตก
+            '"twinkling"': ระยิบระยับ
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': น้ำมะนาว
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: สื่อสาร {VAR1} กับ {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: ทำให้ {NUM} ใหม่ {ANIMATION_NAME} สไปรต์  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: เป็นตัวแทน {NUM} ใหม่ {ANIMATION_NAME} สไปรต์ [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}พูด{TEXT1}"
       gamelab_addBehaviorSimple:
         text: "{SPRITE} เทพเจ้าเริ่มต้น {BEHAVIOR}"
       gamelab_addTarget:
@@ -1027,7 +1072,15 @@ th:
         text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
+            new Behavior(spinning_right, []): หมุนไปทางขวา
+            new Behavior(spinning_left, []): หมุนไปทางซ้าย
+            new Behavior(fluttering, []): กระพือปีก
+            new Behavior(jittering, []): กระสับกระส่าย
+            new Behavior(wobbling, []): โยกเยก
             new Behavior(wandering, []): เคลื่อนที่
+            new Behavior(patrolling, []): เดินลาดตระเวน
+            new Behavior(moving_west_and_looping, []): เคลื่อนที่ไปทางตะวันตกและวนรอบ
+            new Behavior(moving_east_and_looping, []): เคลื่อนไปทางตะวันออกและวนรอบ
             new Behavior(moving_north_and_looping, []): เคลื่อนไปทางทิศเหนือแล้วลูป
             new Behavior(moving_south_and_looping, []): เคลื่อนไปทางทิศใต้แล้วลูป
       gamelab_comment:
@@ -1046,7 +1099,7 @@ th:
         text: ลากเส้น {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: "[SPRITE]บล็อกขอบ[0] จากการย้าย"
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'ทุกๆ {N} {UNIT} '
         options:
           UNIT:
@@ -1072,6 +1125,7 @@ th:
         options:
           CHOICE:
             '"this"': นี้
+            '"other"': อย่างอื่น
       gamelab_getTime:
         text: เวลาเป็น {UNIT}
         options:
@@ -1205,8 +1259,6 @@ th:
             '"pop"': กระโดด
             '"rain"': มีฝน
             '"spiral"': วงก้นหอย
-      gamelab_makeNewScaledSprite:
-        text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       gamelab_makeNumSprites:
@@ -1219,6 +1271,12 @@ th:
             '90': เป็นตำแหน่ง
             '180': ซ้าย
             '270': ขึ้นข้างบน
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': เล็ก
+            '50': ปานกลาง
+            '100': ใหญ่
       gamelab_mirrorSprite:
         text: "{SPRITE} หน้า {DIRECTION}"
         options:
@@ -1289,6 +1347,32 @@ th:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": เลือก
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": เสียงทุ้มนุ่มลึก
             "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
+      gamelab_playSoundOptionsSoccer:
+        text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": แอร์ฮอร์น
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": เสียงปรบมือ
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": เสียงสวด
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": เสียงเชียร์
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": เตะ
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": นกหวีดสองเสียง
+            "'sound://category_sports/One_Whistle_SFX.mp3'": นกหวีด
+      gamelab_playSoundOptionsSpace:
+        text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": หลุมดำ
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": กระจุกปืนรัว
+            "'sound://category_space/Carina_SFX.mp3'": คารินา
+            "'sound://category_space/Cassiopeia_SFX.mp3'": แคสสิโอเปีย
+            "'sound://category_space/Crab_nebula_SFX.mp3'": เนบิวลาปู
+            "'sound://category_space/Launch_SFX.mp3'": ปล่อย
+            "'sound://category_space/Lift_Off.mp3'": บินขึ้น
+            "'sound://category_space/Pillars_SFX.mp3'": เสาหลัก
+            "'sound://category_space/Southern_ring_SFX.mp3'": วงแหวนทางใต้
+            "'sound://category_space/Supernova_SFX.mp3'": ซุปเปอร์โนวา
+            "'sound://category_space/Tycho_SFX.mp3'": ไทโช
       gamelab_playSpeech:
         text: เล่นเสียงพูด {SOUND}
       gamelab_playerBehaviors:
@@ -1296,6 +1380,7 @@ th:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): เคลื่อนไหวด้วยปุ่มลูกศร
+            new Behavior(driving_with_arrow_keys, []): ขับด้วยปุ่มลูกศร
             draggable(): ลากได้
       gamelab_pointInDirection:
         text: จุด {SPRITE} {DIRECTION}
@@ -1851,6 +1936,39 @@ th:
         text: สัตว์ประหลาดเริ่มสวมหน้ากาก
       Outbreak_stopMoving:
         text: สัตว์ประหลาดหยุดเคลื่อนไหว
+      ParticlesBlocks_getMicroscope:
+        text: กล้องจุลทรรศน์มี {INPUT1}
+        options:
+          INPUT1:
+            '1': น้ำมะนาว
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': น้ำมะนาว
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): ของแข็ง
+            new Behavior(liquid, []): ของเหลว
+            new Behavior(wandering, []): แก๊ส
+      ParticlesBlocks_statesOfMatter2:
+        text: ตั้งค่าพฤติกรรม {COSTUME} ถึง {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': 'อนุภาคของแข็ง '
+            '"liquid"': อนุภาคของเหลว
+            '"gas"': อนุภาคแก๊ส
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'อนุภาคของแข็ง '
+            '"liquid"': อนุภาคของเหลว
+            '"gas"': อนุภาคแก๊ส
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1921,6 +2039,21 @@ th:
             '"sound://category_achievements/peaceful_win_1.mp3"': ชนะ
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': วน
             '"sound://category_achievements/peaceful_win_6.mp3"': กระดิ่งลม
+      Poetry_playSoundOptionsSpace:
+        text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": หลุมดำ
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": กระจุกปืนรัว
+            "'sound://category_space/Carina_SFX.mp3'": คารินา
+            "'sound://category_space/Cassiopeia_SFX.mp3'": แคสสิโอเปีย
+            "'sound://category_space/Crab_nebula_SFX.mp3'": เนบิวลาปู
+            "'sound://category_space/Launch_SFX.mp3'": ปล่อย
+            "'sound://category_space/Lift_Off.mp3'": บินขึ้น
+            "'sound://category_space/Pillars_SFX.mp3'": เสาหลัก
+            "'sound://category_space/Southern_ring_SFX.mp3'": วงแหวนทางใต้
+            "'sound://category_space/Supernova_SFX.mp3'": ซุปเปอร์โนวา
+            "'sound://category_space/Tycho_SFX.mp3'": ไทโช
       Poetry_setAuthor:
         text: ตั้งชื่อผู้แต่ง {AUTHOR}
       Poetry_setBackground:
@@ -2005,14 +2138,28 @@ th:
         text: 'สไปร์ท {ANIMATION_NAME} เริ่ม {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': กระพือปีก
+            '"growing"': ขยายตัว
+            '"jittering"': กระสับกระส่าย
+            '"shrinking"': หดตัว
+            '"spinning_left"': หมุนไปทางซ้าย
+            '"spinning_right"': หมุนไปทางขวา
             '"swimming_left_and_right"': ว่ายน้ำ
             '"wandering"': เคลื่อนที่
+            '"wobbling"': โยกเยก
       Poetry_stopBehavior:
         text: 'สไปร์ท {ANIMATION_NAME} หยุด {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': กระพือปีก
+            '"growing"': ขยายตัว
+            '"jittering"': กระสับกระส่าย
+            '"shrinking"': หดตัว
+            '"spinning_left"': หมุนไปทางซ้าย
+            '"spinning_right"': หมุนไปทางขวา
             '"swimming_left_and_right"': ว่ายน้ำ
             '"wandering"': เคลื่อนที่
+            '"wobbling"': โยกเยก
             '"all"': "--ทุกพฤติกรรม--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
@@ -2035,6 +2182,11 @@ th:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: เมื่อ {VAR} ให้คำตอบ
       RyanLab_moveForward:
@@ -2234,5 +2386,19 @@ th:
           DIR:
             right: ไปทางขวา ↻
             left: ไปทางซ้าย ↺
+      storylab_setForegroundEffect2:
+        text: ใช้เอฟเฟกต์ {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': ฟองสบู่
+            '"confetti"': กระดาษสี
+            '"hearts"': หัวใจ
+            '"rain"': มีฝน
+            '"starburst"': ดาวกระจาย
+            '"twinkling"': ระยิบระยับ
+      storylab_setHeading:
+        text: ตั้งค่าหัวเรื่อง {HEADING}
+      storylab_setSubheading:
+        text: ตั้งค่าหัวข้อย่อย {SUBHEADING}
       validation_validatedBackground:
         text: ตั้งค่าพื้นหลังเป็น {IMG}

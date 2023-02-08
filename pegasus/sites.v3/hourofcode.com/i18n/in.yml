@@ -11,6 +11,12 @@ in:
   campaign_date_full: crwdns104653:0crwdne104653:0
   campaign_date_year: crwdns104654:0crwdne104654:0
   campaign_date_full_year: crwdns104655:0crwdne104655:0
+  nonus_campaign_date_start_short: crwdns3153928:0crwdne3153928:0
+  nonus_campaign_date_start_long: crwdns3153930:0crwdne3153930:0
+  nonus_campaign_date_short: crwdns3153932:0crwdne3153932:0
+  nonus_campaign_date_full: crwdns3153934:0crwdne3153934:0
+  nonus_campaign_date_year: crwdns3153936:0crwdne3153936:0
+  nonus_campaign_date_full_year: crwdns3153938:0crwdne3153938:0
   latam_campaign_date_start_short: crwdns2461846:0crwdne2461846:0
   latam_campaign_date_start_long: crwdns2461848:0crwdne2461848:0
   latam_campaign_date_short: crwdns2461850:0crwdne2461850:0
@@ -82,6 +88,9 @@ in:
   hoc_overview_csc_header: crwdns2698675:0crwdne2698675:0
   hoc_overview_csc_desc: crwdns2698677:0crwdne2698677:0
   hoc_overview_csc_learn_more: crwdns2698679:0crwdne2698679:0
+  hoc_danceparty_alt_text: crwdns2921262:0crwdne2921262:0
+  hoc_ai_alt_text: crwdns2921264:0crwdne2921264:0
+  hoc_banner_alt_text: crwdns2921266:0crwdne2921266:0
   ai_video_title_what_is_ai: crwdns2289853:0crwdne2289853:0
   ai_video_title_algorithm_bias: crwdns2289965:0crwdne2289965:0
   ai_video_title_phone_knows_dog: crwdns2289855:0crwdne2289855:0
@@ -393,7 +402,6 @@ in:
   signup_email_preference_no: crwdns169287:0crwdne169287:0
   signup_email_preference_error: crwdns169288:0crwdne169288:0
   signup_multiple_event_warning: crwdns104883:0crwdne104883:0
-  signup_registration_deadline: crwdns104884:0crwdne104884:0
   signup_name_placeholder: crwdns104885:0crwdne104885:0
   signup_email_placeholder: crwdns104886:0crwdne104886:0
   signup_organization_name_placeholder: crwdns104887:0crwdne104887:0
@@ -466,7 +474,7 @@ in:
   hoc_faq_how_participate_a_markdown: crwdns2364808:0%{howto}crwdnd2364808:0%{campaign_date}crwdne2364808:0
   hoc_faq_behind_hoc_q: crwdns104930:0crwdne104930:0
   hoc_faq_behind_hoc_a: crwdns104931:0%{partner_url}crwdne104931:0
-  hoc_faq_behind_hoc_a_markdown: crwdns2364810:0%{partner_url}crwdne2364810:0
+  hoc_faq_behind_hoc_a_markdown: crwdns2364810:0[partners]crwdnd2364810:0%{partner_url}crwdne2364810:0
   hoc_faq_host_q: crwdns104932:0crwdne104932:0
   hoc_faq_host_a: crwdns104933:0%{codeorg_url}crwdne104933:0
   hoc_faq_host_a_markdown: crwdns2364812:0%{codeorg_url}crwdnd2364812:0%{howto}crwdne2364812:0
@@ -6546,86 +6554,167 @@ in:
   all: crwdns107298:0crwdne107298:0
   dont_know: crwdns107299:0crwdne107299:0
   language_label: crwdns2465564:0crwdne2465564:0
-  ar: crwdns2712881:0crwdne2712881:0
-  az: crwdns2712883:0crwdne2712883:0
-  bg: crwdns2712885:0crwdne2712885:0
-  bn: crwdns2712887:0crwdne2712887:0
-  br: crwdns2712889:0crwdne2712889:0
-  bs: crwdns2712891:0crwdne2712891:0
-  ca: crwdns2712893:0crwdne2712893:0
-  cs: crwdns2712895:0crwdne2712895:0
-  cs-cz: crwdns2712897:0crwdne2712897:0
-  da: crwdns2712899:0crwdne2712899:0
-  da-dk: crwdns2712901:0crwdne2712901:0
-  de: crwdns2712903:0crwdne2712903:0
-  de-de: crwdns2712905:0crwdne2712905:0
-  el: crwdns2712907:0crwdne2712907:0
-  el-gr: crwdns2712909:0crwdne2712909:0
-  en: crwdns2712911:0crwdne2712911:0
-  en-gb: crwdns2712913:0crwdne2712913:0
-  es: crwdns2712915:0crwdne2712915:0
-  es-es: crwdns2712917:0crwdne2712917:0
-  es-mx: crwdns2712919:0crwdne2712919:0
-  et: crwdns2712921:0crwdne2712921:0
-  eu: crwdns2712923:0crwdne2712923:0
-  fa: crwdns2712925:0crwdne2712925:0
-  fa-ir: crwdns2712927:0crwdne2712927:0
-  fi: crwdns2712929:0crwdne2712929:0
-  fi-fi: crwdns2712931:0crwdne2712931:0
-  fil-ph: crwdns2712933:0crwdne2712933:0
-  fr: crwdns2712935:0crwdne2712935:0
-  gl: crwdns2712937:0crwdne2712937:0
-  he: crwdns2712939:0crwdne2712939:0
-  hi: crwdns2712941:0crwdne2712941:0
-  hi-in: crwdns2712943:0crwdne2712943:0
-  hr: crwdns2712945:0crwdne2712945:0
-  hu: crwdns2712947:0crwdne2712947:0
-  ia: crwdns2712949:0crwdne2712949:0
-  id: crwdns2712951:0crwdne2712951:0
-  is: crwdns2712953:0crwdne2712953:0
-  it: crwdns2712955:0crwdne2712955:0
-  it-it: crwdns2712957:0crwdne2712957:0
-  ja: crwdns2712959:0crwdne2712959:0
-  ja-jp: crwdns2712961:0crwdne2712961:0
-  ka: crwdns2712963:0crwdne2712963:0
-  kk: crwdns2712965:0crwdne2712965:0
-  ko: crwdns2712967:0crwdne2712967:0
-  lt: crwdns2712969:0crwdne2712969:0
-  lv: crwdns2712971:0crwdne2712971:0
-  mk: crwdns2712973:0crwdne2712973:0
-  mr: crwdns2712975:0crwdne2712975:0
-  ms: crwdns2712977:0crwdne2712977:0
-  my: crwdns2712979:0crwdne2712979:0
-  nl: crwdns2712981:0crwdne2712981:0
-  nl-nl: crwdns2712983:0crwdne2712983:0
-  nn: crwdns2712985:0crwdne2712985:0
-  false: crwdns2712987:0crwdne2712987:0
-  pl: crwdns2712989:0crwdne2712989:0
-  pl-pl: crwdns2712991:0crwdne2712991:0
-  pt: crwdns2712993:0crwdne2712993:0
-  pt-br: crwdns2712995:0crwdne2712995:0
-  pt-pt: crwdns2712997:0crwdne2712997:0
-  ro: crwdns2712999:0crwdne2712999:0
-  ru: crwdns2713001:0crwdne2713001:0
-  sk: crwdns2713003:0crwdne2713003:0
-  sl: crwdns2713005:0crwdne2713005:0
-  sq: crwdns2713007:0crwdne2713007:0
-  sr: crwdns2713009:0crwdne2713009:0
-  sv: crwdns2713011:0crwdne2713011:0
-  sv-se: crwdns2713013:0crwdne2713013:0
-  sw: crwdns2713015:0crwdne2713015:0
-  ta: crwdns2713017:0crwdne2713017:0
-  te: crwdns2713019:0crwdne2713019:0
-  th: crwdns2713021:0crwdne2713021:0
-  tl: crwdns2713023:0crwdne2713023:0
-  tr: crwdns2713025:0crwdne2713025:0
-  uk: crwdns2713027:0crwdne2713027:0
-  ur: crwdns2713029:0crwdne2713029:0
-  ur-in: crwdns2713031:0crwdne2713031:0
-  ur-pk: crwdns2713033:0crwdne2713033:0
-  vi: crwdns2713035:0crwdne2713035:0
-  zh: crwdns2713037:0crwdne2713037:0
-  zh-cn: crwdns2713039:0crwdne2713039:0
-  zh-hans: crwdns2713041:0crwdne2713041:0
-  zh-hant: crwdns2713043:0crwdne2713043:0
-  zh-tw: crwdns2713045:0crwdne2713045:0
+  language_code:
+    ar: crwdns2917076:0crwdne2917076:0
+    az: crwdns2917078:0crwdne2917078:0
+    bg: crwdns2917080:0crwdne2917080:0
+    bn: crwdns2917082:0crwdne2917082:0
+    br: crwdns2917084:0crwdne2917084:0
+    bs: crwdns2917086:0crwdne2917086:0
+    ca: crwdns2917088:0crwdne2917088:0
+    co: crwdns2917090:0crwdne2917090:0
+    cs: crwdns2917092:0crwdne2917092:0
+    da: crwdns2917094:0crwdne2917094:0
+    de: crwdns2917096:0crwdne2917096:0
+    dv: crwdns2917098:0crwdne2917098:0
+    el: crwdns2917100:0crwdne2917100:0
+    en: crwdns2917102:0crwdne2917102:0
+    es: crwdns2917104:0crwdne2917104:0
+    et: crwdns2917106:0crwdne2917106:0
+    eu: crwdns2917108:0crwdne2917108:0
+    fa: crwdns2917110:0crwdne2917110:0
+    fi: crwdns2917112:0crwdne2917112:0
+    fil: crwdns2917114:0crwdne2917114:0
+    fr: crwdns2917116:0crwdne2917116:0
+    ga: crwdns2917118:0crwdne2917118:0
+    gl: crwdns2917120:0crwdne2917120:0
+    haw: crwdns2917122:0crwdne2917122:0
+    he: crwdns2917124:0crwdne2917124:0
+    hi: crwdns2917126:0crwdne2917126:0
+    hr: crwdns2917128:0crwdne2917128:0
+    hu: crwdns2917130:0crwdne2917130:0
+    hy: crwdns2917132:0crwdne2917132:0
+    ia: crwdns2917134:0crwdne2917134:0
+    id: crwdns2917136:0crwdne2917136:0
+    is: crwdns2917138:0crwdne2917138:0
+    it: crwdns2917140:0crwdne2917140:0
+    ja: crwdns2917142:0crwdne2917142:0
+    ka: crwdns2917144:0crwdne2917144:0
+    kk: crwdns2917146:0crwdne2917146:0
+    km: crwdns2917148:0crwdne2917148:0
+    kn: crwdns2917150:0crwdne2917150:0
+    ko: crwdns2917152:0crwdne2917152:0
+    ku: crwdns2917154:0crwdne2917154:0
+    ky: crwdns2917156:0crwdne2917156:0
+    lt: crwdns2917158:0crwdne2917158:0
+    lv: crwdns2917160:0crwdne2917160:0
+    mi: crwdns2917162:0crwdne2917162:0
+    mk: crwdns2917164:0crwdne2917164:0
+    mn: crwdns2917166:0crwdne2917166:0
+    mr: crwdns2917168:0crwdne2917168:0
+    ms: crwdns2917170:0crwdne2917170:0
+    mt: crwdns2917172:0crwdne2917172:0
+    my: crwdns2917174:0crwdne2917174:0
+    ne: crwdns2917176:0crwdne2917176:0
+    nl: crwdns2917178:0crwdne2917178:0
+    nn: crwdns2917180:0crwdne2917180:0
+    false: crwdns2917182:0crwdne2917182:0
+    pl: crwdns2917184:0crwdne2917184:0
+    ps: crwdns2917186:0crwdne2917186:0
+    pt: crwdns2917188:0crwdne2917188:0
+    ro: crwdns2917190:0crwdne2917190:0
+    ru: crwdns2917192:0crwdne2917192:0
+    se: crwdns2917194:0crwdne2917194:0
+    si: crwdns2917196:0crwdne2917196:0
+    sk: crwdns2917198:0crwdne2917198:0
+    sl: crwdns2917200:0crwdne2917200:0
+    sq: crwdns2917202:0crwdne2917202:0
+    sr: crwdns2917204:0crwdne2917204:0
+    sv: crwdns2917206:0crwdne2917206:0
+    sw: crwdns2917208:0crwdne2917208:0
+    ta: crwdns2917210:0crwdne2917210:0
+    te: crwdns2917212:0crwdne2917212:0
+    tg: crwdns2917214:0crwdne2917214:0
+    th: crwdns2917216:0crwdne2917216:0
+    tl: crwdns2917218:0crwdne2917218:0
+    tr: crwdns2917220:0crwdne2917220:0
+    uk: crwdns2917222:0crwdne2917222:0
+    ur: crwdns2917224:0crwdne2917224:0
+    uz: crwdns2917226:0crwdne2917226:0
+    vi: crwdns2917228:0crwdne2917228:0
+    zh: crwdns2917230:0crwdne2917230:0
+    zu: crwdns2917232:0crwdne2917232:0
+  locale_code:
+    ar-sa: crwdns2917234:0crwdne2917234:0
+    az-az: crwdns2917236:0crwdne2917236:0
+    bg-bg: crwdns2917238:0crwdne2917238:0
+    bn-bd: crwdns2917240:0crwdne2917240:0
+    bs-ba: crwdns2917242:0crwdne2917242:0
+    ca-es: crwdns2917244:0crwdne2917244:0
+    co-co: crwdns2917246:0crwdne2917246:0
+    cs-cz: crwdns2917248:0crwdne2917248:0
+    da-dk: crwdns2917250:0crwdne2917250:0
+    de-de: crwdns2917252:0crwdne2917252:0
+    dv-mv: crwdns2917254:0crwdne2917254:0
+    el-gr: crwdns2917256:0crwdne2917256:0
+    en-gb: crwdns2917258:0crwdne2917258:0
+    en-us: crwdns2917260:0crwdne2917260:0
+    es-es: crwdns2917262:0crwdne2917262:0
+    es-mx: crwdns2917264:0crwdne2917264:0
+    et-ee: crwdns2917266:0crwdne2917266:0
+    eu-es: crwdns2917268:0crwdne2917268:0
+    fa-af: crwdns2917270:0crwdne2917270:0
+    fa-ir: crwdns2917272:0crwdne2917272:0
+    fi-fi: crwdns2917274:0crwdne2917274:0
+    fil-ph: crwdns2917276:0crwdne2917276:0
+    fr-fr: crwdns2917278:0crwdne2917278:0
+    ga-ie: crwdns2917280:0crwdne2917280:0
+    gl-es: crwdns2917282:0crwdne2917282:0
+    haw-hi: crwdns2917284:0crwdne2917284:0
+    he-il: crwdns2917286:0crwdne2917286:0
+    hi-in: crwdns2917288:0crwdne2917288:0
+    hr-hr: crwdns2917290:0crwdne2917290:0
+    hu-hu: crwdns2917292:0crwdne2917292:0
+    hy-am: crwdns2917294:0crwdne2917294:0
+    id-id: crwdns2917296:0crwdne2917296:0
+    is-is: crwdns2917298:0crwdne2917298:0
+    it-it: crwdns2917300:0crwdne2917300:0
+    ja-jp: crwdns2917302:0crwdne2917302:0
+    ka-ge: crwdns2917304:0crwdne2917304:0
+    kk-kz: crwdns2917306:0crwdne2917306:0
+    km-kh: crwdns2917308:0crwdne2917308:0
+    kn-in: crwdns2917310:0crwdne2917310:0
+    ko-kr: crwdns2917312:0crwdne2917312:0
+    ku-iq: crwdns2917314:0crwdne2917314:0
+    ky-kg: crwdns2917316:0crwdne2917316:0
+    lt-lt: crwdns2917318:0crwdne2917318:0
+    lv-lv: crwdns2917320:0crwdne2917320:0
+    mi-nz: crwdns2917322:0crwdne2917322:0
+    mk-mk: crwdns2917324:0crwdne2917324:0
+    mn-mn: crwdns2917326:0crwdne2917326:0
+    mr-in: crwdns2917328:0crwdne2917328:0
+    ms-my: crwdns2917330:0crwdne2917330:0
+    mt-mt: crwdns2917332:0crwdne2917332:0
+    my-mm: crwdns2917334:0crwdne2917334:0
+    ne-np: crwdns2917336:0crwdne2917336:0
+    nl-nl: crwdns2917338:0crwdne2917338:0
+    nn-no: crwdns2917340:0crwdne2917340:0
+    no-no: crwdns2917342:0crwdne2917342:0
+    pl-pl: crwdns2917344:0crwdne2917344:0
+    ps-af: crwdns2917346:0crwdne2917346:0
+    pt-br: crwdns2917348:0crwdne2917348:0
+    pt-pt: crwdns2917350:0crwdne2917350:0
+    ro-ro: crwdns2917352:0crwdne2917352:0
+    ru-ru: crwdns2917354:0crwdne2917354:0
+    se-fi: crwdns2917356:0crwdne2917356:0
+    si-lk: crwdns2917358:0crwdne2917358:0
+    sk-sk: crwdns2917360:0crwdne2917360:0
+    sl-si: crwdns2917362:0crwdne2917362:0
+    sq-al: crwdns2917364:0crwdne2917364:0
+    sr-sp: crwdns2917366:0crwdne2917366:0
+    sv-se: crwdns2917368:0crwdne2917368:0
+    ta-in: crwdns2917370:0crwdne2917370:0
+    te-in: crwdns2917372:0crwdne2917372:0
+    tg-tj: crwdns2917374:0crwdne2917374:0
+    th-th: crwdns2917376:0crwdne2917376:0
+    tr-tr: crwdns2917378:0crwdne2917378:0
+    uk-ua: crwdns2917380:0crwdne2917380:0
+    ur-in: crwdns2917382:0crwdne2917382:0
+    ur-pk: crwdns2917384:0crwdne2917384:0
+    uz-uz: crwdns2917386:0crwdne2917386:0
+    vi-vn: crwdns2917388:0crwdne2917388:0
+    zh-cn: crwdns2917390:0crwdne2917390:0
+    zh-hans: crwdns2917392:0crwdne2917392:0
+    zh-hant: crwdns2917394:0crwdne2917394:0
+    zh-tw: crwdns2917396:0crwdne2917396:0
+    zu-za: crwdns2917398:0crwdne2917398:0

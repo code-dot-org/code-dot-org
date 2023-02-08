@@ -112,7 +112,19 @@ export const commands = {
     }
   },
 
-  // Used in levels to override default validation timing.
+  addBonusCriteria(predicate) {
+    if (typeof predicate === 'function') {
+      this.bonusCriteria.push(new bonusCriteria(predicate));
+    }
+  },
+
+  // Used in levels to override default validation settings.
+  setSuccessMessage(message) {
+    this.successMessage = message;
+  },
+  setBonusSuccessMessage(message) {
+    this.bonusSuccessMessage = message;
+  },
   setEarlyTime(frames) {
     this.validationFrames.early = frames;
   },
@@ -123,7 +135,7 @@ export const commands = {
     this.validationFrames.fail = frames;
   },
   setDelayTime(frames) {
-    this.validationFrames.pass = frames;
+    this.validationFrames.delay = frames;
   },
   getFailTime() {
     return this.validationFrames.fail;
@@ -136,7 +148,7 @@ export const commands = {
   },
 
   checkAndSetSuccessTime(state) {
-    if (!this.validationFrames.successFrame && state === 'pass') {
+    if (!this.validationFrames.successFrame && state !== 'fail') {
       this.validationFrames.successFrame = this.currentFrame();
       this.validationFrames.pass =
         this.validationFrames.delay + this.currentFrame();
@@ -157,10 +169,11 @@ export const commands = {
   // to update UX elements, such as progress bars.
   updateValidation() {
     // Get the current (ie. previous frame) pass/fail state prior to validation
-    const state = commands.getPassState(this.criteria);
+    const state = commands.getPassState(this.criteria, this.bonusCriteria);
 
     // Check all criteria and update the completion status of each.
     commands.checkAllCriteria(this.criteria);
+    commands.checkAllCriteria(this.bonusCriteria);
     commands.checkAndSetSuccessTime.call(this, state);
     // Calculate the size of the current progress bar as it fills to the right
     // across the screen.
@@ -170,7 +183,7 @@ export const commands = {
     drawUtils.validationBar(this.p5, barWidth, state, {});
     switch (state) {
       case 'fail':
-        // End the level.
+        // End the level after enough time has passed.
         if (this.currentFrame() > this.validationFrames.fail) {
           // If a user fails a level, we currently console.log the criteria object.
           // As this is a new feature, it might be helpful to be able to get this
@@ -179,15 +192,18 @@ export const commands = {
           console.log(this.criteria);
           return {
             state: 'failed',
-            feedback: commands.reportFailure(this.criteria)
+            feedback: commands.chooseFailureFeedback(this.criteria)
           };
         }
         break;
+      case 'bonus':
+        this.successMessage = this.bonusSuccessMessage;
+      // fall through
       case 'pass':
         if (this.currentFrame() > this.validationFrames.pass) {
           return {
             state: 'succeeded',
-            feedback: commands.reportSuccess(this.criteria)
+            feedback: this.successMessage
           };
         }
         break;
@@ -205,6 +221,7 @@ export const commands = {
     const spriteIds = this.getSpriteIdsInUse();
     this.previous.eventLogLength = this.eventLog.length;
     this.previous.printLogLength = this.printLog.length || 0;
+    this.previous.soundLogLength = this.soundLog.length || 0;
     this.previous.sprites = [];
     for (let i = 0; i < spriteIds.length; i++) {
       let spriteId = spriteIds[i];
@@ -224,20 +241,25 @@ export const commands = {
 
   // If the student has not completed any criteria, they are "failing".
   // This determines things like the current color of the validation timer bar below the play area.
-  getPassState(criteria) {
-    var state = 'pass';
+  getPassState(criteria, bonusCriteria) {
     for (const criterion in criteria) {
       if (!criteria[criterion].complete) {
-        state = 'fail';
+        return 'fail';
       }
     }
-    return state;
+    for (const criterion in bonusCriteria) {
+      if (bonusCriteria[criterion].complete) {
+        return 'bonus';
+      }
+    }
+    return 'pass';
   },
 
   calculateBarScale(state) {
     let scale = APP_WIDTH;
     switch (state) {
       case 'pass':
+      case 'bonus':
         scale =
           APP_WIDTH /
           (this.validationFrames.pass - this.validationFrames.successFrame);
@@ -271,28 +293,16 @@ export const commands = {
   },
 
   // Used at the end of a level. Find the first failed criteria and return associated feedback.
-  reportFailure(criteria) {
+  chooseFailureFeedback(criteria) {
     let firstFailed = -1;
     for (const criterion in criteria) {
       if (!criteria[criterion].complete && firstFailed === -1) {
         firstFailed = criterion;
+        break;
       }
     }
     if (firstFailed > -1) {
       return criteria[firstFailed].feedback;
-    }
-  },
-
-  // Used at the end of a level. If there are no failed criteria, return the generic success feedback.
-  reportSuccess(criteria) {
-    let firstFailed = -1;
-    for (const criterion in criteria) {
-      if (!criteria[criterion].complete && firstFailed === -1) {
-        firstFailed = criterion;
-      }
-    }
-    if (firstFailed === -1) {
-      return 'genericSuccess';
     }
   }
 };
@@ -316,6 +326,12 @@ class criteria {
   constructor(predicate, feedback) {
     this.predicate = predicate;
     this.feedback = feedback;
+    this.complete = false;
+  }
+}
+class bonusCriteria {
+  constructor(predicate) {
+    this.predicate = predicate;
     this.complete = false;
   }
 }

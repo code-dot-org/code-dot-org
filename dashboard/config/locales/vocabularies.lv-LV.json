@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Atkļūdošana"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Atkļūdošana"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Sazarojumi"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Atkļūdošana"
         },
         "loops/aquatic/unversioned": {
           "word": "Cikli"
@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Atkļūdošana"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kods"
         },
@@ -68,8 +76,94 @@
         "debugging/basketball/unversioned": {
           "word": "Atkļūdošana"
         },
+        "debugging/coursed/2022": {
+          "word": "Atkļūdošana"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Sazarojumi"
+        },
+        "variable/coursef/2022": {
+          "word": "Mainīgais"
+        },
+        "internet/coursef/2022": {
+          "word": "Internets"
+        },
+        "define/coursef/2022": {
+          "word": "Definēt"
+        },
+        "function/coursee/2022": {
+          "word": "Funkcija"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Sazarojumi"
+        },
+        "define/coursee/2022": {
+          "word": "Definēt"
+        },
+        "debugging/courseb/2022": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/express/2022": {
+          "word": "Atkļūdošana"
+        },
+        "conditionals/express/2022": {
+          "word": "Sazarojumi"
+        },
+        "function/express/2022": {
+          "word": "Funkcija"
+        },
+        "variable/express/2022": {
+          "word": "Mainīgais"
+        },
+        "define/express/2022": {
+          "word": "Definēt"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/coursea/2022": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/coursec/2022": {
+          "word": "Atkļūdošana"
+        },
+        "binary/coursec/2022": {
+          "word": "Binārie"
+        },
+        "debugging/csd/2022": {
+          "word": "Atkļūdošana"
+        },
+        "variable/csd/2022": {
+          "word": "Mainīgais"
+        },
+        "conditionals/csd/2022": {
+          "word": "Sazarojumi"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstrakcija"
+        },
+        "function/csd/2022": {
+          "word": "Funkcija"
+        },
         "code/poem-art/unversioned": {
-          "word": "Kods"
+          "word": "Kods",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Mainīgais"

@@ -217,11 +217,11 @@ it:
           di storia così ottenuti diventano dei modelli per divertirsi ad inventare
           nuove storie.
       ForLoopFun:
-        title: Divertiti usando i cicli con contatore
+        title: Divertirsi con i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte,
           ma ora impariamo come usare i cicli con strutture aggiuntive.
       SongwritingWithParameters:
-        title: Composizione di Canzoni - Parametri
+        title: Scrittura musicale di un programma - Parametri
         desc: Una delle strutture più belle nell'informatica è la funzione.  Le funzioni
           (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare
           più e più volte all'interno di un programma più grande. Questa lezione aiuta
@@ -421,11 +421,11 @@ it:
           diversi modi. Svolgi questa attività prima di (o in concomitanza con) la
           lezione sull'astrazione per comprendere a fondo come usare le variabili.
       courseF_unplugged_forLoopFun:
-        title: Divertiti usando i cicli con contatore
+        title: Divertirsi con i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte,
           ma ora impariamo come usare i cicli con strutture aggiuntive.
       courseF_unplugged_songwritingParameters:
-        title: Composizione di Canzoni - Parametri
+        title: Scrittura musicale di un programma - Parametri
         desc: Una delle strutture più belle nell'informatica è la funzione.  Le funzioni
           (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare
           più e più volte all'interno di un programma più grande. Questa lezione aiuta
@@ -580,7 +580,7 @@ it:
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
       courseE_unplugged_privateInformation_2019:
-        title: Cittadinanza digitale - Dati personali e altri dati
+        title: Dati personali e altri dati
         desc: Sviluppata da Common Sense Education, questa lezione tratta della differenza
           tra informazioni sicure da condividere online e informazioni che non lo
           sono.
@@ -664,6 +664,7 @@ it:
           ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
           di essere corretti con coloro che danno vita ai contenuti creativi.
       GraphingData_2019:
+        title: Rappresentazione grafica dei dati
         desc: In questa lezione, gli studenti raccoglieranno i dati da un progetto
           del Play Lab o dello scenario globale reale e lo useranno per fare predizioni.
       courseE_unplugged_accessAbility_2019:

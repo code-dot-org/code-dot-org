@@ -2,6 +2,22 @@
 mi:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': wawaenga
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': wawaenga
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} tinihiaia wāhanga e {N}
@@ -212,20 +228,12 @@ mi:
             MOVES.XArmsUp: Totoro
             MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
-      Dancelab_everyMeasuresRange:
-        text: 'māhia ia wāhanga e {N} a muri i te {START} '
       Dancelab_everySeconds:
         text: 'māhia ia {N} {UNIT} '
         options:
           UNIT:
             '"measures"': wāhanga
             '"seconds"': ngā hēkona
-      Dancelab_everySecondsRange:
-        text: 'ia {N} {UNIT} mai i te {START} ki te {STOP} '
-        options:
-          UNIT:
-            measures: Wāhanga
-            seconds: Hēkona
       Dancelab_everyVerseChorus:
         text: 'ia {UNIT} '
         options:
@@ -966,6 +974,14 @@ mi:
         text: tatūnga
       Dancelab_whenSetup2:
         text: tatūnga
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"rain"': ua
+            '"starburst"': Pāpahu Whetū
       gamelab_addBehaviorSimple:
         text: parehe {SPRITE} ka {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -994,7 +1010,7 @@ mi:
         text: "{SPRITE}"
       gamelab_costumeImage:
         text: "{COSTUME}"
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'māhia ia {N} {UNIT} '
         options:
           UNIT:
@@ -1109,6 +1125,12 @@ mi:
             '90': raro
             '180': mauī
             '270': runga
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': wawaenga
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1458,6 +1480,11 @@ mi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:
@@ -1599,3 +1626,11 @@ mi:
           DIR:
             right: matau ↻
             left: maui ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"rain"': ua
+            '"starburst"': Pāpahu Whetū

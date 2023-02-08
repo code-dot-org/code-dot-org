@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module Pd
-  class DummyForm < ActiveRecord::Base
+  class DummyForm < ApplicationRecord
     include Pd::JotFormBackedForm
 
     # @override
@@ -178,7 +178,7 @@ module Pd
     end
 
     test 'fill_placeholders syncs each placeholder' do
-      mock_placeholders = 2.times.map do
+      mock_placeholders = Array.new(2) do
         mock {|mock_placeholder| mock_placeholder.expects(:sync_from_jotform)}
       end
 
@@ -194,7 +194,7 @@ module Pd
 
     test 'fill_placeholders collects errors and re-raises at the end' do
       form_id = get_form_id
-      failed_submission_ids = 2.times.map {get_submission_id}
+      failed_submission_ids = Array.new(2) {get_submission_id}
 
       mock_placeholders = [
         mock {|_mock_successful_placeholder| expects(:sync_from_jotform)},
@@ -303,7 +303,7 @@ module Pd
     end
 
     test 'sync_from_jotform with no args syncs all forms' do
-      all_form_ids = 2.times.map {get_form_id}
+      all_form_ids = Array.new(2) {get_form_id}
       DummyForm.expects(:all_form_ids).returns(all_form_ids)
       DummyForm.expects(:_sync_from_jotform).with(all_form_ids)
 
@@ -319,7 +319,7 @@ module Pd
     end
 
     test 'jotform sync gets questions syncs new answers for each form' do
-      form_ids = 2.times.map {get_form_id}
+      form_ids = Array.new(2) {get_form_id}
       last_submission_id = get_submission_id
       min_date = Date.today
       form_ids.each do |form_id|
@@ -363,7 +363,7 @@ module Pd
 
       # 3 batches (batch limit == 5)
       mock_translations = [5, 5, 1].each_with_index.map do |result_count, i|
-        mock_submissions = result_count.times.map do
+        mock_submissions = Array.new(result_count) do
           submission_id = get_submission_id
           mock_questions.expects(:update!).with(last_submission_id: submission_id)
           mock do |mock_submission|
@@ -463,7 +463,7 @@ module Pd
         mock {expects(:last_submission_id).returns(nil).at_least_once}
       )
 
-      mock_submissions = 2.times.map do |i|
+      mock_submissions = Array.new(2) do |i|
         submission_id = get_submission_id
         mock do |mock_submission|
           expects(:[]).with(:submission_id).returns(submission_id)
@@ -490,7 +490,7 @@ module Pd
       e = assert_raises do
         DummyForm.sync_from_jotform form_id
       end
-      2.times.map do |i|
+      Array.new(2) do |i|
         assert e.message.include? "Process error #{i}"
       end
       assert e.message.include? 'Submission all: Entire batch failed. Aborting'

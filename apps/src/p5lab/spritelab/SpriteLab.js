@@ -9,6 +9,7 @@ import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
 import React from 'react';
 import {singleton as studioApp} from '../../StudioApp';
+import {closeWorkspaceAlert} from '../../code-studio/projectRedux';
 
 export default class SpriteLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -76,7 +77,9 @@ export default class SpriteLab extends P5Lab {
 
   reset() {
     super.reset();
+    getStore().dispatch(closeWorkspaceAlert());
     getStore().dispatch(clearPrompts());
+    this.clearExecutionErrorWorkspaceAlert();
     this.preview();
   }
 
@@ -92,14 +95,15 @@ export default class SpriteLab extends P5Lab {
   }
 
   /**
-   * If there is an executionError, create a WorkspaceAlert.
+   * If there is an executionError, display a WorkspaceAlert.
    * We do this because Sprite Lab has no user-facing console.
    */
   reactToExecutionError(msg) {
     if (!msg) {
       return;
     }
-    studioApp().displayWorkspaceAlert(
+
+    this.executionErrorWorkspaceAlert = studioApp().displayWorkspaceAlert(
       'error',
       React.createElement(
         'div',
@@ -110,6 +114,15 @@ export default class SpriteLab extends P5Lab {
       ),
       true /* bottom */
     );
+  }
+
+  clearExecutionErrorWorkspaceAlert() {
+    if (!this.executionErrorWorkspaceAlert) {
+      return;
+    }
+
+    studioApp().closeAlert(this.executionErrorWorkspaceAlert);
+    this.executionErrorWorkspaceAlert = undefined;
   }
 
   onPromptAnswer(variableName, value) {
@@ -146,5 +159,16 @@ export default class SpriteLab extends P5Lab {
    */
   getReinfFeedbackMsg(isFinalFreePlayLevel) {
     return isFinalFreePlayLevel ? null : this.getMsg().reinfFeedbackMsg();
+  }
+
+  runValidationCode() {
+    // Skip validation code in 'editBlocks' mode (i.e., a levelbuilder is
+    // editing start blocks for the level).
+    if (this.level.editBlocks) {
+      this.onPuzzleComplete(false /* submit */);
+      return;
+    }
+
+    super.runValidationCode();
   }
 }

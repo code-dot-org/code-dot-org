@@ -1,0 +1,29 @@
+#codeWorkspace {
+  border: none !important;
+}
+
+button {
+  padding: 1.5% 3%;
+
+  &:active {
+    border: none !important;
+  }
+}
+
+#pondTextMarkdown p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#pondTextMarkdown strong {
+  color: #eb5757;
+  font-weight: normal;
+  font-family: "Gotham 4r", arial, sans-serif;
+}
+
+#pondTextMarkdown em {
+  color: #56c568;
+  font-style: normal;
+  font-family: "Gotham 4r", arial, sans-serif;
+}

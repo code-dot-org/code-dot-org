@@ -73,7 +73,7 @@ class TestFlakiness
   def self.recommend_reruns(flakiness)
     recommended_reruns = Math.log(MAX_FAILURE_RATE, flakiness)
     max_reruns = [1, [recommended_reruns, 5].min].max.ceil
-    confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
+    confidence = (1.0 - (flakiness**(max_reruns + 1))).round(3)
     return [max_reruns, confidence]
   end
 
@@ -83,7 +83,7 @@ class TestFlakiness
   # for calculating flakiness.
   # @param timestamp [Integer] Unix timestamp (e.g., Time.now.to_i)
   def self.reset(timestamp)
-    File.open(FLAKINESS_TIMESTAMP_FILENAME, "w") {|f| f.write({timestamp: timestamp}.to_json)}
+    File.write(FLAKINESS_TIMESTAMP_FILENAME, {timestamp: timestamp}.to_json)
   end
 
   CACHE_FILENAME = (File.dirname(__FILE__) + "/../../dashboard/tmp/cache/test_summary.json").freeze

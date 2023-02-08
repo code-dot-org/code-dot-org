@@ -4,12 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSA Self Paced PL",
       "is_migrated": true,
-      "pilot_experiment": "csa-getting-started-preview"
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-02 02:31:12 UTC",
+    "serialized_at": "2022-06-03 14:32:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

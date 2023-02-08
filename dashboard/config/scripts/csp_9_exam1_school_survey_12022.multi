@@ -10,7 +10,7 @@ The next three questions all refer to the same dataset described below.
 
 A school is conducting a survey of students to learn more about how they get to school. Students were asked how they travel to school, how long it takes them to get to school, what time they arrive at school, and for a description of their most significant challenges when traveling to school. Several rows of the data collected are shown in the table below.
 
-Which column is data will likely be most difficult to visualize or analyze?
+Which column is data that will likely be most difficult to visualize or analyze?
 
 | Student ID | How Travel | How Long | Time Arrive | Biggest Challenges |
 | --- | --- | --- | --- | ---|

@@ -1,6 +1,6 @@
 %h1= @page_title = "Editing script '#{@script.name}'"
 
-= form_for(@script || :script, @script ? {} : {url: scripts_path}) do |f|
+= form_for(@script || :script, @script ? {url: script_path(@script)} : {url: scripts_path}) do |f|
   - if @script && @script.errors.any?
     #error_explanation
       %h2

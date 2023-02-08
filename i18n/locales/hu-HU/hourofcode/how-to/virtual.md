@@ -1,110 +1,71 @@
 ---
-title: Kódolás Órája útmutató virtuális eseményekhez
+title: Kódolás órája útmutató virtuális eseményekhez
 ---
 
 {{ signup_button }}
 
-# Tippek egy virtuális Kódolás Órája eseményhez
+# Ötletek egy virtuális Kódolás órája eseményhez
 
-### Egy sikeres Kódolás Órája esemény levezényléséhez nem kell feltétlen személyesen is ott lenned!
+### Egy Kódolás órája sikeres megtartásához nem kell feltétlen személyesen jelen lennni!
 
 ***
 
-Míg a Kódolás Óráját hagyományosan az egész világon tantermekben tartják, neked nem kell személyesen is ott lenned, hogy egy jót szórakozzatok! Az alábbi tippek felhasználásával továbbra is egy interaktív és inspiráló órát szervezhetsz a hallgatóknak.  Vess egy pillantást a <a href="https://hourofcode.com/files/participation-guide-virtual.pdf"> virtuális esemény útmutatónkra</a>, ha még vannak kérdéseid.
+Míg a Kódolás óráját hagyományosan az egész világon tantermekben tartják, nem kell személyesen jelen lenned ahhoz, hogy az óra jó szórakozás legyen! Az alábbi ötletek felhasználásával távolról is interaktív és inspiráló órát tarthatsz a hallgatóknak.  Ha még van kérdések, nézd meg a [résztvevőknek szóló útmutatót]({{ localized_files/participation_guide_virtual }}).
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## Lehet, hogy külön tartózkodtok, de mégis elkezdhetitek együtt
-Még akkor is, ha azt tervezed, hogy a hallgatók önállóan végzik majd a feladatukat, azt javasoljuk, hogy egy online virtuális bejelentkezéssel kezdjétek el az eseményt, hogy a résztvevők átérezzék a hangulatot. Számos érdekes módja van annak, hogyan kezdheted el: 
+## Lehettek távol egymástól, mégis elkezdhetitek együtt
+Még akkor is ha a hallgatóknak önállóan elvégzendő feladatot tervezel adni, mi azt javasoljuk, hogy kezdd az online eseményt egy virtuális nyitással, ami a hallgatókat izgatottá és lelkessé teszi. Számos érdekes módja van egy esemény elkedésének:
 
 <ul>
-<li><b> Hívj meg vendégelőadót</b>: Önként jelentkezők ezrei várják megkeresésed külünbőző szakterületekről! A kereséshez egyszerűen használd a <a href="https://code.org/volunteer/local"> önkéntes térképünket</a>. A virtuális óra során a távolság mit sem számít, ezért szükség esetén fontold meg más irányítószámon élő önkéntesek keresését is, akik távolról is tudnak segíteni. Miután kapcsolatba léptél egy önkéntessel, hivatkozhatsz a <a href="http://hourofcode.com/us/how-to/volunteers"> Kódolás Órája önkéntes útmutatóra </a> a lehetséges témák, vitkérdések és egyebek meghatározásához.</li> 
-<li><b> Inspiráló videó megjelenítése</b>: Egy másik remek kezdés, ha közösen megnéztek egy <a href="http://hourofcode.com/us/promote/resources#videos"> inspiráló videót</a>. Számos videó kevesebb mint 5 perces és elég ötletet és bátorítást ad hírességek szájából egyenesen a te diákjaidnak.</li> 
-<li><b> Beszéljetek a számítástechnikáról</b>: Fordítsd a Kódolás Órája eseményt a számítástechnika mélyebb megértésére, figyelembe véve a technológia mindennapi életünkre gyakorolt hatását. Tegyél fel kérdéseket a hallgatóknak, és alakítsd az esemény kezdetét interaktív beszélgetéssé. Ha ötleteket szeretnél kapni a beszélgetés elindításához, nézd meg ezeket a <a href="https://code.org/csforgood#prompts"> minta kérdéseket</a>.</li>
+<li><b>Hívj meg vendégelőadót</b>: Önként jelentkezők ezrei különbőző szakterületekről várják a megkeresésed! A kereséshez egyszerűen használd az <a href="https://code.org/volunteer/local"> önkéntes térképünket</a>. Egy virtuális Kódolás órája során nem számít a távolság, ezért ha kell, más területen élő önkénteseket is számításba vehetsz, akik távolról is tudnak segíteni. Miután kapcsolatba léptél egy önkéntessel, felhívhatod a figyelmét az útmutatóra, <a href="http://hourofcode.com/us/how-to/volunteers">Útmutató önkénteseknek a Kódolás órájához</a>, aminek segítségével lehet témákat találni, vitkérdések meghatározni, és még sok minden mást is.</li>
+<li><b> Inspiráló videó lejátszása</b>: Egy másik biztos kezdés lehet az egyik <a href="http://hourofcode.com/us/promote/resources#videos"> inspiráló videónk</a> közös megtekintése. Számos videó 5 percesnél is rövidebb, amelyekben a te diákjaid által is ismert híres személyiségek inspirálják és bátorítják a diákokat.</li>
+<li><b>Beszéljetek arról, hogy milyen jó célokat szolgál a számítástechnika</b>: A Kódolás órájának legyen a célja a számítástechnika mélyebb megértésére, vegyétek számba a technológia mindennapi életünkre gyakorolt hatását. Tegyél fel kérdéseket a hallgatóknak, az eseményt kezdjétek interaktív beszélgetéssel. Ha ötleteket szeretnél kapni a beszélgetés megkezdéséhez, nézd meg ezeket a <a href="https://code.org/csforgood#prompts">vitakérdéseket</a>.</li>
 </ul>
 
 ---
 
-## Mit készítsek el előre
+## Mit kell előre elkészíteni?
 
-### 1. Döntsd el mi legyen a virtuális platform
-Valószínűleg már ismered az olyan platformokat, mint a Cisco Webex, a Google Meet, a Microsoft Teams, a Skype vagy a Zoom. Bármelyiket is preferálod, azt javasoljuk, hogy ismerkedj meg a használatával, teszteld le annak képességeit, és futtass le egy Kódolás Órája programot  még az esemény dátuma előtt.
+### 1. Döntsd el, mi legyen a videókonferencia platformja
+Valószínűleg már ismered az olyan platformokat, mint a Cisco Webex, a Google Meet, a Microsoft Teams, a Skype és a Zoom. Bármelyiket is választod, azt javasoljuk, hogy ismerkedj meg vele, hogyan kell használni, teszteld le, mit tud, és futtass le egy Kódolás órája programot  még az esemény időpontja előtt.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Tervezd meg a diákok részvételét
-** Önálló programzási tevékenység ** <br> Javasoljuk, hogy a kezdést követően engedd meg a hallgatóknak, hogy távozzanak a videokonferenciáról, hogy <a href="https://hourofcode.com/us/learn"> a Kódolás Órája gyakorlatokat  </ / a> önállóan tudják megoldani. Ez lehetővé teszi a hallgatók számára, hogy elmélyüljenek saját projektjeikben, és jobban megismerjék a számítástechnika fogalmait. Minimálisra csökkenti az esetleges figyelemelterelést, amit a videokonferencia-ablakok megnyitása okozna. </p> 
+### 2. Tervezd meg a diákok részvételének a módját
+**Önálló tevékenység a Kódolás óráján** <br> Azt javasoljuk, hogy a kezdést követően engedd el a hallgatókat a videokonferenciáról, hogy <a href="https://hourofcode.com/us/learn">a Kódolás órájára kiadott feladatokat</a> önállóan végezzék el. Ez lehetővé teszi a hallgatók számára, hogy elmélyüljenek saját projektjeikben, és jobban megismerjék a számítástechnika fogalmait. Minimálisra csökkenti a videokonferencia nyitott ablaka okozta zavarást és figyelemelterelést.
 
-<p spaces-before="0">
-  Hasznos lehet, ha 1-3 gyakorlatot előre kiválasztassz és felajánlassz nekik, mint lehetséges opciót. Ez lehetővé teszi, hogy olyan tevékenységeket válassz, amelyek a legjobban megfelelnek az évfolyamnak. Ráadásul, ha a hallgatóknak kérdései lennének, amelyek segítséget igényelnek, akkor te is jobban felkészülhetsz a segítségnyújtásra, ha már ismerik az általuk kidolgozott oktatóanyagokat.
-</p>
+Hasznos lehet 1-3 gyakorlatot előre kiválasztasztani, és felajánlani a diákoknak a választási lehetőséget. Ezáltal az évfolyamnak legjobban megfelelő tevékenységeket tudod kiválasztani. Ráadásul, ha a hallgatóknak kérdései lesznek és segítséget igényelnek, akkor te is jobban felkészült leszel, hiszen már ismered a nekik kiadott gyakorlatokat.
 
-<p spaces-before="0">
-  Ha az osztály várhatóan közvetlenül a kezdést követően fogja elkezdeni a gyakorlatot, akkor fontolóra veheted egy virtuális konferenciaterem, csevegési platform vagy más kommunikációs eszköz nyitva tartását, hogy szükség esetén kérdéseikkel újra kapcsolatba léphessenek veled.
-</p>
+Ha az osztály közvetlenül az óra megkezdését követően áll neki a feladatnak, akkor megfontolandó egy virtuális konferenciaterem, csevegési platform vagy más kommunikációs eszköz nyitva tartása, hogy szükség esetén a kérdéseiket feltehessék neked.
 
-<p spaces-before="0">
-  <strong x-id = "1"> Kódolás Órája online </strong> <br> Ha a résztvevőket inkább ugyanabban a videohívásban szeretnéd tartani az esemény ideje alatt, kérjük, vedd figyelembe, hogy mindig két ablaknak kell nyitva lennie - az egyik a videokonferencia platformhoz, a másik pedig a hallgatóknak a feladatok elvégzésére.
-</p>
+**Közös online tevékenység a Kódolás óráján** <br> Ha a résztvevőket az esemény ideje alatt ugyanabban a videohívásban szeretnéd tartani, vedd figyelembe, hogy a diákoknak két állandóan nyitva lévő ablakra lesz szükségük - egy a videokonferencia platformhoz, a másik pedig a feladatok elvégzéséhez.
 
-<p spaces-before="0">
-  <strong x-id = "1"> Szülőkkel </strong> <br> A 4. és annál alacsonyabb osztályba járó tanulók esetén érdemes megfontolni a szüleik bevonását is a Kódolás Órájába. Támogathatod őket néhány ajánlott oktatóanyaggal, valamint az alábbi hasznos <a href="https://hourofcode.com/us/how-to/parents"> útmutatóval</ a >. </p> 
-  
-  <p spaces-before="0">
-    <a href="https://hourofcode.com/us/how-to/parents"><img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" /></a>
-  </p>
+**Szülőkkel** <br> Az 1- 4. osztályba járó tanulók esetén érdemes megfontolni a szülők bevonását, és arra bátorítani őket, hogy tartsanak otthon egy Kódolás óráját. Támogathatod őket, ajánlhatsz nekik gyakorlatokat, de hasznos lehet az <a href="https://hourofcode.com/us/how-to/parents">Útmutató szülőknek</a>is.
 
-<h3 spaces-before="0">
-  3. Vonj be önkéntest
-</h3>
+[<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-<p spaces-before="0">
-  Az igényeknek megfelelően önkénteseket is találhatsz az <a href="https://code.org/volunteer/local"> önkéntes térképünkön</a>. Sokan elérhetők online, és több mint szívesen beszélnek a számítástechnikában szerzett tapasztalataikról, arról, hogy a technológia hogyan befolyásolja életüket, vagy egyszerűen csak segítséget nyújtanak a hallgatói kérdések megválaszolásához. Miután megtaláltad a megfelelő önkéntest, fontos, hogy még idő előtt egyeztessetek a részletekről és hogy megvitassátok a szerepét az eseményen, kidolgozzátok a technikai követelményeket és meghatározzátok az online részvétel logisztikáját.
-</p>
+### 3. Önkéntesek bevonása
+Az igényeidnek megfelelő önkénteseket találhatsz az <a href="https://code.org/volunteer/local">önkéntes térképünkön</a>. Sokan elérhetők távolról történő bekapcsolódásra, nagyon szívesen beszélnek a számítástechnikában szerzett tapasztalataikról, arról, hogy a technológia hogyan befolyásolja életüket, vagy egyszerűen csak segítenek a hallgatóknak a problémáik megoldásában. Miután megtaláltad a megfelelő önkéntest, mindenképpen találkozzatok még az esemény előtt, beszéljétek meg, hogy mi lesz az ő a szerepe az eseményen, dolgozzátok ki a technikai követelményeket, és határozzátok meg az online részvétel logisztikáját.
 
-<h3 spaces-before="0">
-  4. Ünnepi kellékek
-</h3>
+### 4. Ünnepi kellékek
+Vess egy pillantást a virtuális Kódolás órája megünneplését segítő alábbi ötletekre. Egyes gyakorlatok előkészítést igényelnek, például <a href="https://code.org/certificates"> tanúsítványokat</a> kell készíteni a résztvevő számára.
 
-<p spaces-before="0">
-  Vess egy pillantást alábbi ötletekre a virtuális ünnepléshez. Egyes gyakorlatok felkészülést igényelnek, például ilyen a <a href="https://code.org/certificates"> tanúsítványok </a> létrehozása az összes résztvevő számára.
-</p>
+---
 
-<hr />
+## Ünnepeljünk együtt
 
-<h2 spaces-before="0">
-  Ünnepeljünk együtt
-</h2>
+Hasonlóan ahhoz, ahogyan elindítottad az eseményt, találkozzatok utána is, és ünnepeljetek! Íme néhány ötlet a virtuális ünneplés interaktívvá és különlegessé tételéhez:
 
-<p spaces-before="0">
-  Hasonlóan ahhoz, ahogyan elindítottad az eseményt, találkozzatok újra, hogy megünnepeljétek! Íme néhány ötlet a virtuális ünneplés interaktívvá és különlegesé tételéhez:
-</p>
+- Engedd meg a tanulóknak, hogy megosszák a befejezett projektjeiket az osztály többi tagjával. Ha konferenciahívásra használt platform lehetővé teszi, akár arra is ösztönözheted őket, hogy készítsenek egy képernyőképet a projektjükről, és állítsák be azt virtuális háttérként!
+- Beszéljétek meg a tanulságokat: Mit tanultak a számítástechnikáról és a technológiáról? Mit tettek, amikor problémába ütköztek, hogyan oldották meg?
+- <a href="https://code.org/certificates">Tanúsítványok készítése és szétosztása</a> a résztvevőknek
+- Oszd meg a Kódolás óráján készült fotóidat, videóidat a közösségi hálón. Használd #HourOfCode és a @codeorg kifejezéseket így mi is írunk a sikereidről!
 
-<ul>
-  <li>
-    Engedd meg a tanulóknak, hogy megosszák befejezett projektjeiket az osztály többi tagjával. Ha konferenciahívásra használt platform lehetővé teszi, akár arra is ösztönözheted őket, hogy készítsenek egy képernyőképet a projektjükről, és állítsák be azt virtuális háttérként!
-  </li>
-  <li>
-    Beszéljd meg a tanulságokat: Mit tanultak a számítástechnikáról és a technológiáról? Mit tettek, amikor problémába ütköztek, hogyan oldották meg?
-  </li>
-  <li>
-    <a href="https://code.org/certificates"> Tanúsítványok létrehozása és megosztása </a> a résztvevőkkel
-  </li>
-  <li>
-    Oszd meg a Kódolás Órája-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd #HourOfCode-t és a @codeorg-ot így kiemelhetjük a sikeredet!
-  </li>
-</ul>
+[<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-<p spaces-before="0">
-  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" /></a>
-</p>
+Végül, ha nem egy <a href="https://code.org/volunteer/local">vendégelőadóval</a>, <a href="https://hourofcode.com/us/promote/resources#">inspiráló videóval</a> vagy <a href="https://code.org/csforgood#prompts">vitakérdésekkel</a> kezdted az eseményt, ez egy újabb remek alkalom lenne arra, hogy ezek közül is beépíts egyet.
 
-<p spaces-before="0">
-  Végezetül csak annyit, ha nem <a href="https://code.org/volunteer/local"> vendégelőadóval</a> nyitottad meg az eseményt, egy <a href = "https : //hourofcode.com/us/promote/resources# "mark =" crwd-mark ">inspiráló videó</a>, vagy néhány <a href =" https://code.org/csforgood#prompts "mark =" crwd-mark "> vitakérdés</a> remek lehetőséget kínálnak, hogy beépítsd őket legközelebb az órádba.
-</p>
-
-<p spaces-before="0">
-  {{ signup_button }}
-</p>
+{{ signup_button }}

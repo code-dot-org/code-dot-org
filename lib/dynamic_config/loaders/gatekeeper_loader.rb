@@ -44,7 +44,7 @@ module GatekeeperLoader
   # Takes in a yaml string a and converts it to a list
   # of commands to be sent to Gatekeeper.set
   def self.yaml_to_commands(yaml_str)
-    obj = YAML.load(yaml_str)
+    obj = YAML.safe_load(yaml_str)
     commands = []
 
     raise ArgumentError, "Invalid yaml format, must be a hash" unless obj.is_a? Hash
@@ -77,7 +77,7 @@ module GatekeeperLoader
   # Load yaml file into gatekeeper
   # @param filepath [String]
   def self.load(filepath)
-    yaml = File.open(filepath, 'r').read
+    yaml = File.read(filepath)
     commands = yaml_to_commands(yaml)
     apply_commands(commands)
   end

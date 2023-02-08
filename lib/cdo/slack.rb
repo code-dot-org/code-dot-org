@@ -166,7 +166,7 @@ class Slack
   def self.snippet(room, text)
     # omit leading '#' when passing channel names to this API
     channel = CHANNEL_MAP[room] || room
-    result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.escape(text)}")
+    result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.encode_www_form_component(text)}")
     return !!result
   end
 
@@ -202,7 +202,7 @@ class Slack
   private_class_method def self.slackify(message)
     message_copy = message.dup
     message_copy.strip!
-    message_copy = "```#{message_copy[7..-1]}```" if message_copy =~ /^\/quote /
+    message_copy = "```#{message_copy[7..]}```" if /^\/quote /.match?(message_copy)
     message_copy.
       gsub(/<\/?i>/, '_').
       gsub(/<\/?b>/, '*').

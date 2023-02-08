@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:07.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -57,12 +53,12 @@
     "parent_level_id": 20675,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/docs/concepts/javascript/random-numbers/",
+    "map_reference": "/courses/csd-2022/guides/random-numbers",
     "video_key": "csd_gamelab_variables_1",
     "show_type_hints": "false",
     "encrypted": "false",
@@ -77,6 +73,10 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:07.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:07.508+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables random reassign_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables random reassign_2021\"}]"

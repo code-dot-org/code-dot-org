@@ -4,6 +4,22 @@ fi:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': keskipitkä
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': keskipitkä
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} vaihtele jokaisen {N} tahdin \nvälillä {MOVE1} ja {MOVE2}"
         options:
@@ -212,20 +228,12 @@ fi:
             MOVES.XArmsUp: Venytys
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-      Dancelab_everyMeasuresRange:
-        text: 'toista joka {N} tahdin jälkeen {START} '
       Dancelab_everySeconds:
         text: 'joka {N} {UNIT} '
         options:
           UNIT:
             '"measures"': tahdit
             '"seconds"': sekuntia
-      Dancelab_everySecondsRange:
-        text: 'joka {N} {UNIT} alusta {START} loppuun {STOP} '
-        options:
-          UNIT:
-            measures: Tahdit
-            seconds: Sekunnit
       Dancelab_everyVerseChorus:
         text: 'Joka {UNIT} '
         options:
@@ -967,6 +975,14 @@ fi:
         text: asetukset
       Dancelab_whenSetup2:
         text: asetukset
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Kuplat
+            '"confetti"': Konfetti
+            '"hearts"': sydämet
+            '"rain"': sade
+            '"starburst"': Tähtisäteet
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} alkaa {BEHAVIOR}
       gamelab_addTarget:
@@ -1009,7 +1025,7 @@ fi:
         text: on vedettävä
       gamelab_edgesDisplace:
         text: reunat estävät {SPRITE} liikkumasta
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'joka {N} {UNIT} '
         options:
           UNIT:
@@ -1139,8 +1155,6 @@ fi:
         options:
           EFFECT:
             '"rain"': sade
-      gamelab_makeNewScaledSprite:
-        text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       gamelab_makeProjectile:
@@ -1150,6 +1164,12 @@ fi:
             '90': alas
             '180': vasemmalle
             '270': ylös
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': keskipitkä
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} kasvot {DIRECTION}"
         options:
@@ -1192,6 +1212,10 @@ fi:
             "'sound://category_animals/dolphin.mp3'": delfiini
             "'sound://category_animals/dog.mp3'": koira
             "'sound://category_digital/jump_7.mp3'": hyppää
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1666,6 +1690,8 @@ fi:
           SOUND:
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': kupla
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hyppää
+      Poetry_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       Poetry_setBackground:
         text: aseta taustaväri {COLOR}
       Poetry_setBackgroundEffect:
@@ -1707,6 +1733,11 @@ fi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: siirry eteenpäin
       RyanLab_turnLeft:
@@ -1902,5 +1933,13 @@ fi:
           DIR:
             right: oikea ↻
             left: vasen ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Kuplat
+            '"confetti"': Konfetti
+            '"hearts"': sydämet
+            '"rain"': sade
+            '"starburst"': Tähtisäteet
       validation_validatedBackground:
         text: aseta tausta {IMG}

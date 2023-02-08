@@ -22,6 +22,7 @@ module CdoApps
       live_stream true
       user user
       group user
+      timeout 7200 # The default 3600 seconds is often not sufficient when the database is configured as an RDS cluster.
       action :nothing
     end
 

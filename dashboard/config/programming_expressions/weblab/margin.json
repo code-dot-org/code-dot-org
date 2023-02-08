@@ -3,7 +3,7 @@
   "name": "Margin",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Margin\r\n\r\nThe `margin` property specifies the margin area on all four sides of an element. It is a shorthand for `margin-top`, `margin-right`, `margin-bottom`, and `margin-left`. When one value is specified, it applies the same margin to all four sides.\r\n",
+  "content": "# Margin\r\n\r\nThe [`Margin`(#d3e965)](/docs/weblab/margin/) property specifies the margin area on all four sides of an element. It is a shorthand for `margin-top`, `margin-right`, `margin-bottom`, and `margin-left`. When one value is specified, it applies the same margin to all four sides.\r\n",
   "examples": [
     {
       "name": " Single Margin Value",

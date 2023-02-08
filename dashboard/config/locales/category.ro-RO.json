@@ -1,0 +1,74 @@
+{
+  "ro-RO": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Să citească Literatură"
+        },
+        "ccela/SL": {
+          "description": "Vorbit & Ascultat"
+        },
+        "ccmath/MP": {
+          "description": "Practici Matematice"
+        },
+        "csta2011/CPP": {
+          "description": "Practică de Calcul & Programare "
+        },
+        "csta2011/CT": {
+          "description": "Gândire Computațională"
+        },
+        "iste/1": {
+          "description": "Elevii demonstrează gândire creativă, construiesc cunoștințe și dezvoltă produse și procese inovative, utilizând tehnologia."
+        },
+        "iste/4": {
+          "description": "Studenții utilizează aptitudinile de gândire critică pentru planificarea și conducerea cercetării, gestionării proiectelor, rezolvă probleme și iau decizii informate utilizând instrumentele și resursele digitale adecvate."
+        },
+        "iste/6": {
+          "description": "Elevii demonstrează o înțelegere solidă a conceptelor gehnologice, sistemelor și operațiilor."
+        },
+        "ccela/L": {
+          "description": "Limbă"
+        },
+        "ccela/RI": {
+          "description": "Citire Informațională"
+        },
+        "ccmath/OA": {
+          "description": "Operațiuni și Gândire Algebrică"
+        },
+        "csta2011/CD": {
+          "description": "Computere & Dispozitive de Comunicare"
+        },
+        "csta2011/CI": {
+          "description": "Impacturi la nivel de Comunitate, Global și Etic"
+        },
+        "ccmath/NBT": {
+          "description": "Numere și Operațiuni În Baza Zece"
+        },
+        "ccmath/G": {
+          "description": "Geometrie"
+        },
+        "ccela/W": {
+          "description": "Scriere"
+        },
+        "csta2011/CL": {
+          "description": "Colaborare"
+        },
+        "iste/2": {
+          "description": "Elevii utilizează metode și medii digitale pentru a comunica și lucra în colaborare, inclusiv de la distanță, pentru sprijinirea învățării individuale și pentru a contribui la învățarea celorlalți."
+        },
+        "csta/IC": {
+          "description": "Impactul computerelor"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Să explice cum resursele informatice pot fi protejate și pot fi utilizate în mod greșit."
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Să compare algoritmii de comprimare a datelor pentru a determina care este mai bun într-un anumit context."
+        },
+        "csta/DA": {
+          "description": "Date & Analiză"
+        }
+      }
+    }
+  }
+}

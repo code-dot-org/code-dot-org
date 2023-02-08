@@ -25,6 +25,7 @@ import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import loadSource from './util/loadSource';
+import projectRedux from '@cdo/apps/code-studio/projectRedux';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -48,7 +49,7 @@ var example = {
   levelFile: 'levels',
   // id of the level within the levels file
   levelId: '5_5',
-  // a complete level defintion, can be used instead of levelFile/levelId
+  // a complete level definition, can be used instead of levelFile/levelId
   levelDefinition: {},
   // a set of tests
   tests: [
@@ -125,6 +126,7 @@ describe('Level tests', function() {
       progress,
       currentUser,
       arrowDisplay,
+      project: projectRedux,
       ...jsDebuggerReducers
     });
 

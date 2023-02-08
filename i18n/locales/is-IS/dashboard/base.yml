@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 is:
   errors:
     messages:
@@ -39,6 +45,7 @@ is:
         personal_email_markdown: "Einkanetfang [(smelltu hér ef þú hefur ekki netfang)](%{url})"
         username: 'notandanafn'
         password: 'Lykilorð'
+        verified_teacher: 'Staðfestur kennari'
         password_confirmation: 'Staðfesting lykilorðs'
         current_password: 'Núverandi lykilorð'
         locale: 'Forritunarmál'
@@ -63,6 +70,7 @@ is:
   previous_page: Fyrri síða
   next_page: Næsta síða
   next_resource: Næstu tilföng
+  done_with_module: Búin(n) með þessa námseiningu
   cancel: "Hætta við"
   okay: "Allt í lagi"
   or: "eða"
@@ -168,6 +176,9 @@ is:
     user_type_button: "Uppfæra tegund aðgangs"
     user_type_label: "Tegund aðgangs"
     user_type_student: "nemandi"
+    user_type_student_desc: "Skoðaðu öll námskeiðin okkar og starfsemi, auk:"
+    user_type_student_ability_1: "Vistiði framfarir ykkar og verkefni"
+    user_type_student_ability_2: "Verið með í kennslustofuhluta kennarans þíns"
     user_type_teacher: "Kennari"
     field_is_required: "er nauðsynlegt"
     accept_terms: "Þú verður að samþykkja að stofna aðgang"
@@ -272,6 +283,7 @@ is:
     invite_sent: 'Boð send'
     added_teacher: '%{name} bætt við sem kennara'
     registered: "Þú ert með skráningu í %{section_name}."
+    captcha_required: 'Vinsamlegast fylltu út CAPTCHA til að vera með í þessum hluta.'
     already_exists: 'Þú ert nú þegar í hópnum %{section_name}.'
     error:
       signed_in: 'Skráðu þig út fyrst'
@@ -401,13 +413,13 @@ is:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Kubbar)'
       starwarsblocks_hour: 'Star Wars (Kubbar)'
+      thebadguys: 'Vondu kallarnir'
       loading: 'Hleð...'
       weblab: 'Vefsmiðja'
       view_all: 'Sjá öll verkefni...'
     popup:
       progress_for_user: "Framvinda %{name}"
       progress: 'Framvinda þín'
-      lines: 'Samtals línur af kóða: %{lines}'
       close: 'LOKA'
       mastery: 'Hugtök'
       puzzle_map: 'Áfangar'
@@ -526,6 +538,7 @@ is:
     choose_next_course: "Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan"
     print_certificate: "Prenta skírteini"
   certificate_sponsor_message: "%{sponsor_name} studdi við nám þitt með rausnarlegri gjöf."
+  certificate_hour_of_code: "Klukkustund kóðunar"
   move_students:
     new_section_dne: "Því miður finnst hópurinn %{new_section_code} ekki. Vinsamlegast færðu inn annan kóða fyrir hóp."
     section_code_cant_be_current_section: "Núgildandi hópur getur ekki verið sami og nýi hópurinn."
@@ -573,6 +586,7 @@ is:
     make_my_own_app: 'Búa til mitt eigið app'
     how_it_works: 'Hvernig það virkar'
     try_hour_of_code: 'Prófa Klukkustund kóðunar!'
+    view_code: 'Sjá kóða'
   reference_area:
     title: 'Vantar þig aðstoð?'
     subtitle: 'Skoðaðu þessi myndbönd og vísbendingar'
@@ -635,23 +649,17 @@ is:
       body_short: "Hannaðu app og forritaðu það með kubbum eða JavaScript svo það virki. Deildu því svo með öðrum."
       audience: 'Aldur 13+'
       cta: 'Læra hvernig'
-    dance:
-      title: 'Danspartý'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Danspartý'
-    hoc:
-      title: 'Völundarhús'
-      body: 'Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.'
+    dance:
+      title: 'Danspartý'
     flappy:
       title: 'Flappy kóði'
       body: 'Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna með Flappy kóða!'
-    20-hour:
-      title: 'Hraðnámskeiðið'
-      body: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
-      body_short: 'Lærðu undirstöðu í tölvunarfræði með hraðaðri útgáfu af námskeiðum 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Prófaðu nýjustu Klukkustund kóðunar (beta)'
-      try_frozen: 'Listamaður með Önnu og Elsu úr Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Safn"
       body: "Skoða safn forrita og mynda sem notendur okkar hafa búið til"
@@ -660,18 +668,18 @@ is:
       body: "Leikjasmiðja er forritunarumhverfi þar sem þú getur búið til einfaldar hreyfimyndir og leiki með hlutum og gagnvirkum leikverum."
       audience: "Aldur 13+"
       cta: "Læra hvernig"
+    hero:
+      title: "Minecraft"
+      body: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
     hoc-encryption:
       title: "Einföld dulkóðun"
       body: "Nemendur munu læra aðferðir til að búa til og þýða dulkóðuð skilaboð."
-    weblab:
-      title: "Vefsmiðjan (beta)"
-      body: "Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði."
-      audience: "Aldur 13+"
-      cta: "Læra hvernig"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Völundarhús'
+      body: 'Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.'
+    hoc2014:
+      try_new_tutorial: 'Prófaðu nýjustu Klukkustund kóðunar (beta)'
+      try_frozen: 'Listamaður með Önnu og Elsu úr Frozen'
     infinity:
       title: "Infinity Leikjasmiðja"
       body: "Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum."
@@ -681,30 +689,36 @@ is:
     minecraft2016:
       title: "Minecraft"
       body: "Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
     sports:
       title: "Íþróttir"
       body: "Búa til körfuboltaleik eða blanda saman íþróttum."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Þjöppun texta"
       body: "Í þessari kennslustund munu nemendur nota græjuna fyrir textaþjöppun til að þjappa texta með því að skipta út mynstrum fyrir tákn."
-    unplugged:
-      title: "Verkefni án tölvu"
-      audience: "Aldur 6+"
-      body: "Við höfum sett saman lista yfir verkefni unnin án tölvu sem hægt er að nota í kennslustofunni. Nú er hægt að kenna grundvallaratriði tölvunarfræðinnar hvort sem tölvur eru til staðar eða ekki í kennslustofunni. Reyndu að nota verkefnin sem sjálfstæð námskeið eða sem aukaefni fyrir námskeið í tölvunarfræði."
-      body_short: "Prófaðu verkefni án tölvu, ef engin tölva er til staðar."
-    unplugged_conditionals:
-      title: "Skilyrði"
-      body: "Lærðu um algrím og skilyrtar yrðingar í þessu verkefni \"án tölvu\" með því að nota spilastokk."
+    weblab:
+      title: "Vefsmiðjan (beta)"
+      body: "Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði."
+      audience: "Aldur 13+"
+      cta: "Læra hvernig"
     widgets:
       title: "Græjur"
       body: "Nemendur geta kannað hugtök úr námskeiðinu okkar Grunnhugtök tölvunarfræði verklega með þessum stafrænu tækjum. Notaðu græjurnar einar eða búðu til kennslustundir um einstök hugtök fyrir hópinn."
       audience: "Aldur 14+"
       cta: "Læra hvernig"
+    unplugged_conditionals:
+      title: "Skilyrði"
+      body: "Lærðu um algrím og skilyrtar yrðingar í þessu verkefni \"án tölvu\" með því að nota spilastokk."
+    unplugged:
+      title: "Verkefni án tölvu"
+      audience: "Aldur 6+"
+      body: "Við höfum sett saman lista yfir verkefni unnin án tölvu sem hægt er að nota í kennslustofunni. Nú er hægt að kenna grundvallaratriði tölvunarfræðinnar hvort sem tölvur eru til staðar eða ekki í kennslustofunni. Reyndu að nota verkefnin sem sjálfstæð námskeið eða sem aukaefni fyrir námskeið í tölvunarfræði."
+      body_short: "Prófaðu verkefni án tölvu, ef engin tölva er til staðar."
+    20-hour:
+      title: 'Hraðnámskeiðið'
+      body: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
+      body_short: 'Lærðu undirstöðu í tölvunarfræði með hraðaðri útgáfu af námskeiðum 2-4.'
   landing:
     prerelease_tutorial: "Þetta kennsluefni er **beta** útgáfa. Það gæti breyst eftir því sem endurgjöf berst og endurbætur eru gerðar."
     report_bug: "Tilkynna galla"
@@ -797,14 +811,6 @@ is:
     reminder_desc: 'Við höfum uppfært <a href="%{tos_url}" target="_blank">þjónustuskilmála</a> og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a> okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.'
     reminder_desc_markdown: Við höfum uppfært [þjónustuskilmála](%{tos_url}) og [persónuverndarstefnu](%{privacy_url}) okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.
     review_terms: "Skoða uppfærða skilmála"
-  donor_interstitial:
-    title: "Þessi ókeypis námskeið í tölvunarfræði eru studd af..."
-    subtitle: "Við viljum þakka þeim örlátu stuðningsaðilum sem með stuðningi sínum hafa gert góðan árangur Code.org mögulegan. Við erum ákveðin í að Code.org verði áfram ókeypis fyrir skóla og nemendur um allan heim, þökk sé áframhaldandi örlæti [stuðningsaðila okkar](%{donors_url})!"
-    local_supporters: "Staðbundir stuðningsaðilar"
-    global_supporters: "Stuðningsaðilar á heimsvísu"
-    support_codeorg_1: "Hver dollar sem gefinn er Code.org veitir fleiri nemendum tækifæri."
-    support_codeorg_2: "[Gefðu núna](%{donate_url}) til að styðja Code.org."
-    get_started: "Byrjaðu á Code.org"
   school_info_interstitial:
     title: "Við viljum koma tölvunarfræði á framfæri við hvern nemanda - hjálpaðu okkur að fylgjast með árangri okkar!"
     message: "Vinsamlegast skráðu upplýsingar um skóla hér fyrir neðan."
@@ -966,6 +972,7 @@ is:
   no_course_access_teacher: "Þú hefur ekki aðgang að þessu námskeiði. Ef þú telur að þú ættir að hafa aðgang að þessu námskeiði, skrifaðu þá til support@code.org svo að við getum bætt úr því."
   no_script_access_student: "Þú hefur ekki aðgang að þessari einingu. Vinsamlegast spurðu kennarann þinn í hvaða einingu þú ættir að vera."
   no_script_access_teacher: "Þú hefur ekki aðgang að þessari einingu. Ef þú telur að þú ættir að hafa aðgang að þessari einingu, skrifaðu þá til support@code.org svo að við getum bætt úr því."
+  no_exemplar_access_teacher: "Aðeins staðfestir kennarar geta fengið aðgang að fyrirmyndarkóða. Ef þú vilt verða staðfestur kennari, vinsamlegast skrifaðu til support@code.org."
   return_unit_overview: 'Fara í yfirlit kafla'
   return_course_overview: 'Fara í yfirlit kafla'
   view_all_units: 'Sjá allar einingar'
@@ -1010,7 +1017,9 @@ is:
         israel: 'Ísrael'
         malaysia: 'Malasía'
         mexico: 'Mexíkó'
+        paraguay: 'Paragvæ'
         thailand: 'Thailand'
+        uzbekistan: 'Úsbekistan'
       ages:
         ages_under_6: '< 6 ára'
         ages_7_8: '7-8 ára'
@@ -1031,6 +1040,7 @@ is:
         music: 'Tónlist'
         art: 'Listir'
         other: "Annað:"
+        na: 'Á ekki við'
       resources:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
@@ -1040,7 +1050,8 @@ is:
         lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Annað:"
+        other: "Annað"
+        na: 'Á ekki við'
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -1050,7 +1061,8 @@ is:
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Wonder Workshop'
-        other: "Annað:"
+        other: "Annað"
+        na: 'Á ekki við'
       workshop_course:
         csf_af: 'Grunnatriði TF (Námskeið A-F)'
         csf_express: 'Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)'
@@ -1096,6 +1108,7 @@ is:
       error_wrong_provider: 'Rangur aðili. Gættu þess að þú sért að skrá þig inn með Google.'
       error_invalid_user: 'Ógilt notandanafn. Prófaðu að skrá þig inn aftur.'
       error_no_code: 'Vinsamlegast færðu inn kóðann fyrir innskráningu.'
+      confirm_login: 'Veldu „Staðfesta“ til að skrá þig inn með Google reikningnum þínum.'
   parent_email_banner:
     text: "**Ert þú foreldri eða forráðamaður?** Tengdu netfangið þitt við þennan aðgang til að fá upplýsingar um framvindu og verkefni barnsins þíns!"
     link_your_email: "Tengja netfang"
@@ -1103,4 +1116,7 @@ is:
   behaviors:
     this_sprite: "þessi vera"
   unit_prefix: "Eining %{n}"
+  code_org_logo_alt: "Code.org Heimasíða"
   teacher_feedback: "Endurgjöf kennara"
+  pixelation:
+    binary: "Tvíundir"

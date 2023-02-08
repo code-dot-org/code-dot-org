@@ -1,18 +1,5 @@
 import React from 'react';
 import ResourcesDropdown from './ResourcesDropdown';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
-import {allowConsoleWarnings} from '../../../../test/util/testUtils';
-
-const legacySampleResources = [
-  {
-    type: ResourceType.curriculum,
-    link: 'https://example.com/a'
-  },
-  {
-    type: ResourceType.vocabulary,
-    link: 'https://example.com/b'
-  }
-];
 
 const migratedSampleResources = [
   {
@@ -27,45 +14,19 @@ const migratedSampleResources = [
   }
 ];
 
-export default storybook => {
-  if (IN_UNIT_TEST) {
-    allowConsoleWarnings();
-  }
+export default {
+  title: 'ResourcesDropdown',
+  component: ResourcesDropdown
+};
 
-  storybook.storiesOf('ResourcesDropdown', module).addStoryTable([
-    {
-      name: 'unmigrated teacher resources',
-      story: () => (
-        <div>
-          <ResourcesDropdown
-            resources={legacySampleResources}
-            useMigratedResources={false}
-          />
-        </div>
-      )
-    },
-    {
-      name: 'migrated teacher resources',
-      story: () => (
-        <div>
-          <ResourcesDropdown
-            migratedResources={migratedSampleResources}
-            useMigratedResources={true}
-          />
-        </div>
-      )
-    },
-    {
-      name: 'migrated student resources',
-      story: () => (
-        <div>
-          <ResourcesDropdown
-            migratedResources={migratedSampleResources}
-            useMigratedResources={true}
-            studentFacing={true}
-          />
-        </div>
-      )
-    }
-  ]);
+// Template
+const Template = args => (
+  <ResourcesDropdown resources={migratedSampleResources} {...args} />
+);
+
+export const MigratedTeacherResources = Template.bind({});
+
+export const MigratedStudentResources = Template.bind({});
+MigratedStudentResources.args = {
+  studentFacing: true
 };

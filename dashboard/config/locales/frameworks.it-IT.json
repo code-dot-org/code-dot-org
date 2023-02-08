@@ -1,0 +1,26 @@
+{
+  "it-IT": {
+    "data": {
+      "frameworks": {
+        "csta": {
+          "name": "CSTA K-12 Computer Science Standards (2017)"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Computer Science Standards (2011)"
+        },
+        "ccela": {
+          "name": "Competenze linguistiche"
+        },
+        "ngss": {
+          "name": "Competenze scientifiche di ultima generazione"
+        },
+        "ccmath": {
+          "name": "Competenze matematiche"
+        },
+        "iste": {
+          "name": "Standard ISTE per studenti"
+        }
+      }
+    }
+  }
+}

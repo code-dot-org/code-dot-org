@@ -964,6 +964,7 @@
   coursee-2020_name: Námskeið E (2020)
   coursef-2020_name: Námskeið F (2020)
   coursed-2021_name: Námskeið D (2021)
+  coursed-2022_name: Námskeið D (2021)
   express-2018_name: Hraðnámskeið (2018)
   pre-express-2018_name: Hraðnámskeið fyrir forlæsa (2018)
   express-2019_name: Hraðnámskeið (2019)
@@ -1083,6 +1084,12 @@
   coursed-2021_gradelevel: 14 ára og eldri
   coursee-2021_gradelevel: 8 - 12 ára
   coursef-2021_gradelevel: Bekkur 10+
+  coursea-2022_gradelevel: Bekkur 5+
+  courseb-2022_gradelevel: Bekkur 6+
+  coursec-2022_gradelevel: Bekkur 7+
+  coursed-2022_gradelevel: 14 ára og eldri
+  coursee-2022_gradelevel: 8 - 12 ára
+  coursef-2022_gradelevel: Bekkur 10+
   accelerated_gradelevel: "Fyrir 10-18 ára"
   codeorg_platformtext: "Fyrir nýjustu vafra, snjallsíma, spjaldtölvur"
   codeintl_platformtext: "Fyrir nýjustu vafra, snjallsíma, spjaldtölvur"
@@ -1211,6 +1218,8 @@
   courseb-2020_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
   coursea-2021_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
   courseb-2021_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+  coursea-2022_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+  courseb-2022_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
   codeorg_longdescription: "Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum."
   codeintl_longdescription: "Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1672,3 +1681,5 @@
   ai_microsoft_thanks: "Við þökkum Microsoft fyrir að styðja við hugsjón og stefnumið okkar sem er að tryggja að hvert barn hafi tækifæri til að læra tölvunarfræði og öðlast þá færni sem þarf til að ná árangri á 21. öldinni."
   ai_activity: "Verkefni"
   ai_description: "Lýsing"
+  hoc2022_landing_page_create_title: "Búa til"
+  try_it_yourself: "Prófaðu þetta!"

@@ -651,6 +651,12 @@
   coursed-2021_gradelevel: Amžius 7-11
   coursee-2021_gradelevel: Amžius 8-12
   coursef-2021_gradelevel: Amžius 9-13
+  coursea-2022_gradelevel: Amžius 4-7
+  courseb-2022_gradelevel: Amžius 5-8
+  coursec-2022_gradelevel: Amžius 6-10 metų
+  coursed-2022_gradelevel: Amžius 7-11
+  coursee-2022_gradelevel: Amžius 8-12
+  coursef-2022_gradelevel: Amžius 9-13
   accelerated_gradelevel: "Amžius 10-18"
   codeorg_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
   codeintl_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
@@ -888,3 +894,4 @@
   ai_for_oceans_lesson_plan: "pamokos planas"
   ai_activity: "Veikla"
   ai_description: "Aprašymas"
+  hoc2022_landing_page_create_title: "Sukurti"

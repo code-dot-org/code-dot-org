@@ -2,9 +2,12 @@ mr:
   data:
     block_categories:
       Actions: कृती
+      Category: वर्ग
       Color: रंग
       Conditionals: कंडीशनल्स 
+      Effects: प्रभाव
       Events: ईव्हेंट्स
+      Location: ठिकाण
       Logic: लॉजिक
       Loops: लूप्स
       Math: गणित

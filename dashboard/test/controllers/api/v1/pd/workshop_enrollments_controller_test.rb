@@ -22,39 +22,39 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
   test 'routes' do
     assert_routing(
-      {method: :get, path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments"},
+      {method: :get, path: "http://#{CDO.dashboard_hostname}/api/v1/pd/workshops/#{@workshop.id}/enrollments"},
       {controller: CONTROLLER_PATH, action: 'index', workshop_id: @workshop.id.to_s}
     )
 
     assert_routing(
-      {path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments", method: :post},
+      {path: "http://#{CDO.dashboard_hostname}/api/v1/pd/workshops/#{@workshop.id}/enrollments", method: :post},
       {controller: CONTROLLER_PATH, action: 'create', workshop_id: @workshop.id.to_s}
     )
 
     assert_routing(
-      {method: :delete, path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments/#{@enrollment.id}"},
+      {method: :delete, path: "http://#{CDO.dashboard_hostname}/api/v1/pd/workshops/#{@workshop.id}/enrollments/#{@enrollment.id}"},
       {controller: CONTROLLER_PATH, action: 'destroy', workshop_id: @workshop.id.to_s, id: @enrollment.id.to_s}
     )
 
     assert_routing(
-      {method: :delete, path: "/api/v1/pd/enrollments/#{@enrollment.code}"},
+      {method: :delete, path: "http://#{CDO.dashboard_hostname}/api/v1/pd/enrollments/#{@enrollment.code}"},
       {controller: CONTROLLER_PATH, action: 'cancel', enrollment_code: @enrollment.code.to_s}
     )
 
     assert_routing(
-      {method: :post, path: "/api/v1/pd/enrollment/#{@enrollment.id}/scholarship_info"},
+      {method: :post, path: "http://#{CDO.dashboard_hostname}/api/v1/pd/enrollment/#{@enrollment.id}/scholarship_info"},
       {controller: CONTROLLER_PATH, action: 'update_scholarship_info', enrollment_id: @enrollment.id.to_s}
     )
 
     assert_routing(
-      {method: :post, path: "/api/v1/pd/enrollments/move"},
+      {method: :post, path: "http://#{CDO.dashboard_hostname}/api/v1/pd/enrollments/move"},
       {controller: CONTROLLER_PATH, action: 'move', enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id},
       {},
       {enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id}
     )
 
     assert_routing(
-      {method: :post, path: "/api/v1/pd/enrollment/#{@enrollment.id}/edit"},
+      {method: :post, path: "http://#{CDO.dashboard_hostname}/api/v1/pd/enrollment/#{@enrollment.id}/edit"},
       {controller: CONTROLLER_PATH, action: 'edit', id: @enrollment.id.to_s}
     )
   end

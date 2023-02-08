@@ -68,7 +68,7 @@ def main
   script_id = get_script_id
 
   # Confirm the script does not exist.
-  script = Script.find_by_id(script_id)
+  script = Unit.find_by_id(script_id)
   if script
     puts "ERROR: Script Found (ID: #{script.id}, name: #{script.name})"
     raise ArgumentError
@@ -78,9 +78,7 @@ def main
   data = get_all_progress(script_id)
 
   # Write the data to a JSON file.
-  File.open("/tmp/all_progress_#{script_id}.json", 'w') do |f|
-    f.write(JSON.pretty_generate(data))
-  end
+  File.write("/tmp/all_progress_#{script_id}.json", JSON.pretty_generate(data))
 
   # Delete the data (if requested).
   print "Should all user progress (" \

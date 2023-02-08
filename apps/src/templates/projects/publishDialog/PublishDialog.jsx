@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
@@ -56,20 +56,20 @@ class PublishDialog extends Component {
         </div>
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.close}
             color={Button.ButtonColor.gray}
             className="no-mc"
+            style={{margin: 0}}
           />
           <Button
-            __useDeprecatedTag
             text={i18n.publish()}
             onClick={this.confirm}
             color={Button.ButtonColor.orange}
             className="no-mc"
             isPending={this.props.isPublishPending}
             pendingText={i18n.publishPending()}
+            style={{margin: 0}}
             id="publish-dialog-publish-button"
           />
         </DialogFooter>

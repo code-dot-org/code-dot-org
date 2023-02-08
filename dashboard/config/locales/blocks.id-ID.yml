@@ -2,8 +2,29 @@
 id:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: mengonfirmasi pengguna {QUESTION} untuk variabel {VAR} dengan pilihan
+          {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}ucapkan{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': sangat kecil
+            '0.75': kecil
+            '1.00': sedang
+            '2.00': besar
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': sangat kecil
+            '0.75': kecil
+            '1.00': sedang
+            '2.00': besar
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} berganti setiap {N}
@@ -214,20 +235,12 @@ id:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Ini atau Itu
             MOVES.Rest: Tidak Ada
-      Dancelab_everyMeasuresRange:
-        text: 'ulangi setiap {N} langkah setelah {START} '
       Dancelab_everySeconds:
         text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
             '"measures"': langkah
             '"seconds"': detik
-      Dancelab_everySecondsRange:
-        text: 'setiap {N} {UNIT} dari {START} hingga {STOP} '
-        options:
-          UNIT:
-            measures: Langkah
-            seconds: Detik
       Dancelab_everyVerseChorus:
         text: 'setiap {UNIT} '
         options:
@@ -990,6 +1003,39 @@ id:
             '"macklemore90"': Macklemore - Tak bisa menahan kita
             '"hammer"': MC Hammer - Kamu tak bisa menyentuhnya
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Mikroskop memimliki {INPUT1}
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: lakukan efek {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': hati
+            '"emojis"': Emoji Bahagia
+            '"rain"': hujan
+            '"starburst"': Semburan bintang
+            '"glass"': Kaca Pecah
+            '"twinkling"': Berkelip
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Berkomunikasi {VAR1} dengan {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: buat {NUM} sprite {ANIMATION_NAME} baru  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: menunjukkan {NUM} sprite {ANIMATION_NAME} baru [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}ucapkan{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} mulai {BEHAVIOR}
       gamelab_addTarget:
@@ -1066,7 +1112,7 @@ id:
         text: gambar garis {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: tepi blok {SPRITE} dari bergerak
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
@@ -1225,8 +1271,6 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
-      gamelab_makeNewScaledSprite:
-        text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_makeNumSprites:
@@ -1241,6 +1285,13 @@ id:
             '90': turun
             '180': kiri
             '270': atas
+      gamelab_makeSpritesWithSize:
+        text: buat {NUM} sprite {SIZE} {COSTUME} baru
+        options:
+          SIZE:
+            '30': kecil
+            '50': sedang
+            '100': besar
       gamelab_mirrorSprite:
         text: "{SPRITE} wajah {DIRECTION}"
         options:
@@ -1315,6 +1366,31 @@ id:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bass yang
               unik
             "'sound://category_digital/jump_7.mp3'": lompat
+      gamelab_playSoundOptionsSoccer:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": airhorn
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": tepuk tangan
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": nyanyian
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": Sorak sorai
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": tendangan
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": peluit ganda
+            "'sound://category_sports/One_Whistle_SFX.mp3'": peluit
+      gamelab_playSoundOptionsSpace:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebula kepiting
+            "'sound://category_space/Launch_SFX.mp3'": peluncuran
+            "'sound://category_space/Lift_Off.mp3'": lepas landas
+            "'sound://category_space/Pillars_SFX.mp3'": kepulan
+            "'sound://category_space/Southern_ring_SFX.mp3'": nebula cincin
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: putar ucapan {SOUND}
       gamelab_playerBehaviors:
@@ -1482,6 +1558,41 @@ id:
         text: "{SPRITE} ucapan {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}ucapan{TEXT1}selama{NUM}detik"
+      gamelab_spriteThink:
+        text: "{SPRITE} berpikir {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}berpikir{TEXT1}selama{NUM}detik"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} berpikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Saatnya berteman dengan domba.
+            '"She''ll never recognize me now."': Ia pasti tak akan bisa mengenalku
+              sekarang.
+            '"This costume keeps me warm."': Kostum ini menghangatkanku.
+            '"I am actually a wolf."': Aku sebenarnya adalah seekor serigala.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} berpikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Aku merasa mengantuk.
+            '"No one could ever beat me."': Tak ada yang bisa mengalahkanku.
+            '"I''ve done this race before."': Aku sudah pernah mengikuti lomba ini.
+            '"My feet are bigger than Turtle''s feet."': Kakiku lebih dari besar dari
+              kaki Kura-kura.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} berpikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Aku sangat lapar.
+            '"I''m a visitor in this town."': Aku hanya pengunjung di kota ini.
+            '"If we share, we''ll all have something to eat. "': Jika berbagi, kita
+              semua bisa makan.
+            '"I''ll trick everyone into giving me their food."': Akuakan menipu semua
+              orang agar memberi makanannya padaku.
       gamelab_startAvoiding:
         text: "{SPRITE} mulai menghindari {TARGET}"
       gamelab_startFollowing:
@@ -1936,6 +2047,39 @@ id:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskop memimliki {INPUT1}
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): padat
+            new Behavior(liquid, []): cair
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Tetapkan {COSTUME} menjadi {BEHAVIOR} perilaku
+        options:
+          BEHAVIOR:
+            '"solid"': partikel padat
+            '"liquid"': partikel cair
+            '"gas"': partikel gas
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': partikel padat
+            '"liquid"': partikel cair
+            '"gas"': partikel gas
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2005,6 +2149,20 @@ id:
             '"sound://category_achievements/peaceful_win_1.mp3"': Menang
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Pusaran
             '"sound://category_achievements/peaceful_win_6.mp3"': Genta Angin
+      Poetry_playSoundOptionsSpace:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebula kepiting
+            "'sound://category_space/Launch_SFX.mp3'": peluncuran
+            "'sound://category_space/Lift_Off.mp3'": lepas landas
+            "'sound://category_space/Pillars_SFX.mp3'": kepulan
+            "'sound://category_space/Southern_ring_SFX.mp3'": nebula cincin
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setAuthor:
         text: tetapkan pembuat {AUTHOR}
       Poetry_setBackground:
@@ -2136,6 +2294,11 @@ id:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: ketika {VAR} dijawab
       RyanLab_moveForward:
@@ -2317,6 +2480,20 @@ id:
           DIR:
             right: kanan
             left: kiri -
+      storylab_setForegroundEffect2:
+        text: lakukan efek {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': hati
+            '"rain"': hujan
+            '"starburst"': Semburan bintang
+            '"twinkling"': Berkelip
+      storylab_setHeading:
+        text: tetapkan heading {HEADING}
+      storylab_setSubheading:
+        text: tetapkan subheading {SUBHEADING}
       validation_validatedBackground:
         text: atur latar belakang ke {IMG}
       validation_validatedSound:

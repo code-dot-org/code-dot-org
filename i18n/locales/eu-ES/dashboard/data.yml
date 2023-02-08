@@ -352,14 +352,22 @@ eu:
         C4_unplugged_forloops: For begiztak
         C4_unplugged_parameters: Abestiak idazten parametroekin
         C4_unplugged_binary: Bitarra
+        CSF_a_b_artist_loops: Begiztak Artistan
+        CSF_artist_angles: Angeluak Artistan
+        CSF_collector_k1_blocks: 'Konputazio Zientzien oinarriak: Biltzailea'
+        CSF_collector_repeat_loops: Biltzailearen errepikapenen begiztak
+        CSF_collector_text_blocks: 'Konputazio Zientzien oinarriak: Biltzailea'
         CSF_create_functions: Sortu funtzioak
         CSF_debugging_k1_blocks: Arazketa
         CSF_debugging_text_blocks: Arazketa
         CSF_EF_cs_matters: Informatika Gaiak
+        CSF_maze_intro_k1_blocks: Code Studio sarrera
+        CSF_maze_intro_text_blocks: Code Studio sarrera
         CSF_my_robotic_friends: Nire lagun robotikoak
         CSF_Power_of_Words: Hitzen indarra
         CSF_Super_Digital_Citizen: Super hiritar digitala
         CSF_stevie_big_project: Stevie eta Big Proiektua
+        CSF_unspotted_bugs: Harrapatu gabeko akatsak
         CSF_zuck_loops_short: Errepikatu Loops
         frozen_intro: 'Sarrera: Kodetzeko ordua'
         frozen_loops: 'Sarrera: Begiztak'
@@ -372,11 +380,13 @@ eu:
         infinity_playlab_events: Jolas Laborategia - Gertaerak
         infinity_playlab_repeat_forever: Jolas Laborategia - "Errepikatu Betirako"
         csd_concept_how_computers_work: Ordenagailuen funtzionamendua aurkezten
+        csd_concept_computer: 'Nola funtzionatzen dute ordenagailuek: zerk egiten du ordenagailu bat?'
         csd_concept_binary_data: 'Nola funtzionatzen duten ordenagailuak: bitarrak eta datuak'
         csd_concept_circuits_logic: 'Nola funtzionatzen duten ordenagailuak: zirkuituak eta logika'
         csd_concept_memory_cpu_input_output: 'Ordenagailuen funtzionamendua: memoria, PUZ, sarrera eta irteera'
         csd_concept_hardware_software: 'Ordenagailuen funtzionamendua: Hardwarea eta softwarea'
         csd_concept_search: Nola funtzionatzen duen bilaketak
+        csd_external_amazon_data: Nola erabiltzen diren Big Data Amazonen gomendio sistemetan gure bizitzak aldatzeko
         csd_external_netflix_data: Nola egiten ditu Netflix-ek telesaio eta film iradokizunak?
         csd_external_waze_data: Zergatik daude hainbeste erabiltzaile Wazerekin obsesionatuta?
         csd_gamelab_animation_tab: Animazio fitxa
@@ -414,13 +424,46 @@ eu:
         mc_2016_events: Minecraft kode ordua - Gertaerak
         mc_2016_spawn: Minecraft kode ordua - Sortu
         mc_2016_congrats: Minecraft kode ordua - Zorionak
+        applab_hoc_welcome: Aplikazioen Laborategiko Kodearen Ordua - Ongi etorri
+        applab_hoc_setproperty: Aplikazioen Laborategiko Kodearen Ordua - setProperty
+        applab_hoc_onevent: Aplikazioen Laborategiko Kodearen Ordua - onEvent
+        applab_hoc_designmode: Aplikazioen Laborategiko Kodearen Ordua - Diseinu modua
+        applab_hoc_share: Aplikazioen Laborategiko Kodearen Ordua - Partekatzea
+        mc_2017_agent_intro: Aplikazioen Laborategiko Kodearen Ordua - Agentea
+        mc_2017_repeat: Aplikazioen Laborategiko Kodearen Ordua - Errepikapen begiztak
+        mc_2017_functions: Aplikazioen Laborategiko Kodearen Ordua - Funtzioak
         mc_2017_congratulations: Minecraft kode ordua - Zorionak
+        mc_2017_puzzle_1: Aplikazioen Laborategiko Kodearen Ordua - Agentea
+        mc_2017_puzzle_3: Aplikazioen Laborategiko Kodearen Ordua - Errepikapen begiztak
+        mc_2017_puzzle_8: Aplikazioen Laborategiko Kodearen Ordua - Funtzioak
+        mc_2017_puzzle_12: Aplikazioen Laborategiko Kodearen Ordua - Jolas librea
+        hint_videos_d_11_3_first: 'Gomendatutako bideoak: D.11.3 Lehenengoa'
+        hint_videos_d_11_3_last: 'Gomendatutako bideoak: D.11.3 Azkena'
+        hint_videos_d_11_4_first: 'Gomendatutako bideoak: D.11.4 Lehenengoa'
+        hint_videos_d_11_4_last: 'Gomendatutako bideoak: D.11.4 Azkena'
+        hint_videos_d_11_5_first: 'Gomendatutako bideoak: D.11.5 Lehenengoa'
+        hint_videos_d_11_5_last: 'Gomendatutako bideoak: D.11.5 Azkena'
+        hint_videos_d_11_6_first: 'Gomendatutako bideoak: D.11.6 Lehenengoa'
+        hint_videos_d_11_6_last: 'Gomendatutako bideoak: D.11.6 Azkena'
+        hint_videos_d_11_7_first: 'Gomendatutako bideoak: D.11.7 Lehenengoa'
+        hint_videos_d_11_7_last: 'Gomendatutako bideoak: D.11.7 Azkena'
+        hint_videos_d_11_9_first: 'Gomendatutako bideoak: D.11.9 Lehenengoa'
+        hint_videos_d_11_9_last: 'Gomendatutako bideoak: D.11.9 Azkena'
+        hint_videos_d_11_11_first: 'Gomendatutako bideoak: D.11.11 Lehenengoa'
+        hint_videos_d_11_11_last: 'Gomendatutako bideoak: D.11.11 Azkena'
+        applab_intro_welcome: Aplikazioen Laborategia - Lehen urratsak
+        applab_intro_events: Aplikazioen Laborategia - Egin interaktiboa
+        applab_intro_sounds: Aplikazioen Laborategia - Irudiak eta soinuak
+        applab_intro_designmode: Aplikazioen Laborategia - Diseinu modua
+        applab_intro_share: Aplikazioen Laborategia - Partekatu zure aplikazioa
         CSF_loops_AB: Itzuliak
         csd_pair_programming: Bikoteka programatzen
         csd_applab_parameters: Parametrodun funtzioak
         csd_debugging: Arazketa
         playlab_2021: 'Sarrera: Jolas Laborategia'
         playlab_2021_reader: 'Sarrera: Jolas Laborategia'
+        csp_applab_parameters: Parametrodun funtzioak
+        CS_Changing_Everything: Informatika dena aldatzen ari da
     callout:
       text:
         drag_blocks: Arrastatu "mugitu" blokea eta lotu beste blokearen azpian

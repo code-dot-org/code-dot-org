@@ -334,6 +334,778 @@
           "word": "crwdns2700837:0crwdne2700837:0",
           "definition": "crwdns2700839:0crwdne2700839:0"
         },
+        "algorithm/coursed/2022": {
+          "word": "crwdns3121276:0crwdne3121276:0",
+          "definition": "crwdns3121280:0crwdne3121280:0"
+        },
+        "program/coursed/2022": {
+          "word": "crwdns3121822:0crwdne3121822:0",
+          "definition": "crwdns3121824:0crwdne3121824:0"
+        },
+        "bug/coursed/2022": {
+          "word": "crwdns3121462:0crwdne3121462:0",
+          "definition": "crwdns3121464:0crwdne3121464:0"
+        },
+        "debugging/coursed/2022": {
+          "word": "crwdns3121466:0crwdne3121466:0",
+          "definition": "crwdns3121468:0crwdne3121468:0"
+        },
+        "loop/coursed/2022": {
+          "word": "crwdns3122676:0crwdne3122676:0",
+          "definition": "crwdns3122678:0crwdne3122678:0"
+        },
+        "programming/coursed/2022": {
+          "word": "crwdns3120924:0crwdne3120924:0",
+          "definition": "crwdns3120926:0crwdne3120926:0"
+        },
+        "frustrated/coursed/2022": {
+          "word": "crwdns3121296:0crwdne3121296:0",
+          "definition": "crwdns3121300:0crwdne3121300:0"
+        },
+        "persistence/coursed/2022": {
+          "word": "crwdns3121306:0crwdne3121306:0",
+          "definition": "crwdns3121312:0crwdne3121312:0"
+        },
+        "event/coursed/2022": {
+          "word": "crwdns3121818:0crwdne3121818:0",
+          "definition": "crwdns3121820:0crwdne3121820:0"
+        },
+        "code/coursed/2022": {
+          "word": "crwdns3121814:0crwdne3121814:0",
+          "definition": "crwdns3121816:0crwdne3121816:0"
+        },
+        "repeat/coursed/2022": {
+          "word": "crwdns3122680:0crwdne3122680:0",
+          "definition": "crwdns3122682:0crwdne3122682:0"
+        },
+        "command/coursed/2022": {
+          "word": "crwdns3122136:0crwdne3122136:0",
+          "definition": "crwdns3122138:0crwdne3122138:0"
+        },
+        "conditionals/coursed/2022": {
+          "word": "crwdns3122672:0crwdne3122672:0",
+          "definition": "crwdns3122674:0crwdne3122674:0"
+        },
+        "pseudocode/coursed/2022": {
+          "word": "crwdns3122274:0crwdne3122274:0",
+          "definition": "crwdns3122276:0crwdne3122276:0"
+        },
+        "condition/coursed/2022": {
+          "word": "crwdns3122668:0crwdne3122668:0",
+          "definition": "crwdns3122670:0crwdne3122670:0"
+        },
+        "while_loop/coursed/2022": {
+          "word": "crwdns3122580:0crwdne3122580:0",
+          "definition": "crwdns3122582:0crwdne3122582:0"
+        },
+        "until/coursed/2022": {
+          "word": "crwdns3122684:0crwdne3122684:0",
+          "definition": "crwdns3122686:0crwdne3122686:0"
+        },
+        "sprite/coursef/2022": {
+          "word": "crwdns3151472:0crwdne3151472:0",
+          "definition": "crwdns3151482:0crwdne3151482:0"
+        },
+        "user/coursef/2022": {
+          "word": "crwdns3151262:0crwdne3151262:0",
+          "definition": "crwdns3151266:0crwdne3151266:0"
+        },
+        "algorithm/coursef/2022": {
+          "word": "crwdns3151620:0crwdne3151620:0",
+          "definition": "crwdns3151622:0crwdne3151622:0"
+        },
+        "behavior/coursef/2022": {
+          "word": "crwdns3151710:0crwdne3151710:0",
+          "definition": "crwdns3151712:0crwdne3151712:0"
+        },
+        "program/coursef/2022": {
+          "word": "crwdns3151466:0crwdne3151466:0",
+          "definition": "crwdns3151470:0crwdne3151470:0"
+        },
+        "event/coursef/2022": {
+          "word": "crwdns3152536:0crwdne3152536:0",
+          "definition": "crwdns3152538:0crwdne3152538:0"
+        },
+        "variable/coursef/2022": {
+          "word": "crwdns3152072:0crwdne3152072:0",
+          "definition": "crwdns3152074:0crwdne3152074:0"
+        },
+        "prompt/coursef/2022": {
+          "word": "crwdns3152068:0crwdne3152068:0",
+          "definition": "crwdns3152070:0crwdne3152070:0"
+        },
+        "input/coursef/2022": {
+          "word": "crwdns3152064:0crwdne3152064:0",
+          "definition": "crwdns3152066:0crwdne3152066:0"
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "crwdns3152540:0crwdne3152540:0",
+          "definition": "crwdns3152542:0crwdne3152542:0"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "crwdns3152656:0crwdne3152656:0",
+          "definition": "crwdns3152658:0crwdne3152658:0"
+        },
+        "dns/coursef/2022": {
+          "word": "crwdns3152770:0crwdne3152770:0",
+          "definition": "crwdns3152772:0crwdne3152772:0"
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "crwdns3152774:0crwdne3152774:0",
+          "definition": "crwdns3152776:0crwdne3152776:0"
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "crwdns3152778:0crwdne3152778:0",
+          "definition": "crwdns3152780:0crwdne3152780:0"
+        },
+        "internet/coursef/2022": {
+          "word": "crwdns3152782:0crwdne3152782:0",
+          "definition": "crwdns3152784:0crwdne3152784:0"
+        },
+        "ip_address/coursef/2022": {
+          "word": "crwdns3152786:0crwdne3152786:0",
+          "definition": "crwdns3152788:0crwdne3152788:0"
+        },
+        "packets/coursef/2022": {
+          "word": "crwdns3152790:0crwdne3152790:0",
+          "definition": "crwdns3152792:0crwdne3152792:0"
+        },
+        "servers/coursef/2022": {
+          "word": "crwdns3152794:0crwdne3152794:0",
+          "definition": "crwdns3152796:0crwdne3152796:0"
+        },
+        "url/coursef/2022": {
+          "word": "crwdns3152798:0crwdne3152798:0",
+          "definition": "crwdns3152800:0crwdne3152800:0"
+        },
+        "wi_fi/coursef/2022": {
+          "word": "crwdns3152802:0crwdne3152802:0",
+          "definition": "crwdns3152804:0crwdne3152804:0"
+        },
+        "define/coursef/2022": {
+          "word": "crwdns3152912:0crwdne3152912:0",
+          "definition": "crwdns3152914:0crwdne3152914:0"
+        },
+        "prepare/coursef/2022": {
+          "word": "crwdns3152916:0crwdne3152916:0",
+          "definition": "crwdns3152918:0crwdne3152918:0"
+        },
+        "reflect/coursef/2022": {
+          "word": "crwdns3152920:0crwdne3152920:0",
+          "definition": "crwdns3152922:0crwdne3152922:0"
+        },
+        "try/coursef/2022": {
+          "word": "crwdns3152924:0crwdne3152924:0",
+          "definition": "crwdns3152926:0crwdne3152926:0"
+        },
+        "behavior/coursee/2022": {
+          "word": "crwdns3123704:0crwdne3123704:0",
+          "definition": "crwdns3123706:0crwdne3123706:0"
+        },
+        "sprite/coursee/2022": {
+          "word": "crwdns3123710:0crwdne3123710:0",
+          "definition": "crwdns3123716:0crwdne3123716:0"
+        },
+        "loop/coursee/2022": {
+          "word": "crwdns3124484:0crwdne3124484:0",
+          "definition": "crwdns3124488:0crwdne3124488:0"
+        },
+        "repeat/coursee/2022": {
+          "word": "crwdns3124492:0crwdne3124492:0",
+          "definition": "crwdns3124496:0crwdne3124496:0"
+        },
+        "function/coursee/2022": {
+          "word": "crwdns3125268:0crwdne3125268:0",
+          "definition": "crwdns3125270:0crwdne3125270:0"
+        },
+        "call_a_function/coursee/2022": {
+          "word": "crwdns3125004:0crwdne3125004:0",
+          "definition": "crwdns3125006:0crwdne3125006:0"
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "crwdns3125008:0crwdne3125008:0",
+          "definition": "crwdns3125010:0crwdne3125010:0"
+        },
+        "condition/coursee/2022": {
+          "word": "crwdns3125192:0crwdne3125192:0",
+          "definition": "crwdns3125194:0crwdne3125194:0"
+        },
+        "conditionals/coursee/2022": {
+          "word": "crwdns3125264:0crwdne3125264:0",
+          "definition": "crwdns3125266:0crwdne3125266:0"
+        },
+        "while_loop/coursee/2022": {
+          "word": "crwdns3125200:0crwdne3125200:0",
+          "definition": "crwdns3125202:0crwdne3125202:0"
+        },
+        "copyright/coursee/2022": {
+          "word": "crwdns3125442:0crwdne3125442:0",
+          "definition": "crwdns3125444:0crwdne3125444:0"
+        },
+        "define/coursee/2022": {
+          "word": "crwdns3125550:0crwdne3125550:0",
+          "definition": "crwdns3125552:0crwdne3125552:0"
+        },
+        "prepare/coursee/2022": {
+          "word": "crwdns3125554:0crwdne3125554:0",
+          "definition": "crwdns3125556:0crwdne3125556:0"
+        },
+        "reflect/coursee/2022": {
+          "word": "crwdns3125558:0crwdne3125558:0",
+          "definition": "crwdns3125560:0crwdne3125560:0"
+        },
+        "try/coursee/2022": {
+          "word": "crwdns3125562:0crwdne3125562:0",
+          "definition": "crwdns3125564:0crwdne3125564:0"
+        },
+        "algorithm/courseb/2022": {
+          "word": "crwdns3140664:0crwdne3140664:0",
+          "definition": "crwdns3140666:0crwdne3140666:0"
+        },
+        "bug/courseb/2022": {
+          "word": "crwdns3140668:0crwdne3140668:0",
+          "definition": "crwdns3140670:0crwdne3140670:0"
+        },
+        "debugging/courseb/2022": {
+          "word": "crwdns3140672:0crwdne3140672:0",
+          "definition": "crwdns3140674:0crwdne3140674:0"
+        },
+        "click/courseb/2022": {
+          "word": "crwdns3140442:0crwdne3140442:0",
+          "definition": "crwdns3140444:0crwdne3140444:0"
+        },
+        "double_click/courseb/2022": {
+          "word": "crwdns3140446:0crwdne3140446:0",
+          "definition": "crwdns3140448:0crwdne3140448:0"
+        },
+        "drag/courseb/2022": {
+          "word": "crwdns3140450:0crwdne3140450:0",
+          "definition": "crwdns3140452:0crwdne3140452:0"
+        },
+        "drop/courseb/2022": {
+          "word": "crwdns3140454:0crwdne3140454:0",
+          "definition": "crwdns3140456:0crwdne3140456:0"
+        },
+        "program/courseb/2022": {
+          "word": "crwdns3140680:0crwdne3140680:0",
+          "definition": "crwdns3140682:0crwdne3140682:0"
+        },
+        "programming/courseb/2022": {
+          "word": "crwdns3140684:0crwdne3140684:0",
+          "definition": "crwdns3140686:0crwdne3140686:0"
+        },
+        "persistence/courseb/2022": {
+          "word": "crwdns3140676:0crwdne3140676:0",
+          "definition": "crwdns3140678:0crwdne3140678:0"
+        },
+        "loop/courseb/2022": {
+          "word": "crwdns3141100:0crwdne3141100:0",
+          "definition": "crwdns3141102:0crwdne3141102:0"
+        },
+        "repeat/courseb/2022": {
+          "word": "crwdns3140998:0crwdne3140998:0",
+          "definition": "crwdns3141000:0crwdne3141000:0"
+        },
+        "event/courseb/2022": {
+          "word": "crwdns3141466:0crwdne3141466:0",
+          "definition": "crwdns3141468:0crwdne3141468:0"
+        },
+        "algorithm/express/2022": {
+          "word": "crwdns3138446:0crwdne3138446:0",
+          "definition": "crwdns3138448:0crwdne3138448:0"
+        },
+        "bug/express/2022": {
+          "word": "crwdns3138032:0crwdne3138032:0",
+          "definition": "crwdns3138034:0crwdne3138034:0"
+        },
+        "debugging/express/2022": {
+          "word": "crwdns3138036:0crwdne3138036:0",
+          "definition": "crwdns3138038:0crwdne3138038:0"
+        },
+        "sequencing/express/2022": {
+          "word": "crwdns3137956:0crwdne3137956:0",
+          "definition": "crwdns3137958:0crwdne3137958:0"
+        },
+        "program/express/2022": {
+          "word": "crwdns3138674:0crwdne3138674:0",
+          "definition": "crwdns3138676:0crwdne3138676:0"
+        },
+        "programming/express/2022": {
+          "word": "crwdns3138118:0crwdne3138118:0",
+          "definition": "crwdns3138120:0crwdne3138120:0"
+        },
+        "behavior/express/2022": {
+          "word": "crwdns3138532:0crwdne3138532:0",
+          "definition": "crwdns3138534:0crwdne3138534:0"
+        },
+        "sprite/express/2022": {
+          "word": "crwdns3138366:0crwdne3138366:0",
+          "definition": "crwdns3138368:0crwdne3138368:0"
+        },
+        "event/express/2022": {
+          "word": "crwdns3138670:0crwdne3138670:0",
+          "definition": "crwdns3138672:0crwdne3138672:0"
+        },
+        "code/express/2022": {
+          "word": "crwdns3138666:0crwdne3138666:0",
+          "definition": "crwdns3138668:0crwdne3138668:0"
+        },
+        "loop/express/2022": {
+          "word": "crwdns3139398:0crwdne3139398:0",
+          "definition": "crwdns3139400:0crwdne3139400:0"
+        },
+        "repeat/express/2022": {
+          "word": "crwdns3139402:0crwdne3139402:0",
+          "definition": "crwdns3139404:0crwdne3139404:0"
+        },
+        "command/express/2022": {
+          "word": "crwdns3138918:0crwdne3138918:0",
+          "definition": "crwdns3138920:0crwdne3138920:0"
+        },
+        "condition/express/2022": {
+          "word": "crwdns3139390:0crwdne3139390:0",
+          "definition": "crwdns3139392:0crwdne3139392:0"
+        },
+        "conditionals/express/2022": {
+          "word": "crwdns3139394:0crwdne3139394:0",
+          "definition": "crwdns3139396:0crwdne3139396:0"
+        },
+        "while_loop/express/2022": {
+          "word": "crwdns3139406:0crwdne3139406:0",
+          "definition": "crwdns3139408:0crwdne3139408:0"
+        },
+        "until/express/2022": {
+          "word": "crwdns3139334:0crwdne3139334:0",
+          "definition": "crwdns3139336:0crwdne3139336:0"
+        },
+        "function/express/2022": {
+          "word": "crwdns3139600:0crwdne3139600:0",
+          "definition": "crwdns3139602:0crwdne3139602:0"
+        },
+        "prompt/express/2022": {
+          "word": "crwdns3139684:0crwdne3139684:0",
+          "definition": "crwdns3139686:0crwdne3139686:0"
+        },
+        "variable/express/2022": {
+          "word": "crwdns3139886:0crwdne3139886:0",
+          "definition": "crwdns3139888:0crwdne3139888:0"
+        },
+        "for_loop/express/2022": {
+          "word": "crwdns3140010:0crwdne3140010:0",
+          "definition": "crwdns3140012:0crwdne3140012:0"
+        },
+        "define/express/2022": {
+          "word": "crwdns3140090:0crwdne3140090:0",
+          "definition": "crwdns3140092:0crwdne3140092:0"
+        },
+        "prepare/express/2022": {
+          "word": "crwdns3140094:0crwdne3140094:0",
+          "definition": "crwdns3140096:0crwdne3140096:0"
+        },
+        "reflect/express/2022": {
+          "word": "crwdns3140098:0crwdne3140098:0",
+          "definition": "crwdns3140100:0crwdne3140100:0"
+        },
+        "try/express/2022": {
+          "word": "crwdns3140102:0crwdne3140102:0",
+          "definition": "crwdns3140104:0crwdne3140104:0"
+        },
+        "click/pre-express/2022": {
+          "word": "crwdns3125874:0crwdne3125874:0",
+          "definition": "crwdns3125876:0crwdne3125876:0"
+        },
+        "double_click/pre-express/2022": {
+          "word": "crwdns3125878:0crwdne3125878:0",
+          "definition": "crwdns3125880:0crwdne3125880:0"
+        },
+        "drag/pre-express/2022": {
+          "word": "crwdns3125882:0crwdne3125882:0",
+          "definition": "crwdns3125884:0crwdne3125884:0"
+        },
+        "drop/pre-express/2022": {
+          "word": "crwdns3125886:0crwdne3125886:0",
+          "definition": "crwdns3125888:0crwdne3125888:0"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "crwdns3126120:0crwdne3126120:0",
+          "definition": "crwdns3126122:0crwdne3126122:0"
+        },
+        "bug/pre-express/2022": {
+          "word": "crwdns3126124:0crwdne3126124:0",
+          "definition": "crwdns3126126:0crwdne3126126:0"
+        },
+        "debugging/pre-express/2022": {
+          "word": "crwdns3126128:0crwdne3126128:0",
+          "definition": "crwdns3126130:0crwdne3126130:0"
+        },
+        "program/pre-express/2022": {
+          "word": "crwdns3126136:0crwdne3126136:0",
+          "definition": "crwdns3126138:0crwdne3126138:0"
+        },
+        "programming/pre-express/2022": {
+          "word": "crwdns3126140:0crwdne3126140:0",
+          "definition": "crwdns3126142:0crwdne3126142:0"
+        },
+        "persistence/pre-express/2022": {
+          "word": "crwdns3126132:0crwdne3126132:0",
+          "definition": "crwdns3126134:0crwdne3126134:0"
+        },
+        "loop/pre-express/2022": {
+          "word": "crwdns3126494:0crwdne3126494:0",
+          "definition": "crwdns3126496:0crwdne3126496:0"
+        },
+        "repeat/pre-express/2022": {
+          "word": "crwdns3126408:0crwdne3126408:0",
+          "definition": "crwdns3126410:0crwdne3126410:0"
+        },
+        "event/pre-express/2022": {
+          "word": "crwdns3126656:0crwdne3126656:0",
+          "definition": "crwdns3126658:0crwdne3126658:0"
+        },
+        "algorithm/coursea/2022": {
+          "word": "crwdns3127256:0crwdne3127256:0",
+          "definition": "crwdns3127258:0crwdne3127258:0"
+        },
+        "debugging/coursea/2022": {
+          "word": "crwdns3127264:0crwdne3127264:0",
+          "definition": "crwdns3127266:0crwdne3127266:0"
+        },
+        "program/coursea/2022": {
+          "word": "crwdns3127268:0crwdne3127268:0",
+          "definition": "crwdns3127270:0crwdne3127270:0"
+        },
+        "click/coursea/2022": {
+          "word": "crwdns3127068:0crwdne3127068:0",
+          "definition": "crwdns3127070:0crwdne3127070:0"
+        },
+        "double_click/coursea/2022": {
+          "word": "crwdns3127072:0crwdne3127072:0",
+          "definition": "crwdns3127074:0crwdne3127074:0"
+        },
+        "drag/coursea/2022": {
+          "word": "crwdns3127076:0crwdne3127076:0",
+          "definition": "crwdns3127078:0crwdne3127078:0"
+        },
+        "drop/coursea/2022": {
+          "word": "crwdns3127080:0crwdne3127080:0",
+          "definition": "crwdns3127082:0crwdne3127082:0"
+        },
+        "bug/coursea/2022": {
+          "word": "crwdns3127260:0crwdne3127260:0",
+          "definition": "crwdns3127262:0crwdne3127262:0"
+        },
+        "programming/coursea/2022": {
+          "word": "crwdns3127272:0crwdne3127272:0",
+          "definition": "crwdns3127274:0crwdne3127274:0"
+        },
+        "loop/coursea/2022": {
+          "word": "crwdns3128012:0crwdne3128012:0",
+          "definition": "crwdns3128014:0crwdne3128014:0"
+        },
+        "repeat/coursea/2022": {
+          "word": "crwdns3127708:0crwdne3127708:0",
+          "definition": "crwdns3127710:0crwdne3127710:0"
+        },
+        "event/coursea/2022": {
+          "word": "crwdns3127930:0crwdne3127930:0",
+          "definition": "crwdns3127932:0crwdne3127932:0"
+        },
+        "algorithm/coursec/2022": {
+          "word": "crwdns3129448:0crwdne3129448:0",
+          "definition": "crwdns3129452:0crwdne3129452:0"
+        },
+        "bug/coursec/2022": {
+          "word": "crwdns3129210:0crwdne3129210:0",
+          "definition": "crwdns3129216:0crwdne3129216:0"
+        },
+        "debugging/coursec/2022": {
+          "word": "crwdns3129220:0crwdne3129220:0",
+          "definition": "crwdns3129224:0crwdne3129224:0"
+        },
+        "program/coursec/2022": {
+          "word": "crwdns3129454:0crwdne3129454:0",
+          "definition": "crwdns3129458:0crwdne3129458:0"
+        },
+        "sequencing/coursec/2022": {
+          "word": "crwdns3129014:0crwdne3129014:0",
+          "definition": "crwdns3129016:0crwdne3129016:0"
+        },
+        "persistence/coursec/2022": {
+          "word": "crwdns3129232:0crwdne3129232:0",
+          "definition": "crwdns3129236:0crwdne3129236:0"
+        },
+        "programming/coursec/2022": {
+          "word": "crwdns3129462:0crwdne3129462:0",
+          "definition": "crwdns3129466:0crwdne3129466:0"
+        },
+        "angle/coursec/2022": {
+          "word": "crwdns3129688:0crwdne3129688:0",
+          "definition": "crwdns3129692:0crwdne3129692:0"
+        },
+        "loop/coursec/2022": {
+          "word": "crwdns3130726:0crwdne3130726:0",
+          "definition": "crwdns3130732:0crwdne3130732:0"
+        },
+        "repeat/coursec/2022": {
+          "word": "crwdns3130736:0crwdne3130736:0",
+          "definition": "crwdns3130740:0crwdne3130740:0"
+        },
+        "event/coursec/2022": {
+          "word": "crwdns3131480:0crwdne3131480:0",
+          "definition": "crwdns3131484:0crwdne3131484:0"
+        },
+        "data/coursec/2022": {
+          "word": "crwdns3131658:0crwdne3131658:0",
+          "definition": "crwdns3131662:0crwdne3131662:0"
+        },
+        "graph/coursec/2022": {
+          "word": "crwdns3131664:0crwdne3131664:0",
+          "definition": "crwdns3131668:0crwdne3131668:0"
+        },
+        "binary/coursec/2022": {
+          "word": "crwdns3131960:0crwdne3131960:0",
+          "definition": "crwdns3131964:0crwdne3131964:0"
+        },
+        "decode/csd/2022": {
+          "word": "crwdns2959552:0crwdne2959552:0",
+          "definition": "crwdns2959556:0crwdne2959556:0"
+        },
+        "encode/csd/2022": {
+          "word": "crwdns2959560:0crwdne2959560:0",
+          "definition": "crwdns2959562:0crwdne2959562:0"
+        },
+        "ascii/csd/2022": {
+          "word": "crwdns2959690:0crwdne2959690:0",
+          "definition": "crwdns2959692:0crwdne2959692:0"
+        },
+        "binary_system/csd/2022": {
+          "word": "crwdns2959694:0crwdne2959694:0",
+          "definition": "crwdns2959698:0crwdne2959698:0"
+        },
+        "bit/csd/2022": {
+          "word": "crwdns2959700:0crwdne2959700:0",
+          "definition": "crwdns2959704:0crwdne2959704:0"
+        },
+        "pixel/csd/2022": {
+          "word": "crwdns2959828:0crwdne2959828:0",
+          "definition": "crwdns2959832:0crwdne2959832:0"
+        },
+        "decrypt/csd/2022": {
+          "word": "crwdns2960274:0crwdne2960274:0",
+          "definition": "crwdns2960278:0crwdne2960278:0"
+        },
+        "encrypt/csd/2022": {
+          "word": "crwdns2960280:0crwdne2960280:0",
+          "definition": "crwdns2960282:0crwdne2960282:0"
+        },
+        "computer/csd/2022": {
+          "word": "crwdns2982844:0crwdne2982844:0",
+          "definition": "crwdns2982846:0crwdne2982846:0"
+        },
+        "input/csd/2022": {
+          "word": "crwdns2974418:0crwdne2974418:0",
+          "definition": "crwdns2974422:0crwdne2974422:0"
+        },
+        "output/csd/2022": {
+          "word": "crwdns2974200:0crwdne2974200:0",
+          "definition": "crwdns2974202:0crwdne2974202:0"
+        },
+        "processing/csd/2022": {
+          "word": "crwdns2983098:0crwdne2983098:0",
+          "definition": "crwdns2983100:0crwdne2983100:0"
+        },
+        "storage/csd/2022": {
+          "word": "crwdns2983248:0crwdne2983248:0",
+          "definition": "crwdns2983250:0crwdne2983250:0"
+        },
+        "bug/csd/2022": {
+          "word": "crwdns2970752:0crwdne2970752:0",
+          "definition": "crwdns2970754:0crwdne2970754:0"
+        },
+        "debugging/csd/2022": {
+          "word": "crwdns2962886:0crwdne2962886:0",
+          "definition": "crwdns2962888:0crwdne2962888:0"
+        },
+        "program/csd/2022": {
+          "word": "crwdns2962890:0crwdne2962890:0",
+          "definition": "crwdns2962892:0crwdne2962892:0"
+        },
+        "parameter/csd/2022": {
+          "word": "crwdns2962974:0crwdne2962974:0",
+          "definition": "crwdns2962976:0crwdne2962976:0"
+        },
+        "variable/csd/2022": {
+          "word": "crwdns2963090:0crwdne2963090:0",
+          "definition": "crwdns2963092:0crwdne2963092:0"
+        },
+        "dot_notation/csd/2022": {
+          "word": "crwdns2963324:0crwdne2963324:0",
+          "definition": "crwdns2963326:0crwdne2963326:0"
+        },
+        "property/csd/2022": {
+          "word": "crwdns2963424:0crwdne2963424:0",
+          "definition": "crwdns2963426:0crwdne2963426:0"
+        },
+        "sprite/csd/2022": {
+          "word": "crwdns2963332:0crwdne2963332:0",
+          "definition": "crwdns2963334:0crwdne2963334:0"
+        },
+        "boolean_expression/csd/2022": {
+          "word": "crwdns2964118:0crwdne2964118:0",
+          "definition": "crwdns2964120:0crwdne2964120:0"
+        },
+        "condition/csd/2022": {
+          "word": "crwdns2964122:0crwdne2964122:0",
+          "definition": "crwdns2964124:0crwdne2964124:0"
+        },
+        "conditionals/csd/2022": {
+          "word": "crwdns2964322:0crwdne2964322:0",
+          "definition": "crwdns2964324:0crwdne2964324:0"
+        },
+        "abstraction/csd/2022": {
+          "word": "crwdns2965072:0crwdne2965072:0",
+          "definition": "crwdns2965074:0crwdne2965074:0"
+        },
+        "function/csd/2022": {
+          "word": "crwdns2965298:0crwdne2965298:0",
+          "definition": "crwdns2965300:0crwdne2965300:0"
+        },
+        "html/csd/2022": {
+          "word": "crwdns2985534:0crwdne2985534:0",
+          "definition": "crwdns2985536:0crwdne2985536:0"
+        },
+        "html_element/csd/2022": {
+          "word": "crwdns2985538:0crwdne2985538:0",
+          "definition": "crwdns2985540:0crwdne2985540:0"
+        },
+        "html_tag/csd/2022": {
+          "word": "crwdns2985542:0crwdne2985542:0",
+          "definition": "crwdns2985544:0crwdne2985544:0"
+        },
+        "website_content/csd/2022": {
+          "word": "crwdns2985546:0crwdne2985546:0",
+          "definition": "crwdns2985548:0crwdne2985548:0"
+        },
+        "website_structure/csd/2022": {
+          "word": "crwdns2985550:0crwdne2985550:0",
+          "definition": "crwdns2985552:0crwdne2985552:0"
+        },
+        "heading/csd/2022": {
+          "word": "crwdns2985684:0crwdne2985684:0",
+          "definition": "crwdns2985686:0crwdne2985686:0"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "crwdns2985920:0crwdne2985920:0",
+          "definition": "crwdns2985922:0crwdne2985922:0"
+        },
+        "css/csd/2022": {
+          "word": "crwdns2986068:0crwdne2986068:0",
+          "definition": "crwdns2986070:0crwdne2986070:0"
+        },
+        "css_selector/csd/2022": {
+          "word": "crwdns2986072:0crwdne2986072:0",
+          "definition": "crwdns2986074:0crwdne2986074:0"
+        },
+        "copyright/csd/2022": {
+          "word": "crwdns2986310:0crwdne2986310:0",
+          "definition": "crwdns2986312:0crwdne2986312:0"
+        },
+        "relevant/csd/2022": {
+          "word": "crwdns2987208:0crwdne2987208:0",
+          "definition": "crwdns2987210:0crwdne2987210:0"
+        },
+        "search_engine/csd/2022": {
+          "word": "crwdns2987212:0crwdne2987212:0",
+          "definition": "crwdns2987214:0crwdne2987214:0"
+        },
+        "trustworthy/csd/2022": {
+          "word": "crwdns2987216:0crwdne2987216:0",
+          "definition": "crwdns2987218:0crwdne2987218:0"
+        },
+        "css_class/csd/2022": {
+          "word": "crwdns2987304:0crwdne2987304:0",
+          "definition": "crwdns2987306:0crwdne2987306:0"
+        },
+        "empathy/csd/2022": {
+          "word": "crwdns2968002:0crwdne2968002:0",
+          "definition": "crwdns2968004:0crwdne2968004:0"
+        },
+        "user/csd/2022": {
+          "word": "crwdns2968006:0crwdne2968006:0",
+          "definition": "crwdns2968008:0crwdne2968008:0"
+        },
+        "usability/csd/2022": {
+          "word": "crwdns2968142:0crwdne2968142:0",
+          "definition": "crwdns2968146:0crwdne2968146:0"
+        },
+        "prototype/csd/2022": {
+          "word": "crwdns2976530:0crwdne2976530:0",
+          "definition": "crwdns2976534:0crwdne2976534:0"
+        },
+        "user_interface/csd/2022": {
+          "word": "crwdns2968550:0crwdne2968550:0",
+          "definition": "crwdns2968554:0crwdne2968554:0"
+        },
+        "feature/csd/2022": {
+          "word": "crwdns2970756:0crwdne2970756:0",
+          "definition": "crwdns2970758:0crwdne2970758:0"
+        },
+        "innovation/csd/2022": {
+          "word": "crwdns2974096:0crwdne2974096:0",
+          "definition": "crwdns2974098:0crwdne2974098:0"
+        },
+        "circuit/csd/2022": {
+          "word": "crwdns2976538:0crwdne2976538:0",
+          "definition": "crwdns2976540:0crwdne2976540:0"
+        },
+        "machine_learning/csd/2022": {
+          "word": "crwdns2977796:0crwdne2977796:0",
+          "definition": "crwdns2977798:0crwdne2977798:0"
+        },
+        "features/csd/2022": {
+          "word": "crwdns2977946:0crwdne2977946:0",
+          "definition": "crwdns2977948:0crwdne2977948:0"
+        },
+        "label/csd/2022": {
+          "word": "crwdns2977950:0crwdne2977950:0",
+          "definition": "crwdns2977952:0crwdne2977952:0"
+        },
+        "model/csd/2022": {
+          "word": "crwdns2977954:0crwdne2977954:0",
+          "definition": "crwdns2977956:0crwdne2977956:0"
+        },
+        "supervised_learning/csd/2022": {
+          "word": "crwdns2977958:0crwdne2977958:0",
+          "definition": "crwdns2977960:0crwdne2977960:0"
+        },
+        "training/csd/2022": {
+          "word": "crwdns2977962:0crwdne2977962:0",
+          "definition": "crwdns2977964:0crwdne2977964:0"
+        },
+        "unsupervised_learning/csd/2022": {
+          "word": "crwdns2977966:0crwdne2977966:0",
+          "definition": "crwdns2977968:0crwdne2977968:0"
+        },
+        "categorical_data/csd/2022": {
+          "word": "crwdns2978328:0crwdne2978328:0",
+          "definition": "crwdns2978330:0crwdne2978330:0"
+        },
+        "classification/csd/2022": {
+          "word": "crwdns2978332:0crwdne2978332:0",
+          "definition": "crwdns2978334:0crwdne2978334:0"
+        },
+        "bias/csd/2022": {
+          "word": "crwdns2978812:0crwdne2978812:0",
+          "definition": "crwdns2978814:0crwdne2978814:0"
+        },
+        "numerical_data/csd/2022": {
+          "word": "crwdns2979418:0crwdne2979418:0",
+          "definition": "crwdns2979420:0crwdne2979420:0"
+        },
+        "ethics/csd/2022": {
+          "word": "crwdns2979626:0crwdne2979626:0",
+          "definition": "crwdns2979628:0crwdne2979628:0"
+        },
         "code/poem-art/unversioned": {
           "word": "crwdns2710929:0crwdne2710929:0",
           "definition": "crwdns2710931:0crwdne2710931:0"
@@ -930,6 +1702,14 @@
           "word": "crwdns2876506:0crwdne2876506:0",
           "definition": "crwdns2876508:0crwdne2876508:0"
         },
+        "empathy/csd/2021": {
+          "word": "crwdns2910360:0crwdne2910360:0",
+          "definition": "crwdns2910362:0crwdne2910362:0"
+        },
+        "user/csd/2021": {
+          "word": "crwdns2910364:0crwdne2910364:0",
+          "definition": "crwdns2910366:0crwdne2910366:0"
+        },
         "usability/csd/2021": {
           "word": "crwdns2870386:0crwdne2870386:0",
           "definition": "crwdns2870388:0crwdne2870388:0"
@@ -949,6 +1729,10 @@
         "feature/csd/2021": {
           "word": "crwdns2871850:0crwdne2871850:0",
           "definition": "crwdns2871852:0crwdne2871852:0"
+        },
+        "innovation/csd/2021": {
+          "word": "crwdns2911486:0crwdne2911486:0",
+          "definition": "crwdns2911488:0crwdne2911488:0"
         },
         "analog/csd/2021": {
           "word": "crwdns2872546:0crwdne2872546:0",

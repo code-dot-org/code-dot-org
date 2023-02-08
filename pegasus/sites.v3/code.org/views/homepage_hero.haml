@@ -3,8 +3,8 @@
   show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
-  action_buttons_css_class = Homepage.get_action_buttons_css_class()
-  num_columns = Homepage.get_num_columns()
+  action_buttons_css_class = Homepage.get_action_buttons_css_class(request)
+  num_columns = Homepage.get_num_columns(request)
 
 - main_actions = capture_haml do
   - if show_single_hero == "changeworld"
@@ -23,7 +23,7 @@
 
   %div{class: action_buttons_css_class}
     - actions.each do |entry|
-      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow", "cta_button_solid_grey", "cta_button_solid_black"].include? entry[:type]
+      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow", "cta_button_solid_grey", "cta_button_solid_black", "cta_button_hollow_black"].include? entry[:type]
         .action
           %a.linktag#hero-hoc{href: entry[:url]}
             - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
@@ -31,6 +31,7 @@
             - extra_class = "herohocbutton-solid-yellow" if entry[:type] == "cta_button_solid_yellow"
             - extra_class = "herohocbutton-solid-grey" if entry[:type] == "cta_button_solid_grey"
             - extra_class = "herohocbutton-solid-black" if entry[:type] == "cta_button_solid_black"
+            - extra_class = "herohocbutton-hollow-black" if entry[:type] == "cta_button_hollow_black"
             %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
       - elsif entry[:type] == "video"
         .action
@@ -43,31 +44,42 @@
       - elsif entry[:type] == "text"
         .text{dir: "auto"}
           != I18n.t(entry[:text], markdown: true)
+      - elsif entry[:type] == "heading"
+        %h1{dir: "auto"}
+          = I18n.t(entry[:text])
+      - elsif entry[:type] == "heading-two"
+        %h2{dir: "auto"}
+          = I18n.t(entry[:text])
       - elsif entry[:type] == "image"
         %img.image{src: entry[:url]}
+      - elsif entry[:type] == "image-tablet"
+        %img.image-tablet{src: entry[:url]}
       - elsif entry[:type] == "cta_link_white"
         %a.herohocbutton.herolink-white{href: entry[:href]}
           %i.fa{class: entry[:icon_class]}
           %span= entry[:plain_text]
-      
+
 
   .clear{style: "clear: both"}
 
 #hero{style: "position: relative"}
-  - unless ["soon-hoc", "actual-hoc"].include?(hoc_mode)
-    - heroes_arranged.each_with_index do |entry, index|
-      -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
-      - if index == 0
-        -#
-          Use Link rel=preload HTTP headers to preload as early as possible.
-          Two headers with inverse media queries conditionally load the correctly-sized image.
-        - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
-        - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
-        -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
-        .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
+  - heroes_arranged.each_with_index do |entry, index|
+    -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
+    - if index == 0
+      -#
+        Use Link rel=preload HTTP headers to preload as early as possible.
+        Two headers with inverse media queries conditionally load the correctly-sized image.
+      - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
+      - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
+      -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
+      - if entry[:image_mobile]
+        .widehero_do_not_hide.tablet-feature#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
+        .widehero_do_not_hide.phone-feature#fullwidth0m{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image_mobile]});", class: entry[:classname]}
       - else
-        -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
-        .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
+        .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
+    - else
+      -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
+      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
 
   #fullwidth
     - if request.site == 'code.org'
@@ -80,13 +92,13 @@
 
   - if show_single_hero
     - if num_columns == 3
-      - extra_images = Homepage.get_outer_column_images()
+      - extra_images = Homepage.get_outer_column_images(request)
       #actions{style: "padding: 0px"}
-        #bars{style: "display: flex; max-width: 1680px; margin: 0 auto;"}
-          .col-33.tablet-feature{style: "align-items: stretch; background-image: url(#{extra_images[:left_image]}); background-position: 100% 100%; background-size: contain; background-repeat: no-repeat"}
+        #bars{style: "display: flex; margin: 0 auto;"}
+          .col-33.tablet-feature{style: "background: url(#{extra_images[:left_image]}) no-repeat left bottom; background-size: contain"}
           .col-33{style: "z-index: 1; padding-top: 0px; padding-bottom: 40px"}
             = main_actions
-          .col-33.tablet-feature{style: "align-items: stretch; background-image: url(#{extra_images[:right_image]}); background-position: 0% 100%; background-size: contain; background-repeat: no-repeat"}
+          .col-33.tablet-feature{style: "background: url(#{extra_images[:right_image]}) no-repeat right bottom; background-size: contain"}
     - else
       #actions
         = main_actions

@@ -2,6 +2,22 @@
 si:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': මධ්‍යස්ත
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': මධ්‍යස්ත
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -186,6 +202,10 @@ si:
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
             '"x"': x
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': හදවත්
       gamelab_atTime:
         options:
           UNIT:
@@ -200,7 +220,7 @@ si:
           CONDITION:
             '"when"': විට
             '"while"': while
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': තත්පර
@@ -241,6 +261,12 @@ si:
             '90': යට
             '180': වම
             '270': උඩ
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': මධ්‍යස්ත
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -475,3 +501,7 @@ si:
         text: ඉදිරියට යන්න
       craft_placeTorch:
         text: විදුලි පන්දමක් පිහිටුවන්න
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': හදවත්

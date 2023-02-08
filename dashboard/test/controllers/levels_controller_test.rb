@@ -29,6 +29,8 @@ class LevelsControllerTest < ActionController::TestCase
     }
     stub_request(:get, /https:\/\/cdo-v3-shared.firebaseio.com/).
       to_return({"status" => 200, "body" => "{}", "headers" => {}})
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "should get rubric" do
@@ -635,6 +637,19 @@ class LevelsControllerTest < ActionController::TestCase
     assert_redirected_to "/"
   end
 
+  test 'can edit encrypted level' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    level = create :multi, encrypted: true
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+
+    level.update!(encrypted: 'true')
+    get :edit, params: {id: level.id}
+    assert_response :success
+  end
+
   test "should not create level if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
@@ -686,7 +701,8 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should load file contents when editing a dsl defined level" do
     level_path = 'config/scripts/test_demo_level.external'
-    data, _ = External.parse_file level_path
+    contents = File.read(level_path)
+    data, _ = External.parse(contents, level_path)
     External.setup data
 
     level = Level.find_by_name 'Test Demo Level'
@@ -698,7 +714,8 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
     level_path = 'config/scripts/test_external_markdown.external'
-    data, _ = External.parse_file level_path
+    contents = File.read(level_path)
+    data, _ = External.parse(contents, level_path)
     External.setup data
     CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
     level = Level.find_by_name 'Test External Markdown'
@@ -752,7 +769,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should prevent rename of stanadalone project level" do
     level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
-    create(:level, name: level_name) unless Level.where(name: level_name).exists?
+    create(:level, name: level_name) unless Level.exists?(name: level_name)
     level = Level.find_by(name: level_name)
 
     get :edit, params: {id: level.id}
@@ -827,7 +844,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should route new to levels" do
-    assert_routing({method: "post", path: "/levels"}, {controller: "levels", action: "create"})
+    assert_routing({method: "post", path: "http://#{CDO.dashboard_hostname}/levels"}, {controller: "levels", action: "create"})
   end
 
   test "should use level for route helper" do
@@ -938,14 +955,14 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update karel data properly" do
     game = Game.find_by_name("CustomMaze")
     maze_array = [
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 2}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 1, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 2, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 3, "range": 1}, {"tileType": 1, "featureType": 1, "value": 1, "cloudType": 4, "range": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}]
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 2}, {tileType: 1, featureType: 2, value: 1, cloudType: 1, range: 1}, {tileType: 1, featureType: 2, value: 1, cloudType: 2, range: 1}, {tileType: 1, featureType: 2, value: 1, cloudType: 3, range: 1}, {tileType: 1, featureType: 1, value: 1, cloudType: 4, range: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}]
     ]
     post :create, params: {
       level: {
@@ -1171,11 +1188,11 @@ class LevelsControllerTest < ActionController::TestCase
 
   test 'external markdown levels will render <user_id/> as the actual user id' do
     File.stubs(:write)
-    dsl_text = <<DSL
-name 'user_id_replace'
-title 'title for user_id_replace'
-markdown 'this is the markdown for <user_id/>'
-DSL
+    dsl_text = <<~DSL
+      name 'user_id_replace'
+      title 'title for user_id_replace'
+      markdown 'this is the markdown for <user_id/>'
+    DSL
     level = External.create_from_level_builder({}, {name: 'my_user_id_replace', dsl_text: dsl_text})
     sign_in @not_admin
     get :show, params: {id: level}
@@ -1271,7 +1288,7 @@ DSL
   # Assert that the url is a real S3 url, and not a placeholder.
   def assert_s3_image_url(url)
     assert(
-      %r{#{LevelSourceImage::S3_URL}.*\.png}.match(url),
+      %r{#{LevelSourceImage::S3_URL}.*\.png}o.match(url),
       "expected #{url.inspect} to be an S3 URL"
     )
   end

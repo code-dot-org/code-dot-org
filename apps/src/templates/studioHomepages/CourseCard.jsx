@@ -2,10 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
-import BlueHeader from '@cdo/static/small_blue_icons_fullwidth.png';
-import PurpleHeader from '@cdo/static/small_purple_icons_fullwidth.png';
+import Button from '@cdo/apps/templates/Button';
 
 /**
  * A card used on the homepage to display information about a particular course
@@ -16,37 +14,24 @@ class CourseCard extends Component {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    isProfessionalLearningCourse: PropTypes.bool
+    isRtl: PropTypes.bool.isRequired
   };
 
   render() {
-    const {
-      title,
-      description,
-      link,
-      isRtl,
-      isProfessionalLearningCourse
-    } = this.props;
-    const icon = isRtl ? 'chevron-left' : 'chevron-right';
+    const {title, description, link, isRtl} = this.props;
 
     return (
       <a href={link} style={styles.card}>
-        <img
-          src={isProfessionalLearningCourse ? BlueHeader : PurpleHeader}
-          style={styles.image}
-          alt=""
-        />
+        <div style={styles.header} />
         <div style={isRtl ? styles.titleRtl : styles.title}>{title}</div>
         <div style={styles.description}>
-          {description}
-          <div style={styles.linkBox}>
-            <h3 style={styles.continueLink}>{i18n.viewCourse()}</h3>
-            <FontAwesome
-              icon={icon}
-              style={isRtl ? styles.chevronRtl : styles.chevron}
-            />
-          </div>
+          <p>{description}</p>
+          <Button
+            style={styles.linkBox}
+            color={Button.ButtonColor.neutralDark}
+            text={i18n.viewCourse()}
+            href={link}
+          />
         </div>
       </a>
     );
@@ -58,17 +43,19 @@ const styles = {
     overflow: 'hidden',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.border_gray,
+    borderColor: color.neutral_dark20,
     position: 'relative',
     height: 245,
     width: 473,
     float: 'left',
-    marginBottom: 20
+    marginBottom: 20,
+    backgroundColor: color.neutral_light
   },
-  image: {
+  header: {
     position: 'absolute',
     width: 473,
-    height: 130
+    height: 130,
+    backgroundColor: color.brand_primary_default
   },
   title: {
     paddingTop: 10,
@@ -105,8 +92,8 @@ const styles = {
     fontSize: 14,
     lineHeight: 1.5,
     fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
-    background: color.white,
+    color: color.neutral_dark,
+    background: color.neutral_light,
     height: 130,
     width: '100%',
     boxSizing: 'border-box',

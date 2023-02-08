@@ -72,7 +72,7 @@ const styles = {
   },
   errors: {
     fontSize: 14,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     color: color.red,
     paddingTop: 5,
     paddingBottom: 5

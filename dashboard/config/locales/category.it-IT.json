@@ -1,0 +1,80 @@
+{
+  "it-IT": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Leggere"
+        },
+        "csta/AP": {
+          "description": "Algoritmi e programmazione"
+        },
+        "ccela/SL": {
+          "description": "Parlare e ascoltare"
+        },
+        "ccmath/MP": {
+          "description": "Esercizi di matematica"
+        },
+        "csta2011/CPP": {
+          "description": "Pratica e programmazione informatica"
+        },
+        "csta2011/CT": {
+          "description": "Pensiero computazionale"
+        },
+        "iste/1": {
+          "description": "Gli studenti dimostrano il pensiero creativo, costruiscono conoscenze e sviluppano prodotti e processi innovativi utilizzando la tecnologia."
+        },
+        "iste/4": {
+          "description": "Gli studenti usano il pensiero critico per pianificare e condurre ricerche, gestire progetti, risolvere problemi e prendere decisioni informate utilizzando risorse e strumenti digitali appropriati."
+        },
+        "ccela/L": {
+          "description": "Linguaggio"
+        },
+        "ccela/RI": {
+          "description": "Lettura informativa"
+        },
+        "ccmath/OA": {
+          "description": "Operazioni e pensiero algebrico"
+        },
+        "csta2011/CD": {
+          "description": "Computer e dispositivi di comunicazione"
+        },
+        "csta2011/CI": {
+          "description": "Impatti a livello comunitario, globale ed etico"
+        },
+        "ccmath/MD": {
+          "description": "Usare la probabilità per prendere decisioni"
+        },
+        "ccmath/NBT": {
+          "description": "Numeri e operazioni a base dieci"
+        },
+        "ccmath/G": {
+          "description": "Geometria"
+        },
+        "ccela/W": {
+          "description": "Scrivere"
+        },
+        "csta2011/CL": {
+          "description": "Collaborazione"
+        },
+        "iste/2": {
+          "description": "Gli studenti utilizzano i media e gli ambienti digitali per comunicare e collaborare anche a distanza, per supportare l'apprendimento individuale e contribuire all'apprendimento degli altri."
+        },
+        "csta/IC": {
+          "description": "Impatti dell'informatica"
+        },
+        "csta/NI": {
+          "description": "Reti e Internet"
+        },
+        "csta/DA": {
+          "description": "Dati e Analisi"
+        },
+        "csta/CS": {
+          "description": "Sistemi informatici"
+        },
+        "ngss/ETS1": {
+          "description": "Progettazione"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "pl-PL": {
+    "data": {
+      "standard_categories": {
+        "DA": {
+          "description": "Dane i Analiza"
+        },
+        "NI": {
+          "description": "Sieci i Internet"
+        },
+        "DAT-1": {
+          "description": "Sposób, w jaki komputer przedstawia dane różni się od tego, w jaki dane są interpretowane lub wyświetlane dla użytkownika. Do przekładania danych na sposób ich przedstawienia, który jest bardziej zrozumiały dla odbiorców, stosuje się programy komputerowe."
+        },
+        "IOC-2": {
+          "description": "Korzystanie z innowacji komputerowych może łączyć się z zagrożeniem dla osobistego bezpieczeństwa i tożsamości."
+        },
+        "DAT-1.D": {
+          "description": "Porównaj algorytmy kompresji danych w celu stwierdzenia, który jest najlepszy w określonym kontekście."
+        },
+        "IOC-2.B": {
+          "description": "Wyjaśnij, w jaki sposób można chronić zasoby komputerowe i jak można z nich korzystać w niewłaściwy sposób."
+        },
+        "CD": {
+          "description": "Komputery i urządzenia komunikacyjne"
+        },
+        "CI": {
+          "description": "Społeczność, wymiar globalny i czynniki etyczne"
+        },
+        "CL": {
+          "description": "Współpraca"
+        },
+        "CPP": {
+          "description": "Praktyki obliczeniowe i programowanie"
+        },
+        "CT": {
+          "description": "Myślenie komputacyjne"
+        },
+        "L": {
+          "description": "Język"
+        },
+        "RI": {
+          "description": "Czytanie w celach zdobywania informacji"
+        },
+        "RL": {
+          "description": "Czytanie literatury"
+        },
+        "SL": {
+          "description": "Mówienie i słuchanie"
+        },
+        "W": {
+          "description": "Pisanie"
+        },
+        "ETS1": {
+          "description": "Projektowanie inżynierskie"
+        },
+        "C": {
+          "description": "Kółka"
+        },
+        "F": {
+          "description": "Funkcje"
+        },
+        "G": {
+          "description": "Geometria"
+        },
+        "MD": {
+          "description": "Stosowanie prawdopodobieństwa do podejmowania decyzji"
+        },
+        "MP": {
+          "description": "Ćwiczenia matematyczne"
+        },
+        "NBT": {
+          "description": "Liczby i operacje w systemie dziesiętnym"
+        },
+        "OA": {
+          "description": "Operacje i myślenie algebraiczne"
+        },
+        "1": {
+          "description": "Uczniowie wykazują myślenie kreatywne, budują wiedzę i opracowują produkty oraz procesy innowacyjne z użyciem technologii."
+        },
+        "2": {
+          "description": "Uczniowie używają mediów i środowisk cyfrowych, aby komunikować się i wspólnie pracować, z uwzględnieniem odległości, aby wspierać naukę indywidualną i przyczyniają się do tego, że uczą się inni."
+        },
+        "4": {
+          "description": "Uczniowie używają umiejętności krytycznego myślenia do zaplanowania i prowadzenia badań, zarządzają projektami, rozwiązują problemy oraz podejmują świadome decyzje z użyciem odpowiednich narzędzi i zasobów cyfrowych."
+        },
+        "6": {
+          "description": "Uczniowie okazują głębokie zrozumienie pojęć, systemów i operacji technologicznych."
+        }
+      }
+    }
+  }
+}

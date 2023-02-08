@@ -14,13 +14,6 @@ module Pd::Application
       refute application.valid?
     end
 
-    test 'requires csp/csd replacement course info if a course is being replaced' do
-      application = build :pd_principal_approval_application, replace_course: Pd::Application::PrincipalApprovalApplication.options[:replace_course][1]
-      assert application.valid?
-      application.update_form_data_hash({replace_course: 'Yes'})
-      refute application.valid?
-    end
-
     test 'do not require anything if placeholder' do
       application = build :pd_principal_approval_application, form_data: {}.to_json
       assert application.valid?
@@ -47,7 +40,7 @@ module Pd::Application
     test 'corresponding teacher application is required' do
       principal_application = build :pd_principal_approval_application, teacher_application: nil
       refute principal_application.valid?
-      assert_equal ['Teacher application is required'], principal_application.errors.full_messages
+      assert_equal ['Teacher application must exist'], principal_application.errors.full_messages
 
       # fake guid won't work
       principal_application.application_guid = SecureRandom.uuid
@@ -59,9 +52,27 @@ module Pd::Application
       assert principal_application.valid?
     end
 
+    test 'teacher app status becomes "unreviewed" if previously "awaiting_admin_approval" upon admin submission' do
+      teacher_application = create :pd_teacher_application
+      teacher_application.update!(status: 'awaiting_admin_approval')
+
+      assert_equal 'awaiting_admin_approval', teacher_application.status
+      create :pd_principal_approval_application, teacher_application: teacher_application
+      assert_equal 'unreviewed', teacher_application.reload.status
+    end
+
+    test 'teacher application status does not change if not "awaiting_admin_approval" upon admin submission' do
+      teacher_application = create :pd_teacher_application
+      teacher_application.update!(status: 'pending')
+
+      assert_equal 'pending', teacher_application.status
+      create :pd_principal_approval_application, teacher_application: teacher_application
+      assert_equal 'pending', teacher_application.reload.status
+    end
+
     test 'create placeholder and send mail creates a placeholder and sends principal approval' do
       teacher_application = create :pd_teacher_application
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).
+      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).
         with(instance_of(Pd::Application::TeacherApplication)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 

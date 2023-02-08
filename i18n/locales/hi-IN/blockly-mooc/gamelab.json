@@ -1,4 +1,10 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "चौड़ाई",
+  "dropletBlock_createSprite_param3": "ऊंचाई",
+  "dropletBlock_setCollider_param0": "प्रकार",
+  "dropletBlock_setCollider_param4": "ऊंचाई",
+  "dropletBlock_setColliderEach_param0": "प्रकार",
+  "dropletBlock_setColliderEach_param4": "ऊंचाई",
+  "reinfFeedbackMsg": "आपने इसे समाप्त कर लिया है! अगले स्तर पर जाने के लिए \"जारी रखें\" पर क्लिक करें।",
+  "shareGame": "अपनी गेम साझा करें:"
 }

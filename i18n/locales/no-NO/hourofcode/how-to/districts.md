@@ -37,6 +37,6 @@ See our [event how to guide]({{ urls/how_to_events }}) for a sample run of show,
 Kodetimen er bare første steg på en reise for å lære seg mer om hvordan teknologien fungerer og hvordan du kan lage dine egne programmer. For å fortsette på denne reisen:
 
 - Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
-- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

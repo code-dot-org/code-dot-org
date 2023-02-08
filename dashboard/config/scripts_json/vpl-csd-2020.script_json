@@ -13,11 +13,11 @@
     },
     "new_name": null,
     "family_name": "vpl-csd",
-    "serialized_at": "2022-03-22 21:16:46 UTC",
+    "serialized_at": "2022-11-04 18:22:44 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "vpl-csd-2020"
     }
@@ -3247,6 +3247,28 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - P_2222-VPL"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2020",
+        "activity_section.key": "37193c56-5a4f-4b12-a2e5-2d300f3cb386"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - P_2222-VPL"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "VPL - CSD - Module 7 - CI - U6L2a"
         ],
@@ -3267,9 +3289,9 @@
       ]
     },
     {
-      "chapter": 100,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 101,
+      "position": 8,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3292,9 +3314,9 @@
       ]
     },
     {
-      "chapter": 101,
-      "position": 8,
-      "activity_section_position": 4,
+      "chapter": 102,
+      "position": 9,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3317,9 +3339,9 @@
       ]
     },
     {
-      "chapter": 102,
-      "position": 9,
-      "activity_section_position": 5,
+      "chapter": 103,
+      "position": 10,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3342,9 +3364,9 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 10,
-      "activity_section_position": 6,
+      "chapter": 104,
+      "position": 11,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3367,9 +3389,9 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 11,
-      "activity_section_position": 7,
+      "chapter": 105,
+      "position": 12,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3392,9 +3414,9 @@
       ]
     },
     {
-      "chapter": 105,
-      "position": 12,
-      "activity_section_position": 8,
+      "chapter": 106,
+      "position": 13,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3417,8 +3439,8 @@
       ]
     },
     {
-      "chapter": 106,
-      "position": 13,
+      "chapter": 107,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3442,8 +3464,8 @@
       ]
     },
     {
-      "chapter": 107,
-      "position": 14,
+      "chapter": 108,
+      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3467,8 +3489,8 @@
       ]
     },
     {
-      "chapter": 108,
-      "position": 15,
+      "chapter": 109,
+      "position": 16,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3492,8 +3514,8 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 16,
+      "chapter": 110,
+      "position": 17,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3517,8 +3539,8 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 17,
+      "chapter": 111,
+      "position": 18,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3542,8 +3564,8 @@
       ]
     },
     {
-      "chapter": 111,
-      "position": 18,
+      "chapter": 112,
+      "position": 19,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3567,8 +3589,8 @@
       ]
     },
     {
-      "chapter": 112,
-      "position": 19,
+      "chapter": 113,
+      "position": 20,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3592,8 +3614,8 @@
       ]
     },
     {
-      "chapter": 113,
-      "position": 20,
+      "chapter": 114,
+      "position": 21,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3617,8 +3639,8 @@
       ]
     },
     {
-      "chapter": 114,
-      "position": 21,
+      "chapter": 115,
+      "position": 22,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3642,7 +3664,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3667,7 +3689,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3692,7 +3714,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3717,7 +3739,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3742,7 +3764,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3767,7 +3789,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -3792,7 +3814,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -3817,7 +3839,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3842,7 +3864,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -3867,7 +3889,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -3892,7 +3914,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -3917,7 +3939,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -5112,6 +5134,18 @@
         "level.key": "VPL - CSD - Module 7 - CI",
         "script_level.level_keys": [
           "VPL - CSD - Module 7 - CI"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2020",
+        "activity_section.key": "37193c56-5a4f-4b12-a2e5-2d300f3cb386"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - P_2222-VPL",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - P_2222-VPL"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",

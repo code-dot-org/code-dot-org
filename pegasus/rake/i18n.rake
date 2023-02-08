@@ -1,4 +1,6 @@
 require 'cdo/google/drive'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 # Given a line of yml in the form of key: value, wraps unquoted strings in
 # double quotes, escaping existing quotes. Does not touch already quoted or
@@ -9,9 +11,9 @@ require 'cdo/google/drive'
 def format_enus_yml_with_quotes(line)
   match_data = /^ +[a-zA-Z0-9_ ]+?: *(.+)$/.match(line)
   if match_data # formats the values
-    unless /^(".*"|'.*'|\|.*)$/ =~ match_data[1]
+    unless /^(".*"|'.*'|\|.*)$/.match?(match_data[1])
       line.gsub!(/"/, '\\"')
-      line.gsub!(/^([ a-zA-Z0-9_ ]+?): *(.*)$/, '\1: "\2"')
+      line.gsub!(/^([ a-zA-Z0-9_]+?): *(.*)$/, '\1: "\2"')
     end
   else # formats the first key
     line.gsub!(/^en-US:$/, '"en-US":')
@@ -34,7 +36,7 @@ end
 
 namespace :i18n do
   desc 'download the latest i18n gsheet'
-  task :sync do
+  timed_task_with_logging :sync do
     gsheet = 'Data/I18n'
     path = pegasus_dir('cache/i18n/en-US.yml')
 

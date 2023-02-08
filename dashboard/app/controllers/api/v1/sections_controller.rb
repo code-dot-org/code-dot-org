@@ -1,8 +1,8 @@
-class Api::V1::SectionsController < Api::V1::JsonApiController
+class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
   before_action :get_course_and_unit, only: [:create, :update]
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :valid_course_offerings, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -20,7 +20,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Get the set of sections owned by the current user
   def index
     prevent_caching
-    render json: current_user.sections.map(&:summarize)
+    render json: current_user.sections.map(&:summarize_without_students)
   end
 
   # GET /api/v1/sections/<id>
@@ -38,12 +38,19 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # Once this has been done, endpoint can use CanCan load_and_authorize_resource
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
+    return head :bad_request unless Section.valid_participant_type? params[:participant_type]
+
+    if @course || @unit
+      participant_audience = @course ? @course.participant_audience : @unit.participant_audience
+      return head :forbidden unless Section.can_be_assigned_course?(participant_audience, params[:participant_type])
+    end
 
     section = Section.create(
       {
         user_id: current_user.id,
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
+        participant_type: params[:participant_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: @unit&.id,
         course_id: @course&.id,
@@ -68,6 +75,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     # Unhide unit for this section before assigning
     section.toggle_hidden_script @unit, false if @unit
+
+    if @course || @unit
+      participant_audience = @course ? @course.participant_audience : @unit.participant_audience
+      return head :forbidden unless Section.can_be_assigned_course?(participant_audience, section.participant_type)
+    end
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
@@ -112,6 +124,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       }, status: :bad_request
       return
     end
+    # add_student returns 'forbidden' when user can not be participant in section
+    if result == 'forbidden'
+      render json: {
+        result: 'cant_be_participant'
+      }, status: :forbidden
+      return
+    end
     # add_student returns 'full' when @section has or will have 500 followers
     if result == 'full'
       render json: {
@@ -129,6 +148,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: result
     }
   end
@@ -139,6 +160,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: "success"
     }
   end
@@ -152,23 +175,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     }
   end
 
-  def student_script_ids
-    render json: {studentScriptIds: @section.student_script_ids}
-  end
-
   # GET /api/v1/sections/membership
   # Get the set of sections that the current user is enrolled in.
   def membership
     return head :forbidden unless current_user
     render json: current_user.sections_as_student, each_serializer: Api::V1::SectionNameAndIdSerializer
-  end
-
-  # GET /api/v1/sections/valid_scripts
-  def valid_scripts
-    return head :forbidden unless current_user
-
-    scripts = Script.valid_scripts(current_user).map(&:assignable_info)
-    render json: scripts
   end
 
   # GET /api/v1/sections/valid_course_offerings
@@ -185,11 +196,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     participant_types =
       if current_user.permission?(UserPermission::PLC_REVIEWER) || current_user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || current_user.permission?(UserPermission::LEVELBUILDER)
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
       elsif current_user.permission?(UserPermission::FACILITATOR)
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
       else
-        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
+        [Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
       end
 
     render json: {availableParticipantTypes: participant_types}
@@ -237,7 +248,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: {result: 'success'}
   # if the group data is invalid we will get a record invalid exception
   rescue ActiveRecord::RecordInvalid
-    render json: {result: 'invalid groups'}, status: 400
+    render json: {result: 'invalid groups'}, status: :bad_request
   end
 
   # POST /api/v1/sections/<id>/code_review_enabled
@@ -262,21 +273,26 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def get_course_and_unit
     return head :forbidden if current_user.nil?
 
-    course_id = params[:course_id]
-    script_id = params[:script_id]
+    if params[:course_version_id]
+      course_version = CourseVersion.find_by_id(params[:course_version_id])
+      return head :bad_request unless course_version
 
-    if script_id
-      return head :forbidden unless Script.valid_unit_id?(current_user, script_id)
-      @unit = Script.get_from_cache(script_id)
-      return head :bad_request if @unit.nil?
-      # If given a course and script, make sure the script is in that course
-      return head :bad_request if course_id && course_id.to_i != @unit.unit_group.try(:id)
-      # If script has a course and no course_id was provided, use default course
-      course_id ||= @unit.unit_group.try(:id)
-      @course = UnitGroup.get_from_cache(course_id) if course_id
-    elsif course_id
-      return head :forbidden unless UnitGroup.valid_course_id?(course_id, current_user)
-      @course = UnitGroup.get_from_cache(params[:course_id].to_i)
+      if course_version.content_root_type == 'UnitGroup'
+        course_id = course_version.content_root_id
+        @course = UnitGroup.get_from_cache(course_id)
+        return head :bad_request unless @course
+        return head :forbidden unless @course.course_assignable?(current_user)
+        @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
+        return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
+      elsif course_version.content_root_type == 'Unit'
+        unit_id = course_version.content_root_id
+        @unit = Unit.get_from_cache(unit_id)
+        return head :bad_request unless @unit
+        return head :forbidden unless @unit.course_assignable?(current_user)
+      end
+    else
+      # Should not get a unit_id unless also get a course version which is course
+      return head :bad_request if params[:unit_id]
     end
   end
 end

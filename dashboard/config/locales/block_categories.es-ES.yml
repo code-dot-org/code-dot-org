@@ -5,13 +5,17 @@ es:
       Actions: Acciones
       Advanced: Avanzado
       Behaviors: Comportamientos
+      'Behaviors ': 'Comportamientos '
+      Boolean: Booleano
       Brushes: Pinceles
+      Category: Categoría
       Color: Color
       Comment: Comentario
       Comments: Comentario
       Conditionals: Condicionales
       Dancers: Bailarines
       Default: Por defecto
+      Effects: Efectos
       Events: Eventos
       Functions: Funciones
       'Functions ': Funciones
@@ -24,9 +28,13 @@ es:
       Logic: Lógica
       Loops: Bucles
       Math: Matemáticas
+      Number: Número
       Numbers: Numeros
+      Picker: Rocolector/a
+      Prebuilt: Prefabricado
       Properties: Propiedades
       Sprites: Sprites
+      String: Cadena
       Text: Texto
       Variables: Variables
       'Variables ': Variables

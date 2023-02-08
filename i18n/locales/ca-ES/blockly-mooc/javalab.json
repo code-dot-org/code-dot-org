@@ -1,5 +1,10 @@
 {
   "cancel": "Cancel·lar",
+  "create": "Crea",
+  "createNewFile": "Crear fitxer nou",
   "delete": "Elimina",
-  "rename": "Canvia el nom"
+  "invalidMainMethod": "S'ha produït un error al vostre mètode principal. Assegureu-vos que el mètode és públic, estàtic i té un tipus de retorn en blanc i només té un argument (String[] args).",
+  "rename": "Canvia el nom",
+  "renameFile": "Canviar el nom del fitxer",
+  "submit": "Envia"
 }

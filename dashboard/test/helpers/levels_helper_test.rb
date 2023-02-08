@@ -167,7 +167,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "blockly_options 'level.showEndOfLessonMsgs' is true if script.show_unit_overview_between_lessons? is true" do
-    Script.any_instance.stubs(:show_unit_overview_between_lessons?).returns true
+    Unit.any_instance.stubs(:show_unit_overview_between_lessons?).returns true
     @script = create :script
     @lesson = create :lesson
     @level = create :applab
@@ -179,7 +179,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "blockly_options 'level.showEndOfLessonMsgs' is false if script.show_unit_overview_between_lessons? is false" do
-    Script.any_instance.stubs(:show_unit_overview_between_lessons?).returns false
+    Unit.any_instance.stubs(:show_unit_overview_between_lessons?).returns false
     @script = create :script
     @lesson = create :lesson
     @level = create :applab
@@ -309,7 +309,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "app_options sets level_requires_channel to false if level is channel backed with contained levels" do
     @level = create :applab
-    contained_level = create :level
+    contained_level = create :multi
     @level.update(contained_level_names: [contained_level.name])
     assert_equal false, app_options['levelRequiresChannel']
   end
@@ -322,7 +322,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "app_options sets level_requires_channel to true for Javalab with contained levels" do
     @level = create :javalab
-    contained_level = create :level
+    contained_level = create :multi
     @level.update(contained_level_names: [contained_level.name])
     @controller.stubs(:params).returns({action: 'edit_blocks'})
     assert_equal true, app_options['levelRequiresChannel']
@@ -424,6 +424,27 @@ class LevelsHelperTest < ActionView::TestCase
 
     # calling app_options should set readonly_workspace, since we're viewing for
     # different user
+    app_options
+    assert_equal true, view_options[:readonly_workspace]
+  end
+
+  test 'readonly workspace should be set if the level is channel-backed and a code review is open for the project' do
+    @user = create :user
+    sign_in @user
+    stub_storage_id_for_user_id(@user.id)
+
+    script = create(:script)
+    @level = create :javalab
+    create(:script_level, script: script, levels: [@level])
+
+    create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
+    @channel_id = get_channel_for(@level, script.id, @user)
+    assert_not_nil @channel_id
+
+    _,  @project_id = storage_decrypt_channel_id(@channel_id)
+    create :code_review, user_id: @user.id, project_id: @project_id
+
+    # calling app_options should set readonly_workspace, since a code review is open
     app_options
     assert_equal true, view_options[:readonly_workspace]
   end

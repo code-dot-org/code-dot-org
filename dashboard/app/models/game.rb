@@ -21,7 +21,7 @@
 class Game < ApplicationRecord
   include Seeded
   has_many :levels
-  belongs_to :intro_video, foreign_key: 'intro_video_id', class_name: 'Video'
+  belongs_to :intro_video, class_name: 'Video', optional: true
 
   def self.by_name(name)
     (@@game_cache ||= Game.all.index_by(&:name))[name].try(:id)
@@ -234,7 +234,7 @@ class Game < ApplicationRecord
   end
 
   def has_i18n?
-    !([NETSIM, APPLAB, GAMELAB, WEBLAB].include? app)
+    !([NETSIM].include? app)
   end
 
   def use_firebase?

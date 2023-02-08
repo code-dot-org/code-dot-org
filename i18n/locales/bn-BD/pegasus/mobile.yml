@@ -847,6 +847,12 @@
   coursed-2021_gradelevel: গ্রেড ৮ +
   coursee-2021_gradelevel: বয়স 8-12
   coursef-2021_gradelevel: বয়স 9-13
+  coursea-2022_gradelevel: বয়স 4-7
+  courseb-2022_gradelevel: বয়স 5-8
+  coursec-2022_gradelevel: বয়স 6-10
+  coursed-2022_gradelevel: গ্রেড ৮ +
+  coursee-2022_gradelevel: বয়স 8-12
+  coursef-2022_gradelevel: বয়স 9-13
   accelerated_gradelevel: "বয়স ১০-১৮"
   codeorg_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
   codeintl_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
@@ -1195,3 +1201,4 @@
   footer_support: "সম্প্রদায় এবং সহায়তা"
   footer_terms: "শর্তাবলী"
   ai_description: "বর্ণনা"
+  hoc2022_landing_page_create_title: "তৈরি করুন"

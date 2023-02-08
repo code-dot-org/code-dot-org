@@ -64,6 +64,7 @@ ko:
       name: 맵 이름
       nectar: 꽃꿀의 양
       nectars: 꽃꿀
+      object: 객체로 이동합니다
       planet: 행성
       player_score: 플레이어_점수
       points: 점수
@@ -79,8 +80,10 @@ ko:
       screenHeight: 화면높이
       screenWidth: 화면너비
       shout: 소리지름
+      sides: 변
       size: 크기
       speed: 스피드
+      type: 종류
       variable: 변수
       width: 너비
       wizard: 마법사

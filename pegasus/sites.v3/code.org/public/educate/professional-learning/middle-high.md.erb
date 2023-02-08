@@ -12,8 +12,15 @@ theme: responsive
   }
 </style>
 
-# Professional Learning for Middle and High School Teachers	
+# Professional Learning for Middle and High School Teachers
+
+<!-- Skinny banners -->
+<% if !!DCDO.get('csa-skinny-banner', false) %>
+<%= view :csa_skinny_banner, link_address: '/educate/csa', button_label: 'Learn more' %>
+<% else %>
 <%= view :professional_learning_marketing_banner, audience_text: 'you', link_address: '/educate/professional-learning/program-information', button_label: 'Apply now' %>
+<% end %>
+
 
 <a name="scholarships"></a>
 <div class="col-50">
@@ -224,7 +231,7 @@ Want to help spread the word? <a href="https://code.org/files/programs/codeorg-p
 The Code.org Professional Learning Program is open to educators who are interested in teaching Code.org courses - no prior computer science experience required! In order to participate in this program, we ask that applicants:
 
 * Commit to participating in the full, year-long professional learning program
-* Plan to teach the course in the 2021-22 school year
+* Plan to teach the course in the upcoming school year
 * For CS Discoveries, teach students between 6th and 10th grade
 * For CS Principles, teach students between 9th and 12th grade
 * For Computer Science A, teach students familiar to the discipline, having already covered CSD or CSP, or a similar course

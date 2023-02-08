@@ -18,7 +18,7 @@ module Services
         # sync in. Ultimately, we want one file per content type; one for all
         # lessons, one for all activities, one for all resources, etc.
         def self.reorganize
-          Languages.get_locale.each do |prop|
+          PegasusLanguages.get_locale.each do |prop|
             locale = prop[:locale_s]
             next if locale == 'en-US'
             locale_dir = File.join('i18n/locales', locale, 'curriculum_content')
@@ -34,7 +34,7 @@ module Services
 
             # Then we recursively flatten all of our hashes of objects, to group them
             # by type rather than by script
-            result = flatten(script_objects, ScriptCrowdinSerializer, :scripts)
+            result = flatten(script_objects, Serializers::ScriptCrowdinSerializer, :scripts)
 
             # Then we apply some postprocessing.
             postprocess(result)
@@ -58,19 +58,46 @@ module Services
           if result.key?(:lessons)
             rekeyed_lessons = result[:lessons].map do |lesson_url, lesson_data|
               route_params = Rails.application.routes.recognize_path(lesson_url)
-              lesson = Lesson.joins(:script).
-                find_by(
+              # Filter for only lessons which are "numbered".
+              # Only these lessons guarantee that their relative position is unique.
+              lessons = Lesson.joins(:script).
+                where(
                   "scripts.name": route_params[:script_id],
                   relative_position: route_params[:position].to_i,
-                  has_lesson_plan: true
-                )
-              unless lesson.present?
-                STDERR.puts "could not find lesson for url #{lesson_url.inspect}"
+                ).select(&:numbered_lesson?)
+              if lessons.count == 0
+                warn "Could not find lesson for url #{lesson_url.inspect}"
                 next
               end
+              if lessons.count > 1
+                warn "More than one lesson found for url #{lesson_url.inspect}. This should be investigated."
+                next
+              end
+              lesson = lessons.first
               [Services::GloballyUniqueIdentifiers.build_lesson_key(lesson), lesson_data]
             end
             result[:lessons] = rekeyed_lessons.compact.to_h
+          end
+
+          # Same case as lessons for reference_guides
+          if result.key?(:reference_guides)
+            rekeyed_reference_guides = result[:reference_guides].map do |reference_guide_url, reference_guide_data|
+              route_params = Rails.application.routes.recognize_path(reference_guide_url)
+              # :course_course_name param is generated with ReferenceGuide.course_offering_version.
+              # Reversing that to look up the object.
+              split_course_name = route_params[:course_course_name].split("-")
+              course_version_key = split_course_name.pop
+              course_offering_key = split_course_name.join("-")
+              reference_guide = CourseOffering.find_by_key(course_offering_key).
+                course_versions.find_by_key(course_version_key).
+                reference_guides.find_by_key(route_params[:key])
+              if reference_guide.nil?
+                warn "Could not find reference_guide for url #{reference_guide_url.inspect}"
+                next
+              end
+              [Services::GloballyUniqueIdentifiers.build_reference_guide_key(reference_guide), reference_guide_data]
+            end
+            result[:reference_guides] = rekeyed_reference_guides.compact.to_h
           end
 
           # We also provide URLs to the translators for Resources only; because
@@ -79,7 +106,7 @@ module Services
           # these URLs
           if result.key?(:resources)
             result[:resources].each do |_key, resource|
-              next unless resource[:url].present?
+              next if resource[:url].blank?
               resource[:url].strip!
               resource[:url].delete_prefix!('<')
               resource[:url].delete_suffix!('>')

@@ -6,6 +6,8 @@ require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
 require 'net/http'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 # CircleCI Build Tags
 # We provide some limited control over CircleCI's build behavior by adding these
@@ -22,6 +24,9 @@ RUN_ALL_TESTS_TAG = 'test all'.freeze
 
 # Only run apps tests on container 0
 RUN_APPS_TESTS_TAG = 'test apps'.freeze
+
+# Don't run any apps tests
+SKIP_APPS_TESTS_FLAG = 'skip apps'.freeze
 
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
@@ -52,7 +57,7 @@ SKIP_EYES = 'skip eyes'.freeze
 
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
-  task :run_tests do
+  timed_task_with_logging :run_tests do
     unless CircleUtils.unit_test_container?
       ChatClient.log "Wrong container, skipping"
       next
@@ -65,6 +70,9 @@ namespace :circle do
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
       RakeUtils.rake_stream_output 'test:apps'
       RakeUtils.rake_stream_output 'test:changed:all_but_apps'
+    elsif CircleUtils.tagged?(SKIP_APPS_TESTS_FLAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_APPS_TESTS_FLAG}], skipping apps tests."
+      RakeUtils.rake_stream_output 'test:changed:all_but_apps'
     elsif CircleUtils.tagged?(SKIP_UNIT_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UNIT_TESTS_TAG}], skipping unit tests."
     else
@@ -75,7 +83,7 @@ namespace :circle do
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task :run_ui_tests do
+  timed_task_with_logging :run_ui_tests do
     unless CircleUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next
@@ -100,7 +108,7 @@ namespace :circle do
     end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
-      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
+      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
       RakeUtils.system_stream_output "bundle exec ./runner.rb" \
@@ -113,6 +121,7 @@ namespace :circle do
           " --abort_when_failures_exceed 10" \
           " --retry_count 2" \
           " --output-synopsis" \
+          " --with-status-page" \
           " --html"
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
@@ -124,6 +133,7 @@ namespace :circle do
             " --circle" \
             " --parallel 10" \
             " --retry_count 1" \
+            " --with-status-page" \
             " --html"
       end
     end
@@ -134,7 +144,7 @@ namespace :circle do
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
-  task :check_for_unexpected_apps_changes do
+  timed_task_with_logging :check_for_unexpected_apps_changes do
     # Changes to yarn.lock is a particularly common case; catch it early and
     # provide a helpful error message.
     if RakeUtils.git_staged_changes? apps_dir 'yarn.lock'
@@ -151,7 +161,7 @@ namespace :circle do
     end
   end
 
-  task :seed_ui_test do
+  timed_task_with_logging :seed_ui_test do
     unless CircleUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next

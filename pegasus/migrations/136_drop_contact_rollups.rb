@@ -5,7 +5,7 @@ Sequel.migration do
     # We (as of April 2021) manage this process in Dashboard.
     # See this file (ContactRollupsV2) for more details:
     # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/contact_rollups_v2.rb
-    drop_table(:contact_rollups)
+    drop_table?(:contact_rollups)
 
     # This table was generated dynamically if you ran the contact rollups process
     # (ie, was never created by migration).

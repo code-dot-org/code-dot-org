@@ -170,5 +170,7 @@ describe('openUrl', () => {
   it('triggers a call to filterURL for an external link', () => {
     openUrl({url: 'www.google.com'});
     expect($.ajax).to.have.been.calledOnce;
+    openUrl({url: 'code.org.otherdomain.com'});
+    expect($.ajax).to.have.been.calledTwice;
   });
 });

@@ -2,6 +2,22 @@
 ky:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': орто
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': орто
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -237,6 +253,11 @@ ky:
             '"space"': космос
             '"x"': x
             '"y"': 'y'
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрөктөр
+            '"rain"': жаан
       gamelab_atTime:
         options:
           UNIT:
@@ -253,7 +274,7 @@ ky:
           CONDITION:
             '"when"': качан
             '"while"': болуп турганда
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': секунд
@@ -302,6 +323,12 @@ ky:
             '90': ылдый
             '180': солго
             '270': өйдө
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': орто
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -615,3 +642,8 @@ ky:
         text: алдыга жылдыр
       craft_placeTorch:
         text: чырак орнотуу
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрөктөр
+            '"rain"': жаан

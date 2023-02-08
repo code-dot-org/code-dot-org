@@ -1,0 +1,26 @@
+{
+  "th-TH": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Common Core English Language Arts Standards"
+        },
+        "csta": {
+          "name": "มาตรฐานวิทยาการคอมพิวเตอร์ CSTA K-12 (2017)"
+        },
+        "ccmath": {
+          "name": "มาตรฐานทางคณิตศาสตร์หลักโดยทั่วไป"
+        },
+        "csta2011": {
+          "name": "มาตรฐานวิทยาการคอมพิวเตอร์ CSTA K-12 (2011)"
+        },
+        "iste": {
+          "name": "มาตรฐาน ISTE สำหรับนักเรียน"
+        },
+        "csp2021": {
+          "name": "กรอบแนวคิด CSP"
+        }
+      }
+    }
+  }
+}

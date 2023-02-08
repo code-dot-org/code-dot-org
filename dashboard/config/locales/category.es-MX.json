@@ -1,0 +1,107 @@
+{
+  "es-MX": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Leyendo Literatura"
+        },
+        "csta/AP": {
+          "description": "Algoritmos y programación"
+        },
+        "ccela/SL": {
+          "description": "Hablar y escuchar"
+        },
+        "ccmath/MP": {
+          "description": "Prácticas matemáticas"
+        },
+        "csta2011/CPP": {
+          "description": "Práctica de computación y programación"
+        },
+        "csta2011/CT": {
+          "description": "Pensamiento computacional"
+        },
+        "iste/1": {
+          "description": "Los estudiantes demuestran pensamiento creativo, construyen conocimiento y desarrollan productos y procesos innovadores utilizando tecnología."
+        },
+        "iste/4": {
+          "description": "Los estudiantes usan habilidades de pensamiento crítico para planificar y realizar investigaciones, gestionar proyectos, resolver problemas y tomar decisiones informadas utilizando herramientas y recursos digitales apropiados."
+        },
+        "iste/6": {
+          "description": "Los estudiantes demuestran un conocimiento sólido de conceptos, sistemas y operaciones de tecnología."
+        },
+        "ccela/L": {
+          "description": "Idioma"
+        },
+        "ccela/RI": {
+          "description": "Lectura informativa"
+        },
+        "ccmath/OA": {
+          "description": "Operaciones y Pensamiento Algebraico"
+        },
+        "csta2011/CD": {
+          "description": "Ordenadores y Dispositivos de Comunicación"
+        },
+        "csta2011/CI": {
+          "description": "Impactos Sociales, Globales y Éticos"
+        },
+        "ccmath/MD": {
+          "description": "Usando Probabilidades para Tomar Decisiones"
+        },
+        "ccmath/NBT": {
+          "description": "Números y Operaciones en Base Diez"
+        },
+        "ccmath/G": {
+          "description": "Geometría"
+        },
+        "ccela/W": {
+          "description": "Escribir"
+        },
+        "csta2011/CL": {
+          "description": "Colaboración"
+        },
+        "iste/2": {
+          "description": "Los estudiantes utilizan medios y entornos digitales para comunicarse y trabajar en colaboración, incluso a distancia, para apoyar el aprendizaje individual y contribuir al aprendizaje de otros."
+        },
+        "csta/IC": {
+          "description": "Impactos de la computación"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Explica cómo se pueden proteger los recursos informáticos y cómo se puede hacer un mal uso de ellos."
+        },
+        "csta/NI": {
+          "description": "Redes e Internet"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Compara los algoritmos de compresión de datos para determinar cuál es el mejor en un contexto determinado."
+        },
+        "csta/DA": {
+          "description": "Datos y Análisis"
+        },
+        "csta/CS": {
+          "description": "Sistemas de computación"
+        },
+        "ngss/ETS1": {
+          "description": "Diseño Ingenieril"
+        },
+        "ai4k12-2021/3-A-ii": {
+          "description": "La naturaleza del aprendizaje - Búsqueda de patrones en los datos"
+        },
+        "ai4k12-2021/3-A-iv": {
+          "description": "La naturaleza del aprendizaje - Construcción contra uso de un razonador"
+        },
+        "ai4k12-2021/3-A-i": {
+          "description": "La naturaleza del aprendizaje - Humanos contra máquinas"
+        },
+        "ai4k12-2021/3-C-i": {
+          "description": "Conjuntos de datos - Conjuntos de características"
+        },
+        "ai4k12-2021/3-A-iii": {
+          "description": "La naturaleza del aprendizaje - Entrenamiento de un modelo"
+        },
+        "ai4k12-2021/3-C-iii": {
+          "description": "Conjuntos de datos: Sesgo"
+        }
+      }
+    }
+  }
+}

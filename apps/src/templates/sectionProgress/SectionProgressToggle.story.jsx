@@ -12,6 +12,7 @@ export default storybook => {
           setCurrentView={() => {
             console.log('Toggle view.');
           }}
+          scriptId={1}
         />
       )
     };
@@ -26,6 +27,7 @@ export default storybook => {
           setCurrentView={() => {
             console.log('Toggle view.');
           }}
+          scriptId={1}
         />
       )
     };
@@ -41,6 +43,7 @@ export default storybook => {
           setCurrentView={() => {
             console.log('Toggle view.');
           }}
+          scriptId={1}
         />
       )
     };

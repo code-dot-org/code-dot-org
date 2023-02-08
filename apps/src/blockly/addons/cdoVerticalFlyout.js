@@ -32,7 +32,7 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
     // Constrain the flyout to not be wider than 40% of the total workspace space.
     flyoutWidth = Math.min(
       flyoutWidth,
-      this.targetWorkspace.metricsManager_.getSvgMetrics().width * 0.4
+      this.targetWorkspace.getMetricsManager().getSvgMetrics().width * 0.4
     );
     /* End CDO Customization */
 
@@ -90,7 +90,7 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
       return;
     }
     this.reflowInternal_();
-    const toolboxWidth = this.targetWorkspace.getToolboxWidth();
+    const toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
     document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
   }
 }

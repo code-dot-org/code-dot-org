@@ -4,6 +4,22 @@ da:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': mellem
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': mellem
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "\"{GROUP} skift hver {N} takter \nmellem {MOVE1} og {MOVE2}\""
         options:
@@ -212,20 +228,12 @@ da:
             MOVES.XArmsUp: Stræk
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
-      Dancelab_everyMeasuresRange:
-        text: 'gentag hver {N} takt efter {START} '
       Dancelab_everySeconds:
         text: 'gentag hver {N} {UNIT} '
         options:
           UNIT:
             '"measures"': målt
             '"seconds"': sekunder
-      Dancelab_everySecondsRange:
-        text: 'hver {N} {UNIT} fra {START} til {STOP} '
-        options:
-          UNIT:
-            measures: Takt
-            seconds: Sekunder
       Dancelab_everyVerseChorus:
         text: 'hver {UNIT} '
         options:
@@ -977,6 +985,14 @@ da:
         text: opret
       Dancelab_whenSetup2:
         text: opret
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn
+            '"starburst"': Starburst
       gamelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
       gamelab_addTarget:
@@ -1030,7 +1046,7 @@ da:
         text: kan flyttes
       gamelab_edgesDisplace:
         text: kant brik {SPRITE} fra flytning
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'gentag hver {N} {UNIT} '
         options:
           UNIT:
@@ -1162,8 +1178,6 @@ da:
         options:
           EFFECT:
             '"rain"': regn
-      gamelab_makeNewScaledSprite:
-        text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
       gamelab_makeProjectile:
@@ -1173,6 +1187,12 @@ da:
             '90': ned
             '180': venstre
             '270': op
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': mellem
+            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} kigger i retning {DIRECTION}"
         options:
@@ -1212,6 +1232,10 @@ da:
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": hop
+      gamelab_playSoundOptionsSoccer:
+        text: afspil lyd {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: afspil lyd {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1600,6 +1624,8 @@ da:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': klokke
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hop
+      Poetry_playSoundOptionsSpace:
+        text: afspil lyd {SOUND}
       Poetry_setBackground:
         text: indstil baggrundsfarve {COLOR}
       Poetry_setBackgroundEffect:
@@ -1662,6 +1688,11 @@ da:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: flyt fremad
       RyanLab_turnLeft:
@@ -1858,5 +1889,13 @@ da:
           DIR:
             right: til højre ↻
             left: til venstre ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn
+            '"starburst"': Starburst
       validation_validatedBackground:
         text: sæt baggrund til {IMG}

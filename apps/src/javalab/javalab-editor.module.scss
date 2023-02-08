@@ -1,0 +1,49 @@
+@import "color.scss";
+
+.editor {
+  width: 100%;
+  min-height: 100px;
+  background-color: $white;
+}
+
+.darkBackground {
+  background-color: $darkest_slate_gray;
+}
+
+.fileMenuToggleButton {
+  padding: 0;
+  height: 20px;
+  width: 13px;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+  }
+}
+
+.darkFileMenuToggleButton {
+  color: $white;
+}
+
+.tabs {
+  background-color: $background_gray;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.fileTypeIcon {
+  margin: 5px;
+}
+
+.warningBanner {
+  z-index: 99;
+  background-color: $light_yellow;
+  height: 20px;
+  padding: 5px;
+  width: 100%;
+  color: $black;
+}

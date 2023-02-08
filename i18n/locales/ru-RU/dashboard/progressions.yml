@@ -2,16 +2,46 @@ ru:
   data:
     progressions:
       '"If/Else" with the Bee': '«Если/Иначе» с Пчёлкой'
+      8-Bit Binary Number Widget: Виджет 8-Битных Двоичных Чисел
+      AI Lab and Isaac's Data: ИИ Лаборатория и данные Айзека
+      AI Lab and Kim's Data: ИИ Лаборатория и данные Кима
       AI Machine Learning - Video: 'Искусственный интеллект: машинное обучение - видео'
+      'AI for Oceans: Fish vs Not Fish': 'ИИ для океанов: Рыба по сравнению с Не Рыбой'
+      'AI for Oceans: Types of Fish': 'ИИ для океанов: Виды Рыб'
       'AI: Impact on Society - Video': 'Искусственный интеллект: воздействие на общество - видео'
       'AI: Training Data & Bias - Video': 'Искусственный интеллект: обучающие данные и искажения - видео'
       Accelerometer Events: События акселерометра
+      Add Content and HTML: Добавление Контента и HTML
+      Add Content and Structure to Your Page: Добавить Контент и Структуру на Свою Страницу
+      Add Movement: Добавить Движение
+      Add Sprites: Добавить Спрайты
+      Add Style: Добавить Стиль
+      Add Style to Your Page: Добавить Стиль на Свою Страницу
+      Add Text: Добавить Текст
+      Add a Welcome Screen: Добавить Экран Приветствия
       Adding Images: Добавление изображений
+      Adding New Screens: Добавить Новые Экраны
+      Adding Pages: Добавить Страницы
       Adding Screens: Добавление экранов
       Alien Defender: Война с чужими
+      Alternative Datasets: Альтернативные Наборы Данных
       Animate Your Scene: Анимируйте свою сцену
       App Lab Intro - Video: Введение в Лабораторию приложений - видео
       'App Project: Screen Design': 'Проектное решение для приложения: компоновка окна'
+      'App: Choose a Kid''s Movie': 'Приложение: Выбор Детского Фильма'
+      'App: Friend Finder': 'Приложение: Поиск Друзей'
+      'App: Guess the Number': 'Приложение: Угадай Число'
+      'App: How Many Countries': 'Приложение: Сколько Стран'
+      'App: Improved Pet App': 'Приложение: Улучшенное Приложение для Питомца'
+      'App: Is It Your Birthday?': 'Приложение: Это Ваш День рождения?'
+      'App: My Famous Birthday': 'Приложение: Мой Славный День рождения'
+      'App: National Parks': 'Приложение: Национальные Парки'
+      'App: Outfit Picker': 'Приложение: Подбор Одежды'
+      'App: Pet Chooser': 'Приложение: Выбор Питомца'
+      'App: Stamp Notebook': 'Приложение: Альбом для Марок'
+      'App: Story Creator': 'Приложение: Создатель Повести'
+      'App: The Fastest Finger': 'Приложение: Самый быстрый Палец'
+      'App: Where Should I Live?': 'Приложение: Где Я Должен Жить?'
       Artist Intro with JR Hildebrand: Дж. Р. Хильдебранд представляет инструмент «Художник»
       Artist Intro with JR Hildebrande: Дж. Р. Хильдебранд представляет инструмент «Художник»
       Artist Project: Проект "Художник"
@@ -25,9 +55,12 @@ ru:
       Begin planning your project: Начните планировать свой проект
       Begin planning your project_2018: Начните планировать свой project_2018
       Binary Bracelets - Unplugged Activity: Двоичные браслеты — Урок без компьютера
+      Binary Number Widget: Виджет Двоичных Чисел
       Binary Numbers: Двоичные числа
       Board Events: События на доске
       Board Input and Output: Ввод и вывод на доске
+      Book Recommender App: Приложение Рекомендатель Книги
+      Book Recommender Model Card: Карточка Модели Рекомендателя Книги
       Boolean Comparison: Булево сравнение
       Build a Platform Jumper: Создать «Platform Jumper»
       Build a Screen: Создать окно
@@ -43,15 +76,26 @@ ru:
       CSS Classes: CSS классы
       CSS Text Properties: Свойства CSS текста
       CSS and Style Sheets: CSS и таблицы стилей
+      Cake Defender: Защитник Торта
+      Cake Survey: Осмотр Торта
       Challenge: Задание
       Challenge Levels: Уровни задания
+      Challenge/Practice: Задача/Практика
+      'Challenge: Lists': 'Задача: Списки'
+      'Challenge: RGB Colors': 'Задача: Цвета RGB'
       Challenges: Задания
       Change: Изменить
       Changing Screens: Изменение экранов
+      Check Your Work: Проверить Свою Работу
+      Check-In Survey: Регистрационный Опрос
       Checking for a Winner: Проверка победителя
+      'Choice Levels: Customize Your App': 'Выберите Уровни: Настройте Свое Приложение'
       Choose Your Own Adventure: Выбери свое собственное приключение
       Choosing Good IDs: Выбор правильных идентификаторов
+      Club Datasets: Клубные Наборы данных
+      Code Prediction: Предсказание Кода
       Code Your Own Flappy Game: Создайте свою собственную игру «Порхающая птичка»
+      Code Your Page: Программировать Свою Страницу
       Collector Game: Игра «Собиратель»
       Collision Detection: Обнаружение столкновений
       Collisions: Столкновения
@@ -62,6 +106,7 @@ ru:
       Conditionals with Cards - Unplugged Activity: Условные операторы с картами — Урок без компьютера
       'Conditionals: If Statements': ' Операторы Если'
       'Conditionals: If and If/Else Statements': 'Условные операторы: операторы «Если» и «Если/Иначе»'
+      Control Your Player: Управлять Своим Игроком
       Course E Artist Project: Курс E. Проект "Художник"
       Course E Sprite Lab Project: "Курс Д: проект в Лаборатории спрайтов\n"
       'Course E: Play Lab Project': 'Курс E: проект в Лаборатории игр'
@@ -74,32 +119,49 @@ ru:
       Crack Random Substitution: Взломать случайный шифр подстановки
       Crack a Caesar Cipher: Взломать шифр Цезаря
       Create Your Own Animation: Создайте свою собственную анимацию
+      Create Your Sprites: Создать Свои Спрайты
+      Create a Background: Создать Фон
+      Create a Google Form: Создать Форму Google
       Create a Story: Создайте рассказ
+      Create an App in App Lab: Создать Приложение в Лаборатории Приложений
       Create your project: Создай свой проект
       Creative Commons Search: Поиск Creative Commons
       Customize: Индивидуальная настройка
+      Customize Your App: Настроить Свое Приложение
+      Customizing Your App: Настройка Вашего Приложения
       Dance Crews: Танцевальные коллективы
       Data Visualization: Визуализация данных
       De-bugging with the Step Button: Отладка с помощью кнопки «Шаг»
       Debugging: Отладка
       Debugging with the Step Button: Отладка с помощью кнопки «Шаг»
+      'Demo App: Interactive Card': 'Демонстрационное Приложение: Интерактивная Карта'
       Demo Apps: Демонстрационные приложения
       Design Mode: Режим дизайна
       Design Your Game: Разработайте свою игру
       Design Your Prototype: Разработайте свой прототип
       Design a Screen for your App: Разработайте окно для своего приложения
+      Design an AI App - AI Lab: Разработать Приложение для ИИ - ИИ Лаборатория
+      Design an AI App - App Lab: Разработать Приложение с ИИ - Лаборатория Приложений
       Designing for Accessibility: Разработка для обеспечения доступности
       Digital Sharing - Unplugged Activity: Публикация цифровых произведений — Урок без компьютера
       Dogger Example: "Пример доггера\n"
+      Draw Your Background: Нарисовать Свой Фон
+      Draw a Background: Нарисовать Фон
       Drawing: Рисование
+      Driver Alert System: Система Оповещения Водителя
       Editing Images: Редактирование изображений
       End of Course Projects: Конец проектов курса
+      End-Of-Unit Survey: Заключительный Опрос Подразделения
+      End-of-Unit Survey: Изучение End-Of-Unit
       Escape Room Example: Пример побега из комнаты
       Events: События
       Events and Linking Screens: События и связывание окон
       Events and Properties: События и свойства
       Example: Пример
+      Example Animated Scene: Пример Анимированной Сцены
       Example App Types: Примеры типов приложений
+      'Example App: Zoo Classification': 'Пример Приложения: Классификация Зоопарков'
+      Example Apps: Примеры приложений
       Example Projects: Примеры проектов
       Example projects: Примеры проектов
       Exemplar Personal Websites: Примеры персональных веб-сайтов
@@ -108,7 +170,9 @@ ru:
       Experiment with Web Lab: Экспериментирование с Веб-лабораторией
       Exploration: Исследование
       'Exploration: Adding Style': 'Добавление стиля'
+      'Exploration: Clicker Game': 'Исследование: Игра-Кликер'
       'Exploration: For Loops': 'Исследование: Циклы «for»'
+      'Exploration: Rikki''s Poster': 'Исследование: Постер Рикки'
       'Exploration: Sample Apps': 'Исследование: примеры приложений'
       'Exploration: Sample Programs': 'Исследование: Примеры программ'
       'Exploration: Sample Project': 'Исследование: Пример проекта'
@@ -116,6 +180,9 @@ ru:
       Exploring CS in Entertainment: Исследование информатики в развлекательной манере
       Exploring more CSS: Более подробное изучение CSS
       Extra: Дополнительно
+      Extra Challenge: Дополнительная Задача
+      'Extra Challenge: Sound Board': 'Дополнительная Задача: Звуковая Плата'
+      Field Collector App: Приложение Сборщик на Поле
       Final Personal Website: Персональный веб-сайт
       Final Room Escape App: Финальное приложение «Побег из комнаты»
       Find the Wizard: Найти мастера
@@ -127,6 +194,7 @@ ru:
       Follow the Algorithm - Unplugged Activity: Следуй алгоритму — Урок без компьютера
       Follow the Mouse: Следуй за мышью
       Fonts and Style: Шрифты и стиль
+      FoodFight: FoodFight
       For Loop Fun - Unplugged Activity: Игры с циклами «for» – Урок без компьютера
       For Loops: Циклы с параметром
       For Loops and Color LEDs: Циклы «for» и цветные светодиоды
@@ -135,12 +203,15 @@ ru:
       Free Play: Свободная игра
       'Free Play: Make a Scene': 'Свободная игра: Создай сцену'
       'Free Play: Make an Interactive Scene': 'Свободная игра: Создай интерактивную сцену'
+      Fruit and Veggie Explorer: Исследователь Фруктов и Овощей
       Functions: функции
       Functions with Parameters: Процедуры с параметрами
       Geometric Sun: "Геометрическое солнце\n"
       Get In Formation: Давайте установим порядок
+      Getters and Setters: Средства доступа для чтения и записи
       Getting Properties: Обретение свойств
       Graph Paper Programming - Unplugged Activity: Программирование на бумаге в клеточку — Урок без компьютера
+      Green Glass Door: Зеленая Стеклянная Дверь
       Guess The Number: Угадай число
       HTML Tags: HTML тэги
       Headings: Заголовки
@@ -148,30 +219,45 @@ ru:
       Hello World: Привет, мир
       How to Create a Simple Function: Как создать простую функцию
       How to Make a Sprite: Как создать спрайт?
+      Human Device Interaction: Взаимодействие Человека и Устройства
       Hyperlinks: Гиперссылки
       Ice Age Loops: Циклы «Ледникового периода»
       If Statements: Операторы Если
       If-Else Statements: Операторы "если-иначе"
       Images and Sounds: Изображения и звуки
+      Import Your Model: Импортировать Свою Модель
+      Import a Model: Импортировать Модель
       Importing Screens: Импорт экранов
+      Importing Your Model: Импорт Вашей Модели
       Improve Your Game: Улучшите вашу игру
+      Improved Shoe Recommender: Улучшенный Рекомендатель Обуви
+      Incorporate Feedback: Подключить Обратную связь
       Innovation Research: Инновационное исследование
       Input Examples: Примеры ввода
       Input with If-Else: Ввод с «если/иначе»
       Inspiration!: Вдохновение!
+      InspirationalArtwork: InspirationalArtwork
+      Interactive Art: Интерактивное Искусство
+      Intro to Flyer Game: Вступление к Игре Летун
       Intro to For Loops: Введение в циклы «for»
+      Intro to Side Scrollers: Введение в Боковые Прокручиватели
       Intro to Sprites: Введение в спрайты
       Intro to Variables: Введение в переменные
       Introducing Sprite Lab: Представляем Лабораторию спрайтов
       Introduction to Arrays: Введение в массивы
+      Investigate: Исследовать
+      Isaac's Survey Data: Данные Опроса Айзека
       Iteration and Parameters: Итерация и параметры
       Keep On Dancing!: Продолжай танцевать!
       Keeping Data Secret: Сохранение данных в тайне
       Keyboard Input: Ввод с клавиатуры
+      Kim's Survey: Опрос Кима
+      Kim's Survey Data: Данные Опроса Кима
       LED Apps: Приложения СИД
       Layout Properties: Свойства макета
       Layout with CSS: Компоновка с CSS
       Learning from Simulations: Обучение по симуляторам
+      Lesson Extra: Дополнительный Урок
       Lesson Extras: Дополнения к уроку
       Lesson Overview: Обзор урока
       Level Overview: Обзор уровня
@@ -181,8 +267,12 @@ ru:
       Linking Screens: Связывание окон
       Lists: Списки
       Lists in HTML: Списки в HTML
+      Looking for Patterns: Поиск Закономерностей
+      Looping: Петляние
       Loops with the Artist: Циклы с Художником
+      Make Your Sprites: Создать Свои Спрайты
       Make a Prediction: Сделай прогноз
+      Make an Interactive Card: Сделать Интерактивную Карточку
       Make it Interactive: Сделай программу интерактивной
       Making Scenes: Создание сцен
       Making Songs: Создание песен
@@ -190,10 +280,14 @@ ru:
       Making an Interactive Card: Создание интерактивной карты
       'Maze Intro: Programming with Blocks': 'Лабиринт, введение: программирование с помощью блоков'
       Measures: Такты
+      Medical Dataset Model Cards: Карты Моделей Медицинских наборов Данных
+      Medical Priority App: Приложение Медицинский Приоритет
       'Minecraft: Hero''s Journey': 'Майнкрафт: Путешествие Героя'
       'Mini-Project: About Me': 'Мини-проект: Обо мне'
       'Mini-Project: Alien Dance Moves': 'Мини-проект: Танцевальные движения пришельцев'
       'Mini-Project: Alien Dance Party': 'Мини-проект: Танцевальная вечеринка пришельцев'
+      'Mini-Project: Clicker Game': 'Мини-Проект: Игра-Кликер'
+      'Mini-Project: Collector Game': 'Мини-Проект: Игра Сборщик'
       'Mini-Project: Create a Virtual Pet': 'Мини-проект: Создай виртуального питомца'
       'Mini-Project: Outbreak Simulator': 'Мини-проект: Симуляция эпидемии'
       'Mini-Project: Royal Battle': 'Мини-проект: Королевская битва'
@@ -211,7 +305,7 @@ ru:
       'Mini-project: Sticker Design': 'Мини-проект: Оформление наклеек'
       Modify simulation variables: Изменение переменных симуляции
       Modifying Arrays: Изменение и создание массивов
-      Modifying and Creating Arrays: Изменение и создание массивов
+      Modifying and Creating Arrays: Изменение и Создание Массивов
       More Buttons: Больше кнопок
       More Input: Еще больше вводных данных
       More Parameters: Еще больше параметров
@@ -235,13 +329,19 @@ ru:
       'Overview: onEvent': 'Обзор: onEvent'
       'Overview: setPosition': 'Обзор: setPosition'
       Pair Programming: Программирование в парах
+      Pet Recommender: Рекомендатель Питомцев
       Picturing Data: Изображение данных
+      Pizza Party Data: Данные о Вечеринке с Пиццей
+      Pizza Recommendations: Рекомендации по приготовлению Пиццы
       Plan Your Project: Спланируйте свой проект
+      Plan Your Scene: Спланировать Свою Сцену
       Planning: Планирование
       Platform Jumper - Background and Variables: Platform Jumper - Исходные данные и переменные
       Platform Jumper - Items: Platform Jumper - Элементы
       Platform Jumper - Platforms: Platform Jumper - Платформы
       Platform Jumper - Player: Platform Jumper - Игрок
+      Platform Jumper Review: Платформенный Прыгун - Обзор
+      Player Controls: Управление Игроком
       Playing Notes: Игра в Notes
       Playing with Notes: Игра с Notes
       Polling Events: Опросы
@@ -263,10 +363,16 @@ ru:
       Properties: Свойства
       Publishing Your Website: Публикация своего веб-сайта
       Quarter Notes: Четвертные ноты
+      Quick Check: Быстрая Проверка
       RGB Exploration: Исследование RGB
       RGB Widget: RGB Widget
       Random Numbers: Случайные числа
+      Raspado Recommender: Рекомендатель Сока со льдом
       Reading Sensors: Считывание показаний датчиков
+      Recognizing Expressions: Распознавание Выражений
+      Recognizing Fish: Распознавание Рыбы
+      Recognizing Fish Features: Распознавание Особенностей Рыбы
+      Recognizing Shapes: Распознавание Форм
       Reflection: Размышление
       Relay Programming - Unplugged Activity: Эстафетное программирование — Урок без компьютера
       Repeat Blocks: Блоки «повторения»
@@ -276,29 +382,56 @@ ru:
       Repeat Until Statements: Операторы «повторять до тех пор, пока»
       Representing Images: Представление изображений
       Review: Обзор
+      Review Your Animated Scene: Смотреть Свою Анимированную Сцену
+      Review Your App: Смотреть Свое Приложение
+      Review Your Game: Смотреть Свою Игру
+      Review Your Page: Смотреть Свою Страницу
+      Review Your Scene: Смотреть Свою Сцену
+      'Review: CSS': 'Пересмотреть: CSS'
+      'Review: HTML': 'Пересмотреть: HTML'
       Revise Artist Project: Отредактируй проект в среде Художника
       Revise Sprite Lab Project: Отредактируй проект в Лаборатории спрайтов
       Robot Doodle: "Робот Дудль\n"
       Run a simulation: Запуск симуляции
+      Safari App: Приложение Сафари
+      Safari Model: Модель Сафари
+      Same Game: Та же Игра
+      Sample Apps for Good: Примеры Приложений для Пользы
       Sample Game: Пример игры
+      Sample Games: Примеры Игр
+      Sample Personal Web Pages: Примеры Персональных Веб-Страниц
+      Sample Personal Websites: Примеры Персональных Веб-Сайтов
       Sample Programs: Примеры программ
+      Sample Web Page: Пример Веб-Страницы
+      Sample Website: Пример Веб-сайта
+      Scoring & Scoreboard: Подсчет очков и Табло
       Screen Design: Разработка окна
       Sensor Events: События датчиков
       Sensors to Colors: Датчики цветов
+      Set Up Sprites: Настроить Спрайты
       Setting Properties: Задание свойств
+      Setup: Настроить
       Shapes and the Draw Loop: Фигуры и цикл рисования
       Share Your App: Поделись своим приложением
+      Share Your Pages: Поделиться Своими Страницами
+      Share Your Stylesheets: Поделиться Своими Таблицами Стилей
+      Shoe Recommendation Survey: Обзор Рекомендаций по Обуви
+      Shoe Recommender: Рекомендатель Обуви
       Side Scroller: Боковая прокрутка
       Simple Circuits: Простые цепи
       Skill Building: Формирование навыков
       Skill-Building: Формирование навыков
       Sliders: Слайдеры
       Smart Bike - Blinkers: '«Умный» велосипед - мигающие фонарики'
+      Social Sleuth: Социальный Сыщик
       Songwriting - Functions Unplugged Activity: Написание песен — Функции Урок без компьютера
       Speed it Up, Slow it Down: Ускорить, замедлить
       Sprite Lab Example Project: Пример проекта в Лаборатории спрайтов
       Sprite Lab Project: Проект в Лаборатории спрайтов
+      Sprite Movement: Движение Спрайтов
+      Sprite Properties: Свойства спрайтов
       Sprites and the Draw Loop: Спрайты и цикл рисования
+      Star Chaser: Охотник за Звездами
       Styling Text: Стилизация текста
       Styling with Classes: Стилизация с помощью занятий
       Styling your Website: Стилизация своего веб-сайта
@@ -319,8 +452,13 @@ ru:
       The Right App - Unplugged Activity: Правильное приложение — Урок без компьютера
       Top Websites: Лучшие веб-сайты
       Train AI to Clean the Ocean: Обучите ИИ очищать океан
+      Train a Model in AI Lab: Обучите модель в ИИ лаборатории
+      Train an AI to Clean the Ocean: Обучите ИИ очищать океан
       UI Element Properties: Свойства элементов пользовательского интерфейса
+      Ultimate Shoe Recommender: Итоговый Рекомендатель Обуви
       Unit 5 Lesson 1 Overview: Часть 5 Урок 1 Обзор
+      Updating Your Prototype: Обновление Вашего Прототипа
+      Upload Your Images: Загрузить Свои Изображения
       User Interface: Интерфейс пользователя
       Using Getters and Setters: Применение методов получения значения и методов записи значения
       Using HTML Tags: Использование HTML-тегов
@@ -334,14 +472,23 @@ ru:
       Velocity and the Counter Pattern: Скорость и шаблон Счетчика
       Video: Видео
       Video - Encryption and Public Keys: Видео - Шифрование и открытые ключи
+      Video - Functions: Видео - Функции
+      Video - If Statements: Видео - If Выражения
+      Video - Introduction to Arrays: Видео - Введение в Массивы
       'Video - Maze Intro: Programming with Blocks': 'Видео – Лабиринт, введение: Программирование с помощью блоков'
+      Video - Parameters: Видео - Параметры
+      Video - The Counter Pattern: Видео - Шаблон Счетчика
+      Video - Variables: Видео - Переменные
       'Video:  Debugging with the Step Button': 'Видео: Отладка с помощью кнопки «Шаг»'
       'Video:  Minecraft - The Agent': 'Видео: Minecraft — Агент'
       'Video:  Text  and Prompts': 'Видео: Текст и запросы на ввод'
+      'Video: "If/Else"': 'Видео: "If/Else"'
       'Video: AI: What is Machine Learning?': 'Видео: ИИ: Что такое машинное обучение?'
+      'Video: Amazon and Data': 'Видео: Amazon и Данные'
       'Video: Artist Intro with JR Hildebrand': 'Видео: Дж. Р. Хильдебранд представляет инструмент «Художник»'
       'Video: Artist Intro with JR Hildebrande': 'Видео: Дж. Р. Хильдебранд представляет инструмент «Художник»'
       'Video: CS Matters': "Видео: \"Важность информатики\"\n"
+      'Video: Circuits and Logic': 'Видео: Схемы и Логика'
       'Video: Code Your Own Flappy Game': 'Видео: Создайте свою собственную игру «Порхающая птичка»'
       'Video: Conditionals: If Statements': 'Видео: Условные операторы: операторы «если»'
       'Video: Conditionals: If and If/Else Statements': 'Видео: Условные операторы: операторы «Если» и «Если/Иначе»'
@@ -351,23 +498,38 @@ ru:
       'Video: Dance Party Properties': 'Видео: Танцевальная вечеринка Свойства'
       'Video: Dance Party Warm Up': 'Видео: Танцевальная вечеринка Разминка'
       'Video: De-bugging with the Step Button': 'Видео: Отладка с помощью кнопки «Шаг»'
+      'Video: Debugging': 'Видео: Отладка'
       'Video: Debugging with Scrat ': 'Видео: Отладка со Скратом'
       'Video: Debugging with the Step Button': 'Видео: Отладка с помощью кнопки «Шаг»'
       'Video: Events': ' События'
+      'Video: Events in App Lab': 'Видео: События в Лаборатории Приложений'
       'Video: Follow The Digital Trail': 'Видео: Идите по Цифровому следу'
+      'Video: For Loops': 'Видео: Циклы For'
       'Video: Getting Loopy': ' Зацикливание'
       'Video: Happy Maps - Unplugged Activity': 'Видео: Весёлые карты - Урок без компьютера'
       'Video: Harvesting with Conditionals': 'Видео: Сбор урожая с условными операторами'
+      'Video: Hello World: Do What You Want': 'Видео: Привет, Мир: Делайте, Что Хотите'
+      'Video: Hello World: Programming with Events': 'Видео: Привет, Мир: Программирование с Событиями'
+      'Video: Hello World: Welcome to Sprite Lab': 'Видео: Привет, Мир: Добро пожаловать в Лабораторию Спрайтов'
+      'Video: How Search Works': 'Видео: Как Работает Поиск'
       'Video: How to Create a Simple Function': 'Видео: Как создать простую функцию'
       'Video: How to Make a Sprite': ' Как создать спрайт?'
+      'Video: IOSP Model': 'Видео: Модель Интернет-Провайдера'
       'Video: Ice Age Loops': 'Видео: Циклы «Ледникового периода»'
+      'Video: Impact on Society': 'Видео: Влияние на Общество'
       'Video: Impacts on Society': 'Видео: Влияние на общество'
+      'Video: Intro to CSS - Part 1': 'Видео: Введение в CSS - Часть 1'
+      'Video: Intro to CSS - Part 2': 'Видео: Введение в CSS - Часть 2'
+      'Video: Intro to Design Mode': 'Видео: Введение в Режим Проектирования'
       'Video: Intro to Web Lab - Part 1': 'Введение в Web Lab - Часть 1'
       'Video: Intro to Web Lab - Part 2': 'Введение в Web Lab - Часть 2'
       'Video: Introducing Sprite Lab': ' Представляем Лабораторию спрайтов'
       'Video: Introduction to Play Lab': 'Видео: Лаборатория игр. Введение'
+      'Video: Introduction to Variables': 'Видео: Введение в Переменные'
       'Video: Loops in Artist': ' Циклы в исполнителе Художник'
       'Video: Loops with the Artist': 'Видео: Циклы с Художником'
+      'Video: Lots of Sprites': 'Видео: Много Спрайтов'
+      'Video: Managing Disagreement': 'Видео: Управление Противоречиями'
       'Video: Maze Intro - Programming with Blocks': 'Видео: Лабиринт, введение — Программирование с помощью блоков'
       'Video: Maze Intro - Programming with Blocks ': 'Видео: Лабиринт, введение — Программирование с помощью блоков'
       'Video: Maze Intro: Programming with Blocks': 'Видео: Лабиринт, введение: Программирование с помощью блоков'
@@ -382,12 +544,17 @@ ru:
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Видео: Minecraft: Водное путешествие. Операторы цикла с условием завершения'
       'Video: Nested Loops': ' Вложенные циклы'
       'Video: Nested Loops with the Bee': 'Видео: Вложенные циклы с Пчелой'
+      'Video: Netflix and Data': 'Видео: Netflix и Данные'
+      'Video: Outbreak Simulator: Events': 'Видео: Симулятор вспышки: События'
+      'Video: Outbreak Simulator: Free Play': 'Видео: Симулятор Вспышки эпидемии: Свободная Игра'
       'Video: Outbreak Simulator: Introduction': 'Видео: Большое количество спрайтов'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Видео: Симулятор Вспышки эпидемии: Думай Как Ученый'
       'Video: Pair Programming': 'Видео: Программирование в парах'
       'Video: Pair Programming ': 'Видео: Программирование в парах'
       'Video: Programming with Blocks': 'Видео: Программирование с использованием блоков'
       'Video: Programming with Rey and BB-8': 'Видео: Программирование с Реем и BB-8'
       'Video: Properties': 'Видео: Свойства'
+      'Video: Publishing Your Website': 'Видео: Публикация Своего Веб-Сайта'
       'Video: Repeat Blocks': 'Видео: Повторяющиеся блоки'
       'Video: Repeat Blocks with BB-8': 'Видео: Повторяющиеся блоки с BB-8'
       'Video: Repeat Blocks with the Artist': 'Видео: Повторяющиеся блоки с Художником'
@@ -395,18 +562,22 @@ ru:
       'Video: Repeat Until Statements': 'Видео: операторы цикла с условием завершения'
       'Video: Sprites in Action': ' Спрайты в действии'
       'Video: Star Wars Project': ' Проект Звёздные войны'
+      'Video: Teamwork': 'Видео: Коллективная работа'
       'Video: Text and Prompts': 'Видео: Текст и запросы на ввод'
       'Video: The Artist in Code Studio': 'Видео: Художник в Студии кода'
       'Video: The Big Event - Unplugged Activity': 'Видео: Большое событие — Урок без компьютера'
       'Video: The Collector': 'Видео: Собиратель'
       'Video: The Harvester': 'Видео: Сборщица урожая'
       'Video: Training Data & Bias': 'Видео: Обучающие данные и предубеждение'
+      'Video: Training Data and Bias': 'Видео: Обучающие Данные и Предвзятость'
       'Video: Unplugged Variables in Envelopes': 'Видео: Офлайн-переменные в конвертах'
       'Video: Using the Repeat Block': ' Использование блока Повтор'
       'Video: Variables in Artist': 'Видео: переменные в инструменте «Художник»'
       'Video: Velocity': 'Видео: скорость'
       'Video: Warm Up': 'Видео: Разминка'
+      'Video: Waze and Data': 'Видео: Waze и Данные'
       'Video: What Makes a Computer, a Computer?': 'Видео: Что Делает Компьютер Компьютером?'
+      'Video: What is Machine Learning?': 'Видео: Что такое Машинное Обучение?'
       'Video: While Loops with the Farmer': 'Видео: Циклы «пока» со Сборщицей урожая'
       'Video: Wrap-up': ' Итоги'
       Warm Up: Разминка
@@ -416,4 +587,11 @@ ru:
       While Loops with the Farmer: Циклы «пока» со Сборщицей урожая
       'Widget: Text Compression': 'Виджет: Сжатие текста'
       Wrap-up: Итоги
+      'You Choose: Improve Your App': 'Ваш Выбор: Улучшить Свое Приложение'
+      'You Choose: Restaurant Recommendations': 'Ваш Выбор: Рекомендации по Ресторанам'
       Your Personal Website: Ваш личный веб-сайт
+      Your Team Project: Ваш Коллективный Проект
+      Zoo Predictions: Прогнозы Зоопарка
+      getText vs getNumber: getText по сравнению с getNumber
+      isTouching: isTouching
+      setProperty: setProperty

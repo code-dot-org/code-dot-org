@@ -30,7 +30,7 @@ require 'cdo/shared_constants'
 # This is sort-of-but-not-quite a join table between Scripts and Levels; it's grown to have other functionality.
 # It corresponds to the "bubbles" in the UI which represent the levels in a lesson.
 #
-# A Script has_many ScriptLevels, and a ScriptLevel has_and_belongs_to_many Levels. However, most ScriptLevels
+# A Unit has_many ScriptLevels, and a ScriptLevel has_and_belongs_to_many Levels. However, most ScriptLevels
 # are only associated with one Level. There are some special cases where they can have multiple Levels, such as
 # with the now-deprecated variants feature.
 class ScriptLevel < ApplicationRecord
@@ -39,12 +39,12 @@ class ScriptLevel < ApplicationRecord
   include SharedConstants
   include Rails.application.routes.url_helpers
 
-  belongs_to :script
-  belongs_to :lesson, foreign_key: 'stage_id'
+  belongs_to :script, class_name: 'Unit', optional: true
+  belongs_to :lesson, foreign_key: 'stage_id', optional: true
 
   # This field will only be present in scripts which are being edited in the
   # new script / lesson edit GUI.
-  belongs_to :activity_section
+  belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level
@@ -83,7 +83,7 @@ class ScriptLevel < ApplicationRecord
   )
 
   def script
-    return Script.get_from_cache(script_id) if Script.should_cache?
+    return Unit.get_from_cache(script_id) if Unit.should_cache?
     super
   end
 
@@ -219,7 +219,7 @@ class ScriptLevel < ApplicationRecord
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if lesson && lesson.unplugged_lesson?
+    return false if lesson&.unplugged_lesson?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
     return false if locked_or_hidden?(user)
@@ -419,7 +419,7 @@ class ScriptLevel < ApplicationRecord
   def self.summarize_extra_puzzle_pages(last_level_summary)
     extra_levels = []
     level_id = last_level_summary[:ids].first
-    level = Script.cache_find_level(level_id)
+    level = Unit.cache_find_level(level_id)
     extra_level_count = level.pages.length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
@@ -546,7 +546,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   def self.cache_find(id)
-    Script.cache_find_script_level(id)
+    Unit.cache_find_script_level(id)
   end
 
   def to_param
@@ -635,7 +635,7 @@ class ScriptLevel < ApplicationRecord
       Level.find(level_data['id'])
     end
 
-    # Script levels containing anonymous levels must be assessments.
+    # Unit levels containing anonymous levels must be assessments.
     if levels.any? {|l| l.properties["anonymous"] == "true"}
       self.assessment = true
       save! if changed?
@@ -706,16 +706,12 @@ class ScriptLevel < ApplicationRecord
         elsif level.is_a?(Poetry)
           send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(GamelabJr)
-          send("#{'spritelab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send("#{level.standalone_app_name_or_default}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Artist)
           artist_type = ['elsa', 'anna'].include?(level.skin) ? 'frozen' : 'artist'
           send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Studio) # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(Javalab)
-          # TO DO: remove this statement after switching over to use new Javalab exemplars
-          # https://codedotorg.atlassian.net/browse/JAVA-525
-          example
         else
           send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         end

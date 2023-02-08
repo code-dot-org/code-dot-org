@@ -29,7 +29,7 @@ class LessonsControllerTest < ActionController::TestCase
       has_lesson_plan: false,
     )
 
-    @script_title = 'Script Display Name'
+    @script_title = 'Unit Display Name'
     @lesson_name = 'Lesson Display Name'
 
     custom_i18n = {
@@ -37,12 +37,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             @script.name => {
-              'title' => @script_title,
-              'lessons' => {
-                @lesson.name => {
-                  'name' => @lesson_name
-                }
-              }
+              'title' => @script_title
             }
           }
         }
@@ -60,7 +55,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
-    @in_development_unit = create :script, :with_lessons, lessons_count: 1, name: 'in-development-unit', published_state: SharedCourseConstants::PUBLISHED_STATE.in_development, is_migrated: true, include_student_lesson_plans: true
+    @in_development_unit = create :script, :with_lessons, lessons_count: 1, name: 'in-development-unit', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, is_migrated: true, include_student_lesson_plans: true
     @in_development_unit.reload
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
@@ -79,10 +74,10 @@ class LessonsControllerTest < ActionController::TestCase
     @login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-script', is_migrated: true, include_student_lesson_plans: true, login_required: true
     @login_req_script.reload
 
-    @pl_login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-pl-script', is_migrated: true, include_student_lesson_plans: true, login_required: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-pl-script', is_migrated: true, include_student_lesson_plans: true, login_required: true, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     @pl_login_req_script.reload
 
-    @pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-unit-1', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-unit-1', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     @pl_script.reload
   end
 
@@ -288,12 +283,7 @@ class LessonsControllerTest < ActionController::TestCase
         'script' => {
           'name' => {
             script.name => {
-              'title' => @script_title,
-              'lessons' => {
-                solo_lesson_in_script.key => {
-                  'name' => @lesson_name
-                }
-              }
+              'title' => @script_title
             }
           }
         }
@@ -521,7 +511,7 @@ class LessonsControllerTest < ActionController::TestCase
       post :update, params: {
         id: lesson.id,
         lesson: {name: lesson.name},
-        originalLessonData: JSON.generate({"name": "Not the name"})
+        originalLessonData: JSON.generate({name: "Not the name"})
       }
     end
 
@@ -688,11 +678,6 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'update writes lesson name to i18n and script_json in levelbuilder mode' do
     @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
-
-    # Just make sure the new lesson name appears somewhere in the new file contents.
-    File.stubs(:write).with do |filename, data|
-      filename.end_with?('scripts.en.yml') && data.include?(@update_params[:name])
-    end.once
 
     # Just make sure the new lesson name appears somewhere in the new file contents.
     File.stubs(:write).with do |filename, data|
@@ -1391,7 +1376,7 @@ class LessonsControllerTest < ActionController::TestCase
     destination_script = create :script, use_legacy_lesson_plans: true
     original_script = create :script, use_legacy_lesson_plans: false
     lesson = create :lesson, script: original_script
-    put :clone, params: {id: lesson.id, 'destinationUnitName': destination_script.name}
+    put :clone, params: {id: lesson.id, destinationUnitName: destination_script.name}
 
     assert_response :not_acceptable
     assert @response.body.include?('error')
@@ -1404,7 +1389,7 @@ class LessonsControllerTest < ActionController::TestCase
     destination_script = create :script, use_legacy_lesson_plans: false
     original_script = create :script, use_legacy_lesson_plans: true
     lesson = create :lesson, script: original_script
-    put :clone, params: {id: lesson.id, 'destinationUnitName': destination_script.name}
+    put :clone, params: {id: lesson.id, destinationUnitName: destination_script.name}
 
     assert_response :not_acceptable
     assert @response.body.include?('error')
@@ -1415,7 +1400,7 @@ class LessonsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     lesson = create :lesson
-    put :clone, params: {id: lesson.id, 'destinationUnitName': 'fake-script'}
+    put :clone, params: {id: lesson.id, destinationUnitName: 'fake-script'}
     assert_response :not_acceptable
     assert @response.body.include?('error')
   end
@@ -1431,7 +1416,7 @@ class LessonsControllerTest < ActionController::TestCase
     create :course_version, content_root: original_script, key: '2021'
     cloned_lesson = create :lesson, script: script
     Lesson.any_instance.stubs(:copy_to_unit).returns(cloned_lesson)
-    put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
+    put :clone, params: {id: lesson.id, destinationUnitName: script.name}
 
     assert_response 200
     assert @response.body.include?('editLessonUrl')
@@ -1449,7 +1434,7 @@ class LessonsControllerTest < ActionController::TestCase
     create :course_version, content_root: original_script, key: '2020'
     cloned_lesson = create :lesson, script: script
     Lesson.any_instance.stubs(:copy_to_unit).returns(cloned_lesson)
-    put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
+    put :clone, params: {id: lesson.id, destinationUnitName: script.name}
 
     assert_response 200
     assert @response.body.include?('editLessonUrl')

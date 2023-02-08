@@ -1,0 +1,20 @@
+{
+  "hu-HU": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Számítógépes gondolkodás"
+        },
+        "L": {
+          "description": "Nyelv"
+        },
+        "C": {
+          "description": "Alagút"
+        },
+        "F": {
+          "description": "funkciók"
+        }
+      }
+    }
+  }
+}

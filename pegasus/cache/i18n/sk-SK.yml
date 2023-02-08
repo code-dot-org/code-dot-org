@@ -222,7 +222,10 @@ sk-SK:
   if_you_enjoyed: Ak sa ti hodina páčila, opýtaj sa priateľov či to chcú skúsiť tiež!
     Chceme, aby sa celý svet mohol učiť.
   personalize_certificate: Prispôsob si svoj certifikát
+  print_batch_certificates: Vytlačiť viacero certifikátov
   print_certificates: Vytlačiť certifikáty
+  certificate_sponsor_message: "%{sponsor_name} prispel(a) štedrým darom na podporu
+    tvojho učenia."
   share_achievement: Zdieľaj svoj úspech
   beyond_hour_message: Pokračujte s našimi <a href='http://studio.code.org'>ďalšími
     kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>výučbe
@@ -422,6 +425,7 @@ sk-SK:
   homepage_banner_40k_teachers_link: Zistiť viac
   homepage_slot_text_title_hoc: Hodina Kódu
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni už dnes!
+  homepage_slot_text_blurb_hoc_2022: Skúmajte, hrajte sa, tvorte!
   homepage_slot_text_link_hoc: Vyskúšaj Hodinu Kódu
   homepage_slot_text_link_about_hoc: O Hodine Kódu
   homepage_slot_text_link_host: Usporiadaj u vás Hodinu kódu
@@ -448,12 +452,15 @@ sk-SK:
   homepage_slot_text_link_donate: Venuj dar
   homepage_slot_text_link_shop: Tričká, čiapky a ďalšie
   homepage_slot_text_link_administrators: Prines Informatiku na tvoju školu
+  homepage_gallery_header: Viac ako %{project_count} miliónov vytvorených projektov
+    Code.org
   homepage_header_donors: Code.org ďakuje za podporu
   homepage_donors_seall: Zobraziť všetky
   homepage_donors_donate: Prispejte
   homepage_below_hero_announcement_text: Dbáme o Vaše súkromie a preto aktualizujeme
     naše Zásady ochrany osobných údajov s platnosťou od 25. mája.
   homepage_below_hero_announcement_link_text: Zistiť viac
+  homepage_csa_subhead: Nový prístup k
   contact_form_topic_student: Som študent
   contact_form_topic_parent: Som rodič
   contact_form_topic_teacher: Som učiteľ/vzdelávateľ
@@ -902,7 +909,7 @@ sk-SK:
   dashboard_sections_table_secret: Spôsob prihlásenia
   dashboard_sections_table_grade: Ročník
   dashboard_sections_table_course: Kurz
-  dashboard_sections_table_pairing_allowed: Programovanie v páre
+  dashboard_sections_table_pairing_allowed: Párové programovanie
   dashboard_sections_table_stage_extras: Extra úlohy
   dashboard_sections_table_students: Študenti
   dashboard_sections_table_code: Kód triedy
@@ -1033,7 +1040,7 @@ sk-SK:
   dashboard_grade_other: Ostatné
   dashboard_login_word: Slovo
   dashboard_login_picture: Obrázok
-  dashboard_login_none: Email
+  dashboard_login_none: E-mailová adresa
   dashboard_stage: Úroveň
   dashboard_puzzle: Úloha
   dashboard_question: Otázka
@@ -1236,6 +1243,7 @@ sk-SK:
   coursee-2020_name: Kurz E (2019)
   coursef-2020_name: Kurz F (2019)
   coursed-2021_name: Kurz D (2021)
+  coursed-2022_name: Kurz D (2021)
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
@@ -1356,6 +1364,12 @@ sk-SK:
   coursed-2021_gradelevel: Vek 7-11
   coursee-2021_gradelevel: Vek 8-12
   coursef-2021_gradelevel: Vek 9-13
+  coursea-2022_gradelevel: Vek 4-7
+  courseb-2022_gradelevel: Vek 5-8
+  coursec-2022_gradelevel: Vek 6-10
+  coursed-2022_gradelevel: Vek 7-11
+  coursee-2022_gradelevel: Vek 8-12
+  coursef-2022_gradelevel: Vek 9-13
   accelerated_gradelevel: Vek 10-18
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
@@ -1560,6 +1574,22 @@ sk-SK:
     cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem
     programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
   coursee-2021_shortdescription_congrats: Začneš programovať s algoritmami, cyklami,
+    podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+    nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
+  coursea-2022_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  courseb-2022_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  coursec-2022_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami
+    a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky
+    riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si
+    vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+  coursed-2022_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených
+    cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem
+    programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
+  coursee-2022_shortdescription_congrats: Začneš programovať s algoritmami, cyklami,
     podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
     nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
   codeorg_longdescription: Nauč sa základné koncepty informatiky pomocou vizuálneho
@@ -2036,6 +2066,11 @@ sk-SK:
   hoc_overview_dance_title: Tanečná Párty
   hoc_overview_dance_subtitle: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju kamarátmi!
     Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 ďalších!
+  hoc_overview_dance_2022_subtitle: Nakódujte tanečnú párty a zdieľajte ju so svojimi
+    priateľmi. Vystupujú Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba
+    z Disney rozprávky „Encanto“ atď.!
+  hoc_overview_hello_world_2022_alt_text: Animované postavičky astronautov a zvierat
+    vznášajúce sa okolo obrázku Zeme
   hoc_overview_title: Hodina Kódu s Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hodina Kódu</a> je celosvetové
     hnutie, ktorého sa zúčastňujú desiatky miliónov študentov z viac ako 180 krajín.
@@ -2103,10 +2138,18 @@ sk-SK:
   hoc2018_mc_educators_box3_desc: Navštívte Microsoft obchod vo Vašej oblasti a vyhľadajte
     workshop pre Hodinu Kódu. Pre účastníkov od 6 rokov.
   hoc2018_mc_educators_box3_button: Nájsť workshop
+  hoc2022_mc_educators_box3_desc_markdown: Využite tento [bezplatný kurz] na požiadanie
+    (%{free_course_link}) alebo zaregistrujte celú svoju triedu a zúčastnite sa živého
+    workshopu Hodina kódu s hosťujúcim učiteľom. Dostupné niekoľkokrát počas CSEW,
+    6. – 11. decembra.
+  hoc2022_mc_educators_box3_button: Zaregistrujte sa teraz
   hoc2018_mc_educators_box4_title: Viac materiálov pre výučbu informatiky
   hoc2018_mc_educators_box4_desc: Rozšírte Vašu výučbu digitálnych zručností a informatiky
     s týmito materiálmi od Microsoftu.
   hoc2018_mc_educators_box4_button: Preskúmať materiály
+  hoc2022_mc_educators_box4_desc: Inšpirujte STEM vášeň u študentov K-12 s 200 hodinovým
+    učebným plánom informatiky, od bloku po python, podporovaného profesionálnym rozvojom.
+  hoc2022_mc_educators_box4_button: Pokračujte v učení
   hoc2018_mc_watch_videos: Skôr ako začneš, pozri si jedno z týchto inšpiratívnych
     videí
   hoc2018_mc_videos_more: Viac <a href='%{inspiring_videos_playlist}'>inšpiratívnych
@@ -2202,7 +2245,10 @@ sk-SK:
     adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku.
   page_not_found_button: Späť na domovskú stránku
   hoc2018_mc_with_microsoft: V spolupráci s
+  homepage_slot_text_title_at_home: Učenie na doma
+  page_not_available_title: Stránka je nedostupná
   page_not_available_button: Späť na domovskú stránku
+  hoc2020_mc_available_mee: 'Dostupné v Minecrafte: verzia pre vzdelávanie'
   hoc2021_mc_mee_title: Minecraft TimeCraft
   hoc2021_mc_mee_description: 'Cestujte späť v čase a naučte sa programovať! Nový
     tutoriál Minecraft Hour of Code je teraz dostupný v hre Minecraft: vzdelávacie
@@ -2214,19 +2260,47 @@ sk-SK:
   hoc2021_mc_mee_ai_title: Umelá inteligencia pre dobro
   hoc2021_mc_mee_ai_description: 'Objavte AI so svojimi žiakmi a naučte sa programovať
     v hre Minecraft: vzdelávacie vydanie'
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'Utečte z tajomného sídla do úsvitu a zarobte milión
+    smaragdov! Nový tutoriál Minecraft Hodina kódu je teraz dostupný v hre Minecraft:
+    Vzdelávacie vydanie pre Windows, Mac, Chromebook, Ipad a mobil. Začnite s bezplatnými
+    zdrojmi, školeniami a videami pre pedagógov.'
+  hoc2022_mc_mee_timecraft_description: 'Cestujte späť v čase, aby ste zachránili
+    budúcnosť v tejto bezplatnej hodine kódovania v Minecraft: vzdelávacie vydanie.'
   footer_powered_by_aws: Poháňaný službami Amazon Web Services
   codebytes_skinny_banner_english_only: Len v anglickom jazyku
   footer_privacy_policy: Zásady ochrany súkromia
   footer_about: O nás
   footer_partners: Partneri
+  footer_blog: Blog
   footer_donate: Prispejte
+  footer_store: Obchod
   footer_support: Podpora
   footer_terms: Podmienky
   ai_for_oceans: AI pomáha oceánom
   ai_for_oceans_lesson_plan: učebný plán
+  how_ai_works: Ako funguje umelá inteligencia
+  view_lesson_plan: Zobraziť plán lekcie
   ai_in_partnership_with: V spolupráci s
+  cs_for_good: Počítačová veda na dobré účely
   ai_activity: Aktivita
   ai_description: Popis
+  ai_ibm_machine_learning_for_kids: 'IBM: strojové učenie pre deti'
   outbreak_tile_title: Nákaza
   outbreak_tile_subtitle: Mesto Monster Town napadol vírus! Naprogramujte simulátor
     ohniska a skúste urobiť predpovede, čo sa stane so susedmi mesta Monster Town.
+  hoc2022_banner_title: Skúmajte, hrajte sa, tvorte!
+  hoc2022_banner_description: Skúmajte vesmír, streľte gól, prelomte pohyb – existuje
+    tak veľa spôsobov, ako vyskúšať informatiku!
+  hoc2022_cta_primary: Zobraziť novinky
+  hoc2022_cta_secondary: Vyskúšajte ďalšie aktivity
+  hoc2022_landing_page_explore_title: Preskúmať
+  hoc2022_landing_page_explore_description: Otvorte dvere do nových svetov s informatikou!
+  hoc2022_landing_page_play_description: Choďte na ihrisko a skórujte!
+  hoc2022_landing_page_create_title: Vytvoriť
+  hoc2022_landing_page_create_description: Urobte niečo zvláštne a úžasné!
+  hoc2022_landing_page_banner_alt_left: Mimozemšťan tancujúci vedľa Saturna vo vesmíre
+  hoc2022_landing_page_banner_alt_right: Robot driblujúci s futbalovou loptou vo vesmíre
+    pred štartujúcou raketou
+  try_it_yourself: Vyskúšaj to samostatne!
+  try_an_activity: Vyskúšajte aktivitu

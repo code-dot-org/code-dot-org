@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 lt:
   errors:
     messages:
@@ -277,7 +283,6 @@ lt:
     popup:
       progress_for_user: "%{name} pažanga"
       progress: 'Jūsų pažanga'
-      lines: 'Iš viso kodo eilučių: %{lines}'
       close: 'UŽDARYTI'
       mastery: 'Laimėjimai'
       puzzle_map: 'Etapai'
@@ -362,6 +367,7 @@ lt:
     no_primary_course: "Išmėgink „Code Studio“ kursą"
     choose_next_course: "Išbandyk „Code Studio“ kursą, pasirink vieną iš pateiktų žemiau"
     print_certificate: "Atsispausdinti sertifikatą"
+  certificate_hour_of_code: "„Programavimo valanda“"
   share:
     title: "Mokytis su „Code Studio“"
     description: "Kiekvienas gali išmokti informatikos. Kurk žaidimus, programėles ir piešinius programuodamas."
@@ -450,19 +456,13 @@ lt:
       body_short: "Sukurk programėlę naudodamas blokelius arba Javascript ir pasidalink ja su draugais."
       audience: 'Amžius 13+'
       cta: 'Sužinok, kaip'
-    hoc:
-      title: 'Klasikinis labirintas'
-      body: 'Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.'
+    aquatic:
+      title: "Minecraft"
     flappy:
       title: 'Flappy Kodas'
       body: 'Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!'
-    20-hour:
-      title: 'Pagreitintas kursas'
-      body: 'Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.'
-      body_short: 'Išmok informatikos pagrindų pagreitintuose kursuose (panašiuose į 2-4 kursus).'
-    hoc2014:
-      try_new_tutorial: 'Išbandykite naująsias „Programavimo valandos“ pamokėles beta versijoje'
-      try_frozen: 'Piešimas su Ana ir Elze iš "Ledo šalies"'
+    frozen:
+      title: "Ledo šalis"
     gallery:
       title: "Galerija"
       body: "Peržiūrėkite su menininku sukurtų piešinių galeriją"
@@ -470,13 +470,14 @@ lt:
       title: "Žaidimų laboratorija"
       audience: "Amžius 13+"
       cta: "Sužinok, kaip"
-    weblab:
-      audience: "Amžius 13+"
-      cta: "Sužinok, kaip"
-    frozen:
-      title: "Ledo šalis"
-    starwars:
-      title: "Žvaigždžių karai"
+    hero:
+      title: "Minecraft"
+    hoc:
+      title: 'Klasikinis labirintas'
+      body: 'Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.'
+    hoc2014:
+      try_new_tutorial: 'Išbandykite naująsias „Programavimo valandos“ pamokėles beta versijoje'
+      try_frozen: 'Piešimas su Ana ir Elze iš "Ledo šalies"'
     infinity:
       title: "Žaidimų laboratorija „Infinity“"
       body: "Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai."
@@ -486,20 +487,25 @@ lt:
     minecraft2016:
       title: "Minecraft"
       body: "Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje Minecraft versijoje."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
     sports:
       title: "Sportas"
-    unplugged:
-      title: "Papildomos pamokėlės"
-      audience: "Amžius 4+"
-    unplugged_conditionals:
-      title: "Sąlyginiai sakiniai"
+    starwars:
+      title: "Žvaigždžių karai"
+    weblab:
+      audience: "Amžius 13+"
+      cta: "Sužinok, kaip"
     widgets:
       audience: "Amžius 14+"
       cta: "Sužinok, kaip"
+    unplugged_conditionals:
+      title: "Sąlyginiai sakiniai"
+    unplugged:
+      title: "Papildomos pamokėlės"
+      audience: "Amžius 4+"
+    20-hour:
+      title: 'Pagreitintas kursas'
+      body: 'Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.'
+      body_short: 'Išmok informatikos pagrindų pagreitintuose kursuose (panašiuose į 2-4 kursus).'
   landing:
     report_bug: "Pranešti apie problemą"
     support: "Pagalba"
@@ -671,8 +677,12 @@ lt:
         math: 'Matematika'
         science: 'Gamtos mokslai'
         la: 'Literatūra'
+        other: "Kita"
       resources:
         khan: 'Khan Akademija'
+        other: "Kita"
+      robotics:
+        other: "Kita"
       email_opt_in:
         opt_in_yes: 'Taip'
         opt_in_no: 'Ne'
@@ -680,3 +690,5 @@ lt:
     accept: 'Sutinku'
   page_not_found_title: "Puslapis nerastas"
   copy: 'Kopijuoti'
+  pixelation:
+    binary: "Dvejetainis"

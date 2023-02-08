@@ -1,0 +1,17 @@
+{
+  "fr-FR": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Algorithmique"
+        },
+        "ccela/L": {
+          "description": "Langue"
+        },
+        "csta/IC": {
+          "description": "L'impact de l'informatique"
+        }
+      }
+    }
+  }
+}

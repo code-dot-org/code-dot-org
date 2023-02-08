@@ -1,0 +1,86 @@
+{
+  "it-IT": {
+    "data": {
+      "standard_categories": {
+        "AP": {
+          "description": "Algoritmi e programmazione"
+        },
+        "CS": {
+          "description": "Sistemi informatici"
+        },
+        "DA": {
+          "description": "Dati e Analisi"
+        },
+        "NI": {
+          "description": "Reti e Internet"
+        },
+        "CD": {
+          "description": "Computer e dispositivi di comunicazione"
+        },
+        "CI": {
+          "description": "Impatti a livello comunitario, globale ed etico"
+        },
+        "CL": {
+          "description": "Collaborazione"
+        },
+        "CPP": {
+          "description": "Pratica e programmazione informatica"
+        },
+        "CT": {
+          "description": "Pensiero computazionale"
+        },
+        "L": {
+          "description": "Linguaggio"
+        },
+        "RI": {
+          "description": "Lettura informativa"
+        },
+        "RL": {
+          "description": "Leggere"
+        },
+        "SL": {
+          "description": "Parlare e ascoltare"
+        },
+        "W": {
+          "description": "Scrivere"
+        },
+        "ETS": {
+          "description": "Ingegneria nella scienza"
+        },
+        "ETS1": {
+          "description": "Progettazione"
+        },
+        "C": {
+          "description": "Tunnel"
+        },
+        "F": {
+          "description": "Funzioni"
+        },
+        "G": {
+          "description": "Geometria"
+        },
+        "MD": {
+          "description": "Usare la probabilità per prendere decisioni"
+        },
+        "MP": {
+          "description": "Esercizi di matematica"
+        },
+        "NBT": {
+          "description": "Numeri e operazioni a base dieci"
+        },
+        "OA": {
+          "description": "Operazioni e pensiero algebrico"
+        },
+        "1": {
+          "description": "Gli studenti dimostrano il pensiero creativo, costruiscono conoscenze e sviluppano prodotti e processi innovativi utilizzando la tecnologia."
+        },
+        "2": {
+          "description": "Gli studenti utilizzano i media e gli ambienti digitali per comunicare e collaborare anche a distanza, per supportare l'apprendimento individuale e contribuire all'apprendimento degli altri."
+        },
+        "4": {
+          "description": "Gli studenti usano il pensiero critico per pianificare e condurre ricerche, gestire progetti, risolvere problemi e prendere decisioni informate utilizzando risorse e strumenti digitali appropriati."
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {
-  setScriptId,
-  validScriptPropType
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
@@ -60,7 +57,7 @@ class SectionAssessments extends Component {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
-    validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
     assessmentList: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     assessmentId: PropTypes.number,
@@ -182,7 +179,7 @@ class SectionAssessments extends Component {
   render() {
     const {
       sectionName,
-      validScripts,
+      coursesWithProgress,
       scriptId,
       assessmentList,
       assessmentId,
@@ -205,7 +202,7 @@ class SectionAssessments extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              validScripts={validScripts}
+              coursesWithProgress={coursesWithProgress}
               scriptId={scriptId}
               onChange={this.onSelectScript}
             />
@@ -369,7 +366,7 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     isLoading: !!state.sectionAssessments.isLoading,
-    validScripts: state.unitSelection.validScripts,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     assessmentList: getCurrentScriptAssessmentList(state),
     scriptId: state.unitSelection.scriptId,
     assessmentId: state.sectionAssessments.assessmentId,

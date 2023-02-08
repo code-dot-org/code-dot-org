@@ -6,7 +6,8 @@
           "498cd895eb5a102c5aeb977e2b928dee": "សូមអរគុណ!"
         },
         "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "អ្នកឈ្នះហេីយ!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "អ្នកឈ្នះហេីយ!",
+          "8437002ea42b64a5fd68abfb2ab8dae0": "Game over."
         },
         "courseE_aboutme_3": {
           "ed076287532e86365e841e92bfc50d8c": "សួស្ដី​ពិភពលោក!"
@@ -312,7 +313,8 @@
           "f6429fe0f1a76611670df7e1234af936": "តើអ្នកឈ្មោះអ្វី?"
         },
         "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "ត្រី"
+          "83e4a96aed96436c621b9809e258b309": "ត្រី",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "ផ្សេងៗ"
         },
         "courseF_text_concat": {
           "f6429fe0f1a76611670df7e1234af936": "តើអ្នកឈ្មោះអ្វី?"
@@ -323,6 +325,73 @@
         "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "វាយ​អត្ថ​បទ​នៅ​ទី​នេះ",
           "30fcc1693fa8402931d13ac3a5f396fd": "វាយ​បញ្ចូល​ចំ​ណង​ជើង​នៅ​ទី​នេះ"
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "កម្រិត: "
+        },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "វាយ​អត្ថ​បទ​នៅ​ទី​នេះ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "វាយ​បញ្ចូល​ចំ​ណង​ជើង​នៅ​ទី​នេះ"
+        },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "វាយ​អត្ថ​បទ​នៅ​ទី​នេះ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "វាយ​បញ្ចូល​ចំ​ណង​ជើង​នៅ​ទី​នេះ"
+        },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "វាយ​អត្ថ​បទ​នៅ​ទី​នេះ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "វាយ​បញ្ចូល​ចំ​ណង​ជើង​នៅ​ទី​នេះ"
+        },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "វាយ​អត្ថ​បទ​នៅ​ទី​នេះ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "វាយ​បញ្ចូល​ចំ​ណង​ជើង​នៅ​ទី​នេះ"
+        },
+        "courseC_PlayLab_eventsFP2022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "វាយ​អត្ថ​បទ​នៅ​ទី​នេះ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "វាយ​បញ្ចូល​ចំ​ណង​ជើង​នៅ​ទី​នេះ"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "សួស្ដី​ពិភពលោក!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "សួស្ដី​ពិភពលោក!"
+        },
+        "courseE_aboutme_52022": {
+          "ed076287532e86365e841e92bfc50d8c": "សួស្ដី​ពិភពលោក!"
+        },
+        "courseF_apps_aquarium2022": {
+          "83e4a96aed96436c621b9809e258b309": "ត្រី",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "ផ្សេងៗ"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "83e4a96aed96436c621b9809e258b309": "ត្រី",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "ផ្សេងៗ"
+        },
+        "courseF_apps_chatbot2022": {
+          "13e575be866ecf5ac3dcbf61ab2048d7": "តើអ្នកអាយុប៉ុន្មានឆ្នាំ?",
+          "ae096fbf24d913754b01a1601672bf62": "អញ្ចឹងដែរ! "
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "13e575be866ecf5ac3dcbf61ab2048d7": "តើអ្នកអាយុប៉ុន្មានឆ្នាំ?",
+          "ae096fbf24d913754b01a1601672bf62": "អញ្ចឹងដែរ! "
+        },
+        "courseF_apps_collector2022": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "អ្នកឈ្នះហេីយ!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "អ្នកឈ្នះហេីយ!"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "13e575be866ecf5ac3dcbf61ab2048d7": "តើអ្នកអាយុប៉ុន្មានឆ្នាំ?",
+          "ae096fbf24d913754b01a1601672bf62": "អញ្ចឹងដែរ! "
+        },
+        "courseF_text_concat_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "តើអ្នកឈ្មោះអ្វី?"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "តើអ្នកឈ្មោះអ្វី?"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "តើអ្នកឈ្មោះអ្វី?"
         }
       }
     }

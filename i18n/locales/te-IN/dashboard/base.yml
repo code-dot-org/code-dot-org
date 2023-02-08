@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 te:
   errors:
     messages:
@@ -39,6 +45,7 @@ te:
         personal_email_markdown: "వ్యక్తిగత ఇమెయిల్ చిరునామా [(click here if you don't have an email address)](%{url})"
         username: 'వినియోగదారు పేరు'
         password: 'పాస్వర్డ్'
+        verified_teacher: 'ధృవీకరించబడిన ఉపాధ్యాయుడు'
         password_confirmation: 'పాస్వర్డ్ నిర్ధారణ'
         current_password: 'ప్రస్తుత పాస్వర్డ్'
         locale: 'భాష'
@@ -160,6 +167,7 @@ te:
     user:
       signin: 'సైన్ ఇన్'
       signup: 'ఒక అకౌంట్ సృష్టించండి'
+      create: 'సృష్టించు'
       dance: 'డాన్స్ పార్టీ'
     popup:
       prizes_link: 'మరింత సమాచారం'
@@ -169,6 +177,7 @@ te:
     parent_guardian_email_label: "తల్లిదండ్రుల / సంరక్షకుల ఇమెయిల్"
     none: "ఏదీ కాదు"
     only_one_parent_email_supported_warning: "గమనిక: ఈ సమయములో మేము ఒక్కో విద్యార్థి ఖాతాకు ఒక పేరెంట్/సంరక్షకుడి ఇమెయిల్ చిరునామాకు మాత్రమే మద్దతు ఇవ్వగలిగి ఉంటాము."
+  certificate_hour_of_code: "అవర్ ఆఫ్ కోడ్"
   footer:
     copyright: 'కాపీరైట్'
     more: 'ఎక్కువ'
@@ -183,10 +192,12 @@ te:
     tab: 'వీడియో.'
     notes: 'వీడియో లేదా? నోట్స్ చూపించు.'
   upsell:
-    dance:
-      title: 'డాన్స్ పార్టీ'
     dance-2019:
       title: 'డాన్స్ పార్టీ'
+    dance:
+      title: 'డాన్స్ పార్టీ'
+    hello-world:
+      body: 'మీరు సృష్టించే ప్రపంచంలో సంభాషణాత్మక అక్షరాంశాలను కోడ్ చేయడానికి నాలుగు సరదా థీముల నుండి ఎంచుకోండి.'
   landing:
     help_support: "సహాయం మరియు మద్దతు"
   dialog:
@@ -210,3 +221,9 @@ te:
     text: "**మీరు ఒక పేరెంట్ లేదా సంరక్షకులా?** మీ చిన్నారి యొక్క పురోగతి మరియు ప్రాజెక్టులపై ఆధునీకరణతో ఉండడానికై ఈ ఖాతాకు మీ ఇమెయిల్ ని అనుసంధానం చేయండి!"
     link_your_email: "మీ ఇమెయిల్ అనుసంధానం చేయండి"
     not_now: "ఇప్పుడే కాదు "
+  lesson_lock:
+    error:
+      no_updates: "నిర్వర్తించడానికి అప్‌డేట్‌లు ఏవీ లేవు"
+      missing_params: "యూజర్, స్థాయి, మరియు యూనిట్ ఐడి లను విధిగా ఇవ్వాలి"
+      cannot_view_locked_answers: "లాక్ చేయబడి ఉన్నప్పుడు జవాబులను చూడలేరు"
+      forbidden: "యూజరు, విద్యార్థి యొక్క లాక్ చేయదగిన స్థితిని అప్‌డేట్ చేయలేరు"

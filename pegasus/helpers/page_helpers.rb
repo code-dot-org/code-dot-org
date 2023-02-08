@@ -1,5 +1,4 @@
 require 'active_support/core_ext/string/indent'
-require 'cdo/pegasus/donor'
 
 def page_title_with_tagline
   title = @header['title'] || @config[:page_default_title].to_s
@@ -41,10 +40,10 @@ def inline_css(css)
     $log.warn "Too much inlined CSS in page! [#{@total_css} bytes]" if @total_css > max_inline_css
   end
 
-  <<-HTML.html_safe
-<style>
-#{css_string.indent(2)}
-</style>
+  <<~HTML.html_safe
+    <style>
+    #{css_string.indent(2)}
+    </style>
   HTML
 end
 
@@ -66,7 +65,7 @@ def combine_css(*paths)
 
   files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request_site, path, '*.css'))}.flatten
   css = files.sort_by(&File.method(:basename)).map do |i|
-    IO.read(i)
+    File.read(i)
   end.join("\n\n")
   css_min = Sass::Engine.new(css,
     syntax: :scss,

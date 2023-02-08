@@ -347,6 +347,12 @@
   coursed-2021_gradelevel: 7-11 жаштагылар
   coursee-2021_gradelevel: 8-12 жаштагылар
   coursef-2021_gradelevel: 9-13 жаштагылар
+  coursea-2022_gradelevel: 4-7 жаштагылар
+  courseb-2022_gradelevel: 5-8 жаштагылар
+  coursec-2022_gradelevel: 6-10 жаштагылар
+  coursed-2022_gradelevel: 7-11 жаштагылар
+  coursee-2022_gradelevel: 8-12 жаштагылар
+  coursef-2022_gradelevel: 9-13 жаштагылар
   accelerated_gradelevel: "10-18 жаштагылар"
   touchdevelop_platformtext: "Жаңы браузерлер, смартфондор, бардык түзмөктөр"
   codehs_shortdescription: "Карэл ит менен коддоп башта, програмдоого көңүлдүү жана визуалдык киришүү!"
@@ -434,3 +440,4 @@
   ai_for_oceans_lesson_plan: "окуу планы"
   ai_activity: "Тапшырмалар"
   ai_description: "Түшүндүрмөсү"
+  hoc2022_landing_page_create_title: "Түзүү"

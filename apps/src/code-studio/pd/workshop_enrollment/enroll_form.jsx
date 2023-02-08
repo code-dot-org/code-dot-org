@@ -19,9 +19,11 @@ const EXPLAIN = '(Please Explain):';
 
 const CSF = 'CS Fundamentals';
 const INTRO = SubjectNames.SUBJECT_CSF_101;
+const DISTRICT = SubjectNames.SUBJECT_CSF_DISTRICT;
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 
 const CSP = 'CS Principles';
+const ADMINCOUNSELOR = 'Admin/Counselor Workshop';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -39,12 +41,14 @@ const DESCRIBE_ROLES = [
   'Other'
 ];
 
-const ROLES = [
+const CSF_ROLES = [
   'Classroom Teacher',
   'Media Specialist',
   'Tech Teacher',
   'Librarian'
 ].concat(DESCRIBE_ROLES);
+
+const ADMIN_COUNSELOR_ROLES = ['Administrator', 'Counselor', 'Other'];
 
 const GRADES_TEACHING = [
   'Pre-K',
@@ -377,6 +381,10 @@ export default class EnrollForm extends React.Component {
       'I don’t have experience teaching any of these courses'
     ]);
 
+    const roles =
+      (this.props.workshop_course === CSF && CSF_ROLES) ||
+      (this.props.workshop_course === ADMINCOUNSELOR && ADMIN_COUNSELOR_ROLES);
+
     return (
       <form id="enroll-form">
         <p>
@@ -450,7 +458,8 @@ export default class EnrollForm extends React.Component {
           school_info={this.state.school_info}
           errors={this.state.errors}
         />
-        {this.props.workshop_course === CSF && (
+        {(this.props.workshop_course === CSF ||
+          this.props.workshop_course === ADMINCOUNSELOR) && (
           <FormGroup>
             <FormGroup
               validationState={
@@ -469,7 +478,7 @@ export default class EnrollForm extends React.Component {
                 placeholder={null}
                 value={this.state.role}
                 onChange={this.handleRoleChange}
-                options={ROLES.map(r => ({value: r, label: r}))}
+                options={roles.map(r => ({value: r, label: r}))}
               />
               <HelpBlock>{this.state.errors.role}</HelpBlock>
               {this.state && DESCRIBE_ROLES.includes(this.state.role) && (
@@ -481,26 +490,29 @@ export default class EnrollForm extends React.Component {
                 />
               )}
             </FormGroup>
-            <ButtonList
-              id="grades_teaching"
-              key="grades_teaching"
-              answers={gradesTeaching}
-              groupName="grades_teaching"
-              label={gradesLabel}
-              onChange={this.handleChange}
-              selectedItems={this.state.grades_teaching}
-              validationState={
-                this.state.errors.hasOwnProperty('grades_teaching')
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorText={this.state.errors.grades_teaching}
-              type="check"
-            />
+            {this.props.workshop_course !== ADMINCOUNSELOR && (
+              <ButtonList
+                id="grades_teaching"
+                key="grades_teaching"
+                answers={gradesTeaching}
+                groupName="grades_teaching"
+                label={gradesLabel}
+                onChange={this.handleChange}
+                selectedItems={this.state.grades_teaching}
+                validationState={
+                  this.state.errors.hasOwnProperty('grades_teaching')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorText={this.state.errors.grades_teaching}
+                type="check"
+              />
+            )}
           </FormGroup>
         )}
         {this.props.workshop_course === CSF &&
-          this.props.workshop_subject === INTRO && (
+          (this.props.workshop_subject === INTRO ||
+            this.props.workshop_subject === DISTRICT) && (
             <ButtonList
               groupName="csf_intro_intent"
               type="radio"
@@ -518,7 +530,8 @@ export default class EnrollForm extends React.Component {
             />
           )}
         {this.props.workshop_course === CSF &&
-          this.props.workshop_subject === INTRO && (
+          (this.props.workshop_subject === INTRO ||
+            this.props.workshop_subject === DISTRICT) && (
             <ButtonList
               groupName="csf_intro_other_factors"
               type="check"
@@ -606,7 +619,7 @@ export default class EnrollForm extends React.Component {
                 }
                 errorText={this.state.errors.csf_has_physical_curriculum_guide}
                 type="radio"
-                require={true}
+                required={true}
               />
             </FormGroup>
           )}
@@ -756,7 +769,10 @@ export default class EnrollForm extends React.Component {
 
     if (this.props.workshop_course === CSF) {
       requiredFields.push('role', 'grades_teaching');
-      if (this.props.workshop_subject === INTRO) {
+      if (
+        this.props.workshop_subject === INTRO ||
+        this.props.workshop_subject === DISTRICT
+      ) {
         requiredFields.push('csf_intro_intent');
       } else if (this.props.workshop_subject === DEEP_DIVE) {
         requiredFields.push(

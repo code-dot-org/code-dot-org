@@ -6,6 +6,7 @@ ar:
       Advanced: مُتقدم
       Behaviors: السلوك
       Brushes: فرش
+      Category: الفئة
       Color: اللون
       Comment: تعليق
       Comments: 'تعليقات
@@ -14,6 +15,7 @@ ar:
       Conditionals: الجمل الشرطية
       Dancers: الراقصون
       Default: الافتراضي
+      Effects: المؤثرات
       Events: الأحداث
       Functions: دوال
       'Functions ': 'الدوال '

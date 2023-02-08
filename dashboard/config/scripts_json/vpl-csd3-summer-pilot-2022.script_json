@@ -8,11 +8,12 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-01 20:58:57 UTC",
+    "serialized_at": "2022-05-11 01:58:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -80,7 +81,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Overview:**\nThis session serves as both an introduction to Day 3 and a space to debrief the asynchronous work from Day 2\n\n**Participants will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. \n\n**Suggested time:** 15 minutes",
+        "overview": "**Overview:**\nThis session serves as both an introduction to Day 3 and a space to debrief the asynchronous work from Day 2.\n\n**Participants will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. \n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. "
       },
       "seeding_key": {
@@ -91,14 +92,14 @@
     },
     {
       "key": "lesson-2",
-      "name": "Context and Bias",
+      "name": "Barriers and Opportunities",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then expands on the reflections around understanding self and context to include uncovering unconscious biases that exist as a result of identity markers of self and others. Participants will be asked to reflect on ways in which their own unconscious biases might impact their view on who belongs in CS. They will also be challenged to name the responsibility they will claim in ensuring all students feel like they belong in CS. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. \n\n\n**Suggested time:** 60 minutes",
-        "student_overview": "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. "
+        "overview": "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then prompts participants to reflect on their role in reducing barriers to access, diversity, and inclusion in CS education. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in their classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers they have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers they have the power to influence. \n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in your classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -192,7 +193,7 @@
       "properties": {
         "assessment_opportunities": "1. **Use the problem solving process to answer a question using data.**\r\n\r\n\tJournal Prompt: As students reflect on the problem solving process that they used, they should identify how they used each step in solving their problem.\r\n\r\n2. **Identify and collect relevant data to help solve a problem.**\r\n\r\n\tActivity Guide, page 1: In the \"Prepare\" section, relevant data should be identified and recorded.\r\n\r\n3. **Use data to draw conclusions.**\r\n\r\n\tActivity Guide, page 2: The reasons justifying the student's choice should be clearly related to the cited data.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Overview:**\nDuring this role play activity, participants will engage in Unit 5 Lesson 9: Problem Solving and Data. In this lesson, participants will see how the problem solving process can be tailored to deal with data problems. This TLO lesson will also highlight the role of class discussion in the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 5 Lesson 9 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of class discussion in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes",
+        "overview": "**Overview:**\nDuring this role play activity, participants will engage in Unit 5 Lesson 9: Problem Solving and Data. In this lesson, participants will see how the problem solving process can be tailored to deal with data problems. This TLO lesson will also highlight the role of class discussion in the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 5 Lesson 9 while playing the role of the student.\n* Reflect on their experience as a student engaging in the lesson.\n* Discuss the role of class discussion in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes",
         "purpose": "Students have spent the first half of the unit exploring how computers represent different types of information, or data.  In this lesson, they learn how data can be used to solve real word problems, revising the problem solving process through the lens of data analysis.",
         "student_overview": "**You will:**\n\n* Engage in Unit 5 Lesson 9 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of class discussion in the CS Discoveries curriculum."
       },
@@ -210,7 +211,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**Overview:**\nIn this session, you will reflect on what you have gotten out of the day along with what you still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n\n**Suggested time:** 5 minutes",
+        "overview": "**Overview:**\nIn this session, participants will reflect on what they have gotten out of the day along with what they still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n\n**Suggested time:** 5 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n"
       },
       "seeding_key": {
@@ -221,14 +222,14 @@
     },
     {
       "key": "lesson-9",
-      "name": "Barriers and Opportunities",
+      "name": "Connect with the CS Community",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Overview:**\nThese asynchronous activities will prompt participants to reflect on their role in expanding access, diversity, and inclusion in CS education. Participants will be asked to identify aspects of access, diversity, and inclusion in CS education that they have the power to control. They will then go further to articulate concrete steps they can take in the next 30, 60, and 90 days to impact equity CS in their areas of control. \n\n**Participants will:**\n\n* Identify barriers in your/their classroom, school, and/or teaching practice that limit access, diversity, and inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. \n\n**Suggested time:** 60 minutes",
-        "student_overview": "**You will:**\n\n* Identify barriers in your/their classroom, school, and/or teaching practice that limit access, diversity, and inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. \n\n**Suggested time:** 60 minutes"
+        "overview": "**Overview:**\nThe goal of these asynchronous activities is for participants to recognize that they are part of something bigger than what is happening just in their own classroom. These activities will prompt participants to expand their idea of community to include both their local community and the national computer science community.\n\n**Participants will:**\n\n* Explore CS Journeys.\n* Make a plan for connecting with their local community.\n* Make a plan for connecting with other CS educators.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Explore CS Journeys.\n* Make a plan for connecting with your local community.\n* Make a plan for connecting with other CS educators.\n\n**Suggested time:** 60 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -452,6 +453,7 @@
       "key": "1388a2b1-f752-4c99-90e0-0247ab64ee4c",
       "position": 1,
       "properties": {
+        "progression_name": "CS Landscape"
       },
       "seeding_key": {
         "activity_section.key": "1388a2b1-f752-4c99-90e0-0247ab64ee4c",
@@ -778,9 +780,54 @@
       "key": "d0769d90-3619-48b0-81d1-60b77986f59f",
       "position": 1,
       "properties": {
+        "progression_name": "Overview"
       },
       "seeding_key": {
         "activity_section.key": "d0769d90-3619-48b0-81d1-60b77986f59f",
+        "lesson_activity.key": "2007c10e-2f9b-431f-9a53-1cd59e572079"
+      }
+    },
+    {
+      "key": "327b1692-af38-4341-a9eb-abfd90af6aa4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Classroom culture"
+      },
+      "seeding_key": {
+        "activity_section.key": "327b1692-af38-4341-a9eb-abfd90af6aa4",
+        "lesson_activity.key": "2007c10e-2f9b-431f-9a53-1cd59e572079"
+      }
+    },
+    {
+      "key": "64d194a4-7aa5-40de-8e8a-70ba57772158",
+      "position": 3,
+      "properties": {
+        "progression_name": "Curriculum supports "
+      },
+      "seeding_key": {
+        "activity_section.key": "64d194a4-7aa5-40de-8e8a-70ba57772158",
+        "lesson_activity.key": "2007c10e-2f9b-431f-9a53-1cd59e572079"
+      }
+    },
+    {
+      "key": "fc98546e-c087-4b00-93fc-56a75c09e122",
+      "position": 4,
+      "properties": {
+        "progression_name": "Teamwork"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc98546e-c087-4b00-93fc-56a75c09e122",
+        "lesson_activity.key": "2007c10e-2f9b-431f-9a53-1cd59e572079"
+      }
+    },
+    {
+      "key": "e2afc9b7-7663-4c29-8d69-4a725b94b5ad",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2afc9b7-7663-4c29-8d69-4a725b94b5ad",
         "lesson_activity.key": "2007c10e-2f9b-431f-9a53-1cd59e572079"
       }
     },
@@ -1313,9 +1360,54 @@
       }
     },
     {
-      "key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220",
+      "key": "d5ba8ead-8925-40fd-a7e0-98ff1b40bd3c",
       "position": 1,
       "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5ba8ead-8925-40fd-a7e0-98ff1b40bd3c",
+        "lesson_activity.key": "4bb8b56c-7f9f-4651-9fa5-d70f6db0a7b3"
+      }
+    },
+    {
+      "key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore CS Journeys"
+      },
+      "seeding_key": {
+        "activity_section.key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d",
+        "lesson_activity.key": "4bb8b56c-7f9f-4651-9fa5-d70f6db0a7b3"
+      }
+    },
+    {
+      "key": "c3a66eb2-8bf9-464c-8670-67adfa23cfb7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Connect with your local community"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3a66eb2-8bf9-464c-8670-67adfa23cfb7",
+        "lesson_activity.key": "4bb8b56c-7f9f-4651-9fa5-d70f6db0a7b3"
+      }
+    },
+    {
+      "key": "93fed6a7-0b6f-4ce5-a416-78805e49ea56",
+      "position": 4,
+      "properties": {
+        "progression_name": "Connect with CS educators "
+      },
+      "seeding_key": {
+        "activity_section.key": "93fed6a7-0b6f-4ce5-a416-78805e49ea56",
+        "lesson_activity.key": "4bb8b56c-7f9f-4651-9fa5-d70f6db0a7b3"
+      }
+    },
+    {
+      "key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap up"
       },
       "seeding_key": {
         "activity_section.key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220",
@@ -1324,10 +1416,724 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS"
+        ],
+        "progression": "CS Landscape"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1388a2b1-f752-4c99-90e0-0247ab64ee4c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson4"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "d0769d90-3619-48b0-81d1-60b77986f59f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson4"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Classroom culture"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-async1-classroomCulture"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "327b1692-af38-4341-a9eb-abfd90af6aa4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-async1-classroomCulture"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum supports "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-mod3-async1-Inclusion"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "64d194a4-7aa5-40de-8e8a-70ba57772158"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-mod3-async1-Inclusion"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum supports "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDPILOT-VPL-21-mod4-Differentiation"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "64d194a4-7aa5-40de-8e8a-70ba57772158"
+      },
+      "level_keys": [
+        "CSDPILOT-VPL-21-mod4-Differentiation"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum supports "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDPILOT-VPL-21-mod4-DifferentiationContinued"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "64d194a4-7aa5-40de-8e8a-70ba57772158"
+      },
+      "level_keys": [
+        "CSDPILOT-VPL-21-mod4-DifferentiationContinued"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Teamwork"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-mod3-teamworkOverview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "fc98546e-c087-4b00-93fc-56a75c09e122"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-mod3-teamworkOverview"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Teamwork"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-csd web teamwork video_2022"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "fc98546e-c087-4b00-93fc-56a75c09e122"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-csd web teamwork video_2022"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Teamwork"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-csd web disagreement video_2022"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "fc98546e-c087-4b00-93fc-56a75c09e122"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-csd web disagreement video_2022"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async-Day3Lesson4-WrapUp"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "e2afc9b7-7663-4c29-8d69-4a725b94b5ad"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-async-Day3Lesson4-WrapUp"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson9"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson9"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "d5ba8ead-8925-40fd-a7e0-98ff1b40bd3c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson9"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async-CSJourneysIntro"
+        ],
+        "progression": "Explore CS Journeys"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async-CSJourneysIntro"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-async-CSJourneysIntro"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSJourneys-Vid"
+        ],
+        "progression": "Explore CS Journeys"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-CSJourneys-Vid"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-CSJourneys-Vid"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async2-mod3-virtualFieldTrips"
+        ],
+        "progression": "Explore CS Journeys"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async2-mod3-virtualFieldTrips"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-async2-mod3-virtualFieldTrips"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async2-mod3-Task-exploreCSJourneys"
+        ],
+        "progression": "Explore CS Journeys"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async2-mod3-Task-exploreCSJourneys"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-async2-mod3-Task-exploreCSJourneys"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-async-ConnectWithLocalCommunity"
+        ],
+        "progression": "Connect with your local community"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async-ConnectWithLocalCommunity"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "c3a66eb2-8bf9-464c-8670-67adfa23cfb7"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-async-ConnectWithLocalCommunity"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-PLC"
+        ],
+        "progression": "Connect with CS educators "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-PLC"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "93fed6a7-0b6f-4ce5-a416-78805e49ea56"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-asyncOverview-mod3-PLC"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-JoinTheTeacherCommunity"
+        ],
+        "progression": "Connect with CS educators "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-JoinTheTeacherCommunity"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "93fed6a7-0b6f-4ce5-a416-78805e49ea56"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-JoinTheTeacherCommunity"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CreateAPLC"
+        ],
+        "progression": "Connect with CS educators "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CreateAPLC"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "93fed6a7-0b6f-4ce5-a416-78805e49ea56"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CreateAPLC"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp"
+        ],
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1388a2b1-f752-4c99-90e0-0247ab64ee4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson4",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "d0769d90-3619-48b0-81d1-60b77986f59f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-async1-classroomCulture",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-async1-classroomCulture"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "327b1692-af38-4341-a9eb-abfd90af6aa4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-mod3-async1-Inclusion",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-mod3-async1-Inclusion"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "64d194a4-7aa5-40de-8e8a-70ba57772158"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDPILOT-VPL-21-mod4-Differentiation",
+        "script_level.level_keys": [
+          "CSDPILOT-VPL-21-mod4-Differentiation"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "64d194a4-7aa5-40de-8e8a-70ba57772158"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDPILOT-VPL-21-mod4-DifferentiationContinued",
+        "script_level.level_keys": [
+          "CSDPILOT-VPL-21-mod4-DifferentiationContinued"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "64d194a4-7aa5-40de-8e8a-70ba57772158"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-mod3-teamworkOverview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-mod3-teamworkOverview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "fc98546e-c087-4b00-93fc-56a75c09e122"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-csd web teamwork video_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-csd web teamwork video_2022"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "fc98546e-c087-4b00-93fc-56a75c09e122"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-csd web disagreement video_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-csd web disagreement video_2022"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "fc98546e-c087-4b00-93fc-56a75c09e122"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-async-Day3Lesson4-WrapUp",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async-Day3Lesson4-WrapUp"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "e2afc9b7-7663-4c29-8d69-4a725b94b5ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson9",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson9"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "d5ba8ead-8925-40fd-a7e0-98ff1b40bd3c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-async-CSJourneysIntro",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async-CSJourneysIntro"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-CSJourneys-Vid",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-CSJourneys-Vid"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-async2-mod3-virtualFieldTrips",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async2-mod3-virtualFieldTrips"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-async2-mod3-Task-exploreCSJourneys",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async2-mod3-Task-exploreCSJourneys"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1cc7a7d8-ab24-4612-b1f4-7e68106de59d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-async-ConnectWithLocalCommunity",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-async-ConnectWithLocalCommunity"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "c3a66eb2-8bf9-464c-8670-67adfa23cfb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-asyncOverview-mod3-PLC",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-PLC"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "93fed6a7-0b6f-4ce5-a416-78805e49ea56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-JoinTheTeacherCommunity",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-JoinTheTeacherCommunity"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "93fed6a7-0b6f-4ce5-a416-78805e49ea56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CreateAPLC",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CreateAPLC"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "93fed6a7-0b6f-4ce5-a416-78805e49ea56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220"
+      }
+    }
   ],
   "resources": [
     {

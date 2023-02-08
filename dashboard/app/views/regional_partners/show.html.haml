@@ -8,36 +8,18 @@
   - if flash[:upload_error]
     = content_tag(:div, flash[:upload_error], {class: 'alert alert-danger'}, false)
     - flash[:upload_error] = nil
-%p
+
+- if can? :update, @regional_partner
+  = link_to 'Edit', edit_regional_partner_path(@regional_partner)
+\|
+= link_to 'Back', regional_partners_path
+
+%p{style: 'margin-top: 20px' }
   %strong ID:
   = @regional_partner.id
 %p
   %strong Name:
   = @regional_partner.name
-%p
-  %strong Group:
-  = @regional_partner.group
-%p
-  %strong Urban:
-  = @regional_partner.urban? ? 'Yes' : 'No'
-%p
-  %strong Apps open date for teachers:
-  = @regional_partner.apps_open_date_teacher
-%p
-  %strong Apps close date for teachers:
-  = @regional_partner.apps_close_date_teacher
-%p
-  %strong Program information:
-  = @regional_partner.cost_scholarship_information
-%p
-  %strong Additional Partner information:
-  = @regional_partner.additional_program_information
-%p
-  %strong Link to Partner's Application:
-  = @regional_partner.link_to_partner_application
-%p
-  %strong PL Programs Offered:
-  = @regional_partner.pl_programs_offered
 %p
   %strong Contact Email:
   = @regional_partner.contact_email
@@ -53,10 +35,38 @@
 %p
   %strong Updated At:
   = @regional_partner.updated_at.strftime('%F')
-- if can? :update, @regional_partner
-  = link_to 'Edit', edit_regional_partner_path(@regional_partner)
-\|
-= link_to 'Back', regional_partners_path
+
+%h2 Teacher Application Settings
+%p
+  %strong Apps open date for teachers:
+  = @regional_partner.apps_open_date_teacher
+%p
+  %strong Apps close date for teachers:
+  = @regional_partner.apps_close_date_teacher
+%p
+  %strong Free and Reduced Lunch Guardrail Percent:
+  = @regional_partner.frl_guardrail_percent
+%p
+  %strong Underrepresented Group Guardrail Percent:
+  = @regional_partner.urg_guardrail_percent
+%p
+  %strong Link to Partner's Application:
+  = @regional_partner.link_to_partner_application
+%p
+  %strong PL Programs Offered:
+  = @regional_partner.pl_programs_offered
+%p
+  %strong Program information:
+.field{style: 'border: 1px solid black; padding: 5px' }
+  :markdown
+    #{@regional_partner.cost_scholarship_information}
+
+%p
+  %strong Additional Partner information:
+.field{style: 'border: 1px solid black; padding: 5px' }
+  :markdown
+    #{@regional_partner.additional_program_information}
+
 %br
 %h2 Regions
 %p

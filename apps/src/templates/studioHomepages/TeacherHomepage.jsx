@@ -7,8 +7,8 @@ import Notification from '../Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
-import StudentSections from './StudentSections';
 import TeacherResources from './TeacherResources';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -19,6 +19,13 @@ import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import Button from '@cdo/apps/templates/Button';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import IncubatorBanner from './IncubatorBanner';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
@@ -28,7 +35,8 @@ export const UnconnectedTeacherHomepage = ({
   courses,
   donorBannerName,
   isEnglish,
-  joinedSections,
+  joinedStudentSections,
+  joinedPlSections,
   ncesSchoolId,
   queryStringOpen,
   schoolYear,
@@ -42,7 +50,10 @@ export const UnconnectedTeacherHomepage = ({
   teacherName,
   topCourse,
   topPlCourse,
-  beginGoogleImportRosterFlow
+  beginGoogleImportRosterFlow,
+  hasFeedback,
+  showIncubatorBanner,
+  currentUserId
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
@@ -144,6 +155,19 @@ export const UnconnectedTeacherHomepage = ({
 
   const showDonorBanner = isEnglish && donorBannerName;
 
+  // Send one analytics event when a teacher logs in. Use session storage to determine
+  // whether they've just logged in.
+  if (
+    !!currentUserId &&
+    tryGetSessionStorage(LOGGED_TEACHER_SESSION, 'false') !== 'true'
+  ) {
+    trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
+
+    analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
+      'user id': currentUserId
+    });
+  }
+
   return (
     <div>
       <HeaderBanner
@@ -239,21 +263,34 @@ export const UnconnectedTeacherHomepage = ({
           topCourse={topCourse}
           showAllCoursesLink={true}
           isTeacher={true}
+          hasFeedback={false}
         />
+        {hasFeedback && (plCourses?.length > 0 || topPlCourse) && (
+          <ParticipantFeedbackNotification
+            studentId={teacherId}
+            isProfessionalLearningCourse={true}
+          />
+        )}
         {(plCourses?.length > 0 || topPlCourse) && (
           <RecentCourses
             courses={plCourses}
             topCourse={topPlCourse}
             showAllCoursesLink={true}
             isProfessionalLearningCourse={true}
+            hasFeedback={hasFeedback}
           />
         )}
         <TeacherResources />
+        {showIncubatorBanner && <IncubatorBanner />}
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
-        <StudentSections initialSections={joinedSections} isTeacher={true} />
+        <JoinSectionArea
+          initialJoinedStudentSections={joinedStudentSections}
+          initialJoinedPlSections={joinedPlSections}
+          isTeacher={true}
+        />
       </div>
     </div>
   );
@@ -268,7 +305,8 @@ UnconnectedTeacherHomepage.propTypes = {
   donorBannerName: PropTypes.string,
   hocLaunch: PropTypes.string,
   isEnglish: PropTypes.bool.isRequired,
-  joinedSections: shapes.sections,
+  joinedStudentSections: shapes.sections,
+  joinedPlSections: shapes.sections,
   ncesSchoolId: PropTypes.string,
   queryStringOpen: PropTypes.string,
   schoolYear: PropTypes.number,
@@ -282,7 +320,10 @@ UnconnectedTeacherHomepage.propTypes = {
   teacherName: PropTypes.string,
   topCourse: shapes.topCourse,
   topPlCourse: shapes.topCourse,
-  beginGoogleImportRosterFlow: PropTypes.func
+  beginGoogleImportRosterFlow: PropTypes.func,
+  hasFeedback: PropTypes.bool,
+  showIncubatorBanner: PropTypes.bool,
+  currentUserId: PropTypes.number
 };
 
 const styles = {

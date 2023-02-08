@@ -1,6 +1,12 @@
 import React from 'react';
 import {action} from '@storybook/addon-actions';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+export default {
+  title: 'AssignmentVersionSelector',
+  component: AssignmentVersionSelector
+};
 
 const styles = {
   dropdown: {
@@ -8,60 +14,24 @@ const styles = {
   }
 };
 
-const defaultVersions = [
-  {
-    year: '2019',
-    title: "19'-20'",
-    isStable: false,
-    localeCodes: [],
-    locales: []
-  },
-  {
-    year: '2018',
-    title: "18'-19'",
-    isStable: true,
-    isRecommended: true,
-    isSelected: false,
-    localeCodes: ['en-US'],
-    locales: ['English']
-  },
-  {
-    year: '2017',
-    title: "17'-18'",
-    isStable: true,
-    isRecommended: false,
-    isSelected: true,
-    localeCodes: ['en-US', 'fr-FR', 'es-MX'],
-    locales: ['English', 'Français', 'Español (Latinoamérica)']
-  }
-];
+const Template = args => (
+  <AssignmentVersionSelector
+    onChangeVersion={action('onChangeVersion')}
+    courseVersions={courseOfferings['1'].course_versions}
+    selectedCourseVersionId={1}
+    {...args}
+  />
+);
 
-export default storybook => {
-  storybook.storiesOf('AssignmentVersionSelector', module).addStoryTable([
-    {
-      name: 'with popup menu',
-      story: () => {
-        return (
-          <AssignmentVersionSelector
-            dropdownStyle={styles.dropdown}
-            onChangeVersion={action('onChangeVersion')}
-            versions={defaultVersions}
-          />
-        );
-      }
-    },
-    {
-      name: 'with popup menu, disabled',
-      story: () => {
-        return (
-          <AssignmentVersionSelector
-            dropdownStyle={styles.dropdown}
-            onChangeVersion={action('onChangeVersion')}
-            versions={defaultVersions}
-            disabled
-          />
-        );
-      }
-    }
-  ]);
+export const Enabled = Template.bind({});
+Enabled.args = {
+  dropdownStyle: styles.dropdown
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
+  dropdownStyle: styles.dropdown
+};
+
+export const EnabledNoStyling = Template.bind({});

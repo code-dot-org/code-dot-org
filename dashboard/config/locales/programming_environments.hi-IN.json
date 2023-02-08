@@ -1,0 +1,407 @@
+{
+  "hi-IN": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "वेब लैब"
+        },
+        "gamelab": {
+          "name": "गेम लैब",
+          "categories": {
+            "game_lab": {
+              "name": "गेम लैब",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "स्प्राइट"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "स्प्राइट"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "काला व सफेद"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "संगीत बनाना"
+                    }
+                  },
+                  "short_description": "निर्दिष्ट URL से MP3 ध्वनि फाइल प्ले करता है।"
+                }
+              }
+            },
+            "sprites": {
+              "name": "स्प्राइट्स",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "घुमावदार"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "समूह",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "स्प्राइट"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "स्प्राइट"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "स्प्राइट"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "रंग"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "रंग"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "ड्राइंग",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "स्टार"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "गणित",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "न्यूनतम नंबर दिया"
+                    },
+                    "max": {
+                      "description": "अधिकतम नंबर दिया"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "न्यूनतम नंबर दिया"
+                    },
+                    "max": {
+                      "description": "अधिकतम नंबर दिया"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "चर"
+            },
+            "functions": {
+              "name": "कार्य"
+            }
+          }
+        },
+        "applab": {
+          "name": "ऐप लैब",
+          "description": "ऐप लैब एक प्रोग्रामिंग वातावरण है जहां आप सरल ऐप बना सकते हैं। एक ऐप डिज़ाइन करें, इसे काम करने के लिए ब्लॉक या जावास्क्रिप्ट के साथ कोड करें, फिर सेकंडो में अपना ऐप साझा करें।",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "सिकुड़ना और बढ़ना"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "कार्य"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "संगीत बनाना"
+                    }
+                  },
+                  "short_description": "निर्दिष्ट URL से MP3 ध्वनि फाइल प्ले करता है।"
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "वस्तु"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "डेटा",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "कार्य"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "वस्तु"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "वस्तु"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "कार्य"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "गणित",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "न्यूनतम नंबर दिया"
+                    },
+                    "max": {
+                      "description": "अधिकतम नंबर दिया"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "न्यूनतम नंबर दिया"
+                    },
+                    "max": {
+                      "description": "अधिकतम नंबर दिया"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "चर",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "अपना खुद का एडवेंचर चुनें"
+                    }
+                  }
+                },
+                "addPair": {
+                  "return_value": "कोई नहीं"
+                }
+              }
+            },
+            "functions": {
+              "name": "कार्य"
+            },
+            "advanced": {
+              "name": "उन्नत"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "स्प्राइट लैब",
+          "categories": {
+            "sprites": {
+              "name": "स्प्राइट्स"
+            },
+            "world": {
+              "name": "विश्व"
+            },
+            "location": {
+              "name": "स्थान"
+            },
+            "actions": {
+              "name": "क्रियाएँ"
+            },
+            "events": {
+              "name": "घटनाएँ"
+            },
+            "behaviors": {
+              "name": "व्यवहार"
+            },
+            "loops": {
+              "name": "फंदे"
+            },
+            "variables": {
+              "name": "चर"
+            },
+            "math": {
+              "name": "गणित"
+            },
+            "logic": {
+              "name": "तर्क"
+            },
+            "functions": {
+              "name": "कार्य"
+            },
+            "text": {
+              "name": "पाठ"
+            },
+            "comments": {
+              "name": "टिप्पणियां"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java Lab"
+        }
+      }
+    }
+  }
+}

@@ -779,6 +779,12 @@
   coursed-2021_gradelevel: 8-сыныптан бастап
   coursee-2021_gradelevel: Жас аралығы 8-12
   coursef-2021_gradelevel: Жас аралығы 9-13
+  coursea-2022_gradelevel: 4-7 жастағылар үшін
+  courseb-2022_gradelevel: Жас аралығы 5-8
+  coursec-2022_gradelevel: 6-10 жастағылар үшін
+  coursed-2022_gradelevel: 8-сыныптан бастап
+  coursee-2022_gradelevel: Жас аралығы 8-12
+  coursef-2022_gradelevel: Жас аралығы 9-13
   accelerated_gradelevel: "10-18 жастағылар үшін"
   codeorg_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
   codeintl_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
@@ -1132,3 +1138,4 @@
   footer_terms: "Ережелер"
   ai_for_oceans_lesson_plan: "оқу жоспары"
   ai_description: "Сипаттама"
+  hoc2022_landing_page_create_title: "Құру"

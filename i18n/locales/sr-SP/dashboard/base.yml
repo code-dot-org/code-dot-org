@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 sr:
   errors:
     messages:
@@ -281,7 +287,6 @@ sr:
     popup:
       progress_for_user: "Напредак %{name}"
       progress: 'Напредак'
-      lines: 'Укупно линија кода: %{lines}'
       close: 'ЗАТВОРИ'
       mastery: 'Концепти'
       puzzle_map: 'Нивои'
@@ -366,6 +371,7 @@ sr:
     no_primary_course: "Испробајте Code Studio курс"
     choose_next_course: "Испробајте Code Studio курс одабиром једног испод"
     print_certificate: "Одштампајте сертификат"
+  certificate_hour_of_code: "Час кода"
   share:
     title: "Научите о Code Studio-ју"
     description: "Свако може да научи компјутерску науку. Да направи игрице, апликације и уметност помоћу кодирања."
@@ -415,24 +421,24 @@ sr:
       current: "Тренутни Нивои"
       unused: "Неупотребљени Нивои"
   upsell:
-    20-hour:
-      body: 'Овај 20-часовни  курс представља срж компјутерских наука и програмерских основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је забавно учити у било којем животном периоду.'
-    hoc2014:
-      try_frozen: 'Уметник са Аном и Елзом из Залеђеног краљевства'
-    gallery:
-      title: "Галерија"
     frozen:
       title: "Залеђено краљевство"
+    gallery:
+      title: "Галерија"
+    hoc2014:
+      try_frozen: 'Уметник са Аном и Елзом из Залеђеног краљевства'
     infinity:
       body: "Креирај приче и игре са Дизнијевим ликовима у Играоници."
     minecraft:
       body: "Истражите Мајнкрафт свет кроз кôд"
     minecraft2016:
       body: "Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а."
-    unplugged_conditionals:
-      title: "Кондиционали"
     widgets:
       audience: "Узраста 14+"
+    unplugged_conditionals:
+      title: "Кондиционали"
+    20-hour:
+      body: 'Овај 20-часовни  курс представља срж компјутерских наука и програмерских основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је забавно учити у било којем животном периоду.'
   multi-submittable:
     wrong_title: "Хвала"
     correct_title: "Хвала"
@@ -483,6 +489,11 @@ sr:
         math: 'Математика'
         science: 'Наука'
         la: 'Уметност језика'
+        other: "Други"
+      resources:
+        other: "Други"
+      robotics:
+        other: "Други"
       email_opt_in:
         opt_in_yes: 'Да'
         opt_in_no: 'не'

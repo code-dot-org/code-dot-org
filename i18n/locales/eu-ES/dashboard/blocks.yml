@@ -2,6 +2,22 @@
 eu:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': ertaina
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': ertaina
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -147,12 +163,6 @@ eu:
           UNIT:
             '"measures"': neurriak
             '"seconds"': segundu
-      Dancelab_everySecondsRange:
-        text: "{N} {UNIT} aldiro, {START} tik {STOP} ra "
-        options:
-          UNIT:
-            measures: Neurriak
-            seconds: Segunduak
       Dancelab_everyVerseChorus:
         text: "{UNIT} guztietan "
         options:
@@ -461,6 +471,11 @@ eu:
           SONG:
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': bihotzak
+            '"rain"': euria
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} hasi {BEHAVIOR}
       gamelab_atTime:
@@ -490,7 +505,7 @@ eu:
         text: 'iruzkina: {COMMENT}'
       gamelab_destroy:
         text: ezabatu {THIS}
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: "{N} {UNIT} aldiro "
         options:
           UNIT:
@@ -550,6 +565,12 @@ eu:
             '90': behera
             '180': ezkerrera
             '270': gora
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': ertaina
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -881,3 +902,8 @@ eu:
         text: mugitu aurrera
       craft_placeTorch:
         text: argi-zuzia kokatu
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': bihotzak
+            '"rain"': euria

@@ -3,6 +3,8 @@ require 'base64'
 class CertificatesController < ApplicationController
   include CertificatesHelper
 
+  before_action :authenticate_user!, only: [:batch]
+
   # GET /certificates/:encoded_params
   # encoded_params includes:
   #   name - student name (optional)
@@ -23,6 +25,46 @@ class CertificatesController < ApplicationController
       imageUrl: certificate_image_url(data['name'], data['course'], data['donor']),
       printUrl: certificate_print_url(data['name'], data['course'], data['donor']),
       announcement: announcement
+    }
+  end
+
+  def blank
+    announcement = Announcements.get_announcement_for_page('/certificates')
+
+    @certificate_data = {
+      imageUrl: certificate_image_url(nil, 'hourofcode', nil),
+      printUrl: certificate_print_url(nil, 'hourofcode', nil),
+      announcement: announcement
+    }
+
+    render :show
+  end
+
+  # GET /certificates/batch
+  # POST /certificates/batch
+  def batch
+    unless current_user.teacher?
+      return redirect_to root_path, alert: 'You must be signed in as a teacher to bulk print certificates.'
+    end
+
+    begin
+      course_name = params[:course] ? Base64.urlsafe_decode64(params[:course]) : 'hourofcode'
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return render status: :bad_request, json: {message: 'invalid base64'}
+    end
+
+    course_version = CurriculumHelper.find_matching_course_version(course_name)
+    return render status: :bad_request, json: {message: "invalid course name: #{course_name.inspect}"} unless course_version
+
+    course_title = course_name == 'hourofcode' ? I18n.t('certificate_hour_of_code') : course_version.localized_title
+
+    student_names = request.method == 'POST' ? params[:names] : []
+
+    @certificate_data = {
+      courseName: course_name,
+      courseTitle: course_title,
+      studentNames: student_names,
+      imageUrl: certificate_image_url(nil, course_name, nil),
     }
   end
 end

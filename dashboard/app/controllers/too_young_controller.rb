@@ -11,7 +11,7 @@ class TooYoungController < ApplicationController
   #
   # GET /too_young
   def index
-    has_teacher = current_user && current_user.teachers.any?
+    has_teacher = current_user&.teachers&.any?
     msg = has_teacher ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
     redirect_to '/', flash: {alert: msg}
   end

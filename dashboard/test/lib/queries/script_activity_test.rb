@@ -24,7 +24,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal [a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_student_units(@user)
     assert_equal a.script, Queries::ScriptActivity.primary_student_unit(@user)
 
-    unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     course_script = create :script, published_state: nil
     create :unit_group_unit, unit_group: unit_group, script: course_script, position: 1
     course_script.reload
@@ -40,9 +40,9 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
 
   test 'user is working on pl scripts' do
     teacher = create :teacher
-    script1 = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    script2 = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    script3 = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    script1 = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    script2 = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    script3 = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     s1 = create :user_script, user: teacher, script: script1, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
     s2 = create :user_script, user: teacher, script: script2, started_at: (Time.now - 50.days), last_progress_at: (Time.now - 3.days)
     c = create :user_script, user: teacher, script: script3, started_at: (Time.now - 10.days), completed_at: (Time.now - 8.days)
@@ -57,12 +57,12 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal s2.script, Queries::ScriptActivity.primary_pl_unit(teacher)
 
     # add an assigned script that's more recent
-    script4 = create :script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    script4 = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     a = create :user_script, user: teacher, script: script4, started_at: (Time.now - 1.day)
     assert_equal [a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_pl_units(teacher)
     assert_equal a.script, Queries::ScriptActivity.primary_pl_unit(teacher)
 
-    unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     course_script = create :script, published_state: nil
     create :unit_group_unit, unit_group: unit_group, script: course_script, position: 1
     course_script.reload
@@ -77,8 +77,8 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'user should prefer working on 20hour instead of hoc' do
-    twenty_hour = Script.twenty_hour_unit
-    hoc = Script.find_by(name: 'hourofcode')
+    twenty_hour = Unit.twenty_hour_unit
+    hoc = Unit.find_by(name: 'hourofcode')
 
     # do a level that is both in script 1 and hoc
     [twenty_hour, hoc].each do |script|
@@ -89,7 +89,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'in_progress_and_completed_scripts does not include deleted scripts' do
-    real_script = Script.starwars_unit
+    real_script = Unit.starwars_unit
     fake_script = create :script
 
     user_script_1 = create :user_script, user: @user, script: real_script
@@ -100,7 +100,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     # Preconditions for test: The script is gone, but the associated UserScript still exists.
     # If we start failing this setup assertion (that is, we do automated cleanup
     # when deleting a script) then we can probably delete this test.
-    refute Script.exists?(fake_script.id), "Precondition for test: Expected Script #{fake_script.id} to be deleted."
+    refute Unit.exists?(fake_script.id), "Precondition for test: Expected Unit #{fake_script.id} to be deleted."
     assert UserScript.exists?(user_script_2.id), "Precondition for test: Expected UserScript #{user_script_2.id} to still exist."
 
     # Test: We only get back the userscript for the script that still exists

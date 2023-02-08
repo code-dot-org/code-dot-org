@@ -3,7 +3,6 @@
 - require 'country_codes'
 - location = Geocoder.search(request.ip).try(:first)
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
-
 - @page_title = t('activerecord.attributes.user.finish_sign_up_header')
 
 #signup
@@ -98,13 +97,21 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    .row#gender-dropdown{style: "display: none;"}
-      .span3.signup-field-label
-        = f.label :gender, t('signup_form.gender')
-      - if @user.errors[:gender].present?
-        %span.error= @user.errors[:gender].join(', ')
-      .span5
-        = f.select :gender, gender_options
+    - if ask_gender_experiment?(request, session.id.to_s)
+      - gender_input_type = gender_input_type?(request, session)
+      - SignUpTracking.log_gender_input_type_started(session, gender_input_type, request.locale, 'email_signup')
+      - if gender_input_type != User::GenderExperimentHelper::GENDER_INPUT_TYPE_NONE
+        .row#gender-dropdown{style: "display: none;"}
+          .span3.signup-field-label
+            = f.label :gender, t('signup_form.gender')
+          - if @user.errors[:gender].present?
+            %span.error= @user.errors[:gender].join(', ')
+          - if gender_input_type == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
+            .span5
+              = f.select :gender, gender_options
+          - else
+            .span5
+              = f.text_field :gender
 
     .row#school-info-section{style: "display: none;"}
       .span10

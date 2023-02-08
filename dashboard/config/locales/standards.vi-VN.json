@@ -1,0 +1,461 @@
+{
+  "vi-VN": {
+    "data": {
+      "standards": {
+        "ccela/3.RL.4": {
+          "description": "Xác định nghĩa của các từ và cụm từ khi sử dụng trong văn bản, phân biệt nghĩa đen với nghĩa bóng."
+        },
+        "ccela/4.RL.7": {
+          "description": "Liên hệ giữa phần chữ của một câu chuyện hoặc vở kịch và cách trình bày văn bản bằng hình ảnh hoặc miệng, xác định vị trí của mỗi phiên bản thể hiện phần mô tả và phương hướng cụ thể trong văn bản."
+        },
+        "ccela/5.RL.4": {
+          "description": "Xác định nghĩa của các từ và cụm từ khi sử dụng trong văn bản, bao gồm cả ngôn ngữ tượng hình như ẩn dụ và so sánh."
+        },
+        "ccela/5.RL.7": {
+          "description": "Phân tích cách các yếu tố hình ảnh và đa phương tiện góp phần vào ý nghĩa, phong cách hoặc nét đẹp của văn bản (ví dụ: tiểu thuyết đồ họa, trình bày tiểu thuyết bằng phương tiện, truyện dân gian, thần thoại, bài thơ)."
+        },
+        "ccela/6.SL.1": {
+          "description": "Tương tác hiệu quả trong một loạt các cuộc thảo luận hợp tác (theo cặp, theo nhóm và do giáo viên hướng dẫn) với nhiều bạn học khác về các chủ đề, đoạn văn và bài tập lớp 6, phát triển ý tưởng của người khác và thể hiện chính kiến một cách rõ ràng."
+        },
+        "ccela/7.SL.1": {
+          "description": "Tương tác hiệu quả trong một loạt các cuộc thảo luận hợp tác (theo cặp, theo nhóm và do giáo viên hướng dẫn) với nhiều bạn học khác về các chủ đề, đoạn văn và bài tập lớp 7, phát triển ý tưởng của người khác và thể hiện chính kiến một cách rõ ràng."
+        },
+        "ccmath/MP.1": {
+          "description": "Nhận thức vấn đề và kiên trì giải quyết"
+        },
+        "ccmath/MP.2": {
+          "description": "Lý do trừu tượng và định lượng"
+        },
+        "ccmath/MP.5": {
+          "description": "Sử dụng công cụ thích hợp có chiến lược"
+        },
+        "ccmath/MP.6": {
+          "description": "Quản lý độ chính xác"
+        },
+        "ccmath/MP.7": {
+          "description": "Tìm và tận dụng cấu trúc"
+        },
+        "ccmath/MP.8": {
+          "description": "Tìm và thể hiện quy luật trong các lập luận lặp đi lặp lại"
+        },
+        "csta2011/CPP.L1:6-06": {
+          "description": "Triển khai lời giải cho bài toán bằng ngôn ngữ lập trình trực quan sử dụng khối."
+        },
+        "csta2011/CT.L2:1": {
+          "description": "Sử dụng các bước cơ bản trong phương pháp giải quyết vấn đề bằng thuật toán để thiết kế giải pháp (Ví dụ: diễn giải và khám phá bài toán, kiểm tra các ví dụ mẫu, thiết kế, triển khai giải pháp, thử nghiệm và đánh giá)."
+        },
+        "csta2011/CT.L2:12": {
+          "description": "Sử dụng tính trừu tượng để phân tách một vấn đề thành các vấn đề nhỏ hơn."
+        },
+        "csta2011/CT.L2:6": {
+          "description": "Mô tả và phân tích chuỗi hướng dẫn đang thực hiện (Ví dụ: mô tả hành vi của nhân vật trong trò chơi điện tử do các quy tắc và thuật toán điều khiển)."
+        },
+        "csta2011/CT.L2:7": {
+          "description": "Biểu diễn dữ liệu theo nhiều cách khác nhau, bao gồm chữ, âm thanh, hình ảnh và số."
+        },
+        "csta2011/CT.L2:8": {
+          "description": "Sử dụng các hình thức biểu diễn trực quan về trạng thái, cấu trúc và dữ liệu của bài toán (Ví dụ: đồ thị, biểu đồ, sơ đồ mạng lưới, lưu đồ)."
+        },
+        "iste/1.a": {
+          "description": "Áp dụng kiến thức hiện có để tạo ra các ý tưởng, sản phẩm hoặc quy trình mới."
+        },
+        "iste/1.b": {
+          "description": "Tạo ra tác phẩm gốc như một phương tiện biểu đạt của cá nhân hoặc nhóm."
+        },
+        "iste/1.c": {
+          "description": "Sử dụng các mô hình và bản mô phỏng để khám phá các hệ thống và bài toán phức tạp."
+        },
+        "iste/4.b": {
+          "description": "Lập kế hoạch và quản lý các hoạt động để phát triển giải pháp hoặc hoàn thành một dự án."
+        },
+        "iste/6.a": {
+          "description": "Hiểu và sử dụng hệ thống công nghệ."
+        },
+        "iste/6.c": {
+          "description": "Khắc phục sự cố hệ thống và ứng dụng."
+        },
+        "iste/6.d": {
+          "description": "Chuyển giao kiến thức hiện tại để học các công nghệ mới."
+        },
+        "ccela/1.L.6": {
+          "description": "Sử dụng các từ và cụm từ thu thập thông qua các cuộc trò chuyện, đọc và nghe, rồi trả lời văn bản, bao gồm cả việc sử dụng các liên từ xuất hiện thường xuyên để báo hiệu các mệnh đề quan hệ đơn giản (Ví dụ: bởi vì)."
+        },
+        "ccela/1.SL.1": {
+          "description": "Tham gia vào các cuộc trò chuyện hợp tác với các bạn học khác về các chủ đề và đoạn văn lớp 1 với các bạn cùng lứa tuổi và người lớn trong các nhóm nhỏ và lớn hơn."
+        },
+        "ccela/11-12.RI.4": {
+          "description": "Xác định ý nghĩa của từ và cụm từ khi sử dụng trong văn bản, bao gồm nghĩa bóng, hàm ý và nghĩa đen; phân tích cách tác giả sử dụng và tinh chỉnh ý nghĩa của một thuật ngữ chính hoặc các thuật ngữ trong toàn bộ văn bản (Ví dụ: cách Madison định nghĩa"
+        },
+        "ccela/2.L.6": {
+          "description": "Sử dụng các từ và cụm từ thu thập thông qua các cuộc trò chuyện, đọc và nghe, rồi trả lời văn bản, bao gồm cả việc sử dụng các tính từ và trợ từ để miêu tả (Ví dụ: Khi các bạn khác vui, mình cũng thấy vui)."
+        },
+        "ccela/2.SL.1": {
+          "description": "Tham gia vào các cuộc trò chuyện hợp tác với các bạn học khác về các chủ đề và đoạn văn lớp 2 với các bạn cùng lứa tuổi và người lớn trong các nhóm nhỏ và lớn hơn."
+        },
+        "ccela/3.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ hội thoại, kiến thức chung và phù hợp với từng lĩnh vực, bao gồm cả những từ và cụm từ báo hiệu mối quan hệ không gian và thời gian (Ví dụ: Sau bữa tối hôm đó, chúng tôi đã đi tìm chúng)."
+        },
+        "ccela/3.SL.1": {
+          "description": "Tương tác hiệu quả trong một loạt các cuộc thảo luận hợp tác (theo cặp, theo nhóm và do giáo viên hướng dẫn) với nhiều bạn học khác về các chủ đề và đoạn văn lớp 3, phát triển ý tưởng của người khác và thể hiện chính kiến một cách rõ ràng."
+        },
+        "ccmath/1.OA.1": {
+          "description": "Sử dụng phép cộng và phép trừ trong phạm vi 20 để giải các bài toán liên quan đến các tình huống cộng, trừ, gộp ;aok, tách ra và so sánh, với các ẩn số ở tất cả các vị trí, ví dụ bằng cách sử dụng các đối tượng, hình vẽ và phương trình có ký hiệu cho"
+        },
+        "ccmath/2.OA.1": {
+          "description": "Sử dụng phép cộng và phép trừ trong phạm vi 100 để giải các bài toán một và hai bước liên quan đến các tình huống cộng, trừ, gộp lại, tách biệt và so sánh với các ẩn số ở tất cả các vị trí, ví dụ bằng cách sử dụng hình vẽ và phương trình với một"
+        },
+        "ccmath/3.OA.3": {
+          "description": "Sử dụng phép nhân và phép chia trong phạm vi 100 để giải các bài toán trong các tình huống liên quan đến nhóm, mảng và đại lượng đo bằng nhau, ví dụ như bằng cách sử dụng hình vẽ và phương trình có ký hiệu cho số chưa biết để biểu diễn bài toán.1"
+        },
+        "csta2011/CD.L1:3-01": {
+          "description": "Sử dụng các thiết bị đầu vào và đầu ra tiêu chuẩn để vận hành hiệu quả máy tính và các công nghệ liên quan."
+        },
+        "csta2011/CI.L1:3-01": {
+          "description": "Thực hành quyền công dân số có trách nhiệm (các hành vi pháp lý và đạo đức) trong việc sử dụng các hệ thống công nghệ và phần mềm."
+        },
+        "csta2011/CPP.L1:6-01": {
+          "description": "Sử dụng tài nguyên công nghệ (ví dụ: máy tính, điều tra thu thập dữ liệu, thiết bị di động, video, phần mềm giáo dục và công cụ web) để giải quyết vấn đề và học tập tự định hướng."
+        },
+        "ccela/11-12.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ học thuật chung và theo lĩnh vực cụ thể, đủ để đọc, viết, nói và nghe ở cấp độ sẵn sàng đi làm và học đại học; thể hiện khả năng độc lập thu thập kiến thức từ vựng khi xem xét"
+        },
+        "ccela/4.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ học thuật chung phù hợp với trình độ và theo lĩnh vực cụ thể, bao gồm những từ và cụm từ báo hiệu hành động, cảm xúc hoặc trạng thái chính xác (Ví dụ: thắc mắc, than vãn, lắp bắp) và cơ bản cho một chủ đề cụ thể (Ví dụ:"
+        },
+        "ccela/5.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ chung về học thuật và theo lĩnh vực cụ thể phù hợp với trình độ, bao gồm cả những từ và cụm từ báo hiệu sự đối lập, phép cộng và các mối quan hệ logic khác (Ví dụ: tuy nhiên, mặc dù, tương tự như vậy, hơn thế nữa, ngoài ra)."
+        },
+        "ccmath/4.MD.6": {
+          "description": "Đo góc theo số đo độ là số nguyên bằng thước đo góc. Phác thảo các góc theo số đo xác định."
+        },
+        "ccmath/4.NBT.4": {
+          "description": "Cộng và trừ các số nguyên có nhiều chữ số một cách thành thạo bằng cách sử dụng thuật toán chuẩn."
+        },
+        "ccmath/4.NBT.5": {
+          "description": "Nhân một số nguyên có tối đa bốn chữ số với một số nguyên có một chữ số và nhân hai số có hai chữ số, sử dụng các chiến lược dựa trên giá trị vị trí và các thuộc tính của phép toán. Minh họa và giải thích phép tính bằng cách sử dụng phương trình, ar hình chữ nhật"
+        },
+        "ccmath/7.G.2": {
+          "description": "Hãy vẽ (bằng tay, bằng thước và thước đo góc và bằng thiết bị điện tử) các hình khối hình học với các điều kiện cho trước. Hãy tập trung vào việc tạo dựng hình tam giác từ ba số đo góc hoặc cạnh, lưu ý khi các điều kiện xác định một tam giác duy nhất, nhiều hơn một tam giác"
+        },
+        "csta2011/CPP.L1:3-02": {
+          "description": "Sử dụng các nguồn hỗ trợ đa phương tiện phù hợp với sự phát triển (Ví dụ: sách tương tác và phần mềm giáo dục) để hỗ trợ việc học trong toàn bộ chương trình học."
+        },
+        "csta2011/CPP.L1:3-04": {
+          "description": "Xây dựng tập hợp các câu lệnh được thực thi để hoàn thành một nhiệm vụ đơn giản (Ví dụ: bài hướng dẫn về chú rùa)."
+        },
+        "ccela/11-12.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sản xuất, xuất bản và cập nhật các sản phẩm riêng hoặc chia sẻ để đáp lại phản hồi liên tục, bao gồm các lập luận hoặc thông tin mới."
+        },
+        "ccela/4.W.3": {
+          "description": "Viết bản tường thuật để phát triển các trải nghiệm hoặc sự kiện thực tế hoặc tưởng tượng bằng cách sử dụng kỹ thuật hiệu quả, mô tả chi tiết và chuỗi sự kiện rõ ràng."
+        },
+        "ccela/6.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sáng tác và xuất bản các bài viết cũng như để tương tác và cộng tác với những người khác; thể hiện kỹ năng gõ bàn phím đầy đủ để gõ tối thiểu ba trang liên tiếp."
+        },
+        "ccela/7.W.3": {
+          "description": "Viết tường thuật để phát triển các trải nghiệm, sự kiện thực tế hoặc tưởng tượng bằng cách sử dụng kỹ thuật hiệu quả, các thông tin mô tả phù hợp và chuỗi sự kiện có cấu trúc tốt."
+        },
+        "ccela/7.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sáng tác và xuất bản bài viết, liên kết và trích dẫn nguồn cũng như để tương tác và cộng tác với những người khác, bao gồm cả liên kết và trích dẫn nguồn."
+        },
+        "ccela/8.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sáng tác và xuất bản bài viết và trình bày mối quan hệ giữa thông tin và ý tưởng một cách hiệu quả cũng như để tương tác và cộng tác với những người khác."
+        },
+        "ccela/9-10.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sáng tác, xuất bản và cập nhật các sản phẩm viết riêng hoặc chia sẻ, tận dụng khả năng của công nghệ để liên kết với các thông tin khác và hiển thị thông tin một cách linh hoạt và năng động."
+        },
+        "ccmath/MP.4": {
+          "description": "Mô hình với toán học"
+        },
+        "csta2011/CL.L1:6-02": {
+          "description": "Sử dụng tài nguyên trực tuyến (ví dụ: email, các cuộc thảo luận trực tuyến, môi trường web làm việc cộng tác) để tham gia vào các hoạt động hợp tác giải quyết vấn đề nhằm mục đích phát triển các giải pháp hoặc sản phẩm."
+        },
+        "csta2011/CPP.L1:3-01": {
+          "description": "Sử dụng tài nguyên công nghệ để tiến hành nghiên cứu phù hợp với lứa tuổi."
+        },
+        "csta2011/CPP.L2:3": {
+          "description": "Thiết kế, phát triển, xuất bản và trình bày các sản phẩm (ví dụ: trang web, ứng dụng di động, hình ảnh động) bằng cách sử dụng các tài nguyên công nghệ để thể hiện và truyền đạt các khái niệm chương trình giảng dạy."
+        },
+        "iste/2.a": {
+          "description": "Tương tác, cộng tác và xuất bản với các đồng nghiệp, chuyên gia hoặc những người khác sử dụng nhiều môi trường kỹ thuật số và phương tiện truyền thông."
+        },
+        "iste/2.b": {
+          "description": "Truyền đạt thông tin và ý tưởng một cách hiệu quả tới nhiều đối tượng bằng nhiều phương tiện và định dạng khác nhau."
+        },
+        "iste/4.d": {
+          "description": "Sử dụng nhiều quy trình và quan điểm đa dạng để khám phá các giải pháp thay thế."
+        },
+        "csp2021/IOC-2.B.5": {
+          "description": "Mã hóa là quá trình mã hóa dữ liệu để ngăn chặn hành vi truy cập trái phép. Giải mã là quá trình giải mã dữ liệu. Hai phương pháp mã hóa phổ biến là: ● Mã hóa khóa đối xứng bao gồm một khóa cho cả quy trình mã hóa và giải mã. ● Mã hóa khóa công khai ghép khóa công khai để mã hóa và khóa riêng tư để giải mã. Người gửi không cần khóa riêng của người nhận để mã hóa tin nhắn, nhưng cần có khóa riêng của người nhận để giải mã thông điệp. TUYÊN BỐ MIỄN TRỪ (EKIOC-2.B.5): Các phương pháp toán học cụ thể để mã hóa và giải mã nằm ngoài phạm vi của khóa học này và Kỳ thi AP."
+        },
+        "csta/3A-NI-06": {
+          "description": "Đề xuất các biện pháp bảo mật để giải quyết các tình huống khác nhau dựa trên các yếu tố như hiệu quả, tính khả thi và tác động về đạo đức."
+        },
+        "csta/3A-NI-07": {
+          "description": "So sánh các biện pháp bảo mật khác nhau, xem xét sự cân bằng giữa khả năng sử dụng và tính bảo mật của hệ thống máy tính."
+        },
+        "csta/3B-NI-04": {
+          "description": "So sánh cách các nhà phát triển phần mềm bảo vệ thiết bị và thông tin khỏi bị truy cập trái phép."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "Nén dữ liệu có thể làm giảm kích thước (số bit) của dữ liệu cần truyền đi hoặc lưu trữ."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Số bit ít hơn không nhất thiết có nghĩa là ít thông tin hơn."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "Mức độ giảm kích thước trong quá trình nén dữ liệu phụ thuộc vào cả số lượng bit dư thừa khi biểu diễn dữ liệu gốc và thuật toán nén dữ liệu được áp dụng."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Các thuật toán nén dữ liệu không giảm chất lượng thường có thể giảm số lượng bit lưu trữ hoặc truyền đi mà vẫn đảm bảo tái tạo được toàn bộ dữ liệu ban đầu."
+        },
+        "csta/3A-DA-10": {
+          "description": "Đánh giá sự cân bằng trong cách tổ chức các phần tử dữ liệu và vị trí lưu trữ dữ liệu."
+        },
+        "csta/1B-IC-18": {
+          "description": "Thảo luận về các công nghệ máy tính đã thay đổi thế giới và trình bày cách các công nghệ đó gây ảnh hưởng và chịu sự ảnh hưởng của các phong tục văn hóa."
+        },
+        "csta/1B-DA-07": {
+          "description": "Sử dụng dữ liệu để làm nổi bật hoặc đề xuất các mối quan hệ nhân quả, dự đoán kết quả hoặc truyền đạt ý tưởng."
+        },
+        "1B-DA-07": {
+          "description": "Sử dụng dữ liệu để làm nổi bật hoặc đề xuất các mối quan hệ nhân quả, dự đoán kết quả hoặc truyền đạt ý tưởng."
+        },
+        "1B-IC-18": {
+          "description": "Thảo luận về các công nghệ máy tính đã thay đổi thế giới và trình bày cách các công nghệ đó gây ảnh hưởng và chịu sự ảnh hưởng của các phong tục văn hóa."
+        },
+        "3A-DA-10": {
+          "description": "Đánh giá sự cân bằng trong cách tổ chức các phần tử dữ liệu và vị trí lưu trữ dữ liệu."
+        },
+        "3A-NI-06": {
+          "description": "Đề xuất các biện pháp bảo mật để giải quyết các tình huống khác nhau dựa trên các yếu tố như hiệu quả, tính khả thi và tác động về đạo đức."
+        },
+        "3A-NI-07": {
+          "description": "So sánh các biện pháp bảo mật khác nhau, xem xét sự cân bằng giữa khả năng sử dụng và tính bảo mật của hệ thống máy tính."
+        },
+        "3B-NI-04": {
+          "description": "So sánh cách các nhà phát triển phần mềm bảo vệ thiết bị và thông tin khỏi bị truy cập trái phép."
+        },
+        "DAT-1.D.1": {
+          "description": "Nén dữ liệu có thể làm giảm kích thước (số bit) của dữ liệu cần truyền đi hoặc lưu trữ."
+        },
+        "DAT-1.D.2": {
+          "description": "Số bit ít hơn không nhất thiết có nghĩa là ít thông tin hơn."
+        },
+        "DAT-1.D.3": {
+          "description": "Mức độ giảm kích thước trong quá trình nén dữ liệu phụ thuộc vào cả số lượng bit dư thừa khi biểu diễn dữ liệu gốc và thuật toán nén dữ liệu được áp dụng."
+        },
+        "DAT-1.D.4": {
+          "description": "Các thuật toán nén dữ liệu không giảm chất lượng thường có thể giảm số lượng bit lưu trữ hoặc truyền đi mà vẫn đảm bảo tái tạo được toàn bộ dữ liệu ban đầu."
+        },
+        "IOC-2.B.5": {
+          "description": "Mã hóa là quá trình mã hóa dữ liệu để ngăn chặn hành vi truy cập trái phép. Giải mã là quá trình giải mã dữ liệu. Hai phương pháp mã hóa phổ biến là: ● Mã hóa khóa đối xứng bao gồm một khóa cho cả quy trình mã hóa và giải mã. ● Mã hóa khóa công khai ghép khóa công khai để mã hóa và khóa riêng tư để giải mã. Người gửi không cần khóa riêng của người nhận để mã hóa tin nhắn, nhưng cần có khóa riêng của người nhận để giải mã thông điệp. TUYÊN BỐ MIỄN TRỪ (EKIOC-2.B.5): Các phương pháp toán học cụ thể để mã hóa và giải mã nằm ngoài phạm vi của khóa học này và Kỳ thi AP."
+        },
+        "CD.L1:3-01": {
+          "description": "Sử dụng các thiết bị đầu vào và đầu ra tiêu chuẩn để vận hành hiệu quả máy tính và các công nghệ liên quan."
+        },
+        "CI.L1:3-01": {
+          "description": "Thực hành quyền công dân số có trách nhiệm (các hành vi pháp lý và đạo đức) trong việc sử dụng các hệ thống công nghệ và phần mềm."
+        },
+        "CL.L1:6-02": {
+          "description": "Sử dụng tài nguyên trực tuyến (ví dụ: email, các cuộc thảo luận trực tuyến, môi trường web làm việc cộng tác) để tham gia vào các hoạt động hợp tác giải quyết vấn đề nhằm mục đích phát triển các giải pháp hoặc sản phẩm."
+        },
+        "CPP.L1:3-01": {
+          "description": "Sử dụng tài nguyên công nghệ để tiến hành nghiên cứu phù hợp với lứa tuổi."
+        },
+        "CPP.L1:3-02": {
+          "description": "Sử dụng các nguồn hỗ trợ đa phương tiện phù hợp với sự phát triển (Ví dụ: sách tương tác và phần mềm giáo dục) để hỗ trợ việc học trong toàn bộ chương trình học."
+        },
+        "CPP.L1:3-04": {
+          "description": "Xây dựng tập hợp các câu lệnh được thực thi để hoàn thành một nhiệm vụ đơn giản (Ví dụ: bài hướng dẫn về chú rùa)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Sử dụng tài nguyên công nghệ (ví dụ: máy tính, điều tra thu thập dữ liệu, thiết bị di động, video, phần mềm giáo dục và công cụ web) để giải quyết vấn đề và học tập tự định hướng."
+        },
+        "CPP.L1:6-06": {
+          "description": "Triển khai lời giải cho bài toán bằng ngôn ngữ lập trình trực quan sử dụng khối."
+        },
+        "CPP.L2:3": {
+          "description": "Thiết kế, phát triển, xuất bản và trình bày các sản phẩm (ví dụ: trang web, ứng dụng di động, hình ảnh động) bằng cách sử dụng các tài nguyên công nghệ để thể hiện và truyền đạt các khái niệm chương trình giảng dạy."
+        },
+        "CT.L2:1": {
+          "description": "Sử dụng các bước cơ bản trong phương pháp giải quyết vấn đề bằng thuật toán để thiết kế giải pháp (Ví dụ: diễn giải và khám phá bài toán, kiểm tra các ví dụ mẫu, thiết kế, triển khai giải pháp, thử nghiệm và đánh giá)."
+        },
+        "CT.L2:12": {
+          "description": "Sử dụng tính trừu tượng để phân tách một vấn đề thành các vấn đề nhỏ hơn."
+        },
+        "CT.L2:6": {
+          "description": "Mô tả và phân tích chuỗi hướng dẫn đang thực hiện (Ví dụ: mô tả hành vi của nhân vật trong trò chơi điện tử do các quy tắc và thuật toán điều khiển)."
+        },
+        "CT.L2:7": {
+          "description": "Biểu diễn dữ liệu theo nhiều cách khác nhau, bao gồm chữ, âm thanh, hình ảnh và số."
+        },
+        "CT.L2:8": {
+          "description": "Sử dụng các hình thức biểu diễn trực quan về trạng thái, cấu trúc và dữ liệu của bài toán (Ví dụ: đồ thị, biểu đồ, sơ đồ mạng lưới, lưu đồ)."
+        },
+        "1.L.6": {
+          "description": "Sử dụng các từ và cụm từ thu thập thông qua các cuộc trò chuyện, đọc và nghe, rồi trả lời văn bản, bao gồm cả việc sử dụng các liên từ xuất hiện thường xuyên để báo hiệu các mệnh đề quan hệ đơn giản (Ví dụ: bởi vì)."
+        },
+        "11-12.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ học thuật chung và theo lĩnh vực cụ thể, đủ để đọc, viết, nói và nghe ở cấp độ sẵn sàng đi làm và học đại học; thể hiện khả năng độc lập thu thập kiến thức từ vựng khi xem xét"
+        },
+        "2.L.6": {
+          "description": "Sử dụng các từ và cụm từ thu thập thông qua các cuộc trò chuyện, đọc và nghe, rồi trả lời văn bản, bao gồm cả việc sử dụng các tính từ và trợ từ để miêu tả (Ví dụ: Khi các bạn khác vui, mình cũng thấy vui)."
+        },
+        "3.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ hội thoại, kiến thức chung và phù hợp với từng lĩnh vực, bao gồm cả những từ và cụm từ báo hiệu mối quan hệ không gian và thời gian (Ví dụ: Sau bữa tối hôm đó, chúng tôi đã đi tìm chúng)."
+        },
+        "4.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ học thuật chung phù hợp với trình độ và theo lĩnh vực cụ thể, bao gồm những từ và cụm từ báo hiệu hành động, cảm xúc hoặc trạng thái chính xác (Ví dụ: thắc mắc, than vãn, lắp bắp) và cơ bản cho một chủ đề cụ thể (Ví dụ:"
+        },
+        "5.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ chung về học thuật và theo lĩnh vực cụ thể phù hợp với trình độ, bao gồm cả những từ và cụm từ báo hiệu sự đối lập, phép cộng và các mối quan hệ logic khác (Ví dụ: tuy nhiên, mặc dù, tương tự như vậy, hơn thế nữa, ngoài ra)."
+        },
+        "9-10.L.6": {
+          "description": "Tiếp thu và sử dụng chính xác các từ và cụm từ học thuật chung và theo lĩnh vực cụ thể, đủ để đọc, viết, nói và nghe ở cấp độ sẵn sàng đi làm và học đại học; thể hiện khả năng độc lập thu thập kiến thức từ vựng khi xem xét"
+        },
+        "11-12.RI.4": {
+          "description": "Xác định ý nghĩa của từ và cụm từ khi sử dụng trong văn bản, bao gồm nghĩa bóng, hàm ý và nghĩa đen; phân tích cách tác giả sử dụng và tinh chỉnh ý nghĩa của một thuật ngữ chính hoặc các thuật ngữ trong toàn bộ văn bản (Ví dụ: cách Madison định nghĩa"
+        },
+        "3.RL.4": {
+          "description": "Xác định nghĩa của các từ và cụm từ khi sử dụng trong văn bản, phân biệt nghĩa đen với nghĩa bóng."
+        },
+        "4.RL.7": {
+          "description": "Liên hệ giữa phần chữ của một câu chuyện hoặc vở kịch và cách trình bày văn bản bằng hình ảnh hoặc miệng, xác định vị trí của mỗi phiên bản thể hiện phần mô tả và phương hướng cụ thể trong văn bản."
+        },
+        "5.RL.4": {
+          "description": "Xác định nghĩa của các từ và cụm từ khi sử dụng trong văn bản, bao gồm cả ngôn ngữ tượng hình như ẩn dụ và so sánh."
+        },
+        "5.RL.7": {
+          "description": "Phân tích cách các yếu tố hình ảnh và đa phương tiện góp phần vào ý nghĩa, phong cách hoặc nét đẹp của văn bản (ví dụ: tiểu thuyết đồ họa, trình bày tiểu thuyết bằng phương tiện, truyện dân gian, thần thoại, bài thơ)."
+        },
+        "1.SL.1": {
+          "description": "Tham gia vào các cuộc trò chuyện hợp tác với các bạn học khác về các chủ đề và đoạn văn lớp 1 với các bạn cùng lứa tuổi và người lớn trong các nhóm nhỏ và lớn hơn."
+        },
+        "2.SL.1": {
+          "description": "Tham gia vào các cuộc trò chuyện hợp tác với các bạn học khác về các chủ đề và đoạn văn lớp 2 với các bạn cùng lứa tuổi và người lớn trong các nhóm nhỏ và lớn hơn."
+        },
+        "3.SL.1": {
+          "description": "Tương tác hiệu quả trong một loạt các cuộc thảo luận hợp tác (theo cặp, theo nhóm và do giáo viên hướng dẫn) với nhiều bạn học khác về các chủ đề và đoạn văn lớp 3, phát triển ý tưởng của người khác và thể hiện chính kiến một cách rõ ràng."
+        },
+        "6.SL.1": {
+          "description": "Tương tác hiệu quả trong một loạt các cuộc thảo luận hợp tác (theo cặp, theo nhóm và do giáo viên hướng dẫn) với nhiều bạn học khác về các chủ đề, đoạn văn và bài tập lớp 6, phát triển ý tưởng của người khác và thể hiện chính kiến một cách rõ ràng."
+        },
+        "7.SL.1": {
+          "description": "Tương tác hiệu quả trong một loạt các cuộc thảo luận hợp tác (theo cặp, theo nhóm và do giáo viên hướng dẫn) với nhiều bạn học khác về các chủ đề, đoạn văn và bài tập lớp 7, phát triển ý tưởng của người khác và thể hiện chính kiến một cách rõ ràng."
+        },
+        "11-12.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sản xuất, xuất bản và cập nhật các sản phẩm riêng hoặc chia sẻ để đáp lại phản hồi liên tục, bao gồm các lập luận hoặc thông tin mới."
+        },
+        "3.W.3": {
+          "description": "Viết bản tường thuật để phát triển các trải nghiệm hoặc sự kiện thực tế hoặc tưởng tượng bằng cách sử dụng kỹ thuật hiệu quả, mô tả chi tiết và chuỗi sự kiện rõ ràng."
+        },
+        "4.W.3": {
+          "description": "Viết bản tường thuật để phát triển các trải nghiệm hoặc sự kiện thực tế hoặc tưởng tượng bằng cách sử dụng kỹ thuật hiệu quả, mô tả chi tiết và chuỗi sự kiện rõ ràng."
+        },
+        "5.W.3": {
+          "description": "Viết bản tường thuật để phát triển các trải nghiệm hoặc sự kiện thực tế hoặc tưởng tượng bằng cách sử dụng kỹ thuật hiệu quả, mô tả chi tiết và chuỗi sự kiện rõ ràng."
+        },
+        "6.W.3": {
+          "description": "Viết tường thuật để phát triển các trải nghiệm, sự kiện thực tế hoặc tưởng tượng bằng cách sử dụng kỹ thuật hiệu quả, các thông tin mô tả phù hợp và chuỗi sự kiện có cấu trúc tốt."
+        },
+        "6.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sáng tác và xuất bản các bài viết cũng như để tương tác và cộng tác với những người khác; thể hiện kỹ năng gõ bàn phím đầy đủ để gõ tối thiểu ba trang liên tiếp."
+        },
+        "7.W.3": {
+          "description": "Viết tường thuật để phát triển các trải nghiệm, sự kiện thực tế hoặc tưởng tượng bằng cách sử dụng kỹ thuật hiệu quả, các thông tin mô tả phù hợp và chuỗi sự kiện có cấu trúc tốt."
+        },
+        "7.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sáng tác và xuất bản bài viết, liên kết và trích dẫn nguồn cũng như để tương tác và cộng tác với những người khác, bao gồm cả liên kết và trích dẫn nguồn."
+        },
+        "8.W.3": {
+          "description": "Viết tường thuật để phát triển các trải nghiệm, sự kiện thực tế hoặc tưởng tượng bằng cách sử dụng kỹ thuật hiệu quả, các thông tin mô tả phù hợp và chuỗi sự kiện có cấu trúc tốt."
+        },
+        "8.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sáng tác và xuất bản bài viết và trình bày mối quan hệ giữa thông tin và ý tưởng một cách hiệu quả cũng như để tương tác và cộng tác với những người khác."
+        },
+        "9-10.W.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sáng tác, xuất bản và cập nhật các sản phẩm viết riêng hoặc chia sẻ, tận dụng khả năng của công nghệ để liên kết với các thông tin khác và hiển thị thông tin một cách linh hoạt và năng động."
+        },
+        "11-12.WHST.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sản xuất, xuất bản và cập nhật các sản phẩm riêng hoặc chia sẻ để đáp lại phản hồi liên tục, bao gồm các lập luận hoặc thông tin mới."
+        },
+        "9-10.WHST.6": {
+          "description": "Sử dụng công nghệ, bao gồm cả Internet, để sáng tác, xuất bản và cập nhật các sản phẩm viết riêng hoặc chia sẻ, tận dụng khả năng của công nghệ để liên kết với các thông tin khác và hiển thị thông tin một cách linh hoạt và năng động."
+        },
+        "7.G.2": {
+          "description": "Hãy vẽ (bằng tay, bằng thước và thước đo góc và bằng thiết bị điện tử) các hình khối hình học với các điều kiện cho trước. Hãy tập trung vào việc tạo dựng hình tam giác từ ba số đo góc hoặc cạnh, lưu ý khi các điều kiện xác định một tam giác duy nhất, nhiều hơn một tam giác"
+        },
+        "4.MD.6": {
+          "description": "Đo góc theo số đo độ là số nguyên bằng thước đo góc. Phác thảo các góc theo số đo xác định."
+        },
+        "MP.1": {
+          "description": "Nhận thức vấn đề và kiên trì giải quyết"
+        },
+        "MP.2": {
+          "description": "Lý do trừu tượng và định lượng"
+        },
+        "MP.4": {
+          "description": "Mô hình với toán học"
+        },
+        "MP.5": {
+          "description": "Sử dụng công cụ thích hợp có chiến lược"
+        },
+        "MP.6": {
+          "description": "Quản lý độ chính xác"
+        },
+        "MP.7": {
+          "description": "Tìm và tận dụng cấu trúc"
+        },
+        "MP.8": {
+          "description": "Tìm và thể hiện quy luật trong các lập luận lặp đi lặp lại"
+        },
+        "4.NBT.4": {
+          "description": "Cộng và trừ các số nguyên có nhiều chữ số một cách thành thạo bằng cách sử dụng thuật toán chuẩn."
+        },
+        "4.NBT.5": {
+          "description": "Nhân một số nguyên có tối đa bốn chữ số với một số nguyên có một chữ số và nhân hai số có hai chữ số, sử dụng các chiến lược dựa trên giá trị vị trí và các thuộc tính của phép toán. Minh họa và giải thích phép tính bằng cách sử dụng phương trình, ar hình chữ nhật"
+        },
+        "1.OA.1": {
+          "description": "Sử dụng phép cộng và phép trừ trong phạm vi 20 để giải các bài toán liên quan đến các tình huống cộng, trừ, gộp ;aok, tách ra và so sánh, với các ẩn số ở tất cả các vị trí, ví dụ bằng cách sử dụng các đối tượng, hình vẽ và phương trình có ký hiệu cho"
+        },
+        "2.OA.1": {
+          "description": "Sử dụng phép cộng và phép trừ trong phạm vi 100 để giải các bài toán một và hai bước liên quan đến các tình huống cộng, trừ, gộp lại, tách biệt và so sánh với các ẩn số ở tất cả các vị trí, ví dụ bằng cách sử dụng hình vẽ và phương trình với một"
+        },
+        "3.OA.3": {
+          "description": "Sử dụng phép nhân và phép chia trong phạm vi 100 để giải các bài toán trong các tình huống liên quan đến nhóm, mảng và đại lượng đo bằng nhau, ví dụ như bằng cách sử dụng hình vẽ và phương trình có ký hiệu cho số chưa biết để biểu diễn bài toán.1"
+        },
+        "1.a": {
+          "description": "Áp dụng kiến thức hiện có để tạo ra các ý tưởng, sản phẩm hoặc quy trình mới."
+        },
+        "1.b": {
+          "description": "Tạo ra tác phẩm gốc như một phương tiện biểu đạt của cá nhân hoặc nhóm."
+        },
+        "1.c": {
+          "description": "Sử dụng các mô hình và bản mô phỏng để khám phá các hệ thống và bài toán phức tạp."
+        },
+        "2.a": {
+          "description": "Tương tác, cộng tác và xuất bản với các đồng nghiệp, chuyên gia hoặc những người khác sử dụng nhiều môi trường kỹ thuật số và phương tiện truyền thông."
+        },
+        "2.b": {
+          "description": "Truyền đạt thông tin và ý tưởng một cách hiệu quả tới nhiều đối tượng bằng nhiều phương tiện và định dạng khác nhau."
+        },
+        "4.b": {
+          "description": "Lập kế hoạch và quản lý các hoạt động để phát triển giải pháp hoặc hoàn thành một dự án."
+        },
+        "4.d": {
+          "description": "Sử dụng nhiều quy trình và quan điểm đa dạng để khám phá các giải pháp thay thế."
+        },
+        "6.a": {
+          "description": "Hiểu và sử dụng hệ thống công nghệ."
+        },
+        "6.c": {
+          "description": "Khắc phục sự cố hệ thống và ứng dụng."
+        },
+        "6.d": {
+          "description": "Chuyển giao kiến thức hiện tại để học các công nghệ mới."
+        }
+      }
+    }
+  }
+}

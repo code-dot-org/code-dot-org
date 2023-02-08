@@ -1,0 +1,14 @@
+{
+  "ms-MY": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "Penggunaan inovasi pengkomputeran mungkin melibatkan risiko kepada keselamatan dan identiti peribadi anda."
+        },
+        "csp2021/DAT-1": {
+          "description": "Cara komputer mewakili data adalah berbeza daripada cara data ditafsir dan dipaparkan untuk pengguna. Program digunakan untuk menterjemah data kepada perwakilan yang lebih mudah difahami oleh orang ramai."
+        }
+      }
+    }
+  }
+}

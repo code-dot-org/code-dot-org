@@ -38,6 +38,8 @@
   "drawATriangle": "Rajzolj egy háromszöget",
   "drawUpperWave": "rajzolj felső hullámot",
   "drawLowerWave": "rajzolj alsó hullámot",
+  "drawShape": "Forma rajzolása",
+  "drawShapeWithSideLength": "rajzolj egy alakot oldalhosszúsággal",
   "drawSticker": "rajzolj matricát",
   "drawStickerWithSize": "rajzolj matricát ezzel a vastagsággal",
   "forward": "előre",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "A művészt láthatóvá, vagy láthatatlanná teszi.",
   "widthTooltip": "A ceruza szélességének módosítása.",
   "withSize": "mérettel",
+  "withSideLength": "oldalhosszúsággal",
   "wrongColour": "A kép színe hibás.  Ehhez a feladványhoz %1 színűnek kell lennie."
 }

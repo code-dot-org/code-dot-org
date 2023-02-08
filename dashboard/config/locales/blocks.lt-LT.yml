@@ -2,8 +2,26 @@
 lt:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': šiek tiek
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': šiek tiek
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           MOVE1:
             MOVES.Rest: Nė vienas
           MOVE2:
@@ -14,6 +32,8 @@ lt:
             '"seconds"': sekundes
       Dancelab_changeMoveEachLR:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           MOVE:
             MOVES.Rest: Nė vienas
       Dancelab_changeMoveLR:
@@ -27,11 +47,15 @@ lt:
             '"height"': aukštis
       Dancelab_changePropEachBy:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
       Dancelab_doMoveEachLR:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           MOVE:
             MOVES.Rest: Nė vienas
       Dancelab_doMoveLR:
@@ -67,12 +91,16 @@ lt:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           LOCATION:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": atsitiktinis
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           FORMAT:
             '"diamond"': deimantą
             '"random"': atsitiktinis
@@ -104,6 +132,8 @@ lt:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
       Dancelab_makeNewDanceSpriteGroup:
         options:
+          COSTUME:
+            '"ALIEN"': ateiviai
           LAYOUT:
             '"diamond"': deimantą
             '"random"': atsitiktinis
@@ -117,6 +147,10 @@ lt:
         options:
           EFFECT:
             '"none"': Nė vienas
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            '"ALIEN"': ateiviai
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -132,6 +166,8 @@ lt:
             '"height"': aukštis
       Dancelab_setPropEach:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
@@ -142,15 +178,27 @@ lt:
             '"height"': aukštis
       Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"ALIEN"': ateiviai
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            '"ALIEN"': ateiviai
       Dancelab_setVisible:
         options:
           VISIBILITY:
             'true': matomas
       Dancelab_setVisibleEach:
         options:
+          THIS:
+            '"ALIEN"': ateiviai
           VISIBILITY:
             'true': matomas
       Dancelab_startMapping:
@@ -160,6 +208,8 @@ lt:
             '"height"': aukštis
       Dancelab_startMappingEach:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
@@ -170,6 +220,8 @@ lt:
             '"height"': aukštis
       Dancelab_stopMappingEach:
         options:
+          GROUP:
+            '"ALIEN"': ateiviai
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
@@ -188,6 +240,10 @@ lt:
             '"space"': kosmosas
             '"enter"': įveskite
             '"x"': x
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': širdelės
       gamelab_atTime:
         options:
           UNIT:
@@ -204,7 +260,7 @@ lt:
           CONDITION:
             '"when"': kada
             '"while"': kol
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': sekundes
@@ -247,6 +303,12 @@ lt:
             '90': žemyn
             '180': kairėn
             '270': aukštyn
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '30': small
+            '50': šiek tiek
+            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -256,6 +318,7 @@ lt:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": trakšt
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbulas
             "'sound://category_animals/cat.mp3'": katė
             "'sound://category_animals/cow.mp3'": karvė
             "'sound://category_animals/sheep.mp3'": avis
@@ -438,6 +501,7 @@ lt:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': plyta
             '"hearts"': širdelės
             '"rainbow"': vaivorykštė
       Poetry_playMusic:
@@ -447,6 +511,7 @@ lt:
       Poetry_playSound:
         options:
           SOUND:
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Burbulas
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': šok
       Poetry_setBackgroundEffect:
         options:
@@ -506,3 +571,7 @@ lt:
         text: judėk į priekį
       craft_placeTorch:
         text: padėk deglą
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': širdelės

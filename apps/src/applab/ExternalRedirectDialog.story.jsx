@@ -2,50 +2,42 @@ import React from 'react';
 import {UnconnectedExternalRedirectDialog as ExternalRedirectDialog} from '@cdo/apps/applab/ExternalRedirectDialog';
 import {REDIRECT_RESPONSE} from './redux/applab';
 
-export default storybook => {
-  storybook.storiesOf('ExternalRedirectDialog', module).addStoryTable([
+export default {
+  title: 'ExternalRedirectDialog',
+  component: ExternalRedirectDialog
+};
+
+const Template = args => (
+  <ExternalRedirectDialog {...args} handleClose={() => {}} />
+);
+
+export const ApprovedSite = Template.bind({});
+ApprovedSite.args = {
+  redirects: [
     {
-      name: 'Approved Site',
-      story: () => (
-        <ExternalRedirectDialog
-          handleClose={() => {}}
-          redirects={[
-            {
-              url:
-                'www.google.com/super_duper/long_url/should_be_wrapped/to-the-next-line.html',
-              approved: REDIRECT_RESPONSE.APPROVED
-            }
-          ]}
-        />
-      )
-    },
-    {
-      name: 'Rejected Site',
-      story: () => (
-        <ExternalRedirectDialog
-          handleClose={() => {}}
-          redirects={[
-            {
-              url: 'www.google.com',
-              approved: REDIRECT_RESPONSE.REJECTED
-            }
-          ]}
-        />
-      )
-    },
-    {
-      name: 'Unsupported Site',
-      story: () => (
-        <ExternalRedirectDialog
-          handleClose={() => {}}
-          redirects={[
-            {
-              url: 'www.google.com',
-              approved: REDIRECT_RESPONSE.UNSUPPORTED
-            }
-          ]}
-        />
-      )
+      url:
+        'www.google.com/super_duper/long_url/should_be_wrapped/to-the-next-line.html',
+      response: REDIRECT_RESPONSE.APPROVED
     }
-  ]);
+  ]
+};
+
+export const RejectedSite = Template.bind({});
+RejectedSite.args = {
+  redirects: [
+    {
+      url: 'www.google.com',
+      response: REDIRECT_RESPONSE.REJECTED
+    }
+  ]
+};
+
+export const UnsupportedSite = Template.bind({});
+UnsupportedSite.args = {
+  redirects: [
+    {
+      url: 'www.google.com',
+      response: REDIRECT_RESPONSE.UNSUPPORTED
+    }
+  ]
 };

@@ -1,0 +1,107 @@
+{
+  "fa-IR": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": ""
+        },
+        "csta/AP": {
+          "description": ""
+        },
+        "ccela/SL": {
+          "description": ""
+        },
+        "ccmath/MP": {
+          "description": ""
+        },
+        "csta2011/CPP": {
+          "description": ""
+        },
+        "csta2011/CT": {
+          "description": "تفکر محاسباتی"
+        },
+        "iste/1": {
+          "description": ""
+        },
+        "iste/4": {
+          "description": ""
+        },
+        "iste/6": {
+          "description": ""
+        },
+        "ccela/L": {
+          "description": "زبان"
+        },
+        "ccela/RI": {
+          "description": ""
+        },
+        "ccmath/OA": {
+          "description": ""
+        },
+        "csta2011/CD": {
+          "description": ""
+        },
+        "csta2011/CI": {
+          "description": ""
+        },
+        "ccmath/MD": {
+          "description": ""
+        },
+        "ccmath/NBT": {
+          "description": ""
+        },
+        "ccmath/G": {
+          "description": ""
+        },
+        "ccela/W": {
+          "description": ""
+        },
+        "csta2011/CL": {
+          "description": ""
+        },
+        "iste/2": {
+          "description": ""
+        },
+        "csta/IC": {
+          "description": ""
+        },
+        "csp2021/IOC-2.B": {
+          "description": ""
+        },
+        "csta/NI": {
+          "description": ""
+        },
+        "csp2021/DAT-1.D": {
+          "description": ""
+        },
+        "csta/DA": {
+          "description": ""
+        },
+        "csta/CS": {
+          "description": ""
+        },
+        "ngss/ETS1": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-ii": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iv": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-i": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iii": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-iii": {
+          "description": ""
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import {
   PageLabels,
   TextFields
 } from '@cdo/apps/generated/pd/principalApprovalApplicationConstants';
+import {TextLink} from '@dsco_/link';
 import {Year} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   FormContext,
@@ -25,9 +26,10 @@ import {
   LabeledRadioButtons,
   LabeledRadioButtonsWithAdditionalTextFields
 } from '../../form_components_func/labeled/LabeledRadioButtons';
-import {LabeledCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',
@@ -53,7 +55,6 @@ const REQUIRED_SCHOOL_INFO_FIELDS = [
   ...RACE_LIST,
   'committedToMasterSchedule',
   'replaceCourse',
-  'committedToDiversity',
   'understandFee',
   'payFee'
 ];
@@ -63,13 +64,9 @@ const ALWAYS_REQUIRED_FIELDS = [
   'firstName',
   'lastName',
   'email',
+  'canEmailYou',
   'confirmPrincipal'
 ];
-const REPLACE_COURSE_FIELDS = [
-  'replaceWhichCourseCsp',
-  'replaceWhichCourseCsd'
-];
-const YES = 'Yes';
 const COURSE_SUFFIXES = {
   'Computer Science Discoveries': 'csd',
   'Computer Science Principles': 'csp',
@@ -108,7 +105,9 @@ const PrincipalApprovalComponent = props => {
           To help us measure our progress towards expanding access and providing
           resources where they’re needed most, we ask that you confirm
           demographic information about your school as well as how the course
-          will be implemented during the upcoming school Year.
+          will be implemented during the upcoming school year. If your school is
+          not listed please select from the drop down “Other school not listed
+          below” and provide the school details below.
         </p>
         <FormGroup
           id="school"
@@ -144,37 +143,6 @@ const PrincipalApprovalComponent = props => {
         )}
       </>
     );
-  };
-
-  const renderCourseReplacementSection = () => {
-    if (teacherApplication.course === 'Computer Science Discoveries') {
-      return (
-        <LabeledCheckBoxesWithAdditionalTextFields
-          name="replaceWhichCourseCsd"
-          textFieldMap={{
-            [TextFields.otherPleaseExplain]: 'other'
-          }}
-        />
-      );
-    } else if (teacherApplication.course === 'Computer Science Principles') {
-      return (
-        <LabeledCheckBoxesWithAdditionalTextFields
-          name="replaceWhichCourseCsp"
-          textFieldMap={{
-            [TextFields.otherPleaseExplain]: 'other'
-          }}
-        />
-      );
-    } else if (teacherApplication.course === 'Computer Science A') {
-      return (
-        <LabeledCheckBoxesWithAdditionalTextFields
-          name="replaceWhichCourseCsa"
-          textFieldMap={{
-            [TextFields.otherPleaseExplain]: 'other'
-          }}
-        />
-      );
-    }
   };
 
   const renderSchoolInfoSection = () => {
@@ -231,22 +199,10 @@ const PrincipalApprovalComponent = props => {
           }}
         />
 
-        {data.replaceCourse === YES && renderCourseReplacementSection()}
-        <LabeledRadioButtonsWithAdditionalTextFields
-          name="committedToDiversity"
-          textFieldMap={{
-            [TextFields.otherPleaseExplain]: 'other'
-          }}
-          label={`A key part of Code.org's mission is to increase and diversify participation
-          in computer science, especially among female students and underrepresented
-          groups. To that end, do you commit to recruiting and 
-          enrolling a diverse group of students in this course, representative of 
-          the overall demographics of your school?`}
-        />
-
         <p style={styles.questionText}>
           {regionalPartner ? regionalPartner.name : 'Your regional partner'} may
-          have scholarships available to cover the cost of the program.{' '}
+          have scholarships available to cover some or all costs associated with
+          the program.{' '}
           <a
             href={
               'https://code.org/educate/professional-learning/program-information' +
@@ -337,9 +293,9 @@ const PrincipalApprovalComponent = props => {
             during the {Year} school Year. This program is delivered by our
             local Code.org Regional Partner
             {regionalPartner ? `, ${regionalPartner.name}` : ''}. Participating
-            teachers are asked to commit to Code.org’s Professional Learning
-            Program starting in the summer and concluding in the spring.
-            Workshops can either be held in-person, virtually, or as a
+            teachers are asked to commit to Code.org’s year long Professional
+            Learning Program starting in the summer and concluding the following
+            spring/summer. Workshops can either be held in-person, virtually, or
             combination of both throughout the Year.
           </p>
           <p>
@@ -348,6 +304,11 @@ const PrincipalApprovalComponent = props => {
             learning program and teaching a new course. That’s why your approval
             is required for the teacher's application to be considered.
           </p>
+          <p>
+            Please note that we are not able to consider the teacher for
+            acceptance into the Professional Learning Program until you have
+            submitted this approval form.
+          </p>
           <LabeledSelect
             name="title"
             required={false}
@@ -355,7 +316,21 @@ const PrincipalApprovalComponent = props => {
           />
           <LabeledInput name="firstName" />
           <LabeledInput name="lastName" />
+          <LabeledInput name="role" />
           <LabeledInput name="email" />
+          <LabeledRadioButtons
+            name="canEmailYou"
+            label={
+              <span>
+                {PageLabels.canEmailYou}{' '}
+                <TextLink
+                  text="(See our privacy policy)"
+                  href={'https://code.org/privacy'}
+                  openInNewTab
+                />
+              </span>
+            }
+          />
           <LabeledRadioButtonsWithAdditionalTextFields
             name="doYouApprove"
             textFieldMap={{
@@ -403,10 +378,8 @@ PrincipalApprovalComponent.propTypes = {
 
 PrincipalApprovalComponent.associatedFields = [
   ...Object.keys(PageLabels),
-  ...REPLACE_COURSE_FIELDS,
   'doYouApprove',
   'committedToMasterSchedule',
-  'committedToDiversity',
   'contactInvoicing',
   'contactInvoicingDetail'
 ];
@@ -427,15 +400,6 @@ PrincipalApprovalComponent.getDynamicallyRequiredFields = data => {
 
   if (data.doYouApprove !== 'No') {
     requiredFields.push(...REQUIRED_SCHOOL_INFO_FIELDS);
-    if (data.replaceCourse === YES) {
-      if (data.course === 'Computer Science Discoveries') {
-        requiredFields.push('replaceWhichCourseCsd');
-      } else if (data.course === 'Computer Science Principles') {
-        requiredFields.push('replaceWhichCourseCsp');
-      } else if (data.course === 'Computer Science A') {
-        requiredFields.push('replaceWhichCourseCsa');
-      }
-    }
   }
 
   return requiredFields;
@@ -461,6 +425,12 @@ PrincipalApprovalComponent.getErrorMessages = data => {
     }
   });
 
+  if (Object.keys(formatErrors).length > 0) {
+    analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT, {
+      'error messages': JSON.stringify(formatErrors)
+    });
+  }
+
   return formatErrors;
 };
 
@@ -471,17 +441,11 @@ PrincipalApprovalComponent.processPageData = data => {
   // Clear out all the form data if the principal rejects the application
   if (data.doYouApprove === 'No') {
     fieldsToClear = fieldsToClear.concat(REQUIRED_SCHOOL_INFO_FIELDS);
-    fieldsToClear = fieldsToClear.concat(REPLACE_COURSE_FIELDS);
   }
 
   // Clear out school form data if we have a school
   if (data.school && data.school !== '-1') {
     fieldsToClear = fieldsToClear.concat(MANUAL_SCHOOL_FIELDS);
-  }
-
-  // Clear out replaced course if we are not replacing a course
-  if (data.replaceCourse !== YES) {
-    fieldsToClear = fieldsToClear.concat(REPLACE_COURSE_FIELDS);
   }
 
   if (data.doYouApprove !== 'No') {
