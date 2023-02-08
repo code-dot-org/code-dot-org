@@ -1,16 +1,19 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: "Offsite CDO Resources"
+Description: S3 Backup Destinations in Offsite AWS
 
 Parameters:
   OnsiteProdBackupRoleArn:
     Type: String
+    Description: |
+      The Arn of the role used in the 'onsite' AWS account that performs
+      cross-account backup related actions into this account.
 
 Resources:
   OffsiteBackupBucket:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     Properties:
-      BucketName: "cdo-backup-offsite-demo"
+      BucketName: "cdo-backup-offsite"
       VersioningConfiguration:
         Status: "Enabled"
       PublicAccessBlockConfiguration:
