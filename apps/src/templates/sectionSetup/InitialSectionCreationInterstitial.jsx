@@ -54,7 +54,7 @@ class InitialSectionCreationInterstitial extends Component {
             <hr style={styles.pageBreak} />
             <div style={styles.footerButtons}>
               <Button
-                id="uitest-dismiss-section-creation"
+                id="uitest-abandon-section-creation"
                 text={i18n.goToMyDashboard()}
                 color={Button.ButtonColor.gray}
                 onClick={this.abandonEditingSection}

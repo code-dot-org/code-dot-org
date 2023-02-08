@@ -9,14 +9,14 @@ import {getStore} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 
 describe('InitialSectionCreationInterstitial', () => {
-  it('logs an Amplitude event for when the dialog is dismissed', () => {
+  it('logs an Amplitude event for when the dialog is abandoned', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     const wrapper = mount(
       <Provider store={getStore()}>
         <InitialSectionCreationInterstitial />
       </Provider>
     );
-    wrapper.find('button#uitest-dismiss-section-creation').simulate('click');
+    wrapper.find('button#uitest-abandon-section-creation').simulate('click');
 
     expect(analyticsSpy).to.have.been.calledOnce;
     expect(analyticsSpy.firstCall.args).to.deep.eq([
