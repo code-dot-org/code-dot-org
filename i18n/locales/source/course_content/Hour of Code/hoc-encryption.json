@@ -1,7 +1,7 @@
 {
   "https://studio.code.org/s/hoc-encryption/lessons/1/levels/1": {
     "short_instructions": "Instructions",
-    "long_instructions": "# Crack a Caesar cipher!\n\nThis tool lets you play with text and do Caesar ciphers. You can use this to either encrypt a message or decrypt it.\n\n# Do this\n\n-   Load a **Sample message** from the message dropdown. This will load a message that has been encrypted with a Caesar cipher.\n\n[][0]\n\n-   Using the buttons in the Caesar substitution tab, you can shift the alphabet forwards or backwards to try to unscramble the message.\n\n[][1]\n\nSee how long it takes you to crack the cipher! Is this a good method of encrypting secret data?\n\n<img src=\"http://code.org/api/hour/begin_encryption.png\">"
+    "long_instructions": "# Crack a Caesar cipher!\n\nThis tool lets you play with text and do Caesar ciphers. You can use this to either encrypt a message or decrypt it.\n\n# Do this\n\n-   Load a **Sample message** from the message dropdown. This will load a message that has been encrypted with a Caesar cipher.\n\n[][0]\n\n-   Using the buttons in the Caesar substitution tab, you can shift the alphabet forwards or backwards to try to unscramble the message.\n\n[][1]\n\nSee how long it takes you to crack the cipher! Is this a good method of encrypting secret data?"
   },
   "https://studio.code.org/s/hoc-encryption/lessons/1/levels/2": {
     "dsls": {

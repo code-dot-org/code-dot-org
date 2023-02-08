@@ -1,67 +1,24 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {setRecommendedAndSelectedVersions} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import {shallow} from 'enzyme';
+import React from 'react';
+import {assert} from '../../../util/reconfiguredChai';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 
-const fakeVersions = [
-  {
-    name: 'coursea-2017',
-    year: '2017',
-    title: '2017',
-    isStable: true,
-    locales: ['English', 'Spanish'],
-    localeCodes: ['en-US', 'es-MX']
-  },
-  {
-    name: 'coursea-2018',
-    year: '2018',
-    title: '2018',
-    isStable: true,
-    locales: ['English'],
-    localeCodes: ['en-US']
-  },
-  {
-    name: 'coursea-2019',
-    year: '2019',
-    title: '2019',
-    isStable: false,
-    locales: ['English'],
-    localeCodes: ['en-US']
-  }
-];
+const defaultProps = {
+  onChangeVersion: () => {},
+  selectedCourseVersionId: 1,
+  courseVersions: courseOfferings['1'].course_versions,
+  disabled: false
+};
 
 describe('AssignmentVersionSelector', () => {
-  describe('setRecommendedAndSelectedVersions', () => {
-    it('sets latest stable version supported in locale to isRecommended if locale provided', () => {
-      const versions = JSON.parse(JSON.stringify(fakeVersions));
-      const response = setRecommendedAndSelectedVersions(versions, 'es-MX');
-      const recommendedVersion = response.find(v => v.isRecommended);
-      const selectedVersion = response.find(v => v.isSelected);
-
-      expect(recommendedVersion.name).to.equal('coursea-2017');
-      expect(selectedVersion.name).to.equal('coursea-2017');
-    });
-
-    it('sets latest stable version to isRecommended if locale is not provided', () => {
-      const versions = JSON.parse(JSON.stringify(fakeVersions));
-      const response = setRecommendedAndSelectedVersions(versions);
-      const recommendedVersion = response.find(v => v.isRecommended);
-      const selectedVersion = response.find(v => v.isSelected);
-
-      expect(recommendedVersion.name).to.equal('coursea-2018');
-      expect(selectedVersion.name).to.equal('coursea-2018');
-    });
-
-    it('sets isSelected on selected version if selectedVersionYear is provided', () => {
-      const versions = JSON.parse(JSON.stringify(fakeVersions));
-      const response = setRecommendedAndSelectedVersions(
-        versions,
-        null,
-        '2017'
-      );
-      const recommendedVersion = response.find(v => v.isRecommended);
-      const selectedVersion = response.find(v => v.isSelected);
-
-      expect(recommendedVersion.name).to.equal('coursea-2018');
-      expect(selectedVersion.name).to.equal('coursea-2017');
-    });
+  it('an option and AssignmentVersionMenuItem for each course version', () => {
+    const wrapper = shallow(<AssignmentVersionSelector {...defaultProps} />);
+    assert.equal(wrapper.find('option').length, 2);
+    assert.equal(wrapper.find('AssignmentVersionMenuItem').length, 2);
+    assert.deepEqual(wrapper.find('option').map(option => option.text()), [
+      '2018 (Recommended)',
+      '2017'
+    ]);
   });
 });

@@ -461,6 +461,7 @@ ro-RO:
   homepage_banner_40k_teachers_link: Află mai mult
   homepage_slot_text_title_hoc: Oră de Programare
   homepage_slot_text_blurb_hoc: Oricine poate învăța. Începe astăzi
+  homepage_slot_text_blurb_hoc_2022: Explorează, Joacă-Te, Creează!
   homepage_slot_text_link_hoc: Încearcă Ora de Programare
   homepage_slot_text_link_about_hoc: Despre Ora de Cod
   homepage_slot_text_link_host: Găzduiește o Oră de Cod
@@ -486,6 +487,7 @@ ro-RO:
   homepage_slot_text_link_buy: Implică-te
   homepage_slot_text_link_donate: Fă o donație
   homepage_slot_text_link_shop: Tricouri, palarii & mai mult
+  homepage_slot_text_link_thebadguys: Programați cu Băieții răi (The Bad Guys)
   homepage_slot_text_link_administrators: Aduceți Informatica în școala dvs.
   homepage_gallery_header: Peste %{project_count} milioane de proiecte Code.org create
   homepage_header_donors: Code.org mulţumește suporterilor săi
@@ -495,6 +497,15 @@ ro-RO:
     dumneavoastră și facem unele actualizări la politica noastră de confidențialitate,
     care vor intra în vigoare începând cu 25 mai.
   homepage_below_hero_announcement_link_text: Află mai mult
+  homepage_higher_power_body: Creați cu Dance Party, aveți șansa să vedeți trupa live.
+  homepage_thebadguys_body: |+
+    Programați o aventură cu doamna Tarantulă, domnul Lup și restul personajelor din film, **The Bad Guys(Băieții răi)**!
+
+
+
+  homepage_csa_subhead: O nouă abordare a
+  homepage_csa_body: Încurajați studenții cu proiecte creative conectate la lumea
+    reală din curriculum-ul nostru bazat pe echitate.
   contact_form_topic_student: Sunt student
   contact_form_topic_parent: Sunt părinte
   contact_form_topic_teacher: Sunt profesor/educator
@@ -682,6 +693,9 @@ ro-RO:
   video_title_marco_belinelli: Oră de cod cu Marco Belinelli
   video_title_chris_bosh: Chris Bosh despre Informatică
   video_title_my_name_is_aracely: Numele meu este Aracely
+  video_title_change_face_of_cs: Schimbați fața informaticii
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas (Ce lipsește din școlile
+    noastre)
   video_1min: 1 min
   video_2min: 2 min
   video_3min: 3 min
@@ -816,6 +830,7 @@ ro-RO:
   volunteer_engineer_submission_distance_16: 10 mile
   volunteer_engineer_submission_distance_24: 15 mile
   volunteer_engineer_submission_distance_32: 20 de mile
+  volunteer_engineer_submission_distance_80: 50 mile
   volunteer_engineer_submission_num_volunteers_5: 5 voluntari
   volunteer_engineer_submission_num_volunteers_10: 10 voluntari
   volunteer_engineer_submission_num_volunteers_25: 25 de voluntari
@@ -1336,6 +1351,10 @@ ro-RO:
   coursed-2021_name: "\t\nCurs D (2021)"
   coursee-2021_name: "\t\nCurs E (2021)"
   coursef-2021_name: Curs F (2021)
+  coursea-2022_name: Curs A (2021)
+  courseb-2022_name: Curs B (2021)
+  coursec-2022_name: Curs C (2021)
+  coursed-2022_name: "\t\nCurs D (2021)"
   express-2018_name: Curs Expres (2018)
   pre-express-2018_name: Curs Expres pentru preșcolari (2018)
   express-2019_name: Curs expres (2019)
@@ -1343,6 +1362,7 @@ ro-RO:
   express-2020_name: Curs Expres (2020)
   pre-express-2020_name: Curs expres pentru preșcolari 2020)
   pre-express-2021_name: Curs Expres pentru preșcolari (2021)
+  pre-express-2022_name: Curs expres pentru preșcolari (2022)
   csd2_name: 'Cap. 2: Dezvoltare Web'
   csd3_name: 'Cap 3: Animație și jocuri'
   accelerated_name: Curs intensiv
@@ -1458,6 +1478,12 @@ ro-RO:
   coursed-2021_gradelevel: Gradele 8+
   coursee-2021_gradelevel: Vârste 8-12 ani
   coursef-2021_gradelevel: Clasele 10+
+  coursea-2022_gradelevel: Clasele 5+
+  courseb-2022_gradelevel: Clasele 6+
+  coursec-2022_gradelevel: Clasele 7+
+  coursed-2022_gradelevel: Gradele 8+
+  coursee-2022_gradelevel: Vârste 8-12 ani
+  coursef-2022_gradelevel: Clasele 10+
   accelerated_gradelevel: Vârste 10 - 18 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
@@ -1680,6 +1706,28 @@ ro-RO:
     a doua parte a acestui curs, concepe și creează un proiect de final de curs pe
     care să-l partajezi cu prietenii și familia.
   coursef-2021_shortdescription_congrats: Învață să folosești diferite tipuri de bucle,
+    evenimente, funcții și relații de condiționalitate. Analizează diverse tehnici
+    de rezolvare a problemelor și discută despre impactul social al computerelor și
+    al Internetului. În a doua parte a acestui curs, concepe și creează un proiect
+    de final de curs pe care să-l partajezi cu prietenii și familia.
+  coursea-2022_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor
+    și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau
+    propria poveste pe care să le partajezi cu ceilalți.
+  courseb-2022_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor
+    și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau
+    propria poveste pe care să le partajezi cu ceilalți.
+  coursec-2022_shortdescription_congrats: Creează programe cu secvențiere, bucle și
+    evenimente. Scrie-ți inițialele în format binar, studiază diferite tehnici de
+    rezolvare a problemelor și învață cum să reacționezi la cyberbullying. La sfârșitul
+    cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi
+    cu ceilalți!
+  coursed-2022_shortdescription_congrats: Elevii învață despre bucle, relații de condiționalitate
+    și evenimente. În afară de cod, elevii vor învăța și despre Cetățenia digitală.
+  coursee-2022_shortdescription_congrats: Începe să scrii cod cu algoritmi, bucle,
+    relații de condiționalitate și evenimente, după care vei trece la funcții. În
+    a doua parte a acestui curs, concepe și creează un proiect de final de curs pe
+    care să-l partajezi cu prietenii și familia.
+  coursef-2022_shortdescription_congrats: Învață să folosești diferite tipuri de bucle,
     evenimente, funcții și relații de condiționalitate. Analizează diverse tehnici
     de rezolvare a problemelor și discută despre impactul social al computerelor și
     al Internetului. În a doua parte a acestui curs, concepe și creează un proiect
@@ -2221,6 +2269,7 @@ ro-RO:
   header_educate_beyond: Dincolo de Code.org
   header_educate_inspire: Inspirați un Student
   header_educate_community: Comunitate online
+  header_educate_requirements: Cerințe tehnice
   header_educate_tools: Instrumente şi clipuri video
   header_about_us: Despre noi
   header_about_leadership: Conducere
@@ -2342,6 +2391,14 @@ ro-RO:
   hoc_overview_dance_2019_subtitle: Programează o petrecere dansantă pe care să le-o
     trimiți prietenilor.  Cu Katy Perry, Shawn Mendes, Panic!At the disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj și încă 34!
+  hoc_overview_dance_2022_subtitle: Codifică o Petrecere Dansantă pe care să le-o
+    trimiți prietenilor. Cu participarea artiștilor Beyoncé, Harry Styles, Lizzo,
+    Lil Nas X, Selena Gomez, muzică de la Disney „Encanto” și multe altele!
+  hoc_overview_hello_world_2022_subtitle: Alegeți din șase teme distractive (inclusiv
+    spațiu și fotbal!) pentru a codifica caractere interactive într-o lume pe care
+    o creați.
+  hoc_overview_hello_world_2022_alt_text: Astronaut și personaje animale animate plutesc
+    în jurul unei ilustrate a pământului
   hoc_overview_title: Activități Ora de codare de la Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Ora de codare</a> este o
     mișcare globală care ajunge la zeci de milioane de elevi din peste 180 de țări.
@@ -2366,6 +2423,16 @@ ro-RO:
   hoc2018_creativity_create: Crează
   hoc2018_creativity_hoc_coming: Hour of Code este aproape…
   hoc2018_creativity_what_will_you_create: Ce vei creea?
+  hoc2018_creativity_homepage: Dați zbor imaginației și naștere inovației. Începeți
+    cu o oră de cod și propriul brand de creativitate, oricare ar fi acesta. Vizionați
+    videoclipul nostru.
+  hoc2018_creativity_hoc_about: 'Anul acesta, Ora de Cod (Hour of Code) se referă
+    la creativitate. '
+  hoc2018_creativity_social_media: "#HourOfCode (#OraDeCod) din acest an este despre
+    creativitate. Eu particip! Tu?"
+  hoc2018_creativity_social_media_2: "#HourOfCode (#OraDeCod) din acest an este despre
+    creativitate. Tu ce vei crea?"
+  hoc2018_creativity_courses: Mergeți mai departe cu cursurile Code.org
   hoc2018_creativity_courses_link: Mergeți mai departe cu <a href="https://studio.code.org/courses">cursurile
     Code.org</a>
   hoc2018_mc_page_title: Tutoriale Hour of Code Minecraft
@@ -2388,7 +2455,16 @@ ro-RO:
   hoc2018_mc_start: Începe
   hoc2018_mc_no_internet: Nu ai Internet?
   hoc2018_mc_download_adventurer: Descarcă versiunea offline a Minecraft Adventurer.
+  hoc2018_mc_educators_box1_button: Începe
   hoc2018_mc_educators_box2_button: Descarcă
+  hoc2022_mc_educators_box3_desc_markdown: Utilizează aceasta la cerere [curs gratuit](%{free_course_link})
+    sau ]nregistrează-ți toată clasa să participe la un atelier live Hour of Code
+    cu un profesor oaspete. Oferit de mai multe ori în timpul CSEW, 6-11 decembrie
+  hoc2022_mc_educators_box3_button: Înregistrează-te acum
+  hoc2022_mc_educators_box4_desc: Inspiră pasiunea STEM în elevii claselor 1-12 cu
+    200h de informatică, de la bloc la limbajul de programare piton, susținut de o
+    dezvoltare profesională.
+  hoc2022_mc_educators_box4_button: Continuă Să Înveți
   hoc2018_mc_watch_videos: Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri
     inspirationale
   hoc2018_mc_videos_more: Mai multe <a href='%{inspiring_videos_playlist}'> videoclipuri
@@ -2512,6 +2588,14 @@ ro-RO:
   hoc2021_mc_mee_ai_title: Inteligența Artificială pentru a face bine
   hoc2021_mc_mee_ai_description: 'Explorați inteligența artificială împreună cu elevii
     și învățați să programați în Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'Evadează din palatul misterios până în zori și câștigă
+    un milion de smaralde! Noul tutorial Minecraft de la Hour of Code este disponibil
+    acum în Minecraft: Ediția Educație pentru Windows, Mac, Chromebook, Ipad și telefoane
+    mobile. Începe cu resurse, cursuri de formare și videoclipuri gratuite pentru
+    educatori.'
+  hoc2022_mc_mee_timecraft_description: 'Călătorește înapoi în timp ca să salvezi
+    viitorul în această lecție gratuită de codare în Minecraft: Ediția Educație.'
   footer_powered_by_aws: Susținut de Amazon Web Services
   codebytes_skinny_banner_english_only: Doar în engleză
   footer_privacy_policy: Politică de confidențialitate
@@ -2531,3 +2615,26 @@ ro-RO:
   outbreak_tile_subtitle: Un virus a infectat Orașul Monștrilor! Programați un simulator
     de epidemie și faceți predicții despre ce se va întâmpla cu vecinii din Orașul
     Monștrilor.
+  outbreak_tile_alt: O simulare a modului în care un virus se răspândește printr-un
+    grup de monștri purpurii.
+  hoc2022_banner_title: Explorează, Joacă-te, Creează!
+  hoc2022_banner_description: Explorează universul, înscrie un gol, fă o mișcare -
+    există atât de multe moduri de a experimenta informatica!
+  hoc2022_cta_primary: Vedeți ce este nou
+  hoc2022_cta_secondary: Încearcă mai multe activități
+  hoc2022_landing_page_explore_title: Explorează
+  hoc2022_landing_page_explore_description: Uși deschise către noi lumi cu informatica!
+  hoc2022_landing_page_play_title: Joacă
+  hoc2022_landing_page_play_description: Cucerește terenul și înscrie!
+  hoc2022_landing_page_create_title: Crează
+  hoc2022_landing_page_create_description: Fă ceva ciudat și minunat!
+  hoc2022_landing_page_banner_alt_left: Un extraterestru care dansează lângă Saturn
+    în spațiu
+  hoc2022_landing_page_banner_alt_right: Un robot driblând o minge de fotbal în spațiu
+    în fața unei rachete care decolează
+  try_an_activity: Încearcă o activitate
+  see_more_activities: Vezi mai multe activități
+  hoc2022_nasa_banner_heading: Alăturați-vă NASA pentru o emisiune specială Hour of
+    Code despre informatică în spațiu!
+  hoc2022_nasa_banner_description: În premieră la ora 10 AM ET, 5 decembrie, pe canalul
+    YouTube al NASA STEM.

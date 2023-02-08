@@ -24,7 +24,7 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
     'allow_signed_out'
   ]
 
-  belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
+  belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version], optional: true
 
   validates :path, presence: true, format: {with: /\A[a-z0-9_]+\z/}
 
@@ -34,6 +34,6 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
 
   def self.form_path_disabled?(path)
     disabled_forms = DCDO.get('foorm_simple_survey_disabled', [])
-    disabled_forms && disabled_forms.include?(path)
+    disabled_forms&.include?(path)
   end
 end

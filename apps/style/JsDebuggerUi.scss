@@ -1,5 +1,6 @@
 // Style rules associated with our visual debugger for the JSInterpreter.
-@import "color";
+// TODO: refactor this into js-debugger.module.scss if possible: https://codedotorg.atlassian.net/browse/SL-353
+@import "color.scss";
 @import "mixins";
 @import "style-constants";
 
@@ -23,11 +24,20 @@
   border: 1px solid $cyan;
   background-color: $cyan;
   color: #fff;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 3px;
   padding: 3px 6px;
   font-size: 14px;
   min-width: 120px;
+
+  &:disabled {
+    cursor: not-allowed;
+    &:active {
+      // We need this !important in order to overwrite !important styles in common.scss
+      // (apps/style/common.scss, line 628)that makes disabled active button to have a black border.
+      border: none !important;
+    }
+  }
 }
 
 #continueButton {
@@ -55,7 +65,7 @@ $debug-area-initial-height: 43px;
   left: 0;
   right: 0;
   z-index: 2;
-  max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  max-height: calc(50% - #{($workspace-headers-height * 0.5) + 1}) !important;
 }
 
 // Make sure the workspace default lines up with the debug area default
@@ -78,12 +88,6 @@ $debug-header-border-width: 1px;
   }
 }
 
-#debug-watch-header {
-  width: $debug-watch-max-column-width + $debug-header-border-width;
-  float: right;
-  border-left: $debug-header-border-width solid gray;
-}
-
 #watchersResizeBar {
   height: 100%;
   width: $resize-bar-width;
@@ -94,7 +98,9 @@ $debug-header-border-width: 1px;
   top: $resize-bar-width;
 }
 
-.debug-commands, .debug-console, .debug-watch {
+.debug-commands,
+.debug-console,
+.debug-watch {
   display: block;
   background-color: $white;
   border: 1px solid #ddd;
@@ -118,7 +124,8 @@ $debug-header-border-width: 1px;
   overflow-y: scroll;
 }
 
-.debug-watch *, .debug-watch input {
+.debug-watch *,
+.debug-watch input {
   font-family: monospace;
   font-size: 12px;
 }
@@ -129,7 +136,8 @@ $debug-header-border-width: 1px;
   clear: both;
   margin-bottom: 1px;
 
-  .watch-variable, .watch-separator {
+  .watch-variable,
+  .watch-separator {
     color: purple;
   }
   .watch-unavailable {
@@ -149,7 +157,8 @@ $debug-header-border-width: 1px;
   min-width: $debug-console-min-column-width;
 }
 
-.debug-console *, .debug-console input {
+.debug-console *,
+.debug-console input {
   font-family: monospace;
   font-size: 12px;
 }
@@ -161,7 +170,7 @@ $debug-header-border-width: 1px;
 
 /* Slider. */
 .sliderContainer {
-  float: left
+  float: left;
 }
 .sliderTrack {
   stroke: $lightest_purple;
@@ -180,7 +189,7 @@ $debug-header-border-width: 1px;
 
 /* Sprited icons. */
 .pause-btn {
-  background-position: 0px -84px;
+  background-position: 0 -84px;
   margin-right: 3px;
 }
 .continue-btn {
@@ -188,7 +197,7 @@ $debug-header-border-width: 1px;
   margin-right: 3px;
 }
 .step-in-btn {
-  background-position: 0px -105px;
+  background-position: 0 -105px;
   margin-right: 3px;
 }
 .step-out-btn {
@@ -196,6 +205,6 @@ $debug-header-border-width: 1px;
   margin-right: 3px;
 }
 .step-over-btn {
-  background-position: 0px 21px;
+  background-position: 0 21px;
   margin-right: 3px;
 }

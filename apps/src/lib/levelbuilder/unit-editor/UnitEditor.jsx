@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
-import LessonDescriptions from '@cdo/apps/lib/levelbuilder/unit-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
@@ -10,9 +9,6 @@ import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExt
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
@@ -20,7 +16,7 @@ import {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
@@ -45,6 +41,9 @@ class UnitEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
+    //Published state of units in a course can be set to be different than the course overall.
+    //We only use this field for units in a course
+    initialUnitPublishedState: PropTypes.oneOf(Object.values(PublishedState)),
     initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
       .isRequired,
     initialInstructorAudience: PropTypes.oneOf(
@@ -63,7 +62,6 @@ class UnitEditor extends React.Component {
     initialWrapupVideo: PropTypes.string,
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
     initialHasVerifiedResources: PropTypes.bool,
@@ -80,7 +78,6 @@ class UnitEditor extends React.Component {
     ),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
-    initialIsMakerUnit: PropTypes.bool,
     unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
@@ -95,26 +92,17 @@ class UnitEditor extends React.Component {
     initialUseLegacyLessonPlans: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
     courseOfferingEditorLink: PropTypes.string,
+    isCSDCourseOffering: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
-      .isRequired,
-    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
-
-    const teacherResources = [...props.initialTeacherResources];
-
-    if (!props.isMigrated) {
-      // add empty entries to get to max
-      while (teacherResources.length < Object.keys(ResourceType).length) {
-        teacherResources.push({type: '', link: ''});
-      }
-    }
 
     this.state = {
       isSaving: false,
@@ -133,7 +121,7 @@ class UnitEditor extends React.Component {
       loginRequired: this.props.initialLoginRequired,
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
-      professionalLearningCourse: this.props.initialProfessionalLearningCourse,
+      deeperLearningCourse: this.props.initialProfessionalLearningCourse,
       onlyInstructorReviewRequired: this.props
         .initialOnlyInstructorReviewRequired,
       peerReviewsRequired: this.props.initialPeerReviewsRequired,
@@ -152,17 +140,14 @@ class UnitEditor extends React.Component {
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       versionYear: this.props.initialVersionYear,
       savedVersionYear: this.props.initialVersionYear,
-      isMakerUnit: this.props.initialIsMakerUnit,
       tts: this.props.initialTts,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
-      lessonDescriptions: this.props.i18nData.lessonDescriptions,
-      teacherResources: teacherResources,
-      hasImportedLessonDescriptions: false,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       publishedState: this.props.initialPublishedState,
+      unitPublishedState: this.props.initialUnitPublishedState,
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
       participantAudience: this.props.initialParticipantAudience
@@ -245,6 +230,20 @@ class UnitEditor extends React.Component {
       });
       return;
     } else if (
+      !this.props.hasCourse &&
+      this.state.deeperLearningCourse === '' &&
+      this.state.publishedState !== PublishedState.in_development &&
+      (!this.state.isCourse ||
+        this.state.versionYear === '' ||
+        this.state.familyName === '')
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Standalone units that are not in development must be a standalone unit with family name and version year.'
+      });
+      return;
+    } else if (
       this.state.isCourse &&
       ((this.state.versionYear !== '' && this.state.familyName === '') ||
         (this.state.versionYear === '' && this.state.familyName !== ''))
@@ -272,6 +271,39 @@ class UnitEditor extends React.Component {
       }
     }
 
+    if (
+      this.state.unitPublishedState !== this.props.initialUnitPublishedState
+    ) {
+      const msg =
+        'It looks like you are hiding this unit. ' +
+        'Are you sure you want to hide this unit? ';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.'
+        });
+        return;
+      }
+    }
+
+    if (
+      this.state.unitPublishedState === PublishedState.in_development &&
+      this.state.unitPublishedState === this.props.initialUnitPublishedState
+    ) {
+      const msg =
+        'This unit is hidden within the course, meaning it is not ' +
+        'visible on the Course Overview page, Section Dialog, or Teacher ' +
+        'Dashboard. It is still visible to Levelbuilders. Would you ' +
+        'like to continue with saving?';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.'
+        });
+        return;
+      }
+    }
+
     let dataToSave = {
       name: this.props.name,
       family_name: this.state.familyName,
@@ -283,14 +315,16 @@ class UnitEditor extends React.Component {
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      published_state: this.state.publishedState,
+      published_state: this.props.hasCourse
+        ? this.state.unitPublishedState
+        : this.state.publishedState,
       instruction_type: this.state.instructionType,
       instructor_audience: this.state.instructorAudience,
       participant_audience: this.state.participantAudience,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
-      professional_learning_course: this.state.professionalLearningCourse,
+      professional_learning_course: this.state.deeperLearningCourse,
       only_instructor_review_required: this.state.onlyInstructorReviewRequired,
       peer_reviews_to_complete: this.state.peerReviewsRequired,
       wrapup_video: this.state.wrapupVideo,
@@ -313,23 +347,14 @@ class UnitEditor extends React.Component {
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
-      resourceLinks: this.state.teacherResources.map(resource => resource.link),
-      resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      resourceIds: this.props.migratedTeacherResources.map(
-        resource => resource.id
-      ),
+      resourceIds: this.props.teacherResources.map(resource => resource.id),
       studentResourceIds: this.props.studentResources.map(
         resource => resource.id
       ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
-      use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
-      is_maker_unit: this.state.isMakerUnit
+      use_legacy_lesson_plans: this.state.useLegacyLessonPlans
     };
-
-    if (this.state.hasImportedLessonDescriptions) {
-      dataToSave.stage_descriptions = this.state.lessonDescriptions;
-    }
 
     $.ajax({
       url: `/s/${this.props.id}`,
@@ -360,18 +385,16 @@ class UnitEditor extends React.Component {
   };
 
   toggleHiddenCourseUnit = () => {
-    const publishedState =
-      this.state.publishedState === PublishedState.in_development
+    const unitPublishedState =
+      this.state.unitPublishedState === PublishedState.in_development
         ? null
         : PublishedState.in_development;
-    this.setState({publishedState});
+    this.setState({unitPublishedState});
   };
 
   render() {
-    const useMigratedTeacherResources =
-      this.props.isMigrated && !this.state.teacherResources?.length;
-
     const allowMajorCurriculumChanges =
+      this.props.initialUnitPublishedState === PublishedState.in_development ||
       this.props.initialPublishedState === PublishedState.in_development ||
       this.props.initialPublishedState === PublishedState.pilot;
 
@@ -544,23 +567,6 @@ class UnitEditor extends React.Component {
             />
           )}
           <label>
-            Is a Maker Unit
-            <input
-              type="checkbox"
-              checked={this.state.isMakerUnit}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({isMakerUnit: !this.state.isMakerUnit})
-              }
-            />
-            <HelpTip>
-              <p>
-                If checked, this unit uses the maker toolkit and teachers who
-                teach it may be eligible for maker toolkit discounts.
-              </p>
-            </HelpTip>
-          </label>
-          <label>
             Supported locales
             <HelpTip>
               <p>
@@ -625,8 +631,9 @@ class UnitEditor extends React.Component {
         {this.props.hasCourse && (
           <CollapsibleEditorSection title="Course Type Settings">
             <p>
-              This unit is part of a course. Go to the course edit page to set
-              the course type settings for the course and its units.
+              Settings in this section change depending on whether this unit is
+              grouped with other units in a course. If this does not look as
+              expected, please add or remove this unit from a course.
             </p>
           </CollapsibleEditorSection>
         )}
@@ -647,14 +654,6 @@ class UnitEditor extends React.Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         )}
-
-        <CollapsibleEditorSection title="Announcements">
-          <AnnouncementsEditor
-            announcements={this.state.announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
-        </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Publishing Settings">
           {this.props.isLevelbuilder && (
@@ -692,13 +691,16 @@ class UnitEditor extends React.Component {
                   </p>
                 </HelpTip>
               </label>
-              {this.props.hasCourse && (
-                <div>
-                  <p>
-                    This unit is part of a course. Go to the course edit page to
-                    publish the course and its units.
-                  </p>
-                  {/*
+              {this.props.hasCourse &&
+                this.state.publishedState !== PublishedState.in_development && (
+                  <div>
+                    <p>
+                      Settings in this section change depending on whether this
+                      unit is grouped with other units in a course. If this does
+                      not look as expected, please add or remove this unit from
+                      a course.
+                    </p>
+                    {/*
                    Just use a checkbox instead of a dropdown to set the
                    published state for now, because (1) units in unit groups
                    really only need 2 of the 6 possible states at the moment,
@@ -708,29 +710,31 @@ class UnitEditor extends React.Component {
                    clean this up is tracked in:
                    https://codedotorg.atlassian.net/browse/PLAT-1170
                    */}
-                  <label>
-                    Hide this unit within this course
-                    <input
-                      type="checkbox"
-                      checked={
-                        this.state.publishedState ===
-                        PublishedState.in_development
-                      }
-                      style={styles.checkbox}
-                      onChange={this.toggleHiddenCourseUnit}
-                    />
-                    <HelpTip>
-                      <p>
-                        Whether to hide this unit from the list of units in its
-                        course, as viewed on the course overview page, the edit
-                        section dialog, and the teacher dashboard, as well as
-                        when navigating directly to the unit by its url. Hidden
-                        units will still be visible to levelbuilders.
-                      </p>
-                    </HelpTip>
-                  </label>
-                </div>
-              )}
+                    <label>
+                      Hide this unit within this course
+                      <input
+                        className="unit-test-hide-unit-in-course"
+                        type="checkbox"
+                        checked={
+                          this.state.unitPublishedState ===
+                          PublishedState.in_development
+                        }
+                        style={styles.checkbox}
+                        onChange={this.toggleHiddenCourseUnit}
+                      />
+                      <HelpTip>
+                        <p>
+                          Whether to hide this unit from the list of units in
+                          its course, as viewed on the course overview page, the
+                          edit section dialog, and the teacher dashboard, as
+                          well as when navigating directly to the unit by its
+                          url. Hidden units will still be visible to
+                          levelbuilders.
+                        </p>
+                      </HelpTip>
+                    </label>
+                  </div>
+                )}
               {!this.props.hasCourse && (
                 <div>
                   <CourseVersionPublishingEditor
@@ -766,6 +770,14 @@ class UnitEditor extends React.Component {
               )}
             </div>
           )}
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
+          <AnnouncementsEditor
+            announcements={this.state.announcements}
+            inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
+          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
@@ -854,21 +866,6 @@ class UnitEditor extends React.Component {
               this.setState({projectWidgetTypes})
             }
           />
-          {!this.props.isMigrated && (
-            <LessonDescriptions
-              scriptName={this.props.name}
-              currentDescriptions={this.props.i18nData.lessonDescriptions}
-              updateLessonDescriptions={(
-                lessonDescriptions,
-                hasImportedLessonDescriptions
-              ) =>
-                this.setState({
-                  lessonDescriptions,
-                  hasImportedLessonDescriptions
-                })
-              }
-            />
-          )}
           {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
             <label>
               Include student-facing lesson plans
@@ -925,13 +922,8 @@ class UnitEditor extends React.Component {
               <div />
               <ResourcesEditor
                 inputStyle={styles.input}
-                resources={this.state.teacherResources}
-                updateResources={teacherResources =>
-                  this.setState({teacherResources})
-                }
-                useMigratedResources={useMigratedTeacherResources}
                 courseVersionId={this.props.initialCourseVersionId}
-                migratedResources={this.props.migratedTeacherResources}
+                resources={this.props.teacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
               />
             </div>
@@ -944,9 +936,8 @@ class UnitEditor extends React.Component {
                 </div>
                 <ResourcesEditor
                   inputStyle={styles.input}
-                  useMigratedResources
                   courseVersionId={this.props.initialCourseVersionId}
-                  migratedResources={this.props.studentResources}
+                  resources={this.props.studentResources}
                   studentFacing
                 />
               </div>
@@ -1009,7 +1000,7 @@ class UnitEditor extends React.Component {
               </i>
             </b>
             <label>
-              Professional Learning Course
+              Deeper Learning Course Name
               <HelpTip>
                 <p>
                   When filled out, the course unit associated with this unit
@@ -1019,10 +1010,10 @@ class UnitEditor extends React.Component {
                 </p>
               </HelpTip>
               <input
-                value={this.state.professionalLearningCourse}
+                value={this.state.deeperLearningCourse}
                 style={styles.input}
                 onChange={e =>
-                  this.setState({professionalLearningCourse: e.target.value})
+                  this.setState({deeperLearningCourse: e.target.value})
                 }
               />
             </label>
@@ -1122,7 +1113,7 @@ export const UnconnectedUnitEditor = UnitEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    migratedTeacherResources: state.resources,
+    teacherResources: state.resources,
     studentResources: state.studentResources
   }),
   {

@@ -8,6 +8,12 @@ class AzureTextToSpeechTest < ActionController::TestCase
     @mock_token = 'a1b2c3d4'
     CDO.stubs(:azure_speech_service_key).returns(@api_key)
     CDO.stubs(:azure_speech_service_region).returns(@region)
+
+    # A list of keys used by our shared cache that should be cleared between every test.
+    [
+      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
+      AzureTextToSpeech::AZURE_TTS_PREFIX
+    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
   end
 
   test 'get_token: returns token on success' do

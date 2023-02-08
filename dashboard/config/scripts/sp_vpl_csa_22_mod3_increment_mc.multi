@@ -2,7 +2,7 @@ name 'SP-VPL-CSA-22-mod3-increment-mc'
 title 'Check for Understanding'
 
 wrong '`index++`'
-wrong '`index += 1'
+wrong '`index += 1`'
 right '`index = 1 + 1`'
 wrong '`index = index + 1`'
 

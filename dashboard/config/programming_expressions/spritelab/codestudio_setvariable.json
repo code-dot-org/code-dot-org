@@ -8,7 +8,7 @@
   "examples": [
     {
       "name": "Example 1",
-      "description": "Change the color input given to the variable “spriteColor.” See how changing the variable value changes what the variable then passes to the `change color` block.\r\n",
+      "description": "Change the color input given to the variable “spriteColor.” See how changing the variable value changes what the variable then passes to the [`change color`(#5ef3ff)](/docs/spritelab/gamelab_setTint/) block.\r\n",
       "app": "https://studio.code.org/projects/spritelab/zOzSXi7WUid8owiJSoTk5UCz4grLc_91o-UN0bQi2AA",
       "image": null,
       "app_display_type": "embedAppWithCode",

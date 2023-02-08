@@ -22,7 +22,8 @@ class LevelStarterAssetsController < ApplicationController
   # Returns requested file body as an IO stream.
   def file
     friendly_name = "#{params[:filename]}.#{params[:format]}"
-    starter_assets = @level&.project_template_level&.starter_assets || @level.starter_assets
+    starter_assets = @level&.project_template_level&.starter_assets || @level&.starter_assets
+    return head :not_found if starter_assets.nil_or_empty?
     uuid_name = starter_assets[friendly_name]
     file_obj = get_object(uuid_name)
     content_type = file_content_type(File.extname(uuid_name))

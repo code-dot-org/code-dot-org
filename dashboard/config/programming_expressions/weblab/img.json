@@ -3,7 +3,7 @@
   "name": "Image",
   "category": "HTML Tags",
   "category_key": "html_tags",
-  "content": "# Image\r\n\r\nThis tag is used to embed  images into a web page. This image tag `<img>` has two required attributes:\r\n* `src` - Specifies the path to the image\r\n* `alt` - Specifies an alternate text for the image, if the image for some reason cannot be displayed. \r\n* `height` - Specifies the height of the image in pixels.\r\n* `width` - Specifies the width of the image in pixels.\r\n",
+  "content": "# Image\r\n\r\nThis tag is used to embed  images into a web page. This image tag `<img>` has two required attributes:\r\n* `src` - Specifies the path to the image\r\n* `alt` - Specifies an alternate text for the image, if the image for some reason cannot be displayed. \r\n* [`Height`(#d3e965)](/docs/weblab/height/) - Specifies the height of the image in pixels.\r\n* [`Width`(#d3e965)](/docs/weblab/width/) - Specifies the width of the image in pixels.\r\n",
   "examples": [
     {
       "name": "Using Images With Text",

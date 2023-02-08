@@ -19,6 +19,6 @@ Rack::MiniProfiler.config.storage = Rack::MiniProfiler::FileStore
 
 # Only allow when it's explicitly allowed based on the rules in ApplicationController.check_profiler,
 # across all environments for consistency.
-# By default, this would be :allow_all for dev and test, :whitelist for other environments.
-# The whitelist mode means we must explicitly call authorize_request on a given request.
-Rack::MiniProfiler.config.authorization_mode = :whitelist
+# By default, this would be :allow_all for dev and test, :allow_authorized for other environments.
+# The "allow authorized" mode means we must explicitly call authorize_request on a given request.
+Rack::MiniProfiler.config.authorization_mode = :allow_authorized

@@ -25,17 +25,17 @@
 
 require 'cdo/activity_constants'
 
-# Summary information about a User's Activity on a Level in a Script.
+# Summary information about a User's Activity on a Level in a Unit.
 # Includes number of attempts (attempts), best score and whether it was submitted
 class UserLevel < ApplicationRecord
   AUTOLOCK_PERIOD = 1.day
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
-  belongs_to :user
-  belongs_to :level
-  belongs_to :script
-  belongs_to :level_source
+  belongs_to :user, optional: true
+  belongs_to :level, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
+  belongs_to :level_source, optional: true
 
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
@@ -174,7 +174,7 @@ class UserLevel < ApplicationRecord
     self.best_result = ActivityConstants::UNSUBMITTED_RESULT
 
     # Destroy any existing, unassigned peer reviews
-    if Script.cache_find_level(level_id).try(:peer_reviewable?)
+    if Unit.cache_find_level(level_id).try(:peer_reviewable?)
       PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
     end
   end
@@ -204,10 +204,10 @@ class UserLevel < ApplicationRecord
     readonly_answers? && !show_as_locked?(lesson)
   end
 
-  # First ScriptLevel in this Script containing this Level.
+  # First ScriptLevel in this Unit containing this Level.
   # Cached equivalent to `level.script_levels.where(script_id: script.id).first`.
   def script_level
-    s = Script.get_from_cache(script_id)
+    s = Unit.get_from_cache(script_id)
     s.script_levels.detect {|sl| sl.level_ids.include? level_id}
   end
 

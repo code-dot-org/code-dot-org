@@ -3,7 +3,7 @@
   "name": "camera.off()",
   "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "Deactivates the camera. \r\n\r\nThe camera enables scrolling and zooming for scenes extending beyond the display area. A camera has a position, a zoom factor, and mouse coordinates relative to the view. The camera is automatically created and available for use.\r\n\r\nUse `camera.on()` to have the display area drawn according to the camera position and scale.",
+  "content": "Deactivates the camera. \n\nThe camera enables scrolling and zooming for scenes extending beyond the display area. A camera has a position, a zoom factor, and mouse coordinates relative to the view. The camera is automatically created and available for use.\n\nUse [`camera.on()`(#fff176)](/docs/gamelab/camera.on/) to have the display area drawn according to the camera position and scale.",
   "examples": [
     {
       "name": "",
@@ -18,5 +18,5 @@
   "return_value": "No return value. Possibly changes output in the display after drawSprites() is called.",
   "short_description": "Deactivates the camera. ",
   "syntax": "camera.off();",
-  "tips": "- The camera is automatically turned on at the start of each `draw()` loop. "
+  "tips": "- The camera is automatically turned on at the start of each [`draw()`(#fff176)](/docs/gamelab/draw/) loop. "
 }

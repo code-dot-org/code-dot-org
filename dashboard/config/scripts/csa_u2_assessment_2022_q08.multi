@@ -17,7 +17,7 @@ Consider the following class definitions.
 public class Plant {
    private String leafColor;
 
-   public void Flower(String leafColor) {
+   public Plant(String leafColor) {
       this.leafColor = leafColor;
    }
 
@@ -28,6 +28,7 @@ public class Plant {
 
 public class Tree extends Plant {
    private double treeDiameter;
+   
    public Tree (String treeColor, double diameter) {
       super(treeColor);
       this.treeDiameter = diameter;

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:04.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -67,17 +63,21 @@
     "thumbnail_url": "https://images.code.org/c52d84260d74ec1b938f877f0c5ddd88-image-1528744566060.47.48 PM.png",
     "encrypted": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": " /docs/concepts/javascript/naming-variables/",
+    "map_reference": "/courses/csd-2022/guides/naming-variables",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "libraries_enabled": "false",
     "bubble_choice_description": "Test your understanding of variables to draw something more complex.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:04.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:04.194+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables Challenge_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables Challenge_2021\"}]"

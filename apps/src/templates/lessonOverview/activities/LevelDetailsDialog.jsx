@@ -158,6 +158,7 @@ class LevelDetailsDialog extends Component {
           isCollapsed={false}
           hidden={false}
           isEmbedView={false}
+          hasBackgroundMusic={false}
           mainStyle={{paddingBottom: 5, position: 'static'}}
           containerStyle={{
             overflowY: 'auto',
@@ -174,6 +175,7 @@ class LevelDetailsDialog extends Component {
           serverLevelId={parseInt(level.id)}
           serverScriptId={this.state.scriptLevel.scriptId}
           exampleSolutions={exampleSolutions}
+          inLessonPlan
         />
       );
     } else {

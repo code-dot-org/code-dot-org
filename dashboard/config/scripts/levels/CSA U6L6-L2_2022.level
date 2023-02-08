@@ -1,9 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-02-26T00:28:23.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -16,12 +12,19 @@
         "isVisible": true
       }
     },
+    "name_suffix": "_2022",
+    "encrypted_examples": [
+
+    ],
     "contained_level_names": [
       "CSA U6L6-L2 Predict_2022"
-    ],
-    "name_suffix": "_2022"
+    ]
   },
+  "game_id": 68,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:23.027+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L2\\\"\"],\"cloned_from\":\"CSA U6L6-L2\"}]"
+  "created_at": "2022-02-26T00:28:23.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:23.027+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L2\\\"\"],\"cloned_from\":\"CSA U6L6-L2\"},{\"changed_at\":\"2022-05-05 14:47:26 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 14:48:12 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 14:48:45 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

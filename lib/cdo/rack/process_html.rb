@@ -79,19 +79,18 @@ module Rack
 
       # Skip if :include is provided and evaluates to false
       if @include &&
-          !(@include === env['PATH_INFO'])
+          !(@include == env['PATH_INFO'])
         return false
       end
 
       # Skip if :exclude is provided and evaluates to true
       if @exclude &&
-          @exclude === env['PATH_INFO']
+          @exclude == env['PATH_INFO']
         return false
       end
 
       # Skip if :skip_if lambda is provided and evaluates to true
-      if @skip_if &&
-          @skip_if.call(env, status, headers, body)
+      if @skip_if&.call(env, status, headers, body)
         return false
       end
 

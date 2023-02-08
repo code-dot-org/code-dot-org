@@ -53,7 +53,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test "create assigns unique section codes" do
-    sections = 3.times.map do
+    sections = Array.new(3) do
       # Repeatedly seed the RNG so we get the same "random" codes.
       srand 1
       Section.create!(@default_attrs)
@@ -174,16 +174,23 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'pl section must use email logins required' do
-    section = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, login_type: 'word'
+    section = build :section, :teacher_participants, login_type: 'word'
     refute section.valid?
     assert_equal ['Login type must be email for professional learning sections.'], section.errors.full_messages
   end
 
+  test 'pl section must use pl grade' do
+    section = build :section, :teacher_participants, grade: 'Other'
+    refute section.valid?
+    assert_equal ['Grade must be pl for pl section.'], section.errors.full_messages
+  end
+
   test 'can not update participant type' do
-    section = create :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    section = create :section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     error = assert_raises do
-      section.participant_type = SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      section.participant_type = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      section.grade = 'pl'
       section.save!
     end
 
@@ -267,9 +274,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student raises for admin students' do
-    assert_raises do
-      assert_does_not_create(Follower) do
-        @section.add_student (create :admin)
+    assert_does_not_create(Follower) do
+      assert_raises ActiveRecord::RecordInvalid do
+        @section.add_student(create(:admin))
       end
     end
   end
@@ -282,10 +289,10 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student returns failure if user does not meet participant_type for section' do
-    section_with_teacher_participants = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    section_with_teacher_participants = build :section, :teacher_participants
     assert_does_not_create(Follower) do
       add_student_return = section_with_teacher_participants.add_student @student
-      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+      assert_equal Section::ADD_STUDENT_FORBIDDEN, add_student_return
     end
   end
 
@@ -414,6 +421,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
+        courseVersionName: 'somecourse',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -422,10 +430,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: nil,
-        script_id: nil,
         course_id: unit_group.id,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
@@ -447,7 +455,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    script = Script.find_by_name('jigsaw')
+    script = Unit.find_by_name('jigsaw')
     CourseOffering.add_course_offering(script)
 
     Timecop.freeze(Time.zone.now) do
@@ -462,6 +470,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '/s/jigsaw',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
+        courseVersionName: 'jigsaw',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -470,10 +479,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
         course_offering_id: script.course_version.course_offering.id,
         course_version_id: script.course_version.id,
         unit_id: nil,
-        script_id: script.id,
         course_id: nil,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -495,7 +504,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
-    script = Script.find_by_name('jigsaw')
+    script = Unit.find_by_name('jigsaw')
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     CourseOffering.add_course_offering(unit_group)
 
@@ -513,6 +522,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: 'Jigsaw',
         linkToCurrentUnit: '/s/jigsaw',
+        courseVersionName: 'somecourse',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -521,10 +531,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: script.id,
-        script_id: script.id,
         course_id: unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -557,6 +567,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
+        courseVersionName: nil,
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -565,10 +576,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
         course_offering_id: nil,
         course_version_id: nil,
         unit_id: nil,
-        script_id: nil,
         course_id: nil,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
@@ -620,6 +631,40 @@ class SectionTest < ActiveSupport::TestCase
 
     assert summarized_section[:script][:project_sharing]
     assert summarized_section[:sharing_disabled]
+  end
+
+  test 'can_join_section_as_participant? returns correct response based on permissions' do
+    student_section = create :section
+    teacher_section = create :section, :teacher_participants
+    facilitator_section = create :section, :facilitator_participants
+
+    levelbuilder = create :levelbuilder
+    universal_instructor = create :universal_instructor
+    plc_reviewer = create :plc_reviewer
+    facilitator = create :facilitator
+    teacher = create :teacher
+    student = create :student
+
+    assert student_section.can_join_section_as_participant?(levelbuilder)
+    assert student_section.can_join_section_as_participant?(universal_instructor)
+    assert student_section.can_join_section_as_participant?(plc_reviewer)
+    assert student_section.can_join_section_as_participant?(facilitator)
+    assert student_section.can_join_section_as_participant?(teacher)
+    assert student_section.can_join_section_as_participant?(student)
+
+    assert teacher_section.can_join_section_as_participant?(levelbuilder)
+    assert teacher_section.can_join_section_as_participant?(universal_instructor)
+    assert teacher_section.can_join_section_as_participant?(plc_reviewer)
+    assert teacher_section.can_join_section_as_participant?(facilitator)
+    assert teacher_section.can_join_section_as_participant?(teacher)
+    refute teacher_section.can_join_section_as_participant?(student)
+
+    assert facilitator_section.can_join_section_as_participant?(levelbuilder)
+    assert facilitator_section.can_join_section_as_participant?(universal_instructor)
+    refute facilitator_section.can_join_section_as_participant?(plc_reviewer)
+    assert facilitator_section.can_join_section_as_participant?(facilitator)
+    refute facilitator_section.can_join_section_as_participant?(teacher)
+    refute facilitator_section.can_join_section_as_participant?(student)
   end
 
   test 'valid_grade? accepts K-12 and Other' do
@@ -730,7 +775,7 @@ class SectionTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
 
     def create_script_with_levels(name, level_type)
-      script = Script.find_by_name(name) || create(:script, name: name)
+      script = Unit.find_by_name(name) || create(:script, name: name)
       lesson_group = create :lesson_group, script: script
       lesson = create :lesson, script: script, lesson_group: lesson_group
       # 5 non-programming levels
@@ -747,7 +792,7 @@ class SectionTest < ActiveSupport::TestCase
 
     # Create progress for student in given script. Assumes all levels are either
     # Unplugged or some form of programming level
-    # @param {Script} script
+    # @param {Unit} script
     # @param {User} student
     # @param {number} num_programming_levels
     # @param {number} num_non_programming_levels

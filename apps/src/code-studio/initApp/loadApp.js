@@ -3,12 +3,11 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore} from '../redux';
-import {
-  setAppLoadStarted,
-  setAppLoaded
-} from '@cdo/apps/code-studio/headerRedux';
+import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
+import renderProjectNotFound from './renderProjectNotFound';
+import renderVersionNotFound from './renderVersionNotFound';
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
@@ -45,7 +44,7 @@ export function setupApp(appOptions) {
       // Lock the contained levels if this is a teacher viewing student work:
       lockContainedLevelAnswers();
     }
-    if (!appOptions.level.edit_blocks) {
+    if (!(appOptions.level.edit_blocks || appOptions.level.editBlocks)) {
       // Always mark the workspace as readonly when we have contained levels,
       // unless editing:
       appOptions.readonlyWorkspace = true;
@@ -67,13 +66,16 @@ export function setupApp(appOptions) {
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();
-      }
-      // Only show version history if user is project owner, or teacher viewing student work
-      const isTeacher =
-        getStore().getState().currentUser?.userType === 'teacher';
-      const isViewingStudent = !!queryParams('user_id');
-      if (project.isOwner() || (isTeacher && isViewingStudent)) {
-        $('#versions-header').show();
+        // Only show version history if user is project owner, or teacher viewing student work
+        const isTeacher =
+          getStore().getState().currentUser?.userType === 'teacher';
+        const isViewingStudent = !!queryParams('user_id');
+        if (
+          project.isOwner() ||
+          (isTeacher && isViewingStudent && appOptions.level.isStarted)
+        ) {
+          $('#versions-header').show();
+        }
       }
       $(document).trigger('appInitialized');
     },
@@ -239,26 +241,37 @@ function tryToUploadShareImageToS3({image, level}) {
  */
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
-    project.load().then(() => {
-      if (project.hideBecauseAbusive()) {
-        renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
-        return;
-      }
-      if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(project, msg.policyViolation());
-        return;
-      }
-      if (project.getSharingDisabled()) {
-        renderAbusive(
-          project,
-          msg.sharingDisabled({
-            sign_in_url: 'https://studio.code.org/users/sign_in'
-          })
-        );
-        return;
-      }
-      resolve(appOptions);
-    });
+    project
+      .load()
+      .then(() => {
+        if (project.hideBecauseAbusive()) {
+          renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
+          return;
+        }
+        if (project.hideBecausePrivacyViolationOrProfane()) {
+          renderAbusive(project, msg.policyViolation());
+          return;
+        }
+        if (project.getSharingDisabled()) {
+          renderAbusive(
+            project,
+            msg.sharingDisabled({
+              sign_in_url: 'https://studio.code.org/users/sign_in'
+            })
+          );
+          return;
+        }
+        resolve(appOptions);
+      })
+      .catch(() => {
+        if (project.channelNotFound()) {
+          renderProjectNotFound();
+          return;
+        } else if (project.sourceNotFound()) {
+          renderVersionNotFound();
+          return;
+        }
+      });
   });
 }
 
@@ -350,6 +363,7 @@ async function loadAppAsync(appOptions) {
     const data = await userAppOptionsRequest;
 
     appOptions.disableSocialShare = data.disableSocialShare;
+    appOptions.isInstructor = data.isInstructor;
 
     if (data.isStarted) {
       appOptions.level.isStarted = data.isStarted;
@@ -446,7 +460,7 @@ const sourceHandler = {
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
         // If we're readOnly, source hasn't changed at all
-        source = Blockly.mainBlockSpace.isReadOnly()
+        source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
           : Blockly.Xml.domToText(
               Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
@@ -472,13 +486,6 @@ const sourceHandler = {
     } else {
       callback({});
     }
-  },
-  setInitialGeneratedProperties(generatedProperties) {
-    getAppOptions().initialGeneratedProperties = generatedProperties;
-  },
-  getGeneratedProperties() {
-    const {getGeneratedProperties} = getAppOptions();
-    return getGeneratedProperties && getGeneratedProperties();
   },
   prepareForRemix() {
     const {prepareForRemix} = getAppOptions();

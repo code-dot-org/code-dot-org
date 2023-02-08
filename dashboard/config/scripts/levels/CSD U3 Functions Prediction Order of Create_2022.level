@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:41:53.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -64,6 +60,10 @@
     "expand_debugger": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:41:53.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:53.455+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Prediction Order of Create_2021\\\"\"],\"cloned_from\":\"CSD U3 Functions Prediction Order of Create_2021\"}]"

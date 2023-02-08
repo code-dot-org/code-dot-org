@@ -30,7 +30,7 @@ class LevelGroup < DSLDefined
   )
 
   def dsl_default
-    <<~ruby
+    <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
       title 'title of the assessment here'
       submittable 'true'
@@ -43,7 +43,7 @@ class LevelGroup < DSLDefined
       page
       level 'level 3'
       level 'level 4'
-    ruby
+    RUBY
   end
 
   def icon
@@ -69,10 +69,12 @@ class LevelGroup < DSLDefined
       @levels_offset = levels_offset
     end
 
-    attr_reader :page_number
-    attr_reader :levels_and_texts_offset
-    attr_reader :levels_and_texts
-    attr_reader :levels_offset
+    attr_reader(
+      :page_number,
+      :levels_and_texts_offset,
+      :levels_and_texts,
+      :levels_offset
+    )
 
     def levels
       levels_and_texts.reject {|l| l.is_a?(External)}
@@ -116,8 +118,8 @@ class LevelGroup < DSLDefined
     end
   end
 
-  def self.setup(data)
-    level = super(data)
+  def self.setup(data, md5)
+    level = super(data, md5)
 
     levels_and_texts_by_page = data[:pages].map do |page|
       page[:levels].map do |level_name|
@@ -180,7 +182,7 @@ class LevelGroup < DSLDefined
       level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
       level
     rescue Exception => e
-      raise e, "Failed to clone #{name} as #{new_name}. Message: #{e.message}"
+      raise e, "Failed to clone LevelGroup #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
     end
   end
 
@@ -190,7 +192,7 @@ class LevelGroup < DSLDefined
   # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
   def clone_sublevels_with_suffix(old_levels_and_texts_by_page, new_suffix)
     new_levels_and_texts_by_page = old_levels_and_texts_by_page.map do |levels_and_texts|
-      levels_and_texts.map {|level| level.clone_with_suffix(new_suffix)}
+      levels_and_texts.map {|level| level.clone_with_suffix(new_suffix, allow_existing: false)}
     end
     update_levels_and_texts_by_page(new_levels_and_texts_by_page)
   end

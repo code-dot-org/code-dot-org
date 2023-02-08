@@ -5,7 +5,7 @@ import {getExceptionMessage} from './javabuilderExceptionHandler';
 const CHECK_MARK = '✔';
 const HEAVY_X = '✖';
 
-export function onTestResult(data, callback) {
+export function onTestResult(data, callback, miniAppType) {
   let message = '';
   const {
     status,
@@ -19,14 +19,17 @@ export function onTestResult(data, callback) {
     stackTrace
   } = data.detail && data.detail;
   const statusDetails = {className: className, methodName: methodName};
+  let successful = true;
   switch (data.value) {
     case UserTestResultSignalType.TEST_STATUS:
       if (status === TestStatus.SUCCESSFUL) {
         message = `${CHECK_MARK} ${msg.successfulTestResult(statusDetails)}`;
       } else if (status === TestStatus.FAILED) {
         message = `${HEAVY_X} ${msg.failedTestResult(statusDetails)}`;
+        successful = false;
       } else {
         message = `${HEAVY_X} ${msg.abortedTestResult(statusDetails)}`;
+        successful = false;
       }
       break;
     case UserTestResultSignalType.STATUS_DETAILS:
@@ -36,7 +39,7 @@ export function onTestResult(data, callback) {
       } else if (exceptionName) {
         message += msg.exceptionThrown({exceptionName: exceptionName});
       } else {
-        message += getExceptionMessage(data, data.detail.type);
+        message += getExceptionMessage(data, data.detail.type, miniAppType);
       }
 
       if (stackTrace) {
@@ -50,4 +53,5 @@ export function onTestResult(data, callback) {
       break;
   }
   callback(message);
+  return {success: successful, isValidation: isValidation};
 }

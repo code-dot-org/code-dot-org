@@ -5,7 +5,6 @@ import * as actions from './redux/errorDialogStack';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-var labMsg = require('@cdo/gamelab/locale') || require('@cdo/spritelab/locale');
 import msg from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
@@ -22,7 +21,8 @@ class ErrorDialogStack extends React.Component {
     errors: PropTypes.arrayOf(PropTypes.object).isRequired,
     dismissError: PropTypes.func.isRequired,
     deleteAnimation: PropTypes.func,
-    animationList: PropTypes.object
+    animationList: PropTypes.object,
+    isSpriteLab: PropTypes.bool.isRequired
   };
 
   handleDeleteChoice(key) {
@@ -40,7 +40,7 @@ class ErrorDialogStack extends React.Component {
       },
       {includeUserId: true}
     );
-    this.props.deleteAnimation(key);
+    this.props.deleteAnimation(key, this.props.isSpriteLab);
     this.props.dismissError();
   }
 
@@ -86,9 +86,7 @@ class ErrorDialogStack extends React.Component {
             information and choice to reload the page or delete the animation */}
         {error.error_type === 'anim_load' && (
           <div>
-            <p>
-              {labMsg.errorLoadingAnimation({animationName: animationName})}
-            </p>
+            <p>{msg.errorLoadingAnimation({animationName: animationName})}</p>
             <p>
               {msg.contactWithoutEmail()}{' '}
               <a
@@ -125,7 +123,8 @@ export default connect(
   function propsFromStore(state) {
     return {
       errors: state.errorDialogStack,
-      animationList: state.animationList
+      animationList: state.animationList,
+      isSpriteLab: state.pageConstants.isBlockly
     };
   },
   function propsFromDispatch(dispatch) {
@@ -133,8 +132,8 @@ export default connect(
       dismissError: function() {
         dispatch(actions.dismissError());
       },
-      deleteAnimation: function(key) {
-        dispatch(animationActions.deleteAnimation(key));
+      deleteAnimation: function(key, isSpriteLab) {
+        dispatch(animationActions.deleteAnimation(key, isSpriteLab));
       }
     };
   }

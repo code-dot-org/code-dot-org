@@ -76,7 +76,7 @@ export function shrinkBlockSpaceContainer(blockSpace, withPadding) {
   // and shrink it, triggering a blockspace resize when we do so
   container.style.height = height + 'px';
   container.style.width = width + 'px';
-  blockSpace.blockSpaceEditor.svgResize();
+  Blockly.cdoUtils.workspaceSvgResize(blockSpace);
 }
 
 /**
@@ -111,8 +111,9 @@ function removeCommentNodes(root) {
  * Converts any inline XML in the container element into embedded
  * readonly BlockSpaces
  * @param {Element} xmlContainer The element in which to search for XML
+ * @param {Boolean} isRtl True if we are displaying in RTL
  */
-export function convertXmlToBlockly(xmlContainer) {
+export function convertXmlToBlockly(xmlContainer, isRtl) {
   const xmls = xmlContainer.getElementsByTagName('xml');
 
   Array.prototype.forEach.call(xmls, function(xml) {
@@ -144,13 +145,13 @@ export function convertXmlToBlockly(xmlContainer) {
 
     // Don't render the raw XML
     xml.style.display = 'none';
-
     const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockSpaceContainer,
       xml,
       {
         noScrolling: true,
-        inline: inline
+        inline: inline,
+        rtl: isRtl
       }
     );
 

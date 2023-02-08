@@ -3,7 +3,7 @@
   "name": "setChecked",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Sets the state of a checkbox or radioButton.\n\n`setChecked()` is used by your app to mark or unmark a checkbox or radio button by using the element ID. Check boxes are used when the user is asked to check a box if they agree with something, like an app privacy statement. Radio buttons are used when the user is asked to choose one item from a predefined group of options.",
+  "content": "Sets the state of a checkbox or radioButton.\n\n[`setChecked()`(#fff176)](/docs/applab/setChecked/) is used by your app to mark or unmark a checkbox or radio button by using the element ID. Check boxes are used when the user is asked to check a box if they agree with something, like an app privacy statement. Radio buttons are used when the user is asked to choose one item from a predefined group of options.",
   "examples": [
     {
       "name": "Example: Tell Me My Favorite Color",

@@ -33,12 +33,12 @@ CSV.foreach(regional_partner_csv, headers: true) do |row|
   next unless email || user_id
 
   # Some partnerss don't have accounts yet and are marked with - followed by a comment in the id field.
-  next if user_id && user_id.start_with?('-')
+  next if user_id&.start_with?('-')
   regional_partner = begin
     if user_id.nil?
       User.find_by!(email: email)
     else
-      User.find_by!(id: user_id)
+      User.find(user_id)
     end
   rescue ActiveRecord::RecordNotFound
     puts "Unable to find user id: #{user_id} or email: #{email}"

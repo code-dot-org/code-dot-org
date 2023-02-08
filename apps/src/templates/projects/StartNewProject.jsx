@@ -28,18 +28,6 @@ export default class StartNewProject extends React.Component {
     const {canViewAdvancedTools, canViewFullList} = this.props;
     const {showFullList} = this.state;
 
-    const GAMES_AND_EVENTS = [
-      'spritelab',
-      'dance',
-      'poetry',
-      'flappy',
-      'starwarsblocks',
-      'starwars',
-      'bounce',
-      'sports',
-      'basketball'
-    ];
-
     const DEFAULT_PROJECT_TYPES_ADVANCED = [
       'spritelab',
       'artist',
@@ -50,26 +38,56 @@ export default class StartNewProject extends React.Component {
     const DEFAULT_PROJECT_TYPES_BASIC = [
       'spritelab',
       'artist',
-      'minecraft_designer',
       'dance',
-      'poetry'
+      'playlab'
     ];
 
     const defaultProjectTypes = canViewAdvancedTools
       ? DEFAULT_PROJECT_TYPES_ADVANCED
       : DEFAULT_PROJECT_TYPES_BASIC;
 
+    const OPEN_ENDED_PROJECT_TYPES = [
+      'spritelab',
+      'dance',
+      'poetry',
+      'thebadguys'
+    ];
+
+    const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
+
+    const MINECRAFT_PROJECT_TYPES = [
+      'minecraft_adventurer',
+      'minecraft_designer',
+      'minecraft_hero',
+      'minecraft_aquatic'
+    ];
+
+    const GAMES_AND_EVENTS_PROJECT_TYPES = [
+      'flappy',
+      'starwarsblocks',
+      'bounce',
+      'sports',
+      'basketball'
+    ];
+
+    const PLAYLAB_PROJECT_TYPES = ['playlab', 'infinity', 'gumball', 'iceage'];
+
+    const ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'starwars'];
+
+    const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
+
     return (
       <div>
-        <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
+        <h4 className="new-project-heading" style={styles.headingStartNew}>
+          {i18n.projectStartNew()}
+        </h4>
         <NewProjectButtons projectTypes={defaultProjectTypes} />
 
         {canViewFullList && (
           <Button
-            __useDeprecatedTag
             id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             icon={showFullList ? 'caret-up' : 'caret-down'}
             text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
             style={styles.button}
@@ -81,39 +99,34 @@ export default class StartNewProject extends React.Component {
         {showFullList && (
           <div>
             <NewProjectButtons
-              description={i18n.projectGroupPlaylab()}
-              projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupEvents()}
-              projectTypes={GAMES_AND_EVENTS}
+              description={i18n.projectGroupOpenEnded()}
+              projectTypes={OPEN_ENDED_PROJECT_TYPES}
             />
             <NewProjectButtons
               description={i18n.projectGroupArtist()}
-              projectTypes={['artist', 'frozen']}
+              projectTypes={DRAWING_PROJECT_TYPES}
             />
             <NewProjectButtons
               description={i18n.projectGroupMinecraft()}
-              projectTypes={[
-                'minecraft_aquatic',
-                'minecraft_hero',
-                'minecraft_designer',
-                'minecraft_adventurer'
-              ]}
+              projectTypes={MINECRAFT_PROJECT_TYPES}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupEvents()}
+              projectTypes={GAMES_AND_EVENTS_PROJECT_TYPES}
             />
             {canViewAdvancedTools && (
               <NewProjectButtons
                 description={i18n.projectGroupAdvancedTools()}
-                projectTypes={['applab', 'gamelab', 'weblab']}
+                projectTypes={ADVANCED_PROJECT_TYPES}
               />
             )}
             <NewProjectButtons
-              description={i18n.projectGroupPreReader()}
-              projectTypes={['playlab_k1', 'artist_k1']}
+              description={i18n.projectGroupPlaylab()}
+              projectTypes={PLAYLAB_PROJECT_TYPES}
             />
             <NewProjectButtons
-              description={i18n.projectGroupMath()}
-              projectTypes={['calc', 'eval']}
+              description={i18n.projectGroupPreReader()}
+              projectTypes={PREREADER_PROJECT_TYPES}
             />
           </div>
         )}
@@ -126,14 +139,15 @@ export default class StartNewProject extends React.Component {
 const styles = {
   button: {
     float: 'right',
-    marginRight: 1
+    margin: '0 1px 0 0',
+    padding: '0 16px'
   },
   headingStartNew: {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 16,
     fontFamily: '"Gotham 4r"',
-    color: color.charcoal,
+    color: color.neutral_dark,
     marginBottom: -10
   },
   spacer: {

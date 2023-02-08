@@ -1,0 +1,73 @@
+{
+  "category_key": "java_lang",
+  "content": "The `Math` class provides methods to perform various math calculations. These methods include calculating the square root, absolute value, and hypothesis, and many other operations.",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[{\"name\":\"PI\",\"type\":\"static double\",\"description\":\"the `double` value representing pi, the ratio of the circumference of a circle to its diameter\"}]",
+  "key": "Math",
+  "name": "Math",
+  "syntax": "`Math.methodName(parameter);`",
+  "tips": "",
+  "methods": [
+    {
+      "name": "abs",
+      "position": 0,
+      "key": "abs",
+      "overload_of": null,
+      "content": "Returns the absolute (positive) value of `a`.",
+      "parameters": "[{\"name\":\"a\",\"type\":\"double\",\"required\":true,\"description\":\"the value whose absolute value is to be determined\"}]",
+      "examples": "[{\"name\":\"\",\"description\":\"\",\"code\":\"```\\ndouble num = -0.9;\\n\\nSystem.out.println(Math.abs(num));\\n```\\n\\n***Output:***\\n\\n0.9\"}]",
+      "syntax": "`public static double abs(double a)`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "abs",
+      "position": 1,
+      "key": "abs2",
+      "overload_of": "abs",
+      "content": "Returns the absolute value of an `int` value.",
+      "parameters": "[{\"name\":\"a\",\"type\":\"int\",\"required\":true,\"description\":\"the value whose absolute value is to be determined\"}]",
+      "examples": "[{\"code\":\"```\\nint num = -20;\\n\\nSystem.out.println(Math.abs(num));\\n```\\n\\n**Output:**\\n\\n20\"}]",
+      "syntax": "`public static int abs(int a)`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "sqrt",
+      "position": 2,
+      "key": "math.sqrt-x",
+      "overload_of": null,
+      "content": "Returns the square root of `a`. The return value will always be a positive and correctly rounded number.",
+      "parameters": "[{\"name\":\"a\",\"type\":\"double\",\"required\":true,\"description\":\"the value to obtain the square root\"}]",
+      "examples": "[{\"name\":\"\",\"code\":\"```\\ndouble a = 25.0;\\ndouble b = 0.0;\\n\\nSystem.out.println(Math.sqrt(a));\\nSystem.out.println(Math.sqrt(b));\\n```\\n\\n**Output:**\\n\\n5.0\\n\\n0.0\"}]",
+      "syntax": "`public static double sqrt(double a)`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "random",
+      "position": 3,
+      "key": "math.random",
+      "overload_of": null,
+      "content": "Returns a random value that is greater than or equal to `0.0` and less than `1.0`. ",
+      "parameters": "[]",
+      "examples": "[{\"code\":\"```\\ndouble randomValue = Math.random();\\nSystem.out.println(randomValue);\\n```\\n\\n![](https://images.code.org/1d8b44796999067d2cacb3911cd75e62-math_random.gif)\"}]",
+      "syntax": "`public static double random()`",
+      "external_link": null,
+      "return_value": null
+    },
+    {
+      "name": "pow",
+      "position": 4,
+      "key": "pow",
+      "overload_of": null,
+      "content": "Returns the first argument raised to the power of the second argument.",
+      "parameters": "[{\"name\":\"a\",\"type\":\"double\",\"required\":true,\"description\":\"the base\"},{\"name\":\"b\",\"type\":\"double\",\"required\":true,\"description\":\"the exponent\"}]",
+      "examples": "[{\"code\":\"```\\ndouble a = 30;\\ndouble b = 2;\\nSystem.out.println(Math.pow(a, b));\\n  \\na = 3;\\nb = 4;\\nSystem.out.println(Math.pow(a, b));\\n  \\na = 2;\\nb = 6;\\nSystem.out.println(Math.pow(a, b));\\n```\\n\\n**Output:**\\n\\n900.0\\n\\n81.0\\n\\n64.0\"}]",
+      "syntax": "`public static double pow(double a, double b)`",
+      "external_link": null,
+      "return_value": null
+    }
+  ]
+}

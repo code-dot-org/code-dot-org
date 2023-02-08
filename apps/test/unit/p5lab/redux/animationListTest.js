@@ -23,12 +23,15 @@ import {setExternalGlobals} from '../../../util/testUtils';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 const project = require('@cdo/apps/code-studio/initApp/project');
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import _ from 'lodash';
 
 describe('animationList', function() {
   setExternalGlobals(beforeEach, afterEach);
   describe('animationSourceUrl', function() {
     const key = 'foo';
+
+    before(() => assetPrefix.init({}));
 
     it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function() {
       const props = {sourceUrl: 'bar'};
@@ -369,6 +372,20 @@ describe('animationList', function() {
       );
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key0));
+      expect(store.getState().animationTab.selectedAnimation).to.equal('');
+    });
+
+    it('deleting an animation deselects when there are no other non-background animations in the spritelab animationList', function() {
+      const key0 = 'animation_1';
+      const key1 = 'animation_2';
+      let animationList = createAnimationList(2);
+      animationList.propsByKey[key1].categories = ['backgrounds'];
+      let store = createStore(
+        combineReducers({animationList: reducer, animationTab}),
+        {}
+      );
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(deleteAnimation(key0, true));
       expect(store.getState().animationTab.selectedAnimation).to.equal('');
     });
   });

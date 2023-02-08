@@ -39,11 +39,11 @@ class PeerReview < ApplicationRecord
     escalated: 2
   }
 
-  belongs_to :submitter, class_name: 'User'
-  belongs_to :reviewer, class_name: 'User'
-  belongs_to :script
-  belongs_to :level
-  belongs_to :level_source
+  belongs_to :submitter, class_name: 'User', optional: true
+  belongs_to :reviewer, class_name: 'User', optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
+  belongs_to :level, optional: true
+  belongs_to :level_source, optional: true
 
   validates :status, inclusion: {in: %w{accepted rejected}}, if: -> {from_instructor}
 
@@ -130,12 +130,12 @@ class PeerReview < ApplicationRecord
   end
 
   def self.create_for_submission(user_level, level_source_id)
-    return if PeerReview.where(
+    return if PeerReview.exists?(
       submitter: user_level.user,
       level: user_level.level,
       from_instructor: true,
       status: :accepted
-    ).exists?
+    )
 
     transaction do
       # Remove old unassigned reviews for this submitter+script+level combination
@@ -155,7 +155,7 @@ class PeerReview < ApplicationRecord
       }
 
       # First, create a placeholder Peer Review entry for someone else enrolled in the course to review.
-      # Only create it if this CourseUnit (PLC Courses equivalent of a Script) requires review from peers.
+      # Only create it if this CourseUnit (PLC Courses equivalent of a Unit) requires review from peers.
       create!(base_peer_review_attributes) unless user_level.script&.only_instructor_review_required?
 
       # Always create a Peer Review entry in order for the instructor to provide a review.

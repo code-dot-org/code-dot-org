@@ -24,8 +24,6 @@
 #  index_levels_on_name       (name)
 #
 
-require 'cdo/script_constants'
-
 # Levels defined using a text-based ruby DSL syntax.
 # See #BaseDSL for the DSL format implementation.
 class DSLDefined < Level
@@ -41,6 +39,12 @@ class DSLDefined < Level
 
   def dsl_default
     "Enter the level definition here.\n"
+  end
+
+  def localized_teacher_markdown
+    # Overrides the normal behavior since for DSLDefined levels, the teacher
+    # markdown is part of the dsl.
+    localized_property('teacher_markdown')
   end
 
   def localized_property(property)
@@ -84,22 +88,17 @@ class DSLDefined < Level
     end
   end
 
-  def self.setup(data)
+  def self.setup(data, md5=nil)
     level = find_or_create_by({name: data[:name]})
     level.send(:write_attribute, 'properties', {})
 
-    level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties])
+    level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties], md5: md5)
 
     level
   end
 
   def self.dsl_class
     "#{self}DSL".constantize
-  end
-
-  # Use DSL class to parse file
-  def self.parse_file(filename, name=nil)
-    parse(File.read(filename), filename, name)
   end
 
   # Use DSL class to parse string
@@ -121,7 +120,10 @@ class DSLDefined < Level
         raise "Renaming of DSLDefined levels is not allowed: '#{old_name}' --> '#{data[:name]}'"
       end
 
-      level = setup data
+      # prevent levelbuilder from reseeding this level during the next deploy.
+      md5 = Digest::MD5.hexdigest(text)
+
+      level = setup data, md5
 
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode

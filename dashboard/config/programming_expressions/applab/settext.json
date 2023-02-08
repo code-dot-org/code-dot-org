@@ -50,5 +50,5 @@
   "return_value": "No return value. Modifies screen only.\r\n",
   "short_description": "Sets the text for the specified screen element.",
   "syntax": "setText(id, text)",
-  "tips": "- To clear the text on a screen element set the text to be \"\". Make sure you `getText()` first if you need to save the data from a `textInput()` to a variable."
+  "tips": "- To clear the text on a screen element set the text to be \"\". Make sure you [`getText()`(#fff176)](/docs/applab/getText/) first if you need to save the data from a [`textInput()`(#fff176)](/docs/applab/textInput/) to a variable."
 }

@@ -21,9 +21,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## CS 기초 2021-22 내 언플러그드 수업
-
-<a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS 기초 2021-22</a>에서는 다음 수업들을 만나볼 수 있습니다. <br><br>
+## CS 기초 2022-23 내 언플러그드 수업
+다음 수업은 <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>에서 찾을 수 있습니다. <br><br>
 
 <style>
 table, th, td {
@@ -32,7 +31,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t01 {
   width: 10%;
@@ -61,70 +60,73 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>코스</th>
-    <th><center><big>수업 계획</th>
-     <th width=10%><center><big>개념</th>
-    <th width=20%><center><big>동영상</th>
+    <th><center><big>Course</th>
+    <th><center><big>Lesson Plan</th>
+    <th width=10%><center><big>Concept</th>
+    <th width=20%><center><big>Video</th>
      <tr>
-    <th rowspan="3" id="t01">코스 A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 - 해피 맵</a><br><small>이 언플러그드 수업에서는 팀을 꾸려 “플러브”를 과일에 가져가기 같은 간단한 작업을 하게 됩니다. 학생들은 명령을 정확하게 작성하는 연습을 하면서 명령을 제공된 기호로 변환해봅니다. 코드에서 문제가 발생하면 학생들은 또다시 협력해 버그를 알아내고 해결책을 찾아내야 합니다.</td><td>시퀀싱</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t01">Course A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. 학생들은 명령을 정확하게 작성하는 연습을 하면서 명령을 제공된 기호로 변환해봅니다. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 - 해피 루프</a><br><small>이 활동에서는 해피 맵이 다시 나옵니다. 이번 활동을 통해 학생들은 코드를 가지고 더 크고 긴 퍼즐을 풀며 구조의 다용도성을 알아보고 더 긴 코드를 더 쉽게 쓸 수 있게 됩니다.</td><td>루프</td> <td><img src="/images/a7.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 - 더 빅 이벤트 주니어</a><br><small>이벤트는 사전에 작성된 알고리즘에 다양성을 추가하는 훌륭한 기능입니다. 사용자가 원할 때 곧바로 프로그램이 사용자에게 반응하도록 하고 싶을 때가 있습니다. 이벤트는 그때를 위한 것입니다.</td><td>이벤트</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. 사용자가 원할 때 곧바로 프로그램이 사용자에게 반응하도록 하고 싶을 때가 있습니다. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
   </tr>
        <tr>
-    <th rowspan="3" id="t02">코스 B</th>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 - 움직여, 움직여</a><br><small>학생들은 이 수업을 통해 이 코스를 진행하면서 맞닥뜨릴 코딩 연습에 대한 정신적 준비를 하게 됩니다. 작게 팀을 꾸려 목표를 달성할 때까지 친구들을 이리저리 조심스럽게 움직이도록 프로그래밍해보는 신체 활동을 합니다 </td><td>시퀀싱</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t02">Course B</th>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/2">B.2 - Move It, Move It</a><br><small>This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course. In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 - 루프에 빠져들기</a><br><small>더 길고 더 흥미로운 프로그램을 작성하기 시작하면 대개 코드에 반복이 많아집니다. 이 수업에서 학생들은 춤에서 반복되는 동작의 패턴을 보며 루프를 어떻게 사용하면 더 쉽게 명령을 전달할 수 있는지 배워봅니다.</td><td>루프</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/6">B.6 - Getting Loopy</a><br><small>As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
   <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 - 꼭 맞는 앱</a><br><small>이 수업에서 학생들은 컴퓨터 과학이 사람들의 실생활에 도움이 된다는 것을 알게 됩니다. 가상의 스마트폰 사용자들의 요구 사항을 다뤄주는 “꼭 맞는 앱”을 찾아줄 수 있도록 그들에게 감정을 이입하는 것부터 시작합니다. 그런 다음 공감과 창의력을 발휘해 또 하나의 추가 사용자의 요구 사항을 다루는 자신만의 스마트폰 앱을 스케치합니다.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>  </tr>
-       <tr>
-    <th rowspan="4" id="t03">코스 C</th>
-    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 - 내 로봇 친구들 주니어</a><br><i>*준비물: 플라스틱 컵(2~3명 그룹당 10개)</i><br><small>학생들은 코드의 자리에 기호 세트를 사용해 “로봇”이 다양한 패턴으로 컵을 쌓을 수 있도록 명령하는 알고리즘을 디자인합니다. 차례차례 돌아가며 로봇으로 참여해 친구들이 정의한 알고리즘에 따라서만 응답해봅니다. 이 세그먼트에서 학생들은 기호와 동작 간의 관계, 알고리즘과 프로그램 간의 차이, 그리고 디버깅이라는 아주 유익한 기능을 배웁니다.</td><td>시퀀싱</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
-  </tr>
-   <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 - 내 루프 로봇 친구 주니어</a><br><i>*준비물: 종이컵(4명 그룹당 20개)</i><br><small>개요학생들은 초기 “내 로봇 친구들” 활동을 바탕으로 더 크고 복잡한 디자인을 다뤄봅니다. 자신들의 “로봇”이 더 커진 디자인을 완성할 수 있도록 프로그램하려면 루프로 대체할 수 있는 명령 속 패턴을 식별해야 합니다.</td><td>루프</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/10">B.10 - The Right App</a><br><small>This lesson has students recognize that computer science can help people in real life. 가상의 스마트폰 사용자들의 요구 사항을 다뤄주는 “꼭 맞는 앱”을 찾아줄 수 있도록 그들에게 감정을 이입하는 것부터 시작합니다. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
   </tr>
        <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 - 더 빅 이벤트</a><br><small>곧 학생들은 이벤트가 사전 작성된 알고리즘에 유연성를 더하는 훌륭한 방법이라는 것을 배우게 됩니다. 사용자가 원할 때 곧바로 프로그램이 사용자에게 반응하도록 하고 싶을 때가 있습니다. 이벤트는 프로그램을 더 흥미롭고 더 상호적으로 만들 수 있습니다.</td><td>이벤트</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+    <th rowspan="4" id="t03">Course C</th>
+    <td><a href="https://studio.code.org/s/coursec-2022/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. 차례차례 돌아가며 로봇으로 참여해 친구들이 정의한 알고리즘에 따라서만 응답해봅니다. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Supplies: Paper cups (20/group of 4)</i><br><small>Overview
+Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+  </tr>
+      <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. 사용자가 원할 때 곧바로 프로그램이 사용자에게 반응하도록 하고 싶을 때가 있습니다. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
    </tr>
-        </tr>
-      <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 - 이진법 팔찌</a><br><i>*준비물: 마커. 선택 사항 –학생당 파이프 블리너 1개, 검은색 비즈 18개/흰색 비즈 18개</i><br><small>컴퓨터의 세계에서 이진법은 정말 중요합니다. 오늘날 대부분의 컴퓨터는 정보의 유형에 관계없이 모두 이진법 형태로 저장하기 때문입니다. 이 수업에서는 현실 속 무언가를 켜짐과 꺼짐의 일련으로 변환하는 일이 어떻게 가능한지를 보여줄 것입니다.</td><td>이진법</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+       </tr>
+     <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. 선택 사항 –학생당 파이프 블리너 1개, 검은색 비즈 18개/흰색 비즈 18개</i><br><small>컴퓨터의 세계에서 이진법은 정말 중요합니다. 오늘날 대부분의 컴퓨터는 정보의 유형에 관계없이 모두 이진법 형태로 저장하기 때문입니다. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
   </tr>
          <tr>
-    <th rowspan="3" id="t04">코스 D</th>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - 그래프용지 프로그래밍<br></a><small>서로서로 그림을 그리도록 “프로그래밍”함으로써 학생들은 프로그래밍의 핵심 개념을 재미있고 이해하기 쉽게 경험하게 됩니다. 수업은 학생들이 기호를 사용해 서로서로 명령을 내려 그래프용지 위 네모를 색칠해 기존의 그림을 재현하게 하는 것으로 시작합니다. 시간이 된다면 학생들이 스스로 제작한 이미지로 수업을 마무리지어도 됩니다.</td><td>시퀀싱</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>  </tr>
+    <th rowspan="3" id="t04">Course D</th>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/2">D.2 - Graph Paper Programming<br></a><small>By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. 수업은 학생들이 기호를 사용해 서로서로 명령을 내려 그래프용지 위 네모를 색칠해 기존의 그림을 재현하게 하는 것으로 시작합니다. If there’s time, the lesson can conclude with images that the students create themselves.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+  </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - 릴레이 프로그래밍<br></a><small>이 활동은 디버깅과 지속성에 대한 짧은 수업으로 시작해 학생들이 팀을 이뤄 협력하며 한 번에 한 명령씩 프로그램을 작성하는 경쟁으로 빠르게 이어집니다.</td><td>시퀀싱</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 - 카드로 배우는 조건문</a><br><small>이 수업에서는 조건문을 사용하여 특정 정보에 맞게 프로그램을 조정하는 방법을 보여줍니다. 우리가 프로그램을 작성할 때 필요한 모든 정보를 항상 가지고 있는 것이 아닙니다. 코드가 실행 중인 때에 어떤 상황이 참이 될지는 모르나 상황에 따라 무언가가 달라지기를 원할 때가 있습니다. 바로 그때 조건문이 필요합니다. 조건문을 사용하면 언제든 코드가 실행 중일 때 참인 정보를 바탕으로 컴퓨터가 결정을 내리도록 할 수 있습니다.+</td><td>조건문</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. 우리가 프로그램을 작성할 때 필요한 모든 정보를 항상 가지고 있는 것이 아닙니다. 코드가 실행 중인 때에 어떤 상황이 참이 될지는 모르나 상황에 따라 무언가가 달라지기를 원할 때가 있습니다. 바로 그때 조건문이 필요합니다. 조건문을 사용하면 코드가 실행될 때마다 참인 정보를 기반으로 하여 컴퓨터가 결정을 내릴 수 있습니다.+</td><td>조건문</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-    </tr>
-         <tr>
-    <th rowspan="3" id="t05">코스 E</th>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - 디지털 공유</a><br><i>*준비물: 스마트폰 또는 태블릿</i><br><small>Copyright and Creativity 팀에서 컴퓨터 과학 기초에 빌려준 이 수업은 학생들이 특히 디지털 환경에서 소유권과 저작권을 존중할 때의 어려움과 이점을 이해할 수 있도록 도와줍니다. 예술가의 권리를 존중하는 일이 도덕적인 디지털 시민이 되는 데 중요한 부분이라는 것을 학생들에게 알려주어야 합니다.</td><td>디지털 시민 정신</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - 작사·작곡</a><br><small>컴퓨터 과학의 세계에서 가장 숭고한 구조 중 하나는 바로 함수입니다. 함수(프로시저라고도 합니다) 는 더 큰 프로그램 안에서 몇 번이고 사용할 수 있는 미니 프로그램입니다. 이 수업을 통해 학생들은 코드 덩어리들을 함수로 결합하는 일이 어째서 그토록 유용한 연습이 될 수 있는지를 직관적으로 이해하게 됩니다.</td><td>함수</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">과정 E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - 작곡</a><br><small>컴퓨터 과학의 세계에서 가장 멋진 구조 중 하나는 함수입니다. 함수(프로시저라고도 합니다) 는 더 큰 프로그램 안에서 몇 번이고 사용할 수 있는 미니 프로그램입니다. 이 강의는 학생들이 코드 덩어리를 함수로 결합하는 것이 어째서 그토록 유용한 연습이 될 수 있는지 직관적으로 이해하는 데 도움이 됩니다.</td><td>함수</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 - 접근성을 위한 디자인하기</a><br><small>이 수업에서 학생들은 가상의 앱을 위한 브레인스토밍과 접근 가능한 솔루션을 통해 공감의 가치와 접근성에 대해 배웁니다.</td><td>컴퓨팅의 영향</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - 접근성을 위한 디자인</a><br><small>이 강의에서 학생들은 가상 앱에 대한 접근 가능한 솔루션을 브레인스토밍하고 설계함으로써, 접근성과 공감의 가치에 대해 배우게 됩니다.</td><td>컴퓨팅의 영향<</td><td><img src="/images/e18.png" width="90%"></td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - 디지털 공유</a><br><i>*준비물: 스마트폰 또는 태블릿</i><br><small>저작권 및 창의성에 대해 팀에서 컴퓨터 과학 기초에 대여한 이 수업은 학생들이 특히 디지털 환경에서 소유권과 저작권을 존중할 때의 어려움과 이점을 이해하도록 돕기 위한 것입니다. 학생들은 윤리적인 디지털 시민이 되기 위한 중요한 부분으로서 예술가의 권리를 존중해야 합니다.</td><td>디지털 시민 의식</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t06">코스 F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 -빈칸 이야기</a><br><i>*준비물: 봉투 6장(종이 또는 색인 카드 반으로 접어도 가능)</i><br><small>학생들은 빈칸 채우기 이야기를 맥락으로 활용해(Mad Libs®와 유사) 컴퓨터가 사용자에게서 입력을 받고 보관하다가 나중에 프로그램이 실행되었을 때 어떻게 그것을 사용하는지를 이해하게 됩니다.
-   </td><td>변수</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
-    </tr>
+    <th rowspan="3" id="t06">과정 F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -빈 공간 이야기</a><br><i>*준비물: 봉투 6개(종이 또는 색인 카드도 괜찮음, 반으로 접힌 것)</i><br><small>학생들은 빈칸 채우기 이야기(Mad Libs®와 유사)를 컴퓨터가 어떻게 사용하는지 이해하기 위한 맥락으로 사용하게 됩니다. 사용자의 입력을 저장한 다음 나중에 프로그램이 실행될 때 사용합니다.
+   </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+  </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - 재미난 루프를 위하여</a><br><i>*준비물: 주사위(2~4명 그룹당 주사위 3개)</i><br><small>루프를 사용하면 작업이 계속해서 반복된다는 것은 알고 있습니다. 이제는 추가 구조가 자체적으로 내장된 루프를 사용하는 법을 알아볼 것입니다. 이 새로운 구조들을 사용하면 학생들이 더 강력하고 역동적인 코드를 만들 수 있습니다.</td><td>루프를 위하여</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. 이 새로운 구조들을 사용하면 학생들이 더 강력하고 역동적인 코드를 만들 수 있습니다.</td><td>루프를 위하여</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - 인터넷</a><br><small>인터넷을 매일 사용하는 사람은 많지만 어떻게 작동하는지를 아는 사람은 거의 없습니다. 이 수업에서 학생들은 인터넷을 돌고 돌는 상황을 가정하고 연결과 URL, IP 주소, DNS에 대해 배워봅니다.</td><td>데이터</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - 인터넷</a><br><small>인터넷을 매일 사용하는 사람은 많지만 어떻게 작동하는지를 아는 사람은 거의 없습니다. 이 수업에서 학생들은 인터넷을 돌고 돌는 상황을 가정하고 연결과 URL, IP 주소, DNS에 대해 배워봅니다.</td><td>데이터</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 
@@ -147,7 +149,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t07 {
   width: 10%;
@@ -161,17 +163,16 @@ th, td {
     <th width=65%><center><big>수업 계획 <br>
 <small> 수업 계획에는 부가 자료(슬라이드, 동영상, 해답지 등) 가 포함되어 있습니다.
 </th>
-     <th><center><big>자료</th>
+    <th><center><big>Resources</th>
      <tr>
-    <th rowspan="2" id=t07 width=5%>디지털 시민 정신</th>
-    <td><a href="https://curriculum.code.org/csf-19/coursef/18">크라우드소싱</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+    <th rowspan="2" id=t07 width=5%>Digital Citizenship</th>
+    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
   </tr>
   <tr>
-      <td colspan="2">*Common Sense Education에서 다양한 언플러그드 활동이 포함된 <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">Digital Citizenship Curriculum 전문</a>을 찾아볼 수 있습니다.</td>
+      <td colspan="2">*Common Sense Education has a <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">full Digital Citizenship Curriculum</a> that includes many unplugged activities.</td>
     <tr>
-    <th id=t07>이진법</th>
-        <td><a href=”https://curriculum.code.org/csf-20/coursed/16/">이진법 이미지 
-</a><br><small>*준비물:선택 - 학생들이 볼 수 있게끔 반대 방향으로 항목 분류. 대부분 사람들은 이진법을 무조건 0과 1로 생각합니다. 정보가 여러 가지 이진법으로 나타날 수 있다는 사고방식을 학생들에게 소개할 것입니다. 이 수업에서는 이진법 개념을 한 수준 끌어올려 컴퓨터가 어떻게 훨씬 더 복잡한 정보(이미지나 색상 등)까지도 이진법으로 보관할 수 있는지를 설명합니다.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+    <th id=t07>Binary</th>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binary Images </a><br><small>*Supplies:Optional - Groupings of opposite items to display to students. 대부분 사람들은 이진법을 무조건 0과 1로 생각합니다. 정보가 여러 가지 이진법으로 나타날 수 있다는 사고방식을 학생들에게 소개할 것입니다. 이 수업에서는 이진법 개념을 한 수준 끌어올려 컴퓨터가 어떻게 훨씬 더 복잡한 정보(이미지나 색상 등)까지도 이진법으로 보관할 수 있는지를 설명합니다.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
  </tr>
     <tr>
     <th id=t07>루프</th>

@@ -166,7 +166,7 @@ def dotd_menu_prompt
 
         #{bold 'A'}: Show all options.
 
-      Honeybadger:
+      Misc:
 
         #{bold 'H'}: Retrieve #{underline 'H'}oneybadger issues.
 
@@ -197,30 +197,31 @@ def dotd_menu_prompt_all
 
         #{bold 'D'}: Show default (limited) options.
 
-      Honeybadger:
+      Misc:
 
         #{bold 'H'}: Retrieve #{underline 'H'}oneybadger issues.
+        #{bold 'C'}: Perform self-#{underline 'c'}heck diagnostic.
 
       DTS:
 
         #{bold 'S'}: Commit content on #{underline 's'}taging.
-        #{bold 'DTS'}: #{underline 'DTS'} from levelbuilder.
+        #{bold 'DTS'}: #{underline 'D'}eploy #{underline 't'}o #{underline 's'}taging from levelbuilder.
 
       DTT:
 
-        #{bold 'DTT'}: #{underline 'DTT'}.
+        #{bold 'DTT'}: #{underline 'D'}eploy #{underline 't'}o #{underline 't'}est.
         #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
         #{bold 'R'}: Mark the most recent DTT #{underline 'r'}ed.
         #{bold 'K'}: #{underline 'K'}ill the currently running test run.
 
       DTP:
 
-        #{bold 'DTP'}: #{underline 'DTP'} the most recent green DTT.
+        #{bold 'DTP'}: #{underline 'D'}eploy #{underline 't'}o #{underline 'p'}roduction the most recent green DTT.
 
       DTL:
 
         #{bold 'L'}: Commit content on #{underline 'l'}evebuilder.
-        #{bold 'DTL'}: #{underline 'DTL'} the most recent green DTT.
+        #{bold 'DTL'}: #{underline 'D'}eploy #{underline 't'}o #{underline 'l'}evelbuilder the most recent green DTT.
 
       Quit:
 
@@ -242,6 +243,7 @@ def dotd_menu(dotd_name)
       menu.choice(:A) {show_full_menu = true}
       menu.choice(:D) {show_full_menu = false}
       menu.choice(:H) {get_honeybadger_issues}
+      menu.choice(:C) {perform_self_check}
       menu.choice(:S) do
         if run_on 'staging', "staging/bin/content-push --name=\"#{@dotd_name}\""
           @logger.info 'commits content on staging'
@@ -285,11 +287,14 @@ def dotd_menu(dotd_name)
       menu.choice(:G) {mark_dtt_green}
       menu.choice(:R) {mark_dtt_red}
       menu.choice(:K) do
-        run_on 'test', 'test/bin/kill-tests'
+        run_on 'test', 'test/bin/terminate_build'
 
         puts <<-EOS.unindent
 
           Attempted to kill tests. See Slack#infra-test for more information.
+
+          If the test build does not restart, run the /restart-test-build
+          slack command to restart it.
 
         EOS
         @logger.info 'kills tests'
@@ -463,6 +468,28 @@ def get_honeybadger_issues
   end
   puts '' if issues.count > 0
   @logger.info 'gets honeybadger issues'
+end
+
+# Performs a diagnostic self-check to make sure the local environment is
+# properly set up for all standard Dev of the Day operations.
+def perform_self_check
+  puts "Checking access to internal servers"
+  %w(staging test levelbuilder-staging production-console).each do |environment|
+    run_on(environment, "echo 'successfully connected to #{environment}'")
+  end
+
+  puts "Checking access to GitHub"
+  puts "latest staging commit is: #{GitHub.sha('staging', true)}"
+
+  puts "Checking access to Slack"
+  puts "current Developer of the Day is: #{DevelopersTopic.dotd}"
+
+  # We forego checking access to Honeybadger here; in part because Honeybadger
+  # access is not required for standard Dev of the Day operations but mostly
+  # because we don't really have a good way to do so. We could call
+  # Honeybadger.get_recent_issues, but probably we should create a
+  # more-targeted method on the Honeybadger class we can call to check
+  # connectivity. Saving that as a problem for a future developer.
 end
 
 # Creates a new branch with the given name from the given commit on the test

@@ -20,7 +20,6 @@ class CohortView extends React.Component {
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
-      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
       role: PropTypes.string.isRequired
     })
   };
@@ -128,7 +127,6 @@ class CohortView extends React.Component {
 
           <CohortViewTable
             data={this.state.applications}
-            viewType={this.props.route.viewType}
             path={this.props.route.path}
           />
         </div>

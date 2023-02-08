@@ -3,7 +3,7 @@
   "name": "tempSensor.F",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Converts tempSensor.value to an easy to read temperature in Fahrenheit.\r\n\r\n`tempSensor.F` is a property of the tempSensor analog object. `tempSensor.F` converts the raw value to Fahrenheit. ",
+  "content": "Converts tempSensor.value to an easy to read temperature in Fahrenheit.\r\n\r\n[`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/) is a property of the tempSensor analog object. [`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/) converts the raw value to Fahrenheit. ",
   "examples": [
     {
       "name": "Thermometer using Fahrenheit ",

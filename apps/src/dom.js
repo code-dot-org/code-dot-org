@@ -89,7 +89,7 @@ var addEvent = function(
         unbindEvent('click');
       }
 
-      handler.call(this, e);
+      handler?.call(this, e);
     });
   }
 

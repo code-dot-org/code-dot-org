@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {Heading1} from './Headings';
 import {
   importOrUpdateRoster,
   sectionCode,
@@ -11,6 +13,7 @@ import {
   sectionName
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../../templates/Button';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const PROVIDER_NAME = {
@@ -21,7 +24,6 @@ const PROVIDER_NAME = {
 export const READY = 'ready';
 export const IN_PROGRESS = 'in-progress';
 export const SUCCESS = 'success';
-export const FAILURE = 'failure';
 
 /**
  * Button that will re-sync an omniauth section's roster with the third-paty
@@ -39,7 +41,9 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   state = {
-    buttonState: READY
+    buttonState: READY,
+    isDialogOpen: false,
+    syncFailErrorLog: ''
   };
 
   onClick = () => {
@@ -71,12 +75,6 @@ class SyncOmniAuthSectionControl extends React.Component {
       return;
     }
 
-    if (buttonState === FAILURE) {
-      // On click after failure, reset the button so the user can try again.
-      this.setState({buttonState: READY});
-      return;
-    }
-
     // Default case: Button is READY
     this.setState({buttonState: IN_PROGRESS});
     // Section code is the course ID, without the G- or C- prefix.
@@ -87,13 +85,40 @@ class SyncOmniAuthSectionControl extends React.Component {
         // While we are embedded in an angular page, reloading is the easiest
         // way to pick up roster changes.  Once everything is React maybe we
         // won't need to do this.
+
         utils.reload();
       })
-      .catch(() => this.setState({buttonState: FAILURE}));
+      .catch(sync_error => {
+        this.setState({
+          syncFailErrorLog: '' + sync_error
+        });
+        this.openDialog();
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'manage-students',
+            event: 'sync-oauth-button-error',
+            data_json: JSON.stringify({
+              sectionId: sectionId,
+              loginType: sectionProvider,
+              error_message: sync_error
+            })
+          },
+          {includeUserId: true}
+        );
+      });
+  };
+
+  openDialog = () => {
+    this.setState({isDialogOpen: true});
+  };
+
+  closeDialog = () => {
+    this.setState({buttonState: READY, isDialogOpen: false});
   };
 
   render() {
-    const {sectionProvider} = this.props;
+    const {sectionProvider, sectionCode} = this.props;
     const {buttonState} = this.state;
     const supportedType = PROVIDER_NAME.hasOwnProperty(sectionProvider);
     if (!supportedType || !sectionCode) {
@@ -102,11 +127,43 @@ class SyncOmniAuthSectionControl extends React.Component {
     }
 
     return (
-      <SyncOmniAuthSectionButton
-        provider={sectionProvider}
-        buttonState={buttonState}
-        onClick={this.onClick}
-      />
+      <div>
+        <SyncOmniAuthSectionButton
+          provider={sectionProvider}
+          buttonState={buttonState}
+          onClick={this.onClick}
+        />
+        <BaseDialog
+          useUpdatedStyles
+          isOpen={this.state.isDialogOpen}
+          style={styles.dialog}
+          handleClose={this.closeDialog}
+        >
+          <Heading1>{i18n.loginTypeSyncButtonDialogHeader()}</Heading1>
+          <p>{i18n.loginTypeSyncButtonDialogHeaderSub()}</p>
+          <div style={styles.scroll}>
+            <pre>
+              <code>{this.state.syncFailErrorLog}</code>
+            </pre>
+          </div>
+          <div style={styles.needHelpMessage}>
+            <SafeMarkdown
+              markdown={i18n.loginTypeSyncButtonDialogTroubleshooting({
+                syncFailureSupportArticle:
+                  'https://support.code.org/hc/en-us/articles/6496495212557'
+              })}
+            />
+          </div>
+          <div style={styles.closeButton}>
+            <Button
+              __useDeprecatedTag
+              text={i18n.closeDialog()}
+              onClick={this.closeDialog}
+              color={Button.ButtonColor.gray}
+            />
+          </div>
+        </BaseDialog>
+      </div>
     );
   }
 }
@@ -142,8 +199,7 @@ export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
 }
 SyncOmniAuthSectionButton.propTypes = {
   provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)).isRequired,
-  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS, FAILURE])
-    .isRequired,
+  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS]).isRequired,
   onClick: PropTypes.func
 };
 
@@ -152,8 +208,6 @@ function buttonText(buttonState, providerName) {
     return i18n.loginTypeSyncButton_inProgress({providerName});
   } else if (buttonState === SUCCESS) {
     return i18n.loginTypeSyncButton_success({providerName});
-  } else if (buttonState === FAILURE) {
-    return i18n.loginTypeSyncButton_failure({providerName});
   }
   return i18n.loginTypeSyncButton({providerName});
 }
@@ -164,11 +218,25 @@ function iconProps(buttonState) {
       icon: 'refresh',
       iconClassName: 'fa-spin fa-fw'
     };
-  } else if (buttonState === FAILURE) {
-    return {
-      icon: 'exclamation-circle',
-      iconClassName: 'fa-fw'
-    };
   }
   return {};
 }
+
+const styles = {
+  dialog: {
+    padding: '10px 20px 20px 20px',
+    maxHeight: '500px'
+  },
+  scroll: {
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    maxHeight: '200px',
+    paddingTop: '10px'
+  },
+  needHelpMessage: {
+    paddingTop: '20px'
+  },
+  closeButton: {
+    paddingTop: '20px'
+  }
+};

@@ -3,6 +3,18 @@
 
 dashboard_enable_pegasus: true
 
+db_cluster_id: localhost
+db_proxy_reporting_endpoint: localhost
+db_writer_endpoint: localhost
+
+db_admin_user: root
+db_admin_password: ''
+db_writer_user: root
+db_writer_password: ''
+db_reader_user: root
+db_reader_password: ''
+db_writer: 'mysql://root@localhost/'
+
 firebase_name: cdo-v3-dev
 # provide a unique path for firebase channels data for development, to avoid conflicts in channel ids.
 firebase_secret: !Secret
@@ -31,12 +43,12 @@ pusher_application_secret: fake_application_secret
 poste_secret: not a real secret
 dashboard_devise_pepper: not a pepper!
 dashboard_secret_key_base: not a secret
-db_writer: 'mysql://root@localhost/'
 
 custom_error_response: false
 
 # Used for exporting the workshop data to a gsheet
-applications_2022_2023_gsheet_key: !Secret
+applications_gsheet_key: !Secret
+eir_teacher_enrollments_gsheet_key: !Secret
 
 # Used for decoding certain protected level sources
 properties_encryption_key: !Secret

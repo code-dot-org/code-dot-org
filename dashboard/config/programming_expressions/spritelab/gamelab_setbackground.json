@@ -4,7 +4,7 @@
   "category": "World",
   "category_key": "world",
   "block_name": "gamelab_setBackground",
-  "content": "Sets the background of the display area to a solid color. 70 colors are available in the default color block, or a `random color` can be specified.",
+  "content": "Sets the background of the display area to a solid color. 70 colors are available in the default color block, or a [`random color`(#acacd2)](/docs/spritelab/gamelab_randomColor/) can be specified.",
   "examples": [
     {
       "name": "Example 2",

@@ -3,7 +3,6 @@ export const testSection = {
   courseId: 29,
   courseOfferingId: 2,
   courseVersionId: 3,
-  scriptId: null,
   unitId: null,
   name: 'my_section',
   loginType: 'word',
@@ -13,14 +12,14 @@ export const testSection = {
   ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 10,
-  code: 'PMTKVH'
+  code: 'PMTKVH',
+  participantType: 'student'
 };
 export const noStudentsSection = {
   id: 11,
   courseId: 29,
   courseOfferingId: 2,
   courseVersionId: 3,
-  scriptId: null,
   unitId: null,
   name: 'my_section',
   loginType: 'word',
@@ -30,62 +29,9 @@ export const noStudentsSection = {
   ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 0,
-  code: 'PMTKVH'
+  code: 'PMTKVH',
+  participantType: 'student'
 };
-
-export const validAssignments = {
-  '29_null': {
-    id: 29,
-    name: 'CS Discoveries 2017',
-    script_name: 'csd',
-    category: 'Full Courses',
-    position: 1,
-    category_priority: 0,
-    courseId: 29,
-    scriptId: null,
-    assignId: '29_null',
-    path: '//localhost-studio.code.org:3000/courses/csd',
-    assignment_family_name: 'csd',
-    assignment_family_title: 'CS Discoveries',
-    version_year: '2017',
-    version_title: "'17-'18"
-  },
-  null_168: {
-    id: 168,
-    name: 'Unit 1: Problem Solving',
-    script_name: 'csd1',
-    category: 'CS Discoveries',
-    position: 0,
-    category_priority: 7,
-    courseId: null,
-    scriptId: 168,
-    assignId: 'null_168',
-    path: '//localhost-studio.code.org:3000/s/csd1-2019',
-    assignment_family_name: 'csd1',
-    assignment_family_title: 'Unit 1: Problem Solving',
-    version_year: '2017',
-    version_title: '2017'
-  }
-};
-
-export const assignmentFamilies = [
-  {
-    name: 'CS Discoveries 2017',
-    category: 'Full Courses',
-    position: 1,
-    category_priority: 0,
-    assignment_family_name: 'csd',
-    assignment_family_title: 'CS Discoveries'
-  },
-  {
-    name: 'Unit 1: Problem Solving',
-    category: 'CS Discoveries',
-    position: 0,
-    category_priority: 7,
-    assignment_family_name: 'csd1',
-    assignment_family_title: 'Unit 1: Problem Solving'
-  }
-];
 
 export const courseOfferings = {
   1: {
@@ -102,7 +48,7 @@ export const courseOfferings = {
         content_root_id: 1,
         name: 'Course A',
         path: '/s/coursea-2017',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: false,
         locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
@@ -123,7 +69,7 @@ export const courseOfferings = {
         content_root_id: 2,
         name: 'Course A',
         path: '/s/coursea-2018',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: ['English', 'Italiano', 'Slovenčina'],
@@ -261,7 +207,7 @@ export const courseOfferings = {
         content_root_id: 9,
         name: 'Flappy',
         path: '/s/flappy',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: false,
         locales: [],
@@ -283,6 +229,7 @@ export const courseOfferings = {
     display_name: 'Hello World',
     category: 'hoc',
     is_featured: true,
+    participant_audience: 'student',
     course_versions: {
       7: {
         id: 7,
@@ -291,7 +238,7 @@ export const courseOfferings = {
         content_root_id: 10,
         name: 'Hello World',
         path: '/s/hello-world',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -313,6 +260,7 @@ export const courseOfferings = {
     display_name: 'Poem Art',
     category: 'hoc',
     is_featured: true,
+    participant_audience: 'student',
     course_versions: {
       8: {
         id: 8,
@@ -321,7 +269,7 @@ export const courseOfferings = {
         content_root_id: 11,
         name: 'Poem Art',
         path: '/s/poem-art',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -352,7 +300,7 @@ export const courseOfferings = {
         content_root_id: 12,
         name: 'Artist',
         path: '/s/artist',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -422,7 +370,7 @@ export const courseOfferings = {
         content_root_id: 15,
         name: 'Virtual PL CSP 2020',
         path: '/s/vpl-csp-2020',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -444,7 +392,7 @@ export const courseOfferings = {
         content_root_id: 16,
         name: 'Virtual PL CSP 2021',
         path: '/s/vpl-csp-2021',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -462,3 +410,57 @@ export const courseOfferings = {
     }
   }
 };
+
+export const fakeCoursesWithProgress = [
+  {
+    display_name: 'Course A',
+    units: [
+      {
+        id: 2,
+        version_year: '2018',
+        key: 'coursea-2018',
+        name: 'Course A (2018)',
+        position: null
+      },
+      {
+        id: 1,
+        version_year: '2017',
+        key: 'coursea-2017',
+        name: 'Course A (2017)',
+        position: null
+      }
+    ]
+  },
+  {
+    display_name: 'CS Discoveries 2018',
+    units: [
+      {
+        id: 5,
+        version_year: null,
+        key: 'csd1-2018',
+        name: 'Unit 1',
+        position: 1
+      },
+      {
+        id: 6,
+        version_year: null,
+        key: 'csd2-2018',
+        name: 'Unit 2',
+        position: 2
+      }
+    ]
+  },
+  {
+    display_name: 'Flappy',
+    units: [
+      {
+        id: 9,
+        version_year: 'unversioned',
+        key: 'flappy',
+        name: 'Flappy',
+        position: null,
+        description: 'Make a flappy game!'
+      }
+    ]
+  }
+];

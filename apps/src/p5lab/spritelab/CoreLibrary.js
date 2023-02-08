@@ -1,7 +1,14 @@
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
+import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
+import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert
+} from '../../code-studio/projectRedux';
+import msg from '@cdo/locale';
 
 export default class CoreLibrary {
   constructor(p5) {
@@ -23,9 +30,13 @@ export default class CoreLibrary {
     this.promptVars = {};
     this.eventLog = [];
     this.speechBubbles = [];
+    this.storyLabText = {};
     this.soundLog = [];
     this.criteria = [];
+    this.bonusCriteria = [];
     this.previous = {};
+    this.successMessage = 'genericSuccess';
+    this.bonusSuccessMessage = 'genericBonusSuccess';
     this.validationFrames = {
       delay: 90,
       fail: 150,
@@ -43,6 +54,7 @@ export default class CoreLibrary {
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
         }
+        commands.drawStoryLabText.apply(this);
       },
       ...commands
     };
@@ -85,21 +97,30 @@ export default class CoreLibrary {
       return;
     }
 
-    this.speechBubbles.forEach(({text, sprite}) => {
+    this.speechBubbles.forEach(({text, sprite, bubbleType}) => {
       this.drawSpeechBubble(
         text,
         sprite.x,
-        sprite.y - Math.round(sprite.getScaledHeight() / 2)
+        sprite.y - Math.round(sprite.getScaledHeight() / 2),
+        bubbleType
       );
     });
   }
 
-  drawSpeechBubble(text, x, y) {
+  /**
+   * Draws a speech bubble with multi-lane text.
+   * @param {String} text
+   * @param {Number} spriteX - corner of sprite
+   * @param {Number} spriteY - top of sprite
+   * @param {String} bubbleType - 'say' or 'think'
+   */
+  drawSpeechBubble(text, spriteX, spriteY, bubbleType) {
     const padding = 8;
     if (typeof text === 'number') {
       text = text.toString();
     }
-    //protect against crashes in the unlikely event that a non-string or non-number was passed
+    // Protect against crashes in the unlikely event that a
+    // non-string or non-number was passed.
     if (typeof text !== 'string') {
       text = '';
     }
@@ -126,47 +147,52 @@ export default class CoreLibrary {
         ? 1
         : -1
     )[0];
-    let width =
-      drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
-    width = Math.max(width, 50);
-    const height = lines.length * textSize + padding * 2;
+    const bubbleWidth = Math.max(
+      50,
+      drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2
+    );
+    const bubbleHeight = lines.length * textSize + padding * 2;
 
-    let triangleSize = 10;
-    let triangleTipX = x;
-    // The number of pixels used to create the rounded corners of the speech bubble:
-    const rectangleCornerRadius = 8;
-
-    // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
-    // In other words, x and y indicate the default position of the bubble's triangular tip.
-    y = Math.min(y, APP_HEIGHT);
-    const spriteX = x;
-    if (y - height - triangleSize < 1) {
-      triangleSize = Math.max(1, y - height);
-      y = height + triangleSize;
-    }
-    if (spriteX - width / 2 < 1) {
-      triangleTipX = Math.max(spriteX, rectangleCornerRadius + triangleSize);
-      x = width / 2;
-    }
-    if (spriteX + width / 2 > APP_WIDTH) {
-      triangleTipX = Math.min(spriteX, APP_WIDTH - rectangleCornerRadius);
-      x = APP_WIDTH - width / 2;
-    }
-
+    const tailHeight = 10;
+    const bubbleY = Math.max(
+      0,
+      Math.min(APP_HEIGHT, spriteY) - bubbleHeight - tailHeight
+    );
+    const bubbleX = Math.max(
+      0,
+      Math.min(APP_WIDTH - bubbleWidth, spriteX - bubbleWidth / 2)
+    );
+    const radius = padding;
     // Draw bubble.
-    const {minY} = drawUtils.speechBubble(this.p5, x, y, width, height, {
-      triangleSize,
-      triangleTipX,
-      rectangleCornerRadius
-    });
+    drawUtils.speechBubble(
+      this.p5,
+      bubbleX,
+      bubbleY,
+      bubbleWidth,
+      bubbleHeight,
+      spriteX,
+      spriteY,
+      {
+        tailHeight,
+        radius
+      },
+      bubbleType
+    );
 
     // Draw text within bubble.
-    drawUtils.multilineText(this.p5, lines, x, minY + padding, textSize, {
-      horizontalAlign: this.p5.CENTER
-    });
+    drawUtils.multilineText(
+      this.p5,
+      lines,
+      bubbleX + bubbleWidth / 2,
+      bubbleY + padding,
+      textSize,
+      {
+        horizontalAlign: this.p5.CENTER
+      }
+    );
   }
 
-  addSpeechBubble(sprite, text, seconds = null) {
+  addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {
     // Sprites can only have one speech bubble at a time so first filter out
     // any existing speech bubbles for this sprite
     this.removeSpeechBubblesForSprite(sprite);
@@ -179,7 +205,8 @@ export default class CoreLibrary {
       sprite,
       text,
       removeAt,
-      renderFrame: this.currentFrame()
+      renderFrame: this.currentFrame(),
+      bubbleType
     });
     return id;
   }
@@ -327,11 +354,44 @@ export default class CoreLibrary {
     return spriteIds;
   }
 
+  getNumberOfSprites() {
+    return Object.keys(this.nativeSpriteMap).length;
+  }
+
+  getMaxAllowedNewSprites(numRequested) {
+    const numSpritesSoFar = this.getNumberOfSprites();
+    const numNewSpritesPossible = MAX_NUM_SPRITES - numSpritesSoFar;
+    return Math.min(numRequested, numNewSpritesPossible);
+  }
+
   getLastSpeechBubbleForSpriteId(spriteId) {
     const speechBubbles = this.speechBubbles.filter(
       ({sprite}) => sprite.id === parseInt(spriteId)
     );
     return speechBubbles[speechBubbles.length - 1];
+  }
+
+  reachedSpriteMax() {
+    return this.getNumberOfSprites() >= MAX_NUM_SPRITES;
+  }
+
+  reachedSpriteWarningThreshold() {
+    return (
+      this.getNumberOfSprites() === MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER
+    );
+  }
+
+  // This function is called within the addSprite function BEFORE a new sprite is created
+  // If the total number of sprites is equal to (MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER),
+  // a workspace alert warning is displayed to let user know they have reached the sprite limit
+  dispatchSpriteLimitWarning() {
+    getStore().dispatch(
+      displayWorkspaceAlert(
+        workspaceAlertTypes.warning,
+        msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
+        /* bottom */ true
+      )
+    );
   }
 
   /**
@@ -340,7 +400,15 @@ export default class CoreLibrary {
    * @returns {Number} A unique id to reference the sprite.
    */
   addSprite(opts) {
+    if (this.reachedSpriteMax()) {
+      return;
+    } else if (this.reachedSpriteWarningThreshold()) {
+      this.dispatchSpriteLimitWarning();
+    }
     opts = opts || {};
+    if (this.getNumberOfSprites() >= MAX_NUM_SPRITES) {
+      return;
+    }
     let name = opts.name;
     let location = opts.location || {x: 200, y: 200};
     if (typeof location === 'function') {
@@ -454,13 +522,17 @@ export default class CoreLibrary {
 
   onPromptAnswer(variableName, userInput) {
     this.numActivePrompts--;
-    this.promptVars[variableName] = userInput;
+    // Check to see if the user entered a number.
+    const typedInput = isNaN(parseFloat(userInput))
+      ? userInput
+      : parseFloat(userInput);
+    this.promptVars[variableName] = typedInput;
     const callbacks = this.userInputEventCallbacks[variableName];
     if (callbacks) {
       // Make sure to call the setter callback to set the variable
       // before the user callback, which may rely on the variable's new value
       callbacks.setterCallbacks.forEach(callback => {
-        callback(userInput);
+        callback(typedInput);
       });
       callbacks.userCallbacks.forEach(callback => {
         callback();
@@ -535,13 +607,24 @@ export default class CoreLibrary {
   everyIntervalEvent(inputEvent) {
     if (inputEvent.args.unit === 'seconds') {
       const previousTime = inputEvent.previousTime || 0;
+      const previousModdedTime = inputEvent.previousModdedTime || 0;
       const worldTime = this.getSecondsSinceReset();
       // Repeat every n seconds
       const moddedWorldTime = worldTime % inputEvent.args.n;
-      inputEvent.previousTime = moddedWorldTime;
+      inputEvent.previousTime = worldTime;
+      inputEvent.previousModdedTime = moddedWorldTime;
+
+      // Case where n is 1, so we want to repeat every second, but only the first tick in each second.
+      const singleSecondInterval =
+        inputEvent.args.n === 1 && previousTime !== worldTime;
+
       // There are many ticks per second, but we only want to fire the event once (on the first tick where
       // the time matches the event argument)
-      if (moddedWorldTime === 0 && previousTime !== 0) {
+      // Determine if the current time is on the interval
+      if (
+        (moddedWorldTime === 0 && previousModdedTime !== 0) ||
+        singleSecondInterval
+      ) {
         // Call callback with no extra args
         this.eventLog.push(`everyInterval: ${inputEvent.args.n}`);
         return [{}];

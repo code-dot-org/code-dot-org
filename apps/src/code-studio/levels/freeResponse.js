@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import {TestResults} from '../../constants';
-import {onAnswerChanged} from './codeStudioLevels';
+import {onAnswerChanged, resetContainedLevel} from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 
 export default class FreeResponse {
@@ -26,6 +26,11 @@ export default class FreeResponse {
       textarea.on('input', null, null, function() {
         onAnswerChanged(levelId, false);
       });
+
+      var resetButton = $('#reset-predict-progress-button');
+      if (resetButton) {
+        resetButton.click(() => resetContainedLevel());
+      }
     });
   }
 
@@ -49,6 +54,13 @@ export default class FreeResponse {
 
   lockAnswers() {
     $(`textarea#level_${this.levelId}.response`).prop('disabled', true);
+    $('#reset-predict-progress-button')?.prop('disabled', false);
+  }
+
+  resetAnswers() {
+    $(`textarea#level_${this.levelId}.response`).prop('disabled', false);
+    $(`textarea#level_${this.levelId}.response`).val('');
+    $('#reset-predict-progress-button')?.prop('disabled', true);
   }
 
   getCurrentAnswerFeedback() {

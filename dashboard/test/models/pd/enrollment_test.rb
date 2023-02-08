@@ -104,7 +104,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
       URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
-    assert_nil csp_academic_year_workshop_enrollment.pre_workshop_survey_url
+    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_academic_year_workshop_enrollment.code}",
+      URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).query
     assert_equal '/pd/workshop_survey/csf/pre201', URI(csf_201_workshop_enrollment.pre_workshop_survey_url).path
     assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
   end
@@ -113,14 +114,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csf_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8)
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
 
+    csf_district_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8), subject: SUBJECT_CSF_DISTRICT
+    csf_district_enrollment = create :pd_enrollment, workshop: csf_district_workshop
+
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
     csp_enrollment = create :pd_enrollment, workshop: csp_workshop
-
-    counselor_workshop = create :counselor_workshop, :ended
-    counselor_enrollment = create :pd_enrollment, workshop: counselor_workshop
-
-    admin_workshop = create :admin_workshop, :ended
-    admin_enrollment = create :pd_enrollment, workshop: admin_workshop
 
     local_summer_workshop = create :csp_summer_workshop, :ended
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
@@ -128,12 +126,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csp_wfrt = create :csp_wfrt, :ended
     csp_wfrt_enrollment = create :pd_enrollment, workshop: csp_wfrt
 
-    code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
-    assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
-    assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
-
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_district_enrollment.code}"], csf_district_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
@@ -174,7 +169,16 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.send_exit_survey
   end
 
-  test 'send_exit_survey sends email and updates survey_sent_at' do
+  test 'send_exit_survey does not send mail for workshops without exit survey URL' do
+    enrollment = create :pd_enrollment, user: create(:teacher)
+
+    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns(nil)
+    Pd::WorkshopMailer.expects(:exit_survey).never
+
+    enrollment.send_exit_survey
+  end
+
+  test 'send_exit_survey tries to send email and, if successful, updates survey_sent_at ' do
     enrollment = create :pd_enrollment, user: create(:teacher)
 
     mock_mail = stub(deliver_now: nil)
@@ -182,6 +186,15 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     enrollment.send_exit_survey
     assert_not_nil enrollment.reload.survey_sent_at
+  end
+
+  test 'send_exit_survey tries to send email and, if unsuccessful, does not update survey_sent_at' do
+    enrollment = create :pd_enrollment, user: create(:teacher)
+
+    Pd::WorkshopMailer.expects(:exit_survey).once.returns(nil)
+
+    enrollment.send_exit_survey
+    assert_nil enrollment.reload.survey_sent_at
   end
 
   test 'name is deprecated and calls through to full_name' do
@@ -264,22 +277,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert create :pd_enrollment, email: 'valid@example.net'
   end
 
-  test 'completed_survey?' do
-    # no survey
-    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: false)))
-    enrollment = create :pd_enrollment
-    refute enrollment.completed_survey?
-
-    # survey just completed, not yet processed
-    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: true)))
-    assert enrollment.completed_survey?
-
-    # survey processed, model up to date. Pegasus should not be contacted.
-    PEGASUS_DB.expects('[]').with(:forms).never
-    enrollment.update!(completed_survey_id: 1234)
-    assert enrollment.completed_survey?
-  end
-
   test 'filter_for_survey_completion argument check' do
     e = assert_raises do
       # not an enumerable
@@ -339,13 +336,28 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
-  test 'academic year survey filter' do
+  test 'csd academic year survey not filtered out' do
+    workshop = create :csd_academic_year_workshop
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+  end
+
+  test 'csp academic year survey not filtered out' do
     workshop = create :csp_academic_year_workshop
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
-    # academic year surveys should always return [] since we do not show post-surveys in the dashboard
-    assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+  end
+
+  test 'csa academic year survey not filtered out' do
+    workshop = create :csa_academic_year_workshop
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
   test 'enrolling in class automatically enrolls in online learning' do

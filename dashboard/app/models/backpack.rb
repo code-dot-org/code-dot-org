@@ -14,7 +14,7 @@
 #  index_backpacks_on_user_id         (user_id) UNIQUE
 #
 class Backpack < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   # The projects table used to be named storage_apps. This column has not been renamed
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
@@ -25,7 +25,7 @@ class Backpack < ApplicationRecord
     unless backpack
       # Create a project for this user's backpack
       project = Projects.new(storage_id_for_user_id(user_id))
-      encrypted_id = project.create({'hidden': true}, ip: ip, type: 'backpack')
+      encrypted_id = project.create({hidden: true}, ip: ip, type: 'backpack')
       _, project_id = storage_decrypt_channel_id(encrypted_id)
       backpack = create!(user_id: user_id, project_id: project_id)
     end

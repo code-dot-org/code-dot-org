@@ -365,6 +365,7 @@ zh-CN:
   homepage_banner_40k_teachers_link: 了解详情
   homepage_slot_text_title_hoc: 编程一小时
   homepage_slot_text_blurb_hoc: 任何人都可学习。立即开始
+  homepage_slot_text_blurb_hoc_2022: 探索，玩耍，创造!
   homepage_slot_text_link_hoc: 来试试“编程一小时”项目！
   homepage_slot_text_link_about_hoc: 关于《编程一小时》
   homepage_slot_text_link_host: 举办一次“编程一小时”活动
@@ -390,14 +391,19 @@ zh-CN:
   homepage_slot_text_link_buy: 加入进来
   homepage_slot_text_link_donate: 捐赠
   homepage_slot_text_link_shop: T 恤，帽子，还有更多的东西
+  homepage_slot_text_link_thebadguys: "《坏蛋联盟》编程"
   homepage_slot_text_link_administrators: 带到您的学校或地区
-  homepage_gallery_header: 已创建了 %{project_count} 万个 Code.org 项目
+  homepage_gallery_header: 已创建超过%{project_count}百万个Code.org项目
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: 查看全部
   homepage_donors_donate: 捐赠
   homepage_below_hero_announcement_text: 我们尊重您的隐私，为此我们对隐私政策进行了一些更新，并将从 5 月 25 日起生效。
   homepage_below_hero_announcement_link_text: 了解详情
   homepage_higher_power_body: 与舞蹈派对一起创作，获得观看乐队现场表演的机会。
+  homepage_thebadguys_body: 与狼蛛女士、沃尔夫先生和其他坏家伙一起编写一段冒险故事！
+  homepage_csa_subhead: 一个新方法-
+  homepage_csa_title: AP®计算机科学A
+  homepage_csa_body: 在我们以公平为导向的课程中，为学生提供与现实世界相连的创意项目。
   contact_form_topic_student: 我是学生
   contact_form_topic_parent: 我是家长
   contact_form_topic_teacher: 我的老师或教育家
@@ -536,6 +542,8 @@ zh-CN:
   video_title_marco_belinelli: 和 Marco Belinelli 一起编程一小时
   video_title_chris_bosh: Chris Bosh 和计算机科学
   video_title_my_name_is_aracely: 我叫阿拉丝莉
+  video_title_change_face_of_cs: 改变计算机科学的面貌
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
   video_1min: 1分钟
   video_2min: 2分钟
   video_3min: 3分钟
@@ -619,6 +627,7 @@ zh-CN:
   volunteer_engineer_submission_distance_16: 10 英里
   volunteer_engineer_submission_distance_24: 15 英里
   volunteer_engineer_submission_distance_32: 20 英里
+  volunteer_engineer_submission_distance_80: 50英里
   volunteer_engineer_submission_num_volunteers_5: 5 名志愿者
   volunteer_engineer_submission_num_volunteers_10: 10 名志愿者
   volunteer_engineer_submission_num_volunteers_25: 25 名志愿者
@@ -1015,6 +1024,7 @@ zh-CN:
   coursee-2020_name: 课程 E (2019)
   coursef-2020_name: 课程 F （2019）
   coursed-2021_name: 课程 D （2021）
+  coursed-2022_name: 课程 D （2021）
   express-2018_name: 速学课程 （2018）
   pre-express-2018_name: 学前儿童的速学课程（2018）
   express-2019_name: 速学课程 (2019)
@@ -1022,6 +1032,7 @@ zh-CN:
   express-2020_name: 速学课程 (2019)
   pre-express-2020_name: 学前儿童的速学课程（2020）
   pre-express-2021_name: 学前儿童的速学课程（2021）
+  pre-express-2022_name: 学前儿童快捷课程（2022）
   csd2_name: 单元 2：网页开发
   csd3_name: 单元 3：动画和游戏
   accelerated_name: 加速课程
@@ -1135,6 +1146,12 @@ zh-CN:
   coursed-2021_gradelevel: 8年级以上
   coursee-2021_gradelevel: 年龄 8-12
   coursef-2021_gradelevel: 年龄 9-13
+  coursea-2022_gradelevel: 年龄 4-7
+  courseb-2022_gradelevel: 年龄 5-8
+  coursec-2022_gradelevel: 年龄 6-10
+  coursed-2022_gradelevel: 8年级以上
+  coursee-2022_gradelevel: 年龄 8-12
+  coursef-2022_gradelevel: 年龄 9-13
   accelerated_gradelevel: 10-18 岁
   codeorg_platformtext: 现代浏览器、智能手机、平板电脑
   codeintl_platformtext: 现代浏览器、智能手机、平板电脑
@@ -1273,6 +1290,12 @@ zh-CN:
   coursed-2021_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
   coursee-2021_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
   coursef-2021_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+  coursea-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  courseb-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  coursec-2022_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+  coursed-2022_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+  coursee-2022_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+  coursef-2022_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
   codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   khan_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
@@ -1536,6 +1559,7 @@ zh-CN:
   header_educate_beyond: Code.org 意外的内容
   header_educate_inspire: 鼓舞学生
   header_educate_community: 在线社区
+  header_educate_requirements: 技术要求
   header_educate_tools: 工具和视频
   header_about_us: 关于我们
   header_about_leadership: 管理团队
@@ -1544,7 +1568,7 @@ zh-CN:
   header_about_team: 全体成员
   header_about_news: 新闻室
   header_about_evaluation: 评估
-  header_about_jobs: 招聘
+  header_about_jobs: 职业机会
   header_about_contact: 联系我们
   header_about_faqs: 常见问答
   header_learn: 学习
@@ -1632,6 +1656,9 @@ zh-CN:
     Urban、Ciara 等 25 个！
   hoc_overview_dance_2019_subtitle: 编写舞蹈派对，并与朋友分享。精选了 Katy Perry、Shawn Mendes、Panic!
     At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj，以及其他 34 名明星的豪华阵容！
+  hoc_overview_dance_2022_subtitle: 编写一个舞蹈派对与你的朋友分享。里面有碧昂丝、哈利·史泰尔斯、丽佐、纳斯小子、塞莱娜·戈麦斯、迪士尼魔法满屋的音乐等等！
+  hoc_overview_hello_world_2022_subtitle: 从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。
+  hoc_overview_hello_world_2022_alt_text: 动画化漂浮在地球插图周围的宇航员和动物角色
   hoc_overview_title: 来自 Code.org 的编程一小时活动
   hoc_overview_subtitle: <a href="https://hourofcode.com">编程一小时</a>是一个全球性的活动，在全球 180
     多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试有 500 多个、支持45种语言的编程一小时教程。
@@ -1680,9 +1707,13 @@ zh-CN:
   hoc2018_mc_educators_box3_title: 参加免费的学生工场
   hoc2018_mc_educators_box3_desc: 加入你附近微软商店的免费编程一小时工场。所有技能级别，年龄在6岁以上。
   hoc2018_mc_educators_box3_button: 找到工场
+  hoc2022_mc_educators_box3_desc_markdown: '使用这个按需提供的[免费课程](%{free_course_link})或为整个班级注册与客座老师一起进行的实时编程一小时研讨会。在12月6日至11日的CSEW期间多次提供。 '
+  hoc2022_mc_educators_box3_button: '马上注册 '
   hoc2018_mc_educators_box4_title: 更多计算机科学资源
   hoc2018_mc_educators_box4_desc: 从微软带来改变社区的数字技能和计算机科学教育资源。
   hoc2018_mc_educators_box4_button: 探索资源
+  hoc2022_mc_educators_box4_desc: 在专业开发的支持下，通过200小时的计算机科学课程（从模块到python），激发K-12学生对STEM的热情。
+  hoc2022_mc_educators_box4_button: 继续学习
   hoc2018_mc_watch_videos: 在开始之前，看一段鼓舞人心的视频
   hoc2018_mc_videos_more: 更多由榜样人物和明星出演的<a href='%{inspiring_videos_playlist}'>鼓舞人心的视频</a>
   hoc2018_mc_careers_more: 更多由科技人士拍摄的的<a href='%{careers_url}' target='_blank'>鼓舞人心的视频</a>
@@ -1772,6 +1803,8 @@ zh-CN:
   hoc2018_dance_video2: 舞蹈派对 - 事件
   hoc2018_dance_video3: 舞蹈派对 - 属性
   hoc2018_dance_video4: 舞蹈派对 - 祝贺
+  dance_box_higher_power_line_1: 为酷玩乐队的“更高的力量”编一支舞蹈，你就有机会看到乐队的现场表演！
+  dance_box_higher_power_line_2: 查看<a href="%{path}">code.org/coldplay</a>了解更多信息。
   page_not_found_title: 找不到页面
   page_not_found_header: 404：找不到页面
   page_not_found_description: 您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。
@@ -1805,13 +1838,16 @@ zh-CN:
   hoc2021_mc_mee_villages_description: 在 Minecraft：教育版中学习编程基础知识，与学生一起探索多样性和包容性。
   hoc2021_mc_mee_ai_title: 人工智能为行善
   hoc2021_mc_mee_ai_description: 与学生一起探索 AI，并在 Minecraft：教育版中学习编程。
-  footer_powered_by_aws: 由亚马逊网络服务
-  footer_built_on_github: 在微软的GitHub上构建
-  codebytes_skinny_banner_title: 加入我们12月7-11日的CodeBytes直播迷你课程！
-  codebytes_skinny_banner_description: '加入我们CodeBytes计算机科学教育周的每日课程，20分钟的交互式计算机科学课程。每天两次流媒体直播，CodeBytes是学生参与虚拟
-    #HourOfCode 的好方法！'
+  hoc2022_mc_mee_title: 我的世界逃生庄园
+  hoc2022_mc_mee_description: '在黎明前逃离神秘的豪宅，赚取一百万颗翡翠！新鲜出炉的我的世界编程一小时教程现已在《我的世界：教育版》中推出，适用于Windows、Mac、Chromebook、Ipad和移动设备。开始使用免费的教育工作者资源、培训和视频。 '
+  hoc2022_mc_mee_timecraft_description: 在《我的世界：教育版》的这个免费编程课中，进行时间旅行，拯救未来。
+  footer_powered_by_aws: 亚马逊网络服务（Amazon Web Services）和“由AWS提供支持”徽标是Amazon.com，Inc.，或者其在美国/其他国家内的附属公司的商标。
+  footer_built_on_github: 在微软的 GitHub 上构建
+  codebytes_skinny_banner_title: 加入我们12月7-11日的 CodeBytes 直播迷你课程！
+  codebytes_skinny_banner_description: '加入我们 CodeBytes 计算机科学教育周的每日课程，20分钟的交互式计算机科学课程。每天两次流媒体直播，CodeBytes
+    是学生参与虚拟 #HourOfCode 的好方法！'
   codebytes_skinny_banner_english_only: 仅英语
-  codebytes_skinny_banner_learn: 更多信息请访问[code.org/codebytes](%{code_bytes_url})。
+  codebytes_skinny_banner_learn: 更多信息请访问 [code.org/codebytes](%{code_bytes_url})。
   footer_privacy_policy: 隐私政策
   footer_privacy_policy_updated: 隐私政策（已更新）
   footer_about: 关于
@@ -1864,12 +1900,34 @@ zh-CN:
   ai_ibm_machine_learning_for_kids: IBM：面向儿童的机器学习
   ai_ecs: ECS：人工智能 (AI)
   ai_ecs_description: 探索计算机科学（ECS）课程的新的替代课程单元。
+  ai_aiedu_intro: aiEDU：人工智能简介
+  ai_aiedu_intro_description: AI入门是一个免费、创新、与文化相关的课程，学生可以在其中培养关于人工智能的概念，以及如何在现实生活中使用它。
   ai_elements: 人工智能的要素
   ai_elements_description: Reaktor 和赫尔辛基大学创建的一系列免费在线课程。
-  ai_cognimates: COGNIMATES
+  ai_cognimates: Cognimates
   ai_cognimates_description: 一个用于构建游戏、编程机器人和训练的 AI 教育平台。
   ai_try_activity: 尝试活动
   outbreak_tile_title: 疫情爆发
   outbreak_tile_subtitle: 有病毒感染了怪物城！编写一个爆发模拟器，并预测怪物城的邻居会发生什么。
   outbreak_tile_alt: 模拟病毒如何通过一群紫色怪物传播。
   footer_cookie_notice: Cookie通知
+  top_hoc_tutorial_applab_alt_text: 一只用食指触碰触屏平板电脑的棕色手，在蓝色背景下发射星星和光线
+  minecraft_tile_alt: "《我的世界》中的两个角色：史蒂夫和亚历克斯，背景是一个带珊瑚、海豚和海带的水生我的世界场景"
+  hoc2022_banner_title: 探索，玩耍，创造！
+  hoc2022_banner_description: 探索宇宙，进球得分，跳舞 — 尝试计算机科学的方法如此之多！
+  hoc2022_cta_primary: 看看有什么新内容
+  hoc2022_cta_secondary: 尝试更多活动
+  hoc2022_landing_page_explore_title: 发现
+  hoc2022_landing_page_explore_description: 用计算机科学打开通往新世界的大门！
+  hoc2022_landing_page_play_title: 玩
+  hoc2022_landing_page_play_description: 上场得分！
+  hoc2022_landing_page_create_title: 创建
+  hoc2022_landing_page_create_description: 做一些怪异而美妙的东西！
+  hoc2022_landing_page_banner_alt_left: 一个外星人在太空中的土星旁跳舞
+  hoc2022_landing_page_banner_alt_right: 一个机器人在太空中起飞的火箭前盘带足球
+  try_it_yourself: 自己试一试！
+  try_an_activity: 尝试一个活动
+  see_more_activities: 尝试更多活动
+  hoc2022_nasa_webb_alt_text: NASA詹姆斯·韦伯望远镜的插图
+  hoc2022_nasa_banner_heading: 加入NASA并观看关于太空计算机科学的《编程一小时》特别节目！
+  hoc2022_nasa_banner_description: 美国东部时间12月5日上午10点，在NASA STEM的YouTub频道上首播。

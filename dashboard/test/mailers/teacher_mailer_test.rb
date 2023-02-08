@@ -9,6 +9,7 @@ class TeacherMailerTest < ActionMailer::TestCase
     assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'en-US'), mail.subject
     assert_equal [teacher.email], mail.to
     assert_equal ['hadi_partovi@code.org'], mail.from
+    assert_equal ['support@code.org'], mail.reply_to
     assert_match /Hello/, mail.body.encoded
     assert links_are_complete_urls?(mail)
   end
@@ -57,5 +58,15 @@ class TeacherMailerTest < ActionMailer::TestCase
     assert_match 'Your account has been deleted', mail.body.encoded
     assert_match '1001 student accounts were deleted.', mail.body.encoded
     refute_match "#{removed_students.first.name} (#{removed_students.first.username})", mail.body.encoded
+  end
+
+  test 'verified teacher email' do
+    teacher = build :teacher, email: 'test@example.com'
+    mail = TeacherMailer.verified_teacher_email(teacher)
+
+    assert_equal I18n.t('teacher_mailer.verified_teacher_subject'), mail.subject
+    assert_equal [teacher.email], mail.to
+    assert_equal ['teacher@code.org'], mail.from
+    assert_match /Hi,/, mail.body.encoded
   end
 end

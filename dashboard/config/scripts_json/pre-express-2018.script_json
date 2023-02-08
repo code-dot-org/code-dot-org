@@ -9,7 +9,8 @@
           "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
           "details": "Click \"Learn More\" to read the help article on showing and hiding lessons.",
           "link": "https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses",
-          "type": "bullhorn"
+          "type": "bullhorn",
+          "key": "66984aed-46b1-4a2f-8d2f-c88c9f13ead0"
         }
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
@@ -33,7 +34,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2022-03-11 12:07:39 UTC",
+    "serialized_at": "2022-09-28 14:31:30 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

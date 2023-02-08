@@ -1,5 +1,5 @@
 require 'cdo/aws/cloudfront'
-require 'google/apis/classroom_v1'
+require 'google-apis-classroom_v1'
 
 class ApiController < ApplicationController
   layout false
@@ -174,6 +174,7 @@ class ApiController < ApplicationController
   end
 
   def update_lockable_state
+    return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.no_updates")} if params[:updates].blank?
     updates = params.require(:updates)
     updates.to_a.each do |item|
       # Convert string-boolean parameters to boolean
@@ -182,17 +183,17 @@ class ApiController < ApplicationController
       user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
         # Must provide user, level, and script ids
-        return head :bad_request
+        return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.missing_params")}
       end
 
       if item[:locked] && item[:readonly_answers]
         # Can not view answers while locked
-        return head :bad_request
+        return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.cannot_view_locked_answers")}
       end
 
       unless User.find(user_level_data[:user_id]).teachers.include? current_user
         # Can only update lockable state for user's students
-        return head :forbidden
+        return render status: :forbidden, json: {error: I18n.t("lesson_lock.error.forbidden")}
       end
       UserLevel.update_lockable_state(
         user_level_data[:user_id],
@@ -269,7 +270,7 @@ class ApiController < ApplicationController
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
       student_levels = script_levels.map do |script_level|
         user_levels = script_level.level_ids.map do |id|
-          contained_levels = Script.cache_find_level(id).contained_levels
+          contained_levels = Unit.cache_find_level(id).contained_levels
           if contained_levels.any?
             level_map[contained_levels.first.id]
           else
@@ -414,7 +415,7 @@ class ApiController < ApplicationController
   end
 
   def script_structure
-    script = Script.get_from_cache(params[:script])
+    script = Unit.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
     summary = script.summarize(true, current_user, true)
     summary[:path] = overview_path
@@ -422,7 +423,7 @@ class ApiController < ApplicationController
   end
 
   def script_standards
-    script = Script.get_from_cache(params[:script])
+    script = Unit.get_from_cache(params[:script])
     standards = script.standards
     render json: standards
   end
@@ -435,12 +436,12 @@ class ApiController < ApplicationController
     if current_user
       if params[:user_id].present?
         user = User.find(params[:user_id])
-        return head :forbidden unless user.student_of?(current_user)
+        return head :forbidden unless user.student_of?(current_user) || user.id == current_user.id
       else
         user = current_user
       end
 
-      script = Script.get_from_cache(params[:script])
+      script = Unit.get_from_cache(params[:script])
       teacher_viewing_student = !current_user.student? && current_user.students.include?(user)
       render json: summarize_user_progress(script, user).merge(
         {
@@ -461,10 +462,10 @@ class ApiController < ApplicationController
     prevent_caching
     response = {}
 
-    script = Script.get_from_cache(params[:script])
+    script = Unit.get_from_cache(params[:script])
     lesson = script.lessons[params[:lesson_position].to_i - 1]
     script_level = lesson.cached_script_levels[params[:level_position].to_i - 1]
-    level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
+    level = params[:level] ? Unit.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
       response[:signedIn] = true
@@ -494,6 +495,7 @@ class ApiController < ApplicationController
       # need to be sent down.  See LP-2086 for a list of potential values.
 
       response[:disableSocialShare] = user.under_13?
+      response[:isInstructor] = script.can_be_instructor?(current_user)
       response.merge!(progress_app_options(script, level, user))
     else
       response[:signedIn] = false
@@ -550,8 +552,8 @@ class ApiController < ApplicationController
 
   # GET /api/example_solutions/:script_level_id/:level_id
   def example_solutions
-    script_level = Script.cache_find_script_level params[:script_level_id].to_i
-    level = Script.cache_find_level params[:level_id].to_i
+    script_level = Unit.cache_find_script_level params[:script_level_id].to_i
+    level = Unit.cache_find_level params[:level_id].to_i
     section_id = params[:section_id].present? ? params[:section_id].to_i : nil
     render json: script_level.get_example_solutions(level, current_user, section_id)
   end
@@ -629,8 +631,8 @@ class ApiController < ApplicationController
   def load_script(section=nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
-    script = Script.get_from_cache(script_id) if script_id
-    script ||= Script.twenty_hour_unit
+    script = Unit.get_from_cache(script_id) if script_id
+    script ||= Unit.twenty_hour_unit
     script
   end
 end

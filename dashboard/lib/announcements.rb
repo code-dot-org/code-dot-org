@@ -21,7 +21,7 @@ class Announcements
     return nil unless banner_id_for_page
 
     banner = banners[banner_id_for_page]
-    banner ? banner.merge({"id": banner_id_for_page}) : nil
+    banner ? banner.merge({id: banner_id_for_page}) : nil
   end
 
   def self.load_announcements
@@ -34,7 +34,7 @@ class Announcements
       end
       begin
         @@announcements_data = JSON.parse(
-          IO.read(@@json_path),
+          File.read(@@json_path),
           symbolize_names: true,
           object_class: HashWithIndifferentAccess
         )
@@ -51,7 +51,7 @@ class Announcements
   def self.validate_announcements_data(announcements_data)
     return false unless announcements_data && announcements_data[:pages] &&
       announcements_data[:banners] &&
-      announcements_data[:banners].respond_to?("each_value")
+      announcements_data[:banners].respond_to?(:each_value)
 
     announcements_data[:banners].each_value do |banner|
       return false unless validate_banner(banner)

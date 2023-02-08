@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Sprites
 
-##### Sprites are a very complex concept, and students may have difficulty understanding exactly what they are. The most important aspect for students to understand is that sprites allow them to organize a lot of information about something that they want to draw to the screen.
+##### Sprites are a complex concept, and students may have difficulty understanding exactly what they are. The most important aspect for students to understand is that sprites allow them to organize a lot of information about something that they want to draw to the screen.
 
 
 ## Using the Animation Tab

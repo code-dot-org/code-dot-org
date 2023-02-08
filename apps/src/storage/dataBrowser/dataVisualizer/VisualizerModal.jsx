@@ -6,7 +6,8 @@ import {DebounceInput} from 'react-debounce-input';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import color from '../../../util/color';
-import * as dataStyles from '../dataStyles';
+import dataStyles from '../data-styles.module.scss';
+import classNames from 'classnames';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
@@ -39,6 +40,7 @@ export const INITIAL_STATE = {
 class VisualizerModal extends React.Component {
   static propTypes = {
     // from redux state
+    isRtl: PropTypes.bool.isRequired,
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
     tableRecords: PropTypes.array.isRequired
@@ -224,10 +226,16 @@ class VisualizerModal extends React.Component {
       this.state.filterColumn
     );
     return (
-      <span style={styles.container}>
+      <span
+        style={
+          this.props.isRtl
+            ? {...styles.container, ...styles.containerRtl}
+            : styles.container
+        }
+      >
         <button
           type="button"
-          style={dataStyles.whiteButton}
+          className={classNames(dataStyles.button, dataStyles.buttonWhite)}
           onClick={this.handleOpen}
         >
           {msg.visualizeData()}
@@ -406,6 +414,9 @@ class VisualizerModal extends React.Component {
             </div>
             <Snapshot
               chartType={this.state.chartType}
+              chartTypeName={this.getDisplayNameForChartType(
+                this.state.chartType
+              )}
               chartTitle={this.state.chartTitle}
               selectedOptions={this.chartOptionsToString(this.state.chartType)}
             />
@@ -419,6 +430,9 @@ class VisualizerModal extends React.Component {
 const styles = {
   container: {
     display: 'inline-block'
+  },
+  containerRtl: {
+    marginLeft: '10px'
   },
   modalBody: {
     display: 'flex',
@@ -455,6 +469,7 @@ const styles = {
 
 export const UnconnectedVisualizerModal = VisualizerModal;
 export default connect(state => ({
+  isRtl: state.isRtl,
   tableColumns: state.data.tableColumns || [],
   tableRecords: state.data.tableRecords || [],
   tableName: state.data.tableName || ''

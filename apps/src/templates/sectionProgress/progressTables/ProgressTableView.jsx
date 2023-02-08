@@ -34,7 +34,8 @@ import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSections
  * Since our progress tables are built out of standard HTML table elements,
  * we can leverage CSS classes for laying out and styling those elements.
  */
-import progressTableStyles from './progressTableStyles.scss';
+import progressTableStyleConstants from './progress-table-constants.module.scss';
+import './progressTableStyles.scss';
 
 function idForExpansionIndex(studentId, index) {
   return `${studentId}.${index}`;
@@ -142,7 +143,7 @@ class ProgressTableView extends React.Component {
    * Override the default initial number of rows to render
    */
   setRowsToRender() {
-    const initialRows = parseInt(progressTableStyles.MAX_ROWS);
+    const initialRows = parseInt(progressTableStyleConstants.MAX_ROWS);
 
     // amountOfRowsToRender is a reactabular internal
     this.studentList?.bodyComponent.setState({
@@ -205,7 +206,10 @@ class ProgressTableView extends React.Component {
    * account for the horizontal space used by the vertical scrollbar.
    */
   needsContentHeaderGutter() {
-    return this.props.students.length > parseInt(progressTableStyles.MAX_ROWS);
+    return (
+      this.props.students.length >
+      parseInt(progressTableStyleConstants.MAX_ROWS)
+    );
   }
 
   onToggleRow(studentId) {
@@ -297,7 +301,7 @@ class ProgressTableView extends React.Component {
   summaryContentViewProps() {
     return {
       columnWidths: new Array(this.props.scriptData.lessons.length).fill(
-        parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
+        parseInt(progressTableStyleConstants.MIN_COLUMN_WIDTH)
       ),
       lessonCellFormatters: this.summaryCellFormatters,
       includeHeaderArrows: false
@@ -375,7 +379,7 @@ const styles = {
   },
   contentView: {
     display: 'inline-block',
-    width: parseInt(progressTableStyles.CONTENT_VIEW_WIDTH)
+    width: parseInt(progressTableStyleConstants.CONTENT_VIEW_WIDTH)
   }
 };
 

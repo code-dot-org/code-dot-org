@@ -11,11 +11,11 @@ class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
 
   test 'get_script_overview_url returns nil if we did not generate a pdf' do
     CDO.stubs(:rack_env).returns(:staging)
-    unit_with_lesson_plans = create(:script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path1")
+    unit_with_lesson_plans = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path1")
     lg_with_lps = create(:lesson_group, script: unit_with_lesson_plans)
     create(:lesson, script: unit_with_lesson_plans, lesson_group: lg_with_lps, has_lesson_plan: true)
 
-    unit_without_lesson_plans = create(:script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path2")
+    unit_without_lesson_plans = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, seeded_from: Time.at(1), name: "test-pdf-path2")
     lg_without_lps = create(:lesson_group, script: unit_with_lesson_plans)
     create(:lesson, script: unit_without_lesson_plans, lesson_group: lg_without_lps, has_lesson_plan: false)
 
@@ -34,22 +34,25 @@ class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
       Services::CurriculumPdfs.get_script_overview_pathname(script).to_s
   end
 
-  test 'Script Overview PDFs are generated into the given directory' do
+  test 'Unit Overview PDFs are generated into the given directory' do
     script = create(:script, seeded_from: Time.now)
     Dir.mktmpdir('curriculum_pdfs_script_overview_test') do |tmpdir|
       assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?
       PDF.expects(:generate_from_url).with do |url, _outpath|
         url == Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true&viewAs=Instructor"
       end
+      FileUtils.stubs(:cp)
       Services::CurriculumPdfs.generate_script_overview_pdf(script, tmpdir)
     end
   end
 
-  test 'Script Overview PDF includes Lesson Plan PDFs' do
+  test 'Unit Overview PDF includes Lesson Plan PDFs' do
     script = create(:script, seeded_from: Time.now)
     lesson_group = create(:lesson_group, script: script)
 
     Dir.mktmpdir('curriculum_pdfs_script_overview_test') do |tmpdir|
+      FileUtils.stubs(:cp)
+
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.length == 1}
       Services::CurriculumPdfs.generate_script_overview_pdf(script, tmpdir)
 

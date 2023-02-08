@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -23,12 +23,13 @@ class InlineHint extends React.Component {
     textToSpeechEnabled: PropTypes.bool,
     isBlockly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
+    isRtl: PropTypes.bool,
     skinId: PropTypes.string
   };
 
   componentDidMount() {
     if (this.props.isBlockly) {
-      convertXmlToBlockly(ReactDOM.findDOMNode(this));
+      convertXmlToBlockly(ReactDOM.findDOMNode(this), this.props.isRtl);
     }
   }
 
@@ -54,7 +55,12 @@ class InlineHint extends React.Component {
         skinId={this.props.skinId}
       >
         <SafeMarkdown markdown={this.props.markdown} />
-        {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
+        {this.props.block && (
+          <ReadOnlyBlockSpace
+            block={this.props.block}
+            isRtl={this.props.isRtl}
+          />
+        )}
         {this.props.video && (
           <VideoThumbnail
             onClick={this.onVideoClick}

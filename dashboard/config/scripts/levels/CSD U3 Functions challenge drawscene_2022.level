@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:41:58.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -54,7 +50,9 @@
       "declareNoAssign_x": null,
       "assign_x": null,
       "setAnimation": null,
-      "rgb": null
+      "rgb": null,
+      "comment": null,
+      "comment_GameLab": null
     },
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -74,7 +72,7 @@
     "expand_debugger": "false",
     "parent_level_id": 23167,
     "name_suffix": "_2022",
-    "map_reference": "/docs/concepts/javascript/functions/",
+    "map_reference": "/courses/csd-2022/guides/functions",
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_gamelab_functions",
@@ -83,25 +81,33 @@
     "libraries_enabled": "false",
     "thumbnail_url": "https://images.code.org/0b70fff7d9395197d2ba3a351aa32eeb-image-1591297781924.gif",
     "reference_links": [
-      "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
-      "/docs/concepts/game-lab/sprites/collision-detection/",
-      "/docs/concepts/game-lab/sprites/velocity/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/game-lab/the-draw-loop/",
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/velocity-and-the-counter-pattern",
+      "/courses/csd-2022/guides/collision-detection",
+      "/courses/csd-2022/guides/velocity",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/if-else-statements",
+      "/courses/csd-2022/guides/the-counter-pattern-2",
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_enabled": "false"
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-03-30T23:41:58.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:58.885+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions challenge drawscene_2021\\\"\"],\"cloned_from\":\"CSD U3 Functions challenge drawscene_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:41:58.885+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions challenge drawscene_2021\\\"\"],\"cloned_from\":\"CSD U3 Functions challenge drawscene_2021\"},{\"changed_at\":\"2023-01-28 01:03:59 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-28 01:12:37 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

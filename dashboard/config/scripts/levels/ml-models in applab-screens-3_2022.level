@@ -1,14 +1,10 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:49:15.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://cdn.glitch.com/863b2e2c-c3b7-405e-8ece-1585b4e83e88%2Fif-statement%202.gif?v=1625508649934)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Completing the App\r\n\r\nNow that we have all of our screens, lets finish adding if-statements to our program to switch to the correct screen based on the result.\r\n\r\n## Do This\r\n\r\nRepeat the same process we did for the fish screen three more times. As a reminder, here are the steps:\r\n\r\n- Drag out an [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) and place it inside the [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block ( [Show me where](#triggercallout=if_statement) )\r\n- Drag out the [`==`(#FFB74D)](/docs/applab/equalityOperator/) block and place it inside the [`if-statement`(#64B5F6)](/docs/applab/ifBlock/)\r\n- On the left side of the [`==`(#FFB74D)](/docs/applab/equalityOperator/), type `value`. This is the variable that has the result of our prediction.\r\n- On the right side of the [`==`(#FFB74D)](/docs/applab/equalityOperator/), type the name of the pet recommendation *including the quotes*.\r\n\t- Remember that you can use the Model Card to remember all the possible prediction values\r\n- Inside the [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) block:\r\n\t- Drag out a [`setScreen()`(#fff176)](/docs/applab/setScreen/) block and select the correct screen from the dropdown menu\r\n\r\nTest your code! Try to get to each pet! Verify that all of the screens work\r\n",
+    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/2271697f7a45f509995a6d976c5852be-image-1652288744853.gif)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Completing the App\r\n\r\nNow that we have all of our screens, lets finish adding if-statements to our program to switch to the correct screen based on the result.\r\n\r\n## Do This\r\n\r\nRepeat the same process we did for the fish screen three more times. As a reminder, here are the steps:\r\n\r\n- Drag out an [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) and place it inside the [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block ( [Show me where](#triggercallout=if_statement) )\r\n- Drag out the [`==`(#FFB74D)](/docs/applab/equalityOperator/) block and place it inside the [`if-statement`(#64B5F6)](/docs/applab/ifBlock/)\r\n- On the left side of the [`==`(#FFB74D)](/docs/applab/equalityOperator/), type `value`. This is the variable that has the result of our prediction.\r\n- On the right side of the [`==`(#FFB74D)](/docs/applab/equalityOperator/), type the name of the pet recommendation *including the quotes*.\r\n\t- Remember that you can use the Model Card to remember all the possible prediction values\r\n- Inside the [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) block:\r\n\t- Drag out a [`setScreen()`(#fff176)](/docs/applab/setScreen/) block and select the correct screen from the dropdown menu\r\n\r\nTest your code! Try to get to each pet! Verify that all of the screens work\r\n\r\n![]()",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -55,8 +51,8 @@
     "ai_enabled": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_AI_L7_ifstatement\",\r\n  \"callout_text\": \"Add your if-statement here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"if_statement\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"getPrediction\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "reference_links": [
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/if-statements/"
+      "/courses/csd-2022/guides/changing-screens",
+      "/courses/csd-2022/guides/if-statements-2"
     ],
     "video_key": "csp_applab_conditionals_2A",
     "ai_model_id": "j5MH8AtyV1sw",
@@ -65,9 +61,13 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:49:15.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:15.851+00:00\",\"changed\":[\"cloned from \\\"ml-models in applab-screens-3-2021\\\"\"],\"cloned_from\":\"ml-models in applab-screens-3-2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:15.851+00:00\",\"changed\":[\"cloned from \\\"ml-models in applab-screens-3-2021\\\"\"],\"cloned_from\":\"ml-models in applab-screens-3-2021\"},{\"changed_at\":\"2022-05-11 17:05:54 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

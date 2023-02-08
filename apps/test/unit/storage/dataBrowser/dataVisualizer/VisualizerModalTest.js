@@ -11,6 +11,7 @@ import {
 import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
 
 const DEFAULT_PROPS = {
+  isRtl: false,
   tableColumns: ['column1', 'column2'],
   tableName: 'testTable',
   tableRecords: [

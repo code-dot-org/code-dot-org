@@ -30,7 +30,7 @@
 MAX_CACHE_AGE = Rails.application.config.experiment_cache_time_seconds.seconds
 
 class Experiment < ApplicationRecord
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
 
   validates :name, presence: true
   after_save {Experiment.update_cache}
@@ -67,7 +67,7 @@ class Experiment < ApplicationRecord
       e,
       error_message: 'Error getting experiments',
       context: {
-        user_id: user && user.id
+        user_id: user&.id
       }
     )
     []
@@ -77,7 +77,7 @@ class Experiment < ApplicationRecord
   # section and/or script.
   # @param user [User]
   # @param section [Section]
-  # @param script [Script]
+  # @param script [Unit]
   # @param experiment_name [String]
   # @returns [Boolean]
   def self.enabled?(user: nil, section: nil, script: nil, experiment_name: nil)
@@ -93,7 +93,7 @@ class Experiment < ApplicationRecord
   # section and/or script.
   # @param user [User]
   # @param section [Section]
-  # @param script [Script]
+  # @param script [Unit]
   # @param experiment_names [Array[String]]
   # @returns [Boolean]
   def self.any_enabled?(user: nil, section: nil, script: nil, experiment_names: [])

@@ -39,6 +39,6 @@ Sehen Sie sich den [Veranstaltungsleitfaden]({{ urls/how_to_events }}) für eine
 Die Hour of Code ist nur der erste Schritt einer Reise um mehr darüber zu lernen, wie Technologie funktioniert und wie Software Anwendungen geschrieben werden. Um weiter zu reisen:
 
 - Ermutigen Sie Ihre Schülerinnen und Schüler weiter [online zu lernen](%= resolve_url('https://code. org/learn/beyond') %).
-- Nehmen Sie an einem [eintägigen Workshop](%= resolve_url('https://code.org/professional-development-workshops') %) teil, um Anleitung eines erfahrenen Informatikberaters zu erhalten. (Nur für Lehrer/Veranstalter aus den USA!)
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

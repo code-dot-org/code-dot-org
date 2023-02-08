@@ -3,7 +3,7 @@
   "name": "buzzer.note()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Plays specific notes on the buzzer.\r\n\r\nLike `.frequency()`, `buzzer.note()` plays different tones on the buzzer. However, instead of giving the buzzer a frequency to play, you give it a note and octave ranging from 1-4 (C3, D4, E4, etc). Anything above octave 5 is too high and will not play on the buzzer. \r\n\r\n`.notes()` has a parameter for duration too. Unless the note is given a duration, it will play continuously. ",
+  "content": "Plays specific notes on the buzzer.\r\n\r\nLike `.frequency()`, [`buzzer.note()`(#f78183)](/docs/applab/buzzer.note/) plays different tones on the buzzer. However, instead of giving the buzzer a frequency to play, you give it a note and octave ranging from 1-4 (C3, D4, E4, etc). Anything above octave 5 is too high and will not play on the buzzer. \r\n\r\n`.notes()` has a parameter for duration too. Unless the note is given a duration, it will play continuously. ",
   "examples": [
     {
       "name": "",

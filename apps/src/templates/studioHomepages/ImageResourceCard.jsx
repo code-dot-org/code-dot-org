@@ -6,6 +6,7 @@ import color from '../../util/color';
 
 class ImageResourceCard extends Component {
   static propTypes = {
+    altText: PropTypes.string,
     title: PropTypes.string.isRequired,
     callout: PropTypes.string,
     description: PropTypes.string.isRequired,
@@ -20,7 +21,15 @@ class ImageResourceCard extends Component {
   }
 
   render() {
-    const {title, callout, description, buttonText, link, isRtl} = this.props;
+    const {
+      altText,
+      title,
+      callout,
+      description,
+      buttonText,
+      link,
+      isRtl
+    } = this.props;
 
     return (
       <div style={{...styles.card, ...(isRtl && styles.rtl)}}>
@@ -39,16 +48,20 @@ class ImageResourceCard extends Component {
           <Button
             __useDeprecatedTag
             href={link}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={buttonText}
             style={styles.button}
           />
         </div>
-        <img style={styles.image} src={this.getImage()} />
+        <img style={styles.image} src={this.getImage()} alt={altText} />
       </div>
     );
   }
 }
+
+ImageResourceCard.defaultProps = {
+  altText: ''
+};
 
 const styles = {
   card: {
@@ -58,8 +71,9 @@ const styles = {
     marginBottom: 20,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: color.border_gray,
-    background: color.teal
+    borderColor: color.neutral_dark20,
+    background: color.neutral_light,
+    color: color.neutral_dark
   },
   image: {
     width: 158
@@ -80,7 +94,6 @@ const styles = {
     fontSize: 24,
     paddingBottom: 10,
     fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
     whiteSpace: 'nowrap'
   },
   callout: {
@@ -95,7 +108,6 @@ const styles = {
     fontSize: 14,
     lineHeight: '21px',
     fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
     height: 80
   },
   button: {

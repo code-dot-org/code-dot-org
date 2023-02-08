@@ -4,7 +4,7 @@
   "category": "Events",
   "category_key": "events",
   "block_name": "gamelab_whenTouching",
-  "content": "Triggers a sequence of blocks to run when a specific sprite touches another specific sprite.\n\n(Opens YouTube in new tab)\n\n[![How To Make A Sprite](https://img.youtube.com/vi/VUmZ2IsFAGo/0.jpg)](https://www.youtube.com/watch?v=VUmZ2IsFAGo)\n\nSometimes code should only be run if an event happens. In this case, when a specific sprite touches another specific sprite, the blocks attached under the event block will begin to run sequentially. If the `costume` block is used in either parameter, the event will check for touches between any sprites of the matching costume(s).\n\nThis block has a drop-down menu with “when” and “while” options. “When” a sprite touches another sprite, the code will only run once. “While” a sprite is touching another sprite, the code will run over and over again until the sprites stop touching. ",
+  "content": "Triggers a sequence of blocks to run when a specific sprite touches another specific sprite.\n\n(Opens YouTube in new tab)\n\n[![How To Make A Sprite](https://img.youtube.com/vi/VUmZ2IsFAGo/0.jpg)](https://www.youtube.com/watch?v=VUmZ2IsFAGo)\n\nSometimes code should only be run if an event happens. In this case, when a specific sprite touches another specific sprite, the blocks attached under the event block will begin to run sequentially. If the [`costume`(#df9399)](/docs/spritelab/gamelab_allSpritesWithAnimation/) block is used in either parameter, the event will check for touches between any sprites of the matching costume(s).\n\nThis block has a drop-down menu with “when” and “while” options. “When” a sprite touches another sprite, the code will only run once. “While” a sprite is touching another sprite, the code will run over and over again until the sprites stop touching. ",
   "examples": [
     {
       "name": "Example 1",
@@ -40,5 +40,5 @@
   ],
   "short_description": "Triggers a sequence of blocks to run when a specific sprite touches another specific sprite.",
   "syntax": "whenTouching",
-  "tips": "-  For group events, use the `this / other sprite` block in the following actions to only affect the sprite that was touched."
+  "tips": "-  For group events, use the [`this / other sprite`(#df9399)](/docs/spritelab/gamelab_getThisSprite/) block in the following actions to only affect the sprite that was touched."
 }

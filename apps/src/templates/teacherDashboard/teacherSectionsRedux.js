@@ -3,7 +3,11 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import PropTypes from 'prop-types';
+import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
+import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -14,10 +18,10 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'lessonExtras',
   'pairingAllowed',
+  'participantType',
   'ttsAutoplayEnabled',
   'participantType',
   'courseId',
-  'scriptId',
   'courseOfferingId',
   'courseVersionId',
   'unitId',
@@ -51,7 +55,6 @@ const importUrlByProvider = {
 const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
 const SET_AVAILABLE_PARTICIPANT_TYPES =
   'teacherDashboard/SET_AVAILABLE_PARTICIPANT_TYPES';
-const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -65,6 +68,8 @@ const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
+/** Opens add section UI */
+const CREATE_SECION_BEGIN = 'teacherDashboard/CREATE_SECION_BEGIN';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
 /** Makes staged changes to section being edited */
@@ -121,11 +126,6 @@ export const setAuthProviders = providers => ({
 export const setRosterProvider = rosterProvider => ({
   type: SET_ROSTER_PROVIDER,
   rosterProvider
-});
-export const setValidAssignments = (validCourses, validScripts) => ({
-  type: SET_VALID_ASSIGNMENTS,
-  validCourses,
-  validScripts
 });
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
@@ -246,13 +246,34 @@ export const assignToSection = (
     {includeUserId: true}
   );
   return (dispatch, getState) => {
+    const section = getState().teacherSections.sections[sectionId];
+    // Only log if the assignment is changing.
+    // We need an OR here because unitId will be null for standalone units
+    if (
+      (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||
+      (courseVersionId && section.courseVersionId !== courseVersionId) ||
+      (unitId && section.unitId !== unitId)
+    ) {
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId,
+        sectionLoginType: section.loginType,
+        previousUnitId: section.unitId,
+        previousCourseId: section.courseOfferingId,
+        previousCourseVersionId: section.courseVersionId,
+        newUnitId: unitId,
+        newCourseId: courseOfferingId,
+        newCourseVersionId: courseVersionId
+      });
+    }
+
     dispatch(beginEditingSection(sectionId, true));
     dispatch(
       editSectionProperties({
         courseId: courseId,
         courseOfferingId: courseOfferingId,
         courseVersionId: courseVersionId,
-        scriptId: unitId
+        unitId: unitId
       })
     );
     return dispatch(finishEditingSection(pageType));
@@ -270,12 +291,13 @@ export const unassignSection = (sectionId, location) => (
 ) => {
   dispatch(beginEditingSection(sectionId, true));
   const {initialCourseId, initialUnitId} = getState().teacherSections;
+
   dispatch(
     editSectionProperties({
       courseId: null,
       courseOfferingId: null,
       courseVersionId: null,
-      scriptId: null
+      unitId: null
     })
   );
   firehoseClient.putRecord(
@@ -297,6 +319,19 @@ export const unassignSection = (sectionId, location) => (
   );
   return dispatch(finishEditingSection());
 };
+
+export const beginCreatingSection = (
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  participantType
+) => ({
+  type: CREATE_SECION_BEGIN,
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  participantType
+});
 
 /**
  * Opens the UI for editing the specified section.
@@ -387,29 +422,16 @@ export const reloadAfterEditingSection = () => (dispatch, getState) => {
   });
 };
 
-/**
- * Change the login type of the given section.
- * @param {number} sectionId
- * @param {SectionLoginType} loginType
- * @return {function():Promise}
- */
-export const editSectionLoginType = (sectionId, loginType) => dispatch => {
-  dispatch(beginEditingSection(sectionId));
-  dispatch(editSectionProperties({loginType}));
-  return dispatch(finishEditingSection());
-};
-
 export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
-  // If section id is provided, load students for the current section.
-  dispatch({type: ASYNC_LOAD_BEGIN});
+
   let apis = [
     '/dashboardapi/sections',
-    `/dashboardapi/courses`,
-    '/dashboardapi/sections/valid_scripts',
     '/dashboardapi/sections/valid_course_offerings',
     '/dashboardapi/sections/available_participant_types'
   ];
+
+  // If section id is provided, load students for the current section.
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
@@ -418,13 +440,10 @@ export const asyncLoadSectionData = id => dispatch => {
     .then(
       ([
         sections,
-        validCourses,
-        validScripts,
         validCourseOfferings,
         availableParticipantTypes,
         students
       ]) => {
-        dispatch(setValidAssignments(validCourses, validScripts));
         dispatch(setCourseOfferings(validCourseOfferings));
         dispatch(
           setAvailableParticipantTypes(
@@ -557,13 +576,9 @@ const initialState = {
   // for consistency and ease of comparison).
   providers: [],
   sectionIds: [],
+  studentSectionIds: [],
+  plSectionIds: [],
   selectedSectionId: NO_SECTION,
-  // A map from assignmentId to assignment (see assignmentShape PropType).
-  validAssignments: {},
-  // Array of assignment families, to populate the assignment family dropdown
-  // with options like "CSD", "Course A", or "Frozen". See the
-  // assignmentFamilyShape PropType.
-  assignmentFamilies: [],
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
@@ -599,16 +614,15 @@ const initialState = {
 };
 /**
  * Generate shape for new section
- * @param id
- * @param loginType
+ * @param participantType
  * @returns {sectionShape}
  */
 
-function newSectionData(id, loginType) {
+function newSectionData(participantType) {
   return {
-    id: id,
+    id: PENDING_NEW_SECTION_ID,
     name: '',
-    loginType: loginType,
+    loginType: undefined,
     grade: '',
     providerManaged: false,
     lessonExtras: true,
@@ -616,26 +630,17 @@ function newSectionData(id, loginType) {
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
+    participantType: participantType,
     code: '',
     courseId: null,
     courseOfferingId: null,
     courseVersionId: null,
     unitId: null,
-    scriptId: null,
     hidden: false,
     isAssigned: undefined,
     restrictSection: false
   };
 }
-
-// Fields to copy from the assignmentInfo when creating an assignmentFamily.
-export const assignmentFamilyFields = [
-  'category_priority',
-  'category',
-  'position',
-  'assignment_family_title',
-  'assignment_family_name'
-];
 
 // Maps authentication provider to OAuthSectionTypes for ease of comparison
 // (i.e., Google auth is 'google_oauth2' but the section type is 'google_classroom').
@@ -669,81 +674,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       courseOfferings: action.courseOfferings
-    };
-  }
-
-  if (action.type === SET_VALID_ASSIGNMENTS) {
-    const validAssignments = {};
-    const assignmentFamilyMap = {};
-
-    // Array of assignment ids of units which belong to any valid courses.
-    let secondaryAssignmentIds = [];
-
-    // NOTE: We depend elsewhere on the order of our keys in validAssignments
-    action.validCourses.forEach(course => {
-      const assignId = assignmentId(course.id, null);
-      const scriptAssignIds = (course.script_ids || []).map(scriptId =>
-        assignmentId(null, scriptId)
-      );
-      validAssignments[assignId] = {
-        ..._.omit(course, 'script_ids'),
-        courseId: course.id,
-        scriptId: null,
-        scriptAssignIds,
-        assignId,
-        path: `/courses/${course.script_name}`
-      };
-
-      // Make sure each assignment family is only added once.
-      const familyName = course.assignment_family_name;
-      if (familyName && !assignmentFamilyMap[familyName]) {
-        assignmentFamilyMap[familyName] = _.pick(
-          course,
-          assignmentFamilyFields
-        );
-      }
-
-      secondaryAssignmentIds.push(...scriptAssignIds);
-    });
-    secondaryAssignmentIds = _.uniq(secondaryAssignmentIds);
-
-    action.validScripts.forEach(unit => {
-      const assignId = assignmentId(null, unit.id);
-
-      // Put each unit in its own assignment family with the default version
-      // year, unless those values were provided by the server.
-      const assignmentFamilyName =
-        unit.assignment_family_name || unit.script_name;
-      const assignmentFamilyTitle = unit.assignment_family_title || unit.name;
-      validAssignments[assignId] = {
-        ...unit,
-        courseId: null,
-        scriptId: unit.id,
-        assignId,
-        path: `/s/${unit.script_name}`,
-        assignment_family_name: assignmentFamilyName,
-        version_year: unit.version_year,
-        version_title: unit.version_title
-      };
-
-      // Do not add assignment families for units belonging to courses. To assign
-      // them, one must first select the corresponding course from the assignment
-      // family dropdown, and then select the unit from the secondary dropdown.
-      if (!secondaryAssignmentIds.includes(assignId)) {
-        if (!assignmentFamilyMap[assignmentFamilyName]) {
-          assignmentFamilyMap[assignmentFamilyName] = {
-            ..._.pick(unit, assignmentFamilyFields),
-            assignment_family_title: assignmentFamilyTitle,
-            assignment_family_name: assignmentFamilyName
-          };
-        }
-      }
-    });
-
-    return {
-      ...state,
-      validAssignments,
-      assignmentFamilies: _.values(assignmentFamilyMap)
     };
   }
 
@@ -794,13 +724,28 @@ export default function teacherSections(state = initialState, action) {
       }
     });
 
+    let sectionIds = _.uniq(
+      state.sectionIds.concat(sections.map(section => section.id))
+    );
+
+    const studentSectionIds = sections
+      .filter(
+        section => section.participantType === ParticipantAudience.student
+      )
+      .map(section => section.id);
+    const plSectionIds = sections
+      .filter(
+        section => section.participantType !== ParticipantAudience.student
+      )
+      .map(section => section.id);
+
     return {
       ...state,
       sectionsAreLoaded: true,
       selectedSectionId,
-      sectionIds: _.uniq(
-        state.sectionIds.concat(sections.map(section => section.id))
-      ),
+      sectionIds: sectionIds,
+      studentSectionIds: studentSectionIds,
+      plSectionIds: plSectionIds,
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')
@@ -838,6 +783,8 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       sectionIds: _.without(state.sectionIds, sectionId),
+      studentSectionIds: _.without(state.studentSectionIds, sectionId),
+      plSectionIds: _.without(state.plSectionIds, sectionId),
       sections: _.omit(state.sections, sectionId)
     };
   }
@@ -882,14 +829,40 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
-  if (action.type === EDIT_SECTION_BEGIN) {
-    const initialSectionData = action.sectionId
-      ? {...state.sections[action.sectionId]}
-      : newSectionData(PENDING_NEW_SECTION_ID, undefined);
+  if (action.type === CREATE_SECION_BEGIN) {
+    const initialSectionData = newSectionData(action.participantType);
+    if (action.courseOfferingId) {
+      initialSectionData.courseOfferingId = action.courseOfferingId;
+    }
+    if (action.courseVersionId) {
+      initialSectionData.courseVersionId = action.courseVersionId;
+    }
+    if (action.unitId) {
+      initialSectionData.unitId = action.unitId;
+    }
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
-      initialUnitId: initialSectionData.scriptId,
+      initialUnitId: initialSectionData.unitId,
+      initialCourseOfferingId: initialSectionData.courseOfferingId,
+      initialCourseVersionId: initialSectionData.courseVersionId,
+      initialLoginType: initialSectionData.loginType,
+      sectionBeingEdited: initialSectionData
+    };
+  }
+
+  if (action.type === EDIT_SECTION_BEGIN) {
+    const initialParticipantType =
+      state.availableParticipantTypes.length === 1
+        ? state.availableParticipantTypes[0]
+        : undefined;
+    const initialSectionData = action.sectionId
+      ? {...state.sections[action.sectionId]}
+      : newSectionData(initialParticipantType);
+    return {
+      ...state,
+      initialCourseId: initialSectionData.courseId,
+      initialUnitId: initialSectionData.unitId,
       initialCourseOfferingId: initialSectionData.courseOfferingId,
       initialCourseVersionId: initialSectionData.courseVersionId,
       initialLoginType: initialSectionData.loginType,
@@ -912,16 +885,24 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    // PL Sections must use email logins and its grade value should be "pl"
+    const loginTypeSettings = {};
+    const gradeSettings = {};
+    if (
+      action.props.participantType &&
+      action.props.participantType !== ParticipantAudience.student
+    ) {
+      loginTypeSettings.loginType = SectionLoginType.email;
+      gradeSettings.grade = PlGradeValue;
+    }
+
     const lessonExtraSettings = {};
-    if (action.props.scriptId && action.props.lessonExtras === undefined) {
+    if (action.props.unitId && action.props.lessonExtras === undefined) {
       lessonExtraSettings.lessonExtras = true;
     }
 
     const ttsAutoplayEnabledSettings = {};
-    if (
-      action.props.scriptId &&
-      action.props.ttsAutoplayEnabled === undefined
-    ) {
+    if (action.props.unitId && action.props.ttsAutoplayEnabled === undefined) {
       ttsAutoplayEnabledSettings.ttsAutoplayEnabled = false;
     }
 
@@ -931,6 +912,8 @@ export default function teacherSections(state = initialState, action) {
         ...state.sectionBeingEdited,
         ...lessonExtraSettings,
         ...ttsAutoplayEnabledSettings,
+        ...loginTypeSettings,
+        ...gradeSettings,
         ...action.props
       }
     };
@@ -966,6 +949,23 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    const newSections = _.omit(state.sections, oldSectionId);
+    newSections[section.id] = {
+      ...state.sections[section.id],
+      ...section
+    };
+
+    const newStudentSectionIds = Object.values(newSections)
+      .filter(
+        section => section.participantType === ParticipantAudience.student
+      )
+      .map(section => section.id);
+    const newPlSectionIds = Object.values(newSections)
+      .filter(
+        section => section.participantType !== ParticipantAudience.student
+      )
+      .map(section => section.id);
+
     if (section.loginType !== state.initialLoginType) {
       firehoseClient.putRecord(
         {
@@ -987,8 +987,8 @@ export default function teacherSections(state = initialState, action) {
       section_creation_timestamp: section.createdAt,
       page_name: state.pageType
     };
-    if (section.scriptId !== state.initialUnitId) {
-      assignmentData.script_id = section.scriptId;
+    if (section.unitId !== state.initialUnitId) {
+      assignmentData.unit_id = section.unitId;
     }
     if (section.courseId !== state.initialCourseId) {
       assignmentData.course_id = section.courseId;
@@ -1001,7 +1001,7 @@ export default function teacherSections(state = initialState, action) {
     }
     if (
       // If either of these is not undefined, then assignment changed and should be logged
-      !(typeof assignmentData.script_id === 'undefined') ||
+      !(typeof assignmentData.unit_id === 'undefined') ||
       !(typeof assignmentData.course_id === 'undefined')
     ) {
       firehoseClient.putRecord(
@@ -1022,15 +1022,9 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       sectionIds: newSectionIds,
-      sections: {
-        // When updating a persisted section, omitting oldSectionId is still fine
-        // because we're adding it back on the next line
-        ..._.omit(state.sections, oldSectionId),
-        [section.id]: {
-          ...state.sections[section.id],
-          ...section
-        }
-      },
+      sections: newSections,
+      studentSectionIds: newStudentSectionIds,
+      plSectionIds: newPlSectionIds,
       sectionBeingEdited: null,
       saveInProgress: false
     };
@@ -1138,8 +1132,6 @@ export default function teacherSections(state = initialState, action) {
 
 // Helpers and Selectors
 
-export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
-
 function getRoot(state) {
   return state.teacherSections; // Global knowledge eww.
 }
@@ -1184,11 +1176,30 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
-export function assignedUnit(state) {
-  const {sectionBeingEdited, validAssignments} = getRoot(state);
+export function assignedCourseOffering(state) {
+  const {sectionBeingEdited, courseOfferings} = getRoot(state);
 
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  return validAssignments[assignId];
+  return courseOfferings[(sectionBeingEdited?.courseOfferingId)];
+}
+
+function assignedUnit(state) {
+  const {sectionBeingEdited, courseOfferings} = getRoot(state);
+
+  let assignedUnit = null;
+  const courseVersion =
+    courseOfferings[sectionBeingEdited.courseOfferingId]?.course_versions[
+      sectionBeingEdited.courseVersionId
+    ];
+
+  if (courseVersion) {
+    if (sectionBeingEdited.unitId) {
+      assignedUnit = courseVersion.units[sectionBeingEdited.unitId];
+    } else if (courseVersion.type === 'Unit') {
+      assignedUnit = Object.values(courseVersion.units)[0];
+    }
+  }
+
+  return assignedUnit;
 }
 
 export function assignedUnitName(state) {
@@ -1201,10 +1212,6 @@ export function assignedUnitName(state) {
 }
 
 export function assignedUnitLessonExtrasAvailable(state) {
-  const {sectionBeingEdited} = getRoot(state);
-  if (!sectionBeingEdited) {
-    return false;
-  }
   const assignment = assignedUnit(state);
   return assignment ? assignment.lesson_extras_available : false;
 }
@@ -1218,6 +1225,11 @@ export function assignedUnitTextToSpeechEnabled(state) {
   return assignment ? assignment.text_to_speech_enabled : false;
 }
 
+export function assignedUnitRequiresVerifiedInstructor(state) {
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.requires_verified_instructor : false;
+}
+
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
   return sortSectionsList(allSections || []).filter(section => !section.hidden);
@@ -1229,26 +1241,28 @@ export function getVisibleSections(state) {
  * @param {number[]} sectionIds - List of section ids we want row data for
  */
 export function getSectionRows(state, sectionIds) {
-  const {sections, validAssignments} = getRoot(state);
+  const {sections, courseOfferings} = getRoot(state);
   return sectionIds.map(id => ({
     ..._.pick(sections[id], [
       'id',
       'name',
+      'courseVersionName',
       'loginType',
       'studentCount',
       'code',
+      'participantType',
       'grade',
       'providerManaged',
       'hidden'
     ]),
-    assignmentNames: assignmentNames(validAssignments, sections[id]),
-    assignmentPaths: assignmentPaths(validAssignments, sections[id])
+    assignmentNames: assignmentNames(courseOfferings, sections[id]),
+    assignmentPaths: assignmentPaths(courseOfferings, sections[id])
   }));
 }
 
 export function getAssignmentName(state, sectionId) {
-  const {sections, validAssignments} = getRoot(state);
-  return assignmentNames(validAssignments, sections[sectionId])[0];
+  const {sections, courseOfferings} = getRoot(state);
+  return assignmentNames(courseOfferings, sections[sectionId])[0];
 }
 /**
  * Maps from the data we get back from the server for a section, to the format
@@ -1257,6 +1271,7 @@ export function getAssignmentName(state, sectionId) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
@@ -1271,7 +1286,6 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionId: serverSection.course_version_id,
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script_id,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
@@ -1279,7 +1293,8 @@ export const sectionFromServerSection = serverSection => ({
   codeReviewExpiresAt: serverSection.code_review_expires_at
     ? Date.parse(serverSection.code_review_expires_at)
     : null,
-  isAssignedCSA: serverSection.is_assigned_csa
+  isAssignedCSA: serverSection.is_assigned_csa,
+  participantType: serverSection.participant_type
 });
 
 /**
@@ -1291,8 +1306,8 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   id: serverStudent.id,
   name: serverStudent.name,
   sharingDisabled: serverStudent.sharing_disabled,
-  totalLines: serverStudent.total_lines,
   secretPicturePath: serverStudent.secret_picture_path,
+  secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words
 });
 
@@ -1315,25 +1330,28 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
-    script_id: section.scriptId,
-    restrict_section: section.restrictSection
+    restrict_section: section.restrictSection,
+    participant_type: section.participantType
   };
 }
 
-const assignmentsForSection = (validAssignments, section) => {
+const assignmentsForSection = (courseOfferings, section) => {
   const assignments = [];
-  if (section.courseId) {
-    const assignId = assignmentId(section.courseId, null);
-    if (validAssignments[assignId]) {
-      assignments.push(validAssignments[assignId]);
+  if (section.courseOfferingId && section.courseVersionId) {
+    const courseVersion =
+      courseOfferings[section.courseOfferingId]?.course_versions[
+        section.courseVersionId
+      ];
+    if (courseVersion) {
+      assignments.push(courseVersion);
+      if (section.unitId && courseVersion.type === 'UnitGroup') {
+        if (courseVersion.units[section.unitId]) {
+          assignments.push(courseVersion.units[section.unitId]);
+        }
+      }
     }
   }
-  if (section.scriptId) {
-    const assignId = assignmentId(null, section.scriptId);
-    if (validAssignments[assignId]) {
-      assignments.push(validAssignments[assignId]);
-    }
-  }
+
   return assignments;
 };
 
@@ -1341,8 +1359,8 @@ const assignmentsForSection = (validAssignments, section) => {
  * Get the name of the course/unit assigned to the given section
  * @returns {string[]}
  */
-export const assignmentNames = (validAssignments, section) => {
-  const assignments = assignmentsForSection(validAssignments, section);
+export const assignmentNames = (courseOfferings, section) => {
+  const assignments = assignmentsForSection(courseOfferings, section);
   // we might not have an assignment object if we have a section that was somehow
   // assigned to a hidden unit (and we dont have permissions to see hidden units)
   return assignments.map(assignment => (assignment ? assignment.name : ''));
@@ -1352,8 +1370,8 @@ export const assignmentNames = (validAssignments, section) => {
  * Get the path of the course/unit assigned to the given section
  * @returns {string[]}
  */
-export const assignmentPaths = (validAssignments, section) => {
-  const assignments = assignmentsForSection(validAssignments, section);
+export const assignmentPaths = (courseOfferings, section) => {
+  const assignments = assignmentsForSection(courseOfferings, section);
   return assignments.map(assignment => (assignment ? assignment.path : ''));
 };
 
@@ -1377,14 +1395,6 @@ export function isEditingSection(state) {
 }
 
 /**
- * Ask for the id of the section we're currently editing, or null if we're not
- * editing a section.
- */
-export function editedSectionId(state) {
-  return state.sectionBeingEdited ? state.sectionBeingEdited.id : null;
-}
-
-/**
  * @param {object} state - state.teacherSections in redux tree
  * Extract a list of name/id for each section
  */
@@ -1402,15 +1412,18 @@ export function sectionsNameAndId(state) {
  */
 export function sectionsForDropdown(
   state,
-  scriptId,
-  courseId,
-  onCourseOverview
+  courseOfferingId,
+  courseVersionId,
+  unitId
 ) {
   return sortedSectionsList(state.sections).map(section => ({
     ...section,
     isAssigned:
-      (scriptId !== null && section.scriptId === scriptId) ||
-      (courseId !== null && section.courseId === courseId && onCourseOverview)
+      (unitId !== null && section.unitId === unitId) ||
+      (courseOfferingId !== null &&
+        section.courseOfferingId === courseOfferingId &&
+        (courseVersionId !== null &&
+          section.courseVersionId === courseVersionId))
   }));
 }
 
@@ -1436,12 +1449,35 @@ export function hiddenSectionIds(state) {
   return state.sectionIds.filter(id => state.sections[id].hidden);
 }
 
+/**
+ * @param {object} state - Full state of redux tree
+ */
+export function hiddenStudentSectionIds(state) {
+  state = getRoot(state);
+  return state.sectionIds.filter(
+    id =>
+      state.sections[id].hidden &&
+      state.sections[id].participantType === ParticipantAudience.student
+  );
+}
+
+/**
+ * @param {object} state - Full state of redux tree
+ */
+export function hiddenPlSectionIds(state) {
+  state = getRoot(state);
+  return state.sectionIds.filter(
+    id =>
+      state.sections[id].hidden &&
+      state.sections[id].participantType !== ParticipantAudience.student
+  );
+}
+
 export const studentShape = PropTypes.shape({
   sectionId: PropTypes.number,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   sharingDisabled: PropTypes.bool,
-  totalLines: PropTypes.number,
   secretPicturePath: PropTypes.string,
   secretWords: PropTypes.string
 });

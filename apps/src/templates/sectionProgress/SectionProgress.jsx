@@ -16,11 +16,10 @@ import {
 } from './sectionProgressRedux';
 import {loadScriptProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {
-  setScriptId,
-  validScriptPropType
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
 
@@ -35,7 +34,7 @@ class SectionProgress extends Component {
     //Provided by redux
     scriptId: PropTypes.number,
     sectionId: PropTypes.number,
-    validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
@@ -79,6 +78,12 @@ class SectionProgress extends Component {
       old_script_id: this.props.scriptId,
       new_script_id: scriptId
     });
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_CHANGE_UNIT, {
+      sectionId: this.props.sectionId,
+      oldUnitId: this.props.scriptId,
+      unitId: scriptId
+    });
   };
 
   onChangeLevel = lessonOfInterest => {
@@ -87,6 +92,12 @@ class SectionProgress extends Component {
     this.recordEvent('jump_to_lesson', {
       script_id: this.props.scriptId,
       stage_id: this.props.scriptData.lessons[lessonOfInterest].id
+    });
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_JUMP_TO_LESSON, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+      lesson: this.props.scriptData.lessons[lessonOfInterest].id
     });
   };
 
@@ -116,7 +127,7 @@ class SectionProgress extends Component {
 
   render() {
     const {
-      validScripts,
+      coursesWithProgress,
       currentView,
       scriptId,
       scriptData,
@@ -136,7 +147,7 @@ class SectionProgress extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              validScripts={validScripts}
+              coursesWithProgress={coursesWithProgress}
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
@@ -220,7 +231,7 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
-    validScripts: state.unitSelection.validScripts,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,

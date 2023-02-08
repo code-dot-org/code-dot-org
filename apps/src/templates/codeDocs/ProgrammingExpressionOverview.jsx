@@ -11,11 +11,16 @@ import {
   shrinkBlockSpaceContainer
 } from '@cdo/apps/templates/instructions/utils';
 import {parseElement} from '@cdo/apps/xml';
+import '../../../style/curriculum/documentation_tables.scss';
 
 const VIDEO_WIDTH = 560;
 const VIDEO_HEIGHT = 315;
 
-export default function ProgrammingExpressionOverview({programmingExpression}) {
+export default function ProgrammingExpressionOverview({
+  programmingExpression,
+  programmingEnvironmentName,
+  programmingEnvironmentLanguage
+}) {
   const titleRef = React.createRef();
   const videoRef = createRef();
 
@@ -104,6 +109,7 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
           <EnhancedSafeMarkdown
             markdown={programmingExpression.content.trim()}
             expandableImages
+            className="docs-pages"
           />
         </div>
       )}
@@ -114,9 +120,7 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
             <Example
               key={idx}
               example={example}
-              programmingEnvironmentName={
-                programmingExpression.programmingEnvironmentName
-              }
+              programmingEnvironmentName={programmingEnvironmentName}
             />
           ))}
         </div>
@@ -127,13 +131,17 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
           <EnhancedSafeMarkdown
             markdown={`\`${programmingExpression.syntax}\``}
             expandableImages
+            className="docs-pages"
           />
         </div>
       )}
       {programmingExpression.parameters?.length > 0 && (
         <div>
           <h2>{i18n.parametersHeader()}</h2>
-          <ParametersTable parameters={programmingExpression.parameters} />
+          <ParametersTable
+            parameters={programmingExpression.parameters}
+            programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+          />
         </div>
       )}
       {!!programmingExpression.returnValue && (
@@ -148,6 +156,7 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
           <EnhancedSafeMarkdown
             markdown={programmingExpression.tips.trim()}
             expandableImages
+            className="docs-pages"
           />
         </div>
       )}
@@ -158,9 +167,14 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
             markdown={i18n.additionalInformationText({
               externalDocumentationUrl: programmingExpression.externalDocumentation.trim()
             })}
+            className="docs-pages"
           />
         </div>
       )}
+      <div>
+        <p />
+        <EnhancedSafeMarkdown markdown={i18n.documentationBug()} />
+      </div>
     </div>
   );
 }
@@ -174,13 +188,14 @@ const programmingExpressionShape = PropTypes.shape({
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
   tips: PropTypes.string,
-  programmingEnvironmentName: PropTypes.string,
   video: PropTypes.object,
   imageUrl: PropTypes.string
 });
 
 ProgrammingExpressionOverview.propTypes = {
-  programmingExpression: programmingExpressionShape.isRequired
+  programmingExpression: programmingExpressionShape.isRequired,
+  programmingEnvironmentName: PropTypes.string,
+  programmingEnvironmentLanguage: PropTypes.string
 };
 
 const styles = {

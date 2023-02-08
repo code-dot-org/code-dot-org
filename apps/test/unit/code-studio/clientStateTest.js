@@ -34,73 +34,6 @@ describe('clientState#sourceForLevel', function() {
   });
 });
 
-describe('clientState#trackLines', function() {
-  beforeEach(function() {
-    state.reset();
-  });
-
-  it('records line counts when level is completed', function() {
-    state.lines().should.equal(0);
-
-    //User has passed a level
-    state.trackLines(true, 5);
-    state.lines().should.equal(5);
-
-    //User has passed another level
-    state.trackLines(true, 10);
-    state.lines().should.equal(15);
-  });
-
-  it('does not record line counts when level is failed', function() {
-    state.lines().should.equal(0);
-
-    //User has failed a level
-    state.trackLines(false, 5);
-    state.lines().should.equal(0);
-  });
-
-  it('truncates line count at a certain level', function() {
-    state.trackLines(true, 999);
-    state.lines().should.equal(999);
-
-    state.trackLines(true, 5);
-    state.lines().should.equal(1000);
-
-    state.trackLines(true, 1);
-    state.lines().should.equal(1000);
-  });
-
-  it('does not allow negative line counts', function() {
-    state.trackLines(true, 10);
-    state.lines().should.equal(10);
-
-    state.trackLines(true, -10);
-    state.lines().should.equal(10);
-  });
-
-  it('Does not record line counts when level progress does not have a line count', function() {
-    sessionStorage.setItem('lines', 50);
-    state.lines().should.equal(50);
-    state.trackLines(true, undefined);
-    state.lines().should.equal(50);
-    state.trackLines(true, Infinity);
-    state.lines().should.equal(50);
-    state.trackLines(true, NaN);
-    state.lines().should.equal(50);
-    state.trackLines(true, '');
-    state.lines().should.equal(50);
-    state.trackLines(true, 50);
-    state.lines().should.equal(100);
-  });
-
-  it('Handled malformed line counts in session storage', function() {
-    sessionStorage.setItem('lines', NaN);
-    state.lines().should.equal(0);
-    state.trackLines(true, 50);
-    state.lines().should.equal(50);
-  });
-});
-
 describe('clientState#queryParams', function() {
   it('parses query params', function() {
     window.history.replaceState('', '', '?foo=1&bar=2');
@@ -198,16 +131,13 @@ describe('clientState#reset', function() {
   it('Resetting client state actually resets everything', function() {
     state.recordCalloutSeen('someCallout');
     state.recordVideoSeen('someVideo');
-    state.trackLines(true, 5);
 
     state.hasSeenCallout('someCallout').should.equal(true);
     state.hasSeenVideo('someVideo').should.equal(true);
-    state.lines().should.equal(5);
 
     state.reset();
 
     state.hasSeenCallout('someCallout').should.equal(false);
     state.hasSeenVideo('someVideo').should.equal(false);
-    state.lines().should.equal(0);
   });
 });

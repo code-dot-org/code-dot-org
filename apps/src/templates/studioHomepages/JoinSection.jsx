@@ -16,6 +16,7 @@ class JoinSection extends React.Component {
     enrolledInASection: PropTypes.bool.isRequired,
     updateSections: PropTypes.func.isRequired,
     updateSectionsResult: PropTypes.func.isRequired,
+    isTeacher: PropTypes.bool,
 
     // Provided by Redux
     isRtl: PropTypes.bool
@@ -61,7 +62,7 @@ class JoinSection extends React.Component {
         const sectionName = data.sections.find(
           s => s.code === normalizedSectionCode
         ).name;
-        this.props.updateSections(data.sections);
+        this.props.updateSections(data.studentSections, data.plSections);
         this.props.updateSectionsResult(
           'join',
           data.result,
@@ -103,7 +104,11 @@ class JoinSection extends React.Component {
       >
         <div style={wordBoxStyle}>
           <div style={styles.heading}>{i18n.joinASection()}</div>
-          <div style={styles.details}>{i18n.joinSectionDescription()}</div>
+          <div style={styles.details}>
+            {this.props.isTeacher
+              ? i18n.joinSectionTeacherDescription()
+              : i18n.joinSectionDescription()}
+          </div>
         </div>
         <div style={styles.actionBox}>
           <input
@@ -117,10 +122,9 @@ class JoinSection extends React.Component {
             placeholder={i18n.joinSectionPlaceholder()}
           />
           <Button
-            __useDeprecatedTag
             onClick={this.joinSection}
             className="ui-test-join-section"
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.brandSecondaryDefault}
             disabled={this.state.sectionCode.length === 0}
             text={i18n.joinSection()}
             style={styles.button}
@@ -137,10 +141,9 @@ const styles = {
     display: 'flex',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.border_gray,
+    borderColor: color.neutral_dark20,
     width: styleConstants['content-width'],
-    backgroundColor: color.white,
-    marginTop: 25
+    backgroundColor: color.white
   },
   mainDashed: {
     borderWidth: 5,
@@ -153,13 +156,13 @@ const styles = {
     fontSize: 20,
     fontWeight: 'bold',
     backgroundColor: color.white,
-    color: color.teal
+    color: color.neutral_dark
   },
   details: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     marginTop: 5,
-    color: color.charcoal
+    color: color.neutral_dark
   },
   wordBox: {
     width: styleConstants['content-width'] - 475,

@@ -257,6 +257,7 @@ hr-HR:
   homepage_banner_40k_teachers_link: Doznaj više
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Svatko može naučiti. Započnite danas
+  homepage_slot_text_blurb_hoc_2022: Istražite, igrajte se, stvarajte!
   homepage_slot_text_link_hoc: Isprobaj Hour of Code
   homepage_slot_text_link_host: Održite Sat kodiranja
   homepage_solot_text_link_volunteer: Volontiraj za Sat kodiranja
@@ -277,6 +278,7 @@ hr-HR:
   homepage_slot_text_link_stats: Pogledajte statistike
   homepage_slot_text_link_buy: Uključite se
   homepage_slot_text_link_donate: Donirajte
+  homepage_gallery_header: Stvoreno preko %{project_count} milijuna Code.org projekata
   homepage_header_donors: Code.org zahvaljuje na podršci
   homepage_donors_seall: Prikaži sve
   homepage_donors_donate: Donirajte
@@ -755,6 +757,12 @@ hr-HR:
   coursed-2021_gradelevel: Dob 7-11
   coursee-2021_gradelevel: Dob 8-12
   coursef-2021_gradelevel: Dob 9-13
+  coursea-2022_gradelevel: Dob 4-7
+  courseb-2022_gradelevel: Dob 5-8
+  coursec-2022_gradelevel: Dob 6-10
+  coursed-2022_gradelevel: Dob 7-11
+  coursee-2022_gradelevel: Dob 8-12
+  coursef-2022_gradelevel: Dob 9-13
   accelerated_gradelevel: Dob 10+ (nakon Tečaja 3)
   codeorg_platformtext: Suvremeni preglednici, mobiteli, tableti
   codeintl_platformtext: Suvremeni preglednici, mobiteli, tableti
@@ -1338,6 +1346,11 @@ hr-HR:
   user_header_flappy: Flappy
   user_header_view_all: Prikaz svih projekata...
   applab_tile_start_tutorial: Početak
+  hoc_overview_dance_2022_subtitle: Kodirajte plesnu zabavu koju ćete podijeliti sa
+    svojim prijateljima. Tu su Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
+    glazba iz Disneyjevog "Encanto" i još mnogo toga!
+  hoc_overview_hello_world_2022_alt_text: Animirani astronaut i životinjski likovi
+    plutaju oko ilustracije zemlje
   hoc_overview_start_tutorial: Početak
   hoc_overview_more_resources: Za više informacija o interakciji s virtualnom učionicom,
     pogledajte naš vodič za organiziranje [virtualnog Sata kodiranja](https://hourofcode.com/us/how-to/virtual).
@@ -1346,6 +1359,15 @@ hr-HR:
   hoc2018_creativity_create: Stvori
   hoc2018_mc_start: Početak
   hoc2018_mc_educators_box2_button: Preuzmi
+  hoc2022_mc_educators_box3_desc_markdown: Iskoristite ovo na zahtjev [besplatni tečaj]
+    (%{free_course_link}) ili registrirajte cijeli razred kako biste prisustvovali
+    radionici sata kodiranja uživo s gostujućim učiteljem. Nudi se više puta tijekom
+    CSEW-a, prosinac 6 - 11.
+  hoc2022_mc_educators_box3_button: Registrirajte se sada
+  hoc2022_mc_educators_box4_desc: Inspirirajte STEM strast kod učenika K-12 s 200
+    sati nastavnog plana i programa računalne znanosti, od bloka do Python-a, podržanog
+    profesionalnim razvojem.
+  hoc2022_mc_educators_box4_button: Nastavite učiti
   hoc2018_mc_watch_videos: Prije nego što počneš, pogledaj jedan od ovih inspirativnih
     videa
   hoc2018_mc_video_title_inspire_girl: Inspiriraj djevojku
@@ -1357,6 +1379,13 @@ hr-HR:
   hoc2018_dance_amazon_about_future_engineer_button: Doznaj više
   hoc2018_dance_video2: Plesna zabava - događaji
   hoc2018_dance_video3: Plesna zabava - svojstva
+  hoc2022_mc_mee_title: Minecraft bijeg sa imanja
+  hoc2022_mc_mee_description: 'Pobjeći iz tajanstvenog letnjikovca do zore i zaraditi
+    milijun smaragda! Novi vodič za Minecraft Sat kodiranja sada je dostupan u Minecraftu:
+    Education Edition za Windows, Mac, Chromebook, Ipad i Mobile. Započnite s besplatnim
+    resursima edukatora, treninzima i videozapisima. '
+  hoc2022_mc_mee_timecraft_description: 'Putujte natrag u prošlost kako biste spasili
+    budućnost u ovoj besplatnoj lekciji kodiranja u Minecraft: Education Edition.'
   footer_powered_by_aws: Potpomognuto s Amazon Web Services
   footer_privacy_policy: Politika privatnosti
   footer_privacy_policy_updated: Politika privatnosti (ažurirana)
@@ -1367,3 +1396,18 @@ hr-HR:
   footer_terms: Uvjeti
   ai_for_oceans_lesson_plan: nastavni plan
   ai_description: Opis
+  hoc2022_banner_title: Istražite, igrajte se, stvarajte!
+  hoc2022_banner_description: Istražite svemir, zabijte gol, poništite potez — toliko
+    je načina da isprobate računalne znanosti!
+  hoc2022_cta_primary: Pogledajte što je novo
+  hoc2022_cta_secondary: Isprobajte više aktivnosti
+  hoc2022_landing_page_explore_title: Istraži
+  hoc2022_landing_page_explore_description: Otvorite vrata novih svjetova s računalnim
+    znanostima!
+  hoc2022_landing_page_play_title: Igraj
+  hoc2022_landing_page_play_description: Izađi na teren i zabij!
+  hoc2022_landing_page_create_title: Stvori
+  hoc2022_landing_page_create_description: Napravite nešto neobično i prekrasno!
+  hoc2022_landing_page_banner_alt_left: Vanzemaljac koji pleše pored Saturna u svemiru
+  hoc2022_landing_page_banner_alt_right: Robot dribla nogometnu loptu u svemiru ispred
+    rakete koja polijeće

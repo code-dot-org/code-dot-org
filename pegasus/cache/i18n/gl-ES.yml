@@ -927,6 +927,12 @@ gl-ES:
   coursed-2021_gradelevel: De 7 a 11 anos
   coursee-2021_gradelevel: De 8 a 12 anos
   coursef-2021_gradelevel: De 9 a 13 anos
+  coursea-2022_gradelevel: De 4 a 7 anos
+  courseb-2022_gradelevel: De 5 a 8 anos
+  coursec-2022_gradelevel: Idades de 6 a 10 anos
+  coursed-2022_gradelevel: De 7 a 11 anos
+  coursee-2022_gradelevel: De 8 a 12 anos
+  coursef-2022_gradelevel: De 9 a 13 anos
   accelerated_gradelevel: Idades de 10 a 18 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
@@ -1628,3 +1634,4 @@ gl-ES:
   ai_for_oceans_lesson_plan: plan de estudos
   ai_activity: Actividade
   ai_description: Rango
+  hoc2022_landing_page_create_title: Crear

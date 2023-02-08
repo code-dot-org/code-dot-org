@@ -4,7 +4,7 @@ import msg from '@cdo/locale';
 const RENAME_THIS_ID = 'RENAME_THIS_ID';
 const RENAME_ALL_ID = 'RENAME_ALL_ID';
 
-export default class FieldVariable extends GoogleBlockly.FieldVariable {
+export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
   /**
    * Handle the selection of an item in the variable dropdown menu.
    * Special case the 'Rename all' and 'Rename this' options to prompt the user
@@ -20,7 +20,7 @@ export default class FieldVariable extends GoogleBlockly.FieldVariable {
       switch (id) {
         case RENAME_ALL_ID:
           // Rename all instances of this variable.
-          FieldVariable.modalPromptName(
+          CdoFieldVariable.modalPromptName(
             msg.renameAllPromptTitle({variableName: oldVar}),
             msg.rename(),
             oldVar,
@@ -33,7 +33,7 @@ export default class FieldVariable extends GoogleBlockly.FieldVariable {
           break;
         case RENAME_THIS_ID:
           // Rename just this variable.
-          FieldVariable.modalPromptName(
+          CdoFieldVariable.modalPromptName(
             msg.renameThisPromptTitle(),
             msg.create(),
             '',
@@ -51,23 +51,24 @@ export default class FieldVariable extends GoogleBlockly.FieldVariable {
       }
     }
   }
+  menuGenerator_ = function() {
+    const options = CdoFieldVariable.dropdownCreate.call(this);
+
+    // Remove the last two options (Delete and Rename)
+    options.pop();
+    options.pop();
+
+    // Add our custom options (Rename this variable, Rename all)
+    options.push([
+      msg.renameAll({variableName: this.getText()}),
+      RENAME_ALL_ID
+    ]);
+    options.push([msg.renameThis(), RENAME_THIS_ID]);
+
+    return options;
+  };
 }
-
-FieldVariable.originalDropdownCreate = FieldVariable.dropdownCreate;
-FieldVariable.dropdownCreate = function() {
-  const options = FieldVariable.originalDropdownCreate.call(this);
-
-  // Remove the last two options (Delete and Rename)
-  options.pop();
-  options.pop();
-
-  // Add our custom options (Rename this variable, Rename all)
-  options.push([msg.renameAll({variableName: this.getText()}), RENAME_ALL_ID]);
-  options.push([msg.renameThis(), RENAME_THIS_ID]);
-
-  return options;
-};
-
+// Fix built-in block
 /**
  * Prompt the user for a variable name and perform some whitespace cleanup
  * @param {string} promptText description text for window prompt
@@ -75,7 +76,7 @@ FieldVariable.dropdownCreate = function() {
  * @param {string} defaultText default input text for window prompt
  * @param {Function} callback with parameter (text) of new name
  */
-FieldVariable.modalPromptName = function(
+CdoFieldVariable.modalPromptName = function(
   promptText,
   confirmButtonLabel,
   defaultText,

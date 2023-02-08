@@ -26,23 +26,21 @@ class UserScript < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user
-  belongs_to :script
-
-  validates_presence_of :user, :script
+  belongs_to :script, class_name: 'Unit'
 
   serialized_attrs %w(
     version_warning_dismissed
   )
 
   def script
-    Script.get_from_cache(script_id)
+    Unit.get_from_cache(script_id)
   end
 
   # @return [Boolean] Whether the user completed the script, e.g., if there are no more progression
   #   levels to be completed (note unplugged levels are an example of non-progress levels). Also
   #   returns false if the associated user has been soft-deleted.
   def check_completed?
-    user && user.completed_progression_levels?(script)
+    user&.completed_progression_levels?(script)
   end
 
   def empty?
@@ -55,8 +53,8 @@ class UserScript < ApplicationRecord
       joins(:script).
       where(user: for_user, scripts: {name: script_names}).
       pluck(:name)
-    script_names.map do |name|
-      [name, filtered_progress.include?(name)]
-    end.to_h
+    script_names.index_with do |name|
+      filtered_progress.include?(name)
+    end
   end
 end

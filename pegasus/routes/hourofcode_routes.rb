@@ -1,5 +1,5 @@
 get '/' do
-  pass unless request.user_agent =~ /^facebookexternalhit\/1\.1/
+  pass unless /^facebookexternalhit\/1\.1/.match?(request.user_agent)
   dont_cache
   env['PATH_INFO'] = '/us'
   pass

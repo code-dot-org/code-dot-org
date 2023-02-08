@@ -39,8 +39,6 @@ export default class TutorialExplorer extends React.Component {
       .isRequired,
     hideFilters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)),
     locale: PropTypes.string.isRequired,
-    backButton: PropTypes.bool,
-    roboticsButtonUrl: PropTypes.string,
     showSortDropdown: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
     defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions))
@@ -270,19 +268,11 @@ export default class TutorialExplorer extends React.Component {
   /*
    * The extra set of tutorials for a specific locale, shown at top for non-en user
    * with no filter options.
-   * If not robotics page, show all tutorials including robotics.  If robotics page,
-   * then use that filter.
    */
   filterTutorialSetForLocale() {
     const filterProps = {
       sortByFieldName: this.props.defaultSortBy
     };
-
-    if (this.isRobotics()) {
-      filterProps.filters = {
-        activity_type: ['robotics']
-      };
-    }
 
     filterProps.specificLocale = true;
     filterProps.locale = this.props.locale;
@@ -291,8 +281,7 @@ export default class TutorialExplorer extends React.Component {
 
   getUniqueOrgNames() {
     return TutorialExplorer.getUniqueOrgNamesFromTutorials(
-      this.props.tutorials,
-      this.isRobotics()
+      this.props.tutorials
     );
   }
 
@@ -342,10 +331,6 @@ export default class TutorialExplorer extends React.Component {
 
   isLocaleEnglish() {
     return this.props.locale.substring(0, 2) === 'en';
-  }
-
-  isRobotics() {
-    return !this.props.roboticsButtonUrl;
   }
 
   /**
@@ -528,25 +513,14 @@ export default class TutorialExplorer extends React.Component {
    * sorted alphabetically.
    *
    * @param {Array} tutorials - Array of tutorials.
-   * @param {bool} robotics - Whether the page is for robotics.
    * @return {Array} - Array of strings.
    */
-  static getUniqueOrgNamesFromTutorials(tutorials, robotics) {
+  static getUniqueOrgNamesFromTutorials(tutorials) {
     // Filter out tutorials with DoNotShow as either tag or organization name.
     let availableTutorials = tutorials.filter(t => {
       return (
         t.tags.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow
       );
-    });
-
-    // Ensure robotics tag is either present or absent, depending whether we
-    // are on robotics variant of the page or not.
-    availableTutorials = availableTutorials.filter(t => {
-      if (robotics) {
-        return t.tags_activity_type.split(',').indexOf('robotics') !== -1;
-      } else {
-        return t.tags_activity_type.split(',').indexOf('robotics') === -1;
-      }
     });
 
     // Construct array of unique org names from the tutorials.
@@ -611,7 +585,6 @@ export default class TutorialExplorer extends React.Component {
                 filterGroups={this.props.filterGroups}
                 selection={this.state.filters}
                 onUserInputFilter={this.handleUserInputFilter}
-                backButton={this.props.backButton}
                 filteredTutorialsCount={this.state.filteredTutorialsCount}
                 showingModalFilters={this.state.showingModalFilters}
                 showModalFilters={this.showModalFilters}
@@ -642,7 +615,6 @@ export default class TutorialExplorer extends React.Component {
                     onUserInputFilter={this.handleUserInputFilter}
                     onUserInputOrgName={this.handleUserInputOrgName}
                     onUserInputSortBy={this.handleUserInputSortBy}
-                    roboticsButtonUrl={this.props.roboticsButtonUrl}
                   />
                 </div>
               )}
@@ -704,7 +676,7 @@ const styles = {
   }
 };
 
-function getFilters({robotics, mobile}) {
+function getFilters({mobile}) {
   const filters = [
     {
       name: 'grade',
@@ -736,7 +708,10 @@ function getFilters({robotics, mobile}) {
         {name: 'computers', text: i18n.filterPlatformComputers()},
         {name: 'android', text: i18n.filterPlatformAndroid()},
         {name: 'ios', text: i18n.filterPlatformIos()},
-        {name: 'screenreader', text: i18n.filterPlatformScreenReader()},
+        {
+          name: 'robotics',
+          text: i18n.filterPlatformRobotics()
+        },
         {name: 'no-internet', text: i18n.filterPlatformNoInternet()},
         {name: 'no-computers', text: i18n.filterPlatformNoComputers()}
       ]
@@ -774,6 +749,17 @@ function getFilters({robotics, mobile}) {
       ]
     },
     {
+      name: 'accessibility',
+      text: i18n.filterAccessibility(),
+      entries: [
+        {name: 'screenreader', text: i18n.filterAccessibilityScreenReader()},
+        {name: 'tts', text: i18n.filterAccessibilityTTS()},
+        {name: 'keyboard', text: i18n.filterAccessibilityKeyboard()},
+        {name: 'captions', text: i18n.filterAccessibilityCaptions()},
+        {name: 'highcontrast', text: i18n.filterAccessibilityHighContrast()}
+      ]
+    },
+    {
       name: 'programming_language',
       text: i18n.filterProgrammingLanguage(),
       entries: [
@@ -789,24 +775,7 @@ function getFilters({robotics, mobile}) {
     grade: ['all']
   };
 
-  const hideFilters = {
-    activity_type: ['robotics']
-  };
-
-  if (robotics) {
-    filters.forEach(filterGroup => {
-      if (filterGroup.name === 'activity_type') {
-        filterGroup.entries = [
-          {name: 'robotics', text: i18n.filterActivityTypeRobotics()}
-        ];
-        filterGroup.display = false;
-      }
-    });
-
-    initialFilters.activity_type = ['robotics'];
-
-    hideFilters.activity_type = [];
-  }
+  const hideFilters = {};
 
   if (mobile) {
     initialFilters.platform = ['android', 'ios'];
@@ -819,15 +788,14 @@ function getFilters({robotics, mobile}) {
  * Parse URL parameters to retrieve an override of initialFilters.
  *
  * @param {Array} filters - Array of filterGroup objects.
- * @param {bool} robotics - whether on the robotics page.
  *
  * @return {object} - Returns an object containing arrays of strings.  Each
  *   array is named for a filterGroup name, and each string inside is named
- *   for a filter entry.  Note that this is not currently white-listed against
+ *   for a filter entry.  Note that this is not currently allow-listed against
  *   our known name of filterGroups/entries, but invalid entries should be
  *   ignored in the filtering user experience.
  */
-function getUrlParameters(filters, robotics) {
+function getUrlParameters(filters) {
   // Create a result object that has a __proto__ so that React validation will work
   // properly.
   let parametersObject = {};
@@ -860,23 +828,15 @@ function getUrlParameters(filters, robotics) {
     }
   }
 
-  if (robotics) {
-    // The robotics page remains dedicated to robotics activities.
-    parametersObject.activity_type = ['robotics'];
-    parametersObject.student_experience = ['beginner'];
-    parametersObject.grade = ['all'];
-  }
-
   return parametersObject;
 }
 
 window.TutorialExplorerManager = function(options) {
   options.mobile = mobileCheck();
   let {filters, initialFilters, hideFilters} = getFilters(options);
-  const robotics = !options.roboticsButtonUrl;
 
   // Check for URL-based override of initialFilters.
-  const providedParameters = getUrlParameters(filters, robotics);
+  const providedParameters = getUrlParameters(filters);
   if (!_.isEmpty(providedParameters)) {
     initialFilters = providedParameters;
   }
@@ -895,8 +855,6 @@ window.TutorialExplorerManager = function(options) {
         initialFilters={initialFilters}
         hideFilters={hideFilters}
         locale={options.locale}
-        backButton={options.backButton}
-        roboticsButtonUrl={options.roboticsButtonUrl}
         showSortDropdown={options.showSortDropdown}
         disabledTutorials={options.disabledTutorials}
         defaultSortBy={defaultSortBy}

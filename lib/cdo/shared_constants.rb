@@ -52,6 +52,8 @@ module SharedConstants
 
   STUDENT_GRADE_LEVELS = %w(K 1 2 3 4 5 6 7 8 9 10 11 12 Other).freeze
 
+  PL_GRADE_VALUE = 'pl'.freeze
+
   # The set of artist autorun options
   ARTIST_AUTORUN_OPTIONS = OpenStruct.new(
     {
@@ -263,6 +265,7 @@ module SharedConstants
       "declareAssign_x_prompt": null,
       "declareAssign_x_promptNum": null,
       "console.log": null,
+      "console.clear": null,
       "declareAssign_str_hello_world": null,
       "substring": null,
       "indexOf": null,
@@ -566,6 +569,7 @@ module SharedConstants
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
+      "console.clear": null,
       "comment_Variables": null,
 
       // Functions

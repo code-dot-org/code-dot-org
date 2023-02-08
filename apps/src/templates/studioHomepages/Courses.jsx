@@ -13,13 +13,13 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import shapes from './shapes';
+import color from '../../util/color';
 
 class Courses extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     isSignedOut: PropTypes.bool.isRequired,
-    linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
     specialAnnouncement: shapes.specialAnnouncement,
@@ -96,7 +96,9 @@ class Courses extends Component {
             <Button
               __useDeprecatedTag
               href="/users/sign_up"
+              className="bannerContentButton"
               color={Button.ButtonColor.gray}
+              style={styles.headerButton}
               text={buttonText}
             />
           )}
@@ -142,6 +144,13 @@ class Courses extends Component {
 const styles = {
   content: {
     maxWidth: styleConstants['content-width']
+  },
+  headerButton: {
+    margin: 'unset',
+    backgroundColor: color.white,
+    borderColor: color.white,
+    color: color.neutral_dark,
+    fontFamily: `"Gotham 5r", sans-serif`
   }
 };
 

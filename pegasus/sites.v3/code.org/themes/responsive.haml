@@ -5,6 +5,7 @@
 
 %html{dir: dir}
   %head
+    = render inline: File.read(deploy_dir('shared/haml/onetrust_cookie_scripts.haml')), type: :haml
 
     %meta{name: "google-site-verification", content: "EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A"}
 
@@ -14,6 +15,7 @@
 
     %link{rel:'stylesheet', type:'text/css', href:'/css/brstrap.css'}
     %link{rel:'stylesheet', type:'text/css', href:'/css/common.css'}
+    %link{rel:'stylesheet', type:'text/css', href:'/css/video-responsive.css'}
 
     %meta{:'http-equiv'=>'X-UA-Compatible', content:'IE=Edge'}
 

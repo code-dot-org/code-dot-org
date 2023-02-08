@@ -4,7 +4,7 @@
   "category": "Sprites",
   "category_key": "actions",
   "block_name": "gamelab_moveInDirection",
-  "content": "Moves a sprite or group of sprites the given number of pixels in the selected direction.\r\n\r\nThis block lets sprites move around the display. A sprite can move in four directions, and a default `number` block is given to specify how many pixels the sprite will move at a time.",
+  "content": "Moves a sprite or group of sprites the given number of pixels in the selected direction.\r\n\r\nThis block lets sprites move around the display. A sprite can move in four directions, and a default [`number`(#bbb3ce)](/docs/spritelab/codestudio_number/) block is given to specify how many pixels the sprite will move at a time.",
   "examples": [
     {
       "name": "Example 1",

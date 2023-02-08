@@ -47,38 +47,33 @@ export function PoemEditor(props) {
   }, [props.isOpen, error]);
 
   const body = (
-    <div>
-      <div style={styles.modalContainer}>
-        <label style={styles.label}>{msg.title()}</label>
+    <form style={{margin: 0}}>
+      <label style={styles.labelContainer}>
+        <span style={styles.label}>{msg.title()}</span>
         <input
           style={styles.input}
           value={title}
           onChange={event => setTitle(event.target.value)}
         />
-      </div>
-      <div style={styles.modalContainer}>
-        <label style={styles.label}>{msg.author()}</label>
+      </label>
+      <label style={styles.labelContainer}>
+        <span style={styles.label}>{msg.author()}</span>
         <input
           style={styles.input}
           value={author}
           onChange={event => setAuthor(event.target.value)}
         />
-      </div>
-      <div style={{...styles.modalContainer, paddingTop: 0}}>
-        <div style={styles.label} />
-        <div style={{...styles.input, ...styles.warning}}>
-          {msg.authorWarning()}
-        </div>
-      </div>
-      <div style={styles.modalContainer}>
-        <label style={styles.label}>{msg.poem()}</label>
+      </label>
+      <div style={styles.warning}>{msg.authorWarning()}</div>
+      <label style={styles.labelContainer}>
+        <span style={styles.label}>{msg.poem()}</span>
         <textarea
           style={styles.input}
           value={poem}
           onChange={event => setPoem(event.target.value)}
         />
-      </div>
-    </div>
+      </label>
+    </form>
   );
 
   const onSave = () => {
@@ -185,7 +180,7 @@ function PoemSelector(props) {
   const getPoemOptions = () => {
     const options = Object.keys(POEMS)
       .map(poemKey => getPoem(poemKey))
-      .filter(poem => !poem.locale || poem.locale === appOptions.locale)
+      .filter(poem => !poem.locales || poem.locales.includes(appOptions.locale))
       .sort((a, b) => (a.title > b.title ? 1 : -1))
       .map(poem => ({value: poem.key, label: poem.title}));
     // Add option to create your own poem to the top of the dropdown.
@@ -246,10 +241,10 @@ const styles = {
   input: {
     flex: 2
   },
-  modalContainer: {
+  labelContainer: {
     display: 'flex',
-    justifyContent: 'flex-end',
-    padding: 10
+    justifyContent: 'space-between',
+    padding: '10px 10px 0 10px'
   },
   error: {
     color: color.red,
@@ -258,7 +253,9 @@ const styles = {
     marginRight: 5
   },
   warning: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
+    textAlign: 'end',
+    padding: '0 10px 10px 0'
   }
 };
 

@@ -3,8 +3,34 @@
   "name": "Not operator",
   "category": "Math",
   "category_key": "math",
-  "content": "[name]\n\n## Not operator\n\n[/name]\n\n[category]\n\nCategory: Math\n\n[/category]\n\n[description]\n\n[short_description]\n\nReturns false if the expression is true; otherwise, returns true.\n\n[/short_description]\n\nYou can stick a NOT (!) in front of any boolean expression to invert its result. This opens the door to express the same logical statements in different ways.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\n// Truth table for the boolean NOT operator.\nconsole.log(!true);\nconsole.log(!false);\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Take Your Temperature**  Check (two different ways) for temperature in a good range or not.\n\n```\n// Check for temperature in a good range or not.\ntextLabel(\"tempLabelID\", \"What is your temperature?\");\ntextInput(\"tempID\", \"\");\nbutton(\"buttonID\", \"Submit\");\ntextLabel(\"tempMessageID1\", \"\");\ntextLabel(\"tempMessageID2\", \"\");\nonEvent(\"buttonID\", \"click\", function(event) {\n  setText(\"tempMessageID1\",\"\");\n  setText(\"tempMessageID2\",\"\");  \n  var temp = getText(\"tempID\");\n  if (!(temp >= 98 && temp <= 99.5) ) {\n    setText(\"tempMessageID1\", \"You may be sick.\");\n  }\n  else {\n    setText(\"tempMessageID1\", \"Your temperature is fine.\");\n  }\n  if (!(temp >= 98) || !(temp <= 99.5) ) {\n    setText(\"tempMessageID2\", \"You may be sick.\");\n  }\n  else {\n    setText(\"tempMessageID2\", \"Your temperature is fine.\");\n  }\n});\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Working 9 to 5** Determines if it is currently working hours.\n\n```\n// Determines if it is currently working hours.\nfunction IsWorkingHours() {\n    var now = new Date();\n    var hours = now.getHours();\n    var workHours = false;\n    if (hours >= 9 && hours < 17) {\n        workHours = true; \n    }\n    return workHours;\n}\n\nif (!IsWorkingHours()) {\n    console.log('take a break');\n} else {\n    console.log('get to work');\n}\n```\n\n[/example]\n\n____________________________________________________\n\n[syntax]\n\n### Syntax\n\n```\n!expression\n```\n\n[/syntax]\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| expression | boolean | Yes | The boolean expression to invert the result of. |\n\n[/parameters]\n\n[returns]\n\n### Returns\nBoolean true or false\n\n[/returns]\n\n[tips]\n\n### Tips\n- Some complex decisions can sometimes be rewritten to use an ! operator. It is fine to choose whichever reads clearest.\n\n[/tips]\n\n",
-  "return_value": "Boolean (true/false) value",
+  "content": "You can stick a NOT (!) in front of any boolean expression to invert its result. This opens the door to express the same logical statements in different ways.",
+  "examples": [
+    {
+      "name": "Example: Typical usage",
+      "description": "Truth table for the boolean NOT operator.",
+      "code": "```\nconsole.log(!true);\nconsole.log(!false);\n```"
+    },
+    {
+      "name": "Example: Take Your Temperature",
+      "description": "Check (two different ways) for temperature in a good range or not.",
+      "code": "```\ntextLabel(\"tempLabelID\", \"What is your temperature?\");\ntextInput(\"tempID\", \"\");\nbutton(\"buttonID\", \"Submit\");\ntextLabel(\"tempMessageID1\", \"\");\ntextLabel(\"tempMessageID2\", \"\");\nonEvent(\"buttonID\", \"click\", function(event) {\n  setText(\"tempMessageID1\",\"\");\n  setText(\"tempMessageID2\",\"\");  \n  var temp = getText(\"tempID\");\n  if (!(temp >= 98 && temp <= 99.5) ) {\n    setText(\"tempMessageID1\", \"You may be sick.\");\n  }\n  else {\n    setText(\"tempMessageID1\", \"Your temperature is fine.\");\n  }\n  if (!(temp >= 98) || !(temp <= 99.5) ) {\n    setText(\"tempMessageID2\", \"You may be sick.\");\n  }\n  else {\n    setText(\"tempMessageID2\", \"Your temperature is fine.\");\n  }\n});\n```"
+    },
+    {
+      "name": "Example: Working 9 to 5",
+      "description": "Determines if it is currently working hours.",
+      "code": "```\nfunction IsWorkingHours() {\n    var now = new Date();\n    var hours = now.getHours();\n    var workHours = false;\n    if (hours >= 9 && hours < 17) {\n        workHours = true; \n    }\n    return workHours;\n}\n\nif (!IsWorkingHours()) {\n    console.log('take a break');\n} else {\n    console.log('get to work');\n}\n```"
+    }
+  ],
+  "palette_params": [
+    {
+      "name": "expression",
+      "type": "boolean",
+      "required": true,
+      "description": "The boolean expression to invert the result of."
+    }
+  ],
+  "return_value": "Returns false if the expression is true; otherwise, returns true.",
   "short_description": "\nNot operator\nCategory: Math",
-  "syntax": "!__"
+  "syntax": "!expression",
+  "tips": "- Some complex decisions can sometimes be rewritten to use an ! operator. It is fine to choose whichever reads clearest."
 }

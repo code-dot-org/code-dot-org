@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:09.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "true",
@@ -25,10 +21,14 @@
     "encrypted_examples": "42z1AWJV72SO+fd55oH68hJ9I/8hJlSCCzn8PAhmmLJ0pzwej+WXCa3zD/ws\n2vVxln1SkRLWn29zJHt4s4pD3g==\n",
     "thumbnail_url": "https://images.code.org/6759651ae1adb74458c8b7f6349d1e6e-image-1589303766669.png",
     "reference_links": [
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ]
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:09.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:09.321+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev bubble choice p tag_2021\\\"\"],\"cloned_from\":\"CSD Web Dev bubble choice p tag_2021\"}]"

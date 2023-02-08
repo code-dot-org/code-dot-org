@@ -33,7 +33,7 @@ export function getAsyncOutputWarning(...args) {
 }
 
 /**
- * Validates a user function parameter, and outputs error to the console if invalid
+ * Validates a user function parameter, and outputs warning to the console if invalid
  * @returns {boolean} True if param passed validation.
  */
 export function apiValidateType(
@@ -47,6 +47,7 @@ export function apiValidateType(
   const validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
     var properType;
+    var customWarning;
     switch (expectedType) {
       case 'color':
         // Special handling for colors, must be a string and a valid RGBColor:
@@ -63,8 +64,35 @@ export function apiValidateType(
           typeof varValue === 'boolean';
         break;
       case 'pinid':
+        var validPins = [
+          'A0',
+          'A1',
+          'A2',
+          'A3',
+          'A4',
+          'A5',
+          'A6',
+          'A7',
+          0,
+          1,
+          2,
+          3,
+          6,
+          9,
+          10,
+          12
+        ];
+        var reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
         properType =
-          typeof varValue === 'string' || typeof varValue === 'number';
+          validPins.includes(varValue) && !reservedPins.includes(varValue);
+        if (!validPins.includes(varValue)) {
+          outputError(
+            `${funcName}() ${varName} parameter value (${varValue}) is not a valid ${expectedType}. Please use a different ${expectedType}.`
+          );
+          return false;
+        } else if (reservedPins.includes(varValue)) {
+          customWarning = `${funcName}() ${varName} parameter value (${varValue}) is a reserved ${expectedType}. Please use a different ${expectedType}.`;
+        }
         break;
       case 'number':
         properType =
@@ -105,9 +133,11 @@ export function apiValidateType(
     if (!properType) {
       const outputValue =
         typeof varValue === 'function' ? 'function' : varValue;
-      outputWarning(
-        `${funcName}() ${varName} parameter value (${outputValue}) is not a ${expectedType}.`
-      );
+      // Use the default warning message if a custom one has not been set
+      var warningMessage =
+        customWarning ||
+        `${funcName}() ${varName} parameter value (${outputValue}) is not a ${expectedType}.`;
+      outputWarning(warningMessage);
     }
     opts[validatedTypeKey] = properType;
   }

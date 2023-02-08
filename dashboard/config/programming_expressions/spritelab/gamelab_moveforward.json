@@ -40,5 +40,5 @@
   ],
   "short_description": "Moves the sprite the specified number of pixels in the direction it is facing.",
   "syntax": "moveForward",
-  "tips": "- Using this block with `turn` or `change sprite property` (rotation) can allow a sprite to move in the direction that its costume is facing."
+  "tips": "- Using this block with [`turn`(#5ef3ff)](/docs/spritelab/gamelab_turn/) or [`change sprite property`(#5ef3ff)](/docs/spritelab/gamelab_changePropBy/) (rotation) can allow a sprite to move in the direction that its costume is facing."
 }

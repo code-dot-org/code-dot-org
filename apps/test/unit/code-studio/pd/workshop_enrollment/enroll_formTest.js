@@ -82,6 +82,31 @@ describe('Enroll Form', () => {
     });
   });
 
+  describe('CSF District Enroll Form', () => {
+    let enrollForm;
+    before(() => {
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="CS Fundamentals"
+          workshop_subject={SubjectNames.SUBJECT_CSF_DISTRICT}
+          first_name={props.first_name}
+          email={props.email}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+        />
+      );
+    });
+
+    it('displays intent question', () => {
+      assert(enrollForm.exists({groupName: 'csf_intro_intent'}));
+    });
+
+    it('displays other factors question', () => {
+      assert(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
+    });
+  });
+
   describe('CSF Deep Dive Enroll Form', () => {
     let enrollForm;
     before(() => {
@@ -208,6 +233,43 @@ describe('Enroll Form', () => {
       it('displays questions not relevant for this workshop type', () => {
         refute(enrollForm.exists({groupName: question}));
       });
+    });
+  });
+
+  describe('Admin/Counselor Enroll Form', () => {
+    let enrollForm;
+    before(() => {
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="Admin/Counselor Workshop"
+          first_name={props.first_name}
+          email={props.email}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+        />
+      );
+    });
+
+    it('displays role question', () => {
+      assert(enrollForm.exists('#role'));
+    });
+
+    it('does not display grades_teaching question', () => {
+      assert(!enrollForm.exists('#grades_teaching'));
+    });
+
+    it('displays describe role question after answered as other', () => {
+      enrollForm.setState({role: 'Other'});
+      expect(enrollForm.find('#describe_role')).to.have.length(1);
+    });
+
+    it('does not display describe role question after answered as counselor or admin', () => {
+      enrollForm.setState({role: 'Administrator'});
+      expect(enrollForm.find('#describe_role')).to.have.length(0);
+
+      enrollForm.setState({role: 'Counselor'});
+      expect(enrollForm.find('#describe_role')).to.have.length(0);
     });
   });
 

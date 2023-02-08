@@ -1,5 +1,5 @@
 module SurveyResultsHelper
-  DIVERSITY_SURVEY_ENABLED = true
+  DIVERSITY_SURVEY_ENABLED = false
 
   def show_diversity_survey?(kind)
     return false unless SurveyResultsHelper::DIVERSITY_SURVEY_ENABLED
@@ -43,7 +43,7 @@ module SurveyResultsHelper
   end
 
   def existing_survey_result?(kind)
-    SurveyResult.where(user_id: current_user.id, kind: kind).exists?
+    SurveyResult.exists?(user_id: current_user.id, kind: kind)
   end
 
   def country_us?

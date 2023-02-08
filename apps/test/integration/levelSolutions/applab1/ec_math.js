@@ -291,7 +291,7 @@ module.exports = {
         );
 
         assert.equal(
-          /See examples/.test($('.tooltipster-content').text()),
+          /Examples/.test($('.tooltipster-content').text()),
           true,
           'tooltip has examples link'
         );

@@ -4,6 +4,7 @@
 # models).
 
 class FollowersController < ApplicationController
+  include User::GenderExperimentHelper
   before_action :load_section
 
   # Add custom flash types:
@@ -31,7 +32,7 @@ class FollowersController < ApplicationController
     # Create boolean to confirm if a user already actively exists on a section roster
     is_existing_follower = !!Follower.find_by(section: @section, student_user: @user)
 
-    if current_user && current_user.display_captcha? && !verify_recaptcha
+    if current_user&.display_captcha? && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
       # Concatenate section code so user does not have to type section code again
       # Note that @section will always be defined due to validations in load_section
@@ -39,8 +40,11 @@ class FollowersController < ApplicationController
       redirect_to redirection
       return
     else
+      gender = params.dig(:user, :gender)
+      gender_input_type = gender_input_type?(request, session)
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save && @section&.add_student(@user)
+          SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'section_signup', @user)
           sign_in(:user, @user)
           @user.increment_section_attempts
           # Check for an exiting user, and redirect to course if found
@@ -92,8 +96,8 @@ class FollowersController < ApplicationController
     @section = Section.find_by_code(params[:section_code].strip)
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
-    unless @section && @section.user&.teacher?
-      current_user.increment_section_attempts if current_user
+    unless @section&.user&.teacher?
+      current_user&.increment_section_attempts
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
       return
     end

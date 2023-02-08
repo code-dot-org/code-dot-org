@@ -15,6 +15,9 @@
   - email_mismatch = current_user.errors.delete(:email_mismatch)
   - current_user.reload if email_mismatch.present?
   = render "devise/shared/error_messages", resource: resource
+  - if current_user.permission?(UserPermission::AUTHORIZED_TEACHER)
+    .field
+      = f.label '✔ '+t('activerecord.attributes.user.verified_teacher'), class: 'label-bold', style: 'color:green; text-transform: capitalize';
   %div
   .field
     = f.label :name, class: "label-bold"
@@ -23,13 +26,6 @@
     - else # most users are allowed to edit username
       = f.text_field :name, autofocus: true, maxlength: 255
   - if !f.object.teacher_managed_account?
-    -# Temporary: Allow single-auth students with no email to add a parent email
-    - if current_user.parent_managed_account? || current_user.can_add_parent_email?
-      .field
-        = f.label t('user.parent_email_label'), class: "label-bold"
-        %em= t('user.parent_email_hint')
-        %br/
-        = f.email_field :parent_email, autocomplete: 'off', maxlength: 255
     - if !current_user.parent_managed_account?
       .field
         = f.label :email, class: "label-bold"
@@ -65,9 +61,6 @@
       %br/
       = f.password_field :current_password, maxlength: 255
   - if !resource.teacher?
-    .field
-      = f.label t('signup_form.gender'), class: "label-bold"
-      = f.select :gender, gender_options
     .field
       = f.label t('signup_form.age'), class: "label-bold"
       = f.select :age, User::AGE_DROPDOWN_OPTIONS

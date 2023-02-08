@@ -8,7 +8,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const defaultProps = {
   excludeCsfColumnInLegend: true,
-  teacherResources: [],
   studentResources: [],
   isSignedIn: true,
   isVerifiedInstructor: true,
@@ -19,14 +18,14 @@ const defaultProps = {
   scriptId: 123,
   scriptName: 'csp1',
   unitTitle: 'CSP 1',
-  professionalLearningCourse: false,
+  deeperLearningCourse: false,
   viewAs: ViewType.Instructor,
   isRtl: false,
   sectionsForDropdown: [],
   unitHasLockableLessons: false,
   unitAllowsHiddenLessons: false,
   publishedState: 'beta',
-  versions: [],
+  versions: {},
   redirectScriptUrl: null,
   unitCalendarLessons: [],
   completedLessonNumber: undefined

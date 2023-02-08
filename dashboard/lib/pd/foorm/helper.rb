@@ -29,7 +29,7 @@ module Pd::Foorm
         # any other pre-survey, return 0
         return 0
       elsif survey_key.include?("Day")
-        return 100 + survey_key[4..-1].to_i
+        return 100 + survey_key[4..].to_i
       elsif survey_key.start_with? "Post Workshop - Module"
         # last character will be the module number, use that as an index
         return 1000 + survey_key[-1].to_i
@@ -41,7 +41,7 @@ module Pd::Foorm
     end
 
     def fill_question_placeholders(question)
-      question && question.sub!("{panel.facilitator_name}", "my facilitator")
+      question&.sub!("{panel.facilitator_name}", "my facilitator")
       question
     end
 

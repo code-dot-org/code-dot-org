@@ -7,6 +7,9 @@ import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {useRegionalPartner} from '../components/useRegionalPartner';
 
 const defaultSubmitButtonText = i18n.submit();
 
@@ -92,6 +95,7 @@ const FormController = props => {
     ...getInitialStored(sessionStorageKey, 'data'),
     ...getInitialData()
   }));
+  const [regionalPartner] = useRegionalPartner(data);
   const [submitting, setSubmitting] = useState(false);
   const [saving, setSaving] = useState(false);
   const [savedData, setSavedData] = useState(getInitialData());
@@ -114,8 +118,6 @@ const FormController = props => {
   const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
     applicationId
   );
-  const applicationStatusOnSave = 'incomplete';
-  const applicationStatusOnSubmit = 'unreviewed';
 
   // do this once on mount only
   useEffect(() => {
@@ -340,13 +342,13 @@ const FormController = props => {
    *
    * @returns {Object}
    */
-  const serializeFormData = (formData, status) => {
+  const serializeFormData = (formData, isSaving) => {
     if (!formData) {
       throw new Error(`formData cannot be undefined`);
     }
     return {
       form_data: formData,
-      status: status,
+      isSaving: isSaving,
       ...serializeAdditionalData()
     };
   };
@@ -370,14 +372,14 @@ const FormController = props => {
     setSaving(false);
   };
 
-  const makeRequest = applicationStatus => {
+  const makeRequest = isSaving => {
     const ajaxRequest = (method, endpoint) =>
       $.ajax({
         method: method,
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify(serializeFormData(data, applicationStatus))
+        data: JSON.stringify(serializeFormData(data, isSaving))
       });
 
     return updatedApplicationId
@@ -403,7 +405,7 @@ const FormController = props => {
       onSuccessfulSave(response);
     };
 
-    makeRequest(applicationStatusOnSave)
+    makeRequest(true)
       .done(data => handleSuccessfulSave(data))
       .fail(data => handleRequestFailure(data));
   };
@@ -439,9 +441,22 @@ const FormController = props => {
     const handleSuccessfulSubmit = data => {
       sessionStorage.removeItem(sessionStorageKey);
       onSuccessfulSubmit(data);
+
+      // Log application status change upon submission for Teacher Applications
+      if (window.location.href.includes('teacher')) {
+        const rp_requires_admin_approval =
+          regionalPartner.applications_principal_approval ===
+          'all_teachers_required';
+        analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+          'application id': data.id,
+          'application status': rp_requires_admin_approval
+            ? 'awaiting_admin_approval'
+            : 'unreviewed'
+        });
+      }
     };
 
-    makeRequest(applicationStatusOnSubmit)
+    makeRequest(false)
       .done(data => handleSuccessfulSubmit(data))
       .fail(data => handleRequestFailure(data));
   };
@@ -557,6 +572,13 @@ const FormController = props => {
       const currentPageValid =
         validateOnSubmitOnly || validateCurrentPageRequiredFields();
       if (currentPageValid) {
+        if (currentPage !== newPage) {
+          analyticsReporter.sendEvent(EVENTS.PAGE_CHANGED_EVENT, {
+            'current application page': currentPage + 1,
+            'new application page': newPage + 1
+          });
+        }
+
         setCurrentPage(newPage);
 
         saveToSessionStorage({currentPage: newPage});
@@ -566,6 +588,7 @@ const FormController = props => {
       pageComponents,
       validateOnSubmitOnly,
       saveToSessionStorage,
+      currentPage,
       validateCurrentPageRequiredFields
     ]
   );

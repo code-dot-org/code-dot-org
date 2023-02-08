@@ -1,21 +1,23 @@
 /** Body of the animation picker dialog */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import * as dialogStyles from './styles';
-import AnimationPickerListItem from './AnimationPickerListItem.jsx';
+import AnimationPickerListItem, {
+  getCategory
+} from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
   searchAssets,
-  filterOutBackgrounds
+  filterAnimations
 } from '@cdo/apps/code-studio/assets/searchAssets';
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
+import style from './animation-picker-body.module.scss';
 
 const MAX_SEARCH_RESULTS = 40;
 
@@ -33,7 +35,7 @@ export default class AnimationPickerBody extends React.Component {
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
-    canDraw: PropTypes.bool.isRequired,
+    hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     pickerType: PropTypes.string.isRequired
   };
@@ -46,8 +48,26 @@ export default class AnimationPickerBody extends React.Component {
 
   componentDidMount() {
     this.scrollListContainer = React.createRef();
+    if (this.props.defaultQuery) {
+      const currentPage = 0;
+      const {results, pageCount} = this.searchAssetsWrapper(
+        currentPage,
+        this.props.defaultQuery
+      );
+      let nextQuery = this.props.defaultQuery || {
+        categoryQuery: '',
+        searchQuery: ''
+      };
+      this.setState({
+        ...nextQuery,
+        currentPage,
+        results,
+        pageCount
+      });
+    }
   }
 
+  // Can be safely removed once the 'backgroundsTab' experiment is removed.
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.defaultQuery !== nextProps.defaultQuery) {
       const currentPage = 0;
@@ -67,7 +87,6 @@ export default class AnimationPickerBody extends React.Component {
       });
     }
   }
-
   searchAssetsWrapper = (page, config = {}) => {
     let {searchQuery, categoryQuery, libraryManifest} = config;
 
@@ -103,9 +122,7 @@ export default class AnimationPickerBody extends React.Component {
       (!pageCount || nextPage <= pageCount)
     ) {
       let {results: newResults, pageCount} = this.searchAssetsWrapper(nextPage);
-      if (this.props.hideBackgrounds) {
-        newResults = filterOutBackgrounds(newResults);
-      }
+      newResults = filterAnimations(newResults, this.props);
 
       this.setState({
         results: [...(results || []), ...newResults],
@@ -120,21 +137,17 @@ export default class AnimationPickerBody extends React.Component {
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       searchQuery
     });
-    if (this.props.hideBackgrounds) {
-      results = filterOutBackgrounds(results);
-    }
+    results = filterAnimations(results, this.props);
     this.setState({searchQuery, currentPage, results, pageCount});
   };
 
   onCategoryChange = event => {
-    const categoryQuery = event.target.className;
+    const categoryQuery = getCategory(event.target);
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
       categoryQuery
     });
-    if (this.props.hideBackgrounds) {
-      results = filterOutBackgrounds(results);
-    }
+    results = filterAnimations(results, this.props);
     this.setState({categoryQuery, currentPage, results, pageCount});
   };
 
@@ -211,7 +224,6 @@ export default class AnimationPickerBody extends React.Component {
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
-
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
@@ -232,13 +244,13 @@ export default class AnimationPickerBody extends React.Component {
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div style={styles.navigation}>
+          <div className={style.navigation}>
             {categoryQuery !== '' && (
-              <div style={styles.breadCrumbs}>
+              <div className={style.breadCrumbs}>
                 {this.props.navigable && (
                   <span
                     onClick={this.onClearCategories}
-                    style={styles.allAnimations}
+                    className={style.allAnimations}
                   >
                     {`${msg.animationPicker_allCategories()} > `}
                   </span>
@@ -257,12 +269,12 @@ export default class AnimationPickerBody extends React.Component {
             {' '}
             {(searchQuery !== '' || categoryQuery !== '') &&
               results.length === 0 && (
-                <div style={styles.emptyResults}>
+                <div className={style.emptyResults}>
                   {msg.animationPicker_noResultsFound()}
                 </div>
               )}
             {((searchQuery === '' && categoryQuery === '') ||
-              (results.length === 0 && this.props.canDraw)) && (
+              results.length === 0) && (
               <div>
                 <AnimationPickerListItem
                   label={msg.animationPicker_drawYourOwn()}
@@ -286,7 +298,7 @@ export default class AnimationPickerBody extends React.Component {
           </ScrollableList>
         </div>
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div style={styles.footer}>
+          <div className={style.footer}>
             <Button
               className="ui-test-selector-done-button"
               text={msg.done()}
@@ -300,40 +312,9 @@ export default class AnimationPickerBody extends React.Component {
   }
 }
 
-export const UnconnectedAnimationPickerBody = Radium(AnimationPickerBody);
-
 export const WarningLabel = ({children}) => (
   <span style={{color: color.red}}>{children}</span>
 );
 WarningLabel.propTypes = {
   children: PropTypes.node
-};
-
-const styles = {
-  allAnimations: {
-    color: color.purple,
-    fontFamily: "'Gotham 7r', sans-serif",
-    cursor: 'pointer'
-  },
-  breadCrumbs: {
-    margin: '8px 0',
-    fontSize: 14,
-    display: 'inline-block'
-  },
-  pagination: {
-    float: 'right',
-    display: 'inline',
-    marginTop: 10
-  },
-  emptyResults: {
-    paddingBottom: 10
-  },
-  navigation: {
-    minHeight: 30
-  },
-  footer: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    marginTop: 5
-  }
 };
