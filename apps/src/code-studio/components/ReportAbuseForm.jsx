@@ -165,12 +165,14 @@ export default class ReportAbuseForm extends React.Component {
             ref="abuse_detail"
             id="uitest-abuse-detail"
           />
-          <p>{msg.verifyNotBot()}</p>
           {this.props.projectValidator || (
-            <div
-              className="g-recaptcha"
-              data-sitekey={this.props.captchaSiteKey}
-            />
+            <div>
+              <p>{msg.verifyNotBot()}</p>
+              <div
+                className="g-recaptcha"
+                data-sitekey={this.props.captchaSiteKey}
+              />
+            </div>
           )}
           <div>
             <SafeMarkdown
