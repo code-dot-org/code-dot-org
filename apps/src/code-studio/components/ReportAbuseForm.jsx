@@ -27,51 +27,28 @@ export default class ReportAbuseForm extends React.Component {
     abuseUrl: PropTypes.string.isRequired,
     name: PropTypes.string,
     email: PropTypes.string,
-    age: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    projectValidator: PropTypes.bool,
+    captchaSiteKey: PropTypes.string
   };
 
   constructor(props) {
     super(props);
-    this.state = {
-      submitButtonEnabled: false,
-      loadedCaptcha: false
-    };
-    this.token = '';
-    this.onCaptchaVerification = this.onCaptchaVerification.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.onCaptchaExpiration = this.onCaptchaExpiration.bind(this);
   }
 
   componentDidMount() {
-    //Add reCaptcha and associated callbacks.
+    // Add reCaptcha. https://developers.google.com/recaptcha/docs/display
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js';
     script.id = 'captcha';
-    window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
-    window.onCaptchaExpired = () => this.onCaptchaExpiration();
-    script.onload = () => this.setState({loadedCaptcha: true});
+    script.async = true;
+    script.defer = true;
     document.body.appendChild(script);
   }
 
   componentWillUnmount() {
     const captchaScript = document.getElementById('captcha');
     captchaScript.remove();
-  }
-
-  onCaptchaVerification(token) {
-    this.setState({submitButtonEnabled: true});
-    this.token = token;
-  }
-
-  onCaptchaExpiration() {
-    this.setState({submitButtonEnabled: false});
-  }
-
-  // Function passed as props must then send token to the Rails backend immediately
-  // for verification.
-  // Must submit a POST request per documentation here: https://developers.google.com/recaptcha/docs/verify
-  handleSubmit() {
-    return; //this.props.handleSubmit(this.token);
   }
 
   /**
@@ -193,12 +170,14 @@ export default class ReportAbuseForm extends React.Component {
             id="uitest-abuse-detail"
           />
           <p>{msg.verifyNotBot()}</p>
-          <div
-            className="g-recaptcha"
-            data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-            data-callback="onCaptchaSubmit"
-            data-expired-callback="onCaptchaExpired"
-          />
+          {this.props.projectValidator || (
+            <div
+              className="g-recaptcha"
+              data-sitekey={this.props.captchaSiteKey}
+              data-callback="onCaptchaSubmit"
+              data-expired-callback="onCaptchaExpired"
+            />
+          )}
           <div>
             <SafeMarkdown
               markdown={msg.abuseFormAcknowledge({

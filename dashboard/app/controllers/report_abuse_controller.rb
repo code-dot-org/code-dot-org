@@ -34,8 +34,9 @@ class ReportAbuseController < ApplicationController
   def report_abuse
     unless protected_project?
 
-      unless verify_recaptcha
-        flash[:alert] = I18n.t('password.reset_errors.captcha_required')
+      # Project Validators can skip the captcha. Everyone else has to pass it.
+      unless verify_recaptcha || current_user.project_validator?
+        flash[:alert] = I18n.t('project.abuse.report_abuse_form.validation.captcha')
         redirect_to report_abuse_path
         return
       end
@@ -89,6 +90,8 @@ class ReportAbuseController < ApplicationController
       name: current_user&.name,
       email: current_user&.email,
       age: current_user&.age,
+      projectValidator: current_user&.project_validator? || false,
+      captchaSiteKey: CDO.recaptcha_site_key,
     }
   end
 
