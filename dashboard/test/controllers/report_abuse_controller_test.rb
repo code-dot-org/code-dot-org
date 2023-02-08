@@ -27,7 +27,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
 
   # channels
 
-  test "update abuse score" do
+  test "signed out user does not update abuse score" do
     assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
   end
 
