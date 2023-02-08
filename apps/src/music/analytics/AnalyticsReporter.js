@@ -98,9 +98,11 @@ export default class AnalyticsReporter {
     let triggerBlocksWithCode = 0;
     blocks.forEach(block => {
       if (
-        [BlockTypes.TRIGGERED_AT, BlockTypes.TRIGGERED_AT_SIMPLE].includes(
-          block.type
-        )
+        [
+          BlockTypes.TRIGGERED_AT,
+          BlockTypes.TRIGGERED_AT_SIMPLE,
+          BlockTypes.TRIGGERED_AT_SIMPLE2
+        ].includes(block.type)
       ) {
         triggerBlocksCount++;
         if (block.getChildren().length > 0) {
