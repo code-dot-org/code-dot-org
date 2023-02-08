@@ -41,8 +41,8 @@ strong {
   font-family: $gotham-bold, sans-serif;
 }
 
-// Centers a text element
-.center-text { text-align: center !important; }
+// Centers a block-level element
+.centered { text-align: center !important; }
 
 // Removes the bottom margin
 .no-margin-bottom { margin-bottom: 0 !important;}
@@ -118,7 +118,7 @@ a.link-button {
   }
 }
 
-// Lists
+// Unordered lists
 ul {
   margin: 1em;
 
@@ -161,11 +161,13 @@ ul {
   }
 }
 
-// Step-by-step list
+// Ordered lists
+// Step-by-step section
 ol.steps-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: baseline;
   margin: unset;
   padding: unset;
 
@@ -177,11 +179,23 @@ ol.steps-list {
     flex-wrap: wrap;
     text-align: center;
     width: 20%;
-    margin: 1.5em 0;
+    margin: 3em 0 2.5em;
   }
 
   h4 {
     width: 100%;
+
+    & > span {
+      background: $neutral_white;
+      display: block;
+      width: 2em;
+      height: 2em;
+      margin: 0 auto;
+      line-height: 1.7;
+      border: 2px solid;
+      border-radius: 100%;
+      outline: 0.25em solid $brand_primary_light;
+    }
   }
 }
 

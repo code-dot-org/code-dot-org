@@ -82,7 +82,8 @@ theme: responsive_full_width
         .text-wrapper
           %h5 Scholarships for schools serving underserved students
           %p Access to $1.5M in Professional Learning scholarships for teachers serving students traditionally underrepresented in CS.
-    %a{href: '#email-signup-form', class: 'link-button'} Become a Code.org District Partner
+    %div.centered
+      %a{href: '#email-signup-form', class: 'link-button'} Become a Code.org District Partner
 
 %section
   .wrapper
@@ -90,6 +91,7 @@ theme: responsive_full_width
     %figure.video-responsive
       %div
         %iframe{src: "https://www.youtube.com/embed/B8w9FHh6nUk", allowFullScreen: 'true', frameborder: '0'}
+
 
 %section.bg-primary
   .wrapper
@@ -100,26 +102,32 @@ theme: responsive_full_width
     %h2 How does the District Partner Program work?
     %ol.steps-list
       %li
-        %h4 1
+        %h4
+          %span 1
         %h5 Commit
         %p <a href="#email-signup-form">Request invitation</a> to sign the district partner pledge.
         %p <em>Not sure yet?</em> <a href="#email-signup-form">Fill out our form</a> and we'll send you more information.
       %li
-        %h4 2
+        %h4
+          %span 2
         %h5 Prepare
         %p <a href="/roadmap">Support schools</a> in adding new Code.org course(s) to master schedules.
         %p Get teachers trained this summer & students enrolled.
       %li
-        %h4 3
+        %h4
+          %span 3
         %h5 Start
         %p Use data to understand course implementation and student outcomes.
         %p Receive ongoing resources to support classroom teaching & learning.
       %li
-        %h4 4
+        %h4
+          %span 4
         %h5 Sustain & Grow
         %p Engage parents and community.
         %p Learn best practices from peers and thought leaders.
         %p Expand CS offerings in your schools.
+    %div.centered
+      %a{href: '#email-signup-form', class: 'link-button'} Become a Code.org District Partner
 
 %a{id: 'email-signup-form'}
 %section

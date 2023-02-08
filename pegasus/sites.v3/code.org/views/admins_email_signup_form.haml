@@ -1,4 +1,9 @@
+%script{:src => "https://www.google.com/recaptcha/api.js"}
+:javascript
+  function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
+
 %form{:action => "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8", :method => "POST"}
+  %input{:name => "captcha_settings", :type => "hidden", :value => "{\"keyname\":\"salesforce\",\"fallback\":\"true\",\"orgId\":\"00Dj0000001sjyo\",\"ts\":\"\"}"}/
   %input{:name => "oid", :type => "hidden", :value => "00Dj0000001sjyo"}/
   %input{:name => "retURL", :type => "hidden", :value => "http://code.org"}/
   %label{:for => "first_name"} First Name
@@ -10,67 +15,6 @@
   %label{:for => "email"} Email
   %input#email{:maxlength => "80", :name => "email", :size => "20", :type => "text"}/
   %br/
-  %label{:for => "phone"} Phone
-  %input#phone{:maxlength => "40", :name => "phone", :size => "20", :type => "text"}/
-  %br/
-  %label{:for => "00N5b00000Dblwd"} School District:
-  %input#00N5b00000Dblwd{:maxlength => "255", :name => "00N5b00000Dblwd", :size => "20", :type => "text"}/
-  %br/
-  %label{:for => "city"} City
-  %input#city{:maxlength => "40", :name => "city", :size => "20", :type => "text"}/
-  %br/
-  %label{:for => "00N5b00000DblgG"} State:
-  %select#00N5b00000DblgG{:name => "00N5b00000DblgG", :title => "State"}
-    %option{:value => ""} --None--
-    %option{:value => "AK"} AK
-    %option{:value => "AL"} AL
-    %option{:value => "AR"} AR
-    %option{:value => "AZ"} AZ
-    %option{:value => "CA"} CA
-    %option{:value => "CO"} CO
-    %option{:value => "CT"} CT
-    %option{:value => "DE"} DE
-    %option{:value => "FL"} FL
-    %option{:value => "GA"} GA
-    %option{:value => "HI"} HI
-    %option{:value => "IA"} IA
-    %option{:value => "ID"} ID
-    %option{:value => "IL"} IL
-    %option{:value => "IN"} IN
-    %option{:value => "KS"} KS
-    %option{:value => "KY"} KY
-    %option{:value => "LA"} LA
-    %option{:value => "MA"} MA
-    %option{:value => "MD"} MD
-    %option{:value => "ME"} ME
-    %option{:value => "MI"} MI
-    %option{:value => "MN"} MN
-    %option{:value => "MO"} MO
-    %option{:value => "MS"} MS
-    %option{:value => "MT"} MT
-    %option{:value => "NC"} NC
-    %option{:value => "ND"} ND
-    %option{:value => "NE"} NE
-    %option{:value => "NH"} NH
-    %option{:value => "NJ"} NJ
-    %option{:value => "NM"} NM
-    %option{:value => "NV"} NV
-    %option{:value => "NY"} NY
-    %option{:value => "OH"} OH
-    %option{:value => "OK"} OK
-    %option{:value => "OR"} OR
-    %option{:value => "PA"} PA
-    %option{:value => "RI"} RI
-    %option{:value => "SC"} SC
-    %option{:value => "SD"} SD
-    %option{:value => "TN"} TN
-    %option{:value => "TX"} TX
-    %option{:value => "UT"} UT
-    %option{:value => "VA"} VA
-    %option{:value => "VT"} VT
-    %option{:value => "WA"} WA
-    %option{:value => "WI"} WI
-    %option{:value => "WV"} WV
-    %option{:value => "WY"} WY
+  .g-recaptcha{"data-sitekey" => "6LdsXlskAAAAAF58Nd4fyP3JcXrbUCmuNYpZ-wdO"}
   %br/
   %input{:name => "submit", :type => "submit"}/
