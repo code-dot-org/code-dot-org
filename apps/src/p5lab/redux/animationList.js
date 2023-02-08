@@ -440,7 +440,7 @@ export function appendBlankFrame() {
 }
 
 /**
- * Add an animation to the project (at the end of the list).
+ * Add an animation to the project (at the end of the list, unless a Sprite Lab project).
  * @param {!AnimationKey} key
  * @param {!SerializedAnimation} props
  */
@@ -448,10 +448,16 @@ export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
   return (dispatch, getState) => {
-    dispatch(addAnimationAction(key, {...props, looping: true}));
+    const isSpriteLab =
+      getState().pageConstants && getState().pageConstants.isBlockly;
+    const index = isSpriteLab ? 0 : null;
+    dispatch(addAnimationAction(key, {...props, looping: true}, index));
+    const isBackground = props.categories?.[0] === 'backgrounds';
+    const selector =
+      isSpriteLab && isBackground ? selectBackground : selectAnimation;
     dispatch(
       loadAnimationFromSource(key, () => {
-        dispatch(selectAnimation(key));
+        dispatch(selector(key));
       })
     );
     let name = generateAnimationName(
@@ -481,7 +487,7 @@ export function appendCustomFrames(props) {
 }
 
 /**
- * Add a library animation to the project (at the end of the list, unless a spritelab project).
+ * Add a library animation to the project (at the end of the list, unless a Sprite Lab project).
  * @param {!SerializedAnimation} props
  */
 export function addLibraryAnimation(props, isSpriteLab) {
