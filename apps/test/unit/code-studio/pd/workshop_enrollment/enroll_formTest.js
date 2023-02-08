@@ -12,16 +12,13 @@ const refute = p => assert.isNotOk(p);
 describe('Enroll Form', () => {
   // We aren't testing server responses, but have a fake server to handle calls and suppress warnings
   let server;
-  before(() => {
-    server = sinon.fakeServer.create();
-  });
-  after(() => {
-    server.restore();
-  });
+  let enrollForm;
   beforeEach(() => {
+    server = sinon.fakeServer.create();
     sinon.spy(jQuery, 'ajax');
   });
   afterEach(() => {
+    server.restore();
     jQuery.ajax.restore();
   });
 
@@ -61,7 +58,7 @@ describe('Enroll Form', () => {
     planning_to_teach_ap: 'Yes'
   };
 
-  const ensureFrontendValidation = (form, state, errorProperty) => {
+  const testValidateFields = (form, state, errorProperty) => {
     form.setState(state);
     form.find('#submit').simulate('click');
     expect(form.state('errors')).to.have.property(errorProperty);
@@ -76,7 +73,6 @@ describe('Enroll Form', () => {
   };
 
   describe('CSF Enroll Form', () => {
-    let enrollForm;
     const extraRequiredParams = ['role', 'grades_teaching'];
     const requiredParams = {
       ...baseParams,
@@ -112,7 +108,7 @@ describe('Enroll Form', () => {
 
     extraRequiredParams.forEach(requiredParam => {
       it(`does not submit when ${requiredParam} is missing`, () => {
-        ensureFrontendValidation(
+        testValidateFields(
           enrollForm,
           omit(requiredParams, requiredParam),
           requiredParam
@@ -126,7 +122,6 @@ describe('Enroll Form', () => {
   });
 
   describe('CSF Intro Enroll Form', () => {
-    let enrollForm;
     const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
     const requiredParams = {
       ...baseParams,
@@ -156,7 +151,7 @@ describe('Enroll Form', () => {
 
     extraRequiredParams.forEach(requiredParam => {
       it(`does not submit when ${requiredParam} is missing`, () => {
-        ensureFrontendValidation(
+        testValidateFields(
           enrollForm,
           omit(requiredParams, requiredParam),
           requiredParam
@@ -170,7 +165,6 @@ describe('Enroll Form', () => {
   });
 
   describe('CSF District Enroll Form', () => {
-    let enrollForm;
     const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
     const requiredParams = {
       ...baseParams,
@@ -200,7 +194,7 @@ describe('Enroll Form', () => {
 
     extraRequiredParams.forEach(requiredParam => {
       it(`does not submit when ${requiredParam} is missing`, () => {
-        ensureFrontendValidation(
+        testValidateFields(
           enrollForm,
           omit(requiredParams, requiredParam),
           requiredParam
@@ -214,7 +208,6 @@ describe('Enroll Form', () => {
   });
 
   describe('CSF Deep Dive Enroll Form', () => {
-    let enrollForm;
     const extraRequiredParams = [
       'role',
       'grades_teaching',
@@ -249,7 +242,7 @@ describe('Enroll Form', () => {
 
     extraRequiredParams.forEach(requiredParam => {
       it(`does not submit when ${requiredParam} is missing`, () => {
-        ensureFrontendValidation(
+        testValidateFields(
           enrollForm,
           omit(requiredParams, requiredParam),
           requiredParam
@@ -263,7 +256,6 @@ describe('Enroll Form', () => {
   });
 
   describe('CSP Enroll Form', () => {
-    let enrollForm;
     const requiredParams = {
       ...baseParams
     };
@@ -307,12 +299,6 @@ describe('Enroll Form', () => {
   });
 
   describe('CSP Enroll Form with demographics', () => {
-    let enrollForm;
-    const extraRequiredParams = [];
-    const requiredParams = {
-      ...baseParams,
-      ...pick(extraParams, extraRequiredParams)
-    };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
@@ -336,12 +322,11 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      testSuccessfulSubmit(enrollForm, requiredParams);
+      testSuccessfulSubmit(enrollForm, baseParams);
     });
   });
 
   describe('CSP Returning Teachers Form', () => {
-    let enrollForm;
     const extraRequiredParams = [
       'years_teaching',
       'years_teaching_cs',
@@ -393,7 +378,7 @@ describe('Enroll Form', () => {
 
     extraRequiredParams.forEach(requiredParam => {
       it(`does not submit when ${requiredParam} is missing`, () => {
-        ensureFrontendValidation(
+        testValidateFields(
           enrollForm,
           omit(requiredParams, requiredParam),
           requiredParam
@@ -407,10 +392,6 @@ describe('Enroll Form', () => {
   });
 
   describe('Admin/Counselor Enroll Form', () => {
-    let enrollForm;
-    const requiredParams = {
-      ...baseParams
-    };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
@@ -442,12 +423,11 @@ describe('Enroll Form', () => {
     });
 
     it('submits when all required params are present', () => {
-      testSuccessfulSubmit(enrollForm, requiredParams);
+      testSuccessfulSubmit(enrollForm, baseParams);
     });
   });
 
   describe('Enroll Form', () => {
-    let enrollForm;
     const requiredParams = {
       ...baseParams,
       ...pick(extraParams, ['role', 'grades_teaching'])
@@ -491,18 +471,14 @@ describe('Enroll Form', () => {
     });
 
     it("doesn't submit other school_info fields when school_id is selected", () => {
-      const expectedData = {
-        ...requiredParams,
-        school_info: {school_id: school_id}
-      };
-
       enrollForm.setState(requiredParams);
       enrollForm.find('#submit').simulate('click');
 
       expect(jQuery.ajax.calledOnce).to.be.true;
-      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal(
-        expectedData
-      );
+      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal({
+        ...requiredParams,
+        school_info: {school_id: school_id}
+      });
     });
 
     it('disables submit button after submit', () => {
@@ -547,36 +523,22 @@ describe('Enroll Form', () => {
       expect(enrollForm.state('errors')).not.to.have.property('first_name');
     });
 
-    it('does not submit when user sets blank first name', () => {
-      ensureFrontendValidation(
-        enrollForm,
-        {...requiredParams, first_name: ''},
-        'first_name'
-      );
+    // first name and email fields are set as props on page load
+    // the user needs to explicitly set them blank for errors to appear
+    ['first_name', 'email'].forEach(param => {
+      it(`does not submit when user sets blank ${param}`, () => {
+        testValidateFields(enrollForm, {...requiredParams, [param]: ''}, param);
+      });
     });
 
-    it('does not submit when user does not input last name', () => {
-      ensureFrontendValidation(
-        enrollForm,
-        omit(requiredParams, 'last_name'),
-        'last_name'
-      );
-    });
-
-    it('does not submit when user sets blank email', () => {
-      ensureFrontendValidation(
-        enrollForm,
-        {...requiredParams, email: ''},
-        'email'
-      );
-    });
-
-    it('does not submit when user does not input school', () => {
-      ensureFrontendValidation(
-        enrollForm,
-        omit(requiredParams, 'school_info'),
-        'school_id'
-      );
+    ['last_name', 'school_info'].forEach(param => {
+      it(`does not submit when user does not input ${param}`, () => {
+        testValidateFields(
+          enrollForm,
+          omit(requiredParams, param),
+          param === 'school_info' ? 'school_id' : param
+        );
+      });
     });
   });
 });
