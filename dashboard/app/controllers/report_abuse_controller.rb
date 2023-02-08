@@ -176,8 +176,7 @@ class ReportAbuseController < ApplicationController
 
   def project_validator?
     return false unless current_user
-    return true if current_user.project_validator?
-    false
+    current_user.project_validator?
   end
 
   def get_bucket_impl(endpoint)
