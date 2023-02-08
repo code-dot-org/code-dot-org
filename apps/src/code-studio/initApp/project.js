@@ -845,7 +845,6 @@ var projects = (module.exports = {
       case 'flappy':
       case 'weblab':
       case 'gamelab':
-      case 'spritelab':
       case 'thebadguys':
       case 'javalab':
         return appOptions.app; // Pass through type exactly
@@ -895,6 +894,8 @@ var projects = (module.exports = {
         return 'bounce';
       case 'poetry':
         return appOptions.level.standaloneAppName;
+      case 'spritelab':
+        return appOptions.level.standaloneAppName || appOptions.app;
       default:
         return null;
     }

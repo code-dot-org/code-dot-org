@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:55 UTC",
+    "serialized_at": "2023-01-10 18:57:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -161,7 +161,7 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students make further projects on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose.",
+        "overview": "Students make further progress on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose.",
         "preparation": "* Ensure students have access to their project guides.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In previous lessons students have been considering the ways that computing innovations may risk their privacy. This lesson further builds on those questions by asking students to think more broadly about the ways computing innovations may have unintended consequences.\r\n\r\nThe next project lesson will be spent primarily working on one-pagers. That lesson and the second half of this one are the largest chunks of class time dedicated to students completing those individual projects.",
         "student_overview": "Students make further projects on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose."

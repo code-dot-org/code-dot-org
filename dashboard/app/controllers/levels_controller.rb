@@ -141,7 +141,7 @@ class LevelsController < ApplicationController
   # GET /levels/1/edit
   def edit
     # Make sure that the encrypted property is a boolean
-    if @level.properties['encrypted']&.is_a?(String)
+    if @level.properties['encrypted'].is_a?(String)
       @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
     end
     bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
@@ -334,8 +334,8 @@ class LevelsController < ApplicationController
     # Set some defaults.
     params[:level][:skin] ||= type_class.skins.first if type_class <= Blockly
     if type_class <= Grid
-      default_tile = type_class == Karel ? {"tileType": 0} : 0
-      start_tile = type_class == Karel ? {"tileType": 2} : 2
+      default_tile = type_class == Karel ? {tileType: 0} : 0
+      start_tile = type_class == Karel ? {tileType: 2} : 2
       params[:level][:maze_data] = Array.new(8) {Array.new(8) {default_tile}}
       params[:level][:maze_data][0][0] = start_tile
     end

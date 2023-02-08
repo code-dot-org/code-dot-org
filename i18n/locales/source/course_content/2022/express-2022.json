@@ -206,22 +206,22 @@
             {
               "text": "Scrat will reach the acorn. There are no bugs in the code.",
               "correct": false,
-              "feedback": "Incorrect. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Incorrect. Scrat will not reach the acorn because he turns the wrong way."
             },
             {
               "text": "Scrat will not reach the acorn because he turns the wrong way.",
               "correct": true,
-              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Correct! Scrat turns the wrong direction and will not reach the acorn."
             },
             {
               "text": "Scrat will not reach the acorn because there are not enough `move forward` blocks.",
-              "correct": true,
-              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "correct": false,
+              "feedback": "Incorrect. Scrat will not reach the acorn because he turns the wrong way."
             },
             {
               "text": "Scrat will not move from the first block.",
               "correct": false,
-              "feedback": "There are two bugs in this code. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Scrat will not reach the acorn because he turns the wrong way."
             }
           ],
           "questions": [
@@ -408,17 +408,6 @@
     "authored_hints": {
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
-    },
-    "function_definitions": {
-      "draw flame": {
-        "name": "draw flame",
-        "parameters": {
-          "x": "x"
-        }
-      },
-      "draw fire": {
-        "name": "draw fire"
-      }
     }
   },
   "https://studio.code.org/s/express-2022/lessons/4/levels/5": {
@@ -2448,7 +2437,7 @@
   },
   "https://studio.code.org/s/express-2022/lessons/8/levels/6": {
     "short_instructions": "Give your pet a behavior when the new sprite touches it.",
-    "long_instructions": "_Now, let's show your pet's excitement by giving it a behavior when the new sprite touches it._\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\n## Do This:\n\n1.  Add another `when touches` block to your code. Select your pet and its toy or friend.\n2.  Use a `sprite begins` block to give your pet a new behavior _when the new sprite touches it._\n\n**Optional Challenge:**\n\n-   Play a sound to show your pet's excitment.",
+    "long_instructions": "_Now, let's show your pet's excitement by giving it a behavior when the new sprite touches it._\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\n## Do This:\n\n1.  Add another `when touches` block to your code. Select your pet and its toy or friend.\n2.  Use a `sprite begins` block to give your pet a new behavior _when the new sprite touches it._\n\n**Optional Challenge:**\n\n-   Play a sound to show your pet's excitement.",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/express-2022/lessons/8/levels/7": {

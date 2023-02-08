@@ -115,6 +115,10 @@ zh:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -797,6 +801,10 @@ zh:
   footer_menu_terms: 服務條款
   footer_menu_privacy: 隱私政策
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: 一小時玩程式
   learn_banner_blurb: 體驗為所有年齡層設計的一小時玩程式教程（支援超過 45 種語言）。參加超過 180 個國家、數以百萬計的學生、教師都加入的一小時玩程式活動。
   learn_banner_beyond: 想要不斷地學習嗎？ <a id='learn_banner_beyond'> 超越一小時</a>
@@ -5535,7 +5543,7 @@ zh:
   tutorial_irobotphone_string_platforms: 所有的主流瀏覽器
   tutorial_codeguppydraw_string_platforms: 所有的主流瀏覽器
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -8387,8 +8395,7 @@ zh:
   tutorial_microsoftforest_string_platforms: 所有的主流瀏覽器
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: 所有的主流瀏覽器
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: Windows, iPad, MacOS
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: 所有的主流瀏覽器
   tutorial_codeartportrait_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
@@ -8776,6 +8783,10 @@ zh:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -9111,6 +9122,18 @@ zh:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: 學前 - 年級 5
   tutorial_rpledfirefly_string_detail_grades: 年級 6-8
   tutorial_rpcharting_string_detail_grades: 年級 9+
@@ -9203,6 +9226,10 @@ zh:
   tutorial_nasapackage_string_detail_grades: 年級 6-8
   tutorial_nasalunar_string_detail_grades: 年級 6-8
   tutorial_meeestate_string_detail_grades: 年級 2+
+  tutorial_imagipixelart_string_detail_grades: 年級 2-8
+  tutorial_kcjhealth_string_detail_grades: 年級 6+
+  tutorial_msftwakanda_string_detail_grades: 年級 6+
+  tutorial_nafbrand_string_detail_grades: 年級 9+
   tutorial_rpccw_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
     iPhone
   tutorial_rpledfirefly_string_platforms: 所有的主流瀏覽器
@@ -9320,8 +9347,13 @@ zh:
   tutorial_nasaorbit_string_platforms: 所有的主流瀏覽器
   tutorial_nasapackage_string_platforms: 所有的主流瀏覽器
   tutorial_nasalunar_string_platforms: 所有現代瀏覽器，iPad，iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: 所有的主流瀏覽器
+  tutorial_msftwakanda_string_platforms: 所有的主流瀏覽器
+  tutorial_nafbrand_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -9415,6 +9447,10 @@ zh:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: 積木式
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -9513,29 +9549,10 @@ zh:
   tutorial_nasapackage_string_detail_programming_languages: 積木式
   tutorial_nasalunar_string_detail_programming_languages: 積木式, JavaScript
   tutorial_meeestate_string_detail_programming_languages: 積木式, Python
-  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
-    animations in this 1 hour crash course!
-  tutorial_imagipixelart_name: Code your own pixel art!
-  tutorial_imagipixelart_string_detail_grades: 年級 2-8
-  tutorial_imagipixelart_string_detail_platforms: ''
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
-    Windows phone, Android phone, iPhone
-  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
-    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
-  tutorial_kcjhealth_name: The Health & Well-Being Challenge
-  tutorial_kcjhealth_string_detail_grades: 年級 6+
-  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
   tutorial_kcjhealth_string_detail_programming_languages: 積木式
-  tutorial_kcjhealth_string_platforms: 所有的主流瀏覽器
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
-    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
-    ''Black Panther: Wakanda Forever''!'
-  tutorial_msftwakanda_name: Long Live Wakanda
-  tutorial_msftwakanda_string_detail_grades: 年級 6+
-  tutorial_msftwakanda_string_detail_platforms: ''
   tutorial_msftwakanda_string_detail_programming_languages: 積木式
-  tutorial_msftwakanda_string_platforms: 所有的主流瀏覽器
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: 我們找不到你的學校。請輸入更多資訊。
   school_name: 學校名稱
   school_name_error: 需填寫學校名稱。
@@ -9580,6 +9597,13 @@ zh:
   all: 所有
   dont_know: 我不知道
   language_label: Language
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

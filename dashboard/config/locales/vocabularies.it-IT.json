@@ -847,6 +847,9 @@
         "input/csd/2022": {
           "word": "Input"
         },
+        "processing/csd/2022": {
+          "word": "Elaborazione"
+        },
         "bug/csd/2022": {
           "word": "Bug (errore)",
           "definition": "Parte di un programma che non funziona correttamente."
@@ -1492,6 +1495,9 @@
         },
         "input/csd/2021": {
           "word": "Input"
+        },
+        "processing/csd/2021": {
+          "word": "Elaborazione"
         },
         "digital_footprint/csd/2021": {
           "word": "Orme digitali"

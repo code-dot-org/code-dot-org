@@ -31,7 +31,7 @@ ca:
         title: Recapitulació
         desc: La recapitulació final a la primera sèrie de 20 hores ajudarà la classe a reviure tots els seus moments preferits al mateix temps que els hi proporciona els passos següents que han de prendre si estan interessats a continuar l'odissea informàtica.
       UnplugHappyMaps:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       MoveIt:
         title: Mou-te, mou-te
@@ -110,7 +110,7 @@ ca:
         title: 'Algoritmes reals: Planta una llavor'
         desc: Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important.
       courseA_unplugged_happyMaps:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       courseA_unplugged_goingPlacesSafely:
         title: Anar als llocs amb precaució
@@ -167,7 +167,7 @@ ca:
         title: 'Algoritmes reals: Planta una llavor'
         desc: Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important.
       UnplugHappyMaps_2018:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       GoingPlacesSafely_2018:
         title: Anar als llocs amb precaució
@@ -200,11 +200,13 @@ ca:
         title: Polseres binàries
         desc: Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres.
       MoveItMoveIt_2018:
-        title: Mou-lo, Mou-lo
+        title: A moure's!
       RelayProgramming_2018:
         title: Programació en relleus
       courseB_unplugged_MRF_2019:
         title: Els meus amics robòtics
+      courseB_unplugged_loopyMRF_2019:
+        title: Els meus amics robòtics amb bucles
       Conditionals_2019:
         title: Condicionals
         desc: Per aprendre de les declaracions de condicionals, els alumnes juguen un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
@@ -236,15 +238,17 @@ ca:
         title: 'Algoritmes reals: Planta una llavor'
         desc: Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important.
       UnplugHappyMaps_2019:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       GoingPlacesSafely_2019:
         title: Anar als llocs amb precaució
         desc: Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet.
       MoveItMoveIt_2019:
-        title: Mou-lo, Mou-lo
+        title: A moure's!
       DigitalFootprint_2019:
         title: La vostra empremta digital
+      GraphingData_2019:
+        title: Dades en imatges
       timeforcs_demo_crowdsourcing:
         title: Col·laboració oberta
       timeforcs_demo_conditionals:

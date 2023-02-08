@@ -45,6 +45,10 @@ function member(elt, array) {
   return false;
 }
 
+function checkSpriteExists(id) {
+  return member(id, getSpriteIdsInUse());
+}
+
 /**
 Updates several helper variables that are used in validation code:
 - spriteIds - an array of all the current sprite IDs
@@ -293,12 +297,15 @@ SPRITE VALIDATION
  }, "changeLocation");  // include i18n feedback string
  */
 function checkMovedSpritePin(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteX = getProp(sprite, "x");
-  var spriteY = getProp(sprite, "y");
-  if(spriteX != 200 || spriteY != 200) {
-    return true;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteX = getProp(sprite, "x");
+    var spriteY = getProp(sprite, "y");
+    if(spriteX != 200 || spriteY != 200) {
+      return true;
+ 	}
   }
+  return false;
 }
 
 
@@ -314,13 +321,16 @@ function checkMovedSpritePin(spriteId) {
   }, "useSetpropBlock");
  */
 function checkNotDefaultSize(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteScale = getProp(sprite, "scale");
-  if(spriteScale != 100) {
-    return true;
-  } else {
-  	return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteScale = getProp(sprite, "scale");
+    if(spriteScale != 100) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 //Checks if the sprite has been changed from the default costume
@@ -338,13 +348,16 @@ function checkNotDefaultSize(spriteId) {
  }, "cscLandmarkChangeCostume");  // include i18n feedback string
  */
 function checkNotDefaultCostume(spriteId, defaultCostume) {
-  var sprite = {id: spriteId};
-  var spriteCostume = getProp(sprite, "costume");
-  if(spriteCostume != defaultCostume) {
-    return true;
-  } else {
-    return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteCostume = getProp(sprite, "costume");
+    if(spriteCostume != defaultCostume) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 
@@ -557,7 +570,10 @@ function checkThisSpriteClickedThisFrame(spriteId) {
   }, "cscLandmarkBackgroundStoryteller");  // include i18n feedback string
   */
 function checkNewBackground() {
-  return getBackground() != validationProps.previous.background;
+  if (getBackground() != '' && getBackground() != null) {
+  	return getBackground() != validationProps.previous.background;
+  }
+  return false;
 }
 
 //Checks if n unique touch events have happened
@@ -602,7 +618,10 @@ function checkUniqueTouchEvents(n, delayTime) {
  }, "noEvents");
  */
 function checkAtLeastNEvents(n) {
-  return eventLog.length >= n;
+  if (eventLog) {
+      return eventLog.length >= n;
+  }
+  return false;
 }
 
 //Checks if a prompt appeared with an event
@@ -1085,4 +1104,11 @@ function checkInteractiveSpriteMovement() {
 
 function checkUsedWhenRun() {
 	console.log(getEventLog());
+}
+
+function checkSpriteHasBehavior(spriteId, behaviorString) {
+  if (spriteId == undefined) { console.log("No sprite ID supplied to checkSpriteHasBehavior"); return; }
+  if (behaviorString == undefined) { console.log("No behavior string supplied to checkSpriteHasBehavior"); return; }
+
+  return member(behaviorString, getBehaviorsForSpriteId(spriteId));
 }

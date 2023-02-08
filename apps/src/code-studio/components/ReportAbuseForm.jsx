@@ -118,6 +118,7 @@ export default class ReportAbuseForm extends React.Component {
             style={{width: INPUT_WIDTH}}
             defaultValue={this.props.abuseUrl}
             name="abuse_url"
+            id="uitest-abuse-url"
           />
 
           <div>

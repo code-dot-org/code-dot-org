@@ -6031,7 +6031,7 @@ sk-SK:
         content1: Pozri si nasledujúci kód a uhádni, kde sa objaví sprajt včely.
         title: Umiestnenie sprajtu včely
       CSD Games Properties practice_2021:
-        display_name: Vlastnosti postáv
+        display_name: Vlastnosti sprajtov
         description: Vyskúšaj si vlastnosti sprajtov, ktoré sme sa tu naučili
       CSD Header Size MC_2018_2019_pilot_2021:
         answers:
@@ -6574,7 +6574,7 @@ sk-SK:
         content1: Pozri si nasledujúci kód a uhádni, kde sa objaví sprajt včely.
         title: Umiestnenie sprajtu včely
       CSD Games Properties practice_2022:
-        display_name: Vlastnosti postáv
+        display_name: Vlastnosti sprajtov
         description: Vyskúšaj si vlastnosti sprajtov, ktoré sme sa tu naučili
       CSD Header Size MC_2018_2019_pilot_2022:
         answers:
@@ -17081,20 +17081,12 @@ sk-SK:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat sa dostane k žaluďu. V tomto kóde nie sú žiadne chyby.
-          feedback: Nesprávne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
-            ďaleko vpred aby sa dostal až k žaluďu.
         - text: Scrat sa nedostane k žaluďu pretože sa otočí nesprávnym smerom.
           correct: true
-          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
-            ďaleko vpred aby sa dostal až k žaluďu.
         - text: Scrat sa nedostane až k žaluďu, pretože je použitých málo bokov `posuň
             sa dopredu`.
-          correct: true
-          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
-            ďaleko vpred aby sa dostal až k žaluďu.
         - text: Scrat sa nepohne z prvého bloku.
-          feedback: V tomto kóde sú dve chyby. Ako prvé Scrat zle odbočí, potom sa
-            neposunie dostatočne ďaleko vpred aby sa dostal až k žaluďu.
+          feedback: Scrat sa nedostane k žaluďu pretože sa otočí nesprávnym smerom.
         questions:
         - text: Hľadaj chyby v kóde. Dostane sa Scrat až k žaluďu alebo narazí na
             problém?
@@ -17766,17 +17758,15 @@ sk-SK:
         display_name: Podmienky – cvičenia
       CSD web keyboard practice choice_2021:
         description: V týchto aktivitách si precvičíš zadávanie vstupov pomocou klávesnice.
-        display_name: Precvičenie zadávania vstupov pomocou klávesnice
+        display_name: Vstup z klávesnice – cvičenie
       CSD web keyboard practice choice_2022:
         description: V týchto aktivitách si precvičíš zadávanie vstupov pomocou klávesnice.
-        display_name: Precvičenie zadávania vstupov pomocou klávesnice
+        display_name: Vstup z klávesnice – cvičenie
       CSD web mouse practice choice_2021:
         description: V týchto aktivitách si precvičíš zadávanie údajov pomocou klávesnice
           a používanie bloku if/else.
         display_name: Vstup pomocou myši a „if/else“ – cvičenia
       CSD web mouse practice choice_2022:
-        description: V týchto aktivitách si precvičíš zadávanie údajov pomocou klávesnice
-          a používanie bloku if/else.
         display_name: Vstup pomocou myši a „if/else“ – cvičenia
       CSD Games Properties challenge_2021:
         description: Vyskúšaj si tieto nové úlohy s vlastnosťami sprajtov

@@ -1,3 +1,4 @@
+import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
   ScrollOptions
@@ -18,6 +19,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
+import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './addons/cdoTheme';
 import initializeTouch from './addons/cdoTouch';
@@ -36,6 +38,9 @@ import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
+
+const INFINITE_LOOP_TRAP =
+  '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -92,9 +97,18 @@ const BlocklyWrapper = function(blocklyInstance) {
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
-  blocklyWrapper.setInfiniteLoopTrap = function() {}; // TODO
-  blocklyWrapper.clearInfiniteLoopTrap = function() {}; // TODO
-  blocklyWrapper.getInfiniteLoopTrap = function() {}; // TODO
+  blocklyWrapper.setInfiniteLoopTrap = function() {
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
+  };
+
+  blocklyWrapper.clearInfiniteLoopTrap = function() {
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
+  };
+
+  blocklyWrapper.getInfiniteLoopTrap = function() {
+    return Blockly.JavaScript.INFINITE_LOOP_TRAP;
+  };
+
   blocklyWrapper.loopHighlight = function() {}; // TODO
   blocklyWrapper.getWorkspaceCode = function() {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
@@ -120,6 +134,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
   blocklyWrapper.wrapReadOnlyProperty('Events');
+  blocklyWrapper.wrapReadOnlyProperty('Extensions');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleTextInput');
@@ -130,6 +145,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
+  blocklyWrapper.wrapReadOnlyProperty('fieldRegistry');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -140,6 +156,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
   blocklyWrapper.wrapReadOnlyProperty('geras');
+  blocklyWrapper.wrapReadOnlyProperty('thrasos');
   blocklyWrapper.wrapReadOnlyProperty('zelos');
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
@@ -160,6 +177,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('RTL');
   blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
   blocklyWrapper.wrapReadOnlyProperty('selected');
+  blocklyWrapper.wrapReadOnlyProperty('serialization');
   blocklyWrapper.wrapReadOnlyProperty('SPRITE');
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
@@ -216,6 +234,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   );
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
+    'cdo_renderer_thrasos',
+    CdoRendererThrasos,
+    true /* opt_allowOverrides */
+  );
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.RENDERER,
     'cdo_renderer_zelos',
     CdoRendererZelos,
     true /* opt_allowOverrides */
@@ -240,6 +264,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
+  // Properties cannot be modified until wrapSettableProperty has been called
   blocklyWrapper.wrapSettableProperty('assetUrl');
   blocklyWrapper.wrapSettableProperty('behaviorEditor');
   blocklyWrapper.wrapSettableProperty('customSimpleDialog');
@@ -251,6 +276,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
+
+  blocklyWrapper.JavaScript = javascriptGenerator;
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -266,10 +293,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.addChangeListener = function(blockspace, handler) {
     blockspace.addChangeListener(handler);
-  };
-
-  blocklyWrapper.getWorkspaceCode = function() {
-    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
   };
 
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
@@ -307,9 +330,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.BlockSvg.prototype.isUnused = function() {
-    const isTopBlock = this.previousConnection === null;
-    const hasParentBlock = !!this.parentBlock_;
-    return !(isTopBlock || hasParentBlock);
+    return this.disabled;
   };
 
   blocklyWrapper.BlockSvg.prototype.removeUnusedBlockFrame = function() {
@@ -525,13 +546,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.customSimpleDialog = opt_options.customSimpleDialog;
 
     // Shrink container to make room for the workspace header
-    container.style.height = `calc(100% - ${
-      styleConstants['workspace-headers-height']
-    }px)`;
+    if (!opt_options.isBlockEditMode) {
+      container.style.height = `calc(100% - ${
+        styleConstants['workspace-headers-height']
+      }px)`;
+    }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
-    if (!blocklyWrapper.isStartMode) {
+    if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
       workspace.addChangeListener(Blockly.Events.disableOrphans);
     }
 

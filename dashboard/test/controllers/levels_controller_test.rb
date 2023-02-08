@@ -769,7 +769,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should prevent rename of stanadalone project level" do
     level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
-    create(:level, name: level_name) unless Level.where(name: level_name).exists?
+    create(:level, name: level_name) unless Level.exists?(name: level_name)
     level = Level.find_by(name: level_name)
 
     get :edit, params: {id: level.id}
@@ -955,14 +955,14 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update karel data properly" do
     game = Game.find_by_name("CustomMaze")
     maze_array = [
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 2}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 1, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 2, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 3, "range": 1}, {"tileType": 1, "featureType": 1, "value": 1, "cloudType": 4, "range": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}]
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 2}, {tileType: 1, featureType: 2, value: 1, cloudType: 1, range: 1}, {tileType: 1, featureType: 2, value: 1, cloudType: 2, range: 1}, {tileType: 1, featureType: 2, value: 1, cloudType: 3, range: 1}, {tileType: 1, featureType: 1, value: 1, cloudType: 4, range: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}]
     ]
     post :create, params: {
       level: {

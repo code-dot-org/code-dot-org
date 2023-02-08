@@ -152,7 +152,7 @@ namespace :test do
         seed_file = Tempfile.new(['db_seed', '.sql'])
         auto_inc = 's/ AUTO_INCREMENT=[0-9]*\b//'
         writer = URI.parse(CDO.dashboard_db_writer || 'mysql://root@localhost/dashboard_test')
-        database = writer.path[1..-1]
+        database = writer.path[1..]
         writer.path = ''
         opts = MysqlConsoleHelper.options(writer)
         mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
@@ -190,7 +190,7 @@ namespace :test do
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
           CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          databases = procs.times.map {|i| "#{database}#{i + 1}"}
+          databases = Array.new(procs) {|i| "#{database}#{i + 1}"}
           databases.each do |db|
             recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
             RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql #{opts}"
