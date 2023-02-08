@@ -81,11 +81,18 @@ export default class AnimationPickerListItem extends React.Component {
                 onPreviewLoad={() => this.setState({loaded: true})}
               />
             )}
-            {icon && <i className={'fa fa-' + icon} />}
+            {icon && (
+              <i
+                className={classNames(
+                  'fa fa-' + icon,
+                  isBackgroundsTab && style.icon
+                )}
+              />
+            )}
             {isBackgroundsTab && (
-              <p className={classNames(style.label, style.labelIcon)}>
+              <span className={classNames(style.label, style.labelIcon)}>
                 {label}
-              </p>
+              </span>
             )}
             {category && (
               <img
