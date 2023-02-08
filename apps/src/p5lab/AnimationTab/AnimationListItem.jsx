@@ -16,7 +16,7 @@ import {selectAnimation, selectBackground} from '../redux/animationTab';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 import _ from 'lodash';
-import {CURRENT_ANIMATION_TYPE} from '../constants';
+import {P5LabInterfaceMode} from '../constants';
 
 /**
  * A single list item representing an animation.  Displays an animated
@@ -30,7 +30,7 @@ class AnimationListItem extends React.Component {
     animationList: shapes.AnimationList.isRequired,
     columnWidth: PropTypes.number.isRequired,
     cloneAnimation: PropTypes.func.isRequired,
-    currentAnimationType: PropTypes.oneOf(Object.values(CURRENT_ANIMATION_TYPE))
+    interfaceMode: PropTypes.oneOf(Object.values(P5LabInterfaceMode))
       .isRequired,
     deleteAnimation: PropTypes.func.isRequired,
     selectAnimation: PropTypes.func.isRequired,
@@ -85,7 +85,7 @@ class AnimationListItem extends React.Component {
   }
 
   onSelect = () => {
-    if (this.props.currentAnimationType === CURRENT_ANIMATION_TYPE.background) {
+    if (this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND) {
       this.props.selectBackground(this.props.animationKey);
     } else {
       this.props.selectAnimation(this.props.animationKey);
@@ -95,7 +95,7 @@ class AnimationListItem extends React.Component {
   cloneAnimation = evt => {
     this.props.cloneAnimation(
       this.props.animationKey,
-      this.props.currentAnimationType
+      this.props.interfaceMode
     );
     evt.stopPropagation();
   };
@@ -104,7 +104,7 @@ class AnimationListItem extends React.Component {
     this.props.deleteAnimation(
       this.props.animationKey,
       this.props.isSpriteLab,
-      this.props.currentAnimationType
+      this.props.interfaceMode
     );
   };
 
@@ -302,7 +302,7 @@ const styles = {
 };
 export default connect(
   state => ({
-    currentAnimationType: state.animationTab.currentAnimationType,
+    interfaceMode: state.animationTab.interfaceMode,
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
       state.pageConstants.allAnimationsSingleFrame || false,

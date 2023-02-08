@@ -154,9 +154,7 @@ const styles = {
 export default connect(
   state => ({
     currentAnimation:
-      state.animationTab.currentAnimations[
-        state.animationTab.currentAnimationType
-      ],
+      state.animationTab.currentAnimations[state.animationTab.interfaceMode],
     columnSizes: state.animationTab.columnSizes
   }),
   dispatch => ({

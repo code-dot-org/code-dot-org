@@ -1,18 +1,18 @@
 /** @file Redux actions and reducer for the AnimationTab */
 
-import {CURRENT_ANIMATION_TYPE} from '../constants';
+import {P5LabInterfaceMode} from '../constants';
 
 const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
 const SELECT_BACKGROUND = 'AnimationTab/SELECT_BACKGROUND';
-const SET_ANIMATION_TYPE = 'AnimationTab/SET_ANIMATION_TYPE';
+const SET_INTERFACE_MODE = 'AnimationTab/SET_INTERFACE_MODE';
 const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
 
 const initialState = {
   currentAnimations: {
-    [CURRENT_ANIMATION_TYPE.default]: '',
-    [CURRENT_ANIMATION_TYPE.background]: ''
+    [P5LabInterfaceMode.ANIMATION]: '',
+    [P5LabInterfaceMode.BACKGROUND]: ''
   },
-  currentAnimationType: CURRENT_ANIMATION_TYPE.default,
+  interfaceMode: P5LabInterfaceMode.CODE,
   columnSizes: [150, undefined]
 };
 
@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
       ...state,
       currentAnimations: {
         ...state.currentAnimations,
-        default: action.animationKey
+        [P5LabInterfaceMode.ANIMATION]: action.animationKey
       }
     };
   }
@@ -31,17 +31,17 @@ export default (state = initialState, action) => {
       ...state,
       currentAnimations: {
         ...state.currentAnimations,
-        background: action.animationKey
+        [P5LabInterfaceMode.BACKGROUND]: action.animationKey
       }
     };
   }
-  if (action.type === SET_ANIMATION_TYPE) {
+  if (action.type === SET_INTERFACE_MODE) {
     return {
       ...state,
-      currentAnimationType:
+      interfaceMode:
         action.mode === 'BACKGROUND'
-          ? CURRENT_ANIMATION_TYPE.background
-          : CURRENT_ANIMATION_TYPE.default
+          ? P5LabInterfaceMode.BACKGROUND
+          : P5LabInterfaceMode.ANIMATION
     };
   }
   if (action.type === SET_COLUMN_SIZES) {
@@ -69,11 +69,11 @@ export function selectBackground(animationKey) {
 }
 
 /**
- * Switch to background mode (Sprite Lab only)
+ * Switch interace mode (CODE, ANIMATION, or BACKGROUND)
  * @returns {{type: string}}
  */
-export function setAnimationType(mode) {
-  return {type: SET_ANIMATION_TYPE, mode};
+export function setInterfaceMode(mode) {
+  return {type: SET_INTERFACE_MODE, mode};
 }
 
 /**

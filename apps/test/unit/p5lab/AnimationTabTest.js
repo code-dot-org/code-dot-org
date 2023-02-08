@@ -6,8 +6,8 @@ describe('AnimationTab', function() {
     var reducer = animationTab.default;
     var initialState = {
       columnSizes: [150, undefined],
-      currentAnimations: {default: '', background: ''},
-      currentAnimationType: 'default'
+      currentAnimations: {ANIMATION: '', BAKGROUND: ''},
+      interfaceMode: 'CODE'
     };
 
     it('has expected initial state', function() {
@@ -17,7 +17,7 @@ describe('AnimationTab', function() {
     it('returns original state on unhandled action', function() {
       var state = {
         columnSizes: [150, undefined],
-        currentAnimations: {default: 'whatever', background: ''}
+        currentAnimations: {ANIMATION: 'whatever', BACKGROUND: ''}
       };
       expect(reducer(state, {})).to.equal(state);
     });
@@ -29,7 +29,7 @@ describe('AnimationTab', function() {
         var newState = reducer(initialState, selectAnimation('animationKey'));
         expect(newState).not.to.equal(initialState);
         expect(newState).to.have.deep.property(
-          'currentAnimations.default',
+          'currentAnimations.ANIMATION',
           'animationKey'
         );
       });
@@ -37,7 +37,7 @@ describe('AnimationTab', function() {
       it('does not change state if animation already selected', function() {
         var state = {
           columnSizes: [150, undefined],
-          currentAnimations: {default: 'anotherKey', background: ''}
+          currentAnimations: {ANIMATION: 'anotherKey', BACKGROUND: ''}
         };
         var newState = reducer(state, selectAnimation('anotherKey'));
         expect(newState).to.deep.equal(state);
@@ -51,7 +51,7 @@ describe('AnimationTab', function() {
         var newState = reducer(initialState, selectBackground('backgroundKey'));
         expect(newState).not.to.equal(initialState);
         expect(newState).to.have.deep.property(
-          'currentAnimations.background',
+          'currentAnimations.BACKGROUND',
           'backgroundKey'
         );
       });
@@ -59,7 +59,7 @@ describe('AnimationTab', function() {
       it('does not change state if background already selected', function() {
         var state = {
           columnSizes: [150, undefined],
-          currentAnimations: {default: '', background: 'anotherKey'}
+          currentAnimations: {ANIMATION: '', BACKGROUND: 'anotherKey'}
         };
         var newState = reducer(state, selectBackground('anotherKey'));
         expect(newState).to.deep.equal(state);
