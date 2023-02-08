@@ -17,6 +17,16 @@ module ScriptConstants
   CSP17_UNIT2_NAME = 'csp2-2017'.freeze
   CSP17_UNIT3_NAME = 'csp3-2017'.freeze
 
+  # CSF family names
+  COURSEA = 'coursea'.freeze
+  COURSEB = 'courseb'.freeze
+  COURSEC = 'coursec'.freeze
+  COURSED = 'coursed'.freeze
+  COURSEE = 'coursee'.freeze
+  COURSEF = 'coursef'.freeze
+  EXPRESS = 'express'.freeze
+  PREEXPRESS = 'pre-express'.freeze
+
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
   # a category will be the order in which they appear in the dropdown, and the
