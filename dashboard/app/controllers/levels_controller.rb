@@ -141,7 +141,7 @@ class LevelsController < ApplicationController
   # GET /levels/1/edit
   def edit
     # Make sure that the encrypted property is a boolean
-    if @level.properties['encrypted']&.is_a?(String)
+    if @level.properties['encrypted'].is_a?(String)
       @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
     end
     bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
