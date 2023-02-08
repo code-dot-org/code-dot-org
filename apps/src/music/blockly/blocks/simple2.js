@@ -2,6 +2,39 @@ import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
 import {DEFAULT_SOUND, TRIGGER_FIELD} from '../constants';
 
+// Some helpers used when generating code to be used by the interpreter.
+// Called by executeSong().
+export class GeneratorHelpersSimple2 {
+  // Given the function's name and body code, this returns the
+  // code for the function's implementation.  All functions
+  // in this model play sounds sequentially by default.
+  static getFunctionImplementation(functionName, functionCode) {
+    return `function ${functionName}() {
+      ProgramSequencer.playSequential();
+      ${functionCode}
+      ProgramSequencer.endSequential();
+    }
+    `;
+  }
+
+  // Given a block of code with function calls, and also function implementations,
+  // this returns the implementation of the when_run block to be used when the user
+  // didn't provide their own implementation.  In this implementation, all of the
+  // provided functions are called immediately, simulating tracks mode.
+  static getDefaultWhenRunImplementation(
+    functionCallsCode,
+    functionImplementationsCode
+  ) {
+    return `
+    var __insideWhenRun = true;
+    ProgramSequencer.init();
+    ProgramSequencer.playTogether();
+    ${functionCallsCode}
+    ${functionImplementationsCode}
+  `;
+  }
+}
+
 export const whenRunSimple2 = {
   definition: {
     type: BlockTypes.WHEN_RUN_SIMPLE2,
