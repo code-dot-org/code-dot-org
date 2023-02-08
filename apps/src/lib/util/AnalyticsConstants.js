@@ -2,6 +2,7 @@ const EVENTS = {
   // Sign-up flow
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
+  TEACHER_LOGIN_EVENT: 'Teacher Login',
 
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_EVENT: 'Course Overview Page Visited',
@@ -28,7 +29,10 @@ const EVENTS = {
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
-  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson'
+  PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
+
+  // Levels
+  FEEDBACK_SUBMITTED: 'Level Feedback Submitted'
 };
 
 export {EVENTS};
