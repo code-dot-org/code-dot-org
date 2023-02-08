@@ -22,6 +22,7 @@ import {
 } from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import trackEvent from '@cdo/apps/util/trackEvent';
+import {P5LabInterfaceMode} from '../constants';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -243,6 +244,7 @@ function generateAnimationName(baseName, animationList) {
       animationName = animationName.replace(baseName, '');
       if (animationName[0] === '_') {
         const brokenUpString = animationName.split('_');
+        // TODO: Address the fragility here if animationName includes multiple underscores.
         const number = parseInt(brokenUpString.pop());
         unavailableNumbers.push(number);
       }
@@ -403,24 +405,37 @@ const getOrderedKeysOnlyBackgrounds = serializedAnimationList => {
   });
 };
 
-export function addBlankAnimation() {
+export function addBlankAnimation(interfaceMode) {
   // To avoid special cases and saving tons of blank animations to our server,
   // we're actually adding a secret blank library animation any time the user
   // picks "Draw my own."  As soon as the user makes any changes to the
   // animation it gets saved as a custom animation in their own project, just
   // like we do with other library animations.
+  const isBackground = interfaceMode === P5LabInterfaceMode.BACKGROUND;
+  const blankAnimation = {
+    name: 'animation',
+    sourceUrl:
+      '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
+    frameSize: {x: 100, y: 100},
+    frameCount: 1,
+    looping: true,
+    frameDelay: 4,
+    version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
+  };
+  const blankBackground = {
+    name: 'blank_background',
+    sourceUrl:
+      '/api/v1/animation-library/level_animations/.31YUNsUQNxLZeGkrQper8CLl_jyNb71/blank.png',
+    frameSize: {x: 400, y: 400},
+    frameCount: 1,
+    looping: true,
+    frameDelay: 2,
+    categories: ['backgrounds'],
+    version: '.31YUNsUQNxLZeGkrQper8CLl_jyNb71'
+  };
   return addLibraryAnimation(
-    {
-      name: 'animation',
-      sourceUrl:
-        '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
-      frameSize: {x: 100, y: 100},
-      frameCount: 1,
-      looping: true,
-      frameDelay: 4,
-      version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
-    },
-    false /*skipBackground. False because these are going to be sprites or we're in gamelab*/
+    isBackground ? blankBackground : blankAnimation,
+    isBackground
   );
 }
 
