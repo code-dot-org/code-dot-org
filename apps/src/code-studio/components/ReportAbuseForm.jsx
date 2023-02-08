@@ -174,8 +174,6 @@ export default class ReportAbuseForm extends React.Component {
             <div
               className="g-recaptcha"
               data-sitekey={this.props.captchaSiteKey}
-              data-callback="onCaptchaSubmit"
-              data-expired-callback="onCaptchaExpired"
             />
           )}
           <div>
