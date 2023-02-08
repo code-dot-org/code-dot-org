@@ -91,8 +91,7 @@ class PiskelEditor extends React.Component {
   }
 
   sendPendingFramesToPiskel(animationProps) {
-    const {currentAnimation} = this.props;
-    const key = currentAnimation;
+    const {currentAnimation: key} = this.props;
     if (!animationProps) {
       throw new Error('No props present for animation with key ' + key);
     }
@@ -112,7 +111,7 @@ class PiskelEditor extends React.Component {
           this.props.removePendingFrames();
 
           // If the selected animation changed out from under us, load again.
-          if (currentAnimation !== key) {
+          if (this.props.currentAnimation !== key) {
             this.loadSelectedAnimation_(this.props);
           }
         }
