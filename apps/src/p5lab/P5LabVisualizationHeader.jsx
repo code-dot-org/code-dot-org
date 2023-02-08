@@ -12,7 +12,6 @@ import {allowAnimationMode, countAllowedModes} from './stateQueries';
 import PoemSelector from './poetry/PoemSelector';
 import * as utils from '../utils';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -22,8 +21,7 @@ class P5LabVisualizationHeader extends React.Component {
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
-      P5LabInterfaceMode.ANIMATION,
-      P5LabInterfaceMode.BACKGROUND
+      P5LabInterfaceMode.ANIMATION
     ]).isRequired,
     allowAnimationMode: PropTypes.bool.isRequired,
     onInterfaceModeChange: PropTypes.func.isRequired,
@@ -43,10 +41,7 @@ class P5LabVisualizationHeader extends React.Component {
         // Fire a window resize event to tell Game Lab (Droplet) to rerender.
         setTimeout(() => utils.fireResizeEvent(), 0);
       }
-    } else if (
-      mode === P5LabInterfaceMode.ANIMATION ||
-      mode === P5LabInterfaceMode.BACKGROUND
-    ) {
+    } else if (mode === P5LabInterfaceMode.ANIMATION) {
       if (this.props.isBlockly) {
         Blockly.WidgetDiv.hide();
         Blockly.DropDownDiv?.hide();
@@ -103,18 +98,6 @@ class P5LabVisualizationHeader extends React.Component {
                     : msg.animationMode()}
                 </button>
               )}
-              {allowAnimationMode &&
-                this.props.isBlockly &&
-                experiments.isEnabled('backgroundsTab') && (
-                  <button
-                    style={styles.buttonFocus}
-                    type="button"
-                    value={P5LabInterfaceMode.BACKGROUND}
-                    id="backgroundMode"
-                  >
-                    {msg.backgroundMode()}
-                  </button>
-                )}
             </ToggleGroup>
           </div>
         )}

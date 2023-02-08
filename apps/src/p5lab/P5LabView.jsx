@@ -41,8 +41,7 @@ class P5LabView extends React.Component {
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
-      P5LabInterfaceMode.ANIMATION,
-      P5LabInterfaceMode.BACKGROUND
+      P5LabInterfaceMode.ANIMATION
     ]).isRequired,
     isResponsive: PropTypes.bool.isRequired,
     hideSource: PropTypes.bool.isRequired,
@@ -124,11 +123,13 @@ class P5LabView extends React.Component {
     if (this.props.isBackground) {
       defaultQuery.categoryQuery = 'backgrounds';
     }
-    // We don't want them to be able to navigate to all categories if we're only showing backgrounds.
+    // we don't want them to be able to navigate to all categories if we're only showing backgrounds
     const navigable = !this.props.isBackground;
-    // We don't want to show backgrounds if we're looking for costumes in Sprite Lab.
+    // we don't want to show backgrounds if we're looking for sprites in spritelab
     const hideBackgrounds = !this.props.isBackground && this.props.isBlockly;
-    const hideCostumes = this.props.isBackground && this.props.isBlockly;
+    // we don't want students to be able to draw their own backgrounds in spritelab so if we're showing
+    // backgrounds alone, we must be in spritelab and we should get rid of the draw your own option
+    const canDraw = !this.props.isBackground;
     return (
       <div style={codeModeStyle}>
         <div
@@ -152,7 +153,7 @@ class P5LabView extends React.Component {
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
               hideBackgrounds={hideBackgrounds}
-              hideCostumes={hideCostumes}
+              canDraw={canDraw}
               pickerType={
                 this.props.isBackground
                   ? PICKER_TYPE.backgrounds
@@ -179,38 +180,16 @@ class P5LabView extends React.Component {
 
   renderAnimationMode() {
     const {allowAnimationMode, interfaceMode} = this.props;
-    let defaultQuery = {
-      categoryQuery: '',
-      searchQuery: ''
-    };
-    if (this.props.isBackground) {
-      // Navigate to the backgrounds animation category.
-      defaultQuery.categoryQuery = 'backgrounds';
-    }
     return allowAnimationMode &&
-      (interfaceMode === P5LabInterfaceMode.ANIMATION ||
-        interfaceMode === P5LabInterfaceMode.BACKGROUND) ? (
+      interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
         hideUploadOption={this.shouldHideAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
-        hideBackgrounds={
-          this.props.isBlockly &&
-          interfaceMode !== P5LabInterfaceMode.BACKGROUND
-        }
-        hideCostumes={
-          this.props.isBlockly &&
-          interfaceMode === P5LabInterfaceMode.BACKGROUND
-        }
+        hideBackgrounds={this.props.isBlockly}
         labType={this.props.labType}
-        pickerType={
-          this.props.isBackground
-            ? PICKER_TYPE.backgrounds
-            : this.state.projectType
-        }
-        interfaceMode={interfaceMode}
+        pickerType={this.state.projectType}
       />
     ) : (
       undefined

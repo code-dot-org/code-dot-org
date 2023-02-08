@@ -164,13 +164,6 @@ class AnimationListItem extends React.Component {
   };
 
   render() {
-    const {
-      allAnimationsSingleFrame,
-      isSelected,
-      isSpriteLab,
-      labType,
-      style
-    } = this.props;
     const animationProps = Object.assign(
       {},
       this.getAnimationProps(this.props),
@@ -178,7 +171,7 @@ class AnimationListItem extends React.Component {
     );
     const name = this.state.name;
     let animationName;
-    if (isSelected) {
+    if (this.props.isSelected) {
       let invalidNameStyle = this.state.isNameValid
         ? {}
         : {backgroundColor: color.lightest_red};
@@ -196,10 +189,10 @@ class AnimationListItem extends React.Component {
       animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
-    const selectedStyle = isSelected ? styles.selectedTile : {};
-    const tileStyle = {...styles.tile, ...selectedStyle, ...style};
+    const selectedStyle = this.props.isSelected ? styles.selectedTile : {};
+    const tileStyle = {...styles.tile, ...selectedStyle, ...this.props.style};
 
-    const arrowStyle = isSelected ? styles.rightArrow : {};
+    const arrowStyle = this.props.isSelected ? styles.rightArrow : {};
 
     return (
       <button style={tileStyle} onClick={this.onSelect} type="button">
@@ -207,11 +200,11 @@ class AnimationListItem extends React.Component {
         <ListItemThumbnail
           ref="thumbnail"
           animationProps={animationProps}
-          isSelected={isSelected}
-          singleFrameAnimation={allAnimationsSingleFrame}
+          isSelected={this.props.isSelected}
+          singleFrameAnimation={this.props.allAnimationsSingleFrame}
         />
-        {!isSpriteLab && animationName}
-        {isSelected && (
+        {!this.props.isSpriteLab && animationName}
+        {this.props.isSelected && (
           <ListItemButtons
             onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
@@ -221,8 +214,8 @@ class AnimationListItem extends React.Component {
             frameDelay={this.convertFrameDelayToLockedValues(
               this.state.frameDelay
             )}
-            singleFrameAnimation={allAnimationsSingleFrame}
-            labType={labType}
+            singleFrameAnimation={this.props.allAnimationsSingleFrame}
+            labType={this.props.labType}
           />
         )}
       </button>
