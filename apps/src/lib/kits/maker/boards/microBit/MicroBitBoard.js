@@ -48,6 +48,7 @@ export default class MicroBitBoard extends EventEmitter {
 
     /** @private {MicrobitFirmataClient} serial port controller */
     this.boardClient_ = new MBFirmataWrapper(portType);
+    this.boardClientWithoutSerialPort = null;
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
@@ -162,9 +163,13 @@ export default class MicroBitBoard extends EventEmitter {
    * @throws {Error} if called before connecting to firmware
    */
   initializeComponents() {
+    this.boardClientWithoutSerialPort = Object.assign({}, this.boardClient_);
+    delete this.boardClientWithoutSerialPort.serialPortWebSerial;
+    delete this.boardClientWithoutSerialPort.myPort;
+
     return createMicroBitComponents(this.boardClient_).then(components => {
       this.prewiredComponents_ = {
-        board: this.boardClient_,
+        board: this.boardClientWithoutSerialPort,
         ...components
       };
     });
@@ -323,6 +328,7 @@ export default class MicroBitBoard extends EventEmitter {
       this.boardClient_.reset();
     }
     this.boardClient_ = null;
+    this.boardClientWithoutSerialPort = null;
 
     return Promise.resolve();
   }

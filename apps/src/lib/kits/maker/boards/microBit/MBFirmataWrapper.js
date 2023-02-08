@@ -25,8 +25,6 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
   // Used in setSerialPort, which is copied from setSerialPort in MBFirmataClient,
   // as a wrapper. Lifted into its own function because of linting.
   dataReceived(data) {
-    console.log('dataReceived function - data', data);
-    console.log('this', this);
     if (this.inbufCount + data.length < this.inbuf.length) {
       this.inbuf.set(data, this.inbufCount);
       this.inbufCount += data.length;
