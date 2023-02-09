@@ -313,16 +313,22 @@ details {
     }
   }
 
-  & > summary::marker {
+  & summary::marker {
     content: "";
+
   }
 
-  & > summary::after {
+  // Hides the default arrow on Safari
+  & summary::-webkit-details-marker {
+    display:none;
+  }
+
+  & summary::after {
     font: var(--fa-font-solid);
     content: "\f107";
   }
 
-  &[open] > summary::after {
+  &[open] summary::after {
     font: var(--fa-font-solid);
     content: "\f106";
   }
