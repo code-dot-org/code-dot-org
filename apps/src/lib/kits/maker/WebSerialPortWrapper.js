@@ -39,7 +39,6 @@ export default class WebSerialPortWrapper extends EventEmitter {
 
         this.readLoop();
       })
-      .then(() => this)
       .catch(error => Promise.reject('Failure to open port: ' + error));
   }
 
@@ -57,7 +56,6 @@ export default class WebSerialPortWrapper extends EventEmitter {
         this.emit('open');
         this.readLoop();
       })
-      .then(() => this)
       .catch(error => Promise.reject('Failure to open port: ' + error));
   }
 
