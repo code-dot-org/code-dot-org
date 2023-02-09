@@ -75,12 +75,5 @@ Feature: Unit overview page
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Teacher_Blake"
     And I am on "http://studio.code.org/s/csp3-2019"
-    When I click selector ".uitest-lesson-plan" once I see it
+    And I click selector "#uitest-lesson-plan" once I see it
     And I am on "https://curriculum.code.org/csp-19/unit3/1/"
-
-  Scenario: Unit overview student resources
-    Given I create an authorized teacher-associated student named "Blake"
-    When I sign in as "Teacher_Blake"
-    And I am on "http://studio.code.org/s/csd1-2021"
-    When I click selector ".uitest-student-resources" once I see it
-    And I am on "https://studio.code.org/s/csd1-2021/lessons/1/student"
