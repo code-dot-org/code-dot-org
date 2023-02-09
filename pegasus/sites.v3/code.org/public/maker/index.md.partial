@@ -89,7 +89,8 @@ Interested in incorporating physical computing, maker education, and/or robotics
 <div class="col-45">
   <h3>Hour of Code</h3>
   <aside style="max-width: 500px; width:100%; margin: 2em auto;">
-    <a class="twitter-timeline" data-width="500" data-height="500" href="https://twitter.com/codeorg/timelines/1603521404896698369?ref_src=twsrc%5Etfw">Hour of Code | Maker - Curated tweets by codeorg</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Great problem solving skills demonstrated by grade 6/7 and 7/8 students <a href="https://twitter.com/StDominicDP?ref_src=twsrc%5Etfw">@StDominicDP</a> this morning <a href="https://twitter.com/hashtag/coding?src=hash&amp;ref_src=twsrc%5Etfw">#coding</a> <a href="https://twitter.com/hashtag/HourOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#HourOfCode</a> <a href="https://t.co/dEfgUl2pvt">pic.twitter.com/dEfgUl2pvt</a></p>&mdash; Vickie Morgado M.Ed (she/her) (@vickiemorgado1) <a href="https://twitter.com/vickiemorgado1/status/1603479652986945536?ref_src=twsrc%5Etfw">December 15, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a href="https://twitter.com/codeorg/timelines/1603521404896698369?ref_src=twsrc%5Etfw" target="_blank" rel="noopener noreferrer">Hour of Code | Maker - Curated tweets by codeorg</a>
   </aside>
 </div>
 <div class="col-50" style="float: right">
@@ -108,7 +109,7 @@ Interested in incorporating physical computing, maker education, and/or robotics
   <h2>Subscribe for the latest news</h2>
   <p>Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for Maker.</p>
   <div class="flex-container" style="text-align: center">
-    <iframe class="col-50" src="http://go.pardot.com/l/153401/2023-01-10/pqf2sr" scrolling="no" width="100%" height="400" type="text/html" frameborder="0" allowtransparency="true" style="overflow:hidden; float: none"></iframe>
+    <iframe class="col-50" src="http://go.pardot.com/l/153401/2023-01-10/pqf2sr" scrolling="yes" width="100%" height="450" type="text/html" frameborder="0" allowtransparency="true" style="overflow:hidden; float: none"></iframe>
   </div>
 </div>
 <div style="clear: both"></div>

@@ -281,26 +281,35 @@ export default class MusicPlayer {
     this.tracksMetadata[id] = {
       name,
       insideWhenRun,
-      currentMeasure: measureStart
+      currentMeasure: measureStart,
+      maxConcurrentSounds: 0
     };
   }
 
-  addSoundToTrack(trackId, soundId) {
+  addSoundsToTrack(trackId, ...soundIds) {
     if (!this.tracksMetadata[trackId]) {
       console.warn('No track with ID: ' + trackId);
       return;
     }
 
     const {currentMeasure, insideWhenRun} = this.tracksMetadata[trackId];
+    let maxSoundLength = 0;
 
-    this.playSoundAtMeasureById(
-      soundId,
-      currentMeasure,
-      insideWhenRun,
-      trackId
+    for (let soundId of soundIds) {
+      this.playSoundAtMeasureById(
+        soundId,
+        currentMeasure,
+        insideWhenRun,
+        trackId
+      );
+      maxSoundLength = Math.max(maxSoundLength, this.getLengthForId(soundId));
+    }
+
+    this.tracksMetadata[trackId].currentMeasure += maxSoundLength;
+    this.tracksMetadata[trackId].maxConcurrentSounds = Math.max(
+      soundIds.length,
+      this.tracksMetadata[trackId].maxConcurrentSounds
     );
-
-    this.tracksMetadata[trackId].currentMeasure += this.getLengthForId(soundId);
   }
 
   addRestToTrack(trackId, lengthMeasures) {
@@ -321,6 +330,14 @@ export default class MusicPlayer {
   }
 
   getLengthForId(id) {
+    return this.getSoundForId(id).length;
+  }
+
+  getTypeForId(id) {
+    return this.getSoundForId(id).type;
+  }
+
+  getSoundForId(id) {
     const splitId = id.split('/');
     const path = splitId[0];
     const src = splitId[1];
@@ -330,6 +347,6 @@ export default class MusicPlayer {
     );
     const sound = folder.sounds.find(sound => sound.src === src);
 
-    return sound.length;
+    return sound;
   }
 }

@@ -1,5 +1,6 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
+reply-to: 'Code.org <support@code.org>'
 subject: "Your local school’s computer science program"
 ---
 Thank you for sharing information about your school’s computer science program and your continued support of our mission to give every student the opportunity to learn computer science.

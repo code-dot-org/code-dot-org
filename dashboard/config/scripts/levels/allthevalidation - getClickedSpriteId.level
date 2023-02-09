@@ -38,15 +38,18 @@
     "hide_pause_button": "false",
     "authored_hints": "[]",
     "long_instructions": "# allthevalidation Template\r\n\r\n**Make sure to import the correct helper libraries, especially `zCriterionValidationLibrary`**\r\n\r\nThis level validates the function getClickedSpriteId(), which returns the ID of the sprite clicked this frame.\r\n\r\nTest criteria: When the sprite is clicked, it should print the sprite's ID to the canvas and pass the level.",
-    "validation_code": "if(World.frameCount == 1) {\r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n  setupPrevious();\r\n\r\n  addCriteria(function() {\r\n    if (clickEventFound()) {\r\n    \tprintText(getClickedSpriteId());\r\n      \treturn true;\r\n    }\r\n  }, \"subject\");\r\n}\r\ngetHelperVars();\r\ncheck();\r\nupdatePrevious();",
-    "preload_asset_list": null
+    "validation_code": "if (World.frameCount == 1) {\r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n  setupPrevious();\r\n\r\n  addCriteria(function() {\r\n    if (clickEventFound()) {\r\n    \tprintText(getClickedSpriteId());\r\n      \treturn true;\r\n    }\r\n  }, \"subject\");\r\n}\r\n\r\ngetHelperVars();\r\ncheck();\r\nupdatePrevious();",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-12-06T14:20:25.000Z",
-  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-12-06T14:20:25.904+00:00\",\"changed\":[\"cloned from \\\"allthevalidation - checkNotDefaultBackground\\\"\"],\"cloned_from\":\"allthevalidation - checkNotDefaultBackground\"},{\"changed_at\":\"2022-12-06 14:22:22 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"validation_code\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-06 14:25:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-06 14:25:25 +0000\",\"changed\":[\"toolbox_blocks\",\"validation_code\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-06 14:26:09 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-30 20:29:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "created_at": "2022-12-06T14:20:25.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-12-06T14:20:25.904+00:00\",\"changed\":[\"cloned from \\\"allthevalidation - checkNotDefaultBackground\\\"\"],\"cloned_from\":\"allthevalidation - checkNotDefaultBackground\"},{\"changed_at\":\"2022-12-06 14:22:22 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"validation_code\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-06 14:25:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-06 14:25:25 +0000\",\"changed\":[\"toolbox_blocks\",\"validation_code\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-06 14:26:09 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-30 20:29:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-01-17 20:50:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,0 +1,19 @@
+name 'csc_timecapsule_markdown_lesson_4'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Share Your Time Capsule
+
+<img src="https://images.code.org/86192adb9b62e6f2937a13e276bc3a68-image-1675892561041.png" style="float:left; width:20%; padding-top:10px; padding-right:30px;"/>
+<br>
+
+**Now that you have coded your time capsule poem, it's time to share it out!**
+
+As you view your classmates' projects consider the following questions:
+
+> 1. What images and sounds did you see in your classmates’ time capsules?
+>2. How were their stories different from yours?
+>3. How were their stories similar to yours?
+>4. How did their images make you feel?
+MARKDOWN

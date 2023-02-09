@@ -64,9 +64,7 @@ class ManifestBuilder
     output_file = @options[:spritelab] ? SPRITELAB_OUTPUT_FILE : DEFAULT_OUTPUT_FILE
 
     # Write result to file
-    File.open(output_file, 'w') do |file|
-      file.write(generate_json(animation_metadata, alias_map, category_map))
-    end
+    File.write(output_file, generate_json(animation_metadata, alias_map, category_map))
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 

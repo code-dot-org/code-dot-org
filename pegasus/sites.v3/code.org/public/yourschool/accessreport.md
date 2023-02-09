@@ -19,7 +19,7 @@ The K–12 Computer Science Access Report is a collaborative partnership (with t
 
 
 The interactive visualization below provides data nationally and per state for the most recent school year of data reported in the K–12 Computer Science Access Report. Some tabs allow filtering by state, county, district, and legislative districts. The following data is also available:
-- Appendices and all the summary data for the State of Computer Science Education can be downloaded [here](https://advocacy.code.org/2021_State_of_CS_data.xlsx).
+- Appendices and all the summary data for the State of Computer Science Education can be downloaded [here](https://advocacy.code.org/data/2022_state_of_cs_data.xlsx).
 - AP computer science exam-taking data over time, by gender and race/ethnicity can be viewed at [code.org/ap](https://code.org/ap). 
 - The interactive data and raw data per school can be obtained from the Tableau view below.
 

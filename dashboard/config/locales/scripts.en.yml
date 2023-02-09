@@ -8991,21 +8991,8 @@ en:
           title: Arrays and Algorithms
           description_audience: ''
           description_short: Students use one-dimensional (1D) arrays to store lists of primitive values and object references.
-          description: |-
-            This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to represent lists of data while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, students identify the preconditions and postconditions that an algorithm must satisfy. Additionally, students learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
-
-            ### AP Classroom Personal Progress Checks
-            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa3-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
-
-            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
-            * Personal Progress Check 4
-            * Personal Progress Check 6
-
-            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
-
-            ## Finished Teaching This Unit?
-            Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3) to let the Code.org curriculum team know how the unit went.
-          student_description: This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to represent lists of data while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, you identify the preconditions and postconditions that an algorithm must satisfy. Additionally, you learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
+          description: "This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to store multiple related values while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, students identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. Students continue to develop software engineering skills as they learn to make design decisions and use 1D arrays to store and analyze data.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### *By the end of this unit, students will be able to . . .*\n\n* Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n* Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n* Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n* Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n* Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n* Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n:::\n&nbsp\n\n::: details [**✅ AP Classroom Personal Progress Checks**]\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa3-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n* Personal Progress Check 4\n* Personal Progress Check 6\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3) to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to store multiple related values while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, you identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. You continue to develop software engineering skills as you learn to make design decisions and use 1D arrays to store and analyze data.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### *By the end of this unit, you will be able to . . .*\n\n* Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n* Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n* Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n* Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n* Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n* Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n:::"
         csa4-2023:
           lessons: {}
           lesson_groups: {}
@@ -9477,6 +9464,12 @@ en:
               name: Emma's Stuff
             lesson-2:
               name: NEW- Function Machines
+            lesson-3:
+              name: NEW- Function Machines - Lesson 2
+            lesson-4:
+              name: NEW- Function Machines - Lesson 3
+            lesson-5:
+              name: NEW- Function Machines - Lesson 4
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -9518,31 +9511,37 @@ en:
               display_name: Survey
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
-          title: Digital Information ('22-'23)
+          title: Digital Information ('23-'24)
           description: 'This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world''s information.
 
 '
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description_audience: ''
+          lessons: {}
+          name: csp1-2023
         csp2-2023:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: The Internet'
-          title: The Internet ('22-'23)
+          title: The Internet ('23-'24)
           description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           description_short: Build the internet from the ground up using the Internet Simulator.
           description_audience: ''
+          lessons: {}
+          name: csp2-2023
         csp3-2023:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unit 3: Intro to App Design'
-          title: Intro to App Design ('22-'23)
+          title: Intro to App Design ('23-'24)
           description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
           description_audience: ''
+          lessons: {}
+          name: csp3-2023
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -9553,11 +9552,13 @@ en:
               display_name: Functions
             csp_project:
               display_name: Project
-          title: Variables, Conditionals, and Functions ('22-'23)
+          title: Variables, Conditionals, and Functions ('23-'24)
           description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description_audience: ''
+          lessons: {}
+          name: csp4-2023
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -9614,11 +9615,13 @@ en:
               display_name: Libraries
             lessonGroup-3:
               display_name: Post-Course Survey
-          title: Parameters, Return, and Libraries ('22-'23)
+          title: Parameters, Return, and Libraries ('23-'24)
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
           description_audience: ''
+          lessons: {}
+          name: csp7-2023
         csp8-2023:
           lesson_groups:
             lessonGroup-2:
@@ -9725,7 +9728,7 @@ en:
             * Access and modify elements in arrays
             * Traverse arrays
 
-            **Estimated Time:** 7.5 hours
+            **Estimated Time:** 5.5 hours
           student_description: |
             This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
 
@@ -9741,9 +9744,12 @@ en:
             * Access and modify elements in arrays
             * Traverse arrays
 
-            **Estimated Time:** 7.5 hours
+            **Estimated Time:** 5.5 hours
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa3-2023
         csa-examples-22:
           lessons:
             lesson-1:
@@ -9942,9 +9948,134 @@ en:
           lessons:
             lesson-1:
               name: Creating and using objects
+            lesson-2:
+              name: Exploring the Painter class
           lesson_groups: {}
           name: self-paced-pl-csa4-2023
-          title: ''
+          title: Getting to know the Painter class
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module is for any teacher who is familiar with Java OR has done Module 3, but who want introduction to the student-facing tools Code.org's in CSA Curriculum.
+
+            **You will:**
+            * Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            * Learn how to use UML diagrams
+            * Call methods from the `Painter` class
+            * Instantiate an object
+
+
+            **Estimated Time:** ~2 hours
+          student_description: |-
+            This module is for any teacher who is:
+
+            * Experienced in using variables, conditionals, loops and arrays in other programming languages
+            * Has finished Module 3 in this set of Modules
+            * Is new to Java
+            * Want an introduction to the student-facing tools in Code.org's tools in CSA Curriculum.
+
+            **You will:**
+            * Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            * Learn how to use UML diagrams
+            * Call methods from the `Painter` class
+            * Instantiate an object
+
+
+            **Estimated Time:** ~2 hours
+        katies-playground:
+          lessons:
+            lesson-1:
+              name: FM Ideas
+          lesson_groups: {}
+          name: katies-playground
+          title: Katie's Place To Do Stuff
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        microbit-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+          name: microbit-2022
+          title: Creating Apps with Devices (Micro:bit)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        microbit-temp:
+          lessons:
+            lesson-11:
+              name: LED Screen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Intro to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+            lessonGroup-4:
+              display_name: Building Physical Prototypes
+          name: microbit-temp
+          title: Micro:bit Temp
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-timecapsule-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-timecapsule-2023
+          title: Time Capsule (2023)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-2:
+              name: Content Workshop
+            lesson-1:
+              name: Workshop Opener
+            lesson-3:
+              name: Planning for Next Year
+            lesson-4:
+              name: Unconference
+            lesson-5:
+              name: Closing
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-2:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd7-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Committing to Equitable Teaching Practices
+            lesson-4:
+              name: Connecting to the Community Going Forward
+            lesson-5:
+              name: Closing
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd8-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 8
           description_audience: ''
           description_short: ''
           description: ''

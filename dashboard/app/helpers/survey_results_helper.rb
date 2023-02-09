@@ -43,7 +43,7 @@ module SurveyResultsHelper
   end
 
   def existing_survey_result?(kind)
-    SurveyResult.where(user_id: current_user.id, kind: kind).exists?
+    SurveyResult.exists?(user_id: current_user.id, kind: kind)
   end
 
   def country_us?

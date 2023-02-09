@@ -882,7 +882,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "milestone with multiple pairings creates multiple new user levels" do
     section = create(:follower, student_user: @user).section
-    pairings = 3.times.map {create(:follower, section: section).student_user}
+    pairings = Array.new(3) {create(:follower, section: section).student_user}
     session[:pairings] = pairings.map(&:id)
     session[:pairing_section_id] = section.id
 

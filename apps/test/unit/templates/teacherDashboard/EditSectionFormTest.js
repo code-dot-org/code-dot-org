@@ -409,10 +409,13 @@ describe('EditSectionForm', () => {
     assert.equal(lessonExtrasField.length, 1);
   });
 
-  it('sends completed event when save is clicked', () => {
+  it('sends completed events when save is clicked', () => {
     const wrapper = shallow(
       <EditSectionForm
         isNewSection={true}
+        initialUnitId={7}
+        initialCourseVersionId={5}
+        initialCourseOfferingId={3}
         title="Create a new section"
         handleSave={async () => {}}
         handleClose={() => {}}
@@ -432,16 +435,38 @@ describe('EditSectionForm', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     wrapper.find('Button[text="Save"]').simulate('click');
-    assert(analyticsSpy.calledOnce);
+    assert(analyticsSpy.calledTwice);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
     assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
       sectionCurriculum: courseOfferings[testSection.courseOfferingId].id,
       sectionCurriculumLocalizedName:
         courseOfferings[testSection.courseOfferingId].display_name,
+      sectionCurriculumVersionYear: '2017',
       sectionGrade: testSection.grade,
       sectionLockSelection: testSection.restrictSection,
       sectionName: testSection.name,
-      sectionPairProgramSelection: testSection.pairingAllowed
+      sectionPairProgramSelection: testSection.pairingAllowed,
+      sectionUnitId: null
+    });
+
+    assert.equal(
+      analyticsSpy.getCall(1).firstArg,
+      'Section Curriculum Assigned'
+    );
+    assert.deepEqual(analyticsSpy.getCall(1).lastArg, {
+      sectionName: testSection.name,
+      sectionId: testSection.id,
+      sectionLoginType: testSection.loginType,
+      previousUnitId: 7,
+      previousCourseId: 3,
+      previousCourseVersionId: 5,
+      previousVersionYear: '2022',
+      newUnitId: null,
+      newCourseId: courseOfferings[testSection.courseOfferingId].id,
+      newCourseVersionId: Object.values(
+        courseOfferings[testSection.courseOfferingId].course_versions
+      ).find(cv => cv.key === '2017').id,
+      newVersionYear: '2017'
     });
 
     analyticsSpy.restore();
@@ -451,6 +476,9 @@ describe('EditSectionForm', () => {
     const wrapper = shallow(
       <EditSectionForm
         isNewSection={true}
+        initialUnitId={7}
+        initialCourseVersionId={5}
+        initialCourseOfferingId={3}
         title="Create a new section"
         handleSave={async () => {}}
         handleClose={() => {}}
@@ -476,10 +504,12 @@ describe('EditSectionForm', () => {
       sectionCurriculum: courseOfferings[testSection.courseOfferingId].id,
       sectionCurriculumLocalizedName:
         courseOfferings[testSection.courseOfferingId].display_name,
+      sectionCurriculumVersionYear: '2017',
       sectionGrade: testSection.grade,
       sectionLockSelection: testSection.restrictSection,
       sectionName: testSection.name,
-      sectionPairProgramSelection: testSection.pairingAllowed
+      sectionPairProgramSelection: testSection.pairingAllowed,
+      sectionUnitId: null
     });
 
     analyticsSpy.restore();

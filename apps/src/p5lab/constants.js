@@ -2,7 +2,11 @@
 var utils = require('@cdo/apps/utils');
 
 /** @enum {string} */
-export const P5LabInterfaceMode = utils.makeEnum('CODE', 'ANIMATION');
+export const P5LabInterfaceMode = utils.makeEnum(
+  'CODE',
+  'ANIMATION',
+  'BACKGROUND'
+);
 
 /** @enum {string} */
 export const P5LabType = utils.makeEnum('GAMELAB', 'SPRITELAB', 'POETRY');

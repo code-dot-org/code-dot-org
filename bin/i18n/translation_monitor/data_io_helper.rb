@@ -9,9 +9,7 @@ module DataIOHelper
   # @param data [Hash]
   # @param file_name [string]
   def write_to_json(data, file_name)
-    File.open(file_name, 'w') do |f|
-      f.write JSON.pretty_generate(data)
-    end
+    File.write(file_name, JSON.pretty_generate(data))
   end
 
   # @param file_name [string]

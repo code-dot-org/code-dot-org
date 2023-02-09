@@ -7,6 +7,7 @@ import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 describe('AppLabVisualizationColumn', () => {
   describe('in widget mode', () => {
     let visualizationColumn;
+
     beforeEach(() => {
       visualizationColumn = shallow(
         <UnconnectedApplabVisualizationColumn
@@ -27,8 +28,7 @@ describe('AppLabVisualizationColumn', () => {
           widgetMode
           isIframeEmbed
           playspacePhoneFrame
-        />,
-        {disableLifecycleMethods: true}
+        />
       );
     });
 

@@ -66,13 +66,13 @@
       cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
       cronjob at:'0 17 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
-      
+
       # This should be run after the commit_content job that happens on both the levelbuilder
       # and staging environments
       # merge_lb_to_staging is also known as DTS or "deploy to staging"
       cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
 
-      
+
       # This should be run after the commit_content job that happens on the levelbuilder
       # environment.
       cronjob at:'20 9 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
@@ -102,7 +102,6 @@
       cronjob at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
       cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
-      cronjob at:'49 5 * * *', do:deploy_dir('bin', 'cron', 'update_census_mapbox')
       cronjob at:'0 9 * * 1-5', do:deploy_dir('bin', 'cron', 'check_for_census_inaccuracy_reports')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')

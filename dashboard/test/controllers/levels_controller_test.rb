@@ -769,7 +769,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should prevent rename of stanadalone project level" do
     level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
-    create(:level, name: level_name) unless Level.where(name: level_name).exists?
+    create(:level, name: level_name) unless Level.exists?(name: level_name)
     level = Level.find_by(name: level_name)
 
     get :edit, params: {id: level.id}

@@ -41,7 +41,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event where mouse is clicked
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.setStyle('event_blocks');
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
@@ -64,7 +64,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event where flappy hits ground
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.setStyle('event_blocks');
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
@@ -87,7 +87,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event where flappy hits a Obstacle
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.setStyle('event_blocks');
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
@@ -110,7 +110,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event where flappy enters a Obstacle
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.setStyle('event_blocks');
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
@@ -133,7 +133,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for flapping (flying upwards)
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.setStyle('default');
       if (isK1) {
         this.appendDummyInput()
           .appendField(msg.flap())
@@ -163,7 +163,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.setStyle('default');
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -212,7 +212,7 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput().appendField(soundDropdown, 'VALUE');
       }
 
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.setStyle('default');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.playSoundTooltip());
@@ -261,7 +261,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for incrementing the player's score.
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.setStyle('default');
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.score())
@@ -284,7 +284,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_endGame = {
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.setStyle('default');
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.end())
@@ -309,7 +309,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setSpeed = {
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.setStyle('variable_blocks');
       if (isK1) {
         var fieldImageDropdown = new blockly.FieldImageDropdown(
           this.K1_VALUES,
@@ -360,7 +360,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
-      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.setStyle('variable_blocks');
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -388,7 +388,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setBackground = {
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.setStyle('variable_blocks');
       var dropdown;
       var input = this.appendDummyInput();
       if (isK1) {
@@ -439,7 +439,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setPlayer = {
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.setStyle('variable_blocks');
       var dropdown;
       var input = this.appendDummyInput();
       if (isK1) {
@@ -505,7 +505,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setObstacle = {
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.setStyle('variable_blocks');
       var dropdown;
       var input = this.appendDummyInput();
       if (isK1) {
@@ -555,7 +555,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setGround = {
     helpUrl: '',
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.setStyle('variable_blocks');
       var dropdown;
       var input = this.appendDummyInput();
       if (isK1) {
@@ -608,7 +608,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
-      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.setStyle('variable_blocks');
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -633,7 +633,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setScore = {
     // Block for moving forward or backward the internal number of pixels.
     init: function() {
-      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.setStyle('variable_blocks');
       this.appendDummyInput()
         .appendField(msg.setScore())
         .appendField(

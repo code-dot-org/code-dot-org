@@ -490,22 +490,24 @@ export default class EnrollForm extends React.Component {
                 />
               )}
             </FormGroup>
-            <ButtonList
-              id="grades_teaching"
-              key="grades_teaching"
-              answers={gradesTeaching}
-              groupName="grades_teaching"
-              label={gradesLabel}
-              onChange={this.handleChange}
-              selectedItems={this.state.grades_teaching}
-              validationState={
-                this.state.errors.hasOwnProperty('grades_teaching')
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorText={this.state.errors.grades_teaching}
-              type="check"
-            />
+            {this.props.workshop_course !== ADMINCOUNSELOR && (
+              <ButtonList
+                id="grades_teaching"
+                key="grades_teaching"
+                answers={gradesTeaching}
+                groupName="grades_teaching"
+                label={gradesLabel}
+                onChange={this.handleChange}
+                selectedItems={this.state.grades_teaching}
+                validationState={
+                  this.state.errors.hasOwnProperty('grades_teaching')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorText={this.state.errors.grades_teaching}
+                type="check"
+              />
+            )}
           </FormGroup>
         )}
         {this.props.workshop_course === CSF &&

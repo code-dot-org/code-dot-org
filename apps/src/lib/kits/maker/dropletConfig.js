@@ -501,7 +501,7 @@ const microBitBlocks = [
     func: 'ledScreen.display',
     category: MICROBIT_CATEGORY,
     params: [
-      '[\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[0, 1, 0, 1, 0],\n[1, 0, 1, 0, 1]\n]'
+      '[\n[1, 1, 1, 1, 1],\n[1, 1, 1, 1, 1],\n[1, 1, 1, 1, 1],\n[1, 1, 1, 1, 1],\n[1, 1, 1, 1, 1]\n]'
     ],
     paletteParams: ['boardArray']
   },
@@ -558,12 +558,6 @@ const microBitBlocks = [
     category: MICROBIT_CATEGORY,
     type: 'property'
   },
-  {
-    func: 'compass.getHeading',
-    category: MICROBIT_CATEGORY,
-    type: 'value'
-  },
-
   {
     func: 'tempSensor.F',
     category: MICROBIT_CATEGORY,
