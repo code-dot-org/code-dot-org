@@ -20,7 +20,7 @@ const domainDependencies = [
   }
 ];
 
-class WebLabSupportVerification extends Component {
+class WebLabNetworkCheck extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -246,4 +246,4 @@ const styles = {
   }
 };
 
-export default WebLabSupportVerification;
+export default WebLabNetworkCheck;

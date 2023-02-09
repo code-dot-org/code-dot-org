@@ -11,7 +11,7 @@ class WeblabHostController < ApplicationController
     render layout: false
   end
 
-  def support_verification
+  def network_check
     @studio_url = STUDIO_URL
   end
 end

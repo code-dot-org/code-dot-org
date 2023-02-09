@@ -666,8 +666,8 @@ describe('entry tests', () => {
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
     'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
-    'weblab_host/support_verification':
-      './src/sites/studio/pages/weblab_host/support_verification.js'
+    'weblab_host/network_check':
+      './src/sites/studio/pages/weblab_host/network_check.js'
   };
 
   var internalEntries = {
