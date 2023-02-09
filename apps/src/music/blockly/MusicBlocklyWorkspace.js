@@ -18,6 +18,7 @@ import {
   playMultiMutator
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
+import {GeneratorHelpersSimple2} from './blocks/simple2';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -120,29 +121,47 @@ export default class MusicBlocklyWorkspace {
 
     const topBlocks = this.workspace.getTopBlocks();
 
-    if (getBlockMode() === BlockMode.SIMPLE2) {
-      // If there's no when_run block, then we'll generate
-      // some custom code that calls all the functions
-      // together, simulating tracks mode.
+    // These are both used for BlockMode.SIMPLE2.
+    let functionCallsCode = '';
+    let functionImplementationsCode = '';
 
+    if (getBlockMode() === BlockMode.SIMPLE2) {
+      // Go through all blocks, specifically looking for functions.
+      // As they are found, accumulate one set of code to call all of them,
+      // and a second set of code that has their implementations.
+      // We'll use the calls only when simulating tracks mode, and the
+      // implementations will become part of the runtime code for both when_run,
+      // as well as for each new trigger handler.
+      topBlocks.forEach(functionBlock => {
+        if (functionBlock.type === 'procedures_defnoreturn') {
+          // Accumulate some custom code that calls all the functions
+          // together, simulating tracks mode.
+          functionCallsCode += `${functionBlock.getFieldValue('NAME')}();
+          `;
+
+          // Accumulate some code that has all of the function implementations.
+          const functionCode = Blockly.JavaScript.blockToCode(
+            functionBlock.getChildren()[0]
+          );
+          functionImplementationsCode += GeneratorHelpersSimple2.getFunctionImplementation(
+            functionBlock.getFieldValue('NAME'),
+            functionCode
+          );
+        }
+      });
+
+      // If there's no when_run block, then we'll generate
+      // some custom code that first initializes things, and then calls all
+      // the functions together, simulating tracks mode.
       if (
         !topBlocks.some(block => block.type === BlockTypes.WHEN_RUN_SIMPLE2)
       ) {
         events.whenRunButton = {
-          code: `
-              ProgramSequencer.init();
-              ProgramSequencer.playTogether();
-            `
+          code: GeneratorHelpersSimple2.getDefaultWhenRunImplementation(
+            functionCallsCode,
+            functionImplementationsCode
+          )
         };
-
-        topBlocks.forEach(functionBlock => {
-          if (functionBlock.type === 'procedures_defnoreturn') {
-            events.whenRunButton.code += `${functionBlock.getFieldValue(
-              'NAME'
-            )}();
-            `;
-          }
-        });
       }
     }
 
@@ -155,28 +174,11 @@ export default class MusicBlocklyWorkspace {
         }
       } else {
         if (block.type === BlockTypes.WHEN_RUN_SIMPLE2) {
-          if (!events.whenRunButton) {
-            events.whenRunButton = {code: ''};
-          }
-          events.whenRunButton.code += Blockly.JavaScript.blockToCode(block);
-        }
-
-        if (block.type === 'procedures_defnoreturn') {
-          if (!events.whenRunButton) {
-            events.whenRunButton = {code: ''};
-          }
-
-          const functionCode = Blockly.JavaScript.blockToCode(
-            block.getChildren()[0]
-          );
-          events.whenRunButton.code += `function ${block.getFieldValue(
-            'NAME'
-          )}() {
-              ProgramSequencer.playSequential();
-              ${functionCode}
-              ProgramSequencer.endSequential();
-            }
-            `;
+          events.whenRunButton = {
+            code:
+              Blockly.JavaScript.blockToCode(block) +
+              functionImplementationsCode
+          };
         }
       }
 
@@ -196,12 +198,14 @@ export default class MusicBlocklyWorkspace {
         [
           BlockTypes.TRIGGERED_AT,
           BlockTypes.TRIGGERED_AT_SIMPLE,
+          BlockTypes.TRIGGERED_AT_SIMPLE2,
           BlockTypes.NEW_TRACK_ON_TRIGGER
         ].includes(block.type)
       ) {
         const id = block.getFieldValue(TRIGGER_FIELD);
         events[this.triggerIdToEvent(id)] = {
-          code: Blockly.JavaScript.blockToCode(block)
+          code:
+            Blockly.JavaScript.blockToCode(block) + functionImplementationsCode
         };
       }
     });
