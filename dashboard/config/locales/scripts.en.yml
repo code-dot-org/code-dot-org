@@ -9511,31 +9511,37 @@ en:
               display_name: Survey
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
-          title: Digital Information ('22-'23)
+          title: Digital Information ('23-'24)
           description: 'This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world''s information.
 
 '
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description_audience: ''
+          lessons: {}
+          name: csp1-2023
         csp2-2023:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: The Internet'
-          title: The Internet ('22-'23)
+          title: The Internet ('23-'24)
           description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           description_short: Build the internet from the ground up using the Internet Simulator.
           description_audience: ''
+          lessons: {}
+          name: csp2-2023
         csp3-2023:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unit 3: Intro to App Design'
-          title: Intro to App Design ('22-'23)
+          title: Intro to App Design ('23-'24)
           description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
           description_audience: ''
+          lessons: {}
+          name: csp3-2023
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -9546,11 +9552,13 @@ en:
               display_name: Functions
             csp_project:
               display_name: Project
-          title: Variables, Conditionals, and Functions ('22-'23)
+          title: Variables, Conditionals, and Functions ('23-'24)
           description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description_audience: ''
+          lessons: {}
+          name: csp4-2023
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -9607,11 +9615,13 @@ en:
               display_name: Libraries
             lessonGroup-3:
               display_name: Post-Course Survey
-          title: Parameters, Return, and Libraries ('22-'23)
+          title: Parameters, Return, and Libraries ('23-'24)
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
           description_audience: ''
+          lessons: {}
+          name: csp7-2023
         csp8-2023:
           lesson_groups:
             lessonGroup-2:
@@ -10020,6 +10030,52 @@ en:
           lesson_groups: {}
           name: csc-timecapsule-2023
           title: Time Capsule (2023)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-2:
+              name: Content Workshop
+            lesson-1:
+              name: Workshop Opener
+            lesson-3:
+              name: Planning for Next Year
+            lesson-4:
+              name: Unconference
+            lesson-5:
+              name: Closing
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-2:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd7-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Committing to Equitable Teaching Practices
+            lesson-4:
+              name: Connecting to the Community Going Forward
+            lesson-5:
+              name: Closing
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd8-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 8
           description_audience: ''
           description_short: ''
           description: ''

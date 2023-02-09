@@ -5,10 +5,18 @@ title 'Making Counters'
 markdown <<MARKDOWN
 ##Plan Your Time Capsule
 
-Today you will write your own time capsule poem. As you plan, think about what someone in the future would want to learn about your life. 
+<div>
+<img src="https://images.code.org/179efa82b25c0dd386fe69ad8da267af-image-1675887704385.png" style="float:left; width:20%; padding-top:10px; padding-right:30px;"/>
 
-Imagine your future grandchildren asking you what it was like when you were young. They want to see life through your eyes. Next class you will code your time capsule poem. 
+Today you will write your own time capsule poem. 
 
-Start thinking about what backgrounds, text effects, sounds, sprites and events you may use.
+You will create a digital treasure box of information about your life right now to share with the future. **It's like sending a message to your future self and your future friends that explains life right now.**
+
+As you plan, think about all the things you like to do and the things that are important to you. Add details about what's currently happening in your community and the world.
+
+Think about the backgrounds, text effects, sounds, sprites, and events you may use to make your digital time capsule an immersive experience.
+
+**In the next lesson, you will code your time capsule poem.**
+
 
 MARKDOWN
