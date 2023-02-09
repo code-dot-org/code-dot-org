@@ -294,6 +294,7 @@ export function pickLibraryAnimation(animation) {
       }
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendLibraryFrames(animation));
+      dispatch(hide());
     }
   };
 }
