@@ -69,31 +69,30 @@ class ManifestBuilder
     info "Mapped #{category_map.size} categories"
 
     # Write result to file
-    File.open(DEFAULT_OUTPUT_FILE, 'w') do |file|
-      file.write(
-        JSON.pretty_generate(
-          {
-            # JSON-style file comment
-            '//': [
-              'Sound Library Manifest',
-              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
-              'See tools/scripts/rebuildSoundLibraryManifest.rb for more information.'
-            ],
+    File.write(
+      DEFAULT_OUTPUT_FILE,
+      JSON.pretty_generate(
+        {
+          # JSON-style file comment
+          '//': [
+            'Sound Library Manifest',
+            'GENERATED FILE: DO NOT MODIFY DIRECTLY',
+            'See tools/scripts/rebuildSoundLibraryManifest.rb for more information.'
+          ],
 
-            # Strip aliases from metadata - they're no longer needed since they
-            #   are represented in the alias map.
-            # Also sort for stable updates
-            metadata: sound_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+          # Strip aliases from metadata - they're no longer needed since they
+          #   are represented in the alias map.
+          # Also sort for stable updates
+          metadata: sound_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
 
-            # Sort category map for stable updates
-            categories: category_map.sort.to_h,
+          # Sort category map for stable updates
+          categories: category_map.sort.to_h,
 
-            # Sort alias map for stable updates
-            aliases: alias_map.sort.to_h
-          }
-        )
+          # Sort alias map for stable updates
+          aliases: alias_map.sort.to_h
+        }
       )
-    end
+    )
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-11 20:12:27 UTC",
+    "serialized_at": "2023-02-08 19:02:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1944,28 +1944,353 @@
   ],
   "script_levels": [
     {
-      "chapter": 14,
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6 L01 Algorithms vs Problems_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6 L01 Algorithms vs Problems_2023"
+        ],
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "5fdcfa36-7e52-47be-a140-966d307e9f04"
+      },
+      "level_keys": [
+        "U6 L01 Algorithms vs Problems_2023"
+      ]
+    },
+    {
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2023"
+          "CSP U6L2 Ticket Generator_2023"
         ],
-        "progression": "Post-Course Survey Instructions"
+        "progression": "Widget: Ticket Generator"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2023"
+          "CSP U6L2 Ticket Generator_2023"
         ],
-        "lesson.key": "CS Principles Post-Course Survey",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit10_2020",
         "script.name": "csp10-2023",
-        "activity_section.key": "a29bbfde-7ee4-4e31-88d0-917c94683ddc"
+        "activity_section.key": "c77924ec-77b3-43b7-92e0-6a0c96c32103"
       },
       "level_keys": [
-        "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2023"
+        "CSP U6L2 Ticket Generator_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L2 CFU Binary Search Steps2022_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L2 CFU Binary Search Steps2022_2023"
+        ],
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "51e3a836-613b-4250-9047-1ab617d2fa09"
+      },
+      "level_keys": [
+        "U6L2 CFU Binary Search Steps2022_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L2 CFU Efficiency and Algorithms2022_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L2 CFU Efficiency and Algorithms2022_2023"
+        ],
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "51e3a836-613b-4250-9047-1ab617d2fa09"
+      },
+      "level_keys": [
+        "U6L2 CFU Efficiency and Algorithms2022_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U6L3 BigO Widget_2023"
+        ],
+        "progression": "Widget: Reasonable or Unreasonable?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U6L3 BigO Widget_2023"
+        ],
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "368159ff-e317-40f7-9372-6dadaa69deb1"
+      },
+      "level_keys": [
+        "CSP U6L3 BigO Widget_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L3 CFU Reasonable vs Unreasonable2022_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L3 CFU Reasonable vs Unreasonable2022_2023"
+        ],
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "c39997bd-0916-446a-b1fd-03cf67f65353"
+      },
+      "level_keys": [
+        "U6L3 CFU Reasonable vs Unreasonable2022_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6 L03 Evaluate Reasonable or Not_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6 L03 Evaluate Reasonable or Not_2023"
+        ],
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "c39997bd-0916-446a-b1fd-03cf67f65353"
+      },
+      "level_keys": [
+        "U6 L03 Evaluate Reasonable or Not_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U6L4 Traveling Salesman_2023"
+        ],
+        "progression": "Widget: Traveling Salesman"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U6L4 Traveling Salesman_2023"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "e88ae67a-b010-4c85-8161-77fb46573190"
+      },
+      "level_keys": [
+        "CSP U6L4 Traveling Salesman_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U6L4 Random Traveling Salesman_2023"
+        ],
+        "progression": "Widget: Traveling Salesman - Random Nodes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U6L4 Random Traveling Salesman_2023"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "9ebe549a-f47f-4e4e-ba90-2e48269df0ed"
+      },
+      "level_keys": [
+        "CSP U6L4 Random Traveling Salesman_2023"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L4 CFU Reason for Heuristics2022_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L4 CFU Reason for Heuristics2022_2023"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "fbe9180a-8332-4fe3-bcf2-e60ee916d1cd"
+      },
+      "level_keys": [
+        "U6L4 CFU Reason for Heuristics2022_2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6 L04 Unreasonable vs Undecidable_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6 L04 Unreasonable vs Undecidable_2023"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "fbe9180a-8332-4fe3-bcf2-e60ee916d1cd"
+      },
+      "level_keys": [
+        "U6 L04 Unreasonable vs Undecidable_2023"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L5 CFU Calculate Speedup2022_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L5 CFU Calculate Speedup2022_2023"
+        ],
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "32df95b1-26f8-4de9-958e-a6739bcb867f"
+      },
+      "level_keys": [
+        "U6L5 CFU Calculate Speedup2022_2023"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6 L05 Speedup Forever_2023"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6 L05 Speedup Forever_2023"
+        ],
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "32df95b1-26f8-4de9-958e-a6739bcb867f"
+      },
+      "level_keys": [
+        "U6 L05 Speedup Forever_2023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp6_2023"
+        ],
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp6_2023"
+        ],
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "d651ef22-e1f5-4c85-a9ea-3354a17e12b1"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp6_2023"
       ]
     },
     {
@@ -1997,357 +2322,15 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U6 L01 Algorithms vs Problems_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6 L01 Algorithms vs Problems_2023"
-        ],
-        "lesson.key": "Algorithms Solve Problems",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "5fdcfa36-7e52-47be-a140-966d307e9f04"
-      },
-      "level_keys": [
-        "U6 L01 Algorithms vs Problems_2023"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 1,
-      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSP U6L2 Ticket Generator_2023"
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2023"
         ],
-        "progression": "Widget: Ticket Generator"
+        "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
       "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U6L2 Ticket Generator_2023"
-        ],
-        "lesson.key": "Algorithm Efficiency",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "c77924ec-77b3-43b7-92e0-6a0c96c32103"
-      },
-      "level_keys": [
-        "CSP U6L2 Ticket Generator_2023"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U6L2 CFU Binary Search Steps2022_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6L2 CFU Binary Search Steps2022_2023"
-        ],
-        "lesson.key": "Algorithm Efficiency",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "51e3a836-613b-4250-9047-1ab617d2fa09"
-      },
-      "level_keys": [
-        "U6L2 CFU Binary Search Steps2022_2023"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U6L2 CFU Efficiency and Algorithms2022_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6L2 CFU Efficiency and Algorithms2022_2023"
-        ],
-        "lesson.key": "Algorithm Efficiency",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "51e3a836-613b-4250-9047-1ab617d2fa09"
-      },
-      "level_keys": [
-        "U6L2 CFU Efficiency and Algorithms2022_2023"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSP U6L3 BigO Widget_2023"
-        ],
-        "progression": "Widget: Reasonable or Unreasonable?"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U6L3 BigO Widget_2023"
-        ],
-        "lesson.key": "Unreasonable Time",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "368159ff-e317-40f7-9372-6dadaa69deb1"
-      },
-      "level_keys": [
-        "CSP U6L3 BigO Widget_2023"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U6L3 CFU Reasonable vs Unreasonable2022_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6L3 CFU Reasonable vs Unreasonable2022_2023"
-        ],
-        "lesson.key": "Unreasonable Time",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "c39997bd-0916-446a-b1fd-03cf67f65353"
-      },
-      "level_keys": [
-        "U6L3 CFU Reasonable vs Unreasonable2022_2023"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U6 L03 Evaluate Reasonable or Not_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6 L03 Evaluate Reasonable or Not_2023"
-        ],
-        "lesson.key": "Unreasonable Time",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "c39997bd-0916-446a-b1fd-03cf67f65353"
-      },
-      "level_keys": [
-        "U6 L03 Evaluate Reasonable or Not_2023"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSP U6L4 Traveling Salesman_2023"
-        ],
-        "progression": "Widget: Traveling Salesman"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U6L4 Traveling Salesman_2023"
-        ],
-        "lesson.key": "The Limits of Algorithms",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "e88ae67a-b010-4c85-8161-77fb46573190"
-      },
-      "level_keys": [
-        "CSP U6L4 Traveling Salesman_2023"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSP U6L4 Random Traveling Salesman_2023"
-        ],
-        "progression": "Widget: Traveling Salesman - Random Nodes"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U6L4 Random Traveling Salesman_2023"
-        ],
-        "lesson.key": "The Limits of Algorithms",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "9ebe549a-f47f-4e4e-ba90-2e48269df0ed"
-      },
-      "level_keys": [
-        "CSP U6L4 Random Traveling Salesman_2023"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U6L4 CFU Reason for Heuristics2022_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6L4 CFU Reason for Heuristics2022_2023"
-        ],
-        "lesson.key": "The Limits of Algorithms",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "fbe9180a-8332-4fe3-bcf2-e60ee916d1cd"
-      },
-      "level_keys": [
-        "U6L4 CFU Reason for Heuristics2022_2023"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U6 L04 Unreasonable vs Undecidable_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6 L04 Unreasonable vs Undecidable_2023"
-        ],
-        "lesson.key": "The Limits of Algorithms",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "fbe9180a-8332-4fe3-bcf2-e60ee916d1cd"
-      },
-      "level_keys": [
-        "U6 L04 Unreasonable vs Undecidable_2023"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U6L5 CFU Calculate Speedup2022_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6L5 CFU Calculate Speedup2022_2023"
-        ],
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "32df95b1-26f8-4de9-958e-a6739bcb867f"
-      },
-      "level_keys": [
-        "U6L5 CFU Calculate Speedup2022_2023"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U6 L05 Speedup Forever_2023"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6 L05 Speedup Forever_2023"
-        ],
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "32df95b1-26f8-4de9-958e-a6739bcb867f"
-      },
-      "level_keys": [
-        "U6 L05 Speedup Forever_2023"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csp6_2023"
-        ],
-        "progression": "End-of-Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csp6_2023"
-        ],
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "d651ef22-e1f5-4c85-a9ea-3354a17e12b1"
-      },
-      "level_keys": [
-        "Student End of Unit Survey_csp6_2023"
-      ]
-    }
-  ],
-  "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2023",
         "script_level.level_keys": [
           "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2023"
         ],
@@ -2355,20 +2338,13 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp10-2023",
         "activity_section.key": "a29bbfde-7ee4-4e31-88d0-917c94683ddc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Unit 6 AP-Style Assessment 2022_2023",
-        "script_level.level_keys": [
-          "CSP Unit 6 AP-Style Assessment 2022_2023"
-        ],
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2023",
-        "activity_section.key": "761db350-311f-456a-b451-5a5b528fe7fb"
-      }
-    },
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
     {
       "seeding_key": {
         "level.key": "U6 L01 Algorithms vs Problems_2023",
@@ -2536,6 +2512,30 @@
         "script.name": "csp10-2023",
         "activity_section.key": "d651ef22-e1f5-4c85-a9ea-3354a17e12b1"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 6 AP-Style Assessment 2022_2023",
+        "script_level.level_keys": [
+          "CSP Unit 6 AP-Style Assessment 2022_2023"
+        ],
+        "lesson.key": "Assessment Day",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2023",
+        "activity_section.key": "761db350-311f-456a-b451-5a5b528fe7fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2023",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2023"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp10-2023",
+        "activity_section.key": "a29bbfde-7ee4-4e31-88d0-917c94683ddc"
+      }
     }
   ],
   "resources": [
@@ -2596,16 +2596,81 @@
       }
     },
     {
-      "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/copy",
-      "key": "csp_unit_6_-_algorithms",
+      "name": "CSP Unit 10 - Lesson 1 - Algorithms Solve Problems",
+      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/copy",
+      "key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/export?format=pdf",
+        "download_url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 2 - Algorithm Efficiency",
+      "url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/copy",
+      "key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 3 - Unreasonable Time",
+      "url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/copy",
+      "key": "csp_unit_10_-_lesson_3_-_unreasonable_time",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_3_-_unreasonable_time"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 4 - The Limits of Algorithms",
+      "url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/copy",
+      "key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 5 - Distributed Algorithms",
+      "url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/copy",
+      "key": "csp_unit_10_-_lesson_5_-_distributed_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_5_-_distributed_algorithms"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 6 - Assessment Day",
+      "url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/copy",
+      "key": "csp_unit_10_-_lesson_6_-_assessment_day",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_6_-_assessment_day"
       }
     },
     {
@@ -2618,6 +2683,18 @@
       },
       "seeding_key": {
         "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
+      "name": "KEY - Unreasonable Time",
+      "url": "https://docs.google.com/document/d/1wn2Z0k76KdotURzPG69GeYFzWvpMq1qiWUSlKfeDOfQ/edit?usp=sharing",
+      "key": "key_-_unreasonable_time",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_-_unreasonable_time"
       }
     },
     {
@@ -2662,25 +2739,25 @@
     {
       "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_6_-_assessment_day"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_5_-_distributed_algorithms"
       }
     },
     {
@@ -2692,7 +2769,7 @@
     {
       "seeding_key": {
         "lesson.key": "The Limits of Algorithms",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms"
       }
     },
     {
@@ -2704,7 +2781,13 @@
     {
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_3_-_unreasonable_time"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "key_-_unreasonable_time"
       }
     },
     {

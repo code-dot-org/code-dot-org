@@ -5856,6 +5856,17 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Eindimensionale (1D) Arrays
+            lesson-3:
+              name: Schleifen mit dem Wiederhol-Block
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         hello-world-space-2022:
           title: 'Hello World: Weltraum'
         hello-world-soccer-2022:

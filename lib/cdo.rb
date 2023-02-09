@@ -209,8 +209,8 @@ module Cdo
 
     def curriculum_url(locale, uri = '', autocomplete_partial_path = true)
       return unless uri
-      uri = URI.encode(uri)
-      uri = URI.parse(uri)
+      uri = URI::DEFAULT_PARSER.escape(uri)
+      uri = URI::DEFAULT_PARSER.parse(uri)
 
       uri.host = "curriculum.code.org" if uri.host.nil? && autocomplete_partial_path
       uri.scheme = "https" if uri.scheme.nil? && autocomplete_partial_path

@@ -2042,6 +2042,10 @@ ta:
           lessons:
             lesson-4:
               name: மாறிலிகள்
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ஒரு பரிமாண (1D) அணிவரிசைகள்
         hello-world-space-2022:
           title: 'வணக்கம் உலகம்: விண்வெளி'
         hello-world-soccer-2022:

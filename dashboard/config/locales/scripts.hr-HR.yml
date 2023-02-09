@@ -1083,6 +1083,10 @@ hr:
           lessons:
             lesson-4:
               name: Varijable
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Petlja brojača
         hello-world-space-2022:
           title: 'Hello World: Prostor'
         hello-world-soccer-2022:

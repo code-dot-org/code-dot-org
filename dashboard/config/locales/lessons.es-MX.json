@@ -407,7 +407,7 @@
         },
         "coursed-2022/Graph Paper Programming": {
           "name": "Programación con Papel Cuadriculado",
-          "overview": "Al \"programarse\" entre sí para dibujar imágenes, los estudiantes obtienen una oportunidad de experimentar algunos de los conceptos centrales de programar de una manera divertida y accesible. La clase comenzará haciendo que los estudiantes usen símbolos para instruirse entre ellos para colorear cuadrados en papel cuadriculado en un intento por producir una imagen existente. Si queda tiempo, la lección puede concluir con imágenes que los mismos estudiantes crean. ",
+          "overview": "En esta lección de **context-setting**, los estudiantes usan símbolos para instruirse unos a otros en colorear cuadrados en papel cuadriculado. Al \"programarse\" unos a otros para hacer dibujos, los estudiantes tienen la oportunidad de experimentar algunos de los conceptos básicos de la programación de una manera divertida y accesible.",
           "purpose": "Los objetivos de esta actividad son desarrollar habilidades de pensamiento crítico, sembrar interés por este curso e introducir algunos conceptos fundamentales de la programación que serán usados a lo largo del curso. Al introducir conceptos básicos, como secuenciación o algoritmos, a través de una actividad sin conexión, incluso los estudiantes que no se sienten familiarizados con un computador podrán sentar las bases para comprender estos temas. En esta lección, los estudiantes aprenderán cómo desarrollar un algoritmo y codificarlo en un programa. ",
           "student_overview": "En esta lección, programarás a tu compañero de clase para que dibujar imágenes."
         },
@@ -1087,7 +1087,7 @@
           "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEl poder de internet permite a los estudiantes experimentar y visitar lugares que quizás no puedan en persona. Sin embargo, al igual que viajar en el mundo real, es importante mantenerse seguros cuando viajamos por internet. En este viaje virtual, los niños pueden practicar cómo mantenerse seguros en aventuras en línea.",
           "preparation": "-   Revisar el material instructivo.\n-   Imprimir guías para cada estudiante.\n-   (Opcional) Imprimir un póster del poema para mostrarlo a toda la clase.",
           "purpose": "El plan de estudios de Ciudadanía Digital de Common Sense aborda seis temas centrales, basados en las últimas investigaciones sobre niños, medios y tecnología. Esta lección se centra en la privacidad y la seguridad. Los estudiantes aprenden a proteger la información personal y obtienen una comprensión más profunda de los derechos de privacidad de sus datos para que puedan defenderse a sí mismos y a los demás.",
-          "student_overview": "Aprenda a ir a sitios seguros en Internet."
+          "student_overview": "Aprende cómo entrar a sitios en línea de forma segura."
         },
         "coursea-2022/Learn to Drag and Drop": {
           "name": "Aprende a arrastrar y soltar",
@@ -1098,7 +1098,7 @@
         },
         "coursea-2022/Happy Maps": {
           "name": "Mapas felices",
-          "overview": "La transición desde los algoritmos hacia la programación puede ser corta si los estudiantes entienden la diferencia entre planificar una secuencia y codificar esa secuencia en el lenguaje apropiado. Esta actividad ayudará a los estudiantes a adquirir experiencia en la lectura y escritura de código abreviado.",
+          "overview": "Esta lección **context-setting** reúne a los equipos con una tarea sencilla: llevar el “flurb” al fruto. Los estudiantes practicarán la escritura de instrucciones precisas mientras trabajan para traducir las instrucciones a los símbolos proporcionados.",
           "preparation": "-   Imprime la **\\*Guía de trabajo** y un juego de **\\*Manipulativos** por cada grupo (2 a 3 estudiantes).\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "La transición desde los algoritmos hacia la programación puede ser corta si los estudiantes entienden la diferencia entre planificar una secuencia y codificar esa secuencia en el lenguaje apropiado. Esta actividad ayudará a los estudiantes a adquirir experiencia en la lectura y escritura de código abreviado.",
           "student_overview": "Escribe instrucciones para que el Flurb llegue hasta la fruta."
@@ -1160,7 +1160,7 @@
           "student_overview": "Muévete y grita cuando tus docentes presionen los botones de un control remoto gigante."
         },
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
-          "name": "Mini-Proyecto: En Movimiento con Laboratorio de Juegos",
+          "name": "Mini-Proyecto: En movimiento con Play Lab",
           "overview": "En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para los estudiantes.\n-   (Opcional) Elige un par de desafíos para realizar en conjunto con tu clase.\n-   Revisa las **\\*Recomendaciones de la lección FCC**.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "En esta lección, los estudiantes desarrollaran su comprensión de los eventos a través de Play Lab. Los eventos son muy comunes en los programas informáticos. En esta actividad, los estudiantes usarán los eventos para que un personaje se mueva por la pantalla, haga ruidos y cambie los fondos en base a los eventos iniciados por el usuario.",
@@ -1966,32 +1966,38 @@
         "csd7-2022/Introduction to Machine Learning": {
           "name": "Introducción al Aprendizaje Automático",
           "overview": "En esta lección, los estudiantes aprenderán acerca de un tipo de inteligencia artificial llamado aprendizaje automático, y cómo pueden utilizar el proceso de resolución de problemas para entrenar a un robot que sea capaz de solucionar problemas. Los estudiantes participarán en tres actividades de aprendizaje automático en las que un robot (bot con inteligencia artificial) aprenderá a detectar patrones en peces.\n\n**Pregunta del día:** ¿Cómo podemos utilizar el proceso de resolución de problemas para resolver un problema relacionado con el aprendizaje automático?",
+          "preparation": "-   Repasa los niveles de Code Studio antes de la clase\n-   Imprime copias de la guía de actividades para cada alumno\n-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) donde los profesores verificados pueden encontrar estrategias adicionales o recursos compartidos por otros profesores.",
           "student_overview": "Aprenda los conceptos básicos del aprendizaje automático ayudando a AI Bot a reconocer peces para limpiar el océano"
         },
         "csd7-2022/Types of Machine Learning": {
           "name": "Tipos de Aprendizaje Automático",
           "overview": "En esta lección, los estudiantes pensarán en cómo pueden crear modelos “mentales” al aprender conceptos nuevos, y cómo éstos pueden ser similares a un modelo de “aprendizaje automático”. Los estudiantes realizarán una actividad sobre patrones de colores, sin la ayuda del docente, con el objetivo de simular la creación de un modelo de aprendizaje automático. Luego, jugarán a “Green Glass Door” como ejemplo de aprendizaje supervisado. Para finalizar, clasificarán diversos escenarios entre aprendizaje “supervisado” y “no supervisado”. \n\n**Pregunta del día:** ¿Cuáles son los diferentes tipos de aprendizaje automático?",
+          "preparation": "-   Revisa todos los materiales para la lección de hoy.\n-   Consulta el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) donde los profesores verificados pueden encontrar estrategias o recursos adicionales compartidos por otros profesores.",
           "purpose": "-   Revise los niveles de Code Studio antes de la lección, de esta forma sabrá cómo funciona el juego llamado “the Green Glass Door”\n-   Imprima o prepare copias en línea de la guía de actividades para cada estudiante",
           "student_overview": "Aprenda dos tipos diferentes de aprendizaje automático: aprendizaje supervisado y no supervisado. Luego compare cómo el aprendizaje automático puede ser similar o diferente a cómo aprenden los humanos."
         },
         "csd7-2022/Innovations in AI": {
           "name": "Innovaciones en IA (Inteligencia Artificial)",
           "overview": "En esta lección, los estudiantes explorarán una aplicación de inteligencia artificial llamada Seeing Al y estudiarán cómo ofrece ayuda a personas con discapacidad visual. Luego, los estudiantes investigarán otros ejemplos del impacto que la inteligencia artificial genera en la sociedad, enfocándose en los usuarios que se ven afectados. Para finalizar, los estudiantes compartirán sus hallazgos con los demás.\n\n**Pregunta del día:** ¿Cómo la inteligencia artificial está ayudando a resolver problemas en el mundo?",
+          "preparation": "-   Imprime copias de la guía de actividad para cada alumno\n-   Prepárate para distribuir digitalmente el recurso Áreas de Investigación de la Inteligencia Artificial a los alumnos. \n-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) donde los profesores verificados encuentran estrategias adicionales o recursos compartidos por otros profesores.",
           "student_overview": "Investiga diferentes ejemplos de cómo se está utilizando la Inteligencia Artificial para resolver problemas en el mundo."
         },
         "csd7-2022/Patterns in Data": {
           "name": "Patrones en Datos",
           "overview": "En esta lección, los estudiantes examinarán varias aplicaciones que toman decisiones sobre qué calzado usar para llegar a comprender cómo el aprendizaje automático puede ayudar a tomar esta decisión. Se guiará a los estudiantes para que lleguen a la conclusión de que encuestar a los usuarios puede contribuir a tomar la mejor decisión mediante la búsqueda de patrones en los datos y basando dichas decisiones en los patrones encontrados.\n\n**Pregunta del día:** ¿Qué estrategias utilizan los modelos de computadora para tomar decisiones?",
+          "preparation": "-   Repasa los niveles de Code Studio antes de la clase\n-   Imprime copias de la guía de actividades para cada alumno\n-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) donde los profesores verificados pueden encontrar estrategias adicionales o recursos compartidos por otros profesores.",
           "student_overview": "Explore tres formas diferentes en que las computadoras pueden hacer recomendaciones y cuán importantes pueden ser los datos para tomar decisiones precisas."
         },
         "csd7-2022/Classification Models": {
           "name": "Modelos de Clasificación",
           "overview": "En esta lección, los estudiantes participarán en una actividad que no requiere computadora, la cual simulará uno de los algoritmos de aprendizaje automático utilizados por las computadoras con el objetivo de separar los datos en grupos para ayudar en la toma de decisiones. Los estudiantes tendrán que ayudar a una computadora a aprender a clasificar alimentos en frutas o vegetales. También, tendrán que graficar 20 frutas en dos ejes diferentes comparando su “dulzor” con su “facilidad para comer”. Luego, tendrán que separar los datos en grupos: un área de frutas y otra de vegetales.\n\n**Pregunta del día:** ¿Cómo aprenden las computadoras a clasificar datos?",
+          "preparation": "-   Repasa todos los materiales de la lección de hoy.\n-   Recorta tarjetas de frutas y verduras: un juego de tarjetas para cada grupo.\n-   Regla o escuadra para cada alumno\n-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) para encontrar estrategias adicionales o recursos compartidos por otros profesores.",
           "student_overview": "Aprenda a crear un modelo de aprendizaje automático ayudando a una computadora a clasificar los alimentos en frutas o vegetales"
         },
         "csd7-2022/Introduction to AI Lab": {
           "name": "Introducción al Laboratorio de Inteligencia Artificial",
           "overview": "En esta lección, los estudiantes trabajarán por primera vez con la herramienta AI Lab, donde seleccionarán características para entrenar un modelo que predice una etiqueta determinada. Los estudiantes comenzarán explorando AI Lab y entrenando un modelo para reconocer formas. A continuación, ellos simularán haber sido contratados por varios restaurantes que quieren hacer recomendaciones a nuevos clientes basándose en datos recopilados por encuestas, recorrerán cada conjunto de datos, y utilizarán las herramientas de visualización de datos para identificar las características con altas relaciones en los datos.\n\n**Pregunta del día:** ¿Cómo podemos utilizar el aprendizaje automático para hacer recomendaciones?",
+          "preparation": "-   Repasa los niveles de Code Studio antes de la lección\n-   Observa los dos vídeos de esta lección y familiarízate con el Laboratorio de Inteligencia Artificial.\n-   Imprime o prepara para compartir en línea copias de la guía de actividad para cada alumno\n-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) donde los profesores verificados pueden encontrar estrategias adicionales o recursos compartidos por otros profesores.",
           "student_overview": "Aprenda a usar AI Lab para entrenar modelos de aprendizaje automático, por ejemplo, cómo reconocer formas o cómo hacer recomendaciones de comida para un restaurante."
         },
         "csd7-2022/Importing Models in App Lab": {
@@ -2035,6 +2041,7 @@
           "student_overview": "¿Qué significa que la inteligencia artificial se use éticamente? En esta lección, ayudará a crear un código de ética de IA e investigará ejemplos de inteligencia artificial que siguen o no su código de ética."
         },
         "csd7-2022/Mini-Project: Make a Machine Learning App": {
+          "preparation": "-   Repasa los niveles de Code Studio antes de la clase\n-   Imprime copias de la guía de actividades para cada alumno\n-   Visita el foro [\"Sala de Profesores\"](https://forum.code.org/t/project-hub-make-a-machine-learning-app-ai-and-machine-learning-lesson-15/36219) donde los profesores verificados pueden encontrar estrategias adicionales o recursos compartidos por otros profesores.",
           "student_overview": "Elija entre varios conjuntos de datos del mundo real para entrenar un modelo y crear una aplicación que utilice el aprendizaje automático"
         },
         "csd7-2022/Issue Statements": {
@@ -5046,7 +5053,7 @@
           "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEl poder de internet permite a los estudiantes experimentar y visitar lugares que quizás no puedan en persona. Sin embargo, al igual que viajar en el mundo real, es importante mantenerse seguros cuando viajamos por internet. En este viaje virtual, los niños pueden practicar cómo mantenerse seguros en aventuras en línea.",
           "preparation": "-   Revisar el material instructivo.\n-   Imprimir guías para cada estudiante.\n-   (Opcional) Imprimir un póster del poema para mostrarlo a toda la clase.",
           "purpose": "El plan de estudios de Ciudadanía Digital de Common Sense aborda seis temas centrales, basados en las últimas investigaciones sobre niños, medios y tecnología. Esta lección se centra en la privacidad y la seguridad. Los estudiantes aprenden a proteger la información personal y obtienen una comprensión más profunda de los derechos de privacidad de sus datos para que puedan defenderse a sí mismos y a los demás.",
-          "student_overview": "Aprenda a ir a sitios seguros en Internet."
+          "student_overview": "Aprende cómo entrar a sitios en línea de forma segura."
         },
         "coursea-2021/Learn to Drag and Drop": {
           "name": "Aprende a arrastrar y soltar",
@@ -5057,7 +5064,7 @@
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Mapas felices",
-          "overview": "La transición desde los algoritmos hacia la programación puede ser corta si los estudiantes entienden la diferencia entre planificar una secuencia y codificar esa secuencia en el lenguaje apropiado. Esta actividad ayudará a los estudiantes a adquirir experiencia en la lectura y escritura de código abreviado.",
+          "overview": "Esta lección **context-setting** reúne a los equipos con una tarea sencilla: llevar el “flurb” al fruto. Los estudiantes practicarán la escritura de instrucciones precisas mientras trabajan para traducir las instrucciones a los símbolos proporcionados.",
           "preparation": "-   Imprime la **\\*Guía de trabajo** y un juego de **\\*Manipulativos** por cada grupo (2 a 3 estudiantes).\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "La transición desde los algoritmos hacia la programación puede ser corta si los estudiantes entienden la diferencia entre planificar una secuencia y codificar esa secuencia en el lenguaje apropiado. Esta actividad ayudará a los estudiantes a adquirir experiencia en la lectura y escritura de código abreviado.",
           "student_overview": "Escribe instrucciones para que el Flurb llegue hasta la fruta."
@@ -5119,7 +5126,7 @@
           "student_overview": "Muévete y grita cuando tus docentes presionen los botones de un control remoto gigante."
         },
         "coursea-2021/Events in Play Lab": {
-          "name": "Mini-Proyecto: En Movimiento con Laboratorio de Juegos",
+          "name": "Mini-Proyecto: En movimiento con Play Lab",
           "overview": "En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!",
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para los estudiantes.\n-   (Opcional) Elige un par de desafíos para realizar en conjunto con tu clase.\n-   Revisa las **\\*Recomendaciones de la lección FCC**.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "En esta lección, los estudiantes desarrollaran su comprensión de los eventos a través de Play Lab. Los eventos son muy comunes en los programas informáticos. En esta actividad, los estudiantes usarán los eventos para que un personaje se mueva por la pantalla, haga ruidos y cambie los fondos en base a los eventos iniciados por el usuario.",
@@ -5253,7 +5260,7 @@
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "name": "Programación con Papel Cuadriculado",
-          "overview": "Al \"programarse\" entre sí para dibujar imágenes, los estudiantes obtienen una oportunidad de experimentar algunos de los conceptos centrales de programar de una manera divertida y accesible. La clase comenzará haciendo que los estudiantes usen símbolos para instruirse entre ellos para colorear cuadrados en papel cuadriculado en un intento por producir una imagen existente. Si queda tiempo, la lección puede concluir con imágenes que los mismos estudiantes crean. ",
+          "overview": "En esta lección de **context-setting**, los estudiantes usan símbolos para instruirse unos a otros en colorear cuadrados en papel cuadriculado. Al \"programarse\" unos a otros para hacer dibujos, los estudiantes tienen la oportunidad de experimentar algunos de los conceptos básicos de la programación de una manera divertida y accesible.",
           "preparation": "-   (Opcional) Mira el video **\\*Lección en acción**.\n-   Imprime una **\\*guía de trabajo** y una **\\*evaluación** para cada estudiante.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "Los objetivos de esta actividad son desarrollar habilidades de pensamiento crítico, sembrar interés por este curso e introducir algunos conceptos fundamentales de la programación que serán usados a lo largo del curso. Al introducir conceptos básicos, como secuenciación o algoritmos, a través de una actividad sin conexión, incluso los estudiantes que no se sienten familiarizados con un computador podrán sentar las bases para comprender estos temas. En esta lección, los estudiantes aprenderán cómo desarrollar un algoritmo y codificarlo en un programa. ",
           "student_overview": "En esta lección, programarás a tu compañero de clase para que dibujar imágenes."

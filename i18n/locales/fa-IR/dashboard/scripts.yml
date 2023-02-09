@@ -1416,6 +1416,10 @@ fa:
           lessons:
             lesson-4:
               name: متغیرها
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: حلقه های "برای"
         hello-world-space-2022:
           title: 'سلام دنیا: فضا'
         hello-world-soccer-2022:

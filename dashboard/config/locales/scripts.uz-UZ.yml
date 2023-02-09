@@ -5194,6 +5194,13 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For sikllari
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         hello-world-space-2022:
           title: 'Salom Dunyo: Kosmik'
         hello-world-soccer-2022:

@@ -1234,6 +1234,20 @@
                     }
                   }
                 },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Број"
+                    }
+                  }
+                },
                 "toggleSwitch.isOpen": {
                   "return_value": "Булова"
                 }

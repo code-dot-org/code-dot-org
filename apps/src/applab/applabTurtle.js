@@ -21,7 +21,7 @@ applabTurtle.getTurtleContext = function() {
     });
     canvas = document.getElementById('turtleCanvas');
 
-    // And create the turtle (defaults to visible):
+    // Create the turtleImage (turtle image defaults to visible):
     Applab.turtle.visible = true;
     var turtleImage = document.createElement('img');
     turtleImage.src = turtleImageSrc;

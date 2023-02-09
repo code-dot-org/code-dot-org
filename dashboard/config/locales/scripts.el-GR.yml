@@ -2022,6 +2022,10 @@ el:
           lessons:
             lesson-4:
               name: Μεταβλητές
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Βρόχοι Για
         hello-world-space-2022:
           title: 'Γεια σας κόσμο: Διάστημα'
         hello-world-soccer-2022:

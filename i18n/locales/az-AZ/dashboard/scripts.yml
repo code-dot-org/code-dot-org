@@ -2996,6 +2996,15 @@ az:
             lessonGroup-2:
               display_name: Məzmun
           title: Sinif strukturu və dizaynı
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Birölçülü (1D) massivlər
+            lesson-3:
+              name: '"For" dövrü'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
         csa4-2023:
           title: Şərtlər və Məntiq
         csa8-2023:

@@ -5153,7 +5153,7 @@ fr-FR:
         markdown: "# Bracelets Binaires  \n\nCrée un bracelet qui représente ton nom
           dans un système qu'un ordinateur peut comprendre !  \n\n![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
       ConditionalsWithCards-Unplugged_2021:
-        markdown: "# Les instructions conditionnelles avec des Cartes   \n\nJoue à
+        markdown: "# Les instructions conditionnellesavec des Cartes   \n\nJoue à
           un jeu de cartes et crée des règles comme : « Si je tire une carte rouge,
           je marque un point » et « Si je tire une carte noire, tu marques un point ».\n"
       CourseF_outbreak_story:
@@ -7049,7 +7049,7 @@ fr-FR:
           <br/>
           <br/>
 
-          ## Puzzles
+          ## Casse-têtes
 
           Chaque étape est composée de niveaux que nous appelons __ casse-têtes__, qui contiennent des vidéos, des lectures ou des questions individuelles. Les casse-têtes sont indiqués par des cercles avec des nombres. Les couleurs du cercle du casse-tête changeront en fonction de vos progrès. Dans ce développement professionnel, vous verrez les types de cercles suivants :
           <br/>
@@ -7112,7 +7112,7 @@ fr-FR:
           <br/>
           <br/>
 
-          ## Puzzles
+          ## Casse-têtes
 
           Chaque étape est composée de niveaux que nous appelons __ casse-têtes__, qui contiennent des vidéos, des lectures ou des questions individuelles. Les casse-têtes sont indiqués par des cercles avec des nombres. Les couleurs du cercle du casse-tête changeront en fonction de vos progrès. Dans ce développement professionnel, vous verrez les types de cercles suivants :
           <br/>
@@ -9266,7 +9266,7 @@ fr-FR:
         - text: Préparer
         - text: Réfléchir
         - text: Essayer
-        - text: Définis
+        - text: Définir
       CSD U1 Test PSP match_2021:
         answers:
         - {}
@@ -9277,7 +9277,7 @@ fr-FR:
         - text: Préparer
         - text: Réfléchir
         - text: Essayer
-        - text: Définis
+        - text: Définir
       CSD U1 Test PSP match_2022:
         answers:
         - {}
@@ -9288,7 +9288,7 @@ fr-FR:
         - text: Préparer
         - text: Réfléchir
         - text: Essayer
-        - text: Définis
+        - text: Définir
       CSD U1 Test define a computer:
         answers:
         - correct: true

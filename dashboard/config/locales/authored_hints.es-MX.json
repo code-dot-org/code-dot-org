@@ -8818,7 +8818,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Solo tienes que presionar el botón \"Finalizar\"!",
           "repeat_every_ideas": "**¿Necesitas algunas ideas?**\n\n-   Cambia repetidamente el tamaño de un bailarín para que crezca.\n-   Cambia repetidamente la rotación de un bailarín para que gire.\n\n_¡También puedes usar números negativos para crear el efecto opuesto!_",
-          "next_previous": "**Desafío opcional**\n\n-   Puedes usar este nuevo bloque de evento para recorrer una lista de movimientos de baile y establecer el movimiento como `(Aleatorio)`, `(Siguiente)` o `(Anterior)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Desafío opcional**\n\n-   Puedes usar este nuevo bloque de evento para recorrer una lista de movimientos de baile y establecer el movimiento como \"(Random)\", que significa aleatorio, \"(Next), que significa siguiente, o \"(Previous), que significa anterior.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "El bloque alternativo está en la categoría \"Bailarines\"."
@@ -10128,7 +10128,7 @@
           "courseD_bounce_events12s_b": "Intenta hacer que cada toma valga 2 puntos y ¡ cambia el logo del equipo por el de tu ciudad natal!"
         },
         "courseD_bounce_events1s_2021": {
-          "courseD_bounce_events1s_a": "Es necesario añadir el bloque `mover a la izquierda` al evento`cuando flecha izquierda` para que este juego funcione:\n\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n\n</xml>",
+          "courseD_bounce_events1s_a": "Es necesario añadir el bloque \"move left\" (mover a la izquierda) al evento \"when left arrow\" (cuando la flecha izquierda) para que este juego funcione:\n\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n\n</xml>",
           "courseD_bounce_events1s_b": "No te olvides de presionar \"Ejecutar\" y llevar la mano a la cesta para resolver este rompecabezas."
         },
         "courseD_bounce_events2s_2021": {

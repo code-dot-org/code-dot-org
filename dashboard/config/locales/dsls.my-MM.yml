@@ -2877,7 +2877,7 @@ my-MM:
       CSD U5 test crosstab multi:
         answers:
         - text: ခွေး
-        - {}
+        - text: ပင်ဂွင်း
         - {}
         - {}
         - {}
@@ -2886,7 +2886,7 @@ my-MM:
       CSD U5 test crosstab multi_2021:
         answers:
         - text: ခွေး
-        - {}
+        - text: ပင်ဂွင်း
         - {}
         - {}
         - {}
@@ -2895,7 +2895,7 @@ my-MM:
       CSD U5 test crosstab multi_2022:
         answers:
         - text: ခွေး
-        - {}
+        - text: ပင်ဂွင်း
         - {}
         - {}
         - {}
@@ -2904,7 +2904,7 @@ my-MM:
       CSD U5 test datacount multi:
         answers:
         - text: ခွေး
-        - {}
+        - text: ပင်ဂွင်း
         - {}
         - {}
         - {}
@@ -2913,7 +2913,7 @@ my-MM:
       CSD U5 test datacount multi_2021:
         answers:
         - text: ခွေး
-        - {}
+        - text: ပင်ဂွင်း
         - {}
         - {}
         - {}
@@ -2922,7 +2922,7 @@ my-MM:
       CSD U5 test datacount multi_2022:
         answers:
         - text: ခွေး
-        - {}
+        - text: ပင်ဂွင်း
         - {}
         - {}
         - {}

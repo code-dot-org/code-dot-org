@@ -1599,6 +1599,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         csd4-2023:
           lesson_groups:
             lessonGroup-2:

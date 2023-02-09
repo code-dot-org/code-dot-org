@@ -2,6 +2,12 @@
   "ca-ES": {
     "data": {
       "objectives": {
+        "bdb824f7-9d5c-4465-b019-0294329fd999": {
+          "description": "Identificar el vocabulari clau de la informàtica."
+        },
+        "69ffb469-2601-46aa-bc80-82043d8dcd1e": {
+          "description": "Identificar llocs on anar per seguir aprenent informàtica i programació."
+        },
         "008a40f4-a5ee-42aa-862e-670f19129694": {
           "description": "Definir \"programació\" i \"informàtica\"."
         },
@@ -29,6 +35,9 @@
         "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
           "description": "Identificar el vocabulari clau de la informàtica"
         },
+        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
+          "description": "Relacionar els conceptes de la informàtica amb el món real."
+        },
         "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
         },
@@ -47,6 +56,9 @@
         "a5bebcad-7295-4ecd-af0d-4012f97de704": {
           "description": "Identificar el vocabulari clau de la informàtica"
         },
+        "303a2b74-af73-401c-8929-1fc1c5611f18": {
+          "description": "Relacionar els conceptes de la informàtica amb el món real."
+        },
         "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
         },
@@ -55,6 +67,9 @@
         },
         "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
           "description": "Identificar el vocabulari clau de la informàtica"
+        },
+        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
+          "description": "Relacionar els conceptes de la informàtica amb el món real."
         },
         "59992d8c-d194-4063-82fa-001a0b6482d9": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
@@ -70,6 +85,9 @@
         },
         "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
           "description": "Identificar el vocabulari clau de la informàtica"
+        },
+        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
+          "description": "Relacionar els conceptes de la informàtica amb el món real."
         },
         "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
@@ -98,6 +116,9 @@
         "dca3e183-1119-471b-b510-a5b6f40f34b4": {
           "description": "Identificar el vocabulari clau de la informàtica"
         },
+        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
+          "description": "Relacionar els conceptes de la informàtica amb el món real."
+        },
         "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
         },
@@ -116,6 +137,9 @@
         "b1e4a88d-565b-4d95-a6d7-129869cff301": {
           "description": "Identificar el vocabulari clau de la informàtica"
         },
+        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
+          "description": "Relacionar els conceptes de la informàtica amb el món real."
+        },
         "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
         },
@@ -125,14 +149,29 @@
         "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
           "description": "Identificar el vocabulari clau de la informàtica"
         },
+        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
+          "description": "Relacionar els conceptes de la informàtica amb el món real."
+        },
         "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
         },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "Crear un joc interactiu utilitzant seqüències i controladors d'esdeveniments."
+        },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Compartir un artefacte creatiu amb els companys."
+        },
+        "559aa8ee-c19e-41b2-8820-8cf04cf72dad": {
+          "description": "Definir \"programació\" i \"informàtica\"."
+        },
+        "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
+          "description": "Identificar el vocabulari clau de la informàtica."
+        },
+        "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
+          "description": "Identificar llocs on anar per seguir aprenent informàtica i programació."
         },
         "63be9575-1232-47a5-991c-8bd03ac7c949": {
           "description": "Definir \"programació\" i \"informàtica\"."
@@ -140,14 +179,35 @@
         "0b17cf0a-2614-40be-afbc-1045245d0a38": {
           "description": "Identificar el vocabulari clau de la informàtica"
         },
+        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
+          "description": "Relacionar els conceptes de la informàtica amb el món real."
+        },
         "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
         },
         "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
         },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "Crear un joc interactiu utilitzant seqüències i controladors d'esdeveniments."
+        },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "Compartir un artefacte creatiu amb els companys."
+        },
+        "8b4629a9-0621-4442-9801-e3b61e4fbaf3": {
+          "description": "Definir \"programació\" i \"informàtica\"."
+        },
+        "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
+          "description": "Identificar el vocabulari clau de la informàtica."
+        },
+        "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
+          "description": "Identificar llocs on anar per seguir aprenent informàtica i programació."
+        },
+        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
+          "description": "Identificar el vocabulari clau de la informàtica."
+        },
+        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
+          "description": "Identificar llocs on anar per seguir aprenent informàtica i programació."
         },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
           "description": "Desenvolupar programes que responguin a esdeveniments cronometrats"
@@ -164,6 +224,18 @@
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": ""
         },
+        "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
+          "description": "Definir el terme \"contrasenya\" i explicar per a què serveix."
+        },
+        "c14cd5a0-312f-491c-aa00-73b82dd8e628": {
+          "description": "Practicar creant una contrasenya segura i fàcil de recordar."
+        },
+        "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
+          "description": "Replantejar una seqüència de passos amb el format d'un programa codificat"
+        },
+        "e2eb4dfd-1b5b-4a01-aceb-1b96c49cd254": {
+          "description": "Explicar les limitacions que suposa traduir problemes que estan en llenguatge humà al llenguatge de les màquines"
+        },
         "86d6703f-6086-48c6-820f-d9d972471655": {
           "description": "Ordenar les ordres de moviment com a passos seqüencials en un programa."
         },
@@ -173,11 +245,23 @@
         "f0a49033-5a23-4b2e-b570-69fd6d678f65": {
           "description": "Modificar un programa existent per resoldre errors."
         },
+        "0d2e39ca-970f-40e0-b26a-84bcecf9315d": {
+          "description": "Descriure i implementar un pla per depurar un programa."
+        },
+        "59c4efee-e0c3-4293-9609-a82db6698755": {
+          "description": "Llegir i entendre el codi que se'ls presenta."
+        },
+        "66a6e0e0-c56c-4148-9d57-ce509afa4fc6": {
+          "description": "Identificar un error (o bug) i els problemes que provoca en un programa."
+        },
         "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
           "description": "Compartir un artefacte creatiu amb els companys."
         },
         "d2a9a010-d6c6-4ce1-9f70-cb5ceba6af8f": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
+        },
+        "df973a96-c08b-4f3f-9a11-c93434193cfe": {
+          "description": "Crear un joc interactiu utilitzant seqüències i controladors d'esdeveniments."
         },
         "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
@@ -202,6 +286,12 @@
         },
         "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
+        },
+        "64421cd8-645b-40d1-b071-4f4238065252": {
+          "description": "Desglossar tasques complexes en seccions repetibles més petites."
+        },
+        "ddac6ae3-6abe-444e-af05-8a6b2a5eec65": {
+          "description": "Reconèixer patrons grans repetits que estan fets a partir de patrons més petits repetits."
         },
         "f466b8aa-18bf-460d-9780-1abcb7f32589": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
@@ -238,6 +328,9 @@
         },
         "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
           "description": "Comptar quantes vegades s'hauria de repetir una acció i representar-la en forma de bucle."
+        },
+        "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
+          "description": "Desglossar tasques complexes en seccions repetibles més petites."
         },
         "2cae95f3-a3dc-4541-8b5c-43d876d26ce3": {
           "description": "Explicar quan cal utilitzar un bucle, un bucle imbricat, o cap bucle."
@@ -452,8 +545,14 @@
         "bbb2787f-1faa-4193-93ec-e2e5ff8de139": {
           "description": "Diferenciar entre les ordres que s'han de repetir en bucles i les ordres que s'han de fer servir per si soles."
         },
+        "64f8b4e0-c197-41bc-9e3d-b957587027d9": {
+          "description": "Reconèixer patrons grans repetits que estan fets a partir de patrons més petits repetits."
+        },
         "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
+        },
+        "f875fba7-8b45-4faa-b661-24d7eae983b5": {
+          "description": "Desglossar tasques complexes en seccions repetibles més petites."
         },
         "2dc48a33-af54-4ea5-b2a5-4b8c16018529": {
           "description": "Reconèixer la diferència entre l'ús d'un bucle i d'un bucle imbricat."
@@ -827,6 +926,12 @@
         "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
           "description": "Diferenciar entre les ordres que s'han de repetir en bucles i les ordres que s'han de fer servir per si soles."
         },
+        "dd570e3f-8340-4838-8ba1-de856546f834": {
+          "description": "Desglossar tasques complexes en seccions repetibles més petites."
+        },
+        "12412b47-e83e-43a9-ad42-e98cba364913": {
+          "description": "Reconèixer patrons grans repetits que estan fets a partir de patrons més petits repetits."
+        },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
         },
@@ -1151,6 +1256,18 @@
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "Superar obstacles, com ara restriccions de temps o errors."
         },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": "Definir el terme \"contrasenya\" i explicar per a què serveix."
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": "Practicar creant una contrasenya segura i fàcil de recordar."
+        },
+        "3c4b51d5-b72f-42df-a55a-86c146214424": {
+          "description": "Replantejar una seqüència de passos amb el format d'un programa codificat"
+        },
+        "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
+          "description": "Explicar les limitacions que suposa traduir problemes que estan en llenguatge humà al llenguatge de les màquines"
+        },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
           "description": "Ordenar les ordres de moviment com a passos seqüencials en un programa."
         },
@@ -1160,8 +1277,20 @@
         "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
           "description": "Desglossar una seqüència llarga d'instruccions en la seqüència repetible més gran possible."
         },
+        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
+          "description": "Llegir i entendre el codi que se'ls presenta."
+        },
+        "71cede4e-3e93-41d6-a422-f2443f756a61": {
+          "description": "Identificar un error (o bug) i els problemes que provoca en un programa."
+        },
+        "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
+          "description": "Descriure i implementar un pla per depurar un programa."
+        },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
+        },
+        "ed6bda58-2e92-4a38-8847-7f739a13385e": {
+          "description": "Crear un joc interactiu utilitzant seqüències i controladors d'esdeveniments."
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Compartir un artefacte creatiu amb els companys."
@@ -1189,6 +1318,12 @@
         },
         "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
           "description": "Diferenciar entre les ordres que s'han de repetir en bucles i les ordres que s'han de fer servir per si soles."
+        },
+        "3a50aae3-6e0f-4821-9539-d06669eba0b1": {
+          "description": "Desglossar tasques complexes en seccions repetibles més petites."
+        },
+        "a19b271e-27b4-410c-bd3f-20c07f3ce2f0": {
+          "description": "Reconèixer patrons grans repetits que estan fets a partir de patrons més petits repetits."
         },
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
@@ -1276,6 +1411,12 @@
         },
         "32250c07-4872-43ce-9968-33e17f779cf3": {
           "description": "Diferenciar entre les ordres que s'han de repetir en bucles i les ordres que s'han de fer servir per si soles."
+        },
+        "06be5715-7c67-4b13-816d-acb7253a13b2": {
+          "description": "Desglossar tasques complexes en seccions repetibles més petites."
+        },
+        "b884b12d-1247-42f3-a907-652dd25566f2": {
+          "description": "Reconèixer patrons grans repetits que estan fets a partir de patrons més petits repetits."
         },
         "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
@@ -1417,6 +1558,9 @@
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
           "description": "Comptar quantes vegades s'hauria de repetir una acció i representar-la en forma de bucle."
+        },
+        "5b77c883-5479-4cfe-a31a-605957dd083d": {
+          "description": "Desglossar tasques complexes en seccions repetibles més petites."
         },
         "6174da85-eb3a-4c0e-925d-360b04604fdb": {
           "description": "Explicar quan cal utilitzar un bucle, un bucle imbricat, o cap bucle."

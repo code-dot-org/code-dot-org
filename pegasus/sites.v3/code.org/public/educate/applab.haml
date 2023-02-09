@@ -6,6 +6,11 @@ video_player: true
 
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/css/highlights.css", rel: "stylesheet"}
+:css
+  /* For phase 1 compatibility */
+  .tutorial-info h2 {
+    margin-top: 0px
+  }
 
 .tools-banner
   .tools-img-box
@@ -21,6 +26,9 @@ video_player: true
 
 .clear
 
+%div{style: "margin-top: 3em;"}
+  = view :maker_skinny_banner
+
 #resources.tile-container-responsive
   = view :top_hoc_tutorial_applab, image_match_youtube_height: true
 
@@ -28,7 +36,7 @@ video_player: true
     .tutorial-tile
       = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
       .tutorial-info{style: "justify-content: flex-start;"}
-        %h3{style: "margin-top: 0px;"} App Lab in the classroom
+        %h2 App Lab in the classroom
         .smalltext This launch video introduces five reasons App Lab could be a great tool for students learning programming.
       .clear
 
@@ -144,7 +152,7 @@ video_player: true
     %tr
       %td
         %a{href: CDO.studio_url("/s/csd4-2022")}
-          %img{src: "/educate/csp/images/thumb_app.png", alt: ""}
+          %img{src: "/educate/csp/images/thumb_app.png", alt: "", style: "padding-right: 5px;"}
           Unit 4
       %td
         %b.purple The Design Process

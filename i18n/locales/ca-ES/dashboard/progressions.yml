@@ -5,6 +5,7 @@ ca:
       Assessment: Avaluació
       Back and Forth: Anada i tornada
       Bass, Mid, and Treble: Greus, mitjans i aguts
+      Binary Bracelets - Unplugged Activity: Polseres binàries - Activitat sense connexió
       Challenge: Repte
       Dance Crews: Grups de dansa
       Debugging: Depuració
@@ -13,6 +14,7 @@ ca:
       Events: Esdeveniments
       Example: Exemple
       Exploration: Exploració
+      'Exploration: Sample Project': 'Exploració: Projecte de mostra'
       For Loops: Bucles "for"
       Free Play: Joc lliure
       'Free Play: Make a Scene': 'Joc lliure: Fem una escena'
@@ -30,25 +32,37 @@ ca:
       'Mini-Project: Create a Virtual Pet': 'Mini-Projecte: Fem una mascota virtual'
       'Mini-Project: Royal Battle': 'Miniprojecte: Batalla real'
       'Mini-Project: Sticker Art': 'Miniprojecte: Art amb adhesius'
+      'Mini-project: Chase Game': 'Miniprojecte: Joc de persecució'
+      'Mini-project: Flappy Game': 'Miniprojecte: Joc amb el Flappy'
       'Mini-project: Jorge the Dog': 'Miniprojecte: El gosset Jorge'
+      'Mini-project: Sticker Art': 'Miniprojecte: Art amb adhesius'
       'Mini-project: Sticker Design': 'Miniprojecte: Disseny d''adhesius'
       More Buttons: Més botons
+      Move It Move it Video  - Unplugged Activity: A moure's - Activitat sense connexió
       My Online Neighborhood: El meu barri d'internet
+      My Robotic Friends - Unplugged Activity: Els meus amics robòtics - Activitat sense connexió
       Overview: Vista general
       Pair Programming: Programació per parelles
+      Picturing Data: Dades en imatges
+      Planning: Planificació
       Practice: Pràctica
       Prediction: Predicció
       Programming with Rey and BB-8: Programació amb la Rey i el BB-8
+      Project: Projecte
       Properties: Propietats
       Quarter Notes: Notes negres
       Reflection: Reflexió
+      Review: Repàs
       Skill Building: Desenvolupament d'habilitats
       Speed it Up, Slow it Down: Ara ràpid, ara lent
       Sprite Properties: Propietats de l'sprite
       The Harvester: L'agricultora
       Variables: Variables
       Video: Vídeo
+      'Video - Maze Intro: Programming with Blocks': 'Vídeo - Introducció al laberint: Programació amb blocs'
+      'Video:  Debugging with the Step Button': 'Vídeo:  Depurar amb el botó de pas'
       'Video: Artist Intro with JR Hildebrand': 'Vídeo: Introducció a l''Artista amb J. R. Hildebrand'
+      'Video: Code Your Own Flappy Game': 'Vídeo: Programa el teu propi joc amb el Flappy'
       'Video: Dance Party Events': 'Vídeo: Festa de ball - Esdeveniments'
       'Video: Dance Party Measures': 'Vídeo: Festa de ball - Compassos'
       'Video: Dance Party Party On!': 'Vídeo: Festa de ball - Que comenci la festa!'
@@ -56,18 +70,21 @@ ca:
       'Video: Dance Party Warm Up': 'Vídeo: Festa de ball - Escalfament'
       'Video: Debugging with Scrat ': 'Vídeo: Depuració amb l''Scrat '
       'Video: Debugging with the Step Button': 'Vídeo: Depurar amb el botó de pas'
+      'Video: Follow The Digital Trail': 'Vídeo: Seguim el rastre digital'
       'Video: How to Make a Sprite': 'Vídeo: Com fer un sprite'
       'Video: Ice Age Loops': 'Vídeo: Bucles a l''Edat de gel'
       'Video: Introducing Sprite Lab': 'Vídeo: Introducció al Laboratori d''Sprites'
       'Video: Introduction to Play Lab': 'Vïdeo: Introducció al Laboratori de Jocs'
       'Video: Loops in Artist': 'Vídeo: Bucles a l''Artista'
       'Video: Maze Intro - Programming with Blocks': 'Vídeo: Introducció al laberint - Programació amb blocs'
+      'Video: Maze Intro - Programming with Blocks ': 'Vídeo: Introducció al laberint - Programació amb blocs '
       'Video: Nested Loops with the Bee': 'Vídeo: Bucles imbricats amb l''abella'
       'Video: Programming with Blocks': 'Vídeo: Programació amb blocs'
       'Video: Programming with Rey and BB-8': 'Vídeo: Programació amb la Rey i el BB-8'
       'Video: Repeat Blocks with BB-8': 'Vídeo: Blocs de repetició amb el BB-8'
       'Video: Sprites in Action': 'Vídeo: Sprites en acció'
       'Video: The Artist in Code Studio': 'Vídeo: L''artista a Code Studio'
+      'Video: The Big Event - Unplugged Activity': 'Vídeo: El gran esdeveniment: Activitat sense connexió'
       'Video: The Collector': 'Vídeo: La col·leccionista'
       'Video: The Harvester': 'Vídeo: L''agricultora'
       'Video: Using the Repeat Block': 'Vídeo: El bloc de repetició'

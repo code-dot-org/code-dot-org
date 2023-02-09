@@ -3230,7 +3230,15 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-        csa3-2023: {}
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Matrice Uni-Dimensionale (1D)
+            lesson-3:
+              name: Bucle Pentru
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa4-2023: {}
         csa5-2023: {}
         csa6-2023: {}
@@ -3366,3 +3374,5 @@ ro:
         allthevalidation: {}
         vpl-csd5-ayw-pilot-2022: {}
         vpl-csd6-ayw-pilot-2022: {}
+        self-paced-pl-csa4-2023: {}
+        katies-playground: {}

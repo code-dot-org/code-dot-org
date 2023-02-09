@@ -4,6 +4,8 @@ require 'cdo/rake_utils'
 require 'cdo/tempfile'
 require 'pdf/conversion'
 require src_dir 'curriculum_course'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 PDFConversionInfo = Struct.new(:url_path, :src_files, :output_pdf_path)
 
@@ -50,4 +52,4 @@ all_outfiles = []
   all_outfiles << fetchfile_for_pdf
 end
 
-task default: all_outfiles
+timed_task_with_logging default: all_outfiles

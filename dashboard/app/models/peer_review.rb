@@ -130,12 +130,12 @@ class PeerReview < ApplicationRecord
   end
 
   def self.create_for_submission(user_level, level_source_id)
-    return if PeerReview.where(
+    return if PeerReview.exists?(
       submitter: user_level.user,
       level: user_level.level,
       from_instructor: true,
       status: :accepted
-    ).exists?
+    )
 
     transaction do
       # Remove old unassigned reviews for this submitter+script+level combination

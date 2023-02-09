@@ -24,3 +24,11 @@ public boolean mystery(int[] nums) {
 }
 ```
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This method declares a `boolean` variable called `result` to keep track of the result of executing the method, and the `for` loop then traverses through each element of the 1D array `nums`.
+
+In the body of the `for` loop, the condition of the `if` statement (`nums[index] % 2 == 1`) checks if the remainder after dividing the current value by `2` equals `1`. If the condition is `true`, the variable `result` is set to `false`.
+
+If any of the values in the 1D array `nums` is odd (has a remainder of `1` after dividing it by `2`), then the value `false` is returned. Otherwise, the value `true` is returned.
+MARKDOWN

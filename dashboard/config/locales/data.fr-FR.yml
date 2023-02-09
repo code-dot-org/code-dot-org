@@ -13,13 +13,13 @@ fr:
         Artist2: L'Artiste 2
         Unplug5: Fonctions
         Farmer: Le Fermier
-        Unplug6: Formules conditionnelles
+        Unplug6: Instructions conditionnelles
         Artist3: L'Artiste 3
         Unplug7: Ecriture de chanson
         Farmer2: Le Fermier 2
         Unplug8: Abstraction
         Artist4: L'Artiste 4
-        Unplug9: Programmation de relais
+        Unplug9: Programmation en relais
         Farmer3: Le Fermier 3
         Unplug10: L'Internet
         Artist5: L'Artiste 5
@@ -27,7 +27,7 @@ fr:
         MazeEC: Le labyrinthe
         Bounce: Rebond
         Flappy: Flappy Bird
-        Jigsaw: Puzzle
+        Jigsaw: Casse-tête
         MazeStep: Mode « pas à pas » du labyrinthe
         Wordsearch: Mots mêlés
         Webapp: Labo des applis
@@ -603,7 +603,7 @@ fr:
         C2_graph_paper: Programmation sur papier quadrillé
         C2_conditionals_with_cards: Instructions conditionnelles
         C2_binary_bracelets: Bracelets binaires
-        C2_relay_programming: Programmation de relais
+        C2_relay_programming: Programmation en relais
         C2_paper_airplanes: Avions en Papier
         C2_digital_footprint: Ton Empreinte Numérique
         C2_digital_footprint_v2: Ton Empreinte Numérique
@@ -637,7 +637,7 @@ fr:
         C4_function_edit: Modification de fonctions
         C4_function_create: Création de Fonctions
         C4_function_parameters: Fonctions avec Paramètres
-        C4_conditionals: Formules conditionnelles
+        C4_conditionals: Instructions conditionnelles
         C4_unplugged_algorithms: Algorithmes avec des Tangrams
         C4_unplugged_madlibs: Mad Libs (histoire à trous)
         C4_unplugged_variables: Variables en enveloppes

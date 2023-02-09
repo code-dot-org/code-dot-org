@@ -4617,6 +4617,17 @@ zh-TW:
               display_name: 內容
             lessonGroup-4:
               display_name: 替代課程
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 一維（1D）陣列
+            lesson-3:
+              name: 計次迴圈（For Loops）
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-4:
+              display_name: 替代課程
         hello-world-space-2022:
           title: 你好世界：太空
         hello-world-soccer-2022:

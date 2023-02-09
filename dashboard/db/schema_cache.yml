@@ -28731,6 +28731,20 @@ indexes:
     type: 
     using: :btree
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: projects
+    name: storage_apps_storage_id_state_index
+    unique: false
+    columns:
+    - storage_id
+    - state
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   puzzle_ratings:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: puzzle_ratings
@@ -30241,7 +30255,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20221024233909
+version: 20230124093901
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

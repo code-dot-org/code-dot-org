@@ -15,6 +15,7 @@ var ALLOWED_KEYS = new Set([
   'codeOwnersName',
   'hasDataMode',
   'hasDesignMode',
+  'inStartBlocksMode',
   'isChallengeLevel',
   'isEmbedView',
   'isResponsive',

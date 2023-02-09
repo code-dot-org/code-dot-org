@@ -5697,6 +5697,15 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Matrizes unidimensionais (1D)
+            lesson-3:
+              name: Laços para
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         hello-world-space-2022:
           title: 'Olá, Mundo: Espaço'
         hello-world-soccer-2022:

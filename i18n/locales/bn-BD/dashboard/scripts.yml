@@ -861,6 +861,10 @@ bn:
           lessons:
             lesson-4:
               name: চলকগুলো
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: ফর লুপ
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:

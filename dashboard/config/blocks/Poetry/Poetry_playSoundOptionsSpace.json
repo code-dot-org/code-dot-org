@@ -4,6 +4,7 @@
     "func": "playSoundOptionsSpace",
     "docFunc": "gamelab_playSoundOptions",
     "blockText": "play sound {SOUND}",
+    "style": "world_blocks",
     "args": [
       {
         "name": "SOUND",

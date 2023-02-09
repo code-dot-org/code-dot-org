@@ -1,6 +1,6 @@
 name 'CSA U3L4-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Converting Loops'
+description 'Convert the `while` loop in the program to use a `for` loop to traverse the 1D array.'
 
 sublevels
 level 'CSA U3L4-L6a_2023'

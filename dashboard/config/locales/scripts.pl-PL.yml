@@ -6619,6 +6619,8 @@ pl:
           lessons:
             lesson-7:
               name: Wprowadzenie do Duszków
+            lesson-9:
+              name: Microbit Playground
         csc-pilot-2022-ecosystems:
           name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
@@ -6887,6 +6889,8 @@ pl:
           lessons:
             lesson-4:
               name: 'Moduł 4 po pracy: Tablice 2D w Jednostce 5 i FRQ'
+            lesson-5:
+              name: 'Moduł 5 po pracy: Projekt Jednostki 5'
             lesson-6:
               name: 'Moduł 6 po pracy: Metody łańcuchowe w Jednostce 6'
         csa-labs-2022:
@@ -6932,6 +6936,8 @@ pl:
               name: 'Moduł 8 po pracy: Przygotowanie studentów do egzaminu AP'
             lesson-8:
               name: 'Moduł 8 po pracy: Przygotowanie studentów do egzaminu AP'
+            lesson-9:
+              name: Moduł X
           name: csa-draft-pl
         vpl-csd2-ayw-pilot-2022:
           lessons:
@@ -7095,6 +7101,8 @@ pl:
               name: Jednostka 2 Sprawdzian
             lesson-13:
               name: Projekt zarządzania sklepem [wersja 1-dniowa]
+            lesson-14:
+              name: To słowo kluczowe
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -7105,6 +7113,32 @@ pl:
           name: csa2-2023
           title: Struktura klas i Projekt
         csa3-2023:
+          lessons:
+            lesson-2:
+              name: Modyfikowanie elementów
+            lesson-3:
+              name: Pętle dla (for)
+            lesson-4:
+              name: Warunki wstępne i warunki końcowe
+            lesson-6:
+              name: Zmienne statyczne i stałe
+            lesson-7:
+              name: Polimorfizm
+            lesson-8:
+              name: Algorytmy macierzowe
+            lesson-9:
+              name: Znajdowanie duplikatów
+            lesson-11:
+              name: Praktyka FRQ
+            lesson-12:
+              name: Jednostka 3 Sprawdzian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa3-2023
           title: Tablice i Algorytmy
         csa4-2023:
@@ -7336,6 +7370,8 @@ pl:
               name: Lekcja cząstek 4
             lesson-6:
               name: Testowanie Katie
+            lesson-7:
+              name: Funkcje labiryntu
           name: csd-playground
           title: Plac Zabaw CSP
         self-paced-pl-physical-computing1:
@@ -7433,6 +7469,7 @@ pl:
               display_name: Twórz PT
             lessonGroup-3:
               display_name: Ankieta po odbyciu kursu
+          name: csp8-2023
         csp9-2023:
           lesson_groups:
             csp_unit9_2020:
@@ -7558,3 +7595,16 @@ pl:
               name: Badanie asynchronicznego programu nauczania
           name: vpl-csd4-ayw-pilot-2022
           title: Odkrycia Informatyki wirtualny moduł 6
+        self-paced-pl-csa4-2023:
+          lessons:
+            lesson-1:
+              name: Tworzenie i stosowanie obiektów
+            lesson-2:
+              name: Odkrywanie klasy Painter
+          name: self-paced-pl-csd4-2023
+        katies-playground:
+          lessons:
+            lesson-1:
+              name: Pomysły FM
+          name: katies-playground
+          title: Miejsce Katie do robienia rzeczy

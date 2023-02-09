@@ -4008,6 +4008,17 @@ zh-CN:
               display_name: 内容
             lessonGroup-4:
               display_name: 替补课程
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 一维（1D）数组
+            lesson-3:
+              name: 计数循环
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 替补课程
         hello-world-space-2022:
           title: 你好世界：太空
         hello-world-soccer-2022:

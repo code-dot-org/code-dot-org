@@ -2916,6 +2916,15 @@ is:
               display_name: Innihald
             lessonGroup-4:
               display_name: Annað kennsluefni
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Frá lykkjur
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+            lessonGroup-4:
+              display_name: Annað kennsluefni
         csd4-2023:
           lesson_groups:
             lessonGroup-2:

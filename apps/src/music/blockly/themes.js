@@ -1,7 +1,8 @@
 import CdoTheme from '@cdo/apps/blockly/addons/cdoTheme';
 import GoogleBlockly from 'blockly/core';
+import {cdoBlockStyles} from '../../blockly/addons/cdoTheme.js';
 
-const blockStyles = {};
+const blockStyles = cdoBlockStyles;
 const categoryStyles = {};
 const componentStyles = {
   toolboxBackgroundColour: '#424242', // gray-800
@@ -18,7 +19,7 @@ export const musicLabDarkTheme = GoogleBlockly.Theme.defineTheme(
     componentStyles,
     fontStyle: {
       family: '"Gotham 4r", sans-serif',
-      size: 10.5
+      size: 16
     }
   }
 );

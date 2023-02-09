@@ -2323,7 +2323,10 @@ he:
           lessons:
             lesson-4:
               name: משתנים
-        csa3-2023: {}
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: בשביל לולאות
         csa4-2023: {}
         csa5-2023: {}
         csa6-2023: {}
@@ -2443,3 +2446,5 @@ he:
         allthevalidation: {}
         vpl-csd5-ayw-pilot-2022: {}
         vpl-csd6-ayw-pilot-2022: {}
+        self-paced-pl-csa4-2023: {}
+        katies-playground: {}

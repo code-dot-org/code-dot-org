@@ -1062,6 +1062,20 @@
                     }
                   }
                 },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
                 "toggleSwitch.isOpen": {
                   "return_value": "Boolean"
                 }

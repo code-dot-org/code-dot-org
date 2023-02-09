@@ -701,16 +701,17 @@ class ScriptLevel < ApplicationRecord
         # Java Lab levels use levels rather than projects as their example, so the URL is much more clearly
         # defined and is directly set on the level. Because of this, the value of "example" is already in its
         # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
-        if level.is_a?(Dancelab)
+        case level
+        when Dancelab
           send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(Poetry)
+        when Poetry
           send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(GamelabJr)
-          send("#{'spritelab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(Artist)
+        when GamelabJr
+          send("#{level.standalone_app_name_or_default}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        when Artist
           artist_type = ['elsa', 'anna'].include?(level.skin) ? 'frozen' : 'artist'
           send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(Studio) # playlab
+        when Studio # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         else
           send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)

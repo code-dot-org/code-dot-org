@@ -331,6 +331,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "command/coursed/2022": {
+          "word": "Ordre",
+          "definition": "Una instrucció per a l'ordinador. Els algorismes i els programes informàtics es componen de tot un seguit d'ordres juntes."
+        },
         "conditionals/coursed/2022": {
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
@@ -338,6 +342,10 @@
         "condition/coursed/2022": {
           "word": "Condició",
           "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
+        },
+        "while_loop/coursed/2022": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/coursed/2022": {
           "word": "Until"
@@ -394,6 +402,10 @@
         "conditionals/coursee/2022": {
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
+        },
+        "while_loop/coursee/2022": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "copyright/coursee/2022": {
           "word": "Copyright"
@@ -501,6 +513,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "command/express/2022": {
+          "word": "Ordre",
+          "definition": "Una instrucció per a l'ordinador. Els algorismes i els programes informàtics es componen de tot un seguit d'ordres juntes."
+        },
         "condition/express/2022": {
           "word": "Condició",
           "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
@@ -508,6 +524,10 @@
         "conditionals/express/2022": {
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
+        },
+        "while_loop/express/2022": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/express/2022": {
           "word": "Until"
@@ -937,6 +957,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "command/coursed/2021": {
+          "word": "Ordre",
+          "definition": "Una instrucció per a l'ordinador. Els algorismes i els programes informàtics es componen de tot un seguit d'ordres juntes."
+        },
         "conditionals/coursed/2021": {
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
@@ -944,6 +968,10 @@
         "condition/coursed/2021": {
           "word": "Condició",
           "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
+        },
+        "while_loop/coursed/2021": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/coursed/2021": {
           "word": "Until"
@@ -996,6 +1024,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "command/express/2021": {
+          "word": "Ordre",
+          "definition": "Una instrucció per a l'ordinador. Els algorismes i els programes informàtics es componen de tot un seguit d'ordres juntes."
+        },
         "condition/express/2021": {
           "word": "Condició",
           "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
@@ -1003,6 +1035,10 @@
         "conditionals/express/2021": {
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
+        },
+        "while_loop/express/2021": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/express/2021": {
           "word": "Until"
@@ -1106,6 +1142,10 @@
         "conditionals/coursee/2021": {
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
+        },
+        "while_loop/coursee/2021": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "define/coursee/2021": {
           "word": "Defineix"

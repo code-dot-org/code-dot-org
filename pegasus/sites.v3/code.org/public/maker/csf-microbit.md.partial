@@ -52,8 +52,8 @@ style_min: true
 <div class="col-50" style="margin-top: 10px">
   <p>The BBC micro:bit is a pocket-sized computer that introduces you to how software and hardware work together. It has an LED light display, buttons, sensors and many input/output features that, when programmed, let it interact with you and your world!</p>
   <p>The micro:bit also helps students develop computational thinking skills. With it they can learn how to code and learn to think creatively in their application of digital technologies to problem-solving challenges and product design.</p>
-  <p>The micro:bit has additional teacher resources, which you can find on their website, including professional development courses, videos for your classroom, posters, and more. Visit <a href="https://microbit.org/teach/for-teachers/" target="_blank" rel="noopener noreferrer">https://microbit.org/teach/for-teachers/</a> to learn more.</p>
-  <a href="/maker/csf-microbit"><button>Learn more</button></a>
+  <p>The micro:bit has additional teacher resources, which you can find on their website, including professional development courses, videos for your classroom, posters, and more.</p>
+  <a href="https://microbit.org/teach/for-teachers/" target="_blank" rel="noopener noreferrer"><button>Learn more</button></a>
 </div>
 
 <div class="col-50" style="padding-left: 30px; float: right; margin-top: 0">

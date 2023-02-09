@@ -5607,6 +5607,17 @@ id:
               display_name: Konten
             lessonGroup-4:
               display_name: Pelajaran Alternatif
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Array 1 Dimensi/ One-Dimensional (1D)
+            lesson-3:
+              name: For Loop
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
         hello-world-space-2022:
           title: 'Halo Dunia: Ruang'
         hello-world-soccer-2022:

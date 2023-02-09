@@ -26,6 +26,10 @@ my:
             MOVES.Rest: ဘာမှမရှိ
           MOVE2:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -56,14 +60,26 @@ my:
         options:
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       Dancelab_ifDanceIs:
         options:
           DANCE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -88,6 +104,8 @@ my:
             '"ALIEN"': ဂြိုဟ်သား
             '"CAT"': ကြောင်
             '"DOG"': ခွေး
+            '"ROBOT"': စက်ရုပ်
+            '"UNICORN"': ခေါင်းမှာအချောင်းတစ်ချောင်းထွက်နေတဲ့မြင်း
           LOCATION:
             "{x: 100, y: 200}": ဘယ်ဘက်သို့
             "{x: 300, y: 200}": ညာဘက်သို့
@@ -97,6 +115,8 @@ my:
             '"ALIEN"': ဂြိုဟ်သား
             '"CAT"': ကြောင်
             '"DOG"': ခွေး
+            '"ROBOT"': စက်ရုပ်
+            '"UNICORN"': ခေါင်းမှာအချောင်းတစ်ချောင်းထွက်နေတဲ့မြင်း
           LOCATION:
             "{x: 100, y: 200}": ဘယ်ဘက်သို့
             "{x: 300, y: 200}": ညာဘက်သို့
@@ -217,21 +237,37 @@ my:
           EFFECT:
             '"hearts"': အသည်းနှလုံးများ
             '"rain"': မိုးရွာသည်
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
             '"speed"': အရှိန်
       gamelab_checkTouching:
         options:
           CONDITION:
             '"when"': အချိန်
             '"while"': စဉ်တွင်
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
             '"speed"': အရှိန်
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -288,6 +324,8 @@ my:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
+      gamelab_repeatForever:
+        text: ထာဝရ ပြန်လုပ်ပါ။
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -309,6 +347,8 @@ my:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
             '"speed"': အရှိန်
       gamelab_setProp_dropdown:
         options:
@@ -361,6 +401,8 @@ my:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -370,6 +412,8 @@ my:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
       Mikelab_groupChangeAnim:
         options:
           SELECT:
@@ -380,6 +424,8 @@ my:
             '"all"': အားလုံး
           PROPERTY:
             '"scale"': အရွယ်အစား
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -393,6 +439,8 @@ my:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
@@ -411,6 +459,8 @@ my:
             '"all"': အားလုံး
           PROPERTY:
             '"scale"': အရွယ်အစား
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
       Mikelab_groupSetTint:
         options:
           SELECT:
@@ -421,6 +471,8 @@ my:
             MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
+      Mikelab_repeatUntilComplete:
+        text: ထာဝရ ပြန်လုပ်ပါ။
       Mikelab_setBG:
         options:
           BG:
@@ -429,6 +481,8 @@ my:
         options:
           PROPERTY:
             '"scale"': အရွယ်အစား
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -442,13 +496,28 @@ my:
       Mikelab_whenKeyPressed:
         options:
           KEY:
+            '"up"': မြှားအပေါ်ဘက်သို့
+            '"down"': မြှားအောက်ဘက်သို့
+            '"left"': မြှားဘယ်ဘက်သို့
+            '"right"': မြှားညာဘက်သို့
             '"a"': က
             '"d"': ဃ
       Mikelab_whenKeyReleased:
         options:
           KEY:
+            '"up"': မြှားအပေါ်ဘက်သို့
+            '"down"': မြှားအောက်ဘက်သို့
+            '"left"': မြှားဘယ်ဘက်သို့
+            '"right"': မြှားညာဘက်သို့
             '"a"': က
             '"d"': ဃ
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': မြှားအပေါ်ဘက်သို့
+            '"down"': မြှားအောက်ဘက်သို့
+            '"left"': မြှားဘယ်ဘက်သို့
+            '"right"': မြှားညာဘက်သို့
       Poetry_addFrame:
         options:
           BRUSH:

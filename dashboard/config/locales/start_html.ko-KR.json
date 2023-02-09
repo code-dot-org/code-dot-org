@@ -224,7 +224,9 @@
           "pink": "핑크색",
           "green": "초록",
           "black": "검정",
-          "purple": "보라색"
+          "purple": "보라색",
+          "Sunny": "화창함",
+          "Rainy": "비가 옴"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "지우기",
@@ -232,7 +234,9 @@
           "pink": "핑크색",
           "green": "초록",
           "black": "검정",
-          "purple": "보라색"
+          "purple": "보라색",
+          "Sunny": "화창함",
+          "Rainy": "비가 옴"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -1361,12 +1365,36 @@
         "ml-L2 supervised - green glass door-2021": {
           "Green Glass Door": "녹색 유리문",
           "Accepted": "수락됨",
-          "Rejected": "거절됨"
+          "Rejected": "거절됨",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "이 게임에서는 Green Glass Door를 통해 어떤 단어가 허용되는지 알아보려고 합니다.",
+          "Some words are accepted and others are rejected": "어떤 단어는 받아들여지고 어떤 단어는 거부됩니다",
+          "In the next screen, a wise wizard will show us how to play the game": "다음 화면에서는 현명한 마법사가 게임 방법을 보여줍니다.",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "그러면 플레이를 하면서 어떤 단어가 문 쪽에서 받아들여지거나 거부되는지 맞출 기회를 얻게 됩니다.",
+          "Start Playing": "플레이 시작",
+          "Word:": "단어:",
+          "Decision:": "결정:",
+          "New Example Word": "새 예제 단어",
+          "I'm Ready To Try Myself!": "직접 해볼 준비가 됐어요!",
+          "See All Results": "모든 결과 보기",
+          "On this screen, the wizard can show you example words. See if you notice any patterns": "이 화면에서 마법사는 예제 단어를 보여 줄 수 있습니다. 패턴이 보이는지 확인하세요",
+          "Check Your Word": "단어 확인하기"
         },
         "ml-L2 supervised - green glass door_2022": {
           "Green Glass Door": "녹색 유리문",
           "Accepted": "수락됨",
-          "Rejected": "거절됨"
+          "Rejected": "거절됨",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "이 게임에서는 Green Glass Door를 통해 어떤 단어가 허용되는지 알아보려고 합니다.",
+          "Some words are accepted and others are rejected": "어떤 단어는 받아들여지고 어떤 단어는 거부됩니다",
+          "In the next screen, a wise wizard will show us how to play the game": "다음 화면에서는 현명한 마법사가 게임 방법을 보여줍니다.",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "그러면 플레이를 하면서 어떤 단어가 문 쪽에서 받아들여지거나 거부되는지 맞출 기회를 얻게 됩니다.",
+          "Start Playing": "플레이 시작",
+          "Word:": "단어:",
+          "Decision:": "결정:",
+          "New Example Word": "새 예제 단어",
+          "I'm Ready To Try Myself!": "직접 해볼 준비가 됐어요!",
+          "See All Results": "모든 결과 보기",
+          "On this screen, the wizard can show you example words. See if you notice any patterns": "이 화면에서 마법사는 예제 단어를 보여 줄 수 있습니다. 패턴이 보이는지 확인하세요",
+          "Check Your Word": "단어 확인하기"
         },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "다음"
@@ -1388,41 +1416,87 @@
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "계속하기",
-          "Loading...": "Loading..."
+          "Loading...": "Loading...",
+          "Hover over a dot to see its name": "점 위에 마우스를 갖다대면 이름이 보입니다",
+          "Try Your Own Food!": "직접 차려 드세요!",
+          "x Axis": "x 축",
+          "y Axis": "y 축",
+          "Flip Colors": "색상 뒤집기",
+          "Fruit Accuracy:": "과일 정확도:"
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
           "Continue": "계속하기",
-          "Loading...": "Loading..."
+          "Loading...": "Loading...",
+          "Hover over a dot to see its name": "점 위에 마우스를 갖다대면 이름이 보입니다",
+          "Try Your Own Food!": "직접 차려 드세요!",
+          "x Axis": "x 축",
+          "y Axis": "y 축",
+          "Flip Colors": "색상 뒤집기",
+          "Fruit Accuracy:": "과일 정확도:"
         },
         "ml-intro app lab-book recommender demo-2021": {
           "Silly": "어리석다",
-          "Predict": "예측"
+          "Predict": "예측",
+          "Outdoors": "야외",
+          "Indoors": "실내"
         },
         "ml-intro app lab-book recommender demo_2022": {
           "Silly": "어리석다",
-          "Predict": "예측"
+          "Predict": "예측",
+          "Outdoors": "야외",
+          "Indoors": "실내"
         },
         "ml-model card-medical app v2 2021-2": {
           "W": "왼쪽",
           "A": "A",
           "yes": "예",
           "no": "아니요",
-          "head": "머리"
+          "head": "머리",
+          "nonbinary (identifies outside gender binary)": "논바이너리 (젠더 바이너리 이외를 식별)",
+          "Shortness of Breath?": "호흡이 곤란한가요?",
+          "Pain Type": "통증 유형",
+          "Achy": "아픈",
+          "Dull": "둔한",
+          "Sharp": "날카로운",
+          "Stabbing": "쑤시는 듯한",
+          "Throbbing": "욱신거림",
+          "Area of Pain?": "통증 부위는?",
+          "stomach": "배",
+          "limb": "팔다리",
+          "chest": "가슴",
+          "Sign In": "로그인"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "왼쪽",
           "A": "A",
           "yes": "예",
           "no": "아니요",
-          "head": "머리"
+          "head": "머리",
+          "nonbinary (identifies outside gender binary)": "논바이너리 (젠더 바이너리 이외를 식별)",
+          "Shortness of Breath?": "호흡이 곤란한가요?",
+          "Pain Type": "통증 유형",
+          "Achy": "아픈",
+          "Dull": "둔한",
+          "Sharp": "날카로운",
+          "Stabbing": "쑤시는 듯한",
+          "Throbbing": "욱신거림",
+          "Area of Pain?": "통증 부위는?",
+          "stomach": "배",
+          "limb": "팔다리",
+          "chest": "가슴",
+          "Sign In": "로그인"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "어리석다",
-          "Predict": "예측"
+          "Predict": "예측",
+          "Outdoors": "야외",
+          "Indoors": "실내"
         },
         "ml-model cards-book recommender model card_2022": {
           "Silly": "어리석다",
-          "Predict": "예측"
+          "Predict": "예측",
+          "Outdoors": "야외",
+          "Indoors": "실내"
         },
         "ml-models in applab-choice if quotes": {
           "3": "3",
@@ -1498,23 +1572,107 @@
         },
         "ml-models-shoes decision tree-2021": {
           "Improved Shoe Recommender": "개선된 구두 추천",
-          "Sports": "스포츠"
+          "Sports": "스포츠",
+          "Recommend Shoes!": "신발 추천!",
+          "Another Recommendation!": "또 다른 추천!",
+          "We Recommend...": "다음을 추천합니다...",
+          "Is It Raining Outside?": "밖에 비가 오나요?",
+          "Yes!": "예!",
+          "No!": "아니요!",
+          "Where Are You Spending Your Day?": "하루를 어디서 보내고 계신가요?",
+          "Choose An Option": "옵션 선택하기",
+          "Indoors": "실내",
+          "Outdoors": "야외",
+          "In Bed": "침대에서",
+          "Recommend Shoes": "신발 추천",
+          "What Kind Of Day is Today?": "오늘은 어떤 날인가요?",
+          "Casual": "보통",
+          "Fancy": "멋짐"
         },
         "ml-models-shoes decision tree_2022": {
           "Improved Shoe Recommender": "개선된 구두 추천",
-          "Sports": "스포츠"
+          "Sports": "스포츠",
+          "Recommend Shoes!": "신발 추천!",
+          "Another Recommendation!": "또 다른 추천!",
+          "We Recommend...": "다음을 추천합니다...",
+          "Is It Raining Outside?": "밖에 비가 오나요?",
+          "Yes!": "예!",
+          "No!": "아니요!",
+          "Where Are You Spending Your Day?": "하루를 어디서 보내고 계신가요?",
+          "Choose An Option": "옵션 선택하기",
+          "Indoors": "실내",
+          "Outdoors": "야외",
+          "In Bed": "침대에서",
+          "Recommend Shoes": "신발 추천",
+          "What Kind Of Day is Today?": "오늘은 어떤 날인가요?",
+          "Casual": "보통",
+          "Fancy": "멋짐"
         },
         "ml-models-shoes points-2021": {
-          "Ultimate Shoe Recommender": "최종적인 구두 추천"
+          "Ultimate Shoe Recommender": "최종적인 구두 추천",
+          "Recommend Shoes!": "신발 추천!",
+          "Another Recommendation!": "또 다른 추천!",
+          "We Recommend...": "다음을 추천합니다...",
+          "Where will you spend most of your time?": "가장 많은 시간을 보내는 곳은 어디입니까?",
+          "In Bed": "침대에서",
+          "Indoors": "실내",
+          "Outside in a City": "도시 외부",
+          "Outside in Nature": "외부 자연 속에서",
+          "What is the weather like?": "날씨가 어떤가요?",
+          "Sunny": "화창함",
+          "Rainy": "비가 옴",
+          "Snowy": "눈이 내림",
+          "Windy": "바람이 붐",
+          "How do you feel about socks?": "양말에 대해 어떻게 생각하세요?",
+          "Yes Socks!": "네, 양말!",
+          "No Socks!": "양말은 아니에요!",
+          "What is your day like?": "오늘 하루는 어떤가요?",
+          "Casual": "보통",
+          "Professional": "전문적인",
+          "Hard Work": "열심히 일함",
+          "Lazy": "게으름",
+          "Do you care about people noticing your shoes?": "사람들이 내 신발을 알아보는 게 신경 쓰이나요?",
+          "Yes!": "예!",
+          "No!": "아니요!"
         },
         "ml-models-shoes points_2022": {
-          "Ultimate Shoe Recommender": "최종적인 구두 추천"
+          "Ultimate Shoe Recommender": "최종적인 구두 추천",
+          "Recommend Shoes!": "신발 추천!",
+          "Another Recommendation!": "또 다른 추천!",
+          "We Recommend...": "다음을 추천합니다...",
+          "Where will you spend most of your time?": "가장 많은 시간을 보내는 곳은 어디입니까?",
+          "In Bed": "침대에서",
+          "Indoors": "실내",
+          "Outside in a City": "도시 외부",
+          "Outside in Nature": "외부 자연 속에서",
+          "What is the weather like?": "날씨가 어떤가요?",
+          "Sunny": "화창함",
+          "Rainy": "비가 옴",
+          "Snowy": "눈이 내림",
+          "Windy": "바람이 붐",
+          "How do you feel about socks?": "양말에 대해 어떻게 생각하세요?",
+          "Yes Socks!": "네, 양말!",
+          "No Socks!": "양말은 아니에요!",
+          "What is your day like?": "오늘 하루는 어떤가요?",
+          "Casual": "보통",
+          "Professional": "전문적인",
+          "Hard Work": "열심히 일함",
+          "Lazy": "게으름",
+          "Do you care about people noticing your shoes?": "사람들이 내 신발을 알아보는 게 신경 쓰이나요?",
+          "Yes!": "예!",
+          "No!": "아니요!"
         },
         "ml-models-shoes random-2021": {
-          "Shoe Recommender": "구두 추천"
+          "Shoe Recommender": "구두 추천",
+          "Recommend Shoes!": "신발 추천!",
+          "Another Recommendation!": "또 다른 추천!",
+          "We Recommend...": "다음을 추천합니다..."
         },
         "ml-models-shoes random_2022": {
-          "Shoe Recommender": "구두 추천"
+          "Shoe Recommender": "구두 추천",
+          "Recommend Shoes!": "신발 추천!",
+          "Another Recommendation!": "또 다른 추천!",
+          "We Recommend...": "다음을 추천합니다..."
         },
         "ml-use model card-example3A-2021": {
           "Driver Alert System": "드라이버 경보 시스템",

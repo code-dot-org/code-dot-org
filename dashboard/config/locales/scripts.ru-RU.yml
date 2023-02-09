@@ -4235,6 +4235,15 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Одномерные (1D) массивы
+            lesson-3:
+              name: Циклы с параметром
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
         hello-world-space-2022:
           title: 'Привет, мир: космос'
         hello-world-soccer-2022:

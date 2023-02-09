@@ -4148,6 +4148,17 @@ ko:
               display_name: 컨텐츠
             lessonGroup-4:
               display_name: 대체 레슨
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 1차원 (1D) 어레이
+            lesson-3:
+              name: 반복을 위한
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
         hello-world-space-2022:
           title: '헬로 월드: 스페이스'
         hello-world-soccer-2022:

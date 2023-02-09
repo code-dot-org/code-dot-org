@@ -9854,9 +9854,13 @@ fil-PH:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
+        - feedback: Mali. Hindi maaabot ni Scrat ang acorn dahil siya ay  lumiko sa
+            maling daan.
         - correct: true
-        - {}
+          feedback: Tama! Lumiko si Scrat sa maling direksyon at hindi maaabot ang
+            acorn.
+        - feedback: Mali. Hindi maaabot ni Scrat ang acorn dahil siya ay  lumiko sa
+            maling daan.
         - {}
         questions:
         - {}

@@ -4450,6 +4450,10 @@ mn:
           lessons:
             lesson-4:
               name: Хувьсагчууд
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Гогцоонд зориулав
         csd4-2023:
           lesson_groups:
             lessonGroup-2:

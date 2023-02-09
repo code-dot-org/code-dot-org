@@ -1273,6 +1273,10 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
         csp4-2023:
           lesson_groups:
             csp_variables:

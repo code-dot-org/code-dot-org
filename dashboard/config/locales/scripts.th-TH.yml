@@ -2409,6 +2409,12 @@ th:
           lessons:
             lesson-4:
               name: ตัวแปร
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: อาร์เรย์มิติเดียว (1D)
+            lesson-3:
+              name: การวนรอบ
         hello-world-space-2022:
           title: 'สวัสดีชาวโลก: จักรวาล'
         hello-world-soccer-2022:

@@ -1006,6 +1006,10 @@ lv:
           lessons:
             lesson-4:
               name: Mainīgie
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: '"par" cikli'
         csp4-2023:
           lesson_groups:
             csp_variables:

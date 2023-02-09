@@ -3295,6 +3295,17 @@ sk:
               display_name: Obsah
             lessonGroup-4:
               display_name: Alternatívne lekcie
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Jednorozmerné (1D) polia
+            lesson-3:
+              name: Cykly "Pre"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
         hello-world-space-2022:
           title: 'Ahoj Svet: Vesmír'
         hello-world-soccer-2022:

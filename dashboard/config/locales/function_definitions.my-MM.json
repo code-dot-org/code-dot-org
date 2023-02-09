@@ -70,6 +70,11 @@
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
+            }
           }
         },
         "NEW Course 4 Artist Params 2": {
@@ -100,6 +105,11 @@
           "draw a pinwheel": {
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
+            }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
             }
           }
         },
@@ -469,6 +479,11 @@
             "parameters": {
               "min": "အနည်းဆုံး"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
+            }
           }
         },
         "courseF_artist_fwp_challenge1": {
@@ -491,12 +506,22 @@
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
+            }
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a pinwheel": {
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
+            }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
             }
           }
         },
@@ -517,6 +542,11 @@
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
+            }
           }
         },
         "CourseD_EOC_artist_2021": {
@@ -524,12 +554,22 @@
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
+            }
           }
         },
         "CourseD_EOC_artist_example2021": {
           "draw a pinwheel": {
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
+            }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
             }
           }
         },
@@ -583,6 +623,11 @@
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
+            }
           }
         },
         "CourseD_EOC_artist2022": {
@@ -590,12 +635,22 @@
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
+            }
           }
         },
         "CourseD_EOC_artist_example20212022": {
           "draw a pinwheel": {
             "parameters": {
               "repeat": "ထပ်မံ ပြုလုပ်ပါ"
+            }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "ရမှတ်"
             }
           }
         },
@@ -709,6 +764,27 @@
           "filled square": {
             "parameters": {
               "size": "အရွယ်အစား"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "ရမှတ်"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "ရမှတ်"
+            }
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "ရမှတ်"
             }
           }
         }

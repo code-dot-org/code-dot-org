@@ -7998,7 +7998,7 @@
         },
         "75801e87-9bc4-4934-ad31-2eae1c5452db": {
           "name": "Denník",
-          "description": "**Otázka dňa: Ako môžeme použiť parametre na to, aby sme dali počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
+          "description": "**Otázka dňa: Ako môžeme pomocou parametrov dať počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
         },
         "1abfbbcd-8efd-43b2-9138-3825b3d1bad5": {
           "description": "**Diskutujte:** Umožnite žiakom, aby sa podelili o svoje nápady.",
@@ -8008,7 +8008,7 @@
         },
         "0203d927-d4fc-4ad3-bb45-86960035eae3": {
           "name": "Vstup-výstup-ukladanie-spracovanie",
-          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíte vstup, výstup, ukladanie a spracovanie v Game Labe?"
+          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíš vstup, výstup, ukladanie a spracovanie v Game Labe?"
         },
         "de1129c2-dd57-441d-8703-cfad937ab506": {
           "description": "\\*\\* Diskutujte:\\*\\* Umožnite žiakom, aby sa podelili o svoje odpovede.",
@@ -8020,7 +8020,7 @@
           "description": "Dnes sa zameriame na ukladanie. Pozrieme sa na premenné, ktoré sú pre počítače veľmi bežným spôsobom ukladania informácií v programe."
         },
         "649425e6-b789-4125-aed7-3f20cfdf8ce3": {
-          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?**"
+          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?**"
         },
         "e7468f3b-3e70-492a-9749-a45d6df1c3f7": {
           "name": "Programovanie s premennými",
@@ -8062,7 +8062,7 @@
         },
         "a941f6f3-3bda-4a2b-abcd-6f302ebaa80a": {
           "name": "Reflexia",
-          "description": "\\*\\*Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?"
+          "description": "\\*\\*Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?"
         },
         "e651c11f-635c-442f-a480-19faf1ce4c52": {
           "description": "**Spýtajte sa:** Položte žiakom nasledujúce otázky:",
@@ -12201,7 +12201,7 @@
           ]
         },
         "40a13955-52e9-4e0a-89ee-3d575f49a396": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A. I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A.I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
         },
         "be01f760-a2cb-42f9-bce1-9069ceabb0fb": {
           "description": "**Cieľ diskusie:** Žiaci môžu zistiť, že A.I. Bot považuje niektoré vlastnosti za dôležité, hoci v skutočnosti s ich slovom vôbec nesúvisia. Napríklad si myslia, že ústa ryby sú dôležité, keď sa snažia určiť, či je ryba červená. Žiaci si to môžu overiť tak, že budú hľadať v rybách vzory, ktoré A.I. Bot akceptoval – možno všetky ich vzorové ryby mali náhodou rovnaký typ úst a A.I. Bot to mylne považoval za dôležité."
@@ -23064,7 +23064,7 @@
           ]
         },
         "934516f6-ebfb-4b43-908d-b48ddd2cd306": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A. I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A.I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
         },
         "9c6b41ce-5bd9-49f9-ab4d-7912732b19b1": {
           "description": "**Cieľ diskusie:** Žiaci môžu zistiť, že A.I. Bot považuje niektoré vlastnosti za dôležité, hoci v skutočnosti s ich slovom vôbec nesúvisia. Napríklad si myslia, že ústa ryby sú dôležité, keď sa snažia určiť, či je ryba červená. Žiaci si to môžu overiť tak, že budú hľadať v rybách vzory, ktoré A.I. Bot akceptoval – možno všetky ich vzorové ryby mali náhodou rovnaký typ úst a A.I. Bot to mylne považoval za dôležité."
@@ -26759,7 +26759,7 @@
         },
         "0e7890f7-6b15-4d74-9d06-39410d94914b": {
           "name": "Denník",
-          "description": "**Otázka dňa: Ako môžeme použiť parametre na to, aby sme dali počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
+          "description": "**Otázka dňa: Ako môžeme pomocou parametrov dať počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
         },
         "5485407f-b2b9-433e-86a4-6da5afa523f5": {
           "description": "**Diskutujte:** Umožnite žiakom, aby sa podelili o svoje nápady.",
@@ -26772,7 +26772,7 @@
         },
         "27e5fe37-7e3b-413e-bb0b-cb4b922db45c": {
           "name": "Vstup-výstup-ukladanie-spracovanie",
-          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíte vstup, výstup, ukladanie a spracovanie v Game Labe?"
+          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíš vstup, výstup, ukladanie a spracovanie v Game Labe?"
         },
         "9e754b3d-83a4-4fb3-bdf5-331c02667465": {
           "description": "\\*\\* Diskutujte:\\*\\* Umožnite žiakom, aby sa podelili o svoje odpovede.",
@@ -26784,7 +26784,7 @@
           "description": "Dnes sa zameriame na ukladanie. Pozrieme sa na premenné, ktoré sú pre počítače veľmi bežným spôsobom ukladania informácií v programe."
         },
         "6bec70d1-36d5-4956-8a4b-64c8af7fd911": {
-          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?**"
+          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?**"
         },
         "bf59eb2b-defb-469f-b80f-f6583ba14219": {
           "name": "Programovanie s premennými",
@@ -26820,7 +26820,7 @@
         },
         "ad26b802-3d93-4e28-bf0c-2b04b8127c12": {
           "name": "Reflexia",
-          "description": "\\*\\*Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?"
+          "description": "\\*\\*Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?"
         },
         "e13128cb-3a56-488b-86db-0a2edd7aff6d": {
           "description": "**Spýtajte sa:** Položte žiakom nasledujúce otázky:",

@@ -764,13 +764,23 @@ class JavalabEditor extends React.Component {
               {showOpenCodeReviewWarning && (
                 <div
                   id="openCodeReviewWarningBanner"
-                  className={style.openCodeReviewWarningBanner}
+                  className={style.warningBanner}
                 >
                   {isViewingOwnProject
                     ? javalabMsg.editingDisabledUnderReview()
                     : javalabMsg.codeReviewingPeer({
                         peerName: codeOwnersName
                       })}
+                </div>
+              )}
+              {isEditingStartSources && (
+                <div
+                  id="startSourcesWarningBanner"
+                  className={style.warningBanner}
+                >
+                  {isProjectTemplateLevel
+                    ? javalabMsg.startSourcesTemplateWarning()
+                    : javalabMsg.inStartSourcesMode()}
                 </div>
               )}
               {orderedTabKeys.map(tabKey => {

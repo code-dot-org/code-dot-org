@@ -4075,6 +4075,17 @@ ja:
               display_name: 内容
             lessonGroup-4:
               display_name: 代替レッスン
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 1次元 (1D) 配列
+            lesson-3:
+              name: ループ用
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 代替レッスン
         hello-world-space-2022:
           title: ハローワールド:スペース
         hello-world-soccer-2022:

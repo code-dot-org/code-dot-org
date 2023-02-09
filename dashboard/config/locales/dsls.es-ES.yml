@@ -642,29 +642,29 @@ es-ES:
           de manera diferente dependiendo cuál botón esta presionado.\n"
       Building a UI with Design Mode:
         markdown: |
-          # Bienvenidos al modo de diseño de Laboratorio de aplicaciones
-          En Laboratorio de aplicaciones, el "Modo de diseño" te permite arrastrar y soltar elementos de la interfaz de usuario en la aplicación.
+          # Bienvenido al Modo Diseño de Laboratorio de Aplicaciones
+          En Laboratorio de Aplicaciones "Modo de Diseño" te permite arrastrar y soltar elementos de interfaz de usuario en la aplicación.
 
           ### Vocabulario
-          **Interfaz de usuario (IU)**: La "Interfaz de usuario" o **IU** de una aplicación se refiere a cómo una persona (usuario) interactúa con la computadora o la aplicación. Existen patrones comunes para las interfaces de usuario que probablemente conozcas solo por experiencia:
+          **Interfaz de Usuario (UI)** - La "Interfaz de Usuario" o **UI** de una aplicación se refiere a cómo una persona (usuario) interactúa con el ordenador o la aplicación.  Hay patrones comunes a las interfaces de usuario que probablemente conozcas por experiencia:
 
-          * **Elementos u objetos de IU**, como botones, imágenes, cuadros de texto, menús desplegables, pantallas, etc.
-          * **Eventos o controles de IU**, como *hacer clic*, *desplazarse*, *mover mouse*, *tipear tecla de teclado*, etc.
+          * **Elementos UI** u objetos, como botones, imágenes, cajas de texto, menús desplegables, pantallas y demás.
+          * **Eventos UI** o controles, como *click*, *scroll*, *mover ratón*, *teclear*, etc.
 
-          Laboratorio de aplicaciones te permite agregar fácilmente elementos de IU a tu aplicación y luego agregar código para responder cuando un usuario interactúa con esos elementos. Es una especie de proceso de dos pasos, pero aprenderemos todo al respecto en esta lección.
+          Laboratorio de Aplicaciones te permite añadir fácilmente elementos de interfaz de usuario a tu aplicación, y luego añadir código para responder cuando un usuario interactúa con esos elementos.  Es un proceso de dos pasos, pero lo aprenderemos todo en esta lección.
 
-          Para comenzar, solo veamos el Modo de diseño y agreguemos un solo elemento de interfaz de usuario (un botón) a nuestra aplicación. Agregaremos código más adelante.
+          Para empezar, veamos el Modo Diseño y añadamos un único elemento de interfaz de usuario (un botón) a nuestra aplicación.  Añadiremos código más adelante.
 
           <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
 
           <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
-          Verás un nuevo conjunto de interruptores sobre el área de la aplicación que te permite alternar entre "Modo de diseño" y "Modo de código".</p>
+          Verás un nuevo conjunto de botones sobre el área de la aplicación que te permiten alternar entre el "Modo Diseño" y el "Modo Código".</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Agregar un elemento es tan fácil como arrastrarlo y soltarlo en la aplicación donde lo deseed. Una vez que está en la pantalla de la aplicación, puedes cambiar su posición, cambiar su tamaño y cambiar muchas otras propiedades al respecto. </p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Añadir un elemento es tan fácil como arrastrarlo y soltarlo en la aplicación donde quieras. Una vez en la pantalla de la aplicación, puedes cambiar su posición, su tamaño y muchas otras propiedades. </p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La pestaña <em>Propiedades</em> muestra todo lo que puedes cambiar sobre el aspecto de un elemento de la interfaz de usuario.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La <em>Pestaña</em> de Propiedades te muestra todo lo que puedes cambiar sobre el aspecto de un elemento de la interfaz de usuario.</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>La <strong>ID del elemento</strong> es importante, porque es cómo refieres al elemento en tu código. Discutiremos las ID de elementos más adelante.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>El <strong>ID del elemento</strong> es importante porque es la forma de referirse al elemento en el código. Hablaremos de los ID de los elementos más adelante.</p>
           </div>
 
           ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
@@ -672,15 +672,15 @@ es-ES:
 
           <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puedes hacer que el texto que ve el usuario en el texto del botón sea lo que quieras.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puedes hacer que el texto que el usuario vea en el botón sea el que tú quieras.</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota:</strong>Desplázate hacia abajo para ver otras propiedades, porque un elemento de la interfaz de usuario podría estar "oculto".</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota:</strong> Desplázate hacia abajo para ver otras propiedades de un elemento de interfaz de usuario que podría estar "oculto" más abajo.</p>
           </div>
 
           <div style="clear: both"></div>
           <hr>
 
-          **¡Ahora inténtalo tú!**
+          **¡Ahora inténtalo!**
         teacher_markdown: |
           ###Primero Diseña
 
@@ -15403,8 +15403,6 @@ es-ES:
         description: Prueba estos nuevos bloques y desafíos con la entrada del ratón.
         display_name: Desafíos del Ratón
       CSD web mouse practice choice_2022:
-        description: Practica la entrada de teclado y el uso del bloque if/else con
-          estas actividades.
         display_name: Entrada de Ratón y Práctica de If/else
       CSD web movement challenge choice_2022:
         description: Añade más a tu escena de peces o crea algo nuevo.
@@ -25286,10 +25284,16 @@ es-ES:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat llegará a la bellota. No hay errores en el código.
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
           correct: true
+          feedback: "¡Correcto! Scrat gira en la dirección equivocada y no alcanzará
+            la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
             "avance".
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no se moverá del primer bloque.
           feedback: Scrat no llegará a la bellota porque gira en sentido equivocado.
         questions:
@@ -25920,8 +25924,7 @@ es-ES:
           Una vez que hayas decidido un tipo de juego con tu compañero, rellena la Guía de Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego. Pasarás los siguientes niveles creando tu juego.
       CSD U3 - Interactive Card - ExampleChoice_2022:
         description: En los próximos niveles, completarás tu propia tarjeta interactiva.
-          Aquí tienes algunos ejemplos para darte algunas ideas. No olvides mirar
-          el código para ver cómo funcionan.
+          Aquí tienes algunos ejemplos para darte algunas ideas.
         display_name: Tu Tarjeta Interactiva
       Student End of Unit Survey - Intro+TeacherMD_csd2-2022:
         teacher_markdown: |

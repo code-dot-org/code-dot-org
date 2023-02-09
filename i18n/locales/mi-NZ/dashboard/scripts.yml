@@ -1182,6 +1182,13 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Mō Ngā Koromeke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         csp4-2023:
           lesson_groups:
             csp_variables:

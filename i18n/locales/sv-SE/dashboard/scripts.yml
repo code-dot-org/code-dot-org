@@ -1893,6 +1893,13 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: "'För' loopar"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

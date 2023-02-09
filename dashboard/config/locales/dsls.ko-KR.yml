@@ -7286,7 +7286,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - correct: true
@@ -7297,7 +7297,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -7308,7 +7308,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-ch1-pulse-survey-q2_2022:
         answers:
         - correct: true
@@ -7319,7 +7319,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-ch1-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -7388,32 +7388,44 @@ ko-KR:
         - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+          correct: true
+        - text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+          correct: true
+        - text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+          correct: true
         questions:
-        - {}
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
       aiml-intro-pulse-survey-q1_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+          correct: true
+        - text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+          correct: true
+        - text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+          correct: true
         questions:
-        - {}
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
       aiml-intro-pulse-survey-q2_2021:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: AI와 머신 러닝에 대해 배우는 것은 이번이 처음입니다.
+          correct: true
+        - text: '소규모 AI 활동(예: 아워오브코드)을 해본 적이 있지만, 긴 수업은 이번이 처음입니다.'
+          correct: true
+        - text: 이미 AI 및 머신 러닝에 대한 수업을 들었거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+          correct: true
         questions:
-        - {}
+        - text: 이전에 AI 및 머신 러닝과 관련하여 어떤 경험을 했나요?
       aiml-intro-pulse-survey-q2_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: AI와 머신 러닝에 대해 배우는 것은 이번이 처음입니다.
+          correct: true
+        - text: '소규모 AI 활동(예: 아워오브코드)을 해본 적이 있지만, 긴 수업은 이번이 처음입니다.'
+          correct: true
+        - text: 이미 AI 및 머신 러닝에 대한 수업을 들었거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+          correct: true
         questions:
-        - {}
+        - text: 이전에 AI 및 머신 러닝과 관련하여 어떤 경험을 했나요?
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -7424,7 +7436,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - correct: true
@@ -7435,7 +7447,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -7446,7 +7458,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-intro-pulse-survey-q4_2022:
         answers:
         - correct: true
@@ -7457,7 +7469,7 @@ ko-KR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
