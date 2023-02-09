@@ -12,6 +12,7 @@ import {forLoop} from './blocks/control';
 import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
 import {
   whenRunSimple2,
+  triggeredAtSimple2,
   playSoundAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential
@@ -23,6 +24,7 @@ const blockList = [
   whenRunSimple2,
   triggeredAt,
   triggeredAtSimple,
+  triggeredAtSimple2,
   playSound,
   playSoundAtCurrentLocation,
   setCurrentLocationNextMeasure,
