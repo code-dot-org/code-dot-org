@@ -596,6 +596,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':
       './src/sites/studio/pages/programming_expressions/show.js',
+    'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
     'devise/registrations/_sign_up':
       './src/sites/studio/pages/devise/registrations/_sign_up.js',
     'devise/shared/_oauth_links':
