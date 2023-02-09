@@ -35,7 +35,8 @@ h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
 
 // Use these classes to change a section's background color
-section.bg-neutral { background-color: $neutral_light; }
+section.bg-neutral-light { background-color: $neutral_light; }
+section.bg-neutral-dark { background-color: $neutral_dark; }
 section.bg-primary { background-color: rgba($brand_primary_light, .5); }
 section.bg-secondary { background-color: $brand_secondary_light; }
 
@@ -150,11 +151,14 @@ a.link-button {
 }
 
 // Basic hero banner
+// Used on common landing pages
+// (not homepage or campaign pages)
 .hero-banner-basic {
   position: relative;
 
   .text-wrapper {
-    z-index: 10;
+    position: relative;
+    z-index: 1;
   }
 
   img {
@@ -162,6 +166,11 @@ a.link-button {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 0;
+
+    @media screen and (max-width: $width-md) {
+      display: none;
+    }
   }
 
 }

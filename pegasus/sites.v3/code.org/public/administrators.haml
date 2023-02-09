@@ -18,15 +18,16 @@ theme: responsive_full_width
 - icon_smile = "fa-solid fa-smile"
 - icon_money_check_dollar_pen = "fa-solid fa-money-check-dollar-pen"
 
-%section.hero-banner-basic.bg-secondary
+%section.hero-banner-basic.bg-neutral-dark
   .wrapper
-    .text-wrapper
-      %h1 Code.org District Partner Program
-      %h2 Bring computer science to your district.
-      %p Learn how you can partner with Code.org to teach your students about the careers of the future.
+    .text-wrapper.col-60
+      %h1{style: "color: white"} Code.org District Partner Program
+      %h2{style: "color: white"} Bring computer science to your district.
+      %p{style: "color: white"} Learn how you can partner with Code.org to teach your students about the careers of the future.
+    .clear
     %img{src: "shared/images/banners/admins-hero-students-at-computers.png", alt: ""}
 
-%section.bg-neutral
+%section.bg-neutral-light
   .wrapper
     %h2 Code.org District Partner Program
     %p As AI and emerging technologies transform nearly every aspect of our lives, Code.org is leading a movement to ensure that K-12 students are equipped to adapt to the realities of a rapidly evolving knowledge economy. For more than a decade, Code.org has partnered with educators to advocate for not just policy change, but the resources necessary to expand access to high quality computer science (CS) curriculum and professional learning experiences.
@@ -99,7 +100,7 @@ theme: responsive_full_width
           %h3 Scholarships for schools serving underserved students
           %p Access to $1.5M in Professional Learning scholarships for teachers serving students traditionally underrepresented in CS.
 
-%section.bg-neutral
+%section.bg-neutral-light
   .wrapper
     %h2 How does the District Partner Program work?
     %ol.steps-list
