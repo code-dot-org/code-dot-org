@@ -64,6 +64,13 @@ export class EditableTeacherFeedback extends Component {
 
   componentDidMount = () => {
     window.addEventListener('beforeunload', this.onUnload);
+    if (this.props.rubric) {
+      analyticsReporter.sendEvent(EVENTS.RUBRIC_LEVEL_VIEWED_EVENT, {
+        sectionId: this.props.selectedSectionId,
+        unitId: this.props.serverScriptId,
+        levelId: this.props.serverLevelId
+      });
+    }
   };
 
   componentWillUnmount() {
@@ -160,7 +167,8 @@ export class EditableTeacherFeedback extends Component {
     analyticsReporter.sendEvent(EVENTS.FEEDBACK_SUBMITTED, {
       sectionId: this.props.selectedSectionId,
       unitId: this.props.serverScriptId,
-      levelId: this.props.serverLevelId
+      levelId: this.props.serverLevelId,
+      isRubric: this.props.rubric
     });
   };
 
