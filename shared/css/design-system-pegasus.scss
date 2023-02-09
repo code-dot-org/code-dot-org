@@ -3,6 +3,11 @@
 // Variables
 $border-radius: 4px;
 
+@mixin focus-outline {
+  outline: $brand_primary_default solid 2px;
+  outline-offset: 2px;
+}
+
 // Start styles
 html {
   scroll-behavior: smooth;
@@ -133,8 +138,7 @@ input[type=submit] {
   }
 
   &:focus {
-    outline: $brand_primary_default solid 2px;
-    outline-offset: 2px;
+    @include focus-outline;
   }
 }
 
@@ -315,7 +319,6 @@ details {
 
   & summary::marker {
     content: "";
-
   }
 
   // Hides the default arrow on Safari
@@ -323,6 +326,8 @@ details {
     display:none;
   }
 
+  // Uses FontAwesome arrow icons to
+  // denote open and close states
   & summary::after {
     font: var(--fa-font-solid);
     content: "\f107";
@@ -354,8 +359,7 @@ form {
     transition: all ease-in-out .2s;
 
     &:focus {
-      outline: $brand_primary_default solid 2px;
-      outline-offset: 2px;
+      @include focus-outline;
     }
 
     &[type=submit] {
