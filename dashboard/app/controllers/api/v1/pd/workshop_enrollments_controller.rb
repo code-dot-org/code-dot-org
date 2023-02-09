@@ -70,8 +70,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
           sign_up_url: url_for('/users/sign_up'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
-      rescue ActiveRecord::ActiveRecordError
-        render_unsuccessful RESPONSE_MESSAGES[:ERROR]
+      rescue ActiveRecord::ValueTooLong
+        render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: 'a response is too long'}
       end
     end
   end

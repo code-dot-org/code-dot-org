@@ -121,7 +121,7 @@ export default class EnrollForm extends React.Component {
       isSubmitting: false,
       errors: {},
       showFormErrorMessage: false,
-      showSubmissionErrorMessage: false
+      submissionErrorMessage: ''
     };
   }
 
@@ -162,7 +162,7 @@ export default class EnrollForm extends React.Component {
 
   handleClickRegister = () => {
     this.setState({showFormErrorMessage: false});
-    this.setState({showSubmissionErrorMessage: false});
+    this.setState({submissionErrorMessage: ''});
     if (this.validateRequiredFields()) {
       this.setState({isSubmitting: true});
       this.submit();
@@ -292,7 +292,10 @@ export default class EnrollForm extends React.Component {
       complete: result => {
         this.setState({isSubmitting: false});
         result?.responseJSON?.workshop_enrollment_status === 'error' &&
-          this.setState({showSubmissionErrorMessage: true});
+          this.setState({
+            submissionErrorMessage:
+              result?.responseJSON?.error_message || 'unknown error'
+          });
         this.props.onSubmissionComplete(result);
       }
     });
@@ -770,12 +773,12 @@ export default class EnrollForm extends React.Component {
             Form errors found. Please check your responses above.
           </p>
         )}
-        {this.state.showSubmissionErrorMessage && (
+        {this.state.submissionErrorMessage && (
           <Alert bsStyle="danger" style={{marginTop: 10}}>
             <p>
-              Sorry, an error occurred upon submission and we were unable to
-              enroll you in this workshop. Double check your responses, and if
-              the problem persists, please contact{' '}
+              Sorry, we were unable to enroll you in this workshop because
+              {' ' + this.state.submissionErrorMessage}. Please double check
+              your responses, and if the problem persists, contact{' '}
               <a href="mailto:support@code.org">support@code.org</a>.
             </p>
           </Alert>
