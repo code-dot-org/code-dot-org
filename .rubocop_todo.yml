@@ -71,6 +71,11 @@ Lint/AmbiguousRegexpLiteral:
 Lint/ConstantDefinitionInBlock:
   Enabled: false
 
+# Offense count: 40
+# Configuration parameters: IgnoreLiteralBranches, IgnoreConstantBranches.
+Lint/DuplicateBranch:
+  Enabled: false
+
 # Offense count: 146
 # Configuration parameters: AllowComments, AllowEmptyLambdas.
 Lint/EmptyBlock:
