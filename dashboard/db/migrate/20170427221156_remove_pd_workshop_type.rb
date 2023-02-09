@@ -8,7 +8,7 @@ class RemovePdWorkshopType < ActiveRecord::Migration[5.0]
     add_column :pd_workshops, :workshop_type, :string, null: true
 
     # populate with derived data
-    Pd::Workshop.where("workshop_type IS NULL").each do |workshop|
+    Pd::Workshop.where(workshop_type: nil).each do |workshop|
       workshop.workshop_type =
         if workshop.funded
           workshop.on_map ? "Public" : "Private"
