@@ -31,7 +31,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
   end
 
-  test "signed in update abuse score" do
+  test "signed in user can update abuse score without dcdo flag enabled" do
     DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(false)
 
     user = create(:student)
@@ -47,7 +47,39 @@ class ReportAbuseControllerTest < ActionController::TestCase
     DCDO.unstub(:get)
   end
 
-  test "abuse frozen" do
+  test "student can't update abuse score with dcdo flag enabled" do
+    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(true)
+
+    user = create(:student)
+    sign_in user
+
+    # check initial state
+    assert_equal 0, Projects.get_abuse(@channel_id)
+
+    # authenticated non-teacher, with flag, should get a score of 0
+    assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
+    assert_equal 0, Projects.get_abuse(@channel_id)
+
+    DCDO.unstub(:get)
+  end
+
+  test "verified teacher can update abuse score with dcdo flag enabled" do
+    user = create(:authorized_teacher)
+    sign_in user
+
+    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(true)
+
+    # check initial state
+    assert_equal 0, Projects.get_abuse(@channel_id)
+
+    # authenticated verified teacher should get a score of 20
+    assert_equal 20, @controller.update_channel_abuse_score(@channel_id)
+    assert_equal 20, Projects.get_abuse(@channel_id)
+
+    DCDO.unstub(:get)
+  end
+
+  test "signed in user can't update abuse score when channel is frozen" do
     # freeze the project
     @projects.update(@channel_id, {frozen: true}, '10.0.0.1')
 
