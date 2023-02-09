@@ -1,68 +1,55 @@
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
+</script>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+  <input type=hidden name='captcha_settings' value='{"keyname":"fixed","fallback":"true","orgId":"00Dj0000001sjyo","ts":""}'>
   <input type=hidden name="oid" value="00Dj0000001sjyo">
-  <input type=hidden name="retURL" value="http://code.org">
+  <input type=hidden name="retURL" value="http://code.org/salesforce-form-thanks">
   <!--  ----------------------------------------------------------------------  -->
   <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
   <!--  these lines if you wish to test in debug mode.                          -->
   <!--  <input type="hidden" name="debug" value=1>                              -->
   <!--  <input type="hidden" name="debugEmail" value="alek@code.org">           -->
   <!--  ----------------------------------------------------------------------  -->
-  <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
-  <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" />
-  <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" />
-  <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" />
-  <label for="00N5b00000Dblwd">School District:</label><input  id="00N5b00000Dblwd" maxlength="255" name="00N5b00000Dblwd" size="20" type="text" />
-  <label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" />
-  <label for="00N5b00000DblgG">State</label><select  id="00N5b00000DblgG" name="00N5b00000DblgG" title="State"><option value="">--None--</option><option value="AK">AK</option>
-  <option value="AL">AL</option>
-  <option value="AR">AR</option>
-  <option value="AZ">AZ</option>
-  <option value="CA">CA</option>
-  <option value="CO">CO</option>
-  <option value="CT">CT</option>
-  <option value="DE">DE</option>
-  <option value="FL">FL</option>
-  <option value="GA">GA</option>
-  <option value="HI">HI</option>
-  <option value="IA">IA</option>
-  <option value="ID">ID</option>
-  <option value="IL">IL</option>
-  <option value="IN">IN</option>
-  <option value="KS">KS</option>
-  <option value="KY">KY</option>
-  <option value="LA">LA</option>
-  <option value="MA">MA</option>
-  <option value="MD">MD</option>
-  <option value="ME">ME</option>
-  <option value="MI">MI</option>
-  <option value="MN">MN</option>
-  <option value="MO">MO</option>
-  <option value="MS">MS</option>
-  <option value="MT">MT</option>
-  <option value="NC">NC</option>
-  <option value="ND">ND</option>
-  <option value="NE">NE</option>
-  <option value="NH">NH</option>
-  <option value="NJ">NJ</option>
-  <option value="NM">NM</option>
-  <option value="NV">NV</option>
-  <option value="NY">NY</option>
-  <option value="OH">OH</option>
-  <option value="OK">OK</option>
-  <option value="OR">OR</option>
-  <option value="PA">PA</option>
-  <option value="RI">RI</option>
-  <option value="SC">SC</option>
-  <option value="SD">SD</option>
-  <option value="TN">TN</option>
-  <option value="TX">TX</option>
-  <option value="UT">UT</option>
-  <option value="VA">VA</option>
-  <option value="VT">VT</option>
-  <option value="WA">WA</option>
-  <option value="WI">WI</option>
-  <option value="WV">WV</option>
-  <option value="WY">WY</option>
+  <label for="company">Name of School District*</label>
+  <input  id="company" maxlength="40" name="company" size="20" type="text" required />
+
+  <label for="city">City*</label>
+  <input  id="city" maxlength="40" name="city" size="20" type="text" required />
+
+  <label for="state">State/Province*</label>
+  <input  id="state" maxlength="20" name="state" size="20" type="text" required />
+
+  <label for="first_name">First Name*</label>
+  <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required />
+
+  <label for="last_name">Last Name*</label>
+  <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required />
+
+  <label for="title">Title*</label>
+  <input  id="title" maxlength="40" name="title" size="20" type="text" required />
+
+  <label for="email">Email*</label>
+  <input  id="email" maxlength="80" name="email" size="20" type="text" required />
+
+  <label for="00N5b00000DbmDP">How did you learn about us?</label>
+  <select  id="00N5b00000DbmDP" name="00N5b00000DbmDP" title="How did you learn about us?">
+      <option value="">--None--</option><option value="Code.org website">Code.org website</option>
+    <option value="Code.org email">Code.org email</option>
+    <option value="From a teacher">From a teacher</option>
+    <option value="From a local regional partner">From a local regional partner</option>
+    <option value="From another district">From another district</option>
+    <option value="From a state-level agency">From a state-level agency</option>
+    <option value="Conference">Conference</option>
+    <option value="Social media">Social media</option>
+    <option value="Other">Other</option>
   </select>
+
+  <input type=hidden id="lead_source" name="lead_source" value="Web Form - Administrators Page">
+  <div class="g-recaptcha" data-sitekey="6LezdGMkAAAAADpS_8wn3yJV8of06uQcYiXHanEp"></div>
   <input type="submit" name="submit">
-  </form>
+</form>
