@@ -274,11 +274,6 @@ Rails/SquishedSQLHeredocs:
 Rails/TimeZone:
   Enabled: false
 
-# Offense count: 16
-# This cop supports safe auto-correction (--auto-correct).
-Rails/WhereEquals:
-  Enabled: false
-
 # Offense count: 2
 Security/MarshalLoad:
   Enabled: false
@@ -287,11 +282,6 @@ Security/MarshalLoad:
 # Configuration parameters: EnforcedStyle, AllowModifiersOnSymbols.
 # SupportedStyles: inline, group
 Style/AccessModifierDeclarations:
-  Enabled: false
-
-# Offense count: 62
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/CaseLikeIf:
   Enabled: false
 
 # Offense count: 27
