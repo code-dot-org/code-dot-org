@@ -15,7 +15,9 @@ import {
 const isBlockInsideWhenRun = ctx => {
   let block = ctx;
   while ((block = block.getParent())) {
-    if (block.type === 'when_run') {
+    if (
+      [BlockTypes.WHEN_RUN, BlockTypes.WHEN_RUN_SIMPLE2].includes(block.type)
+    ) {
       return true;
     }
   }

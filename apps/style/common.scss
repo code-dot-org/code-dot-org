@@ -309,6 +309,10 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
+#codeTextbox.has_banner {
+  top: $workspace-headers-height + 30;
+}
+
 html[dir="rtl"] .editor-column {
   right: 400px;
 }
