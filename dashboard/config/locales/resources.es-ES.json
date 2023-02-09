@@ -484,6 +484,7 @@
         },
         "running_simulations/coursef/2022": {
           "name": "Ejecutar simulaciones",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
           "type": "Hoja de Trabajo"
         },
         "ai_impact_on_society/coursef/2022": {
@@ -4444,7 +4445,7 @@
           "type": "Diapositivas"
         },
         "2021_change_log/coursef/2021": {
-          "name": "Record de Cambios 2021",
+          "name": "Registro de Cambios de 2021",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "Recurso"
         },
@@ -4454,7 +4455,7 @@
           "type": "Recurso"
         },
         "course_vocabulary/coursef/2021": {
-          "name": "Vocabulario del curso\t",
+          "name": "Vocabulario del Curso\t",
           "url": "https://studio.code.org/s/coursef-2021/vocab",
           "type": "Recurso"
         },
@@ -4645,6 +4646,7 @@
         },
         "running-simulations/coursef/2021": {
           "name": "Ejecutar simulaciones",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
           "type": "Hoja de Trabajo"
         },
         "ai-ml/coursef/2021": {
@@ -4703,7 +4705,7 @@
           "type": "Rúbrica"
         },
         "2021_change_log/courseb/2021": {
-          "name": "Record de Cambios 2021",
+          "name": "Registro de Cambios de 2021",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "Recurso"
         },
@@ -4924,7 +4926,7 @@
           "type": "Clave de Respuesta"
         },
         "2021_change_log/coursea/2021": {
-          "name": "Record de Cambios 2021",
+          "name": "Registro de Cambios de 2021",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "Recurso"
         },
@@ -5172,7 +5174,7 @@
           "type": "Clave de Respuesta"
         },
         "2021_change_log/coursec/2021": {
-          "name": "Record de Cambios 2021",
+          "name": "Registro de Cambios de 2021",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "Recurso"
         },
@@ -5390,7 +5392,7 @@
           "type": "Recursos de la lección"
         },
         "2021_change_log/coursed/2021": {
-          "name": "Record de Cambios 2021",
+          "name": "Registro de Cambios de 2021",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "Recurso"
         },
@@ -5633,7 +5635,7 @@
           "type": "Guía de Proyecto"
         },
         "course_vocabulary_1/express/2021": {
-          "name": "Vocabulario del curso\t",
+          "name": "Vocabulario del Curso\t",
           "url": "https://studio.code.org/s/express-2021/vocab",
           "type": "Recurso"
         },
@@ -5769,7 +5771,7 @@
           "type": "Rúbrica"
         },
         "course_vocabulary/pre-express/2021": {
-          "name": "Vocabulario del curso\t",
+          "name": "Vocabulario del Curso\t",
           "url": "https://studio.code.org/s/pre-express-2021/vocab",
           "type": "Recurso"
         },
@@ -5818,7 +5820,7 @@
           "type": "Vídeo"
         },
         "2021_change_log/coursee/2021": {
-          "name": "Record de Cambios 2021",
+          "name": "Registro de Cambios de 2021",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "Recurso"
         },
@@ -5828,7 +5830,7 @@
           "type": "Recurso"
         },
         "course_vocabulary/coursee/2021": {
-          "name": "Vocabulario del curso\t",
+          "name": "Vocabulario del Curso\t",
           "url": "https://studio.code.org/s/coursee-2021/vocab",
           "type": "Recurso"
         },

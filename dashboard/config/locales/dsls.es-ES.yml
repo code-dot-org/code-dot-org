@@ -15404,6 +15404,8 @@ es-ES:
         display_name: Desafíos del Ratón
       CSD web mouse practice choice_2022:
         display_name: Entrada de Ratón y Práctica de If/else
+        description: Practica la introducción de datos con el teclado y el uso de
+          sentencias condicionales con estas actividades.
       CSD web movement challenge choice_2022:
         description: Añade más a tu escena de peces o crea algo nuevo.
         display_name: Desafíos de Movimiento de Sprite
