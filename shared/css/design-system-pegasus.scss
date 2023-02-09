@@ -358,7 +358,7 @@ form {
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: $width-sm) {
+  @media screen and (max-width: $width-md) {
     flex-wrap: wrap;
   }
 }
@@ -382,9 +382,13 @@ form {
   & > .action-block--one-col {
     width: 32%;
 
+    @media screen and (max-width: $width-md) {
+      width: 49%;
+      margin-top: 1em;
+    }
+
     @media screen and (max-width: $width-sm) {
       width: 100%;
-      margin-top: 1em;
     }
   }
 }
@@ -395,11 +399,13 @@ form {
   border: 1px solid $neutral_dark20;
   border-radius: $border-radius;
   display: flex;
+  align-content: baseline;
 }
 
-// Single column action block
+// Single column action blocks
+// Note: set the height of the <p> tag inline to maintain
+// height consistency between cards in a wrapper
 .action-block--one-col {
-  display: flex;
   flex-wrap: wrap;
   padding: 1em 1.5em;
 
@@ -416,7 +422,6 @@ form {
 
 // Two column action block
 .action-block--two-col {
-  align-items: top;
 
   .text-wrapper {
     padding: 1em 1.5em;
