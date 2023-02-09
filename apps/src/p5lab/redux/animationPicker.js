@@ -160,7 +160,6 @@ export function handleUploadComplete(result) {
   });
 
   return function(dispatch, getState) {
-    console.log({getState: getState, uploadState: getState()});
     const isBackgroundMode =
       getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const {goal, uploadFilename} = getState().animationPicker;
