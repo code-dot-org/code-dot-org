@@ -9,6 +9,7 @@ import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
 import i18n from '@cdo/locale';
+import {P5LabInterfaceMode} from '../constants';
 /**
  * Vertical scrolling list of animations associated with the project.
  */
@@ -67,8 +68,8 @@ class AnimationList extends React.Component {
             animationKey={key}
             animationProps={animationList.propsByKey[key]}
             isSelected={
-              key === currentAnimations.default ||
-              key === currentAnimations.background
+              key === currentAnimations[P5LabInterfaceMode.ANIMATION] ||
+              key === currentAnimations[P5LabInterfaceMode.BACKGROUND]
             }
             animationList={animationList}
             labType={labType}

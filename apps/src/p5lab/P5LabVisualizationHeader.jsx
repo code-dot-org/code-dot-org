@@ -150,9 +150,6 @@ export default connect(
     return {
       onInterfaceModeChange(mode) {
         dispatch(changeInterfaceMode(mode));
-      },
-      setAnimationType(mode) {
-        dispatch(setAnimationType(mode));
       }
     };
   }

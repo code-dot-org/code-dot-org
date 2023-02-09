@@ -447,8 +447,9 @@ export function appendBlankFrame() {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
     // so we don't need to worry about backgrounds (which are only in Sprite Lab)
-    const currentAnimationKey = getState().animationTab.currentAnimations
-      .default;
+    const currentAnimationKey = getState().animationTab.currentAnimations[
+      P5LabInterfaceMode.ANIMATION
+    ];
     dispatch(setPendingFramesAction(currentAnimationKey, {blankFrame: true}));
     projectChanged();
   };
@@ -493,8 +494,9 @@ export function appendCustomFrames(props) {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
     // so we don't need to worry about backgrounds (Sprite Lab only)
-    const currentAnimationKey = getState().animationTab.currentAnimations
-      .default;
+    const currentAnimationKey = getState().animationTab.currentAnimations[
+      P5LabInterfaceMode.ANIMATION
+    ];
     dispatch(setPendingFramesAction(currentAnimationKey, props));
     dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
@@ -514,7 +516,7 @@ export function addLibraryAnimation(props, isSpriteLab) {
       dispatch(addAnimationAction(key, props));
     }
     const isSpriteLabBackground =
-      props.categories?.[0] === 'backgrounds' && isSpriteLab;
+      props.categories?.includes('backgrounds') && isSpriteLab;
     const selector = isSpriteLabBackground ? selectBackground : selectAnimation;
     dispatch(
       loadAnimationFromSource(key, () => {
@@ -541,8 +543,9 @@ export function appendLibraryFrames(props) {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
     // so we don't need to worry about backgrounds (Sprite Lab only)
-    const currentAnimationKey = getState().animationTab.currentAnimations
-      .default;
+    const currentAnimationKey = getState().animationTab.currentAnimations[
+      P5LabInterfaceMode.ANIMATION
+    ];
     dispatch(setPendingFramesAction(currentAnimationKey, props));
     dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
@@ -555,7 +558,7 @@ export function appendLibraryFrames(props) {
  * @param {!AnimationKey} key
  * @returns {Function}
  */
-export function cloneAnimation(key, type = 'default') {
+export function cloneAnimation(key, type = P5LabInterfaceMode.ANIMATION) {
   return (dispatch, getState) => {
     const animationList = getState().animationList;
     // Track down the source animation and its index in the collection
@@ -579,7 +582,10 @@ export function cloneAnimation(key, type = 'default') {
         saved: false
       })
     });
-    const selector = type === 'background' ? selectBackground : selectAnimation;
+    const selector =
+      type === P5LabInterfaceMode.BACKGROUND
+        ? selectBackground
+        : selectAnimation;
     dispatch(selector(newAnimationKey));
     projectChanged();
   };
@@ -657,17 +663,21 @@ export function editAnimation(key, props) {
  * @param {!AnimationKey} key
  * @returns {function}
  */
-export function deleteAnimation(key, isSpriteLab = false, type = 'default') {
+export function deleteAnimation(
+  key,
+  isSpriteLab = false,
+  type = P5LabInterfaceMode.ANIMATION
+) {
   return (dispatch, getState) => {
     const animationList = getState().animationList;
     let orderedKeys = animationList.orderedKeys;
     // If we're in spritelab, we need to make sure we don't set the selected animation to a background
     if (isSpriteLab) {
       switch (type) {
-        case 'default':
+        case P5LabInterfaceMode.ANIMATION:
           orderedKeys = getOrderedKeysWithoutBackgrounds(animationList);
           break;
-        case 'background':
+        case P5LabInterfaceMode.BACKGROUND:
           orderedKeys = getOrderedKeysOnlyBackgrounds(animationList);
           break;
       }
@@ -676,7 +686,10 @@ export function deleteAnimation(key, isSpriteLab = false, type = 'default') {
     const currentSelectionIndex = orderedKeys.indexOf(key);
     let keyToSelect =
       currentSelectionIndex === 0 ? 1 : currentSelectionIndex - 1;
-    const selector = type === 'background' ? selectBackground : selectAnimation;
+    const selector =
+      type === P5LabInterfaceMode.BACKGROUND
+        ? selectBackground
+        : selectAnimation;
     dispatch(selector(orderedKeys[keyToSelect] || ''));
 
     dispatch({type: DELETE_ANIMATION, key});
