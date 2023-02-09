@@ -174,11 +174,6 @@ class ReportAbuseController < ApplicationController
 
   private
 
-  def project_validator?
-    return false unless current_user
-    current_user.project_validator?
-  end
-
   def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
@@ -197,7 +192,7 @@ class ReportAbuseController < ApplicationController
   end
 
   def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if project_validator? || new_score.nil?
+    return true if current_user&.project_validator? || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
