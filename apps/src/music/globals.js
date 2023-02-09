@@ -9,7 +9,6 @@
 
 let libraryRef = null;
 let playerRef = null;
-let programSequencerRef = null;
 
 export default {
   setLibrary(library) {
@@ -26,13 +25,5 @@ export default {
 
   getPlayer() {
     return playerRef;
-  },
-
-  setProgramSequencer(programSequencer) {
-    programSequencerRef = programSequencer;
-  },
-
-  getProgramSequencer() {
-    return programSequencerRef;
   }
 };

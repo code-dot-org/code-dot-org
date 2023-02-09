@@ -107,7 +107,6 @@ class UnconnectedMusicView extends React.Component {
 
       Globals.setLibrary(library);
       Globals.setPlayer(this.player);
-      Globals.setProgramSequencer(this.programSequencer);
     });
 
     this.loadInstructions().then(instructions => {
