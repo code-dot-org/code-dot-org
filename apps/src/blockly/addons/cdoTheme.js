@@ -37,6 +37,9 @@ export const cdoCustomStyles = {
   },
   world_blocks: {
     colourPrimary: '#5b5ba5'
+  },
+  flow_blocks: {
+    colourPrimary: '#418eb6'
   }
 };
 
