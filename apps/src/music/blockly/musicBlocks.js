@@ -10,15 +10,25 @@ import {
 } from './blocks/samples';
 import {forLoop} from './blocks/control';
 import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
+import {
+  whenRunSimple2,
+  playSoundAtCurrentLocationSimple2,
+  playSoundsTogether,
+  playSoundsSequential
+} from './blocks/simple2';
 
 // All blocks
 const blockList = [
   whenRun,
+  whenRunSimple2,
   triggeredAt,
   triggeredAtSimple,
   playSound,
   playSoundAtCurrentLocation,
   setCurrentLocationNextMeasure,
+  playSoundAtCurrentLocationSimple2,
+  playSoundsTogether,
+  playSoundsSequential,
   forLoop,
   newTrackAtStart,
   newTrackAtMeasure,

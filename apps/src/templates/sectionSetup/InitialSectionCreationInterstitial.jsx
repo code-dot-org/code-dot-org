@@ -7,6 +7,8 @@ import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import {connect} from 'react-redux';
 import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 class InitialSectionCreationInterstitial extends Component {
   static propTypes = {
@@ -24,7 +26,13 @@ class InitialSectionCreationInterstitial extends Component {
 
   beginEditingSection = () => {
     this.setState({isOpen: false});
+    analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_SIGN_IN_EVENT);
     this.props.beginEditingSection();
+  };
+
+  abandonEditingSection = () => {
+    this.setState({isOpen: false});
+    analyticsReporter.sendEvent(EVENTS.ABANDON_SECTION_SETUP_SIGN_IN_EVENT);
   };
 
   render() {
@@ -33,7 +41,7 @@ class InitialSectionCreationInterstitial extends Component {
     return (
       <BaseDialog
         useUpdatedStyles
-        handleClose={() => this.setState({isOpen: false})}
+        handleClose={this.abandonEditingSection}
         isOpen={isOpen}
       >
         <PadAndCenter>
@@ -46,11 +54,13 @@ class InitialSectionCreationInterstitial extends Component {
             <hr style={styles.pageBreak} />
             <div style={styles.footerButtons}>
               <Button
+                id="uitest-abandon-section-creation"
                 text={i18n.goToMyDashboard()}
                 color={Button.ButtonColor.gray}
-                onClick={() => this.setState({isOpen: false})}
+                onClick={this.abandonEditingSection}
               />
               <Button
+                id="uitest-accept-section-creation"
                 text={i18n.createClassSections()}
                 onClick={this.beginEditingSection}
               />

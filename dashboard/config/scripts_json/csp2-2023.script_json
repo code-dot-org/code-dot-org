@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-27 20:26:20 UTC",
+    "serialized_at": "2023-02-08 20:42:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3034,6 +3034,18 @@
       }
     },
     {
+      "name": "Building a Network",
+      "url": "https://docs.google.com/presentation/d/1kxB2sHjJvwG0tyYUz2I2-aeL5FUfXFNDsAd--ALT9cY/template/preview",
+      "key": "building_a_network",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "building_a_network"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_vocabulary",
@@ -3082,6 +3094,18 @@
       }
     },
     {
+      "name": "HTTP and DNS",
+      "url": "https://docs.google.com/presentation/d/1c-xMjaoO_cE4RAk71mDPg9LCyHnvjxo5yZF90-eQYCk/template/preview",
+      "key": "http_and_dns",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "http_and_dns"
+      }
+    },
+    {
       "name": "Internet Dilemmas",
       "url": "https://docs.google.com/document/d/1UZ1FJDBnwLARSmP7hqFKnMLkV8c2lC6C3qO5RPulDao/edit?usp=sharing",
       "key": "internet_dilemmas",
@@ -3092,6 +3116,18 @@
       },
       "seeding_key": {
         "resource.key": "internet_dilemmas"
+      }
+    },
+    {
+      "name": "Internet Dilemmas",
+      "url": "https://docs.google.com/presentation/d/1TgJ5dvncE-Ch_svWzAn53-9jryR-k1XF4Oue6MhVEso/template/preview",
+      "key": "internet_dilemmas_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "internet_dilemmas_1"
       }
     },
     {
@@ -3117,6 +3153,30 @@
       },
       "seeding_key": {
         "resource.key": "layers_of_the_internet"
+      }
+    },
+    {
+      "name": "Packets",
+      "url": "https://docs.google.com/presentation/d/10bLpLwyNIg4tXMlAS0YhEpUaesAdy2Yqvcg8fo1ZlZQ/template/preview",
+      "key": "packets",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "packets"
+      }
+    },
+    {
+      "name": "Routers and Redundancy",
+      "url": "https://docs.google.com/presentation/d/1Jg8fCWRrk-7XE5ZV0OrOZiWtxu3YzQ_FZGhWW-uqVEM/template/preview",
+      "key": "routers_and_redundancy",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "routers_and_redundancy"
       }
     },
     {
@@ -3197,6 +3257,18 @@
       }
     },
     {
+      "name": "The Need for Addressing",
+      "url": "https://docs.google.com/presentation/d/1wjYGFjh5BfWDRmrdPlabPvx9ctfaxjVxWptfa0khpUo/template/preview",
+      "key": "the_need_for_addressing",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_need_for_addressing"
+      }
+    },
+    {
       "name": "U2 High Score Sample Guide & Rubric",
       "url": "https://docs.google.com/document/d/1AuFdmglDQD6-gzzipbP492kkIUejKrwtHpLbvFv8kcA/edit?usp=sharing",
       "key": "u2_high_score_sample_guide_rubric",
@@ -3247,6 +3319,18 @@
       }
     },
     {
+      "name": "Welcome to the Internet",
+      "url": "https://docs.google.com/presentation/d/10FQTUZnQE_H6pfaNhQ2S28hQAkZ8ITqFMJUjESVoZF0/template/preview",
+      "key": "welcome_to_the_internet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_the_internet"
+      }
+    },
+    {
       "name": "What is the Internet?",
       "url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
       "key": "what_is_the_internet_",
@@ -3270,13 +3354,13 @@
     {
       "seeding_key": {
         "lesson.key": "Building a Network",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "building_a_network"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "HTTP and DNS",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "http_and_dns"
       }
     },
     {
@@ -3306,7 +3390,7 @@
     {
       "seeding_key": {
         "lesson.key": "Packets",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "packets"
       }
     },
     {
@@ -3324,12 +3408,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Internet Dilemmas Part 1",
-        "resource.key": "csp_unit_2_-_the_internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Internet Dilemmas Part 1",
         "resource.key": "exemplar_internet_dilemmas"
       }
     },
@@ -3337,6 +3415,12 @@
       "seeding_key": {
         "lesson.key": "Project   Internet Dilemmas Part 1",
         "resource.key": "internet_dilemmas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Internet Dilemmas Part 1",
+        "resource.key": "internet_dilemmas_1"
       }
     },
     {
@@ -3384,7 +3468,7 @@
     {
       "seeding_key": {
         "lesson.key": "Routers and Redundancy",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "routers_and_redundancy"
       }
     },
     {
@@ -3396,13 +3480,13 @@
     {
       "seeding_key": {
         "lesson.key": "The Need for Addressing",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "the_internet_ip_addresses_and_dns"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Need for Addressing",
-        "resource.key": "the_internet_ip_addresses_and_dns"
+        "resource.key": "the_need_for_addressing"
       }
     },
     {
@@ -3414,7 +3498,7 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to the Internet",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "welcome_to_the_internet"
       }
     },
     {
