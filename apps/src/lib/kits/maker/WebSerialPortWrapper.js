@@ -29,17 +29,16 @@ export default class WebSerialPortWrapper extends EventEmitter {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
     }
-    return this.port
-      .open({baudRate: SERIAL_BAUD})
-      .then(() => {
-        this.portOpen = true;
-        this.emit('open');
-        this.writer = this.port.writable.getWriter();
-        this.reader = this.port.readable.getReader();
-
-        this.readLoop();
-      })
-      .catch(error => Promise.reject('Failure to open port: ' + error));
+    try {
+      await this.port.open({baudRate: SERIAL_BAUD});
+      this.portOpen = true;
+      this.writer = this.port.writable.getWriter();
+      this.reader = this.port.readable.getReader();
+      this.emit('open');
+      this.readLoop();
+    } catch (error) {
+      return Promise.reject('Failure to open port: ' + error);
+    }
   }
 
   // Opens the serial port from Circuit Playground and starts reading from port.
