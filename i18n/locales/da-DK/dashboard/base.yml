@@ -45,6 +45,7 @@ da:
         personal_email_markdown: "Personlig e-mailadresse [(klik her, hvis du ikke har en e-mailadresse)](%{url})"
         username: 'brugernavn'
         password: 'Adgangskode'
+        verified_teacher: 'Verificeret lærer'
         password_confirmation: 'Bekræft adgangskode'
         current_password: 'Nuværende adgangskode'
         locale: 'Sprog'
@@ -69,6 +70,7 @@ da:
   previous_page: Forrige side
   next_page: Næste side
   next_resource: Næste ressource
+  done_with_module: Færdig med dette læringsmodul
   cancel: "Annuller"
   okay: "Okay"
   or: "eller"
@@ -173,7 +175,15 @@ da:
     user_type_button: "Opdater kontotype"
     user_type_label: "Kontotype"
     user_type_student: "Elev"
+    user_type_student_desc: "Udforsk alle vores kurser og aktiviteter, plus"
+    user_type_student_ability_1: "Gem dine fremskridt og projekter"
+    user_type_student_ability_2: "Deltag i din lærers klasse"
     user_type_teacher: "Lærer"
+    user_type_teacher_desc: "Alt hvad eleverne har adgang til, plus"
+    user_type_teacher_ability_1: "Opret sektioner i klassen"
+    user_type_teacher_ability_2: "Tildel og følg med i elevernes arbejde"
+    user_type_teacher_ability_3: "Tilmeld dig professionel læring"
+    user_type_teacher_ability_4: "Deltag på vores lærerforum"
     field_is_required: "er påkrævet"
     accept_terms: "Du skal acceptere at oprette en konto"
     error: "Der opstod en fejl."
@@ -182,6 +192,7 @@ da:
     email_preference_yes: "Ja"
     email_preference_no: "Nej"
     email_preference_required: "Du skal angive en e-mail adresse."
+    share_teacher_email_reg_partner_question: "Ønsker du at vi deler dine kontaktoplysninger med [Code.org regional partner](%{cdo_regional_partner_desc}) i dit område, så de kan underrette dig om lokale faglige udviklings muligheder, ressourcer og begivenheder? "
     share_teacher_email_reg_partner_preference_yes: "Ja"
     share_teacher_email_reg_partner_preference_no: "Nej"
     share_teacher_email_reg_partner_preference_required: "Du skal angive en e-mail adresse."
@@ -258,6 +269,7 @@ da:
   teacher_mailer:
     new_teacher_subject: 'Velkommen til Code.org!'
     delete_teacher_subject: 'Code.org notifikation: Din konto er blevet slettet'
+    verified_teacher_subject: 'Code.org Lærer Verifikation - Succes'
   section:
     your_section:
       one: 'Din afdeling:'
@@ -275,6 +287,8 @@ da:
     invite_sent: 'Invitation sendt'
     added_teacher: '%{name} er tilføjet som din lærer'
     registered: "Du er registreret til %{section_name}."
+    captcha_required: 'Udfyld denne CAPTCHA for at deltage i dette afsnit. '
+    already_exists: 'Du har allerede tilmeldt dig denne sektion %{section_name}.'
     error:
       signed_in: 'Log ud inden du fortsætter'
       username_not_found: 'Brugernavn %{username} blev ikke fundet'
@@ -284,6 +298,9 @@ da:
       blank_code: "Angiv en sektions kode"
       cant_join_own_section: "Desværre, du kan ikke deltage i dit eget afsnit."
       provider_managed_section: "Denne sektion er styret af en anden udbyder og derfor kan ikke tilsluttes. Spørg venligst din lærer om, at tilføje dig via %{provider} og synkroniser igen deres sektion."
+      restricted_section: "Vi kunne ikke tilføje dig denne sektion %{section_code} fordi den er låst. Kontakt din lærer for hjælp. "
+      full_section: "Vi kunne ikke tilføje dig til sektion %{section_code} fordi der allerede er %{section_capacity} elever i den. Kontakt din lærer for hjælp. "
+      not_participant_type: "Vi kunne ikke tilføje dig sektion %{section_code} fordi du ikke opfylder deltagertypen for sektionen. "
     mail:
       student_disassociated:
         subject: "Code.org besked: %{student_name} er ikke længere tilknyttet som din elev."
@@ -321,6 +338,7 @@ da:
       report_bug: "Rapporter fejl"
       teacher_community: "Lærer-fælleskab"
       professional_learning: "Professional learning"
+      web_lab_documentation: "Web Lab Dokumentation"
       educate_overview: "Oversigt for undervisere"
       educate_elementary: "Grundskole"
       educate_middle: "Grundskole (mellemtrin/udskoling)"
@@ -423,6 +441,7 @@ da:
       worked_with: 'Samarbejdede med'
       update_lock_settings: 'Opdater låsningsindstillinger her.'
       clear_response: 'Klar feedback'
+    student_code_view_diabled: 'Elevkoden kan ikke ses for denne aktivitet. '
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
@@ -438,6 +457,7 @@ da:
     delete_confirm: 'Er du sikker på, at du vil slette din konto?'
     deleted_user: 'slettet bruger'
     no_password_because_oauth: 'Ingen adgangskode, fordi du tilmeldte dig ved brug af en tredjepartsudbyder.'
+    no_password_because_sponsored: 'Kontakt din lærer for at administrere din adgangskode. '
     create_personal_login: "Lav et personligt kodeords-login\n"
     create_personal_login_under_13_info: 'Hvis du ønsker, at beholde din Code.org-konto efter slutning af skoleåret, så spørg dine forældre eller din værge om hjælp, om at oprette din egen personlige log-in, som vist nedenunder.'
     create_personal_login_under_13_username: "Brugernavn (ikke brug dit rigtige navn!)"
@@ -449,6 +469,7 @@ da:
     create_personal_login_email_note: "Bemærkelse: E-mailadresser er ikke gemt i form af, at vi kontakter elevene. Elever vil aldrig modtage e-mails fra Code.org, bortset fra, at hvis det er genopretning af adgangskoder. Se vores <a href='%{privacy_policy_url}', target='_blank'>privatlivspolitik</a> for mere information."
     create_personal_login_email_note_markdown: 'Merk: E-postadresser er ikkje lagra i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
     enter_new_login_info: 'Indtast dit nye log-in information'
+    confirm_secret_words: 'Bekræft at det er dig ved at indtaste dine nuværende hemmelige ord'
     parent_email_label: "Forælderens eller værgens e-mail (valgfrit) "
     parent_email_hint: "(det her kan bruges til genopretning af adgangskode)"
     enter_parent_email: "Indtast dine forældres eller din værges e-mailadresse (til genopreting af adgangskode)"
