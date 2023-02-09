@@ -749,7 +749,7 @@ describe('animationList', function() {
       const animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
       const selectedAnimation = store.getState().animationTab.currentAnimations
-        .default;
+        .ANIMATION;
       store.dispatch(appendBlankFrame());
       expect(store.getState().animationList.pendingFrames.key).to.equal(
         selectedAnimation
@@ -771,7 +771,7 @@ describe('animationList', function() {
       const animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
       selectedAnimation = store.getState().animationTab.currentAnimations
-        .default;
+        .ANIMATION;
       libraryAnimProps = {
         name: 'library_animation',
         sourceUrl: 'url',

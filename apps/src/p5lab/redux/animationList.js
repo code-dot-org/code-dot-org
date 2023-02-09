@@ -433,8 +433,9 @@ export function appendBlankFrame() {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
     // so we don't need to worry about backgrounds (which are only in Sprite Lab)
-    const currentAnimationKey = getState().animationTab.currentAnimations
-      .default;
+    const currentAnimationKey = getState().animationTab.currentAnimations[
+      P5LabInterfaceMode.ANIMATION
+    ];
     dispatch(setPendingFramesAction(currentAnimationKey, {blankFrame: true}));
     projectChanged();
   };
@@ -473,8 +474,9 @@ export function appendCustomFrames(props) {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
     // so we don't need to worry about backgrounds (Sprite Lab only)
-    const currentAnimationKey = getState().animationTab.currentAnimations
-      .default;
+    const currentAnimationKey = getState().animationTab.currentAnimations[
+      P5LabInterfaceMode.ANIMATION
+    ];
     dispatch(setPendingFramesAction(currentAnimationKey, props));
     dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
@@ -494,7 +496,7 @@ export function addLibraryAnimation(props, isSpriteLab) {
       dispatch(addAnimationAction(key, props));
     }
     const isSpriteLabBackground =
-      props.categories?.[0] === 'backgrounds' && isSpriteLab;
+      props.categories?.includes('backgrounds') && isSpriteLab;
     const selector = isSpriteLabBackground ? selectBackground : selectAnimation;
     dispatch(
       loadAnimationFromSource(key, () => {
@@ -521,8 +523,9 @@ export function appendLibraryFrames(props) {
   return (dispatch, getState) => {
     // Multiframe animations are only supported in Game Lab,
     // so we don't need to worry about backgrounds (Sprite Lab only)
-    const currentAnimationKey = getState().animationTab.currentAnimations
-      .default;
+    const currentAnimationKey = getState().animationTab.currentAnimations[
+      P5LabInterfaceMode.ANIMATION
+    ];
     dispatch(setPendingFramesAction(currentAnimationKey, props));
     dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
