@@ -404,10 +404,10 @@ export function readRecords(table, searchParams, onSuccess, onError) {
   });
 }
 
-export function readRecordsSync(table, callback) {
+export function readRecordsSync(table, searchParams, callback) {
   return Applab.executeCmd(null, 'readRecords', {
     table: table,
-    searchParams: {},
+    searchParams: searchParams,
     onSuccess: callback,
     onError: callback
   });
