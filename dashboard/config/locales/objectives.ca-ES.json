@@ -245,6 +245,15 @@
         "f0a49033-5a23-4b2e-b570-69fd6d678f65": {
           "description": "Modificar un programa existent per resoldre errors."
         },
+        "15927fdc-d944-4de3-89ca-f238d8014f55": {
+          "description": "Definir idees utilitzant codi i símbols."
+        },
+        "55ae003d-10f1-4364-ab38-3a3360491e38": {
+          "description": "Identificar els signes de frustració."
+        },
+        "d5c5bdd3-6ca6-48b2-ae3b-5aaf0c8dbb70": {
+          "description": "Comprovar la feina feta pels companys."
+        },
         "0d2e39ca-970f-40e0-b26a-84bcecf9315d": {
           "description": "Descriure i implementar un pla per depurar un programa."
         },
@@ -265,6 +274,9 @@
         },
         "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
+        },
+        "f47c401e-4a61-4f0e-a4d3-75f3bd9d8908": {
+          "description": "Crear un joc animat i interactiu utilitzant seqüències i esdeveniments."
         },
         "4ed9cede-cc9a-409d-b433-781185b454b6": {
           "description": "Crear animacions de ball amb codi"
@@ -295,6 +307,39 @@
         },
         "f466b8aa-18bf-460d-9780-1abcb7f32589": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
+        },
+        "1368d16e-4e0d-4b76-8473-2765f5379362": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "744e09fe-1aaa-4253-95e2-7f1c8fc4e5dc": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "ec9adec1-48c1-458e-bae1-37f2be6a863b": {
+          "description": "Seguir un programa i predir-ne el resultat a partir de les dades proporcionades."
+        },
+        "3ca80839-1859-48e0-a010-de7ef526512d": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "c6a481f9-8493-4b50-876c-c16309ec4e50": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "37326a7f-29b6-4ea6-9ed5-a08c2aa2dfd4": {
+          "description": "Resoldre trencaclosques amb una combinació de seqüències en bucle i condicionals."
+        },
+        "b7bbc7eb-a6d3-4820-9b4b-27b64ec0b0d4": {
+          "description": "Traslladar sentències condicionals del llenguatge oral a un programa."
+        },
+        "a4808383-ef10-4135-9a5d-f695b62aeb36": {
+          "description": "Fer servir un bucle \"while\" per crear programes que resolguin problemes amb valors desconeguts."
+        },
+        "d8494711-ae41-4ccd-8db3-04385d787ca3": {
+          "description": "Distingir entre bucles que es repeteixen un nombre fix de vegades i els bucles que es repeteixen mentre una condició sigui vertadera."
+        },
+        "115e7f69-47a1-495a-bc11-8a9ed3270324": {
+          "description": "Crear programes tenint en compte diferents estratègies per implementar condicionals."
+        },
+        "7164456d-4573-432f-b255-a0596e702d96": {
+          "description": "Traslladar sentències condicionals del llenguatge oral i bucles a un programa."
         },
         "bbd1a283-a817-4fd2-9335-651b698f63d2": {
           "description": "Superar obstacles, com ara restriccions de temps o errors."
@@ -352,6 +397,18 @@
         },
         "fa73c58f-368d-4e53-97eb-7de987b548c3": {
           "description": "Categoritzar i generalitzar codi en funcions útils."
+        },
+        "818dc160-2ce6-4d7d-a358-208b9026debb": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "cb32fed2-db37-4e6c-9651-3b1f39fd4741": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "1b6a66df-472f-49d6-acdf-13c2f6fdb263": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "80cf9584-e814-4880-8c83-119966ed7a89": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
         },
         "59e29159-7e29-48ce-95c7-8510877793e9": {
           "description": "Reconèixer quan una funció podria ajudar a simplificar un programa."
@@ -562,6 +619,36 @@
         },
         "7376c401-4ea5-4247-a739-1b3c8f3077c7": {
           "description": "Desglossar el codi en les seqüències repetibles més grans fent servir bucles i bucles imbricats."
+        },
+        "5abe1116-ce82-4bce-8454-7537bdce12d4": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "b75b5c74-2020-4cba-abb7-9c1d2432c93f": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "94a0640b-eaf9-4797-b448-601edefe53f7": {
+          "description": "Traslladar sentències condicionals del llenguatge oral a un programa."
+        },
+        "da9556fa-6a34-4735-a0fe-4f61e5dfba88": {
+          "description": "Resoldre trencaclosques amb una combinació de seqüències en bucle i condicionals."
+        },
+        "9a923506-c553-4734-8675-3925b4205a40": {
+          "description": "Distingir entre bucles que es repeteixen un nombre fix de vegades i els bucles que es repeteixen mentre una condició sigui vertadera."
+        },
+        "ef9064e8-a2fc-43a5-a847-0e504ffd7043": {
+          "description": "Fer servir un bucle \"while\" per crear programes que resolguin problemes amb valors desconeguts."
+        },
+        "11cc6b71-35eb-4651-87ef-17cb48e8e93a": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "979a7e2a-759e-4ffc-96b2-552fe5888fb9": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "580ad418-73dc-42d0-8934-42fe0a9af98a": {
+          "description": "Crear programes tenint en compte diferents estratègies per implementar condicionals."
+        },
+        "94e41188-94ca-4365-878b-408e000c2a1d": {
+          "description": "Traslladar sentències condicionals del llenguatge oral i bucles a un programa."
         },
         "24fd8517-7a14-4489-8d76-76ddf7b9a7fe": {
           "description": "Integrar un bucle i una sentència condicional."
@@ -1277,6 +1364,15 @@
         "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
           "description": "Desglossar una seqüència llarga d'instruccions en la seqüència repetible més gran possible."
         },
+        "8a0addda-b47f-4551-8c82-9115be3c130d": {
+          "description": "Definir idees utilitzant codi i símbols."
+        },
+        "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
+          "description": "Comprovar la feina feta pels companys."
+        },
+        "8dba466d-d809-49c6-8f60-218c27964411": {
+          "description": "Identificar els signes de frustració."
+        },
         "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
           "description": "Llegir i entendre el codi que se'ls presenta."
         },
@@ -1294,6 +1390,9 @@
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Compartir un artefacte creatiu amb els companys."
+        },
+        "bafea2a8-7a23-4046-9360-77d760c54c2b": {
+          "description": "Crear un joc animat i interactiu utilitzant seqüències i esdeveniments."
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
@@ -1327,6 +1426,39 @@
         },
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
+        },
+        "fd3464fd-5921-4873-a850-c0799c55eecd": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "494526f8-7392-4788-9126-b2e2dd53b241": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
+          "description": "Seguir un programa i predir-ne el resultat a partir de les dades proporcionades."
+        },
+        "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "83b6020a-2273-4966-abd6-0049afa1eb4e": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "4a1dcde3-13a7-47d1-859a-b29ade558f5d": {
+          "description": "Traslladar sentències condicionals del llenguatge oral a un programa."
+        },
+        "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f": {
+          "description": "Resoldre trencaclosques amb una combinació de seqüències en bucle i condicionals."
+        },
+        "f06bf36a-d520-4a73-b194-6d1e131a07ec": {
+          "description": "Distingir entre bucles que es repeteixen un nombre fix de vegades i els bucles que es repeteixen mentre una condició sigui vertadera."
+        },
+        "38cd04a9-3d07-4df9-b22d-18e39369e387": {
+          "description": "Fer servir un bucle \"while\" per crear programes que resolguin problemes amb valors desconeguts."
+        },
+        "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3": {
+          "description": "Crear programes tenint en compte diferents estratègies per implementar condicionals."
+        },
+        "630e79db-15ec-49fd-804c-060b8adf40ea": {
+          "description": "Traslladar sentències condicionals del llenguatge oral i bucles a un programa."
         },
         "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
           "description": "Superar obstacles, com ara restriccions de temps o errors."
@@ -1429,6 +1561,36 @@
         },
         "d1ca506b-d694-4c2b-bcc5-38af2ce425dd": {
           "description": "Explicar quan cal utilitzar un bucle, un bucle imbricat, o cap bucle."
+        },
+        "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "feac1e8e-b6f7-466e-9727-d62bdfaf4f09": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "7002da51-158a-4849-b733-48282a764b82": {
+          "description": "Traslladar sentències condicionals del llenguatge oral a un programa."
+        },
+        "08f476a4-492c-47ee-8291-a435761059ac": {
+          "description": "Resoldre trencaclosques amb una combinació de seqüències en bucle i condicionals."
+        },
+        "e85d8d23-86c2-4644-9449-94af8b02f763": {
+          "description": "Distingir entre bucles que es repeteixen un nombre fix de vegades i els bucles que es repeteixen mentre una condició sigui vertadera."
+        },
+        "8bee7277-31d3-4032-a8ea-2d2c820425ec": {
+          "description": "Fer servir un bucle \"while\" per crear programes que resolguin problemes amb valors desconeguts."
+        },
+        "e6f6f67a-369a-4a9d-8197-e3abf61af68e": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "b932c234-ce5d-429e-9c70-cf6d0b28570c": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "ed2d18ce-a51e-4d24-b821-05c631de2b55": {
+          "description": "Crear programes tenint en compte diferents estratègies per implementar condicionals."
+        },
+        "8c19055d-8287-441c-8c20-c0bb9e68aba3": {
+          "description": "Traslladar sentències condicionals del llenguatge oral i bucles a un programa."
         },
         "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
           "description": "Imbricar condicionals per analitzar condicions de valor múltiple fent servir la lògica if, else / if, else."
@@ -1582,6 +1744,18 @@
         },
         "75ef4b25-6f64-4795-9a13-f0d27662040e": {
           "description": "Reconèixer quan una funció podria ajudar a simplificar un programa."
+        },
+        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
+        },
+        "9c7ff713-c208-4acf-9691-da7a4a152565": {
+          "description": "Definir en quines circumstàncies s'han dexecutar o no certes parts d'un programa."
+        },
+        "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
+          "description": "A partir dels criteris definits, determinar si un condicional es compleix o no."
         },
         "dc1b604a-9814-45f4-aed5-b76776ad818c": {
           "description": "Reconèixer quan una funció podria ajudar a simplificar un programa."

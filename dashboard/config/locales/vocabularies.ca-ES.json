@@ -315,8 +315,12 @@
           "word": "Programació",
           "definition": "L'art de crear un programa."
         },
+        "frustrated/coursed/2022": {
+          "word": "Frustrat",
+          "definition": "Sentir-se irritat o enfadat perquè alguna cosa no va com voldries."
+        },
         "persistence/coursed/2022": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "event/coursed/2022": {
@@ -339,6 +343,10 @@
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
         },
+        "pseudocode/coursed/2022": {
+          "word": "pseudocodi",
+          "definition": "Un descripció en llenguatge planer dels passos d'un algorisme"
+        },
         "condition/coursed/2022": {
           "word": "Condició",
           "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
@@ -348,7 +356,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/coursed/2022": {
-          "word": "Until"
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
         },
         "sprite/coursef/2022": {
           "word": "Sprite",
@@ -450,7 +459,7 @@
           "definition": "L'art de crear un programa."
         },
         "persistence/courseb/2022": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "loop/courseb/2022": {
@@ -530,7 +539,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/express/2022": {
-          "word": "Until"
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
         },
         "function/express/2022": {
           "word": "Funció",
@@ -582,7 +592,7 @@
           "definition": "L'art de crear un programa."
         },
         "persistence/pre-express/2022": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "loop/pre-express/2022": {
@@ -666,7 +676,7 @@
           "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
         },
         "persistence/coursec/2022": {
-          "word": "Perseverança"
+          "word": "Persistència"
         },
         "programming/coursec/2022": {
           "word": "Programació",
@@ -814,7 +824,7 @@
           "definition": "L'art de crear un programa."
         },
         "persistence/courseb/2021": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "loop/courseb/2021": {
@@ -941,8 +951,12 @@
           "word": "Programació",
           "definition": "L'art de crear un programa."
         },
+        "frustrated/coursed/2021": {
+          "word": "Frustrat",
+          "definition": "Sentir-se irritat o enfadat perquè alguna cosa no va com voldries."
+        },
         "persistence/coursed/2021": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "event/coursed/2021": {
@@ -965,6 +979,10 @@
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
         },
+        "pseudocode/coursed/2021": {
+          "word": "pseudocodi",
+          "definition": "Un descripció en llenguatge planer dels passos d'un algorisme"
+        },
         "condition/coursed/2021": {
           "word": "Condició",
           "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
@@ -974,7 +992,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/coursed/2021": {
-          "word": "Until"
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
         },
         "algorithm/express/2021": {
           "word": "Algorisme",
@@ -1041,7 +1060,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/express/2021": {
-          "word": "Until"
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
         },
         "function/express/2021": {
           "word": "Funció",
@@ -1093,7 +1113,7 @@
           "definition": "L'art de crear un programa."
         },
         "persistence/pre-express/2021": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "loop/pre-express/2021": {
