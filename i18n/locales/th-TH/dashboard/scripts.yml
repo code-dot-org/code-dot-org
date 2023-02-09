@@ -2261,3 +2261,7 @@ th:
         csp-playground:
           description_audience: ผู้เขียนหลักสูตร
           description_short: เพื่อจัดทำอัปเดตในบทเรียนหรือเลเวลระหว่างหลักสูตรแต่ละเวอร์ชัน
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: แอปแลปเบื้องต้น
