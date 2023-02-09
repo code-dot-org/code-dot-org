@@ -28,6 +28,7 @@ const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
 const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
 const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
 const REMOVE_ANIMATION = 'AnimationPicker/REMOVE_ANIMATION';
+const SET_SHOULD_RESTRICT_UPLOAD = 'AnimationPicker/SET_SHOULD_RESTRICT_UPLOAD';
 
 // Default state, which we reset to any time we hide the animation picker.
 const initialState = {
@@ -39,7 +40,8 @@ const initialState = {
   isSpriteLab: false,
   isBackground: false,
   // List of animations selected to be added through multiselect
-  selectedAnimations: {}
+  selectedAnimations: {},
+  shouldRestrictUpload: true
 };
 
 export default function reducer(state, action) {
@@ -96,6 +98,12 @@ export default function reducer(state, action) {
     return {
       ...state,
       selectedAnimations: updatedAnimations
+    };
+  }
+  if (action.type === SET_SHOULD_RESTRICT_UPLOAD) {
+    return {
+      ...state,
+      shouldRestrictUpload: action.shouldRestrict
     };
   }
   return state;
@@ -242,6 +250,13 @@ export function removeSelectedAnimation(animation) {
   return {
     type: REMOVE_ANIMATION,
     animation: animation
+  };
+}
+
+export function setShouldRestrictUpload(shouldRestrict) {
+  return {
+    type: SET_SHOULD_RESTRICT_UPLOAD,
+    shouldRestrict
   };
 }
 

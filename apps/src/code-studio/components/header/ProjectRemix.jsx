@@ -47,14 +47,17 @@ class ProjectRemix extends React.Component {
       className += ' header_button_light';
     }
     return (
-      <button
-        type="button"
-        className={className}
-        onClick={this.remixProject}
-        style={styles.buttonSpacing}
-      >
-        {i18n.remix()}
-      </button>
+      // in restricted share mode remix is disabled
+      !dashboard.project.inRestrictedShareMode() && (
+        <button
+          type="button"
+          className={className}
+          onClick={this.remixProject}
+          style={styles.buttonSpacing}
+        >
+          {i18n.remix()}
+        </button>
+      )
     );
   }
 }

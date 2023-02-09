@@ -453,11 +453,11 @@ const sourceHandler = {
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
-  setRestrictedUploadEnabled() {
-    getAppOptions.level.restrictedUploadEnabled = true;
+  setInRestrictedShareMode(inRestrictedShareMode) {
+    getAppOptions().level.inRestrictedShareMode = inRestrictedShareMode;
   },
-  getRestrictedUploadEnabled() {
-    return getAppOptions.level.restrictedUploadEnabled;
+  inRestrictedShareMode() {
+    return getAppOptions().level.inRestrictedShareMode;
   },
   // returns a Promise to the level source
   getLevelSource(currentLevelSource) {

@@ -113,7 +113,7 @@ var currentSources = {
   animations: null,
   selectedSong: null,
   selectedPoem: null,
-  restrictedUploadEnabled: false
+  inRestrictedShareMode: false
 };
 
 /**
@@ -139,7 +139,7 @@ function unpackSources(data) {
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
     libraries: data.libraries,
-    restrictedUploadEnabled: data.restrictedUploadEnabled
+    inRestrictedShareMode: data.inRestrictedShareMode
   };
 }
 
@@ -700,8 +700,10 @@ var projects = (module.exports = {
         sourceHandler.setInitialLibrariesList(currentSources.libraries);
       }
 
-      if (currentSources.restrictedUploadEnabled) {
-        sourceHandler.setRestrictedUploadEnabled();
+      if (currentSources.inRestrictedShareMode !== undefined) {
+        sourceHandler.setInRestrictedShareMode(
+          currentSources.inRestrictedShareMode
+        );
       }
 
       if (isEditing) {
@@ -1207,9 +1209,13 @@ var projects = (module.exports = {
     return this.save();
   },
 
-  enableRestrictedUpload() {
-    this.sourceHandler.setRestrictedUploadEnabled();
+  setInRestrictedShareMode(inRestrictedShareMode) {
+    this.sourceHandler.setInRestrictedShareMode();
     return this.save();
+  },
+
+  inRestrictedShareMode() {
+    this.sourceHandler.inRestrictedShareMode();
   },
 
   /**
@@ -1288,6 +1294,7 @@ var projects = (module.exports = {
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
           const libraries = this.sourceHandler.getLibrariesList();
+          const inRestrictedShareMode = this.sourceHandler.inRestrictedShareMode();
           callback({
             source,
             html,
@@ -1295,7 +1302,8 @@ var projects = (module.exports = {
             makerAPIsEnabled,
             selectedSong,
             selectedPoem,
-            libraries
+            libraries,
+            inRestrictedShareMode
           });
         })
         .catch(error => callback({error}))
