@@ -13,10 +13,14 @@ window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js')
   .saveAnswers;
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 $(document).ready(() => {
   const levelData = getScriptData('levelData');
   const initData = getScriptData('initData');
+  const userData = getScriptData('userData');
   window.levelData = levelData;
 
   if (initData) {
@@ -25,6 +29,19 @@ $(document).ready(() => {
       initData.page,
       initData.last_attempt
     );
+  }
+
+  if (userData) {
+    if (
+      userData.currentUserType === 'teacher' &&
+      userData.currentUserId !== userData.viewAsId
+    ) {
+      analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
+        unitId: window.appOptions.serverScriptId,
+        levelId: window.appOptions.serverLevelId,
+        sectionId: queryParams('section_id')
+      });
+    }
   }
 });
 
