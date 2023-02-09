@@ -37,7 +37,7 @@ function load(Bramble) {
 }
 
 // "Minimal" load function does not pass files to Bramble; it's used by
-// the support verification page at studio.code.org/weblab/support-verification
+// the support verification page at studio.code.org/weblab/network-check
 // to check that we can reach a ready state
 function loadMinimal(Bramble) {
   Bramble.load(BRAMBLE_CONTAINER, {
