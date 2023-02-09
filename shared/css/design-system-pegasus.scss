@@ -15,9 +15,22 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $neutral-dark;
+  margin: unset;
+}
+
+h1, h2, h3, h4 {
+  font-family: $barlowSemiCondensed-semibold;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.2;
 }
 
 h2 {
+  font-size: 2.125em;
   margin-bottom: .5em;
 }
 
@@ -25,15 +38,20 @@ h3 {
   font-size: 1.75em;
 }
 
+h4 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
 h5 {
   font-family: $gotham-bold, sans-serif;
   font-size: 1.25em;
-  line-height: 1.2;
   margin-bottom: 0.5em;
 }
 
-strong {
+h6 {
   font-family: $gotham-bold, sans-serif;
+  font-size: 1em;
 }
 
 // Use these classes to change a section's background color
@@ -58,6 +76,7 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 
 // Paragraphs
 p {
+  color: $neutral-dark;
   font-size: 1em;
   line-height: 1.5;
   margin-bottom: 1em;
@@ -73,6 +92,10 @@ p {
     font-size: 1.25em;
     font-family: $gotham-bold;
   }
+}
+
+strong {
+  font-family: $gotham-bold, sans-serif;
 }
 
 // Text links
@@ -291,6 +314,10 @@ details {
     display: flex;
     justify-content: space-between;
     align-items: end;
+
+    @media screen and (max-width: $width-sm) {
+      align-items: baseline;
+    }
 
     &:hover {
       cursor: pointer;
