@@ -15,19 +15,20 @@ end
 # displays 'not_tried'. Passing no_wait=true skips all waits and immediately verifies
 # the bubble.
 def verify_progress(selector, test_result, no_wait=false)
-  if test_result == 'perfect'
+  case test_result
+  when 'perfect'
     background_color = color_string('perfect')
     border_color = color_string('perfect')
-  elsif test_result == 'attempted'
+  when 'attempted'
     background_color = color_string('not_tried')
     border_color = color_string('perfect')
-  elsif test_result == 'not_tried'
+  when 'not_tried'
     background_color = color_string('not_tried')
     border_color = color_string('lighter_gray')
-  elsif test_result == 'perfect_assessment'
+  when 'perfect_assessment'
     background_color = color_string('assessment')
     border_color = color_string('assessment')
-  elsif test_result == 'attempted_assessment'
+  when 'attempted_assessment'
     background_color = color_string('not_tried')
     border_color = color_string('assessment')
   end
@@ -55,9 +56,10 @@ def verify_bubble_color(selector, background_color, border_color)
 end
 
 def verify_bubble_type(selector, type)
-  if type == "concept"
+  case type
+  when "concept"
     border_radius = "2px"
-  elsif type == "activity"
+  when "activity"
     border_radius = "9px"
   else
     raise "Unexpected bubble type"

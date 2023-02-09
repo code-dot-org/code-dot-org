@@ -236,9 +236,10 @@ module Pd::Application
     def self.answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
       additional_text_field_name ||= "#{field_name}_other".to_sym
       answer = hash[field_name]
-      if answer.is_a? String
+      case answer
+      when String
         answer = [option, hash[additional_text_field_name]].flatten.join(' ') if answer == option
-      elsif answer.is_a? Array
+      when Array
         index = answer.index(option)
         answer[index] = [option, hash[additional_text_field_name]].flatten.join(' ') if index
       end
