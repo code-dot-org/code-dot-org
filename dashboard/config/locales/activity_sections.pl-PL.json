@@ -2192,7 +2192,8 @@
           "name": "Refleksja"
         },
         "3dcc5ff1-9cad-46cc-985e-e92e1989a304": {
-          "name": "Lekcje rozszerzeń z mikro:bitem"
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie d Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-D-v4.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Pętle, Instrukcje warunkowe (jeśli ... to ... w przeciwnycm razie), Wejścia i Wyjścia, Zadarzenia i Zmienne."
         },
         "5284ed91-ecd3-477a-8e48-cec21b3822f4": {
           "name": "Słownictwo kluczowe",
@@ -2740,7 +2741,8 @@
           "description": "Jeśli Twoi uczniowie czują się swobodnie z koncepcjami kodowania, spróbuj skłonić ich do tworzenia swoich projektów w innej platformie, takiej jak [Scratch](https://scratch.mit.edu/) lub [Alice](http://www.alice.org/index.php)."
         },
         "d7eee78e-d5fd-418e-9dce-3cb0f1be8122": {
-          "name": "Lekcje rozszerzeń z mikro:bitem"
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie F Podstaw Informatyki kliknij [here](http://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-F-v3.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Zmienne, Dane, Zdarzenia, Symulacja, Pętle, i Instrukcje warunkowe."
         },
         "b01367f6-8c61-4417-9d29-193fd67ddac0": {
           "name": "Słownictwo kluczowe"
@@ -3162,7 +3164,8 @@
           "name": "Przemyśl"
         },
         "be35b565-6d45-46fa-ae1a-c5d1aeb2f901": {
-          "name": "Lekcje rozszerzeń z mikro:bitem"
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie E Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Zdarzenia, Wpływ informatyki, Projektowanie dla dostępnosci, Pętle, Instrukcje warunkowe (jeśli ... to), i Funkcje."
         },
         "ea9709a3-a840-4f3d-b165-90a63ee3c36a": {
           "name": "Słownik kluczowy: ",
@@ -6111,7 +6114,8 @@
           "name": "Refleksja"
         },
         "e79ff65f-c393-4328-8530-e40474ddbca1": {
-          "name": "Lekcje rozszerzeń z mikro:bitem"
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie C Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-C-v8.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Zdarzenia, Wejścia i Wyjścia, Sekwencjonowanie, Pętle, Dane i Zmienne."
         },
         "3640be62-d6b4-4e99-a1c0-b4a53c1e202f": {
           "name": "Dziennik",
