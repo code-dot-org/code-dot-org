@@ -1462,6 +1462,7 @@
   compatibility_hide_this_warning: "Cacher l'avertissement"
   compatibility_unsupported_browser: "Votre navigateur n'est pas supporté. Merci de le mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez essayer d’afficher la page, mais la fonctionnalité risque d’être rompue."
   compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas compatible. Merci de mettre votre navigateur à jour avec [l'un des navigateurs compatibles avec nos services](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page, mais les fonctionnalités risquent d’être compromises. "
+  hourofcode_shortcode: "Coder"
   flappy_shortcode: "battre des ailes"
   header_home: "Accueil"
   header_my_dashboard: "Mon Tableau de Bord"
