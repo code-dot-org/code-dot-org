@@ -121,6 +121,15 @@ describe('maker/dropletConfig.js', () => {
         )
       ).to.deep.equal(['"down"', '"up"']);
     });
+
+    it('compass dropdown', () => {
+      expect(
+        dropletConfig.getBoardEventDropdownForParam(
+          'compass',
+          MB_COMPONENT_EVENTS
+        )
+      ).to.deep.equal(['"change"', '"data"']);
+    });
   });
 
   describe('stringifySong', () => {
