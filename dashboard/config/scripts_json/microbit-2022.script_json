@@ -16,7 +16,7 @@
     "new_name": null,
     "family_name": "microbit",
     "serialized_at": "2023-02-01 10:54:35 UTC",
-    "published_state": "beta",
+    "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",

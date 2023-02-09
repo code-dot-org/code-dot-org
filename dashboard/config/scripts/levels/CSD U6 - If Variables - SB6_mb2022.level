@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-02-01T10:47:10.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -44,8 +40,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "long_instructions": "# Perfect Toast\r\n\r\nThis app simulates a toaster with a piece of toast in between two heated sides. The toast needs to be perfectly placed in the middle - if it's too close to one of the sides, the toast will burn! We can help alert the user of the burning toast by using the buzzer to make a noise if the toast is too close to the edges. Then the user can press buttons on the toaster to move the toast closer to the center.\r\n\r\n## Do This:\r\n1) If the toast is too far to the left, play a sound to alert the user\r\n\t- Add an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to the `buttonL` event to check if the toast is too far to the left.\r\n    - Use the the [`buzzer.frequency`(#f78183)](/docs/applab/buzzer.frequency/) block to play a sound and let the user know\r\n2) If the toast is too far to the right, play a sound to alert the user\r\n\t- Add an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to the `buttonL` event to check if the toast is too far to the right.\r\n    - Use the the [`buzzer.frequency`(#f78183)](/docs/applab/buzzer.frequency/) block to play a sound and let the user know\r\n\r\n**Run Your Code!** Use the left and right buttons to reposition the toast. When the toast gets too close to the walls, the device should buzz!",
+    "makerlab_enabled": "microbit",
+    "long_instructions": "# Perfect Toast\r\n\r\nThis app simulates a toaster with a piece of toast in between two heated sides. The toast needs to be perfectly placed in the middle - if it's too close to one of the sides, the toast will burn! We can help alert the user of the burning toast by making a noise if the toast is too close to the edges. Then the user can press buttons on the toaster to move the toast closer to the center.\r\n\r\n## Do This:\r\n1) If the toast is too far to the left, play a sound to alert the user\r\n\t- Add an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to the `buttonA` event to check if the toast is too far to the left.\r\n    - Use the the [`playSound()`(#fff176)](/docs/ide/applab/expressions/playSound) block to play a sound\r\n2) If the toast is too far to the right, play a sound to alert the user\r\n\t- Add an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to the `buttonB` event to check if the toast is too far to the right.\r\n    - Use the the [`playSound()`(#fff176)](/docs/ide/applab/expressions/playSound) block to play a sound\r\n\r\n**Run Your Code!** Use the A and B buttons to reposition the toast. When the toast gets too close to the walls, the device should buzz!",
     "parent_level_id": 20595,
     "name_suffix": "_mb2022",
     "mini_rubric": "false",
@@ -55,7 +51,6 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/courses/csd-2022/guides/if-statements-2"
@@ -86,16 +81,32 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "buzzer.frequency": null,
-      "onBoardEvent": null
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonA",
+            "buttonB"
+          ],
+          "1": [
+            "\"down\"",
+            "\"up\""
+          ]
+        }
+      }
     },
-    "start_blocks": "var xPosition = randomNumber(0, 300);\nsetProperty(\"toastImg\", \"x\", xPosition);\n\nonBoardEvent(buttonL, \"down\", function() {\n  xPosition = xPosition - 5;\n  setProperty(\"toastImg\", \"x\", xPosition);\n  //1) If the toast is too far to the left, play a sound to alert the user\n  \n});\n\nonBoardEvent(buttonR, \"down\", function() {\n  xPosition = xPosition + 5;\n  setProperty(\"toastImg\", \"x\", xPosition);\n  //2) If the toast is too far to the right, play a sound to alert the user\n  \n});\n",
-    "encrypted_examples": "F4vRfhdYK27T11guWPgcfv4YbDvx69zpA4zc8g3GtS3LEXxu2A0TSOt4IvqP\nTLGSpn4ZUZmM4KYxKvL92aFauA==\n",
+    "start_blocks": "var xPosition = randomNumber(0, 300);\r\nsetProperty(\"toastImg\", \"x\", xPosition);\r\n\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  xPosition = xPosition - 5;\r\n  setProperty(\"toastImg\", \"x\", xPosition);\r\n  //1) If the toast is too far to the left, play a sound to alert the user\r\n  \r\n});\r\n\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  xPosition = xPosition + 5;\r\n  setProperty(\"toastImg\", \"x\", xPosition);\r\n  //2) If the toast is too far to the right, play a sound to alert the user\r\n  \r\n});\r\n",
+    "encrypted_examples": [
+
+    ],
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-02-01T10:47:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:10.794+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB6_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB6_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:10.794+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB6_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB6_2222\"},{\"changed_at\":\"2023-02-07 22:12:03 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

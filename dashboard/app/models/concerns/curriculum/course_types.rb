@@ -64,11 +64,12 @@ module Curriculum::CourseTypes
     return false if user.student?
     return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
 
-    if instructor_audience == 'plc_reviewer'
+    case instructor_audience
+    when 'plc_reviewer'
       return user.permission?(UserPermission::PLC_REVIEWER)
-    elsif instructor_audience == 'facilitator'
+    when 'facilitator'
       return user.permission?(UserPermission::FACILITATOR)
-    elsif instructor_audience == 'teacher'
+    when 'teacher'
       return user.teacher?
     end
 
@@ -87,11 +88,12 @@ module Curriculum::CourseTypes
     return false if !user && participant_audience != 'student'
     return false if can_be_instructor?(user)
 
-    if participant_audience == 'facilitator'
+    case participant_audience
+    when 'facilitator'
       return user.permission?(UserPermission::FACILITATOR)
-    elsif participant_audience == 'teacher'
+    when 'teacher'
       return user.teacher?
-    elsif participant_audience == 'student'
+    when 'student'
       return true #if participant audience is student let anyone join
     end
 

@@ -235,10 +235,11 @@ end
 def get_i18n_strings(level)
   i18n_strings = {}
 
-  if level.is_a?(DSLDefined)
+  case level
+  when DSLDefined
     text = level.dsl_text
     i18n_strings["dsls"] = level.class.dsl_class.parse(text, '')[1] if text
-  elsif level.is_a?(Level)
+  when Level
     %w(
       display_name
       bubble_choice_description

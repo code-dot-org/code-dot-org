@@ -110,6 +110,11 @@ These steps may need to change over time as 3rd party tools update to have versi
    1. Set up your local MySQL server
       1. Force link 5.7 version via `brew link mysql@5.7 --force`
       2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
+      3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first.
+          1. `brew services stop mysql@5.7`
+          2. `mysqld --initialize-insecure` (this will leave the root password blank, which is required)
+          3. `brew services start mysql@5.7`
+          4. Confirm MySQL has started by running `brew services` again.
 
 1. Install the **Java 8 JSK**
    1. Either explicitly via `brew cask install adoptopenjdk/openjdk/adoptopenjdk8` or for M1 in Rosetta, `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
@@ -627,6 +632,16 @@ If you run into an error message about `Could not find MIME type database in the
 - `brew install shared-mime-info`
 
 (More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
+
+#### eventmachine
+
+If bundle install fails with an error referencing `eventmachine`, try
+
+- `gem install eventmachine -v ‘[VERSION]’ -- --with-openssl-dir=$(brew --prefix libressl)`
+
+Where [VERSION] is the current version of eventmachine in Gemfile.lock. For example:
+
+- `gem install eventmachine -v ‘1.2.7’ -- --with-openssl-dir=$(brew --prefix libressl)`
 
 #### Xcode Set Up
 
