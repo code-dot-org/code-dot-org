@@ -2,6 +2,8 @@ const EVENTS = {
   // Sign-up flow
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
+  SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
+  ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
   TEACHER_LOGIN_EVENT: 'Teacher Login',
 
   // Course/Unit info
@@ -32,7 +34,8 @@ const EVENTS = {
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
 
   // Levels
-  FEEDBACK_SUBMITTED: 'Level Feedback Submitted'
+  FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
+  RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed'
 };
 
 export {EVENTS};
