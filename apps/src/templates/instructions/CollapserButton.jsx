@@ -75,8 +75,9 @@ class CollapserButton extends Component {
 
 const styles = {
   collapseButton: {
-    backgroundColor: color.cyan,
-    color: color.white,
+    backgroundColor: color.neutral_white,
+    border: `2px solid ${color.neutral_dark}`,
+    color: color.neutral_dark,
     whiteSpace: 'nowrap'
   },
   collapseIcon: {

@@ -9,8 +9,8 @@
 
 .purpleHeader {
   height: style-constants.$workspace-headers-height;
-  background-color: color.$purple;
-  color: color.$white;
+  background-color: color.$neutral_dark;
+  color: color.$neutral_white;
   overflow-y: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -18,8 +18,8 @@
   user-select: none;
 
   &Unfocused {
-    background-color: color.$lighter_purple;
-    color: color.$dark_charcoal;
+    background-color: color.$neutral_dark;
+    color: color.$neutral_white;
   }
 }
 
