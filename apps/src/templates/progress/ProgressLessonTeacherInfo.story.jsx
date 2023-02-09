@@ -15,7 +15,8 @@ import teacherSections, {
   selectSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const lockableLesson = {
+// 0
+const lockableNoPlanYesUrl = {
   id: 123,
   levels: [1, 2, 3, 4].map(id => ({
     ids: [id],
@@ -30,23 +31,58 @@ const lockableLesson = {
     'https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true'
 };
 
-const nonLockableLesson = {
-  ...lockableLesson,
+// 1
+const nonLockableYesPlanYesUrl = {
+  ...lockableNoPlanYesUrl,
   id: 124,
   lockable: false,
   lesson_plan_html_url: 'lesson_plan.html'
 };
 
-const lockableWithLessonPlan = {
-  ...lockableLesson,
+// 2
+const lockableYesPlanYesUrl = {
+  ...lockableNoPlanYesUrl,
   id: 125,
   lesson_plan_html_url: 'lesson_plan.html'
 };
 
-const nonLockableNoLessonPlan = {
-  ...lockableLesson,
+// 3
+const nonLockableNoPlanYesUrl = {
+  ...lockableNoPlanYesUrl,
   id: 126,
   lockable: false
+};
+
+// 4
+const lockableNoPlanNoUrl = {
+  ...lockableNoPlanYesUrl,
+  id: 124,
+  lessonStartUrl: null
+};
+
+// 5
+const lockableYesPlanNoUrl = {
+  ...lockableNoPlanYesUrl,
+  id: 125,
+  lessonStartUrl: null,
+  lesson_plan_html_url: 'lesson_plan.html'
+};
+
+// 6
+const nonLockableNoPlanNoUrl = {
+  ...lockableNoPlanYesUrl,
+  id: 126,
+  lockable: false,
+  lessonStartUrl: null
+};
+
+// 7
+const nonLockableYesPlanNoUrl = {
+  ...lockableNoPlanYesUrl,
+  id: 125,
+  lessonStartUrl: null,
+  lockable: false,
+  lesson_plan_html_url: 'lesson_plan.html'
 };
 
 const createStore = ({
@@ -57,10 +93,14 @@ const createStore = ({
   registerReducers({teacherSections});
   const store = createStoreWithReducers();
   const lessons = [
-    lockableLesson,
-    nonLockableLesson,
-    lockableWithLessonPlan,
-    nonLockableNoLessonPlan
+    lockableNoPlanYesUrl,
+    nonLockableYesPlanYesUrl,
+    lockableYesPlanYesUrl,
+    nonLockableNoPlanYesUrl,
+    lockableNoPlanNoUrl,
+    lockableYesPlanNoUrl,
+    nonLockableNoPlanNoUrl,
+    nonLockableYesPlanNoUrl
   ];
   store.dispatch(
     initProgress({
@@ -69,14 +109,10 @@ const createStore = ({
       lessons: lessons
     })
   );
-  if (teacherVerified) {
-    store.dispatch(authorizeLockable());
-  }
-  store.dispatch(setViewType(ViewType.Instructor));
   store.dispatch(
     setHiddenLessons(
       {
-        11: [lockableWithLessonPlan.id]
+        11: [lockableYesPlanYesUrl.id]
       },
       allowHidden
     )
@@ -105,6 +141,10 @@ const createStore = ({
     store.dispatch(setSections([sections[11]]));
     store.dispatch(setSectionLockStatus(sections));
     store.dispatch(selectSection('11'));
+    if (teacherVerified) {
+      store.dispatch(authorizeLockable(true));
+    }
+    store.dispatch(setViewType(ViewType.Instructor));
   }
   return store;
 };
@@ -114,178 +154,103 @@ const style = {
   height: 200
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('Progress/ProgressLessonTeacherInfo', module)
-    .addStoryTable([
-      {
-        name: 'loading',
-        story: () => {
-          const store = createStore({preload: true});
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[0]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name:
-          'hideable allowed, lockable lesson with no lesson plan, without lesson url',
-        story: () => {
-          const store = createStore();
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[0]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name:
-          'hideable allowed, lockable lesson with no lesson plan, with lesson url',
-        story: () => {
-          const store = createStore();
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[0]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name:
-          'hideable allowed, lockable lesson with lesson plan, without lesson url',
-        story: () => {
-          const store = createStore();
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[2]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name:
-          'hideable allowed, lockable lesson with lesson plan, with lesson url',
-        story: () => {
-          const store = createStore();
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[2]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name: 'non-verified instructor view for lockable lesson',
-        story: () => {
-          const store = createStore({teacherVerified: false});
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[2]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name:
-          'hideable allowed, nonlockable lesson with lesson plan, without lesson url',
-        story: () => {
-          const store = createStore();
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[1]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name:
-          'hideable allowed, nonlockable lesson with lesson plan, with lesson url',
-        story: () => {
-          const store = createStore();
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[1]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name:
-          'hideable not allowed, nonlockable lesson with no lesson plan, without lesson url',
-        description: "shouldn't render anything",
-        story: () => {
-          const store = createStore({allowHidden: false});
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[3]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      },
-      {
-        name:
-          'hideable not allowed, nonlockable lesson with no lesson plan, with lesson url',
-        story: () => {
-          const store = createStore({allowHidden: false});
-          const state = store.getState();
-          return (
-            <Provider store={store}>
-              <div style={style}>
-                <ProgressLessonTeacherInfo
-                  lesson={lessons(state.progress)[3]}
-                />
-              </div>
-            </Provider>
-          );
-        }
-      }
-    ]);
+export default {
+  title: 'ProgressLessonTeacherInfo',
+  component: ProgressLessonTeacherInfo
 };
+
+const store = createStore();
+const loadingStore = createStore({preload: true});
+const nonVerifiedTeacherStore = createStore({teacherVerified: false});
+const hiddenStore = createStore({allowHidden: false});
+
+const state = store.getState();
+const loadingState = loadingStore.getState();
+const nonVerifiedStoreState = nonVerifiedTeacherStore.getState();
+const hiddenStoreState = hiddenStore.getState();
+
+export const Loading = () => (
+  <Provider store={loadingStore}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo lesson={lessons(loadingState.progress)[0]} />
+    </div>
+  </Provider>
+);
+
+export const HideableLockableNoPlanNoUrl = () => (
+  <Provider store={store}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[4]} />
+    </div>
+  </Provider>
+);
+
+export const HideableLockableNoPlanYesUrl = () => (
+  <Provider store={store}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[0]} />
+    </div>
+  </Provider>
+);
+
+export const HideableLockableYesPlanNoUrl = () => (
+  <Provider store={store}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[5]} />
+    </div>
+  </Provider>
+);
+
+export const HideableLockableYesPlanYesUrl = () => (
+  <Provider store={store}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[2]} />
+    </div>
+  </Provider>
+);
+
+export const NonVerifiedLockableLesson = () => (
+  <Provider store={nonVerifiedTeacherStore}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo
+        lesson={lessons(nonVerifiedStoreState.progress)[2]}
+      />
+    </div>
+  </Provider>
+);
+
+export const HideableNonLockableYesPlanNoUrl = () => (
+  <Provider store={store}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[7]} />
+    </div>
+  </Provider>
+);
+
+export const HideableNonLockableYesPlanYesUrl = () => (
+  <Provider store={store}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[1]} />
+    </div>
+  </Provider>
+);
+
+export const nonHideableNonLockableNoPlanNoUrl = () => (
+  <Provider store={hiddenStore}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo
+        lesson={lessons(hiddenStoreState.progress)[6]}
+      />
+    </div>
+  </Provider>
+);
+
+export const nonHideableNonLockableNoPlanYesUrl = () => (
+  <Provider store={hiddenStore}>
+    <div style={style}>
+      <ProgressLessonTeacherInfo
+        lesson={lessons(hiddenStoreState.progress)[3]}
+      />
+    </div>
+  </Provider>
+);
