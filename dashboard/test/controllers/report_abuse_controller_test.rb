@@ -7,7 +7,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   setup do
     # channels
     # Use a fake storage ID, because if you use the project_storage factory,
-    # everything breaks.
+    # many other tests (e.g. ProjectsController) break.
     storage_id = 1
     @projects = Projects.new(storage_id)
     @channel_id = @projects.create({}, ip: '10.0.0.1')
