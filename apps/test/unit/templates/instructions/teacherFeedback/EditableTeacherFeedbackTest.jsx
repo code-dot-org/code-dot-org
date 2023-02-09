@@ -53,6 +53,23 @@ describe('EditableTeacherFeedback', () => {
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
+  it('logs Amplitude message when rubric level viewed', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    setUp({rubric: RUBRIC});
+
+    expect(analyticsSpy).to.have.been.calledOnce;
+    assert.equal(analyticsSpy.getCall(0).firstArg, 'Rubric Level Viewed');
+    analyticsSpy.restore();
+  });
+
+  it('does not log Amplitude message when non-rubric level viewed', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    setUp();
+
+    expect(analyticsSpy).not.to.have.been.called;
+    analyticsSpy.restore();
+  });
+
   describe('without previous feedback', () => {
     it('does not display EditableFeedbackStatus', () => {
       const wrapper = setUp({rubric: null, latestFeedback: null});
