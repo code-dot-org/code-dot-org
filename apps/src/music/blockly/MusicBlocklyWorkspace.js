@@ -5,6 +5,7 @@ import {musicLabDarkTheme} from './themes';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import {getBlockMode} from '../appConfig';
+import {BlockMode} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
@@ -71,6 +72,7 @@ export default class MusicBlocklyWorkspace {
       renderer: experiments.isEnabled('thrasos')
         ? 'cdo_renderer_thrasos'
         : 'cdo_renderer_zelos',
+      noFunctionBlockFrame: true,
       zoom: {
         startScale: 0.675
       }
@@ -116,11 +118,66 @@ export default class MusicBlocklyWorkspace {
 
     const events = {};
 
-    this.workspace.getTopBlocks().forEach(block => {
-      if (block.type === BlockTypes.WHEN_RUN) {
+    const topBlocks = this.workspace.getTopBlocks();
+
+    if (getBlockMode() === BlockMode.SIMPLE2) {
+      // If there's no when_run block, then we'll generate
+      // some custom code that calls all the functions
+      // together, simulating tracks mode.
+
+      if (
+        !topBlocks.some(block => block.type === BlockTypes.WHEN_RUN_SIMPLE2)
+      ) {
         events.whenRunButton = {
-          code: Blockly.JavaScript.blockToCode(block)
+          code: `
+              ProgramSequencer.init();
+              ProgramSequencer.playTogether();
+            `
         };
+
+        topBlocks.forEach(functionBlock => {
+          if (functionBlock.type === 'procedures_defnoreturn') {
+            events.whenRunButton.code += `${functionBlock.getFieldValue(
+              'NAME'
+            )}();
+            `;
+          }
+        });
+      }
+    }
+
+    topBlocks.forEach(block => {
+      if (getBlockMode() !== BlockMode.SIMPLE2) {
+        if (block.type === BlockTypes.WHEN_RUN) {
+          events.whenRunButton = {
+            code: Blockly.JavaScript.blockToCode(block)
+          };
+        }
+      } else {
+        if (block.type === BlockTypes.WHEN_RUN_SIMPLE2) {
+          if (!events.whenRunButton) {
+            events.whenRunButton = {code: ''};
+          }
+          events.whenRunButton.code += Blockly.JavaScript.blockToCode(block);
+        }
+
+        if (block.type === 'procedures_defnoreturn') {
+          if (!events.whenRunButton) {
+            events.whenRunButton = {code: ''};
+          }
+
+          const functionCode = Blockly.JavaScript.blockToCode(
+            block.getChildren()[0]
+          );
+          events.whenRunButton.code += `function ${block.getFieldValue(
+            'NAME'
+          )}() {
+              ProgramSequencer.playSequential();
+              ${functionCode}
+              ProgramSequencer.endSequential();
+            }
+            `;
+        }
       }
 
       if (
@@ -151,13 +208,13 @@ export default class MusicBlocklyWorkspace {
 
     this.codeHooks = {};
 
+    console.log('executeSong', events);
+
     CustomMarshalingInterpreter.evalWithEvents(scope, events).hooks.forEach(
       hook => {
         this.codeHooks[hook.name] = hook.func;
       }
     );
-
-    console.log('executeSong', events);
 
     if (this.codeHooks.whenRunButton) {
       this.callUserGeneratedCode(this.codeHooks.whenRunButton);
