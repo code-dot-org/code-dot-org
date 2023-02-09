@@ -3768,3 +3768,11 @@ az:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Mövzu 9: Data'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
