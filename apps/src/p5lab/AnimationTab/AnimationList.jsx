@@ -9,14 +9,14 @@ import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
 import i18n from '@cdo/locale';
-
+import {P5LabInterfaceMode} from '../constants';
 /**
  * Vertical scrolling list of animations associated with the project.
  */
 class AnimationList extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
-    selectedAnimation: shapes.AnimationKey,
+    currentAnimations: shapes.CurrentAnimations,
     onNewItemClick: PropTypes.func.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
@@ -32,7 +32,7 @@ class AnimationList extends React.Component {
       labType,
       onNewItemClick,
       spriteLab,
-      selectedAnimation
+      currentAnimations
     } = this.props;
     let newAnimationLabel;
     if (spriteLab) {
@@ -67,7 +67,10 @@ class AnimationList extends React.Component {
             key={key}
             animationKey={key}
             animationProps={animationList.propsByKey[key]}
-            isSelected={key === selectedAnimation}
+            isSelected={
+              key === currentAnimations[P5LabInterfaceMode.ANIMATION] ||
+              key === currentAnimations[P5LabInterfaceMode.BACKGROUND]
+            }
             animationList={animationList}
             labType={labType}
           />
@@ -99,7 +102,7 @@ const styles = {
 export default connect(
   state => ({
     animationList: state.animationList,
-    selectedAnimation: state.animationTab.selectedAnimation,
+    currentAnimations: state.animationTab.currentAnimations,
     spriteLab: state.pageConstants.isBlockly
   }),
   dispatch => ({
