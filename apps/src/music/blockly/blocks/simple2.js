@@ -1,6 +1,10 @@
 import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
-import {DEFAULT_SOUND, TRIGGER_FIELD} from '../constants';
+import {
+  DEFAULT_SOUND,
+  TRIGGER_FIELD,
+  DYNAMIC_TRIGGER_EXTENSION
+} from '../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -67,7 +71,7 @@ export const triggeredAtSimple2 = {
     nextStatement: null,
     style: 'event_blocks',
     tooltip: 'at trigger',
-    extensions: ['dynamic_trigger_extension']
+    extensions: [DYNAMIC_TRIGGER_EXTENSION]
   },
   generator: block => {
     const varName = Blockly.JavaScript.nameDB_.getDistinctName(
