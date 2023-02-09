@@ -39,7 +39,7 @@ strong {
 // Use these classes to change a section's background color
 section.bg-neutral { background-color: $neutral_light; }
 section.bg-primary { background-color: rgba($brand_primary_light, .5); }
-section.bg-secondary { background-color: rgba($brand_secondary_light, .5); }
+section.bg-secondary { background-color: $brand_secondary_light; }
 
 // Centers a block-level element
 .centered { text-align: center !important; }
@@ -144,6 +144,23 @@ a.link-button {
       background: $neutral_dark10;
     }
   }
+}
+
+// Basic hero banner
+.hero-banner-basic {
+  position: relative;
+
+  .text-wrapper {
+    z-index: 10;
+  }
+
+  img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
 }
 
 // Unordered lists

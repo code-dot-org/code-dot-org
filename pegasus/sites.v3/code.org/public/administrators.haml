@@ -19,11 +19,13 @@ theme: responsive_full_width
 - icon_smile = "fa-solid fa-smile"
 - icon_money_check_dollar_pen = "fa-solid fa-money-check-dollar-pen"
 
-%section.bg-secondary
+%section.hero-banner-basic.bg-secondary
   .wrapper
-    %h1 Code.org District Partner Program
-    %h2 Bring computer science to your district.
-    %p Learn how you can partner with Code.org to teach your students about the careers of the future.
+    .text-wrapper
+      %h1 Code.org District Partner Program
+      %h2 Bring computer science to your district.
+      %p Learn how you can partner with Code.org to teach your students about the careers of the future.
+    %img{src: "shared/images/banners/admins-hero-students-at-computers.png", alt: ""}
 
 %section.bg-neutral
   .wrapper
@@ -37,7 +39,7 @@ theme: responsive_full_width
         %li Invest in teachers through high-quality professional learning experiences
         %li Tap into the energy, aspirations, and potential of all students to close equity gaps in computer science education and career pathways
         %li Align with the education-to-workforce priorities of employers and policymakers
-      %a{href: '#email-signup-form', class: 'link-button'} Become a Code.org District Partner
+      %a{href: "#email-signup-form", class: "link-button"} Become a Code.org District Partner
     %div.col-45{style: "float:right; margin-top: 3px"}
       %figure.video-responsive
         %div
