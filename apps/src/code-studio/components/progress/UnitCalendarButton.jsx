@@ -43,11 +43,11 @@ export default class UnitCalendarButton extends React.Component {
     return (
       <div>
         <Button
-          __useDeprecatedTag
           onClick={this.openDialog}
           text={i18n.viewCalendarButton()}
           icon="calendar"
           color={Button.ButtonColor.blue}
+          style={styles.button}
         />
         {this.state.isDialogOpen && (
           <UnitCalendarDialog
@@ -64,3 +64,10 @@ export default class UnitCalendarButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    margin: 0,
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)'
+  }
+};
