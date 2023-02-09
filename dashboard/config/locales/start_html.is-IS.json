@@ -1058,7 +1058,8 @@
           "Correct!": "Rétt!"
         },
         "CSDU6 - UI and Inputs - getNumber": {
-          "+": "+"
+          "+": "+",
+          "???": "???"
         },
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Til baka"
@@ -1180,13 +1181,15 @@
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4"
+          "4": "4",
+          "???": "???"
         },
         "csd-apps for good-3_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4"
+          "4": "4",
+          "???": "???"
         },
         "csd-explore ui-2": {
           "Next": "Næsta",
