@@ -120,7 +120,7 @@ class PiskelEditor extends React.Component {
   }
 
   loadSelectedAnimation_(props) {
-    const key = props.currentAnimation;
+    const {currentAnimation: key} = props;
     if (!this.isPiskelReady_) {
       return;
     }
