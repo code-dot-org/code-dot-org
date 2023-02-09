@@ -71,11 +71,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/ConstantDefinitionInBlock:
   Enabled: false
 
-# Offense count: 40
-# Configuration parameters: IgnoreLiteralBranches, IgnoreConstantBranches.
-Lint/DuplicateBranch:
-  Enabled: false
-
 # Offense count: 146
 # Configuration parameters: AllowComments, AllowEmptyLambdas.
 Lint/EmptyBlock:
@@ -482,12 +477,6 @@ Style/OptionalBooleanParameter:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: same_as_string_literals, single_quotes, double_quotes
 Style/QuotedSymbols:
-  Enabled: false
-
-# Offense count: 17
-# This cop supports unsafe auto-correction (--auto-correct-all).
-# Configuration parameters: Methods.
-Style/RedundantArgument:
   Enabled: false
 
 # Offense count: 14
