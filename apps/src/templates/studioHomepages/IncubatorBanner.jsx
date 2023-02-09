@@ -18,7 +18,7 @@ const IncubatorBanner = () => {
             text: i18n.seeIncubatorProjects()
           }
         ]}
-        marginBottom={0}
+        marginBottom={'0'}
       />
     </ContentContainer>
   );
