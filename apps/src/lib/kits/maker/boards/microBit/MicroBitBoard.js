@@ -163,6 +163,10 @@ export default class MicroBitBoard extends EventEmitter {
    * @throws {Error} if called before connecting to firmware
    */
   initializeComponents() {
+    // Create a copy of boardClient_ but remove references to the WebSerialPortWrapper.
+    // This avoids hitting a recursive loop (due to the emit functionality that's included
+    // in the WebSerialPortWrapper) when we attempt to marshall the object across to
+    // the interpreter.
     this.boardClientWithoutPort = Object.assign({}, this.boardClient_);
     delete this.boardClientWithoutPort.serialPortWebSerial;
     delete this.boardClientWithoutPort.myPort;
