@@ -39,7 +39,8 @@ const EVENTS = {
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
-  RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed'
+  RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
+  TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work'
 };
 
 export {EVENTS};
