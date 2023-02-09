@@ -1,7 +1,7 @@
 require_relative '../../../deployment'
 require 'digest'
 require 'securerandom'
-require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
+require 'cdo/http_cache'
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 require 'active_support/core_ext/object/try'
 
