@@ -1,4 +1,4 @@
-@import 'color', 'font', 'breakpoints';
+@import 'color', 'font', 'breakpoints', 'barlow-semi-condensed-font';
 
 // Variables
 $border-radius: 4px;
@@ -9,50 +9,30 @@ html {
 }
 
 body {
-  font-size: 14px !important;
+  font-size: 14px !important; // this will be changed to 16px in Phase II of the rebrand launch
   color: $neutral-dark;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: $neutral-dark;
-  margin: unset;
+  margin: 0 0 0.5em;
+  line-height: 1.2;
 }
 
 h1, h2, h3, h4 {
   font-family: $barlowSemiCondensed-semibold;
-  line-height: 1.2;
-  margin-bottom: 1em;
 }
 
-h1 {
-  font-size: 3em;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 2.125em;
-  margin-bottom: .5em;
-}
-
-h3 {
-  font-size: 1.75em;
-}
-
-h4 {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-
-h5 {
+h5, h6 {
   font-family: $gotham-bold, sans-serif;
-  font-size: 1.25em;
-  margin-bottom: 0.5em;
 }
 
-h6 {
-  font-family: $gotham-bold, sans-serif;
-  font-size: 1em;
-}
+h1 { font-size: 3em; }
+h2 { font-size: 2.125em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
 
 // Use these classes to change a section's background color
 section.bg-neutral { background-color: $neutral_light; }
@@ -62,8 +42,8 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 // Centers a block-level element
 .centered { text-align: center !important; }
 
-// Removes the bottom margin
-// Often helpful on a last paragraph or list elements
+// Removes the bottom margin —
+// often helpful on a last paragraphs or list elements
 // to maintain consistent white space between sections
 .no-margin-bottom { margin-bottom: 0 !important;}
 
@@ -83,7 +63,7 @@ p {
 
   // For use on course block descriptions or anywhere
   // else that needs smaller paragraph text
-  &.p-two {
+  &.body-two {
     font-size: .875em;
   }
 
@@ -273,7 +253,7 @@ ol.steps-list {
       display: block;
       width: 2em;
       height: 2em;
-      margin: 0 auto;
+      margin: 0 auto 0.5em;
       line-height: 1.7;
       border: 2px solid;
       border-radius: 100%;
@@ -309,7 +289,7 @@ details {
 
   summary {
     font-family: $gotham-bold, sans-serif;
-    font-size: 1.125em;
+    font-size: 1.25em;
     margin-bottom: .5em;
     display: flex;
     justify-content: space-between;
