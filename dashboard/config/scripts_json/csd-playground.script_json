@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2023-01-11 18:12:07 UTC",
+    "serialized_at": "2023-02-08 22:47:25 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -636,7 +636,7 @@
       "key": "61b713d2-7a27-4104-93ef-75b49ef93741",
       "position": 2,
       "properties": {
-        "description": "[`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock)\n\n\n[`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown)\n\n[`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation)\n\n[`visible`(#f78183)](/docs/ide/gamelab/expressions/visible)\n\n[`keyWentDown()`(#fff176)](/docs/ide/gamelab/expressions/keyWentDown)\n\n[`sprite.x`(#f78183)](/docs/ide/gamelab/expressions/x)\n\n[`sprite.velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX)\n\n[`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect)\n\n[`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse)\n\n[`point()`(#4dd0e1)](/docs/ide/gamelab/expressions/point)\n\n[`strokeWeight()`(#4dd0e1)](/docs/ide/gamelab/expressions/strokeWeight)\n\n[`noFill()`(#4dd0e1)](/docs/ide/gamelab/expressions/noFill)\n\n[`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill)\n\n[`background()`(#4dd0e1)](/docs/ide/gamelab/expressions/background)\n\n[`regularPolygon()`(#4dd0e1)](/docs/ide/gamelab/expressions/regularPolygon)\n\n[`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber)\n\n[`rgb()`(#4dd0e1)](/docs/ide/gamelab/expressions/rgb)"
+        "description": "[`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock)\n\n\n[`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown)\n\n[`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation)\n\n[`visible`(#f78183)](/docs/ide/gamelab/expressions/visible)\n\n[`keyWentDown()`(#fff176)](/docs/ide/gamelab/expressions/keyWentDown)\n\n[`sprite.x`(#f78183)](/docs/ide/gamelab/expressions/x)\n\n[`sprite.velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX)\n\n[`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect)\n\n[`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse)\n\n[`point()`(#4dd0e1)](/docs/ide/gamelab/expressions/point)\n\n[`strokeWeight()`(#4dd0e1)](/docs/ide/gamelab/expressions/strokeWeight)\n\n[`noFill()`(#4dd0e1)](/docs/ide/gamelab/expressions/noFill)\n\n[`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill)\n\n[`background()`(#4dd0e1)](/docs/ide/gamelab/expressions/background)\n\n[`regularPolygon()`(#4dd0e1)](/docs/ide/gamelab/expressions/regularPolygon)\n\n[`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber)\n\n[`rgb()`(#4dd0e1)](/docs/ide/gamelab/expressions/rgb)\n\n[`ledScreen.clear()`(#f78183)](/docs/ide/applab/expressions/ledScreen.clear)\n\n[`ledScreen.display()`(#f78183)](/docs/ide/applab/expressions/ledScreen.display)\n\n[`ledScreen.scrollString()`(#f78183)](/docs/ide/applab/expressions/ledScreen.scrollString)\n\n[`<`(#FFB74D)](/docs/ide/applab/expressions/lessThanOperator)"
       },
       "seeding_key": {
         "activity_section.key": "61b713d2-7a27-4104-93ef-75b49ef93741",
@@ -3622,6 +3622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "microbit test v1"
+        ],
         "progression": "Microbit Test"
       },
       "bonus": false,
