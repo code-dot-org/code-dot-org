@@ -11,6 +11,9 @@ const EVENTS = {
   UNIT_OVERVIEW_PAGE_VISITED_EVENT: 'Unit Overview Page Visited',
   TRY_NOW_BUTTON_CLICK_EVENT: 'Try Now Button Clicked',
 
+  // Lesson info
+  LESSON_OVERVIEW_PAGE_VISITED_EVENT: 'Lesson Overview Page Visited',
+
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
 
