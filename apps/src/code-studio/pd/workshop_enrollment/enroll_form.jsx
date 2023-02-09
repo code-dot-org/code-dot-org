@@ -15,6 +15,7 @@ import Select from 'react-select';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
+import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
@@ -98,8 +99,6 @@ const REPLACE_EXISTING_OPTIONS = [
   'No, this will be the only computer science course on the master schedule',
   'I don’t know'
 ];
-
-const ERROR_COLOR = '#a94442'; // Error color used in 'react-bootstrap'
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
@@ -767,7 +766,7 @@ export default class EnrollForm extends React.Component {
           Register
         </Button>
         {this.state.showFormErrorMessage && (
-          <p style={{color: ERROR_COLOR}}>
+          <p style={{color: color.bootstrap_v3_error_text}}>
             Form errors found. Please check your responses above.
           </p>
         )}
