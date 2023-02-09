@@ -1,18 +1,16 @@
 /** @file Redux actions and reducer for the AnimationTab */
 
-import {CURRENT_ANIMATION_TYPE} from '../constants';
+import {P5LabInterfaceMode} from '../constants';
 
 const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
 const SELECT_BACKGROUND = 'AnimationTab/SELECT_BACKGROUND';
-const SET_ANIMATION_TYPE = 'AnimationTab/SET_ANIMATION_TYPE';
 const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
 
 const initialState = {
   currentAnimations: {
-    [CURRENT_ANIMATION_TYPE.default]: '',
-    [CURRENT_ANIMATION_TYPE.background]: ''
+    [P5LabInterfaceMode.ANIMATION]: '',
+    [P5LabInterfaceMode.BACKGROUND]: ''
   },
-  currentAnimationType: CURRENT_ANIMATION_TYPE.default,
   columnSizes: [150, undefined]
 };
 
@@ -22,7 +20,7 @@ export default (state = initialState, action) => {
       ...state,
       currentAnimations: {
         ...state.currentAnimations,
-        default: action.animationKey
+        [P5LabInterfaceMode.ANIMATION]: action.animationKey
       }
     };
   }
@@ -31,17 +29,8 @@ export default (state = initialState, action) => {
       ...state,
       currentAnimations: {
         ...state.currentAnimations,
-        background: action.animationKey
+        [P5LabInterfaceMode.BACKGROUND]: action.animationKey
       }
-    };
-  }
-  if (action.type === SET_ANIMATION_TYPE) {
-    return {
-      ...state,
-      currentAnimationType:
-        action.mode === 'BACKGROUND'
-          ? CURRENT_ANIMATION_TYPE.background
-          : CURRENT_ANIMATION_TYPE.default
     };
   }
   if (action.type === SET_COLUMN_SIZES) {
@@ -66,14 +55,6 @@ export function selectAnimation(animationKey) {
  */
 export function selectBackground(animationKey) {
   return {type: SELECT_BACKGROUND, animationKey};
-}
-
-/**
- * Switch to background mode (Sprite Lab only)
- * @returns {{type: string}}
- */
-export function setAnimationType(mode) {
-  return {type: SET_ANIMATION_TYPE, mode};
 }
 
 /**
