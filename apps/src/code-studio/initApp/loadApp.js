@@ -453,6 +453,12 @@ const sourceHandler = {
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
+  setRestrictedUploadEnabled() {
+    getAppOptions.level.restrictedUploadEnabled = true;
+  },
+  getRestrictedUploadEnabled() {
+    return getAppOptions.level.restrictedUploadEnabled;
+  },
   // returns a Promise to the level source
   getLevelSource(currentLevelSource) {
     return new Promise((resolve, reject) => {

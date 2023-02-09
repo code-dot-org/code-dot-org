@@ -112,7 +112,8 @@ var currentSources = {
   makerAPIsEnabled: null,
   animations: null,
   selectedSong: null,
-  selectedPoem: null
+  selectedPoem: null,
+  restrictedUploadEnabled: false
 };
 
 /**
@@ -137,7 +138,8 @@ function unpackSources(data) {
     makerAPIsEnabled: data.makerAPIsEnabled,
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
-    libraries: data.libraries
+    libraries: data.libraries,
+    restrictedUploadEnabled: data.restrictedUploadEnabled
   };
 }
 
@@ -698,6 +700,10 @@ var projects = (module.exports = {
         sourceHandler.setInitialLibrariesList(currentSources.libraries);
       }
 
+      if (currentSources.restrictedUploadEnabled) {
+        sourceHandler.setRestrictedUploadEnabled();
+      }
+
       if (isEditing) {
         if (current) {
           if (currentSources.source) {
@@ -1198,6 +1204,11 @@ var projects = (module.exports = {
 
   saveSelectedPoem(poem) {
     this.sourceHandler.setSelectedPoem(poem);
+    return this.save();
+  },
+
+  enableRestrictedUpload() {
+    this.sourceHandler.setRestrictedUploadEnabled();
     return this.save();
   },
 
