@@ -9,6 +9,8 @@ linters:
 
   ConsistentQuotationMark:
     enabled: true
+    include:
+      - '/**/*mailer*/**/*.haml'
 exclude:
 - '/**/pegasus/test/fixtures/**/*.haml'
 - 'pegasus/test/fixtures/**/*.haml'
