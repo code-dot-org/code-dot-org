@@ -169,88 +169,124 @@ const loadingState = loadingStore.getState();
 const nonVerifiedStoreState = nonVerifiedTeacherStore.getState();
 const hiddenStoreState = hiddenStore.getState();
 
-export const Loading = () => (
-  <Provider store={loadingStore}>
-    <div style={style}>
-      <ProgressLessonTeacherInfo lesson={lessons(loadingState.progress)[0]} />
-    </div>
-  </Provider>
-);
-
-export const HideableLockableNoPlanNoUrl = () => (
-  <Provider store={store}>
-    <div style={style}>
-      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[4]} />
-    </div>
-  </Provider>
-);
-
-export const HideableLockableNoPlanYesUrl = () => (
-  <Provider store={store}>
-    <div style={style}>
-      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[0]} />
-    </div>
-  </Provider>
-);
-
-export const HideableLockableYesPlanNoUrl = () => (
-  <Provider store={store}>
-    <div style={style}>
-      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[5]} />
-    </div>
-  </Provider>
-);
-
-export const HideableLockableYesPlanYesUrl = () => (
-  <Provider store={store}>
-    <div style={style}>
-      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[2]} />
-    </div>
-  </Provider>
-);
-
-export const NonVerifiedLockableLesson = () => (
-  <Provider store={nonVerifiedTeacherStore}>
+const Template = args => (
+  <Provider store={args.store}>
     <div style={style}>
       <ProgressLessonTeacherInfo
-        lesson={lessons(nonVerifiedStoreState.progress)[2]}
+        lesson={lessons(args.state.progress)[args.lessonIndex]}
       />
     </div>
   </Provider>
 );
 
-export const HideableNonLockableYesPlanNoUrl = () => (
-  <Provider store={store}>
-    <div style={style}>
-      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[7]} />
-    </div>
-  </Provider>
-);
+export const Loading = Template.bind({});
+Loading.args = {
+  store: loadingStore,
+  state: loadingState,
+  lessonIndex: 0
+};
 
-export const HideableNonLockableYesPlanYesUrl = () => (
-  <Provider store={store}>
-    <div style={style}>
-      <ProgressLessonTeacherInfo lesson={lessons(state.progress)[1]} />
-    </div>
-  </Provider>
-);
+export const HideableLockableNoPlanNoUrl = Template.bind({});
+HideableLockableNoPlanNoUrl.args = {
+  store: store,
+  state: state,
+  lessonIndex: 4
+};
 
-export const nonHideableNonLockableNoPlanNoUrl = () => (
-  <Provider store={hiddenStore}>
-    <div style={style}>
-      <ProgressLessonTeacherInfo
-        lesson={lessons(hiddenStoreState.progress)[6]}
-      />
-    </div>
-  </Provider>
-);
+export const HideableLockableNoPlanYesUrl = Template.bind({});
+HideableLockableNoPlanYesUrl.args = {
+  store: store,
+  state: state,
+  lessonIndex: 0
+};
 
-export const nonHideableNonLockableNoPlanYesUrl = () => (
-  <Provider store={hiddenStore}>
-    <div style={style}>
-      <ProgressLessonTeacherInfo
-        lesson={lessons(hiddenStoreState.progress)[3]}
-      />
-    </div>
-  </Provider>
-);
+export const HideableLockableYesPlanNoUrl = Template.bind({});
+HideableLockableYesPlanNoUrl.args = {
+  store: store,
+  state: state,
+  lessonIndex: 5
+};
+
+export const HideableLockableYesPlanYesUrl = Template.bind({});
+HideableLockableYesPlanYesUrl.args = {
+  store: store,
+  state: state,
+  lessonIndex: 2
+};
+
+export const NonVerifiedLockableLesson = Template.bind({});
+NonVerifiedLockableLesson.args = {
+  store: nonVerifiedTeacherStore,
+  state: nonVerifiedStoreState,
+  lessonIndex: 2
+};
+
+export const HideableNonLockableYesPlanNoUrl = Template.bind({});
+HideableNonLockableYesPlanNoUrl.args = {
+  store: store,
+  state: state,
+  lessonIndex: 7
+};
+
+export const HideableNonLockableYesPlanYesUrl = Template.bind({});
+HideableNonLockableYesPlanYesUrl.args = {
+  store: store,
+  state: state,
+  lessonIndex: 1
+};
+
+export const HideableNonLockableNoPlanNoUrl = Template.bind({});
+HideableNonLockableNoPlanNoUrl.args = {
+  store: store,
+  state: state,
+  lessonIndex: 6
+};
+
+export const HideableNonLockableNoPlanYesUrl = Template.bind({});
+HideableNonLockableNoPlanYesUrl.args = {
+  store: store,
+  state: state,
+  lessonIndex: 3
+};
+
+export const nonHideableNonLockableYesPlanYesUrl = Template.bind({});
+nonHideableNonLockableYesPlanYesUrl.args = {
+  store: hiddenStore,
+  state: hiddenStoreState,
+  lessonIndex: 1
+};
+
+export const nonHideableNonLockableNoPlanNoUrl = Template.bind({});
+nonHideableNonLockableNoPlanNoUrl.args = {
+  store: hiddenStore,
+  state: hiddenStoreState,
+  lessonIndex: 6
+};
+
+export const nonHideableNonLockableNoPlanYesUrl = Template.bind({});
+nonHideableNonLockableNoPlanYesUrl.args = {
+  store: hiddenStore,
+  state: hiddenStoreState,
+  lessonIndex: 3
+};
+
+export const nonHideableLockableYesPlanYesUrl = Template.bind({});
+nonHideableLockableYesPlanYesUrl.args = {
+  store: hiddenStore,
+  state: hiddenStoreState,
+  lessonIndex: 2
+};
+
+export const nonHideableLockableNoPlanNoUrl = Template.bind({});
+nonHideableLockableNoPlanNoUrl.args = {
+  store: hiddenStore,
+  state: hiddenStoreState,
+  lessonIndex: 4
+};
+
+export const nonHideableLockableNoPlanYesUrl = Template.bind({});
+nonHideableLockableNoPlanYesUrl.args = {
+  store: hiddenStore,
+  state: hiddenStoreState,
+  lessonIndex: 0
+};
