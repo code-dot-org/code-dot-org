@@ -28,8 +28,6 @@ const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
 const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
 const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
 const REMOVE_ANIMATION = 'AnimationPicker/REMOVE_ANIMATION';
-const SET_IN_RESTRICTED_SHARE_MODE =
-  'AnimationPicker/SET_IN_RESTRICTED_SHARE_MODE';
 
 // Default state, which we reset to any time we hide the animation picker.
 const initialState = {
@@ -41,8 +39,7 @@ const initialState = {
   isSpriteLab: false,
   isBackground: false,
   // List of animations selected to be added through multiselect
-  selectedAnimations: {},
-  inRestrictedShareMode: false
+  selectedAnimations: {}
 };
 
 export default function reducer(state, action) {
@@ -99,12 +96,6 @@ export default function reducer(state, action) {
     return {
       ...state,
       selectedAnimations: updatedAnimations
-    };
-  }
-  if (action.type === SET_IN_RESTRICTED_SHARE_MODE) {
-    return {
-      ...state,
-      inRestrictedShareMode: action.inRestrictedShareMode
     };
   }
   return state;
@@ -251,14 +242,6 @@ export function removeSelectedAnimation(animation) {
   return {
     type: REMOVE_ANIMATION,
     animation: animation
-  };
-}
-
-export function setInRestrictedShareMode(inRestrictedShareMode) {
-  console.log('in redux action');
-  return {
-    type: SET_IN_RESTRICTED_SHARE_MODE,
-    inRestrictedShareMode
   };
 }
 

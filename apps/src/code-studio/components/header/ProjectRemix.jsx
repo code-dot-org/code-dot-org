@@ -44,6 +44,7 @@ class ProjectRemix extends React.Component {
 
   render() {
     const {lightStyle, inRestrictedShareMode} = this.props;
+    console.log(`inRestrictedShareMode is ${inRestrictedShareMode}`);
     let className = 'project_remix header_button no-mc';
     if (lightStyle) {
       className += ' header_button_light';
@@ -66,7 +67,7 @@ export default connect(
   state => ({
     isSignedIn: state.pageConstants && state.pageConstants.isSignedIn,
     inRestrictedShareMode:
-      state.animationPicker && state.animationPicker.inRestrictedShareMode
+      state.animationTab && state.animationTab.inRestrictedShareMode
   }),
   {refreshProjectName}
 )(ProjectRemix);

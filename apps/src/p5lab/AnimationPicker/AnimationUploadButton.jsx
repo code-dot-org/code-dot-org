@@ -6,8 +6,8 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import BaseDialog from '../../templates/BaseDialog.jsx';
 import classNames from 'classnames';
 import styles from './animation-upload-button.module.scss';
-import {setInRestrictedShareMode} from '../redux/animationPicker.js';
 import {connect} from 'react-redux';
+import {setInRestrictedShareMode} from '../redux/animationTab.js';
 
 function AnimationUploadButton({
   onUploadClick,

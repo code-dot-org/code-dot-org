@@ -73,7 +73,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {setInRestrictedShareMode} from './redux/animationPicker';
+import {setInRestrictedShareMode} from './redux/animationTab';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
