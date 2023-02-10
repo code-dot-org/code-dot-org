@@ -8,10 +8,16 @@ import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibrary
 import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
+import {
+  MAX_APP_WIDTH,
+  MIN_APP_WIDTH
+} from '@cdo/apps/p5lab/spritelab/constants';
 
 export default function loadPoetry(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
+  options.maxVisualizationWidth = MAX_APP_WIDTH;
+  options.minVisualizationWidth = MIN_APP_WIDTH;
 
   return getDefaultListMetadata()
     .then(defaultAnimationsList => {
