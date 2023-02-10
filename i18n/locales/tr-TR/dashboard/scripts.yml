@@ -6164,15 +6164,3 @@ tr:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Bölüm 1: Donanım girdisi'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Girdiler ve çıktılar
-            lessonGroup-4:
-              display_name: 'Bölüm 1: Donanım girdisi'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Uygulama Labına Giriş
-            lessonGroup-3:
-              display_name: Girdiler ve çıktılar

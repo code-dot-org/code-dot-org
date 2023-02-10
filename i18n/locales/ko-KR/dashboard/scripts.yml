@@ -4300,15 +4300,3 @@ ko:
           lesson_groups:
             lessonGroup-4:
               display_name: '챕터 2: 물리적 프로토타입 만들기'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 인풋 및 아웃풋
-            lessonGroup-4:
-              display_name: '챕터 2: 물리적 프로토타입 만들기'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 앱 랩 소개
-            lessonGroup-3:
-              display_name: 인풋 및 아웃풋

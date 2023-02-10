@@ -3476,7 +3476,3 @@ vi:
           description_audience: Người biên soạn giáo trình
           description_short: Để cập nhật theo giai đoạn cho các bài học hoặc cấp độ
             giữa các phiên bản giáo trình
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Giới thiệu về AppLab

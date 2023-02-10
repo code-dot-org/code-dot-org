@@ -892,7 +892,7 @@
         },
         "parameter/csd/2022": {
           "word": "Parámetro",
-          "definition": "Información adicional introducida en un bloque para personalizar su funcionalidad"
+          "definition": "Un parámetro es una pieza adicional de información que puedes pasar a una función para personalizarla para una necesidad especial."
         },
         "variable/csd/2022": {
           "word": "Variable",

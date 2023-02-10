@@ -2292,11 +2292,6 @@
                   }
                 },
                 "blink": {
-                  "examples": {
-                    "Simple Button Press": {
-                      "name": "Proste naciśnięcie przycisku"
-                    }
-                  },
                   "palette_params": {
                     "interval": {
                       "type": "liczba"

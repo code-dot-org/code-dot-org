@@ -1814,7 +1814,3 @@ ta:
         csp-playground:
           description_audience: பாடத்திட்ட எழுத்தாளர்கள்
           description_short: பாடத்திட்ட பதிப்புகளுக்கு இடையே பாடங்கள் அல்லது நிலைகளுக்கான புதுப்பிப்புகளை நிலைநிறுத்துவதற்கு
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்

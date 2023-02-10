@@ -594,16 +594,12 @@ bg:
           lesson_groups:
             content:
               display_name: Съдържание
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
         coursef-draft:
           lesson_groups:
             content:
               display_name: Съдържание
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         classic-hoc-impact-study:
           description_short: Опитайте основите на програмирането с много забавни герои!
         hoc-impact-study:
@@ -632,8 +628,6 @@ bg:
               display_name: Учителски практики
         csf2harvey:
           lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             content:
               display_name: Съдържание
         csp5-support:
@@ -670,16 +664,11 @@ bg:
           title: Курс E
           assignment_family_title: Курс E
           lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
         coursef-2017:
           title: Курс F
           assignment_family_title: Курс F
-          lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -760,8 +749,6 @@ bg:
           lesson_groups:
             content:
               display_name: Съдържание
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         csp3-research-mxghyt:
           description_short: Програмиране
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране,
@@ -780,26 +767,16 @@ bg:
             програмиране и инструменти.
         e-f-ramp:
           lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
         new-express:
           lesson_groups:
             content:
               display_name: Съдържание
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         new-e:
           lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
-        new-f:
-          lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         hero:
           title: 'Minecraft: Пътуването на героя'
           description_short: Minecraft се завръща с чисто нова дейност за часът на
@@ -819,14 +796,8 @@ bg:
               display_name: Проучване
         course-e-2018:
           lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
-        course-f-2018:
-          lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         csd3-1819draft:
           lesson_groups:
             cspSurvey:
@@ -859,16 +830,11 @@ bg:
           title: Курс E (2018)
           assignment_family_title: Курс E
           lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
         coursef-2018:
           title: Курс F (2018)
           assignment_family_title: Курс F
-          lesson_groups:
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         csp1-2018:
           lesson_groups:
             cspSurvey:
@@ -1068,8 +1034,6 @@ bg:
               display_name: Спрайт
             csf_digcit:
               display_name: Цифрови граждани
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         coursed-2019:
           title: Курс D (2019)
           lesson_groups:
@@ -1083,8 +1047,6 @@ bg:
               display_name: Двоичен код
             csf_digcit:
               display_name: Цифрови граждани
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         coursee-2019:
           title: Курс E (2019)
           lesson_groups:
@@ -1096,8 +1058,6 @@ bg:
               display_name: Вмъкнати цикли
             csf_functions:
               display_name: Функции
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         express-2019:
           lesson_groups:
             csf_loops:
@@ -1137,8 +1097,6 @@ bg:
               display_name: Събития
             csf_data:
               display_name: Данни
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -1493,8 +1451,6 @@ bg:
               display_name: Вмъкнати цикли
             csf_functions:
               display_name: Функции
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -1596,8 +1552,6 @@ bg:
               display_name: Събития
             csf_data:
               display_name: Данни
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         coursed-2020:
           title: Курс D (2020)
           lesson_groups:
@@ -1611,8 +1565,6 @@ bg:
               display_name: Двоичен код
             csf_digcit:
               display_name: Цифрови граждани
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         coursee-2020:
           title: Курс E (2020)
           lesson_groups:
@@ -1624,8 +1576,6 @@ bg:
               display_name: Вмъкнати цикли
             csf_functions:
               display_name: Функции
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         coursef-2020:
           title: Курс F (2020)
           lesson_groups:
@@ -1639,8 +1589,6 @@ bg:
               display_name: За циклите
             csf_sprites:
               display_name: Спрайт
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         express-2020:
           lesson_groups:
             csf_loops:
@@ -1655,8 +1603,6 @@ bg:
               display_name: За циклите
             csf_sprites:
               display_name: Спрайт
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -1827,8 +1773,6 @@ bg:
               display_name: Повторения
             csf_events:
               display_name: Събития
-            lessonGroup-5:
-              display_name: Проект за Края на Курса
         courseb-2021:
           title: Курс B (2021)
           lesson_groups:
@@ -1839,7 +1783,6 @@ bg:
             csf_events:
               display_name: Събития
             lessonGroup-6:
-              display_name: Проект за Края на Курса
               description: "![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
         coursec-2021:
           title: Курс C (2021)
@@ -1854,8 +1797,6 @@ bg:
               display_name: Събития
             csf_data:
               display_name: Данни
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         coursed-2021:
           lesson_groups:
             csf_events:
@@ -1868,8 +1809,6 @@ bg:
               display_name: Двоичен код
             csf_digcit:
               display_name: Цифрови граждани
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             lessonGroup-6:
               display_name: Цифрови граждани
         coursee-2021:
@@ -1884,8 +1823,6 @@ bg:
               display_name: Условия
             csf_functions:
               display_name: Функции
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         coursef-2021:
           title: Курс F (2021)
           lesson_groups:
@@ -1899,8 +1836,6 @@ bg:
               display_name: Данни и Симулации
             csf_for_loops:
               display_name: За циклите
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             lessonGroup-8:
               display_name: Променливи
             lessonGroup-9:
@@ -1921,8 +1856,6 @@ bg:
               display_name: За циклите
             csf_sprites:
               display_name: Спрайт
-            end_of_course_project:
-              display_name: Проект за Края на Курса
             lessonGroup-9:
               display_name: Събития
         pre-express-2021:
@@ -2128,8 +2061,6 @@ bg:
               display_name: Спрайт
             lessonGroup-3:
               display_name: Променливи
-            lessonGroup-4:
-              display_name: Проект за Края на Курса
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2150,8 +2081,6 @@ bg:
               display_name: Повторения
             csf_events:
               display_name: Събития
-            lessonGroup-5:
-              display_name: Проект за Края на Курса
         express-2022:
           lesson_groups:
             csf_sprites:
@@ -2168,8 +2097,6 @@ bg:
               display_name: Променливи
             csf_for_loops:
               display_name: За циклите
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         csp1-2022:
           lesson_groups:
             cspSurvey:
@@ -2206,8 +2133,6 @@ bg:
               display_name: Повторения
             csf_events:
               display_name: Събития
-            lessonGroup-6:
-              display_name: Проект за Края на Курса
         coursec-2022:
           lesson_groups:
             csf_digcit:
@@ -2218,8 +2143,6 @@ bg:
               display_name: Събития
             csf_data:
               display_name: Данни
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         csp9-2022:
           lesson_groups:
             csp_unit9_2020:
@@ -2234,8 +2157,6 @@ bg:
               display_name: Повторения
             csf_conditionals:
               display_name: Условия
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         coursee-2022:
           lesson_groups:
             csf_sprites:
@@ -2248,8 +2169,6 @@ bg:
               display_name: Функции
             csf_nested_loops:
               display_name: Условия
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         coursef-2022:
           lesson_groups:
             ramp_up:
@@ -2260,8 +2179,6 @@ bg:
               display_name: Променливи
             csf_data:
               display_name: Данни и Симулации
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         csa1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2312,8 +2229,6 @@ bg:
               display_name: Променливи
             csf_data:
               display_name: Данни и Симулации
-            end_of_course_project:
-              display_name: Проект за Края на Курса
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2422,8 +2337,6 @@ bg:
               display_name: Съдържание
         csa3-2023:
           lessons:
-            lesson-1:
-              name: Едномерни (1D) Масиви
             lesson-3:
               name: За циклите
           lesson_groups:

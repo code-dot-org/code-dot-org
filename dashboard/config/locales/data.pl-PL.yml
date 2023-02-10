@@ -990,22 +990,6 @@ pl:
         csa-pl-welcome-to-Neighborhood: Witamy w The Neighborhood
         csa-pl-calling-methods: Wywołanie metod w Javie
         csa-pl-creating-objects: Tworzenie obiektów
-        csa_accessor_methods: 'CSA: Metody accessor'
-        csa_constructors: 'CSA: Konstruktory'
-        csa_creating_a_scanner_object: 'CSA: Tworzenie obiektu skaner'
-        csa_creating_variables: 'CSA: Tworzenie zmiennych'
-        csa_instance_variables_and_attributes: 'CSA: Zmienne instancji i atrybuty'
-        csa_mutator_methods: 'CSA: Metody mutator'
-        csa_overloaded_constructors: 'CSA: Przeciążene konstruktory'
-        csa_the_tostring_method: 'CSA: Metoda toString ()'
-        csa_scanner_class_methods: 'CSA: Metody klasy skaner'
-        csa_for_loops: 'CSD: Pętle ''dla'''
-        csa_enhanced_for_loops: 'CSA: Ulepszone pętle ''dla'''
-        csa_modifying_values_in_a_1d_array: 'CSA: Modyfikowanie wartości w tablicy
-          1D'
-        csa_nested_loops: 'CSA: Zagnieżdżone pętle'
-        csa_one_dimensional_arrays: 'CSA: Tablice jednowymiarowe (1D)'
-        csa_polymorphism: 'CSA: Polimorfizm'
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

@@ -871,7 +871,8 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "parameter/csd/2022": {
-          "word": "Parametr"
+          "word": "Parametr",
+          "definition": "Dodatkowa informacja podana do funkcji, aby dostosować ją do konkretnej potrzeby"
         },
         "variable/csd/2022": {
           "word": "Zmienna",
