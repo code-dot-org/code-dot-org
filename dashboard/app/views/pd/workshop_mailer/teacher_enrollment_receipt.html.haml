@@ -10,14 +10,14 @@
 - if @workshop.local_summer?
   %p
     Thanks for enrolling in
-    = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
+    = "#{@workshop.organizer.name}'#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
     5-day Summer workshop on the Code.org
     = @workshop.course
     curriculum.
 - elsif @workshop.ayw? || ([Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course)
   %p
     Thanks for enrolling in
-    = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
+    = "#{@workshop.organizer.name}'#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
     = @workshop.subject
     on the Code.org
     = @workshop.course
@@ -28,7 +28,7 @@
     forward to seeing you there!
 - else
   %p
-    Thanks for enrolling in Code.org’s
+    Thanks for enrolling in Code.org's
     = @workshop.course_name
     = @workshop.subject
     workshop. We look forward to seeing you there!
