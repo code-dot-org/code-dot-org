@@ -275,8 +275,8 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
   end
 
   test 'create attendance by enrollment succeeds when an account is not required' do
-    # Admin courses do not require attendance
-    @workshop.update!(course: Pd::Workshop::COURSE_ADMIN, subject: nil)
+    # Admin/Counselor courses do not require attendance
+    @workshop.update!(course: Pd::Workshop::COURSE_ADMIN_COUNSELOR, subject: nil)
 
     sign_in @organizer
     enrollment = create :pd_enrollment, workshop: @workshop

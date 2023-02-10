@@ -32,10 +32,10 @@ module Pd::Payment
       assert_nil report[:organizer_id]
     end
 
-    test 'workshop summary reports nil for attendance count for all sessions attendance for admin workshop' do
-      @ended_admin_workshop = create :admin_workshop, :ended
+    test 'workshop summary reports nil for attendance count for all sessions attendance for admin/counselor workshop' do
+      @ended_admin_counselor_workshop = create :admin_counselor_workshop, :ended
       @workshop_summary = WorkshopSummary.new(
-        workshop: @ended_admin_workshop,
+        workshop: @ended_admin_counselor_workshop,
         pay_period: 'a pay period',
         num_days: 1,
         num_hours: 6,
