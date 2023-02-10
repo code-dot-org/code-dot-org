@@ -1,0 +1,2375 @@
+{
+  "script": {
+    "name": "csc-mappinglandmarks-2023",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "2023"
+    },
+    "new_name": null,
+    "family_name": "csc-mappinglandmarks",
+    "serialized_at": "2023-02-09 20:39:40 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csc-mappinglandmarks-2023"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "US Landmarks",
+      "name": "U.S. Landmarks",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this **skill-building** lesson, students will learn to create and animate sprites on a map. \n\nThis lesson serves two main purposes: (1) to introduce students to coding in Sprite Lab and (2) to offer an example of an interactive Tour Guide app.  Students will code a map by placing well-known US landmarks such as the Statue of Liberty and the Golden Gate Bridge in the playspace. Then, they will code a tour guide sprite that will give the historical significance of the landmarks. \n\nIn this integrated lesson, students are learning social studies and computer science objectives. Most of the social studies learning will happen in the warm-up and wrap-up. To begin, students will examine several examples of maps, and discuss what features make up the map and what purpose the map serves. In the wrap-up, students will discuss the role of a map maker. For computer science objectives, students will learn basic sequencing by learning how to make a sprite, change its location, and assign a behavior to it.\n",
+        "preparation": "* Review and complete the online tutorial yourself.\n* Prepare sticky notes or scratch paper for each student in the wrap-up discussion.\n* Check your technology and decide if you need to troubleshoot anything in advance.\n* Review slides and decide on pacing between student work time and whole group instruction.\n* Review this [teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf) to be prepared to help students find and fix errors in their code. \n* [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support page](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) for more information about pair programming.",
+        "student_overview": "In this lesson, you get to explore maps! Maps can be very informative and helpful when you’re trying to figure out where to go. Maps can show landmarks and tell stories about historical places. \n\nToday you will also get to learn computer science skills! You will create and animate sprites on a map to create a Tour Guide app.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "Local Landmarks - Unplugged Project Planning",
+      "name": "Local Landmarks - Unplugged Project Planning",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "In this **unplugged** lesson, students will create a plan for their digital mapping landmarks project. There is a lot of room for choice in this lesson and the instructor can select the area of focus for the student’s projects. \nFocus ideas:\n* Students can create a map of a very local area such as their classroom, school, or city. \n* Students can create a map to show state-wide historical landmarks, and regional, or national landmarks. \n* The instructor can link the mapping project to another particular area of study or research. \n",
+        "preparation": "* Choose a focus for student mapping landmarks projects.\n* Print an [Activity Guide](https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/edit?usp=sharing) for each student\n* Review [Activity Guide Teacher Key](https://docs.google.com/document/d/1cWsERLbWga8sO4STIPCoU2tMhTQTJeQa_A1jAASuI1c/edit?usp=sharing)",
+        "student_overview": "In this lesson, you will make a plan for your mapping landmarks project. Next lesson you will code the project. First, you’ll work with your classmates to make a list of important landmarks. Then, you’ll decide which sprite costume you’ll use and what the tour guide will say when they visit each landmark in your project. At the end of this lesson, you will make a plan to interview someone in your community or research an important person so that you can add stories to your map. \n"
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "Local Landmarks - Coding Your Project",
+      "name": "Local Landmarks - Coding Your Project",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "In this lesson, students will create their own digital map of landmarks using the plan they developed in lesson 2. The lesson starts with a check-in for student confidence in beginning this creative project. Once students are on the computers, levels will walk them through the process of adding a map background, a tour guide sprite, and three landmarks. They will use events to code the guide sprite to explain each landmark on the map. The lesson wraps up with a quick gallery walk so students explore a variety of solutions for the same project.  \n",
+        "preparation": "* Review and complete the online tutorial yourself.\n* Prepare to return student handouts from the previous lesson. \n* Consider strategies of support for students that may not feel confident or ready to start their creative project.\n",
+        "student_overview": "In this lesson, you get to create your own digital landmark map with a tour guide who visits each landmark to explain it. You will follow the plan you designed last class. Instructions will lead you step-by-step in adding a map background, a tour guide sprite, and your landmarks. You will add code to make your project interactive so your guide moves around the map and explains each landmark when it touches it. \n"
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "Project Share Out",
+      "name": "Project Share Out",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "This final lesson in the module wraps up with a celebration of students’ hard work in programming digital, interactive maps of landmarks and stories through group presentations. The lesson begins with time to reflect on their work, challenges, and favorite parts of the project. Before the presentations begin, you will discuss tips for an effective presentation including audience expectations.\n",
+        "preparation": "* Print a Landmarks Map Reflection & Observation handout for each student.\n",
+        "student_overview": "In this last lesson, you will have the chance to present your project to the rest of your class! First, you will take some time to reflect on the hard work you’ve done in programming your digital landmark mark map. Then you will discuss some presentation tips and show off your hard work! \n"
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe",
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "821193be-e0aa-4907-b138-b2869eb91048",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048",
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "4e31f9f7-1b9a-487f-8f1b-6c157ea84771",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e31f9f7-1b9a-487f-8f1b-6c157ea84771",
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "4f1c1de1-976a-4ef2-a3d7-8341e581abf1",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f1c1de1-976a-4ef2-a3d7-8341e581abf1",
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee",
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "8e70c6b9-5326-4d17-a491-ece94bcbd540",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8e70c6b9-5326-4d17-a491-ece94bcbd540",
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "137b154d-841f-40a6-a82d-a529733048ea",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "137b154d-841f-40a6-a82d-a529733048ea",
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "dd4c7a94-832a-473c-9131-47babf72bb0b",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd4c7a94-832a-473c-9131-47babf72bb0b",
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "fad0a6c3-f811-47f8-820c-a7bd4a653ec3",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fad0a6c3-f811-47f8-820c-a7bd4a653ec3",
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "71e0189f-6b6c-45aa-9c58-79cbeabc5cf3",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71e0189f-6b6c-45aa-9c58-79cbeabc5cf3",
+        "lesson.key": "Project Share Out",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "72c1bd07-a758-4634-833a-13761feaccf8",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "72c1bd07-a758-4634-833a-13761feaccf8",
+        "lesson.key": "Project Share Out",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "key": "46d989c4-49fa-4afd-88af-36cc80f89959",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46d989c4-49fa-4afd-88af-36cc80f89959",
+        "lesson.key": "Project Share Out",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "dd3b64c1-8c3c-4ecc-b928-c22f09f097b2",
+      "position": 1,
+      "properties": {
+        "description": "Think to yourself: What is a map? Have you ever used a map before? Have you seen someone else use a map? Why do we use maps? Did you ever wonder who makes those maps we use? We aren’t going to share out loud just yet, this is just some silent think-time to get our brains ready for today.",
+        "duration": "10",
+        "name": "Maps as stories",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dd3b64c1-8c3c-4ecc-b928-c22f09f097b2",
+        "lesson_activity.key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe"
+      }
+    },
+    {
+      "key": "e0c15a07-8b29-4c1e-9725-33da6ea43e1a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students to consider these rhetorical questions and then show the notice/wonder map slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “What do you notice? What do you Wonder?” Slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "e0c15a07-8b29-4c1e-9725-33da6ea43e1a",
+        "lesson_activity.key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe"
+      }
+    },
+    {
+      "key": "521f94cc-d5bc-4703-9541-7b7ea67e9c47",
+      "position": 3,
+      "properties": {
+        "description": "Maps can be informative, helpful, and fun! Today we’re going to look at a few maps and think about the different ways they are useful. We’ll also think about how the maps were made, who made them and what story the mapmaker wants to share.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "521f94cc-d5bc-4703-9541-7b7ea67e9c47",
+        "lesson_activity.key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe"
+      }
+    },
+    {
+      "key": "27e5bf5c-9482-4a58-8872-556de57dc6e5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow 1-2 minutes for students to think independently, talk in partners or small groups about what they see, and wonder about the map. If there is time, offer space to share out or discuss as a class, otherwise leaving some ideas/questions unanswered is expected at this point.\n\n**Discussion Goal:** Students identify landmarks, the country, the ocean, etc.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Map Components\" Slide\n\nReview basic map vocabulary including Compass Rose, Landmark, Country, Ocean, etc. Extend and elaborate as needed for your class. "
+      },
+      "seeding_key": {
+        "activity_section.key": "27e5bf5c-9482-4a58-8872-556de57dc6e5",
+        "lesson_activity.key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe"
+      }
+    },
+    {
+      "key": "ed64c783-94ff-47b9-8184-9e6b793dbcb6",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ed64c783-94ff-47b9-8184-9e6b793dbcb6",
+        "lesson_activity.key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe"
+      }
+    },
+    {
+      "key": "8ebda860-9e83-4e37-8f70-b3962798b606",
+      "position": 6,
+      "properties": {
+        "description": "Most maps have a few things in common. Maps almost always have a compass rose to show which direction is North and help us understand how we would travel in the area. They show some area of land or water and have labels to mark locations of landmarks, physical features, rivers, borders, cities, and even roads. The map makers decide the amount of area they need to show on the map and which things to label. The labels help us understand the purpose and story of the map we’re looking at. Let’s check out some examples.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8ebda860-9e83-4e37-8f70-b3962798b606",
+        "lesson_activity.key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe"
+      }
+    },
+    {
+      "key": "dc800beb-af36-48d6-a87a-bb5d5f72c569",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Exploring Maps\" Slide\n\n**Discuss:** *What can we learn from these maps? What stories do these maps tell? What can we infer about the map makers?*\n\n**Discussion Goal:** Help students recognize maps have a variety of purposes and the choices of what to label are at times objective boundaries and facts (Native American tribes & Oregon Trail fort, river, mountain locations) while at other times they are subjective choices (best tacos & roller coasters).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Looking Closer\" Slide\n\n**Discuss:** *How do the colors, symbols, and landmarks help us understand the purpose of maps? What are some design choices the map maker needed to decide on (color, graphics, labels, etc)?*\n\n**Discussion Goal:** Students will start to recognize that map makers have a lot to consider when designing a new map. The use of color can help identify patterns and different boundaries, and provide focus. Graphics can be added to show specific landmark details and labels help point out the purpose of the map. "
+      },
+      "seeding_key": {
+        "activity_section.key": "dc800beb-af36-48d6-a87a-bb5d5f72c569",
+        "lesson_activity.key": "4fd81bc5-4357-49e8-a2cf-07025eccbcfe"
+      }
+    },
+    {
+      "key": "8bcb0fbe-c14b-4fd7-887a-519d7523a6d6",
+      "position": 1,
+      "properties": {
+        "description": "Computer science can help us communicate even more information in our maps! Using code you will create a virtual tour guide to help make your map come to life. You will create an interactive map that shares information about historical landmarks in the United States when your tour guide touches them. In this lesson, you will be provided with step-by-step instructions to code an interactive map of important US landmarks. Take your time to learn about Sprite Lab so that you can build your own code for an interactive map later on. \n",
+        "duration": "25",
+        "name": "Code a map",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8bcb0fbe-c14b-4fd7-887a-519d7523a6d6",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "fcaa026f-e83f-465e-be5d-8662a45af679",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Introduction to Sprite Lab video with the full class or have students watch it independently on their computer. Then allow students to follow instructions independently on levels 2-5.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcaa026f-e83f-465e-be5d-8662a45af679",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "07849f16-25c0-4823-bc21-a61671a828b6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building - Map Setup",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Levels 2-5 are designed to be self-paced. Students may progress at different speeds. It may be helpful to set up pair programming with students you know will need extra support or focus. Remind students to use the hints provided in the level instructions and to try a few ways before asking for help. If students finish well ahead of the group you can suggest they experiment with the block in levels 1-5, help another student, or (for very advanced students) open a new sprite lab project in another tab to explore and use their new skills. When the majority of students have completed levels 1-5 pull the class together to discuss the information on level 6\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "45df42f3-0ef6-482d-86e6-ec4cd04c403c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a landmark?*\n\n**Discussion Goal:** The rest of the module focuses on important and historical landmarks on maps so it is important students all have a solid understanding that a landmark is an object (natural or manmade) that has importance or makes a place easily recognizable.",
+        "duration": "5",
+        "name": "What is a landmark?"
+      },
+      "seeding_key": {
+        "activity_section.key": "45df42f3-0ef6-482d-86e6-ec4cd04c403c",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "0f861dd9-b2cb-4315-849b-5a8ccbdbfe0d",
+      "position": 5,
+      "properties": {
+        "description": "Look closely at the map on level 6.  Do you recognize any of the landmarks on this map? What national landmarks are in your state or area that you would like to add to this map? For the rest of this module, you will be coding landmarks - historical US landmarks and later more local landmarks of your choice! ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0f861dd9-b2cb-4315-849b-5a8ccbdbfe0d",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "37305e61-1cfa-4752-9288-2c5789f7717e",
+      "position": 6,
+      "properties": {
+        "progression_name": "Stop to Learn - Landmarks"
+      },
+      "seeding_key": {
+        "activity_section.key": "37305e61-1cfa-4752-9288-2c5789f7717e",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "ea30d051-db0e-4ada-bc0f-1a2b0f4dc6f0",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students continue onto levels 7-12 independently. "
+      },
+      "seeding_key": {
+        "activity_section.key": "ea30d051-db0e-4ada-bc0f-1a2b0f4dc6f0",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da",
+      "position": 8,
+      "properties": {
+        "progression_name": "Skill Building - Map Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "4af6a0a5-abd6-4989-b92e-388088ca88a1",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Encourage students to add more landmarks, program the guide to explain their significance, and check out the toolbox for new blocks to test out. When they’re finished with their project there is an option to click the Share button and send the project to a friend or family member. ",
+        "progression_name": "Free Play - Landmarks"
+      },
+      "seeding_key": {
+        "activity_section.key": "4af6a0a5-abd6-4989-b92e-388088ca88a1",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "676ccb47-3dd1-4f8a-a1c2-a1acf0511b50",
+      "position": 10,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "676ccb47-3dd1-4f8a-a1c2-a1acf0511b50",
+        "lesson_activity.key": "821193be-e0aa-4907-b138-b2869eb91048"
+      }
+    },
+    {
+      "key": "1943ab7a-b76f-422b-a8c2-95de70803b77",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is another way a map can teach us about a place?*\n\n**Discussion Goal:** Explanation of what is being discussed and main points to bring out.",
+        "duration": "10",
+        "name": "Campfire Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "1943ab7a-b76f-422b-a8c2-95de70803b77",
+        "lesson_activity.key": "4e31f9f7-1b9a-487f-8f1b-6c157ea84771"
+      }
+    },
+    {
+      "key": "6805f4a9-2e62-4860-960b-4a347ee9b3d8",
+      "position": 2,
+      "properties": {
+        "description": "Today we used computer science to create a map of historical landmarks in the United States. What is another way a map can teach us about a place? What story can a map tell? ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6805f4a9-2e62-4860-960b-4a347ee9b3d8",
+        "lesson_activity.key": "4e31f9f7-1b9a-487f-8f1b-6c157ea84771"
+      }
+    },
+    {
+      "key": "b10c917e-cfc2-4b55-a4ae-a9ed37269465",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Campfire Discussion directions:\n1) Divide into groups of 4-5.\n2) Each student writes an individual response to the prompt or question on a sticky note or scratch paper and places it around the \"campfire\" (a sheet of paper or object in the center of the group). \n3) Each student then takes turns reading aloud a sticky note other than their own, providing each person in the group an opportunity to question, agree, disagree, and respond to it. \n4) Repeat until each sticky note has been read and discussed.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b10c917e-cfc2-4b55-a4ae-a9ed37269465",
+        "lesson_activity.key": "4e31f9f7-1b9a-487f-8f1b-6c157ea84771"
+      }
+    },
+    {
+      "key": "f73b69fa-cb99-4a5d-be9f-3018381bc057",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson, we learned how to code a digital map of landmarks. Today you will get ready to make your own custom map about *[insert chosen focus here]*. Everyone will be making a map about *[insert chosen focus here]*, however, each student will design their map differently. Let’s start by making a list of important landmarks that would be important to have on your maps. Remember that a landmark is an important object, either manmade or natural, that makes a place recognizable or holds significance to the community.  ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f73b69fa-cb99-4a5d-be9f-3018381bc057",
+        "lesson_activity.key": "4f1c1de1-976a-4ef2-a3d7-8341e581abf1"
+      }
+    },
+    {
+      "key": "f305ce27-e748-4c98-b1d0-979044edebf4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"What are the important landmarks in the area?\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a blank piece of paper to write a list on."
+      },
+      "seeding_key": {
+        "activity_section.key": "f305ce27-e748-4c98-b1d0-979044edebf4",
+        "lesson_activity.key": "4f1c1de1-976a-4ef2-a3d7-8341e581abf1"
+      }
+    },
+    {
+      "key": "e22adb6b-4e64-46c7-9451-9769a2e512af",
+      "position": 3,
+      "properties": {
+        "description": "Start to think about what is unique about *[insert chosen focus here]*. What important events have happened here? How would someone know they’re in the area? On your own paper, write at least three important landmarks you’d like to include on your landmark map. We’re going to share our ideas next.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e22adb6b-4e64-46c7-9451-9769a2e512af",
+        "lesson_activity.key": "4f1c1de1-976a-4ef2-a3d7-8341e581abf1"
+      }
+    },
+    {
+      "key": "23c87c16-112f-48d3-bd8a-daf1d43c2fae",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 2-3 minutes to start a list of landmarks on their own.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"GoGoMo\" Slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "23c87c16-112f-48d3-bd8a-daf1d43c2fae",
+        "lesson_activity.key": "4f1c1de1-976a-4ef2-a3d7-8341e581abf1"
+      }
+    },
+    {
+      "key": "85438c40-7d9b-4f43-bbad-0d1ed804352b",
+      "position": 5,
+      "properties": {
+        "description": "We’re going to use the GoGoMo activity to build our list together! Go Go Mo stands for Give One, Get One, Move On. When we begin you will find a partner and GIVE ONE of the ideas on your list. Then your partner will GIVE ONE of the ideas on their list. Both partners should write their partner’s new idea on their list. When both partners are done then MOVE ON to find a new partner. With the new partner, you will ‘give one’ (share an idea), ‘get one’ (add their idea to your list), and then move on again. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "85438c40-7d9b-4f43-bbad-0d1ed804352b",
+        "lesson_activity.key": "4f1c1de1-976a-4ef2-a3d7-8341e581abf1"
+      }
+    },
+    {
+      "key": "1e2b528a-53ec-4b1e-903d-f5a11b655d45",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students guidance on who they should pair up with first. Then set a timer or play the music on the slide by clicking on the speaker graphic near the slide title."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e2b528a-53ec-4b1e-903d-f5a11b655d45",
+        "lesson_activity.key": "4f1c1de1-976a-4ef2-a3d7-8341e581abf1"
+      }
+    },
+    {
+      "key": "9d07ec30-1daa-4e4b-b3df-375f24d058e5",
+      "position": 1,
+      "properties": {
+        "description": "Now that everyone has a longer list of important landmarks, you’re going to choose three that you would like to include in your project during the next lesson. Think carefully about the purpose of your map and what story the map will tell. On your list, circle the landmarks that will help illustrate the story and purpose the best. ",
+        "duration": "10",
+        "name": "Landmark Planning",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9d07ec30-1daa-4e4b-b3df-375f24d058e5",
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee"
+      }
+    },
+    {
+      "key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Local Landmarks Planning handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee"
+      }
+    },
+    {
+      "key": "74167c5a-91df-4ebb-9e92-147d0e96fa37",
+      "position": 3,
+      "properties": {
+        "description": "Start by explaining your map location. We will be building maps that illustrate the [insert chosen focus here] area. \n\nNext, state the purpose of your map. Will your map inform others, inspire them to visit, or explain the history of the area?\n\nNow take some time to write a plan for the landmarks in your project. Think about what the landmark will look like, where it will be placed on the map and what the guide will say about the landmark when they visit it.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "74167c5a-91df-4ebb-9e92-147d0e96fa37",
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee"
+      }
+    },
+    {
+      "key": "7536275f-c301-4001-b8e0-94aa1f3ef6fc",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Circulate the classroom to support students and narrate ideas as you see them develop.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may want to open Lesson 3 on your display in order to show students some of the costume options for their landmarks to help spur their creativity. They will be guided to choose new costumes from the library or draw their own unique graphics. The fifth column on the handout is optional. If adding some text about the significance or symbolism of the landmarks enhances your chosen area of study, consider including it in the plan. If the area of study is more literal such as a school or town you may consider having students skip this part of the plan.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7536275f-c301-4001-b8e0-94aa1f3ef6fc",
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee"
+      }
+    },
+    {
+      "key": "61096518-c69e-4c84-a2ac-631af900e683",
+      "position": 5,
+      "properties": {
+        "description": "Now that you have some ideas for which landmarks to include in your project we are going to think about the people in the area and the stories they would tell about the place. \n\n",
+        "duration": "10",
+        "name": "Discussion",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "61096518-c69e-4c84-a2ac-631af900e683",
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee"
+      }
+    },
+    {
+      "key": "92515864-3623-4851-90c2-456fc3416420",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Discuss: People\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could personal stories make a map better?*\n\n**Discussion Goal:** Students will realize that people across the area may have different perspectives and experiences that help us understand the place better. The choice of stories that are included shape the perception of the area and are very important decisions for the mapmaker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "92515864-3623-4851-90c2-456fc3416420",
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee"
+      }
+    },
+    {
+      "key": "e2d84844-5d7c-4436-814f-8386a806ba9a",
+      "position": 7,
+      "properties": {
+        "description": "Who would have an important story to include in a map of the area? Complete the boxes with stars in order to prepare to talk to (or research) the people in the area.\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e2d84844-5d7c-4436-814f-8386a806ba9a",
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee"
+      }
+    },
+    {
+      "key": "880dcf16-89ca-439d-ae07-b4edd26170d3",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Circulate the classroom and support students with ideas for potential questions to ask/research."
+      },
+      "seeding_key": {
+        "activity_section.key": "880dcf16-89ca-439d-ae07-b4edd26170d3",
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee"
+      }
+    },
+    {
+      "key": "6b737ed4-98bd-4ecf-a60d-b5aac23cd100",
+      "position": 9,
+      "properties": {
+        "progression_name": "Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b737ed4-98bd-4ecf-a60d-b5aac23cd100",
+        "lesson_activity.key": "0e929a5b-1c50-4402-a10d-949d8e8d91ee"
+      }
+    },
+    {
+      "key": "36bf07e9-8f5c-4ca7-b2b5-e85ef0820d06",
+      "position": 1,
+      "properties": {
+        "description": "Interviewing people in our community can be challenging. Here are some tips to make your interview go smoothly.\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "36bf07e9-8f5c-4ca7-b2b5-e85ef0820d06",
+        "lesson_activity.key": "8e70c6b9-5326-4d17-a491-ece94bcbd540"
+      }
+    },
+    {
+      "key": "cb6f50e7-196f-4f13-b051-cae1bf20541d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Interview practice\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the \"Tips for an Effective Interview\" on the slide."
+      },
+      "seeding_key": {
+        "activity_section.key": "cb6f50e7-196f-4f13-b051-cae1bf20541d",
+        "lesson_activity.key": "8e70c6b9-5326-4d17-a491-ece94bcbd540"
+      }
+    },
+    {
+      "key": "8780bdfb-5f8a-4cf4-a35e-b350a8be9315",
+      "position": 3,
+      "properties": {
+        "description": "Using these tips, you will practice asking the questions you planned with a partner. The first partner will go first, asking both questions they wrote down. Practice using polite statements like “Can I ask you a question?” and “Thank you for your time” If you find a better way to ask the question, you may like to rewrite your notes on the handout. \n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8780bdfb-5f8a-4cf4-a35e-b350a8be9315",
+        "lesson_activity.key": "8e70c6b9-5326-4d17-a491-ece94bcbd540"
+      }
+    },
+    {
+      "key": "3244088a-b52f-408a-aca0-a793fd132ec4",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide students into pairs or small groups to practice asking their interview questions. If time allows, you can highlight a successful model by demonstrating for the full class. When the practice is complete, collect the handouts for use in the next lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "3244088a-b52f-408a-aca0-a793fd132ec4",
+        "lesson_activity.key": "8e70c6b9-5326-4d17-a491-ece94bcbd540"
+      }
+    },
+    {
+      "key": "2653bd3b-c45a-4b37-8c4c-539f5f753c6a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Check In\" Slide",
+        "name": "Check In"
+      },
+      "seeding_key": {
+        "activity_section.key": "2653bd3b-c45a-4b37-8c4c-539f5f753c6a",
+        "lesson_activity.key": "137b154d-841f-40a6-a82d-a529733048ea"
+      }
+    },
+    {
+      "key": "7a7ed62d-6587-4de7-93e2-e1d8fb5f19ae",
+      "position": 2,
+      "properties": {
+        "description": "Today we will use our plan to code a digital map of landmarks. We will follow the instructions on each level but every project will be unique. How do you feel about starting this creative project? Give a thumbs up if you’re feeling good and prepared. Show a sideways thumb if you’re feeling okay but have some questions. Or move your thumb down if you’re not ready yet or need a lot of support to get started.  (Scan the responses then say…) Okay, thank you for sharing how you’re feeling. Let’s look into what to do when we face challenges today. \n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\"This is a moment to check in to see how each student is feeling about their project. Here are suggestions for how to respond to students who: \n\n(1) give a thumbs up ... say \"great!\" and that you might tap them to check in with a classmate who might be feeling so-so or thumbs down. \n\n(2) give a thumb sideways ... talk to the person next to you. Chat about what's making you feel so-so about your project. What could make you feel good about starting your project? \n\n(3) give a thumbs down ... tell these students that you will check in with them once independent time starts.\" \n\nIf there are students feeling like they need significant support to get started, you may consider some pair programming and/or scaffolding the level of creativity of the project. To narrow the scope, you can provide some students with a new version of the planning handout that you have filled out. By making some of the decisions about which costumes, starting location, and text to use, students will be able to move along with more focus. \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7a7ed62d-6587-4de7-93e2-e1d8fb5f19ae",
+        "lesson_activity.key": "137b154d-841f-40a6-a82d-a529733048ea"
+      }
+    },
+    {
+      "key": "6f9028e9-b332-442e-aa41-bb849d96241a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Debugging Strategies\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges, normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
+      },
+      "seeding_key": {
+        "activity_section.key": "6f9028e9-b332-442e-aa41-bb849d96241a",
+        "lesson_activity.key": "137b154d-841f-40a6-a82d-a529733048ea"
+      }
+    },
+    {
+      "key": "fe4d9446-6ab9-4968-ad7a-5634443d3e7d",
+      "position": 4,
+      "properties": {
+        "description": "Did you know, computer scientists get bugs all the time and one technique they use to solve their problems is called Rubber Duck Debugging. They talk to a rubber duck (yes, really) or some other inanimate object about what's bothering them about their code. Just talking it out will sometimes lead to figuring out the solution!\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fe4d9446-6ab9-4968-ad7a-5634443d3e7d",
+        "lesson_activity.key": "137b154d-841f-40a6-a82d-a529733048ea"
+      }
+    },
+    {
+      "key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 1-4\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Return student’s Local Landmarks Map Planning handout if they were collected in the previous lesson.",
+        "duration": "10",
+        "name": "Map Set Up",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8",
+        "lesson_activity.key": "dd4c7a94-832a-473c-9131-47babf72bb0b"
+      }
+    },
+    {
+      "key": "0704b38e-a65a-4dff-9840-26f5b831a040",
+      "position": 2,
+      "properties": {
+        "description": "We are all going to pause and explain our project so far to a partner.\n",
+        "duration": "15",
+        "name": "Stop, Show, & Support",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider how the pacing will work best for your class. The ‘stop, show & support’ potion of this activity may be better later in the progression for some groups. It may also be abbreviated to an even shorter brain break and quick opportunity to see their peer’s progress. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0704b38e-a65a-4dff-9840-26f5b831a040",
+        "lesson_activity.key": "dd4c7a94-832a-473c-9131-47babf72bb0b"
+      }
+    },
+    {
+      "key": "ae2b6186-d102-41ee-9377-5cb1f9a72c2b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Stop, Show, & Support\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide Students to pair up."
+      },
+      "seeding_key": {
+        "activity_section.key": "ae2b6186-d102-41ee-9377-5cb1f9a72c2b",
+        "lesson_activity.key": "dd4c7a94-832a-473c-9131-47babf72bb0b"
+      }
+    },
+    {
+      "key": "327bb2d4-8c67-43fc-8654-7984060e1971",
+      "position": 4,
+      "properties": {
+        "description": "The partner with the most blue on their outfit today will share first. Answer the questions on the slide: \n- Which sprite costume did you use for your guide?\n- Where does your guide start on the map and why? \n- Have you had any bugs yet?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "327bb2d4-8c67-43fc-8654-7984060e1971",
+        "lesson_activity.key": "dd4c7a94-832a-473c-9131-47babf72bb0b"
+      }
+    },
+    {
+      "key": "61029c87-095e-46cf-8cd6-f6f4d8146372",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 5-11\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students return to their own project and resume the progression.",
+        "duration": "15",
+        "name": "Landmarks & Events",
+        "progression_name": "Landmarks & Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372",
+        "lesson_activity.key": "dd4c7a94-832a-473c-9131-47babf72bb0b"
+      }
+    },
+    {
+      "key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78",
+      "position": 6,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78",
+        "lesson_activity.key": "dd4c7a94-832a-473c-9131-47babf72bb0b"
+      }
+    },
+    {
+      "key": "3f90277d-7951-428b-9655-728af3ec0bec",
+      "position": 1,
+      "properties": {
+        "description": "Now that we all have a digital map of landmarks, let’s move around to see a few other projects. While you’re looking at your classmate’s projects, be on the lookout for projects that use the same landmarks as you choose. Also, watch for inspiration, you might find something you would like to add to your own project in the next lesson. \n\n",
+        "name": "Gallery Walk",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3f90277d-7951-428b-9655-728af3ec0bec",
+        "lesson_activity.key": "fad0a6c3-f811-47f8-820c-a7bd4a653ec3"
+      }
+    },
+    {
+      "key": "20203952-8328-46fe-b9d0-0cf4461bc06d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Gallery Walk\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide students to move around the room to view their peer's projects. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The more structured a gallery walk is, the more effective they are in keeping students’ focus on exploring peer projects. You may want to consider a strategy similar to musical chairs where students move while the music plays and stop at the nearest computer when it stops. Another helpful way to ensure focus is to encourage a share out after the gallery walk or have students leave a comment on a sticky note or scrap paper for the projects they look at. \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "20203952-8328-46fe-b9d0-0cf4461bc06d",
+        "lesson_activity.key": "fad0a6c3-f811-47f8-820c-a7bd4a653ec3"
+      }
+    },
+    {
+      "key": "e2aedfe4-331c-4ac2-bb34-3b220ecffd1e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Local Landmarks Map Reflection handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Reflect\" Slide",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2aedfe4-331c-4ac2-bb34-3b220ecffd1e",
+        "lesson_activity.key": "71e0189f-6b6c-45aa-9c58-79cbeabc5cf3"
+      }
+    },
+    {
+      "key": "d153b90a-01a7-4016-85a3-228f256aa567",
+      "position": 2,
+      "properties": {
+        "description": "Take some time to think about this big project you have completed. It’s good to take time to reflect on what you’re proud of and also what you would like to improve or learn more about next time. \n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d153b90a-01a7-4016-85a3-228f256aa567",
+        "lesson_activity.key": "71e0189f-6b6c-45aa-9c58-79cbeabc5cf3"
+      }
+    },
+    {
+      "key": "1a3034dc-2527-4810-be65-79be6f8deb47",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students time to complete the reflection.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You might consider having students put a star next to the reflection question(s) you would like them to prioritize. Writing sentence starters on the board (or equivalent) may be supportive for students having a hard time starting. \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1a3034dc-2527-4810-be65-79be6f8deb47",
+        "lesson_activity.key": "71e0189f-6b6c-45aa-9c58-79cbeabc5cf3"
+      }
+    },
+    {
+      "key": "66f09c0e-cef1-4baa-b000-532f81154bad",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Presentations\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What are the aspects of an effective presentation?\n\n**Discussion Goal:** Students will feel prepared and confident to stand in front of the class to present their project.  Identify the tips listed on the slide: \n1) Be prepared: Is your code complete?  Is your project ready?\n2) Explain everything: Be very descriptive in explaining how the code works, your design choices, and the challenges you faced.\n3) Ask for questions & comments: Allow your audience to participate in your presentations.\n",
+        "duration": "25",
+        "name": "Presentations"
+      },
+      "seeding_key": {
+        "activity_section.key": "66f09c0e-cef1-4baa-b000-532f81154bad",
+        "lesson_activity.key": "72c1bd07-a758-4634-833a-13761feaccf8"
+      }
+    },
+    {
+      "key": "aee24841-bfb4-4a4a-96e4-f837fee6db9e",
+      "position": 2,
+      "properties": {
+        "description": "Let’s record our observations of our first presentation. Start by writing the presenter’s name and one of the landmarks they programmed on their map. In the third box, write a ‘Glow,’ an example of something the programmer did very well (for example creative costumes, unique landmark choice, accurate mapping, unique guide choice, detailed text to explain the landmark, etc). Then add a ‘Grow’ for this programmer (for example, location of landmarks, shorter text, drawing a unique landmark costume, etc)\n\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Since presenting can be a new skill for some students, consider strategies to make it feel like a celebration and very positive. Model an abundance of positive comments, leading questions, and positive body language. \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "aee24841-bfb4-4a4a-96e4-f837fee6db9e",
+        "lesson_activity.key": "72c1bd07-a758-4634-833a-13761feaccf8"
+      }
+    },
+    {
+      "key": "8553d7d1-ff30-44e2-b135-b49fdd6ae1a5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "8553d7d1-ff30-44e2-b135-b49fdd6ae1a5",
+        "lesson_activity.key": "72c1bd07-a758-4634-833a-13761feaccf8"
+      }
+    },
+    {
+      "key": "7ea9d97e-c167-4390-8b1e-86803a4cd30f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Glows, Grows, Want-to-Knows\" Slide",
+        "name": "Glows, Grows, Want-To-Knows"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ea9d97e-c167-4390-8b1e-86803a4cd30f",
+        "lesson_activity.key": "46d989c4-49fa-4afd-88af-36cc80f89959"
+      }
+    },
+    {
+      "key": "8f4cc9e4-7521-4d30-8347-435113197288",
+      "position": 2,
+      "properties": {
+        "description": "We recorded some observations of glows and grows during our presentations but now let’s think about what was awesome and/or needs improvement in your own projects and questions or ideas you want to know more about computer science. \n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8f4cc9e4-7521-4d30-8347-435113197288",
+        "lesson_activity.key": "46d989c4-49fa-4afd-88af-36cc80f89959"
+      }
+    },
+    {
+      "key": "d314c5fa-5b56-4dee-a76c-9a87a007a1b9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Facilitate a full group or small groups share out. "
+      },
+      "seeding_key": {
+        "activity_section.key": "d314c5fa-5b56-4dee-a76c-9a87a007a1b9",
+        "lesson_activity.key": "46d989c4-49fa-4afd-88af-36cc80f89959"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      },
+      "level_keys": [
+        "CourseF_video_introSpriteLab_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_demo_usa_map_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      },
+      "level_keys": [
+        "csc_landmarks_demo_usa_map_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      },
+      "level_keys": [
+        "csc_landmarks_makesprite_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_location_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      },
+      "level_keys": [
+        "csc_landmarks_location_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_size_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      },
+      "level_keys": [
+        "csc_landmarks_size_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Stop to Learn - Landmarks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_behavior_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "37305e61-1cfa-4752-9288-2c5789f7717e"
+      },
+      "level_keys": [
+        "csc_landmarks_behavior_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmark_explain_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      },
+      "level_keys": [
+        "csc_landmark_explain_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_place1_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      },
+      "level_keys": [
+        "csc_landmarks_place1_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      },
+      "level_keys": [
+        "coursee_helloworld_eventsvideo_2023"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_touches1_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      },
+      "level_keys": [
+        "csc_landmarks_touches1_2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_place2_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      },
+      "level_keys": [
+        "csc_landmarks_place2_2023"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building - Map Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_touches2_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      },
+      "level_keys": [
+        "csc_landmarks_touches2_2023"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play - Landmarks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_freeplay_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4af6a0a5-abd6-4989-b92e-388088ca88a1"
+      },
+      "level_keys": [
+        "csc_landmarks_freeplay_2023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_survey_L1_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "676ccb47-3dd1-4f8a-a1c2-a1acf0511b50"
+      },
+      "level_keys": [
+        "csc_landmarks_survey_L1_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_mappinglandmarks_markdown_lesson_2"
+        ],
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "6b737ed4-98bd-4ecf-a60d-b5aac23cd100"
+      },
+      "level_keys": [
+        "csc_mappinglandmarks_markdown_lesson_2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_background_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
+      },
+      "level_keys": [
+        "csc_landmarks_background_2023"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
+      },
+      "level_keys": [
+        "csc_landmarks_makesprite_2023"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_location_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
+      },
+      "level_keys": [
+        "csc_landmarks_location_2023"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_place1_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
+      },
+      "level_keys": [
+        "csc_landmarks_place1_2023"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Landmarks & Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_place2_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      },
+      "level_keys": [
+        "csc_landmarks_place2_2023"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Landmarks & Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_touches1_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      },
+      "level_keys": [
+        "csc_landmarks_touches1_2023"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Landmarks & Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_touches2_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      },
+      "level_keys": [
+        "csc_landmarks_touches2_2023"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Landmarks & Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite3_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      },
+      "level_keys": [
+        "csc_landmarks_makesprite3_2023"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Landmarks & Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_touches3_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      },
+      "level_keys": [
+        "csc_landmarks_touches3_2023"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Landmarks & Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_freeplay_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      },
+      "level_keys": [
+        "csc_landmarks_freeplay_2023"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_landmarks_survey_L3_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
+      },
+      "level_keys": [
+        "csc_landmarks_survey_L3_2023"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_mappinglandmarks_markdown_lesson_4"
+        ],
+        "lesson.key": "Project Share Out",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "8553d7d1-ff30-44e2-b135-b49fdd6ae1a5"
+      },
+      "level_keys": [
+        "csc_mappinglandmarks_markdown_lesson_4"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CourseF_video_introSpriteLab_2023",
+        "script_level.level_keys": [
+          "CourseF_video_introSpriteLab_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_demo_usa_map_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_demo_usa_map_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_makesprite_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_location_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_location_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_size_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_size_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "07849f16-25c0-4823-bc21-a61671a828b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_behavior_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_behavior_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "37305e61-1cfa-4752-9288-2c5789f7717e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmark_explain_2023",
+        "script_level.level_keys": [
+          "csc_landmark_explain_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_place1_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_place1_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_eventsvideo_2023",
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_touches1_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_touches1_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_place2_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_place2_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_touches2_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_touches2_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4fbdd3e8-a024-4500-9e8b-d5593d2980da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_freeplay_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_freeplay_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "4af6a0a5-abd6-4989-b92e-388088ca88a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_survey_L1_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_survey_L1_2023"
+        ],
+        "lesson.key": "US Landmarks",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "676ccb47-3dd1-4f8a-a1c2-a1acf0511b50"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_mappinglandmarks_markdown_lesson_2",
+        "script_level.level_keys": [
+          "csc_mappinglandmarks_markdown_lesson_2"
+        ],
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "6b737ed4-98bd-4ecf-a60d-b5aac23cd100"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_background_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_background_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_makesprite_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_location_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_location_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_place1_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_place1_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_place2_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_place2_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_touches1_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_touches1_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_touches2_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_touches2_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_makesprite3_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_makesprite3_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_touches3_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_touches3_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_freeplay_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_freeplay_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_landmarks_survey_L3_2023",
+        "script_level.level_keys": [
+          "csc_landmarks_survey_L3_2023"
+        ],
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_mappinglandmarks_markdown_lesson_4",
+        "script_level.level_keys": [
+          "csc_mappinglandmarks_markdown_lesson_4"
+        ],
+        "lesson.key": "Project Share Out",
+        "lesson_group.key": "",
+        "script.name": "csc-mappinglandmarks-2023",
+        "activity_section.key": "8553d7d1-ff30-44e2-b135-b49fdd6ae1a5"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Activity Guide Planning",
+      "url": "https://docs.google.com/document/d/1cWsERLbWga8sO4STIPCoU2tMhTQTJeQa_A1jAASuI1c/template/preview",
+      "key": "activity_guide_planning",
+      "properties": {
+        "audience": "Verified Teacher",
+        "download_url": "https://docs.google.com/document/d/1cWsERLbWga8sO4STIPCoU2tMhTQTJeQa_A1jAASuI1c/export/pdf",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_planning"
+      }
+    },
+    {
+      "name": "Activity Guide Planning",
+      "url": "https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/template/preview",
+      "key": "activity_guide_planning_1",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/export/pdf",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_planning_1"
+      }
+    },
+    {
+      "name": "Activity Guide Planning",
+      "url": "https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/view",
+      "key": "activity_guide_planning_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_planning_2"
+      }
+    },
+    {
+      "name": "Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1NQ8RV3VFLGnERpfgqFEUMU_a0-vGeKTvnilGFdVHlU0/template/preview",
+      "key": "lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1NQ8RV3VFLGnERpfgqFEUMU_a0-vGeKTvnilGFdVHlU0/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "name": "Local Landmarks Map Reflection & Observation",
+      "url": "https://docs.google.com/document/d/1EBmhoM1MaBAhb46T7LKx2gFktTxxniZJJkNzZd0iXYc/template/preview",
+      "key": "local_landmarks_map_reflection_observation",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1EBmhoM1MaBAhb46T7LKx2gFktTxxniZJJkNzZd0iXYc/export/pdf",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "local_landmarks_map_reflection_observation"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "resource.key": "activity_guide_planning_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "resource.key": "activity_guide_planning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "resource.key": "activity_guide_planning_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "resource.key": "local_landmarks_map_reflection_observation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "resource.key": "lesson_slides"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "code",
+      "word": "Code",
+      "definition": "(v) to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "landmark",
+      "word": "Landmark",
+      "definition": "A landmark is an object  (natural or manmade) that has importance or makes a place easily recognizable.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "landmark"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "An image or character in your program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "vocabulary.key": "landmark"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "vocabulary.key": "landmark"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "vocabulary.key": "landmark"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "vocabulary.key": "sprite"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "10f0c3f1-a149-46e8-b546-fb6f567ba8c3",
+      "properties": {
+        "description": "Students will use cardinal directions to navigate a map."
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "10f0c3f1-a149-46e8-b546-fb6f567ba8c3"
+      }
+    },
+    {
+      "key": "289e9e5b-9e48-4eef-b0fa-d7a5c4ac4482",
+      "properties": {
+        "description": "Students will brainstorm a list of local landmarks and key storytellers."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "objective.key": "289e9e5b-9e48-4eef-b0fa-d7a5c4ac4482"
+      }
+    },
+    {
+      "key": "5e164681-b93f-4dad-809a-ffc7701a4da2",
+      "properties": {
+        "description": "Students will plan an interview with someone in the community or research an important person"
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "objective.key": "5e164681-b93f-4dad-809a-ffc7701a4da2"
+      }
+    },
+    {
+      "key": "9428a226-3239-4085-a266-f830a65b3b0e",
+      "properties": {
+        "description": "Students will use geographic tools and skills to locate and describe places."
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "9428a226-3239-4085-a266-f830a65b3b0e"
+      }
+    },
+    {
+      "key": "99a9bdf2-5341-4904-8051-b6ba24986664",
+      "properties": {
+        "description": "Students will explore landmarks that represent important historical moments in United States history. "
+      },
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "objective.key": "99a9bdf2-5341-4904-8051-b6ba24986664"
+      }
+    },
+    {
+      "key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a",
+      "properties": {
+        "description": "Students will use strategies for an effective presentation. "
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "objective.key": "b40d5d58-f5eb-4a1a-8cbd-2c203dabc03a"
+      }
+    },
+    {
+      "key": "c3241075-06f3-4d52-8478-7e5bafea4a87",
+      "properties": {
+        "description": "Students will use maps, globes, and other simple geographic models to identify cultural and environmental characteristics of places. "
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "objective.key": "c3241075-06f3-4d52-8478-7e5bafea4a87"
+      }
+    },
+    {
+      "key": "cd732d89-1d5e-42ea-b08f-f573face922b",
+      "properties": {
+        "description": "Students will write a plan for their digital mapping landmarks project."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "objective.key": "cd732d89-1d5e-42ea-b08f-f573face922b"
+      }
+    },
+    {
+      "key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a",
+      "properties": {
+        "description": "Students will create a digital map of an area with key landmarks. "
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "e97f5b17-1c05-4ad3-8a3d-b84b85e4df1a"
+      }
+    },
+    {
+      "key": "f908e942-e501-4ad4-8946-36c717955216",
+      "properties": {
+        "description": "Students will use text to explain the importance and/or significance of landmarks in the area. "
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "objective.key": "f908e942-e501-4ad4-8946-36c717955216"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
