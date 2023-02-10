@@ -2753,15 +2753,3 @@ fil:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kabanata 2: Input ng Hardware'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Mga Input at Mga Output
-            lessonGroup-4:
-              display_name: 'Kabanata 2: Input ng Hardware'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Panimula sa App Lab
-            lessonGroup-3:
-              display_name: Mga Input at Mga Output

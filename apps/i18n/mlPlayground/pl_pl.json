@@ -8,10 +8,8 @@
   "correctAnswer": "Poprawnie",
   "incorrectAnswer": "Nieprawidłowe",
   "potentialUsesLabel": "Zamierzone użycie",
-  "potentialUsesDescription": "Opisz problem, który Twoim zdaniem ten model może pomóc rozwiązać, lub jedną potencjalną aplikację, którą ktoś mógłby stworzyć z tym modelem.",
   "potentialUsesPlaceholder": "Napisz krótki opis.",
   "potentialMisusesLabel": "Ograniczenia i ostrzeżenia",
-  "potentialMisusesDescription": "Opisz wszelkie ograniczenia w sposobie tworzenia tego modelu lub w jaki sposób powinien być używany. Możesz powiedzieć takie rzeczy jak „Unikaj używania tego modelu do...” lub „Uważaj na...”.\nWażne pytania do rozważenia to:",
   "potentialMisusesDescriptionRepresent": "Czy dane reprezentują wszystkich możliwych użytkowników i scenariusze?",
   "potentialMisusesDescriptionEnough": "Czy zebrałeś wystarczającą ilość danych, aby mieć pewność co do dokładności modelu?",
   "potentialMisusesDescriptionSituations": "Czy są sytuacje, w których ten model zdecydowanie nie powinien być używany?",
@@ -83,7 +81,6 @@
   "crossTabRelationshipHeader": "Informacje o związku",
   "crossTabTooMuchData": "Aktualnie wybrane dane są zbyt duże, aby można było je wyświetlić w tabeli.",
   "uniqueOptionsWarningNotice": "Uwaga",
-  "uniqueOptionsWarningMessage": "Kolumn kategorii z więcej niż {valueCount} unikalnymi wartościami nie można wybrać jako etykiety ani funkcji.",
   "predictionStatement": "Przewiduj {output} na podstawie {inputs}",
   "datasets": {
     "medical_priority": {
@@ -1267,8 +1264,7 @@
           "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj herbaty bbelkowej powinien zamówić nowy klient.",
           "potentialMisuses": "Wszystko inne niż zalecana herbata bąbelkowa."
         }
-      },
-      "name": "herbata bąbelkowa"
+      }
     },
     "global_happiness_raw": {
       "fields": {
@@ -1490,9 +1486,6 @@
         }
       },
       "name": "Regionalne badanie żywności na Święto Dziękczynienia"
-    },
-    "jeans": {
-      "name": "Pomiary dżinsów"
     },
     "taco_toppings_toy": {
       "fields": {

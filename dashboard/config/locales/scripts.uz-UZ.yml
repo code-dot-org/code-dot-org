@@ -5298,15 +5298,3 @@ uz:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapter 2: Building Physical Prototypes'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Inputs and Outputs
-            lessonGroup-4:
-              display_name: 'Chapter 2: Building Physical Prototypes'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Intro to App Lab
-            lessonGroup-3:
-              display_name: Inputs and Outputs

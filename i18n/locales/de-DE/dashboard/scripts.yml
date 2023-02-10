@@ -4398,15 +4398,3 @@ de:
         vpl-csd6-ayw-pilot-2022: {}
         self-paced-pl-csa4-2023: {}
         katies-playground: {}
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Ein- und Ausgaben
-            lessonGroup-4:
-              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Einführung in AppLab
-            lessonGroup-3:
-              display_name: Ein- und Ausgaben

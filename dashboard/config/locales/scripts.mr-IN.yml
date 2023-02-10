@@ -1953,7 +1953,3 @@ mr:
           description_audience: अभ्यासक्रम लेखक
           description_short: अभ्यासक्रमाच्या आवृत्त्यांमधील धडे किंवा स्तरांवरील अपडेट्स
             स्टेज करण्यासाठी
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: अॅप लॅबची ओळख

@@ -290,39 +290,27 @@
           "Star Wars": "Междузвездни войни",
           "Yes": "Да",
           "No": "Не",
-          "text": "текст",
-          "Comedy": "Комедия",
-          "Musical": "Мюзикъл",
-          "Action": "Екшън"
+          "text": "текст"
         },
         "CSD U1 storage movies_2022": {
           "Star Wars": "Междузвездни войни",
           "Yes": "Да",
           "No": "Не",
-          "text": "текст",
-          "Comedy": "Комедия",
-          "Musical": "Мюзикъл",
-          "Action": "Екшън"
+          "text": "текст"
         },
         "CSD U1 storage outfit_2021": {
           "white": "бял",
           "pink": "розово",
           "green": "зелено",
           "black": "черно",
-          "purple": "лилаво",
-          "Clear": "Изчисти",
-          "What is the weather like today?": "Как е времето днес?",
-          "What is your favorite color?": "Какъв е любимият ви цвят?"
+          "purple": "лилаво"
         },
         "CSD U1 storage outfit_2022": {
           "white": "бял",
           "pink": "розово",
           "green": "зелено",
           "black": "черно",
-          "purple": "лилаво",
-          "Clear": "Изчисти",
-          "What is the weather like today?": "Как е времето днес?",
-          "What is your favorite color?": "Какъв е любимият ви цвят?"
+          "purple": "лилаво"
         },
         "CSD U2 RGB intro": {
           "2": "2",
@@ -392,9 +380,7 @@
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "South": "Юг",
-          "West": "Запад",
-          "North": "Север",
-          "East": "Изток"
+          "West": "Запад"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
           "Success!": "Успешно!"
@@ -420,8 +406,7 @@
           "fast": "бързо",
           "slow": "бавно",
           "short": "късо",
-          "long": "дълго",
-          "on": "включен"
+          "long": "дълго"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Red": "Червено",
@@ -1412,14 +1397,12 @@
         "ml-customize-raspado-2021": {
           "yes": "да",
           "no": "не",
-          "Predict": "Предсказване",
-          "preference": "предпочитания"
+          "Predict": "Предсказване"
         },
         "ml-customize-raspado_2022": {
           "yes": "да",
           "no": "не",
-          "Predict": "Предсказване",
-          "preference": "предпочитания"
+          "Predict": "Предсказване"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Напред",
@@ -1552,41 +1535,6 @@
           "cloudy": "облачен",
           "night": "нощ",
           "Predict": "Предсказване"
-        },
-        "CSD U6 - Combine Inputs - PracB_2222": {
-          "bright": "светло"
-        },
-        "CSD U6 - Sensors - PC_2222": {
-          "off": "изключен",
-          "on": "включен"
-        },
-        "CSD U6 LED all": {
-          "on": "включен"
-        },
-        "CSD U6 LED all_2018": {
-          "on": "включен"
-        },
-        "CSD U6 LED all_2019": {
-          "on": "включен"
-        },
-        "CSD U6 LED all_2021": {
-          "on": "включен"
-        },
-        "CSD U6 light show": {
-          "on": "включен",
-          "off": "изключен"
-        },
-        "CSD U6 light show_2018": {
-          "on": "включен",
-          "off": "изключен"
-        },
-        "CSD U6 light show_2019": {
-          "on": "включен",
-          "off": "изключен"
-        },
-        "CSD U6 light show_2021": {
-          "on": "включен",
-          "off": "изключен"
         }
       }
     }

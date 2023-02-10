@@ -1732,11 +1732,3 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Maŋŋil Kurssa Iskkadeapmi
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at

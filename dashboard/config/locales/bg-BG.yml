@@ -39,7 +39,6 @@ bg:
           с имейл адрес)](%{url})
         username: Потребителско име
         password: Парола
-        verified_teacher: Удостоверен Учител
         password_confirmation: Потвърждение на паролата
         current_password: Текуща парола
         locale: Език
@@ -121,7 +120,6 @@ bg:
     windowslive: Microsoft профил
     microsoft_v2_auth: Microsoft профил
     clever: Умен профил
-    powerschool: Powerschool
     forgot_password: Забравена парола?
     migration_success: Успех! Вие сте обновили до нашето преживяване за нови акоунти.
     demigration_success: Преживяването за нови акоунти е прекратено на Вашия акоунт.
@@ -323,7 +321,6 @@ bg:
   teacher_mailer:
     new_teacher_subject: Добре дошли в Code.org!
     delete_teacher_subject: 'Уведомление от Code.org: Вашият акоунт е изтрит'
-    verified_teacher_subject: Удостоверяване на Учител в Code.org - Успех
   section:
     your_section:
       one: 'Вашата секция:'
@@ -434,14 +431,12 @@ bg:
       teach: Обучи
       about: Относно
       legal_privacy: Защита на личните данни
-      legal_cookie_notice: Известие за Бисквитки
       legal_tos: Термини
     user:
       classroom: Начална страница на учителя
       district_dashboard: Областно табло
       label: Здравейте %{username}
       stats: Студио по кодиране
-      my_projects: Моите проекти
       settings: Моят акаунт
       logout: Изход
       signin: Вход
@@ -455,7 +450,6 @@ bg:
       algebra_game: Алгебра
       applab: Лаборатория за приложения
       artist: Художник
-      artist_k1: Художник (Предучилищен)
       basketball: Баскетбол
       bounce: Bounce
       calc: Calc
@@ -727,10 +721,6 @@ bg:
     make_my_own_app: Направих собствено приложение
     how_it_works: Как работи
     try_hour_of_code: Опитайте Hour of Code!
-    store: Магазин
-    cookie_notice: Известие за Бисквитки
-    view_code: Вижте Кода
-    locale_select: Изберете език
   reference_area:
     title: Нужда от помощ?
     subtitle: Вижте тези клипове и съвети
@@ -761,9 +751,6 @@ bg:
       gamelab_unsupported_tablet: Game Lab работи най-добре на настолен компютър или
         лаптоп в мишка и клавиатура. Може да изпитате проблеми използвайки този инструмент
         на текущото ви устройство.
-      weblab_unsupported_locale_storage: Възможно е да възникнат проблеми при използването
-        на Web Lab в режим на Частно Сърфиране. Моля, презаредете проекта си в нормален
-        режим. Съжаляваме за неудобството.
   slow_loading: Това отнема повече време от обичайното...
   try_reloading: Опитайте да презаредите страницата
   next_stage: Завършено! Продължете към следващия етап
@@ -811,10 +798,8 @@ bg:
       cta: Научете как
     aquatic:
       title: Minecraft
-      image_alt: Стийв и Алекс от Minecraft те търсят.
     dance-2019:
       title: Танцово Парти
-      image_alt: Щастлива котка, ленивец и акула танцуват.
     dance:
       title: Танцово Парти
     flappy:
@@ -857,22 +842,11 @@ bg:
       title: Minecraft
       body: Програмирай животни и други Minecraft същества в своя собствена версия
         на Minecraft.
-    poem-art:
-      body: Изразете себе си! Използвайте код, за да създадете анимирани поеми.
-    pre-express-2017:
-      image_alt: Куче и еднорог, стоящи пред дърво, направено от парчета пъзел.
-    pre-express-2018:
-      image_alt: Куче и еднорог, стоящи пред дърво, направено от парчета пъзел.
-    pre-express-2019:
-      image_alt: Куче и еднорог, стоящи пред дърво, направено от парчета пъзел.
-    pre-express:
-      image_alt: Куче и еднорог, стоящи пред дърво, направено от парчета пъзел.
     sports:
       title: Спорт
       body: Създайте баскетболна игра или смесица между спортове.
     starwars:
       title: Междузвездни войни
-      image_alt: R2-D2, Лея, Рей и ББ-8 стоящи в пустиня.
     text-compression:
       title: Компресия на текста
       body: В този урок, учениците ще използват Widget-та за Компресиране на Текст,
@@ -884,7 +858,6 @@ bg:
         вашия сайт за секунди.
       audience: Възраст 13 +
       cta: Научете как
-      image_alt: Компютърен екран, показващ HTML код.
     widgets:
       title: Джаджи
       body: Учениците могат да изследват концепции от нашия курс "Принципи на Компютърните
@@ -1025,8 +998,6 @@ bg:
       Условия за ползване</a> и <a href="%{privacy_url}" target="_blank"> Поверителност</a>
     accept_label_markdown: Съгласен съм с актуализираните [Условия за ползване](%{tos_url})
       и [Поверителност](%{privacy_url})
-    accept_tos: Регистрирайки се в Code.org, вие се съгласявате с нашите [Условия
-      за Ползване](%{tos_url}) и [Политика за Поверителност](%{privacy_url}).
     accept: Приемам
     print: Печат
     reminder_desc: Ние обновихме нашите <a href="%{tos_url}" target="_blank"> Условия
@@ -1041,8 +1012,6 @@ bg:
       условия.
     review_terms: Преглед на актуализираните условия
   school_info_interstitial:
-    title: Ние искаме да направим компютърните науки достъпни за всеки ученик - помогнете
-      ни да проследим напредъка си!
     message: Моля попълнете информацията за вашето училище по-долу.
     message_with_suggestion: Моля, уверете се че следната информация е правилна или
       я поправете, ако е нужно.
@@ -1270,9 +1239,7 @@ bg:
       school_department_region: Регион на Училището
       colombian_school_city: 'Града на Училището '
       colombian_chilean_school_department: Регион на Училището
-      colombian_school_municipality: Община на Училището
       colombian_chilean_school_name: Име на училището
-      chilean_school_commune: Община
       ages: На кои класове преподавате тази година?
       subjects: Кои предмети преподавате тази година?
       resources: Кои от следните обучителни ресурси по КН използвате?
@@ -1284,15 +1251,12 @@ bg:
         not_listed: Предпочитан термин не е специфициран
         none: Предпочитам да не отговоря
       school_country:
-        barbados: Барбадос
-        belize: Белиз
         canada: Канада
         chile: Чили
         colombia: Колумбия
         israel: Израел
         malaysia: Малайзия
         mexico: Мексико
-        paraguay: Парагвай
         thailand: Тайланд
         uzbekistan: Узбекистан
       ages:
@@ -1313,7 +1277,6 @@ bg:
         music: Музика
         art: Изкуство
         other: 'Друго:'
-        na: Не е приложимо
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1323,7 +1286,6 @@ bg:
         scratch: Scratch
         tynker: Tynker
         other: Друго
-        na: Не е приложимо
       robotics:
         kodable: Kodable
         lego: LEGO Education
@@ -1332,20 +1294,12 @@ bg:
         sphero: Sphero
         raspberry: Raspberry Pi
         other: Друго
-        na: Не е приложимо
       workshop_course:
         csp: '"15-" 16 CS принципи'
-        not_applicable: Не е приложимо
       email_opt_in:
         opt_in_yes: Да
         opt_in_no: Не
     international_opt_in:
-      intro: Благодарим ви, че отделихте време да получите обучение в учебната програма
-        на Code.org. Мисията ни, да предоставим възможности за обучение по компютърни
-        науки на всички деца във всички училища по света, не би била възможна без
-        вас.
-      facilitator_not_listed: Моят посредник не е в списъка
-      facilitator_not_applicable: Не е приложимо
       organizer_not_listed: Моят организатор не е в списъка
     logged_out:
       body: За да апочнете, първо трябва да сте влезли във вашия Code.org акоунт.
@@ -1363,10 +1317,6 @@ bg:
     more_information: Вижте декларацията за поверителност на Code.org.
     accept: Приемам
   page_not_found_title: Страницата не е намерена
-  page_not_found_header: '404: Страницата Не е Намерена'
-  page_not_found_description: Страницата, която търсите, не съществува на този адрес.
-    Проверете уеб адреса и изпратете отново. Или се върнете на началната ни страница.
-  page_not_found_button: Началната страница
   copy: Копиране
   confirm: Потвърдете
   maker:
@@ -1386,18 +1336,5 @@ bg:
     this_sprite: този спрайт
   unit_prefix: Урок %{n}
   code_org_logo_alt: Начална страница Code.org
-  reset_predict_progress_button: Изтриване на Отговор
   pixelation:
-    readable_format: Четим Формат
-    save_image: Запазване на Изображението
-    actual_size: Действителен Размер
-    image_file_format_width: 'Широчина: 1 byte'
-    image_file_format_height: 'Височина: 1 byte'
-    image_file_format_bits_per_pixel: 'Битове на Пиксел: 1 байт'
-    image_file_format_data_a: n бита пикселни данни
-    image_file_format_data_b: n = Широчина * Височина * Битове на Пиксел
-    image_width: Широчина на Изображението
-    image_height: Височина на Изображението
-    bits_per_pixel_header: Битове на Пиксел
     binary: Двоичен код
-    hexadecimal: Шестнадесетична
