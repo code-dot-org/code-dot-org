@@ -1,0 +1,17 @@
+name 'csc_mappinglandmarks_markdown_lesson_2'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Planning Your Local Landmarks Map
+
+Today you will create a plan for your digital mapping landmarks project.
+
+You might create a map of your classroom, school, or city. Maybe you'll choose to feature state, regional, or national landmarks. Or you might choose to create a map based on an area you have studied in class.
+
+As you plan your map, think about the backgrounds, sprites, and speech you want to use to teach other people about the landmarks you have chosen.
+
+**In the next lesson, you will code your landmarks map.**
+
+
+MARKDOWN
