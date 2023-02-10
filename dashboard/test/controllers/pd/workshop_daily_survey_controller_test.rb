@@ -389,7 +389,7 @@ module Pd
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/thanks'
       assert_response :success
-      assert_select 'h1', text: 'Thank you for submitting today’s survey.'
+      assert_select 'h1', text: 'Thank you for submitting today\'s survey.'
     end
 
     test 'AYW1 pre-survey link shows foorm survey' do
@@ -540,17 +540,17 @@ module Pd
 
     def assert_closed
       assert_select 'h1', text: 'The survey has closed'
-      assert_select 'p', text: /The survey for today’s session of your workshop is now closed\./
+      assert_select 'p', text: /The survey for today\'s session of your workshop is now closed\./
     end
 
     def assert_no_attendance
       assert_select 'h1', text: 'No Attendance'
       assert_select 'p', text:
-        'You need to be marked as attended for today’s session of your workshop before you can complete this survey.'
+        'You need to be marked as attended for today\'s session of your workshop before you can complete this survey.'
     end
 
     def assert_thanks
-      assert_select '#thanks>h1', text: 'Thank you for submitting today’s survey.'
+      assert_select '#thanks>h1', text: 'Thank you for submitting today\'s survey.'
     end
 
     def assert_redirected_to_sign_in

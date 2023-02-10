@@ -119,7 +119,7 @@ class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
         "Somewhat good",
         "Quite good",
         "Extremely good",
-        "N/A - I didn’t need extra help",
+        "N/A - I didn't need extra help",
       ],
 
       how_comfortable_asking_questions: [

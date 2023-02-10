@@ -1258,7 +1258,7 @@ def refute_bad_gateway_or_site_unreachable
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   expect(first_header_text).not_to end_with('Bad Gateway')
   # This error message is specific to Chrome
-  expect(first_header_text).not_to eq('This site can’t be reached')
+  expect(first_header_text).not_to eq('This site can\'t be reached')
 end
 
 Then /^I wait until the image within element "([^"]*)" has loaded$/ do |selector|
