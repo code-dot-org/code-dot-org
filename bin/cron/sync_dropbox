@@ -40,7 +40,6 @@ TOTAL_SECONDS = 55 - INTERVAL_SECONDS
 
 logger = HighFrequencyReporter.new(Slack, 'sync-dropbox-staging', '/home/ubuntu/dropbox_sync_error_log.csv')
 logger.load # load errors from most recent sync
-first_attempt = true
 
 while (Time.now - SCRIPT_START) < TOTAL_SECONDS
   attempt_start = Time.now
@@ -60,21 +59,12 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
     ERROR_MSG
     logger.record error_message
   end
-  if first_attempt && Time.now.min % 5 == 0
-    HooksUtils.get_unstaged_files.each do |filename|
-      next unless HooksUtils.prohibited?(filename)
-      msg = "INVALID FILENAME: #{filename}"
-      ChatClient.log("<@#{DevelopersTopic.dotd}> #{msg}", color: 'red')
-      ChatClient.message('content-editors', msg, color: 'red')
-    end
-  end
   current_time = Time.now
   logger.save
   while current_time - attempt_start < INTERVAL_SECONDS && (current_time - SCRIPT_START) < TOTAL_SECONDS
     sleep 0.1
     current_time = Time.now
   end
-  first_attempt = false
 end
 
 # Reports to Slack if current minute is a multiple of 1
