@@ -99,10 +99,22 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert_equal 0, JSON.parse(response.body)['abuse_score']
   end
 
-  test "can't reset abuse score as normal user" do
+  test "can't reset abuse score as signed-out user" do
     response = get :show_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
+
+    response = delete :reset_abuse, params: {channel_id: @channel_id}
+    assert response.unauthorized?
+  end
+
+  test "can't reset abuse score as student user" do
+    response = get :show_abuse, params: {channel_id: @channel_id}
+    assert response.ok?
+    assert_equal 0, JSON.parse(response.body)['abuse_score']
+
+    user = create(:student)
+    sign_in user
 
     response = delete :reset_abuse, params: {channel_id: @channel_id}
     assert response.unauthorized?
