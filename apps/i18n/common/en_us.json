@@ -114,7 +114,7 @@
   "animationPicker_leaveSelectionText": "Any selected {contextName}s will not be added to your project.",
   "animationPicker_leaveSelectionTitle": "Leave the Library?",
   "animationPicker_noResultsFound": "Sorry, no results found.",
-  "animationPicker_restrictedUploadWarning": "Warning: projects with uploaded images can't be remixed or published to the gallery. Are you sure you want to continue?",
+  "animationPicker_restrictedUploadWarning": "WARNING: Projects with uploaded images can't be remixed or published to the gallery. Are you sure you want to continue?",
   "animationPicker_returnToLibrary": "Return to library",
   "animationPicker_title": "{assetType} Library",
   "animationPicker_unsupportedType": "Sorry, this file type is not supported.",

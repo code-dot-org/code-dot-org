@@ -18,6 +18,7 @@ import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
 import style from './animation-picker-body.module.scss';
+import AnimationUploadButton from './AnimationUploadButton.jsx';
 
 const MAX_SEARCH_RESULTS = 40;
 
@@ -219,7 +220,8 @@ export default class AnimationPickerBody extends React.Component {
       is13Plus,
       onDrawYourOwnClick,
       onUploadClick,
-      onAnimationSelectionComplete
+      onAnimationSelectionComplete,
+      shouldRestrictAnimationUpload
     } = this.props;
 
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
@@ -283,10 +285,11 @@ export default class AnimationPickerBody extends React.Component {
                   onClick={onDrawYourOwnClick}
                 />
                 {!hideUploadOption && (
-                  <AnimationPickerListItem
-                    label={msg.animationPicker_uploadImage()}
-                    icon="upload"
-                    onClick={onUploadClick}
+                  <AnimationUploadButton
+                    onUploadClick={onUploadClick}
+                    shouldRestrictAnimationUpload={
+                      shouldRestrictAnimationUpload
+                    }
                   />
                 )}
               </div>

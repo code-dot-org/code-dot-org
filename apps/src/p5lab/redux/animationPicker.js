@@ -28,7 +28,8 @@ const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
 const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
 const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
 const REMOVE_ANIMATION = 'AnimationPicker/REMOVE_ANIMATION';
-const SET_SHOULD_RESTRICT_UPLOAD = 'AnimationPicker/SET_SHOULD_RESTRICT_UPLOAD';
+const SET_IN_RESTRICTED_SHARE_MODE =
+  'AnimationPicker/SET_IN_RESTRICTED_SHARE_MODE';
 
 // Default state, which we reset to any time we hide the animation picker.
 const initialState = {
@@ -41,7 +42,7 @@ const initialState = {
   isBackground: false,
   // List of animations selected to be added through multiselect
   selectedAnimations: {},
-  shouldRestrictUpload: true
+  inRestrictedShareMode: false
 };
 
 export default function reducer(state, action) {
@@ -100,10 +101,10 @@ export default function reducer(state, action) {
       selectedAnimations: updatedAnimations
     };
   }
-  if (action.type === SET_SHOULD_RESTRICT_UPLOAD) {
+  if (action.type === SET_IN_RESTRICTED_SHARE_MODE) {
     return {
       ...state,
-      shouldRestrictUpload: action.shouldRestrict
+      inRestrictedShareMode: action.inRestrictedShareMode
     };
   }
   return state;
@@ -253,10 +254,11 @@ export function removeSelectedAnimation(animation) {
   };
 }
 
-export function setShouldRestrictUpload(shouldRestrict) {
+export function setInRestrictedShareMode(inRestrictedShareMode) {
+  console.log('in redux action');
   return {
-    type: SET_SHOULD_RESTRICT_UPLOAD,
-    shouldRestrict
+    type: SET_IN_RESTRICTED_SHARE_MODE,
+    inRestrictedShareMode
   };
 }
 

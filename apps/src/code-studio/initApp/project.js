@@ -1210,12 +1210,12 @@ var projects = (module.exports = {
   },
 
   setInRestrictedShareMode(inRestrictedShareMode) {
-    this.sourceHandler.setInRestrictedShareMode();
+    this.sourceHandler.setInRestrictedShareMode(inRestrictedShareMode);
     return this.save();
   },
 
   inRestrictedShareMode() {
-    this.sourceHandler.inRestrictedShareMode();
+    return this.sourceHandler.inRestrictedShareMode();
   },
 
   /**

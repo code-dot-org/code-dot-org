@@ -4,10 +4,15 @@ import msg from '@cdo/locale';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import project from '@cdo/apps/code-studio/initApp/project';
 import BaseDialog from '../../templates/BaseDialog.jsx';
+import classNames from 'classnames';
+import styles from './animation-upload-button.module.scss';
+import {setInRestrictedShareMode} from '../redux/animationPicker.js';
+import {connect} from 'react-redux';
 
-export default function AnimationUploadButton({
+function AnimationUploadButton({
   onUploadClick,
-  shouldRestrictAnimationUpload
+  shouldRestrictAnimationUpload,
+  setInRestrictedShareMode
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showRestrictedUploadWarning =
@@ -33,13 +38,25 @@ export default function AnimationUploadButton({
         isOpen={isModalOpen}
         handleClose={() => setIsModalOpen(false)}
       >
-        <div>{msg.animationPicker_restrictedUploadWarning()}</div>
-        <button type="button" onClick={() => setIsModalOpen(false)}>
-          {msg.dialogCancel()}
-        </button>
-        <button type="button" onClick={confirmRestrictedUpload}>
-          {msg.dialogOK()}
-        </button>
+        <div className={styles.warningMessage}>
+          {msg.animationPicker_restrictedUploadWarning()}
+        </div>
+        <div className={styles.modalButtonRow}>
+          <button
+            className={classNames(styles.modalButton, styles.cancelButton)}
+            type="button"
+            onClick={() => setIsModalOpen(false)}
+          >
+            {msg.dialogCancel()}
+          </button>
+          <button
+            className={classNames(styles.modalButton, styles.confirmButton)}
+            type="button"
+            onClick={confirmRestrictedUpload}
+          >
+            {msg.dialogOK()}
+          </button>
+        </div>
       </BaseDialog>
     );
   }
@@ -47,6 +64,8 @@ export default function AnimationUploadButton({
   function confirmRestrictedUpload() {
     project.setInRestrictedShareMode(true);
     setIsModalOpen(false);
+    // redux setting, for use in share/remix
+    setInRestrictedShareMode(true);
     onUploadClick();
   }
 
@@ -60,5 +79,15 @@ export default function AnimationUploadButton({
 
 AnimationUploadButton.propTypes = {
   onUploadClick: PropTypes.func.isRequired,
-  shouldRestrictAnimationUpload: PropTypes.bool.isRequired
+  shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
+  // populated from redux
+  setInRestrictedShareMode: PropTypes.func.isRequired
 };
+
+export default connect(
+  null,
+  dispatch => ({
+    setInRestrictedShareMode: inRestrictedShareMode =>
+      dispatch(setInRestrictedShareMode(inRestrictedShareMode))
+  })
+)(AnimationUploadButton);
