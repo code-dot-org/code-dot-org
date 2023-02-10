@@ -1,3 +1,6 @@
+// Analytics constants used within the apps directory.
+// (See pegasus/helpers/analytics_constants.rb for constants in the
+// pegasus directory)
 const EVENTS = {
   // Sign-up flow
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
@@ -26,28 +29,7 @@ const EVENTS = {
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
 
   // Marketing site pages
-  HOMEPAGE_VISITED_EVENT: 'Homepage Visited',
-  ADMIN_PAGE_VISITED_EVENT: 'Administrator Page Visited',
   TEACH_PAGE_VISITED_EVENT: 'Teach Page Visited',
-  AI_PAGE_VISIT_EVENT: 'AI Page Visited',
-  CSA_CURRICULUM_PAGE_VISITED_EVENT: 'CSA Curriculum Page Visited',
-  CSC_CURRICULUM_PAGE_VISITED_EVENT: 'CSC Curriculum Page Visited',
-  CSD_CURRICULUM_PAGE_VISITED_EVENT: 'CSD Curriculum Page Visited',
-  CSF_CURRICULUM_PAGE_VISITED_EVENT: 'CSF Curriculum Page Visited',
-  CSP_CURRICULUM_PAGE_VISITED_EVENT: 'CSP Curriculum Page Visited',
-  PHYSICAL_COMPUTING_PAGE_VISITED_EVENT: 'Physical Computing Page Visited',
-  ELEMENTARY_CURRICULUM_PAGE_VISITED_EVENT:
-    'Elementary School Curriculum Page Visited',
-  MIDDLE_SCHOOL_CURRICULUM_PAGE_VISITED_EVENT:
-    'Middle School Curriculum Page Visited',
-  HIGH_SCHOOL_CURRICULUM_PAGE_VISITED_EVENT:
-    'High School Curriculum Page Visited',
-  ELEMENTARY_SCHOOL_PL_PAGE_VISITED_EVENT:
-    'Elementary School Professional Learning Page Visited',
-  MIDDLE_AND_HIGH_SCHOOL_PL_PAGE_VISITED_EVENT:
-    'Middle And High School Professional Learning Page Visited',
-  PICK_PL_PAGE_VISITED_EVENT: 'Pick Your Professional Learning Page Visited',
-  RP_LANDING_PAGE_VISITED_EVENT: 'Regional Partner Landing Page Visited',
 
   // Sections
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
