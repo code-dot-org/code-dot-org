@@ -7,6 +7,7 @@ import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
+import ProgramSequencer from '../player/ProgramSequencer';
 import {Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -45,6 +46,7 @@ class UnconnectedMusicView extends React.Component {
     super(props);
 
     this.player = new MusicPlayer();
+    this.programSequencer = new ProgramSequencer();
     this.analyticsReporter = new AnalyticsReporter();
     this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
@@ -155,7 +157,7 @@ class UnconnectedMusicView extends React.Component {
     try {
       instructions = await response.json();
     } catch (error) {
-      console.error(error);
+      console.error('Instructions load error.', error);
       instructions = null;
     }
     return instructions;
@@ -235,6 +237,7 @@ class UnconnectedMusicView extends React.Component {
   executeSong = () => {
     this.musicBlocklyWorkspace.executeSong({
       MusicPlayer: this.player,
+      ProgramSequencer: this.programSequencer,
       getTriggerCount: () => this.triggerCount
     });
   };

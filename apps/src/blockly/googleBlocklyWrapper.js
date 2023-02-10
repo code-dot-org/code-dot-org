@@ -1,3 +1,4 @@
+import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
   ScrollOptions
@@ -34,6 +35,7 @@ import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
+import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
@@ -263,6 +265,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
+  // Properties cannot be modified until wrapSettableProperty has been called
   blocklyWrapper.wrapSettableProperty('assetUrl');
   blocklyWrapper.wrapSettableProperty('behaviorEditor');
   blocklyWrapper.wrapSettableProperty('customSimpleDialog');
@@ -274,6 +277,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
+
+  blocklyWrapper.JavaScript = javascriptGenerator;
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -289,10 +294,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.addChangeListener = function(blockspace, handler) {
     blockspace.addChangeListener(handler);
-  };
-
-  blocklyWrapper.getWorkspaceCode = function() {
-    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
   };
 
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
@@ -576,8 +577,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
       );
     }
     // Customize function definition blocks.
-    Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
-      FUNCTION_BLOCK.init;
+    if (options.noFunctionBlockFrame) {
+      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+        FUNCTION_BLOCK_NO_FRAME.init;
+    } else {
+      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+        FUNCTION_BLOCK.init;
+    }
+
     return workspace;
   };
 

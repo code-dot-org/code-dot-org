@@ -246,29 +246,35 @@ describe('animationList', function() {
       server.restore();
     });
 
-    it('when animationList has 1 item, selectedAnimation should be the animation', function() {
+    it('when animationList has 1 item, currentAnimations.ANIMATION should be the animation', function() {
       const key0 = 'animation_1';
       let animationList = createAnimationList(1);
 
       store.dispatch(setInitialAnimationList(animationList));
-      expect(store.getState().animationTab.selectedAnimation).to.equal(key0);
+      expect(
+        store.getState().animationTab.currentAnimations.ANIMATION
+      ).to.equal(key0);
     });
 
-    it('when animationList has multiple items, selectedAnimation should be the first animation', function() {
+    it('when animationList has multiple items, currentAnimations.ANIMATION should be the first animation', function() {
       const key0 = 'animation_1';
       let animationList = createAnimationList(2);
 
       store.dispatch(setInitialAnimationList(animationList));
-      expect(store.getState().animationTab.selectedAnimation).to.equal(key0);
+      expect(
+        store.getState().animationTab.currentAnimations.ANIMATION
+      ).to.equal(key0);
     });
 
-    it('when animationList has 0 items, selectedAnimation should be the empty string', function() {
+    it('when animationList has 0 items, currentAnimations.ANIMATION should be the empty string', function() {
       let animationList = {
         orderedKeys: [],
         propsByKey: {}
       };
       store.dispatch(setInitialAnimationList(animationList));
-      expect(store.getState().animationTab.selectedAnimation).to.equal('');
+      expect(
+        store.getState().animationTab.currentAnimations.ANIMATION
+      ).to.equal('');
     });
 
     it('should not initialize with multiple animations of the same name', function() {
@@ -346,7 +352,9 @@ describe('animationList', function() {
       );
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key0));
-      expect(store.getState().animationTab.selectedAnimation).to.equal(key1);
+      expect(
+        store.getState().animationTab.currentAnimations.ANIMATION
+      ).to.equal(key1);
     });
 
     it('deleting an animation reselects the previous animation in the animationList', function() {
@@ -360,7 +368,9 @@ describe('animationList', function() {
       );
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key1));
-      expect(store.getState().animationTab.selectedAnimation).to.equal(key0);
+      expect(
+        store.getState().animationTab.currentAnimations.ANIMATION
+      ).to.equal(key0);
     });
 
     it('deleting an animation deselects when there are no other animations in the animationList', function() {
@@ -372,7 +382,9 @@ describe('animationList', function() {
       );
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key0));
-      expect(store.getState().animationTab.selectedAnimation).to.equal('');
+      expect(
+        store.getState().animationTab.currentAnimations.ANIMATION
+      ).to.equal('');
     });
 
     it('deleting an animation deselects when there are no other non-background animations in the spritelab animationList', function() {
@@ -386,7 +398,9 @@ describe('animationList', function() {
       );
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key0, true));
-      expect(store.getState().animationTab.selectedAnimation).to.equal('');
+      expect(
+        store.getState().animationTab.currentAnimations.ANIMATION
+      ).to.equal('');
     });
   });
 
@@ -731,10 +745,11 @@ describe('animationList', function() {
       ).to.equal(true);
     });
 
-    it('new blank pending frame uses the selectedAnimation key', function() {
+    it('new blank pending frame uses the currentAnimations.ANIMATION key', function() {
       const animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
-      const selectedAnimation = store.getState().animationTab.selectedAnimation;
+      const selectedAnimation = store.getState().animationTab.currentAnimations
+        .ANIMATION;
       store.dispatch(appendBlankFrame());
       expect(store.getState().animationList.pendingFrames.key).to.equal(
         selectedAnimation
@@ -755,7 +770,8 @@ describe('animationList', function() {
       );
       const animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
-      selectedAnimation = store.getState().animationTab.selectedAnimation;
+      selectedAnimation = store.getState().animationTab.currentAnimations
+        .ANIMATION;
       libraryAnimProps = {
         name: 'library_animation',
         sourceUrl: 'url',
