@@ -4369,11 +4369,3 @@ ru:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Глава 2: Создание физических прототипов'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: 'Глава 2: Создание физических прототипов'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Введение в Лабораторию приложений

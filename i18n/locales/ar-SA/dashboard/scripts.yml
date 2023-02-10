@@ -4300,15 +4300,3 @@ ar:
           lesson_groups:
             lessonGroup-4:
               display_name: 'الفصل 2: بناء نماذج أوليّة مادية'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: المدخلات والمخرجات
-            lessonGroup-4:
-              display_name: 'الفصل 2: بناء نماذج أوليّة مادية'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: مقدمة عن مختبر التطبيقات
-            lessonGroup-3:
-              display_name: المدخلات والمخرجات

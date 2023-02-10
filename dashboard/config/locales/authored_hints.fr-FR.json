@@ -6018,7 +6018,7 @@
           "courseD_collector_debugging4_b": "Si tu as du mal à voir comment faire le schéma récurrent en escalier, essaie de le tracer avec ton doigt en répétant les commandes à voix haute.\n\nN'oublie pas de faire remarquer les directions des tournants !"
         },
         "courseD_collector_debugging5": {
-          "courseD_collector_debugging5_a": "Commence par regarder la première boucle.\n\nQu'est-ce qu'elle fait ? \n\nQu'est ce qu'elle est sensée faire?\n\nQu'est-ce que cela nous indique ?",
+          "courseD_collector_debugging5_a": "Commence par regarde la première boucle.\n\nQu'est ce qu'elle fait?\n\nQu'est ce qu'elle est sensée faire?\n\nA quoi cela te fait il penser?",
           "courseD_collector_debugging5_b": "Une fois que tu as la première boucle comme tu la souhaites, que reste-t-il dans ton code ?"
         },
         "courseD_collector_debugging5a_2018": {

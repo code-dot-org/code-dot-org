@@ -1239,20 +1239,12 @@ bg-BG:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Скрат ще стигне жълъда. Няма грешки в кода.
-          feedback: Неправилно. Първо, Скрат се обръща в грешната посока, после Скрат
-            не се премества напред достатъчен брой пъти, за да стигне жълъда.
-        - text: Скрат няма да стигне жълъда, защото се е обърнал в грешната посока.
-          feedback: Правилно! Първо, Скрат се обръща в грешната посока, после Скрат
-            не се премества напред достатъчен брой пъти, за да стигне жълъда.
-        - text: Скрат няма да стигне жълъда, защото няма достатъчно блоково `движи
-            напред`.
-          feedback: Правилно! Първо, Скрат се обръща в грешната посока, после Скрат
-            не се премества напред достатъчен брой пъти, за да стигне жълъда.
-        - feedback: Има две грешки в кода. Първо, Скрат се обръща в грешната посока,
-            после Скрат не се преместве достатъчен брой пъти, за да стигне жълъда.
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
-        - text: Потърсете за грешки в кода. Скрат ще стигне ли жълъда или има проблем?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -1967,10 +1959,9 @@ bg-BG:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - text: Пирата би казал "Удоволствие е да се запознаем, Али" и това е всичко.
-          feedback: Правилно.
-        - text: Пирата би казал "Удоволствие е да се запознаем" и това е всичко.
-        - text: Пирата би казал "Али" и това е всичко.
+        - {}
+        - {}
+        - {}
         - {}
         questions:
         - {}
@@ -2008,37 +1999,10 @@ bg-BG:
         - {}
       csf_be_a_super_digital_citizen:
         content1: описание тук
-        markdown: |-
-          # Супер Дигитален Гражданин
-
-          ## Как можете да застъпите, когато видите кибертормоз?
       csf_password_power-up:
         content1: описание тук
-        markdown: |-
-          # Подобрете Паролата си
-
-          ## Съвети за Парола да Запомните
-
-          * Започнете със запомняща се **фраза**.
-          * Само **родителите** ви трябва да знаят паролата ви.
-          * Никога не използвайте **лична** информация в паролата си.
-          * Създавайте пароли от поне **осем** знака.
-          * Използвайте букви, цифри и **знаци** в паролите си.
-
-          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: описание тук
-        markdown: |-
-          # СТОП на Грубостта
-
-          ## Какво трябва да направите, ако някой е груб с вас онлайн?
-
-          * **С**тъпете назад.
-          * Каже**Т**е на възрастен, на когото имате доверие.
-          * **О**К сайтове първо
-          * **П**аузирайте и помислете онлайн.
-
-          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -2101,20 +2065,12 @@ bg-BG:
         - {}
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - text: Скрат ще стигне жълъда. Няма грешки в кода.
-          feedback: Неправилно. Първо, Скрат се обръща в грешната посока, после Скрат
-            не се премества напред достатъчен брой пъти, за да стигне жълъда.
-        - text: Скрат няма да стигне жълъда, защото се е обърнал в грешната посока.
-          feedback: Правилно! Първо, Скрат се обръща в грешната посока, после Скрат
-            не се премества напред достатъчен брой пъти, за да стигне жълъда.
-        - text: Скрат няма да стигне жълъда, защото няма достатъчно блоково `движи
-            напред`.
-          feedback: Правилно! Първо, Скрат се обръща в грешната посока, после Скрат
-            не се премества напред достатъчен брой пъти, за да стигне жълъда.
-        - feedback: Има две грешки в кода. Първо, Скрат се обръща в грешната посока,
-            после Скрат не се преместве достатъчен брой пъти, за да стигне жълъда.
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
-        - text: Потърсете за грешки в кода. Скрат ще стигне ли жълъда или има проблем?
+        - {}
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - {}
@@ -2208,23 +2164,12 @@ bg-BG:
         content1: описание тук
       csf_putting_a_stop_to_online_meanness_2021:
         content1: описание тук
-        markdown: |-
-          # СТОП на Грубостта
-
-          ## Какво трябва да направите, ако някой е груб с вас онлайн?
-
-          * **С**тъпете назад.
-          * Каже**Т**е на възрастен, на когото имате доверие.
-          * **О**К сайтове първо
-          * **П**аузирайте и помислете онлайн.
-
-          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1_2021:
         answers:
         - {}
         - {}
         - {}
-        - text: Лаурел ще събере 1 парче съкровище, използвайки този код.
+        - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
@@ -2349,39 +2294,16 @@ bg-BG:
         - {}
       csf_be_a_super_digital_citizen_2021:
         content1: описание тук
-        markdown: |-
-          # Супер Дигитален Гражданин
-
-          ## Как можете да застъпите, когато видите кибертормоз?
       csf_password_power-up_2021:
         content1: описание тук
-        markdown: |-
-          # Подобрете Паролата си
-
-          ## Съвети за Парола да Запомните
-
-          * Започнете със запомняща се **фраза**.
-          * Само **родителите** ви трябва да знаят паролата ви.
-          * Никога не използвайте **лична** информация в паролата си.
-          * Създавайте пароли от поне **осем** знака.
-          * Използвайте букви, цифри и **знаци** в паролите си.
-
-          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       Unit 1 Lesson 1 Overview:
-        markdown: "# Преглед\n\nКласът работи по групи, за да изработи лодки от алуминиево
-          фолио, които да издържат възможно най-много стотинки. В края на урока групите
-          обмислят опита си от тази дейност и правят връзка с видовете решаване на
-          проблеми, които ще правят през останалата част от курса. \n\n\n## Ресурси\n\n*
-          [Алуминиеви лодки](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
-          - Ръководство за Дейността (копирайте като [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
-          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))"
-        teacher_markdown: |-
-          [key]
-
-          * [Алуминиери лодки - Образец]
-          (https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Ръководство за Дейноста ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
-
-          [/key]
+        markdown: "# Общ Преглед\n\nТози клас работи в групи,  който ще проектират
+          кораби направени от алуминиево фолио с цел да могат да носият възможно най-много
+          стотинки. В края урока групите ще отразяват своя опит с упражненито и ще
+          правят връзки с другите видове проблеми който ще решават в следващтите уроци
+          на този курс. \n\n#E Ресурси \n\n*[Кораби  от А луминиево Фолио] (ttps://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          \ - \n\nИнструкции за Урока( копие \n[MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n\n"
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -2523,41 +2445,35 @@ bg-BG:
           target=\"_new\">\n<button>\nОтиди на план на урока\n</button> \n</a>\n\n<br/><br/>"
       Choose 2 Test:
         answers:
-        - text: Линия 2
-        - text: Линия 3
-        - text: Линия 4
-        - text: Линия 5
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - {}
       Eval Contracts F:
         answers:
         - ''
-        content1: Напишете договор за текстовата функция
-        title: Текстов Догоров
       Multi Horizontal Scroll Test:
         answers:
-        - text: 3 бита
-        - text: 4 бита
-        - text: 5 бита
-        - text: 6 бита
-        - text: 7 бита
-        - text: 12 бита
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
-        - text: |-
-            Стандартната QWERT клавиатура има 47 клавиша, които изписват знаци на екрана. Всеки от тези клавиши също може да показва втори знак, като се натисне клавиша и се задържи "Shift" заедно с него(Приемаме, че всички други клавиши са игнориране в този въпрос).
-
-            Колко бита ще ви трябват, за да кодирате всичко, което може да бъде въведено на тази клавиатура?
-        title: 'Оценяване: Кодиране на Текст'
+        - {}
       Submittable Multi:
         answers:
         - text: синьо
         - text: зелено
-        - text: тюркоазено
+        - {}
         - text: жълт
-        - text: истинко оранжево разбира се
+        - {}
         - text: червено
         questions:
-        - text: Какъв е любимият ви цвят?
+        - {}
       Test Contained Multi:
         answers:
         - text: '0'
@@ -2572,18 +2488,18 @@ bg-BG:
         content1: описание тук
       contained_Choose_2_Test:
         answers:
-        - text: Линия 2
-        - text: Линия 3
-        - text: Линия 4
-        - text: Линия 5
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - {}
       contained_Choose_2_Test_2:
         answers:
-        - text: Линия 2
-        - text: Линия 3
-        - text: Линия 4
-        - text: Линия 5
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - {}
       contained_Happy_Maps_Multi 1:
@@ -2597,15 +2513,12 @@ bg-BG:
         title: избор от множество отговори
       test questionless single multi:
         answers:
-        - text: "Извикване на параметрите на функция  \n\n ![](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)"
-        - text: "Дефиниране на параметрите на функция  \n ![](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)"
-        - text: "Местене на костенурката по екрана  \n ![](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)"
-        - text: "Ориентиране на посоката на костенурката   \n![](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)"
-        - text: "Настройване на химикалката   \n![](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)"
         - {}
-        markdown: Разгелдайте тези различни употреби на `случайноЧисло`. Всеки отговор
-          описва употребата и показва примерен код. Кое от тези НЕ Е валидна употреба
-          на `случайноЧисло`
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       HappyMaps-Unplugged_2021:
         markdown: |-
           # Щастливи Карти
@@ -3017,7 +2930,7 @@ bg-BG:
         - {}
         - {}
         questions:
-        - text: Линия 5
+        - {}
         - {}
         - {}
         - {}
@@ -3030,7 +2943,7 @@ bg-BG:
         - {}
         - {}
         questions:
-        - text: Линия 5
+        - {}
         - {}
         - {}
         - {}
@@ -3043,7 +2956,7 @@ bg-BG:
         - {}
         - {}
         questions:
-        - text: Линия 5
+        - {}
         - {}
         - {}
         - {}
@@ -3338,9 +3251,7 @@ bg-BG:
         - {}
         - {}
         questions:
-        - text: Клас провел проучване, за да реши къде да отиде на екскурзия, и иска
-            да направи таблица, за да види колко популярен е бил всеки избор. Ще трябва
-            ли да направят някакви промени в данните, преди да създадат диаграмата?
+        - {}
       CSD U5 test crosstab multi:
         answers:
         - text: куче
@@ -9318,18 +9229,12 @@ bg-BG:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - text: Скрат ще стигне жълъда. Няма грешки в кода.
-          feedback: Неправилно. Скрат няма да стигне жълъда, защото се обръща в грешната
-            посока.
-        - text: Скрат няма да стигне жълъда, защото се е обърнал в грешната посока.
-          feedback: Правилно! Скрат се обръща в грешната посока и няма да стигне жълъда.
-        - text: Скрат няма да стигне жълъда, защото няма достатъчно блоково `движи
-            напред`.
-          feedback: Неправилно. Скрат няма да стигне жълъда, защото се обръща в грешната
-            посока.
-        - feedback: Скрат няма да стигне жълъда, защото се е обърнал в грешната посока.
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
-        - text: Потърсете за грешки в кода. Скрат ще стигне ли жълъда или има проблем?
+        - {}
       courseC_multi_maze_programming8_predict12022:
         answers:
         - {}
@@ -9545,359 +9450,15 @@ bg-BG:
         - {}
       csf_be_a_super_digital_citizen2022:
         content1: описание тук
-        markdown: |-
-          # Супер Дигитален Гражданин
-
-          ## Как можете да застъпите, когато видите кибертормоз?
       csf_password_power-up2022:
         content1: описание тук
-        markdown: |-
-          # Подобрете Паролата си
-
-          ## Съвети за Парола да Запомните
-
-          * Започнете със запомняща се **фраза**.
-          * Само **родителите** ви трябва да знаят паролата ви.
-          * Никога не използвайте **лична** информация в паролата си.
-          * Създавайте пароли от поне **осем** знака.
-          * Използвайте букви, цифри и **знаци** в паролите си.
-
-          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness2022:
         content1: описание тук
-        markdown: |-
-          # СТОП на Грубостта
-
-          ## Какво трябва да направите, ако някой е груб с вас онлайн?
-
-          * **С**тъпете назад.
-          * Каже**Т**е на възрастен, на когото имате доверие.
-          * **О**К сайтове първо
-          * **П**аузирайте и помислете онлайн.
-
-          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict12022:
         answers:
         - {}
         - {}
         - {}
-        - text: Лаурел ще събере 1 парче съкровище, използвайки този код.
+        - {}
         questions:
         - {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022:
-        teacher_markdown: |-
-          **Анкет за учителите в Края на Урока:** Докато учениците ви попълват анкетата, ще ви бъдем благодарни, ако попълните кратка анкета за учителите.
-
-          ## [Натиснете Тук за Анкета на Учителя](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
-      CSD Student End of Unit Survey - Unit 1_2022:
-        title: CS Открития Проучване в Края на Урока
-      CSD U1 Lesson 5 Overview:
-        markdown: |-
-          # Преглед
-
-          В този урок ще научите за разилични видове входящи и изходящи устройства, използвани от компютри, и за видовете информация, която изпращат и получават.
-
-          ## Лексика
-
-          * **Входящо устройство** - Устройство или компонент, който позволява да се подава информация към компютъра
-          * **Изходящо устройство** - Всяко устройство или компонент, който получава информация от компютъра
-
-          ## Ресурси
-
-          * [Вход и Изход - Ръководство на Дейността]
-          (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
-        teacher_markdown: |-
-          [Вход и Изход - Пример]
-          (https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing) - Ръководство на Дейността ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))
-      CSD U1 Lesson 6 Overview:
-        markdown: |-
-          # Преглед
-
-          В този урок ще научите как обработването се използва от хора и компютри за превръщане на входни данни в изходни.
-
-          ## Лексика
-
-          * **Алгоритъм** - Точна последователност от инстукции за процеси, които могат да бъдат изпълнени от компютър
-
-          ## Ресурси
-
-          * [Алгоритъм за Сортиране на Карти - Ръководство на Дейността]
-          (https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
-        teacher_markdown: "* [Алгоритъм за Сортиране на Карти](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
-          - Пример ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
-          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))"
-      CSD U1 Lesson 7 Overview:
-        markdown: |-
-          # Преглед
-
-          В този урок ще научите за видовете информация, която компютрите съхраняват, и как съхраненението е критична част от обработването на информация.
-
-          ## Ресурси
-
-          * [Съхранение и Обработка - Ръководство на Дейността](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
-        teacher_markdown: "* [Съхранение и Обработка - Пример](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
-          - Наръчник на Дейността ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
-          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))"
-      CSD U1 Lesson 8 Overview:
-        markdown: |-
-          # Преглед
-
-          В този урок ще се разгледате начините, по които приложенията обработват различни видове информация, за да решат проблеми.
-
-          ## Ресурси
-
-          * [Изследване на Приложение - Ръководство на Дейността](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
-        teacher_markdown: "* [Изследване на Приложение КЛЮЧ](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
-          - Ръководство на Дейността ([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
-          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)"
-      CSD U1 Lesson 9 Overview:
-        markdown: |-
-          # Преглед
-
-          За този проект ще разработите собствено приложение, което решава проблем, определен от вас.
-
-          ## Ресурси
-
-          * [Приложения и Решаване на Проблеми - Ръководство на Дейността](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
-          * [Приложения и Решаване на Проблеми - Взаимна Проверка](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
-          * [Приложения и Решаване на Проблеми - Рубрика](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
-        teacher_markdown: |-
-          * [Приложения и Решаване на Проблеми]
-          (https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Пример за Ръководство на Проекта ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
-          * [Приложения и Решаване на Проблеми]
-          (https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Пример за Взаимна Проверка ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
-      CourseE_Lesson_11_Artist_Practice_2022:
-        description: Добра работа досега! Изберете следващата си дейност. Завършете
-          колко се може повече. Продължете да се упражнявате с функции и Художника!
-      CourseE_Lesson_7_Artist_Practice_2022:
-        description: Добра работа досега! Изберете следващата си дейност. Завършете
-          колко се може повече. Продължете да се упражнявате с вложени цикли и Художника!
-      PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
-        markdown: |-
-          # Силата на Думите
-
-          ## Какво трябва да направите, ако някой използва груб или нараняващ език в интернет?
-      PowerOfWords-Unplugged_2020:
-        markdown: |-
-          # Силата на Думите
-
-          ## Какво трябва да направите, ако някой използва груб или нараняващ език в интернет?
-      PowerOfWords-Unplugged_2021:
-        markdown: |-
-          # Силата на Думите
-
-          ## Какво трябва да направите, ако някой използва груб или нараняващ език в интернет?
-      PrivatePersonalInformation-Unplugged2022:
-        markdown: |-
-          # Поверителна и Лична Информация
-
-          ## Каква информация е OK да споделяте онлайн?
-      PrivatePersonalInformation-Unplugged_2020:
-        markdown: |-
-          # Поверителна и Лична Информация
-
-          ## Каква информация е OK да споделяте онлайн?
-      PrivatePersonalInformation-Unplugged_2021:
-        markdown: |-
-          # Поверителна и Лична Информация
-
-          ## Каква информация е OK да споделяте онлайн?
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
-        teacher_markdown: |-
-          **Анкет за Учителите в Края на Урока:** Докато учениците ви попълват анкетата, ще ви бъдем благодарни, ако попълните кратка анкета за учителите.
-
-          ## [Натиснете Тук за Анкета на Учителя](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
-        teacher_markdown: |-
-          **Анкет за Учителите в Края на Урока:** Докато учениците ви попълват анкетата, ще ви бъдем благодарни, ако попълните кратка анкета за учителите.
-
-          ## [Натиснете Тук за Анкета на Учителя](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
-      Unit 1 Lesson 2 Overview:
-        markdown: |-
-          # Преглед
-
-          В този урок ще се запознаете с официален процес за решаване на проблеми, който ще ви помогне да структурирате подхода си към най-различни проблеми.
-
-
-          ## Ресурси
-
-          * [Процес на Решаване на Проблеми - Ръководство на Дейността](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
-        teacher_markdown: |-
-          * [Процеса на Решаване на Проблеми]
-          (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Ръководство на Дейността (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))[PDF]
-      Unit 1 Lesson 3 Overview:
-        markdown: |-
-          # Преглед
-          В този урок ще приложите процеса на решаване на проблеми към различни проблем, за да изследвате как всяка стъпка ви помага да разработвате е подобрявате решения на проблеми.
-
-          ## Ресурси
-
-          * [Решаване на Проблеми - Ръководство на Дейността]
-          (https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
-        teacher_markdown: "[КЛЮЧ за Решаване на Проблеми](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
-          - Ръководство на Дейността [PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
-          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
-      Unit 1 Lesson 4 Overview:
-        markdown: |-
-          # Преглед
-
-          В този урок ще започнете да обмисляте как компютрите помагат за решаването на определен вид проблеми и ще научите ключовите характеристики на всеки компютър.
-
-          ## Ресурси
-
-          * [Какво е Компютър - Ръководство на Дейността]
-          (https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
-        teacher_markdown: |-
-          [Какво е Компютър - Пример]
-          (https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Ръководство на Дейността ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
-      courseAB_EOC2022:
-        display_name: Проект за Края на Курса
-      courseAB_EOC_2021:
-        description: Стигнахте последния урок! Изберете проект, който да създадете.
-        display_name: Проект за Края на Курса
-      courseB_EOC2022:
-        display_name: Проект за Края на Курса
-      courseB_EOC_2021:
-        display_name: Проект за Края на Курса
-      courseD_EOC2022:
-        description: Стигнахте последния урок на Курс D! Изберете проект, който да
-          създадете.
-        display_name: Проект за Края на Курса
-      courseD_EOC_2020:
-        description: Стигнахте последния урок на Курс D! Изберете проект, който да
-          създадете.
-        display_name: Проект за Края на Курса
-      courseD_EOC_2021:
-        description: Стигнахте последния урок на Курс D! Изберете проект, който да
-          създадете.
-        display_name: Проект за Края на Курса
-      courseD_project_exemplars_2020_2021:
-        markdown: |-
-          # Примерни Проекти
-
-          Ще започнете финалния си проект. Преди да започнете, отделете малко време, за да разгледате няколко примерни проекта.
-
-          | Случайна Скорост при Отскачане (Баскетбол) | Умножаване на Stromtrooper-и (Междузвездни Войни) |
-          |---|---|
-          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
-          | Топката си сменя скоростта, когато отскача! | Избягвай stromtrooper-ите или те ще се умножат! |
-
-          | Паника! на Диското (Танцово Парти) | Плажна Сцена (Художник) |
-          |---|---|
-          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
-          | Помощните ви танцьори продължават да си сменят стъпките! | Пробвайте се да добавите повече цвят и фон към тази сцена! |
-      courseE_EOC2022:
-        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
-        display_name: Проект за Края на Курса
-      courseE_EOC_2020:
-        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
-        display_name: Проект за Края на Курса
-      courseE_EOC_2021:
-        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
-        display_name: Проект за Края на Курса
-      courseE_EOC_examples2022:
-        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
-        display_name: Проект за Края на Курса
-      courseE_EOC_examples_2021:
-        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
-        display_name: Проект за Края на Курса
-      courseE_project_exemplars_2019_2020:
-        markdown: |-
-          # Примерни Проекти
-
-          Предстои ви да започнете финалния си проект. Преди да започнете, отделете малко време и вижте примерни проекти.
-
-          ## Sprite Lab
-
-          | Чудовищен Танц (Sprite Lab) | Игра с Кексчета (Sprite Lab) |
-          |---|---|
-          | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
-          | Пробвайте се да добавите текст или точки към тази игра! | Пробвайте се да добавите текст или точки към тази игра! |
-
-          ## Художник
-
-          | Шарка (Художник) | Цветя от Снежинки (Замръзналото Кралство) |
-          |---|---|
-          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
-          | Да бъдем креативни с вложение цикли! | Да бъдем креативни с функции! |е
-      courseExpress_EOC_2020:
-        description: Стигнахте последия урок на Експресния Курс! Изберете проект,
-          който да създадете.
-        display_name: Проект за Края на Курса
-      courseExpress_project_exemplars_2019_2020:
-        markdown: |-
-          # Примерни Проекти
-
-          Предстои ви да започнете финалния си проект. Преди да започнете, отделете малко време, за да разгледате примерни проекти.
-
-          | Паника! на Диското (Танцово Парти) | Плажна Сцена (Художник) |
-          |---|---|
-          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
-          | Насладете се на диското, докато помощните ви танцьори го разкършат! | Пробвайте се да добавите повече цвят и фон към тази сцена! |
-
-          | Цветя от Снежинки (Замръзналото Кралство) | Самолетна Игра (Sprite Lab) |
-          |---|---|
-          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
-          | Да бъдем креативни с функции! | Пробвайте се да добавите текст или точки към тази игра! |
-      courseF_EOC_2020:
-        description: Стигнахте края на Курс F! Избере проект, който да създадете.
-        display_name: Проект за Края на Курса
-      courseF_EOC_2021:
-        description: Стигнахте края на Курс F! Избере проект, който да създадете.
-        display_name: Проект за Края на Курса
-      courseF_EOC_examples2022_2022_pilot_-2022-2:
-        display_name: Проект за Края на Курса
-      courseF_EOC_examples_2021:
-        description: Стигнахте края на Курс F! Избере проект, който да създадете.
-        display_name: Проект за Края на Курса
-      courseF_EOC_samples2022:
-        display_name: Проект за Края на Курса
-      courseF_EOC_samples_2021:
-        display_name: Проект за Края на Курса
-      courseF_project_exemplars_2019_2020:
-        markdown: "# Примерни Проекти\n\nПредстои ви да започнете финалния си проект.
-          Преди да започнете, отделелете малко време и вижте примерни проекти.\n\n##
-          Sprite Lab\n\n| Игра с Кексчета (Sprite Lab) | \tСамолетна Игра (Sprite
-          Lab) |\n|---|---|\n| [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
-          \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
-          | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
-          \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
-          |\n| Пробвайте се да добавите текст или точки към тази игра! | Пробвайте
-          се да добавите текст или точки към тази игра! |\n\n## Художник\n\n| Цветя
-          (Художник) | Спирала (Художник) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
-          \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
-          | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
-          \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
-          \ |\n| Да бъдем креативни с променливи! | Да бъдем креативни с For Цикли!
-          |"
-      csf_digital_trails:
-        markdown: |-
-          # Следвай Дигиталната Пътека
-
-          №№ Какво информация е OK да има във вашия цифровв отпечатък?
-      csf_digital_trails2022:
-        markdown: |-
-          # Следвай Дигиталната Пътека
-
-          №№ Какво информация е OK да има във вашия цифровв отпечатък?
-      csf_digital_trails_2021:
-        markdown: |-
-          # Следвай Дигиталната Пътека
-
-          №№ Какво информация е OK да има във вашия цифровв отпечатък?
-      csf_safety_in_my_online_neighborhood:
-        markdown: |-
-          # Моят Онлайн Квартал
-
-          ## Как отивате да пазарувате онлайн безопасно?
-      csf_safety_in_my_online_neighborhood2022:
-        markdown: |-
-          # Моят Онлайн Квартал
-
-          ## Как отивате да пазарувате онлайн безопасно?
-      express_EOC2022:
-        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
-        display_name: Проект за Края на Курса
-      express_EOC_2021:
-        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
-        display_name: Проект за Края на Курса

@@ -4326,10 +4326,6 @@
           "moving east and looping": "движение на изток и циклене",
           "moving north and looping": "движение на север и циклене",
           "moving south and looping": "движение на юг и циклене"
-        },
-        "courseF_extras_sim": {
-          "wandering 2": "лутане 2",
-          "wandering 1": "лутане 2"
         }
       }
     }

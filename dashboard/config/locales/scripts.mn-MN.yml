@@ -4553,15 +4553,3 @@ mn:
           lesson_groups:
             lessonGroup-4:
               display_name: '2-р бүлэг: Биет ноорог үүсгэх'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Оролт ба гаралт
-            lessonGroup-4:
-              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Апп Лаб-н танилцуулга
-            lessonGroup-3:
-              display_name: Оролт ба гаралт

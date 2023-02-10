@@ -875,7 +875,8 @@
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
         "parameter/csd/2022": {
-          "word": "Parameter"
+          "word": "Parameter",
+          "definition": "Dodatočné informácie poskytované ako vstup do bloku na prispôsobenie jeho fungovania"
         },
         "variable/csd/2022": {
           "word": "Premenná",

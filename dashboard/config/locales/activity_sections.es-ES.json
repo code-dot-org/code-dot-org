@@ -12780,13 +12780,13 @@
         },
         "c7870490-6b34-4571-be3e-07cc39510cc1": {
           "tips": [
-            "**Esto puede ser abrumador:** Cuando los modelos se importan en Laboratorio de Aplicaciones, una gran cantidad de código es pre-generado y esto puede ser abrumador. Los alumnos pueden sentirse nerviosos por tener que entender todo lo que ha pasado. Puedes tranquilizar a los alumnos de la siguiente manera:\n\n-   ¡Recuerda a los alumnos que ya saben mucho de lo que está ocurriendo gracias al debate que acaban de tener! Todos los elementos del Modo Diseño les resultan familiares y el código utiliza los mismos bloques onEvent que esperaban.\n-   Asegura a los alumnos que descubriremos lo que hace la mayor parte de este código a lo largo de la unidad y que no tienen por qué entenderlo todo ahora mismo. \n\n**Opciones de Texto a Voz:** El panel de instrucciones incluye dos opciones que pueden ayudar a la comprensión de los alumnos.\n\n-   **Texto a voz**, que lee en voz alta las instrucciones para los alumnos.\n-   **Microsoft Immersive Reader**, que abre un nuevo panel para las instrucciones y ofrece controles para cambiar el tamaño del texto, el contraste o traducir a otro idioma.\n\n[Pulsa aquí para saber más sobre estas opciones](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+            null
           ],
           "progression_name": "Importar un Modelo"
         },
         "6407eeff-4883-4d4a-9541-0caa24fab54c": {
           "tips": [
-            "**Facilitando Niveles de Programación:** Estos niveles están diseñados para continuar enseñando nuevas habilidades y bloques a través de la exploración, ensayo y error, mediante el uso de ejemplos trabajados a partir de código pre-suministrado. Los alumnos todavía se están familiarizando con los conceptos de la lección y necesitarán un fuerte apoyo a lo largo de estos niveles para ganar confianza, depurar su código y consolidar su comprensión. \n\nConsidera la posibilidad de que los alumnos completen estos niveles en parejas utilizando **Programación en Parejas**, que hace que los alumnos utilicen un ordenador e intercambien entre ser Conductor o Navegador. Este proceso se destaca en [este vídeo](https://www.youtube.com/watch?v=q7d_JtyCq1A), que puedes mostrar a la clase. Puedes hacer que los alumnos cambien de rol en función de un temporizador, o que cambien cada vez que completen un nivel."
+            null
           ]
         },
         "4b1c5fe5-6544-41f1-8b12-60761bb08d95": {

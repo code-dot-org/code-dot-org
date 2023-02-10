@@ -3037,15 +3037,3 @@ ka:
           lesson_groups:
             lessonGroup-4:
               display_name: 'თავი 2: აპარატული შეყვანა'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
-            lessonGroup-4:
-              display_name: 'თავი 2: აპარატული შეყვანა'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: შესავალი აპლიკაციების ლაბორატორიაში
-            lessonGroup-3:
-              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია

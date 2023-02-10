@@ -1846,7 +1846,7 @@ fr-FR:
           ## Que trouverez-vous dans ce bout de concept ?
           Nous y aborderons :
           - Concepts de codage plus avancés : fonctions, variables et formes avancées de boucles (boucles imbriquées et boucles for)
-          - « Sprites » et un nouvel environnement de codage appelé le Labo des Sprites
+          - « Sprites » et un nouvel environnement de codage appelé Sprite Lab
           - Projets de fin d'études
       OPD-K5 events introduced:
         content1: description ici
@@ -2105,29 +2105,29 @@ fr-FR:
       OPD-K5 sprite lab:
         content1: description ici
         markdown: |-
-          # Présentation : le Labo des Sprites
+          # Présentation : Sprite Lab
 
           <img src="https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png » class="level-image">
 
-          ## Concept de codage avancé : Sprites et comportements dans le Labo des Sprites
-          - Se familiariser avec un nouvel environnement de codage : le Labo des Sprites
+          ## Concept de codage avancé : Sprites et comportements dans Sprite Lab
+          - Se familiariser avec un nouvel environnement de codage : Sprite Lab
           - Entraînez-vous à créer des sprites
           - Entraînez-vous à coder des comportements pour différents Sprites
       OPD-K5 sprite lab introduction:
         content1: description ici
         markdown: |-
-          # le Labo des Sprites : Où est-il introduit ?
+          # Sprite Lab : Où est-il introduit ?
 
           ## <a href="https://curriculum.code.org/csf-19/coursee/ » target="blank » rel="noopener noreferrer">Cours E</a>
           - Leçon 5 (hors ligne) : Simon dit
-          - Leçon 6 : Natation des poissons avec le Labo des Sprites
-          - Leçon 7 : Alien Dance Party avec le Labo des Sprites
+          - Leçon 6 : Natation des poissons avec Sprite Lab
+          - Leçon 7 : Alien Dance Party avec Sprite Lab
 
           ## <a href="https://curriculum.code.org/csf-19/coursef/ » target="blank » rel="noopener noreferrer">Cours F</a>
-          - Leçon 2 : Poissons nageurs avec le Labo des Sprites
-          - Leçon 3 : Alien Dance Party avec le Labo des Sprites
-          - Leçon 15 : Comportements dans le Labo des Sprites
-          - Leçon 16 : Animal de compagnie virtuel avec le Labo des Sprites
+          - Leçon 2 : Poissons nageurs avec Sprite Lab
+          - Leçon 3 : Alien Dance Party avec Sprite Lab
+          - Leçon 15 : Comportements dans Sprite Lab
+          - Leçon 16 : Animal de compagnie virtuel avec Sprite Lab
       OPD-K5 sprite lab unplugged:
         content1: description ici
         markdown: |-
@@ -2146,9 +2146,9 @@ fr-FR:
       OPD-K5 sprite lab video:
         content1: description ici
         markdown: |-
-          # Présentation du Labo des Sprites
+          # Présentation de Sprite Lab
 
-          Regardez cette vidéo pour une introduction au Labo des Sprites !
+          Regardez cette vidéo pour une introduction à Sprite Lab !
 
           <a href="https://www.youtube.com/watch?v=l0B0gDuHHC8 » target="blank » rel="noopener noreferrer">![](https://images.code.org/929bd692b7029063aa9bf5835f6e6397-image -1571775211459.12.36 PM.png)</a>
       OPD-K5 types of lessons:
@@ -4070,7 +4070,7 @@ fr-FR:
 
           | Flocons de neige (Gelé) | Jeu d'avion (Labo. des lutins) |
           |---|---|
-          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png « Flocons de neige (Gelé) »)](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Labo des Sprites)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png « Jeu d'avion (Labo. Des lutins ) »)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png « Flocons de neige (Gelé) »)](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png « Jeu d'avion (Labo. Des lutins ) »)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
           | Soit créatif en utilisant des fonctions ! | Essaie d'ajouter du texte ou un score à ce jeu ! |
 
       courseF_EOC_2020:
@@ -6553,7 +6553,7 @@ fr-FR:
           à coder avec des boucles for\n\n### Leçon 11 : Laboratoire de sprites (15-45
           minutes)\n- Définir « sprite » et « comportement\"\n- Identifier où les
           sprites et les comportements sont introduits dans les cours Fondamentaux
-          de l'informatique\n- Explorer l'environnement de codage Labo des Sprites\n\n##
+          de l'informatique\n- Explorer l'environnement de codage Sprite Lab\n\n##
           Étapes suivantes\n\n### Leçon 12 : Revoir vos réflexions (15 minutes)\n-
           Passer en revue les réflexions que vous avez faites tout au long du cours
           jusqu'à présent\n\n### Leçon 13 : prochaines étapes (15 minutes)\n- Explorer

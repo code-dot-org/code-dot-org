@@ -177,24 +177,7 @@
           "28": "28",
           "29": "29",
           "30": "30",
-          "31": "31",
-          "Choose your Birthday!": "¡Elige tu cumpleaños!",
-          "Find out if it's your birthday!": "¡Averigua si es tu cumpleaños!",
-          "January": "Enero",
-          "February": "Febrero",
-          "March": "Marzo",
-          "April": "Abril",
-          "May": "Mayo",
-          "June": "Junio",
-          "July": "Julio",
-          "August": "Agosto",
-          "September": "Septiembre",
-          "October": "Octubre",
-          "November": "Noviembre",
-          "December": "Diciembre",
-          "It's your birthday!": "¡Es tu cumpleaños!",
-          "It's not your birthday yet this year!": "¡Este año, todavía no es tu cumpleaños!",
-          "It was already your birthday this year!!": "¡¡Ya fue tu cumpleaños este año!!"
+          "31": "31"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
@@ -227,24 +210,7 @@
           "28": "28",
           "29": "29",
           "30": "30",
-          "31": "31",
-          "Choose your Birthday!": "¡Elige tu cumpleaños!",
-          "Find out if it's your birthday!": "¡Averigua si es tu cumpleaños!",
-          "January": "Enero",
-          "February": "Febrero",
-          "March": "Marzo",
-          "April": "Abril",
-          "May": "Mayo",
-          "June": "Junio",
-          "July": "Julio",
-          "August": "Agosto",
-          "September": "Septiembre",
-          "October": "Octubre",
-          "November": "Noviembre",
-          "December": "Diciembre",
-          "It's your birthday!": "¡Es tu cumpleaños!",
-          "It's not your birthday yet this year!": "¡Este año, todavía no es tu cumpleaños!",
-          "It was already your birthday this year!!": "¡¡Ya fue tu cumpleaños este año!!"
+          "31": "31"
         },
         "CSD U1 processing countries_2021": {
           "32": "32",
@@ -531,9 +497,7 @@
           "home cooked meals": "comidas caseras",
           "trying new restaurants": "probando nuevos restaurantes",
           "my regular restaurants": "mis restaurantes regulares",
-          "delivery/takeout": "A domicilio o comida para llevar",
-          "Start!": "¡Comenzar!",
-          "Next Question": "Siguiente pregunta"
+          "delivery/takeout": "A domicilio o comida para llevar"
         },
         "CSD U1 processing live_2022": {
           "walking": "caminando",
@@ -558,65 +522,15 @@
           "home cooked meals": "comidas caseras",
           "trying new restaurants": "probando nuevos restaurantes",
           "my regular restaurants": "mis restaurantes regulares",
-          "delivery/takeout": "A domicilio o comida para llevar",
-          "Start!": "¡Comenzar!",
-          "Next Question": "Siguiente pregunta"
+          "delivery/takeout": "A domicilio o comida para llevar"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "¡Correcto!",
-          "Sorry!": "¡Lo siento!",
-          "National Park Quiz": "Cuestionario sobre Parques Nacionales",
-          "Start!": "¡Comenzar!",
-          "What was the first national park?": "¿Cuál fue el primer parque nacional?",
-          "Yosemite": "Yosemite",
-          "Yellowstone": "Yellowstone",
-          "Acadia": "Acadia",
-          "Great Smoky Mountains": "Great Smoky Mountains",
-          "Which is the largest national park?": "¿Cuál es el mayor parque nacional?",
-          "Wrangell-St. Elias": "Wrangell-St. Elias",
-          "Death Valley": "Death Valley",
-          "Denali": "Denali",
-          "Which national park gets the most visitors?": "¿Qué parque nacional recibe más visitantes?",
-          "Grand Canyon": "Gran Cañón",
-          "Which national park has the largest tree in the world?": "¿Qué parque nacional tiene el árbol más grande del mundo?",
-          "Sequoia": "Sequoia",
-          "Redwood": "Redwood",
-          "Shenandoah": "Shenandoah",
-          "Olympic": "Olympic",
-          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Yellowstone fue el primer Parque Nacional, creado por el Presidente Ulysses S. Grant en 1872.",
-          "Next Question": "Siguiente pregunta",
-          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-San Elías es el mayor parque nacional, ¡incluso más grande que muchos países!",
-          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Great Smoky Mountains es el más visitado, con más de 11 millones de visitantes al año.",
-          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Sequoia alberga el árbol más grande del mundo, el General Sherman Tree.",
-          "Play Again": "Jugar de nuevo"
+          "Sorry!": "¡Lo siento!"
         },
         "CSD U1 processing npark_2022": {
           "Correct!": "¡Correcto!",
-          "Sorry!": "¡Lo siento!",
-          "National Park Quiz": "Cuestionario sobre Parques Nacionales",
-          "Start!": "¡Comenzar!",
-          "What was the first national park?": "¿Cuál fue el primer parque nacional?",
-          "Yosemite": "Yosemite",
-          "Yellowstone": "Yellowstone",
-          "Acadia": "Acadia",
-          "Great Smoky Mountains": "Great Smoky Mountains",
-          "Which is the largest national park?": "¿Cuál es el mayor parque nacional?",
-          "Wrangell-St. Elias": "Wrangell-St. Elias",
-          "Death Valley": "Death Valley",
-          "Denali": "Denali",
-          "Which national park gets the most visitors?": "¿Qué parque nacional recibe más visitantes?",
-          "Grand Canyon": "Gran Cañón",
-          "Which national park has the largest tree in the world?": "¿Qué parque nacional tiene el árbol más grande del mundo?",
-          "Sequoia": "Sequoia",
-          "Redwood": "Redwood",
-          "Shenandoah": "Shenandoah",
-          "Olympic": "Olympic",
-          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Yellowstone fue el primer Parque Nacional, creado por el Presidente Ulysses S. Grant en 1872.",
-          "Next Question": "Siguiente pregunta",
-          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-San Elías es el mayor parque nacional, ¡incluso más grande que muchos países!",
-          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Great Smoky Mountains es el más visitado, con más de 11 millones de visitantes al año.",
-          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Sequoia alberga el árbol más grande del mundo, el General Sherman Tree.",
-          "Play Again": "Jugar de nuevo"
+          "Sorry!": "¡Lo siento!"
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
@@ -649,62 +563,7 @@
           "28": "28",
           "29": "29",
           "30": "30",
-          "31": "31",
-          "Enter your Birthday!": "¡Introduce tu fecha de nacimiento!",
-          "Find a writer!": "¡Encuentra un escritor!",
-          "January": "Enero",
-          "February": "Febrero",
-          "March": "Marzo",
-          "April": "Abril",
-          "May": "Mayo",
-          "June": "Junio",
-          "July": "Julio",
-          "August": "Agosto",
-          "September": "Septiembre",
-          "October": "Octubre",
-          "November": "Noviembre",
-          "December": "Diciembre",
-          "1998": "1998",
-          "1999": "1999",
-          "2000": "2000",
-          "2001": "2001",
-          "2002": "2002",
-          "2003": "2003",
-          "2004": "2004",
-          "2005": "2005",
-          "2006": "2006",
-          "2007": "2007",
-          "2008": "2008",
-          "2009": "2009",
-          "2010": "2010",
-          "2011": "2011",
-          "2012": "2012",
-          "2013": "2013",
-          "2014": "2014",
-          "2015": "2015",
-          "Anchee Min": "Anchee Min",
-          "image by Slowking4, GFDL 1.2": "imagen de Slowking4, GFDL 1.2",
-          "You were born on a": "Naciste en un",
-          "Monday": "Lunes",
-          "just like": "igual que",
-          "N. Scott Momaday": "N. Scott Momaday",
-          "public domain image": "imagen de dominio público",
-          "Tuesday": "Martes",
-          "Toni Morrison": "Toni Morrison",
-          "image by John Mathew Smith, CC-BY-SA 2.0": "imagen de John Mathew Smith, CC-BY-SA 2.0",
-          "Wednesday": "Miércoles",
-          "Khaled Hosseini": "Khaled Hosseini",
-          "Public Domain Image": "Imagen de dominio público",
-          "Thursday": "Jueves",
-          "Langston Hughes": "Langston Hughes",
-          "Public Domain": "Dominio público",
-          "Friday": "Viernes",
-          "Margaret Atwood": "Margaret Atwood",
-          "image by Vanwaffle, CC BY-SA 3.0": "imagen de Vanwaffle, CC BY-SA 3.0",
-          "Saturday": "Sábado",
-          "Gabriel Garcia Marquez": "Gabriel García Márquez",
-          "image by Jose Lara, CC-BY-SA": "imagen de José Lara, CC-BY-SA",
-          "Sunday": "Domingo"
+          "31": "31"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
@@ -737,62 +596,7 @@
           "28": "28",
           "29": "29",
           "30": "30",
-          "31": "31",
-          "Enter your Birthday!": "¡Introduce tu fecha de nacimiento!",
-          "Find a writer!": "¡Encuentra un escritor!",
-          "January": "Enero",
-          "February": "Febrero",
-          "March": "Marzo",
-          "April": "Abril",
-          "May": "Mayo",
-          "June": "Junio",
-          "July": "Julio",
-          "August": "Agosto",
-          "September": "Septiembre",
-          "October": "Octubre",
-          "November": "Noviembre",
-          "December": "Diciembre",
-          "1998": "1998",
-          "1999": "1999",
-          "2000": "2000",
-          "2001": "2001",
-          "2002": "2002",
-          "2003": "2003",
-          "2004": "2004",
-          "2005": "2005",
-          "2006": "2006",
-          "2007": "2007",
-          "2008": "2008",
-          "2009": "2009",
-          "2010": "2010",
-          "2011": "2011",
-          "2012": "2012",
-          "2013": "2013",
-          "2014": "2014",
-          "2015": "2015",
-          "Anchee Min": "Anchee Min",
-          "image by Slowking4, GFDL 1.2": "imagen de Slowking4, GFDL 1.2",
-          "You were born on a": "Naciste en un",
-          "Monday": "Lunes",
-          "just like": "igual que",
-          "N. Scott Momaday": "N. Scott Momaday",
-          "public domain image": "imagen de dominio público",
-          "Tuesday": "Martes",
-          "Toni Morrison": "Toni Morrison",
-          "image by John Mathew Smith, CC-BY-SA 2.0": "imagen de John Mathew Smith, CC-BY-SA 2.0",
-          "Wednesday": "Miércoles",
-          "Khaled Hosseini": "Khaled Hosseini",
-          "Public Domain Image": "Imagen de dominio público",
-          "Thursday": "Jueves",
-          "Langston Hughes": "Langston Hughes",
-          "Public Domain": "Dominio público",
-          "Friday": "Viernes",
-          "Margaret Atwood": "Margaret Atwood",
-          "image by Vanwaffle, CC BY-SA 3.0": "imagen de Vanwaffle, CC BY-SA 3.0",
-          "Saturday": "Sábado",
-          "Gabriel Garcia Marquez": "Gabriel García Márquez",
-          "image by Jose Lara, CC-BY-SA": "imagen de José Lara, CC-BY-SA",
-          "Sunday": "Domingo"
+          "31": "31"
         },
         "CSD U1 storage friends_2021": {
           "Friend Finder": "Buscador de Amigos",
@@ -938,27 +742,16 @@
           "blue: 128": "azul: 128"
         },
         "CSD U6 - Accelerometer - PA_2222": {
-          "Game Over": "Juego terminado",
-          "Movement Meter:": "Medidor de Movimiento:",
-          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
+          "Game Over": "Juego terminado"
         },
         "CSD U6 - Accelerometer - PB_2222": {
-          "0": "0",
-          "Steps Taken:": "Pasos dados:",
-          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
-          "You Did It!": "¡Lo hiciste!"
+          "0": "0"
         },
         "CSD U6 - Accelerometer - PD_2222": {
-          "You did it!": "¡Lo hiciste!",
-          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
+          "You did it!": "¡Lo hiciste!"
         },
         "CSD U6 - Accelerometer - PF_2222": {
-          "0": "0",
-          "Tilt the board left and right to change your number. Try to get it as close to the target number as possible!Your NumberTarget Number00Press the right button on the circuit playground to lock in your number!": "Inclina la placa hacia la izquierda y hacia la derecha para cambiar tu número. ¡Intenta acercarte lo más posible al número objetivo! Tu Número Objetivo Número 00 ¡Presiona el botón derecho en el Circuit Playground para fijar tu número!",
-          "Try to get it as close to the target number as possible!": "¡Intenta acercarte lo máximo posible al número objetivo!",
-          "Your Number": "Tu Número",
-          "Target Number": "Número Objetivo",
-          "Press the right button on the circuit playground to lock in your number!": "¡Pulsa el botón derecho del Circuit Playground para fijar tu número!"
+          "0": "0"
         },
         "CSD U6 - Board Inputs - SB1_2222": {
           "Success!": "¡Éxito!",
@@ -1035,8 +828,7 @@
           "Try the following:": "Prueba lo siguiente:",
           "Refresh this page and try again": "Actualiza esta página e inténtalo de nuevo",
           "Plug the board into a different USB": "Conecta la placa a otro puerto USB",
-          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup",
-          "Connect your board to an LED, then plug it in and press Run": "Conecta un LED a tu placa, enchúfala y pulsa Ejecutar"
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "North": "Norte",
@@ -1084,14 +876,7 @@
           "red": "rojo",
           "yellow": "amarillo",
           "green": "verde",
-          "purple": "morado",
-          "Activate Traffic Signal": "Activar Señal de Tráfico",
-          "Traffic Control App": "Aplicación de Control del Tráfico",
-          "Use this app to control a traffic signal in the road so cars know to avoid construction. You can set the direction to guide traffic, along with the color and brightness of the lightsDirection:Color:Brightness:leftrightredyellowgreenpurple": "Utiliza esta aplicación para controlar una señal de tráfico en la carretera para que los coches sepan que deben evitar las obras. Puedes configurar la dirección para guiar el tráfico, junto con el color y el brillo de las luces, Dirección: Color: Brillo: izquierda, derecha, rojo, amarillo, verdepúrpura",
-          "You can set the direction to guide traffic, along with the color and brightness of the lights": "Puedes configurar la dirección para guiar el tráfico, junto con el color y el brillo de las luces",
-          "Direction:": "Dirección:",
-          "Color:": "Color:",
-          "Brightness:": "Brillo:"
+          "purple": "morado"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "on": "activado",
@@ -1105,8 +890,7 @@
           "Buzzer Controls": "Controles de zumbador",
           "Press the left buttonto control the buzzer": "Pulsa el botón izquierdo para controlar el zumbador",
           "blink": "parpadeo",
-          "pulse": "pulso",
-          "Use the toggle switch to control the LED": "Utiliza el conmutador para controlar el LED"
+          "pulse": "pulso"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Red": "Rojo",
@@ -1169,15 +953,10 @@
           "Yellow": "Amarillo"
         },
         "CSD U6 - Functions - P_2222": {
-          "0": "0",
-          "Happiness Tracker": "Rastreador de Felicidad",
-          "Press the buttons on your circuit playground to track how you're feeling. Based on your happiness value, the screen will change to reflect how you feel": "Pulsa los botones de tu Circuit Playground para hacer un seguimiento de cómo te sientes. En función de tu valor de felicidad, la pantalla cambiará para reflejar cómo te sientes.",
-          "Current Happiness Value": "Valor Actual de Felicidad"
+          "0": "0"
         },
         "CSD U6 - Functions - SB7_2222": {
-          "0": "0",
-          "Click An Alien To Increase Your Score!": "¡Pulsa sobre un alienígena para aumentar tu puntuación!",
-          "Score:": "Puntuación:"
+          "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "0": "0",
@@ -1194,17 +973,10 @@
         },
         "CSD U6 - Music - A_2222": {
           "Happy": "Alegre",
-          "Sad": "Triste",
-          "Musical Emojis": "Emojis musicales",
-          "Click the buttons below to change the emotion of the emoji. When you do, a song will play to match that emotion.HappySad": "Haz clic en los botones de abajo para cambiar la emoción del emoji. Cuando lo hagas, se reproducirá una canción que coincida con esa emoción.HappySad",
-          "When you do, a song will play to match that emotion.": "Cuando lo hagas, sonará una canción acorde con esa emoción."
+          "Sad": "Triste"
         },
         "CSD U6 - Music - ChalC_2222": {
-          "Alarm Clock Settings": "Ajustes del Reloj Despertador",
-          "Choose an alarm preference from the dropdown below": "Elige una preferencia de alarma en el menú desplegable",
-          "Alert": "Alerta",
-          "[Add your own style here]": "[Añade tu propio estilo aquí]",
-          "Test the Alarm": "Probar la alarma"
+          "Alarm Clock Settings": "Ajustes del Reloj Despertador"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -1213,9 +985,7 @@
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "Play Song!": "¡Reproducir canción!",
-          "Clear Song": "Borrar canción"
+          "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
           "C": "C",
@@ -1225,13 +995,7 @@
           "G": "G",
           "A": "A",
           "B": "B",
-          "Note:": "Nota:",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#",
-          "Frequency:": "Frecuencia:"
+          "Note:": "Nota:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "C",
@@ -1240,12 +1004,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSD U6 - Music - SB2.5_2222": {
           "C": "C",
@@ -1263,12 +1022,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "¡Éxito!",
@@ -1281,12 +1035,7 @@
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
-          "2": "2",
-          "Escape Room!": "¡Escapa de la Habitación!",
-          "In order to escape, you need enter the correct 3-digit number!Find the buttons hidden around the room. When you press a button, one of the digits will be revealed!Once you've found all 3 digits, enter them in to escape the room!122You Won!": "Encuentra los botones escondidos por la habitación. Una vez que hayas encontrado los 3 dígitos, ¡introdúcelos para escapar de la habitación!122 ¡Ganaste!",
-          "Find the buttons hidden around the room. When you press a button, one of the digits will be revealed!": "Encuentra los botones escondidos por la habitación. Cuando pulses un botón, ¡se revelará uno de los dígitos!",
-          "Once you've found all 3 digits, enter them in to escape the room!": "Una vez que hayas encontrado los 3 dígitos, ¡introdúcelos para escapar de la habitación!",
-          "You Won!": "¡Has ganado!"
+          "2": "2"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
           "Success!": "¡Éxito!",
@@ -1397,8 +1146,7 @@
           "Try the following:": "Prueba lo siguiente:",
           "Refresh this page and try again": "Actualiza esta página e inténtalo de nuevo",
           "Plug the board into a different USB": "Conecta la placa a otro puerto USB",
-          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup",
-          "Connect your board to an LED, then plug it in and press Run": "Conecta un LED a tu placa, enchúfala y pulsa Ejecutar"
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "¡Éxito!",
@@ -1521,77 +1269,56 @@
           "Hello": "Hola"
         },
         "CSD U6 - Sensors - A_2222": {
-          "0": "0",
-          "Room Monitor": "Monitor de habitación",
-          "Light Value": "Valor lumínico",
-          "Sound Value": "Valor sonoro",
-          "Temperature": "Temperatura"
+          "0": "0"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "desactivado",
-          "on": "activado",
-          "The Theremin Is:": "El Theremin es:"
+          "on": "activado"
         },
         "CSD U6 - Sensors - P_2222": {
           "text": "texto",
           "high": "alta",
-          "low": "baja",
-          "Sensor 1": "Sensor 1",
-          "Sensor 2": "Sensor 2",
-          "Sensor 3": "Sensor 3"
+          "low": "baja"
         },
         "CSD U6 - Sensors - SB1_2222": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "value": "valor",
-          "Update": "Actualizar",
-          "Light Sensor Reading": "Lectura del sensor de luz"
+          "Update": "Actualizar"
         },
         "CSD U6 - Sensors - SB3_2222": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 - Sensors - SB4_2222": {
-          "value": "valor",
-          "Temp Sensor Reading": "Lectura del sensor de temperatura"
+          "value": "valor"
         },
         "CSD U6 Driver pt 2": {
-          "You did it!": "¡Lo hiciste!",
-          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
+          "You did it!": "¡Lo hiciste!"
         },
         "CSD U6 Driver pt 2_2018": {
-          "You did it!": "¡Lo hiciste!",
-          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
+          "You did it!": "¡Lo hiciste!"
         },
         "CSD U6 Driver pt 2_2019": {
-          "You did it!": "¡Lo hiciste!",
-          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
+          "You did it!": "¡Lo hiciste!"
         },
         "CSD U6 Driver pt 2_2021": {
-          "You did it!": "¡Lo hiciste!",
-          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
+          "You did it!": "¡Lo hiciste!"
         },
         "CSD U6 Driver pt1": {
-          "You did it!": "¡Lo hiciste!",
-          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
+          "You did it!": "¡Lo hiciste!"
         },
         "CSD U6 Driver pt1_2018": {
-          "You did it!": "¡Lo hiciste!",
-          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
+          "You did it!": "¡Lo hiciste!"
         },
         "CSD U6 Driver pt1_2019": {
-          "You did it!": "¡Lo hiciste!",
-          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
+          "You did it!": "¡Lo hiciste!"
         },
         "CSD U6 Driver pt1_2021": {
-          "You did it!": "¡Lo hiciste!",
-          "Get to the checkered flag but don't hit the red ones!": "¡Llega hasta la bandera a cuadros, pero no golpees las rojas!"
+          "You did it!": "¡Lo hiciste!"
         },
         "CSD U6 LED all": {
           "on": "activado",
@@ -1650,28 +1377,16 @@
           "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 Pedometer": {
-          "0": "0",
-          "Steps Taken:": "Pasos dados:",
-          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
-          "You Did It!": "¡Lo hiciste!"
+          "0": "0"
         },
         "CSD U6 Pedometer_2018": {
-          "0": "0",
-          "Steps Taken:": "Pasos dados:",
-          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
-          "You Did It!": "¡Lo hiciste!"
+          "0": "0"
         },
         "CSD U6 Pedometer_2019": {
-          "0": "0",
-          "Steps Taken:": "Pasos dados:",
-          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
-          "You Did It!": "¡Lo hiciste!"
+          "0": "0"
         },
         "CSD U6 Pedometer_2021": {
-          "0": "0",
-          "Steps Taken:": "Pasos dados:",
-          "Shake or tap your board to move the person to the finish line!": "¡Agita o golpea la placa para llevar a la persona a la línea de meta!",
-          "You Did It!": "¡Lo hiciste!"
+          "0": "0"
         },
         "CSD U6 add LED button": {
           "Success!": "¡Éxito!",
@@ -1714,72 +1429,56 @@
           "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 analog change": {
-          "value": "valor",
-          "Temp Sensor Reading": "Lectura del sensor de temperatura"
+          "value": "valor"
         },
         "CSD U6 analog change_2018": {
-          "value": "valor",
-          "Temp Sensor Reading": "Lectura del sensor de temperatura"
+          "value": "valor"
         },
         "CSD U6 analog change_2019": {
-          "value": "valor",
-          "Temp Sensor Reading": "Lectura del sensor de temperatura"
+          "value": "valor"
         },
         "CSD U6 analog change_2021": {
-          "value": "valor",
-          "Temp Sensor Reading": "Lectura del sensor de temperatura"
+          "value": "valor"
         },
         "CSD U6 analog data": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 analog data_2018": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 analog data_2019": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 analog data_2021": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 analog light": {
           "value": "valor",
-          "Update": "Actualizar",
-          "Light Sensor Reading": "Lectura del sensor de luz"
+          "Update": "Actualizar"
         },
         "CSD U6 analog light_2018": {
           "value": "valor",
-          "Update": "Actualizar",
-          "Light Sensor Reading": "Lectura del sensor de luz"
+          "Update": "Actualizar"
         },
         "CSD U6 analog light_2019": {
           "value": "valor",
-          "Update": "Actualizar",
-          "Light Sensor Reading": "Lectura del sensor de luz"
+          "Update": "Actualizar"
         },
         "CSD U6 analog light_2021": {
           "value": "valor",
-          "Update": "Actualizar",
-          "Light Sensor Reading": "Lectura del sensor de luz"
+          "Update": "Actualizar"
         },
         "CSD U6 analog sound": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 analog sound_2018": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 analog sound_2019": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 analog sound_2021": {
-          "value": "valor",
-          "Sound Sensor Reading": "Lectura del sensor de sonido"
+          "value": "valor"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1788,12 +1487,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSD U6 array piano_2018": {
           "C": "C",
@@ -1802,12 +1496,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSD U6 array piano_2019": {
           "C": "C",
@@ -1816,12 +1505,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSD U6 array piano_2021": {
           "C": "C",
@@ -1830,12 +1514,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSD U6 arrays select predict": {
           "first": "primero (a)",
@@ -2254,20 +1933,16 @@
           "Yellow": "Amarillo"
         },
         "CSD U6 params starchaser intro": {
-          "0": "0",
-          "Score:": "Puntuación:"
+          "0": "0"
         },
         "CSD U6 params starchaser intro_2018": {
-          "0": "0",
-          "Score:": "Puntuación:"
+          "0": "0"
         },
         "CSD U6 params starchaser intro_2019": {
-          "0": "0",
-          "Score:": "Puntuación:"
+          "0": "0"
         },
         "CSD U6 params starchaser intro_2021": {
-          "0": "0",
-          "Score:": "Puntuación:"
+          "0": "0"
         },
         "CSD U6 predict LED button": {
           "Success!": "¡Éxito!",
@@ -2308,34 +1983,22 @@
         "CSD U6 sensor experiment embedded": {
           "text": "texto",
           "high": "alta",
-          "low": "baja",
-          "Sensor 1": "Sensor 1",
-          "Sensor 2": "Sensor 2",
-          "Sensor 3": "Sensor 3"
+          "low": "baja"
         },
         "CSD U6 sensor experiment embedded_2018": {
           "text": "texto",
           "high": "alta",
-          "low": "baja",
-          "Sensor 1": "Sensor 1",
-          "Sensor 2": "Sensor 2",
-          "Sensor 3": "Sensor 3"
+          "low": "baja"
         },
         "CSD U6 sensor experiment embedded_2019": {
           "text": "texto",
           "high": "alta",
-          "low": "baja",
-          "Sensor 1": "Sensor 1",
-          "Sensor 2": "Sensor 2",
-          "Sensor 3": "Sensor 3"
+          "low": "baja"
         },
         "CSD U6 sensor experiment embedded_2021": {
           "text": "texto",
           "high": "alta",
-          "low": "baja",
-          "Sensor 1": "Sensor 1",
-          "Sensor 2": "Sensor 2",
-          "Sensor 3": "Sensor 3"
+          "low": "baja"
         },
         "CSD U6 setProperty predict app": {
           "title": "Título",
@@ -2382,24 +2045,16 @@
           "Choose the duration of the buzz with the slider, then click the left board button to turn it on.": "Elige la duración del zumbido con el control deslizante y, a continuación, pulsa el botón izquierdo de la placa para activarlo."
         },
         "CSD U6 stillness game predict code": {
-          "Game Over": "Juego terminado",
-          "Movement Meter:": "Medidor de Movimiento:",
-          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
+          "Game Over": "Juego terminado"
         },
         "CSD U6 stillness game predict code_2018": {
-          "Game Over": "Juego terminado",
-          "Movement Meter:": "Medidor de Movimiento:",
-          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
+          "Game Over": "Juego terminado"
         },
         "CSD U6 stillness game predict code_2019": {
-          "Game Over": "Juego terminado",
-          "Movement Meter:": "Medidor de Movimiento:",
-          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
+          "Game Over": "Juego terminado"
         },
         "CSD U6 stillness game predict code_2021": {
-          "Game Over": "Juego terminado",
-          "Movement Meter:": "Medidor de Movimiento:",
-          "Pass your board to the person next to you!": "¡Pasa tu placa a la persona que tienes al lado!"
+          "Game Over": "Juego terminado"
         },
         "CSD U6 test LED": {
           "Success!": "¡Éxito!",
@@ -2663,8 +2318,7 @@
           "Who we are and why we made this": "Quiénes somos y por qué hicimos esto",
           "How it Works": "Cómo funciona",
           "Information about how to use this app": "Información sobre cómo utilizar esta aplicación",
-          "Incorrect :(": "Incorrecto :(",
-          "Next Question": "Siguiente pregunta"
+          "Incorrect :(": "Incorrecto :("
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Acerca de",
@@ -2695,8 +2349,7 @@
           "Who we are and why we made this": "Quiénes somos y por qué hicimos esto",
           "How it Works": "Cómo funciona",
           "Information about how to use this app": "Información sobre cómo utilizar esta aplicación",
-          "Incorrect :(": "Incorrecto :(",
-          "Next Question": "Siguiente pregunta"
+          "Incorrect :(": "Incorrecto :("
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Acerca de",
@@ -2727,8 +2380,7 @@
           "Who we are and why we made this": "Quiénes somos y por qué hicimos esto",
           "How it Works": "Cómo funciona",
           "Information about how to use this app": "Información sobre cómo utilizar esta aplicación",
-          "Incorrect :(": "Incorrecto :(",
-          "Next Question": "Siguiente pregunta"
+          "Incorrect :(": "Incorrecto :("
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -2794,12 +2446,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSDU6 circuit playground piano_2018": {
           "C": "C",
@@ -2808,12 +2455,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSDU6 circuit playground piano_2019": {
           "C": "C",
@@ -2822,12 +2464,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSDU6 circuit playground piano_2021": {
           "C": "C",
@@ -2836,12 +2473,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSDU6 piano with notes": {
           "C": "C",
@@ -2850,12 +2482,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSDU6 piano with notes_2018": {
           "C": "C",
@@ -2864,12 +2491,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSDU6 piano with notes_2019": {
           "C": "C",
@@ -2878,12 +2500,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "CSDU6 piano with notes_2021": {
           "C": "C",
@@ -2892,12 +2509,7 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B",
-          "C#": "C#",
-          "D#": "D#",
-          "F#": "F#",
-          "G#": "G#",
-          "A#": "A#"
+          "B": "B"
         },
         "allthethings design mode elements": {
           "text": "texto",
@@ -2987,77 +2599,33 @@
         },
         "csd-apps for good-2": {
           "Next": "Siguiente",
-          "Home": "Inicio",
-          "Water Conservation Tips": "Consejos para conservar el agua",
-          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Es importante que todos pongamos de nuestra parte para consumir menos agua. Pulsa en esta aplicación para obtener consejos sobre ideas de conservación. ",
-          "English": "Inglés",
-          "Spanish": "Español",
-          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "En lugar de comprar botellas de agua desechables, utiliza una botella rellenable. Las botellas de un solo uso llenan nuestros vertederos y atrapan agua valiosa.",
-          "Choose the correct water bottle. Then click the faucet to fill. ": "Elige la botella de agua correcta. A continuación, pulsa en el grifo para llenarla. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de ahorrar agua es ducharse menos tiempo. Prueba a programar un temporizador de cinco minutos.",
-          "Click on the timer": "Pulsa sobre el temporizador"
+          "Home": "Inicio"
         },
         "csd-apps for good-2_2022": {
           "Next": "Siguiente",
-          "Home": "Inicio",
-          "Water Conservation Tips": "Consejos para conservar el agua",
-          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Es importante que todos pongamos de nuestra parte para consumir menos agua. Pulsa en esta aplicación para obtener consejos sobre ideas de conservación. ",
-          "English": "Inglés",
-          "Spanish": "Español",
-          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "En lugar de comprar botellas de agua desechables, utiliza una botella rellenable. Las botellas de un solo uso llenan nuestros vertederos y atrapan agua valiosa.",
-          "Choose the correct water bottle. Then click the faucet to fill. ": "Elige la botella de agua correcta. A continuación, pulsa en el grifo para llenarla. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de ahorrar agua es ducharse menos tiempo. Prueba a programar un temporizador de cinco minutos.",
-          "Click on the timer": "Pulsa sobre el temporizador"
+          "Home": "Inicio"
         },
         "csd-apps for good-3": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4": "4",
-          "???": "???",
-          "4-Square = 4 Times the Fun": "4 cuadrados = 4 veces más divertido",
-          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "¿Has querido aprender a jugar al divertido y social juego del 4 x 4 pero no sabías por dónde empezar? ¡Esta es tu aplicación!",
-          "More Info": "Más información",
-          "How many players do you need to play 4-Square? Click to find out!": "¿Cuántos jugadores hacen falta para jugar al 4 x 4? ¡Pulsa para averiguarlo!",
-          "Start Again": "Volver a empezar",
-          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jugar al 4 x 4, cada jugador se coloca cerca de una de las cuatro casillas marcadas en el suelo. Las casillas están ordenadas del 1 al 4, siendo una la casilla \"superior\". El jugador de la casilla 1 comienza el juego botando la pelota en su casilla y luego golpeándola o dándole un manotazo en otra casilla. La pelota no debe volver a tocar la casilla del jugador original después del bote inicial. Si la pelota bota en la casilla de un jugador, éste debe golpear la pelota en otra casilla antes de que vuelva a botar. Sólo pueden golpear la pelota una vez. Pero, ¿qué ocurre si la pelota golpea la línea? Hay muchas reglas diferentes sobre lo que hay que hacer si la pelota toca la línea: debes acordar con tus amigos si las líneas están dentro o fuera. Si golpeas la pelota fuera de los límites o rebota dos veces en tu casilla, estás fuera. Todo el mundo pasa a la siguiente casilla más alta disponible (el objetivo es permanecer en la primera casilla el mayor tiempo posible). Si quedas fuera, pasas al final de la fila y un nuevo jugador ocupa la plaza vacía en la casilla 4. "
+          "???": "???"
         },
         "csd-apps for good-3_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4": "4",
-          "???": "???",
-          "4-Square = 4 Times the Fun": "4 cuadrados = 4 veces más divertido",
-          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "¿Has querido aprender a jugar al divertido y social juego del 4 x 4 pero no sabías por dónde empezar? ¡Esta es tu aplicación!",
-          "More Info": "Más información",
-          "How many players do you need to play 4-Square? Click to find out!": "¿Cuántos jugadores hacen falta para jugar al 4 x 4? ¡Pulsa para averiguarlo!",
-          "Start Again": "Volver a empezar",
-          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": "Para jugar al 4 x 4, cada jugador se coloca cerca de una de las cuatro casillas marcadas en el suelo. Las casillas están ordenadas del 1 al 4, siendo una la casilla \"superior\". El jugador de la casilla 1 comienza el juego botando la pelota en su casilla y luego golpeándola o dándole un manotazo en otra casilla. La pelota no debe volver a tocar la casilla del jugador original después del bote inicial. Si la pelota bota en la casilla de un jugador, éste debe golpear la pelota en otra casilla antes de que vuelva a botar. Sólo pueden golpear la pelota una vez. Pero, ¿qué ocurre si la pelota golpea la línea? Hay muchas reglas diferentes sobre lo que hay que hacer si la pelota toca la línea: debes acordar con tus amigos si las líneas están dentro o fuera. Si golpeas la pelota fuera de los límites o rebota dos veces en tu casilla, estás fuera. Todo el mundo pasa a la siguiente casilla más alta disponible (el objetivo es permanecer en la primera casilla el mayor tiempo posible). Si quedas fuera, pasas al final de la fila y un nuevo jugador ocupa la plaza vacía en la casilla 4. "
+          "???": "???"
         },
         "csd-explore ui-2": {
           "Next": "Siguiente",
-          "Home": "Inicio",
-          "Water Conservation Tips": "Consejos para conservar el agua",
-          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Es importante que todos pongamos de nuestra parte para consumir menos agua. Pulsa en esta aplicación para obtener consejos sobre ideas de conservación. ",
-          "English": "Inglés",
-          "Spanish": "Español",
-          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "En lugar de comprar botellas de agua desechables, utiliza una botella rellenable. Las botellas de un solo uso llenan nuestros vertederos y atrapan agua valiosa.",
-          "Choose the correct water bottle. Then click the faucet to fill. ": "Elige la botella de agua correcta. A continuación, pulsa en el grifo para llenarla. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de ahorrar agua es ducharse menos tiempo. Prueba a programar un temporizador de cinco minutos.",
-          "Click on the timer": "Pulsa sobre el temporizador"
+          "Home": "Inicio"
         },
         "csd-explore ui-2_2022": {
           "Next": "Siguiente",
-          "Home": "Inicio",
-          "Water Conservation Tips": "Consejos para conservar el agua",
-          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "Es importante que todos pongamos de nuestra parte para consumir menos agua. Pulsa en esta aplicación para obtener consejos sobre ideas de conservación. ",
-          "English": "Inglés",
-          "Spanish": "Español",
-          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "En lugar de comprar botellas de agua desechables, utiliza una botella rellenable. Las botellas de un solo uso llenan nuestros vertederos y atrapan agua valiosa.",
-          "Choose the correct water bottle. Then click the faucet to fill. ": "Elige la botella de agua correcta. A continuación, pulsa en el grifo para llenarla. ",
-          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "Otra forma de ahorrar agua es ducharse menos tiempo. Prueba a programar un temporizador de cinco minutos.",
-          "Click on the timer": "Pulsa sobre el temporizador"
+          "Home": "Inicio"
         },
         "csd-explore ui-3": {
           "1": "1",
@@ -3090,24 +2658,7 @@
           "28": "28",
           "29": "29",
           "30": "30",
-          "31": "31",
-          "Choose your Birthday!": "¡Elige tu cumpleaños!",
-          "Find out if it's your birthday!": "¡Averigua si es tu cumpleaños!",
-          "January": "Enero",
-          "February": "Febrero",
-          "March": "Marzo",
-          "April": "Abril",
-          "May": "Mayo",
-          "June": "Junio",
-          "July": "Julio",
-          "August": "Agosto",
-          "September": "Septiembre",
-          "October": "Octubre",
-          "November": "Noviembre",
-          "December": "Diciembre",
-          "It's your birthday!": "¡Es tu cumpleaños!",
-          "It's not your birthday yet this year!": "¡Este año, todavía no es tu cumpleaños!",
-          "It was already your birthday this year!!": "¡¡Ya fue tu cumpleaños este año!!"
+          "31": "31"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
@@ -3140,80 +2691,15 @@
           "28": "28",
           "29": "29",
           "30": "30",
-          "31": "31",
-          "Choose your Birthday!": "¡Elige tu cumpleaños!",
-          "Find out if it's your birthday!": "¡Averigua si es tu cumpleaños!",
-          "January": "Enero",
-          "February": "Febrero",
-          "March": "Marzo",
-          "April": "Abril",
-          "May": "Mayo",
-          "June": "Junio",
-          "July": "Julio",
-          "August": "Agosto",
-          "September": "Septiembre",
-          "October": "Octubre",
-          "November": "Noviembre",
-          "December": "Diciembre",
-          "It's your birthday!": "¡Es tu cumpleaños!",
-          "It's not your birthday yet this year!": "¡Este año, todavía no es tu cumpleaños!",
-          "It was already your birthday this year!!": "¡¡Ya fue tu cumpleaños este año!!"
+          "31": "31"
         },
         "csd-explore ui-4": {
           "Correct!": "¡Correcto!",
-          "Sorry!": "¡Lo siento!",
-          "National Park Quiz": "Cuestionario sobre Parques Nacionales",
-          "Start!": "¡Comenzar!",
-          "What was the first national park?": "¿Cuál fue el primer parque nacional?",
-          "Yosemite": "Yosemite",
-          "Yellowstone": "Yellowstone",
-          "Acadia": "Acadia",
-          "Great Smoky Mountains": "Great Smoky Mountains",
-          "Which is the largest national park?": "¿Cuál es el mayor parque nacional?",
-          "Wrangell-St. Elias": "Wrangell-St. Elias",
-          "Death Valley": "Death Valley",
-          "Denali": "Denali",
-          "Which national park gets the most visitors?": "¿Qué parque nacional recibe más visitantes?",
-          "Grand Canyon": "Gran Cañón",
-          "Which national park has the largest tree in the world?": "¿Qué parque nacional tiene el árbol más grande del mundo?",
-          "Sequoia": "Sequoia",
-          "Redwood": "Redwood",
-          "Shenandoah": "Shenandoah",
-          "Olympic": "Olympic",
-          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Yellowstone fue el primer Parque Nacional, creado por el Presidente Ulysses S. Grant en 1872.",
-          "Next Question": "Siguiente pregunta",
-          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-San Elías es el mayor parque nacional, ¡incluso más grande que muchos países!",
-          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Great Smoky Mountains es el más visitado, con más de 11 millones de visitantes al año.",
-          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Sequoia alberga el árbol más grande del mundo, el General Sherman Tree.",
-          "Play Again": "Jugar de nuevo"
+          "Sorry!": "¡Lo siento!"
         },
         "csd-explore ui-4_2022": {
           "Correct!": "¡Correcto!",
-          "Sorry!": "¡Lo siento!",
-          "National Park Quiz": "Cuestionario sobre Parques Nacionales",
-          "Start!": "¡Comenzar!",
-          "What was the first national park?": "¿Cuál fue el primer parque nacional?",
-          "Yosemite": "Yosemite",
-          "Yellowstone": "Yellowstone",
-          "Acadia": "Acadia",
-          "Great Smoky Mountains": "Great Smoky Mountains",
-          "Which is the largest national park?": "¿Cuál es el mayor parque nacional?",
-          "Wrangell-St. Elias": "Wrangell-St. Elias",
-          "Death Valley": "Death Valley",
-          "Denali": "Denali",
-          "Which national park gets the most visitors?": "¿Qué parque nacional recibe más visitantes?",
-          "Grand Canyon": "Gran Cañón",
-          "Which national park has the largest tree in the world?": "¿Qué parque nacional tiene el árbol más grande del mundo?",
-          "Sequoia": "Sequoia",
-          "Redwood": "Redwood",
-          "Shenandoah": "Shenandoah",
-          "Olympic": "Olympic",
-          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "Yellowstone fue el primer Parque Nacional, creado por el Presidente Ulysses S. Grant en 1872.",
-          "Next Question": "Siguiente pregunta",
-          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "Wrangell-San Elías es el mayor parque nacional, ¡incluso más grande que muchos países!",
-          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "Great Smoky Mountains es el más visitado, con más de 11 millones de visitantes al año.",
-          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "Sequoia alberga el árbol más grande del mundo, el General Sherman Tree.",
-          "Play Again": "Jugar de nuevo"
+          "Sorry!": "¡Lo siento!"
         },
         "csd-explore ui-5": {
           "1": "1",
@@ -3246,62 +2732,7 @@
           "28": "28",
           "29": "29",
           "30": "30",
-          "31": "31",
-          "Enter your Birthday!": "¡Introduce tu fecha de nacimiento!",
-          "Find a writer!": "¡Encuentra un escritor!",
-          "January": "Enero",
-          "February": "Febrero",
-          "March": "Marzo",
-          "April": "Abril",
-          "May": "Mayo",
-          "June": "Junio",
-          "July": "Julio",
-          "August": "Agosto",
-          "September": "Septiembre",
-          "October": "Octubre",
-          "November": "Noviembre",
-          "December": "Diciembre",
-          "1998": "1998",
-          "1999": "1999",
-          "2000": "2000",
-          "2001": "2001",
-          "2002": "2002",
-          "2003": "2003",
-          "2004": "2004",
-          "2005": "2005",
-          "2006": "2006",
-          "2007": "2007",
-          "2008": "2008",
-          "2009": "2009",
-          "2010": "2010",
-          "2011": "2011",
-          "2012": "2012",
-          "2013": "2013",
-          "2014": "2014",
-          "2015": "2015",
-          "Anchee Min": "Anchee Min",
-          "image by Slowking4, GFDL 1.2": "imagen de Slowking4, GFDL 1.2",
-          "You were born on a": "Naciste en un",
-          "Monday": "Lunes",
-          "just like": "igual que",
-          "N. Scott Momaday": "N. Scott Momaday",
-          "public domain image": "imagen de dominio público",
-          "Tuesday": "Martes",
-          "Toni Morrison": "Toni Morrison",
-          "image by John Mathew Smith, CC-BY-SA 2.0": "imagen de John Mathew Smith, CC-BY-SA 2.0",
-          "Wednesday": "Miércoles",
-          "Khaled Hosseini": "Khaled Hosseini",
-          "Public Domain Image": "Imagen de dominio público",
-          "Thursday": "Jueves",
-          "Langston Hughes": "Langston Hughes",
-          "Public Domain": "Dominio público",
-          "Friday": "Viernes",
-          "Margaret Atwood": "Margaret Atwood",
-          "image by Vanwaffle, CC BY-SA 3.0": "imagen de Vanwaffle, CC BY-SA 3.0",
-          "Saturday": "Sábado",
-          "Gabriel Garcia Marquez": "Gabriel García Márquez",
-          "image by Jose Lara, CC-BY-SA": "imagen de José Lara, CC-BY-SA",
-          "Sunday": "Domingo"
+          "31": "31"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
@@ -3334,82 +2765,13 @@
           "28": "28",
           "29": "29",
           "30": "30",
-          "31": "31",
-          "Enter your Birthday!": "¡Introduce tu fecha de nacimiento!",
-          "Find a writer!": "¡Encuentra un escritor!",
-          "January": "Enero",
-          "February": "Febrero",
-          "March": "Marzo",
-          "April": "Abril",
-          "May": "Mayo",
-          "June": "Junio",
-          "July": "Julio",
-          "August": "Agosto",
-          "September": "Septiembre",
-          "October": "Octubre",
-          "November": "Noviembre",
-          "December": "Diciembre",
-          "1998": "1998",
-          "1999": "1999",
-          "2000": "2000",
-          "2001": "2001",
-          "2002": "2002",
-          "2003": "2003",
-          "2004": "2004",
-          "2005": "2005",
-          "2006": "2006",
-          "2007": "2007",
-          "2008": "2008",
-          "2009": "2009",
-          "2010": "2010",
-          "2011": "2011",
-          "2012": "2012",
-          "2013": "2013",
-          "2014": "2014",
-          "2015": "2015",
-          "Anchee Min": "Anchee Min",
-          "image by Slowking4, GFDL 1.2": "imagen de Slowking4, GFDL 1.2",
-          "You were born on a": "Naciste en un",
-          "Monday": "Lunes",
-          "just like": "igual que",
-          "N. Scott Momaday": "N. Scott Momaday",
-          "public domain image": "imagen de dominio público",
-          "Tuesday": "Martes",
-          "Toni Morrison": "Toni Morrison",
-          "image by John Mathew Smith, CC-BY-SA 2.0": "imagen de John Mathew Smith, CC-BY-SA 2.0",
-          "Wednesday": "Miércoles",
-          "Khaled Hosseini": "Khaled Hosseini",
-          "Public Domain Image": "Imagen de dominio público",
-          "Thursday": "Jueves",
-          "Langston Hughes": "Langston Hughes",
-          "Public Domain": "Dominio público",
-          "Friday": "Viernes",
-          "Margaret Atwood": "Margaret Atwood",
-          "image by Vanwaffle, CC BY-SA 3.0": "imagen de Vanwaffle, CC BY-SA 3.0",
-          "Saturday": "Sábado",
-          "Gabriel Garcia Marquez": "Gabriel García Márquez",
-          "image by Jose Lara, CC-BY-SA": "imagen de José Lara, CC-BY-SA",
-          "Sunday": "Domingo"
+          "31": "31"
         },
         "csd-explore ui-6": {
-          "Next": "Siguiente",
-          "Mad Libs!": "¡Mad Libs!",
-          "Learning to Drive": "Aprendiendo a Conducir",
-          "Plural Noun": "Sustantivo plural",
-          "Noun": "Sustantivo",
-          "Song": "Canción",
-          "Verb": "Verbo",
-          "Play again": "Reproducir de nuevo"
+          "Next": "Siguiente"
         },
         "csd-explore ui-6_2022": {
-          "Next": "Siguiente",
-          "Mad Libs!": "¡Mad Libs!",
-          "Learning to Drive": "Aprendiendo a Conducir",
-          "Plural Noun": "Sustantivo plural",
-          "Noun": "Sustantivo",
-          "Song": "Canción",
-          "Verb": "Verbo",
-          "Play again": "Reproducir de nuevo"
+          "Next": "Siguiente"
         },
         "ml-L2 supervised - green glass door-2021": {
           "Green Glass Door": "Puerta de Cristal Verde",
@@ -3683,8 +3045,7 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
-          "Temperature": "Temperatura"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
         },
         "ml-models in applab-choice if quotes_2022": {
           "3": "3",
@@ -3702,8 +3063,7 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
-          "Temperature": "Temperatura"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
         },
         "ml-models in applab-choice if wrong place": {
           "3": "3",
@@ -3721,8 +3081,7 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
-          "Temperature": "Temperatura"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
         },
         "ml-models in applab-choice if wrong place_2022": {
           "3": "3",
@@ -3740,8 +3099,7 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
-          "Temperature": "Temperatura"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
         },
         "ml-models in applab-choice intended warnings": {
           "3": "3",
@@ -3763,8 +3121,7 @@
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
           "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
           "Intended Uses": "Finalidad de Uso",
-          "Limitations and Warnings": "Limitaciones y Advertencias",
-          "Temperature": "Temperatura"
+          "Limitations and Warnings": "Limitaciones y Advertencias"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "3": "3",
@@ -3786,8 +3143,7 @@
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
           "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
           "Intended Uses": "Finalidad de Uso",
-          "Limitations and Warnings": "Limitaciones y Advertencias",
-          "Temperature": "Temperatura"
+          "Limitations and Warnings": "Limitaciones y Advertencias"
         },
         "ml-models in applab-choice predict typos": {
           "3": "3",
@@ -3805,8 +3161,7 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
-          "Temperature": "Temperatura"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
         },
         "ml-models in applab-choice predict typos_2022": {
           "3": "3",
@@ -3824,8 +3179,7 @@
           "Pet Recommendation: Fish!": "Mascota recomendada: ¡Peces!",
           "Pet Recommendation: Iguana!": "Mascota recomendada: ¡Iguana!",
           "Pet Recommendation: Parakeet": "Mascota recomendada: ¡Periquito!",
-          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!",
-          "Temperature": "Temperatura"
+          "Pet Recommendation: Dog!": "Mascota recomendada: ¡Perro!"
         },
         "ml-models in applab-zoo assessment": {
           "Yes": "Sí",
@@ -4037,8 +3391,7 @@
           "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "Esta función determina la temperatura actual mediante un sensor de temperatura. Si hace demasiado calor, el coche puede sobrecalentarse y averiarse. Si hace demasiado frío, las piezas del coche pueden congelarse o apretarse y funcionar mal.",
           "What time of day is it?": "¿Qué hora es?",
           "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "Esta función determina la hora del día mediante un sensor de luz. La conducción al atardecer y por la noche suele ser más peligrosa que a plena luz del día.",
-          "Predict!": "¡Predecir!",
-          "Alert": "Alerta"
+          "Predict!": "¡Predecir!"
         },
         "ml-use model card-example3A_2022": {
           "Driver Alert System": "Sistema de Alerta al Conductor",
@@ -4066,8 +3419,7 @@
           "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "Esta función determina la temperatura actual mediante un sensor de temperatura. Si hace demasiado calor, el coche puede sobrecalentarse y averiarse. Si hace demasiado frío, las piezas del coche pueden congelarse o apretarse y funcionar mal.",
           "What time of day is it?": "¿Qué hora es?",
           "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "Esta función determina la hora del día mediante un sensor de luz. La conducción al atardecer y por la noche suele ser más peligrosa que a plena luz del día.",
-          "Predict!": "¡Predecir!",
-          "Alert": "Alerta"
+          "Predict!": "¡Predecir!"
         },
         "CSD U6 Catch the Mouse": {
           "Click on the mouse!": "¡Haz clic en el ratón!"
@@ -4323,8 +3675,7 @@
         },
         "CSD U6 - Physical Output - PA_2222": {
           "On": "Encendido",
-          "Off": "Apagado",
-          "Blink": "Parpadeo"
+          "Off": "Apagado"
         },
         "CSD U6 - Screen Inputs - PracA_2222": {
           "image://bedroom.png": "imagen://bedroom.png",
@@ -4616,8 +3967,7 @@
           "Output Area:": "Área de salida:"
         },
         "CSDU6 - UI and Inputs - getNumber practice": {
-          "Value:": "Valor:",
-          "????": "????"
+          "Value:": "Valor:"
         },
         "CSDU6 - UI and Inputs - setProperty": {
           "Click Me!": "¡Púlsame!"
@@ -4769,181 +4119,6 @@
           "blink": "parpadeo",
           "pulse": "pulso",
           "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "Elige tu estilo de LED y, a continuación, utiliza los botones izquierdo y derecho de tu Circuit Playground para apagar y encender el LED."
-        },
-        "CSD U6 - Accelerometer - A_2222": {
-          "Pioneers in Electronics": "Pioneros en Electrónica",
-          "Click on an image below to learn more about each person": "Pulsa en una de las imágenes siguientes para saber más sobre cada persona"
-        },
-        "CSD U6 - Accelerometer - ChalA_2222": {
-          "pitch:": "cabeceo:",
-          "roll:": "balanceo:"
-        },
-        "CSD U6 - Accelerometer - ChalC_2222": {
-          "Wheels Are Aligned": "Las ruedas están alineadas"
-        },
-        "CSD U6 - Accelerometer - P_2222": {
-          "roll:": "balanceo:",
-          "pitch:": "cabeceo:"
-        },
-        "CSD U6 - Accelerometer - SB1_2222": {
-          "pitch:": "cabeceo:",
-          "roll:": "balanceo:"
-        },
-        "CSD U6 - Accelerometer - SB3_2222": {
-          "????": "????"
-        },
-        "CSD U6 - Combine Inputs - ChalA_2222": {
-          "Mood Ring": "Anillo de Estado de Ánimo",
-          "Choose your mood from the dropdown below and the LED ring will update to reflect it": "Elige tu estado de ánimo en el menú desplegable y el anillo LED se actualizará para reflejarlo.",
-          "Excited": "Emocionado",
-          "Relaxed": "Relajado",
-          "(Add your mood here)": "(Añade aquí tu estado de ánimo)"
-        },
-        "CSD U6 - Combine Inputs - ChalC_2222": {
-          "Trivia Game!": "¡Juego de Trivial!",
-          "[Enter your trivia question here!]": "[¡Introduce aquí tu pregunta del trivial!]",
-          "Check Answer!": "¡Comprueba la respuesta!",
-          "Make sure to enter your answer in all lowercase!": "¡Asegúrate de escribir tu respuesta en minúsculas!"
-        },
-        "CSD U6 - Functions - SB6_2222": {
-          "Click ona food to offer it to the aliens!": "¡Pulsa sobre un alimento para ofrecérselo a los alienígenas!"
-        },
-        "CSD U6 - Functions - SB_2222": {
-          "Light Show!": "¡Espectáculo de luces!"
-        },
-        "CSD U6 - Music - ChalB_2222": {
-          "Happy Birthday": "Cumpleaños Feliz",
-          "My Song": "Mi canción"
-        },
-        "CSD U6 - Music - P_2222": {
-          "261": "261",
-          "329": "329",
-          "493": "493",
-          "392": "392",
-          "E4": "E4",
-          "B4": "B4",
-          "C4": "C4",
-          "G4": "G4"
-        },
-        "CSD U6 - Music - SB2.1_2022": {
-          "Click the buttons from top to bottom to hear a song!": "¡Pulsa los botones de arriba abajo para escuchar una canción!",
-          "Note 1": "Nota 1",
-          "Note 2": "Nota 2",
-          "Note 3": "Nota 3",
-          "Note 4": "Nota 4",
-          "Note 5": "Nota 5",
-          "Note 6": "Nota 6",
-          "Note 7": "Nota 7",
-          "Note 8": "Nota 8"
-        },
-        "CSD U6 - Music - SB2.2_2022": {
-          "Click the buttons from top to bottom to hear a song!": "¡Pulsa los botones de arriba abajo para escuchar una canción!",
-          "Note 1": "Nota 1",
-          "Note 2": "Nota 2",
-          "Note 3": "Nota 3",
-          "Note 4": "Nota 4",
-          "Note 5": "Nota 5",
-          "Note 6": "Nota 6",
-          "Note 7": "Nota 7",
-          "Note 8": "Nota 8"
-        },
-        "CSD U6 - Music - SB2_2222": {
-          "C1": "C1",
-          "C2": "C2",
-          "C3": "C3",
-          "C4": "C4",
-          "C5": "C5",
-          "C6": "C6",
-          "C7": "C7",
-          "C8": "C8",
-          "Press each button to hear the note in that octave!": "¡Pulsa cada botón para escuchar la nota de esa octava!"
-        },
-        "CSD U6 - Music - SB5_2222": {
-          "Press to Ring the Doorbell!": "¡Pulsa para llamar al timbre!"
-        },
-        "CSD U6 - Physical Output - A_2222": {
-          "Little Alien Friend": "Pequeño Amigo Extraterrestre",
-          "Wake Up": "Despertar",
-          "Listen": "Escuchar",
-          "Analyze": "Analizar",
-          "Use this app to communicate with the Little Alien Friend toy!": "¡Utiliza esta aplicación para comunicarte con el juguete Little Alien Friend!",
-          "Sleep": "Dormir"
-        },
-        "CSD U6 - Sensors - ChalC_2222": {
-          "Volume Meter!": "¡Medidor de Volumen!"
-        },
-        "CSD U6 - Sensors - PA_2222": {
-          "Current Temperature in Fahrenheit and Celsius": "Temperatura actual en grados Fahrenheit y Celsius"
-        },
-        "CSD U6 - Sensors - PB_2222": {
-          "Blow On The Circuit Playground to Blow Out the Candles!": "¡Sopla en el Circuit Playground para apagar las velas!"
-        },
-        "CSD U6 - Sensors - PD_2222": {
-          "Volume Meter!": "¡Medidor de Volumen!"
-        },
-        "CSD U6 directional LEDs roll": {
-          "????": "????"
-        },
-        "CSD U6 directional LEDs roll_2018": {
-          "????": "????"
-        },
-        "CSD U6 directional LEDs roll_2019": {
-          "????": "????"
-        },
-        "CSD U6 directional LEDs roll_2021": {
-          "????": "????"
-        },
-        "CSD U6 investigate orientation": {
-          "pitch:": "cabeceo:",
-          "roll:": "balanceo:"
-        },
-        "CSD U6 investigate orientation_2018": {
-          "pitch:": "cabeceo:",
-          "roll:": "balanceo:"
-        },
-        "CSD U6 investigate orientation_2019": {
-          "pitch:": "cabeceo:",
-          "roll:": "balanceo:"
-        },
-        "CSD U6 investigate orientation_2021": {
-          "pitch:": "cabeceo:",
-          "roll:": "balanceo:"
-        },
-        "csd-apps for good-1": {
-          "Do More Durham": "Más en Durham",
-          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Participa en los espacios ajardinados de Durham. Puedes cultivar tus propios alimentos y contribuir al estilo de vida saludable de Durham. ",
-          "Seeds": "Semillas",
-          "Briggs Avenue Community Garden": "Huerto Comunitario de Briggs Avenue",
-          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "¿Te gusta la naturaleza? Puedes ayudar a limpiar nuestros parques o guiar a otros en sus excursiones. Sean cuales sean tus intereses, hay una forma de participar. ",
-          "Eno River Association": "Asociación del Río Eno",
-          "Durham Central Park": "Parque Central de Durham"
-        },
-        "csd-apps for good-1_2022": {
-          "Do More Durham": "Más en Durham",
-          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "Participa en los espacios ajardinados de Durham. Puedes cultivar tus propios alimentos y contribuir al estilo de vida saludable de Durham. ",
-          "Seeds": "Semillas",
-          "Briggs Avenue Community Garden": "Huerto Comunitario de Briggs Avenue",
-          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "¿Te gusta la naturaleza? Puedes ayudar a limpiar nuestros parques o guiar a otros en sus excursiones. Sean cuales sean tus intereses, hay una forma de participar. ",
-          "Eno River Association": "Asociación del Río Eno",
-          "Durham Central Park": "Parque Central de Durham"
-        },
-        "csd-explore ui-1": {
-          "Chinese": "Chino",
-          "Italian": "Italiano",
-          "Breakfast": "Desayuno",
-          "Type of Restaurant": "Tipo de restaurante",
-          "Dollars per person": "Euros por persona",
-          "Where Should I Eat?": "¿Dónde comer?",
-          "$15": "15 €"
-        },
-        "csd-explore ui-1_2022": {
-          "Chinese": "Chino",
-          "Italian": "Italiano",
-          "Breakfast": "Desayuno",
-          "Type of Restaurant": "Tipo de restaurante",
-          "Dollars per person": "Euros por persona",
-          "Where Should I Eat?": "¿Dónde comer?",
-          "$15": "15 €"
         }
       }
     }

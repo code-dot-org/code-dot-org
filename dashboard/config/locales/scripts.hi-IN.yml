@@ -5126,15 +5126,3 @@ hi:
           lesson_groups:
             lessonGroup-4:
               display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: इनपुट्स और आउटपुट्स
-            lessonGroup-4:
-              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: ऐप लैब का परिचय
-            lessonGroup-3:
-              display_name: इनपुट्स और आउटपुट्स

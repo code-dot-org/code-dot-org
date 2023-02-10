@@ -135,10 +135,10 @@ ca:
         title: Programació de paper quadriculat
         desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant un grup d'ordres predefinides per dirigir els seus companys a reproduir un dibuix.
       courseD_unplugged_relayProgramming:
-        title: Programació amb relleus
+        title: Programació en relleus
         desc: Els estudiants executen una cursa de relleus on corren a través del pati per escriure un algoritme basat en la imatge "Programació de paper quadriculat". Només poden escriure una instrucció cada vegada i si hi ha un error han d'esborrar-ho tot fins el principi.
       courseD_unplugged_conditionalsCards:
-        title: Condicionals amb cartes
+        title: Condicionals amb targetes
         desc: Per aprendre de les declaracions de condicionals, els alumnes juguen un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
       courseD_unplugged_binaryImages:
         title: Imatges binàries
@@ -202,7 +202,7 @@ ca:
       MoveItMoveIt_2018:
         title: A moure's!
       RelayProgramming_2018:
-        title: Programació amb relleus
+        title: Programació en relleus
       courseB_unplugged_MRF_2019:
         title: Els meus amics robòtics
       courseB_unplugged_loopyMRF_2019:
@@ -214,7 +214,7 @@ ca:
         title: Programació de paper quadriculat
         desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant un grup d'ordres predefinides per dirigir els seus companys a reproduir un dibuix.
       RelayProgramming_2018_2019:
-        title: Programació amb relleus
+        title: Programació en relleus
       courseD_unplugged_digitalCitizenship_2019:
         title: Activitat sense connexió
       BinaryImages_2019:
