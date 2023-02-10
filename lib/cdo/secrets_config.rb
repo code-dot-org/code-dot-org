@@ -1,5 +1,6 @@
 require 'cdo/config'
 require 'cdo/lazy'
+require 'cdo/aws/cloud_formation'
 
 module Cdo
   # Prepend this module to a Cdo::Config to process lazy-loaded secrets contained in special tags.
@@ -16,7 +17,7 @@ module Cdo
     # Generate path to a Secret that was provisioned for a specific CloudFormation Stack. This enables
     # configuration settings to have different values for different deployments that have the same environment type.
     def self.stack_specific_secret_path(key)
-      stack = current_stack_name
+      stack = AWS::CloudFormation.current_stack_name
       stack ? "CfnStack/#{stack}/#{key}" : nil
     end
 
@@ -81,7 +82,7 @@ module Cdo
       table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
         cdo_secrets.required(*value.to_s.scan(SECRET_REGEX).flatten)
         table[key] = Cdo.lazy do
-          stack_specific_secret_path = AWS::CloudFormation.stack_specific_secret_path(key)
+          stack_specific_secret_path = Cdo::SecretsConfig.stack_specific_secret_path(key)
           if value.is_a?(Secret)
             begin
               # First try looking for a Stack-specific secret.

@@ -54,6 +54,9 @@ module AWS
         value
     rescue Net::OpenTimeout # This code is not executing on an AWS EC2 Instance nor in an ECS container or Lambda.
       nil
+    rescue StandardError => error
+      CDO.log.info error.message
+      nil
     end
 
     # @param [Cdo::CloudFormation::StackTemplate] stack
