@@ -270,7 +270,21 @@ ol.steps-list {
       line-height: 1.7;
       border: 2px solid;
       border-radius: 100%;
-      outline: 0.25em solid $brand_primary_light;
+      position: relative;
+
+      // This creates the light blue border around the
+      // charcoal border — would prefer to use the outline
+      // attribute but it doesn't work in Safari
+      &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        bottom: -8px;
+        left: -8px;
+        border: 6px solid $brand_primary_light;
+        border-radius: 100%;
+      }
     }
   }
 
