@@ -22,7 +22,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
     assert announcement
     assert_equal("https://code.org/images/professional-learning-2019-closing-soon.png", announcement[:image])
     assert_equal("Join us in this movement and submit your application today.", announcement[:body])
-    assert_equal("Don't miss out. Apply today!", announcement[:title])
+    assert_equal("Don’t miss out. Apply today!", announcement[:title])
     assert_equal("Join us", announcement[:buttonText])
     assert_equal("https://code.org/educate/professional-learning/middle-high", announcement[:buttonUrl])
     assert_equal("teacher-apps-closing-2020-sign-up", announcement[:buttonId])

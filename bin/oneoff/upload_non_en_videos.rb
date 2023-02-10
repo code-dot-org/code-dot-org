@@ -150,7 +150,7 @@ end
 
 def deprecation_message(options)
   puts "DEPRECATION MESSAGE: This script is currently deprecated and archived to serve as reference.
-  This script uses OAuth out-of-band (OOB) flow, OOB requests to Google's OAuth 2.0 authorization endpoint for existing clients are blocked, and will return an Error 400: invalid_request."
+  This script uses OAuth out-of-band (OOB) flow, OOB requests to Google’s OAuth 2.0 authorization endpoint for existing clients are blocked, and will return an Error 400: invalid_request."
 end
 
 options = parse_options(ARGV)

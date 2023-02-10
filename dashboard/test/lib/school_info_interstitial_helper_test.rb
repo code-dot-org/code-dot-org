@@ -5,7 +5,7 @@ require 'timecop'
 # We should pop up this interstitial again every 7 days unless one of the following is true:
 # - The teacher already filled out all the fields (except location)
 # - They chose “Homeschool,” “After School”, "Organization" or “Other” for school type
-# - Teacher chose a country that's not “United States”
+# - Teacher chose a country that’s not “United States”
 class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   setup do
     Timecop.freeze

@@ -23,7 +23,7 @@ class PurgedAccountLog
 
     # These ids _should_ become meaningless since the user is
     # deleted from these systems - but having them here allows
-    # us to verify that the ids don't exist elsewhere.
+    # us to verify that the ids don’t exist elsewhere.
     @pardot_ids = []
     @poste_contact_ids = []
 

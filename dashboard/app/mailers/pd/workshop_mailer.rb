@@ -319,7 +319,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
         "See you soon for your upcoming #{workshop.course} workshop!"
       else
         # This is sent for the first enrollment, and also for the 3-day reminder.
-        "You're enrolled! View details for your upcoming #{workshop.course} workshop"
+        "You’re enrolled! View details for your upcoming #{workshop.course} workshop"
       end
     else
       'Your upcoming Code.org workshop and next steps'

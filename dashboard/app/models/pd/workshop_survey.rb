@@ -184,7 +184,7 @@ class Pd::WorkshopSurvey < ApplicationRecord
         'From my principal or school district/administration',
         'Email/newsletter from a local organization',
         'School district newsletter',
-        'Workshop organizer\'s website',
+        'Workshop organizer’s website',
         'Education event/conference',
         OTHER
       ],

@@ -13,9 +13,9 @@ class WorkshopSurveyReportCsvConverterTest < ActionController::TestCase
 
   test 'WorkshopSurveyReportConverter converts to csv as expected' do
     expected = [
-      {Workshops: 'First Workshop', 'Overall Success Score (out of 6)' => 1, 'Is there anything else you\'d like to tell us about your experience at this workshop?' => 'hello / there'},
-      {Workshops: 'Second Workshop', 'Overall Success Score (out of 6)' => 2, 'Is there anything else you\'d like to tell us about your experience at this workshop?' => 'how / are / you'},
-      {Workshops: 'Third Workshop', 'Overall Success Score (out of 6)' => 3, 'Is there anything else you\'d like to tell us about your experience at this workshop?' => 'good / bye'}
+      {Workshops: 'First Workshop', 'Overall Success Score (out of 6)' => 1, 'Is there anything else you’d like to tell us about your experience at this workshop?' => 'hello / there'},
+      {Workshops: 'Second Workshop', 'Overall Success Score (out of 6)' => 2, 'Is there anything else you’d like to tell us about your experience at this workshop?' => 'how / are / you'},
+      {Workshops: 'Third Workshop', 'Overall Success Score (out of 6)' => 3, 'Is there anything else you’d like to tell us about your experience at this workshop?' => 'good / bye'}
     ]
 
     assert_equal expected, convert_to_csv(@survey_report)
