@@ -1,26 +1,23 @@
-<%= view :analytics_event_log_helper, event_name: nil %>
-
-<script type='text/javascript'>
-  // Log visits to the following pages found in .md.partial files.
-  // Since parameters can't be passed in to an .erb view from a .md.partial file,
-  // this solution of associating urls with events was opted for to be able to
-  // specify which event to trigger based on the page the user is on when
-  // '{{ visit_partial_event_logger }}' is present.
-  const partialUrlToEventMap = {
-    '/ai': 'AI_PAGE_VISIT_EVENT',
-    '/educate/csc': 'CSC_CURRICULUM_PAGE_VISITED_EVENT',
-    '/maker': 'PHYSICAL_COMPUTING_PAGE_VISITED_EVENT'
-  };
-  const currHref = window.location.href;
-  Object.keys(partialUrlToEventMap).forEach(key => {
-    if (currHref.includes(key)) {
-      const visitEvent = new CustomEvent('customLogEvent', {
-        detail: {
-          eventName: partialUrlToEventMap[key]
-        }
-      });
-      document.dispatchEvent(visitEvent);
-      return;
+<%
+  # Map path of where the .md.partial file is used to its associated visit page
+  # event.
+  def partial_url_to_event_map 
+    {
+      '/ai': AnalyticsConstants::AI_PAGE_VISIT_EVENT,
+      '/educate/csc': AnalyticsConstants::CSC_CURRICULUM_PAGE_VISITED_EVENT,
+      '/maker': AnalyticsConstants::PHYSICAL_COMPUTING_PAGE_VISITED_EVENT
     }
-  });
-</script>
+  end
+
+  def path
+    request.path
+  end
+
+  def event
+    partial_url_to_event_map.each do |curr_partial_path, curr_event|
+      return curr_event if path.include?(curr_partial_path.to_s)
+    end
+  end
+%>
+
+<%= view :analytics_event_log_helper, event_name: event %>
