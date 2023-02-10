@@ -1,9 +1,5 @@
 module CustomCops
   class ConsistentQuotationMark < RuboCop::Cop::Base
-    def_node_matcher :argument_name, <<~PATTERN
-      (send nil? :argument (:sym $_) ...)
-    PATTERN
-
     NOT_ALLOWED_CHARACTERS = [
       '“', # U+201C Left Double Quotation Mark
       '”', # U+201D Right Double Quotation Mark

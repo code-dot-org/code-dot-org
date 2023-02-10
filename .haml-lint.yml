@@ -16,4 +16,4 @@ exclude:
 - '/**/pegasus/test/fixtures/**/*.haml'
 - 'pegasus/test/fixtures/**/*.haml'
 require:
-- './tools/customLinters/haml-lint-consistent-quotation-mark.rb'
+- './tools/customLinters/haml_lint_consistent_quotation_mark.rb'
