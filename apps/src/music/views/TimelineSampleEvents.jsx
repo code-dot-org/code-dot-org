@@ -10,7 +10,8 @@ import TimelineElement from './TimelineElement';
 const TimelineSampleEvents = ({
   barWidth,
   eventVerticalSpace,
-  getEventHeight
+  getEventHeight,
+  currentMeasure
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
   const soundEvents = playerUtils.getSoundEvents();
@@ -34,6 +35,16 @@ const TimelineSampleEvents = ({
     return currentUniqueSounds.indexOf(id);
   };
 
+  const isCurrentlyPlaying = (when, length) => {
+    const currentMeasureExact = playerUtils.getCurrentMeasureExact();
+
+    return (
+      currentMeasureExact !== -1 &&
+      currentMeasureExact >= when &&
+      currentMeasureExact < when + length
+    );
+  };
+
   return (
     <>
       {soundEvents.map((eventData, index) => (
@@ -46,6 +57,10 @@ const TimelineSampleEvents = ({
           }
           top={20 + getVerticalOffsetForEventId(eventData.id)}
           left={barWidth * eventData.when}
+          isCurrentlyPlaying={isCurrentlyPlaying(
+            eventData.when,
+            playerUtils.getLengthForId(eventData.id)
+          )}
         />
       ))}
     </>
@@ -53,6 +68,7 @@ const TimelineSampleEvents = ({
 };
 
 TimelineSampleEvents.propTypes = {
+  currentMeasure: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired

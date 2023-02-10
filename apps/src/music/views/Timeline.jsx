@@ -41,6 +41,7 @@ const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
     : null;
 
   const timelineElementProps = {
+    currentMeasure,
     barWidth,
     eventVerticalSpace,
     getEventHeight
