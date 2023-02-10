@@ -235,8 +235,8 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     aes_key_wrap (1.0.1)
     afm (0.2.2)
-    annotate (3.1.1)
-      activerecord (>= 3.2, < 7.0)
+    annotate (3.2.0)
+      activerecord (>= 3.2, < 8.0)
       rake (>= 10.4, < 14.0)
     ansi (1.5.0)
     ast (2.4.2)
@@ -942,7 +942,7 @@ DEPENDENCIES
   activerecord-import (~> 1.0.3)
   acts_as_list
   addressable
-  annotate (~> 3.1.1)
+  annotate (~> 3.2.0)
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.0)
   aws-sdk-acm
