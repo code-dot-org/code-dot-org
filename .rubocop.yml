@@ -7,6 +7,7 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rails-accessibility
+  - ./rubocop-consistent-quotation-mark.rb
 
 AllCops:
   SuggestExtensions: false
