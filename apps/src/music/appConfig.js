@@ -6,7 +6,7 @@ import {BlockMode} from './constants';
  * a default if an invalid value or no value is found.
  */
 export const getBlockMode = () => {
-  const defaultMode = BlockMode.TRACKS; // Current default is Tracks
+  const defaultMode = BlockMode.SIMPLE2; // Current default mode
 
   let blockMode = queryParams('blocks') || defaultMode;
   blockMode = blockMode.replace(/^./, str => str.toUpperCase()); // Capitalize first letter if necessary

@@ -74,7 +74,7 @@ class UnconnectedMusicView extends React.Component {
       currentAudioElapsedTime: 0,
       updateNumber: 0,
       timelineAtTop: false,
-      showInstructions: true,
+      showInstructions: false,
       instructionsPosIndex
     };
   }
@@ -347,6 +347,7 @@ class UnconnectedMusicView extends React.Component {
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
+          instructionsAvailable={!!this.state.instructions}
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />
