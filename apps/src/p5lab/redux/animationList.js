@@ -472,6 +472,8 @@ export function addAnimation(key, props) {
   return (dispatch, getState) => {
     const isSpriteLab =
       getState().pageConstants && getState().pageConstants.isBlockly;
+    // Unlike Game Lab, Sprite Lab projects start with animations.
+    // We add new animations to the top of the list to make them more discoverable.
     const index = isSpriteLab ? 0 : null;
     dispatch(addAnimationAction(key, {...props, looping: true}, index));
     const isBackground = props.categories?.includes(BACKGROUNDS_CATEGORY);
@@ -517,6 +519,8 @@ export function addLibraryAnimation(props, isSpriteLab) {
   return (dispatch, getState) => {
     const key = createUuid();
     if (getState().pageConstants && getState().pageConstants.isBlockly) {
+      // Unlike Game Lab, Sprite Lab projects start with animations.
+      // We add new animations to the top of the list to make them more discoverable.
       dispatch(addAnimationAction(key, props, 0));
     } else {
       dispatch(addAnimationAction(key, props));

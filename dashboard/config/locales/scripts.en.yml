@@ -4624,6 +4624,7 @@ en:
           description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           name: outbreak
           student_description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          lessons: {}
         apps-for-good:
           lesson_groups: {}
           title: Apps for Good
@@ -10076,6 +10077,15 @@ en:
               display_name: 'Part 2: Asynchronous Post-Work'
           name: vpl-csd8-ayw-pilot-2022
           title: CS Discoveries Virtual Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-mappinglandmarks-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-mappinglandmarks-2023
+          title: Mapping Landmarks (2023)
           description_audience: ''
           description_short: ''
           description: ''
