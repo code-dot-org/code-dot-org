@@ -43,7 +43,10 @@ class ToggleGroup extends Component {
   render() {
     // Reverse children order if locale is RTL
     const {isRtl} = this.props;
-    const spanStyle = isRtl ? styles.buttonReverse : null;
+    const spanStyle = {
+      ...styles.buttons,
+      flexDirection: isRtl ? 'row-reverse' : 'row'
+    };
 
     return <span style={spanStyle}>{this.renderChildren()}</span>;
   }
@@ -80,9 +83,8 @@ class ToggleGroup extends Component {
 }
 
 const styles = {
-  buttonReverse: {
-    display: 'flex',
-    flexDirection: 'row-reverse'
+  buttons: {
+    display: 'flex'
   }
 };
 
