@@ -7,6 +7,7 @@ export const AnalyticsContext = React.createContext(null);
 export const PlayerUtilsContext = React.createContext({
   getSoundEvents: () => [],
   getCurrentMeasure: () => 0,
+  getCurrentMeasureExact: () => 0,
   convertMeasureToSeconds: () => 0,
   getTracksMetadata: () => {},
   getLengthForId: () => 0,

@@ -9,20 +9,29 @@ const typeToColorClass = {
   beat: moduleStyles.timelineElementPurple,
   bass: moduleStyles.timelineElementBlue,
   lead: moduleStyles.timelineElementGreen,
-  fx: moduleStyles.timelineElementYellow
+  fx: moduleStyles.timelineElementYellow,
+  active: moduleStyles.timelineElementWhite
 };
 
 /**
  * Renders a single element (sound) in the timeline
  */
-const TimelineElement = ({soundId, barWidth, height, top, left}) => {
+const TimelineElement = ({
+  soundId,
+  barWidth,
+  height,
+  top,
+  left,
+  isCurrentlyPlaying
+}) => {
   const playerUtils = useContext(PlayerUtilsContext);
 
   return (
     <div
       className={classNames(
         moduleStyles.timelineElement,
-        typeToColorClass[playerUtils.getTypeForId(soundId)]
+        typeToColorClass[playerUtils.getTypeForId(soundId)],
+        isCurrentlyPlaying && moduleStyles.timelineElementPlaying
       )}
       style={{
         width: barWidth * playerUtils.getLengthForId(soundId) - 4,
@@ -41,7 +50,8 @@ TimelineElement.propTypes = {
   barWidth: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   top: PropTypes.number,
-  left: PropTypes.number
+  left: PropTypes.number,
+  isCurrentlyPlaying: PropTypes.bool
 };
 
 export default TimelineElement;

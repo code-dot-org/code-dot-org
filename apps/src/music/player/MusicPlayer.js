@@ -204,6 +204,8 @@ export default class MusicPlayer {
     return 1 + this.getCurrentAudioElapsedTime() / this.secondsPerMeasure();
   }
 
+  // Returns the current measure, rounded to the beginning of the measure.
+  // Returns -1 if music is not playing.
   getCurrentMeasure() {
     const currentAudioTime = GetCurrentAudioTime();
     if (!this.isPlaying || currentAudioTime === null) {
@@ -211,6 +213,20 @@ export default class MusicPlayer {
     }
 
     return this.convertSecondsToMeasure(
+      currentAudioTime - this.startPlayingAudioTime
+    );
+  }
+
+  // Returns the current measure, with a fractional component representing the
+  // exact playhead.
+  // Returns -1 if music is not playing.
+  getCurrentMeasureExact() {
+    const currentAudioTime = GetCurrentAudioTime();
+    if (!this.isPlaying || currentAudioTime === null) {
+      return -1;
+    }
+
+    return this.convertSecondsToMeasureExact(
       currentAudioTime - this.startPlayingAudioTime
     );
   }
@@ -257,6 +273,10 @@ export default class MusicPlayer {
 
   convertSecondsToMeasure(seconds) {
     return Math.floor(seconds / this.secondsPerMeasure());
+  }
+
+  convertSecondsToMeasureExact(seconds) {
+    return seconds / this.secondsPerMeasure();
   }
 
   convertMeasureToSeconds(measure) {
