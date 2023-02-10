@@ -6,7 +6,7 @@ const blockStyles = cdoBlockStyles;
 const categoryStyles = {};
 const componentStyles = {
   toolboxBackgroundColour: '#424242', // gray-800
-  flyoutBackgroundColour: '#9e9e9e', // gray-500
+  flyoutBackgroundColour: '#121212',
   workspaceBackgroundColour: '#212121' // gray-900
 };
 
@@ -18,8 +18,7 @@ export const musicLabDarkTheme = GoogleBlockly.Theme.defineTheme(
     categoryStyles,
     componentStyles,
     fontStyle: {
-      family: '"Gotham 4r", sans-serif',
-      size: 16
+      family: '"Gotham 4r", sans-serif'
     }
   }
 );
