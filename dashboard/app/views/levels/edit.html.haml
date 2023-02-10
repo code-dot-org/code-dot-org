@@ -65,7 +65,9 @@
   .actions{style: "position: fixed; bottom: 0px; width: 100%; background-color: rgb(231, 232, 234); left: 0px; z-index: 900; display: flex; justify-content: flex-end; margin: 0px; align-items: center"}
     %span.publishLevelErrorMessage{style: "display: none; color: red; margin-bottom: 10px; margin-right: 5px; line-height: 35px;"}
       = "There was an error - scroll to the bottom to see"
+    = f.submit 'Save, publish, and reset progress', {:class => 'publishAndResetLevel', :style => "background-color: #E7E8EA; margin-bottom: 10px; margin-right: 10px; height: 35px"}
     = f.submit 'Save and publish your completed work', {:class => 'publishLevel', :style => "background-color: #f0c14b; margin-bottom: 10px; height: 35px"}
+
     %div{style: "display: flex; flex-direction: column; padding: 10px 10px 0px 10px"}
       - if @in_script
         %p Or, save, publish, and return to:
@@ -90,6 +92,11 @@
     });
 
     $('.publishLevel').click(function() {
+      saving = true;
+      $('#level_published').val(true);
+    });
+
+    $('.publishAndResetLevel').click(function() {
       saving = true;
       $('#level_published').val(true);
     });
