@@ -7,12 +7,12 @@ import BaseDialog from '../../templates/BaseDialog.jsx';
 import classNames from 'classnames';
 import styles from './animation-upload-button.module.scss';
 import {connect} from 'react-redux';
-import {setInRestrictedShareMode} from '../redux/animationTab.js';
+import {refreshInRestrictedShareMode} from '../../code-studio/projectRedux.js';
 
 function AnimationUploadButton({
   onUploadClick,
   shouldRestrictAnimationUpload,
-  setInRestrictedShareMode
+  refreshInRestrictedShareMode
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showRestrictedUploadWarning =
@@ -65,7 +65,7 @@ function AnimationUploadButton({
     project.setInRestrictedShareMode(true);
     setIsModalOpen(false);
     // redux setting, for use in share/remix
-    setInRestrictedShareMode(true);
+    refreshInRestrictedShareMode();
     onUploadClick();
   }
 
@@ -81,13 +81,13 @@ AnimationUploadButton.propTypes = {
   onUploadClick: PropTypes.func.isRequired,
   shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
   // populated from redux
-  setInRestrictedShareMode: PropTypes.func.isRequired
+  refreshInRestrictedShareMode: PropTypes.func.isRequired
 };
 
 export default connect(
   null,
   dispatch => ({
-    setInRestrictedShareMode: inRestrictedShareMode =>
-      dispatch(setInRestrictedShareMode(inRestrictedShareMode))
+    refreshInRestrictedShareMode: inRestrictedShareMode =>
+      dispatch(refreshInRestrictedShareMode(inRestrictedShareMode))
   })
 )(AnimationUploadButton);

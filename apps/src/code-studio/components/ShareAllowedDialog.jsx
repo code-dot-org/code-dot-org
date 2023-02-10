@@ -88,7 +88,8 @@ class ShareAllowedDialog extends React.Component {
     onUnpublish: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
-    userSharingDisabled: PropTypes.bool
+    userSharingDisabled: PropTypes.bool,
+    inRestrictedShareMode: PropTypes.bool
   };
 
   state = {
@@ -236,7 +237,12 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: p5labConstants.APP_WIDTH + 40
       };
     }
-    const {canPrint, canPublish, isPublished} = this.props;
+    const {
+      canPrint,
+      canPublish,
+      isPublished,
+      inRestrictedShareMode
+    } = this.props;
     return (
       <div>
         <BaseDialog
@@ -422,6 +428,13 @@ class ShareAllowedDialog extends React.Component {
                     </span>
                   </div>
                 )}
+                {inRestrictedShareMode && (
+                  <div style={{clear: 'both', marginTop: 10}}>
+                    <span style={{fontSize: 12}} className="thumbnail-warning">
+                      {i18n.restrictedShareInfo()}
+                    </span>
+                  </div>
+                )}
                 {this.state.replayVideoUnavailable && (
                   <div style={{clear: 'both', marginTop: 10}}>
                     <span style={{fontSize: 12}} className="thumbnail-warning">
@@ -553,7 +566,8 @@ export default connect(
   state => ({
     exportApp: state.pageConstants.exportApp,
     isOpen: state.shareDialog.isOpen,
-    isUnpublishPending: state.shareDialog.isUnpublishPending
+    isUnpublishPending: state.shareDialog.isUnpublishPending,
+    inRestrictedShareMode: state.project.inRestrictedShareMode
   }),
   dispatch => ({
     onClose: () => dispatch(hideShareDialog()),

@@ -5,16 +5,13 @@ import {P5LabInterfaceMode} from '../constants';
 const SELECT_ANIMATION = 'AnimationTab/SELECT_ANIMATION';
 const SELECT_BACKGROUND = 'AnimationTab/SELECT_BACKGROUND';
 const SET_COLUMN_SIZES = 'AnimationTab/SET_COLUMN_SIZES';
-const SET_IN_RESTRICTED_SHARE_MODE =
-  'AnimationPicker/SET_IN_RESTRICTED_SHARE_MODE';
 
 const initialState = {
   currentAnimations: {
     [P5LabInterfaceMode.ANIMATION]: '',
     [P5LabInterfaceMode.BACKGROUND]: ''
   },
-  columnSizes: [150, undefined],
-  inRestrictedShareMode: false
+  columnSizes: [150, undefined]
 };
 
 export default (state = initialState, action) => {
@@ -38,12 +35,6 @@ export default (state = initialState, action) => {
   }
   if (action.type === SET_COLUMN_SIZES) {
     return {...state, columnSizes: action.sizes};
-  }
-  if (action.type === SET_IN_RESTRICTED_SHARE_MODE) {
-    return {
-      ...state,
-      inRestrictedShareMode: action.inRestrictedShareMode
-    };
   }
   return state;
 };
@@ -73,14 +64,4 @@ export function selectBackground(animationKey) {
  */
 export function setColumnSizes(sizes) {
   return {type: SET_COLUMN_SIZES, sizes};
-}
-
-export function setInRestrictedShareMode(inRestrictedShareMode) {
-  console.log(
-    `in redux action, inRestrictedShareMode is ${inRestrictedShareMode}`
-  );
-  return {
-    type: SET_IN_RESTRICTED_SHARE_MODE,
-    inRestrictedShareMode
-  };
 }

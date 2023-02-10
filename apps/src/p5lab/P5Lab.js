@@ -73,7 +73,6 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {setInRestrictedShareMode} from './redux/animationTab';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -478,10 +477,6 @@ export default class P5Lab {
         this.defaultAnimations /* animationsForV3Migration */,
         this.isBlockly
       )
-    );
-
-    getStore().dispatch(
-      setInRestrictedShareMode(project.inRestrictedShareMode())
     );
 
     // Pre-register all audio preloads with our Sounds API, which will load

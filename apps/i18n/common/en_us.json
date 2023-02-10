@@ -1802,6 +1802,7 @@
   "restoreSection": "Restore Section",
   "restore": "Restore",
   "restoreThisVersion": "Restore this Version",
+  "restrictedShareInfo": "Publish and Remix are disabled on this project because you have chosen to upload images.",
   "restrictSectionAccess": "Lock this section",
   "retryProjectSaveDialogHeader": "Error saving your project",
   "retryProjectSaveDialogBody": "We can't save your project right now. Please check your internet connection and then click 'Try again' to keep working.",
