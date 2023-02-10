@@ -70,6 +70,8 @@ export default combineReducers({
   pendingFrames
 });
 
+const BACKGROUNDS_CATEGORY = 'backgrounds';
+
 /** pendingFrames is used for temporarily storing additional
  * frames before they get added to the animation in Piskel.
  * pendingFrames gets added to animation in PiskelEditor.jsx
@@ -393,7 +395,8 @@ const getOrderedKeysWithoutBackgrounds = serializedAnimationList => {
   return serializedAnimationList.orderedKeys.filter(animKey => {
     const animProps = serializedAnimationList.propsByKey[animKey];
     return (
-      !animProps.categories || !animProps.categories.includes('backgrounds')
+      !animProps.categories ||
+      !animProps.categories.includes(BACKGROUNDS_CATEGORY)
     );
   });
 };
@@ -401,7 +404,10 @@ const getOrderedKeysWithoutBackgrounds = serializedAnimationList => {
 const getOrderedKeysOnlyBackgrounds = serializedAnimationList => {
   return serializedAnimationList.orderedKeys.filter(animKey => {
     const animProps = serializedAnimationList.propsByKey[animKey];
-    return animProps.categories && animProps.categories.includes('backgrounds');
+    return (
+      animProps.categories &&
+      animProps.categories.includes(BACKGROUNDS_CATEGORY)
+    );
   });
 };
 
@@ -430,7 +436,7 @@ export function addBlankAnimation(interfaceMode) {
     frameCount: 1,
     looping: true,
     frameDelay: 2,
-    categories: ['backgrounds'],
+    categories: [BACKGROUNDS_CATEGORY],
     version: '.31YUNsUQNxLZeGkrQper8CLl_jyNb71'
   };
   return addLibraryAnimation(
@@ -468,7 +474,7 @@ export function addAnimation(key, props) {
       getState().pageConstants && getState().pageConstants.isBlockly;
     const index = isSpriteLab ? 0 : null;
     dispatch(addAnimationAction(key, {...props, looping: true}, index));
-    const isBackground = props.categories?.[0] === 'backgrounds';
+    const isBackground = props.categories?.includes(BACKGROUNDS_CATEGORY);
     const selector =
       isSpriteLab && isBackground ? selectBackground : selectAnimation;
     dispatch(
@@ -516,7 +522,7 @@ export function addLibraryAnimation(props, isSpriteLab) {
       dispatch(addAnimationAction(key, props));
     }
     const isSpriteLabBackground =
-      props.categories?.includes('backgrounds') && isSpriteLab;
+      props.categories?.includes(BACKGROUNDS_CATEGORY) && isSpriteLab;
     const selector = isSpriteLabBackground ? selectBackground : selectAnimation;
     dispatch(
       loadAnimationFromSource(key, () => {
