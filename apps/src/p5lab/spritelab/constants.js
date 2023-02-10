@@ -1,5 +1,20 @@
+import {
+  MAX_VISUALIZATION_WIDTH,
+  MIN_VISUALIZATION_WIDTH
+} from '@cdo/apps/StudioApp';
+import experiments from '@cdo/apps/util/experiments';
+
 /** @file Sprite Lab constants */
 var utils = require('@cdo/apps/utils');
+
+/** @const {number} */
+export const MAX_APP_WIDTH = MAX_VISUALIZATION_WIDTH;
+
+// Increased minimum visualization width accounts for header buttons.
+/** @const {number} */
+export const MIN_APP_WIDTH = experiments.isEnabled('backgroundsTab')
+  ? 240
+  : MIN_VISUALIZATION_WIDTH;
 
 export const LocationPickerMode = utils.makeEnum('IDLE', 'SELECTING');
 
