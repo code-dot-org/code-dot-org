@@ -1,13 +1,43 @@
 import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
-import {DEFAULT_SOUND} from '../constants';
+import {
+  DEFAULT_SOUND,
+  TRIGGER_FIELD,
+  DYNAMIC_TRIGGER_EXTENSION
+} from '../constants';
 
-// Examine chain of parents to see if one is 'when_run'.
-const isBlockInsideWhenRun = ctx => {
-  // Since this model doesn't currently support triggered code, then
-  // everything is ultimately called from under when_run.
-  return true;
-};
+// Some helpers used when generating code to be used by the interpreter.
+// Called by executeSong().
+export class GeneratorHelpersSimple2 {
+  // Given the function's name and body code, this returns the
+  // code for the function's implementation.  All functions
+  // in this model play sounds sequentially by default.
+  static getFunctionImplementation(functionName, functionCode) {
+    return `function ${functionName}() {
+      ProgramSequencer.playSequential();
+      ${functionCode}
+      ProgramSequencer.endSequential();
+    }
+    `;
+  }
+
+  // Given a block of code with function calls, and also function implementations,
+  // this returns the implementation of the when_run block to be used when the user
+  // didn't provide their own implementation.  In this implementation, all of the
+  // provided functions are called immediately, simulating tracks mode.
+  static getDefaultWhenRunImplementation(
+    functionCallsCode,
+    functionImplementationsCode
+  ) {
+    return `
+    var __insideWhenRun = true;
+    ProgramSequencer.init();
+    ProgramSequencer.playTogether();
+    ${functionCallsCode}
+    ${functionImplementationsCode}
+  `;
+  }
+}
 
 export const whenRunSimple2 = {
   definition: {
@@ -21,9 +51,40 @@ export const whenRunSimple2 = {
   },
   generator: () =>
     `
+      var __insideWhenRun = true;
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
     `
+};
+
+export const triggeredAtSimple2 = {
+  definition: {
+    type: BlockTypes.TRIGGERED_AT_SIMPLE2,
+    message0: '%1 triggered',
+    args0: [
+      {
+        type: 'input_dummy',
+        name: TRIGGER_FIELD
+      }
+    ],
+    inputsInline: true,
+    nextStatement: null,
+    style: 'event_blocks',
+    tooltip: 'at trigger',
+    extensions: [DYNAMIC_TRIGGER_EXTENSION]
+  },
+  generator: block => {
+    const varName = Blockly.JavaScript.nameDB_.getDistinctName(
+      'eventTime',
+      Blockly.Names.NameType.VARIABLE
+    );
+    return `
+        var __insideWhenRun = false;
+        ${varName} = MusicPlayer.getPlayheadPosition();
+        currentMeasureLocation = Math.ceil(${varName});
+        ProgramSequencer.playSequentialWithMeasure(currentMeasureLocation);
+      `;
+  }
 };
 
 export const playSoundAtCurrentLocationSimple2 = {
@@ -48,16 +109,16 @@ export const playSoundAtCurrentLocationSimple2 = {
     tooltip: 'play sound',
     helpUrl: ''
   },
-  generator: ctx =>
+  generator: block =>
     `
       MusicPlayer.playSoundAtMeasureById(
-        "${ctx.getFieldValue('sound')}",
+        "${block.getFieldValue('sound')}",
         ProgramSequencer.getCurrentMeasure(),
-        ${isBlockInsideWhenRun(ctx) ? 'true' : 'false'}
+        __insideWhenRun
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
-          "${ctx.getFieldValue('sound')}"
+          "${block.getFieldValue('sound')}"
         )
       );
     `
@@ -82,9 +143,9 @@ export const playSoundsTogether = {
     tooltip: 'play sounds together',
     helpUrl: ''
   },
-  generator: ctx =>
+  generator: block =>
     ` ProgramSequencer.playTogether();
-      ${Blockly.JavaScript.statementToCode(ctx, 'code')}
+      ${Blockly.JavaScript.statementToCode(block, 'code')}
       ProgramSequencer.endTogether();
     `
 };
@@ -108,9 +169,9 @@ export const playSoundsSequential = {
     tooltip: 'play sounds sequentially',
     helpUrl: ''
   },
-  generator: ctx =>
+  generator: block =>
     ` ProgramSequencer.playSequential();
-      ${Blockly.JavaScript.statementToCode(ctx, 'code')}
+      ${Blockly.JavaScript.statementToCode(block, 'code')}
       ProgramSequencer.endSequential();
       `
 };

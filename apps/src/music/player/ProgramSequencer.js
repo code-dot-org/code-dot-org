@@ -32,6 +32,13 @@ export default class ProgramSequencer {
     this.stack.push({measure: measure, together: false});
   }
 
+  // Beginning of a play_sequential block, but with an explicit starting measure.
+  // Should only be used for an outermost sequential block, typically in an trigger
+  // handler.
+  playSequentialWithMeasure(currentMeasure) {
+    this.stack.push({measure: currentMeasure, together: false});
+  }
+
   // End of a play_sequential block.
   endSequential() {
     this.endBlock(true);
