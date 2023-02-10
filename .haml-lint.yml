@@ -6,6 +6,11 @@ linters:
     exclude:
       - '/**/pegasus/**/*.haml'
       - 'pegasus/**/*.haml'
+
+  ConsistentQuotationMark:
+    enabled: true
 exclude:
 - '/**/pegasus/test/fixtures/**/*.haml'
 - 'pegasus/test/fixtures/**/*.haml'
+require:
+- './haml-lint-consistent-quotation-mark.rb'
