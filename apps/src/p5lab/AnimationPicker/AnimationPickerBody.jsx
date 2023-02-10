@@ -18,6 +18,7 @@ import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
 import style from './animation-picker-body.module.scss';
+import experiments from '@cdo/apps/util/experiments';
 
 const MAX_SEARCH_RESULTS = 40;
 
@@ -221,6 +222,11 @@ export default class AnimationPickerBody extends React.Component {
       onAnimationSelectionComplete
     } = this.props;
 
+    const searching = searchQuery !== '';
+    const inCategory = categoryQuery !== '';
+    const isBackgroundsTab =
+      this.props.pickerType === 'backgrounds' &&
+      experiments.isEnabled('backgroundsTab');
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
@@ -243,9 +249,9 @@ export default class AnimationPickerBody extends React.Component {
           placeholderText={msg.animationSearchPlaceholder()}
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
-        {(searchQuery !== '' || categoryQuery !== '') && (
+        {(searching || inCategory) && (
           <div className={style.navigation}>
-            {categoryQuery !== '' && (
+            {inCategory && (
               <div className={style.breadCrumbs}>
                 {this.props.navigable && (
                   <span
@@ -267,17 +273,17 @@ export default class AnimationPickerBody extends React.Component {
             onScroll={this.handleScroll}
           >
             {' '}
-            {(searchQuery !== '' || categoryQuery !== '') &&
-              results.length === 0 && (
-                <div className={style.emptyResults}>
-                  {msg.animationPicker_noResultsFound()}
-                </div>
-              )}
-            {((searchQuery === '' && categoryQuery === '') ||
+            {(searching || inCategory) && results.length === 0 && (
+              <div className={style.emptyResults}>
+                {msg.animationPicker_noResultsFound()}
+              </div>
+            )}
+            {((!searching && (!inCategory || isBackgroundsTab)) ||
               results.length === 0) && (
               <div>
                 <AnimationPickerListItem
                   label={msg.animationPicker_drawYourOwn()}
+                  isBackgroundsTab={isBackgroundsTab}
                   icon="pencil"
                   onClick={onDrawYourOwnClick}
                 />
@@ -286,6 +292,7 @@ export default class AnimationPickerBody extends React.Component {
                     label={msg.animationPicker_uploadImage()}
                     icon="upload"
                     onClick={onUploadClick}
+                    isBackgroundsTab={isBackgroundsTab}
                   />
                 )}
               </div>
