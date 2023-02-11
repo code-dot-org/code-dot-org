@@ -1718,7 +1718,8 @@
         "courseE_playLab_challenge1": "\\_A **mókusok** rettegnek, mert azt látják, hogy egy **dinoszaurusz** jött a városba! Meg tudja-e menteni őket a bátor **lovag**? \\_\n\nSzabályok:\n\n1.  _A mókusok megérintésével nő a pontszám._\n2.  _A dinoszaurusz megérintése csökkenti a pontszámot._\n\nEz egy másféle játék, mint amit korábban elkezdté! Futtasd le, és játssz vele egy kicsit, hogy lásd, hogyan is működik. \n\nValaminek történnie kell, ha elérsz valamennyi pontot, vagy ha elfogynak a pontok. Adj hozzá néhány kódot a `nyertes játék` és a `vesztes játéj` függvényekhez, hogy a játék úgy működjön, ahogy kellene. \nÖtletekért kattints a tippekre!",
         "courseF_bee_functions4": "Tudtad, hogy egy függvényt meghívhatsz _egy másik_ függvényből?  \n\nHasználd a `nektár vagy méz ellenőrzése` függvényt az új `menj és ellenőrizd` függvényben, hogy segíts a méhnek elfordulni, megtudni, hogy mi van a felhő alatt, majd visszatolatni, és a megfelelő irányba fordulni!",
         "courseF_bee_functions_challenge1": "Hozz létre egy új függvényt, ami összegyűjti az összes nektárt és mézet, amíg van előrefelé vezető út. Aztán használd is fel a feladathoz!",
-        "courseF_bee_functions_challenge2": "Használj mindent, amit eddig tanultál, és meg tudod csinálni a feladatot!"
+        "courseF_bee_functions_challenge2": "Használj mindent, amit eddig tanultál, és meg tudod csinálni a feladatot!",
+        "course4_artist_variables_challenge1": "Létrehozhatsz egy `length` változót, és felhasználhatod, hogy megalkosd ezt az érdekes mintát."
       }
     }
   }
