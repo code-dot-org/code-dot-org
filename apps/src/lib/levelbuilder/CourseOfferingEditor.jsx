@@ -4,7 +4,12 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  CourseOfferingCategories,
+  CourseOfferingGradeBands,
+  CourseOfferingHeaders,
+  CourseOfferingCurriculumTypes
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
 
 const useCourseOffering = initialCourseOffering => {
@@ -115,6 +120,50 @@ export default function CourseOfferingEditor(props) {
           onChange={e => updateCourseOffering('assignable', e.target.checked)}
         />
       </label>
+      <h2>{`Curriculum Catalog Settings`}</h2>
+      <label>
+        Grade Bands
+        <HelpTip>
+          <p>Select all recommended grade bands.</p>
+        </HelpTip>
+        <select
+          value={courseOffering.gradeBands}
+          style={styles.dropdown}
+          onChange={e => updateCourseOffering('gradeBands', e.target.value)}
+        >
+          {CourseOfferingGradeBands}
+        </select>
+      </label>
+      <label>
+        Curriculum Type
+        <HelpTip>
+          <p>
+            These may not map exactly to our current curriculum model. For
+            instance, Course A is implemented as a standalong unit but will be
+            considered a Course.
+          </p>
+        </HelpTip>
+        <select
+          value={courseOffering.curriculumType}
+          style={styles.dropdown}
+          onChange={e => updateCourseOffering('curriculumType', e.target.value)}
+        >
+          {CourseOfferingCurriculumTypes}
+        </select>
+      </label>
+      <label>
+        Header
+        <HelpTip>
+          <p>This represents the subHeader in curriculum quick assign.</p>
+        </HelpTip>
+        <select
+          value={courseOffering.header}
+          style={styles.dropdown}
+          onChange={e => updateCourseOffering('header', e.target.value)}
+        >
+          {CourseOfferingHeaders}
+        </select>
+      </label>
 
       <SaveBar
         handleSave={handleSave}
@@ -133,7 +182,10 @@ CourseOfferingEditor.propTypes = {
     is_featured: PropTypes.bool,
     category: PropTypes.string,
     display_name: PropTypes.string,
-    assignable: PropTypes.bool
+    assignable: PropTypes.bool,
+    gradeBands: PropTypes.array,
+    curriculumType: PropTypes.string,
+    header: PropTypes.string
   })
 };
 

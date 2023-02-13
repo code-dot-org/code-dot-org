@@ -77,6 +77,28 @@ module Curriculum
       other
     ).freeze
 
+    # The grade bands used to represent course offering audience
+    COURSE_OFFERING_GRADE_BANDS = %w(
+      elementary
+      middle
+      high
+    ).freeze
+
+    # The curriculum types used in curriculum quick assign
+    COURSE_OFFERING_CURRICULUM_TYPES = %w(
+      module
+      course
+      standalone_unit
+    ).freeze
+
+    # The headers used to organize course offerings in curriculum quick assign
+    COURSE_OFFERING_HEADERS = %w(
+      self_paced
+      teacher_led
+      CS_Fundamentals
+      Collections
+    ).freeze
+
     # Sections have a participant_type and courses have a participant_audience. A section
     # should never be assigned a course where the participants in the section can not be
     # participants in the course. There this will tell you give the participant_audience of the
