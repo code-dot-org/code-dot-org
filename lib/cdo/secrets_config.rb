@@ -60,14 +60,20 @@ module Cdo
         "${#{key}}"
       end
     end
+    StackSecret = Struct.new(:key) do
+      def to_s
+        "${#{key}}"
+      end
+    end
 
     SECRET_REGEX = /\${(.*)}/
     YAML.add_domain_type('', 'Secret') {Secret.new}
+    YAML.add_domain_type('', 'StackSecret') {StackSecret.new}
 
     # Processes `Secret` references in the provided config hash.
     def process_secrets!(config)
       return if config.nil?
-      config.select {|_, v| v.is_a?(Secret)}.each do |key, secret|
+      config.select {|_, v| v.is_a?(Secret) || v.is_a?(StackSecret)}.each do |key, secret|
         secret.key ||= SecretsConfig.secret_path(env, key)
       end
     end
@@ -82,10 +88,11 @@ module Cdo
       table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
         cdo_secrets.required(*value.to_s.scan(SECRET_REGEX).flatten)
         table[key] = Cdo.lazy do
-          stack_specific_secret_path = Cdo::SecretsConfig.stack_specific_secret_path(key)
-          if value.is_a?(Secret)
+          case value
+          when StackSecret
             begin
               # First try looking for a Stack-specific secret.
+              stack_specific_secret_path = Cdo::SecretsConfig.stack_specific_secret_path(key)
               stack_specific_secret_path ? cdo_secrets.get!(stack_specific_secret_path) : cdo_secrets.get!(value.key)
             rescue Aws::SecretsManager::Errors::ValidationException
               # We're likely executing in an environment that's not part of a CloudFormation Stack, so the secret name was
@@ -96,6 +103,8 @@ module Cdo
               # ('development', 'test', 'production', etc.).
               cdo_secrets.get!(value.key)
             end
+          when Secret
+            cdo_secrets.get!(value.key)
           else
             # TODO: Do we need to modify this use case as well to get a stack specific secret?
             CDO.log.info "This weird code path was used for CDO configuration setting: #{key} / value: #{value}"
@@ -117,7 +126,7 @@ module Cdo
     # Any exceptions or defaults can be re-added later in the YAML document, after secrets have been cleared.
     def clear_secrets
       @secrets ||= []
-      @secrets |= table.select {|_, v| v.is_a?(Secret)}.keys.map(&:to_s)
+      @secrets |= table.select {|_, v| v.is_a?(Secret) || v.is_a?(StackSecret)}.keys.map(&:to_s)
       @secrets.product([nil]).to_h.to_yaml.sub(/^---.*\n/, '')
     end
   end
