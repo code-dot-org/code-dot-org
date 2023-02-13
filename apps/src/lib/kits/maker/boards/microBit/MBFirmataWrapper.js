@@ -49,7 +49,11 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     }
   }
 
-  // Create and return a copy of this MBFirmataClient with references to the WebSerialPortWrapper removed.
+  // Create and return a copy of this MBFirmataClient with references to the WebSerialPortWrapper
+  // removed. This copy is assigned to the key 'board' in the prewiredComponents object in MicroBitBoard.js
+  // Removing the references to the port avoids hitting a recursive loop (due to the emit functionality
+  // that's included in the WebSerialPortWrapper) when we attempt to marshall the MBFirmataClient
+  // object across to the interpreter.
   getBoardClientWithoutPort() {
     const boardClientWithoutPort = Object.assign({}, this);
     delete boardClientWithoutPort.serialPortWebSerial;

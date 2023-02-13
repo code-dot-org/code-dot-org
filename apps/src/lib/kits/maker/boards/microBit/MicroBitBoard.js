@@ -48,7 +48,6 @@ export default class MicroBitBoard extends EventEmitter {
 
     /** @private {MicrobitFirmataClient} serial port controller */
     this.boardClient_ = new MBFirmataWrapper(portType);
-    this.boardClientWithoutPort = null;
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
