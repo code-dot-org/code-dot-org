@@ -8,7 +8,7 @@ import TimelineElement from './TimelineElement';
  * Renders timeline events, organized by unique sample ID.
  */
 const TimelineSampleEvents = ({
-  currentMeasureExact,
+  currentMeasure,
   barWidth,
   eventVerticalSpace,
   getEventHeight
@@ -48,7 +48,7 @@ const TimelineSampleEvents = ({
           top={20 + getVerticalOffsetForEventId(eventData.id)}
           left={barWidth * eventData.when}
           when={eventData.when}
-          currentMeasureExact={currentMeasureExact}
+          currentMeasure={currentMeasure}
         />
       ))}
     </>
@@ -56,7 +56,7 @@ const TimelineSampleEvents = ({
 };
 
 TimelineSampleEvents.propTypes = {
-  currentMeasureExact: PropTypes.number.isRequired,
+  currentMeasure: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired

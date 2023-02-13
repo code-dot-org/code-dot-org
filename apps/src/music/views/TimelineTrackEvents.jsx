@@ -5,7 +5,7 @@ import moduleStyles from './timeline.module.scss';
 import TimelineElement from './TimelineElement';
 
 const TimelineTrackEvents = ({
-  currentMeasureExact,
+  currentMeasure,
   barWidth,
   eventVerticalSpace,
   getEventHeight
@@ -86,7 +86,7 @@ const TimelineTrackEvents = ({
                         top={index * singleElementHeight}
                         left={0}
                         when={eventData.when}
-                        currentMeasureExact={currentMeasureExact}
+                        currentMeasure={currentMeasure}
                       />
                     )
                   )}
@@ -101,7 +101,7 @@ const TimelineTrackEvents = ({
 };
 
 TimelineTrackEvents.propTypes = {
-  currentMeasureExact: PropTypes.number.isRequired,
+  currentMeasure: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired
