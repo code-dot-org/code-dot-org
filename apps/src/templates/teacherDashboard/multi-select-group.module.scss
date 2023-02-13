@@ -2,8 +2,8 @@
 
 .multiSelectGroup {
   fieldset div {
-    display: inline;
-    margin: 0 5px;
+    display: inline-block;
+    margin: 0 4px;
   }
 
   fieldset div label {
@@ -11,9 +11,11 @@
     background-color: $neutral_white;
     border: 1px solid $neutral_dark;
     color: $neutral_dark;
+    min-width: 30px;
+    text-align: center;
     border-radius: 25px;
     white-space: nowrap;
-    margin: 3px 0;
+    margin: 4px 0;
     padding: 8px 12px;
     cursor: pointer;
     -webkit-touch-callout: none;
