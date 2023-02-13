@@ -832,7 +832,7 @@ class Unit < ApplicationRecord
   end
 
   def hoc?
-    Unit.unit_in_category?('hoc', name)
+    get_course_version&.hoc?
   end
 
   def flappy?
