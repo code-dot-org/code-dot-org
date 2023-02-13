@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-02-01T10:52:25.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -15,8 +11,6 @@
       "setProperty": null,
       "randomNumber_min_max": null,
       "onBoardEvent": null,
-      "lightSensor.value": null,
-      "soundSensor.value": null,
       "ifBlock": null,
       "buzzer.frequency": null,
       "equalityOperator": null,
@@ -64,7 +58,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "microbit",
     "long_instructions": "Template level",
     "parent_level_id": 20595,
     "name_suffix": "_mb2022",
@@ -89,14 +83,21 @@
       "Alien_13.png": "a8446cae-3df6-4f3b-9134-ee5510081024.png",
       "Alien_11.png": "af059fff-9054-4012-8a9e-1acbec70d5aa.png"
     },
-    "start_blocks": "//Events\r\nonBoardEvent(soundSensor, \"change\", function() {\r\n  if (soundSensor.value > 400) {\r\n    //Play a sound and move the aliens around\r\n    buzzer.frequency(800, 200);\r\n    setProperty(\"alien1\", \"x\", randomNumber(0, 320));\r\n    setProperty(\"alien1\", \"y\", randomNumber(0, 450));\r\n    setProperty(\"alien2\", \"x\", randomNumber(0, 320));\r\n    setProperty(\"alien2\", \"y\", randomNumber(0, 450));\r\n    setProperty(\"alien3\", \"x\", randomNumber(0, 320));\r\n    setProperty(\"alien3\", \"y\", randomNumber(0, 450));\r\n    setProperty(\"alien4\", \"x\", randomNumber(0, 320));\r\n    setProperty(\"alien4\", \"y\", randomNumber(0, 450));\r\n  }\r\n});\r\nonBoardEvent(lightSensor, \"change\", function() {\r\n  if (lightSensor.value > 500) {\r\n    //Play a sound and move the aliens around\r\n    buzzer.frequency(800, 200);\r\n    setProperty(\"alien1\", \"x\", randomNumber(0, 320));\r\n    setProperty(\"alien1\", \"y\", randomNumber(0, 450));\r\n    setProperty(\"alien2\", \"x\", randomNumber(0, 320));\r\n    setProperty(\"alien2\", \"y\", randomNumber(0, 450));\r\n    setProperty(\"alien3\", \"x\", randomNumber(0, 320));\r\n    setProperty(\"alien3\", \"y\", randomNumber(0, 450));\r\n    setProperty(\"alien4\", \"x\", randomNumber(0, 320));\r\n    setProperty(\"alien4\", \"y\", randomNumber(0, 450));\r\n  }\r\n});\r\n//Functions\r\n\r\n//Define your moveAliens function here!\r\n",
+    "start_blocks": "//Events\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  setProperty(\"alien1\", \"x\", randomNumber(0, 320));\r\n  setProperty(\"alien1\", \"y\", randomNumber(0, 450));\r\n  setProperty(\"alien2\", \"x\", randomNumber(0, 320));\r\n  setProperty(\"alien2\", \"y\", randomNumber(0, 450));\r\n  setProperty(\"alien3\", \"x\", randomNumber(0, 320));\r\n  setProperty(\"alien3\", \"y\", randomNumber(0, 450));\r\n  setProperty(\"alien4\", \"x\", randomNumber(0, 320));\r\n  setProperty(\"alien4\", \"y\", randomNumber(0, 450));\r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  setProperty(\"alien1\", \"x\", randomNumber(0, 320));\r\n  setProperty(\"alien1\", \"y\", randomNumber(0, 450));\r\n  setProperty(\"alien2\", \"x\", randomNumber(0, 320));\r\n  setProperty(\"alien2\", \"y\", randomNumber(0, 450));\r\n  setProperty(\"alien3\", \"x\", randomNumber(0, 320));\r\n  setProperty(\"alien3\", \"y\", randomNumber(0, 450));\r\n  setProperty(\"alien4\", \"x\", randomNumber(0, 320));\r\n  setProperty(\"alien4\", \"y\", randomNumber(0, 450));\r\n});\r\n//Functions\r\n\r\n//Define your moveAliens function here!\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255); background-size: 320px 450px; background-image: url(&quot;https://levelbuilder-studio.code.org/level_starter_assets/CSD%20U6%20-%20Functions%20-%20SB3_2022/BG-Landscape25.png&quot;);\" data-canonical-image-url=\"image://BG-Landscape25.png\" data-image-type=\"file\"><img src=\"/level_starter_assets/CSD U6 - Functions - SB3_2022/Alien_02.png\" data-canonical-image-url=\"image://Alien_02.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"alien1\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 55px; top: 135px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - Functions - SB3_2022/Alien_06.png\" data-canonical-image-url=\"image://Alien_06.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"alien2\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 200px; top: 215px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - Functions - SB3_2022/Alien_13.png\" data-canonical-image-url=\"image://Alien_13.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"alien3\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 75px; top: 310px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - Functions - SB3_2022/Alien_11.png\" data-canonical-image-url=\"image://Alien_11.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"alien4\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 125px; top: 25px; margin: 0px;\"></div></div>",
     "callout_json": "[]",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-02-01T10:52:25.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:25.694+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB34_template_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB34_template_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:25.694+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB34_template_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB34_template_2222\"},{\"changed_at\":\"2023-02-10 22:26:01 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

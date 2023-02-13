@@ -667,7 +667,9 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
+    'weblab_host/network_check':
+      './src/sites/studio/pages/weblab_host/network_check.js'
   };
 
   var internalEntries = {
@@ -739,6 +741,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
+    'sections/new': './src/sites/studio/pages/sections/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -761,8 +764,6 @@ describe('entry tests', () => {
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/educate/weblab-test':
-      './src/sites/code.org/pages/public/educate/weblab-test.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':
@@ -818,8 +819,6 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new':
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-    'pd/fit_weekend_registration/new':
-      './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
     'pd/workshop_daily_survey/new_general_foorm':
       './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':

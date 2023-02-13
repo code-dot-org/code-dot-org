@@ -4240,3 +4240,15 @@ id:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Bab 2: Membangun Prototipe Fisik'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
+            lessonGroup-4:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengenalan App Lab
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
