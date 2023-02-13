@@ -93,7 +93,21 @@ style.withArrow = {
 };
 
 function buttonStyle(buttonColor, textColor = color.white) {
+  let hoverState = {};
+
+  // color.brand_secondary_default
+  if (buttonColor === '#9660BF') {
+    hoverState = {
+      ':hover': {
+        backgroundColor: color.brand_secondary_dark,
+        borderColor: color.brand_secondary_dark,
+        boxShadow: 'none'
+      }
+    };
+  }
+
   return {
+    ...hoverState,
     backgroundColor: buttonColor,
     borderColor: buttonColor,
     color: textColor
