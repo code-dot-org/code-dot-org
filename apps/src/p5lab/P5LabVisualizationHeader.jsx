@@ -82,6 +82,7 @@ class P5LabVisualizationHeader extends React.Component {
             <ToggleGroup
               selected={interfaceMode}
               onChange={this.changeInterfaceMode}
+              flex={true}
             >
               <button
                 style={styles.buttonFocus}
