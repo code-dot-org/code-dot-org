@@ -1,12 +1,12 @@
 import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
 import {
-  DEFAULT_SOUND,
   TRIGGER_FIELD,
   DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
   FIELD_SOUNDS_TYPE
 } from '../constants';
+import {DEFAULT_SOUND} from '../../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().

@@ -6,7 +6,8 @@ import {
   playSoundAtCurrentLocation,
   playSoundInTrack,
   restInTrack,
-  setCurrentLocationNextMeasure
+  setCurrentLocationNextMeasure,
+  valueSample
 } from './blocks/samples';
 import {forLoop} from './blocks/control';
 import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
@@ -36,7 +37,8 @@ const blockList = [
   newTrackAtMeasure,
   newTrackOnTrigger,
   playSoundInTrack,
-  restInTrack
+  restInTrack,
+  valueSample
 ];
 
 const MUSIC_BLOCKS = {};

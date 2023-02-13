@@ -2,6 +2,7 @@ import moduleStyles from '../views/toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
+import {PRIMARY_SOUND_INPUT_NAME} from './constants';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -46,7 +47,18 @@ const toolboxBlocks = {
   },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
     kind: 'block',
-    type: BlockTypes.PLAY_SOUND_IN_TRACK
+    type: BlockTypes.PLAY_SOUND_IN_TRACK,
+    inputs: {
+      [PRIMARY_SOUND_INPUT_NAME]: {
+        shadow: {
+          type: BlockTypes.VALUE_SAMPLE
+        }
+      }
+    }
+  },
+  [BlockTypes.VALUE_SAMPLE]: {
+    kind: 'block',
+    type: BlockTypes.VALUE_SAMPLE
   },
   [BlockTypes.REST_IN_TRACK]: {
     kind: 'block',
@@ -307,7 +319,11 @@ export function getToolbox() {
           BlockTypes.NEW_TRACK_AT_MEASURE,
           BlockTypes.NEW_TRACK_ON_TRIGGER
         ],
-        Play: [BlockTypes.PLAY_SOUND_IN_TRACK, BlockTypes.REST_IN_TRACK],
+        Play: [
+          BlockTypes.PLAY_SOUND_IN_TRACK,
+          BlockTypes.VALUE_SAMPLE,
+          BlockTypes.REST_IN_TRACK
+        ],
         Control: ['controls_repeat_ext'],
         Math: ['math_arithmetic', 'math_random_int', 'math_modulo'],
         Logic: ['controls_if', 'logic_compare']
