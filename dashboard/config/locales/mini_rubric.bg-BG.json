@@ -4,6 +4,12 @@
       "mini_rubric": {
         "allthethings-mini-rubric-gamelab": {
           "rubric_key_concept": "Ключова Идея"
+        },
+        "allthethings-mini-rubric": {
+          "rubric_performance_level_1": "Справихте се страхотно!",
+          "rubric_performance_level_2": "Справихте се добре.",
+          "rubric_performance_level_3": "Справихте се приемливо.",
+          "rubric_performance_level_4": "Направихте нищо."
         }
       }
     }

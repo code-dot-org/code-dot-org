@@ -2561,11 +2561,14 @@ bg-BG:
       Test Contained Multi:
         answers:
         - text: '0'
-        - {}
+        - feedback: Не, това е 1 * 1.
         - text: '2'
+          feedback: Да, ти си гений!
         - text: '4'
+          feedback: Не, това дори не е близо.
         questions:
-        - {}
+        - text: Какво е 1 + 1?
+        content1: Ето малко информация.
       allthethings_external_displayed_as_unplugged:
         content1: описание тук
       allthethings_external_not_displayed_as_unplugged:
@@ -3626,7 +3629,7 @@ bg-BG:
         - {}
       CSP PD Example Question 2:
         answers:
-        - {}
+        - text: Ще ги накарам да пишат
         - {}
         questions:
         - {}
@@ -3638,11 +3641,11 @@ bg-BG:
         - {}
       PS U3 Q1-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png
+        - text: https://images.code.org/c59d71ecac547d755d63a3f8fca56843-image-1459376262204.png
+        - text: https://images.code.org/3e341ed57ac366663807df24b2a7e329-image-1459376286013.png
+        - text: https://images.code.org/d658fb7f959603138c39ed5f7666fd63-image-1459376301845.png
+        - text: https://images.code.org/841ec4583e3d9f0b41d1b51b496ef94b-image-1459376320683.png
       PS U3 Q1-3:
         answers:
         - {}
@@ -3651,8 +3654,9 @@ bg-BG:
         - {}
       PS U3 Q1-4:
         answers:
-        - {}
-        - {}
+        - text: Функциите са програмни анбстракции за многократна употреба.
+        - text: Функциите помагат да се намали сложността на писането и поддържането
+            на програми.
         - {}
         - {}
         - {}
@@ -9033,7 +9037,7 @@ bg-BG:
         - text: '12'
         - text: Друго
         questions:
-        - {}
+        - text: В кой клас сте?
       pre-assessment survey q29:
         answers:
         - text: Мъж
@@ -9041,7 +9045,7 @@ bg-BG:
         - text: Друго
         - text: Предпочитам да не отговоря
         questions:
-        - {}
+        - text: 'Идентифицирам пола си като:'
       pre-assessment survey q3:
         answers:
         - {}
@@ -9060,7 +9064,7 @@ bg-BG:
         - {}
         - {}
         - text: Бял
-        - {}
+        - text: Две или повече раси
         - text: Друго
         - text: Предпочитам да не отговоря
         questions:
@@ -9084,7 +9088,7 @@ bg-BG:
         - {}
         - {}
         questions:
-        - {}
+        - text: Обичам училищната си работа.
       pre-assessment survey q6:
         answers:
         - {}
@@ -9104,7 +9108,7 @@ bg-BG:
         - {}
         - {}
         questions:
-        - {}
+        - text: Обичам времето си в училище.
       pre-assessment survey q8:
         answers:
         - {}
@@ -9476,6 +9480,9 @@ bg-BG:
         - {}
       courseF_intro_apps2022_2022_pilot_-2022-2:
         display_name: Sprite Lab Приложения
+        description: Всички тези проекти са създадени със Sprite Lab. Изпробвайте
+          ги сега и вижте какво е възможно. На края на този курс, вие ще можете да
+          създавате проекти като тези... и повече!
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -9901,3 +9908,7 @@ bg-BG:
       express_EOC_2021:
         description: Стигнахте края на Курс E! Изберете проект, който да създадете.
         display_name: Проект за Края на Курса
+      courseF_collector_samples_2022_pilot_-2022-2:
+        description: Ще създавате игра за събиране. Преди да започнете, разгледайте
+          примерните проекти отдолу. Натиснете \"Край\" когато сте готови да започнете
+          да планирате своята програма.

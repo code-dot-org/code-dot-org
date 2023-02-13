@@ -772,11 +772,14 @@
         },
         "courseB_maze_seq7_2021": {
           "courseB_maze_seq7_c": "Не можеш да стигнеш жълъда?  Пробвай тази пътека!",
-          "courseB_maze_seq7_a": "Добавете 1 блок, за да преместите Скрат до жълъда."
+          "courseB_maze_seq7_a": "Добавете 1 блок, за да преместите Скрат до жълъда.",
+          "courseB_maze_seq7_b": "Опитайте се да пуснете дадения ви код и вижте къде отивате."
         },
         "courseB_maze_seq9_2021": {
           "courseB_maze_seq9_d": "Запецна ли?  Пробвай тази пътека!",
-          "courseB_maze_seq9_c": "Има два начина да решите този пъзел."
+          "courseB_maze_seq9_c": "Има два начина да решите този пъзел.",
+          "courseB_maze_seq9_a": "Опитайте първо да запишете всичките стъпки на парче хартия.",
+          "courseB_maze_seq9_b": "Изградете програмата си блок по блок и я тествайте, докато изграждате."
         },
         "CourseD_Dance_2020_04": {
           "validation": "**Как да мина това ниво?**\n\n-   Танцъора трябва да смени към нова стъпка след 4 такта.\n\n_Това ниво свършва след 7 такта._"
@@ -977,14 +980,19 @@
         },
         "courseA_collector_loops5_2021": {
           "courseA_collector_loops5_b": "Пробвайте се да разделите проблема на две части, движенето настрани и след това надолу.",
-          "courseA_collector_loops5_c": "Ще желаете да започнете с цикъл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, който мести Лаурел на запад и събира съкровище."
+          "courseA_collector_loops5_c": "Ще желаете да започнете с цикъл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, който мести Лаурел на запад и събира съкровище.",
+          "courseA_collector_loops5_a": "Ако не можете веднага да разбере отговора, пробвайте се да използвате парче хартия, за да разберете какви стрелки ще ви трябват и да откриете модел."
         },
         "courseA_collector_loops8_2021": {
           "courseA_collector_loops8_a": "Ако имате проблеми с разгадаването на този пъзел, пробвайте се да напишете движенията върху лист хартия и потърсете модел.",
-          "courseA_collector_loops8_b": "Пробвайте се да разделите този пъзел на 3 отделни и напишети цикли за всеки."
+          "courseA_collector_loops8_b": "Пробвайте се да разделите този пъзел на 3 отделни и напишети цикли за всеки.",
+          "courseA_collector_loops8_c": "Не забравяйте, че можете до построите кода парче по парче, след това натиснете бутона \"Старт\", за да разберете къде трябва да отидете от там."
         },
         "courseA_collector_loops_challenge1_2021": {
-          "courseA_collector_loops_challenge1_a": "Пробвайте се да промените числата във всеки цикъл, ако нещо не е наред."
+          "courseA_collector_loops_challenge1_a": "Пробвайте се да промените числата във всеки цикъл, ако нещо не е наред.",
+          "courseA_collector_loops_challenge1_b": "Не трябва да използвате цикъл, ако извършвате действие само веднъж.",
+          "courseA_collector_loops_challenge1_c": "Има 6 скъпоценни камъка отдясно на пещерата, когато започнете, но трябва да вземете съкровището 5 пъти движейки се на юг. Знаете ли защо?",
+          "courseA_collector_loops_challenge1_d": "Началната програма не събира последните 2 скъпоценни камъка. Поитайте се да добавите този къд накрая:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
         "courseA_collector_loops_challenge2kp_2021": {
           "courseA_collector_loops_challenge2kp_b": "Пробвайте тази пътека, за да стигнете до решението.",
@@ -992,7 +1000,9 @@
         },
         "courseB_maze_seq6_2021": {
           "courseB_maze_seq5_c": "Има два начина да решите този пъзел.",
-          "courseB_maze_seq5_d": "Не сте сигурни как да стигнете до жълъда? Пробвайте тази пътека!"
+          "courseB_maze_seq5_d": "Не сте сигурни как да стигнете до жълъда? Пробвайте тази пътека!",
+          "courseB_maze_seq6_a": "Крайният ви код трябва да има три блока за движение.",
+          "courseB_maze_seq6_b": "Ако заседнете, пробвайте се да решите пъзела на две части, едната настрани, а другата нагоре-надолу."
         },
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "Най-краткият път може да не свърши работа този път.",
@@ -1018,6 +1028,64 @@
         },
         "iceage_move_to_flag": {
           "iceage_hello3_a": "Използвай блока `премести актьор 1 надясно с 200 пиксела`, за да решиш този пъзел."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "След като сте се преместили на квадрат със съкровище, изполвзайте това блокче, за да го съберете.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "Просто решение бу било да се преместите на Изток 2 пъти, след което да съберете съкровището."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "Ще трябва да се преместите, преди да можете да съберете съкровище.",
+          "courseA_collector_loops2_b": "След като сте се преместили на квадрат със съкровище, изполвзайте това блокче, за да го съберете.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "За да промените докъде отива Лаурел, променете броя на изпълненията на цикъла.",
+          "courseA_collector_loops4_b": "Не забравяйте, че Лаурел трябва да ходи надолу и да събере съкровището преди да свърши <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> цикъла!"
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "Все още на можеш да разбереш какво се обърква? Пусни кода няколко пъти, за да видиш какво се случва.",
+          "courseA_collector_loops6_b": "Най-краткото решение има 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> цикъла един след друг."
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "Ак оне можете ра разберете какво следва, пробвайте се да пуснете кода, за да видите къде отива Лаурел."
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "Ако не можете да забележите най-добрите места за цикли, пробвайте се да го напишете стъпка по стъпка и потърсете за модел. ",
+          "courseA_collector_loops9_b": "Пробвайте се да сложите два от вашите <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> цикъла в друг цикъл, за да съкратите кода си!"
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "Вашият код трябва да изглежда така:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "Вашият код трябва да изглежда така:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "Вашият код трябва да изглежда така:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "Вашият код трябва да изглежда така:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "Вашият код трябва да изглежда така:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "Свържете блоковете до блока <xml><block type=\"when_run\"/></xml>, за да накарате Скрат да се мести!",
+          "courseB_maze_seq1_b": "Изтеглете три от тези <xml><block type=\"maze_moveSouth\"/></xml> стрелки и ги свържете към блока <xml><block type=\"when_run\"/></xml>, за да стигне Скрат до жълъда."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Пробвайте се да добавят по една инструкция, докато не стигнете до жълъда.",
+          "courseB_maze_seq4_b": "Ще искате да използвате блока <xml><block type=\"maze_moveEast\"/></xml>, за да решите този пъзел."
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "Опитайте се да добавяте по един блок, докато не решите пъзела.",
+          "courseB_maze_seq8_b": "Има още един начин да решите този пъзел!",
+          "courseB_maze_seq8_c": "Не знаете накъде да отидете? Пробвайте тази пътека!"
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Не трябва да добавяте или премахвате блокове, за да решите този пъзел.",
+          "courseB_maze_seq_challenge2_b": "Преподрете блокояете и вземете пътеката с формата на стълбище."
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_b": "Не се страхувайте да сгрешите! Опитайте нещо, а ако не работи, опитайте нещо друго!"
         }
       }
     }
