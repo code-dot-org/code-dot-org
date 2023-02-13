@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import msg from '@cdo/locale';
 
 /**
  * Adds a copy command to the block context menu. After switching to v7,
@@ -61,10 +62,9 @@ const registerDeletable = function() {
     displayText: function(scope) {
       // isDeletale is a built in Blockly function that checks whether the block
       // is deletable, is not a shadow, and if the workspace is readonly.
-      const displayText = scope.block.isDeletable()
+      return scope.block.isDeletable()
         ? 'Make Undeletable to Users'
         : 'Make Deletable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
@@ -87,10 +87,9 @@ const registerMovable = function() {
     displayText: function(scope) {
       // isMovable is a built in Blockly function that checks whether the block
       // is movable or not.
-      const displayText = scope.block.isMovable()
+      return scope.block.isMovable()
         ? 'Make Immovable to Users'
         : 'Make Movable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
@@ -113,10 +112,9 @@ const registerEditable = function() {
     displayText: function(scope) {
       // isEditable is a built in Blockly function that checks whether the block
       // is editable or not.
-      const displayText = scope.block.isEditable()
+      return scope.block.isEditable()
         ? 'Make Uneditable to Users'
         : 'Make Editable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
@@ -184,6 +182,29 @@ const registerUnshadow = function() {
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
 
+const registerKeyboardNavigation = function() {
+  const keyboardNavigationOption = {
+    displayText: function(scope) {
+      return scope.workspace.keyboardAccessibilityMode
+        ? msg.blocklyKBNavOff()
+        : msg.blocklyKBNavOn();
+    },
+    preconditionFn: function() {
+      return Blockly.navigationController ? 'enabled' : 'hidden';
+    },
+    callback: function(scope) {
+      const controller = Blockly.navigationController;
+      scope.workspace.keyboardAccessibilityMode
+        ? controller.disable(scope.workspace)
+        : controller.enable(scope.workspace);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'keyboardNavigation',
+    weight: 11
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(keyboardNavigationOption);
+};
+
 const registerAllContextMenuItems = function() {
   registerBlockCopyToStorage();
   registerBlockPasteFromStorage();
@@ -192,6 +213,7 @@ const registerAllContextMenuItems = function() {
   registerEditable();
   registerShadow();
   registerUnshadow();
+  registerKeyboardNavigation();
 };
 
 function canBeShadow(block) {
