@@ -1,6 +1,11 @@
+// Analytics constants used within the apps directory.
+// (See pegasus/helpers/analytics_constants.rb for constants in the
+// pegasus directory)
 const EVENTS = {
   // Sign-up flow
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
+  SIGN_UP_STARTED_EVENT: 'Sign Up Started',
+  SIGN_UP_LOGIN_TYPE_PICKED_EVENT: 'User Login Type Picked',
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
@@ -29,6 +34,9 @@ const EVENTS = {
   APP_STATUS_CHANGE_EVENT: 'Application Status Changed',
   ADMIN_APPROVAL_RECEIVED_EVENT: 'Administrator Approval Received',
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
+
+  // Marketing site pages
+  TEACH_PAGE_VISITED_EVENT: 'Teach Page Visited',
 
   // Sections
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
