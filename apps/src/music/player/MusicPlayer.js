@@ -195,28 +195,28 @@ export default class MusicPlayer {
     return GetCurrentAudioTime() - this.startPlayingAudioTime;
   }
 
-  // Returns the current playhead position, in measures.  It's 1-based.
+  // Called by generated code in the interpreter, and returns the current
+  // measure, in floating point for an exact position.  It's 1-based.
   // Returns 0 if music is not playing.
-  // Called by interpreted code.
-  getPlayheadPosition() {
-    // An error of -1 becomes 0.
-    // A 0-based time becomes 1-based.
-    return 1 + this.getCurrentMeasureExact();
-  }
-
-  // Returns the current measure, with a fractional component representing the
-  // exact position.  It's 0-based.
-  // Returns -1 if music is not playing.
-  // Called by timeline rendering code.
-  getCurrentMeasureExact() {
+  getCurrentMeasure() {
     const currentAudioTime = GetCurrentAudioTime();
     if (!this.isPlaying || currentAudioTime === null) {
-      return -1;
+      return 0;
     }
 
-    return this.convertSecondsToMeasureExact(
-      currentAudioTime - this.startPlayingAudioTime
+    return (
+      1 +
+      this.convertSecondsToMeasureExact(
+        currentAudioTime - this.startPlayingAudioTime
+      )
     );
+  }
+
+  // Called when rendering the timeline, and returns the current
+  // measure, in floating point for an exact position.  It's 0-based.
+  // Returns -1 if music is not playing.
+  getCurrentMeasureInternal() {
+    return this.getCurrentMeasure() - 1;
   }
 
   playSoundEvent(soundEvent, onStop) {

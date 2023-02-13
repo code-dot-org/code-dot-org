@@ -15,7 +15,7 @@ const eventVerticalSpace = 2;
 
 const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
   const playerUtils = useContext(PlayerUtilsContext);
-  const currentMeasureExact = playerUtils.getCurrentMeasureExact();
+  const currentMeasureExact = playerUtils.getCurrentMeasureInternal();
 
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
