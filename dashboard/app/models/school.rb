@@ -40,7 +40,6 @@ class School < ApplicationRecord
   has_many :school_stats_by_year
   has_many :school_info
   has_many :state_cs_offering, class_name: 'Census::StateCsOffering', foreign_key: :state_school_id, primary_key: :state_school_id
-  has_many :census_overrides, class_name: 'Census::CensusOverride'
   has_many :census_summaries, class_name: 'Census::CensusSummary'
 
   has_many :ap_school_code, class_name: 'Census::ApSchoolCode'
