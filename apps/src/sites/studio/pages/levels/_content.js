@@ -7,7 +7,6 @@ import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 import commonBlocks from '@cdo/apps/blocksCommon';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import logToCloud from '@cdo/apps/logToCloud';
-import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(document).ready(() => {
   // Load app specific Blockly blocks. This will enable level creators to write
@@ -42,8 +41,6 @@ $(document).ready(() => {
       });
     }
   }
-
-  reportTeacherReviewingStudentDslLevel();
 
   // Render Markdown
   $('.content-level > .markdown-container').each(function() {
