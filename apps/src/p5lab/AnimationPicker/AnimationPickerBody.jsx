@@ -296,14 +296,9 @@ export default class AnimationPickerBody extends React.Component {
                     shouldRestrictAnimationUpload={
                       shouldRestrictAnimationUpload
                     }
+                    isBackgroundsTab={isBackgroundsTab}
                   />
                 )}
-                {/* // <AnimationPickerListItem
-                  //   label={msg.animationPicker_uploadImage()}
-                  //   icon="upload"
-                  //   onClick={onUploadClick}
-                  //   isBackgroundsTab={isBackgroundsTab}
-                  // /> */}
               </div>
             )}
             {searchQuery === '' &&

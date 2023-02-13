@@ -12,9 +12,14 @@ import {refreshInRestrictedShareMode} from '../../code-studio/projectRedux.js';
 function AnimationUploadButton({
   onUploadClick,
   shouldRestrictAnimationUpload,
+  isBackgroundsTab,
   refreshInRestrictedShareMode
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [noPIIConfirmed, setNoPIIConfirmed] = useState(false);
+  const [restrictedShareConfirmed, setRestrictedShareConfirmed] = useState(
+    false
+  );
   const showRestrictedUploadWarning =
     shouldRestrictAnimationUpload && !project.inRestrictedShareMode();
 
@@ -28,6 +33,7 @@ function AnimationUploadButton({
             ? () => setIsModalOpen(true)
             : onUploadClick
         }
+        isBackgroundsTab={isBackgroundsTab}
       />
     );
   }
@@ -38,14 +44,37 @@ function AnimationUploadButton({
         isOpen={isModalOpen}
         handleClose={() => setIsModalOpen(false)}
       >
-        <div className={styles.warningMessage}>
-          {msg.animationPicker_restrictedUploadWarning()}
+        <div>
+          <h1 className={styles.modalHeader}>
+            {msg.animationPicker_restrictedShareRulesHeader()}
+          </h1>
+          <label className={styles.checkboxLabel}>
+            <input
+              type="checkbox"
+              checked={noPIIConfirmed}
+              onChange={() => setNoPIIConfirmed(!noPIIConfirmed)}
+            />
+            {msg.animationPicker_confirmNoPII()}
+          </label>
+          <label className={styles.checkboxLabel}>
+            <input
+              type="checkbox"
+              checked={restrictedShareConfirmed}
+              onChange={() =>
+                setRestrictedShareConfirmed(!restrictedShareConfirmed)
+              }
+            />
+            {msg.animationPicker_confirmRestrictedShare()}
+          </label>
+          <p className={styles.modalDetails}>
+            {msg.animationPicker_undoRestrictedShareInstructions()}
+          </p>
         </div>
         <div className={styles.modalButtonRow}>
           <button
             className={classNames(styles.modalButton, styles.cancelButton)}
             type="button"
-            onClick={() => setIsModalOpen(false)}
+            onClick={cancelUpload}
           >
             {msg.dialogCancel()}
           </button>
@@ -53,6 +82,7 @@ function AnimationUploadButton({
             className={classNames(styles.modalButton, styles.confirmButton)}
             type="button"
             onClick={confirmRestrictedUpload}
+            disabled={!(noPIIConfirmed && restrictedShareConfirmed)}
           >
             {msg.dialogOK()}
           </button>
@@ -69,6 +99,12 @@ function AnimationUploadButton({
     onUploadClick();
   }
 
+  function cancelUpload() {
+    setRestrictedShareConfirmed(false);
+    setNoPIIConfirmed(false);
+    setIsModalOpen(false);
+  }
+
   return (
     <>
       {renderUploadModal()}
@@ -80,6 +116,7 @@ function AnimationUploadButton({
 AnimationUploadButton.propTypes = {
   onUploadClick: PropTypes.func.isRequired,
   shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
+  isBackgroundsTab: PropTypes.bool.isRequired,
   // populated from redux
   refreshInRestrictedShareMode: PropTypes.func.isRequired
 };
