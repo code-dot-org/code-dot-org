@@ -26,9 +26,8 @@ CongratsAppLabSignedOut.args = {
 
 export const CongratsAppLabStudent = Template.bind({});
 CongratsAppLabStudent.args = {
-  tutorial: 'applab-intro',
-  userType: 'student',
-  language: 'en'
+  ...CongratsAppLabSignedOut.args,
+  userType: 'student'
 };
 
 export const CongratsMinecraftPre2017SignedOut = Template.bind({});
@@ -39,9 +38,8 @@ CongratsMinecraftPre2017SignedOut.args = {
 
 export const CongratsMinecraftPre2017Student = Template.bind({});
 CongratsMinecraftPre2017Student.args = {
-  tutorial: 'minecraft',
-  userType: 'student',
-  language: 'en'
+  ...CongratsMinecraftPre2017SignedOut.args,
+  userType: 'student'
 };
 
 export const Congrats2017MinecraftSignedout = Template.bind({});
@@ -52,9 +50,8 @@ Congrats2017MinecraftSignedout.args = {
 
 export const Congrats2017MinecraftStudent = Template.bind({});
 Congrats2017MinecraftStudent.args = {
-  tutorial: 'hero',
-  userType: 'student',
-  language: 'en'
+  ...Congrats2017MinecraftSignedout.args,
+  userType: 'student'
 };
 
 export const Congrats2017MinecraftStudentKorean = Template.bind({});
