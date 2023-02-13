@@ -14,7 +14,6 @@ class EnrollmentFormsTest < ActionDispatch::IntegrationTest
 
   test 'can enroll in workshop CSD Summer Workshop' do
     sign_in @teacher
-
     workshop = create :csd_summer_workshop
 
     assert_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
@@ -22,7 +21,21 @@ class EnrollmentFormsTest < ActionDispatch::IntegrationTest
     post "/api/v1/pd/workshops/#{workshop.id}/enrollments", params: @base_params
 
     assert_response :success
+    refute_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
+  end
 
+  test 'can enroll in workshop Admin/Counselor Workshop' do
+    sign_in @teacher
+    workshop = create :admin_counselor_workshop
+
+    assert_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
+
+    post "/api/v1/pd/workshops/#{workshop.id}/enrollments", params: {
+      role: "Counselor",
+      grades_teaching: ["Kindergarten"]
+    }.merge(@base_params)
+
+    assert_response :success
     refute_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
   end
 end
