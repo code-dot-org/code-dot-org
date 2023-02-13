@@ -7,6 +7,7 @@ import {
   flush
 } from '@amplitude/analytics-browser';
 import {BlockTypes} from '@cdo/apps/music/blockly/blockTypes';
+import {FIELD_SOUNDS_NAME} from '../blockly/constants';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
@@ -101,7 +102,8 @@ export default class AnalyticsReporter {
         [
           BlockTypes.TRIGGERED_AT,
           BlockTypes.TRIGGERED_AT_SIMPLE,
-          BlockTypes.TRIGGERED_AT_SIMPLE2
+          BlockTypes.TRIGGERED_AT_SIMPLE2,
+          BlockTypes.NEW_TRACK_ON_TRIGGER
         ].includes(block.type)
       ) {
         triggerBlocksCount++;
@@ -110,8 +112,8 @@ export default class AnalyticsReporter {
         }
       }
 
-      if (block.type === BlockTypes.PLAY_SOUND) {
-        this.soundsUsed.add(block.getFieldValue('sound'));
+      if (block.getField(FIELD_SOUNDS_NAME)) {
+        this.soundsUsed.add(block.getFieldValue(FIELD_SOUNDS_NAME));
       }
     });
 
