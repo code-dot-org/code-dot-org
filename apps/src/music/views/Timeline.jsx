@@ -15,7 +15,7 @@ const eventVerticalSpace = 2;
 
 const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
   const playerUtils = useContext(PlayerUtilsContext);
-  const currentMeasure = playerUtils.getCurrentMeasure();
+  const currentMeasureExact = playerUtils.getCurrentMeasureExact();
 
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
@@ -41,7 +41,7 @@ const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
     : null;
 
   const timelineElementProps = {
-    currentMeasure,
+    currentMeasureExact,
     barWidth,
     eventVerticalSpace,
     getEventHeight
@@ -61,7 +61,8 @@ const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
                 <div
                   className={classNames(
                     moduleStyles.barLine,
-                    measure === currentMeasure && moduleStyles.barLineCurrent
+                    measure === Math.floor(currentMeasureExact) &&
+                      moduleStyles.barLineCurrent
                   )}
                 />
                 <div className={moduleStyles.barNumber}>{measure + 1}</div>
