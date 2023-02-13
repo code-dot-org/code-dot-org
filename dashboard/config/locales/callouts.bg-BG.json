@@ -849,6 +849,12 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Нов блок!"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Това число ви казва колко от тези блокове можете да използвате в този пъзел."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Натиснете крушката, ако ви трябва съвет!"
         }
       }
     }

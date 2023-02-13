@@ -1757,3 +1757,7 @@ fi:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Luku 2: Laitteiston syöte'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'

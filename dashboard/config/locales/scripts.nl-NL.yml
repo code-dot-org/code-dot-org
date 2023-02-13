@@ -2850,3 +2850,7 @@ nl:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'
