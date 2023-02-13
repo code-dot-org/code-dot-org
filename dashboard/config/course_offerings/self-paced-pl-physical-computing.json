@@ -1,7 +1,7 @@
 {
   "key": "self-paced-pl-physical-computing",
-  "display_name": "self-paced-pl-physical-computing",
-  "category": "other",
+  "display_name": "Teaching Creating Apps with Devices",
+  "category": "pl_self_paced",
   "is_featured": false,
   "assignable": true
 }
