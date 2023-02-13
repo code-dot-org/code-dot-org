@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {LegacyContractMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
+import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(window).load(function() {
   $.widget('custom.coloriconselectmenu', $.ui.selectmenu, {
@@ -26,6 +27,8 @@ $(window).load(function() {
       addSquareIconToButton(this.element);
     }
   });
+
+  reportTeacherReviewingStudentDslLevel();
 
   /**
    * @param {string} color

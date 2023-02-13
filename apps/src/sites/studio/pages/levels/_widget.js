@@ -14,6 +14,7 @@ import {
   LegacyStartOverDialog,
   LegacyInstructionsDialog
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
 import i18n from '@cdo/locale';
 
 export function showInstructionsDialog() {
@@ -53,4 +54,6 @@ window.dashboard.widget = {
 // On load (note - widget-specific setup may happen before this!)
 $(document).ready(function() {
   $('#bubble').click(showInstructionsDialog);
+
+  reportTeacherReviewingStudentDslLevel();
 });
