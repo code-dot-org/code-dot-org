@@ -1,6 +1,5 @@
 - app = 'level_group'
 - data = @level.properties
-- user_data = {currentUserId: current_user&.id, currentUserType: current_user&.user_type, viewAsId: params[:user_id]}
 - parsed_last_attempt = JSON.parse(@last_attempt || '{}')
 
 = render partial: 'levels/common_audio'
@@ -60,4 +59,4 @@
   - unless @script_level.nil?
     - init_data = { total_level_count: @total_level_count, page: current_page.to_i || -1, last_attempt: parsed_last_attempt}
 
-  %script{src: webpack_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json, userData: user_data.to_json}}
+  %script{src: webpack_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json}}
