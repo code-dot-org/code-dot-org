@@ -667,7 +667,9 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
+    'weblab_host/network_check':
+      './src/sites/studio/pages/weblab_host/network_check.js'
   };
 
   var internalEntries = {
@@ -762,8 +764,6 @@ describe('entry tests', () => {
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/educate/weblab-test':
-      './src/sites/code.org/pages/public/educate/weblab-test.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':
@@ -807,8 +807,6 @@ describe('entry tests', () => {
 
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/workshop_survey/new':
-      './src/sites/studio/pages/pd/workshop_survey/new.js',
     'pd/pre_workshop_survey/new':
       './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
     'pd/teachercon_survey/new':
