@@ -33,6 +33,7 @@ export const MB_COMPONENTS = [
 
 export const MB_BUTTON_VARS = ['buttonA', 'buttonB'];
 export const MB_SENSOR_VARS = ['lightSensor', 'tempSensor'];
+export const MB_ACCELEROMETER = 'accelerometer';
 
 // milliseconds between samples for sensors
 export const SAMPLE_INTERVAL = 50;
