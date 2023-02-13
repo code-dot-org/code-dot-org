@@ -13,7 +13,7 @@ import {
 import {
   MB_BUTTON_VARS,
   MB_SENSOR_VARS,
-  MB_ACCELEROMETER,
+  MB_ACCELEROMETER_VAR,
   MB_COMPONENT_EVENTS
 } from './boards/microBit/MicroBitConstants';
 
@@ -592,7 +592,7 @@ export let configMicrobit = {
   additionalPredefValues: [
     ...MB_BUTTON_VARS,
     ...MB_SENSOR_VARS,
-    MB_ACCELEROMETER
+    MB_ACCELEROMETER_VAR
   ]
 };
 
