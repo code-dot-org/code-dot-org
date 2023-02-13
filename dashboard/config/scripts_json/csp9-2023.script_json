@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-11 20:13:38 UTC",
+    "serialized_at": "2023-02-08 18:36:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1060,31 +1060,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
-        ],
-        "progression": "Post-Course Survey Instructions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
-        ],
-        "lesson.key": "CS Principles Post-Course Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp9-2023",
-        "activity_section.key": "a4478768-ce14-4b5e-9e86-bcf5f70e30bf"
-      },
-      "level_keys": [
-        "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "csp-pt-tech-setup-and-tools2022_2023"
         ],
         "progression": "Tech Setup and Tools for Create PT"
@@ -1104,7 +1079,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1129,7 +1104,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 3,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -1152,12 +1127,20 @@
       "level_keys": [
         "Student End of Unit Survey_csp8_2023"
       ]
-    }
-  ],
-  "levels_script_levels": [
+    },
     {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023",
         "script_level.level_keys": [
           "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
         ],
@@ -1165,8 +1148,13 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2023",
         "activity_section.key": "a4478768-ce14-4b5e-9e86-bcf5f70e30bf"
-      }
-    },
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
     {
       "seeding_key": {
         "level.key": "csp-pt-tech-setup-and-tools2022_2023",
@@ -1201,6 +1189,18 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2023",
         "activity_section.key": "57dc9b5a-1130-4b75-98d5-1a4a73380ff3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2023"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2023",
+        "activity_section.key": "a4478768-ce14-4b5e-9e86-bcf5f70e30bf"
       }
     }
   ],
@@ -1476,16 +1476,55 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Create PT Prep",
-      "url": "https://docs.google.com/presentation/d/11_P6UAyHrb9THCGmwzIpdvKfmmGa8WryKJfaXrjIOag/copy",
-      "key": "csp_unit_8_-_create_pt_prep",
+      "name": "CSP Unit 9 - Lesson 1 - Review the Task",
+      "url": "https://docs.google.com/presentation/d/1G26cLr6Tr_KWQz5Mkapnn8tbBnMh-nYFKjp0ZnvXLBg/copy",
+      "key": "csp_unit_9_-_lesson_1_-_review_the_task",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/11_P6UAyHrb9THCGmwzIpdvKfmmGa8WryKJfaXrjIOag/export?format=pdf",
+        "download_url": "https://docs.google.com/presentation/d/1G26cLr6Tr_KWQz5Mkapnn8tbBnMh-nYFKjp0ZnvXLBg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_1_-_review_the_task"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Lesson 2 - Deep Dive",
+      "url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/copy",
+      "key": "csp_unit_9_-_lesson_2_-_deep_dive",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_lesson_2_-_deep_dive"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Lesson 3 - Make a Plan",
+      "url": "https://docs.google.com/presentation/d/1TbiwTPCsPiXrM_TJYZTuPR_ndhnCL2idVYl0EMKdU3c/copy",
+      "key": "csp_unit_9_-_lesson_3_-_make_a_plan",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1TbiwTPCsPiXrM_TJYZTuPR_ndhnCL2idVYl0EMKdU3c/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_lesson_3_-_make_a_plan"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Lesson 4 - Complete the Task",
+      "url": "https://docs.google.com/presentation/d/1YT1jYL6gbsKi_LbkpPzesdedQjvNzYWXXsY8_YuDpJU/copy",
+      "key": "csp_unit_9_-_lesson_4_-_complete_the_task_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1YT1jYL6gbsKi_LbkpPzesdedQjvNzYWXXsY8_YuDpJU/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_lesson_4_-_complete_the_task_1"
       }
     },
     {
@@ -1517,7 +1556,7 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT   Make a Plan",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_3_-_make_a_plan"
       }
     },
     {
@@ -1613,7 +1652,7 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT   Review the Task",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_1_-_review_the_task"
       }
     },
     {
@@ -1631,7 +1670,7 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_4_-_complete_the_task_1"
       }
     },
     {
@@ -1649,7 +1688,7 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT Deep Dive",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_unit_9_-_lesson_2_-_deep_dive"
       }
     }
   ],

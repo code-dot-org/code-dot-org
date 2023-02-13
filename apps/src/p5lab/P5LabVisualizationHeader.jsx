@@ -143,7 +143,11 @@ export default connect(
     isShareView: state.pageConstants.isShareView,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   }),
-  dispatch => ({
-    onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))
-  })
+  dispatch => {
+    return {
+      onInterfaceModeChange(mode) {
+        dispatch(changeInterfaceMode(mode));
+      }
+    };
+  }
 )(P5LabVisualizationHeader);

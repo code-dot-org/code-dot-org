@@ -459,9 +459,13 @@ describe('EditSectionForm', () => {
       sectionLoginType: testSection.loginType,
       previousUnitId: 7,
       previousCourseId: 3,
+      previousCourseVersionId: 5,
       previousVersionYear: '2022',
       newUnitId: null,
       newCourseId: courseOfferings[testSection.courseOfferingId].id,
+      newCourseVersionId: Object.values(
+        courseOfferings[testSection.courseOfferingId].course_versions
+      ).find(cv => cv.key === '2017').id,
       newVersionYear: '2017'
     });
 

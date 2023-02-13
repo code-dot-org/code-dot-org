@@ -41,7 +41,7 @@ module Dashboard
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/allowlist'
-      require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+      require 'cdo/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Allowlist::Downstream,
         HttpCache.config(rack_env)[:dashboard]
 
@@ -155,15 +155,6 @@ module Dashboard
     config.autoload_paths << Rails.root.join('app', 'models', 'levels')
     config.autoload_paths << Rails.root.join('app', 'models', 'sections')
     config.autoload_paths << Rails.root.join('../lib/cdo/shared_constants')
-
-    # Make sure to explicitly cast all autoload paths to strings; the gem we use to
-    # annotate model files with schema descriptions doesn't know how to deal with
-    # Pathnames. See https://github.com/ctran/annotate_models/issues/758
-    #
-    # We have a PR opened with a fix at https://github.com/ctran/annotate_models/pull/848;
-    # once a version of the gem is released which includes that change, we can get rid of
-    # this line.
-    config.autoload_paths.map!(&:to_s)
 
     # Also make sure some of these directories are always loaded up front in production
     # environments.

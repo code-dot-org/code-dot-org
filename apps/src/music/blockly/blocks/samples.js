@@ -7,14 +7,17 @@ import {
   EXTRA_SAMPLE_FIELD_PREFIX,
   FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
-  TRACK_NAME_FIELD
+  TRACK_NAME_FIELD,
+  TRIGGER_FIELD
 } from '../constants';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
   let block = ctx;
   while ((block = block.getParent())) {
-    if (block.type === 'when_run') {
+    if (
+      [BlockTypes.WHEN_RUN, BlockTypes.WHEN_RUN_SIMPLE2].includes(block.type)
+    ) {
       return true;
     }
   }
@@ -197,7 +200,7 @@ export const newTrackOnTrigger = {
       },
       {
         type: 'input_dummy',
-        name: 'trigger'
+        name: TRIGGER_FIELD
       }
     ],
     inputsInline: true,
