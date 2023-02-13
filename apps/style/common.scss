@@ -1090,9 +1090,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     float: left;
     padding: 0 10px;
     cursor: pointer;
-    #show-toolbox-click-target:hover .fa {
-      color: $white;
-    }
 
     & > span {
       margin: auto auto auto 18px;
