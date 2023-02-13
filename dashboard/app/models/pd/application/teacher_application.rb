@@ -780,7 +780,7 @@ module Pd::Application
       return false if reminder_emails.any?
 
       # Only if we've sent at least one principal approval email before.
-      return false unless emails.where(email_type: 'admin_approval').exists?
+      return false unless emails.exists?(email_type: 'admin_approval')
 
       # If it's valid to send another principal email at this time.
       return allow_sending_principal_email?
@@ -789,7 +789,8 @@ module Pd::Application
     # memoize in a hash, per course
     FILTERED_LABELS = Hash.new do |h, key|
       labels_to_remove = (
-      if key == 'csd'
+      case key
+      when 'csd'
         [
           :csp_which_grades,
           :csp_how_offer,
@@ -799,7 +800,7 @@ module Pd::Application
           :csa_already_know,
           :csa_phone_screen
         ]
-      elsif key == 'csp'
+      when 'csp'
         [
           :csd_which_grades,
           :csa_which_grades,
@@ -807,7 +808,7 @@ module Pd::Application
           :csa_already_know,
           :csa_phone_screen
         ]
-      elsif key == 'csa'
+      when 'csa'
         [
           :csp_which_grades,
           :csp_how_offer,
@@ -834,7 +835,8 @@ module Pd::Application
 
     # List of columns to be filtered out based on selected program (course)
     def self.columns_to_remove(course)
-      if course == 'csd'
+      case course
+      when 'csd'
         {
           teacher: [
             :csp_which_grades,
@@ -850,7 +852,7 @@ module Pd::Application
             :csa_implementation
           ]
         }
-      elsif course == 'csp'
+      when 'csp'
         {
           teacher: [
             :csd_which_grades,
@@ -864,7 +866,7 @@ module Pd::Application
             :csa_implementation
           ]
         }
-      elsif course == 'csa'
+      when 'csa'
         {
           teacher: [
             :csp_which_grades,
@@ -982,19 +984,20 @@ module Pd::Application
       end
 
       # Section 6
-      if course == 'csd'
+      case course
+      when 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] =
           (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
         took_csd_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
-      elsif course == 'csp'
+      when 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] =
           (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
         took_csp_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Principles')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csp_course ? NO : YES
-      elsif course == 'csa'
+      when 'csa'
         meets_minimum_criteria_scores[:csa_which_grades] =
           (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
         took_csa_course = responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)')

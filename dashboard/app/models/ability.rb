@@ -170,7 +170,7 @@ class Ability
         # Only allow a student to view another student's project
         # only on levels where we have our peer review feature.
         # For now, that's only Javalab.
-        if level_to_view&.is_a?(Javalab)
+        if level_to_view.is_a?(Javalab)
           project_level_id = level_to_view.project_template_level.try(:id) ||
             level_to_view.id
 
@@ -445,6 +445,9 @@ class Ability
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
+      # let them change abuse scores
+      can :destroy_abuse, :all
+      can :update_file_abuse, :all
     end
 
     if user.permission?(UserPermission::CENSUS_REVIEWER)

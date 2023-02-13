@@ -501,6 +501,7 @@ Dashboard::Application.routes.draw do
     get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
     get '/weblab/host', to: 'weblab_host#index'
+    get '/weblab/network-check', to: 'weblab_host#network_check'
 
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
@@ -1016,6 +1017,11 @@ Dashboard::Application.routes.draw do
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
+
+    # partial ports of legacy v3 APIs
+    get '/v3/channels/:channel_id/abuse', to: 'report_abuse#show_abuse'
+    delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
+    patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
 
     # offline-service-worker*.js needs to be loaded the the root level of the
     # domain('studio.code.org/').

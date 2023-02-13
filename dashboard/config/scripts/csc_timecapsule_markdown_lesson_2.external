@@ -1,0 +1,28 @@
+name 'csc_timecapsule_markdown_lesson_2'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Plan Your Time Capsule
+
+<div>
+<img src="https://images.code.org/e9dc1d6469d15a7a5e812961fcdaad7a-image-1676059299541.png" style="float:center; width:30%; padding-bottom:10px; padding-left:20%;"/>
+
+<div>
+
+<div style= "width: 70%"> 
+<p align="center"><strong>It's time to plan your digital time capsule with  <br>information about your life right now
+to share with the future.</strong>
+
+
+
+>- Include things you like to do and the things that are important to you. 
+>- Add details about what's currently happening in your community and the world. 
+>- Think about the backgrounds, text effects, sounds, sprites, and events you may use to make your digital time capsule an immersive experience.
+
+
+**In the next lesson, you will code your time capsule poem. It's like sending a message or a treasure box to your future self and your future friends that explains life right now.**
+
+
+</div>
+MARKDOWN
