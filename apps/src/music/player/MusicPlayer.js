@@ -195,6 +195,8 @@ export default class MusicPlayer {
     return GetCurrentAudioTime() - this.startPlayingAudioTime;
   }
 
+  // Returns the current playhead position, in measures.  It's 1-based.
+  // Returns 0 if music is not playing.
   getPlayheadPosition() {
     if (!this.isPlaying) {
       return 0;
@@ -205,7 +207,7 @@ export default class MusicPlayer {
   }
 
   // Returns the current measure, with a fractional component representing the
-  // exact playhead.
+  // exact position.  It's 0-based.
   // Returns -1 if music is not playing.
   getCurrentMeasureExact() {
     const currentAudioTime = GetCurrentAudioTime();
