@@ -192,3 +192,5 @@ theme: responsive_full_width
         %p{style: "height: 70px"} See how three different districts are bringing CS to their students.
         %a.link-button{href: "https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.9ub4frvyuqiy"} Learn more
   .clear
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::ADMIN_PAGE_VISITED_EVENT
