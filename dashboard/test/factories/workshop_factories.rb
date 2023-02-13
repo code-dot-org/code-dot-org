@@ -272,6 +272,18 @@ FactoryGirl.define do
       each_session_hours 8 # The most common session length
     end
 
+    # Facilitator-in-training weekend workshop
+    factory :fit_workshop do
+      subject Pd::Workshop::SUBJECT_FIT
+      course Pd::Workshop::COURSE_CSP # CSD is also valid
+      capacity 100         # Typical capacity
+      on_map false         # Never on map
+      funded               # Sometimes funded (50%)
+      num_sessions 2       # Most have 2 sessions
+      num_facilitators 2   # Most have 2 facilitators
+      each_session_hours 8 # The most common session length
+    end
+
     factory :admin_workshop do
       course Pd::Workshop::COURSE_ADMIN
       subject nil
