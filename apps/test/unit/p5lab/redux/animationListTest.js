@@ -496,17 +496,25 @@ describe('animationList', function() {
     });
 
     it('new blank animations get name animation_1 when it is the first blank animation', function() {
-      store.dispatch(addBlankAnimation());
+      store.dispatch(addBlankAnimation('ANIMATION'));
       let blankAnimationKey = store.getState().animationList.orderedKeys[0];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey].name
       ).to.equal('animation_1');
     });
 
+    it('first new blank background animations get name blank_background_1', function() {
+      store.dispatch(addBlankAnimation('BACKGROUND'));
+      let blankAnimationKey = store.getState().animationList.orderedKeys[0];
+      expect(
+        store.getState().animationList.propsByKey[blankAnimationKey].name
+      ).to.equal('blank_background_1');
+    });
+
     it('new blank animations get name next available number appended', function() {
       let animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
-      store.dispatch(addBlankAnimation());
+      store.dispatch(addBlankAnimation('ANIMATION'));
 
       let blankAnimationKey = store.getState().animationList.orderedKeys[2];
       expect(
@@ -520,7 +528,7 @@ describe('animationList', function() {
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key1));
       expect(store.getState().animationList.orderedKeys.length).to.equal(2);
-      store.dispatch(addBlankAnimation());
+      store.dispatch(addBlankAnimation('ANIMATION'));
       expect(store.getState().animationList.orderedKeys.length).to.equal(3);
       let blankAnimationKey = store.getState().animationList.orderedKeys[2];
       expect(

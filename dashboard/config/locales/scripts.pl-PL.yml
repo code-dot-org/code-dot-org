@@ -7120,6 +7120,8 @@ pl:
               name: Pętle dla (for)
             lesson-4:
               name: Warunki wstępne i warunki końcowe
+            lesson-5:
+              name: Ulepszone dla pętli
             lesson-6:
               name: Zmienne statyczne i stałe
             lesson-7:
@@ -7128,10 +7130,14 @@ pl:
               name: Algorytmy macierzowe
             lesson-9:
               name: Znajdowanie duplikatów
+            lesson-10:
+              name: Dane dla projektu dobra społecznego
             lesson-11:
               name: Praktyka FRQ
             lesson-12:
               name: Jednostka 3 Sprawdzian
+            lesson-13:
+              name: Dane dla projektu dobra społecznego [wersja 1-dniowa]
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -7491,6 +7497,7 @@ pl:
             Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
         self-paced-pl-csa3-2023:
           title: 'Moduł 3: Wsparcie przy programowaniu tekstowym'
+          name: self-paced-pl-csa3-2023
         csa-examples-22:
           lessons:
             lesson-1:
@@ -7608,3 +7615,24 @@ pl:
               name: Pomysły FM
           name: katies-playground
           title: Miejsce Katie do robienia rzeczy
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: mikrobit-2022
+          title: Tworzenie aplikacji z urządzeniami (Micro:bit)
+        microbit-temp:
+          lessons:
+            lesson-11:
+              name: Wyświetlacz LED
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          name: mikrobit-temp
+          title: 'Micro: Bit Temp'

@@ -1070,6 +1070,7 @@ ca:
               display_name: Projecte de final de curs
           student_description: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
         coursed-2021:
+          title: Curs D (2021)
           description_audience: De 7 a 11 anys
           lesson_groups:
             csf_sequencing:
