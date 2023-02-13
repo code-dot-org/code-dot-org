@@ -108,6 +108,7 @@ class ReportAbuseController < ApplicationController
   end
 
   # DELETE /v3/channels/:channel_id/abuse
+  # POST /v3/channels/:channel_id/abuse/delete
   # Clear an abuse score. Requires project_validator permission
   def reset_abuse
     return head :unauthorized unless can?(:destroy_abuse, nil)
