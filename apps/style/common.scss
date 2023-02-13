@@ -575,6 +575,12 @@ button.launch {
   margin-left: 0;
   margin-right: 10px;
 
+  &:hover {
+    background-color: $brand_secondary_dark;
+    border-color: $brand_secondary_dark;
+    box-shadow: none;
+  }
+
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
 }
@@ -596,6 +602,12 @@ button.blocklyLaunch {
 
   border: 1px solid $brand_secondary_default;
   background-color: $brand_secondary_default;
+
+  &:hover {
+    background-color: $brand_secondary_dark;
+    border-color: $brand_secondary_dark;
+    box-shadow: none;
+  }
 
   @media screen and (min-width: 1051px) {
     min-width: 111px;
@@ -628,6 +640,12 @@ button.blocklyLaunch {
   &#resetButton {
     border: 1px solid $brand_secondary_default;
     background-color: $brand_secondary_default;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
+      box-shadow: none;
+    }
   }
 
   &.hideText {
