@@ -520,10 +520,13 @@ db_cluster_id: !Secret
 db_proxy_reporting_endpoint: !Secret
 db_writer_endpoint: !Secret
 
+db_admin_credentials: !Secret
 db_admin_user: master
 db_admin_password: !Secret
+db_writer_credentials: !Secret
 db_writer_user: application-writer
 db_writer_password: !Secret
+db_reader_credentials: !Secret
 db_reader_user: readonly
 db_reader_password: !Secret
 
