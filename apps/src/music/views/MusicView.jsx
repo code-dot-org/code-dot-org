@@ -109,12 +109,15 @@ class UnconnectedMusicView extends React.Component {
       Globals.setPlayer(this.player);
     });
 
-    this.loadInstructions().then(instructions => {
-      this.setState({
-        instructions: instructions,
-        showInstructions: !!instructions
+    // Disable instructions for now.
+    /*
+      this.loadInstructions().then(instructions => {
+        this.setState({
+          instructions: instructions,
+          showInstructions: !!instructions
+        });
       });
-    });
+    */
   }
 
   componentDidUpdate(prevProps) {
