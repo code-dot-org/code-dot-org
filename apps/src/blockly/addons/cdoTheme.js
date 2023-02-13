@@ -1,7 +1,13 @@
 import GoogleBlockly from 'blockly/core';
 
-// Intentionally override definition from core Blockly
-export const coreBlocklyOverrides = {
+export const cdoBlockStyles = {
+  ...coreBlocklyOverrides,
+  ...cdoCustomStyles
+};
+
+// Intentionally overriden styles from Google Blockly.
+// We do not override list, math, text, or variable blocks.
+const coreBlocklyOverrides = {
   colour_blocks: {
     colourPrimary: '#0093c9'
   },
@@ -13,24 +19,16 @@ export const coreBlocklyOverrides = {
   }
 };
 
-export const cdoCustomStyles = {
+// Standard CDO palette of block colors used across labs
+const cdoCustomStyles = {
   default: {
     colourPrimary: '#00b0bc'
   },
-  behavior_blocks: {
-    colourPrimary: '#20cc4e'
-  },
-  dance_blocks: {
-    colourPrimary: '#7435b2'
+  comment_blocks: {
+    colourPrimary: '#b2b2b2'
   },
   event_blocks: {
     colourPrimary: '#00bc3e'
-  },
-  music_blocks: {
-    colourPrimary: '#5b67a5'
-  },
-  sprite_blocks: {
-    colourPrimary: '#b2353f'
   },
   setup_blocks: {
     colourPrimary: '#fca400'
@@ -38,14 +36,39 @@ export const cdoCustomStyles = {
   world_blocks: {
     colourPrimary: '#5b5ba5'
   },
-  flow_blocks: {
-    colourPrimary: '#418eb6'
+  ...spriteLabStyles,
+  ...danceStyles,
+  ...musicLabStyles
+};
+
+// Used for Sprite Lab (and all related level subtypes), and Dance.
+const spriteLabStyles = {
+  behavior_blocks: {
+    colourPrimary: '#20cc4e'
+  },
+  location_blocks: {
+    colourPrimary: '#ead446'
+  },
+  sprite_blocks: {
+    colourPrimary: '#b2353f'
   }
 };
 
-export const cdoBlockStyles = {
-  ...coreBlocklyOverrides,
-  ...cdoCustomStyles
+// Used only for Dance Party
+const danceStyles = {
+  dance_blocks: {
+    colourPrimary: '#7435b2'
+  }
+};
+
+// Experimental MusicLab styles. Subject to change.
+const musicLabStyles = {
+  flow_blocks: {
+    colourPrimary: '#418eb6'
+  },
+  music_blocks: {
+    colourPrimary: '#5b67a5'
+  }
 };
 
 export default GoogleBlockly.Theme.defineTheme('modern', {
