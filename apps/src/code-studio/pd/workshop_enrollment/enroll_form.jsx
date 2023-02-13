@@ -4,11 +4,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
-import {FormGroup, Button, ControlLabel, HelpBlock} from 'react-bootstrap';
+import {
+  FormGroup,
+  Button,
+  ControlLabel,
+  HelpBlock,
+  Alert
+} from 'react-bootstrap';
 import Select from 'react-select';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
+import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
@@ -112,7 +119,9 @@ export default class EnrollForm extends React.Component {
       first_name: this.props.first_name,
       email: this.props.email,
       isSubmitting: false,
-      errors: {}
+      errors: {},
+      showFormErrorMessage: false,
+      submissionErrorMessage: ''
     };
   }
 
@@ -152,9 +161,13 @@ export default class EnrollForm extends React.Component {
   };
 
   handleClickRegister = () => {
+    this.setState({showFormErrorMessage: false});
+    this.setState({submissionErrorMessage: ''});
     if (this.validateRequiredFields()) {
       this.setState({isSubmitting: true});
       this.submit();
+    } else {
+      this.setState({showFormErrorMessage: true});
     }
   };
 
@@ -278,6 +291,11 @@ export default class EnrollForm extends React.Component {
       data: JSON.stringify(params),
       complete: result => {
         this.setState({isSubmitting: false});
+        result?.responseJSON?.workshop_enrollment_status === 'error' &&
+          this.setState({
+            submissionErrorMessage:
+              result?.responseJSON?.error_message || 'unknown error'
+          });
         this.props.onSubmissionComplete(result);
       }
     });
@@ -752,6 +770,21 @@ export default class EnrollForm extends React.Component {
         >
           Register
         </Button>
+        {this.state.showFormErrorMessage && (
+          <p style={{color: color.bootstrap_v3_error_text}}>
+            Form errors found. Please check your responses above.
+          </p>
+        )}
+        {this.state.submissionErrorMessage && (
+          <Alert bsStyle="danger" style={{marginTop: 10}}>
+            <p>
+              Sorry, we were unable to enroll you in this workshop because
+              {' ' + this.state.submissionErrorMessage}. Please double check
+              your responses, and if the problem persists, contact{' '}
+              <a href="mailto:support@code.org">support@code.org</a>.
+            </p>
+          </Alert>
+        )}
         <br />
         <br />
         <br />

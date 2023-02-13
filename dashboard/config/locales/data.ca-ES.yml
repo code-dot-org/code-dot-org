@@ -19,7 +19,7 @@ ca:
         Farmer2: La pagesa 2
         Unplug8: Abstracció
         Artist4: L'artista 4
-        Unplug9: Programació en relleus
+        Unplug9: Programació amb relleus
         Farmer3: La pagesa 3
         Unplug10: Internet
         Artist5: L'artista 5
@@ -500,7 +500,7 @@ ca:
         C2_graph_paper: Programació de paper quadriculat
         C2_conditionals_with_cards: Condicionals
         C2_binary_bracelets: Polseres binàries
-        C2_relay_programming: Programació en relleus
+        C2_relay_programming: Programació amb relleus
         C2_paper_airplanes: Avions de paper
         C2_digital_footprint: La vostra empremta digital
         C2_digital_footprint_v2: La vostra empremta digital
@@ -586,12 +586,14 @@ ca:
         CDEF_Video_SpritesInAction: Sprites en acció
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acció
         mc_2018_intro: 'Introducció a Minecraft: Viatge aquàtic'
+        hoc_dance_properties: Festa de ball - Propietats
         csd_pair_programming: Programació per parelles
         csd_applab_parameters: Funcions amb Paràmetres
         CSF_Going_Places_Safely: El meu barri d'internet
         CSF_Spritelab_MakeSprite_v2: Com crear un sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en acció
         csd_debugging: Depuració
+        hoc_dance_properties_2019: Festa de ball - Propietats
         csf_my_online_neighborhood_2020: El meu barri d'internet
         csf21pilot_prompts: 'Laboratori d''Sprites: Text i preguntes'
         playlab_2021: Introducció a Play Lab
