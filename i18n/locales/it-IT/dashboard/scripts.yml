@@ -3390,3 +3390,15 @@ it:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Capitolo 2: Input Hardware'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduzione a Sviluppo App
+            lessonGroup-3:
+              display_name: Ingressi e uscite

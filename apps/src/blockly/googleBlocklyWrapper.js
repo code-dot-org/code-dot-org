@@ -36,6 +36,7 @@ import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
+import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
@@ -582,8 +583,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
       );
     }
     // Customize function definition blocks.
-    Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
-      FUNCTION_BLOCK.init;
+    if (options.noFunctionBlockFrame) {
+      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+        FUNCTION_BLOCK_NO_FRAME.init;
+    } else {
+      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+        FUNCTION_BLOCK.init;
+    }
+
     return workspace;
   };
 

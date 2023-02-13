@@ -13,7 +13,6 @@ import * as shapes from '../shapes';
 import i18n from '@cdo/locale';
 import {P5LabInterfaceMode, P5LabType} from '../constants.js';
 import experiments from '@cdo/apps/util/experiments';
-
 /**
  * Root of the animation editor interface mode for GameLab
  */
@@ -36,7 +35,7 @@ class AnimationTab extends React.Component {
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
-    selectedAnimation: shapes.AnimationKey,
+    currentAnimation: shapes.AnimationKey,
     defaultQuery: PropTypes.object
   };
 
@@ -44,6 +43,7 @@ class AnimationTab extends React.Component {
     const {
       channelId,
       columnSizes,
+      currentAnimation,
       defaultQuery,
       hideAnimationNames,
       hideBackgrounds,
@@ -52,16 +52,15 @@ class AnimationTab extends React.Component {
       labType,
       libraryManifest,
       onColumnWidthsChange,
-      pickerType,
-      selectedAnimation
+      pickerType
     } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
-    if (selectedAnimation) {
+    if (currentAnimation) {
       hidePiskelStyle = {visibility: 'hidden'};
     }
     const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const animationsColumnStyle =
-      labType === 'SPRITELAB' && experiments.isEnabled('backgroundsTab')
+      labType !== P5LabType.GAMELAB && experiments.isEnabled('backgroundsTab')
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;
     return (
@@ -154,8 +153,8 @@ const styles = {
 };
 export default connect(
   state => ({
-    columnSizes: state.animationTab.columnSizes,
-    selectedAnimation: state.animationTab.selectedAnimation
+    currentAnimation: state.animationTab.currentAnimations[state.interfaceMode],
+    columnSizes: state.animationTab.columnSizes
   }),
   dispatch => ({
     onColumnWidthsChange(widths) {

@@ -117,9 +117,9 @@ class LevelsController < ApplicationController
     # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
     @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%").or(@levels.where('levels.level_num LIKE ?', "%#{params[:name]}%")) if params[:name]
-    @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
-    @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
-    @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
+    @levels = @levels.where(levels: {type: params[:level_type]}) if params[:level_type].present?
+    @levels = @levels.joins(:script_levels).where(script_levels: {script_id: params[:script_id]}) if params[:script_id].present?
+    @levels = @levels.left_joins(:user).where(levels: {user_id: params[:owner_id]}) if params[:owner_id].present?
   end
 
   # GET /levels/1
@@ -141,7 +141,7 @@ class LevelsController < ApplicationController
   # GET /levels/1/edit
   def edit
     # Make sure that the encrypted property is a boolean
-    if @level.properties['encrypted']&.is_a?(String)
+    if @level.properties['encrypted'].is_a?(String)
       @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
     end
     bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
