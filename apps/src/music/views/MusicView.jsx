@@ -367,7 +367,6 @@ class UnconnectedMusicView extends React.Component {
         <PlayerUtilsContext.Provider
           value={{
             getSoundEvents: () => this.player.getSoundEvents(),
-            getCurrentMeasure: () => this.player.getCurrentMeasure(),
             getCurrentMeasureExact: () => this.player.getCurrentMeasureExact(),
             convertMeasureToSeconds: measure =>
               this.player.convertMeasureToSeconds(measure),

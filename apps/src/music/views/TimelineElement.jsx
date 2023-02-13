@@ -59,7 +59,6 @@ TimelineElement.propTypes = {
   height: PropTypes.number.isRequired,
   top: PropTypes.number.isRequired,
   left: PropTypes.number.isRequired,
-  isCurrentlyPlaying: PropTypes.bool.isRequired,
   when: PropTypes.number.isRequired,
   currentMeasureExact: PropTypes.number.isRequired
 };
