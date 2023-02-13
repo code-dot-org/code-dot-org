@@ -7,13 +7,13 @@ db_cluster_id: localhost
 db_proxy_reporting_endpoint: localhost
 db_writer_endpoint: localhost
 
-db_admin_credentials: !Secret
-db_writer_credentials: !Secret
-db_reader_credentials: !Secret
+db_credential_admin: '{"username":"root", "password":""}'
 db_admin_user: root
 db_admin_password: ''
+db_credential_writer: '{"username":"root", "password":""}'
 db_writer_user: root
 db_writer_password: ''
+db_credential_reader: '{"username":"root", "password":""}'
 db_reader_user: root
 db_reader_password: ''
 db_writer: 'mysql://root@localhost/'
