@@ -88,10 +88,18 @@ Feature: Unit overview page
     When I switch tabs
     And I wait until current URL contains "/s/allthemigratedthings/lessons/1"
 
-  Scenario: Unit overview student resources
+  Scenario: Unit overview student resources as teacher
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Teacher_Blake"
     And I am on "http://studio.code.org/s/allthemigratedthings?no_redirect=true"
     And I click selector "#uitest-student-resources" once I see it
+    When I switch tabs
+    And I wait until current URL contains "s/allthemigratedthings/lessons/1/student"
+
+  Scenario: Unit overview student resources as student
+    Given I create an authorized teacher-associated student named "Blake"
+    When I sign in as "Blake"
+    And I am on "http://studio.code.org/s/allthemigratedthings?no_redirect=true"
+    And I click selector ".ui-test-lesson-resources" once I see it
     When I switch tabs
     And I wait until current URL contains "s/allthemigratedthings/lessons/1/student"
