@@ -70,6 +70,8 @@ export default combineReducers({
   pendingFrames
 });
 
+const BACKGROUNDS_CATEGORY = 'backgrounds';
+
 /** pendingFrames is used for temporarily storing additional
  * frames before they get added to the animation in Piskel.
  * pendingFrames gets added to animation in PiskelEditor.jsx
@@ -244,6 +246,7 @@ function generateAnimationName(baseName, animationList) {
       animationName = animationName.replace(baseName, '');
       if (animationName[0] === '_') {
         const brokenUpString = animationName.split('_');
+        // TODO: Address the fragility here if animationName includes multiple underscores.
         const number = parseInt(brokenUpString.pop());
         unavailableNumbers.push(number);
       }
@@ -392,7 +395,8 @@ const getOrderedKeysWithoutBackgrounds = serializedAnimationList => {
   return serializedAnimationList.orderedKeys.filter(animKey => {
     const animProps = serializedAnimationList.propsByKey[animKey];
     return (
-      !animProps.categories || !animProps.categories.includes('backgrounds')
+      !animProps.categories ||
+      !animProps.categories.includes(BACKGROUNDS_CATEGORY)
     );
   });
 };
@@ -400,28 +404,44 @@ const getOrderedKeysWithoutBackgrounds = serializedAnimationList => {
 const getOrderedKeysOnlyBackgrounds = serializedAnimationList => {
   return serializedAnimationList.orderedKeys.filter(animKey => {
     const animProps = serializedAnimationList.propsByKey[animKey];
-    return animProps.categories && animProps.categories.includes('backgrounds');
+    return (
+      animProps.categories &&
+      animProps.categories.includes(BACKGROUNDS_CATEGORY)
+    );
   });
 };
 
-export function addBlankAnimation() {
+export function addBlankAnimation(interfaceMode) {
   // To avoid special cases and saving tons of blank animations to our server,
   // we're actually adding a secret blank library animation any time the user
   // picks "Draw my own."  As soon as the user makes any changes to the
   // animation it gets saved as a custom animation in their own project, just
   // like we do with other library animations.
+  const isBackground = interfaceMode === P5LabInterfaceMode.BACKGROUND;
+  const blankAnimation = {
+    name: 'animation',
+    sourceUrl:
+      '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
+    frameSize: {x: 100, y: 100},
+    frameCount: 1,
+    looping: true,
+    frameDelay: 4,
+    version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
+  };
+  const blankBackground = {
+    name: 'blank_background',
+    sourceUrl:
+      '/api/v1/animation-library/level_animations/.31YUNsUQNxLZeGkrQper8CLl_jyNb71/blank.png',
+    frameSize: {x: 400, y: 400},
+    frameCount: 1,
+    looping: true,
+    frameDelay: 2,
+    categories: [BACKGROUNDS_CATEGORY],
+    version: '.31YUNsUQNxLZeGkrQper8CLl_jyNb71'
+  };
   return addLibraryAnimation(
-    {
-      name: 'animation',
-      sourceUrl:
-        '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
-      frameSize: {x: 100, y: 100},
-      frameCount: 1,
-      looping: true,
-      frameDelay: 4,
-      version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
-    },
-    false /*skipBackground. False because these are going to be sprites or we're in gamelab*/
+    isBackground ? blankBackground : blankAnimation,
+    isBackground
   );
 }
 
@@ -442,7 +462,7 @@ export function appendBlankFrame() {
 }
 
 /**
- * Add an animation to the project (at the end of the list).
+ * Add an animation to the project (at the end of the list, unless a Sprite Lab project).
  * @param {!AnimationKey} key
  * @param {!SerializedAnimation} props
  */
@@ -450,10 +470,18 @@ export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
   return (dispatch, getState) => {
-    dispatch(addAnimationAction(key, {...props, looping: true}));
+    const isSpriteLab =
+      getState().pageConstants && getState().pageConstants.isBlockly;
+    // Unlike Game Lab, Sprite Lab projects start with animations.
+    // We add new animations to the top of the list to make them more discoverable.
+    const index = isSpriteLab ? 0 : null;
+    dispatch(addAnimationAction(key, {...props, looping: true}, index));
+    const isBackground = props.categories?.includes(BACKGROUNDS_CATEGORY);
+    const selector =
+      isSpriteLab && isBackground ? selectBackground : selectAnimation;
     dispatch(
       loadAnimationFromSource(key, () => {
-        dispatch(selectAnimation(key));
+        dispatch(selector(key));
       })
     );
     let name = generateAnimationName(
@@ -484,19 +512,21 @@ export function appendCustomFrames(props) {
 }
 
 /**
- * Add a library animation to the project (at the end of the list, unless a spritelab project).
+ * Add a library animation to the project (at the end of the list, unless a Sprite Lab project).
  * @param {!SerializedAnimation} props
  */
 export function addLibraryAnimation(props, isSpriteLab) {
   return (dispatch, getState) => {
     const key = createUuid();
     if (getState().pageConstants && getState().pageConstants.isBlockly) {
+      // Unlike Game Lab, Sprite Lab projects start with animations.
+      // We add new animations to the top of the list to make them more discoverable.
       dispatch(addAnimationAction(key, props, 0));
     } else {
       dispatch(addAnimationAction(key, props));
     }
     const isSpriteLabBackground =
-      props.categories?.includes('backgrounds') && isSpriteLab;
+      props.categories?.includes(BACKGROUNDS_CATEGORY) && isSpriteLab;
     const selector = isSpriteLabBackground ? selectBackground : selectAnimation;
     dispatch(
       loadAnimationFromSource(key, () => {

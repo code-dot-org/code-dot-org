@@ -1933,6 +1933,8 @@ class UnitTest < ActiveSupport::TestCase
     assert @csc_unit.csc?
     assert @hoc_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     assert @hoc_unit.hoc?
+    refute @csf_unit.hoc?
+    refute @csd_unit.hoc?
   end
 
   test "middle_high?" do
