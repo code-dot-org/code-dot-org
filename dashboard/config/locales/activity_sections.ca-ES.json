@@ -1174,6 +1174,7 @@
           "description": ""
         },
         "98b4c82a-3329-47a1-b2e3-3c46b97c94ba": {
+          "name": "Vocabulari clau",
           "description": "-   **contrasenya**: una sèrie de lletres, símbols i números secrets que fem servir per limitar qui té accés a un contingut digital\n-   **frase**: un seguit de paraules que van juntes i són fàcils de recordar\n-   **símbol**: un caràcter que no és ni un número ni una lletra, com ara #, !, o @.\n-   **nom d’usuari**: el nom que es crea per iniciar sessió en una pàgina web, aplicació o joc\n\nCom a activitat opcional abans de fer la lliçó, feu que els nens juguin al joc [Protegeix-te amb una contrasenya](https://www.digitalpassport.org/password-protect.html) a Digital Passport™ de Common Sense Education. Us ajudarà a introduir els conceptes clau de la lliçó. Per saber-ne més, feu una ullada a la [Guia docent de Digital Passport](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Pregunteu**: _Hi ha alguna cosa que de la vostra vida que prengueu mesures per protegir? Com i per què la protegiu?_ ([Diapositiva 4](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3c3d552210_0_3))\n\nFeu que els alumnes es posin en parelles per parlar-ne i després trieu-ne alguns perquè comparteixin les respostes. Alguns exemples podrien ser _amarg un diari_, _fer servir el cadenat de la bici_, _guardar una joguina en un lloc segur_, etc. Expliqueu que una de les maneres que tenim de protegir les nostres coses consisteix a restringir qui hi pot accedir.\n\n**Pregunteu**: _Ara, pensem en quan fem servir dispositius electrònics, com un mòbil o un ordinador. Com limiteu qui pot accedir a alguna cosa que vulgueu protegir, i per què creieu que fa falta fer-ho?_\n\nAlguns exemples poden incloure fer servir una contrasenya, bloquejar el dispositiu, fer servir l’empremta digital, no deixar que ningú faci servir el dispositiu.\n\n**Digueu**: _Una de les maneres més habituals de protegir els dispositius i la informació a internet és fent servir una contrasenya. Una **contrasenya** és una sèrie de lletres, símbols i números secrets que fem servir per limitar qui té accés a un contingut digital. Tot i això, hi ha contrasenyes que són més segures que d’altres perquè costen més d’esbrinar. Ara veurem per què és important tenir contrasenyes segures i com us podeu assegurar que la vostra ho sigui_. ([Diapositiva 5](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3b037fe8d8_1_103))"
         },
         "d95709a0-d21b-4c11-9bfb-8c1310a823cf": {
@@ -1195,7 +1196,8 @@
           "name": "Introducció"
         },
         "61f2eb20-0ecb-4319-8ea7-5a9210a1c406": {
-          "name": "Programació de paper quadriculat"
+          "name": "Programació de paper quadriculat",
+          "progression_name": "Programació amb paper quadriculat - Activitat sense connexió"
         },
         "78086b29-2d45-4172-91f8-a56000ef094c": {
           "description": "_Aquí tenim una imatge. Feu veure que soc el robot i que tinc un sistema d’execució automàtica. Aquestes són les úniques instruccions que entenc._\n\n_Començarem des de la cantonada superior esquerra, i m’haureu d’anar donant instruccions per guiar-me._"
@@ -1232,6 +1234,9 @@
         "79e56cc4-0f1e-4c7f-a06d-9634f7e2c816": {
           "description": "Els professors teniu un paper molt important en l'educació informàtica i en propiciar un entorn col·laboratiu i dinàmic a l'aula. Mentre fan les activitats en línia, el paper principal del professor és animar i donar suport. Les lliçons en línia estan pensades per centrar-se en l'alumne, de manera que hauríeu d'evitar intervenir quan els nens s'encallin. Aquí teniu algunes idees per fer-ho:\n\n-   Feu servir la programació per parelles sempre que sigui possible durant l'activitat.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això què els diu?\n-   Recordeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."
         },
+        "2437214a-2077-4e3c-b231-e943e66a693f": {
+          "progression_name": "Vídeo: Introducció al laberint: Programació amb blocs"
+        },
         "4e14f7ca-7b1a-4769-ae57-9f128722a0dd": {
           "progression_name": "Desenvolupament d'habilitats"
         },
@@ -1247,29 +1252,46 @@
           "name": "Vocabulari"
         },
         "3ab2b28c-3947-44d9-ae6d-8d8d43320c27": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Recordeu-los que a l'activitat de \"Programació amb paper quadriculat\" vam guiar el sistema d’execució automàtica del company fent servir fletxes. Aquest escalfament els refrescarà aquests conceptes, ja que els necessitaran per fer l'activitat principal."
         },
         "02a52fe1-85a9-4a07-83a8-5469bf8ac7e6": {
           "tips": [
-            null
+            "##### Trucs per superar la frustració\n\n-   Comptar fins a 10\n-   Respirar fons\n-   Escriure sobre el problema a la llibreta\n-   Parlar amb un company sobre el problema\n-   Demanar ajuda\n\n##### Trucs per ser persistent\n\n-   Fer una llista de tot el que ja has provat\n-   Descriure què està passant\n-   Descriure què se suposa que ha de passar\n-   I això, què et diu?\n-   Fer un canvi i tornar a intentar-ho"
           ]
         },
         "29bbe8ac-7f83-407e-ad63-4fe434d80d1d": {
-          "name": "Programació en relleus"
+          "name": "Programació amb relleus",
+          "progression_name": "Programació amb relleus - Activitat sense connexió"
+        },
+        "ca6597d4-2706-400e-9584-c644d696ddf6": {
+          "description": "Tenint present l’activitat de Programació amb paper quadriculat, dividiu la classe en grups i prepareu-vos per fer l’activitat per relleus!\n\n**Preparació:** Imprimiu una còpia del **\\*Paquet d’activitats** per cada equip de 4 o 5 alumnes. Doblegueu o retalleu cada pàgina per la línia de punts."
         },
         "a7cadd06-1f56-42b5-a5b0-b623a57e1fcd": {
           "tips": [
-            null
+            "Aquí teniu alguns aclariments que va bé anar repassant:\n\n-   Només hi pot haver un membre de cada grup davant de la imatge.\n-   Poden comentar els algoritmes els algoritmes amb la resta de companys mentre estan a la fila, i si volen poden planejar qui escriurà què quan arribi els toqui posar-se davant de la imatge.\n-   Quan un alumne depura un programa fent una ratlla sobre una instrucció incorrecta (o un conjunt d’instruccions incorrectes), compta com si fos un torn. El jugador següent haurà de pensar com corregir la part que falta."
           ]
         },
         "77e44b0c-4a6a-4eca-9347-a3395aefd2df": {
           "name": "Reflexió"
         },
+        "058ba490-0f2c-4ea4-a6b3-05cbfefc0966": {
+          "description": "Feu servir aquestes activitats per potenciar l'aprenentatge dels alumnes. Es poden fer servir com activitats de fora de classe o d'aprofundiment.\n\n**Passa el full**\n\n-   Si no disposeu del temps o de l’espai per jugar als relleus, podeu fer que els alumnes facin un grup i es passin un full en què cadascú escriurà una fletxa abans de passar el full al següent.\n\n**Pinta’l i passa’l**\n\n-   Dibuixeu una imatge que contingui tants quadrats pintats com nens hi hagi a cada grup.\n-   Demaneu als alumnes que escriguin tantes fletxes al programa com sigui necessari per arribar a un quadrat pintat (i que inclogui també el pas de pintar el quadrat) abans de passar-lo al company següent.\n\n**Depurem junts**\n\nDibuixeu una imatge a la pissarra. Feu que cada alumne faci un programa per copiar la imatge. Demaneu que es canviïn la feina amb el veí del costat i es depurin els codis mútuament.\n\n-   Encercleu el primer pas incorrecte i torneu el full.\n-   Doneu als alumnes una altra oportunitat de repassar i depurar la seva pròpia feina.\n-   Busqueu un voluntari que vulgui compartir el seu programa.\n\nPregunteu a la classe: \n\n-   _Quants teníeu el mateix programa?_\n-   _Algú en té un de diferent?_"
+        },
         "0c752c58-d938-43f6-ac3c-a9b4556d12db": {
           "name": "Introducció"
         },
+        "dfa65e02-82a9-498c-b437-8db31c60b83b": {
+          "name": "Activitat sense connexió amb blocs de paper",
+          "description": "Dividiu la classe en equips de 3-5 i aneu a un espai gran. Podeu anar al gimnàs o al pati. Feu que els equips formin una fila com a “Programació en relleus”. Trieu un disseny de dificultat mitja del **\\*Paquet d’activitats**. Pengeu el disseny al final d’una distància llarga entre cada equip. A més de la imatge, doneu a cada equip suficients blocs de paper dels **\\*Materials manipulatius**. Cada equip necessitarà uns quants blocs de “pintar 1” i “moure **\\_”. Els blocs de “moure \\_**” es poden omplir o bé abans de començar o bé durant el joc. En qualsevol cas, assegureu-vos que estiguin ben definits quan el joc ja hagi començat.\n\nQuan tots els equips estiguin en fila, mostreu o llegiu les regles següents:\n\n-   El primer alumne de la fila ha de córrer fins a la imatge, fixar-s’hi, i posar el primer bloc de codi del programa per copiar la imatge.\n-   Llavors, el primer alumne torna corrents i toca el company que està primer a la fila i es posa al final.\n-   L’alumne que està al principi de la fila corre cap a la imatge, s’hi fixa, revisa el programa que ja hi ha escrit, i o bé depura el programa traient un bloc de codi incorrecte, o n’afegeix un de nou. Llavors torna corrents i toca al següent, i el procés segueix fins que un grup hagi acabat el seu programa.\n\nAssegureu-vos que els alumnes només facin servir els blocs de “pintar 1” o “moure *\\_\\_”, i que només en col·loquin un per torn. El primer equip que escrigui \\_correctament* el codi per fer la imatge guanya.\n\n#### -O-"
+        },
         "abadfc80-b903-49eb-bbd0-19b5ac76613b": {
-          "name": "Previsualització dels trencaclosques en línia amb tot el grup"
+          "name": "Previsualització dels trencaclosques en línia amb tot el grup",
+          "description": "Feu equips de 3 alumnes i trieu un trencaclosques de la lliçó. Us recomanem que feu servir el cinquè. Feu que els alumnes de cada equip seguin a un ordinador amb el trencaclosques a la pantalla. Cada equip només pot fer servir un ordinador, i només un membre pot mirar la pantalla. Mostreu o llegiu les regles següents:\n\n-   Només un membre de cada equip pot mirar la pantalla. \n-   Aquesta persona només pot eliminar o afegir un bloc a la vegada. Un cop n’hagi afegit o eliminat un, pot tocar l’espatlla de la persona del costat.\n-   Ara li toca a aquesta persona fer servir el seu torn.\n-   Els torns no es poden saltar ni repetir: tothom ha de jugar la mateixa estona.\n\nEl primer equip que acabi el trencaclosques _correctament_ guanya!"
+        },
+        "c2a66127-5945-47ec-938a-f396824349a7": {
+          "name": "Depuració amb la Laurel",
+          "description": "Pot ser útil que els alumnes seguin amb els seus equips de les activitats pont. Els alumnes hauran de fer els trencaclosques sols o per parelles, però tenir un grup proper per fer i respondre preguntes els ajudarà a guanyar confiança i entendre millor el tema d’estudi."
         },
         "7e3632b0-108a-4179-adf0-89a8e204b031": {
           "progression_name": "Desenvolupament d'habilitats"
@@ -1300,6 +1322,9 @@
         },
         "2f692035-15cf-4b35-b975-b860a75d39e8": {
           "description": "#### Juguem un partit!\n\nPorteu els alumnes al pati per jugar a algun joc de pilota. Feu seguiment dels esdeveniments i de les accions. Per exemple, si jugueu a bàsquet, si no fan regats, faran una falta de desplaçament i l’altre equip es quedarà la pilota. Si jugueu a futbol, enviar la pilota fora dels límits del camp farà que l’altre equip tregui. Ficar la pilota a la porteria farà que guanyin un punt. Si veieu que s’ho passen bé, podeu inventar regles noves. Feu que tots els alumnes cridin “Hurra!” quan el capità d’un equip marqui o anoti. Feu que tots es tirin al terra i facin la croqueta si un alumne marca dos gols o anota dues cistelles seguides."
+        },
+        "69b11f21-6d15-4588-b64d-ac6844a7763a": {
+          "description": "### Comentaris del dia de joc (45-60 minuts)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informàtica + Arts i llengua + Matemàtiques + Ciència**\n\n[Comentaris del dia de joc](https://docs.google.com/document/d/1wdBbcgvYXN3GgA1Y2nJjloGosfLxhhWKhUpbQtZPCP0/edit#) és una activitat opcional alineada amb les normes d’Arts i Llengua, Matemàtiques i Ciència de Common escrita per la nostra comunitat docent. En aquesta activitat, els alumnes llegiran les instruccions en veu alta mentre aprenen a programar amb esdeveniments de rebot per crear un joc. Un cop acabat el joc, faran comentaris jugada per jugada mentre els companys prediuen en quina direcció rebotarà la pilota per anotar. Els alumnes també completaran un model de Frayer sobre gràfics de barres abans de crear un gràfic de barres escalat amb les dades recopilades durant el joc.\n\n\\_Estàndards abordats: \\_\n\n-   **CCSS.ELA-LITERACY.RF.3.4:** llegir amb la precisió i fluïdesa necessàries per facilitar la comprensió.\n\n-   **CCSS.ELA-LITERACY.SL.3.4:** informar sobre un tema o text, explicar una historia o relatar una experiència amb fets apropiats i detalls descriptius rellevants, parlant de manera clara i a un ritme entenedor.\n\n-   **CCSS.MATH.CONTENT.3.MD.B.3:** dibuixar un gràfic d’imatges a escala i un gràfic de barres a escala per representar un conjunt de dades amb diverses categories. Resoldre problemes d’un i dos passos del tipus “quants més” i “quants menys” a partir de la informació presentada en gràfics de barres escalades.\n\n-   **NGSS.3-PS2-2:** fer observacions i/o mesuraments del moviment d’un objecte per presentar evidències per afirmar que un patró es pot fer servir per predir un moviment futur."
         },
         "ea99adc6-d611-4d13-9da7-04fcb43c6df3": {
           "tips": [
@@ -1333,7 +1358,7 @@
         },
         "9014dbe4-b770-43d6-aef5-77cf1e032bb9": {
           "tips": [
-            null
+            "Si teniu temps i us agradaria preparar els alumnes amb una activitat sense connexió, plantegeu-vos fer **\\*Festa de ball: sense connexió** abans d’aquesta lliçó. Aquesta activitat breu ajuda a fer veure als alumnes que els esdeveniments desencadenen diferents passos de ball."
           ]
         },
         "607ec054-729f-402a-9c5b-2adba3adb822": {
@@ -1349,7 +1374,8 @@
           "name": "Introducció"
         },
         "1787bc40-73cb-4be2-baac-bc013ef2107e": {
-          "name": "Programa la teva pròpia festa de ball"
+          "name": "Programa la teva pròpia festa de ball",
+          "description": "#### Filtre de música\n\nAquest tutorial inclou canços d'artistes populars. Per consultar la llista de cançons que hi apareixen, vegeu aquesta **\\*Llista de reproducció d'Spotify**. Hem inclòs les versions netes de totes les cançons, i pels alumnes de menys de 13 anys, limitem la música a aquesta llista filtrada. Si veieu que us agradaria fer servir aquesta llista filtrada amb alumnes més grans, podeu compartir la **\\*Llista de reproducció d'Spotify** amb la classe."
         },
         "6b622947-8880-4d2d-8cb2-ed13f13a63c9": {
           "name": "Ajuda: nivell per nivell"
@@ -1384,6 +1410,9 @@
           "name": "Avaluació opcional",
           "description": "Demaneu als vostres alumnes que afegeixin les seves notes adhesives o targetes al vostre mapa mental d'informàtica abans de sortir de l'aula. Intenteu omplir el tauler amb un munt d'idees fantàstiques sobre què és la informàtica i per què és tan important."
         },
+        "19085421-a961-434d-8cca-783977387177": {
+          "description": "### La supervivència dels ballarins (45-60 minuts)\n\n![](https://curriculum.code.org/media/uploads/scienceSmall.png) \n**Informàtica + Ciència**\n\n[La supervivència dels ballarins](https://docs.google.com/document/d/1F1E-qPyfnh7HV1euIjsRX01PZMhbOAA0q447FqRdefo/edit?usp=sharing) és una activitat opcional alineada amb els estàndards de nova generació de ciència. Amb la festa de ball, els alumnes seleccionaran almenys un organisme (ballarí) que sigui adequat per l’entorn (món) que creïn. S’anima als alumnes a fer servir els blocs de codi de “propietats” per personalitzar les característiques de cada organisme (ballarí). \n\n_Estàndards abordats:_\n\n-   **NGSS.3-LS4-2:** fer servir evidències per elaborar una explicació de com les variacions en les característiques entre individus de la mateixa espècie pot proporcionar avantatges per sobreviure, trobar parella i reproduir-se.\n\n-   **NGSS.3-LS4-3:** construir un argument amb evidència que demostri que en un hàbitat determinat alguns organismes sobreviuran sense problemes, d’altres tindran més dificultats, i d’altres no sobreviuran.\n\n-   **AMPLIACIÓ OPCIONAL: NGSS.3-LS4-4:** explicar si una solució serà útil per un problema que apareix quan l’entorn canvia i els tipus de plantes i animals que hi viuen podria canviar."
+        },
         "bcde2562-834f-4054-9106-c9f0ff082258": {
           "name": "Introducció als bucles"
         },
@@ -1410,8 +1439,11 @@
         },
         "31073c5d-beaf-420a-af98-4aa468a7b9d4": {
           "tips": [
-            null
+            "Expliqueu _com_ han de tractar els companys:\n\n-   No seieu a la cadira del company.\n-   No feu servir el teclat del company.\n-   No toqueu el ratolí del company.\n-   Assegureu-vos que el company sap explicar-vos la solució en veu alta abans de marxar."
           ]
+        },
+        "426a591c-ec85-48bf-9864-5f909eafa458": {
+          "description": "**Circuleu:** Els professors teniu un paper molt important en l'educació informàtica i en propiciar un entorn col·laboratiu i dinàmic a l'aula. Mentre fan les activitats en línia, el paper principal del professor és animar i donar suport. Les lliçons en línia estan pensades per centrar-se en l'alumne, de manera que hauríeu d'evitar intervenir quan els nens s'encallin. Aquí teniu algunes idees per fer-ho:\n\n-   Feu servir el vídeo de **\\*Pause and Think Online - A les xarxes, atura't a pensar** sempre que sigui possible.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Recordeu als alumnes que han de fer servir el procés de depuració abans d'apropar-vos al seu ordinador.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això, què em diu?\n-   Recordeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."
         },
         "cbecc5ae-dfcc-4d98-8eea-4366ee0eade0": {
           "name": "Reflexió"
@@ -1420,9 +1452,14 @@
           "description": "Feu servir aquestes activitats per potenciar l'aprenentatge dels alumnes. Es poden fer servir com activitats de fora de classe o d'aprofundiment.\n\n**A moure's**\n\n-   Doneu als alumnes imatges d'accions o passos de ball que es repeteixin.\n    -   Feu que ordenin els moviments i afegeixin bucles per coreografiar el seu propi ball.\n-   Compartiu els balls amb tota la classe.\n\n**Reconnexió**\n\n-   Busca alguns vídeos de YouTube de balls populars que es repeteixin.\n-   Hi troben cap bucle?\n-   Fes el mateix amb alguna cançó!"
         },
         "6169bc3a-deb5-4c4f-9860-10ba26c60214": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "A hores d'ara, els alumnes ja haurien d'haver tingut un primer contacte amb els bucles. En funció d'allò que creieu que pot ajudar la classe, us recomanem:\n\n-   Repetir un trencacloques de la lliçó anterior\n-   Previsualitzar un trencaclosques d'aquesta lliçó\n\nQualsevol de les dues us ajudarà a preparar els alumnes per divertir-se fent els trencaclosques en línia!"
+        },
+        "b232d54d-74fd-4360-bf15-83f2cd03f717": {
+          "description": "#### Trencaclosques en línia\n\nPer saber on afegir els bucles de repetició, a alguns alumnes els ajuda escriure el programa sense bucles i encerclar les parts que es repeteixen. Si creieu que això podria ajudar els vostres alumnes, assegureu-vos que tinguin paper i llapis al costat de l'ordinador. També els pot agradar dibuixar algunes de les formes i les figures en un full mentre les van programant en línia."
         },
         "bc19ceeb-4c22-40a1-9794-7b0e998b5e78": {
+          "name": "Dibuixar formes amb bucles",
           "progression_name": "Vídeo: Introducció a l'Artista amb J. R. Hildebrand"
         },
         "61fa4607-bb88-4573-8bea-10a12e88181a": {
@@ -1484,7 +1521,8 @@
           "name": "Introducció"
         },
         "a89749a5-5e92-470a-90f8-0d7317019298": {
-          "name": "Condicionals amb targetes"
+          "name": "Condicionals amb cartes",
+          "progression_name": "Condicionals amb cartes - Activitat sense connexió"
         },
         "175f1856-2873-43ee-b172-6c73420f7af6": {
           "name": "Avaluació opcional"
@@ -1497,11 +1535,18 @@
         "5310e8c8-822b-4c59-baa0-4583cdf3d249": {
           "name": "Reflexió"
         },
+        "6580e91f-9fb2-4fee-bcaf-c1425a65029a": {
+          "description": "Feu aquestes activitats per aprofundir en l’aprenentatge. Les podeu fer servir com a activitats fora de l’aula o com a reforç.\n\n**Vertader/Fals**\n\n-   Feu que formin una fila per jugar al [Joc del semàfor](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Assigneu a algú la tasca d’actuar com a instructor.\n-   L’instructor tria una condició i demana a tothom que la compleixi que avanci un pas.\n    -   Si portes un cinturó vermell, avança un pas.\n    -   Si portes sandàlies, avança un pas.\n-   Proveu d’afegir varietat dient coses com ara “Si _no_ tens el cabell ros, avança un pas\".\n\n**Imbricació**\n\n-   Dividiu la classe en parelles o en grups reduïts.\n-   Feu que escriguin sentències if (si) per un joc de cartes en tires de paper, com ara:\n    -   el pal és bastons\n    -   el color és vermell\n-   Ara, que facin les tires dels resultats.\n    -   Suma un punt\n    -   Resta un punt\n-   Quan ho tinguin fet, que triïn tres tires de cada tipus i tres cartes, i que parin atenció a l’ordre seleccionat.\n-   Que facin servir tres tires de paper per escriure tres programes diferents fent servir només les tires que han seleccionat, en qualsevol ordre.\n    -   Animeu-los a afegir algunes sentències if (si) dins d’altres sentències if (si).\n-   Ara, que executin els tres programes fent servir les cartes que han agafat de la baralla, en el mateix ordre en cada programa.\n    -   Hi ha algun dos programes que hagin proporcionat el mateix resultat?\n    -   Algun ha proporcionat un resultat diferent?"
+        },
+        "4df2a523-b9f2-425a-b749-6053a7c541ce": {
+          "description": "### Joc de cartes amb condicionals (20-30 minuts)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Informàtica + Art i llengua + Matemàtiques**\n\n[Joc de cartes amb condicionals](https://docs.google.com/document/d/13-vYx6erXi_PE6sYwCUuayjaeNHkyMxOPQ38zTxHL00/edit) és una activitat opcional alineada amb els estàndards d’Arts i Llengua i Matemàtiques de Common Core escrita per la nostra comunitat docent. Els alumnes faran servir una baralla de cartes per repassar problemes bàsics de multiplicació i divisió mentre apliquen el concepte dels condicionals en informàtica.\n\n_Estàndards abordats:_\n\n-   **CCSS.ELA-LITERACY.SL.3.3:** formular i respondre preguntes sobre la informació que proporciona un orador, desenvolupant-la i aportant detalls adients.\n\n-   **CCSS.MATH.CONTENT.3.OA.C.7:** multiplicar i dividir amb fluides dins de 100 a través d’estratègies com la relació entre la multiplicació i la divisió (per exemple, com que sabem que 8 × 5 = 40, sabem que 40 ÷ 5 =) o les propietats de les operacions. A finals del tercer curs, hauran de saber de memòria tots els productes entre dos números d’un dígit."
+        },
         "ff230610-bef8-421e-b37a-6d77e490ce3e": {
           "name": "Introducció"
         },
         "2143fa63-5aea-47af-8684-29aa626fd1d7": {
-          "name": "Mirem endavant amb Minecraft"
+          "name": "Mirem endavant amb Minecraft",
+          "description": "#### Trencaclosques en línia\n\nEls alumnes s'ho passaran d'allò més bé amb aquesta lliçó. Segurament, la majoria haurà sentit a parlar de _Minecraft_, però val la pena fer una breu introducció per si de cas.\n\n_Minecraft_ és un joc de cubs. Es pot jugar amb els personatges de l'Alex o l'Steve per recórrer laberints. Has d'evitar la lava, recollir objectes i explorar un món fet de cubs.\n\nFeu un dels trencaclosques com a demostració per tota la classe (us recomanem el trencaclosques 11). Un cop hàgiu resolt tots els dubtes, feu que els alumnes passin als ordinadors i que comencin a programar per parelles."
         },
         "419b0732-9e07-4ab2-8c48-0fb798dfdfde": {
           "progression_name": "Desenvolupament d'habilitats"
@@ -1521,17 +1566,30 @@
         "d9a92c19-1b83-49fa-bc9c-de8298122305": {
           "name": "Reflexió"
         },
+        "10b28faf-5fc4-41f2-a0fc-6c23d80da22d": {
+          "description": "Feu aquestes activitats per reforçar l'aprenentatge de l'alumne. Es poden fer fora de l'aula o per aprofundir.\n\n#### Més Minecraft\n\nSi veieu que els agrada molt l'entorn _Minecraft_, [aquí teniu alguns enllaços a altres jocs de \\_Minecraft\\_ per jugar en línia](https://code.org/minecraft). Aquests jocs també ensenyen habilitats de programació bàsiques."
+        },
         "8ae849bd-292d-44e8-9ccd-9d9bfc86c592": {
           "name": "Introducció"
         },
+        "e3c7f2af-1680-47d8-abac-407bcf97f905": {
+          "name": "Previsualització dels trencaclosques en línia"
+        },
         "a4ab31f7-6915-461a-b307-aad86879a097": {
-          "name": "If/else amb l'abella"
+          "name": "If/else amb l'abella",
+          "description": "Aquests trencaclosques poden donar peu a preguntes. Feu que treballin en parelles o establiu la norma “Pregunteu a tres abans de preguntar-me a mi” (que preguntin a tres companys abans d’anar al professor). Així sortiran converses que reforçaran la comprensió de cada alumne."
+        },
+        "f581d038-c3fb-4ac3-a56e-31b84d50ba91": {
+          "progression_name": "Vídeo: Condicionals: sentències if"
         },
         "b7925091-8715-4ad6-8d94-6ca396d22fd6": {
           "progression_name": "Predicció"
         },
         "c6c9457f-77f7-4a4a-9f79-72386ab1ac9a": {
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "ec05bf5f-afd1-487a-a92f-45f2d0e1ddf3": {
+          "progression_name": "Vídeo: Condicionals: sentències if i if/else"
         },
         "106bfc79-23ce-4a84-b0b6-38740eb9df89": {
           "progression_name": "Desenvolupament d'habilitats"
@@ -1554,14 +1612,24 @@
         "a1959bb9-3d8d-46ac-826c-df29b6dcb135": {
           "name": "Reflexió"
         },
+        "4bbaf90d-0e2f-4488-974a-ba90b9623e65": {
+          "description": "Feu aquestes activitats per aprofundir en l’aprenentatge. Les podeu fer servir com a activitats fora de l’aula o com a reforç.\n\n**Vertader/Fals**\n\n-   Feu que formin una fila per jugar al [Joc del semàfor](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Assigneu a algú la tasca d’actuar com a instructor.\n-   L’instructor tria una condició i demana a tothom que la compleixi que avanci un pas.\n    -   Si portes un cinturó vermell, avança un pas.\n    -   Si portes sandàlies, avança un pas.\n-   Proveu d’afegir varietat dient coses com ara “Si no tens el cabell ros, avança un pas\".\n\n**Imbricació**\n\n-   Dividiu la classe en parelles o en grups reduïts.\n-   Feu que escriguin sentències if (si) per un joc de cartes en tires de paper, com ara:\n    -   Si el pal és bastons\n    -   Si el color és vermell\n-   Ara, que facin les tires dels resultats.\n    -   Suma un punt\n    -   Resta un punt\n-   Quan ho tinguin fet, que triïn tres tires de cada tipus i tres cartes, i que parin atenció a l’ordre seleccionat.\n-   Que facin servir tres tires de paper per escriure tres programes diferents fent servir només les tires que han seleccionat, en qualsevol ordre.\n    -   Animeu-los a afegir algunes sentències if (si) dins d’altres sentències if (si).\n-   Ara, que executin els tres programes fent servir les cartes que han agafat de la baralla, en el mateix ordre en cada programa.\n    -   Hi ha algun dos programes que hagin proporcionat el mateix resultat?\n    -   Algun ha proporcionat un resultat diferent?"
+        },
         "f909f46d-5551-4020-b2d5-402aa7f10361": {
           "name": "Introducció"
         },
+        "7940bfbf-6888-4db2-b1a7-290d2eb76ba4": {
+          "name": "Previsualització dels trencaclosques en línia"
+        },
         "6ff7be87-b051-4758-93c0-c618a6b80b3c": {
-          "name": "Bucles \"while\" amb l'agricultora"
+          "name": "Bucles \"while\" amb l'agricultora",
+          "description": "Els bucles “while” no són un concepte difícil d’entendre, però si creieu que la vostra classe pot tenir problemes fent aquests trencaclosques, us recomanem la programació per parelles. Així, podran compartir idees abans d’implementar el codi. La programació per parelles ajuda a reforçar la confiança i a entendre conceptes com ara els bucles “while”."
         },
         "e1adf430-4152-42c1-a520-f40716ca9378": {
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "0fa595d7-bcf7-4bf3-a292-22abb41aa813": {
+          "progression_name": "Vídeo: Bucles \"while\" amb l'agricultora"
         },
         "af4d5d9b-dc83-44f1-b884-1aa62fcf1560": {
           "progression_name": "Predicció"
@@ -1588,11 +1656,15 @@
           "name": "Reflexió"
         },
         "cefe1ce5-6a04-45e4-8805-e5b94fff2197": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "En aquesta lliçó, els alumnes crearan bucles que només s'executen fins que (\"until\") una condició sigui certa. Ajudeu-los a entendre com funciona aquesta mecànica dirigint activitats en grup i fent-los fer una acció fins que alguna condició sigui certa. Per exemple: que es toquin el nas fins que els diguis que parin."
         },
         "88a4ca9a-f917-418e-8c1c-2cc4ac814afd": {
           "name": "Bucles \"until\" al laberint",
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "fad7d572-0e05-4122-854b-ee145920d5ec": {
+          "progression_name": "Vïdeo: sentències de repetició \"until\""
         },
         "0878bb75-72da-454e-8ac9-d06588287cde": {
           "progression_name": "Predicció"
@@ -1632,11 +1704,20 @@
             "Els alumnes hauran de provar coses i equivocar-se moltes vegades mentre programin. És molt probable que els projectes acabin sent versions truncades de la seva visió original. Recordeu-los que, en el disseny de programes, és habitual haver de quedar-se amb una solució intermèdia. No passa res si no aconsegueixen dissenyar tots els elements que tenien pensats!"
           ]
         },
+        "a0ef70ba-32d7-450e-85a2-d2415d14209c": {
+          "progression_name": "Projectes d'exemple"
+        },
+        "2e6af268-5fe3-4361-8108-ee1f41cd2e1e": {
+          "progression_name": "Crear el teu propi projecte"
+        },
         "da1c017e-0efa-422b-89a6-180fcef8be6e": {
           "name": "Presentació"
         },
         "558c0510-2a0d-4302-82d1-98f221ecec6f": {
           "name": "Reflexió"
+        },
+        "5284ed91-ecd3-477a-8e48-cec21b3822f4": {
+          "name": "Vocabulari clau"
         },
         "4ec90698-6e58-4695-8fec-298eea182910": {
           "name": "Introducció"
@@ -1951,6 +2032,12 @@
         "f26ccabe-2b34-481f-b142-b6227421df3e": {
           "name": "Explora"
         },
+        "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
+          "progression_name": "Projectes d'exemple"
+        },
+        "ad3b60a9-c96d-4e0b-b124-5f6f34d1c85c": {
+          "progression_name": "Crear el teu propi projecte"
+        },
         "de7ab6f7-a853-4f00-b05d-a9db0bb2da2d": {
           "tips": [
             null
@@ -1975,6 +2062,12 @@
           "tips": [
             null
           ]
+        },
+        "b01367f6-8c61-4417-9d29-193fd67ddac0": {
+          "name": "Vocabulari clau"
+        },
+        "8a089041-e523-46ab-99f6-80c9f1f22523": {
+          "name": "Vocabulari clau"
         },
         "7af8b468-66ad-4d3b-a9c3-2ff50362f027": {
           "name": "Introducció",
@@ -2198,6 +2291,9 @@
         "a8369823-7441-45a9-993c-3546a2f85efe": {
           "name": "Reflexió"
         },
+        "40e44f38-d3c6-46d5-a9c6-c9951512063e": {
+          "description": "Feu aquestes activitats per reforçar l'aprenentatge de l'alumne. Es poden fer fora de l'aula o per aprofundir.\n\n#### Més Minecraft\n\nSi veieu que els agrada molt l'entorn _Minecraft_, [aquí teniu alguns enllaços a altres jocs de \\_Minecraft\\_ per jugar en línia](https://code.org/minecraft). Aquests jocs també ensenyen habilitats de programació bàsiques."
+        },
         "7538f281-8565-4235-a3f1-a40a2679d73d": {
           "name": "Introducció"
         },
@@ -2206,6 +2302,9 @@
             null
           ],
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "bfb6e1c5-96c2-4d97-932f-2ca660c2854f": {
+          "progression_name": "Vídeo: Bucles \"while\" amb l'agricultora"
         },
         "ee4b7d3c-b6b2-4e05-bcb8-cedc77db80c0": {
           "progression_name": "Predicció"
@@ -2265,6 +2364,9 @@
         },
         "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
           "name": "Explora"
+        },
+        "e43bfad4-b411-4e0d-a59c-2e4764fd9c65": {
+          "progression_name": "Crear el teu propi projecte"
         },
         "a0f0bda0-512f-4e9c-8c28-1f749a2a7431": {
           "tips": [
@@ -2399,7 +2501,7 @@
           "description": "**Visualització:** Ensenyeu als alumnes una imatge de l’exercici “A moure’s!” que heu fet en les lliçons anteriors a aquesta. \n\n**Debat:** Demaneu als alumnes que recordin els símbols que van fer sevir a “A moure’s!”    \n\n-   _Què faries si veiessis la fletxa \"nord\"?_\n-   _I si veiessis la fletxa “est”?_\n\n**Transició:** Quan tingueu clar que els alumnes recorden “A moure’s!”, podeu passar a fer l’activitat pont."
         },
         "dd9246d9-8533-4e27-8a28-f1991a19c86e": {
-          "description": "Aquesta activitat permet traslladar els conceptes sense conexió de l'activitat \"A moure's!\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquesta activitat permet traslladar els conceptes sense connexió de l'activitat \"A moure's!\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "9b3f3413-3010-4c0a-86e4-92145569ea72": {
           "name": "Activitat sense connexió amb blocs de paper",
@@ -2526,7 +2628,7 @@
           "description": "Repasseu l'activitat Fent Bucles amb els alumnes:\n\n-   _Què són els bucles?_\n-   _Per què els fem servir?_"
         },
         "7a3612d4-087e-4360-b16d-f1c97b57d320": {
-          "description": "Aquestes activitats permeten traslladar els conceptes sense conexió de l'activitat \"Fent bucles\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquestes activitats permeten traslladar els conceptes sense connexió de l'activitat \"Fent bucles\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "4a96058b-b773-45a2-9901-f2d8783f0a4e": {
           "name": "Activitat sense connexió amb blocs de paper",
@@ -2697,7 +2799,7 @@
           "description": "Repasseu l'activitat \"El gran esdeveniment\" amb els alumnes:\n\n-   _Quines accions hem \"programat\" perquè les facin els botons?_\n\n_Ara afegirem esdeveniments al nostre codi. Més concretament, afegirem un esdeveniment quan dos personatges es toquin._\n\n-   En algun joc heu vist que el contacte entre dos personatges fos un esdeveniment?\\_"
         },
         "9be237cd-9b5c-48e3-9785-1abfb219a687": {
-          "description": "Aquestes activitats permeten traslladar els conceptes sense conexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquestes activitats permeten traslladar els conceptes sense connexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "bde6629f-e67a-4eca-82de-7d379e9b22f2": {
           "tips": [
@@ -3253,10 +3355,12 @@
           "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Com t'ha fet sentir la lliçó d'avui?\n-   Quan es fan servir els bucles? I els bucles imbricats?\n-   En què canviaria el codi del teu floc de neu si només fessis servir un bucle? I si no en fessis servir cap? Dibuixa'n un exemple."
         },
         "4df80825-7300-4e21-b3ec-5b1ecc62d490": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Reuniu el grup i busqueu dos voluntaris perquè caminin en línia recta en alguna direcció dins de l’aula. Si topen amb una cadira, hauran de passar-hi per sobre. Si topen amb una paret, hauran de seure al terra.\n\nQuan al final acabin tots asseguts, pregunteu com programarien un robot perquè reaccioni davant d’una paret o una cadira. Recordeu que no poden dir simplement “passar per sobre la cadira”, a menys que sàpiguen que hi ha una cadira, i que no sempre sabran si n’hi ha alguna. Potser seria útil traduir la tasca en instruccions com: \n\n-   mentre hi hagi camí davant  \n    -   avançar\n    -   si hi ha una cadira, passar-hi per sobre\n-   seure\n\nDigueu als alumnes que en aquesta lliçó faran servir condicional. Doneu la definició de:\n\n-   **Condició**: Una sentència que el programa comprova per veure si és vertadera o falsa. Si és vertadera, es fa una acció. Si no, l’acció s’ignora.\n-   **Condicionals**: Sentències que només s’executen sota certes condicions.\n\nObriu un debat sobre quan es podria fer servir un condicional en un codi."
         },
         "83daad31-f1c9-4d21-897b-a291d39f55df": {
           "name": "Mirem endavant amb Minecraft",
+          "description": "#### Trencaclosques en línia\n\nEls alumnes s'ho passaran d'allò més bé amb aquesta lliçó. Segurament, la majoria haurà sentit a parlar de _Minecraft_, però val la pena fer una breu introducció per si de cas.\n\n_Minecraft_ és un joc de cubs. Es pot jugar amb els personatges de l'Alex o l'Steve per recórrer laberints. Has d'evitar la lava, recollir objectes i explorar un món fet de cubs.\n\nFeu un dels trencaclosques com a demostració per tota la classe (us recomanem el trencaclosques 11). Un cop hàgiu resolt tots els dubtes, feu que els alumnes passin als ordinadors i que comencin a programar per parelles.",
           "progression_name": "Desenvolupament d'habilitats"
         },
         "47b5c27a-db1c-4abd-a3c9-4d90561d7d79": {
@@ -3269,18 +3373,28 @@
           "name": "Reflexió",
           "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   Dibuixa una cara d'emoció que transmeti com t'has sentit durant la lliçó d'avui.\n-   Dibuixa alguna altra cosa que podries haver construït en aquest món de _Minecraft_.\n-   Sabries dibuixar una escena on algú estigui fent servir un condicional?"
         },
+        "a13fc32f-2463-4895-94f3-a95fa9d60f8b": {
+          "description": "Feu aquestes activitats per reforçar l'aprenentatge de l'alumne. Es poden fer fora de l'aula o per aprofundir.\n\n#### Més Minecraft\n\nSi veieu que els agrada molt l'entorn _Minecraft_, [aquí teniu alguns enllaços a altres jocs de \\_Minecraft\\_ per jugar en línia](https://code.org/minecraft). Aquests jocs també ensenyen habilitats de programació bàsiques."
+        },
         "414b0efd-1356-4677-9c30-303d3c0afb41": {
           "name": "Introducció",
           "description": "Farem servir **condicionals** amb _l’abella_ de Code.org per ajudar-la a lidiar amb uns núvols misteriosos. No sabem si en aquestes flors hi ha nèctar, de manera que farem servir condicionals per recollir el nèctar si n’hi ha, però no perdre el temps intentant recollir-ne d’una flor que no en té.\n\nObriu un trencaclosques d’aquesta lliçó. Us recomanem el trencaclosques 9.\n\n-   Pregunteu a la classe què hauria de fer l’abella quan arribi al núvol.\n    -   L’abella hauria de fer servir un condicional per veure si hi ha alguna flor o algun rusc.\n-   Feu servir el bloc “if a la flor / else”. Pregunteu a la classe què ha de fer l’abella si hi ha una flor. Si no hi ha cap flor, hi haurà un rusc. En aquest cas, què hauria de fer l’abella?\n    -   L’abella hauria de recollir el nèctar si hi ha una flor i fer mel si hi ha un rusc.\n\nCompleteu la resta del codi i feu clic a Executar. Comenteu amb la classe per què ha funcionat."
         },
         "13e970f9-2c63-49d0-9995-322afdd7f201": {
-          "name": "If/else amb l'abella"
+          "name": "If/else amb l'abella",
+          "description": "Aquests trencaclosques poden donar peu a preguntes. Feu que treballin en parelles o establiu la norma “Pregunteu a tres abans de preguntar-me a mi” (que preguntin a tres companys abans d’anar al professor). Així sortiran converses que reforçaran la comprensió de cada alumne."
+        },
+        "b1dd72db-135f-4732-a4c7-6d157c9ffee9": {
+          "progression_name": "Vídeo: Condicionals: sentències if"
         },
         "8504a81d-7f72-44e2-ac40-5fe386544817": {
           "progression_name": "Predicció"
         },
         "99b05859-1e56-404c-ab65-0eabd5009dc8": {
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "7c7cc1f1-c244-4f72-ad13-02b868da8070": {
+          "progression_name": "Vídeo: Condicionals: sentències if i if/else"
         },
         "2ba5a718-c776-4973-b81b-46c01ee3a611": {
           "progression_name": "Desenvolupament d'habilitats"
@@ -3301,14 +3415,21 @@
           "name": "Reflexió",
           "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Com t'has sentit durant la lliçó?\n-   Quins condicionals has fet servir avui en el teu codi?\n-   Quins altres condicionals podria fer servir una abella? Alguns exemples serien:\n    -   si tinc un arbre al davant, apartar-me volant   \n    -   si m'he fet mal a l'ala, descansar al terra   \n    -   si em trobo amb una altra abella, dir \"Hola!\""
         },
+        "6907fcc1-20b3-4705-93f9-dcd271fe873b": {
+          "description": "Feu aquestes activitats per aprofundir en l’aprenentatge. Les podeu fer servir com a activitats fora de l’aula o com a reforç.\n\n**Vertader/Fals**\n\n-   Feu que formin una fila per jugar al [Joc del semàfor](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Assigneu a algú la tasca d’actuar com a instructor.\n-   L’instructor tria una condició i demana a tothom que la compleixi que avanci un pas.\n    -   Si portes un cinturó vermell, avança un pas.\n    -   Si portes sandàlies, avança un pas.\n-   Proveu d’afegir varietat dient coses com ara “Si no tens el cabell ros, avança un pas\".\n\n**Imbricació**\n\n-   Dividiu la classe en parelles o en grups reduïts.\n-   Feu que escriguin sentències if (si) per un joc de cartes en tires de paper, com ara:\n    -   Si el pal és bastons\n    -   Si el color és vermell\n-   Ara, que facin les tires dels resultats.\n    -   Suma un punt\n    -   Resta un punt\n-   Quan ho tinguin fet, que triïn tres tires de cada tipus i tres cartes, i que parin atenció a l’ordre seleccionat.\n-   Que facin servir tres tires de paper per escriure tres programes diferents fent servir només les tires que han seleccionat, en qualsevol ordre.\n    -   Animeu-los a afegir algunes sentències if (si) dins d’altres sentències if (si).\n-   Ara, que executin els tres programes fent servir les cartes que han agafat de la baralla, en el mateix ordre en cada programa.\n    -   Hi ha algun dos programes que hagin proporcionat el mateix resultat?\n    -   Algun ha proporcionat un resultat diferent?"
+        },
         "137d4f7b-efec-4607-97b0-e4838274a5c9": {
           "name": "Introducció"
         },
         "eb47f00e-2104-4a6e-b415-3457a740405f": {
-          "name": "Bucles \"while\" amb l'agricultora"
+          "name": "Bucles \"while\" amb l'agricultora",
+          "description": "Els bucles “while” no són un concepte difícil d’entendre, però si creieu que la vostra classe pot tenir problemes fent aquests trencaclosques, us recomanem la programació per parelles. Així, podran compartir idees abans d’implementar el codi. La programació per parelles ajuda a reforçar la confiança i a entendre conceptes com ara els bucles “while”."
         },
         "599f0ab4-6410-4002-9b4a-540e75d4f815": {
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "c2b77086-18bd-4e80-a600-86dc6f32f253": {
+          "progression_name": "Vídeo: Bucles \"while\" amb l'agricultora"
         },
         "2590c04c-01f0-4e10-99af-2bf8d06922ca": {
           "progression_name": "Predicció"
@@ -3329,10 +3450,12 @@
           "progression_name": "Lliçons addicionals"
         },
         "aeb654df-63a6-4b86-913a-5041ccd70d0a": {
-          "name": "Reflexió"
+          "name": "Reflexió",
+          "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Com t'ha fet sentir la lliçó d'avui?\n-   Quina diferència hi ha entre un bucle “while” i un bucle normal de repetició?\n-   Posa un exemple d’un trencaclosques on faries servir un bucle “while” i no de repetició. Se t’acut cap exemple d’un trencaclosques on faries servir un bucle de repetició i no un bucle “while”?"
         },
         "eababef0-4852-4c6f-b5db-2021e532c24d": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Reuniu el grup i busqueu dos voluntaris perquè caminin en línia recta en alguna direcció dins de l’aula. Si topen amb una cadira, hauran de passar-hi per sobre. Si topen amb una paret, hauran de seure al terra.\n\nQuan al final acabin tots asseguts, pregunteu com programarien un robot perquè reaccioni davant d’una paret o una cadira. Recordeu que no poden dir simplement “passar per sobre la cadira”, a menys que sàpiguen que hi ha una cadira, i que no sempre sabran si n’hi ha alguna. Potser seria útil traduir la tasca en instruccions com: \n\n-   mentre hi hagi camí davant  \n    -   avançar\n    -   si hi ha una cadira, passar-hi per sobre\n-   seure\n\nDigueu als alumnes que en aquesta lliçó faran servir condicional. Doneu la definició de:\n\n-   **Condició**: Una sentència que el programa comprova per veure si és vertadera o falsa. Si és vertadera, es fa una acció. Si no, l’acció s’ignora.\n-   **Condicionals**: Sentències que només s’executen sota certes condicions.\n\nObriu un debat sobre quan es podria fer servir un condicional en un codi."
         },
         "78faf9ff-f8c9-4623-8b19-ebb00866ef62": {
           "name": "El condicionals a Minecraft: Viatge aquàtic",
@@ -3354,6 +3477,9 @@
           "name": "Reflexió",
           "description": "**Idees:**\n\n-   Dibuixa una cara d'emoció que transmeti com t'has sentit durant la lliçó d'avui.\n-   Dibuixa alguna altra cosa que podries haver construït en aquest món de Minecraft.\n-   Pots dibuixar una escena on algú faci servir un condicional?"
         },
+        "b271b3ef-be85-4b58-9f43-c39fa5026bb9": {
+          "description": "Feu aquestes activitats per reforçar l'aprenentatge de l'alumne. Es poden fer fora de l'aula o per aprofundir.\n\n#### Més Minecraft\n\nSi veieu que els agrada molt l'entorn _Minecraft_, [aquí teniu alguns enllaços a altres jocs de \\_Minecraft\\_ per jugar en línia](https://code.org/minecraft). Aquests jocs també ensenyen habilitats de programació bàsiques."
+        },
         "d5f6ef42-7dc3-4862-a568-590c2a26c7fa": {
           "name": "Introducció",
           "description": "En aquesta lliçó, els alumnes crearan bucles que només s'executen fins que una condició sigui certa. Ajudeu-los a entendre com funciona aquesta mecànica dirigint activitats en grup i fent-los fer una acció fins que alguna condició sigui certa. Per exemple: que es toquin el nas fins que els diguis que parin."
@@ -3365,6 +3491,9 @@
           "name": "Bucles \"until\" al laberint",
           "description": "Relacionar conceptes no és fàcil, però aquest conjunt de nivells està pensat per ajudar els alumnes a què vegin la infinitat de possibilitats que ofereix la programació quan es fan servir condicions. Si als alumnes els costa trobar les semblances o diferències entre els bucles while i els bucles until, demaneu-los que pensin com farien servir unes sentències semblants a la vida real.",
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "c7e62f55-0604-4487-8b4f-2b788e45cac6": {
+          "progression_name": "Vïdeo: sentències de repetició \"until\""
         },
         "02a06c86-4808-4c05-93b2-45ed61a1eb29": {
           "progression_name": "Predicció"
@@ -3645,6 +3774,9 @@
           "name": "Planificació",
           "description": "Motiveu i prepareu els alumnes per l'activitat per avui!"
         },
+        "a22895e0-d3f5-40e3-a99f-66805a7c0e26": {
+          "description": "Ja hem tingut l'oportunitat de crear diversos projectes. Avui, l'experiència serà molt més lliure, de manera que l'haurem de planificar amb antelació! La planificació és una part molt important en el procés de programar un joc o qualsevol tipus de programa. Per això, abans de passar als ordinadors, dedicarem una estona a planificar els projectes que volem crear."
+        },
         "464b07bf-434b-4b29-8115-fb7ad1d15f56": {
           "description": "**Repartiu:** Repartiu una **\\*Guia de planificació de projectes de fi de curs** a cada alumne o parella. Repasseu tots junts els passos que s'hi inclouen i després deixeu que la completin. Si us fa falta, podeu consultar l'exemple que us proporcionem.",
           "tips": [
@@ -3657,6 +3789,10 @@
           "tips": [
             "Els alumnes hauran de provar coses i equivocar-se moltes vegades mentre programin. És molt probable que els projectes acabin sent versions truncades de la seva visió original. Recordeu-los que, en el disseny de programes, és habitual haver de quedar-se amb una solució intermèdia. No passa res si no aconsegueixen dissenyar tots els elements que tenien pensats!"
           ]
+        },
+        "77e1eae3-37ee-4b59-8014-30279b618562": {
+          "name": "Crear el teu propi projecte",
+          "progression_name": "Crear el teu propi projecte"
         },
         "87e3ea72-c651-4ee5-a33d-17612269cbe3": {
           "name": "Presentació",
@@ -4485,7 +4621,7 @@
           "description": "Repasseu l'activitat \"El gran esdeveniment\" amb els alumnes:\n\n-   _Quines accions hem \"programat\" perquè les facin els botons?_\n\n_Ara afegirem esdeveniments al nostre codi. Més concretament, afegirem un esdeveniment quan dos personatges es toquin._\n\n-   En algun joc heu vist que el contacte entre dos personatges fos un esdeveniment?\\_"
         },
         "9984d52f-279f-4aac-8f83-93ea4c64ab7b": {
-          "description": "Aquestes activitats permeten traslladar els conceptes sense conexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquestes activitats permeten traslladar els conceptes sense connexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "6a7e8f19-fa58-48f8-bbf5-a32c80d3e742": {
           "tips": [
@@ -4562,6 +4698,7 @@
           "description": "Per celebrar la feina que han fet els alumnes, reserveu els darrers 10 minuts perquè puguin ensenyar els seus projectes. Ho podeu fer de moltes maneres, però aquí teniu algunes idees:\n\n-   **Demostració en públic**: Seleccioneu alguns voluntaris exemplars perquè ensenyin breument els seus projectes i expliquin les seves històries davant de la classe. Mentre ho fan, pregunteu-los com ha estat la seva experiència des de la planificació fins la programació.\n-   **Històries en parelles**: Si teniu un grup gran o poc temps, feu que es posin en parelles o grups i s’ensenyin els projectes entre ells.\n-   **Passeig**: Assegureu-vos que tots tenen els projectes llestos per ensenyar-los. Feu com si fos el joc de les cadires musicals i que executin el programa i llegeixin la història de l’ordinador que els toqui. Quan els feu un senyal, hauran de passar a un altre ordinador. Feu-ho cada pocs minuts. Tot i que aquesta opció no genera tanta comunicació estructurada, sí permet que els alumnes provin tants projectes com sigui possible."
         },
         "a4e7ad08-e07b-4d9b-bc75-838ae92df60d": {
+          "name": "Vocabulari clau",
           "description": "-   **connectar-se**: fer servir un ordinador, mòbil o tauleta per visitar una pàgina web o una aplicació\n\n**Pregunteu**: _Què significa ser cruel amb algú?_ ([Diapositiva 3](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g590d551e23_0_56))\n\nLes respostes dels alumnes seran variades, però centreu-vos en les següents: fer bromes sobre l’aspecte físic d’algú, escampar mentides sobre algú, i dir coses desagradables als altres.\n\n**Pregunteu**: _Si tractem algú de manera cruel, com se sentirà?_\n\nAnimeu els alumnes a respondre. Les respostes seran variades, però algunes possibilitats serien sentir-se dolgut, enfadat, disgustat i espantat.\n\n**Pregunteu**: _Què cal fer si alguna vegada algú és cruel amb nosaltres, o si veiem que algú es comporta de manera cruel amb una altra persona?_\n\nAnimeu els alumnes a contestar i poseu èmfasi al fet que sempre han de recórrer a un adult de la seva confiança si algú els tracta de manera cruel o si veuen que algú rep aquest tipus de tractament.\n\n**Digueu**: _A internet hi ha tot de coses divertides i interessants, però de vegades les persones es tracten amb crueltat quan es connecten a internet._\n\nAclariu que **connectar-se** significa \\_ fer servir un ordinador, mòbil o tauleta per visitar una pàgina web o una aplicació.\\_ ([Diapositiva 4](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g5bf47fcc31_0_2))\n\nExpliqueu als alumnes que alguns exemples de crueltat a internet serien:\n\n-   Enviar un missatge cruel a algú\n-   Publicar coses cruels sobre algú en una pàgina web\n-   Burlar-se d’algú a internet\n-   Tractar de manera cruel el personatge d’algú en un joc en línia\n\nSi els alumnes coneixen el terme **ciberassetjament escolar**, _fer servir dispositius digitals, pàgines i aplicacions per intimidar, ferir i disgustar algú_, podeu fer-lo servir.\n\n**Pregunteu**: _Algun cop heu vist com algú feia que una altra persona se sentís malament a internet?_\n\nAnimeu-los a que en parlin en parelles, però indiqueu que poden explicar què va passar, però sense fer servir els noms reals.\n\nExpliqueu-los que aprofundireu en com pot aparèixer la crueltat en línia i què poden fer si els passa a ells o a algun conegut."
         },
         "66084458-7f47-4487-a1b0-3cedb9cf04b0": {
@@ -4938,7 +5075,7 @@
           "name": "Introducció"
         },
         "1a9e3fe9-eb6a-4e32-8e8a-e53a469f6d4a": {
-          "description": "Aquestes activitats permeten traslladar els conceptes sense conexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquestes activitats permeten traslladar els conceptes sense connexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "40fa01ec-8eb2-4f37-af04-b4a4ec5bdad8": {
           "name": "Activitat sense connexió amb blocs de paper",
@@ -5763,6 +5900,9 @@
           "tips": [
             null
           ]
+        },
+        "8f1b70db-3dc8-4346-aa71-b6ad5062e754": {
+          "name": "Guia del projecte"
         },
         "79636d63-1378-4779-b0f6-c0e3d41dbaf6": {
           "tips": [
@@ -7241,7 +7381,8 @@
         "34513068-c4eb-4fad-bf11-87cb7a26ca7f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Guia del projecte"
         },
         "523e9cfe-861d-487e-b922-43f06047aa06": {
           "tips": [
@@ -9167,6 +9308,9 @@
           "name": "Repte",
           "progression_name": "Repte"
         },
+        "737a9d39-005b-43b5-bd74-4580674f8165": {
+          "progression_name": "Guia del projecte"
+        },
         "988b26e3-ab8c-4d5b-b903-982c822e17bd": {
           "name": "Reflexió",
           "progression_name": "Reflexió"
@@ -9976,6 +10120,9 @@
           "name": "Repte",
           "progression_name": "Repte"
         },
+        "a64ebebb-2737-43a0-b4d8-f7971096b3e0": {
+          "progression_name": "Guia del projecte"
+        },
         "301881e9-8b2a-430a-9bf3-928038396c1f": {
           "name": "Reflexió",
           "progression_name": "Reflexió"
@@ -10095,6 +10242,9 @@
         "22367590-f0a2-4c03-8600-8598926280b8": {
           "name": "Repte",
           "progression_name": "Repte"
+        },
+        "cb0106eb-31ae-4c7c-bb6c-00ae7a829cfa": {
+          "progression_name": "Guia del projecte"
         },
         "24f32bdd-aa52-4b1e-9dc3-53b6496ad1e9": {
           "name": "Reflexió",
@@ -10326,6 +10476,9 @@
         },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
           "name": "Reflexió"
+        },
+        "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
+          "name": "Vocabulari clau"
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
@@ -10599,6 +10752,12 @@
             null
           ]
         },
+        "db7f26e9-547b-4801-8328-a93aefc4ce9e": {
+          "progression_name": "Projectes d'exemple"
+        },
+        "211604af-3347-4da2-ae2b-e5a81fd6d49d": {
+          "progression_name": "Crear el teu propi projecte"
+        },
         "e1f77c6c-fd3c-4f0d-b13b-d6846b5625c0": {
           "tips": [
             null
@@ -10732,7 +10891,7 @@
           "description": "**Visualització:** Ensenyeu als alumnes una imatge de l’exercici “A moure’s!” que heu fet en les lliçons anteriors a aquesta. \n\n**Debat:** Demaneu als alumnes que recordin els símbols que van fer sevir a “A moure’s!”    \n\n-   _Què faries si veiessis la fletxa \"nord\"?_\n-   _I si veiessis la fletxa “est”?_\n\n**Transició:** Quan tingueu clar que els alumnes recorden “A moure’s!”, podeu passar a fer l’activitat pont."
         },
         "8b5a63fd-e737-4cfe-bd6d-ae6e37c1cefc": {
-          "description": "Aquesta activitat permet traslladar els conceptes sense conexió de l'activitat \"A moure's!\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquesta activitat permet traslladar els conceptes sense connexió de l'activitat \"A moure's!\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "4d06cf45-70a0-47fb-a3ff-0d4818645b5c": {
           "name": "Activitat sense connexió amb blocs de paper",
@@ -10860,7 +11019,7 @@
           "description": "Repasseu l'activitat Fent Bucles amb els alumnes:\n\n-   _Què són els bucles?_\n-   _Per què els fem servir?_"
         },
         "bd8c9fb2-0968-4f8e-8186-c54ac0fc9870": {
-          "description": "Aquestes activitats permeten traslladar els conceptes sense conexió de l'activitat \"Fent bucles\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquestes activitats permeten traslladar els conceptes sense connexió de l'activitat \"Fent bucles\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "312282bb-1122-4f51-b143-605d761309d1": {
           "name": "Activitat sense connexió amb blocs de paper",
@@ -11034,7 +11193,7 @@
           "description": "Repasseu l'activitat \"El gran esdeveniment\" amb els alumnes:\n\n-   _Quines accions hem \"programat\" perquè les facin els botons?_\n\n_Ara afegirem esdeveniments al nostre codi. Més concretament, afegirem un esdeveniment quan dos personatges es toquin._\n\n-   En algun joc heu vist que el contacte entre dos personatges fos un esdeveniment?\\_"
         },
         "fb42b64a-9f49-441b-95d8-2bdb596c93a9": {
-          "description": "Aquestes activitats permeten traslladar els conceptes sense conexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquestes activitats permeten traslladar els conceptes sense connexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "505b9963-28e4-43cc-81b2-51cd954beb7f": {
           "tips": [
@@ -11530,7 +11689,7 @@
           "description": "Repasseu l'activitat \"El gran esdeveniment\" amb els alumnes:\n\n-   _Quines accions hem \"programat\" perquè les facin els botons?_\n\n_Ara afegirem esdeveniments al nostre codi. Més concretament, afegirem un esdeveniment quan dos personatges es toquin._\n\n-   En algun joc heu vist que el contacte entre dos personatges fos un esdeveniment?\\_"
         },
         "59ef2dfe-0dad-4172-8225-3e844fecb36f": {
-          "description": "Aquestes activitats permeten traslladar els conceptes sense conexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquestes activitats permeten traslladar els conceptes sense connexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "4282b236-dd48-4702-81fd-452fb86a8288": {
           "tips": [
@@ -11607,6 +11766,7 @@
           "description": "Per celebrar la feina que han fet els alumnes, reserveu els darrers 10 minuts perquè puguin ensenyar els seus projectes. Ho podeu fer de moltes maneres, però aquí teniu algunes idees:\n\n-   **Demostració en públic**: Seleccioneu alguns voluntaris exemplars perquè ensenyin breument els seus projectes i expliquin les seves històries davant de la classe. Mentre ho fan, pregunteu-los com ha estat la seva experiència des de la planificació fins la programació.\n-   **Històries en parelles**: Si teniu un grup gran o poc temps, feu que es posin en parelles o grups i s’ensenyin els projectes entre ells.\n-   **Passeig**: Assegureu-vos que tots tenen els projectes llestos per ensenyar-los. Feu com si fos el joc de les cadires musicals i que executin el programa i llegeixin la història de l’ordinador que els toqui. Quan els feu un senyal, hauran de passar a un altre ordinador. Feu-ho cada pocs minuts. Tot i que aquesta opció no genera tanta comunicació estructurada, sí permet que els alumnes provin tants projectes com sigui possible."
         },
         "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "Vocabulari clau",
           "description": "-   **connectar-se**: fer servir un ordinador, mòbil o tauleta per visitar una pàgina web o una aplicació\n\n**Pregunteu**: _Què significa ser cruel amb algú?_ ([Diapositiva 3](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g590d551e23_0_56))\n\nLes respostes dels alumnes seran variades, però centreu-vos en les següents: fer bromes sobre l’aspecte físic d’algú, escampar mentides sobre algú, i dir coses desagradables als altres.\n\n**Pregunteu**: _Si tractem algú de manera cruel, com se sentirà?_\n\nAnimeu els alumnes a respondre. Les respostes seran variades, però algunes possibilitats serien sentir-se dolgut, enfadat, disgustat i espantat.\n\n**Pregunteu**: _Què cal fer si alguna vegada algú és cruel amb nosaltres, o si veiem que algú es comporta de manera cruel amb una altra persona?_\n\nAnimeu els alumnes a contestar i poseu èmfasi al fet que sempre han de recórrer a un adult de la seva confiança si algú els tracta de manera cruel o si veuen que algú rep aquest tipus de tractament.\n\n**Digueu**: _A internet hi ha tot de coses divertides i interessants, però de vegades les persones es tracten amb crueltat quan es connecten a internet._\n\nAclariu que **connectar-se** significa \\_ fer servir un ordinador, mòbil o tauleta per visitar una pàgina web o una aplicació.\\_ ([Diapositiva 4](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g5bf47fcc31_0_2))\n\nExpliqueu als alumnes que alguns exemples de crueltat a internet serien:\n\n-   Enviar un missatge cruel a algú\n-   Publicar coses cruels sobre algú en una pàgina web\n-   Burlar-se d’algú a internet\n-   Tractar de manera cruel el personatge d’algú en un joc en línia\n\nSi els alumnes coneixen el terme **ciberassetjament escolar**, _fer servir dispositius digitals, pàgines i aplicacions per intimidar, ferir i disgustar algú_, podeu fer-lo servir.\n\n**Pregunteu**: _Algun cop heu vist com algú feia que una altra persona se sentís malament a internet?_\n\nAnimeu-los a que en parlin en parelles, però indiqueu que poden explicar què va passar, però sense fer servir els noms reals.\n\nExpliqueu-los que aprofundireu en com pot aparèixer la crueltat en línia i què poden fer si els passa a ells o a algun conegut."
         },
         "b05af723-adce-4036-a645-7b9519b86a1c": {
@@ -12028,7 +12188,7 @@
           "description": "-   Repasseu l'activitat \"El gran esdeveniment\" amb els alumnes:-\n-   _Quines accions hem \"programat\" perquè les facin els botons?_\n-   _Ara afegirem esdeveniments al nostre codi. Més concretament, crearem un esdeveniment per quan fem clic amb el ratolí, i un altre per quan l'ocell topi amb un objecte, com ara el terra un obstacle. Heu vist en algun altre joc un esdeveniment que passa quan un personatge toca un altre objecte?_"
         },
         "c83b9630-0560-4bd5-8574-6e4a25d4de4e": {
-          "description": "Aquestes activitats permeten traslladar els conceptes sense conexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
+          "description": "Aquestes activitats permeten traslladar els conceptes sense connexió de l'activitat \"El gran esdeveniment\" al món en línia en què es comencen a endinsar. Trieu _una_ de les activitats següents per fer amb la classe:"
         },
         "029d4726-2804-4d14-9270-4405e9461405": {
           "name": "Activitat sense connexió amb blocs de paper",
@@ -12201,6 +12361,7 @@
           "description": "Per celebrar la feina que han fet els alumnes, reserveu els darrers 10 minuts perquè puguin ensenyar els seus projectes. Ho podeu fer de moltes maneres, però aquí teniu algunes idees:\n\n-   **Demostració en públic**: Seleccioneu alguns voluntaris exemplars perquè ensenyin breument els seus projectes davant de la classe. Mentre ho fan, assegureu-vos que parlin de què els ha semblat l'experiència desde la planificació fins la programació i exploquin alguna idea que els agradaria incloure.\n-   **Provar-ho jugant**: Poseu els alumnes o els grups en parelles perquè puguin provar els projectes dels altres mentre hi juguen. Mentre ho fan, demaneu-los que donin comentaris positius i constructius. L'avantatge de fer-ho és que podran proporcionar i respondre a aquests comentaris en grups més reduïts.\n-   **Passeig**: Assegureu-vos que tots tenen els projectes llestos per ensenyar-los. Feu com si fos el joc de les cadires musicals i que provin el projecte de l’ordinador que els toqui durant uns minuts, fins que els feu un senyal perquè passin a un altre ordinador. Feu-ho cada pocs minuts. Tot i que aquesta opció no genera tanta comunicació estructurada, sí permet que els alumnes provin tants projectes com sigui possible."
         },
         "b8f03681-d01e-4384-b88f-5e562eab172f": {
+          "name": "Vocabulari clau",
           "description": "-   **contrasenya**: una sèrie de lletres, símbols i números secrets que fem servir per limitar qui té accés a un contingut digital\n-   **frase**: un seguit de paraules que van juntes i són fàcils de recordar\n-   **símbol**: un caràcter que no és ni un número ni una lletra, com ara #, !, o @.\n-   **nom d’usuari**: el nom que es crea per iniciar sessió en una pàgina web, aplicació o joc\n\nCom a activitat opcional abans de fer la lliçó, feu que els nens juguin al joc [Protegeix-te amb una contrasenya](https://www.digitalpassport.org/password-protect.html) a Digital Passport™ de Common Sense Education. Us ajudarà a introduir els conceptes clau de la lliçó. Per saber-ne més, feu una ullada a la [Guia docent de Digital Passport](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Pregunteu**: _Hi ha alguna cosa que de la vostra vida que prengueu mesures per protegir? Com i per què la protegiu?_ ([Diapositiva 4](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3c3d552210_0_3))\n\nFeu que els alumnes es posin en parelles per parlar-ne i després trieu-ne alguns perquè comparteixin les respostes. Alguns exemples podrien ser _amarg un diari_, _fer servir el cadenat de la bici_, _guardar una joguina en un lloc segur_, etc. Expliqueu que una de les maneres que tenim de protegir les nostres coses consisteix a restringir qui hi pot accedir.\n\n**Pregunteu**: _Ara, pensem en quan fem servir dispositius electrònics, com un mòbil o un ordinador. Com limiteu qui pot accedir a alguna cosa que vulgueu protegir, i per què creieu que fa falta fer-ho?_\n\nAlguns exemples poden incloure fer servir una contrasenya, bloquejar el dispositiu, fer servir l’empremta digital, no deixar que ningú faci servir el dispositiu.\n\n**Digueu**: _Una de les maneres més habituals de protegir els dispositius i la informació a internet és fent servir una contrasenya. Una **contrasenya** és una sèrie de lletres, símbols i números secrets que fem servir per limitar qui té accés a un contingut digital. Tot i això, hi ha contrasenyes que són més segures que d’altres perquè costen més d’esbrinar. Ara veurem per què és important tenir contrasenyes segures i com us podeu assegurar que la vostra ho sigui_. ([Diapositiva 5](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3b037fe8d8_1_103))"
         },
         "379be0a3-0e9d-4c13-95e7-bb981bb48d50": {
@@ -12226,7 +12387,8 @@
           "description": "Encamineu la conversa per parlar sobre el fet que les persones han de fer servir ordres concretes per programar els robots perquè facin tasques concretes."
         },
         "0cafd30f-53e4-45fb-96c0-767858add851": {
-          "name": "Programació de paper quadriculat"
+          "name": "Programació de paper quadriculat",
+          "progression_name": "Programació amb paper quadriculat - Activitat sense connexió"
         },
         "3b2b2cce-a3b0-4e92-8175-9d2e950c1ccd": {
           "description": "En aquesta activitat, els alumnes faran tant de programadors com de robots, i pintaran de colors els quadrats seguint els programes que s’escriguin els uns als altres.\n\n**Repartiu:** Els alumnes faran servir quadrícules de 4x4 (o fulls de paper quadriculat amb caixes de 4x4 marcades). També necessitaran la fitxa de treball amb la imatge.\n\n**Visualització:** Projecteu aquestes ordres o escriviu-les a la pissarra. No duraran gaire, però ajudaran els alumnes a passar dels algorismes als programes.\n\n    Mou-te un quadrat a la dreta\n    Mou-te un quadrat a l’esquerra\n    Mou-te un quadrat cap amunt\n    Mou-te un quadrat cap avall\n    Pinta el quadrat\n\n**Digueu:** Avui, tots podrem programar un robot... i ja els tenim a la classe! Sou vosaltres! Escriurem programes fent servir símbols amb significats especials per ajudar-nos mútuament a recrear una imatge. Primer, practicarem junts, jo faré de robot i vosaltres de programadors. I, després, ens dividirem en grups perquè tothom ho pugui fer.\n\n**Visualització:** Mostreu la imatge que els alumnes us hauran d’ajudar a recrear i una quadrícula en blanc que anireu omplint amb el vostre sistema d’execució automàtica. Assegureu-vos que les instruccions, la quadrícula i la imatge apareguin en pantalla alhora.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper1.png)"
@@ -12291,6 +12453,9 @@
         "528f5675-b238-4157-849e-e3c9882d39f5": {
           "description": "Els professors teniu un paper molt important en l'educació informàtica i en propiciar un entorn col·laboratiu i dinàmic a l'aula. Mentre fan les activitats en línia, el paper principal del professor és animar i donar suport. Les lliçons en línia estan pensades per centrar-se en l'alumne, de manera que hauríeu d'evitar intervenir quan els nens s'encallin. Aquí teniu algunes idees per fer-ho:\n\n-   Feu servir la programació per parelles sempre que sigui possible durant l'activitat.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això què els diu?\n-   Recordeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."
         },
+        "c54ece34-6ca8-4a97-a431-8513386bf6a7": {
+          "progression_name": "Vídeo: Introducció al laberint: Programació amb blocs"
+        },
         "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
           "progression_name": "Desenvolupament d'habilitats"
         },
@@ -12304,32 +12469,62 @@
           "name": "Reflexió",
           "description": "**Preguntes:**\n\n-   De què tractava la lliçó d’avui?\n-   Què us ha semblat?\n-   Feu una llista d'alguns dels errors (o bugs) que us heu trobat als vostres programes.\n-   Quin és el trencaclosques que més us ha agradat fer? Dibuixeu el vostre personatge preferit fent un trencaclosques."
         },
+        "98aedbff-d7d0-4548-b2fd-c8f9d35d2503": {
+          "description": "Recordeu-los que a l'activitat de \"Programació amb paper quadriculat\" vam guiar el sistema d’execució automàtica del company fent servir fletxes. Aquest escalfament els refrescarà aquests conceptes, ja que els necessitaran per fer l'activitat principal."
+        },
         "67688952-e1da-43b1-a7d0-f2889dec7e48": {
-          "name": "En què m'he equivocat?"
+          "name": "En què m'he equivocat?",
+          "description": "**Objectiu:** En aquesta lliçó, volem ajudar els alumnes a aprendre a identificar y corregir els errors (o bugs) dels seus propis programes. La manera més senzilla de fer-ho és ensenyant-los un programa que contingui errors que no siguin culpa seva. Un cop us hagin ajudar a arreglar el “vostre” programa, digueu-los que cometre errors pot resultar molt frustrant, i ajudeu-los a entendre que sentir-se així és completament normal, i que no s’han d’avergonyir de res.\n\n**Visualització:** Mostreu la **\\*Imatge de depuració del professor**.\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Debat:** Demaneu l’atenció de la classe i digueu que esteu encallats. Teníeu un problema i crèieu que l’havíeu resolt, però sembla que no funciona. Al vostre programa hi ha un error (o bug): us poden ajudar a arreglar-lo?\n\nExpliqueu-los les instruccions:\n\n-   _Començar a l’estrella._\n-   _Seguir les instruccions pas a pas._\n-   _S’acaba quan tots els quadrats correctes estan pintats._\n\n_Opcional:_  Seguiu el que van dient en una quadrícula en blanc. Mostreu-vos frustrats quan la imatge no quedi com volíeu.\n\n**Reflexió:** _Sabeu per què no funciona el meu programa?_\n\n**Parelles:** Deixeu que treballin junts per veure si saben dir què se suposa que ha de dir el programa.\n\n**Compartir:** Pregunteu si algú ha trobar una manera de resoldre el programa. Quan algú us doni una resposta correcta, digueu-los que saben depurar molt bé!"
         },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
           "description": "**Debat:** Pregunteu als alumnes si saben com us heu sentit quan no trobàveu la resposta.  És possible que diguin que estàveu “enfadats” o “tristos”.  En lloc de dir que no, expliqueu que estàveu una mica enfadats, una mica tristos i una mica confusos.  Quan totes aquestes emocions s’ajunten, generen una sensació que es diu “frustració”.  Quan ens sentim “frustrats”, de vegades pensem que estem enfadats, tristos o confusos, i és possible que tinguem ganes d’abandonar, però la frustració és una sensació natural i ens indica que estem a punt d’aprendre alguna cosa!  En comptes de deixar-ho, hem de ser persistents. Intentar-ho una vegada i una altra.  I quan ho hagin provat algunes vegades, començarem a entendre com depurar els problemes!",
           "tips": [
-            null
+            "##### Trucs per superar la frustració\n\n-   Comptar fins a 10\n-   Respirar fons\n-   Escriure sobre el problema a la llibreta\n-   Parlar amb un company sobre el problema\n-   Demanar ajuda\n\n##### Trucs per ser persistent\n\n-   Fer una llista de tot el que ja has provat\n-   Descriure què està passant\n-   Descriure què se suposa que ha de passar\n-   I això, què et diu?\n-   Fer un canvi i tornar a intentar-ho"
           ]
         },
+        "f3c9c8ad-1f77-4506-ba5e-076eaa74813d": {
+          "description": "**Repartiu:** Per assegurar-vos que els alumnes entenen la idea de trobar i arreglar errors (depurar), repartiu la **\\*Fitxa de treball** perquè facin l’activitat per parelles.\n\n_Opcional:_ Si voleu fer l’activitat més ràpida, podeu fer l’exercici tota la classe junts.\n\n**Transició:** \\_Ara ja podem jugar!"
+        },
         "3b65cbfa-b176-412f-abd3-357bc1a825ab": {
-          "name": "Programació en relleus"
+          "name": "Programació amb relleus",
+          "progression_name": "Programació amb relleus - Activitat sense connexió"
+        },
+        "c6c65318-513e-41d1-9250-8402d6154e40": {
+          "description": "Tenint present l’activitat de Programació amb paper quadriculat, dividiu la classe en grups i prepareu-vos per fer l’activitat per relleus!\n\n**Preparació:** Imprimiu una còpia del **\\*Paquet d’activitats** per cada equip de 4 o 5 alumnes. Doblegueu o retalleu cada pàgina per la línia de punts."
         },
         "57f59aa8-2f36-4383-9997-f4a4aed29aea": {
           "tips": [
-            null
+            "Aquí teniu alguns aclariments que va bé anar repassant:\n\n-   Només hi pot haver un membre de cada grup davant de la imatge.\n-   Poden comentar els algoritmes els algoritmes amb la resta de companys mentre estan a la fila, i si volen poden planejar qui escriurà què quan arribi els toqui posar-se davant de la imatge.\n-   Quan un alumne depura un programa fent una ratlla sobre una instrucció incorrecta (o un conjunt d’instruccions incorrectes), compta com si fos un torn. El jugador següent haurà de pensar com corregir la part que falta."
           ]
+        },
+        "39b3a444-1dcd-4b13-b3f9-079ad9d593b1": {
+          "description": "Repasseu les regles del joc amb la classe:\n\n-   Dividiu els alumnes en grups de 3-5.\n-   Feu que cada grup formi una fila com si fos una cursa de relleus.\n-   Col·loqueu una imatge idèntica a l’altre extrem de l’aula/gimnàs/pati.\n-   Feu que el primer alumne de la fila corri fins a la imatge, la revisi i escrigui el primer símbol del programa que fa falta per copiar la imatge.\n-   Llavors, el primer alumne torna corrents i toca el company que està primer a la fila i es posa al final.\n-   L’alumne que estava al principi de la fila corre cap a la imatge, s’hi fixa, revisa el programa que ja hi ha escrit, i o bé depura el programa fent una ratlla sobre un símbol incorrecte, o n’afegeix un de nou. Llavors torna corrents i toca al següent, i el procés segueix fins que un grup hagi acabat el seu programa.\n\nEl primer grup en acabar amb un programa que coincideixi amb la imatge, guanya!\nJugueu diverses vegades, amb imatges cada cop més difícils.\n\nRepetiu el joc tantes vegades com pugueu per temps o fins que els alumnes estiguin cansats de córrer amunt i avall.\n\n**Transició:** Un cop s’acabi el joc, feu una rotllana per comentar el que han après.\n\n**Debat:** _Què hem après avui?_\n\n-   _Què passaria si cada persona de l’equip pogués fer cinc fletxes seguides?_\n    -   _Com d’important seria depurar el nostre propi treball i el treball del programador que ha passar per allà abans que nosaltres?_\n    -   _I si en fessin 10, de fletxes?_\n    -   _I 10.000? Seria més o menys important?_\n-   _Creieu que un programa és millor o pitjor quan hi ha treballat més d’una persona?_\n-   _Creieu que la gent fa més o menys errors quan van de pressa?_\n-   _Si trobeu un error, cal tirar tot el programa a les escombraries i tornar a començar?_"
         },
         "fe8fc837-1652-4638-bb0d-fe8c61b31f79": {
           "name": "Reflexió",
           "description": "**Preguntes:**\n\n-   De què tractava la lliçó d’avui?\n-   Què us ha semblat?\n-   De quina manera ens ha ajudat treballar en equip per aconseguir escriure el programa d'avui?\n-   Us heu començat a sentir frustrats en algun moment? Què heu fet quan us n'heu adonat?"
         },
+        "7c3fba18-e6be-4b65-904b-47336d1e9e8c": {
+          "description": "Feu servir aquestes activitats per potenciar l'aprenentatge dels alumnes. Es poden fer servir com activitats de fora de classe o d'aprofundiment.\n\n**Passa el full**\n\n-   Si no disposeu del temps o de l’espai per jugar als relleus, podeu fer que els alumnes facin un grup i es passin un full en què cadascú escriurà una fletxa abans de passar el full al següent.\n\n**Pinta’l i passa’l**\n\n-   Dibuixeu una imatge que contingui tants quadrats pintats com nens hi hagi a cada grup.\n-   Demaneu als alumnes que escriguin tantes fletxes al programa com sigui necessari per arribar a un quadrat pintat (i que inclogui també el pas de pintar el quadrat) abans de passar-lo al company següent.\n\n**Depurem junts**\n\nDibuixeu una imatge a la pissarra. Feu que cada alumne faci un programa per copiar la imatge. Demaneu que es canviïn la feina amb el veí del costat i es depurin els codis mútuament.\n\n-   Encercleu el primer pas incorrecte i torneu el full.\n-   Doneu als alumnes una altra oportunitat de repassar i depurar la seva pròpia feina.\n-   Busqueu un voluntari que vulgui compartir el seu programa.\n\nPregunteu a la classe: \n\n-   _Quants teníeu el mateix programa?_\n-   _Algú en té un de diferent?_"
+        },
         "d2a287ee-e85d-4ced-a525-517d98f9258b": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Una de les parts més importar d’aprendre a programar és aprendre a depurar. Pregunteu a la classe si alguna vegada han après una habilitat nova i han fallat.\n\nPer exemple:\n\n-   Aprendre a anar en bici i caure\n-   Aprendre a cuinar i que se’ns cremi\n-   Aprendre a jugar a un esport i no guanyar un partit\n\nEl fracàs és molt habitual quan aprenem a fer coses noves. Demaneu que us expliquin algun cop que hagin fallat i com van superar-ho.\n\nEn programació, els informàtics es troben amb que al seu codi hi ha errors (o bugs).\n\n-   **Error (o bug)**: Una part d’un programa que no funciona correctament.\n\nUn error pot fer que un programa no funcioni gens bé, i per això és tan important aprendre a “depurar” el codi.\n\n-   **Depuració**: Trobar i arreglar programes en un algorisme o programa.\n\nSeguiu la conversa si creieu que a la classe li anirà bé una mica més d’introducció, però no us queden sense temps per fer una de les activitats pont."
+        },
+        "6bf120d1-a205-4b0d-a878-2420e58d6445": {
+          "description": "Aquestes activitats permeten traslladar els conceptes sense connexió de l'activitat \"Depuració sense connexió: Programació en relleus\" al món en línia en què es comencen a endinsar. Trieu una de les activitats següents per fer amb la classe:"
+        },
+        "058f7f9f-1629-4511-91f8-6eb16b1f7c9a": {
+          "name": "Activitat sense connexió amb blocs de paper",
+          "description": "Dividiu la classe en equips de 3-5 i aneu a un espai gran. Podeu anar al gimnàs o al pati. Feu que els equips formin una fila com a “Programació en relleus”. Trieu un disseny de dificultat mitja del **\\*Paquet d’activitats**. Pengeu el disseny al final d’una distància llarga entre cada equip. A més de la imatge, doneu a cada equip suficients blocs de paper dels **\\*Materials manipulatius**. Cada equip necessitarà uns quants blocs de “pintar 1” i “moure **\\_”. Els blocs de “moure \\_**” es poden omplir o bé abans de començar o bé durant el joc. En qualsevol cas, assegureu-vos que estiguin ben definits quan el joc ja hagi començat.\n\nQuan tots els equips estiguin en fila, mostreu o llegiu les regles següents:\n\n-   El primer alumne de la fila ha de córrer fins a la imatge, fixar-s’hi, i posar el primer bloc de codi del programa per copiar la imatge.\n-   Llavors, el primer alumne torna corrents i toca el company que està primer a la fila i es posa al final.\n-   L’alumne que està al principi de la fila corre cap a la imatge, s’hi fixa, revisa el programa que ja hi ha escrit, i o bé depura el programa traient un bloc de codi incorrecte, o n’afegeix un de nou. Llavors torna corrents i toca al següent, i el procés segueix fins que un grup hagi acabat el seu programa.\n\nAssegureu-vos que els alumnes només facin servir els blocs de “pintar 1” o “moure *\\_\\_”, i que només en col·loquin un per torn. El primer equip que escrigui \\_correctament* el codi per fer la imatge guanya.\n\n#### -O-"
         },
         "b8b482a1-38e6-4602-b73b-a064fefe0ea5": {
-          "name": "Previsualització dels trencaclosques en línia amb tot el grup"
+          "name": "Previsualització dels trencaclosques en línia amb tot el grup",
+          "description": "Feu equips de 3 alumnes i trieu un trencaclosques de la lliçó. Us recomanem que feu servir el cinquè. Feu que els alumnes de cada equip seguin a un ordinador amb el trencaclosques a la pantalla. Cada equip només pot fer servir un ordinador, i només un membre pot mirar la pantalla. Mostreu o llegiu les regles següents:\n\n-   Només un membre de cada equip pot mirar la pantalla. \n-   Aquesta persona només pot eliminar o afegir un bloc a la vegada. Un cop n’hagi afegit o eliminat un, pot tocar l’espatlla de la persona del costat.\n-   Ara li toca a aquesta persona fer servir el seu torn.\n-   Els torns no es poden saltar ni repetir: tothom ha de jugar la mateixa estona.\n\nEl primer equip que acabi el trencaclosques _correctament_ guanya!"
+        },
+        "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
+          "name": "Depuració amb la Laurel",
+          "description": "Pot ser útil que els alumnes seguin amb els seus equips de les activitats pont. Els alumnes hauran de fer els trencaclosques sols o per parelles, però tenir un grup proper per fer i respondre preguntes els ajudarà a guanyar confiança i entendre millor el tema d’estudi."
         },
         "0fee56da-4a47-490c-b500-a54be824f01c": {
           "progression_name": "Desenvolupament d'habilitats"
@@ -12377,6 +12572,9 @@
         "082d4e0e-d22e-482c-98aa-ff8e27e88c99": {
           "description": "#### Juguem un partit!\n\nPorteu els alumnes al pati per jugar a algun joc de pilota. Feu seguiment dels esdeveniments i de les accions. Per exemple, si jugueu a bàsquet, si no fan regats, faran una falta de desplaçament i l’altre equip es quedarà la pilota. Si jugueu a futbol, enviar la pilota fora dels límits del camp farà que l’altre equip tregui. Ficar la pilota a la porteria farà que guanyin un punt. Si veieu que s’ho passen bé, podeu inventar regles noves. Feu que tots els alumnes cridin “Hurra!” quan el capità d’un equip marqui o anoti. Feu que tots es tirin al terra i facin la croqueta si un alumne marca dos gols o anota dues cistelles seguides."
         },
+        "9f9c7f46-5d3f-4d94-9f40-f4fa158f7388": {
+          "description": "### Comentaris del dia de joc (45-60 minuts)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informàtica + Arts i llengua + Matemàtiques + Ciència**\n\n[Comentaris del dia de joc](https://docs.google.com/document/d/1wdBbcgvYXN3GgA1Y2nJjloGosfLxhhWKhUpbQtZPCP0/edit#) és una activitat opcional alineada amb les normes d’Arts i Llengua, Matemàtiques i Ciència de Common escrita per la nostra comunitat docent. En aquesta activitat, els alumnes llegiran les instruccions en veu alta mentre aprenen a programar amb esdeveniments de rebot per crear un joc. Un cop acabat el joc, faran comentaris jugada per jugada mentre els companys prediuen en quina direcció rebotarà la pilota per anotar. Els alumnes també completaran un model de Frayer sobre gràfics de barres abans de crear un gràfic de barres escalat amb les dades recopilades durant el joc.\n\n\\_Estàndards abordats: \\_\n\n-   **CCSS.ELA-LITERACY.RF.3.4:** llegir amb la precisió i fluïdesa necessàries per facilitar la comprensió.\n\n-   **CCSS.ELA-LITERACY.SL.3.4:** informar sobre un tema o text, explicar una historia o relatar una experiència amb fets apropiats i detalls descriptius rellevants, parlant de manera clara i a un ritme entenedor.\n\n-   **CCSS.MATH.CONTENT.3.MD.B.3:** dibuixar un gràfic d’imatges a escala i un gràfic de barres a escala per representar un conjunt de dades amb diverses categories. Resoldre problemes d’un i dos passos del tipus “quants més” i “quants menys” a partir de la informació presentada en gràfics de barres escalades.\n\n-   **NGSS.3-PS2-2:** fer observacions i/o mesuraments del moviment d’un objecte per presentar evidències per afirmar que un patró es pot fer servir per predir un moviment futur."
+        },
         "a13f7ef9-20f5-4865-9117-3515b8cf7414": {
           "name": "Introducció",
           "description": "Pregunteu a la classe quin és el seu videojoc preferit (potser haureu de recordar-lo que només poden parlar de videojocs que siguin apropiats per la classe). Pregunteu quina és la part del joc que més els agrada.\n\nGairebé sempre, els alumnes respondran amb algun esdeveniment. Quan veieu que la resposta d’un alumne es correspon amb un esdeveniment, demaneu-li que el descrigui més detalladament.\nQuan l’alumne acabi de descriure’l, dediqueu un moment a relacionar-lo amb la definició d’un **esdeveniment**.\n\n-   **Esdeveniment:** Una acció que fa que passi alguna cosa.\n\nDemaneu als alumnes que us expliquin algunes de les parts que més els agraden dels videojocs i per què es consideren esdeveniments. Feu que es posin per parelles i comentin les diferencies entre els esdeveniments de l’un i de l’altre.",
@@ -12407,7 +12605,7 @@
         },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
           "tips": [
-            null
+            "Si teniu temps i us agradaria preparar els alumnes amb una activitat sense connexió, plantegeu-vos fer **\\*Festa de ball: sense connexió** abans d’aquesta lliçó. Aquesta activitat breu ajuda a fer veure als alumnes que els esdeveniments desencadenen diferents passos de ball."
           ]
         },
         "270c3845-697d-42f7-b720-f6926aceff03": {
@@ -12417,31 +12615,36 @@
           "description": "Animeu els alumnes a que us diguin de quines maneres expressen la seva creativitat, com ara dibuixant, ballant, fent música o escrivint.\n\nExpliqueu que avui serem creatius amb el nostre codi. Igual que passa quan triem quins colors o quines paraules volem fer servir quan pintem o escrivim, triar quin codi escrivim i com els altres podran interactuar-hi pot ser una oportunitat per expressar la nostra creativitat.\n\n**Aixeca't i balla:** Digueu a la classe que avui veurem com podem combinar la programació amb la dansa d'una manera creativa. Demaneu-los que facin algun pas de ball que conegueu o que s'inventin durant 10 segons per posar-los contents. Podeu posar alguna cançó d'aquesta **\\*llista d'Spotify** per començar. Enregistra com ballen en vídeo.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
         },
         "2fe76df3-dde6-43fd-a725-2a1c458996b2": {
-          "name": "Programa la teva pròpia festa de ball"
+          "name": "Programa la teva pròpia festa de ball",
+          "description": "#### Filtre de música\n\nAquest tutorial inclou canços d'artistes populars. Per consultar la llista de cançons que hi apareixen, vegeu aquesta **\\*Llista de reproducció d'Spotify**. Hem inclòs les versions netes de totes les cançons, i pels alumnes de menys de 13 anys, limitem la música a aquesta llista filtrada. Si veieu que us agradaria fer servir aquesta llista filtrada amb alumnes més grans, podeu compartir la **\\*Llista de reproducció d'Spotify** amb la classe."
         },
         "07d81a89-c42f-4e92-90cf-a745cd0196d8": {
           "name": "Ajuda: nivell per nivell",
           "description": "##### Nivell 1"
         },
         "09a6a786-084e-4677-a2cf-3306ef1a6e83": {
+          "description": "##### Nivell 2\n\n-   Arrossegueu el bloc vermell de \"crear un nou\" des de la caixa d'eines, a l'esquerra, fins l'espai de treball, a la dreta. Connecteu-lo dins del bloc de \"configurar\".\n-   Ja heu escrit el vostre primer progama! No us oblideu de fer clic a \"Executar\" per veure què passa. Hauria de sonar música i un personatge s'hauria de començar a moure a l'àrea de visualització.",
           "progression_name": "Pràctica"
         },
         "f88c59b4-e502-4301-9ec4-221b7a85b350": {
           "description": "##### Nivell 3"
         },
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
+          "description": "#### Nivell 4\n\n-   Els nivells 4 i 5 tracten de fer el ball interactiu. \n-   Els blocs verds són blocs d'esdeveniment. Aquests blocs comencen una nova seqüència de codi i no necessiten estar connectats dins del bloc de configuració. \n-   Si connecteu el bloc lila sota el bloc d'esdeveniment verd, podreu fer que el personatge balli prement els botons de fletxa taronges o fent servir les fletxes del teclat.\n-   Premeu els botons de fletxa després de fer clic a Executar o el personatge o personatges no ballaran.\n\n#### Nivell 5\n\n-   Traieu un segon bloc lila de \"fer un cop\". A l'espai de treball hi trobareu un bloc \"els ossos fan un cop\" i un bloc \"els gats fan un cop\". Tots dos han d'estar connectats a un bloc verd d'esdeveniment \"en prémer\".\n-   Recordeu prémer els botons de fletxa després de fer clic a Executar, o el personatge o personatges no ballaran.",
           "progression_name": "Esdeveniments"
         },
         "3dbac671-c428-479f-8a2b-301d4a5578e5": {
           "description": "##### Nivell 6"
         },
         "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
+          "description": "#### Nivell 7\n\n-   Els nivells 7 i 8 tracten de sincronitzar el ball amb la música. \n-   Els blocs d'esdeveniments \"després de compassos\" també comencen una nova seqüència de codi i no s'han de connectar dins del bloc de configuració.\n-   Si connecteu el bloc lila de \"fer sempre\" sota el bloc d'esdeveniment verd \"després de compassos\", el personatge farà un pas de ball passat el nombre de compassos que indiqueu.\n-   El bloc \"fer sempre\" funciona de manera diferent dels blocs de \"fer un cop\" que hem vist en els nivells anteriors.\n\n#### Nivell 8\n\n-   Traieu un segon bloc d'esdeveniments verd. A l'espai de treball hi trobareu un bloc de \"després de 4 compassos\" i un bloc de \"després de 6 compassos\". A tots dos cal connectar-hi el bloc lila a la part inferior.\n\n#### Nivell 9\n\n-   El nivell 9 tracta de crear grups de ballarins ràpidament.\n-   Feu servir el bloc nou que ha aparegut a la caixa d'eines per crear un grup de ballarins més petits.\n    \\*També haureu de fer servir el bloc normal de \"crear nou\" per crear un ballarí \"principal\".\n-   Molts alumnes sabran que es pot fer que un objecte sembli més llunyà si el dibuixen més petit. En el nivell següent, podreu aprofundir en aquest concepte.",
           "progression_name": "Compassos"
         },
         "1790551e-be1b-4e39-8725-ab4ed96c2743": {
           "description": "##### Nivell 10"
         },
         "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
+          "description": "##### Nivell 11\n\n-   Els nivells 11-13 tracten d’ajustar les propietats (mida, color) dels ballarins.\n-   És important assegurar-se que el bloc verd blavós “establir” estigui col·locat en algun punt del programa _després_ d’haver creat els ballarins. Per resoldre aquest trencaclosques, cal col·locar un bloc “establir mida” en qualsevol punt del programa i fer-lo servir per canviar la mida d’alguns dels ballarins.\n-   Els ballarins creats com a grup tenen una mida preestablerta de 30. Els altres ballarins tenen una mida preestablerta de 100.\n\n##### Nivell 12\n\n-   Igual que al nivell anterior, cal assegurar-se de fer servir el bloc “establir tonalitat a (color)” després d’haver creats els ballarins al programa. Per exemple, si es col·loca com a primer pas a la zona de “configuració” del programa, no tindrà cap efecte.\n\n##### Nivell 13\n\n-   Amb el codi adequat, hauríeu de poder veure com el ballarí passa per diferents colors, mides o passos de ball.\n-   Assegureu-vos que hi hagi un bloc verd blavós de “canviar”, un bloc verd blavós “distribuir aleatòriament” o un bloc lila de “fer sempre” connectat dins del bloc “cada 2 compassos”.\n-   Assegureu-vos que els blocs “fer sempre” estiguin configurats com a (Següent), (Anterior) o (Aleatori). Si no, el ballarí farà el moviment establert sense parar.\n-   Tingueu en compte que el **codi que els alumnes escriuen en aquest nivell no es corregeix**, de manera que sempre passaran de nivell, fins i tot si no canvien el programa. El més important és que experimentin amb el seu codi de la manera que més els agradi. Feu clic al botó “Acabar” per avançar.\n-   Si creeu ballarins nous dins del bloc “cada 2 compassos”, el programa crearà diversos ballarins idèntics al mateix lloc, la qual cosa pot tenir conseqüències no desitjades!",
           "progression_name": "Propietats"
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
@@ -12449,7 +12652,11 @@
             "A aquestes alçades de la lliçó, ja deveu haver notat que les instruccions són menys prescriptives. Animeu els alumnes a ser creatius i a explorar els blocs nous que s'han introduït. A partir d'ara, el codi dels alumnes **no es corregeix per veure si és correcte** per tal de promoure l'experimentació en lloc de fer un exercici concret."
           ]
         },
+        "19a261df-276b-4f57-98db-a694c8dc0b40": {
+          "description": "##### Nivell 14"
+        },
         "248f398f-18b7-4f09-a251-8d119f3c167d": {
+          "description": "##### Nivell 15\n\n-   Aquest darrer nivell és molt obert. El tutorial està dissenyat per donar als alumnes el temps que necessitin per treballar en el seu ball.\n-   **Animeu-los a compartir:** Si els alumnes tenen un telèfon mòbil amb dades podran enviar ràpidament un missatge amb l'enllaç als seuse projectes al seu mòbil o al d'un amic. Si la política de l'escola ho permet, és un bon moment per animar-los a fer-ho.\n-   **Promoveu la creativitat:** La creativitat és un element molt important d'aquesta lliçó, però en aquest punt ho és encara més!",
           "progression_name": "Joc lliure"
         },
         "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab": {
@@ -12464,10 +12671,15 @@
           "description": "Demaneu als vostres alumnes que afegeixin les seves notes adhesives o targetes al vostre mapa mental d'informàtica abans de sortir de l'aula. Intenteu omplir el tauler amb un munt d'idees fantàstiques sobre què és la informàtica i per què és tan important."
         },
         "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
-          "name": "Oportunitat multidisciplinària"
+          "name": "Oportunitat multidisciplinària",
+          "description": "### La supervivència dels ballarins (45-60 minuts)\n\n![](https://curriculum.code.org/media/uploads/scienceSmall.png) \n**Informàtica + Ciència**\n\n[La supervivència dels ballarins](https://docs.google.com/document/d/1F1E-qPyfnh7HV1euIjsRX01PZMhbOAA0q447FqRdefo/edit?usp=sharing) és una activitat opcional alineada amb els estàndards de nova generació de ciència. Amb la festa de ball, els alumnes seleccionaran almenys un organisme (ballarí) que sigui adequat per l’entorn (món) que creïn. S’anima als alumnes a fer servir els blocs de codi de “propietats” per personalitzar les característiques de cada organisme (ballarí). \n\n_Estàndards abordats:_\n\n-   **NGSS.3-LS4-2:** fer servir evidències per elaborar una explicació de com les variacions en les característiques entre individus de la mateixa espècie pot proporcionar avantatges per sobreviure, trobar parella i reproduir-se.\n\n-   **NGSS.3-LS4-3:** construir un argument amb evidència que demostri que en un hàbitat determinat alguns organismes sobreviuran sense problemes, d’altres tindran més dificultats, i d’altres no sobreviuran.\n\n-   **AMPLIACIÓ OPCIONAL: NGSS.3-LS4-4:** explicar si una solució serà útil per un problema que apareix quan l’entorn canvia i els tipus de plantes i animals que hi viuen podria canviar."
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
-          "name": "Introducció als bucles"
+          "name": "Introducció als bucles",
+          "description": "**Demostració:** Busqueu un voluntari i feu-lo posar dempeus.\n\n-   Digueu al voluntari que camini al voltant de la taula (o de la cadira, o d’un amic).\n-   Quan acabi, digueu-li que ho torni a fer, amb les mateixes paraules que abans.\n-   Quan acabi, demaneu-li que ho torni a fer.\n-   Repetiu.\n\n**Pregunta:** _Creus que hauríem acabat abans si t’hagués demanat que fessis 4 voltes a la taula?_\n\n**Reflexió:** _I si volgués que ho fessis deu cops? Com reformularíeu les meves instruccions per fer-les més eficients i per evitar que hagués de repetir el mateix tota l’estona? Escriviu les instruccions en un full._\n\n**Compartiu:** Demaneu als alumnes que comparteixin les instruccions amb la classe, i expliqueu com cadascuna ha simplificat la tasca de donar instruccions.\n\n**Digueu:** _Avui ens centrarem en trobar maneres de fer que donar moltes instruccions sigui més fàcil, sobretot quan les instruccions es repeteixen sense parar._"
+        },
+        "b1d1db9d-2443-4c23-92c4-71660ddc4305": {
+          "description": "#### Previsualització de bucles a l’Edat de gel\n\nPer acabar la connexió, previsualitzeu un trencaclosques en línia (o dos) amb tota la classe.\n\n**Demostració:** Feu un trencaclosques en línia sencer dels que hauran de fer a continuació. Us recomanem el Trencaclosques 5. Assenyaleu la “zona de jocs” amb _l’Scrat_, així com “l’espai de treball”, on hi ha el codi Blockly. Expliqueu que aquest codi Blockly és el llenguatge que faran servir a partir d’ara per portar _l’Scrat_ fins a la gla.  Troben alguna similitud amb l’exercici que acaben de fer? Quines són les diferències principals? S'assembla en res a l'exercici que acaben de fer? Quines diferències hi ha entre l'un i l'altre?\n\nEntre tots, arrossegueu el codi cap a l'espai de treball, de manera que _l’Scrat_ acabi arribant a la gla.\n\n**Transició:** Ara, els alumnes ja haurien d'estar llestos per passar als seus ordinadors per fer els trencaclosques tots sols."
         },
         "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
           "name": "Bucles a l'Edat de Gel",
@@ -12490,8 +12702,11 @@
         },
         "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
           "tips": [
-            null
+            "Expliqueu _com_ han de tractar els companys:\n\n-   No seieu a la cadira del company.\n-   No feu servir el teclat del company.\n-   No toqueu el ratolí del company.\n-   Assegureu-vos que el company sap explicar-vos la solució en veu alta abans de marxar."
           ]
+        },
+        "c94f17b5-c6a4-4011-a5a0-0af169f73d03": {
+          "description": "**Circuleu:** Els professors teniu un paper molt important en l'educació informàtica i en propiciar un entorn col·laboratiu i dinàmic a l'aula. Mentre fan les activitats en línia, el paper principal del professor és animar i donar suport. Les lliçons en línia estan pensades per centrar-se en l'alumne, de manera que hauríeu d'evitar intervenir quan els nens s'encallin. Aquí teniu algunes idees per fer-ho:\n\n-   Feu servir el vídeo de **\\*Pause and Think Online - A les xarxes, atura't a pensar** sempre que sigui possible.\n-   Animeu els estudiants que tinguin preguntes o problemes a que primer li preguntin al company.\n-   Les preguntes sense resposta es poden dirigir a un grup proper, que potser ja sap la solució.\n-   Recordeu als alumnes que han de fer servir el procés de depuració abans d'apropar-vos al seu ordinador.\n-   Feu que els alumnes descriguin el problema que tenen davant. Què se suposa que ha de fer? Què fa? I això, què em diu?\n-   Recordeu als alumnes frustrats que la frustració és un pas més del camí d'aprenentatge i que la persistència donarà fruit.\n-   Si un alumne segueix encallat després de tot aquest procés, feu-li preguntes orientatives per tal que detecti l'error per si mateix."
         },
         "37881eab-e326-4635-89a0-382e72e6fffc": {
           "name": "Reflexió",
@@ -12501,9 +12716,11 @@
           "description": "Feu servir aquestes activitats per potenciar l'aprenentatge dels alumnes. Es poden fer servir com activitats de fora de classe o d'aprofundiment.\n\n**A moure's**\n\n-   Doneu als alumnes imatges d'accions o passos de ball que es repeteixin.\n    -   Feu que ordenin els moviments i afegeixin bucles per coreografiar el seu propi ball.\n-   Compartiu els balls amb tota la classe.\n\n**Reconnexió**\n\n-   Busca alguns vídeos de YouTube de balls populars que es repeteixin.\n-   Hi troben cap bucle?\n-   Fes el mateix amb alguna cançó!"
         },
         "f34cb485-1f89-4670-bb09-f170b83be646": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "A hores d'ara, els alumnes ja haurien d'haver tingut un primer contacte amb els bucles. En funció d'allò que creieu que pot ajudar la classe, us recomanem:\n\n-   Repetir un trencacloques de la lliçó anterior\n-   Previsualitzar un trencaclosques d'aquesta lliçó\n\nQualsevol de les dues us ajudarà a preparar els alumnes per divertir-se fent els trencaclosques en línia!"
         },
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
+          "name": "Dibuixar formes amb bucles",
           "progression_name": "Vídeo: Introducció a l'Artista amb J. R. Hildebrand"
         },
         "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
@@ -12517,6 +12734,9 @@
         },
         "ed79cfbb-8420-46b1-8cf2-ed9e0ae885f1": {
           "progression_name": "Pràctica"
+        },
+        "f3f79fbb-d2e7-410e-9258-ca61b0519fb3": {
+          "description": "#### Trencaclosques en línia\n\nPer saber on afegir els bucles de repetició, a alguns alumnes els ajuda escriure el programa sense bucles i encerclar les parts que es repeteixen. Si creieu que això podria ajudar els vostres alumnes, assegureu-vos que tinguin paper i llapis al costat de l'ordinador. També els pot agradar dibuixar algunes de les formes i les figures en un full mentre les van programant en línia."
         },
         "b5ff885e-a9ca-4b9b-8c1e-53f9273c7935": {
           "name": "Reflexió",
@@ -12558,11 +12778,19 @@
           "name": "Reflexió",
           "description": "**Preguntes:**\n\n-   De què tractava la lliçó d’avui?\n-   Què us ha semblat?\n-   Què és un bucle imbricat?\n-   Podeu dibuixar un trencaclosques on n'hi hagi un? Proveu d'escriure el codi per resoldre el vostre trencaclosques."
         },
+        "6b52ae43-bb00-43ac-9260-7c554d2f9f29": {
+          "description": "#### Vocabulari\n\nEn aquesta lliçó hi ha una paraula nova i important:\n\n**Condicionals** -_Repetiu amb mi: con-di-cio-nals_\n\nSón sentències que només s'executen sota certes condicions."
+        },
         "75e07169-e97a-4d68-b9dc-18aefddf1eab": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "-   Aquesta lliçó es pot començar directament\n    -   Digueu als alumnes que si poden fer silenci total durant 30 segons, faràs alguna cosa com ara:\n        -   Cantar òpera\n        -   Donar-los cinc minuts més a l’hora del pati\n        -   Fer la vertical\n    -   Comenceu a comptar immediatament.\n    -   Si ho aconsegueixen, digueu-los que com que ho han fet molt bé, rebran el premi.\n    -   Si no, digueu-los que no han fet silenci total durant els 30 segons, de manera que no rebran el premi.\n-   Pregunteu: _Quina era la condició per rebre el premi?_\n    -   La condició era SI fèieu silenci durant 30 segons.\n        -   Si fèieu silenci, la condició seria vertadera, i rebríeu el premi.\n        -   Si no, la condició seria falsa, de manera que no hi hauria premi.\n    -   _Se us acut algun altre condicional?_\n        -   Si endevineu quina edat tinc, tota la classe us aplaudirà.\n        -   Si sé una resposta, puc aixecar la mà.\n        -   Quins altres exemples se us acuden?\n-   _De vegades, volem afegir una altra condició, en cas que la sentència “IF” (“SI”) no sigui vertadera._\n    -   _Aquesta condició extra es diu sentència \"ELSE\" (“SI NO”)._\n    -   _Quan la condició \"IF\" (“SI”) no es compleix, ens fixem en la condició “ELSE” (“SI NO”) per saber què hem de fer._\n        -   _Per exemple: SI trec un rei d’aquesta baralla de cartes, tothom aplaudeix. SI NO, tothom diu “oooooh”._\n        -   _Provem-ho._(Traieu una carta i veieu si la classe reacciona correctament).\n    -   Demaneu que analitzin què acaba de passar.\n        -   _Quin era el “SI” (“IF”)?_\n        -   _I quin era el “SI NO” (“ELSE”)?_\n        -   _Quina condició s’ha complert?_\n    -   _Encara que us sembli impossible, encara hi ha una tercera opció._\n    -   _I si us digués que aplaudiu si trec un 7, si no, si i resulta que és un número per sota del 7 dieu “HURRA”, i si no i resulta que és qualsevol altra cosa, dieu “Ooooooh”?_\n            \\-   *Per això fem servir els termes “si”, “si no-si” i “si no” (o “if”, “else-if”, i “else”).\n            \\-   \\_El “si” (o “if”) és la primera condició.*\n            \\-   _Només ens fixem en el “si no-si” (“else-if”) si la primera condició, “si” (“if”) no és vertadera._\n            \\-   _I ens fixem en el “si no” (“else”) només si cap de les anteriors són vertaderes._\n\nAra jugarem a un joc."
         },
         "721db2fe-1035-40b0-a9a6-e1fae1e2edbd": {
-          "name": "Condicionals amb targetes"
+          "name": "Condicionals amb cartes",
+          "progression_name": "Condicionals amb cartes - Activitat sense connexió"
+        },
+        "13a60f33-de92-4780-b8a6-f7eff9d0a87c": {
+          "description": "#### Condicionals amb cartes: programa d’exemple – Guia de preparació del Professor\n\n**Instruccions:**\n\n-   Crea alguns programes amb la classe que depenguin de coses com ara el pal de la carta, el color o el valor per sumar o restar punts. Podeu escriure el programa en forma d’algorisme, pseudocodi o codi com a tal.\n\nAquí teniu un exemple d’algorisme:\n\n    Si (CARTA és VERMELLA)\n    \tEl TEU equip suma 1 punt\n\n    Si no\n    \tL’ALTRE equip suma 1 punt\n\nAquí teniu un exemple del mateix programa en pseudocodi:\n\n    Si (carta.color == VERMELL){\n    \tpunts.teus = punts.teus + 1;\n    }\n\n    Si no {\n    \tpunts.altre = punts.altre + 1;\n    }\n\n-   Formeu equips.\n-   Cada equip haurà de tenir una pila de cartes (com a mínim, tantes com membres de l’equip) a prop.\n-   Projecteu un dels vostres “programes” perquè tothom el vegi.\n-   Feu que els equips facin torns agafant cartes i seguint el programa per veure quants punts aconsegueixen sumar cada ronda.\n-   Jugueu-hi diverses vegades amb diferents programes per tal que els alumnes entenguin bé el concepte dels condicionals.\n\nQuan ja hagin practicat una estona, podeu animar-los a imbricar condicionals els uns dins els altres. Assegureu-vos que sàpiguen que, si la carta es vermella, el SEU equip sumarà 1 punt, i que _no passa res més_ perquè la condició s’ha complert:\n\n    Si (CARTA és VERMELLA)\n    \tEl TEU equip suma 1 punt\n\n    Si no\n    \tSi (CARTA és més alta que 9)\n    \t\tL’ALTRE equip suma 1 punt\n    \tSi no\n    \t\tEl TEU equip suma els mateixos punts del número de la carta\n\nAquí teniu el mateix programa en pseudocodi:\n\n    Si (carta.color == VERMELL ){\n    \tpunts.teus = punts.teus + 1;\n    }\n    Si no {\n    \tsi (carta.valor > 9){\n    \t\tpunts.altre = punts.altre + 1;\n    \t}\n    \tSi no {\n    \t\tpunts.teus = punts.teus + carta.valor;\n    \t}\n    }"
         },
         "4a483f91-af16-44dc-982f-c62424c8d5ec": {
           "name": "Reflexió",
@@ -12570,15 +12798,29 @@
             null
           ]
         },
+        "810f850f-370f-4cf5-beb4-3caca272ec00": {
+          "description": "#### Conversa ràpida: Què hem après?\n\n-   Si haguéssiu de programar això amb els blocs Blockly, què hauríeu d’afegir al voltant dels condicionals per tal que el codi s’executés més d’un cop? (Un bucle)\n-   Quines altres coses feu durant el dia sota certes concidions?\n-   Si se suposa que heu de fer alguna cosa quan el valor d’una carta és més alt que 5, i traieu un 5, heu complert la condició?\n-   Tingueu en compte que les condicions només son “Vertaderes” o “Falses”. No hi ha cap condició que es correspongui amb “Plàtan”.\n-   Quan fa falta complir diverses combinacions de condicions, podem fer servir una cosa que es diu “condicionals imbricats”.\n    -   Què creieu que vol dir?\n    -   Em podeu donar algun exemple d’on n’heu vist algun durant el joc?\n-   Quina part del joc us ha agradat més?"
+        },
         "95951ba3-d513-4635-a484-1d1819906049": {
           "name": "Reflexió",
           "description": "**Preguntes:**\n\n-   De què tractava la lliçó d’avui?\n-   Què us ha semblat?\n-   Què és un condicional? Com n'heu fet servir un avui?\n-   Quins són alguns dels condicionals que heu fet servir avui? Se us n'acuden alguns altres que poguéssiu fer servir amb una baralla de cartes?"
         },
+        "d3c82a83-b5e1-498a-a130-9df9f7f36e88": {
+          "description": "Repartiu una **\\*Avaluació – Condicionals amb cartes** a cada alumne i deixeu que la facin tots sols després d’explicar bé les instruccions. Com que ja n'han fet d'altres, no tindran cap problema fent aquesta activitat. Si cal, podeu fer servir el **Vídeo de l’avaluació** com a guía."
+        },
+        "abc8cb08-ade8-44d3-95ba-558fadaf4c21": {
+          "description": "Feu aquestes activitats per aprofundir en l’aprenentatge. Les podeu fer servir com a activitats fora de l’aula o com a reforç.\n\n**Vertader/Fals**\n\n-   Feu que formin una fila per jugar al [Joc del semàfor](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Assigneu a algú la tasca d’actuar com a instructor.\n-   L’instructor tria una condició i demana a tothom que la compleixi que avanci un pas.\n    -   Si portes un cinturó vermell, avança un pas.\n    -   Si portes sandàlies, avança un pas.\n-   Proveu d’afegir varietat dient coses com ara “Si _no_ tens el cabell ros, avança un pas\".\n\n**Imbricació**\n\n-   Dividiu la classe en parelles o en grups reduïts.\n-   Feu que escriguin sentències if (si) per un joc de cartes en tires de paper, com ara:\n    -   el pal és bastons\n    -   el color és vermell\n-   Ara, que facin les tires dels resultats.\n    -   Suma un punt\n    -   Resta un punt\n-   Quan ho tinguin fet, que triïn tres tires de cada tipus i tres cartes, i que parin atenció a l’ordre seleccionat.\n-   Que facin servir tres tires de paper per escriure tres programes diferents fent servir només les tires que han seleccionat, en qualsevol ordre.\n    -   Animeu-los a afegir algunes sentències if (si) dins d’altres sentències if (si).\n-   Ara, que executin els tres programes fent servir les cartes que han agafat de la baralla, en el mateix ordre en cada programa.\n    -   Hi ha algun dos programes que hagin proporcionat el mateix resultat?\n    -   Algun ha proporcionat un resultat diferent?"
+        },
+        "45c6ec0b-356a-418b-9d46-7e4d2453729a": {
+          "description": "### Joc de cartes amb condicionals (20-30 minuts)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Informàtica + Art i llengua + Matemàtiques**\n\n[Joc de cartes amb condicionals](https://docs.google.com/document/d/13-vYx6erXi_PE6sYwCUuayjaeNHkyMxOPQ38zTxHL00/edit) és una activitat opcional alineada amb els estàndards d’Arts i Llengua i Matemàtiques de Common Core escrita per la nostra comunitat docent. Els alumnes faran servir una baralla de cartes per repassar problemes bàsics de multiplicació i divisió mentre apliquen el concepte dels condicionals en informàtica.\n\n_Estàndards abordats:_\n\n-   **CCSS.ELA-LITERACY.SL.3.3:** formular i respondre preguntes sobre la informació que proporciona un orador, desenvolupant-la i aportant detalls adients.\n\n-   **CCSS.MATH.CONTENT.3.OA.C.7:** multiplicar i dividir amb fluides dins de 100 a través d’estratègies com la relació entre la multiplicació i la divisió (per exemple, com que sabem que 8 × 5 = 40, sabem que 40 ÷ 5 =) o les propietats de les operacions. A finals del tercer curs, hauran de saber de memòria tots els productes entre dos números d’un dígit."
+        },
         "6b12a150-fd35-4498-821d-938ad47883e4": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Reuniu el grup i busqueu dos voluntaris perquè caminin en línia recta en alguna direcció dins de l’aula. Si topen amb una cadira, hauran de passar-hi per sobre. Si topen amb una paret, hauran de seure al terra.\n\nQuan al final acabin tots asseguts, pregunteu com programarien un robot perquè reaccioni davant d’una paret o una cadira. Recordeu que no poden dir simplement “passar per sobre la cadira”, a menys que sàpiguen que hi ha una cadira, i que no sempre sabran si n’hi ha alguna. Potser seria útil traduir la tasca en instruccions com: \n\n-   mentre hi hagi camí davant  \n    -   avançar\n    -   si hi ha una cadira, passar-hi per sobre\n-   seure\n\nDigueu als alumnes que en aquesta lliçó faran servir condicional. Doneu la definició de:\n\n-   **Condició**: Una sentència que el programa comprova per veure si és vertadera o falsa. Si és vertadera, es fa una acció. Si no, l’acció s’ignora.\n-   **Condicionals**: Sentències que només s’executen sota certes condicions.\n\nObriu un debat sobre quan es podria fer servir un condicional en un codi."
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
           "name": "Mirem endavant amb Minecraft",
+          "description": "#### Trencaclosques en línia\n\nEls alumnes s'ho passaran d'allò més bé amb aquesta lliçó. Segurament, la majoria haurà sentit a parlar de _Minecraft_, però val la pena fer una breu introducció per si de cas.\n\n_Minecraft_ és un joc de cubs. Es pot jugar amb els personatges de l'Alex o l'Steve per recórrer laberints. Has d'evitar la lava, recollir objectes i explorar un món fet de cubs.\n\nFeu un dels trencaclosques com a demostració per tota la classe (us recomanem el trencaclosques 11). Un cop hàgiu resolt tots els dubtes, feu que els alumnes passin als ordinadors i que comencin a programar per parelles.",
           "progression_name": "Desenvolupament d'habilitats"
         },
         "16432484-49b1-47dc-bbd9-60f67bacc790": {
@@ -12591,17 +12833,32 @@
           "name": "Reflexió",
           "description": "**Idees:**\n\n-   Dibuixeu una cara d'emoció que transmeti com us heu sentit durant la lliçó d'avui.\n-   Dibuixeu alguna altra cosa que podríeu haver construït en aquest món de _Minecraft_.\n-   Podeu dibuixar una escena on algú faci servir un condicional?"
         },
+        "e70f9030-b24c-4a28-ae86-29a3c9d0c24f": {
+          "description": "Feu aquestes activitats per reforçar l'aprenentatge de l'alumne. Es poden fer fora de l'aula o per aprofundir.\n\n#### Més Minecraft\n\nSi veieu que els agrada molt l'entorn _Minecraft_, [aquí teniu alguns enllaços a altres jocs de \\_Minecraft\\_ per jugar en línia](https://code.org/minecraft). Aquests jocs també ensenyen habilitats de programació bàsiques."
+        },
         "0e7cf944-a328-4388-afa7-8712fed768e0": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Repasseu l’activitat dels “Condicionals amb cartes” amb el grup.\n\n-   _Què és una sentència condicional?_\n-   _Quan són útils els condicionals?_\n-   _Quines condicions vau fer servir a l’última activitat?_\n\nAra farem servir els condicionals amb l’abella de Code.org per ajudar-la a lidiar amb uns núvols molt misteriosos. No sabem si a les flors hi ha nèctar o no, de manera que haurem de fer servir condicionals per assegurar-nos que recollim el nèctar si n’hi ha, i que no intentem recollir-ne a les flors que no en tenen."
+        },
+        "8cc71fbc-f53a-45d2-9b80-e102f01f25b7": {
+          "name": "Previsualització dels trencaclosques en línia",
+          "description": "Obriu un trencaclosques d’aquesta lliçó; us recomanem el trencaclosques 9.\n\n-   Pregunteu a la classe què hauria de fer l’abella quan arribi al núvol.\n    -   L’abella hauria de fer servir un condicional per buscar una flor o un rusc.\n-   Feu servir el bloc “if a la flor / else”. Demaneu a la classe què hauria de fer l’abella si hi ha una flor. Si no hi ha una flor, hi haurà un rusc. Què haurà de fer llavors l’abella?\n    -   L’abella hauria de “recollir nèctar” si hi ha una flor, i “fer mel” si hi ha un rusc.\n\nOmpliu la resta del codi i feu clic a “Executar”. Comenteu amb la classe com és que ha funcionat."
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
-          "name": "If/else amb l'abella"
+          "name": "If/else amb l'abella",
+          "description": "Aquests trencaclosques poden donar peu a preguntes. Feu que treballin en parelles o establiu la norma “Pregunteu a tres abans de preguntar-me a mi” (que preguntin a tres companys abans d’anar al professor). Així sortiran converses que reforçaran la comprensió de cada alumne."
+        },
+        "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
+          "progression_name": "Vídeo: Condicionals: sentències if"
         },
         "f1f109b3-a855-40c1-b062-66f433dee5e8": {
           "progression_name": "Predicció"
         },
         "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "e50811f9-8d07-4737-841d-ae3ebf402649": {
+          "progression_name": "Vídeo: Condicionals: sentències if i if/else"
         },
         "3f6678b5-e568-42f2-a629-56defb6374fe": {
           "progression_name": "Desenvolupament d'habilitats"
@@ -12622,14 +12879,26 @@
           "name": "Reflexió",
           "description": "**Preguntes:**\n\n-   De què tractava la lliçó d'avui?\n-   Com us heu sentit durant la lliçó?\n-   Quins condicionals heu fet servir avui al vostre codi?\n-   Quins altres condicionals podria fer servir una abella? Alguns exemples serien:\n    -   si tinc un arbre al davant, apartar-me volant   \n    -   si m'he fet mal a l'ala, descansar al terra   \n    -   si em trobo amb una altra abella, dir \"Hola!\""
         },
+        "a2300321-9e3d-4d48-8fca-7caa05f7e889": {
+          "description": "Feu aquestes activitats per aprofundir en l’aprenentatge. Les podeu fer servir com a activitats fora de l’aula o com a reforç.\n\n**Vertader/Fals**\n\n-   Feu que formin una fila per jugar al [Joc del semàfor](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Assigneu a algú la tasca d’actuar com a instructor.\n-   L’instructor tria una condició i demana a tothom que la compleixi que avanci un pas.\n    -   Si portes un cinturó vermell, avança un pas.\n    -   Si portes sandàlies, avança un pas.\n-   Proveu d’afegir varietat dient coses com ara “Si no tens el cabell ros, avança un pas\".\n\n**Imbricació**\n\n-   Dividiu la classe en parelles o en grups reduïts.\n-   Feu que escriguin sentències if (si) per un joc de cartes en tires de paper, com ara:\n    -   Si el pal és bastons\n    -   Si el color és vermell\n-   Ara, que facin les tires dels resultats.\n    -   Suma un punt\n    -   Resta un punt\n-   Quan ho tinguin fet, que triïn tres tires de cada tipus i tres cartes, i que parin atenció a l’ordre seleccionat.\n-   Que facin servir tres tires de paper per escriure tres programes diferents fent servir només les tires que han seleccionat, en qualsevol ordre.\n    -   Animeu-los a afegir algunes sentències if (si) dins d’altres sentències if (si).\n-   Ara, que executin els tres programes fent servir les cartes que han agafat de la baralla, en el mateix ordre en cada programa.\n    -   Hi ha algun dos programes que hagin proporcionat el mateix resultat?\n    -   Algun ha proporcionat un resultat diferent?"
+        },
         "9edcc1a3-dce9-45bc-86af-546b41287b53": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Feu servir la paraula “mentre” (“while”) en una frase. Demaneu als alumnes què vol dir. Si algú els digués _“mentre hi hagi un forat, omple’l de terra”_, què farien? I durant quanta estona?\n\nQuan fem servir paraules com “mentre”, estem fent servir una condició per dir-li a l’ordinador durant quanta estona s’ha d’executar el bucle. Una condició és una sentència que es posa a prova i es determina com a vertadera o falsa. En el cas anterior, la condició és si hi ha un forat. Només és possible que hi hagi un forat o que no n’hi hagi cap, de manera que la sentència només podrà ser vertadera o falsa.\n\nDigueu als alumnes que avui aprendran un tipus nou de bucle. Fins ara, només els han fet servir per repetir una ordre un nombre de vegades determinar. Aquí, no sempre sabran quantes vegades cal repetir-la, però sí sabran quan hauran d’aturar-la o seguir fent-la. Els bucles “while” permeten als programadors repetir una ordre mentre una condició sigui vertadera. En l’exemple anterior, la condició es l’existència d’un forat.\n\nSi aneu bé de temps, podeu obrir una conversa sobre altres vegades en què creguin que un bucle “while” seria útil. Alguns exemples poden ser:\n\n-   Córrer en direcció cap a una pilota mentre la tens al davant.\n-   Omplir un got mentre hi hagi espai per més líquid.\n-   Avançar mentre hi hagi un camí davant."
+        },
+        "c4193bf0-446f-4812-beb9-b3884a1385c9": {
+          "name": "Previsualització dels trencaclosques en línia",
+          "description": "Obriu un trencaclosques dels de la sèrie de trencaclosques en línia de Code Studio d’avui. Us en recomanem el número 6.\n\n-   Demaneu a la classe què hauria de fer l’agricultora quan arribi a la pila de terra.\n    -   Hauria de fer servir un bucle “while” per començar a treure la terra.\n-   Feu servir el bloc “while hi hagi una pila / fer”. Demaneu a la classe què hauria de fer l’agricultora dins d’aquest bucle “while”.\n    -   L’agricultora hauria de “treure’n 1”. L’agricultura seguirà “traient 1 terra” mentre quedi terra. En altres paraules: quan no quedi terra, “treure’n 1” deixarà d’executar-se!\n\nOmpliu la resta del codi i feu clic a “Executar”. Comenteu amb la classe com és que ha funcionat."
         },
         "0a565c10-633a-486e-9d62-f62933373bf7": {
-          "name": "Bucles \"while\" amb l'agricultora"
+          "name": "Bucles \"while\" amb l'agricultora",
+          "description": "Els bucles “while” no són un concepte difícil d’entendre, però si creieu que la vostra classe pot tenir problemes fent aquests trencaclosques, us recomanem la programació per parelles. Així, podran compartir idees abans d’implementar el codi. La programació per parelles ajuda a reforçar la confiança i a entendre conceptes com ara els bucles “while”."
         },
         "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "5b71ce88-2e79-4478-888a-796bed9dacb9": {
+          "progression_name": "Vídeo: Bucles \"while\" amb l'agricultora"
         },
         "87c83177-38ac-4fc9-b6a7-ef90a1a4d321": {
           "progression_name": "Predicció"
@@ -12650,14 +12919,23 @@
           "progression_name": "Repte"
         },
         "6751c001-d379-4682-8c2e-3eead4acba66": {
-          "name": "Reflexió"
+          "name": "Reflexió",
+          "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Com t'ha fet sentir la lliçó d'avui?\n-   Quina diferència hi ha entre un bucle “while” i un bucle normal de repetició?\n-   Posa un exemple d’un trencaclosques on faries servir un bucle “while” i no de repetició. Se t’acut cap exemple d’un trencaclosques on faries servir un bucle de repetició i no un bucle “while”?"
         },
         "6ecd9736-c038-433f-bd11-18b7ae703bcd": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "En aquesta lliçó, els alumnes crearan bucles que només s'executen fins que (\"until\") una condició sigui certa. Ajudeu-los a entendre com funciona aquesta mecànica dirigint activitats en grup i fent-los fer una acció fins que alguna condició sigui certa. Per exemple: que es toquin el nas fins que els diguis que parin."
+        },
+        "21ce5499-3d29-40b9-8d79-184696838f2e": {
+          "description": "#### Previsualització d'un trencaclosques en línia\n\nObriu un trencaclosques dels que hi ha a la sessió de Code Studio d'avui. Us recomanem el trencaclosques 4. \n\n-   Pregunteu a la classe què ha de repetir l'ocell per arribar al porquet.\n    -   L'ocell ha de repetir el moviment \"avançar\", \"girar a la dreta\", \"avançar\", i després \"girar a l'esquerra\".\n-   Pregunteu a la classe què poden fer servir per repetir aquest codi. \n    -   L'ocell ha de repetir aquest patró _fins que_ (\"until\") arribi al porc. \n\nCompleteu el codi fent servir el bucle de repetició until i feu clic a \"Executar\". Comenteu amb la classe per què ha funcionat."
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
           "name": "Bucles \"until\" al laberint",
+          "description": "#### Trencaclosques en línia\n\nRelacionar conceptes no és fàcil, però aquest conjunt de lliçons està pensat per ajudar els alumnes a què vegin la infinitat de possibilitats que ofereix la programació quan es fan servir condicions. Si als alumnes els costa trobar les semblances o diferències entre els bucles \"while\" i els bucles \"until\", demaneu-los que pensin com farien servir unes sentències semblants a la vida real.",
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "b7917167-64a0-4090-b00a-1159a7235352": {
+          "progression_name": "Vïdeo: sentències de repetició \"until\""
         },
         "6ba7d996-6da1-49e6-a73a-924609f4e472": {
           "progression_name": "Predicció"
@@ -12675,11 +12953,15 @@
           "progression_name": "Predicció"
         },
         "b9c0e01d-2222-4dca-ad71-dc6068af0439": {
-          "name": "Reflexió"
+          "name": "Reflexió",
+          "description": "**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Com t'ha fet sentir la lliçó d'avui?\n-   Quina diferència hi ha entre un bucle \"until\" i un bucle \"while\"?"
         },
         "b4068598-c442-4526-9086-a22c466fa578": {
           "name": "Planificació",
           "description": "Motiveu i prepareu els alumnes per l'activitat per avui!"
+        },
+        "4110b137-9041-41f7-94d2-83be0cff3fa2": {
+          "description": "Ja hem tingut l'oportunitat de crear diversos projectes. Avui, l'experiència serà molt més lliure, de manera que l'haurem de planificar amb antelació! La planificació és una part molt important en el procés de programar un joc o qualsevol tipus de programa. Per això, abans de passar als ordinadors, dedicarem una estona a planificar els projectes que volem crear."
         },
         "ea88a8c8-980d-4d9f-a288-545a8cd65be6": {
           "description": "**Repartiu:** Repartiu una **\\*Guia de planificació de projectes** a cada alumne o parella. Repasseu tots junts els passos que s'hi inclouen i després deixeu que la completin. Si us fa falta, podeu consultar l'exemple que us proporcionem.",
@@ -12694,8 +12976,15 @@
             "Els alumnes hauran de provar coses i equivocar-se moltes vegades mentre programin. És molt probable que els projectes acabin sent versions truncades de la seva visió original. Recordeu-los que, en el disseny de programes, és habitual haver de quedar-se amb una solució intermèdia. No passa res si no aconsegueixen dissenyar tots els elements que tenien pensats!"
           ]
         },
+        "44ff9770-a1eb-4ec3-922d-013bcadaef08": {
+          "progression_name": "Projectes d'exemple"
+        },
+        "cc80e93e-054f-4dfb-acf9-75c0fa999f10": {
+          "progression_name": "Crear el teu propi projecte"
+        },
         "bfb31158-7c6c-4e30-9e86-141b77445111": {
-          "name": "Presentació"
+          "name": "Presentació",
+          "description": "Per celebrar la feina que han fet els alumnes, reserveu els darrers 10 minuts perquè puguin ensenyar els seus projectes. Ho podeu fer de moltes maneres, però aquí teniu algunes idees:\n\n-   **Demostració en públic**: Seleccioneu alguns voluntaris exemplars perquè ensenyin breument els seus projectes davant de la classe. Mentre ho fan, assegureu-vos que parlin de què els ha semblat l'experiència desde la planificació fins la programació i exploquin alguna idea que els agradaria incloure.\n-   **Provar-ho jugant**: Poseu els alumnes o els grups en parelles perquè puguin provar els projectes dels altres mentre hi juguen. Mentre ho fan, demaneu-los que donin comentaris positius i constructius. L'avantatge de fer-ho és que podran proporcionar i respondre a aquests comentaris en grups més reduïts.\n-   **Passeig**: Assegureu-vos que tots tenen els projectes llestos per ensenyar-los. Feu com si fos el joc de les cadires musicals i que provin el projecte de l’ordinador que els toqui durant uns minuts, fins que els feu un senyal perquè passin a un altre ordinador. Feu-ho cada pocs minuts. Tot i que aquesta opció no genera tanta comunicació estructurada, sí permet que els alumnes provin tants projectes com sigui possible."
         },
         "2765363f-4649-4b42-b4ae-245c6f5347ad": {
           "name": "Introducció",
@@ -13201,10 +13490,12 @@
           "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Com t'ha fet sentir la lliçó d'avui?\n-   Quan es fan servir els bucles? I els bucles imbricats?\n-   En què canviaria el codi del teu floc de neu si només fessis servir un bucle? I si no en fessis servir cap? Dibuixa'n un exemple."
         },
         "a608e3c1-c749-4463-b478-51d339fab447": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Reuniu el grup i busqueu dos voluntaris perquè caminin en línia recta en alguna direcció dins de l’aula. Si topen amb una cadira, hauran de passar-hi per sobre. Si topen amb una paret, hauran de seure al terra.\n\nQuan al final acabin tots asseguts, pregunteu com programarien un robot perquè reaccioni davant d’una paret o una cadira. Recordeu que no poden dir simplement “passar per sobre la cadira”, a menys que sàpiguen que hi ha una cadira, i que no sempre sabran si n’hi ha alguna. Potser seria útil traduir la tasca en instruccions com: \n\n-   mentre hi hagi camí davant  \n    -   avançar\n    -   si hi ha una cadira, passar-hi per sobre\n-   seure\n\nDigueu als alumnes que en aquesta lliçó faran servir condicional. Doneu la definició de:\n\n-   **Condició**: Una sentència que el programa comprova per veure si és vertadera o falsa. Si és vertadera, es fa una acció. Si no, l’acció s’ignora.\n-   **Condicionals**: Sentències que només s’executen sota certes condicions.\n\nObriu un debat sobre quan es podria fer servir un condicional en un codi."
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
           "name": "Mirem endavant amb Minecraft",
+          "description": "#### Trencaclosques en línia\n\nEls alumnes s'ho passaran d'allò més bé amb aquesta lliçó. Segurament, la majoria haurà sentit a parlar de _Minecraft_, però val la pena fer una breu introducció per si de cas.\n\n_Minecraft_ és un joc de cubs. Es pot jugar amb els personatges de l'Alex o l'Steve per recórrer laberints. Has d'evitar la lava, recollir objectes i explorar un món fet de cubs.\n\nFeu un dels trencaclosques com a demostració per tota la classe (us recomanem el trencaclosques 11). Un cop hàgiu resolt tots els dubtes, feu que els alumnes passin als ordinadors i que comencin a programar per parelles.",
           "progression_name": "Desenvolupament d'habilitats"
         },
         "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
@@ -13217,18 +13508,28 @@
           "name": "Reflexió",
           "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   Dibuixa una cara d'emoció que transmeti com t'has sentit durant la lliçó d'avui.\n-   Dibuixa alguna altra cosa que podries haver construït en aquest món de _Minecraft_.\n-   Sabries dibuixar una escena on algú estigui fent servir un condicional?"
         },
+        "d1347fb6-5a79-4474-a27c-712a5e38d5a6": {
+          "description": "Feu aquestes activitats per reforçar l'aprenentatge de l'alumne. Es poden fer fora de l'aula o per aprofundir.\n\n#### Més Minecraft\n\nSi veieu que els agrada molt l'entorn _Minecraft_, [aquí teniu alguns enllaços a altres jocs de \\_Minecraft\\_ per jugar en línia](https://code.org/minecraft). Aquests jocs també ensenyen habilitats de programació bàsiques."
+        },
         "888667b6-71ac-4d2f-81df-ac6b8769f8b8": {
           "name": "Introducció",
           "description": "Farem servir **condicionals** amb _l’abella_ de Code.org per ajudar-la a lidiar amb uns núvols misteriosos. No sabem si en aquestes flors hi ha nèctar, de manera que farem servir condicionals per recollir el nèctar si n’hi ha, però no perdre el temps intentant recollir-ne d’una flor que no en té.\n\nObriu un trencaclosques d’aquesta lliçó. Us recomanem el trencaclosques 9.\n\n-   Pregunteu a la classe què hauria de fer l’abella quan arribi al núvol.\n    -   L’abella hauria de fer servir un condicional per veure si hi ha alguna flor o algun rusc.\n-   Feu servir el bloc “if a la flor / else”. Pregunteu a la classe què ha de fer l’abella si hi ha una flor. Si no hi ha cap flor, hi haurà un rusc. En aquest cas, què hauria de fer l’abella?\n    -   L’abella hauria de recollir el nèctar si hi ha una flor i fer mel si hi ha un rusc.\n\nCompleteu la resta del codi i feu clic a Executar. Comenteu amb la classe per què ha funcionat."
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
-          "name": "If/else amb l'abella"
+          "name": "If/else amb l'abella",
+          "description": "Aquests trencaclosques poden donar peu a preguntes. Feu que treballin en parelles o establiu la norma “Pregunteu a tres abans de preguntar-me a mi” (que preguntin a tres companys abans d’anar al professor). Així sortiran converses que reforçaran la comprensió de cada alumne."
+        },
+        "c622f540-96a1-4448-9a80-18850f23abdd": {
+          "progression_name": "Vídeo: Condicionals: sentències if"
         },
         "d8adccb1-7876-4c08-9ece-7fb8c7f9873f": {
           "progression_name": "Predicció"
         },
         "2c223051-9787-4ae5-afb2-c999300ee231": {
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "de68c7d7-06ea-4aca-b533-5e0644760022": {
+          "progression_name": "Vídeo: Condicionals: sentències if i if/else"
         },
         "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
           "progression_name": "Desenvolupament d'habilitats"
@@ -13249,15 +13550,22 @@
           "name": "Reflexió",
           "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Com t'has sentit durant la lliçó?\n-   Quins condicionals has fet servir avui en el teu codi?\n-   Quins altres condicionals podria fer servir una abella? Alguns exemples serien:\n    -   si tinc un arbre al davant, apartar-me volant   \n    -   si m'he fet mal a l'ala, descansar al terra   \n    -   si em trobo amb una altra abella, dir \"Hola!\""
         },
+        "e7f9ff18-d88c-49c8-95d3-e3a89cda7675": {
+          "description": "Feu aquestes activitats per aprofundir en l’aprenentatge. Les podeu fer servir com a activitats fora de l’aula o com a reforç.\n\n**Vertader/Fals**\n\n-   Feu que formin una fila per jugar al [Joc del semàfor](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Assigneu a algú la tasca d’actuar com a instructor.\n-   L’instructor tria una condició i demana a tothom que la compleixi que avanci un pas.\n    -   Si portes un cinturó vermell, avança un pas.\n    -   Si portes sandàlies, avança un pas.\n-   Proveu d’afegir varietat dient coses com ara “Si no tens el cabell ros, avança un pas\".\n\n**Imbricació**\n\n-   Dividiu la classe en parelles o en grups reduïts.\n-   Feu que escriguin sentències if (si) per un joc de cartes en tires de paper, com ara:\n    -   Si el pal és bastons\n    -   Si el color és vermell\n-   Ara, que facin les tires dels resultats.\n    -   Suma un punt\n    -   Resta un punt\n-   Quan ho tinguin fet, que triïn tres tires de cada tipus i tres cartes, i que parin atenció a l’ordre seleccionat.\n-   Que facin servir tres tires de paper per escriure tres programes diferents fent servir només les tires que han seleccionat, en qualsevol ordre.\n    -   Animeu-los a afegir algunes sentències if (si) dins d’altres sentències if (si).\n-   Ara, que executin els tres programes fent servir les cartes que han agafat de la baralla, en el mateix ordre en cada programa.\n    -   Hi ha algun dos programes que hagin proporcionat el mateix resultat?\n    -   Algun ha proporcionat un resultat diferent?"
+        },
         "c75f92ab-cfc1-481f-b93a-c6496cd99709": {
           "name": "Introducció",
           "description": "Feu servir “mentre” en una frase davant dels alumnes. Pregunteu-los què vol dir la paraula while (“mentre”). Si diguessis _“mentre hi hagi un forat, omple’l de terra”_, què farien? Durant quant de temps ho farien?\n\nQuan fem servir una paraula com “mentre”, estem partint d’una condició per dir-li a l’ordinador durant quant de temps s’ha d’executar un bucle. Una condició és una sentència que s’ha posat a prova i que s’ha determinat com a vertadera o falsa. En el cas que acabem de veure, la condició és certa si hi ha un forat. Només és possible que hi hagi un forat o que no n’hi hagi cap, de manera que la sentència només podrà ser o vertadera o falsa.\n\nExpliqueu als alumnes que ara aprendran a fer servir un altre tipus de bucle. Fins ara, només han fet servir bucles per repetir una ordre un cert nombre de vegades. Aquí, no sempre sabran quantes vegades cal repetir l’ordre, però sí sabran quan hauran de parar o de seguir fent l’acció. Els bucles while permeten el programador repetir una ordre sempre que la condició sigui sent vertadera. En l’exemple anterior, la condició és l’existència d’un forat.\n\nSi aneu bé de temps, feu que els alumnes parlin d’altres situacions en què seria útil fer servir un bucle de “mentre”. Alguns exemples serien:\n\n-   Córrer cap a una pilota mentre la tinguis al davant.\n-   Omplir un got mentre hi càpiga més líquid.\n-   Caminar cap endavant mentre hi hagi un camí.\n\n### Vista prèvia de trencaclosques en línia.\n\nObriu un trencaclosques dels que trobareu a la lliçó d’avui de Code Studio. Us recomanem el trencaclosques 6.\n\n-   Demaneu a la classe què hauria de fer la pagesa quan arribi a la pila de terra.\n    -   Hauria de fer servir un bucle while per començar a netejar la terra.\n-   Fer servir el bloc de “while hi hagi una pila / fer”. Demaneu a la classe què hauria de fer la pagesa dins del bucle while.\n-   La pagesa hauria de “netejar 1”. La pagesa seguirà “netejant 1 terra” mentre hi hagi terra. En altres paraules, quan ja no hi hagi terra, el “netejar 1” deixarà d’executar-se.\n\nCompleteu el codi i feu clic a Executar. Comenteu amb la classe per què ha funcionat."
         },
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
-          "name": "Bucles \"while\" amb l'agricultora"
+          "name": "Bucles \"while\" amb l'agricultora",
+          "description": "Els bucles “while” no són un concepte difícil d’entendre, però si creieu que la vostra classe pot tenir problemes fent aquests trencaclosques, us recomanem la programació per parelles. Així, podran compartir idees abans d’implementar el codi. La programació per parelles ajuda a reforçar la confiança i a entendre conceptes com ara els bucles “while”."
         },
         "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "2094fb7f-31a7-4639-be69-0baf39649007": {
+          "progression_name": "Vídeo: Bucles \"while\" amb l'agricultora"
         },
         "3bcc5818-64c5-43b1-b0c3-44535e842497": {
           "progression_name": "Predicció"
@@ -13278,10 +13586,12 @@
           "progression_name": "Lliçons addicionals"
         },
         "4860c6c5-d580-4865-a582-3c33cdb8e4da": {
-          "name": "Reflexió"
+          "name": "Reflexió",
+          "description": "Demanar als alumnes que escriguin sobre allò que han après, per què és útil, i què en pensen pot ajudar-los a assimilar el coneixement que han adquirit avui, i en fer-ho crearan un full de repàs que els podran consultar més endavant.\n\n**Idees:**\n\n-   De què tractava la lliçó d'avui?\n-   Com t'ha fet sentir la lliçó d'avui?\n-   Quina diferència hi ha entre un bucle “while” i un bucle normal de repetició?\n-   Posa un exemple d’un trencaclosques on faries servir un bucle “while” i no de repetició. Se t’acut cap exemple d’un trencaclosques on faries servir un bucle de repetició i no un bucle “while”?"
         },
         "dc1332e9-8b48-4325-a310-3de22c787e7d": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Reuniu el grup i busqueu dos voluntaris perquè caminin en línia recta en alguna direcció dins de l’aula. Si topen amb una cadira, hauran de passar-hi per sobre. Si topen amb una paret, hauran de seure al terra.\n\nQuan al final acabin tots asseguts, pregunteu com programarien un robot perquè reaccioni davant d’una paret o una cadira. Recordeu que no poden dir simplement “passar per sobre la cadira”, a menys que sàpiguen que hi ha una cadira, i que no sempre sabran si n’hi ha alguna. Potser seria útil traduir la tasca en instruccions com: \n\n-   mentre hi hagi camí davant  \n    -   avançar\n    -   si hi ha una cadira, passar-hi per sobre\n-   seure\n\nDigueu als alumnes que en aquesta lliçó faran servir condicional. Doneu la definició de:\n\n-   **Condició**: Una sentència que el programa comprova per veure si és vertadera o falsa. Si és vertadera, es fa una acció. Si no, l’acció s’ignora.\n-   **Condicionals**: Sentències que només s’executen sota certes condicions.\n\nObriu un debat sobre quan es podria fer servir un condicional en un codi."
         },
         "59ec2b50-dbdf-4df1-9593-1bb961c5edd8": {
           "name": "El condicionals a Minecraft: Viatge aquàtic",
@@ -13303,6 +13613,9 @@
           "name": "Reflexió",
           "description": "**Idees:**\n\n-   Dibuixa una cara d'emoció que transmeti com t'has sentit durant la lliçó d'avui.\n-   Dibuixa alguna altra cosa que podries haver construït en aquest món de Minecraft.\n-   Pots dibuixar una escena on algú faci servir un condicional?"
         },
+        "707421af-498c-4710-81f9-a56ecd4c0b6e": {
+          "description": "Feu aquestes activitats per reforçar l'aprenentatge de l'alumne. Es poden fer fora de l'aula o per aprofundir.\n\n#### Més Minecraft\n\nSi veieu que els agrada molt l'entorn _Minecraft_, [aquí teniu alguns enllaços a altres jocs de \\_Minecraft\\_ per jugar en línia](https://code.org/minecraft). Aquests jocs també ensenyen habilitats de programació bàsiques."
+        },
         "f6d8a30c-dedb-4797-b71a-d661fb24aeec": {
           "name": "Introducció",
           "description": "En aquesta lliçó, els alumnes crearan bucles que només s'executen fins que una condició sigui certa. Ajudeu-los a entendre com funciona aquesta mecànica dirigint activitats en grup i fent-los fer una acció fins que alguna condició sigui certa. Per exemple: que es toquin el nas fins que els diguis que parin."
@@ -13314,6 +13627,9 @@
           "name": "Bucles \"until\" al laberint",
           "description": "Relacionar conceptes no és fàcil, però aquest conjunt de nivells està pensat per ajudar els alumnes a què vegin la infinitat de possibilitats que ofereix la programació quan es fan servir condicions. Si als alumnes els costa trobar les semblances o diferències entre els bucles while i els bucles until, demaneu-los que pensin com farien servir unes sentències semblants a la vida real.",
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "2860b3ce-f715-47f5-87e7-dac20f46d6ca": {
+          "progression_name": "Vïdeo: sentències de repetició \"until\""
         },
         "a45d0ea2-26ce-41c6-9128-3833b39cb233": {
           "progression_name": "Predicció"
@@ -13568,6 +13884,9 @@
           "name": "Planificació",
           "description": "Motiveu i prepareu els alumnes per l'activitat per avui!"
         },
+        "98da6290-a96c-4126-86c6-1ca062b83feb": {
+          "description": "Ja hem tingut l'oportunitat de crear diversos projectes. Avui, l'experiència serà molt més lliure, de manera que l'haurem de planificar amb antelació! La planificació és una part molt important en el procés de programar un joc o qualsevol tipus de programa. Per això, abans de passar als ordinadors, dedicarem una estona a planificar els projectes que volem crear."
+        },
         "83a07440-69f4-47bc-9a0a-4281dd6b5b7b": {
           "description": "**Repartiu:** Repartiu una **\\*Guia de planificació de projectes de fi de curs** a cada alumne o parella. Repasseu tots junts els passos que s'hi inclouen i després deixeu que la completin. Si us fa falta, podeu consultar l'exemple que us proporcionem.",
           "tips": [
@@ -13580,6 +13899,10 @@
           "tips": [
             "Els alumnes hauran de provar coses i equivocar-se moltes vegades mentre programin. És molt probable que els projectes acabin sent versions truncades de la seva visió original. Recordeu-los que, en el disseny de programes, és habitual haver de quedar-se amb una solució intermèdia. No passa res si no aconsegueixen dissenyar tots els elements que tenien pensats!"
           ]
+        },
+        "3d53701a-e90f-4938-977a-ca8ee2584163": {
+          "name": "Crear el teu propi projecte",
+          "progression_name": "Crear el teu propi projecte"
         },
         "d99249e4-021e-4a39-9462-045e0306c00a": {
           "name": "Presentació",
@@ -14066,6 +14389,12 @@
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "Reflexió"
         },
+        "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
+          "name": "Vocabulari clau"
+        },
+        "bec84680-216c-4711-b91f-5b37260fd598": {
+          "name": "Vocabulari clau"
+        },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "Introducció"
         },
@@ -14236,7 +14565,8 @@
           "description": "Feu aquestes activitats per reforçar l'aprenentatge de l'alumne. Es poden fer fora de l'aula o per aprofundir.\n\n#### Dibuixar amb funcions\n\nDividiu la classe en grups de 2 o 3 alumnes. Demaneu a cada grup que escrigui una funció que dibuixi alguna forma, i un programa que faci servir aquesta funció. Segons la creativitat o la concentració dels grups, és possible que calgui assignar una forma determinada a cada grup. Quan tots els grups hagin acabat, feu que s'intercanviïn els programes. En un full a part, cada grup ha de dibuixar allò que crea el programa. Quan acabin, hauran de tornar els programes i els seus dibuixos al grup que els ha deixat el programa.\n\nTots els grups han rebut el dibuix que s'esperaven? Si no, quin problema hi ha hagut? Feu que la classe dugui a terme el procés de depuració i ho tornin a intentar."
         },
         "26475297-6a91-4f8c-a64d-ded841ff0cb9": {
-          "name": "Introducció"
+          "name": "Introducció",
+          "description": "Reuniu el grup i busqueu dos voluntaris perquè caminin en línia recta en alguna direcció dins de l’aula. Si topen amb una cadira, hauran de passar-hi per sobre. Si topen amb una paret, hauran de seure al terra.\n\nQuan al final acabin tots asseguts, pregunteu com programarien un robot perquè reaccioni davant d’una paret o una cadira. Recordeu que no poden dir simplement “passar per sobre la cadira”, a menys que sàpiguen que hi ha una cadira, i que no sempre sabran si n’hi ha alguna. Potser seria útil traduir la tasca en instruccions com: \n\n-   mentre hi hagi camí davant  \n    -   avançar\n    -   si hi ha una cadira, passar-hi per sobre\n-   seure\n\nDigueu als alumnes que en aquesta lliçó faran servir condicional. Doneu la definició de:\n\n-   **Condició**: Una sentència que el programa comprova per veure si és vertadera o falsa. Si és vertadera, es fa una acció. Si no, l’acció s’ignora.\n-   **Condicionals**: Sentències que només s’executen sota certes condicions.\n\nObriu un debat sobre quan es podria fer servir un condicional en un codi."
         },
         "6e3ca289-2d9d-4ff7-b9c6-dd6d8fcad1bf": {
           "name": "El condicionals a Minecraft: Viatge aquàtic"
@@ -14257,6 +14587,9 @@
           "name": "Reflexió",
           "description": "**Idees:**\n\n-   Dibuixa una cara d'emoció que transmeti com t'has sentit durant la lliçó d'avui.\n-   Dibuixa alguna altra cosa que podries haver construït en aquest món de Minecraft.\n-   Pots dibuixar una escena on algú faci servir un condicional?"
         },
+        "b080aea3-3609-4c59-bafa-176865508638": {
+          "description": "Feu aquestes activitats per reforçar l'aprenentatge de l'alumne. Es poden fer fora de l'aula o per aprofundir.\n\n#### Més Minecraft\n\nSi veieu que els agrada molt l'entorn _Minecraft_, [aquí teniu alguns enllaços a altres jocs de \\_Minecraft\\_ per jugar en línia](https://code.org/minecraft). Aquests jocs també ensenyen habilitats de programació bàsiques."
+        },
         "2a7befee-2eac-4af5-bf1c-6192b24cbad2": {
           "name": "Introducció"
         },
@@ -14265,6 +14598,9 @@
             null
           ],
           "progression_name": "Desenvolupament d'habilitats"
+        },
+        "a63ac211-7ad4-4c28-af4a-cfa489ec8a77": {
+          "progression_name": "Vídeo: Bucles \"while\" amb l'agricultora"
         },
         "22826fb5-5cdf-4918-970d-680d9ba82f88": {
           "progression_name": "Predicció"
@@ -14308,6 +14644,9 @@
         },
         "365538ed-acdc-4054-9f6c-fb4085cced76": {
           "name": "Reflexió"
+        },
+        "f8b211c2-4c26-4946-ab95-74efdb7ca40a": {
+          "progression_name": "Crear el teu propi projecte"
         },
         "076a8517-ba6d-4f59-804d-d40a49d9f184": {
           "tips": [
@@ -16992,6 +17331,9 @@
             null
           ]
         },
+        "a5bc259a-2779-4488-b754-f6485a212933": {
+          "name": "Guia del projecte"
+        },
         "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
           "tips": [
             null
@@ -17553,7 +17895,8 @@
         "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Guia del projecte"
         },
         "f82407b3-02da-446b-9c56-6e11c8f2df36": {
           "tips": [
@@ -17737,6 +18080,10 @@
           "tips": [
             null
           ]
+        },
+        "4430b310-61e8-44d7-9033-9b5f7099ddb1": {
+          "name": "Crear el teu propi projecte",
+          "progression_name": "Crear el teu propi projecte"
         },
         "cf04f300-1bb8-4024-a77f-cfdeae97ccba": {
           "name": "Pràctica",
@@ -17996,6 +18343,13 @@
         },
         "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
           "progression_name": "Joc lliure"
+        },
+        "0b1979f9-ab58-4284-adc9-ff2ccb176fde": {
+          "progression_name": "Projectes d'exemple"
+        },
+        "c81e44f6-ab58-47eb-8573-234c9a9e0f0e": {
+          "name": "Crear el teu propi projecte",
+          "progression_name": "Crear el teu propi projecte"
         },
         "3407f4a4-8db6-489c-98ef-0c8fd31c9017": {
           "progression_name": "Pràctica"
@@ -18262,6 +18616,10 @@
         "279bf9ee-e1f5-49fa-84be-bc065112aab6": {
           "progression_name": "Pràctica"
         },
+        "dc5d2770-baaa-4bd2-a210-0335bdb5a6b9": {
+          "name": "Crear el teu propi projecte",
+          "progression_name": "Crear el teu propi projecte"
+        },
         "b009d107-5f2d-46b7-9cdf-6df3f9dadc06": {
           "name": "Pràctica",
           "progression_name": "Pràctica"
@@ -18473,6 +18831,13 @@
         },
         "20614514-4e5f-4737-8071-c17f2ae6f1e4": {
           "progression_name": "Joc lliure"
+        },
+        "d8a45307-88cc-435b-a5b2-a6d8f7de2165": {
+          "progression_name": "Projectes d'exemple"
+        },
+        "b1fc46a7-4dc0-42fd-a720-10e96229aa5f": {
+          "name": "Crear el teu propi projecte",
+          "progression_name": "Crear el teu propi projecte"
         }
       }
     }
