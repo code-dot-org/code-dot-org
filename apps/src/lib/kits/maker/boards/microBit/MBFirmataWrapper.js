@@ -49,6 +49,14 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     }
   }
 
+  // Create and return a copy of this MBFirmataClient with references to the WebSerialPortWrapper removed.
+  getBoardClientWithoutPort() {
+    const boardClientWithoutPort = Object.assign({}, this);
+    delete boardClientWithoutPort.serialPortWebSerial;
+    delete boardClientWithoutPort.myPort;
+    return boardClientWithoutPort;
+  }
+
   async disconnect() {
     // Close and discard the serial port.
     if (!isWebSerialPort(this.myPort)) {
