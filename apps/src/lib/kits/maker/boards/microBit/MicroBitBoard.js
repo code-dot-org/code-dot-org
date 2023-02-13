@@ -327,7 +327,6 @@ export default class MicroBitBoard extends EventEmitter {
       this.boardClient_.reset();
     }
     this.boardClient_ = null;
-    this.boardClientWithoutPort = null;
 
     return Promise.resolve();
   }
