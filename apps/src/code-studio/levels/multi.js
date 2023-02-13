@@ -8,9 +8,7 @@ import {
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
 import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 var Multi = function(
   levelId,
@@ -149,12 +147,10 @@ Multi.prototype.ready = function() {
     if (window.appOptions.submitted) {
       // show the Unsubmit button.
       $('#' + this.id + ' .unsubmitButton').show();
-    } else if (!!queryParams('user_id')) {
-      analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
-        unitId: window.appOptions.serverScriptId,
-        levelId: window.appOptions.serverLevelId,
-        sectionId: queryParams('section_id')
-      });
+    }
+
+    if (this.standalone) {
+      reportTeacherReviewingStudentDslLevel();
     }
   }
 

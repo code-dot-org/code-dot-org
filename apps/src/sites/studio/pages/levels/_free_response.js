@@ -5,9 +5,7 @@ import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import Attachments from '@cdo/apps/code-studio/components/Attachments';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(document).ready(() => {
   const data = getScriptData('freeresponse');
@@ -24,16 +22,8 @@ $(document).ready(() => {
     );
   });
 
-  if (
-    window.appOptions.readonlyWorkspace &&
-    !window.appOptions.submitted &&
-    !!queryParams('user_id')
-  ) {
-    analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
-      unitId: appOptions.serverScriptId,
-      levelId: appOptions.serverLevelId,
-      sectionId: queryParams('section_id')
-    });
+  if (!appOptions.hasContainedLevels) {
+    reportTeacherReviewingStudentDslLevel();
   }
 
   const attachmentsMountPoint = document.querySelector('#free-response-upload');
