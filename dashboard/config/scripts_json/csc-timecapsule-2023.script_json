@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-02-08 22:55:14 UTC",
+    "serialized_at": "2023-02-10 21:37:00 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -299,7 +299,7 @@
       "position": 1,
       "properties": {
         "description": "**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section. \n\n",
-        "name": "Mood and Imagery",
+        "name": "Skill Building",
         "progression_name": "Video",
         "tips": [
           {
@@ -319,8 +319,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introduction\" Video ",
         "duration": "40",
-        "name": "Level-by-Level Support",
-        "progression_name": "Video"
+        "name": "Digital Time Capsule Intro",
+        "progression_name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "227b8dcb-fb59-4c77-925c-f696d7585eca",
@@ -328,8 +328,20 @@
       }
     },
     {
-      "key": "ef6e8766-c654-408f-89c5-bd6d21105185",
+      "key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Prediction\" slides\n\n**Level 3**: Consider reading the time capsule poem out loud to all students before they begin writing their prediction. ",
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42",
+        "lesson_activity.key": "f9f1326b-d1e4-4304-9c20-597037c86ffe"
+      }
+    },
+    {
+      "key": "ef6e8766-c654-408f-89c5-bd6d21105185",
+      "position": 4,
       "properties": {
         "tips": [
           {
@@ -340,18 +352,6 @@
       },
       "seeding_key": {
         "activity_section.key": "ef6e8766-c654-408f-89c5-bd6d21105185",
-        "lesson_activity.key": "f9f1326b-d1e4-4304-9c20-597037c86ffe"
-      }
-    },
-    {
-      "key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Prediction\" slides\n\n**Level 2**: Consider reading the time capsule poem out loud to all students before they begin writing their prediction. Ensure that students understand the terms background, sound, sprites. \n",
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42",
         "lesson_activity.key": "f9f1326b-d1e4-4304-9c20-597037c86ffe"
       }
     },
@@ -851,7 +851,7 @@
         "level_keys": [
           "csc_time capsule_intro video_2023"
         ],
-        "progression": "Video"
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -870,6 +870,28 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_timecapsule_info_2023"
+        ],
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2023",
+        "activity_section.key": "227b8dcb-fb59-4c77-925c-f696d7585eca"
+      },
+      "level_keys": [
+        "csc_timecapsule_info_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -893,34 +915,9 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_video_introSpriteLab_2023"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_video_introSpriteLab_2023"
-        ],
-        "lesson.key": "Time Capsule Introduction (pilot)",
-        "lesson_group.key": "",
-        "script.name": "csc-timecapsule-2023",
-        "activity_section.key": "3802d1bc-5279-467a-a816-fbc28aea136d"
-      },
-      "level_keys": [
-        "CourseF_video_introSpriteLab_2023"
-      ]
-    },
-    {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -945,7 +942,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -970,7 +967,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -995,7 +992,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1020,7 +1017,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1458,6 +1455,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csc_timecapsule_info_2023",
+        "script_level.level_keys": [
+          "csc_timecapsule_info_2023"
+        ],
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "lesson_group.key": "",
+        "script.name": "csc-timecapsule-2023",
+        "activity_section.key": "227b8dcb-fb59-4c77-925c-f696d7585eca"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csc_timecapsule_predict3_2023",
         "script_level.level_keys": [
           "csc_timecapsule_predict3_2023"
@@ -1466,18 +1475,6 @@
         "lesson_group.key": "",
         "script.name": "csc-timecapsule-2023",
         "activity_section.key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_video_introSpriteLab_2023",
-        "script_level.level_keys": [
-          "CourseF_video_introSpriteLab_2023"
-        ],
-        "lesson.key": "Time Capsule Introduction (pilot)",
-        "lesson_group.key": "",
-        "script.name": "csc-timecapsule-2023",
-        "activity_section.key": "3802d1bc-5279-467a-a816-fbc28aea136d"
       }
     },
     {
