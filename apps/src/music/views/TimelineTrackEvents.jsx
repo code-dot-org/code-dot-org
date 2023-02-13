@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import React, {useContext, useMemo} from 'react';
 import {PlayerUtilsContext} from '../context';
 import moduleStyles from './timeline.module.scss';
+import TimelineElement from './TimelineElement';
 
 const TimelineTrackEvents = ({
   barWidth,
   eventVerticalSpace,
-  getEventHeight,
-  colorClasses,
-  getLengthForId
+  getEventHeight
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
   // useMemo() compares dependency using Object.is() comparison, which won't work correctly
@@ -31,11 +29,18 @@ const TimelineTrackEvents = ({
         if (!tracksToSounds[event.trackId]) {
           tracksToSounds[event.trackId] = {
             name: tracksMetadata[event.trackId].name,
-            sounds: []
+            soundsByTime: {},
+            maxConcurrentSounds:
+              tracksMetadata[event.trackId].maxConcurrentSounds
           };
         }
 
-        tracksToSounds[event.trackId].sounds.push(event);
+        const trackData = tracksToSounds[event.trackId];
+        if (!trackData.soundsByTime[event.when]) {
+          trackData.soundsByTime[event.when] = [];
+        }
+
+        trackData.soundsByTime[event.when].push(event);
       }
     });
 
@@ -49,37 +54,40 @@ const TimelineTrackEvents = ({
 
   const numTracks = Object.keys(tracksToSounds).length;
   // Available height is 110 - number of track titles times track title height (18px)
-  const eventHeight =
+  const singleElementHeight =
     getEventHeight(numTracks, 110 - numTracks * 18) - eventVerticalSpace;
 
   return (
     <div className={moduleStyles.tracksContainer}>
       {Object.keys(tracksToSounds).map((trackId, index) => {
-        const colorClass = colorClasses[index % 4];
+        const currentTrackData = tracksToSounds[trackId];
+        const trackElementsHeight =
+          singleElementHeight * currentTrackData.maxConcurrentSounds;
+
         return (
           <div className={moduleStyles.trackRowContainer} key={index}>
             <div className={moduleStyles.trackName}>
-              {tracksToSounds[trackId].name}
+              {currentTrackData.name}
             </div>
-            <div style={{height: eventHeight}}>
-              {tracksToSounds[trackId].sounds.map((eventData, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={classNames(
-                      moduleStyles.timelineElement,
-                      colorClass
-                    )}
-                    style={{
-                      width: barWidth * getLengthForId(eventData.id) - 4,
-                      left: barWidth * eventData.when,
-                      height: eventHeight
-                    }}
-                  >
-                    &nbsp;
-                  </div>
-                );
-              })}
+            <div style={{height: trackElementsHeight, position: 'relative'}}>
+              {Object.keys(currentTrackData.soundsByTime).map((when, index) => (
+                <div
+                  style={{position: 'relative', left: barWidth * when}}
+                  key={index}
+                >
+                  {currentTrackData.soundsByTime[when].map(
+                    (eventData, index) => (
+                      <TimelineElement
+                        key={index}
+                        soundId={eventData.id}
+                        barWidth={barWidth}
+                        height={singleElementHeight}
+                        top={index * singleElementHeight}
+                      />
+                    )
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         );
@@ -91,8 +99,6 @@ const TimelineTrackEvents = ({
 TimelineTrackEvents.propTypes = {
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
-  getLengthForId: PropTypes.func.isRequired,
-  colorClasses: PropTypes.array.isRequired,
   getEventHeight: PropTypes.func.isRequired
 };
 

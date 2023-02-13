@@ -196,9 +196,10 @@ class CertificateImage
 
   def self.certificate_template_for(course)
     if ScriptConstants.unit_in_category?(:minecraft, course)
-      if course == ScriptConstants::MINECRAFT_HERO_NAME
+      case course
+      when ScriptConstants::MINECRAFT_HERO_NAME
         'MC_Hour_Of_Code_Certificate_Hero.png'
-      elsif course == ScriptConstants::MINECRAFT_AQUATIC_NAME
+      when ScriptConstants::MINECRAFT_AQUATIC_NAME
         'MC_Hour_Of_Code_Certificate_Aquatic.png'
       else
         'MC_Hour_Of_Code_Certificate.png'

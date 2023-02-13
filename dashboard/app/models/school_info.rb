@@ -265,11 +265,12 @@ class SchoolInfo < ApplicationRecord
   def validate_school_district_without_country
     return if school_type == SCHOOL_TYPE_CHARTER && zip.present?
     return if school_type == SCHOOL_TYPE_PRIVATE && zip.present?
-    if school_type == SCHOOL_TYPE_PUBLIC
+    case school_type
+    when SCHOOL_TYPE_PUBLIC
       return if state == SCHOOL_STATE_OTHER
       return if state.present? && school_district_id.present?
       return if state.present? && school_district_id.blank? && school_district_other.present?
-    elsif school_type == SCHOOL_TYPE_OTHER
+    when SCHOOL_TYPE_OTHER
       return if state == SCHOOL_STATE_OTHER
       return if state.present? && school_district_id.present?
       return if state.present? && school_district_id.blank? && school_district_other.present?

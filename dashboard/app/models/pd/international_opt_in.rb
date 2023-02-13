@@ -125,15 +125,16 @@ class Pd::InternationalOptIn < ApplicationRecord
   # @override
   def dynamic_required_fields(hash)
     [].tap do |required|
-      if hash[:school_country] == "Colombia"
+      case hash[:school_country]
+      when 'Colombia'
         required << :school_department
         required << :school_municipality
         required << :school_city
-      elsif hash[:school_country] == "Chile"
+      when 'Chile'
         required << :school_department
         required << :school_commune
         required << :school_id
-      elsif hash[:school_country] == "Uzbekistan"
+      when 'Uzbekistan'
         required << :school_department
         required << :school_municipality
       else

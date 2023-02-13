@@ -106,7 +106,7 @@ Dashboard::Application.routes.draw do
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
     # User-facing section routes
-    resources :sections, only: [:show] do
+    resources :sections, only: [:show, :new] do
       member do
         post 'log_in'
       end
@@ -501,6 +501,7 @@ Dashboard::Application.routes.draw do
     get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
     get '/weblab/host', to: 'weblab_host#index'
+    get '/weblab/network-check', to: 'weblab_host#network_check'
 
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'

@@ -78,3 +78,5 @@ export const WEB_SERIAL_FILTERS = [
   {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
   {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID}
 ];
+
+export const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));

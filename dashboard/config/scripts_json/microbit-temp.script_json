@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "microbit-temp",
-    "serialized_at": "2023-02-01 12:33:59 UTC",
+    "serialized_at": "2023-02-10 21:10:48 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -100,7 +100,7 @@
     },
     {
       "key": "The Circuit Playground",
-      "name": "The Micro:bit",
+      "name": "The Micro:bit [Giles Lesson]",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -108,9 +108,7 @@
       "properties": {
         "assessment_opportunities": "1. **Connect and troubleshoot external devices**\n\n\tAt the beginning of the online activity, students should connect the boards themselves, using the setup page to troubleshoot common problems.\n\n2. **Turn on and off an LED with code**\n\n\tCode Studio: See rubric on level 9.\n\n3. **Control the buzzer with code**\n\n\tCode Studio: see rubric on level 9.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.\n\n**Question of the Day:** What outputs can I control on the circuit playground?",
-        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\n* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. "
+        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\n* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers"
       },
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
@@ -120,7 +118,7 @@
     },
     {
       "key": "Updating Screen Elements",
-      "name": "Updating Screen Elements",
+      "name": "Updating Screen Elements [MB Levels]",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -140,7 +138,7 @@
     },
     {
       "key": "Board Events",
-      "name": "Board Events",
+      "name": "Board Events [MB Levels]",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -160,7 +158,7 @@
     },
     {
       "key": "Variables and If Statements",
-      "name": "Variables and If Statements",
+      "name": "Variables and If Statements [MB Levels]",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -179,7 +177,7 @@
     },
     {
       "key": "Problem Solving Process with Programming",
-      "name": "Problem Solving Process with Programming",
+      "name": "Problem Solving Process with Programming [MB Levels]",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -197,7 +195,7 @@
     },
     {
       "key": "Mini-Project: Field Collector App",
-      "name": "Mini-Project: Field Collector App",
+      "name": "Mini-Project: Field Collector App [MB Levels]",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -215,27 +213,12 @@
       }
     },
     {
-      "key": "lesson-11",
-      "name": "LED Screen",
+      "key": "Getting Screen Inputs",
+      "name": "Getting Screen Inputs [MB Levels]",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "microbit-temp"
-      }
-    },
-    {
-      "key": "Getting Screen Inputs",
-      "name": "Getting Screen Inputs",
-      "absolute_position": 10,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 10,
       "properties": {
         "assessment_opportunities": "1. **Design apps using the text input, dropdown, and slider design elements**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use getProperty and getText to access user input on the screen**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use user input to update elements on the screen using code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -251,11 +234,11 @@
     },
     {
       "key": "Combining Inputs and Outputs",
-      "name": "Combining Inputs and Outputs",
-      "absolute_position": 11,
+      "name": "Combining Inputs and Outputs [MB Levels]",
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
         "assessment_opportunities": "1. **Use inputs from app design elements to update screen elements or produce output on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use inputs from the circuit playground to update screen elements or produce output on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use variables and if-statements for complex user interaction**\n\n\tCode Studio: see rubric on the assessment level",
         "overview": "In this lesson, students combine inputs and outputs across both the circuit playground and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the circuit playground change. Or, students may use the buttons on the circuit playground to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or circuit playground features in this lesson, but students are combining many elements from previous lessons in new ways.\n\n**Question of the Day:** How can I use inputs and outputs from both the circuit playground and the app screen?",
@@ -270,11 +253,11 @@
     },
     {
       "key": "Project: Human Device Interaction",
-      "name": "Project: Human Device Interaction",
-      "absolute_position": 12,
+      "name": "Project: Human Device Interaction [MB Levels]",
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
         "overview": "In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. ",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-human-device-interaction-physical-computing-lesson-10/36216) forum for verified teachers to find additional strategies or resources shared by fellow teachers"
@@ -287,11 +270,11 @@
     },
     {
       "key": "Board Sensors",
-      "name": "Board Sensors",
-      "absolute_position": 13,
+      "name": "Board Sensors [MB Levels]",
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "assessment_opportunities": "1. **Develop programs that respond to sensor input**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Scale a range of numbers to meet a specific need**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -307,11 +290,11 @@
     },
     {
       "key": "Accelerometer",
-      "name": "Accelerometer",
-      "absolute_position": 14,
+      "name": "Accelerometer [MB Levels]",
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
         "assessment_opportunities": "1. **Use accelerometer orientation (pitch and roll) when creating apps**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use the data event to continually update an element's properties.**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -328,10 +311,10 @@
     {
       "key": "Functions",
       "name": "Functions",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "assessment_opportunities": "1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -348,10 +331,10 @@
     {
       "key": "Mini-Project: Interactive Art",
       "name": "Mini-Project: Interactive Art",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "overview": "In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.",
@@ -367,10 +350,10 @@
     {
       "key": "Physical Outputs and LEDs",
       "name": "Physical Outputs and LEDs",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
         "assessment_opportunities": "1. **Create and debug a circuit with an LED**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that control an LED with code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -387,10 +370,10 @@
     {
       "key": "Physical Inputs and Buttons",
       "name": "Physical Inputs and Buttons",
-      "absolute_position": 18,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
         "assessment_opportunities": "1. **Create and debug a circuit with a button**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that use an external button for input**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -407,10 +390,10 @@
     {
       "key": "Project - Prototype an Innovation",
       "name": "Project - Prototype an Innovation",
-      "absolute_position": 19,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 18,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -4824,6 +4807,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Getting Started_mb2022"
+        ],
         "progression": "App Lab Intro - Video"
       },
       "bonus": false,
@@ -4846,6 +4832,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color_mb2022"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -4868,6 +4857,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2_mb2022"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -4890,6 +4882,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text_mb2022"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -4912,6 +4907,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_mb2022"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -4934,6 +4932,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro_mb2022"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -4956,6 +4957,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_mb2022"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -4978,6 +4982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_mb2022"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -5000,6 +5007,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound_mb2022"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -5022,6 +5032,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5044,6 +5057,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5066,6 +5082,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5088,6 +5107,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5110,6 +5132,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App_mb2022"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -5132,6 +5157,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_mb2022"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -5154,6 +5182,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "devices-pre-survey-levelgroup_mb2022"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -5176,6 +5207,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 Circuit Playground Test_mb2022"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -5198,6 +5232,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5220,6 +5257,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5242,6 +5282,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5264,6 +5307,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - P2_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5286,6 +5332,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5308,6 +5357,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5330,6 +5382,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5352,6 +5407,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5374,6 +5432,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5396,6 +5457,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5418,6 +5482,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5440,6 +5507,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5462,6 +5532,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5484,6 +5557,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5506,6 +5582,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5528,6 +5607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5550,6 +5632,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - ChalB_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5572,6 +5657,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5594,6 +5682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5616,6 +5707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5638,6 +5732,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5660,6 +5757,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5682,12 +5782,15 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - PracB_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Inputs - A_mb2022"
+          "CSD U6 - Board Inputs - PracB_mb2022"
         ],
         "lesson.key": "Board Events",
         "lesson_group.key": "lessonGroup-3",
@@ -5695,7 +5798,7 @@
         "activity_section.key": "427bbb2c-beb9-49c0-94ef-81005e4256f0"
       },
       "level_keys": [
-        "CSD U6 - Board Inputs - A_mb2022"
+        "CSD U6 - Board Inputs - PracB_mb2022"
       ]
     },
     {
@@ -5704,6 +5807,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5726,6 +5832,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5748,6 +5857,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB0_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5770,6 +5882,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables  - Vid_mb2022"
+        ],
         "progression": "Video - Variables"
       },
       "bonus": false,
@@ -5792,6 +5907,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5814,6 +5932,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5836,6 +5957,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables  - Vid2_mb2022"
+        ],
         "progression": "Video - The Counter Pattern"
       },
       "bonus": false,
@@ -5858,6 +5982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5880,6 +6007,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB5_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5902,6 +6032,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables  - Vid3_mb2022"
+        ],
         "progression": "Video - If Statements"
       },
       "bonus": false,
@@ -5924,6 +6057,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P2_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5946,6 +6082,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB7_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5968,6 +6107,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB6_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5990,6 +6132,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6012,6 +6157,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6034,6 +6182,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_mb2022"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -6056,6 +6207,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB1_mb2022"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -6078,6 +6232,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_mb2022"
+        ],
         "progression": "Create a Trivia Game"
       },
       "bonus": false,
@@ -6100,6 +6257,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC1_mb2022"
+        ],
         "progression": "Create a Trivia Game"
       },
       "bonus": false,
@@ -6122,6 +6282,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Design_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6144,6 +6307,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Events_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6166,6 +6332,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Logic_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6188,6 +6357,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Review_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6210,6 +6382,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6232,6 +6407,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6254,6 +6432,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6276,6 +6457,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6298,6 +6482,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6320,6 +6507,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6342,6 +6532,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB5_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6364,6 +6557,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6386,6 +6582,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6408,6 +6607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6430,6 +6632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6452,6 +6657,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6474,6 +6682,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6496,12 +6707,15 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB4v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Combine Inputs - SB3_mb2022"
+          "CSD U6 - Combine Inputs - SB4v2_mb2022"
         ],
         "lesson.key": "Combining Inputs and Outputs",
         "lesson_group.key": "lessonGroup-3",
@@ -6509,7 +6723,7 @@
         "activity_section.key": "d0964652-afed-4a4f-9d45-0de6c417d820"
       },
       "level_keys": [
-        "CSD U6 - Combine Inputs - SB3_mb2022"
+        "CSD U6 - Combine Inputs - SB4v2_mb2022"
       ]
     },
     {
@@ -6518,12 +6732,15 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB5v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Combine Inputs - SB4_mb2022"
+          "CSD U6 - Combine Inputs - SB5v2_mb2022"
         ],
         "lesson.key": "Combining Inputs and Outputs",
         "lesson_group.key": "lessonGroup-3",
@@ -6531,15 +6748,43 @@
         "activity_section.key": "d0964652-afed-4a4f-9d45-0de6c417d820"
       },
       "level_keys": [
-        "CSD U6 - Combine Inputs - SB4_mb2022"
+        "CSD U6 - Combine Inputs - SB5v2_mb2022"
       ]
     },
     {
       "chapter": 79,
       "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB6_mb2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB6_mb2022"
+        ],
+        "lesson.key": "Combining Inputs and Outputs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "microbit-temp",
+        "activity_section.key": "d0964652-afed-4a4f-9d45-0de6c417d820"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - SB6_mb2022"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6557,11 +6802,14 @@
       ]
     },
     {
-      "chapter": 80,
-      "position": 7,
+      "chapter": 81,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6579,11 +6827,14 @@
       ]
     },
     {
-      "chapter": 81,
-      "position": 8,
+      "chapter": 82,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6601,11 +6852,14 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Design_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6623,11 +6877,14 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Events_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6645,11 +6902,14 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Logic_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6667,11 +6927,14 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Review_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6689,11 +6952,14 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_mb2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -6711,11 +6977,14 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6733,11 +7002,14 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6755,11 +7027,14 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - P2_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6777,11 +7052,14 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6799,11 +7077,14 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB4.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6821,11 +7102,14 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6843,11 +7127,14 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6865,11 +7152,14 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6887,11 +7177,14 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6909,11 +7202,14 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6931,11 +7227,14 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6953,11 +7252,14 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6975,11 +7277,14 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6997,11 +7302,14 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PC_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7019,11 +7327,14 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PB_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7041,11 +7352,14 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7063,11 +7377,14 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7085,11 +7402,14 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7107,11 +7427,14 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7129,11 +7452,14 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - Functions Video_mb2022"
+        ],
         "progression": "Video - Functions"
       },
       "bonus": false,
@@ -7151,11 +7477,14 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7173,11 +7502,14 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7195,11 +7527,14 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7217,11 +7552,14 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7239,11 +7577,14 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - P2_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7261,11 +7602,14 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - Parameters Video_mb2022"
+        ],
         "progression": "Video - Parameters"
       },
       "bonus": false,
@@ -7283,11 +7627,14 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB5_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7305,11 +7652,14 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB6_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7327,11 +7677,14 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB7_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7349,11 +7702,14 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7371,11 +7727,14 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7393,11 +7752,14 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Interactive Art - Events_mb2022"
+        ],
         "progression": "Interactive Art"
       },
       "bonus": false,
@@ -7415,11 +7777,14 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Interactive Art - Logic_mb2022"
+        ],
         "progression": "Interactive Art"
       },
       "bonus": false,
@@ -7437,11 +7802,14 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Interactive Art - Review_mb2022"
+        ],
         "progression": "Interactive Art"
       },
       "bonus": false,
@@ -7459,11 +7827,14 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Setup_mb2022"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -7481,11 +7852,14 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7503,11 +7877,14 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7525,11 +7902,14 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7547,11 +7927,14 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB2.2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7569,11 +7952,14 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7591,11 +7977,14 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7613,11 +8002,14 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7635,11 +8027,14 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB1_mb2022"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -7657,11 +8052,14 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7679,11 +8077,14 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7701,11 +8102,14 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7723,11 +8127,14 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7745,11 +8152,14 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7767,11 +8177,14 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7789,11 +8202,14 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Prototype Innovation - Design_mb2022"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -7811,11 +8227,14 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Prototype Innovation - Events_mb2022"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -7833,11 +8252,14 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Innovations - Logic_mb2022"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -7855,11 +8277,14 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 140,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Innovations - Review_mb2022"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -7877,11 +8302,14 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 141,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "devices-post-survey-levelgroup_mb2022"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -8370,9 +8798,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Board Inputs - A_mb2022",
+        "level.key": "CSD U6 - Board Inputs - PracB_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Board Inputs - A_mb2022"
+          "CSD U6 - Board Inputs - PracB_mb2022"
         ],
         "lesson.key": "Board Events",
         "lesson_group.key": "lessonGroup-3",
@@ -8814,9 +9242,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Combine Inputs - SB3_mb2022",
+        "level.key": "CSD U6 - Combine Inputs - SB4v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Combine Inputs - SB3_mb2022"
+          "CSD U6 - Combine Inputs - SB4v2_mb2022"
         ],
         "lesson.key": "Combining Inputs and Outputs",
         "lesson_group.key": "lessonGroup-3",
@@ -8826,9 +9254,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Combine Inputs - SB4_mb2022",
+        "level.key": "CSD U6 - Combine Inputs - SB5v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Combine Inputs - SB4_mb2022"
+          "CSD U6 - Combine Inputs - SB5v2_mb2022"
+        ],
+        "lesson.key": "Combining Inputs and Outputs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "microbit-temp",
+        "activity_section.key": "d0964652-afed-4a4f-9d45-0de6c417d820"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - SB6_mb2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB6_mb2022"
         ],
         "lesson.key": "Combining Inputs and Outputs",
         "lesson_group.key": "lessonGroup-3",
