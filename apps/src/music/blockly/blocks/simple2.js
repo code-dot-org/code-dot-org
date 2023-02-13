@@ -80,9 +80,9 @@ export const triggeredAtSimple2 = {
     );
     return `
         var __insideWhenRun = false;
-        ${varName} = MusicPlayer.getCurrentMeasure();
-        currentMeasureLocation = Math.ceil(${varName});
-        ProgramSequencer.playSequentialWithMeasure(currentMeasureLocation);
+        ${varName} = MusicPlayer.getCurrentPlayhead();
+        currentPlayheadLocation = Math.ceil(${varName});
+        ProgramSequencer.playSequentialWithMeasure(currentPlayheadLocation);
       `;
   }
 };

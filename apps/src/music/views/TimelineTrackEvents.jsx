@@ -5,7 +5,7 @@ import moduleStyles from './timeline.module.scss';
 import TimelineElement from './TimelineElement';
 
 const TimelineTrackEvents = ({
-  currentMeasure,
+  currentPlayhead,
   barWidth,
   eventVerticalSpace,
   getEventHeight
@@ -73,7 +73,7 @@ const TimelineTrackEvents = ({
             <div style={{height: trackElementsHeight, position: 'relative'}}>
               {Object.keys(currentTrackData.soundsByTime).map((when, index) => (
                 <div
-                  style={{position: 'relative', left: barWidth * when}}
+                  style={{position: 'relative', left: barWidth * (when - 1)}}
                   key={index}
                 >
                   {currentTrackData.soundsByTime[when].map(
@@ -86,7 +86,7 @@ const TimelineTrackEvents = ({
                         top={index * singleElementHeight}
                         left={0}
                         when={eventData.when}
-                        currentMeasure={currentMeasure}
+                        currentPlayhead={currentPlayhead}
                       />
                     )
                   )}
@@ -101,7 +101,7 @@ const TimelineTrackEvents = ({
 };
 
 TimelineTrackEvents.propTypes = {
-  currentMeasure: PropTypes.number.isRequired,
+  currentPlayhead: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired

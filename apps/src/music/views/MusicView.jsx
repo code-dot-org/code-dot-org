@@ -71,7 +71,7 @@ class UnconnectedMusicView extends React.Component {
       instructions: null,
       isPlaying: false,
       startPlayingAudioTime: null,
-      currentAudioElapsedTime: 0,
+      currentPlayhead: 0,
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: true,
@@ -135,7 +135,7 @@ class UnconnectedMusicView extends React.Component {
   updateTimer = () => {
     if (this.state.isPlaying) {
       this.setState({
-        currentAudioElapsedTime: this.player.getCurrentAudioElapsedTime()
+        currentPlayhead: this.player.getCurrentPlayhead()
       });
     }
   };
@@ -253,7 +253,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.player.playSong();
 
-    this.setState({isPlaying: true, currentAudioElapsedTime: 0});
+    this.setState({isPlaying: true, currentPlayhead: 1});
   };
 
   stopSong = () => {
@@ -352,7 +352,7 @@ class UnconnectedMusicView extends React.Component {
         />
         <Timeline
           isPlaying={this.state.isPlaying}
-          currentAudioElapsedTime={this.state.currentAudioElapsedTime}
+          currentPlayhead={this.state.currentPlayhead}
         />
       </div>
     );
@@ -367,8 +367,7 @@ class UnconnectedMusicView extends React.Component {
         <PlayerUtilsContext.Provider
           value={{
             getSoundEvents: () => this.player.getSoundEvents(),
-            getCurrentMeasureInternal: () =>
-              this.player.getCurrentMeasureInternal(),
+            getCurrentPlayhead: () => this.player.getCurrentPlayhead(),
             convertMeasureToSeconds: measure =>
               this.player.convertMeasureToSeconds(measure),
             getTracksMetadata: () => this.player.getTracksMetadata(),
