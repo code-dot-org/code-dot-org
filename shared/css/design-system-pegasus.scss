@@ -78,6 +78,12 @@ p {
     font-size: 1.25em;
     font-family: $gotham-bold;
   }
+
+  &.overline {
+    font-size: .75em;
+    font-family: $gotham-bold;
+    text-transform: uppercase;
+  }
 }
 
 strong {
@@ -434,6 +440,28 @@ form {
   border-radius: $border-radius;
   display: flex;
   align-content: baseline;
+
+  p.overline {
+    color: $brand_primary_default;
+    width: 100%;
+  }
+
+  figure.video-responsive {
+    margin-bottom: 1em;
+  }
+
+  ul {
+    margin: 0 1em 1em;
+  }
+
+  &.secondary {
+
+    h3 {
+      font-family: $gotham-bold, sans-serif;
+      font-size: 1.25em;
+      margin-bottom: 0.5em;
+    }
+  }
 }
 
 // Single column action blocks
@@ -456,8 +484,17 @@ form {
 
 // Two column action block
 .action-block--two-col {
+  flex-wrap: wrap;
+  overflow: hidden;
 
   .text-wrapper {
     padding: 1em 1.5em;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    a.link-button, button {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
