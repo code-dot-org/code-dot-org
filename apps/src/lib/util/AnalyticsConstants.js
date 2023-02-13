@@ -13,6 +13,7 @@ const EVENTS = {
 
   // Lesson info
   LESSON_OVERVIEW_PAGE_VISITED_EVENT: 'Lesson Overview Page Visited',
+  LESSON_RESOURCE_LINK_VISITED_EVENT: 'Lesson Resource Link Visited',
 
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',

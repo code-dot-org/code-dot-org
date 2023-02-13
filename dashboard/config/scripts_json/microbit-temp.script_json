@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "microbit-temp",
-    "serialized_at": "2023-02-08 20:43:22 UTC",
+    "serialized_at": "2023-02-10 21:10:48 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -270,7 +270,7 @@
     },
     {
       "key": "Board Sensors",
-      "name": "Board Sensors",
+      "name": "Board Sensors [MB Levels]",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -290,7 +290,7 @@
     },
     {
       "key": "Accelerometer",
-      "name": "Accelerometer",
+      "name": "Accelerometer [MB Levels]",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -6707,6 +6707,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB4v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6729,6 +6732,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB5v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6751,6 +6757,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB6_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,

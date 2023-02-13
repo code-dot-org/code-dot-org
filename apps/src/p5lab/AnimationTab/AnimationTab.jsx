@@ -63,7 +63,7 @@ class AnimationTab extends React.Component {
     }
     const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const animationsColumnStyle =
-      labType === 'SPRITELAB' &&
+      labType !== P5LabType.GAMELAB &&
       experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;

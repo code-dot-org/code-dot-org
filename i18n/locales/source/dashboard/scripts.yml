@@ -9242,7 +9242,7 @@ en:
             -   Access and modify elements in arrays
             -   Traverse arrays
 
-            **Estimated Time:** 7.5 hours
+            **Estimated Time:** 5.5 hours
           student_description: |-
             This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
 
@@ -9259,9 +9259,12 @@ en:
             -   Access and modify elements in arrays
             -   Traverse arrays
 
-            **Estimated Time:** 7.5 hours
+            **Estimated Time:** 5.5 hours
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa3-2023
         csa-examples-22:
           lessons:
             lesson-1:
@@ -9465,20 +9468,32 @@ en:
               name: Exploring the Painter class
           lesson_groups: {}
           name: self-paced-pl-csa4-2023
-          title: ''
+          title: Getting to know the Painter class
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |-
+            This module is for any teacher who is familiar with Java OR has done Module 3, but who want introduction to the student-facing tools Code.org's in CSA Curriculum.
+
+            **You will:**
+
+            -   Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            -   Learn how to use UML diagrams
+            -   Call methods from the `Painter` class
+            -   Instantiate an object
+
+            **Estimated Time:** ~2 hours
           student_description: |-
             This module is for any teacher who is:
 
             -   Experienced in using variables, conditionals, loops and arrays in other programming languages
             -   Has finished Module 3 in this set of Modules
             -   Is new to Java
+            -   Want an introduction to the student-facing tools in Code.org's tools in CSA Curriculum.
 
             **You will:**
 
             -   Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            -   Learn how to use UML diagrams
             -   Call methods from the `Painter` class
             -   Instantiate an object
 
@@ -9490,6 +9505,38 @@ en:
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        microbit-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+          name: microbit-2022
+          title: Creating Apps with Devices (Micro:bit)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        microbit-temp:
+          lessons:
+            lesson-11:
+              name: LED Screen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Intro to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+            lessonGroup-4:
+              display_name: Building Physical Prototypes
+          name: microbit-temp
+          title: Micro:bit Temp
           description_audience: ''
           description_short: ''
           description: ''
