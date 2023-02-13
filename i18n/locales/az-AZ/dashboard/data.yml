@@ -648,6 +648,10 @@ az:
         csa-pl-equals-book: Book sinfi üçün equals() metodunun yazılması
         csa-multi-select-pl: Java-da çox seçimli ifadələr
         csc_timecapsule_intro: Zaman kapsulunun təqdimatı
+        PL_Equity_in_CS_Education: Kompüter elmi təhsilində bərabərlik/ədalət
+        csc_fm_pilot: Funksional Maşınlar (Pilot)
+        csc_fm_pilot_v2: 'Funksional Maşınlar Girişi'
+        csc-sprite-lab-pixel-editor: Öz Sprite'ını(-zı) Çək(-in)
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına yapışdırın'
