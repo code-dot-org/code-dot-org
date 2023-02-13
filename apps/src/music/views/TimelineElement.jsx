@@ -9,8 +9,7 @@ const typeToColorClass = {
   beat: moduleStyles.timelineElementPurple,
   bass: moduleStyles.timelineElementBlue,
   lead: moduleStyles.timelineElementGreen,
-  fx: moduleStyles.timelineElementYellow,
-  active: moduleStyles.timelineElementWhite
+  fx: moduleStyles.timelineElementYellow
 };
 
 /**
