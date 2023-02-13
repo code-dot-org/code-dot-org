@@ -67,7 +67,7 @@ export default class MusicPlayer {
       type: EventType.PLAY,
       id,
       insideWhenRun,
-      when: measure - 1,
+      when: measure,
       trackId
     };
 
@@ -187,6 +187,7 @@ export default class MusicPlayer {
     return this.soundEvents;
   }
 
+  /*
   getCurrentAudioElapsedTime() {
     if (!this.isPlaying) {
       return 0;
@@ -194,11 +195,13 @@ export default class MusicPlayer {
 
     return GetCurrentAudioTime() - this.startPlayingAudioTime;
   }
+  */
 
   // Called by generated code in the interpreter, and returns the current
-  // measure, in floating point for an exact position.  It's 1-based.
+  // playhead, in floating point for an exact position, and scaled to measures.
+  // It's 1-based.
   // Returns 0 if music is not playing.
-  getCurrentMeasure() {
+  getCurrentPlayhead() {
     const currentAudioTime = GetCurrentAudioTime();
     if (!this.isPlaying || currentAudioTime === null) {
       return 0;
@@ -212,18 +215,11 @@ export default class MusicPlayer {
     );
   }
 
-  // Called when rendering the timeline, and returns the current
-  // measure, in floating point for an exact position.  It's 0-based.
-  // Returns -1 if music is not playing.
-  getCurrentMeasureInternal() {
-    return this.getCurrentMeasure() - 1;
-  }
-
   playSoundEvent(soundEvent, onStop) {
     if (soundEvent.type === EventType.PLAY) {
       const eventStart =
         this.startPlayingAudioTime +
-        this.convertMeasureToSeconds(soundEvent.when);
+        this.convertMeasureToSeconds(soundEvent.when - 1);
 
       const currentAudioTime = GetCurrentAudioTime();
 

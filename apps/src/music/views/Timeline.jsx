@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import React, {useContext} from 'react';
+import React from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
-import {PlayerUtilsContext} from '../context';
 import {getBlockMode} from '../appConfig';
 import TimelineTrackEvents from './TimelineTrackEvents';
 import {BlockMode} from '../constants';
@@ -13,10 +12,7 @@ const numMeasures = 30;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
 
-const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
-  const playerUtils = useContext(PlayerUtilsContext);
-  const currentMeasure = playerUtils.getCurrentMeasureInternal();
-
+const Timeline = ({isPlaying, currentPlayhead}) => {
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
     // we will limit each row's height to the size that would allow
@@ -35,13 +31,10 @@ const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
     return Math.floor(availableHeight / numSoundsToShow);
   };
 
-  const playHeadOffset = isPlaying
-    ? (currentAudioElapsedTime * barWidth) /
-      playerUtils.convertMeasureToSeconds(1)
-    : null;
+  const playHeadOffset = isPlaying ? (currentPlayhead - 1) * barWidth : null;
 
   const timelineElementProps = {
-    currentMeasure,
+    currentPlayhead,
     barWidth,
     eventVerticalSpace,
     getEventHeight
@@ -61,7 +54,7 @@ const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
                 <div
                   className={classNames(
                     moduleStyles.barLine,
-                    measure === Math.floor(currentMeasure) &&
+                    measure === Math.floor(currentPlayhead - 1) &&
                       moduleStyles.barLineCurrent
                   )}
                 />
@@ -96,7 +89,7 @@ const Timeline = ({isPlaying, currentAudioElapsedTime}) => {
 
 Timeline.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
-  currentAudioElapsedTime: PropTypes.number.isRequired,
+  currentPlayhead: PropTypes.number.isRequired,
   sounds: PropTypes.array
 };
 
