@@ -206,7 +206,7 @@ export default class MusicPlayer {
 
     return (
       1 +
-      this.convertSecondsToMeasureExact(
+      this.convertSecondsToMeasure(
         currentAudioTime - this.startPlayingAudioTime
       )
     );
@@ -259,7 +259,7 @@ export default class MusicPlayer {
     }
   }
 
-  convertSecondsToMeasureExact(seconds) {
+  convertSecondsToMeasure(seconds) {
     return seconds / this.secondsPerMeasure();
   }
 
