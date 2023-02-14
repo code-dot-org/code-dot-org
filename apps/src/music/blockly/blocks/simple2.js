@@ -123,7 +123,7 @@ export const playSoundAtCurrentLocationSimple2 = {
 export const playRestAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: 'play rest for %1 measures',
+    message0: 'rest for %1 measures',
     args0: [
       {
         type: 'input_value',
