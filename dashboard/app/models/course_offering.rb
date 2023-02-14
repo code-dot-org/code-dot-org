@@ -12,7 +12,7 @@
 #  assignable           :boolean          default(TRUE), not null
 #  curriculum_type      :string(255)
 #  marketing_initiative :string(255)
-#  grade_level          :string(255)
+#  grade_levels         :string(255)
 #  header               :string(255)
 #
 # Indexes

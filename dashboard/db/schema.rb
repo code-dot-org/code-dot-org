@@ -424,7 +424,7 @@ ActiveRecord::Schema.define(version: 2023_02_14_123814) do
     t.boolean "assignable", default: true, null: false
     t.string "curriculum_type"
     t.string "marketing_initiative"
-    t.string "grade_level"
+    t.string "grade_levels"
     t.string "header"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
