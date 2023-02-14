@@ -82,6 +82,7 @@ class P5LabVisualizationHeader extends React.Component {
             <ToggleGroup
               selected={interfaceMode}
               onChange={this.changeInterfaceMode}
+              flex={true}
             >
               <button
                 style={styles.buttonFocus}
@@ -107,7 +108,14 @@ class P5LabVisualizationHeader extends React.Component {
                 this.props.isBlockly &&
                 experiments.isEnabled('backgroundsTab') && (
                   <button
-                    style={styles.buttonFocus}
+                    style={{
+                      ...styles.buttonFocus,
+                      // All truncation if the visualize column is very small
+                      // or if translated strings are longer than English.
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap'
+                    }}
                     type="button"
                     value={P5LabInterfaceMode.BACKGROUND}
                     id="backgroundMode"
