@@ -9,10 +9,11 @@ import styles from './animation-upload-button.module.scss';
 import {connect} from 'react-redux';
 import {refreshInRestrictedShareMode} from '../../code-studio/projectRedux.js';
 
-function AnimationUploadButton({
+export function UnconnectedAnimationUploadButton({
   onUploadClick,
   shouldRestrictAnimationUpload,
   isBackgroundsTab,
+  inRestrictedShareMode,
   refreshInRestrictedShareMode
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,7 +22,7 @@ function AnimationUploadButton({
     false
   );
   const showRestrictedUploadWarning =
-    shouldRestrictAnimationUpload && !project.inRestrictedShareMode();
+    shouldRestrictAnimationUpload && !inRestrictedShareMode;
 
   function renderUploadButton() {
     return (
@@ -113,18 +114,21 @@ function AnimationUploadButton({
   );
 }
 
-AnimationUploadButton.propTypes = {
+UnconnectedAnimationUploadButton.propTypes = {
   onUploadClick: PropTypes.func.isRequired,
   shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
   isBackgroundsTab: PropTypes.bool.isRequired,
   // populated from redux
+  inRestrictedShareMode: PropTypes.bool.isRequired,
   refreshInRestrictedShareMode: PropTypes.func.isRequired
 };
 
 export default connect(
-  null,
+  state => ({
+    inRestrictedShareMode: state.project.inRestrictedShareMode
+  }),
   dispatch => ({
     refreshInRestrictedShareMode: inRestrictedShareMode =>
       dispatch(refreshInRestrictedShareMode(inRestrictedShareMode))
   })
-)(AnimationUploadButton);
+)(UnconnectedAnimationUploadButton);
