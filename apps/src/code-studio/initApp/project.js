@@ -30,7 +30,11 @@ var showProjectAdmin = require('../showProjectAdmin');
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 import {getStore} from '../../redux';
-import {workspaceAlertTypes, displayWorkspaceAlert} from '../projectRedux';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert,
+  refreshInRestrictedShareMode
+} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -704,6 +708,9 @@ var projects = (module.exports = {
         sourceHandler.setInRestrictedShareMode(
           currentSources.inRestrictedShareMode
         );
+        // ensure restrictdShareMode is set correctly in redux
+        // so we hide publish and remix correctly.
+        getStore().dispatch(refreshInRestrictedShareMode());
       }
 
       if (isEditing) {
@@ -960,7 +967,7 @@ var projects = (module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled, selectedSong, selectedPoem} have changed.
+   * makerAPIsEnabled, selectedSong, selectedPoem, inRestrictedShareMode} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
