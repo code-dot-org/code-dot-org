@@ -75,18 +75,14 @@ export const triggeredAtSimple2 = {
     tooltip: 'at trigger',
     extensions: [DYNAMIC_TRIGGER_EXTENSION]
   },
-  generator: block => {
-    const varName = Blockly.JavaScript.nameDB_.getDistinctName(
-      'eventTime',
-      Blockly.Names.NameType.VARIABLE
-    );
-    return `
-        var __insideWhenRun = false;
-        ${varName} = MusicPlayer.getPlayheadPosition();
-        currentMeasureLocation = Math.ceil(${varName});
-        ProgramSequencer.playSequentialWithMeasure(currentMeasureLocation);
-      `;
-  }
+  generator: () =>
+    ` var __insideWhenRun = false;
+      ProgramSequencer.playSequentialWithMeasure(
+        Math.ceil(
+          MusicPlayer.getCurrentPlayheadPosition()
+        )
+      );
+    `
 };
 
 export const playSoundAtCurrentLocationSimple2 = {
