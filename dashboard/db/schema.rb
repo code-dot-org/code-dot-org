@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_13_141358) do
+ActiveRecord::Schema.define(version: 2023_02_14_123814) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -422,8 +422,9 @@ ActiveRecord::Schema.define(version: 2023_02_13_141358) do
     t.string "category", default: "other", null: false
     t.boolean "is_featured", default: false, null: false
     t.boolean "assignable", default: true, null: false
-    t.string "grade_level"
     t.string "curriculum_type"
+    t.string "marketing_initiative"
+    t.string "grade_level"
     t.string "header"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end

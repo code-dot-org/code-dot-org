@@ -2,17 +2,18 @@
 #
 # Table name: course_offerings
 #
-#  id              :integer          not null, primary key
-#  key             :string(255)      not null
-#  display_name    :string(255)      not null
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  category        :string(255)      default("other"), not null
-#  is_featured     :boolean          default(FALSE), not null
-#  assignable      :boolean          default(TRUE), not null
-#  grade_level     :string(255)
-#  curriculum_type :string(255)
-#  header          :string(255)
+#  id                   :integer          not null, primary key
+#  key                  :string(255)      not null
+#  display_name         :string(255)      not null
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  category             :string(255)      default("other"), not null
+#  is_featured          :boolean          default(FALSE), not null
+#  assignable           :boolean          default(TRUE), not null
+#  curriculum_type      :string(255)
+#  marketing_initiative :string(255)
+#  grade_level          :string(255)
+#  header               :string(255)
 #
 # Indexes
 #
