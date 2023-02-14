@@ -251,15 +251,10 @@ const toolboxBlocks = {
         }
       }
     }
-  },
-  ['procedures_callnoreturn']: {
-    kind: 'block',
-    type: 'procedures_callnoreturn',
-    titles: {name: 'blah'}
   }
 };
 
-function generateToolbox(categoryBlocksMap, includeVariables) {
+function generateToolbox(categoryBlocksMap, options) {
   const toolbox = {
     kind: 'categoryToolbox',
     contents: []
@@ -280,12 +275,21 @@ function generateToolbox(categoryBlocksMap, includeVariables) {
     });
   }
 
-  if (includeVariables) {
+  if (options?.includeVariables) {
     toolbox.contents.push({
       kind: 'category',
       name: 'Variables',
       cssConfig: baseCategoryCssConfig,
       custom: 'VARIABLE'
+    });
+  }
+
+  if (options?.includeFunctions) {
+    toolbox.contents.push({
+      kind: 'category',
+      name: 'Functions',
+      cssConfig: baseCategoryCssConfig,
+      custom: 'PROCEDURE'
     });
   }
 
@@ -304,17 +308,19 @@ export function getToolbox() {
         ]
       });
     case BlockMode.SIMPLE2:
-      return generateToolbox({
-        Simple2: [
-          BlockTypes.TRIGGERED_AT_SIMPLE2,
-          BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
-          BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
-          BlockTypes.PLAY_SOUNDS_TOGETHER,
-          BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
-          'procedures_callnoreturn',
-          'controls_repeat_ext'
-        ]
-      });
+      return generateToolbox(
+        {
+          Simple2: [
+            BlockTypes.TRIGGERED_AT_SIMPLE2,
+            BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_SOUNDS_TOGETHER,
+            BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+            'controls_repeat_ext'
+          ]
+        },
+        {includeFunctions: true}
+      );
     case BlockMode.TRACKS:
       return generateToolbox({
         Tracks: [
@@ -341,7 +347,7 @@ export function getToolbox() {
           ],
           Logic: ['controls_if', 'logic_compare']
         },
-        true
+        {includeVariables: true}
       );
   }
 
