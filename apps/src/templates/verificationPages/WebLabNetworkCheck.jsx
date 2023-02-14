@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-// import {BRAMBLE_READY_STATE, FILE_SYSTEM_ERROR} from '../../weblab/brambleHost';
+import {BRAMBLE_READY_STATE, FILE_SYSTEM_ERROR} from '../../weblab/constants';
 import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
 
 const WEBLAB_URL = '/weblab/host?skip_files=true';
-const FILE_SYSTEM_ERROR = 'EFILESYSTEMERROR';
-const BRAMBLE_READY_STATE = 'bramble:readyToMount';
 
 const STATUS_CODE_PROJECTS = 'statusCodeProjects';
 const STATUS_COMPUTING_IN_THE_CORE = 'statusComputingInTheCore';
@@ -50,8 +48,12 @@ class WebLabNetworkCheck extends Component {
   };
 
   updateBrambleStatus = (event = {}) => {
-    // Only react to events from the expected origin
-    if (!event.origin === this.props.studioUrl) {
+    // Only react to events if we're attempting the Bramble test
+    // and we receive and event from the appropriate origin
+    if (
+      !event.origin === this.props.studioUrl ||
+      !this.state[STATUS_BRAMBLE_MOUNTABLE] === Status.ATTEMPTING
+    ) {
       return;
     }
 
@@ -62,17 +64,11 @@ class WebLabNetworkCheck extends Component {
       console.log(err);
     }
 
-    if (
-      data?.msg === FILE_SYSTEM_ERROR &&
-      this.state[STATUS_BRAMBLE_MOUNTABLE] === Status.ATTEMPTING
-    ) {
+    // These two are mutually exclusive -- if there's a filesystem
+    // error, Bramble will not reach the ready state
+    if (data?.msg === FILE_SYSTEM_ERROR) {
       this.setState({encounteredFileSystemError: true});
-    }
-
-    if (
-      data?.msg === BRAMBLE_READY_STATE &&
-      this.state[STATUS_BRAMBLE_MOUNTABLE] === Status.ATTEMPTING
-    ) {
+    } else if (data?.msg === BRAMBLE_READY_STATE) {
       this.setState({
         [STATUS_BRAMBLE_MOUNTABLE]: Status.SUCCEEDED
       });
@@ -252,9 +248,11 @@ class WebLabNetworkCheck extends Component {
             When checking network support, try to meet as many of these criteria
             as possible:
           </p>
-          <li>Use your school's internet connection</li>
-          <li>Use a student computer</li>
-          <li>Log into the computer with a student account</li>
+          <ul>
+            <li>Use your school's internet connection</li>
+            <li>Use a student computer</li>
+            <li>Log into the computer with a student account</li>
+          </ul>
           <br />
           <p>
             Note: You do not need to be logged in to Code.org for this test to

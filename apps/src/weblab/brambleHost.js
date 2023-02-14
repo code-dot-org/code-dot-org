@@ -1,17 +1,14 @@
 /* global requirejs */
 import CdoBramble, {BRAMBLE_CONTAINER} from './CdoBramble';
+import {FILE_SYSTEM_ERROR, BRAMBLE_READY_STATE} from './constants';
 
 /**
  * JS to communicate between Bramble and Code Studio
  */
-
 const scriptData = document.querySelector('script[data-bramble]');
 const brambleConfig = JSON.parse(scriptData.dataset.bramble);
 const BRAMBLE_BASE_URL = brambleConfig.baseUrl;
 window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
-
-const FILE_SYSTEM_ERROR = 'EFILESYSTEMERROR';
-const BRAMBLE_READY_STATE = 'bramble:readyToMount';
 
 // Get the WebLab object from our parent window
 let webLab_;
