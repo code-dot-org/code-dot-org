@@ -142,7 +142,7 @@ export default class MusicPlayer {
         if (soundEvent.insideWhenRun) {
           const eventStart =
             this.startPlayingAudioTime +
-            this.convertMeasureToSeconds(soundEvent.when);
+            this.convertPlayheadPositionToSeconds(soundEvent.when);
           if (eventStart > GetCurrentAudioTime()) {
             StopSoundByUniqueId(GROUP_TAG, soundEvent.uniqueId);
           }
@@ -201,17 +201,14 @@ export default class MusicPlayer {
   // playhead, in floating point for an exact position, and scaled to measures.
   // It's 1-based.
   // Returns 0 if music is not playing.
-  getCurrentPlayhead() {
+  getCurrentPlayheadPosition() {
     const currentAudioTime = GetCurrentAudioTime();
     if (!this.isPlaying || currentAudioTime === null) {
       return 0;
     }
 
-    return (
-      1 +
-      this.convertSecondsToMeasure(
-        currentAudioTime - this.startPlayingAudioTime
-      )
+    return this.convertSecondsToPlayheadPosition(
+      currentAudioTime - this.startPlayingAudioTime
     );
   }
 
@@ -219,7 +216,7 @@ export default class MusicPlayer {
     if (soundEvent.type === EventType.PLAY) {
       const eventStart =
         this.startPlayingAudioTime +
-        this.convertMeasureToSeconds(soundEvent.when - 1);
+        this.convertPlayheadPositionToSeconds(soundEvent.when);
 
       const currentAudioTime = GetCurrentAudioTime();
 
@@ -255,12 +252,16 @@ export default class MusicPlayer {
     }
   }
 
-  convertSecondsToMeasure(seconds) {
-    return seconds / this.secondsPerMeasure();
+  // Converts actual seconds used by the audio system into a playhead
+  // position, which is 1-based and scaled to measures.
+  convertSecondsToPlayheadPosition(seconds) {
+    return 1 + seconds / this.secondsPerMeasure();
   }
 
-  convertMeasureToSeconds(measure) {
-    return this.secondsPerMeasure() * measure;
+  // Converts a playhead position, which is 1-based and scaled to measures,
+  // into actual seconds used by the audio system.
+  convertPlayheadPositionToSeconds(playheadPosition) {
+    return this.secondsPerMeasure() * (playheadPosition - 1);
   }
 
   secondsPerMeasure() {

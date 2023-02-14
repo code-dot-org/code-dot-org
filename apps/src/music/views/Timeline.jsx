@@ -12,7 +12,7 @@ const numMeasures = 30;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
 
-const Timeline = ({isPlaying, currentPlayhead}) => {
+const Timeline = ({isPlaying, currentPlayheadPosition}) => {
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
     // we will limit each row's height to the size that would allow
@@ -31,34 +31,39 @@ const Timeline = ({isPlaying, currentPlayhead}) => {
     return Math.floor(availableHeight / numSoundsToShow);
   };
 
-  const playHeadOffset = isPlaying ? (currentPlayhead - 1) * barWidth : null;
+  const playHeadOffsetInPixels = isPlaying
+    ? (currentPlayheadPosition - 1) * barWidth
+    : null;
 
   const timelineElementProps = {
-    currentPlayhead,
+    currentPlayheadPosition,
     barWidth,
     eventVerticalSpace,
     getEventHeight
   };
 
+  // Generate an array containing measure numbers from 1..numMeasures.
+  const arrayOfMeasures = Array.from({length: numMeasures}, (_, i) => i + 1);
+
   return (
     <div id="timeline" className={moduleStyles.wrapper}>
       <div className={moduleStyles.container}>
         <div className={moduleStyles.fullWidthOverlay}>
-          {[...Array(numMeasures).keys()].map((measure, index) => {
+          {arrayOfMeasures.map((measure, index) => {
             return (
               <div
                 key={index}
                 className={moduleStyles.barLineContainer}
-                style={{left: measure * barWidth}}
+                style={{left: index * barWidth}}
               >
                 <div
                   className={classNames(
                     moduleStyles.barLine,
-                    measure === Math.floor(currentPlayhead - 1) &&
+                    measure === Math.floor(currentPlayheadPosition) &&
                       moduleStyles.barLineCurrent
                   )}
                 />
-                <div className={moduleStyles.barNumber}>{measure + 1}</div>
+                <div className={moduleStyles.barNumber}>{measure}</div>
               </div>
             );
           })}
@@ -73,10 +78,10 @@ const Timeline = ({isPlaying, currentPlayhead}) => {
         </div>
 
         <div className={moduleStyles.fullWidthOverlay}>
-          {playHeadOffset !== null && (
+          {playHeadOffsetInPixels !== null && (
             <div
               className={moduleStyles.playhead}
-              style={{left: playHeadOffset}}
+              style={{left: playHeadOffsetInPixels}}
             >
               &nbsp;
             </div>
@@ -89,7 +94,7 @@ const Timeline = ({isPlaying, currentPlayhead}) => {
 
 Timeline.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
-  currentPlayhead: PropTypes.number.isRequired,
+  currentPlayheadPosition: PropTypes.number.isRequired,
   sounds: PropTypes.array
 };
 

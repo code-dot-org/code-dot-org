@@ -22,16 +22,16 @@ const TimelineElement = ({
   top,
   left,
   when,
-  currentPlayhead
+  currentPlayheadPosition
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
 
   const length = playerUtils.getLengthForId(soundId);
 
   const isCurrentlyPlaying =
-    currentPlayhead !== -1 &&
-    currentPlayhead >= when &&
-    currentPlayhead < when + length;
+    currentPlayheadPosition !== -1 &&
+    currentPlayheadPosition >= when &&
+    currentPlayheadPosition < when + length;
 
   return (
     <div
@@ -57,9 +57,9 @@ TimelineElement.propTypes = {
   barWidth: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   top: PropTypes.number.isRequired,
-  left: PropTypes.number.isRequired,
+  left: PropTypes.number,
   when: PropTypes.number.isRequired,
-  currentPlayhead: PropTypes.number.isRequired
+  currentPlayheadPosition: PropTypes.number.isRequired
 };
 
 export default TimelineElement;
