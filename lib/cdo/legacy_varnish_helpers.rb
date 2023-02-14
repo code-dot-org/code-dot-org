@@ -1,6 +1,12 @@
-# Various Ruby helper methods, originally from the `cdo-varnish` cookbook
-
-module HttpHelpers
+# Various Ruby helper methods, originally from the `cdo-varnish` cookbook.
+#
+# Originally, we needed some complex logic to accommodate the use of Varnish
+# alongside several other caching and delivery layers in our system. We no
+# longer rely on Varnish, but we do rely on some of that old logic in some
+# places in the codebase.
+#
+# This module contains the subset of that logic that we still depend on.
+module LegacyVarnishHelpers
   # Basic regex matcher for an optional query part of a URL followed by end-of-string anchor.
   END_URL_REGEX = "(\\?.*)?$".freeze
 
