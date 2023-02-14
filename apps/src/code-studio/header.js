@@ -13,8 +13,7 @@ import {
   showProjectUpdatedAt,
   setProjectUpdatedAt,
   refreshProjectName,
-  setShowTryAgainDialog,
-  refreshInRestrictedShareMode
+  setShowTryAgainDialog
 } from './projectRedux';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -259,7 +258,6 @@ header.showHeaderForProjectBacked = function(options) {
 header.showProjectHeader = function() {
   header.updateTimestamp();
   getStore().dispatch(refreshProjectName());
-  getStore().dispatch(refreshInRestrictedShareMode());
   getStore().dispatch(showProjectHeader());
 };
 

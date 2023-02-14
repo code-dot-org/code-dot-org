@@ -285,7 +285,7 @@ export default class P5Lab {
           this.isBlockly
         )
       );
-      project.setInRestrictedShareMode(false);
+      project.sourceHandler.setInRestrictedShareMode(false);
       this.studioApp_.resetButtonClick();
     }.bind(this);
 
