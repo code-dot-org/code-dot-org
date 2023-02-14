@@ -24,67 +24,63 @@ export default class WebSerialPortWrapper extends EventEmitter {
     // TODO - not sure if this is used in Maker Toolkit yet
   }
 
-  /** Opens the serial port from Micro:Bit and starts reading from port.
-   * We are opening the port here and not reading from or writing to the port at this point in
-   * implementation. Later on when the entire Micro:WebSerial pathway is implemented,
-   * this function may be removed logic added for the MB in the open() function below,
-   * if appropriate.
-   */
-  openMBPort() {
+  // Opens the serial port from Micro:Bit and starts reading from port.
+  async openMBPort() {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
     }
-    return this.port
+    try {
+      await this.port.open({baudRate: SERIAL_BAUD});
+      this.portOpen = true;
+      this.writer = this.port.writable.getWriter();
+      this.reader = this.port.readable.getReader();
+      this.emit('open');
+      this.readLoop();
+    } catch (error) {
+      return Promise.reject('Failure to open port: ' + error);
+    }
+  }
+
+  // Opens the serial port from Circuit Playground and starts reading from port.
+  async openCPPort() {
+    if (this.portOpen) {
+      throw new Error(`Requested port is already open.`);
+    }
+    this.port
       .open({baudRate: SERIAL_BAUD})
       .then(() => {
+        this.portOpen = true;
         this.writer = this.port.writable.getWriter();
         this.reader = this.port.readable.getReader();
-      })
-      .then(() => {
-        this.portOpen = true;
         this.emit('open');
+        this.readLoop();
       })
       .catch(error => Promise.reject('Failure to open port: ' + error));
   }
 
-  // Opens the serial port from Circuit Playground and starts reading from port.
-  async open() {
-    if (this.portOpen) {
-      throw new Error(`Requested port is already open.`);
-    }
-
-    this.port
-      .open({baudRate: SERIAL_BAUD})
-      .then(() => {
-        this.writer = this.port.writable.getWriter();
-        this.reader = this.port.readable.getReader();
-      })
-      .then(async () => {
-        this.portOpen = true;
-        this.emit('open');
-        while (this.port.readable?.locked) {
-          try {
-            const {value, done} = await this.reader.read();
-            if (done) {
-              break;
-            }
-            this.emit('data', Buffer.from(value));
-          } catch (e) {
-            console.error(e);
-
-            if (e.code === DEVICE_LOST_ERROR_CODE) {
-              this.emit('disconnect');
-            }
-          }
+  async readLoop() {
+    while (this.port.readable?.locked) {
+      try {
+        const {value, done} = await this.reader.read();
+        if (done) {
+          this.reader.releaseLock();
+          break;
         }
-      })
-      .catch(error => Promise.reject('Failure to open port: ' + error));
+        this.emit('data', Buffer.from(value));
+      } catch (e) {
+        console.error(e);
+        if (e.code === DEVICE_LOST_ERROR_CODE) {
+          this.emit('disconnect');
+        }
+      }
+    }
   }
 
   write(buffer, encoding, callback) {
     if (!this.portOpen) {
       throw new Error('Requested port cannot be written to until it is open');
     }
+    buffer = buffer instanceof ArrayBuffer ? buffer : new Uint8Array(buffer);
     return this.writer
       .write(buffer)
       .then(() => (callback ? callback() : null))

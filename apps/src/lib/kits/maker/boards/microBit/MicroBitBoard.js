@@ -129,7 +129,27 @@ export default class MicroBitBoard extends EventEmitter {
       // webserial pathway
       return this.openSerialPortWebSerial(this.port)
         .then(serialPort => {
-          this.boardClient_.connectBoard(serialPort);
+          return this.boardClient_.connectBoard(serialPort);
+        })
+        .then(() => {
+          // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
+          return delayPromise(250);
+        })
+        .then(() => {
+          if (
+            this.boardClient_.firmwareVersion.includes(
+              MICROBIT_FIRMWARE_VERSION
+            )
+          ) {
+            return Promise.resolve();
+          } else {
+            if (this.boardClient_.firmwareVersion === '') {
+              console.warn(
+                'Firmware version not detected in time. Try refreshing the page.'
+              );
+            }
+            return Promise.reject('Incorrect firmware detected');
+          }
         })
         .catch(err => Promise.reject(err));
     }
@@ -144,7 +164,11 @@ export default class MicroBitBoard extends EventEmitter {
   initializeComponents() {
     return createMicroBitComponents(this.boardClient_).then(components => {
       this.prewiredComponents_ = {
-        board: this.boardClient_,
+        // board is assigned a copy of boardClient_ but with references to the WebSerialPortWrapper
+        // removed. This avoids hitting a recursive loop (due to the emit functionality that's included
+        // in the WebSerialPortWrapper) when we attempt to marshall the object across to the
+        // interpreter.
+        board: this.boardClient_.getBoardClientWithoutPort(),
         ...components
       };
     });
