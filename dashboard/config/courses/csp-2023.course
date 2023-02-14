@@ -20,6 +20,7 @@
   "properties": {
     "family_name": "csp",
     "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2023"
   },
   "resources": [

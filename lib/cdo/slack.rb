@@ -13,6 +13,7 @@ class Slack
   }.freeze
 
   CHANNEL_MAP = {
+    'content-editors' => 'content-editors',
     'server operations' => 'server-operations',
     'staging' => 'infra-staging',
     'test' => 'infra-test',
@@ -21,6 +22,7 @@ class Slack
 
   # Common channel name to ID mappings
   CHANNEL_IDS = {
+    'content-editors' => 'C03A2LG1JLQ',
     'developers' => 'C0T0PNTM3',
     'deploy-status' => 'C7GS8NE8L',
     'infra-staging' => 'C03CK8E51',

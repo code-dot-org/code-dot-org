@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-13 23:49:05 UTC",
+    "serialized_at": "2023-02-08 19:02:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2596,16 +2596,81 @@
       }
     },
     {
-      "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/copy",
-      "key": "csp_unit_6_-_algorithms",
+      "name": "CSP Unit 10 - Lesson 1 - Algorithms Solve Problems",
+      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/copy",
+      "key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1djOZcZoLmTnz_OUAEUEZJP7EkBPw1pYbt_z5mEDu72w/export?format=pdf",
+        "download_url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 2 - Algorithm Efficiency",
+      "url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/copy",
+      "key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 3 - Unreasonable Time",
+      "url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/copy",
+      "key": "csp_unit_10_-_lesson_3_-_unreasonable_time",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_3_-_unreasonable_time"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 4 - The Limits of Algorithms",
+      "url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/copy",
+      "key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 5 - Distributed Algorithms",
+      "url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/copy",
+      "key": "csp_unit_10_-_lesson_5_-_distributed_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_5_-_distributed_algorithms"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Lesson 6 - Assessment Day",
+      "url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/copy",
+      "key": "csp_unit_10_-_lesson_6_-_assessment_day",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_lesson_6_-_assessment_day"
       }
     },
     {
@@ -2674,25 +2739,25 @@
     {
       "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_2_-_algorithm_efficiency"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_1_-_algorithms_solve_problems"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_6_-_assessment_day"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_5_-_distributed_algorithms"
       }
     },
     {
@@ -2704,7 +2769,7 @@
     {
       "seeding_key": {
         "lesson.key": "The Limits of Algorithms",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms"
       }
     },
     {
@@ -2716,7 +2781,7 @@
     {
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
-        "resource.key": "csp_unit_6_-_algorithms"
+        "resource.key": "csp_unit_10_-_lesson_3_-_unreasonable_time"
       }
     },
     {
