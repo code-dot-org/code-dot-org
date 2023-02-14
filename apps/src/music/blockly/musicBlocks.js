@@ -14,6 +14,7 @@ import {
   whenRunSimple2,
   triggeredAtSimple2,
   playSoundAtCurrentLocationSimple2,
+  playRestAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential
 } from './blocks/simple2';
@@ -29,6 +30,7 @@ const blockList = [
   playSoundAtCurrentLocation,
   setCurrentLocationNextMeasure,
   playSoundAtCurrentLocationSimple2,
+  playRestAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
   forLoop,
