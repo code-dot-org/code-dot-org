@@ -187,8 +187,8 @@ describe('maker/commands.js - MicroBit', () => {
 
   describe('pinMode(pin, mode)', () => {
     it('delegates to makerBoard.pinMode with mapped mode id', () => {
-      pinMode({pin: 0, mode: 'input'});
-      expect(stubBoardController.pinMode).to.have.been.calledWith(0, 0);
+      pinMode({pin: 1, mode: 'input'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(1, 0);
     });
 
     it('display error when invalid pin 3 is used', () => {
