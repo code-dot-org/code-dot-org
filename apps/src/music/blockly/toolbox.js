@@ -32,6 +32,18 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE
   },
+  [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2
+  },
+  [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER
+  },
+  [BlockTypes.PLAY_SOUNDS_SEQUENTIAL]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL
+  },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_IN_TRACK
@@ -79,6 +91,10 @@ const toolboxBlocks = {
   [BlockTypes.TRIGGERED_AT_SIMPLE]: {
     kind: 'block',
     type: BlockTypes.TRIGGERED_AT_SIMPLE
+  },
+  [BlockTypes.TRIGGERED_AT_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.TRIGGERED_AT_SIMPLE2
   },
   [BlockTypes.FOR_LOOP]: {
     kind: 'block',
@@ -221,6 +237,11 @@ const toolboxBlocks = {
         }
       }
     }
+  },
+  ['procedures_callnoreturn']: {
+    kind: 'block',
+    type: 'procedures_callnoreturn',
+    titles: {name: 'blah'}
   }
 };
 
@@ -265,6 +286,17 @@ export function getToolbox() {
         Simple: [
           BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
           BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
+          'controls_repeat_ext'
+        ]
+      });
+    case BlockMode.SIMPLE2:
+      return generateToolbox({
+        Simple2: [
+          BlockTypes.TRIGGERED_AT_SIMPLE2,
+          BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+          BlockTypes.PLAY_SOUNDS_TOGETHER,
+          BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+          'procedures_callnoreturn',
           'controls_repeat_ext'
         ]
       });

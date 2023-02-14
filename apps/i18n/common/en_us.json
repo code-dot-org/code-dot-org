@@ -207,6 +207,8 @@
   "betterThanPerfectDescription": "WOW!",
   "bigQuestions": "Big questions",
   "blocklyMessage": "Blockly",
+  "blocklyKBNavOn": "Enable Keyboard Navigation",
+  "blocklyKBNavOff": "Disable Keyboard Navigation",
   "block": "Block",
   "blocks": "blocks",
   "booleanFalse": "false",

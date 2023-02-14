@@ -7,6 +7,8 @@ import {Buffer} from 'buffer';
 
 import testImageAccess from '../code-studio/url_test';
 
+export const BRAMBLE_CONTAINER = '#bramble';
+
 const PageAction = makeEnum(
   logToCloud.PageAction.BrambleError,
   logToCloud.PageAction.BrambleFilesystemResetSuccess,
@@ -63,7 +65,7 @@ export default class CdoBramble {
     // Temporarily test domain reachability.
     this.testReach();
 
-    this.Bramble.load('#bramble', this.config());
+    this.Bramble.load(BRAMBLE_CONTAINER, this.config());
 
     this.Bramble.on('readyStateChange', (_, newState) => {
       if (this.Bramble.MOUNTABLE === newState) {

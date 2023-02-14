@@ -124,18 +124,6 @@ export default class WorkshopEnrollment extends React.Component {
     );
   }
 
-  renderUnknownError() {
-    return (
-      <div>
-        <p>
-          Sorry, an error occurred and we were unable to enroll you in this
-          workshop. Please contact{' '}
-          <a href="mailto:support@code.org">support@code.org</a>.
-        </p>
-      </div>
-    );
-  }
-
   renderSuccess() {
     analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
       'regional partner': this.props.workshop.regional_partner?.name,
@@ -179,7 +167,19 @@ export default class WorkshopEnrollment extends React.Component {
 
   render() {
     switch (this.state.workshopEnrollmentStatus) {
-      case SUBMISSION_STATUSES.UNSUBMITTED:
+      case SUBMISSION_STATUSES.DUPLICATE:
+        return this.renderDuplicate();
+      case SUBMISSION_STATUSES.OWN:
+        return this.renderOwn();
+      case SUBMISSION_STATUSES.CLOSED:
+        return this.renderClosed();
+      case SUBMISSION_STATUSES.FULL:
+        return this.renderFull();
+      case SUBMISSION_STATUSES.NOT_FOUND:
+        return this.renderNotFound();
+      case SUBMISSION_STATUSES.SUCCESS:
+        return this.renderSuccess();
+      default:
         return (
           <div>
             <h1>{`Register for a ${this.props.workshop.course} workshop`}</h1>
@@ -226,20 +226,6 @@ export default class WorkshopEnrollment extends React.Component {
             </div>
           </div>
         );
-      case SUBMISSION_STATUSES.DUPLICATE:
-        return this.renderDuplicate();
-      case SUBMISSION_STATUSES.OWN:
-        return this.renderOwn();
-      case SUBMISSION_STATUSES.CLOSED:
-        return this.renderClosed();
-      case SUBMISSION_STATUSES.FULL:
-        return this.renderFull();
-      case SUBMISSION_STATUSES.NOT_FOUND:
-        return this.renderNotFound();
-      case SUBMISSION_STATUSES.SUCCESS:
-        return this.renderSuccess();
-      default:
-        return this.renderUnknownError();
     }
   }
 }

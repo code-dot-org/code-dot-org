@@ -8,6 +8,7 @@ export const PLAY_MULTI_MUTATOR = 'play_multi_mutator';
 
 export const TRACK_NAME_FIELD = 'track_name';
 export const FIELD_SOUNDS_TYPE = 'field_sounds';
+export const FIELD_SOUNDS_NAME = 'sound';
 export const EXTRA_SAMPLE_INPUT_PREFIX = 'extra_sample_input';
 export const EXTRA_SAMPLE_FIELD_PREFIX = 'extra_sample';
 export const TRIGGER_FIELD = 'trigger';
