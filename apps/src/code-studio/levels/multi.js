@@ -8,6 +8,7 @@ import {
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
 import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 var Multi = function(
   levelId,
@@ -146,6 +147,10 @@ Multi.prototype.ready = function() {
     if (window.appOptions.submitted) {
       // show the Unsubmit button.
       $('#' + this.id + ' .unsubmitButton').show();
+    }
+
+    if (this.standalone) {
+      reportTeacherReviewingStudentNonLabLevel();
     }
   }
 
