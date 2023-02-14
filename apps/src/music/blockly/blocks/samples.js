@@ -215,7 +215,7 @@ export const newTrackOnTrigger = {
       ctx.id
     }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
       TRACK_NAME_FIELD
-    )}", Math.ceil(MusicPlayer.getCurrentPlayhead()), false);\n`;
+    )}", Math.ceil(MusicPlayer.getCurrentPlayheadPosition()), false);\n`;
   }
 };
 
