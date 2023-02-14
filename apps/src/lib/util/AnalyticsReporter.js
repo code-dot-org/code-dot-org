@@ -6,6 +6,7 @@ import {
   setUserId
 } from '@amplitude/analytics-browser';
 import {currentLocation} from '@cdo/apps/utils';
+import logToCloud from '@cdo/apps/logToCloud';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
@@ -48,7 +49,16 @@ class AnalyticsReporter {
 
   sendEvent(eventName, payload) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      track(eventName, payload);
+      if (!eventName) {
+        logToCloud.addPageAction(
+          logToCloud.PageAction.NoValidEventNameLogError,
+          {
+            payload: payload
+          }
+        );
+      } else {
+        track(eventName, payload);
+      }
     } else {
       this.log(`${eventName}. Payload: ${JSON.stringify({payload})}`);
     }
