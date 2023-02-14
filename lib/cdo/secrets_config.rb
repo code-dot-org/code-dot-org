@@ -14,13 +14,6 @@ module Cdo
       "#{prefix}/cdo/#{key}"
     end
 
-    # Generate path to a Secret that was provisioned for a specific CloudFormation Stack. This enables
-    # configuration settings to have different values for different deployments that have the same environment type.
-    def self.stack_specific_secret_path(key)
-      stack = AWS::CloudFormation.current_stack_name
-      stack ? "CfnStack/#{stack}/#{key}" : nil
-    end
-
     # Load a secrets-config hash from specified file.
     # @param filename [String]
     # @return [Hash<String, String|Hash>]
@@ -55,14 +48,54 @@ module Cdo
     private
 
     # Stores a reference to a secret so it can be resolved later.
-    Secret = Struct.new(:key) do
+    #
+    # Specifically, stores a reference to both the unique key which can
+    # identify the secret and a prefix which can identify which environment's
+    # secrets we should use.
+    Secret = Struct.new(:secret_prefix, :secret_key) do
+      def key
+        SecretsConfig.secret_path(secret_prefix, secret_key)
+      end
+
       def to_s
         "${#{key}}"
       end
+
+      # Resolve the secret referenced by this object.
+      def lookup(secrets_manager)
+        secrets_manager.get!(key)
+      end
     end
-    StackSecret = Struct.new(:key) do
-      def to_s
-        "${#{key}}"
+
+    class StackSecret < Secret
+      # Extend the default lookup functionality to support checking for
+      # stack-specific secrets, defaulting to the original functionality if
+      # none are found.
+      def lookup(secrets_manager)
+        # First try looking for a Stack-specific secret.
+        stack_specific_secret_path ? secrets_manager.get!(stack_specific_secret_path) : super
+      rescue Aws::SecretsManager::Errors::ValidationException
+        # We're likely executing in an environment that's not part of a
+        # CloudFormation Stack, so the secret name was invalid (nil). Fall back
+        # to looking up the environment type secret.
+        super
+      rescue Aws::SecretsManager::Errors::ResourceNotFoundException
+        # Fall back to looking up a secret shared by all deployments with the
+        # same environment-type ('development', 'test', 'production', etc.).
+        super
+      end
+
+      # Generate path to a Secret that was provisioned for a specific
+      # CloudFormation Stack. This enables configuration settings to have
+      # different values for different deployments that have the same
+      # environment type.
+      #
+      # Note that we use `secret_key` for this rather than `key`, since the
+      # latter is environment-specific and we want stack-specific overrides to
+      # apply to all environments.
+      def stack_specific_secret_path
+        @stack ||= AWS::CloudFormation.current_stack_name
+        @stack ? "CfnStack/#{@stack}/#{secret_key}" : nil
       end
     end
 
@@ -73,8 +106,9 @@ module Cdo
     # Processes `Secret` references in the provided config hash.
     def process_secrets!(config)
       return if config.nil?
-      config.select {|_, v| v.is_a?(Secret) || v.is_a?(StackSecret)}.each do |key, secret|
-        secret.key ||= SecretsConfig.secret_path(env, key)
+      config.select {|_, v| v.is_a?(Secret)}.each do |key, secret|
+        secret.secret_prefix ||= env
+        secret.secret_key ||= key
       end
     end
 
@@ -88,23 +122,8 @@ module Cdo
       table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
         cdo_secrets.required(*value.to_s.scan(SECRET_REGEX).flatten)
         table[key] = Cdo.lazy do
-          case value
-          when StackSecret
-            begin
-              # First try looking for a Stack-specific secret.
-              stack_specific_secret_path = Cdo::SecretsConfig.stack_specific_secret_path(key)
-              stack_specific_secret_path ? cdo_secrets.get!(stack_specific_secret_path) : cdo_secrets.get!(value.key)
-            rescue Aws::SecretsManager::Errors::ValidationException
-              # We're likely executing in an environment that's not part of a CloudFormation Stack, so the secret name was
-              # invalid (nil). Fall back to looking up the environment type secret.
-              cdo_secrets.get!(value.key)
-            rescue Aws::SecretsManager::Errors::ResourceNotFoundException
-              # Fall back to looking up a secret shared by all deployments with the same environment-type
-              # ('development', 'test', 'production', etc.).
-              cdo_secrets.get!(value.key)
-            end
-          when Secret
-            cdo_secrets.get!(value.key)
+          if value.is_a?(Secret)
+            value.lookup(cdo_secrets)
           else
             # TODO: Do we need to modify this use case as well to get a stack specific secret?
             CDO.log.info "This weird code path was used for CDO configuration setting: #{key} / value: #{value}"
@@ -126,7 +145,7 @@ module Cdo
     # Any exceptions or defaults can be re-added later in the YAML document, after secrets have been cleared.
     def clear_secrets
       @secrets ||= []
-      @secrets |= table.select {|_, v| v.is_a?(Secret) || v.is_a?(StackSecret)}.keys.map(&:to_s)
+      @secrets |= table.select {|_, v| v.is_a?(Secret)}.keys.map(&:to_s)
       @secrets.product([nil]).to_h.to_yaml.sub(/^---.*\n/, '')
     end
   end
