@@ -36,6 +36,20 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2
   },
+  [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+    inputs: {
+      measures: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1
+          }
+        }
+      }
+    }
+  },
   [BlockTypes.PLAY_SOUNDS_TOGETHER]: {
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER
@@ -299,6 +313,7 @@ export function getToolbox() {
           Simple2: [
             BlockTypes.TRIGGERED_AT_SIMPLE2,
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_SOUNDS_TOGETHER,
             BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
             'controls_repeat_ext'
