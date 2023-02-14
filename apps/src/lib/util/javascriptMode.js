@@ -66,10 +66,12 @@ export function apiValidateType(
         break;
       case 'pinid':
         var validPins, reservedPins;
-        if (board?.client_) {
+        // if the board is a Micro:Bit
+        if (board?.boardClient_) {
           validPins = [0, 1, 2];
           reservedPins = [];
         } else {
+          // board is a Circuit Playground
           validPins = [
             'A0',
             'A1',
