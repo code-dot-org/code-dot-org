@@ -879,6 +879,8 @@ FactoryGirl.define do
     end
   end
 
+  # WARNING: Using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail.
   factory :project_storage do
   end
 
