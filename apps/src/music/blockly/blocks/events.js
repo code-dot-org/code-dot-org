@@ -41,7 +41,7 @@ export const triggeredAt = {
       Blockly.Names.NameType.VARIABLE
     );
     return `
-      ${varName} = MusicPlayer.getPlayheadPosition();
+      ${varName} = MusicPlayer.getCurrentPlayheadPosition();
       \n`;
   }
 };
@@ -68,7 +68,7 @@ export const triggeredAtSimple = {
       Blockly.Names.NameType.VARIABLE
     );
     return (
-      `${varName} = MusicPlayer.getPlayheadPosition();\n` +
+      `${varName} = MusicPlayer.getCurrentPlayheadPosition();\n` +
       `currentMeasureLocation = Math.ceil(${varName});\n`
     );
   }
