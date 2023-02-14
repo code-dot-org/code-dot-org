@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SoundsPanel from '../views/SoundsPanel';
 import GoogleBlockly from 'blockly/core';
+import experiments from '@cdo/apps/util/experiments';
 
 class FieldSounds extends GoogleBlockly.Field {
   constructor(options) {
@@ -40,7 +41,9 @@ class FieldSounds extends GoogleBlockly.Field {
       this.borderRect_.setAttribute('fill', 'transparent');
     }
     if (this.textElement_) {
-      this.textElement_.style.fill = 'white';
+      if (experiments.isEnabled('zelos')) {
+        this.textElement_.style.fill = 'white';
+      }
     }
   }
 
