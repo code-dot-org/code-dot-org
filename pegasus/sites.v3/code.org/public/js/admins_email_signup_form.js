@@ -14,6 +14,10 @@ setInterval(timestamp, 500);
 // Set a disabled attribute on button until
 // the reCAPTCHA checkbox is clicked
 function recaptchaCallback() {
+  // Check reCAPTCHA callback response
+  // docs: https://developers.google.com/recaptcha/docs/display
+  console.log(grecaptcha.getResponse());
+
   let btnSubmit = document.querySelector("button");
 
   if (btnSubmit.hasAttribute("disabled")) {
