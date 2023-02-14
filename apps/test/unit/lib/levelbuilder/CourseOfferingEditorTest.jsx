@@ -18,8 +18,8 @@ describe('CourseOfferingEditor', () => {
         assignable: true,
         grade_levels: 'K',
         curriculum_type: 'Module',
-        header: null,
-        marketing_initiative: null
+        header: 'Self-Paced',
+        marketing_initiative: 'HOC'
       }
     };
   });
@@ -48,7 +48,12 @@ describe('CourseOfferingEditor', () => {
         key: 'test-course-offering',
         display_name: 'Course Offering 2',
         category: 'Full Courses',
-        is_featured: true
+        is_featured: true,
+        assignable: true,
+        grade_levels: 'K',
+        curriculum_type: 'Module',
+        header: 'Self-Paced',
+        marketing_initiative: 'HOC'
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
