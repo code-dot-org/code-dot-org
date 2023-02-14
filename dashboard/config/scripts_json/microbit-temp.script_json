@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "microbit-temp",
-    "serialized_at": "2023-02-10 21:10:48 UTC",
+    "serialized_at": "2023-02-14 00:37:08 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -310,7 +310,7 @@
     },
     {
       "key": "Functions",
-      "name": "Functions",
+      "name": "Functions [MB Levels]",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -330,7 +330,7 @@
     },
     {
       "key": "Mini-Project: Interactive Art",
-      "name": "Mini-Project: Interactive Art",
+      "name": "Mini-Project: Interactive Art [MB Levels]",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -389,7 +389,7 @@
     },
     {
       "key": "Project - Prototype an Innovation",
-      "name": "Project - Prototype an Innovation",
+      "name": "Project - Prototype an Innovation [MB Levels]",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -5282,15 +5282,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U6 - Board Outputs - SB2_mb2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB2_mb2022"
+          "CSD U6 - Board Outputs - SB3v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
@@ -5298,32 +5295,29 @@
         "activity_section.key": "115f42ec-99b1-46b7-b9bb-0d93b734cd4e"
       },
       "level_keys": [
-        "CSD U6 - Board Outputs - SB2_mb2022"
+        "CSD U6 - Board Outputs - SB3v2_mb2022"
       ]
     },
     {
       "chapter": 21,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U6 - Board Outputs - P2_mb2022"
-        ],
-        "progression": "Predict"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - P2_mb2022"
+          "CSD U6 - Board Outputs - SB4v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "microbit-temp",
-        "activity_section.key": "92173873-11de-40cb-99a4-10e9a76bf7e7"
+        "activity_section.key": "115f42ec-99b1-46b7-b9bb-0d93b734cd4e"
       },
       "level_keys": [
-        "CSD U6 - Board Outputs - P2_mb2022"
+        "CSD U6 - Board Outputs - SB4v2_mb2022"
       ]
     },
     {
@@ -5332,40 +5326,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U6 - Board Outputs - SB3_mb2022"
-        ],
-        "progression": "Skill Building"
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB3_mb2022"
+          "CSD U6 - Board Outputs - P2v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "microbit-temp",
-        "activity_section.key": "0efc223f-8343-4e98-8cd0-be6e0aa7ab7a"
+        "activity_section.key": "92173873-11de-40cb-99a4-10e9a76bf7e7"
       },
       "level_keys": [
-        "CSD U6 - Board Outputs - SB3_mb2022"
+        "CSD U6 - Board Outputs - P2v2_mb2022"
       ]
     },
     {
       "chapter": 23,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U6 - Board Outputs - SB4_mb2022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB4_mb2022"
+          "CSD U6 - Board Outputs - SB6v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
@@ -5373,7 +5361,7 @@
         "activity_section.key": "0efc223f-8343-4e98-8cd0-be6e0aa7ab7a"
       },
       "level_keys": [
-        "CSD U6 - Board Outputs - SB4_mb2022"
+        "CSD U6 - Board Outputs - SB6v2_mb2022"
       ]
     },
     {
@@ -8558,9 +8546,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Board Outputs - SB2_mb2022",
+        "level.key": "CSD U6 - Board Outputs - SB3v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB2_mb2022"
+          "CSD U6 - Board Outputs - SB3v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
@@ -8570,9 +8558,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Board Outputs - P2_mb2022",
+        "level.key": "CSD U6 - Board Outputs - SB4v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - P2_mb2022"
+          "CSD U6 - Board Outputs - SB4v2_mb2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "microbit-temp",
+        "activity_section.key": "115f42ec-99b1-46b7-b9bb-0d93b734cd4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - P2v2_mb2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - P2v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
@@ -8582,21 +8582,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Board Outputs - SB3_mb2022",
+        "level.key": "CSD U6 - Board Outputs - SB6v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB3_mb2022"
-        ],
-        "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "microbit-temp",
-        "activity_section.key": "0efc223f-8343-4e98-8cd0-be6e0aa7ab7a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U6 - Board Outputs - SB4_mb2022",
-        "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB4_mb2022"
+          "CSD U6 - Board Outputs - SB6v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
