@@ -5,14 +5,13 @@ function timestamp() { var response = document.getElementById("g-recaptcha-respo
 setInterval(timestamp, 500);
 
 // Set a disabled attribute on button until
-// the reCAPTCHA checkbox is clicked
+// the reCAPTCHA checkbox is clicked.
+// Uses the data-callback attribute to check for a successful response.
+// Docs: https://developers.google.com/recaptcha/docs/display
 function recaptchaCallback() {
   const btnSubmit = document.querySelector("button");
 
   if (btnSubmit.hasAttribute("disabled")) {
     btnSubmit.removeAttribute("disabled");
-    btnSubmit.setAttribute("disabled");
   }
 }
-
-recaptchaCallback();
