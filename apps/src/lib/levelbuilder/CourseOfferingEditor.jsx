@@ -58,6 +58,7 @@ export default function CourseOfferingEditor(props) {
       });
   };
 
+  // Converts selected grade levels into a string for the table
   const handleGradeLevels = e => {
     var options = e.target.options;
     var gradeLevels = [];
@@ -140,7 +141,7 @@ export default function CourseOfferingEditor(props) {
         </HelpTip>
         <select
           multiple
-          value={courseOffering.grade_levels}
+          value={courseOffering.grade_levels?.split(',')}
           style={styles.dropdown}
           onChange={handleGradeLevels}
         >

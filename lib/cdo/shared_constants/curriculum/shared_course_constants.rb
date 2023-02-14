@@ -98,11 +98,23 @@ module Curriculum
     # The headers used to organize course offerings in curriculum quick assign
     COURSE_OFFERING_HEADERS = OpenStruct.new(
       {
+        favorites: 'Favorites',
+        labs_and_skills: 'Labs and Skills',
+        minecraft: 'Minecraft',
+        hello_world: 'Hello World',
+        popular_media: 'Popular Media',
+        sports: 'Sports',
+        express: 'Express',
+        csf: 'CS Fundamentals',
+        csc: 'CS Connections',
+        year_long: 'Year Long',
+        csa_labs: 'CSA Labs',
         self_paced: 'Self-Paced',
         teacher_led: 'Teacher-Led',
-        CS_Fundamentals: 'CS Fundamentals',
-        CS_Connections: 'CS Connections',
-        Collections: 'Collections'
+        collections: 'Collections',
+        virtual_pl: 'Virtual Professional Learning',
+        self_paced_pl: 'Self Paced Professional Learning',
+        other_pl: 'Other Professional Learning'
       }
     ).freeze
 
