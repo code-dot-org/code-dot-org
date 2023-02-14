@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGroup';
+import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 
@@ -9,22 +10,8 @@ export default function SingleSectionSetUp({
   section,
   updateSection
 }) {
-  const options = [
-    'K',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
-    '12'
-  ].map(g => ({label: g, value: g}));
-  const [values, setValues] = useState(
+  const options = StudentGradeLevels.map(g => ({label: g, value: g}));
+  const [grades, setGrades] = useState(
     Object.fromEntries(options.map(o => [o.value, false]))
   );
 
@@ -41,12 +28,12 @@ export default function SingleSectionSetUp({
         />
       </label>
       <MultiSelectGroup
-        label="Pick at least one grade"
+        label="Grade (choose at least one)"
         name="grades"
         required={true}
         options={options}
-        values={values}
-        setValues={setValues}
+        values={grades}
+        setValues={setGrades}
       />
       <hr />
     </div>
