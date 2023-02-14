@@ -16,7 +16,7 @@ import {
 import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
-describe('maker/commands.js', () => {
+describe('maker/commands.js - CircuitPlayground', () => {
   let stubBoardController, errorHandler;
 
   beforeEach(() => {
@@ -162,6 +162,40 @@ describe('maker/commands.js', () => {
         onBoardEvent({component, event: 'doubleTap', callback});
         expect(component.on).to.have.been.calledWith('tap:double', callback);
       });
+    });
+  });
+});
+
+describe('maker/commands.js - MicroBit', () => {
+  let stubBoardController, errorHandler;
+
+  beforeEach(() => {
+    stubBoardController = sinon.createStubInstance(FakeBoard);
+    stubBoardController.boardClient_ = true; // MicroBitBoard
+    injectBoardController(stubBoardController);
+    errorHandler = {
+      outputWarning: sinon.spy(),
+      outputError: sinon.stub()
+    };
+    injectErrorHandler(errorHandler);
+  });
+
+  afterEach(() => {
+    injectBoardController(undefined);
+    injectErrorHandler(null);
+  });
+
+  describe('pinMode(pin, mode)', () => {
+    it('delegates to makerBoard.pinMode with mapped mode id', () => {
+      pinMode({pin: 0, mode: 'input'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(0, 0);
+    });
+
+    it('display error when invalid pin 3 is used', () => {
+      pinMode({pin: 3, mode: 'input'});
+      expect(errorHandler.outputError).to.have.been.calledWith(
+        'pinMode() pin parameter value (3) is not a valid pinid. Please use a different pinid.'
+      );
     });
   });
 });
