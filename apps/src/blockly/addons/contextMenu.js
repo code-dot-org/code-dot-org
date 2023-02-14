@@ -206,13 +206,13 @@ const registerKeyboardNavigation = function() {
 };
 
 /**
- * Change workspace theme to modern CdoTheme
+ * Change workspace theme to classic CdoTheme
  */
 const registerCdoTheme = function() {
   const cdoThemeOption = {
     displayText: function(scope) {
       return (
-        (isCurrentTheme('modern', scope.workspace)
+        (isCurrentTheme('classic', scope.workspace)
           ? '✓ '
           : `${msg.enable()} `) + msg.blocklyClassicTheme()
       );
@@ -220,15 +220,15 @@ const registerCdoTheme = function() {
     preconditionFn: function(scope) {
       if (isMusicLabTheme(scope.workspace)) {
         return 'hidden';
-      } else if (isCurrentTheme('modern', scope.workspace)) {
+      } else if (isCurrentTheme('classic', scope.workspace)) {
         return 'disabled';
       } else {
         return 'enabled';
       }
     },
     callback: function(scope) {
-      localStorage.setItem('blocklyTheme', 'modern');
-      scope.workspace.setTheme(Blockly.themes.modern);
+      localStorage.setItem('blocklyTheme', 'classic');
+      scope.workspace.setTheme(Blockly.themes.classic);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'defaultTheme',
