@@ -1,14 +1,6 @@
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
-  factory :census_reviewer, parent: :teacher do
-    name 'Census Reviewer'
-    after(:create) do |reviewer|
-      reviewer.permission = UserPermission::CENSUS_REVIEWER
-      reviewer.save!
-    end
-  end
-
   factory :census_submission_school_info, parent: :school_info_us do
     transient do
       school_year 2017
