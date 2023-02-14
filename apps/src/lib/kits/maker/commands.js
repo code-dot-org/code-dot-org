@@ -22,7 +22,9 @@ export function injectBoardController(boardController) {
  * @param {string} opts.mode
  */
 export function pinMode(opts) {
-  if (!apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid')) {
+  if (
+    !apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid', null, board)
+  ) {
     return;
   }
   const modeStringToConstant = {
@@ -40,7 +42,17 @@ export function pinMode(opts) {
  * @param {number} opts.value
  */
 export function digitalWrite(opts) {
-  if (!apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid')) {
+  if (
+    !apiValidateType(
+      opts,
+      'digitalWrite',
+      'pin',
+      opts.pin,
+      'pinid',
+      null,
+      board
+    )
+  ) {
     return;
   }
   apiValidateTypeAndRange(
@@ -59,7 +71,9 @@ export function digitalWrite(opts) {
  * @param {string|number} opts.pin
  */
 export function digitalRead(opts) {
-  if (!apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid')) {
+  if (
+    !apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid', null, board)
+  ) {
     return;
   }
   return board.digitalRead(opts.pin, opts.callback);
@@ -70,7 +84,9 @@ export function digitalRead(opts) {
  * @param {number} opts.value
  */
 export function analogWrite(opts) {
-  if (!apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid')) {
+  if (
+    !apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid', null, board)
+  ) {
     return;
   }
   apiValidateTypeAndRange(
@@ -89,7 +105,9 @@ export function analogWrite(opts) {
  * @param {string|number} opts.pin
  */
 export function analogRead(opts) {
-  if (!apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid')) {
+  if (
+    !apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid', null, board)
+  ) {
     return;
   }
   return board.analogRead(opts.pin, opts.callback);
@@ -123,7 +141,9 @@ export function onBoardEvent(opts) {
  * @param {number} opts.pin
  */
 export function createLed(opts) {
-  if (!apiValidateType(opts, 'createLed', 'pin', opts.pin, 'pinid')) {
+  if (
+    !apiValidateType(opts, 'createLed', 'pin', opts.pin, 'pinid', null, board)
+  ) {
     return;
   }
   return board.createLed(opts.pin);
@@ -135,7 +155,17 @@ export function createLed(opts) {
  * @param {number} opts.pin
  */
 export function createButton(opts) {
-  if (!apiValidateType(opts, 'createButton', 'pin', opts.pin, 'pinid')) {
+  if (
+    !apiValidateType(
+      opts,
+      'createButton',
+      'pin',
+      opts.pin,
+      'pinid',
+      null,
+      board
+    )
+  ) {
     return;
   }
   return board.createButton(opts.pin);

@@ -42,7 +42,8 @@ export function apiValidateType(
   varName,
   varValue,
   expectedType,
-  opt
+  opt,
+  board
 ) {
   const validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
@@ -64,25 +65,31 @@ export function apiValidateType(
           typeof varValue === 'boolean';
         break;
       case 'pinid':
-        var validPins = [
-          'A0',
-          'A1',
-          'A2',
-          'A3',
-          'A4',
-          'A5',
-          'A6',
-          'A7',
-          0,
-          1,
-          2,
-          3,
-          6,
-          9,
-          10,
-          12
-        ];
-        var reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
+        var validPins, reservedPins;
+        if (board?.client_) {
+          validPins = [0, 1, 2];
+          reservedPins = [];
+        } else {
+          validPins = [
+            'A0',
+            'A1',
+            'A2',
+            'A3',
+            'A4',
+            'A5',
+            'A6',
+            'A7',
+            0,
+            1,
+            2,
+            3,
+            6,
+            9,
+            10,
+            12
+          ];
+          reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
+        }
         properType =
           validPins.includes(varValue) && !reservedPins.includes(varValue);
         if (!validPins.includes(varValue)) {
