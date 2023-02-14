@@ -29,7 +29,7 @@ const TimelineElement = ({
   const length = playerUtils.getLengthForId(soundId);
 
   const isCurrentlyPlaying =
-    currentPlayheadPosition !== -1 &&
+    currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&
     currentPlayheadPosition < when + length;
 
