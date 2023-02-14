@@ -16,6 +16,7 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
   path.resolve(__dirname, 'node_modules', '@blockly', 'field-grid-dropdown'),
+  path.resolve(__dirname, 'node_modules', '@blockly', 'keyboard-navigation'),
   path.resolve(__dirname, 'node_modules', '@blockly', 'plugin-scroll-options'),
   path.resolve(__dirname, 'node_modules', 'blockly'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
