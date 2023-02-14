@@ -6,12 +6,12 @@ import {
 import {BOARD_EVENT_ALIASES} from './boards/circuitPlayground/PlaygroundConstants';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
 
-/** @private {CircuitPlaygroundBoard} */
+/** @private {CircuitPlaygroundBoard, MicroBitBoard} */
 let board;
 
 /**
  * Change which board controller handles Maker Toolkit commands.
- * @param {CircuitPlaygroundBoard} boardController
+ * @param {CircuitPlaygroundBoard, MicrobitBoard} boardController
  */
 export function injectBoardController(boardController) {
   board = boardController;

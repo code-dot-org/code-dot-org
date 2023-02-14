@@ -1,4 +1,4 @@
-/** @file Test maker command behavior */
+/** @file Test maker command behavior for Circuit Playground and Micro:Bit*/
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
