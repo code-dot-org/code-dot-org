@@ -13,6 +13,7 @@ import {
 import {
   MB_BUTTON_VARS,
   MB_SENSOR_VARS,
+  MB_ACCELEROMETER_VAR,
   MB_COMPONENT_EVENTS
 } from './boards/microBit/MicroBitConstants';
 
@@ -588,7 +589,11 @@ export let configMicrobit = {
     }
   },
   blocks: [...getMakerBlocks(MICROBIT_CATEGORY), ...microBitBlocks],
-  additionalPredefValues: [...MB_BUTTON_VARS, ...MB_SENSOR_VARS]
+  additionalPredefValues: [
+    ...MB_BUTTON_VARS,
+    ...MB_SENSOR_VARS,
+    MB_ACCELEROMETER_VAR
+  ]
 };
 
 export let configCircuitPlayground = {
