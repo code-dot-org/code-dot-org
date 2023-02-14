@@ -56,7 +56,7 @@ class AnalyticsReporter {
             payload: payload
           }
         );
-        track('EMPTY_EVENT_NAME_ENTERED_ERROR', payload);
+        track('NO_VALID_EVENT_NAME_LOG_ERROR', payload);
       } else {
         track(eventName, payload);
       }
