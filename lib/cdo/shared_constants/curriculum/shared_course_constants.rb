@@ -78,26 +78,42 @@ module Curriculum
     ).freeze
 
     # The grade bands used to represent course offering audience
-    COURSE_OFFERING_GRADE_BANDS = %w(
-      elementary
-      middle
-      high
+    COURSE_OFFERING_GRADE_BANDS = OpenStruct.new(
+      {
+        elementary: 'Elementary',
+        middle: 'Middle',
+        high: 'High'
+      }
     ).freeze
 
     # The curriculum types used in curriculum quick assign
-    COURSE_OFFERING_CURRICULUM_TYPES = %w(
-      module
-      course
-      standalone_unit
+    COURSE_OFFERING_CURRICULUM_TYPES = OpenStruct.new(
+      {
+        module: 'Module',
+        course: 'Course',
+        standalone_unit: 'Standalone Unit'
+      }
     ).freeze
 
     # The headers used to organize course offerings in curriculum quick assign
-    COURSE_OFFERING_HEADERS = %w(
-      self_paced
-      teacher_led
-      CS_Fundamentals
-      Collections
+    COURSE_OFFERING_HEADERS = OpenStruct.new(
+      {
+        self_paced: 'Self-Paced',
+        teacher_led: 'Teacher-Led',
+        CS_Fundamentals: 'CS Fundamentals',
+        CS_Connections: 'CS Connections',
+        Collections: 'Collections'
+      }
     ).freeze
+
+    # Used in curriculum quick assign
+    COURSE_OFFERING_MARKETING_INITIATIVES = OpenStruct.new(
+      {
+        hoc: 'HOC',
+        csc: 'CSC',
+        csf: 'CSF'
+      }
+    )
 
     # Sections have a participant_type and courses have a participant_audience. A section
     # should never be assigned a course where the participants in the section can not be

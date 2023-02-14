@@ -8,7 +8,8 @@ import {
   CourseOfferingCategories,
   CourseOfferingGradeBands,
   CourseOfferingHeaders,
-  CourseOfferingCurriculumTypes
+  CourseOfferingCurriculumTypes,
+  CourseOfferingMarketingInitiatives
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
 
@@ -55,6 +56,17 @@ export default function CourseOfferingEditor(props) {
         setError(error.responseText);
         setIsSaving(false);
       });
+  };
+
+  const handleGradeBands = e => {
+    var options = e.target.options;
+    var gradeBands = [];
+    for (var i = 0, l = options.length; i < l; i++) {
+      if (options[i].selected) {
+        gradeBands.push(options[i].value);
+      }
+    }
+    this.props.updateCourseOffering('grade_bands', gradeBands);
   };
 
   return (
@@ -127,11 +139,17 @@ export default function CourseOfferingEditor(props) {
           <p>Select all recommended grade bands.</p>
         </HelpTip>
         <select
-          value={courseOffering.gradeBands}
+          multiple
+          value={courseOffering.grade_bands}
           style={styles.dropdown}
-          onChange={e => updateCourseOffering('gradeBands', e.target.value)}
+          onChange={handleGradeBands}
         >
-          {CourseOfferingGradeBands}
+          <option value="">(None)</option>
+          {Object.values(CourseOfferingGradeBands).map(band => (
+            <option key={band} value={band}>
+              {band}
+            </option>
+          ))}
         </select>
       </label>
       <label>
@@ -144,11 +162,18 @@ export default function CourseOfferingEditor(props) {
           </p>
         </HelpTip>
         <select
-          value={courseOffering.curriculumType}
+          value={courseOffering.curriculum_type}
           style={styles.dropdown}
-          onChange={e => updateCourseOffering('curriculumType', e.target.value)}
+          onChange={e =>
+            updateCourseOffering('curriculum_type', e.target.value)
+          }
         >
-          {CourseOfferingCurriculumTypes}
+          <option value="">(None)</option>
+          {Object.values(CourseOfferingCurriculumTypes).map(type => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+          ))}
         </select>
       </label>
       <label>
@@ -161,7 +186,29 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => updateCourseOffering('header', e.target.value)}
         >
-          {CourseOfferingHeaders}
+          <option value="">(None)</option>
+          {Object.values(CourseOfferingHeaders).map(header => (
+            <option key={header} value={header}>
+              {header}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        Marketing Initiative
+        <select
+          value={courseOffering.marketingInitiative}
+          style={styles.dropdown}
+          onChange={e =>
+            updateCourseOffering('marketing_initiative', e.target.value)
+          }
+        >
+          <option value="">(None)</option>
+          {Object.values(CourseOfferingMarketingInitiatives).map(initiative => (
+            <option key={initiative} value={initiative}>
+              {initiative}
+            </option>
+          ))}
         </select>
       </label>
 
@@ -183,9 +230,10 @@ CourseOfferingEditor.propTypes = {
     category: PropTypes.string,
     display_name: PropTypes.string,
     assignable: PropTypes.bool,
-    gradeBands: PropTypes.array,
-    curriculumType: PropTypes.string,
-    header: PropTypes.string
+    grade_bands: PropTypes.array,
+    curriculum_type: PropTypes.string,
+    header: PropTypes.string,
+    marketing_initiative: PropTypes.string
   })
 };
 
