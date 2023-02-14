@@ -187,19 +187,8 @@ export default class MusicPlayer {
     return this.soundEvents;
   }
 
-  /*
-  getCurrentAudioElapsedTime() {
-    if (!this.isPlaying) {
-      return 0;
-    }
-
-    return GetCurrentAudioTime() - this.startPlayingAudioTime;
-  }
-  */
-
-  // Called by generated code in the interpreter, and returns the current
-  // playhead, in floating point for an exact position, and scaled to measures.
-  // It's 1-based.
+  // Returns the current playhead position, in floating point for an exact position,
+  // 1-based, and scaled to measures.
   // Returns 0 if music is not playing.
   getCurrentPlayheadPosition() {
     const currentAudioTime = GetCurrentAudioTime();

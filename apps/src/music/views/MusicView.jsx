@@ -263,7 +263,7 @@ class UnconnectedMusicView extends React.Component {
     // user-triggered sounds.
     this.player.clearTriggeredEvents();
 
-    this.setState({isPlaying: false});
+    this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
   };
 
