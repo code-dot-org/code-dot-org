@@ -1,3 +1,5 @@
+require_relative 'linter_constants'
+
 module HamlLint
   # This linter ensures we are using consistent quotation mark
   # characters in our files by not allowing many characters.
@@ -5,20 +7,11 @@ module HamlLint
   class Linter::ConsistentQuotationMark < Linter
     include LinterRegistry
 
-    NOT_ALLOWED_CHARACTERS = [
-      '“', # U+201C Left Double Quotation Mark
-      '”', # U+201D Right Double Quotation Mark
-      '‘', # U+2018 Left Single Quotation Mark
-      '’', # U+2019 Right Single Quotation Mark
-    ].freeze
-
-    NOT_ALLOWED_REGEX = /[#{NOT_ALLOWED_CHARACTERS.join}]/
-
     def visit_root(root)
       dummy_node = Struct.new(:line)
 
       document.source_lines.each_with_index do |line, index|
-        next unless line.match?(NOT_ALLOWED_REGEX)
+        next unless line.match?(LinterConstants::NOT_ALLOWED_REGEX)
 
         unless root.node_for_line(index).disabled?(self)
           record_lint dummy_node.new(index + 1),
