@@ -1,6 +1,6 @@
 require pegasus_dir('router')
 require 'cdo/http_cache'
-require 'cdo/http_helpers'
+require 'cdo/legacy_varnish_helpers'
 
 # Simple Rack middleware that forwards requests to Pegasus or Dashboard where appropriate.
 # Matches `Host` HTTP request headers against standard Pegasus hosts.
@@ -34,7 +34,7 @@ class PegasusSites
 
     # Process HTTP-cache `proxy` values for path-specific behavior.
     config = @config[backend][:behaviors] + [@config[backend][:default]]
-    behavior = HttpHelpers.behavior_for_path(config, path)
+    behavior = LegacyVarnishHelpers.behavior_for_path(config, path)
     if (proxy = behavior[:proxy])
       if proxy == 'pegasus'
         backend = :pegasus

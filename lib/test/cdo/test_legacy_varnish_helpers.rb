@@ -1,9 +1,9 @@
 require_relative '../test_helper'
 
-require 'cdo/http_helpers'
+require 'cdo/legacy_varnish_helpers'
 
-class HttpHelpersTest < Minitest::Test
-  HEADERS = HttpHelpers::REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
+class LegacyVarnishHelpersTest < Minitest::Test
+  HEADERS = LegacyVarnishHelpers::REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
   BEHAVIOR = {
     dashboard: {
       behaviors: [],
@@ -29,7 +29,7 @@ class HttpHelpersTest < Minitest::Test
   }.freeze
 
   def ruby_behavior(config, path)
-    HttpHelpers.behavior_for_path(config[:behaviors] + [config[:default]], path)
+    LegacyVarnishHelpers.behavior_for_path(config[:behaviors] + [config[:default]], path)
   end
 
   def test_ruby_behavior
