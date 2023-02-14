@@ -12,6 +12,7 @@ export const reportTeacherReviewingStudentDslLevel = (
   if (
     appOptions.readonlyWorkspace &&
     !appOptions.submitted &&
+    !appOptions.isCodeReviewing &&
     !!queryParams('user_id')
   ) {
     analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
