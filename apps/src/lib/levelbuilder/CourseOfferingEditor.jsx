@@ -66,7 +66,7 @@ export default function CourseOfferingEditor(props) {
         gradeLevels.push(options[i].value);
       }
     }
-    this.props.updateCourseOffering('grade_levels', gradeLevels.join(','));
+    updateCourseOffering('grade_levels', gradeLevels.join(','));
   };
 
   return (
