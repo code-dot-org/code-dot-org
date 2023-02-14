@@ -525,22 +525,4 @@ FactoryGirl.define do
       school nil
     end
   end
-
-  factory :census_inaccuracy_investigation, class: 'Census::CensusInaccuracyInvestigation' do
-    user {build :teacher}
-    notes "Some notes from my investigation"
-    census_submission {build :census_your_school2017v7, submitter_email_address: user&.email}
-
-    trait :without_submission do
-      census_submission nil
-    end
-
-    trait :without_user do
-      user nil
-    end
-
-    trait :without_notes do
-      notes nil
-    end
-  end
 end
