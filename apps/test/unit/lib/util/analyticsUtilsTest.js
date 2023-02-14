@@ -1,6 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 import * as utils from '@cdo/apps/code-studio/utils';
 import sinon from 'sinon';
 
@@ -14,7 +14,7 @@ describe('AnalyticsUtils', () => {
     queryParamsSpy.withArgs('user_id').returns('123');
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    reportTeacherReviewingStudentDslLevel();
+    reportTeacherReviewingStudentNonLabLevel();
     expect(analyticsSpy).to.be.called.once;
 
     utils.queryParams.restore();

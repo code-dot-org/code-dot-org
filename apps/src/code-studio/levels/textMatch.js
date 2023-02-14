@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
-import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 var TextMatch = function(levelId, id, app, standalone, answers, lastAttempt) {
   // The dashboard levelId.
@@ -44,7 +44,7 @@ TextMatch.prototype.ready = function() {
     onAnswerChanged(this.levelId, false);
   });
 
-  reportTeacherReviewingStudentDslLevel();
+  reportTeacherReviewingStudentNonLabLevel();
 };
 
 TextMatch.prototype.getAppName = function() {

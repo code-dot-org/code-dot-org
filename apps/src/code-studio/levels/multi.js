@@ -8,7 +8,7 @@ import {
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
 import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 var Multi = function(
   levelId,
@@ -150,7 +150,7 @@ Multi.prototype.ready = function() {
     }
 
     if (this.standalone) {
-      reportTeacherReviewingStudentDslLevel();
+      reportTeacherReviewingStudentNonLabLevel();
     }
   }
 

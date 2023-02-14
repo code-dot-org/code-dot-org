@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import Attachments from '@cdo/apps/code-studio/components/Attachments';
-import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(document).ready(() => {
   const data = getScriptData('freeresponse');
@@ -23,7 +23,7 @@ $(document).ready(() => {
   });
 
   if (!appOptions.hasContainedLevels) {
-    reportTeacherReviewingStudentDslLevel();
+    reportTeacherReviewingStudentNonLabLevel();
   }
 
   const attachmentsMountPoint = document.querySelector('#free-response-upload');

@@ -1,10 +1,10 @@
 import {processResults} from '@cdo/apps/code-studio/levels/dialogHelper';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {reportTeacherReviewingStudentDslLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 registerGetResult();
 
-reportTeacherReviewingStudentDslLevel();
+reportTeacherReviewingStudentNonLabLevel();
 
 $(document).on('click', '.submitButton', () => {
   const submitButton = $('.submitButton');
