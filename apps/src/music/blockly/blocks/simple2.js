@@ -122,6 +122,35 @@ export const playSoundAtCurrentLocationSimple2 = {
     `
 };
 
+export const playRestAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: 'rest for %1 measures',
+    args0: [
+      {
+        type: 'input_value',
+        name: 'measures'
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'music_blocks',
+    tooltip: 'rest',
+    helpUrl: ''
+  },
+  generator: block =>
+    `
+      ProgramSequencer.updateMeasureForPlayByLength(
+        ${Blockly.JavaScript.valueToCode(
+          block,
+          'measures',
+          Blockly.JavaScript.ORDER_ASSIGNMENT
+        )}
+      );
+    `
+};
+
 export const playSoundsTogether = {
   definition: {
     type: BlockTypes.PLAY_SOUNDS_TOGETHER,
