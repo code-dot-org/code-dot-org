@@ -31,7 +31,6 @@ const blockList = [
   setCurrentLocationNextMeasure,
   playSoundAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
-  playRestAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
   forLoop,
