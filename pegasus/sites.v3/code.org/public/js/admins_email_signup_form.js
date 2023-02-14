@@ -6,7 +6,7 @@ setInterval(timestamp, 500);
 // Set a disabled attribute on button until
 // the reCAPTCHA checkbox is clicked
 function recaptchaCallback() {
-  let btnSubmit = document.querySelector("button");
+  const btnSubmit = document.querySelector("button");
 
   if (btnSubmit.hasAttribute("disabled")) {
     btnSubmit.removeAttribute("disabled");
