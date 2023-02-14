@@ -33,7 +33,10 @@ export default function SingleSectionSetUp({
         required={true}
         options={options}
         values={grades}
-        setValues={setGrades}
+        setValues={g => {
+          updateSection('grades', g);
+          setGrades(g);
+        }}
       />
       <hr />
     </div>
