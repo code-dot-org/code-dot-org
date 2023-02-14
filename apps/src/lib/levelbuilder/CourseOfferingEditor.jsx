@@ -6,11 +6,11 @@ import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {
   CourseOfferingCategories,
-  CourseOfferingGradeBands,
   CourseOfferingHeaders,
   CourseOfferingCurriculumTypes,
   CourseOfferingMarketingInitiatives
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
 
 const useCourseOffering = initialCourseOffering => {
@@ -58,15 +58,15 @@ export default function CourseOfferingEditor(props) {
       });
   };
 
-  const handleGradeBands = e => {
+  const handleGradeLevels = e => {
     var options = e.target.options;
-    var gradeBands = [];
+    var gradeLevels = [];
     for (var i = 0, l = options.length; i < l; i++) {
       if (options[i].selected) {
-        gradeBands.push(options[i].value);
+        gradeLevels.push(options[i].value);
       }
     }
-    this.props.updateCourseOffering('grade_bands', gradeBands);
+    this.props.updateCourseOffering('grade_levels', gradeLevels.join(','));
   };
 
   return (
@@ -134,20 +134,20 @@ export default function CourseOfferingEditor(props) {
       </label>
       <h2>{`Curriculum Catalog Settings`}</h2>
       <label>
-        Grade Bands
+        Grade Levels
         <HelpTip>
-          <p>Select all recommended grade bands.</p>
+          <p>Select all recommended grade levels.</p>
         </HelpTip>
         <select
           multiple
-          value={courseOffering.grade_bands}
+          value={courseOffering.grade_levels}
           style={styles.dropdown}
-          onChange={handleGradeBands}
+          onChange={handleGradeLevels}
         >
           <option value="">(None)</option>
-          {Object.values(CourseOfferingGradeBands).map(band => (
-            <option key={band} value={band}>
-              {band}
+          {Object.values(StudentGradeLevels).map(level => (
+            <option key={level} value={level}>
+              {level}
             </option>
           ))}
         </select>
@@ -230,7 +230,7 @@ CourseOfferingEditor.propTypes = {
     category: PropTypes.string,
     display_name: PropTypes.string,
     assignable: PropTypes.bool,
-    grade_bands: PropTypes.array,
+    grade_levels: PropTypes.string,
     curriculum_type: PropTypes.string,
     header: PropTypes.string,
     marketing_initiative: PropTypes.string
