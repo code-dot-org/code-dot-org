@@ -3,7 +3,9 @@ import Globals from '../../globals';
 import {
   DEFAULT_SOUND,
   TRIGGER_FIELD,
-  DYNAMIC_TRIGGER_EXTENSION
+  DYNAMIC_TRIGGER_EXTENSION,
+  FIELD_SOUNDS_NAME,
+  FIELD_SOUNDS_TYPE
 } from '../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
@@ -73,18 +75,14 @@ export const triggeredAtSimple2 = {
     tooltip: 'at trigger',
     extensions: [DYNAMIC_TRIGGER_EXTENSION]
   },
-  generator: block => {
-    const varName = Blockly.JavaScript.nameDB_.getDistinctName(
-      'eventTime',
-      Blockly.Names.NameType.VARIABLE
-    );
-    return `
-        var __insideWhenRun = false;
-        ${varName} = MusicPlayer.getPlayheadPosition();
-        currentMeasureLocation = Math.ceil(${varName});
-        ProgramSequencer.playSequentialWithMeasure(currentMeasureLocation);
-      `;
-  }
+  generator: () =>
+    ` var __insideWhenRun = false;
+      ProgramSequencer.playSequentialWithMeasure(
+        Math.ceil(
+          MusicPlayer.getCurrentPlayheadPosition()
+        )
+      );
+    `
 };
 
 export const playSoundAtCurrentLocationSimple2 = {
@@ -93,8 +91,8 @@ export const playSoundAtCurrentLocationSimple2 = {
     message0: 'play %1',
     args0: [
       {
-        type: 'field_sounds',
-        name: 'sound',
+        type: FIELD_SOUNDS_TYPE,
+        name: FIELD_SOUNDS_NAME,
         getLibrary: () => Globals.getLibrary(),
         playPreview: (id, onStop) => {
           Globals.getPlayer().previewSound(id, onStop);
@@ -112,13 +110,13 @@ export const playSoundAtCurrentLocationSimple2 = {
   generator: block =>
     `
       MusicPlayer.playSoundAtMeasureById(
-        "${block.getFieldValue('sound')}",
+        "${block.getFieldValue(FIELD_SOUNDS_NAME)}",
         ProgramSequencer.getCurrentMeasure(),
         __insideWhenRun
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
-          "${block.getFieldValue('sound')}"
+          "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
         )
       );
     `

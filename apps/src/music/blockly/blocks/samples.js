@@ -5,6 +5,7 @@ import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
   EXTRA_SAMPLE_FIELD_PREFIX,
+  FIELD_SOUNDS_NAME,
   FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
   TRACK_NAME_FIELD,
@@ -52,7 +53,7 @@ export const playSound = {
     args0: [
       {
         type: FIELD_SOUNDS_TYPE,
-        name: 'sound',
+        name: FIELD_SOUNDS_NAME,
         getLibrary: () => Globals.getLibrary(),
         playPreview: (id, onStop) => {
           Globals.getPlayer().previewSound(id, onStop);
@@ -72,7 +73,7 @@ export const playSound = {
   },
   generator: ctx =>
     'MusicPlayer.playSoundAtMeasureById("' +
-    ctx.getFieldValue('sound') +
+    ctx.getFieldValue(FIELD_SOUNDS_NAME) +
     '", ' +
     Blockly.JavaScript.valueToCode(
       ctx,
@@ -91,7 +92,7 @@ export const playSoundAtCurrentLocation = {
     args0: [
       {
         type: FIELD_SOUNDS_TYPE,
-        name: 'sound',
+        name: FIELD_SOUNDS_NAME,
         getLibrary: () => Globals.getLibrary(),
         playPreview: (id, onStop) => {
           Globals.getPlayer().previewSound(id, onStop);
@@ -108,7 +109,7 @@ export const playSoundAtCurrentLocation = {
   },
   generator: ctx =>
     'MusicPlayer.playSoundAtMeasureById("' +
-    ctx.getFieldValue('sound') +
+    ctx.getFieldValue(FIELD_SOUNDS_NAME) +
     '", ' +
     'currentMeasureLocation' +
     ', ' +
@@ -215,7 +216,7 @@ export const newTrackOnTrigger = {
       ctx.id
     }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
       TRACK_NAME_FIELD
-    )}", Math.ceil(MusicPlayer.getPlayheadPosition()), false);\n`;
+    )}", Math.ceil(MusicPlayer.getCurrentPlayheadPosition()), false);\n`;
   }
 };
 
@@ -226,7 +227,7 @@ export const playSoundInTrack = {
     args0: [
       {
         type: FIELD_SOUNDS_TYPE,
-        name: 'sound',
+        name: FIELD_SOUNDS_NAME,
         getLibrary: () => Globals.getLibrary(),
         playPreview: (id, onStop) => {
           Globals.getPlayer().previewSound(id, onStop);
@@ -243,7 +244,7 @@ export const playSoundInTrack = {
     helpUrl: ''
   },
   generator: ctx => {
-    const allSounds = [`"${ctx.getFieldValue('sound')}"`];
+    const allSounds = [`"${ctx.getFieldValue(FIELD_SOUNDS_NAME)}"`];
     for (let i = 0; i < ctx.extraSampleCount_; i++) {
       allSounds.push(`"${ctx.getFieldValue(EXTRA_SAMPLE_FIELD_PREFIX + i)}"`);
     }
