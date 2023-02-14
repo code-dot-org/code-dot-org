@@ -6,6 +6,10 @@
     margin: 0 4px;
   }
 
+  fieldset div:nth-of-type(1) {
+    margin-left: 0;
+  }
+
   fieldset div label {
     display: inline-block;
     background-color: $neutral_white;
