@@ -10,6 +10,9 @@ const brambleConfig = JSON.parse(scriptData.dataset.bramble);
 const BRAMBLE_BASE_URL = brambleConfig.baseUrl;
 window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 
+const FILE_SYSTEM_ERROR = 'EFILESYSTEMERROR';
+const BRAMBLE_READY_STATE = 'bramble:readyToMount';
+
 // Get the WebLab object from our parent window
 let webLab_;
 if (parent.getWebLab) {
@@ -47,12 +50,21 @@ function loadMinimal(Bramble) {
   Bramble.on('readyStateChange', (_, newState) => {
     if (Bramble.MOUNTABLE === newState) {
       window.parent.postMessage(
-        JSON.stringify({type: 'bramble:readyToMount'}),
+        JSON.stringify({msg: BRAMBLE_READY_STATE}),
         brambleConfig.studioUrl
       );
     }
   });
-  Bramble.on('error', console.log);
+
+  Bramble.on('error', err => {
+    if (err.code === FILE_SYSTEM_ERROR) {
+      window.parent.postMessage(
+        JSON.stringify({msg: FILE_SYSTEM_ERROR}),
+        brambleConfig.studioUrl
+      );
+    }
+    console.log(err);
+  });
 }
 
 // Load bramble.js
