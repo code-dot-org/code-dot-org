@@ -10090,3 +10090,22 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        blockchain-2023:
+          lessons:
+            lesson-1:
+              name: Blockchain Overview
+            lesson-2:
+              name: Applied Blockchain & Bitcoin
+            lesson-3:
+              name: Beyond Currencies
+            lesson-4:
+              name: Value on the Blockchain
+            lesson-5:
+              name: Societal Impact
+          lesson_groups: {}
+          name: blockchain-2023
+          title: Blockchain
+          description_audience: ''
+          description_short: ''
+          description: This is the unit on Blockchain!
+          student_description: ''
