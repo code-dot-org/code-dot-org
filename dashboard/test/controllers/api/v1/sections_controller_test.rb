@@ -373,7 +373,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
         grade: desired_grade,
       }
-      assert_equal desired_grade, returned_section.grade
+      assert_equal [desired_grade], returned_section.grades
     end
   end
 
@@ -405,7 +405,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       grade: nil,
     }
-    assert_nil returned_section.grade
+    assert_nil returned_section.grades
   end
 
   test "create section without participant type gives error" do
@@ -426,7 +426,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     # TODO: Better to fail here?
 
-    assert_nil returned_section.grade
+    assert_nil returned_section.grades
   end
 
   test 'creates a six-letter section code' do
@@ -739,7 +739,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       user: @teacher,
       script_id: @script_in_preview_state.id,
       login_type: Section::LOGIN_TYPE_WORD,
-      grade: "1",
+      grades: ["1"],
       lesson_extras: true,
       pairing_allowed: false,
       hidden: true
@@ -764,7 +764,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil(section_with_script.script_id)
     assert_equal("My Section", section_with_script.name)
     assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
-    assert_equal("K", section_with_script.grade)
+    assert_equal(["K"], section_with_script.grades)
     assert_equal(false, section_with_script.lesson_extras)
     assert_equal(true, section_with_script.pairing_allowed)
     assert_equal(false, section_with_script.hidden)

@@ -51,7 +51,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         participant_type: params[:participant_type],
-        grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
+        grades: Section.valid_grades?([params[:grade].to_s]) ? [params[:grade].to_s] : nil,
         script_id: @unit&.id,
         course_id: @course&.id,
         lesson_extras: params['lesson_extras'] || false,
@@ -87,7 +87,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:script_id] = @unit&.id
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
-    fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
+    fields[:grades] = [params[:grade]] if Section.valid_grades?([params[:grade]])
     fields[:lesson_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?

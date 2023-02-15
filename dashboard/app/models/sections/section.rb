@@ -81,7 +81,29 @@ class Section < ApplicationRecord
   alias_attribute :lesson_extras, :stage_extras
 
   validates :participant_type, acceptance: {accept: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
-  validates :grade, acceptance: {accept: [SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten, message: "must be one of the valid student grades. Expected one of: #{[SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten}. Got: \"%{value}\"."}
+
+  # Custom CSV serializer for the grades array.
+  class GradesArray
+    def self.dump(grades)
+      unless grades.is_a?(Array) || grades.nil?
+        raise ArgumentError, "Grades must be an array"
+      end
+      grades ? grades.uniq.join(',') : nil
+    end
+
+    def self.load(grades)
+      grades ? grades.split(',').uniq.sort_by do |grade|
+        SharedConstants::STUDENT_GRADE_LEVELS.index(grade) ||
+          Float::INFINITY
+      end : nil
+    end
+  end
+  serialize :grade, GradesArray
+  # Allow accessing section.grades, without a costly column rename.
+  alias_attribute :grades, :grade
+
+  validate :grades_are_subset_of_valid_grades, unless: -> {grades.nil?}
+  validate :grades_with_pl_are_only_pl, unless: -> {grades.nil?}
 
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
@@ -98,8 +120,8 @@ class Section < ApplicationRecord
   # PL courses which are run with adults should have the grade type of 'pl'.
   # This value was recommended by RED team.
   def pl_sections_must_use_pl_grade
-    if pl_section? && grade != SharedConstants::PL_GRADE_VALUE
-      errors.add(:grade, 'must be pl for pl section.')
+    if pl_section? && grades != [SharedConstants::PL_GRADE_VALUE]
+      errors.add(:grades, 'must be ["pl"] for pl section.')
     end
   end
 
@@ -109,6 +131,22 @@ class Section < ApplicationRecord
   def participant_type_not_changed
     if participant_type_changed? && persisted?
       errors.add(:participant_type, "can not be update once set.")
+    end
+  end
+
+  # We want the `grades` attribute to be a list that only includes elements
+  # that exist in the list of valid grades.
+  def grades_are_subset_of_valid_grades
+    unless Section.valid_grades?(grades)
+      errors.add(:grades, "must be one or more of the valid student grades. Expected: #{VALID_GRADES}. Got: #{grades}.")
+    end
+  end
+
+  # If the grades include 'pl', they must *ONLY* include 'pl'.
+  # E.g.: You can't have a section with 'K' and 'pl'.
+  def grades_with_pl_are_only_pl
+    if grades.include?(SharedConstants::PL_GRADE_VALUE) && grades.length != 1
+      errors.add(:grades, "cannot combine pl with other grades")
     end
   end
 
@@ -137,6 +175,11 @@ class Section < ApplicationRecord
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
 
+  VALID_GRADES = [
+    SharedConstants::STUDENT_GRADE_LEVELS,
+    SharedConstants::PL_GRADE_VALUE
+  ].flatten.freeze
+
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
@@ -155,8 +198,9 @@ class Section < ApplicationRecord
     Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.value?(type)
   end
 
-  def self.valid_grade?(grade)
-    SharedConstants::STUDENT_GRADE_LEVELS.include?(grade) || grade == PL_GRADE_VALUE
+  def self.valid_grades?(grades)
+    return false if grades.empty?
+    (grades - VALID_GRADES).empty?
   end
 
   # Override default script accessor to use our cache
@@ -377,7 +421,7 @@ class Section < ApplicationRecord
           project_sharing: script.try(:project_sharing)
         },
         studentCount: num_students,
-        grade: grade,
+        grades: grades,
         providerManaged: provider_managed?,
         hidden: hidden,
         students: include_students ? unique_students.map(&:summarize) : nil,
