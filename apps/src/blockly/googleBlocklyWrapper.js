@@ -283,7 +283,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   // Allows for dynamically setting the workspace theme with workspace.setTheme()
   blocklyWrapper.themes = {
-    classic: CdoTheme,
+    modern: CdoTheme,
     dark: CdoDarkTheme,
     music: MusicLabTheme
   };
