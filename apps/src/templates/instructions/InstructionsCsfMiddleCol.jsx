@@ -168,7 +168,7 @@ class InstructionsCsfMiddleCol extends React.Component {
           {this.props.overlayVisible && (
             <div>
               <hr />
-              <LegacyButton type="brandSecondary" onClick={this.closeOverlay}>
+              <LegacyButton type="primary" onClick={this.closeOverlay}>
                 {i18n.dialogOK()}
               </LegacyButton>
             </div>
