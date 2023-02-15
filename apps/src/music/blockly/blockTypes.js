@@ -18,5 +18,6 @@ export const BlockTypes = {
   NEW_TRACK_AT_MEASURE: 'new_track_at_measure',
   NEW_TRACK_ON_TRIGGER: 'new_track_on_trigger',
   PLAY_SOUND_IN_TRACK: 'play_sound_in_track',
-  REST_IN_TRACK: 'rest_in_track'
+  REST_IN_TRACK: 'rest_in_track',
+  VALUE_SAMPLE: 'value_sample'
 };
