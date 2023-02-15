@@ -1,13 +1,14 @@
 import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 
-const blocklyTheme = 'blocklyTheme';
-const blocklyStash = 'blocklyStash';
-const enabled = 'enabled';
-const disabled = 'disabled';
-const hidden = 'hidden';
-const modern = 'modern';
-const dark = 'dark';
+const BLOCKLY_THEME = 'blocklyTheme';
+const BLOCKLY_STASH = 'blocklyStash';
+const ENABLED = 'enabled';
+const DISABLED = 'disabled';
+const HIDDEN = 'hidden';
+const MODERN = 'modern';
+const DARK = 'dark';
+const MUSICLAB_DARK = 'musiclabdark';
 
 /**
  * Adds a copy command to the block context menu. After switching to v7,
@@ -21,14 +22,14 @@ const registerBlockCopyToStorage = function() {
     },
     preconditionFn: function(scope) {
       if (scope.block.isDeletable() && scope.block.isMovable()) {
-        return enabled;
+        return ENABLED;
       } else {
-        return disabled;
+        return DISABLED;
       }
     },
     callback: function(scope) {
       const copyData = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
-      localStorage.setItem(blocklyStash, copyData);
+      localStorage.setItem(BLOCKLY_STASH, copyData);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockCopyToStorage',
@@ -48,14 +49,14 @@ const registerBlockPasteFromStorage = function() {
       return msg.paste();
     },
     preconditionFn: function(scope) {
-      const copyData = localStorage.getItem(blocklyStash);
+      const copyData = localStorage.getItem(BLOCKLY_STASH);
       if (copyData) {
-        return enabled;
+        return ENABLED;
       }
-      return disabled;
+      return DISABLED;
     },
     callback: function(scope) {
-      const copyData = localStorage.getItem(blocklyStash);
+      const copyData = localStorage.getItem(BLOCKLY_STASH);
       Blockly.mainBlockSpace.paste(JSON.parse(copyData));
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -76,9 +77,9 @@ const registerDeletable = function() {
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return enabled;
+        return ENABLED;
       }
-      return hidden;
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.setDeletable(!scope.block.isDeletable());
@@ -101,9 +102,9 @@ const registerMovable = function() {
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return enabled;
+        return ENABLED;
       }
-      return hidden;
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.setMovable(!scope.block.isMovable());
@@ -126,9 +127,9 @@ const registerEditable = function() {
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return enabled;
+        return ENABLED;
       }
-      return hidden;
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.setEditable(!scope.block.isEditable());
@@ -147,9 +148,9 @@ const registerShadow = function() {
       if (Blockly.isStartMode && canBeShadow(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return enabled;
+        return ENABLED;
       }
-      return hidden;
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.setShadow(true);
@@ -176,9 +177,9 @@ const registerUnshadow = function() {
       if (Blockly.isStartMode && hasShadowChildren(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return enabled;
+        return ENABLED;
       }
-      return hidden;
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.getChildren().forEach(child => child.setShadow(false));
@@ -198,7 +199,7 @@ const registerKeyboardNavigation = function() {
         : msg.blocklyKBNavOn();
     },
     preconditionFn: function() {
-      return Blockly.navigationController ? enabled : hidden;
+      return Blockly.navigationController ? ENABLED : HIDDEN;
     },
     callback: function(scope) {
       const controller = Blockly.navigationController;
@@ -220,21 +221,21 @@ const registerCdoTheme = function() {
   const cdoThemeOption = {
     displayText: function(scope) {
       return (
-        (isCurrentTheme(modern, scope.workspace) ? '✓ ' : `${msg.enable()} `) +
+        (isCurrentTheme(MODERN, scope.workspace) ? '✓ ' : `${msg.enable()} `) +
         msg.blocklyModernTheme()
       );
     },
     preconditionFn: function(scope) {
       if (isMusicLabTheme(scope.workspace)) {
-        return hidden;
-      } else if (isCurrentTheme(modern, scope.workspace)) {
-        return disabled;
+        return HIDDEN;
+      } else if (isCurrentTheme(MODERN, scope.workspace)) {
+        return DISABLED;
       } else {
-        return enabled;
+        return ENABLED;
       }
     },
     callback: function(scope) {
-      localStorage.setItem(blocklyTheme, modern);
+      localStorage.setItem(BLOCKLY_THEME, MODERN);
       scope.workspace.setTheme(Blockly.themes.modern);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -251,21 +252,21 @@ const registerDarkTheme = function() {
   const darkThemeOption = {
     displayText: function(scope) {
       return (
-        (isCurrentTheme(dark, scope.workspace) ? '✓ ' : `${msg.enable()} `) +
+        (isCurrentTheme(DARK, scope.workspace) ? '✓ ' : `${msg.enable()} `) +
         msg.blocklyDarkTheme()
       );
     },
     preconditionFn: function(scope) {
       if (isMusicLabTheme(scope.workspace)) {
-        return hidden;
-      } else if (isCurrentTheme(dark, scope.workspace)) {
-        return disabled;
+        return HIDDEN;
+      } else if (isCurrentTheme(DARK, scope.workspace)) {
+        return DISABLED;
       } else {
-        return enabled;
+        return ENABLED;
       }
     },
     callback: function(scope) {
-      localStorage.setItem(blocklyTheme, dark);
+      localStorage.setItem(BLOCKLY_THEME, DARK);
       scope.workspace.setTheme(Blockly.themes.dark);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -311,11 +312,11 @@ function hasShadowChildren(block) {
 function isCurrentTheme(theme, workspace) {
   return (
     workspace?.getTheme().name === theme ||
-    localStorage.getItem(blocklyTheme) === theme
+    localStorage.getItem(BLOCKLY_THEME) === theme
   );
 }
 
 function isMusicLabTheme(workspace) {
-  return workspace.getTheme().name === 'musiclabdark';
+  return workspace.getTheme().name === MUSICLAB_DARK;
 }
 exports.registerAllContextMenuItems = registerAllContextMenuItems;
