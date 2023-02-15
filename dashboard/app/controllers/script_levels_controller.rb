@@ -3,7 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 
 class ScriptLevelsController < ApplicationController
-  check_authorization
+  check_authorization except: [:summarize_responses]
   include LevelsHelper
   include VersionRedirectOverrider
   include CachedUnitHelper
@@ -148,6 +148,33 @@ class ScriptLevelsController < ApplicationController
     @body_classes = @level.properties['background']
 
     present_level
+  end
+
+  def summarize_responses
+    @unit = Unit.get_from_cache(params[:script_id], raise_exceptions: false)
+    @script_level = ScriptLevelsController.get_script_level(@unit, params)
+    level = @script_level.oldest_active_level
+    return head :not_acceptable unless ['Match', 'Multi', 'FreeResponse'].include?(level.type)
+
+    section_id = params.require(:section_id).to_i
+    section = Section.find_by_id(section_id)
+
+    summary = {}
+
+    section.students.each do |student|
+      case level
+      when Multi
+        summary[student.name] = {
+          response: student.user_levels.find_by(script_id: @unit.id, level_id: level.id)&.level_source&.data&.split(',')&.map(&:to_i)&.sort
+        }
+      else
+        summary[student.name] = {
+          response: student.user_levels.find_by(script_id: @unit.id, level_id: level.id)&.level_source&.data
+        }
+      end
+    end
+
+    render :ok, json: summary.to_json
   end
 
   def self.get_script_level(script, params)
