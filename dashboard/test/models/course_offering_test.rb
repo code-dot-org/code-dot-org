@@ -438,7 +438,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed course offerings" do
-    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'Hour of Test', header: 'Test'
+    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'course', marketing_initiative: 'hoc', header: 'popular_media'
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
     course_offering.destroy!
