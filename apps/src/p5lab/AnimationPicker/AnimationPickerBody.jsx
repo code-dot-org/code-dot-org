@@ -229,7 +229,7 @@ export default class AnimationPickerBody extends React.Component {
     const inCategory = categoryQuery !== '';
     const isBackgroundsTab =
       this.props.pickerType === 'backgrounds' &&
-      experiments.isEnabled('backgroundsTab');
+      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD);
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
