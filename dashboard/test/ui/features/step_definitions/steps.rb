@@ -520,6 +520,10 @@ When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
 end
 
+When /^I complete the CAPTCHA$/ do
+  @browser.execute_script("$('#g-recaptcha-response').val('test-captcha-response');")
+end
+
 When /^I press delete$/ do
   script = "Blockly.mainBlockSpaceEditor.onKeyDown_("
   script += "{"

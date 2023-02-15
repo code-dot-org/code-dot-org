@@ -435,7 +435,7 @@ describe('CircuitPlaygroundBoard', () => {
     beforeEach(() => {
       wrappedPort = new WebSerialPortWrapper();
       sinon
-        .stub(wrappedPort, 'open')
+        .stub(wrappedPort, 'openCPPort')
         .returns(new Promise(resolve => resolve(wrappedPort)));
       board = new CircuitPlaygroundBoard(wrappedPort);
       board.port_.vendorId = '0x239A';
