@@ -10,6 +10,7 @@ steps:
   - name: clone
     image: docker:git
     commands:
+      - hostname=$(wget -O - http://169.254.169.254/latest/meta-data/public-hostname 2> /dev/null || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git reset --hard $DRONE_COMMIT
       # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
@@ -188,6 +189,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: bb9d5b8edd6b1b4b39a54e6f37561bbb74b9a6139e584eba1ab7fd04d9635036
+hmac: a42f3249d466f263dd8242d07f573717d16c16efb40a152d6cb2bbe2466d09a8
 
 ...

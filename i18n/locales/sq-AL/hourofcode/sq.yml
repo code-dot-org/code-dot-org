@@ -152,6 +152,10 @@ sq:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -233,7 +237,7 @@ sq:
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
-  codeorg_homepage_hoc2018_header_line1: The Hour of Code is coming...
+  codeorg_homepage_hoc2018_header_line1: Ora e Kodit po vjen...
   codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: What will you create?
   codeorg_homepage_hoc2018_header_line3: Give flight to imagination and birth to innovation.
@@ -241,9 +245,9 @@ sq:
   codeorg_homepage_hoc2018_musician_before: Featuring
   codeorg_homepage_hoc2018_musician_after: and more!
   codeorg_homepage_hoc2018_video: Watch our video
-  hourofcode_homepage_hoc2018_header_line1: Cdokush, kudo mund te organizoje nje event
-    te ores se kodit. Udhezuesit jane te qassehm ne me shume se 45 gjuhe. Nuk ju nevojitet
-    te keni eksperience paraprake.
+  hourofcode_homepage_hoc2018_header_line1: Çdokush, kudo mund të organizojë një ngjarje
+    të orës së kodit. Udhëzuesit janë të qasshëm në më shumë se 45 gjuhe. Nuk duhet
+    të keni eksperiencë paraprake.
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
   codeorg_homepage_hoc_is_coming: Ora e Kodimit po vjen
   codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
@@ -531,6 +535,10 @@ sq:
   signup_registration_closed: And every year in December, your class can join millions
     of students around the world celebrating Computer Science Education Week with
     the Hour of Code. We'll open registration for the annual celebration in October.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organizoni një Orë Kodim gjatë %{campaign_date} dhe regjistroheni
     këtu.
   signup_name_label: Emri juaj
@@ -552,7 +560,7 @@ sq:
   signup_send_posters_address_label: Adresa e shkollës apo organizatës
   signup_whole_school_flag_label: Ky event është për tërë shkollën
   signup_your_event: Regjistroni eventin tuaj
-  signup_host_an_hour: Zhvillo një Orë
+  signup_host_an_hour: Mbaj nje ore
   signup_match_volunteer: Më ndihmoni të gjej inxhinier programesh për të nxitur studentët
   signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
     local opportunities, or other computer science news?
@@ -587,7 +595,7 @@ sq:
   signup_submit_and_continue_label: Submit and Continue
   signup_continue_label: Continue
   signup_thank_you_header: Falemnderit që u regjistruat për të organizuar eventin
-    Ora e Kodimit.
+    Ora e Kodit.
   signup_thank_you_message: Ua dërguam email konfirmimin me informacionin që ju ndihmon
     të filloni.
   social_hoc2018_code_org_what_create: 'Code.org: What will you create?'
@@ -623,9 +631,8 @@ sq:
   map_legend_title: Legjend
   map_legend_hoc_events: Eventet e Orës së Kodimit
   map_legend_cs_tech_jam: Evente speciale
-  map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
-    page.</a>
-  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_warning: 'Lista e plote e ngjarjeve mund te shikohet ne faqen e eventit. '
+  map_warning_markdown: Lista e plote e eventeve mund te shikohet ne faqen e eventit.
   meta_tag_og_title: Ora e Kodimit po vjen
   meta_tag_og_description: Ora e Kodimit është lëvizje globale që i përfshin dhjetëra
     miliona studentë në mbi 180 shtete dhe mbi 45 gjuhë.
@@ -656,7 +663,7 @@ sq:
     fushatë bazë është mbështetur nga mbi <a href='%{partners}'> 400 partnerë </a>
     dhe 200.000 edukatorët në mbarë botën.
   hoc_faq_last_year: Provo tutorialet
-  hoc_faq_when_is_hoc_q: Kur mbahet Ora e Kodimit?
+  hoc_faq_when_is_hoc_q: Kur mbahet Ora e Kodit?
   hoc_faq_when_is_hoc_a: Kushdo mund të organizojë Orën e Kodimit, por qëllimi bazë
     i fushatës është që dhjetëra miliona nxënës t'a provojnë Orën e Kodimit gjatë
     %{campaign_date}, në mbështetje të <a href='http://csedweek.org'>Javës së Edukative
@@ -674,11 +681,11 @@ sq:
     kompjuterike. Kjo ndihmon në aftësitë e zgjidhjes së problemave. logjikë dhe kreativitet.
     Duke e nisur herët, studentët do të kenë bazat e suksesit për çdo karrierë në
     shekullin e 21-të. Shikoni më shumë statistika në <a href='%{codeorg_url}'>%{partner_url}</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
-  hoc_faq_how_participate_q: Si të marr pjesë në Orën e Kodimit?
+  hoc_faq_why_cs_a_markdown: 'Cdo nxenes duhet te kete mundesine te mesoje shkenca
+    kompjuterike. Mesimi ne kete fushe ndihmon ne zhvillimin e aftesive per zgjidhjen
+    e problemeve, logjiken dhe kreativitetin. Duke filluar heret, nxenesit do te kene
+    nje baze per sukses ne karrieren e shekullit 21. Shihni me shume statistika. '
+  hoc_faq_how_participate_q: Si të marr pjesë në Orën e Kodit?
   hoc_faq_how_participate_a: "<a href='/how-to'>Fillo planifikimin këtu</a> duke rishikuar
     udhëzuesit tanë. Mund të organizosh një Orë të Kodimit në shkollën tuaj ose në
     komunitetin tuaj &mdash; si në një aktivitet ekstra kurikularë, organizata jo-fitimprurëse
@@ -724,13 +731,12 @@ sq:
     në përshkrimet specifike të tutorialeve. Mos harroni ne gjithashtu ofrojmë <a
     href='%{unplugged_url}'>aktivitete të shkëputur </a> në qoftë se shkolla juaj
     nuk mund të përshtasë tutorialet!
-  hoc_faq_devices_a_markdown: "  Tutorial Code.org berfungsi dalam semua peranti dan
-    pelayar. Anda boleh lihat lebih banyak maklumat tentang keperluan teknikal tutorial
-    Code.org [di sini](%{codeorg_url}/educate/it). Keperluan teknikal untuk tutorial
-    bukan Code.org boleh didapati di [%{partner_url}/learn](%{codeorg_url}/learn)
-    dalam penerangan khusus tutorial. Jangan lupa kami juga menawarkan [aktiviti tanpa
-    menggunakan komputer](%{unplugged_url}) jika sekolah anda tidak dapat menyediakan
-    tutorial!  "
+  hoc_faq_devices_a_markdown: 'Udhezuesit e Code.org funksionojne ne te gjitha pajisjet
+    dhe shfletuesit e internetit. Mund te shihni me shume informacion per udhezuesit
+    e Code.org dhe nevojave teknologjike. Nevojat teknologjie per tutorialet qe nuk
+    jane ne Code.org mund te gjinden ne pershkrimet specifike te udhezuesve. Mos harroni
+    se ne poashtu ofrojme aktivitete te cilat nuk kane nevoje per kompjuter nese shkolla
+    juaj nuk mund te akomodoje udhezuesit! '
   hoc_faq_need_computers_q: Më duhet të siguroj nga një kompjuter për secilin pjesëmarrës?
   hoc_faq_need_computers_a: Jo. Ne kemi tutoriale të Orës së Kodimit që janë të përdorueshme
     në kompjuter, telefona të mençur, tableta, madje dhe të tjera për të cilët nuk
@@ -743,35 +749,32 @@ sq:
     të zhvillojë një Orë të Kodimit së bashku. Ndiqni bashkarisht pjesë të videove
     dhe kaloni radhën duke zgjidhur problema ose duke i'u përgjigjur pyetjeve. <li><b>Punoni
     të shkëputur.</b> Ofrojmë tutoriale që nuk kërkojnë fare kompjuter.</ul>
-  hoc_faq_need_computers_a_markdown: "  Tidak. Kami mempunyai tutorial Hour of Code
-    (Sejam Mengekod) yang berfungsi dengan PC, telefon pintar, tablet dan beberapa
-    item yang tidak memerlukan komputer sama sekali! Anda boleh sertai kami di mana
-    sahaja anda berada, dengan apa sahaja yang anda miliki.      _Berikut ialah beberapa
-    pilihan:_      - **Berfungsi dalam pasangan.** [Penyelidikan menunjukkan](%{pair_programming_research})
-    pelajar mengoptimumkan pembelajaran dengan [pengaturcaraan berpasangan](%{pair_programming_video}),
-    berkongsi komputer dan bekerjasama. Galakkan pelajar anda untuk melipatgandakan
-    usaha.   - **Gunakan skrin yang dipancarkan.** Jika anda mempunyai projektor dan
-    skrin untuk komputer yang disambungkan ke Laman Web, seluruh kumpulan anda boleh
-    melakukan Hour of Code (Sejam Mengekod bersama. Tonton bahagian video bersama
-    dan secara bergilir selesaikan teka-teki atau jawab soalan.   - **Lakukannya tanpa
-    menggunakan komputer.** Kami menawarkan [tutorial yang tidak memerlukan komputer](%{unplugged_url})
-    sama sekali.  "
+  hoc_faq_need_computers_a_markdown: "Jo. Ne kemi udhezues te Ores se Kodit qe funksionojne
+    ne kompjuteret personal, tableta, dhe disa per te cilet nuk duhet te keni kompjuter
+    fare! Mund te kyqeni nga kudo qe jeni, me ckado qe keni. \n\nMe poshte jane disa
+    opsione: \n\n- Punoni ne qifte: Kerkimet tregojne se nxenesit mesojne me shume
+    me programim ne qifte, duke e ndare nje kompjuter dhe duke punuar se bashku. Inkurajoni
+    nxenesit tuaj qe te bashkepunojne. \n- Perdorni projektore: Nese keni nje projektor
+    dhe ekran per nje kompjuter te lidhur me webin, i gjithe grupi yt mund te beje
+    nje Ore Kodi se bashku. Shikoni pjese te ndryshme te videove se bashku dhe zgjidhni
+    probleme ose pergjigjuni pyetjeve. \n- Dilni offline: Ne ofrojme udhezues per
+    te cilet nuk ju duhet kompjuter fare. "
   hoc_faq_international_q: Ndodhem në <country>. Si të marr pjesë?
-  hoc_faq_international_a: Çdokush mund të organizojë eventin Ora e Kodimit, në çdo
+  hoc_faq_international_a: Çdokush mund të organizojë eventin Ora e Kodit, në çdo
     vend të botës. Vitin e kaluar studentët në të gjithë botën iu bashkuan Orës së
     Kodimit. Për më shumë klikoni <a href='/promote'>këtu</a>.
   hoc_faq_international_a_markdown: Çdokush mund të organizojë eventin Ora e Kodimit,
     në çdo vend të botës. Vitin e kaluar studentët në të gjithë botën iu bashkuan
     Orës së Kodimit. Për më shumë klikoni <a href='/promote'>këtu</a>.
-  hoc_faq_tutorial_q: Si mund të zhvilloj një tutorial të Orës së Kodimit?
+  hoc_faq_tutorial_q: Si mund të zhvilloj një tutorial të Orës së Kodit?
   hoc_faq_tutorial_a: Nëse jeni të interesuar të bëheni partner për tutoriale, <a
     href='target-tutorial-guidelines'>ndiqni udhëzimet dhe instruksionet tona</a>.
     Do të dëshironim të kishim një mori mundësish angazhimi, por qëllimi kryesor është
     të optimiziohet përvoja për studentët dhe mësimdhënësit e rinj në shkencat kompjuterike.
-  hoc_faq_tutorial_a_markdown: "  Jika anda berminat untuk menjadi rakan tutorial,
-    [lihat garis panduan dan arahan kami](%{tutorial_guidelines}). Kami ingin mengadakan
-    pelbagai pilihan menarik, tetapi matlamat utama ialah mengoptimumkan pengalaman
-    untuk pelajar dan guru yang baharu dalam sains komputer.  "
+  hoc_faq_tutorial_a_markdown: Nëse jeni të interesuar të bëheni partner për tutoriale,
+    <a href='target-tutorial-guidelines'>ndiqni udhëzimet dhe instruksionet tona</a>.
+    Do të dëshironim të kishim një mori mundësish angazhimi, por qëllimi kryesor është
+    të optimiziohet përvoja për studentët dhe mësimdhënësit e rinj në shkencat kompjuterike.
   hoc_faq_account_q: A duhet pjesëmarrësit të LOG ON kur përdorin një llogari?
   hoc_faq_account_a: Jo. Absolutisht nuk nevojitet Regjistrim apo Login për nxënësit
     për të provuar Orën e Kodimit. Shumica e <a href='http://%{codeorg_url}/learn/beyond'>kurseve</a>
@@ -780,7 +783,7 @@ sq:
   hoc_faq_account_a_markdown: Jo. Absolutisht nuk nevojitet Regjistrim apo Login për
     nxënësit për të provuar Orën e Kodimit. Shumica e <a href='http://%{codeorg_url}/learn/beyond'>kurseve</a>
     kërkojnë krijimin e një llogarie për të ruajtur të dhënat që dëshmojnë progresin
-    e studentit.
+    e nxenesit.
   hoc_faq_high_school_q: Çfarë aktiviteteti  mundem ta realizoj me nxënësit e shkollës
     së mesme?
   hoc_faq_high_school_a: Për të gjitha moshat, ne rekomandojmë të provoni një nga
@@ -788,24 +791,26 @@ sq:
     si tutoriali i Angry Birds ose me Anna dhe Elsa. Një student gjimnazi duhet të
     jetë i aftë të përfundojë një nga këto në 30 minuta dhe më pas mund të provojë
     një tutorial më të avancuar në JavaScript, si Khan Academy ose CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
-  hoc_faq_scratch_q: E realizoj Orën e Kodimit përmes Scratch, por çfarë nëse nxënësit
+  hoc_faq_high_school_a_markdown: Udhezuesit tane te cilet permbajne Star Wars dhe
+    Minecraft jane shume tep ershtatshem per nxenesit e shkolles se mesme, veqanarisht
+    versioni i StarWars ne JavaScript dhe niveli i luajtjes falas ne te dy udhezuesit.
+    Ne poashtu ju rekomandojme ta provoni njeren nga udhezuesit tane qe te filloni,
+    siq eshte udhezuesi me Angry Birds ose me Annen dhe Elsen. Nje nxenes i shkolles
+    se mesme duhet te jete ne gjendje te perfundoje njeren nga keto per 30 minuta
+    dhe pastaj mund te provoje udhezues me te avancuar ne JavaScript, siq eshte Khan
+    Academy ose CodeHS.
+  hoc_faq_scratch_q: E realizoj Orën e Kodit përmes Scratch, por çfarë nëse nxënësit
     kanë iPad-e në vend të laptopëve?
   hoc_faq_scratch_a: Scratch nuk funksionon tek tabletët. Nëse nxënësit tuaj janë
     të rinj, ata mund të përdorin ScratchJR iPad app (for early-readers). Nëse shihni
     tutorialet në <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, ju mund
     të gjeni tutoriale të tjerë që funksionojnë në iPad - nga Code.org, Tynker, Lightbot
     ose CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch nuk funksionon tek tabletët. Nëse nxënësit tuaj
+    janë të rinj, ata mund të përdorin  ScratchJR iPad app (for early-readers). Nëse
+    shihni tutorialet në <a href='http://code.org/learn'>Code.org/learn</a>, ju mund
+    të gjeni tutoriale të tjerë që funksionojnë në  iPad - nga Code.org, Tynker, Lightbot,
+    or CodeSpark.
   hoc_faq_count_hoc_q: Si i numëroni Orët e Kodimit?
   hoc_faq_map_q: Pse nuk mund ta shoh pikën time në hartë?
   hoc_faq_map_a: Na vjen keq që ju nuk mund të shikoni eventin tuaj të Orës së kodimit
@@ -815,14 +820,13 @@ sq:
     dhe ju mund ta gjeni eventin tuaj të listuar aty. Përveç kësaj, duke patur parasysh
     mijëra personat që rregjistrohen në Orën e Kodimit, harta dhe eventet përditësohen
     në listë pas 48 orësh. Kontrolloni sërish pas disa ditësh!
-  hoc_faq_map_a_markdown: "  Kami memohon maaf kerana anda tidak dapat melihat acara
-    anda di peta Hour of Code (Sejam Mengekod). Oleh kerana puluhan ribu penganjur
-    yang mendaftar, peta menggabungkan data dan memaparkan satu titik untuk beberapa
-    acara. Jika anda mengklik pautan [halaman acara](%{events_url}) di bawah peta,
-    anda akan diarahkan ke senarai semua acara mengikut negeri dan boleh menemui acara
-    anda yang disenaraikan di sana. Di samping itu, memandangkan ribuan individu mendaftar
-    untuk Hour of Code (Sejam Mengekod), peta dan senarai acara biasanya memerlukan
-    48 jam untuk dikemas kini. Sila semak semula dalam beberapa hari!  "
+  hoc_faq_map_a_markdown: Na vjen keq që ju nuk mund të shikoni eventin tuaj të Orës
+    së kodimit në hartë. Për shkak të dhjetëra mijëra organizatorëve që rregjistrohen,
+    harta përmbledh të dhënat dhe tregon një pikë për disa evente. Në qoftë se klikoni
+    numrin mbi hartë ju do të ridrejtoheni në një listë të të gjitha eventeve sipas
+    shtetit dhe ju mund ta gjeni eventin tuaj të listuar aty. Përveç kësaj, duke patur
+    parasysh mijëra personat që rregjistrohen në Orën e Kodimit, harta dhe eventet
+    përditësohen në listë pas 48 orësh. Kontrolloni sërish pas disa ditësh!
   hoc_faq_count_hoc_a: Ndjekësi i Orës së Kodimit nuk është një matës i saktë i përdorimit.
     Ne nuk llogarisim Id unike të studentit në mënyrë perfekte kur marrin pjesë në
     Orën e Kodimit, veçanërisht sepse ne nuk i kërkojmë studentëve që të hyjnë ose
@@ -877,7 +881,7 @@ sq:
   hoc_faq_more_questions_q: Keni ende pyetje të tjera?
   hoc_faq_more_questions_a: Provoni të gjeni përgjigjie në  <a href='http://support.code.org'>forumin
     tonë përkrahës</a>.
-  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
+  hoc_faq_more_questions_a_markdown: 'Gjeni pergjigjet ne forumin tone te supportit. '
   hoc_faq_keep_learning_q: Si mund të vazhdoj të mësoj pas Orës së Kodimit?
   hoc_faq_keep_learning_a: Gjithsecili mund të zhvillojë një Orë Kodimi në cdo kohë.
     Tutorialet janë të disponueshme për gjatë gjithë vitit. Ju mund të prisni që tutorialet
@@ -894,20 +898,19 @@ sq:
     e certifikatave </a> ku ju mund të printoni certifikatat për të gjithë klasën
     tuaj. Ju gjithashtu mund të printoni <a href='%{codeorg_url}/certificates?course=mc'>
     certifikata të vecanta </a> për studentët gjatë tutorialit Minecraft.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
-  hoc_faq_logo_q: A ka kufizimi në lidhje me mënyrën e përdorimit të logos dhe emrit
-    të Orës së Kodimit?
+  hoc_faq_certificates_a_markdown: Shkoni tek <a href='%{codeorg_url}/certificates'>
+    faqja e certifikatave </a> ku ju mund të printoni certifikatat për të gjithë klasën
+    tuaj. Ju gjithashtu mund të printoni <a href='%{codeorg_url}/certificates?course=mc'>
+    certifikata të vecanta </a> për studentët gjatë tutorialit Minecraft.
+  hoc_faq_logo_q: A ka kufizime në lidhje me mënyrën e përdorimit të logos dhe emrit
+    të Orës së Kodit?
   hoc_faq_logo_a: Ora e Kodimit është markë e rregjistruar. Ne nuk duam të ndalojmë
     përdorimin e saj, por duam të sigurohemi që përdorimi i saj përputhet me kushtet
     tona. Ju lutem shikoni <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>kushtet
     e përdorimit</a>.
-  hoc_faq_logo_a_markdown: "  Hour of Code didaftarkan sebagai tanda dagang. Kami
-    tidak mahu menghalang penggunaannya, tetapi kami mahu memastikan penggunaannya
-    sesuai dalam beberapa had. Sila lihat [garis panduan ini untuk penggunaan](%{logo_url}).
-    \ "
+  hoc_faq_logo_a_markdown: 'Ora e Kodit eshte marke e regjistruar. ne nuk duam ta
+    parandalojme perdorimin e saj, mirpo ne deshirojme te sigurohemi se perdorimi
+    i saj pershtatet me disa limite te paracaktuara. Ju lutem shihni rregullat e perdorimit. '
   stats_hoc_2013_image_alt: Statistikat nga Ora e Kodimit 2013
   stats_growth: Ishte më e shpejta për t'i arritur 15 milion përdorues.
   stats_i18n: Nxënësit mësojnë në mbi 45 gjuhë
@@ -917,11 +920,11 @@ sq:
   stats_pinterest: 'Pinterest: 2 vjet'
   stats_instagram: 'Instagram: 14 muaj'
   stats_hoc: 'Ora e Kodimit: 5 ditë'
-  stats_global: Më shumë se 100M nxënës kanë provuar Orën e Kodimit
+  stats_global: Më shumë se 100M nxënës kanë provuar Orën e Kodit
   stats_girls_more: Më shumë vajza provuan shkencat kompjuterike se sa në 70 vitet
     e fundit
-  stats_females: Participation of female students in computer science is only 20-25%
-    of high school courses, university courses, and the workforce.
+  stats_females: 'Pjesemarrja e studenteve femra ne shkenca kompjuterike eshte vetem
+    20-25% ne kurset e shkolles se mesme, klasat universitare dhe fuqine punetore. '
   stats_females_more: During the Hour of Code, female students make up <b>50% of all
     participants</b>!
   stats_females_more_markdown: During the Hour of Code, female students make up **50%
@@ -959,7 +962,7 @@ sq:
     posterët inspirues dhe banerët e mediave sociale.
   resources_banner_howto_text: Si
   resources_banner_howto_button: Burimet për mësuesit, prindërit dhe qarqet për te
-    organizuar Orën e Kodimit.
+    organizuar Orën e Kodit.
   handouts_section: Shpërndani këto handout-e
   handouts_onepager: Përhap fjalët përmes këtij handout
   handouts_brochure: Jepjuani këtë broshurë mësuesve dhe shkollave
@@ -977,7 +980,7 @@ sq:
   title_how_to_promote: Përhape fjalën
   title_how_to_districts: Ora e Kodimit Metoda për Shpërndarje
   title_how_to_events: Eventi i Orës së Kodimit, Metoda
-  title_how_to_organizations: Si të behemi nikoqir të Orës së Kodimit- Organizatat
+  title_how_to_organizations: Si te mbajme nje Ore Kodi
   title_how_to_companies: Si të organizojmë një Orë Kodimi - Kompanitë
   title_how_to_officials: Udhëzuesit për zyrtarët publikë
   title_how_to_volunteers: Udhëzues për vullnetarët e Orës së Kodimit
@@ -1014,8 +1017,8 @@ sq:
   highlights_header: Momentet kryesore të Orës së Kodit
   highlights_description: Disa nga momentet tona të preferuara nga fushata e Orës
     së Kodimit.
-  highlights_previous: Highlights from previous years
-  highlights_see_more: See more highlights
+  highlights_previous: Momentet kyqe te viteve te kaluara.
+  highlights_see_more: Shini me shume momente kyqe.
   highlights_readmore: Read more
   highlights_watchvideo: Shiko videon
   highlights_facebook: Shpërndaje në Facebook
@@ -1042,24 +1045,29 @@ sq:
   footer_copyright_message: Copyright %{current_year} Code.org. Të gjitha të drejtat
     e rezervuara.
   footer_trademark_message: Hour of Code™ është markë e Code.org.
-  footer_built_on_github: Built on GitHub from Microsoft
+  footer_built_on_github: 'Nderto ne GitHub nga Microsoft '
   footer_menu_partners: Partnerët dhe Këshilluesit
   footer_menu_contact: Na Kontaktoni
   footer_menu_support: Mbështetje
   footer_menu_terms: Termat
   footer_menu_privacy: Politika e Privatësisë
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: ORA e KODIMIT
   learn_banner_blurb: Try a one-hour tutorial designed for all ages in over 45 languages.  Join
     millions of students and teachers in over 180 countries starting with an Hour
     of Code.
   learn_banner_beyond: Want to keep learning?  <a id='learn_banner_beyond'>Go beyond
     an hour</a>
-  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
+  learn_banner_beyond_markdown: Deshironi te vazhdoni te mesoni (Shkoni me tutje se
+    vetem nje ore)
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Mesuesit: mbani nje ore kodi ose lexoni guiden
+    e pjesemarrjes. '
   tutorial_dance2019_name: Dance Party
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -5558,11 +5566,12 @@ sq:
   tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
     an algorithm as a set of step-by-step directions. Students learn to create, test,
     and fix an algorithm to complete a specific task. '
-  tutorial_kibodrop_longdescription: Engineering is about persistence and grit. Today
-    the students will become engineers, learning the steps of the Engineering Design
-    Process. They will create models out of craft and recycled materials, then they
-    will test the sturdiness of their models by dropping them from ankle height. This
-    is an unplugged activity; KIBO robots are optional.
+  tutorial_kibodrop_longdescription: Inxhinieria eshte shume e lidhur me qendrueshmerine
+    dhe punen. Sot nxenesit do te behen inxhiniere, duke mesuar hapat e procesit te
+    dizajnimit inxhinierik. Do te krijojne modele nga materialet e recikluara, dhe
+    pastaj do ta testojne qendrueshmerine e modeleve te tyre duke i leshuar ato nga
+    nje lartesi. Ky eshte nje aktiviteti i cili nuk kerkon lidhje me kompjuter; robotet
+    KIBO jane opsional.
   tutorial_ozobotcolor1_longdescription: Students will learn the basic functionality
     of Ozobot, including how to calibrate the bot's sensors, and how to draw lines
     for the bot to follow.
@@ -7241,7 +7250,8 @@ sq:
   tutorial_irobotphone_string_platforms: All modern browsers
   tutorial_codeguppydraw_string_platforms: All modern browsers
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_meeempathy_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -9313,7 +9323,8 @@ sq:
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: All modern browsers
   tutorial_rpisensehat_string_platforms: All modern browsers
-  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_mee_string_platforms: All modern browsers, Mac, Windows, Chromebook, iPhone,
+    iPad, Android phone, Android tablet
   tutorial_kuborobo_string_platforms: Unplugged
   tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
     iPads, modern Android phones, iPhones
@@ -9820,10 +9831,12 @@ sq:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10151,8 +10164,8 @@ sq:
   tutorial_microsoftforest_string_platforms: All modern browsers
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: All modern browsers
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: All modern browsers, Mac, Windows,
+    Chromebook, iPhone, iPad, Android phone, Android tablet
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: All modern browsers, Screen reader
   tutorial_codeartportrait_string_platforms: All modern browsers, Android tablet,
@@ -10542,6 +10555,10 @@ sq:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -10883,6 +10900,18 @@ sq:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Grades 2-5
   tutorial_rpledfirefly_string_detail_grades: Grades 6-8
   tutorial_rpcharting_string_detail_grades: Grades 9+
@@ -10975,6 +11004,10 @@ sq:
   tutorial_nasapackage_string_detail_grades: Grades 6-8
   tutorial_nasalunar_string_detail_grades: Grades 6-8
   tutorial_meeestate_string_detail_grades: Grades 2+
+  tutorial_imagipixelart_string_detail_grades: Grades 2-8
+  tutorial_kcjhealth_string_detail_grades: Grades 6+
+  tutorial_msftwakanda_string_detail_grades: Grades 6+
+  tutorial_nafbrand_string_detail_grades: Grades 9+
   tutorial_rpccw_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_rpledfirefly_string_platforms: All modern browsers
@@ -11092,8 +11125,14 @@ sq:
   tutorial_nasaorbit_string_platforms: All modern browsers
   tutorial_nasapackage_string_platforms: All modern browsers
   tutorial_nasalunar_string_platforms: All modern browsers, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: All modern browsers
+  tutorial_msftwakanda_string_platforms: All modern browsers
+  tutorial_nafbrand_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11187,6 +11226,10 @@ sq:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Blocks
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11283,29 +11326,10 @@ sq:
   tutorial_nasapackage_string_detail_programming_languages: Blocks
   tutorial_nasalunar_string_detail_programming_languages: Blocks, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Blocks, Python
-  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
-    animations in this 1 hour crash course!
-  tutorial_imagipixelart_name: Code your own pixel art!
-  tutorial_imagipixelart_string_detail_grades: Grades 2-8
-  tutorial_imagipixelart_string_detail_platforms: ''
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
-    Windows phone, Android phone, iPhone
-  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
-    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
-  tutorial_kcjhealth_name: The Health & Well-Being Challenge
-  tutorial_kcjhealth_string_detail_grades: Grades 6+
-  tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
-  tutorial_kcjhealth_string_platforms: All modern browsers
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
-    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
-    ''Black Panther: Wakanda Forever''!'
-  tutorial_msftwakanda_name: Long Live Wakanda
-  tutorial_msftwakanda_string_detail_grades: Grades 6+
-  tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
-  tutorial_msftwakanda_string_platforms: All modern browsers
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: Blocks
+  tutorial_msftwakanda_string_detail_programming_languages: Blocks
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
@@ -11362,6 +11386,13 @@ sq:
   all: All
   dont_know: I don't know
   language_label: Language
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

@@ -48,14 +48,15 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "standalone_app_name": "science"
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-11-04T03:28:17.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-11-04T03:28:17.756+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_afterChange\\\"\"],\"cloned_from\":\"csc_particles_phys_afterChange\"},{\"changed_at\":\"2022-11-04 17:03:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 17:04:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 17:04:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 00:44:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 00:45:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 00:47:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 20:30:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 21:07:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 21:13:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-09 19:30:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-04T03:28:17.756+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_afterChange\\\"\"],\"cloned_from\":\"csc_particles_phys_afterChange\"},{\"changed_at\":\"2022-11-04 17:03:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 17:04:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 17:04:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 00:44:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 00:45:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 00:47:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 20:30:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 21:07:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 21:13:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-09 19:30:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-12-01 22:09:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-03 19:35:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -64,51 +65,51 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn" editable="false">
+            <block type="procedures_callnoreturn" deletable="false" editable="false" can_disconnect_from_parent="false">
               <mutation name="LabSetup"/>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching">
+        <block type="gamelab_checkTouching" deletable="false">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
               <field name="ANIMATION">"baking_soda"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
               <field name="ANIMATION">"lemon_juice"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_setAnimation">
+            <block type="gamelab_setAnimation" deletable="false" can_disconnect_from_parent="false">
               <field name="ANIMATION">"beaker_2"</field>
               <value name="THIS">
-                <block type="gamelab_allSpritesWithAnimation">
+                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                   <field name="ANIMATION">"lemon_juice"</field>
                 </block>
               </value>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching">
+        <block type="gamelab_checkTouching" deletable="false">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
               <field name="ANIMATION">"lemon_juice"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
               <field name="ANIMATION">"science_microscope"</field>
             </block>
           </value>
           <next>
-            <block type="procedures_callnoreturn">
+            <block type="procedures_callnoreturn" deletable="false" can_disconnect_from_parent="false">
               <mutation name="MicroscopeSetupBEFORE"/>
               <next>
-                <block type="ParticlesBlocks_statesOfMatter2">
+                <block type="ParticlesBlocks_statesOfMatter2" deletable="false" can_disconnect_from_parent="false">
                   <field name="COSTUME">"lemon_particle"</field>
                   <field name="BEHAVIOR">"liquid"</field>
                 </block>
@@ -116,27 +117,27 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching">
+        <block type="gamelab_checkTouching" deletable="false">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
               <field name="ANIMATION">"beaker_2"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
               <field name="ANIMATION">"science_microscope"</field>
             </block>
           </value>
           <next>
-            <block type="procedures_callnoreturn">
+            <block type="procedures_callnoreturn" deletable="false" can_disconnect_from_parent="false">
               <mutation name="MicroscopeSetupAFTER"/>
               <next>
-                <block type="ParticlesBlocks_statesOfMatter2">
+                <block type="ParticlesBlocks_statesOfMatter2" deletable="false" can_disconnect_from_parent="false">
                   <field name="COSTUME">"mixed_soda_particle"</field>
                   <field name="BEHAVIOR">"liquid"</field>
                   <next>
-                    <block type="ParticlesBlocks_statesOfMatter2">
+                    <block type="ParticlesBlocks_statesOfMatter2" deletable="false" can_disconnect_from_parent="false">
                       <field name="COSTUME">"baking_soda_particle"</field>
                       <field name="BEHAVIOR">"gas"</field>
                     </block>
@@ -145,6 +146,15 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_callnoreturn" editable="false">
+          <mutation name="LabSetup"/>
+        </block>
+        <block type="procedures_callnoreturn" uservisible="false">
+          <mutation name="MicroscopeSetupBEFORE"/>
+        </block>
+        <block type="procedures_callnoreturn" uservisible="false">
+          <mutation name="MicroscopeSetupAFTER"/>
         </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
@@ -205,7 +215,7 @@
                                       </value>
                                       <next>
                                         <block type="gamelab_makeNewSpriteAnon">
-                                          <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                                          <field name="ANIMATION_NAME">"sciencetist_3b"</field>
                                           <value name="LOCATION">
                                             <block type="gamelab_location_picker">
                                               <field name="LOCATION">{"x":356,"y":308}</field>
@@ -227,15 +237,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="procedures_callnoreturn" editable="false" uservisible="false">
-          <mutation name="LabSetup"/>
-        </block>
-        <block type="procedures_callnoreturn" uservisible="false">
-          <mutation name="MicroscopeSetupBEFORE"/>
-        </block>
-        <block type="procedures_callnoreturn" uservisible="false">
-          <mutation name="MicroscopeSetupAFTER"/>
         </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
@@ -279,7 +280,7 @@
                               </value>
                               <next>
                                 <block type="gamelab_makeNewSpriteAnon">
-                                  <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                                  <field name="ANIMATION_NAME">"sciencetist_3b"</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
                                       <field name="LOCATION">{"x":89,"y":295}</field>
@@ -308,7 +309,7 @@
               </value>
               <next>
                 <block type="gamelab_makeNewSpriteAnon" movable="false">
-                  <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                  <field name="ANIMATION_NAME">"sciencetist_3b"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" movable="false">
                       <field name="LOCATION">{"x":346,"y":257}</field>
@@ -425,7 +426,7 @@
                   </value>
                   <next>
                     <block type="gamelab_makeNumSprites" uservisible="false">
-                      <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                      <field name="ANIMATION_NAME">"sciencetist_3b"</field>
                       <value name="NUM">
                         <block type="math_number" uservisible="false">
                           <field name="NUM">30</field>

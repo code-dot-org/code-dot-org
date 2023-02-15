@@ -586,7 +586,6 @@
         "Dance_Party_11b": "Artıq rəqs vaxtıdır! Siz sol ox düyməsini basdığınız zaman pişik dab hərəkətini edir. Sağ ox düyməsini basdığınızda Robotu bir dəfə \"at\" və yuxarı ox düyməsini basdıqda bir dəfə \"əl çalın\".\n\n\\*\\* Düymələrdən istifadə edərək robot bacardıqca tez düş-alqış-düş-alqış etməlidir! \\*\\*",
         "Dance_Party_12": "Rəqs etməkdən həzz alın! Dostlarınızla bölüşmək üçün öz rəqsinizi yaradın.",
         "Escape Room Example": "# Otaqdan Qaçış\n\nBugünkü atelyedə bir otaqdan qaçma tətbiqinin hazırlanması üzərində işləyəcəksiniz! Bu səviyyə, yaradacağınız şeyi hiss etmək üçün ətrafında oynamalı olduğunuz bir nümunə tətbiqə malikdir.\n\n# Bunu et\n\n-   Tətbiqi başlatmaq üçün RUN düyməsini basın\n-   Qapını açacaq açarı tapmağa çalışın.",
-        "Fish Tank 4-validated_2021": "Akvariumlarımızın suya ehtiyacı var!\n\"Blockly\"blok[0]-dan istifadə edərək arxa fonu istədiyiniz rəng edin. Biz göyü məsləhət görürük!  ",
         "Fish Tank 7-validated": "Alət qutusuna bir çox yeni blok əlavə etdik.\n\nBalıq tankını xüsusi etmək üçün onlarla oyna! ",
         "Fish Tank 7-validated_2019": "Alət qutusuna bir çox yeni blok əlavə etdik.\n\nBalıq tankını xüsusi etmək üçün onlarla oyna! ",
         "Fish Tank 7-validated_2020": "Alət qutusuna bir çox yeni blok əlavə etdik.\n\nBalıq tankını xüsusi etmək üçün onlarla oyna! ",
@@ -2090,7 +2089,6 @@
         "csp-pre-survey-2017-q36-e_2018": "Başqa səbəbə görə narahatam:",
         "csp-pre-survey-2017-q38": "Əgər belədirsə, indiki informatika dərsinizdən əvvəl hansı kompüter elmləri kursunu keçmisiniz?",
         "csp-pre-survey-2017-q38_2018": "Əgər belədirsə, indiki informatika dərsinizdən əvvəl hansı kompüter elmləri kursunu keçmisiniz?",
-        "ramp_artist_loops62022": "Bu pilləkən daha böyükdür, lakin sonuncu tapmaca ilə eyni miqdarda kod tələb edir!\n\nTapmacanı tamamlamaq üçün bu döngəni düzəldin.\n",
         "2-3 Artist Loops 2": "İndi hüceyrəni qabıq etmək üçün təkrar blokdan istifadə edin.",
         "CSD U2 Image Tag 1_2018": "div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n\\<ətraflı>\n\n\\<xülasə>\n<strong>Şəkilləri necə əlavə edə bilərəm?</strong>\n\\</xülasə>\n\n`<img>` teqi sizə veb səhifənizdə şəkilləri göstərməyə imkan verir. <br><br>\n\nMisal:\n\n<pre>&lt;img src=\"dog.png\" alt=\"it tullanır\"/&gt;</pre><br><br>\n\nBrauzerə hansı fayldan istifadə edəcəyini bildirmək üçün mötərizədə \\<img> teqinə **atribut** adlanan əlavə məlumat əlavə edilir. `src` atributu **s**ou**rc**e mənasını verir və şəklin adını bildirir. Şəkil fayllarının adlarına kompüterin hansı şəkil növü ilə işlədiyini bildirən genişlənmələr daxildir. Ümumi uzantılar .jpg, .jpeg, .png-dir. <br><br>\n\nsrc atributuna malik olmaqla yanaşı, şəkil elementləri də şəkli təsvir edən `alt` atributuna malikdir. Bu, görüntünün yüklənməməsi və ya görmə qabiliyyəti ilə bağlı problemi olan insanlar üçün vacibdir. <br><br>\n\n`<img>` teqi **özünü bağlayan teq** nümunəsidir, çünki o, bir teqdə başlayır və bağlanır. Bunu qeyd etmək üçün adətən şəkil etiketinin sonundakı yaxın etiketinə daxil olan `/` işarəsini qoyuruq.\n\n</details>\n<ətraflı>\n<xülasə>\n<strong>Niyə şəkil teqinin bağlanma teqi yoxdur?</strong>\n</xülasə>\nŞəkil teqinin bağlanma teqinə ehtiyacı yoxdur, çünki teqlərə bükülməli olan mətn məzmunu yoxdur. Ekranda görünən məzmun etiketlər atributları vasitəsilə müəyyən edilir.\n</details>\n<ətraflı>\n<xülasə>\n<strong>Atribut nədir?</strong>\n</xülasə>\n\nAtributlar etiketə daxil edilən əlavə məlumatdır. Atributların adları və dəyərləri var. Ad hansı növ məlumatın verildiyini bildirir və sonra dəyər həmin etiket üçün xüsusi məlumatı verir.\n\nMəsələn, \\<img> teqlərinin iki atributu var, src və alt. src şəkil faylının adını təyin edir və alt brauzerə oxuna bilən mətndə təsvirin nə olduğunu bildirir.\n\n</details>\n</div>\n\n# Şəkillər\n\nSizin üçün İt vs Pişik veb səhifəsi açıldı. Köpək şəkli artıq aşağıdakı veb səhifəyə əlavə edilib. `cat.jpeg` şəklini pişik başlığının altındakı səhifəyə əlavə etmək üçün şəkil etiketindən istifadə edin.",
         "CSD U2 css elements freeplay_2022": "# CSS Veb səhifınizə əlavə edin\n\nŞəxsi Stilinizdə Mini-Layihənizdə başlatdığınız CSS layihəsinə əlavə etmək üçün yeni biliklərinizdən istifadə edin. Həmin dərs üçün yaratdığınız veb səhifə aşağı köçürülüb olunub - şəkillərinizə bir az üslub əlavə edin!",
@@ -2195,7 +2193,9 @@
         "ramp_artist_loops7_2019": "Bir nümunə axtarın və döngələrdən istifadə edərək bu kodu qısaltın!",
         "ramp_artist_loops7_2020": "Bir nümunə axtarın və döngələrdən istifadə edərək bu kodu qısaltın!",
         "test_anonymous_student_survey_next_class": "Bu dərsdən sonra nə edəcəksiniz?",
-        "test_anonymous_student_survey_why_class": "Niyə bu dərsi keçirirsən? Ən azı iki səbəb göstərin."
+        "test_anonymous_student_survey_why_class": "Niyə bu dərsi keçirirsən? Ən azı iki səbəb göstərin.",
+        "Fish Tank 4-validated_2021": "Akvariumlarımızın suya ehtiyacı var!\n\"Blockly\"blok[0]-dan istifadə edərək arxa fonu istədiyiniz rəng edin. Biz göyü məsləhət görürük!  ",
+        "ramp_artist_loops62022": "Bu pilləkən daha böyükdür, lakin sonuncu tapmaca ilə eyni miqdarda kod tələb edir!\n\nTapmacanı tamamlamaq üçün bu döngəni düzəldin.\n"
       }
     }
   }

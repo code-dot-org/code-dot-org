@@ -5944,85 +5944,186 @@
           "progression_name": "Istruzioni del Sondaggio Post-Corso"
         },
         "9a692bd5-9de8-4718-9518-f14949953885": {
+          "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato».",
           "tips": [
             null
           ]
         },
+        "b0d9f9cb-d953-47a3-9e09-3dd5d822d198": {
+          "description": "## In fase di creazione della classe\n\n1.  Se non ne hanno già uno, chiedi agli studenti di creare un account Code Studio all'indirizzo <https://studio.code.org> \n2.  Condividi con gli studenti la sezione Unisciti all'URL e chiedi loro di raggiungerla per entrare nella tua sezione\n    -   Puoi confermare che uno studente si è iscritto con successo alla tua sezione aprendo la pagina di avanzamento della sezione nella home page del docente e premendo aggiorna quando gli studenti si iscrivono. Gli studenti dovrebbero vedere una piccola barra verde nella parte superiore della pagina che dice «Ti sei iscritto con successo...» \n3.  A partire da [studio.code.org]a[1] , chiedi agli studenti di individuare il riquadro Alla scoperta dell'informatica e fare clic su «Visualizza corso», quindi passare all'Unità 1.\n\nUna volta che gli studenti avranno consultato la pagina riepilogativa dell'Unità 1, saranno pronti per rispondere al sondaggio pre-corso del CSD"
+        },
         "7dfa48db-7c8e-4682-b804-844a5d067be1": {
+          "description": "#### Importante! Chiedi ai tuoi studenti di partecipare al sondaggio pre-corso CSD!\n\nGli studenti possono trovare un link al sondaggio in Code Studio come primo elemento nella pagina di panoramica dell'Unità 1. Per garantire che gli studenti partecipino al sondaggio solo al momento opportuno, questo viene «bloccato» e non può essere visualizzato fino a quando non lo «sblocchi». L'articolo di supporto [Come amministrare una valutazione bloccata](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) fornisce dettagli su come eseguire questa operazione quando si è pronti. Tieni presente che le istruzioni per la gestione di una valutazione e di un sondaggio sono le stesse.    \n\n**Quanto tempo è necessario?** Il sondaggio richiede del tempo: contiene circa 30 domande. Potresti prendere in considerazione l'idea di somministrarlo a scuola in una giornata di ordinaria amministrazione o come primo compito a casa.\n\n**Quando devo consegnare il sondaggio?** Poiché si tratta di un sondaggio preliminare al corso, è importante che gli studenti lo completino il più presto possibile prima che abbiano avuto molta (o nessuna) esposizione alla classe, in modo da poter valutare con precisione i cambiamenti negli atteggiamenti e nelle convinzioni causati dal corso.",
           "tips": [
             null
           ]
         },
         "bf8c5749-5654-4b32-b8d0-d07707a43e5c": {
+          "name": "Porre le basi",
+          "description": "**Richiesta:** cosa rende qualcuno un buon risolutore di problemi? Preparati a condividere tre idee con il tuo gruppo.",
           "tips": [
             null
           ]
         },
         "9c4081bd-6027-4900-b3a9-f5d81c695753": {
+          "description": "**Discussione:** consenti agli studenti di condividere le risposte al tavolo in gruppo o con un partner, poi chiedi a chi si sente a proprio agio di condividerle con tutta la classe.",
           "tips": [
             null
           ]
         },
+        "af8ff534-e0ff-450d-84b1-fe561faa05be": {
+          "description": "Sono tutte ottime idee! In informatica, dobbiamo risolvere problemi in continuazione, quindi esamineremo tutte queste capacità di risoluzione dei problemi oggi e per il resto del corso. La maggior parte della risoluzione dei problemi che le persone svolgono in informatica avviene in team. Oggi lavoreremo in squadra per risolvere un problema divertente che non ha bisogno di computer. Mentre lavori su quel problema, ecco una domanda a cui puoi pensare."
+        },
+        "4d6c41eb-f05a-4942-acda-3b6b704e6417": {
+          "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
+        },
+        "76dbf17b-16f9-481d-abdd-e62d672077bd": {
+          "name": "Costruire una barca in alluminio",
+          "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
+        "a658f16f-0d46-48cd-aaca-f788bd6e1088": {
+          "description": "Oggi costruiremo barche in alluminio. Avrete l'opportunità di costruire almeno due barche e di fare esperienza con ognuna di esse per migliorare i vostri progetti. Prima di iniziare, decidete in gruppo che tipo di progetto vorreste realizzare con la vostra prima barca. Annota le tue idee e gli eventuali punti deboli di questo progetto nella tua guida alle attività."
+        },
         "95513cb2-de57-4d2a-bfcd-1f163f44edd6": {
+          "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
             null
           ]
         },
         "0667b5fd-1f7d-4f5b-a663-908f7de1a469": {
+          "name": "Obiettivi e regole",
+          "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
             null
           ]
         },
         "3420d870-7344-4f9c-bf08-01a81fe4c3d6": {
+          "name": "Elabora un piano",
+          "description": "Concedi agli studenti un paio di minuti per discutere in gruppo dell'approccio che adotteranno con questa prima barca. Una volta che i gruppi avranno annotato le loro idee e alcuni possibili punti deboli, potranno rivolgersi a te per prendere il foglio di alluminio e iniziare a costruire le rispettive barche.",
           "tips": [
             null
           ]
+        },
+        "4e00ff11-13c5-4dc7-853e-d107de9c6526": {
+          "name": "Metti alla prova la tua barca",
+          "description": "Una volta predisposti i gruppi, chiedi loro di mettere alla prova le rispettive barche facendo cadere singoli monetine nella barca. Ricorda loro le regole, in particolare che non possono toccare o regolare le barche una volta che sono in acqua. Chiedi loro di annotare nelle loro guide di attività, il numero totale di monetine contenute."
+        },
+        "34b886d9-1bd6-4860-92f9-e56e213a9a83": {
+          "name": "Valuta e migliora",
+          "description": "Questo primo tentativo di costruire le nostre barche è stato solo per familiarizzare con la sfida. Costruiremo tutti una seconda barca e vedremo se possiamo aumentare la quantità di monetine contenute nelle nostre barche. Prima di iniziare però, vediamo cosa possiamo imparare da questa prova."
         },
         "64e1499c-0030-4aa5-aa26-6711a689ad83": {
+          "description": "**Condividi:** chiedi agli studenti di condividere i risultati della loro prima corsa con i gruppi vicini. Chiedi ai gruppi di concentrarsi in particolare su quale sia stato l'eventuale difetto della loro barca (ad esempio non era abbastanza profonda, era instabile, ecc.) e di riflettere su come aggirare questi problemi.",
           "tips": [
             null
           ]
+        },
+        "a50d517a-d000-4ace-a66e-94088a60cda2": {
+          "description": "### Sviluppa un piano\n\n\\*\\*Richiesta: \\*\\* Ora che hai avuto la possibilità di imparare dal primo ciclo di costruzione di barche, ripetiamo la stessa attività. Innanzitutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò e ti darò un nuovo pezzo di pellicola.\n\n**Supporto**: mentre circoli da un gruppo all'altro, fai domande sull'obiettivo del gruppo nella riprogettazione. Es: «Quale aspetto della tua barca necessitava di maggiori miglioramenti?» «Quali idee di altri gruppi volevi integrare nelle tue?» «Hai sentito il bisogno di riprogettare completamente la tua barca o di apportare solo piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro un nuovo pezzo di foglio d'alluminio e chiedi a ciascuno di loro di costruire una nuova barca.\n\n### Metti alla prova la tua barca\n\nI gruppi possono mettere alla prova i propri progetti come prima e registrare i risultati sulle proprie guide di attività."
         },
         "b2e287ee-cae3-4d61-917c-d1bd94d023c2": {
-          "name": "Rifletti"
+          "name": "Rifletti",
+          "description": "**Transizione**: chiedi agli studenti della classe di tornare al proprio posto per riflettere sull'attività."
+        },
+        "9452a0ba-bc38-4d08-9ed0-0c801a22b22f": {
+          "name": "Rifletti sulla sfida",
+          "description": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**"
+        },
+        "76c211b9-7edc-48ad-a080-90769956789c": {
+          "description": "**Discussione**: hai lavorato in team per questa attività. In che modo il lavoro in team ha reso questa attività più semplice e impegnativa? Cosa ha aiutato il tuo gruppo a superare queste sfide?"
         },
         "cc9820ba-547a-4cee-a8d8-2d36e88c490b": {
+          "description": "**Discussione**: concedi agli studenti il tempo di condividere i propri pensieri con la classe.",
           "tips": [
             null
           ]
         },
+        "cc8446a8-1bf0-481f-baa3-25a5042ec52c": {
+          "description": "Tutti i tuoi pensieri su queste domande sono stati fantastici. Faremo molto lavoro di squadra in questa classe. Potresti essere abituato a pensare che l'informatica riguardi solo i computer, ma l'informatica riguarda principalmente la risoluzione di problemi e questa fase di solito si svolge in squadra. Anche molte altre parti di questa attività, come il miglioramento dei progetti e la costruzione di oggetti, saranno una componente importante di questo corso. Spero che tu sia entusiasta per quest'anno. Domani inizieremo ad approfondire la mera soluzione dei problemi."
+        },
+        "628ed7ee-3bdd-4492-8a0a-854bed600b93": {
+          "name": "Riflessioni sui problemi",
+          "description": "**Discussione:** Usiamo il termine «problema» per fare riferimento a molte situazioni diverse. Posso dire di avere un problema con i compiti, un problema con mio fratello e un problema con la mia macchina, ma con queste tre espressioni si intendono cose molto diverse. Voglio che, utilizzando un foglio per gli appunti, riflettiate sul maggior numero di tipologie di problemi e che siate pronti a condividerli con la classe."
+        },
         "ccf1e3ac-6263-42ae-a4b8-4e4c601d2617": {
+          "description": "**Discussione:** per un paio di minuti gli studenti dovrebbero annotare silenziosamente le loro idee per iscritto. Subito dopo invitali a condividere con il compagno ciò che hanno scritto e poi finalmente riunisci l'intera classe per creare un elenco a livello di classe. Annota alla lavagna tutti i diversi tipi di problemi a cui gli studenti pensano o da qualche altra parte in modo che siano chiaramente visibili.",
           "tips": [
             null,
             null
           ]
         },
+        "893a97b9-a0c3-4bb2-ba1b-231c0acfe5f9": {
+          "description": "In molti diversi ambiti della nostra vita, è chiaro che ci confrontiamo con dei problemi. A seconda del contesto, questa parola può avere molti significati diversi. Oggi esamineremo alcuni passaggi che possiamo usare per risolvere ogni tipo di problema."
+        },
+        "c7ec4c53-9517-4113-bb4b-34685afa11bb": {
+          "description": "**Domanda del giorno: quali sono alcuni passaggi comuni che possiamo usare per risolvere tanti tipi diversi di problemi?**"
+        },
+        "db081221-790e-4c39-9ac2-4cd7ec618da5": {
+          "description": "Risolviamo problemi in continuazione, ma non pensiamo spesso a come risolverli. Avere una strategia o un processo per affrontare molti tipi diversi di problemi può renderti un risolutore di problemi più attento, creativo e di successo."
+        },
+        "023c6b38-324c-47cd-8619-7c6b75227e2b": {
+          "description": "**Distribuzione**: distribuisci copie delle guide alle attività."
+        },
         "f71ff33f-68b6-4385-940d-3532a4eae4f2": {
-          "name": "Il Processo di Risoluzione dei Problemi",
+          "name": "Il processo di risoluzione dei problemi",
+          "description": "**Video:** Guarda su Code Studio il video sul processo di risoluzione dei problemi\n\n**Domande da prendere in considerazione in relazione al video:**\n\n-   Come sei riuscito a seguire il processo di risoluzione dei problemi nell'ultima lezione?\n-   Come potresti usare questo processo per risolvere un problema della tua vita quotidiana?",
           "tips": [
             null
           ],
-          "progression_name": "Video: Processo di Risoluzione di Problemi"
+          "progression_name": "Video: processo di risoluzione di problemi"
+        },
+        "417d4a9f-fa7d-409c-9bdb-6d22d1e98908": {
+          "description": "Introduci e ripassa in classe le descrizioni delle quattro fasi del procedimento leggendole ad alta voce. Rispondi o discuti qualsiasi domanda degli studenti sul procedimento, altrimenti passa al completamento della prima sezione della guida alle attività."
+        },
+        "957ef2cd-b951-40d7-933b-3e2b61fd10a8": {
+          "name": "Che aspetto ha",
+          "description": "Chiedi agli studenti di completare la prima sezione della guida alle attività, compilando i passaggi dell'attività del giorno precedente che secondo loro rientrano in ogni fase del processo di risoluzione dei problemi."
         },
         "f9167a6d-5aac-465c-8021-e17c9e90b60c": {
+          "description": "**Discussione:** Una volta completata la prima sezione della guida alle attività, chiedi loro di condividerla con i compagni e poi con l'intera classe.",
           "tips": [
             null
           ]
+        },
+        "b02dc16e-b054-4f17-9168-1ab069c9ea75": {
+          "name": "Un problema che sei bravo a risolvere",
+          "description": "Chiedi agli studenti di selezionare un tipo di problema che pensano di essere davvero bravi a risolvere. Usa l'elenco dei problemi già presenti alla lavagna per aiutare gli studenti a pensare al loro tipo di problema. Ancora una volta concedi loro un paio di minuti per registrare in silenzio le fasi del loro processo prima di condividerlo con un compagno."
         },
         "2aa9ceeb-af8c-4332-bcb8-c71ba1724d2a": {
+          "description": "**Discussione:** Chiedi agli studenti di condividere con un compagno ciò che hanno scritto e poi ancora una volta di condurre una discussione sulle conversazioni che hanno avuto. Chiedi agli studenti di parlare dei singoli passaggi che stanno utilizzando per risolvere il problema prescelto, ma anche di indicare i casi in cui gli stessi tipi di strategie ricorrono più volte.",
           "tips": [
             null
           ]
+        },
+        "bbd2337a-114c-4765-b524-186cf57211e2": {
+          "name": "Un problema che tu e un compagno di classe volete risolvere meglio",
+          "description": "Crea coppie di studenti e chiedi loro di completare la sezione finale della guida alle attività. Dovranno scegliere un tipo di problema che entrambi i membri del gruppo desiderano migliorare e quindi scrivere i passaggi che userebbero per risolverlo, nell'ambito del processo di risoluzione dei problemi.\n\n**Discussione:** organizza un'ultima attività di condivisione in cui gli studenti spiegano come userebbero il processo di risoluzione dei problemi per affrontare un problema meno familiare."
         },
         "bdc940b9-c99e-450d-8f17-2b1e7e07d33f": {
+          "name": "Realizza i cartelloni con i passaggi",
+          "description": "**Distribuzione:** consegna a ogni gruppo la carta per realizzare un cartellone.",
           "tips": [
             null
           ]
         },
+        "30ac5447-b7f3-466a-bedd-f8483c50b053": {
+          "description": "**Discussione:** dai tavoli, scegli uno dei problemi su cui hai lavorato oggi e crea un cartellone che mostri come il processo di risoluzione dei problemi può essere utilizzato per aiutarti a risolverlo.\n\n**Girando tra i banchi:** mentre gli studenti lavorano sui loro cartelloni, poni loro domande sui diversi problemi e in che modo i passaggi per risolverli sono correlati ai passaggi standard del processo di risoluzione dei problemi.\n\n**Condividi:** fai condividere agli studenti il proprio cartellone con il resto della classe."
+        },
+        "640e3f66-36f9-4da9-b850-5c03bae70f12": {
+          "description": "**Domanda del giorno: quali sono alcuni passaggi comuni che possiamo usare per risolvere tanti tipi diversi di problemi?**"
+        },
         "88761bd9-a2f6-4621-be38-b1dbadedbcf4": {
+          "description": "**Discussione:** oggi hai vagliato diversi tipi di problemi, ma tutti possono essere affrontati con il nostro procedimento di risoluzione dei problemi. Per ogni fase del procedimento, pensa a un suggerimento generale che potrebbe essere utile indipendentemente dal problema che qualcuno sta cercando di risolvere.",
           "tips": [
             null
           ]
+        },
+        "92ffc8f1-a6af-44be-a2f9-61580660f285": {
+          "description": "Ho iniziato dicendo che un procedimento formalizzato di risoluzione dei problemi potrebbe aiutarci a risolvere tutti i tipi di problemi. Oggi abbiamo iniziato a capire come si presenta questo processo in una varietà di situazioni di vita reale. Domani inizieremo a mettere in atto questo processo per vedere come funziona effettivamente."
+        },
+        "de77bca6-021d-485b-afe2-c923080827ce": {
+          "name": "Discussione dell'articolo",
+          "description": "Leggi l'articolo [Stai risolvendo il problema sbagliato](https://uxmag.com/articles/you-are-solving-the-wrong-problem)\n\n1.  Cosa c'era di interessante in questo articolo?\n2.  Quali eventi attuali pensi che dobbiamo esaminare attraverso questo procedimento di risoluzione dei problemi? Perché?"
         },
         "909bef2e-1cba-4c7b-8d9d-2b0ef675fabb": {
           "tips": [
@@ -6098,6 +6199,9 @@
           "tips": [
             null
           ]
+        },
+        "833c817c-2dad-4e3f-919d-3eba339b2028": {
+          "name": "Ingressi e uscite"
         },
         "f58f45ec-972c-4cfc-80d5-b3fb88621914": {
           "tips": [
@@ -6218,35 +6322,57 @@
         "3258b13a-0f05-4f62-bf07-38aca3a745db": {
           "name": "Riflessione"
         },
+        "df73d786-2f5f-4ce6-b86c-63985e354302": {
+          "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
+        },
         "2b30cadb-489b-48a6-9412-77201cf56342": {
           "tips": [
             null
           ]
         },
         "e746898d-927d-4fc4-9055-ce26f22b274d": {
+          "name": "Porre le basi",
+          "description": "**Richiesta:** cosa rende qualcuno un buon risolutore di problemi? Preparati a condividere tre idee con il tuo gruppo.",
           "tips": [
             null
           ]
         },
         "9df30447-3817-4adb-8ccb-2fb54a6cc7b5": {
+          "description": "**Discussione:** consenti agli studenti di condividere le risposte al tavolo in gruppo o con un partner, poi chiedi a chi si sente a proprio agio di condividerle con tutta la classe.",
           "tips": [
             null
           ]
         },
+        "70f3c8cc-21a3-42d8-b143-c080dc00183c": {
+          "description": "Sono tutte ottime idee! In informatica, dobbiamo risolvere problemi in continuazione, quindi esamineremo tutte queste capacità di risoluzione dei problemi oggi e per il resto del corso. La maggior parte della risoluzione dei problemi che le persone svolgono in informatica avviene in team. Oggi lavoreremo in squadra per risolvere un problema divertente che non ha bisogno di computer. Mentre lavori su quel problema, ecco una domanda a cui puoi pensare."
+        },
+        "fc2251bd-8842-4b8f-8fd0-026bab4454fd": {
+          "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
+        },
+        "0133c8b4-1bd0-40c9-a4f0-a5ebbfccddd5": {
+          "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
         "9c55da28-8567-4354-83a7-d69f494cc553": {
+          "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
             null
           ]
         },
         "bb2ca753-9e20-4862-a5f8-b46453f8ce94": {
+          "name": "Obiettivi e regole",
+          "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
             null
           ]
         },
         "8a9c7222-2421-496c-ad09-4d055cdcbca8": {
+          "name": "Elabora un piano",
           "tips": [
             null
           ]
+        },
+        "e9de9293-1dea-417b-98d4-8046a6d2435a": {
+          "name": "Valuta e migliora"
         },
         "d816c1a5-90aa-4775-98f0-8325769bfcc0": {
           "tips": [
@@ -6254,12 +6380,27 @@
           ]
         },
         "67a5d084-3fb2-41b1-b97a-e9ebf4009129": {
-          "name": "Rifletti"
+          "name": "Rifletti",
+          "description": "**Transizione**: chiedi agli studenti della classe di tornare al proprio posto per riflettere sull'attività."
+        },
+        "3aab281a-0e2e-41ac-9b5a-94aa6229b632": {
+          "name": "Rifletti sulla sfida",
+          "description": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**"
+        },
+        "3887d56c-e0af-436f-9a1a-23684d55ff13": {
+          "description": "**Discussione**: hai lavorato in team per questa attività. In che modo il lavoro in team ha reso questa attività più semplice e impegnativa? Cosa ha aiutato il tuo gruppo a superare queste sfide?"
         },
         "6963316c-70d1-4a34-8ffc-dbe6db5307c9": {
+          "description": "**Discussione**: concedi agli studenti il tempo di condividere i propri pensieri con la classe.",
           "tips": [
             null
           ]
+        },
+        "e8f5e76f-8926-44d9-880e-a17bb3f798fc": {
+          "description": "Tutti i tuoi pensieri su queste domande sono stati fantastici. Faremo molto lavoro di squadra in questa classe. Potresti essere abituato a pensare che l'informatica riguardi solo i computer, ma l'informatica riguarda principalmente la risoluzione di problemi e questa fase di solito si svolge in squadra. Anche molte altre parti di questa attività, come il miglioramento dei progetti e la costruzione di oggetti, saranno una componente importante di questo corso. Spero che tu sia entusiasta per quest'anno. Domani inizieremo ad approfondire la mera soluzione dei problemi."
+        },
+        "c2045954-0aa7-4467-86af-23b6f3067e70": {
+          "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
         "305aebd8-9daf-4d68-b332-ed969803bced": {
           "tips": [
@@ -6267,29 +6408,48 @@
           ]
         },
         "a6bbc25d-26fa-460d-b468-24e907dfb666": {
+          "name": "Porre le basi",
+          "description": "**Richiesta:** cosa rende qualcuno un buon risolutore di problemi? Preparati a condividere tre idee con il tuo gruppo.",
           "tips": [
             null
           ]
         },
         "58bc8560-30ee-4e4b-8a41-fb60494c8e72": {
+          "description": "**Discussione:** consenti agli studenti di condividere le risposte al tavolo in gruppo o con un partner, poi chiedi a chi si sente a proprio agio di condividerle con tutta la classe.",
           "tips": [
             null
           ]
         },
+        "d04fa75d-7179-4dff-b318-8cb8e45a7481": {
+          "description": "Sono tutte ottime idee! In informatica, dobbiamo risolvere problemi in continuazione, quindi esamineremo tutte queste capacità di risoluzione dei problemi oggi e per il resto del corso. La maggior parte della risoluzione dei problemi che le persone svolgono in informatica avviene in team. Oggi lavoreremo in squadra per risolvere un problema divertente che non ha bisogno di computer. Mentre lavori su quel problema, ecco una domanda a cui puoi pensare."
+        },
+        "3a9827ea-c126-4cb3-b186-361b49d9d4c1": {
+          "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
+        },
+        "ca54fa06-4c7e-479f-b7cc-e9fec8605dc6": {
+          "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
         "3cade706-35ca-4591-8b03-b81c9b3ac155": {
+          "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
             null
           ]
         },
         "a115c9f0-e81d-4614-902b-013b48c73dd3": {
+          "name": "Obiettivi e regole",
+          "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
             null
           ]
         },
         "3ecc7174-3d61-48b2-b527-596c96b2d593": {
+          "name": "Elabora un piano",
           "tips": [
             null
           ]
+        },
+        "71f7568f-7785-4e88-8d34-d9538bfa3963": {
+          "name": "Valuta e migliora"
         },
         "b3e1e318-87e3-41cd-be33-643df5ac2ff1": {
           "tips": [
@@ -6297,12 +6457,27 @@
           ]
         },
         "35e95c35-425b-44e2-9fe6-0c00d79237d6": {
-          "name": "Rifletti"
+          "name": "Rifletti",
+          "description": "**Transizione**: chiedi agli studenti della classe di tornare al proprio posto per riflettere sull'attività."
+        },
+        "2a182d2a-e1d7-4134-ab51-4a9309aa4308": {
+          "name": "Rifletti sulla sfida",
+          "description": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**"
+        },
+        "ea436e6e-1343-4717-bd58-a3030c9bd4a9": {
+          "description": "**Discussione**: hai lavorato in team per questa attività. In che modo il lavoro in team ha reso questa attività più semplice e impegnativa? Cosa ha aiutato il tuo gruppo a superare queste sfide?"
         },
         "b235f058-8080-422e-98a8-8ec5bd825565": {
+          "description": "**Discussione**: concedi agli studenti il tempo di condividere i propri pensieri con la classe.",
           "tips": [
             null
           ]
+        },
+        "ee5969aa-60b7-48db-b559-e874035b97df": {
+          "description": "Tutti i tuoi pensieri su queste domande sono stati fantastici. Faremo molto lavoro di squadra in questa classe. Potresti essere abituato a pensare che l'informatica riguardi solo i computer, ma l'informatica riguarda principalmente la risoluzione di problemi e questa fase di solito si svolge in squadra. Anche molte altre parti di questa attività, come il miglioramento dei progetti e la costruzione di oggetti, saranno una componente importante di questo corso. Spero che tu sia entusiasta per quest'anno. Domani inizieremo ad approfondire la mera soluzione dei problemi."
+        },
+        "c7d3976f-62e3-4a23-b332-d57a740908b3": {
+          "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
         "824d14f1-04c5-4ec9-af8b-8c6717ea9fd0": {
           "tips": [
@@ -6310,29 +6485,48 @@
           ]
         },
         "cdd68f55-79bd-4117-9361-9e9fd0f60d72": {
+          "name": "Porre le basi",
+          "description": "**Richiesta:** cosa rende qualcuno un buon risolutore di problemi? Preparati a condividere tre idee con il tuo gruppo.",
           "tips": [
             null
           ]
         },
         "bb076ec8-2777-4b87-8a6a-ce6f8348a5d5": {
+          "description": "**Discussione:** consenti agli studenti di condividere le risposte al tavolo in gruppo o con un partner, poi chiedi a chi si sente a proprio agio di condividerle con tutta la classe.",
           "tips": [
             null
           ]
         },
+        "1e851aea-3bb7-40b6-9aff-ed37d40b540e": {
+          "description": "Sono tutte ottime idee! In informatica, dobbiamo risolvere problemi in continuazione, quindi esamineremo tutte queste capacità di risoluzione dei problemi oggi e per il resto del corso. La maggior parte della risoluzione dei problemi che le persone svolgono in informatica avviene in team. Oggi lavoreremo in squadra per risolvere un problema divertente che non ha bisogno di computer. Mentre lavori su quel problema, ecco una domanda a cui puoi pensare."
+        },
+        "f061f3ad-ce3a-44aa-8c32-002e71dd6edd": {
+          "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
+        },
+        "40f54f12-c7cc-4289-a720-123df6af617a": {
+          "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
         "e129bba1-faba-47e0-8d48-8cb3d1be8c85": {
+          "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
             null
           ]
         },
         "cf837b19-bc57-4852-929b-cecbace3a881": {
+          "name": "Obiettivi e regole",
+          "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
             null
           ]
         },
         "744ab806-f293-4bdb-b602-2f6f87f67fd7": {
+          "name": "Elabora un piano",
           "tips": [
             null
           ]
+        },
+        "95eca054-2c21-4cd1-a4c5-b405189227a7": {
+          "name": "Valuta e migliora"
         },
         "7a9ae5b8-ad34-48a4-89eb-79178470dc69": {
           "tips": [
@@ -6340,12 +6534,24 @@
           ]
         },
         "215425a6-e4cf-4993-ad77-37a7a54933bd": {
-          "name": "Rifletti"
+          "name": "Rifletti",
+          "description": "**Transizione**: chiedi agli studenti della classe di tornare al proprio posto per riflettere sull'attività."
+        },
+        "52d5cbaa-de46-4d40-848a-c8feeadd2a94": {
+          "name": "Rifletti sulla sfida",
+          "description": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**"
+        },
+        "d758e2df-ca07-4835-b555-f4355f1ec4cb": {
+          "description": "**Discussione**: hai lavorato in team per questa attività. In che modo il lavoro in team ha reso questa attività più semplice e impegnativa? Cosa ha aiutato il tuo gruppo a superare queste sfide?"
         },
         "7f606fd0-c7e7-4499-b1ea-e8d2682e69a4": {
+          "description": "**Discussione**: concedi agli studenti il tempo di condividere i propri pensieri con la classe.",
           "tips": [
             null
           ]
+        },
+        "d26d14b1-60d5-43db-bfa6-3db97d8176b7": {
+          "description": "Tutti i tuoi pensieri su queste domande sono stati fantastici. Faremo molto lavoro di squadra in questa classe. Potresti essere abituato a pensare che l'informatica riguardi solo i computer, ma l'informatica riguarda principalmente la risoluzione di problemi e questa fase di solito si svolge in squadra. Anche molte altre parti di questa attività, come il miglioramento dei progetti e la costruzione di oggetti, saranno una componente importante di questo corso. Spero che tu sia entusiasta per quest'anno. Domani inizieremo ad approfondire la mera soluzione dei problemi."
         },
         "50af75b9-1eb8-46bb-8075-8fbda21f911f": {
           "tips": [
@@ -12194,8 +12400,8 @@
           "progression_name": "Panoramica della Lezione"
         },
         "8044f0e5-2eee-425f-b124-6f80494e5b23": {
-          "name": "Video: Processo di Risoluzione di Problemi",
-          "progression_name": "Video: Processo di Risoluzione di Problemi"
+          "name": "Video: processo di risoluzione di problemi",
+          "progression_name": "Video: processo di risoluzione di problemi"
         },
         "11df93d2-fda9-467b-bb01-71f213fe5346": {
           "name": "Panoramica della Lezione",
@@ -20179,6 +20385,9 @@
           ],
           "progression_name": "Istruzioni del Sondaggio Post-Corso"
         },
+        "e0edb51a-713c-4007-a296-26e1876af1db": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "2e17eccc-2343-4bde-849c-eaf270f343f8": {
           "tips": [
             null
@@ -20196,6 +20405,9 @@
         },
         "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
           "progression_name": "Programmi Campione"
+        },
+        "41038ed3-ea0a-4cb1-b1d0-57661d3258de": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -20224,6 +20436,9 @@
           "tips": [
             null
           ]
+        },
+        "396c0e7f-8bdb-4859-9f67-58be83de7eaa": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "0a01de04-3b8f-4025-864a-8a2f48f9fd09": {
           "tips": [
@@ -20281,6 +20496,9 @@
           "tips": [
             null
           ]
+        },
+        "4bb7d3f2-8c65-4468-8bce-21fbfcde4619": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "11f4055c-bcd6-4b74-8f9a-5d69502955f2": {
           "tips": [
@@ -21001,86 +21219,199 @@
           ],
           "progression_name": "Istruzioni del Sondaggio Post-Corso"
         },
+        "bc58aa76-45ad-40e0-b0b8-70f6ffc0850c": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1JCiMaoKxeREcXotL3XGr5IsbJijyQYUyZytcQgCx_gI/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
+          "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato».",
           "tips": [
             null
           ]
         },
+        "ad03dcc6-515c-4a86-bf14-d0bb13c89769": {
+          "description": "## Prima della lezione\n\n#### Assicurati di essere registrato su Code Studio come account insegnante «verificato»\n\nChiunque può creare un account insegnante su Code Studio, il che significa che abbiamo bisogno di un ulteriore livello di autorizzazione per consentire agli insegnanti di CS Discoveries di vedere valutazioni, chiavi di risposta e qualsiasi altro materiale a cui gli studenti non dovrebbero essere in grado di accedere banalmente. Se hai partecipato a un TeacherCon di Code.org durante l'estate, dovresti già avere questo accesso.\n\nPer verificare di disporre dell'accesso:\n\n1.  Vai alla [pagina panoramica del corso dell'Unità 1](https://studio.code.org/s/csd1-2021)\n2.  Consideri il sondaggio pre-corso di CS Discoveries come la prima «fase» del corso?\n3.  In caso contrario, compila [questo modulo](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Tieni presente che può volerci circa un giorno per diventare un account insegnante verificato, quindi esegui questo passaggio in anticipo!\n\nSe non sei un account insegnante verificato, puoi comunque creare una sezione per la tua classe, ma non sarai in grado di amministrare il sondaggio pre-corso il primo giorno.\n\n#### Crea una sezione di classe su Code Studio.\n\nPer creare una sezione:\n\n1.  Vai alla [Home page del docente](https://studio.code.org/home)\n2.  Fai clic su «Nuova sezione» in «Sezioni della classe»\n3.  Scegli «Accessi via email» \n4.  Nell'apposito spazio, dai un nome alla sezione (ad esempio Periodo CSD 1), il voto dei tuoi studenti, il corso: «Scoperte dell'informatica», l'unità corrente: «Unità 1: Risoluzione dei problemi» e fai clic su «Salva»\n5.  Una volta creata la sezione, fate clic sul nome della sezione\n6.  Nella nuova pagina, vedrai un URL di iscrizione univoco che distribuirai ai tuoi studenti in classe. \n\nPer un video che illustra questi passaggi e altro ancora sulla navigazione del tuo account Code.org, vai al \n[r how-to-videos/csd/2021]"
+        },
+        "32772c7d-26fd-4352-b09c-6a7331500a70": {
+          "description": "## In fase di creazione della classe\n\n1.  Se non ne hanno già uno, chiedi agli studenti di creare un account Code Studio all'indirizzo <https://studio.code.org> \n2.  Condividi con gli studenti la sezione Unisciti all'URL e chiedi loro di raggiungerla per entrare nella tua sezione\n    -   Puoi confermare che uno studente si è iscritto con successo alla tua sezione aprendo la pagina di avanzamento della sezione nella home page del docente e premendo aggiorna quando gli studenti si iscrivono. Gli studenti dovrebbero vedere una piccola barra verde nella parte superiore della pagina che dice «Ti sei iscritto con successo...» \n3.  A partire da [studio.code.org]a[1] , chiedi agli studenti di individuare il riquadro Alla scoperta dell'informatica e fare clic su «Visualizza corso», quindi passare all'Unità 1.\n\nUna volta che gli studenti avranno consultato la pagina riepilogativa dell'Unità 1, saranno pronti per rispondere al sondaggio pre-corso del CSD"
+        },
         "1dca60be-eb7f-40ef-8b91-8ca231c1b14a": {
+          "description": "#### Importante! Chiedi ai tuoi studenti di partecipare al sondaggio pre-corso CSD!\n\nGli studenti possono trovare un link al sondaggio in Code Studio come primo elemento nella pagina di panoramica dell'Unità 1. Per garantire che gli studenti partecipino al sondaggio solo al momento opportuno, questo viene «bloccato» e non può essere visualizzato fino a quando non lo «sblocchi». L'articolo di supporto [Come amministrare una valutazione bloccata](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) fornisce dettagli su come eseguire questa operazione quando si è pronti. Tieni presente che le istruzioni per la gestione di una valutazione e di un sondaggio sono le stesse.    \n\n**Quanto tempo è necessario?** Il sondaggio richiede del tempo: contiene circa 30 domande. Potresti prendere in considerazione l'idea di somministrarlo a scuola in una giornata di ordinaria amministrazione o come primo compito a casa.\n\n**Quando devo consegnare il sondaggio?** Poiché si tratta di un sondaggio preliminare al corso, è importante che gli studenti lo completino il più presto possibile prima che abbiano avuto molta (o nessuna) esposizione alla classe, in modo da poter valutare con precisione i cambiamenti negli atteggiamenti e nelle convinzioni causati dal corso.",
           "tips": [
             null
           ]
         },
         "1c951438-4727-4ea5-84d9-560f7dac9204": {
+          "name": "Porre le basi",
+          "description": "**Richiesta:** cosa rende qualcuno un buon risolutore di problemi? Preparati a condividere tre idee con il tuo gruppo.",
           "tips": [
             null
           ]
         },
         "37d397d0-785f-4dc7-b172-2b51e5757ba3": {
+          "description": "**Discussione:** consenti agli studenti di condividere le risposte al tavolo in gruppo o con un partner, poi chiedi a chi si sente a proprio agio di condividerle con tutta la classe.",
           "tips": [
             null
           ]
         },
+        "4ae4ed17-55d9-4ad4-837d-06cbcaa121d1": {
+          "description": "Sono tutte ottime idee! In informatica, dobbiamo risolvere problemi in continuazione, quindi esamineremo tutte queste capacità di risoluzione dei problemi oggi e per il resto del corso. La maggior parte della risoluzione dei problemi che le persone svolgono in informatica avviene in team. Oggi lavoreremo in squadra per risolvere un problema divertente che non ha bisogno di computer. Mentre lavori su quel problema, ecco una domanda a cui puoi pensare."
+        },
+        "9eb792f3-b6ec-4e1b-a96e-f9bc4bda5247": {
+          "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
+        },
+        "621b00e1-d6b6-4060-b0db-8dee8c8ebb6a": {
+          "name": "Costruire una barca in alluminio",
+          "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
+        "8f694c11-9713-491a-a965-360ddbc1033a": {
+          "description": "Oggi costruiremo barche in alluminio. Avrete l'opportunità di costruire almeno due barche e di fare esperienza con ognuna di esse per migliorare i vostri progetti. Prima di iniziare, decidete in gruppo che tipo di progetto vorreste realizzare con la vostra prima barca. Annota le tue idee e gli eventuali punti deboli di questo progetto nella tua guida alle attività."
+        },
         "5166952d-961b-4ba8-b379-c4101d84b4de": {
+          "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
             null
           ]
         },
         "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
+          "name": "Obiettivi e regole",
+          "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
             null
           ]
         },
         "6470c3f3-0547-4d23-bede-dbac0704a029": {
+          "name": "Elabora un piano",
+          "description": "Concedi agli studenti un paio di minuti per discutere in gruppo dell'approccio che adotteranno con questa prima barca. Una volta che i gruppi avranno annotato le loro idee e alcuni possibili punti deboli, potranno rivolgersi a te per prendere il foglio di alluminio e iniziare a costruire le rispettive barche.",
           "tips": [
             null
           ]
+        },
+        "2b44b34b-743b-4698-bcf9-2b32d2172ac5": {
+          "name": "Metti alla prova la tua barca",
+          "description": "Una volta predisposti i gruppi, chiedi loro di mettere alla prova le rispettive barche facendo cadere singoli monetine nella barca. Ricorda loro le regole, in particolare che non possono toccare o regolare le barche una volta che sono in acqua. Chiedi loro di annotare nelle loro guide di attività, il numero totale di monetine contenute."
+        },
+        "75e6b296-d238-4993-a9f3-2712d896e9c6": {
+          "name": "Valuta e migliora",
+          "description": "Questo primo tentativo di costruire le nostre barche è stato solo per familiarizzare con la sfida. Costruiremo tutti una seconda barca e vedremo se possiamo aumentare la quantità di monetine contenute nelle nostre barche. Prima di iniziare però, vediamo cosa possiamo imparare da questa prova."
         },
         "e1fdc61e-61b5-4b5d-b46a-62a26f7cca05": {
+          "description": "**Condividi:** chiedi agli studenti di condividere i risultati della loro prima corsa con i gruppi vicini. Chiedi ai gruppi di concentrarsi in particolare su quale sia stato l'eventuale difetto della loro barca (ad esempio non era abbastanza profonda, era instabile, ecc.) e di riflettere su come aggirare questi problemi.",
           "tips": [
             null
           ]
+        },
+        "fd85159d-c1a1-484b-a5c6-fed3d2d0cc77": {
+          "description": "### Sviluppa un piano\n\n\\*\\*Richiesta: \\*\\* Ora che hai avuto la possibilità di imparare dal primo ciclo di costruzione di barche, ripetiamo la stessa attività. Innanzitutto, il tuo gruppo svilupperà un nuovo piano. Proprio come prima, annotalo sulla tua guida alle attività e quando sarai pronto tornerò e ti darò un nuovo pezzo di pellicola.\n\n**Supporto**: mentre circoli da un gruppo all'altro, fai domande sull'obiettivo del gruppo nella riprogettazione. Es: «Quale aspetto della tua barca necessitava di maggiori miglioramenti?» «Quali idee di altri gruppi volevi integrare nelle tue?» «Hai sentito il bisogno di riprogettare completamente la tua barca o di apportare solo piccole modifiche?» \n\nUna volta che i gruppi hanno preparato i nuovi piani, dai loro un nuovo pezzo di foglio d'alluminio e chiedi a ciascuno di loro di costruire una nuova barca.\n\n### Metti alla prova la tua barca\n\nI gruppi possono mettere alla prova i propri progetti come prima e registrare i risultati sulle proprie guide di attività."
         },
         "fc1bd727-4c35-4405-a14f-a713bcd7e532": {
-          "name": "Rifletti"
+          "name": "Rifletti",
+          "description": "**Transizione**: chiedi agli studenti della classe di tornare al proprio posto per riflettere sull'attività."
+        },
+        "62597c94-0e74-4478-b491-9427a83a7a2a": {
+          "name": "Rifletti sulla sfida",
+          "description": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**"
+        },
+        "4a8474b0-c86b-4bc6-8813-1a47b5be09e8": {
+          "description": "**Discussione**: hai lavorato in team per questa attività. In che modo il lavoro in team ha reso questa attività più semplice e impegnativa? Cosa ha aiutato il tuo gruppo a superare queste sfide?"
         },
         "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "description": "**Discussione**: concedi agli studenti il tempo di condividere i propri pensieri con la classe.",
           "tips": [
             null
           ]
         },
+        "3d5ff4dc-c2df-4b01-852e-2a3449801046": {
+          "description": "Tutti i tuoi pensieri su queste domande sono stati fantastici. Faremo molto lavoro di squadra in questa classe. Potresti essere abituato a pensare che l'informatica riguardi solo i computer, ma l'informatica riguarda principalmente la risoluzione di problemi e questa fase di solito si svolge in squadra. Anche molte altre parti di questa attività, come il miglioramento dei progetti e la costruzione di oggetti, saranno una componente importante di questo corso. Spero che tu sia entusiasta per quest'anno. Domani inizieremo ad approfondire la mera soluzione dei problemi."
+        },
+        "2a184203-f42f-45e9-8e1a-84c538d98d65": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1GuG1KvOOE6UcNfZClbHsMW50nEpSeKlnytbY4NrOeN0/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
+        "a46854b4-0c89-445c-bb74-76b861c1f7a9": {
+          "name": "Riflessioni sui problemi",
+          "description": "**Discussione:** Usiamo il termine «problema» per fare riferimento a molte situazioni diverse. Posso dire di avere un problema con i compiti, un problema con mio fratello e un problema con la mia macchina, ma con queste tre espressioni si intendono cose molto diverse. Voglio che, utilizzando un foglio per gli appunti, riflettiate sul maggior numero di tipologie di problemi e che siate pronti a condividerli con la classe."
+        },
         "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "description": "**Discussione:** per un paio di minuti gli studenti dovrebbero annotare silenziosamente le loro idee per iscritto. Subito dopo invitali a condividere con il compagno ciò che hanno scritto e poi finalmente riunisci l'intera classe per creare un elenco a livello di classe. Annota alla lavagna tutti i diversi tipi di problemi a cui gli studenti pensano o da qualche altra parte in modo che siano chiaramente visibili.",
           "tips": [
             null,
             null
           ]
         },
+        "889b6e82-6222-44d5-a7e8-d6bea339eb73": {
+          "description": "In molti diversi ambiti della nostra vita, è chiaro che ci confrontiamo con dei problemi. A seconda del contesto, questa parola può avere molti significati diversi. Oggi esamineremo alcuni passaggi che possiamo usare per risolvere ogni tipo di problema."
+        },
+        "1b5c295f-10f1-469e-8cbf-d16b7c19056f": {
+          "description": "**Domanda del giorno: quali sono alcuni passaggi comuni che possiamo usare per risolvere tanti tipi diversi di problemi?**"
+        },
+        "6a21930f-10d3-4f81-9c1d-8fd69681c1ef": {
+          "description": "Risolviamo problemi in continuazione, ma non pensiamo spesso a come risolverli. Avere una strategia o un processo per affrontare molti tipi diversi di problemi può renderti un risolutore di problemi più attento, creativo e di successo."
+        },
+        "9842f2ee-96b6-4407-9dcb-379b048173c3": {
+          "description": "**Distribuzione**: distribuisci copie delle guide alle attività."
+        },
         "23f003b6-2c1b-4e88-a343-f77714a50d89": {
-          "name": "Il Processo di Risoluzione dei Problemi",
+          "name": "Il processo di risoluzione dei problemi",
+          "description": "**Video:** Guarda su Code Studio il video sul processo di risoluzione dei problemi\n\n**Domande da prendere in considerazione in relazione al video:**\n\n-   Come sei riuscito a seguire il processo di risoluzione dei problemi nell'ultima lezione?\n-   Come potresti usare questo processo per risolvere un problema della tua vita quotidiana?",
           "tips": [
             null
           ],
-          "progression_name": "Video: Processo di Risoluzione di Problemi"
+          "progression_name": "Video: processo di risoluzione di problemi"
+        },
+        "9541def4-ab55-4976-8e32-5c267d62e229": {
+          "description": "Introduci e ripassa in classe le descrizioni delle quattro fasi del procedimento leggendole ad alta voce. Rispondi o discuti qualsiasi domanda degli studenti sul procedimento, altrimenti passa al completamento della prima sezione della guida alle attività."
+        },
+        "aab191bf-3a2c-4f58-86d1-bfa34cf48052": {
+          "name": "Che aspetto ha",
+          "description": "Chiedi agli studenti di completare la prima sezione della guida alle attività, compilando i passaggi dell'attività del giorno precedente che secondo loro rientrano in ogni fase del processo di risoluzione dei problemi."
         },
         "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "description": "**Discussione:** Una volta completata la prima sezione della guida alle attività, chiedi loro di condividerla con i compagni e poi con l'intera classe.",
           "tips": [
             null
           ]
+        },
+        "9071b1c1-0031-4e52-b8f6-a20e311f95c1": {
+          "name": "Un problema che sei bravo a risolvere",
+          "description": "Chiedi agli studenti di selezionare un tipo di problema che pensano di essere davvero bravi a risolvere. Usa l'elenco dei problemi già presenti alla lavagna per aiutare gli studenti a pensare al loro tipo di problema. Ancora una volta concedi loro un paio di minuti per registrare in silenzio le fasi del loro processo prima di condividerlo con un compagno."
         },
         "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "description": "**Discussione:** Chiedi agli studenti di condividere con un compagno ciò che hanno scritto e poi ancora una volta di condurre una discussione sulle conversazioni che hanno avuto. Chiedi agli studenti di parlare dei singoli passaggi che stanno utilizzando per risolvere il problema prescelto, ma anche di indicare i casi in cui gli stessi tipi di strategie ricorrono più volte.",
           "tips": [
             null
           ]
+        },
+        "7048cb12-62e3-4d97-a12a-7d75befc7d07": {
+          "name": "Un problema che tu e un compagno di classe volete risolvere meglio",
+          "description": "Crea coppie di studenti e chiedi loro di completare la sezione finale della guida alle attività. Dovranno scegliere un tipo di problema che entrambi i membri del gruppo desiderano migliorare e quindi scrivere i passaggi che userebbero per risolverlo, nell'ambito del processo di risoluzione dei problemi.\n\n**Discussione:** organizza un'ultima attività di condivisione in cui gli studenti spiegano come userebbero il processo di risoluzione dei problemi per affrontare un problema meno familiare."
         },
         "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "name": "Realizza i cartelloni con i passaggi",
+          "description": "**Distribuzione:** consegna a ogni gruppo la carta per realizzare un cartellone.",
           "tips": [
             null
           ]
         },
+        "6c98d6b3-a1ef-45a7-afb1-4d6fa842e50d": {
+          "description": "**Discussione:** dai tavoli, scegli uno dei problemi su cui hai lavorato oggi e crea un cartellone che mostri come il processo di risoluzione dei problemi può essere utilizzato per aiutarti a risolverlo.\n\n**Girando tra i banchi:** mentre gli studenti lavorano sui loro cartelloni, poni loro domande sui diversi problemi e in che modo i passaggi per risolverli sono correlati ai passaggi standard del processo di risoluzione dei problemi.\n\n**Condividi:** fai condividere agli studenti il proprio cartellone con il resto della classe."
+        },
+        "5c0ec90c-60b9-463c-a278-5a3c5104d0be": {
+          "description": "**Domanda del giorno: quali sono alcuni passaggi comuni che possiamo usare per risolvere tanti tipi diversi di problemi?**"
+        },
         "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "description": "**Discussione:** oggi hai vagliato diversi tipi di problemi, ma tutti possono essere affrontati con il nostro procedimento di risoluzione dei problemi. Per ogni fase del procedimento, pensa a un suggerimento generale che potrebbe essere utile indipendentemente dal problema che qualcuno sta cercando di risolvere.",
           "tips": [
             null
           ]
+        },
+        "ae99a30d-0767-4d0b-9f6d-49a26f879d3d": {
+          "description": "Ho iniziato dicendo che un procedimento formalizzato di risoluzione dei problemi potrebbe aiutarci a risolvere tutti i tipi di problemi. Oggi abbiamo iniziato a capire come si presenta questo processo in una varietà di situazioni di vita reale. Domani inizieremo a mettere in atto questo processo per vedere come funziona effettivamente."
+        },
+        "640e6f56-0797-4fde-a056-1b37b27d7e46": {
+          "name": "Discussione dell'articolo",
+          "description": "Leggi l'articolo [Stai risolvendo il problema sbagliato](https://uxmag.com/articles/you-are-solving-the-wrong-problem)\n\n1.  Cosa c'era di interessante in questo articolo?\n2.  Quali eventi attuali pensi che dobbiamo esaminare attraverso questo procedimento di risoluzione dei problemi? Perché?"
+        },
+        "d1da8d2b-4a50-42ae-929a-02094d6d152d": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1A8YzyvZWN-p3KsNwYzQeJFDz0f7GKecMz870KUXHwJE/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "tips": [
@@ -21111,6 +21442,9 @@
           "tips": [
             null
           ]
+        },
+        "6497bd95-a793-49c9-a2c3-fe2556936fa5": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1l37PJbRu1MnLDYySiPDDQofPbQ7usqmx4cB6Xa2kBN8/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
           "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
@@ -21152,10 +21486,16 @@
             null
           ]
         },
+        "5f2c6154-314a-4bc8-bde8-1e06666ecea8": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1Pc-DVRoydKe19opvK8N0JKpjIK__NUBHlO6f05lX80k/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "396fe142-472b-4c62-976b-578e5ff5bff0": {
           "tips": [
             null
           ]
+        },
+        "502a9053-c029-441d-aac1-5dcfc540fe9d": {
+          "name": "Ingressi e uscite"
         },
         "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
           "tips": [
@@ -21176,6 +21516,9 @@
           "tips": [
             null
           ]
+        },
+        "5e3a206e-5fdc-4d0b-94ce-84c83313ccce": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1JGA6VwPGMtfZDgyiDnpXFFQtGoHclsNGkcLuwTe7wLU/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
           "tips": [
@@ -21206,6 +21549,9 @@
           "tips": [
             null
           ]
+        },
+        "e6ecc76e-b9cd-4936-a8eb-2a365597bf3a": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1tsaiEHbxGmt6TCd15_OaKqqbafJIlEILY9N0GKgvg14/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "071466cb-7d6b-4e91-93bb-261e508f89dc": {
           "tips": [
@@ -21240,6 +21586,9 @@
             null
           ]
         },
+        "fbec93b8-ebae-4b0b-9c2f-3ceee251e162": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1H0UKaAlFi8-nRe1vUOYEPA_bR8M2J7Msd4aORf0zHm0/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "a5bc259a-2779-4488-b754-f6485a212933": {
           "name": "Guida al progetto"
         },
@@ -21272,35 +21621,57 @@
           "name": "Riflessione",
           "progression_name": "Riflessione"
         },
+        "7693d6aa-abdb-4631-ae6c-d358e5d063e8": {
+          "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
+        },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
           "tips": [
             null
           ]
         },
         "68d48a87-2999-499a-962e-a0a177e1c4e6": {
+          "name": "Porre le basi",
+          "description": "**Richiesta:** cosa rende qualcuno un buon risolutore di problemi? Preparati a condividere tre idee con il tuo gruppo.",
           "tips": [
             null
           ]
         },
         "f51c4e46-0b95-4035-bbef-921e12d33e3c": {
+          "description": "**Discussione:** consenti agli studenti di condividere le risposte al tavolo in gruppo o con un partner, poi chiedi a chi si sente a proprio agio di condividerle con tutta la classe.",
           "tips": [
             null
           ]
         },
+        "b7043c24-837d-4375-8abc-db97b39d5a86": {
+          "description": "Sono tutte ottime idee! In informatica, dobbiamo risolvere problemi in continuazione, quindi esamineremo tutte queste capacità di risoluzione dei problemi oggi e per il resto del corso. La maggior parte della risoluzione dei problemi che le persone svolgono in informatica avviene in team. Oggi lavoreremo in squadra per risolvere un problema divertente che non ha bisogno di computer. Mentre lavori su quel problema, ecco una domanda a cui puoi pensare."
+        },
+        "1b6e47b3-1fff-4497-abb7-08eaea7bbd52": {
+          "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
+        },
+        "20c1bfc1-6514-49f7-8426-549f7bce2c3f": {
+          "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
         "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
+          "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
             null
           ]
         },
         "f3726d11-0690-46a9-b742-f48b4a80ab33": {
+          "name": "Obiettivi e regole",
+          "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
             null
           ]
         },
         "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
+          "name": "Elabora un piano",
           "tips": [
             null
           ]
+        },
+        "49050d16-5918-4c25-b43d-144649ad574c": {
+          "name": "Valuta e migliora"
         },
         "caf7880a-40b3-4252-865e-a81d22f30d07": {
           "tips": [
@@ -21308,12 +21679,27 @@
           ]
         },
         "17a60d00-0762-4796-8bb7-c953b2f53867": {
-          "name": "Rifletti"
+          "name": "Rifletti",
+          "description": "**Transizione**: chiedi agli studenti della classe di tornare al proprio posto per riflettere sull'attività."
+        },
+        "8da74910-a0c5-4983-a7be-0b370c20d612": {
+          "name": "Rifletti sulla sfida",
+          "description": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**"
+        },
+        "e2eaa19c-4ad1-42ea-a0ee-1186b3a986b7": {
+          "description": "**Discussione**: hai lavorato in team per questa attività. In che modo il lavoro in team ha reso questa attività più semplice e impegnativa? Cosa ha aiutato il tuo gruppo a superare queste sfide?"
         },
         "04f7b740-ae5f-4f12-9867-27f7b08eff1e": {
+          "description": "**Discussione**: concedi agli studenti il tempo di condividere i propri pensieri con la classe.",
           "tips": [
             null
           ]
+        },
+        "84c36a0f-89da-46bf-a8c8-8ccaafb3146a": {
+          "description": "Tutti i tuoi pensieri su queste domande sono stati fantastici. Faremo molto lavoro di squadra in questa classe. Potresti essere abituato a pensare che l'informatica riguardi solo i computer, ma l'informatica riguarda principalmente la risoluzione di problemi e questa fase di solito si svolge in squadra. Anche molte altre parti di questa attività, come il miglioramento dei progetti e la costruzione di oggetti, saranno una componente importante di questo corso. Spero che tu sia entusiasta per quest'anno. Domani inizieremo ad approfondire la mera soluzione dei problemi."
+        },
+        "805b87e8-c377-489d-84e2-8be6316309b1": {
+          "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
           "tips": [
@@ -21321,29 +21707,48 @@
           ]
         },
         "418d731c-d516-4e49-8547-9313763526ca": {
+          "name": "Porre le basi",
+          "description": "**Richiesta:** cosa rende qualcuno un buon risolutore di problemi? Preparati a condividere tre idee con il tuo gruppo.",
           "tips": [
             null
           ]
         },
         "c941f0ac-38f6-4828-9ca4-e8b600868807": {
+          "description": "**Discussione:** consenti agli studenti di condividere le risposte al tavolo in gruppo o con un partner, poi chiedi a chi si sente a proprio agio di condividerle con tutta la classe.",
           "tips": [
             null
           ]
         },
+        "d4e42301-7a41-4d37-8f34-07e7d9562339": {
+          "description": "Sono tutte ottime idee! In informatica, dobbiamo risolvere problemi in continuazione, quindi esamineremo tutte queste capacità di risoluzione dei problemi oggi e per il resto del corso. La maggior parte della risoluzione dei problemi che le persone svolgono in informatica avviene in team. Oggi lavoreremo in squadra per risolvere un problema divertente che non ha bisogno di computer. Mentre lavori su quel problema, ecco una domanda a cui puoi pensare."
+        },
+        "ae6365e1-e28d-4d30-846a-2ebef57b4afd": {
+          "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
+        },
+        "d3cf10fd-68e0-46fd-8a4e-a82daa4e0f1c": {
+          "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
         "c209191d-c268-4f8e-b40c-93a5de206b76": {
+          "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
             null
           ]
         },
         "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
+          "name": "Obiettivi e regole",
+          "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
             null
           ]
         },
         "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
+          "name": "Elabora un piano",
           "tips": [
             null
           ]
+        },
+        "e4c5a863-1f7b-4d7e-994a-a4750df74d0f": {
+          "name": "Valuta e migliora"
         },
         "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
           "tips": [
@@ -21351,12 +21756,27 @@
           ]
         },
         "cebe2e73-7783-4bbf-9469-c2084423900d": {
-          "name": "Rifletti"
+          "name": "Rifletti",
+          "description": "**Transizione**: chiedi agli studenti della classe di tornare al proprio posto per riflettere sull'attività."
+        },
+        "a90c61ba-7aa3-4b9b-ba1c-081bb47c3230": {
+          "name": "Rifletti sulla sfida",
+          "description": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**"
+        },
+        "6977e8b1-edf5-4a77-b65d-561695544e26": {
+          "description": "**Discussione**: hai lavorato in team per questa attività. In che modo il lavoro in team ha reso questa attività più semplice e impegnativa? Cosa ha aiutato il tuo gruppo a superare queste sfide?"
         },
         "01c916af-970c-4e2f-a98e-38cbc436eefc": {
+          "description": "**Discussione**: concedi agli studenti il tempo di condividere i propri pensieri con la classe.",
           "tips": [
             null
           ]
+        },
+        "f5e08562-db11-4323-80ed-4c719b6a6905": {
+          "description": "Tutti i tuoi pensieri su queste domande sono stati fantastici. Faremo molto lavoro di squadra in questa classe. Potresti essere abituato a pensare che l'informatica riguardi solo i computer, ma l'informatica riguarda principalmente la risoluzione di problemi e questa fase di solito si svolge in squadra. Anche molte altre parti di questa attività, come il miglioramento dei progetti e la costruzione di oggetti, saranno una componente importante di questo corso. Spero che tu sia entusiasta per quest'anno. Domani inizieremo ad approfondire la mera soluzione dei problemi."
+        },
+        "7e2b0140-2517-4a48-89c6-2e51107ec2f2": {
+          "description": "Per poter vedere il lavoro degli studenti nell'arco dell'anno e consentire loro di accedere a strumenti e risorse online, gli studenti devono trovarsi tutti nella stessa sezione di Code Studio. Per visualizzare le valutazioni e le chiavi di risposta fornite da Code.org, devi anche essere un «insegnante verificato»."
         },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
           "tips": [
@@ -21364,29 +21784,48 @@
           ]
         },
         "9823b27f-66ca-4ea1-860d-3472e5317340": {
+          "name": "Porre le basi",
+          "description": "**Richiesta:** cosa rende qualcuno un buon risolutore di problemi? Preparati a condividere tre idee con il tuo gruppo.",
           "tips": [
             null
           ]
         },
         "77c22840-b9e9-4426-9894-30f101f2c00e": {
+          "description": "**Discussione:** consenti agli studenti di condividere le risposte al tavolo in gruppo o con un partner, poi chiedi a chi si sente a proprio agio di condividerle con tutta la classe.",
           "tips": [
             null
           ]
         },
+        "c1a4e53a-2218-4c00-80d7-3505a462d81d": {
+          "description": "Sono tutte ottime idee! In informatica, dobbiamo risolvere problemi in continuazione, quindi esamineremo tutte queste capacità di risoluzione dei problemi oggi e per il resto del corso. La maggior parte della risoluzione dei problemi che le persone svolgono in informatica avviene in team. Oggi lavoreremo in squadra per risolvere un problema divertente che non ha bisogno di computer. Mentre lavori su quel problema, ecco una domanda a cui puoi pensare."
+        },
+        "05812355-06bd-4750-9713-691134fd7a89": {
+          "description": "**Mostra:** mostra agli studenti la domanda del giorno\n\n**Domanda del giorno: cos'è che può aiutarci a lavorare insieme e a risolvere i problemi in gruppo?**"
+        },
+        "241975ce-013e-4f72-a787-8800069fd731": {
+          "description": "**Gruppo**: crea gruppi di 2 o 3 studenti."
+        },
         "b452ecde-f660-4d52-9ab7-8b33989681f0": {
+          "description": "**Distribuzione**: distribuisci una copia della guida alle attività per ogni gruppo.",
           "tips": [
             null
           ]
         },
         "f5570fab-fdee-464e-b569-ec19142fc35d": {
+          "name": "Obiettivi e regole",
+          "description": "In classe, leggi le sezioni Obiettivi e Regole della guida alle attività e rispondi alle domande.",
           "tips": [
             null
           ]
         },
         "661c94ca-9d68-45ee-afca-2ff357684bf3": {
+          "name": "Elabora un piano",
           "tips": [
             null
           ]
+        },
+        "185b70c9-2353-4632-aec9-7372f25cb1a6": {
+          "name": "Valuta e migliora"
         },
         "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
           "tips": [
@@ -21394,12 +21833,24 @@
           ]
         },
         "ba9df800-646b-4324-9b35-b3f6564ba061": {
-          "name": "Rifletti"
+          "name": "Rifletti",
+          "description": "**Transizione**: chiedi agli studenti della classe di tornare al proprio posto per riflettere sull'attività."
+        },
+        "eb580d4d-4253-490a-9fe8-256885fb0ed8": {
+          "name": "Rifletti sulla sfida",
+          "description": "**Domanda del giorno: cosa può aiutarci a lavorare insieme e risolvere i problemi in gruppo?**"
+        },
+        "10f5ec1c-3957-422e-a1ee-3787a5df1dc7": {
+          "description": "**Discussione**: hai lavorato in team per questa attività. In che modo il lavoro in team ha reso questa attività più semplice e impegnativa? Cosa ha aiutato il tuo gruppo a superare queste sfide?"
         },
         "f25bdc7d-2ab6-493a-a4e7-e46dbeaa01c4": {
+          "description": "**Discussione**: concedi agli studenti il tempo di condividere i propri pensieri con la classe.",
           "tips": [
             null
           ]
+        },
+        "32af4c30-b182-4d2e-9c46-e61ad93d6eb9": {
+          "description": "Tutti i tuoi pensieri su queste domande sono stati fantastici. Faremo molto lavoro di squadra in questa classe. Potresti essere abituato a pensare che l'informatica riguardi solo i computer, ma l'informatica riguarda principalmente la risoluzione di problemi e questa fase di solito si svolge in squadra. Anche molte altre parti di questa attività, come il miglioramento dei progetti e la costruzione di oggetti, saranno una componente importante di questo corso. Spero che tu sia entusiasta per quest'anno. Domani inizieremo ad approfondire la mera soluzione dei problemi."
         },
         "48dcb032-0dad-4177-89a7-066d60d785f5": {
           "tips": [
@@ -21461,6 +21912,9 @@
             null
           ]
         },
+        "a48c9e93-5e4f-4d2f-8dfa-60efd0b084ef": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
           "tips": [
             null
@@ -21475,6 +21929,9 @@
           "tips": [
             null
           ]
+        },
+        "a5c12f54-2e19-46af-a21d-db66b8318787": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "248256b0-de8c-4fcf-8f60-58492ef07802": {
           "tips": [
@@ -21541,6 +21998,9 @@
             null
           ]
         },
+        "e5b0e53d-5c21-4315-a91f-f903cc340ad8": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "83d7613a-c741-4d4a-9dcd-993ab08aa61d": {
           "tips": [
             null
@@ -21598,6 +22058,9 @@
             null
           ]
         },
+        "9236a3c6-101b-41e3-9696-62b0e0bcfe95": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "016877a1-d391-46b7-998e-fbe9a7c12703": {
           "tips": [
             null
@@ -21610,6 +22073,9 @@
           "tips": [
             null
           ]
+        },
+        "052a4549-c1d1-4dac-ace3-074188604c3c": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "b9efce7e-87cf-466d-8916-1ef98f26db40": {
           "name": "Segui le tracce digitali"
@@ -21628,6 +22094,9 @@
           "tips": [
             null
           ]
+        },
+        "83c158d0-11bd-4cd7-8fc7-7534dda863e4": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "3412213d-9a22-470e-859c-66b9a752d6bb": {
           "tips": [
@@ -21682,6 +22151,9 @@
             null
           ]
         },
+        "743c31d1-cc99-468e-9152-2fe251370f2f": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "4662cf38-bec5-4f63-9f2d-237617407f0f": {
           "tips": [
             null
@@ -21699,6 +22171,9 @@
           "tips": [
             null
           ]
+        },
+        "e8cf01fc-667f-46b0-a1f6-2a5b27f5c597": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "3356cda1-c8fe-4475-aaf6-1361379c848f": {
           "tips": [
@@ -21730,6 +22205,9 @@
             null
           ]
         },
+        "220d7407-a765-403f-b90f-528d428db6a6": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
           "tips": [
             null
@@ -21759,6 +22237,9 @@
         "125e32e7-13c6-48a9-8fcb-b8635d079ecf": {
           "progression_name": "Sfide"
         },
+        "5135be5c-3b48-41fd-90f9-a9c70a323590": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
           "tips": [
             null
@@ -21778,6 +22259,9 @@
           "tips": [
             null
           ]
+        },
+        "43eef65b-6395-4536-9c23-694a4c12ce55": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "0c2abb8a-e980-4137-bca7-7af46bb7b629": {
           "tips": [
@@ -21807,6 +22291,9 @@
         "fa81a49c-8be7-43ac-92fe-cbc509b0970c": {
           "progression_name": "Sfide"
         },
+        "6fbd3fb6-e29a-45ef-8b5b-d389ae4f5800": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "0bb5cdfb-1e6b-44df-9d3f-7a1f0bfcab33": {
           "tips": [
             null
@@ -21821,6 +22308,9 @@
           "tips": [
             null
           ]
+        },
+        "d54afce7-f6a7-4593-af30-3a118333c846": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "710ee97e-1fb7-429d-a724-cb0a92f72425": {
           "tips": [
@@ -21860,6 +22350,9 @@
         "bb76c259-62ef-49ef-9b8c-d0ca91a380a7": {
           "progression_name": "Riflessione"
         },
+        "67268b30-70fb-48cd-87f0-76e9187bdf1f": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
           "tips": [
             null
@@ -21889,6 +22382,9 @@
           "tips": [
             null
           ]
+        },
+        "983ec108-269d-4bf4-9055-32d7d2d81aff": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "d328ac00-0ae4-43b4-ac6b-09b544bdf673": {
           "tips": [
@@ -21920,6 +22416,9 @@
             null
           ]
         },
+        "07580a67-ba7d-4b21-b44b-5f1fb09038d7": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "49bb4251-eaa1-423c-9bfd-ec0f6113f83e": {
           "tips": [
             null
@@ -21939,6 +22438,9 @@
           "tips": [
             null
           ]
+        },
+        "6a1f16c8-cae3-41fe-a10f-62e69a936dc2": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
           "tips": [
@@ -21963,6 +22465,9 @@
         "5aa91065-3f4e-409f-9f3e-14bd98649ef5": {
           "progression_name": "Sfide"
         },
+        "dceb3758-3a1b-47bb-9c0d-a815cbd4c16a": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "ada4d5c1-50ee-446a-85c6-d61dd4d3221f": {
           "tips": [
             null
@@ -21980,6 +22485,9 @@
           "tips": [
             null
           ]
+        },
+        "29715d83-b2b1-4cfb-b72a-494bb7a45c11": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "85c3804b-17da-40f8-a088-0627011b36e7": {
           "tips": [
@@ -22011,6 +22519,9 @@
             null
           ]
         },
+        "e066e2c1-ded6-4398-88fa-5f12947e75fe": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
         "4c27a0e8-612a-478a-a854-aa5a966c8245": {
           "tips": [
             null
@@ -22023,6 +22534,9 @@
           "tips": [
             null
           ]
+        },
+        "913801ab-bb46-4687-a54b-6dbded08a5d8": {
+          "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [

@@ -32,8 +32,19 @@ theme: responsive
 <h2 class="careers-header">Our Core Values</h2>
 <%=view :values_tiles %>
 
-<h3>A unifying approach in a divided world</h3>
-<p>Code.org's global role in the K-12 computer science movement is only possible because we use a unifying approach across diverse and often divided stakeholders. At a time of increasing polarization, the idea of increasing opportunity for students unites people from across the political spectrum. Code.org's team members, students, teachers, and supporters have diverse and diverging viewpoints, and they are all welcome in our mission. <a href="/about/unifying">Read more</a>.</p>
+<div class="careers__unifying-approach">
+  <div class="col-66">
+    <h3>A unifying approach in a divided world</h3>
+    <p>Code.org's global role in the K-12 computer science movement is only possible because we use a unifying approach across diverse and often divided stakeholders. At a time of increasing polarization, the idea of increasing opportunity for students unites people from across the political spectrum. Code.org's team members, students, teachers, and supporters have diverse and diverging viewpoints, and they are all welcome in our mission. <a href="/about/unifying">Read more</a>.</p>
+  </div>
+  <!--DiversityJobs.com Badge -->
+  <a href="https://diversityjobs.com/employer/top-diversity-employers?utm_campaign=TopEmployer&utm_medium=badge" target="_blank" rel="noopener noreferrer">
+    <img src="https://circaworks.com/wp-content/uploads/2022/03/employer_member_badge_2022.png" width="200" alt="DiversityJobs.com Employer Member" title="DiversityJobs.com Employer Member" />
+  </a>
+  <!-- END DiversityJobs.com Badge -->
+</div>
+<div style="clear: both;"></div>
+
 
 <h2 class="careers-header">Balancing Work and Life</h2>
 <div class="careers__section-container">
@@ -95,8 +106,8 @@ Code.org is based in Seattle, but many of our team members are remote; remote ca
 <a href="https://github.com/code-dot-org">Check out our GitHub</a>
 
 <div class="careers__team-photos">
-    <img src="../images/careers-at-code/all-hands-2020.jpg">
-    <img src="../images/careers-at-code/code-pride.jpg">
+    <img src="../images/careers-at-code/all-hands-2020.jpg" alt="">
+    <img src="../images/careers-at-code/code-pride.jpg" alt="<%= hoc_s(:careers_page_code_pride_alt_text)%>">
 </div>
 
 _We embrace diverse perspectives, ideas, and backgrounds at Code.org. We are committed to providing an equal opportunity to all employees and applicants. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability (mental and physical) status._

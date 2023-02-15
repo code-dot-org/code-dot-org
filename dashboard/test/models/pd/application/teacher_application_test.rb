@@ -207,7 +207,7 @@ module Pd::Application
         regional_partner_workshop_ids: workshops.map(&:id),
         able_to_attend_multiple: (
         # Select all but the first. Expect the first selected to be returned below
-        workshops[1..-1].map do |workshop|
+        workshops[1..].map do |workshop|
           "#{workshop.friendly_date_range} in #{workshop.location_address} hosted by Code.org"
         end
         )
@@ -292,17 +292,6 @@ module Pd::Application
       )
 
       assert_equal workshop_1, application_2.get_first_selected_workshop
-    end
-
-    test 'can_see_locked_status? is always false' do
-      teacher = create :teacher
-      g1_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 1)
-      g3_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 3)
-      workshop_admin = create :workshop_admin
-
-      [teacher, g1_program_manager, g3_program_manager, workshop_admin].each do |user|
-        refute TeacherApplication.can_see_locked_status?(user)
-      end
     end
 
     test 'columns_to_remove' do
@@ -423,7 +412,7 @@ module Pd::Application
 
       # update related field
       Timecop.freeze 1
-      application.update!(form_data: application.form_data_hash.merge("firstName": 'Garfunkel').to_json)
+      application.update!(form_data: application.form_data_hash.merge(firstName: 'Garfunkel').to_json)
       assert_status_log(
         [
           {status: 'incomplete', at: 1.second.ago},
@@ -548,14 +537,12 @@ module Pd::Application
         csd_which_grades: ['6'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
-        replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_free_lunch_percent: 50,
-        principal_underrepresented_minority_percent: 50,
-        principal_wont_replace_existing_course: principal_options[:replace_course].second
+        principal_underrepresented_minority_percent: 50
 
       application = create :pd_teacher_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -567,7 +554,6 @@ module Pd::Application
             enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
-            replace_existing: YES,
             principal_approval: YES,
             principal_schedule_confirmed: YES,
           },
@@ -590,14 +576,12 @@ module Pd::Application
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
-        replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_free_lunch_percent: 50,
-        principal_underrepresented_minority_percent: 50,
-        principal_wont_replace_existing_course: principal_options[:replace_course].second
+        principal_underrepresented_minority_percent: 50
 
       application = create :pd_teacher_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -609,7 +593,6 @@ module Pd::Application
             enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
-            replace_existing: YES,
             principal_approval: YES,
             principal_schedule_confirmed: YES,
           },
@@ -634,14 +617,12 @@ module Pd::Application
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
         csa_how_offer: options[:csa_how_offer].last,
-        replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_free_lunch_percent: 50,
-        principal_underrepresented_minority_percent: 50,
-        principal_wont_replace_existing_course: principal_options[:replace_course].second
+        principal_underrepresented_minority_percent: 50
 
       application = create :pd_teacher_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -655,7 +636,6 @@ module Pd::Application
             enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
-            replace_existing: YES,
             principal_approval: YES,
             principal_schedule_confirmed: YES,
           },
@@ -677,7 +657,6 @@ module Pd::Application
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
-        replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: [options[:race].second]
 
@@ -691,7 +670,6 @@ module Pd::Application
             enough_course_hours: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
-            replace_existing: YES,
           },
           meets_scholarship_criteria_scores: {},
         }.deep_stringify_keys,
@@ -708,14 +686,12 @@ module Pd::Application
         csd_which_grades: %w(11 12),
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
-        replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_free_lunch_percent: 49,
-        principal_underrepresented_minority_percent: 49,
-        principal_wont_replace_existing_course: principal_options[:replace_course].first
+        principal_underrepresented_minority_percent: 49
 
       application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
       application.auto_score!
@@ -727,7 +703,6 @@ module Pd::Application
             enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
-            replace_existing: NO,
             principal_approval: NO,
             principal_schedule_confirmed: NO,
           },
@@ -750,14 +725,12 @@ module Pd::Application
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
-        replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_free_lunch_percent: 49,
-        principal_underrepresented_minority_percent: 49,
-        principal_wont_replace_existing_course: principal_options[:replace_course].first
+        principal_underrepresented_minority_percent: 49
 
       application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
       application.auto_score!
@@ -769,7 +742,6 @@ module Pd::Application
             enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
-            replace_existing: NO,
             principal_approval: NO,
             principal_schedule_confirmed: NO,
           },
@@ -794,14 +766,12 @@ module Pd::Application
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'Computer Science A (CSA)',
         csa_how_offer: options[:csa_how_offer].first,
-        replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_free_lunch_percent: 49,
-        principal_underrepresented_minority_percent: 49,
-        principal_wont_replace_existing_course: principal_options[:replace_course].first
+        principal_underrepresented_minority_percent: 49
 
       application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
       application.auto_score!
@@ -815,7 +785,6 @@ module Pd::Application
             enough_course_hours: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
-            replace_existing: NO,
             principal_approval: NO,
             principal_schedule_confirmed: NO,
           },
@@ -828,106 +797,13 @@ module Pd::Application
       )
     end
 
-    test 'autoscore principal responses override teacher responses' do
-      options = Pd::Application::TeacherApplication.options
-      principal_options = Pd::Application::PrincipalApprovalApplication.options
-
-      application_hash = build :pd_teacher_application_hash,
-        replace_existing: options[:replace_existing].first
-
-      application = create :pd_teacher_application, form_data_hash: application_hash
-
-      application.auto_score!
-
-      assert_equal NO,
-        application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
-
-      application.update_form_data_hash(
-        {
-          principal_approval: principal_options[:do_you_approve].first,
-          principal_wont_replace_existing_course: principal_options[:replace_course].second
-        }
-      )
-
-      application.auto_score!
-
-      assert_equal YES,
-        application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
-    end
-
-    test 'autoscore principal responses for replace_existing question' do
-      principal_options = Pd::Application::PrincipalApprovalApplication.options
-
-      test_cases = [
-        # If the answer for replace_course is 'Yes', the application does not meet requirement
-        {
-          principal_answers: {replace_course: principal_options[:replace_course].first},
-          meet_requirement: NO
-        },
-        {
-          principal_answers: {
-            replace_course: principal_options[:replace_course].first
-          },
-          meet_requirement: NO
-        },
-        # If the answer for replace_course is 'No...', the application meets requirement
-        {
-          principal_answers: {replace_course: principal_options[:replace_course].second},
-          meet_requirement: YES
-        },
-        {
-          principal_answers: {replace_course: principal_options[:replace_course].third},
-          meet_requirement: YES
-        },
-        # If the answer for replace_course is 'I don't know...', the verdict is inconclusive
-        {
-          principal_answers: {replace_course: principal_options[:replace_course].last},
-          meet_requirement: nil
-        }
-      ]
-
-      # Creates a teacher application with an inconclusive replace_existing answer.
-      # The principal's responses will override teacher's responses anyway.
-      application = build :pd_teacher_application,
-        form_data_hash: (
-        build :pd_teacher_application_hash, replace_existing: TEXT_FIELDS[:i_dont_know_explain]
-        )
-      application.auto_score!
-      assert_nil application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
-
-      # For each test case, creates an principal approval application and re-scores the
-      # teacher application.
-      test_cases.each_with_index do |test_case, index|
-        principal_approval = build :pd_principal_approval_application,
-          teacher_application: application,
-          form_data_hash: (
-          build :pd_principal_approval_application_hash_common, test_case[:principal_answers]
-          )
-
-        # Updates the application with principal's responses and run auto_score! again
-        application.on_successful_principal_approval_create(principal_approval)
-
-        # Written as a conditional to address Minitest 6 deprecation: `DEPRECATED: Use assert_nil if expecting nil`
-        if test_case[:meet_requirement]
-          assert application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
-                 "Test case index #{index} failed"
-        else
-          refute application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
-                 "Test case index #{index} failed"
-        end
-      end
-    end
-
     test 'autoscore nil results when applicable' do
-      options = Pd::Application::TeacherApplication.options
       principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
-        replace_existing: options[:replace_existing].first,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].fourth,
-        principal_wont_replace_existing_course: principal_options[:replace_course].last
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].fourth
 
       application = create :pd_teacher_application, form_data_hash: application_hash
 
@@ -936,7 +812,6 @@ module Pd::Application
       response_scores_hash = application.response_scores_hash
 
       assert_nil response_scores_hash[:meets_minimum_criteria_scores][:principal_schedule_confirmed]
-      assert_nil response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
     end
 
     test 'principal_approval_state' do
@@ -961,6 +836,66 @@ module Pd::Application
 
       create :pd_principal_approval_application, teacher_application: application, approved: 'Yes'
       assert application.reload.principal_approval_state.include? 'Complete - Admin said Yes on'
+    end
+
+    test 'scholarship criteria uses regional partner set fields when specified' do
+      regional_partner = build :regional_partner,
+        frl_guardrail_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural] + 2,
+        urg_guardrail_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 2
+
+      # Does not meet Free and Reduced Lunch criteria but does meet Underrepresented Group criteria
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
+      application_hash = build :pd_teacher_application_hash,
+        principal_approval: principal_options[:do_you_approve].first,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
+        principal_wont_replace_existing_course: principal_options[:replace_course].first,
+        principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural] + 1,
+        principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1
+
+      application = create :pd_teacher_application, regional_partner: regional_partner, form_data_hash: application_hash
+      application.auto_score!
+
+      # Regional partner defined guardrails: FRL = (default + 2)%, URG = (default - 2)%
+      assert_equal(NO, application.response_scores_hash[:meets_scholarship_criteria_scores][:free_lunch_percent])
+      assert_equal(YES, application.response_scores_hash[:meets_scholarship_criteria_scores][:underrepresented_minority_percent])
+    end
+
+    test 'scholarship criteria uses default guardrails when regional partner does not specify' do
+      regional_partner = build :regional_partner
+
+      # Meets Free and Reduced Lunch criteria but not Underrepresented Group criteria
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
+      application_hash = build :pd_teacher_application_hash,
+        principal_approval: principal_options[:do_you_approve].first,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
+        principal_wont_replace_existing_course: principal_options[:replace_course].first,
+        principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
+        principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1
+
+      application = create :pd_teacher_application, regional_partner: regional_partner, form_data_hash: application_hash
+      application.auto_score!
+
+      # Regional partner did not set guardrails, default to 50% for both (40% for FRL for rural schools)
+      assert_equal(YES, application.response_scores_hash[:meets_scholarship_criteria_scores][:free_lunch_percent])
+      assert_equal(NO, application.response_scores_hash[:meets_scholarship_criteria_scores][:underrepresented_minority_percent])
+    end
+
+    test 'scholarship criteria uses default guardrails when matched to No Partner' do
+      # Meets Free and Reduced Lunch criteria but not Underrepresented Group criteria
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
+      application_hash = build :pd_teacher_application_hash,
+        principal_approval: principal_options[:do_you_approve].first,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
+        principal_wont_replace_existing_course: principal_options[:replace_course].first,
+        principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
+        principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1
+
+      application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
+      application.auto_score!
+
+      # No partner guardrails default to 50% for both (40% for FRL for rural schools)
+      assert_equal(YES, application.response_scores_hash[:meets_scholarship_criteria_scores][:free_lunch_percent])
+      assert_equal(NO, application.response_scores_hash[:meets_scholarship_criteria_scores][:underrepresented_minority_percent])
     end
 
     test 'require assigned workshop for registration-related statuses when emails sent by system' do

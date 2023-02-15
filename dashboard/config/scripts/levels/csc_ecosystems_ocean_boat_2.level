@@ -23,7 +23,7 @@
     "short_instructions": "In this level you need to add the fish into this simulation and give them a realistic size and movement.",
     "long_instructions": "**The fishing boat at the top is taking fish out of their ecosystem. Build code that removes fish one at a time when  they touch the fishing boat.**\r\n\r\nDo This:\r\n- Make a new `when fish touches boat` event\r\n- Connect a blue `remove` block under your new event. \r\n- Click on the blue plus sign on the `when touches` event and drag out a fish block to snap to the `remove` block.\r\n- Press \"Run\" to check that each time a fish touches the boat it disappears from the ecosystem. \r\n\r\n![](https://images.code.org/59bb77699f0ec9f41eef55e3c900d590-image-1650493439980.gif)",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
@@ -40,14 +40,15 @@
     "name_suffix": "_2",
     "validation_code": "if (World.frameCount == 1) {\r\n  validationProps.amountOfFish = countByAnimation({\"costume\": \"fish_10\"});\r\n  console.log(validationProps.amountOfFish);\r\n  addCriteria(function() {\r\n    // Make sure the correct sprite is removed after the touch event\r\n    return (touchEventFound() && countByAnimation({\"costume\": \"fish_10\"}) != validationProps.amountOfFish);\r\n  }, \"removeSpriteWhenTouch\");\r\n}\r\n\r\ncheck();\r\n",
     "encrypted_examples": "cC+LH8gh43Y3GcUOf/rpur3jLPQpRbVLU2BAEiElWE9kvtyMAJ/736ZHyBYL\ndMZEs7FjulrrkchXi1rGf1OYTg==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "spritelab"
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-11-01T23:05:08.000Z",
-  "user_id": 18528,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:08.973+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_boat_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_boat_2022\"},{\"changed_at\":\"2022-11-10 18:50:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-10 18:51:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "created_at": "2022-11-01T23:05:08.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:08.973+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_boat_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_boat_2022\"},{\"changed_at\":\"2022-11-10 18:50:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-10 18:51:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-30 20:18:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:11:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -423,7 +424,7 @@
         <block type="gamelab_makeNumSprites">
           <field name="ANIMATION_NAME">"fish_10"</field>
           <value name="NUM">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">10</field>
             </block>
           </value>
@@ -431,24 +432,24 @@
         <block type="gamelab_setProp">
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
           <value name="VAL">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">50</field>
             </block>
           </value>
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_collectibleBehaviors">
+            <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
               <field name="BEHAVIOR">new Behavior(wandering, [])</field>
             </block>
           </value>
@@ -456,12 +457,12 @@
         <block type="gamelab_checkTouching">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_10"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"boat-net"</field>
             </block>
           </value>

@@ -1,4 +1,4 @@
 ---
-title: Kodlama Saatini Yardımcı Teknoloji ile tamamlamak
+title: Hour Of Code'u Yardımcı Teknoloji ile tamamlamak
 ---
 

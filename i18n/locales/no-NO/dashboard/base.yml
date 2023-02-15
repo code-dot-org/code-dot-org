@@ -599,23 +599,17 @@
       body_short: "Design en app, kode blokker eller JavaScript for å få det til å fungere, deretter kan du dele din app i løpet av sekunder."
       audience: 'Minstealder 13 år'
       cta: 'Lær hvordan'
-    dance:
-      title: 'Dansefest'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Dansefest'
-    hoc:
-      title: 'Klassisk labyrint'
-      body: 'Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har alt prøvd.'
+    dance:
+      title: 'Dansefest'
     flappy:
       title: 'Flappy kode'
       body: 'Vil du lage ditt eget spill på mindre enn 10 minutter? Prøv vår veiledning i Flappy-kode!'
-    20-hour:
-      title: 'Framskyndet kurs'
-      body: 'Denne 20-timers kurset introduserer kjernebegreper innen informatikk og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men det er morsomt å lære for alle aldersgrupper.'
-      body_short: 'Lær grunnleggende datavitenskap i en framskyndet versjon av kursene 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Prøv den nye Kodetime veiledningen i beta'
-      try_frozen: 'Kunstner med Anna og Elsa fra Frost'
+    frozen:
+      title: "Frost"
     gallery:
       title: "Galleri"
       body: "Se et galleri av app- og artist-bilder laget av våre brukere"
@@ -624,18 +618,18 @@
       body: "Spill Lab er et programmerings miljø der du kan lage enkle animasjoner og spill med objekter og karakterer som samhandler med hverandre."
       audience: "Minstealder 13 år"
       cta: "Lær hvordan"
+    hero:
+      title: "Minecraft"
+      body: "Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom Minecraft med kode."
     hoc-encryption:
       title: "Enkel kryptering"
       body: "Studentene lærer teknikker for å lage og knekke krypterte meldinger."
-    weblab:
-      title: "Web Lab (beta)"
-      body: "Web Lab er et programmeringsmiljø hvor du kan gjøre lage web-sider med HTML og CSS. Design din webside og del siden din i løpet av sekunder."
-      audience: "Minstealder 13 år"
-      cta: "Lær hvordan"
-    frozen:
-      title: "Frost"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Klassisk labyrint'
+      body: 'Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har alt prøvd.'
+    hoc2014:
+      try_new_tutorial: 'Prøv den nye Kodetime veiledningen i beta'
+      try_frozen: 'Kunstner med Anna og Elsa fra Frost'
     infinity:
       title: "Infinity Spill-Lab"
       body: "Bruk Spill-lab for å lage en historie eller spill med Disney Infinity figurer."
@@ -645,29 +639,35 @@
     minecraft2016:
       title: "Minecraft"
       body: "Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom Minecraft med kode."
     sports:
       title: "Sport"
       body: "Velg mellom å lage et basketballspill eller miks og match på tvers av ulike sporter."
+    starwars:
+      title: "Star Wars"
     text-compression:
       body: "I denne leksjonen vil studentene bruke tekst comprimerings modulen til å komprimere tekst ved å estatte mønstre med symboler."
-    unplugged:
-      title: "Leksjoner uten datamaskin"
-      audience: "Alder 4+"
-      body: "Vi har satt sammen en liste med leksjoner uten datamaskin som du kan prøve ut i klasserommet. Nå kan du undervise i grunnkonseptene for dataprogrammering uavhengig av om du har datamaskiner i klasserommet. Prøv disse leksjonene som frittstående kurs eller sammen med et hvilket som helst kurs i datakunnskap."
-      body_short: "Hvis du ikke har datamaskiner, kan du prøve disse leksjonene uten datamaskin i ditt klasserom."
-    unplugged_conditionals:
-      title: "Betingelser"
-      body: "Lær om algoritmer og betingede instruksjoner i denne aktiviteten uten datamaskin ved å bruke en kortstokk."
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab er et programmeringsmiljø hvor du kan gjøre lage web-sider med HTML og CSS. Design din webside og del siden din i løpet av sekunder."
+      audience: "Minstealder 13 år"
+      cta: "Lær hvordan"
     widgets:
       title: "Moduler"
       body: "Studenter kan utforske konsepter fra informatikk-prinsipper-kurset vårt selv ved å bruke disse digitale verktøyene. Bruk modulene for seg selv, eller lag en enkeltkonseptøkt for klassen din."
       audience: "Alder 14+"
       cta: "Lær hvordan"
+    unplugged_conditionals:
+      title: "Betingelser"
+      body: "Lær om algoritmer og betingede instruksjoner i denne aktiviteten uten datamaskin ved å bruke en kortstokk."
+    unplugged:
+      title: "Leksjoner uten datamaskin"
+      audience: "Alder 4+"
+      body: "Vi har satt sammen en liste med leksjoner uten datamaskin som du kan prøve ut i klasserommet. Nå kan du undervise i grunnkonseptene for dataprogrammering uavhengig av om du har datamaskiner i klasserommet. Prøv disse leksjonene som frittstående kurs eller sammen med et hvilket som helst kurs i datakunnskap."
+      body_short: "Hvis du ikke har datamaskiner, kan du prøve disse leksjonene uten datamaskin i ditt klasserom."
+    20-hour:
+      title: 'Framskyndet kurs'
+      body: 'Denne 20-timers kurset introduserer kjernebegreper innen informatikk og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men det er morsomt å lære for alle aldersgrupper.'
+      body_short: 'Lær grunnleggende datavitenskap i en framskyndet versjon av kursene 2-4.'
   landing:
     report_bug: "Rapporter feil"
     support: "Få hjelp"

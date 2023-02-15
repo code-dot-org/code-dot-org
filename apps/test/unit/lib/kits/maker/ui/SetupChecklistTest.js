@@ -193,7 +193,7 @@ describe('SetupChecklist', () => {
  * @param {number} intervalMs - time to wait between steps
  * @return {Promise}
  */
-function yieldUntil(wrapper, predicate, timeoutMs = 2000, intervalMs = 5) {
+function yieldUntil(wrapper, predicate, timeoutMs = 3500, intervalMs = 5) {
   return new Promise((resolve, reject) => {
     let elapsedTime = 0;
     const key = setInterval(() => {

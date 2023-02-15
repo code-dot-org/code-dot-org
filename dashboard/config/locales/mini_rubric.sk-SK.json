@@ -67,8 +67,7 @@
           "rubric_key_concept": "Štruktúrovať obsah webovej stránky pomocou HTML (pridanie obrázka na webovú stránku). Pri používaní cudzej tvorby je správne uvedený zdroj.",
           "rubric_performance_level_1": "Obrázok sa zobrazuje správne a v atribúte `alt` je zadaný primeraný popis obrázka. V značke `img` sa nenachádza žiadny nepotrebný kód. Zdroj obrázka je uvedený správne a obrázok je vhodne pomenovaný.",
           "rubric_performance_level_2": "Obrázok sa zobrazuje správne a je použitý v súlade s pravidlami, ktoré stanovuje jeho licencia.",
-          "rubric_performance_level_3": "Na stránke je využitá značka `img` so zdrojovou adresou obrázka, ale možno sa vyskytli drobné syntaktické chyby alebo preklepy, kvôli ktorým sa obrázok nezobrazuje správne. Prípadne daný obrázok nie je možné použiť na webovej stránke legálne.",
-          "rubric_performance_level_4": "Značka `img` nie je použitá alebo chýba zdrojová adresa daného obrázka."
+          "rubric_performance_level_3": "Na stránke je využitá značka `img` so zdrojovou adresou obrázka, ale možno sa vyskytli drobné syntaktické chyby alebo preklepy, kvôli ktorým sa obrázok nezobrazuje správne. Prípadne daný obrázok nie je možné použiť na webovej stránke legálne."
         },
         "CSD U2 add style_2019": {
           "rubric_key_concept": "Vytvoriť pravidlá, ktoré ovplyvňujú celé skupiny prvkov; použiť na webovej stránke formátovanie pomocou CSS.",

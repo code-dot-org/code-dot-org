@@ -19,25 +19,748 @@
           "description": "Game Lab maraqlı oyunlar və animasiyalar edə biləcəyiniz proqramlaşdırma mühitidir. İşləmək üçün simvollarınızı çəkin, bloklarla və ya JavaScript ilə kodlayın, sonra oyununuzu saniyələr ərzində paylaşın.",
           "categories": {
             "game_lab": {
-              "name": "Oyun labaratoriyası"
+              "name": "Oyun labaratoriyası",
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprayt"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprayt"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Ağ və Qara"
+                    }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Musiqi bəstələmək"
+                    }
+                  },
+                  "palette_params": {
+                    "url": {
+                      "type": "Simli"
+                    },
+                    "loop": {
+                      "type": "Boolean"
+                    }
+                  },
+                  "short_description": "Göstərilən URL-dən MP3 səs sənədini səsləndirir."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Simli"
+                    },
+                    "gender": {
+                      "type": "Simli"
+                    },
+                    "language": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "spaceButtonVisible": {
+                      "type": "Boolean"
+                    },
+                    "dpadVisible": {
+                      "type": "Boolean"
+                    },
+                    "dpadFourWay": {
+                      "type": "Boolean"
+                    },
+                    "mobileOnly": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Simli"
+                    }
+                  }
+                }
+              }
             },
             "sprites": {
-              "name": "Spraytlar"
+              "name": "Spraytlar",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiral"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Simli"
+                    },
+                    "xOffset": {
+                      "type": "Nömrə"
+                    },
+                    "yOffset": {
+                      "type": "Nömrə"
+                    },
+                    "width/radius": {
+                      "type": "Nömrə"
+                    },
+                    "height": {
+                      "type": "Nömrə"
+                    },
+                    "rotationOffset": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Nömrə"
+                    },
+                    "angle": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "createSprite": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "width": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    },
+                    "height": {
+                      "type": "Nömrə"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Qruplar"
+              "name": "Qruplar",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprayt"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprayt"
+                    }
+                  }
+                },
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprayt"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Simli"
+                    },
+                    "yOffset": {
+                      "type": "Nömrə"
+                    },
+                    "width/radius": {
+                      "type": "Nömrə"
+                    },
+                    "height": {
+                      "type": "Nömrə"
+                    },
+                    "rotationOffset": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Rəng"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Nömrə"
+                    },
+                    "angle": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Rəng"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Nömrə"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Şəkil"
+              "name": "Şəkil",
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    },
+                    "w": {
+                      "type": "Nömrə"
+                    },
+                    "h": {
+                      "type": "Nömrə"
+                    },
+                    "start": {
+                      "type": "Nömrə"
+                    },
+                    "stop": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    },
+                    "w": {
+                      "type": "Nömrə"
+                    },
+                    "h": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Nömrə"
+                    },
+                    "y1": {
+                      "type": "Nömrə"
+                    },
+                    "x2": {
+                      "type": "Nömrə"
+                    },
+                    "y2": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    },
+                    "w": {
+                      "type": "Nömrə"
+                    },
+                    "h": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    },
+                    "sides": {
+                      "type": "Nömrə"
+                    },
+                    "size": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Nömrə"
+                    },
+                    "g": {
+                      "type": "Nömrə"
+                    },
+                    "b": {
+                      "type": "Nömrə"
+                    },
+                    "a": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Ulduz"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Nömrə"
+                    },
+                    "y1": {
+                      "type": "Nömrə"
+                    },
+                    "x2": {
+                      "type": "Nömrə"
+                    },
+                    "y2": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "str": {
+                      "type": "Simli"
+                    },
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    },
+                    "width": {
+                      "type": "Nömrə"
+                    },
+                    "height": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Simli"
+                    },
+                    "vert": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Nömrə"
+                    }
+                  }
+                }
+              }
             },
             "control": {
-              "name": "Nəzarət"
+              "name": "Nəzarət",
+              "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "nömrə"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Riyaziyyat"
+              "name": "Riyaziyyat",
+              "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Nömrə"
+                    },
+                    "value2": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "type": "nömrə",
+                      "description": "Minimum, yəni ən kiçik ədəd alındı"
+                    },
+                    "max": {
+                      "type": "nömrə",
+                      "description": "Maksimum, yəni ən böyük ədəd alındı"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "type": "nömrə",
+                      "description": "Minimum, yəni ən kiçik ədəd alındı"
+                    },
+                    "max": {
+                      "type": "nömrə",
+                      "description": "Maksimum, yəni ən böyük ədəd alındı"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "dəyişənlər"
+              "name": "dəyişənlər",
+              "expressions": {
+                "substring": {
+                  "palette_params": {
+                    "start": {
+                      "type": "nömrə"
+                    },
+                    "end": {
+                      "type": "nömrə"
+                    }
+                  }
+                }
+              }
             },
             "functions": {
               "name": "Funksiyalar"
@@ -49,34 +772,925 @@
           "description": "App Lab sadə proqramlar hazırlaya biləcəyiniz proqramlaşdırma mühitidir. Tətbiq dizayn edin, onu işləməsi üçün bloklar və ya JavaScript ilə kodlayın, sonra tətbiqinizi saniyələr ərzində paylaşın.",
           "categories": {
             "ui_controls": {
-              "name": "UI nəzarətləri"
+              "name": "UI nəzarətləri",
+              "expressions": {
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Simli"
+                    },
+                    "property": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Kiçilmək və Böyümək"
+                    }
+                  },
+                  "palette_params": {
+                    "type": {
+                      "type": "Simli"
+                    },
+                    "id": {
+                      "type": "Simli"
+                    },
+                    "callback": {
+                      "type": "Funksiya"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Musiqi bəstələmək"
+                    }
+                  },
+                  "palette_params": {
+                    "loop": {
+                      "type": "Boolean"
+                    }
+                  },
+                  "short_description": "Göstərilən URL-dən MP3 səs sənədini səsləndirir."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Simli"
+                    },
+                    "gender": {
+                      "type": "Simli"
+                    },
+                    "language": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Nömrə"
+                    },
+                    "g": {
+                      "type": "Nömrə"
+                    },
+                    "b": {
+                      "type": "Nömrə"
+                    },
+                    "a": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "setNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setPosition": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "width": {
+                      "type": "nömrə"
+                    },
+                    "height": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Simli"
+                    },
+                    "property": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "setSize": {
+                  "palette_params": {
+                    "height": {
+                      "type": "nömrə"
+                    },
+                    "width": {
+                      "type": "nömrə"
+                    }
+                  }
+                }
+              }
             },
             "canvas": {
-              "name": "Kətan"
+              "name": "Kətan",
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "radius": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "createCanvas": {
+                  "palette_params": {
+                    "[width]": {
+                      "type": "nömrə"
+                    },
+                    "[height]": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "[width]": {
+                      "type": "nömrə"
+                    },
+                    "[height]": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "width": {
+                      "type": "nömrə"
+                    },
+                    "height": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "nömrə"
+                    },
+                    "y1": {
+                      "type": "nömrə"
+                    },
+                    "x2": {
+                      "type": "nömrə"
+                    },
+                    "y2": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "width": {
+                      "type": "nömrə"
+                    },
+                    "height": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "alphaValue": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "blueValue": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "greenValue": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "red": {
+                      "type": "nömrə"
+                    },
+                    "green": {
+                      "type": "nömrə"
+                    },
+                    "blue": {
+                      "type": "nömrə"
+                    },
+                    "alpha": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "əşya"
+                    },
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    },
+                    "redValue": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "setStrokeWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "nömrə"
+                    }
+                  }
+                }
+              }
             },
             "data": {
-              "name": "məlumat"
+              "name": "məlumat",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "əşya"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "əşya"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "əşya"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "əşya"
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Simli"
+                    },
+                    "column": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "name": {
+                      "type": "Simli"
+                    },
+                    "id": {
+                      "type": "Simli"
+                    },
+                    "callback": {
+                      "type": "Funksiya"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "əşya"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "əşya"
+                    }
+                  }
+                }
+              }
             },
             "turtle": {
-              "name": "Tısbağa"
+              "name": "Tısbağa",
+              "expressions": {
+                "arcLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "nömrə"
+                    },
+                    "radius": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "arcRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "nömrə"
+                    },
+                    "radius": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "dot": {
+                  "palette_params": {
+                    "radius": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "moveForward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "moveTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    },
+                    "y": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Nömrə"
+                    },
+                    "g": {
+                      "type": "nömrə"
+                    },
+                    "b": {
+                      "type": "nömrə"
+                    },
+                    "a": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "penWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "speed": {
+                  "palette_params": {
+                    "value": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "turnLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "turnRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "turnTo": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "nömrə"
+                    }
+                  }
+                }
+              }
             },
             "control": {
-              "name": "Nəzarət"
+              "name": "Nəzarət",
+              "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "Nömrə"
+                    },
+                    "callback": {
+                      "type": "Funksiya"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Riyaziyyat"
+              "name": "Riyaziyyat",
+              "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "type": "nömrə",
+                      "description": "Minimum, yəni ən kiçik ədəd alındı"
+                    },
+                    "max": {
+                      "type": "nömrə",
+                      "description": "Maksimum, yəni ən böyük ədəd alındı"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "type": "nömrə",
+                      "description": "Minimum, yəni ən kiçik ədəd alındı"
+                    },
+                    "max": {
+                      "type": "nömrə",
+                      "description": "Maksimum, yəni ən böyük ədəd alındı"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "dəyişənlər"
+              "name": "dəyişənlər",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Öz macəranızı seçin"
+                    }
+                  }
+                },
+                "substring": {
+                  "palette_params": {
+                    "start": {
+                      "type": "nömrə"
+                    },
+                    "end": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Simli"
+                    }
+                  },
+                  "return_value": "Heç biri"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "insertItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "removeItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "nömrə"
+                    }
+                  }
+                }
+              }
             },
             "functions": {
               "name": "Funksiyalar"
             },
             "advanced": {
-              "name": "Qabaqcıl"
+              "name": "Qabaqcıl",
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Simli"
+                    },
+                    "css": {
+                      "type": "Simli"
+                    }
+                  }
+                }
+              }
             },
             "maker": {
-              "name": "Yaradan"
+              "name": "Yaradan",
+              "expressions": {
+                "createButton": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "createLed": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "pinMode": {
+                  "palette_params": {
+                    "pin": {
+                      "type": "Nömrə"
+                    },
+                    "mode": {
+                      "type": "Simli"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "isPressed": {
+                  "return_value": "Boolean"
+                },
+                "buzzer.frequency": {
+                  "palette_params": {
+                    "frequency": {
+                      "type": "nömrə"
+                    },
+                    "duration": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "buzzer.note": {
+                  "palette_params": {
+                    "duration": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "color": {
+                  "palette_params": {
+                    "red": {
+                      "type": "nömrə"
+                    },
+                    "green": {
+                      "type": "nömrə"
+                    },
+                    "blue": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "intensity": {
+                  "palette_params": {
+                    "brightness": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "led.blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "led.pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "nömrə"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Boolean"
+                }
+              }
             }
           }
         },

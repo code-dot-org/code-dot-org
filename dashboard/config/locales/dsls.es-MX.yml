@@ -2170,45 +2170,45 @@ es-MX:
           ### ¿Qué información necesitas para ayudarte a descifrarla?
       CSD U3 drawSprites placement match:
         answers:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         content1: Haz coincidir el código con la imagen que genera.
         questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
         title: dibujarSprites
       CSD U3 drawSprites placement match_2019:
         answers:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         content1: Haz coincidir el código con la imagen que genera.
         questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
         title: dibujarSprites
       CSD U3 game intro:
         content1: descripción aquí
@@ -12060,6 +12060,7 @@ es-MX:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: No sucederá nada.
+          correct: true
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
           feedback: Incorrecto. El pez dorado comenzará a dar vueltas
@@ -12589,24 +12590,24 @@ es-MX:
             producirá.
       CSD U3 drawSprites placement match_2019_pilot_2021:
         answers:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         content1: Haz coincidir el código con la imagen que genera.
         questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
         title: dibujarSprites
       CSD U3 drawing practice choice_2021:
         display_name: Práctica
@@ -14639,23 +14640,23 @@ es-MX:
         title: Pregunta 3
       CSD U3 drawSprites placement match_2022:
         answers:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
         questions:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         title: dibujarSprites
         content1: Haz coincidir la imagen con el código que producirá.
       CSD U3 drawing challenges_2022:
@@ -15283,7 +15284,7 @@ es-MX:
           correct: true
         - text: I, II, y III
         questions:
-        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+        - text: "¿Qué necesita saber un programador al crear un detector de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
             Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
             Qué debe hacer el programa cuando se dispara el evento"
@@ -15296,7 +15297,7 @@ es-MX:
           correct: true
         - text: I, II, y III
         questions:
-        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+        - text: "¿Qué necesita saber un programador al crear un detector de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
             Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
             Qué debe hacer el programa cuando se dispara el evento"
@@ -15490,9 +15491,9 @@ es-MX:
         description: Prueba estos nuevos bloques y desafíos con la entrada del mouse.
         display_name: Desafíos del Mouse
       CSD web mouse practice choice_2022:
-        description: Practica la entrada de teclado y el uso del bloque if/else con
-          estas actividades.
         display_name: Entrada de Mouse y Práctica de If/else
+        description: Practica la introducción de datos con el teclado y el uso de
+          sentencias condicionales con estas actividades.
       CSD web movement challenge choice_2022:
         description: Añade más cosas a tu escena de peces o crea algo nuevo.
         display_name: Desafíos de Movimiento de Sprite
@@ -25379,21 +25380,18 @@ es-MX:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat llegará a la bellota. No hay errores en el código.
-          feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
-            Scrat no avanza las veces suficientes para alcanzar la bellota.
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no llegará a la bellota porque gira en la dirección equivocada.
           correct: true
-          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
-            Scrat no avanza las veces suficientes para alcanzar la bellota."
+          feedback: "¡Correcto! Scrat gira en la dirección equivocada y no alcanzará
+            la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
             "avanzar".
-          correct: true
-          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
-            Scrat no avanza las veces suficientes para alcanzar la bellota."
+          feedback: Incorrecto. Scrat no llegará a la bellota porque gira hacia el
+            lado equivocado.
         - text: Scrat no se moverá del primer bloque.
-          feedback: Hay dos errores en este código. En primer lugar, Scrat gira en
-            la dirección equivocada y a continuación, Scrat no se mueve hacia adelante
-            suficientes veces para llegar a la bellota.
+          feedback: Scrat no llegará a la bellota porque gira en la dirección equivocada.
         questions:
         - text: Busca errores en este código. ¿Llegará Scrat a la bellota o hay algún
             problema?
@@ -26104,8 +26102,7 @@ es-MX:
           Una vez que hayas decidido un tipo de juego con tu compañero, rellena la Guía de Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego. Pasarás los siguientes niveles creando tu juego.
       CSD U3 - Interactive Card - ExampleChoice_2022:
         description: En los próximos niveles, completarás tu propia tarjeta interactiva.
-          Aquí tienes algunos ejemplos para darte algunas ideas. No olvides mirar
-          el código para ver cómo funcionan.
+          Aquí tienes algunos ejemplos para darte algunas ideas.
         display_name: Tu Tarjeta Interactiva
       Student End of Unit Survey - Intro+TeacherMD_csd2-2022:
         teacher_markdown: |

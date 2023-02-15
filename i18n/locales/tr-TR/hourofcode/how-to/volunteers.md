@@ -142,7 +142,7 @@ Okul veya öğretmenle birlikte, neyin en mantıklı olacağını tartışın. �
 
 #### Cihazlar:
 
-En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar gerekli değildir ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz! Bağımsız aktiviteler için Sınıf Teknolojisi bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek filtreleme yapabilirsiniz.
+En iyi Hour of Code deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar gerekli değildir ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz! Bağımsız aktiviteler için Sınıf Teknolojisi bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek filtreleme yapabilirsiniz.
 
 - Aktiviteleri bilgisayar veya cihazlarda **deneyin**. Ses ve videoların tarayıcılarda düzgün bir şekilde çalıştıklarından emin olun.
 - **Yeterli cihazınız yok mu?** Eşli programlama kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
@@ -173,7 +173,7 @@ Etkinliğiniz için belirli bir yol haritanız olduğunda, öğrencileri, bir ok
 
 - Katılımcılar ve öğrencilerin [sertifikalarını verin]({{ urls/certificates }}).
 - ["I did an Hour of Code!" çıkartmalarından bastırın]({{ promote/resources_stickers }}) veya [Code.org Amazon Mağazasında](https://code.org/shop) başka ödül ve promosyon ürünleri bulun.
-- Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
+- Hour of Code etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
 
 * * *
 

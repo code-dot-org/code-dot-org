@@ -91,7 +91,7 @@ Ekstra yol kat etmek istiyorsanız şirketiniz bir Hour of Code etkinliğine de 
 
 #### Cihazlar:
 
-En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar gerekli değildir ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz! Bağımsız aktiviteler için Sınıf Teknolojisi bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek filtreleme yapabilirsiniz.
+En iyi Hour of Code deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar gerekli değildir ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz! Bağımsız aktiviteler için Sınıf Teknolojisi bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek filtreleme yapabilirsiniz.
 
 - Aktiviteleri bilgisayar veya cihazlarda **deneyin**. Ses ve videoların tarayıcılarda düzgün bir şekilde çalıştıklarından emin olun.
 - **Yeterli cihazınız yok mu?** Eşli programlama kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.

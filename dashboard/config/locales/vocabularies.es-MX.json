@@ -892,7 +892,7 @@
         },
         "parameter/csd/2022": {
           "word": "Parámetro",
-          "definition": "Un parámetro es una pieza adicional de información que puedes pasar a una función para personalizarla para una necesidad especial."
+          "definition": "Información adicional introducida en un bloque para personalizar su funcionalidad"
         },
         "variable/csd/2022": {
           "word": "Variable",
@@ -1676,7 +1676,7 @@
           "definition": "primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final."
         },
         "user_interface/csd/2021": {
-          "word": "Pantalla de Usuario",
+          "word": "Interfaces de Usuario",
           "definition": "elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
         },
         "bug/csd/2021": {

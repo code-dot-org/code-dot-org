@@ -2281,6 +2281,13 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For-løkker
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2323,11 +2330,23 @@
               display_name: Funksjoner
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Lister
             csp_loops:
+              display_name: Løkker
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lister
+            lessonGroup-3:
               display_name: Løkker
         csp9-2023:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(gammel) Enhet 9: Data"
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototyper'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototyper'

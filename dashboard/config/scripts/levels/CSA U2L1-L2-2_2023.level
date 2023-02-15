@@ -29,13 +29,17 @@
         "isVisible": true,
         "tabOrder": 3
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "Making the `year` variable `public` instead of `private` allows the `ContentRunner` class to access and print the value assigned to `year`. When attempting to print the `title` variable, students will see the error about the variable being `private`."
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-11-11T17:56:40.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-11T17:56:40.336+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2_2023\\\"\"],\"cloned_from\":\"CSA U2L1-L2_2023\"},{\"changed_at\":\"2022-11-11 17:58:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:12:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:12:52 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:12:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:13:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-11-11T17:56:40.336+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2_2023\\\"\"],\"cloned_from\":\"CSA U2L1-L2_2023\"},{\"changed_at\":\"2022-11-11 17:58:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:12:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:12:52 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:12:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-11 18:13:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-15 19:35:58 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

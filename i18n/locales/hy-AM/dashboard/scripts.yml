@@ -1428,6 +1428,13 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For Loops
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:
@@ -1446,9 +1453,13 @@ hy:
               display_name: գործառույթները
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: ցուցակները
             csp_loops:
+              display_name: loops
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ցուցակները
+            lessonGroup-3:
               display_name: loops
         csp9-2023:
           lesson_groups:

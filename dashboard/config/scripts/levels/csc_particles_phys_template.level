@@ -42,17 +42,14 @@
       "downButton"
     ],
     "validation_code": "//validation",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-10-31T23:12:37.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-10-31T23:12:37.000Z",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-31T23:12:37.082+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_setup1\\\"\"],\"cloned_from\":\"csc_particles_phys_setup1\"},{\"changed_at\":\"2022-10-31 23:13:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:13:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:14:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:14:15 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:17:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:18:06 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:18:31 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:27:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:35:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:35:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:35:36 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:35:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:53:29 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 17:22:55 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 21:46:04 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-10-31T23:12:37.082+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_setup1\\\"\"],\"cloned_from\":\"csc_particles_phys_setup1\"},{\"changed_at\":\"2022-10-31 23:13:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:13:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:14:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:14:15 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:17:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:18:06 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:18:31 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:27:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:35:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:35:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:35:36 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:35:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:53:29 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 17:22:55 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 21:46:04 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-12-01 21:43:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-12-01 22:04:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -61,26 +58,26 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
+            <block type="gamelab_setBackgroundImageAs" deletable="false" can_disconnect_from_parent="false">
               <field name="IMG">"background_science_lab_small-01"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
+                <block type="gamelab_makeNewSpriteAnon" deletable="false" can_disconnect_from_parent="false">
                   <field name="ANIMATION_NAME">"wood"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker">
+                    <block type="gamelab_location_picker" deletable="false" can_disconnect_from_parent="false">
                       <field name="LOCATION">{"x":222,"y":220}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_setProp">
+                    <block type="gamelab_setProp" deletable="false" can_disconnect_from_parent="false">
                       <field name="PROPERTY">"scale"</field>
                       <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
+                        <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
                           <field name="ANIMATION">"wood"</field>
                         </block>
                       </value>
                       <value name="VAL">
-                        <block type="math_number">
+                        <block type="math_number" deletable="false" can_disconnect_from_parent="false">
                           <field name="NUM">75</field>
                         </block>
                       </value>
@@ -90,6 +87,9 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_callnoreturn" editable="false" uservisible="false">
+          <mutation name="LabSetup"/>
         </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
@@ -101,7 +101,7 @@
               </value>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"scientist_2"</field>
+                  <field name="ANIMATION_NAME">"scientist_1"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
                       <field name="LOCATION">{"x":81,"y":294}</field>
@@ -123,7 +123,7 @@
                               <field name="SPEECH">First, bring the solid ice to the microscope for a closer look. </field>
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"scientist_2"</field>
+                                  <field name="ANIMATION">"scientist_1"</field>
                                 </block>
                               </value>
                               <next>
@@ -218,7 +218,7 @@
                       </value>
                       <next>
                         <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"scientist_2"</field>
+                          <field name="ANIMATION_NAME">"scientist_1"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
                               <field name="LOCATION">{"x":89,"y":295}</field>

@@ -9,22 +9,141 @@
           "name": "مختبر اللعب",
           "categories": {
             "game_lab": {
-              "name": "مختبر اللعب"
+              "name": "مختبر اللعب",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "أسود وأبيض"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "إنشاء موسيقى"
+                    }
+                  },
+                  "short_description": "شغِّل ملف الصوت بصيغة MP3 من الرابط المحدد."
+                }
+              }
             },
             "sprites": {
-              "name": "النقوش المتحركة"
+              "name": "النقوش المتحركة",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "حلزوني"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "مجموعات\n"
+              "name": "مجموعات",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "اللون"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "اللون"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "الرسم"
+              "name": "الرسم",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "الركل"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "العمليات الحسابية"
+              "name": "العمليات الحسابية",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "قام بإرجاع أصغر عدد"
+                    },
+                    "max": {
+                      "description": "قام بإرجاع أكبر عدد"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "قام بإرجاع أصغر عدد"
+                    },
+                    "max": {
+                      "description": "قام بإرجاع أكبر عدد"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "المتغيرات"
+              "name": "المتغيرات",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "يقوم بتعيين قيمة لمتغير تم الإعلان عنه مسبقًا."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "يقوم بتحديد متغير بالاسم المحدد."
+                },
+                "declareAssign_x": {
+                  "short_description": "يقوم بتحديد القيمة الأولية للمتغير وتعيينها."
+                }
+              }
             },
             "functions": {
               "name": "دوال"
@@ -35,14 +154,207 @@
           "name": "مختبر التطبيق",
           "description": "مختبر التطبيقات App Lab بيئة برمجية يمكنك من خلالها تصميم التطبيقات البسيطة. لذا؛ صمِّم تطبيقًا وقم بترميزه باستخدام القطع البرمجية أو لغة جافا سكريبت لعمل التطبيق، ثم شارِك تطبيقك في ثوانٍ.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "الانكماش والنمو"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "وظيفة "
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "إنشاء موسيقى"
+                    }
+                  },
+                  "short_description": "شغِّل ملف الصوت بصيغة MP3 من الرابط المحدد."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "البيانات"
+              "name": "البيانات",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "وظيفة "
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "كائن"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "وظيفة "
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "العمليات الحسابية"
+              "name": "العمليات الحسابية",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "قام بإرجاع أصغر عدد"
+                    },
+                    "max": {
+                      "description": "قام بإرجاع أكبر عدد"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "قام بإرجاع أصغر عدد"
+                    },
+                    "max": {
+                      "description": "قام بإرجاع أكبر عدد"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "المتغيرات"
+              "name": "المتغيرات",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "يقوم بتحديد متغير بالاسم المحدد."
+                },
+                "declareAssign_x": {
+                  "short_description": "يقوم بتحديد القيمة الأولية للمتغير وتعيينها."
+                },
+                "addPair": {
+                  "return_value": "لا شيء"
+                }
+              }
             },
             "functions": {
               "name": "دوال"

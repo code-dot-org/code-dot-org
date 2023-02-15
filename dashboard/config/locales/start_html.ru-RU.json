@@ -1,0 +1,1693 @@
+{
+  "ru-RU": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "Yes": "Да",
+          "No": "Нет",
+          "cute": "милый"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "Yes": "Да",
+          "No": "Нет",
+          "cute": "милый"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "Yes": "Да",
+          "No": "Нет",
+          "cute": "милый"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "Yes": "Да",
+          "No": "Нет",
+          "cute": "милый"
+        },
+        "CSD U1 IO Story_2021": {
+          "Name": "Имя",
+          "Color": "Цвет",
+          "Food": "Еда",
+          "City": "Город",
+          "text": "текст"
+        },
+        "CSD U1 IO Story_2022": {
+          "Name": "Имя",
+          "Color": "Цвет",
+          "Food": "Еда",
+          "City": "Город",
+          "text": "текст"
+        },
+        "CSD U1 processing bday_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31"
+        },
+        "CSD U1 processing bday_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31"
+        },
+        "CSD U1 processing countries_2021": {
+          "32": "32"
+        },
+        "CSD U1 processing countries_2022": {
+          "32": "32"
+        },
+        "CSD U1 processing fastest_2021": {
+          "s": "s",
+          "k": "k",
+          "0": "0"
+        },
+        "CSD U1 processing fastest_2022": {
+          "s": "s",
+          "k": "k",
+          "0": "0"
+        },
+        "CSD U1 processing guess_2021": {
+          "?": "?",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31",
+          "32": "32",
+          "33": "33",
+          "34": "34",
+          "35": "35",
+          "36": "36",
+          "37": "37",
+          "38": "38",
+          "39": "39",
+          "40": "40",
+          "text": "текст"
+        },
+        "CSD U1 processing guess_2022": {
+          "?": "?",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31",
+          "32": "32",
+          "33": "33",
+          "34": "34",
+          "35": "35",
+          "36": "36",
+          "37": "37",
+          "38": "38",
+          "39": "39",
+          "40": "40",
+          "text": "текст"
+        },
+        "CSD U1 processing live_2021": {
+          "walking": "прогулка",
+          "bear": "Медведь",
+          "rat": "крыса"
+        },
+        "CSD U1 processing live_2022": {
+          "walking": "прогулка",
+          "bear": "Медведь",
+          "rat": "крыса"
+        },
+        "CSD U1 processing npark_2021": {
+          "Correct!": "Верно\n",
+          "Sorry!": "Извините!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Correct!": "Верно\n",
+          "Sorry!": "Извините!"
+        },
+        "CSD U1 processing writers_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31"
+        },
+        "CSD U1 processing writers_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "Назад"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Назад"
+        },
+        "CSD U1 storage movies_2021": {
+          "Star Wars": "Звездные войны",
+          "Yes": "Да",
+          "No": "Нет",
+          "text": "текст"
+        },
+        "CSD U1 storage movies_2022": {
+          "Star Wars": "Звездные войны",
+          "Yes": "Да",
+          "No": "Нет",
+          "text": "текст"
+        },
+        "CSD U1 storage outfit_2021": {
+          "Clear": "Очистить",
+          "white": "белый",
+          "pink": "розовый",
+          "green": "зеленый",
+          "black": "черный",
+          "purple": "пурпурный"
+        },
+        "CSD U1 storage outfit_2022": {
+          "Clear": "Очистить",
+          "white": "белый",
+          "pink": "розовый",
+          "green": "зеленый",
+          "black": "черный",
+          "purple": "пурпурный"
+        },
+        "CSD U2 RGB intro": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2018": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2019": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U6 - Accelerometer - PA_2222": {
+          "Game Over": "Игра Окончена"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2222": {
+          "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 - Accelerometer - PF_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "Счастливый"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "Рыба"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "North": "Север",
+          "South": "Юг",
+          "East": "Восток",
+          "West": "Запад"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "Средний"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "left": "влево",
+          "right": "вправо",
+          "red": "красный",
+          "yellow": "жёлтый",
+          "green": "зеленый",
+          "purple": "пурпурный"
+        },
+        "CSD U6 - Combine Inputs - CA_2022": {
+          "on": "вкл",
+          "fast": "быстро",
+          "slow": "медленно",
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2222": {
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "влево",
+          "right": "вправо"
+        },
+        "CSD U6 - Combine Inputs - PracB_2222": {
+          "bright": "яркий"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "yellow": "жёлтый",
+          "green": "зеленый",
+          "blue": "синий",
+          "orange": "оранжевый"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "спокойный",
+          "Test": "Тест"
+        },
+        "CSD U6 - Combine Inputs - SB2_2222": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 - Combine Inputs - SB4_2222": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 - Functions - P2C_2222": {
+          "Red": "Красный",
+          "Blue": "Синий"
+        },
+        "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "0": "0",
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "Имя"
+        },
+        "CSD U6 - If Variables - SB4_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "Счастливый"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "А",
+          "B": "Б",
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б",
+          "Note:": "Примечание:"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "Score": "Счет",
+          "0": "0"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "Name:": "Имя:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2222": {
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий",
+          "Save": "Сохранить"
+        },
+        "CSD U6 - Screen Inputs - PracD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB1_2222": {
+          "Welcome": "Добро пожаловать"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "черный",
+          "white": "белый"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "черный",
+          "white": "белый"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "Happy": "Счастливый",
+          "?": "?"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "название"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "White": "Белый",
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "up": "вверх",
+          "down": "вниз",
+          "left": "влево",
+          "right": "вправо"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "наименование"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2222": {
+          "off": "выкл",
+          "on": "вкл"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "текст",
+          "high": "высокий",
+          "low": "низкий"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Обновить"
+        },
+        "CSD U6 Driver pt 2": {
+          "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 Driver pt 2_2018": {
+          "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 Driver pt 2_2019": {
+          "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 Driver pt 2_2021": {
+          "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 Driver pt1": {
+          "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 Driver pt1_2018": {
+          "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 Driver pt1_2019": {
+          "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 Driver pt1_2021": {
+          "You did it!": "У тебя получилось!"
+        },
+        "CSD U6 LED all": {
+          "on": "вкл"
+        },
+        "CSD U6 LED all_2018": {
+          "on": "вкл"
+        },
+        "CSD U6 LED all_2019": {
+          "on": "вкл"
+        },
+        "CSD U6 LED all_2021": {
+          "on": "вкл"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 Pedometer": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2018": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2019": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2021": {
+          "0": "0"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 analog light": {
+          "Update": "Обновить"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Обновить"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Обновить"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Обновить"
+        },
+        "CSD U6 array piano": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 array piano_2018": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 array piano_2019": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 array piano_2021": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "первый"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "первый"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "первый"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "первый"
+        },
+        "CSD U6 change": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 change_2018": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 change_2019": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 change_2021": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "Средний"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "Средний"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "Средний"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "Средний"
+        },
+        "CSD U6 emotion machine example": {
+          "Happy": "Счастливый",
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "Happy": "Счастливый",
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "Happy": "Счастливый",
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "Happy": "Счастливый",
+          "?": "?"
+        },
+        "CSD U6 frequency": {
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 frequency_2018": {
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 frequency_2019": {
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 frequency_2021": {
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 get toggle": {
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 get toggle_2018": {
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 get toggle_2019": {
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 get toggle_2021": {
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 getProperty Demo": {
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий",
+          "Save": "Сохранить"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий",
+          "Save": "Сохранить"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий",
+          "Save": "Сохранить"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий",
+          "Save": "Сохранить"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Отправить"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Отправить"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Отправить"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Отправить"
+        },
+        "CSD U6 getters debug": {
+          "slow": "медленно",
+          "fast": "быстро",
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 getters debug_2018": {
+          "fast": "быстро",
+          "slow": "медленно",
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 getters debug_2019": {
+          "fast": "быстро",
+          "slow": "медленно",
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 getters debug_2021": {
+          "fast": "быстро",
+          "slow": "медленно",
+          "short": "недолго",
+          "long": "долго",
+          "low": "низкий",
+          "high": "высокий"
+        },
+        "CSD U6 interval": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 interval_2018": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 interval_2019": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 interval_2021": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 light show": {
+          "on": "вкл",
+          "off": "выкл"
+        },
+        "CSD U6 light show_2018": {
+          "on": "вкл",
+          "off": "выкл"
+        },
+        "CSD U6 light show_2019": {
+          "on": "вкл",
+          "off": "выкл"
+        },
+        "CSD U6 light show_2021": {
+          "on": "вкл",
+          "off": "выкл"
+        },
+        "CSD U6 params create colors": {
+          "Red": "Красный",
+          "Blue": "Синий"
+        },
+        "CSD U6 params create colors_2018": {
+          "Red": "Красный",
+          "Blue": "Синий"
+        },
+        "CSD U6 params create colors_2019": {
+          "Red": "Красный",
+          "Blue": "Синий"
+        },
+        "CSD U6 params create colors_2021": {
+          "Red": "Красный",
+          "Blue": "Синий"
+        },
+        "CSD U6 params starchaser intro": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2018": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2019": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2021": {
+          "0": "0"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "текст",
+          "high": "высокий",
+          "low": "низкий"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "текст",
+          "high": "высокий",
+          "low": "низкий"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "текст",
+          "high": "высокий",
+          "low": "низкий"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "текст",
+          "high": "высокий",
+          "low": "низкий"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "название"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "название"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "название"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "название"
+        },
+        "CSD U6 slider intro": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 slider intro_2018": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 slider intro_2019": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 slider intro_2021": {
+          "short": "недолго",
+          "long": "долго"
+        },
+        "CSD U6 stillness game predict code": {
+          "Game Over": "Игра Окончена"
+        },
+        "CSD U6 stillness game predict code_2018": {
+          "Game Over": "Игра Окончена"
+        },
+        "CSD U6 stillness game predict code_2019": {
+          "Game Over": "Игра Окончена"
+        },
+        "CSD U6 stillness game predict code_2021": {
+          "Game Over": "Игра Окончена"
+        },
+        "CSD U6 test LED": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "Успешно!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "Успешно!"
+        },
+        "CSDU4 Connecting Screens": {
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий"
+        },
+        "CSDU4 Connecting Screens Getting Back": {
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About": "О разработчике",
+          "About Us": "О нас",
+          "User": "Пользователь",
+          "Cancel": "Отменить",
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий",
+          "Yes": "Да",
+          "No": "Нет",
+          "Save": "Сохранить"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About": "О разработчике",
+          "About Us": "О нас",
+          "User": "Пользователь",
+          "Cancel": "Отменить",
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий",
+          "Yes": "Да",
+          "No": "Нет",
+          "Save": "Сохранить"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About": "О разработчике",
+          "About Us": "О нас",
+          "User": "Пользователь",
+          "Cancel": "Отменить",
+          "Name:": "Имя:",
+          "Red": "Красный",
+          "Green": "Зеленый",
+          "Blue": "Синий",
+          "Yes": "Да",
+          "No": "Нет",
+          "Save": "Сохранить"
+        },
+        "CSDU4 Decision App Demo": {
+          "About": "О разработчике",
+          "Why?": "Почему",
+          "I don't know": "Я не знаю",
+          "When?": "Когда?",
+          "About Us": "О нас"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About": "О разработчике",
+          "Why?": "Почему",
+          "I don't know": "Я не знаю",
+          "When?": "Когда?",
+          "About Us": "О нас"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About": "О разработчике",
+          "Why?": "Почему",
+          "I don't know": "Я не знаю",
+          "When?": "Когда?",
+          "About Us": "О нас"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "Скрыть",
+          "Show": "Показать"
+        },
+        "CSDU4 List App Demo": {
+          "About": "О разработчике",
+          "About Us": "О нас",
+          "Done": "Готово",
+          "Cancel": "Отменить"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About": "О разработчике",
+          "About Us": "О нас",
+          "Done": "Готово",
+          "Cancel": "Отменить"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About": "О разработчике",
+          "About Us": "О нас",
+          "Done": "Готово",
+          "Cancel": "Отменить"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About": "О разработчике",
+          "Submit": "Отправить",
+          "Why?": "Почему",
+          "When?": "Когда?",
+          "About Us": "О нас",
+          "Correct!": "Верно\n"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About": "О разработчике",
+          "Submit": "Отправить",
+          "Why?": "Почему",
+          "When?": "Когда?",
+          "About Us": "О нас",
+          "Correct!": "Верно\n"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About": "О разработчике",
+          "Submit": "Отправить",
+          "Why?": "Почему",
+          "When?": "Когда?",
+          "About Us": "О нас",
+          "Correct!": "Верно\n"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+",
+          "???": "???\n",
+          "=": "="
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Назад"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "Успешно!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "Успешно!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "Успешно!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "Успешно!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Успешно!"
+        },
+        "CSDU6 circuit playground piano": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 piano with notes": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 piano with notes_2018": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 piano with notes_2019": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 piano with notes_2021": {
+          "C": "В",
+          "D": "Г",
+          "E": "В",
+          "F": "Д",
+          "G": "Е",
+          "A": "А",
+          "B": "Б"
+        },
+        "allthethings design mode elements": {
+          "text": "текст"
+        },
+        "csa widget test2": {
+          "8": "8",
+          "32": "32"
+        },
+        "csd u5 recommender sample": {
+          "Start": "Начать",
+          "flying": "полет"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "Начать",
+          "flying": "полет"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "Начать",
+          "flying": "полет"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "Начать",
+          "flying": "полет"
+        },
+        "csd-apps for good-2": {
+          "Next": "Вперед",
+          "Home": "Домой"
+        },
+        "csd-apps for good-2_2022": {
+          "Next": "Вперед",
+          "Home": "Домой"
+        },
+        "csd-apps for good-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "???": "???\n"
+        },
+        "csd-apps for good-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "???": "???\n"
+        },
+        "csd-explore ui-2": {
+          "Next": "Вперед",
+          "Home": "Домой"
+        },
+        "csd-explore ui-2_2022": {
+          "Next": "Вперед",
+          "Home": "Домой"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31"
+        },
+        "csd-explore ui-4": {
+          "Correct!": "Верно\n",
+          "Sorry!": "Извините!"
+        },
+        "csd-explore ui-4_2022": {
+          "Correct!": "Верно\n",
+          "Sorry!": "Извините!"
+        },
+        "csd-explore ui-5": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "21": "21",
+          "22": "22",
+          "23": "23",
+          "24": "24",
+          "25": "25",
+          "26": "26",
+          "27": "27",
+          "28": "28",
+          "29": "29",
+          "30": "30",
+          "31": "31"
+        },
+        "csd-explore ui-6": {
+          "Next": "Вперед"
+        },
+        "csd-explore ui-6_2022": {
+          "Next": "Вперед"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Green Glass Door": "Зеленая Стеклянная Дверь",
+          "Accepted": "Принято",
+          "Rejected": "Отклонено"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Green Glass Door": "Зеленая Стеклянная Дверь",
+          "Accepted": "Принято",
+          "Rejected": "Отклонено"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Вперед"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Вперед"
+        },
+        "ml-customize-raspado-2021": {
+          "yes": "да",
+          "no": "нет",
+          "Raspado Recommender": "Рекомендатель Сока со льдом",
+          "Predict": "Предсказать"
+        },
+        "ml-customize-raspado_2022": {
+          "yes": "да",
+          "no": "нет",
+          "Raspado Recommender": "Рекомендатель Сока со льдом",
+          "Predict": "Предсказать"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "Продолжить",
+          "Loading...": "ЗАГРУЗКА..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Продолжить",
+          "Loading...": "ЗАГРУЗКА..."
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Silly": "Глупый",
+          "Predict": "Предсказать"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "Глупый",
+          "Predict": "Предсказать"
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "W": "З",
+          "A": "А",
+          "yes": "да",
+          "no": "нет",
+          "head": "голова"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "W": "З",
+          "A": "А",
+          "yes": "да",
+          "no": "нет",
+          "head": "голова"
+        },
+        "ml-model cards-book recommender model card": {
+          "Silly": "Глупый",
+          "Predict": "Предсказать"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Silly": "Глупый",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-choice if quotes": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Предсказать",
+          "Back": "Назад"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Предсказать",
+          "Back": "Назад"
+        },
+        "ml-models in applab-choice predict typos": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-zoo assessment": {
+          "Yes": "Да",
+          "No": "Нет",
+          "B": "Б",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "Yes": "Да",
+          "No": "Нет",
+          "B": "Б",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-zoo model embed": {
+          "Yes": "Да",
+          "No": "Нет",
+          "Predict": "Предсказать"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "Yes": "Да",
+          "No": "Нет",
+          "Predict": "Предсказать"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Improved Shoe Recommender": "Улучшенный Рекомендатель Обуви",
+          "Sports": "Виды спорта"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Improved Shoe Recommender": "Улучшенный Рекомендатель Обуви",
+          "Sports": "Виды спорта"
+        },
+        "ml-models-shoes points-2021": {
+          "Ultimate Shoe Recommender": "Итоговый Рекомендатель Обуви"
+        },
+        "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "Итоговый Рекомендатель Обуви"
+        },
+        "ml-models-shoes random-2021": {
+          "Shoe Recommender": "Рекомендатель Обуви"
+        },
+        "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Рекомендатель Обуви"
+        },
+        "ml-use model card-example3A-2021": {
+          "Driver Alert System": "Система Оповещения Водителя",
+          "rain": "дождь",
+          "snow": "снег",
+          "cloudy": "облачно",
+          "night": "ночь",
+          "dusk": "Сумерки ",
+          "Predict": "Предсказать"
+        },
+        "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Система Оповещения Водителя",
+          "rain": "дождь",
+          "snow": "снег",
+          "cloudy": "облачно",
+          "night": "ночь",
+          "dusk": "Сумерки ",
+          "Predict": "Предсказать"
+        }
+      }
+    }
+  }
+}

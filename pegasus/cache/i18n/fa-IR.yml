@@ -676,6 +676,8 @@ fa-IR:
   dashboard_puzzle: پازل
   dashboard_question: سوال
   dashboard_correctness_correct: صحیح است
+  dashboard_submission_submitted: ثبت‌شده
+  dashboard_submission_in_progress: در حال پیش رفت
   stats_hoc_2013_heading: 'آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک
     هفته:'
   stats_hoc_2013_image_alt: وضعیت کد نویسی در سال 2013
@@ -785,6 +787,20 @@ fa-IR:
   course2_name: دوره 2
   course3_name: دورۀ 3
   course4_name: دوره 4
+  coursea-2021_name: دوره A ‏(2021)
+  courseb-2021_name: دوره B ‏(2021)
+  coursec-2021_name: دوره C ‏(2021)
+  coursed-2021_name: دوره D ‏(2021)
+  coursee-2021_name: دوره E ‏(2021)
+  coursef-2021_name: دوره F ‏(2021)
+  coursea-2022_name: دوره A ‏(2022)
+  courseb-2022_name: دوره B ‏(2022)
+  coursec-2022_name: دوره C ‏(2022)
+  coursed-2022_name: دوره D ‏(2022)
+  coursee-2022_name: دوره E ‏(2022)
+  coursef-2022_name: دوره F ‏(2022)
+  express-2021_name: دوره اکسپرس (2021)
+  express-2022_name: دوره اکسپرس (2022)
   accelerated_name: دوره های سریع
   20-hour_name: دوره های سریع
   classicmaze_name: هزارتوی کلاسیک
@@ -995,6 +1011,36 @@ fa-IR:
   infinity_shortdescription: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
     شخصیت های دیزنی بی نهایت.
   artist_shortdescription: با نقاش چند عکس و طرح باحال بکش!
+  coursea-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
+    باشید.
+  courseb-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
+    باشید.
+  coursec-2020_shortdescription_congrats: با استفاده از توالی، حلقه و رویدادها برنامه
+    بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید
+    و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا
+    داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
+  coursea-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
+    باشید.
+  courseb-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
+    باشید.
+  coursec-2021_shortdescription_congrats: با استفاده از توالی، حلقه و رویدادها برنامه
+    بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید
+    و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا
+    داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
+  coursea-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
+    باشید.
+  courseb-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
+    باشید.
+  coursec-2022_shortdescription_congrats: با استفاده از توالی، حلقه و رویدادها برنامه
+    بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید
+    و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا
+    داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
   codeorg_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
     را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک
     زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
@@ -1492,9 +1538,11 @@ fa-IR:
   header_help_us: به ما کمک کنید
   header_about: درباره
   header_report_bug: گزارش مشکل
+  header_legal: حریم خصوصی و مسائل حقوقی
   header_legal_privacy: قوانین حفظ حریم خصوصی
   header_legal_tos: شرایط
   header_tutorials: آموزش‌ها
+  sprite_lab_documentation: مستندات آزمایشگاه اسپرایت
   header_documentation: مستندات
   user_header_label: سلام %{username}
   user_header_team: تیم
@@ -1507,8 +1555,10 @@ fa-IR:
   user_header_gamelab: کارگاه بازی سازی
   user_header_playlab: آزمایشگاه بازی
   user_header_dance: جشن و رقص
+  user_header_spritelab: آزمایشگاه اسپرایت
   user_header_minecraft: ماینکرفت
   user_header_flappy: فلاپی
+  user_header_view_all: مشاهده همه پروژه‌ها...
   user_header_view_my_projects: پروژه های من را ببینید
   view_all_sections: مشاهده‌ی همه‌ی بخش‌ها
   hero_name: 'ماینکرافت: سفر قهرمانان'
@@ -1573,16 +1623,20 @@ fa-IR:
   hoc2022_mc_mee_timecraft_description: در این درس رایگان کدنویسی نسخه آموزشی Minecraft
     برای نجات آینده با ماشین زمان سفر کنید.
   footer_powered_by_aws: قدرت گرفته شده توسط وب سرویس های آمازون
+  footer_built_on_github: ساخته‌شده در GitHub از طریق مایکروسافت
   codebytes_skinny_banner_english_only: فقط انگلیسی
   footer_privacy_policy: قوانین حفظ حریم خصوصی
   footer_about: درباره
   footer_partners: شرکا
   footer_donate: کمک مالی بدهید
+  footer_store: فروشگاه
   footer_support: پشتیبانی
   footer_terms: شرایط
   ai_for_oceans_lesson_plan: طرح درس
   ai_activity: فعالیت
   ai_description: توضیحات
+  outbreak_tile_title: شیوع
+  footer_cookie_notice: اطلاعیه کوکی
   hoc2022_banner_title: بگرد، بازی کن و خلق کن!
   hoc2022_banner_description: جهان را بگرد، امتیاز کسب کن، حرکت ایجاد کن - راه‌های
     زیادی برای کار با علوم کامپیوتر هست!
@@ -1595,3 +1649,6 @@ fa-IR:
   hoc2022_landing_page_banner_alt_left: رقص بیگانه در کنار زحل در فضا
   hoc2022_landing_page_banner_alt_right: یک ربات یک توپ فوتبال را در فضای مقابل یک
     موشک که در حال استارت پرواز است دریبل میزند
+  try_it_yourself: خودتان امتحان کنید!
+  try_an_activity: فعالیتی رو تست کنید
+  see_more_activities: مشاهده فعالیت های بیشتر

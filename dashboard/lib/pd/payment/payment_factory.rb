@@ -1,7 +1,7 @@
 module Pd::Payment
   module PaymentFactory
     def self.get_payment(workshop)
-      raise 'Workshop required.' unless workshop&.is_a?(Pd::Workshop)
+      raise 'Workshop required.' unless workshop.is_a?(Pd::Workshop)
       get_calculator_class(workshop).instance.calculate(workshop)
     end
 

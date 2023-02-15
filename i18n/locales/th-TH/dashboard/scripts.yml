@@ -2188,6 +2188,12 @@ th:
           lessons:
             lesson-4:
               name: ตัวแปร
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: อาร์เรย์มิติเดียว (1D)
+            lesson-3:
+              name: การวนรอบ
         hello-world-space-2022:
           title: 'สวัสดีชาวโลก: จักรวาล'
         hello-world-soccer-2022:
@@ -2239,11 +2245,23 @@ th:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: รายการ
+              display_name: ข้อมูล
             csp_loops:
               display_name: ลูป
             csp_project:
               display_name: โปรเจกต์
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: รายการ
+            lessonGroup-3:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: โปรเจกต์
         csp-playground:
           description_audience: ผู้เขียนหลักสูตร
           description_short: เพื่อจัดทำอัปเดตในบทเรียนหรือเลเวลระหว่างหลักสูตรแต่ละเวอร์ชัน
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: แอปแลปเบื้องต้น

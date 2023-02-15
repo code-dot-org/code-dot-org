@@ -19,7 +19,7 @@ Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tan
 - [Hour of Code etkinliğine güçlü başlamanın yolları](#how-to-start)
 - [Kodlamaya başlayın](#code)
 - [Öğrencilerinizin başarısını kutlayın](#celebrate)
-- [Eğitimciler için diğer Kod-Saati kaynakları](#other-resources)
+- [Eğitimciler için diğer Hour of Code kaynakları](#other-resources)
 
 * * *
 
@@ -47,7 +47,7 @@ Aktiviteleri keşfedin ve şuna önceden karar verin: Tüm öğrencileriniz içi
 
 ### Teknolojik ihtiyaçlarınızı düşünün (bilgisayar kullanmak isteğinize bağlı)
 
-- En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar gerekli değildir ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz! [Bağımsız aktiviteler](/learn) için Sınıf Teknolojisi bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek filtreleme yapabilirsiniz.
+- En iyi Hour of Code deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar gerekli değildir ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz! [Bağımsız aktiviteler](/learn) için Sınıf Teknolojisi bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek filtreleme yapabilirsiniz.
 - Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. Bağlantı hızınız düşük mü? Videoları sınıfın ön tarafından izletin, böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen içerikleri deneyin.
 - Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kulaklıklar edinin ya da öğrencilere kendilerininkini getirmelerini söyleyin.
 - Yeterli cihazınız yok mu? O halde [eşli programlamayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
@@ -141,7 +141,7 @@ Hem siz hem de öğrencileriniz bilgisayar biliminde yeniyseniz sorun değil. İ
     
     - Öğrencileriniz için [Sertifika basın]({{ urls/certificates }}).
     - Öğrencileriniz için ["I did an Hour of Code!"]({{ urls/promote_stickers }}) çıkartmalarından bastırın.
-    - Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
+    - Hour of Code etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
     
     * * *
     

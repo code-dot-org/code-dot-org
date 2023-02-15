@@ -13,7 +13,6 @@ import {
 } from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
-import DetailViewResponse from './detail_view_response';
 import {
   RegionalPartnerDropdown,
   UNMATCHED_PARTNER_VALUE,
@@ -30,24 +29,14 @@ import {
   ValidScores as TeacherValidScores,
   PrincipalApprovalState
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {
-  InterviewQuestions,
-  LabelOverrides as FacilitatorLabelOverrides,
-  PageLabels as FacilitatorPageLabelsOverrides,
-  SectionHeaders as FacilitatorSectionHeaders,
-  ScoreableQuestions as FacilitatorScoreableQuestions,
-  ValidScores as FacilitatorValidScores
-} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import _ from 'lodash';
 import {
   getApplicationStatuses,
   ApplicationFinalStatuses,
-  ApplicationTypes,
   ScholarshipStatusRequiredStatuses
 } from './constants';
-import {FacilitatorScoringFields} from './detail_view/facilitator_scoring_fields';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
@@ -58,11 +47,10 @@ import {
   PROGRAM_CSA,
   getProgramInfo
 } from '../application/teacher/TeacherApplicationConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const NA = 'N/A';
-
-const DEFAULT_NOTES =
-  'Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:';
 
 const WORKSHOP_REQUIRED = `Please assign a summer workshop to this applicant before setting this
                           applicant's status to "Accepted". This status will trigger an automated
@@ -103,7 +91,6 @@ export class DetailViewContents extends React.Component {
       email: PropTypes.string,
       form_data: PropTypes.object,
       application_year: PropTypes.string,
-      application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
       response_scores: PropTypes.object,
       meets_criteria: PropTypes.string,
       meets_scholarship_criteria: PropTypes.string,
@@ -113,13 +100,7 @@ export class DetailViewContents extends React.Component {
       pd_workshop_id: PropTypes.number,
       pd_workshop_name: PropTypes.string,
       pd_workshop_url: PropTypes.string,
-      fit_workshop_id: PropTypes.number,
-      fit_workshop_name: PropTypes.string,
-      fit_workshop_url: PropTypes.string,
       application_guid: PropTypes.string,
-      registered_teachercon: PropTypes.bool,
-      registered_fit_weekend: PropTypes.bool,
-      attending_teachercon: PropTypes.bool,
       school_stats: PropTypes.object,
       status_change_log: PropTypes.arrayOf(PropTypes.object),
       scholarship_status: PropTypes.string,
@@ -127,7 +108,6 @@ export class DetailViewContents extends React.Component {
       principal_approval_not_required: PropTypes.bool,
       allow_sending_principal_email: PropTypes.bool
     }).isRequired,
-    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
     isWorkshopAdmin: PropTypes.bool,
     regionalPartnerGroup: PropTypes.number,
@@ -146,23 +126,12 @@ export class DetailViewContents extends React.Component {
   constructor(props) {
     super(props);
 
-    if (
-      this.props.applicationData.application_type === ApplicationTypes.teacher
-    ) {
-      this.labelOverrides = TeacherLabelOverrides;
-      this.pageLabels = TeacherPageLabelsOverrides;
-      this.sectionHeaders = TeacherSectionHeaders;
-      this.scoreableQuestions = TeacherScoreableQuestions;
-      this.multiAnswerQuestionFields = TeacherMultiAnswerQuestionFields;
-      this.validScores = TeacherValidScores;
-    } else {
-      this.labelOverrides = FacilitatorLabelOverrides;
-      this.pageLabels = FacilitatorPageLabelsOverrides;
-      this.sectionHeaders = FacilitatorSectionHeaders;
-      this.scoreableQuestions = FacilitatorScoreableQuestions;
-      this.multiAnswerQuestionFields = {};
-      this.validScores = FacilitatorValidScores;
-    }
+    this.labelOverrides = TeacherLabelOverrides;
+    this.pageLabels = TeacherPageLabelsOverrides;
+    this.sectionHeaders = TeacherSectionHeaders;
+    this.scoreableQuestions = TeacherScoreableQuestions;
+    this.multiAnswerQuestionFields = TeacherMultiAnswerQuestionFields;
+    this.validScores = TeacherValidScores;
 
     this.state = this.getOriginalState();
   }
@@ -171,6 +140,7 @@ export class DetailViewContents extends React.Component {
     return {
       editing: false,
       status: this.props.applicationData.status,
+      last_logged_status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
       notes_2: this.props.applicationData.notes_2,
@@ -192,23 +162,12 @@ export class DetailViewContents extends React.Component {
         this.props.applicationData.regional_partner_id ||
         UNMATCHED_PARTNER_VALUE,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
-      fit_workshop_id: this.props.applicationData.fit_workshop_id,
       scholarship_status: this.props.applicationData.scholarship_status,
       bonus_point_questions: this.scoreableQuestions['bonusPoints'],
       cantSaveStatusReason: '',
       principalApprovalIsRequired: !this.props.applicationData
         .principal_approval_not_required
     };
-  }
-
-  UNSAFE_componentWillMount() {
-    if (
-      this.props.applicationData.application_type ===
-        ApplicationTypes.facilitator &&
-      !this.props.applicationData.notes
-    ) {
-      this.setState({notes: DEFAULT_NOTES});
-    }
   }
 
   handleCancelEditClick = () => {
@@ -232,12 +191,8 @@ export class DetailViewContents extends React.Component {
   };
 
   handleStatusChange = event => {
-    const workshopAssigned =
-      this.props.applicationData.pd_workshop_id ||
-      this.props.applicationData.fit_workshop_id;
+    const workshopAssigned = this.props.applicationData.pd_workshop_id;
     if (
-      this.props.applicationData.application_type ===
-        ApplicationTypes.teacher &&
       !this.state.scholarship_status &&
       ScholarshipStatusRequiredStatuses.includes(event.target.value)
     ) {
@@ -245,7 +200,6 @@ export class DetailViewContents extends React.Component {
         cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
                               applicant's status to ${
                                 getApplicationStatuses(
-                                  this.props.viewType,
                                   this.props.applicationData
                                     .update_emails_sent_by_system
                                 )[event.target.value]
@@ -294,12 +248,6 @@ export class DetailViewContents extends React.Component {
     });
   };
 
-  handleFitWorkshopChange = selection => {
-    this.setState({
-      fit_workshop_id: selection ? selection.value : null
-    });
-  };
-
   handleScoreChange = event => {
     // The format of the id is key-category. The format of the response scores is a hash
     // with keys like bonus points, scholarship criteria, etc. The category says which
@@ -344,25 +292,7 @@ export class DetailViewContents extends React.Component {
       'pd_workshop_id'
     ];
 
-    if (
-      this.props.applicationData.application_type ===
-      ApplicationTypes.facilitator
-    ) {
-      stateValues.push('fit_workshop_id');
-      stateValues.push('question_1');
-      stateValues.push('question_2');
-      stateValues.push('question_3');
-      stateValues.push('question_4');
-      stateValues.push('question_5');
-      stateValues.push('question_6');
-      stateValues.push('question_7');
-    }
-
-    if (
-      this.props.applicationData.application_type === ApplicationTypes.teacher
-    ) {
-      stateValues.push('scholarship_status');
-    }
+    stateValues.push('scholarship_status');
 
     const data = {
       ..._.pick(this.state, stateValues),
@@ -383,6 +313,17 @@ export class DetailViewContents extends React.Component {
       // The parent is responsible for passing it back in as props.
       if (this.props.onUpdate) {
         this.props.onUpdate(applicationData);
+      }
+
+      // Log if the application status changed
+      if (this.state.status !== this.state.last_logged_status) {
+        analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+          'application id': this.props.applicationId,
+          'application status': this.state.status
+        });
+        this.setState({
+          last_logged_status: this.state.status
+        });
       }
     });
   };
@@ -411,35 +352,6 @@ export class DetailViewContents extends React.Component {
           deleted: false,
           showDeleteApplicationConfirmation: false
         });
-      });
-  };
-
-  handleDeleteFitWeekendRegistrationClick = () => {
-    this.setState({showDeleteFitWeekendRegistrationConfirmation: true});
-  };
-
-  handleDeleteFitWeekendRegistrationCancel = () => {
-    this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
-  };
-
-  handleDeleteFitWeekendRegistrationConfirmed = () => {
-    $.ajax({
-      method: 'DELETE',
-      url: `/pd/fit_weekend_registration/${
-        this.props.applicationData.application_guid
-      }`
-    })
-      .done(() => {
-        this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
-        if (this.props.onUpdate) {
-          this.props.onUpdate({
-            ...this.props.applicationData,
-            registered_fit_weekend: false
-          });
-        }
-      })
-      .fail(() => {
-        this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
       });
   };
 
@@ -484,27 +396,6 @@ export class DetailViewContents extends React.Component {
         }}
         editing={!!this.state.editing}
         onChange={this.handleSummerWorkshopChange}
-      />
-    );
-  };
-
-  renderFitWeekendAnswer = () => {
-    return (
-      <DetailViewWorkshopAssignmentResponse
-        question="FIT Workshop"
-        courseName={this.props.applicationData.course_name}
-        subjectType="fit"
-        year={parseInt(
-          this.props.applicationData.application_year.split('-')[0],
-          10
-        )}
-        assignedWorkshop={{
-          id: this.state.fit_workshop_id,
-          name: this.props.applicationData.fit_workshop_name,
-          url: this.props.applicationData.fit_workshop_url
-        }}
-        editing={!!(this.state.editing && this.props.isWorkshopAdmin)}
-        onChange={this.handleFitWorkshopChange}
       />
     );
   };
@@ -577,24 +468,6 @@ export class DetailViewContents extends React.Component {
             >
               Delete Application
             </MenuItem>
-            {this.props.applicationData.registered_fit_weekend && (
-              <MenuItem
-                style={styles.delete}
-                onSelect={this.handleDeleteFitWeekendRegistrationClick}
-              >
-                Delete FiT Weekend Registration
-              </MenuItem>
-            )}
-            {this.props.applicationData.registered_fit_weekend && (
-              <ConfirmationDialog
-                show={this.state.showDeleteFitWeekendRegistrationConfirmation}
-                onOk={this.handleDeleteFitWeekendRegistrationConfirmed}
-                onCancel={this.handleDeleteFitWeekendRegistrationCancel}
-                headerText="Delete FiT Weekend Registration"
-                bodyText="Are you sure you want to delete this FiT Weekend registration? You will not be able to undo this."
-                okText="Delete"
-              />
-            )}
           </SplitButton>
         </div>
       );
@@ -627,7 +500,6 @@ export class DetailViewContents extends React.Component {
 
     const statuses = _.omit(
       getApplicationStatuses(
-        this.props.viewType,
         this.props.applicationData.update_emails_sent_by_system
       ),
       statusesToHide
@@ -671,13 +543,6 @@ export class DetailViewContents extends React.Component {
     // Render the select with the lock button in a fancy InputGroup
     return (
       <InputGroup style={styles.statusSelectGroup}>
-        {this.props.canLock &&
-          this.props.applicationData.application_type ===
-            ApplicationTypes.facilitator && (
-            <InputGroup.Button style={styles.editButton}>
-              {this.renderLockButton()}
-            </InputGroup.Button>
-          )}
         {selectControl}
         <InputGroup.Button style={styles.editButton}>
           {this.renderEditButtons()}
@@ -694,9 +559,7 @@ export class DetailViewContents extends React.Component {
     );
   };
 
-  showLocked = () =>
-    this.props.applicationData.application_type ===
-    ApplicationTypes.facilitator;
+  showLocked = () => false;
 
   renderEditMenu = (textAlign = 'left') => {
     return (
@@ -715,9 +578,7 @@ export class DetailViewContents extends React.Component {
 
   renderHeader = () => {
     const rubricURL =
-      this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? 'https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/view'
-        : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
+      'https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/view';
 
     return (
       <div style={styles.headerWrapper}>
@@ -728,15 +589,10 @@ export class DetailViewContents extends React.Component {
             }`}
           </h1>
           <h4>Meets Guidelines? {this.props.applicationData.meets_criteria}</h4>
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher && (
-            <h4>
-              Meets scholarship requirements?{' '}
-              {this.props.applicationData.meets_scholarship_criteria}
-            </h4>
-          )}
-
-          {this.renderPointsSection()}
+          <h4>
+            Meets scholarship requirements?{' '}
+            {this.props.applicationData.meets_scholarship_criteria}
+          </h4>
 
           <h4>
             <a target="_blank" rel="noopener noreferrer" href={rubricURL}>
@@ -748,144 +604,6 @@ export class DetailViewContents extends React.Component {
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
           {this.renderEditMenu('right')}
         </div>
-      </div>
-    );
-  };
-
-  renderPointsSection = () => {
-    if (
-      this.props.applicationData.application_type ===
-        ApplicationTypes.facilitator &&
-      this.props.applicationData.all_scores
-    ) {
-      return (
-        <div>
-          <h4>
-            Total Score: {this.props.applicationData.all_scores['total_score']}
-          </h4>
-          <div style={styles.scoreBreakdown}>
-            <p>
-              Application Score:{' '}
-              {this.props.applicationData.all_scores['application_score']}
-            </p>
-            <p>
-              Interview Score:{' '}
-              {this.props.applicationData.all_scores['interview_score']}
-            </p>
-            <br />
-            <p>
-              Teacher Experience Score:{' '}
-              {
-                this.props.applicationData.all_scores[
-                  'teaching_experience_score'
-                ]
-              }
-            </p>
-            <p>
-              Leadership Score:{' '}
-              {this.props.applicationData.all_scores['leadership_score']}
-            </p>
-            <p>
-              Champion for CS Score:{' '}
-              {this.props.applicationData.all_scores['champion_for_cs_score']}
-            </p>
-            <p>
-              Equity Score:{' '}
-              {this.props.applicationData.all_scores['equity_score']}
-            </p>
-            <p>
-              Growth Mindset Score:{' '}
-              {this.props.applicationData.all_scores['growth_minded_score']}
-            </p>
-            <p>
-              Content Knowledge Score:{' '}
-              {this.props.applicationData.all_scores['content_knowledge_score']}
-            </p>
-            <p>
-              Program Commitment Score:{' '}
-              {
-                this.props.applicationData.all_scores[
-                  'program_commitment_score'
-                ]
-              }
-            </p>
-          </div>
-        </div>
-      );
-    }
-  };
-
-  renderRegistrationLinks = () => {
-    const registrationLinks = [];
-
-    const buildRegistrationLink = urlKey => (
-      <a href={`/pd/${urlKey}/${this.props.applicationData.application_guid}`}>
-        {`${window.location.host}/pd/${urlKey}/${
-          this.props.applicationData.application_guid
-        }`}
-      </a>
-    );
-
-    if (
-      this.props.isWorkshopAdmin &&
-      this.props.applicationData.status === 'accepted' &&
-      this.props.applicationData.locked
-    ) {
-      if (this.props.applicationData.fit_workshop_id) {
-        registrationLinks.push(
-          <DetailViewResponse
-            question="FiT Weekend Registration Link"
-            layout="lineItem"
-            answer={buildRegistrationLink('fit_weekend_registration')}
-          />
-        );
-      }
-    }
-
-    return registrationLinks;
-  };
-
-  renderInterview = () => {
-    let interviewFields = [];
-    [
-      {label: 'question1', id: 'question_1', value: this.state.question_1},
-      {label: 'question2', id: 'question_2', value: this.state.question_2},
-      {label: 'question3', id: 'question_3', value: this.state.question_3},
-      {label: 'question4', id: 'question_4', value: this.state.question_4},
-      {label: 'question5', id: 'question_5', value: this.state.question_5},
-      {label: 'question6', id: 'question_6', value: this.state.question_6},
-      {label: 'question7', id: 'question_7', value: this.state.question_7}
-    ].forEach((field, i) => {
-      interviewFields.push(
-        <tr key={i}>
-          <td style={styles.questionColumn}>
-            {InterviewQuestions[field.label]}
-          </td>
-          <td>
-            <FormControl
-              id={field.id}
-              disabled={!this.state.editing}
-              componentClass="textarea"
-              value={field.value || ''}
-              onChange={this.handleInterviewNotesChange}
-              style={styles.notes}
-            />
-          </td>
-          {this.renderScoringSection(field.id) ? (
-            this.renderScoringSection(field.id)
-          ) : (
-            <td />
-          )}
-        </tr>
-      );
-    });
-
-    return (
-      <div>
-        <h3>Interview Questions</h3>
-        <Table style={styles.detailViewTable} striped bordered>
-          <tbody>{interviewFields}</tbody>
-        </Table>
       </div>
     );
   };
@@ -945,26 +663,6 @@ export class DetailViewContents extends React.Component {
     }
 
     if (
-      this.props.applicationData.application_type === 'Facilitator' &&
-      this.state.bonus_point_questions.includes(snakeCaseKey)
-    ) {
-      if (scoringDropdowns.length) {
-        scoringDropdowns.push(<br key="bonus_points_br" />);
-      }
-
-      scoringDropdowns.push(
-        <div key="bonus_points_scores">
-          {FacilitatorScoringFields[key]
-            ? FacilitatorScoringFields[key]['title']
-            : 'Bonus Points'}
-          {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
-          {FacilitatorScoringFields[key] &&
-            FacilitatorScoringFields[key]['rubric']}
-        </div>
-      );
-    }
-    if (
-      this.props.applicationData.application_type === 'Teacher' &&
       this.scoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)
     ) {
       if (scoringDropdowns.length) {
@@ -1008,24 +706,21 @@ export class DetailViewContents extends React.Component {
     );
   }
 
-  showPrincipalApprovalTable = () => {
-    return this.props.applicationData.principal_approval_state?.startsWith(
-      PrincipalApprovalState.complete
-    );
-  };
-
   handlePrincipalApprovalChange = (_id, principalApproval) => {
     this.setState({principalApproval});
     this.setState({
       principalApprovalIsRequired: !this.state.principalApprovalIsRequired
     });
+    analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+      'application id': this.props.applicationId,
+      'application status': this.state.principalApprovalIsRequired
+        ? 'awaiting_admin_approval'
+        : 'unreviewed'
+    });
   };
 
   renderDetailViewTableLayout = () => {
-    const sectionsToRemove =
-      this.props.applicationData.application_type !== ApplicationTypes.teacher
-        ? ['submission']
-        : [];
+    const sectionsToRemove = ['additionalDemographicInformation'];
     const questionsToRemove = ['genderIdentity', 'race'];
 
     return (
@@ -1227,48 +922,32 @@ export class DetailViewContents extends React.Component {
             </td>
             <td style={styles.scoringColumn} />
           </tr>
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher && (
-            <tr>
-              <td style={styles.questionColumn}>School Name</td>
-              <td style={styles.answerColumn}>
-                {this.renderSchoolTrait(
-                  this.props.applicationData.school_name,
-                  this.props.applicationData.form_data['principal_school']
-                )}
-              </td>
-              <td style={styles.scoringColumn} />
-            </tr>
-          )}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher && (
-            <tr>
-              <td style={styles.questionColumn}>School District</td>
-              <td style={styles.answerColumn}>
-                {this.renderSchoolTrait(
-                  this.props.applicationData.district_name,
-                  this.props.applicationData.form_data[
-                    'principal_school_district'
-                  ]
-                )}
-              </td>
-              <td style={styles.scoringColumn} />
-            </tr>
-          )}
+          <tr>
+            <td style={styles.questionColumn}>School Name</td>
+            <td style={styles.answerColumn}>
+              {this.renderSchoolTrait(
+                this.props.applicationData.school_name,
+                this.props.applicationData.form_data['principal_school']
+              )}
+            </td>
+            <td style={styles.scoringColumn} />
+          </tr>
+          <tr>
+            <td style={styles.questionColumn}>School District</td>
+            <td style={styles.answerColumn}>
+              {this.renderSchoolTrait(
+                this.props.applicationData.district_name,
+                this.props.applicationData.form_data[
+                  'principal_school_district'
+                ]
+              )}
+            </td>
+            <td style={styles.scoringColumn} />
+          </tr>
           {!(this.props.applicationData.course === 'csf') && (
             <tr>
               <td style={styles.questionColumn}>Summer Workshop</td>
               <td style={styles.answerColumn}>{this.renderWorkshopAnswer()}</td>
-              <td style={styles.scoringColumn} />
-            </tr>
-          )}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.facilitator && (
-            <tr>
-              <td style={styles.questionColumn}>FiT Workshop</td>
-              <td style={styles.answerColumn}>
-                {this.renderFitWeekendAnswer()}
-              </td>
               <td style={styles.scoringColumn} />
             </tr>
           )}
@@ -1279,16 +958,13 @@ export class DetailViewContents extends React.Component {
             </td>
             <td style={styles.scoringColumn} />
           </tr>
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher && (
-            <tr>
-              <td style={styles.questionColumn}>Scholarship Teacher?</td>
-              <td style={styles.answerColumn}>
-                {this.renderScholarshipStatusAnswer()}
-              </td>
-              <td style={styles.scoringColumn} />
-            </tr>
-          )}
+          <tr>
+            <td style={styles.questionColumn}>Scholarship Teacher?</td>
+            <td style={styles.answerColumn}>
+              {this.renderScholarshipStatusAnswer()}
+            </td>
+            <td style={styles.scoringColumn} />
+          </tr>
         </tbody>
       </Table>
     );
@@ -1320,8 +996,6 @@ export class DetailViewContents extends React.Component {
         <br />
         {this.renderTopTableLayout()}
         {this.renderDetailViewTableLayout()}
-        {this.props.applicationData.application_type ===
-          ApplicationTypes.facilitator && this.renderInterview()}
         {this.renderNotes()}
         {this.renderEditMenu()}
         {this.props.applicationData.status_change_log && (

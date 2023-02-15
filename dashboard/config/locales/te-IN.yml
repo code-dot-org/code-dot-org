@@ -46,6 +46,7 @@ te:
           have an email address)](%{url})
         username: వినియోగదారు పేరు
         password: పాస్వర్డ్
+        verified_teacher: ధృవీకరించబడిన ఉపాధ్యాయుడు
         password_confirmation: పాస్వర్డ్ నిర్ధారణ
         current_password: ప్రస్తుత పాస్వర్డ్
         locale: భాష
@@ -239,9 +240,9 @@ te:
     tab: వీడియో.
     notes: వీడియో లేదా? నోట్స్ చూపించు.
   upsell:
-    dance:
-      title: డాన్స్ పార్టీ
     dance-2019:
+      title: డాన్స్ పార్టీ
+    dance:
       title: డాన్స్ పార్టీ
     hello-world:
       body: మీరు సృష్టించే ప్రపంచంలో సంభాషణాత్మక అక్షరాంశాలను కోడ్ చేయడానికి నాలుగు

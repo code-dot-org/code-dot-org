@@ -3230,7 +3230,15 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-        csa3-2023: {}
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Matrice Uni-Dimensionale (1D)
+            lesson-3:
+              name: Bucle Pentru
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa4-2023: {}
         csa5-2023: {}
         csa6-2023: {}
@@ -3318,15 +3326,19 @@ ro:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Liste
+              display_name: Date
             csp_loops:
               display_name: Bucle
             lessonGroup-5:
               display_name: Chestionar după curs
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
             lessonGroup-2:
               display_name: Chestionar după curs
+            lessonGroup-3:
+              display_name: Bucle
         csp7-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3358,3 +3370,11 @@ ro:
           description_audience: Scriitori de Curriculum
           description_short: Pentru actualizările pe stadii ale lecțiilor sau nivelurile dintre versiunile planului curicular
         csc-pilot-fa2022-particles: {}
+        devices-2022: {}
+        allthevalidation: {}
+        vpl-csd5-ayw-pilot-2022: {}
+        vpl-csd6-ayw-pilot-2022: {}
+        self-paced-pl-csa4-2023: {}
+        katies-playground: {}
+        microbit-2022: {}
+        microbit-temp: {}

@@ -145,6 +145,7 @@
           "name": "Pagtuklas ng mga Apps"
         },
         "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Ipinapakilala ang Sprite Lab",
           "type": "Video"
         },
         "ai_impact_on_society/coursef/2022": {
@@ -274,6 +275,9 @@
         },
         "sprite_lab_documentation/express/2022": {
           "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "Sprites sa aksyon"
         },
         "pause_and_think_online/express/2022": {
           "type": "Video"
@@ -647,9 +651,11 @@
           "type": "Rubric"
         },
         "boolean_expressions/csd/2022": {
+          "name": "Mga Expression Ng Boolean",
           "type": "Video"
         },
         "conditional_statements/csd/2022": {
+          "name": "Mga Kondisyong ng Pahayag",
           "type": "Video"
         },
         "conditionals/csd/2022": {
@@ -659,6 +665,7 @@
           "name": "Keyboard na Input"
         },
         "if_else_statements/csd/2022": {
+          "name": "Kung / Iba Pa Pahayag",
           "type": "Video"
         },
         "interactive_card_1/csd/2022": {
@@ -927,6 +934,7 @@
           "name": "Proyekto - Pagpapakita ng App"
         },
         "computer_science_is_changing_everything/csd/2022": {
+          "name": "Binabago ng agham ng Computer ang lahat",
           "type": "Video"
         },
         "computing_innovations_1/csd/2022": {
@@ -1037,18 +1045,27 @@
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Pagsasanay at pagsubok sa Ai Lab",
           "type": "Video"
         },
         "ai_training_data_bias/csd/2022": {
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Mga model card sa Ai Lab",
           "type": "Video"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Numerical Data sa Ai Lab"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Numerical Data sa Ai Lab"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Numerical Data sa Ai Lab",
           "type": "Video"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
@@ -1522,11 +1539,18 @@
         "exploring_apps_1/coursef/2021": {
           "name": "Pagtuklas ng mga Apps"
         },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Ipinapakilala ang Sprite Lab"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Ipinapakilala ang Sprite Lab",
           "type": "Video"
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Sprites sa aksyon"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "Video"
@@ -1845,6 +1869,9 @@
         "sprite_lab_documentation_1/express/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
         },
+        "sprites_in_action/express/2021": {
+          "name": "Sprites sa aksyon"
+        },
         "pause_and_think_online/express/2021": {
           "type": "Video"
         },
@@ -1926,18 +1953,27 @@
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Pagsasanay at pagsubok sa Ai Lab",
           "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
           "type": "Video"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Mga model card sa Ai Lab",
           "type": "Video"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Numerical Data sa Ai Lab"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Numerical Data sa Ai Lab"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Numerical Data sa Ai Lab",
           "type": "Video"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
@@ -2003,6 +2039,7 @@
           "type": "Video"
         },
         "innovation-video-1-1/csd/2021": {
+          "name": "Binabago ng agham ng Computer ang lahat",
           "type": "Video"
         },
         "designing_screens_with_code/csd/2021": {
@@ -2186,12 +2223,15 @@
           "type": "Rubric"
         },
         "boolean_expressions/csd/2021": {
+          "name": "Mga Expression Ng Boolean",
           "type": "Video"
         },
         "conditional_statements/csd/2021": {
+          "name": "Mga Kondisyong ng Pahayag",
           "type": "Video"
         },
         "if_else_statements/csd/2021": {
+          "name": "Kung / Iba Pa Pahayag",
           "type": "Video"
         },
         "interactive-card-project-guide-2019/csd/2021": {

@@ -101,7 +101,7 @@ uz:
     Code.org-ning birinchi zavqidan bahramand bo''ling sun''iy intellekt haqida ko''proq
     ma''lumot berish uchun yangi sayohatga qadam qo''ying. AI uchun "Okeanlar" faoliyatidan
     foydalanganda siz mashinada o''rganishning haqiqiy modellarini o''rgatasiz. [Qo''shimcha
-    ma''lumot] (# parda ortida). '
+    ma''lumot](#behind-the-scenes). '
   oceans_landing_teacher_resources: O'qituvchilar uchun resurslar
   oceans_landing_teacher_resources_desc: Axloqiy masalalarni o'rganayotganda, sun'iy
     intellektni, mashinada o'rganishni, o'qitish ma'lumotlarini va xolislikni o'rgatishda
@@ -160,6 +160,10 @@ uz:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Dasturlash soati jonli efir
   hoc_live_sign_up_title: Dasturlash soati jonli efiriga ro'yxatdan o'ting
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -549,12 +553,16 @@ uz:
     href='%{howto_guide_url}'> Qanday qo‘llanma </a> ni o‘qing. "
   signup_registration_not_required_markdown: Ishtirok etish uchun ro‘yxatdan o‘tishingiz
     shart emas! "Kodeks soati" tadbirlari yil davomida ishlaydi. [Harakatni sinab
-    ko‘ring] (% {hoc_activities_url}) yoki o‘zingizning sinfingiz uchun tadbir rejalashtirish
-    uchun [Qanday qo‘llanma] ni (% {howto_guide_url}) o‘qing. "
+    ko‘ring](%{hoc_activities_url}) yoki o‘zingizning sinfingiz uchun tadbir rejalashtirish
+    uchun [Qanday qo‘llanma](%{howto_guide_url}) ni o‘qing. "
   signup_registration_closed: Va har yili dekabr oyida sizning sinfingiz butun dunyo
     bo‘ylab millionlab talabalar bilan birgalikda "Informatika bo‘yicha ta'lim haftaligi"
     ni "Kod soati" bilan nishonlashi mumkin. Har yili o‘tkaziladigan bayram uchun
     ro‘yxatdan o‘tishni oktyabr oyida ochamiz. "
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{Promotion_date} davomida soat kodini tashkil qiling va uni shu
     yerda ro‘yxatdan o‘tkazing. '"
   signup_name_label: Ismingiz
@@ -658,7 +666,7 @@ uz:
   map_warning: Tadbirlarning to‘liq ro‘yxatini <a href='%{events_url}'> tadbirlar
     sahifasida ko‘rish mumkin. </a> "
   map_warning_markdown: Tadbirlarning to‘liq ro‘yxatini [tadbirlar sahifasida ko‘rish
-    mumkin.](%{Events_url}) "
+    mumkin.](%{events_url}) "
   meta_tag_og_title: 'Dasturlash soati: Harakatga qo''shiling'
   meta_tag_og_description: Dasturlash soati - bu 180 dan ortiq mamlakatlarda va 45
     dan ortiq tillarda o‘n millionlab har xil yoshdagi talabalarni qamrab oluvchi
@@ -863,7 +871,7 @@ uz:
   hoc_faq_map_a_markdown: Tadbiringizni "Kodlar soati" xaritasida ko‘rmaganingizdan
     juda afsusdamiz. Ro‘yxatdan o‘tgan o‘n minglab tashkilotchilar tufayli xarita
     ma'lumotlarni birlashtiradi va bir nechta voqealar uchun bitta nuqtani ko‘rsatadi.
-    Agar siz xarita ostidagi [voqealar sahifasi] (% {events_url}) havolasini bosgan
+    Agar siz xarita ostidagi [voqealar sahifasi](%{events_url}) havolasini bosgan
     bo‘lsangiz, siz barcha tadbirlar ro‘yxatiga davlat bo‘yicha yo‘naltirilasiz va
     u erda o‘z voqeangizni topishingiz mumkin. Bundan tashqari, minglab odamlarning
     "Kodlar soati" ga yozilishini hisobga olsak, xaritani va voqealar ro‘yxatini yangilash
@@ -1107,6 +1115,10 @@ uz:
   footer_menu_terms: Xizmat shartlari
   footer_menu_privacy: Maxfiylik siyosati
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: Dasturlash soati mashg‘ulotlari
   learn_banner_blurb: 45 tadan ziyod tillarda barcha yoshdagilarga mo‘ljallangan bir
     soatlik darslarni sinab ko‘ring. Dasturlash soatidan boshlagan 180 dan ortiq mamlakatlardagi
@@ -1114,7 +1126,7 @@ uz:
   learn_banner_beyond: O'rganishni davom ettirmoqchimisiz? <a id='learn_banner_beyond'>
     Bir soatdan keyinga </a>
   learn_banner_beyond_markdown: O‘qishni davom ettirmoqchimisiz? [Bir soatdan oshib
-    keting] (% {url}) "
+    keting](%{url}) "
   learn_banner_teachers: 'O‘qituvchilar: <a id=''teacher_banner_host''> Dasturlash
     soatini o‘tkazing </a> yoki <a id=''teacher_banner_howto''> Qo‘llanma bilan tanishib
     chiqing </a>'
@@ -7960,8 +7972,7 @@ uz:
   tutorial_irobotphone_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_codeguppydraw_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: Barcha zamonaviy brauzerlar, Android planshetlari,
-    iPad
+  tutorial_meeempathy_string_platforms: iPad, kompyuterlar (Windows PC, Mac)
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip va Circuit
@@ -10668,10 +10679,12 @@ uz:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -11000,8 +11013,7 @@ uz:
   tutorial_microsoftforest_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Barcha zamonaviy brauzerlar
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: iPad, kompyuterlar (Windows PC, Mac)
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: Barcha zamonaviy brauzerlar, Screen reader
   tutorial_codeartportrait_string_platforms: Barcha zamonaviy brauzerlar, Android
@@ -11394,6 +11406,10 @@ uz:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -11735,6 +11751,18 @@ uz:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Maktabgacha yoshdan 5-sinfgacha
   tutorial_rpledfirefly_string_detail_grades: 6-8-sinflar
   tutorial_rpcharting_string_detail_grades: 9+ sinflar
@@ -11827,6 +11855,10 @@ uz:
   tutorial_nasapackage_string_detail_grades: 6-8-sinflar
   tutorial_nasalunar_string_detail_grades: 6-8-sinflar
   tutorial_meeestate_string_detail_grades: 2+ sinf
+  tutorial_imagipixelart_string_detail_grades: 2-8-sinflar
+  tutorial_kcjhealth_string_detail_grades: 6+ sinflar
+  tutorial_msftwakanda_string_detail_grades: 6+ sinflar
+  tutorial_nafbrand_string_detail_grades: 9+ sinflar
   tutorial_rpccw_string_platforms: Barcha zamonaviy brauzerlar, Android tablet, iPad,
     Windows phone, Android phone, iPhone
   tutorial_rpledfirefly_string_platforms: Barcha zamonaviy brauzerlar
@@ -11947,8 +11979,13 @@ uz:
   tutorial_nasaorbit_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_nasapackage_string_platforms: Barcha zamonaviy brauzerlar
   tutorial_nasalunar_string_platforms: Barcha zamonaviy brauzerlar, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: iPad, kompyuterlar (Windows PC, Mac)
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: Barcha zamonaviy brauzerlar
+  tutorial_msftwakanda_string_platforms: Barcha zamonaviy brauzerlar
+  tutorial_nafbrand_string_platforms: Barcha zamonaviy brauzerlar, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -12042,6 +12079,10 @@ uz:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Bloklar
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -12138,29 +12179,10 @@ uz:
   tutorial_nasapackage_string_detail_programming_languages: Bloklar
   tutorial_nasalunar_string_detail_programming_languages: Bloklar, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Bloklar, Python
-  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
-    animations in this 1 hour crash course!
-  tutorial_imagipixelart_name: Code your own pixel art!
-  tutorial_imagipixelart_string_detail_grades: 2-8-sinflar
-  tutorial_imagipixelart_string_detail_platforms: ''
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
-    Windows phone, Android phone, iPhone
-  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
-    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
-  tutorial_kcjhealth_name: The Health & Well-Being Challenge
-  tutorial_kcjhealth_string_detail_grades: 6+ sinflar
-  tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
-  tutorial_kcjhealth_string_platforms: Barcha zamonaviy brauzerlar
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
-    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
-    ''Black Panther: Wakanda Forever''!'
-  tutorial_msftwakanda_name: Long Live Wakanda
-  tutorial_msftwakanda_string_detail_grades: 6+ sinflar
-  tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
-  tutorial_msftwakanda_string_platforms: Barcha zamonaviy brauzerlar
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: Bloklar
+  tutorial_msftwakanda_string_detail_programming_languages: Bloklar
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: Biz sizning maktabingizni topa olmadik. Iltimos, qo‘shimcha
     ma’lumot kiriting.
   school_name: Maktab nomi
@@ -12222,6 +12244,13 @@ uz:
   all: Barcha
   dont_know: Bilmayman
   language_label: Til
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

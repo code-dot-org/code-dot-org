@@ -313,6 +313,9 @@
           "name": "Dance Party",
           "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
         },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
+        },
         "coursed-2022/Nested Loops in Maze": {
           "name": "Naka-nest na mga Loops sa Maze"
         },
@@ -334,6 +337,12 @@
         "coursef-2022/The Power of Words": {
           "name": "Ang Kapangyarihan ng mga Salita",
           "student_overview": "Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online."
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "Ipinapakilala ang Sprite Lab"
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "Sprites sa aksyon"
         },
         "coursef-2022/Mini-Project: Virtual Pet": {
           "name": "Mini-Project: Virtual na Alaga",
@@ -427,6 +436,9 @@
         },
         "express-2022/Creating Art with Code": {
           "name": "Pag-program sa Artist"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "Sprites sa aksyon"
         },
         "express-2022/Dance Party": {
           "name": "Dance Party",
@@ -767,6 +779,9 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Survey ng CS Discoveries Post-Course"
         },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Numerical Data sa Ai Lab"
+        },
         "csd7-2022/Survey Planning": {
           "name": "Pagdidisenyo ng Koleksyon ng mga Datos"
         },
@@ -817,6 +832,9 @@
         },
         "coursed-2018/Events in Bounce": {
           "name": "Mga Pangyayari sa Bounce"
+        },
+        "coursed-2018/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
         },
         "coursed-2018/Nested Loops in Bee": {
           "name": "Naka-nest na mga Loops sa Maze"
@@ -1438,6 +1456,9 @@
         },
         "coursed-2019/Build a Star Wars Game": {
           "name": "Bumuo ng Star Wars na Laro"
+        },
+        "coursed-2019/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
         },
         "coursed-2019/Nested Loops in Bee": {
           "name": "Naka-nest na mga Loops sa Maze"
@@ -3060,6 +3081,12 @@
         "allthethings/lesson-48": {
           "name": "Panulaan"
         },
+        "coursef-2021/lesson-6": {
+          "name": "Ipinapakilala ang Sprite Lab"
+        },
+        "coursef-2021/lesson-8": {
+          "name": "Sprites sa aksyon"
+        },
         "coursef-2021/Virtual Pet": {
           "name": "Mini-Project: Virtual na Alaga",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
@@ -3226,6 +3253,9 @@
           "name": "Dance Party",
           "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
         },
+        "coursed-2021/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
+        },
         "coursed-2021/Loops in Artist": {
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
@@ -3264,6 +3294,9 @@
         },
         "express-2021/Creating Art with Code": {
           "name": "Pag-program sa Artist"
+        },
+        "express-2021/lesson-3": {
+          "name": "Sprites sa aksyon"
         },
         "express-2021/lesson-1": {
           "name": "Dance Party",
@@ -3376,6 +3409,9 @@
         },
         "coursee-2021/lesson-1": {
           "name": "Pagdidisenyo sa Accessibility"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Numerical Data sa Ai Lab"
         },
         "csd7-2021/Survey Planning": {
           "name": "Pagdidisenyo ng Koleksyon ng mga Datos"
@@ -3701,6 +3737,9 @@
         },
         "coursed-2020/Dance Party": {
           "name": "Dance Party"
+        },
+        "coursed-2020/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
         },
         "coursed-2020/Nested Loops in Bee": {
           "name": "Naka-nest na mga Loops sa Maze"

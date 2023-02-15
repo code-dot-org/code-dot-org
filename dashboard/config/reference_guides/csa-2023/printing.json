@@ -1,0 +1,9 @@
+{
+  "key": "printing",
+  "course_version_key": "2023",
+  "course_offering_key": "csa",
+  "parent_reference_guide_key": "basics",
+  "display_name": "Printing",
+  "content": "In Java, you can print statements using `System.out.print()`(#e7e8ea) and `System.out.println()`(#e7e8ea).",
+  "position": 2
+}

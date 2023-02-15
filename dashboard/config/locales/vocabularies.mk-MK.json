@@ -28,6 +28,9 @@
         "variable/coursef/2022": {
           "word": "Променлива"
         },
+        "input/coursef/2022": {
+          "word": "Влез"
+        },
         "define/coursef/2022": {
           "word": "Дефинирајте"
         },
@@ -45,6 +48,12 @@
         },
         "define/express/2022": {
           "word": "Дефинирајте"
+        },
+        "data/coursec/2022": {
+          "word": "Податоци"
+        },
+        "input/csd/2022": {
+          "word": "Влез"
         },
         "variable/csd/2022": {
           "word": "Променлива"
@@ -75,6 +84,9 @@
         "variable/coursef/2021": {
           "word": "Променлива"
         },
+        "input/coursef/2021": {
+          "word": "Влез"
+        },
         "define/coursef/2021": {
           "word": "Дефинирајте"
         },
@@ -98,6 +110,9 @@
         },
         "function/csd/2021": {
           "word": "Функција"
+        },
+        "input/csd/2021": {
+          "word": "Влез"
         }
       }
     }

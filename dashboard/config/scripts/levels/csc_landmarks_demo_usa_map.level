@@ -22,7 +22,7 @@
     "instructions_important": "false",
     "long_instructions": "**Click “Run” and move the tour guide to visit each landmark.**\r\n\r\nUse the arrow keys to move your tour guide. \r\n- What do you notice? \r\n- What do you wonder? \r\n- What do you like about the project? \r\n\r\n\r\n",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
@@ -48,14 +48,15 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "standalone_app_name": "spritelab"
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-10-13T18:02:04.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-13T18:02:04.829+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_freeplay_-usa-map\\\"\"],\"cloned_from\":\"csc_landmarks_freeplay_-usa-map\"},{\"changed_at\":\"2022-10-13 18:06:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:08:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:12:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:12:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:14:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:15:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:16:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:16:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-18 23:00:44 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-18 23:01:23 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 17:27:35 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 17:39:06 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 17:40:08 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 17:40:53 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 17:42:34 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:24:45 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:27:03 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:29:32 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:30:41 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:33:05 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:35:03 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-02 20:55:26 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-02 20:56:39 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-02 20:58:38 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-13T18:02:04.829+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_freeplay_-usa-map\\\"\"],\"cloned_from\":\"csc_landmarks_freeplay_-usa-map\"},{\"changed_at\":\"2022-10-13 18:06:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:08:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:12:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:12:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:14:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:15:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:16:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 18:16:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-18 23:00:44 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-18 23:01:23 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 17:27:35 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 17:39:06 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 17:40:08 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 17:40:53 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 17:42:34 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:24:45 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:27:03 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:29:32 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:30:41 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:33:05 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 21:35:03 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-02 20:55:26 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-02 20:56:39 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-02 20:58:38 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-30 20:54:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-03 22:04:30 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -64,10 +65,10 @@
       <xml>
         <block type="when_run" deletable="false" movable="false" editable="false">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
+            <block type="gamelab_setBackgroundImageAs" can_disconnect_from_parent="false">
               <field name="IMG">"map_usa-01"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
+                <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
                   <field name="ANIMATION_NAME">"red_shirt_wave2"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
@@ -75,7 +76,7 @@
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon">
+                    <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
                       <field name="ANIMATION_NAME">"statue_of_liberty2"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
@@ -83,7 +84,7 @@
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_makeNewSpriteAnon">
+                        <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
                           <field name="ANIMATION_NAME">"golden_gate_bridge"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
@@ -91,22 +92,22 @@
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_spriteSay">
+                            <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
                               <field name="SPEECH">Welcome to our tour of historical landmarks of the United States.</field>
                               <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
+                                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                                   <field name="ANIMATION">"red_shirt_wave2"</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_addBehaviorSimple">
+                                <block type="gamelab_addBehaviorSimple" can_disconnect_from_parent="false">
                                   <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation">
+                                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                                       <field name="ANIMATION">"red_shirt_wave2"</field>
                                     </block>
                                   </value>
                                   <value name="BEHAVIOR">
-                                    <block type="gamelab_behavior_get">
+                                    <block type="gamelab_behavior_get" can_disconnect_from_parent="false">
                                       <mutation/>
                                       <field name="VAR" id="moving NESW with arrow keys">moving NESW with arrow keys</field>
                                     </block>
@@ -127,20 +128,20 @@
         <block type="gamelab_checkTouching" deletable="false" movable="false" editable="false">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"red_shirt_wave2"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"statue_of_liberty2"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_spriteSay">
+            <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
               <field name="SPEECH">The Statue of Liberty is a symbol of freedom and opportunity for all newcomers to the United States.</field>
               <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
+                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                   <field name="ANIMATION">"red_shirt_wave2"</field>
                 </block>
               </value>
@@ -150,20 +151,20 @@
         <block type="gamelab_checkTouching" deletable="false" movable="false" editable="false">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"red_shirt_wave2"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"golden_gate_bridge"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_spriteSay">
+            <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
               <field name="SPEECH">The Golden Gate Bridge was built during the Great Depression and is a symbol of ingenuity and determination.</field>
               <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
+                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                   <field name="ANIMATION">"red_shirt_wave2"</field>
                 </block>
               </value>

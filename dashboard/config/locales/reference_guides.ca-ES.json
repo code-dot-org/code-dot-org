@@ -15,7 +15,7 @@
           "display_name": "Mode de disseny"
         },
         "csd-2022/for-loops": {
-          "display_name": "Per bucles"
+          "display_name": "Bucles \"for\""
         },
         "csd-2022/functions": {
           "display_name": "Funcions"
@@ -50,8 +50,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "Vista general"
         },
+        "csd-2022/sprite-properties": {
+          "display_name": "Propietats de l'sprite"
+        },
         "csd-2022/variables": {
           "display_name": "Variables"
+        },
+        "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
     }

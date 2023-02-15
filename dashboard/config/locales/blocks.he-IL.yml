@@ -1133,7 +1133,7 @@ he:
             '9': '9'
             '10': '10'
       gamelab_isKeyPressed:
-        text: לחוץ
+        text: "{KEY} לחוץ"
         options:
           KEY:
             '"up"': למעלה
@@ -1293,8 +1293,12 @@ he:
             "'sound://category_animals/cat.mp3'": חתול
             "'sound://category_animals/cow.mp3'": פרה
             "'sound://category_animals/sheep.mp3'": כבשה
+            "'sound://category_animals/goat.mp3'": עז
             "'sound://category_animals/chicken.mp3'": תרנגולת
+            "'sound://category_animals/rooster.mp3'": תרנגול
+            "'sound://category_animals/elephant.mp3'": פיל
             "'sound://category_animals/dolphin.mp3'": דולפין
+            "'sound://category_animals/chick.mp3'": אפרוח
             "'sound://category_animals/dog.mp3'": כלב
             "'sound://category_collect/trill_stings.mp3'": סלסול
             "'sound://category_instrumental/harpe_pluck_1.mp3'": נבל
@@ -1381,6 +1385,7 @@ he:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': מדבר
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': גלקסיה
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': רשת
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': אחו
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': קשת
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': כוכבים
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': תת-ימי
@@ -1448,7 +1453,9 @@ he:
             '"when"': כאשר
             '"while"': כל עוד
       gamelab_spriteSay:
-        text: אמור
+        text: "{SPRITE} אמור {SPEECH}"
+      gamelab_spriteThink:
+        text: "{SPRITE} חשוב {SPEECH}"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_turn:
@@ -1504,7 +1511,9 @@ he:
       gamelab_whileUpArrow:
         text: בעוד חץ למעלה לחוץ
       gamelab_withPercentChance:
-        text: אם {NUM} אחוז סיכוי
+        text: |-
+          אם {NUM} אחוז סיכוי
+          {STATEMENT}
       gamelab_withPercentChanceDropdown:
         text: |2-
            {NUM} סיכוי
@@ -1724,6 +1733,7 @@ he:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': אחו
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -2100,7 +2110,7 @@ he:
             '0.5': half of
             '0.25': few
       aalab_spriteSayChoices:
-        text: אמור
+        text: "{SPRITE} אמור {SPEECH}"
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:

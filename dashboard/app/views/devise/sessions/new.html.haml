@@ -1,4 +1,7 @@
-%h1= t('signin_form.title')
+%link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
+%script{src: webpack_asset_path('js/devise/sessions/new.js')}
+
+%h2= t('signin_form.title')
 
 .flex-container
   #signin
@@ -28,7 +31,7 @@
     / Not yet signed up? Sign up
     - if devise_mapping.registerable?
       = link_to new_user_registration_path, class: 'field-aligned' do
-        %button.blue-button= t('nav.user.signup')
+        %button.neutral-button{:id => 'user_signup'}= t('nav.user.signup')
 
   %div.vertical-or
     %hr
@@ -37,7 +40,7 @@
 
   = render "devise/shared/oauth_links"
 
-%h2#code_without_signing_in= t('signin.try_heading')
+%h4#code_without_signing_in= t('signin.try_heading')
 
 .row
   - if @is_english
@@ -55,15 +58,3 @@
 %br/
 %br/
 %br/
-
-:javascript
-  $("#user_login").placeholder();
-
-  $("#new_user").on("submit", function (e) {
-    window.dashboard.hashEmail({
-      email_selector: '#user_login',
-      hashed_email_selector: '#user_hashed_email'
-    });
-
-    dashboard.clientState.reset();
-  });

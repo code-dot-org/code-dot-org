@@ -463,25 +463,14 @@ hr:
       title: Laboratorij aplikacija
       audience: Dob 13+
       cta: Nauči kako
-    hello-world:
-      body: Odaberite između četiri zabavne teme za kodiranje interaktivnih likova
-        u svijetu koji stvorite.
-    hoc:
-      title: Klasični labirint
-      body: Isprobajte osnove informatike. Milijuni su im dali šansu.
+    aquatic:
+      title: Minecraft
     flappy:
       title: Flappy kôd
       body: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš
         tutorijal izrade Flappy kôda!
-    20-hour:
-      title: Ubrzani tečaj
-      body: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike.
-        Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je
-        zabavan za učenje bez obzira na dob polaznika.
-      body_short: Naučite osnovne računalne znanosti ubrzanom verzijom tečajeva 2-4.
-    hoc2014:
-      try_new_tutorial: Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji
-      try_frozen: Budi umjetnik s Annom i Elsom iz Snježnog kraljevstva
+    frozen:
+      title: Snježno kraljevstvo
     gallery:
       title: Galerija
       body: Pogledaj galeriju aplikacija i umjetničkih slika koje su napravili naši
@@ -490,14 +479,17 @@ hr:
       title: Game Lab
       audience: Dob 13+
       cta: Nauči kako
-    weblab:
-      title: Web Lab (beta)
-      audience: Dob 13+
-      cta: Nauči kako
-    frozen:
-      title: Snježno kraljevstvo
-    starwars:
-      title: Ratovi zvijezda
+    hello-world:
+      body: Odaberite između četiri zabavne teme za kodiranje interaktivnih likova
+        u svijetu koji stvorite.
+    hero:
+      title: Minecraft
+    hoc:
+      title: Klasični labirint
+      body: Isprobajte osnove informatike. Milijuni su im dali šansu.
+    hoc2014:
+      try_new_tutorial: Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji
+      try_frozen: Budi umjetnik s Annom i Elsom iz Snježnog kraljevstva
     infinity:
       title: Infinity Laboratorij igara
       body: Koristi Laboratorij igara za stvaranje priče ili igre s likovima iz Disney
@@ -507,15 +499,23 @@ hr:
       body: Istraži Minecraft svijet pomoću koda
     minecraft2016:
       title: Minecraft
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-    unplugged_conditionals:
-      title: Uvjeti
+    starwars:
+      title: Ratovi zvijezda
+    weblab:
+      title: Web Lab (beta)
+      audience: Dob 13+
+      cta: Nauči kako
     widgets:
       audience: Dob 14+
       cta: Nauči kako
+    unplugged_conditionals:
+      title: Uvjeti
+    20-hour:
+      title: Ubrzani tečaj
+      body: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike.
+        Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je
+        zabavan za učenje bez obzira na dob polaznika.
+      body_short: Naučite osnovne računalne znanosti ubrzanom verzijom tečajeva 2-4.
   landing:
     report_bug: Prijavi grešku
     support: Zatraži pomoć

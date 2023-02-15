@@ -4617,6 +4617,17 @@ zh-TW:
               display_name: 內容
             lessonGroup-4:
               display_name: 替代課程
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 一維（1D）陣列
+            lesson-3:
+              name: 計次迴圈（For Loops）
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-4:
+              display_name: 替代課程
         hello-world-space-2022:
           title: 你好世界：太空
         hello-world-soccer-2022:
@@ -4702,7 +4713,7 @@ zh-TW:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: 清單
+              display_name: 數據
             csp_loops:
               display_name: 迴圈
             csp_traversals:
@@ -4712,14 +4723,22 @@ zh-TW:
             lessonGroup-5:
               display_name: 課後調查
           description: 本單元介紹了列表、迴圈和尋訪，並探討如何利用它們來建立儲存和處理大量資料的應用程式。學習使用 App Lab 中的數據庫來設計程式，並在本單元末、為期 5 天的黑客松中設計一個題材不限的程式。
-          student_description: 本單元介紹了列表、迴圈和尋訪，並探討如何利用它們來建立儲存和處理大量資料的應用程式。學習使用 App Lab 中的數據庫來設計程式，並在本單元末、為期 5 天的黑客松中設計一個題材不限的程式。
           description_short: 學習如何建立使用列表、迴圈和尋訪來儲存和處理大量資訊的應用程式。
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 單元 6：演算法
+              display_name: 清單
             lessonGroup-2:
               display_name: 課後調查
+            lessonGroup-3:
+              display_name: 迴圈
+            lessonGroup-4:
+              display_name: 尋訪
+            lessonGroup-5:
+              display_name: 專案
+          description: 本單元介紹了列表、迴圈和尋訪，並探討如何利用它們來建立儲存和處理大量資料的應用程式。學習使用 App Lab 中的數據庫來設計程式，並在本單元末、為期 5 天的黑客松中設計一個題材不限的程式。
+          student_description: 本單元介紹了列表、迴圈和尋訪，並探討如何利用它們來建立儲存和處理大量資料的應用程式。學習使用 App Lab 中的數據庫來設計程式，並在本單元末、為期 5 天的黑客松中設計一個題材不限的程式。
+          description_short: 學習如何建立使用列表、迴圈和尋訪來儲存和處理大量資訊的應用程式。
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -4755,3 +4774,19 @@ zh-TW:
           title: CSP 遊樂場
           description_audience: 課程作者
           description_short: 用於課程版本之間的課程或級別分階段更新
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: App Lab 入門
+            lessonGroup-3:
+              display_name: 輸入與輸出

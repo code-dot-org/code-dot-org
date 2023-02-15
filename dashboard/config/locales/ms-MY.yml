@@ -831,33 +831,18 @@ ms:
         berfungsi, kemudian kongsi aplikasi anda dalam beberapa saat.
       audience: Umur 13+
       cta: Ketahui lebih lanjut
-    dance:
-      title: Majlis Tari-Menari
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Majlis Tari-Menari
-    hello-world:
-      title: Helo Dunia
-      body: Pilih daripada empat tema yang menyeronokkan untuk mengekodkan aksara
-        interaktif dalam dunia yang anda cipta.
-    poem-art:
-      title: Seni Puisi
-      body: Ekspresikan diri anda! Gunakan kod untuk mencipta puisi animasi.
-    hoc:
-      title: Pagar Sesat Klasik
-      body: Cuba asas sains komputer. Jutaan individu telah mencubanya.
+    dance:
+      title: Majlis Tari-Menari
     flappy:
       title: Kod Flappy
       body: Anda mahu menulis permainan anda sendiri dalam masa kurang daripada 10
         minit? Cuba tutorial Kod Flappy kami!
-    20-hour:
-      title: Kursus Dipercepatkan
-      body: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming.
-        Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia
-        adalah menyeronokkan untuk belajar di semua peringkat umur.
-      body_short: Mempelajari asas sains komputer dalam versi kursus 2-4 yang dipercepatkan.
-    hoc2014:
-      try_new_tutorial: Cuba tutorial Hour of Code baharu kami dalam versi beta
-      try_frozen: Artis bersama Anna dan Elsa, daripada Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Galeri
       body: Lihat galeri apl dan imej artis yang dibuat oleh pengguna kami
@@ -867,20 +852,23 @@ ms:
         antara satu sama lain.
       audience: Umur 13+
       cta: Ketahui lebih lanjut
+    hello-world:
+      title: Helo Dunia
+      body: Pilih daripada empat tema yang menyeronokkan untuk mengekodkan aksara
+        interaktif dalam dunia yang anda cipta.
+    hero:
+      title: Minecraft
+      body: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi
+        Minecraft dengan kod.
     hoc-encryption:
       title: Penyulitan Mudah
       body: Pelajar akan mempelajari teknik mencipta dan merengkah mesej yang disulitkan.
-    weblab:
-      title: Web Lab (beta)
-      body: Web Lab ialah persekitaran pengaturcaraan di mana anda boleh membuat halaman
-        web mudah menggunakan HTML dan CSS. Reka halaman web anda dan kongsi tapak
-        anda dalam beberapa saat.
-      audience: Umur 13+
-      cta: Ketahui lebih lanjut
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Pagar Sesat Klasik
+      body: Cuba asas sains komputer. Jutaan individu telah mencubanya.
+    hoc2014:
+      try_new_tutorial: Cuba tutorial Hour of Code baharu kami dalam versi beta
+      try_frozen: Artis bersama Anna dan Elsa, daripada Frozen
     infinity:
       title: Makmal Mainan Infiniti
       body: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi
@@ -891,20 +879,37 @@ ms:
     minecraft2016:
       title: Minecraft
       body: Program haiwan dan makhluk Minecraft lain dalam versi Minecraft anda sendiri.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi
-        Minecraft dengan kod.
+    poem-art:
+      title: Seni Puisi
+      body: Ekspresikan diri anda! Gunakan kod untuk mencipta puisi animasi.
     sports:
       title: Sukan
       body: Membuat permainan bola keranjang atau mencampur dan memadankan merentasi
         sukan.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Pemampatan Teks
       body: Dalam pelajaran ini, pelajar akan menggunakan Widget Pemampatan Teks untuk
         memampatkan teks dengan menggantikan corak dengan simbol.
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab ialah persekitaran pengaturcaraan di mana anda boleh membuat halaman
+        web mudah menggunakan HTML dan CSS. Reka halaman web anda dan kongsi tapak
+        anda dalam beberapa saat.
+      audience: Umur 13+
+      cta: Ketahui lebih lanjut
+    widgets:
+      title: Widget
+      body: Pelajar boleh meneroka konsep dari kursus Prinsip Sains Komputer kami
+        secara langsung menggunakan alat digital ini. Gunakan widget sendiri, atau
+        buat pelajaran konsep tunggal untuk kelas anda.
+      audience: Umur 14 keatas
+      cta: Ketahui lebih lanjut
+    unplugged_conditionals:
+      title: Bersyarat
+      body: Mempelajari tentang algoritma dan pernyataan bersyarat dalam aktiviti
+        “nirplag” ini dengan menggunakan dek kad.
     unplugged:
       title: Pelajaran Nirplag
       audience: Umur 4+
@@ -915,17 +920,12 @@ ms:
         pelengkap untuk mana-mana kursus sains komputer.
       body_short: Jika anda tidak mempunyai komputer, cuba pelajaran nirplag di dalam
         kelas anda.
-    unplugged_conditionals:
-      title: Bersyarat
-      body: Mempelajari tentang algoritma dan pernyataan bersyarat dalam aktiviti
-        “nirplag” ini dengan menggunakan dek kad.
-    widgets:
-      title: Widget
-      body: Pelajar boleh meneroka konsep dari kursus Prinsip Sains Komputer kami
-        secara langsung menggunakan alat digital ini. Gunakan widget sendiri, atau
-        buat pelajaran konsep tunggal untuk kelas anda.
-      audience: Umur 14 keatas
-      cta: Ketahui lebih lanjut
+    20-hour:
+      title: Kursus Dipercepatkan
+      body: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming.
+        Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia
+        adalah menyeronokkan untuk belajar di semua peringkat umur.
+      body_short: Mempelajari asas sains komputer dalam versi kursus 2-4 yang dipercepatkan.
   landing:
     prerelease_tutorial: Tutorial ini adalah dalam **beta**.  Ia tertakluk kepada
       semakan kerana maklum balas diterima dan penambahbaikan dibuat.

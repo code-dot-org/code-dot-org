@@ -1,6 +1,7 @@
 import {
   GetCurrentAudioTime,
   InitSound,
+  LoadSoundFromBuffer,
   PlaySound,
   StopSound,
   StopSoundByUniqueId
@@ -26,6 +27,7 @@ export default class MusicPlayer {
     this.library = {};
     this.groupPrefix = 'all';
     this.isInitialized = false;
+    this.tracksMetadata = {};
   }
 
   initialize(library) {
@@ -43,7 +45,11 @@ export default class MusicPlayer {
     this.isInitialized = true;
   }
 
-  playSoundAtMeasureById(id, measure, insideWhenRun) {
+  loadSoundFromBuffer(id, buffer) {
+    LoadSoundFromBuffer(id, buffer);
+  }
+
+  playSoundAtMeasureById(id, measure, insideWhenRun, trackId) {
     if (!this.isInitialized) {
       console.log('MusicPlayer not initialized');
       return;
@@ -61,17 +67,11 @@ export default class MusicPlayer {
       type: EventType.PLAY,
       id,
       insideWhenRun,
-      when: measure - 1
+      when: measure,
+      trackId
     };
 
     this.soundEvents.push(soundEvent);
-
-    // Sort the sounds by play time, earliest first, so that when we
-    // render the timeline, we can prioritize by play time when
-    // allocating rows to sounds.
-    this.soundEvents.sort(
-      (soundEventA, soundEventB) => soundEventA.when - soundEventB.when
-    );
 
     if (this.isPlaying) {
       this.playSoundEvent(soundEvent);
@@ -142,7 +142,7 @@ export default class MusicPlayer {
         if (soundEvent.insideWhenRun) {
           const eventStart =
             this.startPlayingAudioTime +
-            this.convertMeasureToSeconds(soundEvent.when);
+            this.convertPlayheadPositionToSeconds(soundEvent.when);
           if (eventStart > GetCurrentAudioTime()) {
             StopSoundByUniqueId(GROUP_TAG, soundEvent.uniqueId);
           }
@@ -155,16 +155,27 @@ export default class MusicPlayer {
     this.soundEvents = this.soundEvents.filter(
       soundEvent => !soundEvent.insideWhenRun
     );
+    Object.keys(this.tracksMetadata).forEach(trackId => {
+      if (this.tracksMetadata[trackId].insideWhenRun) {
+        delete this.tracksMetadata[trackId];
+      }
+    });
   }
 
   clearTriggeredEvents() {
     this.soundEvents = this.soundEvents.filter(
       soundEvent => soundEvent.insideWhenRun
     );
+    Object.keys(this.tracksMetadata).forEach(trackId => {
+      if (!this.tracksMetadata[trackId].insideWhenRun) {
+        delete this.tracksMetadata[trackId];
+      }
+    });
   }
 
   clearAllSoundEvents() {
     this.soundEvents = [];
+    this.clearTracksData();
   }
 
   stopAndCancelPreviews() {
@@ -176,30 +187,16 @@ export default class MusicPlayer {
     return this.soundEvents;
   }
 
-  getCurrentAudioElapsedTime() {
-    if (!this.isPlaying) {
-      return 0;
-    }
-
-    return GetCurrentAudioTime() - this.startPlayingAudioTime;
-  }
-
-  getPlayheadPosition() {
-    if (!this.isPlaying) {
-      return 0;
-    }
-
-    // Playhead time is 1-based (user-facing)
-    return 1 + this.getCurrentAudioElapsedTime() / this.secondsPerMeasure();
-  }
-
-  getCurrentMeasure() {
+  // Returns the current playhead position, in floating point for an exact position,
+  // 1-based, and scaled to measures.
+  // Returns 0 if music is not playing.
+  getCurrentPlayheadPosition() {
     const currentAudioTime = GetCurrentAudioTime();
     if (!this.isPlaying || currentAudioTime === null) {
-      return -1;
+      return 0;
     }
 
-    return this.convertSecondsToMeasure(
+    return this.convertSecondsToPlayheadPosition(
       currentAudioTime - this.startPlayingAudioTime
     );
   }
@@ -208,7 +205,7 @@ export default class MusicPlayer {
     if (soundEvent.type === EventType.PLAY) {
       const eventStart =
         this.startPlayingAudioTime +
-        this.convertMeasureToSeconds(soundEvent.when);
+        this.convertPlayheadPositionToSeconds(soundEvent.when);
 
       const currentAudioTime = GetCurrentAudioTime();
 
@@ -244,15 +241,102 @@ export default class MusicPlayer {
     }
   }
 
-  convertSecondsToMeasure(seconds) {
-    return Math.floor(seconds / this.secondsPerMeasure());
+  // Converts actual seconds used by the audio system into a playhead
+  // position, which is 1-based and scaled to measures.
+  convertSecondsToPlayheadPosition(seconds) {
+    return 1 + seconds / this.secondsPerMeasure();
   }
 
-  convertMeasureToSeconds(measure) {
-    return this.secondsPerMeasure() * measure;
+  // Converts a playhead position, which is 1-based and scaled to measures,
+  // into actual seconds used by the audio system.
+  convertPlayheadPositionToSeconds(playheadPosition) {
+    return this.secondsPerMeasure() * (playheadPosition - 1);
   }
 
   secondsPerMeasure() {
     return (60 / this.bpm) * BEATS_PER_MEASURE;
+  }
+
+  createTrack(id, name, measureStart, insideWhenRun) {
+    if (id === null) {
+      console.warn(`Invalid track ID`);
+      return;
+    }
+
+    if (this.tracksMetadata[id]) {
+      console.warn(`Track ${id}: ${name} already exists!`);
+      return;
+    }
+
+    this.tracksMetadata[id] = {
+      name,
+      insideWhenRun,
+      currentMeasure: measureStart,
+      maxConcurrentSounds: 0
+    };
+  }
+
+  addSoundsToTrack(trackId, ...soundIds) {
+    if (!this.tracksMetadata[trackId]) {
+      console.warn('No track with ID: ' + trackId);
+      return;
+    }
+
+    const {currentMeasure, insideWhenRun} = this.tracksMetadata[trackId];
+    let maxSoundLength = 0;
+
+    for (let soundId of soundIds) {
+      this.playSoundAtMeasureById(
+        soundId,
+        currentMeasure,
+        insideWhenRun,
+        trackId
+      );
+      maxSoundLength = Math.max(maxSoundLength, this.getLengthForId(soundId));
+    }
+
+    this.tracksMetadata[trackId].currentMeasure += maxSoundLength;
+    this.tracksMetadata[trackId].maxConcurrentSounds = Math.max(
+      soundIds.length,
+      this.tracksMetadata[trackId].maxConcurrentSounds
+    );
+  }
+
+  addRestToTrack(trackId, lengthMeasures) {
+    if (!this.tracksMetadata[trackId]) {
+      console.warn('No track with ID: ' + trackId);
+      return;
+    }
+
+    this.tracksMetadata[trackId].currentMeasure += lengthMeasures;
+  }
+
+  clearTracksData() {
+    this.tracksMetadata = {};
+  }
+
+  getTracksMetadata() {
+    return this.tracksMetadata;
+  }
+
+  getLengthForId(id) {
+    return this.getSoundForId(id).length;
+  }
+
+  getTypeForId(id) {
+    return this.getSoundForId(id).type;
+  }
+
+  getSoundForId(id) {
+    const splitId = id.split('/');
+    const path = splitId[0];
+    const src = splitId[1];
+
+    const folder = this.library.groups[0].folders.find(
+      folder => folder.path === path
+    );
+    const sound = folder.sounds.find(sound => sound.src === src);
+
+    return sound;
   }
 }

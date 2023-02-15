@@ -40,7 +40,7 @@ Son perfectos para los profesores que quieran incorporar la informática a sus p
 {{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "Inglés", duration: "5 horas", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Codificación con Poesía", right_description: "Conecta la informática y la poesía en tu aula con esta serie de lecciones.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Ver módulo" }}
 
 <aside>
-  <h3><strong>Feedback</strong></h3>
+  <h3><strong>Sugerencias</strong></h3>
   <p>This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any feedback you'd like to share?</p>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform?usp=sf_link" target="_blank" rel="noreferrer"><button>Give feedback</button></a>
 </aside>

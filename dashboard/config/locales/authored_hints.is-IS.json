@@ -11713,18 +11713,22 @@
           "courseD_artist_nestedLoops4_c": "Notaðu faldaða lykkju til að teikna hringana 4 sinnum."
         },
         "courseD_artist_nestedLoops52022": {
-          "courseD_artist_nestedLoops5_b": "Búðu til hring með `endurtaka` lykkju sem endurtekur 360 sinnum. Innan lykkjunnar á að færa áfram 1 díl og snúa um 1 gráðu."
+          "courseD_artist_nestedLoops5_b": "Búðu til hring með `endurtaka` lykkju sem endurtekur 360 sinnum. Innan lykkjunnar á að færa áfram 1 díl og snúa um 1 gráðu.",
+          "courseD_artist_nestedLoops5_a": "Auðveld lausn er:\n\n- Endurtaka 4 sinnum\n- - Teikna hring\n- - Hoppa áfram 50 díla\n- - Snúa til hægri 90 gráður"
         },
         "courseD_artist_nestedLoops72022": {
-          "courseD_artist_nestedLoops7_a": "Hér þarf að nota faldaðar lykkjur. Fyrst er lykkja sem teiknar ferning. Utan um hana kemur önnur lykkja en hvað á hún að gera?"
+          "courseD_artist_nestedLoops7_a": "Hér þarf að nota faldaðar lykkjur. Fyrst er lykkja sem teiknar ferning. Utan um hana kemur önnur lykkja en hvað á hún að gera?",
+          "courseD_artist_nestedLoops7_b": "Notaðu lykkju innan í lykkju þar sem innri lykkjan er kóðinn fyrir ferning.\n\n- endurtaktu 6 sinnum\n  - búa til ferning\n  - hoppa áfram um **50 díla**\n  - snúa um **60 gráður**"
         },
         "courseD_artist_nestedLoops82022": {
           "courseD_artist_nestedLoops8_a": "Með 8 sexhyrninga í myndinni þarftu að snúa um **45 gráður** á milli þeirra. Hvers vegna? Vegna þess að 360 gráður (snúningur heilan hring) deilt með 8 (fjölda sexhyrninga) er 45 gráður.",
-          "courseD_artist_nestedLoops8_b": "Ef þú kemst ekki áfram, kíktu þá á síðustu þraut, og breyttu svo því sem er öðruvísi núna."
+          "courseD_artist_nestedLoops8_b": "Ef þú kemst ekki áfram, kíktu þá á síðustu þraut, og breyttu svo því sem er öðruvísi núna.",
+          "courseD_artist_nestedLoops8_c": "Notaðu lykkju innan í lykkju:\n\n  - Endurtaktu 8 sinnum\n    - teikna sexhyrning\n    - hoppa áfram 50 díla\n    - snúa til hægri um 45 gráður"
         },
         "courseD_artist_nestedLoops92022": {
           "courseD_artist_nestedLoops9_a": "Byrjaðu á að nota faldaða lykkju eins og þá sem þú hafðir áður, en nú á að teikna ferninga.",
-          "courseD_artist_nestedLoops9_b": "Bættu við faldaðri lykkju neðan við þá sem teiknar ferningana, en láttu þessar lykkjur teikna þríhyrninga."
+          "courseD_artist_nestedLoops9_b": "Bættu við faldaðri lykkju neðan við þá sem teiknar ferningana, en láttu þessar lykkjur teikna þríhyrninga.",
+          "courseD_artist_nestedLoops9_c": "Notaðu tvær lykkjur innan í lykkju;\n- Endurtaktu 8 sinnum\n  - teikna ferning\n  - hoppa áfram 50 díla\n  - snúa til hægri um 45 gráður\n- Endurtaktu 8 sinnum\n  - teikna þríhyrning\n  - hoppa áfram 50 díla\n  - snúa til hægri um 45 gráður"
         },
         "courseD_artist_nestedLoopsFP2022": {
           "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nÞessi mynd var gerð með einni faldaðri lykkju sem endurtekur sexhyrning (með 50 díla hliðar) 15 sinnum og notar 48 gráðu snúning.",
@@ -12311,6 +12315,15 @@
         "coursea_maze_ramp12022": {
           "courseC_maze_programming1_a": "Ef fuglinn er ekki að komast til svínsins, þarftu að gæta þess að allir kubbarnir séu tengdir saman og smella svo aftur á \"Keyra\".",
           "courseC_maze_programming1_b": "Ekki óttast að gera mistök! Prófaðu eitthvað og ef það virkar ekki skaltu bara prófa eitthvað annað!"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Hringur er 360 gráður. Margfaldaðu gráður snúnings með fjölda endurtekninga. Er það jafnt og 360?\nPrófaðu snúningana sem stungið er upp á til að sjá að þetta virkar!\n\nHér eru nokkur dæmi til að koma þér af stað:\n\n-   Prófaðu 60 gráðu snúning 6 sinnum\n-   Prófaðu 45 gráðu snúning 8 sinnum\n-   Prófaðu 30 gráðu snúning 12 sinnum"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Til að láta skepnuna segja eitthvað er hægt að tengja kóðakubbana svona:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "Til að láta tjáknið segja eitthvað er hægt að tengja kóðakubbana svona:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

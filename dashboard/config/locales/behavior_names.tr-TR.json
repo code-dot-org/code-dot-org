@@ -1677,7 +1677,7 @@
           "jittering2": "kararsızlık2",
           "patrolling2": "denetleme2",
           "moving with arrow keys2": "ok tuşları2 ile hareket",
-          "driving with arrow keys2": "ok tuşları2 ile hareket"
+          "driving with arrow keys2": "ok tuşları2 ile sürmek"
         },
         "courseF_apps_card": {
           "driving with arrow keys": "ok tuşları ile hareket",
@@ -1725,7 +1725,7 @@
           "patrolling2": "denetleme2",
           "blocking movement": "engelleme hareketi",
           "moving with arrow keys2": "ok tuşları2 ile hareket",
-          "driving with arrow keys2": "ok tuşları2 ile hareket"
+          "driving with arrow keys2": "ok tuşları2 ile sürmek"
         },
         "courseF_apps_collector": {
           "wandering": "gezinme",
@@ -1756,7 +1756,7 @@
           "patrolling2": "denetleme2",
           "flying west and looping": "batıya doğru uçuş ve döngü",
           "moving with arrow keys2": "ok tuşları2 ile hareket",
-          "driving with arrow keys2": "ok tuşları2 ile hareket"
+          "driving with arrow keys2": "ok tuşları2 ile sürmek"
         },
         "courseF_apps_madlib": {
           "wandering": "gezinme",
@@ -3712,7 +3712,7 @@
           "jittering2": "kararsızlık2",
           "patrolling2": "denetleme2",
           "moving with arrow keys2": "ok tuşları2 ile hareket",
-          "driving with arrow keys2": "ok tuşları2 ile hareket"
+          "driving with arrow keys2": "ok tuşları2 ile sürmek"
         },
         "courseF_apps_aquarium_-2022-2": {
           "wandering2": "gezinme2",
@@ -3743,7 +3743,7 @@
           "jittering2": "kararsızlık2",
           "patrolling2": "denetleme2",
           "moving with arrow keys2": "ok tuşları2 ile hareket",
-          "driving with arrow keys2": "ok tuşları2 ile hareket"
+          "driving with arrow keys2": "ok tuşları2 ile sürmek"
         },
         "courseF_apps_card2022": {
           "blocking movement": "engelleme hareketi",
@@ -3808,7 +3808,7 @@
           "moving west2": "batıya hareket etme2",
           "patrolling2": "denetleme2",
           "moving with arrow keys2": "ok tuşları2 ile hareket",
-          "driving with arrow keys2": "ok tuşları2 ile hareket"
+          "driving with arrow keys2": "ok tuşları2 ile sürmek"
         },
         "courseF_apps_chatbot_-2022-2": {
           "blocking movement": "engelleme hareketi",
@@ -3839,7 +3839,7 @@
           "moving west2": "batıya hareket etme2",
           "patrolling2": "denetleme2",
           "moving with arrow keys2": "ok tuşları2 ile hareket",
-          "driving with arrow keys2": "ok tuşları2 ile hareket"
+          "driving with arrow keys2": "ok tuşları2 ile sürmek"
         },
         "courseF_apps_collector2022": {
           "wandering": "gezinme",
@@ -3870,7 +3870,7 @@
           "jittering2": "kararsızlık2",
           "patrolling2": "denetleme2",
           "moving with arrow keys2": "ok tuşları2 ile hareket",
-          "driving with arrow keys2": "ok tuşları2 ile hareket"
+          "driving with arrow keys2": "ok tuşları2 ile sürmek"
         },
         "courseF_apps_collector_-2022-2": {
           "wandering": "gezinme",
@@ -3901,7 +3901,7 @@
           "jittering2": "kararsızlık2",
           "patrolling2": "denetleme2",
           "moving with arrow keys2": "ok tuşları2 ile hareket",
-          "driving with arrow keys2": "ok tuşları2 ile hareket"
+          "driving with arrow keys2": "ok tuşları2 ile sürmek"
         },
         "courseF_apps_madlib2022": {
           "wandering": "gezinme",

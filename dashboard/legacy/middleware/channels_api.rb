@@ -306,41 +306,20 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
-  #
   # GET /v3/channels/<channel-id>/abuse
   #
   # Get an abuse score.
   #
-  get %r{/v3/channels/([^/]+)/abuse$} do |id|
-    dont_cache
-    content_type :json
-    begin
-      value = Projects.get_abuse(id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {abuse_score: value}.to_json
-  end
+  # Moved to ReportAbuseController.
+  #
 
   #
   # POST /v3/channels/<channel-id>/abuse
   #
   # Increment an abuse score
   #
-  post %r{/v3/channels/([^/]+)/abuse$} do |id|
-    dont_cache
-    content_type :json
-    # Reports of abuse from verified teachers are more reliable than reports
-    # from students so we increase the abuse score enough to block the project
-    # with only one report from a verified teacher.
-    amount = verified_teacher? ? 20 : 10
-    begin
-      value = Projects.new(get_storage_id).increment_abuse(id, amount)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {abuse_score: value}.to_json
-  end
+  # API endpoint removed. Functionality moved to ReportAbuseController.
+  #
 
   #
   # POST /v3/channels/<channel-id>/buffer_abuse_score
@@ -367,22 +346,8 @@ class ChannelsApi < Sinatra::Base
   #
   # Clear an abuse score. Requires project_validator permission
   #
-  delete %r{/v3/channels/([^/]+)/abuse$} do |id|
-    # UserPermission::PROJECT_VALIDATOR
-    not_authorized unless project_validator?
-
-    dont_cache
-    content_type :json
-    begin
-      value = Projects.new(get_storage_id).reset_abuse(id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {abuse_score: value}.to_json
-  end
-  post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
-    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
-  end
+  # Moved to ReportAbuseController.
+  #
 
   # This method is included here so that it can be stubbed in tests.
   def project_validator?

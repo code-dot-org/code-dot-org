@@ -108,10 +108,10 @@
         },
         "CSD U2 Image assessment_2022": {
           "rubric_key_concept": "Estructurar el contenido de una página web utilizando HTML (añadir una imagen a una página web).  Mencionar con precisión a otros cuando se utiliza su trabajo.",
-          "rubric_performance_level_1": "La imagen se muestra correctamente y el atributo `alt` ofrece una descripción de prueba razonable de la imagen.  No se incluye código innecesario en la etiqueta `img`.  La mención de la imagen es correcta y su nombre es adecuado.",
+          "rubric_performance_level_1": "La imagen se muestra correctamente y el atributo `alt` ofrece una descripción de texto razonable de la imagen.  No se incluye código innecesario en la etiqueta `img`.  La atribución de la imagen es correcta y su nombre es adecuado.",
           "rubric_performance_level_2": "La imagen se muestra correctamente y se utiliza de acuerdo con la descripción de su licencia de copyright.",
           "rubric_performance_level_3": "Se utiliza la etiqueta `img` y se proporciona una dirección de origen para la imagen, pero puede haber pequeños errores de sintaxis o faltas de ortografía que impiden que la imagen se muestre correctamente.  La imagen puede no estar disponible para su uso legal en la página web.",
-          "rubric_performance_level_4": "La etiqueta `img` no se utiliza o no se indica una dirección de origen para la imagen."
+          "rubric_performance_level_4": "No se utiliza la etiqueta `img` o no se indica la dirección de origen de la imagen."
         },
         "CSD U2 adding pages_2021": {
           "rubric_key_concept": "Creación de un artefacto digital, con enlaces dentro de un sitio de varias páginas\n",
@@ -137,7 +137,7 @@
         "CSD U2 classes haikus_2022": {
           "rubric_performance_level_1": "La clase y el conjunto de reglas se han creado correctamente, se han incluido todos los elementos del haiku elegido y hay al menos tres reglas en el conjunto de reglas.",
           "rubric_performance_level_2": "Se ha creado una clase, un conjunto de reglas y la mayoría de los elementos de la sección de haiku elegida en el sitio web se ven afectados por esta clase, pero puede haber algunos errores menores para algunas partes del texto, o puede haber menos de tres reglas en el conjunto de reglas.",
-          "rubric_performance_level_3": "La clase y el conjunto de reglas están creados, y al menos algunos elementos del sitio web están en esa clase, pero puede haber errores importantes que impiden que el texto sea estilizado.",
+          "rubric_performance_level_3": "Se crean una clase y un conjunto de reglas, y al menos algunos elementos del sitio web están en esa clase, pero puede haber errores importantes que impidan aplicar estilo al texto.",
           "rubric_performance_level_4": "Ninguna clase o conjunto de reglas se han creado, o no se han puesto elementos del sitio web en la clase.",
           "rubric_key_concept": "Crear clases que puedan ser referenciadas y afectadas como un grupo."
         },
@@ -861,7 +861,7 @@
           "rubric_performance_level_4": "No hay etiquetas de párrafo en el texto."
         },
         "CSD U2 HTML Adding Paragraphs pt 2_2021": {
-          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya títulos jerárquicos, párrafos, listas e imágenes; comprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
+          "rubric_key_concept": "Utiliza el lenguaje HTML para crear una página web que incluya títulos jerárquicos, párrafos, listas e imágenes; comprendiendo la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
           "rubric_performance_level_1": "Todo el texto está contenido en etiquetas de párrafo.  Hay al menos dos párrafos creados mediante el uso correcto de las etiquetas de párrafo.",
           "rubric_performance_level_2": "Al menos se ha separado parte del texto en un párrafo mediante el uso adecuado de las etiquetas de párrafo.",
           "rubric_performance_level_3": "Hay al menos una etiqueta de párrafo en el texto, pero puede que no se utilice correctamente (por ejemplo, falta la etiqueta de cierre, párrafos creados fuera del elemento body).",
@@ -1038,8 +1038,8 @@
         "CSD U6 - Functions - A_2222": {
           "rubric_key_concept": "Utiliza funciones con parámetros para organizar las aplicaciones",
           "rubric_performance_level_1": "La aplicación utiliza una función con dos parámetros que corresponden al nombre y a la cantidad a mover. Los parámetros sustituyen correctamente cada nombre y valor de la cantidad de nieve original. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
-          "rubric_performance_level_2": "La aplicación utiliza una función con un solo parámetro, o la aplicación utiliza una función con dos parámetros pero no todos los valores se actualizan mediante parámetros. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
-          "rubric_performance_level_3": "La aplicación utiliza una función pero no utiliza parámetros, o no todos los elementos de la nieve se mueven en la pantalla",
+          "rubric_performance_level_2": "La aplicación utiliza una función con un solo parámetro, o la aplicación utiliza una función con dos parámetros, pero no todos los valores se actualizan mediante parámetros. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
+          "rubric_performance_level_3": "La aplicación utiliza una función, pero no utiliza parámetros, o no todos los elementos de la nieve se mueven en la pantalla",
           "rubric_performance_level_4": "El código no ha cambiado con respecto a la aplicación original"
         },
         "CSD U6 - Music - A_2222": {

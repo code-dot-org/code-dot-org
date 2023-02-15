@@ -78,6 +78,14 @@ export function moveDefaultSpriteMetadataToProduction() {
     });
 }
 
+export function getSourceUrlForLevelAnimation(
+  versionId,
+  filename,
+  extension = ''
+) {
+  return `/api/v1/animation-library/level_animations/${versionId}/${filename}${extension}`;
+}
+
 export function generateAnimationMetadataForFile(fileObject) {
   const json = fileObject.json;
   const png = fileObject.png;
@@ -89,9 +97,11 @@ export function generateAnimationMetadataForFile(fileObject) {
         jsonLastModified: json.last_modified,
         pngLastModified: png.last_modified,
         version: png.version_id,
-        sourceUrl: `/api/v1/animation-library/level_animations/${
-          png.version_id
-        }/${metadata.name}.png`,
+        sourceUrl: getSourceUrlForLevelAnimation(
+          png.version_id,
+          metadata.name,
+          '.png'
+        ),
         sourceSize: png.source_size
       };
       return Promise.resolve(combinedMetadata);

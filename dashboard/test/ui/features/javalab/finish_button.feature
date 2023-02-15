@@ -1,4 +1,4 @@
-# Item to track renabling this: https://codedotorg.atlassian.net/browse/SL-375
+# We don't support Java Lab on mobile.
 @no_circle @no_phone
 Feature: Finish Button
 

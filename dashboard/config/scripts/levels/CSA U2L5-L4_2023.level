@@ -17,13 +17,14 @@
     "project_template_level_name": "CSA U2L5-Super PBT_2023",
     "encrypted_examples": [
 
-    ]
+    ],
+    "teacher_markdown": "The `super()` keyword can be used in a subclass constructor to pass the values to the superclass constructor. This allows the values to be assigned to the instance variables that are declared in the superclass since the subclass cannot directly access these."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-11-23T14:31:53.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-11-23T14:31:53.620+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L3_2023\\\"\"],\"cloned_from\":\"CSA U2L5-L3_2023\"},{\"changed_at\":\"2022-11-23 14:31:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-23 19:30:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-23 19:32:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-11-23T14:31:53.620+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L3_2023\\\"\"],\"cloned_from\":\"CSA U2L5-L3_2023\"},{\"changed_at\":\"2022-11-23 14:31:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-23 19:30:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-23 19:32:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-15 19:55:02 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

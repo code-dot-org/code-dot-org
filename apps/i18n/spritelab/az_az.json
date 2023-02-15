@@ -84,7 +84,6 @@
   "didntMoveRight": "Qrafik obyekt sağa hərəkət etmədi",
   "didntMoveUp": "Qrafik obyekt yuxarı qalxmadı.",
   "didntPressKey": "*\"Çalış\"* düyməsini basdıqdan sonra ox düyməsini basdığınızdan əmin olun. Oyun sahəsinin altındakı narıncı düymələri vura və ya klaviaturanızdakı düymələri basa bilərsiniz. ",
-  "errorLoadingAnimation": "\"{AnimationName}\" animasiyanızı yükləməkdə çətinlik çəkirik. Yaxşı bir internet bağlantınız olduğundan əmin olun və səhifəni yenidən yükləməyə çalışın. Bu problem davam edərsə, bu animasiyanın pozulması mümkündür. Bu vəziyyətdə animasiyanı silməklə davam etməyiniz lazım ola bilər.",
   "eventNotDetected": "Hadisə aşkarlanmadı. İş yerinizdə düzgün hadisə bloklarına malik olduğunuzdan və hər kod blokunda düzgün *kostyum* seçdiyinizdən əmin olun.",
   "eventsOneChange": "Qrafikanı yalnız bir dəfə dəyişmək olur. Düyməni bir neçə dəfə basaraq proqramınızı yoxlayın və düzgün blokdan istifadə etdiyinizə əmin olun.",
   "eventsWrongBehaviors": "Sizin sprite-da tam olaraq 3 davranış olmalıdır. Kodunuzdakı \"hər şeyi dayandırır\" blokunu başqa yerə köçürməyə çalışın. ",

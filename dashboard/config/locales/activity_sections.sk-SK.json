@@ -2249,7 +2249,7 @@
           ]
         },
         "3aa37d43-0bc2-433c-9fdd-59a704d6d5f8": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "progression_name": "Predpoveď"
         },
         "fa8242f4-3cba-4a2c-bd5b-069a58450349": {
@@ -3879,7 +3879,7 @@
           "description": "#### 1. kolo (ľahké):\n\n-   Začni pochodovať na mieste.\n-   Prestaň pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň tlieskať.\n-   Začni pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:** _Čo sa stalo, keď ste dostali príkaz tlieskať, ale už ste pochodovali na mieste? Čo sa stane, keď naraz dostanete dva príkazy, aby ste niečo spravili?_\n\n#### 2. kolo (stredne ťažké):\n\n-   Začni mávať ramenami vo vzduchu.\n-   Začni kývať hlavou.\n-   Prestaň mávať ramenami vo vzduchu.\n-   Prestaň kývať hlavou.\n-   Začni triasť kolenami.\n-   Začni mávať ramenami ako vták.\n-   Prestaň triasť kolenami.\n-   Začni kývať hlavou.\n-   Začni pochodovať na mieste.\n-   Prestaň mávať ramenami ako vták.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:**\n\n_Aké typy aktivít spôsobili, že sa ľudia začali mýliť?\nAké postupy sú podľa vás užitočné na to, aby ste dokázali správne nasledovať pokyny?\nPrečo je dôležité samostatne sledovať každú činnosť?_\n\n#### 3. kolo (ťažké)\n\n-   Začni čupieť.\n-   Začni si ťukať na čelo.\n-   Prestaň čupieť.\n-   Prestaň si ťukať na čelo.\n-   Začni skákať.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni tlieskať.\n-   Začni mávať ramenami ako vták.\n-   Prestaň všetko.\n-   Začni čupieť.\n-   Začni skákať.\n-   Prestaň všetko.\n-   Začni si búchať do kolien.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni sa točiť doľava.\n-   Začni sa točiť doprava.\n-   Prestaň sa točiť doľava.\n-   Prestaň sa točiť doprava.\n\n**Diskusia:** _Čo sa stane, keď sú dve činnosti zdanlivo protichodné?_\n\n_Čo treba spraviť, keď dostaneš naraz príkaz tlieskať rukami a mávať ramenami?_\n\n_Ako môžeš skákať, keď čupíš?_\n\n_Čo sa stane, keď si máš naraz búchať do kolien a ťukať na čelo?_\n\n_Čo robili ostatní hráči, keď ste dostali príkaz točiť sa do protichodných smerov?_ \n\n_Čo by sa stalo, ak by ste dostali príkaz točiť sa doľava aj doprava naraz?_\n\nŽiaci by mali chápať, že niektoré činnosti sú protichodné, čo môže viesť k nepredvídateľným výsledkom. Dve protichodné činnosti sa môžu navzájom zrušiť."
         },
         "fcfb7745-6451-4f94-a9c1-23d681360aac": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "description": "#### Predpoveď (2 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "progression_name": "Predpoveď"
         },
@@ -7998,7 +7998,7 @@
         },
         "75801e87-9bc4-4934-ad31-2eae1c5452db": {
           "name": "Denník",
-          "description": "**Otázka dňa: Ako môžeme použiť parametre na to, aby sme dali počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
+          "description": "**Otázka dňa: Ako môžeme pomocou parametrov dať počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
         },
         "1abfbbcd-8efd-43b2-9138-3825b3d1bad5": {
           "description": "**Diskutujte:** Umožnite žiakom, aby sa podelili o svoje nápady.",
@@ -8008,7 +8008,7 @@
         },
         "0203d927-d4fc-4ad3-bb45-86960035eae3": {
           "name": "Vstup-výstup-ukladanie-spracovanie",
-          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíte vstup, výstup, ukladanie a spracovanie v Game Labe?"
+          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíš vstup, výstup, ukladanie a spracovanie v Game Labe?"
         },
         "de1129c2-dd57-441d-8703-cfad937ab506": {
           "description": "\\*\\* Diskutujte:\\*\\* Umožnite žiakom, aby sa podelili o svoje odpovede.",
@@ -8020,7 +8020,7 @@
           "description": "Dnes sa zameriame na ukladanie. Pozrieme sa na premenné, ktoré sú pre počítače veľmi bežným spôsobom ukladania informácií v programe."
         },
         "649425e6-b789-4125-aed7-3f20cfdf8ce3": {
-          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?**"
+          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?**"
         },
         "e7468f3b-3e70-492a-9749-a45d6df1c3f7": {
           "name": "Programovanie s premennými",
@@ -8062,7 +8062,7 @@
         },
         "a941f6f3-3bda-4a2b-abcd-6f302ebaa80a": {
           "name": "Reflexia",
-          "description": "\\*\\*Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?"
+          "description": "\\*\\*Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?"
         },
         "e651c11f-635c-442f-a480-19faf1ce4c52": {
           "description": "**Spýtajte sa:** Položte žiakom nasledujúce otázky:",
@@ -8634,7 +8634,7 @@
           "description": "**Otázka dňa: Ako môžu naše programy reagovať na vstupy od používateľa?**"
         },
         "e7c40cc1-5969-4bdb-bd17-0c0f786b9d76": {
-          "name": "Stlačenie kláves ako vstup",
+          "name": "Vstup z klávesnice",
           "description": "**Premostenie:** Požiadajte žiakov, aby si otvorili Code Studio",
           "tips": [
             null
@@ -8927,7 +8927,7 @@
           "description": "**Opakovanie**\n\nPožiadajte žiakov, aby si spomenuli na všetky veci, ktoré sa doteraz naučili robiť v rámci tohto tematického celku, a svoje odpovede ukázali triede.  Toto je vhodný čas na zopakovanie všetkých myšlienok, ktoré boli pre žiakov náročné."
         },
         "5393cd79-cac8-4c95-bdf5-2dfd9fb45b92": {
-          "description": "Teraz, keď ste sa naučili zisťovať interakcie medzi sprajtmi, môžete začať vytvárať zaujímavejšie hry.  Dnes sa pozrieme na to, ako môžete použiť to, čo ste sa naučili, na vytvorenie plošinovkovej hry."
+          "description": "Teraz, keď ste sa naučili zisťovať interakcie medzi sprajtmi, môžete začať vytvárať zaujímavejšie hry.  Dnes sa pozrieme na to, ako môžete použiť to, čo ste sa naučili, na vytvorenie plošinovky."
         },
         "4d0e1b05-6764-45b5-85f0-d956e11f0704": {
           "description": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**",
@@ -8942,7 +8942,7 @@
           ]
         },
         "1e49d8c1-a9ea-489d-ac88-fd9f334b8118": {
-          "progression_name": "Úvod do side-scrollerov"
+          "progression_name": "Úvod do plošinoviek"
         },
         "e00eff58-39ab-4524-a6d0-de984c917f60": {
           "progression_name": "Nakresli si pozadie"
@@ -12201,7 +12201,7 @@
           ]
         },
         "40a13955-52e9-4e0a-89ee-3d575f49a396": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A. I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A.I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
         },
         "be01f760-a2cb-42f9-bce1-9069ceabb0fb": {
           "description": "**Cieľ diskusie:** Žiaci môžu zistiť, že A.I. Bot považuje niektoré vlastnosti za dôležité, hoci v skutočnosti s ich slovom vôbec nesúvisia. Napríklad si myslia, že ústa ryby sú dôležité, keď sa snažia určiť, či je ryba červená. Žiaci si to môžu overiť tak, že budú hľadať v rybách vzory, ktoré A.I. Bot akceptoval – možno všetky ich vzorové ryby mali náhodou rovnaký typ úst a A.I. Bot to mylne považoval za dôležité."
@@ -13452,7 +13452,7 @@
           "progression_name": "Reflexia"
         },
         "ff77579c-bfc0-4614-87d3-89f4b5e7a5b2": {
-          "description": "Táto lekcia je prvou zo série piatich lekcií, ktoré žiakom pomôžu pripraviť sa na dokončenie záverečného projektu v rámci tohto tematického celku. Úlohy, ktoré žiaci riešia tento týždeň, sú totožné s úlohami, ktoré budú riešiť v rámci projektu. Preto môže byť užitočné prečítať si sprievodcu záverečným projektom, aby ste videli, ako jednotlivé lekcie súvisia so záverečným projektom – [kliknutím sem získate prístup k plánu lekcií pre záverečný projekt](../21).\n\nŽiaci budú v priebehu tohto týždňa vytvárať aj vlastné prieskumy pomocou Formulárov Google. To si vyžaduje, aby žiaci mali účet Google. Ak vaši žiaci nemajú účet Google, zvážte, či jeho vytvorenie nezaradíte do dnešnej alebo zajtrajšej vyučovacej hodiny."
+          "description": "Táto lekcia je prvou zo série piatich lekcií, ktoré žiakom pomôžu pripraviť sa na dokončenie záverečného projektu v rámci tohto tematického celku. Úlohy, ktoré žiaci riešia tento týždeň, sú totožné s úlohami, ktoré budú riešiť v rámci projektu. Preto môže byť užitočné prečítať si sprievodcu záverečným projektom, aby ste videli, ako jednotlivé lekcie súvisia so záverečným projektom – [kliknutím sem získate prístup k plánu lekcií pre záverečný projekt](./21).\n\nŽiaci budú v priebehu tohto týždňa vytvárať aj vlastné prieskumy pomocou Formulárov Google. To si vyžaduje, aby žiaci mali účet Google. Ak vaši žiaci nemajú účet Google, zvážte, či jeho vytvorenie nezaradíte do dnešnej alebo zajtrajšej vyučovacej hodiny."
         },
         "097848dd-29f1-4682-a7a3-ba8b76d537ec": {
           "name": "Denník",
@@ -14087,7 +14087,7 @@
           "progression_name": "Kreslenie"
         },
         "35757aa8-b162-4b82-9336-c272e4907930": {
-          "progression_name": "Tvorba tvarov v Game Labe"
+          "progression_name": "Kreslenie tvarov v Game Labe"
         },
         "e72a0445-ed69-4440-b9d7-e07e7895982d": {
           "progression_name": "Náročnejšie úlohy"
@@ -14174,7 +14174,7 @@
           "progression_name": "\"Sprite\" objekty a vykresľovací cyklus"
         },
         "9fcb88d4-d160-48f1-839b-a859098936ba": {
-          "progression_name": "Vlastnosti postáv"
+          "progression_name": "Vlastnosti sprajtov"
         },
         "5af1eedf-4119-4465-9112-21357b4c9530": {
           "progression_name": "\"Sprite\" objekty a vykresľovací cyklus"
@@ -14227,13 +14227,13 @@
           "progression_name": "Prehľad lekcie"
         },
         "778179e7-0498-4a67-9748-bbd0a3124677": {
-          "progression_name": "Stlačenie kláves ako vstup"
+          "progression_name": "Vstup z klávesnice"
         },
         "88edaa56-2d58-4888-9762-ac044884b679": {
           "progression_name": "Úprava obrázkov"
         },
         "db02c79f-5245-42bc-aab9-460b3e732b45": {
-          "progression_name": "Stlačenie kláves ako vstup"
+          "progression_name": "Vstup z klávesnice"
         },
         "29dc442e-bb0f-46a4-97b7-3f803dd2ea7d": {
           "progression_name": "Prehľad lekcie"
@@ -14279,7 +14279,7 @@
           "progression_name": "Rýchlosť"
         },
         "c67c09eb-f947-4b9e-93df-740612cef3dc": {
-          "progression_name": "Posúvačka (side-scroller)"
+          "progression_name": "Plošinovka"
         },
         "84021691-71af-4214-b414-d85de602e92f": {
           "progression_name": "Prehľad lekcie"
@@ -15981,7 +15981,7 @@
           "progression_name": "Kreslenie"
         },
         "4433d7c9-254b-45d8-a574-2b76e0610be1": {
-          "progression_name": "Tvorba tvarov v Game Labe"
+          "progression_name": "Kreslenie tvarov v Game Labe"
         },
         "d1036688-71f8-4075-be73-786b8f7b930f": {
           "progression_name": "Náročnejšie úlohy"
@@ -16068,7 +16068,7 @@
           "progression_name": "\"Sprite\" objekty a vykresľovací cyklus"
         },
         "89860dc5-98ff-4e81-b72c-56732f2f2b0a": {
-          "progression_name": "Vlastnosti postáv"
+          "progression_name": "Vlastnosti sprajtov"
         },
         "c9cc0204-f409-4d46-89e4-620987dab74e": {
           "progression_name": "\"Sprite\" objekty a vykresľovací cyklus"
@@ -16121,13 +16121,13 @@
           "progression_name": "Prehľad lekcie"
         },
         "63f28385-c350-49ea-9d4b-2d02eede51d0": {
-          "progression_name": "Stlačenie kláves ako vstup"
+          "progression_name": "Vstup z klávesnice"
         },
         "0a03b724-0c9b-4478-81d1-b5b6200271ee": {
           "progression_name": "Úprava obrázkov"
         },
         "2cf172ce-f3e5-480b-a247-19afa399e984": {
-          "progression_name": "Stlačenie kláves ako vstup"
+          "progression_name": "Vstup z klávesnice"
         },
         "666f054a-0fd9-47a8-bd33-ce3ed2022fda": {
           "progression_name": "Prehľad lekcie"
@@ -16176,7 +16176,7 @@
           "progression_name": "Rýchlosť \"sprite\" objektu"
         },
         "d763a5fd-9781-4a36-89f5-6afd6bd25929": {
-          "progression_name": "Posúvačka (side-scroller)"
+          "progression_name": "Plošinovka"
         },
         "913cf6d5-1934-4e19-8cfd-c86e320bd941": {
           "progression_name": "Prehľad lekcie"
@@ -16964,7 +16964,7 @@
           "progression_name": "Kreslenie"
         },
         "813b9c81-0aad-4ed5-956b-3d4facca5816": {
-          "progression_name": "Tvorba tvarov v Game Labe"
+          "progression_name": "Kreslenie tvarov v Game Labe"
         },
         "cb684307-ce51-4674-9ce0-cf32e34f02c4": {
           "progression_name": "Náročnejšie úlohy"
@@ -17064,7 +17064,7 @@
           "progression_name": "\"Sprite\" objekty a vykresľovací cyklus"
         },
         "6d500881-4394-4b38-9bbb-56b73d897b83": {
-          "progression_name": "Vlastnosti postáv"
+          "progression_name": "Vlastnosti sprajtov"
         },
         "bf95d671-b457-4d3a-9ca8-ae57d660a224": {
           "progression_name": "\"Sprite\" objekty a vykresľovací cyklus"
@@ -17129,13 +17129,13 @@
           "progression_name": "Prehľad lekcie"
         },
         "acc4297f-692d-410f-877d-b724074e3705": {
-          "progression_name": "Stlačenie kláves ako vstup"
+          "progression_name": "Vstup z klávesnice"
         },
         "f0b21c2b-eb9c-4108-a1b5-ec2b4db23296": {
           "progression_name": "Úprava obrázkov"
         },
         "b905e7c7-4dbf-4629-bba0-a716c025f35e": {
-          "progression_name": "Stlačenie kláves ako vstup"
+          "progression_name": "Vstup z klávesnice"
         },
         "970e0d56-a8de-4dde-a5ab-a2597f95aa1d": {
           "name": "Voľná hra",
@@ -17183,7 +17183,7 @@
           "progression_name": "Rýchlosť"
         },
         "1cbdcce5-22a2-48dd-a2cd-28086ca9579b": {
-          "progression_name": "Posúvačka (side-scroller)"
+          "progression_name": "Plošinovka"
         },
         "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
           "name": "Voľná hra",
@@ -18072,7 +18072,7 @@
           "description": "#### 1. kolo (ľahké):\n\n-   Začni pochodovať na mieste.\n-   Prestaň pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň tlieskať.\n-   Začni pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:** _Čo sa stalo, keď ste dostali príkaz tlieskať, ale už ste pochodovali na mieste? Čo sa stane, keď naraz dostanete dva príkazy, aby ste niečo spravili?_\n\n#### 2. kolo (stredne ťažké):\n\n-   Začni mávať ramenami vo vzduchu.\n-   Začni kývať hlavou.\n-   Prestaň mávať ramenami vo vzduchu.\n-   Prestaň kývať hlavou.\n-   Začni triasť kolenami.\n-   Začni mávať ramenami ako vták.\n-   Prestaň triasť kolenami.\n-   Začni kývať hlavou.\n-   Začni pochodovať na mieste.\n-   Prestaň mávať ramenami ako vták.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:**\n\n_Aké typy aktivít spôsobili, že sa ľudia začali mýliť?\nAké postupy sú podľa vás užitočné na to, aby ste dokázali správne nasledovať pokyny?\nPrečo je dôležité samostatne sledovať každú činnosť?_\n\n#### 3. kolo (ťažké)\n\n-   Začni čupieť.\n-   Začni si ťukať na čelo.\n-   Prestaň čupieť.\n-   Prestaň si ťukať na čelo.\n-   Začni skákať.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni tlieskať.\n-   Začni mávať ramenami ako vták.\n-   Prestaň všetko.\n-   Začni čupieť.\n-   Začni skákať.\n-   Prestaň všetko.\n-   Začni si búchať do kolien.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni sa točiť doľava.\n-   Začni sa točiť doprava.\n-   Prestaň sa točiť doľava.\n-   Prestaň sa točiť doprava.\n\n**Diskusia:** _Čo sa stane, keď sú dve činnosti zdanlivo protichodné?_\n\n_Čo treba spraviť, keď dostaneš naraz príkaz tlieskať rukami a mávať ramenami?_\n\n_Ako môžeš skákať, keď čupíš?_\n\n_Čo sa stane, keď si máš naraz búchať do kolien a ťukať na čelo?_\n\n_Čo robili ostatní hráči, keď ste dostali príkaz točiť sa do protichodných smerov?_ \n\n_Čo by sa stalo, ak by ste dostali príkaz točiť sa doľava aj doprava naraz?_\n\nŽiaci by mali chápať, že niektoré činnosti sú protichodné, čo môže viesť k nepredvídateľným výsledkom. Dve protichodné činnosti sa môžu navzájom zrušiť."
         },
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "description": "#### Predpoveď (2 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "progression_name": "Predpoveď"
         },
@@ -21227,7 +21227,7 @@
           "description": "#### 1. kolo (ľahké):\n\n-   Začni pochodovať na mieste.\n-   Prestaň pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň tlieskať.\n-   Začni pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:** _Čo sa stalo, keď ste dostali príkaz tlieskať, ale už ste pochodovali na mieste? Čo sa stane, keď naraz dostanete dva príkazy, aby ste niečo spravili?_\n\n#### 2. kolo (stredne ťažké):\n\n-   Začni mávať ramenami vo vzduchu.\n-   Začni kývať hlavou.\n-   Prestaň mávať ramenami vo vzduchu.\n-   Prestaň kývať hlavou.\n-   Začni triasť kolenami.\n-   Začni mávať ramenami ako vták.\n-   Prestaň triasť kolenami.\n-   Začni kývať hlavou.\n-   Začni pochodovať na mieste.\n-   Prestaň mávať ramenami ako vták.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:**\n\n_Aké typy aktivít spôsobili, že sa ľudia začali mýliť?\nAké postupy sú podľa vás užitočné na to, aby ste dokázali správne nasledovať pokyny?\nPrečo je dôležité samostatne sledovať každú činnosť?_\n\n#### 3. kolo (ťažké)\n\n-   Začni čupieť.\n-   Začni si ťukať na čelo.\n-   Prestaň čupieť.\n-   Prestaň si ťukať na čelo.\n-   Začni skákať.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni tlieskať.\n-   Začni mávať ramenami ako vták.\n-   Prestaň všetko.\n-   Začni čupieť.\n-   Začni skákať.\n-   Prestaň všetko.\n-   Začni si búchať do kolien.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni sa točiť doľava.\n-   Začni sa točiť doprava.\n-   Prestaň sa točiť doľava.\n-   Prestaň sa točiť doprava.\n\n**Diskusia:** _Čo sa stane, keď sú dve činnosti zdanlivo protichodné?_\n\n_Čo treba spraviť, keď dostaneš naraz príkaz tlieskať rukami a mávať ramenami?_\n\n_Ako môžeš skákať, keď čupíš?_\n\n_Čo sa stane, keď si máš naraz búchať do kolien a ťukať na čelo?_\n\n_Čo robili ostatní hráči, keď ste dostali príkaz točiť sa do protichodných smerov?_ \n\n_Čo by sa stalo, ak by ste dostali príkaz točiť sa doľava aj doprava naraz?_\n\nŽiaci by mali chápať, že niektoré činnosti sú protichodné, čo môže viesť k nepredvídateľným výsledkom. Dve protichodné činnosti sa môžu navzájom zrušiť."
         },
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "description": "#### Predpoveď (2 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "progression_name": "Predpoveď"
         },
@@ -23064,7 +23064,7 @@
           ]
         },
         "934516f6-ebfb-4b43-908d-b48ddd2cd306": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A. I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Keď žiaci dospejú do poslednej fázy, nechajte ich stlačiť bielu ikonu Informácie vpravo hore. Zobrazia sa tak vlastnosti, na základe ktorých A.I. Bot prijíma rozhodnutia. V tomto príklade sa A.I. Bot naučil, že pri rozhodovaní je najdôležitejšia farba a najmenej dôležité sú oči.\n\nPožiadajte žiakov, aby si najdôležitejšie a najmenej dôležité vlastnosti zapísali do sprievodcu aktivitou.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diskutujte:** _Ktoré vlastnosti boli podľa A.I. Bota najdôležitejšie? Sú to funkcie, ktoré ste očakávali?_"
         },
         "9c6b41ce-5bd9-49f9-ab4d-7912732b19b1": {
           "description": "**Cieľ diskusie:** Žiaci môžu zistiť, že A.I. Bot považuje niektoré vlastnosti za dôležité, hoci v skutočnosti s ich slovom vôbec nesúvisia. Napríklad si myslia, že ústa ryby sú dôležité, keď sa snažia určiť, či je ryba červená. Žiaci si to môžu overiť tak, že budú hľadať v rybách vzory, ktoré A.I. Bot akceptoval – možno všetky ich vzorové ryby mali náhodou rovnaký typ úst a A.I. Bot to mylne považoval za dôležité."
@@ -26759,7 +26759,7 @@
         },
         "0e7890f7-6b15-4d74-9d06-39410d94914b": {
           "name": "Denník",
-          "description": "**Otázka dňa: Ako môžeme použiť parametre na to, aby sme dali počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
+          "description": "**Otázka dňa: Ako môžeme pomocou parametrov dať počítaču konkrétnejšie pokyny?**\n\n**Spýtajte sa:** Parametre používate na určenie umiestnenia a veľkosti vášho tvaru. Napadajú vás ďalšie situácie, v ktorých by mohli byť parametre užitočné?"
         },
         "5485407f-b2b9-433e-86a4-6da5afa523f5": {
           "description": "**Diskutujte:** Umožnite žiakom, aby sa podelili o svoje nápady.",
@@ -26772,7 +26772,7 @@
         },
         "27e5fe37-7e3b-413e-bb0b-cb4b922db45c": {
           "name": "Vstup-výstup-ukladanie-spracovanie",
-          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíte vstup, výstup, ukladanie a spracovanie v Game Labe?"
+          "description": "**Spýtajte sa:** Na začiatku kurzu sme sa dozvedeli, že vstup, výstup, ukladanie a spracovanie sú spoločné pre všetky počítače. Kde vidíš vstup, výstup, ukladanie a spracovanie v Game Labe?"
         },
         "9e754b3d-83a4-4fb3-bdf5-331c02667465": {
           "description": "\\*\\* Diskutujte:\\*\\* Umožnite žiakom, aby sa podelili o svoje odpovede.",
@@ -26784,7 +26784,7 @@
           "description": "Dnes sa zameriame na ukladanie. Pozrieme sa na premenné, ktoré sú pre počítače veľmi bežným spôsobom ukladania informácií v programe."
         },
         "6bec70d1-36d5-4956-8a4b-64c8af7fd911": {
-          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?**"
+          "description": "**Kľúčová slovná zásoba:** premenná – označenie časti informácie použitej v programe\n\n**Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?**"
         },
         "bf59eb2b-defb-469f-b80f-f6583ba14219": {
           "name": "Programovanie s premennými",
@@ -26820,7 +26820,7 @@
         },
         "ad26b802-3d93-4e28-bf0c-2b04b8127c12": {
           "name": "Reflexia",
-          "description": "\\*\\*Otázka dňa: Ako môžeme používať premenné na ukladanie informácií v našich programoch?"
+          "description": "\\*\\*Otázka dňa: Ako môžeme pomocou premenných ukladať informácie vo svojich programoch?"
         },
         "e13128cb-3a56-488b-86db-0a2edd7aff6d": {
           "description": "**Spýtajte sa:** Položte žiakom nasledujúce otázky:",
@@ -27388,7 +27388,7 @@
           "description": "**Otázka dňa: Ako môžu naše programy reagovať na vstupy od používateľa?**"
         },
         "55c35c06-acaf-41fa-b001-47448467e841": {
-          "name": "Stlačenie kláves ako vstup",
+          "name": "Vstup z klávesnice",
           "description": "**Premostenie:** Požiadajte žiakov, aby si otvorili Code Studio"
         },
         "1cc6a39c-ad40-4484-941a-cfedaee5e669": {
@@ -27690,7 +27690,7 @@
           "description": "**Opakovanie**\n\nPožiadajte žiakov, aby si spomenuli na všetky veci, ktoré sa doteraz naučili robiť v rámci tohto tematického celku, a svoje odpovede ukázali triede.  Toto je vhodný čas na zopakovanie všetkých myšlienok, ktoré boli pre žiakov náročné."
         },
         "9bb424bb-78ee-4289-b15c-4508a240fa47": {
-          "description": "Teraz, keď ste sa naučili zisťovať interakcie medzi sprajtmi, môžete začať vytvárať zaujímavejšie hry.  Dnes sa pozrieme na to, ako môžete použiť to, čo ste sa naučili, na vytvorenie plošinovkovej hry."
+          "description": "Teraz, keď ste sa naučili zisťovať interakcie medzi sprajtmi, môžete začať vytvárať zaujímavejšie hry.  Dnes sa pozrieme na to, ako môžete použiť to, čo ste sa naučili, na vytvorenie plošinovky."
         },
         "325ef25b-590a-4aca-a61c-c1191abbb6bf": {
           "description": "**Otázka dňa: Ako dokážeme nové typy pohybu sprajtov a detekciu kolízií využiť na vytvorenie hry?**"
@@ -27699,7 +27699,7 @@
           "description": "**Rozdajte:** (nepovinné) rozdajte kópie sprievodcu aktivitou. Žiaci môžu použiť tento hárok na naplánovanie plošinovky, ktorú vytvoria na konci tejto lekcie, ale plánovať môžu aj na čistý papier.\n\n**Premostenie:** Požiadajte žiakov, aby si otvorili Code Studio."
         },
         "0525516c-cd72-4700-9c7b-36644137ab93": {
-          "progression_name": "Úvod do side-scrollerov"
+          "progression_name": "Úvod do plošinoviek"
         },
         "c62c9fee-1e51-4d9d-b221-915d73af2cd2": {
           "progression_name": "Nakresli si pozadie"

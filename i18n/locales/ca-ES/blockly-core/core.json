@@ -290,7 +290,7 @@
     "PROCEDURES_CALLRETURN_TOOLTIP": "Executa la funció '%1' definida per l'usuari i utilitza el resultat.",
     "PROCEDURES_CREATE_DO": "Crea '%1'",
     "PROCEDURES_DEFNORETURN_HELPURL": "http://en.wikipedia.org/wiki/Procedure_%28computer_science%29",
-    "PROCEDURES_DEFNORETURN_PROCEDURE": "fes alguna cosa",
+    "PROCEDURES_DEFNORETURN_PROCEDURE": "fer alguna cosa",
     "PROCEDURES_DEFNORETURN_TITLE": "a",
     "PROCEDURES_DEFNORETURN_TOOLTIP": "Crea una funció sense dades de sortida.",
     "PROCEDURES_DEFRETURN_HELPURL": "http://en.wikipedia.org/wiki/Procedure_%28computer_science%29",

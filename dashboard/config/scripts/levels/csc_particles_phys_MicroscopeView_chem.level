@@ -23,7 +23,7 @@
     "instructions_important": "false",
     "long_instructions": "## Look At Particles Before The Chemical Change\r\n\r\n**Now you'll set up the experiment to look *inside* the microscope and see the particles *BEFORE* the chemical change!**\r\n- Add a new `when lemon juice touches microscope` event.\r\n- Add the new `MicroscopeSetupBEFORE` block to this event.\r\n  - *This is another really cool block that does **so much** for you! Click the \"edit\" on the `MicroscopeSetupBEFORE` block and take a look at all the programming this block is doing for you!*\r\n- Add a `set lemon juice particle behavior` block under the `MicroscopeSetupBEFORE` block and make sure to select has the correct state of matter for lemon juice.\r\n- Press \"Run\" and test your code by dragging the lemon juice over to the microscope.\r\n\r\n",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
@@ -48,20 +48,57 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "standalone_app_name": "spritelab"
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-11-04T03:28:17.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-11-04T03:28:17.129+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_MicroscopeView\\\"\"],\"cloned_from\":\"csc_particles_phys_MicroscopeView\"},{\"changed_at\":\"2022-11-04 16:32:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:33:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:37:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:38:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:39:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:40:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:40:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:50:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 17:48:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:46:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:46:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-09 19:29:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-04T03:28:17.129+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_MicroscopeView\\\"\"],\"cloned_from\":\"csc_particles_phys_MicroscopeView\"},{\"changed_at\":\"2022-11-04 16:32:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:33:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:37:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:38:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:39:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:40:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:40:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:50:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 17:48:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:46:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:46:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-09 19:29:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-12-01 22:14:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:02:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" deletable="false" editable="false" can_disconnect_from_parent="false">
+              <mutation name="LabSetup"/>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" deletable="false">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"baking_soda"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"lemon_juice"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_setAnimation" deletable="false" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"beaker_2"</field>
+              <value name="THIS">
+                <block type="gamelab_allSpritesWithAnimation" deletable="false" can_disconnect_from_parent="false">
+                  <field name="ANIMATION">"lemon_juice"</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_callnoreturn" editable="false" uservisible="false">
+          <mutation name="LabSetup"/>
+        </block>
+        <block type="procedures_callnoreturn" uservisible="false">
+          <mutation name="MicroscopeSetupBEFORE"/>
+        </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
           <field name="NAME" id="MicroscopeSetupBEFORE">MicroscopeSetupBEFORE</field>
@@ -104,7 +141,7 @@
                               </value>
                               <next>
                                 <block type="gamelab_makeNewSpriteAnon">
-                                  <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                                  <field name="ANIMATION_NAME">"sciencetist_3b"</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
                                       <field name="LOCATION">{"x":89,"y":295}</field>
@@ -123,39 +160,6 @@
             </block>
           </statement>
         </block>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="procedures_callnoreturn" editable="false">
-              <mutation name="LabSetup"/>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"baking_soda"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"lemon_juice"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_setAnimation">
-              <field name="ANIMATION">"beaker_2"</field>
-              <value name="THIS">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"lemon_juice"</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_callnoreturn" editable="false" uservisible="false">
-          <mutation name="LabSetup"/>
-        </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
           <field name="NAME" id="LabSetup">LabSetup</field>
@@ -166,7 +170,7 @@
               </value>
               <next>
                 <block type="gamelab_makeNewSpriteAnon" movable="false">
-                  <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                  <field name="ANIMATION_NAME">"sciencetist_3b"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" movable="false">
                       <field name="LOCATION">{"x":346,"y":257}</field>
@@ -252,9 +256,6 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_callnoreturn" uservisible="false">
-          <mutation name="MicroscopeSetupBEFORE"/>
-        </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
           <field name="NAME" id="myFunction">myFunction</field>
@@ -286,7 +287,7 @@
                   </value>
                   <next>
                     <block type="gamelab_makeNumSprites" uservisible="false">
-                      <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                      <field name="ANIMATION_NAME">"sciencetist_3b"</field>
                       <value name="NUM">
                         <block type="math_number" uservisible="false">
                           <field name="NUM">30</field>

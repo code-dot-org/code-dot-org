@@ -15,9 +15,9 @@ public Pixel maxRed(Pixel[][] pixels) {
    int max = 0;
    Pixel p = null;
 
-   for (int row = 0; row < pixels.length; row++) {
-      for (int col = 0; col < pixels[0].length; col++) {
-         if (pixels[row][col].getRed() > max) {
+   for (int r = 0; r < pixels.length; r++) {
+      for (int c = 0; c < pixels[0].length; c++) {
+         if (pixels[r][c].getRed() > max) {
             /*MISSING CODE*/
          }
       }

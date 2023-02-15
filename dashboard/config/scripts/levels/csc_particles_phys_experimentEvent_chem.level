@@ -23,7 +23,7 @@
     "instructions_important": "false",
     "long_instructions": "## Experiment Event\r\n\r\n**The chemical change will happen when the baking soda interacts with the lemon juice. Let's make that happen!**\r\n- Bring a new `when sprite touches sprite` event block into the workspace.\r\n- Add a `change costume` block under your new event block to change the lemon juice costume to the new bubbly substance.\r\n- Test your code. Click run and drag the baking soda to the lemon juice.\r\n\r\n",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
@@ -48,14 +48,15 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "standalone_app_name": "spritelab"
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-11-04T03:28:16.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-11-04T03:28:16.857+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_experimentEvent\\\"\"],\"cloned_from\":\"csc_particles_phys_experimentEvent\"},{\"changed_at\":\"2022-11-04 16:26:55 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:27:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 00:42:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:49:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-09 19:28:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-04T03:28:16.857+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_experimentEvent\\\"\"],\"cloned_from\":\"csc_particles_phys_experimentEvent\"},{\"changed_at\":\"2022-11-04 16:26:55 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-04 16:27:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 00:42:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 19:49:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-09 19:28:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-12-01 22:13:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:02:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -64,10 +65,13 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn" editable="false">
+            <block type="procedures_callnoreturn" deletable="false" editable="false" can_disconnect_from_parent="false">
               <mutation name="LabSetup"/>
             </block>
           </next>
+        </block>
+        <block type="procedures_callnoreturn" editable="false" uservisible="false">
+          <mutation name="LabSetup"/>
         </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
@@ -79,7 +83,7 @@
               </value>
               <next>
                 <block type="gamelab_makeNewSpriteAnon" movable="false">
-                  <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                  <field name="ANIMATION_NAME">"sciencetist_3b"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker" movable="false">
                       <field name="LOCATION">{"x":346,"y":257}</field>
@@ -165,9 +169,6 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_callnoreturn" editable="false" uservisible="false">
-          <mutation name="LabSetup"/>
-        </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
           <field name="NAME" id="myFunction">myFunction</field>
@@ -199,7 +200,7 @@
                   </value>
                   <next>
                     <block type="gamelab_makeNumSprites" uservisible="false">
-                      <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                      <field name="ANIMATION_NAME">"sciencetist_3b"</field>
                       <value name="NUM">
                         <block type="math_number" uservisible="false">
                           <field name="NUM">30</field>

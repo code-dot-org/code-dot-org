@@ -1,7 +1,57 @@
 mk:
   data:
     variable_names:
+      "???": "???"
+      Actor_1_Counter: Актер_1_Бројач
+      Actor_2_Counter: Актер_2_Бројач
+      Blue: Сина
+      Green: Зелена
+      Red: Црвена
+      adjective: придавка
+      age: возраст
+      animal1score: животни1резултат
+      animal1speed: животни1брзина
+      animal2score: животни2резултат
+      animal2speed: животни2брзина
+      answer: Одговори
+      armlength: должина на оружје
+      binary: бинарни
       birds: Птици
+      bit: малку
+      blue1: сина1
+      blue2: сина2
+      body-part: тело-дел
+      bodylength: должина на телото
+      buttonHeight: КопчеВисина
+      buttonMargin: КопчеМаргина
+      buttonWidth: КопчетоШирина
+      cat_score: cat_score
+      cat_speed: cat_speed
+      cats: мачки
+      centerToPadLeft: ЦентарзаПДлево
+      choice: избор
+      circ: цирк
+      codeName: Кдовото име
+      color: Боја
+      controllerHeight: КонтролерВисина
+      controllerWidth: КонтролорШирина
+      counter2: контра2
+      currentActor: струјаTactor
+      direction: Насока
+      dog_score: куче_резултат
+      dog_speed: куче_брзина
+      dogs: кучиња
+      dragons: змејови
+      enemy_speed: непријател_брзина
+      energy: енергија
+      firstName: ПрвоИме
+      footlength: должина на нозете
+      gather: собере
+      green1: зелена1
+      green2: зелена2
+      guess: погоди
+      i: i
+      legangle: legangle
       planet: планета
       random: случајно
       repeat: повтори

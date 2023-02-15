@@ -4,6 +4,6 @@
   "course_offering_key": "csa",
   "parent_reference_guide_key": "classes-and-objects",
   "display_name": "Instantiating Objects",
-  "content": "An object is instantiated using the following syntax:\n\n  ```\n  ClassName nameOfObject = new ClassName();\n  ```\n\nBe sure to replace `ClassName`(#e7e8ea) with the name of the class and `nameOfObject`(#e7e8ea) with the name of the object.",
+  "content": "## What is an object?\n\nAn **object** is an instance of a class.\n\nObjects typically have **attributes**, which are characteristics of the object. Attributes are declared as instance variables in the class and represent the **state** of the object.\n\nObjects also typically have **behaviors**, which are actions that an object can perform. Behaviors are written as **methods** in the class.\n\n## How do I create an object?\n\nAn object is instantiated using the following syntax:\n\n  ```\n  ClassName nameOfObject = new ClassName();\n  ```\n\nBe sure to replace `ClassName`(#e7e8ea) with the name of the class and `nameOfObject`(#e7e8ea) with the name of the object.\n\nFor example, to create an instance of a `Student`(#e7e8ea) class, we would write:\n\n```\nStudent amy = new Student();\n```\n\nIn this example, `amy`(#e7e8ea) is an **instance** of the class `Student`(#e7e8ea).",
   "position": 2
 }

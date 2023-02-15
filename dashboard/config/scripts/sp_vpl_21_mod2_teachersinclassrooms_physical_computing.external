@@ -3,13 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Navigating lesson plans and resources  
+# Navigating Lesson Plans and Resources  
 
-#### Now that you know how to navigate the Code.org learning platform, we are going to dig deeper into the resources available to support you in teaching Code.org curricula. 
+##### Now that you know how to navigate the Code.org learning platform, we are going to dig deeper into the resources available to support you in teaching Code.org curricula. 
 
 ## You will learn how to:
 
 * ##### Locate and use course lesson plans and teacher resources 
+
+##### **Suggested time:** 20 minutes
 
 ## Let's keep learning! 
 

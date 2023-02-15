@@ -153,6 +153,10 @@ se:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -529,6 +533,10 @@ se:
   signup_registration_closed: And every year in December, your class can join millions
     of students around the world celebrating Computer Science Education Week with
     the Hour of Code. We'll open registration for the annual celebration in October.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organize an Hour of Code during %{campaign_date}, and register it
     here.
   signup_name_label: Your name
@@ -814,11 +822,20 @@ se:
     Hour of Code, especially because we don't require students to log in or register.
     As a result, we both over-count and under-count participants at the same time.
     Read all the details <a href='%{codeorg_url}/loc'>here</a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: 'We do not count unique student IDs perfectly when
+    tracking participation in the Hour of Code. Why? Partly because we don''t want
+    the friction of prompting to “login / register” before a student or classroom
+    tries learning for the first time, and partly because there are may activities
+    we cannot track online. We do take certain steps to reduce double-counting, but
+    without a login prompt, this can''t work perfectly. At the same time, there are
+    MANY student activities in the Hour of Code that aren''t tracked at all. For example:
+    (1) students who use a mobile/tablet app to try the Hour of Code are typically
+    not counted (2) students who share a screen for pair-programming or group-programming
+    may be counted as one (3) students trying an unplugged classroom activity cannot
+    be counted online (4) teachers who create their own Hour of Code activities. As
+    a result, there is some under-counting and some double-counting, and so we do
+    not view the Hour of Code tracker to be an exact measure of usage. It is certainly
+    directionally correct, and shows that many tens of millions of students have participated.'
   hoc_faq_one_hour_q: How much can one learn in an hour?
   hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
     an expert computer scientist in one hour. One hour is only enough to learn that
@@ -1012,6 +1029,10 @@ se:
   footer_menu_terms: Terms
   footer_menu_privacy: Privacy Policy
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: Hour of Code Activities
   learn_banner_blurb: Try a one-hour tutorial designed for all ages in over 45 languages.  Join
     millions of students and teachers in over 180 countries starting with an Hour
@@ -7204,7 +7225,8 @@ se:
   tutorial_irobotphone_string_platforms: All modern browsers
   tutorial_codeguppydraw_string_platforms: All modern browsers
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_meeempathy_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -9276,7 +9298,8 @@ se:
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: All modern browsers
   tutorial_rpisensehat_string_platforms: All modern browsers
-  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_mee_string_platforms: All modern browsers, Mac, Windows, Chromebook, iPhone,
+    iPad, Android phone, Android tablet
   tutorial_kuborobo_string_platforms: Unplugged
   tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
     iPads, modern Android phones, iPhones
@@ -9783,10 +9806,12 @@ se:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10114,8 +10139,8 @@ se:
   tutorial_microsoftforest_string_platforms: All modern browsers
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: All modern browsers
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: All modern browsers, Mac, Windows,
+    Chromebook, iPhone, iPad, Android phone, Android tablet
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: All modern browsers, Screen reader
   tutorial_codeartportrait_string_platforms: All modern browsers, Android tablet,
@@ -10505,6 +10530,10 @@ se:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -10846,6 +10875,18 @@ se:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Grades 2-5
   tutorial_rpledfirefly_string_detail_grades: Grades 6-8
   tutorial_rpcharting_string_detail_grades: Grades 9+
@@ -10938,6 +10979,10 @@ se:
   tutorial_nasapackage_string_detail_grades: Grades 6-8
   tutorial_nasalunar_string_detail_grades: Grades 6-8
   tutorial_meeestate_string_detail_grades: Grades 2+
+  tutorial_imagipixelart_string_detail_grades: Grades 2-8
+  tutorial_kcjhealth_string_detail_grades: Grades 6+
+  tutorial_msftwakanda_string_detail_grades: Grades 6+
+  tutorial_nafbrand_string_detail_grades: Grades 9+
   tutorial_rpccw_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_rpledfirefly_string_platforms: All modern browsers
@@ -11055,8 +11100,14 @@ se:
   tutorial_nasaorbit_string_platforms: All modern browsers
   tutorial_nasapackage_string_platforms: All modern browsers
   tutorial_nasalunar_string_platforms: All modern browsers, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: All modern browsers
+  tutorial_msftwakanda_string_platforms: All modern browsers
+  tutorial_nafbrand_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11150,6 +11201,10 @@ se:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Blocks
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11246,29 +11301,10 @@ se:
   tutorial_nasapackage_string_detail_programming_languages: Blocks
   tutorial_nasalunar_string_detail_programming_languages: Blocks, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Blocks, Python
-  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
-    animations in this 1 hour crash course!
-  tutorial_imagipixelart_name: Code your own pixel art!
-  tutorial_imagipixelart_string_detail_grades: Grades 2-8
-  tutorial_imagipixelart_string_detail_platforms: ''
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
-    Windows phone, Android phone, iPhone
-  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
-    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
-  tutorial_kcjhealth_name: The Health & Well-Being Challenge
-  tutorial_kcjhealth_string_detail_grades: Grades 6+
-  tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
-  tutorial_kcjhealth_string_platforms: All modern browsers
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
-    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
-    ''Black Panther: Wakanda Forever''!'
-  tutorial_msftwakanda_name: Long Live Wakanda
-  tutorial_msftwakanda_string_detail_grades: Grades 6+
-  tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
-  tutorial_msftwakanda_string_platforms: All modern browsers
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: Blocks
+  tutorial_msftwakanda_string_detail_programming_languages: Blocks
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
@@ -11325,6 +11361,13 @@ se:
   all: All
   dont_know: I don't know
   language_label: Language
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani
