@@ -141,9 +141,4 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     submission = build :census_submission, how_many_10_hours: "NONE", how_many_20_hours: "ALL"
     assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school: nil, is_k8_school: nil)
   end
-
-  def validate_explanation(explanation)
-    assert_not_nil explanation
-    assert_equal 9, explanation.length, explanation
-  end
 end
