@@ -108,9 +108,11 @@ class YourSchool extends Component {
             </h1>
             <h3 style={styles.description}>
               Find your school on the map to see if computer science was offered
-              during the 2021-2022 school year. Then{' '}
+              during the {this.props.currentCensusYear - 1}-
+              {this.props.currentCensusYear} school year. Then{' '}
               <a href="#form">fill out the survey below</a> to make sure your
-              school is accurately represented for 2022-2023.
+              school is accurately represented for{' '}
+              {this.props.currentCensusYear}-{this.props.currentCensusYear + 1}.
             </h3>
             <SchoolAutocompleteDropdown
               value={
