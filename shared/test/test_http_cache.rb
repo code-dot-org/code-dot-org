@@ -14,7 +14,7 @@ module Cdo
 
       include Rack::Test::Methods
       def build_rack_mock_session
-        @session ||= Rack::MockSession.new(app, 'localhost.code.org')
+        @build_rack_mock_session ||= Rack::MockSession.new(app, 'localhost.code.org')
       end
 
       def mock_app
