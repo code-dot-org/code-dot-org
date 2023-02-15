@@ -176,6 +176,7 @@
   "assignToSection": "Assign to section",
   "assignToMultipleSections": "Assign to sections",
   "assignUnit": "Assign Unit",
+  "assignSuccess": "Success! Assignment updated!",
   "assignedToNewerVersion": "Your teacher assigned you to a newer version of this course.",
   "assignmentSelectorCourse": "Select course",
   "assignmentSelectorVersion": "Version",
@@ -312,6 +313,8 @@
   "chooseColumn": "Choose a column from \"{table}\"",
   "choosePrefix": "Choose...",
   "chooseSection": "Choose your section",
+  "chooseSectionsPrompt": "Which section(s) do you want to assign \"{assignmentName}\" to?",
+  "chooseSectionsDirections": "When you assign a curriculum to a section, that curriculum will be the first thing students see upon signing in. Changing the assigned curriculum will never affect students progress on other curriculum.",
   "chooseTable": "Choose a table",
   "chromebook": "Chromebook",
   "className": "Class Name",
@@ -350,6 +353,7 @@
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "completionStatus": "Completion Status",
   "concept": "Concept",
+  "confirmAssignment": "Confirm section assignments",
   "confirmChanges": "Confirm Changes",
   "confirmClearTable": "Do you really want to delete all data from this table? You cannot undo this action.",
   "confirmDeleteExplanation": "Deleting this file will remove it everywhere in your project",
@@ -2363,9 +2367,6 @@
   "yourSchoolTeacherButton": "Start teaching",
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
   "yourSchoolTellUs": "Tell us about your school",
-  "zipOrCountry": "ZIP code or country",
-  "chooseSectionsPrompt": "Which section(s) do you want to assign \"{assignmentName}\" to?",
-  "chooseSectionsDirections": "When you assign a curriculum to a section, that curriculum will be the first thing students see upon signing in. Changing the assigned curriculum will never affect students progress on other curriculum.",
   "yourSectionsList": "Your Sections",
-  "confirmAssignment": "Confirm section assignments"
+  "zipOrCountry": "ZIP code or country"
 }

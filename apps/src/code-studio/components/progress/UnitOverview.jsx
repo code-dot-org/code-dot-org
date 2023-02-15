@@ -59,6 +59,7 @@ class UnitOverview extends React.Component {
     completedLessonNumber: PropTypes.string,
     isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
+    participantAudience: PropTypes.string,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -120,7 +121,8 @@ class UnitOverview extends React.Component {
       courseOfferingId,
       courseVersionId,
       isProfessionalLearningCourse,
-      publishedState
+      publishedState,
+      participantAudience
     } = this.props;
 
     const displayRedirectDialog =
@@ -193,6 +195,7 @@ class UnitOverview extends React.Component {
             isProfessionalLearningCourse={isProfessionalLearningCourse}
             courseLink={this.props.courseLink}
             publishedState={publishedState}
+            participantAudience={participantAudience}
           />
         </div>
         <ProgressTable minimal={false} />

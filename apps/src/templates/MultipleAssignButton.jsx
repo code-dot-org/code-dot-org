@@ -9,13 +9,8 @@ import {
   unassignSection,
   sectionsForDropdown
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-// KT added function ^^
-// import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
-import {
-  isScriptHiddenForSection,
-  updateHiddenScript
-} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 class MultipleAssignButton extends React.Component {
@@ -30,6 +25,7 @@ class MultipleAssignButton extends React.Component {
     reassignConfirm: PropTypes.func,
     buttonLocationAnalytics: PropTypes.string,
     isStandAloneUnit: PropTypes.bool,
+    participantAudience: PropTypes.string,
     // Redux
     assignToSection: PropTypes.func.isRequired,
     hiddenLessonState: PropTypes.object,
@@ -51,54 +47,11 @@ class MultipleAssignButton extends React.Component {
     });
   };
 
-  // unhideAndAssign = () => {
-  //   const {
-  //     sectionId,
-  //     courseId,
-  //     courseOfferingId,
-  //     courseVersionId,
-  //     scriptId,
-  //     assignToSection,
-  //     updateHiddenScript,
-  //     testingFunction
-  //   } = this.props;
-  //   updateHiddenScript(sectionId, scriptId, false);
-  //   assignToSection(
-  //     sectionId,
-  //     courseId,
-  //     courseOfferingId,
-  //     courseVersionId,
-  //     scriptId
-  //   );
-  //   testingFunction(
-  //     sectionId,
-  //     courseId,
-  //     courseOfferingId,
-  //     courseVersionId,
-  //     scriptId
-  //   );
-  // };
-
   handleClick = () => {
-    const {scriptId, sectionId, hiddenLessonState} = this.props;
-    const isHiddenFromSection =
-      sectionId &&
-      scriptId &&
-      hiddenLessonState &&
-      isScriptHiddenForSection(hiddenLessonState, sectionId, scriptId);
-    if (isHiddenFromSection) {
-      // this creates a popup
-      this.setState({
-        confirmationDialogOpen: true
-      });
-    } else {
-      this.setState({
-        assignmentChoiceDialogOpen: true
-      });
-      console.log(
-        'assignmentChoiceDialog ' + this.state.assignmentChoiceDialogOpen
-      );
-    }
+    this.setState({
+      assignmentChoiceDialogOpen: true
+    });
+    console.log('Handler activated!');
   };
 
   render() {
@@ -112,8 +65,10 @@ class MultipleAssignButton extends React.Component {
       buttonLocationAnalytics,
       isStandAloneUnit,
       isRtl,
-      sectionsForDropdown
+      sectionsForDropdown,
+      participantAudience
     } = this.props;
+    console.log('MultipleAssignButtonRendered');
 
     // Adjust styles if locale is RTL
     const buttonMarginStyle = isRtl
@@ -144,6 +99,7 @@ class MultipleAssignButton extends React.Component {
             reassignConfirm={this.props.reassignConfirm}
             buttonLocationAnalytics={buttonLocationAnalytics}
             isStandAloneUnit={isStandAloneUnit}
+            participantAudience={participantAudience}
           />
         )}
       </div>
@@ -164,7 +120,7 @@ const styles = {
   }
 };
 
-export const UnconnectedAssignButton = MultipleAssignButton;
+export const UnconnectedMultipleAssignButton = MultipleAssignButton;
 
 export default connect(
   (state, ownProps) => ({

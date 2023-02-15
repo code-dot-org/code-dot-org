@@ -18,6 +18,7 @@ class SectionAssigner extends Component {
     forceReload: PropTypes.bool,
     buttonLocationAnalytics: PropTypes.string,
     isStandAloneUnit: PropTypes.bool,
+    participantAudience: PropTypes.string,
     // Redux provided
     selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
@@ -56,7 +57,8 @@ class SectionAssigner extends Component {
       forceReload,
       assignmentName,
       buttonLocationAnalytics,
-      isStandAloneUnit
+      isStandAloneUnit,
+      participantAudience
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -67,7 +69,7 @@ class SectionAssigner extends Component {
         <div style={styles.label}>
           <div>{i18n.currentSection()}</div>
           {this.state.confirmationMessageOpen && (
-            <span>Success! Assignment updated!</span>
+            <span style={styles.confirmText}>{i18n.assignSuccess()}</span>
           )}
         </div>
         <div style={styles.content}>
@@ -92,6 +94,7 @@ class SectionAssigner extends Component {
               reassignConfirm={this.onReassignConfirm}
               buttonLocationAnalytics={buttonLocationAnalytics}
               isStandAloneUnit={isStandAloneUnit}
+              participantAudience={participantAudience}
             />
           )}
         </div>
@@ -116,6 +119,10 @@ const styles = {
     paddingBottom: 10,
     display: 'flex',
     justifyContent: 'space-between'
+  },
+  confirmText: {
+    fontSize: 12,
+    fontFamily: '"Gotham 4r", sans-serif'
   }
 };
 

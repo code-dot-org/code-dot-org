@@ -13,11 +13,7 @@ import {
   unassignSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
-// import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-/**
- * Confirmation dialog for when assigning a script or course from the course or script overview page
- */
 class MultipleSectionsAssigner extends Component {
   static propTypes = {
     courseId: PropTypes.number,
@@ -30,15 +26,13 @@ class MultipleSectionsAssigner extends Component {
     reassignConfirm: PropTypes.func,
     buttonLocationAnalytics: PropTypes.string,
     isStandAloneUnit: PropTypes.bool,
+    participantAudience: PropTypes.string,
     // Redux
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     unassignSection: PropTypes.func.isRequired,
     assignToSection: PropTypes.func.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     testingFunction: PropTypes.func.isRequired,
-
-    // Redux and from Section Assigner
-    // selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number
   };
 
@@ -80,9 +74,6 @@ class MultipleSectionsAssigner extends Component {
     };
   }
 
-  // create a state of the list of all the sections currently assigned the course.
-  // pass this as a prop to the Teacher Section Option
-
   chooseMenuItem = section => {
     console.log(section + 'was clicked');
   };
@@ -92,7 +83,6 @@ class MultipleSectionsAssigner extends Component {
       s => s.code === currentSection.code
     );
     if (isUnchecked) {
-      // Remove it from the list
       this.setState(state => {
         let newList = state.currentSectionsAssigned.filter(
           s => s.code !== currentSection.code
@@ -116,7 +106,7 @@ class MultipleSectionsAssigner extends Component {
       scriptId,
       assignToSection
     } = this.props;
-    // This will assign any courses that need to be assigned
+    // Assign any courses that need to be assigned
     for (let i = 0; i < this.state.currentSectionsAssigned.length; i++) {
       const needsToBeAssigned = !this.state.initialSectionsAssigned.some(
         s => s.code === this.state.currentSectionsAssigned[i].code
@@ -133,12 +123,11 @@ class MultipleSectionsAssigner extends Component {
           );
         } else {
           this.unhideAndAssignUnit(this.state.currentSectionsAssigned[i]);
-          this.props.reassignConfirm();
         }
       }
     }
 
-    // Checks to see if any sections need to be removed from being assigned.
+    // If any sections need to be removed from being assigned, remove them
     for (let i = 0; i < this.state.initialSectionsAssigned.length; i++) {
       const isSectionToBeRemoved = !this.state.currentSectionsAssigned.some(
         s => s.code === this.state.initialSectionsAssigned[i].code
@@ -147,18 +136,13 @@ class MultipleSectionsAssigner extends Component {
       if (isSectionToBeRemoved) {
         // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
         // note, I don't know of a better way to check if it is on a course landing page
-        if (
-          this.props.buttonLocationAnalytics === 'course-overview-top' ||
-          this.props.isStandAloneUnit
-        ) {
-          this.props.unassignSection(
-            this.state.initialSectionsAssigned[i].id,
-            ''
-          );
-        } else {
-          // if on UNIT landing page, remove unit assignment but keep course assignment
-          this.assignCourseWithoutUnit(this.state.initialSectionsAssigned[i]);
-        }
+        this.props.buttonLocationAnalytics === 'course-overview-top' ||
+        this.props.isStandAloneUnit
+          ? this.props.unassignSection(
+              this.state.initialSectionsAssigned[i].id,
+              ''
+            )
+          : this.assignCourseWithoutUnit(this.state.initialSectionsAssigned[i]);
       }
     }
     // close dialogue
@@ -195,6 +179,7 @@ class MultipleSectionsAssigner extends Component {
   };
 
   // this is the same as the above function but just has null as the scriptId
+  // not sure if this should be its own function or not
   assignCourseWithoutUnit = section => {
     const {
       courseId,
@@ -220,6 +205,10 @@ class MultipleSectionsAssigner extends Component {
     );
   };
 
+  isAssignableToSection = sectionParticipantType => {
+    return sectionParticipantType === this.props.participantAudience;
+  };
+
   selectAllHandler = () => {
     for (let i = 0; i < this.props.sections.length; i++) {
       // if the section is NOT in currentSections assigned, assign it
@@ -238,7 +227,6 @@ class MultipleSectionsAssigner extends Component {
 
   render() {
     const {sections, assignmentName, onClose} = this.props;
-    console.log('script id is ' + this.props.scriptId);
 
     return (
       <BaseDialog isOpen={true} handleClose={onClose}>
@@ -252,24 +240,28 @@ class MultipleSectionsAssigner extends Component {
         <hr />
         <div style={styles.grid}>
           {sections &&
-            sections.map(section => (
-              <TeacherSectionOption
-                key={section.id}
-                section={section}
-                isChecked={
-                  !!this.state.currentSectionsAssigned.some(
-                    s => s.code === section.code
-                  )
-                }
-                assignedSections={this.state.currentSectionsAssigned}
-                onChange={() => this.handleChangedCheckbox(section)} // this fucntion should update the state of multiple secion assigner
-                editedValue={section.isAssigned}
-              />
-            ))}
+            sections.map(
+              section =>
+                this.isAssignableToSection(section.participantType) && (
+                  <TeacherSectionOption
+                    key={section.id}
+                    section={section}
+                    isChecked={
+                      !!this.state.currentSectionsAssigned.some(
+                        s => s.code === section.code
+                      )
+                    }
+                    assignedSections={this.state.currentSectionsAssigned}
+                    onChange={() => this.handleChangedCheckbox(section)} // this fucntion should update the state of multiple secion assigner
+                    editedValue={section.isAssigned}
+                  />
+                )
+            )}
         </div>
         <a
           style={styles.selectAllSectionsLabel}
           onClick={this.selectAllHandler}
+          className="select-all-sections"
         >
           Select All
         </a>

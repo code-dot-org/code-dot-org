@@ -48,6 +48,7 @@ class UnitOverviewTopRow extends React.Component {
     isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     courseLink: PropTypes.string,
+    participantAudience: PropTypes.string,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -139,7 +140,8 @@ class UnitOverviewTopRow extends React.Component {
       courseOfferingId,
       courseVersionId,
       isProfessionalLearningCourse,
-      publishedState
+      publishedState,
+      participantAudience
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -261,6 +263,7 @@ class UnitOverviewTopRow extends React.Component {
               forceReload={true}
               buttonLocationAnalytics={'unit-overview-top'}
               isStandAloneUnit={this.props.courseLink === null}
+              participantAudience={participantAudience}
             />
             {unitAllowsHiddenLessons && (
               <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />

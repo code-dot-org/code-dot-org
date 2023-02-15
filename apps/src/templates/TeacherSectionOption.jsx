@@ -8,8 +8,7 @@ export default class TeacherSectionOption extends Component {
     section: sectionForDropdownShape,
     onChange: PropTypes.func.isRequired,
     isChecked: PropTypes.bool,
-    assignedSections: PropTypes.arrayOf(sectionForDropdownShape),
-    checked: PropTypes.bool
+    assignedSections: PropTypes.arrayOf(sectionForDropdownShape)
   };
 
   constructor(props) {
@@ -18,8 +17,6 @@ export default class TeacherSectionOption extends Component {
     this.state = {
       updatedAssignedSections: this.props.assignedSections
     };
-
-    console.log(this.state.updatedAssignedSections);
   }
 
   renderCheckbox = () => {
