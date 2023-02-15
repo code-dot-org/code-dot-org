@@ -11,6 +11,11 @@ import {FIELD_SOUNDS_NAME} from '../blockly/constants';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
+/**
+ * An analytics reporter specifically used for the Music Lab prototype, which logs analytics
+ * to Amplitude. For the more general Amplitude Analytics Reporter used across the application
+ * outside of Music Lab, check {@link apps/src/lib/util/AnalyticsReporter}.
+ */
 export default class AnalyticsReporter {
   constructor() {
     this.sessionInProgress = false;
