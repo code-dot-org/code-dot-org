@@ -1312,10 +1312,10 @@
   resolved "https://registry.yarnpkg.com/@blockly/keyboard-navigation/-/keyboard-navigation-0.3.6.tgz#e1575f1328b0652cda92139b284be124be1e7368"
   integrity sha512-Bq30R9XSAMmY1w2y16xHV1Of/myCyAUkpICj3k+nENggBmkLeZeqIy4oTN26Lb9hKveKhS7HdYycD+mS+x+v5Q==
 
-"@blockly/plugin-cross-tab-copy-paste@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@blockly/plugin-cross-tab-copy-paste/-/plugin-cross-tab-copy-paste-2.0.2.tgz#f003d732f2f18b3f1e5ed0b9b7fd67e6e2835acc"
-  integrity sha512-QPO5unlkoDai+lWq3yDljvFob31ThRSyoQ8bp0D1FO+G/eorpKpox4JhtzFs4+QCVrBL7C/BqSayfJg/XTFKPg==
+"@blockly/plugin-cross-tab-copy-paste@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@blockly/plugin-cross-tab-copy-paste/-/plugin-cross-tab-copy-paste-2.0.7.tgz#2668385d59f637a204fd48a73dcd442596e0d434"
+  integrity sha512-1vQmdV+0Z61jCebz3tqV+vA2lsyaOZBq5s/bZtbnBr9/aCm3wSmKuHWA1aKKkdRveeOffPqQGA1KHT3r6QfmVQ==
 
 "@blockly/plugin-scroll-options@~3.0.3":
   version "3.0.3"
