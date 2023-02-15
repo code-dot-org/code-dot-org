@@ -24,6 +24,7 @@ import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
+import CdoHighContrastTheme from './themes/cdoHighContrast';
 import MusicLabTheme from './themes/musicLabDark';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
@@ -285,6 +286,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.themes = {
     modern: CdoTheme,
     dark: CdoDarkTheme,
+    highContrast: CdoHighContrastTheme,
     music: MusicLabTheme
   };
   blocklyWrapper.JavaScript = javascriptGenerator;

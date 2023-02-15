@@ -8,6 +8,7 @@ const disabled = 'disabled';
 const hidden = 'hidden';
 const modern = 'modern';
 const dark = 'dark';
+const highContrast = 'highContrast';
 
 /**
  * Adds a copy command to the block context menu. After switching to v7,
@@ -275,6 +276,38 @@ const registerDarkTheme = function() {
   GoogleBlockly.ContextMenuRegistry.registry.register(darkThemeOption);
 };
 
+/**
+ * Change workspace theme to CdoHighContrastTheme
+ */
+const registerHighContrastTheme = function() {
+  const highContrastThemeOption = {
+    displayText: function(scope) {
+      return (
+        (isCurrentTheme(highContrast, scope.workspace)
+          ? '✓ '
+          : `${msg.enable()} `) + msg.blocklyHighContrastTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return hidden;
+      } else if (isCurrentTheme(highContrast, scope.workspace)) {
+        return disabled;
+      } else {
+        return enabled;
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem(blocklyTheme, highContrast);
+      scope.workspace.setTheme(Blockly.themes.highContrast);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'highContrastTheme',
+    weight: 14
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(highContrastThemeOption);
+};
+
 const registerAllContextMenuItems = function() {
   registerBlockCopyToStorage();
   registerBlockPasteFromStorage();
@@ -286,6 +319,7 @@ const registerAllContextMenuItems = function() {
   registerKeyboardNavigation();
   registerCdoTheme();
   registerDarkTheme();
+  registerHighContrastTheme();
 };
 
 function canBeShadow(block) {
