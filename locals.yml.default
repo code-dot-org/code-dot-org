@@ -135,8 +135,3 @@ use_my_apps: true
 # instance of Javabuilder. This will likely be 'javabuilder-dev-<your_branch_name>'
 # use_localhost_javabuilder: true
 # local_javabuilder_stack_name: javabuilder-dev-<your_branch_name>
-
-# Contributors will not have permission to access certain keys, but also should
-# not need access. Override them here to avoid errors.
-# slack_bot_token: PLACEHOLDER
-# pardot_private_key: PLACEHOLDER
