@@ -417,7 +417,7 @@ Resources:
               - s3:GetObjectVersionAcl
               - s3:GetObjectVersionTagging
             Resource:
-              - arn:aws:s3:::cdo-animation-library
+              - arn:aws:s3:::cdo-animation-library/*
   
   ContributorSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy
