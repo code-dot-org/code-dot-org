@@ -62,7 +62,6 @@ Summaries are recomputed every night via a [cron job](https://github.com/code-do
 
 # Mapping from `census_submissions` column names to census questions
 Topic questions only show up for those who indicated that their school has a 10 or 20 hr class.
-INACCURACY_REPORTED and INACCURACY_COMMENT only show when the user clicks the "I believe that the categorization for this school is inaccurate" link from the map info window.
 
 | Column Name | Question |
 | ----------- | -------- |
@@ -87,8 +86,6 @@ INACCURACY_REPORTED and INACCURACY_COMMENT only show when the user clicks the "I
 | TELL_US_MORE | "Please tell us more about this course." |
 | PLEDGED | "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all." |
 | SHARE_WITH_REGIONAL_PARTNERS | "Share my contact information with the Code.org regional partner in my state so I can be contacted about local professional learning, resources and events." |
-| INACCURACY_REPORTED | "I believe that the computer science categorization for this school is inaccurate" |
-| INACCURACY_COMMENT | "Explain why you think that the categorization for this school is inaccurate" |
 
 # Historic Notes
 
