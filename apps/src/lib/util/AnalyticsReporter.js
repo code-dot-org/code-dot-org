@@ -51,7 +51,7 @@ class AnalyticsReporter {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       if (!eventName) {
         logToCloud.addPageAction(
-          logToCloud.PageAction.NoValidEventNameLogError,
+          logToCloud.PageAction.NoValidAmplitudeEventNameError,
           {
             payload: payload
           }

@@ -22,7 +22,7 @@ const PageAction = makeEnum(
   'LoadScriptProgressFinished',
   'SectionProgressRenderedWithData',
   'JavabuilderWebSocketConnectionError',
-  'NoValidEventNameLogError'
+  'NoValidAmplitudeEventNameError'
 );
 
 const MAX_FIELD_LENGTH = 4095;
