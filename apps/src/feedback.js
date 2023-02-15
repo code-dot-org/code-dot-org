@@ -34,6 +34,7 @@ import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import color from '@cdo/apps/util/color';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -1267,6 +1268,7 @@ FeedbackUtils.prototype.showGeneratedCode = function(appStrings) {
  * Display the "Clear Puzzle" confirmation dialog.  Takes a parameter to hide
  * the icon.  Calls `callback` if the user confirms they want to clear the puzzle.
  */
+// todo do
 FeedbackUtils.prototype.showClearPuzzleConfirmation = function(
   hideIcon,
   callback
@@ -1306,15 +1308,20 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(
  * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
 FeedbackUtils.prototype.showSimpleDialog = function(options) {
+  const bodyTextStyle = {
+    color: color.neutral_dark,
+    fontSize: '14px'
+  };
+
   var textBoxStyle = {
     marginBottom: 10
   };
   var contentDiv = ReactDOM.render(
     <div>
       {options.headerText && (
-        <p className="dialog-title">{options.headerText}</p>
+        <h5 className="dialog-title">{options.headerText}</h5>
       )}
-      {options.bodyText && <p>{options.bodyText}</p>}
+      {options.bodyText && <p style={bodyTextStyle}>{options.bodyText}</p>}
       {options.prompt && (
         <input style={textBoxStyle} defaultValue={options.promptPrefill} />
       )}
