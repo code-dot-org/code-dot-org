@@ -6,6 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabDropdown from './components/JavalabDropdown';
 import {DisplayTheme} from './DisplayTheme';
 import i18n from '@cdo/locale';
+import CloseOnEscape from './components/CloseOnEscape';
 
 /**
  * A button that drops down to a set of clickable file names, and closes itself if
@@ -32,12 +33,6 @@ class JavalabFileExplorer extends Component {
 
   handleClickOutside = () => {
     if (this.state.dropdownOpen) {
-      this.collapseDropdown();
-    }
-  };
-
-  handleKeyDown = event => {
-    if (this.state.dropdownOpen && event.key === 'Escape') {
       this.collapseDropdown();
     }
   };
@@ -69,7 +64,7 @@ class JavalabFileExplorer extends Component {
     const files = this.transformFileMetadata();
 
     return (
-      <div style={styles.main} onKeyDown={this.handleKeyDown}>
+      <CloseOnEscape style={styles.main} handleClose={this.handleClickOutside}>
         <button
           aria-label={i18n.fileExplorer()}
           type="button"
@@ -97,7 +92,7 @@ class JavalabFileExplorer extends Component {
               ))}
           </JavalabDropdown>
         )}
-      </div>
+      </CloseOnEscape>
     );
   }
 }

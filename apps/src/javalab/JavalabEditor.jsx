@@ -49,6 +49,7 @@ import JavalabEditorDialogManager, {
 } from './JavalabEditorDialogManager';
 import JavalabEditorHeader from './JavalabEditorHeader';
 import {java} from '@codemirror/lang-java';
+import CloseOnEscape from './components/CloseOnEscape';
 
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;
@@ -372,12 +373,6 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  handleKeyDown = event => {
-    if (this.state.showMenu && event.key === 'Escape') {
-      this.cancelTabMenu();
-    }
-  };
-
   // This moves the active tab to the left in the tab menu
   moveTabLeft() {
     const {activeTabKey, orderedTabKeys} = this.props;
@@ -681,7 +676,7 @@ class JavalabEditor extends React.Component {
       zIndex: 1000
     };
     return (
-      <div onKeyDown={this.handleKeyDown}>
+      <CloseOnEscape handleClose={this.cancelTabMenu}>
         <JavalabEditorHeader onBackpackImportFile={this.onImportFile} />
         <Tab.Container
           activeKey={activeTabKey}
@@ -818,7 +813,7 @@ class JavalabEditor extends React.Component {
           handleClearPuzzle={handleClearPuzzle}
           isProjectTemplateLevel={isProjectTemplateLevel}
         />
-      </div>
+      </CloseOnEscape>
     );
   }
 }

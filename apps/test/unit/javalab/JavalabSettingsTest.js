@@ -124,17 +124,4 @@ describe('JavalabSettings', () => {
     assert.isTrue(decreaseButton.first().props().disabled);
     assert.isFalse(increaseButton.first().props().disabled);
   });
-
-  it('closes dropdown when Escape pressed', () => {
-    const wrapper = createWrapper();
-    wrapper.instance().toggleDropdown();
-    assert.isTrue(wrapper.instance().state.dropdownOpen);
-
-    wrapper
-      .find('div')
-      .first()
-      .props()
-      .onKeyDown({key: 'Escape'});
-    assert.isFalse(wrapper.instance().state.dropdownOpen);
-  });
 });

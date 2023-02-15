@@ -12,6 +12,7 @@ import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import CloseOnEscape from './components/CloseOnEscape';
 
 const Dialog = makeEnum(
   'IMPORT_WARNING',
@@ -217,12 +218,6 @@ class Backpack extends Component {
     }
   };
 
-  handleKeyDown = event => {
-    if (this.state.dropdownOpen && event.key === 'Escape') {
-      this.collapseDropdown();
-    }
-  };
-
   toggleDropdown = () => {
     if (this.state.dropdownOpen) {
       this.collapseDropdown();
@@ -325,7 +320,7 @@ class Backpack extends Component {
     // to align with other buttons in the JavalabEditor header,
     // which all use PaneButton.
     return (
-      <div onKeyDown={this.handleKeyDown}>
+      <CloseOnEscape handleClose={this.handleClickOutside}>
         <PaneButton
           id="javalab-editor-backpack"
           icon={backpackIcon}
@@ -462,7 +457,7 @@ class Backpack extends Component {
           displayTheme={displayTheme}
           confirmButtonText={msg.dialogOK()}
         />
-      </div>
+      </CloseOnEscape>
     );
   }
 }
