@@ -54,7 +54,7 @@ module Api::V1::Pd::Application
         principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
         principal_pay_fee: 'Yes, my school would be able to pay the full program fee.'
       }
-      actual_principal_fields = @teacher_application.sanitize_form_data_hash.slice(*expected_principal_fields.keys)
+      actual_principal_fields = @teacher_application.sanitized_form_data_hash.slice(*expected_principal_fields.keys)
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
@@ -77,7 +77,7 @@ module Api::V1::Pd::Application
 
       assert_equal(
         'Yes',
-        teacher_application.reload.sanitize_form_data_hash[:principal_wont_replace_existing_course]
+        teacher_application.reload.sanitized_form_data_hash[:principal_wont_replace_existing_course]
       )
     end
 
@@ -106,7 +106,7 @@ module Api::V1::Pd::Application
         principal_schedule_confirmed: "Other: this is the other for master schedule",
         principal_wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
       }
-      actual_principal_fields = teacher_application.reload.sanitize_form_data_hash.select do |k, _|
+      actual_principal_fields = teacher_application.reload.sanitized_form_data_hash.select do |k, _|
         expected_principal_fields.key?(k)
       end
 
