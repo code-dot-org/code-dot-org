@@ -3,9 +3,15 @@
 // Variables
 $border-radius: 4px;
 
+// Mixins
 @mixin focus-outline {
   outline: $brand_primary_default solid 2px;
   outline-offset: 2px;
+}
+
+@mixin h3-style {
+  font-family: $gotham-bold, sans-serif;
+  font-size: 1.25em;
 }
 
 // Start styles
@@ -222,9 +228,55 @@ ul {
       }
 
       h3 {
-        font-family: $gotham-bold, sans-serif;
-        font-size: 1.25em;
-        margin-bottom: 0.5em;
+        @include h3-style;
+      }
+    }
+  }
+
+  &.arrow-list {
+    margin: 2em 0 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+      height: 12em;
+      background: $brand_primary_light;
+      position: relative;
+      padding: 1em 1em 1em 2.5em;
+      text-indent: 0 !important;
+      display: flex;
+      align-content: start;
+      flex-wrap: wrap;
+      margin: 1.5em 0;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100% !important;
+      }
+
+      h3 {
+        @include h3-style;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0; bottom: 0; width: 0; height: 0;
+        border-left: 1em solid $neutral_white;
+        border-top: 6em solid transparent;
+        border-bottom: 6em solid transparent;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: -1em;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 1em solid $brand_primary_light;
+        border-top: 6em solid transparent;
+        border-bottom: 6em solid transparent;
       }
     }
   }
@@ -295,10 +347,7 @@ ol.steps-list {
   }
 
   h4 {
-    font-family: $gotham-bold, sans-serif;
-    font-size: 1.25em;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
+    @include h3-style;
     width: 100%;
   }
 }
