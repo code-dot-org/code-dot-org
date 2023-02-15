@@ -22,7 +22,7 @@ class CookieAllowlistTest < Minitest::Test
   }.freeze
 
   def build_rack_mock_session
-    @session ||= Rack::MockSession.new(app)
+    @build_rack_mock_session ||= Rack::MockSession.new(app)
   end
 
   def app
