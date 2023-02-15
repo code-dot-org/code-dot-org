@@ -43,3 +43,5 @@ export const BlockMode = {
   SIMPLE2: 'Simple2',
   TRACKS: 'Tracks'
 };
+
+export const DEFAULT_SOUND = 'dance/groovy_beat';
