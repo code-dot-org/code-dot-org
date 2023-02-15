@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-external]');
@@ -13,6 +14,8 @@ $(document).ready(() => {
   }
 
   registerGetResult();
+
+  reportTeacherReviewingStudentNonLabLevel();
 
   // Handle click on the continue button (results in navigating to next puzzle)
   // Note: We're using this pattern instead of

@@ -130,6 +130,7 @@ button,
 .btn,
 input[type=submit] {
   height: unset;
+  min-width: 200px;
   display: inline-block;
   color: white;
   background-color: $brand_secondary_default;
@@ -147,10 +148,18 @@ input[type=submit] {
     background-color: $brand_secondary_dark;
     border-color: $brand_secondary_dark;
     text-decoration: none;
+    cursor: pointer;
   }
 
   &:focus {
     @include focus-outline;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $neutral_dark20;
+    border: 2px solid $neutral_dark20;
+    color: $neutral_white;
   }
 }
 
@@ -431,13 +440,14 @@ form {
     &:focus {
       @include focus-outline;
     }
+  }
 
-    &[type=submit] {
-      width: 200px;
+  button,
+  &[type=submit] {
+    margin-top: 1em;
 
-      @media screen and (max-width: $width-sm) {
-        width: 100%;
-      }
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
     }
   }
 }
