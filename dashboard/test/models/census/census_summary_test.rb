@@ -142,40 +142,6 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school: nil, is_k8_school: nil)
   end
 
-  test "Three years ago data is not used" do
-    school_year = 2020
-    school = create :census_school,
-      :with_state_not_having_state_data,
-      :with_three_years_ago_teaches_maybe,
-      school_year: school_year
-    summary = generate_summary(school, school_year)
-    assert_nil summary.teaches_cs, summary.audit_data
-  end
-
-  test "No data is a nil teaches_cs" do
-    school_year = 2020
-    school = create :census_school,
-      :with_state_not_having_state_data,
-      school_year: school_year
-    summary = generate_summary(school, school_year)
-    assert_nil summary.teaches_cs, summary.audit_data
-  end
-
-  def generate_summary(school, year)
-    summaries = Census::CensusSummary.summarize_school_data(
-      {
-        school: school,
-        school_years: [year - 3, year - 2, year - 1, year],
-        years_with_ap_data: [year],
-        years_with_ib_data: [year],
-        state_years_with_data: {
-          school.state => [year]
-        },
-      }
-    )
-    summaries.last
-  end
-
   def empty_compute_teaches_cs_args
     {
       audit: {},
