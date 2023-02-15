@@ -1,6 +1,14 @@
 import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 
+const blocklyTheme = 'blocklyTheme';
+const blocklyStash = 'blocklyStash';
+const enabled = 'enabled';
+const disabled = 'disabled';
+const hidden = 'hidden';
+const modern = 'modern';
+const dark = 'dark';
+
 /**
  * Adds a copy command to the block context menu. After switching to v7,
  * we can replace this with:
@@ -13,14 +21,14 @@ const registerBlockCopyToStorage = function() {
     },
     preconditionFn: function(scope) {
       if (scope.block.isDeletable() && scope.block.isMovable()) {
-        return 'enabled';
+        return enabled;
       } else {
-        return 'disabled';
+        return disabled;
       }
     },
     callback: function(scope) {
       const copyData = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
-      localStorage.setItem('blocklyStash', copyData);
+      localStorage.setItem(blocklyStash, copyData);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockCopyToStorage',
@@ -40,14 +48,14 @@ const registerBlockPasteFromStorage = function() {
       return msg.paste();
     },
     preconditionFn: function(scope) {
-      const copyData = localStorage.getItem('blocklyStash');
+      const copyData = localStorage.getItem(blocklyStash);
       if (copyData) {
-        return 'enabled';
+        return enabled;
       }
-      return 'disabled';
+      return disabled;
     },
     callback: function(scope) {
-      const copyData = localStorage.getItem('blocklyStash');
+      const copyData = localStorage.getItem(blocklyStash);
       Blockly.mainBlockSpace.paste(JSON.parse(copyData));
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -68,9 +76,9 @@ const registerDeletable = function() {
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return 'enabled';
+        return enabled;
       }
-      return 'hidden';
+      return hidden;
     },
     callback: function(scope) {
       scope.block.setDeletable(!scope.block.isDeletable());
@@ -93,9 +101,9 @@ const registerMovable = function() {
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return 'enabled';
+        return enabled;
       }
-      return 'hidden';
+      return hidden;
     },
     callback: function(scope) {
       scope.block.setMovable(!scope.block.isMovable());
@@ -118,9 +126,9 @@ const registerEditable = function() {
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return 'enabled';
+        return enabled;
       }
-      return 'hidden';
+      return hidden;
     },
     callback: function(scope) {
       scope.block.setEditable(!scope.block.isEditable());
@@ -139,9 +147,9 @@ const registerShadow = function() {
       if (Blockly.isStartMode && canBeShadow(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return 'enabled';
+        return enabled;
       }
-      return 'hidden';
+      return hidden;
     },
     callback: function(scope) {
       scope.block.setShadow(true);
@@ -168,9 +176,9 @@ const registerUnshadow = function() {
       if (Blockly.isStartMode && hasShadowChildren(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return 'enabled';
+        return enabled;
       }
-      return 'hidden';
+      return hidden;
     },
     callback: function(scope) {
       scope.block.getChildren().forEach(child => child.setShadow(false));
@@ -190,7 +198,7 @@ const registerKeyboardNavigation = function() {
         : msg.blocklyKBNavOn();
     },
     preconditionFn: function() {
-      return Blockly.navigationController ? 'enabled' : 'hidden';
+      return Blockly.navigationController ? enabled : hidden;
     },
     callback: function(scope) {
       const controller = Blockly.navigationController;
@@ -212,22 +220,21 @@ const registerCdoTheme = function() {
   const cdoThemeOption = {
     displayText: function(scope) {
       return (
-        (isCurrentTheme('modern', scope.workspace)
-          ? '✓ '
-          : `${msg.enable()} `) + msg.blocklyModernTheme()
+        (isCurrentTheme(modern, scope.workspace) ? '✓ ' : `${msg.enable()} `) +
+        msg.blocklyModernTheme()
       );
     },
     preconditionFn: function(scope) {
       if (isMusicLabTheme(scope.workspace)) {
-        return 'hidden';
-      } else if (isCurrentTheme('modern', scope.workspace)) {
-        return 'disabled';
+        return hidden;
+      } else if (isCurrentTheme(modern, scope.workspace)) {
+        return disabled;
       } else {
-        return 'enabled';
+        return enabled;
       }
     },
     callback: function(scope) {
-      localStorage.setItem('blocklyTheme', 'modern');
+      localStorage.setItem(blocklyTheme, modern);
       scope.workspace.setTheme(Blockly.themes.modern);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -244,21 +251,21 @@ const registerDarkTheme = function() {
   const darkThemeOption = {
     displayText: function(scope) {
       return (
-        (isCurrentTheme('dark', scope.workspace) ? '✓ ' : `${msg.enable()} `) +
+        (isCurrentTheme(dark, scope.workspace) ? '✓ ' : `${msg.enable()} `) +
         msg.blocklyDarkTheme()
       );
     },
     preconditionFn: function(scope) {
       if (isMusicLabTheme(scope.workspace)) {
-        return 'hidden';
-      } else if (isCurrentTheme('dark', scope.workspace)) {
-        return 'disabled';
+        return hidden;
+      } else if (isCurrentTheme(dark, scope.workspace)) {
+        return disabled;
       } else {
-        return 'enabled';
+        return enabled;
       }
     },
     callback: function(scope) {
-      localStorage.setItem('blocklyTheme', 'dark');
+      localStorage.setItem(blocklyTheme, dark);
       scope.workspace.setTheme(Blockly.themes.dark);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -304,7 +311,7 @@ function hasShadowChildren(block) {
 function isCurrentTheme(theme, workspace) {
   return (
     workspace?.getTheme().name === theme ||
-    localStorage.getItem('blocklyTheme') === theme
+    localStorage.getItem(blocklyTheme) === theme
   );
 }
 
