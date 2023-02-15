@@ -63,7 +63,7 @@ export default function CourseOfferingEditor(props) {
     var options = e.target.options;
     var gradeLevels = [];
     for (var i = 0, l = options.length; i < l; i++) {
-      if (options[i].selected) {
+      if (options[i].selected && options[i].value !== '') {
         gradeLevels.push(options[i].value);
       }
     }
@@ -133,7 +133,7 @@ export default function CourseOfferingEditor(props) {
           onChange={e => updateCourseOffering('assignable', e.target.checked)}
         />
       </label>
-      <h2>{`Curriculum Catalog Settings`}</h2>
+      <h2>Curriculum Catalog Settings</h2>
       <label>
         Grade Levels
         <HelpTip>
