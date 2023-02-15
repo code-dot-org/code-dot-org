@@ -92,28 +92,6 @@ style.withArrow = {
   }
 };
 
-function buttonStyle(buttonColor, textColor = color.white) {
-  let hoverState = {};
-
-  // color.brand_secondary_default
-  if (buttonColor === '#9660BF') {
-    hoverState = {
-      ':hover': {
-        backgroundColor: color.brand_secondary_dark,
-        borderColor: color.brand_secondary_dark,
-        boxShadow: 'none'
-      }
-    };
-  }
-
-  return {
-    ...hoverState,
-    backgroundColor: buttonColor,
-    borderColor: buttonColor,
-    color: textColor
-  };
-}
-
 export const BUTTON_TYPES = {
   default: {
     style: {
@@ -123,19 +101,46 @@ export const BUTTON_TYPES = {
     }
   },
   cancel: {
-    style: buttonStyle(color.green)
+    style: {
+      backgroundColor: color.neutral_white,
+      border: `2px solid ${color.neutral_dark}`,
+      color: color.neutral_dark,
+      ':hover': {
+        backgroundColor: color.neutral_dark20,
+        boxShadow: 'none'
+      }
+    }
   },
   primary: {
-    style: buttonStyle(color.orange)
-  },
-  brandSecondary: {
-    style: buttonStyle(color.brand_secondary_default)
+    style: {
+      backgroundColor: color.brand_secondary_default,
+      borderColor: color.brand_secondary_default,
+      color: color.neutral_white,
+      ':hover': {
+        backgroundColor: color.brand_secondary_dark,
+        borderColor: color.brand_secondary_dark,
+        boxShadow: 'none'
+      }
+    }
   },
   danger: {
-    style: buttonStyle(color.red)
+    style: {
+      backgroundColor: color.product_negative_default,
+      borderColor: color.product_negative_default,
+      color: color.neutral_white,
+      ':hover': {
+        backgroundColor: color.product_negative_dark,
+        borderColor: color.product_negative_dark,
+        boxShadow: 'none'
+      }
+    }
   },
   action: {
-    style: buttonStyle(color.purple)
+    style: {
+      backgroundColor: color.purple,
+      borderColor: color.purple,
+      color: color.white
+    }
   }
 };
 

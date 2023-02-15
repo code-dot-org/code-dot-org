@@ -1276,15 +1276,16 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     p {
       font-size: 14px;
       line-height: inherit;
-      color: $charcoal;
+      color: $neutral_dark;
       margin-bottom: 10px;
 
       a {
         font-family: $gotham-extra-bold;
         font-weight: normal;
-        color: $purple;
+        color: $brand_secondary_default;
+        text-decoration: underline;
         &:hover {
-          text-decoration: underline;
+          color: $brand_secondary_dark;
         }
       }
     }
