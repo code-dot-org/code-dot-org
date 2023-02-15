@@ -1322,6 +1322,11 @@
   resolved "https://registry.yarnpkg.com/@blockly/theme-dark/-/theme-dark-4.0.3.tgz#7457f91d93157804bd661a699dae9ba673061010"
   integrity sha512-7viuSkUtxdPzKOAncEuHxEj5ZnSnA1qhYCjm/Yqtsr9mAenvnnYgDzO2/BB2tfn7FrFWa63+9PWLFVDGOs070A==
 
+"@blockly/theme-highcontrast@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@blockly/theme-highcontrast/-/theme-highcontrast-3.0.3.tgz#4978eb0975f0bab24727218e4cbe3a0b6e7c0bbe"
+  integrity sha512-v6tl9bSsbCjYJNR3hgvIvCGo/hLjk+ow2QdNE8ly2UTz8dBZ+MYYKZ3sFng1qDVy+WM8IbR45gPOx4RD+UjSXw==
+
 "@cdo/interpreted@link:../dashboard/config/libraries":
   version "0.0.0"
   uid ""
