@@ -3,5 +3,9 @@
   "display_name": "Star Wars: Building a Galaxy With Code (Blockly)",
   "category": "hoc",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": null,
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": null
 }
