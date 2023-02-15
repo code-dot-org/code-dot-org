@@ -180,16 +180,4 @@ class Census::CensusSummary < ApplicationRecord
       state_cs_offerings: [],
     }
   end
-
-  def self.get_school_stats(school, audit)
-    # If the school doesn't have stats then treat it as not high school.
-    # The lack of stats will show up in the audit data as a null value for high_school.
-    # k8_school will behave similarly.
-    stats = school.school_stats_by_year.try(:sort).try(:last)
-    high_school = stats.try(:has_high_school_grades?)
-    k8_school = stats.try(:has_k8_grades?)
-    audit[:stats][:high_school] = high_school
-    audit[:stats][:k8_school] = k8_school
-    {high_school: high_school, k8_school: k8_school}
-  end
 end
