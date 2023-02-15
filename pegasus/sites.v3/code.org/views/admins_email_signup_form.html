@@ -1,7 +1,5 @@
 <script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
-</script>
+<script src="/js/admins_email_signup_form.js"></script>
 
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
   <input type=hidden name='captcha_settings' value='{"keyname":"fixed","fallback":"true","orgId":"00Dj0000001sjyo","ts":""}'>
@@ -43,6 +41,6 @@
   </select>
 
   <input type=hidden id="lead_source" name="lead_source" value="Web Form - Administrators Page">
-  <div class="g-recaptcha" data-sitekey="6LezdGMkAAAAADpS_8wn3yJV8of06uQcYiXHanEp"></div>
-  <input type="submit" name="submit" value="Submit">
+  <div class="g-recaptcha" data-sitekey="6LezdGMkAAAAADpS_8wn3yJV8of06uQcYiXHanEp" data-callback="recaptchaCallback"></div>
+  <button type="submit" name="submit" disabled>Submit</button>
 </form>
