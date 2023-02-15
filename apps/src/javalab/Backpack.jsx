@@ -325,10 +325,7 @@ class Backpack extends Component {
     // to align with other buttons in the JavalabEditor header,
     // which all use PaneButton.
     return (
-      <div
-        id="javalab-editor-backpack-container"
-        onKeyDown={this.handleKeyDown}
-      >
+      <div onKeyDown={this.handleKeyDown}>
         <PaneButton
           id="javalab-editor-backpack"
           icon={backpackIcon}
