@@ -60,15 +60,4 @@ class Census::CensusSummary < ApplicationRecord
       )
     end
   end
-
-  def self.empty_audit_data
-    {
-      version: 1.0,
-      stats: {},
-      census_submissions: [],
-      ap_cs_offerings: [],
-      ib_cs_offerings: [],
-      state_cs_offerings: [],
-    }
-  end
 end
