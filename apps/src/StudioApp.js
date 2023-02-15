@@ -43,7 +43,8 @@ import {
   KeyCodes,
   TestResults,
   TOOLBOX_EDIT_MODE,
-  NOTIFICATION_ALERT_TYPE
+  NOTIFICATION_ALERT_TYPE,
+  START_BLOCKS
 } from './constants';
 import {assets as assetsApi} from './clientApi';
 import {
@@ -93,7 +94,7 @@ var copyrightStrings;
 /**
  * The minimum width of a playable whole blockly game.
  */
-const MIN_WIDTH = 1200;
+const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
@@ -1196,6 +1197,13 @@ StudioApp.prototype.inject = function(div, options) {
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
+
+  // Allows Google Blockly labs to use the Zelos or Thrasos renderer instead of the default.
+  if (experiments.isEnabled('zelos')) {
+    options.renderer = 'cdo_renderer_zelos';
+  } else if (experiments.isEnabled('thrasos')) {
+    options.renderer = 'cdo_renderer_thrasos';
+  }
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -1519,15 +1527,21 @@ StudioApp.prototype.resizeVisualization = function(width) {
  */
 StudioApp.prototype.resizeToolboxHeader = function() {
   var toolboxWidth = 0;
-  if (
-    this.editCode &&
-    this.editor &&
-    this.editor.session &&
-    this.editor.session.paletteEnabled
-  ) {
-    // If in the droplet editor, set toolboxWidth based on the block palette width:
-    var categories = document.querySelector('.droplet-palette-wrapper');
-    toolboxWidth = categories.getBoundingClientRect().width;
+  if (this.editCode && this.editor && this.editor.session) {
+    const isRtl = getStore().getState().isRtl;
+    const categories = document.querySelector('.droplet-palette-wrapper');
+
+    if (isRtl) {
+      // If Rtl - handle show/hide toolbox functionality
+      categories.style.zIndex = this.editor.session.paletteEnabled
+        ? 'inherit'
+        : '0';
+    }
+
+    if (this.editor.session.paletteEnabled) {
+      // If in the droplet editor, set toolboxWidth based on the block palette width:
+      toolboxWidth = categories.getBoundingClientRect().width;
+    }
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
   }
@@ -2438,7 +2452,7 @@ StudioApp.prototype.handleEditCode_ = function(config) {
         this.editor.enablePalette(!this.editor.session.paletteEnabled);
         showToolboxHeader.style.display = this.editor.session.paletteEnabled
           ? 'none'
-          : 'inline-block';
+          : 'flex';
         hideToolboxIcon.style.display = !this.editor.session.paletteEnabled
           ? 'none'
           : 'inline-block';
@@ -3340,6 +3354,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       showNextHint: this.showNextHint.bind(this),
       locale: config.locale,
       assetUrl: this.assetUrl,
+      inStartBlocksMode: level.edit_blocks === START_BLOCKS,
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),

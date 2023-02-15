@@ -896,7 +896,7 @@
           "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos puentes para que Alex o Steve puedan caminar más allá de los límites del mapa."
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
@@ -906,7 +906,7 @@
           "courseC_flappy_events3_a": "Si algo no está funcionando correctamente, asegúrate de que tus bloques estén conectados a los eventos correctos en el espacio de trabajo."
         },
         "OPD-K5-events-5": {
-          "courseC_flappy_events4_a": "Conecte el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este rompecabezas."
+          "courseC_flappy_events4_a": "Conecte el bloque `final del juego` a` cuando golpee un obstáculo` para resolver este rompecabezas."
         },
         "OPD-K5-events-6": {
           "courseC_flappy_events5_a": "Deberás usar el bloque `marcar un punto` para pasar este nivel."
@@ -927,7 +927,7 @@
         "OPD-K5-forloops-6": {
           "courseF_bee_for6_a": "No te olvides de utilizar una variable 'contador' dentro de tu bucle (loop) de ´repetir´,",
           "courseF_bee_for6_b": "Dentro de tu bucle (loop) 'para', tendrás que tener un comando 'avanzar' y un bucle (loop) para recolectar néctar.",
-          "courseF_bee_for6_c": "Tu bucle (loop) debe contar \\*\\* de 5 a 1 \\*\\*."
+          "courseF_bee_for6_c": "Tu bucle (loop) debe contar ** de 5 a 1 **."
         },
         "OPD-K5-forloops-7": {
           "courseF_bee_for7_a": "Tu bucle (loop) 'para' deberá contar de 1 a 7 en incrementos de 2.",
@@ -940,12 +940,12 @@
           "courseE_playLab_scaffold1_c": "Usa ¨set ??? fondo¨para elegir un fondo para tu escena."
         },
         "OPD-K5-projects-3": {
-          "courseE_playLab_scaffold1_a": "Abre el menú desplegable del evento 'cuando \\_\\_\\_ flecha' para cambiar la dirección de los controles de bloqueo.",
+          "courseE_playLab_scaffold1_a": "Abre el menú desplegable del evento 'cuando ___ flecha' para cambiar la dirección de los controles de bloqueo.",
           "courseE_playLab_scaffold1_b": "Debes tener cuatro 'cuando flecha' bloques de eventos, con una dirección para abrir debajo de cada uno.",
           "courseE_playLab_scaffold1_c": "Cuando hayas terminado, ¡podrás mover a tu héroe con las teclas de flecha!"
         },
         "OPD-K5-projects-5": {
-          "courseE_playLab_scaffold4_a": "Usa `anotar punto` para agregar un punto, y`quitar punto` para restar uno."
+          "courseE_playLab_scaffold4_a": "Usa `anotar punto` para agregar un punto, y` quitar punto` para restar uno."
         },
         "OPD-K5-variables-1": {
           "grade5_artist_variables_triangles1_a": "Para hacer un ángulo interior de 60 grados en este triángulo, recuerda girar al artista en 120 grados.",
@@ -962,14 +962,14 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "El código no será muy diferente de lo que fue en el último desafío, excepto que tendrás que girar al artista para saltar hacia abajo, y luego hacerlo dar la vuelta para estar listo para saltar hacia adelante otra vez.",
-          "courseF_artist_variables4_c": "Este es el patrón que seguirá tu artista:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_c": "Este es el patrón que seguirá tu artista:\n\n[][0]",
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "La segunda mitad de tu código debe tener casi el mismo aspecto que la primera mitad, salvo que girarás a la _izquierda_, saltarás y girarás a la _derecha_.",
           "courseF_artist_variables5_b": "La primera mitad de tu código dibujará tres triángulos, y la segunda mitad dibujará los otros tres.",
           "courseF_artist_variables5_c": "Comienza por duplicar el código en la primera mitad de tu programa, luego modifícalo para que se muestre el diseño.",
-          "courseF_artist_variables5_d": "Este es el patrón que seguirá tu artista:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "Este es el patrón que seguirá tu artista:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?",
@@ -4892,7 +4892,7 @@
         },
         "courseC_starWars_loops5_copy": {
           "courseC_starWars_loops5_b": "Para moverte hacia abajo, debes girar y luego avanzar.",
-          "courseC_starWars_loops5_a": "La mejor solución utiliza un giro, luego solo un \\`avanzar ', otro giro y luego un loop."
+          "courseC_starWars_loops5_a": "La mejor solución utiliza un giro, luego solo un `avanzar ', otro giro y luego un loop."
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "Intenta escribir todos los movimientos en un papel y busca un patrón.",
@@ -4912,7 +4912,7 @@
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "Intenta escribir todos los movimientos en un papel y busca un patrón.",
-          "courseC_starWars_loops6_b": "Si deseas utilizar menos código, ¡puedes poner un bucle (loop) de `repetir'`dentro de otro!\\\\ \nA esto se lo llama **bucle anidado** (nested loop)"
+          "courseC_starWars_loops6_b": "Si deseas utilizar menos código, ¡puedes poner un bucle (loop) de `repetir'`dentro de otro!\\ \nA esto se lo llama **bucle anidado** (nested loop)"
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
@@ -4962,7 +4962,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Trata de pensar sobre este problema en pequeñas partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!",
           "course_starWars_loops8_b": "Piensa en la primera parte de este problema como un problema del escalón. ¿Cómo resolviste eso antes?",
-          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle (loop) de `repetir`.",
@@ -5570,7 +5570,7 @@
           "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals1_predict1_copy": {
-          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque ` si ` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
@@ -5596,7 +5596,7 @@
         },
         "courseD_bee_conditionals2_copy": {
           "courseD_bee_conditionals2_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
-          "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar un `si` comunicado.",
+          "courseD_bee_conditionals2_a": "Algunas veces una flor estará allí, otras no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar un ` si ` comunicado.",
           "courseD_bee_conditionals2_b": "Puedes usar un loop 'repetir' o un 'mientras camino por delante' para moverse a través de este laberinto.",
           "courseD_bee_conditionals2_c": "No tienes buscar panales, solo habrá flores o espacios en blanco debajo de las nubes.",
           "courseD_bee_conditionals2_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
@@ -5655,8 +5655,8 @@
         "courseD_bee_conditionals4_copy": {
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una instrucción \\`si' dentro de tu bucle (loop) para comprobar si hay néctar en cada espacio. ",
-          "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
+          "courseD_bee_conditionals4_b": "Usa una instrucción `si' dentro de tu bucle (loop) para comprobar si hay néctar en cada espacio. ",
+          "courseD_bee_conditionals4_c": "Usa un bloque [bloque blockly][0] para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
           "courseD_bee_conditionals4_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals5": {
@@ -5676,7 +5676,7 @@
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Configura un loop anidado con un bloque `repetir` en el exterior y un ciclo`cuando hay un camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
-          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá continuar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras que en el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`obtener néctar`.",
+          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá continuar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras que en el camino, la abeja tiene que comprobar si hay una flor. ` si hay una flor`, la abeja debería` obtener néctar`.",
           "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que hay un camino adelante` tendrás que seguir adelante y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
           "courseD_bee_conditionals5_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
@@ -7110,7 +7110,7 @@
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "La función que escribes no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixeles.",
           "courseD_artist_functions2_c": "Utiliza el bloque verde 'dibujar un cuadrado' para \"llamar\" a tu función debajo del bloque 'cuando ejecutar'. De lo contrario, el código en la función no se ejecutará.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "El programa debe:\n\n-   Usar la función\n-   Avanzar 100 + 75 pixeles\n-   Usar la función"
+          "courseD_artist_functions2_a": "El programa debe:\n\n- Usar la función\n- Avanzar 100 + 75 pixeles\n- Usar la función"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Para resolver este desafío, sólo necesitas agregar un loop que repita el código de inicio 8 veces.\n\nSi no puedes recordar cuál era el código de inicio, haz clic en \"comenzar de nuevo\" en la esquina superior derecha del espacio de trabajo.",
@@ -8818,7 +8818,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Solo tienes que presionar el botón \"Finalizar\"!",
           "repeat_every_ideas": "**¿Necesitas algunas ideas?**\n\n-   Cambia repetidamente el tamaño de un bailarín para que crezca.\n-   Cambia repetidamente la rotación de un bailarín para que gire.\n\n_¡También puedes usar números negativos para crear el efecto opuesto!_",
-          "next_previous": "**Desafío opcional**\n\n-   Puedes usar este nuevo bloque de evento para recorrer una lista de movimientos de baile y establecer el movimiento como `(Aleatorio)`, `(Siguiente)` o `(Anterior)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Desafío opcional**\n\n-   Puedes usar este nuevo bloque de evento para recorrer una lista de movimientos de baile y establecer el movimiento como \"(Random)\", que significa aleatorio, \"(Next), que significa siguiente, o \"(Previous), que significa anterior.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "El bloque alternativo está en la categoría \"Bailarines\"."
@@ -10128,7 +10128,7 @@
           "courseD_bounce_events12s_b": "Intenta hacer que cada toma valga 2 puntos y ¡ cambia el logo del equipo por el de tu ciudad natal!"
         },
         "courseD_bounce_events1s_2021": {
-          "courseD_bounce_events1s_a": "Es necesario añadir el bloque `mover a la izquierda` al evento`cuando flecha izquierda` para que este juego funcione:\n\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n\n</xml>",
+          "courseD_bounce_events1s_a": "Es necesario añadir el bloque \"move left\" (mover a la izquierda) al evento \"when left arrow\" (cuando la flecha izquierda) para que este juego funcione:\n\n<xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n\n</xml>",
           "courseD_bounce_events1s_b": "No te olvides de presionar \"Ejecutar\" y llevar la mano a la cesta para resolver este rompecabezas."
         },
         "courseD_bounce_events2s_2021": {
@@ -10793,8 +10793,8 @@
           "hw_retro_changePropBy": "Si quieres cambiar el tamaño de un sprite una y otra vez (con eventos), utiliza este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Cada sprite tiene una **ubicación**. Puedes establecer la ubicación haciendo clic en el pin de este bloque: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Haz clic en el pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) en el bloque de ubicación y luego elige una nueva posición para tu sprite en la pantalla.\n-   Pulsa el botón \"Ejecutar\" cuando el código esté terminado.",
-          "remove_hint": "Puedes eliminar un sprite en un determinado número de línea. Puedes añadir un nuevo sprite para ocupar su lugar: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Cada sprite tiene una **ubicación**. Puedes establecer la ubicación haciendo clic en el pin de este bloque: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Haz clic en el pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) en el bloque de ubicación y luego elige una nueva posición para tu sprite en la pantalla.\n-   Pulsa el botón \"Ejecutar\" cuando el código esté terminado.",
+          "remove_hint": "Puedes eliminar un sprite en un determinado número de línea. Puedes añadir un nuevo sprite para ocupar su lugar: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Encuentra un bloque de fondo como este:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\ny encuentra un bloque de efecto de texto como éste: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nConecta estos bloques en `cuando se ejecuta` en tu Espacio de Trabajo.",
@@ -10806,14 +10806,14 @@
           "more_events_hint": "Puedes utilizar más de un evento en tu programa. Prueba a utilizar dos eventos con efectos diferentes para que coincidan con las nuevas líneas del poema. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Encuentra este bloque:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\no este bloque: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConéctalo debajo de `cuando se ejecuta` en tu espacio de trabajo.",
-          "more_code": "Añade más efectos y colores para acompañar el sonido que has elegido. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Encuentra este bloque:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\no este bloque: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConéctalo debajo de `cuando se ejecuta` en tu espacio de trabajo.",
+          "more_code": "Añade más efectos y colores para acompañar el sonido que has elegido. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Añade un bloque `empieza sprite` a tu código. Asegúrate de que ya has creado el sprite al que vas a dar un comportamiento. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Añade un bloque `empieza sprite` a tu código. Asegúrate de que ya has creado el sprite al que vas a dar un comportamiento. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Encuentra este bloque y haz clic en el `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n¿Qué ocurre cuando el número es `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Encuentra este bloque y haz clic en el `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n¿Qué ocurre cuando el número es `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "2-3 Maze 3": {
           "2-3_Maze_6_a": "¡Hay dos formas de resolver este rompecabezas!"

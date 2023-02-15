@@ -8,18 +8,31 @@ function representManipulative_test(var1, s1costume, behavior) {
   //For ideal behavior: original sprites should be 40x40
   //to create 10x10 grid for students
   
+  //destroy(({costume: s1costume}));
+  var spriteIds = getSpriteIdsInUse();
+  for(var i = 0; i < spriteIds.length; i++) {
+    var val = getProp(({id: spriteIds[i]}), "isManipulative");
+    if(val == 47) {
+      destroy(({id: spriteIds[i]}));
+    }
+  }
+  
+  
   var x = 20;
   var y = 400-20;
   for (counter_i = 0; counter_i < var1; counter_i++) {
-    createNewSprite({name: "manipulative" + counter_i}, s1costume, {"x": x, "y": y});
+    var spriteId = makeNewSpriteAnon(s1costume, ({"x":x,"y":y}));
+    //var spriteId = createNewSprite({name: "manipulative" + counter_i}, s1costume, {"x": x, "y": y});
+    setProp(({id: spriteId}), "isManipulative", 47);
     //makeNewSpriteAnon(s1costume, {"x": x, "y": y});
+    console.log();
     x += 40;
     if(x >= 400) {
       x = 20;
       y += 40;
     }
+    addBehaviorSimple(({id: spriteId}), new Behavior(northAndStop, []));
   }
-  addBehaviorSimple(({costume: s1costume}), new Behavior(northAndStop, []));
 }
 
 function northAndStop(this_sprite) {

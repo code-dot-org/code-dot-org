@@ -4,6 +4,8 @@ fil:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: prompt user {QUESTION} sa variable {VAR} na may pagpipiliang {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}sabihin{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -514,7 +516,7 @@ fil:
       Dancelab_onPointerUp:
         text: sa panturo up
       Dancelab_randomColor:
-        text: iba-ibang kulay
+        text: kahit anong kulay
       Dancelab_setBackground:
         text: set background color {COLOR}
       Dancelab_setBackgroundEffect:
@@ -998,6 +1000,13 @@ fil:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Ang mikroskopyo merong {INPUT1}
+        options:
+          INPUT1:
+            '1': katas ng limon
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: gawin ang {EFFECT} effect
         options:
@@ -1010,12 +1019,20 @@ fil:
             '"starburst"': Starburst
             '"glass"': Nakakabasag na Salamin
             '"twinkling"': Kumikislap
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): pagiging draggable
-            wandering(): gumagala
-            shrinking(): lumiliit
+          INPUT1:
+            '1': katas ng limon
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Makipag-ugnay sa {VAR1} gamit ang {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: gumawa ng {NUM} bagong {ANIMATION_NAME} sprite {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: kumakatawan sa {NUM} bagong {ANIMATION_NAME} sprite [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}sabihin{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} ay nagsisimula {BEHAVIOR}
       gamelab_addTarget:
@@ -1373,6 +1390,7 @@ fil:
             "'sound://category_space/Pillars_SFX.mp3'": mga haligi
             "'sound://category_space/Southern_ring_SFX.mp3'": singsing sa timog
             "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: i-play ang salita {SOUND}
       gamelab_playerBehaviors:
@@ -1395,9 +1413,9 @@ fil:
       gamelab_printText:
         text: print {TEXT}
       gamelab_randColor:
-        text: iba-ibang kulay
+        text: kahit anong kulay
       gamelab_randomColor:
-        text: iba-ibang kulay
+        text: kahit anong kulay
       gamelab_randomLocation:
         text: random na lokasyon
       gamelab_removeAllBehaviors:
@@ -1874,7 +1892,7 @@ fil:
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
-        text: iba-ibang kulay
+        text: kahit anong kulay
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} tumitigil {BEHAVIOR}
       Mikelab_repeatUntilComplete:
@@ -1995,8 +2013,39 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: Ang mikroskopyo merong {INPUT1}
+        options:
+          INPUT1:
+            '1': katas ng limon
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': katas ng limon
+            '3': baking soda
+            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): matibay
+            new Behavior(liquid, []): likido
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Itakda ang {COSTUME} sa {BEHAVIOR} gawi
+        options:
+          BEHAVIOR:
+            '"solid"': solidong mumunting bagay
+            '"liquid"': likidong mumunting bagay
+            '"gas"': gas particle
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': solidong mumunting bagay
+            '"liquid"': likidong mumunting bagay
+            '"gas"': gas particle
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2052,6 +2101,21 @@ fil:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': talon
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ilaw
             '"sound://category_background/typewriter.mp3"': Makinilya
+      Poetry_playSoundOptionsSpace:
+        text: Ang ... {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": kumpol ng bala
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Launch_SFX.mp3'": ilunsad
+            "'sound://category_space/Lift_Off.mp3'": iangat
+            "'sound://category_space/Pillars_SFX.mp3'": mga haligi
+            "'sound://category_space/Southern_ring_SFX.mp3'": singsing sa timog
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setAuthor:
         text: itakda ang may-akda {AUTHOR}
       Poetry_setBackground:
@@ -2346,6 +2410,16 @@ fil:
           DIR:
             right: right ↻
             left: kaliwang ↺
+      storylab_setForegroundEffect2:
+        text: gawin ang {EFFECT} effect
+        options:
+          EFFECT:
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts"': mga puso
+            '"rain"': ulan
+            '"starburst"': Starburst
+            '"twinkling"': Kumikislap
       storylab_setHeading:
         text: i-set ang heading {HEADING}
       storylab_setSubheading:

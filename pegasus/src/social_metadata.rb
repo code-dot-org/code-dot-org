@@ -10,6 +10,7 @@
 #   code.org/learn
 #   code.org/prize
 #   code.org/hourofcode2022
+#   code.org/maker
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -38,6 +39,7 @@ def get_social_metadata_for_page(request)
     mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
     dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
     dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
+    dance_2022: {path: "/images/social-media/dance-social-2022.png", width: 1200, height: 630},
     hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
     hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
     oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
@@ -49,6 +51,7 @@ def get_social_metadata_for_page(request)
     hoc_2022_social: {path: "/shared/images/social-media/hoc2022_social.png", width: 1200, height: 630},
     cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
     hoc_2022_landing_page: {path: "/shared/images/social-media/hoc2022_social_landing_page.png", width: 1200, height: 630},
+    maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -118,8 +121,8 @@ def get_social_metadata_for_page(request)
     "dance" => {
       "default" => {
         title: hoc_s(:social_hoc2018_dance_party),
-        description: hoc_s(:social_hoc2019_dance),
-        image: images[:dance_2019]
+        description: hoc_s(:social_hoc2022_dance),
+        image: images[:dance_2022]
       }
     },
     "oceans" => {
@@ -171,6 +174,13 @@ def get_social_metadata_for_page(request)
         image: images[:hoc_2022_landing_page]
       }
     },
+    "maker" => {
+      "default" => {
+        title: hoc_s(:social_maker_title),
+        description: hoc_s(:social_maker_desc),
+        image: images[:maker_physical_computing]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -197,6 +207,8 @@ def get_social_metadata_for_page(request)
     page = "cs-leaders-prize"
   elsif request.path == "/hourofcode2022" && request.site == "code.org"
     page = "hoc-2022-landing-page"
+  elsif request.path == "/maker" && request.site == "code.org"
+    page = "maker"
   else
     return {}
   end
@@ -211,9 +223,10 @@ def get_social_metadata_for_page(request)
   # Additional hoc variants.
   extension = ""
   hoc_launch = DCDO.get("hoc_launch", CDO.default_hoc_launch)
-  if hoc_launch == "mc"
+  case hoc_launch
+  when "mc"
     extension = "-mc"
-  elsif hoc_launch == "dance"
+  when "dance"
     extension = "-dance"
   end
 
@@ -224,13 +237,14 @@ def get_social_metadata_for_page(request)
 
   output = {}
   social_tag_set.each do |name, value|
-    if name == :image
+    case name
+    when :image
       output["og:image"] = "https://#{request.host}#{value[:path]}"
       output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
       output["og:image:width"] = value[:width]
       output["og:image:height"] = value[:height]
       output["twitter:card"] = "photo"
-    elsif name == :video
+    when :video
       output["og:video:url"] = "http://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:secure_url"] = "https://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:type"] = "video/mp4"
@@ -240,13 +254,13 @@ def get_social_metadata_for_page(request)
       output["twitter:player:width"] = value[:width]
       output["twitter:player:height"] = value[:height]
       output["twitter:card"] = "player"
-    elsif name == :title
+    when :title
       output["og:title"] = value
       output["twitter:title"] = value
-    elsif name == :description
+    when :description
       output["og:description"] = value
       output["twitter:description"] = value
-    elsif name == :description_twitter
+    when :description_twitter
       output["twitter:description"] = value
     end
   end

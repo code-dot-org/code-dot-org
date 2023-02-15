@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Navigating Code.org 
 
-##### Welcome to Lesson 2! This lesson is designed to orient you to the Codde.org website and teaching tools. 
+##### Welcome to Lesson 2! This lesson is designed to orient you to the Code.org website and teaching tools. 
 
 <img src="https://images.code.org/65b0f234d50ccf544ff6d54c0b5bbff6-image-1627656763104.jpg" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
 
@@ -13,14 +13,11 @@ markdown <<MARKDOWN
 ## You will learn how to:
 
 * ##### Navigate the Code.org website and teacher tools.
-* ##### Locate and use course lesson plans and teacher resources.
-* ##### Learn how to access support while teaching the course.
+* ##### Set up a class section.
 
-### **Suggested time:** 60 minutes
+### **Suggested time:** 35 minutes
 
 <div style="clear:both"/>
-
-##### If you already have experience using the Code.org website and teaching tools, you can skip ahead to [Module 2: Preparing to Teach Physical Computing](https://studio.code.org/s/self-paced-pl-physical-computing2). 
 
 ## Let's get started!
 

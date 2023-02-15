@@ -9,13 +9,15 @@ module Crowdin
   MAX_THREADS = 8
 
   class LegacyUtils
-    attr_reader :project
-    attr_reader :files_to_download_json
-    attr_reader :files_to_sync_out_json
-    attr_reader :etags_json
-    attr_reader :locales_dir
-    attr_reader :locale_subdir
-    attr_reader :logger
+    attr_reader(
+      :project,
+      :files_to_download_json,
+      :files_to_sync_out_json,
+      :etags_json,
+      :locales_dir,
+      :locale_subdir,
+      :logger
+    )
 
     # @param project [Crowdin::Project]
     # @param options [Hash, nil]
@@ -57,7 +59,7 @@ module Crowdin
       languages.each_with_index do |language, i|
         language_code = language["id"]
         @logger.debug("#{language['name']} (#{language_code}): #{i}/#{num_languages}")
-        @logger.info("~#{(i * 100 / num_languages).round(-1)}% complete (#{i}/#{num_languages})") if i > 0 && i % (num_languages / 5) == 0
+        @logger.info("~#{(i * 100 / num_languages).round(-1)}% complete (#{i}/#{num_languages})") if i > 0 && i % [num_languages / 5, 1].max == 0
 
         etags[language_code] ||= {}
         # construct download directory; locale_subdir is optional, so compact
@@ -109,7 +111,7 @@ module Crowdin
       end
     rescue Net::ReadTimeout, Net::OpenTimeout, AWSError => error
       # Only attempting retries on request errors. Surfacing errors during write.
-      STDERR.puts "download_file(#{dest})#{response.present? ? " error code: #{response.code}" : ''} error: #{error}"
+      warn "download_file(#{dest})#{response.present? ? " error code: #{response.code}" : ''} error: #{error}"
       raise if attempts <= 1
       download_file(download_url, dest, attempts: attempts - 1)
     end

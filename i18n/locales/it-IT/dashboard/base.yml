@@ -61,7 +61,7 @@ it:
         error:
           future: non può essere in futuro
   beta: "versione provvisoria"
-  hello: "Ciao a tutti"
+  hello: "Ciao mondo"
   welcome_back: "Bentornato, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"
   see_your_learning_plan: "Guarda il tuo piano di apprendimento"
@@ -668,28 +668,17 @@ it:
       body_short: "Progetta una App, programmala con i blocchi o con Javascript, e poi condividila."
       audience: 'Da 13 anni in su'
       cta: 'Scopri come'
-    dance:
-      title: 'Ballando col codice'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Ballando col codice'
-    hello-world:
-      title: 'Ciao Mondo'
-    poem-art:
-      title: 'L''arte della poesia'
-      body: 'Esprimiti! Usa il codice per animare le poesie.'
-    hoc:
-      title: 'Labirinto Classico'
-      body: 'Impara i concetti base dell''informatica. Milioni di persone l''hanno già fatto.'
+    dance:
+      title: 'Ballando col codice'
     flappy:
       title: 'Flappy'
       body: 'Vuoi creare la tua versione del gioco "Flappy" in meno di 10 minuti? Prova questo corso!'
-    20-hour:
-      title: 'Corso rapido'
-      body: 'Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti fondamentali dell''informatica e della programmazione. Il corso è pensato per l''uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un po'' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.'
-      body_short: 'Acquisisci le basi dell''informatica con una sintesi dei corsi 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Prova il nuovo corso dell''Ora del Codice in versione provvisoria'
-      try_frozen: 'Artista con Anna ed Elsa, da Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "La tua collezione"
       body: "Guarda una collezione di app e immagini artistiche create dai nostri utenti"
@@ -698,18 +687,21 @@ it:
       body: "Sviluppo Giochi è un ambiente di programmazione in cui si possono realizzare semplici animazioni e giochi con oggetti e personaggi che interagiscono tra loro."
       audience: "Da 13 anni in su"
       cta: "Scopri come"
+    hello-world:
+      title: 'Ciao mondo'
+      body: 'Scegli tra i seguenti quattro temi divertenti per programmare dei personaggi interattivi in un mondo creato da te.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
     hoc-encryption:
       title: "Crittografia semplice"
       body: "Gli studenti imparano delle tecniche per creare e decodificare un messaggio cifrato."
-    weblab:
-      title: "Sviluppo Web"
-      body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
-      audience: "Da 13 anni in su"
-      cta: "Scopri come"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Guerre Stellari"
+    hoc:
+      title: 'Labirinto Classico'
+      body: 'Impara i concetti base dell''informatica. Milioni di persone l''hanno già fatto.'
+    hoc2014:
+      try_new_tutorial: 'Prova il nuovo corso dell''Ora del Codice in versione provvisoria'
+      try_frozen: 'Artista con Anna ed Elsa, da Frozen'
     infinity:
       title: "Laboratorio con Disney Infinity"
       body: "Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity."
@@ -719,30 +711,39 @@ it:
     minecraft2016:
       title: "Minecraft"
       body: "Programma animali e altre creature di Minecraft nella tua versione di questo gioco."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
+    poem-art:
+      title: 'L''arte della poesia'
+      body: 'Esprimiti! Usa il codice per animare le poesie.'
     sports:
       title: "Sport"
       body: "Crea una partita di basket o abbina diversi sport."
+    starwars:
+      title: "Guerre Stellari"
     text-compression:
       title: "Compressione del testo"
       body: "In questa lezione impari come comprimere un testo, sostituendo sequenze di caratteri ripetuti con simboli."
-    unplugged:
-      title: "Lezioni Tradizionali"
-      audience: "Età 4+"
-      body: "Abbiamo preparato delle lezioni (chiamate <i>lezioni tradizionali</i>) da usare nella tua classe senza utilizzare un computer. Potrai quindi insegnare le basi dell'informatica anche senza avere un computer! Puoi usare queste lezioni tradizionali sia come un corso a sé stante che come complemento agli altri corsi."
-      body_short: "Se non hai un computer, prova queste lezioni tradizionali."
-    unplugged_conditionals:
-      title: "Istruzioni condizionali"
-      body: "Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali usando un mazzo di carte."
+    weblab:
+      title: "Sviluppo Web"
+      body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
+      audience: "Da 13 anni in su"
+      cta: "Scopri come"
     widgets:
       title: "Componenti"
       body: "Gli studenti possono esplorare concetti dal nostro corso Cs Principles usando questi strumenti digitali sul campo. Possono utilizzare i componenti per conto proprio o creare una lezione su un singolo concetto per la classe."
       audience: "Dai 14 anni in su"
       cta: "Scopri come"
+    unplugged_conditionals:
+      title: "Istruzioni condizionali"
+      body: "Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali usando un mazzo di carte."
+    unplugged:
+      title: "Lezioni Tradizionali"
+      audience: "Età 4+"
+      body: "Abbiamo preparato delle lezioni (chiamate <i>lezioni tradizionali</i>) da usare nella tua classe senza utilizzare un computer. Potrai quindi insegnare le basi dell'informatica anche senza avere un computer! Puoi usare queste lezioni tradizionali sia come un corso a sé stante che come complemento agli altri corsi."
+      body_short: "Se non hai un computer, prova queste lezioni tradizionali."
+    20-hour:
+      title: 'Corso rapido'
+      body: 'Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti fondamentali dell''informatica e della programmazione. Il corso è pensato per l''uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un po'' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.'
+      body_short: 'Acquisisci le basi dell''informatica con una sintesi dei corsi 2-4.'
   landing:
     prerelease_tutorial: "Questa esercitazione è in **versione provvisoria**. È soggetta a revisioni man mano che arrivano osservazioni, al fine di migliorarla."
     report_bug: "Report Bug"

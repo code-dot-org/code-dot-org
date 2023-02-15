@@ -4,7 +4,7 @@
     .peer-review-content{class: peer_review.css_classes}
       %p.peer-review-title
         %strong= peer_review.from_instructor ? t('peer_review.instructor_feedback') : t('peer_review.peer_feedback')
-        = "\u2022 added #{time_ago_in_words(peer_review.updated_at)} ago"
+        = "\u2022 added at #{peer_review.updated_at}"
       %p.peer-review-status= peer_review.localized_status_description
       %p= peer_review.data
       - unless peer_review.current?

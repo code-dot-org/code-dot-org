@@ -84,7 +84,6 @@
   "didntMoveRight": "你的精靈圖沒有向右移動。",
   "didntMoveUp": "你的精靈圖沒有向上移動。",
   "didntPressKey": "點擊運行後，請確保有按方向鍵。你可以點擊遊戲區的橙色按鈕或按鍵盤上的鍵。",
-  "errorLoadingAnimation": "好像是在加載動畫“{animationName}”時遇到了問題。確保互聯網連接良好，然後嘗試重新加載頁面。如果問題仍然存在，則可能是該動畫已經損壞。在此情況下，你可能需要通過刪除該動畫來繼續。",
   "eventNotDetected": "沒有偵測到該事件。請確保你的工作區有正確的事件積木，並在每段程式碼中都選擇了正確的 *服裝*。 \n <xml><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"預設\"</title></block></xml>",
   "eventsOneChange": "你的精靈圖改變了，但只有一次。按幾次來測試你的程式，並確保使用了正確的積木。<xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "你的精靈圖應該正好有 3 個行為。嘗試移動「停止所有」積木到程式碼的其他地方。",

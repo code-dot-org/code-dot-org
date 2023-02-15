@@ -763,11 +763,14 @@ bs:
           lesson_groups:
             required:
               display_name: Pregled
+        dance-2019:
+          title: Plesna zabava
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
               display_name: Slijedeći Koraci
         dance-extras-2019:
+          title: Nastavite plesati
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
           student_description: Izađite iz okvira prvog sata sa proširenim idejama
             o projektu.
@@ -1233,6 +1236,14 @@ bs:
           lessons:
             lesson-6:
               name: Petlje
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Varijable
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Od-Do-Za Petlje
         csd5-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1251,7 +1262,11 @@ bs:
               display_name: Funkcije
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Liste
             csp_loops:
+              display_name: Petlje
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
               display_name: Petlje

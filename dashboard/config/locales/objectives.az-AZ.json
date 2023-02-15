@@ -281,6 +281,9 @@
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "İnsan qərəzinin maşın öyrənməsində necə rol oynaması ilə bağlı səbəb."
         },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": ""
+        },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
         },
@@ -810,13 +813,13 @@
           "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin."
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin.\n"
         },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Şeirin əhval-ruhiyyəsinin dəyişməsini təsvir edin."
+          "description": "Şeirin əhval-ruhiyyəsinin dəyişməsini təsvir edin.\n"
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Mətndə məcazi və hərfi dili vurğula"
+          "description": "Mətndə məcazi və hərfi dili vurğula\n"
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Tələbələr kompüter laboratoriyasına keçdikdə nə gözlənildiyini dərk edin."

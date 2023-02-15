@@ -469,14 +469,24 @@ class JsDebugger extends React.Component {
           >
             {i18n.debugConsoleHeader()}
           </span>
-          <span className={styles.showHideIcon}>
+          <button
+            type="button"
+            className={classNames(
+              styles.showHideIcon,
+              styles.chevronButton,
+              !hasFocus && styles.chevronButtonUnfocused
+            )}
+            onClick={this.slideToggle}
+            aria-label={i18n.debugArea()}
+            aria-expanded={this.state.open}
+            aria-controls="debug-area"
+          >
             <FontAwesome
               icon={
                 this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
               }
-              onClick={this.slideToggle}
             />
-          </span>
+          </button>
           {this.props.debugButtons && (
             <PaneSection id="debug-commands-header">
               <FontAwesome
@@ -512,8 +522,13 @@ class JsDebugger extends React.Component {
                 this.state.watchersHidden && styles.watchersHidden
               )}
             >
-              <span
-                className={styles.showDebugWatchIcon}
+              <button
+                type="button"
+                className={classNames(
+                  styles.showDebugWatchIcon,
+                  styles.chevronButton,
+                  !hasFocus && styles.chevronButtonUnfocused
+                )}
                 onClick={() => {
                   // reset resizer-overridden styles
                   // (remove once resize logic migrated to React)
@@ -528,6 +543,9 @@ class JsDebugger extends React.Component {
                   }
                   this.setState({watchersHidden: !this.state.watchersHidden});
                 }}
+                aria-label={i18n.debugWatchHeader()}
+                aria-expanded={!this.state.watchersHidden}
+                aria-controls="debug-watch"
               >
                 <FontAwesome
                   id="hide-watcher"
@@ -537,7 +555,7 @@ class JsDebugger extends React.Component {
                       : 'chevron-circle-right'
                   }
                 />
-              </span>
+              </button>
               <span className={classNames('header-text', styles.noUserSelect)}>
                 {this.state.watchersHidden
                   ? i18n.debugShowWatchHeader()

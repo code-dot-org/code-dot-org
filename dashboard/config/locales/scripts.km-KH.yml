@@ -548,7 +548,10 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
+        dance-2019:
+          title: Dance Party
         dance-extras-2019:
+          title: Keep On Dancing
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
         csp4-preview:
@@ -858,6 +861,10 @@ km:
           lessons:
             lesson-6:
               name: រង្វិល​ជុំ
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: អ​ថេរ
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -868,7 +875,11 @@ km:
               display_name: អនុ​គមន៍
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: បញ្ជី
             csp_loops:
+              display_name: រង្វិល​ជុំ
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: បញ្ជី
+            lessonGroup-3:
               display_name: រង្វិល​ជុំ

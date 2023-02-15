@@ -1,14 +1,20 @@
 {
   "pages": {
-    "homepage": ["hoc2022-soon-hoc"]
+    "homepage": [
+      "hoc2022-soon-hoc",
+      "hoc2022-actual-hoc",
+      "pl-launch-superhero"
+    ]
   },
 
   "banners": {
     "hoc2022-soon-hoc": {
-      "hoc_modes": ["soon-hoc", "actual-hoc"],
+      "hoc_modes": ["soon-hoc"],
       "class": "hoc-banner homepage",
-      "desktopImage": "/images/hoc2022-codeorg-hero-banner-01.svg",
-      "mobileImage": "/images/hoc2022-codeorg-hero-banner-mobile-01.svg",
+      "desktopImage": "/images/hoc2022-codeorg-hero-banner-02.png",
+      "mobileImage": "/images/hoc2022-codeorg-hero-banner-mobile-02.png",
+      "leftImage": "/images/hoc2022-codeorg-hero-banner-02-left.svg",
+      "rightImage": "/images/hoc2022-codeorg-hero-banner-02-right.svg",
       "actions": [
         {
           "type": "text",
@@ -19,14 +25,78 @@
           "text": "hoc2022_banner_title"
         },
         {
-          "type": "cta_button_solid_yellow",
-          "text": "homepage_action_text_join_us",
-          "url": "https://hourofcode.com/us/#join"
+          "type": "heading-two",
+          "text": "hoc2022_banner_description"
         },
         {
-          "type": "cta_button_hollow_black",
-          "text": "homepage_action_text_try_it",
+          "type": "cta_button_solid_yellow",
+          "text": "hoc2022_cta_primary",
+          "url": "/hourofcode2022"
+        },
+        {
+          "type": "cta_button_hollow_white",
+          "text": "hoc2022_cta_secondary",
           "url": "/hourofcode/overview"
+        }
+      ]
+    },
+    "hoc2022-actual-hoc": {
+      "hoc_modes": ["actual-hoc"],
+      "class": "hoc-banner homepage",
+      "desktopImage": "/images/hoc2022-codeorg-hero-banner-02.png",
+      "mobileImage": "/images/hoc2022-codeorg-hero-banner-mobile-02.png",
+      "leftImage": "/images/hoc2022-codeorg-hero-banner-02-left.svg",
+      "rightImage": "/images/hoc2022-codeorg-hero-banner-02-right.svg",
+      "actions": [
+        {
+          "type": "text",
+          "text": "homepage_hero_hoc_is_here"
+        },
+        {
+          "type": "heading",
+          "text": "hoc2022_banner_title"
+        },
+        {
+          "type": "heading-two",
+          "text": "hoc2022_banner_description"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "hoc2022_cta_primary",
+          "url": "/hourofcode2022"
+        },
+        {
+          "type": "cta_button_hollow_white",
+          "text": "hoc2022_cta_secondary",
+          "url": "/hourofcode/overview"
+        }
+      ]
+    },
+    "pl-launch-superhero": {
+      "dcdo": "pl-launch-hero-banner",
+      "class": "pl-banner-superhero homepage",
+      "desktopImage": "/images/pl-superhero-banner-yellow-bg.svg",
+      "actions": [
+        {
+          "type": "heading",
+          "text": "pl_superhero_title"
+        },
+        {
+          "type": "heading-two",
+          "text": "pl_superhero_desc"
+        },
+        {
+          "type": "image",
+          "url": "/images/pl-superhero-girl.png"
+        },
+        {
+          "type": "image-tablet",
+          "url": "/images/pl-superhero-girl-tablet.png"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "front_join_us_learn_more",
+          "url": "/educate/professional-learning"
         }
       ]
     }

@@ -7,6 +7,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 
 import {KeyCodes} from '../../../constants';
 import {
@@ -357,9 +358,9 @@ export default connect(
                 : style.debugInputWrapper
             }
           >
-            <span style={style.debugInputPrompt} onClick={this.focus}>
+            <label htmlFor="debug-input" style={style.debugInputPrompt}>
               &gt;
-            </span>
+            </label>
             <input
               type="text"
               spellCheck="false"
@@ -368,6 +369,7 @@ export default connect(
               style={style.debugInput}
               ref={el => (this._debugInput = el)}
               onKeyDown={this.onInputKeyDown}
+              aria-label={i18n.debugConsoleHeader()}
             />
           </div>
         </div>

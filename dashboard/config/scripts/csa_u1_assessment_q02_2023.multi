@@ -1,11 +1,14 @@
 name 'CSA U1 Assessment q02_2023'
 
-wrong 'The constructor contains all of the methods that an object can utilize.'
-wrong 'Constructors should be made `private` to keep all information safe and secure.'
-wrong 'The constructor should not have the same name as the class.'
-wrong 'In inheritance, the parent class should always contain the keyword `super`.'
-right 'The constructor is used to create objects of a class.'
+wrong 'Performing a task in a program requires a method.'
+wrong 'A method contains the statements that actually performs its task.'
+wrong 'The algorithm that the method represents can consist of a combination of sequencing, selection, and iteration.'
+right 'All of the above.'
 
 markdown <<MARKDOWN
-Which of the following is a TRUE statement about constructors in Java?
+Which of the following statements is true?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Methods represent a behavior for an object and are intended to perform a specific task. Methods are called to perform the task and contain statements for executing its task. The statements in a method are an algorithm, which can consist of a combination of sequencing, selection, and iteration statements.
 MARKDOWN

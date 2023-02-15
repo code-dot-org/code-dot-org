@@ -23,7 +23,11 @@
           "rubric_performance_level_4": "No hay bucles \"for\" en el código."
         },
         "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Concepto clave"
+          "rubric_key_concept": "Concepto clave",
+          "rubric_performance_level_1": "Hice x, y, y z.",
+          "rubric_performance_level_2": "Hice `x` e `y`",
+          "rubric_performance_level_3": "Hice `x` o `y`",
+          "rubric_performance_level_4": "No hice `x`, `y` o `z`"
         },
         "CDU U6 Playground Sound Board_2019": {
           "rubric_key_concept": "Crear y modificar arrays, desarrollar software para controlar una variedad de dispositivos físicos.",
@@ -62,10 +66,10 @@
         },
         "CSD U2 Image assessment_2022": {
           "rubric_key_concept": "Estructurar el contenido de una página web utilizando HTML (añadir una imagen a una página web).  Mencionar con precisión a otros cuando se utiliza su trabajo.",
-          "rubric_performance_level_1": "La imagen se muestra correctamente y el atributo `alt` ofrece una descripción de prueba razonable de la imagen.  No se incluye código innecesario en la etiqueta `img`.  La mención de la imagen es correcta y su nombre es adecuado.",
+          "rubric_performance_level_1": "La imagen se muestra correctamente y el atributo `alt` ofrece una descripción de texto razonable de la imagen.  No se incluye código innecesario en la etiqueta `img`.  La atribución de la imagen es correcta y su nombre es adecuado.",
           "rubric_performance_level_2": "La imagen se muestra correctamente y se utiliza de acuerdo con la descripción de su licencia de copyright.",
           "rubric_performance_level_3": "Se utiliza la etiqueta `img` y se proporciona una dirección de origen para la imagen, pero puede haber pequeños errores de sintaxis o faltas de ortografía que impiden que la imagen se muestre correctamente.  La imagen puede no estar disponible para su uso legal en la página web.",
-          "rubric_performance_level_4": "La etiqueta `img` no se utiliza o no se indica una dirección de origen para la imagen."
+          "rubric_performance_level_4": "No se utiliza la etiqueta `img` o no se indica la dirección de origen de la imagen."
         },
         "CSD U2 adding pages_2021": {
           "rubric_key_concept": "Creación de un artefacto digital, con enlaces dentro de un sitio de varias páginas\n",
@@ -91,7 +95,7 @@
         "CSD U2 classes haikus_2022": {
           "rubric_performance_level_1": "La clase y el conjunto de reglas se han creado correctamente, se han incluido todos los elementos del haiku elegido y hay al menos tres reglas en el conjunto de reglas.",
           "rubric_performance_level_2": "Se ha creado una clase, un conjunto de reglas y la mayoría de los elementos de la sección de haiku elegida en el sitio web se ven afectados por esta clase, pero puede haber algunos errores menores para algunas partes del texto, o puede haber menos de tres reglas en el conjunto de reglas.",
-          "rubric_performance_level_3": "La clase y el conjunto de reglas están creados, y al menos algunos elementos del sitio web están en esa clase, pero puede haber errores importantes que impiden que el texto sea estilizado.",
+          "rubric_performance_level_3": "Se crean una clase y un conjunto de reglas, y al menos algunos elementos del sitio web están en esa clase, pero puede haber errores importantes que impidan aplicar estilo al texto.",
           "rubric_performance_level_4": "Ninguna clase o conjunto de reglas se han creado, o no se han puesto elementos del sitio web en la clase.",
           "rubric_key_concept": "Crear clases que puedan ser referenciadas y afectadas como un grupo."
         },
@@ -992,8 +996,8 @@
         "CSD U6 - Functions - A_2222": {
           "rubric_key_concept": "Utiliza funciones con parámetros para organizar las aplicaciones",
           "rubric_performance_level_1": "La aplicación utiliza una función con dos parámetros que corresponden al nombre y a la cantidad a mover. Los parámetros sustituyen correctamente cada nombre y valor de la cantidad de nieve original. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
-          "rubric_performance_level_2": "La aplicación utiliza una función con un solo parámetro, o la aplicación utiliza una función con dos parámetros pero no todos los valores se actualizan mediante parámetros. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
-          "rubric_performance_level_3": "La aplicación utiliza una función pero no utiliza parámetros, o no todos los elementos de la nieve se mueven en la pantalla",
+          "rubric_performance_level_2": "La aplicación utiliza una función con un solo parámetro, o la aplicación utiliza una función con dos parámetros, pero no todos los valores se actualizan mediante parámetros. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
+          "rubric_performance_level_3": "La aplicación utiliza una función, pero no utiliza parámetros, o no todos los elementos de la nieve se mueven en la pantalla",
           "rubric_performance_level_4": "El código no ha cambiado con respecto a la aplicación original"
         },
         "CSD U6 - Music - A_2222": {
@@ -1059,6 +1063,20 @@
           "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
           "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
           "rubric_performance_level_4": "No hay eventos en el prototipo."
+        },
+        "allthethings-mini-rubric": {
+          "rubric_key_concept": "Este es el concepto clave de esta mini-rúbrica.",
+          "rubric_performance_level_1": "¡Lo has hecho muy bien!",
+          "rubric_performance_level_2": "Lo has hecho bien.",
+          "rubric_performance_level_3": "Lo hiciste bien.",
+          "rubric_performance_level_4": "No has hecho nada."
+        },
+        "allthethings-mini-rubric-weblab": {
+          "rubric_key_concept": "Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo.",
+          "rubric_performance_level_1": "Lo que hay que hacer para superarse.",
+          "rubric_performance_level_2": "Lo que hay que hacer para reunirse.",
+          "rubric_performance_level_3": "Lo que hay que hacer para acercarse.",
+          "rubric_performance_level_4": "En realidad no has hecho nada."
         }
       }
     }

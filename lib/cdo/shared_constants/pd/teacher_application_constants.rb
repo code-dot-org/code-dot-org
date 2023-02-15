@@ -9,24 +9,50 @@ module Pd
 
     PRINCIPAL_APPROVAL_STATE = {
       not_required: 'Not required',
-      in_progress: 'Incomplete - Principal email sent on ',
+      in_progress: 'Incomplete - Admin email sent on ',
       complete: 'Complete - '
     }
 
     YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
+    REGIONAL_PARTNER_DEFAULT_GUARDRAILS = {
+      frl_rural: 40,
+      frl_not_rural: 50,
+      urg: 50
+    }
+
     SECTION_HEADERS = {
-      about_you: 'About You and Your School',
-      teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
-      professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      additional_demographic_information: 'Additional Demographic Information and Submission',
-      school_stats_and_principal_approval_section: 'Principal Approval and School Information'
+      find_your_region: 'Find Your Region',
+      about_you: 'About You',
+      additional_demographic_information: 'Additional Demographic Information',
+      administrator_information: 'Administrator/School Leader Information',
+      implementation_plan: 'Implementation Plan',
+      professional_learning_program_requirements: 'Program Requirements and Submission',
+      school_stats_and_principal_approval_section: 'Administrator Approval and School Information'
     }
 
     PAGE_LABELS = {
-      about_you: {
+      choose_your_program: {
+        program: clean_multiline(
+          "Which professional learning program would you like to participate in for the #{YEAR}
+          school year?"
+        )
+      },
+      find_your_region: {
         country: 'Country',
+        school: 'School',
+        school_name: 'School name',
+        school_district_name: 'School district',
+        school_address: 'School address',
+        school_city: 'School city',
+        school_state: 'School state',
+        school_zip_code: 'School zip code',
+        school_type: 'My school is a'
+      },
+      about_you: {
+        completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
+        completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
@@ -36,37 +62,32 @@ module Pd
         city: 'Home city',
         state: 'Home state',
         zip_code: 'Home zip code',
-        school: 'School',
-        school_name: 'School name',
-        school_district_name: 'School district',
-        school_address: 'School address',
-        school_city: 'School city',
-        school_state: 'School state',
-        school_zip_code: 'School zip code',
-        school_type: 'My school is a',
-        principal_role: "Administrator/School Leader's Role",
-        principal_title: "Administrator/School Leader's title",
-        principal_first_name: "Administrator/School Leader's first name",
-        principal_last_name: "Administrator/School Leader's last name",
-        principal_email: "Administrator/School Leader's email address",
-        principal_confirm_email: "Confirm Administrator/School Leader's email address",
-        principal_phone_number: "Administrator/School Leader's phone number",
+        how_heard: 'How did you hear about this program?'
+      },
+      additional_demographic_information: {
         current_role: 'What is your current role at your school?',
-        completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
-        completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
-        how_heard: 'How did you hear about this program?',
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
            If so, mark the programs you've participated in."
-        )
-      },
-      teaching_background: {
-      },
-      choose_your_program: {
-        program: clean_multiline(
-          "Which professional learning program would you like to participate in for the #{YEAR}
-          school year?"
         ),
+        csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
+        csa_phone_screen: clean_multiline(
+          'Are you able to independently write a function (or procedure) with one or more
+          parameters and that uses conditional logic, loops, and an array (or list)?'
+        ),
+        gender_identity: 'Gender identity:',
+        race: 'Race or ethnicity:',
+      },
+      administrator_information: {
+        principal_title: "Administrator/School Leader's title",
+        principal_first_name: "Administrator/School Leader's first name",
+        principal_last_name: "Administrator/School Leader's last name",
+        principal_role: "Administrator/School Leader's Role",
+        principal_email: "Administrator/School Leader's email address",
+        principal_confirm_email: "Confirm Administrator/School Leader's email address",
+        principal_phone_number: "Administrator/School Leader's phone number"
+      },
+      implementation_plan: {
         csd_which_grades: clean_multiline(
           "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?
            Please note that the CS Discoveries Professional Learning Program
@@ -78,11 +99,6 @@ module Pd
           is not available for grades K-8. (select all that apply)"
         ),
         csp_how_offer: 'How will you offer CS Principles?',
-        csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
-        csa_phone_screen: clean_multiline(
-          'Are you able to independently write and debug an error-free function (or procedure) with
-          one or more parameters and that uses conditional logic, loops, and an array (or list)?'
-        ),
         csa_which_grades: clean_multiline(
           "To which grades does your school plan to offer CSA in the #{YEAR} school year?
           The Code.org CSA curriculum is recommended for those who have successfully completed
@@ -99,13 +115,7 @@ module Pd
           able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
           pay_fee: 'Will your school be able to pay the fee?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
-          scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
-        },
-      additional_demographic_information:
-        {
-          gender_identity: 'Gender identity:',
-          race: 'Race or ethnicity:',
-          how_heard: 'How did you hear about this program?',
+          scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
           agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
         },
       school_stats_and_principal_approval_section: {
@@ -153,7 +163,7 @@ module Pd
         notes_5: "Notes 5",
         alternate_email: "Alternate email",
         school_type: "School type",
-        district_name: PAGE_LABELS[:about_you][:school_district_name],
+        district_name: PAGE_LABELS[:find_your_region][:school_district_name],
         school_city: "School city",
         school_state: "School state",
         school_zip_code: "School zip code",
@@ -162,27 +172,32 @@ module Pd
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
         csa_which_grades: "To which grades does your school plan to offer CSA in the #{YEAR} school year?",
+        csa_already_know: "Have you previously taught CS or have you learned CS yourself?",
+        csa_phone_screen: clean_multiline(
+          'Are you able to independently write a function (or procedure) with one or more
+          parameters and that uses conditional logic, loops, and an array (or list)?'
+        ),
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
-        how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
+        how_heard: PAGE_LABELS[:about_you][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
-        principal_approval_url: "Principal Approval Form URL",
+        principal_approval_url: "Administrator/School Leader Approval Form URL",
         street_address: 'Home street address',
         city: 'Home city',
         state: 'Home state',
       },
       principal: {
-        title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
-        first_name: PAGE_LABELS[:about_you][:principal_first_name] + " (provided by principal)",
-        last_name: PAGE_LABELS[:about_you][:principal_last_name] + " (provided by principal)",
-        role: PAGE_LABELS[:about_you][:principal_role] + " (provided by principal)",
-        email: PAGE_LABELS[:about_you][:principal_email] + " (provided by principal)",
+        title: PAGE_LABELS[:administrator_information][:principal_title] + " (provided by principal)",
+        first_name: PAGE_LABELS[:administrator_information][:principal_first_name] + " (provided by principal)",
+        last_name: PAGE_LABELS[:administrator_information][:principal_last_name] + " (provided by principal)",
+        role: PAGE_LABELS[:administrator_information][:principal_role] + " (provided by principal)",
+        email: PAGE_LABELS[:administrator_information][:principal_email] + " (provided by principal)",
         can_email_you: 'Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)',
-        school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
-        district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
+        school_name: PAGE_LABELS[:find_your_region][:school_name] + " (provided by principal)",
+        district_name: PAGE_LABELS[:find_your_region][:school_district_name] + " (provided by principal)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's #{YEAR} Professional Learning Program?",
         total_student_enrollment: "Total student enrollment",
         free_lunch_percent: "Percent of students who are eligible to receive free or reduced lunch (Principal's response)",
@@ -257,10 +272,11 @@ module Pd
       csd_which_grades: YES_NO,
       csp_which_grades: YES_NO,
       csa_which_grades: YES_NO,
+      csa_already_know: YES_NO,
+      csa_phone_screen: YES_NO,
       committed: YES_NO,
       enough_course_hours: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
-      replace_existing: YES_NO,
       principal_approval: YES_NO,
       principal_schedule_confirmed: YES_NO,
       # Scholarship requirements
@@ -279,7 +295,6 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ],
@@ -288,17 +303,16 @@ module Pd
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ],
       criteria_score_questions_csa: [
         :csa_already_know,
+        :csa_phone_screen,
         :csa_which_grades,
         :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
-        :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ]

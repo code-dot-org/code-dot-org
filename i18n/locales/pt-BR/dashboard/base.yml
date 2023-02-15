@@ -360,6 +360,7 @@ pt:
       educate_beyond: "Além do Code.org"
       educate_inspire: "Inspire um Estudante"
       educate_community: "Comunidade On-Line"
+      educate_requirements: "Requisitos Técnicos"
       educate_tools: "Vídeos e ferramentas"
       about_us: "Quem Somos"
       about_leadership: "Liderança"
@@ -586,6 +587,7 @@ pt:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
     code_from_html: 'A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
+    built_on_github: 'Construído no GitHub da Microsoft'
     google_copyright: '© Google Inc. usado com permissão. Google Classroom é uma marca registrada de Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
     copyright: 'Direitos Autorais'
@@ -597,6 +599,7 @@ pt:
     tos_short: 'Termos'
     tos: 'Termos de Serviço'
     privacy: 'Política de Privacidade'
+    privacy_updated: 'Política de Privacidade Atualizada'
     secure: 'Versão Segura'
     report_abuse: 'Reportar abuso'
     built_on_code_studio: 'Criado no Code Studio'
@@ -666,27 +669,17 @@ pt:
       body_short: "Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos."
       audience: 'A partir de 13 anos'
       cta: 'Saiba como'
-    dance:
-      title: 'Festa dançante'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Festa dançante'
-    hello-world:
-      title: 'Olá Mundo'
-    poem-art:
-      title: 'Arte poética'
-    hoc:
-      title: 'Labirinto clássico'
-      body: 'Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.'
+    dance:
+      title: 'Festa dançante'
     flappy:
       title: 'Código do Flappy bird'
       body: 'Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!'
-    20-hour:
-      title: 'Curso acelerado'
-      body: 'Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.'
-      body_short: 'Aprenda os fundamentos da ciência da computação em uma versão acelerada dos cursos 2 a 4.'
-    hoc2014:
-      try_new_tutorial: 'Experimente nosso novo tutorial da Hora do Código na versão beta'
-      try_frozen: 'O Artista com Anna e Elsa, do filme Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galeria"
       body: "Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários"
@@ -695,18 +688,21 @@ pt:
       body: "O Laboratório de Jogos é um ambiente de programação onde você pode criar animações simples e jogos com objetos e personagens que interagem uns com os outros."
       audience: "A partir de 13 anos"
       cta: "Saiba como"
+    hello-world:
+      title: 'Olá Mundo'
+      body: 'Selecione entre quatro temas divertidos para codificar os personagens interativos em um mundo criado por você.'
+    hero:
+      title: "Minecraft"
+      body: "O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código."
     hoc-encryption:
       title: "Criptografia simples"
       body: "Os alunos vão aprender técnicas para criar e quebrar mensagens encriptadas."
-    weblab:
-      title: "Laboratório Web (beta)"
-      body: "O Laboratório Web é um ambiente de programação onde você pode criar páginas web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site em segundos."
-      audience: "A partir de 13 anos"
-      cta: "Saiba como"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Labirinto clássico'
+      body: 'Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.'
+    hoc2014:
+      try_new_tutorial: 'Experimente nosso novo tutorial da Hora do Código na versão beta'
+      try_frozen: 'O Artista com Anna e Elsa, do filme Frozen'
     infinity:
       title: "Laboratório infinito"
       body: "Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity."
@@ -716,30 +712,38 @@ pt:
     minecraft2016:
       title: "Minecraft"
       body: "Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código."
+    poem-art:
+      title: 'Arte poética'
     sports:
       title: "Esportes"
       body: "Faça um jogo de basquete ou misture os esportes."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Compressão de texto"
       body: "Nesta lição, os alunos irão usar a Ferramenta de Compressão de Texto para comprimir texto substituindo padrões por símbolos."
-    unplugged:
-      title: "Aulas off-line"
-      audience: "A partir de 4 anos"
-      body: "Nós fizemos uma lista de aulas off-line para você usar em sua sala de aula. Agora você pode ensinar os conceitos básicos da ciência da computação, independentemente de ter ou não computadores na sala! Use essas aulas como um curso independente ou como aulas complementares para qualquer curso de ciência da computação."
-      body_short: "Se não tiver computadores, teste essas lições off-line em sua sala de aula."
-    unplugged_conditionals:
-      title: "Condições"
-      body: "Aprenda sobre algoritmos e declarações condicionais nesta atividade \"off-line\" usando um baralho de cartas."
+    weblab:
+      title: "Laboratório Web (beta)"
+      body: "O Laboratório Web é um ambiente de programação onde você pode criar páginas web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site em segundos."
+      audience: "A partir de 13 anos"
+      cta: "Saiba como"
     widgets:
       title: "Widgets"
       body: "Os alunos podem colocar as mãos na massa para explorar os conceitos do nosso curso de Princípios da Ciência da Computação utilizando essas ferramentas digitais. Eles podem usar os \"widgets\" como bem entenderem ou criar uma lição envolvendo um único conceito para suas aulas."
       audience: "Maiores de 14 anos"
       cta: "Saiba como"
+    unplugged_conditionals:
+      title: "Condições"
+      body: "Aprenda sobre algoritmos e declarações condicionais nesta atividade \"off-line\" usando um baralho de cartas."
+    unplugged:
+      title: "Aulas off-line"
+      audience: "A partir de 4 anos"
+      body: "Nós fizemos uma lista de aulas off-line para você usar em sua sala de aula. Agora você pode ensinar os conceitos básicos da ciência da computação, independentemente de ter ou não computadores na sala! Use essas aulas como um curso independente ou como aulas complementares para qualquer curso de ciência da computação."
+      body_short: "Se não tiver computadores, teste essas lições off-line em sua sala de aula."
+    20-hour:
+      title: 'Curso acelerado'
+      body: 'Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.'
+      body_short: 'Aprenda os fundamentos da ciência da computação em uma versão acelerada dos cursos 2 a 4.'
   landing:
     prerelease_tutorial: "Esse tutorial está em **beta**. Ele ainda está sujeito a revisões, conforme são recebidos feedbacks e são feitas melhorias."
     report_bug: "Reportar erro"

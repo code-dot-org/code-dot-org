@@ -10,6 +10,8 @@ import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 import Button from '@cdo/apps/templates/Button';
+import moduleStyles from '@cdo/apps/templates/button.module.scss';
+import classNames from 'classnames';
 import color from '@cdo/apps/util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -76,9 +78,17 @@ class FeedbackDownload extends Component {
       onClickDownload
     } = this.props;
 
+    // These allow the CSVLink to be styled as a button
+    let className = classNames(
+      moduleStyles.main,
+      moduleStyles[Button.ButtonColor.gray],
+      moduleStyles['default']
+    );
+
     return (
       <div>
         <CSVLink
+          role="button"
           filename={i18n.feedbackDownloadFileName({
             sectionName: sectionName,
             scriptName: scriptName,
@@ -87,13 +97,10 @@ class FeedbackDownload extends Component {
           data={exportableFeedbackData}
           headers={this.headers}
           onClick={onClickDownload}
+          style={styles.buttonContainer}
+          className={className}
         >
-          <Button
-            __useDeprecatedTag
-            text={i18n.downloadFeedbackCSV()}
-            onClick={() => {}}
-            color={Button.ButtonColor.gray}
-          />
+          {i18n.downloadFeedbackCSV()}
         </CSVLink>
         <div>
           <SafeMarkdown
@@ -116,6 +123,10 @@ const styles = {
   icon: {
     color: color.purple,
     paddingRight: 5
+  },
+  buttonContainer: {
+    padding: '12px 24px',
+    lineHeight: '10px'
   }
 };
 

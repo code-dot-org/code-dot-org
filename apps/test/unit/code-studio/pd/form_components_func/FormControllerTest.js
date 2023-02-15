@@ -242,12 +242,12 @@ describe('FormController', () => {
   });
 
   describe('Saving', () => {
-    it('Sends incomplete status on save', () => {
+    it('Sends isSaving on save', () => {
       sinon.spy($, 'ajax');
       form = isolateComponent(<FormController {...defaultProps} />);
       clickSaveButton();
       const serverCalledWith = $.ajax.getCall(0).args[0];
-      expect(JSON.parse(serverCalledWith.data).status).to.equal('incomplete');
+      expect(JSON.parse(serverCalledWith.data).isSaving).to.equal(true);
     });
 
     it('Disables the save button during save and renders spinner', () => {
@@ -489,13 +489,13 @@ describe('FormController', () => {
         });
       });
 
-      it('Sends application status as unreviewed on submit', () => {
+      it('Sends isSaving as false on submit', () => {
         sinon.spy($, 'ajax');
         form = isolateComponent(<FormController {...defaultProps} />);
         setPage(2);
         triggerSubmit();
         const serverCalledWith = $.ajax.getCall(0).args[0];
-        expect(JSON.parse(serverCalledWith.data).status).to.equal('unreviewed');
+        expect(JSON.parse(serverCalledWith.data).isSaving).to.equal(false);
       });
 
       it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {

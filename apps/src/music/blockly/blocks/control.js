@@ -3,6 +3,7 @@ import {BlockTypes} from '../blockTypes';
 export const loopFromTo = {
   definition: {
     type: BlockTypes.LOOP_FROM_TO,
+    style: 'loop_blocks',
     message0: 'loop %1 from %2 to %3',
     args0: [
       {
@@ -33,7 +34,6 @@ export const loopFromTo = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
     tooltip: 'loop from a number to another number',
     helpUrl: ''
   },

@@ -346,7 +346,7 @@ exports.mathBlockXml = function(type, inputs, titles) {
 };
 
 /**
- * Generate xml for a functional defintion
+ * Generate xml for a functional definition
  * @param {string} name The name of the function
  * @param {string} outputType Function's output type
  * @param {Object<string, string>[]} argList Name and type for each arg
@@ -915,6 +915,7 @@ exports.createJsWrapperBlockCreator = function(
   return (
     {
       color,
+      style,
       func,
       expression,
       orderPrecedence,
@@ -1017,10 +1018,17 @@ exports.createJsWrapperBlockCreator = function(
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function() {
-        if (color) {
+        // Styles should be used over hard-coded colors in Google Blockly blocks
+        if (style && this.setStyle) {
+          this.setStyle(style);
+        } else if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+          if (this.setStyle) {
+            this.setStyle('default');
+          } else {
+            Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+          }
         }
 
         if (returnType) {

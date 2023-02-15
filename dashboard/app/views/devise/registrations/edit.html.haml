@@ -62,9 +62,6 @@
       = f.password_field :current_password, maxlength: 255
   - if !resource.teacher?
     .field
-      = f.label t('signup_form.gender'), class: "label-bold"
-      = f.select :gender, gender_options
-    .field
       = f.label t('signup_form.age'), class: "label-bold"
       = f.select :age, User::AGE_DROPDOWN_OPTIONS
   - if resource.teacher?

@@ -80,3 +80,18 @@ $debug-header-border-width: 1px;
 .displayInitial {
   display: initial;
 }
+
+.chevronButton {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: color.$white;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &Unfocused {
+    color: color.$dark-charcoal;
+  }
+}

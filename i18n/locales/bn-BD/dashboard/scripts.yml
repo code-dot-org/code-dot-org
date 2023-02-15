@@ -857,6 +857,14 @@ bn:
           lessons:
             lesson-6:
               name: চক্র
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: চলকগুলো
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: ফর লুপ
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:
@@ -875,7 +883,11 @@ bn:
               display_name: ফাংশনগুলি
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: তালিকা
             csp_loops:
+              display_name: চক্র
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: তালিকা
+            lessonGroup-3:
               display_name: চক্র

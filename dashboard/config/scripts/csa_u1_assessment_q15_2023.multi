@@ -20,3 +20,7 @@ myPainter.paint("green");
 
 Which of the following initial conditions must be true for the code to run without error?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Since the first line requires the `Painter` object to move forward one space, it must be able to move forward in the direction it is facing first. If there is an obstacle in front of the `Painter`, calling `move()` will result in an error.
+MARKDOWN

@@ -644,3 +644,8 @@ ky:
         text: алдыга жылдыр
       craft_placeTorch:
         text: чырак орнотуу
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': жүрөктөр
+            '"rain"': жаан

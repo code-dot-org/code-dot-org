@@ -1614,6 +1614,14 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: Kysely
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Muuttujat
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Silmukat
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1650,7 +1658,19 @@ fi:
               display_name: Funktiot
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Listat
             csp_loops:
               display_name: Silmukat
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listat
+            lessonGroup-3:
+              display_name: Silmukat
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'

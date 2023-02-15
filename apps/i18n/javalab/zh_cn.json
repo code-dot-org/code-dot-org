@@ -1,6 +1,7 @@
 {
   "abortedTestResult": "{className} > {methodName} 中止",
   "addAComment": "添加评论",
+  "addACommentToReview": "回复评论",
   "authorizerNearLimit": "您在过去一小时内运行代码次数过多，您的账户会在{attemptsLeft}次尝试之后被永久锁定且无法运行任何Java代码，请在15分钟后重试。",
   "authorizerTokenUsed": "您正在尝试重新使用已运行的代码令牌，请在重试之前确认是否处于安全网络环境中。 如果您认为此消息有误，请联系 support@code.org。",
   "authorLabel": "作者",

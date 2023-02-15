@@ -46,7 +46,7 @@ module Pd::Application
     end
 
     test 'can update status' do
-      application = create FACILITATOR_APPLICATION_FACTORY
+      application = create TEACHER_APPLICATION_FACTORY
       assert application.unreviewed?
 
       application.update(status: 'pending')
@@ -58,7 +58,7 @@ module Pd::Application
 
     test 'regional partner name' do
       partner = build :regional_partner
-      application = build FACILITATOR_APPLICATION_FACTORY, regional_partner: partner
+      application = build TEACHER_APPLICATION_FACTORY, regional_partner: partner
 
       assert_equal partner.name, application.regional_partner_name
     end
@@ -66,7 +66,7 @@ module Pd::Application
     test 'school name' do
       school_info = build :school_info
       teacher = build :teacher, school_info: school_info
-      application = build FACILITATOR_APPLICATION_FACTORY, user: teacher
+      application = build TEACHER_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_name.titleize, application.school_name
     end
@@ -74,7 +74,7 @@ module Pd::Application
     test 'district name' do
       school_info = create :school_info
       teacher = build :teacher, school_info: school_info
-      application = build FACILITATOR_APPLICATION_FACTORY, user: teacher
+      application = build TEACHER_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_district_name.titleize, application.district_name
     end
@@ -213,24 +213,26 @@ module Pd::Application
       assert_equal '2018-03-09', application.date_accepted
     end
 
-    test 'applied_at and date_applied have the first unreviewed status' do
-      application = create :pd_teacher_application, status: 'incomplete'
-      assert_nil application.applied_at
+    %w[unreviewed awaiting_admin_approval].each do |status|
+      test "applied_at and date_applied fields get set once they are submitted with status #{status}" do
+        application = create :pd_teacher_application, status: 'incomplete'
+        assert_nil application.applied_at
 
-      tomorrow = Date.tomorrow.to_time
-      next_day = tomorrow + 1.day
+        tomorrow = Date.tomorrow.to_time
+        next_day = tomorrow + 1.day
 
-      Timecop.freeze(tomorrow) do
-        application.update!(status: 'unreviewed')
+        Timecop.freeze(tomorrow) do
+          application.update!(status: status)
+        end
+
+        Timecop.freeze(next_day) do
+          application.update!(status: 'reopened')
+          application.update!(status: status)
+        end
+
+        assert_equal tomorrow, application.applied_at
+        assert_equal tomorrow, application.date_applied.to_time
       end
-
-      Timecop.freeze(next_day) do
-        application.update!(status: 'reopened')
-        application.update!(status: 'unreviewed')
-      end
-
-      assert_equal tomorrow, application.applied_at
-      assert_equal tomorrow, application.date_applied.to_time
     end
 
     test 'memoized full_answers' do
@@ -334,7 +336,7 @@ module Pd::Application
     end
 
     test 'formatted_partner_contact_email' do
-      application = create :pd_facilitator1920_application
+      application = create :pd_teacher_application
 
       partner = create :regional_partner
 

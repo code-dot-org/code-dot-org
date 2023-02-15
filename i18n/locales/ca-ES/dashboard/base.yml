@@ -19,7 +19,7 @@
 ca:
   errors:
     messages:
-      not_saved: 'Si us plau corregeixi els errors següents:'
+      not_saved: 'Corregeix els errors següents:'
       too_young: 'Aquest contingut té restriccions d''edat en el lloc i no està disponible per als estudiants més joves.'
       teacher_must_accept_terms: 'Aquest contingut té restriccions d''edat en el lloc i no està disponible per als estudiants més joves. Demana el teu professor d''acceptar les condicions actualitzades del servei per poder accedir a aquest contingut. El teu professor pot fer-ho entreu al codi d''estudi i fent clic el botó "Revisió actualitzada termes" a la part superior de la pàgina principal de codi d''estudi.'
       pair_programmer: 'Actualment estàs programant en parella amb un estudiant que no té accés a aquest contingut. Per accedir a aquest contingut, atura la programació en parella i torna-hi.'
@@ -233,7 +233,7 @@ ca:
     update: 'Actualitza'
     submit: 'Envia'
     destroy: 'Destrueix'
-    back: 'Torna'
+    back: 'Tornar'
     confirm: 'Estàs segur?'
     created: '%{model} s''ha creat correctament.'
     updated: '%{model} s''ha actualitzat correctament.'
@@ -241,11 +241,13 @@ ca:
     access_denied: 'No tens accés a aquest %{model}.'
   nav:
     header:
-      finished_hoc: "He acabat la meva Hora de Codi"
+      finished_hoc: "He acabat!"
       sign_in_to_save: 'Inicia la sessió per a desar el progrés'
       course_catalog: "Catàleg de cursos"
       project_gallery: "Projectes"
       help_support: "Ajuda i suport"
+      report_bug: "Informar d'un problema"
+      sprite_lab_documentation: "Documentació del Laboratori d'Sprites"
       educate_hoc: "L'hora del codi"
       about_us: "Sobre nosaltres"
       about_leadership: "Lideratge"
@@ -263,6 +265,7 @@ ca:
       teach: "Ensenya"
       about: "Quant a"
       legal_privacy: "Política de privadesa"
+      legal_cookie_notice: "Política de galetes"
       legal_tos: "Condicions d'ús"
     user:
       classroom: 'Pàgina d''inici de mestre'
@@ -288,7 +291,7 @@ ca:
       gamelab: 'Laboratori de jocs'
       iceage: 'Edat de gel'
       infinity: 'Infinit'
-      minecraft_adventurer: 'Aventurer Minecraft'
+      minecraft_adventurer: 'Minecraft: L''aventurer'
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
       spritelab: 'Laboratori de personatges'
@@ -397,7 +400,11 @@ ca:
     help_from_html: 'Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat a crear aquesta classe.'
     help_from_html_old: 'Enginyers d''Amazon, Google i Microsoft han ajudat a crear aquests materials.'
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Tots els drets reservats. < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Tots els drets reservats. < br / > Frozen &#8482; © %{current_year} Disney. Tots els drets reservats. < br / > Ice Age &#8482; © %{current_year} segle Xx Fox. Tots els drets reservats. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio entreteniment Ltd. Tots els drets reservats. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc Tots els drets reservats. < br / > El sorprenent món de Gumball és marca registrada i © 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tots els drets reservats. Star Wars&#8482; &copy; %{current_year} Disney i Lucasfilm. Tots els drets reservats. Frozen&#8482; &copy; %{current_year} Disney. Tots els drets reservats. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tots els drets reservats. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tots els drets reservats. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tots els drets reservats. DreamWorks Los tipos malos &copy; %{current_year} DreamWorks Animation LLC. Tots els drets reservats.'
+    code_from_html: 'Code.org fa servir p5.play, sota llicència de <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 'Funciona amb Amazon Web Services'
+    built_on_github: 'Fet amb GitHub de Microsoft'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, el logotip de CODE i de l''Hora del Codi&reg; són marques registrades de Code.org.'
     copyright: 'Copyright'
     more: 'Més'
     feedback: 'Digues la teva'
@@ -412,6 +419,8 @@ ca:
     make_my_own_app: 'Fer la meva aplicació'
     how_it_works: 'Com funciona'
     try_hour_of_code: 'Proveu una hora de codi!'
+    store: 'Botiga'
+    cookie_notice: 'Política de galetes'
   reference_area:
     title: 'Necessites ajuda?'
     subtitle: 'Mira aquests vídeos i consells'
@@ -421,13 +430,19 @@ ca:
     direction: 'Direcció de Començament (en graus)'
   video:
     tab: 'Vídeo.'
-    notes: 'Cap vídeo? Mostra les notes.'
+    notes: 'No hi ha vídeo? Mostra les notes.'
     notes_coming_soon: 'Notes per a aquest vídeo molt aviat.'
     autoplay_option: 'Reprodueix automàticament els vídeos'
     download: 'Descarregar vídeo'
+    show_notes: 'Mostrar notes'
+    label: 'Vídeo'
   compatibility:
     upgrade:
+      unsupported_message: "El vostre navegador no és compatible. Sisplau, actualitzeu-lo a [un dels nostres navegadors compatibles](%{supported_browsers_url}). Podeu provar de veure la pàgina, però la funcionalitat es podria veure afectada."
       link: "Més informació"
+      applab_unsupported_tablet: "El Laboratori d'aplicacions funciona millor en un ordinador de sobretaula o portàtil amb ratolí i teclat. És possible que tingueu problemes si feu servir aquesta eina en el dispositiu actual."
+      gamelab_unsupported_tablet: "El Laboratori de jocs funciona millor en un ordinador de sobretaula o portàtil amb ratolí i teclat. És possible que tingueu problemes si feu servir aquesta eina en el dispositiu actual."
+      weblab_unsupported_locale_storage: "És possible que tingueu problemes amb el Laboratori web si feu servir el mode de navegació privada. Sisplau, carregueu el projecte un altre cop amb el mode normal. Disculpeu les molèsties."
   slow_loading: 'Això està trigant més de l''habitual...'
   try_reloading: 'Prova de tornar a carregar la pàgina'
   next_stage: 'Has acabat! Continua amb la següent etapa'
@@ -463,36 +478,34 @@ ca:
     applab:
       title: 'Laboratori d''aplicacions'
       body: "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons."
-    dance:
-      title: 'Festa de ball'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Festa de ball'
-    hoc:
-      title: 'Laberint clàssic'
-      body: 'Prova els conceptes bàsics de la informàtica. Ja ho han fet milions d''usuaris.'
+    dance:
+      title: 'Festa de ball'
     flappy:
       title: 'Codi Flappy'
       body: 'Vols ''escriure el teu propi joc en menys de 10 minuts? Prova el nostre tutorial Codi Flappy!'
-    20-hour:
-      title: 'Curs accelerat'
-      body: 'Aquest curs de 20 hores és una introducció als conceptes bàsics d''informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d''ESO, però és divertit d''aprendre a qualsevol edat.'
-      body_short: 'Aprèn informàtica bàsica en una versió accelerada dels cursos 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Provi la nova classe beta de l''Hora del Codi'
-      try_frozen: 'Amb els personatges Anna i Elsa de Frozem'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galeria"
       body: "Mira tota una galeria d'imatges artístiques i aplicacions creades pels nostres usuaris"
     gamelab:
       title: "Laboratori de jocs"
       body: "El Laboratori de jocs és un entorn de programació on podeu crear animacions simples i jocs amb objectes i caràcters que interaccionen uns amb altres."
-    weblab:
-      title: "Laboratori web (beta)"
-      body: "El Laboratori web és un entorn de programació on podeu crear pàgines web simples utilitzant HTML i CSS. Dissenyeu pàgines i compartiu el vostre lloc web en pocs segons."
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hello-world:
+      body: 'Trieu entre quatre temes divertits per codificar caràcters interactius en un món que creeu.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi."
+    hoc:
+      title: 'Laberint clàssic'
+      body: 'Prova els conceptes bàsics de la informàtica. Ja ho han fet milions d''usuaris.'
+    hoc2014:
+      try_new_tutorial: 'Provi la nova classe beta de l''Hora del Codi'
+      try_frozen: 'Amb els personatges Anna i Elsa de Frozem'
     infinity:
       title: "Infinity Play Lab"
       body: "Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity."
@@ -502,19 +515,23 @@ ca:
     minecraft2016:
       title: "Minecraft"
       body: "Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi."
-    unplugged:
-      title: "Lliçons sense connexió"
-      body_short: "Si no teniu ordinadors, proveu aquestes lliçons sense connexió a la classe."
-    unplugged_conditionals:
-      title: "Condicionals"
+    starwars:
+      title: "Star Wars"
+    weblab:
+      title: "Laboratori web (beta)"
+      body: "El Laboratori web és un entorn de programació on podeu crear pàgines web simples utilitzant HTML i CSS. Dissenyeu pàgines i compartiu el vostre lloc web en pocs segons."
     widgets:
       title: "Ginys"
       audience: "Edat 14 +"
+    unplugged_conditionals:
+      title: "Condicionals"
+    unplugged:
+      title: "Lliçons sense connexió"
+      body_short: "Si no teniu ordinadors, proveu aquestes lliçons sense connexió a la classe."
+    20-hour:
+      title: 'Curs accelerat'
+      body: 'Aquest curs de 20 hores és una introducció als conceptes bàsics d''informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d''ESO, però és divertit d''aprendre a qualsevol edat.'
+      body_short: 'Aprèn informàtica bàsica en una versió accelerada dels cursos 2-4.'
   landing:
     report_bug: "Informeu d'errors"
     support: "Obtenir ajuda"
@@ -622,6 +639,8 @@ ca:
           other: 'Altres'
   hoc_download:
     minecraft_name: 'Hora del Codi de Minecraft'
+  hidden_stage: "El teu professor no tenia previst que arribessis aquí. Pregunta-li quina lliçó has de fer."
+  return_unit_overview: 'Anar el resum de la unitat'
   view_teacher_guide: 'Veure la guia docent'
   pd:
     form_labels:
@@ -651,6 +670,7 @@ ca:
     accept: 'D''acord'
   copy: 'Copiar'
   confirm: 'confirmació'
+  code_org_logo_alt: "Inici de Code.org"
   lesson_lock:
     error:
       no_updates: "No hi ha actualitzacions per realitzar"

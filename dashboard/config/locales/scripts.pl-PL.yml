@@ -3641,6 +3641,9 @@ pl:
           title: Wykrywacz kolizji
         dance-2019:
           title: Potańcówka (2019)
+          description_short: Koduj imprezę taneczną, aby podzielić się nią ze znajomymi.
+            Z udziałem Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzyka
+            z filmu Disneya „Encanto,” i więcej!
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją
             swoim znajomym.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij
@@ -6616,6 +6619,8 @@ pl:
           lessons:
             lesson-7:
               name: Wprowadzenie do Duszków
+            lesson-9:
+              name: Microbit Playground
         csc-pilot-2022-ecosystems:
           name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
@@ -6881,6 +6886,13 @@ pl:
         vpl-csa-2022:
           name: vpl-csa-2022
           title: CSA Wirtualne profesjonalne uczenie się
+          lessons:
+            lesson-4:
+              name: 'Moduł 4 po pracy: Tablice 2D w Jednostce 5 i FRQ'
+            lesson-5:
+              name: 'Moduł 5 po pracy: Projekt Jednostki 5'
+            lesson-6:
+              name: 'Moduł 6 po pracy: Metody łańcuchowe w Jednostce 6'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -6911,6 +6923,21 @@ pl:
             lesson-20:
               name: Aktywność otwarta
         csa-draft-pl:
+          lessons:
+            lesson-3:
+              name: 'Moduł 4 po pracy: FRQ i Jednostka 5'
+            lesson-4:
+              name: 'Moduł 5 po pracy: Jednostka 5 Projekt'
+            lesson-5:
+              name: 'Moduł 6 po pracy: Metody łańcuchowe w Jednostce 6'
+            lesson-6:
+              name: 'Moduł 7 po pracy: Projekt jednostki 7'
+            lesson-7:
+              name: 'Moduł 8 po pracy: Przygotowanie studentów do egzaminu AP'
+            lesson-8:
+              name: 'Moduł 8 po pracy: Przygotowanie studentów do egzaminu AP'
+            lesson-9:
+              name: Moduł X
           name: csa-draft-pl
         vpl-csd2-ayw-pilot-2022:
           lessons:
@@ -7007,10 +7034,20 @@ pl:
               name: Ankieta wstępna CSA
             lesson-2:
               name: Java Lab
+            lesson-4:
+              name: Sąsiedztwo
+            lesson-5:
+              name: Nawigacja i malowanie
             lesson-6:
               name: Pętle
+            lesson-7:
+              name: Dziedziczenie
             lesson-8:
               name: Metody pisania
+            lesson-9:
+              name: Styl programowania i opinie
+            lesson-10:
+              name: Instrukcje wyboru
             lesson-11:
               name: Strategie debugowania
             lesson-12:
@@ -7018,7 +7055,7 @@ pl:
             lesson-13:
               name: Dwukierunkowe instrukcje wyboru
             lesson-15:
-              name: Skrajne przypadki
+              name: Metody z parametrami
             lesson-16:
               name: Otwarty kod źródłowy
             lesson-20:
@@ -7037,9 +7074,77 @@ pl:
           name: csa1-2023
           title: Programowanie obiektowe
         csa2-2023:
+          lessons:
+            lesson-1:
+              name: Atrybuty
+            lesson-2:
+              name: Konstruktory bez argumentów
+            lesson-3:
+              name: Sparametryzowane konstruktory
+            lesson-4:
+              name: Zmienne
+            lesson-5:
+              name: Metody Accessor
+            lesson-6:
+              name: Dane użytkownika
+            lesson-7:
+              name: Operatory i wyrażenia
+            lesson-8:
+              name: Metody mutatorów
+            lesson-9:
+              name: Drukowanie obiektów
+            lesson-10:
+              name: Projekt zarządzania sklepem
+            lesson-11:
+              name: Praktyka FRQ
+            lesson-12:
+              name: Jednostka 2 Sprawdzian
+            lesson-13:
+              name: Projekt zarządzania sklepem [wersja 1-dniowa]
+            lesson-14:
+              name: To słowo kluczowe
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa2-2023
           title: Struktura klas i Projekt
         csa3-2023:
+          lessons:
+            lesson-2:
+              name: Modyfikowanie elementów
+            lesson-3:
+              name: Pętle dla (for)
+            lesson-4:
+              name: Warunki wstępne i warunki końcowe
+            lesson-5:
+              name: Ulepszone dla pętli
+            lesson-6:
+              name: Zmienne statyczne i stałe
+            lesson-7:
+              name: Polimorfizm
+            lesson-8:
+              name: Algorytmy macierzowe
+            lesson-9:
+              name: Znajdowanie duplikatów
+            lesson-10:
+              name: Dane dla projektu dobra społecznego
+            lesson-11:
+              name: Praktyka FRQ
+            lesson-12:
+              name: Jednostka 3 Sprawdzian
+            lesson-13:
+              name: Dane dla projektu dobra społecznego [wersja 1-dniowa]
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           name: csa3-2023
           title: Tablice i Algorytmy
         csa4-2023:
@@ -7059,12 +7164,20 @@ pl:
           title: Wyszukiwanie i porządkowanie
         vpl-csd3-ayw-pilot-2022:
           lessons:
+            lesson-3:
+              name: Ocena kształtujący w Odkrycia Informatyki
             lesson-4:
               name: Równość i dane
+            lesson-6:
+              name: Moduł 3 Praca asynchroniczna
+            lesson-7:
+              name: Cykle zapytań o dane
           name: vpl-csd3-ayw-pilot-2022
           title: Odkrycia informatyki wirtualny moduł 3
         vpl-csd4-ayw-pilot-2022:
           lessons:
+            lesson-3:
+              name: Definiowanie sukcesu ucznia w ocenie podsumowującej
             lesson-5:
               name: Moduł 4 Praca asynchroniczna
           name: vpl-csd4-ayw-pilot-2022
@@ -7082,14 +7195,64 @@ pl:
             lesson-5:
               name: Użyj tablic, aby uzyskać losowe odpowiedzi
           title: AP CSA Magpie Lab
+          description: "Od Elizy w latach sześćdziesiątych po Siri i Watsona dzisiaj,
+            pomysł rozmowy z komputerami w języku naturalnym fascynował ludzi. (I
+            tak, odbyła się więcej niż jedna rozmowa między Elizą i Siri - wyszukaj
+            „chatbot Eliza Siri”.) Podczas gdy przetwarzanie języka naturalnego (NLP)
+            jest złożoną dziedziną, dość łatwo jest stworzyć prosty program odpowiadający
+            na angielskie zdania.\n\n**Wymagania wstępne**\n\nPrzed wykonaniem tego
+            ćwiczenia uczniowie powinni umieć:\n\n-   zlokalizować strony internetowe
+            za pomocą przeglądarki internetowej\n-   uruchamiać i edytować programy
+            w Java, które korzystają z klas\n-   śledzić kod\n-   odczytywać interfejsy
+            API zarówno dla standardowych bibliotek Java, jak i lokalnego kodu "
+          student_description: |-
+            Od Elizy w latach sześćdziesiątych po Siri i Watsona dzisiaj, pomysł rozmowy z komputerami w języku naturalnym fascynował ludzi. Coraz więcej programów komputerowych pozwala ludziom na interakcję z nimi przez wpisanie zdań po angielsku. Dziedzina informatyki, która dotyczy sposobu, w jaki komputery mogą rozumieć język ludzki, nazywa się przetwarzaniem języka naturalnego (NLP).
+
+            NLP jest dziedziną, która stara się, aby komputery rozumiały naturalny (tj. ludzki) język. Istnieje wiele ekscytujących przełomów w tej dziedzinie.
+
+            Dla tego laboratorium, poznasz niektóre z podstaw NLP. Podczas odkrywania tego, będziesz pracować z różnymi metodami klasy 'Łańcuch ('String`) i ćwiczyć używając instrukcji 'jeśli" (`if\`). Będziesz śledzić metodę, aby znaleźć słowa w danych wejściowych użytkownika.
         emma:
           lessons:
             lesson-1:
               name: ćwiczenia
         csa-consumer-review-lab:
           lessons:
+            lesson-1:
+              name: Recenzje i wartość nastrojów
+            lesson-2:
+              name: Wartość nastrojów i oceny w gwiazdkach
             lesson-5:
               name: Aktywność otwarta
+          title: Laboratorium przeglądu konsumentów AP CSA
+          description: "Consumer Review Lab zapewnia uczniom możliwość pracy nad większym
+            zadaniem obejmującym wiele klas na początku kursu, zanim dowiedzą się,
+            jak pisać własne klasy. Koncentrując się na wywoływaniu metod i wykorzystaniu
+            struktur sterowania selekcją i iteracją, uczniowie zdobędą praktykę, która
+            bezpośrednio odnosi się do pytań otwartych z zakresu **Metody i Struktury
+            Sterujące**, z którymi zetkną się na egzaminie na koniec roku. Ponieważ
+            uczniowie często zmagają się z metodami w klasie \"Łańcuch\" („String”),
+            to laboratorium koncentruje się w szczególności na wywoływaniu tych metod
+            i budowaniu łańcuchów w interesujący i angażujący sposób.\n\n### Połączenie
+            w świecie rzeczywistym\n\nWszyscy regularnie korzystamy z recenzji, aby
+            pomóc nam określić, który film zobaczyć, w którą grę wideo zagrać, a nawet
+            jaką parę słuchawek kupić. Ale jak łatwo jest sfałszować recenzję? Prawda
+            jest taka, że jest to niezwykle proste, a fałszywe recenzje mogą mieć
+            znaczący wpływ na produkty, które są kupowane lub konsumowane, w tym filmy,
+            które ludzie oglądają i restauracje, w których zdecydują się zjeść. Gdyby
+            konsumenci wiedzieli, że recenzja, którą czytali i wykorzystują do podjęcia
+            decyzji, pochodzi z programu komputerowego, a nie od człowieka, mogli
+            by być mniej skłonni w to uwierzyć. \n\nJaką motywację mają ludzie do
+            tworzenia fałszywych recenzji lub komentarzy i co należy zrobić, aby temu
+            zapobiec, jeśli w ogóle? Jeśli technologia może być wykorzystana do tworzenia
+            i publikowania pozytywnych recenzji własnych produktów firmy lub negatywnych
+            recenzji konkurencji, jakie są tego konsekwencje etyczne?\n\nTworzenie
+            fałszywych recenzji ma implikacje etyczne i ważne jest, aby podkreślić,
+            że chociaż uczniowie przechodzą przez proces, aby zobaczyć jak można je
+            generować, w żaden sposób nie opowiada się za tego typu zachowaniami.
+            Jest to podobne do hakerów „białego kapelusza”, którzy muszą zrozumieć
+            te same narzędzia i procesy hakerów przestępczych, aby wykonywać swoją
+            pracę. Omów z uczniami obawy etyczne i to, jak zrozumienie tego procesu
+            jest ważne dla zapobiegania niechcianym zachowaniom w Internecie. "
         csa-data-lab:
           lessons:
             lesson-1:
@@ -7100,6 +7263,21 @@ pl:
               name: Zbierając to wszystko razem...
             lesson-4:
               name: Aktywność otwarta
+          title: AP CSA Data Lab
+          description: |-
+            Uczniowie są zmotywowani, jeśli czują się związani z materiałem, który studiują. Jednym ze sposobów, aby treści informatyczne były odpowiednie, znaczące, relatywne, a ekscytujące jest włączenie rzeczywistych zestawów danych do praktycznych zadań programistycznych.
+
+            Dane są wartościami. Wartości same w sobie nie są wiedzą, wiedza jest tym, co zyskujesz dzięki badaniu danych. To ćwiczenie ma na celu zachęcenie uczniów do czerpania wiedzy na interesujący ich temat poprzez zbadanie zestawu dostępnych danych z sieci. Aby zdobyć wiedzę z danych w tym laboratorium, uczniowie zadadzą pytanie, wyszukają zestawu danych na ten temat, a następnie przetworzą te dane, aby znaleźć odpowiedź na ich pytanie.
+
+            ### Połączenie w świecie rzeczywistym
+
+            Możliwość dostępu i przetwarzania danych jest ważną częścią wielu branż. Niezależnie od tego, czy chodzi o ustalenie najlepszej alokacji zasobów, czy podjęcie decyzji, jaki nowy produkt stworzyć, analizowanie danych jest niezbędnym elementem tych dociekań. Na szczęście dostępne są narzędzia ułatwiające odczyt i przetwarzanie danych, a to laboratorium przybliży uczniom jedno z takich narzędzi i poprosi ich o wykorzystanie istniejących danych ze świata rzeczywistego, aby odpowiedzieli na pytanie, które ich interesuje.
+          student_description: Dane są wartościami. Wartości same w sobie nie są wiedzą,
+            wiedza jest tym, co zyskujesz dzięki badaniu danych. To ćwiczenie ma na
+            celu zachęcenie Cię do czerpania wiedzy na interesujący Cię temat poprzez
+            zbadanie zestawu swobodnie dostępnych danych z sieci. Aby zdobyć wiedzę
+            z danych w tym laboratorium, zadasz pytanie, wyszukaj zestaw danych na
+            ten temat, a następnie przetwórz te dane, aby odpowiedzieć na swoje pytanie.
         hello-world-space-2022:
           title: 'Witaj świecie: kosmos'
         hello-world-soccer-2022:
@@ -7162,24 +7340,44 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
           name: physcomp-temp
+          description: |-
+            W jednostce Physical Computing (Informatyka z Urządzeniami Fizycznymi) uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i Adafruit Circuit Playground, uczniowie opracowują programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc na to, jak prosty surowy prototyp może doprowadzić do gotowego produktu. Następnie uczniowie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” ("maker") do tworzenia prototypów z codziennych materiałów.
+
+            **Wskazówki dotyczące implementacji Informatyki z Urządzeniami Fizycznymi**
+
+            -   Ta jednostka wymaga, by uczniowie mieli dostęp do Circuit Playground - [kliknij tutaj](https://code.org/circuitplayground), aby uzyskać więcej informacji na temat korzystania z Circuit Playground w klasie
+            -   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+
+            \*\* Rozwój zawodowy:\*\* Jeśli jesteś zainteresowany prowadzeniem tego kursu, zalecamy ukończenie bezpłatnego [Moduł rozwoju zawodowego, we własnym tempie, w zakresie informatyki z urządzeniami fizycznymi](<>). Moduł został zaprojektowany tak, aby trwał 2 godziny. Nie zakłada się wcześniejszego doświadczenia z kodowaniem lub sztuczną inteligencją.
         csc-bookcover:
           lessons:
             lesson-1:
               name: Okładka
           name: csc-bookcover
           title: Okładka CSC
-          description: jest to wewnętrzny skrypt jako źródło prawdy dla tej lekcji,
-            który zostanie ponownie wykorzystany w innych modułach CSC.
         csc-landmarks-pilot:
           lessons:
             lesson-1:
               name: Zabytki USA
             lesson-3:
               name: Lokalni gawędziarze
+            lesson-5:
+              name: Lokalni gawędziarze
           name: csc-landmarks-pilot
-          description: Moduł pilotażowy zima 2022 r. – Moduł historycznych zabytków
-            i punktów orientacyjnych na mapie
         csc-playground:
+          lessons:
+            lesson-2:
+              name: Lekcja cząstek 1
+            lesson-3:
+              name: Lekcja cząstek 2
+            lesson-4:
+              name: Lekcja cząstek 3
+            lesson-5:
+              name: Lekcja cząstek 4
+            lesson-6:
+              name: Testowanie Katie
+            lesson-7:
+              name: Funkcje labiryntu
           name: csd-playground
           title: Plac Zabaw CSP
         self-paced-pl-physical-computing1:
@@ -7190,11 +7388,23 @@ pl:
               name: Ta lekcja wymaga nazwy
           name: self-paced-pl-physical-computing2
         emmas-playground:
+          lessons:
+            lesson-1:
+              name: Rzeczy Emmy
+            lesson-2:
+              name: NOWOŚĆ- Maszyny funkcyjne
           name: emmas-playground
+        amys-playground:
+          lessons:
+            lesson-1:
+              name: Pęczek rzeczy
         csc-function-machines-pilot:
           lessons:
             lesson-1:
               name: Co to za dźwięk?
+            lesson-4:
+              name: Sekretna wiadomość
+          title: Moduł pilotażowy funkcjonowania maszyn
         csp1-2023:
           lesson_groups:
             cspSurvey:
@@ -7223,7 +7433,7 @@ pl:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listy
+              display_name: Dane
             csp_loops:
               display_name: Pętle
             csp_traversals:
@@ -7232,12 +7442,25 @@ pl:
               display_name: Projekt
             lessonGroup-5:
               display_name: Ankieta po odbyciu kursu
+            lessonGroup-6:
+              display_name: Ankieta poprzedzająca jednostkę
+          lessons:
+            lesson-1:
+              name: Listy, pętle i przejścia przed ankietą
+          name: csp5-2023
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Jednistka 6: Algorytmy'
+              display_name: Listy
             lessonGroup-2:
               display_name: Ankieta po odbyciu kursu
+            lessonGroup-3:
+              display_name: Pętle
+            lessonGroup-4:
+              display_name: Przejścia
+            lessonGroup-5:
+              display_name: Projekt
+          name: csp6-2023
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -7252,18 +7475,21 @@ pl:
               display_name: Twórz PT
             lessonGroup-3:
               display_name: Ankieta po odbyciu kursu
+          name: csp8-2023
         csp9-2023:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Jednostka 9: Dane'
             lessonGroup-2:
               display_name: Ankieta po odbyciu kursu
+          name: csp9-2023
         csp10-2023:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
             lessonGroup-2:
               display_name: Ankieta po odbyciu kursu
+          name: csp10-2023
         csp-post-survey-2023:
           title: Zasady informatyki Ankieta po kursie
           description: Ta jednostka zawiera ankietę po kursie Zasady Informatyki
@@ -7271,6 +7497,7 @@ pl:
             Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
         self-paced-pl-csa3-2023:
           title: 'Moduł 3: Wsparcie przy programowaniu tekstowym'
+          name: self-paced-pl-csa3-2023
         csa-examples-22:
           lessons:
             lesson-1:
@@ -7289,3 +7516,123 @@ pl:
               name: Jednostka 7 Projekty
             lesson-8:
               name: Jednostka 8 Projekty
+          title: Przykłady projektów Jednostki CSA [2022-2023]
+        amy-playground:
+          lessons:
+            lesson-1:
+              name: Cząstki
+            lesson-3:
+              name: Sprite Lab Building Demo
+        angelina-playground:
+          lessons:
+            lesson-1:
+              name: Stany rzeczy
+            lesson-2:
+              name: OG Stany rzeczy
+            lesson-4:
+              name: Siatka CSS
+          name: angelina-playground
+          title: Miejsce Angeliny do robienia rzeczy
+        csc-pilot-fa2022-timecapsule:
+          name: csc-pilot-fa2022-timecapsule
+          title: Kapsuły czasu (jesień 2022 pilotaż)
+        csc-pilot-fa2022-ecosystem:
+          name: csc-pilot-fa2022-ecosystem
+          title: Ekosystemy (jesień 2022 pilotaż)
+        csp-playground:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Zmienne EIPM (Erik)
+          name: csd-playground
+          title: Plac Zabaw CSP
+        csc-pilot-fa2022-particles:
+          name: csc-pilot-fa2022-particles
+          title: 'Cząstki '
+        devices-2022:
+          lessons:
+            lesson-11:
+              name: Proces rozwiązywania problemów z programowaniem
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: urządzenia-2022
+          title: Tworzenie aplikacji dla urządzeń
+          description: "W jednostce Tworzenie aplikacji za pomocą urządzeń uczniowie
+            badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i
+            Adafruit Circuit Playground, uczniowie opracowują programy, które wykorzystują
+            te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach,
+            patrząc, jak prosty zgrubny prototyp może doprowadzić do gotowego produktu.
+            Następnie uczniowie badają, w jaki sposób można wykorzystać urządzenia
+            fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia
+            „twórcy” do tworzenia prototypów z codziennych materiałów. \n\n**Wskazówki
+            dotyczące wdrażania tworzenia aplikacji za pomocą urządzeń**\n\n-   Ta
+            jednostka wymaga od uczniów dostępu do Circuit Playground - [kliknij tutaj](https://code.org/circuitplayground),
+            aby uzyskać więcej informacji na temat korzystania z Circuit Playground
+            w klasie\n-   Wskazówki dotyczące wspierania uczniów na poziomach programowania
+            i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview)
+            i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n\n\\*\\*Rozwój
+            zawodowy: \\*\\* Jeśli jesteś zainteresowany prowadzeniem tego kursu,
+            zalecamy ukończenie bezpłatnego [Tworzenie aplikacji z urządzeniami Moduł
+            Profesjonalnego rozwoju zawodowego we własnym tempie](https://studio.code.org/courses/self-paced-pl-physical-computing-2022).
+            Moduł został zaprojektowany na 2 godziny. Nie zakłada się wcześniejszego
+            doświadczenia z kodowaniem lub sztuczną inteligencją."
+        allthevalidation:
+          lessons:
+            lesson-1:
+              name: Walidacja Sprite Lab
+          name: allthevalidation
+          title: Cała walidacja
+          description: Jest to miejsce do tworzenia poziomów, aby udokumentować i
+            ujednolicić test walidacji Sprite Lab
+        vpl-csd5-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Wspieranie równości
+            lesson-5:
+              name: Badanie asynchronicznego programu nauczania
+          name: vpl-csd4-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 5
+        vpl-csd6-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Wspieranie uczenia się uczniów
+            lesson-5:
+              name: Badanie asynchronicznego programu nauczania
+          name: vpl-csd4-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 6
+        self-paced-pl-csa4-2023:
+          lessons:
+            lesson-1:
+              name: Tworzenie i stosowanie obiektów
+            lesson-2:
+              name: Odkrywanie klasy Painter
+          name: self-paced-pl-csd4-2023
+        katies-playground:
+          lessons:
+            lesson-1:
+              name: Pomysły FM
+          name: katies-playground
+          title: Miejsce Katie do robienia rzeczy
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: mikrobit-2022
+          title: Tworzenie aplikacji z urządzeniami (Micro:bit)
+        microbit-temp:
+          lessons:
+            lesson-11:
+              name: Wyświetlacz LED
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          name: mikrobit-temp
+          title: 'Micro: Bit Temp'

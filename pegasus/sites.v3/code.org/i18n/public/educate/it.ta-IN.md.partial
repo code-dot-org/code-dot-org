@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ theme: responsive
 | **இணைய சிமுலேட்டரைப் பயன்படுத்த**                                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **இணைய ஆய்வகத்தைப் பயன்படுத்த**                                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **கூகுள் கிளாஸ்ரூம் ஷேர் பட்டனைப் பயன்படுத்த**                                                | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                                   | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## மொபைல் மற்றும் டேப்லெட் ஆதரவு விவரங்கள்
 

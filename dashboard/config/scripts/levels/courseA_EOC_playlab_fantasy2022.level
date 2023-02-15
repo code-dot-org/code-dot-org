@@ -1,9 +1,5 @@
 <Studio>
   <config><![CDATA[{
-  "game_id": 33,
-  "created_at": "2022-01-06T20:08:15.000Z",
-  "level_num": "custom",
-  "user_id": 302,
   "properties": {
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
@@ -62,9 +58,13 @@
     "thumbnail_url": "https://images.code.org/69fa109c60bdbb56a2127b9c9d34c182-image-1617203016795.gif",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 33,
+  "created_at": "2022-01-06T20:08:15.000Z",
+  "user_id": 302,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:15.666+00:00\",\"changed\":[\"cloned from \\\"courseA_EOC_playlab_fantasy\\\"\"],\"cloned_from\":\"courseA_EOC_playlab_fantasy\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:15.666+00:00\",\"changed\":[\"cloned from \\\"courseA_EOC_playlab_fantasy\\\"\"],\"cloned_from\":\"courseA_EOC_playlab_fantasy\"},{\"changed_at\":\"2023-01-03 22:16:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks>
     <initialization_blocks>
@@ -102,40 +102,43 @@
     <toolbox_blocks>
       <xml>
         <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">0</title>
+          <field name="SPRITE">0</field>
+          <field name="VALUE">0</field>
         </block>
         <block type="studio_move">
-          <title name="SPRITE">0</title>
-          <title name="DIR">1</title>
-        </block>
-        <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <field name="SPRITE">0</field>
+          <field name="DIR">1</field>
         </block>
         <block type="studio_playSound">
-          <title name="SOUND">random</title>
+          <field name="SOUND">random</field>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <field name="SPRITE">0</field>
+          <field name="VALUE">Hi there.</field>
         </block>
         <block type="studio_setBackground">
-          <title name="VALUE">"city"</title>
+          <field name="VALUE">"city"</field>
         </block>
         <block type="studio_setSprite">
-          <title name="VALUE">"visible"</title>
-          <title name="SPRITE">1</title>
+          <field name="VALUE">"visible"</field>
+          <field name="SPRITE">1</field>
         </block>
         <block type="studio_setSprite">
-          <title name="VALUE">"hidden"</title>
-          <title name="SPRITE">0</title>
+          <field name="VALUE">"hidden"</field>
+          <field name="SPRITE">0</field>
         </block>
         <block type="studio_whenArrow">
-          <title name="VALUE">up</title>
+          <field name="VALUE">up</field>
         </block>
         <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">1</title>
+          <field name="SPRITE">1</field>
         </block>
         <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">1</title>
+          <field name="SPRITE1">0</field>
+          <field name="SPRITE2">1</field>
+        </block>
+        <block type="controls_repeat_simplified_dropdown">
+          <field name="TIMES" config="3-10">5</field>
         </block>
       </xml>
     </toolbox_blocks>

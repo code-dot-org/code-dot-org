@@ -1368,3 +1368,9 @@ et:
           DIR:
             right: paremale ↻
             left: vasakule ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Mullid
+            '"hearts"': südamed
+            '"rain"': vihm

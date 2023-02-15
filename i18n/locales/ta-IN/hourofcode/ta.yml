@@ -44,6 +44,8 @@ ta:
   hoc2022_codeorg_title: நாசா மற்றும் பலவற்றுடன் ஹவர் ஆஃப் கோட் கொண்டாடுங்கள்
   hoc2022_codeorg_description: 10வது மணிநேரக் குறியீடு இந்த உலகில் இல்லை! எங்களுடன்
     ஆராயவும், விளையாடவும் மற்றும் உருவாக்கவும் வாருங்கள்.
+  social_hoc2022_dance: பியோன்சே இடம்பெறும், ஹாரி ஸ்டைல்ஸ், லிஸ்ஸோ, லில் நாஸ் எக்ஸ்,
+    செலினா கோம்ஸ், டிஸ்னியின் இருந்து இசை “Encanto,” மேலும்!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: இன்று கற்றுக் கொள்ளுங்கள், நாளை பிரகாசமாக உருவாக்குங்கள்.
@@ -162,6 +164,10 @@ ta:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: கோட் லைவ் நேரம்
   hoc_live_sign_up_title: மணிநேர நேரத்திற்கு பதிவுபெறுக
   hoc_live_learn_title: மணிநேர குறியீட்டைக் கற்றுக்கொள்ளுங்கள்
@@ -560,6 +566,10 @@ ta:
   signup_registration_closed: உலகமெங்கும் Hour of Code உடன் கம்ப்யூட்டர் சயின்ஸ் கல்வி
     வாரத்தை கொண்டாடுகிற பல லட்சக்கணக்கான மாணவர்களுடன் ஒவ்வொரு ஆண்டும் டிசம்பரில் உங்கள்
     வகுப்பு இணையலாம். ஆண்டு விழா கொண்டாட்டத்திற்கான பதிவை அக்டோபரில் நாங்கள் திறக்கிறோம்.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: "%{campaign_date}-ல் ஒரு Hour of Code –ஐ ஏற்பாடு செய்து, இங்கு பதிவு
     செய்யுங்கள்."
   signup_name_label: உங்கள் பெயர்
@@ -608,6 +618,7 @@ ta:
     என விளக்கவும்
   signup_send_posters_address_placeholder: இந்த முகவரி எங்கள் மேப்பில் பகிரப்படாது
   signup_event_type_in_school: ஒரு பள்ளியில்
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: பள்ளிக்கு வெளியே
   signup_event_type_at_home: வீடு
   signup_submit_census_label: சமர்ப்பி
@@ -1081,6 +1092,10 @@ ta:
   footer_menu_terms: நிபந்தனைகள்
   footer_menu_privacy: தனியுரிமைக் கொள்கை
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: Hour of Code நடவடிக்கைகள்
   learn_banner_blurb: 45க்கும் அதிகமான மொழிகளில் அனைத்து வயதினருக்கும் வடிவமைக்கப்பட்ட
     ஒரு ஒரு-மணிநேர டுடோரியலை முயற்சித்துப் பாருங்கள்.  180க்கும் அதிகமான நாடுகளில்
@@ -1094,11 +1109,6 @@ ta:
     படிக்கவும் </a>'
   learn_banner_teachers_markdown: 'ஆசிரியர்கள்: [ஒரு மணிநேரத்தை ஹோஸ்ட் செய்யுங்கள்]
     (%{host_url}) அல்லது [எப்படி வழிகாட்டியைப் படிக்கவும்] (%{howto_url}'
-  learn_robotics_banner_heading: ரோபோடிக்ஸ் மற்றும் சர்க்யூட்கள்
-  learn_robotics_banner_blurb: ரோபோக்கள் அல்லது பொருள்ரீதியான கணினி கருவிப்பெட்டியை
-    வைத்துள்ளீர்களா? அவற்றை கீழ்க்காணும் நடவடிக்கைகளுக்குப் பயன்படுத்தி எந்த வயதையும்
-    சேர்ந்த மாணவர்களுக்கு ஒரு உறுதியான Hour of Code ஐ உருவாக்குங்கள். எந்த ஹார்டுவேரும்
-    இன்றி நீங்கள் துவங்க ஏதுவாக சில நடவடிக்ககளில் ஒரு சிமுலேட்டரும் வழங்கப்படுகிறது.
   tutorial_dance2019_name: நடன விருந்து
   tutorial_danceparty_name: நடன விருந்து
   tutorial_chibitronics_name: 'சிபிட்ரோனிக்ஸ்: ஒளிரும் கதை'
@@ -7872,8 +7882,7 @@ ta:
   tutorial_irobotphone_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_codeguppydraw_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_codejumper_string_platforms: அன்ப்ளுக்ட்,ஸ்கிரீன் ரீடர்
-  tutorial_meeempathy_string_platforms: 'அனைத்து நவீன உலாவிகளும்,ஆண்ட்ராய்டு டேப்லெட்
-    ,ஐபாட் '
+  tutorial_meeempathy_string_platforms: ஐபாட், கணினிகள் (விண்டோஸ் பிசி, மேக்)
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: சிபிட்ரோனிக்ஸ் சிபி சிப் மற்றும்
@@ -10310,7 +10319,7 @@ ta:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -10522,10 +10531,12 @@ ta:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10854,8 +10865,7 @@ ta:
   tutorial_microsoftforest_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_blackbirdscreen_string_platforms: குரோம்
   tutorial_toxicodecompute2_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: ஐபாட், கணினிகள் (விண்டோஸ் பிசி, மேக்)
   tutorial_blackbirdtether_string_platforms: குரோம்
   tutorial_ob_string_platforms: அனைத்து நவீன உலாவிகள், ஸ்க்ரீன் ரீடர்
   tutorial_codeartportrait_string_platforms: 'அனைத்து நவீன உலாவிகளும்,ஆண்ட்ராய்டு
@@ -11186,7 +11196,7 @@ ta:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11248,6 +11258,10 @@ ta:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -11589,6 +11603,18 @@ ta:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: தரங்கள் 2-5
   tutorial_rpledfirefly_string_detail_grades: 'தரங்கள் 6-8 '
   tutorial_rpcharting_string_detail_grades: தரங்கள் 9+
@@ -11682,6 +11708,10 @@ ta:
   tutorial_nasapackage_string_detail_grades: 'தரங்கள் 6-8 '
   tutorial_nasalunar_string_detail_grades: 'தரங்கள் 6-8 '
   tutorial_meeestate_string_detail_grades: தரங்கள் 2+
+  tutorial_imagipixelart_string_detail_grades: தரம் 2 - 8
+  tutorial_kcjhealth_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
+  tutorial_msftwakanda_string_detail_grades: 6+ தரங்கள் (11 மற்றும் அதற்கு மேற்பட்டவை)
+  tutorial_nafbrand_string_detail_grades: தரங்கள் 9+
   tutorial_rpccw_string_platforms: அனைத்து நவீன உலாவிகள், Android டேப்லெட், ஐபாட்,
     விண்டோஸ் தொலைபேசி, Android தொலைபேசி, ஐபோன்
   tutorial_rpledfirefly_string_platforms: அனைத்து நவீன உலாவிகளும்
@@ -11802,8 +11832,13 @@ ta:
   tutorial_nasaorbit_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_nasapackage_string_platforms: அனைத்து நவீன உலாவிகளும்
   tutorial_nasalunar_string_platforms: அனைத்து நவீன உலாவிகளும், ஐபாட், ஐபோன்
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: ஐபாட், கணினிகள் (விண்டோஸ் பிசி, மேக்)
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: அனைத்து நவீன உலாவிகளும்
+  tutorial_msftwakanda_string_platforms: அனைத்து நவீன உலாவிகளும்
+  tutorial_nafbrand_string_platforms: அனைத்து நவீன உலாவிகள், Android டேப்லெட், ஐபாட்,
+    விண்டோஸ் தொலைபேசி, Android தொலைபேசி, ஐபோன்
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11897,6 +11932,10 @@ ta:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: தொகுதிகள்
   tutorial_rpledfirefly_string_detail_programming_languages: பைதான்
   tutorial_rpcharting_string_detail_programming_languages: பைதான்
@@ -11960,7 +11999,7 @@ ta:
   tutorial_googlesuperhero_string_detail_programming_languages: தொகுதிகள்
   tutorial_googlename _string_detail_programming_languages: தொகுதிகள்
   tutorial_carnegiezillah_string_detail_programming_languages: தொகுதிகள்
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: தொகுதிகள்
   tutorial_hatchxrsolar_string_detail_programming_languages: தொகுதிகள்
   tutorial_hatchxrspace_string_detail_programming_languages: தொகுதிகள்
   tutorial_hatchxrtrex_string_detail_programming_languages: தொகுதிகள்
@@ -11997,6 +12036,10 @@ ta:
   tutorial_nasapackage_string_detail_programming_languages: தொகுதிகள்
   tutorial_nasalunar_string_detail_programming_languages: பிளாக்ஸ், ஜாவாஸ்கிரிப்ட்
   tutorial_meeestate_string_detail_programming_languages: பிளாக்ஸ், பைதான்
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: தொகுதிகள்
+  tutorial_msftwakanda_string_detail_programming_languages: தொகுதிகள்
+  tutorial_nafbrand_string_detail_programming_languages: பைதான்
   school_not_found_heading: உங்கள் பள்ளியை எங்களால் காண இயலவில்லை. தயவுசெய்து மேலும்
     தகவல்களை உள்ளிடவும்.
   school_name: பள்ளி பெயர்
@@ -12059,6 +12102,13 @@ ta:
   all: அனைத்தும்
   dont_know: தெரியவில்லை
   language_label: மொழி
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

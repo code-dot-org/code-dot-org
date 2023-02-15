@@ -62,9 +62,9 @@ const styles = {
     fontSize: 16,
     fontFamily: 'Gotham 4r',
     zIndex: 2,
-    color: color.charcoal,
+    color: color.neutral_dark,
     width: 940,
-    marginBottom: -10
+    marginBottom: 0
   }
 };
 

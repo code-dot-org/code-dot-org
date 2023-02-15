@@ -1016,6 +1016,14 @@ eu:
           lessons:
             lesson-6:
               name: Itzuliak
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Aldagaiak
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For begiztak
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1027,6 +1035,12 @@ eu:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Zerrendak
+              display_name: Datu
             csp_loops:
+              display_name: Itzuliak
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Zerrendak
+            lessonGroup-3:
               display_name: Itzuliak

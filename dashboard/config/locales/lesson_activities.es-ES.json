@@ -333,7 +333,7 @@
           "name": "Calentamiento"
         },
         "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
-          "name": "Actividad Principal"
+          "name": "Actividad Principal\n"
         },
         "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
           "name": "Actividad de cierre"
@@ -477,7 +477,7 @@
           "name": "Calentamiento"
         },
         "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
-          "name": "Actividad Principal"
+          "name": "Actividad Principal\n"
         },
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
           "name": "Actividad de cierre"
@@ -805,6 +805,9 @@
         },
         "a54509a7-dac6-4985-830d-91272c3de923": {
           "name": "Actividad de cierre"
+        },
+        "f7559bae-c62e-4cc6-94a2-26b09e8c1eed": {
+          "name": "Ampliación del aprendizaje"
         },
         "4297e4f8-df09-4a0f-a1f1-6eebb5fb75b3": {
           "name": "Preparación: la misma palabra, significados diferentes."
@@ -1192,6 +1195,9 @@
         },
         "f4c94b25-e0f0-4caa-bebd-1557f771a849": {
           "name": "Día 5 & 6 - Presenta Tu Proyecto"
+        },
+        "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af": {
+          "name": "Ampliación del aprendizaje"
         },
         "5b342453-cd42-4221-8375-618cf1ddb41b": {
           "name": "Ver: Sigue el Rastro Digital"
@@ -2176,6 +2182,9 @@
         },
         "74e2ce00-926c-4dff-9ffe-161c3e10e05e": {
           "name": "Actividad de cierre"
+        },
+        "b351a875-cdc3-4da8-a2c0-fb84cee29102": {
+          "name": "Ampliación del aprendizaje"
         },
         "e756dd3c-ceff-4018-ae32-e393404279eb": {
           "name": "Calentamiento"
@@ -5742,7 +5751,7 @@
           "name": "Calentamiento"
         },
         "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
-          "name": "Actividad Principal"
+          "name": "Actividad Principal\n"
         },
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Actividad de cierre"
@@ -9283,6 +9292,9 @@
         },
         "1840d382-40db-43dd-b6cd-4f002ec7eb04": {
           "name": "Prueba posterior al proyecto"
+        },
+        "6e1384cd-1561-474c-bd34-f0b50f33d24a": {
+          "name": "Encuesta Fin de Curso"
         },
         "e159a5eb-31ca-47d9-bc81-e2777d7027a0": {
           "name": "Niveles"

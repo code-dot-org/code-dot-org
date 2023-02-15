@@ -46,17 +46,17 @@
       =view :language
 
     .social-media
-      %a.social-icon{:href=>'https://www.facebook.com/Code.org', :target=>'_blank'}
+      %a.social-icon{:href=>'https://www.facebook.com/Code.org', :'aria-label'=>hoc_s(:footer_menu_facebook), :target=>'_blank'}
         %i.fa.fa-facebook.fa-lg
         &nbsp; &nbsp;
-      %a.social-icon{:href=>'https://twitter.com/codeorg', :target=>'_blank'}
+      %a.social-icon{:href=>'https://twitter.com/codeorg', :'aria-label'=>hoc_s(:footer_menu_twitter), :target=>'_blank'}
         %i.fa.fa-twitter.fa-lg
         &nbsp; &nbsp;
-      %a.social-icon{:href=>'https://www.instagram.com/codeorg', :target=>'_blank'}
+      %a.social-icon{:href=>'https://www.instagram.com/codeorg', :'aria-label'=>hoc_s(:footer_menu_instagram), :target=>'_blank'}
         %i.fa.fa-instagram.fa-lg
         &nbsp; &nbsp;
-      %a.social-icon{:href=>'https://medium.com/@codeorg', :target=>'_blank'}
-        %img{src: '/images/icons/medium-monogram-white.png', style: 'width: 20px'}
+      %a.social-icon{:href=>'https://medium.com/@codeorg', :'aria-label'=>hoc_s(:footer_menu_medium), :target=>'_blank'}
+        %img{src: '/images/icons/medium-monogram-white.png', alt: '', style: 'width: 20px'}
 
   #copyright
     !="&copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org."

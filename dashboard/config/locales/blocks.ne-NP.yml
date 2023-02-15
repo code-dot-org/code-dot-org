@@ -787,3 +787,7 @@ ne:
         text: move forward
       craft_placeTorch:
         text: place torch
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': hearts

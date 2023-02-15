@@ -3,6 +3,8 @@ import TopCourse from './studioHomepages/TopCourse';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import shapes from './studioHomepages/shapes';
 import i18n from '@cdo/locale';
+import {MAKER_DEPRECATION_SUPPORT_URL} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 
 export default class MakerLanding extends Component {
   static propTypes = {
@@ -38,6 +40,14 @@ export default class MakerLanding extends Component {
 
     return (
       <div style={styles.container}>
+        <Notification
+          type={NotificationType.warning}
+          notice={i18n.makerPageDeprecationWarningTitle()}
+          details={i18n.makerPageDeprecationWarningDetails()}
+          detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+          detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+          dismissible
+        />
         <h1 style={styles.title}>{i18n.makerPageTitle()}</h1>
         <TopCourse
           assignableName={topCourse.assignableName}

@@ -1626,3 +1626,11 @@ mi:
           DIR:
             right: matau ↻
             left: maui ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"rain"': ua
+            '"starburst"': Pāpahu Whetū

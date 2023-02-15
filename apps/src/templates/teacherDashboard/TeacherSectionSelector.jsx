@@ -18,8 +18,10 @@ export default class TeacherSectionSelector extends Component {
     // We need to reload on section change on the script overview page to get
     // accurate information about students in the selected section.
     forceReload: PropTypes.bool,
-    courseId: PropTypes.number,
-    scriptId: PropTypes.number
+    courseOfferingId: PropTypes.number,
+    courseOfferingParticipantType: PropTypes.string,
+    courseVersionId: PropTypes.number,
+    unitId: PropTypes.number
   };
 
   state = {
@@ -69,12 +71,19 @@ export default class TeacherSectionSelector extends Component {
   };
 
   render() {
-    const {sections, selectedSection, courseId, scriptId} = this.props;
+    const {
+      sections,
+      selectedSection,
+      courseOfferingId,
+      courseVersionId,
+      unitId
+    } = this.props;
     const menuOffset = {x: 0, y: 0};
     const value = selectedSection ? selectedSection.id : '';
     const queryParams = queryString.stringify({
-      courseId,
-      scriptId
+      courseOfferingId,
+      courseVersionId,
+      unitId
     });
 
     return (

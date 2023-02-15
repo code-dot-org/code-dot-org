@@ -4,8 +4,8 @@ hu:
     course:
       name:
         csp-2017:
-          assignment_family_title: Számítógép-tudományi Alapelvek
-          title: Számítógép-tudományi Alapelvek ('17-'18)
+          assignment_family_title: Számítástechnikai Alapelvek
+          title: Számítástechnikai Alapelvek ('17-'18)
           version_title: "'17-'18"
           description_student: 2016 őszén mutatkozott be a College Board legújabb
             AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai.
@@ -25,10 +25,10 @@ hu:
             vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb
             számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
             felkínálásával.
-          description_short: Ismerd meg az alapvető számítógép-tudományi fogalmakat.
+          description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
         csd-2017:
           assignment_family_title: Számítástechnikai Felfedezések
-          title: Számítástudományi Felfedezések ('17-'18)
+          title: Számítástechnikai Felfedezések ('17-'18)
           version_title: "'17-'18"
           description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
             egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
@@ -49,7 +49,7 @@ hu:
             leírás tartozik hozzá
         csd-2018:
           assignment_family_title: Számítástechnikai Felfedezések
-          title: Számítógép-tudományi Felfedezések ('18-'19)
+          title: Számítástechnikai Felfedezések ('18-'19)
           version_title: "'18-'19"
           description_short: Bevezető számítástechnikai tanfolyam, amely lehetővé
             teszi, hogy a tanulók eredeti tartalmakat hozzanak létre.
@@ -62,10 +62,10 @@ hu:
             hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
             a kommunikáció, a problémamegoldás és szórakozás során.
         csp-2018:
-          assignment_family_title: Számítógép-tudományi Alapelvek
-          title: Számítógép-tudományi Alapelvek ('18-'19)
+          assignment_family_title: Számítástechnikai Alapelvek
+          title: Számítástechnikai Alapelvek ('18-'19)
           version_title: "'18-'19"
-          description_short: Ismerd meg az alapvető számítógép-tudományi fogalmakat.
+          description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
           description_student: 2016 őszén mutatkozott be a College Board legújabb
             AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai.
             A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba
@@ -85,7 +85,7 @@ hu:
             számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
             felkínálásával.
         csp-2019:
-          description_short: Ismerd meg az alapvető számítógép-tudományi fogalmakat.
+          description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
           description_student: 2016 őszén mutatkozott be a College Board legújabb
             AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai.
             A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba

@@ -113,7 +113,7 @@
         },
         "2-3 Artist Functions 10": {
           "big gear": {
-            "name": "menj és gyűjts nektárt"
+            "name": "nagy fogaskerék"
           },
           "small gear": {
             "name": "kis fogaskerék"
@@ -230,17 +230,17 @@
             "name": "rajzolj kört"
           },
           "draw goal": {
-            "name": "rajzold meg a célt"
+            "name": "rajzolj kaput"
           }
         },
         "4-5 Bee Conditionals 7": {
           "check purple flower": {
-            "name": "ellenőrizd lila virágot"
+            "name": "ellenőrizd a lila virágot"
           }
         },
         "4-5 Bee Conditionals 8": {
           "check flower make honey": {
-            "name": "nézd meg a virágot készíts mézet"
+            "name": "virágvizsgálat és mézkészítés"
           }
         },
         "4-5 Bee Conditionals Assessment 1": {
@@ -1245,7 +1245,7 @@
             "name": "csinálj valamit"
           },
           "get 3 nectar or honey": {
-            "name": "gyűjts 3 nektárt és mézet"
+            "name": "szerezz 3 nektárt vagy mézet"
           }
         },
         "course3_bee_functions_challenge2": {
@@ -1253,12 +1253,12 @@
             "name": "csinálj valamit"
           },
           "move and collect": {
-            "name": "lépj és gyűjts"
+            "name": "menj és gyűjts"
           }
         },
         "course3_bee_functions_challenge3": {
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           },
           "row of nectar": {
             "name": "nektársor"
@@ -1269,7 +1269,7 @@
         },
         "course3_bee_functions_challenge4": {
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           },
           "row of nectar": {
             "name": "nektársor"
@@ -2657,7 +2657,7 @@
             "name": "csinálj valamit"
           },
           "get 3 nectar or honey": {
-            "name": "gyűjts 3 nektárt és mézet"
+            "name": "szerezz 3 nektárt vagy mézet"
           }
         },
         "courseE_bee_functions_challenge2": {
@@ -2665,7 +2665,7 @@
             "name": "csinálj valamit"
           },
           "move and collect": {
-            "name": "lépj és gyűjts"
+            "name": "menj és gyűjts"
           }
         },
         "courseE_farmer_concept1": {
@@ -3197,7 +3197,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_for_challenge1": {
@@ -3232,7 +3232,7 @@
         },
         "courseF_bee_functions3a": {
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions4": {
@@ -3240,7 +3240,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions5a": {
@@ -3248,7 +3248,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions6": {
@@ -3282,7 +3282,7 @@
             "name": "nektárokSora"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_functions_challenge2": {
@@ -3293,7 +3293,7 @@
             "name": "menj és ellenőrizd"
           },
           "check nectar or honey": {
-            "name": "ellenőrizd nektárt vagy mézet"
+            "name": "nektár vagy méz ellenőrzése"
           }
         },
         "courseF_bee_fwp2": {

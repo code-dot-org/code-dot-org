@@ -609,8 +609,7 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Code.org ನಲ್ಲಿ ತರಗತಿ ವಿಭಾಗವನ್ನು ಹೇಗೆ ಮಾಡುವುದು",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+          "name": "Code.org ನಲ್ಲಿ ತರಗತಿ ವಿಭಾಗವನ್ನು ಹೇಗೆ ಮಾಡುವುದು"
         },
         "pair_programming/courseb/2022": {
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
@@ -1771,7 +1770,8 @@
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "ಕವಿತೆಗಳ ಪಟ್ಟಿ",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
         },
         "2021_change_log/coursef/2021": {
           "name": "2021 ಬದಲಾವಣೆ ವಿವರ",
@@ -3137,7 +3137,11 @@
           "type": "ವೀಡಿಯೊ"
         },
         "loops_in_app_lab/csd/2021": {
+          "name": "ಲೂಪ್ಸಗಾಗಿ",
           "type": "ವೀಡಿಯೊ"
+        },
+        "for_loops/csd/2021": {
+          "name": "ಲೂಪ್ಸಗಾಗಿ"
         },
         "accelerometer_events/csd/2021": {
           "name": "ಅಕ್ಸೆಲೆರೊಮೀಟರ್ ಕ್ರಿಯೆಗಳು"

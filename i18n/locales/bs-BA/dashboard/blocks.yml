@@ -1353,3 +1353,10 @@ bs:
         options:
           DIR:
             left: lijevo ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Balončići
+            '"confetti"': Konfeti
+            '"hearts"': srca
+            '"rain"': kiša

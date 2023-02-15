@@ -47,11 +47,11 @@ class Api::V1::Pd::ApplicationSerializerTest < ::ActionController::TestCase
         status: 'pending',
         at: Time.parse('2019-10-01 9:00 -07:00')
       }, {
-        status: 'accepted_no_cost_registration',
+        status: 'accepted',
         at: Time.parse('2019-11-06 15:00 -08:00')
       }],
       status_timestamp_change_log: [{
-        title: 'accepted_no_cost_registration_email',
+        title: 'accepted_email',
         time: Time.parse('2019-11-06 15:01 -08:00'),
       }, {
         title: 'pending',
@@ -59,7 +59,7 @@ class Api::V1::Pd::ApplicationSerializerTest < ::ActionController::TestCase
         changing_user_id: program_manager.id,
         changing_user_name: program_manager.name
       }, {
-        title: 'accepted_no_cost_registration',
+        title: 'accepted',
         time: Time.parse('2019-11-06 15:00 -08:00'),
         changing_user_id: program_manager.id,
         changing_user_name: program_manager.name
@@ -69,10 +69,10 @@ class Api::V1::Pd::ApplicationSerializerTest < ::ActionController::TestCase
     serialized = ::Api::V1::Pd::ApplicationSerializer.new(@application, {scope: {}}).attributes
     assert_equal(
       [{
-        title: 'Accepted No Cost Registration Email',
+        title: 'Accepted Email',
         time: '2019-11-06 15:01 PST'
       }, {
-        title: 'Accepted No Cost Registration',
+        title: 'Accepted',
         time: '2019-11-06 15:00 PST',
         changing_user: program_manager.name,
       }, {

@@ -6,6 +6,9 @@ import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {courses, topCourse, joinedSections} from './homepagesTestData';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
+import sinon from 'sinon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('StudentHomepage', () => {
   const TEST_PROPS = {
@@ -14,6 +17,7 @@ describe('StudentHomepage', () => {
     sections: joinedSections,
     codeOrgUrlPrefix: 'http://localhost:3000',
     studentId: 123,
+    isEnglish: true,
     showVerifiedTeacherWarning: false
   };
 
@@ -54,6 +58,28 @@ describe('StudentHomepage', () => {
     assert.deepEqual(joinSectionArea.props(), {
       initialJoinedStudentSections: joinedSections
     });
+  });
+
+  it('does not log an Amplitude event for student signing-in', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    shallow(<StudentHomepage {...TEST_PROPS} />);
+
+    expect(analyticsSpy).not.to.have.been.called;
+    analyticsSpy.restore();
+  });
+
+  it('shows the special announcement for English', () => {
+    const wrapper = shallow(
+      <StudentHomepage {...TEST_PROPS} isEnglish={true} />
+    );
+    assert(wrapper.find('SpecialAnnouncement').exists());
+  });
+
+  it('does not show the special announcement for non-English', () => {
+    const wrapper = shallow(
+      <StudentHomepage {...TEST_PROPS} isEnglish={false} />
+    );
+    assert.isFalse(wrapper.find('SpecialAnnouncement').exists());
   });
 
   it('displays a notification for verified teacher permissions if showVerifiedTeacherWarning is true', () => {

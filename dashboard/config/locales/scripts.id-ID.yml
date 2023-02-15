@@ -3402,6 +3402,9 @@ id:
           title: Detektor Benturan
         dance-2019:
           title: Pesta Dansa (2019)
+          description_short: Buat Kode Pesta Dansa untuk dibagikan kepada teman-temanmu.
+            Menampilkan Beyonce, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musik
+            dari “Encanto” Disney, dan masih banyak lagi!
           description: Buat code pesta dansa Anda sendiri untuk dibagikan ke teman-teman
             Anda!
           student_description: Buat code pesta dansa Anda sendiri untuk dibagikan
@@ -5595,6 +5598,30 @@ id:
               display_name: Konten
             lessonGroup-5:
               display_name: Pelajaran Alternatif
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: variabel
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Array 1 Dimensi/ One-Dimensional (1D)
+            lesson-3:
+              name: For Loop
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Pelajaran Alternatif
+        hello-world-space-2022:
+          title: 'Halo Dunia: Ruang'
+        hello-world-soccer-2022:
+          title: 'Halo Dunia: Sepak bola'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5669,7 +5696,7 @@ id:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: List
+              display_name: Data
             csp_loops:
               display_name: Loop
             csp_traversals:
@@ -5681,9 +5708,15 @@ id:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unit 6: Algorithm'
+              display_name: List
             lessonGroup-2:
               display_name: Survei Pasca Kursus
+            lessonGroup-3:
+              display_name: Loop
+            lessonGroup-4:
+              display_name: Melintang
+            lessonGroup-5:
+              display_name: Proyek
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -5712,3 +5745,24 @@ id:
               display_name: Survei Pasca Kursus
         csp-post-survey-2023:
           title: Survei Pascakursus CS Principles
+        csp-playground:
+          title: CSP Playground
+          description_audience: Penulis Kurikulum
+          description_short: Untuk pembaruan tahapan atau level pembelajaran di antara
+            versi kurikulum
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
+            lessonGroup-4:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengenalan App Lab
+            lessonGroup-3:
+              display_name: Masukan dan keluaran

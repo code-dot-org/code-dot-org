@@ -15,13 +15,14 @@ module Api::V1::Pd::Application
       }
     end
 
-    PRINCIPAL_APPROVAL_EMAILS = [
-      :principal_approval_completed,
-      :principal_approval_completed_partner
+    ADMIN_APPROVAL_EMAILS = [
+      :admin_approval_completed,
+      :admin_approval_completed_partner,
+      :admin_approval_completed_teacher_receipt
     ]
 
     setup do
-      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+      ADMIN_APPROVAL_EMAILS.each do |email_type|
         Pd::Application::TeacherApplicationMailer.stubs(email_type).returns(
           mock {|mail| mail.stubs(:deliver_now)}
         )
@@ -113,7 +114,7 @@ module Api::V1::Pd::Application
     end
 
     test 'Sends principal approval received emails on successful create' do
-      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+      ADMIN_APPROVAL_EMAILS.each do |email_type|
         TEACHER_APPLICATION_CLASS.any_instance.expects(:queue_email).with(email_type, deliver_now: true)
       end
 
@@ -122,7 +123,7 @@ module Api::V1::Pd::Application
     end
 
     test 'Does not send emails on unsuccessful create' do
-      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+      ADMIN_APPROVAL_EMAILS.each do |email_type|
         Pd::Application::TeacherApplicationMailer.expects(email_type).never
       end
 

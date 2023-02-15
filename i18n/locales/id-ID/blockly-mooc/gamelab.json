@@ -1,4 +1,10 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "lebar",
+  "dropletBlock_createSprite_param3": "tinggi",
+  "dropletBlock_setCollider_param0": "tipe",
+  "dropletBlock_setCollider_param4": "tinggi",
+  "dropletBlock_setColliderEach_param0": "tipe",
+  "dropletBlock_setColliderEach_param4": "tinggi",
+  "reinfFeedbackMsg": "Kamu telah selesai! Klik \"Lanjutkan\" untuk maju ke level selanjutnya.",
+  "shareGame": "Bagikan permainanmu:"
 }

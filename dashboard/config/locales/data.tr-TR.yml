@@ -532,7 +532,7 @@ tr:
         Unplug10: İnternet
         Unplug11: Özet
         C1_happy_maps_unplugged: Mutlu Haritalar
-        C1_moveitmoveit_unplugged: Çabuk, Çabuk Taşı
+        C1_moveitmoveit_unplugged: Oynat, Oynat
         C1_bigevent_unplugged: Büyük Olay
         C1_getting_loopy: Döngüselleşme
         C1_pair_programming: Eşli Programlama
@@ -587,9 +587,9 @@ tr:
         C4_bee_conditional: Arı Koşullandırmaları
         C4_variables_artist: Değişkenler - Sanatçı
         C4_variables_playlab: Değişkenler - Oyun laboratuarı
-        C4_for_loops: For Döngüleri
-        C4_for_loops_bee: For Döngüleri
-        C4_for_loops_no_bee: For Döngüleri
+        C4_for_loops: For (İçin) Döngüleri
+        C4_for_loops_bee: For (İçin) Döngüleri
+        C4_for_loops_no_bee: For (İçin) Döngüleri
         C4_math_artist: Matematik ile Sanatçı'yı programla
         C4_function_edit: Fonksiyonları düzenleme
         C4_function_create: Fonksiyonları Oluşturma
@@ -598,7 +598,7 @@ tr:
         C4_unplugged_algorithms: Tangramlar ile algoritmalar
         C4_unplugged_madlibs: Çılgın Kütüphaneler
         C4_unplugged_variables: Zarfların içindeki Değişkenler
-        C4_unplugged_forloops: For Döngüleri
+        C4_unplugged_forloops: For (İçin) Döngüleri
         C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
         C4_unplugged_binary: İkili
         CSF_a_b_artist_loops: Sanatçı- Döngüler
@@ -610,8 +610,8 @@ tr:
         CSF_debugging_k1_blocks: Hata Ayıklama
         CSF_debugging_text_blocks: Hata Ayıklama
         CSF_EF_cs_matters: Bilgisayar Bilimi Önemlidir
-        CSF_maze_intro_k1_blocks: Kod Stüdyosu tanıtımı
-        CSF_maze_intro_text_blocks: Kod Stüdyosu tanıtımı
+        CSF_maze_intro_k1_blocks: Code Studio tanıtımı
+        CSF_maze_intro_text_blocks: Code Studio tanıtımı
         CSF_my_robotic_friends: Robot dostlarım
         CSF_Power_of_Words: Kelimelerin Gücü
         CSF_Super_Digital_Citizen: Süper Dijital Vatandaş
@@ -769,9 +769,9 @@ tr:
         csd_applab_parameters: Fonksiyon parametreleri
         csd_applab_loops: Uygulama Laboratuvarındaki Döngüler
         csd_problem_solving_process: Problem çözme süreci
-        CSF_Going_Places_Safely: Online Mahallem
+        CSF_Going_Places_Safely: Çevrimiçi Mahallem
         CSF_SpriteLab_Intro_v2: Hareketli Nesne Laboratuvarı Tanıtımı
-        CSF_Spritelab_MakeSprite_v2: Nesne Oluşturma
+        CSF_Spritelab_MakeSprite_v2: Hareketli Nesne Oluşturma
         CSF_SpriteLab_SpritesInAction_v2: Eylem halindeki Hareketli Nesneler
         csd_debugging: Hata Ayıklama
         csd_applab_designmode_short: Uygulama Laboratuvarı Tasarım Modu
@@ -795,7 +795,7 @@ tr:
         hoc_dance_measures_2019: Dans Partisi 2019 - Ölçütler
         hoc_dance_properties_2019: Dans Partisi 2019 - Özellikler
         csd_what_computers_do: Bilgisayarlar Ne Yapar?
-        csf_my_online_neighborhood_2020: Online Mahallem
+        csf_my_online_neighborhood_2020: Çevrimiçi Mahallem
         csf_follow_the_digital_trail: Dijital İzi Takip Edin
         csf_private_and_personal_information: Özel ve Kişisel Bilgiler
         csd_what_computers_are: Bilgisayar nedir?
@@ -815,9 +815,34 @@ tr:
           Düşünme'
         codebreak_e12: 'Kod Kırma 12.0: Aloe Blacc, Bret Taylor, & Paula Mejia ile
           Donanım'
+        csf21pilot_events: 'Sprite Lab: Hareketli nesneler harekette'
+        csf21pilot_prompts: 'Sprite Lab: Metin ve Bilgi İstemleri'
         outbreak_mike: Mike ile CodeBytes Bölüm 3 - Salgın Simülatörü
+        poembot-pilot-prompts: Haiku Bots - Seçeneklerle İstemi [PILOT]
+        poembot-pilot-text: Haiku Bots - Metin Saklama [PILOT]
+        poembot-pilot-haiku: Haiku Bots - Haiku'nu Göster [PILOT]
+        csd_ml_intro_to_ai_lab: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş
+        csd_ml_import_model: AI Modelini İçe Aktarma
+        csf_lots_of_sprites: 'Sprite Lab: Çok sayıda Hareketli Nesneler'
         playlab_2021: Oyun laboratuarı için giriş
         playlab_2021_reader: Oyun laboratuarı için giriş
+        csp_defining_calling_functions: Tanımlama ve Çağırma Fonksiyonları
+        csp_tutorial_datatab: Uygulama Laboratuvarında Veri Sekmesi
+        csp_tutorial_libraries: Uygulama Laboratuvarındaki Kitaplıklar
+        PL-Video-21: Code.org'un Profesyonel Öğrenimine Hoş Geldiniz!
+        csp_tutorial_datavis1: Uygulama Laboratuvarında Veri Görselleştirici - Bölüm
+          1
+        csp_tutorial_datavis2: Uygulama Laboratuvarında Veri Görselleştirici - Bölüm
+          2
+        csd_ml_intro_ai_lab_july2021: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş
+        csd_ml_training_testing_ai_lan: Yapay Zeka Laboratuvarında Eğitim ve Test
+        csd_ml_model_cards_july2021: AI Laboratuvarında Model Kartları
+        csd_ml_numerical_ai_lab: AI Laboratuvarında Sayısal Veriler
+        Gettting_Started_Progress: İlerleme, Geri Bildirim ve Değerlendirme
+        Gettting_Started_ClassSection: Sınıf Bölümü Oluşturma
+        Gettting_Started_StudentExperience: Öğrenci Deneyimi
+        Getting_Started_BasicFeatures: Code.org'un Temel Özellikleri
+        PL_overview_CSD: Bilgisayar Bilimi Keşifleri Nedir?
         PL_CSD_TeacherTips_Advise: Öğretmen İpuçları - Yeni Öğretmenlere Tavsiyeler
         PL_CSD_TeacherTips_IntroToCSD: Öğretmen İpuçları - BB Keşiflerine Giriş
         PL_CSD_TeacherTips_ProblemSolvingProcess: Öğretmen İpuçları - Problem Çözme
@@ -831,6 +856,7 @@ tr:
         hello_world_intro: Merhaba Dünya - Hareketli Nesneler Laboratuvarına Hoş Geldiniz
         hello_world_events: Merhaba Dünya - Olaylarla Programlama
         hello_world_congrats: Merhaba Dünya - Dilediğinizi Yapın
+        csp_global_vs_local: Global ve Yerel Değişkenler Hata Ayıklama
         rough_poemart_intro: v1 Şiir Sanatı Girişi
         rough_poemart_events: v1 Şiir Sanatı Etkinlikleri
         rough_poemart_imagery: v1 Şiir Sanatı Görüntüleri
@@ -842,12 +868,26 @@ tr:
         poetry_module_multichoiceprompts: Çoktan Seçmeli İstemler - Şiirle Kodlama
         poetry_module_conditionals: Koşullar - Şiirle Kodlama
         poemart_intro: Şiir Sanatına Giriş
+        poemart_events: v1 Şiir Sanatı Etkinlikleri
+        poemart_imagery: Şiir Sanatı  - İmgeler
+        poemart_celebration: Şiir Sanatı Kutlama
+        csd_u6_variables_part2: Değişkenler - Bölüm 2
+        csd_ml_ethics_ai: 'Etik ve Yapay Zeka '
+        outbreak_intro: 'Salgın simülasyonu: Giriş'
+        outbreak_events: 'Salgın Simülatörü: Etkinlikler'
+        outbreak_scientist: 'Salgın Simülatörü: Bilim Adamı Gibi Düşünmek'
+        outbreak_outro: 'Salgın Simülatörü: Bedava Oyna'
+        PL_overview_CSP: Bilgisayar Bilimi İlkeleri Nedir?
+        PL_CSP_EIPMOverview: EIPM Dersleri Rehberi
         CSA-PL-debugging-temp: Java Lab'da Hata ayıklamaya giriş - geçici
+        csd_app_lab_design_mode: CSD Uygulama Laboratuvarı Tasarım Modu
+        csd_app_lab_events: CSD Uygulama Laboratuvarı Etkinlikleri
+        PL_CSD_Unit4_AppTesting: Kağıt Prototip testi
         csd_u6_circuit_playground: Fiziksel Bilişim
         csd_u6_input_output: Girdiler ve çıktılar
         CSA-PL-for-loops: Java'da döngüler
         CSA-PL-variables: Java'da Değişken Oluşturmak
-        PL_CS_Journeys_Overview: CS Journeys
+        PL_CS_Journeys_Overview: BB Yolculukları
         CSA-PL-intro-to-java-lab: Java Laboratuvarı temelleri
         CSA-PL-first-program: Java'da Program yazma
         CSD_u6_variables_part1: 'CSD: Değişkenler'
@@ -863,7 +903,31 @@ tr:
         CSA-PL-two-way-selection: İki yönlü seçim
         CSA-PL-Printing-in-Java: Java'da Yazdırma
         CSA-PL-multi-selection-statements: Çok Seçenekli İfadeler
+        PL_CSP_TeacherTips_Advice: Öğretmen İpuçları - Yeni BB Öğretmenlerine Tavsiyeler
+        PL_CSP_TeacherTips_IntroToCSP: 'Öğretmen İpuçları: BB İlkelerine Giriş'
+        PL_CSP_TeacherTips_Debugging: 'Öğretmen İpuçları: Hata Ayıklama ile Yardım'
+        PL_CSP_TeacherTips_LeadLearner: 'Öğretmen İpuçları: Nasıl Lider Öğrenci Olunur'
+        PL_CSP_TeacherTips_APExam: 'Öğretmen İpuçları: AP Sınavına Hazırlık'
+        PL_CSP_TeacherTips_EIPM: 'Öğretmen İpuçları: EIPM Süreci'
+        PL_CSD_CircuitPlayground_Overview: Devre Oyun Alanına Genel Bakış
+        CSA-PL-debugging-22: Java Lab'da hata ayıklama
+        CSD_Unit6_InteractiveArtExemplar: Etkileşimli Sanat Örnekleri
         CS_Changing_Everything: Bilgisayar Bilimi, Her Şeyi Değiştiriyor.
+        csa-alias-video: Eşittir ve Takma Adlar
+        csa-equals-video: Eşitler () yöntemi
+        csa-user-stories: Yazılım Mühendisliğinde Kullanıcı Hikayeleri
+        csa-pl-vpl-m1-unit-3: 3. Ünite'de Yazılım Mühendisliği
+        csa-pl-intro-to-equality: Eşitliğe Giriş
+        csa-pl-intro-to-equals-method: Eşitler () yöntemine giriş
+        csa-pl-equals-book: Kitap sınıfı için Eşitler () yönteminin yazılması
+        csa-multi-select-pl: Java'da Çok Seçimli İfadeler
+        csc_timecapsule_intro: Zaman Kapsülü Giriş
+        PL_Equity_in_CS_Education: BB Eğitiminde Eşitlik
+        csc_fm_pilot: Fonksiyon Makineleri (Pilot)
+        csc_fm_pilot_v2: 'Fonksiyon Makineleri Tanıtımı '
+        csc-sprite-lab-pixel-editor: Kendi Hareketli Nesneni Çiz
+        csa-pl-intro-to-strings: Java'da Dizgilere Giriş
+        csa-pl-compareTo: Karşılaştırma () metodu
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
@@ -883,7 +947,7 @@ tr:
           arasına yaz
         jigsaw_click: Bu bloğa tıklayın!
         move_elsa_forward: Elsa'yı ilerletmek için bir "İlerle" bloğunu sürükleyip
-          "Çalıştığında" bloğunun altına ekleyin
+          "Çalıştığında" bloğunun altına ekleyin.
         turn_elsa: '"Dön" bloğunu kullanarak Elsa''yı döndürün. Açılan menüden Elsa''nın
           ne kadar döneceğini belirleyebilirsiniz'
         replace_questions: Açılan menüden "???" yerine bir numara seçin

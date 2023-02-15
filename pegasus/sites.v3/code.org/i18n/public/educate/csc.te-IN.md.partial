@@ -35,7 +35,7 @@ Our newest curriculum makes the connections between learning computer science an
 
 CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
 
-They're perfect for teachers who'd like to incorporate computer science into their lesson plans for other subjects, as well as CS educators who want to reinforce what students are learning in other subjects.
+ఇతరు సబ్జెక్టుల కోసం తమ పాఠ్యప్రణాళిలలో కంప్యూటర్ సైన్స్‌ను చేర్చాలనుకునే ఉపాధ్యాయులకు మరియు ఇతర సబ్జెక్టులలో విద్యార్థులు నేర్చుకుంటున్నదాన్ని మరింత బలోపేతం చేయాలనుకునే CS విద్యావేత్తలకు ఇవి సరిగ్గా సరిపోతాయి.
 
 {{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
 

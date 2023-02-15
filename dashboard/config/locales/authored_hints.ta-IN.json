@@ -1027,7 +1027,7 @@
         "courseC_starWars_loops4_copy": {
           "courseC_starWars_loops4_c": "டர்ன் பிளாக்கில் \"இடது\" க்கு அடுத்துள்ள சிறிய அம்புக்குறியைக் கிளிக் செய்தால் அதை \"வலது\" என்று மாற்ற அனுமதிக்கும்.",
           "courseC_starWars_loops4_a": "இரண்டு `மீண்டும்` தொகுதிகள் பயன்படுத்தவும்.",
-          "courseC_starWars_loops4_b": "ஒவ்வொரு `மீண்டும்` சுழலுக்கும் ஒரே ஒரு கட்டளை மட்டுமே இருக்கும்:`முன்னோக்கி நகர்த்து`."
+          "courseC_starWars_loops4_b": "ஒவ்வொரு `மீண்டும்` சுழலுக்கும் ஒரே ஒரு கட்டளை மட்டுமே இருக்கும்:` முன்னோக்கி நகர்த்து`."
         },
         "courseC_starWars_loops4_dani": {
           "courseC_starWars_loops4_c": "டர்ன் பிளாக்கில் \"இடது\" க்கு அடுத்துள்ள சிறிய அம்புக்குறியைக் கிளிக் செய்தால் அதை \"வலது\" என்று மாற்ற அனுமதிக்கும்.",
@@ -1080,7 +1080,7 @@
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "நகர்வுகள் அனைத்தையும் ஒரு துண்டு காகிதத்தில் எழுதி ஒரு மாதிரியைத் தேடுங்கள்.",
-          "courseC_starWars_loops6_b": "நீங்கள் குறைந்த குறியீட்டைப் பயன்படுத்த விரும்பினால், ஒரு `மீண்டும்` சுழற்சியை இன்னொருவருக்குள் வைக்கலாம்! \\\nஇது \\*\\* உள்ளமை வளையம் \\*\\* என்று அழைக்கப்படுகிறது."
+          "courseC_starWars_loops6_b": "நீங்கள் குறைந்த குறியீட்டைப் பயன்படுத்த விரும்பினால், ஒரு `மீண்டும்` சுழற்சியை இன்னொருவருக்குள் வைக்கலாம்! \\\nஇது ** உள்ளமை வளையம் ** என்று அழைக்கப்படுகிறது."
         },
         "courseC_starWars_loops6_dani": {
           "courseC_starWars_loops6_a": "நகர்வுகள் அனைத்தையும் ஒரு துண்டு காகிதத்தில் எழுதி ஒரு மாதிரியைத் தேடுங்கள்.",
@@ -1149,7 +1149,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "இந்த சிக்கலைப் பற்றி சிறிய பகுதிகளாக சிந்திக்க முயற்சிக்கவும். உரிய நேரம் எடுத்துக்கொள்ளுங்கள். முதல் முயற்சியிலேயே அதை நீங்கள் தீர்க்க தேவையில்லை!",
           "course_starWars_loops8_b": "இந்த சிக்கலின் முதல் பாதியை ஒரு படிக்கட்டு படி சிக்கலாக நினைத்துப் பாருங்கள். இதற்கு முன்பு அதை எவ்வாறு தீர்த்தீர்கள்?",
-          "course_starWars_loops8_c": "இந்த பாதையை பாருங்கள்.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "இந்த பாதையை பாருங்கள்.\n\n[][0]\n"
         },
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "இந்த சிக்கலைப் பற்றி சிறிய பகுதிகளாக சிந்திக்க முயற்சிக்கவும். உரிய நேரம் எடுத்துக்கொள்ளுங்கள். முதல் முயற்சியிலேயே அதை நீங்கள் தீர்க்க தேவையில்லை!",
@@ -2992,7 +2992,7 @@
           "courseC_flappy_events3_a": "ஏதாவது சரியாக வேலை செய்யவில்லை எனில், உங்கள் தொகுதிகள் பணியிடத்தில் உள்ள சரியான நிகழ்வுகளுடன் இணைக்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்."
         },
         "OPD-K5-events-5": {
-          "courseC_flappy_events4_a": "இந்தப் புதிரைத் தீர்க்க, `எண்ட் கேம்` பிளாக்கை \\`எப்போது தடையாக' இணைக்கவும். "
+          "courseC_flappy_events4_a": "இந்தப் புதிரைத் தீர்க்க, `எண்ட் கேம்` பிளாக்கை `எப்போது தடையாக' இணைக்கவும். "
         },
         "OPD-K5-events-6": {
           "courseC_flappy_events5_a": "இந்த நிலையை கடக்க நீங்கள் `ஸ்கோர் எ பாயிண்ட்` பிளாக்கைப் பயன்படுத்த வேண்டும். "
@@ -3021,7 +3021,7 @@
         },
         "OPD-K5-projects-2": {
           "courseE_playLab_scaffold1_a": "`நடிகர் 1 ஆக அமைக்கப்பட்டாரா ??? மேடையில் ஒரு நடிகரைச் சேர்க்க image` block ஐப் பயன்படுத்தலாம்.",
-          "courseE_playLab_scaffold1_b": "நிகழ்ச்சியின் தொடக்கத்தில் உங்கள் நடிகர் தோன்றுவதற்கு `செட் நடிகர்` தொகுதியை`எப்போது ஓடு` என்பதன் கீழ் வைக்கவும்.",
+          "courseE_playLab_scaffold1_b": "நிகழ்ச்சியின் தொடக்கத்தில் உங்கள் நடிகர் தோன்றுவதற்கு `செட் நடிகர்` தொகுதியை` எப்போது ஓடு` என்பதன் கீழ் வைக்கவும்.",
           "courseE_playLab_scaffold1_c": "`செட் பயன்படுத்தவும் ??? உங்கள் காட்சிக்கான பின்னணியை தேர்வு செய்ய பின்னணி`."
         },
         "OPD-K5-projects-3": {
@@ -3029,10 +3029,10 @@
           "courseE_playLab_scaffold1_c": "நீங்கள் முடித்ததும், உங்கள் ஹீரோவை அம்புக்குறி மூலம் நகர்த்த முடியும்!"
         },
         "OPD-K5-projects-5": {
-          "courseE_playLab_scaffold4_a": "ஒரு புள்ளியைச் சேர்க்க `மதிப்பெண் புள்ளி` ஐப் பயன்படுத்தவும், ஒன்றைக் கழிக்க`புள்ளியை அகற்றவும்`."
+          "courseE_playLab_scaffold4_a": "ஒரு புள்ளியைச் சேர்க்க `மதிப்பெண் புள்ளி` ஐப் பயன்படுத்தவும், ஒன்றைக் கழிக்க` புள்ளியை அகற்றவும்`."
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml> "
+          "courseF_artist_variables4_b": "[blockly block][0] "
         },
         "course1_artist_loops_challenge3": {
           "courseA_artist_loops_challenge2_a": "இது போன்ற தொகுதிகள்: <xml>  <block type=\"simple_move_up_left\"/></xml> உங்கள் கலைஞரை ஒரு சாய்வில் நகர்த்த அனுமதிக்கும்!"
@@ -10674,6 +10674,12 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "ஒரு ஸ்ப்ரைட்டின் அளவை ஒரு முறை அமைக்க, நீங்கள் இந்தத் தொகுதியைப் பயன்படுத்தலாம்:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "ஸ்பிரைட்டின் அளவை மீண்டும் மீண்டும் (நிகழ்வுகளுடன்) மாற்ற விரும்பினால், இந்தத் தடுப்பைப் பயன்படுத்தவும்:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "மனிதனாக ஏதாவது சொல்ல செய்ய, இந்த மாதிரி குறியீடு தொகுதிகள் இணைக்க:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "மனிதனாக ஏதாவது சொல்ல செய்ய, இந்த மாதிரி குறியீடு தொகுதிகள் இணைக்க:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

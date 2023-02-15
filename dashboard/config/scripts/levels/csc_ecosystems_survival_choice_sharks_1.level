@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-11-01T23:04:48.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -35,7 +31,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "start_in_animation_tab": "false",
@@ -70,11 +66,16 @@
     "encrypted_examples": "a3P5VXMJtXtTEM1dea2KQEwCe0qMzRSKXUKFyofkMvhK9aL6yQjDdKIJaBRO\naBeXwAARo+b2LuKNEf99wflQY2Fv6Ddb6LaSveBUTuCy/SMEHAv6jzMKG68N\nbhuDiYFaRKDF/NRBc1lJqR+9UlHhYw==\n",
     "display_name": "Shark Groups",
     "thumbnail_url": "https://images.code.org/31a67be59074553b94d1ea33fdee8747-image-1650394302259.51.33 AM.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "spritelab"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-11-01T23:04:48.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:48.478+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_sharks_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_sharks_2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:48.478+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_sharks_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_sharks_2022\"},{\"changed_at\":\"2022-11-30 19:29:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:10:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -120,12 +121,12 @@
         <block type="gamelab_moveInDirection">
           <field name="DIRECTION">"North"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"cuteanimals_shark"</field>
             </block>
           </value>
           <value name="DISTANCE">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">10</field>
             </block>
           </value>
@@ -133,7 +134,7 @@
         <block type="gamelab_spriteSay">
           <field name="SPEECH">Let's work together to hunt for little fish!</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"cuteanimals_shark"</field>
             </block>
           </value>

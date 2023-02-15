@@ -4065,6 +4065,22 @@ pt:
               display_name: Questionário
             lessonGroup-3:
               display_name: Conteúdo
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variáveis
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Arrays Unidimensionais (1D)
+            lesson-3:
+              name: Ciclos "for"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4134,7 +4150,7 @@ pt:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listas
+              display_name: Dados
             csp_loops:
               display_name: Ciclos
             csp_traversals:
@@ -4146,9 +4162,15 @@ pt:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unidade 6: Algoritmos'
+              display_name: Listas
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
+            lessonGroup-3:
+              display_name: Ciclos
+            lessonGroup-4:
+              display_name: Traversais
+            lessonGroup-5:
+              display_name: Projeto
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -4177,3 +4199,23 @@ pt:
               display_name: Pesquisa Pós-Curso
         csp-post-survey-2023:
           title: Pesquisa pós-curso de princípios do CS
+        csp-playground:
+          title: CSP Parque Infantil
+          description_audience: Escritores de currículos
+          description_short: Para organizar atualizações de aulas ou níveis entre versões de currículo
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introdução Laboratório de Aplicativos
+            lessonGroup-3:
+              display_name: Entradas e saídas

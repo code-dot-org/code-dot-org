@@ -53,7 +53,7 @@ class HelpHeader
     if options[:level] && options[:level].game == Game.weblab
       entries << {
         title: I18n.t("#{loc_prefix}web_lab_documentation"),
-        url: "https://studio.code.org/docs/weblab/ol/",
+        url: "https://studio.code.org/docs/ide/weblab/",
         id: "weblab-docs"
       }
     end

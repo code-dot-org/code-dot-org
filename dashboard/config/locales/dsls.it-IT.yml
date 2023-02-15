@@ -1325,8 +1325,6 @@ it-IT:
 
           Puoi provare questi progetti _in qualsiasi ordine_. Dai un'occhiata per scoprire com'è stato realizzato qualche effetto che hai intravisto in un esercizio precedente o combina dei meccanismi visti in diversi esercizi. Provali tutti, scegli il tuo preferito e divertiti a personalizzarlo per renderlo tuo.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
-
           <div class="clearfix"></div>
 
           <div style="float: left; margin: 10px">
@@ -1390,13 +1388,11 @@ it-IT:
           </div>
       Dance_Party_extras_intro_2019:
         markdown: |
-          "# Continua a ballare!
+          # Continua a ballare!
 
           Per la parte 2, creerai il tuo progetto personale. Non ci sono rompicapi qui, invece ci sono un sacco di progetti che mostrano diversi modi per rendere più complessi i dance party.
 
           Puoi fare questi livelli in qualsiasi ordine. Passa in rassegna per vedere come è stato fatto qualcosa in un livello precedente, o combina i concept tra i progetti. Provali tutti, scegli il tuo preferito, e passa il tuo tempo a lavorare su questo progetto per renderlo tuo.
-
-          <a class=""btn btn-large btn-primary next-stage submitButton pull-right”>Continua</a>
 
           <div class=""clearfix""></div>
 
@@ -1478,7 +1474,7 @@ it-IT:
 
           <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
 
-          </div>"
+          </div>
       GoingPlacesSafely-unplugged:
         markdown: |-
           # Navigare in sicurezza
@@ -1761,26 +1757,25 @@ it-IT:
         content1: descrizione qui
       New Challenge Introduction:
         content1: descrizione qui
-        markdown: "### Nuova Sfida: Decodifica un Codice a Sostituzione Casuale...
-          con un nuovo componente\n\nChe succederebbe se invece di scivolare l'intero
-          alfabeto, avessimo mappato ogni lettera dell'alfabeto ad una differente
-          lettera casuale dell'alfabeto? Ciò è chiamato un **Codice a Sostituzione
-          Casuale.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nOra,
-          invece del messaggio segreto codificato con un semplice scorrimento alfabetico,
-          affronterai messaggi codificati con una **sostituzione casuale**.  \n\n\n\nCiò
-          è molto più difficile di decodificare e richiede uno strumento più sofisticato,
-          dunque...\n\nQuando clicchi continua, vedrai una **nuova, più sofisticata
-          versione dello strumento di crittografia** che mostra molte cose differenti.\n\nMa
-          cosa faccia è un po' un mistero!  \n\n### Le Tue Mansioni:\n\n * Scopri
-          cosa succede in questa nuova versione dello strumento\n * Quale informazione
-          ti è stata presentata?\n * Scopri cosa ti fa fare lo strumento\n * Come
-          sempre: non puoi romperlo. Quindi clicca sulle cose, fruga in giro.\n *
-          Se lo scopri potresti essere capace di decodificare un messaggio codificato
-          con sostituzione casuale.\n \n### Suggerimento\n\n* Sapevi che la **E**
-          è la lettera più comunemente usata in inglese?\n\n### Riunisciti e Discuti\n
-          Dopo un po' di tempo a giocarci, dovresti metterti con qualcuno - partner,
-          piccolo gruppo, classe intera - per discutere cosa hai scoperto e verificare
-          che tu sappia cosa succede ed i vari modi in cui puoi usare lo strumento.\n\n\n"
+        markdown: "### Nuova sfida - Rottura di un Cifrario a sostituzione casuale...
+          con un nuovo componente\n\nCosa succederebbe se invece di far scorrere l'intero
+          alfabeto, mappassimo ogni lettera dell'alfabeto con un'altra lettera casuale
+          dell'alfabeto? Questo è denominato **Cifrario a sostituzione casuale**.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nOra,
+          invece del messaggio segreto cifrato con un semplice scorrimento alfabetico,
+          dovrai affrontare messaggi cifrati con una **sostituzione casuale**.  \n\n\n\nQuesto
+          è molto più difficile da rompere e richiede uno strumento più sofisticato.\n\nQuando
+          cliccherai su \"Continua\", vedrai una **versione più sofisticata dello
+          strumento di cifratura** con molte nuove funzionalità.\n\nMa cosa faccia
+          resta un mistero!  \n\n### I tuoi compiti\n\n * Scopri cosa succede in questa
+          nuova versione dello strumento\n * Quale informazione ti è stata presentata?\n
+          * Scopri cosa ti premette di fare lo strumento\n * Come sempre: non puoi
+          romperlo. Quindi clicca e fruga in giro.\n * Se scopri come funziona, potresti
+          essere in grado di rompere un messaggio cifrato con sostituzione casuale.\n
+          \n### Suggerimento\n\n* Sapevi che la **E** è la lettera più usata in inglese?\n\n###
+          Riunisciti e Discuti\n Dopo un po' di prove, dovresti metterti con qualcuno
+          - partner, piccolo gruppo, classe intera - per discutere cosa hai scoperto
+          e verificare che tu abbia realmente compreso cosa fa e i vari modi in cui
+          puoi usare questo strumento.\n\n\n"
       OPD-K5 About:
         markdown: |
           #  Per cominciare > Descrizione del corso
@@ -4132,54 +4127,52 @@ it-IT:
           È ora di presentare il tuo progetto! Il tuo insegnante ti fornirà maggiori dettagli su come presentare il tuo lavoro ai tuoi compagni di classe.
       'Technique: Frequency Analysis':
         content1: descrizione qui
-        markdown: "# Decodificare i Codici a Sostituzione\n\nLa migliore tecnica per
-          decodificare un codice a sostituzione casuale è conosciuta come **analisi
-          di frequenza** \n\nParafrasato da: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+        markdown: "# Rompere i Cifrari a sostituzione\n\nLa migliore tecnica per rompere
+          un cifrario a sostituzione casuale è conosciuta come **analisi di frequenza**
+          \n\nParafrasato da: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
           \n\n* **Analisi di frequenza** è una tecnica basata su quanto *frequentemente*
-          certe lettere appaiono in inglese rispetto altre.\n* Per esempio, data una
-          sezione di testo inglese, *E*, *T*, *A* ed *O* sono le più comuni, mentre
+          certe lettere appaiono in inglese rispetto alle altre.\n* Per esempio, data
+          una sezione di testo inglese, *E*, *T*, *A* ed *O* sono le più comuni, mentre
           *Z*, *Q* e *X* sono rare. Allo stesso modo, *TH*, *ER*, *ON* e *AN* sono
-          le più comuni paia di lettere che si presentano una accanto all'altra.\n*
+          le coppie di lettere più comuni che si presentano una accanto all'altra.\n*
           In effetti, la distribuzione delle lettere è approssimativamente la stessa
           per quasi *tutti* gli esempi di testo inglese. \n\n\nLa versione del componente
-          sulla pagina precedente è intesa per aiutarti a **codificare un codice a
-          sostituzione tramite l'analisi di frequenza**.\n\nAnalizzando la frequenza
-          delle lettere nel messaggio crittografato comparato alla frequenza di lettere
-          in un pezzo tipico di prosa inglese, puoi iniziare a restringere su quale
-          mappatura delle lettere potrebbe essere. \n\nLo strumento ti mostra come
-          la frequenza di lettere nel testo codificato (arancione) si compari con
-          la frequenza dall'inglese tipico (blu).\n\n### Suggerimento: Dove iniziare?\n\n1.
-          Trova le parole brevi e \"decodificale\" per prime. Quante parole di una
-          lettera conosci? (\"a\"). Una parola di 3 lettere molto comune è \"the\".\n2.
-          Una volta fatto ciò, hai la sostituzione per alcune delle lettere più comuni.
-          Dovresti essere capace di usare l'intuito per guardare alle altre parole
-          con queste sostituzioni parziali e fare buone intuizioni.\n3. Dopo aver
-          trovato una manciata di difficili lettere, il resto verrà rapidamente.\n4.
-          Comparare le frequenze di lettere da una buona intuizione per dare risposte
-          sensate.\n\n### Prova questo:\nL'animazione sotto mostra qualcuno che inizia.
-          Ecco cosa ha provato\n\n* Prima ordina i caratteri per frequenza. \n* Identifica
-          un gruppo di caratteri che potrebbero mappare la parola `the`.  \nÈ un buon
-          inizio!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
-          \n\n## La sostituzione casuale è buona?\n* Dopo un po' di pratica quanto
-          ti ci vuole per decodificare un codice a sostituzione casuale?\n* È un bene
+          presente nella pagina precedente è intesa per aiutarti a **rompere un codice
+          a sostituzione tramite l'analisi di frequenza**.\n\nAnalizzando la frequenza
+          delle lettere nel messaggio cifrato comparato alla frequenza di lettere
+          in un tipico brano inglese, puoi iniziare ad ipotizzare la mappatura delle
+          lettere. \n\nLo strumento ti mostra come la frequenza di lettere nel testo
+          cifrato (arancione) si rapporti alla frequenza di un tipico testo inglese
+          (blu).\n\n### Suggerimento - Da dove cominciare?\n\n1. Trova le parole più
+          brevi e \"rompile\" per prime. Quante parole di una lettera conosci? (\"a\").
+          Una parola di 3 lettere molto comune è \"the\".\n2. Una volta fatto ciò,
+          hai la sostituzione per alcune delle lettere più comuni. Dovresti basarti
+          sul tuo intuito per analizzare le altre parole con queste sostituzioni parziali
+          e fare nuove scoperte.\n3. Dopo aver trovato un po' di lettere più difficili,
+          diventerà tutto più semplice\n4. Il confronto delle frequenze delle lettere
+          fornisce ottimi spunti per indovinare risposte sensate.\n\n### Prova questo\nL'animazione
+          qui sotto mostra il processo iniziale.\n\n* Prima ordina i caratteri per
+          frequenza. \n* Identifica un gruppo di caratteri che potrebbero mappare
+          la parola `the`.  \nÈ un buon inizio!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+          \n\n## La sostituzione casuale è una buona tecnica?\n* Dopo un po' di pratica,
+          quanto ti ci vuole a rompere un codice a sostituzione casuale?\n* È un bene
           o no?\n\n\n"
       Terminology Recap:
         content1: descrizione qui
-        markdown: "#Pausa e Ricapitolare\n\nI messaggi codificati con il **codice
-          di Cesare** sono molto facili da decodificare, specialmente con uno strumento
+        markdown: "#Pausa e riepilogo\n\nI messaggi codificati con il **cifrario di
+          Cesare** sono molto facili da decodificare, specialmente con uno strumento
           informatico. Ora che hai fatto un po' di pratica decodificando una cifra
           a scorrimento alfabetico (abbastanza facile, eh?) proviamo qualcosa di più
-          difficile.\n\n**Terminologia di ricapitolo:**\n\n* **Crittografia** - un
-          processo di codifica di messaggi per mantenerli segreti, così che solo le
-          parti \"autorizzate\" possano leggerli.\n* **Decrittazione** - un processo
-          che inverte la crittografia, prendendo un messaggio segreto e riproducendo
-          il normale testo originale\n* **Codice** - il termine generico per una tecnica
-          (o algoritmo) che compia la crittografia\n* **Codice di Cesare** - una tecnica
-          di crittografia che fa scivolare l'alfabeto di qualche numero di caratteri.\n*
-          **Decodificare la crittografia** - Quando tenti di decodificare un messaggio
-          segreto **senza** sapere tutte le specifiche del codice, stai provando a
-          **decodificare** la crittografia. \n\n\nClicca Continua per vedere la **Prossima
-          Sfida**...\n"
+          difficile.\n\n**Riepilogo della terminologia**\n\n* **Cifrature** - un processo
+          di codifica di messaggi per mantenerli segreti, in modo che solo le parti
+          \"autorizzate\" possano leggerli\n* **Decifratura** - un processo che inverte
+          la cifratura, trasformando un messaggio segreto nel suo testo originale\n*
+          **Cifrario** - il termine generico per una tecnica (o algoritmo) che compia
+          la cifratura\n* **Cifrario di Cesare** - una tecnica di cifratura che fa
+          scorrere l'alfabeto di un certo numero di caratteri\n* **Rompere la cifratura**
+          - quando si tenta di decifrare un messaggio segreto **senza** avere tutte
+          le specifiche del cifrario, stai provando a **rompere** la cifratura. \n\n\nClicca
+          su \"Continua\" per vedere la **Prossima Sfida**...\n"
       Unit 1 Lesson 2 Overview:
         markdown: |
           # Panoramica
@@ -8857,7 +8850,7 @@ it-IT:
 
           Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
       TheRightAppMarkdownLevel_2021:
-        markdown: "# L'App giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
+        markdown: "# L'app giusta\n\n* Al giorno d'oggi, tutti utilizzano i computer
           e, in particolare, gli smartphone. \n* Le applicazioni per smartphone, o
           \"app\", offrono tante nuove opportunità, come parlare con gli amici, ascoltare
           musica, fare acquisti o semplicemente navigare su Internet.\n* Per un programmatore
@@ -10090,7 +10083,7 @@ it-IT:
         - text: Input
         - {}
         - text: Archiviazione
-        - {}
+        - text: Elaborazione
       CSD U1 IOSP match_2021:
         answers:
         - {}
@@ -10101,7 +10094,7 @@ it-IT:
         - text: Input
         - {}
         - text: Archiviazione
-        - {}
+        - text: Elaborazione
       CSD U1 IOSP match_2022:
         answers:
         - {}
@@ -10112,7 +10105,7 @@ it-IT:
         - text: Input
         - {}
         - text: Archiviazione
-        - {}
+        - text: Elaborazione
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -17122,21 +17115,12 @@ it-IT:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat raggiungerà la ghianda. Non ci sono errori nel codice.
-          feedback: Sbagliato. Prima, Scrat si gira nella direzione sbagliata, poi
-            non si muove abbastanza volte in avanti per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
           correct: true
-          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
-            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Scrat non raggiungerà la ghianda perché non ci sono abbastanza blocchi
             `vai avanti`.
-          correct: true
-          feedback: Corretto! Prima, Scrat si gira nella direzione sbagliata, poi
-            non si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Scrat non si sposterà dal primo blocco.
-          feedback: Ci sono due errori in questo codice. Prima, Scrat si gira nella
-            direzione sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
-            la ghianda.
+          feedback: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
         questions:
         - text: Cerca gli errori in questo codice. Scrat raggiungerà la ghianda o
             c'è un problema?

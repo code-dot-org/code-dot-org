@@ -1,5 +1,5 @@
 ---
-title: Ora e kodit si udhëzues për ngjarjet virtuale
+title: Udhëzuesi për orën e kodit për vullnetaret
 ---
 
 {{ signup_button }}
@@ -10,62 +10,62 @@ title: Ora e kodit si udhëzues për ngjarjet virtuale
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+Perderisa ora e kodit mbahet neper klasa rreth globit, nuk keni nevoj te jeni fizikisht aty qe te jeni pjese e kenaqesise! Ju mund te mbani nje ore kodi interaktive dhe inspiruese per studentet ne distance duke perdoru disa nga keto rekomandime.  Hidhni nje sy, guides tone te pjesemarrjes nese keni ende pyetje
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event:
+## Mund te jeni te ndare, mire mund te filloni se bashku
+Edhe nese planifikoni qe studentet ti kompletojne aktivitetet e tyre ne menyre te pavarur, ne ju rekomandojme te filloni eventin me nje kick off virtual qe t'i gezoni pjesemarresit. Ka menyra te shumta se si mund te filloni eventin tuaj:
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li>
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li>
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li>Ftoni musafir foles. Mijera vullnetare nga te gjitha fushat jane duke pritur te ndegjojne nga ju!  Perdorni harten tone te vullnetareve per t'i gjetur ata. me nje ore kodimi virtuale, nuk jeni i limituar nga distanca, keshtu qe nese ju duhet, kondiseroni te kerkoni jashte zip kodit tuaj per vullnetare qe ofrojne ndihme ne distance. Pasi te jeni lidhiru me nje vullnetar, mund t;i referoheni kesaj guide per percaktimin e temave potenciale, pyetjeve te diskutimit dhe me shume.</li>
+<li>Tregoni nje video inspiruese, Nje opsion se si ta filloni eventin tuaj eshte qe t'i tregoni pjesemarresve nje nder videot e shumta inspiruese.  Shumica e videove jane me te shkurta se 5 minuta dhe permbajne ne vete inspirim dhe inkurajim nga te famshmit qe femijet tuaj do t'i njohin. </li>
+<li>Diskutoni shkencat kompjuterike per te mire. Ktheni eventin tuaj te ores se kodit ne nje kuptim me te thelle te shkencave kompjuterike duke konsideruar impaktin e teknologjise ne jeten tone te perditshme. Pyesni stydentet pyetje te ndryshme dhe ktheni fillimin e eventit tuaj ne nje diskutim interaktiv. Nese jeni ne kerkim te ideve se si te filloni biseden, shikoni keto pyetje diskutimi.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## 2) Pergadituni perpara kohes
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. Percaktoni platformen tuaj per video konference
+Besojme qe jeni familiarizuar me platforma te ndryshme si Cisco Webex, Google Meet, Microsoft Teams, Skyp ose Zoom. Secilen nga keto vegla qe preferoni, ne ju enkurajojme te familjarizoheni, testoni mundesite e tyre, dhe testoni agjenden e ores se kodit tende perpara dates se eventit.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. Planifiko se si studentet do te marrin pjese
+Aktivitete te udhehequra vete. Ne ju rekomandojme se pas fillimit te eventit, t'i lejoni studenteve te largohen nga video konferenca qe te punojne ne aktivitetet e orese se kodimit vetem sesa aty sebashku. Kjo do t'i lejoj studenteve te perfshihen thellesisht ne projektet e tyre, dhe te fitojne nje kuptim me te thelle te shkencave kompjuterike. Poashtu do ta minimizoje shperqendrimin dhe veshitersite qe mund te vijne gjate rruges nese keni nje dritare te nje video konference te hapur.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+Mund te ju ndihmoje nese keni 1-3 opsione te udhezuesve te hapur per ta qe te zgjedhin perpara kohe.  Kjo ju mundeson te zgjidhni aktivitete qe jane me te pershtatshme per nivelin e tyre klasor. Plus, nese studentet kane pyetje te cilat kerkojne ndihme do te jeni me mire i pergaditur t'i ndihmoni nese veqse jeni te familjarizuar me udhezimet ne te cilat ata po punojne.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+Nese klasa juaj do ta beje aktivitetin e pare pasi te filloje eventi, mund ta konsideroni mbajtjen e nje konference virtuale, platforme per bisede, ose menyra te tjera te komunikimit te hapura ne menyre qe te mund te bejne pyetje kurdo qe duhet.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+Aktivitetet e ores se kodit qe mudn te behen se bashku online. Nese preferoni qe t'i mbani pjesemarresit tuaj ne te njejten video konference pergjate eventit tuaj, ju lutem kini parasyshe se pjesemarresit duhet te kene dy dritare te hapura ne te njejten kohe, nje per platformen e video konferences dhe tjeteren per studentet qe te punojne ne aktivitetet e tyre.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+Me prinderit. Per nxenesit qe jane ne klasen e 4 dhe me poshte, konsidero enkurajimin e prinderve te tyre te mbajne nje ore kodimi ne shtepi. Ju mund t'i mbeshtesni me udhezues te rekomanduar poashtu
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. Listoni nje vullnetar
+Mund te gjeni nje vullnetar te pershtatshem per nevojat tuaja duke vizituar harten tone te vullnetareve. Shimica nga ta jane te qasshem per pjesemarrje ne distance dhe jane te gatshem te ndajne me shume per eksperiencen e tyre ne shkenca kompjuterike, se si teknologjia ka impakt ne rrolin e tyre, ose thjeshte te ju ndihmojne me pyetje te nxenesve. Menjhehere pasi te keni gjetur nje vullnetar, sigurohuni qe te organizoni nje takim me ta perpara kohe ku do te keni mundesine te diskutoni rreth rrolit te tyre ne event, punoni ne kerkesat teknike dhe te themeloni logjistiken e pjesemarrjes online.
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://studio.code.org/certificates/batch">certificates</a> for all of your participants.
+### 4. Pajisjet e festes
+Shihni me poshte per ide se si te festoni oren e kodit tuaj virtual Disa mund te kerkojne nga ju te pregaditeni perpara kohes certifikata per te gjithe pjesemarresit tuaj.
 
 ---
 
-## Celebrate together
+## Festoni se bashku
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+Ngjashem me se si ju e keni filluar eventin tuaj, bashkohuni me pas per te festuar! Shihni disa ide te cilat do te bejne festimin tuaj virtual me interaktiv dhe special:
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://studio.code.org/certificates/batch">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Lejoni nxenesit te ndajne projektet e tyre te kompletuara me pjesen tejter te klases. Nese platform e konferences se videos e lejon, mund t'i inkurajoni nxenesit tuaj te marrin nje foto te projektit te tyre dhe te e vendosin si prapavi virtuale.
+- Diskutoni gjerat qe keni mesuar: Cfare kane mesuar ata per shkencat kopjuterike ose teknologjine? Cfar kane bere ata kur kane hasur ne nje problem, si e kane zgjidhur ate?
+- Krijoni dhe ndani certifikata per pjesemarresit
+- Shperndani foto dhe video te ores suaj te kodit ne rrjetet sociale.  Perdorni hashtag-un #hourofcode dhe @codeorg ne menyre qe te ndani sukseset tuaj!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+Se fundi, nese nuk e keni filluar eventin tuaj me nje musafir, video inspiruese ose pyetje te diskutimit, kjo eshte nje mundesi tjeter e mire te inkorporoni njeren nga keto eksperienca poashtu.
 
 {{ signup_button }}

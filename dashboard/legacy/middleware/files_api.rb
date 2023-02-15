@@ -36,12 +36,6 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if has_permission?('project_validator') || new_score.nil?
-
-    get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
-  end
-
   def can_view_abusive_assets?(encrypted_channel_id)
     return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
 
@@ -450,7 +444,7 @@ class FilesApi < Sinatra::Base
     # 'replace' and 'currentVersion'.
     current_version = params['version'] || params['currentVersion']
     should_replace = params['replace'] == 'true'
-    version_to_replace = params['version'] || (should_replace && params['currentVersion']) unless endpoint === 'assets'
+    version_to_replace = params['version'] || (should_replace && params['currentVersion']) unless endpoint == 'assets'
 
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
@@ -622,27 +616,8 @@ class FilesApi < Sinatra::Base
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  patch %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/$} do |endpoint, encrypted_channel_id|
-    dont_cache
-
-    abuse_score = request.GET['abuse_score']
-    not_modified if abuse_score.nil?
-
-    buckets = get_bucket_impl(endpoint).new
-
-    begin
-      files = buckets.list(encrypted_channel_id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    files.each do |file|
-      not_authorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
-      buckets.replace_abuse_score(encrypted_channel_id, file[:filename], abuse_score)
-    end
-
-    content_type :json
-    {abuse_score: abuse_score}.to_json
-  end
+  # Endpoint removed. Functionality moved to ReportAbuseController.
+  #
 
   #
   # DELETE /v3/(animations|assets|sources|libraries)/<channel-id>/<filename>
@@ -712,7 +687,7 @@ class FilesApi < Sinatra::Base
     #     }
     #   ]
     # }
-    {"filesVersionId": result[:version_id], "files": JSON.parse(result[:body].read)}.to_json
+    {filesVersionId: result[:version_id], files: JSON.parse(result[:body].read)}.to_json
   end
 
   #
@@ -749,12 +724,12 @@ class FilesApi < Sinatra::Base
         new_entry_json = copy_file(
           'files',
           encrypted_channel_id,
-          URI.encode(unescaped_filename_downcased),
-          URI.encode(unescaped_src_filename_downcased)
+          CGI.escape(unescaped_filename_downcased),
+          CGI.escape(unescaped_src_filename_downcased)
         )
       end
     else
-      new_entry_json = put_file('files', encrypted_channel_id, URI.encode(unescaped_filename_downcased), body)
+      new_entry_json = put_file('files', encrypted_channel_id, CGI.escape(unescaped_filename_downcased), body)
     end
     new_entry_hash = JSON.parse new_entry_json
     # Replace downcased filename with original filename (to preserve case in the manifest)
@@ -793,7 +768,7 @@ class FilesApi < Sinatra::Base
 
     # delete a file if requested (same as src file in a rename operation)
     if deleting_separate_file
-      bucket.delete(encrypted_channel_id, URI.encode(unescaped_delete_filename_downcased))
+      bucket.delete(encrypted_channel_id, CGI.escape(unescaped_delete_filename_downcased))
     end
 
     # return the new entry info
@@ -941,7 +916,7 @@ class FilesApi < Sinatra::Base
     manifest_json = manifest.to_json
     result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json, nil, abuse_score)
 
-    {"filesVersionId": result[:version_id], "files": manifest}.to_json
+    {filesVersionId: result[:version_id], files: manifest}.to_json
   end
 
   #

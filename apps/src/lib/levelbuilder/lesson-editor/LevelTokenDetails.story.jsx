@@ -4,89 +4,54 @@ import {action} from '@storybook/addon-actions';
 
 const defaultLevel = {
   id: '10',
-  levels: [
-    {
-      name: 'Level One',
-      id: '1',
-      url: 'levels/598/edit',
-      icon: 'fa-desktop',
-      isUnplugged: false,
-      isConceptLevel: true,
-      skin: null,
-      videoKey: null,
-      concepts: '',
-      conceptDifficulty: ''
-    }
-  ],
-  position: 1,
-  activeId: '1',
-  kind: 'puzzle',
-  bonus: false,
-  assessment: false,
-  challenge: false,
-  expand: false
-};
-
-const blocklyLevel = {
-  id: '11',
   position: 1,
   levels: [
     {
-      id: '4',
-      name: 'blockly:Studio:playlab_1',
-      url: 'levels/59800/edit'
+      name: 'Level 1',
+      id: '2',
+      url: '/fake/url/'
     }
   ],
-  activeId: '4',
-  expand: false
+  activeId: '2',
+  expand: true
 };
 
-export default storybook => {
-  storybook.storiesOf('LevelTokenDetails', module).addStoryTable([
-    {
-      name: 'level token details',
-      story: () => (
-        <div style={{width: 800}}>
-          <LevelTokenDetails
-            setScriptLevelField={action('setScriptLevelField')}
-            scriptLevel={defaultLevel}
-            activitySectionPosition={1}
-            activityPosition={1}
-            lessonExtrasAvailableForUnit={true}
-            allowMajorCurriculumChanges={true}
-          />
-        </div>
-      )
-    },
-    {
-      name: 'level token details with bonus disabled',
-      story: () => (
-        <div style={{width: 800}}>
-          <LevelTokenDetails
-            setScriptLevelField={action('setScriptLevelField')}
-            scriptLevel={defaultLevel}
-            activitySectionPosition={1}
-            activityPosition={1}
-            lessonExtrasAvailableForUnit={false}
-            allowMajorCurriculumChanges={true}
-          />
-        </div>
-      )
-    },
-    {
-      name: 'level token details with blockly level',
-      story: () => (
-        <div style={{width: 800}}>
-          <LevelTokenDetails
-            setScriptLevelField={action('setScriptLevelField')}
-            scriptLevel={blocklyLevel}
-            activitySectionPosition={1}
-            activityPosition={1}
-            lessonExtrasAvailableForUnit={true}
-            allowMajorCurriculumChanges={true}
-          />
-        </div>
-      )
-    }
-  ]);
+export default {
+  title: 'LevelTokenDetails',
+  component: LevelTokenDetails
+};
+
+const Template = args => (
+  <div style={{width: 800}}>
+    <LevelTokenDetails
+      setScriptLevelField={action('setScriptLevelField')}
+      activitySectionPosition={1}
+      activityPosition={1}
+      allowMajorCurriculumChanges={true}
+      scriptLevel={defaultLevel}
+      {...args}
+    />
+  </div>
+);
+
+export const LevelTokenLessonExtras = Template.bind({});
+LevelTokenLessonExtras.args = {
+  lessonExtrasAvailableForUnit: true
+};
+
+export const LevelTokenNoExtras = Template.bind({});
+LevelTokenNoExtras.args = {
+  lessonExtrasAvailableForUnit: false
+};
+
+export const LevelTokenPL = Template.bind({});
+LevelTokenPL.args = {
+  lessonExtrasAvailableForUnit: true,
+  isProfessionalLearningCourse: true
+};
+
+export const LevelTokenInactive = Template.bind({});
+LevelTokenInactive.args = {
+  lessonExtrasAvailableForUnit: true,
+  inactiveLevelNames: ['Inactive Level']
 };

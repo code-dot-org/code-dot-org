@@ -3173,6 +3173,10 @@ hi:
         denny-science-8:
           title: संघट्टन डिटेक्टर
         dance-2019:
+          title: डांस पार्टी
+          description_short: अपने दोस्तों के साथ साझा करने के लिए एक डांस पार्टी को
+            कोड करें। जिसमें बेयोंसे, हैरी स्टाइल्स, लिज़ो, लिल नैस एक्स, सेलेना गोमेज़,
+            डिज्नी के “एनकैंटो” के संगीत और बहुत कुछ शामिल हैं!
           description: अपने दोस्तों के साथ साझा करने के लिए अपनी डांस पार्टी को कोड
             दें!
           student_description: अपने दोस्तों के साथ साझा करने के लिए अपनी डांस पार्टी
@@ -3192,6 +3196,7 @@ hi:
             Code.org के कंप्यूटर साइंस के मूल सिद्धांतों का उपयोग करते हुए कंप्यूटर
             साइंस कैसे पढ़ाएं।
         dance-extras-2019:
+          title: डांस करते रहें
           description: विस्तारित प्रोजेक्ट विचारों के साथ पहले घंटे से आगे बढ़ें।
           description_short: Code.org के डांस पार्टी ट्यूटोरियल के लिए इस फॉलो-अप
             गतिविदि के साथ आवर ऑफ़ कोड से आगे जाएं।
@@ -4981,6 +4986,20 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: सर्वेक्षण
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: चर
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: एक-आयामी (1D) ऐरे
+            lesson-3:
+              name: फॉर लूप्स
+        hello-world-space-2022:
+          title: 'हेलो वर्ल्ड: स्पेस'
+        hello-world-soccer-2022:
+          title: 'हेलो वर्ल्ड: सॉकर'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5051,7 +5070,7 @@ hi:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: सूचियाँ
+              display_name: डेटा
             csp_loops:
               display_name: फंदे
             csp_traversals:
@@ -5063,9 +5082,15 @@ hi:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'इकाई 6: कलन विधियां'
+              display_name: सूचियाँ
             lessonGroup-2:
               display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+            lessonGroup-3:
+              display_name: फंदे
+            lessonGroup-4:
+              display_name: चक्रमण
+            lessonGroup-5:
+              display_name: प्रोजेक्ट
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -5092,3 +5117,24 @@ hi:
               display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp-post-survey-2023:
           title: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+        csp-playground:
+          title: CSP प्लेग्राउंड
+          description_audience: पाठ्यक्रम राईटरस
+          description_short: पाठ्यचर्या संस्करणों के बीच पाठों या स्तरों के अद्यतनों
+            के मंचन के लिए
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: इनपुट्स और आउटपुट्स
+            lessonGroup-4:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ऐप लैब का परिचय
+            lessonGroup-3:
+              display_name: इनपुट्स और आउटपुट्स

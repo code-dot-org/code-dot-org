@@ -22,7 +22,7 @@ module Services
     # @see GloballyUniqueIdentifiers.find_vocab
     def self.build_vocab_key(vocab)
       if vocab&.course_version&.course_offering.blank?
-        STDERR.puts "Vocabulary object #{vocab.key.inspect} is missing course version and/or offering"
+        warn "Vocabulary object #{vocab.key.inspect} is missing course version and/or offering"
         return
       end
 
@@ -54,7 +54,7 @@ module Services
     # @see GloballyUniqueIdentifiers.find_resource
     def self.build_resource_key(resource)
       if resource&.course_version&.course_offering.blank?
-        STDERR.puts "Resource object #{resource.key.inspect} is missing course version and/or offering"
+        warn "Resource object #{resource.key.inspect} is missing course version and/or offering"
         return
       end
 

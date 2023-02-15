@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-10-19T18:19:52.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -49,7 +45,8 @@
       "whileBlock": null,
       "mathRound": null,
       "getList": null,
-      "setText": null
+      "setText": null,
+      "getColumn": null
     },
     "embed": "false",
     "instructions_important": "false",
@@ -72,7 +69,6 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false",
     "long_instructions": "This app lets users compare [Gas Prices](https://studio.code.org/data_docs/us-gas-prices/) between major cities. Right now it only works for Seattle. \r\n\r\nYour job is to pick **one** of the other cities on the map and make it work for that city. Run the program and read the code to see how it works. Use the code for Seattle as an example as you go through.\r\n\r\n# Do This\r\n\r\n1. Add code to setup another list for the city you've picked. (Look through the dataset in the data tab to see how it's organized)\r\n2. Add code to setup a filtered list for the city you've picked.\r\n3. Inside the `onEvent`, add code so that the filtered list is cleared every time the dropdown changes\r\n4. Inside the `filter` function, add code so that prices from your city list are added to the appropriate filtered list.\r\n5. At the bottom of your program, declare a function for the city you chose that calculates the average of the values in the appropriate filtered list and updates the screen. (**Hint:** Look at the `seattleAverage` function as a guide.)\r\n6. Inside the `onEvent`, add a call to the function you just declared.\r\n\r\n",
     "parent_level_id": 26166,
     "mini_rubric": "false",
@@ -95,9 +91,13 @@
     "encrypted_examples": "NlIH2W7AmnJsQIqDXGQ+ZBidjQfzEYbLfzpeTPWV+AfBv13Hql3CW8e5/fHu\n8k7AJJc+ocjMlZESp7TGfzCgzQ==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-10-19T18:19:52.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-19T18:19:52.240+00:00\",\"changed\":[\"cloned from \\\"U5 Traversals Practice Choice C\\\"\"],\"cloned_from\":\"U5 Traversals Practice Choice C\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-19T18:19:52.240+00:00\",\"changed\":[\"cloned from \\\"U5 Traversals Practice Choice C\\\"\"],\"cloned_from\":\"U5 Traversals Practice Choice C\"},{\"changed_at\":\"2022-12-02 01:39:56 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

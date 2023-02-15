@@ -615,7 +615,10 @@
         "helloworld_food_sizes_soccer-2022": "크기",
         "helloworld_food_sizes_space-2022": "크기",
         "helloworld_food_sounds_soccer-2022": "사운드",
-        "helloworld_food_sounds_space-2022": "사운드"
+        "helloworld_food_sounds_space-2022": "사운드",
+        "helloworld_food_backgrounds": "이벤트를 클릭합니다.",
+        "helloworld_food_backgrounds_soccer-2022": "이벤트를 클릭합니다.",
+        "helloworld_food_backgrounds_space-2022": "이벤트를 클릭합니다."
       }
     }
   }

@@ -1,4 +1,5 @@
 @import "color.scss";
+@import "font.scss";
 
 // Note: Keep these constants in sync with Button.jsx.
 $button-height-default: 34px;
@@ -6,11 +7,16 @@ $button-height-large: 40px;
 $button-height-narrow: 40px;
 $button-height-small: 20px;
 
+/* stylelint-disable selector-pseudo-class-no-unknown */
 div,
 button,
 a,
 a:link,
-a:visited {
+a:visited,
+// Global .header a styles override application.scss.
+:global(.header) a:link,
+:global(.header) a:visited {
+  /* stylelint-enable selector-pseudo-class-no-unknown */
   &.main {
     display: inline-block;
     font-size: 12px;
@@ -197,6 +203,65 @@ a:visited {
     }
   }
 
+  // Phase 1 of Code.org Redesign - Colors
+  &.brandSecondaryDefault {
+    color: $neutral_white;
+    background-color: $brand_secondary_default;
+    border-color: $brand_secondary_default;
+    border-radius: 4px;
+    border-width: 2px;
+    line-height: 30px;
+
+    &:hover {
+      box-shadow: none;
+      color: $white;
+      border-color: $brand_secondary_dark;
+      background-color: $brand_secondary_dark;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: $brand_secondary_light;
+      border: none;
+    }
+  }
+
+  &.neutralDark {
+    color: $neutral_dark;
+    background-color: $neutral_white;
+    border: 2px solid $neutral_dark;
+    border-radius: 4px;
+    line-height: 30px;
+
+    &:hover {
+      background-color: $neutral_dark10;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_dark20;
+      border-color: $neutral_dark20;
+      background-color: $neutral_white;
+      cursor: not-allowed;
+    }
+  }
+
+  &.neutralDark,
+  &.brandSecondaryDefault {
+    &.default {
+      padding-left: 16px;
+      padding-right: 16px;
+      font-family: $gotham-bold;
+    }
+  }
+
   // Button sizes.
   &.default {
     height: $button-height-default;
@@ -236,6 +301,10 @@ a:visited {
   // Must be below sizes, since we want it to have precedence for line-height.
   &.updated {
     line-height: 12px;
+  }
+
+  &.phase1Updated {
+    line-height: 30px;
   }
 
   &.textButton {

@@ -4,6 +4,8 @@ cs:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: vyzvat uživatele {QUESTION} s proměnnou {VAR} a možnostmi {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}řekni{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -376,7 +378,7 @@ cs:
         options:
           COSTUME:
             '"ALIEN"': mimozemšťan
-            '"BEAR"': Medvěd
+            '"BEAR"': medvěd
             '"CAT"': kočka
             '"DOG"': pes
             '"DUCK"': kachna
@@ -405,7 +407,7 @@ cs:
         options:
           COSTUME:
             '"ALIEN"': mimozemšťan
-            '"BEAR"': Medvěd
+            '"BEAR"': medvěd
             '"CAT"': kočka
             '"DOG"': pes
             '"DUCK"': kachna
@@ -988,6 +990,13 @@ cs:
         text: nastavení
       Dancelab_whenSetup2:
         text: nastavení
+      DansBlocks_getMicroscope:
+        text: Mikroskop má {INPUT1}
+        options:
+          INPUT1:
+            '1': citronová šťáva
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: proveď efekt {EFFECT}
         options:
@@ -1000,12 +1009,20 @@ cs:
             '"starburst"': Výbuch hvězdy
             '"glass"': Tříštění skla
             '"twinkling"': Zablikání
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): přetažení
-            wandering(): potulování se
-            shrinking(): smršťování
+          INPUT1:
+            '1': citronová šťáva
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Komunikujte {VAR1} s {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: udělejte {NUM} nových {ANIMATION_NAME} sprajtů  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: reprezentujte {NUM} nových {ANIMATION_NAME} sprajtů [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}řekni{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprajt {SPRITE} začne {BEHAVIOR}
       gamelab_addTarget:
@@ -1301,7 +1318,7 @@ cs:
             "'sound://category_background/ocean_waves.mp3'": vlny v oceánu
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": vlnky na pláži
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": bublina
-            "'sound://category_animals/bear.mp3'": Medvěd
+            "'sound://category_animals/bear.mp3'": medvěd
             "'sound://category_animals/cat.mp3'": kočka
             "'sound://category_animals/cow.mp3'": kráva
             "'sound://category_animals/pig.mp3'": prase
@@ -1351,6 +1368,7 @@ cs:
             "'sound://category_space/Pillars_SFX.mp3'": sloupy
             "'sound://category_space/Southern_ring_SFX.mp3'": jižní okruh
             "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": Tycho
       gamelab_playSpeech:
         text: přehrát řeč {SOUND}
       gamelab_playerBehaviors:
@@ -1967,6 +1985,38 @@ cs:
         text: nakonfigurujte Město příšer s{COUNT}příšerami
       Outbreak_stopMoving:
         text: příšery se přestávají pohybovat
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskop má {INPUT1}
+        options:
+          INPUT1:
+            '1': citronová šťáva
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': citronová šťáva
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): pevná látka
+            new Behavior(liquid, []): kapalina
+            new Behavior(wandering, []): plyn
+      ParticlesBlocks_statesOfMatter2:
+        text: Nastavte {COSTUME} na {BEHAVIOR} chování
+        options:
+          BEHAVIOR:
+            '"solid"': částice pevné látky
+            '"liquid"': částice kapaliny
+            '"gas"': částice plynu
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': částice pevné látky
+            '"liquid"': částice kapaliny
+            '"gas"': částice plynu
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2037,6 +2087,21 @@ cs:
             '"sound://category_achievements/peaceful_win_1.mp3"': Úspěch
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Víření
             '"sound://category_achievements/peaceful_win_6.mp3"': Zvonkohra
+      Poetry_playSoundOptionsSpace:
+        text: přehraj zvuk {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": černá díra
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Kupa galaxií Bullet Cluster
+            "'sound://category_space/Carina_SFX.mp3'": Lodní kýl
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Kassiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Krabí mlhovina
+            "'sound://category_space/Launch_SFX.mp3'": odpal
+            "'sound://category_space/Lift_Off.mp3'": vzlet
+            "'sound://category_space/Pillars_SFX.mp3'": sloupy
+            "'sound://category_space/Southern_ring_SFX.mp3'": jižní okruh
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": Tycho
       Poetry_setAuthor:
         text: nastavit autora {AUTHOR}
       Poetry_setBackground:
@@ -2369,6 +2434,16 @@ cs:
           DIR:
             right: vpravo ↻
             left: vlevo ↺
+      storylab_setForegroundEffect2:
+        text: proveď efekt {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts"': srdce
+            '"rain"': déšť
+            '"starburst"': Výbuch hvězdy
+            '"twinkling"': Zablikání
       storylab_setHeading:
         text: nastavit nadpis {HEADING}
       storylab_setSubheading:

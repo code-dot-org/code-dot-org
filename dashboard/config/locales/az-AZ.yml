@@ -447,6 +447,7 @@ az:
       help_us: Bizə kömək edin
       teach: Öyrədin
       about: Haqqımızda
+      incubator: İnkubator
       legal: Məxfilik və Hüquq
       legal_privacy: Məxfilik siyasəti
       legal_cookie_notice: Kuki Xəbərdarlığı
@@ -749,6 +750,7 @@ az:
     store: Mağaza
     cookie_notice: Kuki Xəbərdarlığı
     view_code: Koda Baxın
+    locale_select: Dili seç (-in)
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
@@ -823,34 +825,30 @@ az:
         kodlayın, sonra tətbiqinizi saniyələr ərzində paylaşın.
       audience: 13+ yaş
       cta: Öyrənin necə
-    dance:
-      title: Rəqs şənliyi
+      image_alt: Raketlə işləyən bel çantasını taxan bənövşəyi dovşan.
+    applab-intro:
+      image_alt: Əl telefon ekranının ortasına tıklayır. Ekran işıltı və parıldama
+        saçır.
+    aquatic:
+      title: Minecraft
+      image_alt: Minecraft'dan Stiv və Aleks sənə baxırlar.
+    artist:
+      image_alt: Böyük qələmi tutub və üçbucaq çəkən cizgi filmi personajı.
+    conditionals:
+      image_alt: Oyun kartı göyərtəsini qarışdıran iki əl.
+    course1:
+      image_alt: Hansısa kodun qarşısında duran Code.org'dən eşşəkarısı və narıncı
+        balıq.
     dance-2019:
       title: Rəqs şənliyi
-    hello-world:
-      title: Salam Dünya
-      body: Yaratdığınız dünyada interaktiv simvolları kodlaşdırmaq üçün dörd əyləncəli
-        mövzudan birini seçin.
-    poem-art:
-      body: Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.
-    hoc:
-      title: Ənənəvi labirint
-      body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
-        bu fürsətdən istifadə edib.
+    dance:
+      title: Rəqs şənliyi
     flappy:
       title: Qanadlı Kod
       body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod
         dərsliyimizi sınayın!
-    20-hour:
-      title: Sürətləndirilmiş kurs
-      body: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas
-        anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə
-        istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
-      body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası
-        ilə öyrənin.
-    hoc2014:
-      try_new_tutorial: Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə edin.
-      try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
+    frozen:
+      title: Buzlu ürək
     gallery:
       title: Qalereya
       body: İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına
@@ -861,21 +859,25 @@ az:
         sadə animasiyalar və oyunlar yarada biləcəyiniz proqramlaşdırma mühitidir.
       audience: 13+ yaş
       cta: Öyrənin necə
+    hello-world:
+      title: Salam Dünya
+      body: Yaratdığınız dünyada interaktiv simvolları kodlaşdırmaq üçün dörd əyləncəli
+        mövzudan birini seçin.
+    hero:
+      title: Minecraft
+      body: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a
+        səyahət.
     hoc-encryption:
       title: Sadə Şifrələmə
       body: Tələbələr şifrələnmiş mesajların yaradılması və sındırılması üsullarını
         öyrənəcəklər.
-    weblab:
-      title: veb-laboratoriya (beta)
-      body: Web Laboratoriyası HTML və CSS-dən istifadə edərək sadə veb səhifələr
-        yarada biləcəyiniz proqramlaşdırma mühitidir. Veb səhifələrinizi dizayn edin
-        və saytınızı saniyələr ərzində paylaşın.
-      audience: 13+ yaş
-      cta: Öyrənin necə
-    frozen:
-      title: Buzlu ürək
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Ənənəvi labirint
+      body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
+        bu fürsətdən istifadə edib.
+    hoc2014:
+      try_new_tutorial: Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə edin.
+      try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
     infinity:
       title: Infinity oyun laboratoriyası
       body: Disney Infinity personajlarının oynadığı hekayə və ya oyun yaratmaq üçün
@@ -887,19 +889,35 @@ az:
       title: Minecraft
       body: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını
         proqramlaşdırın.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a
-        səyahət.
+    poem-art:
+      body: Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.
     sports:
       title: İdman
       body: Basketbol oyunu hazırlayın və ya idman növlərini qarışdırın və uyğunlaşdırın.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Mətnin sıxılması
       body: Bu dərsdə şagirdlər nümunələri simvollarla əvəz edərək mətni sıxmaq üçün
         Mətn Sıxılma Vidcetindən istifadə edəcəklər.
+    weblab:
+      title: veb-laboratoriya (beta)
+      body: Web Laboratoriyası HTML və CSS-dən istifadə edərək sadə veb səhifələr
+        yarada biləcəyiniz proqramlaşdırma mühitidir. Veb səhifələrinizi dizayn edin
+        və saytınızı saniyələr ərzində paylaşın.
+      audience: 13+ yaş
+      cta: Öyrənin necə
+    widgets:
+      title: Vidjetlər
+      body: Tələbələr bu rəqəmsal alətlərdən istifadə edərək, Kompüter Elmləri Prinsipləri
+        kursumuzdakı anlayışları praktiki olaraq araşdıra bilərlər. Vidcetləri təkbaşına
+        istifadə edin və ya sinifiniz üçün tək konseptual dərs yaradın.
+      audience: 14+ yaş
+      cta: Öyrənin necə
+    unplugged_conditionals:
+      title: Şərti ifadələr
+      body: Kartların göyərtəsindən istifadə edərək, bu "plugged" fəaliyyətdə alqoritmlər
+        və şərti ifadələr haqqında məlumat əldə edin.
     unplugged:
       title: Sərbəst dərslər
       audience: 4+ yaş
@@ -910,17 +928,13 @@ az:
         çalışın.
       body_short: Əgər kompüteriniz yoxdursa, sinif otağınızda bu şəbəkədən çıxarılan
         dərsləri sınayın.
-    unplugged_conditionals:
-      title: Şərti ifadələr
-      body: Kartların göyərtəsindən istifadə edərək, bu "plugged" fəaliyyətdə alqoritmlər
-        və şərti ifadələr haqqında məlumat əldə edin.
-    widgets:
-      title: Vidjetlər
-      body: Tələbələr bu rəqəmsal alətlərdən istifadə edərək, Kompüter Elmləri Prinsipləri
-        kursumuzdakı anlayışları praktiki olaraq araşdıra bilərlər. Vidcetləri təkbaşına
-        istifadə edin və ya sinifiniz üçün tək konseptual dərs yaradın.
-      audience: 14+ yaş
-      cta: Öyrənin necə
+    20-hour:
+      title: Sürətləndirilmiş kurs
+      body: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas
+        anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə
+        istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
+      body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası
+        ilə öyrənin.
   landing:
     prerelease_tutorial: Bu dərslik **beta**-dadır. Rəy alındıqca və təkmilləşdirmələr
       aparıldıqca o, yenidən nəzərdən keçirilməlidir.
@@ -1468,4 +1482,5 @@ az:
       forbidden: İstifadəçi tələbənin kilidlənən vəziyyətini yeniləyə bilməz
   reset_predict_progress_button: Cavabı Sil
   pixelation:
+    save_image: Şəkli saxla (-yın)
     binary: İkilik

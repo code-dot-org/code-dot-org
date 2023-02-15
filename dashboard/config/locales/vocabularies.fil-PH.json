@@ -250,6 +250,9 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "machine_learning/oceans/unversioned": {
+          "word": "Pag-Aaral Ng Makina"
+        },
         "program/coursed/2022": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
@@ -287,6 +290,9 @@
         "models_and_simulations/coursef/2022": {
           "word": "Mga Modelo at Simulation",
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Pag-Aaral Ng Makina"
         },
         "internet/coursef/2022": {
           "word": "Internet"
@@ -428,15 +434,28 @@
         "user_interface/csd/2022": {
           "word": "Interface ng User"
         },
+        "machine_learning/csd/2022": {
+          "word": "Pag-Aaral Ng Makina"
+        },
         "code/poem-art/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": ""
         },
         "event/poem-art/unversioned": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "program/poem-art/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Paggawi"
@@ -458,6 +477,9 @@
         "models_and_simulations/coursef/2021": {
           "word": "Mga Modelo at Simulation",
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Pag-Aaral Ng Makina"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -582,6 +604,9 @@
         },
         "define/coursee/2021": {
           "word": "magtakda"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Pag-Aaral Ng Makina"
         },
         "user_interface/csd/2021": {
           "word": "Interface ng User"

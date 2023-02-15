@@ -1451,6 +1451,20 @@ lt:
           lesson_groups:
             lessonGroup-3:
               display_name: Turinys
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Kintamieji
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Kartojimas
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1461,7 +1475,11 @@ lt:
               display_name: Komandų kūrimas
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Sąrašai
             csp_loops:
+              display_name: Kartojimas
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Sąrašai
+            lessonGroup-3:
               display_name: Kartojimas

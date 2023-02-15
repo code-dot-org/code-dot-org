@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-10-11T20:38:07.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -46,8 +42,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "long_instructions": "# Building Prototypes\r\n\r\nEarly in the Physical Computing unit, students learn about inputs and outputs as they gain experience using their Circuit Playground with App Lab. Later in the unit, they will use the skills from early in the unit to start building prototypes. In preparation for this, students will explore ways to build on concepts they have already learned to expand their creativity. \r\n\r\n# Making Music\r\n\r\nIn Lesson 13, students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. The sample app in this Level is a Using carefully-chosen frequencies, students can use the [`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) block to create a musical instrument like a piano.\r\n\r\nIn this app, when students play the piano, the note and the frequency will appear. Using these frequencies in their code will let them simulate musical instruments and play songs.\r\n\r\n\r\n# Do this\r\n\r\n* Try to play a song on the piano! Click below to see some examples\r\n\r\n::: details [Mary had a Little Lamb]\r\nE - D - C - D - E - E - E\r\n\r\nD - D - D\r\n\r\nE - E - E\r\n\r\nE - D - C - D - E - E - E\r\n\r\nE - D - D - E - D - C\r\n:::\r\n\r\n::: details [Twinkle Twinkle Little Star]\r\nC - C - G - G - A - A - G\r\n\r\nF - F - E - E - D - D - C\r\n\r\nG - G - F - F - E - E - D\r\n\r\nG - G - F - F - E - E - D\r\n\r\nC - C - G - G - A - A - G\r\n\r\nF - F - E - E - D - D - C\r\n:::\r\n\r\n<hr />\r\n\r\n<!--\r\n::: details [**(Optional): Wait - why does this work?!**]\r\n[[images and explanation about speaker vibrations + string vibrations + getting to be the same frequency = the note]]\r\n:::\r\n\r\n-->",
+    "makerlab_enabled": "circuitPlayground",
+    "long_instructions": "# Building Prototypes\r\n\r\nIn Chapter 1, students learn about inputs and outputs as they gain experience using their Circuit Playground with App Lab. In Chapter 2, they will use the skills from early in the unit to start building prototypes. In preparation for this, students will explore ways to build on concepts they have already learned to expand their creativity. \r\n\r\n# Making Music\r\n\r\nStudents will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. The sample app in this Level is a Using carefully-chosen frequencies, students can use the [`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) block to create a musical instrument like a piano.\r\n\r\nIn this app, when students play the piano, the note and the frequency will appear. Using these frequencies in their code will let them simulate musical instruments and play songs.\r\n\r\n\r\n# Do this\r\n\r\n* Try to play a song on the piano! Click below to see some examples\r\n\r\n::: details [Mary had a Little Lamb]\r\nE - D - C - D - E - E - E\r\n\r\nD - D - D\r\n\r\nE - E - E\r\n\r\nE - D - C - D - E - E - E\r\n\r\nE - D - D - E - D - C\r\n:::\r\n\r\n::: details [Twinkle Twinkle Little Star]\r\nC - C - G - G - A - A - G\r\n\r\nF - F - E - E - D - D - C\r\n\r\nG - G - F - F - E - E - D\r\n\r\nG - G - F - F - E - E - D\r\n\r\nC - C - G - G - A - A - G\r\n\r\nF - F - E - E - D - D - C\r\n:::\r\n\r\n<hr />\r\n\r\n<!--\r\n::: details [**(Optional): Wait - why does this work?!**]\r\n[[images and explanation about speaker vibrations + string vibrations + getting to be the same frequency = the note]]\r\n:::\r\n\r\n-->",
     "code_functions": {
       "onEvent": null,
       "buzzer.frequency": null,
@@ -69,9 +65,13 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-10-11T20:38:07.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-11T20:38:07.369+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2222\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-11T20:38:07.369+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2222\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_2222\"},{\"changed_at\":\"2022-11-06 17:37:04 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-06 17:38:40 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 19:34:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

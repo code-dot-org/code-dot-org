@@ -2,6 +2,42 @@
   "es-ES": {
     "data": {
       "announcements": {
+        "8f212dd2-169f-4a3d-9880-f76d3372b6c1": {
+          "buttonText": "Más información"
+        },
+        "a3109564-513f-47c8-bdf3-d69a19f5149e": {
+          "buttonText": "Más información"
+        },
+        "9b45f4aa-6b0a-44d7-9813-8e724baca343": {
+          "buttonText": "Más información"
+        },
+        "26f29937-fd4e-4738-8dfe-459f286636f4": {
+          "buttonText": "Más información"
+        },
+        "b7bff9e1-22bd-4f95-bb95-68e91fd5b3a3": {
+          "notice": "Ayudas para la enseñanza de los Descubrimientos de Informática",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "79a249d7-fb90-4e9c-bd8b-e7884ad2034b": {
+          "notice": "Ayudas para la enseñanza de los Descubrimientos de Informática",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "b5b0c936-3bc6-4e69-8796-e205d103151f": {
+          "notice": "Ayudas para la enseñanza de los Descubrimientos de Informática",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "f1160bfc-3ae9-41a1-8ac9-1c9e7de4afeb": {
+          "notice": "Ayudas para la enseñanza de los Descubrimientos de Informática",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be": {
+          "notice": "Ayudas para la enseñanza de los Descubrimientos de Informática",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "1aca9aa7-be38-47cb-b58d-9d0df5c15f3b": {
+          "notice": "Ayudas para la enseñanza de los Descubrimientos de Informática",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
         "a5c79bfe-dc53-48e6-b535-cfbfb3eae114": {
           "notice": "Nuevo: Elige qué lecciones mostrar u ocultar en tu sección",
           "details": "Pulsa \"Más información\" para leer el artículo de ayuda sobre cómo mostrar y ocultar las lecciones."
@@ -37,6 +73,42 @@
         "487af7e8-d3dd-46c2-a0fa-936a4e58d977": {
           "notice": "¿Te has apuntado al examen AP?",
           "details": "Ahora es el momento de inscribirse para hacer el examen de Principios de Informática AP. Asegúrate de preguntar a tu profesor sobre el plazo de inscripción de tu centro y apúntate hoy mismo. ¿No estás seguro de querer hacer el examen? Tenemos SEIS razones por las que deberías hacerlo. Compruébalas."
+        },
+        "c89013b3-d0d5-4faa-842a-718092083fe6": {
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "1ff50ed3-0032-4ed0-b28c-376ce0f1c2ce": {
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "5972aa0b-1730-4977-82db-23cee2bda683": {
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "633d1416-a7fb-44b6-a724-8479fd66f4fa": {
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "69e413fa-9081-4fac-8d73-9294b6fa1f11": {
+          "notice": "Ayudas para la enseñanza de los Descubrimientos de Informática",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "4fc301ee-93c8-4d3c-b4f6-8ad16536da1a": {
+          "notice": "Modificaciones Virtuales",
+          "details": "Si estás enseñando en un entorno virtual, híbrido o socialmente distanciado, entonces puedes ver las modificaciones recomendadas a nuestros planes de estudio que se pueden utilizar en estos entornos."
+        },
+        "12f743d3-19be-4f6e-be39-e61a9bfac4d6": {
+          "notice": "Ayudas para la enseñanza de los Descubrimientos de Informática",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "07719219-e5f5-4ff5-b623-24063a236415": {
+          "notice": "Modificaciones Virtuales",
+          "details": "Si estás enseñando en un entorno virtual, híbrido o socialmente distanciado, entonces puedes ver las modificaciones recomendadas a nuestros planes de estudio que se pueden utilizar en estos entornos."
+        },
+        "2b95b40d-3be9-445c-856a-879a6eceeea1": {
+          "notice": "Ayudas para la enseñanza de los Descubrimientos de Informática",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "219a6035-ef5e-4474-8dcc-682b3ba030d7": {
+          "notice": "Modificaciones Virtuales",
+          "details": "Si estás enseñando en un entorno virtual, híbrido o socialmente distanciado, entonces puedes ver las modificaciones recomendadas a nuestros planes de estudio que se pueden utilizar en estos entornos."
         }
       }
     }

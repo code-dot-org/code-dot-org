@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-04-07T19:51:42.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -73,9 +69,13 @@
     "encrypted_examples": "1z0QI2wbppcJKZm/sCNigAAI/gqpJwzLa8MTGOJmNkjIGfohtkVeM+izjwuk\nS088sgimY8IbPhv59zBolczvHg==\n",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-04-07T19:51:42.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-07T19:51:42.487+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_freeplay_food_2022_pilot\\\"\"],\"cloned_from\":\"courseF_groups_freeplay_food_2022_pilot\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-07T19:51:42.487+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_freeplay_food_2022_pilot\\\"\"],\"cloned_from\":\"courseF_groups_freeplay_food_2022_pilot\"},{\"changed_at\":\"2023-01-17 18:27:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

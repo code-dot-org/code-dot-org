@@ -84,7 +84,6 @@
   "didntMoveRight": "Ваш спрайт не двигался вправо.",
   "didntMoveUp": "Ваш спрайт не двигался вверх.",
   "didntPressKey": "После нажатия кнопки «Выполнить» обязательно нажмите клавишу со стрелкой. Можно нажимать оранжевые кнопки под игровой областью или нажимать кнопки на клавиатуре.",
-  "errorLoadingAnimation": "Похоже у нас проблемы с загрузкой вашей анимации \"{animationName}\". Убедитесь, что у вас хорошее соединение с интернетом и попробуйте перезагрузить страницу. Если проблема остаётся, возможно анимация повреждена. В этом случае вы можете продолжить, удалив анимацию.",
   "eventNotDetected": "Событие не было обнаружено. Убедитесь, что у вас есть правильные блоки событий в вашей рабочей области и что вы выбрали правильный *костюм* в каждом блоке кода. \n <xml><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></xml>",
   "eventsOneChange": "Ваш спрайт изменился, но только один раз. Проверьте свою программу, нажав несколько раз на клавишу, и убедитесь, что используете правильный блок. \n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "У вашего спрайта должно быть ровно 3 поведения. Попробуйте переместить блок прекращает все` в другое место в своем коде.",

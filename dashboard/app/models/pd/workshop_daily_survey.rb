@@ -99,7 +99,7 @@ module Pd
 
     def day_for_subject
       unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day
-        errors[:day] << "Day #{day} is not valid for workshop subject #{pd_workshop.subject}"
+        errors.add(:day, "Day #{day} is not valid for workshop subject #{pd_workshop.subject}")
       end
     end
   end

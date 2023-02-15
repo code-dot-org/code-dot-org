@@ -440,8 +440,9 @@ end
 def generate_status_page(suite_start_time)
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
-  File.open(status_page_filename, 'w') do |file|
-    file.write haml_engine.render(
+  File.write(
+    status_page_filename,
+    haml_engine.render(
       Object.new,
       {
         api_origin: CDO.studio_url('', scheme_for_environment),
@@ -454,7 +455,7 @@ def generate_status_page(suite_start_time)
         browser_features: browser_features
       }
     )
-  end
+  )
   ChatClient.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 
@@ -559,7 +560,7 @@ def output_synopsis(output_text, log_prefix)
 
   failing_scenarios = lines.rindex("Failing Scenarios:\n")
   if failing_scenarios
-    return lines[failing_scenarios..-1].map {|line| "#{log_prefix}#{line}"}.join
+    return lines[failing_scenarios..].map {|line| "#{log_prefix}#{line}"}.join
   else
     return lines.last(3).map {|line| "#{log_prefix}#{line}"}.join
   end
@@ -727,10 +728,6 @@ def run_feature(browser, feature, options)
   # These things won't be disabled in the dashboard instance we're testing against.
   run_environment['SKIP_I18N_INIT'] = 'true'
   run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
-
-  # Force Applitools eyes to use a consistent host OS identifier for now
-  # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  run_environment['APPLITOOLS_HOST_OS'] = browser['mobile'] ? 'iOS 11.3' : 'Windows 6x'
 
   max_reruns = how_many_reruns?(test_run_string)
 

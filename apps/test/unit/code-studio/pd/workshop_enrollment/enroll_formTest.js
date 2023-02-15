@@ -236,6 +236,43 @@ describe('Enroll Form', () => {
     });
   });
 
+  describe('Admin/Counselor Enroll Form', () => {
+    let enrollForm;
+    before(() => {
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="Admin/Counselor Workshop"
+          first_name={props.first_name}
+          email={props.email}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+        />
+      );
+    });
+
+    it('displays role question', () => {
+      assert(enrollForm.exists('#role'));
+    });
+
+    it('does not display grades_teaching question', () => {
+      assert(!enrollForm.exists('#grades_teaching'));
+    });
+
+    it('displays describe role question after answered as other', () => {
+      enrollForm.setState({role: 'Other'});
+      expect(enrollForm.find('#describe_role')).to.have.length(1);
+    });
+
+    it('does not display describe role question after answered as counselor or admin', () => {
+      enrollForm.setState({role: 'Administrator'});
+      expect(enrollForm.find('#describe_role')).to.have.length(0);
+
+      enrollForm.setState({role: 'Counselor'});
+      expect(enrollForm.find('#describe_role')).to.have.length(0);
+    });
+  });
+
   describe('Enroll Form', () => {
     let enrollForm;
     beforeEach(() => {

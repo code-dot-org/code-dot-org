@@ -130,8 +130,8 @@ export class UnconnectedJavalabSettings extends Component {
   renderDropdown = () => {
     return (
       <div className={classNames(style.settingsDropdown)}>
-        {this.renderSwitchThemeButton()}
         {this.renderFontSizeSelector()}
+        {this.renderSwitchThemeButton()}
       </div>
     );
   };
@@ -141,7 +141,6 @@ export class UnconnectedJavalabSettings extends Component {
 
     return (
       <div className={style.main}>
-        {dropdownOpen && this.renderDropdown()}
         <JavalabButton
           icon={<FontAwesome icon="cog" />}
           text={msg.settings()}
@@ -152,6 +151,7 @@ export class UnconnectedJavalabSettings extends Component {
           onClick={this.toggleDropdown}
           isHorizontal
         />
+        {dropdownOpen && this.renderDropdown()}
       </div>
     );
   }

@@ -9,3 +9,7 @@ wrong 'None of the above.'
 markdown <<MARKDOWN
 Fill in the blank. Inheritance represents a/an _______ relationship.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Inheritance represents an is-a relationship. For example, `PainterPlus` is a `Painter` or `Dog` is a `Pet`.
+MARKDOWN

@@ -956,6 +956,14 @@ gl:
           lessons:
             lesson-6:
               name: Bucles
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variables
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Bucles "Para" (For)
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -966,7 +974,11 @@ gl:
               display_name: Funcións
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Listas
             csp_loops:
+              display_name: Bucles
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-3:
               display_name: Bucles

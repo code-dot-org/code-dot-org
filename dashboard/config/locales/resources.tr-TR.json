@@ -146,20 +146,23 @@
           "type": "Kaynak"
         },
         "teacher_forum/coursed/2022": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Sanal Ders Değişiklikleri"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Kaynak"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
-          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryolar",
+          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryoları",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
           "type": "Çalışma Kağıdı"
         },
         "password_power-up_if_then_scenarios_1/coursed/2022": {
-          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryolar",
+          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryoları",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
           "type": "Cevap Anahtarı"
         },
@@ -193,7 +196,7 @@
         },
         "graph_paper_programming/coursed/2022": {
           "name": "Grafik Kağıdı Programlama",
-          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/17-qtJ5AMfe1tBZ8k5oN8zunFlrlbbE5w/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Aktivite Çalışma Kağıdı"
         },
         "graph_paper_programming_1/coursed/2022": {
@@ -282,10 +285,11 @@
         },
         "dance_party_project_guide/coursed/2022": {
           "name": "Dans Partisi Proje Rehberi",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "url": "https://docs.google.com/document/d/167pxq_OhCR_wEzHSKtUrVwMUcmgQPvxm/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "dance_party_unplugged/coursed/2022": {
+          "name": "Dans Partisi: Bağlantısız",
           "type": "Kaynak"
         },
         "open-ended_programming_levels_2/coursed/2022": {
@@ -298,7 +302,7 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "feeling_faces/coursed/2022": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -314,7 +318,7 @@
         },
         "conditionals_with_cards_2/coursed/2022": {
           "name": "Kartlarla Koşullu Önermeler",
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "url": "https://docs.google.com/document/d/1CTv8mou2xN7WWErbaoa-y3rAj1ayoOsZ_OQz2jsnSh8/edit?usp=sharing",
           "type": "Değerlendirme"
         },
         "conditionals_with_cards_3/coursed/2022": {
@@ -329,7 +333,7 @@
         },
         "conditionals_with_cards_sample_program/coursed/2022": {
           "name": "Kartlarla Koşullar Örnek Programı",
-          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit",
+          "url": "https://docs.google.com/document/d/1xhY_6BbUchbi10dpFtGCad_RLdiXBZE_JwwEdH83M-M/edit?usp=sharing",
           "type": "Öğretmen Hazırlık Rehberi"
         },
         "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
@@ -370,12 +374,15 @@
           "type": "Kaynak"
         },
         "teacher_forum/coursef/2022": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Sanal Ders Değişiklikleri"
+        },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Kaynak"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Kelimelerin Gücü: Ders Sınavı",
@@ -399,7 +406,7 @@
         },
         "the_power_of_words_words_can_hurt/coursef/2022": {
           "name": "Kelimelerin Gücü: Kelimeler Acıtabilir",
-          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit",
+          "url": "https://docs.google.com/document/d/1mm_EVqraytessJQnVg7XmZTsePVcCkWaGBmKqOjtUAA/edit?usp=sharing",
           "type": "Çalışma Kağıdı"
         },
         "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
@@ -407,12 +414,12 @@
         },
         "exploring_apps/coursef/2022": {
           "name": "Uygulamaları Keşfetme",
-          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
+          "url": "https://docs.google.com/document/d/176FCfC-SvdlKXOuahEvm7qczE98ROwn4/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Kaynak"
         },
         "exploring_apps_1/coursef/2022": {
           "name": "Uygulamaları Keşfetme",
-          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
+          "url": "https://docs.google.com/document/d/16jOQBQZ3FhQ91LHTF1gXSymCqyvoG_kd/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "introducing_sprite_lab_1/coursef/2022": {
@@ -426,10 +433,12 @@
           "type": "Slaytlar"
         },
         "blank_space_stories/coursef/2022": {
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+          "name": "Boş Alan Hikayeleri",
+          "url": "https://docs.google.com/document/d/1gT4eW6sNLiSNP5U3joKjGZJdEFNUmz8_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true"
         },
         "blank_space_stories_1/coursef/2022": {
-          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
+          "name": "Boş Alan Hikayeleri",
+          "url": "https://docs.google.com/document/d/1KuqffPr14ap5sw8OLFv-LyOlKm8PlWT0/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "mini_project_user_input_programs/coursef/2022": {
@@ -439,7 +448,7 @@
         },
         "mini_project_user_input_programs_1/coursef/2022": {
           "name": "Mini Proje: Kullanıcı Giriş Programları",
-          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
+          "url": "https://docs.google.com/document/d/1cz29Iy6f60dtLiSnBjTeIYNYsLgDtA0J/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "teacher_sandbox_level/coursef/2022": {
@@ -449,11 +458,11 @@
         },
         "user_input_programs/coursef/2022": {
           "name": "Kullanıcı Giriş Programları",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+          "url": "https://docs.google.com/document/d/11tF59zkkXcMD1BjZPJwQbpKRYdLDLFgS/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true"
         },
         "running_simulations/coursef/2022": {
           "name": "Simülasyonların Çalıştırılması",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
+          "url": "https://docs.google.com/document/d/1cQA6L6RbEcMI20f_rqwQLTt_1NhI5DV9/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "ai_impact_on_society/coursef/2022": {
@@ -537,12 +546,15 @@
           "type": "Kaynak"
         },
         "teacher_forum/coursee/2022": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Sanal Ders Değişiklikleri"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Kaynak"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Süper Dijital Vatandaş Olun: Ders Slaytları",
@@ -590,7 +602,7 @@
         },
         "about_me_planning_guide/coursee/2022": {
           "name": "Benim Hakkımda Planlama Kılavuzu",
-          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview",
+          "url": "https://docs.google.com/document/d/15YOtpCFOtDldti7CZh_15XzJ-YrKeTyM/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "pause_and_think_online/coursee/2022": {
@@ -689,7 +701,7 @@
           "type": "Kaynak"
         },
         "teacher_forum/courseb/2022": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -697,22 +709,22 @@
           "name": "Sanal Ders Değişiklikleri"
         },
         "digital_trails_animal_tracks/courseb/2022": {
-          "name": "Dijital Yollar: Hayvan Parçaları",
+          "name": "Dijital İzler: Hayvan İzleri",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "Öğrenci Notu"
         },
         "digital_trails_digital_trail_squares/courseb/2022": {
-          "name": "Dijital Parklar: Dijital Trail Kareler",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "name": "Dijital İzler: Dijital İz Kareleri",
+          "url": "https://docs.google.com/document/d/1toU8uzA54pnBUOw4_eXWEmOM_e-mKoM-I4b9yal24Lc/edit?usp=sharing",
           "type": "Öğrenci Notu"
         },
         "digital_trails_follow_the_digital_trail/courseb/2022": {
-          "name": "Dijital Trails: Dijital Yolu Takip Edin",
+          "name": "Dijital İzler: Dijital İzi Takip Edin",
           "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
           "type": "Ders Videosu"
         },
         "digital_trails_lesson_slides/courseb/2022": {
-          "name": "Dijital Yollar: Ders Slaytları",
+          "name": "Dijital İzler: Ders Slaytları",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
           "type": "Sunum Destesi"
         },
@@ -722,17 +734,17 @@
           "type": "Kaynak"
         },
         "move_it_move_it/courseb/2022": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
           "type": "Harita Aktivitesi"
         },
         "move_it_move_it_1/courseb/2022": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
           "type": "Çalışma Kağıdı"
         },
         "move_it_move_it_2/courseb/2022": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
           "type": "Çalışma Kağıdı Cevap Anahtarı"
         },
@@ -751,14 +763,12 @@
           "url": "https://studio.code.org/s/jigsaw"
         },
         "feeling_faces/courseb/2022": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Code.org'da bir Sınıf Bölümü Nasıl Yapılır",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "Öğretmen Videosu"
+          "name": "Code.org'da bir Sınıf Bölümü Nasıl Yapılır"
         },
         "pair_programming/courseb/2022": {
           "name": "Eşli Programlama",
@@ -777,7 +787,7 @@
         },
         "compass_rose/courseb/2022": {
           "name": "Pusula Gülü",
-          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit",
+          "url": "https://docs.google.com/document/d/1Tg4MqopzP_nnG8468QeP7U7FlPxbiKrz9xx8woCgT94/edit?usp=sharing",
           "type": "Çalışma Kağıdı"
         },
         "feeling_faces_-_emotion_image/courseb/2022": {
@@ -856,12 +866,12 @@
         },
         "play_lab_project_planning_guide/courseb/2022": {
           "name": "Play Lab Proje Planlama Kılavuzu",
-          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview",
+          "url": "https://docs.google.com/document/d/1EkbsnMxEV3tVd2p4AiWh6JkUQkmnMLPW/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "play_lab_project_planning_guide_1/courseb/2022": {
           "name": "Play Lab Proje Planlama Kılavuzu",
-          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
+          "url": "https://docs.google.com/document/d/1ex5R2X4uELzPuOpFMwENg01MHAMmF5g_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "debugging_guide/express/2022": {
@@ -869,7 +879,7 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum/express/2022": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -923,7 +933,7 @@
         },
         "dance_party_project_guide/express/2022": {
           "name": "Dans Partisi Proje Rehberi",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "url": "https://docs.google.com/document/d/167pxq_OhCR_wEzHSKtUrVwMUcmgQPvxm/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "open-ended_programming_levels/express/2022": {
@@ -945,6 +955,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2022": {
+          "name": "Metin ve Bilgi İstemleri",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Slaytlar"
         },
@@ -968,7 +979,7 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum/pre-express/2022": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -978,7 +989,7 @@
           "type": "Video"
         },
         "feeling_faces/pre-express/2022": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -993,7 +1004,7 @@
           "type": "Öğrenci Videosu"
         },
         "wiggles_-_go_noodle/pre-express/2022": {
-          "name": "Wiggles - Go Noodle",
+          "name": "Wiggles - Haydi Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -1031,7 +1042,7 @@
           "type": "Kaynak"
         },
         "teacher_forum/coursea/2022": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -1044,18 +1055,18 @@
           "type": "Sunum Destesi"
         },
         "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallemim",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallem",
           "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
           "type": "Ders Videosu"
         },
         "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Duraklat ve Düşün Anını",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Dur ve Düşün Anı",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
           "type": "Öğrenci Notu"
         },
         "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Güvenlik: Bu Kurallar!",
-          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Güvenlik: En İyisi!",
+          "url": "https://docs.google.com/document/d/1BZv2X9QwTYe8VOmSLCm2lKGBw2tY2UG7vHisu9O5h3s/edit?usp=sharing",
           "type": "Şiir Posteri"
         },
         "20_20_20_rule/coursea/2022": {
@@ -1139,7 +1150,7 @@
           "type": "Yönergeler"
         },
         "feeling_faces/coursea/2022": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -1184,12 +1195,12 @@
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "Sanatçı Projesi Planlama Rehberi",
-          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+          "url": "https://docs.google.com/document/d/1fief0NDYq95-tda7u_aRoLzg018CxQwf/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "artist_project_planning_guide_1/coursea/2022": {
           "name": "Sanatçı Projesi Planlama Rehberi",
-          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
+          "url": "https://docs.google.com/document/d/1PpohIDmip6AJCb49kpIdQQRyfDbOgyTt/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
@@ -1221,20 +1232,23 @@
           "type": "Kaynak"
         },
         "teacher_forum/coursec/2022": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Sanal Ders Değişiklikleri"
         },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Kaynak"
+        },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
-          "name": "Çevrimiçi Anlamlığa Durdurmak: Ders Slaytları",
+          "name": "Çevrimiçi Kabalığa DUR demek: Ders Slaytları",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
           "type": "Sunum Destesi"
         },
         "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
-          "name": "Çevrimiçi Ortalama Durdurmak: Online Ortalama Durdur",
+          "name": "Çevrimiçi Kabalığa DUR demek: Çevrimiçi Kabalığı DURDUR",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
           "type": "Öğrenci Notu"
         },
@@ -1351,7 +1365,7 @@
         },
         "graphing_data_from_play_lab/coursec/2022": {
           "name": "Play Lab'dan Veri Graflama",
-          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5",
+          "url": "https://docs.google.com/document/d/1H-kMSdLj4xTrEQPmS0ukyol73heln0F_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "binary_bracelets/coursec/2022": {
@@ -1366,17 +1380,17 @@
         },
         "binary_bracelets_2/coursec/2022": {
           "name": "İkilik Bileklikler",
-          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
+          "url": "https://docs.google.com/document/d/1hLHc8AnPffa2CkChZRzfrgsBfjBScELJgBz0O1eZNZ8/edit?usp=sharing",
           "type": "Çalışma Kağıdı"
         },
         "binary_bracelets_3/coursec/2022": {
           "name": "İkilik Bileklikler",
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "url": "https://docs.google.com/document/d/1ydGf8sbuIWJEQvzLXfEd0IVd5m8y0fMuS294IcC2YAI/edit?usp=sharing",
           "type": "Değerlendirme"
         },
         "binary_bracelets_4/coursec/2022": {
           "name": "İkilik Bileklikler",
-          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
+          "url": "https://docs.google.com/document/d/1BJr-LRoy-_64_ME7CluZ3mz5XICjlulv9293G9Rw310/edit?usp=sharing",
           "type": "Değerlendirme Cevap Anahtarı"
         },
         "bits_versus_bytes/coursec/2022": {
@@ -1386,16 +1400,16 @@
         },
         "play_lab_project_planning_guide/coursec/2022": {
           "name": "Play Lab Proje Planlama Kılavuzu",
-          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit",
+          "url": "https://docs.google.com/document/d/1VGGg4txMyeOIUTv3OTV1KI175CBZfMYkW7zjcKn5lpo/edit",
           "type": "Çalışma Kağıdı"
         },
         "play_lab_project_planning_guide_exemplar_/coursec/2022": {
           "name": "Play Lab Proje Planlama Kılavuzu (Örnek)",
-          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1BPiAd-ueRcFp1Vez9WVYZi9es1wG_lHZ/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Ders Kaynağı"
         },
         "teacher_forum/csd/2022": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "meals_data/csd/2022": {
           "type": "Kaynak"
@@ -1442,7 +1456,7 @@
           "type": "Slaytlar"
         },
         "combining_representations/csd/2022": {
-          "name": "İfadeleri birleştirme",
+          "name": "Temsillerin Birleştirilmesi",
           "type": "Slaytlar"
         },
         "medical_records_1/csd/2022": {
@@ -1545,7 +1559,7 @@
           "type": "Slaytlar"
         },
         "make_a_recommendation/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "make_a_recommendation_1/csd/2022": {
           "type": "Değerlendirme Tablosu"
@@ -1621,7 +1635,7 @@
         },
         "apps_and_problem_solving_1/csd/2022": {
           "name": "Uygulamalar ve Problem çözme",
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "apps_and_problem_solving_2/csd/2022": {
           "name": "Uygulamalar ve Problem çözme",
@@ -1819,7 +1833,7 @@
         },
         "interactive_card_2/csd/2022": {
           "name": "İnteraktif Kart",
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "interactive_card_3/csd/2022": {
           "name": "İnteraktif Kart",
@@ -1864,7 +1878,7 @@
           "type": "Slaytlar"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
-          "name": "Hız ve Sayaç Modeli",
+          "name": "Hız ve Sayaç Deseni",
           "type": "Kaynak"
         },
         "complex_sprite_movement/csd/2022": {
@@ -1910,7 +1924,7 @@
           "type": "Proje Kılavuzu"
         },
         "make_your_own_game_2/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "make_your_own_game_3/csd/2022": {
           "type": "Değerlendirme Tablosu"
@@ -1967,7 +1981,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "html_web_page_2/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "html_web_page_3/csd/2022": {
           "type": "Proje Kılavuzu"
@@ -2012,7 +2026,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "your_personal_style_1/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "your_personal_style_2/csd/2022": {
           "type": "Proje Kılavuzu"
@@ -2057,7 +2071,7 @@
           "type": "Kaynak"
         },
         "personal_web_page/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "personal_web_page_-_reflect/csd/2022": {
           "type": "Proje Kılavuzu"
@@ -2069,7 +2083,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "publishing_your_website/csd/2022": {
-          "name": "Web Sitenizi Yayınlıyoruz",
+          "name": "Web Sitenizi Yayınlama",
           "type": "Video"
         },
         "project_-_personal_web_page/csd/2022": {
@@ -2139,7 +2153,7 @@
           "type": "Proje Kılavuzu"
         },
         "website_for_a_purpose_1/csd/2022": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "peer_review_and_final_touches/csd/2022": {
           "name": "Akran İncelemesi ve Son Rötuşlar",
@@ -2265,7 +2279,11 @@
         "bugs_and_features_2/csd/2022": {
           "type": "Slaytlar"
         },
+        "updating_your_prototype/csd/2022": {
+          "name": "Prototipinizi Güncelleme"
+        },
         "updating_your_prototype_1/csd/2022": {
+          "name": "Prototipinizi Güncelleme",
           "type": "Slaytlar"
         },
         "app_presentation/csd/2022": {
@@ -2324,11 +2342,11 @@
           "type": "Slaytlar"
         },
         "board_events/csd/2022": {
-          "name": "Kurul Etkinlikleri",
+          "name": "Devre kartı Etkinlikleri",
           "type": "Kaynak"
         },
         "board_events_1/csd/2022": {
-          "name": "Kurul Etkinlikleri",
+          "name": "Devre kartı Etkinlikleri",
           "type": "Slaytlar"
         },
         "physical_input/csd/2022": {
@@ -2427,7 +2445,7 @@
           "type": "Slaytlar"
         },
         "playing_notes/csd/2022": {
-          "name": "Notları çalma",
+          "name": "Notaları çalma",
           "type": "Kaynak"
         },
         "producing_output/csd/2022": {
@@ -2532,15 +2550,18 @@
           "type": "Kaynak"
         },
         "introduction_to_ai_lab/csd/2022": {
+          "name": "AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş ",
           "type": "Slaytlar"
         },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş ",
           "type": "Video"
         },
         "selecting_features/csd/2022": {
           "type": "Kaynak"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Yapay Zeka Laboratuvarında Eğitim ve Test",
           "type": "Video"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -2564,6 +2585,7 @@
           "type": "Cevap Anahtarı"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI Laboratuvarında Model Kartları",
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2022": {
@@ -2594,9 +2616,14 @@
           "type": "Cevap Anahtarı"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "AI Laboratuvarında Sayısal Veriler",
           "type": "Slaytlar"
         },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "AI Laboratuvarında Sayısal Veriler"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "AI Laboratuvarında Sayısal Veriler",
           "type": "Video"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -2673,7 +2700,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/courseb/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/courseb/2018": {
           "name": "Kelime Dağarcığı"
@@ -2685,7 +2712,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursea/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursea/2018": {
           "name": "Kelime Dağarcığı"
@@ -2697,7 +2724,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursed/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursed/2018": {
           "name": "Kelime Dağarcığı"
@@ -2709,7 +2736,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursef/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursef/2018": {
           "name": "Kelime Dağarcığı"
@@ -2721,7 +2748,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/express/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/express/2018": {
           "name": "Kelime Dağarcığı"
@@ -2733,7 +2760,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursee/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursee/2018": {
           "name": "Kelime Dağarcığı"
@@ -2745,7 +2772,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursec/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursec/2018": {
           "name": "Kelime Dağarcığı"
@@ -2760,7 +2787,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_2/csd/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_2/csd/2018": {
           "name": "Kelime Dağarcığı"
@@ -2775,7 +2802,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_5/csd/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_5/csd/2018": {
           "name": "Kelime Dağarcığı"
@@ -2787,7 +2814,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_4/csd/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_4/csd/2018": {
           "name": "Kelime Dağarcığı"
@@ -2802,7 +2829,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_3/csd/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_3/csd/2018": {
           "name": "Kelime Dağarcığı"
@@ -2817,7 +2844,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_1/csd/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_1/csd/2018": {
           "name": "Kelime Dağarcığı"
@@ -2829,7 +2856,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/csd/2018": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/csd/2018": {
           "name": "Kelime Dağarcığı"
@@ -2844,7 +2871,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursea/2019": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursea/2019": {
           "name": "Kelime Dağarcığı"
@@ -2859,7 +2886,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/courseb/2019": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/courseb/2019": {
           "name": "Kelime Dağarcığı"
@@ -2874,7 +2901,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursed/2019": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursed/2019": {
           "name": "Kelime Dağarcığı"
@@ -2889,7 +2916,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursef/2019": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursef/2019": {
           "name": "Kelime Dağarcığı"
@@ -2904,7 +2931,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursee/2019": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursee/2019": {
           "name": "Kelime Dağarcığı"
@@ -2916,7 +2943,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/express/2019": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/express/2019": {
           "name": "Kelime Dağarcığı"
@@ -2931,13 +2958,13 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursec/2019": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursec/2019": {
           "name": "Kelime Dağarcığı"
         },
         "teacher_forum/csd/2019": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "code_introduced_1/csd/2019": {
           "name": "Koda Giriş"
@@ -3015,7 +3042,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_2/csd/2017": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_2/csd/2017": {
           "name": "Kelime Dağarcığı"
@@ -3030,7 +3057,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_5/csd/2017": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_5/csd/2017": {
           "name": "Kelime Dağarcığı"
@@ -3045,7 +3072,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_1/csd/2017": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_1/csd/2017": {
           "name": "Kelime Dağarcığı"
@@ -3057,7 +3084,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/csd/2017": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/csd/2017": {
           "name": "Kelime Dağarcığı"
@@ -3069,7 +3096,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_4/csd/2017": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_4/csd/2017": {
           "name": "Kelime Dağarcığı"
@@ -3084,7 +3111,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum_3/csd/2017": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary_3/csd/2017": {
           "name": "Kelime Dağarcığı"
@@ -3145,7 +3172,7 @@
           "type": "Kaynak"
         },
         "teacher_forum_1/coursef/2021": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -3156,12 +3183,12 @@
         },
         "exploring_apps/coursef/2021": {
           "name": "Uygulamaları Keşfetme",
-          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
+          "url": "https://docs.google.com/document/d/176FCfC-SvdlKXOuahEvm7qczE98ROwn4/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Kaynak"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "Uygulamaları Keşfetme",
-          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
+          "url": "https://docs.google.com/document/d/16jOQBQZ3FhQ91LHTF1gXSymCqyvoG_kd/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "introducing_sprite_lab/coursef/2021": {
@@ -3211,15 +3238,17 @@
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Kelimelerin Gücü: Kelimeler Acıtabilir",
-          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit",
+          "url": "https://docs.google.com/document/d/1mm_EVqraytessJQnVg7XmZTsePVcCkWaGBmKqOjtUAA/edit?usp=sharing",
           "type": "Çalışma Kağıdı"
         },
         "blank_space_stories/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
+          "name": "Boş Alan Hikayeleri",
+          "url": "https://docs.google.com/document/d/1KuqffPr14ap5sw8OLFv-LyOlKm8PlWT0/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+          "name": "Boş Alan Hikayeleri",
+          "url": "https://docs.google.com/document/d/1gT4eW6sNLiSNP5U3joKjGZJdEFNUmz8_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true"
         },
         "variables_blank_space_stories/coursef/2021": {
           "name": "Değişkenler: Boş Boşluk Hikayeleri",
@@ -3227,6 +3256,7 @@
           "type": "Slaytlar"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "Metin ve Bilgi İstemleri",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Slaytlar"
         },
@@ -3237,7 +3267,7 @@
         },
         "mini_project_user_input_programs_1/coursef/2021": {
           "name": "Mini Proje: Kullanıcı Giriş Programları",
-          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
+          "url": "https://docs.google.com/document/d/1cz29Iy6f60dtLiSnBjTeIYNYsLgDtA0J/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "teacher_sandbox_level/coursef/2021": {
@@ -3247,7 +3277,7 @@
         },
         "user_input_programs/coursef/2021": {
           "name": "Kullanıcı Giriş Programları",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+          "url": "https://docs.google.com/document/d/11tF59zkkXcMD1BjZPJwQbpKRYdLDLFgS/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Dur ve Çevrimiçi Düşün",
@@ -3291,7 +3321,7 @@
         },
         "running-simulations/coursef/2021": {
           "name": "Simülasyonların Çalıştırılması",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
+          "url": "https://docs.google.com/document/d/1cQA6L6RbEcMI20f_rqwQLTt_1NhI5DV9/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "ai-ml/coursef/2021": {
@@ -3395,7 +3425,7 @@
           "type": "Kaynak"
         },
         "teacher_forum_1/courseb/2021": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -3405,22 +3435,22 @@
           "type": "Kaynak"
         },
         "digital-trails-animal-tracks/courseb/2021": {
-          "name": "Dijital Yollar: Hayvan Parçaları",
+          "name": "Dijital İzler: Hayvan İzleri",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "Öğrenci Notu"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "Dijital Parklar: Dijital Trail Kareler",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "name": "Dijital İzler: Dijital İz Kareleri",
+          "url": "https://docs.google.com/document/d/1toU8uzA54pnBUOw4_eXWEmOM_e-mKoM-I4b9yal24Lc/edit?usp=sharing",
           "type": "Öğrenci Notu"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "Dijital Trails: Dijital Yolu Takip Edin",
+          "name": "Dijital İzler: Dijital İzi Takip Edin",
           "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
           "type": "Ders Videosu"
         },
         "digital-trails-lesson-slides/courseb/2021": {
-          "name": "Dijital Yollar: Ders Slaytları",
+          "name": "Dijital İzler: Ders Slaytları",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
           "type": "Sunum Destesi"
         },
@@ -3430,17 +3460,17 @@
           "type": "Kaynak"
         },
         "mimi-activity/courseb/2021": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
           "type": "Harita Aktivitesi"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
           "type": "Çalışma Kağıdı"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Çabuk, Çabuk Taşı",
+          "name": "Oynat, Oynat",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
           "type": "Çalışma Kağıdı Cevap Anahtarı"
         },
@@ -3464,7 +3494,7 @@
           "type": "Yönergeler"
         },
         "feeling-faces-image/courseb/2021": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -3484,7 +3514,7 @@
         },
         "compass-rose/courseb/2021": {
           "name": "Pusula Gülü",
-          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit",
+          "url": "https://docs.google.com/document/d/1Tg4MqopzP_nnG8468QeP7U7FlPxbiKrz9xx8woCgT94/edit?usp=sharing",
           "type": "Çalışma Kağıdı"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
@@ -3564,12 +3594,12 @@
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "Play Lab Proje Planlama Kılavuzu",
-          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview",
+          "url": "https://docs.google.com/document/d/1EkbsnMxEV3tVd2p4AiWh6JkUQkmnMLPW/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
           "name": "Play Lab Proje Planlama Kılavuzu",
-          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
+          "url": "https://docs.google.com/document/d/1ex5R2X4uELzPuOpFMwENg01MHAMmF5g_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "2021_change_log/coursea/2021": {
@@ -3618,7 +3648,7 @@
           "type": "Kaynak"
         },
         "teacher_forum_1/coursea/2021": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -3633,18 +3663,18 @@
           "type": "Sunum Destesi"
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallemim",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallem",
           "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
           "type": "Ders Videosu"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Duraklat ve Düşün Anını",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Dur ve Düşün Anı",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
           "type": "Öğrenci Notu"
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "Çevrimiçi Mahallemde Güvenlik: Güvenlik: Bu Kurallar!",
-          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "name": "Çevrimiçi Mahallemde Güvenlik: Güvenlik: En İyisi!",
+          "url": "https://docs.google.com/document/d/1BZv2X9QwTYe8VOmSLCm2lKGBw2tY2UG7vHisu9O5h3s/edit?usp=sharing",
           "type": "Şiir Posteri"
         },
         "20_20_20_rule/coursea/2021": {
@@ -3738,7 +3768,7 @@
           "type": "Yönergeler"
         },
         "feeling-faces-image/coursea/2021": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -3813,12 +3843,12 @@
         },
         "artist_project_planning_guide/coursea/2021": {
           "name": "Sanatçı Projesi Planlama Rehberi",
-          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+          "url": "https://docs.google.com/document/d/1fief0NDYq95-tda7u_aRoLzg018CxQwf/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "artist_project_planning_guide_1/coursea/2021": {
           "name": "Sanatçı Projesi Planlama Rehberi",
-          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
+          "url": "https://docs.google.com/document/d/1PpohIDmip6AJCb49kpIdQQRyfDbOgyTt/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Cevap Anahtarı"
         },
         "2021_change_log/coursec/2021": {
@@ -3867,7 +3897,7 @@
           "type": "Kaynak"
         },
         "teacher_forum_1/coursec/2021": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -3877,7 +3907,7 @@
           "type": "Kaynak"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
-          "name": "Çevrimiçi Anlamlığa Durdurmak: Ders Slaytları",
+          "name": "Çevrimiçi Kabalığı DURDURmak: Ders Slaytları",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
           "type": "Sunum Destesi"
         },
@@ -3997,22 +4027,22 @@
         },
         "right-app-scenarios/coursec/2021": {
           "name": "Play Lab'dan Veri Graflama",
-          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5",
+          "url": "https://docs.google.com/document/d/1H-kMSdLj4xTrEQPmS0ukyol73heln0F_/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "İkilik Bileklikler",
-          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
+          "url": "https://docs.google.com/document/d/1BJr-LRoy-_64_ME7CluZ3mz5XICjlulv9293G9Rw310/edit?usp=sharing",
           "type": "Değerlendirme Cevap Anahtarı"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
           "name": "İkilik Bileklikler",
-          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
+          "url": "https://docs.google.com/document/d/1hLHc8AnPffa2CkChZRzfrgsBfjBScELJgBz0O1eZNZ8/edit?usp=sharing",
           "type": "Çalışma Kağıdı"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "İkilik Bileklikler",
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "url": "https://docs.google.com/document/d/1ydGf8sbuIWJEQvzLXfEd0IVd5m8y0fMuS294IcC2YAI/edit?usp=sharing",
           "type": "Değerlendirme"
         },
         "csf-bit-byte-video/coursec/2021": {
@@ -4032,12 +4062,12 @@
         },
         "play-lab-project-guide/coursec/2021": {
           "name": "Play Lab Proje Planlama Kılavuzu",
-          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit",
+          "url": "https://docs.google.com/document/d/1VGGg4txMyeOIUTv3OTV1KI175CBZfMYkW7zjcKn5lpo/edit",
           "type": "Çalışma Kağıdı"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
           "name": "Play Lab Proje Planlama Kılavuzu (Örnek)",
-          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1BPiAd-ueRcFp1Vez9WVYZi9es1wG_lHZ/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Ders Kaynağı"
         },
         "2021_change_log/coursed/2021": {
@@ -4086,7 +4116,7 @@
           "type": "Kaynak"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -4096,12 +4126,12 @@
           "type": "Kaynak"
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryolar",
+          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryoları",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
           "type": "Çalışma Kağıdı"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryolar",
+          "name": "Şifre Güçlendirme: Eğer... Sonra... Senaryoları",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
           "type": "Cevap Anahtarı"
         },
@@ -4147,7 +4177,7 @@
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Grafik Kağıdı Programlama",
-          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/17-qtJ5AMfe1tBZ8k5oN8zunFlrlbbE5w/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Aktivite Çalışma Kağıdı"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
@@ -4225,10 +4255,11 @@
         },
         "dance-party-project-guide/coursed/2021": {
           "name": "Dans Partisi Proje Rehberi",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "url": "https://docs.google.com/document/d/167pxq_OhCR_wEzHSKtUrVwMUcmgQPvxm/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "dance_party_unplugged/coursed/2021": {
+          "name": "Dans Partisi: Bağlantısız",
           "url": "https://curriculum.code.org/hoc/unplugged/4/",
           "type": "Kaynak"
         },
@@ -4238,7 +4269,7 @@
           "type": "Cevap Anahtarı"
         },
         "feeling-faces-image/coursed/2021": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -4259,12 +4290,12 @@
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Kartlarla Koşullu Önermeler",
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "url": "https://docs.google.com/document/d/1CTv8mou2xN7WWErbaoa-y3rAj1ayoOsZ_OQz2jsnSh8/edit?usp=sharing",
           "type": "Değerlendirme"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
           "name": "Kartlarla Koşullar Örnek Programı",
-          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit",
+          "url": "https://docs.google.com/document/d/1xhY_6BbUchbi10dpFtGCad_RLdiXBZE_JwwEdH83M-M/edit?usp=sharing",
           "type": "Öğretmen Hazırlık Rehberi"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
@@ -4297,7 +4328,7 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum_1/express/2021": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -4365,7 +4396,7 @@
         },
         "dance-party-project-guide/express/2021": {
           "name": "Dans Partisi Proje Rehberi",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "url": "https://docs.google.com/document/d/167pxq_OhCR_wEzHSKtUrVwMUcmgQPvxm/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "open-ended_programming_levels/express/2021": {
@@ -4399,6 +4430,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "Metin ve Bilgi İstemleri",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "Slaytlar"
         },
@@ -4432,7 +4464,7 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum_1/pre-express/2021": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -4447,7 +4479,7 @@
           "type": "Öğretmen Videosu"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "His Yüzleri",
+          "name": "Hisseden Yüzler",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
           "type": "Duygu Resimleri"
         },
@@ -4457,7 +4489,7 @@
           "type": "Öğrenci Videosu"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "Wiggles - Go Noodle",
+          "name": "Wiggles - Haydi Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
@@ -4516,7 +4548,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum_1/coursee/2021": {
-          "name": "Öğretmen forumu",
+          "name": "Öğretmen Forumu",
           "url": "https://forum.code.org/c/csf/",
           "type": "Kaynak"
         },
@@ -4574,7 +4606,7 @@
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "Benim Hakkımda Planlama Kılavuzu",
-          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview",
+          "url": "https://docs.google.com/document/d/15YOtpCFOtDldti7CZh_15XzJ-YrKeTyM/edit?usp=share_link&ouid=109161598002566703443&rtpof=true&sd=true",
           "type": "Çalışma Kağıdı"
         },
         "common-sense-media-pause-think/coursee/2021": {
@@ -4710,12 +4742,15 @@
           "type": "Kaynak"
         },
         "introduction_to_ai_lab/csd/2021": {
+          "name": "AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş ",
           "type": "Slaytlar"
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş ",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Yapay Zeka Laboratuvarında Eğitim ve Test",
           "type": "Video"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
@@ -4745,6 +4780,7 @@
           "type": "Slaytlar"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI Laboratuvarında Model Kartları",
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2021": {
@@ -4772,9 +4808,14 @@
           "type": "Cevap Anahtarı"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI Laboratuvarında Sayısal Veriler",
           "type": "Slaytlar"
         },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI Laboratuvarında Sayısal Veriler"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI Laboratuvarında Sayısal Veriler",
           "type": "Video"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
@@ -4845,7 +4886,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "teacher_forum/csd/2021": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "unit-4-the-design-process/csd/2021": {
           "type": "Slaytlar"
@@ -4911,6 +4952,9 @@
         "responding_to_user_input/csd/2021": {
           "type": "Kaynak"
         },
+        "updating-your-prototype/csd/2021": {
+          "name": "Prototipinizi Güncelleme"
+        },
         "app-presentation/csd/2021": {
           "name": "Uygulama Sunumu",
           "type": "Değerlendirme Tablosu"
@@ -4956,7 +5000,7 @@
           "type": "Kaynak"
         },
         "board_events/csd/2021": {
-          "name": "Kurul Etkinlikleri",
+          "name": "Devre kartı Etkinlikleri",
           "type": "Kaynak"
         },
         "physical_input/csd/2021": {
@@ -5015,18 +5059,18 @@
           "type": "Kaynak"
         },
         "playing_notes/csd/2021": {
-          "name": "Notları çalma",
+          "name": "Notaları çalma",
           "type": "Kaynak"
         },
         "producing_output/csd/2021": {
           "type": "Kaynak"
         },
         "loops_in_app_lab/csd/2021": {
-          "name": "For Döngüleri",
+          "name": "For (İçin) Döngüleri",
           "type": "Video"
         },
         "for_loops/csd/2021": {
-          "name": "For Döngüleri",
+          "name": "For (İçin) Döngüleri",
           "type": "Kaynak"
         },
         "modifying_arrays/csd/2021": {
@@ -5152,7 +5196,7 @@
           "type": "Video"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "make-a-recommendation-1/csd/2021": {
           "type": "Değerlendirme Tablosu"
@@ -5164,7 +5208,7 @@
           "type": "Slaytlar"
         },
         "teacher_forum_1/csd/2021": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "type": "Slaytlar"
@@ -5278,7 +5322,7 @@
         },
         "interactive-card-1-2-3-4/csd/2021": {
           "name": "İnteraktif Kart",
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "interactive_card/csd/2021": {
           "name": "İnteraktif Kart",
@@ -5311,7 +5355,7 @@
           "type": "Proje Kılavuzu"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
-          "name": "Hız ve Sayaç Modeli",
+          "name": "Hız ve Sayaç Deseni",
           "type": "Kaynak"
         },
         "flyer-game-1/csd/2021": {
@@ -5334,7 +5378,7 @@
           "type": "Proje Kılavuzu"
         },
         "make-your-own-game-1-2-3/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "make_your_own_game/csd/2021": {
           "type": "Değerlendirme Tablosu"
@@ -5378,7 +5422,7 @@
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "name": "Uygulamalar ve Problem çözme",
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "Uygulamalar ve Problem çözme",
@@ -5428,7 +5472,7 @@
           "type": "Slaytlar"
         },
         "html-web-page/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "html-page/csd/2021": {
           "type": "Proje Kılavuzu"
@@ -5469,7 +5513,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "your-personal-style-1/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "your-personal-style/csd/2021": {
           "type": "Proje Kılavuzu"
@@ -5489,7 +5533,7 @@
           "type": "Proje Kılavuzu"
         },
         "personal-web-page-1/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "person-web-page-reflect/csd/2021": {
           "type": "Proje Kılavuzu"
@@ -5498,7 +5542,7 @@
           "type": "Değerlendirme Tablosu"
         },
         "publishing_your_website/csd/2021": {
-          "name": "Web Sitenizi Yayınlıyoruz",
+          "name": "Web Sitenizi Yayınlama",
           "type": "Video"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
@@ -5540,7 +5584,7 @@
           "type": "Kaynak"
         },
         "website-for-a-purpose/csd/2021": {
-          "type": "Eş gözden geçirme"
+          "type": "Akran Değerlendirmesi"
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "Proje Kılavuzu"
@@ -5552,7 +5596,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/pre-express/2020": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/pre-express/2020": {
           "name": "Kelime Dağarcığı"
@@ -5564,7 +5608,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/express/2020": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/express/2020": {
           "name": "Kelime Dağarcığı"
@@ -5579,7 +5623,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/courseb/2020": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/courseb/2020": {
           "name": "Kelime Dağarcığı"
@@ -5594,7 +5638,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursed/2020": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursed/2020": {
           "name": "Kelime Dağarcığı"
@@ -5609,7 +5653,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursec/2020": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursec/2020": {
           "name": "Kelime Dağarcığı"
@@ -5624,7 +5668,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursee/2020": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursee/2020": {
           "name": "Kelime Dağarcığı"
@@ -5639,7 +5683,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursea/2020": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursea/2020": {
           "name": "Kelime Dağarcığı"
@@ -5654,7 +5698,7 @@
           "name": "Standart eşlemeler"
         },
         "teacher_forum/coursef/2020": {
-          "name": "Öğretmen forumu"
+          "name": "Öğretmen Forumu"
         },
         "vocabulary/coursef/2020": {
           "name": "Kelime Dağarcığı"

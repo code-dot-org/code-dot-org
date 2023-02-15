@@ -258,6 +258,10 @@
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "البرمجة",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للكمبيوتر"
@@ -827,6 +831,9 @@
         "event/coursec/2022": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "data/coursec/2022": {
+          "word": "البيانات"
         },
         "binary/coursec/2022": {
           "word": "ثنائي",

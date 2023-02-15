@@ -245,6 +245,10 @@
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Código",
           "definition": "(v) para escrever o código ou as instruções em um computador."

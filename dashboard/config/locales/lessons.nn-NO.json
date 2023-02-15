@@ -26,9 +26,6 @@
         "gumball/Gumball Play Lab": {
           "name": "Gumball Spel-lab"
         },
-        "dance/Dance Party": {
-          "name": "Dansefest"
-        },
         "hoc-encryption/Simple Encryption": {
           "name": "Enkel kryptering"
         },
@@ -41,11 +38,20 @@
         "playlab/Play Lab": {
           "name": "Spel-lab"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity Spel-Lab"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Kodetimen 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Dansefest"
         },
         "k5-onlinepd-2019/Sequencing": {
           "name": "Sekvensiering"

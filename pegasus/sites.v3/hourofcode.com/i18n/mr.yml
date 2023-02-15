@@ -43,6 +43,8 @@ mr:
   hoc2022_codeorg_title: NASA आणि अधिकसह अवर ऑफ कोड साजरे करा
   hoc2022_codeorg_description: अवर ऑफ कोडचा 10वा तास खूपच अद्भुत आहे! या आमच्यासोबत
     एक्सप्लोर करा, खेळा आणि तयार करा.
+  social_hoc2022_dance: Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Disney
+    च्या “Encanto” मधले संगीत आणि आणखी बरेच काही!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: आज शिका, उद्याचे उज्ज्वल भविष्य घडवा.
@@ -147,6 +149,10 @@ mr:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Our Professional Learning program helps you teach computer science!
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -534,6 +540,10 @@ mr:
   signup_registration_closed: तसेच दर वर्षी डिसेंबरमध्ये तुमचा संपूर्ण वर्ग जगभरातील
     कोट्यावधी विद्यार्थ्यांसोबत कॉम्प्युटर सायंस शिक्षण सप्ताह साजरा करताना कोडचा
     तासमध्ये भाग घेऊ शकतो. या वार्षिक सोहळ्यासाठी नोंदणी आम्ही ऑक्टोबरमध्ये सुरू करू.
+  signup_registration_closed_2022_markdown: 'Registration for this year''s Hour of
+    Code event map is currently closed, but you can still [host an Hour of Code](%{hoc_activities_url})
+    and join in the celebration on social media! Post fun pictures or video of your
+    event using the #HourOfCode hashtag!'
   signup_header: Organize an Hour of Code during %{campaign_date}, and register it
     here.
   signup_name_label: तुमचे नाव
@@ -580,6 +590,7 @@ mr:
     करा
   signup_send_posters_address_placeholder: हा पत्ता आमच्या नकाशावर दाखवला जाणार नाही
   signup_event_type_in_school: शाळेमध्ये
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: शाळेच्या बाहेर
   signup_event_type_at_home: Home
   signup_submit_census_label: पाठवा
@@ -1045,6 +1056,10 @@ mr:
   footer_menu_terms: अटी
   footer_menu_privacy: गोपनीयता धोरण
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: कोड चा तास
   learn_banner_blurb: 45 पेक्षा अधिक भाषांमध्ये उपलब्ध, सर्व वयोगटांसाठी डिझाइन केलेले
     एका तासाचे ट्यूटोरियल करून पाहा.  180 पेक्षा अधिक देशांतील कोट्यावधी विद्यार्थी
@@ -1056,11 +1071,6 @@ mr:
     किंवा <a id=''teacher_banner_howto''>"कसे करावे” मार्गदर्शिका वाचा</a>'
   learn_banner_teachers_markdown: 'शिक्षक: [तास होस्ट करा](%{host_url}) किंवा [कसा
     करावा मार्गदर्शिका वाचा](%{howto_url})'
-  learn_robotics_banner_heading: रोबॉटिक्स आणि सर्किट
-  learn_robotics_banner_blurb: रोबॉट्स किंवा भौतिक कॉम्प्युटिंगचे किट आहेत? खालील
-    कृतींसोबत त्यांना वापरा आणि कुठल्याही वयोगटाच्या विद्यार्थ्यांसाठी एक स्पष्ट कोडचा
-    तास बनवा! काही कृतींमध्ये एक सिम्युलेटर म्हणजे आभासी वातावरण सुद्धा असते ज्यामुळे
-    तुम्ही हार्डवेअर शिवाय सुद्धा सुरू करू शकता.
   tutorial_dance2019_name: Dance Party
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -1484,12 +1494,12 @@ mr:
   tutorial_bcjs2_name: World of JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
-  tutorial_blockscadbargraphs_name: Bar Graphs
-  tutorial_blockscadbirdhouses_name: Birdhouses
-  tutorial_blockscadclock_name: Analog Clock
-  tutorial_blockscaddinner_name: Dinner Robot
-  tutorial_blockscadicecream_name: Ice Cream Machine
-  tutorial_blockscadpizza_name: Pizza Printer
+  tutorial_blockscadbargraphs_name: BlocksCAD Bar Graphs
+  tutorial_blockscadbirdhouses_name: BlocksCAD Birdhouses
+  tutorial_blockscadclock_name: BlocksCAD Analog Clock
+  tutorial_blockscaddinner_name: BlocksCAD Dinner Robot
+  tutorial_blockscadicecream_name: BlocksCAD Ice Cream Machine
+  tutorial_blockscadpizza_name: BlocksCAD Pizza Printer
   tutorial_blockscadsugar_name: Sugar Cubes
   tutorial_bsgridlight_name: 'GridLight: Hello World'
   tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
@@ -7249,7 +7259,8 @@ mr:
   tutorial_irobotphone_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codeguppydraw_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_meeempathy_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -8738,9 +8749,9 @@ mr:
   tutorial_eddog_name: Code a guard dog with Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
-  tutorial_blockscadtarget_name: Transformation Target Practice
+  tutorial_blockscadtarget_name: BlocksCAD Transformation Target Practice
   tutorial_tcadicicles_name: Designing Icicles With Codeblocks in Tinkercad
-  tutorial_blockscadscale_name: Scale City
+  tutorial_blockscadscale_name: BlocksCAD Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
@@ -9305,7 +9316,8 @@ mr:
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_rpisensehat_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_mee_string_platforms: All modern browsers, Mac, Windows, Chromebook, iPhone,
+    iPad, Android phone, Android tablet
   tutorial_kuborobo_string_platforms: Unplugged
   tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
     iPads, modern Android phones, iPhones
@@ -9600,7 +9612,7 @@ mr:
   tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
   tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
     Jr
-  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_blockscadvirus_name: BlocksCAD Modeling a Virus with Code
   tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
   tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
   tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
@@ -9812,10 +9824,12 @@ mr:
   tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
     puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
     app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
-  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
-    between researchers at Carnegie Mellon University and students from the Boys and
-    Girls Clubs of Western PA where students and their (co)robot partners must defend
-    their candy stash from oncoming baddies.
+  tutorial_carnegieslime_longdescription: Every year the Minions of Scarecorp try
+    to steal your candy crops. Booville High's Baddest Slimeball crew have come together
+    to protect the candy crops with slime weapons. Players play as teen monsters who
+    program their collaborative robot (aka 'cobot') pets to help take down the Minions
+    of Scarecorp who are after their town's candy harvest. Choose between four characters
+    and their cobotic pets.
   tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
     sequencing as students utilize logic, reasoning, and computer science skills to
     navigate real life scenarios. No bot needed!
@@ -10143,8 +10157,8 @@ mr:
   tutorial_microsoftforest_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: All modern browsers, Mac, Windows,
+    Chromebook, iPhone, iPad, Android phone, Android tablet
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_codeartportrait_string_platforms: All modern browsers, Android tablet,
@@ -10473,7 +10487,7 @@ mr:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -10535,6 +10549,10 @@ mr:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -10876,6 +10894,18 @@ mr:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Grades 2-5
   tutorial_rpledfirefly_string_detail_grades: Grades 6-8
   tutorial_rpcharting_string_detail_grades: पातळी ९+
@@ -10968,6 +10998,10 @@ mr:
   tutorial_nasapackage_string_detail_grades: Grades 6-8
   tutorial_nasalunar_string_detail_grades: Grades 6-8
   tutorial_meeestate_string_detail_grades: पातळी २+
+  tutorial_imagipixelart_string_detail_grades: Grades 2-8
+  tutorial_kcjhealth_string_detail_grades: Grades 6+
+  tutorial_msftwakanda_string_detail_grades: Grades 6+
+  tutorial_nafbrand_string_detail_grades: पातळी ९+
   tutorial_rpccw_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_rpledfirefly_string_platforms: सर्व आधुनिक ब्राउझर्स
@@ -11085,8 +11119,14 @@ mr:
   tutorial_nasaorbit_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_nasapackage_string_platforms: सर्व आधुनिक ब्राउझर्स
   tutorial_nasalunar_string_platforms: All modern browsers, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: सर्व आधुनिक ब्राउझर्स
+  tutorial_msftwakanda_string_platforms: सर्व आधुनिक ब्राउझर्स
+  tutorial_nafbrand_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11180,6 +11220,10 @@ mr:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11241,7 +11285,7 @@ mr:
   tutorial_googlesuperhero_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_googlename _string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_carnegiezillah_string_detail_programming_languages: साचे (ब्लॉक्स)
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_hatchxrsolar_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_hatchxrspace_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_hatchxrtrex_string_detail_programming_languages: साचे (ब्लॉक्स)
@@ -11276,6 +11320,10 @@ mr:
   tutorial_nasapackage_string_detail_programming_languages: साचे (ब्लॉक्स)
   tutorial_nasalunar_string_detail_programming_languages: ब्लॉक्स, जावास्क्रिप्ट
   tutorial_meeestate_string_detail_programming_languages: साचे (ब्लॉक्स), पायथन
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: साचे (ब्लॉक्स)
+  tutorial_msftwakanda_string_detail_programming_languages: साचे (ब्लॉक्स)
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: आम्हाला तुमची शाळा सापडली नाही. कृपया अधिक माहिती टाका.
   school_name: शाळेचे नाव
   school_name_error: शाळेचे नाव आवश्यक आहे.
@@ -11335,6 +11383,13 @@ mr:
   all: सर्व
   dont_know: मला माहीत नाही
   language_label: Language
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

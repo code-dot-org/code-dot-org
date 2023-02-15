@@ -4,10 +4,10 @@ module Pd::Application
     include ActiveApplicationModels
 
     def new
-      # Temporary security settings
-      # TODO: Mehal - remove this and associated Gatekeeper key after going to prod
-      if Rails.env.production? && !current_user.try(:workshop_admin?) && Gatekeeper.disallows('pd_principal_approval_application')
-        return render :not_available
+      # Block on production until we're ready to release and publicize the url for teacher applications
+      # Allow workshop admins to preview
+      if Rails.env.production? && !current_user.try(:workshop_admin?) && Gatekeeper.disallows('pd_teacher_application')
+        return head :not_found
       end
 
       teacher_application = TEACHER_APPLICATION_CLASS.find_by(application_guid: params[:application_guid])
@@ -17,6 +17,7 @@ module Pd::Application
       application_hash = teacher_application.sanitize_form_data_hash
 
       @teacher_application = {
+        id: teacher_application.id,
         course: Pd::Application::ApplicationConstants::COURSE_NAMES[teacher_application.course],
         name: teacher_application.applicant_name,
         application_guid: teacher_application.application_guid,

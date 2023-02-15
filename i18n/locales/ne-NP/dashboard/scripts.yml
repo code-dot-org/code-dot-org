@@ -1383,6 +1383,20 @@ ne:
           lesson_groups:
             lessonGroup-3:
               display_name: Content
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variables
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For Loops
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:
@@ -1401,9 +1415,13 @@ ne:
               display_name: Functions
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Lists
             csp_loops:
+              display_name: Loops
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lists
+            lessonGroup-3:
               display_name: Loops
         csp9-2023:
           lesson_groups:

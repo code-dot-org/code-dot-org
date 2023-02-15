@@ -12731,18 +12731,11 @@ az-AZ:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
-          feedback: Yanlış. Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat
-            palıd qozasına çatmaq üçün kifayət qədər irəliyə getmir.
         - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
-          feedback: Düzdü! Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat palıd
-            qozasına çatmaq üçün kifayət qədər irəli getmir.
         - text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
             et" blokları yoxdur.
-          feedback: Düzdü! Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat palıd
-            qozasına çatmaq üçün kifayət qədər irəli getmir.
         - text: Scrat birinci blokdan hərəkət etməyəcək.
-          feedback: Bu kodda iki səhv var. Birincisi, Scrat yanlış istiqamətə dönür,
-            sonra Scrat palıd qozasına çatmaq üçün kifayət qədər irəli getmir.
+          feedback: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
         questions:
         - text: Bu kodda səhvləri axtarın. Scrat palıd qozasına çatacaq, yoxsa bir
             problem var?

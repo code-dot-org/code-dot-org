@@ -13,6 +13,9 @@ export default class JavalabDropdown extends Component {
     className: PropTypes.string,
     children: props => {
       React.Children.map(props.children, child => {
+        if (!child) {
+          return;
+        }
         if (child.type !== 'button') {
           throw new Error('only accepts children of type <button/>');
         }
@@ -24,21 +27,24 @@ export default class JavalabDropdown extends Component {
     style: PropTypes.object
   };
 
+  // filter removes null elements
   render() {
     return (
       <div
         className={classNames(style.dropdown, this.props.className)}
         style={this.props.style}
       >
-        {this.props.children.map((child, index) => (
-          <button
-            type="button"
-            className={style.anchor}
-            {...child.props}
-            key={index}
-            style={child.props.style}
-          />
-        ))}
+        {this.props.children
+          .filter(child => child)
+          .map((child, index) => (
+            <button
+              type="button"
+              {...child.props}
+              className={classNames(style.anchor, child.props.className)}
+              key={index}
+              style={child.props.style}
+            />
+          ))}
       </div>
     );
   }

@@ -1049,6 +1049,7 @@ zh-CN:
           description_short: "《我的世界》编程一小时的全新的活动回来了！"
           description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
           student_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+          name: 英雄
         applab-intro-staging:
           title: 应用实验室阶段简介
         csp-explore-2017:
@@ -2377,6 +2378,7 @@ zh-CN:
           title: 碰撞检测
         dance-2019:
           title: 舞蹈派对 (2019)
+          description_short: 编写一个舞蹈派对与你的朋友分享。里面有碧昂丝、哈利·史泰尔斯、丽佐、纳斯小子、塞莱娜·戈麦斯、迪士尼魔法满屋的音乐等等！
           description: 写出你自己的舞会代码，分享给你的朋友们！
           student_description: 写出你自己的舞会代码，分享给你的朋友们！
         k5-onlinepd-2019:
@@ -4095,6 +4097,30 @@ zh-CN:
               display_name: 内容
             lessonGroup-5:
               display_name: 替补课程
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: 变量
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 替补课程
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 一维（1D）数组
+            lesson-3:
+              name: 计数循环
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 替补课程
+        hello-world-space-2022:
+          title: 你好世界：太空
+        hello-world-soccer-2022:
+          title: 你好世界：足球
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4175,7 +4201,7 @@ zh-CN:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: 列表
+              display_name: 数据
             csp_loops:
               display_name: 循环
             csp_traversals:
@@ -4187,9 +4213,15 @@ zh-CN:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: '单元 6: 算法'
+              display_name: 列表
             lessonGroup-2:
               display_name: 课后问卷
+            lessonGroup-3:
+              display_name: 循环
+            lessonGroup-4:
+              display_name: 遍历
+            lessonGroup-5:
+              display_name: 项目
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -4218,3 +4250,23 @@ zh-CN:
               display_name: 课后问卷
         csp-post-survey-2023:
           title: 计算机科学原理课后调查
+        csp-playground:
+          title: 计算机科学原理游戏板
+          description_audience: 课程作者
+          description_short: 用于课程版本之间的课程或级别分阶段更新
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章︰ 创建物理原型
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 输入和输出
+            lessonGroup-4:
+              display_name: 第 2 章︰ 创建物理原型
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 应用程序实验室简介
+            lessonGroup-3:
+              display_name: 输入和输出

@@ -6,6 +6,7 @@ import {
   registerReducers,
   getStore
 } from '@cdo/apps/redux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import reducer, {
   __testInterface__,
   setAuthProviders,
@@ -14,6 +15,7 @@ import reducer, {
   setSections,
   selectSection,
   removeSection,
+  beginCreatingSection,
   beginEditingSection,
   editSectionProperties,
   cancelEditingSection,
@@ -37,6 +39,7 @@ import reducer, {
   getSectionRows,
   sortedSectionsList,
   sortSectionsList,
+  assignToSection,
   NO_SECTION
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
@@ -298,6 +301,66 @@ describe('teacherSectionsRedux', () => {
     it('doesnt let you remove a non-existent section', () => {
       assert.throws(() => {
         reducer(stateWithSections, removeSection(1234));
+      });
+    });
+  });
+
+  describe('beginCreatingSection', () => {
+    it('populates sectionBeingEdited if no course provided', () => {
+      assert.isNull(initialState.sectionBeingEdited);
+      const state = reducer(initialState, beginCreatingSection());
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: PENDING_NEW_SECTION_ID,
+        name: '',
+        loginType: undefined,
+        grade: '',
+        participantType: undefined,
+        providerManaged: false,
+        lessonExtras: true,
+        ttsAutoplayEnabled: false,
+        pairingAllowed: true,
+        sharingDisabled: false,
+        studentCount: 0,
+        code: '',
+        courseId: null,
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null,
+        hidden: false,
+        isAssigned: undefined,
+        restrictSection: false
+      });
+    });
+
+    it('populates sectionBeingEdited with provided course', () => {
+      assert.isNull(initialState.sectionBeingEdited);
+      const courseOfferingId = 1;
+      const courseVersionId = 2;
+      const unitId = 3;
+      const state = reducer(
+        initialState,
+        beginCreatingSection(courseOfferingId, courseVersionId, unitId)
+      );
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: PENDING_NEW_SECTION_ID,
+        name: '',
+        loginType: undefined,
+        grade: '',
+        participantType: undefined,
+        providerManaged: false,
+        lessonExtras: true,
+        ttsAutoplayEnabled: false,
+        pairingAllowed: true,
+        sharingDisabled: false,
+        studentCount: 0,
+        code: '',
+        courseId: null,
+        courseOfferingId: courseOfferingId,
+        courseVersionId: courseVersionId,
+        unitId: unitId,
+        hidden: false,
+        isAssigned: undefined,
+        restrictSection: false
       });
     });
   });
@@ -1636,6 +1699,66 @@ describe('teacherSectionsRedux', () => {
     it('sorts an array of sections by descending id', () => {
       const expected = sections.reverse();
       assert.deepEqual(sortSectionsList(sections), expected);
+    });
+  });
+
+  describe('AnalyticsReporter events', () => {
+    let analyticsSpy;
+
+    beforeEach(() => {
+      store.dispatch(setSections(sections));
+      analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    });
+
+    afterEach(() => {
+      analyticsSpy.restore();
+    });
+
+    it('sends an event when course offering is assigned', () => {
+      const testSection = getState().teacherSections.sections[11];
+      store.dispatch(assignToSection(testSection.id, 100, 101, 102, 103));
+      expect(analyticsSpy).to.be.called.once;
+      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+        sectionName: testSection.name,
+        sectionId: testSection.id,
+        sectionLoginType: testSection.loginType,
+        previousUnitId: testSection.unitId,
+        previousCourseId: testSection.courseOfferingId,
+        previousCourseVersionId: testSection.courseVersionId,
+        newUnitId: 103,
+        newCourseId: 101,
+        newCourseVersionId: 102
+      });
+    });
+
+    it('sends an event when unit is changed', () => {
+      const testSection = getState().teacherSections.sections[11];
+      store.dispatch(
+        assignToSection(
+          testSection.id,
+          testSection.courseId,
+          testSection.courseOfferingId,
+          testSection.courseVersionId,
+          7
+        )
+      );
+      expect(analyticsSpy).to.be.called.once;
+      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+        sectionName: testSection.name,
+        sectionId: testSection.id,
+        sectionLoginType: testSection.loginType,
+        previousUnitId: testSection.unitId,
+        previousCourseId: testSection.courseOfferingId,
+        previousCourseVersionId: testSection.courseVersionId,
+        newUnitId: 7,
+        newCourseId: testSection.courseOfferingId,
+        newCourseVersionId: testSection.courseVersionId
+      });
+    });
+
+    it('doesnt send an event when course offering is unchanged', () => {
+      store.dispatch(assignToSection(11, 2, 2, 3, null));
+      expect(analyticsSpy).to.not.be.called;
     });
   });
 });

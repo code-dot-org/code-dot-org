@@ -1,20 +1,29 @@
 import GoogleBlockly from 'blockly/core';
+import msg from '@cdo/locale';
+
+const BLOCKLY_THEME = 'blocklyTheme';
+const BLOCKLY_STASH = 'blocklyStash';
+const ENABLED = 'enabled';
+const DISABLED = 'disabled';
+const HIDDEN = 'hidden';
+const MODERN = 'modern';
+const DARK = 'dark';
+const MUSICLAB_DARK = 'musiclabdark';
 
 const registerDeletable = function() {
   const deletableOption = {
     displayText: function(scope) {
       // isDeletale is a built in Blockly function that checks whether the block
       // is deletable, is not a shadow, and if the workspace is readonly.
-      const displayText = scope.block.isDeletable()
+      return scope.block.isDeletable()
         ? 'Make Undeletable to Users'
         : 'Make Deletable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return 'enabled';
+        return ENABLED;
       }
-      return 'hidden';
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.setDeletable(!scope.block.isDeletable());
@@ -31,16 +40,15 @@ const registerMovable = function() {
     displayText: function(scope) {
       // isMovable is a built in Blockly function that checks whether the block
       // is movable or not.
-      const displayText = scope.block.isMovable()
+      return scope.block.isMovable()
         ? 'Make Immovable to Users'
         : 'Make Movable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return 'enabled';
+        return ENABLED;
       }
-      return 'hidden';
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.setMovable(!scope.block.isMovable());
@@ -57,16 +65,15 @@ const registerEditable = function() {
     displayText: function(scope) {
       // isEditable is a built in Blockly function that checks whether the block
       // is editable or not.
-      const displayText = scope.block.isEditable()
+      return scope.block.isEditable()
         ? 'Make Uneditable to Users'
         : 'Make Editable to Users';
-      return displayText;
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return 'enabled';
+        return ENABLED;
       }
-      return 'hidden';
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.setEditable(!scope.block.isEditable());
@@ -85,9 +92,9 @@ const registerShadow = function() {
       if (Blockly.isStartMode && canBeShadow(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return 'enabled';
+        return ENABLED;
       }
-      return 'hidden';
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.setShadow(true);
@@ -114,9 +121,9 @@ const registerUnshadow = function() {
       if (Blockly.isStartMode && hasShadowChildren(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return 'enabled';
+        return ENABLED;
       }
-      return 'hidden';
+      return HIDDEN;
     },
     callback: function(scope) {
       scope.block.getChildren().forEach(child => child.setShadow(false));
@@ -128,12 +135,100 @@ const registerUnshadow = function() {
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
 
+const registerKeyboardNavigation = function() {
+  const keyboardNavigationOption = {
+    displayText: function(scope) {
+      return scope.workspace.keyboardAccessibilityMode
+        ? msg.blocklyKBNavOff()
+        : msg.blocklyKBNavOn();
+    },
+    preconditionFn: function() {
+      return Blockly.navigationController ? ENABLED : HIDDEN;
+    },
+    callback: function(scope) {
+      const controller = Blockly.navigationController;
+      scope.workspace.keyboardAccessibilityMode
+        ? controller.disable(scope.workspace)
+        : controller.enable(scope.workspace);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'keyboardNavigation',
+    weight: 11
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(keyboardNavigationOption);
+};
+
+/**
+ * Change workspace theme to modern CdoTheme
+ */
+const registerCdoTheme = function() {
+  const cdoThemeOption = {
+    displayText: function(scope) {
+      return (
+        (isCurrentTheme(MODERN, scope.workspace) ? '✓ ' : `${msg.enable()} `) +
+        msg.blocklyModernTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return HIDDEN;
+      } else if (isCurrentTheme(MODERN, scope.workspace)) {
+        return DISABLED;
+      } else {
+        return ENABLED;
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem(BLOCKLY_THEME, MODERN);
+      scope.workspace.setTheme(Blockly.themes.modern);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'defaultTheme',
+    weight: 12
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(cdoThemeOption);
+};
+
+/**
+ * Change workspace theme to CdoDarkTheme
+ */
+const registerDarkTheme = function() {
+  const darkThemeOption = {
+    displayText: function(scope) {
+      return (
+        (isCurrentTheme(DARK, scope.workspace) ? '✓ ' : `${msg.enable()} `) +
+        msg.blocklyDarkTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return HIDDEN;
+      } else if (isCurrentTheme(DARK, scope.workspace)) {
+        return DISABLED;
+      } else {
+        return ENABLED;
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem(BLOCKLY_THEME, DARK);
+      scope.workspace.setTheme(Blockly.themes.dark);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'darkTheme',
+    weight: 13
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(darkThemeOption);
+};
+
 const registerAllContextMenuItems = function() {
   registerDeletable();
   registerMovable();
   registerEditable();
   registerShadow();
   registerUnshadow();
+  registerKeyboardNavigation();
+  registerCdoTheme();
+  registerDarkTheme();
 };
 
 function canBeShadow(block) {
@@ -156,4 +251,14 @@ function hasShadowChildren(block) {
   return shadowChildCount(block) > 0;
 }
 
+function isCurrentTheme(theme, workspace) {
+  return (
+    workspace?.getTheme().name === theme ||
+    localStorage.getItem(BLOCKLY_THEME) === theme
+  );
+}
+
+function isMusicLabTheme(workspace) {
+  return workspace.getTheme().name === MUSICLAB_DARK;
+}
 exports.registerAllContextMenuItems = registerAllContextMenuItems;

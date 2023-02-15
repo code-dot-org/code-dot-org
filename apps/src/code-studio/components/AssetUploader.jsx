@@ -42,7 +42,6 @@ export default class AssetUploader extends React.Component {
           onUploadError={this.props.onUploadError}
         />
         <Button
-          __useDeprecatedTag
           onClick={this.fileUploadClicked}
           className="share"
           id="upload-asset"

@@ -153,6 +153,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "تعديلات الدرس الافتراضي"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "مصدر"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "تعزيز الكلمة السرية: سيناريوهات.. إذا.. ثم ",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -377,6 +380,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "تعديلات الدرس الافتراضي"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "مصدر"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "قوة الكلمات: اختبار الدرس",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -499,7 +505,8 @@
           "type": "فيديو نشاط"
         },
         "cs_fundamentals_final_project/coursef/2022": {
-          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر"
+          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
+          "type": "نموذج التقييم"
         },
         "final_project_design_1/coursef/2022": {
           "name": "دليل مشروع نهاية الدورة التدريبية."
@@ -544,6 +551,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "تعديلات الدرس الافتراضي"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "مصدر"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "كن مواطناً رقمياً خارقاً: شرائح الدرس",
@@ -654,7 +664,8 @@
           "type": "مصدر"
         },
         "cs_fundamentals_final_project/coursee/2022": {
-          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر"
+          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
+          "type": "نموذج التقييم"
         },
         "end_of_course_project_guide/coursee/2022": {
           "name": "دليل مشروع نهاية الدورة التدريبية."
@@ -754,9 +765,7 @@
           "type": "صور المشاعر"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "كيف تنشئ شعبة صفية على Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "فيديو المعلم"
+          "name": "كيف تنشئ شعبة صفية على Code.org"
         },
         "pair_programming/courseb/2022": {
           "name": "البرمجة الزوجية",
@@ -953,7 +962,8 @@
         },
         "cs_fundamentals_final_project/express/2022": {
           "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "نموذج التقييم"
         },
         "csf_express_end_of_course_project_planning_guide/express/2022": {
           "name": "دليل تخطيط نهاية الدورة التدريبية \"مبادئ علوم الكمبيوتر\"",
@@ -1223,6 +1233,9 @@
         "virtual_lesson_modifications/coursec/2022": {
           "name": "تعديلات الدرس الافتراضي"
         },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "مصدر"
+        },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "وضع حد الدناءة علي الانترنت: شرائح عرض الدرس",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
@@ -1456,7 +1469,8 @@
           "name": "المشروع - إنشاء تمثيل"
         },
         "create_a_representation_2/csd/2022": {
-          "name": "المشروع - إنشاء تمثيل"
+          "name": "المشروع - إنشاء تمثيل",
+          "type": "نموذج التقييم"
         },
         "create_a_representation_3/csd/2022": {
           "name": "المشروع - إنشاء تمثيل",
@@ -1546,6 +1560,9 @@
         "make_a_recommendation/csd/2022": {
           "type": "استعراض النظراء"
         },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "نموذج التقييم"
+        },
         "project_-_make_a_recommendation/csd/2022": {
           "type": "شرائح"
         },
@@ -1616,7 +1633,8 @@
           "type": "استعراض النظراء"
         },
         "apps_and_problem_solving_2/csd/2022": {
-          "name": "التطبيقات وحل المشكلات"
+          "name": "التطبيقات وحل المشكلات",
+          "type": "نموذج التقييم"
         },
         "project_-_propose_an_app/csd/2022": {
           "name": "المشروع - اقتراح تطبيق",
@@ -1717,6 +1735,9 @@
           "name": "النص",
           "type": "شرائح"
         },
+        "captioned_scenes/csd/2022": {
+          "type": "نموذج التقييم"
+        },
         "mini-project_-_captioned_scenes/csd/2022": {
           "name": "مشروع صغير: المشاهدات ذات التعليقات التوضيحية",
           "type": "شرائح"
@@ -1745,6 +1766,9 @@
         "sprite_movement_1/csd/2022": {
           "name": "حركة الرسوم المتحركة",
           "type": "شرائح"
+        },
+        "animated_scene/csd/2022": {
+          "type": "نموذج التقييم"
         },
         "mini-project_-_animation/csd/2022": {
           "name": "مشروع صغير: الرسوم المتحركة",
@@ -1789,6 +1813,9 @@
         "interactive_card_2/csd/2022": {
           "type": "استعراض النظراء"
         },
+        "interactive_card_3/csd/2022": {
+          "type": "نموذج التقييم"
+        },
         "project_-_interactive_card/csd/2022": {
           "name": "المشروع - البطاقة التفاعلية",
           "type": "شرائح"
@@ -1816,6 +1843,9 @@
           "name": "كشف التصادم",
           "type": "شرائح"
         },
+        "side_scroller/csd/2022": {
+          "type": "نموذج التقييم"
+        },
         "mini-project_-_side_scroller/csd/2022": {
           "name": "مشروع صغير: التمرير الجانبي",
           "type": "شرائح"
@@ -1830,6 +1860,9 @@
         "collisions/csd/2022": {
           "name": "التصادمات",
           "type": "شرائح"
+        },
+        "flyer_game/csd/2022": {
+          "type": "نموذج التقييم"
         },
         "mini-project_-_flyer_game/csd/2022": {
           "name": "مشروع صغير: لعبة التحليق",
@@ -1857,6 +1890,9 @@
         },
         "make_your_own_game_2/csd/2022": {
           "type": "استعراض النظراء"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "نموذج التقييم"
         },
         "project_-_design_a_game/csd/2022": {
           "name": "المشروع - تصميم لعبة",
@@ -1901,6 +1937,9 @@
         "formatting_html/csd/2022": {
           "type": "مصدر"
         },
+        "html_web_page/csd/2022": {
+          "type": "نموذج التقييم"
+        },
         "html_web_page_2/csd/2022": {
           "type": "استعراض النظراء"
         },
@@ -1933,6 +1972,9 @@
         "styling_text_with_css/csd/2022": {
           "name": "تصميم النص باستخدام CSS",
           "type": "شرائح"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "نموذج التقييم"
         },
         "your_personal_style_1/csd/2022": {
           "type": "استعراض النظراء"
@@ -1978,6 +2020,9 @@
         "personal_web_page_-_student_checklist/csd/2022": {
           "type": "مصدر"
         },
+        "personal_web_page_1/csd/2022": {
+          "type": "نموذج التقييم"
+        },
         "publishing_your_website/csd/2022": {
           "type": "فيديو"
         },
@@ -2010,6 +2055,9 @@
         },
         "css_classes/csd/2022": {
           "type": "شرائح"
+        },
+        "website_for_a_purpose/csd/2022": {
+          "type": "نموذج التقييم"
         },
         "planning_a_multi-page_site/csd/2022": {
           "name": "تخطيط موقع ويب متعدد الصفحات",
@@ -2071,7 +2119,8 @@
           "type": "شرائح"
         },
         "paper_prototypes/csd/2022": {
-          "name": "النماذج الورقية الأولية"
+          "name": "النماذج الورقية الأولية",
+          "type": "نموذج التقييم"
         },
         "project_-_paper_prototype/csd/2022": {
           "name": "المشروع - النموذج الورقي الأولي",
@@ -2159,7 +2208,8 @@
           "type": "شرائح"
         },
         "app_presentation/csd/2022": {
-          "name": "عرض التطبيق"
+          "name": "عرض التطبيق",
+          "type": "نموذج التقييم"
         },
         "app_presentation_1/csd/2022": {
           "name": "عرض التطبيق"
@@ -2246,6 +2296,9 @@
         "mini-project_on-the-go_app/csd/2022": {
           "type": "شرائح"
         },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "نموذج التقييم"
+        },
         "color_leds/csd/2022": {
           "type": "شرائح"
         },
@@ -2269,6 +2322,9 @@
         },
         "project_human_device_interaction/csd/2022": {
           "type": "شرائح"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "نموذج التقييم"
         },
         "analog_sensors/csd/2022": {
           "type": "مصدر"
@@ -2332,6 +2388,9 @@
         "mini-project_interactive_art/csd/2022": {
           "type": "شرائح"
         },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "نموذج التقييم"
+        },
         "student_example_projects/csd/2022": {
           "type": "مصدر"
         },
@@ -2350,6 +2409,9 @@
         "project_prototype_an_innovation/csd/2022": {
           "name": "المشروع: إعداد نموذج أولي لابتكار",
           "type": "شرائح"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "نموذج التقييم"
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
@@ -2484,6 +2546,9 @@
         "our_ai_code_of_ethics_template_/csd/2022": {
           "type": "شرائح"
         },
+        "create_an_ml_app/csd/2022": {
+          "type": "نموذج التقييم"
+        },
         "make_a_machine_learning_app/csd/2022": {
           "type": "شرائح"
         },
@@ -2520,6 +2585,9 @@
         },
         "design_an_ai_app/csd/2022": {
           "type": "شرائح"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "نموذج التقييم"
         },
         "model_card_-_digital_template/csd/2022": {
           "type": "مصدر"
@@ -3210,7 +3278,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "نموذج التقييم"
         },
         "2021_change_log/courseb/2021": {
           "name": "سجل التغيير ٢٠٢١",
@@ -4273,7 +4342,8 @@
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "نموذج التقييم"
         },
         "course_vocabulary/pre-express/2021": {
           "name": "مفردات الدورة التدريبية",
@@ -4517,7 +4587,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "نموذج التقييم"
         },
         "csd_curriculum_guide/csd/2021": {
           "type": "مصدر"
@@ -4658,6 +4729,9 @@
         "make_a_machine_learning_app/csd/2021": {
           "type": "شرائح"
         },
+        "create_an_ml_app/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "issue_statements/csd/2021": {
           "type": "شرائح"
         },
@@ -4695,6 +4769,9 @@
         "model_card_-_printable_template/csd/2021": {
           "type": "مصدر"
         },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "teacher_forum/csd/2021": {
           "name": "منتدى المعلم"
         },
@@ -4717,7 +4794,8 @@
           "type": "تأملات"
         },
         "paper-prototypes/csd/2021": {
-          "name": "النماذج الورقية الأولية"
+          "name": "النماذج الورقية الأولية",
+          "type": "نموذج التقييم"
         },
         "market-research/csd/2021": {
           "name": "أبحاث السوق"
@@ -4762,7 +4840,8 @@
           "type": "مصدر"
         },
         "app-presentation/csd/2021": {
-          "name": "عرض التطبيق"
+          "name": "عرض التطبيق",
+          "type": "نموذج التقييم"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "عرض التطبيق"
@@ -4836,6 +4915,9 @@
         "if_statements_1/csd/2021": {
           "type": "مصدر"
         },
+        "make_a_game_1/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "introduction_to_arrays/csd/2021": {
           "name": "مقدمة عن المجموعات الوصفية",
           "type": "فيديو"
@@ -4880,6 +4962,9 @@
         "circuits_and_buttons/csd/2021": {
           "type": "مصدر"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "unit-5-data-society/csd/2021": {
           "type": "شرائح"
         },
@@ -4923,7 +5008,8 @@
           "type": "شرائح"
         },
         "create_a_representation/csd/2021": {
-          "name": "المشروع - إنشاء تمثيل"
+          "name": "المشروع - إنشاء تمثيل",
+          "type": "نموذج التقييم"
         },
         "structuring_data/csd/2021": {
           "name": "هيكلة البيانات"
@@ -4983,6 +5069,9 @@
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "استعراض النظراء"
         },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "unit_5_data_society_2/csd/2021": {
           "type": "شرائح"
         },
@@ -5038,6 +5127,9 @@
           "name": "خصائص الكائنات",
           "type": "مصدر"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "فيديو"
         },
@@ -5054,6 +5146,9 @@
         },
         "the_counter_pattern/csd/2021": {
           "type": "مصدر"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "نموذج التقييم"
         },
         "boolean_expressions/csd/2021": {
           "name": "تعبيرات منطقية",
@@ -5079,6 +5174,9 @@
         "interactive-card-1-2-3-4/csd/2021": {
           "type": "استعراض النظراء"
         },
+        "interactive_card/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "extra_code_in_challenge_levels_1/csd/2021": {
           "type": "مصدر"
         },
@@ -5097,8 +5195,14 @@
           "name": "كشف التصادم",
           "type": "مصدر"
         },
+        "side-scroller-1/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
           "type": "مصدر"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "نموذج التقييم"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "دوال",
@@ -5110,6 +5214,9 @@
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "استعراض النظراء"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "نموذج التقييم"
         },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
           "type": "شرائح"
@@ -5153,7 +5260,8 @@
           "type": "استعراض النظراء"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "التطبيقات وحل المشكلات"
+          "name": "التطبيقات وحل المشكلات",
+          "type": "نموذج التقييم"
         },
         "apps_and_problem_solving_-_student_checklist/csd/2021": {
           "type": "مصدر"
@@ -5188,6 +5296,9 @@
         "video_debugging/csd/2021": {
           "type": "فيديو"
         },
+        "html-web-page-1/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "mini-project-html-page/csd/2021": {
           "type": "شرائح"
         },
@@ -5219,6 +5330,9 @@
         "text_properties/csd/2021": {
           "type": "مصدر"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "نموذج التقييم"
+        },
         "your-personal-style-1/csd/2021": {
           "type": "استعراض النظراء"
         },
@@ -5234,6 +5348,9 @@
         },
         "personal-web-page-1/csd/2021": {
           "type": "استعراض النظراء"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "نموذج التقييم"
         },
         "publishing_your_website/csd/2021": {
           "type": "فيديو"
@@ -5256,6 +5373,9 @@
         "classes/csd/2021": {
           "name": "الفصول الدراسية",
           "type": "مصدر"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "نموذج التقييم"
         },
         "hyperlinks/csd/2021": {
           "type": "مصدر"

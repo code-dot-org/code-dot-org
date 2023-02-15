@@ -830,6 +830,7 @@ ro-RO:
   volunteer_engineer_submission_distance_16: 10 mile
   volunteer_engineer_submission_distance_24: 15 mile
   volunteer_engineer_submission_distance_32: 20 de mile
+  volunteer_engineer_submission_distance_80: 50 mile
   volunteer_engineer_submission_num_volunteers_5: 5 voluntari
   volunteer_engineer_submission_num_volunteers_10: 10 voluntari
   volunteer_engineer_submission_num_volunteers_25: 25 de voluntari
@@ -2390,6 +2391,14 @@ ro-RO:
   hoc_overview_dance_2019_subtitle: Programează o petrecere dansantă pe care să le-o
     trimiți prietenilor.  Cu Katy Perry, Shawn Mendes, Panic!At the disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj și încă 34!
+  hoc_overview_dance_2022_subtitle: Codifică o Petrecere Dansantă pe care să le-o
+    trimiți prietenilor. Cu participarea artiștilor Beyoncé, Harry Styles, Lizzo,
+    Lil Nas X, Selena Gomez, muzică de la Disney „Encanto” și multe altele!
+  hoc_overview_hello_world_2022_subtitle: Alegeți din șase teme distractive (inclusiv
+    spațiu și fotbal!) pentru a codifica caractere interactive într-o lume pe care
+    o creați.
+  hoc_overview_hello_world_2022_alt_text: Astronaut și personaje animale animate plutesc
+    în jurul unei ilustrate a pământului
   hoc_overview_title: Activități Ora de codare de la Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Ora de codare</a> este o
     mișcare globală care ajunge la zeci de milioane de elevi din peste 180 de țări.
@@ -2423,6 +2432,7 @@ ro-RO:
     creativitate. Eu particip! Tu?"
   hoc2018_creativity_social_media_2: "#HourOfCode (#OraDeCod) din acest an este despre
     creativitate. Tu ce vei crea?"
+  hoc2018_creativity_courses: Mergeți mai departe cu cursurile Code.org
   hoc2018_creativity_courses_link: Mergeți mai departe cu <a href="https://studio.code.org/courses">cursurile
     Code.org</a>
   hoc2018_mc_page_title: Tutoriale Hour of Code Minecraft
@@ -2445,7 +2455,16 @@ ro-RO:
   hoc2018_mc_start: Începe
   hoc2018_mc_no_internet: Nu ai Internet?
   hoc2018_mc_download_adventurer: Descarcă versiunea offline a Minecraft Adventurer.
+  hoc2018_mc_educators_box1_button: Începe
   hoc2018_mc_educators_box2_button: Descarcă
+  hoc2022_mc_educators_box3_desc_markdown: Utilizează aceasta la cerere [curs gratuit](%{free_course_link})
+    sau ]nregistrează-ți toată clasa să participe la un atelier live Hour of Code
+    cu un profesor oaspete. Oferit de mai multe ori în timpul CSEW, 6-11 decembrie
+  hoc2022_mc_educators_box3_button: Înregistrează-te acum
+  hoc2022_mc_educators_box4_desc: Inspiră pasiunea STEM în elevii claselor 1-12 cu
+    200h de informatică, de la bloc la limbajul de programare piton, susținut de o
+    dezvoltare profesională.
+  hoc2022_mc_educators_box4_button: Continuă Să Înveți
   hoc2018_mc_watch_videos: Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri
     inspirationale
   hoc2018_mc_videos_more: Mai multe <a href='%{inspiring_videos_playlist}'> videoclipuri
@@ -2569,6 +2588,14 @@ ro-RO:
   hoc2021_mc_mee_ai_title: Inteligența Artificială pentru a face bine
   hoc2021_mc_mee_ai_description: 'Explorați inteligența artificială împreună cu elevii
     și învățați să programați în Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'Evadează din palatul misterios până în zori și câștigă
+    un milion de smaralde! Noul tutorial Minecraft de la Hour of Code este disponibil
+    acum în Minecraft: Ediția Educație pentru Windows, Mac, Chromebook, Ipad și telefoane
+    mobile. Începe cu resurse, cursuri de formare și videoclipuri gratuite pentru
+    educatori.'
+  hoc2022_mc_mee_timecraft_description: 'Călătorește înapoi în timp ca să salvezi
+    viitorul în această lecție gratuită de codare în Minecraft: Ediția Educație.'
   footer_powered_by_aws: Susținut de Amazon Web Services
   codebytes_skinny_banner_english_only: Doar în engleză
   footer_privacy_policy: Politică de confidențialitate
@@ -2588,12 +2615,26 @@ ro-RO:
   outbreak_tile_subtitle: Un virus a infectat Orașul Monștrilor! Programați un simulator
     de epidemie și faceți predicții despre ce se va întâmpla cu vecinii din Orașul
     Monștrilor.
+  outbreak_tile_alt: O simulare a modului în care un virus se răspândește printr-un
+    grup de monștri purpurii.
   hoc2022_banner_title: Explorează, Joacă-te, Creează!
   hoc2022_banner_description: Explorează universul, înscrie un gol, fă o mișcare -
     există atât de multe moduri de a experimenta informatica!
   hoc2022_cta_primary: Vedeți ce este nou
   hoc2022_cta_secondary: Încearcă mai multe activități
+  hoc2022_landing_page_explore_title: Explorează
   hoc2022_landing_page_explore_description: Uși deschise către noi lumi cu informatica!
+  hoc2022_landing_page_play_title: Joacă
   hoc2022_landing_page_play_description: Cucerește terenul și înscrie!
   hoc2022_landing_page_create_title: Crează
   hoc2022_landing_page_create_description: Fă ceva ciudat și minunat!
+  hoc2022_landing_page_banner_alt_left: Un extraterestru care dansează lângă Saturn
+    în spațiu
+  hoc2022_landing_page_banner_alt_right: Un robot driblând o minge de fotbal în spațiu
+    în fața unei rachete care decolează
+  try_an_activity: Încearcă o activitate
+  see_more_activities: Vezi mai multe activități
+  hoc2022_nasa_banner_heading: Alăturați-vă NASA pentru o emisiune specială Hour of
+    Code despre informatică în spațiu!
+  hoc2022_nasa_banner_description: În premieră la ora 10 AM ET, 5 decembrie, pe canalul
+    YouTube al NASA STEM.

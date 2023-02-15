@@ -4,6 +4,8 @@ id:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: mengonfirmasi pengguna {QUESTION} untuk variabel {VAR} dengan pilihan {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}ucapkan{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1000,6 +1002,13 @@ id:
             '"macklemore90"': Macklemore - Tak bisa menahan kita
             '"hammer"': MC Hammer - Kamu tak bisa menyentuhnya
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Mikroskop memimliki {INPUT1}
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: lakukan efek {EFFECT}
         options:
@@ -1012,12 +1021,20 @@ id:
             '"starburst"': Semburan bintang
             '"glass"': Kaca Pecah
             '"twinkling"': Berkelip
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): yang diseret
-            wandering(): pengembaraan
-            shrinking(): penyusutan
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Berkomunikasi {VAR1} dengan {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: buat {NUM} sprite {ANIMATION_NAME} baru  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: menunjukkan {NUM} sprite {ANIMATION_NAME} baru [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}ucapkan{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} mulai {BEHAVIOR}
       gamelab_addTarget:
@@ -1367,6 +1384,7 @@ id:
             "'sound://category_space/Pillars_SFX.mp3'": kepulan
             "'sound://category_space/Southern_ring_SFX.mp3'": nebula cincin
             "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: putar ucapan {SOUND}
       gamelab_playerBehaviors:
@@ -1983,8 +2001,39 @@ id:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskop memimliki {INPUT1}
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): padat
+            new Behavior(liquid, []): cair
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Tetapkan {COSTUME} menjadi {BEHAVIOR} perilaku
+        options:
+          BEHAVIOR:
+            '"solid"': partikel padat
+            '"liquid"': partikel cair
+            '"gas"': partikel gas
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': partikel padat
+            '"liquid"': partikel cair
+            '"gas"': partikel gas
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2054,6 +2103,20 @@ id:
             '"sound://category_achievements/peaceful_win_1.mp3"': Menang
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Pusaran
             '"sound://category_achievements/peaceful_win_6.mp3"': Genta Angin
+      Poetry_playSoundOptionsSpace:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebula kepiting
+            "'sound://category_space/Launch_SFX.mp3'": peluncuran
+            "'sound://category_space/Lift_Off.mp3'": lepas landas
+            "'sound://category_space/Pillars_SFX.mp3'": kepulan
+            "'sound://category_space/Southern_ring_SFX.mp3'": nebula cincin
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setAuthor:
         text: tetapkan pembuat {AUTHOR}
       Poetry_setBackground:
@@ -2368,6 +2431,16 @@ id:
           DIR:
             right: kanan
             left: kiri -
+      storylab_setForegroundEffect2:
+        text: lakukan efek {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': hati
+            '"rain"': hujan
+            '"starburst"': Semburan bintang
+            '"twinkling"': Berkelip
       storylab_setHeading:
         text: tetapkan heading {HEADING}
       storylab_setSubheading:

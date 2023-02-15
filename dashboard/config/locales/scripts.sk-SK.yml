@@ -1894,6 +1894,10 @@ sk:
             required:
               display_name: Prehľad
         dance-2019:
+          title: Tanečná Párty
+          description_short: Nakódujte tanečnú párty a zdieľajte ju so svojimi priateľmi.
+            Vystupujú Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba
+            z Disney rozprávky „Encanto“ atď.!
           description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         k5-onlinepd-2019:
@@ -3802,6 +3806,30 @@ sk:
               display_name: Obsah
             lessonGroup-5:
               display_name: Alternatívne lekcie
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Premenné
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Jednorozmerné (1D) polia
+            lesson-3:
+              name: Cykly "Pre"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        hello-world-space-2022:
+          title: 'Ahoj Svet: Vesmír'
+        hello-world-soccer-2022:
+          title: 'Ahoj Svet: Futbal'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3891,7 +3919,7 @@ sk:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Zoznamy
+              display_name: Dáta
             csp_loops:
               display_name: Cykly
             csp_traversals:
@@ -3902,8 +3930,16 @@ sk:
               display_name: Hodnotenie kurzu
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Zoznamy
             lessonGroup-2:
               display_name: Hodnotenie kurzu
+            lessonGroup-3:
+              display_name: Cykly
+            lessonGroup-4:
+              display_name: Prechody
+            lessonGroup-5:
+              display_name: Projekt
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -3926,3 +3962,23 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Hodnotenie kurzu
+        csp-playground:
+          description_audience: Autori osnov
+          description_short: Na prípravu aktualizácií hodín alebo úrovní medzi verziami
+            učebných osnov
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Labu
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
