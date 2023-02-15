@@ -1268,7 +1268,6 @@ FeedbackUtils.prototype.showGeneratedCode = function(appStrings) {
  * Display the "Clear Puzzle" confirmation dialog.  Takes a parameter to hide
  * the icon.  Calls `callback` if the user confirms they want to clear the puzzle.
  */
-// todo do
 FeedbackUtils.prototype.showClearPuzzleConfirmation = function(
   hideIcon,
   callback
