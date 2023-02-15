@@ -107,9 +107,10 @@ class YourSchool extends Component {
               Does your school teach Computer Science?
             </h1>
             <h3 style={styles.description}>
-              Find your school on the map to see if computer science is already
-              being offered. Can't find your school on the map?{' '}
-              <a href="#form">Fill out the survey below</a>.
+              Find your school on the map to see if computer science was offered
+              during the 2021-2022 school year. Then{' '}
+              <a href="#form">fill out the survey below</a> to make sure your
+              school is accurately represented for 2022-2023.
             </h3>
             <SchoolAutocompleteDropdown
               value={
