@@ -1,7 +1,7 @@
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {BlockTypes} from './blockTypes';
 import {MUSIC_BLOCKS} from './musicBlocks';
-import {musicLabDarkTheme} from './themes';
+import musicLabDarkTheme from '@cdo/apps/blockly/themes/musicLabDark';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import {getBlockMode} from '../appConfig';
@@ -70,14 +70,19 @@ export default class MusicBlocklyWorkspace {
       toolbox: getToolbox(),
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: musicLabDarkTheme,
-      renderer: experiments.isEnabled('thrasos')
-        ? 'cdo_renderer_thrasos'
-        : 'cdo_renderer_zelos',
+      renderer: experiments.isEnabled('zelos')
+        ? 'cdo_renderer_zelos'
+        : 'cdo_renderer_thrasos',
       noFunctionBlockFrame: true,
       zoom: {
-        startScale: 0.675
+        startScale: experiments.isEnabled('zelos') ? 0.9 : 1
       }
     });
+
+    // Remove two default entries in the toolbox's Functions category that
+    // we don't want.
+    delete Blockly.Blocks.procedures_defreturn;
+    delete Blockly.Blocks.procedures_ifreturn;
 
     Blockly.setInfiniteLoopTrap();
 
@@ -136,7 +141,10 @@ export default class MusicBlocklyWorkspace {
         if (functionBlock.type === 'procedures_defnoreturn') {
           // Accumulate some custom code that calls all the functions
           // together, simulating tracks mode.
-          functionCallsCode += `${functionBlock.getFieldValue('NAME')}();
+          const actualFunctionName = GeneratorHelpersSimple2.getSafeFunctionName(
+            functionBlock.getFieldValue('NAME')
+          );
+          functionCallsCode += `${actualFunctionName}();
           `;
 
           // Accumulate some code that has all of the function implementations.

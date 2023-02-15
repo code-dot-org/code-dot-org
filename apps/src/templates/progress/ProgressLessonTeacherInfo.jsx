@@ -103,6 +103,7 @@ class ProgressLessonTeacherInfo extends React.Component {
           <div style={styles.buttonContainer}>
             <Button
               __useDeprecatedTag
+              id="uitest-lesson-plan"
               href={lesson.lesson_plan_html_url}
               text={i18n.viewLessonPlan()}
               icon="file-text"
@@ -116,6 +117,7 @@ class ProgressLessonTeacherInfo extends React.Component {
           <div style={styles.buttonContainer}>
             <Button
               __useDeprecatedTag
+              id="uitest-student-resources"
               href={lesson.student_lesson_plan_html_url}
               text={i18n.studentResources()}
               icon="file-text"
