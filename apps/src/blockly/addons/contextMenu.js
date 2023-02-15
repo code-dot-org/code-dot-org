@@ -2,7 +2,6 @@ import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 
 const BLOCKLY_THEME = 'blocklyTheme';
-const BLOCKLY_STASH = 'blocklyStash';
 const ENABLED = 'enabled';
 const DISABLED = 'disabled';
 const HIDDEN = 'hidden';
