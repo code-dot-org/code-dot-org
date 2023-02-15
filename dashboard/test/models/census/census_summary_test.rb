@@ -142,40 +142,6 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school: nil, is_k8_school: nil)
   end
 
-  def empty_compute_teaches_cs_args
-    {
-      audit: {},
-      overrides_summary: {
-        should_override: false,
-        override_value: nil,
-      },
-      has_ap_data: false,
-      has_ib_data: false,
-      submissions_summary: {
-        consistency: {
-          teacher_or_admin: nil,
-          not_teacher_or_admin: nil,
-        },
-        has_inconsistent_surveys: {
-          teacher_or_admin: false,
-          not_teacher_or_admin: false,
-        },
-        counts: {
-          teacher_or_admin: {
-            yes: 0,
-            no: 0,
-          },
-          not_teacher_or_admin: {
-            yes: 0,
-            no: 0,
-          },
-        }
-      },
-      state_summary: nil,
-      previous_years_results: [nil, nil, nil],
-    }
-  end
-
   def validate_explanation(explanation)
     assert_not_nil explanation
     assert_equal 9, explanation.length, explanation
