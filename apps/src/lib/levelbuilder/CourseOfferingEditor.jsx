@@ -137,7 +137,10 @@ export default function CourseOfferingEditor(props) {
       <label>
         Grade Levels
         <HelpTip>
-          <p>Select all recommended grade levels.</p>
+          <p>
+            Select all recommended grade levels. Shift-click or cmd-click to
+            select multiple.
+          </p>
         </HelpTip>
         <select
           multiple
