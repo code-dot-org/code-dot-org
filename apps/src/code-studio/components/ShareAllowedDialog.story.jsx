@@ -6,6 +6,7 @@ import {action} from '@storybook/addon-actions';
 import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 import shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
+import project from '@cdo/apps/code-studio/projectRedux';
 
 export default {
   title: 'ShareAllowedDialog',
@@ -31,7 +32,9 @@ const defaultArgs = {
 };
 
 const Template = args => (
-  <Provider store={reduxStore({publishDialog, pageConstants, shareDialog})}>
+  <Provider
+    store={reduxStore({publishDialog, pageConstants, shareDialog, project})}
+  >
     {/* ShareAllowedDialog has a marginLeft of -360 so it shows up correctly on the page.
         Nesting inside a div so it appears in storybook correctly */}
     <div style={{marginLeft: 360}}>
@@ -122,4 +125,12 @@ WithSharingForUserDisabled.args = {
   isPublished: true,
   isUnpublishPending: true,
   userSharingDisabled: true
+};
+
+export const InRestrictedShareMode = Template.bind({});
+InRestrictedShareMode.args = {
+  ...defaultArgs,
+  canPublish: true,
+  inRestrictedShareMode: true,
+  appType: 'spritelab'
 };

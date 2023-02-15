@@ -35,13 +35,10 @@ export function shareProject(shareUrl) {
 
     // Allow publishing for any project type that students can publish.
     // Younger students can now get to the share dialog if their teacher allows
-    // it, and should be able to publish unless they are in restricted share mode.
-    // Restricted share mode is turned on if a student has uploaded images to a
-    // sprite lab project.
+    // it. ShareAllowedDialog will disabled publishing, even if canPublish is true,
+    // if the project is in restricted share mode.
     const canPublish =
-      !!appOptions.isSignedIn &&
-      AllPublishableProjectTypes.includes(appType) &&
-      !dashboard.project.inRestrictedShareMode();
+      !!appOptions.isSignedIn && AllPublishableProjectTypes.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
