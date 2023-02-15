@@ -75,7 +75,9 @@ export class MicrobitStubBoard {
 
   setDigitalOutput(pin, value) {}
 
-  getBoardClientWithoutPort() {}
+  getBoardClientWithoutPort() {
+    return {};
+  }
 
   disconnect() {}
 
