@@ -4,8 +4,9 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
-import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import moduleStyles from './inline-audio.module.scss';
+import classNames from 'classnames';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -77,7 +78,6 @@ class InlineAudio extends React.Component {
     audio: undefined,
     playing: false,
     error: false,
-    hover: false,
     loaded: false,
     autoplayed: false
   };
@@ -247,10 +247,6 @@ class InlineAudio extends React.Component {
     this.setState({playing: false});
   }
 
-  toggleHover = () => {
-    this.setState({hover: !this.state.hover});
-  };
-
   render() {
     if (
       this.props.textToSpeechEnabled &&
@@ -260,98 +256,47 @@ class InlineAudio extends React.Component {
       this.getAudioSrc()
     ) {
       return (
-        <div
-          className="inline-audio"
-          style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
-          onMouseOver={this.toggleHover}
-          onMouseOut={this.toggleHover}
+        <button
+          className={classNames('inline-audio', moduleStyles.inlineAudioButton)}
+          style={this.props.style && this.props.style.wrapper}
           onClick={this.toggleAudio}
+          type="button"
         >
           <div
-            style={[
-              styles.button,
-              styles.volumeButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
-            ]}
+            style={[this.props.style && this.props.style.button]}
+            className={classNames(
+              moduleStyles.iconWrapper,
+              moduleStyles.iconWrapperVolume
+            )}
             id="volume"
           >
             <i
-              className={'fa fa-volume-up'}
-              style={[
-                styles.buttonImg,
-                this.props.style && this.props.style.buttonImg
-              ]}
+              className={classNames('fa fa-volume-up', moduleStyles.buttonImg)}
+              style={[this.props.style && this.props.style.buttonImg]}
             />
           </div>
           <div
-            className="playPause"
-            style={[
-              styles.button,
-              styles.playPauseButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
-            ]}
+            className={classNames(
+              'playPause',
+              moduleStyles.iconWrapper,
+              moduleStyles.iconWrapperPlayPause
+            )}
+            style={[this.props.style && this.props.style.button]}
           >
             <i
-              className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
-              style={[
-                styles.buttonImg,
-                this.props.style && this.props.style.buttonImg
-              ]}
+              className={classNames(
+                this.state.playing ? 'fa fa-pause' : 'fa fa-play',
+                moduleStyles.buttonImg
+              )}
+              style={[this.props.style && this.props.style.buttonImg]}
             />
           </div>
-        </div>
+        </button>
       );
     }
     return null;
   }
 }
-
-const styles = {
-  error: {
-    display: 'inline-block',
-    marginLeft: 10,
-    marginBottom: 0,
-    padding: '5px 10px'
-  },
-
-  wrapper: {
-    marginLeft: '3px',
-    marginRight: '3px',
-    display: 'flex'
-  },
-
-  button: {
-    cursor: 'pointer',
-    float: 'left',
-    backgroundColor: color.lightest_purple,
-    border: 'none',
-    outline: 'none',
-    width: 33,
-    boxSizing: 'border-box'
-  },
-
-  volumeButton: {
-    borderRadius: '4px 0px 0px 4px'
-  },
-
-  playPauseButton: {
-    borderRadius: '0px 4px 4px 0px'
-  },
-
-  buttonImg: {
-    opacity: 1,
-    float: 'left',
-    paddingRight: 8,
-    paddingLeft: 8,
-    color: '#4d575f'
-  },
-
-  hover: {
-    backgroundColor: color.cyan
-  }
-};
 
 InlineAudio.defaultProps = {
   ttsAutoplayEnabled: false

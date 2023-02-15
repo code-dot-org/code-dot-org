@@ -11,7 +11,13 @@ import classNames from 'classnames';
 import moduleStyles from './button.module.scss';
 
 // Note: Keep these constants in sync with button.module.scss.
+const Phase1ButtonColor = {
+  brandSecondaryDefault: 'brandSecondaryDefault',
+  neutralDark: 'neutralDark'
+};
+
 const ButtonColor = {
+  ...Phase1ButtonColor,
   orange: 'orange',
   gray: 'gray',
   blue: 'blue',
@@ -43,7 +49,7 @@ class Button extends React.Component {
     text: PropTypes.string,
     children: PropTypes.node,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
-    color: PropTypes.oneOf(Object.keys(ButtonColor)),
+    color: PropTypes.oneOf(Object.values(ButtonColor)),
     styleAsText: PropTypes.bool,
     icon: PropTypes.string,
     iconClassName: PropTypes.string,
@@ -96,9 +102,13 @@ class Button extends React.Component {
       throw new Error('Expect at least one of href/onClick');
     }
 
+    let buttonStyle = style;
     let Tag = 'button';
     if (__useDeprecatedTag) {
       Tag = href ? 'a' : 'div';
+    } else {
+      // boxShadow should default to none, unless otherwise overridden
+      buttonStyle = {boxShadow: 'none', ...style};
     }
 
     if (download && Tag !== 'a') {
@@ -110,7 +120,10 @@ class Button extends React.Component {
     }
 
     const sizeClassNames = __useDeprecatedTag
-      ? moduleStyles[size]
+      ? [
+          moduleStyles[size],
+          Phase1ButtonColor[color] ? moduleStyles.phase1Updated : ''
+        ]
       : [moduleStyles[size], moduleStyles.updated];
 
     // Opening links in new tabs with 'target=_blank' is inherently insecure.
@@ -140,7 +153,7 @@ class Button extends React.Component {
     return (
       <Tag
         className={className}
-        style={{...style}}
+        style={{...buttonStyle}}
         href={disabled ? '#' : href}
         target={target}
         rel={rel}

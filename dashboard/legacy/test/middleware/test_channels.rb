@@ -43,7 +43,7 @@ class ChannelsTest < Minitest::Test
     young_user_cannot_share = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(young_user_cannot_share)
 
@@ -56,7 +56,7 @@ class ChannelsTest < Minitest::Test
     young_user_can_share = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": false}.to_json
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(young_user_can_share)
 
@@ -238,7 +238,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -252,7 +252,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {"sharing_disabled": false}.to_json
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -266,7 +266,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -280,7 +280,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": false}.to_json
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -301,7 +301,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -310,33 +310,6 @@ class ChannelsTest < Minitest::Test
     assert_can_publish('playlab')
     assert_cannot_publish('weblab')
     assert_cannot_publish('foo')
-  end
-
-  def test_abuse
-    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 10, JSON.parse(last_response.body)['abuse_score']
-
-    delete "/v3/channels/#{channel_id}/abuse"
-    assert last_response.unauthorized?
-
-    ChannelsApi.any_instance.stubs(:project_validator?).returns(true)
-
-    delete "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    ChannelsApi.any_instance.unstub(:project_validator?)
   end
 
   def test_disable_and_enable_content_moderation
@@ -393,22 +366,6 @@ class ChannelsTest < Minitest::Test
     assert last_response.ok?
     assert_equal true, JSON.parse(last_response.body)['sharing_disabled']
     Projects.any_instance.unstub(:get_user_sharing_disabled)
-  end
-
-  def test_abuse_frozen
-    post '/v3/channels', {frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
   end
 
   def test_most_recent

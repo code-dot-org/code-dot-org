@@ -1,0 +1,7 @@
+- if @pool == 'Dancelab' || @pool == 'Poetry'
+  %script{src: webpack_asset_path('js/googleblockly.js')}
+  - @blockly_version = 'google'
+- else
+  %script{src: webpack_asset_path('js/blockly.js')}
+  %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
+  - @blockly_version = 'cdo'

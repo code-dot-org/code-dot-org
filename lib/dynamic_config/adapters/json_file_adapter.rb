@@ -60,9 +60,7 @@ class JSONFileDatastoreAdapter
   end
 
   def write_to_file
-    File.open(@file_path, "w") do |f|
-      f.write(JSON.dump(@hash))
-    end
+    File.write(@file_path, JSON.dump(@hash))
   end
 
   def clear

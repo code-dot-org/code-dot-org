@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-11-01T23:05:12.000Z",
-  "level_num": "custom",
-  "user_id": 18528,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -27,7 +23,7 @@
     "short_instructions": "Add a second conditional to check if the fist have eaten enough algae to clear the water and bring the coral back to a healthy state. ",
     "long_instructions": "**Add a second conditional to check if the fish have eaten enough algae to clear the water and bring the coral back to a healthy state.**\r\n\r\nDo This: \r\n- Connect another `if` block under the first one.\r\n- The condition should read `if the number of algae is < 8`\r\n- Place two `change costume` blocks inside of the `if` block and set them to change from sick coral to healthy coral.\r\n\r\nNote: Your new code should read - If the number of algae is less than 8, change the sick coral to healthy. ",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
@@ -44,10 +40,15 @@
     "name_suffix": "_2",
     "validation_code": "if (World.frameCount == 1) {\r\n  \tvalidationProps.coralSickened = false;\r\n  \tsetWaitTime(500);\r\n  \t// Check that the coral starts in the right costume\r\n\taddCriteria(function() {\r\n      return countByAnimation({\"costume\": \"underseadeco_24\"}) >= 1 &&\r\n        \t countByAnimation({\"costume\": \"underseadeco_25\"}) >= 1;\r\n    }, \"changeOrSetCostumeEvent\");\r\n\r\n \t// Check that there is more than 8 algae and the coral costume changes appropriately\r\n  \taddCriteria(function() {\r\n    \tvar criteriaState = (\r\n          countByAnimation({\"costume\": \"green-sea-plant-2\"}) > 8 &&\r\n          countByAnimation({\"costume\": \"red-coral-dead\"}) >= 1 &&\r\n          countByAnimation({\"costume\": \"purple-coral-dead\"}) >= 1\r\n        );\r\n      \tif (criteriaState == true) {\r\n        \tvalidationProps.coralSickened = true;\r\n          \treturn true;\r\n        }\r\n      \treturn false;\r\n    }, \"changeOrSetCostumeEvent\");\r\n\r\n  \t// Check that the coral was sickened and then check that if the algae count is less than 8 that the costumes change back\r\n    addCriteria(function() {\r\n      \tconsole.log(validationProps.coralSickened == true);\r\n          return (\r\n           \tvalidationProps.coralSickened == true &&\r\n            countByAnimation({\"costume\": \"green-sea-plant-2\"}) < 8 &&\r\n            countByAnimation({\"costume\": \"underseadeco_25\"}) >= 1 &&\r\n            countByAnimation({\"costume\": \"underseadeco_24\"}) >= 1\r\n          );\r\n      }, \"changeOrSetCostumeEvent\");\r\n}\r\n\r\ncheck();",
     "encrypted_examples": "NRrrab1OZAEIeK5NrUM1xiPE5O9tDUJLZA0mxeUKf3yr2/L9+YHyrYFNu79T\nJno/Fm2+uMdxeMJV4qP4ze3j1w==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "spritelab"
   },
+  "game_id": 64,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:12.701+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_health_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_health_2022\"}]",
+  "created_at": "2022-11-01T23:05:12.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:12.701+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_health_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_health_2022\"},{\"changed_at\":\"2022-11-30 20:25:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:11:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -423,7 +424,7 @@
         <block type="gamelab_makeNumSprites">
           <field name="ANIMATION_NAME">"fish_05"</field>
           <value name="NUM">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">10</field>
             </block>
           </value>
@@ -431,24 +432,24 @@
         <block type="gamelab_setProp">
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_05"</field>
             </block>
           </value>
           <value name="VAL">
-            <block type="math_number">
+            <block type="math_number" can_disconnect_from_parent="false">
               <field name="NUM">50</field>
             </block>
           </value>
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_05"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_collectibleBehaviors">
+            <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
               <field name="BEHAVIOR">new Behavior(wandering, [])</field>
             </block>
           </value>
@@ -456,12 +457,12 @@
         <block type="gamelab_checkTouching">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"fish_05"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"green-sea-plant-2"</field>
             </block>
           </value>
@@ -469,19 +470,19 @@
         <block type="gamelab_destroy"/>
         <block type="controls_if">
           <value name="IF0">
-            <block type="logic_compare">
+            <block type="logic_compare" can_disconnect_from_parent="false">
               <field name="OP">LT</field>
               <value name="A">
-                <block type="gamelab_countByAnimation">
+                <block type="gamelab_countByAnimation" can_disconnect_from_parent="false">
                   <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation">
+                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                       <field name="ANIMATION">"green-sea-plant-2"</field>
                     </block>
                   </value>
                 </block>
               </value>
               <value name="B">
-                <block type="math_number">
+                <block type="math_number" can_disconnect_from_parent="false">
                   <field name="NUM">8</field>
                 </block>
               </value>
@@ -491,7 +492,7 @@
         <block type="gamelab_setAnimation">
           <field name="ANIMATION">"underseadeco_25"</field>
           <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"red-coral-dead"</field>
             </block>
           </value>
@@ -499,7 +500,7 @@
         <block type="gamelab_setAnimation">
           <field name="ANIMATION">"underseadeco_24"</field>
           <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <field name="ANIMATION">"purple-coral-dead"</field>
             </block>
           </value>

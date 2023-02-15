@@ -74,30 +74,30 @@
   "user_id": 9,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-07-25T00:42:58.403+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_click_ecosystems\"},{\"changed_at\":\"2022-07-25 00:46:08 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-02 17:31:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-02 20:53:04 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-08 23:22:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-08 23:24:33 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-23 16:54:27 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-30 16:04:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-07-25T00:42:58.403+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_click_ecosystems\"},{\"changed_at\":\"2022-07-25 00:46:08 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-02 17:31:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-08-02 20:53:04 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-08 23:22:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-08 23:24:33 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-23 16:54:27 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-30 16:04:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-30 16:17:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="gamelab_setBackgroundImageAs" can_disconnect_from_parent="false">
+            <block type="gamelab_setBackgroundImageAs" deletable="false" can_disconnect_from_parent="false">
               <field name="IMG">"meadow"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
+                <block type="gamelab_makeNewSpriteAnon" deletable="false" can_disconnect_from_parent="false">
                   <field name="ANIMATION_NAME">"rabbit-1"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                    <block type="gamelab_location_picker" deletable="false" movable="false" can_disconnect_from_parent="false">
                       <field name="LOCATION">{"x":162,"y":286}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
+                    <block type="gamelab_makeNewSpriteAnon" deletable="false" can_disconnect_from_parent="false">
                       <field name="ANIMATION_NAME">"rabbit-snowy"</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                        <block type="gamelab_location_picker" deletable="false" movable="false" can_disconnect_from_parent="false">
                           <field name="LOCATION">{"x":275,"y":284}</field>
                         </block>
                       </value>
@@ -108,36 +108,36 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" movable="false">
+        <block type="gamelab_spriteClicked" deletable="false" movable="false">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+            <block type="gamelab_allSpritesWithAnimation" movable="false" can_disconnect_from_parent="false">
               <field name="ANIMATION">"rabbit-1"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
+            <block type="gamelab_spriteSay" deletable="false" can_disconnect_from_parent="false">
               <field name="SPEECH">Hi!</field>
               <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <block type="gamelab_allSpritesWithAnimation" movable="false" can_disconnect_from_parent="false">
                   <field name="ANIMATION">"rabbit-1"</field>
                 </block>
               </value>
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" movable="false">
+        <block type="gamelab_spriteClicked" deletable="false" movable="false">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+            <block type="gamelab_allSpritesWithAnimation" movable="false" can_disconnect_from_parent="false">
               <field name="ANIMATION">"rabbit-snowy"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
+            <block type="gamelab_spriteSay" deletable="false" can_disconnect_from_parent="false">
               <field name="SPEECH">Hello!</field>
               <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <block type="gamelab_allSpritesWithAnimation" movable="false" can_disconnect_from_parent="false">
                   <field name="ANIMATION">"rabbit-snowy"</field>
                 </block>
               </value>

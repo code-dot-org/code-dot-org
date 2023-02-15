@@ -4,6 +4,6 @@
   "course_offering_key": "csa",
   "parent_reference_guide_key": "writing-a-class",
   "display_name": "No-Argument Constructors",
-  "content": null,
+  "content": "## What is a constructor?\n\nA **constructor** is a block of code that has the same name as the class and tells the computer how to create a new object.\n\nIf no constructor is defined in the class, a no-argument constructor is provided by default.\n\n## Can I have multiple constructors?\n\nA class can have multiple constructors as long as they have different parameter values. The **constructor signature** helps Java differentiate between the different constructors.\n\nA **constructor signature** consists of the name of the constructor and the list of its parameters.",
   "position": 2
 }

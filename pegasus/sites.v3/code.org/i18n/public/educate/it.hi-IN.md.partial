@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ theme: responsive
 | **इंटरनेट सिम्युलेटर का उपयोग करने के लिए**                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **वेब लैब का उपयोग करने के लिए**                                                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **गूगल क्लासरूम शेयर बटन का उपयोग करने के लिए**                                  | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                      | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## मोबाइल और टैबलेट समर्थन विवरण
 

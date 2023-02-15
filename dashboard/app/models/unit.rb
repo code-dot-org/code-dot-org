@@ -305,7 +305,6 @@ class Unit < ApplicationRecord
     include_student_lesson_plans
     is_migrated
     seeded_from
-    is_maker_unit
     use_legacy_lesson_plans
   )
 
@@ -329,13 +328,6 @@ class Unit < ApplicationRecord
     Unit.get_from_cache(Unit::FLAPPY_NAME)
   end
 
-  # List of units in the CSD course offering which use the maker tools.
-  # Used to determine the most recent Maker Unit to show on the Maker Homepage
-  def self.maker_units(user)
-    # only units in CSD should be included in the maker units
-    @@maker_units ||= visible_units.select(&:is_maker_unit?).select {|u| u.get_course_version&.course_offering&.csd?}
-  end
-
   class << self
     def all_scripts
       return all.to_a unless should_cache?
@@ -344,7 +336,7 @@ class Unit < ApplicationRecord
 
     def family_names
       Rails.cache.fetch('script/family_names', force: !Unit.should_cache?) do
-        (CourseVersion.course_offering_keys('Unit') + ScriptConstants::FAMILY_NAMES).uniq.sort
+        (CourseVersion.course_offering_keys('Unit') + ScriptConstants::DEPRECATED_FAMILY_NAMES).uniq.sort
       end
     end
 
@@ -765,6 +757,24 @@ class Unit < ApplicationRecord
       first
   end
 
+  # @param family_name [String] The family name for a unit family.
+  # @param user [User]
+  # @return [Unit|nil] Returns the latest unit version in a family that the user has progress in.
+  def self.latest_version_with_progress(family_name, user)
+    return nil unless family_name && user
+
+    family_unit_versions = Unit.get_family_from_cache(family_name).
+      sort_by(&:version_year).freeze
+    family_unit_names = family_unit_versions.map(&:name)
+    progress = UserScript.lookup_hash(user, family_unit_names)
+
+    latest_version_with_progress = nil
+    family_unit_versions.each do |version|
+      latest_version_with_progress = version if progress[version.name]
+    end
+    latest_version_with_progress
+  end
+
   def text_response_levels
     return @text_response_levels if Unit.should_cache? && @text_response_levels
     @text_response_levels = text_response_levels_without_cache
@@ -822,7 +832,7 @@ class Unit < ApplicationRecord
   end
 
   def hoc?
-    Unit.unit_in_category?('hoc', name)
+    get_course_version&.hoc?
   end
 
   def flappy?
@@ -1483,7 +1493,7 @@ class Unit < ApplicationRecord
       end
 
       peer_review_lesson_info = {
-        name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
+        name: I18n.t('peer_review.review_count', review_count: peer_reviews_to_complete),
         lesson_group_display_name: 'Peer Review',
         levels: levels,
         lockable: false
@@ -1541,7 +1551,6 @@ class Unit < ApplicationRecord
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
       version_year: version_year,
-      is_maker_unit: is_maker_unit?,
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
@@ -1700,7 +1709,6 @@ class Unit < ApplicationRecord
     @@level_cache = nil
     @@all_scripts = nil
     @@visible_units = nil
-    @@maker_units = nil
     Rails.cache.delete UNIT_CACHE_KEY
   end
 
@@ -1795,8 +1803,7 @@ class Unit < ApplicationRecord
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,
-      :use_legacy_lesson_plans,
-      :is_maker_unit
+      :use_legacy_lesson_plans
     ]
 
     result = {}

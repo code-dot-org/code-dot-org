@@ -53,7 +53,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test "create assigns unique section codes" do
-    sections = 3.times.map do
+    sections = Array.new(3) do
       # Repeatedly seed the RNG so we get the same "random" codes.
       srand 1
       Section.create!(@default_attrs)

@@ -17,6 +17,7 @@ module Pd::Application
       application_hash = teacher_application.sanitize_form_data_hash
 
       @teacher_application = {
+        id: teacher_application.id,
         course: Pd::Application::ApplicationConstants::COURSE_NAMES[teacher_application.course],
         name: teacher_application.applicant_name,
         application_guid: teacher_application.application_guid,

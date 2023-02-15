@@ -4,6 +4,6 @@
   "course_offering_key": "csa",
   "parent_reference_guide_key": "data-structures",
   "display_name": "ArrayLists",
-  "content": null,
+  "content": "## What is an ArrayList?\n\nAn `ArrayList`(#e7e8ea) is used to represent a list.\n\nWhile the size of a 1D and 2D array cannot be changed, an `ArrayList`(#e7e8ea) allows you to add and remove elements and change its size.\n\n## How do I modify elements in an ArrayList?\n\nThe `ArrayList`(#e7e8ea) class has methods to modify its elements.\n\nTo add elements to an `ArrayList`(#e7e8ea), you can use the `add()`(#e7e8ea) method. The element you want to add is passed as its argument.\n\nTo remove elements from an `ArrayList`(#e7e8ea), you can use the `remove()`(#e7e8ea) method. The index of the element or the element you want to remove is passed as its argument.",
   "position": 3
 }

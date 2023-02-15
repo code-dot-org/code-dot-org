@@ -30,7 +30,7 @@ theme: responsive
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
           <td>Edge 94.x</td>
@@ -78,6 +78,7 @@ theme: responsive
 | **ಇಂಟರ್ನೆಟ್ ಸಿಮ್ಯುಲೇಟರ್ ಅನ್ನು ಬಳಸಲು**                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **ವೆಬ್ ಲ್ಯಾಬ್ ಬಳಸಲು**                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google ಕ್ಲಾಸ್‌ರೂಮ್ ಹಂಚಿಕೆ ಬಟನ್ ಬಳಸಲು**                          | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                       | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## ಮೊಬೈಲ್ ಮತ್ತು ಟ್ಯಾಬ್ಲೆಟ್ ಬೆಂಬಲ ವಿವರಗಳು
 

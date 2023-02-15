@@ -56,9 +56,13 @@ class TeacherApplicationHelperTest < ActionView::TestCase
         condition_message: 'application is in a different year',
         user: @user_with_outdated_incomplete
       }
-    ].each do |expected_output:, user:, condition_message:|
-      sign_in user
-      assert_equal expected_output, has_incomplete_application?, "expected #{expected_output} when #{condition_message}"
+    ].each do |test_params|
+      sign_in test_params[:user]
+      assert_equal(
+        test_params[:expected_output],
+        has_incomplete_application?,
+        msg: "expected #{test_params[:expected_output]} when #{test_params[:condition_message]}"
+      )
     end
   end
 
@@ -79,9 +83,13 @@ class TeacherApplicationHelperTest < ActionView::TestCase
         condition_message: 'application is in a different year',
         user: @user_with_outdated_reopened
       }
-    ].each do |expected_output:, user:, condition_message:|
-      sign_in user
-      assert_equal expected_output, has_reopened_application?, "expected #{expected_output} when #{condition_message}"
+    ].each do |test_params|
+      sign_in test_params[:user]
+      assert_equal(
+        test_params[:expected_output],
+        has_reopened_application?,
+        msg: "expected #{test_params[:expected_output]} when #{test_params[:condition_message]}"
+      )
     end
   end
 end

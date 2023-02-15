@@ -191,3 +191,5 @@ export const BlocklyVersion = {
   CDO: 'CDO',
   GOOGLE: 'Google'
 };
+
+export const START_BLOCKS = 'start_blocks';

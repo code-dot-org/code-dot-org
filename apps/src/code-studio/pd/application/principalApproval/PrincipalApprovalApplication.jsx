@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FormController from '../../form_components_func/FormController';
 import PrincipalApprovalComponent from './PrincipalApprovalComponent';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const PrincipalApprovalApplication = props => {
   const getInitialData = () => ({
@@ -44,6 +46,11 @@ const PrincipalApprovalApplication = props => {
   };
 
   const onSuccessfulSubmit = () => {
+    analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT);
+    analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+      'application id': props.teacherApplication.id,
+      'application status': 'unreviewed'
+    });
     window.location.reload(true);
   };
 
@@ -65,6 +72,7 @@ PrincipalApprovalApplication.propTypes = {
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   teacherApplication: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     course: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     application_guid: PropTypes.string.isRequired,

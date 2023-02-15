@@ -67,7 +67,7 @@ class SingleSignOn
       # custom.
       #
       if k[0..6] == "custom."
-        field = k[7..-1]
+        field = k[7..]
         sso.custom_fields[field] = v
       end
     end

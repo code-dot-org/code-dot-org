@@ -4,6 +4,6 @@
   "course_offering_key": "csa",
   "parent_reference_guide_key": "classes-and-objects",
   "display_name": "Writing a Class",
-  "content": null,
+  "content": "## What is a class?\n\nA **class** is a programmer-defined blueprint from which objects are created.\n\nA Java program must have at least one class. The name of the class must be the same as the name of the file. For example, the `Student`(#e7e8ea) class below must be in a file named `Student.java`(#e7e8ea).\n\n```\npublic class Student {\n\n   // instance variables, constructors, and methods\n\n}\n```",
   "position": 1
 }

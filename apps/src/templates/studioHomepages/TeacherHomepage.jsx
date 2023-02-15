@@ -21,6 +21,11 @@ import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCa
 import Button from '@cdo/apps/templates/Button';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import IncubatorBanner from './IncubatorBanner';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
@@ -47,7 +52,8 @@ export const UnconnectedTeacherHomepage = ({
   topPlCourse,
   beginGoogleImportRosterFlow,
   hasFeedback,
-  showIncubatorBanner
+  showIncubatorBanner,
+  currentUserId
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
@@ -148,6 +154,19 @@ export const UnconnectedTeacherHomepage = ({
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
   const showDonorBanner = isEnglish && donorBannerName;
+
+  // Send one analytics event when a teacher logs in. Use session storage to determine
+  // whether they've just logged in.
+  if (
+    !!currentUserId &&
+    tryGetSessionStorage(LOGGED_TEACHER_SESSION, 'false') !== 'true'
+  ) {
+    trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
+
+    analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
+      'user id': currentUserId
+    });
+  }
 
   return (
     <div>
@@ -303,7 +322,8 @@ UnconnectedTeacherHomepage.propTypes = {
   topPlCourse: shapes.topCourse,
   beginGoogleImportRosterFlow: PropTypes.func,
   hasFeedback: PropTypes.bool,
-  showIncubatorBanner: PropTypes.bool
+  showIncubatorBanner: PropTypes.bool,
+  currentUserId: PropTypes.number
 };
 
 const styles = {

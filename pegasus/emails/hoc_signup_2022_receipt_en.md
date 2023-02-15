@@ -36,7 +36,7 @@ Many of the organizations offering activities on HourofCode.com also have curric
 
 Many of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://<%= hourofcode %>/beyond)
 
-Code.org also offers full [introductory computer science courses](https://<%= codedotorg %>/educate/curriculum/cs-fundamentals-international) translated into over 67 languages at no cost to you or your school. <% end %> Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+Code.org also offers full [introductory computer science courses](https://<%= codedotorg %>/educate/curriculum/elementary-school) translated into over 67 languages at no cost to you or your school. <% end %> Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
 
 
 Hadi Partovi<br />

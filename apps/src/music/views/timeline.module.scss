@@ -1,0 +1,121 @@
+@import "./theme/tokens-dark";
+
+$full-width: 900px;
+
+.wrapper {
+  background-color: $gray-900;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-size: 100% 200%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  .container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+
+    .fullWidthOverlay {
+      width: $full-width;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .barLineContainer {
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 100%;
+
+      .barLine {
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        border-left: 2px $gray-800 solid;
+        color: $gray-600;
+
+        &Current {
+          border-left-color: $gray-600;
+          color: $gray-300;
+        }
+      }
+
+      .barNumber {
+        padding-left: 6px;
+      }
+    }
+
+    .soundsArea {
+      width: $full-width;
+      height: 100%;
+
+      .timelineElement {
+        position: absolute;
+        box-sizing: border-box;
+        border-radius: 8px;
+        border: solid 2px;
+
+        &Purple {
+          background-color: purple;
+          border-color: lightpink;
+        }
+
+        &Blue {
+          background-color: blue;
+          border-color: lightblue;
+        }
+
+        &Green {
+          background-color: green;
+          border-color: lightgreen;
+        }
+
+        &Yellow {
+          background-color: yellow;
+          border-color: brown;
+        }
+
+        &Playing {
+          box-shadow: 0 0 10px rgba(255 255 255 / 0.5);
+        }
+      }
+
+      .tracksContainer {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-top: 20px;
+
+        .trackRowContainer {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2px;
+
+          .trackName {
+            font-size: 12px;
+            font-style: italic;
+            padding-left: 2px;
+          }
+
+          .trackSoundsContainer {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    .playhead {
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      border-left: 3px $yellow solid;
+    }
+  }
+}

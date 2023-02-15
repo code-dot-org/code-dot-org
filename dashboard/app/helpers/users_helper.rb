@@ -48,7 +48,7 @@ module UsersHelper
       source_user.destroy!
     end
 
-    log_account_takeover_to_firehose(firehose_params)
+    log_account_takeover_to_firehose(**firehose_params)
     true
   rescue => e
     # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
