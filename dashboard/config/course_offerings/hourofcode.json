@@ -3,5 +3,9 @@
   "display_name": "Classic Maze",
   "category": "hoc",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": null,
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": null
 }
