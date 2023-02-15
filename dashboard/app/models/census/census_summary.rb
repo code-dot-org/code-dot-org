@@ -61,47 +61,6 @@ class Census::CensusSummary < ApplicationRecord
     end
   end
 
-  def self.submission_has_response(submission, is_high_school)
-    # Treat an "I don't know" response the same as not having any response
-    if is_high_school
-      !(submission.how_many_20_hours.nil? || submission.how_many_20_hours_dont_know?)
-    else
-      !(submission.how_many_10_hours.nil? || submission.how_many_10_hours_dont_know?) ||
-      !(submission.how_many_20_hours.nil? || submission.how_many_20_hours_dont_know?)
-    end
-  end
-
-  HISTORICAL_RESULTS_MAP = {
-    "YES" => "HISTORICAL_YES",
-    "NO" => "HISTORICAL_NO",
-    "MAYBE" => "HISTORICAL_MAYBE",
-  }
-
-  def self.map_historical_teaches_cs(historical_value)
-    HISTORICAL_RESULTS_MAP[historical_value]
-  end
-
-  def self.conditional_result(detail_label, condition, new_result, detail_value, current_result, details, set_value_when_not_used = false)
-    result = current_result
-    if condition
-      value = detail_value
-      used = result.nil?
-      result = new_result if result.nil?
-    else
-      value = set_value_when_not_used ? detail_value : nil
-      used = false
-    end
-    details.push(
-      {
-        label: detail_label,
-        value: value,
-        used: used,
-      }
-    )
-
-    return result
-  end
-
   def self.empty_audit_data
     {
       version: 1.0,
