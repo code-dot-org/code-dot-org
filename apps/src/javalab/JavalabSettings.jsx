@@ -48,6 +48,12 @@ export class UnconnectedJavalabSettings extends Component {
     }
   };
 
+  handleKeyDown = event => {
+    if (this.state.dropdownOpen && event.key === 'Escape') {
+      this.collapseDropdown();
+    }
+  };
+
   toggleDropdown = () => {
     if (this.state.dropdownOpen) {
       this.collapseDropdown();
@@ -140,7 +146,7 @@ export class UnconnectedJavalabSettings extends Component {
     const {dropdownOpen} = this.state;
 
     return (
-      <div className={style.main}>
+      <div className={style.main} onKeyDown={this.handleKeyDown}>
         <JavalabButton
           icon={<FontAwesome icon="cog" />}
           text={msg.settings()}

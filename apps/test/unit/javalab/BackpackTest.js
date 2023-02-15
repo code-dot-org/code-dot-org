@@ -220,4 +220,17 @@ describe('Java Lab Backpack Test', () => {
     // backpackFilenames should have length 2 (file3 should be gone)
     expect(state.backpackFilenames.length).to.equal(2);
   });
+
+  it('Closes dropdown when Escape pressed', () => {
+    const wrapper = shallow(<Backpack {...defaultProps} />);
+    wrapper.instance().expandDropdown();
+    expect(wrapper.instance().state.dropdownOpen).to.be.true;
+
+    wrapper
+      .find('div')
+      .first()
+      .props()
+      .onKeyDown({key: 'Escape'});
+    expect(wrapper.instance().state.dropdownOpen).to.be.false;
+  });
 });

@@ -372,6 +372,12 @@ class JavalabEditor extends React.Component {
     });
   }
 
+  handleKeyDown = event => {
+    if (this.state.showMenu && event.key === 'Escape') {
+      this.cancelTabMenu();
+    }
+  };
+
   // This moves the active tab to the left in the tab menu
   moveTabLeft() {
     const {activeTabKey, orderedTabKeys} = this.props;
@@ -675,7 +681,7 @@ class JavalabEditor extends React.Component {
       zIndex: 1000
     };
     return (
-      <div>
+      <div onKeyDown={this.handleKeyDown}>
         <JavalabEditorHeader onBackpackImportFile={this.onImportFile} />
         <Tab.Container
           activeKey={activeTabKey}

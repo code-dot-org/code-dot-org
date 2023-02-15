@@ -36,6 +36,12 @@ class JavalabFileExplorer extends Component {
     }
   };
 
+  handleKeyDown = event => {
+    if (this.state.dropdownOpen && event.key === 'Escape') {
+      this.collapseDropdown();
+    }
+  };
+
   toggleDropdown = () => {
     if (this.state.dropdownOpen) {
       this.collapseDropdown();
@@ -63,7 +69,7 @@ class JavalabFileExplorer extends Component {
     const files = this.transformFileMetadata();
 
     return (
-      <div style={styles.main}>
+      <div style={styles.main} onKeyDown={this.handleKeyDown}>
         <button
           aria-label={i18n.fileExplorer()}
           type="button"

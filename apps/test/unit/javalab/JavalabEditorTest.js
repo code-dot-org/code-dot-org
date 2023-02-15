@@ -174,6 +174,30 @@ describe('Java Lab Editor Test', () => {
         expect(editor.find('JavalabEditor').instance().state.contextTarget).to
           .be.null;
       });
+
+      it('Closes tab menu when Escape pressed', () => {
+        const editor = createWrapper();
+        editor
+          .find('JavalabEditor')
+          .instance()
+          .setState({
+            showMenu: true,
+            contextTarget: 'file-0',
+            menuPosition: {
+              top: '2px',
+              left: '4px'
+            }
+          });
+
+        editor
+          .find('div')
+          .first()
+          .props()
+          .onKeyDown({key: 'Escape'});
+
+        expect(editor.find('JavalabEditor').instance().state.showMenu).to.be
+          .false;
+      });
     });
 
     describe('Rename', () => {

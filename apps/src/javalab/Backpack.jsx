@@ -217,6 +217,12 @@ class Backpack extends Component {
     }
   };
 
+  handleKeyDown = event => {
+    if (this.state.dropdownOpen && event.key === 'Escape') {
+      this.collapseDropdown();
+    }
+  };
+
   toggleDropdown = () => {
     if (this.state.dropdownOpen) {
       this.collapseDropdown();
@@ -319,7 +325,10 @@ class Backpack extends Component {
     // to align with other buttons in the JavalabEditor header,
     // which all use PaneButton.
     return (
-      <>
+      <div
+        id="javalab-editor-backpack-container"
+        onKeyDown={this.handleKeyDown}
+      >
         <PaneButton
           id="javalab-editor-backpack"
           icon={backpackIcon}
@@ -456,7 +465,7 @@ class Backpack extends Component {
           displayTheme={displayTheme}
           confirmButtonText={msg.dialogOK()}
         />
-      </>
+      </div>
     );
   }
 }
