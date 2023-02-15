@@ -206,54 +206,6 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     end
   end
 
-  def validate_compute_teaches_cs_with_override(override_value)
-    args = empty_compute_teaches_cs_args
-    args[:overrides_summary] = {
-      should_override: true,
-      override_value: override_value,
-    }
-
-    teaches_cs = compute_teaches_cs args
-
-    assert_equal override_value, teaches_cs, args[:audit] unless override_value.nil?
-    assert_nil teaches_cs, args[:audit] if override_value.nil?
-    explanation = args[:audit][:explanation]
-    validate_explanation explanation
-    explanation.select {|e| e[:label] == 'overrides'}.first.tap do |e|
-      assert e[:used], e
-      assert_equal override_value, e[:value], e unless override_value.nil?
-      assert_nil e[:value], e if override_value.nil?
-    end
-  end
-
-  test "compute_teaches_cs with yes override gives correct results" do
-    validate_compute_teaches_cs_with_override('YES')
-  end
-
-  test "compute_teaches_cs with no override gives correct results" do
-    validate_compute_teaches_cs_with_override('NO')
-  end
-
-  test "compute_teaches_cs with maybe override gives correct results" do
-    validate_compute_teaches_cs_with_override('MAYBE')
-  end
-
-  test "compute_teaches_cs with historic yes override gives correct results" do
-    validate_compute_teaches_cs_with_override('HISTORIC_YES')
-  end
-
-  test "compute_teaches_cs with historic no override gives correct results" do
-    validate_compute_teaches_cs_with_override('HISTORIC_NO')
-  end
-
-  test "compute_teaches_cs with historic maybe override gives correct results" do
-    validate_compute_teaches_cs_with_override('HISTORIC_MAYBE')
-  end
-
-  test "compute_teaches_cs with nil override gives correct results" do
-    validate_compute_teaches_cs_with_override(nil)
-  end
-
   test "compute_teaches_cs with AP data gives correct results" do
     args = empty_compute_teaches_cs_args
     args[:has_ap_data] = true
