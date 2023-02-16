@@ -17,7 +17,6 @@ import {
 import {loadScriptProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import firehoseClient from '../../lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ProgressViewHeader from './ProgressViewHeader';
@@ -74,11 +73,6 @@ class SectionProgress extends Component {
     this.props.setScriptId(scriptId);
     loadScriptProgress(scriptId, this.props.sectionId);
 
-    this.recordEvent('change_script', {
-      old_script_id: this.props.scriptId,
-      new_script_id: scriptId
-    });
-
     analyticsReporter.sendEvent(EVENTS.PROGRESS_CHANGE_UNIT, {
       sectionId: this.props.sectionId,
       oldUnitId: this.props.scriptId,
@@ -89,35 +83,11 @@ class SectionProgress extends Component {
   onChangeLevel = lessonOfInterest => {
     this.props.setLessonOfInterest(lessonOfInterest);
 
-    this.recordEvent('jump_to_lesson', {
-      script_id: this.props.scriptId,
-      stage_id: this.props.scriptData.lessons[lessonOfInterest].id
-    });
-
     analyticsReporter.sendEvent(EVENTS.PROGRESS_JUMP_TO_LESSON, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
       lesson: this.props.scriptData.lessons[lessonOfInterest].id
     });
-  };
-
-  navigateToScript = () => {
-    this.recordEvent('go_to_script', {script_id: this.props.scriptId});
-  };
-
-  recordEvent = (eventName, dataJson = {}) => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: eventName,
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          ...dataJson
-        })
-      },
-      {includeUserId: true}
-    );
   };
 
   levelDataInitialized = () => {

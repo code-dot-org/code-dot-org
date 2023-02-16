@@ -14,7 +14,6 @@ import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAs
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import EmptySection from './EmptySection';
 import _ from 'lodash';
-import firehoseClient from '../../lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
@@ -48,21 +47,7 @@ function TeacherDashboard({
   };
 
   useLocationChange((location, prevLocation) => {
-    const previousTab = _.last(_.split(prevLocation.pathname, '/'));
     const newTab = _.last(_.split(location.pathname, '/'));
-    // Log if we switched tabs in the teacher dashboard
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: previousTab,
-        event: 'click_new_tab',
-        data_json: JSON.stringify({
-          section_id: sectionId,
-          new_tab: newTab
-        })
-      },
-      {includeUserId: true}
-    );
     if (newTab === 'progress') {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
         sectionId: sectionId
