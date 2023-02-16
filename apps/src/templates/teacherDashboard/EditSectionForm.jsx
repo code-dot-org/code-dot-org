@@ -27,7 +27,6 @@ import {
   SectionLoginType,
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
@@ -112,35 +111,6 @@ class EditSectionForm extends Component {
       alert(i18n.unexpectedError());
       console.error(status);
     });
-  };
-
-  recordAutoplayToggleEvent = ttsAutoplayEnabled => {
-    firehoseClient.putRecord(
-      {
-        study: 'section_setting',
-        study_group: 'tts_auto_play',
-        event: ttsAutoplayEnabled ? 'turn_on' : 'turn_off',
-        script_id: this.props.section.unitId,
-        data_json: JSON.stringify({
-          section_id: this.props.section.id
-        })
-      },
-      {useProgressScriptId: false, includeUserId: true}
-    );
-  };
-
-  recordRestrictSectionEvent = restrictSection => {
-    firehoseClient.putRecord(
-      {
-        study: 'lock_section',
-        study_group: 'display_lock_section',
-        event: restrictSection ? 'turn_on' : 'turn_off',
-        data_json: JSON.stringify({
-          section_id: this.props.section.id
-        })
-      },
-      {useProgressScriptId: false, includeUserId: true}
-    );
   };
 
   // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
@@ -315,7 +285,6 @@ class EditSectionForm extends Component {
               value={section.ttsAutoplayEnabled}
               onChange={ttsAutoplayEnabled => {
                 editSectionProperties({ttsAutoplayEnabled});
-                this.recordAutoplayToggleEvent(ttsAutoplayEnabled);
               }}
               disabled={isSaveInProgress}
             />
@@ -325,7 +294,6 @@ class EditSectionForm extends Component {
               value={section.restrictSection}
               onChange={restrictSection => {
                 editSectionProperties({restrictSection});
-                this.recordRestrictSectionEvent(restrictSection);
               }}
               disabled={isSaveInProgress}
               loginType={this.props.section.loginType}
