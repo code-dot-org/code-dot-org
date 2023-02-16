@@ -78,11 +78,12 @@ module Curriculum
     ).freeze
 
     # The grade bands used to represent course offering audience
-    COURSE_OFFERING_GRADE_BANDS = OpenStruct.new(
+    COURSE_OFFERING_MARKETING_AUDIENCE = OpenStruct.new(
       {
-        elementary: 'Elementary',
-        middle: 'Middle',
-        high: 'High'
+        elementary: 'Elementary School',
+        middle: 'Middle School',
+        high: 'High School',
+        hoc: 'Hour of Code'
       }
     ).freeze
 
