@@ -17,6 +17,8 @@ export class GeneratorHelpersSimple2 {
   static getFunctionImplementation(functionName, functionCode) {
     const actualFunctionName = this.getSafeFunctionName(functionName);
     return `function ${actualFunctionName}() {
+      var __currentFunctionName = '${functionName}';
+      var __currentFunctionInvocation = Math.random() * 100000;
       ProgramSequencer.playSequential();
       ${functionCode}
       ProgramSequencer.endSequential();
@@ -34,6 +36,7 @@ export class GeneratorHelpersSimple2 {
   ) {
     return `
     var __insideWhenRun = true;
+    var __currentFunctionName = 'when_run';
     ProgramSequencer.init();
     ProgramSequencer.playTogether();
     ${functionCallsCode}
@@ -73,6 +76,7 @@ export const whenRunSimple2 = {
   generator: () =>
     `
       var __insideWhenRun = true;
+      var __currentFunctionName = 'when_run';
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
     `
@@ -131,7 +135,9 @@ export const playSoundAtCurrentLocationSimple2 = {
       MusicPlayer.playSoundAtMeasureById(
         "${block.getFieldValue(FIELD_SOUNDS_NAME)}",
         ProgramSequencer.getCurrentMeasure(),
-        __insideWhenRun
+        __insideWhenRun,
+        __currentFunctionName,
+        __currentFunctionInvocation
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
