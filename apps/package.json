@@ -238,6 +238,7 @@
     "@amplitude/analytics-browser": "^1.5.4",
     "@blockly/field-grid-dropdown": "~2.0.2",
     "@blockly/keyboard-navigation": "0.3.6",
+    "@blockly/plugin-cross-tab-copy-paste": "^2.0.7",
     "@blockly/plugin-scroll-options": "~3.0.3",
     "@blockly/theme-dark": "^4.0.3",
     "@code-dot-org/johnny-five": "2.1.0-cdo.3",
