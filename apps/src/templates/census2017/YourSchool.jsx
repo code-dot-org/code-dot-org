@@ -107,9 +107,12 @@ class YourSchool extends Component {
               Does your school teach Computer Science?
             </h1>
             <h3 style={styles.description}>
-              Find your school on the map to see if computer science is already
-              being offered. Can't find your school on the map?{' '}
-              <a href="#form">Fill out the survey below</a>.
+              Find your school on the map to see if computer science was offered
+              during the {this.props.currentCensusYear - 1}-
+              {this.props.currentCensusYear} school year. Then{' '}
+              <a href="#form">fill out the survey below</a> to make sure your
+              school is accurately represented for{' '}
+              {this.props.currentCensusYear}-{this.props.currentCensusYear + 1}.
             </h3>
             <SchoolAutocompleteDropdown
               value={
