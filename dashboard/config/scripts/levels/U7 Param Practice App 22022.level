@@ -42,7 +42,8 @@
       "functionParams_n": null,
       "setNumber": null,
       "setText": null,
-      "comment": null
+      "comment": null,
+      "callMyFunction_n": null
     },
     "embed": "false",
     "instructions_important": "false",
@@ -67,7 +68,6 @@
     "beginner_mode": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"area51\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(54, 47, 73);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; background-color: rgb(34, 29, 48); border-width: 0px; border-color: rgb(216, 255, 167); color: rgb(216, 255, 167); font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 13px; padding: 2px 15px; width: 320px; height: 55px; position: absolute; left: 0px; top: 0px; border-radius: 0px;\" id=\"label5\"></label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; border-radius: 10px; border-width: 0px; border-color: rgb(216, 255, 167); color: rgb(216, 255, 167); font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 38px; padding: 2px 15px; width: 283px; height: 43px; position: absolute; left: 20px; top: 5px; text-align: center; background-color: rgba(0, 0, 0, 0);\" id=\"title\">compliment.er</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; background-color: rgb(255, 255, 255); border-radius: 10px; border-width: 0px; border-color: rgb(216, 255, 167); color: rgb(179, 148, 255); font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 24px; padding: 2px 15px; width: 280px; height: 160px; position: absolute; left: 20px; top: 255px; text-align: center;\" id=\"output\"></label><input id=\"nameInput\" style=\"margin: 0px; width: 280px; height: 50px; border-style: solid; background-color: rgb(34, 29, 48); border-radius: 10px; border-width: 1px; border-color: rgb(216, 255, 167); color: rgb(216, 255, 167); font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; padding: 5px 15px; position: absolute; left: 20px; top: 90px; font-size: 24px;\" placeholder=\"Name\"><button id=\"complimentButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 55px; width: 200px; background-color: rgba(0, 0, 0, 0); border-radius: 10px; border-width: 2px; border-color: rgb(179, 148, 255); color: rgb(216, 255, 167); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 24px; position: absolute; left: 60px; top: 170px;\">Compliment</button></div></div>",
     "fail_on_lint_errors": "true",
-    "makerlab_enabled": "false",
     "long_instructions": "<img src=\"https://images.code.org/1908cd68eeb0be1f352b9844cf3a3805-image-1575482119032.54.38 AM.png\" style=\"float:right; height:250px\">\r\n\r\n# Do This\r\n\r\n* We have taken our code for complimenting people, and turned it into an app. Read the code.\r\n* Complete the `updateScreen` function following the instructions in the comments of the code. When it works the user should see a random greeting and compliment when enter their name and click the button.\r\n* Add comments to the randomCompliment function. Use the format shown below\r\n\r\n```\r\n// function purpose...\r\n// parameterName {type} - explanation of parameter\r\n// return {type} - short description of what is returned\r\n```",
     "parent_level_id": 18130,
     "mini_rubric": "false",
@@ -76,8 +76,8 @@
     "widget_mode": "false",
     "encrypted_examples": "wVxTfCSpGOAvsbD/+45XyB7gza2SVap3k+XhrR7de1Tx5k/MgC60ezYWl+QL\nIrvqaD8uNxNPB7zpgIhDyx2gZA==\n",
     "name_suffix": "2022",
-    "preload_asset_list": null,
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -85,7 +85,7 @@
   "level_num": "custom",
   "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:19:09.695+00:00\",\"changed\":[\"cloned from \\\"U7 Param Practice App 2_2021\\\"\"],\"cloned_from\":\"U7 Param Practice App 2_2021\"},{\"changed_at\":\"2022-01-21 19:04:00 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:19:09.695+00:00\",\"changed\":[\"cloned from \\\"U7 Param Practice App 2_2021\\\"\"],\"cloned_from\":\"U7 Param Practice App 2_2021\"},{\"changed_at\":\"2022-01-21 19:04:00 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-02-15 18:21:12 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
