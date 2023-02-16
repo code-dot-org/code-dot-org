@@ -1183,9 +1183,7 @@ function getParamFromCodeAtIndex(index, methodName, code) {
   // each parameter
 
   const paramsRegex = `^${methodName}\\(((?:(?:\\([^\\)]*\\))|(?:"[^"]*")|(?:\'[^\']*\')|[^)]*)*)\\)?\\s*$`;
-  console.log('paramsRegex', paramsRegex);
   const matchParams = new RegExp(paramsRegex).exec(code);
-  console.log('matchParams', matchParams);
   if (matchParams) {
     return formatParamString(index, matchParams[1]);
   }
