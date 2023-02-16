@@ -167,7 +167,11 @@ class CourseOffering < ApplicationRecord
       display_name: display_name,
       category: category,
       is_featured: is_featured,
-      assignable: assignable?
+      assignable: assignable?,
+      curriculum_type: curriculum_type,
+      marketing_initiative: marketing_initiative,
+      grade_levels: grade_levels,
+      header: header
     }
   end
 

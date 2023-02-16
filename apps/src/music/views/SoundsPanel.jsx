@@ -4,6 +4,11 @@ import classNames from 'classnames';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
+/*
+ * Renders a UI for previewing and choosing samples. This is currently used within a
+ * custom Blockly Field {@link FieldSounds}
+ */
+
 const getIcon = type => {
   const typeToIcon = {
     beat: 'volume-up',

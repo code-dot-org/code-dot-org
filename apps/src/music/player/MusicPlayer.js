@@ -16,6 +16,10 @@ const EventType = {
   PREVIEW: 'preview'
 };
 
+/**
+ * Main music player component which handles scheduling sounds for playback and interacting
+ * with the underlying audio system.
+ */
 export default class MusicPlayer {
   constructor(bpm) {
     this.bpm = bpm || DEFAULT_BPM;
