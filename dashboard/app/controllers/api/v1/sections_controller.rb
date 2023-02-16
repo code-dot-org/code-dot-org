@@ -45,13 +45,20 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return head :forbidden unless Section.can_be_assigned_course?(participant_audience, params[:participant_type])
     end
 
+    # If the new grades field exists, it takes precedence.
+    grades = if Section.valid_grades?(params[:grades] || [])
+               params[:grades]
+             elsif Section.valid_grades?([params[:grade].to_s])
+               [params[:grade].to_s]
+             end
+
     section = Section.create(
       {
         user_id: current_user.id,
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         participant_type: params[:participant_type],
-        grades: Section.valid_grades?([params[:grade].to_s]) ? [params[:grade].to_s] : nil,
+        grades: grades,
         script_id: @unit&.id,
         course_id: @course&.id,
         lesson_extras: params['lesson_extras'] || false,
@@ -88,6 +95,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grades] = [params[:grade]] if Section.valid_grades?([params[:grade]])
+    # If the new grades field exists, it takes precedence.
+    fields[:grades] = params[:grades] if Section.valid_grades?(params[:grades] || [])
     fields[:lesson_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
