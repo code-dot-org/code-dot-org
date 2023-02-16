@@ -4,6 +4,10 @@ import SoundsPanel from '../views/SoundsPanel';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 
+/**
+ * A custom field that renders the sample previewing and choosing UI, used in
+ * various "play_sound"-related blocks. The UI is rendered by {@link SoundsPanel}.
+ */
 class FieldSounds extends GoogleBlockly.Field {
   constructor(options) {
     super(options.currentValue);
