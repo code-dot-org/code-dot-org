@@ -35,12 +35,20 @@ import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
+
+const options = {
+  contextMenu: true,
+  shortcut: true
+};
+
+const plugin = new CrossTabCopyPaste();
+plugin.init(options);
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -250,7 +258,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     true /* opt_allowOverrides */
   );
   registerAllContextMenuItems();
-  registerAllShortcutItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
