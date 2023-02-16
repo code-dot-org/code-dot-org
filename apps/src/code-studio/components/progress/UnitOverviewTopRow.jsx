@@ -261,7 +261,7 @@ class UnitOverviewTopRow extends React.Component {
               courseVersionId={courseVersionId}
               scriptId={scriptId}
               forceReload={true}
-              buttonLocationAnalytics={'unit-overview-top'}
+              isOnCoursePage={false}
               isStandAloneUnit={this.props.courseLink === null}
               participantAudience={participantAudience}
             />

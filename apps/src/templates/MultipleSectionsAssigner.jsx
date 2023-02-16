@@ -24,7 +24,7 @@ class MultipleSectionsAssigner extends Component {
     courseVersionId: PropTypes.number,
     scriptId: PropTypes.number,
     reassignConfirm: PropTypes.func,
-    buttonLocationAnalytics: PropTypes.string,
+    isOnCoursePage: PropTypes.bool,
     isStandAloneUnit: PropTypes.bool,
     participantAudience: PropTypes.string,
     // Redux
@@ -42,7 +42,7 @@ class MultipleSectionsAssigner extends Component {
     let initialSectionsAssignedToCourseList = [];
 
     // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
-    if (this.props.buttonLocationAnalytics === 'unit-overview-top') {
+    if (!this.props.isOnCoursePage) {
       if (this.props.isStandAloneUnit) {
         for (let i = 0; i < this.props.sections.length; i++) {
           if (
@@ -59,7 +59,7 @@ class MultipleSectionsAssigner extends Component {
           }
         }
       }
-    } else if (this.props.buttonLocationAnalytics === 'course-overview-top') {
+    } else if (this.props.isOnCoursePage) {
       // checks to see if this is coming from the COURSE landing page
       for (let i = 0; i < this.props.sections.length; i++) {
         if (this.props.courseId === this.props.sections[i].courseId) {
@@ -104,7 +104,8 @@ class MultipleSectionsAssigner extends Component {
       courseOfferingId,
       courseVersionId,
       scriptId,
-      assignToSection
+      assignToSection,
+      isOnCoursePage
     } = this.props;
     // Assign any courses that need to be assigned
     for (let i = 0; i < this.state.currentSectionsAssigned.length; i++) {
@@ -112,7 +113,7 @@ class MultipleSectionsAssigner extends Component {
         s => s.code === this.state.currentSectionsAssigned[i].code
       );
       if (needsToBeAssigned) {
-        if (this.props.buttonLocationAnalytics === 'course-overview-top') {
+        if (isOnCoursePage) {
           const sectionId = this.state.currentSectionsAssigned[i].id;
           assignToSection(
             sectionId,
@@ -136,8 +137,7 @@ class MultipleSectionsAssigner extends Component {
       if (isSectionToBeRemoved) {
         // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
         // note, I don't know of a better way to check if it is on a course landing page
-        this.props.buttonLocationAnalytics === 'course-overview-top' ||
-        this.props.isStandAloneUnit
+        isOnCoursePage || this.props.isStandAloneUnit
           ? this.props.unassignSection(
               this.state.initialSectionsAssigned[i].id,
               ''

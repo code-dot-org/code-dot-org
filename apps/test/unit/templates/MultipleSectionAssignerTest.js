@@ -34,7 +34,7 @@ describe('MultipleSectionsAssigner', () => {
 
   it('renders checked and unchecked checkboxes for sections on the UNIT landing page', () => {
     const wrapper = setUp({
-      buttonLocationAnalytics: 'unit-overview-top',
+      isOnCoursePage: false,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId
@@ -65,7 +65,7 @@ describe('MultipleSectionsAssigner', () => {
 
   it('renders checked and unchecked checkboxes for sections on the COURSE landing page', () => {
     const wrapper = setUp({
-      buttonLocationAnalytics: 'course-overview-top',
+      isOnCoursePage: true,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId
@@ -114,7 +114,7 @@ describe('MultipleSectionsAssigner', () => {
 
   it('renders checked and unchecked checkboxes for sections on a STAND ALONE landing page', () => {
     const wrapper = setUp({
-      buttonLocationAnalytics: 'unit-overview-top',
+      isOnCoursePage: false,
       courseId: assigedStandaloneUnitSection.courseId,
       isStandAloneUnit: true,
       scriptId: assigedStandaloneUnitSection.unitId,
@@ -145,7 +145,7 @@ describe('MultipleSectionsAssigner', () => {
   // this feels like a spot check - should we check another version where the participant audience is 'teacher'?
   it('renders all assignable sections for the course', () => {
     const wrapper = setUp({
-      buttonLocationAnalytics: 'course-overview-top',
+      isOnCoursePage: true,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId,
@@ -184,7 +184,7 @@ describe('MultipleSectionsAssigner', () => {
     let testingFunction = sinon.fake();
 
     const wrapper = setUp({
-      buttonLocationAnalytics: 'unit-overview-top',
+      isOnCoursePage: false,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId,
@@ -233,7 +233,7 @@ describe('MultipleSectionsAssigner', () => {
     let testingFunction = sinon.fake();
 
     const wrapper = setUp({
-      buttonLocationAnalytics: 'unit-overview-top',
+      isOnCoursePage: false,
       courseId: assigedStandaloneUnitSection.courseId,
       isStandAloneUnit: true,
       scriptId: assigedStandaloneUnitSection.unitId,
@@ -278,7 +278,7 @@ describe('MultipleSectionsAssigner', () => {
     let reassignConfirm = sinon.fake();
 
     const wrapper = setUp({
-      buttonLocationAnalytics: 'unit-overview-top',
+      isOnCoursePage: false,
       courseId: assigedStandaloneUnitSection.courseId,
       isStandAloneUnit: true,
       scriptId: assigedStandaloneUnitSection.unitId,
@@ -322,7 +322,7 @@ describe('MultipleSectionsAssigner', () => {
     let updateHiddenScript = sinon.fake();
 
     const wrapper = setUp({
-      buttonLocationAnalytics: 'unit-overview-top',
+      isOnCoursePage: false,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId,
@@ -368,7 +368,7 @@ describe('MultipleSectionsAssigner', () => {
     let reassignConfirm = sinon.fake();
 
     const wrapper = setUp({
-      buttonLocationAnalytics: 'course-overview-top',
+      isOnCoursePage: true,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId,
@@ -411,7 +411,7 @@ describe('MultipleSectionsAssigner', () => {
     let reassignConfirm = sinon.fake();
 
     const wrapper = setUp({
-      buttonLocationAnalytics: 'course-overview-top',
+      isOnCoursePage: true,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId,
@@ -450,7 +450,7 @@ describe('MultipleSectionsAssigner', () => {
 
   it('can select all sections using the `select all` link', () => {
     const wrapper = setUp({
-      buttonLocationAnalytics: 'unit-overview-top',
+      isOnCoursePage: false,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId
