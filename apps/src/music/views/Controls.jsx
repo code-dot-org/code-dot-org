@@ -7,6 +7,10 @@ import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 import {AnalyticsContext} from '../context';
 
+/**
+ * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
+ * and show/hide instructions button.
+ */
 const Controls = ({
   isPlaying,
   setPlaying,

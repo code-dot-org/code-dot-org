@@ -22,7 +22,8 @@ public class Evaluator extends Calculator {
  ...
   public int compute(int value) {
     value = super.compute(value - 1);
-    return value ++;
+    value++;
+    return value;
   }
 }
 ```
