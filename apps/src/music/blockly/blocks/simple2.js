@@ -37,6 +37,7 @@ export class GeneratorHelpersSimple2 {
     return `
     var __insideWhenRun = true;
     var __currentFunctionName = 'when_run';
+    var __currentFunctionInvocation = Math.random() * 100000;
     ProgramSequencer.init();
     ProgramSequencer.playTogether();
     ${functionCallsCode}
@@ -77,6 +78,7 @@ export const whenRunSimple2 = {
     `
       var __insideWhenRun = true;
       var __currentFunctionName = 'when_run';
+      var __currentFunctionInvocation = Math.random() * 100000;
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
     `

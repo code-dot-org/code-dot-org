@@ -105,7 +105,9 @@ const TimelineSimple2Events = ({
             soundId={eventData.id}
             barWidth={barWidth}
             height={
-              getEventHeight(currentUniqueSounds.length) - eventVerticalSpace
+              getEventHeight(currentUniqueSounds.length) -
+              eventVerticalSpace -
+              1
             }
             top={
               20 +
