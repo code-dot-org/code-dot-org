@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import msg from '@cdo/locale';
-import {getFirstParam} from '../dropletUtils';
 import GetColumnParamPicker, {ParamType} from './GetColumnParamPicker';
+import {getFirstParam} from '../dropletUtils';
+import {stripEncapsulatingDoubleQuotes} from '../utils';
 
 function openModal(type, callback, table) {
   const modalDiv = document.createElement('div');
@@ -40,11 +41,9 @@ export function getTables() {
 function getTableNameFromColumnSocket(socket, editor) {
   const paramValue = getFirstParam('getColumn', socket.parent, editor);
 
-  // The socket value (ex. the table name) has an extra set of double quotes in Droplet mode (but not in text mode)
-  // The following call to .replace() trims double-quotes only if they exist as the first and last characters in the string
-  // N.B. In text mode, the call stack goes getFirstParam->getParamAtIndex->getParamFromCodeAtIndex->formatParamString
-  // formatParamString is what removes the double quotes before we get here in text mode
-  return paramValue.replace(/^"(.*)"$/, '$1');
+  // The socket value (ex. the table name) has an extra set of double quotes in Droplet mode but not in text mode
+  // N.B. formatParamString is what removes the double quotes before we get here in text mode
+  return stripEncapsulatingDoubleQuotes(paramValue);
 }
 
 export function getColumns() {
