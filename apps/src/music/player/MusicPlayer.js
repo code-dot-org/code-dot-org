@@ -16,6 +16,10 @@ const EventType = {
   PREVIEW: 'preview'
 };
 
+/**
+ * Main music player component which handles scheduling sounds for playback and interacting
+ * with the underlying audio system.
+ */
 export default class MusicPlayer {
   constructor(bpm) {
     this.bpm = bpm || DEFAULT_BPM;
@@ -67,7 +71,7 @@ export default class MusicPlayer {
       type: EventType.PLAY,
       id,
       insideWhenRun,
-      when: measure - 1,
+      when: measure,
       trackId
     };
 
@@ -142,7 +146,7 @@ export default class MusicPlayer {
         if (soundEvent.insideWhenRun) {
           const eventStart =
             this.startPlayingAudioTime +
-            this.convertMeasureToSeconds(soundEvent.when);
+            this.convertPlayheadPositionToSeconds(soundEvent.when);
           if (eventStart > GetCurrentAudioTime()) {
             StopSoundByUniqueId(GROUP_TAG, soundEvent.uniqueId);
           }
@@ -187,30 +191,16 @@ export default class MusicPlayer {
     return this.soundEvents;
   }
 
-  getCurrentAudioElapsedTime() {
-    if (!this.isPlaying) {
-      return 0;
-    }
-
-    return GetCurrentAudioTime() - this.startPlayingAudioTime;
-  }
-
-  getPlayheadPosition() {
-    if (!this.isPlaying) {
-      return 0;
-    }
-
-    // Playhead time is 1-based (user-facing)
-    return 1 + this.getCurrentAudioElapsedTime() / this.secondsPerMeasure();
-  }
-
-  getCurrentMeasure() {
+  // Returns the current playhead position, in floating point for an exact position,
+  // 1-based, and scaled to measures.
+  // Returns 0 if music is not playing.
+  getCurrentPlayheadPosition() {
     const currentAudioTime = GetCurrentAudioTime();
     if (!this.isPlaying || currentAudioTime === null) {
-      return -1;
+      return 0;
     }
 
-    return this.convertSecondsToMeasure(
+    return this.convertSecondsToPlayheadPosition(
       currentAudioTime - this.startPlayingAudioTime
     );
   }
@@ -219,7 +209,7 @@ export default class MusicPlayer {
     if (soundEvent.type === EventType.PLAY) {
       const eventStart =
         this.startPlayingAudioTime +
-        this.convertMeasureToSeconds(soundEvent.when);
+        this.convertPlayheadPositionToSeconds(soundEvent.when);
 
       const currentAudioTime = GetCurrentAudioTime();
 
@@ -255,12 +245,16 @@ export default class MusicPlayer {
     }
   }
 
-  convertSecondsToMeasure(seconds) {
-    return Math.floor(seconds / this.secondsPerMeasure());
+  // Converts actual seconds used by the audio system into a playhead
+  // position, which is 1-based and scaled to measures.
+  convertSecondsToPlayheadPosition(seconds) {
+    return 1 + seconds / this.secondsPerMeasure();
   }
 
-  convertMeasureToSeconds(measure) {
-    return this.secondsPerMeasure() * measure;
+  // Converts a playhead position, which is 1-based and scaled to measures,
+  // into actual seconds used by the audio system.
+  convertPlayheadPositionToSeconds(playheadPosition) {
+    return this.secondsPerMeasure() * (playheadPosition - 1);
   }
 
   secondsPerMeasure() {

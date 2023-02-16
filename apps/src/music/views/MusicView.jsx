@@ -12,7 +12,7 @@ import {Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import moduleStyles from './music.module.scss';
+import moduleStyles from './music-view.module.scss';
 import {AnalyticsContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
@@ -34,6 +34,13 @@ const instructionPositionOrder = [
   InstructionsPositions.RIGHT
 ];
 
+/**
+ * Top-level container for Music Lab. Manages all views on the page as well as the
+ * Blockly workspace and music player.
+ *
+ * TODO: Split up this component into a pure view and class/component that manages
+ * application state.
+ */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
     // populated by Redux
@@ -48,7 +55,6 @@ class UnconnectedMusicView extends React.Component {
     this.player = new MusicPlayer();
     this.programSequencer = new ProgramSequencer();
     this.analyticsReporter = new AnalyticsReporter();
-    this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     // Increments every time a trigger is pressed;
@@ -70,8 +76,7 @@ class UnconnectedMusicView extends React.Component {
     this.state = {
       instructions: null,
       isPlaying: false,
-      startPlayingAudioTime: null,
-      currentAudioElapsedTime: 0,
+      currentPlayheadPosition: 0,
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: true,
@@ -135,7 +140,7 @@ class UnconnectedMusicView extends React.Component {
   updateTimer = () => {
     if (this.state.isPlaying) {
       this.setState({
-        currentAudioElapsedTime: this.player.getCurrentAudioElapsedTime()
+        currentPlayheadPosition: this.player.getCurrentPlayheadPosition()
       });
     }
   };
@@ -253,7 +258,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.player.playSong();
 
-    this.setState({isPlaying: true, currentAudioElapsedTime: 0});
+    this.setState({isPlaying: true, currentPlayheadPosition: 1});
   };
 
   stopSong = () => {
@@ -263,7 +268,7 @@ class UnconnectedMusicView extends React.Component {
     // user-triggered sounds.
     this.player.clearTriggeredEvents();
 
-    this.setState({isPlaying: false});
+    this.setState({isPlaying: false, currentPlayheadPosition: 0});
     this.triggerCount = 0;
   };
 
@@ -352,7 +357,7 @@ class UnconnectedMusicView extends React.Component {
         />
         <Timeline
           isPlaying={this.state.isPlaying}
-          currentAudioElapsedTime={this.state.currentAudioElapsedTime}
+          currentPlayheadPosition={this.state.currentPlayheadPosition}
         />
       </div>
     );
@@ -367,7 +372,6 @@ class UnconnectedMusicView extends React.Component {
         <PlayerUtilsContext.Provider
           value={{
             getSoundEvents: () => this.player.getSoundEvents(),
-            getCurrentMeasure: () => this.player.getCurrentMeasure(),
             convertMeasureToSeconds: measure =>
               this.player.convertMeasureToSeconds(measure),
             getTracksMetadata: () => this.player.getTracksMetadata(),

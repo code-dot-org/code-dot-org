@@ -33,6 +33,13 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse
     unless protected_project?
+
+      unless verify_recaptcha || !require_captcha?
+        flash[:alert] = I18n.t('project.abuse.report_abuse_form.validation.captcha')
+        redirect_to report_abuse_path
+        return
+      end
+
       unless Rails.env.development? || Rails.env.test?
         subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
           'Featured Project: Abuse Reported' :
@@ -82,6 +89,8 @@ class ReportAbuseController < ApplicationController
       name: current_user&.name,
       email: current_user&.email,
       age: current_user&.age,
+      requireCaptcha: require_captcha?,
+      captchaSiteKey: CDO.recaptcha_site_key,
     }
   end
 
@@ -99,6 +108,7 @@ class ReportAbuseController < ApplicationController
   end
 
   # DELETE /v3/channels/:channel_id/abuse
+  # POST /v3/channels/:channel_id/abuse/delete
   # Clear an abuse score. Requires project_validator permission
   def reset_abuse
     return head :unauthorized unless can?(:destroy_abuse, nil)
@@ -195,5 +205,10 @@ class ReportAbuseController < ApplicationController
     return true if current_user&.project_validator? || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
+  end
+
+  def require_captcha?
+    return false if current_user&.admin? || current_user&.project_validator?
+    true
   end
 end

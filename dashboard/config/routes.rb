@@ -1020,6 +1020,7 @@ Dashboard::Application.routes.draw do
     # partial ports of legacy v3 APIs
     get '/v3/channels/:channel_id/abuse', to: 'report_abuse#show_abuse'
     delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
+    post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
     patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
 
     # offline-service-worker*.js needs to be loaded the the root level of the

@@ -13,6 +13,7 @@ window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js')
   .saveAnswers;
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(document).ready(() => {
   const levelData = getScriptData('levelData');
@@ -26,6 +27,8 @@ $(document).ready(() => {
       initData.last_attempt
     );
   }
+
+  reportTeacherReviewingStudentNonLabLevel({page: initData?.page});
 });
 
 function initLevelGroup(levelCount, currentPage, lastAttempt) {

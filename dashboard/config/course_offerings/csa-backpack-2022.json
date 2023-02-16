@@ -3,5 +3,9 @@
   "display_name": "csa-backpack-2022",
   "category": "other",
   "is_featured": false,
-  "assignable": false
+  "assignable": false,
+  "curriculum_type": null,
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": null
 }
