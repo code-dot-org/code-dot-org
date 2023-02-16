@@ -8,8 +8,7 @@ module CustomRake
       logger = RakeTaskEventLogger.new(self)
       logger.start_task_logging
       begin
-        task_execution = super
-        puts "Finished #{name} (#{distance_of_time_in_words(Benchmark.realtime {task_execution}.to_f)})"
+        puts "Finished #{name} (#{distance_of_time_in_words(Benchmark.realtime {super}.to_f)})"
       rescue => exception
         logger.exception_task_logging(exception)
         raise
