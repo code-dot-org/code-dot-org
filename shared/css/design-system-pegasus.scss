@@ -141,6 +141,7 @@ input[type=submit] {
   font-size: 1em;
   font-family: 'Gotham 5r', sans-serif;
   text-decoration: none;
+  text-align: center;
   transition: all ease-in-out .2s;
 
   &:hover {
@@ -242,8 +243,9 @@ ul {
     }
   }
 
+  // Lists that have an arrow shape as li backgrounds
   &.arrow-list {
-    margin: 2em 0 1em;
+    margin: 1em 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -252,15 +254,20 @@ ul {
       height: 12em;
       background: $brand_primary_light;
       position: relative;
-      padding: 1em 1em 1em 2.5em;
+      padding: 1.5em 2.5em;
       text-indent: 0 !important;
       display: flex;
       align-content: start;
       flex-wrap: wrap;
       margin: 1.5em 0;
 
+      @media screen and (max-width: $width-md) {
+        padding: 1em 1em 1em 2em;
+      }
+
       @media screen and (max-width: $width-sm) {
         width: 100% !important;
+        margin-bottom: 0;
       }
 
       h3 {
@@ -270,10 +277,13 @@ ul {
       &:after {
         content: '';
         position: absolute;
-        left: 0; bottom: 0; width: 0; height: 0;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
         border-left: 1em solid $neutral_white;
-        border-top: 6em solid transparent;
-        border-bottom: 6em solid transparent;
+        border-top: calc(12em / 2) solid transparent;
+        border-bottom: calc(12em / 2) solid transparent;
       }
 
       &:before {
@@ -284,8 +294,24 @@ ul {
         width: 0;
         height: 0;
         border-left: 1em solid $brand_primary_light;
-        border-top: 6em solid transparent;
-        border-bottom: 6em solid transparent;
+        border-top: calc(12em / 2) solid transparent;
+        border-bottom: calc(12em / 2) solid transparent;
+      }
+
+      &:nth-child(1) {
+        background: rgba($brand_primary_light, .4);
+
+        &:before {
+          border-left: 1em solid rgba($brand_primary_light, .4);
+        }
+      }
+
+      &:nth-child(2) {
+        background: rgba($brand_primary_light, .6);
+
+        &:before {
+          border-left: 1em solid rgba($brand_primary_light, .6);
+        }
       }
     }
   }
