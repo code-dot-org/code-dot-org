@@ -10047,6 +10047,8 @@ en:
               name: Unconference
             lesson-5:
               name: Closing
+            lesson-6:
+              name: Asynchronous Curriculum Investigation
           lesson_groups:
             lessonGroup-3:
               display_name: 'Part 1: Synchronous Session'
@@ -10056,8 +10058,20 @@ en:
           title: CS Discoveries Virtual Module 7
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Reflect on their previous year of teaching CS Discoveries by naming successes and challenges.
+            * Determine which units they will teach and in what order for the following year of CS Discoveries.
+            * Collaborate and share ideas with other teachers.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Reflect on your previous year of teaching CS Discoveries by naming successes and challenges.
+            * Determine which units you will teach and in what order for the following year of CS Discoveries.
+            * Collaborate and share ideas with other teachers.
         vpl-csd8-ayw-pilot-2022:
           lessons:
             lesson-1:
@@ -10070,6 +10084,8 @@ en:
               name: Connecting to the Community Going Forward
             lesson-5:
               name: Closing
+            lesson-6:
+              name: Asynchronous Curriculum Investigation
           lesson_groups:
             lessonGroup-2:
               display_name: 'Part 1: Synchronous Session'
@@ -10079,8 +10095,18 @@ en:
           title: CS Discoveries Virtual Module 8
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Describe the commitment they will continue to pursue in support of equity in CS, and the strategies they will use to support that commitment.
+            * Make a plan to continuously develop new skills after this workshop.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Describe the commitment you will continue to pursue in support of equity in CS, and the strategies you will use to support that commitment.
+            * Make a plan to continuously develop new skills after this workshop.
         csc-mappinglandmarks-2023:
           lessons: {}
           lesson_groups: {}
@@ -10109,3 +10135,12 @@ en:
           description_short: ''
           description: This is the unit on Blockchain!
           student_description: ''
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Artificial Intelligence and Machine Learning
+          title: Teaching AI and Machine Learning
+          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          description_short: ''
+          description_audience: ''
