@@ -16,11 +16,11 @@ export default class UniqueSounds {
   // all other sounds means that the new sound will replace the old one in
   // the same row.
 
-  getUniqueSounds(songDataEvents, preservePositions = true) {
+  getUniqueSounds(songDataEvents) {
     // First, generate a list of all current unique sounds.
     const currentUniqueSounds = [];
     for (const songEvent of songDataEvents) {
-      const id = songEvent.trackId + ' ' + songEvent.id;
+      const id = songEvent.id;
       if (currentUniqueSounds.indexOf(id) === -1) {
         currentUniqueSounds.push(id);
       }
@@ -31,7 +31,7 @@ export default class UniqueSounds {
 
     // If we have a previous output from this function, then we'll attempt
     // to keep its sounds in the same rows as they were before.
-    if (preservePositions && this.previousUniqueSounds) {
+    if (this.previousUniqueSounds) {
       // This is where we will store the output sounds.  It can be a sparse
       // array since it will maintain existing sound positions if they
       // were already positioned previously.

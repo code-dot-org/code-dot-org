@@ -28,6 +28,7 @@ export default class MusicPlayer {
     this.groupPrefix = 'all';
     this.isInitialized = false;
     this.tracksMetadata = {};
+    this.uniqueInvocationIdUpto = 0;
   }
 
   initialize(library) {
@@ -49,13 +50,7 @@ export default class MusicPlayer {
     LoadSoundFromBuffer(id, buffer);
   }
 
-  playSoundAtMeasureById(
-    id,
-    measure,
-    insideWhenRun,
-    trackId,
-    functionInstance
-  ) {
+  playSoundAtMeasureById(id, measure, insideWhenRun, trackId, functionContext) {
     if (!this.isInitialized) {
       console.log('MusicPlayer not initialized');
       return;
@@ -75,7 +70,7 @@ export default class MusicPlayer {
       insideWhenRun,
       when: measure,
       trackId,
-      functionInstance
+      functionContext
     };
 
     this.soundEvents.push(soundEvent);
@@ -345,5 +340,12 @@ export default class MusicPlayer {
     const sound = folder.sounds.find(sound => sound.src === src);
 
     return sound;
+  }
+
+  // Called by interpreted code in the simple2 model, this returns
+  // a unique value that is used to differentiate each invocation of
+  // a function, so that the timeline renderer can group relevant events.
+  getUniqueInvocationId() {
+    return this.uniqueInvocationIdUpto++;
   }
 }
