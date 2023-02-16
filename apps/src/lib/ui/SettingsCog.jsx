@@ -82,27 +82,29 @@ export class SettingsCog extends Component {
   closeModelManager = () => this.setState({managingModels: false});
   handleClickOutside = () => this.close();
 
+  getPageConstants() {
+    return getStore().getState().pageConstants;
+  }
   areLibrariesEnabled() {
-    let pageConstants = getStore().getState().pageConstants;
-    return pageConstants && pageConstants.librariesEnabled;
+    return this.getPageConstants()?.librariesEnabled;
   }
 
   areAIToolsEnabled() {
-    let pageConstants = getStore().getState().pageConstants;
-    return pageConstants && pageConstants.aiEnabled;
+    return this.getPageConstants()?.aiEnabled;
   }
 
   isCurriculumLevel() {
-    console.log('isCurriculumLevel called');
-    let pageConstants = getStore().getState().pageConstants;
-    console.log(pageConstants);
-    return pageConstants && pageConstants.isProjectTemplateLevel !== undefined;
+    // isValidationEnabled is only defined for App Lab curriculum levels
+    return this.getPageConstants()?.isValidationEnabled !== undefined;
   }
 
   levelbuilderModel() {
     let model = {};
     let pageConstants = getStore().getState().pageConstants;
-    if (pageConstants?.aiModelId && pageConstants?.aiModelName) {
+    if (
+      this.getPageConstants()?.aiModelId &&
+      this.getPageConstants()?.aiModelName
+    ) {
       model.id = pageConstants.aiModelId;
       model.name = pageConstants.aiModelName;
     }

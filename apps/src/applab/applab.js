@@ -677,7 +677,8 @@ Applab.init = function(config) {
     showMakerToggle:
       !!config.level.isProjectLevel || config.level.makerlabEnabled,
     validationEnabled: !!config.level.validationEnabled,
-    widgetMode: config.level.widgetMode
+    widgetMode: config.level.widgetMode,
+    isValidationEnabled: config.level.validationEnabled // if undefined, then not a curriculum level
   });
 
   config.dropletConfig = dropletConfig;
