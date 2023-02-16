@@ -84,3 +84,8 @@ export const sectionForDropdownShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   isAssigned: PropTypes.bool.isRequired
 });
+
+export const multiSelectOptionShape = PropTypes.shape({
+  value: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired
+});
