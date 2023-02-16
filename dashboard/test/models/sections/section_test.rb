@@ -145,6 +145,33 @@ class SectionTest < ActiveSupport::TestCase
     assert_includes error.message, 'Grades must be one or more of the valid student grades'
   end
 
+  test 'should raise error if grades contain pl and others' do
+    section1 = Section.create @default_attrs
+
+    error = assert_raises do
+      section1.grades = ['pl', '1']
+      section1.save!
+    end
+
+    assert_includes error.message, 'Grades cannot combine pl with other grades'
+  end
+
+  test 'grades are sorted on save' do
+    section = Section.create @default_attrs
+
+    section.update!(grades: ['12', '1', '5', 'K'])
+    section.reload
+    assert_equal section.grades, ['K', '1', '5', '12']
+
+    section.update!(grades: ['10', 'Other', '1', '2'])
+    section.reload
+    assert_equal section.grades, ['1', '2', '10', 'Other']
+
+    section.update!(grades: ['Other', '1', 'K'])
+    section.reload
+    assert_equal section.grades, ['K', '1', 'Other']
+  end
+
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
   # sections. As this situation cannot happen without manipulating the DB (dependent callbacks),
   # we do not worry about testing it.
@@ -680,6 +707,7 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.valid_grades?(["Something else"])
     refute Section.valid_grades?(["56"])
     refute Section.valid_grades?(["K", "1", "56", "Other"])
+    refute Section.valid_grades?([""])
   end
 
   test 'code review disabled for sections with no code review expiration' do
