@@ -39,10 +39,12 @@ export function getTables() {
 
 function getTableNameFromColumnSocket(socket, editor) {
   const paramValue = getFirstParam('getColumn', socket.parent, editor);
-  // The socket value has an extra set of double quotes. Trim off the first
-  // and last characters to remove, but don't use utils.stripQuotes because
-  // there may be other quotes in the table name (for example, apostrophes)
-  return paramValue.substring(1, paramValue.length - 1);
+
+  // The socket value (ex. the table name) has an extra set of double quotes in Droplet mode (but not in text mode)
+  // The following call to .replace() trims double-quotes only if they exist as the first and last characters in the string
+  // N.B. In text mode, the call stack goes getFirstParam->getParamAtIndex->getParamFromCodeAtIndex->formatParamString
+  // formatParamString is what removes the double quotes before we get here in text mode
+  return paramValue.replace(/^"(.*)"$/, '$1');
 }
 
 export function getColumns() {

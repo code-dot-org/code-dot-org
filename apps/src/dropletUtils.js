@@ -1147,7 +1147,9 @@ export function setParamAtIndex(index, value, block) {
 
 /**
  * Take a string like "'param1', 'param2'" and an index and return
- * the param at the given index without extra quotes, commas or spaces.
+ * the param at the given index without extra quotes, commas or spaces
+ * Note: The sanitization here is too aggressive for some parameters and
+ * is the cause of at least one bug: https://codedotorg.atlassian.net/browse/SL-580
  */
 function formatParamString(index, params) {
   // Use encodeURIComponent to encode everything except commas outside
@@ -1181,7 +1183,9 @@ function getParamFromCodeAtIndex(index, methodName, code) {
   // each parameter
 
   const paramsRegex = `^${methodName}\\(((?:(?:\\([^\\)]*\\))|(?:"[^"]*")|(?:\'[^\']*\')|[^)]*)*)\\)?\\s*$`;
+  console.log('paramsRegex', paramsRegex);
   const matchParams = new RegExp(paramsRegex).exec(code);
+  console.log('matchParams', matchParams);
   if (matchParams) {
     return formatParamString(index, matchParams[1]);
   }
