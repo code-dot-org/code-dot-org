@@ -11,6 +11,18 @@ class RakeTaskEventLogger
     @enable_cloudwatch = true
   end
 
+  def self.depth
+    @@depth
+  end
+
+  def self.increase_depth
+    @@depth += 1
+  end
+
+  def self.decrease_depth
+    @@depth -= 1
+  end
+
   def start_task_logging
     @start_time = Time.new
     event = 'start'.freeze
@@ -84,6 +96,8 @@ class RakeTaskEventLogger
         dimensions: {name: "Environment",
                      environment: rack_env,
                      task_name: @rake_task.name,
+                     depth: @@depth,
+                     is_drone_run: ENV['CI'] ? true : false,
                      # file_name: __FILE__,
                      # pid: Process.pid,
                      # invocation_chain: task_chain,
@@ -96,6 +110,7 @@ class RakeTaskEventLogger
       ChatClient.log 'Metrics logged', color: 'green'
       ChatClient.log event, color: 'green'
       ChatClient.log @rake_task.name, color: 'green'
+      ChatClient.log @@depth
       ChatClient.log (duration_ms.nil? ? 1 : duration_ms), color: 'green'
       ChatClient.log __FILE__, color: 'green'
       ChatClient.log rack_env, color: 'green'

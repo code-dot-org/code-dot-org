@@ -9,12 +9,12 @@ module CustomRake
       logger = RakeTaskEventLogger.new(self)
       logger.start_task_logging
       begin
-        RakeTaskEventLogger.depth = RakeTaskEventLogger.depth + 1
+        RakeTaskEventLogger.increase_depth
         task_execution = super
-        RakeTaskEventLogger.depth = RakeTaskEventLogger.depth - 1
+        RakeTaskEventLogger.decrease_depth
         puts "Finished #{name} (#{distance_of_time_in_words(Benchmark.realtime {task_execution}.to_f)})"
       rescue => exception
-        RakeTaskEventLogger.depth = RakeTaskEventLogger.depth - 1
+        RakeTaskEventLogger.decrease_depth
         logger.exception_task_logging(exception)
         raise
       end
