@@ -167,19 +167,19 @@ class OwnedSectionsTable extends Component {
     if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
       return sortBy(data, function(obj) {
-        return mult * StudentGradeLevels.concat(null).indexOf(obj.grade);
+        return mult * StudentGradeLevels.concat(null).indexOf(obj.grades);
       });
     } else {
       return orderBy(data, activeColumn, directionArray);
     }
   };
 
-  gradeFormatter = (grade, {rowData}) => {
+  gradeFormatter = (grades, {rowData}) => {
     return (
       <div>
         {this.props.isPlSections
           ? participantNames[rowData.participantType]
-          : rowData.grade}
+          : rowData.grades.join(', ')}
       </div>
     );
   };
@@ -243,7 +243,7 @@ class OwnedSectionsTable extends Component {
         }
       },
       {
-        property: this.props.isPlSections ? 'participantType' : 'grade',
+        property: this.props.isPlSections ? 'participantType' : 'grades',
         header: {
           label: this.props.isPlSections ? i18n.participants() : i18n.grade(),
           props: {
