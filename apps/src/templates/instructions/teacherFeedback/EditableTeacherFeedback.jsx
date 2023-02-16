@@ -13,7 +13,6 @@ import {
   rubricShape
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
@@ -101,25 +100,6 @@ export class EditableTeacherFeedback extends Component {
     });
   };
 
-  recordReviewStateUpdated() {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_feedback',
-        study_group: 'V0',
-        event: 'keep_working',
-        data_json: JSON.stringify({
-          student_id: this.studentId,
-          script_id: this.props.serverScriptId,
-          level_id: this.props.serverLevelId,
-          old_state: this.getLatestReviewState(),
-          new_state: this.state.reviewState,
-          section_id: this.props.selectedSectionId
-        })
-      },
-      {includeUserId: true}
-    );
-  }
-
   onRubricChange = value => {
     //If you click on the currently selected performance level clear the performance level
     if (value === this.state.performance) {
@@ -145,7 +125,6 @@ export class EditableTeacherFeedback extends Component {
     updateTeacherFeedback(payload, this.props.token)
       .done(data => {
         if (this.state.reviewStateUpdated) {
-          this.recordReviewStateUpdated();
           // The review state effects the state of the progress bubbles,
           // we re-fetch user progress after the review state has changed
           // so that the progress bubbles reflect the latest feedback
