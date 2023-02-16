@@ -1,8 +1,8 @@
 require lib_dir 'cdo/data/logging/timed_task_with_logging'
 class RakeTaskEventLogger
-  STUDY_TABLE = 'rake_performance'.freeze
+  STUDY_TABLE = 'RAKE_TASKS'.freeze
   CURRENT_LOGGING_VERSION = 'v1'.freeze
-
+  @@depth = 0
   def initialize(rake_task)
     @start_time = 0
     @end_time = 0
@@ -49,6 +49,7 @@ class RakeTaskEventLogger
           event: event,
           data_json: {
             task_name: @rake_task.name,
+            arguments: @rake_task.arg_names,
             pid: Process.pid,
             invocation_chain: task_chain,
             duration_ms: duration_ms,
@@ -69,7 +70,7 @@ class RakeTaskEventLogger
     end
   end
 
-  def log_cloud_formation(event, duration_ms, exception = nil)
+  def log_cloud_watch(event, duration_ms, exception = nil)
     unless @enable_cloudwatch
       return
     end
@@ -83,15 +84,15 @@ class RakeTaskEventLogger
         dimensions: {name: "Environment",
                      environment: rack_env,
                      task_name: @rake_task.name,
-                     file_name: __FILE__,
-                     pid: Process.pid,
-                     invocation_chain: task_chain,
-                     duration_ms: duration_ms,
-                     exception: exception&.to_s,
-                     exception_backtrace: exception&.backtrace,
+                     # file_name: __FILE__,
+                     # pid: Process.pid,
+                     # invocation_chain: task_chain,
+                     # exception: exception&.to_s,
+                     # exception_backtrace: exception&.backtrace,
                      version: CURRENT_LOGGING_VERSION}
       }
       Cdo::Metrics.push(STUDY_TABLE, metrics)
+      Cdo::Metrics.flush!
       ChatClient.log 'Metrics logged', color: 'green'
       ChatClient.log event, color: 'green'
       ChatClient.log @rake_task.name, color: 'green'
@@ -121,6 +122,6 @@ class RakeTaskEventLogger
 
   def log_event(event, duration = nil, exception = nil)
     log_firehose(event, duration, exception)
-    log_cloud_formation(event, duration, exception)
+    log_cloud_watch(event, duration, exception)
   end
 end
