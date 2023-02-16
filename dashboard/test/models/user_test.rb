@@ -4808,6 +4808,16 @@ class UserTest < ActiveSupport::TestCase
     assert_equal expected_grades.sort, marketing_segment_grades.sort
   end
 
+  test 'marketing_segment_data returns expected grades for teacher with multi-grade sections' do
+    teacher = create :teacher
+    create :section, user: teacher, grades: ["6", "K", "10"]
+    create :section, user: teacher, grades: ["7", "K", "12"]
+
+    expected_grades = %w(6 K 10 7 12)
+    marketing_segment_grades = JSON.parse(teacher.marketing_segment_data[:grades])
+    assert_equal expected_grades.sort, marketing_segment_grades.sort
+  end
+
   test 'marketing_segment_data does not return grades for teacher with no sections' do
     teacher = create :teacher
     assert_nil teacher.marketing_segment_data[:grades]
