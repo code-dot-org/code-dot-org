@@ -12,6 +12,9 @@ const numMeasures = 30;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
 
+/**
+ * Renders the music playback timeline.
+ */
 const Timeline = ({isPlaying, currentPlayheadPosition}) => {
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
