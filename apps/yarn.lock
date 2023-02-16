@@ -1411,10 +1411,10 @@
     react-chartjs-2 "^2.11.1"
     reselect "^4.0.0"
 
-"@code-dot-org/p5.play@^1.3.20-cdo":
-  version "1.3.20-cdo"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.20-cdo.tgz#7627bc6372bb9f6d818e62a3ea805cffb0c960bd"
-  integrity sha512-rRFLJdUMFARXvaPNXYolWx5dVl3NG4uz63PwmPoUXEbsTEfzEu8ATKXbmxtukSG7PLUk6X8oVqraQedjj5a3MA==
+"@code-dot-org/p5.play@1.3.21-cdo":
+  version "1.3.21-cdo"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.21-cdo.tgz#78a5401ae993624b62a7b03ec5324a965d01aacb"
+  integrity sha512-82ioovT5wgyEPlA2AAmCfa9LG0yro7vyXl9aXolJpCzkKTnPpHfAtAMIZq99UVNvjiP5ib2ASov/mIiMvZJSDg==
   dependencies:
     "@code-dot-org/p5" "0.5.4-cdo.10"
 
