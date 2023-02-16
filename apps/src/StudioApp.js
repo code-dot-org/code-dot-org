@@ -3342,7 +3342,6 @@ StudioApp.prototype.displayNotStartedBanner = function(config) {
  */
 StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   const level = config.level;
-  console.log('setPageConstants - level', level);
   const combined = _.assign(
     {
       exampleSolutions: config.exampleSolutions,
