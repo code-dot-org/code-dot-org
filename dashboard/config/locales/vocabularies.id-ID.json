@@ -22,10 +22,6 @@
           "word": "Debugging",
           "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
         },
-        "program/minecraft/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
         "event/minecraft/unversioned": {
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
@@ -33,6 +29,10 @@
         "loop/minecraft/unversioned": {
           "word": "Loop",
           "definition": "Tindakan melakukan sesuatu berulang kali."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/hero/unversioned": {
           "word": "kode",
@@ -42,13 +42,13 @@
           "word": "Debugging",
           "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
         },
-        "program/hero/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
         "function/hero/unversioned": {
           "word": "Fungsi",
           "definition": "Sebuah kode yang dapat Anda panggil berulang kali dengan mudah."
+        },
+        "program/hero/unversioned": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/poem-art/2021": {
           "word": "kode",
@@ -130,6 +130,7 @@
           "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/gumball/unversioned": {
+          "word": "kode",
           "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/gumball/unversioned": {
@@ -140,6 +141,9 @@
           "word": "Program",
           "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
+        "code/dance/unversioned": {
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
+        },
         "event/dance/unversioned": {
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
@@ -148,19 +152,8 @@
           "word": "Program",
           "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
-        "code/dance/unversioned": {
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
         "code/aquatic/unversioned": {
           "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/aquatic/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "condition/aquatic/unversioned": {
           "word": "Kondisi",
@@ -170,9 +163,17 @@
           "word": "Kondisi",
           "definition": "Pernyataan yang hanya berlaku dalam kondisi tertentu."
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugging",
+          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
         "loops/aquatic/unversioned": {
           "word": "Loop",
           "definition": "Tindakan melakukan sesuatu berulang kali."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "Sandi Caesar",
@@ -255,10 +256,6 @@
           "word": "Model dan Simulasi",
           "definition": "program yang mereplika atau meniru ciri utama dari peristiwa dunia nyata guna menyelidiki perilakunya tanpa menghabiskan biaya, waktu, atau bahaya dalam menjalankan eksperimen di kehidupan nyata."
         },
-        "event/sports/unversioned": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
-        },
         "code/sports/unversioned": {
           "word": "kode",
           "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
@@ -266,6 +263,10 @@
         "debugging/sports/unversioned": {
           "word": "Debugging",
           "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "event/sports/unversioned": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
         "program/sports/unversioned": {
           "word": "Program",
@@ -282,16 +283,16 @@
           "word": "Program",
           "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
-        "event/basketball/unversioned": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
-        },
         "code/basketball/unversioned": {
           "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
         "debugging/basketball/unversioned": {
           "word": "Debugging",
           "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "event/basketball/unversioned": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
         "program/basketball/unversioned": {
           "word": "Program",
@@ -322,6 +323,515 @@
         "machine_learning/oceans/unversioned": {
           "word": "Pembelajaran Mesin",
           "definition": "Bagaimana komputer mengenali pola dan membuat keputusan tanpa diprogram secara eksplisit"
+        },
+        "algorithm/coursed/2022": {
+          "word": "Algoritma",
+          "definition": "Daftar tahap untuk menyelesaikan tugas."
+        },
+        "program/coursed/2022": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "bug/coursed/2022": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "debugging/coursed/2022": {
+          "word": "Debugging",
+          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "loop/coursed/2022": {
+          "word": "Loop",
+          "definition": "Tindakan melakukan sesuatu berulang kali."
+        },
+        "programming/coursed/2022": {
+          "word": "Pemrograman",
+          "definition": "Seni membuat program."
+        },
+        "frustrated/coursed/2022": {
+          "word": "Frustrasi",
+          "definition": "Merasa kesal atau marah karena ada sesuatu tidak seperti yang Anda inginkan."
+        },
+        "persistence/coursed/2022": {
+          "word": "Ketekunan",
+          "definition": "Terus mencoba, bahkan ketika ada sesuatu yang sangat sulit."
+        },
+        "event/coursed/2022": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
+        },
+        "code/coursed/2022": {
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
+        },
+        "repeat/coursed/2022": {
+          "word": "Ulangi",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "command/coursed/2022": {
+          "word": "Perintah",
+          "definition": "Instruksi untuk komputer. Banyak perintah yang disatukan untuk membuat algoritma dan program komputer."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Kondisi",
+          "definition": "Pernyataan yang hanya berlaku dalam kondisi tertentu."
+        },
+        "pseudocode/coursed/2022": {
+          "word": "pseudocode",
+          "definition": "Deskripsi bahasa polos tentang langkah-langkah dalam algorithm"
+        },
+        "condition/coursed/2022": {
+          "word": "Kondisi",
+          "definition": "Sesuatu yang diperiksa program untuk melihat benar salahnya sebelum mengizinkan tindakan."
+        },
+        "while_loop/coursed/2022": {
+          "word": "While Loop",
+          "definition": "Loop yang terus berulang ketika kondisinya benar."
+        },
+        "until/coursed/2022": {
+          "word": "Until",
+          "definition": "Perintah yang menyuruh Anda melakukan sesuatu hanya sampai titik bahwa sesuatu menjadi benar."
+        },
+        "sprite/coursef/2022": {
+          "word": "Sprite",
+          "definition": "Sebuah benda grafis di layar dengan lokasi, ukuran, dan tampilan."
+        },
+        "user/coursef/2022": {
+          "word": "Pengguna",
+          "definition": "Seseorang yang menggunakan objek, termasuk perangkat lunak dan perangkat keras."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Algoritma",
+          "definition": "Daftar langkah untuk menyelesaikan suatu tugas."
+        },
+        "behavior/coursef/2022": {
+          "word": "Perilaku"
+        },
+        "program/coursef/2022": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "event/coursef/2022": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
+        },
+        "variable/coursef/2022": {
+          "word": "Variabel",
+          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
+        },
+        "prompt/coursef/2022": {
+          "word": "Prompt",
+          "definition": "Sebuah pesan di layar komputer yang menunggu input dari pengguna."
+        },
+        "input/coursef/2022": {
+          "word": "Input",
+          "definition": "Informasi yang diperoleh komputer dari pengguna."
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Model dan Simulasi",
+          "definition": "program yang mereplika atau meniru ciri utama dari peristiwa dunia nyata guna menyelidiki perilakunya tanpa menghabiskan biaya, waktu, atau bahaya dalam menjalankan eksperimen di kehidupan nyata."
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Pembelajaran Mesin",
+          "definition": "Bagaimana komputer mengenali pola dan membuat keputusan tanpa diprogram secara eksplisit"
+        },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "singkatan dari Domain Name System atau Sistem Nama Domain, sistem ini menerjemahkan nama domain (seperti example.com) ke alamat IP (seperti 93.184.216.34)"
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "DSL/Kabel",
+          "definition": "Metode pengiriman informasi menggunakan kabel telepon atau televisi."
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "Kabel Serat Optik",
+          "definition": "Koneksi yang menggunakan cahaya untuk mengirimkan informasi"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet",
+          "definition": "Sekelompok komputer dan server yang saling terhubung."
+        },
+        "ip_address/coursef/2022": {
+          "word": "Alamat IP",
+          "definition": "Nomor yang ditetapkan untuk setiap item yang terhubung ke Internet."
+        },
+        "packets/coursef/2022": {
+          "word": "Paket",
+          "definition": "Sepotong kecil informasi yang telah dengan dibentuk secara hati-hati dari sebagian informasi yang lebih besar."
+        },
+        "servers/coursef/2022": {
+          "word": "Server",
+          "definition": "Komputer yang hanya lahir untuk menyediakan barang kepada orang lain."
+        },
+        "url/coursef/2022": {
+          "word": "URL",
+          "definition": "Alamat yang mudah diingat untuk menelepon halaman web (seperti www.code.org)."
+        },
+        "wi_fi/coursef/2022": {
+          "word": "Wi-Fi",
+          "definition": "Metode nirkabel untuk mengirimkan informasi menggunakan gelombang radio."
+        },
+        "define/coursef/2022": {
+          "word": "Definisikan",
+          "definition": "Cari tahu rincian masalah yang ingin Anda pecahkan"
+        },
+        "prepare/coursef/2022": {
+          "word": "Siapkan",
+          "definition": "Teliti, rencanakan, dan dapatkan bahan untuk aktivitas yang akan Anda lakukan"
+        },
+        "reflect/coursef/2022": {
+          "word": "Renungkan",
+          "definition": "Memikirkan kembali sesuatu secara cermat dengan tujuan meningkatkan hasilnya pada masa datang"
+        },
+        "try/coursef/2022": {
+          "word": "Coba",
+          "definition": "Mencoba melakukan sesuatu"
+        },
+        "behavior/coursee/2022": {
+          "word": "Perilaku",
+          "definition": "Sebuah tindakan yang dilakukan terus-menerus oleh sprite sampai dia disuruh berhenti."
+        },
+        "sprite/coursee/2022": {
+          "word": "Sprite",
+          "definition": "Sebuah benda grafis di layar dengan lokasi, ukuran, dan tampilan."
+        },
+        "loop/coursee/2022": {
+          "word": "Loop",
+          "definition": "Tindakan melakukan sesuatu berulang kali."
+        },
+        "repeat/coursee/2022": {
+          "word": "Ulangi",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "function/coursee/2022": {
+          "word": "Fungsi"
+        },
+        "condition/coursee/2022": {
+          "word": "Kondisi"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Kondisi",
+          "definition": "Pernyataan yang hanya berlaku dalam kondisi tertentu."
+        },
+        "while_loop/coursee/2022": {
+          "word": "While Loop",
+          "definition": "Loop yang terus berulang ketika kondisinya benar."
+        },
+        "copyright/coursee/2022": {
+          "word": "Hak cipta",
+          "definition": "hak hukum eksklusif untuk mencetak, menerbitkan, memperagakan, memfilmkan, atau merekam karya sastra, seni, atau musik dan mengotorisasi orang lain untuk melakukan semua tindakan di atas"
+        },
+        "define/coursee/2022": {
+          "word": "Definisikan",
+          "definition": "Cari tahu rincian masalah yang ingin Anda pecahkan"
+        },
+        "prepare/coursee/2022": {
+          "word": "Siapkan",
+          "definition": "Teliti, rencanakan, dan dapatkan bahan untuk aktivitas yang akan Anda lakukan"
+        },
+        "reflect/coursee/2022": {
+          "word": "Renungkan",
+          "definition": "Memikirkan kembali sesuatu secara cermat dengan tujuan meningkatkan hasilnya pada masa datang"
+        },
+        "try/coursee/2022": {
+          "word": "Coba",
+          "definition": "Mencoba melakukan sesuatu"
+        },
+        "algorithm/courseb/2022": {
+          "word": "Algoritma",
+          "definition": "Daftar tahap untuk menyelesaikan tugas."
+        },
+        "bug/courseb/2022": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "debugging/courseb/2022": {
+          "word": "Debugging",
+          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "click/courseb/2022": {
+          "word": "Klik",
+          "definition": "Tekan tombol mouse"
+        },
+        "double_click/courseb/2022": {
+          "word": "Klik dua kali",
+          "definition": "Tekan tombol mouse dengan sangat cepat"
+        },
+        "drag/courseb/2022": {
+          "word": "Drag",
+          "definition": "Klik tombol mouse Anda dan tahan ketika Anda memindahkan pointer mouse ke lokasi yang baru"
+        },
+        "drop/courseb/2022": {
+          "word": "Jatuh",
+          "definition": "Lepaskan tombol mouse Anda untuk \"melepaskan\" item yang Anda seret"
+        },
+        "program/courseb/2022": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "programming/courseb/2022": {
+          "word": "Pemrograman",
+          "definition": "Seni membuat program."
+        },
+        "persistence/courseb/2022": {
+          "word": "Ketekunan",
+          "definition": "Terus mencoba, bahkan ketika ada sesuatu yang sangat sulit."
+        },
+        "loop/courseb/2022": {
+          "word": "Loop",
+          "definition": "Tindakan melakukan sesuatu berulang kali."
+        },
+        "repeat/courseb/2022": {
+          "word": "Ulangi",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/courseb/2022": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
+        },
+        "algorithm/express/2022": {
+          "word": "Algoritma",
+          "definition": "Daftar tahap untuk menyelesaikan tugas."
+        },
+        "bug/express/2022": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "debugging/express/2022": {
+          "word": "Debugging",
+          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "sequencing/express/2022": {
+          "word": "Urutan",
+          "definition": "Berikan perintah dalam urutan yang benar sehingga komputer dapat membaca perintah."
+        },
+        "program/express/2022": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "programming/express/2022": {
+          "word": "Pemrograman",
+          "definition": "Seni membuat program."
+        },
+        "behavior/express/2022": {
+          "word": "Perilaku",
+          "definition": "Sebuah tindakan yang dilakukan terus-menerus oleh sprite sampai dia disuruh berhenti."
+        },
+        "sprite/express/2022": {
+          "word": "Sprite",
+          "definition": "Sebuah benda grafis di layar dengan lokasi, ukuran, dan tampilan."
+        },
+        "event/express/2022": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
+        },
+        "code/express/2022": {
+          "definition": "menulis code, atau menulis instruksi untuk komputer."
+        },
+        "loop/express/2022": {
+          "word": "Loop",
+          "definition": "Tindakan melakukan sesuatu berulang kali."
+        },
+        "repeat/express/2022": {
+          "word": "Ulangi",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "command/express/2022": {
+          "word": "Perintah",
+          "definition": "Instruksi untuk komputer. Banyak perintah yang disatukan untuk membuat algoritma dan program komputer."
+        },
+        "condition/express/2022": {
+          "word": "Kondisi",
+          "definition": "Sesuatu yang diperiksa program untuk melihat benar salahnya sebelum mengizinkan tindakan."
+        },
+        "conditionals/express/2022": {
+          "word": "Kondisi",
+          "definition": "Pernyataan yang hanya berlaku dalam kondisi tertentu."
+        },
+        "while_loop/express/2022": {
+          "word": "While Loop",
+          "definition": "Loop yang terus berulang ketika kondisinya benar."
+        },
+        "until/express/2022": {
+          "word": "Until",
+          "definition": "Perintah yang menyuruh Anda melakukan sesuatu hanya sampai titik bahwa sesuatu menjadi benar."
+        },
+        "function/express/2022": {
+          "word": "Fungsi",
+          "definition": "Sebuah kode yang dapat Anda panggil berulang kali dengan mudah."
+        },
+        "prompt/express/2022": {
+          "word": "prompt",
+          "definition": "Sebuah pesan di layar komputer yang menunggu input dari pengguna."
+        },
+        "variable/express/2022": {
+          "word": "Variabel",
+          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
+        },
+        "for_loop/express/2022": {
+          "word": "For Loop",
+          "definition": "Loop yang memiliki awal, akhir, dan nilai kenaikan yang telah ditentukan (interval langkah)."
+        },
+        "define/express/2022": {
+          "word": "Definisikan",
+          "definition": "Cari tahu rincian masalah yang ingin Anda pecahkan"
+        },
+        "prepare/express/2022": {
+          "word": "Siapkan",
+          "definition": "Teliti, rencanakan, dan dapatkan bahan untuk aktivitas yang akan Anda lakukan"
+        },
+        "reflect/express/2022": {
+          "word": "Renungkan",
+          "definition": "Memikirkan kembali sesuatu secara cermat dengan tujuan meningkatkan hasilnya pada masa datang"
+        },
+        "try/express/2022": {
+          "word": "Coba",
+          "definition": "Mencoba melakukan sesuatu"
+        },
+        "click/pre-express/2022": {
+          "word": "Klik",
+          "definition": "Tekan tombol mouse"
+        },
+        "double_click/pre-express/2022": {
+          "word": "Klik dua kali",
+          "definition": "Tekan tombol mouse dengan sangat cepat"
+        },
+        "drag/pre-express/2022": {
+          "word": "Drag",
+          "definition": "Klik tombol mouse Anda dan tahan ketika Anda memindahkan pointer mouse ke lokasi yang baru"
+        },
+        "drop/pre-express/2022": {
+          "word": "Jatuh",
+          "definition": "Lepaskan tombol mouse Anda untuk \"melepaskan\" item yang Anda seret"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Algoritma",
+          "definition": "Daftar tahap untuk menyelesaikan tugas."
+        },
+        "bug/pre-express/2022": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "debugging/pre-express/2022": {
+          "word": "Debugging",
+          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "program/pre-express/2022": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "programming/pre-express/2022": {
+          "word": "Pemrograman",
+          "definition": "Seni membuat program."
+        },
+        "persistence/pre-express/2022": {
+          "word": "Ketekunan",
+          "definition": "Terus mencoba, bahkan ketika ada sesuatu yang sangat sulit."
+        },
+        "loop/pre-express/2022": {
+          "word": "Loop",
+          "definition": "Tindakan melakukan sesuatu berulang kali."
+        },
+        "repeat/pre-express/2022": {
+          "word": "Ulangi",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/pre-express/2022": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
+        },
+        "algorithm/coursea/2022": {
+          "word": "Algoritma",
+          "definition": "Daftar tahap untuk menyelesaikan tugas."
+        },
+        "debugging/coursea/2022": {
+          "word": "Debugging",
+          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "program/coursea/2022": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "click/coursea/2022": {
+          "word": "Klik",
+          "definition": "Tekan tombol mouse"
+        },
+        "double_click/coursea/2022": {
+          "word": "Klik dua kali",
+          "definition": "Tekan tombol mouse dengan sangat cepat"
+        },
+        "drag/coursea/2022": {
+          "word": "Drag",
+          "definition": "Klik tombol mouse Anda dan tahan ketika Anda memindahkan pointer mouse ke lokasi yang baru"
+        },
+        "drop/coursea/2022": {
+          "word": "Jatuh",
+          "definition": "Lepaskan tombol mouse Anda untuk \"melepaskan\" item yang Anda seret"
+        },
+        "bug/coursea/2022": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "programming/coursea/2022": {
+          "word": "Pemrograman",
+          "definition": "Seni membuat program."
+        },
+        "loop/coursea/2022": {
+          "word": "Loop",
+          "definition": "Tindakan melakukan sesuatu berulang kali."
+        },
+        "repeat/coursea/2022": {
+          "word": "Ulangi",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/coursea/2022": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Algoritma",
+          "definition": "Daftar tahap untuk menyelesaikan tugas."
+        },
+        "bug/coursec/2022": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "debugging/coursec/2022": {
+          "word": "Debugging",
+          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "program/coursec/2022": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "sequencing/coursec/2022": {
+          "word": "Urutan",
+          "definition": "Berikan perintah dalam urutan yang benar sehingga komputer dapat membaca perintah."
+        },
+        "persistence/coursec/2022": {
+          "word": "Ketekunan"
+        },
+        "programming/coursec/2022": {
+          "word": "Pemrograman",
+          "definition": "Seni membuat program."
+        },
+        "loop/coursec/2022": {
+          "word": "Loop",
+          "definition": "Tindakan melakukan sesuatu berulang kali."
+        },
+        "repeat/coursec/2022": {
+          "word": "Ulangi",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/coursec/2022": {
+          "word": "Event",
+          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
+        },
+        "data/coursec/2022": {
+          "word": "Data"
+        },
+        "binary/coursec/2022": {
+          "word": "Binary",
+          "definition": "Cara menyatakan informasi hanya dengan menggunakan dua pilihan."
         },
         "input/csd/2022": {
           "word": "Input"
@@ -406,6 +916,10 @@
           "word": "Pengguna",
           "definition": "Seseorang yang menggunakan objek, termasuk perangkat lunak dan perangkat keras."
         },
+        "algorithm/coursef/2021": {
+          "word": "Algoritma",
+          "definition": "Daftar langkah untuk menyelesaikan suatu tugas."
+        },
         "behavior/coursef/2021": {
           "word": "Perilaku",
           "definition": "Sebuah tindakan yang dilakukan terus-menerus oleh sprite sampai dia disuruh berhenti."
@@ -413,10 +927,6 @@
         "program/coursef/2021": {
           "word": "Program",
           "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algoritma",
-          "definition": "Daftar langkah untuk menyelesaikan suatu tugas."
         },
         "event/coursef/2021": {
           "word": "Event",
@@ -458,9 +968,21 @@
           "word": "DNS",
           "definition": "singkatan dari Domain Name System atau Sistem Nama Domain, sistem ini menerjemahkan nama domain (seperti example.com) ke alamat IP (seperti 93.184.216.34)"
         },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Kabel",
+          "definition": "Metode pengiriman informasi menggunakan kabel telepon atau televisi."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Kabel Serat Optik",
+          "definition": "Koneksi yang menggunakan cahaya untuk mengirimkan informasi"
+        },
         "internet/coursef/2021": {
           "word": "Internet",
           "definition": "Sekelompok komputer dan server yang saling terhubung."
+        },
+        "ip_address/coursef/2021": {
+          "word": "Alamat IP",
+          "definition": "Nomor yang ditetapkan untuk setiap item yang terhubung ke Internet."
         },
         "packets/coursef/2021": {
           "word": "Paket",
@@ -473,18 +995,6 @@
         "url/coursef/2021": {
           "word": "URL",
           "definition": "Alamat yang mudah diingat untuk menelepon halaman web (seperti www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Kabel",
-          "definition": "Metode pengiriman informasi menggunakan kabel telepon atau televisi."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Kabel Serat Optik",
-          "definition": "Koneksi yang menggunakan cahaya untuk mengirimkan informasi"
-        },
-        "ip_address/coursef/2021": {
-          "word": "Alamat IP",
-          "definition": "Nomor yang ditetapkan untuk setiap item yang terhubung ke Internet."
         },
         "wi_fi/coursef/2021": {
           "word": "Wi-Fi",
@@ -522,6 +1032,10 @@
           "word": "Klik",
           "definition": "Tekan tombol mouse"
         },
+        "double_click/courseb/2021": {
+          "word": "Klik dua kali",
+          "definition": "Tekan tombol mouse dengan sangat cepat"
+        },
         "drag/courseb/2021": {
           "word": "Drag",
           "definition": "Klik tombol mouse Anda dan tahan ketika Anda memindahkan pointer mouse ke lokasi yang baru"
@@ -529,10 +1043,6 @@
         "drop/courseb/2021": {
           "word": "Jatuh",
           "definition": "Lepaskan tombol mouse Anda untuk \"melepaskan\" item yang Anda seret"
-        },
-        "double_click/courseb/2021": {
-          "word": "Klik dua kali",
-          "definition": "Tekan tombol mouse dengan sangat cepat"
         },
         "program/courseb/2021": {
           "word": "Program",
@@ -574,6 +1084,10 @@
           "word": "Klik",
           "definition": "Tekan tombol mouse"
         },
+        "double_click/coursea/2021": {
+          "word": "Klik dua kali",
+          "definition": "Tekan tombol mouse dengan sangat cepat"
+        },
         "drag/coursea/2021": {
           "word": "Drag",
           "definition": "Klik tombol mouse Anda dan tahan ketika Anda memindahkan pointer mouse ke lokasi yang baru"
@@ -581,10 +1095,6 @@
         "drop/coursea/2021": {
           "word": "Jatuh",
           "definition": "Lepaskan tombol mouse Anda untuk \"melepaskan\" item yang Anda seret"
-        },
-        "double_click/coursea/2021": {
-          "word": "Klik dua kali",
-          "definition": "Tekan tombol mouse dengan sangat cepat"
         },
         "bug/coursea/2021": {
           "word": "Bug",
@@ -784,13 +1294,13 @@
           "word": "Fungsi",
           "definition": "Sebuah kode yang dapat Anda panggil berulang kali dengan mudah."
         },
-        "variable/express/2021": {
-          "word": "Variabel",
-          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
-        },
         "prompt/express/2021": {
           "word": "prompt",
           "definition": "Sebuah pesan di layar komputer yang menunggu input dari pengguna."
+        },
+        "variable/express/2021": {
+          "word": "Variabel",
+          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
         },
         "for_loop/express/2021": {
           "word": "For Loop",
@@ -816,6 +1326,10 @@
           "word": "Klik",
           "definition": "Tekan tombol mouse"
         },
+        "double_click/pre-express/2021": {
+          "word": "Klik dua kali",
+          "definition": "Tekan tombol mouse dengan sangat cepat"
+        },
         "drag/pre-express/2021": {
           "word": "Drag",
           "definition": "Klik tombol mouse Anda dan tahan ketika Anda memindahkan pointer mouse ke lokasi yang baru"
@@ -823,10 +1337,6 @@
         "drop/pre-express/2021": {
           "word": "Jatuh",
           "definition": "Lepaskan tombol mouse Anda untuk \"melepaskan\" item yang Anda seret"
-        },
-        "double_click/pre-express/2021": {
-          "word": "Klik dua kali",
-          "definition": "Tekan tombol mouse dengan sangat cepat"
         },
         "algorithm/pre-express/2021": {
           "word": "Algoritma",
@@ -864,13 +1374,13 @@
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
-        "behavior/coursee/2021": {
-          "word": "Perilaku",
-          "definition": "Sebuah tindakan yang dilakukan terus-menerus oleh sprite sampai dia disuruh berhenti."
-        },
         "algorithm/coursee/2021": {
           "word": "algorithm",
           "definition": "Daftar langkah untuk menyelesaikan suatu tugas"
+        },
+        "behavior/coursee/2021": {
+          "word": "Perilaku",
+          "definition": "Sebuah tindakan yang dilakukan terus-menerus oleh sprite sampai dia disuruh berhenti."
         },
         "sprite/coursee/2021": {
           "word": "Sprite",

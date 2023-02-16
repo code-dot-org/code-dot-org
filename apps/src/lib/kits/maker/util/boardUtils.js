@@ -6,6 +6,8 @@ import {
   MICROBIT_VID
 } from '../portScanning';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import DCDO from '@cdo/apps/dcdo';
+import {isChromeOS, getChromeVersion} from '../util/browserChecks';
 
 export const BOARD_TYPE = {
   CLASSIC: 'classic',
@@ -52,6 +54,21 @@ export function isWebSerialPort(port) {
   return port instanceof WebSerialPortWrapper;
 }
 
+/**
+ * Determines whether WebSerial port is available in the current browser.
+ * WebSerial should be available in ChromeOS (depending on DCDO flag and
+ * in a version after WebSerial was released) and in Chromium browsers.
+ */
+export function shouldUseWebSerial() {
+  const webSerialAvailableInBrowser = 'serial' in navigator;
+  const usingChromeOSAndDCDO =
+    isChromeOS() &&
+    !!DCDO.get('webserial-on-chromeos', true) &&
+    getChromeVersion() >= 90;
+
+  return usingChromeOSAndDCDO || webSerialAvailableInBrowser;
+}
+
 /** @const {number} serial port transfer rate */
 export const SERIAL_BAUD = 57600;
 
@@ -61,3 +78,5 @@ export const WEB_SERIAL_FILTERS = [
   {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
   {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID}
 ];
+
+export const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));

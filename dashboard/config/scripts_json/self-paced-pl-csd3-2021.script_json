@@ -10,7 +10,8 @@
           "details": "If you are not already a verified teacher, click here to complete the form to become a verified teacher.",
           "link": "https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "b11d6c6c-c57e-466b-a4a4-4f0417e271c8"
         }
       ],
       "has_verified_resources": true,
@@ -20,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-25 01:56:42 UTC",
+    "serialized_at": "2022-09-28 14:31:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

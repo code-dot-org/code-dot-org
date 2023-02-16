@@ -3,8 +3,34 @@
   "name": "Declare a variable",
   "category": "Variables",
   "category_key": "variables",
-  "content": "[name]\n\n## Declare a variable\n\n[/name]\n\n[category]\n\nCategory: Variables\n\n[/category]\n\n[description]\n\n[short_description]\n\nDeclares a variable with the given name.\n\n[/short_description]\n\nMany apps process data. To be able to process data your apps need to keep track of the data in memory. Variables are simply names you use to refer to stored data in your apps.  You can name your variables whatever you want so long as the name is not already used by the system.  Variable names can not have spaces or special characters.  In practice, it is helpful to name your variables in a way that describes the value they store.  For instance, if the variable you create is to store a person's name you might name that variable personName.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\n// Pioneering computer scientist.\nvar name;\nvar birthYear;\nname = \"Alan Turing\";\nbirthYear = 1912;\nconsole.log(name + \" was born in the year \" + birthYear);\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Count Sixes** Count the number of sixes rolled in 5 random die rolls.\n\n```\n// Count the number of sixes rolled in 5 random die rolls.\nvar counter;\ncounter=0;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nconsole.log(\"You threw \" + counter + \" sixes out of 5 throws of a die.\");\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Simple Average** Average three tempertatures prompted from the user.\n\n```\n// Average three tempertatures prompted from the user.\nvar temperatureSum;\ntemperatureSum=0;\ntemperatureSum = temperatureSum + promptNum(\"Enter the first temperature\");\ntemperatureSum = temperatureSum + promptNum(\"Enter the second temperature\");\ntemperatureSum = temperatureSum + promptNum(\"Enter the third temperature\");\nconsole.log (\"The average temperature is \" + temperatureSum/3 );\n```\n\n[/example]\n\n____________________________________________________\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| x | variable name | Yes | The name you will use in the program to reference the variable. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |\n\n[/parameters]\n\n[returns]\n\n### Returns\nNo return value. Variable created in memory.\n\n[/returns]\n\n[tips]\n\n### Tips\n- If you do not assign a value to declared variable, the variable value is \"undefined\" or \"null\" and you can get unpredictable results.\n- Variables can store numbers, strings, arrays or objects.\n- The block of code where you declare the variable defines the variable's *scope*.  Scope refers to which blocks of code can access that variable by name.  For instance, if you declare a variable inside a function, that variable name can only be accessed inside that function. Variables decalred at the top of your program are *global* and can be accessed anywhere in your program.\n\n[/tips]\n\n",
+  "content": "Declares a variable with the given name.\n\nMany apps process data. To be able to process data your apps need to keep track of the data in memory. Variables are simply names you use to refer to stored data in your apps.  You can name your variables whatever you want so long as the name is not already used by the system.  Variable names can not have spaces or special characters.  In practice, it is helpful to name your variables in a way that describes the value they store.  For instance, if the variable you create is to store a person's name you might name that variable personName.",
+  "examples": [
+    {
+      "name": "",
+      "description": "Pioneering computer scientist",
+      "code": "```\n// Pioneering computer scientist.\nvar name;\nvar birthYear;\nname = \"Alan Turing\";\nbirthYear = 1912;\nconsole.log(name + \" was born in the year \" + birthYear);\n```"
+    },
+    {
+      "name": "Count Sixes",
+      "description": "Count the number of sixes rolled in 5 random die rolls.",
+      "code": "```\n// Count the number of sixes rolled in 5 random die rolls.\nvar counter;\ncounter=0;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nif (randomNumber(1,6)==6) counter = counter + 1;\nconsole.log(\"You threw \" + counter + \" sixes out of 5 throws of a die.\");\n```"
+    },
+    {
+      "name": "Simple Average",
+      "description": "Average three temperatures prompted from the user.",
+      "code": "```\n// Average three tempertatures prompted from the user.\nvar temperatureSum;\ntemperatureSum=0;\ntemperatureSum = temperatureSum + promptNum(\"Enter the first temperature\");\ntemperatureSum = temperatureSum + promptNum(\"Enter the second temperature\");\ntemperatureSum = temperatureSum + promptNum(\"Enter the third temperature\");\nconsole.log (\"The average temperature is \" + temperatureSum/3 );\n```"
+    }
+  ],
+  "palette_params": [
+    {
+      "name": "x",
+      "type": "variable name",
+      "required": true,
+      "description": "The name you will use in the program to reference the variable. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _.\n\n"
+    }
+  ],
   "return_value": "Does not return anything. `someVal` created in memory.",
-  "short_description": "\nDeclare a variable\nCategory: Variables",
-  "syntax": "var x;"
+  "short_description": "Declares a variable with the given name.",
+  "syntax": "var x;",
+  "tips": "- If you do not assign a value to declared variable, the variable value is \"undefined\" or \"null\" and you can get unpredictable results.\n- Variables can store numbers, strings, arrays or objects.\n- The block of code where you declare the variable defines the variable's *scope*.  Scope refers to which blocks of code can access that variable by name.  For instance, if you declare a variable inside a function, that variable name can only be accessed inside that function. Variables declared at the top of your program are *global* and can be accessed anywhere in your program."
 }

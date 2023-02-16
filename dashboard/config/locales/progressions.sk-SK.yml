@@ -3,6 +3,8 @@ sk:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" (ak/potom) so včelou'
+      AI Lab and Isaac's Data: AI Lab a Isaacove údaje
+      AI Lab and Kim's Data: AI Lab a Kimine údaje
       AI Machine Learning - Video: Strojové učenie – video
       'AI: Impact on Society - Video': 'Umelá inteligencia: Vplyv na spoločnosť –
         video'
@@ -16,9 +18,12 @@ sk:
       Add Style: Pridaj štýl
       Add Style to Your Page: Pridaj na svoju stránku štýl
       Add Text: Pridaj text
-      Adding Images: Pridanie obrázkov
+      Add a Welcome Screen: Pridaj uvítaciu obrazovku
+      Adding Images: Pridávanie obrázkov
+      Adding New Screens: Pridávanie nových obrazoviek
       Adding Pages: Pridávanie stránok
       Adding Screens: Pridanie obrazoviek
+      Alternative Datasets: Alternatívne množiny údajov
       Animate Your Scene: Animuj svoju scénu
       App Lab Intro - Video: Úvod do App Labu – video
       'App: Choose a Kid''s Movie': 'Aplikácia: Výber detského filmu'
@@ -49,6 +54,8 @@ sk:
       Binary Bracelets - Unplugged Activity: Binárne náramky – aktivita bez počítača
       Binary Numbers: Binárne čísla
       Board Input and Output: Vstup a výstup dosky plošných spojov
+      Book Recommender App: Aplikácia na odporúčanie kníh
+      Book Recommender Model Card: 'Karta modelu: Odporúčanie kníh'
       Boolean Comparison: Porovnanie pravdivosti
       Booleans and Comparison Operators: Logické výrazy a porovnávacie znamienka
       Build a Platform Jumper: Vytvor si plošinovú skákaciu hru
@@ -57,6 +64,7 @@ sk:
       'Bunny ': 'Zajac '
       CS Discoveries Post-Course Survey: 'Objavujeme informatiku: Záverečný dotazník'
       CS Discoveries Post-course Survey: 'Objavujeme informatiku: Záverečný dotazník'
+      CSS Classes: CSS triedy
       Cake Defender: Obranca koláča
       Challenge: Výzva
       Challenge Levels: Úrovne výzvy
@@ -65,9 +73,12 @@ sk:
       Challenges: Náročnejšie úlohy
       Change: Zmeň
       Check Your Work: Skontroluj svoju prácu
+      Check-In Survey: Kontrolný dotazník
       Checking for a Winner: Určuje sa víťaz
+      'Choice Levels: Customize Your App': 'Voliteľné úrovne: Prispôsob si aplikáciu'
       Choose Your Own Adventure: Interaktívny príbeh
       'Circuit Playground: Introduction': 'Cvičný obvod: Úvod'
+      Club Datasets: Množiny údajov klubov
       Code Prediction: Predpoveď kódu
       Code Your Own Flappy Game: Vytvor si hru v štýle Flappy Bird
       Code Your Page: Naprogramuj svoju stránku
@@ -95,9 +106,14 @@ sk:
       Create Your Own Animation: Vytvor svoju vlastnú animáciu
       Create Your Sprites: Vytvor si sprajty
       Create a Background: Vytvor pozadie
+      Create a Google Form: Vytvor formulár Google
       Create a Story: Vytvor príbeh
+      Create an App in App Lab: Vytvor si aplikáciu v App Labe
       Create your project: Vytvor svoj projekt
+      Creative Commons Search: Vyhľadávanie Creative Commons
       Customize: Prispôsobiť
+      Customize Your App: Prispôsob si aplikáciu
+      Customizing Your App: Prispôsob si aplikáciu
       Dance Crews: Tanečné skupiny
       Data Visualization: Vykreslenie údajov
       De-bugging with the Step Button: Ladenie programu pomocou tlačidla krokovania
@@ -107,6 +123,8 @@ sk:
       Demo Apps: Demo aplikácie
       Design Mode: Dizajnový mód
       Design Mode Elements: Prvky dizajnového módu
+      Design an AI App - AI Lab: Návrh aplikácie umelej inteligencie – AI Lab
+      Design an AI App - App Lab: Návrh aplikácie umelej inteligencie – App Lab
       Designing for Accessibility: Navrhovanie s ohľadom na zjednodušenie ovládania
       Digital Sharing - Unplugged Activity: Digitálne zdieľanie – aktivita bez počítača
       Dogger Example: Príklad s loďou
@@ -114,6 +132,7 @@ sk:
       Draw a Background: Nakresli pozadie
       Drawing: Kreslenie
       Drawing Shapes: Kreslenie tvarov
+      Driver Alert System: Výstražný systém pre rodičov
       Editing Images: Úprava obrázkov
       End of Course Projects: Záverečné projekty
       Events: Udalosti
@@ -121,12 +140,14 @@ sk:
       Events and Properties: Udalosti a vlastnosti
       Example: Príklad
       Example Animated Scene: Príklad animovanej scény
+      'Example App: Zoo Classification': 'Ukážková aplikácia: Triedenie v zoo'
       Example Projects: Vzorové projekty
       Example projects: Vzorové projekty
       Expanding Personal Website: Rozšírenie vlastnej webstránky
       Expanding Your Website: Rozšírenie tvojej webstránky
       Experiment with Web Lab: Experimentuj s Web Labom
       Exploration: Objavovanie
+      'Exploration: Adding Style': 'Skúmame: Pridávanie štýlov'
       'Exploration: For Loops': 'Objavovanie: Cykly for'
       'Exploration: Rikki''s Poster': 'Preskúmanie: Rikkiin plagát'
       'Exploration: Sample Apps': 'Objavovanie: Vzorové aplikácie'
@@ -147,24 +168,33 @@ sk:
       For Loops: Cykly "Pre"
       For Loops and Color LEDs: Cykly "for" a farebné LEDky
       For Loops and Repeat Blocks: Cykly "for" a opakujúce sa bloky
+      Formatting HTML: Formátovanie HTML
       Free Play: Voľná hra
       'Free Play: Make a Scene': 'Voľná hra: Vytvor scénu'
       'Free Play: Make an Interactive Scene': 'Voľná hra: Vytvor interaktívnu scénu'
+      Fruit and Veggie Explorer: Program na prehliadanie ovocia a zeleniny
       Functions: Funkcie
       Functions with Parameters: Funkcie s parametrami
       Geometric Sun: Geometrické Slnko
       Get In Formation: Všetci do formácie
       Graph Paper Programming - Unplugged Activity: Programovanie na štvorčekovom
         papieri – aktivita bez počítača
+      Green Glass Door: Zelené sklenené dvere
       HTML Tags: HTML tag-y
       Headings: Nadpisy
       Headings in HTML: Nadpisy v HTML
       Hello World: Ahoj Svet
       How to Create a Simple Function: Ako vytvoriť jednoduchú funkciu
       How to Make a Sprite: Ako vytvoriť postavu
+      Hyperlinks: Hypertextové odkazy
       Ice Age Loops: Cykly Doby Ľadovej
       If-Else Statements: Výroky "If-Else"
       Images and Sounds: Obrázky a zvuky
+      Images in HTML: Obrázky v HTML
+      Import Your Model: Importuj svoj model
+      Import a Model: Importovanie modelu
+      Importing Your Model: Importovanie tvojho modelu
+      Improved Shoe Recommender: Vylepšený program na odporúčanie topánok
       Incorporate Feedback: Zapracuj spätnú väzbu
       Input Examples: Príklady vstupu
       Input with If-Else: Vstup s "if/else" (ak/potom)
@@ -173,7 +203,7 @@ sk:
       Intro to Design Mode: Úvod do dizajnového módu
       Intro to Flyer Game: Úvod do Lietacej hry
       Intro to For Loops: Predstavenie cyklov "for"
-      Intro to Side Scrollers: Úvod do side-scrollerov
+      Intro to Side Scrollers: Úvod do plošinoviek
       Intro to Sprites: Predstavenie "sprite" objektov
       Intro to Variables: Predstavenie premenných
       Introducing Sprite Lab: Predstavenie Sprite Labu
@@ -181,18 +211,24 @@ sk:
       Introduction to Game Lab: Úvod do Game Labu
       Introduction to Variables: Predstavenie premenných
       Introduction to Variables - Part 1: Predstavenie premenných - 1. časť
+      Isaac's Survey Data: Isaacove údaje z dotazníka
       Iteration and Parameters: Opakovanie a parametre
       Keep On Dancing!: Neprestávaj tancovať!
-      Keyboard Input: Stlačenie kláves ako vstup
+      Keyboard Input: Vstup z klávesnice
+      Kim's Survey: Kimin dotazník
+      Kim's Survey Data: Kimine údaje z dotazníka
       LED Apps: Appky s LEDkami
+      Layout Properties: Vlastnosti rozloženia
       Layout with CSS: Rozloženie pomocou CSS
       Learning from Simulations: Učenie sa zo simulácií
       Lesson Extras: Doplnkové materiály
       Lesson Overview: Prehľad lekcie
       Levels: Úrovne
       Light Show: Svetelná show
+      Linking Pages: Prepájanie stránok
       Lists: Zoznamy
       Lists in HTML: Zoznamy v HTML
+      Looking for Patterns: Hľadanie vzorov
       Looping: Cykly
       Loops with the Artist: Cykly s umelcom
       Make Your Sprites: Vytvor si sprajty
@@ -206,6 +242,8 @@ sk:
       'Maze Intro: Programming with Blocks': 'Úvod k bludiskám: Programovanie pomocou
         blokov'
       Measures: Takty
+      Medical Dataset Model Cards: Množina medicínskych údajov – karty modelov
+      Medical Priority App: Aplikácia medicínskej priority
       'Minecraft: Hero''s Journey': 'Minecraft: Cesta hrdinu'
       'Mini-Project: About Me': '"O mne" so Sprite Labom'
       'Mini-Project: Alien Dance Moves': 'Mini-Projekt: Tanečné pohyby votrelca'
@@ -244,8 +282,10 @@ sk:
       New Shapes: Nové tvary
       Orientation: Orientácia
       Overview: Prehľad
-      Pair Programming: Programovanie v páre
+      Pair Programming: Párové programovanie
+      Pet Recommender: Odporúčanie domáceho zvieratka
       Picturing Data: Zobrazenie dát v grafoch
+      Pizza Recommendations: Odporúčanie pizze
       Plan Your Project: Naplánuj si projekt
       Plan Your Scene: Naplánuj si scénu
       Planning: Plánovanie
@@ -257,7 +297,7 @@ sk:
       Player Controls: Ovládanie hry
       Playing Notes: Hranie nôt
       Playing with Notes: Hranie pomocou nôt
-      Plotting Shapes in Game Lab: Tvorba tvarov v Game Labe
+      Plotting Shapes in Game Lab: Kreslenie tvarov v Game Labe
       Post-Course Survey Instructions: Pokyny na vyplnenie záverečného dotazníka
       Practice: Cvičenie
       Predict: Predpoveď
@@ -276,7 +316,12 @@ sk:
       Quick Check: Rýchla kontrola
       RGB Exploration: Objavovanie RGB
       Random Numbers: Náhodné čísla
+      Raspado Recommender: Program na odporúčanie ľadových džúsov
       Reading Sensors: Čítanie snímačov
+      Recognizing Expressions: Rozpoznávanie výrazov
+      Recognizing Fish: Rozpoznávanie rýb
+      Recognizing Fish Features: Rozpoznávanie vlastností rýb
+      Recognizing Shapes: Rozpoznávanie tvarov
       Reflection: Reflexia
       Relay Programming - Unplugged Activity: Štafetové programovanie – aktivita bez
         počítača
@@ -287,8 +332,9 @@ sk:
       Repeat Until Statements: Príkazy „opakuj až kým neplatí“
       Review: Opakovanie
       Review Your Animated Scene: Skontroluj svoju animovanú scénu
+      Review Your App: Skontroluj svoju aplikáciu
       Review Your Game: Skontroluj svoju hru
-      Review Your Page: Skontrolu svoju stránku
+      Review Your Page: Skontroluj svoju stránku
       Review Your Scene: Skontroluj si scénu
       'Review: CSS': 'Opakovanie: CSS'
       'Review: HTML': 'Opakovanie: HTML'
@@ -296,6 +342,8 @@ sk:
       Revise Sprite Lab Project: Reviduj Sprite Lab projekt
       Robot Doodle: Robotova čmáranica
       Run a simulation: Spusť simuláciu
+      Safari App: Safari aplikácia
+      Safari Model: Model safari
       Same Game: Ukážková hra
       Sample Game: Ukážková hra
       Sample Games: Ukážkové hry
@@ -316,7 +364,9 @@ sk:
       Share Your App: Zdieľaj svoju appku
       Share Your Pages: Zdieľaj svoje stránky
       Share Your Stylesheets: Zdieľaj svoje súbory štýlov
-      Side Scroller: Posúvačka (side-scroller)
+      Shoe Recommendation Survey: Odporúčanie topánok – dotazník
+      Shoe Recommender: Program na odporúčanie topánok
+      Side Scroller: Plošinovka
       Simple Circuits: Jednoduché el. obvody
       Skill Building: Budovanie zručností
       Skill-Building: Budovanie zručností
@@ -330,7 +380,7 @@ sk:
       Sprite Lab Example Project: Sprite Lab ukážkový projekt
       Sprite Lab Project: Lab postáv projekt
       Sprite Movement: Pohyb sprajtov
-      Sprite Properties: Vlastnosti postáv
+      Sprite Properties: Vlastnosti sprajtov
       Sprite Scenes: Scény so sprajtmi
       Sprite Velocity: Rýchlosť "sprite" objektu
       Sprites and the Draw Loop: '"Sprite" objekty a vykresľovací cyklus'
@@ -352,8 +402,10 @@ sk:
       The Right App - Unplugged Activity: Vhodná aplikácia – aktivita bez počítača
       Top Websites: Najlepšie weby
       Tour of Design Mode: Predstavenie dizajnového módu
+      Train a Model in AI Lab: Trénovanie modelu v AI Labe
       Train an AI to Clean the Ocean: Vycvičte umelú inteligenciu na čistenie oceánov
       UI Element Properties: Vlastnosti častí užívateľského rozhrania
+      Ultimate Shoe Recommender: Záverečný program na odporúčanie topánok
       Upload Your Images: Nahraj svoje obrázky
       User Interface: Užívateľské prostredie
       Using Getters and Setters: Používanie GET/SET príkazov (vráť/nastav hodnotu)
@@ -489,6 +541,9 @@ sk:
       Where'd They Go?: Kam sa podeli?
       While Loops with the Farmer: Cykly "pokiaľ" s Farmárkou
       Wrap-up: Zhrnutie
+      'You Choose: Improve Your App': 'Vyber si: Vylepši si aplikáciu'
+      'You Choose: Restaurant Recommendations': 'Vyber si: Odporúčania pre reštaurácie'
       Your Personal Website: Tvoja vlastná webstránka
       Your Team Project: Tvoj tímový projekt
+      Zoo Predictions: Predpovede v zoo
       isTouching: '"isTouching" (dotyk)'

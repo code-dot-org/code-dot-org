@@ -23,6 +23,12 @@
         "flappy/Flappy Code": {
           "name": "Flappy Code"
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Hello World: Putbol",
+          "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
+          "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
+          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
+        },
         "hourofcode/Maze": {
           "name": "Maze",
           "overview": "Sa araling ito, nakakakuha ang mga mag-aaral sa lahat ng edad ng panimulang karanasan sa coding at computer science sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito para sa mga batang mag-aaral, edad 4-10, ngunit maaaring iakma sa mas matatandang mag-aaral gamit ang mga mungkahi sa pagkakaiba-iba na ibinigay.",
@@ -49,7 +55,6 @@
           "name": "Gumball na Play Lab"
         },
         "dance/Dance Party": {
-          "name": "Dance Party",
           "overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika.",
           "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block).",
           "student_overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika."
@@ -67,6 +72,12 @@
           "name": "Simpleng Pag-encrypt",
           "overview": "Sa araling ito, ipinakilala sa mga mag-aaral ang pangangailangan sa pag-encrypt at mga simpleng pamamaraan sa pagsira (o pag-crack) ng mga lihim na mensahe. Sinubukan ng mga mag-aaral ang kanilang sarili sa pag-crack ng isang mensahe na naka-encode ng klasikong Caesar cipher at isa ring Random Substitution Cipher. Dapat maging lubos na pamilyar ang mga mag-aaral sa ideya na sa panahon ng makapangyarihang mga tool sa pagkalkula, kailangang maging mas sopistikado ang mga diskarte ng pag-encrypt. Ang pinakamahalagang aspeto ng araling ito ay upang maunawaan kung paano at bakit gumaganap ang pag-encrypt sa ating buhay araw-araw sa Internet, mahalaga ang paggawa ng mahusay na pag-encrypt. Babasahin ng mga mag-aaral ang kanilang mga paa sa pag-unawa sa mga pagsasaalang-alang na dapat gawin sa paggawa ng malakas na pag-encrypt sa harap ng makapangyarihang mga tool sa pag-compute na magagamit upang i-crack ito. Mahalaga sa sinumang gumagamit ng Internet ang pangangailangan sa pagiging lihim kapag nagpapadala ng mga bit sa Internet.",
           "student_overview": "Sa araling ito, ipinakilala sa mga mag-aaral ang pangangailangan sa pag-encrypt at mga simpleng pamamaraan sa pagsira (o pag-crack) ng mga lihim na mensahe. Sinubukan ng mga mag-aaral ang kanilang sarili sa pag-crack ng isang mensahe na naka-encode ng klasikong Caesar cipher at isa ring Random Substitution Cipher. Dapat maging lubos na pamilyar ang mga mag-aaral sa ideya na sa panahon ng makapangyarihang mga tool sa pagkalkula, kailangang maging mas sopistikado ang mga diskarte ng pag-encrypt. Ang pinakamahalagang aspeto ng araling ito ay upang maunawaan kung paano at bakit gumaganap ang pag-encrypt sa ating buhay araw-araw sa Internet, mahalaga ang paggawa ng mahusay na pag-encrypt. Babasahin ng mga mag-aaral ang kanilang mga paa sa pag-unawa sa mga pagsasaalang-alang na dapat gawin sa paggawa ng malakas na pag-encrypt sa harap ng makapangyarihang mga tool sa pag-compute na magagamit upang i-crack ito. Mahalaga sa sinumang gumagamit ng Internet ang pangangailangan sa pagiging lihim kapag nagpapadala ng mga bit sa Internet."
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Hello World: Puwang",
+          "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
+          "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. - Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
+          "purpose": "Inilaan ng araling ito upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Gamit ang kasanayang ito, maaaring gumawa ng mga proyekto ang mga mag-aaral sa anumang paksa, tulad ng ibang paksa sa paaralan o isang bagay na personal na nauugnay sa kanila. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa."
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "Sa araling ito, matututunan ng mga mag-aaral ang mga pangunahing kaalaman sa computer science sa pamamagitan ng programming sa Sprite Lab. Isang tool ang Sprite Lab na magagamit mo upang bumuo ng mga mapanlikha at nakakatuwang proyekto. Matututo ang mga mag-aaral na lumikha at magbigay-buhay sa mga tiyanak at gawin silang interactive gamit ang mga event.\n\nMayroong maraming mga bersyon ng araling ito. Nagtuturo ang bawat bersyon ng parehong mga konsepto ngunit nagtatampok ng iba't ibang mga imahe upang maakit sa iba't ibang mga mag-aaral. Para sa higit pang impormasyon bisitahin ang [Hello World landing page.](https://code.org/helloworld)",
@@ -104,7 +115,7 @@
         },
         "outbreak/Outbreak": {
           "overview": "Pinagsasama ng araling ito ang **pagbuo ng kasanayan** sa mga event sa isang **mini-project** kung saan makakagawa ang mga mag-aaral ng sarili nilang computer simulation sa Sprite Lab. Pag-aaralan ng mga mag-aaral ang simulation upang maunawaan kung gaano kabilis kumalat ang isang virus at kung ano ang maaaring gawin upang mapabagal ito.",
-          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "preparation": "- Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n- Siguraduhing may reflection journal ang bawat mag-aaral.",
           "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo.",
           "student_overview": "Isang virus ang dumating sa Monster Town! Matutong gumawa ng virus simulator at tulungan na maging malusog muli ang mga halimaw."
         },
@@ -125,6 +136,7 @@
           "name": "Hour of Code 2013"
         },
         "dance-2019/Dance Party": {
+          "name": "Dance Party",
           "overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika.",
           "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block).",
           "student_overview": "Sa araling ito, nakakakuha ng panimulang karanasan sa coding at computer science ang mga mag-aaral sa lahat ng edad sa isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa. Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool upang tumugon sa musika."
@@ -276,6 +288,286 @@
         },
         "frequency_analysis/Frequency Analysis": {
           "name": "Kadalasan na Pagsusuri"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Graph Paper Programming"
+        },
+        "coursed-2022/Introduction to Online Puzzles": {
+          "name": "Pambungad sa mga Online na mga Palaisipan"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Relay Programming"
+        },
+        "coursed-2022/Debugging with Laurel": {
+          "name": "Pagde-debug sa Kolektor"
+        },
+        "coursed-2022/Events in Bounce": {
+          "name": "Mga Pangyayari sa Bounce"
+        },
+        "coursed-2022/Build a Star Wars Game": {
+          "name": "Bumuo ng Star Wars na Laro",
+          "overview": "Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.",
+          "student_overview": "Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito."
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Dance Party",
+          "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
+        },
+        "coursed-2022/Nested Loops in Maze": {
+          "name": "Naka-nest na mga Loops sa Maze"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Mga Conditional gamit ang mga Card"
+        },
+        "coursed-2022/Looking Ahead with Minecraft": {
+          "name": "Masdan ang Hinaharap"
+        },
+        "coursed-2022/If/Else with Bee": {
+          "name": "Mga Kondisyonal sa Bee"
+        },
+        "coursed-2022/While Loops in Farmer": {
+          "name": "Mga While Loops sa Farmer"
+        },
+        "coursed-2022/End of Course Project": {
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+        },
+        "coursef-2022/The Power of Words": {
+          "name": "Ang Kapangyarihan ng mga Salita",
+          "student_overview": "Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online."
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "Ipinapakilala ang Sprite Lab"
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "Sprites sa aksyon"
+        },
+        "coursef-2022/Mini-Project: Virtual Pet": {
+          "name": "Mini-Project: Virtual na Alaga",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursef-2022/Mini-Project: User Input Programs": {
+          "name": "Mini-Project: Mga Programa sa Pag-input ng User"
+        },
+        "coursef-2022/Outbreak": {
+          "name": "Pagsiklab",
+          "overview": "Pinagsasama ng araling ito ang **pagbuo ng kasanayan** sa mga event sa isang **mini-project** kung saan makakagawa ang mga mag-aaral ng sarili nilang computer simulation sa Sprite Lab. Pag-aaralan ng mga mag-aaral ang simulation upang maunawaan kung gaano kabilis kumalat ang isang virus at kung ano ang maaaring gawin upang mapabagal ito.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo.",
+          "student_overview": "Isang virus ang dumating sa Monster Town! Matutong gumawa ng virus simulator at tulungan na maging malusog muli ang mga halimaw."
+        },
+        "coursef-2022/The Internet": {
+          "name": "The Internet",
+          "overview": "Kahit na maraming mga tao ang gumamit ng Internet araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana. Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet, habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address, at ang DNS.",
+          "student_overview": "Nagtataka ka na ba kung paano ang mga impormasyon naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang Internet gumagana."
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "Pribado at Personal na Impormasyon",
+          "student_overview": "Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado."
+        },
+        "coursee-2022/Swimming Fish with Sprite Lab": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursee-2022/Hello World: Food": {
+          "name": "Hello World"
+        },
+        "coursee-2022/Mini-Project: About Me": {
+          "name": "Mini-Project: Tungkol sa Akin"
+        },
+        "coursee-2022/Drawing with Loops": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Pagsusulat ng Awit",
+          "overview": "Isa sa mga pinakadakilang istraktura sa mundo ng computer science ay ang function. Ang mga function (minsang tinatawag na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob ng iyong mas malaking programa. Ang araling ito ay makakatulong sa mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama sa mga piraso ng code sa isang function ay maaaring lubhang nakakatulong na pag-uugali.",
+          "student_overview": "Kahit ang mga rockstar ay nangangailangan ng mga kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol sa mga kakayahan gamit ang mga titik mula sa mga awitin."
+        },
+        "coursee-2022/Functions in Minecraft": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursee-2022/Functions with Artist": {
+          "name": "Mga Function sa Artist",
+          "overview": "Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "student_overview": "Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!"
+        },
+        "coursee-2022/Conditionals with the Farmer": {
+          "overview": "Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "student_overview": "Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito."
+        },
+        "coursee-2022/Functions with Harvester": {
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
+        },
+        "coursee-2022/Designing for Accessibility": {
+          "name": "Pagdidisenyo sa Accessibility"
+        },
+        "coursee-2022/Digital Sharing": {
+          "name": "Digital na Pagbabahagi"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Galawin ito, Galawin ito"
+        },
+        "courseb-2022/Sequencing with Angry Birds": {
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan."
+        },
+        "courseb-2022/Programming with Angry Birds": {
+          "name": "Pag-Program sa Maze"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Pagiging Loopy"
+        },
+        "courseb-2022/Loops with Harvester": {
+          "name": "Mga Loops sa Harvester"
+        },
+        "courseb-2022/The Big Event Jr": {
+          "overview": "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan."
+        },
+        "express-2022/Programming with Angry Birds": {
+          "name": "Pag-Program sa Maze"
+        },
+        "express-2022/Debugging in Maze": {
+          "name": "Pagde-debug sa Maze"
+        },
+        "express-2022/Collecting Treasure with Laurel": {
+          "name": "Pag-program sa Kolektor"
+        },
+        "express-2022/Creating Art with Code": {
+          "name": "Pag-program sa Artist"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "Sprites sa aksyon"
+        },
+        "express-2022/Dance Party": {
+          "name": "Dance Party",
+          "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
+        },
+        "express-2022/Loops with Rey and BB-8": {
+          "name": "Mga Loops kasama sina Rey at BB-8"
+        },
+        "express-2022/Nested Loops in Maze": {
+          "name": "Naka-nest na mga Loops sa Maze"
+        },
+        "express-2022/Snowflakes with Anna and Elsa": {
+          "name": "Naka-nest na mga Loop sa Frozen"
+        },
+        "express-2022/Looking Ahead with Minecraft": {
+          "name": "Masdan ang Hinaharap"
+        },
+        "express-2022/If/Else with Bee": {
+          "name": "Mga Kondisyonal sa Bee"
+        },
+        "express-2022/While Loops in Farmer": {
+          "name": "Mga While Loops sa Farmer"
+        },
+        "express-2022/Harvesting with Conditionals": {
+          "name": "Mga Kondisyonal & Mga Loop sa Harvester"
+        },
+        "express-2022/Functions with Artist": {
+          "name": "Mga Function sa Artist",
+          "overview": "Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.",
+          "student_overview": "Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!"
+        },
+        "express-2022/Using Variables with the Artist": {
+          "overview": "Sa araling ito, ang mga estudyante ay tutuklas sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang mga variables maaaring gamitin para madaling isulat ang mga code at madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga estudyante ay magtatapos sa isang libreng laro na antas para ipakita kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga disenyo."
+        },
+        "express-2022/For Loops with Bee": {
+          "overview": "Nagtatampok sa Bee, ang araling ito ay nakatuon sa mga for loop at gamit ang isang lumalaking variable para malutas ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas epektibong maglutas ng mga kumplikadong mga problema.",
+          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!"
+        },
+        "express-2022/For Loops with Artist": {
+          "name": "Mga Loops sa Artist",
+          "overview": "Sa araling ito, ang mga estudyante ay patuloy na magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist. Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli, sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling sining sa libreng laro na antas.",
+          "student_overview": "Maghanda na sa iyong susunod na obra maestra. Dito ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang mga larawan."
+        },
+        "express-2022/End of Course Project": {
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+        },
+        "pre-express-2022/Learn to Drag and Drop": {
+          "name": "Matutong Mag-Drag at Mag-Drop",
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
+        },
+        "pre-express-2022/Sequencing with Scrat": {
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan."
+        },
+        "pre-express-2022/Programming with Angry Birds": {
+          "name": "Pag-Program sa Maze"
+        },
+        "pre-express-2022/Programming with Rey and BB-8": {
+          "name": "Pag-Program kasama sina Rey at BB-8"
+        },
+        "pre-express-2022/Ocean Scene with Loops": {
+          "overview": "Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop."
+        },
+        "pre-express-2022/On the Move with Events": {
+          "overview": "Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!"
+        },
+        "coursea-2022/Learn to Drag and Drop": {
+          "name": "Matutong Mag-Drag at Mag-Drop",
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Happy Maps",
+          "overview": "Ang tulay mula sa mga algoritmo papunta sa pag-program ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng madaliang code.",
+          "purpose": "Ang tulay mula sa mga algoritmo papunta sa pag-program ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng madaliang code."
+        },
+        "coursea-2022/Sequencing with Scrat": {
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan."
+        },
+        "coursea-2022/Programming with Rey and BB-8": {
+          "name": "Pag-Program kasama sina Rey at BB-8"
+        },
+        "coursea-2022/Happy Loops": {
+          "overview": "Ang mga loop ay lubhang nakakatulong at makapangyarihan na kagamitan sa pag-program. Para maunawaan kung paano nakakatulong ang mga loops, ang mga estudyante ay kailangang hikayatin na gustohin ang madaliang paraan para lutasin ang mga di-gaanong mahalagang mga problema."
+        },
+        "coursea-2022/Loops with Laurel": {
+          "overview": "Ang pagbubuo sa konsepto ng paulit-ulit na mga instruksyon mula sa \"Masayang mga Loop\", ang yugtong ito ay mag-uudyok sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta ng mga kayamanan sa Code.org."
+        },
+        "coursea-2022/Ocean Scene with Loops": {
+          "overview": "Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop."
+        },
+        "coursea-2022/The Big Event Jr": {
+          "overview": "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan."
+        },
+        "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "overview": "Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!"
+        },
+        "coursec-2022/Programming with Angry Birds": {
+          "name": "Pag-Program sa Maze"
+        },
+        "coursec-2022/Debugging in Maze": {
+          "name": "Pagde-debug sa Maze"
+        },
+        "coursec-2022/Collecting Treasure with Laurel": {
+          "name": "Pag-program sa Kolektor"
+        },
+        "coursec-2022/Creating Art with Code": {
+          "name": "Pag-program sa Artist"
+        },
+        "coursec-2022/Loops with Rey and BB-8": {
+          "name": "Mga Loops kasama sina Rey at BB-8"
+        },
+        "coursec-2022/Harvesting Crops with Loops": {
+          "name": "Mga Loops sa Harvester"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursec-2022/Build a Flappy Game": {
+          "name": "Bumuo ng Flappy na Laro"
+        },
+        "coursec-2022/Picturing Data": {
+          "name": "Paglalarawan ng Data"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binary na mga Pulseras"
+        },
+        "coursec-2022/End of Course Project": {
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
         },
         "csd5-2022/Representation Matters": {
           "name": "Ang Representasyon ay Mahalaga"
@@ -487,6 +779,9 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Survey ng CS Discoveries Post-Course"
         },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Numerical Data sa Ai Lab"
+        },
         "csd7-2022/Survey Planning": {
           "name": "Pagdidisenyo ng Koleksyon ng mga Datos"
         },
@@ -537,6 +832,9 @@
         },
         "coursed-2018/Events in Bounce": {
           "name": "Mga Pangyayari sa Bounce"
+        },
+        "coursed-2018/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
         },
         "coursed-2018/Nested Loops in Bee": {
           "name": "Naka-nest na mga Loops sa Maze"
@@ -1158,6 +1456,9 @@
         },
         "coursed-2019/Build a Star Wars Game": {
           "name": "Bumuo ng Star Wars na Laro"
+        },
+        "coursed-2019/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
         },
         "coursed-2019/Nested Loops in Bee": {
           "name": "Naka-nest na mga Loops sa Maze"
@@ -2777,6 +3078,15 @@
         "allthethings/Java Lab": {
           "name": "Java Lab"
         },
+        "allthethings/lesson-48": {
+          "name": "Panulaan"
+        },
+        "coursef-2021/lesson-6": {
+          "name": "Ipinapakilala ang Sprite Lab"
+        },
+        "coursef-2021/lesson-8": {
+          "name": "Sprites sa aksyon"
+        },
         "coursef-2021/Virtual Pet": {
           "name": "Mini-Project: Virtual na Alaga",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
@@ -2943,6 +3253,9 @@
           "name": "Dance Party",
           "purpose": "Ang leksyon na ito ay nagpapakilala sa buod ng mga konsepto ng coding ng CS at programming sa event (gamit ang mga block)."
         },
+        "coursed-2021/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
+        },
         "coursed-2021/Loops in Artist": {
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
@@ -2981,6 +3294,9 @@
         },
         "express-2021/Creating Art with Code": {
           "name": "Pag-program sa Artist"
+        },
+        "express-2021/lesson-3": {
+          "name": "Sprites sa aksyon"
         },
         "express-2021/lesson-1": {
           "name": "Dance Party",
@@ -3093,6 +3409,9 @@
         },
         "coursee-2021/lesson-1": {
           "name": "Pagdidisenyo sa Accessibility"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Numerical Data sa Ai Lab"
         },
         "csd7-2021/Survey Planning": {
           "name": "Pagdidisenyo ng Koleksyon ng mga Datos"
@@ -3418,6 +3737,9 @@
         },
         "coursed-2020/Dance Party": {
           "name": "Dance Party"
+        },
+        "coursed-2020/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo"
         },
         "coursed-2020/Nested Loops in Bee": {
           "name": "Naka-nest na mga Loops sa Maze"

@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Отклањање грешака"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Отклањање грешака"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Кондиционали"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Отклањање грешака"
         },
         "loops/aquatic/unversioned": {
           "word": "Петље"
@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Отклањање грешака"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kod"
         },
@@ -67,6 +75,90 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Отклањање грешака"
+        },
+        "debugging/coursed/2022": {
+          "word": "Отклањање грешака"
+        },
+        "programming/coursed/2022": {
+          "word": "Programming"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Кондиционали"
+        },
+        "behavior/coursef/2022": {
+          "word": "Понашање"
+        },
+        "variable/coursef/2022": {
+          "word": "Променљива"
+        },
+        "input/coursef/2022": {
+          "word": "Унос"
+        },
+        "internet/coursef/2022": {
+          "word": "Интернет"
+        },
+        "define/coursef/2022": {
+          "word": "Дефинисати"
+        },
+        "behavior/coursee/2022": {
+          "word": "Понашање"
+        },
+        "function/coursee/2022": {
+          "word": "Функција"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Кондиционали"
+        },
+        "copyright/coursee/2022": {
+          "word": "Ауторска права"
+        },
+        "define/coursee/2022": {
+          "word": "Дефинисати"
+        },
+        "debugging/courseb/2022": {
+          "word": "Отклањање грешака"
+        },
+        "programming/courseb/2022": {
+          "word": "Programming"
+        },
+        "debugging/express/2022": {
+          "word": "Отклањање грешака"
+        },
+        "programming/express/2022": {
+          "word": "Programming"
+        },
+        "behavior/express/2022": {
+          "word": "Понашање"
+        },
+        "conditionals/express/2022": {
+          "word": "Кондиционали"
+        },
+        "function/express/2022": {
+          "word": "Функција"
+        },
+        "variable/express/2022": {
+          "word": "Променљива"
+        },
+        "define/express/2022": {
+          "word": "Дефинисати"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Отклањање грешака"
+        },
+        "programming/pre-express/2022": {
+          "word": "Programming"
+        },
+        "debugging/coursea/2022": {
+          "word": "Отклањање грешака"
+        },
+        "programming/coursea/2022": {
+          "word": "Programming"
+        },
+        "debugging/coursec/2022": {
+          "word": "Отклањање грешака"
+        },
+        "programming/coursec/2022": {
+          "word": "Programming"
         },
         "input/csd/2022": {
           "word": "Унос"
@@ -90,7 +182,24 @@
           "word": "Ауторска права"
         },
         "code/poem-art/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Понашање"

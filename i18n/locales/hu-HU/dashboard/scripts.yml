@@ -1348,6 +1348,8 @@ hu:
             required:
               display_name: Összefoglaló
         dance-2019:
+          title: Táncos buli
+          description_short: Kódozzon egy táncpartit, amelyet megoszthat barátaival és családjával. Közreműködik Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, zene a Disney „Encanto,” és több!
           description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
           student_description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
         k5-onlinepd-2019:
@@ -1355,6 +1357,7 @@ hu:
             k5_getting_started:
               display_name: Első lépések
         dance-extras-2019:
+          title: Táncolj tovább
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
           student_description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         csp4-preview:
@@ -2148,7 +2151,6 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
-          name: csa5-exemplars
           title: 5.  rész  - Tárgyak rendszerezése [Exemplars]
         csd-post-survey-2021:
           name: csd-post-survey-2021
@@ -2172,6 +2174,8 @@ hu:
               display_name: Tartalom
             lessonGroup-5:
               display_name: Homokozó
+        ai-ethics-2021:
+          description_audience: 6-12. évfolyam
         poem-art-2021:
           title: Versművészet
         explore-data-1-2021:
@@ -2382,6 +2386,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Első lépések
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2441,6 +2449,10 @@ hu:
               display_name: Tartalom
         hello-world-csc:
           title: Helló világ
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Bevezetés a sprite-okba
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -2483,5 +2495,160 @@ hu:
         aiml-2022:
           name: aiml-2022
           description_short: Ismerkedés a mesterséges intelligenciával és a gépi tanulással
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Aszinkron hibakeresési kiterjesztés
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: '2.  modul: Aszinkron munka'
         soccer:
           name: foci
+          title: Saját focimeccs kódolása
+          description_short: Focimeccs készítése
+          description: Focimeccs készítése
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+            lessonGroup-2:
+              display_name: Tartalom
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Kérdőív
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java laboratórium
+            lesson-6:
+              name: hurkok
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
+            lessonGroup-3:
+              display_name: Tartalom
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: változók
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Számláló ciklusok
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        hello-world-space-2022:
+          title: 'Helló Világ: Space'
+        hello-world-soccer-2022:
+          title: 'Helló Világ: Labdarúgás'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
+          title: Problémamegoldás
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Mi az a hang?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp_unit1_2020:
+              display_name: '1.  fejezet: Digitális információ'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lecke: Az internet'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Adat
+            csp_loops:
+              display_name: hurkok
+            csp_project:
+              display_name: Projekt
+            lessonGroup-5:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listák
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+            lessonGroup-3:
+              display_name: hurkok
+            lessonGroup-5:
+              display_name: Projekt
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés

@@ -231,8 +231,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "rood",
-                "blue": "blauw",
+                red: "rood",
+                blue: "blauw",
               }
             }
           }
@@ -297,8 +297,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "rood",
-                "blue": "blauw",
+                red: "rood",
+                blue: "blauw",
               }
             }
           }
@@ -343,8 +343,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "red",
-                "blue": "blue",
+                red: "red",
+                blue: "blue",
               }
             }
           }
@@ -373,8 +373,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "rood",
-                "blue": "blauw",
+                red: "rood",
+                blue: "blauw",
               }
             }
           }
@@ -434,8 +434,8 @@ class BlocklyTest < ActiveSupport::TestCase
             "text" => "actor {TYPE} {COSTUME}",
             "options" => {
               "COSTUME" => {
-                "hat": "",
-                "shirt": "",
+                hat: "",
+                shirt: "",
               }
             }
           }
@@ -543,8 +543,8 @@ class BlocklyTest < ActiveSupport::TestCase
       'data' => {
         'authored_hints' => {
           level_name => {
-            "first": "first test markdown",
-            "second": "second test markdown",
+            first: "first test markdown",
+            second: "second test markdown",
           }
         }
       }
@@ -558,8 +558,8 @@ class BlocklyTest < ActiveSupport::TestCase
       type: 'Maze',
       authored_hints: JSON.generate(
         [
-          {"hint_markdown": "first english markdown", "hint_id": "first"},
-          {"hint_markdown": "second english markdown", "hint_id": "second"},
+          {hint_markdown: "first english markdown", hint_id: "first"},
+          {hint_markdown: "second english markdown", hint_id: "second"},
         ]
       )
     )
@@ -590,22 +590,22 @@ class BlocklyTest < ActiveSupport::TestCase
       'data' => {
         'authored_hints' => {
           level_name => {
-            "first": hint,
+            first: hint,
           }
         },
         behavior_names: {
           level_name => {
-            "wandering": "deambulando",
+            wandering: "deambulando",
           }
         }
       },
-      'behaviors': {
-        "this_sprite": "Este sprite"
+      behaviors: {
+        this_sprite: "Este sprite"
       },
     }
 
     I18n.backend.store_translations test_locale, custom_i18n
-    I18n.backend.store_translations :en, 'behaviors': {"this_sprite": "this sprite"}
+    I18n.backend.store_translations :en, behaviors: {this_sprite: "this sprite"}
 
     level = Level.create(
       name: level_name,
@@ -613,7 +613,7 @@ class BlocklyTest < ActiveSupport::TestCase
       type: 'Maze',
       authored_hints: JSON.generate(
         [
-          {"hint_markdown": hint, "hint_id": "first"},
+          {hint_markdown: hint, hint_id: "first"},
         ]
       )
     )
@@ -810,8 +810,8 @@ class BlocklyTest < ActiveSupport::TestCase
       type: 'Maze',
       authored_hints: JSON.generate(
         [
-          {"hint_markdown": "first english markdown", "hint_id": "first"},
-          {"hint_markdown": "second english markdown", "hint_id": ""},
+          {hint_markdown: "first english markdown", hint_id: "first"},
+          {hint_markdown: "second english markdown", hint_id: ""},
         ]
       )
     )
@@ -1041,5 +1041,209 @@ class BlocklyTest < ActiveSupport::TestCase
     expected_localized_block_xml.strip!.gsub!(/\s*\n\s*/, '')
 
     assert_equal expected_localized_block_xml, localized_block_xml
+  end
+
+  test 'localizes math_change blocks' do
+    test_locale = 'te-ST'
+    level_name = 'test localize math change blocks'
+    original_variable_str = 'counter'
+    localized_variable_str = 'contador'
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+    )
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'data' => {
+        'variable_names' => {
+          original_variable_str => localized_variable_str
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # Create a simple blockly level XML structure containing the
+    # original string, then localize the XML structure.
+    # A snippet of: https://studio.code.org/s/coursef-2021/lessons/12/levels/5
+    block_xml = <<~XML
+      <block type="maze_move">
+        <title name="DIR">moveForward</title>
+        <next>
+          <block type="controls_repeat_ext">
+            <value name="TIMES">
+              <block type="variables_get">
+                <title name="VAR">counter</title>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="maze_honey"/>
+            </statement>
+            <next>
+              <block type="maze_turn">
+                <title name="DIR">turnLeft</title>
+                <next>
+                  <block type="math_change">
+                    <title name="VAR">counter</title>
+                    <value name="DELTA">
+                      <block type="math_number">
+                        <title name="NUM">1</title>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    XML
+
+    # Localized output to be tested
+    localized_block_xml = level.localized_remaining_variable_blocks(block_xml)
+
+    # Expected output
+    parsed_xml = Nokogiri::XML(localized_block_xml, &:noblanks)
+    assert_equal parsed_xml.at_xpath('//block[@type="math_change"]/*[@name="VAR"]').content, localized_variable_str
+  end
+
+  test 'localizes gamelab_textVariableJoin blocks' do
+    test_locale = 'te-ST'
+    level_name = 'test localize gamelab_textVariableJoin blocks'
+    original_variable_str = 'name'
+    localized_variable_str = 'nombre'
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+    )
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'data' => {
+        'variable_names' => {
+          original_variable_str => localized_variable_str
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # Create a simple blockly level XML structure containing the
+    # original string, then localize the XML structure.
+    # A snippet of: https://studio.code.org/s/coursef-2022/lessons/7/levels/1
+    block_xml = <<~XML
+      <block type="gamelab_whenPromptAnswered">
+        <value name="VAR">
+          <block type="variables_get">
+            <title name="VAR">name</title>
+          </block>
+        </value>
+        <next>
+          <block type="gamelab_printText">
+            <value name="TEXT">
+              <block type="gamelab_textJoin">
+                <title name="TEXT1">Hello </title>
+                <value name="TEXT2">
+                  <block type="gamelab_textVariableJoin">
+                    <title name="VAR">name</title>
+                    <value name="TEXT2">
+                      <block type="text">
+                        <title name="TEXT">!</title>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    XML
+
+    # Localized output to be tested
+    localized_block_xml = level.localized_remaining_variable_blocks(block_xml)
+
+    # Expected output
+    parsed_xml = Nokogiri::XML(localized_block_xml, &:noblanks)
+    assert_equal parsed_xml.at_xpath('//block[@type="gamelab_textVariableJoin"]/*[@name="VAR"]').content, localized_variable_str
+  end
+
+  test 'localizes studio_ask blocks' do
+    test_locale = 'te-ST'
+    level_name = 'test localize studio_ask blocks'
+    original_variable_str = 'name'
+    localized_variable_str = 'nombre'
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+    )
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'data' => {
+        'variable_names' => {
+          original_variable_str => localized_variable_str
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # Create a simple blockly level XML structure containing the
+    # original string, then localize the XML structure.
+    # A snippet of: https://studio.code.org/s/coursef-2017/lessons/17/levels/5
+    block_xml = <<~XML
+      <block type="when_run" deletable="false">
+        <next>
+          <block type="studio_ask" can_disconnect_from_parent="false">
+            <title name="TEXT">What be yer name?</title>
+            <title name="VAR">name</title>
+            <next>
+              <block type="studio_saySpriteParams" inline="true" can_disconnect_from_parent="false">
+                <title name="SPRITE">1</title>
+                <value name="TEXT">
+                  <block type="variables_get" editable="false" can_disconnect_from_parent="false">
+                    <title name="VAR">name</title>
+                  </block>
+                </value>
+                <next>
+                  <block type="studio_saySpriteParams" inline="true">
+                    <title name="SPRITE">0</title>
+                    <value name="TEXT">
+                      <block type="text_join_simple" inline="false" inputcount="3">
+                        <value name="ADD0">
+                          <block type="text">
+                            <title name="TEXT">It be a pleasure, </title>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text">
+                            <title name="TEXT">.</title>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+      <block type="variables_get">
+        <title name="VAR">name</title>
+      </block>
+    XML
+
+    # Localized output to be tested
+    localized_block_xml = level.localized_remaining_variable_blocks(block_xml)
+
+    # Expected output
+    parsed_xml = Nokogiri::XML(localized_block_xml, &:noblanks)
+    assert_equal parsed_xml.at_xpath('//block[@type="studio_ask"]/*[@name="VAR"]').content, localized_variable_str
   end
 end

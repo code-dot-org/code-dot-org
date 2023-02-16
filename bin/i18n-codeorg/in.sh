@@ -56,6 +56,22 @@ done
 ### Oceans tutorial
 cp_in apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json i18n/locales/source/blockly-mooc/fish.json
 
+### AI Lab UI Strings
+source_ui=apps/node_modules/@code-dot-org/ml-playground/i18n/mlPlayground.json
+staged_ui=i18n/locales/source/external-sources/ml-playground/mlPlayground.json
+cp_in $source_ui $staged_ui
+
+### AI Lab datasets
+orig_dir=apps/node_modules/@code-dot-org/ml-playground/public/datasets
+loc_dir=i18n/locales/source/external-sources/ml-playground/datasets
+mkdir -p $loc_dir
+
+# Copy JSON files.
+for file in $(find $orig_dir -name '*.json'); do
+  relname=${file#$orig_dir}
+  cp_in $file $loc_dir$relname
+done
+
 ### Pegasus
 
 orig_dir=pegasus/cache/i18n

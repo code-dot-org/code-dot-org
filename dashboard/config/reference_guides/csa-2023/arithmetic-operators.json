@@ -1,0 +1,9 @@
+{
+  "key": "arithmetic-operators",
+  "course_version_key": "2023",
+  "course_offering_key": "csa",
+  "parent_reference_guide_key": "operators",
+  "display_name": "Arithmetic Operators",
+  "content": "Different arithmetic operations can be used with `int`(#e7e8ea) and `double`(#e7e8ea) data types.",
+  "position": 2
+}

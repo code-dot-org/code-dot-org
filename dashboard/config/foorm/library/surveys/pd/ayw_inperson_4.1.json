@@ -6,6 +6,7 @@
         {
           "type": "panel",
           "name": "ayw4_panel",
+          "visibleIf": "{workshop_agenda}='module7_8' or ({workshop_agenda}='in_person' and {workshop_subject}='Academic Year Workshop 4' )",
           "elements": [
             {
               "type": "html",

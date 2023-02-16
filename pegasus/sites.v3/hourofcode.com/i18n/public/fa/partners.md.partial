@@ -2,39 +2,37 @@
 title: شرکا
 ---
 
-ساعت برنامه نویسی توسط مجموعه ساعت برنامه نویسی، مشاوران هفته آموزشی علوم رایانه و کمیته های بررسی راهبری می شود.
+Hour of code رو کمیته‌ی بررسی Hour of Code اداره میکنه
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. این کمیته استراتژی های کمپین ساعت برنامه نویسی را تبیین می کند.
+[کمیته بررسی]({{ urls/review_committee }}) از 12 مربی کنونی و پیشین کلاسهای K-12 تشکیل شده که با کمک سیستم امتیازدهی که کمیته مشاوران ایجادش کرده فعالیت دانش‌آموزان رو ارزیابی کرده و نقطه نظراتش رو اعلام میکنه. این مربیان فعالیت‌های دانش آموز محور و برنامه های آموزشی معلم محور رو که توسط صدها نفر از شرکای همکار ارائه شده‌ن بررسی می‌کنن و ارزش آموزشی فعالیت‌ها، توانایی تعامل با دانش‌آموزان و درخواست‌های تجدیدنظر گروه‌های مختلف دانش آموزان رو ارزیابی می کنن.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. این مربیان فعالیت های دانش آموز محور و برنامه های آموزشی معلم محور را که توسط صدها نفر از شرکای همکار ارائه شده اند بررسی می کنند و ارزش علمی فعالیت ها، توانایی تعامل با دانش آموزان و درخواست های تجدید نظر گروه های مختلف دانش آموزان را ارزیابی می کنند.
+کار و تعهد کمیته به موفقیت ساعت کدنویسی (Hour of Code) و ارائه‌ی مقدمه‌ای بر علوم کامپیوتر برای هر دانش‌آموز کمک کرده.
 
-کار و تعهد هر دو کمیته به موفقیت ساعت برنامه نویسی و چشم انداز آن در ارائه مقدمه ای بر دانش رایانه برای هر دانش آموز کمک کرده است.
-
-# Major Partners and Corporate Supporters
+# شرکای اصلی و حاميان شرکتی
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# شرکای بین‌المللی
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# شرکای آموزشی و برنامه‌ریزان
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# همکاران و ابزارهای زیرساخت
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# ساير شركا
 
 {{ partners/additional_partners }}
 

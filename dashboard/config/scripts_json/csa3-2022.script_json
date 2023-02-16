@@ -12,7 +12,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "End of Unit Survey"
+          "buttonText": "End of Unit Survey",
+          "key": "ba568d96-5358-4967-82c7-9cfbb917f51b"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-02 13:07:29 UTC",
+    "serialized_at": "2022-10-10 13:27:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6820,6 +6821,18 @@
       }
     },
     {
+      "name": "Unit 3 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1CNnvmgTkj3-HYbExyiaGu7QToNwRz33DAaLbUOd3_Oo/edit?usp=sharing",
+      "key": "unit_3_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_guide_exemplar_"
+      }
+    },
+    {
       "name": "Unit 3 Overview",
       "url": "https://docs.google.com/document/d/1jRP3L-mDjVe0kenBfJbYvPX_Zwp4Yz1bin3FJXx3lnA/edit?usp=sharing",
       "key": "unit_3_overview",
@@ -7325,6 +7338,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_3_guide",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_guide_exemplar_",
         "script.name": "csa3-2022"
       }
     },

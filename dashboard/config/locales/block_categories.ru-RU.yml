@@ -5,13 +5,17 @@ ru:
       Actions: Действия
       Advanced: Расширенный
       Behaviors: Режимы работы
+      'Behaviors ': Формы поведения
+      Boolean: Булево выражение
       Brushes: Кисти
+      Category: Категория
       Color: Цвет
       Comment: Комментарий
       Comments: Комментарии
       Conditionals: Условные команды
       Dancers: Танцоры
       Default: По умолчанию
+      Effects: Эффекты
       Events: События
       Functions: функции
       'Functions ': 'Функции '
@@ -24,9 +28,13 @@ ru:
       Logic: Логика
       Loops: Циклы
       Math: Математика
+      Number: Число
       Numbers: Числа
+      Picker: Сборщик
+      Prebuilt: Предварительно Построенный
       Properties: Свойства
       Sprites: Спрайты
+      String: Строка
       Text: Текст
       Variables: Переменные
       'Variables ': 'Переменные '

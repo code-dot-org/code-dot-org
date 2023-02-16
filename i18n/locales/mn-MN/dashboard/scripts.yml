@@ -2783,6 +2783,8 @@ mn:
           title: Зөв бичих дүрэм заах зөгий
         csd-post-survey-2021:
           title: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+        ai-ethics-2021:
+          description_audience: Анги 6-12
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -2972,6 +2974,10 @@ mn:
               display_name: Үйл явдлууд
           description_audience: 4-8 насныхан
           description_short: 'Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны танилцуулга: манай цэцэрлэгийн шилдэг анги болон нэгдүгээр ангийн сургалтуудыг нэгтгэдэг.'
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Эхлүүлэх
         coursef-2022-pilot:
           lesson_groups:
             lessonGroup-7:
@@ -3053,3 +3059,137 @@ mn:
           title: КШУ-ны нээлтийг гүн гүнзгий сурах модуль 1
         soccer:
           name: хөлбөмбөг
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Судалгаа
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Судалгаа
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Гогцоонууд
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Судалгаа
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Хувьсагчууд
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Гогцоонд зориулав
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Программын ноорог'
+          title: Дизайны үйл явц
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+        csd6-2023:
+          title: Биет тооцоолол
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csp_unit1_2020:
+              display_name: '1-р нэгж: Дижитал мэдээлэл'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Нэгж 2: Интернэт'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Гогцоонууд
+            csp_traversals:
+              display_name: Нэвтрэлтүүд
+            csp_project:
+              display_name: Төсөл
+            lessonGroup-5:
+              display_name: Хичээлийн дараах судалгаа
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Жагсаалтууд
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
+            lessonGroup-3:
+              display_name: Гогцоонууд
+            lessonGroup-4:
+              display_name: Нэвтрэлтүүд
+            lessonGroup-5:
+              display_name: Төсөл
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметрүүд ба буцаах утгууд
+            csp_libraries:
+              display_name: Номын сангууд
+            lessonGroup-3:
+              display_name: Хичээлийн дараах судалгаа
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: РТ-г үүсгэх
+            lessonGroup-3:
+              display_name: Хичээлийн дараах судалгаа
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Нэгж 9: Өгөгдөл'
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
+        csp-post-survey-2023:
+          title: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+        csp-playground:
+          title: CSP тоглоомын талбай
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Апп Лаб-н танилцуулга
+            lessonGroup-3:
+              display_name: Оролт ба гаралт

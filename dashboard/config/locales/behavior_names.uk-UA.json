@@ -1639,6 +1639,877 @@
           "patrolling": "патрулювання",
           "wandering": "бродіння",
           "growing": "ріст"
+        },
+        "CourseE_Project_SpriteLab2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "CourseE_Project_SpriteLab_cupcake_examples2022": {
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "CourseE_Project_SpriteLab_examples2022": {
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "CourseF_outbreak1_-2022-2": {
+          "recovering": "видужання",
+          "wandering": "бродіння"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "recovering": "видужання",
+          "wandering": "бродіння"
+        },
+        "CourseF_outbreak3_-2022-2": {
+          "recovering": "видужання",
+          "wandering": "бродіння"
+        },
+        "CourseF_outbreak4_-2022-2": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
+        },
+        "CourseF_outbreak5_-2022-2": {
+          "recovering": "видужання",
+          "wandering": "бродіння"
+        },
+        "CourseF_outbreak6_-2022-2": {
+          "recovering": "видужання",
+          "wandering": "бродіння"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving left and right": "рух ліворуч та праворуч",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving left and right": "рух ліворуч та праворуч",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
+        },
+        "Fish Tank 2-validated2022": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 3-validated2022": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 4-validated2022": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 5-validated2022": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 6-validated2022": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Virtual Pet 1_-2022-2": {
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "Virtual Pet 3_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_22022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_32022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_42022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_52022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseF_apps_aquarium2022": {
+          "wandering": "бродіння",
+          "wobbling": "хитання",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "wandering": "бродіння",
+          "wobbling": "хитання",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками"
+        },
+        "courseF_apps_card2022": {
+          "driving with arrow keys": "рух за стрілками",
+          "moving with arrow keys": "рух за стрілками",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "growing": "ріст"
+        },
+        "courseF_apps_card_-2022-2": {
+          "driving with arrow keys": "рух за стрілками",
+          "moving with arrow keys": "рух за стрілками",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "growing": "ріст"
+        },
+        "courseF_apps_chatbot2022": {
+          "driving with arrow keys": "рух за стрілками",
+          "moving with arrow keys": "рух за стрілками",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "growing": "ріст"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "driving with arrow keys": "рух за стрілками",
+          "moving with arrow keys": "рух за стрілками",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "growing": "ріст"
+        },
+        "courseF_apps_collector2022": {
+          "wandering": "бродіння",
+          "fluttering": "пурхання",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "wandering": "бродіння",
+          "fluttering": "пурхання",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками"
+        },
+        "courseF_apps_madlib2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_apps_pet2022": {
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_apps_pet_-2022-2": {
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_editable_card_-2022-2": {
+          "driving with arrow keys": "рух за стрілками",
+          "moving with arrow keys": "рух за стрілками",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "growing": "ріст"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "driving with arrow keys": "рух за стрілками",
+          "moving with arrow keys": "рух за стрілками",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "growing": "ріст"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_choice_conflict2_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_choice_conflict_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "patrolling": "патрулювання",
+          "wobbling": "хитання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_choice_pufferfish_-2022-2": {
+          "patrolling": "патрулювання",
+          "wobbling": "хитання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_freeplay_air_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_events_freeplay_animals_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_events_freeplay_aquatic_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_events_freeplay_blank_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_events_freeplay_food_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_events_freeplay_space_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_events_key_-2022-2": {
+          "patrolling": "патрулювання",
+          "wobbling": "хитання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "wobbling": "хитання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_predict_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseF_events_review_-2022-2": {
+          "patrolling": "патрулювання",
+          "wobbling": "хитання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_ship_-2022-2": {
+          "patrolling": "патрулювання",
+          "wobbling": "хитання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_stops_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_events_time_-2022-2": {
+          "patrolling": "патрулювання",
+          "wobbling": "хитання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_label_predict_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseF_place_fruit_-2022-2": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "shrinking": "стиснення",
+          "growing": "ріст"
+        },
+        "courseF_sprites_clouds_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_sprites_desert_-2022-2": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_sprites_freeplay_air_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_sprites_freeplay_animals_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_sprites_freeplay_blank_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_sprites_freeplay_food_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_sprites_freeplay_space_-2022-2": {
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання"
+        },
+        "courseF_sprites_make_-2022-2": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_sprites_moreSprites_-2022-2": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_sprites_predict_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_sprites_ship_-2022-2": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_answer_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_choice_events_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_choice_freeplay_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_concat_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_events_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_print_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_text_review_-2022-2": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_variables_card_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_variables_chatbot_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_variables_madlib_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_variables_madlib_finish_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "coursee_helloworld_events": {
+          "patrolling": "патрулювання",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "fluttering": "пурхання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "simcustom_-2022-2": {
+          "wandering": "бродіння",
+          "patrolling": "патрулювання",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
         }
       }
     }

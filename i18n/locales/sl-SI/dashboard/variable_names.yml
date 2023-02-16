@@ -23,6 +23,7 @@ sl:
       score: rezultat
       size: velikost
       speed: hitrost
+      type: Vrsta
       variable: spremenljivka
       wizard: čarovnik
       x: x

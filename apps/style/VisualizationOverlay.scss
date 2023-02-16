@@ -1,4 +1,6 @@
 // Styles for the visualization overlay
+// TODO: Refactor this into a module imported by <VisualizationOverlay> and remove
+// imports in individual stylesheets.
 @import "mixins";
 
 #visualizationOverlay {
@@ -12,7 +14,4 @@
   @include user-selects(none);
 
   pointer-events: none;
-  // This is a hack that enables pointer-events: none on this absolutely-
-  // positioned SVG element in IE9.
-  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0);
 }

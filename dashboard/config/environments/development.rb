@@ -20,6 +20,7 @@ Dashboard::Application.configure do
   config.hosts << "localhost.code.org"
   config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
+  config.hosts << "localhost-advocacy.code.org"
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -45,6 +46,8 @@ Dashboard::Application.configure do
   end
   # and run:
   #   `gem install mailcatcher`
+  # If installation fails on Mac, see https://github.com/sj26/mailcatcher/issues/430#issuecomment-737040499
+  # And run this each time you need to start mailcatcher in the background again:
   #   `mailcatcher --ip=0.0.0.0`
 
   # Print deprecation notices to the Rails logger.

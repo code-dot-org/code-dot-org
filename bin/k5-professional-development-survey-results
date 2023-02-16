@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../pegasus/src/env.rb'
+require_relative '../pegasus/src/env'
 require src_dir 'database'
 require 'csv'
 

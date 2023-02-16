@@ -3641,6 +3641,441 @@
           "function 2": {
             "name": "funksjon 2"
           }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "avslutt spelet"
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "min funksjon"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "teikn ei stjerne",
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "parameters": {
+              "points": "poeng",
+              "length": "lengde"
+            }
+          },
+          "draw a circle": {
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde",
+              "repeat": "gjenta"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikn ein trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          },
+          "draw a house": {
+            "name": "teikn eit hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a square": {
+            "name": "teikn eit kvadrat",
+            "parameters": {
+              "length": "lengde",
+              "sides": "Sider"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "teikn ei stjerne",
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "parameters": {
+              "points": "poeng",
+              "length": "lengde"
+            }
+          },
+          "draw a circle": {
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde",
+              "repeat": "gjenta"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikn ein trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          },
+          "draw a house": {
+            "name": "teikn eit hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a square": {
+            "name": "teikn eit kvadrat",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "teikn ei stjerne",
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "parameters": {
+              "points": "poeng",
+              "length": "lengde"
+            }
+          },
+          "draw a circle": {
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde",
+              "repeat": "gjenta"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikn ein trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          },
+          "draw a house": {
+            "name": "teikn eit hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a square": {
+            "name": "teikn eit kvadrat",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "bygg bru"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "fjern bane"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "bygg kort bru"
+          },
+          "build long bridge": {
+            "name": "bygg lang bru"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": "funksjon 1"
+          },
+          "function 2": {
+            "name": "funksjon 2"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "gjer noko"
+          },
+          "draw hexagon": {
+            "name": "teikn sekskant"
+          },
+          "draw line of hexagons": {
+            "name": "teikn ei linje av sekskantar"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "teikn eit kvadrat"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "teikn ei stjerne"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "teikn ei stjerne"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "gjer noko"
+          },
+          "staggered squares": {
+            "name": "forskjøvne kvadrat"
+          },
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "teikn kvadrat"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "teikn eit kvadrat"
+          },
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "teikn kvadrat"
+          },
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "teikn kvadrat"
+          },
+          "do something": {
+            "name": "gjer noko"
+          },
+          "staggered squares": {
+            "name": "forskjøvne kvadrat"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "gjer noko"
+          },
+          "draw triangle": {
+            "name": "teikn trekant"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw hexagon": {
+            "name": "teikn sekskant"
+          },
+          "draw line of hexagons": {
+            "name": "teikn ei linje av sekskantar"
+          },
+          "staggered squares": {
+            "name": "forskjøvne kvadrat"
+          },
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "teikn kvadrat"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "teikn eit kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "draw line of polygons": {
+            "name": "teikn linje av polygon"
+          },
+          "draw polygon": {
+            "name": "teikn polygon"
+          },
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
+          "pick along path": {
+            "name": "plukk opp langs banen"
+          },
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          },
+          "pumpkin square": {
+            "name": "gresskarkvadrat"
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "pick along path": {
+            "name": "plukk opp langs banen"
+          },
+          "pumpkin square": {
+            "name": "gresskarkvadrat"
+          },
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get produce": {
+            "name": "få produksjon"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "pick along path": {
+            "name": "plukk opp langs banen"
+          },
+          "check for corn": {
+            "name": "sjekk for korn"
+          },
+          "corn rectangle": {
+            "name": "kornrektangel"
+          },
+          "lettuce stairs": {
+            "name": "salat trapper"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "pick along path": {
+            "name": "plukk opp langs banen"
+          },
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": "hagekvadrat"
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+            "name": "hagekvadrat"
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": "hagekvadrat"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "avslutt spelet"
+          }
         }
       }
     }

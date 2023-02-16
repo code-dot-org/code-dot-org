@@ -1,0 +1,14 @@
+@use "./constants.module.scss";
+
+.overlay {
+  visibility: visible;
+
+  &.hidden {
+    visibility: hidden;
+  }
+}
+
+:export {
+  width: constants.$visualization-overlay-width;
+  height: constants.$visualization-overlay-height;
+}

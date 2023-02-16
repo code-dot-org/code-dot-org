@@ -4,32 +4,764 @@
       "programming_environments": {
         "weblab": {
           "name": "Веб-лаборатория",
+          "description": "Веб-редактор HTML/CSS.",
           "categories": {
             "html_tags": {
               "name": "HTML тэги"
+            },
+            "css_properties": {
+              "name": "Свойства CSS"
             }
           }
         },
         "gamelab": {
           "name": "Лаборатория игр",
+          "description": "Лаборатория Игр - это среда программирования, в которой вы можете создавать захватывающие игры и анимацию. Нарисуйте своих персонажей, напишите рабочий код с помощью блоков или JavaScript, а затем поделитесь своей игрой за считанные секунды.",
           "categories": {
             "game_lab": {
-              "name": "Лаборатория игр"
+              "name": "Лаборатория игр",
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт (аним. изображения)"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт (аним. изображения)"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Черно-белый"
+                    }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Строка"
+                    },
+                    "loop": {
+                      "type": "Булево выражение"
+                    }
+                  },
+                  "short_description": "Воспроизводит звуковой файл MP3, находящийся по указанному URL-адресу."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Строка"
+                    },
+                    "gender": {
+                      "type": "Строка"
+                    },
+                    "language": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "spaceButtonVisible": {
+                      "type": "Булево выражение"
+                    },
+                    "dpadVisible": {
+                      "type": "Булево выражение"
+                    },
+                    "dpadFourWay": {
+                      "type": "Булево выражение"
+                    },
+                    "mobileOnly": {
+                      "type": "Булево выражение"
+                    }
+                  }
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Строка"
+                    }
+                  }
+                }
+              }
             },
             "sprites": {
-              "name": "Спрайты"
+              "name": "Спрайты",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Спираль"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Строка"
+                    },
+                    "xOffset": {
+                      "type": "Число"
+                    },
+                    "yOffset": {
+                      "type": "Число"
+                    },
+                    "width/radius": {
+                      "type": "Число"
+                    },
+                    "height": {
+                      "type": "Число"
+                    },
+                    "rotationOffset": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Число"
+                    },
+                    "angle": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "createSprite": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "width": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    },
+                    "height": {
+                      "type": "Число"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Группы"
+              "name": "Группы",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт (аним. изображения)"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт (аним. изображения)"
+                    }
+                  }
+                },
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Спрайт (аним. изображения)"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Строка"
+                    },
+                    "yOffset": {
+                      "type": "Число"
+                    },
+                    "width/radius": {
+                      "type": "Число"
+                    },
+                    "height": {
+                      "type": "Число"
+                    },
+                    "rotationOffset": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Цвет"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Булево выражение"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Число"
+                    },
+                    "angle": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Цвет"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Булево выражение"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Число"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Рисование"
+              "name": "Рисование",
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    },
+                    "w": {
+                      "type": "Число"
+                    },
+                    "h": {
+                      "type": "Число"
+                    },
+                    "start": {
+                      "type": "Число"
+                    },
+                    "stop": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    },
+                    "w": {
+                      "type": "Число"
+                    },
+                    "h": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Число"
+                    },
+                    "y1": {
+                      "type": "Число"
+                    },
+                    "x2": {
+                      "type": "Число"
+                    },
+                    "y2": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    },
+                    "w": {
+                      "type": "Число"
+                    },
+                    "h": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    },
+                    "sides": {
+                      "type": "Число"
+                    },
+                    "size": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Число"
+                    },
+                    "g": {
+                      "type": "Число"
+                    },
+                    "b": {
+                      "type": "Число"
+                    },
+                    "a": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Звезда"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Число"
+                    },
+                    "y1": {
+                      "type": "Число"
+                    },
+                    "x2": {
+                      "type": "Число"
+                    },
+                    "y2": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "str": {
+                      "type": "Строка"
+                    },
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    },
+                    "width": {
+                      "type": "Число"
+                    },
+                    "height": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Строка"
+                    },
+                    "vert": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Число"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "name": "Управление",
+              "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Математика"
+              "name": "Математика",
+              "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Число"
+                    },
+                    "value2": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "type": "number",
+                      "description": "Возвращено минимальное число"
+                    },
+                    "max": {
+                      "type": "number",
+                      "description": "Возвращено максимальное число"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "type": "number",
+                      "description": "Возвращено минимальное число"
+                    },
+                    "max": {
+                      "type": "number",
+                      "description": "Возвращено максимальное число"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Переменные"
+              "name": "Переменные",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Присваивает значение существующей переменной. Например, x = 0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "Объявляет переменную с данным именем после \" Var \", и присваивает его значение на правой части выражения"
+                },
+                "substring": {
+                  "palette_params": {
+                    "start": {
+                      "type": "number"
+                    },
+                    "end": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
             },
             "functions": {
               "name": "функции"
@@ -40,25 +772,930 @@
           "name": "Лаборатория приложений",
           "description": "App Lab является средой программирования, в которой можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков или JavaScript и смотри результат. После этого в считанные секунды приложением можно поделиться.",
           "categories": {
+            "ui_controls": {
+              "name": "Элементы управления интерфейса пользователя",
+              "expressions": {
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Строка"
+                    },
+                    "property": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Сжатие и рост"
+                    }
+                  },
+                  "palette_params": {
+                    "type": {
+                      "type": "Строка"
+                    },
+                    "id": {
+                      "type": "Строка"
+                    },
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Булево выражение"
+                    }
+                  },
+                  "short_description": "Воспроизводит звуковой файл MP3, находящийся по указанному URL-адресу."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Строка"
+                    },
+                    "gender": {
+                      "type": "Строка"
+                    },
+                    "language": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Число"
+                    },
+                    "g": {
+                      "type": "Число"
+                    },
+                    "b": {
+                      "type": "Число"
+                    },
+                    "a": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setPosition": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Строка"
+                    },
+                    "property": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "setSize": {
+                  "palette_params": {
+                    "height": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "canvas": {
+              "name": "Холст",
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "radius": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "createCanvas": {
+                  "palette_params": {
+                    "[width]": {
+                      "type": "number"
+                    },
+                    "[height]": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "[width]": {
+                      "type": "number"
+                    },
+                    "[height]": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "number"
+                    },
+                    "y1": {
+                      "type": "number"
+                    },
+                    "x2": {
+                      "type": "number"
+                    },
+                    "y2": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "alphaValue": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "blueValue": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "greenValue": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "red": {
+                      "type": "number"
+                    },
+                    "green": {
+                      "type": "number"
+                    },
+                    "blue": {
+                      "type": "number"
+                    },
+                    "alpha": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "redValue": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "setStrokeWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Данные"
+              "name": "Данные",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "Объекта"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "Объекта"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "Объекта"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "Объекта"
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Строка"
+                    },
+                    "column": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "name": {
+                      "type": "Строка"
+                    },
+                    "id": {
+                      "type": "Строка"
+                    },
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "Объекта"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "Объекта"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "name": "Черепаха",
+              "expressions": {
+                "arcLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    },
+                    "radius": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "arcRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    },
+                    "radius": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "dot": {
+                  "palette_params": {
+                    "radius": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "moveForward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "moveTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Число"
+                    },
+                    "g": {
+                      "type": "number"
+                    },
+                    "b": {
+                      "type": "number"
+                    },
+                    "a": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "penWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "speed": {
+                  "palette_params": {
+                    "value": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "turnLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "turnRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "turnTo": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "name": "Управление",
+              "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "Число"
+                    },
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Математика"
+              "name": "Математика",
+              "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "type": "number",
+                      "description": "Возвращено минимальное число"
+                    },
+                    "max": {
+                      "type": "number",
+                      "description": "Возвращено максимальное число"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "type": "number",
+                      "description": "Возвращено минимальное число"
+                    },
+                    "max": {
+                      "type": "number",
+                      "description": "Возвращено максимальное число"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Переменные"
+              "name": "Переменные",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Выбери свое собственное приключение"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "Объявляет переменную с данным именем после \" Var \", и присваивает его значение на правой части выражения"
+                },
+                "substring": {
+                  "palette_params": {
+                    "start": {
+                      "type": "number"
+                    },
+                    "end": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Строка"
+                    }
+                  },
+                  "return_value": "Нет"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "insertItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "removeItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
             },
             "functions": {
               "name": "функции"
             },
             "advanced": {
-              "name": "Расширенный"
+              "name": "Расширенный",
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Строка"
+                    },
+                    "css": {
+                      "type": "Строка"
+                    }
+                  }
+                }
+              }
+            },
+            "maker": {
+              "name": "Изготовитель",
+              "expressions": {
+                "createButton": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "createLed": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "pinMode": {
+                  "palette_params": {
+                    "pin": {
+                      "type": "Число"
+                    },
+                    "mode": {
+                      "type": "Строка"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "isPressed": {
+                  "return_value": "Булево выражение"
+                },
+                "buzzer.frequency": {
+                  "palette_params": {
+                    "frequency": {
+                      "type": "number"
+                    },
+                    "duration": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "buzzer.note": {
+                  "palette_params": {
+                    "duration": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "color": {
+                  "palette_params": {
+                    "red": {
+                      "type": "number"
+                    },
+                    "green": {
+                      "type": "number"
+                    },
+                    "blue": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "intensity": {
+                  "palette_params": {
+                    "brightness": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "led.blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "led.pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Булево выражение"
+                }
+              }
             }
           }
         },
         "spritelab": {
           "name": "Лаборатория Спрайтов",
+          "description": "Лаборатория Спрайтов - это блочная среда программирования, в которой вы можете создавать интерактивные проекты.",
           "categories": {
             "sprites": {
               "name": "Спрайты"
@@ -102,7 +1739,39 @@
           }
         },
         "javalab": {
-          "name": "Java Lab"
+          "name": "Java Lab",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Ярлыки Java Лаборатории "
+            },
+            "general": {
+              "name": "Основы Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Структуры Управления"
+            },
+            "data_structures": {
+              "name": "Структуры Данных"
+            }
+          }
         }
       }
     }

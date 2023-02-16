@@ -16,39 +16,39 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'tracking_pixel_url' do
     # hoc
-    assert_equal '//test.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Script.get_from_cache(Script::HOC_2013_NAME))
+    assert_equal '//test.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Unit.get_from_cache(Unit::HOC_2013_NAME))
 
-    assert_equal '//test.code.org/api/hour/begin_frozen.png', tracking_pixel_url(Script.get_from_cache(Script::FROZEN_NAME))
-    assert_equal '//test.code.org/api/hour/begin_course4.png', tracking_pixel_url(Script.get_from_cache(Script::COURSE4_NAME))
-    assert_equal '//test.code.org/api/hour/begin_artist.png', tracking_pixel_url(Script.get_from_cache(Script::ARTIST_NAME))
+    assert_equal '//test.code.org/api/hour/begin_frozen.png', tracking_pixel_url(Unit.get_from_cache(Unit::FROZEN_NAME))
+    assert_equal '//test.code.org/api/hour/begin_course4.png', tracking_pixel_url(Unit.get_from_cache(Unit::COURSE4_NAME))
+    assert_equal '//test.code.org/api/hour/begin_artist.png', tracking_pixel_url(Unit.get_from_cache(Unit::ARTIST_NAME))
   end
 
   test 'hoc_finish_url' do
     # hoc
-    assert_equal '//test.code.org/api/hour/finish', Script.get_from_cache(Script::HOC_2013_NAME).hoc_finish_url
+    assert_equal '//test.code.org/api/hour/finish', Unit.get_from_cache(Unit::HOC_2013_NAME).hoc_finish_url
 
-    assert_equal '//test.code.org/api/hour/finish/frozen', Script.get_from_cache(Script::FROZEN_NAME).hoc_finish_url
-    assert_equal '//test.code.org/api/hour/finish/course4', Script.get_from_cache(Script::COURSE4_NAME).hoc_finish_url
-    assert_equal '//test.code.org/api/hour/finish/starwars', Script.get_from_cache(Script::STARWARS_NAME).hoc_finish_url
-    assert_equal '//test.code.org/api/hour/finish/artist', Script.get_from_cache(Script::ARTIST_NAME).hoc_finish_url
+    assert_equal '//test.code.org/api/hour/finish/frozen', Unit.get_from_cache(Unit::FROZEN_NAME).hoc_finish_url
+    assert_equal '//test.code.org/api/hour/finish/course4', Unit.get_from_cache(Unit::COURSE4_NAME).hoc_finish_url
+    assert_equal '//test.code.org/api/hour/finish/starwars', Unit.get_from_cache(Unit::STARWARS_NAME).hoc_finish_url
+    assert_equal '//test.code.org/api/hour/finish/artist', Unit.get_from_cache(Unit::ARTIST_NAME).hoc_finish_url
   end
 
   test 'script name instead of lesson name in header for HOC' do
     stubs(:current_user).returns(nil)
-    script_level = Script.find_by_name(Script::HOC_NAME).get_script_level_by_chapter 1
+    script_level = Unit.find_by_name(Unit::HOC_NAME).get_script_level_by_chapter 1
     assert_equal 'Classic Maze', script_level.lesson.summarize[:title]
   end
 
   test 'show lesson name in header for multi-lesson script' do
     stubs(:current_user).returns(nil)
-    script = Script.find_by_name(Script::COURSE4_NAME)
+    script = Unit.find_by_name(Unit::COURSE4_NAME)
     script_level = script.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
     assert_equal "Lesson 3: #{script_level.lesson.name}", script_level.lesson.summarize[:title]
   end
 
   test 'show lesson position in header for default script' do
     stubs(:current_user).returns(nil)
-    script_level = Script.twenty_hour_unit.script_levels.fifth
+    script_level = Unit.twenty_hour_unit.script_levels.fifth
     assert_equal 'Lesson 2: The Maze', script_level.lesson.summarize[:title]
   end
 

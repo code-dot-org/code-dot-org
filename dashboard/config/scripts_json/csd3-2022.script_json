@@ -10,7 +10,8 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "b5b0c936-3bc6-4e69-8796-e205d103151f"
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -19,7 +20,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Teacher Survey"
+          "buttonText": "Teacher Survey",
+          "key": "028e71f9-ebae-48ab-9c69-d616fa7d8165"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -37,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-31 19:46:38 UTC",
+    "serialized_at": "2023-02-01 18:20:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -17783,7 +17785,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "Additional information provided as input to a block to customize it's functionality",
+      "definition": "Additional information provided as input to a block to customize its functionality",
       "properties": {
       },
       "seeding_key": {

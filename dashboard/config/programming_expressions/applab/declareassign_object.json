@@ -8,7 +8,7 @@
     {
       "name": "Profile Object",
       "description": "Creates an object to store profile information",
-      "code": "```\nvar myProfile = {\r\n\t\"name\": \"Michelle\",\r\n    \"age\": \"17\",\r\n    \"interests\": \"Computer science, playing music, basketball\",\r\n    \"favorite food\": \"seafood tacos\"\r\n}\n```",
+      "code": "```\nvar myProfile = {\n\t\"name\": \"Michelle\",\n    \"age\": \"17\",\n    \"interests\": \"Computer science, playing music, basketball\",\n    \"favorite food\": \"seafood tacos\"\n}\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",
@@ -25,7 +25,7 @@
     }
   ],
   "return_value": "An object with the pair \"key\": \"value\" stored in the object",
-  "short_description": "Declare an Object\r\nCategory: Variables",
+  "short_description": "Declare an Object",
   "syntax": "var object = {\"key\": \"value\"};",
   "tips": "- The `keys` in a dictionary must be unique.\r\n\t- For example: `var dictionary = {\"orange\": \"a color\", \"orange\": \"a fruit\"}` would return an error\r\n- Objects are similar to arrays in the following ways:\r\n\t- Both allow you to store a collection of data\r\n\t- You can add elements to both an object and an array\r\n\t- You use a single variable to access the entire collection of variables\r\n- Objects are different from arrays in the following ways:\r\n\t- Arrays store _ordered_ information, and you can access each element by its index in the array\r\n\t- Objects tore _unordered_ information, and you can access each element by it's key value"
 }

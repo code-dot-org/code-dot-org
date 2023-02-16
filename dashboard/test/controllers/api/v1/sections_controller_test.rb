@@ -52,7 +52,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CourseOffering.add_course_offering(@csp_unit_group_soft_launched)
     @csp_unit_group.reload
 
-    Script.clear_cache
+    Unit.clear_cache
   end
 
   test 'logged out cannot list sections' do
@@ -651,7 +651,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @beta_unit_group.course_version.id,
-      unit_id: 'MALYON' # Script IDs are numeric
+      unit_id: 'MALYON' # Unit IDs are numeric
     }
     assert_response :forbidden
   end
@@ -848,7 +848,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: script_id is not updated if invalid" do
-    Script.stubs(:course_assignable?).returns(false)
+    Unit.stubs(:course_assignable?).returns(false)
 
     sign_in @teacher
     section = create(:section, user: @teacher, script_id: nil)

@@ -31,6 +31,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   test 'script resources PDF includes resources from all lessons' do
     script = create(:script, seeded_from: Time.now)
     lesson_group = create(:lesson_group, script: script)
+    FileUtils.stubs(:cp)
 
     Dir.mktmpdir('script resources pdf test') do |tmpdir|
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.empty?}
@@ -63,6 +64,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
     lesson.resources << verified_teacher_resource
     lesson_group.lessons << lesson
     script.reload
+    FileUtils.stubs(:cp)
 
     Dir.mktmpdir('script resources pdf test') do |tmpdir|
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.empty?}

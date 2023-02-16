@@ -46,6 +46,503 @@
         "ai-training/oceans/unversioned": {
           "type": "Videó"
         },
+        "curriculum_guide/coursed/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Tanári fórum"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Grafikus programozás",
+          "type": "Értékelés"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Grafikus programozás"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Váltó programozás"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Videó"
+        },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
+        "feeling_faces/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Feltételek kártyákkal"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Feltételek kártyákkal"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Feltételek kártyákkal",
+          "type": "Értékelés"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Feltételek kártyákkal"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Feltételek kártyákkal"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
+          "type": "Projektútmutató"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Tanári fórum"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Videó"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Videó"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Videó"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Videó"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Videó"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet",
+          "type": "Értékelés"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Az internet"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "Rubrika"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Tanári fórum"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Videó"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Értékelés"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Videó"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "Rubrika"
+        },
+        "all_resources/courseb/2022": {
+          "url": "/s/courseb-2022/resources"
+        },
+        "all_standards/courseb/2022": {
+          "url": "/s/courseb-2022/standards"
+        },
+        "all_vocabulary/courseb/2022": {
+          "url": "/s/courseb-2022/vocab"
+        },
+        "common_core_and_ngss_guidance/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Tanári fórum"
+        },
+        "virtual_lesson_modifications/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
+        },
+        "digital_trails_animal_tracks/courseb/2022": {
+          "name": "Digitális nyomvonalak: Állati pályák",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+        },
+        "digital_trails_digital_trail_squares/courseb/2022": {
+          "name": "Digitális nyomvonalak: Digitális nyomvonalak négyzetei",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+        },
+        "digital_trails_follow_the_digital_trail/courseb/2022": {
+          "name": "Digitális nyomvonalak: Kövesse a digitális nyomvonalat",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital_trails_lesson_slides/courseb/2022": {
+          "name": "Digitális nyomvonalak: Diák a leckékhez",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "feeling_faces_emotion_image/courseb/2022": {
+          "name": "Érzelem az arcokon - képek",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Térkép tevékenység"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+        },
+        "20_20_20_rule/courseb/2022": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "drag_and_drop_practice/courseb/2022": {
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "feeling_faces/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Videó"
+        },
+        "compass_rose/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
+        },
+        "feeling_faces_-_emotion_image/courseb/2022": {
+          "name": "Érzelem az arcokon - érzelmek képei",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "happy_map_game_pieces/courseb/2022": {
+          "name": "Boldog Térkép Játék Darabok",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Videó"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Ciklikusság",
+          "url": "https://youtu.be/JoKTqHCni0M"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Ciklikusság",
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Ciklikusság",
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Értékelés"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Ciklikusság",
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+        },
+        "cs_fundamentals_main_activity_tips/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Videó"
+        },
+        "the_right_app_scenarios/courseb/2022": {
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "A nagy esemény",
+          "url": "https://www.youtube.com/watch?v=XoApWo-IrI4"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Értékelés"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "the_big_event_courses_a_b_/courseb/2022": {
+          "name": "A nagy esemény (A, B tanfolyamok)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "play_lab_project_planning_guide/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
+        },
+        "play_lab_project_planning_guide_1/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Tanári fórum"
+        },
+        "pair_programming/express/2022": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Videó"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Videó"
+        },
+        "turns_angles/express/2022": {
+          "type": "Videó"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Videó"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
+        "pair_programming_video/express/2022": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Videó"
+        },
+        "variables/express/2022": {
+          "name": "változók"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "Rubrika"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2022": {
+          "type": "Projektútmutató"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Tanári fórum"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Videó"
+        },
+        "feeling_faces/pre-express/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Videó"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Videó"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Tanári fórum"
+        },
+        "20_20_20_rule/coursea/2022": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Videó"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Videó"
+        },
+        "feeling_faces_-_emotion_image/coursea/2022": {
+          "name": "Érzelem az arcokon - érzelmek képei"
+        },
+        "happy_map_game_pieces/coursea/2022": {
+          "name": "Boldog Térkép Játék Darabok",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Vidám térképek"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Videó"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Videó"
+        },
+        "feeling_faces_emotion_image/coursea/2022": {
+          "name": "Érzelem az arcokon - képek",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2022": {
+          "name": "Érzelem az arcokon - érzelmek képei",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair-programming/coursea/2022": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Videó"
+        },
+        "csf_lesson_recommendations/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Videó"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "A nagy esemény"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Értékelés"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "the_big_event_courses_a_b_/coursea/2022": {
+          "name": "A nagy esemény (A, B tanfolyamok)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "cs_fundamentals_main_activity_tips/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Tanári fórum"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "A robot barátaim"
+        },
+        "cs_fundamentals_main_activity_tips/coursec/2022": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Videó"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "A nagy esemény"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Értékelés"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Videó"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Bináris karkötők"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Bináris karkötők"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Bináris karkötők"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Bináris karkötők",
+          "type": "Értékelés"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Bináris karkötők"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Tanári fórum"
+        },
         "representing_information/csd/2022": {
           "name": "Az információ ábrázolása"
         },
@@ -96,9 +593,6 @@
         },
         "make_a_recommendation_2/csd/2022": {
           "type": "Projektútmutató"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "Tanári fórum"
         },
         "intro_to_problem_solving/csd/2022": {
           "name": "Bevezetés a problémamegoldásba"
@@ -575,16 +1069,20 @@
           "type": "Rubrika"
         },
         "lesson_plans/courseb/2018": {
-          "name": "Óravázlatok"
+          "name": "Óravázlatok",
+          "url": "https://curriculum.code.org/csf-18/courseb/"
         },
         "standard_mappings/courseb/2018": {
-          "name": "Standard leképezések"
+          "name": "Standard leképezések",
+          "url": "https://curriculum.code.org/csf-18/courseb/standards/"
         },
         "teacher_forum/courseb/2018": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/courseb/2018": {
-          "name": "Szótár"
+          "name": "Szótár",
+          "url": "https://curriculum.code.org/csf-18/courseb/vocab/"
         },
         "lesson_plans/coursea/2018": {
           "name": "Óravázlatok"
@@ -605,7 +1103,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursed/2018": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursed/2018": {
           "name": "Szótár"
@@ -617,7 +1116,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursef/2018": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursef/2018": {
           "name": "Szótár"
@@ -629,7 +1129,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/express/2018": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/express/2018": {
           "name": "Szótár"
@@ -641,7 +1142,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursee/2018": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursee/2018": {
           "name": "Szótár"
@@ -653,7 +1155,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursec/2018": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursec/2018": {
           "name": "Szótár"
@@ -745,7 +1248,8 @@
           "name": "Szótár"
         },
         "curriculum_guide/coursea/2019": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursea/2019": {
           "name": "Óravázlatok"
@@ -760,22 +1264,28 @@
           "name": "Szótár"
         },
         "curriculum_guide/courseb/2019": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/courseb/2019": {
-          "name": "Óravázlatok"
+          "name": "Óravázlatok",
+          "url": "https://curriculum.code.org/csf-19/courseb/"
         },
         "standard_mappings/courseb/2019": {
-          "name": "Standard leképezések"
+          "name": "Standard leképezések",
+          "url": "https://curriculum.code.org/csf-19/courseb/standards/"
         },
         "teacher_forum/courseb/2019": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/courseb/2019": {
-          "name": "Szótár"
+          "name": "Szótár",
+          "url": "https://curriculum.code.org/csf-19/courseb/vocab/"
         },
         "curriculum_guide/coursed/2019": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursed/2019": {
           "name": "Óravázlatok"
@@ -784,13 +1294,15 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursed/2019": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursed/2019": {
           "name": "Szótár"
         },
         "curriculum_guide/coursef/2019": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursef/2019": {
           "name": "Óravázlatok"
@@ -799,13 +1311,15 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursef/2019": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursef/2019": {
           "name": "Szótár"
         },
         "curriculum_guide/coursee/2019": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursee/2019": {
           "name": "Óravázlatok"
@@ -814,7 +1328,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursee/2019": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursee/2019": {
           "name": "Szótár"
@@ -826,13 +1341,15 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/express/2019": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/express/2019": {
           "name": "Szótár"
         },
         "curriculum_guide/coursec/2019": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursec/2019": {
           "name": "Óravázlatok"
@@ -841,7 +1358,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursec/2019": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursec/2019": {
           "name": "Szótár"
@@ -1010,7 +1528,20 @@
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Versek listája",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Tanterv útmutató"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Bevezetési Útmutató"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Tanári fórum"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Videó"
@@ -1024,15 +1555,6 @@
         "pause_and_think_online/coursef/2021": {
           "type": "Videó"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Szórakozás a For ciklussal"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Szórakozás a For ciklussal"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Szórakozás a For ciklussal"
-        },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Szórakozás a For ciklussal"
         },
@@ -1040,147 +1562,333 @@
           "name": "Szórakozás a For ciklussal",
           "type": "Értékelés"
         },
-        "ai-ml/coursef/2021": {
-          "type": "Videó"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Szórakozás a For ciklussal"
         },
-        "ai-training/coursef/2021": {
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Szórakozás a For ciklussal"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Szórakozás a For ciklussal"
+        },
+        "ai-ml/coursef/2021": {
           "type": "Videó"
         },
         "ai-societal/coursef/2021": {
           "type": "Videó"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Az internet"
+        "ai-training/coursef/2021": {
+          "type": "Videó"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
           "type": "Értékelés"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Az internet"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "type": "Rubrika"
         },
-        "implementation_guide/coursef/2021": {
-          "name": "Bevezetési Útmutató"
+        "2021_change_log/courseb/2021": {
+          "name": "2021 Változások listája"
         },
-        "curriculum_guide_1/coursef/2021": {
-          "name": "Tanterv útmutató"
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "Common Core és NGSS útmutató",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
-        "teacher_forum_1/coursef/2021": {
-          "name": "Tanári fórum"
+        "course_vocabulary/courseb/2021": {
+          "name": "Tanfolyami szójegyzés",
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Sprite Lab dokumentációja"
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "Tantárgyak közötti kiterjesztések"
         },
-        "mimi-activity/courseb/2021": {
-          "name": "Gyerünk, gyerünk!"
+        "csta_standards_mapping/courseb/2021": {
+          "name": "CSTA (számítástechnika-tanárok egyesülete) leképezése",
+          "url": "https://studio.code.org/s/courseb-2021/standards"
         },
-        "mimi-debugging/courseb/2021": {
-          "name": "Gyerünk, gyerünk!"
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
-        "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Gyerünk, gyerünk!"
-        },
-        "teacher-video-move-it/courseb/2021": {
-          "name": "Gyerünk, gyerünk!"
-        },
-        "pair-programming-vid/courseb/2021": {
-          "name": "Páros programozás"
-        },
-        "wiggles_-_gonoodle/courseb/2021": {
-          "type": "Videó"
-        },
-        "unspotted_bugs/courseb/2021": {
-          "type": "Videó"
-        },
-        "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "Ciklikusság"
-        },
-        "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "Ciklikusság"
-        },
-        "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "Ciklikusság",
-          "type": "Értékelés"
-        },
-        "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "Ciklikusság"
-        },
-        "common-sense-media-pause-think/courseb/2021": {
-          "type": "Videó"
-        },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "A nagy esemény",
-          "type": "Videó"
-        },
-        "csf-the-big-event-assessment/courseb/2021": {
-          "name": "A nagy esemény",
-          "type": "Értékelés"
-        },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "A nagy esemény"
+        "debugging_guide/courseb/2021": {
+          "name": "Hibakeresési útmutató"
         },
         "implementation_guide/courseb/2021": {
           "name": "Bevezetési Útmutató"
         },
-        "curriculum_guide_1/courseb/2021": {
-          "name": "Tanterv útmutató"
+        "lesson_type_guide/courseb/2021": {
+          "name": "Lecketípus útmutató"
         },
         "teacher_forum_1/courseb/2021": {
           "name": "Tanári fórum"
         },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Páros programozás"
+        "virtual_lesson_modifications/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
-        "wiggles-go_noodle/coursea/2021": {
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "Digitális nyomvonalak: Állati pályák",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "Digitális nyomvonalak: Digitális nyomvonalak négyzetei",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "Digitális nyomvonalak: Kövesse a digitális nyomvonalat",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "Digitális nyomvonalak: Diák a leckékhez",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Érzelem az arcokon - képek",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Térkép tevékenység"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+        },
+        "20_20_20_rule/courseb/2021": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "class-section-video/courseb/2021": {
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "jigsaw/courseb/2021": {
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Videó"
+        },
+        "compass-rose/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
+        },
+        "feeling_faces_-_emotion_image/courseb/2021": {
+          "name": "Érzelem az arcokon - érzelmek képei",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "Boldog Térkép Játék Darabok",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Videó"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Ciklikusság",
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Ciklikusság",
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Ciklikusság",
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Értékelés"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Ciklikusság",
+          "url": "https://youtu.be/JoKTqHCni0M"
+        },
+        "csf-lesson-recommend/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "type": "Videó"
+        },
+        "the-right-app-scenarios/courseb/2021": {
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Értékelés"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "A nagy esemény (A, B tanfolyamok)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "A nagy esemény",
+          "url": "https://www.youtube.com/watch?v=XoApWo-IrI4",
+          "type": "Videó"
+        },
+        "play_lab_project_planning_guide/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
+        },
+        "play_lab_project_planning_guide_1/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "Tanfolyami szójegyzés"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Tanári fórum"
+        },
+        "20_20_20_rule/coursea/2021": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
           "type": "Videó"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Videó"
+        },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "Érzelem az arcokon - érzelmek képei"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "Boldog Térkép Játék Darabok",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Vidám térképek"
         },
+        "20_20_20_rule_1/coursea/2021": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
         "wiggles_-_gonoodle/coursea/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Videó"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "type": "Videó"
         },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "Érzelem az arcokon - képek",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "Érzelem az arcokon - érzelmek képei",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Érzelem az arcokon - képek",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
         "pair-programming/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Videó"
+        },
+        "csf_lesson_recommendations/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Érzelem az arcokon - képek",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "type": "Videó"
         },
-        "unplugged-video-big-event/coursea/2021": {
-          "name": "A nagy esemény"
+        "csf_lesson_recommendations_1/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Érzelem az arcokon - képek",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "Értékelés"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "Érzelem az arcokon - érzelmek képei",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "A nagy esemény (A, B tanfolyamok)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "unplugged-video-big-event/coursea/2021": {
           "name": "A nagy esemény"
         },
-        "implementation_guide/coursea/2021": {
+        "csf-lesson-recommend/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csf_lesson_recommendations_2/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "Érzelem az arcokon - érzelmek képei",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "Tanfolyami szójegyzés"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "implementation_guide/coursec/2021": {
           "name": "Bevezetési Útmutató"
         },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "Tanterv útmutató"
-        },
-        "teacher_forum_1/coursea/2021": {
+        "teacher_forum_1/coursec/2021": {
           "name": "Tanári fórum"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "A robot barátaim"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "A robot barátaim"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "A robot barátaim"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -1189,27 +1897,39 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "A robot barátaim"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "A robot barátaim"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "A robot barátaim"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Videó"
         },
-        "unplugged-video-big-event/coursec/2021": {
-          "name": "A nagy esemény"
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Érzelem az arcokon - képek"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "Értékelés"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "A nagy esemény"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "Videó"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Bináris karkötők"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Bináris karkötők"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -1219,56 +1939,64 @@
           "name": "Bináris karkötők",
           "type": "Értékelés"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Bináris karkötők"
         },
-        "implementation_guide/coursec/2021": {
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Bináris karkötők"
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "Tanfolyami szójegyzés"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "implementation_guide/coursed/2021": {
           "name": "Bevezetési Útmutató"
         },
-        "curriculum_guide_1/coursec/2021": {
-          "name": "Tanterv útmutató"
-        },
-        "teacher_forum_1/coursec/2021": {
+        "teacher_forum_1/coursed/2021": {
           "name": "Tanári fórum"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Grafikus programozás"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Grafikus programozás"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Grafikus programozás"
-        },
         "activity-answer-graph-paper/coursed/2021": {
+          "name": "Grafikus programozás"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
           "name": "Grafikus programozás"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Grafikus programozás",
           "type": "Értékelés"
         },
-        "assessment-answer-graph-paper/coursed/2021": {
+        "graph-paper-programming/coursed/2021": {
+          "name": "Grafikus programozás"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Grafikus programozás"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
           "name": "Grafikus programozás"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "Páros programozás"
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Váltó programozás"
         },
         "relay-assessment/coursed/2021": {
           "name": "Váltó programozás"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Váltó programozás"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Váltó programozás"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Váltó programozás"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Váltó programozás"
         },
         "pause_and_think_online/coursed/2021": {
@@ -1277,39 +2005,37 @@
         "dance-party-playlist/coursed/2021": {
           "name": "Spotify lejátszólista (minden korosztálynak)"
         },
+        "feeling-faces-image/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
         "pause_and_think_online_1/coursed/2021": {
           "type": "Videó"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Feltételek kártyákkal"
         },
-        "lesson-in-action-conditional-cards/coursed/2021": {
+        "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Feltételek kártyákkal"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Feltételek kártyákkal",
           "type": "Értékelés"
         },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
+        "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Feltételek kártyákkal"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Feltételek kártyákkal"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "type": "Projektútmutató"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "Bevezetési Útmutató"
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "Tanterv útmutató"
-        },
-        "teacher_forum_1/coursed/2021": {
+        "teacher_forum_1/express/2021": {
           "name": "Tanári fórum"
         },
         "pair_programming/express/2021": {
           "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Videó"
         },
         "artist_introduction/express/2021": {
@@ -1331,6 +2057,7 @@
           "name": "Spotify lejátszólista (minden korosztálynak)"
         },
         "pair_programming_video/express/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Videó"
         },
         "variables_video/express/2021": {
@@ -1342,22 +2069,38 @@
         "rubric-csf-final-projects/express/2021": {
           "type": "Rubrika"
         },
-        "teacher_forum_1/express/2021": {
+        "teacher_forum_1/pre-express/2021": {
           "name": "Tanári fórum"
         },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Páros programozás"
-        },
         "20_20_20_rule/pre-express/2021": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
           "type": "Videó"
         },
+        "feeling-faces-image/pre-express/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
         "wiggles_-_go_noodle/pre-express/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Videó"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Videó"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Bevezetési Útmutató"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "Tanári fórum"
         },
         "sprite_lab_documentation/coursee/2021": {
@@ -1377,18 +2120,6 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "type": "Rubrika"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Bevezetési Útmutató"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Tanterv útmutató"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "Tanári fórum"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Sprite Lab dokumentációja"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Videó"
@@ -1433,6 +2164,9 @@
         "design_an_ai_app_1/csd/2021": {
           "type": "Rubrika"
         },
+        "teacher_forum/csd/2021": {
+          "name": "Tanári fórum"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Videó"
         },
@@ -1457,9 +2191,6 @@
         },
         "app-presentation/csd/2021": {
           "type": "Rubrika"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "Tanári fórum"
         },
         "internet-of-things-video/csd/2021": {
           "type": "Videó"
@@ -1563,6 +2294,9 @@
         },
         "solve-a-data-problem/csd/2021": {
           "type": "Projektútmutató"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Tanári fórum"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "Síkidomok rajzolása"
@@ -1678,9 +2412,6 @@
         },
         "make_your_own_game/csd/2021": {
           "type": "Rubrika"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Tanári fórum"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "Videó"
@@ -1832,7 +2563,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/pre-express/2020": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/pre-express/2020": {
           "name": "Szótár"
@@ -1844,7 +2576,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/express/2020": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/express/2020": {
           "name": "Szótár"
@@ -1853,16 +2586,20 @@
           "name": "Tanterv útmutató"
         },
         "lesson_plans/courseb/2020": {
-          "name": "Óravázlatok"
+          "name": "Óravázlatok",
+          "url": "https://curriculum.code.org/csf-20/courseb/"
         },
         "standard_mappings/courseb/2020": {
-          "name": "Standard leképezések"
+          "name": "Standard leképezések",
+          "url": "https://curriculum.code.org/csf-20/courseb/standards/"
         },
         "teacher_forum/courseb/2020": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/courseb/2020": {
-          "name": "Szótár"
+          "name": "Szótár",
+          "url": "https://curriculum.code.org/csf-20/courseb/vocab/"
         },
         "curriculum_guide/coursed/2020": {
           "name": "Tanterv útmutató"
@@ -1874,7 +2611,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursed/2020": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursed/2020": {
           "name": "Szótár"
@@ -1889,7 +2627,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursec/2020": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursec/2020": {
           "name": "Szótár"
@@ -1904,7 +2643,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursee/2020": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursee/2020": {
           "name": "Szótár"
@@ -1934,7 +2674,8 @@
           "name": "Standard leképezések"
         },
         "teacher_forum/coursef/2020": {
-          "name": "Tanári fórum"
+          "name": "Tanári fórum",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursef/2020": {
           "name": "Szótár"

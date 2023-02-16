@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Otklanjanje pogrešaka"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Otklanjanje pogrešaka"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Uvjeti"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Otklanjanje pogrešaka"
         },
         "loops/aquatic/unversioned": {
           "word": "Petlje"
@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Otklanjanje pogrešaka"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kôd"
         },
@@ -67,6 +75,72 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/coursed/2022": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Uvjeti"
+        },
+        "variable/coursef/2022": {
+          "word": "Varijabla"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Definiši"
+        },
+        "function/coursee/2022": {
+          "word": "Funkcija"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Uvjeti"
+        },
+        "copyright/coursee/2022": {
+          "word": "Autorska prava"
+        },
+        "define/coursee/2022": {
+          "word": "Definiši"
+        },
+        "debugging/courseb/2022": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "drop/courseb/2022": {
+          "word": "Spuštanje"
+        },
+        "debugging/express/2022": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "conditionals/express/2022": {
+          "word": "Uvjeti"
+        },
+        "function/express/2022": {
+          "word": "Funkcija"
+        },
+        "variable/express/2022": {
+          "word": "Varijabla"
+        },
+        "define/express/2022": {
+          "word": "Definiši"
+        },
+        "drop/pre-express/2022": {
+          "word": "Spuštanje"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "debugging/coursea/2022": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "drop/coursea/2022": {
+          "word": "Spuštanje"
+        },
+        "debugging/coursec/2022": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "binary/coursec/2022": {
+          "word": "Binarno"
         },
         "debugging/csd/2022": {
           "word": "Otklanjanje pogrešaka"
@@ -87,7 +161,24 @@
           "word": "Autorska prava"
         },
         "code/poem-art/unversioned": {
-          "word": "Kôd"
+          "word": "Kôd",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Varijabla"

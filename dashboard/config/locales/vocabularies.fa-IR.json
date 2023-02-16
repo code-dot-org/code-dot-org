@@ -22,15 +22,15 @@
           "word": "اشکال‌زدایی",
           "definition": ""
         },
-        "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/minecraft/unversioned": {
           "word": "",
           "definition": ""
         },
         "loop/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/minecraft/unversioned": {
           "word": "",
           "definition": ""
         },
@@ -42,12 +42,12 @@
           "word": "اشکال‌زدایی",
           "definition": ""
         },
-        "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "function/hero/unversioned": {
           "word": "تابع",
+          "definition": ""
+        },
+        "program/hero/unversioned": {
+          "word": "",
           "definition": ""
         },
         "code/poem-art/2021": {
@@ -142,6 +142,10 @@
           "word": "",
           "definition": ""
         },
+        "code/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "event/dance/unversioned": {
           "word": "",
           "definition": ""
@@ -150,19 +154,7 @@
           "word": "",
           "definition": ""
         },
-        "code/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/aquatic/unversioned": {
           "word": "",
           "definition": ""
         },
@@ -174,8 +166,16 @@
           "word": "شرطی ها",
           "definition": ""
         },
+        "debugging/aquatic/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
         "loops/aquatic/unversioned": {
           "word": "حلقه‌ها",
+          "definition": ""
+        },
+        "program/aquatic/unversioned": {
+          "word": "",
           "definition": ""
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
@@ -262,16 +262,16 @@
           "word": "",
           "definition": ""
         },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/sports/unversioned": {
           "word": "کد",
           "definition": ""
         },
         "debugging/sports/unversioned": {
           "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "event/sports/unversioned": {
+          "word": "",
           "definition": ""
         },
         "program/sports/unversioned": {
@@ -290,16 +290,16 @@
           "word": "",
           "definition": ""
         },
-        "event/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/basketball/unversioned": {
           "word": "",
           "definition": ""
         },
         "debugging/basketball/unversioned": {
           "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "event/basketball/unversioned": {
+          "word": "",
           "definition": ""
         },
         "program/basketball/unversioned": {
@@ -333,6 +333,538 @@
         "machine_learning/oceans/unversioned": {
           "word": "",
           "definition": ""
+        },
+        "algorithm/coursed/2022": {
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
+        },
+        "program/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/coursed/2022": {
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
+        },
+        "debugging/coursed/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "loop/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/coursed/2022": {
+          "word": "برنامه نویسی",
+          "definition": "هنر ایجاد یک برنامه"
+        },
+        "frustrated/coursed/2022": {
+          "word": "ناامید شده",
+          "definition": "احساس ناراحتی یا عصبانیت می‌کنید به این دلیل که چیزی، آنطور که شما می‌خواهید، نیست."
+        },
+        "persistence/coursed/2022": {
+          "word": "پشتکاری و تداوم",
+          "definition": "بار و بارها تلاش کنید، حتی زمانی که کاری بسیار سخت باشد."
+        },
+        "event/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "code/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursed/2022": {
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
+        },
+        "command/coursed/2022": {
+          "word": "دستور",
+          "definition": "یک دستورالعمل برای کامپیوتر، بسیاری از دستورات در کنار هم، الگوریتم‌ها و برنامه‌های کامپیوتری را می‌سازند."
+        },
+        "conditionals/coursed/2022": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "pseudocode/coursed/2022": {
+          "word": "کد ساختگی",
+          "definition": "شرح مراحل در الگوریتم به زبان ساده"
+        },
+        "condition/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "while_loop/coursed/2022": {
+          "word": "حلقه While",
+          "definition": "یک حلقه در حالی که یک شرط درست باشد، به تکرار ادامه می‌دهد."
+        },
+        "until/coursed/2022": {
+          "word": "Until (تا وقتی که)",
+          "definition": "دستوری که به شما بیان کند، کاری را فقط تا جایی انجام دهید که چیزی درست شود."
+        },
+        "sprite/coursef/2022": {
+          "word": "اسپرایت‌",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
+        },
+        "user/coursef/2022": {
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می‌کند."
+        },
+        "algorithm/coursef/2022": {
+          "word": "الگوریتم ",
+          "definition": "لیستی از مراحل برای تکمیل یک کار. "
+        },
+        "behavior/coursef/2022": {
+          "word": "رفتار",
+          "definition": ""
+        },
+        "program/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "variable/coursef/2022": {
+          "word": "متغیر",
+          "definition": "برچسبی برای بخشی از اطلاعات در یک برنامه استفاده می‌شود."
+        },
+        "prompt/coursef/2022": {
+          "word": "انگیزش",
+          "definition": "پیامی روی صفحه کامپیوتر که منتظر ورودی کاربر است."
+        },
+        "input/coursef/2022": {
+          "word": "ورودی",
+          "definition": "اطلاعاتی که کامپیوترها از کاربران دریافت می‌کنند."
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "machine_learning/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "مخفف  سیستم نامگذاری دامنه، این سیستم نام‌های دامنه (مانند example.com) را به آدرس‌های IP (مانند 93.184.216.34) ترجمه می‌کند."
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "DSL/کابل\n",
+          "definition": "روشی برای ارسال اطلاعات با استفاده از کابل‌های تلفن یا تلویزیون."
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "کابل فیبر نوری",
+          "definition": "اتصالی که از نور برای انتقال اطلاعات استفاده می‌کند."
+        },
+        "internet/coursef/2022": {
+          "word": "اینترنت",
+          "definition": "گروهی از کامپیوترها و سرورها که به یکدیگر متصل هستند."
+        },
+        "ip_address/coursef/2022": {
+          "word": "آدرس IP",
+          "definition": "شماره‌ای که به هر موردی که به اینترنت متصل است، اختصاص می‌یابد."
+        },
+        "packets/coursef/2022": {
+          "word": "بسته‌ها",
+          "definition": "تکه‌های کوچکی از اطلاعات که با دقت از تکه‌های بزرگتر اطلاعات تشکیل شده‌اند."
+        },
+        "servers/coursef/2022": {
+          "word": "سرور‌ها",
+          "definition": "کامپیوترهایی که فقط برای ارائه چیزهایی به دیگران وجود دارند."
+        },
+        "url/coursef/2022": {
+          "word": "آدرس اینترنتی",
+          "definition": "یک آدرس قابل حفظ برای پیدا کردن صفحه وب (مانند www.code.org)."
+        },
+        "wi_fi/coursef/2022": {
+          "word": "وای-فای",
+          "definition": "یک روش بی‌سیم برای ارسال اطلاعات با استفاده از امواج رادیویی."
+        },
+        "define/coursef/2022": {
+          "word": "تعریف کن",
+          "definition": "جزئیات مشکلاتی را که در تلاش برای حل آنها هستید را مشخص کنید"
+        },
+        "prepare/coursef/2022": {
+          "word": "آماده کنید",
+          "definition": "برای فعالیتی که قرار است انجام دهید تحقیق کنید، برنامه ریزی کنید و مطالبی/اطلاعاتی را به دست آورید"
+        },
+        "reflect/coursef/2022": {
+          "word": "بازتاب",
+          "definition": "با دقت به چیزی فکر کنید که نتیجه را در آینده بهبود بخشد"
+        },
+        "try/coursef/2022": {
+          "word": "امتحان کنید",
+          "definition": "تلاش کنید کاری انجام دهید"
+        },
+        "behavior/coursee/2022": {
+          "word": "رفتار",
+          "definition": "عملی که یک اسپرایت به طور مداوم انجام می‌دهد تا زمانی که به آن گفته شود که متوقف شود."
+        },
+        "sprite/coursee/2022": {
+          "word": "اسپرایت‌",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
+        },
+        "loop/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursee/2022": {
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
+        },
+        "function/coursee/2022": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "call_a_function/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/coursee/2022": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "while_loop/coursee/2022": {
+          "word": "حلقه While",
+          "definition": "یک حلقه در حالی که یک شرط درست باشد، به تکرار ادامه می‌دهد."
+        },
+        "copyright/coursee/2022": {
+          "word": "حق کپی برداری و نشر",
+          "definition": "حق قانونی انحصاری باید به چاپ، انتشار، اجرا، فیلمبرداری یا ضبط مطالب ادبی، هنری یا موسیقی داده شود و دیگران باید جهت انجام همان عمل توجیه شوند."
+        },
+        "define/coursee/2022": {
+          "word": "تعریف کن",
+          "definition": "جزئیات مشکلاتی را که در تلاش برای حل آنها هستید را مشخص کنید"
+        },
+        "prepare/coursee/2022": {
+          "word": "آماده کنید",
+          "definition": "برای فعالیتی که قرار است انجام دهید تحقیق کنید، برنامه ریزی کنید و مطالبی/اطلاعاتی را به دست آورید"
+        },
+        "reflect/coursee/2022": {
+          "word": "بازتاب",
+          "definition": "با دقت به چیزی فکر کنید که نتیجه را در آینده بهبود بخشد"
+        },
+        "try/coursee/2022": {
+          "word": "امتحان کنید",
+          "definition": "تلاش کنید کاری انجام دهید"
+        },
+        "algorithm/courseb/2022": {
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
+        },
+        "bug/courseb/2022": {
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
+        },
+        "debugging/courseb/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "click/courseb/2022": {
+          "word": "کلیک کنید",
+          "definition": "دکمه ماوس را فشار دهید."
+        },
+        "double_click/courseb/2022": {
+          "word": "دوبار کلیک کنید.",
+          "definition": "دکمه ماوس را خیلی سریع فشار دهید."
+        },
+        "drag/courseb/2022": {
+          "word": "بکشید",
+          "definition": "روی دکمه ماوس کلیک کنید و همانطور که نشانگر ماوس را به مکان جدیدی می‌برید، نگه دارید."
+        },
+        "drop/courseb/2022": {
+          "word": "دراپ (رقص)",
+          "definition": "دکمه ماوس را رها کنید تا آیتمی که کشیده بودید، رها شود."
+        },
+        "program/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/courseb/2022": {
+          "word": "برنامه نویسی",
+          "definition": "هنر ایجاد یک برنامه"
+        },
+        "persistence/courseb/2022": {
+          "word": "پشتکاری و تداوم",
+          "definition": "بار و بارها تلاش کنید، حتی زمانی که کاری بسیار سخت باشد."
+        },
+        "loop/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/courseb/2022": {
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
+        },
+        "event/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/express/2022": {
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
+        },
+        "bug/express/2022": {
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
+        },
+        "debugging/express/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "sequencing/express/2022": {
+          "word": "دنباله",
+          "definition": "قرار دادن دستورات به ترتیب صحیح تا کامپیوترها بتوانند دستورات را بخوانند."
+        },
+        "program/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/express/2022": {
+          "word": "برنامه نویسی",
+          "definition": "هنر ایجاد یک برنامه"
+        },
+        "behavior/express/2022": {
+          "word": "رفتار",
+          "definition": "عملی که یک اسپرایت به طور مداوم انجام می‌دهد تا زمانی که به آن گفته شود که متوقف شود."
+        },
+        "sprite/express/2022": {
+          "word": "اسپرایت‌",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
+        },
+        "event/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "code/express/2022": {
+          "word": "",
+          "definition": "باید کد یا دستورالعملی برای کامپیوتر‌، بنویسید."
+        },
+        "loop/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/express/2022": {
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
+        },
+        "command/express/2022": {
+          "word": "دستور",
+          "definition": "یک دستورالعمل برای کامپیوتر، بسیاری از دستورات در کنار هم، الگوریتم‌ها و برنامه‌های کامپیوتری را می‌سازند."
+        },
+        "condition/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/express/2022": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "while_loop/express/2022": {
+          "word": "حلقه While",
+          "definition": "یک حلقه در حالی که یک شرط درست باشد، به تکرار ادامه می‌دهد."
+        },
+        "until/express/2022": {
+          "word": "Until (تا وقتی که)",
+          "definition": "دستوری که به شما بیان کند، کاری را فقط تا جایی انجام دهید که چیزی درست شود."
+        },
+        "function/express/2022": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "prompt/express/2022": {
+          "word": "انگیزش",
+          "definition": "پیامی روی صفحه کامپیوتر که منتظر ورودی کاربر است."
+        },
+        "variable/express/2022": {
+          "word": "متغیر",
+          "definition": "برچسبی برای بخشی از اطلاعات در یک برنامه استفاده می‌شود."
+        },
+        "for_loop/express/2022": {
+          "word": "حلقه \"for\"",
+          "definition": "حلقه‌هایی هستند که شروع، پایان و افزایش (فاصله گام) از پیش تعیین شده دارند."
+        },
+        "define/express/2022": {
+          "word": "تعریف کن",
+          "definition": "جزئیات مشکلاتی را که در تلاش برای حل آنها هستید را مشخص کنید"
+        },
+        "prepare/express/2022": {
+          "word": "آماده کنید",
+          "definition": "برای فعالیتی که قرار است انجام دهید تحقیق کنید، برنامه ریزی کنید و مطالبی/اطلاعاتی را به دست آورید"
+        },
+        "reflect/express/2022": {
+          "word": "بازتاب",
+          "definition": "با دقت به چیزی فکر کنید که نتیجه را در آینده بهبود بخشد"
+        },
+        "try/express/2022": {
+          "word": "امتحان کنید",
+          "definition": "تلاش کنید کاری انجام دهید"
+        },
+        "click/pre-express/2022": {
+          "word": "کلیک کنید",
+          "definition": "دکمه ماوس را فشار دهید."
+        },
+        "double_click/pre-express/2022": {
+          "word": "دوبار کلیک کنید.",
+          "definition": "دکمه ماوس را خیلی سریع فشار دهید."
+        },
+        "drag/pre-express/2022": {
+          "word": "بکشید",
+          "definition": "روی دکمه ماوس کلیک کنید و همانطور که نشانگر ماوس را به مکان جدیدی می‌برید، نگه دارید."
+        },
+        "drop/pre-express/2022": {
+          "word": "دراپ (رقص)",
+          "definition": "دکمه ماوس را رها کنید تا آیتمی که کشیده بودید، رها شود."
+        },
+        "algorithm/pre-express/2022": {
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
+        },
+        "bug/pre-express/2022": {
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
+        },
+        "debugging/pre-express/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/pre-express/2022": {
+          "word": "برنامه نویسی",
+          "definition": "هنر ایجاد یک برنامه"
+        },
+        "persistence/pre-express/2022": {
+          "word": "پشتکاری و تداوم",
+          "definition": "بار و بارها تلاش کنید، حتی زمانی که کاری بسیار سخت باشد."
+        },
+        "loop/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/pre-express/2022": {
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
+        },
+        "event/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/coursea/2022": {
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
+        },
+        "debugging/coursea/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "click/coursea/2022": {
+          "word": "کلیک کنید",
+          "definition": "دکمه ماوس را فشار دهید."
+        },
+        "double_click/coursea/2022": {
+          "word": "دوبار کلیک کنید.",
+          "definition": "دکمه ماوس را خیلی سریع فشار دهید."
+        },
+        "drag/coursea/2022": {
+          "word": "بکشید",
+          "definition": "روی دکمه ماوس کلیک کنید و همانطور که نشانگر ماوس را به مکان جدیدی می‌برید، نگه دارید."
+        },
+        "drop/coursea/2022": {
+          "word": "دراپ (رقص)",
+          "definition": "دکمه ماوس را رها کنید تا آیتمی که کشیده بودید، رها شود."
+        },
+        "bug/coursea/2022": {
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
+        },
+        "programming/coursea/2022": {
+          "word": "برنامه نویسی",
+          "definition": "هنر ایجاد یک برنامه"
+        },
+        "loop/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursea/2022": {
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
+        },
+        "event/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/coursec/2022": {
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
+        },
+        "bug/coursec/2022": {
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
+        },
+        "debugging/coursec/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "sequencing/coursec/2022": {
+          "word": "دنباله",
+          "definition": "قرار دادن دستورات به ترتیب صحیح تا کامپیوترها بتوانند دستورات را بخوانند."
+        },
+        "persistence/coursec/2022": {
+          "word": "پشتکاری و تداوم",
+          "definition": ""
+        },
+        "programming/coursec/2022": {
+          "word": "برنامه نویسی",
+          "definition": "هنر ایجاد یک برنامه"
+        },
+        "angle/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursec/2022": {
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
+        },
+        "event/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "data/coursec/2022": {
+          "word": "داده‌ها",
+          "definition": ""
+        },
+        "graph/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "binary/coursec/2022": {
+          "word": "",
+          "definition": "راهی برای نمایش اطلاعات، تنها با استفاده از دو گزینه وجود دارد."
         },
         "decode/csd/2022": {
           "word": "",
@@ -371,7 +903,7 @@
           "definition": ""
         },
         "input/csd/2022": {
-          "word": "",
+          "word": "ورودی",
           "definition": ""
         },
         "output/csd/2022": {
@@ -387,8 +919,8 @@
           "definition": ""
         },
         "bug/csd/2022": {
-          "word": "",
-          "definition": ""
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
         },
         "debugging/csd/2022": {
           "word": "اشکال‌زدایی",
@@ -404,7 +936,7 @@
         },
         "variable/csd/2022": {
           "word": "متغیر",
-          "definition": ""
+          "definition": "برچسبی برای بخشی از اطلاعات در یک برنامه استفاده می‌شود."
         },
         "dot_notation/csd/2022": {
           "word": "",
@@ -415,7 +947,7 @@
           "definition": ""
         },
         "sprite/csd/2022": {
-          "word": "",
+          "word": "اسپرایت‌",
           "definition": ""
         },
         "boolean_expression/csd/2022": {
@@ -476,7 +1008,7 @@
         },
         "copyright/csd/2022": {
           "word": "حق کپی برداری و نشر",
-          "definition": ""
+          "definition": "حق قانونی انحصاری باید به چاپ، انتشار، اجرا، فیلمبرداری یا ضبط مطالب ادبی، هنری یا موسیقی داده شود و دیگران باید جهت انجام همان عمل توجیه شوند."
         },
         "relevant/csd/2022": {
           "word": "",
@@ -499,8 +1031,8 @@
           "definition": ""
         },
         "user/csd/2022": {
-          "word": "",
-          "definition": ""
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می‌کند."
         },
         "usability/csd/2022": {
           "word": "",
@@ -511,7 +1043,7 @@
           "definition": ""
         },
         "user_interface/csd/2022": {
-          "word": "",
+          "word": "واسطه کاربر",
           "definition": ""
         },
         "feature/csd/2022": {
@@ -595,532 +1127,532 @@
           "definition": ""
         },
         "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اسپرایت",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر. "
         },
         "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می‌کند."
         },
         "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگوریتم",
+          "definition": "لیستی از مراحل برای تکمیل یک کار. "
+        },
+        "behavior/coursef/2021": {
+          "word": "رفتار",
+          "definition": "عملی که یک اسپرابت اسپرایت به طور مداوم انجام میدهد تا زمانی که به آن گفته شود متوقف شود."
+        },
+        "program/coursef/2021": {
+          "word": "برنامه ",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می تواند توسط یک ماشین اجرا شود."
         },
         "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "variable/coursef/2021": {
           "word": "متغیر",
-          "definition": ""
+          "definition": "برچسبی برای بخشی از اطلاعات در یک برنامه استفاده می‌شود."
         },
         "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "انگیزش",
+          "definition": "پیامی روی صفحه کامپیوتر که منتظر ورودی کاربر است."
         },
         "input/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ورودی",
+          "definition": "اطلاعاتی که کامپیوترها از کاربران دریافت می‌کنند."
         },
         "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه",
+          "definition": "عمل انجام دادن کاری به طور مکرر."
         },
         "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
         },
         "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه \"for\"",
+          "definition": "حلقه‌هایی هستند که شروع، پایان و افزایش (فاصله گام) از پیش تعیین شده دارند."
         },
         "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "مدل‌ها و شبیه سازی‌ها",
+          "definition": "برنامه ای که ویژگی‌های کلیدی یک رویداد دنیای واقعی را تکرار یا تقلید می‌کند تا رفتار آن را بدون هزینه، زمان یا خطر اجرای یک آزمایش در زندگی واقعی بررسی کند."
         },
         "machine_learning/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "یادگیری ماشینی",
+          "definition": "چگونه کامپیوترها الگوها را تشخیص می‌دهند و بدون برنامه ریزی صریح تصمیم می‌گیرند"
         },
         "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "DNS",
+          "definition": "مخفف  سیستم نامگذاری دامنه، این سیستم نام‌های دامنه (مانند example.com) را به آدرس‌های IP (مانند 93.184.216.34) ترجمه می‌کند."
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/کابل\n",
+          "definition": "روشی برای ارسال اطلاعات با استفاده از کابل‌های تلفن یا تلویزیون."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "کابل فیبر نوری",
+          "definition": "اتصالی که از نور برای انتقال اطلاعات استفاده می‌کند."
         },
         "internet/coursef/2021": {
           "word": "اینترنت",
-          "definition": ""
-        },
-        "packets/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "گروهی از کامپیوترها و سرورها که به یکدیگر متصل هستند."
         },
         "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "آدرس IP",
+          "definition": "شماره‌ای که به هر موردی که به اینترنت متصل است، اختصاص می‌یابد."
+        },
+        "packets/coursef/2021": {
+          "word": "بسته‌ها",
+          "definition": "تکه‌های کوچکی از اطلاعات که با دقت از تکه‌های بزرگتر اطلاعات تشکیل شده‌اند."
+        },
+        "servers/coursef/2021": {
+          "word": "سرور‌ها",
+          "definition": "کامپیوترهایی که فقط برای ارائه چیزهایی به دیگران وجود دارند."
+        },
+        "url/coursef/2021": {
+          "word": "آدرس اینترنتی",
+          "definition": "یک آدرس قابل حفظ برای پیدا کردن صفحه وب (مانند www.code.org)."
         },
         "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "وای-فای",
+          "definition": "یک روش بی‌سیم برای ارسال اطلاعات با استفاده از امواج رادیویی."
         },
         "define/coursef/2021": {
           "word": "تعریف کن",
-          "definition": ""
+          "definition": "جزئیات مشکلاتی را که در تلاش برای حل آنها هستید را مشخص کنید"
         },
         "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "آماده کنید",
+          "definition": "برای فعالیتی که قرار است انجام دهید تحقیق کنید، برنامه ریزی کنید و مطالبی/اطلاعاتی را به دست آورید"
         },
         "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "بازتاب",
+          "definition": "با دقت به چیزی فکر کنید که نتیجه را در آینده بهبود بخشد"
         },
         "try/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "امتحان کنید",
+          "definition": "تلاش کنید کاری انجام دهید"
         },
         "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
         },
         "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
         },
         "debugging/courseb/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
+          "word": "رفع نقص",
+          "definition": "یافتن و رفع مشکلات در یک الگوریتم یا برنامه."
         },
         "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کلیک کنید",
+          "definition": "دکمه ماوس را فشار دهید."
         },
         "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "دوبار کلیک کنید.",
+          "definition": "دکمه ماوس را خیلی سریع فشار دهید."
+        },
+        "drag/courseb/2021": {
+          "word": "بکشید",
+          "definition": "روی دکمه ماوس کلیک کنید و همانطور که نشانگر ماوس را به مکان جدیدی می‌برید، نگه دارید."
+        },
+        "drop/courseb/2021": {
+          "word": "دراپ (رقص)",
+          "definition": "دکمه ماوس را رها کنید تا آیتمی که کشیده بودید، رها شود."
         },
         "program/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود."
         },
         "programming/courseb/2021": {
           "word": "برنامه نویسی",
-          "definition": ""
+          "definition": "هنر ایجاد یک برنامه"
         },
         "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "پشتکاری و تداوم",
+          "definition": "بار و بارها تلاش کنید، حتی زمانی که کاری بسیار سخت باشد."
         },
         "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه ",
+          "definition": "عمل انجام دادن کاری به طور مکرر."
         },
         "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
         },
         "event/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می شود اتفاقی بیفتد."
         },
         "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
         },
         "debugging/coursea/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
+          "word": "رفع نقص",
+          "definition": "یافتن و رفع مشکلات در یک الگوریتم یا برنامه."
         },
         "program/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می تواند توسط یک ماشین اجرا شود."
         },
         "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کلیک کنید",
+          "definition": "دکمه ماوس را فشار دهید."
         },
         "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "دوبار کلیک کنید.",
+          "definition": "دکمه ماوس را خیلی سریع فشار دهید."
+        },
+        "drag/coursea/2021": {
+          "word": "بکشید",
+          "definition": "روی دکمه ماوس کلیک کنید و همانطور که نشانگر ماوس را به مکان جدیدی می‌برید، نگه دارید."
+        },
+        "drop/coursea/2021": {
+          "word": "دراپ (رقص)",
+          "definition": "دکمه ماوس را رها کنید تا آیتمی که کشیده بودید، رها شود."
         },
         "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
         },
         "programming/coursea/2021": {
           "word": "برنامه نویسی",
-          "definition": ""
+          "definition": "هنر ایجاد یک برنامه"
         },
         "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه ",
+          "definition": "عمل انجام دادن کاری به طور مکرر."
         },
         "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
         },
         "event/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد.\n"
         },
         "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
         },
         "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
         },
         "debugging/coursec/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
+          "word": "رفع نقص",
+          "definition": "پیدا کردن و رفع مشکلات در یک الگوریتم یا برنامه."
         },
         "program/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود.\n"
         },
         "sequencing/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "دنباله",
+          "definition": "قرار دادن دستورات به ترتیب صحیح تا کامپیوترها بتوانند دستورات را بخوانند."
         },
         "programming/coursec/2021": {
           "word": "برنامه نویسی",
-          "definition": ""
+          "definition": "هنر ایجاد یک برنامه"
         },
         "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه",
+          "definition": "عمل انجام دادن کاری به طور مکرر"
         },
         "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
         },
         "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد.\n"
         },
         "binary/coursec/2021": {
           "word": "دو دویی",
-          "definition": ""
+          "definition": "راهی برای نمایش اطلاعات، تنها با استفاده از دو گزینه وجود دارد."
         },
         "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
         },
         "program/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می تواند توسط یک ماشین اجرا شود."
         },
         "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
         },
         "debugging/coursed/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
+          "word": "رفع نقص",
+          "definition": "یافتن و رفع مشکلات در یک الگوریتم یا برنامه."
         },
         "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه",
+          "definition": "عمل انجام دادن کاری به طور مکرر."
         },
         "programming/coursed/2021": {
           "word": "برنامه نویسی",
-          "definition": ""
+          "definition": "هنر ایجاد یک برنامه"
         },
         "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ناامید شده",
+          "definition": "احساس ناراحتی یا عصبانیت می‌کنید به این دلیل که چیزی، آنطور که شما می‌خواهید، نیست."
         },
         "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "پشتکاری و تداوم",
+          "definition": "بار و بارها تلاش کنید، حتی زمانی که کاری بسیار سخت باشد."
         },
         "event/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می شود اتفاقی بیفتد."
         },
         "code/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کد",
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای یک کامپیوتر"
         },
         "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
         },
         "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "دستور",
+          "definition": "یک دستورالعمل برای کامپیوتر، بسیاری از دستورات در کنار هم، الگوریتم‌ها و برنامه‌های کامپیوتری را می‌سازند."
         },
         "conditionals/coursed/2021": {
           "word": "شرطی ها",
-          "definition": ""
+          "definition": "اظهاراتی که فقط تحت شرایط خاصی اجرا می‌شوند."
         },
         "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کد ساختگی",
+          "definition": "شرح مراحل در الگوریتم به زبان ساده"
         },
         "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "شرایط",
+          "definition": "چیزی که یک برنامه قبل از اجازه دادن به یک عمل، درست بودن آن را بررسی می‌کند."
         },
         "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه While",
+          "definition": "یک حلقه در حالی که یک شرط درست باشد، به تکرار ادامه می‌دهد."
         },
         "until/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Until (تا وقتی که)",
+          "definition": "دستوری که به شما بیان کند، کاری را فقط تا جایی انجام دهید که چیزی درست شود."
         },
         "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
         },
         "bug/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
         },
         "debugging/express/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
+          "word": "رفع نقص",
+          "definition": "یافتن و رفع مشکلات در یک الگوریتم یا برنامه."
         },
         "sequencing/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "دنباله",
+          "definition": "قرار دادن دستورات به ترتیب صحیح تا کامپیوترها بتوانند دستورات را بخوانند."
         },
         "program/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می تواند توسط یک ماشین اجرا شود."
         },
         "programming/express/2021": {
           "word": "برنامه نویسی",
-          "definition": ""
+          "definition": "هنر ایجاد یک برنامه"
         },
         "behavior/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رفتار",
+          "definition": "عملی که یک اسپرایت به طور مداوم انجام می‌دهد تا زمانی که به آن گفته شود که متوقف شود."
         },
         "sprite/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اسپرایت‌",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "event/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "code/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کد",
+          "definition": "باید کد یا دستورالعملی برای کامپیوتر‌، بنویسید."
         },
         "loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه ",
+          "definition": "عمل انجام دادن کاری به طور مکرر."
         },
         "repeat/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
         },
         "command/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "دستور",
+          "definition": "یک دستورالعمل برای کامپیوتر، بسیاری از دستورات در کنار هم، الگوریتم‌ها و برنامه‌های کامپیوتری را می‌سازند."
         },
         "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "شرایط",
+          "definition": "چیزی که یک برنامه قبل از اجازه دادن به یک عمل، درست بودن آن را بررسی می‌کند."
         },
         "conditionals/express/2021": {
           "word": "شرطی ها",
-          "definition": ""
+          "definition": "اظهاراتی که فقط تحت شرایط خاصی اجرا می‌شوند."
         },
         "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه While",
+          "definition": "یک حلقه در حالی که یک شرط درست باشد، به تکرار ادامه می‌دهد."
         },
         "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Until (تا وقتی که)",
+          "definition": "دستوری که به شما بیان کند، کاری را فقط تا جایی انجام دهید که چیزی درست شود."
         },
         "function/express/2021": {
           "word": "تابع",
-          "definition": ""
+          "definition": "کدی که به راحتی می توانید بارها و بارها با آن تماس بگیرید."
+        },
+        "prompt/express/2021": {
+          "word": "انگیزش",
+          "definition": "پیامی روی صفحه کامپیوتر که منتظر ورودی کاربر است."
         },
         "variable/express/2021": {
           "word": "متغیر",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "برچسبی برای بخشی از اطلاعات در یک برنامه استفاده می‌شود."
         },
         "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه \"for\"",
+          "definition": "حلقه‌هایی هستند که شروع، پایان و افزایش (فاصله گام) از پیش تعیین شده دارند."
         },
         "define/express/2021": {
           "word": "تعریف کن",
-          "definition": ""
+          "definition": "جزئیات مشکلاتی را که در تلاش برای حل آنها هستید را مشخص کنید"
         },
         "prepare/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "آماده کنید",
+          "definition": "برای فعالیتی که قرار است انجام دهید تحقیق کنید، برنامه ریزی کنید و مطالبی/اطلاعاتی را به دست آورید"
         },
         "reflect/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "بازتاب",
+          "definition": "با دقت به چیزی فکر کنید که نتیجه را در آینده بهبود بخشد"
         },
         "try/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "امتحان کنید",
+          "definition": "تلاش کنید کاری انجام دهید"
         },
         "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کلیک کنید",
+          "definition": "دکمه ماوس را فشار دهید."
         },
         "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "دوبار کلیک کنید.",
+          "definition": "دکمه ماوس را خیلی سریع فشار دهید."
+        },
+        "drag/pre-express/2021": {
+          "word": "بکشید",
+          "definition": "روی دکمه ماوس کلیک کنید و همانطور که نشانگر ماوس را به مکان جدیدی می‌برید، نگه دارید."
+        },
+        "drop/pre-express/2021": {
+          "word": "دراپ (رقص)",
+          "definition": "دکمه ماوس را رها کنید تا آیتمی که کشیده بودید، رها شود."
         },
         "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگوریتم ",
+          "definition": "فهرستی از مراحل جهت تکمیل یک کار"
         },
         "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
         },
         "debugging/pre-express/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
+          "word": "رفع نقص",
+          "definition": "یافتن و رفع مشکلات در یک الگوریتم یا برنامه."
         },
         "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه",
+          "definition": "الگوریتمی که در چیزی کدگذاری شده است که می‌تواند توسط یک ماشین اجرا شود."
         },
         "programming/pre-express/2021": {
           "word": "برنامه نویسی",
-          "definition": ""
+          "definition": "هنر ایجاد یک برنامه"
         },
         "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "پشتکاری و تداوم",
+          "definition": "بار و بارها تلاش کنید، حتی زمانی که کاری بسیار سخت باشد."
         },
         "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه ",
+          "definition": "عمل انجام دادن کاری به طور مکرر."
         },
         "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
         },
         "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد.\n"
         },
         "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگوریتم",
+          "definition": "لیستی از مراحل برای تکمیل یک کار"
+        },
+        "behavior/coursee/2021": {
+          "word": "رفتار",
+          "definition": "عملی که یک اسپرایت به طور مداوم انجام می‌دهد تا زمانی که به آن گفته شود که متوقف شود."
         },
         "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اسپرایت‌",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "event/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد.\n"
         },
         "copyright/coursee/2021": {
           "word": "حق کپی برداری و نشر",
-          "definition": ""
+          "definition": "حق قانونی انحصاری باید به چاپ، انتشار، اجرا، فیلمبرداری یا ضبط مطالب ادبی، هنری یا موسیقی داده شود و دیگران باید جهت انجام همان عمل توجیه شوند."
         },
         "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه",
+          "definition": "عمل انجام دادن کاریبه طور مکرر"
         },
         "repeat/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تکرار",
+          "definition": "کاری را مجددا انجام دادن"
         },
         "function/coursee/2021": {
           "word": "تابع",
-          "definition": ""
+          "definition": "کدی که به راحتی می‌توانید بارها و بارها با آن تماس بگیرید."
         },
         "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "شرایط",
+          "definition": "چیزی که یک برنامه قبل از اجازه دادن به یک عمل، درست بودن آن را بررسی می‌کند."
         },
         "conditionals/coursee/2021": {
           "word": "شرطی ها",
-          "definition": ""
+          "definition": "اظهاراتی که فقط تحت شرایط خاصی اجرا می‌شوند."
         },
         "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه While",
+          "definition": "یک حلقه در حالی که یک شرط درست باشد، به تکرار ادامه می‌دهد."
         },
         "define/coursee/2021": {
           "word": "تعریف کن",
-          "definition": ""
+          "definition": "جزئیات مشکلاتی را که در تلاش برای حل آنها هستید را مشخص کنید"
         },
         "prepare/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "آماده کنید",
+          "definition": "برای فعالیتی که قرار است انجام دهید تحقیق کنید، برنامه ریزی کنید و مطالبی/اطلاعاتی را به دست آورید"
         },
         "reflect/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "بازتاب",
+          "definition": "با دقت به چیزی فکر کنید که نتیجه را در آینده بهبود بخشد"
         },
         "try/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "امتحان کنید",
+          "definition": "تلاش کنید کاری انجام دهید"
         },
         "machine_learning/csd/2021": {
           "word": "",
@@ -1175,8 +1707,8 @@
           "definition": ""
         },
         "user/csd/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می‌کند."
         },
         "usability/csd/2021": {
           "word": "",
@@ -1187,12 +1719,12 @@
           "definition": ""
         },
         "user_interface/csd/2021": {
-          "word": "",
+          "word": "واسطه کاربر",
           "definition": ""
         },
         "bug/csd/2021": {
-          "word": "",
-          "definition": ""
+          "word": "باگ",
+          "definition": "بخشی از یک برنامه‌ای که به درستی کار نمی‌کند."
         },
         "feature/csd/2021": {
           "word": "",
@@ -1215,8 +1747,8 @@
           "definition": ""
         },
         "for_loop/csd/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه \"for\"",
+          "definition": "حلقه‌هایی هستند که شروع، پایان و افزایش (فاصله گام) از پیش تعیین شده دارند."
         },
         "parameter/csd/2021": {
           "word": "",
@@ -1268,14 +1800,14 @@
         },
         "variable/csd/2021": {
           "word": "متغیر",
-          "definition": ""
+          "definition": "برچسبی برای بخشی از اطلاعات در یک برنامه استفاده می‌شود."
         },
         "property/csd/2021": {
           "word": "",
           "definition": ""
         },
         "sprite/csd/2021": {
-          "word": "",
+          "word": "اسپرایت‌",
           "definition": ""
         },
         "dot_notation/csd/2021": {
@@ -1307,7 +1839,7 @@
           "definition": ""
         },
         "input/csd/2021": {
-          "word": "",
+          "word": "ورودی",
           "definition": ""
         },
         "output/csd/2021": {
@@ -1360,7 +1892,7 @@
         },
         "copyright/csd/2021": {
           "word": "حق کپی برداری و نشر",
-          "definition": ""
+          "definition": "حق قانونی انحصاری باید به چاپ، انتشار، اجرا، فیلمبرداری یا ضبط مطالب ادبی، هنری یا موسیقی داده شود و دیگران باید جهت انجام همان عمل توجیه شوند."
         },
         "relevant/csd/2021": {
           "word": "",

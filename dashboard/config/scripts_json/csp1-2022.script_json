@@ -11,7 +11,8 @@
           "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=1",
           "type": "feedback",
           "visibility": "Teacher-only",
-          "buttonText": "Learn More"
+          "buttonText": "Learn More",
+          "key": "49b4c824-bd90-438c-9244-9c2a8fc6edb2"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -29,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-02 17:35:49 UTC",
+    "serialized_at": "2022-12-06 15:27:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -237,7 +238,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget.",
-        "preparation": "\n* Practice using the color pixelation widget \n* Review slides from [r csp_unit_1_-_digital_information_1/csp/2022]\t\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
+        "preparation": "\n* Practice using the color pixelation widget \n* Review slides from [r csp_unit_1_-_digital_information/csp/2022]\t\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "This lesson continues the story of how bits are used to represent digital images.  Much like in the last lesson, students will use the Pixelation Widget to attempt to make digital approximations of analog images, this time in color.  These images are produced using layers of abstraction, with each layer relying on the other to perform its process.\r\n\r\nStudents will begin to realize that analog color images have values that change smoothly and subtly, while digital images do not.  The number of digital colors is also limited by the number of bits per pixel, whereas analog colors are unlimited.\r\n",
         "student_overview": "Learn how computers represent color images using bits."
       },
@@ -5703,11 +5704,10 @@
     },
     {
       "name": "Athletes Don't Own Their Tattoos",
-      "url": "https://www.todayonline.com/world/athletes-dont-own-their-tattoos-thats-problem-video-game-developers",
+      "url": "https://www.nytimes.com/2018/12/27/style/tattoos-video-games.html?smid=url-share",
       "key": "athletes_don_t_own_their_tattoos",
       "properties": {
-        "audience": "Student",
-        "type": "Article"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "athletes_don_t_own_their_tattoos"

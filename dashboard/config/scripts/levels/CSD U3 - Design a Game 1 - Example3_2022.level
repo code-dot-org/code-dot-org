@@ -200,12 +200,12 @@
     "long_instructions": "# Example Game\r\n\r\nWith a partner, brainstorm some different ideas for your game. You can think about the games you've already seen, or look at some more sample games to give you ideas.\r\n\r\nOnce you have settled on a type of game with your partner, fill out the Project Guide with the backgrounds, variables, sprites, and functions that you will need to make the game. You'll spend the next few levels creating your game.",
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 50,
-  "created_at": "2022-03-22T16:48:28.000Z",
-  "user_id": 14639,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-22T16:48:28.416+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - Design a Game 1 - Example2_2022\\\"\"],\"cloned_from\":\"CSD U3 - Design a Game 1 - Example2_2022\"},{\"changed_at\":\"2022-03-22 16:49:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"display_name\",\"thumbnail_url\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-22 16:50:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-08 17:20:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"display_name\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "created_at": "2022-03-22T16:48:28.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "audit_log": "[{\"changed_at\":\"2022-03-22T16:48:28.416+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - Design a Game 1 - Example2_2022\\\"\"],\"cloned_from\":\"CSD U3 - Design a Game 1 - Example2_2022\"},{\"changed_at\":\"2022-03-22 16:49:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"display_name\",\"thumbnail_url\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-22 16:50:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-08 17:20:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"display_name\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-12-08 05:42:39 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-12-08 05:42:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

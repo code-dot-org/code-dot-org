@@ -31,7 +31,7 @@ class Lesson < ApplicationRecord
   include Rails.application.routes.url_helpers
   include SerializedProperties
 
-  belongs_to :script, inverse_of: :lessons, optional: true
+  belongs_to :script, class_name: 'Unit', inverse_of: :lessons, optional: true
   belongs_to :lesson_group, optional: true
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
   has_many :activity_sections, through: :lesson_activities
@@ -128,7 +128,7 @@ class Lesson < ApplicationRecord
   end
 
   def script
-    return Script.get_from_cache(script_id) if Script.should_cache?
+    return Unit.get_from_cache(script_id) if Unit.should_cache?
     super
   end
 
@@ -140,7 +140,7 @@ class Lesson < ApplicationRecord
     # if Scripts are cached, then we do in-memory filtering to avoid a database
     # hit. If Scripts are NOT cached, then we want to find by a query in order
     # to _minimize_ the database hit.
-    if Script.should_cache?
+    if Unit.should_cache?
       script_levels = script.script_levels.select {|sl| sl.stage_id == id}
       return script_levels.first
     else
@@ -150,13 +150,13 @@ class Lesson < ApplicationRecord
 
   def unplugged_lesson?
     script_level = get_script_level_by_id
-    return false unless script_level.present?
+    return false if script_level.blank?
     script_level.oldest_active_level.unplugged?
   end
 
   def spelling_bee?
     script_level = get_script_level_by_id
-    return false unless script_level.present?
+    return false if script_level.blank?
     script_level.oldest_active_level.spelling_bee?
   end
 
@@ -166,7 +166,7 @@ class Lesson < ApplicationRecord
   end
 
   def has_lesson_pdf?
-    return false if Script.unit_in_category?('csf', script.name) && ['2017', '2018'].include?(script.version_year)
+    return false if Unit.unit_in_category?('csf', script.name) && ['2017', '2018'].include?(script.version_year)
 
     !!has_lesson_plan
   end
@@ -571,9 +571,9 @@ class Lesson < ApplicationRecord
 
   # Ensures we get the cached ScriptLevels if they are being cached, vs hitting the db.
   def cached_script_levels
-    return script_levels unless Script.should_cache?
+    return script_levels unless Unit.should_cache?
 
-    script_levels.map {|sl| Script.cache_find_script_level(sl.id)}
+    script_levels.map {|sl| Unit.cache_find_script_level(sl.id)}
   end
 
   def last_progression_script_level
@@ -632,7 +632,7 @@ class Lesson < ApplicationRecord
     return unless objectives
 
     self.objectives = objectives.map do |objective|
-      next nil unless objective['description'].present?
+      next nil if objective['description'].blank?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
@@ -711,7 +711,7 @@ class Lesson < ApplicationRecord
   end
 
   def related_csf_lessons
-    # because curriculum umbrella is stored on the Script model, take a big
+    # because curriculum umbrella is stored on the Unit model, take a big
     # shortcut and look only at curriculum umbrella, ignoring course version
     # and course offering. In the future, when curriulum_umbrella moves to
     # CourseOffering, this implementation will need to change to be more like
@@ -777,7 +777,7 @@ class Lesson < ApplicationRecord
     destination_lesson_group = destination_unit.lesson_groups.last
     unless destination_lesson_group
       destination_lesson_group = LessonGroup.create!(script: destination_unit, position: 1, user_facing: false, key: 'new-lesson-group')
-      Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_unit.name)
+      Unit.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_unit.name)
     end
     copied_lesson.lesson_group_id = destination_lesson_group.id
 
@@ -841,7 +841,7 @@ class Lesson < ApplicationRecord
             Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_activity_section.description, update_vocab_definition_on_clone)
           end
 
-          unless copied_activity_section.tips.blank?
+          if copied_activity_section.tips.present?
             copied_activity_section.tips.each do |tip|
               next unless tip && tip['markdown']
               Services::MarkdownPreprocessor.sub_resource_links!(tip['markdown'], update_resource_link_on_clone)
@@ -863,7 +863,7 @@ class Lesson < ApplicationRecord
             "levels" => [copied_level]
           }
         end
-        copied_activity_section.update_script_levels(sl_data) unless sl_data.blank?
+        copied_activity_section.update_script_levels(sl_data) if sl_data.present?
         copied_activity_section
       end
       copied_lesson_activity

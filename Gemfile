@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
-ruby '>= 2.5', '< 2.7'
+
+ruby '2.7.5'
+
+# Ruby 2.7 no longer includes some libraries by default; install
+# the ones we need here
+# see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
+gem 'thwait'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -9,13 +15,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.4.1'
+gem 'rails', '6.0.6'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
 gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
-gem 'sprockets-rails'
+gem 'sprockets-rails', '3.3.0'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
@@ -36,7 +42,13 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'google-api-client', '~> 0.23'
+# Google APIs. Formerly just the `google-api-client` gem
+# See https://github.com/googleapis/google-api-ruby-client/blob/main/google-api-client/OVERVIEW.md
+gem 'google-apis-core'
+
+gem 'google-apis-analytics_v3'
+gem 'google-apis-classroom_v1'
+gem 'google-apis-youtube_v3'
 
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
@@ -48,7 +60,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google' # use Google Accounts for AWS access
+  gem 'aws-google', '~> 0.2.0'
   gem 'web-console'
 end
 
@@ -139,14 +151,14 @@ gem 'phantomjs', '~> 1.9.7.1'
 gem 'gemoji'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 3.0.0'
+gem 'cancancan', '~> 3.1.0'
 gem 'devise', '~> 4.7.0'
-gem 'devise_invitable', '~> 1.6.0'
+gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
-# Ref: https://github.com/Clever/omniauth-clever/pull/7
-gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
+# Ref: https://github.com/daynew/omniauth-clever/pull/1
+gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
@@ -170,18 +182,13 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/etc monitoring
-  # Ref:
-  # https://github.com/newrelic/newrelic-ruby-agent/pull/359
-  # https://github.com/newrelic/newrelic-ruby-agent/pull/372
-  # https://github.com/newrelic/newrelic-ruby-agent/issues/340
-  github: 'code-dot-org/newrelic-ruby-agent', ref: 'PR-359_prevent_reconnect_attempts_during_shutdowns'
+gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 
 gem 'geocoder'
 
-gem 'mini_magick', ">=4.9.4"
+gem 'mini_magick', ">=4.10.0"
 gem 'rmagick', '~> 4.2.5'
 
 gem 'acts_as_list'
@@ -197,7 +204,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer'
+gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt' # single signon for zendesk
 
@@ -244,6 +251,7 @@ group :development, :staging, :levelbuilder do
   gem 'rubocop', '1.28', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rails-accessibility', require: false
   gem 'scss_lint', require: false
 end
 
@@ -300,8 +308,7 @@ gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: '
 gem 'image_optim', github: 'wjordan/image_optim', ref: 'cdo'
 # Image-optimization tools and binaries.
 gem 'image_optim_pack', '~> 0.5.0', github: 'wjordan/image_optim_pack', ref: 'guetzli'
-# Ref: https://github.com/toy/image_optim_rails/pull/3
-gem 'image_optim_rails', github: 'wjordan/image_optim_rails', ref: 'rails_root_config_path'
+gem 'image_optim_rails', '~> 0.4.0'
 
 gem 'image_size', require: false
 

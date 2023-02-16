@@ -61,8 +61,8 @@ class CensusMapInfoWindow extends Component {
         name: this.props.schoolName,
         city: this.props.city,
         state: this.props.state,
-        latitude: this.props.location.split(',')[0],
-        longitude: this.props.location.split(',')[1]
+        longitude: this.props.location.split(',')[0],
+        latitude: this.props.location.split(',')[1]
       }
     };
 
@@ -179,7 +179,7 @@ export default class CensusMapReplacement extends Component {
       .addTo(this.map);
   }
 
-  formatCoordinatesString(latitude, longitude) {
+  formatCoordinatesString(longitude, latitude) {
     return longitude + ',' + latitude;
   }
 
@@ -321,7 +321,7 @@ export default class CensusMapReplacement extends Component {
   };
 
   updateCensusMapSchool = school => {
-    if (school && school.latitude && school.longitude) {
+    if (school && school.longitude && school.latitude) {
       const schoolLocation = new mapboxgl.LngLat(
         school.longitude,
         school.latitude
@@ -355,7 +355,7 @@ export default class CensusMapReplacement extends Component {
             properties.school_name,
             properties.school_city,
             properties.school_state,
-            _this.formatCoordinatesString(school.latitude, school.longitude),
+            _this.formatCoordinatesString(school.longitude, school.latitude),
             properties.teaches_cs
           );
 

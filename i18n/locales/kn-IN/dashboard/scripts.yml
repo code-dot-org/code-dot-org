@@ -400,6 +400,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             csf_internet:
               display_name: ಇಂಟರ್ನೆಟ್
             csf_digcit:
@@ -434,6 +436,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
         andrea-test:
           lesson_groups:
             required:
@@ -612,7 +616,11 @@ kn:
           lesson_groups:
             required:
               display_name: ಮುನ್ನೋಟ
+        dance-2019:
+          title: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+          description_short: ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲು ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿಯನ್ನು ಕೋಡ್ ಮಾಡಿ. ಬಿಯಾನ್ಸೆ, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿಝೋ, ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್, ಸೆಲೆನಾ ಗೊಮೆಜ್, ಡಿಸ್ನಿಯ “ಎನ್ಕಾಂಟೊ” ನ ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ!
         dance-extras-2019:
+          title: ಡ್ಯಾನ್ಸ್‌ ಮಾಡುತ್ತಿರಿ
           description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
           student_description: ವಿಸ್ತರಿಸಿದ ಪ್ರಾಜೆಕ್ಟ್ ಐಡಿಯಾಗಳ ಜೊತೆಗೆ ಮೊದಲ ಗಂಟೆಯಾಚೆಗೂ ಹೋಗಿ.
         csp4-preview:
@@ -726,6 +734,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         express-2020:
@@ -736,6 +746,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         pre-express-2020:
@@ -840,6 +852,10 @@ kn:
           lesson_groups:
             csf_digcit:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
+            csf_variables:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lessonGroup-8:
@@ -854,11 +870,14 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lessonGroup-9:
               display_name: ಈವೆಂಟ್‌ಗಳು
         pre-express-2021:
+          title: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ (2021)
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
@@ -1055,6 +1074,8 @@ kn:
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
+        ai-ethics-2021:
+          description_audience: ಗ್ರೇಡ್‌ 6-12
         poem-art-2021:
           title: ಕವನ ಕಲೆ
         counting-csc-2021:
@@ -1104,6 +1125,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_for_loops:
+              display_name: ಲೂಪ್ಸಗಾಗಿ
             end_of_course_project:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         csp4-2022:
@@ -1258,5 +1281,85 @@ kn:
         aiml-2022:
           name: aiml-2022
           description_short: ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆಯ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ಅಸಿಂಕ್ರೊನಸ್‌ ಡಿಬಗ್ಗಿಂಗ್‌ ವಿಸ್ತರಣೆ
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ಮಾಡ್ಯೂಲ್‌ 2 ಅಸಿಂಕ್ರನಸ್ ವರ್ಕ್
         soccer:
           name: ಸಾಕರ್
+          title: ನಿಮ್ಮದೇ ಸಾಕರ್ ಗೇಮ್ ಅನ್ನು ಕೋಡ್ ಮಾಡಿ
+          description_short: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
+          description: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+            lesson-6:
+              name: ಲೂಪ್‌ಗಳು
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: ವೇರಿಯಬಲ್‌ಗಳು
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ಒಂದು ಆಯಾಮದ (1D) ಅರೇಗಳು
+            lesson-3:
+              name: ಲೂಪ್ಸಗಾಗಿ
+        hello-world-space-2022:
+          title: 'ಹಲೋ ವರ್ಲ್ಡ್: ಬಾಹ್ಯಾಕಾಶ'
+        hello-world-soccer-2022:
+          title: 'ಹಲೋ ವರ್ಲ್ಡ್: ಸಾಕರ್'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 2
+        csd4-2023:
+          title: ಡಿಸೈನ್ ಪ್ರಕ್ರಿಯೆ
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 2
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: ಧ್ವನಿ ಯಾವುದು?
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csp_conditionals:
+              display_name: ಕಂಡೀಷನಲ್ಸ್‌
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: ಡೇಟಾ
+            csp_loops:
+              display_name: ಲೂಪ್‌ಗಳು
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ಪಟ್ಟಿಗಳು
+            lessonGroup-3:
+              display_name: ಲೂಪ್‌ಗಳು
+        csp-playground:
+          description_audience: ಪಠ್ಯಕ್ರಮ ಬರಹಗಾರರು
+          description_short: ಪಠ್ಯಕ್ರಮ ಆವೃತ್ತಿಗಳ ಮಧ್ಯೆ ಅಧ್ಯಾಯಗಳು ಅಥವಾ ಹಂತಗಳಿಗೆ ಸ್ಟೇಜಿಂಗ್‌ ಅಪ್‌ಡೇಟ್‌ಗಳಿಗಾಗಿ
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ

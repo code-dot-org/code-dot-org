@@ -8,7 +8,7 @@ fr:
       Green: Vert
       Red: Rouge
       actor: acteur
-      age: age
+      age: âge
       animal1score: animal1score
       animal1speed: animal1vitesse
       animal2score: animal2score
@@ -16,7 +16,7 @@ fr:
       answer: réponse
       armlength: armlength
       binary: binaire
-      birds: Oiseaux
+      birds: oiseaux
       bit: bit
       blue1: bleu1
       blue2: bleu2
@@ -26,10 +26,10 @@ fr:
       buttonWidth: boutonLargeur
       cat_score: chat_score
       cat_speed: chat_vitesse
-      cats: tous les chats
+      cats: les chats
       centerToPadLeft: centreVersPavéGauche
       choice: choix
-      circ: cercl
+      circ: cercle
       codeName: codeNom
       color: couleur
       controllerHeight: controleurHauteur
@@ -40,8 +40,8 @@ fr:
       direction: direction
       dog_score: chien_score
       dog_speed: chien_vitesse
-      dogs: tous les chiens
-      dragons: dragons
+      dogs: les chiens
+      dragons: les dragons
       enemy_speed: ennemi_vitesse
       energy: l'Énergie
       firstName: prénom
@@ -65,7 +65,9 @@ fr:
       name: nom
       nectar: nectar
       nectars: nectars
+      object: objet
       padYOffset: padYOffset
+      parts: parties
       planet: planète
       player_score: joueur_score
       points: points
@@ -82,17 +84,18 @@ fr:
       screenHeight: écranHauteur
       screenWidth: écranLargeur
       set sides: mettre des côtés
-      setupSimScore1: setupSimScore1
-      setupSimScore2: setupSimScore2
+      setupSimScore1: configurerScoreSim1
+      setupSimScore2: configurerScoreSim2
       shout: hurler
       sides: côtés
       size: taille
       speed: vitesse
       startX: startX
       startY: startY
+      type: écrire
       variable: variable
       width: largeur
-      wizard: assistant
+      wizard: sorcier
       x: x
       your var 1: votre var 1
       your var 2: votre var 2

@@ -1,4 +1,5 @@
 require 'httparty'
+require_relative 'client_extentions'
 
 module Crowdin
   # This class represents a single project hosted on Crowdin, and provides
@@ -9,41 +10,40 @@ module Crowdin
     attr_reader :id
 
     # @param project_identifier [String]
-    # @param api_key [String]
+    # @param api_token [String]
     # @see https://crowdin.com/project/codeorg/integrations/api for an example of
     #  how to retrieve these values for the "code.org" project
-    def initialize(project_identifier, api_key)
+    def initialize(project_identifier, api_token)
       @id = project_identifier
-      self.class.base_uri("https://api.crowdin.com/api/project/#{project_identifier}")
-      self.class.default_params({"account-key" => api_key, "login" => "code-org"})
+      @crowdin_client = Crowdin::Client.new do |config|
+        config.api_token = api_token
+        config.project_id = Crowdin::Client::CDO_PROJECT_IDS[@id]
+      end
+      # For more specific requests outside of the crowdin-api gem
+      self.class.base_uri("https://api.crowdin.com/api/v2")
+      self.class.headers(
+        {
+          "Authorization" => "Bearer #{api_token}",
+          "Content-Type" => "application/json"
+        }
+      )
     end
 
-    # @see https://support.crowdin.com/api/api-integration-setup/#titles-project-details
-    def project_info
-      # cache the result; we end up calling this method quite a lot since it's
-      # the source of both our lists of files and of languages, and it also
-      # shouldn't ever change mid-sync.
-      @info ||= self.class.post("/info")
-    end
-
-    # @param file [String] name of file (within crowdin) to be downloaded
+    # @param file_id [String] name of file (within crowdin) to be downloaded
     # @param language [String] crowdin language code
     # @param etag [String, nil] the last file version tag returned by crowdin
     #  for this file. If no changes have occurred since the provided etag was
     #  generated, crowdin will return a 304 (Not Modified) status instead of
-    #  downloading the file. See the export-file Crowdin documentation for
-    #  details
+    #  downloading the file. See the Build Project File Translation Crowdin
+    #  documentation for details
     # @param attempts [Number, nil] how many times we should retry the download
     #  if it fails
-    # @param only_head [Boolean, nil] whether to make a HEAD request rather
-    #  than a full GET request. Defaults to false.
-    # @see https://support.crowdin.com/api/api-integration-setup/#titles-export-file
-    def export_file(file, language, etag: nil, attempts: 3, only_head: false)
+    # @see https://developer.crowdin.com/api/v2/#operation/api.projects.translations.builds.files.post
+    def export_file(file_id, language, etag: nil, attempts: 3)
       options = {
-        query: {
-          file: file,
-          language: language
-        }
+        body: {
+          targetLanguageId: language
+        }.to_json
       }
 
       unless etag.nil?
@@ -52,64 +52,64 @@ module Crowdin
         }
       end
 
-      only_head ? self.class.head("/export-file", options) : self.class.get("/export-file", options)
-    rescue Net::ReadTimeout, Net::OpenTimeout => error
+      response = self.class.post(
+        "/projects/#{@crowdin_client.config.project_id}/translations/builds/files/#{file_id}",
+        options
+      )
+      raise CrowdinRateLimitError if response.code == 429
+      raise CrowdinInternalServerError if response.code == 500
+      raise CrowdinServiceUnavailableError if response.code == 503
+
+      response
+    rescue Net::ReadTimeout, Net::OpenTimeout, CrowdinRateLimitError, CrowdinInternalServerError, CrowdinServiceUnavailableError => error
       # Handle a timeout by simply retrying. We default to three attempts before
       # giving up; if this doesn't work out, other things we could consider:
       #
       #   - increasing the default number of attempts
       #   - increasing the number of attempts for certain high-failure-rate calls
       #   - increasing the timeout, either globally or for this specific call
-      STDERR.puts "Crowdin.export_file(#{file}) timed out: #{error}"
+      warn "Crowdin.export_file(#{file_id}) error: #{error}"
+      sleep(3) if response&.code == 429
       raise if attempts <= 1
-      export_file(file, language, etag: etag, attempts: attempts - 1, only_head: only_head)
+      export_file(file_id, language, etag: etag, attempts: attempts - 1)
     end
 
     # Retrieve all languages currently enabled in the crowdin project. Each
-    # language is a hash containing the language name and code, as well as
+    # language is a hash containing the language name and id, as well as
     # other internal crowdin values.
-    # @example [{"name"=>"Norwegian", "code"=>"no", "can_translate"=>"1", "can_approve"=>"1"}, ...]
+    # @example [{"name"=>"Norwegian", "id"=>"no", ...]
     # @return [Array<Hash>]
     def languages
-      project_info["info"]["languages"]["item"]
+      # cache the result; we end up calling this method quite a lot since it's
+      # the source of both our lists of files and of languages, and it also
+      # shouldn't ever change mid-sync.
+
+      @languages ||= list_languages
+    end
+
+    def list_languages
+      result = @crowdin_client.get_project(Crowdin::Client::CDO_PROJECT_IDS[@id])
+      result['data']['targetLanguages']
     end
 
     # Retrieve all files currently uploaded to the crowdin project.
-    # @example ["/dashboard/base.yml", "/dashboard/data.yml", ...]
-    # @return [Array<String>]
+    # @example [{"id"=>169076, "path"=>"/pegasus/mobile.yml"}, {"id"=>169080, "path"=>"/blockly-core/core.json"}, ...]
+    # @return [Array<Hash>]
     def list_files
-      files = project_info["info"]["files"]["item"]
-      results = []
-      each_file(files) do |file, path|
-        results << File.join(path, file["name"])
+      query = {
+        limit: Crowdin::Client::MAX_ITEMS_COUNT,
+        offset: 0
+      }
+
+      results = @crowdin_client.request_loop(query) do
+        @crowdin_client.list_files(query)
       end
-      results
-    end
 
-    private
-
-    # Iterate through files as returned by crowdin. Crowdin returns files in a
-    # nested format, where each file is a "node", and directories are nodes
-    # that can contain other nodes. This helper simply knows how to traverse
-    # that simulated directory structure, and will yield each file in turn
-    # along with its directory.
-    # @param files [Array<Hash>]
-    # @param path [String, nil]
-    # @yield [name, path] the name of a file and the full path to the directory
-    #   in which it can be found.
-    def each_file(files, path="")
-      files = [files] unless files.is_a? Array
-      files.each do |file|
-        case file["node_type"]
-        when "directory"
-          subfiles = file["files"]["item"]
-          subpath = File.join(path, file["name"])
-          each_file(subfiles, subpath) {|f, p| yield f, p}
-        when "file"
-          yield file, path
-        else
-          raise "Cannot process file of type #{file['node_type']}"
-        end
+      results.map! do |file|
+        {
+          "id" => file["data"]["id"],
+          "path" => file["data"]["path"]
+        }
       end
     end
   end

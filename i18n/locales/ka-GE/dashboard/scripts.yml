@@ -145,6 +145,8 @@ ka:
           description_audience: ასაკი 6-13
         afterschool1:
           description_audience: ასაკი 7-13
+        cspunit4draft:
+          description_short: მონაცემები
         Special Fun:
           description_audience: 'ასაკი: 10-18'
         SpecialSeries:
@@ -255,6 +257,8 @@ ka:
               display_name: შიგთავსი
             practice:
               display_name: სწავლება
+        CSDU5-Draft:
+          description_short: მონაცემები
         CSF_Secret_Sample_Story:
           description_audience: 'ასაკი: 8-18+'
         MikeTest:
@@ -400,6 +404,7 @@ ka:
           description_short: შეაერთეთ სხვადასხვა სპორტული თამაშები
           description: შეაერთეთ სხვადასხვა სპორტული თამაშები
           student_description: შეაერთეთ სხვადასხვა სპორტული თამაშები
+          name: სპორტები
         csp3-support:
           lesson_groups:
             required:
@@ -711,6 +716,7 @@ ka:
           description_short: Minecraft დაბრუნდა ახალი საქმიანობის Hour of Code!
           description: Minecraft დაბრუნდა საათის კოდი ახალი საქმიანობის! მოგზაურობა Minecraft კოდით.
           student_description: Minecraft დაბრუნდა საათის კოდი ახალი საქმიანობის! მოგზაურობა Minecraft კოდით.
+          name: გმირი
         csp-explore-2017:
           lesson_groups:
             csp_ap_2:
@@ -1043,6 +1049,7 @@ ka:
           title: გაყინულის განახლებული სკრიპტი
         aquatic:
           title: 'Minecraft: მოგზაურობა წყლის'
+          name: წყლის
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -1064,6 +1071,8 @@ ka:
               display_name: გაუმჯობესება
             csf_variables:
               display_name: ცვლადები
+            csf_data:
+              display_name: მონაცემები
             csf_for_loops:
               display_name: '"მიზნისთვის" ციკლები'
             csf_internet:
@@ -1155,6 +1164,8 @@ ka:
               display_name: ციკლები
             csf_events:
               display_name: მოვლენები
+            csf_data:
+              display_name: მონაცემები
           student_description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
         csp-mid-survey:
           lesson_groups:
@@ -1529,6 +1540,8 @@ ka:
               display_name: შიგთავსი
             required:
               display_name: მიმოხილვა
+        dance-2019:
+          title: ცეკვა
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
@@ -1536,6 +1549,7 @@ ka:
             k5_next_steps:
               display_name: მომდევნო ნაბიჯები
         dance-extras-2019:
+          title: ცეკვის შენარჩუნება
           description: სცილდება პირველი საათის გაფართოებული პროექტის იდეები.
           student_description: სცილდება პირველი საათის გაფართოებული პროექტის იდეები.
         csp4-preview:
@@ -1704,6 +1718,8 @@ ka:
               display_name: ციკლები
             csf_events:
               display_name: მოვლენები
+            csf_data:
+              display_name: მონაცემები
           student_description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
         coursed-2020:
           title: კურსი D (2020)
@@ -1749,6 +1765,8 @@ ka:
               display_name: ციფრული მოქალაქეობა
             csf_variables:
               display_name: ცვლადები
+            csf_data:
+              display_name: მონაცემები
             csf_for_loops:
               display_name: '"მიზნისთვის" ციკლები'
             csf_sprites:
@@ -2015,6 +2033,8 @@ ka:
               display_name: ციკლები
             csf_events:
               display_name: მოვლენები
+            csf_data:
+              display_name: მონაცემები
           student_description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
         coursed-2021:
           description_audience: 'ასაკი: 7-11'
@@ -2162,6 +2182,8 @@ ka:
               display_name: შესავალი
         haikubot-pilot:
           lesson_groups:
+            plan your poem:
+              display_name: დაგეგმეთ თქვენი ჰაიკუ პოემა
             Lesson 3:
               display_name: გაკვეთილი 3
             Lesson 4:
@@ -2220,6 +2242,10 @@ ka:
           lesson_groups:
             lessonGroup-2:
               description: ტესტი
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: გაკვეთილები
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -2240,6 +2266,10 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: გაკვეთილები
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -2260,6 +2290,8 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        ai-ethics-2021:
+          description_audience: კლასები 6-12
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2363,6 +2395,8 @@ ka:
               display_name: ციკლები
             csf_events:
               display_name: მოვლენები
+            csf_data:
+              display_name: მონაცემები
           student_description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
           description_short: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
           description_audience: 'ასაკი: 6-10'
@@ -2443,6 +2477,10 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: დაწყება
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2546,5 +2584,172 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: კეთილი იყოს თქვენი მობრძანება
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ასინქრონული გამართვის გაფართოება
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Module 2 ასინქრონული მუშაობა
         soccer:
           name: ფეხბურთი
+          title: შექმენით თქვენი საკუთარი საფეხბურთო მატჩის კოდი
+          description_short: შექმენით საფეხბურთო მატჩი
+          description: შექმენით საფეხბურთო მატჩი
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: გამოკითხვა
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-5:
+              display_name: გამოკითხვა
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: ციკლები
+          lesson_groups:
+            lessonGroup-2:
+              display_name: გამოკითხვა
+            lessonGroup-3:
+              display_name: შიგთავსი
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: ცვლადები
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: '"მიზნისთვის" ციკლები'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        hello-world-soccer-2022:
+          title: 'გამარჯობა მსოფლიო: ფეხბურთი'
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            lessonGroup-3:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+          title: დიზაინის პროცესი
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            lessonGroup-3:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            lessonGroup-3:
+              display_name: 'თავი 2: თამაშების შექმნა'
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: ეს რა ხმაა?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csp_unit1_2020:
+              display_name: "(ძველი) სექცია 1: ციფრული ინფორმაცია"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(ძველი) სექცია 2: ინტერნეტი"
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: მონაცემები
+            csp_loops:
+              display_name: ციკლები
+            lessonGroup-5:
+              display_name: კურსის შემდგომი გამოკითხვა
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: სიები
+            lessonGroup-2:
+              display_name: კურსის შემდგომი გამოკითხვა
+            lessonGroup-3:
+              display_name: ციკლები
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: კურსის შემდგომი გამოკითხვა
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: კურსის შემდგომი გამოკითხვა
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(ძველი) სექცია 9: მონაცემები"
+            lessonGroup-2:
+              display_name: კურსის შემდგომი გამოკითხვა
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: კურსის შემდგომი გამოკითხვა
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შესავალი აპლიკაციების ლაბორატორიაში
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია

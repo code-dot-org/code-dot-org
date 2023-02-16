@@ -83,7 +83,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 ### Πόσο διαρκεί μια επίσκεψη στην τάξη;
 Μια επίσκεψη στην τάξη διαρκεί συνήθως 60-90 λεπτά, ενώ μια βιντεοκλήση διαρκεί συνήθως 20-30 λεπτά.
 
-### Για τι ηλικίες είναι κατάλληλη η Ώρα του Προγραμματισμού;
+### Για ποιες ηλικίες είναι κατάλληλη η Ώρα του Κώδικα;
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 

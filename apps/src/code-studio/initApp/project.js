@@ -1,13 +1,11 @@
 /* global appOptions */
 import $ from 'jquery';
-import MD5 from 'crypto-js/md5';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 import NameFailureError from '../NameFailureError';
 import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
@@ -137,7 +135,6 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
-    generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
     libraries: data.libraries
@@ -328,19 +325,6 @@ var projects = (module.exports = {
    */
   getMakerAPIs() {
     return currentSources.makerAPIsEnabled;
-  },
-
-  /**
-   * Calculates a md5 hash for everything within sources except the
-   * generatedProperties.
-   * @return {string} md5 hash string.
-   */
-  md5CurrentSources() {
-    const {
-      generatedProperties, // eslint-disable-line no-unused-vars
-      ...sourcesWithoutProperties
-    } = currentSources;
-    return MD5(JSON.stringify(sourcesWithoutProperties)).toString();
   },
 
   getCurrentSourceVersionId() {
@@ -570,9 +554,7 @@ var projects = (module.exports = {
 
   showProjectHeader() {
     if (this.shouldUpdateHeaders()) {
-      header.showProjectHeader({
-        showExport: this.shouldShowExport()
-      });
+      header.showProjectHeader();
     }
   },
 
@@ -594,23 +576,10 @@ var projects = (module.exports = {
     );
   },
 
-  // Currently, only applab when the experiment is enabled. Hide if
-  // hideShareAndRemix is set on the level.
-  shouldShowExport() {
-    const {level = {}, app} = appOptions;
-    const {hideShareAndRemix} = level;
-    return (
-      !hideShareAndRemix &&
-      (app === 'applab' || app === 'gamelab') &&
-      experiments.isEnabled('exportExpo')
-    );
-  },
-
   showHeaderForProjectBacked() {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked({
-        showShareAndRemix: !this.shouldHideShareAndRemix(),
-        showExport: this.shouldShowExport()
+        showShareAndRemix: !this.shouldHideShareAndRemix()
       });
     }
   },
@@ -691,8 +660,6 @@ var projects = (module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
-   * @param {function(Object)} sourceHandler.setInitialGeneratedProperties
-   * @param {function(): Object} sourceHandler.getGeneratedProperties
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
@@ -729,12 +696,6 @@ var projects = (module.exports = {
 
       if (currentSources.libraries) {
         sourceHandler.setInitialLibrariesList(currentSources.libraries);
-      }
-
-      if (currentSources.generatedProperties) {
-        sourceHandler.setInitialGeneratedProperties(
-          currentSources.generatedProperties
-        );
       }
 
       if (isEditing) {
@@ -884,7 +845,6 @@ var projects = (module.exports = {
       case 'flappy':
       case 'weblab':
       case 'gamelab':
-      case 'spritelab':
       case 'thebadguys':
       case 'javalab':
         return appOptions.app; // Pass through type exactly
@@ -934,6 +894,8 @@ var projects = (module.exports = {
         return 'bounce';
       case 'poetry':
         return appOptions.level.standaloneAppName;
+      case 'spritelab':
+        return appOptions.level.standaloneAppName || appOptions.app;
       default:
         return null;
     }
@@ -1314,7 +1276,6 @@ var projects = (module.exports = {
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
-          const generatedProperties = this.sourceHandler.getGeneratedProperties();
           const libraries = this.sourceHandler.getLibrariesList();
           callback({
             source,
@@ -1323,7 +1284,6 @@ var projects = (module.exports = {
             makerAPIsEnabled,
             selectedSong,
             selectedPoem,
-            generatedProperties,
             libraries
           });
         })
@@ -1333,10 +1293,6 @@ var projects = (module.exports = {
 
   getSelectedSong() {
     return currentSources.selectedSong;
-  },
-
-  getGeneratedProperties() {
-    return currentSources.generatedProperties;
   },
 
   /**
@@ -2028,7 +1984,7 @@ function setMakerAPIsStatusFromQueryParams() {
  */
 function setMakerAPIsStatusFromLevel() {
   if (appOptions.level.makerlabEnabled) {
-    currentSources.makerAPIsEnabled = CP_API;
+    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
   }
 }
 

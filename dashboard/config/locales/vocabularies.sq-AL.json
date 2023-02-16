@@ -2,77 +2,498 @@
   "sq-AL": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
         "debugging/minecraft/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/hero/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "function/hero/unversioned": {
-          "word": "Funksion"
+          "word": "Funksion",
+          "definition": "Një pjesë kodi që mund ta aktivizoni lehtësisht vazhdimisht."
+        },
+        "program/hero/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
         "code/poem-art/2021": {
           "word": "Kod"
         },
+        "event/poem-art/2021": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "program/poem-art/2021": {
+          "word": "Programi"
+        },
+        "code/flappy/unversioned": {
+          "word": "kod",
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
         "debugging/flappy/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/flappy/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/frozen/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/frozen/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/iceage/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/iceage/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
         "code/artist/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/artist/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/artist/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/gumball/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Rregullimi"
+        "program/gumball/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
+        "event/dance/unversioned": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "program/dance/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Kusht",
+          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Kushtet"
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "loops/aquatic/unversioned": {
-          "word": "cikle "
+          "word": "cikle ",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Shifra e Cezarit",
+          "definition": "një teknikë për enkriptim që e zhvendos alfabetin me një numër karakteresh"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Shifra",
+          "definition": "termi i përgjithshëm për një teknikë (ose algoritëm) që kryen kriptim"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Kriptimi i çarjes",
+          "definition": "Kur përpiqeni të deshifroni një mesazh sekret pa i ditur të gjitha specifikat e shifrës, po përpiqeni të \"plasni\" enkriptimin."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Dekriptimi",
+          "definition": "një proces që kthen mbrapsht enkriptimin, duke marrë një mesazh sekret dhe duke riprodhuar tekstin origjinal të thjeshtë"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Enkriptimi",
+          "definition": "një proces i kodimit të mesazheve për t'i mbajtur ato sekrete, kështu që vetëm palët \"e autorizuara\" mund ta lexojnë atë."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Shifra e zëvendësimit të rastësishëm",
+          "definition": "një teknikë enkriptimi që harton secilën shkronjë të alfabetit me shkronjat e tjera të alfabetit të zgjedhura rastësisht."
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/starwars/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/starwars/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/mc/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/mc/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/playlab/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/playlab/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "event/outbreak/unversioned": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Kod"
         },
         "debugging/sports/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "event/sports/unversioned": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "program/sports/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/infinity/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/infinity/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/basketball/unversioned": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "event/basketball/unversioned": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "program/basketball/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "machine_learning/oceans/unversioned": {
+          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
+        },
+        "program/coursed/2022": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "debugging/coursed/2022": {
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "loop/coursed/2022": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/coursed/2022": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "code/coursed/2022": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
+        },
+        "condition/coursed/2022": {
+          "word": "Kusht",
+          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
+        },
+        "behavior/coursef/2022": {
+          "word": "Sjellja"
+        },
+        "program/coursef/2022": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "event/coursef/2022": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "variable/coursef/2022": {
+          "word": "Variabël"
+        },
+        "machine_learning/coursef/2022": {
+          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Përcakto"
+        },
+        "behavior/coursee/2022": {
+          "word": "Sjellja"
+        },
+        "loop/coursee/2022": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "function/coursee/2022": {
+          "word": "Funksion"
+        },
+        "condition/coursee/2022": {
+          "word": "Kusht"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
+        },
+        "copyright/coursee/2022": {
+          "word": "E drejta e autorit"
+        },
+        "define/coursee/2022": {
+          "word": "Përcakto"
+        },
+        "debugging/courseb/2022": {
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/courseb/2022": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "loop/courseb/2022": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/courseb/2022": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "debugging/express/2022": {
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/express/2022": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "behavior/express/2022": {
+          "word": "Sjellja"
+        },
+        "event/express/2022": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "loop/express/2022": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "condition/express/2022": {
+          "word": "Kusht",
+          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
+        },
+        "conditionals/express/2022": {
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
+        },
+        "function/express/2022": {
+          "word": "Funksion",
+          "definition": "Një pjesë kodi që mund ta aktivizoni lehtësisht vazhdimisht."
+        },
+        "variable/express/2022": {
+          "word": "Variabël"
+        },
+        "define/express/2022": {
+          "word": "Përcakto"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/pre-express/2022": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "loop/pre-express/2022": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/pre-express/2022": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "debugging/coursea/2022": {
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/coursea/2022": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "loop/coursea/2022": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/coursea/2022": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "debugging/coursec/2022": {
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/coursec/2022": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "loop/coursec/2022": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/coursec/2022": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "data/coursec/2022": {
+          "word": "të dhëna"
+        },
+        "binary/coursec/2022": {
+          "word": "Binare"
         },
         "debugging/csd/2022": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/csd/2022": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
         "variable/csd/2022": {
           "word": "Variabël"
+        },
+        "condition/csd/2022": {
+          "word": "Kusht"
         },
         "conditionals/csd/2022": {
           "word": "Kushtet"
@@ -86,14 +507,49 @@
         "copyright/csd/2022": {
           "word": "E drejta e autorit"
         },
+        "machine_learning/csd/2022": {
+          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
+        },
         "code/poem-art/unversioned": {
-          "word": "Kod"
+          "word": "Kod\n",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programi",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Sjellja"
         },
+        "program/coursef/2021": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "event/coursef/2021": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
         "variable/coursef/2021": {
           "word": "Variabël"
+        },
+        "loop/coursef/2021": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "machine_learning/coursef/2021": {
+          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -102,34 +558,113 @@
           "word": "Përcakto"
         },
         "debugging/courseb/2021": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/courseb/2021": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "loop/courseb/2021": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/courseb/2021": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "debugging/coursea/2021": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/coursea/2021": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "loop/coursea/2021": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/coursea/2021": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "debugging/coursec/2021": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/coursec/2021": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "loop/coursec/2021": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/coursec/2021": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "binary/coursec/2021": {
           "word": "Binare"
         },
+        "program/coursed/2021": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
         "debugging/coursed/2021": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "loop/coursed/2021": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/coursed/2021": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "code/coursed/2021": {
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "conditionals/coursed/2021": {
-          "word": "Kushtet"
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
+        },
+        "condition/coursed/2021": {
+          "word": "Kusht",
+          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
         },
         "debugging/express/2021": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/express/2021": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
         "behavior/express/2021": {
           "word": "Sjellja"
         },
+        "event/express/2021": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "loop/express/2021": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "condition/express/2021": {
+          "word": "Kusht",
+          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
+        },
         "conditionals/express/2021": {
-          "word": "Kushtet"
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
         "function/express/2021": {
-          "word": "Funksion"
+          "word": "Funksion",
+          "definition": "Një pjesë kodi që mund ta aktivizoni lehtësisht vazhdimisht."
         },
         "variable/express/2021": {
           "word": "Variabël"
@@ -138,28 +673,66 @@
           "word": "Përcakto"
         },
         "debugging/pre-express/2021": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/pre-express/2021": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "loop/pre-express/2021": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "event/pre-express/2021": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "behavior/coursee/2021": {
           "word": "Sjellja"
         },
+        "event/coursee/2021": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
         "copyright/coursee/2021": {
           "word": "E drejta e autorit"
         },
+        "loop/coursee/2021": {
+          "word": "Unazë përsëritëse",
+          "definition": "Veprimi i të bërit diçka pa pushim."
+        },
         "function/coursee/2021": {
-          "word": "Funksion"
+          "word": "Funksion",
+          "definition": "Një pjesë kodi që mund ta aktivizoni lehtësisht vazhdimisht."
+        },
+        "condition/coursee/2021": {
+          "word": "Kusht",
+          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
         },
         "conditionals/coursee/2021": {
-          "word": "Kushtet"
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
         "define/coursee/2021": {
           "word": "Përcakto"
         },
+        "machine_learning/csd/2021": {
+          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
+        },
         "debugging/csd/2021": {
-          "word": "Rregullimi"
+          "word": "Rregullimi",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/csd/2021": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
         "variable/csd/2021": {
           "word": "Variabël"
+        },
+        "condition/csd/2021": {
+          "word": "Kusht"
         },
         "conditionals/csd/2021": {
           "word": "Kushtet"

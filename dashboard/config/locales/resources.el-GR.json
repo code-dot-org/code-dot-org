@@ -41,6 +41,359 @@
         "ai-training/oceans/unversioned": {
           "type": "Βίντεο"
         },
+        "curriculum_guide/coursed/2022": {
+          "name": "Οδηγός Προγράμματος"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων",
+          "type": "Αξιολόγηση"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Προγραμματισμός κατά ζεύγη"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Προγραμματισμός Ρελέ"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Βίντεο"
+        },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Υποθέσεις με Κάρτες",
+          "type": "Αξιολόγηση"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Υποθέσεις με Κάρτες"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Οδηγός Προγράμματος"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Βίντεο"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Βίντεο"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Βίντεο"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Βίντεο"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Βίντεο"
+        },
+        "internet/coursef/2022": {
+          "name": "Διαδίκτυο",
+          "type": "Αξιολόγηση"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Διαδίκτυο"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Το Διαδίκτυο"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "Κατάλογος"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Οδηγός Προγράμματος"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Βίντεο"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Αξιολόγηση"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Βίντεο"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "Κατάλογος"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Οδηγός Προγράμματος"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Μετακίνησέ το, Μετακίνησέ το"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Μετακίνησέ το, Μετακίνησέ το"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Μετακίνησέ το, Μετακίνησέ το"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Κούνισέ το, Κούνισέ το"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Προγραμματισμός κατά ζεύγη"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Βίντεο"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Ο Στίβι και το Μεγάλο Πρότζεκτ"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Μη εντοπισμένα bugs",
+          "type": "Βίντεο"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Επαναλαμβανόμαστε",
+          "type": "Αξιολόγηση"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Επαναλαμβανόμαστε"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Βίντεο"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Το Μεγάλο Γεγονός",
+          "type": "Αξιολόγηση"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "pair_programming/express/2022": {
+          "name": "Προγραμματισμός κατά ζεύγη",
+          "type": "Βίντεο"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Βίντεο"
+        },
+        "turns_angles/express/2022": {
+          "type": "Βίντεο"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "Χαρακτήρες σε Δράση"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Βίντεο"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "Κατάλογος τραγουδιών της Spotify (για κάθε ηλικία)"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Βίντεο"
+        },
+        "variables/express/2022": {
+          "name": "Μεταβλητές"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "Κατάλογος"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2022": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Βίντεο"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Προγραμματισμός κατά ζεύγη"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Βίντεο"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Βίντεο"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Οδηγός Προγράμματος"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Βίντεο"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Προγραμματισμός κατά ζεύγη"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Βίντεο"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Χαρούμενοι Χάρτες"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Βίντεο"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Βίντεο"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Βίντεο"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Βίντεο"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Το Μεγάλο Γεγονός",
+          "type": "Αξιολόγηση"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Οδηγός Προγράμματος"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Οι Ρομποτικοί φίλοι μου"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Οι Ρομποτικοί φίλοι μου"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Οι Ρομποτικοί φίλοι μου"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Οι Ρομποτικοί φίλοι μου"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Οι Ρομποτικοί φίλοι μου"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Προγραμματισμός κατά ζεύγη",
+          "type": "Βίντεο"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Το Μεγάλο Γεγονός",
+          "type": "Αξιολόγηση"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Το Μεγάλο Γεγονός"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Βίντεο"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Δυαδικά Βραχιόλια",
+          "type": "Αξιολόγηση"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Δυαδικά Βραχιόλια"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Φόρουμ Καθηγητών"
+        },
         "representing_images/csd/2022": {
           "name": "Αναπαριστώντας Εικόνες"
         },
@@ -88,9 +441,6 @@
         },
         "make_a_recommendation_2/csd/2022": {
           "type": "Οδηγός Προγράμματος"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "Φόρουμ Καθηγητών"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "Βίντεο"
@@ -916,6 +1266,23 @@
         "vocabulary_3/csd/2017": {
           "name": "Λεξιλόγιο"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Οδηγός Προγράμματος"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Φόρουμ Καθηγητών"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Βίντεο"
         },
@@ -931,15 +1298,6 @@
         "pause_and_think_online/coursef/2021": {
           "type": "Βίντεο"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Διασκέδαση με το Βρόχο Για"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Διασκέδαση με το Βρόχο Για"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Διασκέδαση με το Βρόχο Για"
-        },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Διασκέδαση με το Βρόχο Για"
         },
@@ -947,39 +1305,45 @@
           "name": "Διασκέδαση με το Βρόχο Για",
           "type": "Αξιολόγηση"
         },
-        "ai-ml/coursef/2021": {
-          "type": "Βίντεο"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Διασκέδαση με το Βρόχο Για"
         },
-        "ai-training/coursef/2021": {
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Διασκέδαση με το Βρόχο Για"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Διασκέδαση με το Βρόχο Για"
+        },
+        "ai-ml/coursef/2021": {
           "type": "Βίντεο"
         },
         "ai-societal/coursef/2021": {
           "type": "Βίντεο"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Το Διαδίκτυο"
+        "ai-training/coursef/2021": {
+          "type": "Βίντεο"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Διαδίκτυο"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Διαδίκτυο",
           "type": "Αξιολόγηση"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Διαδίκτυο"
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Το Διαδίκτυο"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "type": "Κατάλογος"
         },
-        "implementation_guide/coursef/2021": {
-          "name": "Οδηγός εφαρμογής"
-        },
-        "curriculum_guide_1/coursef/2021": {
+        "curriculum_guide_1/courseb/2021": {
           "name": "Οδηγός Προγράμματος"
         },
-        "teacher_forum_1/coursef/2021": {
-          "name": "Φόρουμ Καθηγητών"
+        "implementation_guide/courseb/2021": {
+          "name": "Οδηγός εφαρμογής"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        "teacher_forum_1/courseb/2021": {
+          "name": "Φόρουμ Καθηγητών"
         },
         "mimi-activity/courseb/2021": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"
@@ -1006,7 +1370,7 @@
           "name": "Μη εντοπισμένα bugs",
           "type": "Βίντεο"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Επαναλαμβανόμαστε"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
@@ -1016,39 +1380,39 @@
           "name": "Επαναλαμβανόμαστε",
           "type": "Αξιολόγηση"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Επαναλαμβανόμαστε"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "type": "Βίντεο"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "Το Μεγάλο Γεγονός",
-          "type": "Βίντεο"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Το Μεγάλο Γεγονός"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Το Μεγάλο Γεγονός",
           "type": "Αξιολόγηση"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "Το Μεγάλο Γεγονός"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Το Μεγάλο Γεγονός",
+          "type": "Βίντεο"
         },
-        "implementation_guide/courseb/2021": {
-          "name": "Οδηγός εφαρμογής"
-        },
-        "curriculum_guide_1/courseb/2021": {
+        "curriculum_guide_1/coursea/2021": {
           "name": "Οδηγός Προγράμματος"
         },
-        "teacher_forum_1/courseb/2021": {
+        "implementation_guide/coursea/2021": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "teacher_forum_1/coursea/2021": {
           "name": "Φόρουμ Καθηγητών"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Βίντεο"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Προγραμματισμός κατά ζεύγη"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "type": "Βίντεο"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Βίντεο"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -1066,32 +1430,26 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "Βίντεο"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "Το Μεγάλο Γεγονός"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Το Μεγάλο Γεγονός",
           "type": "Αξιολόγηση"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "Το Μεγάλο Γεγονός"
         },
-        "implementation_guide/coursea/2021": {
-          "name": "Οδηγός εφαρμογής"
-        },
-        "curriculum_guide_1/coursea/2021": {
+        "curriculum_guide_1/coursec/2021": {
           "name": "Οδηγός Προγράμματος"
         },
-        "teacher_forum_1/coursea/2021": {
+        "implementation_guide/coursec/2021": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "teacher_forum_1/coursec/2021": {
           "name": "Φόρουμ Καθηγητών"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Οι Ρομποτικοί φίλοι μου"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Οι Ρομποτικοί φίλοι μου"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Οι Ρομποτικοί φίλοι μου"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -1100,27 +1458,30 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Οι Ρομποτικοί φίλοι μου"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Οι Ρομποτικοί φίλοι μου"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Οι Ρομποτικοί φίλοι μου"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Προγραμματισμός κατά ζεύγη",
           "type": "Βίντεο"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "Το Μεγάλο Γεγονός"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Το Μεγάλο Γεγονός",
           "type": "Αξιολόγηση"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "Το Μεγάλο Γεγονός"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "Βίντεο"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Δυαδικά Βραχιόλια"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Δυαδικά Βραχιόλια"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -1130,56 +1491,59 @@
           "name": "Δυαδικά Βραχιόλια",
           "type": "Αξιολόγηση"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Δυαδικά Βραχιόλια"
         },
-        "implementation_guide/coursec/2021": {
-          "name": "Οδηγός εφαρμογής"
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Δυαδικά Βραχιόλια"
         },
-        "curriculum_guide_1/coursec/2021": {
+        "curriculum_guide_1/coursed/2021": {
           "name": "Οδηγός Προγράμματος"
         },
-        "teacher_forum_1/coursec/2021": {
+        "implementation_guide/coursed/2021": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "teacher_forum_1/coursed/2021": {
           "name": "Φόρουμ Καθηγητών"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
-        },
         "activity-answer-graph-paper/coursed/2021": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
           "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων",
           "type": "Αξιολόγηση"
         },
-        "assessment-answer-graph-paper/coursed/2021": {
+        "graph-paper-programming/coursed/2021": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
           "name": "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Προγραμματισμός κατά ζεύγη"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Προγραμματισμός Ρελέ"
         },
         "relay-assessment/coursed/2021": {
           "name": "Προγραμματισμός Ρελέ"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Προγραμματισμός Ρελέ"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Προγραμματισμός Ρελέ"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Προγραμματισμός Ρελέ"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Προγραμματισμός Ρελέ"
         },
         "pause_and_think_online/coursed/2021": {
@@ -1191,32 +1555,26 @@
         "pause_and_think_online_1/coursed/2021": {
           "type": "Βίντεο"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Υποθέσεις με Κάρτες"
         },
-        "lesson-in-action-conditional-cards/coursed/2021": {
+        "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Υποθέσεις με Κάρτες"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Υποθέσεις με Κάρτες",
           "type": "Αξιολόγηση"
         },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
+        "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Υποθέσεις με Κάρτες"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Υποθέσεις με Κάρτες"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "type": "Οδηγός Προγράμματος"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "Οδηγός εφαρμογής"
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "Οδηγός Προγράμματος"
-        },
-        "teacher_forum_1/coursed/2021": {
+        "teacher_forum_1/express/2021": {
           "name": "Φόρουμ Καθηγητών"
         },
         "pair_programming/express/2021": {
@@ -1256,14 +1614,14 @@
         "rubric-csf-final-projects/express/2021": {
           "type": "Κατάλογος"
         },
-        "teacher_forum_1/express/2021": {
+        "teacher_forum_1/pre-express/2021": {
           "name": "Φόρουμ Καθηγητών"
-        },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Προγραμματισμός κατά ζεύγη"
         },
         "20_20_20_rule/pre-express/2021": {
           "type": "Βίντεο"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Προγραμματισμός κατά ζεύγη"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "type": "Βίντεο"
@@ -1271,7 +1629,16 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Βίντεο"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Οδηγός Προγράμματος"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Οδηγός εφαρμογής"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "Φόρουμ Καθηγητών"
         },
         "sprite_lab_documentation/coursee/2021": {
@@ -1291,18 +1658,6 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "type": "Κατάλογος"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Οδηγός εφαρμογής"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Οδηγός Προγράμματος"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "Φόρουμ Καθηγητών"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Οδηγίες για το Εργαστήρι Χαρακτήρων"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Βίντεο"
@@ -1347,6 +1702,9 @@
         "design_an_ai_app_1/csd/2021": {
           "type": "Κατάλογος"
         },
+        "teacher_forum/csd/2021": {
+          "name": "Φόρουμ Καθηγητών"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Βίντεο"
         },
@@ -1370,9 +1728,6 @@
         },
         "app-presentation/csd/2021": {
           "type": "Κατάλογος"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "Φόρουμ Καθηγητών"
         },
         "internet-of-things-video/csd/2021": {
           "type": "Βίντεο"
@@ -1467,6 +1822,9 @@
         },
         "solve-a-data-problem/csd/2021": {
           "type": "Οδηγός Προγράμματος"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Φόρουμ Καθηγητών"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Βίντεο"
@@ -1576,9 +1934,6 @@
         },
         "make_your_own_game/csd/2021": {
           "type": "Κατάλογος"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Φόρουμ Καθηγητών"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "Βίντεο"

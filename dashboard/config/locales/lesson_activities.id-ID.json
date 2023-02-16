@@ -74,6 +74,15 @@
         "de1d2662-9c84-4c8c-9aa5-76ecdda9776d": {
           "name": "Pembelajaran yang Diperpanjang"
         },
+        "372347a4-5034-4888-9232-160ad727c83d": {
+          "name": "Pemanasan"
+        },
+        "b42c3a8b-45a1-4991-88b1-362b1491e81b": {
+          "name": "Kegiatan Utama"
+        },
+        "970b0cb3-e914-4b54-9457-7c328aa70870": {
+          "name": "Penutupan"
+        },
         "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
           "name": "Dapat Dimulai"
         },
@@ -144,7 +153,7 @@
           "name": "Pembelajaran yang Diperpanjang"
         },
         "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
-          "name": "Dapat Dimulai"
+          "name": "Memulai"
         },
         "d31e813b-9457-415f-8632-009132bb5e48": {
           "name": "Aktivitas (30-45 menit)"
@@ -156,7 +165,7 @@
           "name": "Penilaian"
         },
         "6e0020c2-9d9e-488e-bb8d-126ac1760e8b": {
-          "name": "Pembelajaran yang Diperpanjang"
+          "name": "Pelajaran tambahan"
         },
         "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f": {
           "name": "Dapat Dimulai"
@@ -211,6 +220,15 @@
         },
         "10b66543-86a4-459e-bc67-a31d688547ce": {
           "name": "Pembelajaran yang Diperpanjang"
+        },
+        "26cd3c8b-1ae7-4fd3-87c2-12cf2612d677": {
+          "name": "Pemanasan"
+        },
+        "b8fea377-abb5-4ee6-b1cc-7d25f9c7459c": {
+          "name": "Kegiatan Utama"
+        },
+        "cda96f31-2f49-4c74-946c-101bea687c76": {
+          "name": "Penutupan"
         },
         "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
           "name": "Pemanasan"
@@ -589,6 +607,1584 @@
         },
         "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
           "name": "Tingkat"
+        },
+        "e708101d-3a86-4ff0-85a9-f5ec782683fe": {
+          "name": "Pemanasan Sssst ... Apa itu Kata Sandi?"
+        },
+        "e285d097-bd01-4c40-a00c-068a9ace8e8d": {
+          "name": "Evaluasi: Oh-Oh! Jika ... Maka ..."
+        },
+        "56a66744-0946-4350-9942-07e1ed1e0d85": {
+          "name": "Buat: Perkuat Kata Sandi Anda"
+        },
+        "f7bf636d-a952-4d38-9eea-a4c76532eb8e": {
+          "name": "Ringkasan: Catatan Tips Kata Sandi"
+        },
+        "dd936731-be2e-45f8-ba99-0dff9935b299": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "def8fa0a-2a44-4633-b219-592a1c026814": {
+          "name": "Tingkat"
+        },
+        "abaa6b2f-5158-4a3b-b861-28580f6362af": {
+          "name": "Pemanasan"
+        },
+        "ee83fda1-8d73-48f5-a6ee-d2dda27a2287": {
+          "name": "Kegiatan Utama"
+        },
+        "8bc2a962-0eac-4bae-85ff-c1ae50a085f6": {
+          "name": "Penutupan"
+        },
+        "f83a0af4-2b5c-4400-8f8b-7bc64de25f5b": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "5cbfab6e-7ad8-476d-a15a-11c31bc85447": {
+          "name": "Pemanasan"
+        },
+        "0976277c-63c8-40f5-a91c-46463ebc49fb": {
+          "name": "Aktivitas Penghubung - Pemrograman"
+        },
+        "34f9cd2c-cd89-445e-9323-d83630338704": {
+          "name": "Kegiatan Utama"
+        },
+        "f15b1210-8cbc-4a9b-a25b-fcd1d8ee8ca1": {
+          "name": "Penutupan"
+        },
+        "2483ab95-65f1-4cb0-a3e9-fa3f9c64d2e5": {
+          "name": "Pemanasan"
+        },
+        "773f2adc-84e8-413e-b889-b824aeae4922": {
+          "name": "Kegiatan Utama"
+        },
+        "11819537-1507-4546-a8f9-d1063c0c0ddc": {
+          "name": "Penutupan"
+        },
+        "5e5b27a3-0f8e-4360-877c-f490abbf065e": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "e982d792-ed3f-403f-8782-58d0e74eb342": {
+          "name": "Pemanasan"
+        },
+        "4960fdd0-1478-40e5-af70-efab13ddd070": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "f2cc2200-d1d2-4bb2-8b5c-84628e8c42c0": {
+          "name": "Kegiatan Utama"
+        },
+        "c387cf31-fc0e-49bb-9eed-dc67641c1d05": {
+          "name": "Penutupan"
+        },
+        "e0ff1760-cf11-4aea-a9c4-22eb56b368c5": {
+          "name": "Pemanasan"
+        },
+        "7340f495-aeb6-406f-934d-adf6025ea394": {
+          "name": "Kegiatan Utama"
+        },
+        "caa68edf-8564-4c1d-a77b-0080b03386f3": {
+          "name": "Penutupan"
+        },
+        "c96ae163-bdf7-40b1-9b39-aa7047d30c2f": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "fd881ec7-eac1-4f8f-b708-7bbefd1d4a66": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "8799b3de-39a1-4578-87f7-2dc2b97e9e00": {
+          "name": "Pemanasan"
+        },
+        "7434edcb-2b00-412f-8333-1b9d5f4091d4": {
+          "name": "Kegiatan Utama"
+        },
+        "740f1b78-c1b2-40d1-a774-6d6ac44689b2": {
+          "name": "Penutupan"
+        },
+        "f4151504-1d9a-4bf3-9d39-94f6fd1e142a": {
+          "name": "Dapat Dimulai"
+        },
+        "cab760ed-3878-474c-a0f0-e9392b4bb0b5": {
+          "name": "Kegiatan"
+        },
+        "83904b3e-7ab5-4cb0-9166-38c40c6d06c9": {
+          "name": "Penutupan"
+        },
+        "26389f28-c8e4-44e9-855f-b95094d2dae0": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "88ef108d-c468-473b-baf1-9c6e2ec76ef7": {
+          "name": "Pemanasan"
+        },
+        "bd41d9a1-3212-4e4a-928e-ad0e05bbdfee": {
+          "name": "Kegiatan Utama"
+        },
+        "f05c91b7-0a1b-498a-aa93-387934a55eb4": {
+          "name": " Ringkasan"
+        },
+        "db740abd-f7bc-4a40-a31f-d8694109f2f9": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "c5b3762a-7ec7-45ad-8562-eed33738a7ad": {
+          "name": "Pemanasan"
+        },
+        "911da8c1-6cda-4fe7-a888-af2af8b70994": {
+          "name": "Kegiatan Utama"
+        },
+        "e2fe4eca-a6f0-4e0a-b23c-8a3fd9f2a72f": {
+          "name": "Penutupan"
+        },
+        "f6fded2d-a57f-48a5-b947-da8fad8826c9": {
+          "name": "Pemanasan"
+        },
+        "79e17d5f-99ba-4b6d-ae83-05d3ff2f58ed": {
+          "name": "Kegiatan Utama"
+        },
+        "b287fad2-713e-44c7-9f5a-969089dbbd93": {
+          "name": "Penutupan"
+        },
+        "91d98159-1f12-468b-acf3-5e44b885c44b": {
+          "name": "Pemanasan"
+        },
+        "e019b34b-4c36-4f63-9059-e7cdc4b6d36f": {
+          "name": "Kegiatan Utama"
+        },
+        "1cf3af21-4b21-4292-9b39-7dfccd10f419": {
+          "name": "Penutupan"
+        },
+        "a340f15a-7b7f-4105-803c-f7e1759cced5": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "fa9d8e25-c013-4772-814a-5c7f8f80278d": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "9b4861a6-9fd1-4d39-ab25-1b7e219a4b20": {
+          "name": "Pemanasan"
+        },
+        "818d6302-7244-4a90-934f-31dc3381836a": {
+          "name": "Kegiatan Utama"
+        },
+        "ed43bde5-d607-4d7e-be4a-02eba3ef011e": {
+          "name": "Penutupan"
+        },
+        "ee4d7816-6a07-4203-985a-e3a6cdfafacd": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "1253667e-4b6d-4ef3-9274-070f711e4b3d": {
+          "name": "Pemanasan"
+        },
+        "c381e292-d281-4325-a307-4c4358dba746": {
+          "name": "Kegiatan Utama"
+        },
+        "75db3009-95d0-4e0a-b66e-d146bd753a39": {
+          "name": "Penutupan"
+        },
+        "ebfaecfc-4c5b-486a-898a-122acc54d24c": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "c44d899c-3a93-40bf-b986-05f28dd6c8d6": {
+          "name": "Pemanasan"
+        },
+        "3c7c2254-c6ec-4f6d-89a4-81633cc72170": {
+          "name": "Kegiatan Utama"
+        },
+        "da3d55a7-cf9b-4564-8624-d0562e95dbc6": {
+          "name": "Penutupan"
+        },
+        "02e66171-eb71-4c24-8669-fb18e86f77fd": {
+          "name": "Pemanasan"
+        },
+        "5450558e-b0ec-4668-a5c0-599b76edb64f": {
+          "name": "Kegiatan Utama"
+        },
+        "3b9be320-5f6b-4422-989d-d749bac1a55f": {
+          "name": "Penutupan"
+        },
+        "6dd1db92-1559-4c2f-8608-70f9707a186b": {
+          "name": "Pemanasan"
+        },
+        "9cfc67f6-a0b8-46ef-abfd-58915b1ad087": {
+          "name": "Kegiatan Utama"
+        },
+        "a54509a7-dac6-4985-830d-91272c3de923": {
+          "name": "Penutupan"
+        },
+        "f7559bae-c62e-4cc6-94a2-26b09e8c1eed": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "4297e4f8-df09-4a0f-a1f1-6eebb5fb75b3": {
+          "name": "Pemanasan: Kata yang Sama. Makna Berbeda."
+        },
+        "5d5fd9dd-ddf2-43b6-b079-90a4951fc484": {
+          "name": "Tonton: Kekuatan Kata-kata"
+        },
+        "a97a978a-4f85-4d03-b3aa-f9ade97cac23": {
+          "name": "Selidiki: Apa Masalahnya?"
+        },
+        "13324f62-aa57-47e7-a446-9f26c40da904": {
+          "name": "Ringkasan: Melintasi Garis"
+        },
+        "06eca5a9-6166-4def-972b-ecf15e73ee59": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "41c25d95-9f6c-432e-89f8-223a863b2f87": {
+          "name": "Pemanasan"
+        },
+        "d5aa2316-043f-4c6a-880a-9f08bf68fbf1": {
+          "name": "Kegiatan Utama"
+        },
+        "16075938-2b45-408d-a373-1e286c2068da": {
+          "name": "Penutupan"
+        },
+        "7cde513f-d979-4541-bc42-59000562fd58": {
+          "name": "Pemanasan"
+        },
+        "b6a33346-e4bd-4277-b357-e501f2c03751": {
+          "name": "Kegiatan Utama"
+        },
+        "302ce721-d400-4292-b0ea-c7738cb558c1": {
+          "name": "Penutupan"
+        },
+        "b3506973-239b-4824-a385-2f03108c216a": {
+          "name": "Pemanasan"
+        },
+        "73613364-4737-4bca-b1c0-df4a0848fa1f": {
+          "name": "Kegiatan Utama"
+        },
+        "2b75fe53-51e0-4f5a-97f9-07ef61b93633": {
+          "name": "Penutupan"
+        },
+        "d69af928-e1f1-4a06-9658-945085e43f97": {
+          "name": "Pemanasan"
+        },
+        "e87b78f5-e8b5-4a9a-92e3-68dc2a7e1b85": {
+          "name": "Kegiatan Utama"
+        },
+        "d6ffc021-c32a-41f7-ab5f-f04d9f3ca174": {
+          "name": "Penutupan"
+        },
+        "ad38918e-f79e-40b0-a297-5bfbfa61242f": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "944b794e-9bf3-425c-9131-6e4c3662af4f": {
+          "name": "Pemanasan"
+        },
+        "3d3601fb-cbf9-48df-afee-0dcbae1c8024": {
+          "name": "Kegiatan Utama"
+        },
+        "5eb7bde7-0d2c-4816-b398-1c6a665cdeb9": {
+          "name": "Penutupan"
+        },
+        "39be02fb-09ad-4047-b301-1b645de2d50a": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "78530493-657f-4a50-bd1c-16933b560f2c": {
+          "name": "Pemanasan"
+        },
+        "ccd2a9bc-d66d-4db7-be86-3d0212ae7629": {
+          "name": "Kegiatan Utama"
+        },
+        "0e3977a4-cfbf-4692-8cbd-31826df5ab1a": {
+          "name": "Penutupan"
+        },
+        "028bb774-7cbc-42be-ad21-8bea489a6df6": {
+          "name": "Pemanasan"
+        },
+        "d59cfcb6-d130-4b9c-a3b3-42f6568c7d4b": {
+          "name": "Kegiatan Utama"
+        },
+        "f7e5fddc-1118-43cd-887b-22160bb8d4c3": {
+          "name": "Penutupan"
+        },
+        "a1d70f29-8c5a-4d71-a255-b35b990fd9a3": {
+          "name": "Pemanasan"
+        },
+        "767830a0-a8d8-43ac-b6d5-0715ab8023d0": {
+          "name": "Kegiatan Utama"
+        },
+        "d613185a-0d3b-4f68-95fe-661fe78be3d1": {
+          "name": "Penutupan"
+        },
+        "ae88d237-aee6-4450-8e61-50a10fb79b36": {
+          "name": "Pemanasan"
+        },
+        "490c4f34-18db-4eb8-a2b4-5d2c2aa070a4": {
+          "name": "Kegiatan Utama"
+        },
+        "d59198e1-6dad-435c-97cb-5427ad86b921": {
+          "name": "Penutupan"
+        },
+        "abe59550-aed1-48e4-a510-2f90824a0511": {
+          "name": "Pemanasan"
+        },
+        "492b7b4c-d33b-49c4-9c6d-f735f32f0b8c": {
+          "name": "Kegiatan Utama"
+        },
+        "cb060f98-ee31-496d-954d-400aa442cc53": {
+          "name": "Penutupan"
+        },
+        "457ab8d4-39af-4b6b-b9c3-50817773d057": {
+          "name": "Pemanasan"
+        },
+        "f66783e8-d1a3-41bf-9a02-5b14352a11ae": {
+          "name": "Kegiatan"
+        },
+        "c1c655bb-d180-4682-a39c-aa73767a3701": {
+          "name": "Penutupan"
+        },
+        "240d09ee-89ca-4a20-8fa1-317d47f2c6c5": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "e0464ee7-4360-4686-8654-b8f858f536c2": {
+          "name": "Pemanasan"
+        },
+        "19297a53-bb23-4c9e-8044-ebd421759b7f": {
+          "name": "Kegiatan Utama"
+        },
+        "9662bebf-a1a8-43a8-bbe2-8f5054619fd7": {
+          "name": "Penutupan"
+        },
+        "3bfb35f7-e9ae-404c-8c91-2c78d4f1d5ee": {
+          "name": "Pemanasan"
+        },
+        "d7a3e98f-3c71-4d59-a560-86243f83407b": {
+          "name": "Kegiatan Utama"
+        },
+        "b5b51a48-519f-4cbf-8fa6-13ba66610961": {
+          "name": "Penutupan"
+        },
+        "5b427eff-5df0-4627-be4e-b448a69a998a": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "9cad9c6c-1877-4c63-beae-56fe65aa9194": {
+          "name": "Pemanasan"
+        },
+        "17141321-d536-4aa2-bcd4-379e8d361f4d": {
+          "name": "Kegiatan Utama"
+        },
+        "f4cf1033-e5c9-4fbf-b7a2-8afb7ab67325": {
+          "name": "Penutupan"
+        },
+        "23b00639-c986-4733-8177-00a94bce228f": {
+          "name": "Penilaian"
+        },
+        "79f5dc37-5072-4f73-9f81-488b04ffef3c": {
+          "name": "Hari 1 - Mengeksplorasi Ide-Ide Proyek"
+        },
+        "728a39bd-59fb-4fa1-a674-6d13d4f4dca2": {
+          "name": "Hari 2 - Proses Desain"
+        },
+        "b69f4d33-0eac-44f4-95b3-11c2a269112a": {
+          "name": "Hari 3 - Membuat Proyek Anda"
+        },
+        "9291f0b4-758d-4006-b10f-a2d5dfcbbf42": {
+          "name": "Hari 5 & 6 - Mempresentasikan Proyek Anda"
+        },
+        "6683243e-d006-4ef6-9f65-a53b80a1ecf6": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "457f5ed8-0041-4bd5-b6e6-800291ae5cf5": {
+          "name": "Pemanasan: Superhero Rahasia"
+        },
+        "0ead3881-08bc-4d6c-9fda-5bd889adbb5f": {
+          "name": "Pelajari: Menjadi Pembela"
+        },
+        "069f8d26-8e31-484a-9e8c-3d67add0197d": {
+          "name": "Buat: Superhero Warga Digital Anda"
+        },
+        "da7bb20b-3692-45ca-a939-6b44411eea77": {
+          "name": "Rangkuman: Cegah Kejenuhan! Komik Setrip"
+        },
+        "02ff6b22-0825-41c1-9e77-721f5801fede": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "01746bcd-3c02-43f5-8a35-0a775acc2095": {
+          "name": "Pemanasan: Berdiri, Duduk"
+        },
+        "6114e1af-1c83-4f1f-add9-a97c2523b343": {
+          "name": "Analisis: Mengapa Orang Berbagi?"
+        },
+        "d1c5ae68-dd15-4aec-aff6-44d0ea484781": {
+          "name": "Analisis: Privat atau Pribadi?"
+        },
+        "776101b2-57fc-4032-b1b3-1ec318adfbb2": {
+          "name": "Ringkasan: Tiket Keluar"
+        },
+        "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "522e566a-4230-4479-b810-bdac5c37634e": {
+          "name": "Tingkat"
+        },
+        "4d2e3a7b-6f10-4ae8-a150-38c094379da1": {
+          "name": "Pemanasan"
+        },
+        "2d9ca8e8-3d7b-42c1-8d9a-7765bf7d0847": {
+          "name": "Aktivitas Penghubung"
+        },
+        "49c18026-c59e-4aa1-93da-e7f15d4bee21": {
+          "name": "Kegiatan Utama"
+        },
+        "3826fff9-9484-4a83-9311-70c70d492e25": {
+          "name": "Penutupan"
+        },
+        "a18d4bd3-bd12-49fd-9ce0-be5a87553023": {
+          "name": "Pemanasan"
+        },
+        "1835051a-c185-43c8-bc70-00418b23a879": {
+          "name": "Kegiatan Utama"
+        },
+        "2ae44a38-4141-461c-a9d1-291a952c3bec": {
+          "name": "Penutupan"
+        },
+        "5b8fa378-7c92-4dfd-aa8b-170836cd31b6": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "124a474b-26b3-42dc-bb84-af0a9be14cc5": {
+          "name": "Pemanasan"
+        },
+        "300d8beb-b7c0-464c-be82-33fa92340fb8": {
+          "name": "Kegiatan Utama"
+        },
+        "e8117fa4-c0ea-4ad9-b368-24ec9f6d4923": {
+          "name": "Penutupan"
+        },
+        "3f920d9d-49c0-4a91-af81-7fbb5b9fc757": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "ca73e49f-ddae-48b1-88b4-99adf0c7d092": {
+          "name": "Pemanasan"
+        },
+        "8c9e95d6-8864-4575-beff-a861d6fcc49b": {
+          "name": "Kegiatan Utama"
+        },
+        "f42d12fc-5eb1-4601-9ca8-46e0a3219bf0": {
+          "name": "Penutupan"
+        },
+        "1e9a6f37-f162-4f87-ab30-471ba44cc016": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "f063bf55-a69c-43d8-aacf-9bf5fdc6e5b2": {
+          "name": "Pemanasan"
+        },
+        "05252785-3ead-4b98-82b0-e13a044b4da1": {
+          "name": "Kegiatan Utama"
+        },
+        "2653dce7-95e4-42f6-afd0-344900304aae": {
+          "name": "Penutupan"
+        },
+        "614ef93f-db3a-408f-87a4-17e43a7d4309": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "ddea6cb3-a9cd-4715-9026-d36bf966b753": {
+          "name": "Pemanasan"
+        },
+        "d251fc65-d089-4c0b-8846-a7daf6ada1f6": {
+          "name": "Kegiatan Utama"
+        },
+        "6a3dbe1e-1e7a-46d4-a84a-2c89274513d8": {
+          "name": "Penutupan"
+        },
+        "7d419f10-c436-4f75-b11b-8f83d5d5c791": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "4eec94f8-b49f-4b9a-944a-ab0ad4f03b6e": {
+          "name": "Pemanasan"
+        },
+        "a419695b-fda8-410c-a333-aa517f804f56": {
+          "name": "Kegiatan Utama"
+        },
+        "fcd44400-dd8c-41a0-9314-1479e4f80ce2": {
+          "name": "Penutupan"
+        },
+        "dac66c49-0189-4dc9-b2d1-f00cbdfa8ce7": {
+          "name": "Penilaian"
+        },
+        "79e1e2e9-dce6-4f3d-b5c8-3d762a776b10": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "5ed04482-6be8-433c-bf16-737461554f43": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "29e0563f-459b-4d33-8100-3677a52b69d0": {
+          "name": "Pemanasan"
+        },
+        "d5847a58-72f4-4636-81c7-05927ecc4cfe": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "d79e14f3-5b82-4cc2-ba94-cb3aa379f5ca": {
+          "name": "Kegiatan Utama"
+        },
+        "b4363c12-5a58-42e1-b872-f90b1ad5fe3e": {
+          "name": "Penutupan"
+        },
+        "7fef7c1f-99e3-4375-9440-2e0b2dc05349": {
+          "name": "Pemanasan"
+        },
+        "dd627bb0-b924-47bc-9ca4-51bea8f6a316": {
+          "name": "Kegiatan Utama"
+        },
+        "ec525cc3-37fc-488f-a9b3-21f02125f922": {
+          "name": "Penutupan"
+        },
+        "e9dcdf4e-0780-4b98-8447-787eced9f567": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "f60e6276-8f62-4f08-a89d-f237f44e58bc": {
+          "name": "Pemanasan"
+        },
+        "135273f1-aefd-4791-8e8a-21c00d972e36": {
+          "name": "Kegiatan Utama"
+        },
+        "4fed1ff4-20a7-4730-adf1-1d41138812d6": {
+          "name": "Penutupan"
+        },
+        "3f8f4c7b-1812-49d0-8c02-62d35bb9711d": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "9b886d19-0e05-49b1-ba50-07065b389704": {
+          "name": "Pemanasan"
+        },
+        "08c247c3-9249-4e6a-8e61-196c8b76a470": {
+          "name": "Kegiatan Utama"
+        },
+        "b1535c2f-64e6-4726-ada1-ce5fff5cb35b": {
+          "name": "Penutupan"
+        },
+        "0dba24b6-b0da-4493-976f-d281bfc2f5ad": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "8587af1b-82c6-44bb-aee2-1500f125d768": {
+          "name": "Pemanasan"
+        },
+        "9e5ccaf3-64ce-47e2-8bde-138d855e5b6d": {
+          "name": "Kegiatan Utama"
+        },
+        "d96b7f77-5b04-48fd-a2a0-e2349a7e9ddb": {
+          "name": "Penutupan"
+        },
+        "fa98ed40-e7cd-4ad2-a13d-bfe4109fb78a": {
+          "name": "Pemanasan"
+        },
+        "0b54fa1b-03a9-44fd-ab5c-e782b16d0a82": {
+          "name": "Kegiatan Utama"
+        },
+        "52ef41bf-9fcf-4c7d-8fec-dbf7d244859b": {
+          "name": "Penutupan"
+        },
+        "74d92853-37dc-4cd5-9d69-087420e81160": {
+          "name": "Pemanasan (Opsional)"
+        },
+        "3df49bdd-03d3-4d4e-aa6a-7df0588bb582": {
+          "name": "Kegiatan Utama"
+        },
+        "15ae43a1-06b0-4baa-b04e-8699ef3fb26f": {
+          "name": "Penutupan"
+        },
+        "36227e91-065d-4acc-8155-f954f1fe1ffc": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "03e20d6a-151e-4f7c-8455-81945f0789b6": {
+          "name": "Hari 1 - Mengeksplorasi Ide-Ide Proyek"
+        },
+        "a064c25d-f04d-46a1-96dd-1c084fd0e289": {
+          "name": "Hari 2 - Proses Desain"
+        },
+        "9a4ec17c-5336-44ff-80d1-e0274512b33f": {
+          "name": "Hari 3 - Membuat Proyek Anda"
+        },
+        "669b4c4b-acd6-42be-a74b-326176efa14b": {
+          "name": "Hari 4 - Merevisi Proyek Anda"
+        },
+        "f4c94b25-e0f0-4caa-bebd-1557f771a849": {
+          "name": "Hari 5 & 6 - Mempresentasikan Proyek Anda"
+        },
+        "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "5b342453-cd42-4221-8375-618cf1ddb41b": {
+          "name": "Tonton: Mengikuti Jejak Digital"
+        },
+        "133dbbe7-859c-4ce7-a0e4-34d1212dd07b": {
+          "name": "Permainan: Jalur Binatang"
+        },
+        "ac5b3240-5c06-438d-b651-7ba0caa67c28": {
+          "name": "Tinjau Lagi: Tak Masalah Disebarkan?"
+        },
+        "e0e795f5-7368-4341-ac98-2b68aa5a26a0": {
+          "name": "Ringkasan: Momen Diam Sebentar & Berpikir"
+        },
+        "15846b35-8b6d-4970-87a4-cc861b66e9cb": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "2d902c04-594b-4595-a677-3c45978e14d8": {
+          "name": "Pemanasan"
+        },
+        "6cca604c-a3b4-469c-ae72-2771e49f5679": {
+          "name": "Kegiatan Utama"
+        },
+        "07fd7769-b0ad-43eb-b0d1-ea4ccfac4baf": {
+          "name": "Penutupan"
+        },
+        "7d5ce6e6-0282-4347-bbe7-f2c0ad21afb9": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "3dd03748-95a1-4a80-921c-79ca88f9c0d8": {
+          "name": "Pemanasan"
+        },
+        "3c623aad-d037-437e-b74d-9c8a5824950a": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "89f19370-c3ba-4212-b017-433e7c2e946f": {
+          "name": "Kegiatan Utama"
+        },
+        "448bef23-e935-4088-8cc4-0fe9ff173780": {
+          "name": "Penutupan"
+        },
+        "02613861-ab47-4a89-a8c5-12dbace2f54e": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "c396e3fc-d4aa-4cb3-9b13-472b50b660fd": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "aae8c0dc-7721-4ba9-a24d-4aaaf32e1e4a": {
+          "name": "Pemanasan"
+        },
+        "a5197817-cd21-44f5-8078-169590fa1ffb": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "78ca7ff6-3168-4f13-9a9f-8e45e426afd8": {
+          "name": "Mempratinjau Puzzle Online Bersama Murid di Kelas"
+        },
+        "4f076f68-7fc3-4cec-994c-1d177f20d51d": {
+          "name": "Kegiatan Utama"
+        },
+        "33d41e28-2af0-43b4-b3d5-7f496f8dba4f": {
+          "name": "Penutupan"
+        },
+        "60db2674-475d-4539-965e-bb62a58b76fe": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "af4312be-c462-4833-8519-b405d96f2b2c": {
+          "name": "Pemanasan"
+        },
+        "0614fe18-5128-4de7-883b-e70a596d867e": {
+          "name": "Kegiatan Utama"
+        },
+        "a9abfe69-ccf5-4d60-aadd-ab925aab2a8b": {
+          "name": "Penutupan"
+        },
+        "b0af1c83-5e0a-4858-bb9b-3a90c6974933": {
+          "name": "Pemanasan"
+        },
+        "7ef43cd7-431a-4ff1-bcd8-708b7755e84f": {
+          "name": "Kegiatan Utama"
+        },
+        "ea581e79-d9a4-41f0-a762-14f3f3c29bba": {
+          "name": "Penilaian"
+        },
+        "27fcf5f0-a9af-4634-a3f5-6ee183c9bce8": {
+          "name": "Penutupan"
+        },
+        "8d9c16a1-9644-4621-aa16-e9c869725074": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "148289f4-4345-49b1-bb7d-d96e9c999fb9": {
+          "name": "Pemanasan"
+        },
+        "978e434e-eb39-4bff-b6bf-508becfb8ad6": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "3e6caa8c-0fa4-475b-96bb-99c5a9f6d3de": {
+          "name": "Kegiatan Utama"
+        },
+        "a4fb28a6-1049-42c7-a63c-f51688554220": {
+          "name": "Penutupan"
+        },
+        "fa7408d8-1dd3-4d8b-a611-f412c92361bd": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "eb3ac5b0-7f9f-4ab5-bc88-cc7d5748b97a": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "7e002958-d294-4986-bfdb-8d5cad5312e5": {
+          "name": "Pemanasan"
+        },
+        "2992021b-4ada-4b71-a3c7-fbf40d3acca2": {
+          "name": "Kegiatan Utama"
+        },
+        "49a16e33-3c0f-40c7-9258-75a3e5ba717c": {
+          "name": " Ringkasan"
+        },
+        "4b9fe477-9a99-4cf7-b390-6cfaf046f61d": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "81967def-358e-4733-aedd-9aa01a30d8e8": {
+          "name": "Pemanasan"
+        },
+        "9d80f684-eac3-4cd7-92ea-d861bad20479": {
+          "name": "Kegiatan Utama"
+        },
+        "fb19c014-becb-4f19-9669-5591aec2bd2a": {
+          "name": "Penutupan"
+        },
+        "380aca01-c1a9-44eb-978e-f896d033b45c": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "bcdb311f-0e2f-4bce-8447-b935e91283d9": {
+          "name": "Pemanasan"
+        },
+        "5e5b0210-18c5-477b-9210-189a155e155a": {
+          "name": "Kegiatan"
+        },
+        "1a849e73-72e4-4780-bd58-6ea6c8cad8fb": {
+          "name": "Penutupan"
+        },
+        "737e13d1-e7a2-4f63-be94-b9f2e7db97ee": {
+          "name": "Pemanasan"
+        },
+        "9699c947-4c73-43e4-bc7a-109abb746184": {
+          "name": "Kegiatan Utama"
+        },
+        "48d609f4-d565-47d0-aa71-f3c6cbae2571": {
+          "name": "Penutupan"
+        },
+        "de886c32-4827-44b6-a34d-ed3e07ef767d": {
+          "name": "Penilaian"
+        },
+        "2cba77e6-e43d-4690-949f-f0fed16b6528": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "bc267268-7861-46d8-876a-4272d51fa63a": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "cf77273f-fbf5-470c-90c1-19dbc5bdbc35": {
+          "name": "Pemanasan"
+        },
+        "51259ea3-edb5-4c2d-ae16-45795c6396cb": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "e9a43341-7ad3-4351-b866-2e1a35d6d0a9": {
+          "name": "Kegiatan Utama"
+        },
+        "47f11f72-4b90-4a2e-a7c8-3f69b97740e7": {
+          "name": "Penutupan"
+        },
+        "812dcf18-f1e3-46dc-9cf6-45c63cd5dd0e": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "acde8fd8-754e-47b9-bd4e-a4fcf27b878b": {
+          "name": "Pemanasan"
+        },
+        "82e4621e-2291-4079-953f-345aed9ae478": {
+          "name": "Kegiatan Utama"
+        },
+        "5f075543-8ff0-4898-a88c-b77a1cb0afbb": {
+          "name": "Penutupan"
+        },
+        "6b9e69c5-cb90-40e3-9130-f40a91e1e3ac": {
+          "name": "Pemanasan"
+        },
+        "69037656-6474-47b5-88ea-b7df262586bd": {
+          "name": "Kegiatan Utama"
+        },
+        "f8c1c605-1236-4268-8125-c2c4c5f4fde9": {
+          "name": "Penutupan"
+        },
+        "f7d39471-7d15-4b89-bde4-6d4846004ccd": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "61a942b7-f5f6-4706-abaa-f7e05643bc93": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "1cd41560-d425-4c55-b269-ced0b1d8d561": {
+          "name": "Pemanasan"
+        },
+        "d7f0a13a-3db5-4972-9c24-0e0fa8463566": {
+          "name": "Kegiatan Utama"
+        },
+        "d7a600d9-068f-4e78-9005-b47a95b17615": {
+          "name": "Penutupan"
+        },
+        "a0ab4c72-fd17-4c92-9627-206ff2d7f56a": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "90198481-f560-4b5b-9229-5e51f18c29ac": {
+          "name": "Pemanasan"
+        },
+        "260359b6-17e1-49e8-8785-d4e4c06d34cc": {
+          "name": "Aktivitas Penghubung"
+        },
+        "343b103b-00b3-4485-8105-487f7b206e6b": {
+          "name": "Kegiatan Utama"
+        },
+        "17284e1d-e795-44e4-9484-f10b8d1d3f6f": {
+          "name": "Penutupan"
+        },
+        "24856a1c-4bbd-4d30-a0a2-008175a93fca": {
+          "name": "Pemanasan"
+        },
+        "9a355427-c14a-4837-8630-9eb1744e563c": {
+          "name": "Kegiatan Utama"
+        },
+        "3e1de9ea-1b88-4cd8-a229-cd3cfb7f1473": {
+          "name": "Penutupan"
+        },
+        "e231dcbb-0fb2-4c6b-9daa-3457e16e0f80": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "d178a54a-af69-4324-b41d-53bba0b0c945": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "d3278419-8194-4a0a-a5ef-74eacedbfde4": {
+          "name": "Pemanasan"
+        },
+        "2ffdc99a-0d2f-4412-b7bd-e29fc00ce398": {
+          "name": "Kegiatan Utama"
+        },
+        "e2363d01-0837-4823-848f-c127c70ec485": {
+          "name": "Penutupan"
+        },
+        "eb4e7f77-0313-4f4f-94c0-f0529ff532f3": {
+          "name": "Pemanasan"
+        },
+        "d296925d-a20e-4d7e-a70a-a548b9ba9d0c": {
+          "name": "Kegiatan Utama"
+        },
+        "52c4853f-eb21-4a76-8051-656c84d23346": {
+          "name": "Penutupan"
+        },
+        "9b2f3c76-9f1d-4c78-ad3c-fa2af2cab780": {
+          "name": "Pemanasan"
+        },
+        "9c434884-f2bd-4fef-bc98-6d4c04f6cc0c": {
+          "name": "Kegiatan Utama"
+        },
+        "5adf6809-f337-4e15-ae7b-576590dfdf10": {
+          "name": "Penutupan"
+        },
+        "6f4ecd68-c7b8-46a9-a7f7-d78c902604b0": {
+          "name": "Pemanasan"
+        },
+        "5195efa6-b2ec-4f87-acb6-a3a2404b4002": {
+          "name": "Kegiatan Utama"
+        },
+        "06405457-a7a2-4d06-a86e-49fcd9b68ca0": {
+          "name": "Penutupan"
+        },
+        "7d776b69-c8bc-4061-bc09-6f7d4fabadd1": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "f82ae62d-6e76-46b1-b3bd-ca643497839a": {
+          "name": "Pemanasan"
+        },
+        "96e3c582-25a1-4209-86f5-a15a19f5c221": {
+          "name": "Aktivitas (30-45 menit)"
+        },
+        "dbc43fde-8339-463d-b174-c01b5cc93c89": {
+          "name": "Penutupan"
+        },
+        "dc6e401d-5f08-4449-b404-9f5390acfa3d": {
+          "name": "Pemanasan"
+        },
+        "e9f3959f-04ce-4f9c-8bc8-9dd29fecace9": {
+          "name": "Kegiatan Utama"
+        },
+        "b36788d7-9643-4457-ba55-a5936fd67c77": {
+          "name": "Penutupan"
+        },
+        "a4fa8c72-b9c4-44cd-9ea4-af03b1e8500c": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "70b4e0eb-e7bc-4317-a1d9-18fe9ce48353": {
+          "name": "Pemanasan"
+        },
+        "90db7da1-6a9b-456f-ba50-f413389d5fab": {
+          "name": "Kegiatan Utama"
+        },
+        "d023bf11-e78a-4720-93f3-10031013096e": {
+          "name": "Penutupan"
+        },
+        "d945cc19-522e-494a-9b12-cfc84bf0ba6f": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "26877025-2ce3-4c89-8827-b7519c974edc": {
+          "name": "Pemanasan"
+        },
+        "039aa42a-b493-419e-9e3e-a6cf103c006b": {
+          "name": "Kegiatan Utama"
+        },
+        "fe342cc5-f06c-4a54-8f84-1def5686579b": {
+          "name": "Penutupan"
+        },
+        "533fe4fd-4ce1-4085-b8d3-38e05237f35c": {
+          "name": "Pemanasan"
+        },
+        "feab0cc0-6a80-4f49-a0d8-7e1f8ac5f6ec": {
+          "name": "Kegiatan Utama"
+        },
+        "d751060c-6a46-4e33-97b9-5393fb29e14f": {
+          "name": "Penutupan"
+        },
+        "1b4f431b-2591-4b3e-961d-d6fd5e62b3bb": {
+          "name": "Pemanasan"
+        },
+        "e1911e12-4293-4c9c-a70c-6a8909f834f0": {
+          "name": "Kegiatan Utama"
+        },
+        "065a78f2-8fac-4008-b615-99d602b8876c": {
+          "name": "Penutupan"
+        },
+        "464c4e54-c910-492d-a5bd-e0a7ca6957ea": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "ed28a98c-cc1e-4e7d-9e0c-d38e4856fafa": {
+          "name": "Pemanasan"
+        },
+        "977070fc-22ca-4ba5-ac74-d4ee756cce0d": {
+          "name": "Kegiatan Utama"
+        },
+        "8760e074-8320-46f8-8c3a-e55176063b1a": {
+          "name": "Penutupan"
+        },
+        "289fcfe5-3db1-48bb-9b3c-6b02a976000b": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "b938281e-0cd0-459e-a65e-6d90e9d38cd8": {
+          "name": "Pemanasan"
+        },
+        "15e4da12-1358-49cd-8053-468eced03e09": {
+          "name": "Kegiatan Utama"
+        },
+        "e8c41aea-102e-4876-8db5-1ee884262b7d": {
+          "name": "Penutupan"
+        },
+        "d8d7b243-06ca-48f2-a644-db75e5fa6e28": {
+          "name": "Pemanasan"
+        },
+        "b5505d13-be35-4253-8943-982af69103dc": {
+          "name": "Kegiatan Utama"
+        },
+        "aa5f590d-dcfe-4b97-b8a1-2eb6cdbafc95": {
+          "name": "Penutupan"
+        },
+        "4e7e48aa-6b90-439e-bc74-10b307d947a5": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "c963266f-b222-4601-bc31-c985c0b01904": {
+          "name": "Pemanasan"
+        },
+        "99c95177-f00a-4882-aa77-d677002d1a53": {
+          "name": "Kegiatan Utama"
+        },
+        "a7429e8c-ec13-486c-9014-13a9e8b94d1a": {
+          "name": "Penutupan"
+        },
+        "a1218000-260d-4261-aaf9-9ae2f301cc7e": {
+          "name": "Pemanasan"
+        },
+        "272a40d1-860c-4b8e-a940-2cc52e7b3a64": {
+          "name": "Kegiatan Utama"
+        },
+        "cd4af995-1ef8-420c-b072-626c77e686eb": {
+          "name": "Penutupan"
+        },
+        "a297e9ad-b7ae-4597-bc0a-8170357e0297": {
+          "name": "Pemanasan"
+        },
+        "8f9beebf-f69d-4ca0-b4a2-ffce22415b8e": {
+          "name": "Kegiatan Utama"
+        },
+        "21c23f38-e6d3-4f5d-8c6c-a4ec09860739": {
+          "name": "Penutupan"
+        },
+        "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624": {
+          "name": "Pemanasan"
+        },
+        "f9b075e1-678f-4564-b33b-e6c7042f5908": {
+          "name": "Kegiatan Utama"
+        },
+        "67447f42-3c3e-4f01-bfcd-c52f9448991b": {
+          "name": "Penutupan"
+        },
+        "0155bb1f-f515-455c-8840-1944c6d52c49": {
+          "name": "Pemanasan"
+        },
+        "34bb8679-e865-4af9-bc78-a6bac9246e92": {
+          "name": "Kegiatan Utama"
+        },
+        "2dc83e62-9426-4b0b-8eb4-11e22ead12fc": {
+          "name": "Penutupan"
+        },
+        "38ea9ff5-2d6b-4e51-a245-751cabce4b8b": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "05222c29-d06f-4f0d-9c57-fb756176712c": {
+          "name": "Pemanasan"
+        },
+        "a4084d74-9a6f-4537-9392-748e4a257d5e": {
+          "name": "Kegiatan Utama"
+        },
+        "d6d2a1c2-abfe-449b-b760-0142d9d7ea44": {
+          "name": "Penutupan"
+        },
+        "9ce3273c-9779-4593-a194-f2587287f9dd": {
+          "name": "Pemanasan"
+        },
+        "c8b3c8c5-84a1-47f0-af8f-f772e1960cc4": {
+          "name": "Kegiatan Utama"
+        },
+        "a78e0f46-d88e-4656-91ef-ff25b678d99a": {
+          "name": "Penutupan"
+        },
+        "deba3deb-ae26-46d4-89c3-42552a652310": {
+          "name": "Pemanasan"
+        },
+        "d2aa174d-0e2f-4f0d-a8a5-37c37234a95a": {
+          "name": "Kegiatan Utama"
+        },
+        "91f0df19-3b17-4e11-872c-f35ece0350d0": {
+          "name": "Penutupan"
+        },
+        "9d268685-17bd-4661-9611-011e4c7e1f31": {
+          "name": "Pemanasan"
+        },
+        "5231da54-6cd1-40da-b1a2-f641e66dad0b": {
+          "name": "Kegiatan Utama"
+        },
+        "a3afe6e0-6daa-420d-9e87-e6ab64db4c1a": {
+          "name": "Penutupan"
+        },
+        "cd8ce7f2-eb53-48a3-91d7-c8de92d6d9f9": {
+          "name": "Pemanasan"
+        },
+        "a624544b-379c-4f84-acdc-83ca9c98e379": {
+          "name": "Kegiatan Utama"
+        },
+        "abf56223-658e-43c2-95c4-0f0000b51fe1": {
+          "name": "Penutupan"
+        },
+        "b0e6a592-befd-4cde-8182-b240bd487a11": {
+          "name": "Pemanasan"
+        },
+        "7cd12b88-29bc-4a64-9b20-2eeecb52f605": {
+          "name": "Kegiatan Utama"
+        },
+        "04117e16-2304-4382-ad49-74b8217a9de1": {
+          "name": "Penutupan"
+        },
+        "ba6f45d2-ed08-448b-bbd5-3b79c9b84917": {
+          "name": "Pemanasan"
+        },
+        "94ce1b1f-fc63-4d73-adf4-cc442fb6ed28": {
+          "name": "Kegiatan Utama"
+        },
+        "75251371-7995-450c-b105-1aa83ff77443": {
+          "name": "Penutupan"
+        },
+        "b2d3a6a7-15e7-4144-afed-b659a105270e": {
+          "name": "Pemanasan"
+        },
+        "6fe161d7-d6ab-46fb-91e7-47864ce10dc8": {
+          "name": "Kegiatan Utama"
+        },
+        "7616eada-577a-482a-9be0-d86144079190": {
+          "name": "Penutupan"
+        },
+        "a96fa837-7cf7-445a-8f2f-d0219c2d18c1": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "32f8d56f-0681-4253-8457-7347e55de868": {
+          "name": "Pemanasan"
+        },
+        "3f0b9eb5-63df-4e80-a632-1995ece4e2f0": {
+          "name": "Mempratinjau Puzzle Online Bersama Murid di Kelas"
+        },
+        "89f9d2cf-385c-445f-947d-1b68bf96eb5e": {
+          "name": "Kegiatan Utama"
+        },
+        "0b0b1403-f6d7-46b0-93b7-3a7144739ab0": {
+          "name": "Penutupan"
+        },
+        "a5b16543-dea5-453c-992f-b1f906a2db44": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "06cda082-0f41-4a52-a1eb-a8c33ef23d83": {
+          "name": "Pemanasan: Melihat Pratinjau Pemrograman di Labirin"
+        },
+        "0fa4c5d1-4c0e-42c4-8f6d-bf50eae78b70": {
+          "name": "Kegiatan Utama"
+        },
+        "6a9cc040-1569-475c-b44f-fddeddd601fb": {
+          "name": "Penutupan"
+        },
+        "936ae155-dd03-4aa8-89c1-a79fb77e94b5": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "476f0a7e-0f8c-48fb-855e-ed6245e473b1": {
+          "name": "Pemanasan"
+        },
+        "65601bc4-1c35-4a1e-bc16-4736970a48a1": {
+          "name": "Kegiatan Utama"
+        },
+        "25c8edcc-0542-4fd0-ad0d-531450f8069f": {
+          "name": "Penutupan"
+        },
+        "cf80987f-c93b-4518-834a-f43d1724b759": {
+          "name": "Pemanasan"
+        },
+        "d1698a23-f238-48a4-a0fd-2dabeb8c7b64": {
+          "name": "Kegiatan Utama"
+        },
+        "1614df8d-0a89-4e0f-8d05-2382db36b8d6": {
+          "name": "Penutupan"
+        },
+        "7f14fa67-b053-43f1-b54e-1372448ae19f": {
+          "name": "Pemanasan"
+        },
+        "152a89ca-a7ad-4ba8-bc78-f221581bd209": {
+          "name": "Kegiatan Utama"
+        },
+        "364491ce-5584-4e01-a791-073515164b97": {
+          "name": " Ringkasan"
+        },
+        "708bdcc2-b0bc-406e-b6f6-e0b13d9db0ab": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "31cead7b-04b5-4f08-ad69-d024f371debc": {
+          "name": "Pemanasan"
+        },
+        "87f5e396-bc40-4bd5-8c1d-0045ec2f96fa": {
+          "name": "Fondasi Online: Pratinjau Loop dalam Kolektor"
+        },
+        "303f1fad-15bb-4639-a2a1-2303a78192fd": {
+          "name": "Kegiatan Utama"
+        },
+        "63657d6a-c623-496b-9757-30396176fe9e": {
+          "name": " Ringkasan"
+        },
+        "ee6ea4fb-151a-48af-aa6e-a83b9d779302": {
+          "name": "Pemanasan"
+        },
+        "2aa7f611-4e8c-4512-bba0-7bbea58231b9": {
+          "name": "Kegiatan Utama"
+        },
+        "9d967fa5-9df5-4b21-9eef-596ad422ee0a": {
+          "name": "Penutupan"
+        },
+        "b455bd64-1bbc-4c9a-b5a8-e0099ee42e8b": {
+          "name": "Pemanasan"
+        },
+        "26696ddb-d1ec-4b8c-8ee8-1d60e1ea8a8b": {
+          "name": "Kegiatan Utama"
+        },
+        "921eae76-43d3-43c6-bb75-fc920e9b7d1c": {
+          "name": "Penutupan"
+        },
+        "e93a2018-fd89-4629-9861-4d0e8990d1bb": {
+          "name": "Pemanasan"
+        },
+        "6f855a08-e0af-4bd5-9d37-1b08eed44c3c": {
+          "name": "Kegiatan Utama"
+        },
+        "69907d5a-d4d4-4aa0-ae04-62da9684bcde": {
+          "name": "Penutupan"
+        },
+        "b3279383-3532-469b-a76f-13ebc612e377": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "7fa61201-c4ac-49d0-855a-853fca164cf6": {
+          "name": "Pemanasan"
+        },
+        "5da97936-a29c-42e0-94b5-bd4087b29fea": {
+          "name": "Kegiatan Utama"
+        },
+        "4ddc9c12-70a5-4d5a-8cf7-95bb95a36bce": {
+          "name": "Penutupan"
+        },
+        "5cbc2dad-35be-4542-8614-57c082dc0299": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "4676cb43-a1fe-4d36-9f41-82d8516ac46a": {
+          "name": "Tonton: Lingkungan Sekitar Online Saya"
+        },
+        "d4e86a51-c366-4b84-81b5-4b956bdb42dc": {
+          "name": "Baca: Keselamatan, Itu yang Utama!"
+        },
+        "854011f5-d6d4-4b11-85de-33e29b599c5d": {
+          "name": "Eksplorasi: Perjalanan Medan Internet"
+        },
+        "98b13493-1a10-4d3a-9a35-ec61a319bb48": {
+          "name": "Momen Diam Sejenak & Berpikir"
+        },
+        "217dee7e-80c0-40a2-b56e-e4df0c5805c6": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "e624bae9-e201-4036-92dc-003b8468256a": {
+          "name": "Pemanasan"
+        },
+        "140c0fd1-dcd1-4898-b18e-ec23087baee5": {
+          "name": "Kegiatan Utama"
+        },
+        "26c33530-3624-48d0-aa4a-d31d88d60dd5": {
+          "name": "Penutupan"
+        },
+        "29d2b8d1-5816-492c-bb32-ac81f88230c0": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "e3543673-fbb0-4ed4-b245-b87e03dac5c5": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "26024df9-6e4f-4347-a9e6-2d28952f5729": {
+          "name": "Pemanasan"
+        },
+        "cb29d1b2-f952-4f72-a718-43126699ac32": {
+          "name": "Kegiatan Utama"
+        },
+        "05c730d2-8b63-47f0-ba9d-d664b50fa08c": {
+          "name": "Penutupan"
+        },
+        "7544ca1c-bed3-4846-82dd-1e4efeb05aa6": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "7b5c3e7f-91ea-4159-b8c7-2346bd035d2d": {
+          "name": "Pemanasan"
+        },
+        "f824456e-fbbf-4107-a086-86cb2c66cdd2": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "64398eb7-46ab-4f42-97ad-3e90882fe3cd": {
+          "name": "Kegiatan Utama"
+        },
+        "a45c8d34-b743-42f8-b032-0145f8a7acb3": {
+          "name": "Penutupan"
+        },
+        "3535fb70-eb20-42aa-a261-909b8fe4800b": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "26a6d7b6-4e7f-45eb-9f06-0aac920cadf6": {
+          "name": "Pemanasan"
+        },
+        "79ad5c97-e159-40b0-ba7b-34b25313c4d1": {
+          "name": "Kegiatan Utama"
+        },
+        "b6f19eca-1d41-47cd-afd5-8a5b50316cb0": {
+          "name": "Penutupan"
+        },
+        "f4c545ed-2b8d-43da-b04e-326dbb97f16e": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "d352a834-02b6-493b-82a9-31c11a819dc8": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "239c73d7-f268-4c08-b4f4-1beea0c347cc": {
+          "name": "Pemanasan"
+        },
+        "f105579f-2cb4-40a3-bc8e-fb6da4bf9e9e": {
+          "name": "Kegiatan Utama"
+        },
+        "3752f66b-8440-41f6-bb77-df9a8a3c7fd8": {
+          "name": "Penutupan"
+        },
+        "b66f054d-7a1a-4d77-b19c-6b012d2b87a1": {
+          "name": "Berlatih"
+        },
+        "3cab4fd7-471c-4ad2-bdd8-e65a69c74898": {
+          "name": "Kegiatan Utama"
+        },
+        "f54be5e4-3e84-4033-8a75-00c7bcb0af1c": {
+          "name": "Penutupan"
+        },
+        "f5cd9462-7ba7-46fe-b356-bea3f8efcff4": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "29a3b6da-7fae-4611-910a-ba1103473edf": {
+          "name": "Pemanasan"
+        },
+        "5a68d945-c634-46b9-878b-6ad9516dad0f": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "eee4561a-d0b0-4086-a939-1424502c37ea": {
+          "name": "Kegiatan Utama"
+        },
+        "e7b93415-adc1-4947-a3b5-74de897f6560": {
+          "name": " Ringkasan"
+        },
+        "e3877751-093b-4fb5-a7ed-9de944d000ed": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "a7d18041-fd52-4f8c-a6ee-de62ca0bbf82": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "97af5df7-745a-49e3-bd61-3ddd22defa7c": {
+          "name": "Pemanasan"
+        },
+        "36dd66ca-40f4-4f12-9bb3-46547c575b25": {
+          "name": "Kegiatan Utama"
+        },
+        "155fb25f-e0ea-468c-bdeb-0b97eec8b19e": {
+          "name": "Penutupan"
+        },
+        "fc7902ec-363b-4c18-b1b6-841de04061b5": {
+          "name": "Pemanasan"
+        },
+        "38a05f4a-3886-4e0d-878c-51a3e8bda67e": {
+          "name": "Kegiatan Utama"
+        },
+        "70d17a47-00c8-41f8-aed2-f5aa76a2b9fb": {
+          "name": "Penutupan"
+        },
+        "51e205c0-25de-4ff0-8333-32f10f0f6215": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "e68d3049-5654-4527-9c7b-8dc1426e138d": {
+          "name": "Pemanasan"
+        },
+        "4e7b48ba-7b86-4f01-bd21-92b42a1081af": {
+          "name": "Kegiatan Utama"
+        },
+        "c146bd03-a9f6-417b-a954-161f2e3e0872": {
+          "name": "Penutupan"
+        },
+        "636ae3fe-7476-4fdc-a8f2-b97bdf300491": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "23f581d0-c75d-456e-97cc-28bddf192f50": {
+          "name": "Pemanasan"
+        },
+        "a6221538-4aea-417b-ad64-76ff327faf9e": {
+          "name": "Aktivitas Penghubung - Event - Pilih Satu"
+        },
+        "445fc613-92a9-4e73-b905-c0de8f745a0d": {
+          "name": "Kegiatan Utama"
+        },
+        "6ed9706c-5358-4a22-875c-fee2a88376ff": {
+          "name": "Penutupan"
+        },
+        "2c8578d4-3bc6-42ac-8fff-2f460daedff3": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "7ae3d9c5-3492-44e0-be39-bc00114371c0": {
+          "name": "Pemanasan"
+        },
+        "aa170416-6126-48d0-9334-807659b01275": {
+          "name": "Kegiatan Utama"
+        },
+        "3b74dca1-328c-42e5-9360-af59a9eede29": {
+          "name": "Penutupan"
+        },
+        "6496f3a3-d253-44df-9139-7b3870eee21f": {
+          "name": "Pelajari: Apa Itu Kekasaran?"
+        },
+        "fd9e26a9-0627-4359-8a36-25bd9dc888c1": {
+          "name": "Lakukan: Online vs. Tatap Muka"
+        },
+        "5bcbf42e-64db-4405-a738-1d5ade6478dc": {
+          "name": "Eksplorasi: STOP Kekasaran"
+        },
+        "e5ba459e-982e-4b0f-a102-e300300f9d8a": {
+          "name": "Ringkasan: Momen Diam Sebentar & Berpikir"
+        },
+        "f32ea3e2-2c77-4d9e-81f2-f062dcc62831": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "8c544c95-64d5-4c31-8e0a-99f9c63478ba": {
+          "name": "Tingkat"
+        },
+        "e56a02fc-2b09-45ef-91bc-40a40ba87709": {
+          "name": "Pemanasan"
+        },
+        "d0023712-1596-4547-ad29-d742aab5fea5": {
+          "name": "Kegiatan"
+        },
+        "cf3b92c1-1534-4b5f-aee0-d1d0fc689f07": {
+          "name": "Penutupan"
+        },
+        "fef0dd69-afa1-48b8-a91a-bb7c90de0fff": {
+          "name": "Pemanasan"
+        },
+        "b274f4c7-f500-40b8-be45-9514daa5fd33": {
+          "name": "Aktivitas Penghubung - Pemrograman"
+        },
+        "21f339fc-a078-41b5-a2c0-bb95b7668103": {
+          "name": "Mempratinjau Puzzle Online Bersama Murid di Kelas"
+        },
+        "084cb6b1-28d4-4352-a2f9-5d58c9702bca": {
+          "name": "Kegiatan Utama"
+        },
+        "88b97b3d-d366-48f8-a1ab-3889b60043b5": {
+          "name": "Penutupan"
+        },
+        "162606b4-d220-420b-9703-a3fde0f875bd": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "3a72607b-f645-4ec9-8c22-1d06333363d7": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "69b9baec-7332-406c-837a-fb64ae1fe34d": {
+          "name": "Pemanasan"
+        },
+        "fc1d79ce-3b23-4812-8760-9e9bbd395029": {
+          "name": "Kegiatan Utama"
+        },
+        "290e1afa-cec3-4eeb-96cc-1ef2695e1ae7": {
+          "name": "Penutupan"
+        },
+        "ad5f23ed-1a14-49b9-b7d5-f0739393e1f9": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "d3e694da-2437-407e-9478-53c69d99ba8d": {
+          "name": "Pemanasan"
+        },
+        "ab929c69-85b7-485d-a8a9-2df1b53af578": {
+          "name": "Aktivitas Penghubung "
+        },
+        "d79fb8ee-956d-4630-b5bb-12a17ac01703": {
+          "name": "Kegiatan Utama"
+        },
+        "d5ffd47e-72e1-4c51-b0b2-c2eb8add6d6c": {
+          "name": "Penutupan"
+        },
+        "a91088f0-aa3f-4df8-9274-d0311f23690b": {
+          "name": "Pemanasan"
+        },
+        "0ac876c0-1192-4f49-8681-84dc7435a23f": {
+          "name": "Kegiatan Utama"
+        },
+        "c385379d-be36-40b9-9a56-a4c34885eb1a": {
+          "name": "Penutupan"
+        },
+        "fe040a1c-988d-4d15-a3bc-a4482aee15ad": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "1b5e65d2-6913-4ffa-99c8-c24b9f66c884": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "85aac025-b9a7-410d-aa32-833228487252": {
+          "name": "Pemanasan"
+        },
+        "bc37d277-781e-45ce-a009-5b860924fd0f": {
+          "name": "Kegiatan"
+        },
+        "23a470c7-c3b7-472d-b6bf-f1788fb36b22": {
+          "name": "Penutupan"
+        },
+        "e45b301d-d9e3-4217-a048-dc3bd80bbb09": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "7aa3d9d0-5f51-4169-935f-83c34e385ec4": {
+          "name": "Pemanasan"
+        },
+        "c530700c-f18a-489f-a8a4-3919972c9152": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "08501ea2-5017-47ab-8c8a-b6670a53d8e4": {
+          "name": "Kegiatan Utama"
+        },
+        "8c27f4d1-b29d-48c6-b0e2-b572561d4318": {
+          "name": "Penutupan"
+        },
+        "0b553378-ac34-4727-9d20-6e2418b91d92": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "45ac5681-de1e-49f9-8135-957e7c79e3d7": {
+          "name": "Pemanasan"
+        },
+        "fdb5011e-e116-415d-b8fc-16bfac7e4752": {
+          "name": "Kegiatan Utama"
+        },
+        "f62b81e6-26e7-4c34-9852-3a50db5f9122": {
+          "name": "Penutupan"
+        },
+        "94065f57-a74c-4669-aba3-4545afc1ac99": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "94a6f332-0114-4c5f-a50a-8ca867c388af": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "b1684e39-7a0d-4473-a2e2-3ca41cf53430": {
+          "name": "Pemanasan"
+        },
+        "7e8cc9d6-7882-4eb8-b06f-1e6833e2ff4d": {
+          "name": "Kegiatan Utama"
+        },
+        "ce2af74c-6ea2-4be2-b451-660bca33f7c9": {
+          "name": "Penutupan"
+        },
+        "80232621-bdde-444c-a5a0-3b34841a7204": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "c8520741-98b8-4caf-a698-966ba8b01e4e": {
+          "name": "Pemanasan"
+        },
+        "9ef3cd14-c36f-436a-9a9a-413e9716350a": {
+          "name": "Kegiatan Utama"
+        },
+        "4d247419-2bf3-4cfb-92e3-922317b3baab": {
+          "name": "Penutupan"
+        },
+        "07fa3f05-8e3a-4bb1-aaca-5d35b3ec01a4": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "b1fb0e94-332b-43de-b96f-70188d1852ef": {
+          "name": "Pemanasan"
+        },
+        "1f8652f9-9c36-4b8b-a711-5006415c9a02": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
+        "9051d98c-093f-4e07-a4b7-af876ed109df": {
+          "name": "Kegiatan Utama"
+        },
+        "6e5ae7b5-8fc7-4fb9-8ea0-341a7dc015a5": {
+          "name": "Penutupan"
+        },
+        "320641ce-d300-442c-9c02-25d01b79c703": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "1cbfc372-bd13-4e94-b2c7-f334d93014a3": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
+        "7124ed35-c669-491b-8481-6406fa13bd93": {
+          "name": "Pemanasan"
+        },
+        "377ac093-85c3-421b-b94e-194931e73cf4": {
+          "name": "Kegiatan Utama"
+        },
+        "9ca8b3bc-e3a4-4f52-a27c-c0552ebf4840": {
+          "name": "Penutupan"
+        },
+        "f73ce05b-cbd9-4cf0-b94d-5544bcaf3347": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "88aa1b29-4bee-44d8-80ec-1e533e712cc2": {
+          "name": "Pemanasan"
+        },
+        "260a3e9b-0432-4cac-8488-dae86ba8fc65": {
+          "name": "Kegiatan Utama"
+        },
+        "821ee9a2-8dee-4363-b44e-7fe17bb0c736": {
+          "name": "Penutupan"
+        },
+        "f4b09758-1a3c-413b-b493-8e8f620af413": {
+          "name": "Pemanasan"
+        },
+        "535c4220-cca3-4ae8-aac9-d594297d2b28": {
+          "name": "Aktivitas Utama "
+        },
+        "72d182ad-5571-4ec0-8707-1ec0310f7ee7": {
+          "name": "Penutupan"
+        },
+        "a8c890ea-45f3-47bb-9276-e165a83ecb48": {
+          "name": "Pembelajaran yang Diperpanjang"
+        },
+        "0dc09009-c0c3-4970-ba5f-1afc56c122be": {
+          "name": "Pemanasan"
+        },
+        "98f4c2cb-47da-46e0-8d0a-bb64f7dbc0c1": {
+          "name": "Kegiatan Utama"
+        },
+        "74e2ce00-926c-4dff-9ffe-161c3e10e05e": {
+          "name": "Penutupan"
+        },
+        "b351a875-cdc3-4da8-a2c0-fb84cee29102": {
+          "name": "Pembelajaran yang Diperpanjang"
         },
         "e756dd3c-ceff-4018-ae32-e393404279eb": {
           "name": "Pemanasan"

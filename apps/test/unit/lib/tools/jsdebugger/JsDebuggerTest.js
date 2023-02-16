@@ -123,10 +123,6 @@ describe('The JSDebugger component', () => {
       expect(openIcon()).to.exist;
     });
 
-    it('will collapse the debugger by setting the height in the css', () => {
-      expect(debugAreaEl().instance().style.height).to.equal('30px');
-    });
-
     it('will call the onSlideShut prop', () => {
       expect(jsDebugger.props().onSlideShut).to.have.been.called;
     });
@@ -162,11 +158,13 @@ describe('The JSDebugger component', () => {
 
         it('will make closing and opening the debugger return to the same height', () => {
           expect(debugAreaEl().instance().style.height).to.equal('350px');
+          // close
           jsDebugger.instance().slideToggle();
           jsDebugger.update();
-          expect(debugAreaEl().instance().style.height).to.equal('30px');
+          // re-open
           jsDebugger.instance().slideToggle();
           jsDebugger.update();
+          expect(debugAreaEl().instance().style.height).to.equal('350px');
         });
       });
     });

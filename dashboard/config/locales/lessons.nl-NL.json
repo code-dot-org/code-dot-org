@@ -23,6 +23,12 @@
         "flappy/Flappy Code": {
           "name": "Flappy Code"
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Hello World: Voetbal",
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
+        },
         "hourofcode/Maze": {
           "name": "Doolhof",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is ontworpen voor jonge studenten in de leeftijd van 4 tot 10 jaar, maar kan tevens worden aangepast aan oudere studenten door gebruik te maken van de onderscheidende suggesties. ",
@@ -49,7 +55,6 @@
           "name": "Kauwgom Speel Lab"
         },
         "dance/Dance Party": {
-          "name": "Dansfeest",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
         },
@@ -66,6 +71,12 @@
           "name": "Eenvoudige versleuteling",
           "overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   ",
           "student_overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   "
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Hallo World: Space",
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
@@ -99,6 +110,12 @@
           "name": "Tekstcompressie",
           "student_overview": "Op een bepaald moment bereiken we een fysieke limiet wat betreft de snelheid van het verzenden van bits, en als we een grote hoeveelheid informatie sneller willen verzenden, dan moeten we een manier vinden om dezelfde informatie weer te geven in minder bits - we moeten de data comprimeren.  "
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab",
           "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
@@ -107,6 +124,7 @@
           "name": "Uur van Code 2013"
         },
         "dance-2019/Dance Party": {
+          "name": "Dansfeest",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
         },
@@ -173,6 +191,52 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Volgende stappen"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Estafette Programmeren"
+        },
+        "coursed-2022/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Dansfeest"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Statements met Kaarten"
+        },
+        "coursef-2022/Outbreak": {
+          "name": "Uitbraak"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Het Internet"
+        },
+        "coursee-2022/Hello World: Food": {
+          "name": "Hallo Wereld"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Songwriting",
+          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "verplaats het, verplaats het"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Rondjes lopen"
+        },
+        "express-2022/Dance Party": {
+          "name": "Dansfeest"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Vrolijke Routes"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "De grote gebeurtenis"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binaire armbanden"
         },
         "csd5-2022/Representing Images": {
           "name": "Het voorstellen van afbeeldingen"
@@ -947,6 +1011,9 @@
         },
         "allthethings/ML Fish": {
           "name": "ML Vis"
+        },
+        "allthethings/lesson-48": {
+          "name": "Poëzie"
         },
         "coursef-2021/For Loop Fun": {
           "name": "For Lus fun"

@@ -23,12 +23,13 @@ class InlineHint extends React.Component {
     textToSpeechEnabled: PropTypes.bool,
     isBlockly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
+    isRtl: PropTypes.bool,
     skinId: PropTypes.string
   };
 
   componentDidMount() {
     if (this.props.isBlockly) {
-      convertXmlToBlockly(ReactDOM.findDOMNode(this));
+      convertXmlToBlockly(ReactDOM.findDOMNode(this), this.props.isRtl);
     }
   }
 
@@ -54,7 +55,12 @@ class InlineHint extends React.Component {
         skinId={this.props.skinId}
       >
         <SafeMarkdown markdown={this.props.markdown} />
-        {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
+        {this.props.block && (
+          <ReadOnlyBlockSpace
+            block={this.props.block}
+            isRtl={this.props.isRtl}
+          />
+        )}
         {this.props.video && (
           <VideoThumbnail
             onClick={this.onVideoClick}

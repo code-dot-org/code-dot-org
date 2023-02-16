@@ -59,7 +59,7 @@ class TeacherScore < ApplicationRecord
   def self.get_level_scores_for_script_for_section(script_id, section_id, page)
     level_scores_by_student_by_lesson_by_script = {}
     # Teacher scores are currently only relevant for unplugged lessons
-    lessons = Script.find(script_id).lessons.select(&:unplugged)
+    lessons = Unit.find(script_id).lessons.select(&:unplugged)
     student_ids = Section.find(section_id).students.page(page).per(50).pluck(:id)
     lesson_student_level_scores = {}
     lessons.each do |lesson|

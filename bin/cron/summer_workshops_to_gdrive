@@ -11,8 +11,9 @@ require 'cdo/google/sheet'
 # by our programs team.
 #
 
-EARLIEST_WORKSHOP_START_DATE = Date.new(2022, 5, 1)
-LATEST_WORKSHOP_START_DATE = Date.new(2022, 9, 16)
+WORKSHOP_YEAR = Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR.partition('-').first.to_i
+EARLIEST_WORKSHOP_START_DATE = Date.new(WORKSHOP_YEAR, 5, 1)
+LATEST_WORKSHOP_START_DATE = Date.new(WORKSHOP_YEAR, 9, 16)
 
 def get_rows
   subjects = [
@@ -36,7 +37,7 @@ def get_rows
 end
 
 def main
-  sheet = Google::Sheet.new CDO.applications_2022_2023_gsheet_key
+  sheet = Google::Sheet.new CDO.applications_gsheet_key
   sheet.export(tab_name: 'summer_workshops', rows: get_rows)
 end
 

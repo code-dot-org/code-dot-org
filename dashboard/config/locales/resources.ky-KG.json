@@ -29,6 +29,129 @@
         "ai-training/oceans/unversioned": {
           "type": "Видео"
         },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Релени програмдоо"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Релени програмдоо"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Релени програмдоо"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Релени програмдоо"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Релени програмдоо"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Релени програмдоо"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Видео"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Видео"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Видео"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Видео"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Видео"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Видео"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Интернет"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Видео"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Видео"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Видео"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Видео"
+        },
+        "pair_programming/express/2022": {
+          "type": "Видео"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Видео"
+        },
+        "turns_angles/express/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Видео"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Видео"
+        },
+        "variables/express/2022": {
+          "name": "Өзгөрмөлөр"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Видео"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Видео"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Видео"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Видео"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Видео"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Видео"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Видео"
+        },
+        "pair_programming/coursec/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Видео"
+        },
         "binary_and_data/csd/2022": {
           "type": "Видео"
         },
@@ -379,6 +502,11 @@
         "vocabulary_3/csd/2017": {
           "name": "Сөздүк"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Видео"
         },
@@ -391,10 +519,10 @@
         "ai-ml/coursef/2021": {
           "type": "Видео"
         },
-        "ai-training/coursef/2021": {
+        "ai-societal/coursef/2021": {
           "type": "Видео"
         },
-        "ai-societal/coursef/2021": {
+        "ai-training/coursef/2021": {
           "type": "Видео"
         },
         "unplugged-video-internet/coursef/2021": {
@@ -412,10 +540,10 @@
         "unplugged-video-big-event/courseb/2021": {
           "type": "Видео"
         },
-        "wiggles-go_noodle/coursea/2021": {
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Видео"
         },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+        "wiggles-go_noodle/coursea/2021": {
           "type": "Видео"
         },
         "wiggles_-_gonoodle/coursea/2021": {
@@ -436,40 +564,40 @@
         "pause_and_think_online/coursec/2021": {
           "type": "Видео"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Графикалык кагазды програмдоо"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Графикалык кагазды програмдоо"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Релени програмдоо"
         },
         "relay-assessment/coursed/2021": {
           "name": "Релени програмдоо"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Релени програмдоо"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Релени програмдоо"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Релени програмдоо"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Релени програмдоо"
         },
         "pause_and_think_online/coursed/2021": {

@@ -1,0 +1,22 @@
+{
+  "category": "CSC",
+  "config": {
+    "func": "setPromptWithChoice",
+    "inline": false,
+    "blockText": "prompt user {QUESTION} for variable {VAR} with choice {A}",
+    "args": [
+      {
+        "name": "QUESTION",
+        "type": "String"
+      },
+      {
+        "name": "VAR",
+        "customInput": "variableNamePicker"
+      },
+      {
+        "name": "A",
+        "type": "String"
+      }
+    ]
+  }
+}

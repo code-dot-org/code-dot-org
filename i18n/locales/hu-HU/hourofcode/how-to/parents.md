@@ -22,7 +22,7 @@ Kipróbálhatod a Kódolás Óráját számítógépenl, táblagépen, okostelef
 
 ## 1) Fedezze fel a tevékenységeket és a gyakorlatokat.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 Számtalan [ Kódolás Órája tevékenység ](https://hourofcode.com/us/learn) áll rendelkezésére, ha internet-hozzáféréssel rendelkező számítógépen dolgozol. Azt javasoljuk, hogy előre nézze át a lehetőségeket, így az igazán élvezetes gyakorlatok felé terelheti a gyermekét.
 
@@ -30,7 +30,7 @@ Minden tevékenységünkben megtalálható a problémamegoldás és a kritikai g
 
 - Gyerekeknek, akik szeretnek játszani: [ Minecraft](https://code.org/minecraft) vagy  Táncparti </ a></li> 
     
-    - For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+    - Gyerekeknek, akik szeretik a Disney-filmeket: [Star Wars](https://code.org/starwars), [Jégvarázs](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Vaiana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
     - Gyerekeknek, akik imádnak tanulni: [Mesterséges Intelligencia az óceánokért](https://code.org/oceans) or [Zeneszerzés Scratch-el](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)</ul>
 
 <h3>Nem erőssége a technológia?</h3>
@@ -38,7 +38,7 @@ Minden tevékenységünkben megtalálható a problémamegoldás és a kritikai g
     
     Ha korlátozottan fér csak hozzá csak számítógéphez, vagy egyáltalán nem, akkor a [ Kódolás Órája tevékenységek ](https://hourofcode.com/us/learn) szűrésével ki tudod választani a „Nincs számítógép vagy eszköz” opciót * Tantermi technológia * szakaszban.
     
-    [![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
+    [![](/images/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
     
     Ezeket a [ rövid videókat ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) is megnézheted, ha további ötleteket szeretnél kapni arról, hogyan lehet otthoni feladatokat megkönnyíteni!
     
@@ -62,7 +62,7 @@ Minden tevékenységünkben megtalálható a problémamegoldás és a kritikai g
     
     - Mutasd meg nekik az alábbi [inspiráló videót](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ), amely az egyik kedvenc példaképüket tartalmazza
     - Inspiráld őket egy videóval a [ tömérdek karrierlehetőségről](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP), amelyhez informatikai ismeretek szükségesek
-    - [ Rendelj néhány kiegészítőt](https://store.code.org/)! Választhat pólókat, matricákat vagy lemosható tetoválásokat. Ossza meg velük azonnal, hogy máris izgulhassanak, vagy tartogasd ezt a különleges élményt az óra végére. 
+    - [ Rendelj néhány kiegészítőt](https://store.code.org/)! Választhat pólókat, matricákat vagy lemosható tetoválásokat. Ossza meg velük azonnal, hogy máris izgulhassanak, vagy tartogasd ezt a különleges élményt az óra végére.
     
     
 
@@ -78,7 +78,7 @@ Minden tevékenységünkben megtalálható a problémamegoldás és a kritikai g
     
     [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-<h3>Have young women at home?</h3>
+<h3>Vannak fiatal nők a háztartásban?</h3>
 
     
     <a href="https://code.org/girls">Íme a javaslataink</a>, amelyekkel felkeltheti érdeklődésüket a számítástechnika iránt. ** Tipp: ** Kezdheted azzal, hogy elmondod nekik, hogy nagyszerűek lennének ebben!
@@ -94,10 +94,10 @@ Minden tevékenységünkben megtalálható a problémamegoldás és a kritikai g
     
     A Kódolás Órája egy globális esemény, amelynek megünneplését a te családod is megérdemli. Íme néhány módszer, amellyel különlegessé teheted a a Kódolás Óráját:
     
-    - Nyomtasd ki a [ Kódolás Órája tanúsítványokat ](https://staging.code.org/certificates), amelyeket oda tudsz adni a gyerekeknek, ha befejezték a feladatot. 
-    - [ Nyomtass matricákat](https://staging.hourofcode.com/us/promote/resources#stickers) otthon vagy  vásárold meg őket online meglepetésként. </li> 
+    - Nyomtasd ki a [ Kódolás Órája tanúsítványokat ](https://staging.code.org/certificates), amelyeket oda tudsz adni a gyerekeknek, ha befejezték a feladatot.
+    - [ Nyomtass matricákat](https://staging.hourofcode.com/us/promote/resources#stickers) otthon vagy  vásárold meg őket online meglepetésként.</li> 
         
-        - Oszd meg a Kódolás Órája-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!</ul> 
+        - Ossza meg a közösségi médiában az otthon tartott Kódolás óráján készült fotókat és videókat. Használd a következőket: [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) Így mi is felhívhatjuk a figyelmet a sikereitekre!</ul> 
         
         [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 

@@ -31,8 +31,6 @@
         "starwarsblocks": "स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (ब्लॉकली)",
         "text-compression": "टेक्स्ट कॉम्प्रेशन ",
         "csa-self-paced-pl": "CSA पायलट शिक्षकांसाठी Code.org नेव्हिगेट करणे",
-        "counting-csc": "लॉरेलसह मोजणे (गणना करणे )",
-        "explore-data-1": "बॉक्स प्लॉट्स आणि हिस्टोग्राम एक्सप्लोर करणे",
         "outbreak-csc": "उद्रेक",
         "poem-art": "कविता कला ",
         "poetry-hoc3": "कविता-hoc3",
@@ -43,7 +41,10 @@
         "halloween": "हॅलोविन",
         "step": "पायरी",
         "csa5-exemplars": "csa5-उदाहरणे",
-        "soccer": "फुटबॉल"
+        "soccer": "फुटबॉल",
+        "hello-world-space": "हॅलो वर्ल्ड: जागा",
+        "hello-world-soccer": "हॅलो वर्ल्ड: फुटबॉल",
+        "playground": "खेळाचे मैदान"
       }
     }
   }

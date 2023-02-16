@@ -696,7 +696,7 @@
       "CSD U3 properties alpha_2022": {
         "display_name": "New Block : Alpha",
         "bubble_choice_description": "Adjust the sprite's transparency with alpha.",
-        "long_instructions": "# Alpha\r\n\r\nAlpha is a property that can control the transparency of a sprite. It uses decimal values to represent transparency:\r\n\r\n- `0.5` would be 50% transparent (partially see-through)\r\n- `1` would be 100% transparent (invisible)\r\n- `0` would be 0% transparent (completely visible)\r\n\r\n## Do This:\r\n\r\nUsing either the sprite already created for you or with any other sprites of your choosing, play around with the alpha property and see how it works and how it changes on different sprites!"
+        "long_instructions": "# Alpha\r\n\r\nAlpha is a property that can control the transparency of a sprite. It uses decimal values to represent transparency:\r\n\r\n- 0.5 would be 50% visible (partially transparent, like it's see-through)\r\n- 1 would be 100% visible (not transparent at all - it will look like a normal sprite)\r\n- 0 would be 0% visible (completely transparent - it will look invisible!)\r\n\r\n## Do This:\r\n\r\nUsing either the sprite already created for you or with any other sprites of your choosing, play around with the alpha property and see how it works and how it changes on different sprites!"
       }
     }
   },
@@ -1299,7 +1299,7 @@
   },
   "https://studio.code.org/s/csd3-2022/lessons/16/levels/7": {
     "dsls": {
-      "description": "Practice keyboard input and using the if/else block with these activities.",
+      "description": "Practice keyboard input and using conditional statements with these activities.",
       "display_name": "Mouse Input and If/else Practice"
     },
     "sublevels": {
@@ -1364,7 +1364,7 @@
   },
   "https://studio.code.org/s/csd3-2022/lessons/17/levels/2": {
     "dsls": {
-      "description": "In the next few levels, you'll be completing your own interactive card. Here are some examples to give you some ideas. Don't forget to look at the code to see how they work.",
+      "description": "In the next few levels, you'll be completing your own interactive card. Here are some examples to give you some ideas.",
       "display_name": "Your Interactive Card"
     },
     "sublevels": {
@@ -1390,7 +1390,7 @@
     "long_instructions": "# Laying Out Your Background\n\nBefore beginning this project, you should have already completed the Interactive Card Planning activity, and you'll want to have that paper with you as you develop your program. Preparation is one of the **most important** elements of successfully creating a program!\n\n# Do This\n\nRefer to your planning activity sheet to help you lay out the shapes that will become the background to your card.\n\n-   First, figure out what the lowest layer in your image is (this should use the `background()` block) and add it to the very top of the draw loop.\n-   Next, layer each additional drawing block in the order you want them to appear in the stack.\n-   Finally, add a comment to the top of this section of code to describe what it does, and if you have any particularly complicated chunks of code within (such as code to draw a tree or a house), add a descriptive comment to that as well.\n\n**Challenge:** Can you use variables or `randomNumber()` to add some subtle animation to your background layer?"
   },
   "https://studio.code.org/s/csd3-2022/lessons/17/levels/4": {
-    "long_instructions": "# Adding Sprites\n\nNow that you have the more static elements of your card layed out, it's time to add the Sprites. Your Sprites should provide the primary animations and interactions for your card - so feel free to get creative here and have fun.\n\n# Do This\n\nCheck out the Sprites table on the back of your planning sheet. For each Sprite in your table:\n\n-   Initialize the Sprite at the top of your program with `createSprite()`.\n-   Find or create the image(s) for the Sprite and set it with `setAnimation()`.\n-   Inside the `draw()` loop update any Sprite properties that we will be constantly animating (we'll deal with conditionals in a minute)."
+    "long_instructions": "# Adding Sprites\n\nNow that you have the more static elements of your card laid out, it's time to add the Sprites. Your Sprites should provide the primary animations and interactions for your card - so feel free to get creative here and have fun.\n\n# Do This\n\nCheck out the Sprites table on the back of your planning sheet. For each Sprite in your table:\n\n-   Initialize the Sprite at the top of your program with `createSprite()`.\n-   Find or create the image(s) for the Sprite and set it with `setAnimation()`.\n-   Inside the `draw()` loop update any Sprite properties that we will be constantly animating (we'll deal with conditionals in a minute)."
   },
   "https://studio.code.org/s/csd3-2022/lessons/17/levels/5": {
     "long_instructions": "# User Input\n\nYou've got a background, you've got Sprites, now it's time to give your user something to do!\n\n# Do This\n\nOn the interactions table from your planning sheet, find all of the interactions that rely on user input (key presses and mouse movements). For each of those interactions:\n\n-   Add an `if` block (or `if-else` block if you need a fallback action) inside the `draw()` loop.\n-   Add the appropriate input block for your condition (such as `keyDown()` or `mouseDown()`).\n-   Add the necessary actions inside the `if` block.\n\n**Challenge:** Can you create more sophisticated conditionals by nesting them or using compound booleans?"
@@ -2394,7 +2394,7 @@
       "Student End of Unit Survey - Intro+TeacherMD_csd3-2022": {
         "dsls": {
           "markdown": "### Please take a moment to respond to these **three quick questions**.\n\n_Code.org takes your privacy seriously._ Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n",
-          "teacher_markdown": "**Teacher End-Of-Unit Surveys:** While your students complete the survey, we would appreciate you completing a **5-question** teacher survey\n\n## [Click Here for Teacher Survey]()\n\n(Note: The survey link does not currently work - it will become available at the start of the school year)\n"
+          "teacher_markdown": "**Teacher End-Of-Unit Surveys:** While your students complete the survey, we would appreciate you completing a quick teacher survey\n\n## [Click Here for Teacher Survey](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3)\n"
         }
       },
       "Student End of Unit Survey - Q1_2022": {
@@ -2678,7 +2678,7 @@
         "long_instructions": "Think about one difficult bug that you needed to fix in your program.  What was your process for finding and fixing the bug?"
       },
       "CSD U3 Test parameter FR_2022": {
-        "long_instructions": "Blocks such as `rect` and `velocityX` have parameters that let you give specific information about what they can do.  Choose a function from your program that could be improved with a parameter and explain how."
+        "long_instructions": "Blocks such as `rect` and `ellipse` have parameters that let you give specific information about what they can do.  Choose a function from your program that could be improved with a parameter and explain how."
       },
       "CSD U3 Test collaboration FR_2022": {
         "long_instructions": "How did you and your partner decide how to divide up the work to make this program?"

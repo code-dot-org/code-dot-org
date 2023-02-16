@@ -770,6 +770,91 @@
         },
         "CSD web text explore_2022": {
           "CSD_U3_variables": "Промене номера тук"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Добавете това блокче към програмата си!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Нов блок!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Нов блок!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Нов блок!",
+          "new_block_4": "Нов блок!"
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Тази малка инструкция казва на компютъра да изпълни ГОЛЯМА част от кода със същото име в работното пространство."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Това е цикъл „повтари“! Щракнете върху него в работното пространство и добавете код, който желаете да се изпълнява отново и отново."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agent може да се носи над водата, но героят не може!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Не можете да изхвърлите тези блокове, но можете да ги редактирате!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Agent може да се носи над лавата, но героят не може!  "
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Ние сме поставили някои блокове тук, за да започнете"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Този код ще започне изграждането на вашия дом. Можете ли да го завършите?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Натиснете \"Старт\", за да пробвате вашата програма",
+          "craft_drag_block_callout": "Плъзни блокче \"върви напред\" и го слепете под другия блок"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Повторете действията като поставите блокове тук вътре"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Този код ще провери за лава, можете ли да добавите команда да вървим напред?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Изкопай това желязо!"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената."
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "Виждате ли някои нови блокове в кутията с инструменти?  Не се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената."
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Това число ви казва колко от тези блокове можете да използвате в този пъзел."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Натиснете крушката, ако ви трябва съвет!"
         }
       }
     }

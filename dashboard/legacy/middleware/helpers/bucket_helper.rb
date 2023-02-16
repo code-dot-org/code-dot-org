@@ -56,7 +56,7 @@ class BucketHelper
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, storage_app_id
     track_list_operation 'BucketHelper.app_size'
-    s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
+    s3.list_objects(bucket: @bucket, prefix: prefix).contents.sum(&:size).to_i
   end
 
   #
@@ -77,7 +77,7 @@ class BucketHelper
     objects = s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
     target_object = objects.find {|x| x.key == target_object_prefix}
 
-    app_size = objects.map(&:size).reduce(:+).to_i
+    app_size = objects.sum(&:size).to_i
     object_size = target_object.nil? ? nil : target_object.size.to_i
 
     [object_size, app_size]
@@ -149,12 +149,12 @@ class BucketHelper
       # https://app.honeybadger.io/projects/3240/faults/35329035/8aba7532-c087-11e7-8280-13b5745130ae
       Honeybadger.context(
         {
-          copy_source: URI.encode(src),
+          copy_source: ERB::Util.url_encode(src),
           copy_dest_bucket: @bucket,
           copy_dest_key: dest
         }
       )
-      response = s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
+      response = s3.copy_object(bucket: @bucket, key: dest, copy_source: ERB::Util.url_encode(src), metadata_directive: 'REPLACE')
 
       {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
     end
@@ -165,14 +165,14 @@ class BucketHelper
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
 
-    s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}?versionId=#{version}"), key: key, metadata_directive: 'REPLACE')
+    s3.copy_object(bucket: @bucket, copy_source: ERB::Util.url_encode("#{@bucket}/#{key}?versionId=#{version}"), key: key, metadata_directive: 'REPLACE')
   end
 
   def replace_abuse_score(encrypted_channel_id, filename, abuse_score)
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
 
-    s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: {abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
+    s3.copy_object(bucket: @bucket, copy_source: ERB::Util.url_encode("#{@bucket}/#{key}"), key: key, metadata: {abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
   end
 
   def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)
@@ -487,7 +487,7 @@ class BucketHelper
   #
   def invalid_version_id?(err)
     # S3 returns an InvalidArgument exception with a particular message for this case.
-    err.is_a?(Aws::S3::Errors::InvalidArgument) && err.message =~ %r{Invalid version id specified}
+    err.is_a?(Aws::S3::Errors::InvalidArgument) && err.message.include?('Invalid version id specified')
   end
 
   def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)

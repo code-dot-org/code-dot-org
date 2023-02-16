@@ -17,6 +17,12 @@
         "playlab/Play Lab": {
           "name": "Spēles laboratorija"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "k5-onlinepd-2019/Loops": {
           "name": "Cikli"
         },
@@ -34,6 +40,36 @@
         },
         "k5-onlinepd-2019/For Loops": {
           "name": "\"par\" cikli"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Releju programmēšana"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internets"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Dziesmu rakstīšana"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Ej, ej"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Laimīgās kartes"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Lielais notikums"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binārās aproces"
         },
         "csd3-2022/Variables": {
           "name": "Mainīgie"

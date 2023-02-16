@@ -11,7 +11,8 @@
           "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=2",
           "type": "feedback",
           "visibility": "Teacher-only",
-          "buttonText": "Learn More"
+          "buttonText": "Learn More",
+          "key": "bd40e697-e830-4d7d-848b-27c7c2584e0d"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -29,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 00:25:02 UTC",
+    "serialized_at": "2023-01-27 20:25:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -105,7 +106,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a scheduling challenge three times, once unplugged, and twice on the Internet Simulator, to explore the need for addressing messages online. Students first complete a challenge where they are allowed to talk to one another to fill out a weekly schedule. They then move on to a version of the Internet Simulator where all of their messages are \"broadcast\" or sent to everyone in the same simulator room. This challenge forces students to develop shared rules for communicating to complete the scheduling activity a second and then third time. The wrap up helps students connect their experiences to real-life rules, or protocols, used on the Internet for addressing messages.",
-        "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp_unit_2_-_the_internet_1/csp/2022]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp_unit_2_-_the_internet/csp/2022]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Now that students have explored what it takes to link devices on a network, they are ready to learn how devices communicate with each other. Prior to this lesson, the Internet Simulator was set up only for point-to-point communication. This new version is setup to “broadcast” every message to every person in the same simulator room. This closely mimics a real life problem that computer scientists had to solve:  With all the bits passing through many computers on a network, how would a computer know if it was the intended recipient?  Which computer should get a reply?  Internet Protocol (IP) solves a portion of this problem by assigning a unique IP address to each device and standardizing how sender and recipient are identified.",
         "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible."
       },
@@ -925,7 +926,7 @@
       "key": "ddcdfaf0-5778-4b85-908c-584fc8c8fa9e",
       "position": 2,
       "properties": {
-        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
+        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
         "remarks": true
       },
       "seeding_key": {
@@ -1286,7 +1287,7 @@
       "key": "329dd0ac-cc60-457b-9774-5f3772bda2ca",
       "position": 1,
       "properties": {
-        "description": "Today we saw a lot of really important principles that are important on the Internet. The first is that if we want to talk to each other we need to know who messages are going from and to. The other is that we all are going to need to be using the same set of rules if we want to communicate with one another. Let's watch a video about these concepts.",
+        "description": "Today we saw a lot of really important principles that apply to the Internet. The first is that if we want to talk to each other we need to know who messages are going from and to. The other is that we all are going to need to be using the same set of rules if we want to communicate with one another. Let's watch a video about these concepts.",
         "remarks": true
       },
       "seeding_key": {
@@ -1309,7 +1310,7 @@
       "key": "567b1934-5b7f-4e7a-8497-72f11290fbf0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communiate over networks.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communicate over networks.\n"
       },
       "seeding_key": {
         "activity_section.key": "567b1934-5b7f-4e7a-8497-72f11290fbf0",
@@ -1331,7 +1332,7 @@
       "key": "5febd336-2c53-4e20-b1e5-5a47b2657543",
       "position": 5,
       "properties": {
-        "description": "Today we took an important step in learning about the Internet. We saw that it's not just important to build a network connecting all these devices, but we need open and shared rules, or protocols, for how these devices will communicate. In coming lessons we'll be learning more about the protocols on the Internet.",
+        "description": "Today we took an important step in learning about the Internet. We saw that it's not just important to build a network connecting all these devices, but we need open and shared rules, or protocols, for how these devices will communicate. In coming lessons we'll be learning more about the protocols the Internet runs on.",
         "remarks": true
       },
       "seeding_key": {
@@ -1565,7 +1566,7 @@
       "key": "8a5f99f4-c3b0-41f5-ad95-0dc9a6607930",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?*\n\n**Discussion Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\n\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message long a different path.\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\n\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?*\n\n**Discussion Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\n\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message along a different path.\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\n\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\n"
       },
       "seeding_key": {
         "activity_section.key": "8a5f99f4-c3b0-41f5-ad95-0dc9a6607930",

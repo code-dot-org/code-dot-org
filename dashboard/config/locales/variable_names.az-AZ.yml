@@ -9,6 +9,7 @@ az:
       Green: Yaşıl
       Red: Qırmızı
       actor: personaj
+      adjective: sifət
       age: yaş
       animal1score: heyvan1xal
       animal1speed: heyvan1sürət
@@ -23,12 +24,15 @@ az:
       bit: bit
       blue1: mavi1
       blue2: mavi2
+      body-part: bədən hissəsi
       bodylength: bədənuzunluğu
       buttonHeight: düyməHündürlüyü
+      buttonMargin: fayda-düyməsi
       buttonWidth: düyməEni
       cat_score: pişik_xalı
       cat_speed: pişik_sürəti
       cats: pişiklər
+      centerToPadLeft: mərkəzToPadSola
       choice: seçim
       circ: dövrə
       codeName: kodAdı
@@ -55,15 +59,25 @@ az:
       honey: bal
       i: i
       left: sola
+      legangle: ayaqbucaqlı
+      leglength: ayaq-uzunluqu
       length: uzunluq
       level: səviyyə
+      marginX: faydaX
+      marginY: faydaY
       meal: yemək
       myName: mənimAdım
       name: ad
       nectar: nektar
       nectars: nektar
+      number: nömrə
+      object: əşya
+      padYOffset: padYOofse
+      parts: hissələri
       planet: planet
+      player_score: oyunçunun_xalı
       points: xallar
+      punchLine: yumruqun_xətti
       random: təsadüfi
       red1: qırmızı1
       red2: qırmızı2
@@ -76,12 +90,17 @@ az:
       screenHeight: ekranHündürlüyü
       screenWidth: ekranGenişliyi
       set sides: kənarları təyin etmək
+      setupSimScore1: quraşdırmaSimXalı1
+      setupSimScore2: quraşdırmaSimXalı2
       shout: bağırmaq
       sides: tərəflər
       size: ölçü
       speed: sürət
       startX: başlaX
       startY: başlaY
+      stopped-left: dayandı-solda
+      time: vaxt
+      type: tip
       variable: dəyişən
       width: enlik
       wizard: sehrbaz

@@ -9,6 +9,7 @@
         {
           "type": "panel",
           "name": "module_8_panel",
+          "visibleIf": "{workshop_agenda}='module8'",
           "elements": [
             {
               "type": "html",

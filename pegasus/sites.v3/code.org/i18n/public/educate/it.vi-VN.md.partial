@@ -1,49 +1,49 @@
 ---
-title: IT Requirements
+title: Yêu cầu IT
 nav: educate_nav
 theme: responsive
 ---
 
-# Technical Requirements for Code.org Tutorials
+# Yêu cầu kỹ thuật đối với Bài hướng dẫn của Code.org
 
-## Hardware
+## Phần cứng
 
-- We recommend at least a 15 MBit/sec Internet connection for your school.
-- The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
-- Looking for mobile device support details? Read below.
+- Chúng tôi đề xuất kết nối Internet của trường học tối thiểu là 15 MBit/giây.
+- Kích thước màn hình nhỏ nhất mà chúng tôi hỗ trợ là 1024 x 728 px.
+- Bạn sẽ cần một chiếc máy tính để bàn hoặc máy tính xách tay có chuột (hoặc bàn di chuột) và bàn phím cho các khóa học cấp trung học cơ sở và trung học phổ thông của chúng tôi: Khám phá KHMT, Nguyên tắc của KHMT và Giới thiệu App Lab. Hầu hết các loại máy tính bảng và thiết bị di động không được hỗ trợ cho các khóa học này. Xem “Chi tiết hỗ trợ dành cho thiết bị di động và máy tính bảng” bên dưới để biết các ngoại lệ cho từng thiết bị.
+- Tất cả các nội dung khác, chẳng hạn như các khóa học K-5 (Nguyên tắc cơ bản của Khoa học Máy tính) và các hoạt động của Giờ lập trình đều tương thích trên iPad và Chromebook cũng như tất cả máy tính bảng, máy tính xách tay hoặc máy tính để bàn hiện hành khác.
+- Bạn đang tìm kiếm thông tin hỗ trợ thiết bị di động? Hãy đọc nội dung bên dưới.
 
-## Minimum Supported Browsers and Platforms
+## Các trình duyệt và nền tảng được hỗ trợ tối thiểu
 
 <table>
  <tr>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser
+          Trình duyệt
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform
+          Nền tảng
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -65,61 +65,62 @@ theme: responsive
  </tr>
 </table>
 
-## Sites to Unblock
+## Trang web cần bỏ chặn
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Để có trải nghiệm tốt nhất với tất cả nội dung Code.org, chúng tôi khuyên bạn nên tham khảo ý kiến của bộ phận IT trường học hoặc học khu để đảm bảo các trang web sau được phép truy cập và không bị chặn.
 
-| Priority                                                 | URL                                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Required**                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **To use YouTube hosted videos (Enhanced Privacy Mode)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **To use Code.org hosted videos**                        | `https://videos.code.org`                                                                                  |
-| **To use Internet Simulator**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **To use Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **To use Google Classroom Share Button**                 | `https://apis.google.com`                                                                                  |
+| Quyền ưu tiên                                                 | URL                                                                                                        |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Bắt buộc**                                                  | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Không bắt buộc**                                            | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Sử dụng video đăng trên YouTube (Chế độ bảo mật nâng cao)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Sử dụng video lưu trên Code.org**                           | `https://videos.code.org`                                                                                  |
+| **Sử dụng Trình mô phỏng Internet**                           | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Sử dụng Web Lab**                                           | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Sử dụng Nút Chia sẻ Lớp học của Google**                    | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                   | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
-## Mobile and Tablet Support Details
+## Thông tin hỗ trợ thiết bị di động và máy tính bảng
 
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+Tất cả các khóa học Khám phá KHMT, Nguyên tắc của KHMT và Giới thiệu App Lab đều không tương thích với máy tính bảng hoặc thiết bị di động – cần có bàn phím và chuột đầy đủ (hoặc bàn di chuột, như trên MacBook). Hầu hết các loại máy tính bảng đều không được hỗ trợ, ngoại trừ:
 
-- Microsoft Surface Pro with an external keyboard
-- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
+- Microsoft Surface Pro có bàn phím rời
+- iPad chạy iPadOS 13.4 trở lên có bàn phím và chuột rời hoặc bàn di chuột
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+Tất cả các nội dung khác, chẳng hạn như các khóa học K-5 (Nguyên tắc cơ bản của Khoa học Máy tính) và các hoạt động của Giờ lập trình đều tương thích trên iPad và Chromebook cũng như tất cả máy tính bảng, máy tính xách tay hoặc máy tính để bàn hiện hành khác.
 
-### Mobile Phones
+### Điện thoại di động
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Các hoạt động trong Giờ lập trình và các khóa học Nguyên tắc cơ bản của KHMT đều có thể hoàn thành trên điện thoại di động. Mặc dù có thể sử dụng cho các hoạt động này nhưng không được tối ưu cho trải nghiệm trên điện thoại di động và có một số hạn chế đã biết (Ví dụ: Mục tiêu cảm ứng có thể nhỏ, các yếu tố phụ có thể hiển thị ngoài màn hình và có thể khó nhập văn bản bằng bàn phím ảo). Các khóa học Khám phá KHMT, Nguyên tắc của KHMT và Giới thiệu App Lab không thể truy cập được trên điện thoại di động.
 
-## Videos
+## Video
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Chúng tôi sử dụng [YouTube](https://www.youtube.com) để nhúng video vào Code.org và [nền tảng học trực tuyến](https://studio.code.org) của mình. Đối với các trường chặn YouTube, chúng tôi sẽ cố gắng hiển thị trình phát video lưu trên Code.org.
 
-### Can you play this video?
+### Bạn có thể phát video này không?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Trước khi bắt đầu các khóa học trực tuyến của Code.org, hãy thử phát video bên dưới để đảm bảo rằng video hoạt động tốt.
 
 <iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Đây là trình phát được sử dụng trong suốt chương trình học. Trình phát này sẽ cố gắng hiển thị video qua YouTube và nếu YouTube bị chặn thì sẽ hiển thị video lưu trên Code.org bằng trình phát “dự phòng” của chúng tôi.
 
-### Video not playing?
+### Video không chạy ư?
 
-If video does not work, you can email us at support@code.org.
+Nếu video không hoạt động, bạn có thể gửi email cho chúng tôi theo địa chỉ support@code.org.
 
-However, you can still use our tutorials without video.
+Tuy nhiên, bạn vẫn có thể sử dụng bài hướng dẫn của chúng tôi mà không cần video.
 
-1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
-2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
-3. If all fails, there is a "Show Notes" tab that provides a storyboard equivalent of videos.
+1. Chúng tôi đã tải lên toàn bộ video của mình [để bạn tải xuống cùng lúc](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Nếu trường của bạn có băng thông thấp, chúng tôi khuyên bạn nên tải video xuống và cho học sinh xem trên màn hình chung.
+2. Chúng tôi đã thêm biểu tượng liên kết tải xuống màu xanh lá cây <img src="/images/green-download.png" width=25 height=25 /> tích hợp vào bài hướng dẫn cho mỗi video để học sinh tải xuống các video hướng dẫn riêng lẻ.
+3. Nếu tất cả các cách trên đều không thành công, có một tab “Hiển thị ghi chú” cung cấp bảng phân cảnh tương đương với các video.
 
   <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
 
-## Special settings for Google Apps/G-Suite users
+## Cài đặt đặc biệt cho người dùng Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Nếu bạn là quản trị viên G-suite, đừng quên kiểm tra cài đặt hạn chế của bạn dành cho YouTube. Nếu bạn đã xác định cài đặt “Quyền truy cập YouTube bị hạn chế nghiêm ngặt” hoặc nếu bạn thấy thông báo cho biết ‘video này bị hạn chế’, bạn có thể thêm kênh của chúng tôi vào danh sách kênh phê duyệt. Xem [hướng dẫn sau đây](https://support.google.com/a/answer/6245597) của Google để tìm hiểu cách thêm kênh của chúng tôi vào danh sách phê duyệt. Bạn cũng có thể xem [hướng dẫn này](https://support.google.com/a/answer/6212415?hl=en) để tìm hiểu thêm về các cài đặt khác nhau và cài đặt nào phù hợp nhất cho lớp học của bạn.
 
-## Still having trouble?
+## Bạn vẫn gặp sự cố?
 
-We'll help you out - just email us at support@code.org!
+Chúng tôi sẽ hỗ trợ – chỉ cần gửi email cho chúng tôi theo địa chỉ support@code.org!

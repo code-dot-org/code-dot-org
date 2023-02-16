@@ -2,17 +2,18 @@
   "script": {
     "name": "poetry-2021",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
+      "student_detail_progress_view": true,
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2022-08-15 17:12:13 UTC",
+    "serialized_at": "2022-09-07 17:29:49 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

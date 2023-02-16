@@ -125,6 +125,7 @@ es-MX:
           description: Aprende programación funcional a través del álgebra.
           description_short: Aprende programación funcional a través del álgebra.
           student_description: Aprende programación funcional a través del álgebra.
+          name: álgebra
         infinity:
           title: Laboratorio de Juego Disney Infinity
           description: Utiliza el laboratorio de juegos para crear una historia o
@@ -786,11 +787,13 @@ es-MX:
           description: Aprender programación funcional a través del álgebra
           description_short: Aprender programación funcional a través del álgebra
           student_description: Aprender programación funcional a través del álgebra
+          name: ÁlgebraA
         AlgebraB:
           title: 'Ciencias de la Computación en Álgebra: curso B'
           description: Aprender programación funcional a través del álgebra
           description_short: Aprender programación funcional a través del álgebra
           student_description: Aprender programación funcional a través del álgebra
+          name: ÁlgebraB
         gamelab-hackathon:
           title: Hackathon en Laboratorio de Juegos
           description: Un lugar para probar cosas en Laboratorio de Juegos
@@ -3589,7 +3592,7 @@ es-MX:
         frozen-2018-test-b:
           title: Nuevo guión de Frozen
         aquatic:
-          title: 'Minecraft: Voyage Aquatic'
+          title: 'Minecraft: Viaje Acuático'
           description_short: "¡Usa tu creatividad y habilidades para resolver problemas
             para explorar y construir mundos bajo el agua con códigos!"
           description: "¡Minecraft está de vuelta con una nueva actividad! Usa tu
@@ -4782,14 +4785,15 @@ es-MX:
           title: Detector de colisiones
         dance-2019:
           title: Fiesta de baile (remix 2019)
-          description_short: "¡Con la presencia de Katy Perry, Shawn Mendes, Panic!
-            At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj y muchos más!"
+          description_short: Programa una Fiesta de Baile para compartir con tus amigos.
+            Con Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, música de la
+            película de Disney“Encanto,” and more!
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
           student_description: "¡Programa tu propio baile para compartirlo con tus
             amigos!"
           name: baile 2019
         k5-onlinepd-2019:
-          title: Enseñanza de los Fundamentos de la Informática
+          title: Cómo enseñar Fundamentos de Ciencias de la Computación
           description: "¡Aprende a enseñar ciencias de la computación con este curso
             en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!"
           description_short: Aprende a enseñar informática utilizando los Fundamentos
@@ -6988,7 +6992,7 @@ es-MX:
           description_audience: 'Edades: 9 a 18'
           lesson_groups:
             csf_warmup:
-              display_name: Calentamiento
+              display_name: Actividad previa
             csf_sequencing:
               display_name: Secuencias
             csf_loops:
@@ -7371,7 +7375,7 @@ es-MX:
               display_name: Simulacros de Exámenes
           name: csa9-piloto
         k5-onlinepd-2021:
-          title: Enseñando los Fundamentos de la Informática ('21-'22)
+          title: Cómo enseñar Fundamentos de Ciencias de la Computación ('21-'22)
           description: "¡Bienvenido al curso en línea gratuito para educadores, a
             su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos de
             Informática!"
@@ -7649,12 +7653,12 @@ es-MX:
           description: "Este módulo es una breve introducción tanto a Code.org como
             a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-   Obtener
             una introducción a Code.org y Descubrimientos de la Informática.\n-   Aprender
-            a participar en este curso de aprendizaje profesional.\n\n**Tiempo sugerido:**
-            10 minutos"
+            como participar en este curso de aprendizaje profesional.\n\n**Tiempo
+            sugerido:** 10 minutos"
           student_description: "Este módulo es una breve introducción tanto a Code.org
             como a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-
             \  Obtener una introducción a Code.org y Descubrimientos de la Informática.\n-
-            \  Aprender a participar en este curso de aprendizaje profesional.\n\n**Tiempo
+            \  Aprender como participar en este curso de aprendizaje profesional.\n\n**Tiempo
             sugerido:** 10 minutos"
         self-paced-pl-csd2-2021:
           lesson_groups:
@@ -7687,25 +7691,25 @@ es-MX:
               display_name: Resumen de los Descubrimientos de la Informática
           name: autodidáctico-pl-csd3-2021
           title: 'Módulo 3: Resumen de Descubrimientos de la Informática'
-          description: "Este módulo le proporcionará una visión general del curso
+          description: "Este módulo te proporcionará una visión general del curso
             Descubrimientos de Informática con énfasis en los conceptos que los estudiantes
             aprenderán y las herramientas que utilizarán a lo largo del curso. Participar
             en este módulo te ayudará a tomar decisiones sobre cómo seleccionar el
             contenido del curso que implementarás en tu aula. \n\n**Tú Podrás:**\n\n-
             \  Obtener una comprensión de alto nivel del plan de estudios de Descubrimientos
-            de Informática.\n-   Familiarizarse con los entornos de programación utilizados
+            de Informática.\n-   Familiarizarte con los entornos de programación utilizados
             en Descubrimientos de Informática.\n-   Decidir qué unidades de Descubrimientos
-            de Informática enseñará en su clase.\n\n**Tiempo sugerido:** 60 minutos"
-          student_description: "Este módulo le proporcionará una visión general del
+            de Informática enseñarás en tu clase.\n\n**Tiempo sugerido:** 60 minutos"
+          student_description: "Este módulo te proporcionará una visión general del
             curso Descubrimientos de Informática con énfasis en los conceptos que
             los estudiantes aprenderán y las herramientas que utilizarán a lo largo
             del curso. Participar en este módulo te ayudará a tomar decisiones sobre
             cómo seleccionar el contenido del curso que implementarás en tu aula.
             \n\n**Tú Podrás:**\n\n-   Obtener una comprensión de alto nivel del plan
-            de estudios de Descubrimientos de Informática.\n-   Familiarizarse con
+            de estudios de Descubrimientos de Informática.\n-   Familiarizarte con
             los entornos de programación utilizados en Descubrimientos de Informática.\n-
-            \  Decidir qué unidades de Descubrimientos de Informática enseñará en
-            su clase.\n\n**Tiempo sugerido:** 60 minutos"
+            \  Decidir qué unidades de Descubrimientos de Informática enseñarás en
+            tu clase.\n\n**Tiempo sugerido:** 60 minutos"
         self-paced-pl-csd4-2021:
           lesson_groups:
             lessonGroup-2:
@@ -7971,7 +7975,8 @@ es-MX:
             lessonGroup-3:
               display_name: Etapa 2
           name: dlp21-csp-mod4
-          title: 2021 Deeper Learning Módulo 4 para el Taller 4 de Principios de Informática
+          title: Principios de Informática 2021 Módulo 4 de Aprendizaje Profundo para
+            el Taller 4
         dlp21-csp-mod1:
           name: dlp21-csp-mod1
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la
@@ -7990,26 +7995,28 @@ es-MX:
           name: dlp21-csd
         dlp21-csd-mod1:
           name: dlp21-csd-mod1
-          title: 2021 Deeper Learning  Módulo 1 para el Taller 1 de Descubrimientos
-            de Informática
+          title: Descubrimientos de Informática 2021 Módulo 1 de Aprendizaje Profundo
+            para el Taller 1
         dlp21-csd-mod2:
           name: dlp21-csd-mod2
-          title: 2021 Deeper Learning Módulo 2 para el Taller 2 de Descubrimientos
-            de Informática
+          title: Descubrimientos de Informática 2021 Módulo 2 de Aprendizaje Profundo
+            para el Taller 2
         dlp21-csd-mod3:
           name: dlp21-csd-mod3
-          title: 2021 Deeper Learning Módulo 3 para el Taller 3 de Descubrimientos
-            de Informática
+          title: Descubrimientos de Informática 2021 Módulo 3 de Aprendizaje Profundo
+            para el Taller 3
         dlp21-csd-mod4:
           name: dlp21-csd-mod4
-          title: 2021 Deeper Learning Módulo 4 para el Taller 4 de Descubrimientos
-            de Informática
+          title: Descubrimientos de Informática 2021 Módulo 4 de Aprendizaje Profundo
+            para el Taller 4
         dlp21-csp-mod2:
           name: dlp21-csp-mod2
-          title: 2021 Deeper Learning Módulo 2 para el Taller 2 de Principios de Informática
+          title: Principios de Informática 2021 Módulo 2 de Aprendizaje Profundo para
+            el Taller 2
         dlp21-csp-mod3:
           name: dlp21-csp-mod3
-          title: 2021 Deeper Learning Módulo 3 para el Taller 3 de Principios de Informática
+          title: Principios de Informática 2021 Módulo 3 de Aprendizaje Profundo para
+            el Taller 3
         dlp21-overview:
           name: dlp21-descripción
         dlp21-csd-overview:
@@ -8279,9 +8286,15 @@ es-MX:
             acciones mediante eventos. Los eventos se utilizan mucho en programación
             y deberían ser fáciles de reconocer después de esta lección.
         csc-things:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Papel de borrador
           name: csc-cosas
           title: CSC Descarga Mental
           description: 'Se trata de un trabajo en proceso :) '
+          lessons:
+            lesson-2:
+              name: cubierta del libro
         poetry-hoc2:
           name: poesía-hoc2
           title: Poesía HoC v2
@@ -8389,7 +8402,7 @@ es-MX:
           description_short: 'En pequeños grupos, los alumnos realizan una investigación
             a partir de artículos y vídeos que exponen los escollos éticos en un área
             de la Inteligencia Artificial (IA) de su elección. '
-          description_audience: grados 6-12
+          description_audience: Cursos de 6to a 12
           name: ia-ética-2021
         poem-art-2021:
           title: El Arte del Poema
@@ -9047,6 +9060,9 @@ es-MX:
           title: 'Especies Invasoras '
           description_short: 'Esta es una beca de investigación financiada por la
             NSF para CS4All '
+          lessons:
+            lesson-21:
+              name: Primeros pasos
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9361,7 +9377,7 @@ es-MX:
               display_name: 'Parte II: Conceptos de los Cursos A - F'
             k5_next_steps_1:
               display_name: 'Parte III: Próximos Pasos'
-          title: Enseñando los Fundamentos de la Informática ('21-'22)
+          title: Cómo enseñar Fundamentos de Ciencias de la Computación ('22-'23)
           description: "¡Bienvenido al curso en línea gratuito para educadores, a
             su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos de
             Informática!"
@@ -9373,6 +9389,7 @@ es-MX:
           description_audience: "¡Bienvenido al curso en línea gratuito para educadores,
             a su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos
             de Informática!"
+          name: k5-onlinepd-2022
         vpl-csd1-ci-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9523,6 +9540,13 @@ es-MX:
             los niveles entre las versiones del plan de estudios
           description: Para organizar las actualizaciones de las lecciones o los niveles
             entre las versiones del plan de estudios
+          lessons:
+            lesson-7:
+              name: Introducción a los Sprites
+            lesson-8:
+              name: Informática Física PSP
+            lesson-9:
+              name: Microbit Playground
         csc-pilot-2022-ecosystems:
           name: csc-piloto-2022-ecosistemas
         csc-pilot-2022-timecapsule:
@@ -9773,6 +9797,7 @@ es-MX:
           title: Aprendizaje Profesional Virtual de CS Discoveries 2021 - 22
         vpl-csp-2022:
           title: CS Principios de Aprendizaje Profesional Virtual 21 - 22
+          name: vpl-csp-2022
         self-paced-pl-csd1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9781,12 +9806,12 @@ es-MX:
           description: "Este módulo es una breve introducción tanto a Code.org como
             a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-   Obtener
             una introducción a Code.org y Descubrimientos de la Informática.\n-   Aprender
-            a participar en este curso de aprendizaje profesional.\n\n**Tiempo sugerido:**
-            10 minutos"
+            como participar en este curso de aprendizaje profesional.\n\n**Tiempo
+            sugerido:** 10 minutos"
           student_description: "Este módulo es una breve introducción tanto a Code.org
             como a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-
             \  Obtener una introducción a Code.org y Descubrimientos de la Informática.\n-
-            \  Aprender a participar en este curso de aprendizaje profesional.\n\n**Tiempo
+            \  Aprender como participar en este curso de aprendizaje profesional.\n\n**Tiempo
             sugerido:** 10 minutos"
         self-paced-pl-csd2-2022:
           lesson_groups:
@@ -9813,25 +9838,25 @@ es-MX:
             lessonGroup-2:
               display_name: Resumen de los Descubrimientos de la Informática
           title: 'Módulo 3: Resumen de Descubrimientos de la Informática'
-          description: "Este módulo le proporcionará una visión general del curso
+          description: "Este módulo te proporcionará una visión general del curso
             Descubrimientos de Informática con énfasis en los conceptos que los estudiantes
             aprenderán y las herramientas que utilizarán a lo largo del curso. Participar
             en este módulo te ayudará a tomar decisiones sobre cómo seleccionar el
             contenido del curso que implementarás en tu aula. \n\n**Tú Podrás:**\n\n-
             \  Obtener una comprensión de alto nivel del plan de estudios de Descubrimientos
-            de Informática.\n-   Familiarizarse con los entornos de programación utilizados
+            de Informática.\n-   Familiarizarte con los entornos de programación utilizados
             en Descubrimientos de Informática.\n-   Decidir qué unidades de Descubrimientos
-            de Informática enseñará en su clase.\n\n**Tiempo sugerido:** 60 minutos"
-          student_description: "Este módulo le proporcionará una visión general del
+            de Informática enseñarás en tu clase.\n\n**Tiempo sugerido:** 60 minutos"
+          student_description: "Este módulo te proporcionará una visión general del
             curso Descubrimientos de Informática con énfasis en los conceptos que
             los estudiantes aprenderán y las herramientas que utilizarán a lo largo
             del curso. Participar en este módulo te ayudará a tomar decisiones sobre
             cómo seleccionar el contenido del curso que implementarás en tu aula.
             \n\n**Tú Podrás:**\n\n-   Obtener una comprensión de alto nivel del plan
-            de estudios de Descubrimientos de Informática.\n-   Familiarizarse con
+            de estudios de Descubrimientos de Informática.\n-   Familiarizarte con
             los entornos de programación utilizados en Descubrimientos de Informática.\n-
-            \  Decidir qué unidades de Descubrimientos de Informática enseñará en
-            su clase.\n\n**Tiempo sugerido:** 60 minutos"
+            \  Decidir qué unidades de Descubrimientos de Informática enseñarás en
+            tu clase.\n\n**Tiempo sugerido:** 60 minutos"
         self-paced-pl-csd4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9861,8 +9886,37 @@ es-MX:
             de la Informática.\n-   Hacer un plan de cómo apoyar el aprendizaje de
             los alumnos a través de la diferenciación, la evaluación continua, y la
             promoción de una cultura de inclusión. \n\n**Tiempo sugerido:** 50 minutos"
+        self-paced-pl-csp1-2022:
+          name: autodidáctico-pl-csp1-2022
         self-paced-pl-csp2-2022:
           title: 'Módulo 2: Navegando por Code.org'
+          name: autodidáctico-pl-csp2-2022
+        self-paced-pl-csp3-2022:
+          name: autodidáctico-pl-csp3-2022
+        self-paced-pl-csp4-2022:
+          description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos
+          student_description: |-
+            En este módulo, conocerás las auténticas prácticas de informática que los estudiantes llevarán a cabo a lo largo del curso de Principios de Informática. Estas prácticas incluyen la depuración, el uso de recursos y la programación en parejas. También explorarás el papel del profesor dentro de un aula de Principios de Informática y harás un plan de cómo apoyar el aprendizaje de los alumnos mientras enseñas el curso.
+
+            **Tendrás que**:
+
+            -   Considerar el papel del profesor en un aula de Principios de Informática.
+            -   Aprender sobre las auténticas prácticas de Informática que los estudiantes desarrollarán a lo largo del curso de Principios de Informática.
+            -   Elaborar un plan para apoyar el aprendizaje de los estudiantes a través de la diferenciación, la evaluación continua y la promoción en una cultura de inclusión.
+            -   Aprender sobre las oportunidades para conectar con la comunidad Informática en general.
+
+            **Tiempo sugerido**: 70 minutos
+          name: autodidáctico-pl-csp4-2022
         csa9-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9911,16 +9965,71 @@ es-MX:
         dlp-csp-mod1-2022:
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la
             Computación
+          name: dlp-csp-mod1-2022
         dlp-csp-mod2-2022:
           title: 2021 Deeper Learning Módulo 2 para el Taller 2 de Principios de Informática
+          name: dlp-csp-mod2-2022
         dlp-csp-mod3-2022:
           title: 2021 Deeper Learning Módulo 3 para el Taller 3 de Principios de Informática
+          name: dlp-csp-mod3-2022
         dlp-csp-mod4-2022:
           title: 2021 Deeper Learning Módulo 4 para el Taller 4 de Principios de Informática
+          name: dlp-csp-mod4-2022
         dlp-csp-overview-2022:
           title: 2021 Descripción General de Deeper Learning en Principios de Informática
           description: "### Bienvenido al programa Deeper Learning  2021 para la incorporación
             de facilitadores de Principios de Informática ."
+          name: dlp-csp-visióngeneral-2022
+        csc-ecosystems-2022:
+          name: csc-ecosistemas-2022
+        csc-starquilts-2022:
+          name: csc-starquilts-2022
+        csc-fables-2022:
+          name: csc-fábulas-2022
+        csc-timecapsule-2022:
+          name: csc-cápsuladeltiempo-2022
+        vpl-csd1-ayw-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-3:
+              name: Depuración en la Plataforma Code.org
+            lesson-4:
+              name: Identificación y Depuración
+            lesson-5:
+              name: Cerrando
+            lesson-6:
+              name: Extensión de depuración asincrónica
+          name: vpl-csd1-ayw-piloto-2022
+          title: Descubrimientos de Informática - Módulo Virtual 1
+          description: |-
+            \*\*Los Participantes deberán: \*\*
+
+            -   Construir la confianza y los conocimientos en los conceptos básicos de la informática.
+            -   Revisar el contenido de depuración y conocer las herramientas de la plataforma y el plan de estudios para apoyar a los alumnos.
+            -   Reflexionar sobre los momentos personales de fracaso y depuración para considerar tu papel en la construcción de la cultura del aula.
+          student_description: |-
+            **Deberás:**
+
+            -   Volver a conectar con tu comunidad para celebrar los éxitos, desahogar las frustraciones, y resolver los problemas de los obstáculos.
+            -   Construir la confianza y el conocimiento de los conceptos básicos de la informática.
+            -   Reflexionar sobre los momentos personales de fracaso y depuración para considerar tu papel en la construcción de la cultura del aula.
+        alltheblocklythings:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Google Blockly
+            lessonGroup-3:
+              display_name: CDO Blockly
+          name: todaslascosasdeblockly
+          title: "¡Todas las Cosas de Blockly!"
+          description_short: Una selección de niveles de Blockly para pruebas internas
         self-paced-pl-csd5-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9953,5 +10062,1012 @@ es-MX:
             clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo
             de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo
             sugerido:** 2 horas"
+        vpl-csa-2022:
+          name: vpl-csa-2022
+          title: Aprendizaje Profesional Virtual de CSA
+          lessons:
+            lesson-2:
+              name: 'Trabajo posterior al Módulo 2: Entendiendo el contenido de la
+                Unidad 4'
+            lesson-4:
+              name: 'Módulo 4 post-trabajo: Arrays 2D en la Unidad 5 y FRQs'
+            lesson-5:
+              name: 'Módulo 5 post-trabajo: Proyecto de la Unidad 5'
+            lesson-6:
+              name: 'Módulo 6 post-trabajo: Métodos de cadenas en la Unidad 6'
+        csa-labs-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Laboratorio Magpie
+            lessonGroup-3:
+              display_name: " Laboratorio Celebrity"
+            lessonGroup-4:
+              display_name: Laboratorio de Opinión del Consumidor
+            lessonGroup-5:
+              display_name: Laboratorio de Datos
+          name: csa-labs-2022
+          title: Laboratorios de AP CSA College Board
+          lessons:
+            lesson-7:
+              name: 'La Clase de los Famosos: Una versión sencilla'
+            lesson-8:
+              name: Poniéndolo todo junto
+            lesson-9:
+              name: Ampliando la Clase de los Famosos
+            lesson-10:
+              name: Actividad sin Límites
+            lesson-11:
+              name: Opción Múltiple / Respuesta Libre
+            lesson-12:
+              name: Introducción (Opiniones y Valor de Sentimiento)
+            lesson-13:
+              name: Valor de Sentimiento y Calificación por Estrellas
+            lesson-14:
+              name: Opinión Autogenerada
+            lesson-15:
+              name: Crear una Opinión Positiva o Negativa
+            lesson-16:
+              name: Actividad sin Límites
+            lesson-17:
+              name: "¡Datos, Datos, Datos!"
+            lesson-18:
+              name: Diseño e Implementación de una Clase Personalizada
+            lesson-19:
+              name: Poniéndolo todo junto
+            lesson-20:
+              name: Actividad sin Límites
+        csa-draft-pl:
+          lessons:
+            lesson-2:
+              name: 'Trabajo posterior del Módulo 3: El Teatro y los conjuntos de
+                datos de la Unidad 4'
+            lesson-3:
+              name: 'Módulo 4 post-trabajo: FRQs y Unidad 5'
+            lesson-4:
+              name: 'Módulo 5 post-trabajo: Proyecto de la Unidad 5'
+            lesson-5:
+              name: 'Módulo 6 post-trabajo: Métodos de cadenas en la Unidad 6'
+            lesson-6:
+              name: 'Módulo 7 post-trabajo: Proyecto de la Unidad 7'
+            lesson-7:
+              name: 'Módulo 8 post-trabajo: Preparando a los alumnos para el examen
+                AP'
+            lesson-8:
+              name: 'Módulo 8 post-trabajo: Preparando a los alumnos para el examen
+                AP'
+            lesson-9:
+              name: Módulo X
+          name: csa-borrador-pl
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-3:
+              name: Depuración de Proyectos
+            lesson-4:
+              name: Escenarios de Inclusión
+            lesson-5:
+              name: Cerrando
+            lesson-6:
+              name: Trabajo asincrónico de módulo 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+          name: vpl-csd2-ayw-piloto-2022
+          title: Descubrimientos de Informática - Módulo Virtual 2
+          description: |-
+            **Los participantes podrán:**
+
+            -   Aumentar la confianza y el conocimiento de los conceptos básicos de la informática.
+            -   Ampliar sus conocimientos de depuración mediante el estudio de secciones de código más largas y complejas.
+            -   Examinar escenarios comunes en el aula para reflexionar sobre las amenazas a la inclusión y la pertenencia, y cómo evitarlas.
+          student_description: |-
+            **Podrás:**
+
+            -   Construir la confianza y el conocimiento de los conceptos básicos de la ciencia de la informática.
+            -   Ampliar tus conocimientos de depuración al ver secciones de código más largas y complejas.
+            -   Examinar escenarios comunes en el aula para reflexionar sobre las amenazas a la inclusión y la pertenencia, y cómo evitarlas.
         soccer:
           name: fútbol
+          title: Programa tu propio partido de fútbol
+          description_short: Haz un partido de fútbol
+          description: Haz un partido de fútbol
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Encuesta
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          title: Programación Orientada a Objetos ('22-'23)
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          title: Asignación de Estado a Objetos (22-23)
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          title: Ampliando los Datos del Programa ('22-'23)
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          title: Condiciones y Lógica ('22-'23)
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: Semana "Demuestra lo que sabes".
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          title: Arrays Bidimensionales ('22-'23)
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          title: ArrayLists y Métodos de Cadena
+          description: |-
+            En esta unidad, los estudiantes utilizan `ArrayList`s para almacenar los datos del programa y diferencian cuándo utilizar arrays 1D y 2D y `ArrayList`s. Los alumnos exploran las ventajas y la funcionalidad de un `ArrayList`, utilizándolo para resolver problemas que implican datos numéricos y de objetos. Los alumnos utilizan los métodos de la clase `String` para analizar y procesar el texto obtenido de la entrada del usuario y del archivo. A lo largo de la unidad, los alumnos escriben la documentación del programa utilizando comentarios de una línea, comentarios de varias líneas y comentarios Javadoc para crear la documentación de la API. En el proceso, los estudiantes identifican y documentan las precondiciones y postcondiciones de los objetos y métodos.
+
+            ### Controles de progreso personal del Aula AP
+
+            Para asignar preguntas del banco de preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el banco de preguntas los enunciados de los conocimientos esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa6-2022/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            Las siguientes comprobaciones de progreso personal en el Aula AP se pueden asignar durante la semana de "Demuestra lo que sabes":
+
+            -   Control de Progreso Personal 2
+            -   Control de Progreso Personal 7
+
+            **_Nota:_** _Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores._
+          student_description: Esta unidad continúa ampliando las estructuras de datos
+            para introducirte en la creación de listas utilizando la clase `ArrayList`.
+            En el proceso, aprenderás sobre las clases `Integer` y `Double` y utilizarás
+            sus métodos para analizar datos de archivos de texto y explorar los límites
+            de los valores enteros. Diferenciarás cuándo utilizar cada tipo de estructura
+            de datos mientras aprendes sobre la estructura y funcionalidad de un `ArrayList`.
+            Aplicarás algoritmos estándar para encontrar y manipular datos en un `ArrayList`
+            de datos numéricos y de objetos. A lo largo de la unidad, se aprende a
+            utilizar la clase `String` para analizar y procesar el texto obtenido
+            de un usuario y de la entrada de un archivo, al tiempo que se aprenden
+            las técnicas y aplicaciones básicas del procesamiento del lenguaje natural.
+            Además, desarrollarás tus conocimientos de ingeniería de software escribiendo
+            comentarios Javadoc para crear documentación de la API para tus programas.
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          title: Descomposición y Recursión de Métodos
+          description: |-
+            Esta unidad permite a los alumnos practicar el diseño y el desarrollo de software utilizando los conocimientos que han adquirido a lo largo del plan de estudios mientras planifican y desarrollan un proyecto de codificación creativo para transmitir un interés personal o una historia utilizando El Teatro. Los alumnos utilizan estrategias de descomposición y principios orientados a objetos para planificar e implementar sus ideas mientras se aseguran de que sus proyectos cumplen con los requisitos especificados. En el proceso, los estudiantes aprenden a escribir métodos `privados`, sobrecargados y anulados y a utilizar la palabra clave `super` en un método de la subclase para llamar a un método de la superclase mientras exploran la funcionalidad de los métodos y sus parámetros. A lo largo de la unidad, los alumnos practican el rastreo y la escritura de métodos recursivos y la comparación de estos métodos con las soluciones iterativas. Con los conocimientos y habilidades adquiridos a lo largo del año, los estudiantes consideran la necesidad de maximizar la fiabilidad del sistema mientras exploran los errores y problemas en los programas existentes.
+
+            ### Controles de Progreso Personal del Aula AP
+
+            Para asignar preguntas del Banco de Preguntas del Aula AP que se alineen con esta unidad, cree un cuestionario personalizado en el Aula AP buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa7-2022/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+          student_description: En esta unidad, se practica el diseño y el desarrollo
+            de software utilizando los conocimientos que se han adquirido a lo largo
+            del plan de estudios mientras se planifica y desarrolla un proyecto de
+            codificación creativo para transmitir un interés personal o una historia
+            utilizando El Teatro. Utilizarás estrategias de descomposición y principios
+            orientados a objetos para planificar e implementar tus ideas mientras
+            te aseguras de que tu proyecto cumple con los requisitos especificados.
+            En el proceso, se aprende a escribir métodos `privados`, sobrecargados
+            y anulados y a utilizar la palabra clave `super` en un método de la subclase
+            para llamar a un método de la superclase mientras se explora la funcionalidad
+            de los métodos y sus parámetros. A lo largo de la unidad, practicarás
+            el rastreo y la escritura de métodos recursivos y la comparación de estos
+            métodos con las soluciones iterativas. Con los conocimientos y habilidades
+            adquiridos a lo largo del año, consideras la necesidad de maximizar la
+            fiabilidad del sistema mientras exploras errores y problemas en los programas
+            existentes.
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+            lessonGroup-5:
+              display_name: Encuesta
+          title: Buscando y Ordenando
+          description: |-
+            En esta unidad, los estudiantes aplican algoritmos de búsqueda y ordenación para trabajar con listas de datos primitivos y de objetos almacenados en arrays 1D y 2D y `ArrayList`s. Los estudiantes analizan la eficiencia de los algoritmos de búsqueda y ordenación y amplían los algoritmos estándar que han desarrollado a lo largo del curso para resolver problemas más complejos. A lo largo de la unidad, los estudiantes aplican sus conocimientos y habilidades de programación para desarrollar un juego que incorpora el diseño orientado a objetos y la eficiencia. Los estudiantes concluyen la unidad y el curso considerando la privacidad y seguridad de sus programas y usuarios.
+
+            ### Controles de progreso personal del Aula AP
+
+            Para asignar preguntas del Banco de Preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa8-pilot-facilitator/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            Las siguientes comprobaciones de progreso personal en el Aula AP pueden asignarse durante la semana de "Demuestra lo que sabes":
+
+            -   Control de Progreso Personal 10
+
+            **_Nota:_** Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores.\_
+          student_description: En esta unidad, ampliarás los algoritmos que has aprendido
+            para explorar enfoques comunes de búsqueda y ordenación de arrays 1D y
+            2D y `ArrayList`s. En el proceso, analizarás y compararás las eficiencias
+            de estos algoritmos utilizando recuentos de ejecución de sentencias y
+            desarrollarás aún más los conocimientos de resolución de problemas para
+            descomponer problemas complejos. A lo largo de la unidad, aplicas tus
+            conocimientos de programación e ingeniería de software para planificar
+            y desarrollar un proyecto de codificación creativo utilizando la consola
+            que incorpora diseño orientado a objetos, estructuras de datos y pensamiento
+            algorítmico. Con los conocimientos y habilidades adquiridos a lo largo
+            del año, analizas la privacidad y la seguridad de los programas y los
+            usuarios.
+        csa9-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Revisión y Práctica
+            lessonGroup-3:
+              display_name: Simulacros de Exámenes
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          title: AP Revisión y Práctica del Examen ('22-'23)
+          description: Esta unidad prepara a los estudiantes para el examen AP CSA
+            repasando los conceptos clave, practicando las preguntas de opción múltiple
+            y de respuesta libre, y reforzando las estrategias para realizar el examen.
+            Los estudiantes identifican los puntos fuertes y las áreas de mejora para
+            crear planes de estudio individualizados para enfocar su práctica y autoevaluar
+            su progreso.
+          student_description: Esta unidad te prepara para el examen AP CSA repasando
+            los conceptos clave, practicando las preguntas de opción múltiple y de
+            respuesta libre, y reforzando las estrategias para realizar el examen.
+            Identificarás los puntos fuertes y las áreas de mejora para crear planes
+            de estudio individualizados que te permitan enfocar tu práctica y autoevaluar
+            el progreso.
+          description_short: Los estudiantes se preparan para el examen AP CSA practicando
+            estrategias para las preguntas de opción múltiple y de respuesta libre.
+        csa1-2023:
+          lessons:
+            lesson-1:
+              name: Bienvenido a CSA
+            lesson-3:
+              name: Proyecto Arte en el Asfalto [Versión de 1 día]
+            lesson-2:
+              name: Laboratorio Java
+            lesson-4:
+              name: El Barrio
+            lesson-5:
+              name: Navegando y Pintando
+            lesson-6:
+              name: Bucles
+            lesson-7:
+              name: Herencia
+            lesson-8:
+              name: Métodos de escritura
+            lesson-9:
+              name: Estilo de Programación y Comentarios
+            lesson-10:
+              name: Sentencias de Selección
+            lesson-11:
+              name: Estrategias de Depuración
+            lesson-12:
+              name: Descomposición y Diseño
+            lesson-13:
+              name: Declaraciones de Selección Bidireccional
+            lesson-14:
+              name: Instanciación de Objetos
+            lesson-15:
+              name: Métodos con Parámetros
+            lesson-16:
+              name: Código Fuente Abierto
+            lesson-17:
+              name: Proyecto Arte en el Asfalto - Día 1
+            lesson-18:
+              name: Proyecto Arte en el Asfalto - Día 2
+            lesson-19:
+              name: Proyecto Arte en el Asfalto - Día 3
+            lesson-20:
+              name: Práctica FRQ
+            lesson-21:
+              name: Evaluación de la Unidad 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Encuesta
+            lessonGroup-3:
+              display_name: Contenido
+            lessonGroup-4:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-5:
+              display_name: Lecciones alternativas
+          title: Programación Orientada a Objetos
+        csa2-2023:
+          lessons:
+            lesson-1:
+              name: Atributos
+            lesson-4:
+              name: Variables
+            lesson-9:
+              name: Imprimiendo objetos
+            lesson-11:
+              name: Práctica FRQ
+            lesson-12:
+              name: Evaluación de la unidad 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
+          title: Estructura y Diseño de la Clase
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Matrices Unidimensionales (1D)
+            lesson-3:
+              name: Bucles Para
+            lesson-11:
+              name: Práctica FRQ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Lecciones alternativas
+          title: Arrays y Algoritmos
+        csa4-2023:
+          title: Condiciones y Lógica
+        csa5-2023:
+          title: Arrays Bidimensionales
+        csa6-2023:
+          title: ArrayLists y Métodos de Cadena
+          description: |-
+            En esta unidad, los estudiantes utilizan `ArrayList`s para almacenar los datos del programa y diferencian cuándo utilizar arrays 1D y 2D y `ArrayList`s. Los alumnos exploran las ventajas y la funcionalidad de un `ArrayList`, utilizándolo para resolver problemas que implican datos numéricos y de objetos. Los alumnos utilizan los métodos de la clase `String` para analizar y procesar el texto obtenido de la entrada del usuario y del archivo. A lo largo de la unidad, los alumnos escriben la documentación del programa utilizando comentarios de una línea, comentarios de varias líneas y comentarios Javadoc para crear la documentación de la API. En el proceso, los estudiantes identifican y documentan las precondiciones y postcondiciones de los objetos y métodos.
+
+            ### Controles de progreso personal del Aula AP
+
+            Para asignar preguntas del banco de preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el banco de preguntas los enunciados de los conocimientos esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa6-2022/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            Las siguientes comprobaciones de progreso personal en el Aula AP se pueden asignar durante la semana de "Demuestra lo que sabes":
+
+            -   Control de Progreso Personal 2
+            -   Control de Progreso Personal 7
+
+            **_Nota:_** _Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores._
+          student_description: Esta unidad continúa ampliando las estructuras de datos
+            para introducirte en la creación de listas utilizando la clase `ArrayList`.
+            En el proceso, aprenderás sobre las clases `Integer` y `Double` y utilizarás
+            sus métodos para analizar datos de archivos de texto y explorar los límites
+            de los valores enteros. Diferenciarás cuándo utilizar cada tipo de estructura
+            de datos mientras aprendes sobre la estructura y funcionalidad de un `ArrayList`.
+            Aplicarás algoritmos estándar para encontrar y manipular datos en un `ArrayList`
+            de datos numéricos y de objetos. A lo largo de la unidad, se aprende a
+            utilizar la clase `String` para analizar y procesar el texto obtenido
+            de un usuario y de la entrada de un archivo, al tiempo que se aprenden
+            las técnicas y aplicaciones básicas del procesamiento del lenguaje natural.
+            Además, desarrollarás tus conocimientos de ingeniería de software escribiendo
+            comentarios Javadoc para crear documentación de la API para tus programas.
+        csa7-2023:
+          title: Descomposición de Métodos y Recursión
+          description: |-
+            Esta unidad permite a los alumnos practicar el diseño y el desarrollo de software utilizando los conocimientos que han adquirido a lo largo del plan de estudios mientras planifican y desarrollan un proyecto de codificación creativo para transmitir un interés personal o una historia utilizando El Teatro. Los alumnos utilizan estrategias de descomposición y principios orientados a objetos para planificar e implementar sus ideas mientras se aseguran de que sus proyectos cumplen con los requisitos especificados. En el proceso, los estudiantes aprenden a escribir métodos `privados`, sobrecargados y anulados y a utilizar la palabra clave `super` en un método de la subclase para llamar a un método de la superclase mientras exploran la funcionalidad de los métodos y sus parámetros. A lo largo de la unidad, los alumnos practican el rastreo y la escritura de métodos recursivos y la comparación de estos métodos con las soluciones iterativas. Con los conocimientos y habilidades adquiridos a lo largo del año, los estudiantes consideran la necesidad de maximizar la fiabilidad del sistema mientras exploran los errores y problemas en los programas existentes.
+
+            ### Controles de Progreso Personal del Aula AP
+
+            Para asignar preguntas del Banco de Preguntas del Aula AP que se alineen con esta unidad, cree un cuestionario personalizado en el Aula AP buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa7-2022/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+          student_description: En esta unidad, se practica el diseño y el desarrollo
+            de software utilizando los conocimientos que se han adquirido a lo largo
+            del plan de estudios mientras se planifica y desarrolla un proyecto de
+            codificación creativo para transmitir un interés personal o una historia
+            utilizando El Teatro. Utilizarás estrategias de descomposición y principios
+            orientados a objetos para planificar e implementar tus ideas mientras
+            te aseguras de que tu proyecto cumple con los requisitos especificados.
+            En el proceso, se aprende a escribir métodos `privados`, sobrecargados
+            y anulados y a utilizar la palabra clave `super` en un método de la subclase
+            para llamar a un método de la superclase mientras se explora la funcionalidad
+            de los métodos y sus parámetros. A lo largo de la unidad, practicarás
+            el rastreo y la escritura de métodos recursivos y la comparación de estos
+            métodos con las soluciones iterativas. Con los conocimientos y habilidades
+            adquiridos a lo largo del año, consideras la necesidad de maximizar la
+            fiabilidad del sistema mientras exploras errores y problemas en los programas
+            existentes.
+        csa8-2023:
+          title: Buscando y Ordenando
+          description: |-
+            En esta unidad, los estudiantes aplican algoritmos de búsqueda y ordenación para trabajar con listas de datos primitivos y de objetos almacenados en arrays 1D y 2D y `ArrayList`s. Los estudiantes analizan la eficiencia de los algoritmos de búsqueda y ordenación y amplían los algoritmos estándar que han desarrollado a lo largo del curso para resolver problemas más complejos. A lo largo de la unidad, los estudiantes aplican sus conocimientos y habilidades de programación para desarrollar un juego que incorpora el diseño orientado a objetos y la eficiencia. Los estudiantes concluyen la unidad y el curso considerando la privacidad y seguridad de sus programas y usuarios.
+
+            ### Controles de progreso personal del Aula AP
+
+            Para asignar preguntas del Banco de Preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\*\*Estándares\*\*](https://studio.code.org/s/csa8-pilot-facilitator/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            Las siguientes comprobaciones de progreso personal en el Aula AP pueden asignarse durante la semana de "Demuestra lo que sabes":
+
+            -   Control de Progreso Personal 10
+
+            **_Nota:_** Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores.\_
+          student_description: En esta unidad, ampliarás los algoritmos que has aprendido
+            para explorar enfoques comunes de búsqueda y ordenación de arrays 1D y
+            2D y `ArrayList`s. En el proceso, analizarás y compararás las eficiencias
+            de estos algoritmos utilizando recuentos de ejecución de sentencias y
+            desarrollarás aún más los conocimientos de resolución de problemas para
+            descomponer problemas complejos. A lo largo de la unidad, aplicas tus
+            conocimientos de programación e ingeniería de software para planificar
+            y desarrollar un proyecto de codificación creativo utilizando la consola
+            que incorpora diseño orientado a objetos, estructuras de datos y pensamiento
+            algorítmico. Con los conocimientos y habilidades adquiridos a lo largo
+            del año, analizas la privacidad y la seguridad de los programas y los
+            usuarios.
+        vpl-csd3-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-5:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+          title: Descubrimientos de Informática - Módulo Virtual 3
+        vpl-csd4-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-4:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+          title: Descubrimientos de Informática - Módulo Virtual 4
+        csa-magpie-lab:
+          lessons:
+            lesson-1:
+              name: Experimenta con Chatbots Existentes
+            lesson-2:
+              name: Trabaja con Código Magpie
+            lesson-3:
+              name: Trabaja con API para Magpie y String
+            lesson-4:
+              name: Modificar Respuestas
+            lesson-5:
+              name: Uso de Arrays para obtener Respuestas Aleatorias
+          title: AP CSA Laboratorio Magpie
+          description: |-
+            Desde Eliza en los años 60 hasta Siri y Watson en la actualidad, la idea de hablar con los ordenadores en lenguaje natural ha fascinado a la gente. (Y sí, ha habido más de una conversación entre Eliza y Siri: busca "chatbot Eliza Siri"). Aunque el procesamiento del lenguaje natural (PNL) es un campo complicado, es bastante fácil crear un programa sencillo que responda a frases en inglés.
+
+            **Requisitos previos**
+
+            Antes de realizar este laboratorio, los estudiantes deben ser capaces de:
+
+            -   localizar sitios web utilizando un navegador web
+            -   ejecutar y editar programas Java que utilicen clases
+            -   rastrear código
+            -   leer las API de las bibliotecas Java estándar y código local
+          student_description: |-
+            Desde Eliza en los años 60 hasta Siri y Watson en la actualidad, la idea de hablar con los ordenadores en lenguaje natural ha fascinado a la gente. Cada vez más, los programas informáticos permiten a las personas interactuar con ellos escribiendo frases en inglés. El campo de la informática que se ocupa de cómo los ordenadores pueden entender el lenguaje humano se llama procesamiento del lenguaje natural (PNL).
+
+            La PNL es un campo que intenta que los ordenadores entiendan el lenguaje natural (es decir, el humano). Hay muchos avances interesantes en este campo.
+
+            En este laboratorio, estudiarás algunos de los fundamentos de la PNL. Mientras exploras esto, trabajarás con una variedad de métodos de la clase `String` y practicarás el uso de la sentencia `if`. Analizarás un método para encontrar palabras en la entrada del usuario.
+        emma:
+          lessons:
+            lesson-1:
+              name: práctica
+        csa-consumer-review-lab:
+          lessons:
+            lesson-1:
+              name: Opiniones y Valor de Sentimiento
+            lesson-2:
+              name: Valor de Sentimiento y Calificación por Estrellas
+            lesson-3:
+              name: Opinión Autogenerada
+            lesson-4:
+              name: Crear una Opinión Positiva o Negativa
+            lesson-5:
+              name: Actividad sin Límites
+          title: AP CSA Laboratorio de Opinión del Consumidor
+          description: |-
+            El Laboratorio de Opinión del Consumidor proporciona a los estudiantes la oportunidad de trabajar en una tarea más grande que involucra múltiples clases al principio del curso, antes de que necesariamente sepan cómo escribir sus propias clases. Al centrarse en la llamada a métodos y en el uso de las estructuras de control de selección e iteración, los estudiantes tendrán una práctica que se relaciona directamente con el tipo de pregunta de respuesta libre **Métodos y Estructuras de Control** que verán en el examen de fin de curso. Dado que los alumnos suelen tener problemas con los métodos de la clase `Cadena`, este laboratorio se centra específicamente en la llamada a estos métodos y en la construcción de cadenas de una forma interesante y atractiva.
+
+            ### Conexión con el Mundo Real
+
+            Todos utilizamos las opiniones con regularidad, para ayudarnos a determinar qué película ver, qué videojuego jugar, o incluso qué par de auriculares comprar. Pero, ¿es fácil falsificar una crítica? La verdad es que es increíblemente sencillo, y las opiniones falsas pueden tener repercusiones significativas en los productos que se compran o consumen, incluidas las películas que la gente ve y los restaurantes que elige para comer. Si los consumidores supieran que la opinión que están leyendo y en la que se basan para tomar una decisión procede de un programa informático y no de un ser humano, sería menos probable que la creyeran.
+
+            ¿Qué motivación tiene la gente para crear estas opiniones o comentarios falsos, y qué debería hacerse para evitarlo, si es que se hace algo? Si se puede utilizar la tecnología para crear y publicar opiniones positivas de los propios productos de la empresa o críticas negativas de la competencia, ¿cuáles son las implicaciones éticas de esto?
+
+            La creación de opiniones falsas tiene implicaciones éticas, y es importante subrayar que, aunque los alumnos están pasando por el proceso para ver una forma en la que se pueden generar, no se está defendiendo de ninguna manera este tipo de comportamiento. Esto es similar a los hackers de "guante blanco" que necesitan entender las mismas herramientas y procesos de los hackers criminales para poder hacer su trabajo. Comenta con los alumnos las preocupaciones éticas y cómo la comprensión de este proceso es importante para prevenir comportamientos no deseados en línea.
+            **\* Translated with www.DeepL.com/Translator (free version) \***
+        csa-data-lab:
+          lessons:
+            lesson-1:
+              name: "¡Datos, Datos, Datos!"
+            lesson-2:
+              name: Diseño e Implementación de una Clase Personalizada
+            lesson-3:
+              name: Poniéndolo todo junto
+            lesson-4:
+              name: Actividad sin Límites
+          title: AP CSA Laboratorio de Datos
+          description: |-
+            Los alumnos están motivados si se sienten conectados con el material que están estudiando. Una forma de hacer que el contenido de la informática sea relevante, significativo, relacionable y emocionante es incorporar conjuntos de datos del mundo real en las tareas de programación práctica.
+
+            Los datos son valores. Los valores por sí mismos no son conocimiento, el conocimiento es lo que se obtiene del estudio de los datos. Este laboratorio está diseñado para animar a los alumnos a obtener conocimientos sobre un tema de su interés examinando un conjunto de datos disponibles libremente en la web. Para obtener conocimientos a partir de los datos en este laboratorio, los alumnos plantearán una pregunta, buscarán un conjunto de datos sobre ese tema y luego procesarán esos datos para determinar la respuesta a su pregunta.
+
+            ### Conexión con el Mundo Real
+
+            Ser capaz de acceder y procesar datos es una parte importante de muchas industrias. Ya sea para determinar la mejor asignación de recursos o para decidir qué nuevo producto crear, el análisis de datos es un componente necesario de esas conversaciones. Por suerte, existen herramientas que ayudan a leer y procesar datos, y este laboratorio presentará una de estas herramientas a los estudiantes y les pedirá que utilicen datos existentes del mundo real para responder a una pregunta de su propio interés.
+          student_description: Los datos son valores. Los valores por sí mismos no
+            son conocimiento, el conocimiento es lo que se obtiene al estudiar los
+            datos. Este laboratorio está diseñado para animarte a obtener conocimientos
+            sobre un tema de tu interés examinando un conjunto de datos de libre acceso
+            en la web. Para obtener conocimientos a partir de los datos en este laboratorio,
+            plantearás una pregunta, buscarás un conjunto de datos sobre ese tema
+            y luego procesarás esos datos para determinar la respuesta a tu pregunta.
+        hello-world-space-2022:
+          title: 'Hola Mundo: Espacio'
+        hello-world-soccer-2022:
+          title: 'Hola Mundo: Fútbol'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+            lessonGroup-4:
+              display_name: Lecciones Alternativas
+          title: Resolución de problemas
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          title: Desarrollo Web
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Prototipos de aplicaciones'
+          title: El proceso de diseño
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representación de la información'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+          title: Datos y Sociedad
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de juegos'
+          title: Animaciones Interactivas y Juegos
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+          title: Computación física
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+          title: Inteligencia Artificial y Aprendizaje Automático
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          name: physcomp-temp
+          title: Informátiva Física [temp]
+          description: |-
+            En la unidad de Computación Física, los estudiantes exploran el papel de los dispositivos físicos en la computación. Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit, los estudiantes desarrollan programas que utilizan las mismas entradas y salidas de hardware que se ven en los dispositivos inteligentes, observando cómo un simple prototipo básico puede conducir a un producto terminado. A continuación, los estudiantes exploran cómo se pueden utilizar los dispositivos físicos para reaccionar ante el mundo que les rodea utilizando una mentalidad "maker" para crear prototipos con materiales cotidianos.
+
+            **Guía de Implementación para la Computación Física**
+
+            -   Esta unidad asume que los alumnos están familiarizados con el Laboratorio de Aplicaciones, específicamente con el uso del Modo Diseño para crear una interfaz de usuario y con el uso de Eventos para cambiar la pantalla al hacer clic en un botón. Esto se puede lograr haciendo que los estudiantes completen la [Hora del Código de Laboratorio de Aplicaciones](https://code.org/circuitplayground) antes de comenzar esta unidad.
+            -   Esta unidad requiere que los estudiantes tengan acceso al Circuit Playground - [pulsa aquí](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) para más información sobre el uso de Circuit Playground's en tu aula.
+            -   En la [Guía de Niveles de Programación](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview) y en la [Guía de Diferenciación](<>) se ofrece orientación sobre cómo apoyar a los estudiantes en los niveles de programación y diferenciar las tareas.
+
+            **Desarrollo profesional:** Si estás interesado en impartir este curso, te recomendamos que completes el módulo gratuito [Módulo de Desarrollo Profesional Autodidacta de Computación Física][4]. El módulo está diseñado para completarlo en 2 horas. No se asume ninguna experiencia previa con la programación o la Inteligencia Artificial.
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
+        csc-bookcover:
+          lessons:
+            lesson-1:
+              name: 'Cubierta del Libro '
+          title: CSC Cubiertalibro
+        csc-landmarks-pilot:
+          lessons:
+            lesson-1:
+              name: Hitos de EE.UU.
+        csc-playground:
+          lessons:
+            lesson-2:
+              name: Partículas - Lección 1
+            lesson-3:
+              name: Partículas - Lección 2
+            lesson-4:
+              name: Partículas - Lección 3
+            lesson-5:
+              name: Partículas - Lección 4
+        self-paced-pl-physical-computing2:
+          lessons:
+            lesson-5:
+              name: Necesitas titular esta lección
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: "¿Qué es ese sonido?"
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csp_unit1_2020:
+              display_name: 'Tema 1: Información digital'
+          title: Información digital ('21-'22)
+          description: Esta unidad estudia los retos y cuestiones técnicas que surgen
+            de la necesidad de representar la información digital en los ordenadores.
+            Aprende cómo se representa la información compleja, como los números,
+            el texto, las imágenes y el sonido, cómo funciona la compresión y las
+            repercusiones sociales más amplias de la digitalización de la información
+            mundial.
+          student_description: Esta unidad estudia los retos y cuestiones técnicas
+            que surgen de la necesidad de representar la información digital en los
+            ordenadores. Aprende cómo se representa la información compleja, como
+            los números, el texto, las imágenes y el sonido, cómo funciona la compresión
+            y las repercusiones sociales más amplias de la digitalización de la información
+            mundial.
+          description_short: Explora los desafíos e impactos de representar la información
+            sobre el mundo que te rodea en bits.
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unidad 2: Internet'
+          title: Internet ('21-'22)
+          description: Esta unidad revela cómo se diseñó Internet para conectar miles
+            de millones de dispositivos y personas entre sí. Aprende cómo funcionan
+            los distintos protocolos de Internet y constrúyelos tú mismo con el Simulador
+            de Internet. A continuación, analiza el impacto que ha tenido Internet,
+            tanto bueno como malo, en la vida moderna.
+          student_description: Esta unidad revela cómo se diseñó Internet para conectar
+            miles de millones de dispositivos y personas entre sí. Aprende cómo funcionan
+            los distintos protocolos de Internet y constrúyelos tú mismo con el Simulador
+            de Internet. A continuación, analiza el impacto que ha tenido Internet,
+            tanto bueno como malo, en la vida moderna.
+          description_short: Construye Internet desde cero con el Simulador de Internet.
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unidad 3: Introducción al diseño de aplicaciones'
+          title: Introducción al Diseño de Aplicaciones ('21-'22)
+          description: Esta unidad es una iniciación a la programación y al diseño
+            de aplicaciones con un fuerte enfoque en habilidades importantes como
+            la depuración, la programación en parejas y las pruebas de usuario. Aprende
+            a diseñar interfaces de usuario y a escribir programas basados en eventos
+            en Laboratorio de Aplicaciones y luego diseña un proyecto que enseñe a
+            tus compañeros de clase sobre un tema de tu elección.
+          student_description: Esta unidad es una iniciación a la programación y al
+            diseño de aplicaciones con un fuerte enfoque en habilidades importantes
+            como la depuración, la programación en parejas y las pruebas de usuario.
+            Aprende a diseñar interfaces de usuario y a escribir programas basados
+            en eventos en Laboratorio de Aplicaciones y luego diseña un proyecto que
+            enseñe a tus compañeros de clase sobre un tema de tu elección.
+          description_short: Diseña tu primera aplicación y aprende cómo los programadores
+            colaboran e interactúan con los usuarios para construir las mejores soluciones
+            posibles a los problemas.
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: Funciones
+            csp_project:
+              display_name: Proyecto
+          title: Variables, Condicionales y Funciones ('21-'22)
+          description: Esta unidad explora cómo las variables, las condicionales y
+            las funciones permiten el diseño de aplicaciones cada vez más complejas.
+            Aprende a programar con estos tres nuevos conceptos a través de una secuencia
+            de actividades colaborativas. A continuación, construye tu propia aplicación
+            de toma de decisiones para compartirla con tus amigos y ayudarles a tomar
+            una decisión.
+          student_description: Esta unidad explora cómo las variables, las condicionales
+            y las funciones permiten el diseño de aplicaciones cada vez más complejas.
+            Aprende a programar con estos tres nuevos conceptos a través de una secuencia
+            de actividades colaborativas. A continuación, construye tu propia aplicación
+            de toma de decisiones para compartirla con tus amigos y ayudarles a tomar
+            una decisión.
+          description_short: Aprende a crear aplicaciones que almacenen información,
+            tomen decisiones y mantengan el código organizado.
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Datos
+            csp_loops:
+              display_name: Bucles
+            csp_traversals:
+              display_name: Recorridos
+            csp_project:
+              display_name: Proyecto
+            lessonGroup-5:
+              display_name: Encuesta de final de curso
+          title: Datos ('21-'22)
+          description: Esta unidad describe las listas, los bucles y los recorridos,
+            y explora el modo en que pueden utilizarse para crear aplicaciones que
+            almacenen y procesen grandes cantidades de información. Aprende a programar
+            con la biblioteca de datos en Laboratorio de Aplicaciones y completa un
+            proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar
+            un programa sobre cualquier tema que elijas.
+          student_description: 'En esta unidad aprenderás cómo el análisis de datos
+            ayuda a convertir los datos en bruto en información útil sobre el mundo.
+            Aprendes a utilizar la visualización de datos para encontrar patrones
+            dentro de los conjuntos de datos y aprendes cómo este proceso de análisis
+            de datos se utiliza en contextos como los datos abiertos o el aprendizaje
+            automático para ayudar a tomar decisiones o aprender más sobre nuestro
+            mundo. En el proyecto de la unidad, analizarás un conjunto de datos de
+            tu elección y presentarás tus conclusiones. '
+          description_short: Aprende a crear aplicaciones que utilicen listas, bucles
+            y recorridos para almacenar y procesar grandes cantidades de información.
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+            lessonGroup-3:
+              display_name: Bucles
+            lessonGroup-4:
+              display_name: Recorridos
+            lessonGroup-5:
+              display_name: Proyecto
+          title: Listas, Bucles y Recorridos ('21-'22)
+          description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          student_description: Esta unidad describe las listas, los bucles y los recorridos,
+            y explora el modo en que pueden utilizarse para crear aplicaciones que
+            almacenen y procesen grandes cantidades de información. Aprende a programar
+            con la biblioteca de datos en Laboratorio de Aplicaciones y completa un
+            proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar
+            un programa sobre cualquier tema que elijas.
+          description_short: Aprende a crear aplicaciones que utilicen listas, bucles
+            y recorridos para almacenar y procesar grandes cantidades de información.
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parámetros y valores de retorno
+            csp_libraries:
+              display_name: Librerías
+            lessonGroup-3:
+              display_name: Encuesta de final de curso
+          title: Parámetros, Retorno y Librerías ('21-'22)
+          description: Esta unidad explica los parámetros, el retorno y las bibliotecas.
+            Aprende a utilizar estos conceptos para construir nuevos tipos de aplicaciones,
+            así como bibliotecas de código que puedes compartir con tus compañeros
+            de clase. Termina la unidad diseñando una biblioteca de funciones en torno
+            a cualquier tema de tu elección.
+          student_description: Esta unidad explica los parámetros, el retorno y las
+            bibliotecas. Aprende a utilizar estos conceptos para construir nuevos
+            tipos de aplicaciones, así como bibliotecas de código que puedes compartir
+            con tus compañeros de clase. Termina la unidad diseñando una biblioteca
+            de funciones en torno a cualquier tema de tu elección.
+          description_short: Aprende a diseñar un código limpio y reutilizable que
+            puedas compartir con un solo compañero o con todo el mundo.
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT de creación
+            lessonGroup-3:
+              display_name: Encuesta de final de curso
+          title: Ciberseguridad e Impactos Globales ('21-'22)
+          description: En esta unidad aprenderás cómo las innovaciones informáticas
+            han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende
+            cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad
+            y las formas en que se utilizan la encriptación y otras técnicas para
+            protegerlos. A lo largo de la unidad participa en una conferencia sobre
+            la "escuela del futuro" en la que tú y un equipo hacéis una propuesta
+            sobre la mejor manera de mejorar la vida escolar con las innovaciones
+            informáticas.
+          student_description: En esta unidad aprenderás cómo las innovaciones informáticas
+            han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende
+            cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad
+            y las formas en que se utilizan la encriptación y otras técnicas para
+            protegerlos. A lo largo de la unidad participa en una conferencia sobre
+            la "escuela del futuro" en la que tú y un equipo hacéis una propuesta
+            sobre la mejor manera de mejorar la vida escolar con las innovaciones
+            informáticas.
+          description_short: Practica y completa la Create Performance Task (PT).
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidad 9: Datos'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+          title: Crear PT - Preparación ('21-'22)
+          description: En esta unidad se prepara y se realiza la AP Create Performance
+            Task. Cada lección contiene enlaces a documentos y actividades útiles
+            para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          student_description: En esta unidad se prepara y se realiza la AP Create
+            Performance Task. Cada lección contiene enlaces a documentos y actividades
+            útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          description_short: Practica y completa la Create Performance Task (PT).
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidad 10: Ciberseguridad e impactos globales'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+          title: Algoritmos ('21-'22)
+          description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          student_description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          description_short: Diseñar y analizar algoritmos para entender cómo funcionan
+            y por qué algunos se consideran mejores que otros.
+        csp-post-survey-2023:
+          title: Encuesta de fin de curso de Principios de Ciencias de la Computación
+          description: Esta unidad contiene la Encuesta Final del Curso de Principios
+            de Informática.
+          student_description: Esta unidad contiene una encuesta sobre el Curso de
+            Principios de Informática. Tu profesor te dirá cuándo es el momento de
+            realizar esta encuesta.
+        self-paced-pl-csa1-2023:
+          description: |-
+            Este módulo es para cualquier persona que utilice estos métodos de aprendizaje profesional para CSA.
+
+            **Podrás:**
+
+            -   Obtener una introducción a Code.org.
+            -   Aprenderás cómo participar en estos módulos de aprendizaje profesional.
+            -   Obtener una introducción al curso AP Computer Science A
+            -   Aprender el enfoque curricular de Code.org para CSA
+
+            **Tiempo estimado:** 60 minutos
+          student_description: |-
+            Este módulo es para cualquier persona que utilice estos métodos de aprendizaje profesional para CSA.
+
+            **Podrás:**
+
+            -   Obtener una introducción a Code.org.
+            -   Aprenderás cómo participar en estos módulos de aprendizaje profesional.
+            -   Obtener una introducción al curso AP Computer Science A
+            -   Aprender el enfoque curricular de Code.org para CSA
+
+            **Tiempo estimado:** 60 minutos
+        self-paced-pl-csa2-2023:
+          title: 'Módulo 2: Navegando por Code.org'
+        self-paced-pl-csa3-2023:
+          title: Soporte para la programación basada en texto
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: 'Unidad 1: Proyectos'
+            lesson-2:
+              name: 'Unidad 2: Proyectos'
+            lesson-3:
+              name: 'Unidad 3: Proyectos'
+            lesson-4:
+              name: 'Unidad 4: Proyectos'
+            lesson-5:
+              name: 'Unidad 5: Proyectos'
+            lesson-6:
+              name: 'Unidad 6: Proyectos'
+            lesson-7:
+              name: 'Unidad 7: Proyectos'
+            lesson-8:
+              name: 'Unidad 8: Proyectos'
+        amy-playground:
+          lessons:
+            lesson-1:
+              name: Partículas
+        csp-playground:
+          title: CSP Playground
+          description_audience: Autores del Curriculum
+          description_short: Para organizar las actualizaciones de las lecciones o
+            los niveles entre las versiones del plan de estudios
+        csc-pilot-fa2022-particles:
+          title: Partículas
+        devices-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
+        vpl-csd5-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-4:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        vpl-csd6-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-4:
+              name: Cerrando
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Parte 1: Sesión Sincrónica'
+            lessonGroup-3:
+              display_name: 'Parte 2: Post-Trabajo Asíncrono'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introducción al Laboratorio de aplicaciones
+            lessonGroup-3:
+              display_name: Entradas y salidas

@@ -84,7 +84,10 @@
         "courseD_bee_nestedLoops8_2021": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
         "courseF_bee2": "Možeš li upotrijebiti petlju da sakupiš sav nektar?",
         "CourseD_Dance_2020_05_2021": "_Sada smo napredovali!_\n\nDodajte još jedan blok od <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takta\"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.",
-        "courseD_maze_nestedLoops4_2021": "Dovedi me do suncokreta!"
+        "courseD_maze_nestedLoops4_2021": "Dovedi me do suncokreta!",
+        "CourseD_Dance_2020_052022": "_Sada smo napredovali!_\n\nDodajte još jedan blok od <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takta\"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.",
+        "courseD_bee_nestedLoops82022": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
+        "courseD_maze_nestedLoops42022": "Dovedi me do suncokreta!"
       }
     }
   }

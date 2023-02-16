@@ -2,6 +2,8 @@
 sv:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: snabb användare {QUESTION} för variabel {VAR} med val {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -11,7 +13,7 @@ sv:
             '0.75': liten
             '1.00': medel
             '2.00': stor
-            '3.00': extra large
+            '3.00': extra stor
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -19,7 +21,7 @@ sv:
             '0.75': liten
             '1.00': medel
             '2.00': stor
-            '3.00': extra large
+            '3.00': extra stor
       Dancelab_alternateMoves:
         text: "{GROUP} växla varje {N} takter \nmellan {MOVE1} och {MOVE2}"
         options:
@@ -228,20 +230,12 @@ sv:
             MOVES.XArmsUp: Sträck dig
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-      Dancelab_everyMeasuresRange:
-        text: 'upprepa varje {N} takter efter {START} '
       Dancelab_everySeconds:
         text: 'varje {N} {UNIT} '
         options:
           UNIT:
             '"measures"': åtgärder
             '"seconds"': sekunder
-      Dancelab_everySecondsRange:
-        text: 'varje {N} {UNIT} från {START} till {STOP} '
-        options:
-          UNIT:
-            measures: Takter
-            seconds: Sekunder
       Dancelab_everyVerseChorus:
         text: 'varje {UNIT} '
         options:
@@ -373,6 +367,7 @@ sv:
             '"x"': korsvis
             '"plus"': plus
             '"spiral"': spiral
+            '"infinity"': oändlig linje
             '"random"': slumpad
       Dancelab_makeAnonymousDanceSprite:
         text: skapa en ny {COSTUME} på {LOCATION}
@@ -503,6 +498,7 @@ sv:
             '"x"': korsvis
             '"plus"': plus
             '"spiral"': spiral
+            '"infinity"': oändlig linje
             '"random"': slumpad
       Dancelab_mixColors:
         text: blanda {COLOR1} och {COLOR2}
@@ -991,6 +987,47 @@ sv:
         text: ställ in
       Dancelab_whenSetup2:
         text: ställ in
+      DansBlocks_getMicroscope:
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bubblor
+            '"confetti"': Konfetti
+            '"hearts"': hjärtan
+            '"rain"': regn
+            '"starburst"': Stjärnfall
+      DansBlocks_setMicroscope:
+        text: Ställ in mikroskop på {INPUT1}
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
+      DansBlocks_testRectangle:
+        text: 'gör rektangel x: {X} y: {Y} b: {W} h: {H} färg: {COLOR}'
+      FunctionBlocks_addEightBlock:
+        text: läggTillÅtta
+      FunctionBlocks_addFiveBlock:
+        text: läggTillFem
+      FunctionBlocks_addFourBlock:
+        text: läggTillFyra
+      FunctionBlocks_addNineBlock:
+        text: läggTillNio
+      FunctionBlocks_addOneBlock:
+        text: läggTillEtt
+      FunctionBlocks_addSevenBlock:
+        text: läggTillSju
+      FunctionBlocks_addSixBlock:
+        text: läggTillSex
+      FunctionBlocks_addThreeBlock:
+        text: läggTillTre
+      FunctionBlocks_addTwoBlock:
+        text: läggTillTvå
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} börjar {BEHAVIOR}
       gamelab_addTarget:
@@ -1305,6 +1342,20 @@ sv:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": välj
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": knäpp bas
             "'sound://category_digital/jump_7.mp3'": hoppa
+      gamelab_playSoundOptionsSoccer:
+        text: spelljud {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": applåder
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": sång
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": jubel
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": två visselpipor
+      gamelab_playSoundOptionsSpace:
+        text: spelljud {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": svart hål
+            "'sound://category_space/Galactic_center_SFX.mp3'": galaktiskt centrum
       gamelab_playSpeech:
         text: spela tal {SOUND}
       gamelab_playerBehaviors:
@@ -1873,6 +1924,19 @@ sv:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
+      ParticlesBlocks_setMicroscope:
+        text: Ställ in mikroskop på {INPUT1}
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1940,6 +2004,12 @@ sv:
             '"sound://category_achievements/peaceful_win_1.mp3"': Vinna
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Virvla
             '"sound://category_achievements/peaceful_win_6.mp3"': Vindspel
+      Poetry_playSoundOptionsSpace:
+        text: spelljud {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": svart hål
+            "'sound://category_space/Galactic_center_SFX.mp3'": galaktiskt centrum
       Poetry_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Poetry_setBackgroundEffect:
@@ -2028,6 +2098,11 @@ sv:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: när  {VAR} svarade
       RyanLab_moveForward:
@@ -2228,5 +2303,13 @@ sv:
           DIR:
             right: höger ↻
             left: vänster ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bubblor
+            '"confetti"': Konfetti
+            '"hearts"': hjärtan
+            '"rain"': regn
+            '"starburst"': Stjärnfall
       validation_validatedBackground:
         text: ställa in bakgrunden till {IMG}

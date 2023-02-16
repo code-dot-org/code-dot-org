@@ -26,8 +26,6 @@
   "sports": "Mengekod permainan sukan anda sendiri",
   "text-compression": "Pemampatan Teks",
   "csa-self-paced-pl": "Menavigasi Code.org untuk Guru Perintis CSA",
-  "counting-csc": "Mengira dengan Laurel",
-  "explore-data-1": "Meneroka Plot dan Histogram Kotak",
   "outbreak-csc": "Wabak",
   "poem-art": "Seni Puisi",
   "edit-code": "Mengedit kod",
@@ -39,5 +37,8 @@
   "step": "langkah",
   "coursee-ramp": "kursuse-tanjakan",
   "csa5-exemplars": "csa5-exemplars",
-  "soccer": "bola sepak"
+  "soccer": "bola sepak",
+  "hello-world-space": "Helo Dunia: Ruang",
+  "hello-world-soccer": "Helo Dunia: Bola Sepak",
+  "playground": "taman permainan"
 }

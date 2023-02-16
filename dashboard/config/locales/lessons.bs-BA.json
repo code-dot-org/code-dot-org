@@ -20,20 +20,26 @@
         "gumball/Gumball Play Lab": {
           "name": "Slatkiši Play Lab"
         },
-        "dance/Dance Party": {
-          "name": "Plesna zabava"
-        },
         "mc/Hour of Code 2015": {
           "name": "Sata Kodiranja Minecraft-a"
         },
         "playlab/Play Lab": {
           "name": "Play Lab"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Beskonačni Laboratorij Igranja"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Sat Kodiranja 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Plesna zabava"
         },
         "k5-onlinepd-2019/Loops": {
           "name": "Petlje"
@@ -64,6 +70,59 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Slijedeći Koraci"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Prijenos programiranja"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Plesna zabava"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Uvjeti s Kartama"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Pisanje pjesama"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Pomakni, Pomakni"
+        },
+        "courseb-2022/Sequencing with Angry Birds": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Zapetljavanje"
+        },
+        "express-2022/Dance Party": {
+          "name": "Plesna zabava"
+        },
+        "pre-express-2022/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "pre-express-2022/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "coursea-2022/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Vesele Mape",
+          "overview": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
+          "purpose": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu."
+        },
+        "coursea-2022/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Veliki Događaj"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binarne narukvice"
         },
         "csd3-2022/Variables": {
           "name": "Varijable"

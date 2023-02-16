@@ -1,0 +1,461 @@
+{
+  "navigateForward": "Áfram",
+  "navigateBack": "Til baka",
+  "tryAgain": "Reyna aftur",
+  "navigateDone": "Ljúka",
+  "saveProgress": "Vista",
+  "correctAnswer": "Rétt",
+  "incorrectAnswer": "Ekki rétt",
+  "modelCardPossibleValuesMinimum": "min",
+  "modelCardPossibleValuesMaximum": "max",
+  "columnInspectorDescription": "Lýsing",
+  "columnDetailsMinimumValue": "min",
+  "columnDetailsMaximumValue": "max",
+  "dataCardLastUpdated": "Síðast uppfært",
+  "predictButton": "Spáðu",
+  "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "aldur"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "veður"
+        },
+        "day": {
+          "id": "dagur"
+        },
+        "shoe": {
+          "id": "skór"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "onion": {
+          "id": "laukur"
+        },
+        "avocado": {
+          "id": "avokadó"
+        },
+        "corn": {
+          "id": "maís"
+        },
+        "beans": {
+          "id": "baunir"
+        },
+        "lime": {
+          "id": "límóna"
+        }
+      }
+    },
+    "bike_sharing": {
+      "fields": {
+        "index": {
+          "id": "sætistala"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "mushrooms": {
+          "id": "sveppir"
+        },
+        "lobster": {
+          "id": "humar"
+        },
+        "bacon": {
+          "id": "beikon"
+        },
+        "cheese": {
+          "id": "ostur"
+        },
+        "meat": {
+          "id": "kjöt"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "litur"
+        },
+        "music": {
+          "id": "tónlist"
+        },
+        "food": {
+          "id": "matur"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "aldur"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Lýsing"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "jarðarber"
+        },
+        "lime": {
+          "id": "límóna"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "hliðar"
+        },
+        "size": {
+          "id": "stærð"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "tomato": {
+          "id": "tómatur"
+        },
+        "avocado": {
+          "id": "avokadó"
+        },
+        "chicken": {
+          "id": "hænsn"
+        },
+        "fruit": {
+          "id": "ávöxtur"
+        },
+        "beans": {
+          "id": "baunir"
+        },
+        "cheese": {
+          "id": "ostur"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Aldur"
+        },
+        "Gender": {
+          "id": "Kyn"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "school": {
+          "id": "skóli"
+        },
+        "age": {
+          "id": "aldur"
+        },
+        "health": {
+          "id": "heilsa"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "hænsn"
+        },
+        "lamb": {
+          "id": "lamb"
+        },
+        "onion": {
+          "id": "laukur"
+        },
+        "cheese": {
+          "id": "ostur"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "aldur"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "Stig"
+        },
+        "Country": {
+          "id": "Land"
+        },
+        "Name": {
+          "id": "Nafn"
+        },
+        "Star": {
+          "id": "Stjarna"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Listamaður"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "fólk"
+        },
+        "rhino": {
+          "id": "nashyrningur"
+        },
+        "elephant": {
+          "id": "fíll"
+        },
+        "alligator": {
+          "id": "krókódíll"
+        },
+        "trees": {
+          "id": "tré"
+        }
+      },
+      "name": "Leiðangur"
+    },
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Lengd"
+        },
+        "Height": {
+          "id": "Hæð"
+        }
+      }
+    },
+    "basketball_shots": {
+      "fields": {
+        "Away team alias": {
+          "id": "Stafir gestaliðsins",
+          "description": "Skammstöfun á heiti gestkomandi liðsins."
+        },
+        "Home team alias": {
+          "id": "Stafir heimaliðsins",
+          "description": "Skammstöfun á heiti heimaliðsins."
+        },
+        "Time in seconds": {
+          "id": "Tími í sekúndum",
+          "description": "Tíminn sem er liðinn á leikklukkunni, í sekúndum."
+        },
+        "Jersey number": {
+          "id": "Númer treyju",
+          "description": "Númer leikmannsins sem skaut."
+        },
+        "Inches from left baseline": {
+          "id": "Tommur frá endalínu vinstra megin",
+          "description": "Fjarlægð frá vinstri endalínu (línan fyrir aftan körfuna)."
+        },
+        "Inches from bottom sideline": {
+          "id": "Tommur frá neðri hliðarlínunni",
+          "description": "Fjarlægð frá neðri hliðarlínunni (línan meðfram vellinum endilöngum)."
+        },
+        "Made or miss": {
+          "id": "Skor eða framhjá",
+          "description": "Hvort 3-stiga skotið tókst eða misheppnaðist."
+        }
+      },
+      "card": {
+        "description": "Þetta gagnasett inniheldur allar 3-stiga skottilraunir frá NCAA-mótinu 2017. Með þessum gögnum er hægt að spá fyrir um hvort skotið hitti eða geigaði.",
+        "context": {
+          "potentialUses": "Spá hvort 3-stiga skot hitti eða geigaði."
+        }
+      },
+      "name": "NCAA 3-stiga tilraunir"
+    },
+    "zoo": {
+      "fields": {
+        "Animal Name": {
+          "id": "Nafn dýrs",
+          "description": "Nafn dýrsins."
+        },
+        "Hair": {
+          "id": "Hár",
+          "description": "Er dýrið með hár?"
+        },
+        "Feathers": {
+          "id": "Fjaðrir",
+          "description": "Er dýrið með fjaðrir?"
+        },
+        "Eggs": {
+          "id": "Egg",
+          "description": "Verpir dýrið eggjum?"
+        },
+        "Milk": {
+          "id": "Mjólk",
+          "description": "Framleiðir dýrið mjólk?"
+        },
+        "Airborne": {
+          "id": "Flug",
+          "description": "Flýgur dýrið?"
+        },
+        "Aquatic": {
+          "description": "Lifir dýrið í vatni?"
+        },
+        "Predator": {
+          "id": "Rándýr",
+          "description": "Er dýrið rándýr?"
+        },
+        "Toothed": {
+          "id": "Tennur",
+          "description": "Er dýrið með tennur?"
+        },
+        "Backbone": {
+          "id": "Hryggur",
+          "description": "Er dýrið með hrygg?"
+        },
+        "Breathes": {
+          "id": "Andar",
+          "description": "Andar dýrið?"
+        },
+        "Venomous": {
+          "id": "Eitur",
+          "description": "Gefur dýrið frá sér eitur?"
+        },
+        "Fins": {
+          "id": "Uggar",
+          "description": "Hefur dýrið ugga?"
+        },
+        "Legs": {
+          "id": "Fætur",
+          "description": "Hversu marga fætur hefur dýrið?"
+        },
+        "Tail": {
+          "id": "Hali",
+          "description": "Er dýrið með hala?"
+        },
+        "Domestic": {
+          "id": "Búfénaður",
+          "description": "Er dýrið búfénaður"
+        },
+        "Catsize": {
+          "id": "Stærð kattar",
+          "description": "Er dýrið álíka stórt og köttur?"
+        },
+        "Class": {
+          "id": "Flokkun",
+          "description": "Hvers konar dýr er það?"
+        }
+      },
+      "card": {
+        "description": "Lítið gagnasafn með mismunandi eiginleikum dýra (hvort þau eru með hár, fjaðrir, tennur og fleira) sem notaðir eru til flokkunar. Næstum allar spurningar eru Já/Nei nema fyrir nafn dýrs, flokk og fjöldi fóta.",
+        "context": {
+          "potentialUses": "Það eru fullt af mögulegum heitum hér, en ein auðveld leið til að koma þér af stað er að reyna að finna hvaða eiginleikar hafa tilhneigingu til að tengjast því að dýr noti eitur.",
+          "potentialMisuses": "Þetta er gagnasafn með aðeins 100 dýrum, svo það getur verið fullt af dýrum sem ekki eru í gögnunum. Ekki taka þetta of bókstaflega!"
+        }
+      },
+      "name": "Dýragarður"
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokadó"
+        },
+        "onion": {
+          "id": "laukur"
+        },
+        "ginger": {
+          "id": "engifer"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Music": {
+          "id": "Tónlist"
+        },
+        "Dance": {
+          "id": "Dans"
+        },
+        "Country": {
+          "id": "Land"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Achievements": {
+          "id": "Afrek"
+        },
+        "Age": {
+          "id": "Aldur",
+          "description": "Aldur"
+        },
+        "Height": {
+          "id": "Hæð",
+          "description": "Hæð"
+        },
+        "Gender": {
+          "id": "Kyn",
+          "description": "Kyn"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banani"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Aldur"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "hliðar"
+        },
+        "size": {
+          "id": "stærð"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Tónlist"
+        },
+        "Dance": {
+          "id": "Dans"
+        },
+        "Country": {
+          "id": "Land"
+        }
+      }
+    }
+  }
+}

@@ -3,33 +3,156 @@
     "data": {
       "programming_environments": {
         "weblab": {
-          "name": "Lab du Web",
+          "name": "Labo Web",
           "categories": {
             "html_tags": {
               "name": "Balises HTML"
+            },
+            "css_properties": {
+              "name": "Propriétés CSS"
             }
           }
         },
         "gamelab": {
           "name": "Labo Jeux",
+          "description": "Game Lab est un environnement de programmation où vous pouvez créer des jeux et des animations passionnants. Dessinez vos personnages, codez avec des blocs ou du JavaScript pour les faire fonctionner, puis partagez votre jeu en quelques secondes.",
           "categories": {
             "game_lab": {
-              "name": "Labo Jeux"
+              "name": "Labo Jeux",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Noir et blanc"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Créer de la Musique"
+                    }
+                  },
+                  "short_description": "Joue le fichier audio MP3 à partir de l’URL spécifiée."
+                }
+              }
             },
             "sprites": {
-              "name": "Les Lutins"
+              "name": "Sprites",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirale"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Groupes"
+              "name": "Groupes",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Couleur"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Couleur"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Dessiner"
+              "name": "Dessiner",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Étoile"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Math"
+              "name": "Math",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Le nombre minimal renvoyé"
+                    },
+                    "max": {
+                      "description": "Le nombre maximal renvoyé"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Le nombre minimal renvoyé"
+                    },
+                    "max": {
+                      "description": "Le nombre maximal renvoyé"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "variables"
+              "name": "Variables",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Assigne un valeur à une variable existante. Par exemple, x = 0;"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Déclare une variable avec le nom donné."
+                },
+                "declareAssign_x": {
+                  "short_description": "Déclare et attribue une valeur initiale à une variable."
+                }
+              }
             },
             "functions": {
               "name": "Fonctions"
@@ -40,28 +163,236 @@
           "name": "Labo des applis",
           "description": "App Lab est un environnement de programmation où vous pouvez créer des applications simples. Concevez une application, codez-la avec des blocs ou avec JavaScript, puis partagez-la en quelques secondes.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Rétrécir et Grandir"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fonction"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Créer de la Musique"
+                    }
+                  },
+                  "short_description": "Joue le fichier audio MP3 à partir de l’URL spécifiée."
+                }
+              }
+            },
+            "canvas": {
+              "name": "Canvas",
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objet"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Données"
+              "name": "Données",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fonction"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objet"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objet"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "name": "Tortue"
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fonction"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Math"
+              "name": "Math",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Le nombre minimal renvoyé"
+                    },
+                    "max": {
+                      "description": "Le nombre maximal renvoyé"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Le nombre minimal renvoyé"
+                    },
+                    "max": {
+                      "description": "Le nombre maximal renvoyé"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "variables"
+              "name": "Variables",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "Déclare une variable avec le nom donné."
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Choisissez votre propre aventure"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "Déclare et attribue une valeur initiale à une variable."
+                },
+                "addPair": {
+                  "return_value": "Aucun"
+                }
+              }
             },
             "functions": {
               "name": "Fonctions"
             },
             "advanced": {
               "name": "Avancé"
+            },
+            "maker": {
+              "name": "Maker"
             }
           }
         },
         "spritelab": {
-          "name": "Le Labo des Lutins",
+          "name": "Le Labo des Sprites",
+          "description": "Sprite Lab est un environnement de programmation Blockly où vous pouvez créer des projets interactifs.",
           "categories": {
             "sprites": {
-              "name": "Les Lutins"
+              "name": "Sprites"
             },
             "world": {
               "name": "Monde"
@@ -82,7 +413,7 @@
               "name": "Boucles"
             },
             "variables": {
-              "name": "variables"
+              "name": "Variables"
             },
             "math": {
               "name": "Math"
@@ -102,7 +433,39 @@
           }
         },
         "javalab": {
-          "name": "Java Lab"
+          "name": "Java Lab",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Raccourcis du Labo Java"
+            },
+            "general": {
+              "name": "Les bases de Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Structures de contrôle"
+            },
+            "data_structures": {
+              "name": "Structure de données"
+            }
+          }
         }
       }
     }

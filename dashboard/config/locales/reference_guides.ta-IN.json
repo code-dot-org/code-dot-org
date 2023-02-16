@@ -1,0 +1,68 @@
+{
+  "ta-IN": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/accelerometer-events": {
+          "display_name": "முடுக்கமானி நிகழ்வுகள்"
+        },
+        "csd-2022/applab-overview": {
+          "display_name": "கண்ணோட்டம்"
+        },
+        "csd-2022/board-events": {
+          "display_name": "குழு நிகழ்வுகள்"
+        },
+        "csd-2022/css-overview": {
+          "display_name": "கண்ணோட்டம்"
+        },
+        "csd-2022/design-mode": {
+          "display_name": "வடிவமைப்பு முறை"
+        },
+        "csd-2022/functions": {
+          "display_name": "செயல்பாடுகள்"
+        },
+        "csd-2022/game-lab-overview": {
+          "display_name": "கண்ணோட்டம்"
+        },
+        "csd-2022/html-overview": {
+          "display_name": "கண்ணோட்டம்"
+        },
+        "csd-2022/javascript": {
+          "display_name": "ஜாவாஸ்கிரிப்ட்"
+        },
+        "csd-2022/javascript-overview": {
+          "display_name": "கண்ணோட்டம்"
+        },
+        "csd-2022/lists": {
+          "display_name": "பட்டியல்கள்"
+        },
+        "csd-2022/maker-toolkit": {
+          "display_name": "மேக்கர் கருவித்தொகுப்பு"
+        },
+        "csd-2022/maker-toolkit-overview": {
+          "display_name": "கண்ணோட்டம்"
+        },
+        "csd-2022/other": {
+          "display_name": "வேறு"
+        },
+        "csd-2022/other-overview": {
+          "display_name": "கண்ணோட்டம்"
+        },
+        "csd-2022/patterns-overview": {
+          "display_name": "கண்ணோட்டம்"
+        },
+        "csd-2022/playing-notes": {
+          "display_name": "விளையாடும் குறிப்புகள்"
+        },
+        "csd-2022/sprite-properties": {
+          "display_name": "ஸ்பிரைட் பண்புகள் "
+        },
+        "csd-2022/variables": {
+          "display_name": "மாறிலிகள்"
+        },
+        "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "வேகம் மற்றும் எதிர் முறை"
+        }
+      }
+    }
+  }
+}

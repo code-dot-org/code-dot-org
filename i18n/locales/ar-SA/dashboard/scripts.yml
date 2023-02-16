@@ -130,6 +130,8 @@ ar:
           student_description: استخدم عنصر واجهة شفرة Vigenere لاستكشاف رسائل التشفير وفك التشفير باستخدام طريقة شفرة Vigenere.
         frequency_analysis:
           description_short: استخدم عنصر واجهة تحليل التردد لتحليل ترددات الحروف في النص مقارنة بالترددات المتوقعة. تحويل الشيفرة واستبدالها.
+        cspunit4draft:
+          description_short: البيانات
         Special Fun:
           description_audience: الأعمار 10-18
         SpecialSeries:
@@ -283,6 +285,8 @@ ar:
           description_short: يغطي هذا التقييم متعدد الخيارات أسئلة تشمل 7 أفكار رئيسية لعلوم الكمبيوتر. إنه الجزء الأول من اختبار 50 سؤال مكوّن من جزأين.
         cspexam2-AKwgAh1ac5:
           description_short: يغطي هذا التقييم متعدد الخيارات أسئلة تشمل 7 أفكار رئيسية لعلوم الكمبيوتر. إنه الجزء الثاني من اختبار 50 سؤال مكوّن من جزأين.
+        CSDU5-Draft:
+          description_short: البيانات
         CSF_Secret_Sample_Story:
           description_audience: الأعمار 8-18+
         MikeTest:
@@ -1558,6 +1562,8 @@ ar:
               display_name: مسرَّعة
             csf_variables:
               display_name: المتغيرات
+            csf_data:
+              display_name: البيانات
             csf_for_loops:
               display_name: للحلقات
             csf_internet:
@@ -1679,6 +1685,8 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+            csf_data:
+              display_name: البيانات
             end_of_course_project:
               display_name: مشروع نهاية الدورة التدريبية.
           student_description: إنشاء برامج باستخدام التسلسل والحلقات والأحداث. ترجم الأحرف الأولى من اسمك إلى لغة ثنائية، واستكشف تقنيات حل المشكلات المختلفة، وتعلم كيفية التعامل مع التنمر الإلكتروني. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها!
@@ -2279,6 +2287,7 @@ ar:
           title: كاشف التصادم
         dance-2019:
           title: حفلة رقص (2019)
+          description_short: قم بترميز حفلة رقص لمشاركتها مع الأصدقاء والعائلة. يضم بيونسي وهاري ستايلز وليزو وليل ناس إكس وسيلينا غوميز وموسيقى من فيلم ديزني «إنكانتو» والمزيد!
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
           student_description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
         k5-onlinepd-2019:
@@ -2556,6 +2565,8 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+            csf_data:
+              display_name: البيانات
             end_of_course_project:
               display_name: مشروع نهاية الدورة التدريبية.
           student_description: إنشاء برامج باستخدام التسلسل والحلقات والأحداث. ترجم الأحرف الأولى من اسمك إلى لغة ثنائية، واستكشف تقنيات حل المشكلات المختلفة، وتعلم كيفية التعامل مع التنمر الإلكتروني. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها!
@@ -2613,6 +2624,8 @@ ar:
               display_name: المواطنة الرقمية
             csf_variables:
               display_name: المتغيرات
+            csf_data:
+              display_name: البيانات
             csf_for_loops:
               display_name: للحلقات
             csf_sprites:
@@ -2969,7 +2982,7 @@ ar:
               display_name: مشروع نهاية الدورة التدريبية.
           student_description: تعلم أساسيات علم الحاسوب وأمان الإنترنت. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها.
         courseb-2021:
-          title: الدورة "ب" (2020)
+          title: الدورة "ب" (2021)
           description: لقد طورنا الدورة "ب" مع وضع طلاب الصف الأول في الاعتبار. بينما تتوازى المفاهيم الموجودة في الدورة التدريبية "ب" مع تلك الموجودة في الدورة التدريبية "أ" ، يتعلم الطلاب أنشطة أكثر تعقيدًا غير متصلة ويعملون من خلال مجموعة متنوعة من الألغاز. سيتعلم الطلاب أساسيات البرمجة، وآليّات التعاون، ومهارات البحث والتفكير النقدي، والمثابرة في مواجهة الصعوبات، وأمان الإنترنت. في نهاية هذه الدورة، يقوم الطلاب بإنشاء ألعاب في بيئة برمجة مختبر الألعاب.
           description_short: مقدمة عن علوم الكمبيوتر للأطفال قبل تعلم القراءة. مشابه للدورة "أ"، ولكن مع عمق إضافي لتعلم المفاهيم.
           description_audience: 'تتراوح الأعمار بين: 5-8'
@@ -2988,7 +3001,7 @@ ar:
               display_name: مشروع نهاية الدورة التدريبية.
           student_description: تعلم أساسيات علم الحاسوب وأمان الإنترنت. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها.
         coursec-2021:
-          title: الدورة "ج" (2020)
+          title: الدورة "ج" (2021)
           description: قمنا بتطوير الدورة C لطلاب الصف الثاني. سيقوم الطلاب بإنشاء برامج مع التسلسل والحلقات والأحداث. سيقومون بالتحقيق في تقنيات حل المشكلات ووضع استراتيجيات لبناء مجتمعات إيجابية سواء عبر الإنترنت أو خارجها. بحلول نهاية الدورة، سيقوم الطلاب بإنشاء ألعاب تفاعلية يمكنهم مشاركتها.
           description_short: تعلم أساسيات علم الحاسوب وأنشئ تصاميمك وقصصك وألعابك الخاصة.
           description_audience: 'تتراوح الأعمار بين: 6-10'
@@ -3003,11 +3016,13 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+            csf_data:
+              display_name: البيانات
             end_of_course_project:
               display_name: مشروع نهاية الدورة التدريبية.
           student_description: إنشاء برامج باستخدام التسلسل والحلقات والأحداث. ترجم الأحرف الأولى من اسمك إلى لغة ثنائية، واستكشف تقنيات حل المشكلات المختلفة، وتعلم كيفية التعامل مع التنمر الإلكتروني. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها!
         coursed-2021:
-          title: الدورة "د" (2020)
+          title: الدورة "د" (2021)
           description: يطور الطلاب فهمهم للحلقات والعبارات الشرطية والأحداث. وبخلاف البرمجة، يتعلم الطلاب المزيد من المعلومات حول المواطنة الرقمية.
           description_short: تعرف على التعبيرات الشرطية. صمم لوحاتك الفنية وألعابك وحتى حفلة رقص.
           description_audience: 'تتراوح الأعمار بين: 7-11'
@@ -3030,7 +3045,7 @@ ar:
               display_name: المواطنة الرقمية
           student_description: يطور الطلاب فهمهم للحلقات والعبارات الشرطية والأحداث. وبخلاف البرمجة، يتعلم الطلاب المزيد من المعلومات حول المواطنة الرقمية.
         coursee-2021:
-          title: الدورة "هـ" (2020)
+          title: الدورة "هـ" (2021)
           description: ابدأ في البرمجة باستخدام الخوارزميات والحلقات والعبارات الشرطية والأحداث ثم تنتقل إلى الوظائف. في الجزء الثاني من هذه الدورة، قم بتصميم وإنشاء مشروع رئيسي يمكنك مشاركته مع أصدقائك وعائلتك.
           description_short: راجع المفاهيم في الدورتين "ج" و"د"، ثم انتقل إلى أبعد من ذلك من خلال تعلم الوظائف.
           description_audience: 'تتراوح الأعمار بين: 8-12'
@@ -3267,6 +3282,8 @@ ar:
           lesson_groups:
             lessonGroup-2:
               display_name: مرحبًا
+        outbreak-module:
+          title: تفشي المرض
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3427,6 +3444,7 @@ ar:
           title: مسابقة التهجئة
         outbreak-csc:
           name: outbreak-csc
+          title: تفشي المرض
         explore-data-1:
           name: explore-data-1
           title: استكشاف المربعات الإحصائية والرسوم البيانية
@@ -3461,6 +3479,8 @@ ar:
               display_name: محتوى
             lessonGroup-5:
               display_name: صندوق الاختبارات
+        ai-ethics-2021:
+          description_audience: المراحل الإعدادية إلى الثانوية
         poem-art-2021:
           title: فن القصيدة
         counting-csc-2021:
@@ -3525,7 +3545,7 @@ ar:
               display_name: الأحداث
             lessonGroup-5:
               display_name: مشروع نهاية الدورة التدريبية.
-          title: الدورة "أ" (2020)
+          title: الدورة "أ" (2022)
           description: تعلم أساسيات علم الحاسوب وأمان الإنترنت. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها.
           student_description: تعلم أساسيات علم الحاسوب وأمان الإنترنت. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها.
           description_short: مقدمة لعلم الحاسوب للطلاب ذوي مهارات القراءة السريعة.
@@ -3550,7 +3570,7 @@ ar:
               display_name: للحلقات
             end_of_course_project:
               display_name: مشروع نهاية الدورة التدريبية.
-          title: دورة سريعة (2020)
+          title: دورة سريعة (2022)
           description: تعلم علوم الكمبيوتر من خلال تجربة الدروس أدناه بالسرعة التي تناسبك! تعلم كيفية إنشاء برامج الكمبيوتر، وتطوير مهارات حل المشكلات، وشق طريقك مارًا بمجموعة من التحديات الممتعة! أنشئ ألعابًا ومشاريع إبداعية لمشاركتها مع الأصدقاء والعائلة والمعلمين.
           student_description: تعلم علوم الكمبيوتر من خلال تجربة الدروس أدناه بالسرعة التي تناسبك! تعلم كيفية إنشاء برامج الكمبيوتر، وتطوير مهارات حل المشكلات، وشق طريقك مارًا بمجموعة من التحديات الممتعة! أنشئ ألعابًا ومشاريع إبداعية لمشاركتها مع الأصدقاء والعائلة والمعلمين.
           description_short: 'مقدمة عن علم الحاسوب: تجمع بين أفضل مناهجنا الابتدائية للطلاب الأكبر سنًا.'
@@ -3606,7 +3626,7 @@ ar:
               display_name: الأحداث
             lessonGroup-6:
               display_name: مشروع نهاية الدورة التدريبية.
-          title: الدورة "ب" (2020)
+          title: الدورة "ب" (2022)
           description: لقد طورنا الدورة "ب" مع وضع طلاب الصف الأول في الاعتبار. بينما تتوازى المفاهيم الموجودة في الدورة التدريبية "ب" مع تلك الموجودة في الدورة التدريبية "أ" ، يتعلم الطلاب أنشطة أكثر تعقيدًا غير متصلة ويعملون من خلال مجموعة متنوعة من الألغاز. سيتعلم الطلاب أساسيات البرمجة، وآليّات التعاون، ومهارات البحث والتفكير النقدي، والمثابرة في مواجهة الصعوبات، وأمان الإنترنت. في نهاية هذه الدورة، يقوم الطلاب بإنشاء ألعاب في بيئة برمجة مختبر الألعاب.
           student_description: تعلم أساسيات علم الحاسوب وأمان الإنترنت. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها.
           description_short: مقدمة عن علوم الكمبيوتر للأطفال قبل تعلم القراءة. مشابه للدورة "أ"، ولكن مع عمق إضافي لتعلم المفاهيم.
@@ -3621,9 +3641,11 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+            csf_data:
+              display_name: البيانات
             end_of_course_project:
               display_name: مشروع نهاية الدورة التدريبية.
-          title: الدورة "ج" (2020)
+          title: الدورة "ج" (2022)
           description: قمنا بتطوير الدورة C لطلاب الصف الثاني. سيقوم الطلاب بإنشاء برامج مع التسلسل والحلقات والأحداث. سيقومون بالتحقيق في تقنيات حل المشكلات ووضع استراتيجيات لبناء مجتمعات إيجابية سواء عبر الإنترنت أو خارجها. بحلول نهاية الدورة، سيقوم الطلاب بإنشاء ألعاب تفاعلية يمكنهم مشاركتها.
           student_description: إنشاء برامج باستخدام التسلسل والحلقات والأحداث. ترجم الأحرف الأولى من اسمك إلى لغة ثنائية، واستكشف تقنيات حل المشكلات المختلفة، وتعلم كيفية التعامل مع التنمر الإلكتروني. في نهاية الدورة التدريبية، قم بإنشاء لعبة أو قصة خاصة بك يمكنك مشاركتها!
           description_short: تعلم أساسيات علم الحاسوب وأنشئ تصاميمك وقصصك وألعابك الخاصة.
@@ -3674,7 +3696,7 @@ ar:
               display_name: الجمل الشرطية
             end_of_course_project:
               display_name: مشروع نهاية الدورة التدريبية.
-          title: الدورة "د" (2020)
+          title: الدورة "د" (2022)
           description: يطور الطلاب فهمهم للحلقات والعبارات الشرطية والأحداث. وبخلاف البرمجة، يتعلم الطلاب المزيد من المعلومات حول المواطنة الرقمية.
           student_description: يطور الطلاب فهمهم للحلقات والعبارات الشرطية والأحداث. وبخلاف البرمجة، يتعلم الطلاب المزيد من المعلومات حول المواطنة الرقمية.
           description_short: تعرف على التعبيرات الشرطية. صمم لوحاتك الفنية وألعابك وحتى حفلة رقص.
@@ -3695,6 +3717,7 @@ ar:
               display_name: تأثيرات الحوسبة
             end_of_course_project:
               display_name: مشروع نهاية الدورة التدريبية.
+          title: الدورة "هـ" (2022)
           description: ابدأ في البرمجة باستخدام الخوارزميات والحلقات والعبارات الشرطية والأحداث ثم تنتقل إلى الوظائف. في الجزء الثاني من هذه الدورة، قم بتصميم وإنشاء مشروع رئيسي يمكنك مشاركته مع أصدقائك وعائلتك.
           student_description: ابدأ في البرمجة باستخدام الخوارزميات والحلقات والعبارات الشرطية والأحداث ثم تنتقل إلى الوظائف. في الجزء الثاني من هذه الدورة، قم بتصميم وإنشاء مشروع رئيسي يمكنك مشاركته مع أصدقائك وعائلتك.
           description_short: راجع المفاهيم في الدورتين "ج" و"د"، ثم انتقل إلى أبعد من ذلك من خلال تعلم الوظائف.
@@ -3709,6 +3732,8 @@ ar:
               display_name: المتغيرات
             end_of_course_project:
               display_name: مشروع نهاية الدورة التدريبية.
+          title: الدورة "و" (2022)
+          student_description: تعلم استخدام أنواع مختلفة من الحلقات والأحداث والوظائف والعبارات الشرطية. تحقق من تقنيات حل المشكلات المختلفة وناقش التأثيرات المجتمعية للحوسبة والإنترنت. في الجزء الثاني من هذه الدورة، قم بتصميم مشروع رئيسي وإنشاءه ومشاركته مع الأصدقاء والعائلة.
           description_short: تعلم جميع المفاهيم في المبادئ الأساسية لعلم الحاسوب وأنشئ قصتك أو لعبتك أو فنونك الخاصة.
           description_audience: 'تتراوح الأعمار بين: 9-13'
         csp-post-survey-2021:
@@ -3743,6 +3768,10 @@ ar:
               display_name: محتوى
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: البدء
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3777,8 +3806,10 @@ ar:
               display_name: المتغيرات
             end_of_course_project:
               display_name: مشروع نهاية الدورة التدريبية.
+          title: الدورة "و" (2022)
           description_audience: 'تتراوح الأعمار بين: 9-13'
           description_short: تعلم جميع المفاهيم في المبادئ الأساسية لعلم الحاسوب وأنشئ قصتك أو لعبتك أو فنونك الخاصة.
+          student_description: تعلم استخدام أنواع مختلفة من الحلقات والأحداث والوظائف والعبارات الشرطية. تحقق من تقنيات حل المشكلات المختلفة وناقش التأثيرات المجتمعية للحوسبة والإنترنت. في الجزء الثاني من هذه الدورة، قم بتصميم مشروع رئيسي وإنشاءه ومشاركته مع الأصدقاء والعائلة.
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4053,5 +4084,231 @@ ar:
               display_name: مرحبًا
         dlp-csp-mod1-2022:
           title: وحدة 1 التعلم العميق في مبادئ علوم الكمبيوتر
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ملحق التصحيح غير المتزامن
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: العمل غير المتزامن للوحدة 2
         soccer:
           name: كرة القدم
+          title: برمجة لعبة كرة القدم الخاصة بك
+          description_short: اصنع لعبة كرة قدم
+          description: اصنع لعبة كرة قدم
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: استبيان
+            lessonGroup-2:
+              display_name: محتوى
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-5:
+              display_name: استبيان
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: مختبر Java
+            lesson-6:
+              name: الحلقات
+          lesson_groups:
+            lessonGroup-2:
+              display_name: استبيان
+            lessonGroup-3:
+              display_name: محتوى
+            lessonGroup-5:
+              display_name: دروس بديلة
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: المتغيرات
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-4:
+              display_name: دروس بديلة
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: مصفوفات أحادية البعد (1D)
+            lesson-3:
+              name: للحلقات
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-4:
+              display_name: دروس بديلة
+        hello-world-space-2022:
+          title: 'مرحبا بالعالم: الفضاء'
+        hello-world-soccer-2022:
+          title: 'مرحبا بالعالم: كرة القدم'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            lessonGroup-3:
+              display_name: 'الفصل 2: نماذج التطبيق'
+          title: عملية التصميم
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'الفصل 1: تمثيل المعلومات'
+            lessonGroup-3:
+              display_name: 'الفصل 2: حل مشكلات البيانات'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            lessonGroup-3:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
+          title: الحوسبة المادية
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'الفصل 2: بناء نماذج أوليّة مادية'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: ما ذلك الصوت؟
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csp_unit1_2020:
+              display_name: "(قديم) الوحدة 1: معلومات رقمية"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'الوحدة 2: الانترنت'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'الوحدة 3: مقدمة في تصميم التطبيقات'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: البيانات
+            csp_loops:
+              display_name: الحلقات
+            csp_traversals:
+              display_name: الاجتيازات
+            csp_project:
+              display_name: مشروع
+            lessonGroup-5:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: القوائم
+            lessonGroup-2:
+              display_name: استبيان ما بعد الدورة التدريبية
+            lessonGroup-3:
+              display_name: الحلقات
+            lessonGroup-4:
+              display_name: الاجتيازات
+            lessonGroup-5:
+              display_name: مشروع
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: إعداد وإرجاع القيم
+            csp_libraries:
+              display_name: المكتبات
+            lessonGroup-3:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: إنشاء مهام الأداء
+            lessonGroup-3:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'الوحدة 9: البيانات'
+            lessonGroup-2:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'الوحدة 10: الأمان عبر الإنترنت والآثار العالمية'
+            lessonGroup-2:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp-post-survey-2023:
+          title: استطلاع رأي بعد انتهاء دورة مبادئ علم الحاسوب
+        csp-playground:
+          title: ملعب مبادئ علم الحاسوب
+          description_audience: كُتاب المقرر الدراسي
+          description_short: لإجراء تحديثات مرحلية للدروس أو المستويات بين إصدارات المقررات الدراسية
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'الفصل 2: بناء نماذج أوليّة مادية'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: المدخلات والمخرجات
+            lessonGroup-4:
+              display_name: 'الفصل 2: بناء نماذج أوليّة مادية'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: مقدمة عن مختبر التطبيقات
+            lessonGroup-3:
+              display_name: المدخلات والمخرجات

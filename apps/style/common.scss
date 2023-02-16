@@ -309,6 +309,10 @@ button.arrow:disabled {
   border: 1px solid #ddd;
 }
 
+#codeTextbox.has_banner {
+  top: $workspace-headers-height + 30;
+}
+
 html[dir="rtl"] .editor-column {
   right: 400px;
 }
@@ -388,6 +392,30 @@ html[dir="rtl"] .editor-column {
 
 .droplet-gutter-line.droplet_warning {
   background-position: 2px 2px;
+}
+
+html[dir="rtl"] {
+  // !Important is used to overwrite droplet.min styling for RTL languages support.
+  #codeTextbox {
+    .droplet-wrapper-div {
+      left: 0 !important;
+    }
+
+    .ace_editor {
+      left: 0 !important;
+    }
+
+    .droplet-palette-wrapper {
+      right: 0 !important;
+      left: unset !important;
+      z-index: 1;
+    }
+
+    .droplet-palette-header,
+    .droplet-palette-scroller {
+      border-left: 2px solid #ddd;
+    }
+  }
 }
 
 #visualizationResizeBar {
@@ -982,6 +1010,11 @@ html[dir="RTL"] .prompt-icon-cell {
       font-size: 12px;
     }
   }
+
+  &.is-running {
+    background-color: $lighter-purple;
+    color: $dark-charcoal;
+  }
 }
 
 $workspace-header-button-height: 24px;
@@ -1018,19 +1051,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
 #design-headers {
   height: $workspace-headers-height;
-  background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.readonly {
-  #headers,
-  #design-headers {
-    background-color: $charcoal;
-  }
 }
 
 #headers,
@@ -1129,6 +1154,9 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       padding-right: 0;
       padding-left: 8px;
     }
+  }
+  .show-toolbox-label {
+    margin-right: 20px;
   }
 }
 

@@ -1,20 +1,8 @@
 import _ from 'lodash';
 import xml from './xml';
-import CdoFieldVariable from './blockly/addons/cdoFieldVariable';
-import {BlocklyVersion} from '@cdo/apps/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
-
-// Used for custom field type ClampedNumber(,)
-// Captures two optional arguments from the type string
-// Allows:
-//   ClampedNumber(x,y)
-//   ClampedNumber( x , y )
-//   ClampedNumber(,y)
-//   ClampedNumber(x,)
-//   ClampedNumber(,)
-const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
 
 /**
  * Create the xml for a level's toolbox
@@ -358,7 +346,7 @@ exports.mathBlockXml = function(type, inputs, titles) {
 };
 
 /**
- * Generate xml for a functional defintion
+ * Generate xml for a functional definition
  * @param {string} name The name of the function
  * @param {string} outputType Function's output type
  * @param {Object<string, string>[]} argList Name and type for each arg
@@ -731,11 +719,6 @@ const STANDARD_INPUT_TYPES = {
   },
   [VARIABLE_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const FieldVariableClass =
-        Blockly.version === BlocklyVersion.CDO
-          ? Blockly.FieldVariable
-          : CdoFieldVariable;
-
       // Make sure the variable name gets declared at the top of the program
       block.getVars = function() {
         return {
@@ -771,7 +754,7 @@ const STANDARD_INPUT_TYPES = {
       // Add the variable field to the block
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(new FieldVariableClass(null), inputConfig.name);
+        .appendField(new Blockly.FieldVariable(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
       return Blockly.JavaScript.translateVarName(
@@ -781,11 +764,8 @@ const STANDARD_INPUT_TYPES = {
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const BlocklyField = Blockly.getFieldForInputType(inputConfig.type);
-      const field = new BlocklyField(
-        '',
-        getFieldInputChangeHandler(blockly, inputConfig.type)
-      );
+      const {type} = inputConfig;
+      const field = Blockly.cdoUtils.getField(type);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(field, inputConfig.name);
@@ -800,26 +780,6 @@ const STANDARD_INPUT_TYPES = {
     }
   }
 };
-
-/**
- * Given a type string for a field input, returns an appropriate change handler function
- * for that type, which customizes the input field and provides validation on blur.
- * @param {Blockly} blockly
- * @param {string} type
- * @returns {?function}
- */
-function getFieldInputChangeHandler(blockly, type) {
-  const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
-  if (clampedNumberMatch) {
-    const min = parseFloat(clampedNumberMatch[1]);
-    const max = parseFloat(clampedNumberMatch[2]);
-    return Blockly.FieldTextInput.clampedNumberValidator(min, max);
-  } else if ('Number' === type) {
-    return blockly.FieldTextInput.numberValidator;
-  } else {
-    return undefined;
-  }
-}
 
 const groupInputsByRow = function(inputs, inputTypes = STANDARD_INPUT_TYPES) {
   const inputRows = [];
@@ -955,6 +915,7 @@ exports.createJsWrapperBlockCreator = function(
   return (
     {
       color,
+      style,
       func,
       expression,
       orderPrecedence,
@@ -1057,10 +1018,17 @@ exports.createJsWrapperBlockCreator = function(
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function() {
-        if (color) {
+        // Styles should be used over hard-coded colors in Google Blockly blocks
+        if (style && this.setStyle) {
+          this.setStyle(style);
+        } else if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+          if (this.setStyle) {
+            this.setStyle('default');
+          } else {
+            Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+          }
         }
 
         if (returnType) {
@@ -1142,45 +1110,48 @@ exports.createJsWrapperBlockCreator = function(
           this.initMiniFlyout(miniToolboxXml);
         }
 
-        // Set block to shadow for preview field if needed
-        switch (this.type) {
-          case 'gamelab_clickedSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_spriteClicked' &&
-                root.getConnections_()[1] &&
-                root.getConnections_()[1].targetBlock()
-            );
-            break;
-          case 'gamelab_newSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_whenSpriteCreated' &&
-                root.getConnections_()[1] &&
-                root.getConnections_()[1].targetBlock()
-            );
-            break;
-          case 'gamelab_subjectSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_checkTouching' &&
-                root.getConnections_()[1] &&
-                root.getConnections_()[1].targetBlock()
-            );
-            break;
-          case 'gamelab_objectSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_checkTouching' &&
-                root.getConnections_()[2] &&
-                root.getConnections_()[2].targetBlock()
-            );
-            break;
-          default:
-            // Not a pointer block, so no block to shadow
-            break;
+        // These blocks should not be loaded into a Google Blockly level.
+        // In the event that they are, skip this so the page doesn't crash.
+        if (this.setBlockToShadow) {
+          // Set block to shadow for preview field if needed
+          switch (this.type) {
+            case 'gamelab_clickedSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_spriteClicked' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_newSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_whenSpriteCreated' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_subjectSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_checkTouching' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_objectSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_checkTouching' &&
+                  root.getConnections_()[2] &&
+                  root.getConnections_()[2].targetBlock()
+              );
+              break;
+            default:
+              // Not a pointer block, so no block to shadow
+              break;
+          }
         }
-
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
       }

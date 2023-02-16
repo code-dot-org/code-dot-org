@@ -32,17 +32,15 @@
     %thead
       %th ID
       %th Name
-      %th Group
-      %th Urban
       %th Contact
-      %th
+      %th Edit
+      %th Show
     %tbody
       - @regional_partners.each do |regional_partner|
         %tr
           %td= link_to regional_partner.id, regional_partner
           %td= regional_partner.name
-          %td= regional_partner.group
-          %td= regional_partner.urban ? 'Yes' : 'No'
           %td= regional_partner.contact_email_with_backup
           - if can? :update, regional_partner
             %td= link_to t('crud.edit'), edit_regional_partner_path(regional_partner)
+            %td= link_to t('crud.show'), @regional_partner

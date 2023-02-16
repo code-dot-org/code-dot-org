@@ -6,21 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only",
-          "dismissible": true
-        },
-        {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
           "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=5",
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "End of Unit Survey"
+          "buttonText": "End of Unit Survey",
+          "key": "fb75ffba-d42e-42ef-9764-e09ab685e140"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -35,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-11 16:19:04 UTC",
+    "serialized_at": "2022-10-24 17:53:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6226,6 +6219,18 @@
       }
     },
     {
+      "name": "Images and Pixels",
+      "url": "https://youtu.be/eTcPLcODrk0",
+      "key": "images_and_pixels",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "images_and_pixels"
+      }
+    },
+    {
       "name": "Java Quick Reference",
       "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
       "key": "java_quick_reference",
@@ -6493,6 +6498,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_5_guide"
+      }
+    },
+    {
+      "name": "Unit 5 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1m2H0g23S-c8HQ_M24nAKhH-DpyDlbeRu0AnIBqgx6G8",
+      "key": "unit_5_guide_exemplar_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_guide_exemplar_"
       }
     },
     {
@@ -6981,6 +6998,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "resource.key": "images_and_pixels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "u5l6_extra_practice"
       }
     },
@@ -7013,6 +7036,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_5_guide",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide_exemplar_",
         "script.name": "csa5-2022"
       }
     },

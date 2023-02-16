@@ -156,7 +156,7 @@ const styles = {
   container: {
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    borderWidth: 1,
+    borderWidth: 3,
     borderRadius: 5,
     padding: 5,
     marginBottom: 10,

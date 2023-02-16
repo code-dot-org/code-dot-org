@@ -24,9 +24,9 @@ def sync_down
 
     CROWDIN_PROJECTS.each do |name, options|
       puts "Downloading translations from #{name} project"
-      api_key = YAML.load_file(options[:identity_file])["api_key"]
+      api_token = YAML.load_file(options[:identity_file])["api_token"]
       project_identifier = YAML.load_file(options[:config_file])["project_identifier"]
-      project = Crowdin::Project.new(project_identifier, api_key)
+      project = Crowdin::Project.new(project_identifier, api_token)
       options = {
         etags_json: options[:etags_json],
         files_to_sync_out_json: options[:files_to_sync_out_json],
@@ -37,7 +37,7 @@ def sync_down
       # download strings not in the regular codeorg project to
       # a specific subdirectory within the locale directory
       case name.to_s
-      when "codeorg-markdown"
+      when "codeorg-markdown-testing", "codeorg-markdown"
         options[:locale_subdir] = "codeorg-markdown"
       when "hour-of-code"
         options[:locale_subdir] = "hourofcode"
@@ -45,9 +45,6 @@ def sync_down
 
       utils = Crowdin::LegacyUtils.new(project, options)
 
-      puts "Fetching list of changed files"
-      elapsed = with_elapsed {utils.fetch_changes}
-      puts "Changes fetched in #{elapsed}"
       puts "Downloading changed files"
       elapsed = with_elapsed {utils.download_changed_files}
       puts "Files downloaded in #{elapsed}"

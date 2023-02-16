@@ -1,0 +1,65 @@
+{
+  "ca-ES": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/app-lab": {
+          "display_name": "Laboratori d'aplicacions"
+        },
+        "csd-2022/applab-overview": {
+          "display_name": "Vista general"
+        },
+        "csd-2022/css-overview": {
+          "display_name": "Vista general"
+        },
+        "csd-2022/design-mode": {
+          "display_name": "Mode de disseny"
+        },
+        "csd-2022/for-loops": {
+          "display_name": "Bucles \"for\""
+        },
+        "csd-2022/functions": {
+          "display_name": "Funcions"
+        },
+        "csd-2022/game-lab": {
+          "display_name": "Laboratori de jocs"
+        },
+        "csd-2022/game-lab-overview": {
+          "display_name": "Vista general"
+        },
+        "csd-2022/html-overview": {
+          "display_name": "Vista general"
+        },
+        "csd-2022/javascript": {
+          "display_name": "JavaScript"
+        },
+        "csd-2022/javascript-overview": {
+          "display_name": "Vista general"
+        },
+        "csd-2022/lists": {
+          "display_name": "Llistes"
+        },
+        "csd-2022/maker-toolkit-overview": {
+          "display_name": "Vista general"
+        },
+        "csd-2022/other": {
+          "display_name": "Altres"
+        },
+        "csd-2022/other-overview": {
+          "display_name": "Vista general"
+        },
+        "csd-2022/patterns-overview": {
+          "display_name": "Vista general"
+        },
+        "csd-2022/sprite-properties": {
+          "display_name": "Propietats de l'sprite"
+        },
+        "csd-2022/variables": {
+          "display_name": "Variables"
+        },
+        "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+        }
+      }
+    }
+  }
+}

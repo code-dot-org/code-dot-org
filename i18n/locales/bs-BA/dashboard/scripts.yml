@@ -678,11 +678,14 @@ bs:
           lesson_groups:
             required:
               display_name: Pregled
+        dance-2019:
+          title: Plesna zabava
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
               display_name: Slijedeći Koraci
         dance-extras-2019:
+          title: Nastavite plesati
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
           student_description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         csp4-preview:
@@ -1131,3 +1134,41 @@ bs:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
         soccer:
           name: nogomet
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Petlje
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Varijable
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Od-Do-Za Petlje
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Jedinica 2: internet'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Petlje
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
+              display_name: Petlje

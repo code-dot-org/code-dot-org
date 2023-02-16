@@ -38,23 +38,17 @@ nav: how_to_nav
     
     * * *
     
-    ## Mag-host ng Gabi ng Family Code kasama ang Hour of Code at anyayahan ang mga magulang na lumahok
+    ## Example plan for a school assembly or event
     
-    Isaalang-alang ang pagho-host ng isang event sa gabi ng K-5 at anyayahan ang mga magulang na sumali sa kanilang mga mag-aaral sa isang oras ng computer science. Isa itong mahusay na paraan upang isali ang mas malaking komunidad at hikayatin ang suporta ng magulang sa computer science sa paaralan mo. Gumawa ng all-in-one na event kit ang aming mga partner sa Gabi ng Family Code na may checklist sa pagpaplano, script ng presenter, mga email ng imbitasyon, mga poster, powerpoint, at higit pa upang patakbuhin ang sarili mong event. [I-click dito upang ma-download ang Kit ng Event](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+    **Event:** School-wide Computer Science Education Week kick-off assembly
     
-    * * *
+    **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
     
-    ## Halimbawang plano sa isang pagtitipon o event sa paaralan
+    **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
     
-    **Event:** Ang kick-off na pagtitipon sa Linggo ng Edukasyon sa Computer Science sa buong paaralan
+    **Location:** School assembly hall (e.g. theater, gym, cafeteria)
     
-    **Petsa:**{{ campaign_date/start_short }} (simula ng Linggo ng Edukasyon ng Computer Science)
-    
-    **Oras:** Sa araw ng klase. Mas mabuti sa kalagitnaan ng umaga. Humigit-kumulang na 1 oras.
-    
-    **Lokasyon:** Sa assembly hall ng paaralan (hal. theater, gym, cafeteria)
-    
-    ## Takbo ng Palabas
+    ## Run of Show
     
     | Oras                   | Aksiyon                                                                                                                                                                                             |
     | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

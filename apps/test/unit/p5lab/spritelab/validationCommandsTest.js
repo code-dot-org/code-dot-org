@@ -3,6 +3,7 @@ import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/validationCommands';
 import {commands as worldCommands} from '@cdo/apps/p5lab/spritelab/commands/worldCommands';
+import {MAX_NUM_TEXTS} from '@cdo/apps/p5lab/spritelab/constants';
 
 describe('Validation Commands', () => {
   let coreLibrary;
@@ -47,6 +48,20 @@ describe('Validation Commands', () => {
       'second',
       'third'
     ]);
+  });
+
+  it(`prints last ${MAX_NUM_TEXTS} statements when there are more than ${MAX_NUM_TEXTS} print commands`, () => {
+    let expectedArray = [];
+    for (let i = 1; i <= MAX_NUM_TEXTS + 100; i++) {
+      worldCommands.printText.apply(coreLibrary, [i]);
+      if (i > 100) {
+        expectedArray.push(i);
+      }
+      // expectedArray contains numbers from 111 to 1100 (last MAX_NUM_TEXTS numbers)
+    }
+    expect(commands.getPrintLog.apply(coreLibrary)).to.deep.equal(
+      expectedArray
+    );
   });
 
   it('getPromptVars', () => {

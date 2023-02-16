@@ -2,39 +2,37 @@
 title: Parteneri
 ---
 
-Hour of Code este condus de catre comitetul Hour of code si Computer Science Education Week.
+Hour of Code este condusă de Comitetul de Evaluare Hour of Code
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Acest comitet ghideaza strategia pentru campania Hour of Code.
+Comitetul de Evaluare []({{ urls/review_committee }}) este alcătuit din 12 actuali și foști educatori din clasele K-12, care evaluează și recomandă activități folosind o rubrică stabilită de un comitet consultativ. Acești educatori analizează activitățile conduse de elevi și planurile de lecții conduse de profesori trimise de sute de parteneri de activități, evaluând valoarea educațională a activităților, capacitatea de a implica elevii și potențialul lor de a atrage diverse grupuri de elevi.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. Aceste cadre didactice revizuiesc activitățile conduse de elevi şi planurile de lecţie conduse de profesor transmise de sute de parteneri, evaluând valoarea educativă a activităților, capacitatea de a capta cursanţii şi atractivitatea potenţială către diverse tipuri de studenţi.
+Munca și dedicarea comitetului au contribuit la succesul Hour of Code și la viziunea sa de a oferi o introducere în informatică pentru fiecare elev.
 
-Munca şi dedicarea ambelor comitete au contribuit la succesul Hour of Code şi la viziunea sa de a oferi o introducere în informatică pentru fiecare student.
-
-# Major Partners and Corporate Supporters
+# Parteneri Importanți și Susținători Corporatiști
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Parteneri Internaționali
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Parteneri Curriculari și Tutoriali
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Parteneri și Instrumente de Infrastructură
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Parteneri Suplimentari
 
 {{ partners/additional_partners }}
 

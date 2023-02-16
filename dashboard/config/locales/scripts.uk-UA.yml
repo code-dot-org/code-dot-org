@@ -1839,8 +1839,11 @@ uk:
             required:
               display_name: Огляд
         dance-2019:
-          description_short: За участі Katy Perry, Shawn Mendes, Panic! At The Disco,
-            Lil Nas X, Jonas Brothers, Nicki Minaj, і 34 інших!
+          title: Танцювальна вечірка
+          description_short: Створіть танцювальну вечірку та поділіться нею з друзями.
+            Ви можете використовувати треки Бейонсе, Гаррі Стайлза, Ліззо, Ліл Нас
+            Ікс, Селени Гомес, музику з диснеївського мультфільму «Енканто» та багато
+            іншого!
         k5-onlinepd-2019:
           title: Викладання основ інформатики
           description: Дізнайтеся, як викладати інформатику за допомогою безкоштовного
@@ -1858,6 +1861,7 @@ uk:
             онлайнового курсу основ інформатики від Code.org, який можна проходити
             у довільному темпі!
         dance-extras-2019:
+          title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
           student_description: Рухайся далі однієї години з розширеними проектними
             ідеями.
@@ -2790,6 +2794,8 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        ai-ethics-2021:
+          description_audience: Класи 6-12
         explore-data-1-2021:
           title: Візуалізація даних
         csa6-exemplars:
@@ -3000,6 +3006,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Починаємо
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3049,6 +3059,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Вступ до спрайтів
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3121,5 +3135,181 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Ласкаво просимо
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Розширення для асинхронного налагодження
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Модуль 2 Асинхронна робота
         soccer:
           name: футбол
+          title: Напишіть код власної футбольної гри
+          description_short: Створіть футбольну гру
+          description: Створіть футбольну гру
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Опитування
+            lessonGroup-2:
+              display_name: Зміст
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+            lessonGroup-5:
+              display_name: Опитування
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Цикли
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування
+            lessonGroup-3:
+              display_name: Зміст
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Змінні
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Цикли For
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        hello-world-space-2022:
+          title: 'Привіт Світ: Космос'
+        hello-world-soccer-2022:
+          title: 'Привіт Світ: Футбол'
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипування додатків'
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представлення інформації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Зображення та анімації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова ігор'
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Що це за звук?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp_unit1_2020:
+              display_name: 'Розділ 1: Цифрова інформація'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Розділ 2: Інтернет'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: Функції
+            csp_project:
+              display_name: Проект
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Дані
+            csp_loops:
+              display_name: Цикли
+            csp_traversals:
+              display_name: Переходи
+            csp_project:
+              display_name: Проект
+            lessonGroup-5:
+              display_name: Опитування після закінчення курсу
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Списки
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+            lessonGroup-3:
+              display_name: Цикли
+            lessonGroup-4:
+              display_name: Переходи
+            lessonGroup-5:
+              display_name: Проект
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            csp_libraries:
+              display_name: Бібліотеки
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Розділ 9: Дані'
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'

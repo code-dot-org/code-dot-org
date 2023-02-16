@@ -65,15 +65,7 @@ function initPage() {
   if (scriptData.announcements) {
     registerReducers({announcements: announcementsReducer});
     scriptData.announcements.forEach(announcement =>
-      store.dispatch(
-        addAnnouncement(
-          announcement.notice,
-          announcement.details,
-          announcement.link,
-          announcement.type,
-          announcement.visibility
-        )
-      )
+      store.dispatch(addAnnouncement(announcement))
     );
   }
 
@@ -126,6 +118,7 @@ function initPage() {
         versions={scriptData.course_versions}
         courseName={scriptData.course_name}
         showAssignButton={scriptData.show_assign_button}
+        isProfessionalLearningCourse={scriptData.isPlCourse}
         userId={scriptData.user_id}
         assignedSectionId={scriptData.assigned_section_id}
         showCalendar={scriptData.showCalendar}
@@ -139,6 +132,7 @@ function initPage() {
         }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
+        publishedState={scriptData.publishedState}
       />
     </Provider>,
     mountPoint

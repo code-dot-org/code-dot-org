@@ -378,6 +378,7 @@ et:
     no_primary_course: "Proovige Code Studio kursust"
     choose_next_course: "Proovige Code Studio kursuseid. Selleks valige üks altpoolt"
     print_certificate: "Prindi tunnistus"
+  certificate_hour_of_code: "KoodiTund"
   move_students:
     new_section_dne: "Vabandame, kuid seda sektsiooni ei ole olemas %{new_section_code} Palun lisa teine sektsiooni kood."
     section_code_cant_be_current_section: "Käesolev sektsioon ei saa olla sama kui uus sektsioon."
@@ -478,23 +479,17 @@ et:
       body_short: "Kujunda rakendus, programmeeri see plokkide või JavaScriptiga, et rakendus toimiks. Seejärel jaga oma rakendust mõne sekundiga."
       audience: 'Vanus 13+'
       cta: 'Õpi kuidas'
-    dance:
-      title: 'Tantsuõhtu'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Tantsuõhtu'
-    hoc:
-      title: 'Klassikaline labürint'
-      body: 'Proovige arvutiteaduse alused. Miljonid on proovinud.'
+    dance:
+      title: 'Tantsuõhtu'
     flappy:
       title: 'Flappy kood'
       body: 'Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi meie Flappy Code õpetusvideot!'
-    20-hour:
-      title: 'Kiirendatud kursus'
-      body: 'See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!'
-      body_short: 'Õppige arvutiteaduse põhitõed kiirendatud versioonis kursustel 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Proovi meie uut KoodiTunni beta õpetusvideot'
-      try_frozen: 'Näitleja Anna ja Elsaga, filmist "Lumekuninganna ja Igavene talv"'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galerii"
       body: "Vaata meie kasutajate poolt tehtud galeriid, kus on äpid ja pildid tegelaskujudest"
@@ -502,14 +497,15 @@ et:
       title: "Game Lab"
       audience: "Vanus 13+"
       cta: "Õpi kuidas"
-    weblab:
-      title: "Web Lab (beta)"
-      audience: "Vanus 13+"
-      cta: "Õpi kuidas"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hero:
+      title: "Minecraft"
+      body: "Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga."
+    hoc:
+      title: 'Klassikaline labürint'
+      body: 'Proovige arvutiteaduse alused. Miljonid on proovinud.'
+    hoc2014:
+      try_new_tutorial: 'Proovi meie uut KoodiTunni beta õpetusvideot'
+      try_frozen: 'Näitleja Anna ja Elsaga, filmist "Lumekuninganna ja Igavene talv"'
     infinity:
       title: "Lõpmatu Play Lab"
       body: "Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad Disney Infinity tegelased."
@@ -519,22 +515,27 @@ et:
     minecraft2016:
       title: "Minecraft"
       body: "Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga."
+    starwars:
+      title: "Star Wars"
+    weblab:
+      title: "Web Lab (beta)"
+      audience: "Vanus 13+"
+      cta: "Õpi kuidas"
+    widgets:
+      title: "Vidinad"
+      audience: "Vanuses 14 +"
+      cta: "Õpi kuidas"
+    unplugged_conditionals:
+      title: "Tingimuslaused"
     unplugged:
       title: "Seadmeteta tunnid"
       audience: "Vanusele 4+"
       body: "Oleme kokku seadnud nimekirja seadmeteta tundidest, mida saad oma klassis läbi viia. Nüüd saad õpetada arvutiteaduste põhialuseid ka siis kui sinu klassis ei ole arvuteid! Proovi neid tunnikavasid kas eraldiseisva kursusena või lisaks teistele arvutiõpetuse tundidele."
       body_short: "Kui sul ei ole arvuteid, proovi neid tunnikavasid seadmeteta tunni läbiviimiseks oma klassis."
-    unplugged_conditionals:
-      title: "Tingimuslaused"
-    widgets:
-      title: "Vidinad"
-      audience: "Vanuses 14 +"
-      cta: "Õpi kuidas"
+    20-hour:
+      title: 'Kiirendatud kursus'
+      body: 'See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!'
+      body_short: 'Õppige arvutiteaduse põhitõed kiirendatud versioonis kursustel 2-4.'
   landing:
     report_bug: "Raporteeri veast"
     support: "Abi saamine"
@@ -798,3 +799,5 @@ et:
     accept: 'Olen nõus'
   page_not_found_title: "Lehte ei leitud"
   copy: 'Kopeeri'
+  pixelation:
+    binary: "Binaarne"

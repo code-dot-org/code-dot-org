@@ -14,6 +14,11 @@ import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
+const CANCELLED_EVENT = 'Section Setup Cancelled';
+const SELECT_LOGIN_TYPE = 'Login Type Selection';
 
 /**
  * UI for selecting the login type of a class section:
@@ -31,14 +36,37 @@ class LoginTypePicker extends Component {
     providers: PropTypes.arrayOf(PropTypes.string)
   };
 
+  reportLoginTypeSelection = provider => {
+    analyticsReporter.sendEvent(LOGIN_TYPE_SELECTED_EVENT, {
+      loginType: provider
+    });
+  };
+
+  recordSectionSetupExitEvent = eventName => {
+    analyticsReporter.sendEvent(eventName, {
+      source: SELECT_LOGIN_TYPE
+    });
+  };
+
   openImportDialog = provider => {
+    this.reportLoginTypeSelection(provider);
     this.props.setRosterProvider(provider);
     this.props.handleCancel(); // close this dialog
     this.props.handleImportOpen(); // open the roster dialog
   };
 
+  onLoginTypeSelect = provider => {
+    this.reportLoginTypeSelection(provider);
+    this.props.setLoginType(provider);
+  };
+
+  cancel = () => {
+    this.recordSectionSetupExitEvent(CANCELLED_EVENT);
+    this.props.handleCancel();
+  };
+
   render() {
-    const {title, providers, setLoginType, handleCancel, disabled} = this.props;
+    const {title, providers, disabled} = this.props;
     const withGoogle =
       providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
@@ -95,9 +123,9 @@ class LoginTypePicker extends Component {
               <MicrosoftClassroomCard onClick={this.openImportDialog} />
             )}
             {withClever && <CleverCard onClick={this.openImportDialog} />}
-            <PictureLoginCard onClick={setLoginType} />
-            <WordLoginCard onClick={setLoginType} />
-            <EmailLoginCard onClick={setLoginType} />
+            <PictureLoginCard onClick={this.onLoginTypeSelect} />
+            <WordLoginCard onClick={this.onLoginTypeSelect} />
+            <EmailLoginCard onClick={this.onLoginTypeSelect} />
           </CardContainer>
           {!hasThirdParty && (
             <div>
@@ -118,8 +146,7 @@ class LoginTypePicker extends Component {
             </a>
           </div>
           <Button
-            __useDeprecatedTag
-            onClick={handleCancel}
+            onClick={this.cancel}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}

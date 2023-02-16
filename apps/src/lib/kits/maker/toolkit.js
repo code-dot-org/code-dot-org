@@ -22,9 +22,11 @@ import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
 import project from '../../../code-studio/initApp/project';
 import {MB_API} from './boards/microBit/MicroBitConstants';
-import experiments from '@cdo/apps/util/experiments';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
-import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {
+  WEB_SERIAL_FILTERS,
+  shouldUseWebSerial
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
@@ -162,34 +164,29 @@ function confirmSupportedBrowser() {
  * @returns {Promise.<MakerBoard>}
  */
 function getBoard() {
+  const boardConstructor =
+    project.getMakerAPIs() === MB_API ? MicroBitBoard : CircuitPlaygroundBoard;
+
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
-  } else {
-    if (project.getMakerAPIs() === MB_API) {
-      return findPortWithViableDevice().then(port => new MicroBitBoard(port));
-    } else {
-      if (experiments.isEnabled('webserial')) {
-        return navigator.serial.getPorts().then(ports => {
-          // No previously connected port. Query user to select port.
-          if (!ports.length) {
-            return navigator.serial
-              .requestPort({filters: WEB_SERIAL_FILTERS})
-              .then(port => {
-                let wrappedPort = new WebSerialPortWrapper(port);
-                return new CircuitPlaygroundBoard(wrappedPort);
-              });
-          } else {
-            let port = ports[0];
+  } else if (shouldUseWebSerial()) {
+    return navigator.serial.getPorts().then(ports => {
+      // No previously connected port. Query user to select port.
+      if (!ports.length) {
+        return navigator.serial
+          .requestPort({filters: WEB_SERIAL_FILTERS})
+          .then(port => {
             let wrappedPort = new WebSerialPortWrapper(port);
-            return new CircuitPlaygroundBoard(wrappedPort);
-          }
-        });
+            return new boardConstructor(wrappedPort);
+          });
       } else {
-        return findPortWithViableDevice().then(
-          port => new CircuitPlaygroundBoard(port)
-        );
+        let port = ports[0];
+        let wrappedPort = new WebSerialPortWrapper(port);
+        return new boardConstructor(wrappedPort);
       }
-    }
+    });
+  } else {
+    return findPortWithViableDevice().then(port => new boardConstructor(port));
   }
 }
 

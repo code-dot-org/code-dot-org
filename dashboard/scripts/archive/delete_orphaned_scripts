@@ -3,12 +3,12 @@
 
 require_relative '../../config/environment'
 
-Script.transaction do # throw this all in a transaction so we roll it back if something unexpected happens
+Unit.transaction do # throw this all in a transaction so we roll it back if something unexpected happens
   file_scripts = Dir.glob('config/scripts/**/*.script').sort.flatten.map do |script|
     File.basename(script, '.script')
   end.map(&:downcase)
 
-  orphans = Script.all.select do |script|
+  orphans = Unit.all.select do |script|
     !file_scripts.include?(script.name.downcase)
   end
 

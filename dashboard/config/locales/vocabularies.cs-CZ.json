@@ -20,10 +20,6 @@
           "word": "Ladění",
           "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
-        "program/minecraft/unversioned": {
-          "word": "Program ",
-          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
-        },
         "event/minecraft/unversioned": {
           "word": "Událost",
           "definition": "Akce, která způsobí, že se něco stane."
@@ -32,6 +28,10 @@
           "word": "Cyklus",
           "definition": "Akce opakovaná stále dokola."
         },
+        "program/minecraft/unversioned": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
         "code/hero/unversioned": {
           "definition": " psát kód, neboli instrukce pro počítač."
         },
@@ -39,13 +39,13 @@
           "word": "Ladění",
           "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
         },
-        "program/hero/unversioned": {
-          "word": "Program ",
-          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
-        },
         "function/hero/unversioned": {
           "word": "Funkce",
           "definition": "Kus kódu, který můžete kdykoli snadno zavolat a používat opakovaně."
+        },
+        "program/hero/unversioned": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "code/poem-art/2021": {
           "word": "Kód",
@@ -135,6 +135,9 @@
           "word": "Program ",
           "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
+        "code/dance/unversioned": {
+          "definition": " psát kód, neboli instrukce pro počítač."
+        },
         "event/dance/unversioned": {
           "word": "Událost",
           "definition": "Akce, která způsobí, že se něco stane."
@@ -143,19 +146,8 @@
           "word": "Program ",
           "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
-        "code/dance/unversioned": {
-          "definition": " psát kód, neboli instrukce pro počítač."
-        },
         "code/aquatic/unversioned": {
           "definition": " psát kód, neboli instrukce pro počítač."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Ladění",
-          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
-        },
-        "program/aquatic/unversioned": {
-          "word": "Program ",
-          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "condition/aquatic/unversioned": {
           "word": "Podmínka",
@@ -165,9 +157,17 @@
           "word": "Podmínky",
           "definition": "Příkazy, které se spustí pouze při splnění určitých podmínek."
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
         "loops/aquatic/unversioned": {
           "word": "Cykly",
           "definition": "Akce opakovaná stále dokola."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "Caesarova šifra ",
@@ -249,10 +249,6 @@
           "word": "Modely a simulace",
           "definition": "program, který replikuje nebo napodobuje klíčové vlastnosti a fungování událostí v reálném světě s cílem prozkoumat jeho chování a přitom se vyhnout nákladům, časovým nárokům nebo škodám v případě spuštění experimentu v reálném světě."
         },
-        "event/sports/unversioned": {
-          "word": "Událost",
-          "definition": "Akce, která způsobí, že se něco stane."
-        },
         "code/sports/unversioned": {
           "word": "Kód",
           "definition": "(v) psát kód nebo pokyny pro počítač."
@@ -260,6 +256,10 @@
         "debugging/sports/unversioned": {
           "word": "Ladění",
           "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "event/sports/unversioned": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "program/sports/unversioned": {
           "word": "Program ",
@@ -276,16 +276,16 @@
           "word": "Program ",
           "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
         },
-        "event/basketball/unversioned": {
-          "word": "Událost",
-          "definition": "Akce, která způsobí, že se něco stane."
-        },
         "code/basketball/unversioned": {
           "definition": " psát kód, neboli instrukce pro počítač."
         },
         "debugging/basketball/unversioned": {
           "word": "Ladění",
           "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "event/basketball/unversioned": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
         },
         "program/basketball/unversioned": {
           "word": "Program ",
@@ -316,6 +316,515 @@
         "machine_learning/oceans/unversioned": {
           "word": "Strojové učení",
           "definition": "Jak počítače rozpoznávají vzory a dělají rozhodnutí, aniž by byly konkrétně naprogramovány"
+        },
+        "algorithm/coursed/2022": {
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
+        },
+        "program/coursed/2022": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "bug/coursed/2022": {
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
+        },
+        "debugging/coursed/2022": {
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "loop/coursed/2022": {
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
+        },
+        "programming/coursed/2022": {
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
+        },
+        "frustrated/coursed/2022": {
+          "word": "Znechucený",
+          "definition": "Cítíte se naštvaní nebo rozzlobení, protože něco není podle vašich představ."
+        },
+        "persistence/coursed/2022": {
+          "word": "Perzistence",
+          "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
+        },
+        "event/coursed/2022": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "code/coursed/2022": {
+          "definition": " psát kód, neboli instrukce pro počítač."
+        },
+        "repeat/coursed/2022": {
+          "word": "Opakovat",
+          "definition": "Znovu něco udělat."
+        },
+        "command/coursed/2022": {
+          "word": "Příkaz",
+          "definition": "Instrukce pro počítač. Mnoho příkazů dohromady tvoří algoritmy a počítačové programy."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Podmínky",
+          "definition": "Příkazy, které se spustí pouze při splnění určitých podmínek."
+        },
+        "pseudocode/coursed/2022": {
+          "word": "pseudokód",
+          "definition": "Srozumitelný popis kroků algoritmu"
+        },
+        "condition/coursed/2022": {
+          "word": "Podmínka",
+          "definition": "Nějaká podmínka, jejíž pravdivost program kontroluje, než povolí určitou akci."
+        },
+        "while_loop/coursed/2022": {
+          "word": "Cyklus Zatím",
+          "definition": "Cyklus, který se opakuje, dokud je podmínka pravdivá."
+        },
+        "until/coursed/2022": {
+          "word": "Do",
+          "definition": "Příkaz, který vám říká, abyste něco udělali, jen do okamžiku, kdy se něco stane pravdou."
+        },
+        "sprite/coursef/2022": {
+          "word": "Sprite",
+          "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
+        },
+        "user/coursef/2022": {
+          "word": "Uživatel",
+          "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
+        },
+        "behavior/coursef/2022": {
+          "word": "Chování"
+        },
+        "program/coursef/2022": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "event/coursef/2022": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "variable/coursef/2022": {
+          "word": "Proměnná",
+          "definition": "Popisek informace použité v programu."
+        },
+        "prompt/coursef/2022": {
+          "word": "Výzva",
+          "definition": "Zpráva na obrazovce počítače, která čeká na vstup od uživatele."
+        },
+        "input/coursef/2022": {
+          "word": "Vstup",
+          "definition": "Informace, které počítače získávají od uživatelů."
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Modely a simulace",
+          "definition": "program, který replikuje nebo napodobuje klíčové vlastnosti a fungování událostí v reálném světě s cílem prozkoumat jeho chování a přitom se vyhnout nákladům, časovým nárokům nebo škodám v případě spuštění experimentu v reálném světě."
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Strojové učení",
+          "definition": "Jak počítače rozpoznávají vzory a dělají rozhodnutí, aniž by byly konkrétně naprogramovány"
+        },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "zkratka pro Domain Name System, tento systém překládá názvy domén (např. example.com) na IP adresy (např. 93.184.216.34)."
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "DSL/Kabel",
+          "definition": "Způsob odeslání informací pomocí telefonních nebo televizních kabelů."
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "Kabel s optickým vláknem",
+          "definition": "Připojení, které k přenosu informací využívá světlo"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet",
+          "definition": "Skupina vzájemně propojených počítačů a serverů."
+        },
+        "ip_address/coursef/2022": {
+          "word": "IP adresa",
+          "definition": "Číslo přidělené ke každé věci připojené k Internetu."
+        },
+        "packets/coursef/2022": {
+          "word": "Pakety",
+          "definition": "Malé kousky informací, které byly pečlivě zformovány z větších kousků informací."
+        },
+        "servers/coursef/2022": {
+          "word": "Servery",
+          "definition": "Počítače, které existují pouze proto, aby poskytovaly věci ostatním."
+        },
+        "url/coursef/2022": {
+          "word": "URL",
+          "definition": "Snadno zapamatovatelná adresa pro vyvolání webové stránky (například www.code.org)."
+        },
+        "wi_fi/coursef/2022": {
+          "word": "Wi-Fi",
+          "definition": "Bezdrátový způsob přenosu informací pomocí rádiových vln."
+        },
+        "define/coursef/2022": {
+          "word": "Definuj",
+          "definition": "Zjistěte podrobnosti problémů, které se snažíte vyřešit."
+        },
+        "prepare/coursef/2022": {
+          "word": "Připravit",
+          "definition": "Vyhledávejte, plánujte a získávejte materiály pro aktivitu, kterou se chystáte provést."
+        },
+        "reflect/coursef/2022": {
+          "word": "Zamyslet se",
+          "definition": "Pečlivě se nad něčím zamyslete se záměrem vylepšit výsledek v budoucnu."
+        },
+        "try/coursef/2022": {
+          "word": "Zkusit",
+          "definition": "Pokus něco udělat"
+        },
+        "behavior/coursee/2022": {
+          "word": "Chování",
+          "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
+        },
+        "sprite/coursee/2022": {
+          "word": "Sprite",
+          "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
+        },
+        "loop/coursee/2022": {
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
+        },
+        "repeat/coursee/2022": {
+          "word": "Opakovat",
+          "definition": "Znovu něco udělat."
+        },
+        "function/coursee/2022": {
+          "word": "Funkce"
+        },
+        "condition/coursee/2022": {
+          "word": "Podmínka"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Podmínky",
+          "definition": "Příkazy, které se spustí pouze při splnění určitých podmínek."
+        },
+        "while_loop/coursee/2022": {
+          "word": "Cyklus Zatím",
+          "definition": "Cyklus, který se opakuje, dokud je podmínka pravdivá."
+        },
+        "copyright/coursee/2022": {
+          "word": "Autorská práva",
+          "definition": "výhradní zákonné právo tisknout, publikovat, předvádět, filmovat nebo nahrávat literární, umělecký nebo hudební materiál a zmocňovat k témuž ostatní"
+        },
+        "define/coursee/2022": {
+          "word": "Definuj",
+          "definition": "Zjistěte podrobnosti problémů, které se snažíte vyřešit."
+        },
+        "prepare/coursee/2022": {
+          "word": "Připravit",
+          "definition": "Vyhledávejte, plánujte a získávejte materiály pro aktivitu, kterou se chystáte provést."
+        },
+        "reflect/coursee/2022": {
+          "word": "Zamyslet se",
+          "definition": "Pečlivě se nad něčím zamyslete se záměrem vylepšit výsledek v budoucnu."
+        },
+        "try/coursee/2022": {
+          "word": "Zkusit",
+          "definition": "Pokus něco udělat"
+        },
+        "algorithm/courseb/2022": {
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
+        },
+        "bug/courseb/2022": {
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
+        },
+        "debugging/courseb/2022": {
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "click/courseb/2022": {
+          "word": "Kliknout",
+          "definition": "Stiskněte tlačítko myši"
+        },
+        "double_click/courseb/2022": {
+          "word": "Dvojí kliknutí",
+          "definition": "Velmi rychle stiskněte tlačítko myši"
+        },
+        "drag/courseb/2022": {
+          "word": "Přetáhnout",
+          "definition": "Při přesouvání ukazatele myši na nové místo klikněte na tlačítko myši a podržte je."
+        },
+        "drop/courseb/2022": {
+          "word": "Roznožka",
+          "definition": "Uvolněním tlačítka myši „pustíte“ přetahovanou položku."
+        },
+        "program/courseb/2022": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "programming/courseb/2022": {
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
+        },
+        "persistence/courseb/2022": {
+          "word": "Perzistence",
+          "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
+        },
+        "loop/courseb/2022": {
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
+        },
+        "repeat/courseb/2022": {
+          "word": "Opakovat",
+          "definition": "Znovu něco udělat."
+        },
+        "event/courseb/2022": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "algorithm/express/2022": {
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
+        },
+        "bug/express/2022": {
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
+        },
+        "debugging/express/2022": {
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "sequencing/express/2022": {
+          "word": "Sekvence",
+          "definition": "Zadání povelů ve správném pořadí, aby je počítače mohly přečíst."
+        },
+        "program/express/2022": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "programming/express/2022": {
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
+        },
+        "behavior/express/2022": {
+          "word": "Chování",
+          "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
+        },
+        "sprite/express/2022": {
+          "word": "Sprite",
+          "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
+        },
+        "event/express/2022": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "code/express/2022": {
+          "definition": " psát kód nebo psát pokyny pro počítač."
+        },
+        "loop/express/2022": {
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
+        },
+        "repeat/express/2022": {
+          "word": "Opakovat",
+          "definition": "Znovu něco udělat."
+        },
+        "command/express/2022": {
+          "word": "Příkaz",
+          "definition": "Instrukce pro počítač. Mnoho příkazů dohromady tvoří algoritmy a počítačové programy."
+        },
+        "condition/express/2022": {
+          "word": "Podmínka",
+          "definition": "Nějaká podmínka, jejíž pravdivost program kontroluje, než povolí určitou akci."
+        },
+        "conditionals/express/2022": {
+          "word": "Podmínky",
+          "definition": "Příkazy, které se spustí pouze při splnění určitých podmínek."
+        },
+        "while_loop/express/2022": {
+          "word": "Cyklus Zatím",
+          "definition": "Cyklus, který se opakuje, dokud je podmínka pravdivá."
+        },
+        "until/express/2022": {
+          "word": "Do",
+          "definition": "Příkaz, který vám říká, abyste něco udělali, jen do okamžiku, kdy se něco stane pravdou."
+        },
+        "function/express/2022": {
+          "word": "Funkce",
+          "definition": "Kus kódu, který můžete kdykoli snadno zavolat a používat opakovaně."
+        },
+        "prompt/express/2022": {
+          "word": "výzva",
+          "definition": "Zpráva na obrazovce počítače, která čeká na vstup od uživatele."
+        },
+        "variable/express/2022": {
+          "word": "Proměnná",
+          "definition": "Popisek informace použité v programu."
+        },
+        "for_loop/express/2022": {
+          "word": "Pro cyklus",
+          "definition": "Cykly, které mají předem určený začátek, konec a přírůstek (krokový interval)."
+        },
+        "define/express/2022": {
+          "word": "Definuj",
+          "definition": "Zjistěte podrobnosti problémů, které se snažíte vyřešit."
+        },
+        "prepare/express/2022": {
+          "word": "Připravit",
+          "definition": "Vyhledávejte, plánujte a získávejte materiály pro aktivitu, kterou se chystáte provést."
+        },
+        "reflect/express/2022": {
+          "word": "Zamyslet se",
+          "definition": "Pečlivě se nad něčím zamyslete se záměrem vylepšit výsledek v budoucnu."
+        },
+        "try/express/2022": {
+          "word": "Zkusit",
+          "definition": "Pokus něco udělat"
+        },
+        "click/pre-express/2022": {
+          "word": "Kliknout",
+          "definition": "Stiskněte tlačítko myši"
+        },
+        "double_click/pre-express/2022": {
+          "word": "Dvojí kliknutí",
+          "definition": "Velmi rychle stiskněte tlačítko myši"
+        },
+        "drag/pre-express/2022": {
+          "word": "Přetáhnout",
+          "definition": "Při přesouvání ukazatele myši na nové místo klikněte na tlačítko myši a podržte je."
+        },
+        "drop/pre-express/2022": {
+          "word": "Roznožka",
+          "definition": "Uvolněním tlačítka myši „pustíte“ přetahovanou položku."
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
+        },
+        "bug/pre-express/2022": {
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
+        },
+        "debugging/pre-express/2022": {
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "program/pre-express/2022": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "programming/pre-express/2022": {
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
+        },
+        "persistence/pre-express/2022": {
+          "word": "Perzistence",
+          "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
+        },
+        "loop/pre-express/2022": {
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
+        },
+        "repeat/pre-express/2022": {
+          "word": "Opakovat",
+          "definition": "Znovu něco udělat."
+        },
+        "event/pre-express/2022": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "algorithm/coursea/2022": {
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
+        },
+        "debugging/coursea/2022": {
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "program/coursea/2022": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "click/coursea/2022": {
+          "word": "Kliknout",
+          "definition": "Stiskněte tlačítko myši"
+        },
+        "double_click/coursea/2022": {
+          "word": "Dvojí kliknutí",
+          "definition": "Velmi rychle stiskněte tlačítko myši"
+        },
+        "drag/coursea/2022": {
+          "word": "Přetáhnout",
+          "definition": "Při přesouvání ukazatele myši na nové místo klikněte na tlačítko myši a podržte je."
+        },
+        "drop/coursea/2022": {
+          "word": "Roznožka",
+          "definition": "Uvolněním tlačítka myši „pustíte“ přetahovanou položku."
+        },
+        "bug/coursea/2022": {
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
+        },
+        "programming/coursea/2022": {
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
+        },
+        "loop/coursea/2022": {
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
+        },
+        "repeat/coursea/2022": {
+          "word": "Opakovat",
+          "definition": "Znovu něco udělat."
+        },
+        "event/coursea/2022": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
+        },
+        "bug/coursec/2022": {
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
+        },
+        "debugging/coursec/2022": {
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "program/coursec/2022": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "sequencing/coursec/2022": {
+          "word": "Sekvence",
+          "definition": "Zadání povelů ve správném pořadí, aby je počítače mohly přečíst."
+        },
+        "persistence/coursec/2022": {
+          "word": "Perzistence"
+        },
+        "programming/coursec/2022": {
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
+        },
+        "loop/coursec/2022": {
+          "word": "Cyklus",
+          "definition": "Akce opakovaná stále dokola."
+        },
+        "repeat/coursec/2022": {
+          "word": "Opakovat",
+          "definition": "Znovu něco udělat."
+        },
+        "event/coursec/2022": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "data/coursec/2022": {
+          "word": "Data"
+        },
+        "binary/coursec/2022": {
+          "word": "Binární",
+          "definition": "Způsob vyjádření informací pomocí pouze dvou možností."
         },
         "input/csd/2022": {
           "word": "Vstup"
@@ -394,6 +903,10 @@
           "word": "Uživatel",
           "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
         },
+        "algorithm/coursef/2021": {
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
+        },
         "behavior/coursef/2021": {
           "word": "Chování",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
@@ -401,10 +914,6 @@
         "program/coursef/2021": {
           "word": "Program ",
           "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algoritmus",
-          "definition": "Seznam kroků k dokončení úkolu."
         },
         "event/coursef/2021": {
           "word": "Událost",
@@ -446,9 +955,21 @@
           "word": "DNS",
           "definition": "zkratka pro Domain Name System, tento systém překládá názvy domén (např. example.com) na IP adresy (např. 93.184.216.34)."
         },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Kabel",
+          "definition": "Způsob odeslání informací pomocí telefonních nebo televizních kabelů."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Kabel s optickým vláknem",
+          "definition": "Připojení, které k přenosu informací využívá světlo"
+        },
         "internet/coursef/2021": {
           "word": "Internet",
           "definition": "Skupina vzájemně propojených počítačů a serverů."
+        },
+        "ip_address/coursef/2021": {
+          "word": "IP adresa",
+          "definition": "Číslo přidělené ke každé věci připojené k Internetu."
         },
         "packets/coursef/2021": {
           "word": "Pakety",
@@ -461,18 +982,6 @@
         "url/coursef/2021": {
           "word": "URL",
           "definition": "Snadno zapamatovatelná adresa pro vyvolání webové stránky (například www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Kabel",
-          "definition": "Způsob odeslání informací pomocí telefonních nebo televizních kabelů."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Kabel s optickým vláknem",
-          "definition": "Připojení, které k přenosu informací využívá světlo"
-        },
-        "ip_address/coursef/2021": {
-          "word": "IP adresa",
-          "definition": "Číslo přidělené ke každé věci připojené k Internetu."
         },
         "wi_fi/coursef/2021": {
           "word": "Wi-Fi",
@@ -510,6 +1019,10 @@
           "word": "Kliknout",
           "definition": "Stiskněte tlačítko myši"
         },
+        "double_click/courseb/2021": {
+          "word": "Dvojí kliknutí",
+          "definition": "Velmi rychle stiskněte tlačítko myši"
+        },
         "drag/courseb/2021": {
           "word": "Přetáhnout",
           "definition": "Při přesouvání ukazatele myši na nové místo klikněte na tlačítko myši a podržte je."
@@ -517,10 +1030,6 @@
         "drop/courseb/2021": {
           "word": "Roznožka",
           "definition": "Uvolněním tlačítka myši „pustíte“ přetahovanou položku."
-        },
-        "double_click/courseb/2021": {
-          "word": "Dvojí kliknutí",
-          "definition": "Velmi rychle stiskněte tlačítko myši"
         },
         "program/courseb/2021": {
           "word": "Program ",
@@ -562,6 +1071,10 @@
           "word": "Kliknout",
           "definition": "Stiskněte tlačítko myši"
         },
+        "double_click/coursea/2021": {
+          "word": "Dvojí kliknutí",
+          "definition": "Velmi rychle stiskněte tlačítko myši"
+        },
         "drag/coursea/2021": {
           "word": "Přetáhnout",
           "definition": "Při přesouvání ukazatele myši na nové místo klikněte na tlačítko myši a podržte je."
@@ -569,10 +1082,6 @@
         "drop/coursea/2021": {
           "word": "Roznožka",
           "definition": "Uvolněním tlačítka myši „pustíte“ přetahovanou položku."
-        },
-        "double_click/coursea/2021": {
-          "word": "Dvojí kliknutí",
-          "definition": "Velmi rychle stiskněte tlačítko myši"
         },
         "bug/coursea/2021": {
           "word": "Chyba",
@@ -772,13 +1281,13 @@
           "word": "Funkce",
           "definition": "Kus kódu, který můžete kdykoli snadno zavolat a používat opakovaně."
         },
-        "variable/express/2021": {
-          "word": "Proměnná",
-          "definition": "Popisek informace použité v programu."
-        },
         "prompt/express/2021": {
           "word": "výzva",
           "definition": "Zpráva na obrazovce počítače, která čeká na vstup od uživatele."
+        },
+        "variable/express/2021": {
+          "word": "Proměnná",
+          "definition": "Popisek informace použité v programu."
         },
         "for_loop/express/2021": {
           "word": "Pro cyklus",
@@ -804,6 +1313,10 @@
           "word": "Kliknout",
           "definition": "Stiskněte tlačítko myši"
         },
+        "double_click/pre-express/2021": {
+          "word": "Dvojí kliknutí",
+          "definition": "Velmi rychle stiskněte tlačítko myši"
+        },
         "drag/pre-express/2021": {
           "word": "Přetáhnout",
           "definition": "Při přesouvání ukazatele myši na nové místo klikněte na tlačítko myši a podržte je."
@@ -811,10 +1324,6 @@
         "drop/pre-express/2021": {
           "word": "Roznožka",
           "definition": "Uvolněním tlačítka myši „pustíte“ přetahovanou položku."
-        },
-        "double_click/pre-express/2021": {
-          "word": "Dvojí kliknutí",
-          "definition": "Velmi rychle stiskněte tlačítko myši"
         },
         "algorithm/pre-express/2021": {
           "word": "Algoritmus",
@@ -852,13 +1361,13 @@
           "word": "Událost",
           "definition": "Akce, která způsobí, že se něco stane."
         },
-        "behavior/coursee/2021": {
-          "word": "Chování",
-          "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
-        },
         "algorithm/coursee/2021": {
           "word": "algoritmus",
           "definition": "Seznam kroků k dokončení úkolu"
+        },
+        "behavior/coursee/2021": {
+          "word": "Chování",
+          "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "sprite/coursee/2021": {
           "word": "Sprite",

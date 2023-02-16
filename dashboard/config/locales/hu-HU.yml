@@ -322,6 +322,7 @@ hu:
   teacher_mailer:
     new_teacher_subject: Üdvözlünk a Code.org-on!
     delete_teacher_subject: 'Code.org figyelmeztetés: a fiókod törölve lett'
+    verified_teacher_subject: Code.org tanári azonosítás - sikeres
   section:
     your_section:
       one: 'A szakaszod:'
@@ -441,6 +442,7 @@ hu:
       about: Rólunk
       legal: Adatvédelem és jogi
       legal_privacy: Adatvédelmi Elvek
+      legal_cookie_notice: Sütikre vonatkozó figyelmeztetés
       legal_tos: Feltételek
     user:
       classroom: Tanári kezdőlap
@@ -664,6 +666,7 @@ hu:
     print_certificate: Oklevél nyomtatása
   certificate_sponsor_message: "%{sponsor_name} tette a nagylelkű ajándékot, hogy
     szponzorálja a tanulást."
+  certificate_hour_of_code: A kódolás órája
   move_students:
     new_section_dne: Sajnáljuk, de a %{new_section_code} kurzus nem létezik. Próbálkozz
       egy másik kódot beírni!
@@ -777,9 +780,8 @@ hu:
       gamelab_unsupported_tablet: A Game Lab legjobban asztali számítógépen vagy laptopon
         működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe
         ütközhet.
-      weblab_unsupported_locale_storage: A Web Lab használata Privát Böngészési módban
-        problémákat okozhat. Kérjük töltsd újra a projektet normál módban. Elnézést
-        a kellemetlenségért.
+      weblab_unsupported_locale_storage: A Weblabor használata magánböngészési módban
+        problémával járhat. Töltsd be újra a projektet normál módban. Elnézést a kellemetlenségért.
   slow_loading: Ez a megszokottnál tovább tart...
   try_reloading: Próbálja meg újratölteni az oldalt
   next_stage: Végeztél! Folytasd a következő leckével!
@@ -824,33 +826,18 @@ hu:
         oszd meg néhány másodperc alatt.
       audience: 13 éves kor felett
       cta: Ismerd meg, hogyan
-    dance:
-      title: Táncos buli
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Táncos buli
-    hello-world:
-      title: Helló világ
-      body: Válassz a négy szórakoztató téma közül, ha interaktív karaktereket akarsz
-        kódolni az általad létrehozott világban.
-    poem-art:
-      title: Versművészet
-      body: Fejezd ki magad! Készíts animált verseket kódok felhasználásával.
-    hoc:
-      title: Hagyományos labirintus
-      body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
+    dance:
+      title: Táncos buli
     flappy:
       title: Flappy kód
       body: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld
         ki a Flappy kód gyakorlatot!
-    20-hour:
-      title: Gyorsított tanfolyam
-      body: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap
-        fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára
-        jó időtöltés lehet.
-      body_short: Ismerd meg a számítógép-tudomány alapjait, a 2-4. gyorsított tanfolyamban.
-    hoc2014:
-      try_new_tutorial: Próbáld ki az új Kódolás Órája oktató anyagunk béta változatát
-      try_frozen: Művészkedj Annával és Elzával a Jégvarázsból
+    frozen:
+      title: Jégvarázs
     gallery:
       title: Galéria
       body: Nézd meg a felhasználóink által készített alkalmazásokat és a művészi
@@ -862,21 +849,24 @@ hu:
         és karakterekkel.
       audience: 13 éves kor felett
       cta: Ismerd meg, hogyan
+    hello-world:
+      title: Helló világ
+      body: Válassz a négy szórakoztató téma közül, ha interaktív karaktereket akarsz
+        kódolni az általad létrehozott világban.
+    hero:
+      title: Minecraft
+      body: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz
+        végig a Minecraft világán kódok segítségével.
     hoc-encryption:
       title: Egyszerű titkosítás
-      body: A diákok megtanulják hogyan kell titkosított üzeneteket létrehozni és
+      body: A diákok megtanulják, hogyan kell titkosított üzeneteket létrehozni és
         feltörni.
-    weblab:
-      title: Web Lab (béta)
-      body: A Web Lab egy programozási környezet, ahol egyszerű weboldalakat lehet
-        készíteni HTML és CSS segítségével. Tervezd meg weboldalaid, és oszd meg a
-        webhelyet akár pár másodperc alatt.
-      audience: 13 éves kor felett
-      cta: Ismerd meg, hogyan
-    frozen:
-      title: Jégvarázs
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Hagyományos labirintus
+      body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
+    hoc2014:
+      try_new_tutorial: Próbáld ki az új Kódolás Órája oktató anyagunk béta változatát
+      try_frozen: Művészkedj Annával és Elzával a Jégvarázsból
     infinity:
       title: Infinity játéklabor
       body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney
@@ -887,19 +877,37 @@ hu:
     minecraft2016:
       title: Minecraft
       body: Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz
-        végig a Minecraft világán kódok segítségével.
+    poem-art:
+      title: Versművészet
+      body: Fejezd ki magad! Készíts animált verseket kódok felhasználásával.
     sports:
       title: Sportok
       body: Készíts egy kosárlabda-játékot, vagy kombináld a különböző sportágakat.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Szöveg tömörítése
       body: Ebben a leckében a tanulók a szövegtömörítő widget segítségével tömörítik
         a szöveget, a mintákat szimbólumokkal helyettesítik.
+    weblab:
+      title: Web Lab (béta)
+      body: A Web Lab egy programozási környezet, ahol egyszerű weboldalakat lehet
+        készíteni HTML és CSS segítségével. Tervezd meg weboldalaid, és oszd meg a
+        webhelyet akár pár másodperc alatt.
+      audience: 13 éves kor felett
+      cta: Ismerd meg, hogyan
+    widgets:
+      title: Widgetek
+      body: Ezeknek a digitális eszközöknek a segítségével a diákok gyakorlatokon
+        keresztül fedezhetik fel a Számítástechnika alapjai kurzusunkban szereplő
+        fogalmakat. Használd a widgeteket önállóan, vagy készíts egy, egy fogalom
+        köré épült leckét az osztálynak.
+      audience: 14 éves kortól
+      cta: Ismerd meg, hogyan
+    unplugged_conditionals:
+      title: Feltételek
+      body: Ismerd meg az algoritmusokat és a feltételes utasításokat ebben a számítógép
+        nélküli tevékenységben egy kártyapakli segítségével.
     unplugged:
       title: Offline tanórák
       audience: 4 éven felettieknek
@@ -910,18 +918,12 @@ hu:
         használni.
       body_short: Ha nincs számítógéped, próbáld ki ezeket az offline tanórákat az
         osztályoddal!
-    unplugged_conditionals:
-      title: Feltételek
-      body: Ismerd meg az algoritmusokat és a feltételes utasításokat ebben a számítógép
-        nélküli tevékenységben egy kártyapakli segítségével.
-    widgets:
-      title: Widgetek
-      body: Ezeknek a digitális eszközöknek a segítségével a diákok gyakorlatokon
-        keresztül fedezhetik fel a Számítástechnika alapjai kurzusunkban szereplő
-        fogalmakat. Használd a widgeteket önállóan, vagy készíts egy, egy fogalom
-        köré épült leckét az osztálynak.
-      audience: 14 éves kortól
-      cta: Ismerd meg, hogyan
+    20-hour:
+      title: Gyorsított tanfolyam
+      body: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap
+        fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára
+        jó időtöltés lehet.
+      body_short: Ismerd meg a számítógép-tudomány alapjait, a 2-4. gyorsított tanfolyamban.
   landing:
     prerelease_tutorial: Ez a gyakorlat **béta** állapotban van.  A visszajelzések
       és a fejlesztések alapján átdolgozásra kerül.
@@ -949,12 +951,12 @@ hu:
     wrong_body: Köszönjük az elküldött válaszokat.
     correct_title: Köszönöm
     correct_body: Köszönjük az elküldött válaszokat.
-    hide_survey_last_answer: Ez a felmérés anoním.  Az összesített eredmények megtekinthetők
-      a tanári irányítópulton. Vedd figyelembe, hogy az eredmények csak akkor láthatók,
-      ha legalább öt diák beküldte a kérdőívet.
-    survey_submission_thankyou: Köszönjük, hogy beküldted ezt a kérdőívet! A felmérést
-      töröltük, így a válaszok névtelenek maradnak. Ne feledd, a tanár továbbra is
-      láthatja az egész osztály adott válaszokat, de nevek nélkül.
+    hide_survey_last_answer: Ez egy név nélküli felmérés.  Az összesített eredmények
+      megtekinthetők a tanári irányítópulton. Az eredmények csak akkor láthatók, ha
+      legalább öt diák beküldte a kérdőívet.
+    survey_submission_thankyou: Köszönjük, hogy beküldted ezt a kérdőívet! A kitöltött
+      kérdőívet töröltük, így a válaszok névtelenek maradnak. Ne feledd, hogy a tanárod
+      látja az egész osztály válaszait, de nevek nélkül.
   level_group-submittable:
     wrong_title: Köszönöm
     wrong_body: Köszönjük az elküldött válaszokat.
@@ -1463,3 +1465,12 @@ hu:
   unit_prefix: Egység %{n}
   code_org_logo_alt: Code.org kezdőlap
   teacher_feedback: Tanári visszajelzés
+  lesson_lock:
+    error:
+      no_updates: Nincs végrehajtandó frissítés
+      missing_params: Meg kell adni a felhasználó, a szint és az egység azonosítóját
+      cannot_view_locked_answers: Zárolt állapotban a válaszokat nem lehet megtekinteni
+      forbidden: A felhasználó nem frissítheti a tanuló zárolható állapotát
+  reset_predict_progress_button: Válasz törlése
+  pixelation:
+    binary: Bináris

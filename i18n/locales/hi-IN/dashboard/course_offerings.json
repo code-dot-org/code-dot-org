@@ -39,8 +39,6 @@
   "sports": "अपनी खुद की स्पोर्ट्स गेम का कूटलेखन करें",
   "text-compression": "टेक्स्ट कम्प्रेशन",
   "csa-self-paced-pl": "CSA पायलट शिक्षकों के लिए Code.org पर नेविगेट करना",
-  "counting-csc": "लॉरेल के साथ काउंटिंग",
-  "explore-data-1": "बॉक्स प्लॉट्स और हिस्टोग्राम को समझना",
   "outbreak-csc": "प्रकोप",
   "poem-art": "कविता आर्ट",
   "poetry-hoc3": "काव्य -hoc3",
@@ -53,5 +51,8 @@
   "step": "चरण",
   "coursee-ramp": "कोर्स e - रैम्प",
   "csa5-exemplars": "csa5-नमूना",
-  "soccer": "फ़ुटबॉल"
+  "soccer": "फ़ुटबॉल",
+  "hello-world-space": "हेलो वर्ल्ड: स्पेस",
+  "hello-world-soccer": "हेलो वर्ल्ड: सॉकर",
+  "playground": "प्लेग्राउंड"
 }

@@ -22,6 +22,9 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -54,6 +57,8 @@ class UnitOverview extends React.Component {
     showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
     completedLessonNumber: PropTypes.string,
+    isProfessionalLearningCourse: PropTypes.bool,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)),
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -69,6 +74,10 @@ class UnitOverview extends React.Component {
     const showRedirectDialog =
       props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
     this.state = {showRedirectDialog};
+
+    analyticsReporter.sendEvent(EVENTS.UNIT_OVERVIEW_PAGE_VISITED_EVENT, {
+      'unit name': props.scriptName
+    });
   }
 
   onCloseRedirectDialog = () => {
@@ -109,7 +118,9 @@ class UnitOverview extends React.Component {
       isCsdOrCsp,
       completedLessonNumber,
       courseOfferingId,
-      courseVersionId
+      courseVersionId,
+      isProfessionalLearningCourse,
+      publishedState
     } = this.props;
 
     const displayRedirectDialog =
@@ -179,6 +190,9 @@ class UnitOverview extends React.Component {
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
+            isProfessionalLearningCourse={isProfessionalLearningCourse}
+            courseLink={this.props.courseLink}
+            publishedState={publishedState}
           />
         </div>
         <ProgressTable minimal={false} />

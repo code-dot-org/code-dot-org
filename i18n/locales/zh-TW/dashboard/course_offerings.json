@@ -50,8 +50,6 @@
   "starwarsblocks": "星際大戰：用程式碼建立銀河系（Blockly）",
   "text-compression": "文字壓縮",
   "csa-self-paced-pl": "CSA領航教師Code.org導航",
-  "counting-csc": "與Laurel一起計算",
-  "explore-data-1": "探索箱形圖和長條圖",
   "outbreak-csc": "疫情爆發",
   "poem-art": "詩歌藝術",
   "edit-code": "編輯程式碼",
@@ -69,5 +67,8 @@
   "step": "點",
   "coursee-ramp": "coursee-ramp",
   "csa5-exemplars": "csa5-exemplars",
-  "soccer": "足球"
+  "soccer": "足球",
+  "hello-world-space": "你好世界：太空",
+  "hello-world-soccer": "你好世界：足球",
+  "playground": "游樂場"
 }

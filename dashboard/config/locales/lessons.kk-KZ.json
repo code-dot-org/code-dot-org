@@ -29,6 +29,12 @@
         "playlab/Play Lab": {
           "name": "Ойындар Лабораториясы"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Диснейдің Шексіз Ойындар Лабораториясы"
         },
@@ -52,6 +58,36 @@
         },
         "k5-onlinepd-2019/For Loops": {
           "name": "For ілмектері"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Ғаламтор"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Ән Жазу"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Қозғал, Қозғал"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Көңілді Карталар"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
         },
         "csd3-2022/Variables": {
           "name": "Айнымалылар"

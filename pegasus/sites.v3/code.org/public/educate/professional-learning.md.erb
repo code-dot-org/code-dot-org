@@ -16,7 +16,7 @@ video_player: true
 
 <div class="col-50">
 	<a href="/professional-development-workshops">
-		<img src="/images/k5-pl.jpg" width="95%"/>
+		<img src="/images/k5-pl.jpg" width="95%" alt=""/>
 	</a>
 	<a href="/professional-development-workshops" style='text-decoration:none'>
 		<button>I teach elementary school</button>
@@ -26,7 +26,7 @@ video_player: true
 
 <div class="col-50">
 	<a href="/educate/professional-learning/middle-high">
-		<img src="/images/mid-high-pl.jpg" width="95%"/>
+		<img src="/images/mid-high-pl.jpg" width="95%" alt=""/>
 	</a>
 	<a href="/educate/professional-learning/middle-high" style='text-decoration:none'>
 		<button>I teach middle or high school</button>
@@ -38,3 +38,5 @@ video_player: true
 
 
 <%= view :answerdash %>
+
+<%= view :analytics_event_log_helper, event_name: AnalyticsConstants::PICK_PL_PAGE_VISITED_EVENT %>

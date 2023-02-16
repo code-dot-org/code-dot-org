@@ -29,6 +29,12 @@
         "playlab/Play Lab": {
           "name": "Play Lab"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab"
         },
@@ -52,6 +58,36 @@
         },
         "k5-onlinepd-2019/For Loops": {
           "name": "For Loops"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Համացանց"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "songwriting"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Ուրախ Քարտեզներ"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binary Bracelets"
         },
         "csd3-2022/Variables": {
           "name": "փոփոխականների"

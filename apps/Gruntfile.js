@@ -2,6 +2,7 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
+var os = require('os');
 var _ = require('lodash');
 var webpackConfig = require('./webpack');
 var offlineWebpackConfig = require('./webpackOffline.config');
@@ -12,8 +13,8 @@ var CopyPlugin = require('copy-webpack-plugin');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var sass = require('sass');
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-var ManifestPlugin = require('webpack-manifest-plugin');
+var TerserPlugin = require('terser-webpack-plugin');
+var {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 
 module.exports = function(grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
@@ -37,7 +38,7 @@ module.exports = function(grunt) {
       : `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `/* eslint-disable */
 // Auto-generated from Gruntfile.js
-import '@babel/polyfill';
+import '@babel/polyfill/noConflict';
 import 'whatwg-fetch';
 import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
@@ -342,6 +343,10 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
+          [
+            'build/package/css/certificates.css',
+            'style/curriculum/certificates.scss'
+          ],
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
           ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
@@ -349,8 +354,8 @@ describe('entry tests', () => {
           ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
-            'build/package/css/reference_guides.css',
-            'style/curriculum/reference_guides.scss'
+            'build/package/css/curriculum_table_styling.css',
+            'style/curriculum/curriculum_table_styling.scss'
           ],
           [
             'build/package/css/curriculum_navigation.css',
@@ -430,6 +435,17 @@ describe('entry tests', () => {
       : ''
   };
 
+  // Workaround for https://github.com/ryanclark/karma-webpack/issues/498.
+  // This is the default karma-webpack output directory, but we define it here
+  // so we can configure webpack's output.publicPath and karma's options.files
+  // so that bundled files will be properly served.
+  // this is the source of the following warning, which can be ignored:
+  // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
+  const webpackOutputPath =
+    path.join(os.tmpdir(), '_karma_webpack_') +
+    Math.floor(Math.random() * 1000000);
+  const webpackOutputPublicPath = '/webpack_output/';
+
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
@@ -467,8 +483,39 @@ describe('entry tests', () => {
         },
         {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
         {pattern: 'build/**/*', watched: false, included: false, nocache: true},
-        {pattern: 'static/**/*', watched: false, included: false, nocache: true}
+        {
+          pattern: 'static/**/*',
+          watched: false,
+          included: false,
+          nocache: true
+        },
+        {
+          pattern: `${webpackOutputPath}/**/*`,
+          watched: false,
+          included: false,
+          nocache: true
+        }
       ],
+      proxies: {
+        // configure karma server to serve files from the source tree for
+        // various paths (the '/base' prefix points to the apps directory where
+        // karma.conf.js is located)
+        '/blockly/media/': '/base/static/',
+        '/lib/blockly/media/': '/base/static/',
+        '/v3/assets/': '/base/test/integration/assets/',
+        '/base/static/1x1.gif': '/base/lib/blockly/media/1x1.gif',
+
+        // requests to the webpack output public path should be served from the
+        // webpack output path where bundled assets are written
+        [webpackOutputPublicPath]: '/absolute/' + webpackOutputPath + '/'
+      },
+
+      webpack: {
+        output: {
+          path: webpackOutputPath,
+          publicPath: webpackOutputPublicPath
+        }
+      },
       client: {
         mocha: {
           timeout: 14000,
@@ -521,6 +568,7 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
+    'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
     'certificates/show': './src/sites/studio/pages/certificates/show.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
@@ -530,9 +578,16 @@ describe('entry tests', () => {
     'courses/resources': './src/sites/studio/pages/courses/resources.js',
     'courses/code': './src/sites/studio/pages/courses/code.js',
     'courses/standards': './src/sites/studio/pages/courses/standards.js',
+    'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
+    'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
+    'incubator/index': './src/sites/studio/pages/incubator/index.js',
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
+    'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+    'print_certificates/batch':
+      './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
       './src/sites/studio/pages/programming_classes/show.js',
     'programming_environments/index':
@@ -541,6 +596,11 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':
       './src/sites/studio/pages/programming_expressions/show.js',
+    'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
+    'devise/registrations/_sign_up':
+      './src/sites/studio/pages/devise/registrations/_sign_up.js',
+    'devise/shared/_oauth_links':
+      './src/sites/studio/pages/devise/shared/_oauth_links.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'devise/registrations/edit':
@@ -559,6 +619,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_small_footer.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'layouts/_initial_section_creation_interstitial':
+      './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -577,6 +639,7 @@ describe('entry tests', () => {
     'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
+    'levels/_pixelation': './src/sites/studio/pages/levels/_pixelation.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/_teacher_markdown':
@@ -586,7 +649,6 @@ describe('entry tests', () => {
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
-    'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
     'maker/home': './src/sites/studio/pages/maker/home.js',
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
@@ -610,7 +672,9 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
+    'weblab_host/network_check':
+      './src/sites/studio/pages/weblab_host/network_check.js'
   };
 
   var internalEntries = {
@@ -620,6 +684,9 @@ describe('entry tests', () => {
       './src/sites/studio/pages/course_offerings/edit.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     'courses/new': './src/sites/studio/pages/courses/new.js',
+    'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
+    'data_docs/edit': './src/sites/studio/pages/data_docs/edit.js',
+    'data_docs/edit_all': './src/sites/studio/pages/data_docs/edit_all.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
@@ -679,6 +746,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
+    'sections/new': './src/sites/studio/pages/sections/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -690,6 +758,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
     'sprite_management/default_sprites_editor':
       './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
+    'sprite_management/release_default_sprites_to_production':
+      './src/sites/studio/pages/sprite_management/release_default_sprites_to_production.js',
     'sprite_management/select_start_animations':
       './src/sites/studio/pages/sprite_management/select_start_animations.js'
   };
@@ -699,10 +769,6 @@ describe('entry tests', () => {
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/educate/regional-partner/playbook':
-      './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
-    'code.org/public/certificates/blank':
-      './src/sites/code.org/pages/public/certificates/blank.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
     'code.org/public/teacher-dashboard/index':
@@ -711,8 +777,6 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
-    'code.org/views/csf_congrats':
-      './src/sites/code.org/pages/views/csf_congrats.js',
     'code.org/views/regional_partner_search':
       './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
@@ -725,6 +789,9 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/amazon_future_engineer.js',
     'code.org/views/amazon_future_engineer_eligibility':
       './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
+    'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
+    'code.org/views/analytics_event_log_helper':
+      './src/sites/code.org/pages/views/analytics_event_log_helper.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -741,30 +808,22 @@ describe('entry tests', () => {
   var professionalDevelopmentEntries = {
     'code.org/public/learn/local':
       './src/sites/code.org/pages/public/learn/local.js',
-    'code.org/views/professional_learning_apply_banner':
-      './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/workshop_survey/new':
-      './src/sites/studio/pages/pd/workshop_survey/new.js',
     'pd/pre_workshop_survey/new':
       './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
     'pd/teachercon_survey/new':
       './src/sites/studio/pages/pd/teachercon_survey/new.js',
     'pd/application_dashboard/index':
       './src/sites/studio/pages/pd/application_dashboard/index.js',
-    'pd/application/facilitator_application/new':
-      './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new':
       './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new':
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-    'pd/fit_weekend_registration/new':
-      './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
     'pd/workshop_daily_survey/new_general_foorm':
       './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':
@@ -871,14 +930,21 @@ describe('entry tests', () => {
       ],
       mode: minify ? 'production' : 'development',
       optimization: {
+        minimize: minify,
         minimizer: [
-          new UglifyJsPlugin({
+          new TerserPlugin({
+            parallel: 4,
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
             exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
-            cache: true,
-            parallel: true,
-            sourceMap: envConstants.DEBUG_MINIFIED
+            terserOptions: {
+              sourceMap: envConstants.DEBUG_MINIFIED,
+              // Handle Safari 10.x issues: [See FND-2108 / FND-2109]
+              // Can remove when we can safely drop support for older iPad/iOS.
+              mangle: {
+                safari10: true
+              }
+            }
           })
         ],
 
@@ -978,7 +1044,7 @@ describe('entry tests', () => {
               },
               test(module) {
                 return [
-                  '@babel/polyfill',
+                  '@babel/polyfill/noConflict',
                   'immutable',
                   'lodash',
                   'moment',
@@ -1019,20 +1085,20 @@ describe('entry tests', () => {
         }),
         // The [contenthash] placeholder generates a 32-character hash when
         // used within the copy plugin.
-        new CopyPlugin(
-          [
+        new CopyPlugin({
+          patterns: [
             // Always include unhashed locale files in the package, since unit
             // tests rely on these in both minified and unminified environments.
             // The order of these rules is important to ensure that the hashed
             // locale files appear in the manifest when minifying.
             {
               from: 'build/locales',
-              to: '[path]/[name].[ext]',
+              to: '[path][name][ext]',
               toType: 'template'
             },
             minify && {
               from: 'build/locales',
-              to: '[path]/[name]wp[contenthash].[ext]',
+              to: '[path][name]wp[contenthash][ext]',
               toType: 'template'
             },
             // Libraries in this directory are assumed to have .js and .min.js
@@ -1048,27 +1114,29 @@ describe('entry tests', () => {
             {
               context: 'build/minifiable-lib/',
               from: minify ? `**/*.min.js` : '**/*.js',
-              to: minify
-                ? '[path]/[name]wp[contenthash].[ext]'
-                : '[path]/[name].[ext]',
+              to: minify ? '[path][name]wp[contenthash].js' : '[path][name].js',
               toType: 'template',
-              ignore: minify ? [] : ['*.min.js'],
-              transformPath: targetPath => targetPath.replace(/\.min/, '')
+              globOptions: {
+                ignore: minify ? [] : ['*.min.js']
+              }
             }
           ].filter(entry => !!entry)
-        ),
+        }),
         // Unit tests require certain unminified files to have been built.
         new UnminifiedWebpackPlugin({
           include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
         }),
-        new ManifestPlugin({
+        new WebpackManifestPlugin({
           basePath: 'js/',
           map: file => {
             if (minify) {
               // Remove contenthash in manifest key from files generated via
               // copy-webpack-plugin. See:
               // https://github.com/webpack-contrib/copy-webpack-plugin/issues/104#issuecomment-370174211
-              file.name = file.name.replace(/wp[a-f0-9]{32}\./, '.');
+              // Also remove .min extension from manifest key, which started appearing after moving from webpack-manifest-plugin 2 -> 4
+              file.name = file.name
+                .replace(/wp[a-f0-9]{32}\./, '.')
+                .replace(/\.min/, '');
             }
             return file;
           }

@@ -5,6 +5,11 @@ my:
       name:
         hourofcode:
           title: ဂန္တဝင် ဝင်္ကပါ
+        events:
+          title: ဖြစ်စဥ်များ
+          description: ဖြစ်စဥ်များ
+          description_short: ဖြစ်စဥ်များ
+          student_description: ဖြစ်စဥ်များ
         flappy:
           title: ဖလပ်ပီ ကုပ်
           description: သင့်ကိုယ်ပိုင်ဂိမ်းကို 10 မိနစ်အောက်သာရေးလိုပါသလား။ ကျွန်ုပ်တို့၏ ဖလပ်ပီ ကုပ် သင်ခန်းစာကို စမ်းသုံးကြည့်ပါ။
@@ -13,6 +18,8 @@ my:
           title: Minecraft Hour of Code
           description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
           student_description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
+        basketball:
+          name: ဘတ်စကတ်ဘော
         hero:
           title: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
           description_short: Hour of Code အတွက် အစီအစဥ်သစ်နဲွ Minecraft ပြန်လည်​ရောက်ရှိလာပါပြီ!
@@ -28,6 +35,8 @@ my:
               display_name: Variables
         coursed-2019:
           lesson_groups:
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
             csf_loops:
               display_name: Loops
         express-2019:
@@ -40,18 +49,26 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         coursea-2019:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         courseb-2019:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         pre-express-2019:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -100,6 +117,8 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -108,10 +127,14 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -126,16 +149,24 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         courseb-2020:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         coursec-2020:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         coursed-2020:
           lesson_groups:
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
             csf_loops:
               display_name: Loops
         coursef-2020:
@@ -152,6 +183,8 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         2021drafting:
           lesson_groups:
             lessonGroup-3:
@@ -170,16 +203,24 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         courseb-2021:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         coursec-2021:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         coursed-2021:
           lesson_groups:
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
             csf_loops:
               display_name: Loops
         coursef-2021:
@@ -192,10 +233,14 @@ my:
               display_name: Loops
             csf_variables:
               display_name: Variables
+            lessonGroup-9:
+              display_name: ဖြစ်စဥ်များ
         pre-express-2021:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         csf-2021-pilot:
           lesson_groups:
             lessonGroup-3:
@@ -210,6 +255,8 @@ my:
           lesson_groups:
             lessonGroup-2:
               description: စမ်းသပ်မှု။
+        ai-ethics-2021:
+          description_audience: အတန်းများ ၆တန်း-၁၂တန်း
         csf-2022-pilot:
           lesson_groups:
             lessonGroup-3:
@@ -218,8 +265,12 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         express-2022:
           lesson_groups:
+            lessonGroup-9:
+              display_name: ဖြစ်စဥ်များ
             csf_loops:
               display_name: Loops
             csf_variables:
@@ -238,12 +289,18 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         coursec-2022:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         coursed-2022:
           lesson_groups:
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
             csf_loops:
               display_name: Loops
         coursef-2022:
@@ -254,7 +311,33 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
         coursef-2022-pilot:
           lesson_groups:
             lessonGroup-8:
               display_name: Variables
+        soccer:
+          name: ဘောလုံး
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Loops
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variables
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Loops
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: စာရင်းများ
+            lessonGroup-3:
+              display_name: Loops

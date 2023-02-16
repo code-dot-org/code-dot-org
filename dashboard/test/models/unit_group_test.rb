@@ -315,8 +315,6 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "set pilot experiment to nil for new UnitGroupUnits" do
-      File.stubs(:write).with {|filename, _| filename.to_s == "#{Rails.root}/config/scripts_json/unit1.script_json"}.once
-
       unit_group = create :unit_group
 
       unit1 = create(:script, name: 'unit1', published_state: 'pilot', pilot_experiment: 'unit-going-to-unit-group-pilot')
@@ -629,7 +627,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 2, summary[:scripts].length
     assert_equal false, summary[:has_verified_resources]
 
-    # spot check that we have fields that show up in Script.summarize(false)
+    # spot check that we have fields that show up in Unit.summarize(false)
     assert_equal 'unit1', summary[:scripts][0][:name]
     assert_equal 'unit1-description', summary[:scripts][0][:description]
 

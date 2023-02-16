@@ -1305,3 +1305,74 @@ kk:
               display_name: Контент
         soccer:
           name: футбол
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Ілмек
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Контент
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Айнымалылар
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For ілмектері
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Айнымалылар
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Ілмек
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Тізімдер
+            lessonGroup-3:
+              display_name: Ілмек

@@ -4712,6 +4712,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        ai-ethics-2021:
+          description_audience: 6-12 sinflar
         explore-data-1-2021:
           title: Ma'lumotlar Vizualizatsiyasi
         csa6-exemplars:
@@ -4977,6 +4979,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Boshlash
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5028,6 +5034,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Spraytlarga kirish
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -5119,5 +5129,184 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Xush kelibsiz
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Asinxron Sozlash kengaytmasi
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 2-Modul Asinxron Ish
         soccer:
           name: futbol
+          title: O'z futbol o'yiningizni dasturlang
+          description_short: Futbol o'yinini yasang
+          description: Futbol o'yinini yasang
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Survey
+            lessonGroup-2:
+              display_name: Kontent
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+            lessonGroup-5:
+              display_name: Survey
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Sikllar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
+            lessonGroup-3:
+              display_name: Kontent
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: O‘zgaruvchilar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For sikllari
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        hello-world-space-2022:
+          title: 'Salom Dunyo: Kosmik'
+        hello-world-soccer-2022:
+          title: 'Salom Dunyo: Futbol'
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Chapter 2: App Prototyping'
+          title: The Design Process
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Representing Information'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Solving Data Problems'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Images and Animations'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Games'
+        csd6-2023:
+          title: Jismoniy hisoblash
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Bu Nimani Ovozi?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csp_unit1_2020:
+              display_name: 'Unit 1: Digital Information'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: Internet'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shartli bayonotlar
+            csp_functions:
+              display_name: Funksiyalar
+            csp_project:
+              display_name: Loyiha
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Sikllar
+            csp_project:
+              display_name: Loyiha
+            lessonGroup-5:
+              display_name: Post-Course Survey
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Ro‘yxatlar
+            lessonGroup-2:
+              display_name: Post-Course Survey
+            lessonGroup-3:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Loyiha
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Post-Course Survey
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Create PT
+            lessonGroup-3:
+              display_name: Post-Course Survey
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Post-Course Survey
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Post-Course Survey
+        csp-post-survey-2023:
+          title: CS Principles Post-Course Survey
+        csp-playground:
+          title: CSP Playground
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Intro to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs

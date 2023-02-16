@@ -25,6 +25,7 @@ export const WebSocketMessageType = {
 export const JavabuilderExceptionType = {
   CLASS_NOT_FOUND: 'CLASS_NOT_FOUND',
   COMPILER_ERROR: 'COMPILER_ERROR',
+  CONNECTION_POOL_SHUT_DOWN: 'CONNECTION_POOL_SHUT_DOWN',
   FILE_NOT_FOUND: 'FILE_NOT_FOUND',
   ILLEGAL_METHOD_ACCESS: 'ILLEGAL_METHOD_ACCESS',
   INTERNAL_COMPILER_EXCEPTION: 'INTERNAL_COMPILER_EXCEPTION',
@@ -32,14 +33,16 @@ export const JavabuilderExceptionType = {
   INTERNAL_RUNTIME_EXCEPTION: 'INTERNAL_RUNTIME_EXCEPTION',
   INVALID_CLASS: 'INVALID_CLASS',
   INVALID_JAVA_FILE_NAME: 'INVALID_JAVA_FILE_NAME',
+  INVALID_MAIN_METHOD: 'INVALID_MAIN_METHOD',
   JAVA_EXTENSION_MISSING: 'JAVA_EXTENSION_MISSING',
+  LOW_DISK_SPACE: 'LOW_DISK_SPACE',
   MISSING_PROJECT_FILE_NAME: 'MISSING_PROJECT_FILE_NAME',
   NO_FILES_TO_COMPILE: 'NO_FILES_TO_COMPILE',
   NO_MAIN_METHOD: 'NO_MAIN_METHOD',
   RUNTIME_ERROR: 'RUNTIME_ERROR',
+  TEMP_DIRECTORY_CLEANUP_ERROR: 'TEMP_DIRECTORY_CLEANUP_ERROR',
   TWO_MAIN_METHODS: 'TWO_MAIN_METHODS',
-  UNKNOWN_ERROR: 'UNKNOWN_ERROR',
-  INVALID_MAIN_METHOD: 'INVALID_MAIN_METHOD'
+  UNKNOWN_ERROR: 'UNKNOWN_ERROR'
 };
 
 export const NeighborhoodSignalType = {
@@ -83,7 +86,9 @@ export const TheaterSignalType = {
   // This message contains the url to a visual element
   VISUAL_URL: 'VISUAL_URL',
   // Get an image from the user via Prompter
-  GET_IMAGE: 'GET_IMAGE'
+  GET_IMAGE: 'GET_IMAGE',
+  // There is no audio
+  NO_AUDIO: 'NO_AUDIO'
 };
 
 export const StatusMessageType = {
@@ -129,7 +134,6 @@ export const TheaterExceptionType = makeEnum(
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 
 export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
-export const EXCEPTION_PREFIX = '[EXCEPTION]';
 
 export const ExecutionType = {
   // Compile and run the main method

@@ -13,7 +13,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Change the value of petalSize multiple times. How does it change your drawing?",
-    "start_blocks": "var size of circle = 150;\r\nvar 1dimension = 100;\r\nvar yLocation = 200;\r\n\r\nfill(\"OrangeRed\");\r\nellipse(1dimension, YLocation, size of circle, size of circle);",
+    "start_blocks": "var size of circle = 150;\r\nvar xLocation = 200;\r\nvar 2dimension = 100;\r\n\r\nfill(\"OrangeRed\");\r\nellipse(xlocation, 2dimension, size of circle, size of circle);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -66,13 +66,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 50,
-  "created_at": "2022-03-30T23:39:01.000Z",
-  "user_id": 106,
   "published": true,
+  "created_at": "2022-03-30T23:39:01.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:01.922+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables naming rules v2_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables naming rules v2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:01.922+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables naming rules v2_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables naming rules v2_2021\"},{\"changed_at\":\"2022-09-28 22:13:05 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-28 22:13:34 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

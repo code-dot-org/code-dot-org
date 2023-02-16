@@ -2,6 +2,10 @@
 ta:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} விருப்பங்களுடன் {VAR} மாறிக்கான பயனர் {QUESTION} ஐத் தூண்டவும்"
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE} சொல் {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -229,12 +233,6 @@ ta:
           UNIT:
             '"measures"': அளவீடுகள்
             '"seconds"': விநாடிகள்
-      Dancelab_everySecondsRange:
-        text: 'ஒவ்வொரு {N} {UNIT} {START} தொடங்கி {STOP} வரை '
-        options:
-          UNIT:
-            measures: அளவீடுகள்
-            seconds: விநாடிகள்
       Dancelab_everyVerseChorus:
         text: 'ஒவ்வொரு {UNIT} '
         options:
@@ -945,6 +943,38 @@ ta:
         text: செட்அப்
       Dancelab_whenSetup2:
         text: செட்அப்
+      DansBlocks_getMicroscope:
+        text: நுண்ணோக்கி {INPUT1}உள்ளது
+        options:
+          INPUT1:
+            '1': எலுமிச்சை சாறு
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: விளைவு {EFFECT}செய்ய
+        options:
+          EFFECT:
+            '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
+            '"hearts"': இதயங்கள்
+            '"emojis"': மகிழ்ச்சியான எமோஜிகள்
+            '"rain"': மழை
+            '"glass"': நொறுங்கும் கண்ணாடி
+            '"twinkling"': மின்னும்
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': எலுமிச்சை சாறு
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "{SPRITE1COSTUME} உடன் {VAR1} தொடர்பு கொள்ளவும்"
+      FunctionBlocks_makeManipulative2:
+        text: செய்ய {NUM} புதிய {ANIMATION_NAME} உருவங்களுக்கு  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: பிரதிநிதித்துவம் {NUM} புதிய {ANIMATION_NAME} உருவங்களுக்கு [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE} சொல் {TEXT1}"
       gamelab_addBehaviorSimple:
         text: ஸ்பிரைட்{SPRITE}தொடக்கம்{BEHAVIOR}
       gamelab_addTarget:
@@ -1272,6 +1302,32 @@ ta:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": நகைச்சுவையான
               பாஸ்
             "'sound://category_digital/jump_7.mp3'": குதி
+      gamelab_playSoundOptionsSoccer:
+        text: ஒலி விளையாட்டு {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": காற்று ஒலிப்பான்
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": கைத்தட்டல்
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": கோஷமிடுங்கள்
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ஆரவாரம்
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": உதை
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": இரண்டு விசில்
+            "'sound://category_sports/One_Whistle_SFX.mp3'": விசில்
+      gamelab_playSoundOptionsSpace:
+        text: ஒலி விளையாட்டு {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": கருந்துளை
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": புல்லட் கிளஸ்ட்டர்
+            "'sound://category_space/Carina_SFX.mp3'": கரினா
+            "'sound://category_space/Cassiopeia_SFX.mp3'": காசியோபியா
+            "'sound://category_space/Crab_nebula_SFX.mp3'": கிராப் நெபுலா
+            "'sound://category_space/Launch_SFX.mp3'": ஏவுதல்
+            "'sound://category_space/Lift_Off.mp3'": தூக்கி எறியுங்கள்
+            "'sound://category_space/Pillars_SFX.mp3'": தூண்கள்
+            "'sound://category_space/Southern_ring_SFX.mp3'": தெற்கு வளையம்
+            "'sound://category_space/Supernova_SFX.mp3'": சூப்பர்நோவா
+            "'sound://category_space/Tycho_SFX.mp3'": டைக்கோ
       gamelab_playSpeech:
         text: பேச்சு விளையாடு {SOUND}
       gamelab_playerBehaviors:
@@ -1862,6 +1918,38 @@ ta:
         text: அசுரர்களை தோராயமாக அமைக்கவும்
       Outbreak_stopMoving:
         text: அரக்கர்கள் நகர்வதை நிறுத்துகிறார்கள்
+      ParticlesBlocks_getMicroscope:
+        text: நுண்ணோக்கி {INPUT1}உள்ளது
+        options:
+          INPUT1:
+            '1': எலுமிச்சை சாறு
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': எலுமிச்சை சாறு
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): திடமான
+            new Behavior(liquid, []): திரவம்
+            new Behavior(wandering, []): கேஸ்
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME} முதல் {BEHAVIOR} நடத்தையை அமைக்கவும்"
+        options:
+          BEHAVIOR:
+            '"solid"': திடமான துகள்
+            '"liquid"': திரவ துகள்
+            '"gas"': வாயு துகள்
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': திடமான துகள்
+            '"liquid"': திரவ துகள்
+            '"gas"': வாயு துகள்
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1934,6 +2022,21 @@ ta:
             '"sound://category_achievements/peaceful_win_1.mp3"': வெல்லுங்கள்
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': சுழல்
             '"sound://category_achievements/peaceful_win_6.mp3"': காற்றின் மணியோசைகள்
+      Poetry_playSoundOptionsSpace:
+        text: ஒலி விளையாட்டு {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": கருந்துளை
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": புல்லட் கிளஸ்ட்டர்
+            "'sound://category_space/Carina_SFX.mp3'": கரினா
+            "'sound://category_space/Cassiopeia_SFX.mp3'": காசியோபியா
+            "'sound://category_space/Crab_nebula_SFX.mp3'": கிராப் நெபுலா
+            "'sound://category_space/Launch_SFX.mp3'": ஏவுதல்
+            "'sound://category_space/Lift_Off.mp3'": தூக்கி எறியுங்கள்
+            "'sound://category_space/Pillars_SFX.mp3'": தூண்கள்
+            "'sound://category_space/Southern_ring_SFX.mp3'": தெற்கு வளையம்
+            "'sound://category_space/Supernova_SFX.mp3'": சூப்பர்நோவா
+            "'sound://category_space/Tycho_SFX.mp3'": டைக்கோ
       Poetry_setAuthor:
         text: தொகுப்பு ஆசிரியர் {AUTHOR}
       Poetry_setBackground:
@@ -2062,6 +2165,11 @@ ta:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR} பதிலளித்த போது "
       RyanLab_moveForward:
@@ -2171,5 +2279,18 @@ ta:
           DIR:
             right: சரி ↻
             left: இடது  ↺
+      storylab_setForegroundEffect2:
+        text: விளைவு {EFFECT}செய்ய
+        options:
+          EFFECT:
+            '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
+            '"hearts"': இதயங்கள்
+            '"rain"': மழை
+            '"twinkling"': மின்னும்
+      storylab_setHeading:
+        text: தலைப்பு அமைக்கவும் {HEADING}
+      storylab_setSubheading:
+        text: துணைத்தலைப்பு அமைக்கவும் {SUBHEADING}
       validation_validatedBackground:
         text: பின்னணி அமைக்க {IMG}

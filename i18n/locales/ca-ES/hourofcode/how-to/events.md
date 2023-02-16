@@ -35,12 +35,6 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 * * *
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
-
-* * *
-
 ## Example plan for a school assembly or event
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
@@ -51,7 +45,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-## Programa
+## Run of Show
 
 | Hora           | Activitat                                                                                                                                              |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |

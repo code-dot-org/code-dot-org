@@ -31,6 +31,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  def get_record_with_sql(select_attribute, table_name, selector)
+    ActiveRecord::Base.connection.exec_query(
+      "SELECT #{select_attribute} from `#{table_name}` WHERE `#{table_name}`.`#{selector.keys[0]}` = #{selector.values[0]}"
+    ).first
+  end
+
   setup do
     # Skip security logging to Slack in test
     ChatClient.stubs(:message)
@@ -885,44 +891,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.code_review_comments
-  #
-
-  test "soft deletes and clears comments written by purged user" do
-    student = create :student
-
-    comment = create :code_review_comment, commenter: student
-    refute comment.deleted?
-    refute_nil comment.comment
-
-    # Confirm that the contents of soft deleted comments
-    # are fully deleted.
-    deleted_comment = create :code_review_comment, commenter: student, deleted_at: Time.now
-    assert deleted_comment.deleted?
-    refute_nil deleted_comment.comment
-
-    purge_user student
-
-    comment.reload
-    assert comment.deleted?
-    assert_nil comment.comment
-
-    deleted_comment.reload
-    assert deleted_comment.deleted?
-    assert_nil deleted_comment.comment
-
-    assert_logged 'Cleared 2 CodeReviewComment'
-  end
-
-  #
   # Table: dashboard.code_review_requests
-  # Table: dashboard.code_review_notes
+  # Table: dashboard.code_review_comments
   #
   test "deletes comment text and soft deletes comments for purged user" do
     student = create :student
     review = create :code_review, user_id: student.id
     student_2 = create :student
-    comment = create :code_review_note, commenter: student_2, code_review: review
+    comment = create :code_review_comment, commenter: student_2, code_review: review
     assert_nil review.deleted_at
     assert_nil comment.deleted_at
     refute_nil comment.comment
@@ -940,7 +916,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "anonymizes and deletes code review comments written by user" do
     student = create :student
-    comment = create :code_review_note, commenter: student
+    comment = create :code_review_comment, commenter: student
     refute_nil comment.commenter
     refute_nil comment.comment
     assert_nil comment.deleted_at
@@ -1004,13 +980,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "clears form_data from pd_facilitator_program_registrations" do
     teacher = create :teacher
-    registration = create :pd_facilitator_program_registration, user: teacher
-    refute_equal '{}', registration.form_data
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_facilitator_program_registrations` (user_id, form_data, created_at, updated_at)
+        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.user
+    application = get_record_with_sql("form_data", "pd_facilitator_program_registrations", {'user_id' => teacher.id})
+    refute_empty application["form_data"]
 
-    registration.reload
-    assert_equal '{}', registration.form_data
+    purge_user teacher
+
+    application = get_record_with_sql("form_data", "pd_facilitator_program_registrations", {'user_id' => teacher.id})
+    assert_empty application["form_data"]
   end
 
   #
@@ -1019,13 +1002,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_fit_weekend1819_registrations" do
-    registration = create :pd_fit_weekend1819_registration
-    refute_equal '{}', registration.form_data
+    application = create :pd_teacher_application
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_fit_weekend1819_registrations` (pd_application_id, form_data, created_at, updated_at)
+        VALUES (#{application.id}, '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.pd_application.user
+    registration = get_record_with_sql("form_data", "pd_fit_weekend1819_registrations", {'pd_application_id' => application.id})
+    refute_empty registration["form_data"]
 
-    registration.reload
-    assert_equal '{}', registration.form_data
+    purge_user application.user
+
+    registration = get_record_with_sql("form_data", "pd_fit_weekend1819_registrations", {'pd_application_id' => application.id})
+    assert_empty registration["form_data"]
   end
 
   #
@@ -1034,13 +1025,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_fit_weekend_registrations" do
-    registration = create :pd_fit_weekend1920_registration
-    refute_equal '{}', registration.form_data
+    application = create :pd_teacher_application
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_fit_weekend_registrations` (pd_application_id, registration_year, form_data, created_at, updated_at)
+        VALUES (#{application.id}, '2019-2020', '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.pd_application.user
+    registration = get_record_with_sql("form_data", "pd_fit_weekend_registrations", {'pd_application_id' => application.id})
+    refute_empty registration["form_data"]
 
-    registration.reload
-    assert_equal '{}', registration.form_data
+    purge_user application.user
+
+    registration = get_record_with_sql("form_data", "pd_fit_weekend_registrations", {'pd_application_id' => application.id})
+    assert_empty registration["form_data"]
   end
 
   #
@@ -1101,24 +1100,38 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "clears form_data from pd_regional_partner_program_registrations" do
     teacher = create :teacher
-    registration = create :pd_regional_partner_program_registration, user: teacher
-    refute_equal '{}', registration.form_data
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_regional_partner_program_registrations` (user_id, form_data, teachercon, created_at, updated_at)
+        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', 1, '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.user
+    registration = get_record_with_sql("form_data", "pd_regional_partner_program_registrations", {'user_id' => teacher.id})
+    refute_empty registration["form_data"]
 
-    registration.reload
-    assert_equal '{}', registration.form_data
+    purge_user teacher
+
+    registration = get_record_with_sql("form_data", "pd_regional_partner_program_registrations", {'user_id' => teacher.id})
+    assert_empty registration["form_data"]
   end
 
   test "sets invalid teachercon from pd_regional_partner_program_registrations" do
     teacher = create :teacher
-    registration = create :pd_regional_partner_program_registration, user: teacher
-    assert_includes 1..3, registration.teachercon
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_regional_partner_program_registrations` (user_id, form_data, teachercon, created_at, updated_at)
+        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', 1, '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.user
+    registration = get_record_with_sql("teachercon", "pd_regional_partner_program_registrations", {'user_id' => teacher.id})
+    refute_equal 0, registration["teachercon"]
 
-    registration.reload
-    assert_equal 0, registration.teachercon
+    purge_user teacher
+
+    registration = get_record_with_sql("teachercon", "pd_regional_partner_program_registrations", {'user_id' => teacher.id})
+    assert_equal 0, registration["teachercon"]
   end
 
   #
@@ -1126,23 +1139,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_teachercon1819_registrations" do
-    registration = create :pd_teachercon1819_registration
-    refute_equal '{}', registration.form_data
+    teacher = create :teacher
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_teachercon1819_registrations` (user_id, form_data, created_at, updated_at)
+        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+    SQL
+    )
 
-    purge_user registration.user
+    registration = get_record_with_sql("form_data", "pd_teachercon1819_registrations", {'user_id' => teacher.id})
+    refute_empty registration["form_data"]
 
-    registration.reload
-    assert_equal '{}', registration.form_data
-  end
+    purge_user teacher
 
-  test "clears user_id from pd_teachercon1819_registrations" do
-    registration = create :pd_teachercon1819_registration
-    refute_nil registration.user_id
-
-    purge_user registration.user
-
-    registration.reload
-    assert_nil registration.user_id
+    registration = get_record_with_sql("form_data", "pd_teachercon1819_registrations", {'user_id' => teacher.id})
+    assert_empty registration["form_data"]
   end
 
   #
@@ -1176,18 +1187,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       SQL
     )
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("primary_email", "pd_teacher_applications", {'user_id' => user.id})
     refute_empty application["primary_email"]
 
     purge_user user
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("primary_email", "pd_teacher_applications", {'user_id' => user.id})
     assert_empty application["primary_email"]
   end
 
@@ -1202,18 +1207,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       SQL
     )
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("secondary_email", "pd_teacher_applications", {'user_id' => user.id})
     refute_empty application["secondary_email"]
 
     purge_user user
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("secondary_email", "pd_teacher_applications", {'user_id' => user.id})
     assert_empty application["secondary_email"]
   end
 
@@ -1228,17 +1227,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       SQL
     )
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
-
+    application = get_record_with_sql("application", "pd_teacher_applications", {'user_id' => user.id})
     refute_empty application["application"]
 
     purge_user user
 
-    application = ActiveRecord::Base.connection.exec_query(
-      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
-    ).first
+    application = get_record_with_sql("application", "pd_teacher_applications", {'user_id' => user.id})
     assert_empty application["application"]
   end
 
@@ -1464,9 +1458,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     assert_equal 0, SurveyResult.where(user_id: teacher_a.id).count
     assert_equal 1, SurveyResult.where(user_id: teacher_b.id).count
-    refute SurveyResult.where(id: survey_result_a.id).exists?
-    refute SurveyResult.where(id: survey_result_b.id).exists?
-    assert SurveyResult.where(id: survey_result_c.id).exists?
+    refute SurveyResult.exists?(id: survey_result_a.id)
+    refute SurveyResult.exists?(id: survey_result_b.id)
+    assert SurveyResult.exists?(id: survey_result_c.id)
   end
 
   #
@@ -2142,7 +2136,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # even if the user doesn't have the related permission.
     program_manager.delete_permission UserPermission::PROGRAM_MANAGER
 
-    assert RegionalPartnerProgramManager.where(program_manager_id: program_manager.id).exists?
+    assert RegionalPartnerProgramManager.exists?(program_manager_id: program_manager.id)
     refute program_manager.permission? UserPermission::PROGRAM_MANAGER
 
     err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
@@ -2166,7 +2160,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # even if the user doesn't have the related permission.
     program_manager.delete_permission UserPermission::PROGRAM_MANAGER
 
-    assert RegionalPartnerProgramManager.where(program_manager_id: program_manager.id).exists?
+    assert RegionalPartnerProgramManager.exists?(program_manager_id: program_manager.id)
     refute program_manager.permission? UserPermission::PROGRAM_MANAGER
 
     unsafe_purge_user program_manager

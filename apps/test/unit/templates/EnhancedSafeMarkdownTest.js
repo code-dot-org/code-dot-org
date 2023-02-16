@@ -16,6 +16,15 @@ describe('EnhancedSafeMarkdown', () => {
     expect(wrapper.equals(<SafeMarkdown markdown="test" />)).to.equal(true);
   });
 
+  it('renders SafeMarkdown by default with class name', () => {
+    const wrapper = shallow(
+      <EnhancedSafeMarkdown markdown="test" className="class test" />
+    );
+    expect(
+      wrapper.equals(<SafeMarkdown markdown="test" className="class test" />)
+    ).to.equal(true);
+  });
+
   it('wraps output in enhancements as specified', () => {
     const wrapper = shallow(
       <EnhancedSafeMarkdown markdown="test" expandableImages />

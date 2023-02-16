@@ -418,7 +418,7 @@
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "קפוץ"
+            "name": "קפיצה"
           }
         },
         "Course 4 Play Lab Params 10": {
@@ -434,12 +434,12 @@
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "קפוץ"
+            "name": "קפיצה"
           }
         },
         "Course 4 Play Lab Params 3": {
           "jump": {
-            "name": "קפוץ",
+            "name": "קפיצה",
             "parameters": {
               "height": "גובה",
               "actor": "שחקן"
@@ -1081,7 +1081,7 @@
         },
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
-            "name": "קפוץ",
+            "name": "קפיצה",
             "parameters": {
               "height": "גובה",
               "actor": "שחקן"
@@ -1148,7 +1148,7 @@
         },
         "New Play Lab Project": {
           "jump": {
-            "name": "קפוץ",
+            "name": "קפיצה",
             "parameters": {
               "height": "גובה",
               "actor": "שחקן"
@@ -4010,6 +4010,450 @@
           },
           "function 2": {
             "name": "פונקציה 2"
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "הפונקציה שלי"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "צייר כוכב",
+            "parameters": {
+              "points": "נקודות",
+              "length": "אורך"
+            }
+          },
+          "draw a circle": {
+            "name": "צייר מעגל"
+          },
+          "draw a pinwheel": {
+            "name": "צייר גלגל רוח",
+            "parameters": {
+              "length": "אורך",
+              "repeat": "חזור"
+            }
+          },
+          "draw a triangle": {
+            "name": "צייר משולש",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a shape": {
+            "name": "צייר צורה",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a house": {
+            "name": "צייר בית",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a square": {
+            "name": "צייר ריבוע",
+            "parameters": {
+              "length": "אורך"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "צייר כוכב",
+            "parameters": {
+              "points": "נקודות",
+              "length": "אורך"
+            }
+          },
+          "draw a circle": {
+            "name": "צייר מעגל"
+          },
+          "draw a pinwheel": {
+            "name": "צייר גלגל רוח",
+            "parameters": {
+              "length": "אורך",
+              "repeat": "חזור"
+            }
+          },
+          "draw a triangle": {
+            "name": "צייר משולש",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a shape": {
+            "name": "צייר צורה",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a house": {
+            "name": "צייר בית",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a square": {
+            "name": "צייר ריבוע",
+            "parameters": {
+              "length": "אורך"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "צייר כוכב",
+            "parameters": {
+              "points": "נקודות",
+              "length": "אורך"
+            }
+          },
+          "draw a circle": {
+            "name": "צייר מעגל"
+          },
+          "draw a pinwheel": {
+            "name": "צייר גלגל רוח",
+            "parameters": {
+              "length": "אורך",
+              "repeat": "חזור"
+            }
+          },
+          "draw a triangle": {
+            "name": "צייר משולש",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a shape": {
+            "name": "צייר צורה",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a house": {
+            "name": "צייר בית",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a square": {
+            "name": "צייר ריבוע",
+            "parameters": {
+              "length": "אורך"
+            }
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "בנה גשר"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "פנה דרך"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "תקן דרך ארוכה"
+          },
+          "fix short path": {
+            "name": "תקן דרך קצרה"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "בנה גשר קצר"
+          },
+          "build long bridge": {
+            "name": "בנה גשר ארוך"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": "פונקציה 1"
+          },
+          "function 2": {
+            "name": "פונקציה 2"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "פוטנציאל לפתרון"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "name": "צייר להבה",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "צייר אש"
+          }
+        },
+        "courseC_artist_prog42022": {
+          "booster": {
+            "name": "מאיץ"
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "עשה משהו"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "עשה משהו"
+          },
+          "draw hexagon": {
+            "name": "צייר משושה"
+          },
+          "draw line of hexagons": {
+            "name": "צייר קו של משושים"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "צייר ריבוע"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "צייר כוכב"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "צייר כוכב"
+          }
+        },
+        "courseE_artist_functions72022": {
+          "draw a window": {
+            "name": "צייר חלון"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "עשה משהו"
+          },
+          "staggered squares": {
+            "name": "נענע מרובעים"
+          },
+          "draw a line of squares": {
+            "name": "צייר קו של מרובעים"
+          },
+          "draw square": {
+            "name": "צייר ריבוע"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "צייר ריבוע"
+          },
+          "do something": {
+            "name": "עשה משהו"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "draw a line of squares": {
+            "name": "צייר קו של מרובעים"
+          },
+          "draw square": {
+            "name": "צייר ריבוע"
+          },
+          "do something": {
+            "name": "עשה משהו"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "draw a line of squares": {
+            "name": "צייר קו של מרובעים"
+          },
+          "draw square": {
+            "name": "צייר ריבוע"
+          },
+          "do something": {
+            "name": "עשה משהו"
+          },
+          "staggered squares": {
+            "name": "נענע מרובעים"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "עשה משהו"
+          },
+          "draw triangle": {
+            "name": "צייר משולש"
+          },
+          "draw line of triangles": {
+            "name": "צייר קו של משולשים"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw hexagon": {
+            "name": "צייר משושה"
+          },
+          "draw line of hexagons": {
+            "name": "צייר קו של משושים"
+          },
+          "staggered squares": {
+            "name": "נענע מרובעים"
+          },
+          "draw a line of squares": {
+            "name": "צייר קו של מרובעים"
+          },
+          "draw square": {
+            "name": "צייר ריבוע"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "my design": {
+            "name": "העיצוב שלי"
+          },
+          "do something": {
+            "name": "עשה משהו"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "my design": {
+            "name": "העיצוב שלי"
+          },
+          "do something": {
+            "name": "עשה משהו"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "צייר ריבוע"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "draw line of polygons": {
+            "name": "צייר קו של מצולע"
+          },
+          "draw polygon": {
+            "name": "צייר מצולע"
+          },
+          "do something": {
+            "name": "עשה משהו"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
+          "pick along path": {
+            "name": "אסוף לאורך הדרך"
+          },
+          "check square for corn": {
+            "name": "בדוק ריבוע עבור תירס"
+          },
+          "get all pumpkins": {
+            "name": "הבא את כל הדלועים"
+          },
+          "pumpkin square": {
+            "name": "מרובע דלעת"
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "pick along path": {
+            "name": "אסוף לאורך הדרך"
+          },
+          "pumpkin square": {
+            "name": "מרובע דלעת"
+          },
+          "check square for corn": {
+            "name": "בדוק ריבוע עבור תירס"
+          },
+          "get produce": {
+            "name": "התחל לייצר"
+          },
+          "get all pumpkins": {
+            "name": "הבא את כל הדלועים"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "pick along path": {
+            "name": "אסוף לאורך הדרך"
+          },
+          "check for corn": {
+            "name": "בדוק עבור תירס"
+          },
+          "corn rectangle": {
+            "name": "ריבוע תירס"
+          },
+          "lettuce stairs": {
+            "name": "מדרגות חסה"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "בדוק ריבוע עבור תירס"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "בדוק ריבוע עבור תירס"
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": "בדוק ריבוע עבור תירס"
+          },
+          "get all pumpkins": {
+            "name": "הבא את כל הדלועים"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "pick along path": {
+            "name": "אסוף לאורך הדרך"
+          },
+          "check square for corn": {
+            "name": "בדוק ריבוע עבור תירס"
+          },
+          "get all pumpkins": {
+            "name": "הבא את כל הדלועים"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+            "name": "בדוק ריבוע עבור תירס"
+          },
+          "get all pumpkins": {
+            "name": "הבא את כל הדלועים"
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": "מרובע גינה"
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+            "name": "מרובע גינה"
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": "מרובע גינה"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "סיים המשחק"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "סיים המשחק"
+          }
+        },
+        "courseF_bee_for_challenge12022": {
+          "move and get nectar with counter": {
+            "name": "זוז ואסוף צוף עם מונה"
           }
         }
       }

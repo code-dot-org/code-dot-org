@@ -74,31 +74,6 @@ class JavalabView extends React.Component {
     this.props.appendOutputLog(javalabMsg.compiled());
   };
 
-  // Sends redux call to update dark mode, which handles user preferences
-  renderSettings = () => {
-    const {displayTheme, setDisplayTheme} = this.props;
-    const displayThemeString =
-      displayTheme === DisplayTheme.DARK
-        ? javalabMsg.displayThemeLightMode()
-        : javalabMsg.displayThemeDarkMode();
-
-    return [
-      <button
-        onClick={() =>
-          setDisplayTheme(
-            displayTheme === DisplayTheme.DARK
-              ? DisplayTheme.LIGHT
-              : DisplayTheme.DARK
-          )
-        }
-        key="theme-setting"
-        type="button"
-      >
-        {javalabMsg.switchToDisplayTheme({displayTheme: displayThemeString})}
-      </button>
-    ];
-  };
-
   // This controls the 'run' button state
   toggleRun = () => {
     const {canRun, isRunning, setIsRunning, onRun, onStop} = this.props;
@@ -278,7 +253,6 @@ class JavalabView extends React.Component {
                       isJavabuilderConnecting
                     }
                     onContinue={() => onContinue(isSubmittable)}
-                    renderSettings={this.renderSettings}
                     showTestButton={true}
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}

@@ -16,7 +16,7 @@
 class ContactRollupsProcessed < ApplicationRecord
   self.table_name = 'contact_rollups_processed'
 
-  DEFAULT_BATCH_SIZE = 10000
+  BATCH_SIZE = DCDO.get('batch_size_import_to_processed', 10000)
 
   # These JSON object keys are used to compile data from a contact_rollups_raw record
   # into a JSON object. They are shorten to single characters to reduce the size of
@@ -54,7 +54,7 @@ class ContactRollupsProcessed < ApplicationRecord
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param batch_size [Integer] number of records to save per INSERT statement.
   # @return [Hash] number of valid and invalid contacts (emails) in the raw table
-  def self.import_from_raw_table(batch_size = DEFAULT_BATCH_SIZE)
+  def self.import_from_raw_table(batch_size = BATCH_SIZE)
     valid_contacts = 0
     invalid_contacts = 0
 
@@ -242,7 +242,7 @@ class ContactRollupsProcessed < ApplicationRecord
     roles.add 'CSP Teacher' if courses.any? {|course| course&.start_with? 'csp'}
     roles.add 'CSA Teacher' if courses.any? {|course| course&.start_with? 'csa'}
 
-    # @see Script model, csf?, csd? and csp? methods
+    # @see Unit model, csf?, csd? and csp? methods
     curricula = extract_field contact_data, 'dashboard.sections', 'curriculum_umbrella'
     roles.add 'CSF Teacher' if curricula.any?('CSF')
     roles.add 'CSD Teacher' if !roles.include?('CSD Teacher') && curricula.any?('CSD')

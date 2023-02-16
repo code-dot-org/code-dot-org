@@ -23,6 +23,12 @@
         "playlab/Play Lab": {
           "name": "Play Lab"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
         },
@@ -46,6 +52,30 @@
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "Osnove Računalništva"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Relejsko programiranje"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Napiši pesem"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Premakni se, premakni"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Veseli zemljevidi"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Veliki dogodek"
         },
         "csd3-2022/Variables": {
           "name": "Spremenljivke"

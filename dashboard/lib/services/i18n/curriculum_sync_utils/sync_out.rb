@@ -66,11 +66,11 @@ module Services
                   relative_position: route_params[:position].to_i,
                 ).select(&:numbered_lesson?)
               if lessons.count == 0
-                STDERR.puts "Could not find lesson for url #{lesson_url.inspect}"
+                warn "Could not find lesson for url #{lesson_url.inspect}"
                 next
               end
               if lessons.count > 1
-                STDERR.puts "More than one lesson found for url #{lesson_url.inspect}. This should be investigated."
+                warn "More than one lesson found for url #{lesson_url.inspect}. This should be investigated."
                 next
               end
               lesson = lessons.first
@@ -79,13 +79,34 @@ module Services
             result[:lessons] = rekeyed_lessons.compact.to_h
           end
 
+          # Same case as lessons for reference_guides
+          if result.key?(:reference_guides)
+            rekeyed_reference_guides = result[:reference_guides].map do |reference_guide_url, reference_guide_data|
+              route_params = Rails.application.routes.recognize_path(reference_guide_url)
+              # :course_course_name param is generated with ReferenceGuide.course_offering_version.
+              # Reversing that to look up the object.
+              split_course_name = route_params[:course_course_name].split("-")
+              course_version_key = split_course_name.pop
+              course_offering_key = split_course_name.join("-")
+              reference_guide = CourseOffering.find_by_key(course_offering_key).
+                course_versions.find_by_key(course_version_key).
+                reference_guides.find_by_key(route_params[:key])
+              if reference_guide.nil?
+                warn "Could not find reference_guide for url #{reference_guide_url.inspect}"
+                next
+              end
+              [Services::GloballyUniqueIdentifiers.build_reference_guide_key(reference_guide), reference_guide_data]
+            end
+            result[:reference_guides] = rekeyed_reference_guides.compact.to_h
+          end
+
           # We also provide URLs to the translators for Resources only; because
           # the sync has a side effect of applying Markdown formatting to
           # everything it encounters, we want to make sure to un-Markdownify
           # these URLs
           if result.key?(:resources)
             result[:resources].each do |_key, resource|
-              next unless resource[:url].present?
+              next if resource[:url].blank?
               resource[:url].strip!
               resource[:url].delete_prefix!('<')
               resource[:url].delete_suffix!('>')

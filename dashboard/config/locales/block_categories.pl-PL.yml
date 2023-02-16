@@ -5,6 +5,7 @@ pl:
       Actions: Działania
       Advanced: Zaawansowane
       Behaviors: Zachowanie
+      'Behaviors ': 'Zachowania '
       Boolean: Wartość logiczna
       Brushes: Pędzle
       Category: Kategoria
@@ -14,6 +15,7 @@ pl:
       Conditionals: Zdania z warunkami
       Dancers: Tancerze
       Default: Domyślne
+      Effects: Efekty
       Events: Zdarzenia
       Functions: Funkcje
       'Functions ': 'Funkcje '

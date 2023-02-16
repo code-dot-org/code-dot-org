@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-food",
-    "serialized_at": "2022-03-11 12:08:38 UTC",
+    "serialized_at": "2022-09-13 19:03:58 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,6 +60,7 @@
       "key": "a653c76e-8536-4e82-adad-98306fc15f07",
       "position": 1,
       "properties": {
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -73,6 +74,7 @@
       "key": "48bd058b-2012-4d4a-9fba-52d20d8a922f",
       "position": 2,
       "properties": {
+        "duration": 40,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -86,6 +88,7 @@
       "key": "ae872c5e-1b66-4026-b2d7-e26574ff8b57",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {

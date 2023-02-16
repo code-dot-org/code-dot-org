@@ -26,9 +26,6 @@
         "gumball/Gumball Play Lab": {
           "name": "Gumball Pelilabra"
         },
-        "dance/Dance Party": {
-          "name": "Tanssibileet"
-        },
         "aquatic/Aquatic": {
           "name": "Minecraft: Merellinen matka"
         },
@@ -41,6 +38,12 @@
         "playlab/Play Lab": {
           "name": "Pelilabra"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disneyn Infinity-Pelilabra"
         },
@@ -51,7 +54,7 @@
           "name": "Kooditunti 2013"
         },
         "dance-2019/Dance Party": {
-          "name": "Tanssibileet (2019)"
+          "name": "Tanssibileet"
         },
         "k5-onlinepd-2019/Loops": {
           "name": "Silmukat"
@@ -76,6 +79,48 @@
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "Tietojenkäsittelyn Perusteet"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Releohjelmointi"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internetti"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Liikuta, liikuta"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "express-2022/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Iloiset kartat"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binäärikorut"
         },
         "csd3-2022/Variables": {
           "name": "Muuttujat"

@@ -29,11 +29,11 @@ social:
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Hackathons and competitions</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
-<a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/events/" target="_blank">
+<a class="linktag" id="bcg-hackathons" href="https://wearebgc.org/events/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/black_girls_code.png" alt="Black Girls CODE logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/events/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls Code hackathons</strong></h3></a>
+  <a class="linktag" id="bcg-hackathons" href="https://wearebgc.org/events/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls Code hackathons</strong></h3></a>
   <p>Community oriented "girls only" hackathons for girls between the ages of 12 and 17. Students participate in creating solutions to social issues within their communities while they build their skills, confidence, experience and have lots of fun!</p>
   <p><i>Check event calendar for dates.</i></p>
 </div>
@@ -80,6 +80,17 @@ social:
   <a class="linktag" id="microsoft-imagine-cup" href="https://imaginecup.microsoft.com/en-us/junior" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Microsoft’s Imagine Cup Jr.</strong></h3></a>
   <p>This global AI for Good challenge introduces students to Microsoft’s AI for Good initiatives, empowering them to solve a problem in the world with the power of AI.</p>
   <p><i>Submission deadline is May 21.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="nasa-appdev" href="http://www.nasa.gov/education/appchallenge" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/nasa-adc.png" alt="Logo for NASA App Development Challenge">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="nasa-appdev" href="http://www.nasa.gov/education/appchallenge" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>NASA App Development Challenge</strong></h3></a>
+  <p>The NASA App Development Challenge (ADC) is a coding challenge in which NASA presents technical problems to middle and high school students seeking student contributions to future deep space exploration missions. By responding to the ADC, students take a part directly in the Artemis Generation endeavors to land American astronauts, including the first woman and first person of color on the Moon.</p>
+  <p><i>Team registration closes September 28th.</i></p>
 </div>
 <div style="clear:both"></div>
 <br>

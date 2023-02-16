@@ -227,12 +227,6 @@
           UNIT:
             '"measures"': takter
             '"seconds"': sekunder
-      Dancelab_everySecondsRange:
-        text: 'hver {N} {UNIT} fra {START} til {STOP} '
-        options:
-          UNIT:
-            measures: Takter
-            seconds: Sekunder
       Dancelab_everyVerseChorus:
         text: 'hver {UNIT} '
         options:
@@ -898,6 +892,13 @@
         text: oppsett
       Dancelab_whenSetup2:
         text: oppsett
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn
       gamelab_addTarget:
         options:
           OPT:
@@ -1115,6 +1116,10 @@
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": Hopp
+      gamelab_playSoundOptionsSoccer:
+        text: spillLyd {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: spillLyd {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1472,6 +1477,8 @@
             '"sound://category_bell/long_bell_notification.mp3"': Bjelle
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bobble
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Hopp
+      Poetry_playSoundOptionsSpace:
+        text: spillLyd {SOUND}
       Poetry_setBackground:
         text: sett bakgrunnsfarge {COLOR}
       Poetry_setBackgroundEffect:
@@ -1509,6 +1516,11 @@
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: gå fremover
       RyanLab_turnLeft:
@@ -1659,3 +1671,10 @@
           DIR:
             right: høyre ↻
             left: venstre ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn

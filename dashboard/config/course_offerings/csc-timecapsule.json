@@ -1,7 +1,11 @@
 {
   "key": "csc-timecapsule",
-  "display_name": "csc-timecapsule",
-  "category": "other",
-  "is_featured": false,
-  "assignable": true
+  "display_name": "Time Capsule Module",
+  "category": "csc",
+  "is_featured": true,
+  "assignable": true,
+  "curriculum_type": null,
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": null
 }

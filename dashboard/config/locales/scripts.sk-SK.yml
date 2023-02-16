@@ -1894,6 +1894,10 @@ sk:
             required:
               display_name: Prehľad
         dance-2019:
+          title: Tanečná Párty
+          description_short: Nakódujte tanečnú párty a zdieľajte ju so svojimi priateľmi.
+            Vystupujú Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba
+            z Disney rozprávky „Encanto“ atď.!
           description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         k5-onlinepd-2019:
@@ -2884,13 +2888,43 @@ sk:
               display_name: Dotazník
         aiml-2021:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1 – Ako funguje strojové učenie
+            lessonGroup-3:
+              display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
             lessonGroup-4:
               display_name: Dotazník
         csd7-2021:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1 – Ako funguje strojové učenie
+            lessonGroup-3:
+              display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
             lessonGroup-4:
               display_name: Dotazník
           title: Umelá inteligencia a strojové učenie
+          description: "7.  tematický celok je praktickým úvodom do vytvárania modelov
+            strojového učenia pomocou tabuľkových údajov. Žiaci zistia, ako sa počítače
+            na základe údajov učia robiť rozhodnutia, a následne budú pracovať na
+            vlastných projektoch strojového učenia, pri ktorých sa budú využívať údaje
+            z reálneho sveta. Na záver tohto tematického celku si vytvoria vlastnú
+            aplikáciu tak, aby pomocou strojového učenia riešila problém, ktorý je
+            pre nich osobne relevantný.\n\n**Pokyny k 7. tematickému celku**\n\n-
+            \  Kým začnete robiť tento tematický celok, spravte 1. kapitolu v 1. tematickom
+            celku.\n-   V tomto tematickom celku sa predpokladá, že žiaci už poznajú
+            App Lab, konkrétne vedia využívať dizajnovací režim na vytváranie používateľského
+            rozhrania a vedia využívať udalosti na to, aby sa po kliknutí na tlačidlo
+            zmenila obrazovka. [Kliknite sem](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview),
+            ak chcete získať viac odporúčaní, ako žiakom predstaviť App Lab pred začatím
+            tohto tematického celku.\n-   Toto je voliteľný tematický celok, ktorým
+            môžete nahradiť iný tematický celok z kurzu Objavujeme informatiku. Viac
+            informácií nájdete v [Implementačnej príručke](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview).\n-
+            \  Viac informácií o tomto tematickom celku nájdete v [Príručke k osnovám](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
+            \n\n**Profesijný rozvoj:** Ak máte záujem vyučovať tento kurz, odporúčame
+            najprv si prejsť bezplatný [Samostatný modul zameraný na profesijný rozvoj
+            v oblasti umelej inteligencie a strojového učenia](https://studio.code.org/s/self-paced-pl-csd5-2021).
+            Modul je navrhnutý tak, aby jeho absolvovanie zabralo iba 2 hodiny. Nevyžadujú
+            sa v ňom žiadne predchádzajúce skúsenosti s programovaním ani umelou inteligenciou."
           student_description: 7. tematický celok je praktickým úvodom do vytvárania
             modelov strojového učenia pomocou tabuľkových údajov. Zistíš, ako sa počítače
             na základe údajov učia robiť rozhodnutia, a následne budeš pracovať na
@@ -3103,6 +3137,8 @@ sk:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        ai-ethics-2021:
+          description_audience: Ročníky 6-9
         poem-art-2021:
           title: Básnické umenie
         hello-world-food-2021:
@@ -3383,6 +3419,10 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Začíname
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3623,6 +3663,9 @@ sk:
             učebných osnov
           description: Na prípravu aktualizácií hodín alebo úrovní medzi verziami
             učebných osnov
+          lessons:
+            lesson-7:
+              name: Predstavenie "sprite" objektov
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3675,6 +3718,10 @@ sk:
               display_name: Dotazník
         csd7-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1 – Ako funguje strojové učenie
+            lessonGroup-3:
+              display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
             lessonGroup-4:
               display_name: Dotazník
         csd6-2022:
@@ -3691,5 +3738,247 @@ sk:
           student_description: Tento modul  obsahuje prieskum po dokončení tvojej
             vyučovacej hodiny modulov CS Discoveries. Tvoj učiteľ ti povie, kedy je
             čas vyplniť tento prieskum.
+        aiml-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1 – Ako funguje strojové učenie
+            lessonGroup-3:
+              display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Rozšírenie asynchrónneho ladenia
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modul 2 Asynchrónna práca
         soccer:
           name: futbal
+          title: Nakódujte si svoj vlastný futbalový zápas
+          description_short: Vyrob si futbalový zápas
+          description: Vyrob si futbalový zápas
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Dotazník
+            lessonGroup-2:
+              display_name: Obsah
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Dotazník
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Cykly
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dotazník
+            lessonGroup-3:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Alternatívne lekcie
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Premenné
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Jednorozmerné (1D) polia
+            lesson-3:
+              name: Cykly "Pre"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
+        hello-world-space-2022:
+          title: 'Ahoj Svet: Vesmír'
+        hello-world-soccer-2022:
+          title: 'Ahoj Svet: Futbal'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Riešenie problémov
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+          title: Nadizajnuj svoj projekt
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba hier'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Fyzické výpočty
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Umelá inteligencia a strojové učenie
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Čo je to za zvuk?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+            csp_unit1_2020:
+              display_name: "(staré) Lekcia 2: Digitálne informácie"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(staré) Lekcia 2: Internet"
+          description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby
+            medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
+          student_description: Táto lekcia vám odhalí ako je internet nadizajnovaný
+            tak, aby medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
+          description_short: Vystavajte si internet od základov pomocou internetového
+            simulátora
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Premenné
+            csp_conditionals:
+              display_name: Podmienené príkazy
+            csp_functions:
+              display_name: Funkcie
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Dáta
+            csp_loops:
+              display_name: Cykly
+            csp_traversals:
+              display_name: Prechody
+            csp_project:
+              display_name: Projekt
+            lessonGroup-5:
+              display_name: Hodnotenie kurzu
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Zoznamy
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
+            lessonGroup-3:
+              display_name: Cykly
+            lessonGroup-4:
+              display_name: Prechody
+            lessonGroup-5:
+              display_name: Projekt
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametre a Hodnoty návratnosti
+            csp_libraries:
+              display_name: Knižnice
+            lessonGroup-3:
+              display_name: Hodnotenie kurzu
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Hodnotenie kurzu
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(staré) Lekcia 9: Údaje"
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
+        csp-playground:
+          description_audience: Autori osnov
+          description_short: Na prípravu aktualizácií hodín alebo úrovní medzi verziami
+            učebných osnov
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Labu
+            lessonGroup-3:
+              display_name: Vstupy a výstupy

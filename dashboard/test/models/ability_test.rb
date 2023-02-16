@@ -65,8 +65,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -102,8 +102,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -139,8 +139,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -176,8 +176,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     refute ability.can?(:read, @in_development_script)
     assert ability.can?(:read, @public_teacher_to_student_unit)
@@ -220,8 +220,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     refute ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -257,8 +257,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -297,8 +297,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -342,8 +342,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -383,8 +383,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -423,15 +423,15 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, Activity)
     assert ability.cannot?(:read, Game)
     assert ability.cannot?(:read, Level)
-    assert ability.cannot?(:read, Script)
+    assert ability.cannot?(:read, Unit)
     assert ability.cannot?(:read, ScriptLevel)
     assert ability.cannot?(:read, UserLevel)
     assert ability.cannot?(:read, UserScript)
     assert ability.cannot?(:destroy, Game)
     assert ability.cannot?(:destroy, Level)
     assert ability.cannot?(:destroy, Activity)
-    assert ability.cannot?(:read, Script.find_by_name('ECSPD'))
-    assert ability.cannot?(:read, Script.find_by_name('flappy'))
+    assert ability.cannot?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.cannot?(:read, Unit.find_by_name('flappy'))
 
     assert ability.cannot?(:read, @public_teacher_to_student_unit)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
@@ -477,8 +477,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    assert ability.can?(:read, Script.find_by_name('ECSPD'))
-    assert ability.can?(:read, Script.find_by_name('flappy'))
+    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -559,7 +559,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     refute ability.can?(:manage, Game)
     refute ability.can?(:manage, Level)
-    refute ability.can?(:manage, Script)
+    refute ability.can?(:manage, Unit)
     refute ability.can?(:manage, Lesson)
     refute ability.can?(:manage, ReferenceGuide)
     refute ability.can?(:manage, ScriptLevel)
@@ -574,7 +574,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:manage, Game)
     assert ability.can?(:manage, Level)
-    assert ability.can?(:manage, Script)
+    assert ability.can?(:manage, Unit)
     assert ability.can?(:manage, Lesson)
     assert ability.can?(:manage, ReferenceGuide)
     assert ability.can?(:manage, ScriptLevel)

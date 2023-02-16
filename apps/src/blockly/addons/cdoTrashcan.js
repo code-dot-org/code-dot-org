@@ -30,8 +30,8 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     const svg = this.workspace.getParentSvg();
     this.container = Blockly.utils.dom.createSvgElement(Blockly.utils.Svg.SVG);
     this.container.style.visibility = 'hidden';
-    this.position(this.workspace.getMetricsManager().getUiMetrics());
     this.createTrashcanSvg();
+    this.position(this.workspace.getMetricsManager().getUiMetrics());
 
     svg.parentNode.insertBefore(this.container, svg);
 
@@ -55,11 +55,6 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       Blockly.utils.Svg.G,
       {class: 'blocklyTrash'},
       this.container
-    );
-    const left = Blockly.cdoUtils.getToolboxWidth() / 2 - WIDTH / 2;
-    this.svgGroup_.setAttribute(
-      'transform',
-      `translate(${left}, ${MARGIN_TOP})`
     );
 
     // trashcan body
@@ -167,24 +162,16 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         toolboxVisibility = 'hidden';
       }
 
-      /**
-       * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
-       * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
-       */
-      Array.prototype.forEach.call(
-        // query selector for uncategorized toolbox contents
-        document.querySelectorAll('.blocklyFlyout .blocklyWorkspace'),
-        function(x) {
+      // query selector for uncategorized toolbox contents
+      document
+        .querySelectorAll('.blocklyFlyout .blocklyWorkspace')
+        .forEach(x => {
           x.style.visibility = toolboxVisibility;
-        }
-      );
-      Array.prototype.forEach.call(
-        // query selector for categorized toolbox contents
-        document.querySelectorAll('.blocklyToolboxContents'),
-        function(x) {
-          x.style.visibility = toolboxVisibility;
-        }
-      );
+        });
+      // query selector for categorized toolbox contents
+      document.querySelectorAll('.blocklyToolboxContents').forEach(x => {
+        x.style.visibility = toolboxVisibility;
+      });
 
       this.container.style.visibility = trashcanVisibility;
 
@@ -205,16 +192,28 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
   /**
    * IPositionable method
-   * Positions the element. Called when the window is resized.
+   * Positions the container and the trashcan itself. Called when the window is resized and on initialization.
    * @param {!Blockly.MetricsManager.UiMetrics} metrics The workspace metrics.
    */
   position(metrics) {
+    const toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
+
+    // Position container
     this.container.style.height = `${metrics.viewMetrics.height}px`;
-    this.container.style.width = `${Blockly.cdoUtils.getToolboxWidth()}px`;
-    this.container.style.left = '0px';
+    this.container.style.width = `${toolboxWidth}px`;
+    this.container.style.left = this.workspace.RTL
+      ? `${metrics.viewMetrics.width}px`
+      : '0px';
     this.container.style.top = '0px';
     this.container.style.position = 'absolute';
     this.container.style.zIndex = '75';
+
+    // Position trashcan within container
+    const left = toolboxWidth / 2 - WIDTH / 2;
+    this?.svgGroup_.setAttribute(
+      'transform',
+      `translate(${left}, ${MARGIN_TOP})`
+    );
   }
 
   /**

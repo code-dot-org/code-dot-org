@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Feilsøking"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Feilsøking"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Betingelser"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Feilsøking"
         },
         "loops/aquatic/unversioned": {
           "word": "Løkker"
@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Feilsøking"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kode"
         },
@@ -67,6 +75,81 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Feilsøking"
+        },
+        "debugging/coursed/2022": {
+          "word": "Feilsøking"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Betingelser"
+        },
+        "variable/coursef/2022": {
+          "word": "Variabel"
+        },
+        "input/coursef/2022": {
+          "word": "Inngang"
+        },
+        "internet/coursef/2022": {
+          "word": "Internett"
+        },
+        "define/coursef/2022": {
+          "word": "Definer"
+        },
+        "function/coursee/2022": {
+          "word": "Funksjon"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Betingelser"
+        },
+        "copyright/coursee/2022": {
+          "word": "Opphavsrett"
+        },
+        "define/coursee/2022": {
+          "word": "Definer"
+        },
+        "debugging/courseb/2022": {
+          "word": "Feilsøking"
+        },
+        "drop/courseb/2022": {
+          "word": "Dropp"
+        },
+        "debugging/express/2022": {
+          "word": "Feilsøking"
+        },
+        "sequencing/express/2022": {
+          "word": "Sekvensiering"
+        },
+        "conditionals/express/2022": {
+          "word": "Betingelser"
+        },
+        "function/express/2022": {
+          "word": "Funksjon"
+        },
+        "variable/express/2022": {
+          "word": "Variabel"
+        },
+        "define/express/2022": {
+          "word": "Definer"
+        },
+        "drop/pre-express/2022": {
+          "word": "Dropp"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Feilsøking"
+        },
+        "debugging/coursea/2022": {
+          "word": "Feilsøking"
+        },
+        "drop/coursea/2022": {
+          "word": "Dropp"
+        },
+        "debugging/coursec/2022": {
+          "word": "Feilsøking"
+        },
+        "sequencing/coursec/2022": {
+          "word": "Sekvensiering"
+        },
+        "binary/coursec/2022": {
+          "word": "Binær"
         },
         "input/csd/2022": {
           "word": "Inngang"
@@ -90,7 +173,24 @@
           "word": "Opphavsrett"
         },
         "code/poem-art/unversioned": {
-          "word": "Kode"
+          "word": "Kode",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Variabel"

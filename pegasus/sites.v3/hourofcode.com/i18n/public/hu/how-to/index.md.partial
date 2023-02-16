@@ -10,9 +10,9 @@ nav: how_to_nav
 
 ### Csatlakozz a mozgalomhoz ,és tarts egy bevezető számítástechnikai órát egy csoport diáknak a következő lépések szerint.
 
-A számítástechnikai gondolkodás fejleszti a problémamegoldó képességeket, a logikus gondolkodást és a kreativitást. A technológia átalakít minden iparágat a világon. A diákoknak ma nem csak a technológia használatát kell megtanulniuk, hanem azt is, hogy hogyan kell a technológiát létrehozni. Aki korán megismerkedik a számítástechnikával, az a szamai sikerét alapozza meg a 21. században.
+A diákoknak ma nem csak a technológia használatát kell megtanulniuk, hanem azt is, hogy hogyan kell a technológiát létrehozni.
 
-A Kódolás órája segítségével egyszerűen és szórakoztató módon lehet a diákokat bevezetni a számítástechnika világába, mi több, tökéletesen beleilleszthető egy tanórába, illetve az iskola utáni tevékenységekbe. Ha még van kérdések, nézd meg a [résztvevőknek szóló útmutatót]({{ localized_files/participation_guide }}).
+A Kódolás órájának a kipróbálásával egyszerűen és szórakoztatva ismertetheted meg a gyermeked az informatikával, és talán ez lesz az első alkalom. Keress egy, a környezetedbe illeszkedő tevékenységet, lehez az tanórai vagy iskolán kívüli, személyes vagy virtuális. Ha az alábbi lépések megismerése után még van kérdésed, nézd meg az [Útmutató résztvevőknek]({{ localized_files/participation_guide }}}) c. kiadványunkat:
 
 - [Nézd meg a Kódolás órája videót](#how-to-video)
 - [Fedezz fel tevékenységeket és a gyakorlatokat](#explore-activities)
@@ -22,8 +22,6 @@ A Kódolás órája segítségével egyszerűen és szórakoztató módon lehet 
 - [Kezdj kódolni](#code)
 - [Ünnepeld a diákjaid sikerét](#celebrate)
 - [Egyéb, Kódolás órája forrásanyagok oktatóknak](#other-resources)
-
-### Egy Kódolás óráját távolról is meg lehet tartani! Kezdésként tekintsd meg a [ tippjeinket, hogyan lehet egy Kódolás óráját megtartani](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -41,7 +39,7 @@ Számos élvezetes[tutorial videót biztosítunk]({{ urls/learn }}) minden koros
 
 Fedezd fel a tevékenységeket, és még időben dönts, hogy egyetlen tanfolyamot szeretnél választani minden tanulónak, vagy minden gyermek kiválaszthatja magának.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -60,7 +58,7 @@ Fedezd fel a tevékenységeket, és még időben dönts, hogy egyetlen tanfolyam
 
 ### Válassz napot és időpontot
 
-Az emberek szerte a világon csatlakoznak a Kódolás Órája rendezvényhez a CS Education Week alatt (december 9. és 13. között), amikor a legújabb oktatóanyagok és tevékenységek megjelennek. De bármikor szervezhetsz Kódolás Óráját!
+A számítástechnika oktatásának a hetén (december 5-11.) világ minden részéből csatlakoznak emberek a Kódolás órája megünnepeléséhez, ekkor jelennek meg a legújabb oktatóprogramok és tevékenységek. De bármikor szervezhetsz Kódolás Óráját!
 
 * * *
 
@@ -76,11 +74,11 @@ Terjeszd a Kódolás óráját más tanároknak, akik talán örömmel csatlakoz
 
 ### Tájékoztasd a pedagógiai asszisztenseket, regisztráljanak az eseményre
 
-Amikor regisztrálsz [sign-up your Hour of Code event](/), a Kódolás Órája eseményre, kapni fogsz hasznos e-mailes üzeneteket, hírekkel és tippekkel a sikeres eseményszervezéshez. Abban is segít hogy replikáld az infót arról hogy iskolád ilyenben részt vesz. Az önkéntesek nagyszerű forrást jelenthetnek, és eljöhetnek az osztályunkba a számítástechnikáról beszélni, vagy egyszerűen csak segíthetnek tanulóknak a Kódolás órája tevékenységekben.
+Miután [regisztrálsz egy Kódolás órájára](/#csatlakozás), e-mail üzeneteket fogsz kapni, amelyben híreket küldünk és hasznos ötleteket adunk ahhoz, hogy Kódolás óráját eredményesen meg tudjátok tartani. Abban is segít hogy replikáld az infót arról hogy iskolád ilyenben részt vesz. Az önkéntesek nagyszerű forrást jelenthetnek, és eljöhetnek az osztályunkba a számítástechnikáról beszélni, vagy egyszerűen csak segíthetnek tanulóknak a Kódolás órája tevékenységekben.
 
 ### Csigázd fel őket!
 
-Vezesse fel az eseményt [ inspiráló videók ](/promote/resources) megosztásával, amelyek különféle embereket és kreatív módszereket emelnek ki a számítástechnika számára. Vagy rendelj inspiráló plakátokat az osztályterembe! A diákok jobban motiváltak a részvételre egy tantárgyban ha olyan embereket látnak, akik bátorítják őket.
+Vezesse fel az eseményt [ inspiráló videók ](/promote/resources) megosztásával, amelyek különféle embereket és kreatív módszereket emelnek ki a számítástechnika számára. Vagy nyomtass inspiráló posztereket az osztályod számára! A diákok jobban motiváltak a részvételre egy tantárgyban ha olyan embereket látnak, akik bátorítják őket.
 
 {{ promote_new_posters }}
 
@@ -115,7 +113,7 @@ Nem baj, ha számodra és a tanulók számára is újdonság a számítástechni
 
 Vezesd a tanulókat a tevékenységhez
 
-- Írd fel a gyakorlat linkjét a táblára. A linket megtalálod a [kiválasztott gyakorlatra vonatkozó információk]({{ urls/learn }}) között, a résztvevők száma alatt.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Ha a tanulóknak nehézségeik vannak, lehet így reagálni:
 
@@ -142,7 +140,6 @@ Mi történjen, ha egy tanuló korábban végez?
 
 - [Nyomtass bizonyítványokat]({{ urls/certificates }}) a résztvevőknek és diákoknak.
 - [Nyomtass "Megcsináltam a Kódolás Óráját!"]({{ urls/promote_stickers }}) matricákat.
-- [Rendeljen személyre szabott pólókat](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) az iskolának.
 - Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 
 * * *
@@ -156,6 +153,6 @@ Mi történjen, ha egy tanuló korábban végez?
 
 ### Mi jön a "Hour of Code" esemény után?
 
-A számítástechnikának nincs vége a Kódolás órájával! Tantervünk webalapú és bármikor ingyenesen használható. [hogyan lehet](/beyond) a számítástechnikát bevinni az iskolába és a diákok közé.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

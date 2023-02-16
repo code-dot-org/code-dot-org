@@ -2,6 +2,12 @@
   "ku-IQ": {
     "data": {
       "lessons": {
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "k5-onlinepd-2019/Loops": {
           "name": "گرێکان"
         },
@@ -13,6 +19,18 @@
         },
         "k5-onlinepd-2019/Variables": {
           "name": "گۆڕاوەکان"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ"
+        },
+        "coursef-2022/The Internet": {
+          "name": "ئینتەرنێت"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "نەخشەی دڵخۆش"
         },
         "csd3-2022/Variables": {
           "name": "گۆڕاوەکان"

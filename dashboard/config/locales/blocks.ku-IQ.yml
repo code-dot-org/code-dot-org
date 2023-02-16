@@ -197,12 +197,6 @@ ku:
         options:
           UNIT:
             '"measures"': پێوانەکان
-      Dancelab_everySecondsRange:
-        text: 'سەرجەم {N} {UNIT} لە {START} تا {STOP} '
-        options:
-          UNIT:
-            measures: پێوانەکان
-            seconds: چرکە
       Dancelab_everyVerseChorus:
         text: 'هەر {UNIT} '
         options:
@@ -826,6 +820,11 @@ ku:
         text: دامەزراندن
       Dancelab_whenSetup2:
         text: دامەزراندن
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': بڵق
+            '"confetti"': بڕشتی کاغەز
       gamelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -988,6 +987,10 @@ ku:
           SOUND:
             "'sound://category_animals/bear.mp3'": وورچ
             "'sound://category_animals/dolphin.mp3'": دۆلفین
+      gamelab_playSoundOptionsSoccer:
+        text: دەنگ هەڵکەر {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: دەنگ هەڵکەر {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1314,6 +1317,8 @@ ku:
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': خاو
       Poetry_playSound:
         text: دەنگ هەڵکەر {SOUND}
+      Poetry_playSoundOptionsSpace:
+        text: دەنگ هەڵکەر {SOUND}
       Poetry_setBackground:
         text: ڕەنگی پاشبنەما دیاریبکە {COLOR}
       Poetry_setBackgroundEffect:
@@ -1347,6 +1352,11 @@ ku:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       SpriteLab2Beta_spriteSay:
         text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
       Vector_createSpriteWith:
@@ -1507,5 +1517,10 @@ ku:
           DIR:
             right: بۆ لای ڕاست ↻
             left: بۆ لای چەپ ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': بڵق
+            '"confetti"': بڕشتی کاغەز
       validation_validatedBackground:
         text: پاشبنەما دابنێ {IMG}

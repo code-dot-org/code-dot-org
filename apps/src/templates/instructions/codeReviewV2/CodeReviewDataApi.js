@@ -99,7 +99,7 @@ export default class CodeReviewDataApi {
             });
           } else {
             $.ajax({
-              url: `/code_review_notes`,
+              url: `/code_review_comments`,
               type: 'POST',
               headers: {'X-CSRF-Token': this.token},
               data: {
@@ -118,7 +118,7 @@ export default class CodeReviewDataApi {
   toggleResolveComment(commentId, isResolved) {
     return new Promise((resolve, reject) => {
       $.ajax({
-        url: `/code_review_notes/${commentId}`,
+        url: `/code_review_comments/${commentId}`,
         type: 'PATCH',
         headers: {'X-CSRF-Token': this.token},
         data: {isResolved}
@@ -130,7 +130,7 @@ export default class CodeReviewDataApi {
 
   deleteCodeReviewComment(commentId) {
     return $.ajax({
-      url: `/code_review_notes/${commentId}`,
+      url: `/code_review_comments/${commentId}`,
       type: 'DELETE',
       headers: {'X-CSRF-Token': this.token}
     });

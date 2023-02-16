@@ -16,9 +16,6 @@ require 'test_helper'
 
 class RegistrationsControllerTest < ActionController::TestCase
   setup do
-    # stub properties so we don't try to hit pegasus db
-    Properties.stubs(:get).returns nil
-
     @default_params = {
       name: 'A name',
       password: 'apassword',
@@ -243,7 +240,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_redirected_to '/'
 
       assert_equal 'A name', assigns(:user).name
-      assert_equal 'F', assigns(:user).gender
+      assert_equal 'f', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
@@ -266,7 +263,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_redirected_to '/'
 
       assert_equal 'A name', assigns(:user).name
-      assert_equal 'F', assigns(:user).gender
+      assert_equal 'f', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
@@ -339,8 +336,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal 'Welcome to Code.org!', mail.subject
-    assert mail.body.to_s =~ /Hadi Partovi/
-    assert mail.body.to_s =~ /New to teaching computer science/
+    assert mail.body.to_s.include?('Hadi Partovi')
+    assert mail.body.to_s.include?('New to teaching computer science')
   end
 
   test "create new teacher with non-us ip sends email without us content" do
@@ -352,8 +349,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal 'Welcome to Code.org!', mail.subject
-    assert mail.body.to_s =~ /Hadi Partovi/
-    refute mail.body.to_s =~ /New to teaching computer science/
+    assert mail.body.to_s.include?('Hadi Partovi')
+    refute mail.body.to_s.include?('New to teaching computer science')
   end
 
   test 'create new teacher with es-MX locale sends localized welcome email' do

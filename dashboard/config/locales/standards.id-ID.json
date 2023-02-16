@@ -217,6 +217,243 @@
         },
         "csta/1B-DA-07": {
           "description": "Menggunakan data untuk menyoroti atau mengajukan hubungan sebab-akibat, memprediksi hasil, atau menyampaikan gagasan."
+        },
+        "1B-DA-07": {
+          "description": "Menggunakan data untuk menyoroti atau mengajukan hubungan sebab-akibat, memprediksi hasil, atau menyampaikan gagasan."
+        },
+        "1B-IC-18": {
+          "description": "Bahas teknologi komputasi yang telah mengubah dunia dan nyatakan Bagaimana teknologi memengaruhi, dan dipengaruhi oleh, praktik budaya."
+        },
+        "3A-DA-10": {
+          "description": "Mengevaluasi tradeoff (pergantian) dalam cara mengatur elemen data serta lokasi penyimpanannya."
+        },
+        "3A-NI-06": {
+          "description": "Rekomendasikan langkah keamanan untuk menghadapi berbagai skenario berdasarkan faktor-faktor seperti efisiensi, kelayakan, dan dampak etis."
+        },
+        "3A-NI-07": {
+          "description": "Bandingkan berbagai langkah keamanan, dengan mempertimbangkan pertukaran antara kegunaan dan keamanan sistem komputer."
+        },
+        "3B-NI-04": {
+          "description": "Bandingkan cara-cara pengembang perangkat lunak dalam melindungi perangkat dan informasi dari akses yang tidak sah."
+        },
+        "DAT-1.D.1": {
+          "description": "Kompresi data dapat mengurangi ukuran (jumlah bit) dari data yang dikirimkan atau disimpan."
+        },
+        "DAT-1.D.2": {
+          "description": "Bit yang lebih kecil tidak selalu berarti informasi yan lebih sedikit."
+        },
+        "DAT-1.D.3": {
+          "description": "Jumlah pengurangan ukuran dari kompresi tergantung pada jumlah redundansi dalam representasi data asli serta algoritma kompresi yang digunakan."
+        },
+        "DAT-1.D.4": {
+          "description": "Algoritma kompresi data lossless biasanya dapat mengurangi jumlah bit yang disimpan atau ditransmisikan, serta dapat menjamin rekonstruksi lengkap dari data yang asli."
+        },
+        "IOC-2.B.5": {
+          "description": "Enkripsi adalah proses penyandian data untuk mencegah akses tanpa izin. Dekripsi adalah proses decoding (membaca sandi) data. Dua pendekatan enkripsi yang umum adalah: ●       Enkripsi symmetric key melibatkan satu key untuk enkripsi dan dekripsi.●       Enkripsi public key menggunakan public key untuk enkripsi dan private key untuk dekripsi. Pengirim tidak memerlukan private key penerima untuk mengenkripsi pesan, akan tetapi private key penerima diperlukan untuk mendekripsi pesan. PERNYATAAN PENGECUALIAN (EKIOC-2.B.5): Prosedur matematika khusus untuk enkripsi dan dekripsi berada di luar lingkup kursus ini dan Ujian AP."
+        },
+        "CD.L1:3-01": {
+          "description": "Gunakan perangkat input dan output standar agar berhasil mengoperasikan komputer dan teknologi terkait."
+        },
+        "CI.L1:3-01": {
+          "description": "Terapkan kewargaan digital yang bertanggung jawab (perilaku hukum dan etika) dalam penggunaan sistem teknologi dan perangkat lunak."
+        },
+        "CL.L1:6-02": {
+          "description": "Gunakan materi pembelajaran online (yaitu, surel, diskusi online, lingkungan web yang kolaboratif) untuk berpartisipasi dalam aktivitas pemecahan masalah kolaboratif dengan tujuan mengembangkan solusi atau produk."
+        },
+        "CPP.L1:3-01": {
+          "description": "Gunakan materi pembelajaran teknologi untuk melakukan penelitian sesuai usia."
+        },
+        "CPP.L1:3-02": {
+          "description": "Gunakan materi pembelajaran multimedia sesuai dengan perkembangan (misalnya, buku interaktif dan perangkat lunak pendidikan) untuk mendukung pembelajaran lintas kurikulum."
+        },
+        "CPP.L1:3-04": {
+          "description": "Buat sederet pernyataan yang harus diterapkan untuk menyelesaikan tugas sederhana (misalnya, instruksi kura-kura)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Gunakan materi pembelajaran teknologi (misalnya, kalkulator, pemeriksaan pengumpulan data, perangkat seluler, video, perangkat lunak pendidikan, dan peralatan web) untuk pemecahan masalah dan pembelajaran mandiri."
+        },
+        "CPP.L1:6-06": {
+          "description": "Terapkan solusi masalah menggunakan bahasa pemrograman visual berbasis blok."
+        },
+        "CPP.L2:3": {
+          "description": "Rancang, kembangkan, terbitkan, dan sajikan produk (misalnya, halaman web, aplikasi seluler, animasi) menggunakan materi pembelajaran teknologi yang menunjukkan dan mengomunikasikan konsep kurikulum."
+        },
+        "CT.L2:1": {
+          "description": "Gunakan langkah-langkah dasar pemecahan masalah algorithm untuk merancang solusi (misalnya, pernyataan dan penelusuran masalah, pemeriksaan contoh sampel, desain, penerapan solusi, pengujian, dan evaluasi)."
+        },
+        "CT.L2:12": {
+          "description": "Gunakan abstraksi untuk menguraikan masalah menjadi submasalah."
+        },
+        "CT.L2:6": {
+          "description": "Uraikan dan analisis urutan instruksi yang diikuti (misalnya, uraikan perilaku karakter dalam permainan video yang didorong oleh aturan dan algorithm)."
+        },
+        "CT.L2:7": {
+          "description": "Gambarkan data dalam berbagai cara termasuk teks, suara, gambar, dan angka."
+        },
+        "CT.L2:8": {
+          "description": "Gunakan gambaran visual dari status masalah, struktur, dan data (misalnya, grafik, bagan, diagram jaringan, diagram alur)."
+        },
+        "1.L.6": {
+          "description": "Gunakan kata-kata dan frase yang diperoleh melalui percakapan, membaca dan dibacakan, dan merespons teks, termasuk menggunakan kata penghubung yang sering muncul untuk menunjukkan hubungan sederhana (misalnya, karena)."
+        },
+        "11-12.L.6": {
+          "description": "Cari dan gunakan kata-kata dan frase akademik umum dan domain khusus secara akurat, cukup untuk membaca, menulis, berbicara, dan mendengarkan di tingkat kesiapan masuk perguruan tinggi dan karier; tunjukkan kemandirian dalam mengumpulkan pengetahuan kosa kata ketika mempertimbangkan"
+        },
+        "2.L.6": {
+          "description": "Gunakan kata-kata dan frase yang diperoleh melalui percakapan, membaca dan dibaca, serta merespons teks, termasuk menggunakan kata sifat dan kata keterangan untuk menguraikan (misalnya, Ketika anak lain bahagia, itu membuat saya bahagia)."
+        },
+        "3.L.6": {
+          "description": "Cari dan gunakan kata-kata dan frase percakapan, akademik umum, dan domain khusus sesuai dengan kelas secara akurat, termasuk yang menandai hubungan ruang dan waktu (misalnya, Setelah makan malam itu, kami pergi mencari mereka)."
+        },
+        "4.L.6": {
+          "description": "Cari dan gunakan kata-kata dan frase akademik umum dan domain khusus sesuai dengan kelas secara akurat, termasuk yang menandai tindakan, emosi, atau keadaan diri yang tepat (misalnya, bertanya, merengek, tergagap) dan menjadi dasar untuk topik tertentu (misalnya,"
+        },
+        "5.L.6": {
+          "description": "Cari dan gunakan kata-kata dan frase akademik umum dan domain khusus sesuai dengan kelas secara akurat, termasuk yang menandai hubungan kontras, penjumlahan, dan hubungan logis lainnya (misalnya, akan tetapi, meskipun, bagaimanapun, serupa dengan itu, lebih dari itu, selain itu)."
+        },
+        "9-10.L.6": {
+          "description": "Cari dan gunakan kata-kata dan frase akademik umum dan domain khusus secara akurat, cukup untuk membaca, menulis, berbicara, dan mendengarkan di tingkat kesiapan masuk perguruan tinggi dan karier; tunjukkan kemandirian dalam mengumpulkan pengetahuan kosa kata ketika mempertimbangkan"
+        },
+        "11-12.RI.4": {
+          "description": "Tentukan makna kata-kata dan frase sesuai penggunaannya dalam teks, termasuk makna kiasan, konotatif, dan teknis; analisis cara penulis menggunakan dan menyempurnakan makna istilah atau istilah utama dalam teks (misalnya, cara Madison mendefinisikan"
+        },
+        "3.RL.4": {
+          "description": "Menntukan arti kata dan frasa seperti yang digunakan dalam teks, membedakan bahasa harfiah dan non-harfiah."
+        },
+        "4.RL.7": {
+          "description": "Membuat hubungan antara teks cerita atau drama dan presentasi visual atau lisan dari teks, mengidentifikasi di bagian mana dari tiap versi versi tersebut yang menggambarkan deskripsi dan arah tertentu dalam teks."
+        },
+        "5.RL.4": {
+          "description": "Menentukan arti kata dan frasa seperti yang digunakan dalam teks, misalnya bahasa kiasan seperti metafora dan perumpamaan."
+        },
+        "5.RL.7": {
+          "description": "Menganalisis kontribusi elemen visual dan multimedia terhadap makna, nada, atau keindahan teks (misalnya, novel grafis, presentasi multimedia untuk fiksi, cerita rakyat, mitos, puisi)."
+        },
+        "1.SL.1": {
+          "description": "Ikuti percakapan kolaboratif dengan beragam mitra tentang topik dan teks kelas 1 dengan teman sebaya dan orang dewasa dalam kelompok kecil dan lebih besar."
+        },
+        "2.SL.1": {
+          "description": "Terlibat dalam percakapan kolaboratif dengan beragam mitra tentang topik dan teks kelas 2 dengan teman sebaya dan orang dewasa dalam kelompok kecil dan lebih besar."
+        },
+        "3.SL.1": {
+          "description": "Terlibat secara efektif dalam berbagai diskusi kolaboratif (satu per satu, dalam kelompok, dan dipimpin oleh guru) dengan beragam mitra pada topik dan teks di kelas 3, bangun gagasan orang lain dan nyatakan gagasan dengan jelas."
+        },
+        "6.SL.1": {
+          "description": "Libatkan diri secara efektif dalam berbagai diskusi kolaboratif (satu lawan satu, berkelompok, dan dipandu guru) dengan bermacam-macam mitra seputar topik, teks, dan masalah kelas 6, dengan membangun gagasan orang lain dan menyampaikan gagasan sendiri dengan jelas."
+        },
+        "7.SL.1": {
+          "description": "Libatkan diri secara efektif dalam berbagai diskusi kolaboratif (satu lawan satu, berkelompok, dan dipandu guru) dengan bermacam-macam mitra seputar topik, teks, dan masalah kelas 7, dengan membangun gagasan orang lain dan menyampaikan gagasan sendiri dengan jelas."
+        },
+        "11-12.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan, dan memperbarui produk tulisan individu atau bersama sebagai respons terhadap masukan berkelanjutan, termasuk argumentasi atau informasi baru."
+        },
+        "3.W.3": {
+          "description": "Tulis narasi untuk mengembangkan pengalaman atau event nyata atau imajinatif menggunakan teknik yang efektif, rincian deskriptif, dan urutan event yang jelas."
+        },
+        "4.W.3": {
+          "description": "Tulis narasi untuk mengembangkan pengalaman atau event nyata atau imajinatif menggunakan teknik yang efektif, rincian deskriptif, dan urutan event yang jelas."
+        },
+        "5.W.3": {
+          "description": "Tulis narasi untuk mengembangkan pengalaman atau event nyata atau imajinatif menggunakan teknik yang efektif, rincian deskriptif, dan urutan event yang jelas."
+        },
+        "6.W.3": {
+          "description": "Tulis narasi untuk mengembangkan pengalaman atau event nyata atau imajinatif menggunakan teknik yang efektif, rincian deskriptif yang relevan, dan urutan event yang terstruktur dengan baik."
+        },
+        "6.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan dan menerbitkan tulisan serta berinteraksi sekaligus berkolaborasi dengan orang lain; tunjukkan penguasaan keterampilan keyboard yang memadai untuk mengetik minimal tiga halaman dalam sekali duduk."
+        },
+        "7.W.3": {
+          "description": "Tulis narasi untuk mengembangkan pengalaman atau event nyata atau imajinatif menggunakan teknik yang efektif, rincian deskriptif yang relevan, dan urutan event yang terstruktur dengan baik."
+        },
+        "7.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan dan menerbitkan tulisan dan tautan serta mengutip sumber dan berinteraksi sekaligus berkolaborasi dengan orang lain, termasuk menautkan dan mengutip sumber."
+        },
+        "8.W.3": {
+          "description": "Tulis narasi untuk mengembangkan pengalaman atau event nyata atau imajinatif menggunakan teknik yang efektif, rincian deskriptif yang relevan, dan urutan event yang terstruktur dengan baik."
+        },
+        "8.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan dan menerbitkan tulisan dan menyajikan hubungan antara informasi dan gagasan secara efisien serta berinteraksi dan berkolaborasi dengan orang lain."
+        },
+        "9-10.W.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan, dan memperbarui produk tulisan individu atau bersama, memanfaatkan kemampuan teknologi untuk menautkan ke informasi lain dan menampilkan informasi secara fleksibel dan dinamis."
+        },
+        "11-12.WHST.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan, dan memperbarui produk tulisan individu atau bersama sebagai respons terhadap masukan berkelanjutan, termasuk argumentasi atau informasi baru."
+        },
+        "9-10.WHST.6": {
+          "description": "Gunakan teknologi, termasuk Internet, untuk menghasilkan, menerbitkan, dan memperbarui produk tulisan individu atau bersama, memanfaatkan kemampuan teknologi untuk menautkan ke informasi lain dan menampilkan informasi secara fleksibel dan dinamis."
+        },
+        "7.G.2": {
+          "description": "Gambar (bentuk bebas, dengan penggaris dan busur derajat, dan dengan teknologi) bentuk geometris dengan kondisi tertentu. Fokus pada membangun segitiga dari tiga ukuran sudut atau sisi, perhatikan ketika kondisi menentukan segitiga unik, lebih dari satu segitiga"
+        },
+        "4.MD.6": {
+          "description": "Ukur sudut dalam derajat bilangan bulat menggunakan busur derajat. Buat sketsa sudut ukuran tertentu."
+        },
+        "MP.1": {
+          "description": "Pahami masalah dan tekunlah dalam memecahkannya"
+        },
+        "MP.2": {
+          "description": "Menalar secara abstrak dan kuantitatif"
+        },
+        "MP.4": {
+          "description": "Model dengan matematika"
+        },
+        "MP.5": {
+          "description": "Gunakan peralatan yang sesuai secara strategis"
+        },
+        "MP.6": {
+          "description": "Memperhatikan ketelitian"
+        },
+        "MP.7": {
+          "description": "Cari dan gunakan struktur"
+        },
+        "MP.8": {
+          "description": "Cari dan ungkapkan keteraturan dalam penalaran berulang"
+        },
+        "4.NBT.4": {
+          "description": "Tambah dan kurangi bilangan bulat besar dengan lancar menggunakan algorithm standar."
+        },
+        "4.NBT.5": {
+          "description": "Kalikan bilangan bulat hingga empat digit dengan bilangan bulat satu digit, dan kalikan dua bilangan dua digit menggunakan strategi yang didasarkan pada nilai tempat dan sifat operasi. Gambarkan dan jelaskan perhitungannya menggunakan persamaan, larik persegi panjang"
+        },
+        "1.OA.1": {
+          "description": "Gunakan penjumlahan dan pengurangan sampai 20 untuk menyelesaikan soal kata yang melibatkan situasi menambahkan, mengambil, mengumpulkan, membongkar, dan membandingkan, dengan yang tidak diketahui pada semua posisi, yaitu, dengan menggunakan objek, gambar, dan persamaan dengan simbol untuk"
+        },
+        "2.OA.1": {
+          "description": "Gunakan penambahan dan pengurangan sampai 100 untuk menyelesaikan soal kata satu dan dua langkah yang melibatkan operasi penambahan, pengurangan, penjumlahan, pembagian, dan perbandingan, dengan nilai yang tidak diketahui pada semua posisi, yaitu, menggunakan gambar dan persamaan dengan"
+        },
+        "3.OA.3": {
+          "description": "Gunakan perkalian dan pembagian sampai 100 untuk memecahkan soal kata dalam situasi yang melibatkan jumlah kelompok, larik, dan ukuran yang sama, misalnya, menggunakan gambar dan persamaan dengan simbol untuk bilangan yang tidak diketahui untuk menunjukkan soal.1"
+        },
+        "1.a": {
+          "description": "Terapkan pengetahuan yang ada untuk menghasilkan gagasan, produk, atau proses yang baru."
+        },
+        "1.b": {
+          "description": "Buat karya asli sebagai sarana ekspresi pribadi atau grup."
+        },
+        "1.c": {
+          "description": "Gunakan model dan simulasi untuk menjelajahi sistem dan masalah yang rumit."
+        },
+        "2.a": {
+          "description": "Jalin interaksi, kolaborasi, dan penerbitan dengan rekan, pakar, atau orang lain yang menggunakan berbagai lingkungan dan media digital."
+        },
+        "2.b": {
+          "description": "Komunikasikan informasi dan gagasan secara efektif ke banyak khalayak menggunakan beragam media dan bentuk."
+        },
+        "4.b": {
+          "description": "Rencanakan dan kelola aktivitas untuk mengembangkan solusi atau menyelesaikan proyek."
+        },
+        "4.d": {
+          "description": "Gunakan banyak proses dan beragam perspektif untuk mengeksplorasi solusi alternatif."
+        },
+        "6.a": {
+          "description": "Pahami dan gunakan sistem teknologi."
+        },
+        "6.c": {
+          "description": "Pecahkan masalah sistem dan aplikasi."
+        },
+        "6.d": {
+          "description": "Transfer pengetahuan saat ini untuk mempelajari teknologi baru."
         }
       }
     }

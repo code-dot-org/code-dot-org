@@ -16,7 +16,7 @@ title: Açıklamalar ve faydalı istatistikler
 
 #### Okulunuzu bilgisayar bilimi ile tanıştırın. Bir Hour of Code ile başlayın!
 
-Teknolojinin dünyadaki her sektörü değiştirmesiyle, bilgisayar bilgisi, geniş kapsamlı bir beceri grubunun parçası haline gelmiştir. Fakat okulların sadece yarısında bilgisayar bilimi dersi var. Bunu değiştirmeye çalışıyor olmamız iyi haber. Eğer geçen seneki Kodlama Saatini duyduysanız, bir tarih yazdığını da biliyorsunuzdur. 100 milyon öğrenci sadece bir saatlik Hour of Code ile bilgisayar biliminin ne kadar erişilebilir ve eğlenceli olabileceğini keşfetti.
+Teknolojinin dünyadaki her sektörü değiştirmesiyle, bilgisayar bilgisi, geniş kapsamlı bir beceri grubunun parçası haline gelmiştir. Fakat okulların sadece yarısında bilgisayar bilimi dersi var. Bunu değiştirmeye çalışıyor olmamız iyi haber. Eğer daha önce Hour of Code'u duyduysanız, tarih yazdığını da biliyor olabilirsiniz. 100 milyondan fazla öğrenci sadece bir saatlik Hour of Code ile bilgisayar biliminin ne kadar erişilebilir ve eğlenceli olabileceğini keşfetti.
 
 Hour of Code herkesin kodlamanın temel bilgilerini öğrenebileceğini göstermek için tasarlanmış bir saatlik bilgisayar bilimine giriş etkinliğidir. [http://HourOfCode.com](http://HourofCode.com), adresinden daha fazla bilgi edinin, kendiniz Hour of Code'u deneyin veya başkalarını bilgisayar dünyası ile tanıştırmak için bir Hour of Code etkinliği düzenleyin!
 
@@ -30,7 +30,7 @@ Umuyoruz ki bu etkinlik öğrencilerde öğrenmeye devam etmek için ilgi uyand�
 
 #### Bu neden önemli?
 
-Teknoloji gezegendeki her sektörü dönüştürüyor. 2015'te, ABD'de kodlama becerilerinizi değerlendirebileceğiniz, sanat ve tasarım da dahil olmak üzere meslek alanlarında 7 milyon açık pozisyon vardı. Fakat ABD'deki okulların yüzde 49'unda bilgisayar bilimi dersi yok. Artık 21. yüzyılı yakalamanın zamanı geldi. Öğrencilerimiz ileride tıbba, iş dünyasına, siyasete veya sanata ilgi duyabilirler. Ne yaptıklarına bakılmaksızın şunu biliyoruz ki, teknolojiyi nasıl oluşturacaklarını bilmek öğrencilere kendilerine güven ve rekabet avantajı sağlayacaktır. <br /> <br />
+Amerika Birleşik Devletlerinde yaklaşık açık olan 700.000 bilgisayarcı işi varken, önceki sene yalnızca 80.000 öğrenci çalışmaya başladı. Ve Amerika'daki okulların yüzde 47'sinde bilgisayar bilimi dersi yok. Artık 21. yüzyılı yakalamanın zamanı geldi. Öğrencilerimiz ileride tıbba, iş dünyasına, siyasete veya sanata ilgi duyabilirler. Ne yaptıklarına bakılmaksızın şunu biliyoruz ki, teknolojiyi nasıl oluşturacaklarını bilmek öğrencilere kendilerine güven ve rekabet avantajı sağlayacaktır. <br /> <br />
 
 #### Materyallerinizde kullanabileceğiniz bir alıntı
 

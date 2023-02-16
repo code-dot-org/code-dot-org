@@ -8,6 +8,7 @@ es-MX:
       Green: Verde
       Red: Rojo
       actor: actor
+      adjective: adjetivo
       age: edad
       animal1score: animal1puntuación
       animal1speed: animal1velocidad
@@ -20,6 +21,7 @@ es-MX:
       bit: bit
       blue1: azul1
       blue2: azul2
+      body-part: parte del cuerpo
       bodylength: Longitud de cuerpo
       buttonHeight: Altura_botón
       buttonMargin: Margen_botón
@@ -65,7 +67,10 @@ es-MX:
       name: nombre
       nectar: néctar
       nectars: néctares
+      number: número
+      object: objeto
       padYOffset: desplazamientoYpad
+      parts: partes
       planet: planeta
       player_score: puntuación_jugador
       points: puntos
@@ -90,6 +95,9 @@ es-MX:
       speed: velocidad
       startX: inicioX
       startY: inicioY
+      stopped-left: parado-izquierda
+      time: hora
+      type: Tipo
       variable: variable
       width: ancho
       wizard: mago

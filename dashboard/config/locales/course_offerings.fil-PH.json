@@ -37,8 +37,6 @@
         "sports": "Mag-code ng sarili mong laro sa palakasan",
         "text-compression": "Compression ng Text",
         "csa-self-paced-pl": "Paggamit sa Code.org para sa CSA na Mga Pilot na Guro",
-        "counting-csc": "Nagbibilang kasama si Laurel",
-        "explore-data-1": "Pag-explore ng Mga Box Plot at Histogram",
         "outbreak-csc": "Pagsiklab",
         "poem-art": "Sining ng Tula",
         "poetry-hoc3": "poetry-hoc3",
@@ -49,7 +47,10 @@
         "step": "hakbang",
         "coursee-ramp": "coursee-ramp",
         "csa5-exemplars": "csa5-exemplars",
-        "soccer": "soccer"
+        "soccer": "soccer",
+        "hello-world-space": "Hello World: Puwang",
+        "hello-world-soccer": "Hello World: Putbol",
+        "playground": "playground"
       }
     }
   }

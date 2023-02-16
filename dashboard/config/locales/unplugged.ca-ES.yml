@@ -63,7 +63,7 @@ ca:
           els passos següents que han de prendre si estan interessats a continuar
           l'odissea informàtica.
       UnplugHappyMaps:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       MoveIt:
@@ -101,7 +101,7 @@ ca:
           botons en un paper a distància i els alumnes reaccionaran depenent de quin
           botó es prem.
       GoingPlacesSafely:
-        title: Anant a llocs segurs
+        title: Anar als llocs amb precaució
         desc: Internet és una eina potent, però a vegades també és un lloc perillós.
           Els mestres t'expliquen com navegar amb seguretat per internet.
       GraphPaperProgramming:
@@ -185,11 +185,11 @@ ca:
           centra en un marc més ampli de la informàtica i com els algoritmes hi juguen
           un rol important.
       courseA_unplugged_happyMaps:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       courseA_unplugged_goingPlacesSafely:
-        title: Anant a llocs segurs
+        title: Anar als llocs amb precaució
         desc: Internet és una eina potent, però a vegades també és un lloc perillós.
           Els mestres t'expliquen com navegar amb seguretat per internet.
       courseABC_unplugged_bigEvent:
@@ -224,13 +224,13 @@ ca:
           un grup d'ordres predefinides per dirigir els seus companys a reproduir
           un dibuix.
       courseD_unplugged_relayProgramming:
-        title: Programació en relleus
+        title: Programació amb relleus
         desc: Els estudiants executen una cursa de relleus on corren a través del
           pati per escriure un algoritme basat en la imatge "Programació de paper
           quadriculat". Només poden escriure una instrucció cada vegada i si hi ha
           un error han d'esborrar-ho tot fins el principi.
       courseD_unplugged_conditionalsCards:
-        title: Condicionals amb targetes
+        title: Condicionals amb cartes
         desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
           un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
           obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
@@ -276,11 +276,11 @@ ca:
           centra en un marc més ampli de la informàtica i com els algoritmes hi juguen
           un rol important.
       UnplugHappyMaps_2018:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       GoingPlacesSafely_2018:
-        title: Anant a llocs segurs
+        title: Anar als llocs amb precaució
         desc: Internet és una eina potent, però a vegades també és un lloc perillós.
           Els mestres t'expliquen com navegar amb seguretat per internet.
       BigEvent_2018:
@@ -329,11 +329,13 @@ ca:
           lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
           i emmagatzemades de diferents maneres.
       MoveItMoveIt_2018:
-        title: Mou-lo, Mou-lo
+        title: A moure's!
       RelayProgramming_2018:
-        title: Programació en relleus
+        title: Programació amb relleus
       courseB_unplugged_MRF_2019:
         title: Els meus amics robòtics
+      courseB_unplugged_loopyMRF_2019:
+        title: Els meus amics robòtics amb bucles
       Conditionals_2019:
         title: Condicionals
         desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
@@ -345,7 +347,7 @@ ca:
           un grup d'ordres predefinides per dirigir els seus companys a reproduir
           un dibuix.
       RelayProgramming_2018_2019:
-        title: Programació en relleus
+        title: Programació amb relleus
       courseD_unplugged_digitalCitizenship_2019:
         title: Activitat sense connexió
       BinaryImages_2019:
@@ -386,17 +388,19 @@ ca:
           centra en un marc més ampli de la informàtica i com els algoritmes hi juguen
           un rol important.
       UnplugHappyMaps_2019:
-        title: Mapes feliços
+        title: Mapes Feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
       GoingPlacesSafely_2019:
-        title: Anant a llocs segurs
+        title: Anar als llocs amb precaució
         desc: Internet és una eina potent, però a vegades també és un lloc perillós.
           Els mestres t'expliquen com navegar amb seguretat per internet.
       MoveItMoveIt_2019:
-        title: Mou-lo, Mou-lo
+        title: A moure's!
       DigitalFootprint_2019:
         title: La vostra empremta digital
+      GraphingData_2019:
+        title: Dades en imatges
       timeforcs_demo_crowdsourcing:
         title: Col·laboració oberta
       timeforcs_demo_conditionals:

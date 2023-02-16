@@ -4,6 +4,22 @@
     "/certificates": "hoc-more"
   },  
   "banners": {
+    "csleadersprize": {
+      "image": "/images/marketing/csleadersprize-dash.png",
+      "title": "Add a new computer science course, win $10,000!",
+      "body": "This CS Education Week, one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help expand access to computer science education for their students.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/prize",
+      "buttonId": "csleadersprize-dashboard"
+    },
+    "csjourneys-22": {
+      "image": "/images/csjourneys/csjourneys22-dash.png",
+      "title": "CS Journeys is back, along with NEW Careers with CS videos",
+      "body": "Watch unique tech professionals at work, plus join virtual field trips of NASA’s Artemis mission and more.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys",
+      "buttonId": "csjourneys22-dashboard"
+    },
     "hoc-more": {
       "image": "/images/marketing/certificates-promo.png",
       "title": "Keep learning!",

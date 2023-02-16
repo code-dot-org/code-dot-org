@@ -19,15 +19,15 @@ fr:
         Farmer2: Le Fermier 2
         Unplug8: Abstraction
         Artist4: L'Artiste 4
-        Unplug9: Programmation de relais
+        Unplug9: Programmation en relais
         Farmer3: Le Fermier 3
-        Unplug10: Internet et les réseaux connectés
+        Unplug10: L'Internet
         Artist5: L'Artiste 5
         Unplug11: Résumé et ouverture
         MazeEC: Le labyrinthe
         Bounce: Rebond
         Flappy: Flappy Bird
-        Jigsaw: Puzzle
+        Jigsaw: Casse-tête
         MazeStep: Mode « pas à pas » du labyrinthe
         Wordsearch: Mots mêlés
         Webapp: Labo des applis
@@ -39,7 +39,7 @@ fr:
         Custom: Artiste
         CustomStudio: Labo de jeux
         Gamelab: Labo Jeux
-        Spritelab: Le Labo des Lutins
+        Spritelab: Le Labo des Sprites
     trophy:
       name:
         Bronze: Bronze
@@ -73,12 +73,12 @@ fr:
         maze_2_7: Aide-moi à bannir ce méchant cochon en utilisant le plus petit nombre
           de blocs. Essaie d’utiliser plus d'un bloc «Répéter plusieurs fois».
         maze_2_8: 'Lorsqu''un bloc est gris, cela signifie que tu ne peux pas le supprimer.
-          Résous ce puzzle en utilisant le bloc «Répéter» qui se répète 3 fois. Essaie
-          de mettre ces 3 blocs dans le bloc gris «Répéter»: se déplacer, se déplacer,
-          tourner.'
+          Résous ce casse-tête en utilisant le bloc «Répéter» qui se répète 3 fois.
+          Essaie de mettre ces 3 blocs dans le bloc gris «Répéter»: se déplacer, se
+          déplacer, tourner.'
         maze_2_9: Ok, essaie le nouveau bloc «Répéter jusqu'à»- il se répétera jusqu'à
           ce que j'atteigne ce cochon agaçant.
-        maze_2_10: OK, une dernière fois pour s'entraîner - peux-tu résoudre ce puzzle
+        maze_2_10: OK, une dernière fois pour s'entraîner - peux-tu résoudre ce casse-tête
           à l'aide de seulement 4 blocs?
         maze_2_11: Chère personne.  Moi zombie. Moi faim. Devoir...atteindre...tournesol...
           Peux-tu me faire aller là-bas avec seulement 5 blocs ?
@@ -87,8 +87,8 @@ fr:
         maze_2_13: 'Utilise le nouveau bloc «Si» pour me laisser décider quand tourner.
           Indice: tu n’as besoin que d''un bloc supplémentaire, mais apprends comment
           nous avons fait, pour pouvoir le refaire tout seul la prochaine fois.'
-        maze_2_14: OK, c'est la même chose que le puzzle précédent, mais tu dois te
-          rappeler comment tu as utilisé le bloc «Si» et le bloc «Répéter» ensemble.
+        maze_2_14: OK, c'est la même chose que le casse-tête précédent, mais tu dois
+          te rappeler comment tu as utilisé le bloc «Si» et le bloc «Répéter» ensemble.
         maze_2_15: Moi veux tournesol ! Utilise un bloc «Si» pour m'y amener avec
           le plus petit nombre de blocs possible.
         maze_2_16: OK, nous allons le refaire encore une fois pour nous entraîner
@@ -134,24 +134,24 @@ fr:
         turtle_4_3: OK, voici le code que tu as écrit pour dessiner un seul triangle.
           Peux-tu ajouter un bloc «Répéter» et «Tourner» pour faire une jolie fleur
           ?
-        turtle_4_4: 'Voici le même code que le puzzle précédent, mais en tournant
+        turtle_4_4: 'Voici le même code que le casse-tête précédent, mais en tournant
           seulement à 36 degrés après avoir dessiné chaque triangle. Combien de fois
           faut-il le répéter ? (Indice : après 360 degrés de rotation, le dessin fera
           un cercle complet)'
-        turtle_4_5: 'Voici le même code de l''énigme précédente, mais en répétant
+        turtle_4_5: 'Voici le même code de l'' casse-tête précédente, mais en répétant
           les virages 36 fois. De combien de degrés doivent-être les virages ? (Indice
           : après 360 degrés de rotation, le dessin fera un cercle complet)'
         turtle_4_6: En utilisant seulement 3 blocs, peux-tu dessiner un carré avec
           des bords de 20 pixels?
-        turtle_4_7: 'Voici le code pour dessiner le carré du dernier puzzle. Peux-tu
+        turtle_4_7: 'Voici le code pour dessiner le carré du dernier casse-tête. Peux-tu
           le répéter pour dessiner 10 carrés adjacents comme une échelle ? Indice
           : tu as besoin de seulement 2 blocs de plus.'
-        turtle_4_8: Voici la solution du puzzle précédent. Peux-tu ajouter seulement
+        turtle_4_8: Voici la solution du casse-tête précédent. Peux-tu ajouter seulement
           2 blocs de plus pour compléter le dessin ?
-        turtle_4_9: Voici la solution du puzzle précédent. De combien de degrés dois-tu
-          tourner pour terminer le dessin ? (Tu devras probablement deviner quelques
-          fois)
-        turtle_4_10: Voici la solution du puzzle précédent. Combien de fois dois-tu
+        turtle_4_9: Voici la solution du casse-tête précédent. De combien de degrés
+          dois-tu tourner pour terminer le dessin ? (Tu devras probablement deviner
+          quelques fois)
+        turtle_4_10: Voici la solution du casse-tête précédent. Combien de fois dois-tu
           répéter pour terminer le dessin ?
         turtle_4_11: Essaie de modifier les numéros dans les blocs «Tourner» et «Répéter»
           pour faire des modèles différents. Ou bien, essaie de changer le reste du
@@ -249,7 +249,7 @@ fr:
           quelques nouveaux blocs.
         maze_karel_2_10: Déplace-moi à travers le champ, et utilise ces deux fonctions
           pour m'aider à supprimer tous les tas et remplir tous les trous.
-        turtle_3_1: Ce puzzle te montre comment les fonctions « Dessiner un carré »
+        turtle_3_1: Ce casse-tête te montre comment les fonctions « Dessiner un carré »
           et « Tracer un cercle » sont définies.  Définir une fonction ne fait pas
           fonctionner ses blocs.  Tu dois retirer le bloc « Dessiner un carré » pour
           vraiment dessiner un carré.
@@ -344,7 +344,7 @@ fr:
         jigsaw_10: Mets les blocs dans l'ordre pour former l'image
         jigsaw_11: Mets les blocs dans l'ordre par numéro croissant
         jigsaw_12: Mets ces blocs dans l'ordre par numéro croissant
-        jigsaw_13: Répare le puzzle !
+        jigsaw_13: Répare le casse-tête !
         mazestep_1: Description de l'étape du labyrinthe ici
         mazestep_2: Description de l'étape du labyrinthe ici
         mazestep_3: Description de l'étape du labyrinthe ici
@@ -559,7 +559,7 @@ fr:
         if_else: Bloc « Si/Sinon »
         if_else_scrat: Bloc « Si/Sinon »
         function: Fonctions
-        loop_while: Bloc « Tant que »
+        loop_while: Le bloc « tant que »
         loop_for: Bloc « Compteur »
         parameters: Fonctions avec Paramètres
         hoc_wrapup: Conclusion de l'Heure de Code
@@ -575,9 +575,9 @@ fr:
         Unplug10: Internet
         Unplug11: Résumé et ouverture
         C1_happy_maps_unplugged: Cartes Joyeuses
-        C1_moveitmoveit_unplugged: Bouge, Bouge
+        C1_moveitmoveit_unplugged: Bouge, Bouge ton corps
         C1_bigevent_unplugged: Le Grand Evénement
-        C1_getting_loopy: Tourner en Rond
+        C1_getting_loopy: Affaire bouclée
         C1_pair_programming: Programmation en Binôme
         C1_maze_intro_sequencing: Introduction au séquencement du labyrinthe
         C1_maze_debugging: Débogage du labyrinthe
@@ -594,16 +594,16 @@ fr:
         C2_maze_intro: Introduction au Dédale
         C2_artist_intro: Introduction à l'Artiste
         C2_zuck_repeat_loop: Labyrinthe et boucles
-        C2_artist_loops: Boucles d'Artiste
+        C2_artist_loops: Les Boucles avec l'Artiste
         C2_artist_debugging: Débogage de l’artiste
         C2_bee_loops: Abeilles et boucles
         C2_bee_debugging: Débogage d'Abeilles
-        C2_bee_conditionals: Abeilles et instructions conditionnelles
+        C2_bee_conditionals: Les Conditions avec l'Abeille
         C2_playlab_createstory: Jouer au Labo - Créer une Histoire
         C2_graph_paper: Programmation sur papier quadrillé
         C2_conditionals_with_cards: Instructions conditionnelles
         C2_binary_bracelets: Bracelets binaires
-        C2_relay_programming: Programmation de relais
+        C2_relay_programming: Programmation en relais
         C2_paper_airplanes: Avions en Papier
         C2_digital_footprint: Ton Empreinte Numérique
         C2_digital_footprint_v2: Ton Empreinte Numérique
@@ -627,7 +627,7 @@ fr:
         C3_songwriting_with_parameters: Composition de chansons avec des paramètres
         C4_intro: Introduction
         C4_loops_zombie: Boucles
-        C4_bee_conditional: Abeilles et instructions conditionnelles
+        C4_bee_conditional: Les Conditions avec l'Abeille
         C4_variables_artist: Variables - Artiste
         C4_variables_playlab: Variables - Labo de jeux
         C4_for_loops: Les Boucles « Pour »
@@ -640,14 +640,14 @@ fr:
         C4_conditionals: Instructions conditionnelles
         C4_unplugged_algorithms: Algorithmes avec des Tangrams
         C4_unplugged_madlibs: Mad Libs (histoire à trous)
-        C4_unplugged_variables: Variables en Enveloppes
+        C4_unplugged_variables: Variables en enveloppes
         C4_unplugged_forloops: Les Boucles « Pour »
         C4_unplugged_parameters: La composition de chansons avec des paramètres
         C4_unplugged_binary: Binaire
-        CSF_a_b_artist_loops: Les Boucles dans Artiste
-        CSF_artist_angles: Angles dans l’Artiste
+        CSF_a_b_artist_loops: Les Boucles dans l'Artiste
+        CSF_artist_angles: Les angles dans l’Artiste
         CSF_collector_k1_blocks: 'Fondamentaux de l’Informatique : La Collectionneuse'
-        CSF_collector_repeat_loops: Les Boucles Répéter du Collecteur
+        CSF_collector_repeat_loops: Les Boucles Répéter dans la Collectionneuse
         CSF_collector_text_blocks: 'Fondamentaux de l’Informatique : La Collectionneuse'
         CSF_create_functions: Créer des Fonctions
         CSF_debugging_k1_blocks: Le Débogage
@@ -664,10 +664,10 @@ fr:
         frozen_intro: Introduction à l'Heure de Code
         frozen_loops: Introduction aux Boucles
         frozen_functions: Introduction aux Fonctions
-        playlab_intro: Introduction au Labo de jeux
+        playlab_intro: Introduction au Labo Jeux
         playlab_events: Évènements du Labo de jeux
         playlab_repeat_forever: Répétition à l’infinie du Labo de jeux
-        tutorial_puzzle_challenge: Tutoriel Défi du puzzle
+        tutorial_puzzle_challenge: Tutoriel Défi du casse-tête
         infinity_playlab_intro: Labo de jeux - Introduction
         infinity_playlab_events: Labo de jeux - Événements
         infinity_playlab_repeat_forever: Labo de jeux  - Répétition à l’infinie
@@ -725,19 +725,19 @@ fr:
         mc_2016_loops: Minecraft Hour of Code - Boucles
         mc_2016_events: Minecraft Hour of Code - Événements
         mc_2016_spawn: Minecraft Hour of Code - Rejeton
-        mc_2016_congrats: Minecraft Hour of Code - Félicitations
+        mc_2016_congrats: Heure de Code Minecraft - Félicitations
         applab_hoc_welcome: Hour of Code dans le Labo des Applis - Bienvenue
         applab_hoc_setproperty: Hour of Code dans le Labo des Applis - setProperty
         applab_hoc_onevent: Hour of Code dans le Labo des Applis - onEvent
         applab_hoc_designmode: Hour of Code dans le Labo des Applis - Mode Création
         applab_hoc_share: Hour of Code dans le Labo des Applis - Partager
-        mc_2017_agent_intro: Minecraft Hour of Code - L'Agent
-        mc_2017_repeat: Minecraft Hour of Code - Les Boucles Répéter
-        mc_2017_functions: Minecraft Hour of Code - Les Fonctions
-        mc_2017_congratulations: Minecraft Hour of Code - Félicitations
-        mc_2017_puzzle_1: Minecraft Hour of Code - L'Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Les Boucles Répéter
-        mc_2017_puzzle_8: Minecraft Hour of Code - Les Fonctions
+        mc_2017_agent_intro: Heure de Code Minecraft - L'Agent
+        mc_2017_repeat: Heure de Code Minecraft - Les Boucles Répéter
+        mc_2017_functions: Heure de Code Minecraft - Les Fonctions
+        mc_2017_congratulations: Heure de Code Minecraft - Félicitations
+        mc_2017_puzzle_1: Heure de Code Minecraft - L'Agent
+        mc_2017_puzzle_3: Heure de Code Minecraft - Les Boucles Répéter
+        mc_2017_puzzle_8: Heure de Code Minecraft - Les Fonctions
         mc_2017_puzzle_12: Minecraft Hour of Code - Jeu Libre
         hint_videos_d_11_3_first: 'Astuces en vidéo : D.11.3 en Premier'
         hint_videos_d_11_3_last: 'Astuces en vidéo : D.11.3 en Dernier'
@@ -767,7 +767,7 @@ fr:
         CSF_harvester_loops_K1: Les Boucles avec l'Agricultrice
         CSF_scrat_loops_K1: Les boucles dans l'Âge de Glace
         CSF_scrat_loops_CF: Les boucles dans l'Âge de Glace
-        CSF_if_allskins: Le Bloc Si
+        CSF_if_allskins: Le bloc Si
         CSF_ifelse_allskins: Utiliser les Blocs « Si/Sinon »
         CSF_ifelseifelse_allskins: Utiliser les Blocs « Si/Sinon »
         CSF_loops_AB: Boucles
@@ -781,11 +781,11 @@ fr:
         CSF_StarWars_ProjectIntro: Introduction au Projet Star Wars
         mc_2018_intro: 'Minecraft : Voyage Aquatique - Introduction'
         MC_2018_loops: 'Minecraft : Voyage Aquatique - Répéter jusqu''à'
-        mc_2018_conditionals: 'Minecraft : Voyage Aquatique – Déclarations Conditionnelles'
+        mc_2018_conditionals: 'Minecraft : Voyage Aquatique – Formules Conditionnelles'
         mc_2018_closing: 'Minecraft : Voyage Aquatique - Félicitations'
         hoc_dance_warmup: Soirée Dansante - Échauffement
-        hoc_dance_events: Soirée Dansante – Les Événements
-        hoc_dance_properties: Soirée Dansante – Les Propriétés
+        hoc_dance_events: Soirée Dansante – Événements
+        hoc_dance_properties: Soirée Dansante – Propriétés
         hoc_dance_congrats: Soirée Dansante - C’est party !
         c_and_c_great_to_create: C'est Super de Créer et de Jouer Équitablement
         c_and_c_digital_sharing: Partage Numérique
@@ -817,7 +817,7 @@ fr:
         csd_problem_solving_process: Le Processus de Résolution de Problèmes
         CSF_Going_Places_Safely: Mon Quartier en Ligne
         CSF_SpriteLab_Intro_v2: Introduction au Labo des Sprites
-        CSF_Spritelab_MakeSprite_v2: Comment Créer un Lutin
+        CSF_Spritelab_MakeSprite_v2: Comment faire un Sprite
         CSF_SpriteLab_SpritesInAction_v2: Les Sprites en Action
         csd_debugging: Le Débogage
         csd_applab_designmode_short: Mode Création du Labo des Applis
@@ -833,18 +833,18 @@ fr:
           des activités « débranchées » ?'
         cs-principles-intro-to-objects: 'Les Principes de l''Informatique : Initiation
           aux Objets'
-        oceans_machine_learning: Apprentissage Automatique
-        oceans_training_data: Les Données D'Entraînement
+        oceans_machine_learning: L'Apprentissage Automatique
+        oceans_training_data: Données d'entraînement
         oceans_societal_implications: Implications Sociétales
         hoc_dance_congrats_2019: Soirée Dansante 2019 - C’est party !
         hoc_dance_warmup_2019: Soirée Dansante 2019 - Échauffement
         hoc_dance_events_2019: Soirée Dansante 2019 - Évènements
-        hoc_dance_measures_2019: Soirée Dansante – Les Mesures
+        hoc_dance_measures_2019: Soirée Dansante – Mesures
         hoc_dance_properties_2019: Soirée Dansante 2019 - Propriétés
         csd_what_computers_do: Que font les ordinateurs?
         csf_my_online_neighborhood_2020: Mon Quartier en Ligne
-        csf_follow_the_digital_trail: Suivez la Traînée Digitale
-        csf_private_and_personal_information: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
+        csf_follow_the_digital_trail: Suis la Piste Numérique
+        csf_private_and_personal_information: Informations Privées et Personnelles
         csd_what_computers_are: Qu'est ce qu'un Ordinateur ?
         codebreak_e01: 'Code Break 1.0: Algorithmes avec Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototypes avec Mark Cuban et Lyndsey Scott'
@@ -869,10 +869,12 @@ fr:
           et China Anne McClain'
         codebreak_e12: 'Pause informatique 12.0 : Matériel avec  Aloe Blacc, Bret
           Taylor et Paula Mejia'
+        csf21pilot_events: 'Les Labo des Sprites : les Sprites en Action'
+        csf21pilot_prompts: 'Labo des sprites : Texte et Invites'
         outbreak_mike: CodeBytes Episode 3 avec Mike - Simulateur d'épidémie
         csd_ml_import_model: Importer un modèle IA
-        playlab_2021: Introduction au Labo de jeux
-        playlab_2021_reader: Introduction au Labo de jeux
+        playlab_2021: Introduction au Labo Jeux
+        playlab_2021_reader: Introduction au Labo Jeux
         PL_CSD_TeacherTips_Advise: Conseils aux enseignants - Conseils destinés aux
           nouveaux enseignants
         PL_CSD_TeacherTips_IntroToCSD: Conseils aux enseignants - Cours d'initiation
@@ -888,7 +890,7 @@ fr:
         poembot-playtest-intro: Présentation de PoemBot Playtest
         poembot-playtest-sprites: Sprites de PoemBot Playtest
         poembot-playtest-events: Événements de PoemBot Playtest
-        hello_world_intro: Bonjour à tous - Bienvenue à Sprite Lab
+        hello_world_intro: Bonjour à tous - Bienvenue au Labo des Sprites
         hello_world_events: Bonjour à tous - Programmer avec des événements
         hello_world_congrats: Bonjour à tous - Faites ce que vous voulez
         rough_poemart_intro: v1 Intro Art de la poésie
@@ -903,24 +905,25 @@ fr:
           poésie
         poetry_module_conditionals: Conditions - Codage avec poésie
         poemart_intro: Introduction à l'art de la poésie
+        outbreak_intro: 'Simulation d''Épidémie : Introduction'
         CSA-PL-debugging-temp: Initiation au débogage dans Java Lab - temp
         csd_u6_circuit_playground: L'Informatique Physique
         csd_u6_input_output: Entrée et Sortie
-        PL_CS_Journeys_Overview: Voyages CS
+        PL_CS_Journeys_Overview: Voyages Informatiques
         csp_applab_parameters: Fonctions avec Paramètres
         CSA-PL-intro-to-arrays: Tableaux unidimensionnels (1D)
         CS_Changing_Everything: L'informatique est en Train de Tout Changer
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
-        run: Clique sur « Exécuter » pour tester ton programme.
+        run: Clique sur « Démarrer » pour tester ton programme.
         watch_again: Clique ici pour revoir la vidéo
         gray_block_explanation: Les blocs qui sont gris ne peuvent pas être supprimés.
-          Peux-tu résoudre le puzzle de toute façon ?
+          Peux-tu résoudre le casse-tête de toute façon ?
         show_code_explanation: Clique ici pour voir le code du programme que tu es
           en train de faire
-        instructions_repeat_explanation: Les instructions de chaque puzzle sont reprises
-          ici
+        instructions_repeat_explanation: Les instructions de chaque casse-tête sont
+          reprises ici
         category_explanation: Tu as toujours les mêmes blocs mais ceux-ci sont désormais
           organisés en catégories.
         set_sprite_image: Attache un bloc « Définir l'image du personnage » au bloc
@@ -946,7 +949,7 @@ fr:
         degrees_per_side: Divise 360 par le nombre de côtés pour obtenir la taille
           de chaque angle en degrés.
         set_sides: Utilise ce bloc pour définir le nombre de « Côtés » nécessaires
-          pour terminer ce puzzle.
+          pour terminer ce casse-tête.
         set_length: Utilise ce bloc pour définir la valeur correcte de la « Longueur ».
         which_equation: Quelle équation rend chaque côté plus court pour les formes
           ayant plus de côtés ?
@@ -954,12 +957,12 @@ fr:
         actions_category: La boîte à outils a un nouvel aspect ! Les blocs «Actions
           » sont maintenant ici.
         draw_square_hint: 'Indice : Utilise la boucle carrés que tu viens de faire
-          dans le puzzle précédent.'
+          dans le casse-tête précédent.'
         edit_function: Clique ici pour modifier ta fonction.
         create_function: Clique ici pour ouvrir la fenêtre « Fonctions » et clique
           ensuite sur le bouton « Créer une fonction ».
         house_hint: Ce n'est pas grave si l'image ne ressemble pas encore à une maison.
-          Nous arrangerons cela dans le prochain puzzle.
+          Nous arrangerons cela dans le prochain casse-tête.
         edit_draw_square: Utilise ce bouton pour modifier la fonction et ajouter la
           boucle.
         edit_get_nectar: Utilise ce bouton pour modifier la fonction et changer la
@@ -1024,8 +1027,8 @@ fr:
         Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
         Infinity_repeat_callout: Place les bloc « Déplacer » ici à l'intérieur
         craft_run_button_callout: Clique sur « Exécuter » pour tester ton programme.
-        craft_drag_block_callout: Fais glisser un bloc « Avancer », bloque-le et emboite-le
-          sous l'autre bloc.
+        craft_drag_block_callout: Sors un bloc « avancer » et accroche-le en dessous
+          de l'autre bloc.
         craft_callout_preplaced: Nous avons préparé des blocs pour vous aider à commencer.
         craft_inside_repeat: Répète des actions en plaçant des blocs ici à l'intérieur
         craft_callout_preplaced_house: Ce code va commencer la construction de ta

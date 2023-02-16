@@ -45,6 +45,7 @@ zh-CN:
         personal_email_markdown: "个人电子邮箱地址 [（没有电子邮箱请点击这里）](%{url})"
         username: '用户名'
         password: '密码:'
+        verified_teacher: '经过验证的老师'
         password_confirmation: '密码确认：'
         current_password: '当前密码'
         locale: '语言'
@@ -270,6 +271,7 @@ zh-CN:
   teacher_mailer:
     new_teacher_subject: '欢迎来到 Code.org ！'
     delete_teacher_subject: 'Code.org 通知：你的帐户已被删除'
+    verified_teacher_subject: 'Code.org 教师验证 - 成功'
   section:
     your_section:
       one: '你的小组：'
@@ -379,6 +381,7 @@ zh-CN:
       about: "关于"
       legal: "隐私与法律"
       legal_privacy: "隐私政策"
+      legal_cookie_notice: "Cookie通知"
       legal_tos: "使用条款"
     user:
       classroom: '教师主页'
@@ -554,6 +557,7 @@ zh-CN:
     choose_next_course: "从下面代码工作室的课程中选一个体验"
     print_certificate: "打印证书"
   certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
+  certificate_hour_of_code: "编程一小时"
   move_students:
     new_section_dne: "抱歉，小组 %{new_section_code} 不存在。请输入不同的小组代码。"
     section_code_cant_be_current_section: "当前小组不能与新建小组相同。"
@@ -584,6 +588,7 @@ zh-CN:
     art_from_html: '我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。<br />星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。<br />冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼，保留所有权利。<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。<br />愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司，保留所有权利。<br />植物大战僵尸&#8482; &copy; %{current_year} 电子艺界，保留所有权利。<br />阿甘妙世界&copy; %{current_year} 梦工厂动画公司，保留所有权利。'
     art_from_html_old: '我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。<br />星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。<br />冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼，保留所有权利。<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。<br />愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司，保留所有权利。<br />植物大战僵尸&#8482; &copy; %{current_year} 电子艺界，保留所有权利。<br />阿甘妙世界&copy; %{current_year} 梦工厂动画公司，保留所有权利。'
     code_from_html: 'Code.org 使用 p5.play 游戏资源库，根据 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> 之许可。'
+    powered_by_aws: '亚马逊网络服务（Amazon Web Services）和“由AWS提供支持”徽标是Amazon.com，Inc.，或者其在美国/其他国家内的附属公司的商标。'
     built_on_github: '在微软的 GitHub 上构建'
     google_copyright: '© Google Inc，授权使用。谷歌课堂是 Google Inc 的一个商标。'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE Logo 和 Hour of Code&reg; 是 Code.org 的注册商标。'
@@ -605,6 +610,7 @@ zh-CN:
     try_hour_of_code: '试试《编程一小时》！'
     store: '商店'
     cookie_notice: 'Cookie通知'
+    view_code: '查看代码'
   reference_area:
     title: '需要帮助吗？'
     subtitle: '看看这些视频和提示'
@@ -667,29 +673,17 @@ zh-CN:
       body_short: "设计一个应用，用代码模块或者 JavaScript 来写出这个程序，然后马上分享你的应用吧。"
       audience: '13岁以上'
       cta: '了解操作方法'
-    dance:
-      title: '舞蹈派对'
+    aquatic:
+      title: "我的世界"
     dance-2019:
       title: '舞蹈派对'
-    hello-world:
-      title: '你好世界'
-      body: '从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。'
-    poem-art:
-      title: '诗歌艺术'
-      body: '表达自己！使用代码创建动画诗歌。'
-    hoc:
-      title: '经典迷宫'
-      body: '请尝试计算机科学的基本知识。数百万人尝试了它。'
+    dance:
+      title: '舞蹈派对'
     flappy:
       title: '飞扬的代码'
       body: '想要在 10 分钟内写你自己的游戏吗？请尝试我们像素鸟编程教程 ！'
-    20-hour:
-      title: '加速课程'
-      body: '这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。'
-      body_short: '在速成版课程2-4中学习入门的计算机科学。'
-    hoc2014:
-      try_new_tutorial: '试试我们新的测试版的编程一小时教程'
-      try_frozen: '来自冰雪奇缘的艺术家安娜及爱莎。'
+    frozen:
+      title: "冰雪奇缘"
     gallery:
       title: "作品"
       body: "查看由我们用户创建的应用程序和艺术家图片的作品"
@@ -698,18 +692,21 @@ zh-CN:
       body: "游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。"
       audience: "13岁以上"
       cta: "了解操作方法"
+    hello-world:
+      title: '你好世界'
+      body: '从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。'
+    hero:
+      title: "我的世界"
+      body: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
     hoc-encryption:
       title: "简单加密"
       body: "学生将学习技术来创建和破解加密的信息。"
-    weblab:
-      title: "网站实验室（测试版）"
-      body: "网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。"
-      audience: "13岁以上"
-      cta: "了解操作方法"
-    frozen:
-      title: "冰雪奇缘"
-    starwars:
-      title: "星球大战"
+    hoc:
+      title: '经典迷宫'
+      body: '请尝试计算机科学的基本知识。数百万人尝试了它。'
+    hoc2014:
+      try_new_tutorial: '试试我们新的测试版的编程一小时教程'
+      try_frozen: '来自冰雪奇缘的艺术家安娜及爱莎。'
     infinity:
       title: "无限发挥游戏实验室"
       body: "通过游戏实验室用迪斯尼无限的角色创建故事或游戏。"
@@ -719,30 +716,39 @@ zh-CN:
     minecraft2016:
       title: "我的世界"
       body: "在你自建的《我的世界》中对各种动物和其他生物进行编程。"
-    aquatic:
-      title: "我的世界"
-    hero:
-      title: "我的世界"
-      body: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+    poem-art:
+      title: '诗歌艺术'
+      body: '表达自己！使用代码创建动画诗歌。'
     sports:
       title: "运动"
       body: "创造一个篮球游戏或跨越各种运动的混合比赛。"
+    starwars:
+      title: "星球大战"
     text-compression:
       title: "文本压缩"
       body: "在这节课中，学生们会通过符号替换模式的方法来使用文本压缩组件来压缩文本。"
-    unplugged:
-      title: "离线课程"
-      audience: "适合年龄 4 岁以上"
-      body: "我们已经为你的班级编排了一系列的线下课程。现在无论你的课堂里是否有计算机，你都可以教计算机科学基础！尝试利用这些课程，来作为一门独立的课程或作为任何计算机科学课程的补充。"
-      body_short: "如果你没有电脑，可以在你的教室试试这些离线的教程。"
-    unplugged_conditionals:
-      title: "条件语句"
-      body: "在这个离线活动中，通过扑克牌来学习算法和条件判断语句。"
+    weblab:
+      title: "网站实验室（测试版）"
+      body: "网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。"
+      audience: "13岁以上"
+      cta: "了解操作方法"
     widgets:
       title: "小部件"
       body: "学生们能使用这些数字工具来动手学习一些计算机科学原理课程的概念。学生们可以自己使用这些工具，也可以为您的班级上一堂单个概念的课程。"
       audience: "14 岁或以上"
       cta: "了解操作方法"
+    unplugged_conditionals:
+      title: "条件语句"
+      body: "在这个离线活动中，通过扑克牌来学习算法和条件判断语句。"
+    unplugged:
+      title: "离线课程"
+      audience: "适合年龄 4 岁以上"
+      body: "我们已经为你的班级编排了一系列的线下课程。现在无论你的课堂里是否有计算机，你都可以教计算机科学基础！尝试利用这些课程，来作为一门独立的课程或作为任何计算机科学课程的补充。"
+      body_short: "如果你没有电脑，可以在你的教室试试这些离线的教程。"
+    20-hour:
+      title: '加速课程'
+      body: '这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。'
+      body_short: '在速成版课程2-4中学习入门的计算机科学。'
   landing:
     prerelease_tutorial: "本教程为 **beta** 版，将根据反馈信息对其进行改进和修订。"
     report_bug: "报告错误"
@@ -1042,12 +1048,15 @@ zh-CN:
         not_listed: '期望的术语未列出'
         none: '不愿回答'
       school_country:
+        barbados: '巴巴多斯'
+        belize: '伯利兹'
         canada: '加拿大'
         chile: '智利'
         colombia: '哥伦比亚'
         israel: '以色列'
         malaysia: '马来西亚'
         mexico: '墨西哥'
+        paraguay: '巴拉圭'
         thailand: '泰国'
         uzbekistan: '乌兹别克斯坦'
       ages:
@@ -1147,3 +1156,14 @@ zh-CN:
   unit_prefix: "单位%{n}"
   code_org_logo_alt: "Code.org 首页"
   teacher_feedback: "老师反馈"
+  lesson_lock:
+    error:
+      no_updates: "没有要执行的更新"
+      missing_params: "必须提供用户、级别和单位id"
+      cannot_view_locked_answers: "锁定时无法查看答案"
+      forbidden: "用户无法更新学生的可锁定状态"
+  reset_predict_progress_button: "删除答案"
+  pixelation:
+    raw_format: "原始格式"
+    raw_format_alt: "查看清除格式的比特"
+    binary: "二进制"

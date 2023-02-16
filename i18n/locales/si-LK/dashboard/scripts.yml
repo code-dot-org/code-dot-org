@@ -1350,3 +1350,88 @@ si:
               display_name: අන්තර්ගතය
         soccer:
           name: පාපන්දු
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: ලූපයන්
+          lesson_groups:
+            lessonGroup-3:
+              display_name: අන්තර්ගතය
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: විචල්‍යන්
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: ලූපයන් සඳහා
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: දත්ත
+            csp_loops:
+              display_name: ලූපයන්
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ලැයිස්තු
+            lessonGroup-3:
+              display_name: ලූපයන්
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"

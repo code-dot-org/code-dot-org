@@ -12,7 +12,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Learn More"
+          "buttonText": "Learn More",
+          "key": "c0b6268f-dbb5-4f81-b459-02e1f35b0761"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -30,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 00:29:03 UTC",
+    "serialized_at": "2022-10-25 20:46:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -77,7 +78,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students explore the “What’s Going on in this Graph?” site in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab.",
-        "preparation": "* Preview [“What’s Going on in this Graph?”](https://www.nytimes.com/2020/06/10/learning/over-60-new-york-times-graphs-for-students-to-analyze.html) and prepare for the demo\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview [“What’s Going on in this Graph?”](https://www.nytimes.com/2020/06/10/learning/over-60-new-york-times-graphs-for-students-to-analyze.html) and prepare for the demo\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1Ycz0b-nlvTSMQPq4dV5MHffdJpZYw-2sPsLAVue4raE/edit?usp=sharing)",
         "purpose": "The two main purposes of this lesson are:\n\n1. Getting acquainted with talking and writing about data. In particular we want to:\n\t* Draw a distinction between describing what the data shows and describing why it might be that way\n\t* In other words: describe connections and trends in data separate from drawing conclusions.\n\t* We want students to get in the habit of separating the what from the why when it comes to talking and writing about data\n2. Introduce the concept of metadata. We want students to understand the value of data about data, that can be used to find, organize, and manage information. It also increases effective use of data by providing extra information. \n",
         "student_overview": "In this lesson, you will explore the “What’s Going on in this Graph?” site in order to tell a \"data story\" which explains both what the data shows and why that might be. Following this, you will learn about the concept of metadata and look for the metadata of datasets on App Lab."
       },
@@ -3499,7 +3500,7 @@
     },
     {
       "name": "Data Visualizer in App Lab - Part 2",
-      "url": "https://youtu.be/OjUEFHo3Yw0",
+      "url": "https://youtu.be/4vaWVvrnsFk",
       "key": "data_visualizer_in_app_lab_-_part_2",
       "properties": {
         "audience": "Student",

@@ -1762,11 +1762,17 @@ ro:
               display_name: Conţinut
             required:
               display_name: Prezentare generală
+        dance-2019:
+          title: Petrecere dansantă
+          description_short: Codifică o Petrecere Dansantă pe care să le-o trimiți
+            prietenilor. Cu participarea artiștilor Beyoncé, Harry Styles, Lizzo,
+            Lil Nas X, Selena Gomez, muzică de la Disney „Encanto” și multe altele!
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
               display_name: Pașii următori
         dance-extras-2019:
+          title: Continuă să dansezi
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
           student_description: Mergi mai departe de prima oră cu ideile de extindere
             a proiectelor.
@@ -2818,6 +2824,8 @@ ro:
               display_name: Conţinut
             lessonGroup-5:
               display_name: Cutie cu nisip
+        ai-ethics-2021:
+          description_audience: Clasele 6-12
         poem-art-2021:
           title: Arta Poeziei
         counting-csc-2021:
@@ -3325,5 +3333,180 @@ ro:
           student_description: Această unitate conține un sondaj care va fi distribuit
             când colegii tăi termină unitățile din ȘC Descoperiri. Profesorul îți
             va spune când trebuie să răspunzi la acest sondaj.
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Extensie de Depanare Asincronă
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modulul  2 Muncă Asincronă
         soccer:
           name: fotbal
+          title: Codifică-ți propriul joc de fotbal
+          description_short: Creează un joc de fotbal
+          description: Creează un joc de fotbal
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sondaj
+            lessonGroup-2:
+              display_name: Conţinut
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Sondaj
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Laboratorul Java
+            lesson-6:
+              name: Bucle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaj
+            lessonGroup-3:
+              display_name: Conţinut
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variabile
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Matrice Uni-Dimensionale (1D)
+            lesson-3:
+              name: Bucle Pentru
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        hello-world-space-2022:
+          title: 'Bunā Lume: Spațiu'
+        hello-world-soccer-2022:
+          title: 'Bunā Lume: Fotbal'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolul 1
+            lessonGroup-3:
+              display_name: Capirolul 2
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+          title: Procesul de design
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolul 1
+            lessonGroup-3:
+              display_name: Capirolul 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolul 1
+            lessonGroup-3:
+              display_name: Capirolul 2
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Ce este Acel Sunet?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csp_unit1_2020:
+              display_name: "(vechi) Unitatea 1: Informaţii digitale"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(vechi) Unitatea 2: Internet"
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Date
+            csp_loops:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Chestionar după curs
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-2:
+              display_name: Chestionar după curs
+            lessonGroup-3:
+              display_name: Bucle
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(vechi) Unitatea 9: date"
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp-playground:
+          description_audience: Scriitori de Curriculum
+          description_short: Pentru actualizările pe stadii ale lecțiilor sau nivelurile
+            dintre versiunile planului curicular

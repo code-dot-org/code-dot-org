@@ -35,23 +35,17 @@ Deel foto's van uw evenement op Facebook en Twitter en gebruik daarbij de hashta
 
 * * *
 
-## Host een Family Code Night met de 'Hour of Code' en nodig ouders uit om deel te nemen.
+## Example plan for a school assembly or event
 
-Overweeg een evenement voor de lage klassen te hosten en nodig ouders uit mee te doen met hun kinderen met een uurtje informatica. Dit is een geweldige manier om de grotere gemeenschap erbij te betrekken en steun van ouders aan te moedigen voor informatica bij u op school. Onze partners van Family Code Night hebben een alles-in-een evenementenkit gecreëerd compleet met een checklist, script voor de presentator, uitnodigingen per e-mail, posters, powerpoints, en meer om uw eigen evenement te creëren. [Klik hier om de evenementenkit te downloaden](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Voorbeeld van een vergadering of evenement op school
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Evenement:** Kickoff-vergadering van de informaticaweek voor de hele school.
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Datum:**{{ campaign_date/start_short }} (start van de informaticaweek)
-
-**Tijd** Gedurende de schooldag. Het liefst in de ochtenduren. Ongeveer 1 uur.
-
-**Locatie:** Vergaderingzaal van de school (bv. theater, sportzaal, cafetaria)
-
-## Programma
+## Run of Show
 
 | Tijdstip    | Actie                                                                                                                                                                 |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

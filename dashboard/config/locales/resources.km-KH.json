@@ -29,6 +29,208 @@
         "ai-training/oceans/unversioned": {
           "type": "វីដេអូ"
         },
+        "implementation_guide/coursed/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "វីដេអូ"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "វីដេអូ"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "វីដេអូ"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "វីដេអូ"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "វីដេអូ"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_internet/coursef/2022": {
+          "name": "អ៊ីនធឺណិត"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "វីដេអូ"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "វីដេអូ"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "វីដេអូ"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie and the Big Project"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "កំហុសដែលមិនបានគ្រោងទុក",
+          "type": "វីដេអូ"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "teacher_forum/express/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "pair_programming/express/2022": {
+          "type": "វីដេអូ"
+        },
+        "artist_introduction/express/2022": {
+          "type": "វីដេអូ"
+        },
+        "turns_angles/express/2022": {
+          "type": "វីដេអូ"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "វីដេអូ"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "វីដេអូ"
+        },
+        "variables/express/2022": {
+          "name": "អ​ថេរ"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "វីដេអូ"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "វីដេអូ"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "វីដេអូ"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "វីដេអូ"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "វីដេអូ"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "វីដេអូ"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "វីដេអូ"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "វីដេអូ"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "pair_programming/coursec/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "វីដេអូ"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
         "binary_and_data/csd/2022": {
           "type": "វីដេអូ"
         },
@@ -50,9 +252,6 @@
         },
         "video_training_data_and_bias/csd/2022": {
           "type": "វីដេអូ"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "វេទិការគ្រូបង្រៀន"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "វីដេអូ"
@@ -705,6 +904,20 @@
         "vocabulary_3/csd/2017": {
           "name": "ពាក្យពិបាក"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "វីដេអូ"
         },
@@ -720,23 +933,20 @@
         "ai-ml/coursef/2021": {
           "type": "វីដេអូ"
         },
-        "ai-training/coursef/2021": {
+        "ai-societal/coursef/2021": {
           "type": "វីដេអូ"
         },
-        "ai-societal/coursef/2021": {
+        "ai-training/coursef/2021": {
           "type": "វីដេអូ"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "អ៊ីនធឺណិត"
         },
-        "implementation_guide/coursef/2021": {
+        "implementation_guide/courseb/2021": {
           "name": "សៀវភៅណែនាំការអនុវត្ត"
         },
-        "teacher_forum_1/coursef/2021": {
+        "teacher_forum_1/courseb/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "ឯកសារ Sprite Lab"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "type": "វីដេអូ"
@@ -751,26 +961,26 @@
         "common-sense-media-pause-think/courseb/2021": {
           "type": "វីដេអូ"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ",
-          "type": "វីដេអូ"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "implementation_guide/courseb/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "teacher_forum_1/courseb/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "wiggles-go_noodle/coursea/2021": {
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ",
           "type": "វីដេអូ"
         },
+        "implementation_guide/coursea/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "វីដេអូ"
+        },
+        "wiggles-go_noodle/coursea/2021": {
           "type": "វីដេអូ"
         },
         "wiggles_-_gonoodle/coursea/2021": {
@@ -785,28 +995,22 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "វីដេអូ"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
-        "implementation_guide/coursea/2021": {
+        "implementation_guide/coursec/2021": {
           "name": "សៀវភៅណែនាំការអនុវត្ត"
         },
-        "teacher_forum_1/coursea/2021": {
+        "teacher_forum_1/coursec/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -815,25 +1019,31 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
         "pair-programming-vid/coursec/2021": {
           "type": "វីដេអូ"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "វីដេអូ"
         },
-        "implementation_guide/coursec/2021": {
+        "implementation_guide/coursed/2021": {
           "name": "សៀវភៅណែនាំការអនុវត្ត"
         },
-        "teacher_forum_1/coursec/2021": {
+        "teacher_forum_1/coursed/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
         "pause_and_think_online/coursed/2021": {
@@ -842,25 +1052,22 @@
         "pause_and_think_online_1/coursed/2021": {
           "type": "វីដេអូ"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
-        "teacher_forum_1/coursed/2021": {
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "teacher_forum_1/express/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
         "pair_programming/express/2021": {
@@ -887,7 +1094,7 @@
         "variables_video/express/2021": {
           "name": "អ​ថេរ"
         },
-        "teacher_forum_1/express/2021": {
+        "teacher_forum_1/pre-express/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
         "20_20_20_rule/pre-express/2021": {
@@ -899,7 +1106,13 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "វីដេអូ"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "implementation_guide/coursee/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
         "sprite_lab_documentation/coursee/2021": {
@@ -910,15 +1123,6 @@
         },
         "digital-sharing-video/coursee/2021": {
           "type": "វីដេអូ"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "ឯកសារ Sprite Lab"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "វីដេអូ"
@@ -956,6 +1160,9 @@
         "view_and_download_survey_data/csd/2021": {
           "type": "វីដេអូ"
         },
+        "teacher_forum/csd/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "វីដេអូ"
         },
@@ -964,9 +1171,6 @@
         },
         "intro_to_design_mode/csd/2021": {
           "type": "វីដេអូ"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
         },
         "internet-of-things-video/csd/2021": {
           "type": "វីដេអូ"
@@ -1019,6 +1223,9 @@
         },
         "video_training_data_and_bias/csd/2021": {
           "type": "វីដេអូ"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "គំនូរគូរជារាង"
@@ -1098,9 +1305,6 @@
         },
         "functions_1/csd/2021": {
           "name": "អនុ​គមន៍"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "វីដេអូ"

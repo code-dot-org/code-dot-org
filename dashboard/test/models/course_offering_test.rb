@@ -349,7 +349,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     ].sort
 
     assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@levelbuilder)
-    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'in assignable course offerings summary display names of course offerings include star if they are not launched' do
@@ -376,7 +376,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     ].sort
 
     assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@pilot_teacher)
-    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'get assignable course offerings for partner should return offerings where partner can be instructor and partners courses' do
@@ -387,7 +387,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     ].sort
 
     assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@partner)
-    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'get assignable course offerings for pl pilot instructor should return offerings where pl pilot instructor can be instructor' do
@@ -399,7 +399,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     ].sort
 
     assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@pilot_instructor)
-    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'get assignable course offerings for teacher should return offerings where teacher can be instructor' do
@@ -409,7 +409,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     ].sort
 
     assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@teacher)
-    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
   end
 
   test 'get assignable course offerings for facilitator should return all offerings, versions, amd units where facilitator can be instructor' do
@@ -421,7 +421,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@facilitator)
 
-    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.key?(co)}
 
     unit_group_course_versions = assignable_course_offerings[@unit_group.course_version.course_offering.id][:course_versions]
     assert_equal unit_group_course_versions.keys, [@unit_group.course_version.id]
@@ -438,7 +438,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed course offerings" do
-    course_offering = create :course_offering, key: 'course-offering-1'
+    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media'
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
     course_offering.destroy!

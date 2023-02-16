@@ -9,7 +9,8 @@
           "notice": "Are you signed up for the AP exam?",
           "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Not sure you want to take the test? We've got SIX reasons why you should. Check them out!",
           "link": "",
-          "type": "information"
+          "type": "information",
+          "key": "487af7e8-d3dd-46c2-a0fa-936a4e58d977"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -23,7 +24,7 @@
     },
     "new_name": "csd1-2017",
     "family_name": "csd1",
-    "serialized_at": "2022-03-22 21:16:08 UTC",
+    "serialized_at": "2022-09-28 14:31:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

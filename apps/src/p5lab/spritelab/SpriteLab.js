@@ -9,6 +9,7 @@ import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
 import React from 'react';
 import {singleton as studioApp} from '../../StudioApp';
+import {closeWorkspaceAlert} from '../../code-studio/projectRedux';
 
 export default class SpriteLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -76,6 +77,7 @@ export default class SpriteLab extends P5Lab {
 
   reset() {
     super.reset();
+    getStore().dispatch(closeWorkspaceAlert());
     getStore().dispatch(clearPrompts());
     this.clearExecutionErrorWorkspaceAlert();
     this.preview();
@@ -157,5 +159,16 @@ export default class SpriteLab extends P5Lab {
    */
   getReinfFeedbackMsg(isFinalFreePlayLevel) {
     return isFinalFreePlayLevel ? null : this.getMsg().reinfFeedbackMsg();
+  }
+
+  runValidationCode() {
+    // Skip validation code in 'editBlocks' mode (i.e., a levelbuilder is
+    // editing start blocks for the level).
+    if (this.level.editBlocks) {
+      this.onPuzzleComplete(false /* submit */);
+      return;
+    }
+
+    super.runValidationCode();
   }
 }

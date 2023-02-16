@@ -32,8 +32,7 @@
         }
       },
       {
-        "name": "TEXT2",
-        "type": "String"
+        "name": "TEXT2"
       }
     ],
     "color": [

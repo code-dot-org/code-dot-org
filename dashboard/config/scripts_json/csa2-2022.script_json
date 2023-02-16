@@ -12,7 +12,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "End of Unit Survey"
+          "buttonText": "End of Unit Survey",
+          "key": "96261a6a-6742-48e0-ab85-c8fcc3b83a95"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-02 13:06:13 UTC",
+    "serialized_at": "2022-12-08 17:27:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6584,6 +6585,18 @@
       }
     },
     {
+      "name": "Unit 2 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1FRfTlmlx2FKOm8VzLu5_-NvuHwsnIYDiGm_dCwlXUFA/edit?usp=sharing",
+      "key": "unit_2_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_guide_exemplar_"
+      }
+    },
+    {
       "name": "Unit 2 Overview",
       "url": "https://docs.google.com/document/d/1bXHCFLjbFcZVIL6TqwxlPplRVhdVH8oivRK8BYC1mQU/edit?usp=sharing",
       "key": "unit_2_overview",
@@ -7028,6 +7041,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_2_guide",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_guide_exemplar_",
         "script.name": "csa2-2022"
       }
     },

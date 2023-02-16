@@ -20,6 +20,7 @@ ne:
       score: score
       size: size
       speed: speed
+      type: type
       variable: चल
       wizard: wizard
       x: x

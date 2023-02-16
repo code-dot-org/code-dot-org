@@ -6,10 +6,15 @@ video_player: true
 
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/css/highlights.css", rel: "stylesheet"}
+:css
+  /* For phase 1 compatibility */
+  .tutorial-info h2 {
+    margin-top: 0px
+  }
 
 .tools-banner
   .tools-img-box
-    %img.tools-img-applab.tools-img{src: CDO.code_org_url("/images/app-lab/applab-tool.png")}
+    %img.tools-img-applab.tools-img{src: CDO.code_org_url("/images/app-lab/applab-tool.png"), alt: ""}
   .tools-info{style: "max-width: 688px;"}
     .tools-title-bar
       %h1.tools-title App Lab
@@ -21,6 +26,9 @@ video_player: true
 
 .clear
 
+%div{style: "margin-top: 3em;"}
+  = view :maker_skinny_banner
+
 #resources.tile-container-responsive
   = view :top_hoc_tutorial_applab, image_match_youtube_height: true
 
@@ -28,7 +36,7 @@ video_player: true
     .tutorial-tile
       = view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4", letterbox: 'false'
       .tutorial-info{style: "justify-content: flex-start;"}
-        %h3{style: "margin-top: 0px;"} App Lab in the classroom
+        %h2 App Lab in the classroom
         .smalltext This launch video introduces five reasons App Lab could be a great tool for students learning programming.
       .clear
 
@@ -95,7 +103,7 @@ video_player: true
     %tr
       %td
         %a{href: CDO.studio_url("/s/csp3-2022")}
-          %img{src: "/educate/csp/images/unit3.png"}
+          %img{src: "/educate/csp/images/unit3.png", alt: ""}
           Unit 3
       %td
         %b.purple Intro to App Design
@@ -103,7 +111,7 @@ video_player: true
     %tr
       %td
         %a{href: CDO.studio_url("/s/csp4-2022")}
-          %img{src: "/educate/csp/images/unit4.png"}
+          %img{src: "/educate/csp/images/unit4.png", alt: ""}
           Unit 4
       %td
         %b.purple Variables, Conditions, and Functions
@@ -111,7 +119,7 @@ video_player: true
     %tr
       %td
         %a{href: CDO.studio_url("/s/csp5-2022")}
-          %img{src: "/educate/csp/images/unit5.png"}
+          %img{src: "/educate/csp/images/unit5.png", alt: ""}
           Unit 5
       %td
         %b.purple Lists, Loops, and Traversals
@@ -119,7 +127,7 @@ video_player: true
     %tr
       %td
         %a{href: CDO.studio_url("/s/csp7-2022")}
-          %img{src: "/educate/csp/images/unit7.png"}
+          %img{src: "/educate/csp/images/unit7.png", alt: ""}
           Unit 7
       %td
         %b.purple Parameters, Return, and Libraries
@@ -127,7 +135,7 @@ video_player: true
     %tr
       %td
         %a{href: CDO.studio_url("/s/csp9-2022")}
-          %img{src: "/educate/csp/images/unit9.png"}
+          %img{src: "/educate/csp/images/unit9.png", alt: ""}
           Unit 9
       %td
         %b.purple Data
@@ -144,7 +152,7 @@ video_player: true
     %tr
       %td
         %a{href: CDO.studio_url("/s/csd4-2022")}
-          %img{src: "/educate/csp/images/thumb_app.png"}
+          %img{src: "/educate/csp/images/thumb_app.png", alt: "", style: "padding-right: 5px;"}
           Unit 4
       %td
         %b.purple The Design Process
@@ -152,7 +160,7 @@ video_player: true
     %tr
       %td
         %a{href: CDO.studio_url("/s/csd6")}
-          %img{src: "/images/fit-50/animated-examples/circuitplayground.gif"}
+          %img{src: "/images/fit-50/animated-examples/circuitplayground.gif", alt: ""}
           Unit 6
       %td
         %b.purple Physical Computing
@@ -161,6 +169,35 @@ video_player: true
           %a{href: "https://code.org/circuitplayground"}
             Adafruit's Circuit Playground
           board.
+
+  %h3
+    Flexible Units that use App Lab
+
+  %table
+    %tr
+      %th{style: "min-width: 75px;"} Link
+      %th Unit description
+    %tr
+      %td
+        %a{href: CDO.studio_url("/s/devices")}
+          %img{src: "/images/fit-50/animated-examples/circuitplayground.gif", alt: ""}
+          Unit
+      %td
+        %b.purple Creating Apps With Devices
+        %p
+          In this Maker unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in smart devices, looking at how a simple prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+    %tr
+      %td
+        %a{href: CDO.studio_url("/s/aiml")}
+          %img{src: "/images/fit-50/oceans/mobile-ai.png", alt: ""}
+          Unit
+      %td
+        %b.purple Artificial Intelligence (AI) and Machine Learning (ML)
+        %p
+          Artificial intelligence (AI) and machine learning (ML) are shaping the world around us. As these technologies touch more and more of our daily lives, they have become an essential part of foundational computer science education. In this
+          %a{href: CDO.studio_url("/s/aiml?viewAs=Instructor")}
+            unit
+          which spans roughly 5 weeks, students can learn the fundamentals of these technologies and discuss their ethical implications.
 
 
 #videos

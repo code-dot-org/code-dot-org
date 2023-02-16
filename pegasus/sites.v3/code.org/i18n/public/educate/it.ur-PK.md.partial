@@ -1,49 +1,49 @@
 ---
-title: IT Requirements
+title: آئی ٹی کی ضروریات
 nav: educate_nav
 theme: responsive
 ---
 
-# Technical Requirements for Code.org Tutorials
+# Code.org کے ٹیوٹوریلز کے لیے تکنیکی ضروریات
 
-## Hardware
+## ہارڈ ویئر
 
-- We recommend at least a 15 MBit/sec Internet connection for your school.
-- The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
-- Looking for mobile device support details? Read below.
+- ہم آپ کے سکول کے لیے 15 میگابٹ/سیکنڈ کے انٹرنٹ کنکشن کی سفارش کرتے ہیں.
+- سب سے چھوٹا سکریں سائز جسے ہم سپورٹ کرتے ہیں 1024 × 728 پکسل ہے.
+- آپ کو ہماے مڈل اور ہائی سکول لیول کے کورسوں CS Discoveries, CS Principles, اور Intro to App Lab کے لیے ماؤس (ٹچ پیڈ) اور کیبورڈ کے حامل ایک ڈسک ٹاپ یا لیپ ٹاپ کی ضرورت ہو گی. ان کورسز کے لیے اکثر ٹیبلٹ اور موبائل ڈیوائسز کو سپورٹ نہیں کیا جاتا. ڈیوائس کے لیے مخصوص مستثنیات کے لیے نیچے "موبائل اور ٹیبلٹ سپورٹ کی تفصیلات" دیکھیں۔
+- دیگر تمام مواد، جیسے K-5 کورسز (کمپیوٹر سائنس کے بنیادی اصول) اور آور آف کوڈ سرگرمیاں دیگر تمام جدید ٹیبلٹس اور لیپ ٹاپ یا ڈیسک ٹاپ کمپیوٹرز کے علاوہ iPads اور Chromebooks کے ساتھ مطابقت رکھتی ہیں۔
+- کیا آپ موبائل ڈیوائس کے سپورٹ کی تفصیلات تلاش کر رہے ہیں؟ درج ذیل پڑھ لیں۔
 
-## Minimum Supported Browsers and Platforms
+## کم سے کم تعاون یافتہ براؤزرز اور پلیٹ فارمز
 
 <table>
  <tr>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser
+          براؤزر
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform
+          پلیٹ فارم
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -65,61 +65,62 @@ theme: responsive
  </tr>
 </table>
 
-## Sites to Unblock
+## انبلاک (unblock) کرنے کے لیے سائٹس
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Code.org کے تمام مواد کے ساتھ بہترین تجربہ کے لیے، ہم آپ کے اسکول یا ضلع کے آئی ٹی ڈیپارٹمنٹ سے مشورہ کرنے کی تجویز کرتے ہیں تاکہ یہ یقینی بنایا جا سکے کہ درج ذیل سائٹس کھولنے کی اجازت ہے اور وہ بلاک نہیں ہیں۔
 
-| Priority                                                 | URL                                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Required**                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **To use YouTube hosted videos (Enhanced Privacy Mode)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **To use Code.org hosted videos**                        | `https://videos.code.org`                                                                                  |
-| **To use Internet Simulator**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **To use Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **To use Google Classroom Share Button**                 | `https://apis.google.com`                                                                                  |
+| ترجیح                                                           | URL                                                                                                        |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **ضروری**                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **اختیاری**                                                     | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **YouTube پر ویڈیوز استعمال کرنے کے لیے (بہتر رازداری کا موڈ)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org پر ویڈیوز استعمال کرنے کے لیے**                      | `https://videos.code.org`                                                                                  |
+| **انٹرنیٹ سیمولیٹر استعمال کرنے کے لیے**                        | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **ویب لیب استعمال کرنے کے لیے**                                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **گوگل کلاس روم شیئر بٹن استعمال کرنے کے لیے**                  | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                     | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
-## Mobile and Tablet Support Details
+## موبائل اور ٹیبلٹ سپورٹ کی تفصیلات
 
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+تمام CS Discoveries, CS Principles, اور Intro to App Lab کورسز ٹیبلیٹ یا موبائل ڈیوائسز کے ساتھ مطابقت نہیں رکھتے- ایک مکمل کیبورڈ اور ماؤس (یا ٹچ پیڈ، جیسا کہ MacBooks پر) درکار ہیں. زیادہ تر ٹیبلٹ تعاون یافتہ نہیں ہیں، درج ذیل مستثنیات کے ساتھ:
 
-- Microsoft Surface Pro with an external keyboard
-- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
+- Microsoft Surface Pro ایک بیرونی کی بورڈ کے ساتھ
+- ایک بیرونی کیبورڈ اور ایک بیرونی ماؤس یا ٹچ پیڈ کے ساتھ iPadOS 13.4 یا اس کے بعد کے آپریٹنگ سسٹم کے ساتھ چلنے والا iPad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+دیگر تمام مواد، جیسے K-5 کورسز (کمپیوٹر سائنس کے بنیادی اصول) اور آور آف کوڈ سرگرمیاں دیگر تمام جدید ٹیبلٹس اور لیپ ٹاپ یا ڈیسک ٹاپ کمپیوٹرز کے علاوہ iPads اور Chromebooks کے ساتھ مطابقت رکھتی ہیں۔
 
-### Mobile Phones
+### موبائل فونز
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+ہمارے آور آف کوڈ کی سرگرمیاں اور CS بنیادی کورسز موبائل فون پر مکمل کیے جا سکتے ہیں۔ اگرچہ یہ سرگرمیاں قابل استعمال ہیں، لیکن وہ موبائل فون کے تجربے کے لیے موزوں نہیں ہیں اور ان میں کچھ معلوم حدود ہیں (مثلاً ٹچ کے اہداف چھوٹے ہوسکتے ہیں، معاون آلات کے عناصر آف اسکرین ڈسپلے ہوسکتے ہیں، اور آن اسکرین کیبورڈ کا استعمال کرتے ہوئے متن کو داخل کرنا مشکل ہوسکتا ہے)۔ CS Discoveries, CS Principles, اور Intro to App Lab کورسز موبائل فون پر قابل استعمال نہیں ہیں.
 
-## Videos
+## ویڈیوز
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+ہم Code.org اور [ہمارے آنلائن پلیٹ فارم](https://studio.code.org) کے اندر ویڈیو دکھانے کے لیے[یوٹوب](https://www.youtube.com) کا استعمال کرتے ہیں.  جن سکولوں میں YouTube بلاک ہے، ہم وہاں Code.org کی میزبانی کردہ ویڈیو پلیئر کے ذریعے ویڈیو دکھانے کی کوشش کرتے ہیں.
 
-### Can you play this video?
+### کیا آپ یہ ویڈیو چلا سکتے ہیں؟
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+اس سے پہلے کہ آپ Code.org کے آن لائن کورسز شروع کریں، نیچے دی گئی ویڈیو کے لیے پلے بیک کی جانچ کریں تاکہ یہ یقینی بنایا جا سکے کہ آپ شروع کرنے کے لیے تیار ہیں.
 
 <iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+پورے نصاب میں یہی پلیئر استعمال ہوتا ہے. یہ YouTube کے ذریعے ویڈیو دکھانے کی کوشش کرے گا اور، اگر یوٹیوب بلاک ہے، تو آپ اس کے بجائے ہمارے "بیک اپ" پلیئر کا استعمال کرتے ہوئے Code.org کے فراہم کردہ ویڈیو دکھا سکتے ہیں.
 
-### Video not playing?
+### ویڈیو نہیں چل رہی؟
 
-If video does not work, you can email us at support@code.org.
+اگر ویڈیو کام نہیں کرتی ہے، تو آپ ہمیں support@code.org پر ای میل کر سکتے ہیں.
 
-However, you can still use our tutorials without video.
+تاہم، آپ ویڈیو کے بغیر بھی ہمارے ٹیوٹوریل استعمال کر سکتے ہیں.
 
-1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
-2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
-3. If all fails, there is a "Show Notes" tab that provides a storyboard equivalent of videos.
+1. ہمارے تمام ویڈیو [ڈاونلوڈ کرنے کے لیے دستیاب ہیں](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). اگر آپ کے اسکول کی bandwidth کم ہے، تو ہم تجویز کرتے ہیں کہ آپ ویڈیوز ڈاؤن لوڈ کر لیں اور انہیں مشترکہ اسکرین پر طلباء کو دکھائیں.
+2. ہم نے ہمارے ٹیوٹوریلز میں ہر ویڈیو کے لیے ضم شدہ ڈاونلوڈ لنک کا آیکن <img src="/images/green-download.png" width=25 height=25 /> شامل کیا ہے، جس سے طلباء انفرادی طور پر ویڈیو ڈاونلوڈ کرنے کے قابل ہوتے ہیں.
+3. اگر سب طریقے ناکام ہوجاتے ہیں تو ایک "شو نوٹس" ٹیب ہے جہاں ویڈیوز کے متبادل کے طور پر اسٹوری بورڈ فراہم کیا گیا ہے۔
 
   <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
 
-## Special settings for Google Apps/G-Suite users
+## Google Apps/G-Suite صارفین کے لیے خصوصی ترتیبات
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+اگر آپ G-suite کے منتظم ہیں، تو YouTube کو محدود رکھنے کے لیے آپ کی ترتیبات ضرور دیکھ لیں. اگر آپ نے "یوٹوب تک رسائی سختی سے محدود کر دی گئی ہے" کی ترتیب سیٹ کی ہے یا اگر آپ کو پیغامات نظر آتے ہیں کہ 'اس ویڈیو پر پابندی لگا دی گئی ہے'، تو آپ ہمارے چینل کو چینلز کی منظور شدہ فہرست میں شامل کر سکتے ہیں. ہمارے چینل کو منظور شدہ فہرست میں شامل کرنے کے لیے Google کا فراہم کردہ [گائیڈ](https://support.google.com/a/answer/6245597) دیکھیں. مختلف ترتیبات کے بارے میں جاننے اور اپنے کلاس روم کے لیے بہترین ترتیبات چننے کے لیے آپ [یہ گائیڈ](https://support.google.com/a/answer/6212415?hl=en) بھی دیکھ سکتے ہیں.
 
-## Still having trouble?
+## اب بھی دشواری پیش آ رہی ہے؟
 
-We'll help you out - just email us at support@code.org!
+ہم آپ کی مدد کریں گے - بس ہمیں support@code.org پر ای میل کریں!

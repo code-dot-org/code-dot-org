@@ -47,12 +47,10 @@ files: [
   "translation" : "/%language%/**/%original_file_name%",
   "ignore" : [
     "/source/hourofcode/**",
-    "/source/blockly-mooc/applab.json",
     "/source/blockly-mooc/calc.json",
     "/source/blockly-mooc/eval.json",
-    "/source/blockly-mooc/gamelab.json",
     "/source/blockly-mooc/netsim.json",
-    "/source/blockly-mooc/weblab.json"
+    "/source/blockly-mooc/mlPlayground.json"
   ],
   "update_option" : "update_as_unapproved"
  }

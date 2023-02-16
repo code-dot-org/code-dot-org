@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Алдааг засах"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Алдааг засах"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Нөхцлүүд"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Алдааг засах"
         },
         "loops/aquatic/unversioned": {
           "word": "Гогцоонууд"
@@ -62,6 +62,14 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Алдагдалгүй шахалт"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Код"
         },
@@ -76,6 +84,87 @@
         },
         "machine_learning/oceans/unversioned": {
           "word": "Машины сургалт"
+        },
+        "debugging/coursed/2022": {
+          "word": "Алдааг засах"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Нөхцлүүд"
+        },
+        "variable/coursef/2022": {
+          "word": "Хувьсагч"
+        },
+        "input/coursef/2022": {
+          "word": "Оролт"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Машины сургалт"
+        },
+        "internet/coursef/2022": {
+          "word": "Интернэт"
+        },
+        "packets/coursef/2022": {
+          "word": "Пакетууд"
+        },
+        "define/coursef/2022": {
+          "word": "Тодорхойлох"
+        },
+        "function/coursee/2022": {
+          "word": "Функц"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Нөхцлүүд"
+        },
+        "copyright/coursee/2022": {
+          "word": "Зохиогчийн эрх"
+        },
+        "define/coursee/2022": {
+          "word": "Тодорхойлох"
+        },
+        "debugging/courseb/2022": {
+          "word": "Алдааг засах"
+        },
+        "drop/courseb/2022": {
+          "word": "Унах"
+        },
+        "debugging/express/2022": {
+          "word": "Алдааг засах"
+        },
+        "sequencing/express/2022": {
+          "word": "Дараалуулах"
+        },
+        "conditionals/express/2022": {
+          "word": "Нөхцлүүд"
+        },
+        "function/express/2022": {
+          "word": "Функц"
+        },
+        "variable/express/2022": {
+          "word": "Хувьсагч"
+        },
+        "define/express/2022": {
+          "word": "Тодорхойлох"
+        },
+        "drop/pre-express/2022": {
+          "word": "Унах"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Алдааг засах"
+        },
+        "debugging/coursea/2022": {
+          "word": "Алдааг засах"
+        },
+        "drop/coursea/2022": {
+          "word": "Унах"
+        },
+        "debugging/coursec/2022": {
+          "word": "Алдааг засах"
+        },
+        "sequencing/coursec/2022": {
+          "word": "Дараалуулах"
+        },
+        "binary/coursec/2022": {
+          "word": "Хоёрт"
         },
         "input/csd/2022": {
           "word": "Оролт"
@@ -108,7 +197,24 @@
           "word": "Машины сургалт"
         },
         "code/poem-art/unversioned": {
-          "word": "Код"
+          "word": "Код",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Хувьсагч"

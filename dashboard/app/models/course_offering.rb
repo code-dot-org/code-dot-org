@@ -2,14 +2,18 @@
 #
 # Table name: course_offerings
 #
-#  id           :integer          not null, primary key
-#  key          :string(255)      not null
-#  display_name :string(255)      not null
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
-#  category     :string(255)      default("other"), not null
-#  is_featured  :boolean          default(FALSE), not null
-#  assignable   :boolean          default(TRUE), not null
+#  id                   :integer          not null, primary key
+#  key                  :string(255)      not null
+#  display_name         :string(255)      not null
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  category             :string(255)      default("other"), not null
+#  is_featured          :boolean          default(FALSE), not null
+#  assignable           :boolean          default(TRUE), not null
+#  curriculum_type      :string(255)
+#  marketing_initiative :string(255)
+#  grade_levels         :string(255)
+#  header               :string(255)
 #
 # Indexes
 #
@@ -19,7 +23,7 @@
 class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
-  has_many :course_versions
+  has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
 
@@ -30,7 +34,7 @@ class CourseOffering < ApplicationRecord
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
 
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
-  # potential content root, i.e. a Script or UnitGroup.
+  # potential content root, i.e. a Unit or UnitGroup.
   #
   # Examples:
   #
@@ -64,7 +68,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.should_cache?
-    Script.should_cache?
+    Unit.should_cache?
   end
 
   def self.get_from_cache(key)
@@ -91,7 +95,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def any_version_is_assignable_editor_experiment?(user)
-    course_versions.any? {|cv| cv.content_root.is_a?(Script) && cv.has_editor_experiment?(user)}
+    course_versions.any? {|cv| cv.content_root.is_a?(Unit) && cv.has_editor_experiment?(user)}
   end
 
   def self.assignable_course_offerings(user)
@@ -163,7 +167,11 @@ class CourseOffering < ApplicationRecord
       display_name: display_name,
       category: category,
       is_featured: is_featured,
-      assignable: assignable?
+      assignable: assignable?,
+      curriculum_type: curriculum_type,
+      marketing_initiative: marketing_initiative,
+      grade_levels: grade_levels,
+      header: header
     }
   end
 
@@ -202,7 +210,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def any_version_is_unit?
-    course_versions.any? {|cv| cv.content_root_type == 'Script'}
+    course_versions.any? {|cv| cv.content_root_type == 'Unit'}
   end
 
   def self.single_unit_course_offerings_containing_units(unit_ids)

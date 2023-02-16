@@ -3,28 +3,149 @@
     "data": {
       "programming_environments": {
         "weblab": {
-          "name": "Laboratorul de web"
+          "name": "Laboratorul de web",
+          "description": "Editor HTML/CSS bazat pe web.",
+          "categories": {
+            "css_properties": {
+              "name": "Proprietăți CSS"
+            }
+          }
         },
         "gamelab": {
           "name": "Game Lab",
+          "description": "Game Lab este un mediu de programare în care puteți realiza jocuri și animații interesante. Desenează-ți personajele, codează cu blocuri sau JavaScript pentru a-l face să funcționeze, apoi distribuie-ți jocul în câteva secunde.",
           "categories": {
             "game_lab": {
-              "name": "Game Lab"
+              "name": "Game Lab",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Negru şi alb"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Redă fişierul audio MP3 din link-ul specificat."
+                }
+              }
             },
             "sprites": {
-              "name": "Spiriduși"
+              "name": "Spiriduși",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirală"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Grupuri"
+              "name": "Grupuri",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Culoare"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Culoare"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Desen"
+              "name": "Desen",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stea"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "name": "Control"
             },
             "math": {
-              "name": "Matematică"
+              "name": "Matematică",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Numărul minim returnat"
+                    },
+                    "max": {
+                      "description": "Numărul maxim returnat"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Numărul minim returnat"
+                    },
+                    "max": {
+                      "description": "Numărul maxim returnat"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Variabile"
+              "name": "Variabile",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Atribuie o valoare unei variabile existente. De exemplu, x = 0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "Declara si atribuie o valoare initiala unei variabile."
+                }
+              }
             },
             "functions": {
               "name": "Funcţii"
@@ -35,25 +156,220 @@
           "name": "Laboratului Aplicației",
           "description": "App Lab este un mediu de programare în care poți crea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.",
           "categories": {
+            "ui_controls": {
+              "name": "controale UI",
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Să ne micșorăm și să ne mărim"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funcţie"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Redă fişierul audio MP3 din link-ul specificat."
+                }
+              }
+            },
+            "canvas": {
+              "name": "Canvas",
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obiect"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Date"
+              "name": "Date",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funcţie"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "obiect"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "obiect"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "name": "Broască țestoasă"
+            },
+            "control": {
+              "name": "Control",
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funcţie"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematică"
+              "name": "Matematică",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Numărul minim returnat"
+                    },
+                    "max": {
+                      "description": "Numărul maxim returnat"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Numărul minim returnat"
+                    },
+                    "max": {
+                      "description": "Numărul maxim returnat"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Variabile"
+              "name": "Variabile",
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "Declara si atribuie o valoare initiala unei variabile."
+                },
+                "addPair": {
+                  "return_value": "Nici unul"
+                }
+              }
             },
             "functions": {
               "name": "Funcţii"
             },
             "advanced": {
               "name": "Avansat"
+            },
+            "maker": {
+              "name": "Producător"
             }
           }
         },
         "spritelab": {
           "name": "Laborator Sprite",
+          "description": "Sprite Lab este un mediu de programare Blockly în care puteți crea proiecte interactive.",
           "categories": {
             "sprites": {
               "name": "Spiriduși"
@@ -97,7 +413,39 @@
           }
         },
         "javalab": {
-          "name": "Laboratorul Java"
+          "name": "Laboratorul Java",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Comenzi rapide Java Lab"
+            },
+            "general": {
+              "name": "Bazele Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.teatru"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Structuri de control"
+            },
+            "data_structures": {
+              "name": "Structuri de date"
+            }
+          }
         }
       }
     }

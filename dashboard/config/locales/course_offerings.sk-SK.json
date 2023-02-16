@@ -42,8 +42,6 @@
         "text-compression": "Kompresia textu",
         "csa-self-paced-pl": "Čo ponúka Code.org pre učiteľov pilotného projektu CSA",
         "dance-unplugged": "Hodina kódu – Tanečná párty – bez počítača",
-        "counting-csc": "Počítanie s Laurel",
-        "explore-data-1": "Skúmanie štvorcových grafov a histogramov",
         "outbreak-csc": "Nákaza",
         "poem-art": "Básnické umenie",
         "hello-world-animals": "Ahoj Svet",
@@ -59,7 +57,10 @@
         "halloween": "halloween",
         "step": "krok",
         "csa5-exemplars": "csa5-exemplars",
-        "soccer": "futbal"
+        "soccer": "futbal",
+        "hello-world-space": "Ahoj Svet: Vesmír",
+        "hello-world-soccer": "Ahoj Svet: Futbal",
+        "playground": "ihrisko"
       }
     }
   }

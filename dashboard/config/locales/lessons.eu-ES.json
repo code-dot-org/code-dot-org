@@ -26,6 +26,12 @@
         "playlab/Play Lab": {
           "name": "Jolas Laborategia"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disneyren Infinity Play Lab"
         },
@@ -49,6 +55,36 @@
         },
         "k5-onlinepd-2019/For Loops": {
           "name": "For begiztak"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Paper grafiko programazioa"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Txandaka programatzen"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Musika idazten"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Iteratzen"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Mapa Zoriontsuak"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Gertaera Handia"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak"
         },
         "csd3-2022/Variables": {
           "name": "Aldagaiak"

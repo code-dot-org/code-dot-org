@@ -17,8 +17,67 @@
         "loops/aquatic/unversioned": {
           "word": "Ngā Koromeke"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Waehere"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Ngā Here"
+        },
+        "variable/coursef/2022": {
+          "word": "Taurangi"
+        },
+        "input/coursef/2022": {
+          "word": "Tāuru"
+        },
+        "internet/coursef/2022": {
+          "word": "Te Ipurangi"
+        },
+        "define/coursef/2022": {
+          "word": "Whakamahukitia"
+        },
+        "function/coursee/2022": {
+          "word": "Taumahi"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Ngā Here"
+        },
+        "copyright/coursee/2022": {
+          "word": "Manatārua"
+        },
+        "define/coursee/2022": {
+          "word": "Whakamahukitia"
+        },
+        "drop/courseb/2022": {
+          "word": "Taka Iho"
+        },
+        "conditionals/express/2022": {
+          "word": "Ngā Here"
+        },
+        "function/express/2022": {
+          "word": "Taumahi"
+        },
+        "variable/express/2022": {
+          "word": "Taurangi"
+        },
+        "define/express/2022": {
+          "word": "Whakamahukitia"
+        },
+        "drop/pre-express/2022": {
+          "word": "Taka Iho"
+        },
+        "drop/coursea/2022": {
+          "word": "Taka Iho"
+        },
+        "binary/coursec/2022": {
+          "word": "Tāhūrua"
         },
         "input/csd/2022": {
           "word": "Tāuru"
@@ -39,7 +98,24 @@
           "word": "Manatārua"
         },
         "code/poem-art/unversioned": {
-          "word": "Waehere"
+          "word": "Waehere",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Taurangi"

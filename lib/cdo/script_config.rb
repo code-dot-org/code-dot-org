@@ -3,8 +3,7 @@
 # so that the other Dashboard code doesn't need to know where the configuration
 # comes from.
 
-require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
-require_relative 'script_constants'
+require_relative 'http_cache'
 
 UNCACHED_HOC_UNITS = %w(playlab artist infinity iceage).freeze
 
@@ -26,6 +25,6 @@ class ScriptConfig
   end
 
   def self.csf_scripts
-    Script.unit_names_by_curriculum_umbrella('CSF')
+    Unit.unit_names_by_curriculum_umbrella('CSF')
   end
 end

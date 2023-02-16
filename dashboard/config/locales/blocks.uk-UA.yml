@@ -2,6 +2,11 @@
 uk:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: запитати користувача {QUESTION} значення змінної {VAR} з варіантами
+          {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}скажи{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -228,20 +233,12 @@ uk:
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-      Dancelab_everyMeasuresRange:
-        text: 'повторювати кожні {N} такти після {START} '
       Dancelab_everySeconds:
         text: 'повторювати кожні {N} {UNIT} '
         options:
           UNIT:
             '"measures"': кроків
             '"seconds"': секунди
-      Dancelab_everySecondsRange:
-        text: 'кожні {N} {UNIT} з {START} до {STOP} '
-        options:
-          UNIT:
-            measures: Кроки
-            seconds: Секунди
       Dancelab_everyVerseChorus:
         text: 'кожні {UNIT} '
         options:
@@ -995,6 +992,35 @@ uk:
         text: налаштування
       Dancelab_whenSetup2:
         text: налаштування
+      DansBlocks_getMicroscope:
+        text: Мікроскоп має {INPUT1}
+        options:
+          INPUT1:
+            '1': лимонний сік
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Бульбашки
+            '"confetti"': Конфеті
+            '"hearts"': серця
+            '"rain"': дощ
+            '"starburst"': Вибухаюча зірка
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': лимонний сік
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Спілкуйтеся з {VAR1} з {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: створити {NUM} нових {ANIMATION_NAME} спрайтів {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: представити {NUM} нових {ANIMATION_NAME} спрайтів [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}скажи{TEXT1}"
       gamelab_addBehaviorSimple:
         text: спрайт {SPRITE} починає {BEHAVIOR}
       gamelab_addTarget:
@@ -1281,6 +1307,33 @@ uk:
             "'sound://category_animals/dog.mp3'": пес
             "'sound://category_animals/tiger.mp3'": тигр
             "'sound://category_digital/jump_7.mp3'": стрибок
+      gamelab_playSoundOptionsSoccer:
+        text: грати звук {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": звуковий сигнал
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": оплески
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": спів
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": вітальний вигук
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": удар
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": два свистки
+            "'sound://category_sports/One_Whistle_SFX.mp3'": свисток
+      gamelab_playSoundOptionsSpace:
+        text: грати звук {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": чорна діра
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": скупчення галактик
+              Куля
+            "'sound://category_space/Carina_SFX.mp3'": Кіль
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Кассіопея
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Крабоподібна туманність
+            "'sound://category_space/Launch_SFX.mp3'": запуск
+            "'sound://category_space/Lift_Off.mp3'": зліт
+            "'sound://category_space/Pillars_SFX.mp3'": стовпи
+            "'sound://category_space/Southern_ring_SFX.mp3'": Південна кільцева туманність
+            "'sound://category_space/Supernova_SFX.mp3'": наднова зірка
+            "'sound://category_space/Tycho_SFX.mp3'": Тихо
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1793,6 +1846,38 @@ uk:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: Мікроскоп має {INPUT1}
+        options:
+          INPUT1:
+            '1': лимонний сік
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': лимонний сік
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): твердий
+            new Behavior(liquid, []): рідкий
+            new Behavior(wandering, []): газ
+      ParticlesBlocks_statesOfMatter2:
+        text: Встановіть для {COSTUME} поведінку {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': 'тверда частинка '
+            '"liquid"': рідка частинка
+            '"gas"': газова частинка
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'тверда частинка '
+            '"liquid"': рідка частинка
+            '"gas"': газова частинка
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1832,6 +1917,22 @@ uk:
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': бульбашка
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': стрибок
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': світло
+      Poetry_playSoundOptionsSpace:
+        text: грати звук {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": чорна діра
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": скупчення галактик
+              Куля
+            "'sound://category_space/Carina_SFX.mp3'": Кіль
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Кассіопея
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Крабоподібна туманність
+            "'sound://category_space/Launch_SFX.mp3'": запуск
+            "'sound://category_space/Lift_Off.mp3'": зліт
+            "'sound://category_space/Pillars_SFX.mp3'": стовпи
+            "'sound://category_space/Southern_ring_SFX.mp3'": Південна кільцева туманність
+            "'sound://category_space/Supernova_SFX.mp3'": наднова зірка
+            "'sound://category_space/Tycho_SFX.mp3'": Тихо
       Poetry_setBackground:
         text: встановити колір тла {COLOR}
       Poetry_setBackgroundEffect:
@@ -1896,6 +1997,11 @@ uk:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: коли відповідь {VAR}
       RyanLab_moveForward:
@@ -2094,5 +2200,17 @@ uk:
           DIR:
             right: праворуч ↻
             left: ліворуч ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Бульбашки
+            '"confetti"': Конфеті
+            '"hearts"': серця
+            '"rain"': дощ
+            '"starburst"': Вибухаюча зірка
+      storylab_setHeading:
+        text: встановити заголовок {HEADING}
+      storylab_setSubheading:
+        text: встановити підзаголовок {SUBHEADING}
       validation_validatedBackground:
         text: встановити фон {IMG}

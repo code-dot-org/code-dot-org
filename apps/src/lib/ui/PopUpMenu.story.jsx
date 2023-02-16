@@ -1,56 +1,67 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
+import {action} from '@storybook/addon-actions';
 import PopUpMenu from './PopUpMenu';
 
-export default storybook => {
-  storybook.storiesOf('PopUpMenu', module).add('overview', () => <Overview />);
+export default {
+  title: 'PopUpMenu',
+  component: PopUpMenu
 };
 
-class Overview extends Component {
-  state = {
-    isOpen: true,
-    targetPoint: {
-      top: 0,
-      left: 0
-    }
-  };
+//
+// STORIES
+//
 
-  componentDidMount() {
-    /* eslint-disable react/no-did-mount-set-state */
-    const rect = this.target.getBoundingClientRect();
-    this.setState({
-      targetPoint: {
+// This component is an integrated example for the <PopUpMenu>.
+// It needs to be its own component so that it adheres to React hooks
+// linting (i.e., this can't be a template or the exported story itself).
+const BasicExampleComponent = props => {
+  const [isOpen, setIsOpen] = useState(true);
+  const targetPoint = React.createRef();
+  const [targetPointRect, setTargetPointRect] = useState(null);
+
+  useEffect(() => {
+    if (!targetPointRect) {
+      const rect = targetPoint.current.getBoundingClientRect();
+      setTargetPointRect({
         top: rect.bottom,
         left: rect.left + rect.width / 2
-      }
-    });
-    /* eslint-enable react/no-did-mount-set-state */
-  }
+      });
+    }
+  }, [targetPoint, targetPointRect]);
 
-  render() {
-    return (
-      <div>
-        The <tt>PopUpMenu</tt> component is absolutely-positioned.
-        <div
-          style={{
-            border: 'solid black thin',
-            margin: '1em',
-            width: '50%'
-          }}
-          ref={el => (this.target = el)}
-          onClick={() => !this.state.isOpen && this.setState({isOpen: true})}
-        >
-          It targets the bottom-center of this element.
-        </div>
-        <PopUpMenu
-          isOpen={this.state.isOpen}
-          onClose={() => this.setState({isOpen: false})}
-          targetPoint={this.state.targetPoint}
-        >
-          <PopUpMenu.Item onClick={() => {}}>Option One</PopUpMenu.Item>
-          <PopUpMenu.Item onClick={() => {}}>Option Two</PopUpMenu.Item>
-          <PopUpMenu.Item onClick={() => {}}>Option Three</PopUpMenu.Item>
-        </PopUpMenu>
+  return (
+    <div>
+      The <tt>PopUpMenu</tt> component is absolutely-positioned.
+      <div
+        style={{
+          border: 'solid black thin',
+          margin: '1em',
+          width: '50%'
+        }}
+        ref={targetPoint}
+        onClick={() => !isOpen && setIsOpen(true)}
+      >
+        It targets the bottom-center of this element.
       </div>
-    );
-  }
-}
+      {targetPointRect && (
+        <PopUpMenu
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          targetPoint={targetPointRect}
+        >
+          <PopUpMenu.Item onClick={action('option 1')}>
+            Option One
+          </PopUpMenu.Item>
+          <PopUpMenu.Item onClick={action('option 2')}>
+            Option Two
+          </PopUpMenu.Item>
+          <PopUpMenu.Item onClick={action('option 3')}>
+            Option Three
+          </PopUpMenu.Item>
+        </PopUpMenu>
+      )}
+    </div>
+  );
+};
+
+export const BasicExample = args => <BasicExampleComponent {...args} />;

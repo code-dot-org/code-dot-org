@@ -15,8 +15,9 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       CourseOffering,
+      DataDoc,
       UnitGroup, # see override below
-      Script, # see override below
+      Unit, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
       ProgrammingClass, # see override below
@@ -50,8 +51,6 @@ class Ability
       :regional_partner_workshops,
       Pd::RegionalPartnerMapping,
       Pd::Application::ApplicationBase,
-      Pd::Application::Facilitator1819Application,
-      Pd::Application::Facilitator1920Application,
       Pd::Application::TeacherApplication,
       Pd::InternationalOptIn,
       :maker_discount,
@@ -63,10 +62,11 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
-      CodeReview,
-      CodeReviewComment,
+      CodeReview
     ]
     cannot :index, Level
+
+    can [:show, :index], DataDoc
 
     # If you can see a level, you can also do these things:
     can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
@@ -103,16 +103,8 @@ class Ability
       end
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
-      can :destroy, CodeReviewComment do |code_review_comment|
-        # Teachers can delete comments on their student's projects,
-        # their own comments anywhere, and comments on their projects.
-        code_review_comment.project_owner&.student_of?(user) ||
-          (user.teacher? && user == code_review_comment.commenter) ||
-          (user.teacher? && user == code_review_comment.project_owner)
-      end
       can :view_project_commits, User do |project_owner|
-        project_owner.id === user.id || can?(:code_review, project_owner)
+        project_owner.id == user.id || can?(:code_review, project_owner)
       end
 
       can :create, CodeReview do |code_review, project|
@@ -137,23 +129,22 @@ class Ability
         in_shared_section_with_code_review && user.in_code_review_group_with?(other_user)
       end
 
-      can :create, CodeReviewNote do |code_review_note|
-        code_review_note.code_review.open? && can?(:code_review, code_review_note.code_review.owner)
+      can :create, CodeReviewComment do |code_review_comment|
+        code_review_comment.code_review.open? && can?(:code_review, code_review_comment.code_review.owner)
       end
 
-      can :update, CodeReviewNote do |code_review_note|
-        code_review_note.code_review.user_id == user.id
+      can :update, CodeReviewComment do |code_review_comment|
+        code_review_comment.code_review.user_id == user.id
       end
 
-      can :destroy, CodeReviewNote do |code_review_note|
+      can :destroy, CodeReviewComment do |code_review_comment|
         # Teachers can delete comments on their student's projects,
         # their own comments anywhere, and comments on their projects.
-        code_review_note.code_review.owner&.student_of?(user) ||
-          (user.teacher? && user.id == code_review_note.commenter_id) ||
-          (user.teacher? && user.id == code_review_note.code_review.user_id)
+        code_review_comment.code_review.owner&.student_of?(user) ||
+          (user.teacher? && user.id == code_review_comment.commenter_id) ||
+          (user.teacher? && user.id == code_review_comment.code_review.user_id)
       end
 
-      can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
@@ -179,7 +170,7 @@ class Ability
         # Only allow a student to view another student's project
         # only on levels where we have our peer review feature.
         # For now, that's only Javalab.
-        if level_to_view&.is_a?(Javalab)
+        if level_to_view.is_a?(Javalab)
           project_level_id = level_to_view.project_template_level.try(:id) ||
             level_to_view.id
 
@@ -210,11 +201,10 @@ class Ability
           !user.students.where(id: user_level.user_id).empty?
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
-        can :view_level_solutions, Script do |script|
+        can :view_level_solutions, Unit do |script|
           !script.old_professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
-        can [:new, :create, :read], FACILITATOR_APPLICATION_CLASS, user_id: user.id
         can [:new, :create, :read, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
@@ -226,7 +216,6 @@ class Ability
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can [:read, :update], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
-        can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
@@ -277,7 +266,6 @@ class Ability
         can :report_csv, :peer_review_submissions
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
-        can :manage, FACILITATOR_APPLICATION_CLASS
         can :manage, TEACHER_APPLICATION_CLASS
         can :move, :workshop_enrollments
         can :update_scholarship_info, Pd::Enrollment
@@ -301,7 +289,7 @@ class Ability
       unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
     end
 
-    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Script do |script|
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Unit do |script|
       script.is_migrated && can?(:read, script)
     end
 
@@ -319,7 +307,7 @@ class Ability
       end
     end
 
-    can :read, Script do |script|
+    can :read, Unit do |script|
       if script.can_be_participant?(user) || script.can_be_instructor?(user)
         if script.in_development?
           user.permission?(UserPermission::LEVELBUILDER)
@@ -396,10 +384,11 @@ class Ability
         ProgrammingExpression,
         ProgrammingMethod,
         ReferenceGuide,
+        DataDoc,
         CourseOffering,
         UnitGroup,
         Resource,
-        Script,
+        Unit,
         ScriptLevel,
         Video,
         Vocabulary,
@@ -430,7 +419,7 @@ class Ability
         can :index, Level
         can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
-        can [:edit, :update], Script, editor_experiment: editor_experiment
+        can [:edit, :update], Unit, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
     end
@@ -456,6 +445,9 @@ class Ability
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
+      # let them change abuse scores
+      can :destroy_abuse, :all
+      can :update_file_abuse, :all
     end
 
     if user.permission?(UserPermission::CENSUS_REVIEWER)
@@ -471,12 +463,13 @@ class Ability
         Level,
         UnitGroup,
         CourseOffering,
-        Script,
+        Unit,
         Lesson,
         ReferenceGuide,
         ScriptLevel,
         UserLevel,
         UserScript,
+        DataDoc,
         :pd_foorm,
         Foorm::Form,
         Foorm::Library,

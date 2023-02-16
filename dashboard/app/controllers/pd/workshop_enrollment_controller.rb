@@ -32,7 +32,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       }
     elsif !current_user
       render :logged_out
-    elsif current_user.teacher? && !current_user.email.present?
+    elsif current_user.teacher? && current_user.email.blank?
       render '/pd/application/teacher_application/no_teacher_email'
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
@@ -52,7 +52,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           name: facilitator.name,
           email: facilitator.email,
           image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil,
-          bio: File.exist?(bio_file) ? File.open(bio_file, "r").read : nil
+          bio: File.exist?(bio_file) ? File.read(bio_file) : nil
         }
       end
 

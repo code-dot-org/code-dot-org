@@ -41,7 +41,6 @@ export default class CensusInaccuracyReviewTable extends Component {
     } else {
       return (
         <Button
-          __useDeprecatedTag
           onClick={() => {
             this.props.onStartReview(data.rowData);
           }}

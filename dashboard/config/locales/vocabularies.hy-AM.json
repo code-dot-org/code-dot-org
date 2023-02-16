@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Debugging"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Debugging"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "conditionals"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugging"
         },
         "loops/aquatic/unversioned": {
           "word": "loops"
@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Debugging"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Կոդ"
         },
@@ -67,6 +75,81 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Debugging"
+        },
+        "debugging/coursed/2022": {
+          "word": "Debugging"
+        },
+        "programming/coursed/2022": {
+          "word": "Programming"
+        },
+        "conditionals/coursed/2022": {
+          "word": "conditionals"
+        },
+        "variable/coursef/2022": {
+          "word": "Փոփոխական"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Սահմանել"
+        },
+        "function/coursee/2022": {
+          "word": "Ֆունկցիա"
+        },
+        "conditionals/coursee/2022": {
+          "word": "conditionals"
+        },
+        "copyright/coursee/2022": {
+          "word": "հեղինակային իրավունք"
+        },
+        "define/coursee/2022": {
+          "word": "Սահմանել"
+        },
+        "debugging/courseb/2022": {
+          "word": "Debugging"
+        },
+        "programming/courseb/2022": {
+          "word": "Programming"
+        },
+        "debugging/express/2022": {
+          "word": "Debugging"
+        },
+        "programming/express/2022": {
+          "word": "Programming"
+        },
+        "conditionals/express/2022": {
+          "word": "conditionals"
+        },
+        "function/express/2022": {
+          "word": "Ֆունկցիա"
+        },
+        "variable/express/2022": {
+          "word": "Փոփոխական"
+        },
+        "define/express/2022": {
+          "word": "Սահմանել"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Debugging"
+        },
+        "programming/pre-express/2022": {
+          "word": "Programming"
+        },
+        "debugging/coursea/2022": {
+          "word": "Debugging"
+        },
+        "programming/coursea/2022": {
+          "word": "Programming"
+        },
+        "debugging/coursec/2022": {
+          "word": "Debugging"
+        },
+        "programming/coursec/2022": {
+          "word": "Programming"
+        },
+        "binary/coursec/2022": {
+          "word": "երկուական"
         },
         "debugging/csd/2022": {
           "word": "Debugging"
@@ -87,7 +170,24 @@
           "word": "հեղինակային իրավունք"
         },
         "code/poem-art/unversioned": {
-          "word": "Կոդ"
+          "word": "Կոդ",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Փոփոխական"

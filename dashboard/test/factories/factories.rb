@@ -110,6 +110,9 @@ FactoryGirl.define do
       trait :with_terms_of_service do
         terms_of_service_version 1
       end
+      trait :not_first_sign_in do
+        sign_in_count 2
+      end
       factory :terms_of_service_teacher do
         with_terms_of_service
       end
@@ -642,6 +645,11 @@ FactoryGirl.define do
     end
   end
 
+  factory :ailab, parent: :level, class: Ailab do
+    game {Game.ailab}
+    level_num 'custom'
+  end
+
   factory :free_response, parent: :level, class: FreeResponse do
     game {Game.free_response}
     level_num 'custom'
@@ -776,7 +784,7 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
-  factory :script, aliases: [:unit] do
+  factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
@@ -871,6 +879,8 @@ FactoryGirl.define do
     end
   end
 
+  # WARNING: Using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail.
   factory :project_storage do
   end
 
@@ -947,7 +957,7 @@ FactoryGirl.define do
       props = {}
       # If multiple levels are specified, mark all but the first as inactive
       if script_level.levels.length > 1
-        script_level.levels[1..-1].each do |level|
+        script_level.levels[1..].each do |level|
           props[level.name] = {active: false}
         end
       end
@@ -1455,6 +1465,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
     pl_programs_offered ['CSD', 'CSP']
+    applications_principal_approval RegionalPartner::ALL_REQUIRE_APPROVAL
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do
@@ -1587,20 +1598,12 @@ FactoryGirl.define do
     storage_id 1
   end
 
-  factory :code_review_note do
+  factory :code_review_comment do
     association :commenter, factory: :student
     association :code_review
 
     is_resolved false
     comment 'a note about the project'
-  end
-
-  factory :code_review_comment do
-    association :commenter, factory: :student
-    association :project_owner, factory: :student
-
-    project_id 1
-    comment 'a comment about your project'
   end
 
   factory :code_review_group do
@@ -1611,13 +1614,6 @@ FactoryGirl.define do
   factory :code_review_group_member do
     association :follower
     association :code_review_group
-  end
-
-  factory :reviewable_project do
-    sequence(:project_id)
-    association :user, factory: :student
-    association :level
-    association :script
   end
 
   factory :project_commit do

@@ -8,13 +8,13 @@ class ScriptsController < ApplicationController
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource
+  authorize_resource class: 'Unit'
 
   use_reader_connection_for_route(:show)
 
   def show
     if @script.redirect_to?
-      redirect_path = script_path(Script.get_from_cache(@script.redirect_to))
+      redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
       redirect_to "#{redirect_path}#{redirect_query_string}"
       return
@@ -66,7 +66,7 @@ class ScriptsController < ApplicationController
       user_providers: current_user&.providers,
       is_instructor: @script.can_be_instructor?(current_user),
       is_verified_instructor: current_user&.verified_instructor?,
-      locale: Script.locale_english_name_map[request.locale],
+      locale: Unit.locale_english_name_map[request.locale],
       locale_code: request.locale,
       course_link: @script.course_link(params[:section_id]),
       course_title: @script.course_title || I18n.t('view_all_units'),
@@ -81,16 +81,16 @@ class ScriptsController < ApplicationController
   end
 
   def index
-    authorize! :manage, Script
+    authorize! :manage, Unit
     rake if params[:rake] == '1'
     # Show all the units that a user has created.
-    @scripts = Script.all
+    @scripts = Unit.all
   end
 
   def new
     @versioned_unit_families = []
     @unit_families_course_types = []
-    Script.family_names.map do |cf|
+    Unit.family_names.map do |cf|
       co = CourseOffering.find_by(key: cf)
 
       # There are some old family names for connecting between units in a course which will not be a course offering
@@ -134,9 +134,9 @@ class ScriptsController < ApplicationController
       }
     )
 
-    @script = Script.new(updated_unit_params)
+    @script = Unit.new(updated_unit_params)
     if @script.save && @script.update_text(unit_params, i18n_params, updated_general_params)
-      redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
+      redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Unit.model_name.human)
     else
       render json: @script.errors
     end
@@ -159,7 +159,7 @@ class ScriptsController < ApplicationController
       filename = "config/scripts_json/#{@script.name}.script_json"
       File.delete(filename) if File.exist?(filename)
     end
-    redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human)
+    redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Unit.model_name.human)
   end
 
   def edit
@@ -170,8 +170,8 @@ class ScriptsController < ApplicationController
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       locales: options_for_locale_select,
-      script_families: Script.family_names,
-      version_year_options: Script.get_version_year_options,
+      script_families: Unit.family_names,
+      version_year_options: Unit.get_version_year_options,
       is_levelbuilder: current_user.levelbuilder?
     }
   end
@@ -198,7 +198,7 @@ class ScriptsController < ApplicationController
   def instructions
     require_levelbuilder_mode
 
-    unit = Script.get_from_cache(params[:id])
+    unit = Unit.get_from_cache(params[:id])
 
     render 'levels/instructions', locals: {lessons: unit.lessons}
   end
@@ -220,9 +220,9 @@ class ScriptsController < ApplicationController
   end
 
   def get_rollup_resources
-    unit = Script.get_from_cache(params[:id])
+    unit = Unit.get_from_cache(params[:id])
     course_version = unit.get_course_version
-    return render status: :bad_request, json: {error: 'Script does not have course version'} unless course_version
+    return render status: :bad_request, json: {error: 'Unit does not have course version'} unless course_version
     rollup_pages = []
     if unit.lessons.any? {|l| !l.programming_expressions.empty?}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(unit), course_version_id: course_version.id))
@@ -248,7 +248,7 @@ class ScriptsController < ApplicationController
   def rake
     @errors = []
     begin
-      Script.rake
+      Unit.rake
       redirect_to scripts_path, notice: 'Updated.'
     rescue StandardError => e
       @errors << e.to_s
@@ -261,14 +261,14 @@ class ScriptsController < ApplicationController
 
     script =
       params[:action] == "edit" ?
-      Script.get_without_cache(unit_id, with_associated_models: true) :
-      Script.get_from_cache(unit_id, raise_exceptions: false)
+      Unit.get_without_cache(unit_id, with_associated_models: true) :
+      Unit.get_from_cache(unit_id, raise_exceptions: false)
     return script if script
 
-    if Script.family_names.include?(unit_id)
-      script = Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
+    if Unit.family_names.include?(unit_id)
+      script = Unit.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
       session[:show_unversioned_redirect_warning] = true
-      Script.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
+      Unit.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
       return script
     end
 
@@ -300,7 +300,6 @@ class ScriptsController < ApplicationController
       :curriculum_umbrella,
       :family_name,
       :version_year,
-      :is_maker_unit,
       :project_sharing,
       :login_required,
       :hideable_lessons,
@@ -359,8 +358,8 @@ class ScriptsController < ApplicationController
 
     # Redirect the user to the latest assigned unit in this family, or to the latest stable unit in this family if
     # none are assigned.
-    redirect_unit = Script.latest_assigned_version(unit.family_name, current_user)
-    redirect_unit ||= Script.latest_stable_version(unit.family_name, locale: locale)
+    redirect_unit = Unit.latest_assigned_version(unit.family_name, current_user)
+    redirect_unit ||= Unit.latest_stable_version(unit.family_name, locale: locale)
 
     # Do not redirect if we are already on the correct unit.
     return nil if redirect_unit == unit

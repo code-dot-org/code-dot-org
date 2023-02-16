@@ -33,7 +33,7 @@ def send_receipts(kind, form)
   begin
     recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
   rescue ArgumentError => e
-    raise e unless e.message =~ /Invalid email address/
+    raise e unless /Invalid email address/.match?(e.message)
     ChatClient.log "Unable to send receipt for form #{form[:id]} because #{e.message}."
     return 0
   end

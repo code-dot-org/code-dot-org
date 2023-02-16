@@ -209,4 +209,24 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     ChatClient.expects(:message).never
     create :admin
   end
+
+  test 'grant authorized_teacher permission calls mailer' do
+    user = create :teacher
+    TeacherMailer.expects(:verified_teacher_email).
+      once.
+      returns(stub(deliver_now: nil))
+    user.permission = UserPermission::AUTHORIZED_TEACHER
+  end
+
+  test 'grant admin permission does not call mailer' do
+    TeacherMailer.expects(:verified_teacher_email).never
+    create :admin
+  end
+
+  test 'cannot grant permission to student user' do
+    student = create :student
+    assert_raises do
+      student.permission = UserPermission::AUTHORIZED_TEACHER
+    end
+  end
 end

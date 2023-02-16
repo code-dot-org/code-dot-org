@@ -105,6 +105,7 @@ ky:
     none: Жок
   home:
     trynow: Дагы кара
+  certificate_hour_of_code: Код сааты
   video:
     tab: Видео.
     notes: Видео жокпу? Эскертмелери көрсөт.
@@ -119,17 +120,17 @@ ky:
   upsell:
     applab:
       title: App Lab
-    hoc:
-      title: Классикалык лабиринт
     flappy:
       title: Flappy Code
     gamelab:
       title: Оюн лабы
-    infinity:
-      body: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө.
     hero:
       body: Minecraft Код саатына жаңы тапшырма менен кайтып келди! Код жазып Minecraft
         өткүлө.
+    hoc:
+      title: Классикалык лабиринт
+    infinity:
+      body: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө.
     unplugged_conditionals:
       title: Шартуулар
   landing:

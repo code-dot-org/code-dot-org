@@ -23,9 +23,6 @@
         "gumball/Gumball Play Lab": {
           "name": "Gumball Leikjasmiðja"
         },
-        "dance/Dance Party": {
-          "name": "Danspartý"
-        },
         "hoc-encryption/Simple Encryption": {
           "name": "Einföld dulkóðun"
         },
@@ -41,11 +38,20 @@
         "text-compression/Text Compression": {
           "name": "Þjöppun texta"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity leikjasmiðja"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Klukkustund kóðunar 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Danspartý"
         },
         "k5-onlinepd-2019/Sequencing": {
           "name": "Skipanaröð"
@@ -169,6 +175,123 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Næstu skref"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Forritun rúðublaða"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Boðhlaupsforritun"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Danspartý"
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "Lykkjur í Ísöld"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Skilyrði með kortum"
+        },
+        "coursed-2022/Looking Ahead with Minecraft": {
+          "name": "Horft fram á við"
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "coursef-2022/The Power of Words": {
+          "name": "Afl orða"
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "Kynning á Kvikasmiðjunni",
+          "overview": "Þessi kennslustund hjálpar nemendum að **setja efnið í samhengi** með því að ræða hlutverk tölva og tækni í eigin lífi, með áherslu á hvernig öpp og verkfæri gefa notendum kost á velja hvernig þau eru notuð. Nemendur munu líka kanna öpp lík þeim sem þeir munu sjálfir búa til síðar.",
+          "preparation": "-   Skoða hvernig nemendur munu skrá sig inn á Code.org.\n-   Ef með þarf: Stofna Code.org aðganga fyrir nemendur.\n-   Láta nemendur gera Kynningu á Kvikasmiðju verkefnið.\n-   Prenta eintök af **\\*Exploring Apps** vinnublaðinu (eða leggja stafræna útgáfu inn í námsumsjónarkerfið).",
+          "purpose": "Fyrsta kennslustundin gengur út á að kveikja áhuga nemenda á námskeiðinu og að tengja eigin áhugamál þeirra við tölvunarfræði. "
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "Kvikar í verki"
+        },
+        "coursef-2022/Mini-Project: Virtual Pet": {
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internetið"
+        },
+        "coursef-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Lagasmíð"
+        },
+        "coursee-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Hreyfa sig, hreyfa sig"
+        },
+        "courseb-2022/Sequencing with Angry Birds": {
+          "name": "Röð aðgerða með Angry Birds"
+        },
+        "courseb-2022/Programming with Harvester": {
+          "name": "Forritun með Hirðinum"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Lykkjulæti"
+        },
+        "courseb-2022/Loops with Harvester": {
+          "name": "Lykkjur með Hirðinum"
+        },
+        "courseb-2022/Loops with Laurel": {
+          "name": "Lykkjur með Láru"
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "Kvikar í verki"
+        },
+        "express-2022/Virtual Pet with Sprite Lab": {
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
+        },
+        "express-2022/Dance Party": {
+          "name": "Danspartý"
+        },
+        "express-2022/Looking Ahead with Minecraft": {
+          "name": "Horft fram á við"
+        },
+        "express-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "pre-express-2022/Programming with Harvester": {
+          "name": "Forritun með Hirðinum"
+        },
+        "pre-express-2022/Loops with Laurel": {
+          "name": "Lykkjur með Láru"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Krúttleg kort"
+        },
+        "coursea-2022/Happy Loops": {
+          "name": "Lukkulegar lykkjur",
+          "overview": "Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni."
+        },
+        "coursea-2022/Loops with Laurel": {
+          "name": "Lykkjur með Láru"
+        },
+        "coursea-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Stórviðburður"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Stafræn armbönd"
+        },
+        "coursec-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Hvað er tölva?"
         },
         "csd1-2022/Input and Output": {
           "name": "Inntak og Úttak"
@@ -479,6 +602,9 @@
         "csd2-2018/RGB Colors and Classes": {
           "name": "RGB Litir og Klasar"
         },
+        "csd1-2018/What is a Computer?": {
+          "name": "Hvað er tölva?"
+        },
         "csd1-2018/Input and Output": {
           "name": "Inntak og Úttak"
         },
@@ -643,6 +769,9 @@
         },
         "csd4-2019/Identifying User Needs": {
           "name": "Greining á þörfum notenda"
+        },
+        "csd1-2019/What is a Computer?": {
+          "name": "Hvað er tölva?"
         },
         "csd1-2019/Input and Output": {
           "name": "Inntak og Úttak"
@@ -832,6 +961,9 @@
         },
         "csd2-2017/RGB Colors and Classes": {
           "name": "RGB Litir og Klasar"
+        },
+        "csd1-2017/What is a Computer?": {
+          "name": "Hvað er tölva?"
         },
         "csd1-2017/Input and Output": {
           "name": "Inntak og Úttak"
@@ -1429,6 +1561,9 @@
         },
         "csd3-2021/Using the Game Design Process": {
           "name": "Notkun leikjahönnunarferlisins"
+        },
+        "csd1-2021/What is a Computer?": {
+          "name": "Hvað er tölva?"
         },
         "csd1-2021/Input and Output": {
           "name": "Inntak og Úttak"

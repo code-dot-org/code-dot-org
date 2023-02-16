@@ -3638,6 +3638,9 @@ de:
           title: Kollisions-Detektor
         dance-2019:
           title: Tanzparty (2019)
+          description_short: Programmiere eine Tanzparty, um sie mit Freunden und
+            Familie zu teilen. Mit Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+            Gomez, Musik aus Disneys „Encanto“ und mehr!
           description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden
             zu teilen!
           student_description: Programmiere deine eigene Tanzparty, um sie mit deinen
@@ -4625,6 +4628,8 @@ de:
           name: coursed-2021
         coursee-2021:
           title: Kurs E (2021)
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested
+            Loops und Funktionen.
           description_audience: 'Alter: 8-12'
           lesson_groups:
             ramp_up:
@@ -4732,10 +4737,13 @@ de:
               display_name: Einführung
             outbreak:
               display_name: Ausbruchssimulation
+            introduction:
+              display_name: Einführung in Grafikobjekte-Labor
             lessonGroup-3:
               display_name: Variablen
             Sprites:
               display_name: Sprites
+              description: Erlerne die Grundlagen des Codierens mit Grafikobjekten!
             variables:
               display_name: Variablen
         csd4-preview-2021:
@@ -4862,12 +4870,20 @@ de:
           name: k5-onlinepd-2021
         haikubot-pilot:
           lesson_groups:
+            rampup:
+              description: Erlerne die Grundlagen des Codierens mit Grafikobjekten
+                und Text!
+            Lesson 1:
+              description: Erlerne die Grundlagen des Codierens mit Grafikobjekten
+                und Text!
             Lesson 3:
               display_name: Lektion 3
             Lesson 4:
               display_name: Lektion 4
             Lesson 5:
               display_name: Lektion 5
+          student_description: Benutze Grafikobjekte-Labor, um einen Haiku-Bot zu
+            erstellen!
         outbreakmodule:
           lesson_groups:
             Outbreak Module:
@@ -5084,6 +5100,8 @@ de:
               display_name: Projekt
             lessonGroup-4:
               display_name: Demos und Ressourcen
+        hello-world-emoji:
+          title: 'Hallo Welt: Emoji'
         hello-world-batman:
           title: Hallo Welt
         csa4-exemplars:
@@ -5170,8 +5188,12 @@ de:
               display_name: Inhalt
             lessonGroup-5:
               display_name: Sandbox
+        ai-ethics-2021:
+          description_audience: Klassen 6-12
         poem-art-2021:
           title: Dichtkunst
+        hello-world-emoji-2021:
+          title: 'Hallo Welt: Emoji'
         explore-data-1-2021:
           title: Datenvisualisierung
         counting-csc-2021:
@@ -5416,6 +5438,8 @@ de:
               display_name: Auswirkungen der Datenverarbeitung
             end_of_course_project:
               display_name: Projekt am Ende des Kurses
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested
+            Loops und Funktionen.
           description_audience: 'Alter: 8-12'
         coursef-2022:
           lesson_groups:
@@ -5469,6 +5493,10 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Erste Schritte
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5640,6 +5668,9 @@ de:
             oder Stufen zwischen Lehrplanversionen
           description: Für die Bereitstellung von Aktualisierungen der Lektionen oder
             Stufen zwischen Lehrplanversionen
+          lessons:
+            lesson-7:
+              name: Einführung in Sprites
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -5752,7 +5783,237 @@ de:
           title: 'Modul 1: Willkommen'
         dlp-csp-mod1-2022:
           title: Grundsätze der Informatik - Vertieftes Lernen Modul 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Asynchrone Debugging-Erweiterung
         self-paced-pl-csd5-2022:
           title: Unterrichten von KI und maschinellem Lernen
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modul 2 Asynchrone Funktion
         soccer:
           name: Fußball
+          title: Programmiere dein eigenes Fußballspiel
+          description_short: Entwickle ein Fußballspiel
+          description: Entwickle ein Fußballspiel
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Umfrage
+            lessonGroup-2:
+              display_name: Inhalt
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Umfrage
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java-Labor
+            lesson-6:
+              name: Schleifen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Umfrage
+            lessonGroup-3:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variablen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Eindimensionale (1D) Arrays
+            lesson-3:
+              name: Schleifen mit dem Wiederhol-Block
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        hello-world-space-2022:
+          title: 'Hello World: Weltraum'
+        hello-world-soccer-2022:
+          title: 'Hello World: Fußball'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+          title: Problemlösung
+        csd2-2023:
+          title: Webentwicklung
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          title: Der Entwurfsprozess
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+          title: Physische Datenverarbeitung
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Was ist das für ein Geräusch?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+            csp_unit1_2020:
+              display_name: 'Einheit 1: Digitale Informationen'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Lektion 2: Das Internet'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Lerneinheit 3: Einführung in das App Design '
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variablen
+            csp_conditionals:
+              display_name: Bedingungen
+            csp_functions:
+              display_name: Funktionen
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Daten
+            csp_loops:
+              display_name: Schleifen
+            csp_traversals:
+              display_name: Traversierungen
+            csp_project:
+              display_name: Projekt
+            lessonGroup-5:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listen
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+            lessonGroup-3:
+              display_name: Schleifen
+            lessonGroup-4:
+              display_name: Traversierungen
+            lessonGroup-5:
+              display_name: Projekt
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter und Rückgabewerte
+            csp_libraries:
+              display_name: Bibliotheken
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT Erstellen
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Lektion 9: Daten'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp-post-survey-2023:
+          title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+        csp-playground:
+          title: Grundsätze der Informatik - Spielplatz
+          description_audience: Lehrpan-Autoren
+          description_short: Für die Bereitstellung von Aktualisierungen der Lektionen
+            oder Stufen zwischen Lehrplanversionen
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Einführung in AppLab
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben

@@ -15,9 +15,7 @@ unless rack_env?(:development)
     }
 end
 
-require 'rack/csrf'
 use Rack::Session::Cookie, secret: (CDO.sinatra_session_secret || 'dev_mode')
-use Rack::Csrf, check_only: ['POST:/v2/poste/send-message']
 
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,
@@ -36,7 +34,7 @@ unless CDO.chef_managed
   # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
   # For other environments (development / CI), run the HTTP cache from Rack middleware.
   require 'cdo/rack/allowlist'
-  require File.expand_path('../../cookbooks/cdo-varnish/libraries/http_cache', __FILE__)
+  require 'cdo/http_cache'
   use Rack::Allowlist::Downstream,
     HttpCache.config(rack_env)[:pegasus]
 

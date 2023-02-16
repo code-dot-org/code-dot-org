@@ -8,7 +8,7 @@ require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
-require 'cdo/properties'
+require_relative 'helpers/properties'
 require 'cdo/languages'
 require 'dynamic_config/page_mode'
 require 'active_support'
@@ -112,10 +112,12 @@ class Documents < Sinatra::Base
       ['.fetch']
     # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    Sass::Plugin.add_template_location(
-      sites_v3_dir('code.org', 'public', 'css'),
-      sites_v3_dir('code.org', 'public', 'css', 'generated')
-    )
+    ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|
+      Sass::Plugin.add_template_location(
+        sites_v3_dir(site, 'public', 'css'),
+        sites_v3_dir(site, 'public', 'css', 'generated')
+      )
+    end
     set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
 
     # Haml/Temple engine doesn't recognize the `path` option
@@ -193,7 +195,7 @@ class Documents < Sinatra::Base
   def update_actionview_assigns
     view_assigns = {}
     instance_variables.each do |name|
-      view_assigns[name[1..-1]] = instance_variable_get(name)
+      view_assigns[name[1..]] = instance_variable_get(name)
     end
     @actionview.assign(view_assigns)
   end
@@ -445,7 +447,12 @@ class Documents < Sinatra::Base
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
-        found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), uri, extnames)
+        # Negotiate for a locale specific partial
+        found = []
+        ["#{uri}.#{request.locale}", uri].each do |search_uri|
+          found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), search_uri, extnames)
+          break unless found.empty?
+        end
         return found.first unless found.empty?
       end
 
@@ -515,7 +522,7 @@ class Documents < Sinatra::Base
 
         path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), true)
         if path
-          request.env[:splat_path_info] = uri[parent.length..-1]
+          request.env[:splat_path_info] = uri[parent.length..]
           return path
         end
 
@@ -555,12 +562,12 @@ class Documents < Sinatra::Base
           # Symbolize the keys of the locals hash; previously, we supported
           # using either symbols or strings in locals hashes but ActionView
           # only allows symbols.
-          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals.symbolize_keys)
+          result = @actionview.render(inline: result, type: extension[1..], locals: locals.symbolize_keys)
         when '.fetch'
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
             FileUtils.mkdir_p File.dirname(cache_file)
-            File.binwrite(cache_file, Net::HTTP.get(URI(result)))
+            File.binwrite(cache_file, Net::HTTP.get(URI(result.chomp)))
           end
           pass unless File.file?(cache_file)
 

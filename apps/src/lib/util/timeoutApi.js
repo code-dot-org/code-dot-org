@@ -1,5 +1,5 @@
 /**
- * @file Droplet-friendly command defintions for timeout and
+ * @file Droplet-friendly command definitions for timeout and
  * interval commands (shared between App Lab and Game Lab).
  */
 import * as apiTimeoutList from './timeoutList';

@@ -29,6 +29,12 @@
         "text-compression/Text Compression": {
           "name": "TeakstaKomprimeren"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinitiija Speallan-lab"
         },
@@ -148,6 +154,39 @@
         },
         "frequency_analysis/Frequency Analysis": {
           "name": "Frekveansa Analysa"
+        },
+        "coursed-2022/Build a Star Wars Game": {
+          "name": "Ráhkat Náste Soahti Spealu"
+        },
+        "coursef-2022/AI For Oceans": {
+          "name": "AI Mearaide"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "Priváhta ja Persovnnlaš Dieđut"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Lávlagiid čállit"
+        },
+        "coursee-2022/Digital Sharing": {
+          "name": "Digitála Juohkin"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "courseb-2022/The Right App": {
+          "name": "Dat Rievttes App:a"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Movttegis Kárttat"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "coursec-2022/Picturing Data": {
+          "name": "Presenteret Dátaid"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binára Giehtabáttit"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Láidehus ČuolbmaČoavdimii"

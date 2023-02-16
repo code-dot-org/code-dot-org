@@ -117,7 +117,32 @@
         "Underground Iron_2021": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
         "Underground Mining Coal_2021": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
         "2-3 Maze 3": "Keep calm and help me find the bad pig. Otherwise\nI might get angry!",
-        "Overworld Chop Tree - allthethings": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the \"destroy block\" command to chop it down."
+        "Overworld Chop Tree - allthethings": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the \"destroy block\" command to chop it down.",
+        "CourseE_HOC 2018 Level_112022": "Build a conduit with Prismarine inside the Ocean Monument.",
+        "CourseE_HOC 2018 Level_22022": "Head to the end of the dock.",
+        "CourseE_HOC 2018 Level_32022": "Head across the open seas to the cod.",
+        "CourseE_HOC 2018 Level_9b2022": "Use the coral as waypoints to reach the treasure.",
+        "Function intro Ryan2022": "Use the `build bridge` function twice to make a path to the torch.",
+        "HOC 2018 Level_122022": "Design your own underwater environment, it’s up to you!",
+        "MC_HOC_2017_01_RETRY2022": "Get the Agent to the pressure plate, then press \"Run\" and use the arrow keys to move the player out of the house to collect the chest. ",
+        "MC_HOC_2017_02_Cole2022": "Move the Agent to the pressure plate so that {currentPlayerName} can get to the map. ",
+        "MC_HOC_2017_06_Cole2022": "Fix this code to get the Agent to build a bridge across this river.",
+        "MC_HOC_2017_07_Cole2022": "Destroy the ice and get {currentPlayerName} to the Minecart.",
+        "MC_HOC_2017_10_RETRY2022": "Create a function to help you finish this minecart.",
+        "MC_HOC_2017_Ali2022": "Use the functions to find a way across the lava.",
+        "Overworld Avoid Monsters2022": "Running into a Creeper is a bad idea. Carefully move past the Creepers and reach the safety of your home.",
+        "Overworld Chop Tree2022": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the \"destroy block\" command to chop it down.",
+        "Overworld Chop Trees2022": "We need to build a house before the sun goes down. Houses require a lot of wood. Cut down all 3 trees.",
+        "Overworld Free Play 20x202022": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
+        "Overworld Move to Sheep2022": "Add a second \"move forward\" command to reach the sheep.",
+        "Overworld Place Wall2022": "Every house starts with a wall. Build the first part of your house by putting the \"place\" and \"move forward\" commands inside the repeat loop.",
+        "Overworld Plant Crops2022": "It’s good to plan ahead. Plant crops on both sides of the water so you don’t get hungry later on.",
+        "Overworld Powered Minecart2022": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
+        "Overworld Shear Sheep2022": "Sheep-shearing time! Use the \"shear\" command to gather wool from both sheep.",
+        "Underground Avoiding Lava2022": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An \"if\" command will come in handy here. Add a \"move forward\" command in the correct place to mine these blocks.",
+        "Underground If Statements2022": "Now things are getting tricky. Mine 3 redstone, but don’t fall into the lava. Use an \"If\" command to place cobblestone over any lava you uncover.",
+        "Underground Iron2022": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
+        "Underground Mining Coal2022": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal."
       }
     }
   }

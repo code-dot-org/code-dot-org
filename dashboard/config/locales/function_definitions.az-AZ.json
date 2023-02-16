@@ -508,6 +508,9 @@
           },
           "rectangle": {
             "name": "düzbucaqlı"
+          },
+          "draw windows": {
+            "name": "pəncələri çək"
           }
         },
         "Geometric Sun_2018": {
@@ -537,6 +540,9 @@
           },
           "rectangle": {
             "name": "düzbucaqlı"
+          },
+          "draw windows": {
+            "name": "pəncələri çək"
           }
         },
         "InspirationalArtwork": {
@@ -2541,12 +2547,12 @@
         },
         "K-1 Artist2 4": {
           "draw rectangle": {
-            "name": "düzbucaqlı çəkin"
+            "name": "düzbucaqlı çəkin."
           }
         },
         "K-1 Artist2 5": {
           "draw rectangle": {
-            "name": "düzbucaqlı çəkin"
+            "name": "düzbucaqlı çəkin."
           }
         },
         "MC_HOC_2017_Ali": {
@@ -2610,7 +2616,7 @@
         },
         "course1_artist_loops_challenge1": {
           "\"simple\" solution": {
-            "name": "\"sadə\" həll"
+            "name": "\"sadə\" həll."
           }
         },
         "course1_artist_loops_challenge2": {
@@ -2620,7 +2626,7 @@
         },
         "courseA_artist_loops_challenge1": {
           "\"simple\" solution": {
-            "name": "\"sadə\" həll"
+            "name": "\"sadə\" həll."
           }
         },
         "courseB_artist_loops_challenge2": {
@@ -3092,12 +3098,12 @@
         },
         "courseE_bee_functions8": {
           "collect all nectar": {
-            "name": "bütün nektar toplamaq"
+            "name": "bütün nektarı topla"
           }
         },
         "courseE_bee_functions9": {
           "get all nectar": {
-            "name": "bütün nektar almaq"
+            "name": "bütün nektarı al"
           }
         },
         "courseE_farmer_functions10b": {
@@ -3754,6 +3760,482 @@
           },
           "function 2": {
             "name": "funksiya 2"
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "mənim funksiyam"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "small flower": {
+            "name": "kiçik gül"
+          },
+          "draw a star": {
+            "name": "bir ulduz çək",
+            "parameters": {
+              "points": "xallar",
+              "length": "uzunluq"
+            }
+          },
+          "draw a circle": {
+            "name": "çevrə çək",
+            "description": "verilən radiuslu çevrə çək",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "təkər çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq",
+              "repeat": "təkrar et"
+            }
+          },
+          "draw a triangle": {
+            "name": "üçbucaq çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a shape": {
+            "name": "bir forma çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq"
+            }
+          },
+          "draw a house": {
+            "name": "ev çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat çək",
+            "parameters": {
+              "length": "uzunluq",
+              "sides": "tərəflər"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "bir ulduz çək",
+            "parameters": {
+              "points": "xallar",
+              "length": "uzunluq"
+            }
+          },
+          "draw a circle": {
+            "name": "çevrə çək",
+            "description": "verilən radiuslu çevrə çək",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "təkər çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq",
+              "repeat": "təkrar et"
+            }
+          },
+          "draw a triangle": {
+            "name": "üçbucaq çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a shape": {
+            "name": "bir forma çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq"
+            }
+          },
+          "draw a house": {
+            "name": "ev çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "bir ulduz çək",
+            "parameters": {
+              "points": "xallar",
+              "length": "uzunluq"
+            }
+          },
+          "draw a circle": {
+            "name": "çevrə çək",
+            "description": "verilən radiuslu çevrə çək",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "təkər çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq",
+              "repeat": "təkrar et"
+            }
+          },
+          "draw a triangle": {
+            "name": "üçbucaq çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a shape": {
+            "name": "bir forma çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq"
+            }
+          },
+          "draw a house": {
+            "name": "ev çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "oyunu yenidən başlad"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "oyunu yenidən başlad"
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "körpü düzəldin"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "təmiz yol"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "uzun yolu düzəlt"
+          },
+          "fix short path": {
+            "name": "qısa yolu düzəlt"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "qısa körpü düzəldin"
+          },
+          "build long bridge": {
+            "name": "uzun körpü düzəldin"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "potensial həll"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "name": "alov çək",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "alov çək"
+          }
+        },
+        "courseC_artist_prog42022": {
+          "booster": {
+            "name": "təkanverici"
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "bir şey etmək"
+          },
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "kvadrat çək"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "bir ulduz çək"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "bir ulduz çək"
+          }
+        },
+        "courseE_artist_functions72022": {
+          "draw a window": {
+            "name": "pəncərə çəkin"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "bir şey etmək"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw square": {
+            "name": "bir kvadrat çək"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "kvadrat çək"
+          },
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw square": {
+            "name": "bir kvadrat çək"
+          },
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw square": {
+            "name": "bir kvadrat çək"
+          },
+          "do something": {
+            "name": "bir şey etmək"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "bir şey etmək"
+          },
+          "draw triangle": {
+            "name": "üçbucaq çək"
+          },
+          "draw line of triangles": {
+            "name": "üçbucaqların xəttini çəkin"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw square": {
+            "name": "bir kvadrat çək"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "kvadrat çək"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "draw line of polygons": {
+            "name": "çoxbucaqlının xəttini çəkin"
+          },
+          "draw polygon": {
+            "name": "çoxbucaqlı çəkin"
+          },
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "get all pumpkins": {
+            "name": "Bütün balqabaqları götür"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "get produce": {
+            "name": "məhsul almaq"
+          },
+          "get all pumpkins": {
+            "name": "Bütün balqabaqları götür"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check for corn": {
+            "name": "qarğıdalı yoxlayın"
+          },
+          "corn rectangle": {
+            "name": " düzbucaqlı qarğıdalı"
+          },
+          "lettuce stairs": {
+            "name": "kahı pilləkənləri"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "get all pumpkins": {
+            "name": "Bütün balqabaqları götür"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "get all pumpkins": {
+            "name": "Bütün balqabaqları götür"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "get all pumpkins": {
+            "name": "Bütün balqabaqları götür"
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "oyunu bitir"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "oyunu bitir"
+          }
+        },
+        "2-3 Artist Loops 2": {
+          "draw 3 hexagons": {
+            "name": "3 altıbucaqlı çək"
+          },
+          "draw 4 hexagons": {
+            "name": "4 altıbucaqlı çək"
+          },
+          "draw 5 hexagons": {
+            "name": "5 altıbucaqlı çək"
           }
         }
       }

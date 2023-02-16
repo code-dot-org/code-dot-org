@@ -50,7 +50,7 @@
   "user_id": 16,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:07.106+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-4point-repeat\\\"\"],\"cloned_from\":\"csc-starquilts-4point-repeat\"},{\"changed_at\":\"2022-09-02 16:30:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-02 16:31:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:01:07.106+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-4point-repeat\\\"\"],\"cloned_from\":\"csc-starquilts-4point-repeat\"},{\"changed_at\":\"2022-09-02 16:30:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-02 16:31:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-12 20:57:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-12 20:58:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-12 20:59:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-12 21:00:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-12 21:06:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -65,7 +65,7 @@
         <block type="turtle_shape_with_side_length">
           <field name="VALUE">smallRhombusMaroon</field>
           <value name="SIZE">
-            <block type="math_number">
+            <block type="math_number" editable="false" can_disconnect_from_parent="false">
               <field name="NUM">35</field>
             </block>
           </value>

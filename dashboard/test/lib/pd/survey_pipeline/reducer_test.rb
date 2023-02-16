@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'pd/survey_pipeline/reducer.rb'
+require 'pd/survey_pipeline/reducer'
 
 module Pd::SurveyPipeline
   class AvgReducerTest < ActiveSupport::TestCase

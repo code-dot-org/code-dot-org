@@ -51,6 +51,34 @@ describe('TopInstructions', () => {
     expect(wrapper.find('ContainedLevelAnswer')).to.have.lengthOf(1);
   });
 
+  it('shows ContainedLevelResetButton on instructions tab', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        hasContainedLevels={true}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.INSTRUCTIONS}
+      />
+    );
+    expect(
+      wrapper.find('Connect(UnconnectedContainedLevelResetButton)')
+    ).to.have.lengthOf(1);
+  });
+
+  it('does not shows ContainedLevelResetButton on teacher only tab', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        hasContainedLevels={true}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+      />
+    );
+    expect(
+      wrapper.find('Connect(UnconnectedContainedLevelResetButton)')
+    ).to.have.lengthOf(0);
+  });
+
   it('shows teacher only markdown in teacher only tab if instructor in training level', () => {
     const wrapper = shallow(
       <TopInstructions

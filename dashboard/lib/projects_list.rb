@@ -110,7 +110,7 @@ module ProjectsList
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
         return include_featured(limit: limit)
       end
-      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
+      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
       fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
     end
 
@@ -227,6 +227,7 @@ module ProjectsList
           state: 'active'
         ).
         exclude(published_at: nil).
+        exclude(abuse_score: 0...).
         order(Sequel.desc(:published_at)).limit(8).all.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end

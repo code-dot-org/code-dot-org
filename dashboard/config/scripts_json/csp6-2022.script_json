@@ -11,7 +11,8 @@
           "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=6",
           "type": "feedback",
           "visibility": "Teacher-only",
-          "buttonText": "Learn More"
+          "buttonText": "Learn More",
+          "key": "297b1d0f-a66c-4ac2-8ba0-65053901fcc2"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -29,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 00:26:21 UTC",
+    "serialized_at": "2023-01-13 23:48:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2620,6 +2621,18 @@
       }
     },
     {
+      "name": "KEY - Unreasonable Time",
+      "url": "https://docs.google.com/document/d/1wn2Z0k76KdotURzPG69GeYFzWvpMq1qiWUSlKfeDOfQ/edit?usp=sharing",
+      "key": "key_-_unreasonable_time",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_-_unreasonable_time"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -2704,6 +2717,12 @@
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
         "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "key_-_unreasonable_time"
       }
     },
     {

@@ -1289,6 +1289,7 @@ he:
         denny-science-8: {}
         dance-2019:
           title: מסיבת ריקודים (2019)
+          description_short: קוד מסיבת ריקודים לחלוק עם חברים ובני משפחה. אמנים משתתפים ביונסה, הארי סטיילס, ליזו, ליל נס X, סלינה גומז, מוסיקה מתוך "Encanto" של דיסני ועוד!
           description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         k5-onlinepd-2019:
@@ -1985,6 +1986,8 @@ he:
         csa-pl-module-2-test: {}
         csa-pl-module-3-test: {}
         csa6-pilot-facilitator: {}
+        ai-ethics-2021:
+          description_audience: כיתות ו-י"ב
         poem-art-2021:
           title: אומנות השירה
         poetry-2021: {}
@@ -2276,11 +2279,177 @@ he:
         csc-starquilts-2022: {}
         csc-fables-2022: {}
         csc-timecapsule-2022: {}
-        vpl-csd1-ayw-pilot-2022: {}
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: הרחבת איתור באגים אסינכרונית
         alltheblocklythings: {}
         self-paced-pl-csd5-2022: {}
         vpl-csa-2022: {}
         csa-labs-2022: {}
-        vpl-csd2-ayw-pilot-2022: {}
+        csa-draft-pl: {}
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: מודול 2 עבודה אסינכרונית
         soccer:
           name: כדורגל
+          title: קודדו משחק כדורגל משלכם
+          description_short: צרו משחק כדורגל
+          description: צרו משחק כדורגל
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa2-validation-pilot-2022: {}
+        csa3-validation-pilot-2022: {}
+        csa4-validation-pilot-2022: {}
+        csa5-validation-pilot-2022: {}
+        csa6-validation-pilot-2022: {}
+        csa7-validation-pilot-2022: {}
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa9-validation-pilot-2022: {}
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: חזרות
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: משתנים
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: בשביל לולאות
+        csa4-2023: {}
+        csa5-2023: {}
+        csa6-2023: {}
+        csa7-2023: {}
+        csa8-2023: {}
+        vpl-csd3-ayw-pilot-2022: {}
+        vpl-csd4-ayw-pilot-2022: {}
+        csa-magpie-lab: {}
+        emma: {}
+        csa-consumer-review-lab: {}
+        csa-data-lab: {}
+        hello-world-space-2022:
+          title: 'שלום, עולם: שטח'
+        hello-world-soccer-2022: {}
+        csd1-2023: {}
+        csd2-2023: {}
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+        csd6-2023: {}
+        csd7-2023: {}
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csc-bookcover: {}
+        csc-landmarks-pilot: {}
+        csc-playground: {}
+        self-paced-pl-physical-computing1: {}
+        self-paced-pl-physical-computing2: {}
+        emmas-playground: {}
+        amys-playground: {}
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: מה הצליל הזה?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp2-2023: {}
+        csp3-2023: {}
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: רשימות
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+            lessonGroup-3:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: פּרוֹיֶקט
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp-post-survey-2023: {}
+        self-paced-pl-csa1-2023: {}
+        self-paced-pl-csa2-2023: {}
+        self-paced-pl-csa3-2023: {}
+        csa-examples-22: {}
+        amy-playground: {}
+        angelina-playground: {}
+        csc-pilot-fa2022-timecapsule: {}
+        csc-pilot-fa2022-ecosystem: {}
+        csp-playground: {}
+        csc-pilot-fa2022-particles: {}
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        allthevalidation: {}
+        vpl-csd5-ayw-pilot-2022: {}
+        vpl-csd6-ayw-pilot-2022: {}
+        self-paced-pl-csa4-2023: {}
+        katies-playground: {}
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        microbit-temp: {}

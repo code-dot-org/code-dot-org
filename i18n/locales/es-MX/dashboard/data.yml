@@ -355,9 +355,9 @@ es-MX:
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Bucles en el artista
         CSF_artist_angles: Ángulos en Artist
-        CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El Recolector'
+        CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: La Recolectora'
         CSF_collector_repeat_loops: Bucles de repetición del Recolector
-        CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación: El Recolector'
+        CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación: La Recolectora'
         CSF_create_functions: Crear funciones
         CSF_debugging_k1_blocks: Depuración
         CSF_debugging_text_blocks: Depuración
@@ -656,7 +656,31 @@ es-MX:
         CSA-PL-two-way-selection: Selección bidireccional
         CSA-PL-Printing-in-Java: Impresión en Java
         CSA-PL-multi-selection-statements: Sentencias de Selección Múltiple
+        PL_CSP_TeacherTips_Advice: 'Consejos para Docentes: Asesoramiento a Nuevos Profesores de Informática'
+        PL_CSP_TeacherTips_IntroToCSP: 'Consejos para Docentes: Introducción a los Principios de Informática'
+        PL_CSP_TeacherTips_Debugging: 'Consejos para Docentes: Ayuda con la Depuración'
+        PL_CSP_TeacherTips_LeadLearner: 'Consejos para Docentes: Cómo ser un Alumno Aventajado'
+        PL_CSP_TeacherTips_APExam: 'Consejos para Docentes: Preparación para el Examen AP'
+        PL_CSP_TeacherTips_EIPM: 'Consejos para Docentes: El proceso de EIPM'
+        PL_CSD_CircuitPlayground_Overview: Circuit Playground - Vista Previa
+        CSA-PL-debugging-22: Depuración en el Laboratorio Java
+        CSD_Unit6_InteractiveArtExemplar: Arte Interactivo - Ejemplo
         CS_Changing_Everything: Las Ciencias de la Computación lo están cambiando todo
+        csa-alias-video: Igualdades y Alias
+        csa-equals-video: El método igualdad()
+        csa-user-stories: Historias de Usuario en Ingeniería de Software
+        csa-pl-vpl-m1-unit-3: Ingeniería de Software en la Unidad 3
+        csa-pl-intro-to-equality: Introducción a la Igualdad
+        csa-pl-intro-to-equals-method: Introducción al método .equals()
+        csa-pl-equals-book: Escribir el método equals() para la clase Libro
+        csa-multi-select-pl: Sentencias de selección múltiple en Java
+        csc_timecapsule_intro: Introducción a la Cápsula del Tiempo
+        PL_Equity_in_CS_Education: Igualdad en la Enseñanza de la Informática
+        csc_fm_pilot: Máquinas Funcionales (Piloto)
+        csc_fm_pilot_v2: 'Máquinas Funcionales (Introducción)'
+        csc-sprite-lab-pixel-editor: Dibuja tu Propio Sprite
+        csa-pl-intro-to-strings: Introducción a las Cadenas en Java
+        csa-pl-compareTo: El método compareTo()
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

@@ -386,11 +386,11 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
 
     review1 = create :code_review, user_id: @project_owner.id, script_id: @script.id, level_id: @level1.id, project_id: @project.id
-    create :code_review_note, code_review_request_id: review1.id
+    create :code_review_comment, code_review_id: review1.id
 
     post :delete_progress, params: {user_id: @project_owner.id, script_id: @script.id, reason: 'Testing'}
     assert_equal 0, CodeReview.where(user_id: @project_owner.id, script_id: @script.id).count
-    assert_equal 0, CodeReviewNote.where(code_review_request_id: review1.id).count
+    assert_equal 0, CodeReviewComment.where(code_review_id: review1.id).count
   end
 
   generate_admin_only_tests_for :user_projects_form

@@ -1012,3 +1012,35 @@ eu:
               display_name: Aldagaiak
         soccer:
           name: futbola
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Itzuliak
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Aldagaiak
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For begiztak
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Datu
+            csp_loops:
+              display_name: Itzuliak
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Zerrendak
+            lessonGroup-3:
+              display_name: Itzuliak

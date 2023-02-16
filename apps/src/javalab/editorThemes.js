@@ -176,3 +176,8 @@ export const lightMode = [
   lightTheme,
   syntaxHighlighting(defaultHighlightStyle)
 ];
+
+export const DEFAULT_FONT_SIZE_PX = 13;
+export const MIN_FONT_SIZE_PX = 13;
+export const MAX_FONT_SIZE_PX = 68;
+export const FONT_SIZE_INCREMENT_PX = 5;

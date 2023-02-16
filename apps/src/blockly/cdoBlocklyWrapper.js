@@ -1,4 +1,5 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+import {CLAMPED_NUMBER_REGEX} from './constants';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -65,6 +66,25 @@ function strip(code) {
       // Trim.
       .replace(/^\s+|\s+$/g, '')
   );
+}
+
+/**
+ * Given a type string for a field input, returns an appropriate change handler function
+ * for that type, which customizes the input field and provides validation on blur.
+ * @param {string} type
+ * @returns {?function}
+ */
+function getFieldInputChangeHandler(type) {
+  const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+  if (clampedNumberMatch) {
+    const min = parseFloat(clampedNumberMatch[1]);
+    const max = parseFloat(clampedNumberMatch[2]);
+    return Blockly.FieldTextInput.clampedNumberValidator(min, max);
+  } else if (type === Blockly.BlockValueType.NUMBER) {
+    return Blockly.FieldTextInput.numberValidator;
+  } else {
+    return undefined;
+  }
 }
 
 function initializeBlocklyWrapper(blocklyInstance) {
@@ -155,10 +175,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.BlockSpace.prototype.getContainer = function() {
     return this.blockSpaceEditor.getSVGElement().parentNode;
-  };
-
-  blocklyWrapper.getFieldForInputType = function(type) {
-    return blocklyWrapper.FieldTextInput;
   };
 
   blocklyWrapper.getGenerator = function() {
@@ -252,6 +268,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     bindBrowserEvent: function(element, name, thisObject, func, useCapture) {
       return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
+    },
+    getField: function(type) {
+      return new Blockly.FieldTextInput('', getFieldInputChangeHandler(type));
     }
   };
   return blocklyWrapper;

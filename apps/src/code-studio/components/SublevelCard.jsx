@@ -9,6 +9,7 @@ import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThu
 import queryString from 'query-string';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 import _ from 'lodash';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default class SublevelCard extends React.Component {
   static propTypes = {
@@ -139,7 +140,7 @@ export default class SublevelCard extends React.Component {
               style={styles.description}
               className="sublevel-card-description-uitest"
             >
-              {sublevel.description}
+              <SafeMarkdown markdown={sublevel.description} />
             </div>
           )}
         </div>

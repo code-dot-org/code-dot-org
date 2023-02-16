@@ -6075,7 +6075,7 @@ pl-PL:
 
       courseF_variables_projects:
         description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historię
-          pustej przestrzeni. Jeśli już skończyłeś \"Część 1\" swój projekt, przejdź
+          pustej przestrzeni. Jeśli już skończyłeś \"Część 1\" swojego projektu, przejdź
           do \"Części 2\".
         display_name: Wybierz projekt
         teacher_markdown: |2-
@@ -6085,16 +6085,16 @@ pl-PL:
           Studenci mogą potrzebować naprawdę czytelnych instrukcji, aby zrozumieć jak poruszać się pośród możliwości wyboru. Dla każdego z wyborów w ramach projektu występują tutaj dwa podpoziomy. Na początek uczniowie powinni wybrać jeden z poziomów oznaczonych jako "Część 1". Po ukończeniu poziomu powinni oni powrócić tutaj i wybrać "Część 2" tego *samego* projektu. W ramach pierwszego poziomu uczniom zostaną zapewnione informacje zwrotne w trakcie łączenia ze sobą podstawowych elementów składowych projektu. Drugi poziom to "czas na zabawę", który jest przeznaczony do tego, by umożliwić uczniom dokonywanie wszelkich zmian w swoim kodzie, jaki chcą.
       courseF_variables_samples:
         description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historie
-          pustej przestrzeni. Zanim zaczniesz, zbadaj poniższe przykładowe projekty,
-          aby przekonać się czego tworzeniem się interesujesz. Wciśnij \"Koniec"\,
+          pustej przestrzeni. Zanim zaczniesz, przejrzyj poniższe przykładowe projekty,
+          aby przekonać się tworzeniem czego się interesujesz. Naciśnij \"Koniec"\,
           gdy będziesz gotowy do rozpoczęcia planowania swojego własnego programu.
         display_name: Eksploracja - Przykładowe programy
-        teacher_markdown: "Omówienie poziomu wyboru # W ramach poziomów wyboru oferuje
-          się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą
-          wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić
-          tyle, ile się chce. \n\nUczniowie powinni uważnie zapoznać się z tymi projektami
-          przed podjęciem decyzji, co chcą tworzyć. Można zapoznać się z nimi wspólnie,
-          jako klasa lub kazać uczniom zgłębiać je na własną rękę.\n"
+        teacher_markdown: "# Omówienie poziomu wyboru \nPoziomy wyboru oferują menu
+          dodatkowych poziomów do realizacji przez uczniów. Muszą oni wykonać przynajmniej
+          jeden z podpoziomów tutaj, ale mogą przerobić tyle, ile się chce. \n\nUczniowie
+          powinni uważnie zapoznać się z tymi projektami przed podjęciem decyzji,
+          co chcą tworzyć. Mogą zapoznać się z nimi wspólnie, jako klasa lub kazać
+          uczniom zgłębiać je na własną rękę.\n"
       SimonSays-Unplugged_2021:
         markdown: |-
           # Podążaj za algorytmem
@@ -13302,3 +13302,791 @@ pl-PL:
         - correct: true
         questions:
         - {}
+      BigEvent-Unplugged2022:
+        markdown: |-
+          # Ważne zdarzenie
+
+          W informatyce zdarzenia są działaniami, które monitoruje komputer. Na tej lekcji będziesz reagować różnie w zależności od tego, który przycisk zostanie naciśnięty.
+      BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Bransoletki binarne
+
+          Utwórz bransoletkę, która przedstawia Twoje imię w systemie, zrozumiałą dla komputera!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged2022:
+        markdown: |-
+          # Wyrażenia warunkowe z kartami
+
+          Zagraj w karty i twórz zasady takie jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam punkt" i "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."
+      CourseE_Artist_Practice_2022:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami i Artystą!
+        display_name: " Ćwiczenie artysty"
+      CourseE_Lesson_11_Artist_Practice_2022:
+        display_name: " Ćwiczenie artysty"
+      CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: " Ćwiczenie artysty"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2:
+        content1: opis tutaj
+        markdown: |-
+          # Epidemia: zakoduj własną symulację
+
+          ## Witamy w Mieście potworów!
+          Miasto potworów było zazwyczaj szczęśliwym i zdrowym miejscem. Potwory z Miasta potworów uwielbiały wędrować po okolicy, aby odwiedzić swoich przyjaciół.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Pewnego dnia jeden z potworów poczuł się chory. Potwór złapał **wirusa**! Wirus to malutki zarazek, który może wywołać chorobę. Inne potwory nie były zbyt zmartwione. Ciągle odwiedzały swoich przyjaciół.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Niedługo potem zachorowały dwa kolejne potwory. To był ten sam wirus! Wygląda na to, że dostali wirusa od swojego przyjaciela.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Wirus powoli rozprzestrzeniał się na inne potwory, które były w pobliżu. Zdrowe potwory zaczęły się martwić, że wszystkie potwory zachorują. Chore potwory zaczęły się martwić, że przekażą wirusa wszystkim innym.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Zatrzymanie rozprzestrzeniania się
+          Na szczęście, po zbadaniu wirusa sąsiedzi Miasta potworów dokonali ważnego odkrycia. Zdali sobie sprawę, że byli mniej skłonni do rozprzestrzeniania wirusa, jeśli nosili maski na ustach. Mając założone maski na twarz, chore potwory rzadziej przenosiły wirusa na zdrowe potwory.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Co się później stanie?
+
+          Dzisiaj masz zamiar napisać kod, aby utworzyć i uruchomić własną **symulację** epidemii wirusa w Mieście potworów. Symulacja to komputerowy model procesu lub systemu. Naucz się kodować i przewidywać, co stanie się z sąsiadami Miasta potworów.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *Jak szybko wirus będzie się rozprzestrzeniał?*
+
+          * *Czy wszyscy zachorują?*
+
+          * *W czym pomogą maski na twarz?*
+
+
+          Kiedy skończysz, udostępnij swoją symulację innym. Podziel się wiadomością o tym, co według Ciebie możemy zrobić, aby pomóc innym zachować zdrowie, gdy wirus pojawi się w mieście.
+      CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: opis tutaj
+        markdown: |-
+          # Epidemia: myśląc jak naukowiec
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Symulacje to świetny sposób na poznanie rzeczy, które mogą być trudne do zaobserwowania w prawdziwym świecie. Pomagają naukowcom w bezpiecznym i wydajnym rozwiązywaniu problemów i testowaniu nowych pomysłów. Twoja symulacja to sposób na pokazanie, jak może wyglądać epidemia wirusa w Mieście potworów.
+
+          ## Zresetuj i powtórz!
+          Nawet jeśli sam napiszesz kod, możesz nie wiedzieć, co się stanie, gdy naciśniesz przycisk Uruchom. Potwory wędrują losowo, więc nie wiesz, czy wirus rozprzestrzeni się szybko, czy wolno. Za każdym razem, gdy zmieniasz kod, pamiętaj, aby uruchomić symulację więcej niż raz. To nie zdarza się dwa razy w ten sam sposób!
+
+          ## Zbieranie danych
+          Spróbuj zapisać swoje obserwacje podczas przeprowadzania symulacji. Możesz policzyć potwory, które zachorują lub użyć licznika czasu, aby zobaczyć, jak szybko się to dzieje. Na przykład, za jak długo zachorują wszystkie potwory, jeśli żaden nie ma maski?
+
+          ## Dokonywanie prognoz
+          Jeśli rozumiesz swój model, możesz go użyć do prognozowania. Możesz nawet zmienić sposób działania symulacji i odgadnąć, co się wydarzy inaczej. Na przykład:
+          * Co by się stało, gdyby było dwa razy więcej potworów?
+          * Co by się stało, gdyby potwory poruszały się o połowę wolniej?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Czy Miasto Potworów przypomina prawdziwy świat?
+          Są pewne granicy, w których jakikolwiek model może być realistyczny.
+          * Co ma wspólnego Twoja symulacja epidemii z epidemiami wirusów w świecie rzeczywistym?
+          * Jakie są różnice?
+          Kiedy skończysz to ćwiczenie, przedyskutuj te pytania z nauczycielami lub rodziną!
+
+          ## Co jeszcze możemy modelować?
+          Stworzyłeś już działający model epidemii w Mieście Potworów. Czego Twoja symulacja nie może zrobić lub pokazać, a co chciałbyś, że mogłaby? Naciśnij kontynuuj, aby kontynuować i naucz się modelować jeszcze więcej:
+          * Zwiększenie liczby potworów w symulacji
+          * Pomaganie potworom w pozbywaniu się wirusa
+          * Prawdopodobieństwo, odporność, szczepionki i więcej!
+
+          Możesz również udostępnić swój model symulacyjny innym lub podzielić się informacją, co Twoim zdaniem możemy zrobić, aby pomóc innym zachować zdrowie, gdy wirus pojawi się w mieście.
+      DesigningForAccessibilityMarkdownLevel2022:
+        markdown: |
+          # Designing for Accessibility
+
+          * W świecie informatyki **dostępność** wiąże się z tworzeniem technologii dla ludzi z niepełnosprawnościami.
+          * Niepełnosprawności mogą mieć charakter fizyczny, słuchowy, wizualny i wiele innych.
+          * Niepełnosprawności są zróżnicowane i wpływają na ludzi w różny sposób, w tym na sposób użycia technologii takich jak **aplikacje na smartfona**.
+          * Projektowanie aplikacji dostępnych dla osób z niepełnosprawnościami sprawiają, że są one lepsze również dla wszystkich innych!
+
+          [](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged2022:
+        markdown: |
+          # Udostępnianie w trybie cyfrowym
+
+          Na tej lekcji będziecie rozpatrywać wyzwania i korzyści związane z przestrzeganiem praw własności i praw autorskich, w szczególności w środowiskach cyfrowych.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # Historie pustej przestrzeni
+
+          Na tej lekcji nauczysz się korzystać z historii pustej przestrzeni i pisać je. Obejrzyj ten film wideo i dowiedz się, jak łączy się to z informatyką.
+      GettingLoopy-Unplugged2022:
+        markdown: |-
+          # Poznając pętle
+
+          Ta lekcja wprowadza pojęcie pętli w programowaniu, używając jej w tańcu.
+      GraphPaperProgramming-Unplugged2022:
+        markdown: |-
+          # Programowanie na papierze do rysowania
+
+          Napisz algorytmy, których mog użyć Twoi koledzy z klasy do rysowania obrazków.
+      HappyMaps-Unplugged2022:
+        markdown: |-
+          # "Wesołe mapy" [Happy Maps]
+
+          Utwórz algorytm, aby przeprowadzić postać przez labirynt.
+      Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |-
+          # Internet
+
+          Buduj swój własny Internet w klasie używając jedynie kartek papieru.
+      MoveItMoveIt-Unplugged2022:
+        markdown: |
+          # Przesuń go, przesuń go
+
+          Użyj mapy i wydawaj polecenia, aby osiągnąć cel.
+      MyLoopyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Moi zapętleni robotyczni przyjaciele
+
+          Skracaj swoje programy przy pomocy pętli!
+      MyRoboticFriends-Unplugged2022:
+        markdown: "# Moi robotyczni przyjaciele \n\nUcz się programowania pisząc kod
+          dla swoich przyjaciół!"
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # Moc słów
+
+          ## Co powinieneś zrobić, kiedy ktoś wypowiada się złośliwie lub krzywdząco w internecie?
+      PrivatePersonalInformation-Unplugged2022:
+        markdown: |
+          # Prywatne i osobiste informacje
+
+          ## Jakie informacje o sobie mógłbyś udostępnić w Internecie?
+      RelayProgramming-Unplugged2022:
+        markdown: "# Programowanie sztafetowe\n\nPodzielcie się na zespoły i pracujcie
+          ze sobą nad pisaniem programów, które rysują obrazki. \n"
+      Songwriting-Unplugged2022:
+        markdown: |-
+          # Pisanie piosenki
+
+          Użyj pojęcia refrenu w piosence, aby nauczyć się, jak definiować i wywoływać funkcje
+      TheRightAppMarkdownLevel2022:
+        markdown: "# Właściwa aplikacja \n\n* Obecnie każdy korzysta z komputera,
+          w szczególności ze smartfonów. \n* Aplikacje na smartfona pomagają ludziom
+          rozmawiać z przyjaciółmi, słuchać muzyki, robić zakupy lub przegldać Internet.\n*
+          Dla programistów ważne jest, by rozumieli potrzeby innych osób i projektowali
+          aplikacji mając to na uwadze!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)1555611687284.png)"
+      courseAB_EOC2022:
+        description: Dotarłeś do ostatniej lekcji! Wybierz projekt do utworzenia.
+        display_name: Koniec projektu kursu
+      courseB_EOC2022:
+        description: Dotarłeś do ostatniej lekcji! Wybierz projekt do utworzenia.
+        display_name: Koniec projektu kursu
+      courseC_multi_artist_prog6_predict12022:
+        answers:
+        - text: Artysta narysuje trójkąt o trzech równych bokach.
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
+        - text: 'Artysta narysuje pojedynczą linię. '
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
+        - text: Artysta narysuje kwadrat.
+          correct: true
+          feedback: Poprawnie!
+        - text: 'Artysta narysuje pięciokąt '
+          feedback: Niepoprawnie. Artysta rysuje kwadrat.
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+      courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
+        - text: '12'
+          correct: true
+          feedback: Poprawnie!
+        - text: '15'
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
+        - text: '20'
+          feedback: Niepoprawnie. Farmer zbierze 4 dynie w każdej z 3 pętli. 4 razy
+            3 daje 12!
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Ile dyń zbierze farmer, kiedy klikniesz
+            "Uruchom"?
+      courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - text: Scrat dotrze do żołędzia. Nie ma żadnych błędów w kodzie.
+        - text: Scrat nie dotrze do żołędzia, bo skręca w złą stronę.
+          correct: true
+        - text: Scrat nie dotrze do żołędzia, ponieważ nie ma wystarczającej liczby
+            bloków `idź do przodu`.
+        - text: Scrat nie zejdzie z pierwszego bloku.
+          feedback: Scrat nie dotrze do żołędzia, bo skręca w złą stronę.
+        questions:
+        - text: Poszukaj błędów w tym kodzie. Czy Scrat dotrze do żołędzia, czy będzie
+            miał z tym problem?
+      courseC_multi_maze_programming8_predict12022:
+        answers:
+        - text: Ptak znajdzie się o krok od świnki.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
+        - text: Ptak wpadnie na TNT.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Ptak wpadnie na ścianę.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        questions:
+        - text: Przeczytaj uważnie poniższy kod. Co się stanie, gdy klikniesz „Uruchom”?
+      courseC_multi_starWars_predict12022:
+        answers:
+        - text: BB-8 nie poruszy się.
+          feedback: Źle. Blok powtarzania sprawi, że BB-8 przesunie się do przodu
+            5 razy.
+        - text: BB-8 przemieści się tylko o jedno miejsce.
+          feedback: Źle. Blok powtarzania sprawi, że BB-8 przesunie się do przodu
+            5 razy.
+        - text: BB-8 przemieści się 5 razy i zbierze cały złom
+          correct: true
+          feedback: Poprawnie!
+        - text: BB-8 przemieści się tylko o 3 miejsca.
+          feedback: Źle. Blok powtarzania sprawi, że BB-8 przesunie się do przodu
+            5 razy.
+        questions:
+        - text: Jak myślisz, co się stanie, gdy naciśniesz "Uruchom"?
+      courseC_multi_starWars_predict22022:
+        answers:
+        - text: BB-8 pojedzie za daleko w pierwszej pętli.
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
+        - text: BB-8 nie dojedzie wystarczająco daleko w pierwszej pętli, aby zebrać
+            cały złom.
+          correct: true
+          feedback: Poprawnie!
+        - text: BB-8 bez żadnego problemu zbierze cały złom
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
+        - text: BB-8 obróci się w złym kierunku po pierwszej pętli.
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+            miejsca, gdy trzeba przemieścić się o 3 miejsca. '
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+      courseD_EOC2022:
+        description: Dotarłeś do ostatniej lekcji Kursu D! Wybierz projekt do utworzenia.
+        display_name: Koniec projektu kursu
+      courseD_EOC_examples2022:
+        description: Zaraz zaczniesz swój projekt końcowy. Zanim zaczniesz, poświęć
+          trochę czasu na zapoznanie się z przykładowymi projektami.
+        display_name: Przykłady projektów
+      courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - text: A
+          correct: true
+          feedback: Poprawnie!
+        - text: B
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
+        - text: B
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
+        - text: Żadne z powyższych
+          feedback: Niepoprawnie. Pętla wewnętrzna tworzy pięciokąt, a zewnętrzna
+            powtarza to 4 razy w okręgu.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Jaki rysunek wykona program, gdy klikniesz
+            "Uruchom"?
+      courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - text: 'Pszczółka poleci do chmury i spróbuje zebrać nektar, bez względu
+            na okoliczności. '
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+            próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar, jeśli jest pod
+            nią kwiatek.
+          correct: true
+          feedback: Poprawnie!
+        - text: 'Pszczółka poleci do chmury i nie zrobi nic więcej, bez względu na
+            okoliczności. '
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" zapewnia, że pszczółka
+            będzie próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Pszczółka nie doleci do chmurki.
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+            próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        questions:
+        - text: Chmura zasłania widok. Pod tą chmurą mógł być kwiatek. Jeśli będzie,
+            pszczółka będzie musiała zebrać nektar jeden raz. Jeśli nie będzie, pszczółka
+            nie powinna robić niczego. Spójrz uważnie na poniższy kod. Jak sądzisz,
+            co się wydarzy, gdy klikniesz "Uruchom"?
+      courseD_multi_bee_conditionals7_predict22022:
+        answers:
+        - text: Pszczółka zbierze nektar z każdego kwiatka i zrobi miód na każdym
+            plastrze miodu.
+          correct: true
+          feedback: Poprawnie!
+        - text: Pszczółka podejmie próbę zebrania nektaru z każdego kwiatka i na każdym
+            plastrze miodu.
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i robić miód na każdym plastrze miodu.
+        - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
+            z plastra miodu.
+          feedback: Niepoprawnie. Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce
+            zebrać nektar z każdego kwiatka i robić miód na każdym plastrze miodu.
+        - text: Pszczółka podejmie próbę zebrania miodu i nektaru z każdego kwiatka
+            i na każdym plastrze miodu.
+          feedback: Niepoprawnie. Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce
+            zebrać nektar z każdego kwiatka i robić miód na każdym plastrze miodu.
+        questions:
+        - text: 'Przyjrzyj się uważnie poniższemu kodowi. Jak myślisz, co się stanie,
+            gdy klikniesz "Uruchom"? Pamiętaj: za każdą chmurką będzie tylko *jeden*
+            plaster miodu lub *jeden* kwiatek.'
+      courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - text: Pszczółka poleci do przodu i zbiera nektar tylko jeden raz.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
+        - text: Pszczółka zbierze tylko 2 nektary.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
+        - text: Pszczółka zbierze cały nektar.
+          correct: true
+          feedback: Poprawnie!
+        - text: Pszczółka odwróci się w złym kierunku.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+            do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
+        questions:
+        - text: Spójrz uważnie na zagnieżdżone pętle poniżej. Co się stanie, gdy klikniesz
+            "Uruchom"?
+      courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
+        - text: '8'
+          correct: true
+          feedback: Poprawnie!
+        - text: '10'
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
+        - text: '12'
+          feedback: Niepoprawnie. Pszczółka zbiera 2 nektary w pętli poruszając się
+            do przodu, a następnie 2 nektary w pętli do dołu. To wszystko dzieje się
+            w innej pętli dwukrotnie. 4 razy 2 wynosi 8!
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Ile miodu zrobi pszczółka, kiedy klikniesz
+            "Uruchom"?
+      courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - text: Żniwiarka zbierze cały plon.
+          feedback: Niepoprawnie. Nie ma tutaj kodu na zbieranie dyni.
+        - text: Żniwiarka nie zbierze żadnych plonów na obranej przez siebie ścieżce.
+          feedback: Niepoprawnie. Dzięki kodowi żniwiarka będzie powtarzała wykonywanie
+            wzoru kaskadowego i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi.
+            Nie będzie zbierać dyń.
+        - text: Żniwiarka zbierze cały plon, z wyjątkiem dyń.
+          correct: true
+          feedback: Poprawnie!
+        - text: Żniwiarka zbierze tylko dynię.
+          feedback: Niepoprawnie. Dzięki kodowi żniwiarka będzie powtarzała wykonywanie
+            wzoru kaskadowego i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi.
+            Nie będzie zbierać dyń.
+        markdown: Kiełki w tej łamigłówce będą kiełkami kukurydzy lub sałaty.
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+      courseD_multi_farmer_while10_predict22022:
+        answers:
+        - text: Nic. Ten kod pozostawi jedynie zniwelowany grunt.
+          feedback: Niepoprawnie. Nie ma kodu na usunięcie brudu z tego stosu.
+        - text: Ten kod pozostawi stertę całkowicie nietkniętą.
+          correct: true
+          feedback: Poprawnie!
+        - text: Ten kod pozostawi dziury całkowicie nietknięte.
+          feedback: Niepoprawnie. Pętle "dopóki" będzie obsługiwać pętle dowolnego
+            rozmiaru, natomiast nie ma kodu do usunięcia brudu z tej sterty.
+        - text: Ten kod pozostawi ostatnią dziurę w stanie nietkniętym.
+          feedback: Niepoprawnie. Nie ma kodu na usunięcie brudu z tego stosu.
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Co pozostanie na końcu tej łamigłówki?
+      courseD_multi_farmer_while4_predict12022:
+        answers:
+        - text: Nic się nie wydarzy.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
+        - text: Farmer nigdy nie przestanie usuwać brudu.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
+        - text: Farmer będzie usuwał brud, jeśli istnieje stos, a następnie przestanie,
+            gdy sterta zniknie.
+          correct: true
+          feedback: Poprawnie!
+        - text: Farmer usunie ziemię tylko raz.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+            a następnie przestanie, gdy sterta zniknie.
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+      courseD_multi_maze_until10_predict22022:
+        answers:
+        - correct: true
+          feedback: Poprawnie!
+        - text: Zombie dotrze do słonecznika.
+        - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
+            w kółko.
+        - text: Zombie utknie na końcu ścieżki wiodącej do przodu.
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+      courseD_multi_maze_until2_predict12022:
+        answers:
+        - text: 'Ptak nie będzie się w ogóle poruszał. '
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest ścieżka, a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
+        - text: Ptak będzie się poruszać do przodu i wpadnie na TNT.
+          feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
+            jest bezpieczna ścieżka, a następnie skręca w lewo. Robi to, aż dotrze
+            do świnki!
+        - text: Ptak odwraca się w złą stronę.
+          feedback: Kod sprawia, że ptak porusza się do przodu, jeśli jest ścieżka,
+            a następnie skręca w lewo. Robi to, aż dotrze do świnki!
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Jak myślisz, co się stanie, gdy klikniesz
+            "Uruchom"?
+      courseE_EOC2022:
+        description: 'Dotarłeś do końca Kursu E! Wybierz projekt do utworzenia. '
+        display_name: Koniec projektu kursu
+      courseE_EOC_examples2022:
+        description: 'Dotarłeś do końca Kursu E! Wybierz projekt do utworzenia. '
+        display_name: Koniec projektu kursu
+      courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - text: Pani żniwiarka zbierze dwie dynie.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
+        - text: Żniwiarka zbierze wszystkie dynie.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
+        - text: Żniwiarka zbierze sałatę.
+          correct: true
+          feedback: Poprawnie!
+        - text: Żniwiarka zbierze kukurydzę.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
+        questions:
+        - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać żniwiarka?
+      courseE_prediction_artistFunction12022:
+        answers:
+        - text: Nic. Funkcja nie jest wywołana w programie.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje jeden kwadrat.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje dwa, nakładające się na siebie kwadraty.
+          feedback: Niepoprawnie. Długość każdego boku kwadratu wynosi tylko 100 pikseli,
+            ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
+        - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
+          correct: true
+          feedback: Poprwnie. Funkcja jest wywołana w programie 2 razy, ze skokiem
+            pomiędzy.
+        questions:
+        - text: Co się stanie, gdy naciśniesz "Uruchom"?
+      courseE_swim_fish_behavior_predict12022:
+        answers:
+        - text: Nic się nie wydarzy.
+          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
+        - text: Roślina biegacz będzie dryfować do górnej części ekranu.
+          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
+        - text: Roślina biegacz zacznie się toczyć.
+          correct: true
+          feedback: Poprawnie!
+        - text: Roślina biegacz będzie mrugać.
+          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        display_name: Koniec projektu kursu
+      courseF_EOC_samples2022:
+        description: Zaraz zaczniesz swój projekt końcowy. Zanim zaczniesz, poświęć
+          trochę czasu na zapoznanie się z przykładowymi projektami.
+        display_name: Koniec projektu kursu
+      courseF_collector_samples_2022_pilot_-2022-2:
+        display_name: Eksploracja - Przykładowe programy
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Teraz można wykorzystać to, czego się nauczyliśmy, aby jeszcze
+          ulepszyć projekt! Ciągle dodawaj coś do swojego programu albo zacznij coś
+          nowego!
+        display_name: Zdarzenia - czas na zabawę
+      courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia ze zdarzeniami!
+        display_name: Ćwiczenia ze zdarzeniami
+      courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: 'Duszek będzie się właśnie obracać w prawo. '
+          feedback: Niepoprawnie. Duszek będzie się również przemieszczać na wschód.
+        - text: Duszek będzie się właśnie przemieszczał na wschód.
+          feedback: Niepoprawnie. Duszek nie przestał obracać się wokół własnej osi,
+            zatem zrobi obie rzeczy jednocześnie.
+        - text: Duszek będzie się jednocześnie obracał wokół własnej osi i przemieszczał.
+          correct: true
+          feedback: Poprawnie! Oba zachowania będą zachodzić jednocześnie.
+        - text: Duszek najpierw będzie się obracał wokół własnej osi, a potem będzie
+            się przemieszczał.
+          feedback: Niepoprawnie. W Sprite Lab połączone bloki będą się pojawiać jednocześnie,
+            po każdym ostatni, zatem do obu zachowań dojdzie jednocześnie.
+        questions:
+        - text: Przeczytaj kod, a potem zgadnij.
+      courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: 'Aplikacje Sprite Lab '
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: '"Już idzie jedna pizza!"'
+          feedback: Niepoprawnie. Etykiety zmiennych nie pasują.
+        - text: '"Już idzie jeden posiłek!"'
+          feedback: Niepoprawnie. Etykieta zmiennej nigdy nie jest drukowana.
+        - text: '"Już idzie jedno jedzenie!"'
+          feedback: Niepoprawnie. Etykieta zmiennej nigdy nie jest drukowana.
+        - text: '"Już idzie jedna porcja!"'
+          correct: true
+          feedback: Poprawnie! Etykiety zmiennych nie pasują.
+        - text: Nic się nie wydrukuje.
+          feedback: Niepoprawnie. Zdarzenie i blok drukowania będą nadal działać.
+        questions:
+        - text: Kod może wyglądać znajomo, ale należy uważnie go przeczytać. Co się
+            wydrukuje, jeśli użytkownik wpisze "pizza"?
+      courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - text: Artysta narysuje trójkąt o bokach 50 pikseli.
+          correct: true
+          feedback: Poprawnie!
+        - text: Artysta narysuje wielokąt o 50 bokach długości 3 pikseli.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być w pętli "powtarzaj",
+            aby to się wydarzyło. '
+        - text: Artysta narysuje trzy otwarte boki ze skrętami 50 stopni.
+          feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być użyta w bloku
+            "skręć", aby to się wydarzyło. '
+        - text: Komputer poprosi użytkownika o liczbę.
+          feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
+            "idź do przodu o" tak, że artysta narysuje trójkąt o bokach 50 pikseli.
+        questions:
+        - text: Ustawiliśmy zmienną "długość" na 50. Co się stanie, gdy klikniesz
+            "Uruchom"?
+      courseF_multi_bee_for3_predict12022:
+        answers:
+        - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
+        - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
+            oprócz jednego.
+          correct: true
+          feedback: Poprawnie!
+        - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
+        - text: Pszczółka poleci do przodu i zbierze jeden nektar z kwiatków numer
+            1 i 4.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+            ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
+        markdown: Ach! Użycie pętli "dla" czyni łamigłówkę czymś dużo prostszym.
+        questions:
+        - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        description: Teraz twoja kolej na tworzenie tego, co tylko zechcesz! Jaki
+          rodzaj projektu stworzysz?
+        display_name: Duszki - czas na zabawę
+      courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z duszkami i
+          zachowaniami!
+        display_name: Ćwiczenia z duszkami
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: Oba samoloty będą się przemieszczać o jedno pole w siatce, a potem
+            się zatrzymają.
+          feedback: Błąd. Te duszki są wyposażone w takie "zachowania", że biegają,
+            aż otrzymają polecenie, by się zatrzymać.
+        - text: Oba samoloty będą się poruszać i nie zatrzymają się.
+          correct: true
+          feedback: Poprawnie! Przy pomocy tych zachowań nakazuje się samolotom rozpoczęcie
+            i kontynuację przemieszczania się.
+        - text: Jeden samolot rozpocznie się poruszać, jako pierwszy, a drugi, jako
+            drugi.
+          feedback: Niepoprawnie. Każdy blok kodu w Sprite Lab uruchamia się natychmiast
+            po kolejnym.
+        - text: Samoloty się zderzą.
+          feedback: Niepoprawnie. Samoloty nie są umiejscowione tak, aby mogły się
+            zetknąć.
+        questions:
+        - text: Przeczytaj kod, a potem zgadnij.
+      courseF_text_practice2022_2022_pilot_-2022-2:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z tekstem i podpowiedziami!
+        display_name: Ćwiczenia w zakresie tekstu i podpowiedzi
+      courseF_variables2_predict2_multi2022_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: Program wydrukuje "Cześć imię!"
+          feedback: Niepoprawnie. Blok imienia zostanie zastąpiony przez to, co wpiszesz.
+        - text: Program przywita się z Tobą imieniem, które wpiszesz.
+          correct: true
+          feedback: Poprawnie! To, co wpiszesz, zostanie użyte w miejscu w bloku imienia.
+        - text: 'Duszek zmieni rozmiar.
+
+'
+          feedback: Niepoprawnie. Tekst jest wydrukowany na ekranie.
+        - text: Komputer zada inne pytanie.
+          feedback: Niepoprawnie. Zadawane jest tylko jedno pytanie, wtedy, gdy program
+            rozpoczyna działanie.
+        questions:
+        - text: 'Ten program pozwala ci odpowiedzieć na pytanie poprzez wpisanie przy
+            pomocy swojej klawiatury. Blok ''drukuj'' pokazuje tekst na ekranie. Dokonaj
+            prognozy: Co się stanie po udzieleniu odpowiedzi na pytanie?'
+      courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historię
+          pustej przestrzeni. Jeśli już skończyłeś \"Część 1\" swojego projektu, przejdź
+          do \"Części 2\".
+        display_name: Wybierz projekt
+      courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historie
+          pustej przestrzeni. Zanim zaczniesz, przejrzyj poniższe przykładowe projekty,
+          aby przekonać się tworzeniem czego się interesujesz. Naciśnij \"Koniec"\,
+          gdy będziesz gotowy do rozpoczęcia planowania swojego własnego programu.
+        display_name: Eksploracja - Przykładowe programy
+      courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: opis tutaj
+        markdown: "# Stop!\n\n## Czy jesteś pewien, że jesteś gotowy na dalsze działania?
+          \n\n\nNa kolejnym poziomie rozpoczniesz pisanie kodu na potrzeby swojego
+          projektu. To sprawdza się najlepiej, gdy masz już plan.\n\nTwój gotowy plan
+          powinien obejmować:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Rodzaj projektu,
+          który budujesz. N przykład kartę z życzeniami, chatbota lub historię pustej
+          przestrzeni.\n* Wykaz pytań, które zadasz użytkownikowi.\n* Inny tekst,
+          który wyświetlisz na ekranie.\n* Opis lub rysunek duszków, które będą ci
+          potrzebne (i ich zachowania).\n\nIf you are not sure if you are ready to
+          move on, check with your teacher!\n"
+      coursee_prediction_artistfunction22022:
+        answers:
+        - text: Artysta rozwiąże tę łamigłówkę poprawnie.
+          feedback: Niepoprawnie. Pętla wykorzystuje blok "narysuj wielokąt" zamiast
+            "narysuj rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty w postaci okna.
+          correct: true
+          feedback: Poprawnie!
+        - text: Artysta narysuje tylko jeden rząd kwadratów.
+          feedback: Niepoprawnie. Program nie wywołuje funkcji "narysuj rząd wielokątów".
+        - text: Artysta narysuje cztery kwadraty, jeden na drugim.
+          feedback: Niepoprawnie. Pętla obraca o 90 stopni między wywołaniami "narysuj
+            wielokąt".
+        questions:
+        - text: Co się stanie, gdy naciśniesz przycisk "Uruchom"?
+      csf_be_a_super_digital_citizen2022:
+        content1: opis tutaj
+        markdown: |
+          # Wzorowy cyfrowy obywatel
+
+          ## Jak reagować, kiedy jesteśmy świadkami cyberprzemocy?
+      csf_digital_trails2022:
+        markdown: |-
+          # Postępuj zgodnie z cyfrowym śladem
+
+          ## Jakie informacje może zawierać Twój cyfrowy ślad?
+      csf_password_power-up2022:
+        content1: opis tutaj
+        markdown: |
+          # Wzmocnij swoje hasło
+
+          ## Wskazówki, jak pamiętać hasło
+
+          * Zacznij od zapadającej w pamięć **frazy**.
+          * Tylko Twoi **rodzice** powinni znać Twoje hasło.
+          * Nigdy nie używaj w haśle żadnych **prywatnych** identyfikujących informacji
+          * Twórz hasła zawierające co najmniej **osiem** znaków.
+          * W haśle użyj liter, liczb i **symboli**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness2022:
+        content1: opis tutaj
+        markdown: |
+          STOP podłości
+
+          ## Co powinieneś zrobić, jeśli ktoś jest dla Ciebie złośliwy w Internecie?
+
+          * **S** Daj sobie spokój.
+          * **T** Poinformuj zaufaną osobę dorosłą.
+          * **O** K Najpierw witryny.
+          * **P** Zatrzymaj się i pomyśl online.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Moje otoczenie online
+
+          ## Jak bezpiecznie podróżujesz do miejsc online?
+      express_EOC2022:
+        description: 'Dotarłeś do końca Kursu E! Wybierz projekt do utworzenia. '
+        display_name: Koniec projektu kursu
+      express_EOC_examples2022:
+        description: Zaraz zaczniesz swój projekt końcowy. Zanim zaczniesz, poświęć
+          trochę czasu na zapoznanie się z przykładowymi projektami.
+        display_name: Przykłady projektów
+      grade2_multi_collector_A_predict12022:
+        answers:
+        - text: Przy pomocy tego kodu Laurel zbierze 4 elementy skarbu.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
+        - text: Laurel będzie próbować zebrać skarb tam, gdzie go nie ma, co spowoduje
+            błąd.
+          correct: true
+          feedback: Poprawnie!
+        - text: Laurel zbierze cały skarb.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
+        - text: Przy pomocy tego kodu Laurel zbierze 1 skarb.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+            co powoduje powstanie błędu.
+        questions:
+        - text: Spójrz uważnie na ten kod. Jak sądzisz, co się stanie, gdy program
+            działa?

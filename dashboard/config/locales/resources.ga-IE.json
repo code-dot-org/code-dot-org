@@ -29,6 +29,339 @@
         "ai-training/oceans/unversioned": {
           "type": "Físeán"
         },
+        "curriculum_guide/coursed/2022": {
+          "name": "Leabhrán an Churaclaim"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar",
+          "type": "Measúnú"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Códáil Bheirte"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Códáil Sealaíochta"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Físeán"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Coinníollacha le Cártaí"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Coinníollacha le Cártaí"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Coinníollacha le Cártaí",
+          "type": "Measúnú"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Coinníollacha le Cártaí"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Coinníollacha le Cártaí"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Leabhrán an Churaclaim"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Físeán"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Fáilte go dtí Saotharlann na Sprideanna",
+          "type": "Físeán"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Físeán"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Físeán"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Físeán"
+        },
+        "internet/coursef/2022": {
+          "name": "An tIdirlíon",
+          "type": "Measúnú"
+        },
+        "internet_1/coursef/2022": {
+          "name": "An tIdirlíon"
+        },
+        "the_internet/coursef/2022": {
+          "name": "An tIdirlíon"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Leabhrán an Churaclaim"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Físeán"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Measúnú"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Físeán"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Leabhrán an Churaclaim"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Bog é, Bog é"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Bog é, Bog é"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Bog é, Bog é"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Bog é, Bog é"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Códáil Bheirte"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Físeán"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stiofán agus an Tionscadal Mór"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Fabhtanna nár tugadh faoi deara",
+          "type": "Físeán"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Bí Lúbach"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Bí Lúbach"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Bí Lúbach",
+          "type": "Measúnú"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Bí Lúbach"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Físeán"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "An Teagmhas Mór"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "An Teagmhas Mór",
+          "type": "Measúnú"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "An Teagmhas Mór"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "pair_programming/express/2022": {
+          "name": "Códáil Bheirte",
+          "type": "Físeán"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Físeán"
+        },
+        "turns_angles/express/2022": {
+          "type": "Físeán"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "Sprideanna ar Obair"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Físeán"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Físeán"
+        },
+        "variables/express/2022": {
+          "name": "Athróga"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Físeán"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Códáil Bheirte"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Físeán"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Físeán"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Leabhrán an Churaclaim"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Físeán"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Códáil Bheirte"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Físeán"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Mapaí Meidhreacha"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Físeán"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Físeán"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Físeán"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Físeán"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "An Teagmhas Mór"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "An Teagmhas Mór",
+          "type": "Measúnú"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "An Teagmhas Mór"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Leabhrán an Churaclaim"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Códáil Bheirte",
+          "type": "Físeán"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "An Teagmhas Mór"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "An Teagmhas Mór",
+          "type": "Measúnú"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "An Teagmhas Mór"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Físeán"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Bráisléid Dhénártha"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Bráisléid Dhénártha"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Bráisléid Dhénártha"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Bráisléid Dhénártha",
+          "type": "Measúnú"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Bráisléid Dhénártha"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Fóram do Mhúinteoirí"
+        },
         "binary_and_data/csd/2022": {
           "type": "Físeán"
         },
@@ -53,9 +386,6 @@
         },
         "make_a_recommendation/csd/2022": {
           "type": "Athbhreithniú Comhghleacaithe"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "Fóram do Mhúinteoirí"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "Físeán"
@@ -726,6 +1056,23 @@
         "vocabulary_3/csd/2017": {
           "name": "Stór Focal"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Leabhrán an Churaclaim"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Fóram do Mhúinteoirí"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Fáilte go dtí Saotharlann na Sprideanna"
         },
@@ -745,15 +1092,6 @@
         "pause_and_think_online/coursef/2021": {
           "type": "Físeán"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Spraoi le Lúba"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Spraoi le Lúba"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Spraoi le Lúba"
-        },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Spraoi le Lúba"
         },
@@ -761,36 +1099,42 @@
           "name": "Spraoi le Lúba",
           "type": "Measúnú"
         },
-        "ai-ml/coursef/2021": {
-          "type": "Físeán"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Spraoi le Lúba"
         },
-        "ai-training/coursef/2021": {
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Spraoi le Lúba"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Spraoi le Lúba"
+        },
+        "ai-ml/coursef/2021": {
           "type": "Físeán"
         },
         "ai-societal/coursef/2021": {
           "type": "Físeán"
         },
-        "unplugged-video-internet/coursef/2021": {
+        "ai-training/coursef/2021": {
+          "type": "Físeán"
+        },
+        "assessment-answer-internet/coursef/2021": {
           "name": "An tIdirlíon"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "An tIdirlíon",
           "type": "Measúnú"
         },
-        "assessment-answer-internet/coursef/2021": {
+        "unplugged-video-internet/coursef/2021": {
           "name": "An tIdirlíon"
         },
-        "implementation_guide/coursef/2021": {
-          "name": "Lámhleabhar Feidhmithe"
-        },
-        "curriculum_guide_1/coursef/2021": {
+        "curriculum_guide_1/courseb/2021": {
           "name": "Leabhrán an Churaclaim"
         },
-        "teacher_forum_1/coursef/2021": {
-          "name": "Fóram do Mhúinteoirí"
+        "implementation_guide/courseb/2021": {
+          "name": "Lámhleabhar Feidhmithe"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        "teacher_forum_1/courseb/2021": {
+          "name": "Fóram do Mhúinteoirí"
         },
         "mimi-activity/courseb/2021": {
           "name": "Bog é, Bog é"
@@ -817,7 +1161,7 @@
           "name": "Fabhtanna nár tugadh faoi deara",
           "type": "Físeán"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Bí Lúbach"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
@@ -827,39 +1171,39 @@
           "name": "Bí Lúbach",
           "type": "Measúnú"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Bí Lúbach"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "type": "Físeán"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "An Teagmhas Mór",
-          "type": "Físeán"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "An Teagmhas Mór"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "An Teagmhas Mór",
           "type": "Measúnú"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "An Teagmhas Mór"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "An Teagmhas Mór",
+          "type": "Físeán"
         },
-        "implementation_guide/courseb/2021": {
-          "name": "Lámhleabhar Feidhmithe"
-        },
-        "curriculum_guide_1/courseb/2021": {
+        "curriculum_guide_1/coursea/2021": {
           "name": "Leabhrán an Churaclaim"
         },
-        "teacher_forum_1/courseb/2021": {
+        "implementation_guide/coursea/2021": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum_1/coursea/2021": {
           "name": "Fóram do Mhúinteoirí"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Físeán"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Códáil Bheirte"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "type": "Físeán"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Físeán"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -877,32 +1221,26 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "Físeán"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "An Teagmhas Mór"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "An Teagmhas Mór",
           "type": "Measúnú"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "An Teagmhas Mór"
         },
-        "implementation_guide/coursea/2021": {
-          "name": "Lámhleabhar Feidhmithe"
-        },
-        "curriculum_guide_1/coursea/2021": {
+        "curriculum_guide_1/coursec/2021": {
           "name": "Leabhrán an Churaclaim"
         },
-        "teacher_forum_1/coursea/2021": {
+        "implementation_guide/coursec/2021": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum_1/coursec/2021": {
           "name": "Fóram do Mhúinteoirí"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Mo Chairde Róbatacha"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Mo Chairde Róbatacha"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Mo Chairde Róbatacha"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -911,27 +1249,30 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Mo Chairde Róbatacha"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Mo Chairde Róbatacha"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Códáil Bheirte",
           "type": "Físeán"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "An Teagmhas Mór"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "An Teagmhas Mór",
           "type": "Measúnú"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "An Teagmhas Mór"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "Físeán"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Bráisléid Dhénártha"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Bráisléid Dhénártha"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -941,56 +1282,59 @@
           "name": "Bráisléid Dhénártha",
           "type": "Measúnú"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Bráisléid Dhénártha"
         },
-        "implementation_guide/coursec/2021": {
-          "name": "Lámhleabhar Feidhmithe"
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Bráisléid Dhénártha"
         },
-        "curriculum_guide_1/coursec/2021": {
+        "curriculum_guide_1/coursed/2021": {
           "name": "Leabhrán an Churaclaim"
         },
-        "teacher_forum_1/coursec/2021": {
+        "implementation_guide/coursed/2021": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum_1/coursed/2021": {
           "name": "Fóram do Mhúinteoirí"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Ríomhchlárú ar Ghrafpháipéar"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Ríomhchlárú ar Ghrafpháipéar"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Ríomhchlárú ar Ghrafpháipéar"
-        },
         "activity-answer-graph-paper/coursed/2021": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
           "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Ríomhchlárú ar Ghrafpháipéar",
           "type": "Measúnú"
         },
-        "assessment-answer-graph-paper/coursed/2021": {
+        "graph-paper-programming/coursed/2021": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
           "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Códáil Bheirte"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Códáil Sealaíochta"
         },
         "relay-assessment/coursed/2021": {
           "name": "Códáil Sealaíochta"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Códáil Sealaíochta"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Códáil Sealaíochta"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Códáil Sealaíochta"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Códáil Sealaíochta"
         },
         "pause_and_think_online/coursed/2021": {
@@ -999,29 +1343,23 @@
         "pause_and_think_online_1/coursed/2021": {
           "type": "Físeán"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Coinníollacha le Cártaí"
         },
-        "lesson-in-action-conditional-cards/coursed/2021": {
+        "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Coinníollacha le Cártaí"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Coinníollacha le Cártaí",
           "type": "Measúnú"
         },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
+        "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Coinníollacha le Cártaí"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Coinníollacha le Cártaí"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "Lámhleabhar Feidhmithe"
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "Leabhrán an Churaclaim"
-        },
-        "teacher_forum_1/coursed/2021": {
+        "teacher_forum_1/express/2021": {
           "name": "Fóram do Mhúinteoirí"
         },
         "pair_programming/express/2021": {
@@ -1052,14 +1390,14 @@
         "variables_video/express/2021": {
           "name": "Athróga"
         },
-        "teacher_forum_1/express/2021": {
+        "teacher_forum_1/pre-express/2021": {
           "name": "Fóram do Mhúinteoirí"
-        },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Códáil Bheirte"
         },
         "20_20_20_rule/pre-express/2021": {
           "type": "Físeán"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Códáil Bheirte"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "type": "Físeán"
@@ -1067,7 +1405,16 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Físeán"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Leabhrán an Churaclaim"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "Fóram do Mhúinteoirí"
         },
         "sprite_lab_documentation/coursee/2021": {
@@ -1081,18 +1428,6 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "type": "Measúnú"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Lámhleabhar Feidhmithe"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Leabhrán an Churaclaim"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "Fóram do Mhúinteoirí"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Saotharlann na Sprideanna: Doiciméadú"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Físeán"
@@ -1130,6 +1465,9 @@
         "view_and_download_survey_data/csd/2021": {
           "type": "Físeán"
         },
+        "teacher_forum/csd/2021": {
+          "name": "Fóram do Mhúinteoirí"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Físeán"
         },
@@ -1138,9 +1476,6 @@
         },
         "intro_to_design_mode/csd/2021": {
           "type": "Físeán"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "Fóram do Mhúinteoirí"
         },
         "internet-of-things-video/csd/2021": {
           "type": "Físeán"
@@ -1197,6 +1532,9 @@
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "Athbhreithniú Comhghleacaithe"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Fóram do Mhúinteoirí"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Físeán"
@@ -1263,9 +1601,6 @@
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "Athbhreithniú Comhghleacaithe"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Fóram do Mhúinteoirí"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "Físeán"

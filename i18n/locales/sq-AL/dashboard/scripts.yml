@@ -1367,3 +1367,84 @@ sq:
               display_name: Përmbajtja
         soccer:
           name: futboll
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: cikle
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përmbajtja
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: variabla
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Për Ciklet
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        hello-world-soccer-2022:
+          title: 'Përshëndetje Botërore: futboll'
+        csc-bookcover:
+          lessons:
+            lesson-1:
+              name: Okładka
+          name: csc-bookcover
+          title: Okładka CSC
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: të dhëna
+            csp_loops:
+              display_name: cikle
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listat
+            lessonGroup-3:
+              display_name: cikle

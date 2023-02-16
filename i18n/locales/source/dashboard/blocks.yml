@@ -2,6 +2,12 @@
 en:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: moving NESW with arrow keys
+      AmysBlocks_setPromptWithChoices:
+        text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3][C][4]
+      AmysBlocks_spriteSayVar:
+        text: "[SPRITE][0]say[TEXT1][1]"
       BadGuys_makeNewBadGuysSprite:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       BadGuys_setSizeAll_dropdown:
@@ -250,20 +256,12 @@ en:
             "-1": "←"
       Dancelab_eval:
         text: eval [CODE][0]
-      Dancelab_everyMeasuresRange:
-        text: 'repeat every [N][0] measures after [START][1] '
       Dancelab_everySeconds:
         text: 'repeat every [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': measures
             '"seconds"': seconds
-      Dancelab_everySecondsRange:
-        text: 'every [N][0] [UNIT][1] from [START][2] to [STOP][3] '
-        options:
-          UNIT:
-            measures: Measures
-            seconds: Seconds
       Dancelab_everyVerseChorus:
         text: 'every [UNIT][0] '
         options:
@@ -1034,6 +1032,62 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Microscope has [INPUT1][0]
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: do [EFFECT][0] effect
+        options:
+          EFFECT:
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"emojis"': happy emojis
+            '"rain"': rain
+            '"starburst"': starburst
+            '"glass"': shattering glass
+            '"twinkling"': twinkling
+      DansBlocks_setMicroscope:
+        text: Set Microscope to [INPUT1][0]
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      DansBlocks_testRectangle:
+        text: 'make rectangle x: [X][0] y: [Y][1] w: [W][2] h: [H][3] color: [COLOR][4]'
+      FunctionBlocks_addEightBlock:
+        text: addEight
+      FunctionBlocks_addFiveBlock:
+        text: addFive
+      FunctionBlocks_addFourBlock:
+        text: addFour
+      FunctionBlocks_addNineBlock:
+        text: addNine
+      FunctionBlocks_addOneBlock:
+        text: addOne
+      FunctionBlocks_addSevenBlock:
+        text: addSeven
+      FunctionBlocks_addSixBlock:
+        text: addSix
+      FunctionBlocks_addThreeBlock:
+        text: addThree
+      FunctionBlocks_addTwoBlock:
+        text: addTwo
+      FunctionBlocks_communicate:
+        text: Communicate [VAR1][0] with [SPRITE1COSTUME][1]
+      FunctionBlocks_makeManipulative2:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites  [BEHAVIOR][2]
+      FunctionBlocks_representManipulative:
+        text: represent [NUM][0] new [ANIMATION_NAME][1] sprites
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] represent [NUM][0] new [ANIMATION_NAME][1] sprites"
+      FunctionBlocks_spriteSayVar:
+        text: "[SPRITE][0]say[TEXT1][1]"
       gamelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       gamelab_addTarget:
@@ -1360,6 +1414,34 @@ en:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": select
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": quirky bass
             "'sound://category_digital/jump_7.mp3'": jump
+      gamelab_playSoundOptionsSoccer:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": airhorn
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": applause
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": chant
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": cheer
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": kick
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": two whistles
+            "'sound://category_sports/One_Whistle_SFX.mp3'": whistle
+      gamelab_playSoundOptionsSpace:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Galactic_center_SFX.mp3'": galactic center
+            "'sound://category_space/Launch_SFX.mp3'": launch
+            "'sound://category_space/Lift_Off.mp3'": lift off
+            "'sound://category_space/Pillars_SFX.mp3'": pillars
+            "'sound://category_space/Southern_ring_SFX.mp3'": southern ring
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": whirlpool galaxy
       gamelab_playSpeech:
         text: play speech [SOUND][0]
       gamelab_playerBehaviors:
@@ -1445,6 +1527,8 @@ en:
             '100': large
       gamelab_setPrompt:
         text: prompt user [QUESTION][0] for variable [VAR][1]
+      gamelab_setPromptWith2Choices:
+        text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3]
       gamelab_setPromptWithChoices:
         text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3][C][4]
       gamelab_setProp:
@@ -2048,6 +2132,41 @@ en:
         text: setup Monster Town with[COUNT][0]monsters
       Outbreak_stopMoving:
         text: monsters stop moving
+      ParticlesBlocks_getMicroscope:
+        text: Microscope has [INPUT1][0]
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        text: Set Microscope to [INPUT1][0]
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): solid
+            new Behavior(liquid, []): liquid
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Set [COSTUME][0] to [BEHAVIOR][1] behavior
+        options:
+          BEHAVIOR:
+            '"solid"': 'solid particle '
+            '"liquid"': liquid particle
+            '"gas"': gas particle
+      ParticlesBlocks_statesOfMatter_testing:
+        text: "[Testing] Set [COSTUME][0] to [BEHAVIOR][1] behavior"
+        options:
+          BEHAVIOR:
+            '"solid"': 'solid particle '
+            '"liquid"': liquid particle
+            '"gas"': gas particle
       Poetry_addFrame:
         text: set frame to [BRUSH][0]
         options:
@@ -2138,6 +2257,23 @@ en:
             '"sound://category_achievements/peaceful_win_1.mp3"': win
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': whirl
             '"sound://category_achievements/peaceful_win_6.mp3"': wind chimes
+      Poetry_playSoundOptionsSpace:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Galactic_center_SFX.mp3'": galactic center
+            "'sound://category_space/Launch_SFX.mp3'": launch
+            "'sound://category_space/Lift_Off.mp3'": lift off
+            "'sound://category_space/Pillars_SFX.mp3'": pillars
+            "'sound://category_space/Southern_ring_SFX.mp3'": southern ring
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": whirlpool galaxy
       Poetry_setAuthor:
         text: set author [AUTHOR][0]
       Poetry_setBackground:
@@ -2274,6 +2410,11 @@ en:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: when [VAR][0] answered
       RyanLab_moveForward:
@@ -2535,6 +2676,24 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      storylab_clearHeadings:
+        text: clear headings
+      storylab_setForegroundEffect2:
+        text: do [EFFECT][0] effect
+        options:
+          EFFECT:
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"rain"': rain
+            '"starburst"': starburst
+            '"twinkling"': twinkling
+      storylab_setHeading:
+        text: set heading [HEADING][0]
+      storylab_setPromptWithChoice:
+        text: prompt user [QUESTION][0] for variable [VAR][1] with choice [A][2]
+      storylab_setSubheading:
+        text: set subheading [SUBHEADING][0]
       validation_validatedBackground:
         text: set background to [IMG][0]
       validation_validatedSound:

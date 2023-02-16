@@ -807,6 +807,8 @@ ta:
             required:
               display_name: கண்ணோட்டம்
         dance-2019:
+          title: நடன விருந்து
+          description_short: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள ஒரு நடன கட்சி குறியீடு. பியோன்சே இடம்பெறும், ஹாரி ஸ்டைல்ஸ், லிஸ்ஸோ, லில் நாஸ் எக்ஸ், செலினா கோம்ஸ், டிஸ்னியின் இருந்து இசை “Encanto,” மேலும்!
           description: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன விருந்தைக் குறிக்கவும்!
           student_description: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன விருந்தைக் குறிக்கவும்!
         dance-extras-2019:
@@ -1354,6 +1356,8 @@ ta:
           lesson_groups:
             lessonGroup-5:
               display_name: சாண்ட்பாக்ஸ்
+        ai-ethics-2021:
+          description_audience: தரம் 6-12
         poem-art-2021:
           title: கவிதை கலை
         explore-data-1-2021:
@@ -1713,6 +1717,9 @@ ta:
           description_audience: பாடத்திட்ட எழுத்தாளர்கள்
           description_short: பாடத்திட்ட பதிப்புகளுக்கு இடையே பாடங்கள் அல்லது நிலைகளுக்கான புதுப்பிப்புகளை நிலைநிறுத்துவதற்கு
           description: பாடத்திட்ட பதிப்புகளுக்கு இடையே பாடங்கள் அல்லது நிலைகளுக்கான புதுப்பிப்புகளை நிலைநிறுத்துவதற்கு
+          lessons:
+            lesson-7:
+              name: ஸ்ப்ரிட்ஸ் அறிமுகம்
         csd-post-survey-2022:
           title: CS டிஸ்கவரிஸ் போஸ்ட்-கோர்ஸ் சர்வே
           description: இந்தத் தொகுதியில் CS கண்டுபிடிப்புகள் பயிற்சிவகுப்புக்குப் பிந்தைய கருத்தாய்வு உள்ளது. CS கண்டுபிடிப்புகளில் மாணவர்கள் தங்கள் இறுதிப் பிரிவை முடித்த பிறகு இந்தத் தொகுதி ஒதுக்கப்படலாம்.
@@ -1722,5 +1729,92 @@ ta:
         aiml-2022:
           name: aiml-2022
           description_short: செயற்கை நுண்ணறிவு மற்றும் இயந்திர கற்றல் பற்றி அறிக
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ஒத்திசைவற்ற பிழைத்திருத்த நீட்டிப்பு
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: தொகுதி 2 ஒத்திசைவற்ற வேலை
         soccer:
           name: காற்பந்து
+          title: உங்கள் சொந்த கால்பந்து விளையாட்டை குறியிடவும்
+          description_short: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
+          description: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: ஜாவா லேப்
+            lesson-6:
+              name: சுழற்சிகள்
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: மாறிலிகள்
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ஒரு பரிமாண (1D) அணிவரிசைகள்
+        hello-world-space-2022:
+          title: 'வணக்கம் உலகம்: விண்வெளி'
+        hello-world-soccer-2022:
+          title: 'வணக்கம் உலகம்: சாக்கர்'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
+          title: பிரச்சனை தீர்வு
+        csd4-2023:
+          title: வடிவமைப்பு செயல்முறை
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: அந்த ஒலி என்ன?
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+            csp_project:
+              display_name: திட்டம்
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: தகவல்கள்
+            csp_loops:
+              display_name: சுழற்சிகள்
+            csp_project:
+              display_name: திட்டம்
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: பட்டியல்கள்
+            lessonGroup-3:
+              display_name: சுழற்சிகள்
+            lessonGroup-5:
+              display_name: திட்டம்
+        csp-playground:
+          description_audience: பாடத்திட்ட எழுத்தாளர்கள்
+          description_short: பாடத்திட்ட பதிப்புகளுக்கு இடையே பாடங்கள் அல்லது நிலைகளுக்கான புதுப்பிப்புகளை நிலைநிறுத்துவதற்கு
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்

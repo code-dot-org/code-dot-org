@@ -80,6 +80,9 @@
         "csta/CS": {
           "description": "Sistemas de computación"
         },
+        "ngss/ETS1": {
+          "description": "Diseño Ingenieril"
+        },
         "ai4k12-2021/3-A-ii": {
           "description": "La naturaleza del aprendizaje - Búsqueda de patrones en los datos"
         },
@@ -97,9 +100,6 @@
         },
         "ai4k12-2021/3-C-iii": {
           "description": "Conjuntos de datos: Sesgo"
-        },
-        "ngss/ETS1": {
-          "description": "Diseño Ingenieril"
         }
       }
     }

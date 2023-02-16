@@ -94,6 +94,7 @@
   "setSpeed": "поставува брзина",
   "setSpeedTooltip": "ја поставува брзината нивото",
   "shareFlappyTwitter": "Проверете ја  Flappy играта  јас  ја направив. Јас ја напишав во @codeorg",
+  "shareFlappyTwitterDonor": "Види ја Флопи играта која ја направив. (Фала {donor} за подршката кон @codeorg)",
   "shareGame": "Споделија твојата игра:",
   "soundRandom": "случајно",
   "soundCrunch": "криза",

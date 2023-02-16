@@ -452,6 +452,7 @@ uk-UA:
   homepage_banner_40k_teachers_link: Дізнайтеся більше
   homepage_slot_text_title_hoc: Година коду
   homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
+  homepage_slot_text_blurb_hoc_2022: досліджуйте, грайте, створюйте!
   homepage_slot_text_link_hoc: Спробуйте годину коду
   homepage_slot_text_link_about_hoc: Про Годину Коду
   homepage_slot_text_link_host: Провести Годину Коду
@@ -2091,6 +2092,12 @@ uk-UA:
   hoc_overview_dance_2019_subtitle: Закодуйте танцювальну вечірку та покажіть її друзям.
     Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Нікі Мінаж та 34 інших виконавців та груп!
+  hoc_overview_dance_2022_subtitle: Створіть танцювальну вечірку та поділіться нею
+    з друзями. Ви можете використовувати треки Бейонсе, Гаррі Стайлза, Ліззо, Ліл
+    Нас Ікс, Селени Гомес, музику з диснеївського мультфільму «Енканто» та багато
+    іншого!
+  hoc_overview_hello_world_2022_alt_text: Анімовані персонажі астронавтів і тварин
+    плавають навколо ілюстрації землі
   hoc_overview_title: Підручники Години коду від Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Година коду</a> це глобальний
     захід, який залучає десятки мільйонів учнів, у більш, ніж 180 країнах світу. Кожен
@@ -2147,7 +2154,16 @@ uk-UA:
   hoc2018_mc_educators_box2_desc: 'Цей набір інструментів допоможе вам провести Годину
     Коду та залучити студентів до інформатики. '
   hoc2018_mc_educators_box2_button: Завантажити
+  hoc2022_mc_educators_box3_desc_markdown: 'Скористайтеся цим [безкоштовним курсом]
+    (%{free_course_link}) за запитом або зареєструйте весь клас для участі в живому
+    семінарі «Година коду» із запрошеним викладачем. Пропонується кілька разів під
+    час Тижня інформатики з 6 по 11 грудня. '
+  hoc2022_mc_educators_box3_button: Зареєструйтеся зараз
   hoc2018_mc_educators_box4_title: Отримайте більше ресурсів з інформатики
+  hoc2022_mc_educators_box4_desc: Надихніть учнів 1–12 класів на вивчення STEM за
+    допомогою 200-годинної програми з інформатики, від програмування блоками до python,
+    з підтримкою професійного зростання.
+  hoc2022_mc_educators_box4_button: Продовжити навчання
   hoc2018_mc_watch_videos: Перед початком роботи перегляньте ці відео для натхнення
   hoc2018_mc_videos_more: Більше <a href='%{inspiring_videos_playlist}'>надихаючих
     відео</a> з рольовими моделями та знаменитостями
@@ -2249,6 +2265,13 @@ uk-UA:
   homepage_slot_text_blurb_at_home: З нашими ресурсами це легко
   homepage_slot_text_link_code_break: Зробіть перерву на код
   page_not_available_title: Сторінка недоступна
+  hoc2022_mc_mee_title: 'Майнкрафт: втеча з особняка'
+  hoc2022_mc_mee_description: 'Утечіть із таємничого особняка до світанку й заробіть
+    мільйон смарагдів! Новий навчальний посібник «Година коду Майнкрафт» тепер доступний
+    у Minecraft: Education Edition для Windows, Mac, Chromebook, Ipad і мобільних
+    пристроїв. Почніть із безкоштовних ресурсів для викладачів, тренінгів і відеороликів. '
+  hoc2022_mc_mee_timecraft_description: 'Зробіть подорож у минуле, щоб врятувати майбутнє,
+    в цьому безкоштовному уроці програмування в Minecraft: Education Edition.'
   footer_powered_by_aws: На потужностях Amazon Web Services
   codebytes_skinny_banner_english_only: Лише англійська
   codebytes_skinny_banner_learn: 'Дізнатися більше на [code.org/codebytes](%{code_bytes_url}). '
@@ -2266,3 +2289,23 @@ uk-UA:
   ai_activity: Активність
   ai_description: Опис
   outbreak_tile_title: Спалах
+  hoc2022_banner_title: Вчись, грай, твори!
+  hoc2022_banner_description: Досліджуйте всесвіт, досягайте результатів, рухайтеся
+    вперед — інформатика відкриває для вас безліч можливостей!
+  hoc2022_cta_primary: Перегляньте новинки
+  hoc2022_cta_secondary: Спробуйте інші заняття
+  hoc2022_landing_page_explore_title: вивчити
+  hoc2022_landing_page_explore_description: Відкрийте двері в нові світи за допомогою
+    інформатики!
+  hoc2022_landing_page_play_title: Грати
+  hoc2022_landing_page_play_description: Виходьте на поле та забивайте!
+  hoc2022_landing_page_create_title: Створити
+  hoc2022_landing_page_create_description: Зробіть щось незвичайне та дивовижне!
+  hoc2022_landing_page_banner_alt_left: Інопланетянин танцює поряд із Сатурном у космосі
+  hoc2022_landing_page_banner_alt_right: Робот веде футбольний м’яч у космосі перед
+    ракетою, що злітає
+  see_more_activities: Переглянути більше заходів
+  hoc2022_nasa_banner_heading: Приєднуйтесь до NASA на спеціальну програму "Година
+    коду" про комп'ютерні науки в космосі!
+  hoc2022_nasa_banner_description: Прем'єра 5 грудня о 10 ранку за східним часом на
+    каналі NASA STEM на YouTube.

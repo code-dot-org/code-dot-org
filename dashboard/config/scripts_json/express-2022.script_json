@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-08-02 19:28:13 UTC",
+    "serialized_at": "2022-11-17 16:57:03 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9979,31 +9979,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Overworld Powered Minecart2022"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Powered Minecart2022"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "express-2022",
-        "activity_section.key": "83daad31-f1c9-4d21-897b-a291d39f55df"
-      },
-      "level_keys": [
-        "Overworld Powered Minecart2022"
-      ]
-    },
-    {
-      "chapter": 182,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "Underground Mining Coal2022"
         ],
         "progression": "Skill Building"
@@ -10020,6 +9995,31 @@
       },
       "level_keys": [
         "Underground Mining Coal2022"
+      ]
+    },
+    {
+      "chapter": 182,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Underground Iron2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Underground Iron2022"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2022",
+        "activity_section.key": "83daad31-f1c9-4d21-897b-a291d39f55df"
+      },
+      "level_keys": [
+        "Underground Iron2022"
       ]
     },
     {
@@ -10081,14 +10081,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Underground Iron2022"
+          "Overworld Powered Minecart2022"
         ],
         "progression": "Challenge"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Underground Iron2022"
+          "Overworld Powered Minecart2022"
         ],
         "lesson.key": "Looking Ahead with Minecraft",
         "lesson_group.key": "csf_conditionals",
@@ -10096,7 +10096,7 @@
         "activity_section.key": "47b5c27a-db1c-4abd-a3c9-4d90561d7d79"
       },
       "level_keys": [
-        "Underground Iron2022"
+        "Overworld Powered Minecart2022"
       ]
     },
     {
@@ -16869,9 +16869,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Overworld Powered Minecart2022",
+        "level.key": "Underground Mining Coal2022",
         "script_level.level_keys": [
-          "Overworld Powered Minecart2022"
+          "Underground Mining Coal2022"
         ],
         "lesson.key": "Looking Ahead with Minecraft",
         "lesson_group.key": "csf_conditionals",
@@ -16881,9 +16881,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Underground Mining Coal2022",
+        "level.key": "Underground Iron2022",
         "script_level.level_keys": [
-          "Underground Mining Coal2022"
+          "Underground Iron2022"
         ],
         "lesson.key": "Looking Ahead with Minecraft",
         "lesson_group.key": "csf_conditionals",
@@ -16917,9 +16917,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Underground Iron2022",
+        "level.key": "Overworld Powered Minecart2022",
         "script_level.level_keys": [
-          "Underground Iron2022"
+          "Overworld Powered Minecart2022"
         ],
         "lesson.key": "Looking Ahead with Minecraft",
         "lesson_group.key": "csf_conditionals",
@@ -19232,18 +19232,6 @@
       }
     },
     {
-      "name": "Making Sprites",
-      "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview\t",
-      "key": "making_sprites",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "making_sprites"
-      }
-    },
-    {
       "name": "Open-ended Programming Levels",
       "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
       "key": "open-ended_programming_levels",
@@ -19534,12 +19522,6 @@
       "seeding_key": {
         "lesson.key": "Loops with Rey and BB-8",
         "resource.key": "unplugged_blocks_courses_c-f_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Making Sprites",
-        "resource.key": "making_sprites"
       }
     },
     {

@@ -39,8 +39,6 @@
   "starwarsblocks": "Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh (Blockly)",
   "text-compression": "Nén văn bản",
   "csa-self-paced-pl": "Sử dụng Code.org cho KHMT A Bài mở đầu Giáo viên",
-  "counting-csc": "Đếm với Laurel",
-  "explore-data-1": "Hộp khám phá Đồ thị và Biểu đồ tần suất",
   "outbreak-csc": "Dịch bệnh bùng phát",
   "poem-art": "Tranh thơ ca",
   "hello-world-animals": "Xin chào Thế giới: Động vật",
@@ -56,5 +54,9 @@
   "step": "bước/ từng bước",
   "coursee-ramp": "coursee-ramp",
   "csa5-exemplars": "csa5-exemplars",
-  "soccer": "bóng đá"
+  "katie-practice": "katie-practice",
+  "soccer": "bóng đá",
+  "hello-world-space": "Xin chào Thế giới: vũ trụ",
+  "hello-world-soccer": "Hello World: Bóng đá",
+  "playground": "sân chơi"
 }

@@ -357,7 +357,6 @@ reporting.sendReport = function(report) {
  * @param report
  */
 function saveReportLocally(report) {
-  clientState.trackLines(report.result, report.lines);
   clientState.trackProgress(
     appOptions.scriptName,
     appOptions.serverLevelId,

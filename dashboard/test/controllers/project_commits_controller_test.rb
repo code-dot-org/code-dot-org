@@ -94,7 +94,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     fake_channel_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(project_owner_student.id)
     @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
-    create :reviewable_project, user_id: project_owner_student.id, project_id: fake_project_id
+    create :code_review, user_id: project_owner_student.id, project_id: fake_project_id
 
     create :project_commit, project_id: fake_project_id, comment: "Third comment"
 
@@ -120,7 +120,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     fake_channel_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(project_owner_student.id)
     @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
-    create :reviewable_project, user_id: project_owner_student.id, project_id: fake_project_id
+    create :code_review, user_id: project_owner_student.id, project_id: fake_project_id
 
     create :project_commit, project_id: fake_project_id, comment: "Third comment"
 

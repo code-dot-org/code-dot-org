@@ -7,7 +7,7 @@ tr:
       Blue: Mavi
       Green: Yeşil
       Red: Kırmızı
-      actor: aktör
+      actor: oyuncu
       age: yaş
       animal1score: hayvan1skor
       animal1speed: hayvan1hız
@@ -65,6 +65,7 @@ tr:
       name: adı
       nectar: nektar
       nectars: nektarlar
+      object: nesne
       padYOffset: padYOffset
       planet: gezegen
       player_score: oyuncu_skoru
@@ -91,6 +92,7 @@ tr:
       startX: startX
       startY: startY
       stopped-left: sol-durdu
+      type: yaz
       variable: değişken
       width: genişlik
       wizard: sihirbaz

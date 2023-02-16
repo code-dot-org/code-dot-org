@@ -6,20 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
           "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7",
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "End of Unit Survey"
+          "buttonText": "End of Unit Survey",
+          "key": "17490b30-9569-42bb-bad2-13526a3d7f91"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -34,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-02 13:12:42 UTC",
+    "serialized_at": "2022-12-08 21:35:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5908,6 +5902,18 @@
       }
     },
     {
+      "name": "Unit 7 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1-yxs1lVqPfGYFwby_nGNi_in_srct8uRPQ90TpTRx8k/edit?usp=sharing",
+      "key": "unit_7_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_guide_exemplar_"
+      }
+    },
+    {
       "name": "Unit 7 Overview",
       "url": "https://docs.google.com/document/d/1KZ23ZONATH81nUkZGvBpO3urH18P6K_icjOqTxcdScY/edit?usp=sharing",
       "key": "unit_7_overview",
@@ -6389,6 +6395,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_7_guide",
+        "script.name": "csa7-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_guide_exemplar_",
         "script.name": "csa7-2022"
       }
     },

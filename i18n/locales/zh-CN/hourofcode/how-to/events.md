@@ -35,23 +35,17 @@ title: 编程一小时操作指南
 
 * * *
 
-## 借助编程一小时开展家庭编程之夜，邀请父母们也参与进来。
+## Example plan for a school assembly or event
 
-考虑举办K-5 晚会，邀请家长们和他们的孩子们一起参加一小时的计算机科学学习。 这是让更多的社区民众参加进来的好方法，它也鼓励家长支持你们学校的计算机科学。 我们的合作伙伴在家庭编程之夜已经创作出一个一体化活动工具包，其中有帮助你举办活动的计划清单、演讲脚本、邀请邮件、海报、PPT演示等内容。 [点击这里下载活动工具册](http://www.familycodenight.org/DownloadCodeDotOrg.html)。
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## 例如计划一次学校集会或活动
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**活动：**学校范围内的计算机科学教育周启动集会
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**日期：**{{ campaign_date/start_short }}（计算机科学教育周开始）
-
-**时间：**上学日期间。推荐早中午活动。大约 1小时。
-
-**地点：**学校礼堂（如剧院、体育馆、食堂）
-
-## 流程演示
+## Run of Show
 
 | 时长          | 活动                                                    |
 | ----------- | ----------------------------------------------------- |

@@ -1439,6 +1439,8 @@ fi:
               description: ehto
         spelling-bee:
           title: Kirjurimehiläinen
+        ai-ethics-2021:
+          description_audience: Luokat 6-12
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -1597,3 +1599,78 @@ fi:
               display_name: Kysely
         soccer:
           name: Jalkapallo
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Silmukat
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kysely
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Muuttujat
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Silmukat
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            lessonGroup-3:
+              display_name: 'Luku 2: Apsin prototypointi'
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            lessonGroup-3:
+              display_name: 'Luku 2: Pelien rakentaminen'
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Luku 2: Laitteiston syöte'
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Muuttujat
+            csp_conditionals:
+              display_name: Ehtolausekkeet
+            csp_functions:
+              display_name: Funktiot
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Silmukat
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listat
+            lessonGroup-3:
+              display_name: Silmukat
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'

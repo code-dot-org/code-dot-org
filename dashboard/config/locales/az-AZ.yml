@@ -25,7 +25,7 @@ az:
       messages:
         blank: zəruridir
         blank_plural: tələb olunur
-        invalid: yanlışdır
+        invalid: etibarsızdır
         invalid_plural: etibarlı deyil
     attributes:
       user:
@@ -41,6 +41,7 @@ az:
 '
         username: istifadəçi adı
         password: Parol
+        verified_teacher: Doğrulanmış Müəllim
         password_confirmation: Parolun təsdiqi
         current_password: Cari parol
         locale: Dil
@@ -63,10 +64,10 @@ az:
   beta: beta versiya
   hello: Salam, dünya
   welcome_back: Bir daha xoş gəldiniz, %{name}
-  your_professional_learning_plan: peşəkar öyrənmə planınız
+  your_professional_learning_plan: Peşəkar Tədris Planınız
   see_your_learning_plan: Öyrənmə planınıza nəzərdən keçirin
   submit: Göndər
-  unsubmit: Təqdim etməmək
+  unsubmit: Göndərilməmiş
   previous_page: Əvvəlki səhifə
   next_page: Növbəti səhifə
   next_resource: Sonrakı resurs
@@ -81,7 +82,7 @@ az:
       placeholder: Bölmə Kodu (ABCDEF)
       instructions: 'Zəhmət olmasa bölməyə qoşulmaq üçün müəlliminizin sizinlə göndərdiyi
         6 hərfli kodu daxil edin (nümunə: "ABCDEF").'
-      instructions_short: 6 hərfli bölmə kodunuzu daxil edin
+      instructions_short: 6 hərfli bölmə şifrənizi daxil edin
       submit: Qoşulun
   add_hint_form:
     placeholder: Zəhmət olmasa ipucunu bura daxil edin
@@ -260,7 +261,7 @@ az:
     charter: Nizamnamə
     private: Şəxsi
     public: İctimai
-    homeschool: ev məktəbi
+    homeschool: evdə təhsil
     after_school: Məktəbdən sonra
     other: Digər
     state: dövlət
@@ -287,7 +288,7 @@ az:
     try_20hours: Bizim 20 saatlıq İnformatikaya Giriş-i yoxlayın
   signinsection:
     welcome: "%{section_name} bölməsinə xoş gəldiniz"
-    name: Adınızı seçin
+    name: Adınızı təyin edin
     picture: İndi isə gizli şəkilinizi seçin
     words: İndi isə gizli sözünüzü daxil edin
     login: Daxil olun
@@ -338,7 +339,7 @@ az:
     default_name: Adsız Bölmə
     remove: " (bölməni sil)"
     type:
-      picture: Şəkil Şifrə
+      picture: Şəkil Parol
       word: Məxfi söz
       email: E-poçt
       google_classroom: Google Classroom
@@ -352,7 +353,7 @@ az:
     error:
       signed_in: Zəhmət olmasa, davam etməzdən öncə sistemdən çıxın
       username_not_found: "%{username} istifadəçi adı tapılmadı"
-      username_in_use: "%{username} artıq istifadə olunur, zəhmət olmasa, digərini
+      username_in_use: "%{username} artıq istifadə olunur, zəhmət olmasa, başqasını
         seçin"
       no_teacher: "'%{teacher_email_or_code}' ilə daxil olan heç kim tapılmadı. Zəhmət
         olmasa, onlardan burada qeydiyyatdan keçməyi xahiş edin və sonra onları yenidən
@@ -378,17 +379,17 @@ az:
   crud:
     new_model: Yeni %{model}
     show: Göstərmək
-    edit: Düzəliş etmək
-    edit_model: "%{model} düzəliş etmək"
+    edit: Redaktə et
+    edit_model: "%{model} Redaktə etmək"
     update: Yeniləmək
     submit: Göndər
-    destroy: Məhv etmək
-    back: Geri qayıtmaq
+    destroy: Yox etmək
+    back: 'Geri  '
     confirm: Əminsiniz?
     created: "%{model} müvəffəqiyyətlə yaradıldı."
     updated: "%{model} müvəffəqiyyətlə yeniləndi."
     destroyed: "%{model} uğurla ləğv edildi."
-    access_denied: Bu %{model} -ə girişiniz yoxdur.
+    access_denied: Bu %{model} -ə icazəniz yoxdur.
   devise:
     registrations:
       user:
@@ -400,7 +401,7 @@ az:
           istifadəçi adınız (%{username}) və parolunuzla hesabınıza daxil ola bilərsiniz
   nav:
     header:
-      finished_hoc: Mən bitirdim!
+      finished_hoc: Mən başa vurdum!
       sign_in_to_save: Nəticələri itirməmək üçün daxil olun
       my_dashboard: İdarəetmə panelim
       course_catalog: Kurs kataloqu
@@ -411,7 +412,7 @@ az:
       report_abuse: Şikayət etmək
       teacher_community: Müəllim forumu
       professional_learning: Peşəkar təhsil
-      documentation: Təlimat və sənədlər
+      documentation: Sənədlər
       tutorials: Dərsliklər
       app_lab_documentation: Tətbiq Laboratoriyasının Sənədləri
       app_lab_tutorials: Tətbiq Laboratoriyası Dərslikləri
@@ -429,15 +430,16 @@ az:
       educate_beyond: Daha çox Code.org
       educate_inspire: Bir şagirdi ruhlandırmaq
       educate_community: Onlayn icma
+      educate_requirements: texniki tələblər
       educate_tools: Alətlər və videolar
       about_us: Haqqımızda
-      about_leadership: Liderlik
+      about_leadership: Başçılıq
       about_donors: Donorlar
-      about_partners: Tərəfdaşlar
+      about_partners: Həmkarlar
       about_team: Bütün komanda
       about_news: Xəbər otağı
-      about_evaluation: Qiymətləndirmə
-      about_jobs: Vakansiyalar
+      about_evaluation: Dəyərləndirmə
+      about_jobs: Karyera
       about_contact: Bizimlə əlaqə saxlayın
       about_faqs: Tez-tez verilən suallar
       learn: Öyrənin
@@ -445,8 +447,10 @@ az:
       help_us: Bizə kömək edin
       teach: Öyrədin
       about: Haqqımızda
+      incubator: İnkubator
       legal: Məxfilik və Hüquq
       legal_privacy: Məxfilik siyasəti
+      legal_cookie_notice: Kuki Xəbərdarlığı
       legal_tos: Xidmət şərtləri
     user:
       classroom: Müəllimin ev səhifəsi
@@ -460,9 +464,9 @@ az:
       signup: Hesab yaratmaq
       already_registered: Artıq qeydiyyatdan keçmisiniz?
       pair_programming: İkili proqramlaşdırma
-      team: Komanda
+      team: Qrup
       driver: Daxil oldu
-      navigator: Ortaq
+      navigator: Həmkar
       create: Düzəlt
       algebra_game: Cəbr
       applab: Proqram Labı
@@ -495,6 +499,7 @@ az:
       starwars: Star Wars
       starwarsblocks: Star Wars (Blokları)
       starwarsblocks_hour: Star Wars (Blokları)
+      thebadguys: Pis Uşaqlar
       loading: Yüklənir...
       weblab: Veb Laboratoriyası
       view_all: Bütün layihələrə baxın...
@@ -526,16 +531,16 @@ az:
     panel:
       answer_viewer: Müəllim Paneli
       student: şagird
-      viewing_solution: Həllə baxın
+      viewing_solution: İzahata baxın
       try_it_yourself: Özünüz cəhd edin
       section: Bölmə
-      example: Nümunə Həll
-      example_with_number: Nümunə Həll %{solution_number}
-      submitted_on: 'Təqdim edildi:'
+      example: Nümunə İzahat
+      example_with_number: Nümunə İzahat %{solution_number}
+      submitted_on: 'Göndərildi:'
       last_updated: 'Son yeniləndi:'
-      unsubmit: Təqdim etməmək
+      unsubmit: Göndərilməmiş
       worked_with: İlə işlədi
-      update_lock_settings: Kilid parametrlərini buradan yeniləyin.
+      update_lock_settings: Kilid parametrlərini buradan təzələyin.
       clear_response: Cavabı təmizləyin
     student_code_view_diabled: Bu fəaliyyət üçün tələbə kodu görünə bilməz.
   user:
@@ -546,8 +551,8 @@ az:
     new_email_hint: "(bu e-poçt ünvanına e-poçt ala biləcəyinizə əmin olun)"
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: "(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)"
-    delete: Hesabı ləğv etmək
-    delete_text: Hesabınızı ləğv etmək, bu hesabla əlaqəli bütün məlumatları və tərəqqini
+    delete: Hesabı silmək
+    delete_text: Hesabınızı silmək, bu hesabla əlaqəli bütün məlumatları və gedişatı
       siləcəkdir
     delete_text_teacher_managed_note: Bu hesabı silmək icazəniz yoxdur, çünki o, müəlliminiz
       tərəfindən idarə olunur. Siz hesabınızı silməzdən əvvəl müəllimləriniz sizi
@@ -555,12 +560,12 @@ az:
     delete_text_teacher_note: 'Xahiş edirik unutmayın: hesabınızı ləğv etmək tələbələrin
       hesablarını silməyəcəkdir.'
     delete_confirm: Hesabınızı ləğv etmək istədiyinizə əminsiniz?
-    deleted_user: istifadəçini sil
-    no_password_because_oauth: Üçüncü tərəf təminatçısı ilə daxil olduğunuz üçün parol
+    deleted_user: silinmiş istifadəçi
+    no_password_because_oauth: Üçüncü tərəf təminatçısı ilə daxil olduğunuz üçün şifrə
       yoxdur.
     no_password_because_sponsored: Şifrənizi idarə etmək üçün müəlliminizə müraciət
       edin.
-    create_personal_login: Şəxsi parol girişi yaradın
+    create_personal_login: Şəxsi şifrə girişi yaradın
     create_personal_login_under_13_info: Əgər siz tədris ilinin bitməsindən sonra
       belə Code.org hesabınızdan istifadə etməyə davam etmək istəyirsinizsə, aşağıda
       öz şəxsi girişinizi yaratmağınıza kömək etmək üçün valideyn/qəyyumunuzdan xahiş
@@ -640,7 +645,7 @@ az:
     local_school: yerli məktəb
     online: onlayn
     see_details: Təfərrüatına baxın
-    view_course: Kursu göstər
+    view_course: Kursa Baxın
     prize_info: 'İştirak üçün mükafatlar (yalnız ABŞ dövlət məktəbi müəllimləri):
       Sinif mükafatları üçün $ 1,000-a qədər.'
     tryfirst: 'Yada, siz birinci dəfə üçün yoxlayın, və sonra qeydiyyatdan keçin:'
@@ -663,6 +668,7 @@ az:
     print_certificate: Sertifikatı çap edin
   certificate_sponsor_message: "%{sponsor_name} sizin təlim sponsor üçün səxavətli
     hədiyyə etdi."
+  certificate_hour_of_code: Kod Saatı
   move_students:
     new_section_dne: Üzr istəyirik, lakin %{new_section_code} bölməsi mövcud deyil.
       Xahiş edirəm başqa bir bölmə kodu daxil edin.
@@ -734,20 +740,24 @@ az:
     tos_short: Şərtlər
     tos: Xidmət şərtləri
     privacy: Məxfilik siyasəti
+    privacy_updated: Məxfilik Siyasəti (yenilənib)
     secure: Təhlükəsiz versiya
     report_abuse: Sui-istifadəni şikayət et
     built_on_code_studio: Code Studio-da inşa edilmişdir
     make_my_own_app: Öz tətbiqimi hazırla
-    how_it_works: Necə işləyir (Kodu göstər)
+    how_it_works: Necə işləyir (Koda bax)
     try_hour_of_code: Kodun bir saatını yoxlayın !
     store: Mağaza
+    cookie_notice: Kuki Xəbərdarlığı
+    view_code: Koda Baxın
+    locale_select: Dili seç (-in)
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
     teacher: Həllə baxın
     teacher_no_solution: Həlli görməyi dayandırın
     auth_error: Həlli görməyə səlahiyyətiniz yoxdur.
-    submit: Sənətçinin yerini yeniləyin
+    submit: Sənətçinin yerini təzələyin
     direction: Istiqamətə başlayın (dərəcələrdə)
   video:
     tab: Video.
@@ -778,12 +788,12 @@ az:
   next_stage: Bitdi! Növbəti mərhələyə keçin!
   download_pdf: Dərs planını açın
   lesson_plan: Dərs Planı
-  view_lesson_plan: Dərs palnına baxın
+  view_lesson_plan: Dərs palnına görüntülə
   pdf_download: PDF faylını endir
   download_coming_soon: Yüklənəbilən fəaliyyət tezliklə xidmətinizdə olacaq.
   video_coming_soon: Video Tezliklə gələcək!
   share_code:
-    title: Proqramımı işdə görmək üçün 'Çalıştır' düyməsini vurun
+    title: Proqramımı işdə görmək üçün 'İcra et' düyməsini vurun
     bounce_og_title: Sıçrama Oyunumu yoxlayın
     flappy_og_title: Flappy Oyunumu yoxlayın
     studio_og_title: Play Lab Tətbiqimi yoxlayın
@@ -815,30 +825,30 @@ az:
         kodlayın, sonra tətbiqinizi saniyələr ərzində paylaşın.
       audience: 13+ yaş
       cta: Öyrənin necə
-    dance:
-      title: Rəqs şənliyi
+      image_alt: Raketlə işləyən bel çantasını taxan bənövşəyi dovşan.
+    applab-intro:
+      image_alt: Əl telefon ekranının ortasına tıklayır. Ekran işıltı və parıldama
+        saçır.
+    aquatic:
+      title: Minecraft
+      image_alt: Minecraft'dan Stiv və Aleks sənə baxırlar.
+    artist:
+      image_alt: Böyük qələmi tutub və üçbucaq çəkən cizgi filmi personajı.
+    conditionals:
+      image_alt: Oyun kartı göyərtəsini qarışdıran iki əl.
+    course1:
+      image_alt: Hansısa kodun qarşısında duran Code.org'dən eşşəkarısı və narıncı
+        balıq.
     dance-2019:
       title: Rəqs şənliyi
-    hello-world:
-      title: Salam Dünya
-    hoc:
-      title: Ənənəvi labirint
-      body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
-        bu fürsətdən istifadə edib.
+    dance:
+      title: Rəqs şənliyi
     flappy:
       title: Qanadlı Kod
       body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod
         dərsliyimizi sınayın!
-    20-hour:
-      title: Sürətləndirilmiş kurs
-      body: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas
-        anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə
-        istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
-      body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası
-        ilə öyrənin.
-    hoc2014:
-      try_new_tutorial: Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə edin.
-      try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
+    frozen:
+      title: Buzlu ürək
     gallery:
       title: Qalereya
       body: İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına
@@ -849,21 +859,25 @@ az:
         sadə animasiyalar və oyunlar yarada biləcəyiniz proqramlaşdırma mühitidir.
       audience: 13+ yaş
       cta: Öyrənin necə
+    hello-world:
+      title: Salam Dünya
+      body: Yaratdığınız dünyada interaktiv simvolları kodlaşdırmaq üçün dörd əyləncəli
+        mövzudan birini seçin.
+    hero:
+      title: Minecraft
+      body: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a
+        səyahət.
     hoc-encryption:
       title: Sadə Şifrələmə
       body: Tələbələr şifrələnmiş mesajların yaradılması və sındırılması üsullarını
         öyrənəcəklər.
-    weblab:
-      title: veb-laboratoriya (beta)
-      body: Web Laboratoriyası HTML və CSS-dən istifadə edərək sadə veb səhifələr
-        yarada biləcəyiniz proqramlaşdırma mühitidir. Veb səhifələrinizi dizayn edin
-        və saytınızı saniyələr ərzində paylaşın.
-      audience: 13+ yaş
-      cta: Öyrənin necə
-    frozen:
-      title: Buzlu ürək
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Ənənəvi labirint
+      body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
+        bu fürsətdən istifadə edib.
+    hoc2014:
+      try_new_tutorial: Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə edin.
+      try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
     infinity:
       title: Infinity oyun laboratoriyası
       body: Disney Infinity personajlarının oynadığı hekayə və ya oyun yaratmaq üçün
@@ -875,19 +889,35 @@ az:
       title: Minecraft
       body: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını
         proqramlaşdırın.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a
-        səyahət.
+    poem-art:
+      body: Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.
     sports:
       title: İdman
       body: Basketbol oyunu hazırlayın və ya idman növlərini qarışdırın və uyğunlaşdırın.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Mətnin sıxılması
       body: Bu dərsdə şagirdlər nümunələri simvollarla əvəz edərək mətni sıxmaq üçün
         Mətn Sıxılma Vidcetindən istifadə edəcəklər.
+    weblab:
+      title: veb-laboratoriya (beta)
+      body: Web Laboratoriyası HTML və CSS-dən istifadə edərək sadə veb səhifələr
+        yarada biləcəyiniz proqramlaşdırma mühitidir. Veb səhifələrinizi dizayn edin
+        və saytınızı saniyələr ərzində paylaşın.
+      audience: 13+ yaş
+      cta: Öyrənin necə
+    widgets:
+      title: Vidjetlər
+      body: Tələbələr bu rəqəmsal alətlərdən istifadə edərək, Kompüter Elmləri Prinsipləri
+        kursumuzdakı anlayışları praktiki olaraq araşdıra bilərlər. Vidcetləri təkbaşına
+        istifadə edin və ya sinifiniz üçün tək konseptual dərs yaradın.
+      audience: 14+ yaş
+      cta: Öyrənin necə
+    unplugged_conditionals:
+      title: Şərti ifadələr
+      body: Kartların göyərtəsindən istifadə edərək, bu "plugged" fəaliyyətdə alqoritmlər
+        və şərti ifadələr haqqında məlumat əldə edin.
     unplugged:
       title: Sərbəst dərslər
       audience: 4+ yaş
@@ -898,17 +928,13 @@ az:
         çalışın.
       body_short: Əgər kompüteriniz yoxdursa, sinif otağınızda bu şəbəkədən çıxarılan
         dərsləri sınayın.
-    unplugged_conditionals:
-      title: Şərti ifadələr
-      body: Kartların göyərtəsindən istifadə edərək, bu "plugged" fəaliyyətdə alqoritmlər
-        və şərti ifadələr haqqında məlumat əldə edin.
-    widgets:
-      title: Vidjetlər
-      body: Tələbələr bu rəqəmsal alətlərdən istifadə edərək, Kompüter Elmləri Prinsipləri
-        kursumuzdakı anlayışları praktiki olaraq araşdıra bilərlər. Vidcetləri təkbaşına
-        istifadə edin və ya sinifiniz üçün tək konseptual dərs yaradın.
-      audience: 14+ yaş
-      cta: Öyrənin necə
+    20-hour:
+      title: Sürətləndirilmiş kurs
+      body: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas
+        anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə
+        istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
+      body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası
+        ilə öyrənin.
   landing:
     prerelease_tutorial: Bu dərslik **beta**-dadır. Rəy alındıqca və təkmilləşdirmələr
       aparıldıqca o, yenidən nəzərdən keçirilməlidir.
@@ -917,7 +943,7 @@ az:
     support_url: "//support.code.org"
     help_resources: Kömək və mənbələr
     help_support: Kömək və dəstək
-    documentation: Təlimat və sənədlər
+    documentation: Sənədlər
     tutorials: Dərsliklər
   free_response:
     placeholder: Cavabınızı buraya daxil edin.
@@ -947,13 +973,13 @@ az:
     wrong_body: Cavablar təqdim etdiyiniz üçün təşəkkür edirik.
     correct_title: Təşəkkür
     correct_body: Cavablar təqdim etdiyiniz üçün təşəkkür edirik.
-    unsubmit-title: Qiymətləndirmənizi göndərməyin!
+    unsubmit-title: Qiymətləndirmənizi geri götürün
     unsubmit-body: Qiymətləndirmənin göndərilməsinin ləğv edilməsi təqdim edilmiş
       vaxt və tarixi sıfırlayacaq. Sən əminsən?
-    submit-incomplete-title: Qiymətləndirməni təqdim edin.
+    submit-incomplete-title: Qiymətləndirməni göndərin.
     submit-incomplete-body: Bəzi sualları yarımçıq qoymuşsunuz. Qiymətləndirmənizi
       təqdim etdikdən sonra redaktə edə bilməzsiniz. Sən əminsən?
-    submit-complete-title: Qiymətləndirməni təqdim edin.
+    submit-complete-title: Qiymətləndirməni göndərin.
     submit-complete-body: Qiymətləndirmənizi təqdim etdikdən sonra redaktə edə bilməzsiniz.
       Sən əminsən?
   match:
@@ -991,7 +1017,7 @@ az:
     week: həftə
   age_interstitial:
     age: Yaşınız
-    header: Hesab Məlumatlarının Yeniləməsi
+    header: Hesab Məlumatlarının Təzələnməsi
     warning: Sizi daha da güclü məxfilik mühafizəsi ilə təmin etmək üçün təcrübəmizi
       yeniləmək prosesindəyik. Bunun üçün mövcud istifadəçilərin burada yaşlarını
       daxil etmələri lazımdır.
@@ -1039,7 +1065,7 @@ az:
       (%{privacy_url}) yenilədik. Zəhmət olmasa bunları qəbul etməzdən əvvəl bunları
       diqqətlə oxuyun. Qeyd edək ki, yenilənmiş şərtləri açıq şəkildə qəbul etməzdən
       əvvəl JavaScript öyrədən vasitələrimiz tələbələriniz üçün əlçatmaz ola bilər."
-    review_terms: Şərtlərə yenidən baxış
+    review_terms: Yenilənmiş şərtləri nəzərdən keçirin
   school_info_interstitial:
     title: Biz hər bir tələbəyə Kompüter Elmlərini öyrətmək istəyirik - tərəqqinizi
       izləməkdə bizə kömək edin!
@@ -1075,10 +1101,10 @@ az:
     not_started: başlanmayıb
     in_progress: davam edir
     completed_too_many_blocks: tamamlandı, həddən artıq çox blok var
-    completed_perfect: tamamlanıb, əladır
+    completed_perfect: tamamlanıb, mükəmməl
     furthest_level_attempted: sonuncu cəhd istifadə edildi.
     assessment: yoxlama
-    submitted: təqdim edilmişdir
+    submitted: göndərilmişdir
   studio:
     courses_working_on: Üzərində işlədiyiniz kurslar
     completed_courses: Tamamlanmış kurslar
@@ -1086,7 +1112,7 @@ az:
   project:
     projects: Layihə qalereyası
     create: Layihə yaradın
-    create_a_project: 'Yeni bir layihə düzəlt:'
+    create_a_project: 'Yeni bir layihə yarat:'
     new: Yenisini düzəlt
     exit: Kursa qayıt
     project_gallery: Layihə qalereyası
@@ -1115,7 +1141,7 @@ az:
     saved: Qalereyada yadda saxlandı!
     not_saved: Yadda saxlanmadı
     view_all: Layihələrimi göstər
-    edit_project: Layihəni redaktə edin.
+    edit_project: Layihədə düzəliş edin.
     sharing_disabled: Üzr istəyirik, bu layihə paylaşmaq üçün əlçatan deyil. Əgər
       bu sizin layihənizdirsə və ya tələbələrinizdən birinin layihəsidirsə, lütfən,
       layihəyə baxmaq üçün hesabınıza <a href='https://studio.code.org/users/sign_in'>daxil
@@ -1135,7 +1161,7 @@ az:
           çox ciddi qəbul edəcəyik, müvafiq araşdırma aparacaq və müvafiq tədbirlər
           görəcəyik.
         validation:
-          email: Zəhmət olmasa bir e-poçt ünvanı verin.
+          email: Zəhmət olmasa bir e-poçt ünvanı təqdim edin.
           age: Zəhmət olmasa bir yaş göstərin
           abuse_type: Zəhmət olmasa bu məzmunun Xidmət Şərtlərini necə pozduğuna cavab
             verin
@@ -1179,7 +1205,7 @@ az:
     title: Kod saatı yükləmələr
     capsule_title: Internetiniz varmı?
     capsule_desc: Onlayn, veb əsaslı [%{app_name}] (%{url}) saytından istifadə edin.
-    instructions_headline: Əlaqə yoxdur?
+    instructions_headline: İnternet yoxdur?
     instructions: 'Müəllimlər üçün təlimatlar: İnternet xidmətiniz zəifdirsə, bu Kod
       Saatı dərsliklərini oflayn istifadə üçün endirmək və quraşdırmaq mümkündür.
       Dilinizi və platformanızı seçin, onu yükləyin və sinifinizdəki bütün kompüterlərə
@@ -1252,6 +1278,16 @@ az:
   no_script_access_teacher: Sizin bu bölməyə girişinizə icazə yoxdur. Əgər bu bölməyə
     girişinizə icazə verilməli olduğunuzu düşünürsünüzsə, zəhmət olmasa support@code.org-a
     yazın ki bu problemi həll edək.
+  no_level_access_student: Sizin bu bölməyə girişinizə icazə yoxdur. Xahiş edirik
+    müəlliminizdən hansı bölmədə olmalı olduğunuzu soruşun.
+  no_level_access_teacher: Bu səviyyəyə girişiniz yoxdur. Bu səviyyəyə çıxışınız olduğunu
+    düşünürsünüzsə, vəziyyəti düzəldə bilməmiz üçün support@code.org ünvanına yazın.
+  no_exemplar: Bu səviyyə üçün heç bir nümunə yoxdur.
+  no_exemplar_access_student: Tələbələr nümunə koduna daxil ola bilməzlər. Zəhmət
+    olmasa müəlliminizdən hansı səviyyədə olmalı olduğunuzu soruşun.
+  no_exemplar_access_teacher: Yalnız təsdiqlənmiş müəllimlər nümunə koduna daxil ola
+    bilər. Əgər təsdiqlənmiş müəllim olmaq istəyirsinizsə, support@code.org ünvanına
+    yazın.
   return_unit_overview: Mündərəcat bölməsinə keçin
   return_course_overview: Kurs icmalına gedin
   view_all_units: Bütün bölmələri görmək
@@ -1306,12 +1342,15 @@ az:
         not_listed: Üstünlük verilən müddət siyahıda deyil
         none: Cavab verməməyə üstünlük verirəm
       school_country:
+        barbados: Barbados
+        belize: beliz
         canada: Kanada
         chile: Çili
         colombia: Kolumbiya
         israel: İtrail
         malaysia: Malayziya
         mexico: Meksika
+        paraguay: Paraqvay
         thailand: Tayland
         uzbekistan: Özbəkistan
       ages:
@@ -1366,7 +1405,7 @@ az:
         opt_in_yes: Bəli
         opt_in_no: Xeyr
     international_opt_in:
-      title: Məşğələdə iştirak
+      title: Seminarda iştirak
       intro: Code.org kurikulumu üzrə təlim almaq üçün vaxt ayırdığınız üçün təşəkkür
         edirik. Dünyanın bütün məktəblərində bütün uşaqlara kompüter elmləri təhsili
         imkanlarını təqdim etmək missiyamız sizsiz mümkün olmazdı.
@@ -1421,8 +1460,8 @@ az:
       error_token_expired: Tokenin müddəti bitib. Yeni token üçün yenidən daxil olun.
       error_wrong_provider: Səhv provayder. Zəhmət olmasa, Google ilə daxil olduğunuzdan
         əmin olun.
-      error_invalid_user: Yanlış istifadəçi ID-si. Zəhmət olmasa, yenidən daxil olmağı
-        yoxlayın.
+      error_invalid_user: Etibarsız istifadəçi ID-si. Zəhmət olmasa, yenidən daxil
+        olmağı yoxlayın.
       error_no_code: Zəhmət olmasa, giriş kodunuzu daxil edin.
       confirm_login: Google hesabınızla daxil olmaq üçün "Təsdiq et" -i seçin.
   parent_email_banner:
@@ -1435,3 +1474,13 @@ az:
   unit_prefix: Vahid %{n}
   code_org_logo_alt: Code.org Evi
   teacher_feedback: Müəllim rəyi
+  lesson_lock:
+    error:
+      no_updates: İcra etmək üçün yeniləmə yoxdur
+      missing_params: İstifadəçi, səviyyə və vahid identifikatorlarını təqdim etməlidir
+      cannot_view_locked_answers: Kilidli olarkən cavablara baxmaq mümkün deyil
+      forbidden: İstifadəçi tələbənin kilidlənən vəziyyətini yeniləyə bilməz
+  reset_predict_progress_button: Cavabı Sil
+  pixelation:
+    save_image: Şəkli saxla (-yın)
+    binary: İkilik

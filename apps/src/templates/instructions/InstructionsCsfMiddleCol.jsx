@@ -185,6 +185,7 @@ class InstructionsCsfMiddleCol extends React.Component {
               ttsMessage={hint.ttsMessage}
               block={hint.block}
               video={hint.hintVideo}
+              isRtl={this.props.isRtl}
             />
           ))}
         {/*

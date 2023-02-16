@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Odpravljanje napak"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Odpravljanje napak"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Pogoji"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Odpravljanje napak"
         },
         "loops/aquatic/unversioned": {
           "word": "Zanke"
@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Odpravljanje napak"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Koda"
         },
@@ -67,6 +75,63 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Odpravljanje napak"
+        },
+        "debugging/coursed/2022": {
+          "word": "Odpravljanje napak"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Pogoji"
+        },
+        "variable/coursef/2022": {
+          "word": "Spremenljivka"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Definiraj"
+        },
+        "function/coursee/2022": {
+          "word": "Funkcija"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Pogoji"
+        },
+        "copyright/coursee/2022": {
+          "word": "Avtorska pravice"
+        },
+        "define/coursee/2022": {
+          "word": "Definiraj"
+        },
+        "debugging/courseb/2022": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/express/2022": {
+          "word": "Odpravljanje napak"
+        },
+        "conditionals/express/2022": {
+          "word": "Pogoji"
+        },
+        "function/express/2022": {
+          "word": "Funkcija"
+        },
+        "variable/express/2022": {
+          "word": "Spremenljivka"
+        },
+        "define/express/2022": {
+          "word": "Definiraj"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/coursea/2022": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/coursec/2022": {
+          "word": "Odpravljanje napak"
+        },
+        "binary/coursec/2022": {
+          "word": "Binarno"
         },
         "debugging/csd/2022": {
           "word": "Odpravljanje napak"
@@ -87,7 +152,24 @@
           "word": "Avtorska pravice"
         },
         "code/poem-art/unversioned": {
-          "word": "Koda"
+          "word": "Koda",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Spremenljivka"

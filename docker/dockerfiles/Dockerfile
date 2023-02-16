@@ -132,8 +132,8 @@ USER circleci
 RUN mkdir -p "$(rbenv root)"/plugins
 RUN git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
-RUN rbenv install 2.6.6
-RUN eval "$(rbenv init -)" && rbenv shell 2.6.6 && rbenv rehash && gem install bundler -v 1.17.3
+RUN rbenv install 2.7.5
+RUN eval "$(rbenv init -)" && rbenv shell 2.7.5 && rbenv rehash && gem install bundler -v 2.3.22
 # This bashrc file will be used whenever someone runs bash in interactive mode.
 # This is mostly intended for the use case where you want to start a shell into a running container with
 # docker exec -it <container_name> bash, which bypasses the entrypoint script.

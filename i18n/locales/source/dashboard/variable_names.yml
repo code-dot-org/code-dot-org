@@ -9,6 +9,7 @@ en:
       Green: Green
       Red: Red
       actor: actor
+      adjective: adjective
       age: age
       animal1score: animal1score
       animal1speed: animal1speed
@@ -21,6 +22,7 @@ en:
       bit: bit
       blue1: blue1
       blue2: blue2
+      body-part: body-part
       bodylength: bodylength
       buttonHeight: buttonHeight
       buttonMargin: buttonMargin
@@ -66,7 +68,10 @@ en:
       name: name
       nectar: nectar
       nectars: nectars
+      number: number
+      object: object
       padYOffset: padYOffset
+      parts: parts
       planet: planet
       player_score: player_score
       points: points
@@ -92,6 +97,8 @@ en:
       startX: startX
       startY: startY
       stopped-left: stopped-left
+      time: time
+      type: type
       variable: variable
       width: width
       wizard: wizard

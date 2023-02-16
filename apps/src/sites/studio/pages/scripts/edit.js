@@ -34,8 +34,6 @@ export default function initPage(unitEditorData) {
     initResources('studentResource', scriptData.student_resources || [])
   );
 
-  let announcements = scriptData.announcements || [];
-
   ReactDOM.render(
     <Provider store={store}>
       <UnitEditor
@@ -69,14 +67,13 @@ export default function initPage(unitEditorData) {
         initialCurriculumPath={scriptData.curriculum_path || ''}
         initialPilotExperiment={scriptData.pilot_experiment || ''}
         initialEditorExperiment={scriptData.editor_experiment || ''}
-        initialAnnouncements={announcements}
+        initialAnnouncements={scriptData.announcements || []}
         initialSupportedLocales={scriptData.supported_locales || []}
         initialLocales={locales}
         initialProjectSharing={scriptData.project_sharing || false}
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
         initialFamilyName={scriptData.family_name || ''}
         initialVersionYear={scriptData.version_year || ''}
-        initialIsMakerUnit={scriptData.is_maker_unit || false}
         unitFamilies={unitEditorData.script_families}
         versionYearOptions={unitEditorData.version_year_options}
         isLevelbuilder={unitEditorData.is_levelbuilder}

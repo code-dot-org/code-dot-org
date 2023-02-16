@@ -862,3 +862,41 @@ bn:
               display_name: চলকগুলো
         soccer:
           name: ফুটবল খেলা
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: চক্র
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: চলকগুলো
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: ফর লুপ
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: চক্র
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: তালিকা
+            lessonGroup-3:
+              display_name: চক্র

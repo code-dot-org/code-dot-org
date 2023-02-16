@@ -99,7 +99,7 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://code.org/certificates?script=mc)。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "下一步",
@@ -149,7 +149,7 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://code.org/certificates?script=mc)。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "下一步",
@@ -264,6 +264,31 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "超越一小時玩程式",
           "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map](https://code.org/volunteer/local)上聯絡一些。"
+        },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "搭建舞臺",
+          "description": "歡迎學生來上課，簡單介紹當天的活動。"
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_在這個活動中，你將創造一個擁有名為精靈圖的有趣角色的互動世界，同時享受樂趣。你將能夠讓精靈圖用你在漫畫或連環畫小說中看到的語言泡泡說話，你將學會讓它們在你或其他人點擊它們時自動做出反應。_\n\n_今天你們要寫“代碼”，也就是一組電腦可以理解的指令。當你寫一個故事時，你需要仔細思考你使用的詞語。當你寫代碼時，你需要仔細思考你給電腦的指令。_",
+          "tips": [
+            "你會想花很少的時間來載入或介紹你的一小時玩程式。特別是對於年輕的學習者來說，最好是儘快開始學習。"
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "一般支持",
+          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計](https://youtu.be/vgkahOzFH2Q)來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "你好世界",
+          "progression_name": "你好世界"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn](https://code.org/learn)嘗試其他教程。"
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "反思",
+          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程](https://code.org/educate/curriculum/elementary-school)。"
         },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### 搭建舞臺\n\n歡迎學生來上課，簡單介紹當天的活動。  \n\n_說：“今天我們要花一個小時學習編碼。有人聽說過“密碼”這個詞嗎？這是什麼意思？”_  \n\n學生們可能會提到“代碼”就像一個秘密資訊，或者它在某種程度上與電腦有關。"
@@ -463,7 +488,7 @@
           "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](<>)嘗試另一個教程。"
         },
         "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
-          "description": "#### 匯報\n\n讓學生反思當天的活動。他們從編碼中學到了什麼？編寫程式？調試？\n\n-   組成正方形的內角是什麼？三角形呢？  \n-   在你的紙上畫一個簡單的形狀，設想一下用來繪製它的代碼。你能把代碼寫在形狀旁邊嗎？ \n\n在花了一個小時探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 慶祝\n\n解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周參與程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://code.org/certificates)。\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問code.org/learn獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
+          "description": "#### 匯報\n\n讓學生反思當天的活動。他們從編碼中學到了什麼？編寫程式？調試？\n\n-   組成正方形的內角是什麼？三角形呢？  \n-   在你的紙上畫一個簡單的形狀，設想一下用來繪製它的代碼。你能把代碼寫在形狀旁邊嗎？ \n\n在花了一個小時探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 慶祝\n\n解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周參與程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch)。\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問code.org/learn獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
         },
         "532c3e19-487f-44e0-97ff-a71886e169f2": {
           "description": "#### 一小時玩程式之後\n\n一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **訪問[You can Teach Computer Science](https://studio.code.org/courses?view=teacher)**獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map](https://code.org/volunteer/local)上聯絡一些。\n\n利用以下活動來加強學生的學習。 它可以用於課外活動或其他豐富活動。  \n\n**影印機**\n\n-   給學生兩張紙  \n-   在一張紙上畫一個簡單的圖像，只使用直線。  \n-   在第二張紙上繪製重建圖像的指令，命令筆直地移動，並在各種角度轉彎。  \n-   交換指令紙，並嘗試僅使用所提供的指令重建圖像。"
@@ -660,7 +685,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://code.org/certificates?script=mc)。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "下一步",
@@ -764,6 +789,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**閱讀Blown to Bits**  \n\n-   閱讀[Blown to Bits, Chapter 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)第165-169頁\n-   回答閱讀指南和[Reading Guide for Encryption](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/)工作表中的問題。  \n\n**更多Blown to Bits**  \n\n-   Blown to Bits第5章的前面部分提到了911事件後加密的重要性和圍繞加密的爭議。這篇閱讀可能是進一步介紹密碼學對現代生活諸多方面影響的有用工具。  \n\n-   讓學生回顧他們的網路流覽歷史，並大致計算他們認為網路是“私密”的比例。他們有辦法確定這是真的嗎？在他們訪問的網站中，有沒有哪個網站會讓他們對自己的流量保密更有信心？他們在這個結論中是合理的嗎？"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "搭建舞臺",
+          "description": "歡迎學生來上課，簡單介紹當天的活動。"
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_在這個活動中，你將創造一個擁有名為精靈圖的有趣角色的互動世界，同時享受樂趣。你將能夠讓精靈圖用你在漫畫或連環畫小說中看到的語言泡泡說話，你將學會讓它們在你或其他人點擊它們時自動做出反應。_\n\n_今天你們要寫“代碼”，也就是一組電腦可以理解的指令。當你寫一個故事時，你需要仔細思考你使用的詞語。當你寫代碼時，你需要仔細思考你給電腦的指令。_",
+          "tips": [
+            "你會想花很少的時間來載入或介紹你的一小時玩程式。特別是對於年輕的學習者來說，最好是儘快開始學習。"
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "一般支持",
+          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計](https://youtu.be/vgkahOzFH2Q)來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "你好世界",
+          "progression_name": "你好世界"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn](https://code.org/learn)嘗試其他教程。"
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "反思",
+          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程](https://code.org/educate/curriculum/elementary-school)。"
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "搭建舞臺",
@@ -869,7 +919,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://code.org/certificates?script=mc)。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "下一步",
@@ -1150,7 +1200,7 @@
           "description": "**正確順序：D，B，A，C**"
         },
         "11b82689-57e5-404f-8846-51e10f2642d0": {
-          "description": "#### 匯報\n\n讓學生反思當天的活動。他們從編碼中學到了什麼？編寫程式？調試？事件？在花了一個小時探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 慶祝\n\n解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周參與程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://code.org/certificates)。\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問code.org/learn獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
+          "description": "#### 匯報\n\n讓學生反思當天的活動。他們從編碼中學到了什麼？編寫程式？調試？事件？在花了一個小時探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 慶祝\n\n解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周參與程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch)。\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問code.org/learn獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
         },
         "e9c48a39-952e-44be-8955-9d012bfa89c1": {
           "description": "#### 一小時玩程式之後\n\n一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science](https://studio.code.org/courses?view=teacher)獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map](https://code.org/volunteer/local)聯絡志工。"
@@ -1239,7 +1289,7 @@
           "description": "**正確順序：D，B，A，C**"
         },
         "efd26bf1-c977-4fc3-883d-a37bb3e68a75": {
-          "description": "#### 匯報\n\n讓學生反思當天的活動。他們從編碼中學到了什麼？編寫程式？調試？事件？在花了一個小時探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 慶祝\n\n解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周參與程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://code.org/certificates)。\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問code.org/learn獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
+          "description": "#### 匯報\n\n讓學生反思當天的活動。他們從編碼中學到了什麼？編寫程式？調試？事件？在花了一個小時探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 慶祝\n\n解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周參與程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch)。\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問code.org/learn獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
         },
         "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
           "description": "#### 一小時玩程式之後\n\n一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science](https://studio.code.org/courses?view=teacher)獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map](https://code.org/volunteer/local)聯絡志工。\n\n#### 帶我去玩球類遊戲\n\n帶學生到外面玩一些球類遊戲。跟蹤事件和行動。例如，在籃球比賽中，不運球會導致移動犯規，而對方得到球。在足球比賽中，把球踢出界外的結果是對方擲界外球。把球踢進球門得一分！如果學生喜歡，就多進行一些活動。當一個隊的隊長得分時，讓所有的學生大喊“耶！”如果一個學生連續進了兩個球，讓所有人都倒地打滾！"
@@ -1459,7 +1509,7 @@
           "progression_name": "教人工智慧一個新詞"
         },
         "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
-          "description": "為學生[Print certificates](https://code.org/certificates?script=oceans)，慶祝成績。  \n\n在課程結束時，鼓勵學生前往[Code.org/learn](http://Code.org/learn)，在那裡他們可以獲得繼續電腦科學冒險的更多思路。"
+          "description": "為學生[Print certificates](https://studio.code.org/certificates/batch?course=b2NlYW5z)，慶祝成績。  \n\n在課程結束時，鼓勵學生前往[Code.org/learn](http://Code.org/learn)，在那裡他們可以獲得繼續電腦科學冒險的更多思路。"
         },
         "be0db11e-cb8e-4658-844c-73a9faafa36d": {
           "description": "#### 幫助分類斑馬山國家公園的動物\n\n Snapshot Safari在南非放置了數百個隱藏攝像機，捕獲了數百萬隻美麗且稀有的動物的圖像。通過對這些圖像中的不同動物進行分類，學生們可以幫助保護瀕臨滅絕的海角山斑馬。你可以在[here](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research)瞭解此項目，或點擊下方內容進行嘗試！\n\n[Snapshot Mountain Zebra - Zooniverse](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
@@ -1563,6 +1613,3532 @@
         "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
           "name": "終極密室逃脫App",
           "progression_name": "終極密室逃脫App"
+        },
+        "0661508e-1aa3-488f-8064-beaec4c40e7a": {
+          "name": "反思（Reflect）"
+        },
+        "835c16c0-8a24-43c1-889b-493814eb50d1": {
+          "name": "詞彙"
+        },
+        "d80d3591-db5f-43bb-b3be-3a0eb14690a7": {
+          "name": "介紹"
+        },
+        "61f2eb20-0ecb-4319-8ea7-5a9210a1c406": {
+          "name": "方格紙編程",
+          "progression_name": "方格紙編程 - 離線活動"
+        },
+        "be35d4b6-5785-44f3-9d9b-158e356ebb0d": {
+          "tips": [
+            null
+          ]
+        },
+        "711dd3c2-55d7-4e71-8714-fea9ceb6cb4a": {
+          "name": "反思",
+          "tips": [
+            null
+          ]
+        },
+        "88774581-810b-4ffd-9baf-292c584f9a3e": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**錦上添花**\n\n-   讓你的班級嘗試著自己編造圖片。\n-   他們能想出如何程式設計出自己製作的圖片嗎？\n\n**課堂挑戰**\n\n-   老師在 5x5 的格子上畫出一幅圖片。\n-   全班同學能跟你一起編好代碼嗎？\""
+        },
+        "96499db1-0002-4488-b370-2d718a5c90ec": {
+          "name": "反思（Reflect）"
+        },
+        "c10c099e-fd94-4a79-9bd6-bfc55b2b1059": {
+          "name": "詞彙"
+        },
+        "e4ac7ebe-4d89-46ca-a2a6-f0e819658e21": {
+          "tips": [
+            null
+          ]
+        },
+        "2437214a-2077-4e3c-b231-e943e66a693f": {
+          "progression_name": "視訊：迷宮簡介：使用模組編程"
+        },
+        "4e14f7ca-7b1a-4769-ae57-9f128722a0dd": {
+          "progression_name": "技能發展"
+        },
+        "aa5e1de6-0f8d-4e95-82cc-da2f38e8a9ad": {
+          "name": "反思"
+        },
+        "f5627332-703a-420b-ab72-660c350b87d9": {
+          "name": "反思（Reflect）",
+          "tips": [
+            null
+          ]
+        },
+        "5dbc43b8-f734-4c93-99d4-0995393a9f25": {
+          "name": "詞彙"
+        },
+        "3ab2b28c-3947-44d9-ae6d-8d8d43320c27": {
+          "name": "介紹"
+        },
+        "02a52fe1-85a9-4a07-83a8-5469bf8ac7e6": {
+          "tips": [
+            null
+          ]
+        },
+        "29bbe8ac-7f83-407e-ad63-4fe434d80d1d": {
+          "name": "接力編程",
+          "progression_name": "接力編程 - 離線活動"
+        },
+        "a7cadd06-1f56-42b5-a5b0-b623a57e1fcd": {
+          "tips": [
+            null
+          ]
+        },
+        "77e44b0c-4a6a-4eca-9347-a3395aefd2df": {
+          "name": "反思"
+        },
+        "0c752c58-d938-43f6-ac3c-a9b4556d12db": {
+          "name": "介紹"
+        },
+        "c2a66127-5945-47ec-938a-f396824349a7": {
+          "name": "和 Laurel 學除錯（Debug）"
+        },
+        "bb78ee6d-4d05-4a4b-90e8-7c6cb6a099dd": {
+          "progression_name": "視訊：使用步進按鈕調試"
+        },
+        "7e3632b0-108a-4179-adf0-89a8e204b031": {
+          "progression_name": "技能發展"
+        },
+        "9280e14f-90c1-467a-ab01-b3a0d7d42415": {
+          "name": "反思"
+        },
+        "037b9c5d-7263-4bb9-aef3-f818cd3d71d6": {
+          "name": "介紹"
+        },
+        "5b25dba2-c68c-43c3-814f-98e4e743cf7f": {
+          "name": "彈板遊戲中的事件（Event）",
+          "progression_name": "技能發展"
+        },
+        "16d61ffc-4200-4a4d-b11e-6fffb02ab38b": {
+          "progression_name": "自由發揮"
+        },
+        "77973449-e6b7-4855-a2cc-1db18970a8e0": {
+          "tips": [
+            null
+          ]
+        },
+        "6483e0eb-3cdc-45fd-b834-207388a3586a": {
+          "tips": [
+            null
+          ]
+        },
+        "ea99adc6-d611-4d13-9da7-04fcb43c6df3": {
+          "name": "反思（Reflect）",
+          "tips": [
+            null
+          ]
+        },
+        "6c45fccd-0b3b-4db0-9224-2dce4fee891a": {
+          "name": "詞彙"
+        },
+        "b7541d65-dbb6-4402-8392-0a1416e131d5": {
+          "name": "介紹"
+        },
+        "77c010a8-6312-4f5a-a39a-ba6c761ba9ce": {
+          "name": "創建一個星際大戰遊戲！",
+          "progression_name": "視訊：星球大戰項目"
+        },
+        "eb787c9f-ed60-4591-ab5f-b76a25cf26b3": {
+          "progression_name": "技能發展"
+        },
+        "cda08e32-7472-46e5-900d-947542cde40e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "自由發揮"
+        },
+        "2f77a890-cf45-4d1a-a4ca-d12e723d8d6f": {
+          "name": "反思"
+        },
+        "87103c82-3389-4983-b9dd-d8ecce58ed92": {
+          "name": "搭建舞臺",
+          "description": "歡迎學生來上課，簡單介紹當天的活動。"
+        },
+        "9014dbe4-b770-43d6-aef5-77cf1e032bb9": {
+          "tips": [
+            null
+          ]
+        },
+        "7c5f7ed0-8e92-4943-8403-033e846373a0": {
+          "name": "反思（Reflect）"
+        },
+        "607ec054-729f-402a-9c5b-2adba3adb822": {
+          "description": "今天我們要做一些非常有創意的事情。你最喜歡的創新方式是什麼？"
+        },
+        "62aac1c8-7601-454f-be68-0e7f16664f69": {
+          "description": "鼓勵學生分享他們表達創造力的方式，如藝術、舞蹈、音樂、寫作。"
+        },
+        "b272663e-4596-4ddd-b25e-b3a5a0c165f7": {
+          "name": "詞彙"
+        },
+        "4183cc0f-f87e-4c3b-80e8-9b849d0aba39": {
+          "name": "介紹"
+        },
+        "6b622947-8880-4d2d-8cb2-ed13f13a63c9": {
+          "progression_name": "視訊：熱身"
+        },
+        "4d7270ba-f9ba-4089-b9c1-0448f6eead69": {
+          "progression_name": "練習"
+        },
+        "c9ed59ff-70e5-4915-b258-f37aae334833": {
+          "progression_name": "視訊：事件"
+        },
+        "715c15b8-ce05-4be2-a6e3-63c7addc5abf": {
+          "progression_name": "事件"
+        },
+        "ea2f2503-ce0e-4498-a269-25b1d203fbe4": {
+          "progression_name": "視訊：測量"
+        },
+        "d9624c03-8570-4129-a205-a8f6ca582aed": {
+          "progression_name": "小節"
+        },
+        "f477b11f-b8b9-46b2-905c-f29eb3377cfc": {
+          "progression_name": "視訊：屬性"
+        },
+        "617957c6-14b8-4db6-8018-1f81a191b624": {
+          "progression_name": "屬性"
+        },
+        "63a3dd77-4375-473b-baa6-45c56d551354": {
+          "tips": [
+            "在這節課的這個時點，你可能會注意到，說明沒有那麼多規定性。鼓勵學生創新，探索引入的新模組。從這時候開始，學生代碼**不檢查正確性**，以鼓勵嘗試，而不是解決一個特定的任務。"
+          ]
+        },
+        "b8360827-fb73-4afe-ae5d-ee12b5ed6dde": {
+          "progression_name": "視訊：總結"
+        },
+        "3e984275-638c-49e0-afb6-fc959cd05771": {
+          "progression_name": "自由發揮"
+        },
+        "92a12478-0870-4331-a034-b5f1ed4164af": {
+          "progression_name": "額外關卡"
+        },
+        "3bda4943-2f46-49ef-b85c-3da70c805c16": {
+          "name": "反思"
+        },
+        "2c20e776-eba9-4b67-b0f1-f539ddcccf13": {
+          "name": "可選評估",
+          "description": "請學生在離開時，在您的「電腦科學」思維地圖上，貼上他們的「集思廣益」便利貼或紙卡。嘗試在板子上填入許多很棒的想法，說明 CS 是什麼以及為什麼很重要。"
+        },
+        "bcde2562-834f-4054-9106-c9f0ff082258": {
+          "name": "迴圈（Loops）的介紹"
+        },
+        "23874ed2-c11c-4626-93ce-738a948d9467": {
+          "name": "冰河歷險紀中的迴圈"
+        },
+        "d9fbe733-657b-4504-8dbb-eab8104168aa": {
+          "progression_name": "技能發展"
+        },
+        "b0695358-20ba-4446-aa75-c0f5657059de": {
+          "progression_name": "視訊：使用重複模組"
+        },
+        "d278b098-4bb0-4e0e-94b2-030bcfdc25bb": {
+          "progression_name": "技能發展"
+        },
+        "8a2827d2-9dd0-4b84-9694-f7f4733543d5": {
+          "progression_name": "挑戰"
+        },
+        "41598a45-8c65-4392-a301-07c4a61a2abd": {
+          "progression_name": "練習"
+        },
+        "e26c0781-e8ca-4864-ab22-1af5ce60b1f4": {
+          "progression_name": "額外關卡"
+        },
+        "31073c5d-beaf-420a-af98-4aa468a7b9d4": {
+          "tips": [
+            null
+          ]
+        },
+        "cbecc5ae-dfcc-4d98-8eea-4366ee0eade0": {
+          "name": "反思"
+        },
+        "6169bc3a-deb5-4c4f-9860-10ba26c60214": {
+          "name": "介紹"
+        },
+        "bc19ceeb-4c22-40a1-9794-7b0e998b5e78": {
+          "name": "以迴圈（Loop）繪畫藝術作品",
+          "progression_name": "視訊：JR Hildebrand的藝術家簡介"
+        },
+        "61fa4607-bb88-4573-8bea-10a12e88181a": {
+          "progression_name": "技能發展"
+        },
+        "5f35a867-9366-4759-b0e8-be48c34c09c5": {
+          "progression_name": "視訊：藝術家循環"
+        },
+        "f52282b3-cfad-49a9-a004-5297a4ca7bbc": {
+          "progression_name": "技能發展"
+        },
+        "f83fde9f-a2d7-4f99-94fb-ac2fc9b79352": {
+          "progression_name": "挑戰"
+        },
+        "3f3774e2-c8fa-4318-9e6e-d58f6983e746": {
+          "progression_name": "練習"
+        },
+        "3315af90-e8ff-4568-813e-2b743e90bf30": {
+          "progression_name": "額外關卡"
+        },
+        "9783ff04-38bf-4b15-8993-bac43ed681b2": {
+          "name": "反思"
+        },
+        "9fe5d0e9-dadb-4541-9ebb-5eaa1acc5883": {
+          "name": "介紹"
+        },
+        "2d76e0dc-c660-40b1-b975-d6f00ad0edbf": {
+          "name": "迷宮裡的巢狀迴圈（Nested Loops）"
+        },
+        "0f7a9d4d-e15d-4efc-a408-644c06c8fcb2": {
+          "progression_name": "技能發展"
+        },
+        "5458d92e-83cc-46e8-8197-4d025e3e090f": {
+          "progression_name": "視訊：蜜蜂巢狀迴圈"
+        },
+        "da706b15-71f6-47dd-a6de-f113b509684c": {
+          "progression_name": "預測"
+        },
+        "535eebb3-357a-451a-95e4-f6cce960290e": {
+          "progression_name": "技能發展"
+        },
+        "355d4996-c94e-4553-ba72-f3b6faffeaea": {
+          "progression_name": "挑戰"
+        },
+        "4dc57979-b524-4f77-818e-2ff70833656b": {
+          "progression_name": "練習"
+        },
+        "58d3231e-2d0e-4c78-b89b-e16fe4d117ef": {
+          "progression_name": "預測"
+        },
+        "791b5b99-593d-4287-ab93-a9970d63744e": {
+          "progression_name": "額外關卡"
+        },
+        "69f426b1-49df-4b5c-a120-305de860c435": {
+          "name": "反思"
+        },
+        "bde81c73-ab2e-4430-88c8-7b0a493c6a18": {
+          "name": "反思（Reflect）"
+        },
+        "84144ea8-ec9f-40ad-925b-6170d47437ef": {
+          "name": "詞彙"
+        },
+        "a8dddc64-bf3e-4023-85b5-e202ec1a0eb6": {
+          "name": "介紹"
+        },
+        "a89749a5-5e92-470a-90f8-0d7317019298": {
+          "name": "用撲克牌學習條件判斷（Conditionals）",
+          "progression_name": "使用卡片的條件語句 - 離線活動"
+        },
+        "175f1856-2873-43ee-b172-6c73420f7af6": {
+          "name": "可選評估"
+        },
+        "dda904ae-113f-4561-8a61-e9ed43297a47": {
+          "tips": [
+            null
+          ]
+        },
+        "5310e8c8-822b-4c59-baa0-4583cdf3d249": {
+          "name": "反思"
+        },
+        "6580e91f-9fb2-4fee-bcaf-c1425a65029a": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**真/假標籤**\n\n-   讓學生排好隊，就像玩 [Red Light / Green Light](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm) 一樣。\n-   選擇一人站在前面，作為呼叫者。\n-   呼叫者選擇一個條件，請符合條件的人上前一步。\n    -   如果你穿了紅皮帶，上前一步。\n    -   如果你穿的是涼鞋，就上前一步。\n-   試著換個說法，比如說「如果你是_不是_金髮，就往前走一步。」\n\n**巢狀**\n\n-   將學生配對或分成小組。\n-   讓他們在紙條上寫出撲克牌的「如果」陳述式，如：\n    -   花色是梅花\n    -   顏色是紅色\n-   讓學生製作類似的小紙條來當做結果用。\n    -   加 1 分\n    -   減 1 分\n-   完成後，讓學生從每種類型的紙條中選擇三個，然後選擇三張撲克牌，注意選擇的順序。\n-   用三張紙，讓學生寫出只用他們選擇的紙條來完成的三個不同程式，按任意順序都可以。\n    -   鼓勵學生把一些如果陳述式放在其他如果陳述式裡面。\n-   現在，請同學們用他們所畫的卡片，按照每個程式的相同順序，把這三個程式都執行一遍。\n    -   是否有兩個程式返回相同的答案？\n    -   是否有哪個程式返回了不同的答案？\""
+        },
+        "ff230610-bef8-421e-b37a-6d77e490ce3e": {
+          "name": "介紹"
+        },
+        "2143fa63-5aea-47af-8684-29aa626fd1d7": {
+          "name": "與 Minecraft 一起展望未來"
+        },
+        "419b0732-9e07-4ab2-8c48-0fb798dfdfde": {
+          "progression_name": "技能發展"
+        },
+        "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec": {
+          "progression_name": "技能發展"
+        },
+        "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a": {
+          "progression_name": "挑戰"
+        },
+        "268e56b4-6f3e-4a44-8383-2e538ae1ab72": {
+          "progression_name": "自由發揮"
+        },
+        "3ea15706-caac-499b-aef5-a7210f291bfc": {
+          "progression_name": "額外關卡"
+        },
+        "d9a92c19-1b83-49fa-bc9c-de8298122305": {
+          "name": "反思"
+        },
+        "8ae849bd-292d-44e8-9ccd-9d9bfc86c592": {
+          "name": "介紹"
+        },
+        "a4ab31f7-6915-461a-b307-aad86879a097": {
+          "name": "與小蜜蜂一起嘗試 If/Else（如果/否則）"
+        },
+        "f581d038-c3fb-4ac3-a56e-31b84d50ba91": {
+          "progression_name": "視訊：條件運算式：IF語句"
+        },
+        "b7925091-8715-4ad6-8d94-6ca396d22fd6": {
+          "progression_name": "預測"
+        },
+        "c6c9457f-77f7-4a4a-9f79-72386ab1ac9a": {
+          "progression_name": "技能發展"
+        },
+        "ec05bf5f-afd1-487a-a92f-45f2d0e1ddf3": {
+          "progression_name": "視訊：條件運算式：IF和If/Else語句"
+        },
+        "106bfc79-23ce-4a84-b0b6-38740eb9df89": {
+          "progression_name": "技能發展"
+        },
+        "327f687c-e443-44e3-bf1e-87dbd7e014c0": {
+          "progression_name": "預測"
+        },
+        "dd2b73eb-51cd-4d7e-81f8-5ed2d57b72dd": {
+          "progression_name": "挑戰"
+        },
+        "63f10835-c9b1-4799-8f26-9ec9968c100f": {
+          "progression_name": "練習"
+        },
+        "8c1a0c94-5769-44d7-90a2-af9b521835d7": {
+          "progression_name": "挑戰"
+        },
+        "3edea7b4-3cb0-44c0-8705-5e2f51f2802d": {
+          "progression_name": "額外關卡"
+        },
+        "a1959bb9-3d8d-46ac-826c-df29b6dcb135": {
+          "name": "反思"
+        },
+        "4bbaf90d-0e2f-4488-974a-ba90b9623e65": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**真/假標籤**\n\n-   讓學生排好隊，就像玩 [Red Light / Green Light](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm) 一樣。\n-   選擇一人站在前面，作為呼叫者。\n-   呼叫者選擇一個條件，請符合條件的人上前一步。\n    -   如果你穿了紅皮帶，上前一步。\n    -   如果你穿的是涼鞋，就上前一步。\n-   試著換個說法，比如說「如果你不是金髮，就往前走一步。」\n\n**巢狀**\n\n-   將學生配對或分成小組。\n-   讓他們在紙條上寫出撲克牌的「如果」陳述式，如：\n    -   如果花色是梅花\n    -   如果顏色是紅色\n-   讓學生製作類似的小紙條來當做結果用。\n    -   加 1 分\n    -   減 1 分\n-   完成後，讓學生從每種類型的紙條中選擇三個，然後選擇三張撲克牌，注意選擇的順序。\n-   用三張紙，讓學生寫出只用他們選擇的紙條來完成的三個不同程式，按任意順序都可以。\n    -   鼓勵學生把一些如果陳述式放在其他如果陳述式裡面。\n-   現在，請同學們用他們所畫的卡片，按照每個程式的相同順序，把這三個程式都執行一遍。\n    -   是否有兩個程式返回相同的答案？\n    -   是否有哪個程式返回了不同的答案？\""
+        },
+        "f909f46d-5551-4020-b2d5-402aa7f10361": {
+          "name": "介紹"
+        },
+        "6ff7be87-b051-4758-93c0-c618a6b80b3c": {
+          "name": "農夫遊戲中的 while（當）迴圈"
+        },
+        "e1adf430-4152-42c1-a520-f40716ca9378": {
+          "progression_name": "技能發展"
+        },
+        "0fa595d7-bcf7-4bf3-a292-22abb41aa813": {
+          "progression_name": "視訊：農民While迴圈"
+        },
+        "af4d5d9b-dc83-44f1-b884-1aa62fcf1560": {
+          "progression_name": "預測"
+        },
+        "26d62974-617f-4322-ab5d-29e79e49cc87": {
+          "progression_name": "技能發展"
+        },
+        "9130d756-a245-4997-93d3-94264979355b": {
+          "progression_name": "挑戰"
+        },
+        "ec1b07e3-f50a-4903-85c9-b2f52b255dcd": {
+          "progression_name": "練習"
+        },
+        "0d0bdf1d-d762-4967-93a2-12b0414e4ef0": {
+          "progression_name": "預測"
+        },
+        "98a0f038-bf2d-4af7-9608-1ca327e1ef01": {
+          "progression_name": "挑戰"
+        },
+        "3694bab1-5f1b-411a-8170-601003b9d32c": {
+          "progression_name": "額外關卡"
+        },
+        "44daf4e4-d94e-4ba5-9364-8e3a93dc267e": {
+          "name": "反思"
+        },
+        "cefe1ce5-6a04-45e4-8805-e5b94fff2197": {
+          "name": "介紹"
+        },
+        "88a4ca9a-f917-418e-8c1c-2cc4ac814afd": {
+          "name": "迷宮裡的 until（直到）迴圈",
+          "progression_name": "技能發展"
+        },
+        "fad7d572-0e05-4122-854b-ee145920d5ec": {
+          "progression_name": "視訊：“重複直到”語句"
+        },
+        "0878bb75-72da-454e-8ac9-d06588287cde": {
+          "progression_name": "預測"
+        },
+        "34a17d75-d294-42da-b0ca-57ddd75b50cb": {
+          "progression_name": "技能發展"
+        },
+        "0664bded-dced-45bc-954d-8bc7d7734235": {
+          "progression_name": "挑戰"
+        },
+        "9ee3da3a-7860-4af1-9e89-3c3f7f99192d": {
+          "progression_name": "練習"
+        },
+        "c5b4eff7-95ff-4c51-acb5-2c23f8758991": {
+          "progression_name": "預測"
+        },
+        "baf8f43c-6977-4f51-a3c6-3b571a735941": {
+          "progression_name": "額外關卡"
+        },
+        "4ebb7582-e4f3-4765-b03c-b08a688ad90f": {
+          "name": "討論"
+        },
+        "3f2558c3-0eb6-492f-b17b-0eeb7f5f393a": {
+          "name": "反思"
+        },
+        "48252ddc-731f-41bc-9552-10c5aa32acce": {
+          "name": "反思"
+        },
+        "bee3bff0-2e37-458f-89b1-b3cf1343271d": {
+          "name": "計畫"
+        },
+        "e8e5a324-ff1a-4d75-b917-b0c405905904": {
+          "tips": [
+            null
+          ]
+        },
+        "db17d2d5-30dc-4b19-a5e6-543602d3d52e": {
+          "name": "課程結束專案",
+          "tips": [
+            null
+          ]
+        },
+        "a0ef70ba-32d7-450e-85a2-d2415d14209c": {
+          "progression_name": "範例專案"
+        },
+        "2e6af268-5fe3-4361-8108-ee1f41cd2e1e": {
+          "progression_name": "創建你的專案"
+        },
+        "558c0510-2a0d-4302-82d1-98f221ecec6f": {
+          "name": "反思"
+        },
+        "af7e0728-c503-4364-86db-6470460a4c2c": {
+          "progression_name": "語言的力量 - 離線活動"
+        },
+        "4ec90698-6e58-4695-8fec-298eea182910": {
+          "name": "介紹"
+        },
+        "e49cc3d9-d33e-4a2c-a549-9ba972b2bffa": {
+          "tips": [
+            null
+          ]
+        },
+        "a64d1695-0afd-4534-a16c-a790006e0193": {
+          "tips": [
+            null
+          ]
+        },
+        "a4614b34-d679-47a0-b4b3-36a360f0336d": {
+          "name": "Sprite Lab 簡介",
+          "progression_name": "視訊：精靈圖實驗室簡介"
+        },
+        "6e47923a-1f07-4c2d-a55a-c45a35a823e9": {
+          "name": "探索應用程式"
+        },
+        "a596d7dd-5533-4dea-b9f7-7dca09bafb6e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "探索：示例App"
+        },
+        "b747bce4-9f61-4265-a886-568636e698e4": {
+          "name": "反思"
+        },
+        "920b8921-f3cf-4726-bbac-b414917f7bd0": {
+          "name": "介紹"
+        },
+        "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
+          "name": "製作精靈圖",
+          "tips": [
+            null
+          ],
+          "progression_name": "預測"
+        },
+        "f72fb33c-b201-40bd-a15f-439a7c4c5521": {
+          "progression_name": "視訊：如何製作精靈圖"
+        },
+        "3f88f7fc-f308-44e8-ad91-df97a9080361": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "0c617599-fd8c-43d4-9158-b44d201cb3aa": {
+          "progression_name": "練習"
+        },
+        "98dedd12-1d66-41ed-9629-e30265862d45": {
+          "tips": [
+            null
+          ],
+          "progression_name": "自由發揮：製作一個場景"
+        },
+        "c0f0a327-9419-4966-a5cd-cfe23d312f09": {
+          "name": "詞彙"
+        },
+        "fd1a19e9-0bde-448a-8dd0-8e3b9db03712": {
+          "name": "反思（Reflect）"
+        },
+        "cf819fb5-aff2-47a4-9c0f-8ab6af6f218f": {
+          "tips": [
+            null
+          ]
+        },
+        "3aa37d43-0bc2-433c-9fdd-59a704d6d5f8": {
+          "name": "運行中的角色",
+          "progression_name": "預測"
+        },
+        "fa8242f4-3cba-4a2c-bd5b-069a58450349": {
+          "progression_name": "視訊：行動的精靈圖"
+        },
+        "ddbb537c-edf8-479c-b44d-8188941c0655": {
+          "progression_name": "技能發展"
+        },
+        "a25d6587-66bc-42ea-9a27-47b5f3586878": {
+          "progression_name": "練習"
+        },
+        "d5632c3a-b496-41b6-a90f-1c738211a438": {
+          "tips": [
+            null
+          ],
+          "progression_name": "自由發揮：製作一個互動場景"
+        },
+        "ec95fadb-9235-4f39-b4f7-f9b02e2fecdb": {
+          "name": "反思（Reflect）"
+        },
+        "c129fbec-8adf-45f8-9920-ccac97d6022f": {
+          "name": "介紹"
+        },
+        "89eea455-9916-4a03-b782-7c22b535cb4a": {
+          "name": "在 Sprite Lab 中製作虛擬寵物"
+        },
+        "f64df1a5-3d41-4029-9a8c-1439d98d7386": {
+          "tips": [
+            null
+          ]
+        },
+        "29dc277a-e2ce-49f2-bc02-9f0c6cd0b490": {
+          "progression_name": "探索"
+        },
+        "e9443a1f-ef37-4cb8-8d8c-415f2ceaf8ee": {
+          "progression_name": "小項目：創建虛擬寵物"
+        },
+        "70b98dfc-752d-47f0-a29f-2c39cbad42be": {
+          "progression_name": "自由發揮"
+        },
+        "6007c0c9-9fe0-4bf5-9861-e64847bd3161": {
+          "name": "反思"
+        },
+        "580f30a2-5998-427d-9399-f52a5426e91d": {
+          "name": "派對遊戲"
+        },
+        "242b6738-c71f-43a4-9a76-2e90e657ff70": {
+          "progression_name": "視訊：信封中的離線變數"
+        },
+        "a39aeb31-f24a-4a70-b481-9fb3172e76cb": {
+          "tips": [
+            null
+          ]
+        },
+        "4a32f72b-2376-432d-8b3a-983f0fe9488b": {
+          "tips": [
+            null
+          ]
+        },
+        "c7ac5782-093f-43a4-a9df-c9b507e35a30": {
+          "name": "反思"
+        },
+        "48748da0-02c7-49dd-9376-c8bacabc64ea": {
+          "name": "檢視"
+        },
+        "14e9da9c-a429-47db-b4bd-c07d5dc4401f": {
+          "name": "文字與提示",
+          "progression_name": "預測"
+        },
+        "71f32e49-99e7-46d2-9a4d-a6b0b07d5a17": {
+          "tips": [
+            null
+          ],
+          "progression_name": "視訊：文本和提示符"
+        },
+        "304fbec8-0776-402a-9eeb-1e774da6bc0c": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "a2280341-dec1-43b0-9269-e8719a92375d": {
+          "progression_name": "練習"
+        },
+        "1025db18-dae1-40a6-ac7e-b38ceed1360d": {
+          "name": "檢視"
+        },
+        "fdbe210a-89d4-489c-a834-a293569d0274": {
+          "name": "反思"
+        },
+        "aef1a460-c4ee-406c-9f3e-2e9243f88502": {
+          "name": "檢視",
+          "tips": [
+            null
+          ],
+          "progression_name": "預測"
+        },
+        "b70948ff-b376-41dc-8c46-6572c8ab8241": {
+          "tips": [
+            null
+          ],
+          "progression_name": "探索：示例程式"
+        },
+        "9eb4bb34-8e86-4041-a410-dd8f833d20a4": {
+          "tips": [
+            null
+          ],
+          "progression_name": "計畫"
+        },
+        "ee6223c9-e041-4165-b451-70f4c8416e23": {
+          "tips": [
+            null
+          ],
+          "progression_name": "小項目：用戶輸入程式"
+        },
+        "2db78276-8789-4046-8488-4ce232bc6bb2": {
+          "name": "介紹"
+        },
+        "86834c6e-de76-4d6a-bc8d-5c6d2e8d760a": {
+          "tips": [
+            null
+          ]
+        },
+        "56262489-b084-4a55-a4e2-b45138492e6c": {
+          "progression_name": "預測"
+        },
+        "e2e2e67f-7883-47c0-b018-118af90abc79": {
+          "progression_name": "技能發展"
+        },
+        "b1b312f7-6502-4335-907d-9663f892dc6f": {
+          "progression_name": "練習"
+        },
+        "6962360d-5a78-47ae-8686-4038e83ebfbf": {
+          "progression_name": "自由發揮"
+        },
+        "95e83631-dfdc-4398-bde7-941a56206de6": {
+          "name": "反思（Reflect）"
+        },
+        "7d525905-cfd3-47a7-b70a-2d2a28c13fac": {
+          "name": "介紹"
+        },
+        "44ade190-d83f-4460-87ae-c1e4dcaef911": {
+          "tips": [
+            null
+          ]
+        },
+        "8477c71b-b998-4915-9ed2-96f5adefe860": {
+          "name": "檢視"
+        },
+        "37b1afe8-191f-4950-a1a9-3d3ba93ae3a0": {
+          "tips": [
+            null
+          ]
+        },
+        "51946ebc-7151-47c2-88bb-29d89d0338c5": {
+          "progression_name": "預測"
+        },
+        "75a9857e-a926-4c5a-a1ff-2307afce0d11": {
+          "tips": [
+            null
+          ]
+        },
+        "f621cd05-64b4-41d4-8c9a-b310731edecb": {
+          "progression_name": "技能發展"
+        },
+        "30357f1e-97b8-43b2-9fa9-edace8299c36": {
+          "name": "反思（Reflect）"
+        },
+        "37214efe-4044-4968-8924-71472b1d2725": {
+          "name": "介紹"
+        },
+        "22b7037c-93fc-4723-a172-22f1501dbf3b": {
+          "progression_name": "探索：示例程式"
+        },
+        "08a15ab5-ba6f-4d69-b493-cae09147c210": {
+          "name": "反思（Reflect）"
+        },
+        "280458d7-1de1-46dc-b42c-2be014890b38": {
+          "name": "介紹"
+        },
+        "c5ce3765-d4c5-4159-8e5c-39035697517e": {
+          "progression_name": "執行一個模擬程式"
+        },
+        "a30085db-0943-45a2-87c4-6a1ef63df09c": {
+          "progression_name": "修改模擬變數"
+        },
+        "65a5c77d-65a0-4744-b99b-26f05b60ebf2": {
+          "name": "反思"
+        },
+        "cbd047b0-88f2-4fdd-8307-afe5ade83470": {
+          "progression_name": "自訂 "
+        },
+        "966897db-4aa7-4d18-81a8-27b4ef5100fe": {
+          "name": "介紹"
+        },
+        "49647f1f-bc9a-402c-85c0-6338ea7c9541": {
+          "name": "疫情爆發"
+        },
+        "f43a5b4e-6e2d-4f24-b566-f942dc8ce78b": {
+          "description": "_在今天的課上，你將去“怪獸城鎮”，那裡即將發生病毒疫情爆發。怪物博士需要你的幫助來減緩病毒的傳播。_\n\n_你將在精靈圖實驗室中創建一個疫情爆發模擬器，然後使用它來瞭解病毒如何傳播。你還將幫助所有的怪物恢復健康！_",
+          "progression_name": "疫情爆發"
+        },
+        "8cbb7cae-6857-4d95-8401-9d1198ee0aec": {
+          "description": "**這樣做：** 全班閱讀 _歡迎來到怪物城鎮_。"
+        },
+        "7fb7bd27-6ada-4f30-9422-37c9ea683969": {
+          "progression_name": "歡迎來到怪物鎮"
+        },
+        "5f45c495-ac96-4203-8eb1-92fe77e81b68": {
+          "description": "**這樣做：**在前一課的基礎上，與學生一起複習詞彙、模型和模擬。模擬是一個過程或系統的電腦模型。"
+        },
+        "12dc3a29-9b6a-448a-91d7-c795731e097b": {
+          "tips": [
+            null
+          ]
+        },
+        "fc407406-3b2b-46cd-be85-000640f4f949": {
+          "progression_name": "技能發展"
+        },
+        "21348baa-81f3-473d-a4d8-bfdef00cc99e": {
+          "progression_name": "技能發展"
+        },
+        "9456da46-d269-42c3-ab51-42e617b07542": {
+          "progression_name": "從模擬中學習"
+        },
+        "7e9c17d4-3d1e-4a6c-a9ef-e1d09bfedee1": {
+          "progression_name": "小項目：疫情爆發模擬器"
+        },
+        "40fc31a6-1dc5-41dd-88d1-80206579453f": {
+          "progression_name": "小項目：疫情爆發模擬器"
+        },
+        "c154010a-b763-41df-9fcf-67e0ba44fdd7": {
+          "description": "_模擬是學習現實世界中難以觀察的事物的好方法。模擬可以幫助科學家解決問題，預測如何解決問題，並安全有效地測試新想法。你的模擬是展示怪物城鎮病毒疫情爆發的一種方法。_"
+        },
+        "63fcf28c-54ae-4953-acfd-397dff2ce9d3": {
+          "name": "反思"
+        },
+        "bcf8a087-827a-435a-9ea1-1b5708a800c2": {
+          "name": "動員大會！"
+        },
+        "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
+          "name": "在海洋中使用的 AI",
+          "tips": [
+            null
+          ],
+          "progression_name": "視訊：人工智慧：什麼是機器學習？"
+        },
+        "138f82fc-c0fe-4836-a4f8-a38e874680b5": {
+          "tips": [
+            null
+          ],
+          "progression_name": "訓練人工智慧來清潔海洋"
+        },
+        "d1a3c948-ad03-4d96-81c4-6588163a3015": {
+          "progression_name": "視訊：訓練數據和偏差"
+        },
+        "97505f9d-3e88-4a48-8fb1-66a0dcb61e9e": {
+          "tips": [
+            "本教程中的魚是基於一些預先定義的元件隨機生成的，包括嘴、尾巴、眼睛、鱗片和鰭，並隨機選擇身體顏色、形狀和大小。人工智慧現在不是查看實際的圖像資料，而是根據學生對每條魚進行分類的方式來尋找這些元件中的模式。如果一條魚的特徵與之匹配，那麼它就更有可能給它貼上與學生相同的標籤。"
+          ],
+          "progression_name": "訓練數據的使用"
+        },
+        "febd53d5-1b5e-4e73-a843-482a6a9a0781": {
+          "progression_name": "視訊：對社會的影響"
+        },
+        "4cbe4554-d9fd-4e24-9f7c-572f2874fee9": {
+          "progression_name": "教人工智慧一個新詞"
+        },
+        "f3a8670b-9954-45f9-af08-1689c799a427": {
+          "tips": [
+            "你可以和同學們分享這些故事，幫助他們瞭解人工智慧將如何影響未來。\n\n-   [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n-   [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
+          ]
+        },
+        "5f554a52-41ac-4982-bfd0-e3deb97bc410": {
+          "name": "反思"
+        },
+        "04f13b6a-1f5c-4c1f-8c9e-cbb4dca0273b": {
+          "description": "你可以和同學們分享這些故事，幫助他們瞭解人工智慧將如何影響未來。\n\n-   [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n-   [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
+        },
+        "768fdc30-25c8-40ae-846a-6de108de3a9f": {
+          "name": "介紹"
+        },
+        "f7e2b7b8-84ff-442f-bd6a-831da855966f": {
+          "tips": [
+            null
+          ]
+        },
+        "1b0d023d-bf54-4703-af7e-5d9fd45d755d": {
+          "tips": [
+            null
+          ]
+        },
+        "07e83a27-5530-4af9-bc71-88838f668e86": {
+          "tips": [
+            null
+          ]
+        },
+        "0965b5bc-06b2-458d-b6c5-9c6f9f2f6340": {
+          "name": "網際網路",
+          "progression_name": "互聯網 - 離線活動"
+        },
+        "3b419e1c-6cbf-4940-b2a0-c12606b359e1": {
+          "tips": [
+            null
+          ]
+        },
+        "fc104032-9a2d-443a-96d0-e7f4c6de6782": {
+          "name": "反思",
+          "tips": [
+            null
+          ]
+        },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "搜索"
+        },
+        "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
+          "progression_name": "範例專案"
+        },
+        "ad3b60a9-c96d-4e0b-b124-5f6f34d1c85c": {
+          "progression_name": "創建你的專案"
+        },
+        "de7ab6f7-a853-4f00-b05d-a9db0bb2da2d": {
+          "tips": [
+            null
+          ]
+        },
+        "3591fc28-830a-4a32-94e4-3468853cea32": {
+          "name": "嘗試（Try）"
+        },
+        "bad6c34f-b32e-4116-908c-7eb4fc2ca6a4": {
+          "tips": [
+            null
+          ]
+        },
+        "38c0b06f-e0b8-4739-b359-6513f419fd11": {
+          "tips": [
+            null
+          ]
+        },
+        "4b48da8b-113d-4b9b-94ff-c776a0cab3b9": {
+          "tips": [
+            null
+          ]
+        },
+        "1b707283-b28d-4147-921e-691c3e5325fe": {
+          "tips": [
+            null
+          ]
+        },
+        "c3102dcc-a35a-489f-8461-06e0aa3d5125": {
+          "description": "如果你的學生已經習慣了編寫代碼概念，可以嘗試讓他們在其他平臺上建立他們的專案，比如 [Scratch](https://scratch.mit.edu/) 或 [Alice](http://www.alice.org/index.php)。"
+        },
+        "3c23fa37-7254-47f3-b576-da07d0b605dd": {
+          "progression_name": "做超級數字公民"
+        },
+        "7af8b468-66ad-4d3b-a9c3-2ff50362f027": {
+          "name": "介紹",
+          "tips": [
+            null
+          ]
+        },
+        "9a18adb7-3bfe-410d-89dc-79ccde9c3419": {
+          "tips": [
+            null
+          ]
+        },
+        "8ad1b5bf-8e05-4fad-89fc-ef821c11b02f": {
+          "name": "Sprite Lab 中的游泳小魚"
+        },
+        "9e16dba8-c792-499c-aa27-cbea95bf15cd": {
+          "tips": [
+            null
+          ]
+        },
+        "14e8ba9a-beb7-4dfa-8f45-6b763221f4c1": {
+          "progression_name": "視訊：精靈圖實驗室簡介"
+        },
+        "6387c7a5-11bc-4b51-9079-ba599124ce44": {
+          "progression_name": "預測"
+        },
+        "ff7aa3e1-8328-41bf-b516-51ca5ea0a800": {
+          "progression_name": "技能發展"
+        },
+        "1a4debc6-59c9-4c5a-8811-8a3cadf8be7a": {
+          "progression_name": "視訊：如何製作精靈圖"
+        },
+        "a5c4b601-4e45-4261-b7a6-9ffefd154aa2": {
+          "progression_name": "練習"
+        },
+        "dce569eb-0a60-42a9-9e31-855a6b138f92": {
+          "progression_name": "自由發揮"
+        },
+        "470b57f7-12df-47d0-acc3-63cb72051541": {
+          "name": "反思"
+        },
+        "66c1f19a-bfc9-4569-8b6c-c0eb3b6336ae": {
+          "name": "搭建舞臺"
+        },
+        "0dfd76e3-4d45-4581-b98f-141d1fcfc804": {
+          "description": "_在這個活動中，你將創造一個擁有名為精靈圖的有趣角色的互動世界，同時享受樂趣。你將能夠讓精靈圖用你在漫畫或連環畫小說中看到的語言泡泡說話，你將學會讓它們在你或其他人點擊它們時自動做出反應。_\n\n_今天你們要寫“代碼”，也就是一組電腦可以理解的指令。當你寫一個故事時，你需要仔細思考你使用的詞語。當你寫代碼時，你需要仔細思考你給電腦的指令。_"
+        },
+        "59a9f2f9-23f8-4562-a6ed-09063806bcff": {
+          "name": "一般支持",
+          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計](https://youtu.be/vgkahOzFH2Q)來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
+        },
+        "3f7d6459-ecb9-4e7a-bf73-8cb15f8e9c4b": {
+          "name": "你好世界"
+        },
+        "5c9fce3b-e030-4ff3-8943-67f13f9dbbf8": {
+          "progression_name": "技能發展"
+        },
+        "0121aca1-bd15-436e-ac4d-5424f269e25a": {
+          "progression_name": "技能發展"
+        },
+        "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
+          "progression_name": "自由發揮"
+        },
+        "ff807207-f4fc-4368-8df5-b4a35942dd53": {
+          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn](https://code.org/learn)嘗試其他教程。"
+        },
+        "ebbcd2fa-1991-41d3-a054-232b53cf8f17": {
+          "name": "反思"
+        },
+        "8489f43d-dff8-41c9-aeca-e699cb7e8adc": {
+          "name": "介紹"
+        },
+        "e3d34b0d-b3a0-49a0-9ff0-6d7bf1679b1c": {
+          "tips": [
+            null
+          ]
+        },
+        "c8351508-1d35-45ce-9f1e-1905c90c7df1": {
+          "progression_name": "探索：Rikki的海報"
+        },
+        "e56da37d-683e-4dc5-89f1-da5e039357d9": {
+          "progression_name": "關於我"
+        },
+        "f3d434b2-d9ce-4dce-b77b-2ed20f99734b": {
+          "name": "反思"
+        },
+        "d058a787-37d6-4c25-b5c0-c427b5bc9373": {
+          "name": "介紹"
+        },
+        "11131345-98a9-4474-8782-c0d97fe84206": {
+          "name": "以迴圈（Loop）繪畫",
+          "progression_name": "視訊：JR Hildebrande的藝術家簡介"
+        },
+        "d8046ff6-568f-4a94-a37c-3f32f63b19fe": {
+          "progression_name": "技能發展"
+        },
+        "69565308-7412-44cc-a895-b4162321caa9": {
+          "progression_name": "視訊：藝術家循環"
+        },
+        "56779577-ac08-415f-b1bd-9ba7abdcf29e": {
+          "progression_name": "技能發展"
+        },
+        "943384fb-1136-4a81-95e0-d5d6f1f9b817": {
+          "progression_name": "練習"
+        },
+        "0f2d930f-f0ed-4b9a-b2f4-ba259ad3ee4a": {
+          "progression_name": "額外關卡"
+        },
+        "9bc82847-83ea-45a1-bbf6-219144c13563": {
+          "name": "反思"
+        },
+        "83e6c37d-1cc1-49b9-b208-79567063fb20": {
+          "name": "介紹"
+        },
+        "1c8c1c88-3c2e-4c1b-bcf8-4e217730d0a6": {
+          "tips": [
+            null
+          ]
+        },
+        "fe5271b2-e5f3-44f5-94d8-d4630bb9d37d": {
+          "progression_name": "技能發展"
+        },
+        "9c33a50c-2471-4797-b3c7-024447bf16ff": {
+          "progression_name": "視訊：巢狀迴圈"
+        },
+        "7571aba3-7786-43cb-91e3-4d1a3218c6cc": {
+          "progression_name": "技能發展"
+        },
+        "0ecc0bd0-6893-4e8d-abf3-176120a15c2b": {
+          "progression_name": "練習"
+        },
+        "45275988-8cf4-4043-b5a4-659cc090346a": {
+          "progression_name": "自由發揮"
+        },
+        "cd8571ad-24a7-4231-92f5-ec2e33b8c7c2": {
+          "progression_name": "額外關卡"
+        },
+        "0b5c0d6e-7e98-4c6e-afe5-0ef4e99677b0": {
+          "name": "反思"
+        },
+        "0242f01c-8a92-4d38-9d15-93132d346a76": {
+          "name": "介紹"
+        },
+        "7823fbff-f32d-4f4f-808e-1bc340e10cf2": {
+          "name": "在冰雪奇緣中使用巢狀迴圈（Nested Loop）",
+          "progression_name": "小專案: 雪花一號"
+        },
+        "2bbcbfb8-df97-457d-9891-719b479cd6b0": {
+          "progression_name": "小專案: 雪花二號"
+        },
+        "f826bb4e-317d-4660-9b78-cd1ddb2adc50": {
+          "name": "反思"
+        },
+        "b6db9c2f-2e77-42e0-bc68-93d8f8e9b4b4": {
+          "name": "介紹"
+        },
+        "fa573a03-86f6-43da-ad41-1e726bc6fd8a": {
+          "tips": [
+            null
+          ]
+        },
+        "7633c66a-ea8d-4974-9b0a-3b1eeb1e7fa8": {
+          "tips": [
+            null
+          ]
+        },
+        "d3f1d3da-8013-4459-a62c-4a67b4457c61": {
+          "name": "歌曲創作",
+          "progression_name": "詞曲創作 - 離線活動"
+        },
+        "850fd05d-eae1-4111-a12a-31ab15e4d5be": {
+          "tips": [
+            null
+          ]
+        },
+        "85d7cd29-59ea-4d90-909c-a8a16824797f": {
+          "name": "反思",
+          "tips": [
+            null
+          ]
+        },
+        "c314e193-0618-4863-9796-8c72975804fc": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**函式的陽光捕手**\n造訪 [CS Fundamentals Unplugged Table](https://code.org/curriculum/unplugged)，或者按一下 [Functional Suncatchers](https://studio.code.org/s/course3/stage/4/puzzle/1) 連結。這個活動需要從工藝品商店裡購買一些用品，但可以幫助學生看到呼叫多個函式的價值。\n\n**創作你的歌曲**\n\n-   一開始大家一起創作一段副歌，然後在兩段主歌之間重複這段副歌。\n-   把副歌改一改，想一想，只需要改一個地方，是不是容易得多了。\n-   再把副歌改一改，使副歌比原來長很多。\n-   再加上第二段副歌，在兩段主歌之間交替進行。\n\n**歌曲創作程式設計**\n\n-   如果我們要把歌聲演出來，而不是唱出來呢？突然之間，我們的副歌就會變成了重複的動作函式，而不是文字。\n-   利用紙上程式設計畫圖課中箭頭的概念，建立一個有很多重複指令的程式。\n    -   把這些重複的動作圈起來，讓同學們可以看到它們的位置。\n    -   在程式上方定義一個名為「副歌」的函式。\n    -   把程式中重複動作出現的地方劃掉，寫上「副歌」。\n-   重複，直到全班可以在幾乎不用指示的情況下就完成這個過程。\""
+        },
+        "e46c5e2b-810a-412d-b3c8-4866111b0589": {
+          "name": "介紹"
+        },
+        "39448b98-4357-44bc-ad9a-84ed2a9b36a8": {
+          "tips": [
+            null
+          ]
+        },
+        "b52ccd27-4398-4746-83f5-b510154fb1d7": {
+          "name": "Minecraft 中的函式",
+          "tips": [
+            null
+          ],
+          "progression_name": "視訊：我的世界 - 吉祥物"
+        },
+        "db999346-e73e-4580-8c5f-d76e30ab2b7d": {
+          "progression_name": "技能發展"
+        },
+        "5607dcf8-03d6-4b10-8dcc-afa2beb681c7": {
+          "progression_name": "視訊：我的世界 - 重複循環"
+        },
+        "3ee7b90a-c59c-47ae-96f2-c5e9bc506d2a": {
+          "progression_name": "技能發展"
+        },
+        "d24f28cb-b90f-45e4-bca2-b2a2f75ffde5": {
+          "progression_name": "視訊：我的世界 - 函數"
+        },
+        "356734de-fbb9-4ac7-b554-2daaa9d70fee": {
+          "progression_name": "技能發展"
+        },
+        "89ce0165-42fa-489a-bc9a-96ddcd686360": {
+          "progression_name": "視訊：我的世界 - 賀詞"
+        },
+        "6ddf83bf-3856-4d68-a048-ac5a0ac26349": {
+          "progression_name": "自由發揮"
+        },
+        "78a9d808-3832-4ea0-976e-f89295d9e96f": {
+          "name": "反思"
+        },
+        "73440a78-9446-4eb3-859e-35c77ce9f79a": {
+          "name": "介紹"
+        },
+        "ad4c144f-f494-49ec-8184-dcf881dc5823": {
+          "name": "在藝術家遊戲中使用函式（Function）",
+          "progression_name": "預測"
+        },
+        "ada4de0f-53bc-4130-bd2f-0da228ca7b7e": {
+          "progression_name": "技能發展"
+        },
+        "ed239e2c-51b5-4a74-a44b-3a8e2486ba1b": {
+          "progression_name": "練習"
+        },
+        "6698a795-4281-4c01-a74e-ec5703f653b9": {
+          "progression_name": "額外關卡"
+        },
+        "d6f43957-de44-4e64-8418-331e0bb6ee14": {
+          "name": "反思"
+        },
+        "8628e382-350f-40de-9e22-d522ab7fd289": {
+          "name": "介紹"
+        },
+        "931a781a-12c2-4079-842c-71002b1bb8a2": {
+          "name": "Minecraft 中的條件式：水上巡航 ",
+          "progression_name": "視訊：我的世界：水上航行簡介"
+        },
+        "09b06756-c981-4af6-a6ea-5697f8fa78e2": {
+          "progression_name": "技能發展"
+        },
+        "60e4bed4-0af0-4f4c-87fd-d778bc66f1c8": {
+          "progression_name": "視訊：我的世界：水上航行“重複直到”"
+        },
+        "d2e8a5d0-a31d-4a17-a649-8e1cc2aa735a": {
+          "progression_name": "技能發展"
+        },
+        "1d87b667-a7f7-4fb7-811b-304ff0178d97": {
+          "progression_name": "視訊：我的世界：水上航行條件運算式"
+        },
+        "6d700f77-eea3-46c2-8ea6-27454cbaf9ab": {
+          "progression_name": "技能發展"
+        },
+        "cc1c1ece-121e-4dd3-a117-dadaddcc56d1": {
+          "progression_name": "視訊：我的世界：水上航行賀詞"
+        },
+        "cbae92bc-d7b3-4707-a5f9-c5b373bdaee7": {
+          "progression_name": "自由發揮"
+        },
+        "a8369823-7441-45a9-993c-3546a2f85efe": {
+          "name": "反思"
+        },
+        "7538f281-8565-4235-a3f1-a40a2679d73d": {
+          "name": "介紹"
+        },
+        "a24e03d0-5524-46ec-ab96-a0b1d9b24d8b": {
+          "name": "與農夫一起嘗試條件式（Conditional）",
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "bfb6e1c5-96c2-4d97-932f-2ca660c2854f": {
+          "progression_name": "視訊：農民While迴圈"
+        },
+        "ee4b7d3c-b6b2-4e05-bcb8-cedc77db80c0": {
+          "progression_name": "預測"
+        },
+        "2908bd65-d321-4b6f-a5f3-6d550564bbaa": {
+          "progression_name": "技能發展"
+        },
+        "e81da78c-ac8a-4212-bbe4-07ba9cfebc9e": {
+          "progression_name": "視訊：“重複直到”模組"
+        },
+        "62f9f06c-c008-464b-b1fb-86e224ce1018": {
+          "progression_name": "技能發展"
+        },
+        "2c2983a7-3e7f-4e05-bc7f-c5663ad6e446": {
+          "progression_name": "視訊：“If/Else”"
+        },
+        "2b231315-7f71-4e5f-a7b9-e32def714216": {
+          "progression_name": "挑戰"
+        },
+        "64fc9e91-c7c8-496d-8820-e7ae95fba0ee": {
+          "progression_name": "練習"
+        },
+        "4bfcc176-30cf-46d2-b6a1-7878cd32087f": {
+          "name": "反思"
+        },
+        "93c7190d-ff63-4aa2-a7f5-cf7546acdb61": {
+          "name": "介紹"
+        },
+        "64c2a884-631f-45d1-b192-29788fe3e807": {
+          "progression_name": "視訊：收穫者"
+        },
+        "19a96cd7-57c5-4a55-a7a2-e71a01464fb4": {
+          "progression_name": "技能發展"
+        },
+        "33f5530f-7a4e-49ee-b9e3-b4c4a8ddc597": {
+          "progression_name": "挑戰"
+        },
+        "fa627e9a-9b25-4ce7-8b89-e5d4da2c3a22": {
+          "progression_name": "練習"
+        },
+        "023d0047-47de-45f4-8a03-a913ca40ace6": {
+          "progression_name": "預測"
+        },
+        "be75c786-414d-4ba7-a1cf-bd5b444be3b2": {
+          "name": "反思"
+        },
+        "2cf54fda-a233-45c5-a347-5ea0150eb697": {
+          "name": "以無障礙為目的設計程式",
+          "progression_name": "以無障礙為目的設計程式"
+        },
+        "e1fe5c10-383e-402b-a4c2-1efbbb6641c1": {
+          "name": "反思"
+        },
+        "179685a9-6ed2-454f-8a2b-76c4032f1d16": {
+          "tips": [
+            null
+          ]
+        },
+        "90986348-020e-4b00-b92f-ba4160018feb": {
+          "name": "數位分享",
+          "progression_name": "數字分享 - 離線活動"
+        },
+        "3f9da29a-6132-4d1b-937a-5732b48eeb94": {
+          "tips": [
+            null
+          ]
+        },
+        "26e345f8-d754-44a5-9197-e0554116562e": {
+          "name": "反思"
+        },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "搜索"
+        },
+        "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8": {
+          "progression_name": "示例項目"
+        },
+        "e43bfad4-b411-4e0d-a59c-2e4764fd9c65": {
+          "progression_name": "創建你的專案"
+        },
+        "a0f0bda0-512f-4e9c-8c28-1f749a2a7431": {
+          "tips": [
+            null
+          ]
+        },
+        "228ce73f-d412-4eb0-a561-eadaff60821f": {
+          "name": "嘗試（Try）"
+        },
+        "84a78eea-27de-4815-8e24-1323addfe7ab": {
+          "tips": [
+            null
+          ]
+        },
+        "5fa5c47a-6198-4e47-b5e6-f7784b309d54": {
+          "tips": [
+            null
+          ]
+        },
+        "9946dfc7-dce9-4ead-bbdc-aec0d224bbc9": {
+          "name": "反思（Reflect）"
+        },
+        "ea9709a3-a840-4f3d-b165-90a63ee3c36a": {
+          "progression_name": "視訊：遵循數字足跡"
+        },
+        "0d42ae11-f1d5-498b-b68f-f559173be646": {
+          "tips": [
+            null
+          ]
+        },
+        "2f04713f-ee5f-4ad7-8696-b8b8b6683fb6": {
+          "tips": [
+            null
+          ]
+        },
+        "b7c83d71-c594-47f1-a2e1-ee50d4b56224": {
+          "progression_name": "移動它，移動它視訊 - 離線活動"
+        },
+        "750a4241-a4da-4eca-a95b-f3157e20f199": {
+          "name": "移動它，移動它"
+        },
+        "8c941561-9506-4101-ad8a-d14a51edb181": {
+          "name": "反思",
+          "tips": [
+            null
+          ]
+        },
+        "07c53b76-81d0-4254-bbce-a04c4dac3f38": {
+          "tips": [
+            null
+          ]
+        },
+        "70f8bf21-fc6d-4fac-b850-7c1a1694ce57": {
+          "name": "迷宮中的循序（Sequence）",
+          "tips": [
+            "向學生展示幫助同學的正確方法：\n\n-   不要坐在同學的椅子上\n-   不要使用同學的鍵盤\n-   不要碰同學的滑鼠\n-   確保同學在你離開之前能描述出解決方案"
+          ]
+        },
+        "29e7cac9-8b1a-4fd2-942f-10682a04aab3": {
+          "progression_name": "視訊 - 迷宮簡介：使用模組編程"
+        },
+        "63f75f65-45a9-4de8-9cc0-6b402647ccc1": {
+          "progression_name": "技能發展"
+        },
+        "a51bc70a-8cae-4398-8259-5b5bd6138f18": {
+          "name": "反思"
+        },
+        "c05c857d-b5f3-4136-b505-f9ab43799bcb": {
+          "tips": [
+            null
+          ]
+        },
+        "75c9132a-969b-4198-8b79-cee2349158bf": {
+          "name": "與憤怒鳥一起編程"
+        },
+        "a13265bc-3063-4de9-9cc1-383f7e8260bf": {
+          "progression_name": "視訊：結對編程"
+        },
+        "12d31175-b400-43ea-b132-40b08afeb0fa": {
+          "progression_name": "技能發展"
+        },
+        "dcffa95e-0a1b-48af-b50d-3e4e3d028eb5": {
+          "progression_name": "挑戰"
+        },
+        "e5358a30-f76d-41f3-9cc4-473c22f7c0fc": {
+          "progression_name": "練習"
+        },
+        "80691b85-b3f7-42c5-b28d-075f30bcfa91": {
+          "progression_name": "額外關卡"
+        },
+        "59fe6808-f9a3-4cbb-b193-9684c40568b6": {
+          "tips": [
+            null
+          ]
+        },
+        "840ef87a-c952-47ea-be8c-cbae1a439635": {
+          "name": "反思"
+        },
+        "a75f7047-ee7e-4d61-ae16-68df8224859a": {
+          "description": "以小組為單位，讓學生在紙上設計出自己的迷宮，並讓其他學生或小組編寫程式來解決。為了增加趣味性，可以讓學生扮演小豬和小鳥，製作真人大小的迷宮。"
+        },
+        "4709a0b0-10cf-444a-95c2-79194cef926d": {
+          "name": "介紹"
+        },
+        "e4f833fe-43bb-4538-8ceb-e014712357b2": {
+          "name": "和農夫一起學程式"
+        },
+        "90d01840-ab32-4ff1-9603-1a400df6c870": {
+          "tips": [
+            null
+          ]
+        },
+        "977f23f8-6bb5-491e-8570-74a8d59a9beb": {
+          "progression_name": "視訊：收穫者"
+        },
+        "49fbb767-771c-46d4-82ed-25acdc22cc34": {
+          "progression_name": "技能發展"
+        },
+        "1f739996-6692-4d2e-bf3a-8360e6585f1b": {
+          "progression_name": "視訊：使用步進按鈕調試"
+        },
+        "9edf4db6-25f2-432c-962d-7972ad7ef163": {
+          "progression_name": "技能發展"
+        },
+        "f423cbb5-1e3c-4917-b077-a99013ee72e0": {
+          "progression_name": "挑戰"
+        },
+        "541fc52e-755a-43bf-b5c1-a85f3c255107": {
+          "progression_name": "練習"
+        },
+        "aed1d975-8125-46e1-b0dd-6c636c59a8f2": {
+          "name": "反思"
+        },
+        "d9e76adf-9b37-4e7d-b1b2-0910919aa6d3": {
+          "progression_name": "視訊：學習循環"
+        },
+        "d7529639-1989-486a-994e-2c87b04b3113": {
+          "name": "學習迴圈"
+        },
+        "72b7082d-9ed1-465f-8d53-952202764c44": {
+          "tips": [
+            null
+          ]
+        },
+        "f7545286-de48-4da2-a7ef-769ca8896358": {
+          "name": "反思"
+        },
+        "48078796-9a5d-47a8-890e-69e86fb1400a": {
+          "name": "介紹"
+        },
+        "97e4cca3-73f7-4a08-8edd-3a56685f07d1": {
+          "name": "全班預習線上關卡"
+        },
+        "80957166-05b2-4b73-802a-b00602014fb9": {
+          "name": "與農夫一起學迴圈（Loops）"
+        },
+        "16d31221-e844-4e6f-8344-fa1084b9dbf9": {
+          "progression_name": "技能發展"
+        },
+        "8d24e924-469e-4ba6-81f0-3c10e6b96145": {
+          "progression_name": "視訊：重複模組"
+        },
+        "8cd5852c-c611-485e-967b-a0b071a6e04d": {
+          "progression_name": "技能發展"
+        },
+        "502c3ae3-b48f-42db-a55f-9e1011b81c07": {
+          "progression_name": "挑戰"
+        },
+        "116db8d7-f2b2-497a-93e3-48dc3cb020eb": {
+          "progression_name": "練習"
+        },
+        "29ae7f90-120d-45cf-bdf6-fc0900726f05": {
+          "name": "反思"
+        },
+        "8c6d11c7-2b53-47b4-a1f3-cc9587f2b10c": {
+          "name": "介紹"
+        },
+        "6e40f870-a79e-48d1-8868-0e499e80790d": {
+          "progression_name": "視訊：收集者"
+        },
+        "bfca3091-4042-4479-acb3-446e166a3dde": {
+          "progression_name": "技能發展"
+        },
+        "d4d7b705-ba37-4ef9-af49-186983bf5274": {
+          "progression_name": "視訊：使用重複模組"
+        },
+        "4926c6b2-f0ed-4508-bbc9-df16b0e5042f": {
+          "progression_name": "技能發展"
+        },
+        "7d1b2aba-f7f2-4655-b555-5269fb178ef6": {
+          "progression_name": "挑戰"
+        },
+        "9d2b30a9-8da4-4c98-bd40-5f94dfc8a0d2": {
+          "progression_name": "練習"
+        },
+        "6fd1b50c-48c1-4ebd-a36f-91027caf9587": {
+          "progression_name": "額外關卡"
+        },
+        "74d465f8-f633-4ec1-a380-5e4c40b7ffc6": {
+          "name": "反思"
+        },
+        "a60b1be5-48d8-4fcc-9203-bdc66d8effe9": {
+          "name": "介紹"
+        },
+        "2351b0fa-15de-406b-b895-8b07d7858eda": {
+          "tips": [
+            null
+          ]
+        },
+        "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
+          "progression_name": "視訊：代碼工作室中的藝術家"
+        },
+        "b7796885-3fd7-48b7-9a37-60950e9906ee": {
+          "progression_name": "技能發展"
+        },
+        "0b77918a-7564-47f3-9a0a-46fd3820e760": {
+          "progression_name": "視訊：藝術家重複模組"
+        },
+        "bda70e53-e9ab-4e7c-877f-4d5020435d75": {
+          "progression_name": "技能發展"
+        },
+        "c9b716a1-6ed8-45b7-81b6-75240df48dae": {
+          "progression_name": "挑戰"
+        },
+        "6aa0f9ae-3248-4a8b-859f-1f75f43c473e": {
+          "progression_name": "練習"
+        },
+        "b8b54f7e-0f68-46c7-84d1-756d1d134cdc": {
+          "progression_name": "自由發揮"
+        },
+        "0d275833-51d3-4cdb-b05f-74807131d02b": {
+          "progression_name": "額外關卡"
+        },
+        "35483307-6fef-40c2-8671-683c328b02d5": {
+          "name": "反思"
+        },
+        "b5554c99-2e3f-4c04-8abb-75273fd2c6e7": {
+          "progression_name": "正確的應用程式 - 離線活動"
+        },
+        "19e5ed07-db5c-4a14-9cd9-3c2e9b75b4a3": {
+          "name": "反思"
+        },
+        "b54332ab-3838-4efd-b83b-0e44f83f3425": {
+          "name": "介紹"
+        },
+        "ce7f096d-fa3c-425e-8e75-962fb8613e63": {
+          "name": "大事件",
+          "progression_name": "視訊：大事件 - 離線活動"
+        },
+        "09024fe7-6b74-4301-8367-5702b11c5e77": {
+          "tips": [
+            null
+          ]
+        },
+        "b7b4ea37-e161-4551-af50-791eb4837f57": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**一個人的事件就是另一個人的反應**\n\n給每個學生分配一個要注意的事件，以及一個對該事件做出適當的反應。把動作串聯起來，讓每個孩子的反應變成一個事件，引發另一個學生的反應。繼續分配，直到每個人都有事情要做，每個人都能做出反應。\n\n**活動現場**\n\n將全班分成若干組。使用事件控制器，給每個組針對同一個按鈕分配不同的反應。對所有的三個按鈕都這樣做，然後看看全班混亂的場面！\""
+        },
+        "252c66a6-6257-4049-829c-1fc9fdef2303": {
+          "name": "介紹"
+        },
+        "bde6629f-e67a-4eca-82de-7d379e9b22f2": {
+          "tips": [
+            null
+          ]
+        },
+        "896b109f-f671-46b5-97d3-54292dc5fedd": {
+          "name": "全班預習線上關卡"
+        },
+        "fb86d63a-88cc-40a1-a21e-eef2197c9587": {
+          "name": "以事件（Event）展開皇家大戰"
+        },
+        "415d59cc-8ee3-4a80-95fe-0099c6a3515c": {
+          "progression_name": "視訊：劇本實驗室簡介"
+        },
+        "d4687de2-d2c6-4e40-ae76-4daca6ebfe30": {
+          "progression_name": "自由發揮"
+        },
+        "564e41dc-2b6c-4aac-a1a5-1825568084dc": {
+          "progression_name": "小專案: 皇家對戰"
+        },
+        "763a51bb-efc3-4451-92e7-1d455731442a": {
+          "progression_name": "自由發揮"
+        },
+        "3d102930-9eee-4921-b3fc-9766a293a8df": {
+          "progression_name": "額外關卡"
+        },
+        "d0be06d0-1065-4f45-a455-1dfbf15d0298": {
+          "name": "反思"
+        },
+        "45b95a4b-1c7d-4082-b4b7-39dd00bb83ec": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**幕後探秘**\n\n當你分享故事的連結時，你也會分享背後的所有代碼。這對學生來說是一個很好的學習方式。\n\n-   將完成的故事連結釋出到網上\n    -   創作一個你自己的故事來分享！\n-   當學生載入連結時，讓他們按一下「運作原理」按鈕來檢視故事背後的代碼。\n-   以小組為單位，討論同學們為自己的故事編寫代碼的不同方式。\n    -   有什麼讓你感到驚訝？\n    -   你想嘗試一下什麼？\n-   選擇別人的故事，然後按一下`重編`，在此基礎上進行修改。（別擔心，原來的故事不會受到影響。）\""
+        },
+        "b1281f5a-4b11-4aa6-a521-bb70fa009c3d": {
+          "name": "檢視",
+          "progression_name": "專案"
+        },
+        "5fb5744d-9d84-476f-b85a-dcd1fceba4f9": {
+          "progression_name": "專案"
+        },
+        "031f0aef-cd6b-4ca5-b894-a7d6a8eca2e1": {
+          "name": "計畫",
+          "tips": [
+            null
+          ]
+        },
+        "23361af0-ba94-44b6-bc6c-fb6900fcc9dd": {
+          "name": "專案",
+          "progression_name": "專案"
+        },
+        "2af4acbc-a5cf-43b6-b7a7-e02e5949bcfb": {
+          "tips": [
+            null
+          ]
+        },
+        "1c38d573-e689-4c3a-84b6-f6c5deb4cd55": {
+          "name": "介紹",
+          "tips": [
+            null
+          ]
+        },
+        "4124a6f9-58cd-4211-be8a-9930d9884d43": {
+          "name": "與憤怒鳥一起編程",
+          "tips": [
+            null
+          ],
+          "progression_name": "視訊：迷宮簡介 - 使用模組編程"
+        },
+        "49b2f670-c867-4f10-9a00-69e36e656858": {
+          "progression_name": "技能發展"
+        },
+        "47ed26cb-f342-486a-9123-166717aab595": {
+          "progression_name": "挑戰"
+        },
+        "113a8302-96b2-4aff-b859-036ff9b540c7": {
+          "progression_name": "練習"
+        },
+        "cbda0c5a-4809-45ee-ad7e-2b55f1b1ddd5": {
+          "progression_name": "預測"
+        },
+        "d02dbffd-eaec-4155-ad4f-54f3787b6264": {
+          "progression_name": "練習"
+        },
+        "17df522f-cbb2-4be1-af08-37c105e9b134": {
+          "progression_name": "挑戰"
+        },
+        "932d0cc0-5664-4aab-8653-df211e76c26f": {
+          "name": "反思"
+        },
+        "0ac901c2-6ae6-46cd-aff2-75c82424476d": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**自由創作**\n\n以小組為單位，讓學生設計自己的迷宮，並互相挑戰能不能編寫程式來解決。為了增加趣味性，可以讓學生扮演小豬和小鳥，製作真人大小的迷宮。\""
+        },
+        "50c37f50-7e2b-4c9c-9443-013742231b0e": {
+          "name": "介紹"
+        },
+        "5b0bad48-bd8f-4217-aef6-6bd8250e1186": {
+          "name": "詞彙"
+        },
+        "5c133834-038c-48e4-819a-cef93780856b": {
+          "name": "與鼠奎特一起除錯"
+        },
+        "08d61c39-60d0-47ef-8ad5-919c6d4693a1": {
+          "progression_name": "視訊：與鼠奎特調試"
+        },
+        "2e366d04-1f25-4c62-8345-e74a5e81799d": {
+          "progression_name": "技能發展"
+        },
+        "5b2a71e6-47a2-4f33-bf7c-9e701f60f4a4": {
+          "progression_name": "挑戰"
+        },
+        "48a18e44-f31f-48ff-b7e4-95a786df2982": {
+          "progression_name": "預測"
+        },
+        "2dd6b911-9612-4d41-836e-faeaf7cc3e77": {
+          "progression_name": "練習"
+        },
+        "27675226-8c0f-4955-ac5f-f9bfa4c7c475": {
+          "progression_name": "額外關卡"
+        },
+        "54b676c0-ba39-450f-9828-5bba0ce6daf6": {
+          "name": "反思"
+        },
+        "3d6e0217-7da3-4ef3-a6fd-e684151c482a": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**埋下小臭蟲**\n\n讓學生回到以前的關卡，有目的性地將新的臭蟲放到他們的解答中。然後，他們可以請其他學生來調試他們的作業。這也可以用紙質關卡來完成。\n\n確保其他學生在調試過程中提出的批評都是有建設性的。如果這對你的班級來說可能有難度，那麼在這個活動之前，可以透過與另一個學生的角色扮演，讓他們瞭解調試中要互相尊重。\""
+        },
+        "0ce0c382-a11b-4c74-ad59-41f02403b46b": {
+          "name": "介紹"
+        },
+        "eb1b0c3e-6a9a-4a09-9420-3d8e7dd8a84c": {
+          "name": "全班預習線上關卡"
+        },
+        "8c9b5729-021b-4d95-b232-e523b7956513": {
+          "name": "和 Laurel 一起收集寶石"
+        },
+        "ea0d0c84-a0d7-41d0-80cc-efe792db04e8": {
+          "progression_name": "視訊：收集者"
+        },
+        "f2310ede-7d4f-478c-aa07-906ae23fe170": {
+          "progression_name": "技能發展"
+        },
+        "fd0ab898-850a-45a0-be4f-1e223b482dce": {
+          "progression_name": "挑戰"
+        },
+        "a44da8b7-1127-4f1c-9634-6387876dc604": {
+          "progression_name": "練習"
+        },
+        "ebc8dbcd-12ed-41f3-b957-3d5ce803e014": {
+          "progression_name": "預測"
+        },
+        "36b378b8-6af7-43ac-bc36-81a2758775fd": {
+          "progression_name": "練習"
+        },
+        "76775349-6666-411c-adea-ee7c7277587c": {
+          "progression_name": "額外關卡"
+        },
+        "be73dc86-a16b-4ab3-8ac7-c1206d4b3c60": {
+          "name": "反思"
+        },
+        "73186d8b-412c-447c-b31d-ba6efced8854": {
+          "name": "介紹"
+        },
+        "a87f5d31-b7cb-48e5-b7c7-06f8a43e329f": {
+          "name": "用代碼創作藝術"
+        },
+        "c2639856-d143-4f85-ae32-262da1af5808": {
+          "progression_name": "視訊：JR Hildebrand的藝術家簡介"
+        },
+        "9d3c0460-5365-4117-811d-9728a5a3f9d9": {
+          "progression_name": "技能發展"
+        },
+        "3c6953b2-ead1-488b-b460-2735304f527f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "挑戰"
+        },
+        "b3505cdb-0f28-4265-a017-d4d3d77d6b72": {
+          "progression_name": "練習"
+        },
+        "738565b6-64b7-435b-92ea-42efb0b3fa2f": {
+          "progression_name": "預測"
+        },
+        "2a1be9e0-a252-42dc-a548-fb62c1c19e91": {
+          "progression_name": "額外關卡"
+        },
+        "958d98ef-b327-40df-bffe-70bd71ac92bf": {
+          "name": "反思"
+        },
+        "a9b4ed74-2780-4aa1-988a-c0fac2ae97f5": {
+          "name": "介紹",
+          "tips": [
+            null
+          ]
+        },
+        "68fc4cb4-cf83-491b-a896-0465d95d09a7": {
+          "name": "Sprite Lab 中的游泳小魚"
+        },
+        "0e4c9d5d-95f3-4156-ad18-fbd153d4a7df": {
+          "tips": [
+            null
+          ]
+        },
+        "1f719c75-2b20-4f3a-87b7-54e1df07ab6b": {
+          "progression_name": "視訊：精靈圖實驗室簡介"
+        },
+        "a266c420-212a-4352-9dab-0ebb021418cc": {
+          "progression_name": "預測"
+        },
+        "2a075c6b-296c-42fb-931a-7f035332357c": {
+          "progression_name": "技能發展"
+        },
+        "c9efe236-2792-4980-9431-e1bbff631f86": {
+          "progression_name": "視訊：如何製作精靈圖"
+        },
+        "3f6279d2-20fb-41da-aa6f-80a97efbe8ac": {
+          "progression_name": "練習"
+        },
+        "048bc86f-ea26-419c-9d73-452f86ff0000": {
+          "progression_name": "自由發揮"
+        },
+        "c5b1c51f-e863-4951-9163-1777993f687b": {
+          "name": "反思"
+        },
+        "3c242de5-2944-4439-a772-10f0e2bfd48a": {
+          "name": "探索應用程式",
+          "progression_name": "探索：示例App"
+        },
+        "25d0dd9f-5a89-4a91-a3de-aba0e507aac8": {
+          "progression_name": "技能發展"
+        },
+        "64fbbaf2-d24b-46f6-8f7c-d31e4c26abc6": {
+          "progression_name": "練習"
+        },
+        "727a30c1-2256-4e3c-aeff-c9a9cf427974": {
+          "progression_name": "自由發揮：製作一個場景"
+        },
+        "84be2102-875d-40ee-af17-903a1eb15736": {
+          "name": "反思"
+        },
+        "c4709ef3-6dff-44f9-ab00-7c8d4ceb84de": {
+          "tips": [
+            null
+          ]
+        },
+        "fcfb7745-6451-4f94-a9c1-23d681360aac": {
+          "name": "運行中的角色",
+          "progression_name": "預測"
+        },
+        "cc8e4408-1488-4da7-be3f-abc39f349b23": {
+          "progression_name": "視訊：行動的精靈圖"
+        },
+        "5ee02837-9f63-4306-84d8-ded40216114f": {
+          "progression_name": "技能發展"
+        },
+        "a04d7a73-d970-45f1-8c68-6553af32892f": {
+          "progression_name": "練習"
+        },
+        "6a8ef71a-9abe-49b8-94a8-e70512276c25": {
+          "progression_name": "自由發揮：製作一個互動場景"
+        },
+        "41f0b9b2-fd16-427b-808e-d70e4cc5b4f6": {
+          "name": "反思"
+        },
+        "9e411d33-77b5-4582-b8e8-dedb36230af5": {
+          "name": "介紹"
+        },
+        "c1903a35-66ca-4702-8dea-17cea274e921": {
+          "name": "在 Sprite Lab 中製作虛擬寵物"
+        },
+        "e6d62a4b-b381-4ce6-9301-da64d2be269a": {
+          "tips": [
+            null
+          ]
+        },
+        "3633b09a-0215-4fac-b23e-ce1f97c04948": {
+          "progression_name": "探索"
+        },
+        "922ff562-376a-4669-a127-3e51f785aad8": {
+          "progression_name": "小項目：創建虛擬寵物"
+        },
+        "116adfa6-d62e-421c-aeff-c0d7a60cb4f0": {
+          "progression_name": "自由發揮"
+        },
+        "fe969166-bb8d-4f28-b0a6-44222f2743bd": {
+          "name": "反思"
+        },
+        "76c17257-496f-4d15-a3a8-55d4cde71f32": {
+          "description": "歡迎學生來上課，簡單介紹當天的活動。"
+        },
+        "d7c09666-3349-4d9b-9c00-0755d08d3165": {
+          "description": "今天我們要做一些非常有創意的事情。你最喜歡的創新方式是什麼？"
+        },
+        "9a3fff4a-420a-45fd-9409-ec6cecaf15b9": {
+          "progression_name": "視訊：舞會派對熱身"
+        },
+        "5398d472-ce7e-4f6b-9a6c-ccfa31ebde30": {
+          "progression_name": "練習"
+        },
+        "0bb34d8e-12a2-4cb4-935d-0c7b247777ff": {
+          "progression_name": "視訊：舞蹈派對事件"
+        },
+        "537232f4-4f8e-4dd4-9b51-122c0d012e9a": {
+          "progression_name": "事件"
+        },
+        "6672d026-0039-4df8-b54f-f0fc92790588": {
+          "progression_name": "視訊：舞會派對節拍"
+        },
+        "06cef1c1-0946-4a77-acac-e9dec70a1573": {
+          "progression_name": "小節"
+        },
+        "cdbe0374-d0ce-426f-b3b3-def9a99df94a": {
+          "progression_name": "視訊：舞會派對屬性"
+        },
+        "22d25455-4f87-44cb-aa36-b5adc00e1ba1": {
+          "tips": [
+            "在這節課的這個時點，你可能會注意到，說明沒有那麼多規定性。鼓勵學生創新，探索引入的新模組。從這時候開始，學生代碼**不檢查正確性**，以鼓勵嘗試，而不是解決一個特定的任務。"
+          ],
+          "progression_name": "屬性"
+        },
+        "0b074fdf-834b-4d06-a5da-6c7e0c670b05": {
+          "progression_name": "視訊：舞會派對開啟！"
+        },
+        "24c3bf60-f0f7-4395-ae4c-12b4b0746c9f": {
+          "progression_name": "自由發揮"
+        },
+        "1d794759-7ad3-4ae6-9ca6-2d16a8c492eb": {
+          "progression_name": "額外關卡"
+        },
+        "99f1d214-501d-425f-87a6-b66407b328aa": {
+          "name": "反思"
+        },
+        "0681ba72-f4b3-4587-ad2b-c4343ee5d7af": {
+          "name": "介紹"
+        },
+        "109dc08b-1106-4a0d-bc01-7dba9d3a40b2": {
+          "name": "和 BB-8 與 Rey 一起練習迴圈（Loop）",
+          "progression_name": "視訊：與Rey和BB-8一起編程"
+        },
+        "a9ede4c3-8f00-479e-9a63-7d2c45e36469": {
+          "progression_name": "練習"
+        },
+        "e40c7888-610e-4876-9780-9f426355af66": {
+          "progression_name": "預測"
+        },
+        "abb57063-4095-45d3-8ea6-f6a1b59b62e4": {
+          "progression_name": "視訊：BB-8重複模組"
+        },
+        "398815f4-e1bb-4d7c-b2be-2c9380704b3e": {
+          "progression_name": "技能發展"
+        },
+        "f935eb4e-5cce-4727-b128-12e08a0da6f5": {
+          "progression_name": "挑戰"
+        },
+        "573324e5-a391-4e63-8b78-3af1d37a8250": {
+          "progression_name": "練習"
+        },
+        "1ee50550-1160-4e84-b3d8-72c9260f8c27": {
+          "progression_name": "預測"
+        },
+        "4e7de8b3-0096-40ec-8fc1-796fe0a50f36": {
+          "progression_name": "練習"
+        },
+        "34e6b039-ccae-45fe-9ab7-b690257c8f6c": {
+          "progression_name": "額外關卡"
+        },
+        "e11dba21-83fa-49a4-9d4f-d30ab72efe16": {
+          "name": "反思"
+        },
+        "ac0e42f0-eb1e-4e86-ac7f-9a4a36a9c806": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**動起來**\n\n-   給學生提供能做的動作或舞蹈動作的圖片。\n-   讓學生編排動作，並新增迴圈，編排自己的舞蹈。\n-   與班上其他同學分享舞蹈。\n\n**連回來**\n\n-   找一些 YouTube 上的有重複動作的流行舞蹈的視訊。\n-   你的班級能找到這些重複迴圈嗎？\n-   試試跟著歌曲來做同樣的事情吧！\""
+        },
+        "5e8e6fbf-ad94-47ff-935e-155e7a92c73f": {
+          "name": "介紹"
+        },
+        "ca09b8e6-6cc8-4fc5-a47e-3126629b1002": {
+          "name": "使用迴圈（Loop）繪畫貼紙藝術",
+          "tips": [
+            null
+          ]
+        },
+        "95e84aa8-80ce-430c-b12c-92d51483644e": {
+          "progression_name": "小專案: 設計貼紙"
+        },
+        "568dc8e1-9914-45bf-98bf-b878327ea8c1": {
+          "progression_name": "自由發揮"
+        },
+        "6fc84d3c-2f86-40ab-b9bd-cd54d3700fe6": {
+          "name": "反思"
+        },
+        "2f0beffd-547f-4c39-aad4-3f475ea744fe": {
+          "name": "介紹"
+        },
+        "744f5dec-6181-4973-bb05-c46564144240": {
+          "name": "迷宮裡的巢狀迴圈（Nested Loops）"
+        },
+        "12894c2b-8f8d-49f7-b339-f1e8f150bfd4": {
+          "progression_name": "練習"
+        },
+        "28d3a549-2b83-411f-aae6-a8fd0e6c6005": {
+          "progression_name": "視訊：蜜蜂巢狀迴圈"
+        },
+        "fb1eaf7d-a8d3-47c5-9dfd-44aa4d8910b2": {
+          "progression_name": "預測"
+        },
+        "b8c7db7b-7f3b-4b89-bde2-705562944f5b": {
+          "progression_name": "練習"
+        },
+        "f7e03887-22e1-4e97-b1e1-143776678547": {
+          "progression_name": "挑戰"
+        },
+        "05284324-e602-4f6c-a656-44ebba6a41c4": {
+          "progression_name": "練習"
+        },
+        "3080e687-1e30-47e4-bf9a-25346c9486eb": {
+          "progression_name": "預測"
+        },
+        "504c0708-e9cc-41e8-86b6-fcdcfc8c93e2": {
+          "progression_name": "額外關卡"
+        },
+        "4a4f0910-32a3-4438-bcf6-e0206fbb3f32": {
+          "name": "反思"
+        },
+        "012a07d9-4401-4f1b-9b2f-0ef2befba91e": {
+          "name": "介紹"
+        },
+        "071fbf5c-0fc0-4738-a7d1-558290f78934": {
+          "name": "和安娜與艾莎一同玩雪花",
+          "progression_name": "技能發展"
+        },
+        "784f33c3-e511-43ab-93b1-8ebb29c48883": {
+          "progression_name": "練習"
+        },
+        "70819138-46a2-4cab-ae61-d4ed5995e49a": {
+          "name": "反思"
+        },
+        "4df80825-7300-4e21-b3ec-5b1ecc62d490": {
+          "name": "介紹"
+        },
+        "83daad31-f1c9-4d21-897b-a291d39f55df": {
+          "name": "與 Minecraft 一起展望未來",
+          "progression_name": "技能發展"
+        },
+        "47b5c27a-db1c-4abd-a3c9-4d90561d7d79": {
+          "progression_name": "挑戰"
+        },
+        "9798ab7a-f709-42df-b9fb-1828099a88d3": {
+          "progression_name": "自由發揮"
+        },
+        "57cf4b4c-bc9c-480c-8645-715b23cedd68": {
+          "name": "反思"
+        },
+        "414b0efd-1356-4677-9c30-303d3c0afb41": {
+          "name": "介紹"
+        },
+        "13e970f9-2c63-49d0-9995-322afdd7f201": {
+          "name": "與小蜜蜂一起嘗試 If/Else（如果/否則）"
+        },
+        "b1dd72db-135f-4732-a4c7-6d157c9ffee9": {
+          "progression_name": "視訊：條件運算式：IF語句"
+        },
+        "8504a81d-7f72-44e2-ac40-5fe386544817": {
+          "progression_name": "預測"
+        },
+        "99b05859-1e56-404c-ab65-0eabd5009dc8": {
+          "progression_name": "技能發展"
+        },
+        "7c7cc1f1-c244-4f72-ad13-02b868da8070": {
+          "progression_name": "視訊：條件運算式：IF和If/Else語句"
+        },
+        "2ba5a718-c776-4973-b81b-46c01ee3a611": {
+          "progression_name": "技能發展"
+        },
+        "ed0aa04b-e740-415f-b009-82f8373ece90": {
+          "progression_name": "預測"
+        },
+        "acb76386-861e-420e-affd-2f61655a5423": {
+          "progression_name": "挑戰"
+        },
+        "480f26bc-03a7-4014-84de-e4a60e3caf83": {
+          "progression_name": "練習"
+        },
+        "9419a044-4ad7-4a3f-8718-fc5606ed7958": {
+          "progression_name": "額外關卡"
+        },
+        "f8ca4dfb-527e-420d-b6ff-5e528347a1f9": {
+          "name": "反思"
+        },
+        "6907fcc1-20b3-4705-93f9-dcd271fe873b": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**真/假標籤**\n\n-   讓學生排好隊，就像玩 [Red Light / Green Light](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm) 一樣。\n-   選擇一人站在前面，作為呼叫者。\n-   呼叫者選擇一個條件，請符合條件的人上前一步。\n    -   如果你穿了紅皮帶，上前一步。\n    -   如果你穿的是涼鞋，就上前一步。\n-   試著換個說法，比如說「如果你不是金髮，就往前走一步。」\n\n**巢狀**\n\n-   將學生配對或分成小組。\n-   讓他們在紙條上寫出撲克牌的「如果」陳述式，如：\n    -   如果花色是梅花\n    -   如果顏色是紅色\n-   讓學生製作類似的小紙條來當做結果用。\n    -   加 1 分\n    -   減 1 分\n-   完成後，讓學生從每種類型的紙條中選擇三個，然後選擇三張撲克牌，注意選擇的順序。\n-   用三張紙，讓學生寫出只用他們選擇的紙條來完成的三個不同程式，按任意順序都可以。\n    -   鼓勵學生把一些如果陳述式放在其他如果陳述式裡面。\n-   現在，請同學們用他們所畫的卡片，按照每個程式的相同順序，把這三個程式都執行一遍。\n    -   是否有兩個程式返回相同的答案？\n    -   是否有哪個程式返回了不同的答案？\""
+        },
+        "137d4f7b-efec-4607-97b0-e4838274a5c9": {
+          "name": "介紹"
+        },
+        "eb47f00e-2104-4a6e-b415-3457a740405f": {
+          "name": "農夫遊戲中的 while（當）迴圈"
+        },
+        "599f0ab4-6410-4002-9b4a-540e75d4f815": {
+          "progression_name": "技能發展"
+        },
+        "c2b77086-18bd-4e80-a600-86dc6f32f253": {
+          "progression_name": "視訊：農民While迴圈"
+        },
+        "2590c04c-01f0-4e10-99af-2bf8d06922ca": {
+          "progression_name": "預測"
+        },
+        "9ab1ae71-66af-4623-b62a-f064c3c1f6eb": {
+          "progression_name": "技能發展"
+        },
+        "0a95b61c-de3a-4cb9-a151-c562c5326c89": {
+          "progression_name": "挑戰"
+        },
+        "208367ed-d0e5-4b54-98bd-c2925f220711": {
+          "progression_name": "練習"
+        },
+        "a169da19-bf83-4912-a7b3-3751242c7f9e": {
+          "progression_name": "預測"
+        },
+        "8e573a8a-22a7-4169-b45d-5901ba99c8df": {
+          "progression_name": "額外關卡"
+        },
+        "aeb654df-63a6-4b86-913a-5041ccd70d0a": {
+          "name": "反思"
+        },
+        "eababef0-4852-4c6f-b5db-2021e532c24d": {
+          "name": "介紹"
+        },
+        "78faf9ff-f8c9-4623-8b19-ebb00866ef62": {
+          "name": "Minecraft 中的條件式：水上巡航 ",
+          "progression_name": "視訊：我的世界：水上航行簡介"
+        },
+        "ae2702dd-1b90-4eac-a21e-8cb4a84b6cd1": {
+          "progression_name": "技能發展"
+        },
+        "11a2db83-caba-4a29-8359-3367bfff4548": {
+          "progression_name": "視訊：我的世界：水上航行“重複直到”"
+        },
+        "1604d928-c94d-4496-a973-156b5ce382a9": {
+          "progression_name": "技能發展"
+        },
+        "de80d136-6c30-4f33-8f97-9cc4800b3ff0": {
+          "progression_name": "視訊：我的世界：水上航行條件運算式"
+        },
+        "6ebeff6b-35ce-4b04-8570-ea1ef77e68cc": {
+          "progression_name": "技能發展"
+        },
+        "67444cba-ef3d-49b1-8e8a-d8ee10bafdc6": {
+          "progression_name": "視訊：我的世界：水上航行賀詞"
+        },
+        "828088e0-ab60-429b-ac4b-4317696c271c": {
+          "progression_name": "自由發揮"
+        },
+        "1b800ef1-9bc4-4366-8510-0539d35b80a1": {
+          "name": "反思"
+        },
+        "d5f6ef42-7dc3-4862-a568-590c2a26c7fa": {
+          "name": "介紹"
+        },
+        "db031fa5-7047-46ee-8ccf-49a1f15c696a": {
+          "name": "迷宮裡的 until（直到）迴圈",
+          "progression_name": "技能發展"
+        },
+        "c7e62f55-0604-4487-8b4f-2b788e45cac6": {
+          "progression_name": "視訊：“重複直到”語句"
+        },
+        "02a06c86-4808-4c05-93b2-45ed61a1eb29": {
+          "progression_name": "預測"
+        },
+        "b19a320c-8372-4505-90c0-a44255e0ae50": {
+          "progression_name": "技能發展"
+        },
+        "04c4d948-2e60-4a38-8c5b-9bf7280d029f": {
+          "progression_name": "挑戰"
+        },
+        "e695d0b5-156d-4dd7-9785-47d3e834cb16": {
+          "progression_name": "練習"
+        },
+        "1aae2f0c-e768-4e5b-a26e-cb17235f4d65": {
+          "progression_name": "預測"
+        },
+        "2ec4116a-6ea6-453e-8c52-ffc4b55077c0": {
+          "name": "反思"
+        },
+        "d89fd667-2100-4ea0-ac33-c25c317c1138": {
+          "name": "介紹"
+        },
+        "88047116-9c78-4003-99fe-cd24ceb91b93": {
+          "name": "使用條件式（Conditional）收割農作物",
+          "progression_name": "視訊：使用條件運算式收穫"
+        },
+        "f93f7ead-cfbc-494a-bfa3-03ed6ed8e7a4": {
+          "progression_name": "技能發展"
+        },
+        "d5c88852-7de9-47ce-82d8-f93f6c33b2c0": {
+          "progression_name": "練習"
+        },
+        "7d64d5dc-765d-4bb4-8664-5d6b8a3ddc1f": {
+          "progression_name": "挑戰"
+        },
+        "d21f6b6c-7d91-4877-8e6d-d2c291eaa930": {
+          "progression_name": "練習"
+        },
+        "e477ffba-5d09-425e-ab4c-c84cbeb23378": {
+          "progression_name": "預測"
+        },
+        "b0e26070-0ca9-4033-9497-dcaaf64de124": {
+          "progression_name": "額外關卡"
+        },
+        "a96ae178-a2f2-4d14-a5e6-622e33ead4ea": {
+          "name": "反思"
+        },
+        "fbf95927-5c0c-4980-bbb6-7a4bc75da827": {
+          "name": "介紹",
+          "tips": [
+            null
+          ]
+        },
+        "22f29e56-1a7c-402b-aaf8-bd5bae9e6546": {
+          "name": "Minecraft 中的函式",
+          "tips": [
+            null
+          ],
+          "progression_name": "視訊：我的世界 - 吉祥物"
+        },
+        "2d570216-8519-47e7-bc42-58b9e876dd9e": {
+          "progression_name": "技能發展"
+        },
+        "b14bedab-3098-4e91-843d-1aad4d569bf4": {
+          "progression_name": "視訊：我的世界 - 重複循環"
+        },
+        "4da6304f-c60e-4701-b04e-38b38ddf008f": {
+          "progression_name": "技能發展"
+        },
+        "fb770a14-6507-48bf-96f0-cdd9270ab48b": {
+          "progression_name": "視訊：我的世界 - 函數"
+        },
+        "94e730d2-235a-408d-8a51-b9ca83fe59e0": {
+          "progression_name": "技能發展"
+        },
+        "49dffb5b-710d-4480-90b9-da7b93963699": {
+          "progression_name": "視訊：我的世界 - 賀詞"
+        },
+        "0cb275f3-0f5c-4b45-a456-c3acd5a7b82d": {
+          "progression_name": "自由發揮"
+        },
+        "5284ee61-2ef7-4772-8473-6d25d45dbb65": {
+          "name": "反思"
+        },
+        "d2c0374f-fce3-4290-9058-8a47a9b14357": {
+          "name": "介紹"
+        },
+        "e0582255-a83c-4278-8b18-9ce09ac1118d": {
+          "name": "在收割者遊戲中學習函式（Function）",
+          "progression_name": "農夫"
+        },
+        "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f": {
+          "progression_name": "練習"
+        },
+        "a2bdcd68-5873-4a71-82a9-049b343d1e33": {
+          "progression_name": "視訊：如何創建一個簡單的函數"
+        },
+        "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4": {
+          "progression_name": "練習"
+        },
+        "480098ab-4bb6-4713-bf04-3404e93c9fe3": {
+          "progression_name": "挑戰"
+        },
+        "ff540d41-6f94-4e4e-affd-0d167ab24093": {
+          "progression_name": "練習"
+        },
+        "ba634679-9f17-4493-878d-b657dad934a2": {
+          "progression_name": "預測"
+        },
+        "bf38bf0f-7ad7-4a0a-af66-0b71c6213644": {
+          "name": "反思"
+        },
+        "5f8d119b-736b-416c-b460-0cf8c13f4d49": {
+          "name": "介紹"
+        },
+        "7e8dd7a8-74bd-4ae5-b88c-3656e16328a2": {
+          "name": "在藝術家遊戲中使用函式（Function）",
+          "progression_name": "預測"
+        },
+        "1c5351ca-eb12-4915-9840-7740a6492981": {
+          "progression_name": "練習"
+        },
+        "9e8a729a-c0b8-4d57-ad98-fd2132ad1ec2": {
+          "progression_name": "挑戰"
+        },
+        "6f138e96-5674-4760-b888-e6020afed570": {
+          "progression_name": "練習"
+        },
+        "a4b3a551-7660-45ad-95a6-a404eaef795d": {
+          "progression_name": "預測"
+        },
+        "556d480c-8833-4dc1-b5ea-fcbd1ed85890": {
+          "progression_name": "自由發揮"
+        },
+        "bc303f43-1995-42e4-887d-02233e2a5905": {
+          "progression_name": "額外關卡"
+        },
+        "64524054-11ee-4769-ab63-83921f0fa6d3": {
+          "name": "反思"
+        },
+        "71d834a2-aedf-4d4c-95d4-4961964ad2f9": {
+          "name": "檢視"
+        },
+        "c69862bf-8fe7-4a68-bb37-ff81924f4bf5": {
+          "name": "文字與提示",
+          "progression_name": "預測"
+        },
+        "30ab0425-1627-48c1-96fe-419887aa0ae7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "視訊：文本和提示符"
+        },
+        "515ecad5-bd7d-46e5-b210-53f7e7a3d43b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "2a0713a5-ac91-4352-9d68-df19d415fd97": {
+          "progression_name": "練習"
+        },
+        "045bb481-c045-49d5-874c-41f39b32980b": {
+          "name": "檢視"
+        },
+        "36962720-1371-45ca-a0b0-f2c29c0aee51": {
+          "name": "反思"
+        },
+        "aa72fe0f-492d-4c13-827d-43918664378e": {
+          "name": "介紹"
+        },
+        "bb115604-d0c7-4483-98c0-2d59d04351bb": {
+          "tips": [
+            null
+          ]
+        },
+        "d51c423f-e3c0-482f-be51-85c0ea2fac87": {
+          "name": "檢視"
+        },
+        "be0c1c94-6eec-4c10-b90f-59da0ebb1a63": {
+          "tips": [
+            null
+          ]
+        },
+        "b2d87065-8954-443d-a9be-bb206b411b24": {
+          "progression_name": "預測"
+        },
+        "3448e98d-17c0-47c5-a924-ce769b817cd5": {
+          "tips": [
+            null
+          ]
+        },
+        "93c42114-b7e6-4d21-9e93-0760e125a7b9": {
+          "progression_name": "技能發展"
+        },
+        "b8a87ad4-50ba-433f-8c86-27093af1fafd": {
+          "name": "反思（Reflect）"
+        },
+        "d87717c8-d527-450d-9bdb-e8932caba6a1": {
+          "name": "檢視"
+        },
+        "c2ecbddf-b99e-4050-903f-fdd7b6660de9": {
+          "progression_name": "預測"
+        },
+        "5b229241-270d-40a7-b79f-40b950f5c494": {
+          "progression_name": "視訊：藝術家中的變數"
+        },
+        "84a9b36a-0025-40e0-a586-3a4b7922202d": {
+          "progression_name": "技能發展"
+        },
+        "29bc9a2b-2f0e-4f9f-becf-3264d6d93b43": {
+          "progression_name": "自由發揮"
+        },
+        "65203df8-9f72-4d3a-9666-25fd7cb97962": {
+          "name": "反思"
+        },
+        "25e6419e-5475-4864-a3db-c05f2d873436": {
+          "name": "介紹"
+        },
+        "aed9e7b5-5f28-4fef-81d9-35d67a89ce96": {
+          "name": "在蜜蜂遊戲中變更變數",
+          "progression_name": "技能發展"
+        },
+        "d2b5d26b-b1db-4e4f-a83f-db69b32fd541": {
+          "progression_name": "練習"
+        },
+        "a615a593-2c9c-4eaf-af4d-e20ec484ef9c": {
+          "name": "反思"
+        },
+        "4c108344-ee78-432c-bec0-21f055aec442": {
+          "name": "介紹"
+        },
+        "9d7beb7b-eaf8-43ce-ae6a-2340a5b5c3d8": {
+          "progression_name": "檢視"
+        },
+        "12c6a686-7a0e-42d5-bdf5-b8d3827addcc": {
+          "progression_name": "探索：For循環"
+        },
+        "76edcfa5-1645-4da7-935c-1a2e53367409": {
+          "progression_name": "影片：計次迴圈"
+        },
+        "aa87a0a5-5dde-4769-92d5-94b9d0063d84": {
+          "progression_name": "預測"
+        },
+        "09232a7b-7302-4953-bf68-8d92ccc592e4": {
+          "progression_name": "技能發展"
+        },
+        "8ff9ffd9-2fd1-42d0-90cf-42f595c4c816": {
+          "progression_name": "練習"
+        },
+        "ea00f202-5974-43d9-831a-37197acb6673": {
+          "progression_name": "額外關卡"
+        },
+        "84eb44ea-5fc3-46cf-8aa9-df823a4c76c0": {
+          "name": "反思"
+        },
+        "bb3c50cd-8d7e-457a-b39d-2fe3172f0e9e": {
+          "name": "介紹"
+        },
+        "6632ae59-76a8-4f0d-bb29-fc591020ed93": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：計次迴圈"
+        },
+        "0ffc4049-22e7-4dab-8199-b55bfc9463bd": {
+          "progression_name": "探索"
+        },
+        "e0e39e0f-93b9-40b2-abe5-18886551cf49": {
+          "progression_name": "技能發展"
+        },
+        "f8950515-c428-4508-b465-0930dcbb9d57": {
+          "progression_name": "自由發揮"
+        },
+        "61a1cba1-c9b5-40c9-bbad-e4633be05b85": {
+          "progression_name": "額外關卡"
+        },
+        "f9e39772-a5dd-4139-aafb-13d5e7ac4da0": {
+          "name": "反思"
+        },
+        "2db3039b-c245-429c-9232-dd4165a45bb6": {
+          "name": "計畫"
+        },
+        "464b07bf-434b-4b29-8115-fb7ad1d15f56": {
+          "tips": [
+            null
+          ]
+        },
+        "926aed8f-c241-4aff-9dac-6045708f27d7": {
+          "tips": [
+            null
+          ]
+        },
+        "3ecaaeb5-144a-49b0-b912-e61446cd31ed": {
+          "name": "示例項目",
+          "progression_name": "示例項目"
+        },
+        "77e1eae3-37ee-4b59-8014-30279b618562": {
+          "name": "創建你的專案",
+          "progression_name": "創建你的專案"
+        },
+        "de1b7224-82b6-4f1e-aa81-b9aebc78c6b1": {
+          "name": "介紹",
+          "tips": [
+            null
+          ]
+        },
+        "f1cf91eb-60a1-478e-a6e8-926270f90a9c": {
+          "tips": [
+            null
+          ]
+        },
+        "55fe1e9d-bf0e-4294-88b0-9f43918c4407": {
+          "name": "學習滑鼠的拖放"
+        },
+        "749e673c-fb7b-4101-9308-78d14af34b57": {
+          "tips": [
+            null
+          ]
+        },
+        "e7ff4d51-6bd2-4e1b-9da4-71c9c010c069": {
+          "description": "教師在電腦科學教育中扮演著至關重要的角色，並營造協作和充滿活力的課堂環境。在線上難題中，教師的角色主要是鼓勵和支持。線上難題應該以學生為中心，因此當學生陷入困境時，老師應該避免介入。關於如何做到這一點的一些思路是：",
+          "tips": [
+            "向學生展示幫助同學的正確方法：\n\n-   不要坐在同學的椅子上\n-   不要使用同學的鍵盤\n-   不要碰同學的滑鼠\n-   確保同學在你離開之前能描述出解決方案"
+          ]
+        },
+        "282e9e32-5912-4b7b-b154-daceab2b09db": {
+          "progression_name": "技能發展"
+        },
+        "9374c17f-89e9-405d-9c08-996fbf90e971": {
+          "name": "反思"
+        },
+        "f1441fec-0659-46e7-b4a8-e5faada350e9": {
+          "tips": [
+            null
+          ]
+        },
+        "638a5ac0-e923-4fd6-8665-22fc3dadc820": {
+          "tips": [
+            null
+          ]
+        },
+        "eb919624-2302-4134-8c74-8b0dbf96bd33": {
+          "tips": [
+            "向學生展示幫助同學的正確方法：\n\n-   不要坐在同學的椅子上\n-   不要使用同學的鍵盤\n-   不要碰同學的滑鼠\n-   確保同學在你離開之前能描述出解決方案"
+          ]
+        },
+        "6b2f9929-2d06-4934-824f-0cc91cce6b30": {
+          "progression_name": "視訊：模組編程"
+        },
+        "bc9ddb65-4298-403d-b9b4-d8c7ad98b760": {
+          "progression_name": "技能發展"
+        },
+        "025d52e0-f429-4572-9ee1-af893e4208ae": {
+          "name": "反思"
+        },
+        "4b2ae2f9-5106-4ab2-91b3-fa6b5077a205": {
+          "name": "與憤怒鳥一起編程",
+          "progression_name": "技能發展"
+        },
+        "d49962e7-d0ed-45b1-88e1-586107bfc184": {
+          "progression_name": "挑戰"
+        },
+        "fbf4cf8d-738c-4f5f-bb85-8014dcc2dee7": {
+          "progression_name": "練習"
+        },
+        "45d87d50-30ef-4aa3-bc3f-e06911ea7ecd": {
+          "progression_name": "額外關卡"
+        },
+        "be7516c7-7930-4a50-afac-99d9ff233e72": {
+          "tips": [
+            null
+          ]
+        },
+        "311a4a95-ba40-4a09-8020-efcbdd67def8": {
+          "name": "反思"
+        },
+        "7dca7d19-2a5c-4dd5-a3ee-86ebe3fc1d6c": {
+          "description": "以小組為單位，讓學生在紙上設計出自己的迷宮，並讓其他學生或小組編寫程式來解決。為了增加趣味性，可以讓學生扮演小豬和小鳥，製作真人大小的迷宮。"
+        },
+        "0918b0a2-6581-4f48-b0f1-4ef6a2b114ce": {
+          "name": "介紹"
+        },
+        "0700ca91-8b31-4bd0-bbdc-888c7ca202ac": {
+          "name": "和 BB-8 與 Rey 一起寫程式",
+          "progression_name": "視訊：與Rey和BB-8一起編程"
+        },
+        "7e274048-6f57-4ec7-b0ef-a9fea4f99ce2": {
+          "progression_name": "技能發展"
+        },
+        "8460d588-eb09-42aa-a1ae-486be4d61940": {
+          "progression_name": "挑戰"
+        },
+        "4938d690-fc47-4e8a-917d-641dd5405763": {
+          "progression_name": "練習"
+        },
+        "36f25ad7-3b6e-446c-9c8a-85b50c7ed131": {
+          "name": "反思"
+        },
+        "951923b1-6912-477c-b97f-b4f9d6f71f62": {
+          "name": "介紹"
+        },
+        "4751f547-860d-4156-abbd-9730989185de": {
+          "name": "和農夫一起學程式"
+        },
+        "30e8181b-a550-477d-9dd7-c9eb8ed6a671": {
+          "tips": [
+            null
+          ]
+        },
+        "b003ab75-0f36-4796-a7bc-82a31d13c79a": {
+          "progression_name": "視訊：收穫者"
+        },
+        "5d87e611-aef5-4743-b2c2-4c12c39f3069": {
+          "progression_name": "技能發展"
+        },
+        "69b88738-d983-4868-a2b6-7ab6d8f09561": {
+          "progression_name": "視訊：使用步進按鈕調試"
+        },
+        "ac3a1054-1f1e-4c0a-8c2c-e20afa043bdf": {
+          "progression_name": "技能發展"
+        },
+        "410ccff6-d1ef-482d-8997-c2364398219c": {
+          "progression_name": "挑戰"
+        },
+        "d6fa1a62-37e2-45df-8eab-84bcf1ed877d": {
+          "progression_name": "練習"
+        },
+        "9bb9132b-8c9b-48ca-9ab8-61dbd56e5bde": {
+          "name": "反思"
+        },
+        "e0d79c69-a899-455f-b74d-670229a86973": {
+          "name": "介紹"
+        },
+        "40bca876-4212-4432-8e78-451ac05d4b6a": {
+          "tips": [
+            null
+          ]
+        },
+        "11413c79-9a85-4bc9-8f69-4880828b1218": {
+          "tips": [
+            null
+          ]
+        },
+        "b7cac6ab-1f77-4f85-8049-a0f88b26e2d1": {
+          "progression_name": "技能發展"
+        },
+        "50fc91cc-37b2-4079-9643-f2e08ec07312": {
+          "progression_name": "視訊：冰河世紀循環"
+        },
+        "b28b1ad5-4cd6-44ce-b3b9-7dcdebbf95ff": {
+          "progression_name": "技能發展"
+        },
+        "98564d72-b4b7-4c4e-a977-76bec68b7278": {
+          "progression_name": "挑戰"
+        },
+        "eca56e55-c71d-40a8-8e0b-05ee293c5a86": {
+          "progression_name": "練習"
+        },
+        "40e8bdb1-49b6-4e8a-88ec-fd980627ed4e": {
+          "name": "反思"
+        },
+        "ea1b43fd-047d-4ed2-a8f6-9c639ec26416": {
+          "name": "介紹"
+        },
+        "7976932c-a4b6-489f-baf4-bfe75e9f6e73": {
+          "name": "與 Laurel 一起學習迴圈"
+        },
+        "6976e6de-38fa-42aa-b538-606a39e4ab91": {
+          "progression_name": "視訊：收集者"
+        },
+        "0c5c0b74-df51-44ca-9b65-78e14fff2a73": {
+          "progression_name": "技能發展"
+        },
+        "59143cde-2005-4d1d-97e3-c53102f1ff17": {
+          "progression_name": "視訊：使用重複模組"
+        },
+        "e371ebd3-968f-49a0-a5dd-c464cdd9e1f0": {
+          "progression_name": "技能發展"
+        },
+        "1ece725c-150b-4d58-bac0-9891ed7bf381": {
+          "progression_name": "挑戰"
+        },
+        "5129f085-9edb-46af-86fd-2dc86602ef13": {
+          "progression_name": "練習"
+        },
+        "371fe3c3-843c-447c-b5c2-337d8584e873": {
+          "progression_name": "額外關卡"
+        },
+        "944b3c69-e65e-4051-9002-fb0900103e22": {
+          "name": "反思"
+        },
+        "524c769b-ceae-4bde-906e-c73bde2ce3e9": {
+          "name": "介紹"
+        },
+        "10437aa7-8a7f-4c9d-ad68-eb015cd57156": {
+          "name": "海洋場景與迴圈（Loop）"
+        },
+        "58f96f9e-2ea8-433e-a770-1eec5ead2f83": {
+          "tips": [
+            null
+          ]
+        },
+        "9ef7b3af-9635-401c-9c3b-edb314aeab10": {
+          "progression_name": "視訊：代碼工作室中的藝術家"
+        },
+        "a3ae6601-d988-4211-bd0f-1a29739732c7": {
+          "progression_name": "技能發展"
+        },
+        "8b343c8e-4adc-4bf6-aa3a-a574d8a9953e": {
+          "progression_name": "視訊：藝術家中的循環"
+        },
+        "f6fd7485-d7ca-40e8-9a20-d1f6236db0a4": {
+          "progression_name": "技能發展"
+        },
+        "204739af-3260-4213-8598-d13acc23e00d": {
+          "progression_name": "挑戰"
+        },
+        "7ba89248-c1c2-4bb2-a72e-18f406424ee6": {
+          "progression_name": "練習"
+        },
+        "45027086-96db-45ba-baa9-2983b677e8c9": {
+          "progression_name": "自由發揮"
+        },
+        "ac9f4b18-ea6f-4e24-bcfc-07ae916db178": {
+          "progression_name": "額外關卡"
+        },
+        "1ab77e7d-e239-43a3-a293-b142e9dd5950": {
+          "name": "反思"
+        },
+        "1e964e3a-33dc-4a31-b893-44e0b55c0ad6": {
+          "name": "介紹"
+        },
+        "4e80fb44-708d-420f-8ae7-c36bfdd20075": {
+          "name": "使用迴圈（Loop）在花園中繪畫",
+          "tips": [
+            null
+          ]
+        },
+        "5a79f620-d679-4a68-9d90-91f8e5f311c9": {
+          "progression_name": "技能發展"
+        },
+        "baa778c6-41e7-4816-9aa2-3e0a0e88a12a": {
+          "progression_name": "挑戰"
+        },
+        "8e20449d-c692-4cac-861a-d8e19fd768a8": {
+          "progression_name": "練習"
+        },
+        "1c1d446d-d36d-4429-9aa9-c043841d460a": {
+          "progression_name": "自由發揮"
+        },
+        "74ab6d31-39e4-4ccf-941d-819c20c60c91": {
+          "progression_name": "額外關卡"
+        },
+        "98e68d36-87f1-4cfe-b988-63f9b3b51882": {
+          "name": "反思"
+        },
+        "44c1a7f9-c83d-4be4-a263-05383ae1eadb": {
+          "name": "介紹",
+          "tips": [
+            null
+          ]
+        },
+        "2aee3299-5be5-46cf-8424-17eab91ae9e9": {
+          "name": "全班預習線上關卡"
+        },
+        "d14782c7-0b0d-47ca-bf31-c0c699ad2af6": {
+          "name": "讓事件活動起來"
+        },
+        "a57f507a-be21-4b13-b6dd-8e23220b2e85": {
+          "progression_name": "視訊：劇本實驗室簡介"
+        },
+        "2e28db00-9470-4dcb-9a9b-7098dbf5c12b": {
+          "progression_name": "自由發揮"
+        },
+        "55e22a45-8561-4471-a957-13667be5a15c": {
+          "progression_name": "練習"
+        },
+        "6b2e09f0-7a68-497a-ab27-da65bf20e45b": {
+          "progression_name": "小專案: 喬治狗兒"
+        },
+        "8a9bb5d1-721a-426a-9002-318e30cdef0f": {
+          "progression_name": "額外關卡"
+        },
+        "dd1fd06b-92d8-4020-a58b-034802f65cc8": {
+          "name": "反思"
+        },
+        "85a0391a-826e-4c1e-b208-5b9d7c82c65d": {
+          "description": "利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。**幕後探秘**當你分享故事的連結時，你也會分享背後的所有代碼。這對學生來說是一個很好的學習方式。-   將完成的故事連結釋出到線上。    -   創作一個你自己的故事來分享！-   當學生載入連結時，讓他們按一下「運作原理」按鈕來檢視故事背後的代碼。-   以小組為單位，討論同學們為自己的故事編寫代碼的不同方式。    -   有什麼讓你感到驚訝？    -   你想嘗試一下什麼？-   選擇別人的故事，然後按一下`重編`，在此基礎上進行修改。（別擔心，原來的故事不會受到影響。）"
+        },
+        "813d23e7-c45b-4fe4-b010-6f03fe92e572": {
+          "name": "介紹"
+        },
+        "7f720bee-3f9a-4837-805d-3686a97947ba": {
+          "name": "以事件（Event）展開皇家大戰"
+        },
+        "f030f807-4ee3-45a2-901b-dc4a5c465a1e": {
+          "progression_name": "小專案: 皇家對戰"
+        },
+        "7e3a5e36-8b18-4987-843e-044f09be9746": {
+          "progression_name": "自由發揮"
+        },
+        "ac20896a-a275-4b6f-a06b-3ffdc83bbb7e": {
+          "progression_name": "額外關卡"
+        },
+        "7f9c451a-0554-4989-b7c8-506ea91062ba": {
+          "name": "反思"
+        },
+        "2c09883a-7c60-446a-ace5-d896370d3d71": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**幕後探秘**\n\n當你分享故事的連結時，你也會分享背後的所有代碼。這對學生來說是一個很好的學習方式。\n\n-   將完成的故事連結釋出到網上\n    -   創作一個你自己的故事來分享！\n-   當學生載入連結時，讓他們按一下「運作原理」按鈕來檢視故事背後的代碼。\n-   以小組為單位，討論同學們為自己的故事編寫代碼的不同方式。\n    -   有什麼讓你感到驚訝？\n    -   你想嘗試一下什麼？\n-   選擇別人的故事，然後按一下`重編`，在此基礎上進行修改。（別擔心，原來的故事不會受到影響。）\""
+        },
+        "7a945439-a8e0-438c-a2a3-7e81b6832618": {
+          "progression_name": "我的線上鄰居"
+        },
+        "05ed12f0-289f-4706-976f-cd05c6780b2e": {
+          "description": "### 重點詞彙\n\n-   **線上**：使用電腦、電話或平板電腦瀏覽網站或 app\n-   **網站或 app**：一個你可以在互聯網拜訪的地方\n\n**問**：_當你去新地方的時候，你需要做甚麼來確保安全？_ ([投影片 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\n邀請學生回答。答案會各有差異，但強調以下的安全則：\n\n-   與大人一同前往\n-   不要自己亂跑\n-   只與你認識的人交談\n\n**說**：_今天我們將討論在互聯網遊覽與現實生活中遊覽很相似，就像在現實遊覽新地方時，會有一些守則確保安全，同樣也有一些方法確保你在網上的安全。_\n\n**放映**[投影片 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) 並表明**線上** 為使用電腦、電話或平板電腦瀏覽網站或 app\\_。\n\n**展示**[投影片 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) 的我的線上鄰舍[2]，然後問：_阿姆斯喜歡互聯網的甚麼？他在互聯網上可以做哪些事情？_\n\n邀請學生回應。回應範例：\n\n-   他喜歡參觀很酷的地方。\n-   他可以與家人和朋友交談。\n-   他可以學習許多新的東西。\n-   他可以在網上創造東西。\n\n**問**：_阿姆斯在網上遊覽時遵守了哪三條規則？_\n\n邀請學生回應。放映[投影片 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) 並強調三條主要規則：\n\n1.  一定要先問的父母（或你信任的大人）。\n2.  只與你認識的人交談。\n3.  駐足在對你來言合適的地方。\n\n解釋駐足在「合適」的地方是指確保該網站或 app 適合兒童，並且你有權到那裏。"
+        },
+        "11cff0b0-c89c-4fa0-978f-787e3b4e4c27": {
+          "description": "**說**：_現在我們會學習一首短詩，幫助我們記住網誌安全的規則。首先，我將朗讀這首詩，然後我們一起讀。_\n\n**放映**[投影片 7](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_196) 並在朗誦這首詩時模仿詩中的動作。這是一首呼喚和回應的詩歌，有不同的動作來分別對應三條安全規則。\n\n**讀** 詩，與你的學生一起。當學生朗讀的時候，他們應該跟上動作。這首詩亦適合一位學生扮演老師的角色，讓全班同學來回應他。\n\n**安全第一！作者 Jenny Pritchett**\n\n_我們需要安全_\n\n_每當在線上時_\n\n_遵守這些規則_\n\n_享受美好時光！_\n\n[舉起 1 隻手指] \\*必定先問問父母 \\*\n\n[舉起 2 隻手指] \\*只跟認識的人聊天 \\*\n\n[舉起 3 隻手指] _只到適合自己的網站_\n\n_我們便會安全無虞_\n\n_無論走到哪一方_\n\n注意：[詩歌海報](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) 非常適合用作每週詩歌，或作為啟動電腦或其他設備時的慣例。"
+        },
+        "0fef2713-dcd5-4c38-96e3-78954af93fec": {
+          "description": "**說**： _電腦讓你在不離開教室也能夠遊覽遙遠的地方。_ \n\n表明 **網站** 是指 _你能在網上到訪的地方。_ ([投影片 8](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_245)) 向學生解釋他們能在網上到訪現實地方的網站或 apps，如動物園和博物館。這些地方或許離他們居住的地方很遠，但他們仍然可以在網上遊覽該地。\n\n**選擇** 一個網站作為全班探索的對象。如果你不肯定探索哪些好網站，可以嘗試以下：\n\n-   [聖地牙哥動物園](http://kids.sandiegozoo.org/)\n-   [國家地理兒童探索世界](https://kids.nationalgeographic.com/explore/countries/)\n\n**問**： _打開一個設備、網站或 app 之前，第一條規則是甚麼？_\n\n邀請學生分享，提醒他們在使用設備或瀏覽網站或 app 時，一定要徵求大入的同意。\n\n與你的班級一同**探索**你選的網站，讓學生他們最感興趣的頁面和活動。當你瀏覽該網站時，指出學生在網上時如何跟隨另外兩條的規則：只與認識的人交談，以及駐足在只適合他們的地方。\n\n注意：如果你正在電腦實驗室或教室裏有足夠的設備，你可以讓學生單獨或分組進行探索。"
+        },
+        "03cbbbdf-41c3-47a1-aad7-d871e5c43061": {
+          "description": "以下是你可以提供給學生以加強他們學習的額外資源:\n\n-   [Family Activity](https://drive.google.com/open?id=17Tq9wgw2F9sMkE2Z2a2zkriLK0zp1qDsSkv5YTB7Ldg) \n-   [Family Tips](https://www.commonsense.org/education/family-tips/k-5-privacy-and-security)"
+        },
+        "5e98b1b4-ab1d-4607-8234-fb70c37ae557": {
+          "name": "介紹",
+          "description": "#### 在電腦教室的行為舉止\n\n**目標：**本討論將教導學生在進入電腦教室時應該遵從什麽以及如何表現。"
+        },
+        "15b4677a-d313-433b-848f-8e1a9e87f4cd": {
+          "tips": [
+            "-   在教室裏使用平靜的肢體動作\n-   不要嚼口香糖或糖果\n-   對你的手進行消毒\n-   與你的夥伴坐在一臺電腦前\n-   確保第一個 \"司機 \"可以拿到滑鼠\n-   當你感到煩躁時，不要拍打或搖晃電腦或螢幕。\n-   遵循**/\\*20/20規則**--如何防止眼睛疲勞\n-   如何應對每20-30分鐘一次的\\*\\*\\*扭動（需要免費登錄GoNoodle網站）。\n-   在問老師問題之前先問你的同學\n-   降低音量，以便其他人都能聽到他們的隔壁同學。\n-   用你的筆記來記錄感受和解決方案"
+          ]
+        },
+        "7890644b-ce6b-45ce-9d69-f94127e930f0": {
+          "description": "**討論：**\n\n圍繞電腦教室的期望進行良好的討論，以確保學生理解這些規則。一些討論的主題可能包括:\n\n-   在電腦教室裏跑步可以嗎？\n-   當我們在電腦教室裏時，我們應該多大聲地說話？\n-   如果你在某個關卡卡住了，你應該怎麽做？\n-   如果你感到煩躁，拍打電腦會有幫助嗎？\n-   當我們要去電腦教室的時候，我們應該如何準備？"
+        },
+        "ffe0c470-7eb8-4ca5-ba9c-3f7c3cdce068": {
+          "description": "### 預覽\n\n投影本課中的一個關卡。向全班展示如何點擊圖片並通過拖放將其放置在正確的位置。故意犯一些錯誤，如點擊背景或在圖片放到正確位置之前就把它放下。當你遇到這些問題時，請班上的志願者幫忙。"
+        },
+        "f3d9ff95-5a31-4d0d-b1f5-7934be9edf02": {
+          "name": "學習滑鼠的拖放"
+        },
+        "e9117446-0648-4712-9bab-f477cc4a7763": {
+          "tips": [
+            null
+          ]
+        },
+        "4297e33f-2028-4d9e-bfe0-76e774c504a5": {
+          "description": "教師在電腦科學教育中扮演著至關重要的角色，並營造協作和充滿活力的課堂環境。在線上難題中，教師的角色主要是鼓勵和支持。線上難題應該以學生為中心，因此當學生陷入困境時，老師應該避免介入。關於如何做到這一點的一些思路是：",
+          "tips": [
+            "向學生展示幫助同學的正確方法：\n\n-   不要坐在同學的椅子上\n-   不要使用同學的鍵盤\n-   不要碰同學的滑鼠\n-   確保同學在你離開之前能描述出解決方案"
+          ]
+        },
+        "1649ef8d-4ee4-47d1-8bcc-bb5d13194f38": {
+          "progression_name": "技能發展"
+        },
+        "719202e7-e59f-44af-9208-46eb120b3ba0": {
+          "name": "反思",
+          "tips": [
+            null
+          ]
+        },
+        "6b3b5eca-1657-4a57-a9d4-883dc76a29cb": {
+          "name": "介紹"
+        },
+        "faec25bb-b1b4-4747-8e97-f0c41662b482": {
+          "tips": [
+            "如果全班開始喊叫，說明你一次只能聽到一個指令。如果有幫助的話，可以點名個別學生。"
+          ]
+        },
+        "025dd978-5154-4bab-ae59-60537c40fe9d": {
+          "progression_name": "視訊：快樂地圖 - 離線活動"
+        },
+        "db8c80aa-92a2-47be-bd6e-ccb990be20d4": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**玩具地圖**\n\n-   用膠帶在地毯上製作一個跟實物一樣大小的格子，讓學生帶著毛絨動物到學校。\n-   現在，學生們可以按照程式中的指示，給朋友們做程式設計，讓他們把實際的東西搬到程式中去。\n\n**自由創作**\n\n-   讓學生自己製作地圖。\n-   讓其他學生用程式解決它們。\""
+        },
+        "e5dabc9f-6cc6-4b50-a17c-0a5123f9ac88": {
+          "tips": [
+            null
+          ]
+        },
+        "ac0e4935-f5f1-49b7-8ce3-02b24e08547d": {
+          "name": "全班預習線上關卡"
+        },
+        "44154694-26ea-4ee0-8438-2b9d3afacf86": {
+          "progression_name": "視訊：模組編程"
+        },
+        "8c2933b9-50b1-4afc-a874-66dc23214d4b": {
+          "tips": [
+            null
+          ]
+        },
+        "26f5ae92-053e-41b6-986f-2000c544fdf1": {
+          "progression_name": "技能發展"
+        },
+        "d07a1c3b-33e7-48f9-8d4a-0e4faecf0780": {
+          "name": "反思"
+        },
+        "312dff10-c9dd-416d-8ef0-210bcb685fa8": {
+          "tips": [
+            null
+          ]
+        },
+        "5a6e89f3-31fc-40a6-8fb3-75b80d302373": {
+          "progression_name": "視訊：結對編程 "
+        },
+        "12694952-dd7c-472d-a1e5-a328dbe61d45": {
+          "progression_name": "技能發展"
+        },
+        "9c7bd507-3aa6-41eb-a20e-8c13be793ea3": {
+          "progression_name": "視訊：使用步進按鈕調試"
+        },
+        "d37d8cc9-677b-4872-90aa-c0d034c56046": {
+          "progression_name": "技能發展"
+        },
+        "33e815ee-52df-4fb3-bb24-807e96744248": {
+          "progression_name": "挑戰"
+        },
+        "8847e02f-5bd4-40d1-8c5e-ae2410335913": {
+          "progression_name": "練習"
+        },
+        "e84627a8-41ba-41d3-a123-d46a326f856b": {
+          "progression_name": "額外關卡"
+        },
+        "398d751a-0d3a-4a34-8467-cf803d7a6281": {
+          "tips": [
+            null
+          ]
+        },
+        "68748ea0-ad5d-4640-8995-bbff7bfb6773": {
+          "name": "反思"
+        },
+        "bcfc82a8-7ed5-47c7-8184-f0aa05afeddf": {
+          "name": "介紹"
+        },
+        "516ebda2-8206-4d7f-b613-9e39338fa563": {
+          "name": "和 BB-8 與 Rey 一起寫程式",
+          "progression_name": "視訊：與Rey和BB-8一起編程"
+        },
+        "370d17c8-578a-49d9-ab3f-052a436d0217": {
+          "progression_name": "技能發展"
+        },
+        "31519dbd-2dc1-44df-9fd8-465963135fb8": {
+          "progression_name": "挑戰"
+        },
+        "7a0f7d49-b40f-4055-bbbc-25e96b4213c7": {
+          "progression_name": "練習"
+        },
+        "5113fd38-2355-414d-a7dd-788095e60406": {
+          "name": "反思"
+        },
+        "dad2daad-3c3c-4b68-9796-dce5981083a9": {
+          "name": "介紹"
+        },
+        "f4b5bbc4-74da-43c9-bd66-e359671c6767": {
+          "name": "迴圈（Loops） - 快樂迴圈"
+        },
+        "2f7c8637-9aa4-491f-af7c-df240d557802": {
+          "name": "反思"
+        },
+        "17baac3e-ab60-45f1-9dea-6fb6e3c0431f": {
+          "tips": [
+            null
+          ]
+        },
+        "c5fcb254-af51-4f8b-bb55-a534fb3d5ea2": {
+          "tips": [
+            null
+          ]
+        },
+        "7060a52b-e96b-4b92-a2d2-7cca708e81ea": {
+          "name": "全班預習線上關卡"
+        },
+        "1cf88d2b-e186-4cf1-b6cb-8a5c5173dfa0": {
+          "name": "和鼠奎特一起學迴圈（Loop）"
+        },
+        "b3b3ff78-4902-4198-ae3c-a3742e2f141d": {
+          "progression_name": "技能發展"
+        },
+        "4a2fc1f8-c7bb-48d3-9fad-26f0cb7cfda6": {
+          "progression_name": "視訊：冰河世紀循環"
+        },
+        "d2711b59-b742-4252-bd55-ff3126f404d1": {
+          "progression_name": "技能發展"
+        },
+        "7ee7e911-e78b-4ce4-bac2-e9fbb4b9294c": {
+          "progression_name": "挑戰"
+        },
+        "9f3e3414-e024-4b83-bbd5-4f0de81b2dee": {
+          "progression_name": "練習"
+        },
+        "da0d9b08-22ef-4f7d-b750-31f702a06784": {
+          "tips": [
+            null
+          ]
+        },
+        "ef057008-aef8-4c2c-a75c-23189a1b3a38": {
+          "name": "反思"
+        },
+        "56c7b066-bfc1-4b16-978f-c37a858e03f8": {
+          "name": "介紹"
+        },
+        "f8d8870a-a1a1-466e-bb0f-951d64a2a3ec": {
+          "tips": [
+            null
+          ]
+        },
+        "c2bf725d-450c-406b-be75-4d4e91c91269": {
+          "progression_name": "視訊：收集者"
+        },
+        "3107f7a8-270f-41aa-9a41-896619d41b1b": {
+          "progression_name": "技能發展"
+        },
+        "15426c8b-26b1-40a0-a5ee-010c3b62a582": {
+          "progression_name": "視訊：使用重複模組"
+        },
+        "ee8caf71-360e-4c70-a574-7b7a2745d530": {
+          "progression_name": "技能發展"
+        },
+        "741bb4fc-4f71-4259-980a-5d1be91a87ba": {
+          "progression_name": "挑戰"
+        },
+        "c8873a95-c3c5-4008-b8b8-bd56e50a2c66": {
+          "progression_name": "練習"
+        },
+        "80af1f77-e7b7-4e3e-b7a8-b5ab36c034af": {
+          "progression_name": "額外關卡"
+        },
+        "afed6615-ef47-44c9-ad3a-931cdf64a11e": {
+          "name": "反思"
+        },
+        "7b804016-339b-43f0-b33b-80f59f2dd53f": {
+          "name": "介紹"
+        },
+        "0f920005-8541-4286-9c1b-d4524d130935": {
+          "name": "海洋場景與迴圈（Loop）"
+        },
+        "0eec21bd-e3d9-4b20-894b-6d137e886079": {
+          "progression_name": "視訊：代碼工作室中的藝術家"
+        },
+        "3d60a400-ed5c-4cda-90f5-9f4ae59c23a4": {
+          "progression_name": "技能發展"
+        },
+        "500b97cd-5ce3-4068-8f56-800505374f63": {
+          "progression_name": "視訊：藝術家中的循環"
+        },
+        "fa2be632-6107-465b-a739-2311da75e17f": {
+          "progression_name": "技能發展"
+        },
+        "170abca5-3f03-4e4e-a246-9300081cbd95": {
+          "progression_name": "挑戰"
+        },
+        "23c558e9-4573-4748-b99d-24e9104f0cf1": {
+          "progression_name": "練習"
+        },
+        "31c7212e-56c7-41b0-97c8-277498149ef7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "自由發揮"
+        },
+        "1b6b82d9-b633-495a-af03-89fa93248a26": {
+          "progression_name": "額外關卡"
+        },
+        "15fda5f6-8cd7-4ba8-8e3a-11930d5df80f": {
+          "name": "反思"
+        },
+        "908f9b6e-4e8e-470e-948b-3060262e2d65": {
+          "name": "介紹"
+        },
+        "bad82d8b-8e16-4d89-bad6-d2d9581d3f01": {
+          "progression_name": "大事件 - 離線活動"
+        },
+        "1cf3f2c2-cbae-48d6-b12c-579dea91d4ee": {
+          "name": "大事件",
+          "tips": [
+            null
+          ]
+        },
+        "6feb1e3e-d5bc-4e4b-af93-cde03dd1a769": {
+          "name": "反思",
+          "tips": [
+            null
+          ]
+        },
+        "7d8ebbc5-ba01-4ba5-b2c9-e29d0e25e96e": {
+          "name": "測驗"
+        },
+        "795a7482-17be-4e5d-9abd-3382e253fd7c": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**一個人的事件就是另一個人的反應**\n\n給每個學生分配一個要注意的事件，以及一個對該事件做出適當的反應。把動作串聯起來，讓每個孩子的反應變成一個事件，引發另一個學生的反應。繼續分配，直到每個人都有事情要做，每個人都能做出反應。\n\n**活動現場**\n\n將全班分成若干組。使用事件控制器，給每個組針對同一個按鈕分配不同的反應。對所有的三個按鈕都這樣做，然後看看全班混亂的場面！\""
+        },
+        "ebbfd882-a637-4029-af3d-6238838878f0": {
+          "name": "介紹"
+        },
+        "6a7e8f19-fa58-48f8-bbf5-a32c80d3e742": {
+          "tips": [
+            null
+          ]
+        },
+        "573402e5-9215-457d-9709-f2d71a8cfdd3": {
+          "name": "全班預習線上關卡"
+        },
+        "60a4885c-c85c-4e63-9f82-79465bccb97c": {
+          "name": "讓事件活動起來"
+        },
+        "2528954c-2716-4cae-b57d-8b23953c85c2": {
+          "progression_name": "視訊：劇本實驗室簡介"
+        },
+        "c8827180-bb39-48f4-b7bd-bf5804cc5830": {
+          "progression_name": "自由發揮"
+        },
+        "a7d05e68-da4d-411a-a07d-d53ba2e04e20": {
+          "progression_name": "練習"
+        },
+        "1d818376-a876-4685-ade0-dd0c66a984f0": {
+          "progression_name": "小專案: 喬治狗兒"
+        },
+        "7091b047-7dd1-4622-abf4-477933f4e759": {
+          "progression_name": "額外關卡"
+        },
+        "fa68abb6-1549-4910-9b4e-7c1dcd17c68d": {
+          "name": "反思"
+        },
+        "498a91b4-c0fa-46f2-bf36-aa35dc346de5": {
+          "description": "利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。**幕後探秘**當你分享故事的連結時，你也會分享背後的所有代碼。這對學生來說是一個很好的學習方式。-   將完成的故事連結釋出到線上。    -   創作一個你自己的故事來分享！-   當學生載入連結時，讓他們按一下「運作原理」按鈕來檢視故事背後的代碼。-   以小組為單位，討論同學們為自己的故事編寫代碼的不同方式。    -   有什麼讓你感到驚訝？    -   你想嘗試一下什麼？-   選擇別人的故事，然後按一下`重編`，在此基礎上進行修改。（別擔心，原來的故事不會受到影響。）"
+        },
+        "eaf088f5-1fd2-48c5-94c7-cea53aa102c8": {
+          "name": "檢視",
+          "progression_name": "專案"
+        },
+        "04be5fa4-0840-4707-9fb5-9e107ce342d8": {
+          "progression_name": "專案"
+        },
+        "b2a0edc8-b5bc-4798-8b44-7149d863a8ab": {
+          "name": "計畫",
+          "tips": [
+            null
+          ]
+        },
+        "346269ec-d737-4b4f-a539-ea4c4b066609": {
+          "name": "專案",
+          "progression_name": "專案"
+        },
+        "70d5ed4e-2d56-4271-8005-8af00a99cbdb": {
+          "tips": [
+            null
+          ]
+        },
+        "a3b81bea-2a8e-4fe9-907f-45ba73aa23e2": {
+          "description": "以下是你可以提供給學生以加強他們學習的額外資源:\n\n-   [Family Activity](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8) \n-   [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
+        },
+        "5fc2cc60-64ea-4c01-8c9e-21280799d17b": {
+          "name": "反思（Reflect）"
+        },
+        "9f5921d9-6813-471c-8c16-40e622971021": {
+          "name": "詞彙"
+        },
+        "a37ca2d2-fd44-4b34-ad75-d6caf1c8fffa": {
+          "name": "介紹"
+        },
+        "4e9eaee6-773f-429b-b274-d6c22d4c6457": {
+          "name": "我的機器人朋友",
+          "progression_name": "我的機器人朋友 - 離線活動"
+        },
+        "3a67bae9-a51b-4f5a-a4c6-99da3b5103b6": {
+          "tips": [
+            null
+          ]
+        },
+        "e24379b7-bf97-4179-948d-ea5af39d8089": {
+          "name": "反思",
+          "tips": [
+            null
+          ]
+        },
+        "3cb8c1e4-0403-4132-8933-b25bfb5c7985": {
+          "name": "反思（Reflect）"
+        },
+        "f200bbb3-21c5-4805-ae91-c6418a1309b7": {
+          "name": "詞彙"
+        },
+        "b5199fed-e3e0-4a59-b01f-e9b40b861d5c": {
+          "name": "介紹"
+        },
+        "3fa1b9bd-496c-4731-90d8-c5710952901e": {
+          "tips": [
+            null
+          ]
+        },
+        "bb92650a-2be6-4f30-b851-611c2401aa32": {
+          "name": "與憤怒鳥一起編程",
+          "tips": [
+            null
+          ]
+        },
+        "41ceab11-c3ad-4289-a806-f178063736d8": {
+          "progression_name": "視訊：迷宮簡介 - 使用模組編程 "
+        },
+        "a0390c7b-253b-4729-bda9-791ef82df43b": {
+          "progression_name": "技能發展"
+        },
+        "757cf81a-cc11-4113-8734-0888328aba75": {
+          "progression_name": "挑戰"
+        },
+        "c0d3a625-32cc-4184-bf79-be7f1066ca97": {
+          "progression_name": "練習"
+        },
+        "5c62deea-ea90-4eaa-9d64-de185304d795": {
+          "progression_name": "預測"
+        },
+        "3d28912c-9140-40fb-af73-171c9a7e0176": {
+          "progression_name": "練習"
+        },
+        "314f4a1b-1e3f-437f-805a-a0ecbfe8fa62": {
+          "progression_name": "額外關卡"
+        },
+        "56c77c77-8074-4fec-b1ee-50ad68c2a10d": {
+          "name": "反思"
+        },
+        "1e38b7d2-95ff-48a4-92f2-b34838d662d6": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**自由創作**\n\n以小組為單位，讓學生設計自己的迷宮，並互相挑戰能不能編寫程式來解決。為了增加趣味性，可以讓學生扮演小豬和小鳥，製作真人大小的迷宮。\""
+        },
+        "ea522c1a-0f1d-4224-9a6c-25852564554a": {
+          "name": "反思（Reflect）"
+        },
+        "0d59aa71-1a4e-4fd3-8a95-3f0f23933b47": {
+          "name": "詞彙"
+        },
+        "e681233b-1029-4530-a3ef-4842b8254aa6": {
+          "name": "介紹"
+        },
+        "1df7d894-eea7-4874-8ae7-b88b4503b76b": {
+          "name": "在迷宮中除錯"
+        },
+        "c3172960-9aa5-4221-b1ab-2d35fb80653e": {
+          "progression_name": "視訊：使用步進按鈕調試"
+        },
+        "2029eb81-02c4-400f-9c31-585c5a3f2118": {
+          "progression_name": "技能發展"
+        },
+        "c3c4cc5c-8b5b-4f3f-aa71-9c20db1f148c": {
+          "progression_name": "挑戰"
+        },
+        "840f0979-0841-4874-9b50-dfa816eb4930": {
+          "progression_name": "預測"
+        },
+        "821cc31c-fbe6-4890-bf1f-4e3c3248149c": {
+          "progression_name": "練習"
+        },
+        "04d056ec-242f-479a-b11e-eee90775ef0f": {
+          "progression_name": "額外關卡"
+        },
+        "b29c4e41-3e9a-45c7-8132-e66d4af738b9": {
+          "name": "反思"
+        },
+        "02b3715d-7036-47da-84c1-c9478fe67b8f": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**埋下小臭蟲**\n\n讓學生回到以前的關卡，有目的性地將新的臭蟲放到他們的解答中。然後，他們可以請其他學生來調試他們的作業。這也可以用紙質關卡來完成。\n\n確保其他學生在調試過程中提出的批評都是有建設性的。如果這對你的班級來說可能有難度，那麼在這個活動之前，可以透過與另一個學生的角色扮演，讓他們瞭解調試中要互相尊重。\""
+        },
+        "fb89a68d-3b84-40eb-8670-33a34ad4431b": {
+          "name": "反思（Reflect）"
+        },
+        "7e073b00-f336-4d89-a848-f79ee9a8bc23": {
+          "name": "詞彙"
+        },
+        "505c83de-b318-4a7d-9a4b-9da377a5b0d8": {
+          "name": "介紹"
+        },
+        "f6bf2eb5-a621-45b5-a038-0dbbb36152ee": {
+          "name": "全班預習線上關卡"
+        },
+        "2780e63f-ba52-459a-9176-4208568b6163": {
+          "name": "和 Laurel 一起收集寶石"
+        },
+        "f3c465c8-b7b0-4b73-8afc-5f30c132f35b": {
+          "progression_name": "視訊：收集者"
+        },
+        "581b9960-a83f-4bdd-87d8-7007977e087c": {
+          "progression_name": "技能發展"
+        },
+        "eddda354-d5be-46f5-96fb-453befa94962": {
+          "progression_name": "挑戰"
+        },
+        "c6479440-7f5b-4d91-829d-92cc5daff4fc": {
+          "progression_name": "練習"
+        },
+        "c6a14661-c9e0-4aab-bf9f-5f90e7210276": {
+          "progression_name": "預測"
+        },
+        "c6cca796-344f-48df-a35f-3b1e0613ee0c": {
+          "progression_name": "練習"
+        },
+        "520f7482-b58c-4d37-94b7-fa8c4d83314b": {
+          "progression_name": "額外關卡"
+        },
+        "4ab4040a-556d-4dfd-9d56-8730be8041ac": {
+          "name": "反思"
+        },
+        "ea8d0dcc-28b3-440d-b100-c036b74d9499": {
+          "name": "反思（Reflect）"
+        },
+        "7e945f73-76d3-4b83-817d-2b9af9789dd7": {
+          "name": "詞彙"
+        },
+        "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
+          "name": "介紹"
+        },
+        "285edd36-99af-46e6-ba3a-91300c2ef572": {
+          "name": "用代碼創作藝術"
+        },
+        "0b1b669c-1acf-42de-9f59-8182f34db782": {
+          "progression_name": "視訊：JR Hildebrand的藝術家簡介"
+        },
+        "efbbafe6-1b5a-4084-be1d-a0adf068fe3c": {
+          "progression_name": "技能發展"
+        },
+        "12b5328f-3f65-46e2-b3e7-9426b47e1f31": {
+          "tips": [
+            null
+          ],
+          "progression_name": "挑戰"
+        },
+        "7bfffd70-d646-4e36-adc5-21d888afa1f0": {
+          "progression_name": "練習"
+        },
+        "05c4267a-d165-4de4-a19c-a86d0ad3639f": {
+          "progression_name": "預測"
+        },
+        "5e09ab58-a2b1-48ad-89fd-47565cfa09e3": {
+          "progression_name": "額外關卡"
+        },
+        "fb85f373-fbf3-4b4c-a7d4-878c77ab3d99": {
+          "name": "反思"
+        },
+        "38f1faf6-557e-4278-8336-2ae0d394cce1": {
+          "name": "反思（Reflect）"
+        },
+        "bcf1fc52-7c45-4c27-928d-9535649691dc": {
+          "name": "詞彙"
+        },
+        "129d2408-3ca5-4a8e-90b1-f5ad3d0e6c48": {
+          "name": "介紹"
+        },
+        "3ff8ec4d-fe12-413a-975d-69e143845e37": {
+          "name": "我的愛迴圈機器人朋友",
+          "progression_name": "我的循環機器人朋友 - 離線活動"
+        },
+        "b1974523-e458-4364-aeb2-80f00e6de4bd": {
+          "tips": [
+            null
+          ]
+        },
+        "373c8a50-ff0d-4677-98aa-a2492f33c9f2": {
+          "name": "反思"
+        },
+        "6ad48bbf-6b60-4210-99ba-722ef48e2ea4": {
+          "name": "反思（Reflect）"
+        },
+        "25f3c528-ac14-47ff-b254-cd071d8737ff": {
+          "name": "詞彙"
+        },
+        "be9470c8-795f-4e1d-83f2-069961c852d2": {
+          "name": "介紹"
+        },
+        "6adb6ede-2fc4-47f7-97d8-32cd0c02402f": {
+          "name": "全班預習線上關卡"
+        },
+        "fe682113-6220-4a20-b2a7-009bde3d8e27": {
+          "name": "和 BB-8 與 Rey 一起練習迴圈（Loop）",
+          "progression_name": "視訊：與Rey和BB-8一起編程"
+        },
+        "336c18d5-0c32-44c2-b35c-a6f7eec5abff": {
+          "progression_name": "技能發展"
+        },
+        "4faf8753-aee7-43d6-9f6f-0e0033aa315f": {
+          "progression_name": "預測"
+        },
+        "ac539445-fa4c-45cd-8d04-d794a3041826": {
+          "progression_name": "視訊：BB-8重複模組"
+        },
+        "78b79d53-246f-40a9-ab3a-557fba2f5c1a": {
+          "progression_name": "技能發展"
+        },
+        "70017f05-4f16-45ff-9175-91445fd1802d": {
+          "progression_name": "挑戰"
+        },
+        "0c3ea776-e22f-422f-b617-998f13aa2ff5": {
+          "progression_name": "練習"
+        },
+        "d952a432-408a-4c84-adf2-d3a023cce77c": {
+          "progression_name": "預測"
+        },
+        "f26e056f-e9c9-4a0a-95f8-64e3044c86c9": {
+          "progression_name": "練習"
+        },
+        "a9c1c890-7b91-4f1a-a207-155306c84f5e": {
+          "progression_name": "額外關卡"
+        },
+        "58e08b96-df9d-4862-98c6-872f29a5e215": {
+          "name": "反思"
+        },
+        "ab2c8aa4-322c-4ac6-b003-7fbf0dfb807b": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**動起來**\n\n-   給學生提供能做的動作或舞蹈動作的圖片。\n-   讓學生編排動作，並新增迴圈，編排自己的舞蹈。\n-   與班上其他同學分享舞蹈。\n\n**連回來**\n\n-   找一些 YouTube 上的有重複動作的流行舞蹈的視訊。\n-   你的班級能找到這些重複迴圈嗎？\n-   試試跟著歌曲來做同樣的事情吧！\""
+        },
+        "b57a66a7-3da1-4c20-8d0a-9b5da066c07e": {
+          "name": "反思（Reflect）"
+        },
+        "3c79c590-2f48-4931-b8fa-736281002766": {
+          "name": "詞彙"
+        },
+        "d9c07104-b142-42fc-abf8-4b34d8429b7a": {
+          "name": "使用迴圈（Loop）收割農作物",
+          "progression_name": "視訊：收穫者"
+        },
+        "38b1f726-8881-479b-a9e5-7fd354aacf31": {
+          "progression_name": "技能發展"
+        },
+        "7d2a391e-fb8f-4791-841a-f31ddac790b7": {
+          "progression_name": "挑戰"
+        },
+        "e68467ed-58ff-45fe-b064-90e8dbca1c3d": {
+          "progression_name": "練習"
+        },
+        "be50d0ba-53db-4cb0-b970-f8fda6cf3ec1": {
+          "progression_name": "預測"
+        },
+        "d83224a8-1d43-4640-9bd6-929d52011c77": {
+          "progression_name": "額外關卡"
+        },
+        "63b4337c-4ae6-43ee-99ae-3f637cd0c29d": {
+          "name": "反思"
+        },
+        "97ec11ba-87bb-4b11-9a21-da5ebf94b45b": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**收穫物品**\n\n-   讓學生們在課桌前堆放學習用品（鉛筆、橡皮等）。\n-   讓他們的夥伴們想出如何讓收割機從一堆走到另一堆，沿途收集每一組物品。\n-   與班上其他同學分享方案。\""
+        },
+        "9fde8e2d-856f-4b87-924a-15d076522654": {
+          "name": "反思（Reflect）"
+        },
+        "305f3738-2a15-46f7-bef1-c405a63b948d": {
+          "name": "詞彙"
+        },
+        "f4370643-7030-4064-a1a5-5d5385a91c80": {
+          "name": "介紹"
+        },
+        "f5af8f45-b9fa-46f2-8006-05af25fe0b04": {
+          "name": "使用迴圈（Loop）繪畫貼紙藝術",
+          "tips": [
+            null
+          ]
+        },
+        "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
+          "progression_name": "自由發揮"
+        },
+        "5ef885b2-0000-4e19-b7be-39fe06f3b7e7": {
+          "name": "反思"
+        },
+        "1d2e55e1-c5d3-4689-a7ab-824bdc250f02": {
+          "name": "反思（Reflect）"
+        },
+        "438866ae-0223-4f9f-badd-3457a85f7c7a": {
+          "name": "介紹"
+        },
+        "b5d0ecce-50d3-4d8f-8143-eb3bcd6a52b0": {
+          "name": "詞彙"
+        },
+        "8816065c-5d3c-4cc9-95a3-f96c88edbb62": {
+          "name": "大事件",
+          "progression_name": "大事件 - 離線活動"
+        },
+        "81ac2e94-8470-41a8-a506-505bf1bd3fac": {
+          "tips": [
+            null
+          ]
+        },
+        "072ac15c-51ea-444a-ba24-2d1da32a8b2d": {
+          "name": "反思",
+          "tips": [
+            null
+          ]
+        },
+        "c14e31a9-2968-4510-926a-0227df66db89": {
+          "tips": [
+            null
+          ]
+        },
+        "02b80534-5007-46a8-9992-3e0323c49a92": {
+          "name": "反思（Reflect）"
+        },
+        "4184cd8d-7e62-44ac-91e2-fa4c825a3aa7": {
+          "name": "詞彙"
+        },
+        "49e86e55-b607-4af6-bdb6-b912549b69ea": {
+          "name": "介紹"
+        },
+        "afa7c923-ac99-4097-b70d-c27072b62bcc": {
+          "name": "製作像素鳥遊戲",
+          "progression_name": "視訊：製作你自己的像素鳥遊戲"
+        },
+        "70706f4c-ac33-422e-86fd-6f20f63e4438": {
+          "progression_name": "技能發展"
+        },
+        "665856d7-1e75-4dcb-bb62-7926daecbcb3": {
+          "progression_name": "小專案: 像素鳥遊戲"
+        },
+        "ddee86f6-7f1f-41b8-bd96-f891312addb0": {
+          "tips": [
+            null
+          ]
+        },
+        "d0ea24ff-eed4-4232-af00-1aebf8a9c264": {
+          "name": "反思"
+        },
+        "a1420040-a891-4dd5-8aa7-127bac142431": {
+          "name": "反思（Reflect）"
+        },
+        "8f34487c-1c94-4472-80bd-7e53befee5f6": {
+          "name": "詞彙"
+        },
+        "e0573e5e-1308-46de-b4aa-d856b692817d": {
+          "name": "介紹"
+        },
+        "6728fc70-4eea-4c9e-8b55-b5643cb406f1": {
+          "name": "使用事件（Event）玩追逐遊戲",
+          "tips": [
+            null
+          ]
+        },
+        "bd4cd8f9-a5e1-4bfa-b3be-85bf3c6c7119": {
+          "progression_name": "視訊：劇本實驗室簡介"
+        },
+        "ab11c643-bd9d-44fb-822b-1eda83be85fd": {
+          "progression_name": "技能發展"
+        },
+        "1b396a72-6c8e-4667-a4a5-8ef61ac9687f": {
+          "progression_name": "小專案: 西洋棋遊戲"
+        },
+        "657133fd-6697-4f38-8ef7-8f53811eb2ef": {
+          "progression_name": "自由發揮"
+        },
+        "f0b5eef7-fc2b-430a-84d1-0db90863beac": {
+          "progression_name": "額外關卡"
+        },
+        "6449b59e-03df-41af-9bea-a74772120074": {
+          "name": "反思"
+        },
+        "950a6b1c-582f-4078-a44f-b28902a797e0": {
+          "description": "利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。**幕後探秘**當你分享故事的連結時，你也會分享背後的所有代碼。這對學生來說是一個很好的學習方式。-   將完成的故事連結釋出到線上。    -   創作一個你自己的故事來分享！-   當學生載入連結時，讓他們按一下「運作原理」按鈕來檢視故事背後的代碼。-   以小組為單位，討論同學們為自己的故事編寫代碼的不同方式。    -   有什麼讓你感到驚訝？    -   你想嘗試一下什麼？-   選擇別人的故事，然後按一下`重編`，在此基礎上進行修改。（別擔心，原來的故事不會受到影響。）"
+        },
+        "0dd3008c-14b5-47c3-9913-65bd3bf87655": {
+          "name": "反思（Reflect）"
+        },
+        "565fdda1-dbbe-4521-aacf-966c4aa204e3": {
+          "name": "詞彙"
+        },
+        "d7a9e0cd-a7e6-46de-910f-3f0e1216f055": {
+          "name": "介紹"
+        },
+        "7416084b-fb76-4855-aabe-eeaf20181d79": {
+          "name": "描繪資料",
+          "progression_name": "描繪資料"
+        },
+        "4a782ed3-3443-4139-a1bd-88f562c4386e": {
+          "tips": [
+            null
+          ]
+        },
+        "f1f2356e-8e7b-400a-9635-bb31159e2a0f": {
+          "name": "反思"
+        },
+        "a3f5e809-2960-4f58-92e2-42b5ddf0d058": {
+          "name": "反思（Reflect）"
+        },
+        "ac8248ed-61d0-4366-876a-0c145094fa03": {
+          "name": "詞彙"
+        },
+        "04091b34-9c0a-44fa-bce4-dd57c3c8f2b2": {
+          "name": "介紹"
+        },
+        "fee740e0-f88d-4032-b68e-a6e113d2195d": {
+          "name": "二進制手環",
+          "progression_name": "二進制手鐲 - 離線活動"
+        },
+        "c4611983-43d6-441a-9663-bda13932452c": {
+          "tips": [
+            null
+          ]
+        },
+        "55aaddae-3714-4289-8bdc-04796645b397": {
+          "tips": [
+            null
+          ]
+        },
+        "3568529d-36f9-48e4-8075-63bf63a1b309": {
+          "name": "反思"
+        },
+        "640bd9a2-11c5-4489-a1df-454c930054de": {
+          "description": "\"利用這些活動來加強學生的學習。這些活動可以作為課外活動或其他發散活動來使用。\n\n**二進位制圖片**\n\n-   網路上有幾個很好的資源可以把這個活動提升到更高的層次。\n-   如果你的學生想了解如何將圖片（甚至是音樂）表示為二進位制，你可以在 Thinkersmith 的 [Binary Baubles](http://code.org/files/CSEDbinary.pdf) 中找到更多的細節。\""
+        },
+        "a373c46d-9bd4-493e-8f40-27654f2c0c62": {
+          "name": "反思（Reflect）"
+        },
+        "eb8e74ca-2768-4a33-9c4d-0493db0c6aaa": {
+          "name": "計畫"
+        },
+        "02b5b8f3-446d-44c5-a594-570e2ff87324": {
+          "tips": [
+            null
+          ]
+        },
+        "e1b47918-ca9e-4c5f-ad78-4fe271e12f47": {
+          "tips": [
+            null
+          ]
+        },
+        "80142989-2849-4df1-9fee-2803f9575ed6": {
+          "progression_name": "探索：示例項目"
+        },
+        "b8275a09-3de2-42a9-844f-0ac27f7ee3ea": {
+          "progression_name": "專案"
+        },
+        "5f1c9827-a478-4cf6-98b2-8834ef534cff": {
+          "name": "反思"
         },
         "3640be62-d6b4-4e99-a1c0-b4a53c1e202f": {
           "tips": [
@@ -10473,13 +14049,13 @@
           "description": "#### 常規支援\n\n活動結束時，學生們將編寫動畫版詩歌，展示他們對所選詩歌的視覺性賞析。本節課的目標是給學生們提供修補代碼的機會，查找最喜歡的視覺效果。\n\n在課堂上走動時，鼓勵學生們：\n\n-   **慢慢來。**大多數級別的課程要求學生們找出理想的效果，以匹配他們對詩歌的意境賞析。強烈建議學生們維持同一級別並修補他們的代碼。\n\n-   **尋找一篇喜歡的詩歌：**適宜高級別學生的詩歌僅供參考。遊戲空間的頂部帶有一個預帶詩歌的下拉清單。要求學生們流覽其中的一些，並找出喜歡的一篇。然後他們可以選擇代碼來製作詩歌動畫場景。\n\n-   **展示已完成的級別：**完全變成綠色的級別氣泡表示學生已經成功完成該級別的全部要求。要求學生點擊綠色氣泡，展示他們的作品。\n\n如果學生不知如何下手：\n\n-   **閱讀說明：**這些說明已清晰列明完成該級別的步驟。如果學生不知如何下手，則要求他們大聲朗讀說明，並使用自己的語言重述說明。\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\">學生們還可以點擊文字轉語言圖示，聽語音版說明。\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **查看提示**：大多數級別至少有一個提示，其中包含更清晰的通關資訊。\n-   **接受錯誤：** 代碼中出現錯誤是程式設計過程中的常見情況。如果程式沒有按預想情況運行，要求學生們講述他們期待的結果，點擊運行查看實際結果，然後在代碼中找出引起差異的部分。記住，要慶倖能夠找出錯誤並糾正錯誤。出現錯誤表示學生們做得不錯，已經有能力構建較複雜的程式。"
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### 按級別提供支援\n\n**級別1：**鼓勵學生們通讀整篇詩歌。然後要求學生們找出一個背景顏色或效果，來匹配所選定詩歌的場景。\n\n**級別2：**在本示例中，學生們應首先自行閱讀詩歌，然後運行程式。你可以詢問學生們所選定程式的聲音和效果是否與詩歌的意境相匹配。要求學生們闡述自己的答案。\n\n**級別3：**本級別將引入聲音，學生們可以使用耳機（如有）。\n\n**級別4：**要求學生閱讀詩歌，找出其中意境發生變化的一行，或者是否引入新畫面。使用事件塊，為所找出的詩歌行添加相應的效果。\n\n**級別5：**在本示例中，學生們應首先自行閱讀詩歌，然後運行程式。詢問學生們，畫面是否與詩歌的文字描述相匹配。要求學生們闡述自己的答案。\n\n**級別6、7、8：**參考常規支援章節中的「接受錯誤」部分。鼓勵學生們利用事件塊構建存在多個過渡的程式。\n\n**級別9：**鼓勵學生們流覽下拉清單中的全部詩歌，並找出喜歡的一篇。告訴學生們，他們可以與家人和朋友分享最後一級的成果。現在，是時候將所有的編碼和ELA技能綜合在一起了！"
+          "description": "####按級別提供支援\n\n**級別1：**鼓勵學生們通讀整篇詩歌。然後要求學生們找出一個背景顏色或效果，來匹配所選定詩歌的場景。\n\n**級別2：**在本示例中，學生們應首先自行閱讀詩歌，然後運行程式。你可以詢問學生們所選定程式的聲音和效果是否與詩歌的意境相匹配。要求學生們闡述自己的答案。\n\n**級別3：**本級別將引入聲音，學生們可以使用耳機（如有）。\n\n**級別4：**要求學生閱讀詩歌，找出其中意境發生變化的一行，或者是否引入新畫面。使用事件塊，為所找出的詩歌行添加相應的效果。\n\n**級別5：**在本示例中，學生們應首先自行閱讀詩歌，然後運行程式。詢問學生們，畫面是否與詩歌的文字描述相匹配。要求學生們闡述自己的答案。\n\n**級別6、7、8：**參考常規支援章節中的「接受錯誤」部分。鼓勵學生們利用事件塊構建存在多個過渡的程式。\n\n**級別9：**鼓勵學生們流覽下拉清單中的全部詩歌，並找出喜歡的一篇。告訴學生們，他們可以與家人和朋友分享最後一級的成果。現在，是時候將所有的編碼和ELA技能綜合在一起了！"
         },
         "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
           "description": "如果你喜歡今天的程式設計課程，你可以訪問code.org/learn繼續學習！如果想與朋友和家人分享自己的作品，點擊【分享】按鈕，即可將連結發送給他們！"
         },
         "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### （備選）測評：理解能力測驗（4分鐘）\n\n每個學生2張便簽紙。 "
+          "description": "####（備選）測評：理解能力測驗（4分鐘）\n\n每個學生2張便簽紙。 "
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "你可以使用2張便簽紙。在其中一張上面，寫下你今天所學到的一項程式設計內容。\n在另一張上面，寫下你今天所學到的一項詩歌內容。\n\n鼓勵學生們舉手回答問題，與全班同學分享：你希望在接下來的程式設計和電腦科學課程中學習哪些其他知識？"

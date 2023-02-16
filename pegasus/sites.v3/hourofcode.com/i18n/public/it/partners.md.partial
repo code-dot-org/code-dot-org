@@ -2,13 +2,11 @@
 title: Partner
 ---
 
-L'Ora del Codice è un progetto curato da Hour of Code, dal Comitato Consultivo della "Computer Science Education Week" e dal Comitato di Revisione.
+Hour of Code e gestito dal Comitato di Revisione Hour of Code.
 
-Il [Comitato Consultivo]({{ urls/advisory_committee }}) è composto da rappresentanti delle scuole dell'obbligo, del mondo accademico, delle organizzazioni no-profit, del commercio e delle organizzazioni internazionali. Questo comitato propone e guida la campagna "Ora del Codice".
+Il [Comitato di revisione]({{ urls/review_committee }}) e composto da 12 educatori presenti e passati tra i bandi di grado K-12 che svolgono e consigliano attività utilizzando una rubrica stabilità da un comitato consultivo. Questi educatori valutano le attività autogestite dagli studenti e i programmi delle lezioni condotte dagli insegnanti inseriti da centinaia di partner, valutandone il valore educativo, la capacità di coinvolgere gli studenti e l'attrattiva per differenti fasce di età.
 
-Il [Comitato di revisione]({{ urls/review_committee }}) è composto da 15 insegnanti della scuola dell'obbligo in grado di valutare e consigliare attività secondo le linee guida del Comitato Consultivo. Questi educatori valutano le attività autogestite dagli studenti ed i programmi delle lezioni condotte dagli insegnanti inseriti da centinaia di partner, valutandone il valore educativo, la capacità di coinvolgere gli studenti e l'attrattiva per differenti fasce di età.
-
-Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell'Ora del Codice, offrendo un'introduzione all'informatica per ogni studente.
+Il lavoro e la dedizione del Comitato hanno contribuito al successo di Hour of Code, offrendo un'introduzione d'informatica per ogni studente.
 
 # Principali Partner e Aziende Sostenitrici
 

@@ -26,6 +26,12 @@
         "playlab/Play Lab": {
           "name": "Играоница"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Дизнијева Играоница"
         },
@@ -49,6 +55,33 @@
         },
         "k5-onlinepd-2019/For Loops": {
           "name": "Бројачке петље"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Графиконско - Папирно Програмирање"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Услови са картама"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Интернет"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Помери га, помери"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Запетљанције"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Веселе мапе"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Велики догађај"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Бинарне наруквице"
         },
         "csd3-2022/Variables": {
           "name": "Променљиве"

@@ -26,6 +26,12 @@
         "playlab/Play Lab": {
           "name": "Laboratorio de Xogos"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Laboratorio de Xogo Disney Infinity"
         },
@@ -55,6 +61,36 @@
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "Fundamentos de Informática"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Programación por relevos"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Condicionais con cartas"
+        },
+        "coursef-2022/The Internet": {
+          "name": "A Internet"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Composición"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Creando camiños"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Bucleándose"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Mapas Felices"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "O Gran Evento"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Pulseiras Binarias"
         },
         "csd3-2022/Variables": {
           "name": "Variables"

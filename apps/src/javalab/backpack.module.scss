@@ -93,3 +93,30 @@
   margin-top: 10px;
   margin-bottom: 0;
 }
+
+%backpack-button {
+  color: $white;
+  font-size: 14px;
+  padding: 5px 10px;
+  width: fit-content;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px 5px 10px;
+}
+
+.button {
+  &Orange {
+    @extend %backpack-button;
+    background-color: $orange;
+    border-color: $orange;
+  }
+
+  &Red {
+    @extend %backpack-button;
+    background-color: $red;
+    border-color: $red;
+  }
+}

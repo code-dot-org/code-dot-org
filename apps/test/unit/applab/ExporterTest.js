@@ -90,7 +90,7 @@ describe('Applab Exporter,', function() {
       'https://code.jquery.com/jquery-1.12.1.min.js',
       JQUERY_JS_CONTENT
     );
-    server.respondWith(/\/_karma_webpack_\/.*\.png/, PNG_ASSET_CONTENT);
+    server.respondWith(/\/webpack_output\/.*\.png/, PNG_ASSET_CONTENT);
     server.respondWith(
       /\/fonts\/fontawesome-webfont\.woff2\?__cb__=\d+/,
       FONTAWESOME_CONTENT
@@ -280,31 +280,6 @@ describe('Applab Exporter,', function() {
         }
       );
     });
-
-    it('should reject the promise with an error in expoMode', function(done) {
-      server.respondImmediately = true;
-      let zipPromise = Exporter.exportAppToZip(
-        'my-app',
-        'console.log("hello");',
-        `<div>
-          <div class="screen" tabindex="1" id="screen1">
-            <input id="nameInput"/>
-            <button id="clickMeButton" style="background-color: red;">Click Me!</button>
-          </div>
-        </div>`,
-        true
-      );
-      zipPromise.then(
-        function() {
-          assert.fail('Expected zipPromise not to resolve');
-          done();
-        },
-        function(error) {
-          assert.equal(error.message, 'failed to fetch assets');
-          done();
-        }
-      );
-    });
   });
 
   describe('when exporting,', function() {
@@ -467,196 +442,6 @@ describe('Applab Exporter,', function() {
     });
   });
 
-  describe('when exporting in expoMode,', function() {
-    var zipFiles = {};
-    beforeEach(function(done) {
-      server.respondImmediately = true;
-      let zipPromise = Exporter.exportAppToZip(
-        'my-app',
-        'console.log("hello");\nplaySound("zoo.mp3");\nplaySound("sound://default.mp3");',
-        `<div>
-          <div class="screen" tabindex="1" id="screen1">
-            <input id="nameInput"/>
-            <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
-            <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
-            <button id="clickMeButton" style="background-color: red;">Click Me!</button>
-            <button id="1Button" style="background-color: blue;">1</button>
-            <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
-          </div>
-        </div>`,
-        true
-      );
-
-      zipPromise.then(function(zip) {
-        var relativePaths = [];
-        zip.forEach(function(relativePath, file) {
-          relativePaths.push(relativePath);
-        });
-        var zipAsyncPromises = relativePaths.map(function(path) {
-          var zipObject = zip.file(path);
-          if (zipObject) {
-            return zipObject.async('string');
-          }
-        });
-        Promise.all(zipAsyncPromises).then(function(fileContents) {
-          relativePaths.forEach(function(path, index) {
-            zipFiles[path] = fileContents[index];
-          });
-          done();
-        }, done);
-      }, done);
-    });
-
-    describe('will produce a zip file, which', function() {
-      it('should contain a bunch of files', () => {
-        const files = Object.keys(zipFiles);
-        files.sort();
-        assert.deepEqual(files, [
-          'my-app/',
-          'my-app/App.js',
-          'my-app/CustomAsset.js',
-          'my-app/DataWarning.js',
-          'my-app/README.txt',
-          'my-app/app.json',
-          'my-app/appassets/',
-          'my-app/appassets/icon.png',
-          'my-app/appassets/splash.png',
-          'my-app/appassets/warning.png',
-          'my-app/assets/',
-          'my-app/assets/applab-api.j',
-          'my-app/assets/applab/',
-          'my-app/assets/applab/applab.css',
-          'my-app/assets/applab/assets/',
-          'my-app/assets/applab/assets/blockly/',
-          'my-app/assets/applab/assets/blockly/media/',
-          'my-app/assets/applab/assets/blockly/media/bar.jpg',
-          'my-app/assets/applab/assets/blockly/media/foo.png',
-          'my-app/assets/applab/assets/blockly/media/third.jpg',
-          'my-app/assets/applab/fontawesome-webfont.woff2',
-          'my-app/assets/bar.png',
-          'my-app/assets/code.j',
-          'my-app/assets/default.mp3',
-          'my-app/assets/foo.png',
-          'my-app/assets/index.html',
-          'my-app/assets/jquery-1.12.1.min.j',
-          'my-app/assets/style.css',
-          'my-app/assets/zoo.mp3',
-          'my-app/metro.config.js',
-          'my-app/package.json',
-          'my-app/packagedFiles.js'
-        ]);
-      });
-
-      it('should contain an applab-api.j file', function() {
-        assert.property(zipFiles, 'my-app/assets/applab-api.j');
-        assert.equal(
-          zipFiles['my-app/assets/applab-api.j'],
-          `${WEBPACK_RUNTIME_JS_CONTENT}\n${getAppOptionsFile(
-            true,
-            'new_fake_id'
-          )}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
-        );
-      });
-
-      it('should contain a jquery-1.12.1.min.j file', function() {
-        assert.property(zipFiles, 'my-app/assets/jquery-1.12.1.min.j');
-        assert.equal(
-          zipFiles['my-app/assets/jquery-1.12.1.min.j'],
-          JQUERY_JS_CONTENT
-        );
-      });
-
-      it('should contain an applab.css file', function() {
-        assert.property(zipFiles, 'my-app/assets/applab/applab.css');
-        assert.equal(
-          zipFiles['my-app/assets/applab/applab.css'],
-          NEW_APPLAB_CSS_CONTENT
-        );
-      });
-
-      describe('the index.html file', () => {
-        let el;
-        beforeEach(() => {
-          el = document.createElement('html');
-          el.innerHTML = zipFiles['my-app/assets/index.html'];
-        });
-
-        it('should have a #divApplab element', () => {
-          assert.isNotNull(
-            el.querySelector('#divApplab'),
-            'no #divApplab element'
-          );
-          const innerTextLines = el
-            .querySelector('#divApplab')
-            .innerText.trim()
-            .split('\n');
-          assert.equal(
-            innerTextLines[0].trim(),
-            'Click Me!',
-            '#divApplab inner text first line'
-          );
-          assert.equal(
-            innerTextLines[1].trim(),
-            '1',
-            '#divApplab inner text second line'
-          );
-        });
-      });
-
-      it('should contain a style.css file', function() {
-        assert.property(zipFiles, 'my-app/assets/style.css');
-      });
-
-      it('style.css should contain the fontawesome definition', () => {
-        assert.include(zipFiles['my-app/assets/style.css'], STYLE_CSS_CONTENT);
-      });
-
-      it('should contain a code.j file', function() {
-        assert.property(zipFiles, 'my-app/assets/code.j');
-      });
-
-      it('should contain a README.txt file', function() {
-        assert.property(zipFiles, 'my-app/README.txt');
-      });
-
-      it('should contain the asset files used by the project', function() {
-        assert.property(zipFiles, 'my-app/assets/foo.png');
-        assert.property(zipFiles, 'my-app/assets/bar.png');
-        assert.property(zipFiles, 'my-app/assets/zoo.mp3');
-      });
-
-      it('should contain the sound library files referenced by the project', function() {
-        assert.property(zipFiles, 'my-app/assets/default.mp3');
-      });
-
-      it('should rewrite urls in html to point to the correct asset files', function() {
-        var el = document.createElement('html');
-        el.innerHTML = zipFiles['my-app/assets/index.html'];
-        assert.equal(
-          el.querySelector('#firstImage').getAttribute('src'),
-          'foo.png'
-        );
-        assert.equal(
-          el.querySelector('#secondImage').getAttribute('src'),
-          'foo.png'
-        );
-      });
-
-      it('should rewrite urls in the code to point to the correct asset files', function() {
-        assert.equal(
-          zipFiles['my-app/assets/code.j'],
-          'console.log("hello");\nplaySound("zoo.mp3");\nplaySound("default.mp3");'
-        );
-      });
-
-      it('should contain the react native files needed by the project', function() {
-        assert.property(zipFiles, 'my-app/App.js');
-        assert.property(zipFiles, 'my-app/CustomAsset.js');
-        assert.property(zipFiles, 'my-app/app.json');
-      });
-    });
-  });
-
   function runExportedApp(code, html, done, globalPromiseName) {
     server.respondImmediately = true;
     let zipPromise = Exporter.exportAppToZip('my-app', code, html);
@@ -701,18 +486,20 @@ describe('Applab Exporter,', function() {
     });
   }
 
-  describe('Regression tests', () => {
+  // TODO: Address infinite loop caused by runExportedApp helper used in 'Regression tests' block.
+  // See ticket for more details: https://codedotorg.atlassian.net/browse/STAR-2399
+  describe.skip('Regression tests', () => {
     testUtils.sandboxDocumentBody();
 
     it('should allow screens to be switched programmatically', done => {
       runExportedApp(
         `console.log("before switch"); setScreen("screen2"); console.log("after switch");`,
         `<div>
-          <div class="screen" tabindex="1" id="screen1">
-          </div>
-          <div class="screen" tabindex="1" id="screen2">
-          </div>
-        </div>`,
+            <div class="screen" tabindex="1" id="screen1">
+            </div>
+            <div class="screen" tabindex="1" id="screen2">
+            </div>
+          </div>`,
         done
       );
     });
@@ -736,14 +523,14 @@ describe('Applab Exporter,', function() {
     it('should allow you to use startWebRequest without the XHR proxy', done => {
       runExportedApp(
         `var webRequestPromise = new Promise(function (resolve, reject) {
-          startWebRequest("https://studio.code.org/fakeRequest", function (status, type, content) {
-            if (status === 200) {
-              resolve(status);
-            } else {
-              reject(new Error('network error'));
-            }
-          });
-        });`,
+            startWebRequest("https://studio.code.org/fakeRequest", function (status, type, content) {
+              if (status === 200) {
+                resolve(status);
+              } else {
+                reject(new Error('network error'));
+              }
+            });
+          });`,
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         done,
         'webRequestPromise'
@@ -754,10 +541,10 @@ describe('Applab Exporter,', function() {
       sinon.spy(window, 'write');
       runExportedApp(
         `
-        var a = 'abcdef'.split('');
-        insertItem(a, 3, 'hi');
-        write(a);
-        `,
+          var a = 'abcdef'.split('');
+          insertItem(a, 3, 'hi');
+          write(a);
+          `,
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         () => {
           expect(window.write).to.have.been.calledWith([

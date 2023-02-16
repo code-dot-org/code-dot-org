@@ -136,6 +136,11 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Поза Годиною коду"
         },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "tips": [
+            null
+          ]
+        },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
             null
@@ -337,6 +342,11 @@
             null
           ]
         },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "tips": [
+            null
+          ]
+        },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "tips": [
             null
@@ -464,17 +474,44 @@
           "progression_name": "Стиснення тексту"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Вступ"
+          "name": "Вступ",
+          "description": ""
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Спалах",
+          "description": "",
           "progression_name": "Спалах"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "",
           "progression_name": "Ласкаво просимо до Монстро-міста"
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": ""
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": ""
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "",
+          "progression_name": ""
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "",
+          "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Вільна гра"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": ""
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": ""
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "",
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Вступ",
@@ -613,10 +650,1993 @@
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Розминка"
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "",
+          "description": ""
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": ""
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": ""
+        },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "",
+          "description": ""
+        },
+        "d80d3591-db5f-43bb-b3be-3a0eb14690a7": {
+          "name": "Вступ"
+        },
+        "61f2eb20-0ecb-4319-8ea7-5a9210a1c406": {
+          "name": "Програмування по клітинках"
+        },
+        "be35d4b6-5785-44f3-9d9b-158e356ebb0d": {
           "tips": [
             null
           ]
+        },
+        "711dd3c2-55d7-4e71-8714-fea9ceb6cb4a": {
+          "tips": [
+            null
+          ]
+        },
+        "e4ac7ebe-4d89-46ca-a2a6-f0e819658e21": {
+          "tips": [
+            null
+          ]
+        },
+        "f5627332-703a-420b-ab72-660c350b87d9": {
+          "tips": [
+            null
+          ]
+        },
+        "3ab2b28c-3947-44d9-ae6d-8d8d43320c27": {
+          "name": "Вступ"
+        },
+        "02a52fe1-85a9-4a07-83a8-5469bf8ac7e6": {
+          "tips": [
+            null
+          ]
+        },
+        "29bbe8ac-7f83-407e-ad63-4fe434d80d1d": {
+          "name": "Естафетне програмування"
+        },
+        "a7cadd06-1f56-42b5-a5b0-b623a57e1fcd": {
+          "tips": [
+            null
+          ]
+        },
+        "0c752c58-d938-43f6-ac3c-a9b4556d12db": {
+          "name": "Вступ"
+        },
+        "037b9c5d-7263-4bb9-aef3-f818cd3d71d6": {
+          "name": "Вступ"
+        },
+        "16d61ffc-4200-4a4d-b11e-6fffb02ab38b": {
+          "progression_name": "Вільна гра"
+        },
+        "77973449-e6b7-4855-a2cc-1db18970a8e0": {
+          "tips": [
+            null
+          ]
+        },
+        "6483e0eb-3cdc-45fd-b834-207388a3586a": {
+          "tips": [
+            null
+          ]
+        },
+        "ea99adc6-d611-4d13-9da7-04fcb43c6df3": {
+          "tips": [
+            null
+          ]
+        },
+        "b7541d65-dbb6-4402-8392-0a1416e131d5": {
+          "name": "Вступ"
+        },
+        "cda08e32-7472-46e5-900d-947542cde40e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Вільна гра"
+        },
+        "9014dbe4-b770-43d6-aef5-77cf1e032bb9": {
+          "tips": [
+            null
+          ]
+        },
+        "4183cc0f-f87e-4c3b-80e8-9b849d0aba39": {
+          "name": "Вступ"
+        },
+        "4d7270ba-f9ba-4089-b9c1-0448f6eead69": {
+          "progression_name": "Практика"
+        },
+        "715c15b8-ce05-4be2-a6e3-63c7addc5abf": {
+          "progression_name": "Події"
+        },
+        "d9624c03-8570-4129-a205-a8f6ca582aed": {
+          "progression_name": "Кроки"
+        },
+        "617957c6-14b8-4db6-8018-1f81a191b624": {
+          "progression_name": "Властивості"
+        },
+        "63a3dd77-4375-473b-baa6-45c56d551354": {
+          "tips": [
+            null
+          ]
+        },
+        "3e984275-638c-49e0-afb6-fc959cd05771": {
+          "progression_name": "Вільна гра"
+        },
+        "92a12478-0870-4331-a034-b5f1ed4164af": {
+          "progression_name": "Додаткове"
+        },
+        "2c20e776-eba9-4b67-b0f1-f539ddcccf13": {
+          "description": "Попросіть учнів додати свої наліпки або картки на вашу асоціативну карту «Інформатика» на виході. Намагайтеся зробити так, щоб учні додали на дошку багато чудових ідей щодо того, що таке інформатика і чому вона важлива."
+        },
+        "bcde2562-834f-4054-9106-c9f0ff082258": {
+          "name": "Вступ до циклів"
+        },
+        "23874ed2-c11c-4626-93ce-738a948d9467": {
+          "name": "Петлі в Ice Age"
+        },
+        "8a2827d2-9dd0-4b84-9694-f7f4733543d5": {
+          "progression_name": "Виклик"
+        },
+        "41598a45-8c65-4392-a301-07c4a61a2abd": {
+          "progression_name": "Практика"
+        },
+        "e26c0781-e8ca-4864-ab22-1af5ce60b1f4": {
+          "progression_name": "Додаткове"
+        },
+        "31073c5d-beaf-420a-af98-4aa468a7b9d4": {
+          "tips": [
+            null
+          ]
+        },
+        "6169bc3a-deb5-4c4f-9860-10ba26c60214": {
+          "name": "Вступ"
+        },
+        "f83fde9f-a2d7-4f99-94fb-ac2fc9b79352": {
+          "progression_name": "Виклик"
+        },
+        "3f3774e2-c8fa-4318-9e6e-d58f6983e746": {
+          "progression_name": "Практика"
+        },
+        "3315af90-e8ff-4568-813e-2b743e90bf30": {
+          "progression_name": "Додаткове"
+        },
+        "9fe5d0e9-dadb-4541-9ebb-5eaa1acc5883": {
+          "name": "Вступ"
+        },
+        "da706b15-71f6-47dd-a6de-f113b509684c": {
+          "progression_name": "Прогнозування"
+        },
+        "355d4996-c94e-4553-ba72-f3b6faffeaea": {
+          "progression_name": "Виклик"
+        },
+        "4dc57979-b524-4f77-818e-2ff70833656b": {
+          "progression_name": "Практика"
+        },
+        "58d3231e-2d0e-4c78-b89b-e16fe4d117ef": {
+          "progression_name": "Прогнозування"
+        },
+        "791b5b99-593d-4287-ab93-a9970d63744e": {
+          "progression_name": "Додаткове"
+        },
+        "a8dddc64-bf3e-4023-85b5-e202ec1a0eb6": {
+          "name": "Вступ"
+        },
+        "a89749a5-5e92-470a-90f8-0d7317019298": {
+          "name": "Листівки та умови"
+        },
+        "dda904ae-113f-4561-8a61-e9ed43297a47": {
+          "tips": [
+            null
+          ]
+        },
+        "ff230610-bef8-421e-b37a-6d77e490ce3e": {
+          "name": "Вступ"
+        },
+        "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a": {
+          "progression_name": "Виклик"
+        },
+        "268e56b4-6f3e-4a44-8383-2e538ae1ab72": {
+          "progression_name": "Вільна гра"
+        },
+        "3ea15706-caac-499b-aef5-a7210f291bfc": {
+          "progression_name": "Додаткове"
+        },
+        "8ae849bd-292d-44e8-9ccd-9d9bfc86c592": {
+          "name": "Вступ"
+        },
+        "b7925091-8715-4ad6-8d94-6ca396d22fd6": {
+          "progression_name": "Прогнозування"
+        },
+        "327f687c-e443-44e3-bf1e-87dbd7e014c0": {
+          "progression_name": "Прогнозування"
+        },
+        "dd2b73eb-51cd-4d7e-81f8-5ed2d57b72dd": {
+          "progression_name": "Виклик"
+        },
+        "63f10835-c9b1-4799-8f26-9ec9968c100f": {
+          "progression_name": "Практика"
+        },
+        "8c1a0c94-5769-44d7-90a2-af9b521835d7": {
+          "progression_name": "Виклик"
+        },
+        "3edea7b4-3cb0-44c0-8705-5e2f51f2802d": {
+          "progression_name": "Додаткове"
+        },
+        "f909f46d-5551-4020-b2d5-402aa7f10361": {
+          "name": "Вступ"
+        },
+        "af4d5d9b-dc83-44f1-b884-1aa62fcf1560": {
+          "progression_name": "Прогнозування"
+        },
+        "9130d756-a245-4997-93d3-94264979355b": {
+          "progression_name": "Виклик"
+        },
+        "ec1b07e3-f50a-4903-85c9-b2f52b255dcd": {
+          "progression_name": "Практика"
+        },
+        "0d0bdf1d-d762-4967-93a2-12b0414e4ef0": {
+          "progression_name": "Прогнозування"
+        },
+        "98a0f038-bf2d-4af7-9608-1ca327e1ef01": {
+          "progression_name": "Виклик"
+        },
+        "3694bab1-5f1b-411a-8170-601003b9d32c": {
+          "progression_name": "Додаткове"
+        },
+        "cefe1ce5-6a04-45e4-8805-e5b94fff2197": {
+          "name": "Вступ"
+        },
+        "0878bb75-72da-454e-8ac9-d06588287cde": {
+          "progression_name": "Прогнозування"
+        },
+        "0664bded-dced-45bc-954d-8bc7d7734235": {
+          "progression_name": "Виклик"
+        },
+        "9ee3da3a-7860-4af1-9e89-3c3f7f99192d": {
+          "progression_name": "Практика"
+        },
+        "c5b4eff7-95ff-4c51-acb5-2c23f8758991": {
+          "progression_name": "Прогнозування"
+        },
+        "baf8f43c-6977-4f51-a3c6-3b571a735941": {
+          "progression_name": "Додаткове"
+        },
+        "bee3bff0-2e37-458f-89b1-b3cf1343271d": {
+          "name": "Планування"
+        },
+        "e8e5a324-ff1a-4d75-b917-b0c405905904": {
+          "tips": [
+            null
+          ]
+        },
+        "db17d2d5-30dc-4b19-a5e6-543602d3d52e": {
+          "tips": [
+            null
+          ]
+        },
+        "a0ef70ba-32d7-450e-85a2-d2415d14209c": {
+          "progression_name": "Приклади проектів"
+        },
+        "2e6af268-5fe3-4361-8108-ee1f41cd2e1e": {
+          "progression_name": "Створити ваш проект"
+        },
+        "4ec90698-6e58-4695-8fec-298eea182910": {
+          "name": "Вступ"
+        },
+        "e49cc3d9-d33e-4a2c-a549-9ba972b2bffa": {
+          "tips": [
+            null
+          ]
+        },
+        "a64d1695-0afd-4534-a16c-a790006e0193": {
+          "tips": [
+            null
+          ]
+        },
+        "a4614b34-d679-47a0-b4b3-36a360f0336d": {
+          "name": "Представляємо Лабораторію спрайтів"
+        },
+        "a596d7dd-5533-4dea-b9f7-7dca09bafb6e": {
+          "tips": [
+            null
+          ]
+        },
+        "920b8921-f3cf-4726-bbac-b414917f7bd0": {
+          "name": "Вступ"
+        },
+        "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Прогнозування"
+        },
+        "3f88f7fc-f308-44e8-ad91-df97a9080361": {
+          "tips": [
+            null
+          ]
+        },
+        "0c617599-fd8c-43d4-9158-b44d201cb3aa": {
+          "progression_name": "Практика"
+        },
+        "98dedd12-1d66-41ed-9629-e30265862d45": {
+          "tips": [
+            null
+          ]
+        },
+        "cf819fb5-aff2-47a4-9c0f-8ab6af6f218f": {
+          "tips": [
+            null
+          ]
+        },
+        "3aa37d43-0bc2-433c-9fdd-59a704d6d5f8": {
+          "name": "Спрайт в Дії",
+          "progression_name": "Прогнозування"
+        },
+        "a25d6587-66bc-42ea-9a27-47b5f3586878": {
+          "progression_name": "Практика"
+        },
+        "d5632c3a-b496-41b6-a90f-1c738211a438": {
+          "tips": [
+            null
+          ]
+        },
+        "c129fbec-8adf-45f8-9920-ccac97d6022f": {
+          "name": "Вступ"
+        },
+        "f64df1a5-3d41-4029-9a8c-1439d98d7386": {
+          "tips": [
+            null
+          ]
+        },
+        "70b98dfc-752d-47f0-a29f-2c39cbad42be": {
+          "progression_name": "Вільна гра"
+        },
+        "a39aeb31-f24a-4a70-b481-9fb3172e76cb": {
+          "tips": [
+            null
+          ]
+        },
+        "4a32f72b-2376-432d-8b3a-983f0fe9488b": {
+          "tips": [
+            null
+          ]
+        },
+        "14e9da9c-a429-47db-b4bd-c07d5dc4401f": {
+          "progression_name": "Прогнозування"
+        },
+        "71f32e49-99e7-46d2-9a4d-a6b0b07d5a17": {
+          "tips": [
+            null
+          ]
+        },
+        "304fbec8-0776-402a-9eeb-1e774da6bc0c": {
+          "tips": [
+            null
+          ]
+        },
+        "a2280341-dec1-43b0-9269-e8719a92375d": {
+          "progression_name": "Практика"
+        },
+        "aef1a460-c4ee-406c-9f3e-2e9243f88502": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Прогнозування"
+        },
+        "b70948ff-b376-41dc-8c46-6572c8ab8241": {
+          "tips": [
+            null
+          ]
+        },
+        "9eb4bb34-8e86-4041-a410-dd8f833d20a4": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Планування"
+        },
+        "ee6223c9-e041-4165-b451-70f4c8416e23": {
+          "tips": [
+            null
+          ]
+        },
+        "2db78276-8789-4046-8488-4ce232bc6bb2": {
+          "name": "Вступ"
+        },
+        "86834c6e-de76-4d6a-bc8d-5c6d2e8d760a": {
+          "tips": [
+            null
+          ]
+        },
+        "56262489-b084-4a55-a4e2-b45138492e6c": {
+          "progression_name": "Прогнозування"
+        },
+        "b1b312f7-6502-4335-907d-9663f892dc6f": {
+          "progression_name": "Практика"
+        },
+        "6962360d-5a78-47ae-8686-4038e83ebfbf": {
+          "progression_name": "Вільна гра"
+        },
+        "7d525905-cfd3-47a7-b70a-2d2a28c13fac": {
+          "name": "Вступ"
+        },
+        "44ade190-d83f-4460-87ae-c1e4dcaef911": {
+          "tips": [
+            null
+          ]
+        },
+        "37b1afe8-191f-4950-a1a9-3d3ba93ae3a0": {
+          "tips": [
+            null
+          ]
+        },
+        "51946ebc-7151-47c2-88bb-29d89d0338c5": {
+          "progression_name": "Прогнозування"
+        },
+        "75a9857e-a926-4c5a-a1ff-2307afce0d11": {
+          "tips": [
+            null
+          ]
+        },
+        "37214efe-4044-4968-8924-71472b1d2725": {
+          "name": "Вступ"
+        },
+        "280458d7-1de1-46dc-b42c-2be014890b38": {
+          "name": "Вступ"
+        },
+        "c5ce3765-d4c5-4159-8e5c-39035697517e": {
+          "progression_name": "Запустити симуляцію"
+        },
+        "a30085db-0943-45a2-87c4-6a1ef63df09c": {
+          "progression_name": "Змінити змінні моделювання"
+        },
+        "966897db-4aa7-4d18-81a8-27b4ef5100fe": {
+          "name": "Вступ"
+        },
+        "49647f1f-bc9a-402c-85c0-6338ea7c9541": {
+          "name": "Спалах"
+        },
+        "f43a5b4e-6e2d-4f24-b566-f942dc8ce78b": {
+          "progression_name": "Спалах"
+        },
+        "7fb7bd27-6ada-4f30-9422-37c9ea683969": {
+          "progression_name": "Ласкаво просимо до Монстро-міста"
+        },
+        "12dc3a29-9b6a-448a-91d7-c795731e097b": {
+          "tips": [
+            null
+          ]
+        },
+        "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
+          "tips": [
+            null
+          ]
+        },
+        "138f82fc-c0fe-4836-a4f8-a38e874680b5": {
+          "tips": [
+            null
+          ]
+        },
+        "97505f9d-3e88-4a48-8fb1-66a0dcb61e9e": {
+          "tips": [
+            null
+          ]
+        },
+        "f3a8670b-9954-45f9-af08-1689c799a427": {
+          "tips": [
+            null
+          ]
+        },
+        "768fdc30-25c8-40ae-846a-6de108de3a9f": {
+          "name": "Вступ"
+        },
+        "f7e2b7b8-84ff-442f-bd6a-831da855966f": {
+          "tips": [
+            null
+          ]
+        },
+        "1b0d023d-bf54-4703-af7e-5d9fd45d755d": {
+          "tips": [
+            null
+          ]
+        },
+        "07e83a27-5530-4af9-bc71-88838f668e86": {
+          "tips": [
+            null
+          ]
+        },
+        "0965b5bc-06b2-458d-b6c5-9c6f9f2f6340": {
+          "name": "Інтернет"
+        },
+        "3b419e1c-6cbf-4940-b2a0-c12606b359e1": {
+          "tips": [
+            null
+          ]
+        },
+        "fc104032-9a2d-443a-96d0-e7f4c6de6782": {
+          "tips": [
+            null
+          ]
+        },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "вивчити"
+        },
+        "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
+          "progression_name": "Приклади проектів"
+        },
+        "ad3b60a9-c96d-4e0b-b124-5f6f34d1c85c": {
+          "progression_name": "Створити ваш проект"
+        },
+        "de7ab6f7-a853-4f00-b05d-a9db0bb2da2d": {
+          "tips": [
+            null
+          ]
+        },
+        "bad6c34f-b32e-4116-908c-7eb4fc2ca6a4": {
+          "tips": [
+            null
+          ]
+        },
+        "38c0b06f-e0b8-4739-b359-6513f419fd11": {
+          "tips": [
+            null
+          ]
+        },
+        "4b48da8b-113d-4b9b-94ff-c776a0cab3b9": {
+          "tips": [
+            null
+          ]
+        },
+        "1b707283-b28d-4147-921e-691c3e5325fe": {
+          "tips": [
+            null
+          ]
+        },
+        "7af8b468-66ad-4d3b-a9c3-2ff50362f027": {
+          "name": "Вступ",
+          "tips": [
+            null
+          ]
+        },
+        "9a18adb7-3bfe-410d-89dc-79ccde9c3419": {
+          "tips": [
+            null
+          ]
+        },
+        "9e16dba8-c792-499c-aa27-cbea95bf15cd": {
+          "tips": [
+            null
+          ]
+        },
+        "6387c7a5-11bc-4b51-9079-ba599124ce44": {
+          "progression_name": "Прогнозування"
+        },
+        "a5c4b601-4e45-4261-b7a6-9ffefd154aa2": {
+          "progression_name": "Практика"
+        },
+        "dce569eb-0a60-42a9-9e31-855a6b138f92": {
+          "progression_name": "Вільна гра"
+        },
+        "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
+          "progression_name": "Вільна гра"
+        },
+        "8489f43d-dff8-41c9-aeca-e699cb7e8adc": {
+          "name": "Вступ"
+        },
+        "e3d34b0d-b3a0-49a0-9ff0-6d7bf1679b1c": {
+          "tips": [
+            null
+          ]
+        },
+        "d058a787-37d6-4c25-b5c0-c427b5bc9373": {
+          "name": "Вступ"
+        },
+        "943384fb-1136-4a81-95e0-d5d6f1f9b817": {
+          "progression_name": "Практика"
+        },
+        "0f2d930f-f0ed-4b9a-b2f4-ba259ad3ee4a": {
+          "progression_name": "Додаткове"
+        },
+        "83e6c37d-1cc1-49b9-b208-79567063fb20": {
+          "name": "Вступ"
+        },
+        "1c8c1c88-3c2e-4c1b-bcf8-4e217730d0a6": {
+          "tips": [
+            null
+          ]
+        },
+        "0ecc0bd0-6893-4e8d-abf3-176120a15c2b": {
+          "progression_name": "Практика"
+        },
+        "45275988-8cf4-4043-b5a4-659cc090346a": {
+          "progression_name": "Вільна гра"
+        },
+        "cd8571ad-24a7-4231-92f5-ec2e33b8c7c2": {
+          "progression_name": "Додаткове"
+        },
+        "0242f01c-8a92-4d38-9d15-93132d346a76": {
+          "name": "Вступ"
+        },
+        "7823fbff-f32d-4f4f-808e-1bc340e10cf2": {
+          "progression_name": "Міні-проект: Сніжинка #1"
+        },
+        "2bbcbfb8-df97-457d-9891-719b479cd6b0": {
+          "progression_name": "Міні-проект: Сніжинка #2"
+        },
+        "b6db9c2f-2e77-42e0-bc68-93d8f8e9b4b4": {
+          "name": "Вступ"
+        },
+        "fa573a03-86f6-43da-ad41-1e726bc6fd8a": {
+          "tips": [
+            null
+          ]
+        },
+        "7633c66a-ea8d-4974-9b0a-3b1eeb1e7fa8": {
+          "tips": [
+            null
+          ]
+        },
+        "d3f1d3da-8013-4459-a62c-4a67b4457c61": {
+          "name": "Написання пісень"
+        },
+        "850fd05d-eae1-4111-a12a-31ab15e4d5be": {
+          "tips": [
+            null
+          ]
+        },
+        "85d7cd29-59ea-4d90-909c-a8a16824797f": {
+          "tips": [
+            null
+          ]
+        },
+        "e46c5e2b-810a-412d-b3c8-4866111b0589": {
+          "name": "Вступ"
+        },
+        "39448b98-4357-44bc-ad9a-84ed2a9b36a8": {
+          "tips": [
+            null
+          ]
+        },
+        "b52ccd27-4398-4746-83f5-b510154fb1d7": {
+          "tips": [
+            null
+          ]
+        },
+        "6ddf83bf-3856-4d68-a048-ac5a0ac26349": {
+          "progression_name": "Вільна гра"
+        },
+        "73440a78-9446-4eb3-859e-35c77ce9f79a": {
+          "name": "Вступ"
+        },
+        "ad4c144f-f494-49ec-8184-dcf881dc5823": {
+          "progression_name": "Прогнозування"
+        },
+        "ed239e2c-51b5-4a74-a44b-3a8e2486ba1b": {
+          "progression_name": "Практика"
+        },
+        "6698a795-4281-4c01-a74e-ec5703f653b9": {
+          "progression_name": "Додаткове"
+        },
+        "8628e382-350f-40de-9e22-d522ab7fd289": {
+          "name": "Вступ"
+        },
+        "cbae92bc-d7b3-4707-a5f9-c5b373bdaee7": {
+          "progression_name": "Вільна гра"
+        },
+        "7538f281-8565-4235-a3f1-a40a2679d73d": {
+          "name": "Вступ"
+        },
+        "a24e03d0-5524-46ec-ab96-a0b1d9b24d8b": {
+          "tips": [
+            null
+          ]
+        },
+        "ee4b7d3c-b6b2-4e05-bcb8-cedc77db80c0": {
+          "progression_name": "Прогнозування"
+        },
+        "2b231315-7f71-4e5f-a7b9-e32def714216": {
+          "progression_name": "Виклик"
+        },
+        "64fc9e91-c7c8-496d-8820-e7ae95fba0ee": {
+          "progression_name": "Практика"
+        },
+        "93c7190d-ff63-4aa2-a7f5-cf7546acdb61": {
+          "name": "Вступ"
+        },
+        "33f5530f-7a4e-49ee-b9e3-b4c4a8ddc597": {
+          "progression_name": "Виклик"
+        },
+        "fa627e9a-9b25-4ce7-8b89-e5d4da2c3a22": {
+          "progression_name": "Практика"
+        },
+        "023d0047-47de-45f4-8a03-a913ca40ace6": {
+          "progression_name": "Прогнозування"
+        },
+        "179685a9-6ed2-454f-8a2b-76c4032f1d16": {
+          "tips": [
+            null
+          ]
+        },
+        "3f9da29a-6132-4d1b-937a-5732b48eeb94": {
+          "tips": [
+            null
+          ]
+        },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "вивчити"
+        },
+        "e43bfad4-b411-4e0d-a59c-2e4764fd9c65": {
+          "progression_name": "Створити ваш проект"
+        },
+        "a0f0bda0-512f-4e9c-8c28-1f749a2a7431": {
+          "tips": [
+            null
+          ]
+        },
+        "84a78eea-27de-4815-8e24-1323addfe7ab": {
+          "tips": [
+            null
+          ]
+        },
+        "5fa5c47a-6198-4e47-b5e6-f7784b309d54": {
+          "tips": [
+            null
+          ]
+        },
+        "0d42ae11-f1d5-498b-b68f-f559173be646": {
+          "tips": [
+            null
+          ]
+        },
+        "2f04713f-ee5f-4ad7-8696-b8b8b6683fb6": {
+          "tips": [
+            null
+          ]
+        },
+        "750a4241-a4da-4eca-a95b-f3157e20f199": {
+          "name": "Рухайся, рухайся"
+        },
+        "8c941561-9506-4101-ad8a-d14a51edb181": {
+          "tips": [
+            null
+          ]
+        },
+        "07c53b76-81d0-4254-bbce-a04c4dac3f38": {
+          "tips": [
+            null
+          ]
+        },
+        "70f8bf21-fc6d-4fac-b850-7c1a1694ce57": {
+          "tips": [
+            null
+          ]
+        },
+        "c05c857d-b5f3-4136-b505-f9ab43799bcb": {
+          "tips": [
+            null
+          ]
+        },
+        "dcffa95e-0a1b-48af-b50d-3e4e3d028eb5": {
+          "progression_name": "Виклик"
+        },
+        "e5358a30-f76d-41f3-9cc4-473c22f7c0fc": {
+          "progression_name": "Практика"
+        },
+        "80691b85-b3f7-42c5-b28d-075f30bcfa91": {
+          "progression_name": "Додаткове"
+        },
+        "59fe6808-f9a3-4cbb-b193-9684c40568b6": {
+          "tips": [
+            null
+          ]
+        },
+        "4709a0b0-10cf-444a-95c2-79194cef926d": {
+          "name": "Вступ"
+        },
+        "90d01840-ab32-4ff1-9603-1a400df6c870": {
+          "tips": [
+            null
+          ]
+        },
+        "f423cbb5-1e3c-4917-b077-a99013ee72e0": {
+          "progression_name": "Виклик"
+        },
+        "541fc52e-755a-43bf-b5c1-a85f3c255107": {
+          "progression_name": "Практика"
+        },
+        "d7529639-1989-486a-994e-2c87b04b3113": {
+          "name": "Економія на повторах"
+        },
+        "72b7082d-9ed1-465f-8d53-952202764c44": {
+          "tips": [
+            null
+          ]
+        },
+        "48078796-9a5d-47a8-890e-69e86fb1400a": {
+          "name": "Вступ"
+        },
+        "502c3ae3-b48f-42db-a55f-9e1011b81c07": {
+          "progression_name": "Виклик"
+        },
+        "116db8d7-f2b2-497a-93e3-48dc3cb020eb": {
+          "progression_name": "Практика"
+        },
+        "8c6d11c7-2b53-47b4-a1f3-cc9587f2b10c": {
+          "name": "Вступ"
+        },
+        "7d1b2aba-f7f2-4655-b555-5269fb178ef6": {
+          "progression_name": "Виклик"
+        },
+        "9d2b30a9-8da4-4c98-bd40-5f94dfc8a0d2": {
+          "progression_name": "Практика"
+        },
+        "6fd1b50c-48c1-4ebd-a36f-91027caf9587": {
+          "progression_name": "Додаткове"
+        },
+        "a60b1be5-48d8-4fcc-9203-bdc66d8effe9": {
+          "name": "Вступ"
+        },
+        "2351b0fa-15de-406b-b895-8b07d7858eda": {
+          "tips": [
+            null
+          ]
+        },
+        "c9b716a1-6ed8-45b7-81b6-75240df48dae": {
+          "progression_name": "Виклик"
+        },
+        "6aa0f9ae-3248-4a8b-859f-1f75f43c473e": {
+          "progression_name": "Практика"
+        },
+        "b8b54f7e-0f68-46c7-84d1-756d1d134cdc": {
+          "progression_name": "Вільна гра"
+        },
+        "0d275833-51d3-4cdb-b05f-74807131d02b": {
+          "progression_name": "Додаткове"
+        },
+        "b54332ab-3838-4efd-b83b-0e44f83f3425": {
+          "name": "Вступ"
+        },
+        "ce7f096d-fa3c-425e-8e75-962fb8613e63": {
+          "name": "Велика подія"
+        },
+        "09024fe7-6b74-4301-8367-5702b11c5e77": {
+          "tips": [
+            null
+          ]
+        },
+        "252c66a6-6257-4049-829c-1fc9fdef2303": {
+          "name": "Вступ"
+        },
+        "bde6629f-e67a-4eca-82de-7d379e9b22f2": {
+          "tips": [
+            null
+          ]
+        },
+        "d4687de2-d2c6-4e40-ae76-4daca6ebfe30": {
+          "progression_name": "Вільна гра"
+        },
+        "564e41dc-2b6c-4aac-a1a5-1825568084dc": {
+          "progression_name": "Міні-проект: Королівська битва"
+        },
+        "763a51bb-efc3-4451-92e7-1d455731442a": {
+          "progression_name": "Вільна гра"
+        },
+        "3d102930-9eee-4921-b3fc-9766a293a8df": {
+          "progression_name": "Додаткове"
+        },
+        "b1281f5a-4b11-4aa6-a521-bb70fa009c3d": {
+          "progression_name": "Проект"
+        },
+        "5fb5744d-9d84-476f-b85a-dcd1fceba4f9": {
+          "progression_name": "Проект"
+        },
+        "031f0aef-cd6b-4ca5-b894-a7d6a8eca2e1": {
+          "name": "Планування",
+          "tips": [
+            null
+          ]
+        },
+        "23361af0-ba94-44b6-bc6c-fb6900fcc9dd": {
+          "name": "Проект",
+          "progression_name": "Проект"
+        },
+        "2af4acbc-a5cf-43b6-b7a7-e02e5949bcfb": {
+          "tips": [
+            null
+          ]
+        },
+        "1c38d573-e689-4c3a-84b6-f6c5deb4cd55": {
+          "name": "Вступ",
+          "tips": [
+            null
+          ]
+        },
+        "4124a6f9-58cd-4211-be8a-9930d9884d43": {
+          "tips": [
+            null
+          ]
+        },
+        "47ed26cb-f342-486a-9123-166717aab595": {
+          "progression_name": "Виклик"
+        },
+        "113a8302-96b2-4aff-b859-036ff9b540c7": {
+          "progression_name": "Практика"
+        },
+        "cbda0c5a-4809-45ee-ad7e-2b55f1b1ddd5": {
+          "progression_name": "Прогнозування"
+        },
+        "d02dbffd-eaec-4155-ad4f-54f3787b6264": {
+          "progression_name": "Практика"
+        },
+        "17df522f-cbb2-4be1-af08-37c105e9b134": {
+          "progression_name": "Виклик"
+        },
+        "50c37f50-7e2b-4c9c-9443-013742231b0e": {
+          "name": "Вступ"
+        },
+        "5b2a71e6-47a2-4f33-bf7c-9e701f60f4a4": {
+          "progression_name": "Виклик"
+        },
+        "48a18e44-f31f-48ff-b7e4-95a786df2982": {
+          "progression_name": "Прогнозування"
+        },
+        "2dd6b911-9612-4d41-836e-faeaf7cc3e77": {
+          "progression_name": "Практика"
+        },
+        "27675226-8c0f-4955-ac5f-f9bfa4c7c475": {
+          "progression_name": "Додаткове"
+        },
+        "0ce0c382-a11b-4c74-ad59-41f02403b46b": {
+          "name": "Вступ"
+        },
+        "fd0ab898-850a-45a0-be4f-1e223b482dce": {
+          "progression_name": "Виклик"
+        },
+        "a44da8b7-1127-4f1c-9634-6387876dc604": {
+          "progression_name": "Практика"
+        },
+        "ebc8dbcd-12ed-41f3-b957-3d5ce803e014": {
+          "progression_name": "Прогнозування"
+        },
+        "36b378b8-6af7-43ac-bc36-81a2758775fd": {
+          "progression_name": "Практика"
+        },
+        "76775349-6666-411c-adea-ee7c7277587c": {
+          "progression_name": "Додаткове"
+        },
+        "73186d8b-412c-447c-b31d-ba6efced8854": {
+          "name": "Вступ"
+        },
+        "3c6953b2-ead1-488b-b460-2735304f527f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Виклик"
+        },
+        "b3505cdb-0f28-4265-a017-d4d3d77d6b72": {
+          "progression_name": "Практика"
+        },
+        "738565b6-64b7-435b-92ea-42efb0b3fa2f": {
+          "progression_name": "Прогнозування"
+        },
+        "2a1be9e0-a252-42dc-a548-fb62c1c19e91": {
+          "progression_name": "Додаткове"
+        },
+        "a9b4ed74-2780-4aa1-988a-c0fac2ae97f5": {
+          "name": "Вступ",
+          "tips": [
+            null
+          ]
+        },
+        "0e4c9d5d-95f3-4156-ad18-fbd153d4a7df": {
+          "tips": [
+            null
+          ]
+        },
+        "a266c420-212a-4352-9dab-0ebb021418cc": {
+          "progression_name": "Прогнозування"
+        },
+        "3f6279d2-20fb-41da-aa6f-80a97efbe8ac": {
+          "progression_name": "Практика"
+        },
+        "048bc86f-ea26-419c-9d73-452f86ff0000": {
+          "progression_name": "Вільна гра"
+        },
+        "64fbbaf2-d24b-46f6-8f7c-d31e4c26abc6": {
+          "progression_name": "Практика"
+        },
+        "c4709ef3-6dff-44f9-ab00-7c8d4ceb84de": {
+          "tips": [
+            null
+          ]
+        },
+        "fcfb7745-6451-4f94-a9c1-23d681360aac": {
+          "name": "Спрайт в Дії",
+          "progression_name": "Прогнозування"
+        },
+        "a04d7a73-d970-45f1-8c68-6553af32892f": {
+          "progression_name": "Практика"
+        },
+        "9e411d33-77b5-4582-b8e8-dedb36230af5": {
+          "name": "Вступ"
+        },
+        "e6d62a4b-b381-4ce6-9301-da64d2be269a": {
+          "tips": [
+            null
+          ]
+        },
+        "116adfa6-d62e-421c-aeff-c0d7a60cb4f0": {
+          "progression_name": "Вільна гра"
+        },
+        "5398d472-ce7e-4f6b-9a6c-ccfa31ebde30": {
+          "progression_name": "Практика"
+        },
+        "537232f4-4f8e-4dd4-9b51-122c0d012e9a": {
+          "progression_name": "Події"
+        },
+        "06cef1c1-0946-4a77-acac-e9dec70a1573": {
+          "progression_name": "Кроки"
+        },
+        "22d25455-4f87-44cb-aa36-b5adc00e1ba1": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Властивості"
+        },
+        "24c3bf60-f0f7-4395-ae4c-12b4b0746c9f": {
+          "progression_name": "Вільна гра"
+        },
+        "1d794759-7ad3-4ae6-9ca6-2d16a8c492eb": {
+          "progression_name": "Додаткове"
+        },
+        "0681ba72-f4b3-4587-ad2b-c4343ee5d7af": {
+          "name": "Вступ"
+        },
+        "a9ede4c3-8f00-479e-9a63-7d2c45e36469": {
+          "progression_name": "Практика"
+        },
+        "e40c7888-610e-4876-9780-9f426355af66": {
+          "progression_name": "Прогнозування"
+        },
+        "f935eb4e-5cce-4727-b128-12e08a0da6f5": {
+          "progression_name": "Виклик"
+        },
+        "573324e5-a391-4e63-8b78-3af1d37a8250": {
+          "progression_name": "Практика"
+        },
+        "1ee50550-1160-4e84-b3d8-72c9260f8c27": {
+          "progression_name": "Прогнозування"
+        },
+        "4e7de8b3-0096-40ec-8fc1-796fe0a50f36": {
+          "progression_name": "Практика"
+        },
+        "34e6b039-ccae-45fe-9ab7-b690257c8f6c": {
+          "progression_name": "Додаткове"
+        },
+        "5e8e6fbf-ad94-47ff-935e-155e7a92c73f": {
+          "name": "Вступ"
+        },
+        "ca09b8e6-6cc8-4fc5-a47e-3126629b1002": {
+          "tips": [
+            null
+          ]
+        },
+        "95e84aa8-80ce-430c-b12c-92d51483644e": {
+          "progression_name": "Міні-проект: Дизайн наклейки"
+        },
+        "568dc8e1-9914-45bf-98bf-b878327ea8c1": {
+          "progression_name": "Вільна гра"
+        },
+        "2f0beffd-547f-4c39-aad4-3f475ea744fe": {
+          "name": "Вступ"
+        },
+        "12894c2b-8f8d-49f7-b339-f1e8f150bfd4": {
+          "progression_name": "Практика"
+        },
+        "fb1eaf7d-a8d3-47c5-9dfd-44aa4d8910b2": {
+          "progression_name": "Прогнозування"
+        },
+        "b8c7db7b-7f3b-4b89-bde2-705562944f5b": {
+          "progression_name": "Практика"
+        },
+        "f7e03887-22e1-4e97-b1e1-143776678547": {
+          "progression_name": "Виклик"
+        },
+        "05284324-e602-4f6c-a656-44ebba6a41c4": {
+          "progression_name": "Практика"
+        },
+        "3080e687-1e30-47e4-bf9a-25346c9486eb": {
+          "progression_name": "Прогнозування"
+        },
+        "504c0708-e9cc-41e8-86b6-fcdcfc8c93e2": {
+          "progression_name": "Додаткове"
+        },
+        "012a07d9-4401-4f1b-9b2f-0ef2befba91e": {
+          "name": "Вступ"
+        },
+        "784f33c3-e511-43ab-93b1-8ebb29c48883": {
+          "progression_name": "Практика"
+        },
+        "4df80825-7300-4e21-b3ec-5b1ecc62d490": {
+          "name": "Вступ"
+        },
+        "47b5c27a-db1c-4abd-a3c9-4d90561d7d79": {
+          "progression_name": "Виклик"
+        },
+        "9798ab7a-f709-42df-b9fb-1828099a88d3": {
+          "progression_name": "Вільна гра"
+        },
+        "414b0efd-1356-4677-9c30-303d3c0afb41": {
+          "name": "Вступ"
+        },
+        "8504a81d-7f72-44e2-ac40-5fe386544817": {
+          "progression_name": "Прогнозування"
+        },
+        "ed0aa04b-e740-415f-b009-82f8373ece90": {
+          "progression_name": "Прогнозування"
+        },
+        "acb76386-861e-420e-affd-2f61655a5423": {
+          "progression_name": "Виклик"
+        },
+        "480f26bc-03a7-4014-84de-e4a60e3caf83": {
+          "progression_name": "Практика"
+        },
+        "9419a044-4ad7-4a3f-8718-fc5606ed7958": {
+          "progression_name": "Додаткове"
+        },
+        "137d4f7b-efec-4607-97b0-e4838274a5c9": {
+          "name": "Вступ"
+        },
+        "2590c04c-01f0-4e10-99af-2bf8d06922ca": {
+          "progression_name": "Прогнозування"
+        },
+        "0a95b61c-de3a-4cb9-a151-c562c5326c89": {
+          "progression_name": "Виклик"
+        },
+        "208367ed-d0e5-4b54-98bd-c2925f220711": {
+          "progression_name": "Практика"
+        },
+        "a169da19-bf83-4912-a7b3-3751242c7f9e": {
+          "progression_name": "Прогнозування"
+        },
+        "8e573a8a-22a7-4169-b45d-5901ba99c8df": {
+          "progression_name": "Додаткове"
+        },
+        "eababef0-4852-4c6f-b5db-2021e532c24d": {
+          "name": "Вступ"
+        },
+        "828088e0-ab60-429b-ac4b-4317696c271c": {
+          "progression_name": "Вільна гра"
+        },
+        "d5f6ef42-7dc3-4862-a568-590c2a26c7fa": {
+          "name": "Вступ"
+        },
+        "02a06c86-4808-4c05-93b2-45ed61a1eb29": {
+          "progression_name": "Прогнозування"
+        },
+        "04c4d948-2e60-4a38-8c5b-9bf7280d029f": {
+          "progression_name": "Виклик"
+        },
+        "e695d0b5-156d-4dd7-9785-47d3e834cb16": {
+          "progression_name": "Практика"
+        },
+        "1aae2f0c-e768-4e5b-a26e-cb17235f4d65": {
+          "progression_name": "Прогнозування"
+        },
+        "d89fd667-2100-4ea0-ac33-c25c317c1138": {
+          "name": "Вступ"
+        },
+        "d5c88852-7de9-47ce-82d8-f93f6c33b2c0": {
+          "progression_name": "Практика"
+        },
+        "7d64d5dc-765d-4bb4-8664-5d6b8a3ddc1f": {
+          "progression_name": "Виклик"
+        },
+        "d21f6b6c-7d91-4877-8e6d-d2c291eaa930": {
+          "progression_name": "Практика"
+        },
+        "e477ffba-5d09-425e-ab4c-c84cbeb23378": {
+          "progression_name": "Прогнозування"
+        },
+        "b0e26070-0ca9-4033-9497-dcaaf64de124": {
+          "progression_name": "Додаткове"
+        },
+        "fbf95927-5c0c-4980-bbb6-7a4bc75da827": {
+          "name": "Вступ",
+          "tips": [
+            null
+          ]
+        },
+        "22f29e56-1a7c-402b-aaf8-bd5bae9e6546": {
+          "tips": [
+            null
+          ]
+        },
+        "0cb275f3-0f5c-4b45-a456-c3acd5a7b82d": {
+          "progression_name": "Вільна гра"
+        },
+        "d2c0374f-fce3-4290-9058-8a47a9b14357": {
+          "name": "Вступ"
+        },
+        "e0582255-a83c-4278-8b18-9ce09ac1118d": {
+          "progression_name": "Лісоруб"
+        },
+        "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f": {
+          "progression_name": "Практика"
+        },
+        "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4": {
+          "progression_name": "Практика"
+        },
+        "480098ab-4bb6-4713-bf04-3404e93c9fe3": {
+          "progression_name": "Виклик"
+        },
+        "ff540d41-6f94-4e4e-affd-0d167ab24093": {
+          "progression_name": "Практика"
+        },
+        "ba634679-9f17-4493-878d-b657dad934a2": {
+          "progression_name": "Прогнозування"
+        },
+        "5f8d119b-736b-416c-b460-0cf8c13f4d49": {
+          "name": "Вступ"
+        },
+        "7e8dd7a8-74bd-4ae5-b88c-3656e16328a2": {
+          "progression_name": "Прогнозування"
+        },
+        "1c5351ca-eb12-4915-9840-7740a6492981": {
+          "progression_name": "Практика"
+        },
+        "9e8a729a-c0b8-4d57-ad98-fd2132ad1ec2": {
+          "progression_name": "Виклик"
+        },
+        "6f138e96-5674-4760-b888-e6020afed570": {
+          "progression_name": "Практика"
+        },
+        "a4b3a551-7660-45ad-95a6-a404eaef795d": {
+          "progression_name": "Прогнозування"
+        },
+        "556d480c-8833-4dc1-b5ea-fcbd1ed85890": {
+          "progression_name": "Вільна гра"
+        },
+        "bc303f43-1995-42e4-887d-02233e2a5905": {
+          "progression_name": "Додаткове"
+        },
+        "c69862bf-8fe7-4a68-bb37-ff81924f4bf5": {
+          "progression_name": "Прогнозування"
+        },
+        "30ab0425-1627-48c1-96fe-419887aa0ae7": {
+          "tips": [
+            null
+          ]
+        },
+        "515ecad5-bd7d-46e5-b210-53f7e7a3d43b": {
+          "tips": [
+            null
+          ]
+        },
+        "2a0713a5-ac91-4352-9d68-df19d415fd97": {
+          "progression_name": "Практика"
+        },
+        "aa72fe0f-492d-4c13-827d-43918664378e": {
+          "name": "Вступ"
+        },
+        "bb115604-d0c7-4483-98c0-2d59d04351bb": {
+          "tips": [
+            null
+          ]
+        },
+        "be0c1c94-6eec-4c10-b90f-59da0ebb1a63": {
+          "tips": [
+            null
+          ]
+        },
+        "b2d87065-8954-443d-a9be-bb206b411b24": {
+          "progression_name": "Прогнозування"
+        },
+        "3448e98d-17c0-47c5-a924-ce769b817cd5": {
+          "tips": [
+            null
+          ]
+        },
+        "c2ecbddf-b99e-4050-903f-fdd7b6660de9": {
+          "progression_name": "Прогнозування"
+        },
+        "29bc9a2b-2f0e-4f9f-becf-3264d6d93b43": {
+          "progression_name": "Вільна гра"
+        },
+        "25e6419e-5475-4864-a3db-c05f2d873436": {
+          "name": "Вступ"
+        },
+        "d2b5d26b-b1db-4e4f-a83f-db69b32fd541": {
+          "progression_name": "Практика"
+        },
+        "4c108344-ee78-432c-bec0-21f055aec442": {
+          "name": "Вступ"
+        },
+        "aa87a0a5-5dde-4769-92d5-94b9d0063d84": {
+          "progression_name": "Прогнозування"
+        },
+        "8ff9ffd9-2fd1-42d0-90cf-42f595c4c816": {
+          "progression_name": "Практика"
+        },
+        "ea00f202-5974-43d9-831a-37197acb6673": {
+          "progression_name": "Додаткове"
+        },
+        "bb3c50cd-8d7e-457a-b39d-2fe3172f0e9e": {
+          "name": "Вступ"
+        },
+        "6632ae59-76a8-4f0d-bb29-fc591020ed93": {
+          "tips": [
+            null
+          ]
+        },
+        "f8950515-c428-4508-b465-0930dcbb9d57": {
+          "progression_name": "Вільна гра"
+        },
+        "61a1cba1-c9b5-40c9-bbad-e4633be05b85": {
+          "progression_name": "Додаткове"
+        },
+        "2db3039b-c245-429c-9232-dd4165a45bb6": {
+          "name": "Планування"
+        },
+        "464b07bf-434b-4b29-8115-fb7ad1d15f56": {
+          "tips": [
+            null
+          ]
+        },
+        "926aed8f-c241-4aff-9dac-6045708f27d7": {
+          "tips": [
+            null
+          ]
+        },
+        "77e1eae3-37ee-4b59-8014-30279b618562": {
+          "name": "Створити ваш проект",
+          "progression_name": "Створити ваш проект"
+        },
+        "de1b7224-82b6-4f1e-aa81-b9aebc78c6b1": {
+          "name": "Вступ",
+          "tips": [
+            null
+          ]
+        },
+        "f1cf91eb-60a1-478e-a6e8-926270f90a9c": {
+          "tips": [
+            null
+          ]
+        },
+        "749e673c-fb7b-4101-9308-78d14af34b57": {
+          "description": "Приділіть деякий час, щоб впевнитися, що всі засвоїли як клацати, перетягувати та відпускати. Знайдіть час, щоб ознайомити учнів з мовою пристроїв, які вони будуть використовувати під час роботи над завданнями. Якщо у вас є планшети, студенти використовуватимуть _сенсорний екран_. Якщо у вас є ноутбуки, вони, ймовірно, будуть використовувати _трекпади_. Настільні комп’ютери, які ви можете знайти в лабораторії, будуть націлені на використання миші.",
+          "tips": [
+            null
+          ]
+        },
+        "e7ff4d51-6bd2-4e1b-9da4-71c9c010c069": {
+          "tips": [
+            null
+          ]
+        },
+        "f1441fec-0659-46e7-b4a8-e5faada350e9": {
+          "tips": [
+            null
+          ]
+        },
+        "638a5ac0-e923-4fd6-8665-22fc3dadc820": {
+          "tips": [
+            null
+          ]
+        },
+        "eb919624-2302-4134-8c74-8b0dbf96bd33": {
+          "tips": [
+            null
+          ]
+        },
+        "d49962e7-d0ed-45b1-88e1-586107bfc184": {
+          "progression_name": "Виклик"
+        },
+        "fbf4cf8d-738c-4f5f-bb85-8014dcc2dee7": {
+          "progression_name": "Практика"
+        },
+        "45d87d50-30ef-4aa3-bc3f-e06911ea7ecd": {
+          "progression_name": "Додаткове"
+        },
+        "be7516c7-7930-4a50-afac-99d9ff233e72": {
+          "tips": [
+            null
+          ]
+        },
+        "0918b0a2-6581-4f48-b0f1-4ef6a2b114ce": {
+          "name": "Вступ"
+        },
+        "8460d588-eb09-42aa-a1ae-486be4d61940": {
+          "progression_name": "Виклик"
+        },
+        "4938d690-fc47-4e8a-917d-641dd5405763": {
+          "progression_name": "Практика"
+        },
+        "951923b1-6912-477c-b97f-b4f9d6f71f62": {
+          "name": "Вступ"
+        },
+        "30e8181b-a550-477d-9dd7-c9eb8ed6a671": {
+          "tips": [
+            null
+          ]
+        },
+        "410ccff6-d1ef-482d-8997-c2364398219c": {
+          "progression_name": "Виклик"
+        },
+        "d6fa1a62-37e2-45df-8eab-84bcf1ed877d": {
+          "progression_name": "Практика"
+        },
+        "e0d79c69-a899-455f-b74d-670229a86973": {
+          "name": "Вступ"
+        },
+        "40bca876-4212-4432-8e78-451ac05d4b6a": {
+          "tips": [
+            null
+          ]
+        },
+        "11413c79-9a85-4bc9-8f69-4880828b1218": {
+          "tips": [
+            null
+          ]
+        },
+        "98564d72-b4b7-4c4e-a977-76bec68b7278": {
+          "progression_name": "Виклик"
+        },
+        "eca56e55-c71d-40a8-8e0b-05ee293c5a86": {
+          "progression_name": "Практика"
+        },
+        "ea1b43fd-047d-4ed2-a8f6-9c639ec26416": {
+          "name": "Вступ"
+        },
+        "1ece725c-150b-4d58-bac0-9891ed7bf381": {
+          "progression_name": "Виклик"
+        },
+        "5129f085-9edb-46af-86fd-2dc86602ef13": {
+          "progression_name": "Практика"
+        },
+        "371fe3c3-843c-447c-b5c2-337d8584e873": {
+          "progression_name": "Додаткове"
+        },
+        "524c769b-ceae-4bde-906e-c73bde2ce3e9": {
+          "name": "Вступ"
+        },
+        "58f96f9e-2ea8-433e-a770-1eec5ead2f83": {
+          "tips": [
+            null
+          ]
+        },
+        "204739af-3260-4213-8598-d13acc23e00d": {
+          "progression_name": "Виклик"
+        },
+        "7ba89248-c1c2-4bb2-a72e-18f406424ee6": {
+          "progression_name": "Практика"
+        },
+        "45027086-96db-45ba-baa9-2983b677e8c9": {
+          "progression_name": "Вільна гра"
+        },
+        "ac9f4b18-ea6f-4e24-bcfc-07ae916db178": {
+          "progression_name": "Додаткове"
+        },
+        "1e964e3a-33dc-4a31-b893-44e0b55c0ad6": {
+          "name": "Вступ"
+        },
+        "4e80fb44-708d-420f-8ae7-c36bfdd20075": {
+          "tips": [
+            null
+          ]
+        },
+        "baa778c6-41e7-4816-9aa2-3e0a0e88a12a": {
+          "progression_name": "Виклик"
+        },
+        "8e20449d-c692-4cac-861a-d8e19fd768a8": {
+          "progression_name": "Практика"
+        },
+        "1c1d446d-d36d-4429-9aa9-c043841d460a": {
+          "progression_name": "Вільна гра"
+        },
+        "74ab6d31-39e4-4ccf-941d-819c20c60c91": {
+          "progression_name": "Додаткове"
+        },
+        "44c1a7f9-c83d-4be4-a263-05383ae1eadb": {
+          "name": "Вступ",
+          "tips": [
+            null
+          ]
+        },
+        "2e28db00-9470-4dcb-9a9b-7098dbf5c12b": {
+          "progression_name": "Вільна гра"
+        },
+        "55e22a45-8561-4471-a957-13667be5a15c": {
+          "progression_name": "Практика"
+        },
+        "6b2e09f0-7a68-497a-ab27-da65bf20e45b": {
+          "progression_name": "Міні-проект: Хорхе Собака"
+        },
+        "8a9bb5d1-721a-426a-9002-318e30cdef0f": {
+          "progression_name": "Додаткове"
+        },
+        "813d23e7-c45b-4fe4-b010-6f03fe92e572": {
+          "name": "Вступ"
+        },
+        "f030f807-4ee3-45a2-901b-dc4a5c465a1e": {
+          "progression_name": "Міні-проект: Королівська битва"
+        },
+        "7e3a5e36-8b18-4987-843e-044f09be9746": {
+          "progression_name": "Вільна гра"
+        },
+        "ac20896a-a275-4b6f-a06b-3ffdc83bbb7e": {
+          "progression_name": "Додаткове"
+        },
+        "7a945439-a8e0-438c-a2a3-7e81b6832618": {
+          "progression_name": "Моє Інтернет-сусідство"
+        },
+        "05ed12f0-289f-4706-976f-cd05c6780b2e": {
+          "description": "### Основна лексика\n\n-   **онлайн**: використання комп’ютера, телефону або планшета для відвідування вебсайту чи додатку\n-   **вебсайт або додаток**: місце, яке ви можете відвідати в Інтернеті\n\n**Запитайте**: _Що вам потрібно зробити, щоб залишатися в безпеці, коли ви відвідуєте нові місця?_ ([Слайд 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nЗапропонуйте студентам відповісти. Відповіді будуть відрізнятися, але зробіть акцент на наступних правилах безпеки:\n\n-   Завжди мандруйте з дорослими.\n-   Не блукайте самі.\n-   Розмовляйте тільки з тими, кого ви знаєте.\n\n**Скажіть**: _Сьогодні ми поговоримо про те, що відвідування вебсайтів в Інтернеті дуже схоже на відвідування місць у реальному житті. Так само як існують правила безпеки, коли ви відвідуєте нові місця у світі, є способи убезпечити себе в Інтернеті._\n\n**Продемонструйте** [Слайд 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) і визначте термін **онлайн** як _використання комп’ютера, телефону чи планшета для відвідування вебсайту чи додатку_.\n\n**Покажіть** відео [Моє Інтернет-сусідство](https://www.commonsense.org/education/videos/my-online-neighborhood) на [Слайді 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93), а потім запитайте: _Що Армсу сподобалося в Інтернеті? Що він може робити в Інтернеті?_\n\nЗапропонуйте студентам відповісти. Зразки відповідей:\n\n-   Він любить відвідувати круті  місця.\n-   Він може спілкуватися зі своєю родиною та друзями. \n-   Він може дізнатися багато нового.\n-   Він може створювати речі в Інтернеті.\n\n**Запитайте**: _Яким трьом правилам дотримується Армс, коли мандрує Інтернетом?_\n\nЗапропонуйте студентам відповісти. Покажіть [Слайд 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) і утвердіть три основні правила:\n\n1.  Завжди спочатку запитуйте своїх батьків (або дорослого, якому ви довіряєте).\n2.  Розмовляйте тільки з людьми, яких ви знаєте.\n3.  Дотримуйтеся місць, які підходять саме вам.\n\nПоясніть, що дотримуватися «правильних» місць означає переконатися, що це сайт чи програма, які підходять для дітей, і що у вас є дозвіл бути там."
+        },
+        "11cff0b0-c89c-4fa0-978f-787e3b4e4c27": {
+          "description": "**Скажіть**: _Зараз ми вивчимо короткий вірш, який допоможе нам згадати правила безпеки в Інтернеті. Спочатку я зачитаю вірш, а потім ми прочитаємо його разом._\n\n**Продемонструйте** [Слайд 7](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_196) і змоделюйте дії з вірша, коли ви читаєте вірш вголос. Цей твір побудований на системі питань та відповідей. Він сповнений діями, які відповідають кожному з трьох правил безпеки.\n\n**Прочитайте** разом з учнями вірш вголос. Читаючи, учні повинні стежити за діями. Вірш також добре працює, коли один з учнів бере на себе роль вчителя, а клас відповідає.\n\n**Безпека рулить! Дженні Прітчетт**\n\n_Щоб бути в безпеці_\n\n_Коли ​​ми в мережі_\n\n_Дотримуємось цих правил_\n\n_І залишаємось небайдужі!_\n\n[Підніміть 1 палець] \\*Завжди спочатку запитуйте своїх батьків! \\*\n\n[Підніміть 2 пальці] \\*Розмовляйте лише з тими, кого ви знаєте! \\*\n\n[Підніміть 3 пальці] _Дотримуйтесь сайтів саме для вас!_\n\n_І ми будемо в безпеці_\n\n_Куди б ми не пішли!_\n\nПримітка. [Плакат вірша](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) чудово підходить для щотижневого повторення або як традиція перед початком роботи за будь-яким комп’ютером чи пристроєм."
+        },
+        "0fef2713-dcd5-4c38-96e3-78954af93fec": {
+          "description": "**Скажіть**: _Комп'ютер дає змогу відвідувати віддалені місця, не виходячи з класу._\n\nВизначте **вебсайт** як _місце, яке ви можете відвідати в Інтернеті._ ([Слайд 8](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_245)) Поясніть учням, що в Інтернеті вони можуть відвідувати вебсайти або програми реальних місць, таких як зоопарки та музеї. Ці місця можуть бути далеко від місця їх проживання, але вони можуть відвідати їх онлайн.\n\n**Оберіть** вебсайт для вивчення для усього класу. Якщо ви не впевнені, що краще досліджувати, спробуйте одну з наведених опцій.\n\n-   [Зоопарк Сан-Дієго](http://kids.sandiegozoo.org/)\n-   [Діти National Geographic досліджують світ](https://kids.nationalgeographic.com/explore/countries/)\n\n**Запитайте**: _Яке перше правило перед тим, як увімкнути пристрій або відкрити вебсайт чи додаток?_\n\nЗапропонуйте учням поділитися, нагадуючи їм, що вони завжди повинні запитувати дозвіл у дорослих, перш ніж використовувати пристрій або відвідувати вебсайт чи додаток.\n\n**Досліджуйте** вебсайт, який ви вибрали разом зі своїм класом, дозволяючи учням обирати сторінки та види діяльності, які їм найбільше цікаві. Переглядаючи сайт, зверніть увагу на те, як учні дотримуються двох інших правил безпеки під час роботи в Інтернеті: спілкуються лише з людьми, яких вони знають, і дотримуються місць, які їм підходять.\n\nПримітка. Якщо ви перебуваєте в комп’ютерній лабораторії або маєте достатньо пристроїв у класі, попросіть учнів провести дослідження окремо або в парах.\n\n**Запитайте** студентів, що вони дізналися під час екскурсії Інтернетом. Також запитайте: _Як ви дотримувалися трьох правил безпеки під час відвідування сайту?_"
+        },
+        "d467ff79-be78-48b7-ae3d-915d6c776e78": {
+          "description": "**Скажіть**: _Сьогодні ми говорили про те, як саме Інтернет дозволяє нам відвідувати далекі місця. Ми дізналися, що подорожі в нові місця в Інтернеті дуже схожі на відвідування місцями в реальному житті. Ми також дізналися три важливі правила безпеки під час відвідування вебсайтів або додатків._\n\n**Роздайте** [Хвилинку на зупинку](https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/edit) кожному учню. Прочитайте інструкції вголос і дозвольте учням самостійно заповнити роздатковий матеріал. ([Слайд 9](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5b457108e7_0_0))\n\n**Запросіть** учнів поділитися своїми міркуваннями з класом. Зберіть роздатковий матеріал для оцінки навчання учнів."
+        },
+        "03cbbbdf-41c3-47a1-aad7-d871e5c43061": {
+          "description": "Ось додаткові ресурси, які ви можете надати студентам для покращення їхнього навчання:\n\n-   [Сімейні активності](https://drive.google.com/open?id=17Tq9wgw2F9sMkE2Z2a2zkriLK0zp1qDsSkv5YTB7Ldg)\n-   [Сімейні поради](https://www.commonsense.org/education/family-tips/k-5-privacy-and-security)"
+        },
+        "5e98b1b4-ab1d-4607-8234-fb70c37ae557": {
+          "name": "Вступ",
+          "description": "#### Поведінка в комп'ютерній лабораторії\n\n**Мета:** Це обговорення навчить студентів, чого очікувати та як поводитися, коли вони заходять до комп’ютерної лабораторії."
+        },
+        "15b4677a-d313-433b-848f-8e1a9e87f4cd": {
+          "tips": [
+            "-   Залишайтеся спокійними в лабораторії\n-   Пам'ятайте, що не можна жувати жуйку або цукерки\n-   Продезінфікуйте руки\n-   Сядьте зі своїм партнером за один комп'ютер\n-   Переконайтеся, що перший «водій» може дістатися до миші\n-   Коли ви розчаровані, не бийте і не трясіть комп'ютер чи монітор\n-   Дотримуйтесь правила **\\*20/20/20** - Як запобігти перенапруженню очей\n-   Як боротися з **\\*Хитаннями** кожні 20-30 хвилин (потрібен безкоштовний вхід на GoNoodle).\n-   Запитайте свого партнера, перш ніж запитати вчителя\n-   Зменште гучність, щоб усі інші могли чути своїх партнерів\n-   Використовуйте свій щоденник, щоб відстежувати свої почуття та рішення"
+          ]
+        },
+        "7890644b-ce6b-45ce-9d69-f94127e930f0": {
+          "description": "**Обговоріть:**\n\nПроведіть детальну дискусію щодо правил поведінки у комп’ютерній лабораторії, щоб переконатися, що учні розуміють правила. Деякі теми обговорення можуть включати:\n\n-   _Біг в комп'ютерній лабораторії - добре?_\n-   _Наскільки голосно ми повинні говорити, коли ми в комп'ютерній лабораторії?_\n-   _Що робити, якщо не вдається розв'язати головоломку?_\n-   _Якщо щось не вдасться, чи допоможе вам те, що ви вдарите по екрану?_\n-   _Як нам підготуватися, коли ми збираємося йти до комп'ютерної лабораторії?_"
+        },
+        "ffe0c470-7eb8-4ca5-ba9c-3f7c3cdce068": {
+          "description": "### Попередній перегляд\n\nПродемонструйте головоломку з уроку. Покажіть класу, як клацнути на зображення та розмістити його в потрібному місці, перетягуючи та опускаючи. Навмисно допускайте помилки, наприклад, клацайте на фон або скидайте зображення перш ніж воно опиниться в потрібному місці. Зверніться по допомогу до волонтерів у класі, коли зіткнетеся з цими проблемами."
+        },
+        "e9117446-0648-4712-9bab-f477cc4a7763": {
+          "description": "Приділіть деякий час, щоб впевнитися, що всі засвоїли як клацати, перетягувати та відпускати. Знайдіть час, щоб ознайомити учнів з мовою пристроїв, які вони будуть використовувати під час роботи над завданнями. Якщо у вас є планшети, студенти використовуватимуть _сенсорний екран_. Якщо у вас є ноутбуки, вони, ймовірно, будуть використовувати _трекпади_. Настільні комп’ютери, які ви можете знайти в лабораторії, будуть націлені на використання миші.",
+          "tips": [
+            "Продумайте план, щоб учні розбили завдання на етапи й записали їх на дошці. Наприклад:\n\n1.  Перемістіть стрілку до блоку.\n2.  Натисніть і утримуйте кнопку миші.\n3.  Перемістіть мишу.\n4.  Відпустіть кнопку.\n\nЦе дасть студентам можливість потренуватися у створенні алгоритму, концепцію, яка буде досліджуватися на наступних уроках."
+          ]
+        },
+        "4297e33f-2028-4d9e-bfe0-76e774c504a5": {
+          "tips": [
+            null
+          ]
+        },
+        "b1e6ef4c-a3bc-4e05-8cb4-e02e93c90bad": {
+          "description": "-   Використовуйте парне програмування, якщо це можливо під час занять.\n-   Заохочуйте студентів із запитаннями/завданнями, почати можна з опитування свого партнера.\n-   Запитання, що залишилися без відповіді, можна передати сусідній групі, яка, можливо, вже знає рішення.\n-   Нагадайте студентам використовувати процес налагодження, перш ніж підійти.\n-   Попросіть учнів описати проблему, яку вони бачать. _Яка функція у цього? Що це робить? Що це тобі говорить?_\n-   Нагадайте студентам, що розчарування - це крок на шляху до навчання, і що наполегливість тільки допоможе їм у майбутньому вивченні.\n-   Якщо студент все ще застряг після всього цього, поставте навідні запитання, щоб змусити учня самостійно помітити помилку."
+        },
+        "719202e7-e59f-44af-9208-46eb120b3ba0": {
+          "tips": [
+            null
+          ]
+        },
+        "6b3b5eca-1657-4a57-a9d4-883dc76a29cb": {
+          "name": "Вступ"
+        },
+        "faec25bb-b1b4-4747-8e97-f0c41662b482": {
+          "tips": [
+            null
+          ]
+        },
+        "e5dabc9f-6cc6-4b50-a17c-0a5123f9ac88": {
+          "tips": [
+            null
+          ]
+        },
+        "8c2933b9-50b1-4afc-a874-66dc23214d4b": {
+          "tips": [
+            null
+          ]
+        },
+        "312dff10-c9dd-416d-8ef0-210bcb685fa8": {
+          "tips": [
+            null
+          ]
+        },
+        "33e815ee-52df-4fb3-bb24-807e96744248": {
+          "progression_name": "Виклик"
+        },
+        "8847e02f-5bd4-40d1-8c5e-ae2410335913": {
+          "progression_name": "Практика"
+        },
+        "e84627a8-41ba-41d3-a123-d46a326f856b": {
+          "progression_name": "Додаткове"
+        },
+        "398d751a-0d3a-4a34-8467-cf803d7a6281": {
+          "tips": [
+            null
+          ]
+        },
+        "bcfc82a8-7ed5-47c7-8184-f0aa05afeddf": {
+          "name": "Вступ"
+        },
+        "31519dbd-2dc1-44df-9fd8-465963135fb8": {
+          "progression_name": "Виклик"
+        },
+        "7a0f7d49-b40f-4055-bbbc-25e96b4213c7": {
+          "progression_name": "Практика"
+        },
+        "dad2daad-3c3c-4b68-9796-dce5981083a9": {
+          "name": "Вступ"
+        },
+        "17baac3e-ab60-45f1-9dea-6fb6e3c0431f": {
+          "tips": [
+            null
+          ]
+        },
+        "c5fcb254-af51-4f8b-bb55-a534fb3d5ea2": {
+          "tips": [
+            null
+          ]
+        },
+        "7ee7e911-e78b-4ce4-bac2-e9fbb4b9294c": {
+          "progression_name": "Виклик"
+        },
+        "9f3e3414-e024-4b83-bbd5-4f0de81b2dee": {
+          "progression_name": "Практика"
+        },
+        "da0d9b08-22ef-4f7d-b750-31f702a06784": {
+          "tips": [
+            null
+          ]
+        },
+        "56c7b066-bfc1-4b16-978f-c37a858e03f8": {
+          "name": "Вступ"
+        },
+        "f8d8870a-a1a1-466e-bb0f-951d64a2a3ec": {
+          "tips": [
+            null
+          ]
+        },
+        "741bb4fc-4f71-4259-980a-5d1be91a87ba": {
+          "progression_name": "Виклик"
+        },
+        "c8873a95-c3c5-4008-b8b8-bd56e50a2c66": {
+          "progression_name": "Практика"
+        },
+        "80af1f77-e7b7-4e3e-b7a8-b5ab36c034af": {
+          "progression_name": "Додаткове"
+        },
+        "7b804016-339b-43f0-b33b-80f59f2dd53f": {
+          "name": "Вступ"
+        },
+        "170abca5-3f03-4e4e-a246-9300081cbd95": {
+          "progression_name": "Виклик"
+        },
+        "23c558e9-4573-4748-b99d-24e9104f0cf1": {
+          "progression_name": "Практика"
+        },
+        "31c7212e-56c7-41b0-97c8-277498149ef7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Вільна гра"
+        },
+        "1b6b82d9-b633-495a-af03-89fa93248a26": {
+          "progression_name": "Додаткове"
+        },
+        "908f9b6e-4e8e-470e-948b-3060262e2d65": {
+          "name": "Вступ"
+        },
+        "1cf3f2c2-cbae-48d6-b12c-579dea91d4ee": {
+          "name": "Велика подія",
+          "tips": [
+            null
+          ]
+        },
+        "6feb1e3e-d5bc-4e4b-af93-cde03dd1a769": {
+          "tips": [
+            null
+          ]
+        },
+        "7d8ebbc5-ba01-4ba5-b2c9-e29d0e25e96e": {
+          "name": "Оцінка"
+        },
+        "ebbfd882-a637-4029-af3d-6238838878f0": {
+          "name": "Вступ"
+        },
+        "6a7e8f19-fa58-48f8-bbf5-a32c80d3e742": {
+          "tips": [
+            null
+          ]
+        },
+        "c8827180-bb39-48f4-b7bd-bf5804cc5830": {
+          "progression_name": "Вільна гра"
+        },
+        "a7d05e68-da4d-411a-a07d-d53ba2e04e20": {
+          "progression_name": "Практика"
+        },
+        "1d818376-a876-4685-ade0-dd0c66a984f0": {
+          "progression_name": "Міні-проект: Хорхе Собака"
+        },
+        "7091b047-7dd1-4622-abf4-477933f4e759": {
+          "progression_name": "Додаткове"
+        },
+        "eaf088f5-1fd2-48c5-94c7-cea53aa102c8": {
+          "progression_name": "Проект"
+        },
+        "04be5fa4-0840-4707-9fb5-9e107ce342d8": {
+          "progression_name": "Проект"
+        },
+        "b2a0edc8-b5bc-4798-8b44-7149d863a8ab": {
+          "name": "Планування",
+          "tips": [
+            null
+          ]
+        },
+        "346269ec-d737-4b4f-a539-ea4c4b066609": {
+          "name": "Проект",
+          "progression_name": "Проект"
+        },
+        "70d5ed4e-2d56-4271-8005-8af00a99cbdb": {
+          "tips": [
+            null
+          ]
+        },
+        "a3b81bea-2a8e-4fe9-907f-45ba73aa23e2": {
+          "description": "Ось додаткові ресурси, які ви можете надати студентам для покращення їхнього навчання:\n\n-   [Сімейні активності](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8)\n-   [Сімейні поради](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
+        },
+        "a37ca2d2-fd44-4b34-ad75-d6caf1c8fffa": {
+          "name": "Вступ"
+        },
+        "4e9eaee6-773f-429b-b274-d6c22d4c6457": {
+          "name": "Мої друзі-роботи"
+        },
+        "3a67bae9-a51b-4f5a-a4c6-99da3b5103b6": {
+          "tips": [
+            null
+          ]
+        },
+        "e24379b7-bf97-4179-948d-ea5af39d8089": {
+          "tips": [
+            null
+          ]
+        },
+        "b5199fed-e3e0-4a59-b01f-e9b40b861d5c": {
+          "name": "Вступ"
+        },
+        "3fa1b9bd-496c-4731-90d8-c5710952901e": {
+          "tips": [
+            null
+          ]
+        },
+        "bb92650a-2be6-4f30-b851-611c2401aa32": {
+          "tips": [
+            null
+          ]
+        },
+        "757cf81a-cc11-4113-8734-0888328aba75": {
+          "progression_name": "Виклик"
+        },
+        "c0d3a625-32cc-4184-bf79-be7f1066ca97": {
+          "progression_name": "Практика"
+        },
+        "5c62deea-ea90-4eaa-9d64-de185304d795": {
+          "progression_name": "Прогнозування"
+        },
+        "3d28912c-9140-40fb-af73-171c9a7e0176": {
+          "progression_name": "Практика"
+        },
+        "314f4a1b-1e3f-437f-805a-a0ecbfe8fa62": {
+          "progression_name": "Додаткове"
+        },
+        "e681233b-1029-4530-a3ef-4842b8254aa6": {
+          "name": "Вступ"
+        },
+        "c3c4cc5c-8b5b-4f3f-aa71-9c20db1f148c": {
+          "progression_name": "Виклик"
+        },
+        "840f0979-0841-4874-9b50-dfa816eb4930": {
+          "progression_name": "Прогнозування"
+        },
+        "821cc31c-fbe6-4890-bf1f-4e3c3248149c": {
+          "progression_name": "Практика"
+        },
+        "04d056ec-242f-479a-b11e-eee90775ef0f": {
+          "progression_name": "Додаткове"
+        },
+        "505c83de-b318-4a7d-9a4b-9da377a5b0d8": {
+          "name": "Вступ"
+        },
+        "eddda354-d5be-46f5-96fb-453befa94962": {
+          "progression_name": "Виклик"
+        },
+        "c6479440-7f5b-4d91-829d-92cc5daff4fc": {
+          "progression_name": "Практика"
+        },
+        "c6a14661-c9e0-4aab-bf9f-5f90e7210276": {
+          "progression_name": "Прогнозування"
+        },
+        "c6cca796-344f-48df-a35f-3b1e0613ee0c": {
+          "progression_name": "Практика"
+        },
+        "520f7482-b58c-4d37-94b7-fa8c4d83314b": {
+          "progression_name": "Додаткове"
+        },
+        "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
+          "name": "Вступ"
+        },
+        "12b5328f-3f65-46e2-b3e7-9426b47e1f31": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Виклик"
+        },
+        "7bfffd70-d646-4e36-adc5-21d888afa1f0": {
+          "progression_name": "Практика"
+        },
+        "05c4267a-d165-4de4-a19c-a86d0ad3639f": {
+          "progression_name": "Прогнозування"
+        },
+        "5e09ab58-a2b1-48ad-89fd-47565cfa09e3": {
+          "progression_name": "Додаткове"
+        },
+        "129d2408-3ca5-4a8e-90b1-f5ad3d0e6c48": {
+          "name": "Вступ"
+        },
+        "3ff8ec4d-fe12-413a-975d-69e143845e37": {
+          "name": "Мої циклічні друзі-роботи"
+        },
+        "b1974523-e458-4364-aeb2-80f00e6de4bd": {
+          "tips": [
+            null
+          ]
+        },
+        "be9470c8-795f-4e1d-83f2-069961c852d2": {
+          "name": "Вступ"
+        },
+        "4faf8753-aee7-43d6-9f6f-0e0033aa315f": {
+          "progression_name": "Прогнозування"
+        },
+        "70017f05-4f16-45ff-9175-91445fd1802d": {
+          "progression_name": "Виклик"
+        },
+        "0c3ea776-e22f-422f-b617-998f13aa2ff5": {
+          "progression_name": "Практика"
+        },
+        "d952a432-408a-4c84-adf2-d3a023cce77c": {
+          "progression_name": "Прогнозування"
+        },
+        "f26e056f-e9c9-4a0a-95f8-64e3044c86c9": {
+          "progression_name": "Практика"
+        },
+        "a9c1c890-7b91-4f1a-a207-155306c84f5e": {
+          "progression_name": "Додаткове"
+        },
+        "7d2a391e-fb8f-4791-841a-f31ddac790b7": {
+          "progression_name": "Виклик"
+        },
+        "e68467ed-58ff-45fe-b064-90e8dbca1c3d": {
+          "progression_name": "Практика"
+        },
+        "be50d0ba-53db-4cb0-b970-f8fda6cf3ec1": {
+          "progression_name": "Прогнозування"
+        },
+        "d83224a8-1d43-4640-9bd6-929d52011c77": {
+          "progression_name": "Додаткове"
+        },
+        "f4370643-7030-4064-a1a5-5d5385a91c80": {
+          "name": "Вступ"
+        },
+        "f5af8f45-b9fa-46f2-8006-05af25fe0b04": {
+          "tips": [
+            null
+          ]
+        },
+        "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
+          "progression_name": "Вільна гра"
+        },
+        "438866ae-0223-4f9f-badd-3457a85f7c7a": {
+          "name": "Вступ"
+        },
+        "8816065c-5d3c-4cc9-95a3-f96c88edbb62": {
+          "name": "Велика подія"
+        },
+        "81ac2e94-8470-41a8-a506-505bf1bd3fac": {
+          "tips": [
+            null
+          ]
+        },
+        "072ac15c-51ea-444a-ba24-2d1da32a8b2d": {
+          "tips": [
+            null
+          ]
+        },
+        "c14e31a9-2968-4510-926a-0227df66db89": {
+          "tips": [
+            null
+          ]
+        },
+        "49e86e55-b607-4af6-bdb6-b912549b69ea": {
+          "name": "Вступ"
+        },
+        "665856d7-1e75-4dcb-bb62-7926daecbcb3": {
+          "progression_name": "Міні-проект: Flappy гра"
+        },
+        "ddee86f6-7f1f-41b8-bd96-f891312addb0": {
+          "tips": [
+            null
+          ]
+        },
+        "e0573e5e-1308-46de-b4aa-d856b692817d": {
+          "name": "Вступ"
+        },
+        "6728fc70-4eea-4c9e-8b55-b5643cb406f1": {
+          "tips": [
+            null
+          ]
+        },
+        "1b396a72-6c8e-4667-a4a5-8ef61ac9687f": {
+          "progression_name": "Міні-проект: Чейз гра"
+        },
+        "657133fd-6697-4f38-8ef7-8f53811eb2ef": {
+          "progression_name": "Вільна гра"
+        },
+        "f0b5eef7-fc2b-430a-84d1-0db90863beac": {
+          "progression_name": "Додаткове"
+        },
+        "d7a9e0cd-a7e6-46de-910f-3f0e1216f055": {
+          "name": "Вступ"
+        },
+        "4a782ed3-3443-4139-a1bd-88f562c4386e": {
+          "tips": [
+            null
+          ]
+        },
+        "04091b34-9c0a-44fa-bce4-dd57c3c8f2b2": {
+          "name": "Вступ"
+        },
+        "fee740e0-f88d-4032-b68e-a6e113d2195d": {
+          "name": "Двійкові браслети"
+        },
+        "c4611983-43d6-441a-9663-bda13932452c": {
+          "tips": [
+            null
+          ]
+        },
+        "55aaddae-3714-4289-8bdc-04796645b397": {
+          "tips": [
+            null
+          ]
+        },
+        "eb8e74ca-2768-4a33-9c4d-0493db0c6aaa": {
+          "name": "Планування"
+        },
+        "02b5b8f3-446d-44c5-a594-570e2ff87324": {
+          "tips": [
+            null
+          ]
+        },
+        "e1b47918-ca9e-4c5f-ad78-4fe271e12f47": {
+          "tips": [
+            null
+          ]
+        },
+        "b8275a09-3de2-42a9-844f-0ac27f7ee3ea": {
+          "progression_name": "Проект"
         },
         "3640be62-d6b4-4e99-a1c0-b4a53c1e202f": {
           "tips": [
@@ -7609,9 +9629,38 @@
           "progression_name": "Огляд уроку"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": ""
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": ""
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": ""
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": ""
+        },
+        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "",
+          "description": ""
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": ""
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": ""
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": ""
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": ""
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [

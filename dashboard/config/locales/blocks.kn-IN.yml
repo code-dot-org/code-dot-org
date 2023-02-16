@@ -2,6 +2,11 @@
 kn:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} ಆಯ್ಕೆಗಳೊಂದಿಗೆ {VAR} ವೇರಿಯಬಲ್‌ಗೆ {QUESTION} ಬಳಕೆದಾರರನ್ನು ಪ್ರಾಂಪ್ಟ್
+          ಮಾಡಿ"
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}ಹೇಳಿ{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
       BadGuys_setSizeAll_dropdown:
@@ -311,6 +316,36 @@ kn:
             '"x"': x
             '"y"': y
             '"1"': '1'
+      DansBlocks_getMicroscope:
+        text: ಸೂಕ್ಷ್ಮದರ್ಶಕದ {INPUT1} ಹೊಂದಿದೆ
+        options:
+          INPUT1:
+            '1': ನಿಂಬೆ ರಸ
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} ಎಫೆಕ್ಟ್ ಮಾಡಿ"
+        options:
+          EFFECT:
+            '"hearts"': ಹೃದಯಗಳು
+            '"emojis"': ಖುಷಿಯ ಎಮೋಜಿಗಳು
+            '"rain"': ಮಳೆ
+            '"glass"': ಗ್ಲಾಸ್ ಒಡೆಯುವುದು
+            '"twinkling"': ಟ್ವಿಂಕಲ್ ಆಗುವುದು
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': ನಿಂಬೆ ರಸ
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "{VAR1} ಅನ್ನು {SPRITE1COSTUME} ಜೊತೆ ಸಂವಹನ ಮಾಡಿ"
+      FunctionBlocks_makeManipulative2:
+        text: "{NUM} ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು {BEHAVIOR} ಮಾಡಿ"
+      FunctionBlocks_representManipulative:
+        text: "{NUM} ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು [BEHAVIOR][2] ಪ್ರತಿನಿಧಿಸಿ"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}ಹೇಳಿ{TEXT1}"
       gamelab_addBehaviorSimple:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} ಆರಂಭ {BEHAVIOR}
       gamelab_addTarget:
@@ -585,6 +620,32 @@ kn:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": ಕ್ವಿರ್ಕಿ
               ಬಾಸ್
             "'sound://category_digital/jump_7.mp3'": ಜಂಪ್
+      gamelab_playSoundOptionsSoccer:
+        text: "{SOUND} ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ"
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": ಏರ್‌ಹಾರ್ನ್‌
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": ಮೆಚ್ಚುಗೆ
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": ಚಾಂಟ್
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ಉತ್ಸಾಹ
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": ಕಿಕ್
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": ಎರಡು ಸಿಳ್ಳೆಗಳು
+            "'sound://category_sports/One_Whistle_SFX.mp3'": ಶಿಳ್ಳೆ
+      gamelab_playSoundOptionsSpace:
+        text: "{SOUND} ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ಬ್ಲ್ಯಾಕ್‌ ಹೋಲ್
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": ಬುಲೆಟ್ ಕ್ಲಸ್ಟರ್
+            "'sound://category_space/Carina_SFX.mp3'": ಕರಿನಾ
+            "'sound://category_space/Cassiopeia_SFX.mp3'": ಕ್ಯಾಸಿಯೋಪಿಯಾ
+            "'sound://category_space/Crab_nebula_SFX.mp3'": ಕ್ರ್ಯಾಬ್‌ ನೆಬ್ಯುಲಾ
+            "'sound://category_space/Launch_SFX.mp3'": ಬಿಡುಗಡೆ
+            "'sound://category_space/Lift_Off.mp3'": ಎತ್ತುವುದು
+            "'sound://category_space/Pillars_SFX.mp3'": ಸ್ತಂಭಗಳು
+            "'sound://category_space/Southern_ring_SFX.mp3'": ಸದರ್ನ್ ರಿಂಗ್
+            "'sound://category_space/Supernova_SFX.mp3'": ಸೂಪರ್‌ನೋವಾ
+            "'sound://category_space/Tycho_SFX.mp3'": ಟೈಕೋ
       gamelab_playSpeech:
         text: "{SOUND} ಸ್ಪೀಚ್ ಪ್ಲೇ ಮಾಡಿ"
       gamelab_playerBehaviors:
@@ -1032,9 +1093,9 @@ kn:
             '"down"': ಕೆಳಮುಖ ಬಾಣ
             '"left"': ಎಡ ಬಾಣ
             '"right"': ಬಲ ಬಾಣ
-            '"w"': W
+            '"w"': ದ
             '"a"': A
-            '"s"': S
+            '"s"': ಪ
             '"d"': D
       Mikelab_whenKeyReleased:
         options:
@@ -1043,9 +1104,9 @@ kn:
             '"down"': ಕೆಳಮುಖ ಬಾಣ
             '"left"': ಎಡ ಬಾಣ
             '"right"': ಬಲ ಬಾಣ
-            '"w"': W
+            '"w"': ದ
             '"a"': A
-            '"s"': S
+            '"s"': ಪ
             '"d"': D
       Mikelab_whileKeyPressed:
         options:
@@ -1078,6 +1139,38 @@ kn:
         text: ಲೇಔಟ್ ಮಾನ್‌ಸ್ಟರ್‌ಗಳ ಯಾದೃಚ್ಛಿಕತೆ
       Outbreak_stopMoving:
         text: ಮಾನ್‌ಸ್ಟರ್‌ಗಳು ಓಡಾಟವನ್ನು ನಿಲ್ಲಿಸಿದ್ದಾರೆ
+      ParticlesBlocks_getMicroscope:
+        text: ಸೂಕ್ಷ್ಮದರ್ಶಕದ {INPUT1} ಹೊಂದಿದೆ
+        options:
+          INPUT1:
+            '1': ನಿಂಬೆ ರಸ
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': ನಿಂಬೆ ರಸ
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): ಸಾಲಿಡ್
+            new Behavior(liquid, []): ಲಿಕ್ವಿಡ್
+            new Behavior(wandering, []): ಅನಿಲ
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME} ಅನ್ನು {BEHAVIOR} ವರ್ತನೆಗೆ ನಿಗದಿಸಿ"
+        options:
+          BEHAVIOR:
+            '"solid"': 'ಘನ ಕಣ '
+            '"liquid"': ದ್ರವ ಕಣ
+            '"gas"': ಅನಿಲ ಕಣ
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'ಘನ ಕಣ '
+            '"liquid"': ದ್ರವ ಕಣ
+            '"gas"': ಅನಿಲ ಕಣ
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1147,6 +1240,21 @@ kn:
             '"sound://category_achievements/peaceful_win_1.mp3"': ವಿನ್
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': ವರ್ಲ್‌
             '"sound://category_achievements/peaceful_win_6.mp3"': ವಿಂಡ್ ಚೈಮ್ಸ್
+      Poetry_playSoundOptionsSpace:
+        text: "{SOUND} ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ಬ್ಲ್ಯಾಕ್‌ ಹೋಲ್
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": ಬುಲೆಟ್ ಕ್ಲಸ್ಟರ್
+            "'sound://category_space/Carina_SFX.mp3'": ಕರಿನಾ
+            "'sound://category_space/Cassiopeia_SFX.mp3'": ಕ್ಯಾಸಿಯೋಪಿಯಾ
+            "'sound://category_space/Crab_nebula_SFX.mp3'": ಕ್ರ್ಯಾಬ್‌ ನೆಬ್ಯುಲಾ
+            "'sound://category_space/Launch_SFX.mp3'": ಬಿಡುಗಡೆ
+            "'sound://category_space/Lift_Off.mp3'": ಎತ್ತುವುದು
+            "'sound://category_space/Pillars_SFX.mp3'": ಸ್ತಂಭಗಳು
+            "'sound://category_space/Southern_ring_SFX.mp3'": ಸದರ್ನ್ ರಿಂಗ್
+            "'sound://category_space/Supernova_SFX.mp3'": ಸೂಪರ್‌ನೋವಾ
+            "'sound://category_space/Tycho_SFX.mp3'": ಟೈಕೋ
       Poetry_setAuthor:
         text: ಲೇಖಕರನ್ನು ಸೇರಿಸಿ {AUTHOR}
       Poetry_setBackgroundEffect:
@@ -1265,6 +1373,11 @@ kn:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR} ಉತ್ತರಿಸಿದಾಗ"
       RyanLab_moveForward:
@@ -1272,7 +1385,7 @@ kn:
       RyanLab_turnLeft:
         text: ಎಡಕ್ಕೆ ತಿರುಗಿ
       RyanLab_turnRight:
-        text: ಬಲಕ್ಕೆ ತಿರುಗು
+        text: ಬಲಕ್ಕೆ ತಿರುಗಿ
       Vector_randomLocation:
         text: ಯಾದೃಚ್ಛಿಕ ಸ್ಥಳ
       aalab_layoutSprites:
@@ -1361,5 +1474,16 @@ kn:
           DIR:
             right: ಬಲ ↻
             left: ಎಡ ↺
+      storylab_setForegroundEffect2:
+        text: "{EFFECT} ಎಫೆಕ್ಟ್ ಮಾಡಿ"
+        options:
+          EFFECT:
+            '"hearts"': ಹೃದಯಗಳು
+            '"rain"': ಮಳೆ
+            '"twinkling"': ಟ್ವಿಂಕಲ್ ಆಗುವುದು
+      storylab_setHeading:
+        text: ಶೀರ್ಷಿಕೆ ನಿಗದಿಸಿ {HEADING}
+      storylab_setSubheading:
+        text: ಸಬ್‌ಹೆಡಿಂಗ್‌ ಸೆಟ್ ಮಾಡಿ {SUBHEADING}
       validation_validatedBackground:
         text: "{IMG} ಗೆ ಹಿನ್ನೆಲೆಯನ್ನು ನಿಗದಿಸಿ"

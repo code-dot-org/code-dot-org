@@ -14,14 +14,14 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.flappy_unit.id)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
   setup do
     # Expect any scripts/courses to be assignable unless specified by test
     UnitGroup.stubs(:course_assignable?).returns(true)
-    Script.stubs(:course_assignable?).returns(true)
+    Unit.stubs(:course_assignable?).returns(true)
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
@@ -194,4 +194,9 @@ class SectionsControllerTest < ActionController::TestCase
 
     assert_redirected_to section_path(id: @picture_section.code)
   end
+
+  test_user_gets_response_for :new, user: nil, response: :forbidden
+  test_user_gets_response_for :new, user: :teacher, response: :forbidden
+  test_user_gets_response_for :new, user: :student, response: :forbidden
+  test_user_gets_response_for :new, user: :admin, response: :success
 end

@@ -33,11 +33,11 @@ class Block < ApplicationRecord
   end
 
   def self.load_and_cache_by_pool(pool)
-    if Script.should_cache? && !Block.all_pool_names.include?(pool)
+    if Unit.should_cache? && !Block.all_pool_names.include?(pool)
       return nil
     end
 
-    Rails.cache.fetch("blocks/#{pool}", force: !Script.should_cache?) do
+    Rails.cache.fetch("blocks/#{pool}", force: !Unit.should_cache?) do
       Block.where(pool: pool).map(&:block_options)
     end
   end

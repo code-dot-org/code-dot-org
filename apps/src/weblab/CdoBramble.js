@@ -3,6 +3,11 @@ import '../assetManagement/download';
 import {makeEnum} from '../utils';
 import {FatalErrorType} from './constants';
 import logToCloud from '../logToCloud';
+import {Buffer} from 'buffer';
+
+import testImageAccess from '../code-studio/url_test';
+
+export const BRAMBLE_CONTAINER = '#bramble';
 
 const PageAction = makeEnum(
   logToCloud.PageAction.BrambleError,
@@ -45,7 +50,22 @@ export default class CdoBramble {
   }
 
   init() {
-    this.Bramble.load('#bramble', this.config());
+    // This variable contains the current initialization state.
+    // We log it after 20 seconds.
+    let currentInitState = 'none';
+
+    // Temporarily log the state.
+    this.tempLog('init');
+
+    // Temporarily log the current state after 20 seconds.
+    setTimeout(() => {
+      this.tempLog('after20', currentInitState);
+    }, 20 * 1000);
+
+    // Temporarily test domain reachability.
+    this.testReach();
+
+    this.Bramble.load(BRAMBLE_CONTAINER, this.config());
 
     this.Bramble.on('readyStateChange', (_, newState) => {
       if (this.Bramble.MOUNTABLE === newState) {
@@ -53,6 +73,10 @@ export default class CdoBramble {
           this.mount();
           this.invokeAll(this.onMountableCallbacks);
         });
+
+        // Temporarily log and store the state.
+        this.tempLog('mountable');
+        currentInitState = 'mountable';
       }
     });
 
@@ -62,6 +86,10 @@ export default class CdoBramble {
       this.brambleProxy = brambleProxy;
       this.configureProxy();
       this.invokeAll(this.onReadyCallbacks);
+
+      // Temporarily log and store the state.
+      this.tempLog('ready');
+      currentInitState = 'ready';
     });
   }
 
@@ -670,6 +698,9 @@ export default class CdoBramble {
         this.logAction(PageAction.BrambleFilesystemResetFailed, {
           error: err.message
         });
+
+        // Temporarily log the error.
+        this.tempLog('fileresetfail', err.message);
       } else {
         this.logAction(PageAction.BrambleFilesystemResetSuccess);
       }
@@ -687,6 +718,9 @@ export default class CdoBramble {
     const {message, code} = error;
     this.logAction(PageAction.BrambleError, {error: message});
 
+    // Temporarily log the error.
+    this.tempLog('error', {message, code});
+
     this.api.openFatalErrorDialog(
       message,
       code === 'EFILESYSTEMERROR'
@@ -696,7 +730,30 @@ export default class CdoBramble {
   }
 
   logAction(actionName, value = {}) {
-    logToCloud.addPageAction(actionName, value);
+    this.api.addPageAction(actionName, value);
+  }
+
+  // Some temporary logging to diagnose possible loading issues.
+  tempLog(event, data = null) {
+    this.api.tempLog(event, data);
+  }
+
+  // Test for whether we can reach the servers hosting the downloadable
+  // JS and saving work.  Images are used to avoid CORS restrictions.
+  testReach() {
+    testImageAccess(
+      'https://downloads.computinginthecore.org/favicon.ico' +
+        '?' +
+        Math.random(),
+      () => this.tempLog('reachDownloads', true),
+      () => this.tempLog('reachDownloads', false)
+    );
+
+    testImageAccess(
+      'https://codeprojects.org/favicon.ico' + '?' + Math.random(),
+      () => this.tempLog('reachProjects', true),
+      () => this.tempLog('reachProjects', false)
+    );
   }
 
   isHtml(path) {

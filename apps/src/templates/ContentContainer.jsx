@@ -6,6 +6,8 @@ import color from '../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
+import moduleStyles from './content-container.module.scss';
+
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,
 // sub-sections on a page because it was built to reuse the styling and
@@ -13,6 +15,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 // example of its use on studio.code.org/home.
 
 const contentWidth = styleConstants['content-width'];
+const linkBoxLineHeight = '26 px';
 
 class ContentContainer extends Component {
   static propTypes = {
@@ -48,10 +51,13 @@ class ContentContainer extends Component {
     return (
       <div style={[boxStyles, bottomMargin]}>
         {(heading || (link && linkText)) && (
-          <div style={styles.headingBox}>
-            <div style={isRtl ? styles.headingTextRtl : styles.headingText}>
+          <div
+            className={moduleStyles.contentContainerHeading}
+            style={styles.headingBox}
+          >
+            <h4 style={isRtl ? styles.headingTextRtl : styles.headingText}>
               {heading}
-            </div>
+            </h4>
             {showLinkTop && (
               <Link link={link} linkText={linkText} isRtl={isRtl} />
             )}
@@ -94,12 +100,14 @@ class Link extends Component {
 
     return (
       <div style={linkBoxStyle}>
-        <a href={link}>
-          {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
+        <a style={styles.linkTag} href={link}>
+          <span style={{display: 'inline-block'}}>
+            {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
+          </span>
           <div style={styles.linkToViewAll}>{linkText}</div>
-        </a>
-        <a href={link} style={{textDecoration: 'none'}}>
-          {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
+          <span style={{display: 'inline-block'}}>
+            {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
+          </span>
         </a>
       </div>
     );
@@ -119,24 +127,21 @@ const styles = {
   headingBox: {
     paddingRight: 10,
     paddingTop: 10,
-    paddingBottom: 20,
     overflow: 'hidden',
     zIndex: 2,
     position: 'relative'
   },
   headingText: {
-    fontFamily: 'Gotham 3r',
     fontSize: 24,
     lineHeight: '26px',
-    color: color.charcoal,
+    color: color.neutral_dark,
     float: 'left',
     paddingRight: 20
   },
   headingTextRtl: {
-    fontFamily: 'Gotham 3r',
     fontSize: 24,
     lineHeight: '26px',
-    color: color.charcoal,
+    color: color.neutral_dark,
     float: 'right',
     paddingLeft: 20
   },
@@ -149,7 +154,8 @@ const styles = {
     display: 'inline',
     position: 'absolute',
     bottom: 20,
-    right: 0
+    right: 0,
+    lineHeight: linkBoxLineHeight
   },
   linkBoxRtl: {
     display: 'inline',
@@ -157,7 +163,8 @@ const styles = {
     paddingLeft: 10,
     position: 'absolute',
     bottom: 20,
-    left: 0
+    left: 0,
+    lineHeight: linkBoxLineHeight
   },
   linkBoxBottom: {
     display: 'inline',
@@ -170,31 +177,32 @@ const styles = {
   description: {
     fontSize: 14,
     lineHeight: '22px',
-    fontFamily: 'Gotham 3r',
+    fontFamily: 'Gotham 4r',
     zIndex: 2,
-    color: color.charcoal,
+    color: color.neutral_dark,
     width: '100%',
     marginTop: -10,
     marginBottom: 10,
     clear: 'both'
   },
+  linkTag: {
+    textDecoration: 'none'
+  },
   linkToViewAll: {
-    color: color.teal,
     fontSize: 14,
-    fontFamily: 'Gotham 4r',
+    fontFamily: `'Gotham 5r', sans-serif`,
     marginTop: -2,
     display: 'inline'
   },
   chevron: {
     display: 'inline',
-    color: color.teal,
     fontSize: 10,
     fontWeight: 'bold',
     marginLeft: 15
   },
   chevronRtl: {
     display: 'inline',
-    color: color.teal,
+    color: color.neutral_dark,
     fontSize: 10,
     fontWeight: 'bold',
     marginRight: 15

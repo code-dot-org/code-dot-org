@@ -503,6 +503,7 @@ fi:
     no_primary_course: "Kokeile kurssia Koodistudiossa"
     choose_next_course: "Kokeile jotakin allaolevista Koodistudion kursseista"
     print_certificate: "Tulosta todistus"
+  certificate_hour_of_code: "Koodaustunti"
   move_students:
     new_section_dne: "Anteeksi, mutta ryhmää %{new_section_code} ei ole olemassa. Anna eri ryhmäkoodi."
     section_code_cant_be_current_section: "Ryhmä ei voi olla sama kuin nykyinen ryhmä."
@@ -603,23 +604,17 @@ fi:
       body_short: "Suunnittele sovellus, koodaa lohkoilla tai JavaScriptillä kunnes se toimii, ja jaa sitten kavereille sekunneissa."
       audience: 'Yli 13-vuotiaille'
       cta: 'Lisätietoja'
-    dance:
-      title: 'Tanssibileet'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Tanssibileet'
-    hoc:
-      title: 'Klassinen sokkelo'
-      body: 'Kokeile tietotekniikan perusteita. Jo miljoonat ovat kokeilleet.'
+    dance:
+      title: 'Tanssibileet'
     flappy:
       title: 'Flappy Code'
       body: 'Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!'
-    20-hour:
-      title: 'Nopeutettu kurssi'
-      body: 'Tämä 20 tunnin kurssi esittelee kurssien 2-4 keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi 10-18 vuotiaiden kanssa. Löydä täysi kokemus kursseissa 2-4!'
-      body_short: 'Opettele tietotekniikan perusteita nopeutetulla versiolla kursseista 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Betatestaa uusia Koodaustunti-kurssejamme'
-      try_frozen: 'Taiteilija Frozenin Annan ja Elsan kanssa'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galleria"
       body: "Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa"
@@ -627,15 +622,15 @@ fi:
       title: "Pelilabra"
       audience: "13+ -vuotiaille"
       cta: "Lisätietoja"
-    weblab:
-      title: "Nettilabra (beta)"
-      body: "Nettilabra on koodausympäristö, jossa tehdään yksikertaisia nettisivuja käyttäen HTML ja CSS kieliä. Suunnittele omat sivusi ja jaa kavereille."
-      audience: "Yli 13-vuotiaille"
-      cta: "Lisätietoja"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Tähtien sota"
+    hero:
+      title: "Minecraft"
+      body: "Minecraft on palannut takaisin Hour of Code -tunnille täysin uudella toiminnolla! Matka Minecraftin läpi koodilla."
+    hoc:
+      title: 'Klassinen sokkelo'
+      body: 'Kokeile tietotekniikan perusteita. Jo miljoonat ovat kokeilleet.'
+    hoc2014:
+      try_new_tutorial: 'Betatestaa uusia Koodaustunti-kurssejamme'
+      try_frozen: 'Taiteilija Frozenin Annan ja Elsan kanssa'
     infinity:
       title: "Infinity Pelilabra"
       body: "Tee Pelilabrassa tarina tai peli jonka pääosassa ovat Disneyn Infinity-hahmot."
@@ -645,21 +640,27 @@ fi:
     minecraft2016:
       title: "Minecraft"
       body: "Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft versiollasi."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft on palannut takaisin Hour of Code -tunnille täysin uudella toiminnolla! Matka Minecraftin läpi koodilla."
-    unplugged:
-      title: "Oppitunnit ilman tietokonetta"
-      audience: "Yli 4-vuotiaille"
-      body_short: "Jos sinulla ei ole tietokonetta, kokeile näitä oppitunteja ilman nettiä luokassasi."
-    unplugged_conditionals:
-      title: "Ehtolausekkeet"
+    starwars:
+      title: "Tähtien sota"
+    weblab:
+      title: "Nettilabra (beta)"
+      body: "Nettilabra on koodausympäristö, jossa tehdään yksikertaisia nettisivuja käyttäen HTML ja CSS kieliä. Suunnittele omat sivusi ja jaa kavereille."
+      audience: "Yli 13-vuotiaille"
+      cta: "Lisätietoja"
     widgets:
       title: "Pienoisohjelmat"
       audience: "Yli 14-vuotiaille"
       cta: "Lisätietoja"
+    unplugged_conditionals:
+      title: "Ehtolausekkeet"
+    unplugged:
+      title: "Oppitunnit ilman tietokonetta"
+      audience: "Yli 4-vuotiaille"
+      body_short: "Jos sinulla ei ole tietokonetta, kokeile näitä oppitunteja ilman nettiä luokassasi."
+    20-hour:
+      title: 'Nopeutettu kurssi'
+      body: 'Tämä 20 tunnin kurssi esittelee kurssien 2-4 keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi 10-18 vuotiaiden kanssa. Löydä täysi kokemus kursseissa 2-4!'
+      body_short: 'Opettele tietotekniikan perusteita nopeutetulla versiolla kursseista 2-4.'
   landing:
     report_bug: "Raportoi ongelma"
     support: "Katso ohjeet"
@@ -884,3 +885,5 @@ fi:
     text: "**letko vanhempi tai huoltaja?** Liitä sähköpostiosoitteesi tähän tiliin pysyäksesi ajan tasalla lapsesi edistymisestä ja projekteista!"
     link_your_email: "Liitä sähköpostiosoitteesi"
     not_now: "Ei nyt"
+  pixelation:
+    binary: "Binääri"

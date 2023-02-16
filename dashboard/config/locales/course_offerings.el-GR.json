@@ -37,7 +37,10 @@
         "edit-code": "Επεξεργασία κώδικα",
         "allthethingscourse": "Allthethingscourse",
         "step": "βήμα",
-        "soccer": "ποδόσφαιρο"
+        "soccer": "ποδόσφαιρο",
+        "hello-world-space": "Γεια σας κόσμο: Διάστημα",
+        "hello-world-soccer": "Γεια σας κόσμο: Ποδόσφαιρο",
+        "playground": "παιδική χαρά"
       }
     }
   }

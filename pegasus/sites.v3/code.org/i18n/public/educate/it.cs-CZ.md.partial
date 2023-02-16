@@ -1,49 +1,49 @@
 ---
-title: IT Requirements
+title: Požadavky IT
 nav: educate_nav
 theme: responsive
 ---
 
-# Technical Requirements for Code.org Tutorials
+# Technické požadavky pro výukové kurzy Code.org
 
 ## Hardware
 
-- We recommend at least a 15 MBit/sec Internet connection for your school.
-- The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
-- Looking for mobile device support details? Read below.
+- Vaší škole doporučujeme internetové připojení o rychlosti alespoň 15 MBit/s.
+- Nejmenší velikost obrazovky, kterou podporujeme, je 1024 x 728 px.
+- Na naše středoškolské kurzy Objevy v počítačových vědách, Principy počítačových věd a Úvod do Laboratoře aplikací budete potřebovat stolní počítač nebo laptop s myší (nebo touchpadem) a klávesnicí. Většinu tabletů a mobilních zařízení tyto kurzy nepodporují. Viz níže uvedenou část „Podrobnosti o podpoře mobilních zařízení a tabletů“, kde najdete výjimky specifické pro příslušná zařízení.
+- Veškerý jiný obsah, jako například kurzy K-5 (Základy počítačových věd) a aktivity Hodina programování jsou kompatibilní s iPady a Chromebooky a veškerými ostatními moderními tablety a laptopy nebo stolními počítači.
+- Hledáte informace o podpoře mobilních zařízení? Přečtěte si níže uvedené.
 
-## Minimum Supported Browsers and Platforms
+## Minimální podporované prohlížeče a platformy
 
 <table>
  <tr>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser
+          Prohlížeč
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform
+          Platforma
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -65,61 +65,62 @@ theme: responsive
  </tr>
 </table>
 
-## Sites to Unblock
+## Servery k odblokování
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Pro co nejlepší prožitek s veškerým obsahem od Code.org Vám doporučujeme poradit se s Vaší školou nebo s IT oddělením školního okrsku, aby bylo zajištěno, že následující servery budou povoleny a nebudou blokovány.
 
-| Priority                                                 | URL                                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Required**                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **To use YouTube hosted videos (Enhanced Privacy Mode)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **To use Code.org hosted videos**                        | `https://videos.code.org`                                                                                  |
-| **To use Internet Simulator**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **To use Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **To use Google Classroom Share Button**                 | `https://apis.google.com`                                                                                  |
+| Priorita                                                           | URL                                                                                                        |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| **Povinné**                                                        | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Volitelné**                                                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Používat videa umístěná na YouTube (režim zlepšeného soukromí)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Používat videa umístěná na Code.org**                            | `https://videos.code.org`                                                                                  |
+| **Používat simulátor internetu**                                   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Používat Web Lab**                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Používat tlačítko sdílení Třídy Google**                         | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                        | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
-## Mobile and Tablet Support Details
+## Údaje o podpoře mobilů a tabletů
 
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+Ne všechny kurzy Objevy v počítačových vědách, Principy počítačových věd a Úvod do Laboratoře apliakcí jsou kompatibilní s tablety či mobilními zařízeními — je potřeba kompletní klávesnice a myš (nebo touchpad, jako například na počítačích MacBook). Tablety většinou podporovány nejsou, s následujícími výjimkami:
 
-- Microsoft Surface Pro with an external keyboard
-- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
+- Microsoft Surface Pro s externí klávesnicí
+- iPad, na němž je spuštěn iPadOS 13.4 nebo novější s externí klávesnicí a externí myší nebo touchpadem
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+Veškerý jiný obsah, jako například kurzy K-5 (Základy počítačových věd) a aktivity Hodina programování jsou kompatibilní s iPady a Chromebooky a veškerými ostatními moderními tablety a laptopy nebo stolními počítači.
 
-### Mobile Phones
+### Mobilní telefony
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Naše aktivity „Hodina programování“ a kurzy „Základy počítačových věd“ je možno absolvovat na mobilních telefonech. Ačkoli jsou tyto aktivity použitelné, nejsou optimalizovány pro prožitek na mobilních telefonech a mají určitá omezení (např. cíle pro dotyk bývají malé, přístupové prvky někdy spadají mimo obrazovku a zadávat text pomocí klávesnice na obrazovce bývá obtížné). Kurzy Objevy v počítačových vědách, Principy počítačových věd a Úvod do Laboratoře aplikací nejsou použitelné na mobilních telefonech.
 
-## Videos
+## Videa
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+K začlenění videí do Code.org a do naší [online výukové platformy](https://studio.code.org) používáme [YouTube](https://www.youtube.com). Pro školy, které mají zablokované YouTube, se pokusíme namísto něj zobrazit videopřehrávač umístěný na serveru Code.org.
 
-### Can you play this video?
+### Umíte přehrát toto video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Než zahájíte online kurzy na Code.org, vyzkoušejte si přehrávání níže uvedeného videa, abyste se ujistili, zda máte připraveno vše potřebné.
 
 <iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Toto je přehrávač používaný v těchto výukových materiálech. Pokusí se zobrazit video přes YouTube, a jestliže bude YouTube zablokováno, zobrazí namísto něho video umístěné na serveru Code.org pomocí našeho „náhradního“ prohlížeče.
 
-### Video not playing?
+### Nelze přehrávat video?
 
-If video does not work, you can email us at support@code.org.
+Jestliže video nefunguje, můžete nám poslat e-mail na adresu support@code.org.
 
-However, you can still use our tutorials without video.
+I tak však můžete používat naše výukové kurzy bez videa.
 
-1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
-2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
-3. If all fails, there is a "Show Notes" tab that provides a storyboard equivalent of videos.
+1. Zařídili jsme, aby všechna naše videa [bylo možno stáhnout najednou](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Jestliže má Vaše škola nízkou přenosovou šířku, doporučujeme Vám videa stáhnout a zobrazovat je studentům na společnou obrazovku.
+2. Do našich výukových kurzů jsme integrovali zelenou ikonu odkazu ke stahování <img src="/images/green-download.png" width=25 height=25 /> pro jednotlivá videa, která studentům umožní stahovat si jednotlivá výuková videa.
+3. Jestliže všechno selže, vždy je tu ještě karta „Zobrazit poznámky“, která poskytne příběhový ekvivalent videí.
 
   <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
 
-## Special settings for Google Apps/G-Suite users
+## Speciální nastavení pro uživatele Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Jestliže jste správcem G-suite, nezapomeňte si zkontrolovat, jaká jsou nastavení Vašich omezení pro YouTube. Jestliže jste specifikovali nastavení „Přísně omezený přístup na YouTube“ nebo jestliže se Vám zobrazují zprávy uvádějící „toto video bylo omezeno“, můžete přidat náš kanál do schváleného seznamu kanálů. Chcete-li se dozvědět, jak přidat náš kanál do sezanmu schválených, podívejte se do  [tohoto průvodce](https://support.google.com/a/answer/6245597) od společnosti Google. Chcete-li se dozvědět více o různých nastaveních a o tom, které je nejlepší pro Vaši třídu, můžete se podívat také do [tohoto průvodce](https://support.google.com/a/answer/6212415?hl=en).
 
-## Still having trouble?
+## Ještě stále máte problémy?
 
-We'll help you out - just email us at support@code.org!
+Pomůžeme Vám — jen nám napište e-mail na adresu support@code.org!

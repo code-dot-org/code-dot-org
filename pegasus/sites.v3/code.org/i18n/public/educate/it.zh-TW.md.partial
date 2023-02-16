@@ -1,49 +1,49 @@
 ---
-title: IT Requirements
+title: IT要求
 nav: educate_nav
 theme: responsive
 ---
 
-# Technical Requirements for Code.org Tutorials
+# Code.org教程的技術要求
 
-## Hardware
+## 硬體
 
-- We recommend at least a 15 MBit/sec Internet connection for your school.
-- The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
-- Looking for mobile device support details? Read below.
+- 我們建議學校的網路連接至少15兆比特/秒。
+- 我們支援的最小螢幕尺寸是1024 x 728 px。
+- 你需要帶滑鼠（或觸控板）和鍵盤的臺式電腦或筆記型電腦，用於我們的初中和高中級別課程：電腦科學探索、電腦科學原理和應用實驗室導論。 大多數平板電腦和移動設備不支援這些課程。 請參閱下面的“移動設備和平板電腦支援詳情”，瞭解特定設備例外情況。
+- 除各種現代平板電腦和筆記型電腦或臺式電腦外，諸如K-5課程（電腦科學基礎）和一小時玩程式活動等所有其他內容在iPad和Chromebook上相容。
+- 尋找移動設備支援詳情？ 閲讀以下内容。
 
-## Minimum Supported Browsers and Platforms
+## 支援的最低瀏覽器和平臺
 
 <table>
  <tr>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser
+          瀏覽器
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform
+          平臺
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -65,61 +65,62 @@ theme: responsive
  </tr>
 </table>
 
-## Sites to Unblock
+## 要解除阻止的網站
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+為了獲得所有Code.org內容的最佳體驗，我們建議諮詢學校或學區的IT部門，以確保以下網站允許訪問，沒有被阻止。
 
-| Priority                                                 | URL                                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Required**                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **To use YouTube hosted videos (Enhanced Privacy Mode)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **To use Code.org hosted videos**                        | `https://videos.code.org`                                                                                  |
-| **To use Internet Simulator**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **To use Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **To use Google Classroom Share Button**                 | `https://apis.google.com`                                                                                  |
+| 優先級                         | 網址                                                                                                         |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **必需**                      | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **可選**                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **使用YouTube託管視訊（增強隱私模式）**   | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **使用Code.org託管視訊**          | `https://videos.code.org`                                                                                  |
+| **使用網路模擬器**                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **使用網路實驗室**                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **使用Google課堂共用按鈕**          | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets** | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
-## Mobile and Tablet Support Details
+## 移動設備/平板電腦支援詳情
 
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+所有電腦科學探索、電腦科學原理和應用實驗室導論課程都不相容平板電腦或移動設備，需要全鍵盤和滑鼠（或觸控板，如MacBook上的）。 大多數平板電腦不支援，但有以下例外：
 
-- Microsoft Surface Pro with an external keyboard
-- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
+- 帶外接鍵盤的微軟Surface Pro
+- 帶外接鍵盤和外接滑鼠或觸控板且運行iPadOS 13.4及以上版本的iPad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+除各種現代平板電腦和筆記型電腦或臺式電腦外，諸如K-5課程（電腦科學基礎）和一小時玩程式活動等所有其他內容在iPad和Chromebook上相容。
 
-### Mobile Phones
+### 手機
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+我們的一小時玩程式活動和電腦科學基礎課程可以在手機上完成。 雖然這些活動可以使用，但它們並沒有針對手機體驗進行優化，並且存在一些已知的局限性（例如觸摸目標可能很小，附件元素可能顯示在螢幕外，文本可能難以使用螢幕鍵盤輸入）。 電腦科學探索、電腦科學原理和應用實驗室導論課程不能在手機上使用。
 
-## Videos
+## 視訊
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+我們使用[YouTube](https://www.youtube.com)來將視訊嵌入Code.org和我們的[線上學習平臺](https://studio.code.org)。 對於YouTube被阻止的學校，我們嘗試顯示Code.org託管視訊播放機。
 
-### Can you play this video?
+### 你能播放這個視訊嗎？
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+在你開始Code.org的線上課程之前，請測試以下視訊的播放，以確保你準備就緒。
 
 <iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+這是貫穿整個課程的播放機。 它將嘗試通過YouTube顯示視訊，如果YouTube被阻止，將使用我們的“後備”播放機顯示Code.org託管視訊。
 
-### Video not playing?
+### 視訊無法播放？
 
-If video does not work, you can email us at support@code.org.
+如果視訊無法播放，你可以給我們發送電子郵件：support@code.org。
 
-However, you can still use our tutorials without video.
+然而，你仍然可以在沒有視訊的情況下使用我們的教程。
 
-1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
-2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
-3. If all fails, there is a "Show Notes" tab that provides a storyboard equivalent of videos.
+1. 我們已經使所有的視訊[可以一起下載](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)。 如果你的學校頻寬較低，我們建議你下載視訊並在共用螢幕上給學生展示。
+2. 在我們的教程中，我們為每個視訊添加了一個綠色下載連結圖示<img src="/images/green-download.png" width=25 height=25 />，讓學生可以下載單個教程視訊。
+3. 如果所有方法都失敗，則“顯示備註”標籤上提供了視訊的等效演示圖板。
 
   <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
 
-## Special settings for Google Apps/G-Suite users
+## Google應用程式/G-Suite用戶的特殊設定
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+如果你是G-suite管理員，記得檢查你對YouTube的限制設定。 如果你已指定“嚴格限制YouTube訪問”設定，或如果你看到“此視訊已被限制”的訊息，你可以將我們的頻道添加到已批准頻道清單。 請參閱來自Google的[這個指南](https://support.google.com/a/answer/6245597)，瞭解如何將我們的頻道添加到已批准清單。 你也可以參閱[這個指南](https://support.google.com/a/answer/6212415?hl=en)以進一步瞭解不同的設定以及哪種設定最適合你的課堂。
 
-## Still having trouble?
+## 仍然存在困難？
 
-We'll help you out - just email us at support@code.org!
+我們將為你提供幫助，只需給我們發送電子郵件：support@code.org！

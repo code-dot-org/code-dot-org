@@ -29,6 +29,12 @@
         "playlab/Play Lab": {
           "name": "ක්‍රීඩා පරීක්ෂණාගාරය"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "ඩිස්නි අසීමිත ක්‍රීඩා විද්‍යාගාරය"
         },
@@ -73,6 +79,36 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "ඉදිරි පියවර"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "coursef-2022/The Internet": {
+          "name": "අන්තර්ජාලය"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "ගීත ලිවීම"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "ඔල්මාද වීම"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "සතුටු සිතියම්"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "විශාල සිදුවීම"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "ද්විමය වළලු"
         },
         "csd3-2022/Variables": {
           "name": "විචල්‍යන්"

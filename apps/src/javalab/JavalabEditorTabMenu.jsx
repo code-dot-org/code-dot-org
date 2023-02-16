@@ -12,34 +12,58 @@ export class JavalabEditorTabMenu extends Component {
   static propTypes = {
     cancelTabMenu: PropTypes.func.isRequired,
     renameFromTabMenu: PropTypes.func.isRequired,
+    moveTabLeft: PropTypes.func.isRequired,
+    moveTabRight: PropTypes.func.isRequired,
     deleteFromTabMenu: PropTypes.func.isRequired,
     changeFileTypeFromTabMenu: PropTypes.func.isRequired,
     showVisibilityOption: PropTypes.bool.isRequired,
     fileIsVisible: PropTypes.bool,
-    fileIsValidation: PropTypes.bool
-  };
-
-  state = {
-    dropdownOpen: false
+    fileIsValidation: PropTypes.bool,
+    activeTabKey: PropTypes.string,
+    orderedTabKeys: PropTypes.array
   };
 
   dropdownElements = () => {
     const {
       renameFromTabMenu,
       deleteFromTabMenu,
+      moveTabRight,
+      moveTabLeft,
       showVisibilityOption,
       changeFileTypeFromTabMenu,
       fileIsVisible,
-      fileIsValidation
+      fileIsValidation,
+      activeTabKey,
+      orderedTabKeys
     } = this.props;
+
     let elements = [
       <button onClick={renameFromTabMenu} key="rename" type="button">
         {javalabMsg.rename()}
-      </button>,
+      </button>
+    ];
+    const tabsLength = orderedTabKeys.length;
+    const index = orderedTabKeys.indexOf(activeTabKey);
+    if (index > 0) {
+      elements.push(
+        <button onClick={moveTabLeft} key="moveLeft" type="button">
+          {javalabMsg.moveLeft()}
+        </button>
+      );
+    }
+    if (index < tabsLength - 1) {
+      elements.push(
+        <button onClick={moveTabRight} key="moveRight" type="button">
+          {javalabMsg.moveRight()}
+        </button>
+      );
+    }
+    elements.push(
       <button onClick={deleteFromTabMenu} key="delete" type="button">
         {javalabMsg.delete()}
       </button>
-    ];
+    );
+
     // options for start sources mode
     if (showVisibilityOption) {
       // file is not visible, add option to make it a starter file

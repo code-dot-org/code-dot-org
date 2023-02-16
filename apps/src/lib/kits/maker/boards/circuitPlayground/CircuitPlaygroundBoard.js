@@ -407,7 +407,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise<SerialPort>}
    */
   static openSerialPortWebSerial(port) {
-    return port.open().then(() => {
+    return port.openCPPort().then(() => {
       this.createPendingQueue(port);
       return port;
     });
@@ -430,9 +430,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
           return;
         }
         if (port.queue.length > 512) {
-          throw new Error(
-            'Send queue is full! More than 512 pending messages.'
-          );
+          // Send queue is full.  More than 512 pending messages.
+          return;
         }
 
         const toSend = port.queue.shift();

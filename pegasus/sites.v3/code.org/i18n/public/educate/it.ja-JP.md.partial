@@ -1,49 +1,49 @@
 ---
-title: IT Requirements
+title: IT要件
 nav: educate_nav
 theme: responsive
 ---
 
-# Technical Requirements for Code.org Tutorials
+# Code.orgチュートリアルの技術的要件
 
-## Hardware
+## ハードウェア
 
-- We recommend at least a 15 MBit/sec Internet connection for your school.
-- The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
-- Looking for mobile device support details? Read below.
+- 学校では15 MBit/秒以上ののインターネット接続をおすすめします。
+- サポートしている最小画面サイズは1024 x 728 pxです。
+- 中学・高校レベルのコース (CS Discoveries、CS Principles、Intro to App Lab) では、マウス (またはタッチパッド) およびキーボードを備えたデスクトップまたはノートパソコンが必要です。 これらのコースではほとんどのタブレットおよびモバイルデバイスをサポートしていません。 デバイス固有の例外については、後述の「モバイルおよびタブレットのサポート詳細」をご覧ください。
+- K-5 (幼稚園年長から小学校5年生まで) コース (コンピューターサイエンス入門) やHour of Codeアクティビティなど、その他すべてのコンテンツは、最新のタブレットやノートパソコン、デスクトップパソコンだけでなく、iPadやChromebookでも利用できます。
+- モバイルデバイスの詳細をお探しですか？ 以下をお読みください。
 
-## Minimum Supported Browsers and Platforms
+## 最低限サポートされているブラウザとプラットフォーム
 
 <table>
  <tr>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser
+          ブラウザ
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform
+          プラットフォーム
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -65,61 +65,62 @@ theme: responsive
  </tr>
 </table>
 
-## Sites to Unblock
+## ブロック解除のためのサイト
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Code.orgのすべてのコンテンツを最大限に活用するため、学校または学区のIT担当部門に相談して、以下のサイトが許可されており、ブロックされていないことを確認することをおすすめします。
 
-| Priority                                                 | URL                                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Required**                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **To use YouTube hosted videos (Enhanced Privacy Mode)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **To use Code.org hosted videos**                        | `https://videos.code.org`                                                                                  |
-| **To use Internet Simulator**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **To use Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **To use Google Classroom Share Button**                 | `https://apis.google.com`                                                                                  |
+| 優先順位                                 | URL                                                                                                        |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| **必須**                               | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **任意**                               | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **YouTubeにあるビデオを使うには (拡張プライバシーモード)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org掲載のビデオを使うには**              | `https://videos.code.org`                                                                                  |
+| **インターネット シミュレーターを使うには**             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **ウェブ ラボを使うには**                      | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Google Classroom共有ボタンを使うには**       | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**          | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
-## Mobile and Tablet Support Details
+## モバイルデバイスおよびタブレットのサポート詳細
 
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+CS Discoveries、CS Principles、Intro to App Labのすべてのコースはタブレットやモバイルデバイスに対応していません。MacBookなどフルキーボードとマウス (またはタッチパッド) が必要です。 ほとんどのタブレットはサポートされていませんが、次の例外があります:
 
-- Microsoft Surface Pro with an external keyboard
-- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
+- 外部キーボード付きのMicrosoft Surface Pro
+- iPadOS 13.4以降を搭載しているiPad (外部キーボードと外部マウス、またはタッチパッド付き)
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+K-5 (幼稚園年長から小学校5年生まで) コース (コンピューターサイエンス入門) やHour of Codeアクティビティなど、その他すべてのコンテンツは、最新のタブレットやノートパソコン、デスクトップパソコンだけでなく、iPadやChromebookでも利用できます。
 
-### Mobile Phones
+### 携帯電話
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Hour of CodeとCS Fundamentalsは携帯電話でも受講可能です。 これらのアクティビティは使えますが、携帯電話での利用に最適化されておらず、既知の制限があります (例: タッチするターゲットが小さい、アクセサリ要素が画面外に表示される、スクリーンキーボードでのテキスト入力がしにくい)。 携帯電話では CS Discoveries、CS Principles、Intro to App Labの各コースを利用できません。
 
-## Videos
+## ビデオ
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+私たちはビデオをCode.orgや[オンライン学習プラットフォーム](https://studio.code.org)に埋め込むため[YouTube](https://www.youtube.com)を使います。 YouTubeをブロックしている学校では、代わりにCode.orgホストのビデオプレーヤーを表示しようとしています。
 
-### Can you play this video?
+### この動画を再生できますか？
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Code.orgのオンラインコースの開始前に、以下のビデオを再生して、準備が整っていることをご確認ください。
 
 <iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+これはカリキュラム全体で使われるプレーヤーです。 YouTubeでビデオを表示しようとしたときにYouTubeがブロックされている場合は、代わりに「代替の」プレーヤーを使ってCode.orgで掲載されているビデオを表示します。
 
-### Video not playing?
+### 動画が再生されませんか？
 
-If video does not work, you can email us at support@code.org.
+ビデオを再生できない場合は、support@code.orgにメールを送信してください。
 
-However, you can still use our tutorials without video.
+ただしビデオなしでチュートリアルを使うことも可能です。
 
-1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
-2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
-3. If all fails, there is a "Show Notes" tab that provides a storyboard equivalent of videos.
+1. 私たちはすべてのビデオを[一緒にダウンロード](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)できるようにしています。 学校のインターネットが低速の場合は、ビデオをダウンロードして共有画面で生徒に見せるのがおすすめです。
+2. チュートリアルに統合するため、各ビデオに緑色のダウンロードリンクアイコン<img src="/images/green-download.png" width=25 height=25 />を追加しました。これにより、生徒はチュートリアルビデオをダウンロードできます。
+3. すべてできなかった場合は、ビデオに相当するストーリーボードを提供する「ノートを表示」タブがあります。
 
   <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
 
-## Special settings for Google Apps/G-Suite users
+## Google Apps/G-Suiteユーザー向けの特別な設定
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+あなたがG-suiteの管理者の場合、YouTubeの制限設定をご確認ください。 「YouTubeへのアクセスを厳しく制限」設定を指定している場合、または「この動画は制限されています」というメッセージが表示された場合は、承認済みチャンネルのリストにチャンネルを追加できます。 承認済みリストへのチャンネル追加方法は、Googleの[このガイド](https://support.google.com/a/answer/6245597)をご覧ください。 また[このガイド](https://support.google.com/a/answer/6212415?hl=en)を見れば、さまざまな設定詳細と、教室に最適な設定を確認することもできます。
 
-## Still having trouble?
+## まだ問題が生じていますか？
 
-We'll help you out - just email us at support@code.org!
+私たちがお助けします - support@code.orgまでお問い合わせください！

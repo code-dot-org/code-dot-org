@@ -224,6 +224,10 @@ def jquery_is_element_displayed(selector)
   "return $(#{selector.dump}).css('display') !== 'none';"
 end
 
+def jquery_is_element_open(selector)
+  "return $(#{selector.dump}).attr('open') !== undefined;"
+end
+
 When /^I wait until element "([^"]*)" is (not )?visible$/ do |selector, negation|
   wait_for_jquery
   wait_until {@browser.execute_script(jquery_is_element_visible(selector)) == negation.nil?}
@@ -516,6 +520,10 @@ When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
 end
 
+When /^I complete the CAPTCHA$/ do
+  @browser.execute_script("$('#g-recaptcha-response').val('test-captcha-response');")
+end
+
 When /^I press delete$/ do
   script = "Blockly.mainBlockSpaceEditor.onKeyDown_("
   script += "{"
@@ -537,6 +545,17 @@ end
 
 When /^I type '([^']*)' into "([^"]*)"$/ do |input_text, selector|
   type_into_selector("\'#{input_text}\'", selector)
+end
+
+When /^I type "([^"]*)" into "([^"]*)" if I see it$/ do |input_text, selector|
+  type_into_selector("\"#{input_text}\"", selector)
+
+  wait_until(5) do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+  end
+  type_into_selector("\"#{input_text}\"", selector)
+rescue Selenium::WebDriver::Error::TimeOutError
+  # Element never appeared, ignore it
 end
 
 # The selector should be wrapped in appropriate quotes when passed into here.
@@ -625,6 +644,13 @@ Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected
   steps %{
     Then I wait to see a ".modal-body"
     And element ".modal-body" contains text "#{expected_text}"
+  }
+end
+
+Then /^I wait to see a modal containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see a ".modal"
+    And element ".modal" contains text "#{expected_text}"
   }
 end
 
@@ -736,6 +762,10 @@ def element_displayed?(selector)
   @browser.execute_script(jquery_is_element_displayed(selector))
 end
 
+def element_open?(selector)
+  @browser.execute_script(jquery_is_element_open(selector))
+end
+
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
 end
@@ -746,6 +776,10 @@ end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
   expect(element_visible?(selector)).to eq(false)
+end
+
+Then /^element "([^"]*)" is (not )?open$/ do |selector, negation|
+  expect(element_open?(selector)).to eq(negation.nil?)
 end
 
 Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
@@ -1104,7 +1138,7 @@ def press_keys(element, key)
 end
 
 def convert_keys(keys)
-  return keys[1..-1].to_sym if keys.start_with?(':')
+  return keys[1..].to_sym if keys.start_with?(':')
   keys.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
   keys.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
   # Convert newlines to :enter keys.
@@ -1375,4 +1409,20 @@ When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
     Given I create a student named "#{student_name}"
     And I join the section
   }
+end
+
+And(/^I navigate to the pegasus certificate share page$/) do
+  query_params = @browser.execute_script("return window.location.search;")
+  session_id = query_params.match(/\?i=([^&]+)/)[1]
+  url = "http://code.org/certificates/#{session_id}"
+  navigate_to replace_hostname(url)
+end
+
+And(/^I see custom certificate image with name "([^"]*)" and course "([^"]*)"$/) do |name, course|
+  expect(@browser.execute_script("return $('img[src*=\"/certificate_images/\"]').length")).to eq(1)
+  src = @browser.execute_script("return $('img[src*=\"/certificate_images/\"]').attr('src')")
+  encoded_params = src.match(%r{/certificate_images/(.*)\.jpg})[1]
+  params = JSON.parse(Base64.urlsafe_decode64(encoded_params))
+  expect(params['name']).to eq(name)
+  expect(params['course']).to eq(course)
 end

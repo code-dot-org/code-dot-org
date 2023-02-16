@@ -1,49 +1,49 @@
 ---
-title: IT Requirements
+title: தகவல் தொழில்நுட்ப தேவைகள்
 nav: educate_nav
 theme: responsive
 ---
 
-# Technical Requirements for Code.org Tutorials
+# Code.org டுடோரியல்களுக்கான தொழில்நுட்பத் தேவைகள்
 
-## Hardware
+## வன்பொருள்
 
-- We recommend at least a 15 MBit/sec Internet connection for your school.
-- The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
-- Looking for mobile device support details? Read below.
+- உங்கள் பள்ளிக்கு குறைந்தபட்சம் 15 MBit/sec இணைய இணைப்பைப் பரிந்துரைக்கிறோம்.
+- நாங்கள் ஆதரிக்கும் சிறிய திரை அளவு 1024 x 728 px ஆகும்.
+- எங்களின் இடைநிலை மற்றும் உயர்நிலைப் பள்ளி படிப்புகளுக்கு மவுஸ் (அல்லது டச்பேட்) மற்றும் விசைப்பலகையுடன் கூடிய டெஸ்க்டாப் அல்லது லேப்டாப் கணினி உங்களுக்குத் தேவைப்படும்: CS கண்டுபிடிப்புகள், CS கோட்பாடுகள் மற்றும் பயன்பாட்டு ஆய்வகத்திற்கான அறிமுகம். இந்த படிப்புகளுக்கு பெரும்பாலான டேப்லெட்டுகள் மற்றும் மொபைல் சாதனங்கள் ஆதரிக்கப்படுவதில்லை. சாதனம் சார்ந்த விதிவிலக்குகளுக்கு கீழே உள்ள "மொபைல் மற்றும் டேப்லெட் ஆதரவு விவரங்கள்" பார்க்கவும்.
+- மற்ற அனைத்து நவீன டேப்லெட்டுகள் மற்றும் லேப்டாப் அல்லது டெஸ்க்டாப் கம்ப்யூட்டர்களுடன் கூடுதலாக K-5 படிப்புகள் (கம்ப்யூட்டர் சயின்ஸ் ஃபண்டமெண்டல்ஸ்) மற்றும் ஹவர் ஆஃப் கோட் செயல்பாடுகள் போன்ற மற்ற எல்லா உள்ளடக்கங்களும் iPadகள் மற்றும் Chromebookகளில் இணக்கமாக இருக்கும்.
+- மொபைல் சாதன ஆதரவு விவரங்களைத் தேடுகிறீர்களா? கீழே உள்ளதை படிக்கவும்.
 
-## Minimum Supported Browsers and Platforms
+## குறைந்தபட்ச ஆதரவு உலாவிகள் மற்றும் இயங்குதளங்கள்
 
 <table>
  <tr>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser
+          உலாவி
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform
+          நடைமேடை
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -65,61 +65,62 @@ theme: responsive
  </tr>
 </table>
 
-## Sites to Unblock
+## தடைநீக்க தளங்கள்
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+அனைத்து Code.org உள்ளடக்கத்திலும் மிகச் சிறந்த அனுபவத்தைப் பெற, பின்வரும் தளங்கள் அனுமதிக்கப்படுவதையும் தடுக்கப்படவில்லை என்பதையும் உறுதிப்படுத்த உங்கள் பள்ளி அல்லது மாவட்டத்தின் தகவல் தொழில்நுட்பத் துறையுடன் கலந்தாலோசிக்க பரிந்துரைக்கிறோம்.
 
-| Priority                                                 | URL                                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Required**                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **To use YouTube hosted videos (Enhanced Privacy Mode)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **To use Code.org hosted videos**                        | `https://videos.code.org`                                                                                  |
-| **To use Internet Simulator**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **To use Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **To use Google Classroom Share Button**                 | `https://apis.google.com`                                                                                  |
+| முன்னுரிமை                                                                                    | URL                                                                                                        |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **தேவை**                                                                                      | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **விருப்பமானது**                                                                              | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **YouTube ஹோஸ்ட் செய்யப்பட்ட வீடியோக்களைப் பயன்படுத்த (மேம்படுத்தப்பட்ட தனியுரிமை பயன்முறை)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org ஹோஸ்ட் செய்யப்பட்ட வீடியோக்களைப் பயன்படுத்த**                                      | `https://videos.code.org`                                                                                  |
+| **இணைய சிமுலேட்டரைப் பயன்படுத்த**                                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **இணைய ஆய்வகத்தைப் பயன்படுத்த**                                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **கூகுள் கிளாஸ்ரூம் ஷேர் பட்டனைப் பயன்படுத்த**                                                | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                                   | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
-## Mobile and Tablet Support Details
+## மொபைல் மற்றும் டேப்லெட் ஆதரவு விவரங்கள்
 
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+அனைத்து CS கண்டுபிடிப்புகள், CS கோட்பாடுகள் மற்றும் பயன்பாட்டு ஆய்வகத்திற்கான அறிமுகம் ஆகியவை டேப்லெட்டுகள் அல்லது மொபைல் சாதனங்களுடன் இணங்கவில்லை - முழு விசைப்பலகை மற்றும் மவுஸ் (அல்லது மேக்புக்ஸில் உள்ளதைப் போன்ற டச்பேட்) தேவை. பின்வரும் விதிவிலக்குகளுடன் பெரும்பாலான டேப்லெட்டுகள் ஆதரிக்கப்படவில்லை:
 
-- Microsoft Surface Pro with an external keyboard
-- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
+- வெளிப்புற விசைப்பலகையுடன் மைக்ரோசாஃப்ட் சர்ஃபேஸ் ப்ரோ
+- வெளிப்புற விசைப்பலகை மற்றும் வெளிப்புற மவுஸ் அல்லது டச்பேடுடன் iPadOS 13.4 அல்லது அதற்குப் பிறகு இயங்கும் iPad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+மற்ற அனைத்து நவீன டேப்லெட்டுகள் மற்றும் லேப்டாப் அல்லது டெஸ்க்டாப் கம்ப்யூட்டர்களுடன் கூடுதலாக K-5 படிப்புகள் (கம்ப்யூட்டர் சயின்ஸ் ஃபண்டமெண்டல்ஸ்) மற்றும் ஹவர் ஆஃப் கோட் செயல்பாடுகள் போன்ற மற்ற எல்லா உள்ளடக்கங்களும் iPadகள் மற்றும் Chromebook களில் இணக்கமாக இருக்கும்.
 
-### Mobile Phones
+### கையடக்க தொலைபேசிகள்
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+எங்கள் ஹவர் ஆஃப் கோட் செயல்பாடுகள் மற்றும் CS அடிப்படை படிப்புகள் மொபைல் போன்களில் முடிக்கப்படலாம். இந்தச் செயல்பாடுகள் பயன்படுத்தக்கூடியதாக இருந்தாலும், அவை மொபைல் ஃபோன் அனுபவத்திற்கு உகந்ததாக இல்லை மற்றும் சில அறியப்பட்ட வரம்புகளைக் கொண்டுள்ளன (எ.கா. தொடு இலக்குகள் சிறியதாக இருக்கலாம், துணை உறுப்புகள் ஆஃப்ஸ்கிரீனில் காட்டப்படலாம் மற்றும் திரையில் உள்ள விசைப்பலகையைப் பயன்படுத்தி உரை உள்ளிடுவது கடினமாக இருக்கலாம்). CS டிஸ்கவரிஸ், CS கோட்பாடுகள், மற்றும் Intro to App Lab படிப்புகளை மொபைல் ஃபோன்களில் பயன்படுத்த முடியாது.
 
-## Videos
+## காணொலிகள்
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Code.org மற்றும் எங்கள் [ஆன்லைன் கற்றலில் வீடியோக்களை உட்பொதிக்க [YouTube](https://www.youtube.com) ஐப் பயன்படுத்துகிறோம். மேடை](https://studio.code.org). YouTube தடைசெய்யப்பட்ட பள்ளிகளுக்கு, அதற்குப் பதிலாக Code.org ஹோஸ்ட் செய்யப்பட்ட வீடியோ பிளேயரைக் காட்ட முயற்சிக்கிறோம்.
 
-### Can you play this video?
+### இந்த வீடியோவை இயக்க முடியுமா?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+நீங்கள் Code.org இன் ஆன்லைன் படிப்புகளைத் தொடங்குவதற்கு முன், கீழே உள்ள வீடியோவின் பின்னணியைச் சோதித்துப் பார்க்கவும்.
 
 <iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+பாடத்திட்டம் முழுவதும் பயன்படுத்தப்படும் பிளேயர் இதுதான். இது YouTube மூலம் வீடியோவைக் காட்ட முயற்சிக்கும், மேலும் YouTube தடுக்கப்பட்டால், அதற்குப் பதிலாக எங்கள் "ஃபால்பேக்" பிளேயரைப் பயன்படுத்தி Code.org ஹோஸ்ட் செய்யப்பட்ட வீடியோவைக் காண்பிக்கும்.
 
-### Video not playing?
+### வீடியோ இயங்கவில்லையா?
 
-If video does not work, you can email us at support@code.org.
+வீடியோ வேலை செய்யவில்லை என்றால், support@code.org இல் எங்களுக்கு மின்னஞ்சல் அனுப்பலாம்.
 
-However, you can still use our tutorials without video.
+இருப்பினும், நீங்கள் வீடியோ இல்லாமல் எங்கள் பயிற்சிகளைப் பயன்படுத்தலாம்.
 
-1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
-2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
-3. If all fails, there is a "Show Notes" tab that provides a storyboard equivalent of videos.
+1. எங்களின் எல்லா வீடியோக்களையும் [ஒன்றாகப் பதிவிறக்கம் செய்துள்ளோம்](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). உங்கள் பள்ளியில் குறைந்த அலைவரிசை இருந்தால், வீடியோக்களைப் பதிவிறக்கி, பகிரப்பட்ட திரையில் மாணவர்களுக்குக் காண்பிக்குமாறு பரிந்துரைக்கிறோம்.
+2. எங்கள் பயிற்சியில் ஒருங்கிணைக்கப்பட்டது, ஒவ்வொரு வீடியோவிற்கும் பச்சை பதிவிறக்க இணைப்பு ஐகானை <img src="/images/green-download.png" width=25 height=25 /> சேர்த்துள்ளோம், இது மாணவர்களை அனுமதிக்கிறது தனிப்பட்ட பயிற்சி வீடியோக்களைப் பதிவிறக்கவும்.
+3. அனைத்தும் தோல்வியுற்றால், வீடியோக்களுக்கு சமமான ஸ்டோரிபோர்டை வழங்கும் "குறிப்புகளைக் காட்டு" தாவல் உள்ளது.
 
   <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
 
-## Special settings for Google Apps/G-Suite users
+## Google Apps/G-Suite பயனர்களுக்கான சிறப்பு அமைப்புகள்
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Google Apps/G-Suite பயனர்களுக்கான சிறப்பு அமைப்புகள். நீங்கள் "கண்டிப்பான தடைசெய்யப்பட்ட YouTube அணுகல்" அமைப்பைக் குறிப்பிட்டிருந்தால் அல்லது 'இந்த வீடியோ தடைசெய்யப்பட்டுள்ளது' என்ற செய்திகளைக் கண்டால், அங்கீகரிக்கப்பட்ட சேனல்களின் பட்டியலில் எங்கள் சேனலைச் சேர்க்கலாம். அங்கீகரிக்கப்பட்ட பட்டியலில் எங்கள் சேனலை எவ்வாறு சேர்ப்பது என்பது பற்றி அறிய, Google வழங்கும் [இந்த வழிகாட்டியைப்](https://support.google.com/a/answer/6245597) பார்க்கவும். வெவ்வேறு அமைப்புகள் மற்றும் உங்கள் வகுப்பறைக்கு எது சிறந்தது என்பதைப் பற்றி மேலும் அறிய, [இந்த வழிகாட்டியைப்](https://support.google.com/a/answer/6212415?hl=en) பார்க்கலாம்.
 
-## Still having trouble?
+## இன்னும் சிக்கல் உள்ளதா?
 
-We'll help you out - just email us at support@code.org!
+நாங்கள் உங்களுக்கு உதவுவோம் - support@code.org இல் எங்களுக்கு மின்னஞ்சல் அனுப்புங்கள்!

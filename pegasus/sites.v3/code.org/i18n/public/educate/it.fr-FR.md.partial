@@ -1,49 +1,49 @@
 ---
-title: IT Requirements
+title: Exigences en matière de TI
 nav: educate_nav
 theme: responsive
 ---
 
-# Technical Requirements for Code.org Tutorials
+# Exigences techniques relatives aux tutoriels de Code.org
 
-## Hardware
+## Matériel
 
-- We recommend at least a 15 MBit/sec Internet connection for your school.
-- The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
-- Looking for mobile device support details? Read below.
+- Nous vous recommandons de mettre à la disposition de votre école une connexion Internet d'au moins 15 MBit/sec.
+- La plus petite taille d'écran supportée est de 1024 x 728 px.
+- Vous aurez besoin d'un ordinateur de bureau ou portable avec une souris (ou un pavé tactile) et un clavier pour nos cours de niveau collège et lycée : CS Discoveries, CS Principles, et Introduction à App Lab. La plupart des tablettes et des appareils mobiles ne sont pas adaptés à ces cours. Voir "Détails relatifs à la prise en charge des téléphones mobiles et des tablettes" ci-dessous pour connaître les particularités liées aux appareils.
+- Tous les autres contenus, comme les cours K-5 ( Fondamentaux de l'informatique) et les activités de Hour of Code, sont compatibles avec les iPads et les Chromebooks, en plus de toutes les autres tablettes modernes et ordinateurs portables ou de bureau.
+- Besoin de détails sur les appareils mobiles pris en charge ? Lire la suite.
 
-## Minimum Supported Browsers and Platforms
+## Configuration minimale requise pour les navigateurs et les plateformes
 
 <table>
  <tr>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser
+          Navigateur
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform
+          Plateforme
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -65,61 +65,62 @@ theme: responsive
  </tr>
 </table>
 
-## Sites to Unblock
+## Sites à débloquer
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Pour une meilleure utilisation de tout le contenu de Code.org, nous vous recommandons de consulter le service informatique de votre école ou de votre district pour vous assurer que les sites suivants sont autorisés et ne sont pas bloqués.
 
-| Priority                                                 | URL                                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Required**                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **To use YouTube hosted videos (Enhanced Privacy Mode)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **To use Code.org hosted videos**                        | `https://videos.code.org`                                                                                  |
-| **To use Internet Simulator**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **To use Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **To use Google Classroom Share Button**                 | `https://apis.google.com`                                                                                  |
+| Priorité                                                                              | URL                                                                                                        |
+| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Obligatoire**                                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Facultatif**                                                                        | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Pour utiliser les vidéos hébergées par YouTube (mode de confidentialité amélioré)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Pour utiliser les vidéos hébergées par Code.org**                                   | `https://videos.code.org`                                                                                  |
+| **Pour utiliser le simulateur de réseau**                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Pour utiliser Web Lab**                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Pour utiliser la fonction de partage de Google Classroom**                          | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                           | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
-## Mobile and Tablet Support Details
+## Détails relatifs à la prise en charge des appareils mobiles et tablettes
 
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+Tous les cours intitulés CS Discoveries, CS Principles, et Introduction à App Lab ne sont pas compatibles avec les tablettes ou les appareils mobiles - vous devez disposer d'un clavier complet et d'une souris (ou d'un pavé tactile, comme sur les MacBooks). La plupart des tablettes ne sont pas prises en charge, à l'exception des cas suivants :
 
-- Microsoft Surface Pro with an external keyboard
-- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
+- Microsoft Surface Pro avec clavier externe
+- iPad fonctionnant sous iPadOS 13.4 ou une version ultérieure, avec un clavier externe et une souris ou un pavé tactile externe
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+Tous les autres contenus, comme les cours K-5 ( Fondamentaux de l'informatique) et les activités de Hour of Code, sont compatibles avec les iPads et les Chromebooks, en plus de toutes les autres tablettes modernes et ordinateurs portables ou de bureau.
 
-### Mobile Phones
+### Téléphone mobile
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Nos activités Hour of Code et nos cours CS Fundamentals peuvent être suivis sur des téléphones portables. Bien que ces activités soient faciles à exploiter, elles ne sont pas conçues pour les téléphones mobiles et présentent certaines limites connues (par exemple, les touches peuvent être petites, les composants accessoires peuvent s'afficher hors de l'écran et le texte peut être difficile à saisir à l'aide du clavier à l'écran). Les cours CS Discoveries, CS Principles et Introductions à App Lab ne sont pas compatibles avec les téléphones portables.
 
-## Videos
+## Vidéos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Nous utilisons [YouTube](https://www.youtube.com) pour intégrer des vidéos dans Code.org et notre [plateforme de formation en ligne](https://studio.code.org). Pour les écoles dont YouTube n'est pas accessible, nous proposons un lecteur vidéo hébergé par Code.org en lieu et place.
 
-### Can you play this video?
+### Pouvez-vous lire cette vidéo ?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Avant de commencer les cours en ligne de Code.org, essayez de lire la vidéo ci-dessous pour être sûr d'être prêt.
 
 <iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+C'est le lecteur qui sera utilisé tout au long de la formation. Il vous permettra de lire la vidéo sur YouTube et, si YouTube est bloqué, il vous affichera la vidéo hébergée par Code.org en utilisant notre lecteur "de secours" en lieu et place.
 
-### Video not playing?
+### Impossible de lire les vidéos ?
 
-If video does not work, you can email us at support@code.org.
+Si vous ne parvenez pas à lire la vidéo, envoyez-nous un courriel à support@code.org.
 
-However, you can still use our tutorials without video.
+Cependant, vous pouvez toujours utiliser nos tutoriels sans vidéo.
 
-1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
-2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
-3. If all fails, there is a "Show Notes" tab that provides a storyboard equivalent of videos.
+1. Nous mettons à votre disposition toutes nos vidéos [disponibles en téléchargement ensemble](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Si votre établissement a une faible bande passante, nous vous recommandons de télécharger les vidéos et de les montrer aux élèves en partageant l'écran.
+2. Intégrée à nos tutoriels, nous avons ajouté une icône verte de téléchargement <img src="/images/green-download.png" width=25 height=25 /> pour chaque vidéo, pour permettre aux apprenants de télécharger des vidéos de formation individuelles.
+3. Si tout cela ne marche pas, il existe un onglet " Afficher les notes " qui offre l'équivalent d'un storyboard des vidéos.
 
   <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
 
-## Special settings for Google Apps/G-Suite users
+## Paramètres spéciaux des utilisateurs de Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Si vous êtes un administrateur G-suite, consultez vos paramètres de restriction sur YouTube. Si vous avez défini le paramètre "Accès restreint strict à YouTube" ou si le message "cette vidéo a été restreinte" s'affiche, vous pourrez ajouter notre chaîne à la liste des chaînes approuvées. Consultez [ce guide](https://support.google.com/a/answer/6245597) de Google pour savoir comment ajouter notre chaîne à la liste approuvée. Vous pouvez également consulter [ce guide](https://support.google.com/a/answer/6212415?hl=en) pour en savoir plus sur les différents paramètres et sur celui qui convient le mieux à votre classe.
 
-## Still having trouble?
+## Rencontrez-vous toujours des problèmes ?
 
-We'll help you out - just email us at support@code.org!
+Nous sommes à votre disposition - veuillez nous envoyer un courriel à support@code.org !

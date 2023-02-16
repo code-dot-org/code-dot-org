@@ -1089,7 +1089,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - text: Д
         questions:
         - {}
@@ -1097,7 +1097,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - text: Д
         questions:
         - {}
@@ -1105,7 +1105,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - text: Д
         questions:
         - {}
@@ -1113,7 +1113,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - text: Д
         questions:
         - {}
@@ -1121,7 +1121,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -1129,7 +1129,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -1137,7 +1137,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -1145,7 +1145,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -1886,7 +1886,7 @@ mk-MK:
         answers:
         - text: А
         - text: Б
-        - {}
+        - text: C
         - {}
         questions:
         - {}
@@ -2191,7 +2191,7 @@ mk-MK:
         - text: Сина
         - text: Зелена
         - {}
-        - {}
+        - text: жолто
         - {}
         - text: Црвена
         questions:
@@ -2258,7 +2258,7 @@ mk-MK:
         - {}
         - {}
         questions:
-        - {}
+        - text: Влез
         - {}
         - {}
         - {}
@@ -2269,7 +2269,7 @@ mk-MK:
         - {}
         - {}
         questions:
-        - {}
+        - text: Влез
         - {}
         - {}
         - {}
@@ -2280,7 +2280,7 @@ mk-MK:
         - {}
         - {}
         questions:
-        - {}
+        - text: Влез
         - {}
         - {}
         - {}
@@ -2950,7 +2950,7 @@ mk-MK:
         answers:
         - {}
         - {}
-        - {}
+        - text: жаба
         - text: жирафа
         - {}
         questions:
@@ -2959,7 +2959,7 @@ mk-MK:
         answers:
         - {}
         - {}
-        - {}
+        - text: жаба
         - text: жирафа
         - {}
         questions:
@@ -2968,7 +2968,7 @@ mk-MK:
         answers:
         - {}
         - {}
-        - {}
+        - text: жаба
         - text: жирафа
         - {}
         questions:
@@ -2977,7 +2977,7 @@ mk-MK:
         answers:
         - {}
         - {}
-        - {}
+        - text: жаба
         - text: жирафа
         - {}
         questions:
@@ -2986,7 +2986,7 @@ mk-MK:
         answers:
         - {}
         - {}
-        - {}
+        - text: жаба
         - text: жирафа
         - {}
         questions:
@@ -2995,7 +2995,7 @@ mk-MK:
         answers:
         - {}
         - {}
-        - {}
+        - text: жаба
         - text: жирафа
         - {}
         questions:
@@ -8844,3 +8844,362 @@ mk-MK:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - text: А
+        - text: Б
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict2_multi2022_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CourseE_Lesson_7_Artist_Practice_2022:
+        description: Напредуваш! Одбери ја следната активност. Заврши колку што можеш.
+          Продолжи да вежбаш за вградени јамки (nested loops) и Artist!
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |-
+          # Моќта на Зборовите
+
+          ## Што треба да направиш кога некој користи лош или повредлив јазик на интернет?
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # Моќта на Зборовите
+
+          ## Што треба да направиш кога некој користи лош или повредлив јазик на интернет?
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # Моќта на Зборовите
+
+          ## Што треба да направиш кога некој користи лош или повредлив јазик на интернет?
+      PrivatePersonalInformation-Unplugged2022:
+        markdown: |-
+          ## Приватни и Лични Информации
+
+          ## Какви информации според тебе се добри за споделување онлајн?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          ## Приватни и Лични Информации
+
+          ## Какви информации според тебе се добри за споделување онлајн?
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          ## Приватни и Лични Информации
+
+          ## Какви информации според тебе се добри за споделување онлајн?
+      courseE_EOC2022:
+        description: Го стигна крајот на Course E! Одбери проект за креирање.
+      courseE_EOC_2020:
+        description: Го стигна крајот на Course E! Одбери проект за креирање.
+      courseE_EOC_2021:
+        description: Го стигна крајот на Course E! Одбери проект за креирање.
+      courseE_EOC_examples2022:
+        description: Го стигна крајот на Course E! Одбери проект за креирање.
+      courseE_EOC_examples_2021:
+        description: Го стигна крајот на Course E! Одбери проект за креирање.
+      courseE_project_exemplars_2019_2020:
+        markdown: |+
+          # Примери за Проекти
+
+          Сега ќе го започнеш твојот последен проект. Пред да започнеш, погледни ги примерите.
+          # Sprite Lab
+
+          | Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
+          |---|---|
+          | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Try adding text or a score to this game! | Try adding text or a score to this game! |
+
+          ## Artist
+
+          | Pattern (Artist) | Snowflake Flowers (Frozen) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Let's get creative with nested loops! | Let's get creative with functions! |
+
+      courseF_EOC_2020:
+        description: Го стигна крајот на Course F! Одбери проект за креирање.
+      courseF_EOC_2021:
+        description: Го стигна крајот на Course F! Одбери проект за креирање.
+      courseF_EOC_examples_2021:
+        description: Го стигна крајот на Course F! Одбери проект за креирање.
+      courseF_project_exemplars_2019_2020:
+        markdown: "# Пример за Проект\n\nЌе го започнеш твојот краен проект. Пред
+          да започнеш, погледни ги примерите.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite
+          Lab) | \tAirplane Game (Sprite Lab) |\n|---|---|\n| [![Cupcake Game (Sprite
+          Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
+          \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          |\n| Try adding text or a score to this game! | Try adding text or a score
+          to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Artist) |\n|---|---|\n|
+          [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
+          \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
+          \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |\n| Let's get creative with variables! | Let's get creative with For
+          Loops! |\n"
+      csf_digital_trails:
+        markdown: |-
+          # Следете ја дигиталната патека
+
+          ## Кои информации е во ред да ги имате на вашиот дигитален отпечаток?
+      csf_digital_trails2022:
+        markdown: |-
+          # Следете ја дигиталната патека
+
+          ## Кои информации е во ред да ги имате на вашиот дигитален отпечаток?
+      csf_digital_trails_2021:
+        markdown: |-
+          # Следете ја дигиталната патека
+
+          ## Кои информации е во ред да ги имате на вашиот дигитален отпечаток?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Моето Онлајн Соседство
+
+          ## Како безбедно да одите на места онлајн?
+      csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Моето Онлајн Соседство
+
+          ## Како безбедно да одите на места онлајн?
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Моето Онлајн Соседство
+
+          ## Како безбедно да одите на места онлајн?
+      express_EOC2022:
+        description: Го стигна крајот на Course E! Одбери проект за креирање.
+      express_EOC_2021:
+        description: Го стигна крајот на Course E! Одбери проект за креирање.

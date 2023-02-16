@@ -1,4 +1,5 @@
 @use "control-buttons.module";
+@use "./components/javalab-dropdown.module";
 @import "color.scss";
 
 .selected {
@@ -12,7 +13,41 @@
   float: left;
 }
 
-.dropdown {
+.settingsDropdown {
+  @extend %dropdown;
   bottom: 40px;
-  margin-left: 5px;
+  margin-left: -47px;
+  flex-direction: column-reverse;
+}
+
+.item {
+  @extend %anchor;
+}
+
+.fontSizeSelector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .textSizeLabel {
+    margin-right: 5px;
+  }
+
+  .fontSizeButton {
+    padding: 5px;
+    line-height: 14px;
+
+    .icon {
+      height: 14px;
+      width: 14px;
+    }
+  }
+
+  // Don't change color or cursor on hover
+  &:hover {
+    background-color: $white;
+    cursor: default;
+    box-shadow: none;
+  }
 }

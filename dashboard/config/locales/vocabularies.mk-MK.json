@@ -14,8 +14,46 @@
         "loops/aquatic/unversioned": {
           "word": "Лупови"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Код"
+        },
+        "variable/coursef/2022": {
+          "word": "Променлива"
+        },
+        "input/coursef/2022": {
+          "word": "Влез"
+        },
+        "define/coursef/2022": {
+          "word": "Дефинирајте"
+        },
+        "function/coursee/2022": {
+          "word": "Функција"
+        },
+        "define/coursee/2022": {
+          "word": "Дефинирајте"
+        },
+        "function/express/2022": {
+          "word": "Функција"
+        },
+        "variable/express/2022": {
+          "word": "Променлива"
+        },
+        "define/express/2022": {
+          "word": "Дефинирајте"
+        },
+        "data/coursec/2022": {
+          "word": "Податоци"
+        },
+        "input/csd/2022": {
+          "word": "Влез"
         },
         "variable/csd/2022": {
           "word": "Променлива"
@@ -24,10 +62,30 @@
           "word": "Функција"
         },
         "code/poem-art/unversioned": {
-          "word": "Код"
+          "word": "Код",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Променлива"
+        },
+        "input/coursef/2021": {
+          "word": "Влез"
         },
         "define/coursef/2021": {
           "word": "Дефинирајте"
@@ -52,6 +110,9 @@
         },
         "function/csd/2021": {
           "word": "Функција"
+        },
+        "input/csd/2021": {
+          "word": "Влез"
         }
       }
     }

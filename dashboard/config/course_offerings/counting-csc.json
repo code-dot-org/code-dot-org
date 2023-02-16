@@ -1,7 +1,11 @@
 {
   "key": "counting-csc",
-  "display_name": "Counting with Laurel",
+  "display_name": "Counting Activity",
   "category": "csc",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": null,
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": null
 }

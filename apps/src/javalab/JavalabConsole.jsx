@@ -53,7 +53,8 @@ class JavalabConsole extends React.Component {
     isPhotoPrompterOpen: PropTypes.bool,
     closePhotoPrompter: PropTypes.func,
     photoPrompterPromptText: PropTypes.string,
-    shouldJumpToInput: PropTypes.bool
+    shouldJumpToInput: PropTypes.bool,
+    editorFontSize: PropTypes.number.isRequired
   };
 
   state = {
@@ -123,7 +124,12 @@ class JavalabConsole extends React.Component {
                 ...styles.input,
                 ...(displayTheme === DisplayTheme.DARK
                   ? styles.darkModeInput
-                  : styles.lightModeInput)
+                  : styles.lightModeInput),
+                // TODO: When converting this component's styles to SCSS,
+                // font size may need to remain an inline style as it is
+                // programmatically assigned, or editor font size logic
+                // should be moved into SCSS.
+                fontSize: this.props.editorFontSize
               }}
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
@@ -201,7 +207,13 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {displayTheme, style, bottomRow, clearConsoleLogs} = this.props;
+    const {
+      displayTheme,
+      style,
+      bottomRow,
+      clearConsoleLogs,
+      editorFontSize
+    } = this.props;
 
     return (
       <div style={style}>
@@ -235,7 +247,12 @@ class JavalabConsole extends React.Component {
               ...styles.console,
               ...(displayTheme === DisplayTheme.DARK
                 ? styles.darkMode
-                : styles.lightMode)
+                : styles.lightMode),
+              // TODO: When converting this component's styles to SCSS,
+              // font size may need to remain an inline style as it is
+              // programmatically assigned, or editor font size logic
+              // should be moved into SCSS.
+              fontSize: editorFontSize
             }}
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
@@ -258,7 +275,8 @@ export default connect(
     displayTheme: state.javalab.displayTheme,
     isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
     photoPrompterPromptText: state.javalab.photoPrompterPromptText,
-    shouldJumpToInput: state.javalab.isRunning || state.javalab.isTesting
+    shouldJumpToInput: state.javalab.isRunning || state.javalab.isTesting,
+    editorFontSize: state.javalab.editorFontSize
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log)),
@@ -316,7 +334,8 @@ const styles = {
     fontFamily: 'monospace',
     flexGrow: 1,
     marginTop: -2,
-    fontSize: 13
+    fontSize: 13,
+    height: '100%'
   },
   spacer: {
     width: 8

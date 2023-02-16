@@ -37,8 +37,6 @@
   "sports": "Naprogramuj svoji vlastní sportovní hru",
   "text-compression": "Komprese textu",
   "csa-self-paced-pl": "Co nabízí Code.org pro učitele pilotního projektu CSA",
-  "counting-csc": "Počítání s Laurel",
-  "explore-data-1": "Zkoumání krabicových grafů a histogramů",
   "outbreak-csc": "Epidemie",
   "poem-art": "Básnické umění",
   "edit-code": "Upravit kód",
@@ -52,5 +50,9 @@
   "step": "krok",
   "coursee-ramp": "coursee-ramp",
   "csa5-exemplars": "csa5-exemplars",
-  "soccer": "fotbal"
+  "katie-practice": "katie-practice",
+  "soccer": "fotbal",
+  "hello-world-space": "Hello World: Prostora",
+  "hello-world-soccer": "Hello World: Fotbal",
+  "playground": "hřiště"
 }

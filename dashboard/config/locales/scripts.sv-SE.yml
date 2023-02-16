@@ -1054,6 +1054,7 @@ sv:
             required:
               display_name: Översikt
         dance-2019:
+          title: Dansparty
           description: Koda ditt egna dansparty som du kan dela med dina vänner.
           student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
         k5-onlinepd-2019:
@@ -1061,6 +1062,7 @@ sv:
             k5_next_steps:
               display_name: Nästa steg
         dance-extras-2019:
+          title: Fortsätt att dansa
           description: Med ytterligare projektidéer kan du fortsätta efter den första
             timmen.
           student_description: Med ytterligare projektidéer kan du fortsätta efter
@@ -1947,3 +1949,110 @@ sv:
               display_name: Välkommen
         soccer:
           name: fotboll
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: loopar
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Innehåll
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: variabler
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: "'För' loopar"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: variabler
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
+            csp_loops:
+              display_name: loopar
+            csp_project:
+              display_name: Projekt
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listor
+            lessonGroup-3:
+              display_name: loopar
+            lessonGroup-5:
+              display_name: Projekt
+        csp7-2023:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek

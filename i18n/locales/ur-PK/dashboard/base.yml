@@ -229,6 +229,7 @@ ur:
     online: آن لائن
     trynow: 'مزید سیکھے'
     try_beta_courses: 'نیا! ہمارے بیٹا کورس برائے K-5 طلبہ کا جائژہ لیں.'
+  certificate_hour_of_code: "آور-آف-کوڈ"
   user_type:
     student: 'Talib-e-ilm'
   footer:
@@ -249,32 +250,33 @@ ur:
       link: "مزید سیکھے"
   view_lesson_plan: 'سبق پلان دیکھیں'
   upsell:
-    dance:
-      title: 'ڈانس پارٹی'
     dance-2019:
       title: 'ڈانس پارٹی'
-    hello-world:
-      title: 'ہیلو ورلڈ'
-    poem-art:
-      title: 'نظم کا فن'
-    20-hour:
-      title: 'تیز کردہ کورس'
-      body_short: '2-4 کورسز کے تیز کردہ ورژن میں بنیادی کمپیوٹر سائنس سیکھیں۔'
-    hoc2014:
-      try_frozen: 'آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ'
+    dance:
+      title: 'ڈانس پارٹی'
     frozen:
       title: "فروزن"
-    starwars:
-      title: "اسٹار وارز"
+    hello-world:
+      title: 'ہیلو ورلڈ'
+      body: 'اپنی تخلیق کردہ دنیا میں انٹرایکٹو کرداروں کو کوڈ کرنے کے لیے چار مزیدار تھیمز میں سے کسی کا انتخاب کریں۔'
+    hoc2014:
+      try_frozen: 'آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ'
+    poem-art:
+      title: 'نظم کا فن'
     sports:
       title: "کھیل کود"
+    starwars:
+      title: "اسٹار وارز"
+    widgets:
+      audience: "عمر 14+"
+    unplugged_conditionals:
+      title: "شرائط"
     unplugged:
       title: "ان پلگڈ اسباق"
       body_short: "اگر آپ کے پاس کمپیوٹر نہیں ہے، تو اپنے کلاس روم میں پلگ نکالا اسباق کو آزمائیں۔"
-    unplugged_conditionals:
-      title: "شرائط"
-    widgets:
-      audience: "عمر 14+"
+    20-hour:
+      title: 'تیز کردہ کورس'
+      body_short: '2-4 کورسز کے تیز کردہ ورژن میں بنیادی کمپیوٹر سائنس سیکھیں۔'
   landing:
     help_support: "مدد اور معاونت"
   multi-submittable:
@@ -348,3 +350,10 @@ ur:
     link_your_email: "ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں"
     not_now: "ابھی نہیں"
   teacher_feedback: "استاد کے حوالے سے رائے"
+  lesson_lock:
+    error:
+      no_updates: "کوئی اپڈیٹ نہیں ہیں"
+      missing_params: "یوزر، لیول، اور یونٹ کے آئی ڈی دینا ضروری ہے"
+      cannot_view_locked_answers: "قفل کی حالت میں جواب نہیں دکھائے جا سکتے"
+      forbidden: "یوزر طالب علم کے قابل قلف حالت کو اپڈیٹ نہیں کر سکتا"
+  reset_predict_progress_button: "جواب ڈیلیٹ کریں"

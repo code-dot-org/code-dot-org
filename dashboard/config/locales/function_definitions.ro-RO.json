@@ -3659,6 +3659,487 @@
               "length": "lungime"
             }
           }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "funcţiunea mea"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "small flower": {
+            "name": "floare mică"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FLORI LOGICE 2"
+          },
+          "LOGIC FLOWER": {
+            "name": "FLORI LOGICE"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLORI LOGICE"
+          },
+          "draw a star": {
+            "name": "desenează o stea",
+            "description": "desenați o stea cu puncte date și laturi de o lungime dată",
+            "parameters": {
+              "points": "puncte",
+              "length": "lungime"
+            }
+          },
+          "draw a circle": {
+            "name": "desenează un cerc",
+            "description": "desenați un cerc cu raza dată",
+            "parameters": {
+              "radius": "rază"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "desenați o morișcă",
+            "parameters": {
+              "sides": "laturi",
+              "length": "lungime",
+              "repeat": "repetă"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenează un triunghi",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a shape": {
+            "name": "desenați o formă",
+            "parameters": {
+              "sides": "laturi",
+              "length": "lungime"
+            }
+          },
+          "draw a house": {
+            "name": "desenează o casă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a square": {
+            "name": "desenează un pătrat",
+            "parameters": {
+              "length": "lungime",
+              "sides": "laturi"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "desenează o stea",
+            "description": "desenați o stea cu puncte date și laturi de o lungime dată",
+            "parameters": {
+              "points": "puncte",
+              "length": "lungime"
+            }
+          },
+          "draw a circle": {
+            "name": "desenează un cerc",
+            "description": "desenați un cerc cu raza dată",
+            "parameters": {
+              "radius": "rază"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "desenați o morișcă",
+            "parameters": {
+              "sides": "laturi",
+              "length": "lungime",
+              "repeat": "repetă"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenează un triunghi",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a shape": {
+            "name": "desenați o formă",
+            "parameters": {
+              "sides": "laturi",
+              "length": "lungime"
+            }
+          },
+          "draw a house": {
+            "name": "desenează o casă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a square": {
+            "name": "desenează un pătrat",
+            "parameters": {
+              "length": "lungime"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "desenează o stea",
+            "description": "desenați o stea cu puncte date și laturi de o lungime dată",
+            "parameters": {
+              "points": "puncte",
+              "length": "lungime"
+            }
+          },
+          "draw a circle": {
+            "name": "desenează un cerc",
+            "description": "desenați un cerc cu raza dată",
+            "parameters": {
+              "radius": "rază"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "desenați o morișcă",
+            "parameters": {
+              "sides": "laturi",
+              "length": "lungime",
+              "repeat": "repetă"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenează un triunghi",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a shape": {
+            "name": "desenați o formă",
+            "parameters": {
+              "sides": "laturi",
+              "length": "lungime"
+            }
+          },
+          "draw a house": {
+            "name": "desenează o casă",
+            "parameters": {
+              "length": "lungime"
+            }
+          },
+          "draw a square": {
+            "name": "desenează un pătrat",
+            "parameters": {
+              "length": "lungime"
+            }
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "resetați jocul"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "resetați jocul"
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "construiește podul"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "curăță calea"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "repară calea lungă"
+          },
+          "fix short path": {
+            "name": "repară calea scurtă"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "construiește un pod scurt"
+          },
+          "build long bridge": {
+            "name": "construiește un pod lung"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "soluție potențială"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "name": "desenați flacără",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "desenați foc"
+          }
+        },
+        "courseC_artist_prog42022": {
+          "booster": {
+            "name": "propulsor"
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "facă ceva"
+          },
+          "draw hexagon": {
+            "name": "desenează hexagon"
+          },
+          "draw line of hexagons": {
+            "name": "desenează un rând de hexagoane"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          },
+          "draw ear stems": {
+            "name": "desenează urechi"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "desenează o stea"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "desenează o stea"
+          }
+        },
+        "courseE_artist_functions72022": {
+          "draw a window": {
+            "name": "desenați o fereastră"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "facă ceva"
+          },
+          "staggered squares": {
+            "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
+          },
+          "draw square": {
+            "name": "desenează pătrat"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          },
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
+          },
+          "draw square": {
+            "name": "desenează pătrat"
+          },
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
+          },
+          "draw square": {
+            "name": "desenează pătrat"
+          },
+          "do something": {
+            "name": "facă ceva"
+          },
+          "staggered squares": {
+            "name": "pătrate așezate în zig-zag"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "facă ceva"
+          },
+          "draw triangle": {
+            "name": "desenează triunghi"
+          },
+          "draw line of triangles": {
+            "name": "desenați un rând de triunghiuri"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw hexagon": {
+            "name": "desenează hexagon"
+          },
+          "draw line of hexagons": {
+            "name": "desenează un rând de hexagoane"
+          },
+          "staggered squares": {
+            "name": "pătrate așezate în zig-zag"
+          },
+          "draw a line of squares": {
+            "name": "desenează un rând de pătrate"
+          },
+          "draw square": {
+            "name": "desenează pătrat"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "my design": {
+            "name": "designul meu"
+          },
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "my design": {
+            "name": "designul meu"
+          },
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "desenează un pătrat"
+          },
+          "draw ear stems": {
+            "name": "desenează urechi"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "draw line of polygons": {
+            "name": "desenează un rând de poligoane"
+          },
+          "draw polygon": {
+            "name": "desenează poligon"
+          },
+          "do something": {
+            "name": "facă ceva"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
+          "pick along path": {
+            "name": "culege de-a lungul căii"
+          },
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          },
+          "pumpkin square": {
+            "name": "pătrat dovleac"
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "pick along path": {
+            "name": "culege de-a lungul căii"
+          },
+          "pumpkin square": {
+            "name": "pătrat dovleac"
+          },
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get produce": {
+            "name": "obțineți legume"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "pick along path": {
+            "name": "culege de-a lungul căii"
+          },
+          "check for corn": {
+            "name": "caută porumb"
+          },
+          "corn rectangle": {
+            "name": "pătrat porumb"
+          },
+          "lettuce stairs": {
+            "name": "scări salată"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "pick along path": {
+            "name": "culege de-a lungul căii"
+          },
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+            "name": "caută porumb în pătrat"
+          },
+          "get all pumpkins": {
+            "name": "strânge toți dovlecii"
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": "pătrat grădină"
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+            "name": "pătrat grădină"
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": "pătrat grădină"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "sfârşitul jocului"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "sfârşitul jocului"
+          }
         }
       }
     }

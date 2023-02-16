@@ -4,6 +4,9 @@ kn:
     game:
       name:
         Unplug6: ಕಂಡೀಷನಲ್ಸ್‌
+    concept:
+      description:
+        loop_for: ಕೌಂಟರ್ ಬ್ಲಾಕ್
     level:
       instructions:
         maze_2_2: 'ತುಂಟ ಹಂದಿಯನ್ನು ಹಿಡಿಯಲು ನಿಮಗೆ ನನ್ನ ಸಹಾಯ ಬೇಕೆ? ಒಟ್ಟಾಗಿ ಹಲವು "ಮುಂದಕ್ಕೆ ಸಾಗಿ" ಬ್ಲಾಕ್‌ಗಳನ್ನು ಪೇರಿಸಿ ಮತ್ತು ನಾನು ಅಲ್ಲಿಗೆ ಹೋಗಲು ಸಹಾಯ ಮಾಡುವುದಕ್ಕಾಗಿ "ರನ್" ಒತ್ತಿ.'
@@ -53,24 +56,24 @@ kn:
         studio_ec_sandbox: ನಿಮ್ಮ ಗೇಮ್ ಅನ್ನು ನೀವೇ ರಚಿಸಿ. ಮುಗಿಸಿದ ನಂತರ, ಸ್ನೇಹಿತರ ತಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಗೇಮ್ ಟ್ರೈ ಮಾಡಲು ಫಿನಿಶ್ ಕ್ಲಿಕ್ ಮಾಡಿ.
     video:
       name:
-        artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
+        artist_intro: ಕಲಾವಿದನ ಪರಿಚಯ
         Unplug6: ಕಂಡೀಷನಲ್ಸ್‌
         Unplug7: ಹಾಡು ಬರೆಯವುದು
         Unplug10: ಇಂಟರ್ನೆಟ್
         C1_happy_maps_unplugged: ಸಂತೋಷದ ನಕ್ಷೆಗಳು
         C1_bigevent_unplugged: ದೊಡ್ಡ ಘಟನೆ
         C1_getting_loopy: ಲೂಪಿ ಆಗುವುದು
-        C1_artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
+        C1_artist_intro: ಕಲಾವಿದನ ಪರಿಚಯ
         C1_building_foundation: ಅಡಿಪಾಯವನ್ನು ನಿರ್ಮಿಸುವುದು
         C1_going_places_safely: ಸುರಕ್ಷಿತವಾಗಿ ಸ್ಥಳಗಳಿಗೆ ಹೋಗುವುದು
-        C2_artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
-        C2_artist_loops: ಆರ್ಟಿಸ್ಟ್‌ ಲೂಪ್‌ಗಳು
+        C2_artist_intro: ಕಲಾವಿದನ ಪರಿಚಯ
+        C2_artist_loops: ಕಲಾವಿದನ ಲೂಪ್‌ಗಳು
         C2_artist_debugging: ಆರ್ಟಿಸ್ಟ್ ಡಿಬಗ್ಗಿಂಗ್‌
         C2_conditionals_with_cards: ಕಂಡೀಷನಲ್ಸ್‌
         C2_binary_bracelets: ಬೈನರಿ ಕಡಗಗಳು
         C2_digital_footprint: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
         C2_digital_footprint_v2: ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಹೆಜ್ಜೆಗುರುತು
-        C3_artist_intro: ಆರ್ಟಿಸ್ಟ್‌ ಪರಿಚಯ
+        C3_artist_intro: ಕಲಾವಿದನ ಪರಿಚಯ
         C3_artist_functions: ಆರ್ಟಿಸ್ಟ್ ಫಂಕ್ಷನ್‌ಗಳು
         C3_artist_nested_loops: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
         C3_bee_nested_loops: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
@@ -79,10 +82,17 @@ kn:
         C3_functional_suncatchers: ಕ್ರಿಯಾತ್ಮಕ ಸನ್‌ಕ್ಯಾಚರ್‌ಗಳು
         C4_loops_zombie: ಲೂಪ್‌ಗಳು
         C4_variables_artist: ವೇರಿಯಬಲ್ಸ್‌ - ಆರ್ಟಿಸ್ಟ್
+        C4_for_loops: ಲೂಪ್ಸಗಾಗಿ
+        C4_for_loops_bee: ಲೂಪ್ಸಗಾಗಿ
+        C4_for_loops_no_bee: ಲೂಪ್ಸಗಾಗಿ
         C4_math_artist: ಗಣಿತದೊಂದಿಎಗ ಆರ್ಟಿಸ್ಟ್‌ ಪ್ರೋಗ್ರಾಮ್ ಮಾಡುವುದು
         C4_conditionals: ಕಂಡೀಷನಲ್ಸ್‌
+        C4_unplugged_forloops: ಲೂಪ್ಸಗಾಗಿ
         CSF_a_b_artist_loops: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
         CSF_artist_angles: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಆಂಗಲ್ಸ್
+        CSF_collector_k1_blocks: 'CS ಫಂಡಮೆಂಟಲ್ಸ್‌: ಕಲೆಕ್ಟರ್'
+        CSF_collector_repeat_loops: ಕಲೆಕ್ಟರ್ ರಿಪೀಟ್ ಲೂಪ್ಸ್
+        CSF_collector_text_blocks: 'CS ಫಂಡಮೆಂಟಲ್ಸ್‌: ಕಲೆಕ್ಟರ್'
         CSF_debugging_k1_blocks: ಡಿಬಗ್ ಮಾಡುವುದು
         CSF_debugging_text_blocks: ಡಿಬಗ್ ಮಾಡುವುದು
         frozen_intro: ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಪರಿಚಯ
@@ -114,10 +124,13 @@ kn:
         mc_2017_puzzle_3: ಮೈನ್‌ಕ್ರಾಪ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ - ರಿಪೀಟ್ ಲೂಪ್‌ಗಳು
         mc_2017_puzzle_8: ಮೈನ್‌ಕ್ರಾಪ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ - ಫಂಕ್ಷನ್‌ಗಳು
         mc_2017_puzzle_12: ಮೈನ್‌ಕ್ರಾಪ್ಟ್ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್‌ - ಫ್ರೀಪ್ಲೇ
+        CSF_scrat_loops_K1: ಐಸ್ ಏಜ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್‌
+        CSF_scrat_loops_CF: ಐಸ್ ಏಜ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್‌
         CSF_loops_AB: ಲೂಪ್‌ಗಳು
         CSF_StarWars_ProjectIntro: ಸ್ಟಾರ್ ವಾರ್ಸ್‌ ಪ್ರಾಜೆಕ್ಟ್‌ ಪರಿಚಯ
         c_and_c_great_to_create: ಫೇರ್ ಅನ್ನು ರಚಿಸಲು ಮತ್ತು ಪ್ಲೇ ಮಾಡಲು ಇದು ಅದ್ಭುತವಾಗಿದೆ
         c_and_c_digital_sharing: ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ
+        repeat_block: ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸುವುದು
         csd_debugging: ಡಿಬಗ್ ಮಾಡುವುದು
         csf_private_and_personal_information: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ
         outbreak_mike: ಮೈಕ್ - ಔಟ್‌ಬ್ರೇಕ್ ಸಿಮ್ಯುಲೇಟರ್ ಜೊತೆಗೆ ಕೋಡ್‌ಬೈಟ್ಸ್‌ ಎಪಿಸೋಡ್ 3
@@ -162,3 +175,8 @@ kn:
         CSA-PL-Printing-in-Java: ಜಾವಾದಲ್ಲಿ ಮುದ್ರಣ
         CSA-PL-multi-selection-statements: ಬಹು-ಆಯ್ಕೆ ಹೇಳಿಕೆಗಳು
         CS_Changing_Everything: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಬದಲಾಗುತ್ತಿದೆ
+    callout:
+      text:
+        repeat_blocks: '“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ'
+        repeat_blocks_2: (2) ಇಲ್ಲಿ “ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಮೂವ್ ಮಾಡಿ ಮತ್ತು ಒಳಗೆ ಗ್ರೇ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇರಿಸಿ
+        frozen_diamond_repeat: ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ.

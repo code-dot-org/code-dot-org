@@ -26,10 +26,10 @@ class ActivitiesController < ApplicationController
 
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
-      @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
+      @level = params[:level_id] ? Unit.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
-      @level = Script.cache_find_level(params[:level_id].to_i)
+      @level = Unit.cache_find_level(params[:level_id].to_i)
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
@@ -212,16 +212,6 @@ class ActivitiesController < ApplicationController
           attempt: params[:attempt]
         )
       end
-    end
-
-    passed = ActivityConstants.passing?(test_result)
-    if lines > 0 && passed
-      # TODO: The user's total line count is no longer shown anywhere in the UI.
-      # Remove this as part of LP-2291 to clean up the code that stores and
-      # maintains the total line count.
-      current_user.total_lines += lines
-      # bypass validations/transactions/etc
-      User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
     end
   end
 

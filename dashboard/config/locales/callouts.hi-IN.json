@@ -1884,6 +1884,486 @@
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "अपना कोड यहां जोड़ें।"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "यह ब्लॉक अपने प्रोग्राम में शामिल करें।",
+          "arrow_buttons": "तीर के बटन दबाकर अपने डांसर को नियंत्रित करें।"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "अपने कार्यक्रम में एक नई इवेंट जोड़ें।"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "नई ब्लॉक"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "नई ब्लॉक"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "नई ब्लॉक",
+          "new_block_4": "नई ब्लॉक"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "ब्लॉक का विस्तार करने के लिए यहां क्लिक करें।",
+          "pointerlocation": "यहां एक सब्जेक्ट ब्लॉक खींचें।"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "अपने प्रोजेक्ट में नए कॉस्टयूम शामिल करने के लिए यहां क्लिक करें!"
+        },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "आपका कोड कैसे काम करता है, इस बारे में अपने लिए या अध्यापक के लिए नोट्स छोड़ने हेतु इस ब्लॉक का उपयोग करें।"
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "यह छोटा-सा निर्देश कंप्यूटर को वर्कस्पेस में समान नाम वाले कोड के बड़े भाग को चलाने के लिए कहता है।"
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "यह `दोहराएं` लूप है!  वर्कस्पेस में इस पर क्लिक करें और वह कोड शामिल करें, जिसे आप बार-बार चलाना चाहते हैं। "
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "एजेंट पानी के ऊपर मंडरा सकता है, लेकिन खिलाड़ी नहीं मंडरा सकता!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "आप इन ब्लॉक्स को दूर नहीं हटा सकते, लेकिन आप इन्हें संपादित कर सकते हैं!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "एजेंट पानी के ऊपर मंडरा सकता है, लेकिन स्टीव और एलेक्स नहीं मंडरा सकते!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "यह कोड आपके घर का निर्माण शुरू करेगा। क्या आप इसे खत्म कर सकते हैं?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "अपने प्रोग्राम को आज़माने के लिए \"Run\" चलाएँ",
+          "craft_drag_block_callout": "\"आगे की ओर मूव करें\" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के लिए कमांड जोड़ सकते हैं?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "इस लौह का खनन करें!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "अपने प्रोजेक्ट में नई पोशाकें शामिल करने के लिए यहां क्लिक करें!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "अपने प्रोजेक्ट में नई पोशाकें शामिल करने के लिए यहां क्लिक करें!"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "इस नंबर का मतलब है कि अंतिम जवाब में इस प्रकार के केवल एक ब्लॉक का उपयोग किया जा सकता है।"
+        },
+        "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "क्या आपको पता है कि आपको जब भी जरूरत हो, आप एक लाइन से पीछे हट सकते हैं?"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "खजाना एकत्र करने के लिए इस ब्लॉक का उपयोग करें।"
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "यह कॉलआउट है"
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "इवेंट तीर की दिशा बदलने के लिए यहां क्लिक करें।"
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "इससे आप \"बेतरतीब” ध्वनि चुन सकते हैं, जिसका मतलब है कि आपको पता नहीं कि आप क्या पाने वाले हैं, जब तक आप इसे सुन नहीं लेते!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "टूलबॉक्स में इन ब्लॉक्स में से केवल एक ब्लॉक है। आप इसका उपयोग कैसे करेंगे?"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "खजाना एकत्र करने के लिए इस ब्लॉक का उपयोग करें।"
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "दिशाएं बदलने के लिए हरे ड्रॉप डाउन तीर का उपयोग करें।"
+        },
+        "courseC19_playLab_EOC32022": {
+          "courseE_playLab_scaffold3_1": "अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता के पास ले जाएं।"
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "इस ब्लॉक का उपयोग करें, जब वैड्डलेस और चॉम्प छूते हैं!"
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों में अभिनेताओं को मूव कर सकते हैं।"
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों में अभिनेताओं को मूव कर सकते हैं।"
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "इस प्रोजेक्ट के लिए यह ब्लॉक बहुत महत्वपूर्ण है। इसका उपयोग अवश्य करें!"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "इसे अपने प्रोग्राम के बीच में शामिल करें।"
+        },
+        "courseC_artist_prog22022": {
+          "slider": "आप अपना प्रोग्राम यहां धीमा कर सकते हैं।"
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको दिखाएंगे कि दूसरे पाठ में उनका उपयोग कैसे करना है।"
+        },
+        "courseC_collector_prog72022": {
+          "courseC_collector_prog7_1": "यदि आपको जरूरत हो तो आप टूलबॉक्स में से और ब्लॉक्स ले सकते हैं!"
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "कद्दू पर नंबर चार आपको बताता है कि लेने के लिए चार कद्दू उपलब्ध हैं।"
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "ये ब्लॉक्स लॉक हैं और इन्हें मिटाया नहीं जा सकता!"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "अपने वर्कस्पेस में टूलबॉक्स से ब्लॉक्स खींचें।"
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "courseC_maze_programming3_3": "ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseC_maze_programming52022": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseC_maze_programming72022": {
+          "courseC_maze_programming7_1": "यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।",
+          "courseC_maze_programming7_2": "ये ब्लॉक्स पत्थर से बने हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "इसपहेलीमेंआपकेपासइनब्लॉक्समेंसेकेवलएकब्लॉकउपलब्धहै।"
+        },
+        "courseD_artist_nestedLoops1a2022": {
+          "courseD_artist_nestedLoops1a_1": "इस पहेली को सही करने के लिए आपको रंगों का उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग` ब्लॉक इसे आसान बनाता है!"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "यादरखें,यहदेखनेकेलिएजांचेंकिक्याप्रत्येकबादलमेंफ्लोअरहैयानहीं।आपकोहनीकॉमकीजांचकरनेकीज़रूरतनहींहै।"
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "एक फूल (या मधु के छत्ते) से सारा मधुरस (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।"
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "अपने कोड में एक बार में एक ब्लॉक चलने का प्रयास करें।"
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "इस पहेली को हल करने के लिए आपको `जब आगे रास्ता हो` ब्लॉक का उपयोग करने की जरूरत होगी।"
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseD_maze_intro5a2022": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "stone_block_2": "स्लेटी ब्लॉक्स को फेंका नहीं जा सकता।"
+        },
+        "courseD_maze_ramp52022": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseE_aboutme_22022": {
+          "": "अपने प्रोजेक्ट में नए कॉस्टयूम शामिल करने के लिए यहां क्लिक करें!"
+        },
+        "courseE_artist_functions22022": {
+          "courseD_artist_functions2_1": "जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?"
+        },
+        "courseE_artist_functions8a2022": {
+          "courseD_artist_functions8_1": "फंक्शन बनाने के लिए आपके ब्लॉक्स, टूलबॉक्स में इस लेबल के अंतर्गत मूव किए गए हैं।"
+        },
+        "courseE_artist_functions_challenge12022": {
+          "courseE_artist_functions_challenge1_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge1_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_functions_challenge22022": {
+          "courseE_artist_functions_challenge2_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge2_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से ब्लॉक्स हैं।"
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions1a2022": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions2b2022": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_artist_for12022": {
+          "courseF_artist_for1_1": "आपके कोड के लिए और जगह बनाने के लिए टूलबॉक्स \"श्रेणी\" मोड में है।  `फॉर` लूप्स यहां स्थित हैं।"
+        },
+        "courseF_bee_for42022": {
+          "courseF_bee_for4_1": "आप `फ़ॉर` लूप यहां पाएंगे!"
+        },
+        "courseF_bee_for92022": {
+          "courseF_bee_for9_1": "आप `गणित` ब्लॉक यहां पाएंगे।"
+        },
+        "courseF_bee_variables_1a2022": {
+          "courseF_bee_functions_1_2018_1": "आप अपने वेरिएबल्स यहां नीचे पा सकते हैं!"
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "जब को जिस समय में बदलने का प्रयास करें।"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "यहां नए ब्लॉक हैं!"
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "यहां पाए जाने वाले नए इवेंट ब्लॉक का उपयोग करें।"
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "यह ब्लॉक गलत क्रम में है।"
+        },
+        "courseF_events_predict_-2022-2": {
+          "behaviors_edit": "यह देखने के लिए यहां क्लिक करें कि यह व्यवहार कैसे काम करता है।"
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "इवेंट्स श्रेणी खोलने के लिए यहां क्लिक करें।"
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "इस बिंदु के नीचे दिए कोड को ध्यान से देखें। "
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "व्यवहार श्रेणी खोलने के लिए यहां क्लिक करें।"
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "स्प्राइट्स श्रेणी खोलने के लिए यहां क्लिक करें"
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "स्थान श्रेणी खोलने के लिए यहां क्लिक करें।"
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "यहां नया ब्लॉक ढूंढ़ें।"
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "यहां नया ब्लॉक ढूंढ़ें!"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "जब आपने सवाल का जवाब दिया तो क्या पृष्ठभूमि का रंग बदला?  यदि हां, तो 'खत्म करें' को दबाएं। यदि नहीं, तो 'रीसेट करें' को दबाएं, अपना कोड बदलें और दुबारा 'चलाएं' को दबाएं।"
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "क्या आपने पूरा कर लिया है? यदि हां, तो 'खत्म करें' पर क्लिक करें। यदि नहीं, तो 'रीसेट करें' पर क्लिक करें, अपना कोड बदलें, और दुबारा 'चलाएं' पर क्लिक करें।"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "title_block": "यहां दो नए ब्लॉक्स ढूंढ़ें!",
+          "text_answer_finish": "क्या शीर्षक स्क्रीन 3 सेकंड के लिए दिखाई गई? यदि हां, तो 'खत्म करें' पर क्लिक करें। यदि नहीं, तो 'रीसेट करें' पर क्लिक करें, अपना कोड बदलें और दुबारा 'चलाएं' पर क्लिक करें।"
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "यहां नया ब्लॉक ढूंढ़ें!"
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "इवेंट्स श्रेणी खोलने के लिए यहां क्लिक करें।"
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "यहां प्रिंट ब्लॉक पाएं!",
+          "text_print_finish": "क्या आपका संदेश ऊपर प्रिंट हुआ था? यदि हां, तो 'खत्म करें' को दबाएं। यदि नहीं, तो 'रीसेट करें' को दबाएं, अपना कोड बदलें और दुबारा 'चलाएं' को दबाएं।"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "यहां अनुबोध ब्लॉक पाएं!"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "इस बिंदु के नीचे दिए कोड को ध्यान से देखें। "
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "इस बिंदु के नीचे दिए कोड को ध्यान से देखें। "
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को एक साथ काटने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "यह ब्लॉक अपने इवेंट में शामिल करें।"
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "अपने प्रोजेक्ट में नए कॉस्टयूम शामिल करने के लिए यहां क्लिक करें!"
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "स्प्राइट के बोलने के लिए इस ब्लॉक का इस्तेमाल करें.",
+          "hello_world_make_sprite": "स्प्राइट बनाने के लिए इस ब्लॉक का इस्तेमाल करें"
+        },
+        "express_maze_debugging92022": {
+          "express_maze_debugging9_2019_1": "अपने वर्कस्पेस में टूलबॉक्स से ब्लॉक्स खींचें।"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "नए बैकग्राउंड सेट करने के लिए इस ब्लॉक  का इस्तेमाल करें"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "नए बैकग्राउंड सेट करने के लिए इस ब्लॉक  का इस्तेमाल करें"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "नीचे दिए गए स्वभावों वाले इस ब्लॉक का इस्तेमाल करें"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "नीचे दिए गए स्वभावों वाले इस ब्लॉक का इस्तेमाल करें"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "कोड रन करने के लिए यहाँ क्लिक करें."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "यह ब्लॉक अपने इवेंट में शामिल करें।"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "यह ब्लॉक अपने इवेंट में शामिल करें।"
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "अपने प्रोजेक्ट में नए कॉस्टयूम शामिल करने के लिए यहां क्लिक करें!"
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "अपने प्रोजेक्ट में नए कॉस्टयूम शामिल करने के लिए यहां क्लिक करें!"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "पिन"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "पिन"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "पिन"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "पिन"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "स्प्राइट के बोलने के लिए इस ब्लॉक का इस्तेमाल करें.",
+          "hello_world_make_sprite": "स्प्राइट बनाने के लिए इस ब्लॉक का इस्तेमाल करें"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "स्प्राइट के बोलने के लिए इस ब्लॉक का इस्तेमाल करें.",
+          "hello_world_make_sprite": "स्प्राइट बनाने के लिए इस ब्लॉक का इस्तेमाल करें"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "नई ब्लॉक",
+          "hello_world_new_block": "नई ब्लॉक"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "नई ब्लॉक",
+          "hello_world_new_block": "नई ब्लॉक"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "नई ब्लॉक"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "सबसे पहले यहां क्लिक करें!"
         }
       }
     }

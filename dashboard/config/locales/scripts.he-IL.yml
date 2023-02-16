@@ -1164,6 +1164,9 @@ he:
               display_name: סקירה
         dance-2019:
           title: מסיבת ריקודים (2019)
+          description_short: קוד מסיבת ריקודים לחלוק עם חברים ובני משפחה. אמנים משתתפים
+            ביונסה, הארי סטיילס, ליזו, ליל נס X, סלינה גומז, מוסיקה מתוך "Encanto"
+            של דיסני ועוד!
           description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         k5-onlinepd-2019:
@@ -1750,6 +1753,8 @@ he:
           title: תחרות איות
         outbreak-csc:
           title: התפרצות
+        ai-ethics-2021:
+          description_audience: כיתות ו-י"ב
         poem-art-2021:
           title: אומנות השירה
         hello-world-food-2021:
@@ -1956,5 +1961,123 @@ he:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
             lessonGroup-4:
               display_name: סקר
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: הרחבת איתור באגים אסינכרונית
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: מודול 2 עבודה אסינכרונית
         soccer:
           name: כדורגל
+          title: קודדו משחק כדורגל משלכם
+          description_short: צרו משחק כדורגל
+          description: צרו משחק כדורגל
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: חזרות
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: משתנים
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: בשביל לולאות
+        hello-world-space-2022:
+          title: 'שלום, עולם: שטח'
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: מה הצליל הזה?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: רשימות
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+            lessonGroup-3:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: פּרוֹיֶקט
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'

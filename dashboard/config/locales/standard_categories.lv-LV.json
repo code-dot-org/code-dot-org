@@ -1,0 +1,17 @@
+{
+  "lv-LV": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Algoritmiska domāšana"
+        },
+        "L": {
+          "description": "Valoda"
+        },
+        "F": {
+          "description": "Funkcijas"
+        }
+      }
+    }
+  }
+}

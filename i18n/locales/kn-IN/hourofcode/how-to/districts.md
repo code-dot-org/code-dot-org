@@ -37,6 +37,6 @@ title: Hour of Code How-To for Districts
 ತಂತ್ರಜ್ಞಾನ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಮತ್ತು ಸಾಫ್ಟ್‌ವೇರ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಎಂಬ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯುವ ಪಯಣದ ಮೊದಲ ಹೆಜ್ಜೆಯೇ ಅವರ್ ಆಪ್ ಕೋಡ್ ಆಗಿದೆ.
 
 - [ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಕಲಿಯುವುದನ್ನು]({{ urls/learn_beyond }}) ಮುಂದುವರಿಸಲು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪ್ರೋತ್ಸಾಹಿಸಿ.
-- ಅನುಭವ ಹೊಂದಿರುವ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಬೋಧಕರಿಂದ ಸೂಚನೆಯನ್ನು ಸ್ವೀಕರಿಸಲು 1 ದಿನದ, ಮುಖಾಮುಖಿ ಕಾರ್ಯಾಗಾರಕ್ಕೆ [ಹಾಜರಾಗಿ]({{ urls/professional_development_workshops }}). (ಅಮೆರಿಕದ ಬೋಧಕರಿಗೆ ಮಾತ್ರ)
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

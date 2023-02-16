@@ -9,12 +9,12 @@ title: How-to guide for Hour of Code volunteers
 
 ***
 
-## Why volunteer?
+## Per què fer-se voluntari?
 Check out some testimony from past volunteers:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- "M'ha ENCANTAT veure com d'entusiasmats aquests nens estaven. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "M'ha ENCANTAT veure com d'entusiasmats estaven aquests nens. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
 
 ## Anyone can volunteer
 ### Volunteers and speakers in tech:
@@ -40,7 +40,7 @@ Do you believe that learning computer science can open doors of opportunity for 
 ## Recruit your co-workers to volunteer
 Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
 
-## How to prepare
+## Com preparar-se
 - [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
 - Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).
@@ -55,13 +55,13 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 
 ### Sample agenda:
 
-| Hora          | Agenda item                                                                                                                                                                                                                                                                                                                                                  |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1-5 minutes   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                         |
-| 5-10 minutes  | Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>What or who inspired you?</li><li>How did you get interested in computer science?</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone.</li><br>Ask the students questions and leave time for Q&A.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul> |
-| 30-60 minutes | **Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.                  |
-| 1-3 minutes   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                              |
-| After         | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.                                          |
+| Hora          | Agenda item                                                                                                                                                                                                                                                                                                                                             |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-5 minutes   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                    |
+| 5-10 minutes  | Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>Què o qui us ha inspirat?</li><li>Com us heu interessat per les ciències informàtiques?</li><li>Heu tingut un mentor?</li><li>Share a story about how tech affects everyone.</li><br>Pregunteu als alumnes i deixeu temps per Q&A.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul> |
+| 30-60 minutes | **Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.             |
+| 1-3 minutes   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                         |
+| After         | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.                                     |
 
 ### After the Event:
 - Share your photos and stories with Code.org at giving@code.org.
@@ -71,19 +71,19 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 - And, check back in a month: Is the teacher interested in offering a computer science course? Share [resources and professional learning opportunities to help them do this](https://code.org/yourschool).
 
 ## How you get selected as a technical volunteer of guest speaker
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
-- Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+- Els professors poden cercar voluntaris al nostre [mapa de voluntaris](http://code.org/volunteer/local).
+- Intenteu crear un perfil el més complet possible per augmentar la possibilitat que un professor us esculli.
 - A teacher will contact you through this form (your email address will never be shared with the teacher). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
 ## Volunteering during the Hour of Code FAQ
 
 ### I haven't been contacted by a teacher yet. How can I still volunteer?
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+Intenteu cercar escoles locals i truqueu al director/professor/recepció i pregunteu com podeu ajudar.
 
-### How long do classroom visits last for?
+### Quina duració tenen les visites de l'aula?
 An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
 
-### What age group is the Hour of Code activity appropriate for?
+### Quin grup d'edat és apropiat per l'activitat d'Hora de Codi?
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 

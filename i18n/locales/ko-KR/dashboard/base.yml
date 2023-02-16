@@ -45,6 +45,7 @@ ko:
         personal_email_markdown: "개인 이메일 주소 [(만약 이메일 주소가 없다면 여기를 클릭하십시오)](%{url})"
         username: 'username'
         password: '비밀번호'
+        verified_teacher: '인증된 교사'
         password_confirmation: '비밀번호 재확인'
         current_password: '현재 비밀번호'
         locale: '언어'
@@ -379,6 +380,7 @@ ko:
       about: "소개"
       legal: "개인정보 보호 및 법률"
       legal_privacy: "개인정보보호 정책"
+      legal_cookie_notice: "쿠키 방침"
       legal_tos: "이용 약관"
     user:
       classroom: '선생님 홈페이지'
@@ -554,6 +556,7 @@ ko:
     choose_next_course: "아래의 Code Studio 과정을 해보세요."
     print_certificate: "인증서 인쇄"
   certificate_sponsor_message: "%{sponsor_name}가 학습을 후원하기 위해 선물을 했습니다."
+  certificate_hour_of_code: "Hour of Code"
   move_students:
     new_section_dne: "죄송합니다. 섹션 %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
     section_code_cant_be_current_section: "현재 섹션과 새로운 섹션은 동일할 수 없습니다."
@@ -606,6 +609,7 @@ ko:
     try_hour_of_code: 'Hour of Code 를 해보세요!'
     store: '스토어'
     cookie_notice: '쿠키 방침'
+    view_code: '코드 보기'
   reference_area:
     title: '도움이 필요하신가요?'
     subtitle: '동영상 및 힌트'
@@ -668,29 +672,17 @@ ko:
       body_short: "앱을 디자인하고, 블록이나 자바스크립트를 이용해 실제로 움직이도록 해보세요. 그리고 여러분들이 만든 앱을 바로 공유할 수 있습니다."
       audience: '13세 이상'
       cta: '방법 알아보기'
-    dance:
-      title: '댄스 파티'
+    aquatic:
+      title: "마인크래프트"
     dance-2019:
       title: '댄스 파티'
-    hello-world:
-      title: '헬로우 월드'
-      body: '4개의 재미있는 주제를 골라 당신이 만든 세계에서 상호적인 캐릭터를 코딩하세요.'
-    poem-art:
-      title: '시학'
-      body: '자신을 표현해보세요! 코드를 사용해 움직이는 시를 만드세요.'
-    hoc:
-      title: '고전 미로게임'
-      body: '컴퓨터과학(CS, 정보과학)의 기초/개념/원리들을 경험 해보세요. 수 백 만 가지를 가능하게 합니다.'
+    dance:
+      title: '댄스 파티'
     flappy:
       title: '플래피 코드'
       body: '10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.'
-    20-hour:
-      title: '빠른 과정'
-      body: '이 20시간 과정은 컴퓨터과학(정보과학) 에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.'
-      body_short: '2-4 과정의 속진 과정에서 기본적인 컴퓨터 과학을 알아보십시오.'
-    hoc2014:
-      try_new_tutorial: '새로운(beta) Hour of Code 튜토리얼 해보기'
-      try_frozen: '프로즌 왕국에서온 안나와 엘사와 함께하는 예술가 퍼즐'
+    frozen:
+      title: "겨울왕국"
     gallery:
       title: "갤러리"
       body: "다른 사람이 만든 앱과 이미지 갤러리 보기"
@@ -699,18 +691,21 @@ ko:
       body: "게임 랩은 서로 상호 작용하는 객체와 캐릭터로 간단한 애니메이션과 게임을 만들 수 있는 프로그래밍 환경입니다."
       audience: "13세 이상"
       cta: "방법 알아보기"
+    hello-world:
+      title: '헬로우 월드'
+      body: '4개의 재미있는 주제를 골라 당신이 만든 세계에서 상호 교류하는 캐릭터를 코딩하세요.'
+    hero:
+      title: "마인크래프트"
+      body: "마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요."
     hoc-encryption:
       title: "간단한 암호화"
       body: "학생은 암호화된 메시지를 만들고 푸는 기법을 배울 것입니다. "
-    weblab:
-      title: "웹 랩 (베타)"
-      body: "웹 랩은 HTML과 CSS를 사용해 간단한 웹 페이지를 만들 수 있는 프로그래밍 환경입니다. 웹 페이지를 설계하고 수 초 내에 사이트를 공유하세요."
-      audience: "13세 이상"
-      cta: "방법 알아보기"
-    frozen:
-      title: "겨울왕국"
-    starwars:
-      title: "스타워즈"
+    hoc:
+      title: '고전 미로게임'
+      body: '컴퓨터과학(CS, 정보과학)의 기초/개념/원리들을 경험 해보세요. 수 백 만 가지를 가능하게 합니다.'
+    hoc2014:
+      try_new_tutorial: '새로운(beta) Hour of Code 튜토리얼 해보기'
+      try_frozen: '프로즌 왕국에서온 안나와 엘사와 함께하는 예술가 퍼즐'
     infinity:
       title: "무한 Play Lab"
       body: "Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요."
@@ -720,30 +715,39 @@ ko:
     minecraft2016:
       title: "마인크래프트"
       body: "Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요."
-    aquatic:
-      title: "마인크래프트"
-    hero:
-      title: "마인크래프트"
-      body: "마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요."
+    poem-art:
+      title: '시학'
+      body: '자신을 표현해보세요! 코드를 사용해 움직이는 시를 만드세요.'
     sports:
       title: "스포츠"
       body: "농구 게임을 만들거나 또는 스포츠를 혼합하고 매치시키세요"
+    starwars:
+      title: "스타워즈"
     text-compression:
       title: "텍스트 압축"
       body: "이 레슨에서 학생은 텍스트 압축 위젯을 사용하여 패턴을 기호로 대신하여 텍스트를 압축할 것입니다."
-    unplugged:
-      title: "언플러그드 레슨"
-      audience: "4세 이상"
-      body: "수업에서 활용할 수 있는 언플러그드 활동을 준비했습니다. 교실에 컴퓨터들이 없어도 컴퓨터과학의 기초/개념/원리들을 교육할 수 있습니다! 이 언플러그드레슨들은 별도 과정 또는 다른 컴퓨터과학 과정의 추가 과정으로 사용해보세요."
-      body_short: "컴퓨터가 없다면, 이 언플러그드 수업을 시도해보세요!"
-    unplugged_conditionals:
-      title: "조건"
-      body: "카드 한 벌을 사용하여 이 \"언플러그\" 활동에서 알고리즘과 조건문에 대해 배워보세요."
+    weblab:
+      title: "웹 랩 (베타)"
+      body: "웹 랩은 HTML과 CSS를 사용해 간단한 웹 페이지를 만들 수 있는 프로그래밍 환경입니다. 웹 페이지를 설계하고 수 초 내에 사이트를 공유하세요."
+      audience: "13세 이상"
+      cta: "방법 알아보기"
     widgets:
       title: "위젯"
       body: "학생은 이러한 디지털 툴을 사용하여 실습형 컴퓨터 과학 원리 과정에서의 개념을 탐구할 수 있습니다. 위젯을 이용하거나, 학급을 위한 단일 개념 레슨을 만들어 보십시오."
       audience: "14세 이상"
       cta: "방법 알아보기"
+    unplugged_conditionals:
+      title: "조건"
+      body: "카드 한 벌을 사용하여 이 \"언플러그\" 활동에서 알고리즘과 조건문에 대해 배워보세요."
+    unplugged:
+      title: "언플러그드 레슨"
+      audience: "4세 이상"
+      body: "수업에서 활용할 수 있는 언플러그드 활동을 준비했습니다. 교실에 컴퓨터들이 없어도 컴퓨터과학의 기초/개념/원리들을 교육할 수 있습니다! 이 언플러그드레슨들은 별도 과정 또는 다른 컴퓨터과학 과정의 추가 과정으로 사용해보세요."
+      body_short: "컴퓨터가 없다면, 이 언플러그드 수업을 시도해보세요!"
+    20-hour:
+      title: '빠른 과정'
+      body: '이 20시간 과정은 컴퓨터과학(정보과학) 에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.'
+      body_short: '2-4 과정의 속진 과정에서 기본적인 컴퓨터 과학을 알아보십시오.'
   landing:
     prerelease_tutorial: "이 튜토리얼은 **베타** 테스트 중입니다. 피드백을 받았고 개선이 이루어지기 때문에 수정을 해야 할 대상입니다."
     report_bug: "버그(오류) 신고하기"
@@ -1053,6 +1057,7 @@ ko:
         israel: '이스라엘'
         malaysia: '말레이시아'
         mexico: '멕시코'
+        paraguay: '파라과이'
         thailand: '태국'
         uzbekistan: '우즈베키스탄'
       ages:
@@ -1153,3 +1158,12 @@ ko:
   unit_prefix: "단원 %{n}"
   code_org_logo_alt: "Cord.org 홈"
   teacher_feedback: "교사 피드백"
+  lesson_lock:
+    error:
+      no_updates: "실행할 업데이트 없음"
+      missing_params: "사용자와 레벨, 단위 ID를 제공해야 합니다"
+      cannot_view_locked_answers: "잠겨있는 동안에는 답을 볼 수 없습니다"
+      forbidden: "사용자는 학생의 잠금 상태를 업데이트할 수 없습니다"
+  reset_predict_progress_button: "답 삭제"
+  pixelation:
+    binary: "2진"

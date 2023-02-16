@@ -16,13 +16,39 @@
         "program/poem-art/2021": {
           "definition": "దేనిలోకైనా కోడ్ చేయబడిన స్టెప్స్ యొక్క సీరీస్‌ను ఒక మెషిన్ ద్వారా రన్ చేయవచ్చు."
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "copyright/coursee/2022": {
+          "word": "కాపీరైట్"
+        },
+        "drop/courseb/2022": {
+          "word": "డ్రాప్"
+        },
+        "drop/pre-express/2022": {
+          "word": "డ్రాప్"
+        },
+        "drop/coursea/2022": {
+          "word": "డ్రాప్"
+        },
         "copyright/csd/2022": {
           "word": "కాపీరైట్"
         },
         "code/poem-art/unversioned": {
+          "word": "",
           "definition": "(v) కంప్యూటర్ కోసం సూచనలు రాయడానికి."
         },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "program/poem-art/unversioned": {
+          "word": "",
           "definition": "దేనిలోకైనా కోడ్ చేయబడిన స్టెప్స్ యొక్క సీరీస్‌ను ఒక మెషిన్ ద్వారా రన్ చేయవచ్చు."
         },
         "mood/poem-art/unversioned": {

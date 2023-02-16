@@ -39,6 +39,7 @@ pt:
         personal_email_markdown: E-mail pessoal [(clique aqui caso não tenha um e-mail)](%{url})
         username: Nome de utilizador
         password: Palavra-passe
+        verified_teacher: Professor verificado
         password_confirmation: Confirmação da palavra-passe
         current_password: Palavra-passe atual
         locale: Idioma
@@ -651,6 +652,7 @@ pt:
     choose_next_course: Experimenta um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
   certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_hour_of_code: Hora do Código
   move_students:
     new_section_dne: Lamentamos, mas a secção %{new_section_code} não existe. Por
       favor insere um código de secção diferente.
@@ -800,33 +802,18 @@ pt:
         funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.
       audience: Maiores de 13 anos
       cta: Saiba como
-    dance:
-      title: Festa dançante
+    aquatic:
+      title: Minecraft
     dance-2019:
       title: Festa dançante
-    hello-world:
-      title: Olá Mundo
-    poem-art:
-      title: Arte poética
-    hoc:
-      title: Labirinto clássico
-      body: Explora as noções básicas da Ciência da Computação. Milhões de pessoas
-        já experimentaram.
+    dance:
+      title: Festa dançante
     flappy:
       title: Flappy Bird
       body: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso
         tutorial sobre o Código do Flappy bird!
-    20-hour:
-      title: Curso acelerado
-      body: Este curso de 20 horas apresenta o informática de núcleo e conceitos de
-        programação. O curso é projetado para uso em salas de aula para os graus K-8,
-        mas é divertido de aprender em todos os tempos.
-      body_short: Aprende as bases da Ciência da Computação com a versão acelerada
-        dos cursos 2 a 4.
-    hoc2014:
-      try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
-        beta
-      try_frozen: O Artista com Anna e Elsa, do filme Frozen
+    frozen:
+      title: Frozen
     gallery:
       title: Galeria
       body: Veja uma galeria de aplicativos e imagens artísticas criadas por nossos
@@ -838,20 +825,23 @@ pt:
         os outros.
       audience: Maiores de 13 anos
       cta: Saiba como
+    hello-world:
+      title: Olá Mundo
+    hero:
+      title: Minecraft
+      body: O Minecraft está de volta para a Hora do Código com uma nova atividade!
+        Viaje através de Minecraft com código.
     hoc-encryption:
       title: Criptografia simples
       body: Os alunos vão aprender técnicas para criar e quebrar mensagens encriptadas.
-    weblab:
-      title: Laboratório Web (beta)
-      body: O Laboratório Web é um ambiente de programação onde você pode criar páginas
-        web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site
-        em segundos.
-      audience: Maiores de 13 anos
-      cta: Saiba como
-    frozen:
-      title: Frozen
-    starwars:
-      title: Star Wars
+    hoc:
+      title: Labirinto clássico
+      body: Explora as noções básicas da Ciência da Computação. Milhões de pessoas
+        já experimentaram.
+    hoc2014:
+      try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
+        beta
+      try_frozen: O Artista com Anna e Elsa, do filme Frozen
     infinity:
       title: Laboratório infinito
       body: Use o Laboratório para criar uma história ou um jogo usando personagens
@@ -863,19 +853,36 @@ pt:
       title: Minecraft
       body: Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas,
         ovelhas, Creepers, mortos-vivos e muito mais.
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
-      body: O Minecraft está de volta para a Hora do Código com uma nova atividade!
-        Viaje através de Minecraft com código.
+    poem-art:
+      title: Arte poética
     sports:
       title: Esportes
       body: Faça um jogo de basquete ou misture os esportes.
+    starwars:
+      title: Star Wars
     text-compression:
       title: Compressão de texto
       body: Nesta lição, os alunos irão usar a Ferramenta de Compressão de Texto para
         comprimir texto substituindo padrões por símbolos.
+    weblab:
+      title: Laboratório Web (beta)
+      body: O Laboratório Web é um ambiente de programação onde você pode criar páginas
+        web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site
+        em segundos.
+      audience: Maiores de 13 anos
+      cta: Saiba como
+    widgets:
+      title: Widgets
+      body: Os alunos podem colocar as mãos na massa para explorar os conceitos do
+        nosso curso de Princípios da Ciência da Computação utilizando essas ferramentas
+        digitais. Eles podem usar os "widgets" como bem entenderem ou criar uma lição
+        envolvendo um único conceito para suas aulas.
+      audience: Maiores de 14 anos
+      cta: Saiba como
+    unplugged_conditionals:
+      title: Condicionais
+      body: Aprenda sobre algoritmos e declarações condicionais nesta atividade "off-line"
+        usando um baralho de cartas.
     unplugged:
       title: Aulas off-line
       audience: A partir de 4 anos
@@ -886,18 +893,13 @@ pt:
         ciência da computação.
       body_short: Se não tiver computadores, teste essas lições off-line em sua sala
         de aula.
-    unplugged_conditionals:
-      title: Condicionais
-      body: Aprenda sobre algoritmos e declarações condicionais nesta atividade "off-line"
-        usando um baralho de cartas.
-    widgets:
-      title: Widgets
-      body: Os alunos podem colocar as mãos na massa para explorar os conceitos do
-        nosso curso de Princípios da Ciência da Computação utilizando essas ferramentas
-        digitais. Eles podem usar os "widgets" como bem entenderem ou criar uma lição
-        envolvendo um único conceito para suas aulas.
-      audience: Maiores de 14 anos
-      cta: Saiba como
+    20-hour:
+      title: Curso acelerado
+      body: Este curso de 20 horas apresenta o informática de núcleo e conceitos de
+        programação. O curso é projetado para uso em salas de aula para os graus K-8,
+        mas é divertido de aprender em todos os tempos.
+      body_short: Aprende as bases da Ciência da Computação com a versão acelerada
+        dos cursos 2 a 4.
   landing:
     prerelease_tutorial: Esse tutorial está em **beta**. Ele ainda está sujeito a
       revisões, conforme são recebidos feedbacks e são feitas melhorias.
@@ -1415,4 +1417,8 @@ pt:
     not_now: Agora não
   behaviors:
     this_sprite: este personagem
+  unit_prefix: 'Unidade: %{n}'
+  code_org_logo_alt: Início - Code.org
   teacher_feedback: Feedback do Professor
+  pixelation:
+    binary: Binário

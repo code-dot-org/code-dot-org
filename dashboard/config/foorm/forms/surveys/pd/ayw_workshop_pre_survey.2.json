@@ -10,6 +10,11 @@
           "html": "<h2>{workshop_course} Workshop Pre-Survey</h2>\n<p><strong>Welcome back!</strong></p>\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about 5 minutes to complete. </p>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
         },
         {
+          "type": "html",
+          "name": "comment",
+          "Natalia_comment": "******NOTE: This is RED's current version - Sept 7, 2022 ******"
+        },
+        {
           "type": "radiogroup",
           "name": "planning_to_attend",
           "title": " Are you planning to attend this upcoming workshop?",
@@ -27,6 +32,12 @@
               "text": "Unsure / Don't Know Yet"
             }
           ]
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/ayw_csa",
+          "library_version": 0,
+          "name": "csa_most_recent_unit_panel"
         },
         {
           "type": "panel",
@@ -113,6 +124,10 @@
                 {
                   "value": "unit_6",
                   "text": "Unit 6 - Physical Computing"
+                },
+                {
+                  "value": "unit_7",
+                  "text": "Unit 7 - AI and Machine Learning"
                 },
                 {
                   "value": "havent_started",
@@ -1180,13 +1195,105 @@
                   "text": "18. CS Discoveries Post Course survey"
                 }
               ]
+            },
+            {
+              "type": "dropdown",
+              "name": "csd_unit_7_lessons",
+              "visibleIf": "{csd_unit} = 'unit_7'",
+              "title": "Which lesson from unit {csd_unit} did you most recently complete. (If not sure, make a best guess)",
+              "choices": [
+                {
+                  "value": "1_Introduction_Machine_Lerning",
+                  "text": "1. Introduction to Machine Learning"
+                },
+                {
+                  "value": "2_Types_Machine_Learning",
+                  "text": "2. Types of Machine Learning"
+                },
+                {
+                  "value": "3_Innovations_AI",
+                  "text": "3. Innovations in AI"
+                },
+                {
+                  "value": "4_Patterns_in_Data",
+                  "text": "4. Patterns in Data"
+                },
+                {
+                  "value": "5_Board_Events",
+                  "text": "5. Board Events"
+                },
+                {
+                  "value": "6_Introduction_AI_Lab",
+                  "text": "6. Introduction to AI Lab"
+                },
+                {
+                  "value": "7_Importing_Models_App_Lab",
+                  "text": "7. Importing Models in App Lab"
+                },
+                {
+                  "value": "8_Model_Cards",
+                  "text": "8. Model Cards"
+                },
+                {
+                  "value": "9_Saving_Models_AI_Lab",
+                  "text": "9. Saving Models in AI Lab"
+                },
+                {
+                  "value": "10_Model_Cards_App_Lab",
+                  "text": "10. Model Cards in App Lab"
+                },
+                {
+                  "value": "11_Numerical_Models",
+                  "text": "11. Numerical Models"
+                },
+                {
+                  "value": "12_Numerical_Data_AI_Lab",
+                  "text": "12. Numerical Data in AI Lab"
+                },
+                {
+                  "value": "13_Customizing_Apps",
+                  "text": "13. Customizing Apps"
+                },
+                {
+                  "value": "14_AI_Code_of_Ethics",
+                  "text": "14. AI Code of Ethics"
+                },
+                {
+                  "value": "15_Project_Make_a_Machine_Learning_App",
+                  "text": "15. Project: Make a Machine Learning App"
+                },
+                {
+                  "value": "16_Issue_Statements",
+                  "text": "16. Issue Statements"
+                },
+                {
+                  "value": "17_Survey_Planning",
+                  "text": "17. Survey Planning"
+                },
+                {
+                  "value": "18_Survey_Data_in_AI_Lab",
+                  "text": "18. Survey Data in AI Lab"
+                },
+                {
+                  "value": "19_Project_Make_a_Machine_Learning_App",
+                  "text": "19. Project: Make a Machine Learning App"
+                },
+                {
+                  "value": "20_Troubleshooting_Models",
+                  "text": "20. Troubleshooting Models"
+                },
+                {
+                  "value": "21_Creating_an_App",
+                  "text": "21.  Creating an App"
+                }
+              ]
             }
           ]
         },
         {
           "type": "radiogroup",
           "name": "previous_content_effective",
-          "title": "Was the content covered in the previous workshop effective in preparing you to teach the content you covered in your {workshop_course} class prior to this PD workshop?",
+          "title": "Was the content covered in the previous workshop effective in preparing you to teach your {workshop_course} class prior to this PD workshop?",
           "choices": [
             {
               "value": "1",
@@ -1217,6 +1324,12 @@
               "text": "Very ineffective"
             }
           ]
+        },
+        {
+          "type": "comment",
+          "name": "ineffective_prep_comment",
+          "visibleIf": "{previous_content_effective} > 4",
+          "title": "What units and/or content did you need more preparation with in order to teach your {workshop_course} class more effectively?"
         },
         {
           "type": "matrix",
@@ -1358,6 +1471,10 @@
                   "text": "Unit 6 - Physical Computing"
                 },
                 {
+                  "value": "unit_7",
+                  "text": "Unit 7 - AI and Machine Learning"
+                },
+                {
                   "value": "not_sure",
                   "text": "Unsure / on the fence about some units"
                 },
@@ -1371,6 +1488,21 @@
           "visibleIf": "{workshop_course} = 'CS Discoveries'",
           "title": "Your plans for teaching CS Discoveries",
           "description": "We recognize that plans change all the time. We're interested in knowing, at this point in time, what your plans are for teaching CS Discoveries.  "
+        },
+        {
+          "type": "radiogroup",
+          "name": "can_contact",
+          "title": "Would you be open to code.org reaching out to you to gather additional feedback about our professional learning programs?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
         },
         {
           "type": "html",

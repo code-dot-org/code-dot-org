@@ -11,7 +11,8 @@
           "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=3",
           "type": "feedback",
           "visibility": "Teacher-only",
-          "buttonText": "Learn More"
+          "buttonText": "Learn More",
+          "key": "cf2c84fe-cbbb-4e69-8650-5c0dbd937855"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -29,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 00:25:16 UTC",
+    "serialized_at": "2022-12-06 15:28:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -976,7 +977,7 @@
       "key": "63a85b8b-4764-41c2-ac27-7b556c8b34c3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 2. \n\n**Levels 1-5:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 1. \n\n**Levels 1-5:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
       },
       "seeding_key": {
         "activity_section.key": "63a85b8b-4764-41c2-ac27-7b556c8b34c3",
@@ -1056,7 +1057,7 @@
       "key": "5a8a5afe-ace3-4092-a972-eab5e1bc215c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 6-10:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 7. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 6-10:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 6. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
         "name": "App Investigation",
         "tips": [
           {
@@ -4431,7 +4432,7 @@
     {
       "key": "83010a59-0e11-47a9-a4ca-124c18fb013c",
       "properties": {
-        "description": "Use the speed slider, break points, and documentation as part of the debugging process"
+        "description": "Use the speed slider, error messages, and documentation as part of the debugging process"
       },
       "seeding_key": {
         "lesson.key": "Debugging",

@@ -91,6 +91,7 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
+    start_html
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -199,7 +200,7 @@ class Level < ApplicationRecord
 
   def available_callouts(script_level)
     if custom?
-      unless callout_json.blank?
+      if callout_json.present?
         return JSON.parse(callout_json).map do |callout_definition|
           i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
           callout_text = (should_localize? &&
@@ -380,7 +381,7 @@ class Level < ApplicationRecord
 
   def self.where_we_want_to_calculate_ideal_level_source
     where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-    where('ideal_level_source_id is null').
+    where(ideal_level_source_id: nil).
     to_a.reject {|level| level.try(:free_play)}
   end
 
@@ -492,7 +493,7 @@ class Level < ApplicationRecord
   end
 
   def self.cache_find(id)
-    Script.cache_find_level(id)
+    Unit.cache_find_level(id)
   end
 
   def icon
@@ -754,11 +755,11 @@ class Level < ApplicationRecord
       ],
       scriptOptions: [
         ['All scripts', ''],
-        *Script.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
+        *Unit.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
       ],
       ownerOptions: [
         ['Any owner', ''],
-        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| !a[0].blank? && !a[1].blank?}.sort_by {|a| a[0]}
+        *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| a[0].present? && a[1].present?}.sort_by {|a| a[0]}
       ]
     }
   end

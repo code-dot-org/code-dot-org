@@ -5725,7 +5725,7 @@ ja-JP:
 
           > **注**：学習計画を立てるのに役立つ推奨時間は上記のとおりです。 これまでに持っている知識、興味、能力に応じて、特定のステージで費やす時間が長かったり短かったりする場合がありますが、このコースは完全に自分のペースで進められます。いつでもコースを離れたり、コースに戻ったり、任意のステージやレベルを再訪したりすることができます。
       OPD-K5 Participation:
-        markdown: |+
+        markdown: |-
           ＃はじめに > 参加の計画
 
           開始前に、特に、これが初めてのオンラインコースの受講であれば、学習のニーズ、目標、およびオンラインの自習型環境での学習という独特な経験について、じっくりと考えてください！
@@ -5737,13 +5737,13 @@ ja-JP:
           ## つながる
 
           学習全体を通じてモチベーションと集中力を維持する1つの方法は、<a href="http://forum.code.org/c/plc" target="_new">専門学習コミュニティ（PLC）フォーラム</a>に積極的に参加することです。
-          まず、<ahref = "http://forum.code.org/t/welcome-please-introduce-yourself/410" target = "_new">「自己紹介」スレッド</a>で自己紹介をしましょう。コース全体を通じてフォーラムを使用し、内容に取り組んでいる他のユーザーと非同期で考え方や重要点、質問を分かち合えます。
+          まず、<a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">「自己紹介」スレッド</a>で自己紹介をしましょう。コース全体を通じてフォーラムを使用し、内容に取り組んでいる他のユーザーと非同期で考え方や重要点、質問を分かち合えます。
 
           <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank" rel="noopener noreferrer">今すぐ自己紹介をする>></button></a><br>
 
           ## 必要なときに助けを得る
 
-          コース中に行き詰まった場合はいつでも、[support.code.org]（http://support.code.org）にアクセスして、[コミュニティフォーラム]（https://support.code.org/hc/communities/public/topics）をチェックしてください。 / hc / communitys / public / topics）。おそらく、ここであなたの疑問に対する答えが見つかるでしょう。答えが見つからない場合や、まだ困ったことがある場合は、[teacher@code.org]（mailto:teacher@code.org）までメールご連絡ください。Code.orgのスタッフが出来る限り迅速にお答えします。
+          コース中に行き詰まった場合はいつでも、[support.code.org](http://support.code.org）にアクセスして、[コミュニティフォーラム]（https://support.code.org/hc/communities/public/topics）をチェックしてください。 / hc / communitys / public / topics）。おそらく、ここであなたの疑問に対する答えが見つかるでしょう。答えが見つからない場合や、まだ困ったことがある場合は、[teacher@code.org]（mailto:teacher@code.org）までメールご連絡ください。Code.orgのスタッフが出来る限り迅速にお答えします。
 
           ## 仲間と組む！
 
@@ -5763,8 +5763,9 @@ ja-JP:
 
           ここで少し時間を取って、このオンラインコースをいつどのように完了するかを検討して、この経験から、確実に最大限の成果が得られるようにしてください。望ましい計画が建てられたら、ステージ1をさらに深く探っていきましょう。
 
+          <a href="http://forum.code.org/c/plc" target="_new">
       OPD-K5 Participation_dani:
-        markdown: |+
+        markdown: |-
           ＃はじめに > 参加の計画
 
           開始前に、特に、これが初めてのオンラインコースの受講であれば、学習のニーズ、目標、およびオンラインの自習型環境での学習という独特な経験について、じっくりと考えてください！
@@ -5776,13 +5777,13 @@ ja-JP:
           ## つながる
 
           学習全体を通じてモチベーションと集中力を維持する1つの方法は、<a href="http://forum.code.org/c/plc" target="_new">専門学習コミュニティ（PLC）フォーラム</a>に積極的に参加することです。
-          まず、<ahref = "http://forum.code.org/t/welcome-please-introduce-yourself/410" target = "_new">「自己紹介」スレッド</a>で自己紹介をしましょう。コース全体を通じてフォーラムを使用し、内容に取り組んでいる他のユーザーと非同期で考え方や重要点、質問を分かち合えます。
+          まず、<a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">「自己紹介」スレッド</a>で自己紹介をしましょう。コース全体を通じてフォーラムを使用し、内容に取り組んでいる他のユーザーと非同期で考え方や重要点、質問を分かち合えます。
 
           <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank" rel="noopener noreferrer">今すぐ自己紹介をする>></button></a><br>
 
           ## 必要なときに助けを得る
 
-          コース中に行き詰まった場合はいつでも、[support.code.org]（http://support.code.org）にアクセスして、[コミュニティフォーラム]（https://support.code.org/hc/communities/public/topics）をチェックしてください。 / hc / communitys / public / topics）。おそらく、ここであなたの疑問に対する答えが見つかるでしょう。答えが見つからない場合や、まだ困ったことがある場合は、[teacher@code.org]（mailto:teacher@code.org）までメールご連絡ください。Code.orgのスタッフが出来る限り迅速にお答えします。
+          コース中に行き詰まった場合はいつでも、[support.code.org](http://support.code.org）にアクセスして、[コミュニティフォーラム]（https://support.code.org/hc/communities/public/topics）をチェックしてください。 / hc / communitys / public / topics）。おそらく、ここであなたの疑問に対する答えが見つかるでしょう。答えが見つからない場合や、まだ困ったことがある場合は、[teacher@code.org]（mailto:teacher@code.org）までメールご連絡ください。Code.orgのスタッフが出来る限り迅速にお答えします。
 
           ## 仲間と組む！
 
@@ -5802,6 +5803,7 @@ ja-JP:
 
           ここで少し時間を取って、このオンラインコースをいつどのように完了するかを検討して、この経験から、確実に最大限の成果が得られるようにしてください。望ましい計画が建てられたら、ステージ1をさらに深く探っていきましょう。
 
+          <a href="http://forum.code.org/c/plc" target="_new">
       OPD-K5 Welcome 2:
         markdown: |-
           # はじめに > コンピュータサイエンス入門
@@ -14321,3 +14323,699 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      BigEvent-Unplugged2022:
+        markdown: |
+          # ビッグ イベント
+
+          コンピューター の せかいでは、イベントは、コンピューターを うごかすときに つかう めいれいの 1つです。このレッスンでは、おしたボタンで ちがう うごきを させられることを まなびます。
+      BinaryBracelets-Unplugged2022:
+        markdown: |
+          # バイナリー形式
+
+          コンピュータがわかる形式で あなたの名前を かいてみよう！
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged2022:
+        markdown: |
+          # 条件判定について
+
+          トランプを使って、"もし 赤いカードなら、1ポイント ゲット" や "もし 黒いカードなら、1ポイント ゲット" といったルールを作ってみよう。
+      CourseE_Artist_Practice_2022:
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。ループとアーティストを使って練習をつづけましょう！
+        display_name: アーティスト練習
+      CourseE_Lesson_11_Artist_Practice_2022:
+        display_name: アーティスト練習
+      CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: アーティスト練習
+      CourseF_outbreak_story2022_2022_pilot_-2022-2:
+        content1: 説明
+        markdown: |-
+          # 大流行：自分だけのシミュレーションを作ってみましょう
+
+          ## モンスタータウンへようこそ！
+          モンスタータウンは、いつもはハッピーで元気いっぱいの場所でした。 モンスタータウンのモンスターたちは、あちこちのお友だちの家に行くのが大好きでした。
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ある日、モンスターの1人が病気になりました。このモンスターは**ウイルス**にかかったのです！ ウイルスというのは、みんなを病気にする小さなバイキンのことです。 他のモンスターはあまり心配しないで、お友だちの所にいつもどおり遊びに行きました。
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          その後すぐに、さらに2人のモンスターが病気になりました。 同じウイルスでした！ 2人はお友だちからウイルスをもらったようです。
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ウイルスはゆっくりと近所の他のモンスターにも広がりました。 元気なモンスターは、全員が病気になるのではないかと心配し始めました。病気のモンスターは、他のみんなにウイルスをうつすのではないかと心配し始めました。
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## 広がるのを止める
+          うれしいことに、モンスタータウンのみんながウイルスをじっくり調べると、大切なことが分かりました。口にマスクをかけると、ウイルスが広がりにくいことに気づいたのです。 マスクをかけると、病気のモンスターが元気なモンスターにウイルスをうつすことも少なくなります。
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## 次の手順は？
+
+          今日はコードを書いて、モンスタータウンのウイルス大流行の**シミュレーション**を作成して実行します。 シミュレーションとは、プロセスまたはシステムのコンピュータモデルのことです。 コーディングをして、モンスタータウンのみんなに何が起きるか予測する方法を学びましょう。
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *ウイルスはどのくらいの速さで広がりますか？*
+
+          * *だれもが病気になりますか？*
+
+          * *フェイスマスクはどのように役立ちますか？*
+
+
+          終わったら、シミュレーションをお友だちと共有しましょう。自分の町にウイルスがやってきたときに、他の人たちの健康を守るためにできると思うことについて、意見を出し合いましょう。
+      CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: 説明
+        markdown: |
+          # 大流行：科学者のように考える
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          シミュレーションは、現実の世界で観察しづらいことについて知るための最高の方法です。科学者が問題を解いて、新しいアイデアを安全に、そして効率よくテストするのを手助けします。 このシミュレーションは、モンスタータウンで、ウイルスの大流行がどのように広がるのかを見せてくれる1つの方法です。
+
+          ## リセットしてもう一度！
+          自分でコードを書いたとしても、「実行」をクリックするまでは、何が起こるか正確に知ることはできません。モンスターは自由に動き回っているので、ウイルスが素早く広がるのか、ゆっくり広がるのか分からないのです。コードを変更するときはいつでも、数回はシミュレーションを実行しましょう。なにごとも2度、同じように起きることはありません！
+
+          ## データを集める
+          シミュレーションを実行したら、観察したことを書きとめましょう。病気になったモンスターの数を数えたり、タイマーを使って、色々なことがどれほど速く起こるかチェックしましょう。たとえば、マスクをかけていないモンスター全員が病気になるまで、たいてい、どのくらいの時間がかかりますか？
+
+          ## 予測する
+          自分のモデルを理解していれば、それを使って予測もできます。 シミュレーションを実行する方法を変更して、どういった違いが出るか予測したりもできます。例えば：
+          * モンスターの数が2倍になると、どうなりますか？
+          *モンスターが半分のスピードで動くと、どうなりますか？
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## モンスタータウンは現実の世界に似ていますか？
+          どれほど現実的に見えるモデルでも、それには限界があります。
+          * シミュレーションは、実際のウイルスの大流行とどのような点で同じですか？
+          * どのような違いがありますか？
+          このアクティビティが終わったら、これらの質問について先生や家族と話し合いましょう！
+
+          ## 他にはどのようなものをモデル化できますか？
+          ここでは、モンスタータウンのウイルス大流行について、実用的なモデルを作成しました。 シミュレーションでできないこと、または、できれば良いと思うことは何ですか？ 「続ける」をクリックして、モデル化のやり方をもっと学びましょう。
+          * シミュレーションでモンスターの数を増やす
+          * モンスターがウイルスから回復するのを助ける
+          * 確率、免疫、ワクチンなど！
+
+          また、シミュレーションモデルをお友だちと共有したり、ウイルスが自分の町で広がったときに、みんなの健康を守るためにできると思うことについて、意見を出し合ったりしましょう。
+      DesigningForAccessibilityMarkdownLevel2022:
+        markdown: |
+          # 使いやすさの設計
+
+          * コンピュータ サイエンスの世界で、**使いやすさ** とは、障害を持った人でも使える技術のことです。
+          * 障害には、肉体的、聴覚,、視覚など さまざまなものが あります。
+          * 障害は多様で、**スマートフォンのアプリ**をどのように使うかなど、様々な面に影響を与えます。
+          * 障害を持った人にも 使いやすいアプリを設計することで、すべての人にとって 使いやすいものになります！
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged2022:
+        markdown: |
+          # 共有
+
+          とくに インタネットを世界で 所有権と著作権を尊重することの課題と利点について学びます。
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |-
+          # ストーリーじゆうちょう
+
+          このレッスンでは、ストーリーじゆうちょうのストーリーの使い方と書き方を学びます。このビデオを見て、これがコンピュータサイエンスにどうつながるか学びましょう。
+      GettingLoopy-Unplugged2022:
+        markdown: |
+          # くりかえし
+
+          ダンスをれいに くりかえしについて まなびます。
+      GraphPaperProgramming-Unplugged2022:
+        markdown: |
+          # グラフ用紙を使ったプログラミング
+
+          友だちが同じもようをかけるように、アルゴリズム（もようのかき方）を書いてみよう。
+      HappyMaps-Unplugged2022:
+        markdown: |
+          # ハッピー マップ
+
+          キャラをうごかして めいろを クリアする ほうほうを かんがえよう。
+      Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # インターネット
+
+          紙を使って、教室にインターネットを作ります。
+      MoveItMoveIt-Unplugged2022:
+        markdown: |
+          # うごかせ、うごかせ
+
+          ちずを みながら コマンドをつかって ゴールにすすみましょう。
+      MyLoopyRoboticFriends-Unplugged2022:
+        markdown: |
+          # ロボットに同じ動きをくり返させる
+
+          くりかえしをつかえば、プログラムを 短くできます！
+      MyRoboticFriends-Unplugged2022:
+        markdown: |
+          # ロボットの友だち
+
+          ロボットのためにプログラムを書くことで、プログラムについて学びます。
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |-
+          ＃言葉の力
+
+          ## 誰かがインターネット上で意地悪な、または人を傷つけるような言葉を使っていたら、あなたはどうしたらよいでしょう？
+      PrivatePersonalInformation-Unplugged2022:
+        markdown: |-
+          # プライベート情報と個人情報
+
+          ## オンラインで共有しても良い、あなたについての情報はどのようなものですか？
+      RelayProgramming-Unplugged2022:
+        markdown: |
+          # リレー プログラミング
+          チームに分かれて、みんなで もようを かくプログラムを作ります。
+      Songwriting-Unplugged2022:
+        markdown: |
+          # 作曲
+
+          歌のコーラスの例に、関数の定義と使い方について学ぼう。
+      TheRightAppMarkdownLevel2022:
+        markdown: |
+          # 正しい アプリ
+
+          * みんなが、コンピューターをつかいます。とくに、スマートフォンは。
+          * スマートフォンのアプリで ともだちと はなしたり、おんがくを きいたり、かいものをしたり、ネットをしたりすることができます。
+          * どのようなことをしたいのか、すべてのひとが つかいやすいのか かんがえることは、プログラマーにとって たいせつなことです！
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseAB_EOC2022:
+        description: さいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
+        display_name: コース最後のプロジェクト
+      courseB_EOC2022:
+        description: さいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
+        display_name: コース最後のプロジェクト
+      courseC_multi_artist_prog6_predict12022:
+        answers:
+        - text: 正三角形。
+          feedback: ふせいかい。正方形でした。
+        - text: まっすぐな線。
+          feedback: ふせいかい。正方形でした。
+        - text: 正方形
+          correct: true
+          feedback: せいかい！
+        - text: アーティストは五角形をかく
+          feedback: ふせいかい。正方形でした。
+        questions:
+        - text: プログラムを実行（じっこう）したら、どんな図形が書けますか？
+      courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+          feedback: ふせいかい。３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
+        - text: '12'
+          correct: true
+          feedback: せいかい！
+        - text: '15'
+          feedback: ふせいかい。３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
+        - text: '20'
+          feedback: ふせいかい。３つの くりかえしの なかで それぞれ ４つのかぼちゃを あつめるので ぜんぶで１２こ！
+        questions:
+        - text: プログラムを実行（じっこう）したら、いくつ カボチャを あつめることが できますか？
+      courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - text: スクラットはどんぐりにとうちゃくする。コードにバグはない。
+        - text: スクラットはまちがった方に曲がるため、ドングリにとうちゃくしない。
+          correct: true
+        - text: "「まえにすすむ」ブロックがじゅうぶんでないため、スクラットはドングリにとうちゃくしません。"
+        - text: スクラットはさいしょのブロックから動かない。
+          feedback: スクラットはまちがった方に曲がるため、ドングリにとうちゃくしない。
+        questions:
+        - text: このコードにあるバグを見つけましょう。スクラットはドングリにとうちゃくしますか、それとも、まだ問題がありますか？
+      courseC_multi_maze_programming8_predict12022:
+        answers:
+        - text: トリさんは ブタの一歩手前まで行くことができる。
+          feedback: ふせいかい。このプログラムで トリさんは ブタのところまで 行くことができます。
+        - text: トリさんは ブタのところへ 行くことができる。
+          correct: true
+          feedback: せいかい！
+        - text: トリさんは TNTにぶつかる。
+          feedback: ふせいかい。このプログラムで トリさんは ブタのところまで 行くことができます。
+        - text: トリさんは壁にぶつかる。
+          feedback: ふせいかい。このプログラムで トリさんは ブタのところまで 行くことができます。
+        questions:
+        - text: "”実行（じっこう）”ボタンをおしたら どうなるか考えてみよう。"
+      courseC_multi_starWars_predict12022:
+        answers:
+        - text: BB-8は、じっとしている。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        - text: １つ前にすすむ。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        - text: ５回前にすすんで、すべてのスクラップをあつめる。
+          correct: true
+          feedback: せいかい！
+        - text: BB-8は3つだけ前に進む。
+          feedback: ふせいかい。くりかえしブロックにより、５回前にすすみます。
+        questions:
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
+      courseC_multi_starWars_predict22022:
+        answers:
+        - text: さいしょの くりかえしで 行きすぎてしまう。
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
+        - text: さいしょの くりかえしの かずが たりなくて、スクラップを ぜんぶ あつめられない。
+          correct: true
+          feedback: せいかい！
+        - text: BB-8は、すべてのスクラップを あつめることが できる。
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
+        - text: BB-8はさいしょのくり返しの後、まちがった方に曲がる
+          feedback: ふせいかい。さいしょのくりかえしで ３回前にすすむべきところ、２回しかすすんでいません。
+        questions:
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
+      courseD_EOC2022:
+        description: コースDのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
+        display_name: コース最後のプロジェクト
+      courseD_EOC_examples2022:
+        description: これで、さいごのプロジェクトになります。始める前に、サンプルのプロジェクトを見てみましょう。
+        display_name: サンプルのプロジェクト
+      courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - text: A
+          correct: true
+          feedback: せいかい！
+        - text: B
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
+        - text: C
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
+        - text: 上の回答のどれでもない
+          feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: "”実行（じっこう）”をクリックしたら、どの図形がかけますか？"
+      courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - text: 'ハチはくものところまで行って、むじょうけんにミツを集めようとする。 '
+          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
+        - text: ハチはくものところまで行って、くもの下に花があれば ミツを 集めます。
+          correct: true
+          feedback: せいかい！
+        - text: 'ハチはくものところまで行くけど、その後は何もしない。 '
+          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
+        - text: みつばちは雲まで行けない。
+          feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
+        questions:
+        - text: くもの下は見えないけど、花があるはず。もし 花があれば、ミツを集めよう。花じゃなかったら、何もしなくていいよ。 "実行（じっこう）"をクリックしたら、どうなるか考えてみよう。
+      courseD_multi_bee_conditionals7_predict22022:
+        answers:
+        - text: ハチは花でミツをとって、ハチの巣でハチミツを作ろうとする。
+          correct: true
+          feedback: せいかい！
+        - text: ハチは花でもハチの巣でもミツをとろうとする。
+          feedback: ふせいかい。`もし 花で` ブロックで ハチは花でミツをとって、ハチの巣でハチミツを作るようにしています。
+        - text: ハチは花でもハチの巣でもハチミツを作ろうとする。
+          feedback: ふせいかい。`もし 花で` ブロックで ハチは花でミツをとって、ハチの巣でハチミツを作るようにしています。
+        - text: みつばちは花とハチの巣の両方で、ハチミツやミツをあつめようとする。
+          feedback: ふせいかい。`もし 花で` ブロックで ハチは花でミツをとって、ハチの巣でハチミツを作るようにしています。
+        questions:
+        - text: '"実行（じっこう）" をクリックしたら、どうなりますか？ただし、くもの下にかくれているのは、ハチの巣が*1つ* か 花が *1つ*
+            です。'
+      courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - text: ハチは、１回だけ 前に 進んで ミツを ゲットする。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
+        - text: ハチは ミツを ２つゲットする。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
+        - text: ハチは すべてのミツを ゲットする。
+          correct: true
+          feedback: せいかい！
+        - text: みつばちはまちがった方にまがる。
+          feedback: ふせいかい、ハチは前に進むのと ミツをとるのを くりかえして、すべてのミツをゲットします。
+        questions:
+        - text: '"実行（じっこう）"をクリックしたら どうなりますか？プログラムは くりかえしが 入れ子に なっているよ。'
+      courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+          feedback: ふせいかい、ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回
+            くりかえすので、８つ ミツを 集めることができます。
+        - text: '8'
+          correct: true
+          feedback: せいかい！
+        - text: '10'
+          feedback: ふせいかい、ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回
+            くりかえすので、８つ ミツを 集めることができます。
+        - text: '12'
+          feedback: ふせいかい、ハチはくりかえしの中にある さいしょのくりかえしで ２つ、後ろのくりかえしで ２つ ミツを 集めます。それを２回
+            くりかえすので、８つ ミツを 集めることができます。
+        questions:
+        - text: '"実行（じっこう）"をクリックしたら ハチは いくつミツを 集めることが できますか？'
+      courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - text: 全部の作物をしゅうかくできる。
+          feedback: ふせいかい、カボチャをとる命令はありません。
+        - text: 通った道にある作物を ひとつも 収かくしません。
+          feedback: ふせいかい、農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしません。
+        - text: カボチャ以外の作物は、全部収かくする。
+          correct: true
+          feedback: せいかい！
+        - text: カボチャを２つだけ2しゅうかくする。
+          feedback: ふせいかい、農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしません。
+        markdown: |
+          葉っぱは、トウモロコシとレタスになります。
+          <br/>
+        questions:
+        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+      courseD_multi_farmer_while10_predict22022:
+        answers:
+        - text: 山もあなもなくなって、まっ平になる。
+          feedback: ふせいかい、土をかたづけて 山を平らにする めいれいは 入っていません。
+        - text: 山が、平らになる。
+          correct: true
+          feedback: せいかい！
+        - text: あなが なくなる。
+          feedback: ふせいかい、`～の間`は、じょうけんを みたす間 くりかえしますが、その中に 土をかたづけて 山を平らにする めいれいは ありません。
+        - text: さいごの穴はそのままになる。
+          feedback: ふせいかい、土をかたづけて 山を平らにする めいれいは 入っていません。
+        questions:
+        - text: このプログラムを動かしたら、どうなるかな？
+      courseD_multi_farmer_while4_predict12022:
+        answers:
+        - text: なにも起こらない。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫はずっと土を かたづけ つづける。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        - text: 農夫は山がなくなるまで、土をかたづけつづける。
+          correct: true
+          feedback: せいかい！
+        - text: 農夫は一度だけ土をかたづける。
+          feedback: ふせいかい、農夫は山がなくなるまで、土をかたづけつづけます。
+        questions:
+        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+      courseD_multi_maze_until10_predict22022:
+        answers:
+        - correct: true
+          feedback: せいかい！
+        - text: ゾンビは、ひまわりに たどり着ける。
+        - text: ゾンビは、右に曲がったら、その一角を回りつづける。
+        - text: ゾンビは道のおわりから前に進めなくなる。
+        questions:
+        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+      courseD_multi_maze_until2_predict12022:
+        answers:
+        - text: トリさんは、まったく動かない。
+          feedback: ふせいかい、道を進んで つきあたったら 左に曲がる を くりかえして ブタにたどり着きます！
+        - text: トリさんは ブタのところへ 行くことができる。
+          correct: true
+          feedback: せいかい！
+        - text: 道をまっすぐ進んで、TNTに ぶつかる。
+          feedback: ふせいかい、道を進んで つきあたったら 左に曲がる を くりかえして ブタにたどり着きます！
+        - text: トリさんはまちがった方にまがる。
+          feedback: 道を進んで つきあたったら 左に曲がる を くりかえして ブタにたどり着きます！
+        questions:
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
+      courseE_EOC2022:
+        description: コースEのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
+        display_name: コース最後のプロジェクト
+      courseE_EOC_examples2022:
+        description: コースEのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
+        display_name: コース最後のプロジェクト
+      courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - text: カボチャを２つしゅうかくする。
+          feedback: 不正解、農夫は道を最後まで行って、曲がって、もと来た道をもどって レタスを しゅうかくします。
+        - text: カボチャを全部しゅうかくする。
+          feedback: 不正解、農夫は道を最後まで行って、曲がって、もと来た道をもどって レタスを しゅうかくします。
+        - text: レタスをしゅうかくする。
+          correct: true
+          feedback: せいかい！
+        - text: トウモロコシをしゅうかくする。
+          feedback: 不正解、農夫は道を最後まで行って、曲がって、もと来た道をもどって レタスを しゅうかくします。
+        questions:
+        - text: 農夫は何をしゅうかくするかな？
+      courseE_prediction_artistFunction12022:
+        answers:
+        - text: 何もかかれない。関数が呼び出されない。
+          feedback: 不正解、関数は２度呼び出されます。
+        - text: 正方形を１つかく。
+          feedback: 不正解、関数は２度呼び出されます。
+        - text: ２つの正方形が重なった絵をかく。
+          feedback: 不正解、正方形の辺の長さは100ピクセルで、次の正方形をかく前に 175ピクセル ジャンプしています。
+        - text: すき間を開けて 正方形を ２つかく。
+          correct: true
+          feedback: 正解、関数は２回呼び出されて、関数と関数の間でジャンプして移動しています。
+        questions:
+        - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
+      courseE_swim_fish_behavior_predict12022:
+        answers:
+        - text: なにも起こらない。
+          feedback: ふせいかい。タンブルウィードはころがり始めます
+        - text: タンブルウィードは画面の上まで浮かびあがる
+          feedback: ふせいかい。タンブルウィードはころがり始めます
+        - text: タンブルウィードはころがり始める
+          correct: true
+          feedback: せいかい！
+        - text: タンブルウィードはチカチカし始める
+          feedback: ふせいかい。タンブルウィードはころがり始めます
+        questions:
+        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        display_name: コース最後のプロジェクト
+      courseF_EOC_samples2022:
+        description: これで、さいごのプロジェクトになります。始める前に、サンプルのプロジェクトを見てみましょう。
+        display_name: コース最後のプロジェクト
+      courseF_collector_samples_2022_pilot_-2022-2:
+        display_name: 探索 - プログラムのサンプル
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: これで、学んだことを使ってプロジェクトをもっと良いものにできます！プログラムにもっとつけ足しをしたり、新しいことを始めたりしましょう！
+        display_name: イベント - じゆうあそび
+      courseF_events_practice2022_2022_pilot_-2022-2:
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。スプライトと動きを使って練習をつづけましょう！
+        display_name: イベント練習
+      courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: スプライトは右に回るだけ。
+          feedback: ふせいかい。スプライトは東に進みもします。
+        - text: スプライトは東に進むだけ。
+          feedback: ふせいかい。スプライトは回転をとめないので、どちらもどうじにおこなわれます。
+        - text: スプライトは回りながら進む。
+          correct: true
+          feedback: せいかい！りょうほうの動きはどうじにはっせいします。
+        - text: スプライトはまず回って、そのあと、進む。
+          feedback: ふせいかい。スプライトロボでは、つなげられたブロックは、そのまえのブロックのすぐあとに起きるので、両方の動きはどうじにはっせいします。
+        questions:
+        - text: コードを読んで、予測しましょう。
+      courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: スプライトラボアプリ
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: "「ピザを1枚、すぐお持ちします！」"
+          feedback: ふせいかい。変数ラベルが一致していません。
+        - text: "「1皿、すぐお持ちします！」"
+          feedback: ふせいかい。変数ラベルがプリントされていません。
+        - text: "「お一人分、すぐお持ちします！」"
+          feedback: ふせいかい。変数ラベルがプリントされていません。
+        - text: "「1つ、すごお持ちします！」"
+          correct: true
+          feedback: せいかい！変数ラベルが一致しています。
+        - text: 何もプリントされない。
+          feedback: ふせいかい。イベントとプリントブロックはまだ動いています。
+        questions:
+        - text: このコードは見覚えがあるかもしれませんが、じっくり読んでみましょう。 ユーザーが「ピザ」と入力すると何がプリントされますか？
+      courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - text: 一辺が50ピクセルの三角形をかく。
+          correct: true
+          feedback: せいかい！
+        - text: 一辺が3ピクセルの50角形をかく。
+          feedback: 不正解、変数`length`は、`くりかえし`の回数ではありません。
+        - text: 50度曲がった線を3本かく
+          feedback: 不正解、変数`length`は、`まがる`角度ではありません。
+        - text: ユーザーにプロンプトして数字のインプットを求めます。
+          feedback: "`動く 前に`の前で 変数`length`に50をセットしているので、アーティストは 一辺が 50ピクセルの三角形をかきます。"
+        questions:
+        - text: 変数 "length"に50をセットしました。"実行（じっこう）"をクリックしたら どうなるかな？
+      courseF_multi_bee_for3_predict12022:
+        answers:
+        - text: 'ハチはすべての花からミツを集めることができる。 '
+          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
+        - text: 1つの花を除いて、ハチはすべての花からミツを集めることができる。
+          correct: true
+          feedback: せいかい！
+        - text: 'ハチはすべての花からミツを1つづつ集める。 '
+          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
+        - text: みつばちは前に進んで、花の1と4から1回分のミツを集める。
+          feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
+        markdown: |+
+          うーん！  このパズルは、`まつ` を使えば かんたんにクリアすることができる！
+
+
+        questions:
+        - text: プログラムを実行（じっこう）したら、どうなりますか？
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        description: ここでは、あたながすきなものを作りましょう！どんなプロジェクトを作りたいですか？
+        display_name: スプライト - じゆうあそび
+      courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。スプライトと動作を使ってれんしゅうをつづけましょう！
+        display_name: スプライト練習
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: どちらの飛行機も、グリッドに沿って1つのスペースを移動して、その後、止まります。
+          feedback: ふせいかい。これらのスプライトには、止まるように言われるまですすみつづける「動き」があります。
+        - text: どちらの飛行機も移動し始めると、止まることはありません。
+          correct: true
+          feedback: せいかい！ひこうきに動きはじめて、そのままつづけるように伝えます。
+        - text: 片方の飛行機がまず動いて、もう片方が次に動きます。
+          feedback: ふせいかい。スプライトラボのコードの、それぞれのブロックは、次のブロックのすぐあとで動きます。
+        - text: 飛行機は墜落します。
+          feedback: ふせいかい。ひこうきはせっしょくするような位置にはありません。
+        questions:
+        - text: コードを読んで、予測しましょう。
+      courseF_text_practice2022_2022_pilot_-2022-2:
+        description: ここまでよくできました！次のアクティビティを選んでください。できるだけたくさんやってみましょう。テキストとプロンプトを使って練習をつづけましょう！
+        display_name: テキストとプロンプトの練習
+      courseF_variables2_predict2_multi2022_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: プログラムが「こんにちは、～さん！」とプリントします。
+          feedback: ふせいかい。名前ブロックは、タイプしたものにとりかえられます。
+        - text: プログラムが、あなたが入力した名前で歓迎してくれます。
+          correct: true
+          feedback: せいかい！名前ブロックの代わりに、入力したものが使われます。
+        - text: スプライトのサイズが変わる。
+          feedback: ふせいかい。テキストが画面にプリントされます。
+        - text: コンピュータが別の質問をする。
+          feedback: ふせいかい。プログラムが始まったときに、1問だけ質問されます。
+        questions:
+        - text: このプログラムでは、キーボードで入力して質問に答えられます。「プリント」ブロックが画面にテキストを表示します。 ここで予測してみましょう。質問に答えた後はどうなるでしょうか？
+      courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: グリーティングカード、チャットボット、またはブランクスペースストーリーのいずれかを作成します。プロジェクトの「パート1」がもう終わっていれば、「パート2」に進んでください。
+        display_name: プロジェクトを選択する
+      courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: グリーティングカード、チャットボット、またはブランクスペースストーリーのいずれかを作成します。始める前に、下のサンプルプロジェクトをじっくり見て、作りたいものを決めましょう。自分だけのプログラムを計画する準備ができたら、「おわり」を押します。
+        display_name: 探索 - プログラムのサンプル
+      courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: 説明
+        markdown: |
+          # ちょっと待って！
+
+          ## 次に進む準備はできていますか？
+
+
+          次のレベルでは、プロジェクトのコードを書き始めます。すでに計画がある人にぴったりです。
+
+          完成した計画には、次のものが入っていなくてはなりません。
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * 作っているプロジェクトの種類。 たとえば、グリーティングカード、チャットボット、ブランクスペースストーリーなどです。
+          * ユーザーに尋ねる質問のリスト。
+          * 画面に表示するその他のテキスト。
+          * 必要なスプライト（とその動作）の説明または図。
+
+          次に進む準備ができているかどうかわからない場合は、先生に確認してください！
+      coursee_prediction_artistfunction22022:
+        answers:
+        - text: アーティストは、ちゃんと絵をかいて、パズルをクリアする。
+          feedback: 不正解、くり返しの中で呼ばれているのは、関数"多角形の列をかく"ではなく 関数"多角形をかく" です。
+        - text: アーティストは４つの正方形でできた まど をかく。
+          correct: true
+          feedback: せいかい！
+        - text: アーティストは、一番上の列だけかく。
+          feedback: 不正解、プログラムの中で関数"多角形の列をかく"を呼んでいません。
+        - text: アーティストは、枠のなかに４つ四角形をかく。
+          feedback: 不正解、くり返しのなかで関数"多角形をかく"を呼んだら90度曲がっています。
+        questions:
+        - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
+      csf_be_a_super_digital_citizen2022:
+        content1: 説明
+        markdown: |-
+          # スーパーデジタルシティズン
+
+          ##  ネットいじめを見たときには、いじめられている人を助けてあげられるでしょう？
+      csf_digital_trails2022:
+        markdown: |-
+          # デジタル証跡（しょうせき）をたどる
+
+          ## デジタル証跡（しょうせき）には、どのような情報が含まれていてもOKでしょうか？
+      csf_password_power-up2022:
+        content1: 説明
+        markdown: |-
+          # パスワードをパワーアップしましょう
+
+          ## おぼえておきたいパスワードのヒント
+
+          * おぼえやすい**フレーズ**から始めます。
+          * **お父さんかお母さん**だけにパスワードを知らせます。
+          * パスワードには**こじんてきな** ID情報をぜったいに使ってはいけません。
+          * さいてい** 8 **文字のパスワードを作成しましょう。
+          * パスワードには文字、数字、そして**記号**を使います。
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness2022:
+        content1: 説明
+        markdown: |-
+          # 意地悪はやめましょう
+
+          ## ネットで誰かに意地悪をされたらどうすればよいですか？
+
+          そこから離れましょう。
+          しんらいできる大人にそのことを伝えましょう。
+          だいじょうぶだと言われたサイトをまず使いましょう。
+          ネット上でも立ち止まって、よく考えましょう。
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # ネットのご近所さん
+
+          ## ネットで安全なおつきあいをするにはどうすれば良いでしょう？
+      express_EOC2022:
+        description: コースEのさいごのレッスンになりました！ 作成するプロジェクトを選びましょう。
+        display_name: コース最後のプロジェクト
+      express_EOC_examples2022:
+        description: これで、さいごのプロジェクトになります。始める前に、サンプルのプロジェクトを見てみましょう。
+        display_name: サンプルのプロジェクト
+      grade2_multi_collector_A_predict12022:
+        answers:
+        - text: ４つ
+          feedback: ふせいかい。ローレルは たからものが ないところで たからものを あつめようとします。
+        - text: ローレルは、たからものが ないところで たからものを あつめようとします。
+          correct: true
+          feedback: せいかい！
+        - text: ローレルは すべての たからものを あつめることができる。
+          feedback: ふせいかい。ローレルは たからものが ないところで たからものを あつめようとします。
+        - text: このコードを使うと、ローレルはたからものを1つあつめる。
+          feedback: ふせいかい。ローレルは たからものが ないところで たからものを あつめようとします。
+        questions:
+        - text: プログラムを 実行したら どうなりますか？

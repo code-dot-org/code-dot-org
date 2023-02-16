@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:57:46 UTC",
+    "serialized_at": "2022-10-06 19:53:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -19,13 +19,14 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Scratch Paper"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csc-things"
       }
     }
@@ -42,7 +43,22 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csc-things"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "book cover",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csc-things"
       }
     }
@@ -56,7 +72,7 @@
       "seeding_key": {
         "lesson_activity.key": "6274df67-1e98-472b-8456-219d3f33d17b",
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csc-things"
       }
     }
@@ -90,7 +106,7 @@
           "(TEST) Poetry HoC_Final Level"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csc-things",
         "activity_section.key": "a7177eb0-083c-45b8-99fe-5b71bd4d4f6d"
       },
@@ -107,7 +123,7 @@
           "(TEST) Poetry HoC_Final Level"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csc-things",
         "activity_section.key": "a7177eb0-083c-45b8-99fe-5b71bd4d4f6d"
       }

@@ -356,7 +356,7 @@ it:
         CSF_a_b_artist_loops: Cicli con l'artista
         CSF_artist_angles: Angoli con l'Artista
         CSF_collector_k1_blocks: 'La collezionista'
-        CSF_collector_repeat_loops: 'La collezionista: Cicli (istruzioni di ripetizione)'
+        CSF_collector_repeat_loops: La collezionista - Cicli (istruzioni di ripetizione)
         CSF_collector_text_blocks: 'La collezionista'
         CSF_create_functions: Creazione di funzioni
         CSF_debugging_k1_blocks: Correzione errori (debugging)
@@ -530,9 +530,9 @@ it:
         csd_gamelab_functions: Chiamare e Definire Funzioni
         csd_applab_parameters: Funzioni con parametri
         csd_applab_loops: Loop in Sviluppo App
-        csd_problem_solving_process: Il Processo di Risoluzione dei Problemi
+        csd_problem_solving_process: Il processo di risoluzione dei problemi
         CSF_Going_Places_Safely: Il mio quartiere digitale
-        CSF_SpriteLab_Intro_v2: Introduzione al Laboratorio dei Personaggi
+        CSF_SpriteLab_Intro_v2: Introduzione al Laboratorio dei personaggi
         CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
         csd_debugging: Correzione errori (debugging)
@@ -555,8 +555,8 @@ it:
         csd_what_computers_do: Cosa Fanno i Computer?
         csf_my_online_neighborhood_2020: Il mio quartiere digitale
         csf_follow_the_digital_trail: Segui le tue tracce digitali
-        csf_private_and_personal_information: Cittadinanza digitale - Dati personali e altri dati
-        csd_what_computers_are: Cos'è un Computer?
+        csf_private_and_personal_information: Dati personali e altri dati
+        csd_what_computers_are: Cos'è un computer?
         codebreak_e01: 'Code Break 1.0: Algoritmi con Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototipi con Mark Cuban e Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Crittografia con Ashton Kutcher e Mia Gil Epner'
@@ -587,8 +587,8 @@ it:
         poembot-playtest-intro: Introduzione al test di gioco di PoemBot
         poembot-playtest-sprites: Personaggi del test di gioco di PoemBot
         poembot-playtest-events: Eventi del test di gioco di PoemBot
-        hello_world_intro: Insegna una nuova parola all'IA
-        hello_world_events: 'Ciao a tutti: programmare con gli Eventi'
+        hello_world_intro: Ciao mondo - Benvenuti nel Laboratorio dei personaggi
+        hello_world_events: Ciao mondo - Programmare con gli eventi
         hello_world_congrats: 'Ciao a tutto: cosa desiderate'
         rough_poemart_intro: L'arte della poesia - Introduzione
         rough_poemart_events: L'arte della poesia - Eventi
@@ -603,14 +603,24 @@ it:
         poemart_events: L'arte della poesia - Eventi
         poemart_imagery: L'arte della poesia  - Metafore
         poemart_celebration: L'arte della poesia  - Celebrazione
+        csd_ml_ethics_ai: 'Etica e Intelligenza Artificiale '
         outbreak_intro: 'Simulatore di focolaio - Introduzione'
         outbreak_events: 'Simulatore di focolaio - Eventi'
         outbreak_scientist: 'Simulatore di focolaio - Pensa come uno scienziato'
         outbreak_outro: 'Simulatore di focolaio - Gioco libero'
         CSA-PL-debugging-temp: Introduzione al Debugging in Sviluppo Java - temp
+        csd_u6_input_output: Ingressi e uscite
+        CSA-PL-variables: Creazione di variabili in Java
         PL_CS_Journeys_Overview: CS Journeys
+        CSD_u6_variables_part1: 'CSD: Variabili'
+        csd_u6_if_statements: 'CSD: Istruzioni if'
+        csc-poem-art-intro: Video introduttivo
+        csc-poem-art-outro: Video finale
+        csd_u6_call_define_functions: 'CSD: Chiamare e Definire Funzioni'
         csp_applab_parameters: Funzioni con parametri
         CSA-PL-intro-to-arrays: Array unidimensionale (1D)
+        CSA-PL-conditionals: Istruzioni Condizionali in Java
+        CSA-PL-Printing-in-Java: Stampa in Java
         CS_Changing_Everything: L'informatica sta cambiando ogni cosa
     callout:
       text:

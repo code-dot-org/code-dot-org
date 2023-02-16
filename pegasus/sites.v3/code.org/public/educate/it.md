@@ -24,21 +24,21 @@ theme: responsive
           Browser
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
@@ -78,6 +78,7 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **To use Internet Simulator**                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                           |
 | **To use Web Lab**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
 | **To use Google Classroom Share Button**                                                 | `https://apis.google.com`                                                                                                                              |
+| **To use App Lab datasets** | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com` |
 
 ## Mobile and Tablet Support Details
 

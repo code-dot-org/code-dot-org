@@ -10,6 +10,8 @@ te:
           student_description: ఈవెంట్లు
         dance:
           name: డాన్స్
+        aquatic:
+          name: జలచర
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -34,6 +36,11 @@ te:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+        dance-2019:
+          title: డాన్స్ పార్టీ
+          description_short: మీ స్నేహితులతో పంచుకోవడానికి ఒక డాన్స్ పార్టీని కోడ్
+            చేయండి. బియాన్స్, హ్యారీ స్టైల్స్, లిజ్జో, లిల్ నాస్ ఎక్స్, సెలెనా గోమెజ్
+            నటించారు, డిస్నీ యొక్క “ఎన్కాంటో” నుండి సంగీతం మరియు మరెన్నో!
         time4cs-control-unit-1:
           lesson_groups:
             csf_events:
@@ -138,3 +145,23 @@ te:
             కేటాయించబడవచ్చు.
           student_description: ఈ యూనిట్‌లో CS అన్వేషణలను క్లాసు పూర్తి చేసినప్పుడు
             ఒక సర్వే ఉంది. ఈ సర్వే చేయడానికి సమయం వచ్చినప్పుడు మీ టీచర్ మీకు చెప్తారు.
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: అసమకాలికమైన డీబగ్గింగ్ పొడిగింపు
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: మాడ్యూల్ 2 అసమకాలికమైన పని
+        soccer:
+          title: మీ స్వంత సాకర్ ఆటను కోడ్ చేయండి
+          description_short: ఒక సాకర్ ఆటను చేయండి
+          description: ఒక సాకర్ ఆటను చేయండి
+        hello-world-space-2022:
+          title: 'హలో వరల్డ్: స్పేస్'
+        hello-world-soccer-2022:
+          title: 'హలో వరల్డ్: సాకర్'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: ఆ శబ్దం ఏమిటి?

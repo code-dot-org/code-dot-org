@@ -1,6 +1,8 @@
 @import "color.scss";
 
-.dropdown {
+// The placeholder classes (%) allow these to be extended in other modules
+.dropdown,
+%dropdown {
   padding: 5px 0;
   position: absolute;
   // without this, this will be below some content
@@ -12,7 +14,8 @@
   flex-direction: column;
 }
 
-.anchor {
+.anchor,
+%anchor {
   padding: 5px 12px;
   color: $dark_charcoal;
   font-family: "Gotham 4r", sans-serif;

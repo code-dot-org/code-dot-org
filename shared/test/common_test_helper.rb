@@ -39,7 +39,7 @@ VCR.configure do |c|
 end
 
 # Truncate database tables to ensure repeatable tests.
-DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects code_review_comments reviewable_projects project_commits).freeze
+DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
 DASHBOARD_TEST_TABLES.each do |table|
   DASHBOARD_DB[table.to_sym].truncate
 end.freeze

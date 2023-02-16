@@ -1,16 +1,14 @@
 ---
-title: Partner
+title: Partners
 ---
 
-Die Hour of Code wird von Beratungs- und Überprüfungsausschüssen für 'Hour of Code' und 'Computer Science Education Week' gesteuert.
+Die Hour of Code wird vom Überprüfungsausschuss (Review Committee) für Hour of Code geleitet.
 
-Der [Beiratsausschuss]({{ urls/advisory_committee }}) setzt sich aus Vertretern von K-12, Wissenschaft, Non-Profit-Organisationen, For-Profits und internationalen Organisationen zusammen. Dieses Komitee leitet die Strategie für die Kampagne "Hour of Code".
+Das [Review Committee]({{ urls/review_committee }}) setzt sich aus zwölf Pädagogen und ehemaligen Pädagogen der Klassenstufe K-12 zusammen, die die Aktivitäten anhand einer von einem Beratungsausschuss erstellten Rubrik bewerten und empfehlen. Diese Pädagogen überprüfen die von Hunderten von Aktivitätspartnern eingereichten von Schülern geleiteten Aktivitäten und von Lehrern geleiteten Unterrichtspläne. Sie bewerten den pädagogischen Wert der Aktivitäten, die Fähigkeit, die Lernenden zu motivieren, und die potenzielle Attraktivität für verschiedene Schülergruppen.
 
-Das [Fallprüfungskomitee]({{ urls/review_committee }}) besteht aus 15 Pädagogen aus K-12-Gruppen, die Aktivitäten der Rubrik des Beratungsausschusses bewerten und empfehlen. Diese Pädagogen überprüfen schülergeführte Aktivitäten und lehrergeführte Unterrichtspläne, die von Hunderten von Aktivitätspartnern eingereicht wurden, und bewerten den Bildungswert der Aktivitäten, die Fähigkeit, die Lernenden zu engagieren, und die potenzielle Anziehungskraft auf verschiedene Gruppen von Schülern.
+Die Arbeit und das Engagement beider Ausschüsse haben zum Erfolg der Hour of Code und ihrer Vision, allen SchülerInnen eine Einführung in die Informatik anzubieten, beigetragen.
 
-Die Arbeit und das Engagement beider Ausschüsse haben zum Erfolg der "Hour of Code" und ihrer Vision beigetragen, jedem Studenten eine Einführung in die Informatik zu bieten.
-
-# Wichtige Partner und Unterstützer von Unternehmen
+# Wichtige Partner und Unternehmen, die Code of Hour unterstützen
 
 {{ partners/major_partners_corporate_supporters }}
 
@@ -22,13 +20,13 @@ Die Arbeit und das Engagement beider Ausschüsse haben zum Erfolg der "Hour of C
 
 * * *
 
-# Curriculum und Tutorial Partner
+# Lehrplan- und Tutorial-Partner
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastruktur Partner und Werkzeuge
+# Infrastruktur-Partner und Tools
 
 {{ partners/infrastructure_partners_tools }}
 

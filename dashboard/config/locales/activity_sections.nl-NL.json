@@ -144,6 +144,26 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Na het Uur Code"
         },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
+          "tips": [
+            "U wilt maar weinig tijd spenderen aan het laden of introduceren van uw 'Hour of Code', vooral als het gaat om jonge leerlingen waarbij het het beste is om zo snel mogelijk te beginnen."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Hallo Wereld",
+          "progression_name": "Hallo Wereld"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Reflectie",
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
+        },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
             null
@@ -369,6 +389,26 @@
             null
           ]
         },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
+          "tips": [
+            "U wilt maar weinig tijd spenderen aan het laden of introduceren van uw 'Hour of Code', vooral als het gaat om jonge leerlingen waarbij het het beste is om zo snel mogelijk te beginnen."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Hallo Wereld",
+          "progression_name": "Hallo Wereld"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Reflectie",
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
+        },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
           "tips": [
@@ -514,17 +554,44 @@
           "progression_name": "Tekstcompressie"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introductie"
+          "name": "Introductie",
+          "description": ""
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Uitbraak",
+          "description": "",
           "progression_name": "Uitbraak"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "",
+          "progression_name": ""
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": ""
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": ""
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "",
+          "progression_name": ""
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "",
+          "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Vrije Speelruimte"
         },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": ""
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": ""
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflectie"
+          "name": "Reflectie",
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introductie",
@@ -676,6 +743,10 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Afronden"
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
           "tips": [
@@ -683,13 +754,14 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+          "name": "",
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n- **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren][0].   \n\n- **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n- **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Hallo Wereld"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-  Welke ander sprites kun je toevoegen aan je project?\n-  Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-  Wat kun je je sprites nog meer laten zeggen?\n-  Wat dienen je sprites te doen als er op ze wordt geklikt?\n-  Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren][0] te gaan."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Reflectie",
@@ -701,6 +773,1776 @@
         "f090c505-7c09-4e19-bcf4-b219f24eae45": {
           "name": "Gebruikersinterface-elementeigenschappen",
           "progression_name": "Gebruikersinterface-elementeigenschappen"
+        },
+        "835c16c0-8a24-43c1-889b-493814eb50d1": {
+          "name": "Woordenschat"
+        },
+        "d80d3591-db5f-43bb-b3be-3a0eb14690a7": {
+          "name": "Introductie"
+        },
+        "61f2eb20-0ecb-4319-8ea7-5a9210a1c406": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "be35d4b6-5785-44f3-9d9b-158e356ebb0d": {
+          "tips": [
+            null
+          ]
+        },
+        "711dd3c2-55d7-4e71-8714-fea9ceb6cb4a": {
+          "name": "Reflectie",
+          "tips": [
+            null
+          ]
+        },
+        "c10c099e-fd94-4a79-9bd6-bfc55b2b1059": {
+          "name": "Woordenschat"
+        },
+        "e4ac7ebe-4d89-46ca-a2a6-f0e819658e21": {
+          "tips": [
+            null
+          ]
+        },
+        "aa5e1de6-0f8d-4e95-82cc-da2f38e8a9ad": {
+          "name": "Reflectie"
+        },
+        "f5627332-703a-420b-ab72-660c350b87d9": {
+          "tips": [
+            null
+          ]
+        },
+        "5dbc43b8-f734-4c93-99d4-0995393a9f25": {
+          "name": "Woordenschat"
+        },
+        "3ab2b28c-3947-44d9-ae6d-8d8d43320c27": {
+          "name": "Introductie"
+        },
+        "02a52fe1-85a9-4a07-83a8-5469bf8ac7e6": {
+          "tips": [
+            null
+          ]
+        },
+        "29bbe8ac-7f83-407e-ad63-4fe434d80d1d": {
+          "name": "Estafette Programmeren"
+        },
+        "a7cadd06-1f56-42b5-a5b0-b623a57e1fcd": {
+          "tips": [
+            null
+          ]
+        },
+        "77e44b0c-4a6a-4eca-9347-a3395aefd2df": {
+          "name": "Reflectie"
+        },
+        "0c752c58-d938-43f6-ac3c-a9b4556d12db": {
+          "name": "Introductie"
+        },
+        "9280e14f-90c1-467a-ab01-b3a0d7d42415": {
+          "name": "Reflectie"
+        },
+        "037b9c5d-7263-4bb9-aef3-f818cd3d71d6": {
+          "name": "Introductie"
+        },
+        "16d61ffc-4200-4a4d-b11e-6fffb02ab38b": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "77973449-e6b7-4855-a2cc-1db18970a8e0": {
+          "tips": [
+            null
+          ]
+        },
+        "6483e0eb-3cdc-45fd-b834-207388a3586a": {
+          "tips": [
+            null
+          ]
+        },
+        "ea99adc6-d611-4d13-9da7-04fcb43c6df3": {
+          "tips": [
+            null
+          ]
+        },
+        "6c45fccd-0b3b-4db0-9224-2dce4fee891a": {
+          "name": "Woordenschat"
+        },
+        "b7541d65-dbb6-4402-8392-0a1416e131d5": {
+          "name": "Introductie"
+        },
+        "77c010a8-6312-4f5a-a39a-ba6c761ba9ce": {
+          "name": "Bouw een Star Wars Spel!"
+        },
+        "cda08e32-7472-46e5-900d-947542cde40e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Vrije Speelruimte"
+        },
+        "2f77a890-cf45-4d1a-a4ca-d12e723d8d6f": {
+          "name": "Reflectie"
+        },
+        "9014dbe4-b770-43d6-aef5-77cf1e032bb9": {
+          "tips": [
+            null
+          ]
+        },
+        "b272663e-4596-4ddd-b25e-b3a5a0c165f7": {
+          "name": "Woordenschat"
+        },
+        "4183cc0f-f87e-4c3b-80e8-9b849d0aba39": {
+          "name": "Introductie"
+        },
+        "715c15b8-ce05-4be2-a6e3-63c7addc5abf": {
+          "progression_name": "Gebeurtenissen"
+        },
+        "d9624c03-8570-4129-a205-a8f6ca582aed": {
+          "progression_name": "Maten"
+        },
+        "617957c6-14b8-4db6-8018-1f81a191b624": {
+          "progression_name": "Eigenschappen"
+        },
+        "63a3dd77-4375-473b-baa6-45c56d551354": {
+          "tips": [
+            null
+          ]
+        },
+        "3e984275-638c-49e0-afb6-fc959cd05771": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "92a12478-0870-4331-a034-b5f1ed4164af": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "3bda4943-2f46-49ef-b85c-3da70c805c16": {
+          "name": "Reflectie"
+        },
+        "bcde2562-834f-4054-9106-c9f0ff082258": {
+          "name": "Inleiding tot Lussen"
+        },
+        "e26c0781-e8ca-4864-ab22-1af5ce60b1f4": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "31073c5d-beaf-420a-af98-4aa468a7b9d4": {
+          "tips": [
+            null
+          ]
+        },
+        "cbecc5ae-dfcc-4d98-8eea-4366ee0eade0": {
+          "name": "Reflectie"
+        },
+        "6169bc3a-deb5-4c4f-9860-10ba26c60214": {
+          "name": "Introductie"
+        },
+        "3315af90-e8ff-4568-813e-2b743e90bf30": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "9783ff04-38bf-4b15-8993-bac43ed681b2": {
+          "name": "Reflectie"
+        },
+        "9fe5d0e9-dadb-4541-9ebb-5eaa1acc5883": {
+          "name": "Introductie"
+        },
+        "791b5b99-593d-4287-ab93-a9970d63744e": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "69f426b1-49df-4b5c-a120-305de860c435": {
+          "name": "Reflectie"
+        },
+        "84144ea8-ec9f-40ad-925b-6170d47437ef": {
+          "name": "Woordenschat"
+        },
+        "a8dddc64-bf3e-4023-85b5-e202ec1a0eb6": {
+          "name": "Introductie"
+        },
+        "a89749a5-5e92-470a-90f8-0d7317019298": {
+          "name": "Statements met Kaarten"
+        },
+        "dda904ae-113f-4561-8a61-e9ed43297a47": {
+          "tips": [
+            null
+          ]
+        },
+        "5310e8c8-822b-4c59-baa0-4583cdf3d249": {
+          "name": "Reflectie"
+        },
+        "ff230610-bef8-421e-b37a-6d77e490ce3e": {
+          "name": "Introductie"
+        },
+        "268e56b4-6f3e-4a44-8383-2e538ae1ab72": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "3ea15706-caac-499b-aef5-a7210f291bfc": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "d9a92c19-1b83-49fa-bc9c-de8298122305": {
+          "name": "Reflectie"
+        },
+        "8ae849bd-292d-44e8-9ccd-9d9bfc86c592": {
+          "name": "Introductie"
+        },
+        "3edea7b4-3cb0-44c0-8705-5e2f51f2802d": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "a1959bb9-3d8d-46ac-826c-df29b6dcb135": {
+          "name": "Reflectie"
+        },
+        "f909f46d-5551-4020-b2d5-402aa7f10361": {
+          "name": "Introductie"
+        },
+        "3694bab1-5f1b-411a-8170-601003b9d32c": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "44daf4e4-d94e-4ba5-9364-8e3a93dc267e": {
+          "name": "Reflectie"
+        },
+        "cefe1ce5-6a04-45e4-8805-e5b94fff2197": {
+          "name": "Introductie"
+        },
+        "baf8f43c-6977-4f51-a3c6-3b571a735941": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "3f2558c3-0eb6-492f-b17b-0eeb7f5f393a": {
+          "name": "Reflectie"
+        },
+        "48252ddc-731f-41bc-9552-10c5aa32acce": {
+          "name": "Reflectie"
+        },
+        "bee3bff0-2e37-458f-89b1-b3cf1343271d": {
+          "name": "Plannen"
+        },
+        "e8e5a324-ff1a-4d75-b917-b0c405905904": {
+          "tips": [
+            null
+          ]
+        },
+        "db17d2d5-30dc-4b19-a5e6-543602d3d52e": {
+          "tips": [
+            null
+          ]
+        },
+        "558c0510-2a0d-4302-82d1-98f221ecec6f": {
+          "name": "Reflectie"
+        },
+        "4ec90698-6e58-4695-8fec-298eea182910": {
+          "name": "Introductie"
+        },
+        "e49cc3d9-d33e-4a2c-a549-9ba972b2bffa": {
+          "tips": [
+            null
+          ]
+        },
+        "a64d1695-0afd-4534-a16c-a790006e0193": {
+          "tips": [
+            null
+          ]
+        },
+        "a596d7dd-5533-4dea-b9f7-7dca09bafb6e": {
+          "tips": [
+            null
+          ]
+        },
+        "b747bce4-9f61-4265-a886-568636e698e4": {
+          "name": "Reflectie"
+        },
+        "920b8921-f3cf-4726-bbac-b414917f7bd0": {
+          "name": "Introductie"
+        },
+        "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
+          "tips": [
+            null
+          ]
+        },
+        "3f88f7fc-f308-44e8-ad91-df97a9080361": {
+          "tips": [
+            null
+          ]
+        },
+        "98dedd12-1d66-41ed-9629-e30265862d45": {
+          "tips": [
+            null
+          ]
+        },
+        "c0f0a327-9419-4966-a5cd-cfe23d312f09": {
+          "name": "Woordenschat"
+        },
+        "cf819fb5-aff2-47a4-9c0f-8ab6af6f218f": {
+          "tips": [
+            null
+          ]
+        },
+        "d5632c3a-b496-41b6-a90f-1c738211a438": {
+          "tips": [
+            null
+          ]
+        },
+        "c129fbec-8adf-45f8-9920-ccac97d6022f": {
+          "name": "Introductie"
+        },
+        "f64df1a5-3d41-4029-9a8c-1439d98d7386": {
+          "tips": [
+            null
+          ]
+        },
+        "70b98dfc-752d-47f0-a29f-2c39cbad42be": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "6007c0c9-9fe0-4bf5-9861-e64847bd3161": {
+          "name": "Reflectie"
+        },
+        "a39aeb31-f24a-4a70-b481-9fb3172e76cb": {
+          "tips": [
+            null
+          ]
+        },
+        "4a32f72b-2376-432d-8b3a-983f0fe9488b": {
+          "tips": [
+            null
+          ]
+        },
+        "c7ac5782-093f-43a4-a9df-c9b507e35a30": {
+          "name": "Reflectie"
+        },
+        "48748da0-02c7-49dd-9376-c8bacabc64ea": {
+          "name": "Beoordelen"
+        },
+        "71f32e49-99e7-46d2-9a4d-a6b0b07d5a17": {
+          "tips": [
+            null
+          ]
+        },
+        "304fbec8-0776-402a-9eeb-1e774da6bc0c": {
+          "tips": [
+            null
+          ]
+        },
+        "1025db18-dae1-40a6-ac7e-b38ceed1360d": {
+          "name": "Beoordelen"
+        },
+        "fdbe210a-89d4-489c-a834-a293569d0274": {
+          "name": "Reflectie"
+        },
+        "aef1a460-c4ee-406c-9f3e-2e9243f88502": {
+          "name": "Beoordelen",
+          "tips": [
+            null
+          ]
+        },
+        "b70948ff-b376-41dc-8c46-6572c8ab8241": {
+          "tips": [
+            null
+          ]
+        },
+        "9eb4bb34-8e86-4041-a410-dd8f833d20a4": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Plannen"
+        },
+        "ee6223c9-e041-4165-b451-70f4c8416e23": {
+          "tips": [
+            null
+          ]
+        },
+        "2db78276-8789-4046-8488-4ce232bc6bb2": {
+          "name": "Introductie"
+        },
+        "86834c6e-de76-4d6a-bc8d-5c6d2e8d760a": {
+          "tips": [
+            null
+          ]
+        },
+        "6962360d-5a78-47ae-8686-4038e83ebfbf": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "7d525905-cfd3-47a7-b70a-2d2a28c13fac": {
+          "name": "Introductie"
+        },
+        "44ade190-d83f-4460-87ae-c1e4dcaef911": {
+          "tips": [
+            null
+          ]
+        },
+        "8477c71b-b998-4915-9ed2-96f5adefe860": {
+          "name": "Beoordelen"
+        },
+        "37b1afe8-191f-4950-a1a9-3d3ba93ae3a0": {
+          "tips": [
+            null
+          ]
+        },
+        "75a9857e-a926-4c5a-a1ff-2307afce0d11": {
+          "tips": [
+            null
+          ]
+        },
+        "37214efe-4044-4968-8924-71472b1d2725": {
+          "name": "Introductie"
+        },
+        "280458d7-1de1-46dc-b42c-2be014890b38": {
+          "name": "Introductie"
+        },
+        "65a5c77d-65a0-4744-b99b-26f05b60ebf2": {
+          "name": "Reflectie"
+        },
+        "966897db-4aa7-4d18-81a8-27b4ef5100fe": {
+          "name": "Introductie"
+        },
+        "49647f1f-bc9a-402c-85c0-6338ea7c9541": {
+          "name": "Uitbraak"
+        },
+        "f43a5b4e-6e2d-4f24-b566-f942dc8ce78b": {
+          "progression_name": "Uitbraak"
+        },
+        "12dc3a29-9b6a-448a-91d7-c795731e097b": {
+          "tips": [
+            null
+          ]
+        },
+        "63fcf28c-54ae-4953-acfd-397dff2ce9d3": {
+          "name": "Reflectie"
+        },
+        "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
+          "tips": [
+            null
+          ]
+        },
+        "138f82fc-c0fe-4836-a4f8-a38e874680b5": {
+          "tips": [
+            null
+          ]
+        },
+        "97505f9d-3e88-4a48-8fb1-66a0dcb61e9e": {
+          "tips": [
+            null
+          ]
+        },
+        "f3a8670b-9954-45f9-af08-1689c799a427": {
+          "tips": [
+            null
+          ]
+        },
+        "5f554a52-41ac-4982-bfd0-e3deb97bc410": {
+          "name": "Reflectie"
+        },
+        "768fdc30-25c8-40ae-846a-6de108de3a9f": {
+          "name": "Introductie"
+        },
+        "f7e2b7b8-84ff-442f-bd6a-831da855966f": {
+          "tips": [
+            null
+          ]
+        },
+        "1b0d023d-bf54-4703-af7e-5d9fd45d755d": {
+          "tips": [
+            null
+          ]
+        },
+        "07e83a27-5530-4af9-bc71-88838f668e86": {
+          "tips": [
+            null
+          ]
+        },
+        "0965b5bc-06b2-458d-b6c5-9c6f9f2f6340": {
+          "name": "Het Internet"
+        },
+        "3b419e1c-6cbf-4940-b2a0-c12606b359e1": {
+          "tips": [
+            null
+          ]
+        },
+        "fc104032-9a2d-443a-96d0-e7f4c6de6782": {
+          "name": "Reflectie",
+          "tips": [
+            null
+          ]
+        },
+        "de7ab6f7-a853-4f00-b05d-a9db0bb2da2d": {
+          "tips": [
+            null
+          ]
+        },
+        "bad6c34f-b32e-4116-908c-7eb4fc2ca6a4": {
+          "tips": [
+            null
+          ]
+        },
+        "38c0b06f-e0b8-4739-b359-6513f419fd11": {
+          "tips": [
+            null
+          ]
+        },
+        "4b48da8b-113d-4b9b-94ff-c776a0cab3b9": {
+          "tips": [
+            null
+          ]
+        },
+        "1b707283-b28d-4147-921e-691c3e5325fe": {
+          "tips": [
+            null
+          ]
+        },
+        "7af8b468-66ad-4d3b-a9c3-2ff50362f027": {
+          "name": "Introductie",
+          "tips": [
+            null
+          ]
+        },
+        "9a18adb7-3bfe-410d-89dc-79ccde9c3419": {
+          "tips": [
+            null
+          ]
+        },
+        "9e16dba8-c792-499c-aa27-cbea95bf15cd": {
+          "tips": [
+            null
+          ]
+        },
+        "dce569eb-0a60-42a9-9e31-855a6b138f92": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "470b57f7-12df-47d0-acc3-63cb72051541": {
+          "name": "Reflectie"
+        },
+        "0dfd76e3-4d45-4581-b98f-141d1fcfc804": {
+          "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._"
+        },
+        "59a9f2f9-23f8-4562-a6ed-09063806bcff": {
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+        },
+        "3f7d6459-ecb9-4e7a-bf73-8cb15f8e9c4b": {
+          "name": "Hallo Wereld"
+        },
+        "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "ff807207-f4fc-4368-8df5-b4a35942dd53": {
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+        },
+        "ebbcd2fa-1991-41d3-a054-232b53cf8f17": {
+          "name": "Reflectie"
+        },
+        "8489f43d-dff8-41c9-aeca-e699cb7e8adc": {
+          "name": "Introductie"
+        },
+        "e3d34b0d-b3a0-49a0-9ff0-6d7bf1679b1c": {
+          "tips": [
+            null
+          ]
+        },
+        "f3d434b2-d9ce-4dce-b77b-2ed20f99734b": {
+          "name": "Reflectie"
+        },
+        "d058a787-37d6-4c25-b5c0-c427b5bc9373": {
+          "name": "Introductie"
+        },
+        "0f2d930f-f0ed-4b9a-b2f4-ba259ad3ee4a": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "9bc82847-83ea-45a1-bbf6-219144c13563": {
+          "name": "Reflectie"
+        },
+        "83e6c37d-1cc1-49b9-b208-79567063fb20": {
+          "name": "Introductie"
+        },
+        "1c8c1c88-3c2e-4c1b-bcf8-4e217730d0a6": {
+          "tips": [
+            null
+          ]
+        },
+        "45275988-8cf4-4043-b5a4-659cc090346a": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "cd8571ad-24a7-4231-92f5-ec2e33b8c7c2": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "0b5c0d6e-7e98-4c6e-afe5-0ef4e99677b0": {
+          "name": "Reflectie"
+        },
+        "0242f01c-8a92-4d38-9d15-93132d346a76": {
+          "name": "Introductie"
+        },
+        "f826bb4e-317d-4660-9b78-cd1ddb2adc50": {
+          "name": "Reflectie"
+        },
+        "b6db9c2f-2e77-42e0-bc68-93d8f8e9b4b4": {
+          "name": "Introductie"
+        },
+        "fa573a03-86f6-43da-ad41-1e726bc6fd8a": {
+          "tips": [
+            null
+          ]
+        },
+        "7633c66a-ea8d-4974-9b0a-3b1eeb1e7fa8": {
+          "tips": [
+            null
+          ]
+        },
+        "d3f1d3da-8013-4459-a62c-4a67b4457c61": {
+          "name": "Songwriting"
+        },
+        "850fd05d-eae1-4111-a12a-31ab15e4d5be": {
+          "tips": [
+            null
+          ]
+        },
+        "85d7cd29-59ea-4d90-909c-a8a16824797f": {
+          "name": "Reflectie",
+          "tips": [
+            null
+          ]
+        },
+        "e46c5e2b-810a-412d-b3c8-4866111b0589": {
+          "name": "Introductie"
+        },
+        "39448b98-4357-44bc-ad9a-84ed2a9b36a8": {
+          "tips": [
+            null
+          ]
+        },
+        "b52ccd27-4398-4746-83f5-b510154fb1d7": {
+          "tips": [
+            null
+          ]
+        },
+        "6ddf83bf-3856-4d68-a048-ac5a0ac26349": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "78a9d808-3832-4ea0-976e-f89295d9e96f": {
+          "name": "Reflectie"
+        },
+        "73440a78-9446-4eb3-859e-35c77ce9f79a": {
+          "name": "Introductie"
+        },
+        "6698a795-4281-4c01-a74e-ec5703f653b9": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "d6f43957-de44-4e64-8418-331e0bb6ee14": {
+          "name": "Reflectie"
+        },
+        "8628e382-350f-40de-9e22-d522ab7fd289": {
+          "name": "Introductie"
+        },
+        "cbae92bc-d7b3-4707-a5f9-c5b373bdaee7": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "a8369823-7441-45a9-993c-3546a2f85efe": {
+          "name": "Reflectie"
+        },
+        "7538f281-8565-4235-a3f1-a40a2679d73d": {
+          "name": "Introductie"
+        },
+        "a24e03d0-5524-46ec-ab96-a0b1d9b24d8b": {
+          "tips": [
+            null
+          ]
+        },
+        "4bfcc176-30cf-46d2-b6a1-7878cd32087f": {
+          "name": "Reflectie"
+        },
+        "93c7190d-ff63-4aa2-a7f5-cf7546acdb61": {
+          "name": "Introductie"
+        },
+        "be75c786-414d-4ba7-a1cf-bd5b444be3b2": {
+          "name": "Reflectie"
+        },
+        "e1fe5c10-383e-402b-a4c2-1efbbb6641c1": {
+          "name": "Reflectie"
+        },
+        "179685a9-6ed2-454f-8a2b-76c4032f1d16": {
+          "tips": [
+            null
+          ]
+        },
+        "3f9da29a-6132-4d1b-937a-5732b48eeb94": {
+          "tips": [
+            null
+          ]
+        },
+        "26e345f8-d754-44a5-9197-e0554116562e": {
+          "name": "Reflectie"
+        },
+        "a0f0bda0-512f-4e9c-8c28-1f749a2a7431": {
+          "tips": [
+            null
+          ]
+        },
+        "84a78eea-27de-4815-8e24-1323addfe7ab": {
+          "tips": [
+            null
+          ]
+        },
+        "5fa5c47a-6198-4e47-b5e6-f7784b309d54": {
+          "tips": [
+            null
+          ]
+        },
+        "0d42ae11-f1d5-498b-b68f-f559173be646": {
+          "tips": [
+            null
+          ]
+        },
+        "2f04713f-ee5f-4ad7-8696-b8b8b6683fb6": {
+          "tips": [
+            null
+          ]
+        },
+        "750a4241-a4da-4eca-a95b-f3157e20f199": {
+          "name": "verplaats het, verplaats het"
+        },
+        "8c941561-9506-4101-ad8a-d14a51edb181": {
+          "name": "Reflectie",
+          "tips": [
+            null
+          ]
+        },
+        "07c53b76-81d0-4254-bbce-a04c4dac3f38": {
+          "tips": [
+            null
+          ]
+        },
+        "70f8bf21-fc6d-4fac-b850-7c1a1694ce57": {
+          "tips": [
+            null
+          ]
+        },
+        "a51bc70a-8cae-4398-8259-5b5bd6138f18": {
+          "name": "Reflectie"
+        },
+        "c05c857d-b5f3-4136-b505-f9ab43799bcb": {
+          "tips": [
+            null
+          ]
+        },
+        "80691b85-b3f7-42c5-b28d-075f30bcfa91": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "59fe6808-f9a3-4cbb-b193-9684c40568b6": {
+          "tips": [
+            null
+          ]
+        },
+        "840ef87a-c952-47ea-be8c-cbae1a439635": {
+          "name": "Reflectie"
+        },
+        "4709a0b0-10cf-444a-95c2-79194cef926d": {
+          "name": "Introductie"
+        },
+        "90d01840-ab32-4ff1-9603-1a400df6c870": {
+          "tips": [
+            null
+          ]
+        },
+        "aed1d975-8125-46e1-b0dd-6c636c59a8f2": {
+          "name": "Reflectie"
+        },
+        "d7529639-1989-486a-994e-2c87b04b3113": {
+          "name": "Rondjes lopen"
+        },
+        "72b7082d-9ed1-465f-8d53-952202764c44": {
+          "tips": [
+            null
+          ]
+        },
+        "f7545286-de48-4da2-a7ef-769ca8896358": {
+          "name": "Reflectie"
+        },
+        "48078796-9a5d-47a8-890e-69e86fb1400a": {
+          "name": "Introductie"
+        },
+        "29ae7f90-120d-45cf-bdf6-fc0900726f05": {
+          "name": "Reflectie"
+        },
+        "8c6d11c7-2b53-47b4-a1f3-cc9587f2b10c": {
+          "name": "Introductie"
+        },
+        "6fd1b50c-48c1-4ebd-a36f-91027caf9587": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "74d465f8-f633-4ec1-a380-5e4c40b7ffc6": {
+          "name": "Reflectie"
+        },
+        "a60b1be5-48d8-4fcc-9203-bdc66d8effe9": {
+          "name": "Introductie"
+        },
+        "2351b0fa-15de-406b-b895-8b07d7858eda": {
+          "tips": [
+            null
+          ]
+        },
+        "b8b54f7e-0f68-46c7-84d1-756d1d134cdc": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "0d275833-51d3-4cdb-b05f-74807131d02b": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "35483307-6fef-40c2-8671-683c328b02d5": {
+          "name": "Reflectie"
+        },
+        "19e5ed07-db5c-4a14-9cd9-3c2e9b75b4a3": {
+          "name": "Reflectie"
+        },
+        "b54332ab-3838-4efd-b83b-0e44f83f3425": {
+          "name": "Introductie"
+        },
+        "ce7f096d-fa3c-425e-8e75-962fb8613e63": {
+          "name": "De grote gebeurtenis"
+        },
+        "09024fe7-6b74-4301-8367-5702b11c5e77": {
+          "tips": [
+            null
+          ]
+        },
+        "252c66a6-6257-4049-829c-1fc9fdef2303": {
+          "name": "Introductie"
+        },
+        "bde6629f-e67a-4eca-82de-7d379e9b22f2": {
+          "tips": [
+            null
+          ]
+        },
+        "d4687de2-d2c6-4e40-ae76-4daca6ebfe30": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "763a51bb-efc3-4451-92e7-1d455731442a": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "3d102930-9eee-4921-b3fc-9766a293a8df": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "d0be06d0-1065-4f45-a455-1dfbf15d0298": {
+          "name": "Reflectie"
+        },
+        "b1281f5a-4b11-4aa6-a521-bb70fa009c3d": {
+          "name": "Beoordelen",
+          "progression_name": "Project"
+        },
+        "5fb5744d-9d84-476f-b85a-dcd1fceba4f9": {
+          "progression_name": "Project"
+        },
+        "031f0aef-cd6b-4ca5-b894-a7d6a8eca2e1": {
+          "name": "Plannen",
+          "tips": [
+            null
+          ]
+        },
+        "23361af0-ba94-44b6-bc6c-fb6900fcc9dd": {
+          "name": "Project",
+          "progression_name": "Project"
+        },
+        "2af4acbc-a5cf-43b6-b7a7-e02e5949bcfb": {
+          "tips": [
+            null
+          ]
+        },
+        "1c38d573-e689-4c3a-84b6-f6c5deb4cd55": {
+          "name": "Introductie",
+          "tips": [
+            null
+          ]
+        },
+        "4124a6f9-58cd-4211-be8a-9930d9884d43": {
+          "tips": [
+            null
+          ]
+        },
+        "932d0cc0-5664-4aab-8653-df211e76c26f": {
+          "name": "Reflectie"
+        },
+        "50c37f50-7e2b-4c9c-9443-013742231b0e": {
+          "name": "Introductie"
+        },
+        "5b0bad48-bd8f-4217-aef6-6bd8250e1186": {
+          "name": "Woordenschat"
+        },
+        "27675226-8c0f-4955-ac5f-f9bfa4c7c475": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "54b676c0-ba39-450f-9828-5bba0ce6daf6": {
+          "name": "Reflectie"
+        },
+        "0ce0c382-a11b-4c74-ad59-41f02403b46b": {
+          "name": "Introductie"
+        },
+        "76775349-6666-411c-adea-ee7c7277587c": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "be73dc86-a16b-4ab3-8ac7-c1206d4b3c60": {
+          "name": "Reflectie"
+        },
+        "73186d8b-412c-447c-b31d-ba6efced8854": {
+          "name": "Introductie"
+        },
+        "3c6953b2-ead1-488b-b460-2735304f527f": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1be9e0-a252-42dc-a548-fb62c1c19e91": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "958d98ef-b327-40df-bffe-70bd71ac92bf": {
+          "name": "Reflectie"
+        },
+        "a9b4ed74-2780-4aa1-988a-c0fac2ae97f5": {
+          "name": "Introductie",
+          "tips": [
+            null
+          ]
+        },
+        "0e4c9d5d-95f3-4156-ad18-fbd153d4a7df": {
+          "tips": [
+            null
+          ]
+        },
+        "048bc86f-ea26-419c-9d73-452f86ff0000": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "c5b1c51f-e863-4951-9163-1777993f687b": {
+          "name": "Reflectie"
+        },
+        "84be2102-875d-40ee-af17-903a1eb15736": {
+          "name": "Reflectie"
+        },
+        "c4709ef3-6dff-44f9-ab00-7c8d4ceb84de": {
+          "tips": [
+            null
+          ]
+        },
+        "41f0b9b2-fd16-427b-808e-d70e4cc5b4f6": {
+          "name": "Reflectie"
+        },
+        "9e411d33-77b5-4582-b8e8-dedb36230af5": {
+          "name": "Introductie"
+        },
+        "e6d62a4b-b381-4ce6-9301-da64d2be269a": {
+          "tips": [
+            null
+          ]
+        },
+        "116adfa6-d62e-421c-aeff-c0d7a60cb4f0": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "fe969166-bb8d-4f28-b0a6-44222f2743bd": {
+          "name": "Reflectie"
+        },
+        "537232f4-4f8e-4dd4-9b51-122c0d012e9a": {
+          "progression_name": "Gebeurtenissen"
+        },
+        "06cef1c1-0946-4a77-acac-e9dec70a1573": {
+          "progression_name": "Maten"
+        },
+        "22d25455-4f87-44cb-aa36-b5adc00e1ba1": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Eigenschappen"
+        },
+        "24c3bf60-f0f7-4395-ae4c-12b4b0746c9f": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "1d794759-7ad3-4ae6-9ca6-2d16a8c492eb": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "99f1d214-501d-425f-87a6-b66407b328aa": {
+          "name": "Reflectie"
+        },
+        "0681ba72-f4b3-4587-ad2b-c4343ee5d7af": {
+          "name": "Introductie"
+        },
+        "34e6b039-ccae-45fe-9ab7-b690257c8f6c": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "e11dba21-83fa-49a4-9d4f-d30ab72efe16": {
+          "name": "Reflectie"
+        },
+        "5e8e6fbf-ad94-47ff-935e-155e7a92c73f": {
+          "name": "Introductie"
+        },
+        "ca09b8e6-6cc8-4fc5-a47e-3126629b1002": {
+          "tips": [
+            null
+          ]
+        },
+        "568dc8e1-9914-45bf-98bf-b878327ea8c1": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "6fc84d3c-2f86-40ab-b9bd-cd54d3700fe6": {
+          "name": "Reflectie"
+        },
+        "2f0beffd-547f-4c39-aad4-3f475ea744fe": {
+          "name": "Introductie"
+        },
+        "504c0708-e9cc-41e8-86b6-fcdcfc8c93e2": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "4a4f0910-32a3-4438-bcf6-e0206fbb3f32": {
+          "name": "Reflectie"
+        },
+        "012a07d9-4401-4f1b-9b2f-0ef2befba91e": {
+          "name": "Introductie"
+        },
+        "70819138-46a2-4cab-ae61-d4ed5995e49a": {
+          "name": "Reflectie"
+        },
+        "4df80825-7300-4e21-b3ec-5b1ecc62d490": {
+          "name": "Introductie"
+        },
+        "9798ab7a-f709-42df-b9fb-1828099a88d3": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "57cf4b4c-bc9c-480c-8645-715b23cedd68": {
+          "name": "Reflectie"
+        },
+        "414b0efd-1356-4677-9c30-303d3c0afb41": {
+          "name": "Introductie"
+        },
+        "9419a044-4ad7-4a3f-8718-fc5606ed7958": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "f8ca4dfb-527e-420d-b6ff-5e528347a1f9": {
+          "name": "Reflectie"
+        },
+        "137d4f7b-efec-4607-97b0-e4838274a5c9": {
+          "name": "Introductie"
+        },
+        "8e573a8a-22a7-4169-b45d-5901ba99c8df": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "aeb654df-63a6-4b86-913a-5041ccd70d0a": {
+          "name": "Reflectie"
+        },
+        "eababef0-4852-4c6f-b5db-2021e532c24d": {
+          "name": "Introductie"
+        },
+        "828088e0-ab60-429b-ac4b-4317696c271c": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "1b800ef1-9bc4-4366-8510-0539d35b80a1": {
+          "name": "Reflectie"
+        },
+        "d5f6ef42-7dc3-4862-a568-590c2a26c7fa": {
+          "name": "Introductie"
+        },
+        "2ec4116a-6ea6-453e-8c52-ffc4b55077c0": {
+          "name": "Reflectie"
+        },
+        "d89fd667-2100-4ea0-ac33-c25c317c1138": {
+          "name": "Introductie"
+        },
+        "b0e26070-0ca9-4033-9497-dcaaf64de124": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "a96ae178-a2f2-4d14-a5e6-622e33ead4ea": {
+          "name": "Reflectie"
+        },
+        "fbf95927-5c0c-4980-bbb6-7a4bc75da827": {
+          "name": "Introductie",
+          "tips": [
+            null
+          ]
+        },
+        "22f29e56-1a7c-402b-aaf8-bd5bae9e6546": {
+          "tips": [
+            null
+          ]
+        },
+        "0cb275f3-0f5c-4b45-a456-c3acd5a7b82d": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "5284ee61-2ef7-4772-8473-6d25d45dbb65": {
+          "name": "Reflectie"
+        },
+        "d2c0374f-fce3-4290-9058-8a47a9b14357": {
+          "name": "Introductie"
+        },
+        "bf38bf0f-7ad7-4a0a-af66-0b71c6213644": {
+          "name": "Reflectie"
+        },
+        "5f8d119b-736b-416c-b460-0cf8c13f4d49": {
+          "name": "Introductie"
+        },
+        "556d480c-8833-4dc1-b5ea-fcbd1ed85890": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "bc303f43-1995-42e4-887d-02233e2a5905": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "64524054-11ee-4769-ab63-83921f0fa6d3": {
+          "name": "Reflectie"
+        },
+        "71d834a2-aedf-4d4c-95d4-4961964ad2f9": {
+          "name": "Beoordelen"
+        },
+        "30ab0425-1627-48c1-96fe-419887aa0ae7": {
+          "tips": [
+            null
+          ]
+        },
+        "515ecad5-bd7d-46e5-b210-53f7e7a3d43b": {
+          "tips": [
+            null
+          ]
+        },
+        "045bb481-c045-49d5-874c-41f39b32980b": {
+          "name": "Beoordelen"
+        },
+        "36962720-1371-45ca-a0b0-f2c29c0aee51": {
+          "name": "Reflectie"
+        },
+        "aa72fe0f-492d-4c13-827d-43918664378e": {
+          "name": "Introductie"
+        },
+        "bb115604-d0c7-4483-98c0-2d59d04351bb": {
+          "tips": [
+            null
+          ]
+        },
+        "d51c423f-e3c0-482f-be51-85c0ea2fac87": {
+          "name": "Beoordelen"
+        },
+        "be0c1c94-6eec-4c10-b90f-59da0ebb1a63": {
+          "tips": [
+            null
+          ]
+        },
+        "3448e98d-17c0-47c5-a924-ce769b817cd5": {
+          "tips": [
+            null
+          ]
+        },
+        "d87717c8-d527-450d-9bdb-e8932caba6a1": {
+          "name": "Beoordelen"
+        },
+        "29bc9a2b-2f0e-4f9f-becf-3264d6d93b43": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "65203df8-9f72-4d3a-9666-25fd7cb97962": {
+          "name": "Reflectie"
+        },
+        "25e6419e-5475-4864-a3db-c05f2d873436": {
+          "name": "Introductie"
+        },
+        "a615a593-2c9c-4eaf-af4d-e20ec484ef9c": {
+          "name": "Reflectie"
+        },
+        "4c108344-ee78-432c-bec0-21f055aec442": {
+          "name": "Introductie"
+        },
+        "9d7beb7b-eaf8-43ce-ae6a-2340a5b5c3d8": {
+          "progression_name": "Beoordelen"
+        },
+        "ea00f202-5974-43d9-831a-37197acb6673": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "84eb44ea-5fc3-46cf-8aa9-df823a4c76c0": {
+          "name": "Reflectie"
+        },
+        "bb3c50cd-8d7e-457a-b39d-2fe3172f0e9e": {
+          "name": "Introductie"
+        },
+        "6632ae59-76a8-4f0d-bb29-fc591020ed93": {
+          "tips": [
+            null
+          ]
+        },
+        "f8950515-c428-4508-b465-0930dcbb9d57": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "61a1cba1-c9b5-40c9-bbad-e4633be05b85": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "f9e39772-a5dd-4139-aafb-13d5e7ac4da0": {
+          "name": "Reflectie"
+        },
+        "2db3039b-c245-429c-9232-dd4165a45bb6": {
+          "name": "Plannen"
+        },
+        "464b07bf-434b-4b29-8115-fb7ad1d15f56": {
+          "tips": [
+            null
+          ]
+        },
+        "926aed8f-c241-4aff-9dac-6045708f27d7": {
+          "tips": [
+            null
+          ]
+        },
+        "de1b7224-82b6-4f1e-aa81-b9aebc78c6b1": {
+          "name": "Introductie",
+          "tips": [
+            null
+          ]
+        },
+        "f1cf91eb-60a1-478e-a6e8-926270f90a9c": {
+          "tips": [
+            null
+          ]
+        },
+        "749e673c-fb7b-4101-9308-78d14af34b57": {
+          "tips": [
+            null
+          ]
+        },
+        "e7ff4d51-6bd2-4e1b-9da4-71c9c010c069": {
+          "tips": [
+            null
+          ]
+        },
+        "9374c17f-89e9-405d-9c08-996fbf90e971": {
+          "name": "Reflectie"
+        },
+        "f1441fec-0659-46e7-b4a8-e5faada350e9": {
+          "tips": [
+            null
+          ]
+        },
+        "638a5ac0-e923-4fd6-8665-22fc3dadc820": {
+          "tips": [
+            null
+          ]
+        },
+        "eb919624-2302-4134-8c74-8b0dbf96bd33": {
+          "tips": [
+            null
+          ]
+        },
+        "025d52e0-f429-4572-9ee1-af893e4208ae": {
+          "name": "Reflectie"
+        },
+        "45d87d50-30ef-4aa3-bc3f-e06911ea7ecd": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "be7516c7-7930-4a50-afac-99d9ff233e72": {
+          "tips": [
+            null
+          ]
+        },
+        "311a4a95-ba40-4a09-8020-efcbdd67def8": {
+          "name": "Reflectie"
+        },
+        "0918b0a2-6581-4f48-b0f1-4ef6a2b114ce": {
+          "name": "Introductie"
+        },
+        "36f25ad7-3b6e-446c-9c8a-85b50c7ed131": {
+          "name": "Reflectie"
+        },
+        "951923b1-6912-477c-b97f-b4f9d6f71f62": {
+          "name": "Introductie"
+        },
+        "30e8181b-a550-477d-9dd7-c9eb8ed6a671": {
+          "tips": [
+            null
+          ]
+        },
+        "9bb9132b-8c9b-48ca-9ab8-61dbd56e5bde": {
+          "name": "Reflectie"
+        },
+        "e0d79c69-a899-455f-b74d-670229a86973": {
+          "name": "Introductie"
+        },
+        "40bca876-4212-4432-8e78-451ac05d4b6a": {
+          "tips": [
+            null
+          ]
+        },
+        "11413c79-9a85-4bc9-8f69-4880828b1218": {
+          "tips": [
+            null
+          ]
+        },
+        "40e8bdb1-49b6-4e8a-88ec-fd980627ed4e": {
+          "name": "Reflectie"
+        },
+        "ea1b43fd-047d-4ed2-a8f6-9c639ec26416": {
+          "name": "Introductie"
+        },
+        "371fe3c3-843c-447c-b5c2-337d8584e873": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "944b3c69-e65e-4051-9002-fb0900103e22": {
+          "name": "Reflectie"
+        },
+        "524c769b-ceae-4bde-906e-c73bde2ce3e9": {
+          "name": "Introductie"
+        },
+        "58f96f9e-2ea8-433e-a770-1eec5ead2f83": {
+          "tips": [
+            null
+          ]
+        },
+        "45027086-96db-45ba-baa9-2983b677e8c9": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "ac9f4b18-ea6f-4e24-bcfc-07ae916db178": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "1ab77e7d-e239-43a3-a293-b142e9dd5950": {
+          "name": "Reflectie"
+        },
+        "1e964e3a-33dc-4a31-b893-44e0b55c0ad6": {
+          "name": "Introductie"
+        },
+        "4e80fb44-708d-420f-8ae7-c36bfdd20075": {
+          "tips": [
+            null
+          ]
+        },
+        "1c1d446d-d36d-4429-9aa9-c043841d460a": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "74ab6d31-39e4-4ccf-941d-819c20c60c91": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "98e68d36-87f1-4cfe-b988-63f9b3b51882": {
+          "name": "Reflectie"
+        },
+        "44c1a7f9-c83d-4be4-a263-05383ae1eadb": {
+          "name": "Introductie",
+          "tips": [
+            null
+          ]
+        },
+        "2e28db00-9470-4dcb-9a9b-7098dbf5c12b": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "8a9bb5d1-721a-426a-9002-318e30cdef0f": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "dd1fd06b-92d8-4020-a58b-034802f65cc8": {
+          "name": "Reflectie"
+        },
+        "813d23e7-c45b-4fe4-b010-6f03fe92e572": {
+          "name": "Introductie"
+        },
+        "7e3a5e36-8b18-4987-843e-044f09be9746": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "ac20896a-a275-4b6f-a06b-3ffdc83bbb7e": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "7f9c451a-0554-4989-b7c8-506ea91062ba": {
+          "name": "Reflectie"
+        },
+        "5e98b1b4-ab1d-4607-8234-fb70c37ae557": {
+          "name": "Introductie"
+        },
+        "15b4677a-d313-433b-848f-8e1a9e87f4cd": {
+          "tips": [
+            null
+          ]
+        },
+        "e9117446-0648-4712-9bab-f477cc4a7763": {
+          "tips": [
+            null
+          ]
+        },
+        "4297e33f-2028-4d9e-bfe0-76e774c504a5": {
+          "tips": [
+            null
+          ]
+        },
+        "719202e7-e59f-44af-9208-46eb120b3ba0": {
+          "name": "Reflectie",
+          "tips": [
+            null
+          ]
+        },
+        "6b3b5eca-1657-4a57-a9d4-883dc76a29cb": {
+          "name": "Introductie"
+        },
+        "faec25bb-b1b4-4747-8e97-f0c41662b482": {
+          "tips": [
+            null
+          ]
+        },
+        "e5dabc9f-6cc6-4b50-a17c-0a5123f9ac88": {
+          "tips": [
+            null
+          ]
+        },
+        "8c2933b9-50b1-4afc-a874-66dc23214d4b": {
+          "tips": [
+            null
+          ]
+        },
+        "d07a1c3b-33e7-48f9-8d4a-0e4faecf0780": {
+          "name": "Reflectie"
+        },
+        "312dff10-c9dd-416d-8ef0-210bcb685fa8": {
+          "tips": [
+            null
+          ]
+        },
+        "e84627a8-41ba-41d3-a123-d46a326f856b": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "398d751a-0d3a-4a34-8467-cf803d7a6281": {
+          "tips": [
+            null
+          ]
+        },
+        "68748ea0-ad5d-4640-8995-bbff7bfb6773": {
+          "name": "Reflectie"
+        },
+        "bcfc82a8-7ed5-47c7-8184-f0aa05afeddf": {
+          "name": "Introductie"
+        },
+        "5113fd38-2355-414d-a7dd-788095e60406": {
+          "name": "Reflectie"
+        },
+        "dad2daad-3c3c-4b68-9796-dce5981083a9": {
+          "name": "Introductie"
+        },
+        "2f7c8637-9aa4-491f-af7c-df240d557802": {
+          "name": "Reflectie"
+        },
+        "17baac3e-ab60-45f1-9dea-6fb6e3c0431f": {
+          "tips": [
+            null
+          ]
+        },
+        "c5fcb254-af51-4f8b-bb55-a534fb3d5ea2": {
+          "tips": [
+            null
+          ]
+        },
+        "da0d9b08-22ef-4f7d-b750-31f702a06784": {
+          "tips": [
+            null
+          ]
+        },
+        "ef057008-aef8-4c2c-a75c-23189a1b3a38": {
+          "name": "Reflectie"
+        },
+        "56c7b066-bfc1-4b16-978f-c37a858e03f8": {
+          "name": "Introductie"
+        },
+        "f8d8870a-a1a1-466e-bb0f-951d64a2a3ec": {
+          "tips": [
+            null
+          ]
+        },
+        "80af1f77-e7b7-4e3e-b7a8-b5ab36c034af": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "afed6615-ef47-44c9-ad3a-931cdf64a11e": {
+          "name": "Reflectie"
+        },
+        "7b804016-339b-43f0-b33b-80f59f2dd53f": {
+          "name": "Introductie"
+        },
+        "31c7212e-56c7-41b0-97c8-277498149ef7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Vrije Speelruimte"
+        },
+        "1b6b82d9-b633-495a-af03-89fa93248a26": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "15fda5f6-8cd7-4ba8-8e3a-11930d5df80f": {
+          "name": "Reflectie"
+        },
+        "908f9b6e-4e8e-470e-948b-3060262e2d65": {
+          "name": "Introductie"
+        },
+        "1cf3f2c2-cbae-48d6-b12c-579dea91d4ee": {
+          "name": "De grote gebeurtenis",
+          "tips": [
+            null
+          ]
+        },
+        "6feb1e3e-d5bc-4e4b-af93-cde03dd1a769": {
+          "name": "Reflectie",
+          "tips": [
+            null
+          ]
+        },
+        "7d8ebbc5-ba01-4ba5-b2c9-e29d0e25e96e": {
+          "name": "Beoordeling"
+        },
+        "ebbfd882-a637-4029-af3d-6238838878f0": {
+          "name": "Introductie"
+        },
+        "6a7e8f19-fa58-48f8-bbf5-a32c80d3e742": {
+          "tips": [
+            null
+          ]
+        },
+        "c8827180-bb39-48f4-b7bd-bf5804cc5830": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "7091b047-7dd1-4622-abf4-477933f4e759": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "fa68abb6-1549-4910-9b4e-7c1dcd17c68d": {
+          "name": "Reflectie"
+        },
+        "eaf088f5-1fd2-48c5-94c7-cea53aa102c8": {
+          "name": "Beoordelen",
+          "progression_name": "Project"
+        },
+        "04be5fa4-0840-4707-9fb5-9e107ce342d8": {
+          "progression_name": "Project"
+        },
+        "b2a0edc8-b5bc-4798-8b44-7149d863a8ab": {
+          "name": "Plannen",
+          "tips": [
+            null
+          ]
+        },
+        "346269ec-d737-4b4f-a539-ea4c4b066609": {
+          "name": "Project",
+          "progression_name": "Project"
+        },
+        "70d5ed4e-2d56-4271-8005-8af00a99cbdb": {
+          "tips": [
+            null
+          ]
+        },
+        "9f5921d9-6813-471c-8c16-40e622971021": {
+          "name": "Woordenschat"
+        },
+        "a37ca2d2-fd44-4b34-ad75-d6caf1c8fffa": {
+          "name": "Introductie"
+        },
+        "4e9eaee6-773f-429b-b274-d6c22d4c6457": {
+          "name": "My Robotic Friends"
+        },
+        "3a67bae9-a51b-4f5a-a4c6-99da3b5103b6": {
+          "tips": [
+            null
+          ]
+        },
+        "e24379b7-bf97-4179-948d-ea5af39d8089": {
+          "name": "Reflectie",
+          "tips": [
+            null
+          ]
+        },
+        "f200bbb3-21c5-4805-ae91-c6418a1309b7": {
+          "name": "Woordenschat"
+        },
+        "b5199fed-e3e0-4a59-b01f-e9b40b861d5c": {
+          "name": "Introductie"
+        },
+        "3fa1b9bd-496c-4731-90d8-c5710952901e": {
+          "tips": [
+            null
+          ]
+        },
+        "bb92650a-2be6-4f30-b851-611c2401aa32": {
+          "tips": [
+            null
+          ]
+        },
+        "314f4a1b-1e3f-437f-805a-a0ecbfe8fa62": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "56c77c77-8074-4fec-b1ee-50ad68c2a10d": {
+          "name": "Reflectie"
+        },
+        "0d59aa71-1a4e-4fd3-8a95-3f0f23933b47": {
+          "name": "Woordenschat"
+        },
+        "e681233b-1029-4530-a3ef-4842b8254aa6": {
+          "name": "Introductie"
+        },
+        "04d056ec-242f-479a-b11e-eee90775ef0f": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "b29c4e41-3e9a-45c7-8132-e66d4af738b9": {
+          "name": "Reflectie"
+        },
+        "7e073b00-f336-4d89-a848-f79ee9a8bc23": {
+          "name": "Woordenschat"
+        },
+        "505c83de-b318-4a7d-9a4b-9da377a5b0d8": {
+          "name": "Introductie"
+        },
+        "520f7482-b58c-4d37-94b7-fa8c4d83314b": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "4ab4040a-556d-4dfd-9d56-8730be8041ac": {
+          "name": "Reflectie"
+        },
+        "7e945f73-76d3-4b83-817d-2b9af9789dd7": {
+          "name": "Woordenschat"
+        },
+        "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
+          "name": "Introductie"
+        },
+        "12b5328f-3f65-46e2-b3e7-9426b47e1f31": {
+          "tips": [
+            null
+          ]
+        },
+        "5e09ab58-a2b1-48ad-89fd-47565cfa09e3": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "fb85f373-fbf3-4b4c-a7d4-878c77ab3d99": {
+          "name": "Reflectie"
+        },
+        "bcf1fc52-7c45-4c27-928d-9535649691dc": {
+          "name": "Woordenschat"
+        },
+        "129d2408-3ca5-4a8e-90b1-f5ad3d0e6c48": {
+          "name": "Introductie"
+        },
+        "b1974523-e458-4364-aeb2-80f00e6de4bd": {
+          "tips": [
+            null
+          ]
+        },
+        "373c8a50-ff0d-4677-98aa-a2492f33c9f2": {
+          "name": "Reflectie"
+        },
+        "25f3c528-ac14-47ff-b254-cd071d8737ff": {
+          "name": "Woordenschat"
+        },
+        "be9470c8-795f-4e1d-83f2-069961c852d2": {
+          "name": "Introductie"
+        },
+        "a9c1c890-7b91-4f1a-a207-155306c84f5e": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "58e08b96-df9d-4862-98c6-872f29a5e215": {
+          "name": "Reflectie"
+        },
+        "3c79c590-2f48-4931-b8fa-736281002766": {
+          "name": "Woordenschat"
+        },
+        "d83224a8-1d43-4640-9bd6-929d52011c77": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "63b4337c-4ae6-43ee-99ae-3f637cd0c29d": {
+          "name": "Reflectie"
+        },
+        "305f3738-2a15-46f7-bef1-c405a63b948d": {
+          "name": "Woordenschat"
+        },
+        "f4370643-7030-4064-a1a5-5d5385a91c80": {
+          "name": "Introductie"
+        },
+        "f5af8f45-b9fa-46f2-8006-05af25fe0b04": {
+          "tips": [
+            null
+          ]
+        },
+        "c5f36648-ac0d-405f-af7a-3020ebdce7f3": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "5ef885b2-0000-4e19-b7be-39fe06f3b7e7": {
+          "name": "Reflectie"
+        },
+        "438866ae-0223-4f9f-badd-3457a85f7c7a": {
+          "name": "Introductie"
+        },
+        "b5d0ecce-50d3-4d8f-8143-eb3bcd6a52b0": {
+          "name": "Woordenschat"
+        },
+        "8816065c-5d3c-4cc9-95a3-f96c88edbb62": {
+          "name": "De grote gebeurtenis"
+        },
+        "81ac2e94-8470-41a8-a506-505bf1bd3fac": {
+          "tips": [
+            null
+          ]
+        },
+        "072ac15c-51ea-444a-ba24-2d1da32a8b2d": {
+          "name": "Reflectie",
+          "tips": [
+            null
+          ]
+        },
+        "c14e31a9-2968-4510-926a-0227df66db89": {
+          "tips": [
+            null
+          ]
+        },
+        "4184cd8d-7e62-44ac-91e2-fa4c825a3aa7": {
+          "name": "Woordenschat"
+        },
+        "49e86e55-b607-4af6-bdb6-b912549b69ea": {
+          "name": "Introductie"
+        },
+        "ddee86f6-7f1f-41b8-bd96-f891312addb0": {
+          "tips": [
+            null
+          ]
+        },
+        "d0ea24ff-eed4-4232-af00-1aebf8a9c264": {
+          "name": "Reflectie"
+        },
+        "8f34487c-1c94-4472-80bd-7e53befee5f6": {
+          "name": "Woordenschat"
+        },
+        "e0573e5e-1308-46de-b4aa-d856b692817d": {
+          "name": "Introductie"
+        },
+        "6728fc70-4eea-4c9e-8b55-b5643cb406f1": {
+          "tips": [
+            null
+          ]
+        },
+        "657133fd-6697-4f38-8ef7-8f53811eb2ef": {
+          "progression_name": "Vrije Speelruimte"
+        },
+        "f0b5eef7-fc2b-430a-84d1-0db90863beac": {
+          "progression_name": "Extra bij Lessen"
+        },
+        "6449b59e-03df-41af-9bea-a74772120074": {
+          "name": "Reflectie"
+        },
+        "565fdda1-dbbe-4521-aacf-966c4aa204e3": {
+          "name": "Woordenschat"
+        },
+        "d7a9e0cd-a7e6-46de-910f-3f0e1216f055": {
+          "name": "Introductie"
+        },
+        "4a782ed3-3443-4139-a1bd-88f562c4386e": {
+          "tips": [
+            null
+          ]
+        },
+        "f1f2356e-8e7b-400a-9635-bb31159e2a0f": {
+          "name": "Reflectie"
+        },
+        "ac8248ed-61d0-4366-876a-0c145094fa03": {
+          "name": "Woordenschat"
+        },
+        "04091b34-9c0a-44fa-bce4-dd57c3c8f2b2": {
+          "name": "Introductie"
+        },
+        "fee740e0-f88d-4032-b68e-a6e113d2195d": {
+          "name": "Binaire armbanden"
+        },
+        "c4611983-43d6-441a-9663-bda13932452c": {
+          "tips": [
+            null
+          ]
+        },
+        "55aaddae-3714-4289-8bdc-04796645b397": {
+          "tips": [
+            null
+          ]
+        },
+        "3568529d-36f9-48e4-8075-63bf63a1b309": {
+          "name": "Reflectie"
+        },
+        "eb8e74ca-2768-4a33-9c4d-0493db0c6aaa": {
+          "name": "Plannen"
+        },
+        "02b5b8f3-446d-44c5-a594-570e2ff87324": {
+          "tips": [
+            null
+          ]
+        },
+        "e1b47918-ca9e-4c5f-ad78-4fe271e12f47": {
+          "tips": [
+            null
+          ]
+        },
+        "b8275a09-3de2-42a9-844f-0ac27f7ee3ea": {
+          "progression_name": "Project"
+        },
+        "5f1c9827-a478-4cf6-98b2-8834ef534cff": {
+          "name": "Reflectie"
         },
         "3640be62-d6b4-4e99-a1c0-b4a53c1e202f": {
           "tips": [
@@ -5220,26 +7062,26 @@
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Vandaag gaan we onze creativiteit gebruiken terwijl we leren coderen. Er zijn veel manieren om creatief te zijn. Wat zijn jouw manieren om creatief te zijn?"
+          "description": "Vandaag gaan we onze creativiteit gebruiken terwijl we leren coderen. Er zijn veel manieren om creatief te zijn. Wat zijn jouw manieren om creatief te zijn?\n"
         },
         "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
           "description": "Moedig de leerlingen aan om te vertellen hoe zij hun creativiteit uiten, bijvoorbeeld met kunst, dans, muziek of schrijven. Vraag de leerlingen, als vervolgvraag, wat zij gebruiken om hun inspiratie te krijgen voor hun creativiteit. "
         },
         "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Wist je dat informatica heel creatief kan zijn? Je kunt zelfs kunst maken met code. Ter herinnering: code is een reeks instructies die een computer kan begrijpen. Net als het kiezen van verfkleuren kan ook de keuze van de code die je schrijft een mogelijkheid zijn om je creativiteit te uiten! \n\nWe gaan vandaag poëzie gebruiken om onze creatieve codering te inspireren. Weet iemand wat poëzie is? Heb je een favoriete gedicht of dichter? "
+          "description": "Wist je dat informatica heel creatief kan zijn? Je kunt zelfs kunst maken met code. Ter herinnering: code is een reeks instructies die een computer kan begrijpen. Net als het kiezen van verfkleuren kan ook de keuze van de code die je schrijft een mogelijkheid zijn om je creativiteit te uiten! \n\nWe gaan vandaag poëzie gebruiken om onze creatieve codering te inspireren. Weet iemand wat poëzie is? Heb je een favoriete gedicht of dichter? \n"
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
           "description": "**Lees samen poëzie:** Lees samen als klas een [few poems][0] en oefen het benoemen van de stemming van elk gedicht. Moedig de leerlingen aan hun interpretatie te delen, zelfs als die verschilt van die van iemand anders. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Poëzie",
-          "description": "#### Algemene ondersteuning\n\nAan het eind van deze activiteit hebben de leerlingen een geanimeerd gedicht dat hun visuele interpretatie weergeeft van het gekozen gedicht. Deze les is bedoeld om leerlingen de mogelijkheid te geven aan hun code te sleutelen en de visuele effecten te vinden die zij het leukst vinden. \n\nTerwijl je door de klas loopt moedig je de leerlingen aan om:\n\n-   **Neem de tijd:** Op de meeste niveaus moeten de leerlingen de perfecte effecten vinden die passen bij hun interpretatie van de stemming van het gedicht. Op niveau blijven en sleutelen aan de code wordt sterk aangemoedigd. \n\n-   **Vind een gedicht dat je bevalt:** Het gedicht dat op een nieuw niveau staat voor een leerling, is slechts een suggestie. Bovenaan de speelruimte is een keuzemenu met voorgeïnstalleerde gedichten. Vraag de leerlingen er een paar door te lezen en er een uit te kiezen die hen aanspreekt. Ze kunnen dan het gedicht dat ze gekozen hebben gaan animeren met code. \n\n-   **Laat een voltooid niveau zien:** Een volledig groene niveaulijst betekent dat de leerling met succes aan alle vereisten voor dat niveau heeft voldaan. Vraag een leerling op een groene bubbel te klikken om te laten zien wat hij gemaakt heeft. \n\nVoor de momenten dat een leerling vastzit: \n\n-   **Lees de instructies:** De instructies zijn opsommingstekens over hoe het niveau kan worden voltooid. Als een leerling het gevoel heeft dat hij niet verder komt, vraag hem dan de instructies hardop voor te lezen en vraag hem de instructies in zijn eigen woorden na te zeggen. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Leerlingen kunnen ook op dit tekst-naar-spraak-pictogram klikken om de instructies te horen voorlezen.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zoek hints**: De meeste niveaus bevatten minstens één hint met meer expliciete details over hoe je het niveau haalt. \n-   **Koester bugs:** Een bug in je code is een natuurlijk onderdeel van het codeerproces. Als het programma niet doet wat ze verwachtten, vraag de leerling dan eerst te vertellen wat hij wil dat er gebeurt. Klik op uitvoeren om te zien wat er werkelijk gebeurt, en zoek dan de plaats in zijn code die de afwijking veroorzaakt. Vergeet blij te zijn met de bugs die je vindt en repareert. Een bug krijgen betekent dat leerlingen goed werk leveren bij het bouwen van een complexer programma. "
+          "description": "#### Algemene ondersteuning\n\nAan het eind van deze activiteit hebben de leerlingen een geanimeerd gedicht dat hun visuele interpretatie weergeeft van het gekozen gedicht. Deze les is bedoeld om leerlingen de mogelijkheid te geven aan hun code te sleutelen en de visuele effecten te vinden die zij het leukst vinden. \n\nTerwijl je door de klas loopt moedig je de leerlingen aan om:\n\n-   **Neem de tijd:** Op de meeste niveaus moeten de leerlingen de perfecte effecten vinden die passen bij hun interpretatie van de stemming van het gedicht. Op niveau blijven en sleutelen aan de code wordt sterk aangemoedigd. \n\n- **Vind een gedicht dat je bevalt:** Het gedicht dat op een nieuw niveau staat voor een leerling, is slechts een suggestie. Bovenaan de speelruimte is een keuzemenu met voorgeïnstalleerde gedichten. Vraag de leerlingen er een paar door te lezen en er een uit te kiezen die hen aanspreekt. Ze kunnen dan het gedicht dat ze gekozen hebben gaan animeren met code. \n\n-   **Laat een voltooid niveau zien:** Een volledig groene niveaulijst betekent dat de leerling met succes aan alle vereisten voor dat niveau heeft voldaan. Vraag een leerling op een groene bubbel te klikken om te laten zien wat hij gemaakt heeft. \n\nVoor de momenten dat een leerling vastzit: \n\n- **Lees de instructies:** De instructies zijn opsommingstekens over hoe het niveau kan worden voltooid. Als een leerling het gevoel heeft dat hij niet verder komt, vraag hem dan de instructies hardop voor te lezen en vraag hem de instructies in zijn eigen woorden na te zeggen. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Leerlingen kunnen ook op dit tekst-naar-spraak-pictogram klikken om de instructies te horen voorlezen.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zoek hints**: De meeste niveaus bevatten minstens één hint met meer expliciete details over hoe je het niveau haalt. \n- **Koester bugs:** Een bug in je code is een natuurlijk onderdeel van het codeerproces. Als het programma niet doet wat ze verwachtten, vraag de leerling dan eerst te vertellen wat hij wil dat er gebeurt. Klik op uitvoeren om te zien wat er werkelijk gebeurt, en zoek dan de plaats in zijn code die de afwijking veroorzaakt. Vergeet blij te zijn met de bugs die je vindt en repareert. Een bug krijgen betekent dat leerlingen goed werk leveren bij het bouwen van een complexer programma. \n"
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Niveau-voor-niveau ondersteuning\n\n**Niveau 1:** Moedig de leerlingen aan het gedicht door te lezen. Vraag de leerlingen dan een achtergrondkleur of -effect te vinden dat past bij de toon van het gedicht dat ze hebben gekozen. \n\n**Niveau 2:** In dit voorbeeld moeten de leerlingen het gedicht eerst zelf lezen en dan op Uitvoeren drukken. Je kunt de leerling vragen of het geluid en de effecten die de programmeur koos, pasten bij de stemming van het gedicht. Vraag de leerlingen hun antwoord uit te werken. \n\n**Niveau 3:** Dit niveau introduceert geluid. Leerlingen kunnen een koptelefoon gebruiken als ze die hebben. \n\n**Niveau 4:** Vraag de leerlingen het gedicht te lezen en de regel te vinden waar de stemming in het gedicht verandert of waar de dichter een nieuw beeld introduceert. Gebruik het gebeurtenissenblok om overeenkomstige effecten toe te voegen aan de geïdentificeerde regels van het gedicht. \n\n**Niveau 5:** In dit voorbeeld moeten de leerlingen het gedicht eerst zelf lezen en dan op Uitvoeren drukken. Vraag de leerling of de beelden overeenkomen met de woorden van het gedicht. Vraag ze hun antwoord uit te werken. \n\n**Niveau 6, 7, 8:** Zie \"Koester bugs\\*\\* onder het kopje Algemene ondersteuning. Moedig leerlingen aan om programma's met meer dan één overgang te bouwen met hun gebeurtenisblokken. \n\n**Niveau 9:** Moedig de leerlingen aan om alle gedichten in het keuzemenu door te lezen om er een te vinden die ze mooi vinden. Vertel de leerlingen dat ze wat ze in dit laatste niveau maken, kunnen delen met hun vrienden en familie. Nu is het tijd om alle codering en ELA-vaardigheden samen te voegen! "
+          "description": "#### Niveau-voor-niveau ondersteuning\n\n**Niveau 1:** Moedig de leerlingen aan het gedicht door te lezen. Vraag de leerlingen dan een achtergrondkleur of -effect te vinden dat past bij de toon van het gedicht dat ze hebben gekozen. \n\n**Niveau 2:** In dit voorbeeld moeten de leerlingen het gedicht eerst zelf lezen en dan op Uitvoeren drukken. Je kunt de leerling vragen of het geluid en de effecten die de programmeur koos, pasten bij de stemming van het gedicht. Vraag de leerlingen hun antwoord uit te werken. \n\n**Niveau 3:** Dit niveau introduceert geluid. Leerlingen kunnen een koptelefoon gebruiken als ze die hebben. \n\n**Niveau 4:** Vraag de leerlingen het gedicht te lezen en de regel te vinden waar de stemming in het gedicht verandert of waar de dichter een nieuw beeld introduceert. Gebruik het gebeurtenissenblok om overeenkomstige effecten toe te voegen aan de geïdentificeerde regels van het gedicht. \n\n**Niveau 5:** In dit voorbeeld moeten de leerlingen het gedicht eerst zelf lezen en dan op Uitvoeren drukken. Vraag de leerling of de beelden overeenkomen met de woorden van het gedicht. Vraag ze hun antwoord uit te werken. \n\n**Niveau 6, 7, 8:** Zie \"Koester bugs** onder het kopje Algemene ondersteuning. Moedig leerlingen aan om programma's met meer dan één overgang te bouwen met hun gebeurtenisblokken. \n\n**Niveau 9:** Moedig de leerlingen aan om alle gedichten in het keuzemenu door te lezen om er een te vinden die ze mooi vinden. Vertel de leerlingen dat ze wat ze in dit laatste niveau maken, kunnen delen met hun vrienden en familie. Nu is het tijd om alle codering en ELA-vaardigheden samen te voegen! "
         },
         "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Als je het leuk vond om vandaag te leren coderen, kun je verder leren door code.org/learn te bezoeken. Als je wat je gemaakt hebt wilt delen met je vrienden en familie, klik dan op de knop \"Delen\" en stuur de link naar wie je maar wilt!"
+          "description": "Als je het leuk vond om vandaag te leren coderen, kun je verder leren door code.org/learn te bezoeken. Als je wat je gemaakt hebt wilt delen met je vrienden en familie, klik dan op de knop \"Delen\" en stuur de link naar wie je maar wilt!\n"
         },
         "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
           "description": "#### (Optioneel) Beoordeling: Controle op begrip (4 minuten)\n\nDeel twee post-it’s uit per leerling. "

@@ -1,0 +1,26 @@
+name 'CSA U1 Assessment q15_2023'
+
+wrong 'The `Painter` object was facing east.'
+wrong 'The `Painter` object had paint.'
+right 'The `Painter` object could move forward.'
+wrong 'The `Painter` object does not have any paint.'
+wrong 'The `Painter` object started on paint.'
+
+markdown <<MARKDOWN
+Consider the code segment below.
+
+```
+Painter myPainter = new Painter();
+myPainter.move();
+myPainter.takePaint();
+myPainter.turnLeft();
+myPainter.move();
+myPainter.paint("green");
+```
+
+Which of the following initial conditions must be true for the code to run without error?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Since the first line requires the `Painter` object to move forward one space, it must be able to move forward in the direction it is facing first. If there is an obstacle in front of the `Painter`, calling `move()` will result in an error.
+MARKDOWN

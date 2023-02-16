@@ -965,7 +965,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
         - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
         questions:
-        - text: Hansı bloklar kvadrat çəkir?
+        - text: Hansı bloklar kvadrat çəkir ?
         content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         title: Çoxlu seçim
       K-1 Artist 2 Match 2:
@@ -980,7 +980,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
         - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Cütləşdirmə
-        content2: Şəkilləri növündən asılı olaraq uyğunlaşdırın.
+        content2: Formaları növündən asılı olaraq uyğunlaşdırın.
       K-1 Bee 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/bee_images/nectar.png"
@@ -988,7 +988,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
-        - text: Burda nə qədər nektar var?
+        - text: Bu nə qədər nektardır?
         content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         title: Çoxlu seçim
       K-1 Bee 1 Multi 2:
@@ -998,7 +998,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
-        - text: Burda nə qədər nektar var?
+        - text: Bu nə qədər nektardır?
         content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         title: Çoxlu seçim
       K-1 Bee Loops Match 1:
@@ -1069,7 +1069,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/E.png"
         - text: "/script_assets/k_1_images/move_blocks/W.png"
         questions:
-        - text: Son blok hansı seçim olmalıdır?
+        - text: " Hansı seçim son blok olmalıdır?"
         content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         title: Çoxlu seçim
       K-1 Maze Loops Multi 1:
@@ -1087,7 +1087,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
         questions:
-        - text: Düzgün təkrarlanma bloku seçin.
+        - text: Düzgün təkrar et bloku seç.
         content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         title: Çoxlu seçim
       K-1 Maze Match 1:
@@ -1102,7 +1102,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
         - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: Cütləşdirmə
-        content2: Pazl və Blokları uyğunlaşdırın
+        content2: Pazl və Blokları uyğunlaşdırın.
       K-1 Maze Multiple Choice 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
@@ -1110,7 +1110,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/WS.png"
         - text: "/script_assets/k_1_images/move_blocks/WN.png"
         questions:
-        - text: Bu səviyyəni hansı cavab həll edir?
+        - text: Bu mərhələni hansı cavab həll edir?
         title: Labirint
         content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
       K-1 Move It Multi 1:
@@ -1138,7 +1138,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         questions:
-        - {}
+        - text: Bu alqoritm üçün hansı addım blanka doldurulmalıdır?
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         title: Çoxlu seçim
       K-1 Word Search Multi 1:
@@ -1147,14 +1147,14 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/EESS.png"
         - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
         questions:
-        - text: Hansı bloklar "MOVE" sözünü yazır?
+        - text: Hansı bloklar "Hərəkət et" sözünü yazır?
         content1: "/script_assets/k_1_images/search_images/move.png, 450"
         title: Çoxlu seçim
       K-1 Word Search Multi 3:
         answers:
         - text: Təyin et
-        - text: Dördbucaq
-        - text: Cənub
+        - text: kvadrat
+        - text: CƏNUB
         questions:
         - text: Hansı söz tələffüz olunur?
         content1: "/script_assets/k_1_images/search_images/square.png, 700"
@@ -1220,7 +1220,7 @@ az-AZ:
         - text: Bilmirəm.
           feedback: Rəssam dördbucaqlı çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
@@ -1232,7 +1232,7 @@ az-AZ:
         - text: Bilmirəm.
           feedback: Rəssam dördbucaqlı çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
         - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
@@ -1244,7 +1244,7 @@ az-AZ:
         - text: Bilmirəm.
           feedback: Rəssam dördbucaqlı çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
@@ -1256,7 +1256,7 @@ az-AZ:
         - text: Bilmirəm.
           feedback: Rəssam dördbucaqlı çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1363,7 +1363,8 @@ az-AZ:
         answers:
         - text: Quş donuzdan bir addım geridə qalacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
@@ -1375,7 +1376,8 @@ az-AZ:
         answers:
         - text: Quş donuzdan bir addım geridə qalacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
@@ -1387,7 +1389,8 @@ az-AZ:
         answers:
         - text: Quş donuzdan bir addım geridə qalacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
@@ -1399,7 +1402,8 @@ az-AZ:
         answers:
         - text: Quş donuzdan bir addım geridə qalacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
@@ -1696,35 +1700,43 @@ az-AZ:
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - feedback: Düzgün!
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - feedback: Düzgün!
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - feedback: Düzgün!
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - feedback: Düzgün!
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
@@ -1875,7 +1887,10 @@ az-AZ:
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
         questions:
@@ -1883,7 +1898,10 @@ az-AZ:
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
         questions:
@@ -1891,7 +1909,10 @@ az-AZ:
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
         questions:
@@ -1899,7 +1920,10 @@ az-AZ:
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
         questions:
@@ -1944,7 +1968,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - {}
         - text: Bilmirəm.
         questions:
@@ -1952,7 +1977,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - {}
         - text: Bilmirəm.
         questions:
@@ -1960,7 +1986,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - {}
         - text: Bilmirəm.
         questions:
@@ -1968,7 +1995,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - {}
         - text: Bilmirəm.
         questions:
@@ -2666,7 +2694,8 @@ az-AZ:
         - text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
           feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
             yalnız 2 boşluq irəli getməsinə imkan verir.
-        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+        - text: BB-8 birinci dövrdən sonra səhv istiqamət alacaq.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
             yalnız 2 boşluq irəli getməsinə imkan verir.
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
@@ -3820,10 +3849,14 @@ az-AZ:
       courseD_multi_farmer_while4_predict1_2021:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - correct: true
           feedback: Düzgün!
-        - {}
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2021:
@@ -3838,7 +3871,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - correct: true
+        - text: Quş donuza kimi edəcək.
+          correct: true
           feedback: Düzgün!
         - {}
         - {}
@@ -4778,10 +4812,26 @@ az-AZ:
         content1: Burada təsvir edin
       csf_be_a_super_digital_citizen:
         content1: Burada təsvir edin
+        markdown: |
+          # Super Rəqəmsal Vətəndaş
+          ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
       csf_be_a_super_digital_citizen_2021:
         content1: Burada təsvir edin
+        markdown: |
+          # Super Rəqəmsal Vətəndaş
+          ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
       csf_password_power-up:
         content1: Burada təsvir edin
+        markdown: |-
+          # Şifrənizi Gücləndirin
+
+          ## Xatırlamaq üçün Şifrə Məsləhətləri
+
+          * Unudulmaz **ifadə** ilə başlayın.
+          * Şifrənizi yalnız **valideynləriniz** bilməlidir.
+          * Heç vaxt parolunuzda heç bir **şəxsi** şəxsiyyət məlumatından istifadə etməyin.
+          * Ən azı **səkkiz** simvoldan ibarət parollar yaradın.
+          * Parolunuzda hərflər, rəqəmlər və **simvollardan** istifadə edin.
       csf_password_power-up_2021:
         content1: Burada təsvir edin
         markdown: |-
@@ -4798,8 +4848,26 @@ az-AZ:
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: Burada təsvir edin
+        markdown: |
+          # Mənalılığı STOP
+
+          ## İnternetdə kimsə sizin üçün pis davranırsa, nə etməli?
+
+          * **U**zaqlaş.
+          * **E**tibarlı böyüklərə deyin.
+          * **O**K saytlar əvvəlcə.
+          * **P**ause və onlayn düşünün.
       csf_putting_a_stop_to_online_meanness_2021:
         content1: Burada təsvir edin
+        markdown: |
+          # Mənalılığı STOP
+
+          ## İnternetdə kimsə sizin üçün pis davranırsa, nə etməli?
+
+          * **U**zaqlaş.
+          * **E**tibarlı böyüklərə deyin.
+          * **O**K saytlar əvvəlcə.
+          * **P**ause və onlayn düşünün.
       CSD U4L06 SFLP:
         markdown: Bu vaxta qədər müəyyən dərəcədə bizdən uzaq olan istifadəçilər üçün
           dizayn hazırlamağa çalışdıq. İstər beyin fırtınası, istər profil, istərsə
@@ -5270,12 +5338,12 @@ az-AZ:
           yazın.
       MoveItMoveIt-Unplugged:
         markdown: |-
-          # Hərəkət etdir, hərəkət etdir
+          # Hərəkət etdirin, hərəkət etdirin
 
           Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
-          # Hərəkət etdir, hərəkət etdir
+          # Hərəkət etdirin, hərəkət etdirin
 
           Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
       RelayProgramming-Unplugged:
@@ -5706,23 +5774,26 @@ az-AZ:
         display_name: Tətbiqinizi özəlləşdirin
       Choose 2 Test:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sətir 2
+        - text: 'Sətir 3
+
+'
+        - text: Sətir 4
+        - text: Sətir 5
         questions:
         - {}
       Eval Contracts F:
         answers:
         - ''
+        title: Mətn müqaviləsi
       Multi Horizontal Scroll Test:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 3 bit
+        - text: 4 bit
+        - text: 5 bit
+        - text: 6 bit
+        - text: 7 bit
+        - text: 12 bit
         questions:
         - {}
       Submittable Multi:
@@ -5734,7 +5805,7 @@ az-AZ:
         - {}
         - text: qırmızı
         questions:
-        - {}
+        - text: Sənin sevimli rəngin hansıdır?
       Test Contained Multi:
         answers:
         - text: '0'
@@ -5749,18 +5820,22 @@ az-AZ:
         content1: Burada təsvir edin
       contained_Choose_2_Test:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sətir 2
+        - text: 'Sətir 3
+
+'
+        - text: Sətir 4
+        - text: Sətir 5
         questions:
         - {}
       contained_Choose_2_Test_2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sətir 2
+        - text: 'Sətir 3
+
+'
+        - text: Sətir 4
+        - text: Sətir 5
         questions:
         - {}
       contained_Happy_Maps_Multi 1:
@@ -6226,7 +6301,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Sətir 5
         - {}
         - {}
         - {}
@@ -6239,7 +6314,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Sətir 5
         - {}
         - {}
         - {}
@@ -6252,7 +6327,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Sətir 5
         - {}
         - {}
         - {}
@@ -6841,10 +6916,11 @@ az-AZ:
         - {}
       CSP PD Example Question 2:
         answers:
-        - {}
-        - {}
+        - lesson: Tələbə Yazısı üçün Strategiyalar
+        - text: Onları həmyaşıdlarından öyrənməyə vadar edəcəm
+          lesson: Həmyaşıdların öyrənilməsinə dəstək
         questions:
-        - {}
+        - text: Tələbələrə necə öyrədəcəksiniz?
       PS U3 Q1-1:
         answers:
         - {}
@@ -6860,10 +6936,10 @@ az-AZ:
         - {}
       PS U3 Q1-3:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 3-cü sətir və 4-cü sətir
+        - text: Sətir 5, 6, 7, 8 və 9
+        - text: 8-ci sətir və 9-cu sətir
+        - text: 9-cu sətir
       PS U3 Q1-4:
         answers:
         - {}
@@ -6893,7 +6969,8 @@ az-AZ:
         - {}
       PS U3 Q1-7:
         answers:
-        - ''
+        - Cavabı bura daxil edin
+        content1: Bura sorğu daxil edin
       PS U3 Q1-8:
         answers:
         - {}
@@ -7263,7 +7340,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məncə kompyuter elmləri maraqlıdır.
       csd-post-survey-2017-q13_2018:
         answers:
         - {}
@@ -7296,7 +7373,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csd-post-survey-2017-q17_2018:
         answers:
         - {}
@@ -7307,7 +7384,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csd-post-survey-2017-q18_2018:
         answers:
         - {}
@@ -7318,7 +7395,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csd-post-survey-2017-q1_2018:
         answers:
         - {}
@@ -7329,7 +7406,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csd-post-survey-2017-q22_2018:
         answers:
         - {}
@@ -7395,7 +7472,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csd-post-survey-2017-q2_2018:
         answers:
         - {}
@@ -7406,7 +7483,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
+            həll etmək üçün bir yol tapmağı bacarıram.
       csd-post-survey-2017-q30_2018:
         answers:
         - {}
@@ -7417,7 +7495,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csd-post-survey-2017-q3_2018:
         answers:
         - {}
@@ -7428,7 +7506,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csd-post-survey-2017-q4_2018:
         answers:
         - {}
@@ -7439,7 +7517,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csd-post-survey-2017-q6_2018:
         answers:
         - {}
@@ -7450,7 +7528,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
       csd-post-survey-2017-q8_2018:
         answers:
         - {}
@@ -7461,7 +7539,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
       csd-post-survey-2017-q9_2018:
         answers:
         - {}
@@ -7472,7 +7550,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csd-post-survey-2018-U1-I-learned:
         answers:
         - {}
@@ -7485,10 +7563,10 @@ az-AZ:
       csd-post-survey-2018-U1-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7504,10 +7582,10 @@ az-AZ:
       csd-post-survey-2018-U2-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7523,10 +7601,10 @@ az-AZ:
       csd-post-survey-2018-U3-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7542,10 +7620,10 @@ az-AZ:
       csd-post-survey-2018-U4-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7561,10 +7639,10 @@ az-AZ:
       csd-post-survey-2018-U5-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7580,10 +7658,10 @@ az-AZ:
       csd-post-survey-2018-U6-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -10371,7 +10449,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csp-post-survey-2017-q10_2018:
         answers:
         - {}
@@ -10393,7 +10471,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məncə kompyuter elmləri maraqlıdır.
       csp-post-survey-2017-q12_2018:
         answers:
         - {}
@@ -10404,7 +10482,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmlərini öyrənmək bacarığım var.
       csp-post-survey-2017-q13:
         answers:
         - {}
@@ -10459,7 +10537,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-post-survey-2017-q17:
         answers:
         - {}
@@ -10470,7 +10548,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-post-survey-2017-q17_2018:
         answers:
         - {}
@@ -10481,7 +10559,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-post-survey-2017-q18:
         answers:
         - {}
@@ -10492,7 +10570,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csp-post-survey-2017-q18_2018:
         answers:
         - {}
@@ -10503,7 +10581,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csp-post-survey-2017-q19_2018:
         answers:
         - {}
@@ -10525,7 +10603,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csp-post-survey-2017-q2:
         answers:
         - {}
@@ -10536,7 +10614,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
+            həll etmək üçün bir yol tapmağı bacarıram.
       csp-post-survey-2017-q20_2018:
         answers:
         - {}
@@ -10646,7 +10725,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edir.
       csp-post-survey-2017-q28_2018:
         answers:
         - {}
@@ -10668,7 +10747,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csp-post-survey-2017-q29_2018:
         answers:
         - {}
@@ -10679,7 +10758,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csp-post-survey-2017-q3:
         answers:
         - {}
@@ -10690,7 +10769,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-post-survey-2017-q30:
         answers:
         - {}
@@ -10701,7 +10780,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-post-survey-2017-q33_2018:
         answers:
         - {}
@@ -10715,11 +10794,13 @@ az-AZ:
         - {}
       csp-post-survey-2017-q36-a_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Çox
+        - text: 'Az
+
+'
+        - text: Heçdə
         questions:
-        - {}
+        - text: Riyaziyyatda yaxşı olmadığım üçün narahatam.
       csp-post-survey-2017-q4:
         answers:
         - {}
@@ -10730,7 +10811,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-post-survey-2017-q4_2018:
         answers:
         - {}
@@ -10741,7 +10822,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-post-survey-2017-q6:
         answers:
         - {}
@@ -10752,7 +10833,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
       csp-post-survey-2017-q8:
         answers:
         - {}
@@ -10763,7 +10844,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
       csp-post-survey-2017-q9:
         answers:
         - {}
@@ -10774,24 +10855,25 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp-post-survey-2018-topics-preamble:
         content1: Burada təsvir edin
       csp-post-survey-2018-unit-feedback-preamble:
         content1: Burada təsvir edin
       csp-post-survey-who-encouraged-csp:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Dost
+        - text: Bir valideyn
+        - text: Başqa bir ailə üzvü
+        - text: Müəllim
+        - text: Məsləhətçi
+        - text: Məktəbdə başqa bir şəxs (məşqçi, direktor, dekan və s.)
+        - text: Siyahıda olmayan başqa bir şəxs
+        - text: Xüsusilə heç kim. Sadəcə götürmək istədim.
+        - text: Mən bu dərsi seçməmişəm.
         questions:
-        - {}
+        - text: Bu dərsi seçməyinizdə kiminsə həvəsləndirilməsi faktoru oldumu? Əgər
+            belədirsə, sizə ən çox kim təsir etdi? (ikiyə qədər seçin).
       csp-post-survey-worry-seem-less-capable:
         answers:
         - {}
@@ -10813,7 +10895,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csp-pre-survey-2017-q10:
         answers:
         - {}
@@ -10868,7 +10950,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məncə kompyuter elmləri maraqlıdır.
       csp-pre-survey-2017-q11_2018:
         answers:
         - {}
@@ -10879,7 +10961,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məncə kompyuter elmləri maraqlıdır.
       csp-pre-survey-2017-q12:
         answers:
         - {}
@@ -10890,7 +10972,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmlərini öyrənmək bacarığım var.
       csp-pre-survey-2017-q12_2018:
         answers:
         - {}
@@ -10901,7 +10983,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmlərini öyrənmək bacarığım var.
       csp-pre-survey-2017-q13:
         answers:
         - {}
@@ -10912,7 +10994,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
+            olacam. '
       csp-pre-survey-2017-q13_2018:
         answers:
         - {}
@@ -10923,7 +11006,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
+            olacam. '
       csp-pre-survey-2017-q13_2021:
         answers:
         - {}
@@ -10934,7 +11018,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
+            olacam. '
       csp-pre-survey-2017-q13_2022:
         answers:
         - {}
@@ -10945,7 +11030,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
+            olacam. '
       csp-pre-survey-2017-q14:
         answers:
         - {}
@@ -10956,7 +11042,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aydın cavabı olmayan kompüter elmləri problemi ilə qarşılaşdığımda,
+            mən həmişə onu həll etməyin bir yolunu tapa biləcəyəm.
       csp-pre-survey-2017-q14_2018:
         answers:
         - {}
@@ -10967,7 +11054,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aydın cavabı olmayan kompüter elmləri problemi ilə qarşılaşdığımda,
+            mən həmişə onu həll etməyin bir yolunu tapa biləcəyəm.
       csp-pre-survey-2017-q16:
         answers:
         - {}
@@ -10978,7 +11066,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-pre-survey-2017-q16_2018:
         answers:
         - {}
@@ -10989,7 +11077,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-pre-survey-2017-q16_2021:
         answers:
         - {}
@@ -11000,7 +11088,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-pre-survey-2017-q16_2022:
         answers:
         - {}
@@ -11011,7 +11099,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-pre-survey-2017-q17:
         answers:
         - {}
@@ -11022,7 +11110,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-pre-survey-2017-q17_2018:
         answers:
         - {}
@@ -11033,7 +11121,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-pre-survey-2017-q17_2021:
         answers:
         - {}
@@ -11044,7 +11132,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-pre-survey-2017-q17_2022:
         answers:
         - {}
@@ -11055,7 +11143,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-pre-survey-2017-q18:
         answers:
         - {}
@@ -11066,7 +11154,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csp-pre-survey-2017-q18_2018:
         answers:
         - {}
@@ -11077,7 +11165,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csp-pre-survey-2017-q19:
         answers:
         - {}
@@ -11088,7 +11176,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyənəcəm.
       csp-pre-survey-2017-q19_2018:
         answers:
         - {}
@@ -11099,7 +11187,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyənəcəm.
       csp-pre-survey-2017-q19_2021:
         answers:
         - {}
@@ -11110,7 +11198,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyənəcəm.
       csp-pre-survey-2017-q19_2022:
         answers:
         - {}
@@ -11121,7 +11209,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyənəcəm.
       csp-pre-survey-2017-q1_2018:
         answers:
         - {}
@@ -11132,7 +11220,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csp-pre-survey-2017-q2:
         answers:
         - {}
@@ -11143,7 +11231,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
+            həll etmək üçün bir yol tapmağı bacarıram.
       csp-pre-survey-2017-q20:
         answers:
         - {}
@@ -11154,7 +11243,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
       csp-pre-survey-2017-q20_2018:
         answers:
         - {}
@@ -11165,7 +11254,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
       csp-pre-survey-2017-q20_2021:
         answers:
         - {}
@@ -11176,7 +11265,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
       csp-pre-survey-2017-q20_2022:
         answers:
         - {}
@@ -11187,7 +11276,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
       csp-pre-survey-2017-q21:
         answers:
         - {}
@@ -11198,7 +11287,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində yaxşı qiymət almaq üçün nə etməli olduğumu
+            bilirəm.
       csp-pre-survey-2017-q21_2018:
         answers:
         - {}
@@ -11209,7 +11299,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində yaxşı qiymət almaq üçün nə etməli olduğumu
+            bilirəm.
       csp-pre-survey-2017-q22:
         answers:
         - {}
@@ -11220,7 +11311,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
       csp-pre-survey-2017-q22_2018:
         answers:
         - {}
@@ -11231,7 +11322,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
       csp-pre-survey-2017-q22_2021:
         answers:
         - {}
@@ -11242,7 +11333,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
       csp-pre-survey-2017-q22_2022:
         answers:
         - {}
@@ -11253,7 +11344,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
       csp-pre-survey-2017-q23:
         answers:
         - {}
@@ -11264,7 +11355,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bu informatika dərsində digər tələbələr kimi mənə də
+            hörmətlə yanaşacaqlar.
       csp-pre-survey-2017-q23_2018:
         answers:
         - {}
@@ -11275,7 +11367,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bu informatika dərsində digər tələbələr kimi mənə də
+            hörmətlə yanaşacaqlar.
       csp-pre-survey-2017-q24:
         answers:
         - {}
@@ -11286,7 +11379,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bu informatika dərsində özümü hiss edəcəm.
       csp-pre-survey-2017-q24_2018:
         answers:
         - {}
@@ -11297,7 +11390,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bu informatika dərsində özümü hiss edəcəm.
       csp-pre-survey-2017-q25:
         answers:
         - {}
@@ -11308,7 +11401,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Hesab edirəm ki, bu informatika dərsində fikirlərim ciddi qəbul olunacaq.
       csp-pre-survey-2017-q25_2018:
         answers:
         - {}
@@ -11319,7 +11412,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Hesab edirəm ki, bu informatika dərsində fikirlərim ciddi qəbul olunacaq.
       csp-pre-survey-2017-q26:
         answers:
         - {}
@@ -11330,7 +11423,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənə elə gəlir ki, mənim kimi insanlar üçün bu informatika sinfinə
+            qəbul olmaq çətin olacaq.
       csp-pre-survey-2017-q26_2018:
         answers:
         - {}
@@ -11341,7 +11435,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənə elə gəlir ki, mənim kimi insanlar üçün bu informatika sinfinə
+            qəbul olmaq çətin olacaq.
       csp-pre-survey-2017-q27:
         answers:
         - {}
@@ -11352,7 +11447,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Boş vaxtlarımda informatika ilə məşğul oluram.
       csp-pre-survey-2017-q27_2018:
         answers:
         - {}
@@ -11363,7 +11458,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Boş vaxtlarımda informatika ilə məşğul oluram.
       csp-pre-survey-2017-q28:
         answers:
         - {}
@@ -11374,7 +11469,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edəcək.
       csp-pre-survey-2017-q28_2018:
         answers:
         - {}
@@ -11385,7 +11480,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edəcək.
       csp-pre-survey-2017-q29:
         answers:
         - {}
@@ -11396,7 +11491,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csp-pre-survey-2017-q29_2018:
         answers:
         - {}
@@ -11407,7 +11502,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csp-pre-survey-2017-q2_2018:
         answers:
         - {}
@@ -11418,7 +11513,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
+            həll etmək üçün bir yol tapmağı bacarıram.
       csp-pre-survey-2017-q3:
         answers:
         - {}
@@ -11429,7 +11525,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-pre-survey-2017-q30:
         answers:
         - {}
@@ -11440,7 +11536,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-pre-survey-2017-q30_2018:
         answers:
         - {}
@@ -11451,7 +11547,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-pre-survey-2017-q30_2021:
         answers:
         - {}
@@ -11462,7 +11558,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-pre-survey-2017-q30_2022:
         answers:
         - {}
@@ -11473,7 +11569,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-pre-survey-2017-q31:
         answers:
         - {}
@@ -11528,7 +11624,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən narahatam ki, bu sinifdəki müəllim və ya tələbələr mənim kompüter
+            elmində digər tələbələr kimi yaxşı olmadığımı düşünə bilərlər.
       csp-pre-survey-2017-q35_2018:
         answers:
         - {}
@@ -11539,45 +11636,56 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən narahatam ki, bu sinifdəki müəllim və ya tələbələr mənim kompüter
+            elmində digər tələbələr kimi yaxşı olmadığımı düşünə bilərlər.
       csp-pre-survey-2017-q36-b:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Çox
+        - text: 'Az
+
+'
+        - text: Heçdə
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı təcrübəm az olduğu üçün narahatam.
       csp-pre-survey-2017-q36-b_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Çox
+        - text: 'Az
+
+'
+        - text: Heçdə
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı təcrübəm az olduğu üçün narahatam.
       csp-pre-survey-2017-q37:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: İndiki informatika dərsinizdən əvvəl məktəbdə başqa informatika dərsləri
+            keçmisinizmi?
       csp-pre-survey-2017-q37_2018:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: İndiki informatika dərsinizdən əvvəl məktəbdə başqa informatika dərsləri
+            keçmisinizmi?
       csp-pre-survey-2017-q39:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Heç məktəb saatlarından kənarda (məsələn, məktəbdən sonrakı proqramda,
+            onlayn və ya düşərgədə və ya yay proqramında) kompüter elmləri fəaliyyətlərində
+            və ya proqramlarında iştirak etmisinizmi?
       csp-pre-survey-2017-q39_2018:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Heç məktəb saatlarından kənarda (məsələn, məktəbdən sonrakı proqramda,
+            onlayn və ya düşərgədə və ya yay proqramında) kompüter elmləri fəaliyyətlərində
+            və ya proqramlarında iştirak etmisinizmi?
       csp-pre-survey-2017-q3_2018:
         answers:
         - {}
@@ -11588,7 +11696,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-pre-survey-2017-q3_2021:
         answers:
         - {}
@@ -11599,7 +11707,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-pre-survey-2017-q3_2022:
         answers:
         - {}
@@ -11610,7 +11718,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-pre-survey-2017-q4:
         answers:
         - {}
@@ -11621,27 +11729,33 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-pre-survey-2017-q40:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Məktəbimdə məktəbdən sonra proqram
+        - text: Məktəbdən sonra başqa yerdə proqram (məsələn, Oğlanlar və Qızlar Klubu
+            və s.)
+        - text: Onlayn proqram
+        - text: Yay proqramı/kampı
         - text: Digər
-        - {}
+        - text: Məktəbdən kənar heç komputer elmləri ilə məşqul olmamışam.
         questions:
-        - {}
+        - text: Əgər belədirsə, siz əvvəllər məktəb saatlarından kənar kompüter elmləri
+            dərsini və ya proqramı harada keçirmisiniz? Əgər birdən çox proqramda
+            iştirak etmisinizsə, lütfən, vaxtınızın çoxunu keçirdiyiniz proqramı seçin.
       csp-pre-survey-2017-q40_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Məktəbimdə məktəbdən sonra proqram
+        - text: Məktəbdən sonra başqa yerdə proqram (məsələn, Oğlanlar və Qızlar Klubu
+            və s.)
+        - text: Onlayn proqram
+        - text: Yay proqramı/kampı
         - text: Digər
-        - {}
+        - text: Məktəbdən kənar heç komputer elmləri ilə məşqul olmamışam.
         questions:
-        - {}
+        - text: Əgər belədirsə, siz əvvəllər məktəb saatlarından kənar kompüter elmləri
+            dərsini və ya proqramı harada keçirmisiniz? Əgər birdən çox proqramda
+            iştirak etmisinizsə, lütfən, vaxtınızın çoxunu keçirdiyiniz proqramı seçin.
       csp-pre-survey-2017-q4_2018:
         answers:
         - {}
@@ -11652,7 +11766,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-pre-survey-2017-q4_2021:
         answers:
         - {}
@@ -11663,7 +11777,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-pre-survey-2017-q4_2022:
         answers:
         - {}
@@ -11674,7 +11788,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-pre-survey-2017-q5:
         answers:
         - {}
@@ -11685,7 +11799,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdəki insanlar nəyisə yaxşı bacardığımı görürlər.
       csp-pre-survey-2017-q5_2018:
         answers:
         - {}
@@ -11696,7 +11810,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdəki insanlar nəyisə yaxşı bacardığımı görürlər.
       csp-pre-survey-2017-q6:
         answers:
         - {}
@@ -11707,7 +11821,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
       csp-pre-survey-2017-q6_2018:
         answers:
         - {}
@@ -11718,7 +11832,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
       csp-pre-survey-2017-q7:
         answers:
         - {}
@@ -11729,7 +11843,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdəki digər şagirdlər mənim fikirlərimi ciddi qəbul edirlər.
       csp-pre-survey-2017-q7_2018:
         answers:
         - {}
@@ -11740,7 +11854,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdəki digər şagirdlər mənim fikirlərimi ciddi qəbul edirlər.
       csp-pre-survey-2017-q8:
         answers:
         - {}
@@ -11751,7 +11865,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
       csp-pre-survey-2017-q8_2018:
         answers:
         - {}
@@ -11762,7 +11876,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
       csp-pre-survey-2017-q9:
         answers:
         - {}
@@ -11773,7 +11887,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp-pre-survey-2017-q9_2018:
         answers:
         - {}
@@ -11784,7 +11898,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp-pre-survey-2017-q9_2021:
         answers:
         - {}
@@ -11795,7 +11909,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp-pre-survey-2017-q9_2022:
         answers:
         - {}
@@ -11806,7 +11920,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp_unit_assessment_overview:
         content1: Burada təsvir edin
       curriculum-how-challenging:
@@ -11820,10 +11934,10 @@ az-AZ:
         - {}
       curriculum-how-did-you-like-lessons:
         answers:
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -12068,7 +12182,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarını yerinə yetirmək bacarığım var
       pre-assessment survey q10:
         answers:
         - {}
@@ -12138,7 +12252,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       pre-assessment survey q17:
         answers:
         - {}
@@ -12168,7 +12282,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       pre-assessment survey q2:
         answers:
         - {}
@@ -12178,7 +12292,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən məktəb işlərində məktəbimdəki digər uşaqların əksəriyyətindən
+            daha yaxşıyam.
       pre-assessment survey q20:
         answers:
         - {}
@@ -12188,7 +12303,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Boş vaxtlarımda informatika ilə məşğul oluram.
       pre-assessment survey q21:
         answers:
         - {}
@@ -12218,29 +12333,35 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edir.
       pre-assessment survey q24:
         answers:
         - text: Bəli
         - text: Xeyr
         questions:
-        - {}
+        - text: İndiki informatika dərsinizdən əvvəl məktəbdə başqa informatika dərsləri
+            keçmisinizmi?
       pre-assessment survey q26:
         answers:
         - text: Bəli
         - text: Xeyr
         questions:
-        - {}
+        - text: Heç məktəb saatlarından kənarda (məsələn, məktəbdən sonrakı proqramda,
+            onlayn və ya düşərgədə və ya yay proqramında) kompüter elmləri fəaliyyətlərində
+            və ya proqramlarında iştirak etmisinizmi?
       pre-assessment survey q27:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Məktəbimdə məktəbdən sonra proqram
+        - text: Məktəbdən sonra başqa yerdə proqram (məsələn, Oğlanlar və Qızlar Klubu
+            və s.)
+        - text: Onlayn proqram
+        - text: Yay proqramı/kampı
         - text: Digər
         - text: Müvcud deyil
         questions:
-        - {}
+        - text: Əgər belədirsə, siz əvvəllər məktəb saatlarından kənar kompüter elmləri
+            dərsini və ya proqramı harada keçirmisiniz? Əgər birdən çox proqramda
+            iştirak etmisinizsə, lütfən, vaxtınızın çoxunu keçirdiyiniz proqramı seçin.
       pre-assessment survey q28:
         answers:
         - text: '8'
@@ -12268,7 +12389,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       pre-assessment survey q30:
         answers:
         - {}
@@ -12291,7 +12412,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Çalışsam, məktəbdəki ən çətin problemləri necə həll edəcəyimi anlaya
+            bilərəm.
       pre-assessment survey q5:
         answers:
         - {}
@@ -12301,7 +12423,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb işlərimi bəyənirəm.
       pre-assessment survey q6:
         answers:
         - {}
@@ -12311,7 +12433,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       pre-assessment survey q7:
         answers:
         - {}
@@ -12321,7 +12443,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə vaxt keçirməkdən zövq alıram.
       pre-assessment survey q8:
         answers:
         - {}
@@ -12344,43 +12466,43 @@ az-AZ:
         - {}
       reasons-took-course:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Onu götürən dostlarım var idi
+        - text: Müəllimi çox bəyənirəm
+        - text: Əyləncəli olacağını düşündüm
+        - text: Kompüter elmləri haqqında daha çox öyrənmək istədim
+        - text: Asan olacağını düşündüm
+        - text: Bunun çətin olacağını düşündüm
+        - text: Sinif mənim məktəbimdə yaxşı nüfuza malikdir
+        - text: Biri məni almağa təşviq etdi
+        - text: Bu, mənim almaq istədiyim başqa bir CS sinfi üçün ilkin şərtdir
+        - text: Tələb olunur, yoxsa mən ona yerləşdirilmişəm.
+        - text: Digər səbəblər qeyd edilməyib
         questions:
-        - {}
+        - text: Bu dərsi götürməyinizə əsas iki səbəb nədir? (ikiyə qədər seçin).
       reasons-took-course-csd_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Onu götürən dostlarım var idi
+        - text: Müəllimi çox bəyənirəm
+        - text: Əyləncəli olacağını düşündüm
+        - text: Kompüter elmləri haqqında daha çox öyrənmək istədim
+        - text: Asan olacağını düşündüm
+        - text: Bunun çətin olacağını düşündüm
+        - text: Tələb olunur, yoxsa mən ona yerləşdirilmişəm.
+        - text: Digər səbəblər qeyd edilməyib
         questions:
-        - {}
+        - text: Bu dərsi götürməyinizə əsas iki səbəb nədir? (ikiyə qədər seçin).
       reasons-took-course-csd_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Onu götürən dostlarım var idi
+        - text: Müəllimi çox bəyənirəm
+        - text: Əyləncəli olacağını düşündüm
+        - text: Kompüter elmləri haqqında daha çox öyrənmək istədim
+        - text: Asan olacağını düşündüm
+        - text: Bunun çətin olacağını düşündüm
+        - text: Tələb olunur, yoxsa mən ona yerləşdirilmişəm.
+        - text: Digər səbəblər qeyd edilməyib
         questions:
-        - {}
+        - text: Bu dərsi götürməyinizə əsas iki səbəb nədir? (ikiyə qədər seçin).
       same-ability:
         answers:
         - {}
@@ -12435,18 +12557,18 @@ az-AZ:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Ola bilər
         questions:
-        - {}
+        - text: Sizcə kompüter elmləri təhsildirmi?
       test anonymous student survey fun:
         answers:
         - {}
         - {}
-        - {}
+        - text: Neytral
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri əyləncəlidir.
       will-be-myself-in-cs:
         answers:
         - {}
@@ -12457,7 +12579,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
       will-be-myself-in-cs_2021:
         answers:
         - {}
@@ -12468,7 +12590,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
       will-be-myself-in-cs_2022:
         answers:
         - {}
@@ -12479,7 +12601,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
       worried-less-capable:
         answers:
         - {}
@@ -12490,7 +12612,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən narahatam ki, başqaları məni kompüter elmində daha az bacarıqlı
+            kimi görəcəklər.
       worried-seen-incapable:
         answers:
         - {}
@@ -12513,3 +12636,665 @@ az-AZ:
         - {}
         questions:
         - {}
+      ConditionalsWithCards-Unplugged2022:
+        markdown: |-
+          # Kartlarla  Şərtlər
+
+          Kart oyunu oynayın və "Qırmızı kart çəksəm, bir xal alacağam" və "Qara kart çəksəm, bir xal alacaqsınız" kimi qaydalar yaradın.
+      CourseE_Artist_Practice_2022:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Loop və rəssam ilə təcrübə saxlamağa davam edin!
+        display_name: Sənətçi təcrübəsi
+      CourseE_Lesson_11_Artist_Practice_2022:
+        display_name: Sənətçi təcrübəsi
+        description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
+          qədər tamamlayın. Funksiyalar və Rəssamla məşq etməyə davam edin!
+      CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Sənətçi təcrübəsi
+        description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
+          qədər tamamlayın. İç-içə döngələr və Rəssamla məşq etməyə davam edin!
+      CourseF_outbreak_story2022_2022_pilot_-2022-2:
+        content1: Burada təsvir edin
+      CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: Burada təsvir edin
+      DesigningForAccessibilityMarkdownLevel2022:
+        markdown: |-
+          # Əlçatanlıq üçün dizayn
+
+          *Kompüter elmləri dünyasında ** əlçatanlıq ** əlillər üçün texnologiya yaratmaqdır.
+          * Əlilliyə fiziki, eşitmə, vizual və digərləri daxildir.
+          *Əlillik müxtəlifdir və insanlara ** smartfon tətbiqləri ** kimi texnologiyadan necə istifadə etdikləri də daxil olmaqla müxtəlif yollarla təsir edir.
+          * Əlilliyi olan insanlar üçün əlçatan olan proqramların layihələndirilməsi həmin proqramları hamı üçün daha yaxşı edir!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      GettingLoopy-Unplugged2022:
+        markdown: |-
+          # Dövr Etmək
+
+          Bu dərs sizə rəqs fəaliyyəti vasitəsilə programalaşdırmada dövr etmək konsepsiyasını təqdim edir.
+      GraphPaperProgramming-Unplugged2022:
+        markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
+          yazın.
+      MoveItMoveIt-Unplugged2022:
+        markdown: |-
+          # Hərəkət etdirin, hərəkət etdirin
+
+          Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
+      RelayProgramming-Unplugged2022:
+        markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
+          işləyin.
+      Songwriting-Unplugged2022:
+        markdown: |
+          # Mahnı yazmaq
+
+          Funksiyaların təyin edilməsi və çağırılması haqqında məlumat əldə etmək üçün mahnıda xor anlayışından istifadə edin.
+      TheRightAppMarkdownLevel2022:
+        markdown: "# Doğru Tətbiq\n\n*Gündəlik həyatımızda hərkəs kompüterlərdən,
+          xüsusilədə smartfonlardan istifadə edir.\n*Smartfon tətbiqləri insanlara
+          dostları ilə danışmaq, musiqi dinləmək, alış-veriş etmək və ya internetə
+          \n  axtarış etmək kimi işləri görməyə kömək edir.\n*Proqramçıların başqalarının
+          ehtiyaclarını anlaması və tətbiqləri nəzərə alaraq dizayn etməsi vacibdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      courseAB_EOC2022:
+        description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+        display_name: Kurs layihələrinin sonu!
+      courseB_EOC2022:
+        description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+        display_name: Kurs layihələrinin sonu!
+      courseC_multi_artist_prog6_predict12022:
+        answers:
+        - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Rəssam tək xətt çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Artist dördbucaqlı çəkəcək.
+          feedback: Düzgün!
+        - text: Rəssam beşbucaqlı cəkəcək
+          feedback: Səhvdir. Rəssam kvadrat çəkir.
+        questions:
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
+      courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+        - text: on iki
+          feedback: Düzgün!
+        - text: on beş
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+        - text: iyirmi
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+        questions:
+        - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
+            sonra fermer neçə balqabaq yığacaq?
+      courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
+        - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+        - text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
+            et" blokları yoxdur.
+        - text: Scrat birinci blokdan hərəkət etməyəcək.
+          feedback: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+        questions:
+        - text: Bu kodda səhvləri axtarın. Scrat palıd qozasına çatacaq, yoxsa bir
+            problem var?
+      courseC_multi_maze_programming8_predict12022:
+        answers:
+        - text: Quş donuzdan bir addım geridə qalacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
+        - text: Quş TNT-nin üzərinə uçacaq.
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
+        - text: 'Quş divarın içində qaçacaq. '
+          feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
+        questions:
+        - text: 'Aşağıdakı kodu çox diqqətlə oxuyun. "İcra et" düyməsini kliklədikdə
+            nə olacaq? '
+      courseC_multi_starWars_predict12022:
+        answers:
+        - text: BB-8 hərəkət etməyəcək.
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - text: BB-8 yalnız bir yerə hərəkət edəcək
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - text: BB-8 5 dəfə hərəkət edəcək və bütün metal qırıntılarını alacaq
+          feedback: Düzgün!
+        - text: BB-8 cəmi 3 boşluq hərəkət edəcək.
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        questions:
+        - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
+      courseC_multi_starWars_predict22022:
+        answers:
+        - text: BB-8 ilk dövrədə çox uzaqlara gedəcək.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        - text: BB-8 bütün metal qırıntılarını əldə etmək üçün ilk dövrədə kifayət
+            qədər uzaqlaşmayacaq.
+          feedback: Düzgün!
+        - text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        questions:
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
+            nə baş verəcək? '
+      courseD_EOC2022:
+        description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
+      courseD_EOC_examples2022:
+        display_name: Layihə Nümunələri
+      courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - text: 'A '
+          feedback: Düzgün!
+        - text: 'B '
+        - text: 'C '
+        - text: Yuxarıdakılardan heç biri
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict22022:
+        answers:
+        - text: Arı hər çiçəyin nektarını alacaq və hər pətəkdən bal hazırlayacaq.
+          feedback: Düzgün!
+        - feedback: Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyə nektar almasına
+            və hər bir pətəkdən bal hazırlamasına imkan verir.
+        - feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
+        - feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
+        questions:
+        - text: 'Aşağıdakı koda diqqətlə baxın. Sizcə "Çalış" düyməsini basdıqdan
+            sonra nə olacaq? Unutmayın: hər buludun arxasında yalnız * bir * bal pətəyi
+            və ya * bir * çiçək olacaq.'
+      courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
+        - {}
+        questions:
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
+      courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - text: '8'
+          feedback: Düzgün!
+        - text: '10'
+        - text: on iki
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict22022:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022:
+        answers:
+        - text: 'Heç nə baş verməyəcək. '
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Düzgün!
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict22022:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022:
+        answers:
+        - text: Quş heç hərəkət etməyəcək.
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_EOC2022:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
+      courseE_EOC_examples2022:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
+      courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - text: Kombayn iki balqabaq yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn bütün balqabaqları yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        - text: Kombayn kahı yığacaq.
+          feedback: Düzgün!
+        - text: Kombayn qarğıdalı yığacaq.
+          feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+        questions:
+        - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
+      courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict12022:
+        answers:
+        - text: 'Heç nə baş verməyəcək. '
+          feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+        - text: Tumbleweed ekranın yuxarı hissəsinə üzəcəkdir
+          feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+        - text: Çöp otu yuvarlanmağa başlayacaq
+          feedback: Düzgün!
+        - text: Çöp otu yanıb sönəcək.
+          feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+        questions:
+        - {}
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        display_name: Kurs layihələrinin sonu!
+      courseF_EOC_samples2022:
+        display_name: Kurs layihələrinin sonu!
+      courseF_events_practice2022_2022_pilot_-2022-2:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
+        display_name: Tədbirlərin keçirilməsi praktikası
+      courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: Sprite yalnız düzgün dönüşümlü olacaq.
+          feedback: Səhv. Sprite də şərqə doğru hərəkət edəcək.
+        - text: Sprite yalnız şərqə gedəcək.
+          feedback: Səhv. Sprite fırlanmağı dayandırmadı, belə ki, həm də eyni zamanda
+            bunu edəcək.
+        - text: Sprite dönüşümlü və eyni zamanda hərəkət edəcək.
+          feedback: Doğru! Hər iki davranış eyni zamanda baş verəcək.
+        - text: Birincisi, sprite fırlanıb və sonra hərəkət edəcək.
+          feedback: Səhv. Sprite Lab-də əlaqəli bloklar hər sonuncudan dərhal sonra
+            baş verir, buna görə də hər iki davranış eyni vaxtda baş verəcəkdir.
+        questions:
+        - text: Kodu oxuyun, sonra proqnoz verin.
+      courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - text: Basdığınız pəri daha çox olacaq
+          feedback: Doğru! Basdığınız sprite daha böyük olacaq.
+        - text: Basdığınız sprite daha az olacaq.
+          feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+        - text: Bütün sprites daha çox olacaq.
+          feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+        - text: Bütün qrafik-obyekt az olacaq.
+          feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+        questions:
+        - text: 'Proqnoz verin: Run düyməsini basdıqdan sonra, spritlərdən birinə
+            basdığınız zaman nə olacaq?'
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: Sprite Lab Tətbiqləri
+        description: 'Bu layihələrin hamısı Sprite Lab ilə yaradılmışdır. Nəyin mümkün
+          olduğunu görmək üçün onları indi sınayın. Bu kursun sonunda siz bu kimi
+          öz layihələrinizi edə biləcəksiniz... və daha çoxunu!
+
+'
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - text: Kompüter istifadəçidən nömrəni tələb edəcək.
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Hələ ki əla iş! Sıradaki fəaliyyətini seç. Bacara bildiyin qədər
+          çox tamamla. Sprite-larla və davranışlarla təcrübə aparmağa davam edin.
+        display_name: Sprite-lar təcrübəsi
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - text: Hər iki təyyarə grid boyunca bir yerə hərəkət edəcək və sonra dayandırılacaq.
+          feedback: Səhv. Bu sprites Onlar dayandırmaq demək qədər fəaliyyət davam
+            edən bir "davranış" var.
+        - text: Hər iki təyyarə hərəkət etməyə başlayacaq və dayanmayacaq.
+          feedback: Doğru! Bu davranış təyyarələr hərəkət başlamaq və hərəkət davam
+            deyir.
+        - text: Bir təyyarə birinci, digəri isə daha sonra hərəkət edəcək.
+          feedback: Səhv. Sprite Lab-də kodun hər bir bloku növbəti dəfə dərhal başlayır.
+        - text: Təyyarələr qırılacaq.
+          feedback: Yalnış. Təyyarələr bir-birinə toxunacaq vəziyyətdə yerləşdirilməyib.
+        questions:
+        - text: Kodu oxuyun, sonra proqnoz verin.
+      courseF_text_practice2022_2022_pilot_-2022-2:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Mətn və göstərişlər ilə təcrübə aparmağı davam edin!
+        display_name: Mətn və təcrübə göstərişlər
+      courseF_variables2_predict2_multi2022_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Kompüter başqa sual soruşacaq.
+        questions:
+        - {}
+      courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: Burada təsvir edin
+      coursee_prediction_artistfunction22022:
+        answers:
+        - text: Rəssam tapmacanı düzgün həll edəcək.
+          feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
+            çəkmək" istifadə olunur.
+        - text: Rəssam pəncərə naxışında dörd kvadrat çəkəcək.
+          feedback: Düzgün!
+        - text: Rəssam yalnız bir kvadrat xətti çəkəcək.
+          feedback: Səhv. Proqram "çoxbucaqlıların xəttini çək" adlandırmır.
+        - text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
+          feedback: Səhv. Döngə "poliqon çəkmək" çağırışları arasında 90 dərəcə çevrilir.
+        questions:
+        - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
+      csf_be_a_super_digital_citizen2022:
+        content1: Burada təsvir edin
+        markdown: |
+          # Super Rəqəmsal Vətəndaş
+          ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
+      csf_digital_trails2022:
+        markdown: |-
+          # Rəqəmsal Cığırı izləyin
+
+          ## What information is OK to have in your digital footprint?
+      csf_password_power-up2022:
+        content1: Burada təsvir edin
+        markdown: |-
+          # Şifrənizi Gücləndirin
+
+          ## Xatırlamaq üçün Şifrə Məsləhətləri
+
+          * Unudulmaz **ifadə** ilə başlayın.
+          * Şifrənizi yalnız **valideynləriniz** bilməlidir.
+          * Heç vaxt parolunuzda heç bir **şəxsi** şəxsiyyət məlumatından istifadə etməyin.
+          * Ən azı **səkkiz** simvoldan ibarət parollar yaradın.
+          * Parolunuzda hərflər, rəqəmlər və **simvollardan** istifadə edin.
+      csf_putting_a_stop_to_online_meanness2022:
+        content1: Burada təsvir edin
+        markdown: |
+          # Mənalılığı STOP
+
+          ## İnternetdə kimsə sizin üçün pis davranırsa, nə etməli?
+
+          * **U**zaqlaş.
+          * **E**tibarlı böyüklərə deyin.
+          * **O**K saytlar əvvəlcə.
+          * **P**ause və onlayn düşünün.
+      csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Onlayn Qonşuluğum
+
+          ## How do you go places safely online?
+      express_EOC2022:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
+      express_EOC_examples2022:
+        display_name: Layihə Nümunələri
+      grade2_multi_collector_A_predict12022:
+        answers:
+        - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+        - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
+          feedback: Düzgün!
+        - text: Laurel bütün xəzinəni toplayacaq.
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+        - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+        questions:
+        - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
+      courseF_groups_practice_2022_pilot_-2022-2:
+        description: Bu günə qədər böyük iş! Növbəti dərsinizi seçin. Mümkün qədər
+          tamamlayın. Hadisələr və sprites qrupları ilə təcrübə saxlamaq!
+        display_name: Sprites Çox Tətbiq Olunur
+      csp-pre-survey-2017 preamble 1:
+        markdown: |-
+          ### **Bu sorğu anonimdir**
+
+          * Bu sorğu 5 qısa hissədən ibarətdir.
+          * Hər şeyi tamamlamaq **10 dəqiqə və ya daha az** çəkməlidir.
+
+          *Code.org məxfiliyinizə çox ciddi yanaşır.* Buradakı cavablarınız **anonim** saxlanılacaq. Heç kim, hətta müəlliminiz də cavablarınızı bir fərd olaraq sizinlə əlaqələndirə bilməz.
+
+          Biz bunu ona görə edirik ki, sizdən **mümkün qədər açıq və dürüst olmaq** istəyirik. Kursdakı təcrübənizə əhəmiyyət veririk və dediklərinizə əsasən təkmilləşdirmələr edirik.
+
+          ***
+
+          ### 1-ci hissə: Ümumilikdə məktəb
+
+          #### *İlk olaraq sizdən ümumiyyətlə məktəb haqqında fikir və hisslərinizi soruşmaq istəyirik.*
+        teacher_markdown: |-
+          Ən yaxşı təcrübə tələbələrə hər hansı sinif fəaliyyəti ilə məşğul olmamışdan **əvvəl** bu sorğunu doldurmaq imkanı verməkdir. Əksər müəllimlər bunu ilkin sinif texnologiyasının qurulması gününün bir hissəsi kimi edirlər.
+
+          Siz tələbələriniz üçün sorğunun anonim nəticələrini görə biləcəksiniz.
+
+          Bu sorğu niyə buradadır?
+          * CS Discoveries-in əsas məqsədi kompüter elmində iştirakın genişləndirilməsidir.
+          * Buna görə də, kurs bitdikdən sonra baş verən dəyişikliyin miqdarını ölçə bilməmiz üçün kursdan əvvəl tələbələrin kompüter elmləri ilə bağlı münasibət və inancları haqqında fikir sahibi olmaq çox vacibdir.
+          * Onu tamamlamaq həm də müəllim və tələbə təcrübəsini təkmilləşdirmək üçün kurrikulumda edə biləcəyimiz mühüm təkmilləşdirmələri anlamağa kömək edir.
+
+
+          * Zəhmət olmasa, tələbələrinizin bu mühüm məlumat dəstinə töhfə verməsinə kömək edin. Onların səsləri fərq yaradır!
+      csp-pre-survey-2017 preamble 1_2018:
+        markdown: |-
+          ### **Bu sorğu anonimdir**
+
+          * Bu sorğu 5 qısa hissədən ibarətdir.
+          * Hər şeyi tamamlamaq **10 dəqiqə və ya daha az** çəkməlidir.
+
+          *Code.org məxfiliyinizə çox ciddi yanaşır.* Buradakı cavablarınız **anonim** saxlanılacaq. Heç kim, hətta müəlliminiz də cavablarınızı bir fərd olaraq sizinlə əlaqələndirə bilməz.
+
+          Biz bunu ona görə edirik ki, sizdən **mümkün qədər açıq və dürüst olmaq** istəyirik. Kursdakı təcrübənizə əhəmiyyət veririk və dediklərinizə əsasən təkmilləşdirmələr edirik.
+
+          ***
+
+          ### 1-ci hissə: Ümumilikdə məktəb
+
+          #### *İlk olaraq sizdən ümumiyyətlə məktəb haqqında fikir və hisslərinizi soruşmaq istəyirik.*
+        teacher_markdown: |-
+          Ən yaxşı təcrübə tələbələrə hər hansı sinif fəaliyyəti ilə məşğul olmamışdan **əvvəl** bu sorğunu doldurmaq imkanı verməkdir. Əksər müəllimlər bunu ilkin sinif texnologiyasının qurulması gününün bir hissəsi kimi edirlər.
+
+          Siz tələbələriniz üçün sorğunun anonim nəticələrini görə biləcəksiniz.
+
+          Bu sorğu niyə buradadır?
+          * CS Discoveries-in əsas məqsədi kompüter elmində iştirakın genişləndirilməsidir.
+          * Buna görə də, kurs bitdikdən sonra baş verən dəyişikliyin miqdarını ölçə bilməmiz üçün kursdan əvvəl tələbələrin kompüter elmləri ilə bağlı münasibət və inancları haqqında fikir sahibi olmaq çox vacibdir.
+          * Onu tamamlamaq həm də müəllim və tələbə təcrübəsini təkmilləşdirmək üçün kurrikulumda edə biləcəyimiz mühüm təkmilləşdirmələri anlamağa kömək edir.
+
+
+          * Zəhmət olmasa, tələbələrinizin bu mühüm məlumat dəstinə töhfə verməsinə kömək edin. Onların səsləri fərq yaradır!
+      csp-pre-survey-2017 preamble 2 cs in general_2018:
+        markdown: |-
+          # Ümumilikdə Kompüter Elmləri
+
+          ### *Sonra, ümumiyyətlə, Kompüter Elmləri haqqında fikir və hisslərinizi soruşmaq istərdik.*
+
+          ***
+      csp-pre-survey-2017 preamble 3 this class:
+        markdown: |-
+          # Ümumilikdə Kompüter Elmləri
+
+          ### *Sonra, kompüter, Kompüter Elmləri haqqında fikir və hiss soruşmaq istəyirik.*
+
+          ***
+      csp-pre-survey-2017 preamble 3 this class_2018:
+        markdown: |-
+          # Ümumilikdə Kompüter Elmləri
+
+          ### *Sonra, kompüter, Kompüter Elmləri haqqında fikir və hiss soruşmaq istəyirik.*
+
+          ***
+      csp-pre-survey-2017 preamble 3 this class_2019:
+        markdown: |-
+          # Ümumilikdə Kompüter Elmləri
+
+          ### *Sonra, kompüter, Kompüter Elmləri haqqında fikir və hiss soruşmaq istəyirik.*
+
+          ***
+      csp-pre-survey-2017 preamble 4 the future:
+        markdown: |-
+          ### 4-cü hissə: Sizin gələcəyiniz və başqaları
+
+          #### *Sonra sizdən gələcək və kompüter elminə başlayanlar haqqında fikir və hisslərinizi soruşuruq*
+
+          ***
+      csp-pre-survey-2017 preamble 4 the future_2018:
+        markdown: |-
+          ### 4-cü hissə: Sizin gələcəyiniz və başqaları
+
+          #### *Sonra sizdən gələcək və kompüter elminə başlayanlar haqqında fikir və hisslərinizi soruşuruq*
+
+          ***
+      csp-pre-survey-2017 preamble 5 demographics:
+        markdown: |-
+          ### 5-ci Hissə: Bitirmə
+
+          #### *Nəhayət, kompüter elmləri ilə bağlı məlumatınız haqqında bir neçə qısa sualımız var*
+
+          ***
+      csp-pre-survey-2017 preamble 5 demographics_2018:
+        markdown: |-
+          ### 5-ci Hissə: Bitirmə
+
+          #### *Nəhayət, kompüter elmləri ilə bağlı məlumatınız haqqında bir neçə qısa sualımız var*
+
+          ***
+      csp-pre-survey-2017-q36-preamble:
+        markdown: |-
+          ***
+
+          #### Əgər kompüter elmində daha az bacarıqlı görünməkdən narahatsınızsa, sizi bu cür hiss edən nədir?
+      csp-pre-survey-2017-q36-preamble_2018:
+        markdown: |-
+          ***
+
+          #### Əgər kompüter elmində daha az bacarıqlı görünməkdən narahatsınızsa, sizi bu cür hiss edən nədir?
+      CSD End of Unit Survey - Unit 1 - IntroMD_2022:
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələriniz sorğunu tamamlasa da, qısa müddətdə müəllim sorğusunu tamamladığınız üçün sizə təşəkkür edirik
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+      CSD Student End of Unit Survey - Unit 1_2022:
+        title: CS Discoveries Semestr Sonu Sorğusu!
+      CSD U4L15 SFLP:
+        markdown: |-
+          # Baxış
+
+          Komandalar bu dəfə öz interaktiv prototipi ilə istifadəçi testinin növbəti mərhələsini keçirirlər. Bu sınaq mərhələsindən toplanan rəylər proqram prototiplərinin son təkrarlanması barədə məlumat verəcəkdir.
+
+
+          ## Resurslar
+
+          * [Tətbiq İstifadəçi Testi](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) - Fəaliyyət Bələdçisi
+      CSD U4L16 SFLP:
+        markdown: |-
+          # Baxış
+
+          Testin son raundunun rəyindən istifadə edərək, komandalar istifadəçilərinin ehtiyaclarına cavab verən dəyişikliklər həyata keçirirlər. Hər bir komanda əlavə etmək istədikləri xüsusiyyətləri və düzəltməli olduqları səhvləri izləyir və prioritetləşdirir.
+          ## Lüğət
+
+          * **Bug** - Düzgün işləməyən proqramın bir hissəsi.
+          * **Xüsusiyyət** - Proqram elementinin fərdi funksional elementi. Bu, yeni bir şey etmək, birdən çox platformada işləmək və ya daha səmərəli işləmək bacarığı ola bilər.
+
+
+          ## Resurslar
+
+          * [Tətbiq İstifadəçisinin Test Təhlili](https://docs.google.com/document/d/1Y7cri91LU_70n6CrIGnUSedPwA_TMfYCkyhCjfpfTns/export?format=pdf) - Fəaliyyət Bələdçisi
+      CSD U4L17 SFLP:
+        markdown: |-
+          Hər bir komanda inkişaf etdirdikləri proqramı "təqdim etmək" üçün təqdimat hazırlayır. Mübarizələri, zəfərləri və gələcək üçün planları bölüşmək vaxtıdır.
+
+
+          ## Resurslar
+
+          * [Tətbiq Təqdimat Şablonu](https://docs.google.com/presentation/d/19KVEybGqu6pdFB3QwjvJNA_VTM5W5Kxy3fUlxf1xnc4/edit) - Slayd Göyərtəsi
+          * [Tətbiq Təqdimatı](https://docs.google.com/presentation/d/1qRbnSABMrfeZHUiQ_mGdhzW7UIGuiGiWyMcQK_pH-tY/edit) - Nümunə
+          * [Tətbiq Təqdimatı](https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - Rubrik
+      CSP pre-assessment survey:
+        title: Əvvəlcədən sorğu
+      PrivatePersonalInformation-Unplugged2022:
+        markdown: |-
+          # Şəxsi Məlumat
+          ## What information about you is OK to share online?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Şəxsi Məlumat
+          ## What information about you is OK to share online?
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Şəxsi Məlumat
+          ## What information about you is OK to share online?
+      courseF_collector_samples_2022_pilot_-2022-2:
+        description: Siz kolleksiyası oyun yaratmaq olacaq. Başlamadan əvvəl aşağıda
+          göstərilən layihələrin nümunələri ilə tanış olun. Öz proqram planlaşdırma
+          başlamaq üçün hazır olduğunuzda "Finish" düyməsinə basın.
+      courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: İndi istədiyiniz hər şeyi etmək üçün öyrəndiklərinizi istifadə
+          edə bilərsiniz! Sprites bir çox interaktiv proqram yaradın!
+        display_name: Sprites çox-pulsuz oyun
+      pre-assessment survey heading1:
+        markdown: Birincisi, ümumi olaraq məktəb işinizlə bağlı sizə bəzi suallarımız
+          var.

@@ -12,7 +12,7 @@ module UsersHelper
   # Returns a boolean - true if all steps were successful, false otherwise.
   def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:, provider:)
     # No-op if source_user is nil
-    return true unless source_user.present?
+    return true if source_user.blank?
 
     firehose_params = {
       source_user: source_user,
@@ -48,7 +48,7 @@ module UsersHelper
       source_user.destroy!
     end
 
-    log_account_takeover_to_firehose(firehose_params)
+    log_account_takeover_to_firehose(**firehose_params)
     true
   rescue => e
     # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
@@ -155,7 +155,7 @@ module UsersHelper
 
   # Get level progress for a set of users within this unit.
   # @param [Enumerable<User>] users
-  # @param [Script] unit
+  # @param [Unit] unit
   # @return [Hash]
   # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
   #   {
@@ -193,7 +193,7 @@ module UsersHelper
   # Retrieve all teacher feedback for the designated set of users in the given
   # unit, with a single query.
   # @param [Enumerable<User>] users
-  # @param [Script] unit
+  # @param [Unit] unit
   # @return [Hash] TeacherFeedbacks by user id by level id
   # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
   # {
@@ -249,7 +249,7 @@ module UsersHelper
   end
 
   # Merges and summarizes a user's level progress for a particular unit.
-  # @param [Script] unit
+  # @param [Unit] unit
   # @param [User] user
   # @param [Hash<Integer, UserLevel>] user_levels_by_level
   #   A map from level id to UserLevel instance for the provided user, passed

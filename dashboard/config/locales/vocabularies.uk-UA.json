@@ -19,13 +19,13 @@
         "debugging/minecraft/unversioned": {
           "word": "Налагодження"
         },
-        "program/minecraft/unversioned": {
-          "word": "Програма",
-          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
-        },
         "event/minecraft/unversioned": {
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
         "code/hero/unversioned": {
           "definition": "писати код або писати інструкції для комп'ютера."
@@ -33,12 +33,12 @@
         "debugging/hero/unversioned": {
           "word": "Налагодження"
         },
+        "function/hero/unversioned": {
+          "word": "Функція"
+        },
         "program/hero/unversioned": {
           "word": "Програма",
           "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
-        },
-        "function/hero/unversioned": {
-          "word": "Функція"
         },
         "code/poem-art/2021": {
           "word": "Код"
@@ -112,6 +112,9 @@
           "word": "Програма",
           "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
+        "code/dance/unversioned": {
+          "definition": "писати код або писати інструкції для комп'ютера."
+        },
         "event/dance/unversioned": {
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
@@ -120,24 +123,21 @@
           "word": "Програма",
           "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
-        "code/dance/unversioned": {
-          "definition": "писати код або писати інструкції для комп'ютера."
-        },
         "code/aquatic/unversioned": {
           "definition": "писати код або писати інструкції для комп'ютера."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Налагодження"
-        },
-        "program/aquatic/unversioned": {
-          "word": "Програма",
-          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Умови"
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Налагодження"
+        },
         "loops/aquatic/unversioned": {
           "word": "Цикли"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
         "encryption/hoc-encryption/unversioned": {
           "word": "Шифрування"
@@ -189,15 +189,19 @@
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
         },
-        "event/sports/unversioned": {
-          "word": "Подія",
-          "definition": "Дія, через яку щось відбувається."
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Код"
         },
         "debugging/sports/unversioned": {
           "word": "Налагодження"
+        },
+        "event/sports/unversioned": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
         },
         "program/sports/unversioned": {
           "word": "Програма",
@@ -213,15 +217,15 @@
           "word": "Програма",
           "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
-        "event/basketball/unversioned": {
-          "word": "Подія",
-          "definition": "Дія, через яку щось відбувається."
-        },
         "code/basketball/unversioned": {
           "definition": "писати код або писати інструкції для комп'ютера."
         },
         "debugging/basketball/unversioned": {
           "word": "Налагодження"
+        },
+        "event/basketball/unversioned": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
         },
         "program/basketball/unversioned": {
           "word": "Програма",
@@ -251,6 +255,176 @@
         },
         "machine_learning/oceans/unversioned": {
           "word": "Машинне навчання"
+        },
+        "program/coursed/2022": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
+        },
+        "debugging/coursed/2022": {
+          "word": "Налагодження"
+        },
+        "programming/coursed/2022": {
+          "word": "Програмування"
+        },
+        "event/coursed/2022": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
+        },
+        "code/coursed/2022": {
+          "definition": "писати код або писати інструкції для комп'ютера."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Умови"
+        },
+        "behavior/coursef/2022": {
+          "word": "Поведінка"
+        },
+        "program/coursef/2022": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
+        },
+        "event/coursef/2022": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
+        },
+        "variable/coursef/2022": {
+          "word": "Змінна"
+        },
+        "input/coursef/2022": {
+          "word": "Ввід"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Машинне навчання"
+        },
+        "internet/coursef/2022": {
+          "word": "Інтернет"
+        },
+        "packets/coursef/2022": {
+          "word": "Пакет"
+        },
+        "define/coursef/2022": {
+          "word": "Визначити"
+        },
+        "behavior/coursee/2022": {
+          "word": "Поведінка"
+        },
+        "function/coursee/2022": {
+          "word": "Функція"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Умови"
+        },
+        "copyright/coursee/2022": {
+          "word": "Авторські права"
+        },
+        "define/coursee/2022": {
+          "word": "Визначити"
+        },
+        "debugging/courseb/2022": {
+          "word": "Налагодження"
+        },
+        "drop/courseb/2022": {
+          "word": "Дроп"
+        },
+        "program/courseb/2022": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
+        },
+        "programming/courseb/2022": {
+          "word": "Програмування"
+        },
+        "event/courseb/2022": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
+        },
+        "debugging/express/2022": {
+          "word": "Налагодження"
+        },
+        "sequencing/express/2022": {
+          "word": "Послідовність дій"
+        },
+        "program/express/2022": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
+        },
+        "programming/express/2022": {
+          "word": "Програмування"
+        },
+        "behavior/express/2022": {
+          "word": "Поведінка"
+        },
+        "event/express/2022": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
+        },
+        "conditionals/express/2022": {
+          "word": "Умови"
+        },
+        "function/express/2022": {
+          "word": "Функція"
+        },
+        "variable/express/2022": {
+          "word": "Змінна"
+        },
+        "define/express/2022": {
+          "word": "Визначити"
+        },
+        "drop/pre-express/2022": {
+          "word": "Дроп"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Налагодження"
+        },
+        "program/pre-express/2022": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
+        },
+        "programming/pre-express/2022": {
+          "word": "Програмування"
+        },
+        "event/pre-express/2022": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
+        },
+        "debugging/coursea/2022": {
+          "word": "Налагодження"
+        },
+        "program/coursea/2022": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
+        },
+        "drop/coursea/2022": {
+          "word": "Дроп"
+        },
+        "programming/coursea/2022": {
+          "word": "Програмування"
+        },
+        "event/coursea/2022": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
+        },
+        "debugging/coursec/2022": {
+          "word": "Налагодження"
+        },
+        "program/coursec/2022": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
+        },
+        "sequencing/coursec/2022": {
+          "word": "Послідовність дій"
+        },
+        "programming/coursec/2022": {
+          "word": "Програмування"
+        },
+        "event/coursec/2022": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
+        },
+        "data/coursec/2022": {
+          "word": "Дані"
+        },
+        "binary/coursec/2022": {
+          "word": "Двійкова система"
         },
         "input/csd/2022": {
           "word": "Ввід"
@@ -287,14 +461,24 @@
           "word": "Машинне навчання"
         },
         "code/poem-art/unversioned": {
-          "word": "Код"
+          "word": "Код",
+          "definition": ""
         },
         "event/poem-art/unversioned": {
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
         },
         "program/poem-art/unversioned": {
-          "word": "Програма"
+          "word": "Програма",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Поведінка"

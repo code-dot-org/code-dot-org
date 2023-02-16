@@ -29,6 +29,324 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "curriculum_guide/coursed/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Lærer-Forum"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Parprogrammering"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Relé programmering"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Betingelser med kort"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Implementeringsguide"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Lærer-Forum"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internett"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internett"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internett"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Implementeringsguide"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Lærer-Forum"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Lærer-Forum"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Flytt den, flytt den"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Flytt den, flytt den"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Flytt den, flytt den"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Flytt den, flytt den"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Parprogrammering"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie og det Store Prosjektet"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Uoppdagede feil",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Gå i spinn"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Gå i spinn"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Gå i spinn"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Gå i spinn"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Den store begivenheten"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Lærer-Forum"
+        },
+        "pair_programming/express/2022": {
+          "name": "Parprogrammering",
+          "type": "Video"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Variabler"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Lærer-Forum"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Parprogrammering"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Lærer-Forum"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Parprogrammering"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Glade Kart"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Den store begivenheten"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Lærer-Forum"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Mine robotliknende venner"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Parprogrammering",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Den store begivenheten"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Den store begivenheten"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binær armbånd"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Lærer-Forum"
+        },
         "binary_and_data/csd/2022": {
           "type": "Video"
         },
@@ -56,9 +374,6 @@
         },
         "make_a_recommendation/csd/2022": {
           "type": "Tilbakemelding"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "Lærer-Forum"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "Video"
@@ -720,6 +1035,23 @@
         "vocabulary_3/csd/2017": {
           "name": "Ordforråd"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Implementeringsguide"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Lærer-Forum"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Video"
         },
@@ -732,50 +1064,47 @@
         "pause_and_think_online/coursef/2021": {
           "type": "Video"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Morro med for løkker"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Morro med for løkker"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Morro med for løkker"
-        },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Morro med for løkker"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Morro med for løkker"
         },
-        "ai-ml/coursef/2021": {
-          "type": "Video"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Morro med for løkker"
         },
-        "ai-training/coursef/2021": {
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Morro med for løkker"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Morro med for løkker"
+        },
+        "ai-ml/coursef/2021": {
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
           "type": "Video"
         },
-        "unplugged-video-internet/coursef/2021": {
+        "ai-training/coursef/2021": {
+          "type": "Video"
+        },
+        "assessment-answer-internet/coursef/2021": {
           "name": "Internett"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internett"
         },
-        "assessment-answer-internet/coursef/2021": {
+        "unplugged-video-internet/coursef/2021": {
           "name": "Internett"
         },
-        "implementation_guide/coursef/2021": {
-          "name": "Implementeringsguide"
-        },
-        "curriculum_guide_1/coursef/2021": {
+        "curriculum_guide_1/courseb/2021": {
           "name": "Curriculum guide"
         },
-        "teacher_forum_1/coursef/2021": {
-          "name": "Lærer-Forum"
+        "implementation_guide/courseb/2021": {
+          "name": "Implementeringsguide"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Animerte figurer lab dokumentasjon"
+        "teacher_forum_1/courseb/2021": {
+          "name": "Lærer-Forum"
         },
         "mimi-activity/courseb/2021": {
           "name": "Flytt den, flytt den"
@@ -802,7 +1131,7 @@
           "name": "Uoppdagede feil",
           "type": "Video"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Gå i spinn"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
@@ -811,38 +1140,38 @@
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Gå i spinn"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Gå i spinn"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "Den store begivenheten",
-          "type": "Video"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Den store begivenheten"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Den store begivenheten"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "Den store begivenheten"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Den store begivenheten",
+          "type": "Video"
         },
-        "implementation_guide/courseb/2021": {
-          "name": "Implementeringsguide"
-        },
-        "curriculum_guide_1/courseb/2021": {
+        "curriculum_guide_1/coursea/2021": {
           "name": "Curriculum guide"
         },
-        "teacher_forum_1/courseb/2021": {
+        "implementation_guide/coursea/2021": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum_1/coursea/2021": {
           "name": "Lærer-Forum"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Video"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Parprogrammering"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "type": "Video"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -860,31 +1189,25 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "Den store begivenheten"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Den store begivenheten"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "Den store begivenheten"
         },
-        "implementation_guide/coursea/2021": {
-          "name": "Implementeringsguide"
-        },
-        "curriculum_guide_1/coursea/2021": {
+        "curriculum_guide_1/coursec/2021": {
           "name": "Curriculum guide"
         },
-        "teacher_forum_1/coursea/2021": {
+        "implementation_guide/coursec/2021": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum_1/coursec/2021": {
           "name": "Lærer-Forum"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Mine robotliknende venner"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Mine robotliknende venner"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Mine robotliknende venner"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -893,26 +1216,29 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Mine robotliknende venner"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Mine robotliknende venner"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Mine robotliknende venner"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Parprogrammering",
           "type": "Video"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "Den store begivenheten"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Den store begivenheten"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "Den store begivenheten"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "Video"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Binær armbånd"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binær armbånd"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -921,55 +1247,58 @@
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Binær armbånd"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Binær armbånd"
         },
-        "implementation_guide/coursec/2021": {
-          "name": "Implementeringsguide"
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binær armbånd"
         },
-        "curriculum_guide_1/coursec/2021": {
+        "curriculum_guide_1/coursed/2021": {
           "name": "Curriculum guide"
         },
-        "teacher_forum_1/coursec/2021": {
+        "implementation_guide/coursed/2021": {
+          "name": "Implementeringsguide"
+        },
+        "teacher_forum_1/coursed/2021": {
           "name": "Lærer-Forum"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Millimeterpapirprogrammering"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Millimeterpapirprogrammering"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Millimeterpapirprogrammering"
-        },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Millimeterpapirprogrammering"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Millimeterpapirprogrammering"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Millimeterpapirprogrammering"
         },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Millimeterpapirprogrammering"
+        },
         "pair-programming-vid/coursed/2021": {
           "name": "Parprogrammering"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Relé programmering"
         },
         "relay-assessment/coursed/2021": {
           "name": "Relé programmering"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Relé programmering"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Relé programmering"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Relé programmering"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Relé programmering"
         },
         "pause_and_think_online/coursed/2021": {
@@ -978,28 +1307,22 @@
         "pause_and_think_online_1/coursed/2021": {
           "type": "Video"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Betingelser med kort"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Betingelser med kort"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Betingelser med kort"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Betingelser med kort"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Betingelser med kort"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "Implementeringsguide"
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Betingelser med kort"
         },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "Curriculum guide"
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Betingelser med kort"
         },
-        "teacher_forum_1/coursed/2021": {
+        "teacher_forum_1/express/2021": {
           "name": "Lærer-Forum"
         },
         "pair_programming/express/2021": {
@@ -1027,14 +1350,14 @@
         "variables_video/express/2021": {
           "name": "Variabler"
         },
-        "teacher_forum_1/express/2021": {
+        "teacher_forum_1/pre-express/2021": {
           "name": "Lærer-Forum"
-        },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Parprogrammering"
         },
         "20_20_20_rule/pre-express/2021": {
           "type": "Video"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Parprogrammering"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "type": "Video"
@@ -1042,7 +1365,16 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Video"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Curriculum guide"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Implementeringsguide"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Animerte figurer lab dokumentasjon"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "Lærer-Forum"
         },
         "sprite_lab_documentation/coursee/2021": {
@@ -1053,18 +1385,6 @@
         },
         "digital-sharing-video/coursee/2021": {
           "type": "Video"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Implementeringsguide"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Curriculum guide"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "Lærer-Forum"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Animerte figurer lab dokumentasjon"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Video"
@@ -1102,6 +1422,9 @@
         "view_and_download_survey_data/csd/2021": {
           "type": "Video"
         },
+        "teacher_forum/csd/2021": {
+          "name": "Lærer-Forum"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
         },
@@ -1119,9 +1442,6 @@
         },
         "design_mode_1/csd/2021": {
           "name": "Utformingsmodus"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "Lærer-Forum"
         },
         "internet-of-things-video/csd/2021": {
           "type": "Video"
@@ -1178,6 +1498,9 @@
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "Tilbakemelding"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Lærer-Forum"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Video"
@@ -1238,9 +1561,6 @@
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "Tilbakemelding"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Lærer-Forum"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "Video"

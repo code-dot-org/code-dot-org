@@ -2,8 +2,48 @@
   "dv-MV": {
     "data": {
       "vocabularies": {
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "copyright/coursee/2022": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/courseb/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "drop/pre-express/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "drop/coursea/2022": {
+          "word": "ޑްރޮޕް"
+        },
         "copyright/csd/2022": {
           "word": "ކޮޕީރައިޓްސް"
+        },
+        "code/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "drop/courseb/2021": {
           "word": "ޑްރޮޕް"

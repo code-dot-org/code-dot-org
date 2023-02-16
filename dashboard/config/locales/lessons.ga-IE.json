@@ -24,7 +24,7 @@
           "name": "Spraotharlann: Gumball"
         },
         "dance/Dance Party": {
-          "name": "Cóisir Dhamhsa"
+          "name": "Cóisir Dhamhsa (2018)"
         },
         "hoc-encryption/Simple Encryption": {
           "name": "Criptiú Simplí"
@@ -41,6 +41,12 @@
         "applab-intro/Intro to App Lab": {
           "name": "Buneolas ar an tSaotharlann Aipeanna"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Spraotharlann Disney Infinity"
         },
@@ -48,7 +54,7 @@
           "name": "An Uair Chódála 2013"
         },
         "dance-2019/Dance Party": {
-          "name": "Cóisir Dhamhsa (2019)"
+          "name": "Cóisir Dhamhsa"
         },
         "oceans/Oceans": {
           "name": "AI ar son an Aigéin"
@@ -82,6 +88,66 @@
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "Buntús na Ríomheolaíochta"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Códáil Sealaíochta"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Cóisir Dhamhsa"
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "Lúba in Ice Age"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Coinníollacha le Cártaí"
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "Fáilte go dtí Saotharlann na Sprideanna"
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "Sprideanna ar Obair"
+        },
+        "coursef-2022/AI For Oceans": {
+          "name": "AI ar son an Aigéin"
+        },
+        "coursef-2022/The Internet": {
+          "name": "An tIdirlíon"
+        },
+        "coursee-2022/Swimming Fish with Sprite Lab": {
+          "name": "Éisc ar snámh i Saotharlann na Sprideanna"
+        },
+        "coursee-2022/Mini-Project: About Me": {
+          "name": "Maidir Liomsa i Saotharlann na Sprideanna"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Ceapadh Ceoil"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Bog é, Bog é"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Bí Lúbach"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "Sprideanna ar Obair"
+        },
+        "express-2022/Virtual Pet with Sprite Lab": {
+          "name": "Peata Fíorúil i Saotharlann na Sprideanna"
+        },
+        "express-2022/Dance Party": {
+          "name": "Cóisir Dhamhsa"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Mapaí Meidhreacha"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "An Teagmhas Mór"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Bráisléid Dhénártha"
         },
         "csd3-2022/Variables": {
           "name": "Athróga"

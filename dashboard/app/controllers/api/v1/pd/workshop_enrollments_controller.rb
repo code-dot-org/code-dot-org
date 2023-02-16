@@ -56,9 +56,10 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     elsif workshop_full?
       render_unsuccessful RESPONSE_MESSAGES[:FULL]
     else
-      enrollment = ::Pd::Enrollment.new workshop: @workshop
-      enrollment.school_info_attributes = school_info_params
-      if enrollment.update enrollment_params
+      ActiveRecord::Base.transaction do
+        enrollment = ::Pd::Enrollment.new workshop: @workshop
+        enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
+
         user&.update_school_info(enrollment.school_info)
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
@@ -69,8 +70,10 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
           sign_up_url: url_for('/users/sign_up'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
-      else
-        render_unsuccessful RESPONSE_MESSAGES[:ERROR]
+      rescue ActiveRecord::ValueTooLong
+        render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: 'a response is too long'}
+      rescue ActiveRecord::RecordInvalid => invalid
+        render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: invalid.message}
       end
     end
   end
@@ -119,9 +122,9 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   def enrollment_params
     {
-      first_name: params[:first_name],
-      last_name: params[:last_name],
-      email: params[:email],
+      first_name: params[:first_name]&.strip_utf8mb4,
+      last_name: params[:last_name]&.strip_utf8mb4,
+      email: params[:email]&.strip_utf8mb4,
       role: params[:role],
       grades_teaching: params[:grades_teaching],
       attended_csf_intro_workshop: params[:attended_csf_intro_workshop],
@@ -145,10 +148,10 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       school_type: params[:school_info][:school_type],
       school_state: params[:school_info][:school_state],
       school_zip: params[:school_info][:school_zip],
-      school_district_name: params[:school_info][:school_district_name],
-      school_district_other: params[:school_info][:school_district_other],
+      school_district_name: params[:school_info][:school_district_name]&.strip_utf8mb4,
+      school_district_other: params[:school_info][:school_district_other]&.strip_utf8mb4,
       school_id: params[:school_info][:school_id],
-      school_name: params[:school_info][:school_name],
+      school_name: params[:school_info][:school_name]&.strip_utf8mb4,
       country: "US" # we currently only support enrollment in pd for US schools
     }
   end

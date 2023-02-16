@@ -1,4 +1,4 @@
-%link{href: asset_path('css/reference_guides.css'), rel: 'stylesheet', type: 'text/css'}
+%link{href: asset_path('css/curriculum_table_styling.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path('css/curriculum_navigation.css'), rel: 'stylesheet', type: 'text/css'}
 -# this header is used by instructions/NetworkResourceLink to display a nice string
 - content_for :head do
@@ -7,3 +7,12 @@
   data: {referenceGuide: @reference_guide.summarize_for_show.to_json, referenceGuides: @reference_guides.to_json, baseUrl: @base_url.to_json}}
 
 #show-container
+
+- if current_user.try(:levelbuilder?)
+  = render layout: 'shared/extra_links' do
+    %strong= @reference_guide.display_name
+    %ul
+      - if Rails.application.config.levelbuilder_mode
+        %li= link_to 'Edit', "#{@base_url.to_s}/#{@reference_guide.key}/edit"
+      - else
+        %li= link_to 'View on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", "#{@base_url.to_s}/#{@reference_guide.key}").to_s

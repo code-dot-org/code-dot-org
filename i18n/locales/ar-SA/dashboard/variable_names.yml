@@ -22,15 +22,18 @@ ar:
       level: المستوى
       name: اسم
       nectar: رحيق
+      object: كائن
       planet: كوكب
       points: نقاط
       random: عشوائي
       repeat: تكرار
       right: اليمين
       score: النتيجة
+      shout: يصرخ
       sides: جوانب
       size: الحجم
       speed: السرعة
+      type: نوع
       variable: متغير
       width: العرض
       wizard: ساحر

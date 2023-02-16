@@ -1,9 +1,36 @@
 {
   "key": "length",
-  "name": "length",
+  "name": "[string].length",
   "category": "Variables",
   "category_key": "variables",
-  "content": "[name]\n\n## [string].length\n\n[/name]\n\n[category]\n\nCategory: Variables\n\n[/category]\n\n[description]\n\n[short_description]\n\nReturns the length of the string.\n\n[/short_description]\n\nWhen doing string parsing or manipulation you usually need to know how long a string is. *length* is actually not a function, but an attribute of a string object. You need to use a variable containing a string, followed by a dot (\".\"), followed by the attribute name *length*.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\nvar word=\"supercalifragilisticexpialidocious\";\nconsole.log(word.length);\n```\n\n[/example]\n____________________________________________________\n\n[example]\n\n**Example: First and Last** See if the first letter is the same as the last letter in a word.\n\n```\n// See if the first letter is the same as the last letter in a word.\nvar word=\"racecar\";\nvar first=word.substring(0,1);\nvar last=word.substring(word.length-1,word.length);\nconsole.log(first == last);\n```\n\n[/example]\n____________________________________________________\n[example]\n\n**Example: Palindrome** Check if a word is a palindrome.\n\n```\n// Check if a word is a palindrome.\nvar word=\"racecar\";\nwhile(word.length>1 && word.substring(0,1)==word.substring(word.length-1,word.length)) {\n  word=word.substring(1,word.length-1);\n}\nif(word.length==0 || word.length==1) console.log(\"palindrome\");\nelse console.log(\"not palindrome\");\n```\n\n[/example]\n____________________________________________________\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| string | string | Yes | The string to find the length of. |\n\n[/parameters]\n\n[returns]\n\n### Returns\nThe length of the string\n\n[/returns]\n\n[tips]\n\n### Tips\n- *length* is always >= 0\n\n[/tips]\n\n",
-  "short_description": "\n[string].length\nCategory: Variables",
-  "syntax": "[string].length"
+  "content": "When doing string parsing or manipulation you usually need to know how long a string is. *length* is actually not a function, but an attribute of a string object. You need to use a variable containing a string, followed by a dot (\".\"), followed by the attribute name *length*.",
+  "examples": [
+    {
+      "name": "Example: how long?!",
+      "description": "",
+      "code": "```\nvar word=\"supercalifragilisticexpialidocious\";\nconsole.log(word.length);\n```"
+    },
+    {
+      "name": "Example: first and last",
+      "description": "See if the first letter is the same as the last letter in a word.",
+      "code": "```\n// See if the first letter is the same as the last letter in a word.\nvar word=\"racecar\";\nvar first=word.substring(0,1);\nvar last=word.substring(word.length-1,word.length);\nconsole.log(first == last);\n```"
+    },
+    {
+      "name": "Example: palindrome",
+      "description": "Check if a word is a palindrome.",
+      "code": "```\n// Check if a word is a palindrome.\nvar word=\"racecar\";\nwhile(word.length>1 && word.substring(0,1)==word.substring(word.length-1,word.length)) {\n  word=word.substring(1,word.length-1);\n}\nif(word.length==0 || word.length==1) console.log(\"palindrome\");\nelse console.log(\"not palindrome\");\n```"
+    }
+  ],
+  "palette_params": [
+    {
+      "name": "string",
+      "type": "string",
+      "required": true,
+      "description": "The string to find the length of."
+    }
+  ],
+  "return_value": "The length of the string",
+  "short_description": "Returns the length of the string.",
+  "syntax": "[string].length",
+  "tips": "- *length* is always >= 0"
 }

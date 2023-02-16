@@ -347,6 +347,7 @@
   homepage_banner_40k_teachers_link: "もっと詳しく知る"
   homepage_slot_text_title_hoc: "Hour of Code（コーディングを学ぶ時間）"
   homepage_slot_text_blurb_hoc: "誰でも学べる！早速始めよう。"
+  homepage_slot_text_blurb_hoc_2022: "いろいろ見て、プレイして作成！"
   homepage_slot_text_link_hoc: "「コードの時間」に挑戦する"
   homepage_slot_text_link_about_hoc: "Hour of Code（アワー オブ コード）について"
   homepage_slot_text_link_host: "Hour of Code を主催する"
@@ -374,7 +375,7 @@
   homepage_slot_text_link_shop: "T シャツ、帽子、その他"
   homepage_slot_text_link_thebadguys: "The Bad Guysでコーディング"
   homepage_slot_text_link_administrators: "あなたの学校にコンピューター サイエンスを取り入れましょう"
-  homepage_gallery_header: "これまでに %{project_count} 百万以上のCode.orgプロジェクトが作成されました"
+  homepage_gallery_header: "これまでに %{project_count} 百万を超えるCode.orgプロジェクトが作成されました"
   homepage_header_donors: "Code.orgは支援者の皆様に感謝します。"
   homepage_donors_seall: "すべてを見る"
   homepage_donors_donate: "寄付する"
@@ -382,6 +383,7 @@
   homepage_below_hero_announcement_link_text: "もっと詳しく知る"
   homepage_higher_power_body: "ダンスパーティーで作成し、バンドライブを見るチャンスを手に入れましょう。"
   homepage_thebadguys_body: "映画** The Bad Guys **のタランチュラさん、ウルフさん、残りのキャラクターたちと一緒に冒険をしてみましょう！"
+  homepage_csa_body: "エクイティ主導型のカリキュラムで、現実世界とつながったクリエイティブなプロジェクトで学生を支援します。"
   contact_form_topic_student: "私は学生です"
   contact_form_topic_parent: "私は親です"
   contact_form_topic_teacher: "私は、教師/教育者です"
@@ -591,6 +593,7 @@
   volunteer_engineer_submission_distance_16: "16キロメートル"
   volunteer_engineer_submission_distance_24: "24キロメートル"
   volunteer_engineer_submission_distance_32: "32キロメートル"
+  volunteer_engineer_submission_distance_80: "50 マイル"
   volunteer_engineer_submission_num_volunteers_5: "5 ボランティア"
   volunteer_engineer_submission_num_volunteers_10: "10 ボランティア"
   volunteer_engineer_submission_num_volunteers_25: "25 ボランティア"
@@ -993,6 +996,7 @@
   express-2020_name: エクスプレスコース (2020)
   pre-express-2020_name: 就学前エクスプレスコース (2020)
   pre-express-2021_name: 読み書き前 エクスプレスコース (2021)
+  pre-express-2022_name: 読み書き前 エクスプレスコース (2022)
   csd2_name: 'ユニット2: ウェブ開発'
   csd3_name: 'ユニット3: アニメーションとゲーム'
   accelerated_name: "上級コース"
@@ -1588,6 +1592,9 @@
   hoc_overview_dance_title: "ダンスパーティー"
   hoc_overview_dance_subtitle: "ダンスパーティーをプログラミングして友だちと共有しましょう。ケイティ・ペリー、マドンナ、J. バルビン、シア、キース・アーバン、キアラ他25人以上が参加します！"
   hoc_overview_dance_2019_subtitle: "ダンスパーティーをプログラミングして友だちと共有しましょう。ケイティ・ペリー、ショーン・メンデス、パニック! アット・ザ・ ディスコ、リル・ナズ・X、ジョナス・ブラザーズ、ニッキー・ミナージュ他34人以上が参加します！"
+  hoc_overview_dance_2022_subtitle: "ダンスパーティーをコーディングして友達とシェアしよう。ビヨンセ、ハリー・スタイルズ、リッツォ、リル・ナズ・エックス、セレーナ・ゴメス、ディズニーの「エンカント」の音楽などをフィーチャー！"
+  hoc_overview_hello_world_2022_subtitle: "楽しい4テーマから選択して作成した世界のインタラクティブなキャラクターをコーディングしましょう。"
+  hoc_overview_hello_world_2022_alt_text: "地球のイラストに浮かぶ宇宙飛行士と動物キャラクターのアニメーション"
   hoc_overview_title: "Code.orgのHour of Codeアクティビティ"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Hour of Code</a>は、180か国以上で数千万人の生徒を対象とする世界的なイニシアティブです。誰でも、どこでも、Hour of Codeイベントを開催したり、45以上の言語で利用できる500以上の1時間のチュートリアルを受けたりすることができます。"
   hoc_overview_subtitle_markdown: "[Hour of Code] (https://hourofcode.com) は、180か国以上の数千万人の生徒を対象とする世界的なイニシアティブです。誰でも、どこでも、Hour of Codeイベントを開催したり、45以上の言語で利用できる500以上の1時間のチュートリアルを受けたりすることができます。"
@@ -1633,9 +1640,13 @@
   hoc2018_mc_educators_box3_title: "無料の生徒用ワークショップに参加する"
   hoc2018_mc_educators_box3_desc: "無料のHour of Codeワークショップを探すには、お住まいの地域のMicrosoft Storeにアクセスしてください。スキルレベルに関係なく、6歳以上の方であれば誰でもご利用いただけます。"
   hoc2018_mc_educators_box3_button: "ワークショップを探す"
+  hoc2022_mc_educators_box3_desc_markdown: 'このオンデマンド [無料コース](%{free_course_link}) を利用するか、クラス全員を登録して、ゲスト講師とのライブHour of Codeワークショップに参加してください。12月6日～11日のCSEW期間中に複数回提供されます。 '
+  hoc2022_mc_educators_box3_button: "新規登録"
   hoc2018_mc_educators_box4_title: "コンピューター サイエンスのその他のリソースにアクセスする"
   hoc2018_mc_educators_box4_desc: "Microsoftのデジタルスキルとコンピューター サイエンス教育リソースを使って、コミュニティに変化をもたらしましょう。"
   hoc2018_mc_educators_box4_button: "リソースを検索"
+  hoc2022_mc_educators_box4_desc: "ブロックからパイソンまで、専門能力開発に支えられた200時間のコンピューターサイエンスカリキュラムで、幼稚園から高校までの学習者のSTEMへの情熱を刺激します。"
+  hoc2022_mc_educators_box4_button: "学習を つづける"
   hoc2018_mc_watch_videos: "はじめる前に、以下のビデオのうち1つを見てみましょう"
   hoc2018_mc_videos_more: "その他の、模範となる人々や有名人による <a href='%{inspiring_videos_playlist}'> 心に訴えるビデオ</a>"
   hoc2018_mc_careers_more: "その他の、技術分野の専門家による <a href='%{careers_url}' target='_blank'> 心に訴えるビデオ</a>"
@@ -1751,6 +1762,9 @@
   hoc2021_mc_mee_villages_description: '教育版マインクラフトで、プログラミングの基本を学び、生徒と一緒に多様性とインクルージョンについて詳しく見てみましょう。'
   hoc2021_mc_mee_ai_title: "AI For Good（AI の社会貢献）"
   hoc2021_mc_mee_ai_description: '生徒と一緒にAIを探り、教育版マインクラフトでプログラミングする方法を学びましょう。'
+  hoc2022_mc_mee_title: "Minecraftエスケープエステート"
+  hoc2022_mc_mee_description: "夜明けまでに謎の屋敷を脱出し、100万エメラルドを手に入れよう！新しいMinecraft Hour of CodeチュートリアルがMinecraftで利用できるようになりました： \nWindows、Mac、Chromebook、Ipad、およびMobile向けの教育エディション。無料の教育リソース、トレーニング、およびビデオをご利用ください。"
+  hoc2022_mc_mee_timecraft_description: 'Minecraftでのこの無料コーディングレッスンである教育編では、未来を救うためにタイムスリップしてください。'
   footer_powered_by_aws: "Powered by Amazon Web Services"
   footer_built_on_github: "マイクロソフトの GitHub 上に構築"
   codebytes_skinny_banner_title: "12月7日～11日のCodeBytesライブミニレッスンにご参加ください！"
@@ -1808,6 +1822,7 @@
   ai_ibm_machine_learning_for_kids: 'IBM: 子供向け機械学習'
   ai_ecs: 'ECS: 人工知能 (AI)'
   ai_ecs_description: "コンピュータサイエンスの探索 (ECS) カリキュラムの新しい代替カリキュラムユニット。"
+  ai_aiedu_intro_description: "Intro to AI は、学生が AI とは何か、そしてそれが現実世界でどのように使用されているかについて、概念的な知識を身につけることができる、革新的で文化的な関連性を備えた無料のカリキュラムです。"
   ai_elements: "人工知能の要素"
   ai_elements_description: "Reaktorとヘルシンキ大学が作成した一連の無料オンラインコース。"
   ai_cognimates: "Cognimates"
@@ -1819,3 +1834,20 @@
   footer_cookie_notice: "クッキーについての通知"
   top_hoc_tutorial_applab_alt_text: "青い背景に星や光を放射する人差し指でタッチスクリーンタブレットに触れる茶色の手"
   minecraft_tile_alt: "珊瑚、イルカ、コンブが生息する水中のマインクラフトシーンを背景にした2人のマインクラフトのキャラクター (スティーブとアレックス)"
+  hoc2022_banner_title: "探索、プレイ、作成！"
+  hoc2022_banner_description: "宇宙を探検してゴールを決め、ダンスをしましょう。コンピューターサイエンスを試す方法はたくさんあります！"
+  hoc2022_cta_primary: "アップデート情報"
+  hoc2022_cta_secondary: "アクティビティをもっと試す"
+  hoc2022_landing_page_explore_title: "探検する"
+  hoc2022_landing_page_explore_description: "コンピュータサイエンスで新世界への扉を開きましょう！"
+  hoc2022_landing_page_play_title: "プレイ"
+  hoc2022_landing_page_play_description: "フィールドを取って、得点しましょう！"
+  hoc2022_landing_page_create_title: "つくる"
+  hoc2022_landing_page_create_description: "変で素敵なものを作りましょう！"
+  hoc2022_landing_page_banner_alt_left: "宇宙で土星の隣で踊るエイリアン"
+  hoc2022_landing_page_banner_alt_right: "ロケットが離陸する前の宇宙でサッカーボールをドリブルするロボット"
+  try_it_yourself: "自分でやってみよう！"
+  try_an_activity: "アクティビティを試す"
+  see_more_activities: "アクティビティをもっと試す"
+  hoc2022_nasa_banner_heading: "NASAに参加して、宇宙でのコンピューターサイエンスに関する特別な「Hour of Code」特集に参加しましょう！"
+  hoc2022_nasa_banner_description: "NASA STEMのYouTubeチャンネルで12月5日午前10時（東部標準時）に初公開されます。"

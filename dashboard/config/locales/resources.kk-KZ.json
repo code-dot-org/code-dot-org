@@ -2,6 +2,189 @@
   "kk-KZ": {
     "data": {
       "resources": {
+        "implementation_guide/coursed/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "internet/coursef/2022": {
+          "name": "Ғаламтор"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Ғаламтор"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Ғаламтор"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Қозғал, Қозғал"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Қозғал, Қозғал"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Қозғал, Қозғал"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Қозғал, Қозғал"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Ілмектерді үйрену"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Ілмектерді үйрену"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Ілмектерді үйрену"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Ілмектерді үйрену"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "pair_programming/express/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "variables/express/2022": {
+          "name": "Айнымалылар"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Көңілді Карталар"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Үлкен Оқиға"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Екілік Білезіктер"
+        },
         "variables/csd/2022": {
           "name": "Айнымалылар"
         },
@@ -140,14 +323,13 @@
         "lesson_plans_3/csd/2017": {
           "name": "Сабақтар жоспары"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Көңілді For циклі"
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Көңілді For циклі"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Көңілді For циклі"
+        "implementation_guide/coursef/2021": {
+          "name": "Іске асыру туралы нұсқаулық"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Көңілді For циклі"
@@ -155,16 +337,25 @@
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Көңілді For циклі"
         },
-        "unplugged-video-internet/coursef/2021": {
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Көңілді For циклі"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Көңілді For циклі"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Көңілді For циклі"
+        },
+        "assessment-answer-internet/coursef/2021": {
           "name": "Ғаламтор"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Ғаламтор"
         },
-        "assessment-answer-internet/coursef/2021": {
+        "unplugged-video-internet/coursef/2021": {
           "name": "Ғаламтор"
         },
-        "implementation_guide/coursef/2021": {
+        "implementation_guide/courseb/2021": {
           "name": "Іске асыру туралы нұсқаулық"
         },
         "mimi-activity/courseb/2021": {
@@ -182,7 +373,7 @@
         "pair-programming-vid/courseb/2021": {
           "name": "Жұптасып Бағдарламалау"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Ілмектерді үйрену"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
@@ -191,19 +382,19 @@
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Ілмектерді үйрену"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Ілмектерді үйрену"
         },
-        "unplugged-video-big-event/courseb/2021": {
+        "assessment-answer-big-event/courseb/2021": {
           "name": "Үлкен Оқиға"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Үлкен Оқиға"
         },
-        "assessment-answer-big-event/courseb/2021": {
+        "unplugged-video-big-event/courseb/2021": {
           "name": "Үлкен Оқиға"
         },
-        "implementation_guide/courseb/2021": {
+        "implementation_guide/coursea/2021": {
           "name": "Іске асыру туралы нұсқаулық"
         },
         "pair-programming-vid/coursea/2021": {
@@ -212,25 +403,19 @@
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Көңілді Карталар"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "Үлкен Оқиға"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Үлкен Оқиға"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "Үлкен Оқиға"
         },
-        "implementation_guide/coursea/2021": {
+        "implementation_guide/coursec/2021": {
           "name": "Іске асыру туралы нұсқаулық"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Менің Достарым Роботтар"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Менің Достарым Роботтар"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Менің Достарым Роботтар"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -239,22 +424,25 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Менің Достарым Роботтар"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Менің Достарым Роботтар"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Жұптасып Бағдарламалау"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "Үлкен Оқиға"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Үлкен Оқиға"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "Үлкен Оқиға"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Екілік Білезіктер"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Екілік Білезіктер"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -263,68 +451,68 @@
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Екілік Білезіктер"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Екілік Білезіктер"
         },
-        "implementation_guide/coursec/2021": {
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Екілік Білезіктер"
+        },
+        "implementation_guide/coursed/2021": {
           "name": "Іске асыру туралы нұсқаулық"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау"
-        },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Миллиметрлік Бағдарламалау"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Миллиметрлік Бағдарламалау"
         },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
         "pair-programming-vid/coursed/2021": {
           "name": "Жұптасып Бағдарламалау"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Релелік Бағдарламалау"
         },
         "relay-assessment/coursed/2021": {
           "name": "Релелік Бағдарламалау"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Релелік Бағдарламалау"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Релелік Бағдарламалау"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Релелік Бағдарламалау"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Релелік Бағдарламалау"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Картаға қатысты шартты белгілер"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Картаға қатысты шартты белгілер"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Картаға қатысты шартты белгілер"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Картаға қатысты шартты белгілер"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Картаға қатысты шартты белгілер"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "Іске асыру туралы нұсқаулық"
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Картаға қатысты шартты белгілер"
         },
         "pair_programming/express/2021": {
           "name": "Жұптасып Бағдарламалау"

@@ -134,7 +134,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     email = auth_hash.info.email || ""
     hashed_email = nil
-    hashed_email = User.hash_email(email) unless email.blank?
+    hashed_email = User.hash_email(email) if email.present?
     auth_option = AuthenticationOption.new(
       user: current_user,
       email: email,
@@ -174,6 +174,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # Microsoft formats email and name differently, so update it to match expected structure
     if provider == AuthenticationOption::MICROSOFT
       auth_hash = extract_microsoft_data(auth_hash)
+    end
+
+    if provider == AuthenticationOption::CLEVER
+      auth_hash = inject_clever_data(auth_hash)
     end
 
     user = User.from_omniauth(auth_hash, auth_params, session)
@@ -257,6 +261,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.begin_sign_up_tracking(session, split_test: false)
     SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
 
+    auth_hash = inject_clever_data(auth_hash())
     user = User.from_omniauth(auth_hash, auth_params, session)
     prepare_locale_cookie user
 
@@ -343,6 +348,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth
   end
 
+  # Moves non-standard attributes from the extra Clever OAuth data and puts it in the location we
+  # expect it to be in the AuthHash. Example attributes: gender, date of birth.
+  def inject_clever_data(auth)
+    return if auth.nil?
+    dob = auth[:dob] || auth.dig(:extra, :raw_info, :canonical, :data, :dob)
+    gender = auth[:gender] || auth.dig(:extra, :raw_info, :canonical, :data, :gender)
+    clever_data = OmniAuth::AuthHash.new(dob: dob, gender: gender)
+    auth.info&.merge!(clever_data)
+    auth
+  end
+
   def just_authorized_google_classroom?
     current_user&.providers&.include?(AuthenticationOption::GOOGLE) &&
       has_google_oauth2_scope?('classroom.rosters.readonly')
@@ -379,7 +395,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     lookup_user = User.find_by_email_or_hashed_email(lookup_email)
     provider = auth_hash.provider.to_s
 
-    unless lookup_user.present?
+    if lookup_user.blank?
       # Even if silent takeover is not available for imported student, we still
       # want to attach the email received from the provider to the student's
       # account since many imports do not provide emails.
@@ -487,7 +503,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def allows_silent_takeover(oauth_user, auth_hash)
-    return false unless auth_hash.provider.present?
+    return false if auth_hash.provider.blank?
     return false unless AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     return false if oauth_user.persisted?
 

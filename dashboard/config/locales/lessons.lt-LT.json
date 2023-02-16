@@ -35,6 +35,12 @@
         "playlab/Play Lab": {
           "name": "Laboratorija"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disnėjaus Infinity laboratorija"
         },
@@ -64,6 +70,36 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Kiti žingsniai"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Programavimas komandoje"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internetas"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Dainų rašymas"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Judėk, judėk"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Kartojimo supratimas"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Laimingieji žemėlapiai"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Didelis įvykis"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Dvejetainės apyrankės"
         },
         "csd3-2022/Variables": {
           "name": "Kintamieji"

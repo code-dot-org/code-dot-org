@@ -2264,6 +2264,7 @@ ko:
           title: 충돌 감지기
         dance-2019:
           title: 댄스 파티 (2019)
+          description_short: 댄스 파티를 코딩해서 친구들과 공유하세요. 비욘세, 해리 스타일스, 리조, 릴 나스 엑스, 셀레나 고메즈, 디즈니의 “엔칸토” 음악 등이 등장합니다!
           description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
           student_description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
         k5-onlinepd-2019:
@@ -3612,6 +3613,8 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 샌드박스
+        ai-ethics-2021:
+          description_audience: 6-12 학년
         poem-art-2021:
           title: 시학
         explore-data-1-2021:
@@ -3889,6 +3892,10 @@ ko:
               display_name: 컨텐츠
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: 시작하기
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3988,6 +3995,9 @@ ko:
           description_audience: 커리큘럼 작성자
           description_short: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
           description: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
+          lessons:
+            lesson-7:
+              name: 스프라이트 소개
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -4067,5 +4077,238 @@ ko:
               display_name: 환영합니다
         dlp-csp-mod1-2022:
           title: CS 원리 심화 학습 모듈 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 비동기 디버깅 확장
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 모듈 2 비동기 작업
         soccer:
           name: 축구
+          title: 축구 게임 코딩
+          description_short: 축구 게임 만들기
+          description: 축구 게임 만들기
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: 설문조사
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 설문조사
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java 연구소
+            lesson-6:
+              name: 반복
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 설문조사
+            lessonGroup-3:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: 변수
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 1차원 (1D) 어레이
+            lesson-3:
+              name: 반복을 위한
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        hello-world-space-2022:
+          title: '헬로 월드: 스페이스'
+        hello-world-soccer-2022:
+          title: '헬로 월드: 축구'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 챕터 1
+            lessonGroup-3:
+              display_name: 챕터 2
+          title: 문제해결
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 웹페이지 만들기'
+            lessonGroup-3:
+              display_name: '챕터 2: 멀티 페이지 웹페이지 '
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 사용자 중심 설계'
+            lessonGroup-3:
+              display_name: '챕터 2: 앱 프로토타입'
+          title: 설계 프로세스
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터1: 정보 표현하기'
+            lessonGroup-3:
+              display_name: '챕터 2: 데이터 문제 해결하기'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 이미지와 애니메이션'
+            lessonGroup-3:
+              display_name: '챕터 2: 게임 만들기'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 챕터 1
+            lessonGroup-3:
+              display_name: 챕터 2
+          title: 물리적 컴퓨팅
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 챕터 1
+            lessonGroup-3:
+              display_name: 챕터 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: 무슨 소리죠?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: 설문조사
+            csp_unit1_2020:
+              display_name: '단원 1: 디지털 정보'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '단원 2: 인터넷'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 단원 1 - 앱 설계 소개
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: 변수
+            csp_conditionals:
+              display_name: 조건
+            csp_functions:
+              display_name: 함수
+            csp_project:
+              display_name: 프로젝트
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: 데이터
+            csp_loops:
+              display_name: 반복
+            csp_traversals:
+              display_name: " 트래버스"
+            csp_project:
+              display_name: 프로젝트
+            lessonGroup-5:
+              display_name: 과정 후 설문조사
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 리스트
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+            lessonGroup-3:
+              display_name: 반복
+            lessonGroup-4:
+              display_name: " 트래버스"
+            lessonGroup-5:
+              display_name: 프로젝트
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 매개변수 및 반환값
+            csp_libraries:
+              display_name: 라이브러리
+            lessonGroup-3:
+              display_name: 과정 후 설문조사
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT 만들기
+            lessonGroup-3:
+              display_name: 과정 후 설문조사
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '단원 9: 데이터'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '단원 10: 사이버보안 및 세계적 영향'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+        csp-post-survey-2023:
+          title: CS 원리 과정 후 설문 조사
+        csp-playground:
+          title: CSP 플레이그라운드
+          description_audience: 커리큘럼 작성자
+          description_short: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+            lessonGroup-4:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 앱 랩 소개
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋

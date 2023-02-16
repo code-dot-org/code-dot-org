@@ -1,49 +1,49 @@
 ---
-title: IT Requirements
+title: Требования к ИТ
 nav: educate_nav
 theme: responsive
 ---
 
-# Technical Requirements for Code.org Tutorials
+# Технические требования для уроков Code.org
 
-## Hardware
+## Аппаратное обеспечение
 
-- We recommend at least a 15 MBit/sec Internet connection for your school.
-- The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
-- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
-- Looking for mobile device support details? Read below.
+- Для проведения уроков рекомендуется, чтобы скорость подключения интернета в школе была не менее 15 Мбит/с.
+- Наименьший поддерживаемый размер экрана: 1024 x 728 пикселей.
+- Для уроков среднего и старшего уровня («Знакомство с информатикой», «Принципы информатики» и «Введение в App Lab») понадобится настольный или портативный компьютер с мышью (или сенсорной панелью) и клавиатурой. Большинство планшетов и мобильных устройств не подойдут для этих уроков. Исключения, касающиеся конкретных устройств, см. в разделе «Информация о поддержке мобильных устройств и планшетов» ниже.
+- Весь остальной контент, например уроки K-5 (Основы информатики) и задания Часа кода совместимы с iPad и Chromebook, а также всеми остальными современными планшетами, ноутбуками и настольными компьютерами.
+- Нужна информация о поддержке мобильных устройств? Читайте далее.
 
-## Minimum Supported Browsers and Platforms
+## Минимальные поддерживаемые браузеры и платформы
 
 <table>
  <tr>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser
+          Браузер
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform
+          Платформа
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -65,61 +65,62 @@ theme: responsive
  </tr>
 </table>
 
-## Sites to Unblock
+## Какие сайты нужно разблокировать
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Для обеспечения правильной работы всего контента Code.org мы рекомендуем обратиться в Ит-отдел вашей школы или района и убедиться, что перечисленные ниже сайте не запрещены и разблокированы.
 
-| Priority                                                 | URL                                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Required**                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **To use YouTube hosted videos (Enhanced Privacy Mode)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **To use Code.org hosted videos**                        | `https://videos.code.org`                                                                                  |
-| **To use Internet Simulator**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **To use Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **To use Google Classroom Share Button**                 | `https://apis.google.com`                                                                                  |
+| Приоритет                                                                                | URL                                                                                                        |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Обязательно**                                                                          | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Опционально**                                                                          | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Для просмотра видео, размещенных на YouTube (в режиме улучшенной конфиденциальности)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Для просмотра видео, размещенных на Code.org**                                         | `https://videos.code.org`                                                                                  |
+| **Для использования интернет-симулятора**                                                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Для использования Web Lab**                                                            | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Для использования кнопки Google Classroom Share**                                      | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                              | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
-## Mobile and Tablet Support Details
+## Информация о поддержке мобильных устройств и планшетов
 
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+Все курсы «Знакомство с информатикой», «Принципы информатики» и «Введение в App Lab» несовместимы с планшетами или мобильными устройствами — для них требуется полноценная клавиатура и мышь (или сенсорная панель, как на MacBook). Большинство планшетов не поддерживаются, за исключением перечисленных ниже:
 
-- Microsoft Surface Pro with an external keyboard
-- iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
+- Microsoft Surface Pro с внешней клавиатурой
+- iPad на ОС iPadOS 13.4 или более поздней версии с внешней клавиатурой и внешней мышью или сенсорной панелью
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+Весь остальной контент, например уроки K-5 (Основы информатики) и задания Часа кода совместимы с iPad и Chromebook, а также всеми остальными современными планшетами, ноутбуками и настольными компьютерами.
 
-### Mobile Phones
+### Мобильные телефоны
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Уроки «Час кода» и уроки по основам информатики можно проходить на мобильных телефонах. Хотя уроки можно проходить на мобильных устройствах, тем не менее они не оптимизированы для мобильных устройств и имеют некоторые известные ограничения (например, сенсорные мишени могут быть маленькими, вспомогательные элементы могут отображаться за пределами экрана, ввод текста с помощью экранной клавиатуры может быть неудобным). Курсы «Знакомство с информатикой» «Принципы информатики» и «Введение в App Lab» не подходят для на мобильных телефонов.
 
-## Videos
+## Видео
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Для встраивания видео в контент Code.org и нашу [платформу онлайн-обучения](https://studio.code.org) мы используем [YouTube](https://www.youtube.com). Если в школе заблокирован YouTube, мы пытаемся демонстрировать видео, размещенные на Code.org .
 
-### Can you play this video?
+### У вас получается посмотреть это видео?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Прежде чем начать прохождение онлайн-уроков на Code.org, проверьте, что вы можете посмотреть приведенное ниже видео.
 
 <iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Этот проигрыватель используется на протяжении всего учебного курса. Он пытается показать видео через YouTube а если YouTube заблокирован, он переключится на резервное видео, размещенное на Code.org.
 
-### Video not playing?
+### Видео не воспроизводится?
 
-If video does not work, you can email us at support@code.org.
+Если видео не воспроизводится, напишите в нашу службу поддержки по адресу support@code.org.
 
-However, you can still use our tutorials without video.
+В любом случае, вы можете проводить уроки без видео.
 
-1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
-2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
-3. If all fails, there is a "Show Notes" tab that provides a storyboard equivalent of videos.
+1. Вы также можете [скачать все наши видео](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Если в вашей школе низкая скорость интернета, мы рекомендуем вам скачать видео и показывать их учащимся на общем экране.
+2. В уроках вы можете увидеть зеленый значок скачиванияi <img src="/images/green-download.png" width=25 height=25 /> у каждого видео, который указывает, что учащиеся могут самостоятельно скачать отдельные обучающие видео.
+3. Если все это не подходит, вы можете использовать вкладку «Показать заметки», на которой представлены слайды, эквивалентные видео.
 
   <img src="/images/fit-500/show-notes.png" style="margin-top: 10px; max-width: 100%" />
 
-## Special settings for Google Apps/G-Suite users
+## Специальные настройки для пользователей Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Если вы являетесь администратором G-suite, обязательно проверьте настройки ограничений для YouTube. Если вы установили параметр «Строгий ограниченный доступ к YouTube» или если вы видите сообщения о том, что «это видео было ограничено», добавьте наш канал в список одобренных каналов. Чтобы узнать, как добавить наш канал в список одобренных каналов, см. [это руководство](https://support.google.com/a/answer/6245597) от Google. Вы также можете просмотреть [это руководство](https://support.google.com/a/answer/6212415?hl=ru), чтобы узнать больше о разных настройках и о том, какие из них лучше подойдут для вашего класса.
 
-## Still having trouble?
+## Есть другие вопросы?
 
-We'll help you out - just email us at support@code.org!
+Мы поможем вам — просто напишите нам по адресу support@code.org!

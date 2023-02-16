@@ -22,6 +22,7 @@ bs:
       score: bodovi
       size: veličina
       speed: brzina
+      type: tip
       width: širina
       wizard: čarobnjak
       x: x

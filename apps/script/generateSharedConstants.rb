@@ -105,6 +105,10 @@ def main
       INSTRUCTOR_AUDIENCE
       CURRICULUM_UMBRELLA
       COURSE_OFFERING_CATEGORIES
+      COURSE_OFFERING_GRADE_BANDS
+      COURSE_OFFERING_CURRICULUM_TYPES
+      COURSE_OFFERING_HEADERS
+      COURSE_OFFERING_MARKETING_INITIATIVES
       PARTICIPANT_AUDIENCES_BY_TYPE
     ),
       source_module: Curriculum::SharedCourseConstants, transform_keys: false
@@ -153,15 +157,6 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS INTERVIEW_QUESTIONS SCOREABLE_QUESTIONS),
-      source_module: Pd::Facilitator1920ApplicationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitatorApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
       %w(PRINCIPAL_APPROVAL_STATE YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
       source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
@@ -176,15 +171,6 @@ def main
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(TEACHER_SEAT_ACCEPTANCE_OPTIONS TEXT_FIELDS),
-      source_module: Pd::Teachercon1819RegistrationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/teachercon1819RegistrationConstants.js"
   )
 
   generate_shared_js_file(

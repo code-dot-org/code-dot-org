@@ -314,6 +314,7 @@ hy:
     no_primary_course: Փորձեք մի Code Studio դասընթաց
     choose_next_course: Փորձեք մի օրենսգիրք Studio դասընթաց ընտրելով մեկը ստորեւ
     print_certificate: Տպել վկայական
+  certificate_hour_of_code: Կոդի ժամ
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -446,23 +447,14 @@ hy:
         աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով.
       audience: տարեկան 13-ից ավելի
       cta: Իմացեք, թե ինչպես
-    hoc:
-      title: Classic Maze
-      body: Փորձեք հիմունքների համակարգչային գիտության. Միլիոնավոր են տվել այն կրակոցի.
+    aquatic:
+      title: Minecraft
     flappy:
       title: Flappy-ի կոդը
       body: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք մեր Flappy
         Code խնամակալական!'
-    20-hour:
-      title: Արագացված Դասընթացի
-      body: This 20-hour course covers the core computer science and programming concepts
-        in courses 2-4. The course is designed for use with ages 10-18. Check out
-        courses 2-4 for a more complete experience!
-      body_short: 'Իմացեք, թե հիմնական համակարգչային գիտությունը արագացված տարբերակով
-        դասընթացներ 2-4:'
-    hoc2014:
-      try_new_tutorial: Փորձեք մեր նոր ժամին օրենսգրքի ձեռնարկը բետա
-      try_frozen: Արվեստագետ Աննայի հետ եւ Էլզա, սառեցրած
+    frozen:
+      title: սառած
     gallery:
       title: սրահ
       body: Դիտելու պատկերասրահում ծրագրի եւ նկարիչ պատկերների կողմից ստեղծված մեր
@@ -470,13 +462,14 @@ hy:
     gamelab:
       audience: տարեկան 13-ից ավելի
       cta: Իմացեք, թե ինչպես
-    weblab:
-      audience: տարեկան 13-ից ավելի
-      cta: Իմացեք, թե ինչպես
-    frozen:
-      title: սառած
-    starwars:
-      title: Աստղային պատերազմներ
+    hero:
+      title: Minecraft
+    hoc:
+      title: Classic Maze
+      body: Փորձեք հիմունքների համակարգչային գիտության. Միլիոնավոր են տվել այն կրակոցի.
+    hoc2014:
+      try_new_tutorial: Փորձեք մեր նոր ժամին օրենսգրքի ձեռնարկը բետա
+      try_frozen: Արվեստագետ Աննայի հետ եւ Էլզա, սառեցրած
     infinity:
       title: Infinity Խաղալ Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
@@ -485,10 +478,16 @@ hy:
       body: Explore a Minecraft world through code
     minecraft2016:
       title: Minecraft
-    aquatic:
-      title: Minecraft
-    hero:
-      title: Minecraft
+    starwars:
+      title: Աստղային պատերազմներ
+    weblab:
+      audience: տարեկան 13-ից ավելի
+      cta: Իմացեք, թե ինչպես
+    widgets:
+      audience: Ages 14+
+      cta: Իմացեք, թե ինչպես
+    unplugged_conditionals:
+      title: conditionals
     unplugged:
       title: unplugged Դասեր
       audience: տարեկան 4+
@@ -499,11 +498,13 @@ hy:
         գիտության, իհարկե:'
       body_short: Եթե ​​դուք dont պետք համակարգիչներ, փորձեք այդ unplugged դասեր ձեր
         դասարանում.
-    unplugged_conditionals:
-      title: conditionals
-    widgets:
-      audience: Ages 14+
-      cta: Իմացեք, թե ինչպես
+    20-hour:
+      title: Արագացված Դասընթացի
+      body: This 20-hour course covers the core computer science and programming concepts
+        in courses 2-4. The course is designed for use with ages 10-18. Check out
+        courses 2-4 for a more complete experience!
+      body_short: 'Իմացեք, թե հիմնական համակարգչային գիտությունը արագացված տարբերակով
+        դասընթացներ 2-4:'
   landing:
     report_bug: Report Bug
     support: Օգնություն ստանալ
@@ -717,3 +718,5 @@ hy:
   cookie_banner:
     accept: Ես համաձայն եմ
   copy: պատճեն
+  pixelation:
+    binary: երկուական

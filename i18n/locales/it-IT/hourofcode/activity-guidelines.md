@@ -231,12 +231,15 @@ Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, i
 
 ## Suggerimenti per la progettazione di tutorial autoguidati di un'ora
 
-**Aggiungi un feedback alla fine dell'attività.** (Per esempio: "Hai completato 10 livelli e hai imparato cosa sono i cicli! Ben fatto!")
+**Aggiungi un feedback alla fine dell'attività.** (Per esempio: "Hai completato 10 livelli e hai imparato cosa sono i cicli! Ben fatto!") We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. Qualsiasi riferimento a "Hour of Code" ("Ora del codice") deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune. Un esempio di uso corretto: "Partecipa all'Ora del Codice sul sito di ACMECorp.com". Un esempio di uso scorretto: "Prova l'Ora del Codice di ACME Corp".
-2. Utilizza un apice "TM" dove menzioni "Ora del Codice" o "Hour of Code", sia sul tuo sito web sia nelle descrizioni delle app.
-3. Includi una nota nella pagina (o nel piè di pagina), che contenga i collegamenti ai siti web CSEdWeek e Code.org e indichi quanto segue: “L'[Ora del Codice](http://hourofcode.com)™' è un'iniziativa a livello nazionale della [Settimana dell'educazione informatica](http://csedweek.org) e di [Code.org](http://code.org) per presentare a milioni di studenti un'ora di informatica e di programmazione dei computer ".
-4. Non è concesso alcun uso di "Ora del Codice" o "Hour of Code" nei nomi delle app.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**Torna all'inizio**](#top)
 

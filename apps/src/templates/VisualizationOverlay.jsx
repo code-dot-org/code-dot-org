@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import debounce from 'lodash/debounce';
+import {createEvent} from '@cdo/apps/utils';
+
+const resizeEventName = 'visualizationOverlayResize';
 
 /**
  * Overlay for the play space that helps render additional UI (like the
@@ -19,7 +22,8 @@ export class VisualizationOverlay extends React.Component {
     areOverlaysVisible: PropTypes.bool.isRequired,
     areRunStateOverlaysVisible: PropTypes.bool.isRequired,
     onMouseMove: PropTypes.func,
-    children: PropTypes.node
+    children: PropTypes.node,
+    className: PropTypes.string
   };
 
   state = {
@@ -39,7 +43,12 @@ export class VisualizationOverlay extends React.Component {
     // Note: This is currently used within a ProtectedStatefulDiv, so we need
     // to hook up our own handlers that trigger updates (based on state) instead
     // of depending on props passed in - hence, these globals.
-    window.addEventListener('resize', debounce(this.recalculateTransform, 100));
+    const debouncedRecalculateTransform = debounce(
+      this.recalculateTransform,
+      100
+    );
+    window.addEventListener('resize', debouncedRecalculateTransform);
+    document.addEventListener(resizeEventName, debouncedRecalculateTransform);
     document.addEventListener('mousemove', this.onMouseMove);
   }
 
@@ -58,6 +67,10 @@ export class VisualizationOverlay extends React.Component {
 
   recalculateTransform = () => {
     const svg = this.refs.root;
+    if (!svg) {
+      return;
+    }
+
     const clientRect = svg.getBoundingClientRect();
 
     // If the svg has no width or no height, we can't trust it; skip
@@ -114,6 +127,7 @@ export class VisualizationOverlay extends React.Component {
       <svg
         ref="root"
         id="visualizationOverlay"
+        className={this.props.className}
         version="1.1"
         baseProfile="full"
         width={this.props.width}
@@ -146,4 +160,9 @@ export function shouldOverlaysBeVisible(state) {
     !state.pageConstants.hideCoordinateOverlay &&
     !(state.runState.isRunning || state.pageConstants.isShareView)
   );
+}
+
+const visualizationOverlayResizeEvent = createEvent(resizeEventName);
+export function dispatchResizeEvent(el = document) {
+  el.dispatchEvent(visualizationOverlayResizeEvent);
 }

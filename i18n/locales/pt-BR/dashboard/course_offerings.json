@@ -44,10 +44,9 @@
   "sports": "Programe seus próprios jogos esportivos",
   "text-compression": "Compressão de texto",
   "csa-self-paced-pl": "Navegação pelo Code.org para professores-piloto do CSA",
-  "counting-csc": "Contando com Laurel",
-  "explore-data-1": "Exploração de plotagens em caixas e histogramas",
   "outbreak-csc": "Epidemia",
   "poem-art": "Arte poética",
+  "hello-world-emoji": "Olá, Mundo: Emoji",
   "edit-code": "Edite o código",
   "tesstest921": "tesstest921",
   "poetry-hoc3": "poetry-hoc3",
@@ -60,5 +59,9 @@
   "step": "passo",
   "coursee-ramp": "percurso",
   "csa5-exemplars": "csa5-exemplars",
-  "soccer": "futebol"
+  "katie-practice": "prática katie",
+  "soccer": "futebol",
+  "hello-world-space": "Olá, Mundo: Espaço",
+  "hello-world-soccer": "Olá, Mundo: Futebol",
+  "playground": "Playground"
 }

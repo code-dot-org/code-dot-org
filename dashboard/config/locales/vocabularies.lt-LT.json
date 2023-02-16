@@ -17,8 +17,55 @@
         "loops/aquatic/unversioned": {
           "word": "Kartojimas"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kodavimas"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "variable/coursef/2022": {
+          "word": "Kintamasis"
+        },
+        "internet/coursef/2022": {
+          "word": "Internetas"
+        },
+        "define/coursef/2022": {
+          "word": "Apibrėžti"
+        },
+        "function/coursee/2022": {
+          "word": "Komanda"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "copyright/coursee/2022": {
+          "word": "Autorinės teisės"
+        },
+        "define/coursee/2022": {
+          "word": "Apibrėžti"
+        },
+        "conditionals/express/2022": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "function/express/2022": {
+          "word": "Komanda"
+        },
+        "variable/express/2022": {
+          "word": "Kintamasis"
+        },
+        "define/express/2022": {
+          "word": "Apibrėžti"
+        },
+        "binary/coursec/2022": {
+          "word": "Dvejetainis"
         },
         "variable/csd/2022": {
           "word": "Kintamasis"
@@ -36,7 +83,24 @@
           "word": "Autorinės teisės"
         },
         "code/poem-art/unversioned": {
-          "word": "Kodavimas"
+          "word": "Kodavimas",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Kintamasis"

@@ -1,0 +1,47 @@
+{
+  "uz-UZ": {
+    "data": {
+      "standard_categories": {
+        "CL": {
+          "description": "Hamkorlik"
+        },
+        "CPP": {
+          "description": "Hisoblash amaliyoti va dasturlash"
+        },
+        "CT": {
+          "description": "Dasturiy fikrlash"
+        },
+        "L": {
+          "description": "Til"
+        },
+        "RI": {
+          "description": "Axborotni o‘qish"
+        },
+        "SL": {
+          "description": "Gapirish va tinglash"
+        },
+        "W": {
+          "description": "Yozish"
+        },
+        "C": {
+          "description": "Aylanalar"
+        },
+        "F": {
+          "description": "Funksiyalar"
+        },
+        "MP": {
+          "description": "Matematik amaliyotlar"
+        },
+        "1": {
+          "description": "Talabalar ijodiy fikrlashni namoyish etadilar, bilimlarini mustahkamlaydilar va texnologiyalar yordamida innovatsion mahsulotlar va jarayonlarni ishlab chiqadilar."
+        },
+        "2": {
+          "description": "Talabalar raqamli axborot vositalari va uskunalaridan muloqot qilish va birgalikda ishlash, shu jumladan masofadan turib, individual ta'limni qo‘llab-quvvatlash va boshqalarning o‘rganishiga hissa qo‘shish uchun foydalanadilar."
+        },
+        "4": {
+          "description": "Talabalar tadqiqotlarni rejalashtirish va o‘tkazish, loyihalarni boshqarish, muammolarni hal qilish va tegishli raqamli vositalar va resurslardan foydalangan holda asosli qarorlar qabul qilishda tanqidiy fikrlash qobiliyatlaridan foydalanadilar."
+        }
+      }
+    }
+  }
+}

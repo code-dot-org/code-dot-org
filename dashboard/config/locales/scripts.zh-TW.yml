@@ -2978,8 +2978,7 @@ zh-TW:
           title: 碰撞偵測器
         dance-2019:
           title: 舞蹈派對 2019
-          description_short: 精選 Katy Perry、 Shawn Mendes、Panic! At The Disco、Lil Nas
-            X、Jonas Brothers、Nicki Minaj，和其他 34 位名人！
+          description_short: 編寫一個舞蹈派對與你的朋友分享。裏面有碧昂絲、哈利·史泰爾斯、麗佐、納斯小子、塞萊娜·戈麥斯、迪士尼魔法滿屋的音樂等等！
           description: 寫個你自己的舞蹈程式，並分享給朋友們！
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
         k5-onlinepd-2019:
@@ -4307,6 +4306,8 @@ zh-TW:
               display_name: 內容
             lessonGroup-5:
               display_name: 沙盒
+        ai-ethics-2021:
+          description_audience: 年級 6-12
         poem-art-2021:
           title: 詩歌藝術
         explore-data-1-2021:
@@ -4585,6 +4586,10 @@ zh-TW:
               display_name: 內容
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: 新手上路
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4706,6 +4711,9 @@ zh-TW:
           description_audience: 課程作者
           description_short: 用於課程版本之間的課程或級別分階段更新
           description: 用於課程版本之間的課程或級別分階段更新
+          lessons:
+            lesson-7:
+              name: 精靈圖介紹
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -4792,5 +4800,250 @@ zh-TW:
               display_name: 歡迎
         dlp-csp-mod1-2022:
           title: 電腦科學原理深入學習 模組 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 異步調試擴展
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 模組2異步工作
         soccer:
           name: 足球
+          title: 編寫你自己的足球遊戲
+          description_short: 製作足球遊戲
+          description: 製作足球遊戲
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: 問卷
+            lessonGroup-2:
+              display_name: 內容
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 問卷
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java 實驗室
+            lesson-6:
+              name: 迴圈
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 問卷
+            lessonGroup-3:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 替代課程
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: 變數
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-4:
+              display_name: 替代課程
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 一維（1D）陣列
+            lesson-3:
+              name: 計次迴圈（For Loops）
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-4:
+              display_name: 替代課程
+        hello-world-space-2022:
+          title: 你好世界：太空
+        hello-world-soccer-2022:
+          title: 你好世界：足球
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 問題解決
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-3:
+              display_name: '第2章: 多網頁網站'
+          title: Web 開發
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：用戶為中心的設計
+            lessonGroup-3:
+              display_name: 第 2 章︰ 應用程式原型
+          title: 設計流程
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：表達信息
+            lessonGroup-3:
+              display_name: 第 2 章：解決數據問題
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：圖像和動畫
+            lessonGroup-3:
+              display_name: 第 2 章：創建遊戲
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 實體運算
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 第 2 章：建立物理原型
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: 那是什麼聲音？
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csp_unit1_2020:
+              display_name: "（舊）單元 1：數位資訊"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "（舊）單元 2：網際網路"
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 單元 3：應用程式設計簡介
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: 數據
+            csp_loops:
+              display_name: 迴圈
+            csp_traversals:
+              display_name: 尋訪
+            csp_project:
+              display_name: 專案
+            lessonGroup-5:
+              display_name: 課後調查
+          description: 本單元介紹了列表、迴圈和尋訪，並探討如何利用它們來建立儲存和處理大量資料的應用程式。學習使用 App Lab 中的數據庫來設計程式，並在本單元末、為期
+            5 天的黑客松中設計一個題材不限的程式。
+          description_short: 學習如何建立使用列表、迴圈和尋訪來儲存和處理大量資訊的應用程式。
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 清單
+            lessonGroup-2:
+              display_name: 課後調查
+            lessonGroup-3:
+              display_name: 迴圈
+            lessonGroup-4:
+              display_name: 尋訪
+            lessonGroup-5:
+              display_name: 專案
+          description: 本單元介紹了列表、迴圈和尋訪，並探討如何利用它們來建立儲存和處理大量資料的應用程式。學習使用 App Lab 中的數據庫來設計程式，並在本單元末、為期
+            5 天的黑客松中設計一個題材不限的程式。
+          student_description: 本單元介紹了列表、迴圈和尋訪，並探討如何利用它們來建立儲存和處理大量資料的應用程式。學習使用 App
+            Lab 中的數據庫來設計程式，並在本單元末、為期 5 天的黑客松中設計一個題材不限的程式。
+          description_short: 學習如何建立使用列表、迴圈和尋訪來儲存和處理大量資訊的應用程式。
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 參數及函數回傳值
+            csp_libraries:
+              display_name: 程式庫
+            lessonGroup-3:
+              display_name: 課後調查
+          description: 本單元介紹了參數、回傳和函式庫。學習如何使用這些概念來建立新型的應用程式，以及可分享給同學的程式碼庫。在本單元末，你可自由選擇題材來設計一個函數庫。
+          student_description: 本單元介紹了參數、回傳和函式庫。學習如何使用這些概念來建立新型的應用程式，以及可分享給同學的程式碼庫。在本單元末，你可自由選擇題材來設計一個函數庫。
+          description_short: 學習如何設計乾淨且可重複使用的程式碼，以便與一位同學或整個世界分享。
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 建立 PT
+            lessonGroup-3:
+              display_name: 課後調查
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 單元 9：資料
+            lessonGroup-2:
+              display_name: 課後調查
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 單元 10：網路安全與全球影響
+            lessonGroup-2:
+              display_name: 課後調查
+        csp-post-survey-2023:
+          title: 電腦科學原理課後問卷調查
+        csp-playground:
+          title: CSP 遊樂場
+          description_audience: 課程作者
+          description_short: 用於課程版本之間的課程或級別分階段更新
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: App Lab 入門
+            lessonGroup-3:
+              display_name: 輸入與輸出

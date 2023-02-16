@@ -23,9 +23,6 @@
         "gumball/Gumball Play Lab": {
           "name": "Taiwhanga Tākaro Gumball"
         },
-        "dance/Dance Party": {
-          "name": "Te Pāti Kanikani"
-        },
         "aquatic/Aquatic": {
           "name": "Toihuke: Rerenga Moana"
         },
@@ -38,11 +35,20 @@
         "playlab/Play Lab": {
           "name": "Taiwhanga Tākaro"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Taiwhanga Tākaro Disney Infinity"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Te Pāti Kanikani"
         },
         "k5-onlinepd-2019/Loops": {
           "name": "Ngā Koromeke"
@@ -61,6 +67,39 @@
         },
         "k5-onlinepd-2019/For Loops": {
           "name": "Mō Ngā Koromeke"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Te Pāti Kanikani"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Te Ipurangi"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Te Tito Waiata"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "E Neke, E Neke"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Kia Koromeke"
+        },
+        "express-2022/Dance Party": {
+          "name": "Te Pāti Kanikani"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Ngā Mahere Harikoa"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Te Takahanga Nui"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Kōmore Ā-Rua"
         },
         "csd3-2022/Variables": {
           "name": "Ngā Taurangi"

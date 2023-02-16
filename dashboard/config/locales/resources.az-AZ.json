@@ -95,6 +95,746 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
+        "common_core_and_ngss_guidance/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        },
+        "cross-curricular_extension_activities/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "debugging_guide/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "password_power-up_if_then_scenarios/coursed/2022": {
+          "name": "Parolun Gücləndirilməsi: Əgər... Onda... Ssenarilər"
+        },
+        "password_power-up_if_then_scenarios_1/coursed/2022": {
+          "name": "Parolun Gücləndirilməsi: Əgər... Onda... Ssenarilər"
+        },
+        "password_power-up_lesson_quiz/coursed/2022": {
+          "name": "Parolun Gücləndirilməsi: Dərs Testi"
+        },
+        "password_power-up_lesson_quiz_1/coursed/2022": {
+          "name": "Parolun Gücləndirilməsi: Dərs Testi"
+        },
+        "password_power-up_lesson_slides/coursed/2022": {
+          "name": "Parolun Gücləndirilməsi: Dərs Slaydları"
+        },
+        "password_power-up_power-up_your_password/coursed/2022": {
+          "name": "Parolun Gücləndirilməsi: Şifrənizi Gücləndirin"
+        },
+        "password_power-up_power-up_your_password_1/coursed/2022": {
+          "name": "Parolun Gücləndirilməsi: Şifrənizi Gücləndirin"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "url": "https://youtu.be/Y_paSrH2ffw"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "Yoxlama"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "open-ended_programming_levels_2/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
+        },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "Spotify Pleylist (bütün yaşlar)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "feeling_faces/coursed/2022": {
+          "name": "Üzləri hiss etmək",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Kartlarla şərtlər"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Kartlarla şərtlər"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Kartlarla şərtlər",
+          "type": "Yoxlama"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Kartlarla şərtlər"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Kartlarla şərtlər"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "common_core_and_ngss_guidance/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "cross-curricular_extension_activities/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "debugging_guide/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Sprite Laboratoriyasının Sənədləri",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "exploring_apps/coursef/2022": {
+          "name": "Tətbiqləri araşdırmaq",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "Tətbiqləri araşdırmaq",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Sprite Laboratoriyasını təqdim edirik",
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Video"
+        },
+        "making_sprites/coursef/2022": {
+          "name": "Spraytlar düzəltmək"
+        },
+        "blank_space_stories/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+        },
+        "blank_space_stories_1/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "name": "AI: Cəmiyyətə Təsir",
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "name": "Avtomatlaşdırılmış Öyrənmə",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "name": "AI: Təlim məlumatları və qərəzlilik",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "İnternet",
+          "type": "Yoxlama"
+        },
+        "internet_1/coursef/2022": {
+          "name": "İnternet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "İnternet"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "sərlövhə"
+        },
+        "common_core_and_ngss_guidance/coursee/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
+        },
+        "cross-curricular_extension_activities/coursee/2022": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "debugging_guide/coursee/2022": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2022": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Sprite Laboratoriyasının Sənədləri",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
+          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2022": {
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
+        },
+        "private_and_personal_information_exit_ticket/coursee/2022": {
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+        },
+        "private_and_personal_information_lesson_slides/coursee/2022": {
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
+        "swimming_fish_teacher_sandbox/coursee/2022": {
+          "name": "Üzgüçülük Balıq Müəllim Sandbox",
+          "url": "https://studio.code.org/levels/18623"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "turns_angles/coursee/2022": {
+          "name": "Dönüşlər və açılar"
+        },
+        "turns_angles_1/coursee/2022": {
+          "name": "Dönüşlər və açılar",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Yoxlama"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "sərlövhə"
+        },
+        "all_resources/courseb/2022": {
+          "url": "/s/courseb-2022/mənbələr"
+        },
+        "all_standards/courseb/2022": {
+          "url": "/2022. kurs Standartları"
+        },
+        "all_vocabulary/courseb/2022": {
+          "url": "/s/courseb-2022/lüğət"
+        },
+        "common_core_and_ngss_guidance/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "cross-curricular_extension_activities/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "debugging_guide/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/baxış"
+        },
+        "digital_trails_animal_tracks/courseb/2022": {
+          "name": "Rəqəmsal yollar: Heyvan izləri"
+        },
+        "digital_trails_digital_trail_squares/courseb/2022": {
+          "name": "Rəqəmsal izlər: Rəqəmsal izi izləyin",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+        },
+        "digital_trails_follow_the_digital_trail/courseb/2022": {
+          "name": "Rəqəmsal izlər: Rəqəmsal izi izləyin",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital_trails_lesson_slides/courseb/2022": {
+          "name": "Rəqəmsal yollar: Dərs Slaydları",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "feeling_faces_emotion_image/courseb/2022": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Hərəkət et",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Hərəkət et",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Hərəkət et",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Hərəkət et",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+        },
+        "20_20_20_rule/courseb/2022": {
+          "name": "20/20/20 Qaydası"
+        },
+        "drag_and_drop_practice/courseb/2022": {
+          "name": "Çəkmək və Buraxmaq Praktikası",
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "feeling_faces/courseb/2022": {
+          "name": "Üzləri hiss etmək",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "how_to_make_a_class_section_on_code_org/courseb/2022": {
+          "name": "Code.org-da sinif seçimi necə edilir "
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
+          "name": "Sökülməmiş Bloklu Bloklar (Siniflər K-1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "name": "Qıvrımlar - GoNoodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
+        },
+        "compass_rose/courseb/2022": {
+          "name": "Rosanı yünləndirin",
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
+        },
+        "feeling_faces_-_emotion_image/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "happy_map_game_pieces/courseb/2022": {
+          "name": "Xoşbəxt xəritə oyun hissələri",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie və Böyük Layihə"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Gözədəyməz xətalar",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Loopy əldə etmək",
+          "url": "https://youtu.be/JoKTqHCni0M"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Loopy əldə etmək",
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Loopy əldə etmək",
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Yoxlama"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Loopy əldə etmək",
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+        },
+        "cs_fundamentals_main_activity_tips/courseb/2022": {
+          "name": "CS Fundamentals Əsas Fəaliyyət Məsləhətləri",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "the_right_app_scenarios/courseb/2022": {
+          "name": "Doğru Tətbiq Ssenariləri",
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Böyük hadisə"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Böyük hadisə",
+          "type": "Yoxlama"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Böyük hadisə"
+        },
+        "debugging_guide/express/2022": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "unplugged_maze_blocks/express/2022": {
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+        },
+        "pair_programming/express/2022": {
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
+        },
+        "unplugged_blocks_courses_c-f_/express/2022": {
+          "name": "Sərbəst Bloklar(C-F kursları)"
+        },
+        "artist_introduction/express/2022": {
+          "name": "Artist Təqdimatı",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "name": "Dönüşlər və açılar",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video"
+        },
+        "turns_angles_1/express/2022": {
+          "name": "Dönüşlər və açılar"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Sprite Laboratoriyasının Sənədləri",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "swimming_fish_teacher_sandbox/express/2022": {
+          "name": "Üzgüçülük Balıq Müəllim Sandbox",
+          "url": "https://studio.code.org/levels/18623"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "Spritelar Hərəkətdə",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "pause_and_think_online/express/2022": {
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "open-ended_programming_levels/express/2022": {
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "Spotify Pleylist (bütün yaşlar)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "pair_programming_video/express/2022": {
+          "name": "Cüt proqramlaşdırma videosu",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "dəyişənlər"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "sərlövhə"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2022": {
+          "type": "Layihə Bələdçisi"
+        },
+        "debugging_guide/pre-express/2022": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "name": "20/20/20 Qaydası",
+          "type": "Video"
+        },
+        "feeling_faces/pre-express/2022": {
+          "name": "Üzləri hiss etmək",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "how_to_make_a_class_section_on_code_org/pre-express/2022": {
+          "name": "Code.org-da sinif seçimi necə edilir ",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "all_resources/coursea/2022": {
+          "url": "/s/coursea-2022/mənbələr"
+        },
+        "all_standards/coursea/2022": {
+          "url": "/s/coursea-2022/standartlar"
+        },
+        "all_vocabulary/coursea/2022": {
+          "url": "/s/coursea-2022/lüğət"
+        },
+        "common_core_and_ngss_guidance/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "debugging_guide/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/baxış"
+        },
+        "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
+          "name": "Onlayn qonşuluqda təhlükəsizlik: Dərs slaydları",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
+          "name": "Onlayn qonşuluğumda təhlükəsizlik: Onlayn qonşuluğum"
+        },
+        "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
+          "name": "Onlayn Qonşuluğumda Təhlükəsizlik: Dayan və Düşün"
+        },
+        "20_20_20_rule/coursea/2022": {
+          "name": "20/20/20 Qaydası"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "name": "Başlanğıc - Sinif bölməsinin yaradılması",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "name": "Wiggles - Noodle-a gedin",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
+        },
+        "happy_map_game_pieces/coursea/2022": {
+          "name": "Xoşbəxt xəritə oyun hissələri",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Şən xəritələr"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
+          "name": "Sökülməmiş Bloklu Bloklar (Siniflər K-1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "name": "Qıvrımlar - GoNoodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "feeling_faces_emotion_image/coursea/2022": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "happy_map_cards_xl/coursea/2022": {
+          "name": "Xoşbəxt Xəritə Kartları XL"
+        },
+        "feeling_faces/coursea/2022": {
+          "name": "Üzləri hiss etmək",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair-programming/coursea/2022": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
+        },
+        "csf_lesson_recommendations/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Böyük hadisə"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Böyük hadisə",
+          "type": "Yoxlama"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Böyük hadisə"
+        },
+        "cs_fundamentals_main_activity_tips/coursea/2022": {
+          "name": "CS Fundamentals Əsas Fəaliyyət Məsləhətləri",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "common_core_and_ngss_guidance/coursec/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
+        },
+        "cross-curricular_extension_activities/coursec/2022": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "debugging_guide_1/coursec/2022": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursec/2022": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
+          "name": "Onlayn mənasını dayandırmaq: Dərs Slaydları"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Mənim robot dostlarım"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Mənim robot dostlarım"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Mənim robot dostlarım"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Mənim robot dostlarım"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Mənim robot dostlarım"
+        },
+        "maze_bridging_page/coursec/2022": {
+          "name": "Labirent Körpü Səhifəsi"
+        },
+        "cs_fundamentals_main_activity_tips/coursec/2022": {
+          "name": "CS Fundamentals Əsas Fəaliyyət Məsləhətləri",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
+        },
+        "artist_introduction/coursec/2022": {
+          "name": "Artist Təqdimatı",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "turns_angles/coursec/2022": {
+          "name": "Dönüşlər və açılar",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "turns_angles_1/coursec/2022": {
+          "name": "Dönüşlər və açılar"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Böyük hadisə"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Böyük hadisə",
+          "type": "Yoxlama"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Böyük hadisə"
+        },
+        "the_big_event_course_c_/coursec/2022": {
+          "name": "Böyük Hadisə (C kursu)"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "ikili bilərziklər"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "ikili bilərziklər"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "ikili bilərziklər"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "ikili bilərziklər",
+          "type": "Yoxlama"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "ikili bilərziklər"
+        },
+        "bits_versus_bytes/coursec/2022": {
+          "name": "Baytlara qarşı bitlər"
+        },
+        "play_lab_project_planning_guide_exemplar_/coursec/2022": {
+          "name": "Play Lab Layihə Planlaşdırma Bələdçisi (Nümunəvi)"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "Müəllim Forumu"
+        },
         "representing_information/csd/2022": {
           "name": "Məlumatı təmsil edən"
         },
@@ -158,9 +898,6 @@
         "make_a_recommendation_2/csd/2022": {
           "type": "Layihə Bələdçisi"
         },
-        "teacher_forum/csd/2022": {
-          "name": "Müəllim Forumu"
-        },
         "aluminum_boats/csd/2022": {
           "name": "Alüminium qayıqlar"
         },
@@ -171,7 +908,8 @@
           "name": "Code.org  \"Necə etməli\" videoları"
         },
         "intro_to_problem_solving/csd/2022": {
-          "name": "Problem Həllinə giriş"
+          "name": "Problem Həllinə giriş",
+          "url": "https://docs.google.com/presentation/d/1zpwDZmqxT8pW9ZxUBfQ3rZhWvjANQPbrz4XE18reP-8/template/önbaxış"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "Video"
@@ -183,13 +921,23 @@
           "name": "Məsələnin həlli prosesi"
         },
         "exploring_problem_solving/csd/2022": {
-          "name": "Problemin həllini araşdırmaq"
+          "name": "Problemin həllini araşdırmaq",
+          "url": "https://docs.google.com/presentation/d/1_-cc28V0UGo-lNB9yJRPvGlHwdMSnYpcoi9lwJVkHEc/template/preview"
         },
         "what_is_a_computer/csd/2022": {
           "type": "Video"
         },
         "what_is_a_computer_/csd/2022": {
           "name": "Kompüter nədir?"
+        },
+        "what_is_a_computer_1/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1v8ErjlG4MLpdwJ-paeJ1PJlUMY3nXL8RfoBK_DczJ-M/template/preview"
+        },
+        "input_and_output_2/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/10ew9kAUGnO0gMSr6sW5sFLB0bYfjdwQgiX-cJyzPQ9w/template/preview"
+        },
+        "apps_with_processing_2/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/16-FcZlbn-DXr_BcDncQwUJvwAy24mT4JOuxTQAHzDOE/template/preview"
         },
         "what_do_computers_do/csd/2022": {
           "type": "Video"
@@ -283,7 +1031,11 @@
           "name": "Bərabərlik Döngüsü"
         },
         "sprite_movement/csd/2022": {
+          "name": "Sprayt Hərəkəti",
           "type": "Video"
+        },
+        "sprite_movement_1/csd/2022": {
+          "name": "Sprayt Hərəkəti"
         },
         "animated_scene/csd/2022": {
           "type": "sərlövhə"
@@ -301,6 +1053,9 @@
         },
         "keyboard_input/csd/2022": {
           "name": "Klaviatura Girişi"
+        },
+        "if-else_statements/csd/2022": {
+          "name": "Əgər-Yoxsa İfadələri"
         },
         "if_else_statements/csd/2022": {
           "name": "əgər/yoxsa ifadələri",
@@ -324,6 +1079,15 @@
         },
         "velocity_2/csd/2022": {
           "name": "Sürət"
+        },
+        "collision_detection/csd/2022": {
+          "name": "Toqquşmanın Aşkarlanması"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "Toqquşmanın Aşkarlanması"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "Toqquşmanın Aşkarlanması"
         },
         "side_scroller/csd/2022": {
           "name": "Yan Scroller",
@@ -428,6 +1192,9 @@
           "name": "CSS - yə giriş: 2 ci hissə",
           "type": "Video"
         },
+        "styling_text_with_css/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1BtifQt5gCAdI3wyzMpW0sdNdnA-6hVk3rdcNETG1oP0/template/preview"
+        },
         "your_personal_style/csd/2022": {
           "type": "sərlövhə"
         },
@@ -451,6 +1218,9 @@
         },
         "personal_web_page_-_prepare/csd/2022": {
           "type": "Layihə Bələdçisi"
+        },
+        "your_web_page_prepare/csd/2022": {
+          "name": "Sizin Veb Səhifə: Hazırlıq"
         },
         "personal_web_page/csd/2022": {
           "type": "Həmyaşıd rəyi"
@@ -478,9 +1248,11 @@
           "type": "Video"
         },
         "video_teamwork/csd/2022": {
+          "name": "Video: Komanda işi",
           "type": "Video"
         },
         "video_how_search_works/csd/2022": {
+          "name": "Video: Axtarış necə işləyir",
           "type": "Video"
         },
         "classes/csd/2022": {
@@ -638,6 +1410,9 @@
         "making_music/csd/2022": {
           "name": "Musiqi bəstələmək"
         },
+        "playing_notes/csd/2022": {
+          "name": "Notları Çalmaq"
+        },
         "arrays/csd/2022": {
           "name": "Massivlər"
         },
@@ -695,7 +1470,14 @@
         "if-statements_in_app_lab/csd/2022": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar",
           "type": "Video"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
@@ -1141,24 +1923,65 @@
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Şeirlərin siyahısı",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
         },
-        "introducing_sprite_lab/coursef/2021": {
-          "name": "Sprite Laboratoriyasını təqdim edirik",
-          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
+        "2021_change_log/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "Kurs lüğəti",
+          "url": "https://studio.code.org/s/coursef-2021/vocab"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursef/2021": {
+          "url": "https://studio.code.org/s/coursef-2021/standards"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "debugging_guide/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Sprite Laboratoriyasının Sənədləri",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "exploring_apps/coursef/2021": {
           "name": "Tətbiqləri araşdırmaq",
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Tətbiqləri araşdırmaq",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+        },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Sprite Laboratoriyasını təqdim edirik",
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Sprite Laboratoriyasını təqdim edirik",
           "url": "https://youtu.be/yd-9xZ275dM",
           "type": "Video"
-        },
-        "exploring_apps_1/coursef/2021": {
-          "name": "Tətbiqləri araşdırmaq",
-          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
           "name": "Spraytlar düzəltmək"
@@ -1173,26 +1996,34 @@
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "Video"
         },
-        "blank_space_stories_-_worksheet/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
-        },
         "blank_space_stories/coursef/2021": {
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "pause_and_think_online/coursef/2021": {
           "type": "Video"
         },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Döngü əyləncəsi üçün"
+        },
         "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Döngü əyləncəsi üçün",
           "type": "Yoxlama"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Döngü əyləncəsi üçün"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Döngü əyləncəsi üçün"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Döngü əyləncəsi üçün"
         },
         "ai-ml/coursef/2021": {
           "name": "Avtomatlaşdırılmış Öyrənmə",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "Video"
-        },
-        "ai-training/coursef/2021": {
-          "name": "AI: Təlim məlumatları və qərəzlilik",
-          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
@@ -1200,73 +2031,78 @@
           "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Video"
         },
-        "unplugged-video-internet/coursef/2021": {
+        "ai-training/coursef/2021": {
+          "name": "AI: Təlim məlumatları və qərəzlilik",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "assessment-answer-internet/coursef/2021": {
           "name": "İnternet"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "İnternet",
           "type": "Yoxlama"
         },
-        "assessment-answer-internet/coursef/2021": {
+        "unplugged-video-internet/coursef/2021": {
           "name": "İnternet"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "type": "sərlövhə"
         },
-        "csta_standards_mapping/coursef/2021": {
-          "url": "https://studio.code.org/s/coursef-2021/standards"
+        "2021_change_log/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "common_core_and_ngss_guidance/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
-        "cross-curricular_extension_activities_1/coursef/2021": {
+        "course_vocabulary/courseb/2021": {
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "course_vocabulary/coursef/2021": {
-          "name": "Kurs lüğəti",
-          "url": "https://studio.code.org/s/coursef-2021/vocab"
+        "csta_standards_mapping/courseb/2021": {
+          "url": "https://studio.code.org/s/courseb-2021/standards"
         },
-        "implementation_guide/coursef/2021": {
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Kurikulum Bələdçisi",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/courseb/2021": {
           "name": "İcra Bələdçisi",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursef/2021": {
+        "lesson_type_guide/courseb/2021": {
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "debugging_guide/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursef/2021": {
-          "name": "Kurikulum Bələdçisi"
-        },
-        "2021_change_log/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursef/2021": {
+        "teacher_forum_1/courseb/2021": {
           "name": "Müəllim Forumu",
           "url": "https://forum.code.org/c/csf/"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Sprite Laboratoriyasının Sənədləri",
-          "url": "https://studio.code.org/docs/spritelab/"
+        "virtual_lesson_modifications/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
-        "virtual_lesson_modifications/coursef/2021": {
-          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
-        },
-        "digital-trails-lesson-slides/courseb/2021": {
-          "name": "Rəqəmsal yollar: Dərs Slaydları",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
-        },
-        "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "Rəqəmsal izlər: Rəqəmsal izi izləyin",
-          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "Rəqəmsal yollar: Heyvan izləri"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Rəqəmsal izlər: Rəqəmsal izi izləyin",
           "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
         },
-        "digital-trails-animal-tracks/courseb/2021": {
-          "name": "Rəqəmsal yollar: Heyvan izləri"
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "Rəqəmsal izlər: Rəqəmsal izi izləyin",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "Rəqəmsal yollar: Dərs Slaydları",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "mimi-activity/courseb/2021": {
           "name": "Hərəkət et",
@@ -1284,17 +2120,8 @@
           "name": "Hərəkət et",
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
-        "feeling_faces_emotion_image/courseb/2021": {
-          "name": "Üz emosiyaları hiss etmə səhifəsi",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
-        },
-        "feeling-faces-image/courseb/2021": {
-          "name": "Üzləri hiss etmək",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
-        },
-        "jigsaw/courseb/2021": {
-          "name": "Çəkmək və Buraxmaq Praktikası",
-          "url": "https://studio.code.org/s/jigsaw"
+        "20_20_20_rule/courseb/2021": {
+          "name": "20/20/20 Qaydası"
         },
         "class-section-video/courseb/2021": {
           "name": "Code.org-da sinif seçimi necə edilir ",
@@ -1303,6 +2130,14 @@
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "Sökülməmiş Bloklu Bloklar (Siniflər K-1)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "Üzləri hiss etmək",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "Çəkmək və Buraxmaq Praktikası",
+          "url": "https://studio.code.org/s/jigsaw"
         },
         "pair-programming-vid/courseb/2021": {
           "name": "Estafet proqramlaşdırması",
@@ -1313,19 +2148,16 @@
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
-        "20_20_20_rule/courseb/2021": {
-          "name": "20/20/20 Qaydası"
-        },
-        "happy-map-game-pieces/courseb/2021": {
-          "name": "Xoşbəxt xəritə oyun hissələri",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
-        },
         "compass-rose/courseb/2021": {
           "name": "Rosanı yünləndirin",
           "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "Xoşbəxt xəritə oyun hissələri",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie və Böyük Layihə"
@@ -1334,18 +2166,22 @@
           "name": "Gözədəyməz xətalar",
           "type": "Video"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
-          "url": "https://youtu.be/JoKTqHCni0M"
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Loopy əldə etmək",
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Loopy əldə etmək",
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Loopy əldə etmək",
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "Yoxlama"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
-          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Loopy əldə etmək",
+          "url": "https://youtu.be/JoKTqHCni0M"
         },
         "csf-lesson-recommend/courseb/2021": {
           "name": "CS Fundamentals Əsas Fəaliyyət Məsləhətləri",
@@ -1359,52 +2195,49 @@
           "name": "Doğru Tətbiq Ssenariləri",
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "Böyük hadisə",
-          "type": "Video"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Böyük hadisə"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Böyük hadisə",
           "type": "Yoxlama"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "Böyük hadisə"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Böyük hadisə",
+          "type": "Video"
         },
-        "csta_standards_mapping/courseb/2021": {
-          "url": "https://studio.code.org/s/courseb-2021/standards"
+        "2021_change_log/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "common_core_and_ngss_guidance/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
         },
-        "cross-curricular_extension_activities/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        "course_vocabulary/coursea/2021": {
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
-        "course_vocabulary/courseb/2021": {
-          "url": "https://studio.code.org/s/courseb-2021/vocab"
+        "csta_standards_mapping/coursea/2021": {
+          "url": "https://studio.code.org/s/coursea-2021/standards"
         },
-        "implementation_guide/courseb/2021": {
-          "name": "İcra Bələdçisi",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/courseb/2021": {
+        "curriculum_guide_1/coursea/2021": {
           "name": "Kurikulum Bələdçisi",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
-        "2021_change_log/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        "debugging_guide/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
-        "teacher_forum_1/courseb/2021": {
+        "implementation_guide/coursea/2021": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum_1/coursea/2021": {
           "name": "Müəllim Forumu",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        "virtual_lesson_modifications/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "Onlayn qonşuluqda təhlükəsizlik: Dərs slaydları",
@@ -1416,36 +2249,36 @@
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Onlayn Qonşuluğumda Təhlükəsizlik: Dayan və Düşün"
         },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Estafet proqramlaşdırması",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
-        },
         "20_20_20_rule/coursea/2021": {
           "name": "20/20/20 Qaydası"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "name": "Wiggles - Noodle-a gedin",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "Video"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "Başlanğıc - Sinif bölməsinin yaradılması",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
           "type": "Video"
         },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Şən xəritələr"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "Wiggles - Noodle-a gedin",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "happy-map-game-pieces/coursea/2021": {
           "name": "Xoşbəxt xəritə oyun hissələri",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
-        "course-ab-blockly-blocks/coursea/2021": {
-          "name": "Sökülməmiş Bloklu Bloklar (Siniflər K-1)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Şən xəritələr"
         },
         "20_20_20_rule_1/coursea/2021": {
           "name": "20/20/20 Qaydası"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "Sökülməmiş Bloklu Bloklar (Siniflər K-1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Qıvrımlar - GoNoodle",
@@ -1462,12 +2295,12 @@
         "feeling_faces_-_emotion_image_1/coursea/2021": {
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
-        "happy-map-cards-xl/coursea/2021": {
-          "name": "Xoşbəxt Xəritə Kartları XL"
-        },
         "feeling_faces_emotion_image_1/coursea/2021": {
           "name": "Üz emosiyaları hiss etmə səhifəsi",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "Xoşbəxt Xəritə Kartları XL"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "Üzləri hiss etmək",
@@ -1477,177 +2310,73 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Video"
         },
+        "csf_lesson_recommendations/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Üz emosiyaları hiss etmə səhifəsi",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
-        },
-        "csf_lesson_recommendations/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
+        "csf_lesson_recommendations_1/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Üz emosiyaları hiss etmə səhifəsi",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
-        "csf_lesson_recommendations_1/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
-        },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "Böyük hadisə"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Böyük hadisə",
           "type": "Yoxlama"
         },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Böyük hadisə"
-        },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Böyük hadisə"
         },
         "csf-lesson-recommend/coursea/2021": {
           "name": "CS Fundamentals Əsas Fəaliyyət Məsləhətləri",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
-        },
         "csf_lesson_recommendations_2/coursea/2021": {
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "csta_standards_mapping/coursea/2021": {
-          "url": "https://studio.code.org/s/coursea-2021/standards"
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
-        "common_core_and_ngss_guidance/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
-        },
-        "course_vocabulary/coursea/2021": {
-          "url": "https://studio.code.org/s/coursea-2021/vocab"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "İcra Bələdçisi",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "Kurikulum Bələdçisi",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursea/2021": {
+        "2021_change_log/coursec/2021": {
+          "name": "2021 Dəyişiklik Qeydiyyatı",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "Müəllim Forumu",
-          "url": "https://forum.code.org/c/csf/"
-        },
-        "virtual_lesson_modifications/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
-        },
-        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
-          "name": "Onlayn mənasını dayandırmaq: Dərs Slaydları"
-        },
-        "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Mənim robot dostlarım"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Mənim robot dostlarım"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "Mənim robot dostlarım"
-        },
-        "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "Mənim robot dostlarım"
-        },
-        "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "Mənim robot dostlarım"
-        },
-        "c2-maze-bridge/coursec/2021": {
-          "name": "Labirent Körpü Səhifəsi"
-        },
-        "pair-programming-vid/coursec/2021": {
-          "name": "Estafet proqramlaşdırması",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "Video"
-        },
-        "csf-lesson-recommend/coursec/2021": {
-          "name": "CS Fundamentals Əsas Fəaliyyət Məsləhətləri",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
-        },
-        "csf-artist-intro-video/coursec/2021": {
-          "name": "Artist Təqdimatı",
-          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
-        },
-        "csf-turns-angles-video/coursec/2021": {
-          "name": "Dönüşlər və açılar",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
-        },
-        "csf-turns-angles-doc/coursec/2021": {
-          "name": "Dönüşlər və açılar"
-        },
-        "feeling_faces_emotion_image/coursec/2021": {
-          "name": "Üz emosiyaları hiss etmə səhifəsi"
-        },
-        "unplugged-video-big-event/coursec/2021": {
-          "name": "Böyük hadisə"
-        },
-        "csf-the-big-event-assessment/coursec/2021": {
-          "name": "Böyük hadisə",
-          "type": "Yoxlama"
-        },
-        "assessment-answer-big-event/coursec/2021": {
-          "name": "Böyük hadisə"
-        },
-        "the_big_event_course_c_/coursec/2021": {
-          "name": "Böyük Hadisə (C kursu)"
-        },
-        "pause_and_think_online/coursec/2021": {
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "Video"
-        },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "Baytlara qarşı bitlər"
-        },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "ikili bilərziklər"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "ikili bilərziklər"
-        },
-        "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "ikili bilərziklər"
-        },
-        "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "ikili bilərziklər",
-          "type": "Yoxlama"
-        },
-        "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "ikili bilərziklər"
-        },
-        "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "Play Lab Layihə Planlaşdırma Bələdçisi (Nümunəvi)"
-        },
-        "csta_standards_mapping/coursec/2021": {
-          "name": "CSTA Standart Xəritəçəkmə",
-          "url": "https://studio.code.org/s/coursec-2021/standards"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
           "name": "Ümumi Əsas və NGSS Rəhbərliyi",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
         },
-        "cross-curricular_extension_activities/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
         "course_vocabulary/coursec/2021": {
           "name": "kurs lüğəti",
           "url": "https://studio.code.org/s/coursec-2021/vocab"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "CSTA Standart Xəritəçəkmə",
+          "url": "https://studio.code.org/s/coursec-2021/standards"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Kurikulum Bələdçisi",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "sazlama təlimatı",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "implementation_guide/coursec/2021": {
           "name": "İcra Bələdçisi",
@@ -1657,24 +2386,143 @@
           "name": "dərs növü bələdçisi",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "debugging_guide_1/coursec/2021": {
-          "name": "sazlama təlimatı",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursec/2021": {
-          "name": "Kurikulum Bələdçisi",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursec/2021": {
-          "name": "2021 Dəyişiklik Qeydiyyatı",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
         "teacher_forum_1/coursec/2021": {
           "name": "Müəllim Forumu",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
+        },
+        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "name": "Onlayn mənasını dayandırmaq: Dərs Slaydları"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
+        "c2-maze-bridge/coursec/2021": {
+          "name": "Labirent Körpü Səhifəsi"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "CS Fundamentals Əsas Fəaliyyət Məsləhətləri",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "Artist Təqdimatı",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "Dönüşlər və açılar"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "Dönüşlər və açılar",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Böyük hadisə"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Böyük hadisə",
+          "type": "Yoxlama"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Böyük Hadisə (C kursu)"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Böyük hadisə"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "ikili bilərziklər"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "ikili bilərziklər"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "ikili bilərziklər",
+          "type": "Yoxlama"
+        },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "Baytlara qarşı bitlər"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "ikili bilərziklər"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "ikili bilərziklər"
+        },
+        "play-lab-project-planning-guide-exemplar/coursec/2021": {
+          "name": "Play Lab Layihə Planlaşdırma Bələdçisi (Nümunəvi)"
+        },
+        "2021_change_log/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        },
+        "course_vocabulary/coursed/2021": {
+          "url": "https://studio.code.org/s/coursed-2021/vocab"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursed/2021": {
+          "url": "https://studio.code.org/s/coursed-2021/standards"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Kurikulum Bələdçisi",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Müəllim Forumu",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "Parolun Gücləndirilməsi: Əgər... Onda... Ssenarilər"
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "Parolun Gücləndirilməsi: Əgər... Onda... Ssenarilər"
+        },
+        "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "Parolun Gücləndirilməsi: Dərs Testi"
+        },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "Parolun Gücləndirilməsi: Dərs Testi"
         },
         "password_power-up_lesson_slides/coursed/2021": {
           "name": "Parolun Gücləndirilməsi: Dərs Slaydları"
@@ -1685,63 +2533,51 @@
         "password_power-up_power-up_your_password_answer_key/coursed/2021": {
           "name": "Parolun Gücləndirilməsi: Şifrənizi Gücləndirin"
         },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "Parolun Gücləndirilməsi: Dərs Testi"
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "Parolun Gücləndirilməsi: Dərs Testi"
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "Parolun Gücləndirilməsi: Əgər... Onda... Ssenarilər"
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "Parolun Gücləndirilməsi: Əgər... Onda... Ssenarilər"
-        },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Millimetrlik kağızda proqramlaşdırma",
-          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Millimetrlik kağızda proqramlaşdırma",
-          "url": "https://youtu.be/Y_paSrH2ffw"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Millimetrlik kağızda proqramlaşdırma",
-          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
-        },
         "activity-answer-graph-paper/coursed/2021": {
           "name": "Millimetrlik kağızda proqramlaşdırma",
           "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Millimetrlik kağızda proqramlaşdırma",
           "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
           "type": "Yoxlama"
         },
-        "assessment-answer-graph-paper/coursed/2021": {
+        "graph-paper-programming/coursed/2021": {
           "name": "Millimetrlik kağızda proqramlaşdırma",
-          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "url": "https://youtu.be/Y_paSrH2ffw"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Estafet proqramlaşdırması",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Estafet proqramlaşdırması"
         },
         "relay-assessment/coursed/2021": {
           "name": "Estafet proqramlaşdırması"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Estafet proqramlaşdırması"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Estafet proqramlaşdırması"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Estafet proqramlaşdırması"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Estafet proqramlaşdırması"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
@@ -1766,60 +2602,38 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Kartlarla şərtlər"
         },
-        "lesson-in-action-conditional-cards/coursed/2021": {
+        "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Kartlarla şərtlər"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Kartlarla şərtlər",
           "type": "Yoxlama"
         },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
+        "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Kartlarla şərtlər"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Kartlarla şərtlər"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "type": "Layihə Bələdçisi"
         },
-        "csta_standards_mapping/coursed/2021": {
-          "url": "https://studio.code.org/s/coursed-2021/standards"
+        "course_vocabulary_1/express/2021": {
+          "name": "Kurs lüğəti",
+          "url": "https://studio.code.org/s/express-2021/vocab"
         },
-        "common_core_and_ngss_guidance/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        "csta_standards_mapping/express/2021": {
+          "url": "https://studio.code.org/s/express-2021/standards"
         },
-        "cross-curricular_extension_activities/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        "debugging_guide/express/2021": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
-        "course_vocabulary/coursed/2021": {
-          "url": "https://studio.code.org/s/coursed-2021/vocab"
-        },
-        "implementation_guide/coursed/2021": {
-          "name": "İcra Bələdçisi",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "Kurikulum Bələdçisi",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursed/2021": {
+        "teacher_forum_1/express/2021": {
           "name": "Müəllim Forumu",
           "url": "https://forum.code.org/c/csf/"
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "unplugged_maze_blocks/express/2021": {
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
@@ -1845,13 +2659,13 @@
         "turns_angles_1/express/2021": {
           "name": "Dönüşlər və açılar"
         },
-        "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "Üzgüçülük Balıq Müəllim Sandbox",
-          "url": "https://studio.code.org/levels/18623"
-        },
         "sprite_lab_documentation/express/2021": {
           "name": "Sprite Laboratoriyasının Sənədləri",
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "swimming_fish_teacher_sandbox/express/2021": {
+          "name": "Üzgüçülük Balıq Müəllim Sandbox",
+          "url": "https://studio.code.org/levels/18623"
         },
         "making_sprites/express/2021": {
           "name": "Spraytlar düzəltmək",
@@ -1877,6 +2691,7 @@
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "pair_programming_video/express/2021": {
+          "name": "Cüt proqramlaşdırma videosu",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Video"
         },
@@ -1898,23 +2713,23 @@
         "rubric-csf-final-projects/express/2021": {
           "type": "sərlövhə"
         },
-        "csta_standards_mapping/express/2021": {
-          "url": "https://studio.code.org/s/express-2021/standards"
-        },
-        "course_vocabulary_1/express/2021": {
+        "course_vocabulary/pre-express/2021": {
           "name": "Kurs lüğəti",
-          "url": "https://studio.code.org/s/express-2021/vocab"
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
-        "teacher_forum_1/express/2021": {
+        "csta_standards_mapping/pre-express/2021": {
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        },
+        "debugging_guide/pre-express/2021": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "teacher_forum_1/pre-express/2021": {
           "name": "Müəllim Forumu",
           "url": "https://forum.code.org/c/csf/"
         },
-        "debugging_guide/express/2021": {
-          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
-        },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Estafet proqramlaşdırması",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        "20_20_20_rule/pre-express/2021": {
+          "name": "20/20/20 Qaydası",
+          "type": "Video"
         },
         "class-section-video/pre-express/2021": {
           "name": "Code.org-da sinif seçimi necə edilir ",
@@ -1924,9 +2739,9 @@
           "name": "Üzləri hiss etmək",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
-        "20_20_20_rule/pre-express/2021": {
-          "name": "20/20/20 Qaydası",
-          "type": "Video"
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
@@ -1936,30 +2751,57 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
-        "csta_standards_mapping/pre-express/2021": {
-          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        "2021_change_log/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "course_vocabulary/pre-express/2021": {
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
+        },
+        "course_vocabulary/coursee/2021": {
           "name": "Kurs lüğəti",
-          "url": "https://studio.code.org/s/pre-express-2021/vocab"
+          "url": "https://studio.code.org/s/coursee-2021/vocab"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "cross-curricular_extension_activities/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursee/2021": {
+          "url": "https://studio.code.org/s/coursee-2021/standards"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Kurikulum Bələdçisi",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "İcra Bələdçisi",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Sprite Laboratoriyasının Sənədləri",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "Müəllim Forumu",
           "url": "https://forum.code.org/c/csf/"
         },
-        "debugging_guide/pre-express/2021": {
-          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        "virtual_lesson_modifications/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "Alqoritmi izləyin."
         },
-        "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "Üzgüçülük Balıq Müəllim Sandbox",
-          "url": "https://studio.code.org/levels/18623"
-        },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Sprite Laboratoriyasının Sənədləri",
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "swimming-fish-teacher-sandbox/coursee/2021": {
+          "name": "Üzgüçülük Balıq Müəllim Sandbox",
+          "url": "https://studio.code.org/levels/18623"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
@@ -1967,11 +2809,11 @@
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
-        "private-and-personal-information-lesson-slides/coursee/2021": {
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
-        },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+        },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Video"
@@ -1994,47 +2836,6 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "type": "sərlövhə"
-        },
-        "csta_standards_mapping/coursee/2021": {
-          "url": "https://studio.code.org/s/coursee-2021/standards"
-        },
-        "common_core_and_ngss_guidance/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
-        },
-        "cross-curricular_extension_activities/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "course_vocabulary/coursee/2021": {
-          "name": "Kurs lüğəti",
-          "url": "https://studio.code.org/s/coursee-2021/vocab"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "İcra Bələdçisi",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Kurikulum Bələdçisi",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "Müəllim Forumu",
-          "url": "https://forum.code.org/c/csf/"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Sprite Laboratoriyasının Sənədləri",
-          "url": "https://studio.code.org/docs/spritelab/"
-        },
-        "virtual_lesson_modifications/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
@@ -2070,7 +2871,14 @@
         "if-statements_in_app_lab/csd/2021": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar",
           "type": "Video"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
@@ -2087,6 +2895,9 @@
         },
         "design_an_ai_app_1/csd/2021": {
           "type": "sərlövhə"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Müəllim Forumu"
         },
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
@@ -2141,9 +2952,6 @@
         "app-presentation-exemplar/csd/2021": {
           "name": "Proqram təqdimatı"
         },
-        "teacher_forum/csd/2021": {
-          "name": "Müəllim Forumu"
-        },
         "internet-of-things-video/csd/2021": {
           "type": "Video"
         },
@@ -2188,6 +2996,9 @@
         },
         "arrays/csd/2021": {
           "name": "Massivlər"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Notları Çalmaq"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "\"For\" dövrü",
@@ -2263,6 +3074,9 @@
         "solve-a-data-problem/csd/2021": {
           "type": "Layihə Bələdçisi"
         },
+        "teacher_forum_1/csd/2021": {
+          "name": "Müəllim Forumu"
+        },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "Rəsm Şekilləri"
         },
@@ -2320,6 +3134,7 @@
           "name": "Bərabərlik Döngüsü"
         },
         "animating-sprites/csd/2021": {
+          "name": "Sprayt Hərəkəti",
           "type": "Video"
         },
         "animated-scene-1/csd/2021": {
@@ -2332,6 +3147,9 @@
         "conditional_statements/csd/2021": {
           "name": "Şərti Operatorlar",
           "type": "Video"
+        },
+        "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "name": "Əgər-Yoxsa İfadələri"
         },
         "if_else_statements/csd/2021": {
           "name": "əgər/yoxsa ifadələri",
@@ -2352,6 +3170,12 @@
         },
         "velocity_2/csd/2021": {
           "name": "Sürət"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Toqquşmanın Aşkarlanması"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Toqquşmanın Aşkarlanması"
         },
         "side-scroller-1/csd/2021": {
           "name": "Yan Scroller",
@@ -2384,9 +3208,6 @@
         },
         "make_your_own_game/csd/2021": {
           "type": "sərlövhə"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Müəllim Forumu"
         },
         "aluminum-boats-exemplar-2020/csd/2021": {
           "name": "Alüminium qayıqlar"
@@ -2520,9 +3341,11 @@
           "type": "Video"
         },
         "how-teamwork-works/csd/2021": {
+          "name": "Video: Komanda işi",
           "type": "Video"
         },
         "how-search-works-video/csd/2021": {
+          "name": "Video: Axtarış necə işləyir",
           "type": "Video"
         },
         "classes/csd/2021": {
@@ -2547,7 +3370,8 @@
           "name": "Dərs Planları"
         },
         "standard_mappings/pre-express/2020": {
-          "name": "Standart Eşlemeler"
+          "name": "Standart Eşlemeler",
+          "url": "https://curriculum.code.org/csf-20/express/standards"
         },
         "teacher_forum/pre-express/2020": {
           "name": "Müəllim Forumu"
@@ -2631,7 +3455,8 @@
           "name": "Kurikulum Bələdçisi"
         },
         "lesson_plans/coursea/2020": {
-          "name": "Dərs Planları"
+          "name": "Dərs Planları",
+          "url": "https://curriculum.code.org/csf-20/coursea/"
         },
         "standard_mappings/coursea/2020": {
           "name": "Standart Eşlemeler"

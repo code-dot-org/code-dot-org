@@ -10,6 +10,7 @@ steps:
   - name: clone
     image: docker:git
     commands:
+      - hostname=$(wget -O - http://169.254.169.254/latest/meta-data/public-hostname 2> /dev/null || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git reset --hard $DRONE_COMMIT
       # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
@@ -30,7 +31,7 @@ steps:
       filename: unit-tests-cache.tar
 
   - name: unit-tests
-    image: codedotorg/code-dot-org:1.5.2
+    image: codedotorg/code-dot-org:1.5.4
     pull: always
     volumes:
       - name: rbenv
@@ -121,7 +122,7 @@ steps:
       restore: true
 
   - name: ui-tests
-    image: codedotorg/code-dot-org:1.5.2
+    image: codedotorg/code-dot-org:1.5.4
     volumes:
       - name: rbenv
         path: /home/circleci/.rbenv
@@ -188,6 +189,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: b815d43d1ab9f9e4827c49881bae75eecd2e8c267fac81463d5906c256a913d1
+hmac: a42f3249d466f263dd8242d07f573717d16c16efb40a152d6cb2bbe2466d09a8
 
 ...

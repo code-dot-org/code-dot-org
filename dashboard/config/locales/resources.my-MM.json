@@ -29,6 +29,117 @@
         "ai-training/oceans/unversioned": {
           "type": "ဗီဒီယို"
         },
+        "teacher_forum/coursed/2022": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/coursef/2022": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/courseb/2022": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/express/2022": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "pair_programming/express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "artist_introduction/express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "turns_angles/express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "variables/express/2022": {
+          "name": "Variables"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/coursea/2022": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/coursec/2022": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "pair_programming/coursec/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/csd/2022": {
+          "name": "ဆရာဖိုရမ်"
+        },
         "binary_and_data/csd/2022": {
           "type": "ဗီဒီယို"
         },
@@ -49,9 +160,6 @@
         },
         "video_training_data_and_bias/csd/2022": {
           "type": "ဗီဒီယို"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "ဆရာဖိုရမ်"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "ဗီဒီယို"
@@ -540,6 +648,14 @@
         "vocabulary_3/csd/2017": {
           "name": "ဝေါဟာရ"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "ဗီဒီယို"
         },
@@ -552,13 +668,13 @@
         "ai-ml/coursef/2021": {
           "type": "ဗီဒီယို"
         },
-        "ai-training/coursef/2021": {
-          "type": "ဗီဒီယို"
-        },
         "ai-societal/coursef/2021": {
           "type": "ဗီဒီယို"
         },
-        "teacher_forum_1/coursef/2021": {
+        "ai-training/coursef/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum_1/courseb/2021": {
           "name": "ဆရာဖိုရမ်"
         },
         "wiggles_-_gonoodle/courseb/2021": {
@@ -573,13 +689,13 @@
         "unplugged-video-big-event/courseb/2021": {
           "type": "ဗီဒီယို"
         },
-        "teacher_forum_1/courseb/2021": {
+        "teacher_forum_1/coursea/2021": {
           "name": "ဆရာဖိုရမ်"
         },
-        "wiggles-go_noodle/coursea/2021": {
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "ဗီဒီယို"
         },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+        "wiggles-go_noodle/coursea/2021": {
           "type": "ဗီဒီယို"
         },
         "wiggles_-_gonoodle/coursea/2021": {
@@ -594,7 +710,7 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "ဗီဒီယို"
         },
-        "teacher_forum_1/coursea/2021": {
+        "teacher_forum_1/coursec/2021": {
           "name": "ဆရာဖိုရမ်"
         },
         "pair-programming-vid/coursec/2021": {
@@ -603,7 +719,7 @@
         "pause_and_think_online/coursec/2021": {
           "type": "ဗီဒီယို"
         },
-        "teacher_forum_1/coursec/2021": {
+        "teacher_forum_1/coursed/2021": {
           "name": "ဆရာဖိုရမ်"
         },
         "pause_and_think_online/coursed/2021": {
@@ -612,7 +728,7 @@
         "pause_and_think_online_1/coursed/2021": {
           "type": "ဗီဒီယို"
         },
-        "teacher_forum_1/coursed/2021": {
+        "teacher_forum_1/express/2021": {
           "name": "ဆရာဖိုရမ်"
         },
         "pair_programming/express/2021": {
@@ -633,7 +749,7 @@
         "variables_video/express/2021": {
           "name": "Variables"
         },
-        "teacher_forum_1/express/2021": {
+        "teacher_forum_1/pre-express/2021": {
           "name": "ဆရာဖိုရမ်"
         },
         "20_20_20_rule/pre-express/2021": {
@@ -645,7 +761,7 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "ဗီဒီယို"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "teacher_forum_1/coursee/2021": {
           "name": "ဆရာဖိုရမ်"
         },
         "common-sense-media-pause-think/coursee/2021": {
@@ -653,9 +769,6 @@
         },
         "digital-sharing-video/coursee/2021": {
           "type": "ဗီဒီယို"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "ဆရာဖိုရမ်"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "ဗီဒီယို"
@@ -693,6 +806,9 @@
         "view_and_download_survey_data/csd/2021": {
           "type": "ဗီဒီယို"
         },
+        "teacher_forum/csd/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "ဗီဒီယို"
         },
@@ -701,9 +817,6 @@
         },
         "intro_to_design_mode/csd/2021": {
           "type": "ဗီဒီယို"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "ဆရာဖိုရမ်"
         },
         "internet-of-things-video/csd/2021": {
           "type": "ဗီဒီယို"
@@ -747,6 +860,9 @@
         "video_training_data_and_bias/csd/2021": {
           "type": "ဗီဒီယို"
         },
+        "teacher_forum_1/csd/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "ဗီဒီယို"
         },
@@ -788,9 +904,6 @@
         },
         "calling_and_defining_functions/csd/2021": {
           "type": "ဗီဒီယို"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "ဆရာဖိုရမ်"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "ဗီဒီယို"

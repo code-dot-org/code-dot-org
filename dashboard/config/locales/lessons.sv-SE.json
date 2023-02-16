@@ -31,7 +31,6 @@
           "name": "Gumball Play Lab"
         },
         "dance/Dance Party": {
-          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "aquatic/Aquatic": {
@@ -49,6 +48,12 @@
         "text-compression/Text Compression": {
           "name": "Text komprimering"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab"
         },
@@ -59,6 +64,7 @@
           "name": "Timme av Kod 2013"
         },
         "dance-2019/Dance Party": {
+          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "k5-onlinepd-2019/Loops": {
@@ -87,6 +93,50 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Nästa steg"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Kalkyleringsprogrammering"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Stafettprogrammering"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Villkorssatser med kort"
+        },
+        "coursef-2022/Outbreak": {
+          "name": "Utbrott"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Låtskrivande"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Flytta det, flytta den"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Att bli snurrig"
+        },
+        "courseb-2022/The Right App": {
+          "name": "Den rätta appen"
+        },
+        "express-2022/Dance Party": {
+          "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Glada kartor"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Den stora händelsen"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binära armband"
         },
         "csd5-2022/Representing Images": {
           "name": "Representerar bilder"
@@ -810,6 +860,9 @@
         },
         "allthethings/Web Lab": {
           "name": "Web Lab"
+        },
+        "allthethings/lesson-48": {
+          "name": "Poesi"
         },
         "coursef-2021/For Loop Fun": {
           "name": "'För' loop skoj"

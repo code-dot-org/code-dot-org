@@ -38,6 +38,6 @@ title: දිස්ත්‍රික්ක සඳහා උපදෙස්
 
 -  මාර්ගගතව ඉගෙනීමට </ 0> සිසුන් උනන්දු කරන්න.</li> 
     
-    - පළපුරුදු පරිගණක විද්‍යා පහසුකම් සපයන්නෙකුගෙන් උපදෙස් ලබා ගැනීම සඳහා [ සහභාගී වන්න ]({{urls/professional_development_workshops }ibl) දින 1 ක පුද්ගල වැඩමුළුවකට සහභාගී වන්න. (එක්සත් ජනපද අධ්‍යාපන ators යින් පමණි)</ul> 
+    - [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.</ul> 
     
     {{ signup_button }}

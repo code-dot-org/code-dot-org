@@ -270,7 +270,7 @@ class Pd::Workshop < ApplicationRecord
   # Filters those those workshops that have not yet ended, but whose
   # final session was scheduled to end more than two days ago
   def self.should_have_ended
-    in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(Time.zone.now - 2.days)
+    in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(2.days.ago)
   end
 
   # Find the workshop that is closest in time to today
@@ -640,7 +640,7 @@ class Pd::Workshop < ApplicationRecord
   # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
   # @return [Integer] number of payment hours, after applying constraints
   def effective_num_hours
-    actual_hours = sessions.map(&:hours).reduce(&:+)
+    actual_hours = sessions.sum(&:hours)
     [actual_hours, time_constraint(:max_hours)].compact.min
   end
 
@@ -697,11 +697,10 @@ class Pd::Workshop < ApplicationRecord
     end
 
     # Get number of sessions attended by teacher
-    attendance_count_by_teacher = Hash[
-      teachers_attending.uniq.map do |teacher|
-        [teacher, teachers_attending.count(teacher)]
+    attendance_count_by_teacher =
+      teachers_attending.uniq.index_with do |teacher|
+        teachers_attending.count(teacher)
       end
-    ]
 
     # Return only teachers who attended all sessions
     attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys

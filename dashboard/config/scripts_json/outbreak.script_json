@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "outbreak",
-    "serialized_at": "2022-04-08 13:31:38 UTC",
+    "serialized_at": "2023-02-09 22:58:44 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. ",
-        "preparation": "####One Week Before Your Hour of Code\n\n* Review the [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) and [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event.\n\n* [Register your Hour of Code event](https://hourofcode.com/us) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n\n* Review and complete the online tutorial yourself: [Outbreak](https://studio.code.org/s/outbreak/)\n\n* Be sure to test it first before asking your students to complete it. \n\n* Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n####One Day Before Your Hour of Code\n\n* Each student who completes the activity should receive a [certificate](https://code.org/certificates). Print one for everyone in advance to make this easier at the end of your Hour of Code.\n\n* (optional) Encourage students to bring in headphones to use during the activity.",
+        "preparation": "####One Week Before Your Hour of Code\n\n* Review the [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) and [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event.\n\n* [Register your Hour of Code event](https://hourofcode.com/us) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n\n* Review and complete the online tutorial yourself: [Outbreak](https://studio.code.org/s/outbreak/)\n\n* Be sure to test it first before asking your students to complete it. \n\n* Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n####One Day Before Your Hour of Code\n\n* Each student who completes the activity should receive a [certificate](https://studio.code.org/certificates/batch). Print one for everyone in advance to make this easier at the end of your Hour of Code.\n\n* (optional) Encourage students to bring in headphones to use during the activity.",
         "purpose": "In this lesson, students will follow instructions to code their own simulation model. Students’ prior knowledge about virus outbreaks in the real world will be applied to a fictitious scenario. \n",
         "student_overview": "A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy."
       },

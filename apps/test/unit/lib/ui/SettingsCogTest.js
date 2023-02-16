@@ -1,70 +1,67 @@
 import React from 'react';
-import {Portal} from 'react-portal';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import msg from '@cdo/locale';
 import {expect} from '../../../util/reconfiguredChai';
-import SettingsCog, {ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
+import {renderMakerButton, SettingsCog} from '@cdo/apps/lib/ui/SettingsCog';
+import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
 import * as assets from '@cdo/apps/code-studio/assets';
 
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
-    const wrapper = mount(<SettingsCog />);
+    const wrapper = shallow(<SettingsCog />);
     expect(wrapper.find(FontAwesome)).to.have.lengthOf(1);
   });
 
   it('opens the menu when the cog is clicked', () => {
-    const wrapper = mount(<SettingsCog />);
-    expect(wrapper.find(Portal)).to.be.empty;
+    const wrapper = shallow(<SettingsCog />);
+    expect(wrapper.find(JavalabDropdown)).to.be.empty;
     wrapper.instance().open();
     wrapper.update();
-    expect(wrapper.find(Portal)).to.have.lengthOf(1);
+    expect(wrapper.find(JavalabDropdown)).to.have.lengthOf(1);
   });
 
   it('can close the menu', () => {
-    const wrapper = mount(<SettingsCog />);
+    const wrapper = shallow(<SettingsCog />);
     wrapper.instance().open();
     wrapper.update();
-    expect(wrapper.find(Portal)).to.have.lengthOf(1);
+    expect(wrapper.find(JavalabDropdown)).to.have.lengthOf(1);
     wrapper.instance().close();
     wrapper.update();
-    expect(wrapper.find(Portal)).to.be.empty;
+    expect(wrapper.find(JavalabDropdown)).to.be.empty;
   });
 
   it('does not show maker toggle when "showMakerToggle" is false', () => {
-    const wrapper = mount(<SettingsCog showMakerToggle={false} />);
-    wrapper.instance().open();
-    wrapper.update();
-    expect(wrapper.find(ToggleMaker)).to.have.lengthOf(0);
+    const wrapper = shallow(<SettingsCog showMakerToggle={false} />);
+    expect(wrapper.text()).to.not.include(msg.enableMaker());
+    expect(wrapper.text()).to.not.include(msg.disableMaker());
   });
 
-  it('does not show maker toggle when "showMakerToggle" is true but project is a level', () => {
-    const wrapper = mount(
-      <SettingsCog showMakerToggle={false} isProjectTemplateLevel={true} />
-    );
-    wrapper.instance().open();
-    wrapper.update();
-    expect(wrapper.find(ToggleMaker)).to.have.lengthOf(0);
-  });
+  // it('does not show maker toggle when "showMakerToggle" is true but project is a level', () => {
+  //   const wrapper = mount(
+  //     <SettingsCog showMakerToggle={false} isProjectTemplateLevel={true} />
+  //   );
+  //   wrapper.instance().open();
+  //   wrapper.update();
+  //   expect(wrapper.find(ToggleMaker)).to.have.lengthOf(0);
+  // });
 
-  it('does show maker toggle when "showMakerToggle" is true but project is not a level', () => {
-    const wrapper = mount(
-      <SettingsCog showMakerToggle={true} isProjectTemplateLevel={false} />
-    );
-    wrapper.instance().open();
-    wrapper.update();
-    expect(wrapper.find(ToggleMaker)).to.have.lengthOf(1);
-  });
+  // it('does show maker toggle when "showMakerToggle" is true but project is not a level', () => {
+  //   const wrapper = mount(
+  //     <SettingsCog showMakerToggle={true} isProjectTemplateLevel={false} />
+  //   );
+  //   wrapper.instance().open();
+  //   wrapper.update();
+  //   expect(wrapper.find(ToggleMaker)).to.have.lengthOf(1);
+  // });
 
   describe('menu items', () => {
     let wrapper;
 
     beforeEach(() => {
-      wrapper = mount(
-        <SettingsCog showMakerToggle={true} isProjectTemplateLevel={false} />
-      );
+      wrapper = shallow(<SettingsCog showMakerToggle={true} />);
       wrapper.instance().open();
       wrapper.update();
     });
@@ -88,7 +85,7 @@ describe('SettingsCog', () => {
       it('closes the menu when clicked', () => {
         wrapper.instance().manageAssets();
         wrapper.update();
-        expect(wrapper.find(Portal)).to.be.empty;
+        expect(wrapper.find(JavalabDropdown)).to.be.empty;
       });
     });
 
@@ -106,27 +103,26 @@ describe('SettingsCog', () => {
       it('renders with enable maker option if maker is available and disabled', () => {
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(false);
-        const wrapper = mount(<ToggleMaker onClick={() => {}} />);
+        const wrapper = shallow(renderMakerButton(() => {}));
         expect(wrapper.text()).to.include(msg.enableMaker());
       });
 
       it('renders with disable maker option if maker is available and enabled', () => {
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(true);
-        const wrapper = mount(<ToggleMaker onClick={() => {}} />);
+        const wrapper = shallow(renderMakerButton(() => {}));
         expect(wrapper.text()).to.include(msg.disableMaker());
       });
 
       it('hides maker toggle if maker is not available', () => {
         makerRedux.isAvailable.returns(false);
-        const wrapper = mount(<ToggleMaker onClick={() => {}} />);
-        expect(wrapper).to.be.blank;
+        expect(renderMakerButton(() => {})).to.be.null;
       });
 
       it('asks for confirmation when clicked', () => {
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(false);
-        var settings = mount(<SettingsCog showMakerToggle={true} />);
+        var settings = shallow(<SettingsCog showMakerToggle={true} />);
         expect(settings.state().confirmingEnableMaker).to.be.false;
         settings.instance().toggleMakerToolkit();
         settings.update();

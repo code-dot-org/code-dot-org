@@ -15,9 +15,5 @@
         = render partial: 'levels/single_multi', locals: {standalone: false, contained_mode: true, last_attempt: sublevel_last_attempt, level: contained_level, tight_layout: true}
       - elsif level_class == "free_response"
         = render partial: 'levels/free_response', locals: {in_level_group: true, last_attempt: sublevel_last_attempt, level: contained_level, left_align: true, is_contained_level: true }
-      - if current_user && @script && @script.can_be_instructor?(current_user) && DCDO.get('reset-predict-level-feature', false)
-        %button{id: 'reset-predict-progress-button', disabled: !sublevel_last_attempt}
-          %i.fa.fa-trash
-            =I18n.t('reset_predict_progress_button')
 
 %div{style: 'clear: both;'}

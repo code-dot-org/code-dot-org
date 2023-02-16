@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-emoji",
-    "serialized_at": "2022-03-11 12:08:38 UTC",
+    "serialized_at": "2022-09-13 19:06:22 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,6 +60,7 @@
       "key": "b90a8b9e-d5d5-4cf5-899c-f0155b34afca",
       "position": 1,
       "properties": {
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -73,6 +74,7 @@
       "key": "88111b93-3762-4109-9f31-2a08ca80ddb5",
       "position": 2,
       "properties": {
+        "duration": 40,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -86,6 +88,7 @@
       "key": "6a36e450-dd26-4e9f-b236-a9c77b5041a1",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {

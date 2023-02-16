@@ -29,6 +29,270 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "implementation_guide/coursed/2022": {
+          "name": "Rakendamise juhend"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Paarisprogrammeerimine"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Relee programmeerimine"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Relee programmeerimine"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Relee programmeerimine"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Relee programmeerimine"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Relee programmeerimine"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Relee programmeerimine"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Tingimuslaused kaartidel"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Tingimuslaused kaartidel"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Tingimuslaused kaartidel"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Tingimuslaused kaartidel"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Tingimuslaused kaartidel"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Rakendamise juhend"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Rakendamise juhend"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Rakendamise juhend"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Liiguta, liiguta"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Liiguta, liiguta"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Liiguta, liiguta"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Liiguta, liiguta"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Paarisprogrammeerimine"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie ja suur projekt"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Märkamata vead",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Muutub tsükliliseks"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Muutub tsükliliseks"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Muutub tsükliliseks"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Muutub tsükliliseks"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Suursündmus"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Suursündmus"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Suursündmus"
+        },
+        "pair_programming/express/2022": {
+          "name": "Paarisprogrammeerimine",
+          "type": "Video"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Muutujad"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Paarisprogrammeerimine"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Rakendamise juhend"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Paarisprogrammeerimine"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Happy Maps"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Suursündmus"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Suursündmus"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Suursündmus"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Rakendamise juhend"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Minu robotsõbrad"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Minu robotsõbrad"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Minu robotsõbrad"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Minu robotsõbrad"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Minu robotsõbrad"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Paarisprogrammeerimine",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Suursündmus"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Suursündmus"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Suursündmus"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binaarsed käevõrud"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binaarsed käevõrud"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binaarsed käevõrud"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binaarsed käevõrud"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binaarsed käevõrud"
+        },
         "binary_and_data/csd/2022": {
           "type": "Video"
         },
@@ -475,6 +739,14 @@
         "vocabulary_3/csd/2017": {
           "name": "Sõnavara"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Rakendamise juhend"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Video"
         },
@@ -484,40 +756,40 @@
         "pause_and_think_online/coursef/2021": {
           "type": "Video"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "For Loop Fun"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "For Loop Fun"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "For Loop Fun"
-        },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "For Loop Fun"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "For Loop Fun"
         },
-        "ai-ml/coursef/2021": {
-          "type": "Video"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "For Loop Fun"
         },
-        "ai-training/coursef/2021": {
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun"
+        },
+        "ai-ml/coursef/2021": {
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
           "type": "Video"
         },
-        "unplugged-video-internet/coursef/2021": {
+        "ai-training/coursef/2021": {
+          "type": "Video"
+        },
+        "assessment-answer-internet/coursef/2021": {
           "name": "Internet"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet"
         },
-        "assessment-answer-internet/coursef/2021": {
+        "unplugged-video-internet/coursef/2021": {
           "name": "Internet"
         },
-        "implementation_guide/coursef/2021": {
+        "implementation_guide/courseb/2021": {
           "name": "Rakendamise juhend"
         },
         "mimi-activity/courseb/2021": {
@@ -545,7 +817,7 @@
           "name": "Märkamata vead",
           "type": "Video"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Muutub tsükliliseks"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
@@ -554,32 +826,32 @@
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Muutub tsükliliseks"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Muutub tsükliliseks"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "Suursündmus",
-          "type": "Video"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Suursündmus"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Suursündmus"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "Suursündmus"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Suursündmus",
+          "type": "Video"
         },
-        "implementation_guide/courseb/2021": {
+        "implementation_guide/coursea/2021": {
           "name": "Rakendamise juhend"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Video"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Paarisprogrammeerimine"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "type": "Video"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -597,25 +869,19 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "Suursündmus"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Suursündmus"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "Suursündmus"
         },
-        "implementation_guide/coursea/2021": {
+        "implementation_guide/coursec/2021": {
           "name": "Rakendamise juhend"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Minu robotsõbrad"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Minu robotsõbrad"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Minu robotsõbrad"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -624,26 +890,29 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Minu robotsõbrad"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Minu robotsõbrad"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Minu robotsõbrad"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Paarisprogrammeerimine",
           "type": "Video"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "Suursündmus"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Suursündmus"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "Suursündmus"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "Video"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Binaarsed käevõrud"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binaarsed käevõrud"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -652,49 +921,52 @@
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Binaarsed käevõrud"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Binaarsed käevõrud"
         },
-        "implementation_guide/coursec/2021": {
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binaarsed käevõrud"
+        },
+        "implementation_guide/coursed/2021": {
           "name": "Rakendamise juhend"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Millimeetripaberi programmeerimine"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Millimeetripaberi programmeerimine"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Millimeetripaberi programmeerimine"
-        },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Millimeetripaberi programmeerimine"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Millimeetripaberi programmeerimine"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Millimeetripaberi programmeerimine"
         },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
         "pair-programming-vid/coursed/2021": {
           "name": "Paarisprogrammeerimine"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Relee programmeerimine"
         },
         "relay-assessment/coursed/2021": {
           "name": "Relee programmeerimine"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Relee programmeerimine"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Relee programmeerimine"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Relee programmeerimine"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Relee programmeerimine"
         },
         "pause_and_think_online/coursed/2021": {
@@ -703,23 +975,20 @@
         "pause_and_think_online_1/coursed/2021": {
           "type": "Video"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Tingimuslaused kaartidel"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Tingimuslaused kaartidel"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Tingimuslaused kaartidel"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Tingimuslaused kaartidel"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Tingimuslaused kaartidel"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "Rakendamise juhend"
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Tingimuslaused kaartidel"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Tingimuslaused kaartidel"
         },
         "pair_programming/express/2021": {
           "name": "Paarisprogrammeerimine",
@@ -740,11 +1009,11 @@
         "variables_video/express/2021": {
           "name": "Muutujad"
         },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Paarisprogrammeerimine"
-        },
         "20_20_20_rule/pre-express/2021": {
           "type": "Video"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Paarisprogrammeerimine"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "type": "Video"
@@ -752,14 +1021,14 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Video"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Rakendamise juhend"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Video"
         },
         "digital-sharing-video/coursee/2021": {
           "type": "Video"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Rakendamise juhend"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Video"

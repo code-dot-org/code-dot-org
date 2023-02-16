@@ -20,11 +20,11 @@
         "csp2021": {
           "name": "crwdns2911062:0crwdne2911062:0"
         },
-        "ai4k12-2021": {
-          "name": "crwdns2912790:0crwdne2912790:0"
-        },
         "ngss": {
           "name": "crwdns2908686:0crwdne2908686:0"
+        },
+        "ai4k12-2021": {
+          "name": "crwdns2912790:0crwdne2912790:0"
         }
       }
     }

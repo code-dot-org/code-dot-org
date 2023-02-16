@@ -29,6 +29,266 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "implementation_guide/coursed/2022": {
+          "name": "Ievietošanas pamācība"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Pāru Programmēšana"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Releju programmēšana"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Releju programmēšana"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Releju programmēšana"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Releju programmēšana"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Releju programmēšana"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Releju programmēšana"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Ievietošanas pamācība"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internets"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internets"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internets"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Ievietošanas pamācība"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Ievietošanas pamācība"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Ej, ej"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Ej, ej"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Ej, ej"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Pārvieto to, pārvieto to"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Pāru Programmēšana"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Kļūst ciklisks"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Kļūst ciklisks"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Kļūst ciklisks"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Kļūst ciklisks"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Lielais notikums"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Lielais notikums"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Lielais notikums"
+        },
+        "pair_programming/express/2022": {
+          "name": "Pāru Programmēšana",
+          "type": "Video"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Mainīgie"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Pāru Programmēšana"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Ievietošanas pamācība"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Pāru Programmēšana"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Laimīgās kartes"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Lielais notikums"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Lielais notikums"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Lielais notikums"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Ievietošanas pamācība"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Mani Robotikas draugi"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Mani Robotikas draugi"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Mani Robotikas draugi"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Mani Robotikas draugi"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Mani Robotikas draugi"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Pāru Programmēšana",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Lielais notikums"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Lielais notikums"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Lielais notikums"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binārās aproces"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binārās aproces"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binārās aproces"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binārās aproces"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binārās aproces"
+        },
         "binary_and_data/csd/2022": {
           "type": "Video"
         },
@@ -445,6 +705,14 @@
         "vocabulary_3/csd/2017": {
           "name": "Vārdnīca"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Ievietošanas pamācība"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Video"
         },
@@ -454,40 +722,40 @@
         "pause_and_think_online/coursef/2021": {
           "type": "Video"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Jautrība ar \"For\" Cikliem"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Jautrība ar \"For\" Cikliem"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Jautrība ar \"For\" Cikliem"
-        },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Jautrība ar \"For\" Cikliem"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Jautrība ar \"For\" Cikliem"
         },
-        "ai-ml/coursef/2021": {
-          "type": "Video"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Jautrība ar \"For\" Cikliem"
         },
-        "ai-training/coursef/2021": {
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Jautrība ar \"For\" Cikliem"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Jautrība ar \"For\" Cikliem"
+        },
+        "ai-ml/coursef/2021": {
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
           "type": "Video"
         },
-        "unplugged-video-internet/coursef/2021": {
+        "ai-training/coursef/2021": {
+          "type": "Video"
+        },
+        "assessment-answer-internet/coursef/2021": {
           "name": "Internets"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internets"
         },
-        "assessment-answer-internet/coursef/2021": {
+        "unplugged-video-internet/coursef/2021": {
           "name": "Internets"
         },
-        "implementation_guide/coursef/2021": {
+        "implementation_guide/courseb/2021": {
           "name": "Ievietošanas pamācība"
         },
         "mimi-activity/courseb/2021": {
@@ -511,7 +779,7 @@
         "unspotted_bugs/courseb/2021": {
           "type": "Video"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Kļūst ciklisks"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
@@ -520,32 +788,32 @@
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Kļūst ciklisks"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Kļūst ciklisks"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "Lielais notikums",
-          "type": "Video"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Lielais notikums"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Lielais notikums"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "Lielais notikums"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Lielais notikums",
+          "type": "Video"
         },
-        "implementation_guide/courseb/2021": {
+        "implementation_guide/coursea/2021": {
           "name": "Ievietošanas pamācība"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Video"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Pāru Programmēšana"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "type": "Video"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -563,25 +831,19 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "Lielais notikums"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Lielais notikums"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "Lielais notikums"
         },
-        "implementation_guide/coursea/2021": {
+        "implementation_guide/coursec/2021": {
           "name": "Ievietošanas pamācība"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Mani Robotikas draugi"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Mani Robotikas draugi"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Mani Robotikas draugi"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -590,26 +852,29 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Mani Robotikas draugi"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Mani Robotikas draugi"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Mani Robotikas draugi"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Pāru Programmēšana",
           "type": "Video"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "Lielais notikums"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Lielais notikums"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "Lielais notikums"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "Video"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Binārās aproces"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binārās aproces"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -618,49 +883,52 @@
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Binārās aproces"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Binārās aproces"
         },
-        "implementation_guide/coursec/2021": {
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binārās aproces"
+        },
+        "implementation_guide/coursed/2021": {
           "name": "Ievietošanas pamācība"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Rūtiņpapīra programmēšana"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Rūtiņpapīra programmēšana"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Rūtiņpapīra programmēšana"
-        },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Rūtiņpapīra programmēšana"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Rūtiņpapīra programmēšana"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Rūtiņpapīra programmēšana"
         },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
         "pair-programming-vid/coursed/2021": {
           "name": "Pāru Programmēšana"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Releju programmēšana"
         },
         "relay-assessment/coursed/2021": {
           "name": "Releju programmēšana"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Releju programmēšana"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Releju programmēšana"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Releju programmēšana"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Releju programmēšana"
         },
         "pause_and_think_online/coursed/2021": {
@@ -669,23 +937,20 @@
         "pause_and_think_online_1/coursed/2021": {
           "type": "Video"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "nosacījumi ar kārtēm"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "nosacījumi ar kārtēm"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "nosacījumi ar kārtēm"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "nosacījumi ar kārtēm"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "nosacījumi ar kārtēm"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "Ievietošanas pamācība"
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "nosacījumi ar kārtēm"
         },
         "pair_programming/express/2021": {
           "name": "Pāru Programmēšana",
@@ -706,11 +971,11 @@
         "variables_video/express/2021": {
           "name": "Mainīgie"
         },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Pāru Programmēšana"
-        },
         "20_20_20_rule/pre-express/2021": {
           "type": "Video"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Pāru Programmēšana"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "type": "Video"
@@ -718,14 +983,14 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Video"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Ievietošanas pamācība"
+        },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Video"
         },
         "digital-sharing-video/coursee/2021": {
           "type": "Video"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Ievietošanas pamācība"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Video"

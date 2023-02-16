@@ -588,7 +588,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        script_id: Script.twenty_hour_unit,
+        script_id: Unit.twenty_hour_unit,
         lesson_position: '99999999999999999999999999',
         id: '1'
       }
@@ -596,7 +596,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        script_id: Script.twenty_hour_unit,
+        script_id: Unit.twenty_hour_unit,
         lesson_position: '1',
         id: '99999999999999999999999999'
       }
@@ -694,38 +694,38 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "updated routing for 20 hour script" do
-    sl = ScriptLevel.find_by script: Script.twenty_hour_unit, chapter: 3
+    sl = ScriptLevel.find_by script: Unit.twenty_hour_unit, chapter: 3
     assert_equal '/s/20-hour/lessons/2/levels/2', build_script_level_path(sl)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}#{build_script_level_path(sl)}"},
-      {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, lesson_position: sl.lesson.to_param, id: sl.to_param}
+      {controller: "script_levels", action: "show", script_id: Unit::TWENTY_HOUR_NAME, lesson_position: sl.lesson.to_param, id: sl.to_param}
     )
   end
 
   test "chapter based routing" do
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/reset"},
-      {controller: "script_levels", action: "reset", script_id: Script::HOC_NAME}
+      {controller: "script_levels", action: "reset", script_id: Unit::HOC_NAME}
     )
 
-    hoc_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::HOC_NAME).id, chapter: 1)
+    hoc_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::HOC_NAME).id, chapter: 1)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/1"},
-      {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"}
+      {controller: "script_levels", action: "show", script_id: Unit::HOC_NAME, chapter: "1"}
     )
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
-    flappy_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5)
+    flappy_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::FLAPPY_NAME).id, chapter: 5)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/flappy/5"},
-      {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"}
+      {controller: "script_levels", action: "show", script_id: Unit::FLAPPY_NAME, chapter: "5"}
     )
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
-    jigsaw_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::JIGSAW_NAME).id, chapter: 3)
+    jigsaw_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::JIGSAW_NAME).id, chapter: 3)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/jigsaw/3"},
-      {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"}
+      {controller: "script_levels", action: "show", script_id: Unit::JIGSAW_NAME, chapter: "3"}
     )
     assert_equal "/s/jigsaw/lessons/1/levels/3", build_script_level_path(jigsaw_level)
   end
@@ -824,7 +824,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show redirects to canonical url for hoc" do
     get :show, params: {
-      script_id: Script::HOC_NAME,
+      script_id: Unit::HOC_NAME,
       lesson_position: '1',
       id: '2'
     }
@@ -835,9 +835,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should show special script level by chapter" do
     # this works for 'special' scripts like flappy, hoc
-    expected_script_level = ScriptLevel.where(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5).first
+    expected_script_level = ScriptLevel.where(script_id: Unit.get_from_cache(Unit::FLAPPY_NAME).id, chapter: 5).first
 
-    get :show, params: {script_id: Script::FLAPPY_NAME, chapter: '5'}
+    get :show, params: {script_id: Unit::FLAPPY_NAME, chapter: '5'}
     assert_response :success
 
     assert_equal expected_script_level, assigns(:script_level)
@@ -845,7 +845,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show redirects to canonical url for special scripts" do
     get :show, params: {
-      script_id: Script::FLAPPY_NAME,
+      script_id: Unit::FLAPPY_NAME,
       lesson_position: '1',
       id: '2'
     }
@@ -913,7 +913,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "reset redirects admins to root" do
     sign_in create(:admin)
-    get :reset, params: {script_id: Script::HOC_NAME}
+    get :reset, params: {script_id: Unit::HOC_NAME}
     assert_redirected_to root_path
   end
 
@@ -1032,60 +1032,60 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     stubs(:current_user).returns(@student)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Unit.find_by_name(Unit::HOC_NAME)))
   end
 
   test 'post script redirect is HOC endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Unit.find_by_name(Unit::HOC_NAME)))
   end
 
   test 'post script redirect is frozen endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Script.find_by_name(Script::FROZEN_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Unit.find_by_name(Unit::FROZEN_NAME)))
   end
 
   test 'post script redirect is starwars endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Script.find_by_name(Script::STARWARS_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Unit.find_by_name(Unit::STARWARS_NAME)))
   end
 
   test "show redirects admins to root" do
     sign_in create(:admin)
-    get :show, params: {script_id: Script::HOC_NAME, chapter: '20'}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '20'}
     assert_redirected_to root_path
   end
 
   test 'end of HoC for logged in user works' do
     sign_in(create(:user))
-    get :show, params: {script_id: Script::HOC_NAME, chapter: '20'}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '20'}
     assert_response :success
   end
 
   test 'end of HoC for anonymous visitor works' do
-    get :show, params: {script_id: Script::HOC_NAME, chapter: '20'}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '20'}
     assert_response :success
   end
 
   # test 'end of HoC has wrapup video in response' do
-  #   get :show, {script_id: Script::HOC_NAME, chapter: '20'}
+  #   get :show, {script_id: Unit::HOC_NAME, chapter: '20'}
   #   assert(@response.body.include?('hoc_wrapup'))
   # end
 
   # test 'end of HoC for signed-in users has no wrapup video, does have lesson change info' do
-  #   get :show, {script_id: Script::HOC_NAME, chapter: '20'}
+  #   get :show, {script_id: Unit::HOC_NAME, chapter: '20'}
   #   assert(!@response.body.include?('hoc_wrapup'))
   #   assert(@response.body.include?('/s/1/level/show?chapter=next'))
   # end
 
   test "next redirects admins to root" do
     sign_in create(:admin)
-    get :next, params: {script_id: Script::HOC_NAME}
+    get :next, params: {script_id: Unit::HOC_NAME}
     assert_redirected_to root_path
   end
 
   test 'next for non signed in user' do
-    get :next, params: {script_id: Script::HOC_NAME}
+    get :next, params: {script_id: Unit::HOC_NAME}
 
     assert_response :redirect
     assert_redirected_to '/hoc/1'
@@ -1093,7 +1093,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should show tracking pixel for hoc chapter 1 in prod' do
     set_env :production
-    get :show, params: {script_id: Script::HOC_NAME, chapter: 1}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: 1}
 
     assert_select 'img[src="//code.org/api/hour/begin_hourofcode.png"]'
   end
@@ -1101,7 +1101,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show tracking pixel for frozen chapter 1 in prod' do
     set_env :production
     get :show, params: {
-      script_id: Script::FROZEN_NAME,
+      script_id: Unit::FROZEN_NAME,
       lesson_position: 1,
       id: 1
     }
@@ -1110,14 +1110,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should show tracking pixel for flappy chapter 1 in prod' do
     set_env :production
-    get :show, params: {script_id: Script::FLAPPY_NAME, chapter: 1}
+    get :show, params: {script_id: Unit::FLAPPY_NAME, chapter: 1}
     assert_select 'img[src="//code.org/api/hour/begin_flappy.png"]'
   end
 
   test 'should show tracking pixel for playlab chapter 1 in prod' do
     set_env :production
     get :show, params: {
-      script_id: Script::PLAYLAB_NAME,
+      script_id: Unit::PLAYLAB_NAME,
       lesson_position: 1,
       id: 1
     }
@@ -1525,7 +1525,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {variants: {'maze 2': {'active': false}}}
+        properties: {variants: {'maze 2': {active: false}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1543,7 +1543,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false}}}
+        properties: {variants: {'maze 1': {active: false}}}
       )
     )
     assert_equal assigns(:level), level2
@@ -1562,7 +1562,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
           lesson: lesson,
           script: script,
           levels: [level, level2],
-          properties: {'variants': {'maze 1': {'active': false}, 'maze 2': {'active': false}}}
+          properties: {variants: {'maze 1': {active: false}, 'maze 2': {active: false}}}
         )
       )
     end
@@ -1585,7 +1585,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false}}}
+        properties: {variants: {'maze 1': {active: false}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1611,7 +1611,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false}}}
+        properties: {variants: {'maze 1': {active: false}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1631,7 +1631,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1652,7 +1652,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1674,7 +1674,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment1.name, experiment2.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment1.name, experiment2.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1696,7 +1696,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level2
@@ -1895,22 +1895,24 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should redirect to 2017 version in script family' do
-    cats1 = create :script, name: 'cats1', family_name: 'ui-test-versioned-script', version_year: '2017'
+    cats1 = create :script, name: 'cats1', family_name: 'cats', version_year: '2017', is_course: true
+    CourseOffering.add_course_offering(cats1)
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
+      get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     end
 
     cats1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
+    get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats1/lessons/1/levels/1"
 
-    create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
+    cats2 = create :script, name: 'cats2', family_name: 'cats', version_year: '2018', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(cats2)
+    get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats2/lessons/1/levels/1"
 
     # next redirects to latest version in a script family
-    get :next, params: {script_id: 'ui-test-versioned-script'}
+    get :next, params: {script_id: 'cats'}
     assert_redirected_to "/s/cats2/next"
   end
 
@@ -2120,7 +2122,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     extras_data = JSON.parse(
       css_select('script[data-extras]').first.attribute('data-extras').to_s
     )
-    puts extras_data
     assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 

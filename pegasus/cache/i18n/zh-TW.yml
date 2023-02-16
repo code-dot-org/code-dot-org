@@ -342,6 +342,7 @@ zh-TW:
   homepage_banner_40k_teachers_link: 進一步了解
   homepage_slot_text_title_hoc: 一小時玩程式
   homepage_slot_text_blurb_hoc: 任何人都可以學習 從今天開始
+  homepage_slot_text_blurb_hoc_2022: 探索，玩耍，創造！
   homepage_slot_text_link_hoc: 試試一小時玩程式
   homepage_slot_text_link_about_hoc: 關於一小時玩程式（Hour of Code）
   homepage_slot_text_link_host: 舉辦一小時玩程式活動
@@ -369,7 +370,7 @@ zh-TW:
   homepage_slot_text_link_shop: T 恤、帽子等更多
   homepage_slot_text_link_thebadguys: 壞蛋聯盟編程
   homepage_slot_text_link_administrators: 將 CS 帶入校園
-  homepage_gallery_header: 已經建立了超過 %{project_count} 萬個專案
+  homepage_gallery_header: 已創建超過%{project_count}百萬個Code.org項目
   homepage_header_donors: Code.org 感謝所有支持者
   homepage_donors_seall: 檢視全部
   homepage_donors_donate: 贊助
@@ -602,6 +603,7 @@ zh-TW:
   volunteer_engineer_submission_distance_16: 10 英里
   volunteer_engineer_submission_distance_24: 15 英里
   volunteer_engineer_submission_distance_32: 20 英里
+  volunteer_engineer_submission_distance_80: 50 英里
   volunteer_engineer_submission_num_volunteers_5: 5 名志工
   volunteer_engineer_submission_num_volunteers_10: 10 名志工
   volunteer_engineer_submission_num_volunteers_25: 25 名志工
@@ -1669,6 +1671,9 @@ zh-TW:
     J. Balvin, Sia, Keith Urban, Ciara…還有更多！
   hoc_overview_dance_2019_subtitle: 編寫舞蹈派對的程式，和你的朋友分享。共有超過 34 位巨星登場，Featuring Katy
     Perry、Shawn Mendes、 Panic! At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj…還有更多！
+  hoc_overview_dance_2022_subtitle: 編寫一個舞蹈派對與你的朋友分享。裏面有碧昂絲、哈利·史泰爾斯、麗佐、納斯小子、塞萊娜·戈麥斯、迪士尼魔法滿屋的音樂等等！
+  hoc_overview_hello_world_2022_subtitle: 從四個有趣的主題中選擇，在你創建的世界中為交互式角色編碼。
+  hoc_overview_hello_world_2022_alt_text: 動畫化漂浮在地球插圖周圍的宇航員和動物角色
   hoc_overview_title: Code.org 的一小時玩程式活動
   hoc_overview_subtitle: <a href="https://hourofcode.com">一小時玩程式（Hour of Code）</a>是個全球性的運動，觸及了來自
     180 多個國家，數以千萬計的學生。不管你是誰，你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有 500 個以上的一小時教程，支援超過 45
@@ -1721,9 +1726,13 @@ zh-TW:
   hoc2018_mc_educators_box3_title: 參加免費的學生工作坊。
   hoc2018_mc_educators_box3_desc: 到你地區的 Microsoft 商店參加免費的一小時玩程式工作坊，適合任何技能級別、六歲或以上的人參加。
   hoc2018_mc_educators_box3_button: 尋找工作坊
+  hoc2022_mc_educators_box3_desc_markdown: 使用這個按需提供的[免費課程](%{free_course_link})或為整個班級注冊與客座老師一起進行的即時一小時玩程式研討會。在12月6日至11日的CSEW期間多次提供。
+  hoc2022_mc_educators_box3_button: 馬上註冊
   hoc2018_mc_educators_box4_title: 查看更多計算機科學資源
   hoc2018_mc_educators_box4_desc: 利用Microsoft的數位技能與電腦科學教育資源，為你的社區帶來變化。
   hoc2018_mc_educators_box4_button: 探索資源
+  hoc2022_mc_educators_box4_desc: 在專業開發的支持下，通過200小時的電腦科學課程（從模組到python），激發K-12學生對STEM的熱情。
+  hoc2022_mc_educators_box4_button: 繼續學習
   hoc2018_mc_watch_videos: 開始前不妨先看個勵志影片
   hoc2018_mc_videos_more: 更多來自模特兒及知名人士的<a href='%{inspiring_videos_playlist}'>啟發影片</a>
   hoc2018_mc_careers_more: 更多來自科技領域專業人士的<a href='%{careers_url}' target='_blank'>啟發影片</a>
@@ -1854,6 +1863,9 @@ zh-TW:
   hoc2021_mc_mee_villages_description: 在 Minecraft：教育版中，與您的學生一起學習編碼基礎知識，並探索多元化和包容性。
   hoc2021_mc_mee_ai_title: 人工智慧
   hoc2021_mc_mee_ai_description: 與您的學生一起探索人工智慧，並在 Minecraft：教育版中學習編寫程式碼。
+  hoc2022_mc_mee_title: 我的世界逃生莊園
+  hoc2022_mc_mee_description: 在黎明前逃離神秘的豪宅，賺取一百萬顆翡翠！新鮮出爐的我的世界一小時玩程式教程現已在《我的世界：教育版》中推出，適用於Windows、Mac、Chromebook、Ipad和移動設備。開始使用免費的教育工作者資源、培訓和視訊。
+  hoc2022_mc_mee_timecraft_description: 在《我的世界：教育版》的這個免費編程課中，進行時間旅行，拯救未來。
   footer_powered_by_aws: Powered by Amazon Web Services
   footer_built_on_github: 構建於 Microsoft 的 Github
   codebytes_skinny_banner_title: 12 月 7–11 日，加入我們 CodeBytes 的迷你課程直播。
@@ -1924,3 +1936,18 @@ zh-TW:
   footer_cookie_notice: Cookie通知
   top_hoc_tutorial_applab_alt_text: 一只用食指觸碰觸屏平板電腦的棕色手，在藍色背景下發射星星和光線
   minecraft_tile_alt: 我的世界中的兩個角色：史蒂夫和亞曆克斯，背景是一個帶珊瑚、海豚和海帶的水生我的世界場景
+  hoc2022_banner_title: 探索，玩耍，創造！
+  hoc2022_banner_description: 探索宇宙，進球得分，跳舞 — 嘗試電腦科學的方法如此之多！
+  hoc2022_cta_primary: 看看有什麼新內容
+  hoc2022_cta_secondary: 嘗試更多活動
+  hoc2022_landing_page_explore_title: 搜索
+  hoc2022_landing_page_explore_description: 用電腦科學打開通往新世界的大門！
+  hoc2022_landing_page_play_title: 開始遊戲
+  hoc2022_landing_page_play_description: 上場得分！
+  hoc2022_landing_page_create_title: 建立
+  hoc2022_landing_page_create_description: 做一些怪異而美妙的東西！
+  hoc2022_landing_page_banner_alt_left: 一個外星人在太空中的土星旁跳舞
+  hoc2022_landing_page_banner_alt_right: 一個機器人在太空中起飛的火箭前盤帶足球
+  try_it_yourself: 自己試試！
+  try_an_activity: 嘗試一個活動
+  see_more_activities: 查看更多活動

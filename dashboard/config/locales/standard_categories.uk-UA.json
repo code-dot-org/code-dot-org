@@ -1,0 +1,20 @@
+{
+  "uk-UA": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Обчислювальне мислення"
+        },
+        "L": {
+          "description": "Мова"
+        },
+        "C": {
+          "description": "Коло"
+        },
+        "F": {
+          "description": "Функції"
+        }
+      }
+    }
+  }
+}

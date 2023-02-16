@@ -50,6 +50,9 @@
         "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
           "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
         },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
+        },
         "3e5eebcd-2140-4152-8654-410468108ab6": {
           "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
         },
@@ -136,6 +139,9 @@
         },
         "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
           "description": "Əvəzetmə şifrələrinin zəif tərəflərini və təhlükəsizlik qüsurlarını izah edin"
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
+          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
@@ -275,8 +281,518 @@
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "İnsan qərəzinin maşın öyrənməsində necə rol oynaması ilə bağlı səbəb."
         },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": ""
+        },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
+        },
+        "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
+          "description": "\"Parol\" terminini müəyyənləşdirin və parolun məqsədini təsvir edin."
+        },
+        "c14cd5a0-312f-491c-aa00-73b82dd8e628": {
+          "description": "Yadda qalan və güclü parol yaratmağı məşq edin."
+        },
+        "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
+          "description": "Kodlanmış proqram kimi addımlar ardıcıllığını yenidən çərçivəyə salın"
+        },
+        "e2eb4dfd-1b5b-4a01-aceb-1b96c49cd254": {
+          "description": "Problemlərin insan dilindən maşın dilinə tərcüməsi ilə bağlı məhdudiyyətləri izah edin"
+        },
+        "c141459a-a5b8-41ce-ada6-33b92afb0596": {
+          "description": "Uzun təlimatlar ardıcıllığını ən böyük təkrarlana bilən ardıcıllığa bölün."
+        },
+        "f0a49033-5a23-4b2e-b570-69fd6d678f65": {
+          "description": "Səhvləri düzəltmək üçün mövcud proqramı dəyişdirinş"
+        },
+        "d5c5bdd3-6ca6-48b2-ae3b-5aaf0c8dbb70": {
+          "description": "Komanda yoldaşlarının gördüyü işləri yoxlayın."
+        },
+        "59c4efee-e0c3-4293-9609-a82db6698755": {
+          "description": "Verilən kodu oxu və başa düş."
+        },
+        "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
+          "description": "Yaradıcı artefaktı digər tələbələrlə paylaşın."
+        },
+        "d2a9a010-d6c6-4ce1-9f70-cb5ceba6af8f": {
+          "description": "Giriş hadisələri ilə əlaqəli hərəkətləri müəyyənləşdirin."
+        },
+        "df973a96-c08b-4f3f-9a11-c93434193cfe": {
+          "description": "Ardıcıllıq və hadisə idarəçilərindən istifadə edərək interaktiv oyun yaradın."
+        },
+        "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
+          "description": "Giriş hadisələri ilə əlaqəli hərəkətləri müəyyənləşdirin."
+        },
+        "f47c401e-4a61-4f0e-a4d3-75f3bd9d8908": {
+          "description": "Ardıcıllıq və hadisələrdən istifadə edərək cizgi, interaktiv oyun yaradın."
+        },
+        "4ed9cede-cc9a-409d-b433-781185b454b6": {
+          "description": "Kodla rəqs animasiyaları yaradın"
+        },
+        "4fa04785-108a-4cea-831b-8078658ea413": {
+          "description": "İstifadəçi inputuna cavab verən proqramlar hazırlayın"
+        },
+        "7728246b-7582-4624-a2b1-229b998fc2ae": {
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar hazırlayın"
+        },
+        "07bc7c07-d75a-45cc-9f98-74501813e5af": {
+          "description": "Kod sahələrini təkrarlayan strukturlardan istifadə edərək proqram qurun"
+        },
+        "fcc0109d-8a25-4194-8a5c-69985bac106c": {
+          "description": "Improve existing code by finding areas of repetition and moving them into looping structures"
+        },
+        "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "f466b8aa-18bf-460d-9780-1abcb7f32589": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "d8494711-ae41-4ccd-8db3-04385d787ca3": {
+          "description": "Sabit sayda təkrarlanan döngələri və şərt doğru olduğu müddətcə təkrarlanan döngələri fərqləndirin."
+        },
+        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
+          "description": "Dizayn prosesində istifadəçinin əhəmiyyətini təsvir edin."
+        },
+        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
+          "description": "Çalışan kompüter proqramında spritləri müəyyən edin."
+        },
+        "7b9c0f1d-efa4-4397-8334-d392bb962fb7": {
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin."
+        },
+        "8fac9b1a-450f-4d68-aa87-d7b8e1bbe873": {
+          "description": "İstifadəçi girişinə cavab verən proqramlar hazırlayın."
+        },
+        "d13ed164-0cf7-4bb3-882a-69ed146aeb9f": {
+          "description": "Hadisələrdən istifadə edərək interaktiv animasiya yaradın."
+        },
+        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
+          "description": "Proqramda “Çalış” düyməsini basdığımız zaman dəyişənin necə təyin olunduğu, saxlandığı və əldə edildiyi arasında əlaqəni müəyyənləşdirin."
+        },
+        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
+          "description": "Proqramda dəyişəni bir neçə dəfə adlandırın.  "
+        },
+        "d059371b-b3f0-40cb-915a-586645b2f109": {
+          "description": "Dəyişənə dəyər təyin edin"
+        },
+        "b155264b-806c-417e-bd5f-2fd91b6093ec": {
+          "description": "Söz və ifadələri saxlamaq üçün dəyişənlərdən istifadə edin."
+        },
+        "72c8cd33-c097-48d6-9178-3b146fdc243a": {
+          "description": "Söz və ifadələri saxlamaq üçün dəyişənlərdən istifadə edin."
+        },
+        "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
+          "description": "Süni intellektin onların həyatında oynadığı rolu müzakirə edin."
+        },
+        "9ec60d3b-ddcc-479c-9e4d-220ff3d8a10a": {
+          "description": "Maşın öyrənmə modelini hazırlayın və sınaqdan keçirin."
+        },
+        "ba631251-039e-4f7a-9320-158390f318c2": {
+          "description": "İnsan qərəzinin maşın öyrənməsində necə rol oynaması ilə bağlı səbəb."
+        },
+        "0265cc40-2950-42f3-a457-7b967fa9c0d9": {
+          "description": "Özəl və şəxsi məlumatların fərqini izah edin."
+        },
+        "16baead5-8507-4681-94b1-0314783a5418": {
+          "description": "Özəl məlumatları onlayn paylaşmağın niyə riskli olduğunu izah edin."
+        },
+        "d4c584f8-36e7-471a-9b83-713ca5e4711a": {
+          "description": "Insanların özləri haqqında onlayn melumat paylaşmasının səbəblərini müəyyənləşdirin."
+        },
+        "bf11a11b-35be-4fdc-a266-9f192e141760": {
+          "description": "Ekranda köçürülə və dəyişdirilə bilən simvol və ya obyekt kimi “sprite” təyin edin."
+        },
+        "884d4f4c-abd4-493c-8029-cde7399519f4": {
+          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
+        },
+        "62ffafea-c5f4-4942-b283-9462c41d52cd": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
+          "description": "Bir hərəkətin neçə dəfə təkrarlanacağını sayın və bir döngə olaraq göstərin."
+        },
+        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
+          "description": "Onlayn paylaşdıqları məlumatların rəqəmsal iz və ya \"iz\" buraxdığını öyrənin."
+        },
+        "7cc37ede-4e83-4881-9213-1746313de397": {
+          "description": "Hansı məlumatların onlayn paylaşılmasının uyğun olduğunu araşdırın."
+        },
+        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
+          "description": "Addımların siyahısını bir sıra fiziki hərəkətlərə çevirin"
+        },
+        "8a9a5295-648e-47f2-baec-c5a360f2788a": {
+          "description": "Dostu başlanğıc mövqeyindən hədəfinə çatdırmaq üçün addımların siyahısını (alqoritm) müəyyən edin"
+        },
+        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
+          "description": "Alqoritmin çıxarılışındakı problemləri tap və düzəlt"
+        },
+        "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
+          "description": "düzgün kompüter laboratoriyası davranışlarını modelləşdirin"
+        },
+        "c78930e6-cbb5-418c-8ca3-9124e79570cd": {
+          "description": "Standart blok əsaslı proqramlaşdırma hərəkətləri ilə sınaqdan keçirin, məsələn: klikləyin, sürükləyin və buraxın və s"
+        },
+        "59718681-70e8-4b7f-91a7-e6b02e4ca98f": {
+          "description": "Hərəkətləri bir sıra əmrlərə çevirin."
+        },
+        "a278cf3e-4bf9-4d1c-b9d0-a73c2530e3d8": {
+          "description": "Hərəkətləri bir sıra əmrlərə çevirin."
+        },
+        "ae6f9158-191c-458c-9850-331faf94b567": {
+          "description": "Proqramdakı səhvləri müəyyənləşdirin və tapın."
+        },
+        "2b7ac17e-7e3a-44b5-8c46-e28eec5af112": {
+          "description": "Uzun bir təlimat ardıcıllığını mümkün olan ən kiçik təkrarlanan ardıcıllığa bölün."
+        },
+        "4d6affaa-f8b0-4dbc-a436-4dccf8c57fc1": {
+          "description": "Labirentin sonuna çatmaq üçün ardıcıl və dövrəli əmrlərin birləşməsindən istifadə edin."
+        },
+        "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
+          "description": "Verilmiş tapşırıq üçün əmrlər ardıcıllığını dövrələyən proqram yaradın."
+        },
+        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
+          "description": "Uzun bir təlimat ardıcıllığını mümkün olan ən kiçik təkrarlanan ardıcıllığa bölün."
+        },
+        "54ae27f7-71b5-41ce-a67a-61d15e520bc3": {
+          "description": "Bir hərəkətin neçə dəfə təkrarlanacağını sayın və bir döngə olaraq göstərin."
+        },
+        "5f8621d2-481c-487d-a2e1-90d7fd15b929": {
+          "description": "Sadə ardıcıllıqları təkrar edərək mürəkkəb fiqurlar çəkən bir proqram yaradın."
+        },
+        "b85981bf-b2e5-49f6-bf08-348f8d16ba2b": {
+          "description": "Bir şəkli ən böyük təkrarlanan ardıcıllığa ayırın."
+        },
+        "28c09bb0-c9f4-44ab-ba0a-8c9cdb24e5f0": {
+          "description": "Smartfon proqramlarının bir neçə fərqli nümunəsini sadalayın"
+        },
+        "9e78b33b-39a6-4524-89e4-a26fdba11cb5": {
+          "description": "Başqaları üçün dizayn texnologiyasına empatiya və yaradıcılıq tətbiq edin"
+        },
+        "f854671c-b4c0-4bd7-8dd6-bf0094cd1733": {
+          "description": "Smartfon proqramlarının bir neçə fərqli nümunəsini sadalayın"
+        },
+        "1275ac31-dcd9-49c5-92e2-68abd8aa9955": {
+          "description": "Təlimatçı tərəfindən verilən əmrləri təkrarlayın."
+        },
+        "ef1a9273-ff0e-4134-8456-9762728bed55": {
+          "description": "Müəllimin hərəkətlərini əmrləri işə salmaq üçün siqnal kimi qəbul edin"
+        },
+        "2583489b-c21a-415d-bd1f-c0fa1eca9ef0": {
+          "description": "Giriş hadisələri ilə əlaqəli hərəkətləri müəyyənləşdirin."
+        },
+        "2f9f9b26-d5f6-48ab-be27-98608a47b74d": {
+          "description": "Ardıcıllıqlardan və hadisə idarəçilərindən istifadə edərək interaktiv cizgi bir hekayə yaradın."
+        },
+        "a64618b3-e151-46ce-9670-cada1927a2db": {
+          "description": "Yaradıcı artefaktı digər tələbələrlə paylaşın."
+        },
+        "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
+          "description": "Proqramdakı səhvləri müəyyənləşdirin və tapın."
+        },
+        "a87240fd-cb47-49df-ae9e-d058ab3fcb26": {
+          "description": "Hərəkətləri bir sıra əmrlərə çevirin."
+        },
+        "3e5024e3-0c8e-436c-b532-42749d6a5cf0": {
+          "description": "Proqramın harada uğursuz olacağını proqnozlaşdırın."
+        },
+        "d219187c-ecad-4854-ba3e-b136b4511fcc": {
+          "description": "Səhvləri düzəltmək üçün mövcud proqramı dəyişdirinş"
+        },
+        "b06566c3-55fe-4cb6-9e55-f40814d47ad8": {
+          "description": "Ardıcıl addımlardan istifadə edərək şəkli tamamlamaq üçün proqram yaradın."
+        },
+        "fbaccfd8-2a19-449c-a260-3e0e4b6f0cc6": {
+          "description": "Mürəkkəb formaları sadə hissələrə bölün."
+        },
+        "0e3791df-3c03-4b83-9943-d3b57110dea1": {
+          "description": "Ekranda köçürülə və dəyişdirilə bilən simvol və ya obyekt kimi “sprite” təyin edin."
+        },
+        "7bb23f18-d99f-4ded-af08-d9e8eee2e1e5": {
+          "description": "Hadisələrdən istifadə edərək interaktiv animasiya yaradın."
+        },
+        "938b2178-a433-4324-ba73-b1b6f8e0c0be": {
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin."
+        },
+        "ae7debff-9532-4a44-9f44-50813f955edf": {
+          "description": "İstifadəçi girişinə cavab verən proqramlar hazırlayın."
+        },
+        "afc3a3eb-84f3-462c-89e5-2b8d3cb1f879": {
+          "description": "Hadisələr, davranışlar, dəyişənlər və fərdi sənətdən istifadə edərək interaktiv virtual ev heyvanı yaradın."
+        },
+        "eb7e84c2-0694-4b77-90a0-747270409a09": {
+          "description": "Virtual ev heyvanını dizayn edərkən, onu qidalandırmaq və ya xoşbəxtliyini izləmək kimi problemlərə proqram həlləri."
+        },
+        "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar hazırlayın"
+        },
+        "f4427747-3b3f-43ac-b124-2ed1856ab5be": {
+          "description": "Kodla rəqs animasiyaları yaradın"
+        },
+        "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
+          "description": "İstifadəçi inputuna cavab verən proqramlar hazırlayın"
+        },
+        "1d64ca6b-c3c3-41c5-b923-280bf46dbdc9": {
+          "description": "Labirentin sonuna çatmaq üçün ardıcıl və dövrəli əmrlərin birləşməsindən istifadə edin."
+        },
+        "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
+          "description": "Uzun təlimatlar ardıcıllığını ən böyük təkrarlana bilən ardıcıllığa bölün."
+        },
+        "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "19f2a21b-7cd6-49c1-b058-a71afadfbf0f": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "9a923506-c553-4734-8675-3925b4205a40": {
+          "description": "Sabit sayda təkrarlanan döngələri və şərt doğru olduğu müddətcə təkrarlanan döngələri fərqləndirin."
+        },
+        "8d8fffd3-6411-4778-95f5-76953d066786": {
+          "description": "Tələbələr kompüter laboratoriyasına keçdikdə nə gözlənildiyini dərk edin."
+        },
+        "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
+          "description": "Kompüter siçanı, trackpad və ya toxunma ekranına istinad edərkən müvafiq terminologiyadan istifadə edin."
+        },
+        "1527c354-dff7-4d8c-94f7-8b55d5bc3099": {
+          "description": "düzgün kompüter laboratoriyası davranışlarını modelləşdirin"
+        },
+        "fc61a33c-e645-4600-b2d3-70bb8e46a938": {
+          "description": "Standart blok əsaslı proqramlaşdırma hərəkətləri ilə sınaqdan keçirin, məsələn: klikləyin, sürükləyin və buraxın və s"
+        },
+        "26c1a686-8627-439a-b7f9-3e42d80d4a6c": {
+          "description": "Yazılı təlimatlardan bir kompüter proqramı qurun"
+        },
+        "8f583ef0-bd0b-4e2c-81c3-11057794f7e2": {
+          "description": "Ardıcıl hərəkətləri yenidən təşkil etməklə proqram yarat."
+        },
+        "e20881b1-a3ad-4095-a434-6db807d457ed": {
+          "description": "Hərəkətləri bir sıra əmrlərə çevirin."
+        },
+        "6856ac6b-753c-4870-bfe4-d6ee553ff409": {
+          "description": "Məntiqi qaydada ardıcıl əmrlər"
+        },
+        "bbf10b3a-152d-472c-82b5-761d1be6e3b2": {
+          "description": "Bir proqramdakı problemləri və ya \"səhvləri\" tanıyın və problemləri həll etmək üçün bir plan hazırlayın. "
+        },
+        "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
+          "description": "Proqramdakı səhvləri müəyyənləşdirin və tapın."
+        },
+        "d73df8bf-fcc2-4732-a4be-cab60f8b326d": {
+          "description": "Hərəkətləri bir sıra əmrlərə çevirin."
+        },
+        "26b58b7e-9af6-4979-8a63-8f69d7f308c8": {
+          "description": "Kod sahələrini təkrarlayan strukturlardan istifadə edərək proqram qurun"
+        },
+        "65939b9f-ba0f-4834-8f54-24419c9391e5": {
+          "description": "Improve existing code by finding areas of repetition and moving them into looping structures"
+        },
+        "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
+          "description": "Uzun bir təlimat ardıcıllığını mümkün olan ən kiçik təkrarlanan ardıcıllığa bölün."
+        },
+        "356a5953-6822-4156-b54f-e5f2095156e1": {
+          "description": "Bir hərəkətin neçə dəfə təkrarlanacağını sayın və bir döngə olaraq göstərin."
+        },
+        "e8114e57-1426-4241-9cbb-dc57a3edadab": {
+          "description": "Bir şəkli ən böyük təkrarlanan ardıcıllığa ayırın."
+        },
+        "fcdb6a79-7043-4f4d-b4fe-04beeb339fea": {
+          "description": "Sadə ardıcıllıqları təkrar edərək mürəkkəb fiqurlar çəkən bir proqram yaradın."
+        },
+        "416213df-e386-420c-aafe-40e05d790f59": {
+          "description": "Sadə ardıcıllıqları təkrar edərək mürəkkəb fiqurlar çəkən bir proqram yaradın."
+        },
+        "448fabd8-2154-4840-9807-b0b79bab8c96": {
+          "description": "Bir hərəkətin neçə dəfə təkrarlanacağını sayın və bir döngə olaraq göstərin."
+        },
+        "f2e5268e-cbce-4db0-abb3-e2b6a65684d8": {
+          "description": "Bir şəkli ən böyük təkrarlanan ardıcıllığa ayırın."
+        },
+        "35be46ad-58dd-4072-97a4-09a55c75e329": {
+          "description": "Giriş hadisələri ilə əlaqəli hərəkətləri müəyyənləşdirin."
+        },
+        "37987315-bfd5-46fd-9faa-9e480ef816b2": {
+          "description": "Ardıcıllıqdan və hadisə idarəçilərindən istifadə edərək interaktiv cizgi bir hekayə yaradın."
+        },
+        "fb6ff331-603c-4310-83e8-77e3e606edfe": {
+          "description": "Yaradıcı artefaktı digər tələbələrlə paylaşın."
+        },
+        "0f40a956-c075-4b89-a139-101c2288896f": {
+          "description": "Yaradıcı artefaktı digər tələbələrlə paylaşın."
+        },
+        "11e630e5-0551-49c9-9894-2db312a9f1df": {
+          "description": "Giriş hadisələri ilə əlaqəli hərəkətləri müəyyənləşdirin."
+        },
+        "d2669646-8580-4bb3-a6e0-54961b42a029": {
+          "description": "Ardıcıllıqlardan və hadisə idarəçilərindən istifadə edərək interaktiv cizgi bir hekayə yaradın."
+        },
+        "086d6899-da60-486b-a9f7-89715397d81c": {
+          "description": "İnternetdən təhlükəsiz istifadə qaydalarını izah edin."
+        },
+        "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
+          "description": "Onlayn şəkildə təhlükəsiz qalmağın real dünya ilə bənzərliklərini müqayisə edin."
+        },
+        "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
+          "description": "İnternetin uzaq yerləri səyahət etməkdə və yeni şeylər öyrənməkdə işlədilə biləcəyini kəşf edin."
+        },
+        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
+          "description": "Tələbələr kompüter laboratoriyasına keçdikdə nə gözlənildiyini dərk edin."
+        },
+        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
+          "description": "Kompüter siçanı, trackpad və ya toxunma ekranına istinad edərkən müvafiq terminologiyadan istifadə edin."
+        },
+        "42c68792-f472-4122-906c-67bef3edae73": {
+          "description": "Alqoritmi program tərcümə edin"
+        },
+        "4d08a4a4-7475-4257-a955-62768629b65e": {
+          "description": "Ardıcıl təlimatlarda səhvlərin və ya səhvlərin müəyyən edilməsi və düzəldilməsi"
+        },
+        "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
+          "description": "Başqası tərəfindən yaradılmış proqramı dekod edin və başladın"
+        },
+        "25a06d14-94e5-41a1-b199-2d8ef7041b0f": {
+          "description": "Standart blok əsaslı proqramlaşdırma hərəkətləri ilə sınaqdan keçirin, məsələn: klikləyin, sürükləyin və buraxın və s"
+        },
+        "2e7e4324-ea3b-4e18-a61a-0e449579669a": {
+          "description": "düzgün kompüter laboratoriyası davranışlarını modelləşdirin"
+        },
+        "81b0eb83-7612-4f91-91d1-f6dd25afebb6": {
+          "description": "Ardıcıl hərəkətləri yenidən təşkil etməklə proqram yarat."
+        },
+        "d6d95ae8-01ab-408a-a17d-6c4813fe0991": {
+          "description": "Yazılı təlimatlardan bir kompüter proqramı qurun"
+        },
+        "8fda32cd-f173-4d41-9a5c-4bb91f282534": {
+          "description": "Bir proqramdakı problemləri və ya \"səhvləri\" tanıyın və problemləri həll etmək üçün bir plan hazırlayın. "
+        },
+        "ad2e874f-6827-4cec-bd3e-4c12a0596df5": {
+          "description": "Məntiqi qaydada ardıcıl əmrlər"
+        },
+        "242ad249-b860-4727-9b98-01f0e2025d8d": {
+          "description": "Döngələri olan proqramı çoxsaylı hərəkətlər silsiləsi kimi şərh edin."
+        },
+        "616d06fa-de3a-4e8e-970b-1077be296a30": {
+          "description": "Təkrarlanan kodu müəyyənləşdirin və birdən çox hərəkəti bir dövrəyə endirin."
+        },
+        "a28f100d-9129-44e2-ae89-93a0e4da1ef2": {
+          "description": "Improve existing code by finding areas of repetition and moving them into looping structures"
+        },
+        "b55b43b6-9b0d-4703-be2e-9525b05c0a26": {
+          "description": "Kod sahələrini təkrarlayan strukturlardan istifadə edərək proqram qurun"
+        },
+        "95c27888-7fcc-4606-8647-b8d7aca4841c": {
+          "description": "Uzun bir təlimat ardıcıllığını mümkün olan ən kiçik təkrarlanan ardıcıllığa bölün."
+        },
+        "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "03eb830d-5a23-4897-b23b-067e5eb0180f": {
+          "description": "Bir şəkli ən böyük təkrarlanan ardıcıllığa ayırın."
+        },
+        "408f218c-3c80-44f0-9a98-c6bd82fa4021": {
+          "description": "Sadə ardıcıllıqları təkrar edərək mürəkkəb fiqurlar çəkən bir proqram yaradın."
+        },
+        "eb0c126b-1a28-4a64-81a8-84713ba12efb": {
+          "description": "Bir hərəkətin neçə dəfə təkrarlanacağını sayın və bir döngə olaraq göstərin."
+        },
+        "699d524a-9ba6-430d-8ab4-fdce1b832b6f": {
+          "description": "Müəllimin hərəkətlərini əmrləri işə salmaq üçün siqnal kimi qəbul edin"
+        },
+        "805cf72f-fb59-4003-b6b5-1879ced802b9": {
+          "description": "Təlimatçı tərəfindən verilən əmrləri təkrarlayın."
+        },
+        "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
+          "description": "Ardıcıllıqdan və hadisə idarəçilərindən istifadə edərək interaktiv cizgi bir hekayə yaradın."
+        },
+        "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
+          "description": "Yaradıcı artefaktı digər tələbələrlə paylaşın."
+        },
+        "dddf548b-2b97-45fd-ad62-f4c633d3647d": {
+          "description": "Giriş hadisələri ilə əlaqəli hərəkətləri müəyyənləşdirin."
+        },
+        "33b55b11-ca81-406f-be39-265e8f33d09d": {
+          "description": "S-T-O-P-dən istifadə edərək onlayn mənalı sözlərə cavab verməyin yollarını müəyyənləşdirin"
+        },
+        "ce3ba860-7753-4c2c-a161-64d59903674a": {
+          "description": "Onlayn alçaqlığın necə görünə biləcəyini və insanlara necə hiss etdirə biləcəyini anlayın"
+        },
+        "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
+          "description": "Təlimat yaratarkən dəqiqliyə diqqət yetirin"
+        },
+        "ce7a9596-845a-4d2f-b7ce-3e27b6faa99d": {
+          "description": "Ardıcıl təlimatlarda səhvlərin və ya səhvlərin müəyyən edilməsi və düzəldilməsi"
+        },
+        "1e020282-115c-4c09-877d-5003b8eb49a6": {
+          "description": "Proqramdakı səhvləri müəyyənləşdirin və tapın."
+        },
+        "fd4b3a3e-1db9-4890-babf-f0def99a0792": {
+          "description": "Hərəkətləri bir sıra əmrlərə çevirin."
+        },
+        "1f6fd95f-78cb-4839-8943-ef8bf1b589e9": {
+          "description": "Proqramın harada uğursuz olacağını proqnozlaşdırın."
+        },
+        "b3dfe6ec-41ae-4e35-92b0-aa57386cbe5d": {
+          "description": "Səhvləri düzəltmək üçün mövcud proqramı dəyişdirinş"
+        },
+        "30aa1d4a-8e6e-4b27-8a1a-5c5ea80d6b3f": {
+          "description": "Ardıcıl addımlardan istifadə edərək şəkli tamamlamaq üçün proqram yaradın."
+        },
+        "e0ada5e4-a180-4691-9bd3-8b83763f9dd2": {
+          "description": "Mürəkkəb formaları sadə hissələrə bölün."
+        },
+        "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
+          "description": "Labirentin sonuna çatmaq üçün ardıcıl və dövrəli əmrlərin birləşməsindən istifadə edin."
+        },
+        "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
+          "description": "Uzun təlimatlar ardıcıllığını ən böyük təkrarlana bilən ardıcıllığa bölün."
+        },
+        "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "2998b3d3-4953-4cbf-94f2-004630893e21": {
+          "description": "Hərəkət etmək və hərəkətləri yerinə yetirmək üçün ardıcıl və dövrəli əmrlərin birləşməsindən istifadə edin."
+        },
+        "35810652-e1be-48aa-923b-1148a5c1584e": {
+          "description": "Təkrarlanan hərəkəti sadələşdirmək üçün döngənin nə vaxt istifadə oluna biləcəyini müəyyənləşdirin."
+        },
+        "5b7b74bc-4f78-4c98-b221-5233324b086e": {
+          "description": "Verilmiş tapşırıq üçün bir əmri döndərən proqram yazın"
+        },
+        "dda209ff-ec81-4914-93c0-2716153efce4": {
+          "description": "Əl ilə təkrar etmək əvəzinə bir döngə quruluşundan istifadə etməyin faydalarını müəyyənləşdirin."
+        },
+        "3070da76-01ca-461e-a251-7a0abd74ec8d": {
+          "description": "Təlimatçı tərəfindən verilən əmrləri təkrarlayın."
+        },
+        "ec6ade74-43c3-41d9-a10e-5001a2630fba": {
+          "description": "Müəllimin hərəkətlərini əmrlərə başlamaq üçün siqnal kimi tanıyın."
+        },
+        "6f45e56c-85b7-4e48-86d4-3394e0e7048e": {
+          "description": "Yaradıcı artefaktı digər tələbələrlə paylaşın."
+        },
+        "36275ea8-84ac-4220-87ca-53d1b5eaac43": {
+          "description": "Giriş hadisələri ilə əlaqəli hərəkətləri müəyyənləşdirin."
+        },
+        "2579c049-c0cd-4fcc-ac9f-bdd6c561ef52": {
+          "description": "İkili kodu hərflərə qaytarın"
+        },
+        "9a7d25e3-3f39-45fb-b14d-56c90df8e06a": {
+          "description": "Hərfləri ikiliyə kodlayın."
+        },
+        "bf86db48-ae33-49e8-a236-883b166a81bb": {
+          "description": "Məktubların kağız üzərində saxlanması fikrini informasiyanın kompüterdə saxlanması ideyası ilə əlaqələndirin"
+        },
+        "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
+          "description": "Yaradılması üçün plan kimi planlaşdırılmış dizayndan istifadə edin"
         },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Maşın öyrənmə modelini hazırlayın və sınaqdan keçirin."
@@ -297,13 +813,13 @@
           "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin."
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin.\n"
         },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Şeirin əhval-ruhiyyəsinin dəyişməsini təsvir edin."
+          "description": "Şeirin əhval-ruhiyyəsinin dəyişməsini təsvir edin.\n"
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Mətndə məcazi və hərfi dili vurğula"
+          "description": "Mətndə məcazi və hərfi dili vurğula\n"
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Tələbələr kompüter laboratoriyasına keçdikdə nə gözlənildiyini dərk edin."

@@ -32,6 +32,7 @@ export default function Congrats(props) {
    */
   const renderExtraCertificateLinks = (language, tutorial) => {
     let extraLinkUrl, extraLinkText;
+    // If Adding extra links see this PR: https://github.com/code-dot-org/code-dot-org/pull/48515
     if (!extraLinkUrl || !extraLinkText) {
       // There are no extra links to render.
       return;
@@ -55,7 +56,6 @@ export default function Congrats(props) {
     randomDonorTwitter,
     randomDonorName,
     hideDancePartyFollowUp,
-    showStudioCertificate,
     initialCertificateImageUrl,
     isHocTutorial,
     nextCourseScriptName,
@@ -74,7 +74,6 @@ export default function Congrats(props) {
         randomDonorTwitter={randomDonorTwitter}
         randomDonorName={randomDonorName}
         under13={under13}
-        showStudioCertificate={showStudioCertificate}
         initialCertificateImageUrl={initialCertificateImageUrl}
         isHocTutorial={isHocTutorial}
       >
@@ -115,7 +114,6 @@ Congrats.propTypes = {
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
   hideDancePartyFollowUp: PropTypes.bool,
-  showStudioCertificate: PropTypes.bool,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
   nextCourseScriptName: PropTypes.string,
