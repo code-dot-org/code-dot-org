@@ -89,16 +89,16 @@ const TimelineSimple2Events = ({
           <div
             style={{
               position: 'absolute',
-              backgroundColor: 'rgba(38 129 153 / 0.7)',
+              backgroundColor: 'rgba(115 115 115 / 0.7)',
               borderRadius: 8,
               left: (uniqueFunction.positionLeft - 1) * barWidth,
               width:
                 (uniqueFunction.positionRight - uniqueFunction.positionLeft) *
                   barWidth -
                 4,
-              top: 20 + uniqueFunction.positionTop - 1,
+              top: 20 + uniqueFunction.positionTop,
               height:
-                uniqueFunction.positionBottom - uniqueFunction.positionTop - 2
+                uniqueFunction.positionBottom - uniqueFunction.positionTop - 3
             }}
           >
             &nbsp;
