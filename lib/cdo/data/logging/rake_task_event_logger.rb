@@ -1,6 +1,9 @@
 require lib_dir 'cdo/data/logging/timed_task_with_logging'
+require 'cdo/github'
+require 'cdo/git_utils'
 class RakeTaskEventLogger
-  STUDY_TABLE = 'RAKE_TASKS'.freeze
+  CLOUD_WATCH_NAMESPACE = 'Infrastructure'
+  STUDY_TABLE = 'rake_performance'.freeze
   CURRENT_LOGGING_VERSION = 'v1'.freeze
   @@depth = 0
   def initialize(rake_task)
@@ -61,7 +64,6 @@ class RakeTaskEventLogger
           event: event,
           data_json: {
             task_name: @rake_task.name,
-            arguments: @rake_task.arg_names,
             pid: Process.pid,
             invocation_chain: task_chain,
             duration_ms: duration_ms,
@@ -86,45 +88,20 @@ class RakeTaskEventLogger
     unless @enable_cloudwatch
       return
     end
-
-    puts "about to log metric"
-    ChatClient.log "about to start logging", color: 'green'
     begin
       metrics = {
         metric_name: event,
         value: duration_ms.nil? ? 1 : duration_ms,
-        dimensions: {name: "Environment",
+        dimensions: {name: "rake_performance",
                      environment: rack_env,
+                     commit_hash: RakeUtils.git_revision,
                      task_name: @rake_task.name,
                      depth: @@depth,
-                     is_drone_run: ENV['CI'] ? true : false,
-                     # file_name: __FILE__,
-                     # pid: Process.pid,
-                     # invocation_chain: task_chain,
-                     # exception: exception&.to_s,
-                     # exception_backtrace: exception&.backtrace,
-                     version: CURRENT_LOGGING_VERSION}
+                     is_drone_run: ENV['CI'] ? true : false}
       }
-      Cdo::Metrics.push(STUDY_TABLE, metrics)
+      Cdo::Metrics.push(CLOUD_WATCH_NAMESPACE, metrics)
       Cdo::Metrics.flush!
-      ChatClient.log 'Metrics logged', color: 'green'
-      ChatClient.log event, color: 'green'
-      ChatClient.log @rake_task.name, color: 'green'
-      ChatClient.log @@depth
-      ChatClient.log (duration_ms.nil? ? 1 : duration_ms), color: 'green'
-      ChatClient.log __FILE__, color: 'green'
-      ChatClient.log rack_env, color: 'green'
-      ChatClient.log task_chain
-
-      puts "Metrics logged"
-      puts event
-
-      puts duration_ms.nil? ? 1 : duration_ms
     rescue => e
-      ChatClient.log 'Exception', color: 'green'
-      ChatClient.log exception&.to_s, color: 'green'
-      puts "Exception"
-      puts e
       Honeybadger.notify(
         e,
         error_message: "Failed to log rake task information in cloudwatch",

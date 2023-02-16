@@ -5,7 +5,6 @@ module CustomRake
     include ActionView::Helpers::DateHelper
 
     def execute(args = nil)
-      ChatClient.log "Executing", color: 'green'
       logger = RakeTaskEventLogger.new(self)
       logger.start_task_logging
       begin
