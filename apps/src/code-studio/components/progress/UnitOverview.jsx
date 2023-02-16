@@ -77,9 +77,12 @@ class UnitOverview extends React.Component {
     this.state = {showRedirectDialog};
 
     if (props.userType === 'teacher') {
-      analyticsReporter.sendEvent(EVENTS.UNIT_OVERVIEW_PAGE_VISITED_EVENT, {
-        'unit name': props.scriptName
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit name': props.scriptName
+        }
+      );
     }
   }
 
