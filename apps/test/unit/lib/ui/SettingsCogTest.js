@@ -39,24 +39,6 @@ describe('SettingsCog', () => {
     expect(wrapper.text()).to.not.include(msg.disableMaker());
   });
 
-  // it('does not show maker toggle when "showMakerToggle" is true but project is a level', () => {
-  //   const wrapper = mount(
-  //     <SettingsCog showMakerToggle={false} isProjectTemplateLevel={true} />
-  //   );
-  //   wrapper.instance().open();
-  //   wrapper.update();
-  //   expect(wrapper.find(ToggleMaker)).to.have.lengthOf(0);
-  // });
-
-  // it('does show maker toggle when "showMakerToggle" is true but project is not a level', () => {
-  //   const wrapper = mount(
-  //     <SettingsCog showMakerToggle={true} isProjectTemplateLevel={false} />
-  //   );
-  //   wrapper.instance().open();
-  //   wrapper.update();
-  //   expect(wrapper.find(ToggleMaker)).to.have.lengthOf(1);
-  // });
-
   describe('menu items', () => {
     let wrapper;
 
@@ -128,6 +110,19 @@ describe('SettingsCog', () => {
         settings.update();
         expect(settings.state().confirmingEnableMaker).to.be.true;
       });
+
+      // it('hides maker toggle when "showMakerToggle" is true but project is a curriculum level', () => {
+      //   makerRedux.isAvailable.returns(true);
+      //   makerRedux.isEnabled.returns(true);
+      // });
+
+      // it('does show maker toggle when "showMakerToggle" is true but project is not a curriculum level', () => {
+      //   const wrapper = shallow(
+      //     isCurriculumLevel(() => {
+      //       return false;
+      //     })
+      //   );
+      // });
     });
   });
 });
