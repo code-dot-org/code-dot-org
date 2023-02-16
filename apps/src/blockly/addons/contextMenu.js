@@ -262,7 +262,6 @@ const registerAllContextMenuItems = function() {
   registerCdoTheme();
   registerDarkTheme();
   registerHighContrastTheme();
-
 };
 
 function canBeShadow(block) {
