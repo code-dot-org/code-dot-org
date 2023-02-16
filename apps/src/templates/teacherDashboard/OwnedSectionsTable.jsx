@@ -167,7 +167,12 @@ class OwnedSectionsTable extends Component {
     if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
       return sortBy(data, function(obj) {
-        return mult * StudentGradeLevels.concat(null).indexOf(obj.grades);
+        return (
+          mult *
+          StudentGradeLevels.concat(null).indexOf(
+            obj.grades ? obj.grades[0] : null
+          )
+        );
       });
     } else {
       return orderBy(data, activeColumn, directionArray);
@@ -175,11 +180,12 @@ class OwnedSectionsTable extends Component {
   };
 
   gradeFormatter = (grades, {rowData}) => {
+    const formattedGrades = rowData.grades ? rowData.grades.join(', ') : null;
     return (
       <div>
         {this.props.isPlSections
           ? participantNames[rowData.participantType]
-          : rowData.grades.join(', ')}
+          : formattedGrades}
       </div>
     );
   };
