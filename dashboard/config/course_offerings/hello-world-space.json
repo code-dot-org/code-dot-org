@@ -5,7 +5,7 @@
   "is_featured": true,
   "assignable": true,
   "curriculum_type": null,
-  "marketing_initiative": "hoc",
+  "marketing_initiative": "HOC",
   "grade_levels": null,
-  "header": null
+  "header": "Hello World"
 }
