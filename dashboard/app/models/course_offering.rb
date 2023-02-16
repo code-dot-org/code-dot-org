@@ -147,7 +147,7 @@ class CourseOffering < ApplicationRecord
       id: id,
       key: key,
       display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
-      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_quick_assign(user, locale_code)}
     }
   end
 
