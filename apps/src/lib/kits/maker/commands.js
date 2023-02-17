@@ -17,13 +17,25 @@ export function injectBoardController(boardController) {
   board = boardController;
 }
 
+function isMicroBitBoard(board) {
+  return !!board.boardClient_;
+}
+
 /**
  * @param {string|number} opts.pin
  * @param {string} opts.mode
  */
 export function pinMode(opts) {
   if (
-    !apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid', null, board)
+    !apiValidateType(
+      opts,
+      'pinMode',
+      'pin',
+      opts.pin,
+      'pinid',
+      null,
+      isMicroBitBoard(board)
+    )
   ) {
     return;
   }
@@ -50,7 +62,7 @@ export function digitalWrite(opts) {
       opts.pin,
       'pinid',
       null,
-      board
+      isMicroBitBoard(board)
     )
   ) {
     return;
@@ -72,7 +84,15 @@ export function digitalWrite(opts) {
  */
 export function digitalRead(opts) {
   if (
-    !apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid', null, board)
+    !apiValidateType(
+      opts,
+      'digitalRead',
+      'pin',
+      opts.pin,
+      'pinid',
+      null,
+      isMicroBitBoard(board)
+    )
   ) {
     return;
   }
@@ -85,7 +105,15 @@ export function digitalRead(opts) {
  */
 export function analogWrite(opts) {
   if (
-    !apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid', null, board)
+    !apiValidateType(
+      opts,
+      'analogWrite',
+      'pin',
+      opts.pin,
+      'pinid',
+      null,
+      isMicroBitBoard(board)
+    )
   ) {
     return;
   }
@@ -106,7 +134,15 @@ export function analogWrite(opts) {
  */
 export function analogRead(opts) {
   if (
-    !apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid', null, board)
+    !apiValidateType(
+      opts,
+      'analogRead',
+      'pin',
+      opts.pin,
+      'pinid',
+      null,
+      isMicroBitBoard(board)
+    )
   ) {
     return;
   }
@@ -142,7 +178,15 @@ export function onBoardEvent(opts) {
  */
 export function createLed(opts) {
   if (
-    !apiValidateType(opts, 'createLed', 'pin', opts.pin, 'pinid', null, board)
+    !apiValidateType(
+      opts,
+      'createLed',
+      'pin',
+      opts.pin,
+      'pinid',
+      null,
+      isMicroBitBoard(board)
+    )
   ) {
     return;
   }
@@ -163,7 +207,7 @@ export function createButton(opts) {
       opts.pin,
       'pinid',
       null,
-      board
+      isMicroBitBoard(board)
     )
   ) {
     return;

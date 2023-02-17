@@ -43,7 +43,7 @@ export function apiValidateType(
   varValue,
   expectedType,
   opt,
-  board
+  isMicroBitBoard
 ) {
   const validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
@@ -66,8 +66,7 @@ export function apiValidateType(
         break;
       case 'pinid':
         var validPins, reservedPins;
-        // board is a Micro:Bit.
-        if (board?.boardClient_) {
+        if (isMicroBitBoard) {
           validPins = [0, 1, 2];
           reservedPins = [];
         } else {
