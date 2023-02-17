@@ -11,7 +11,7 @@ let board;
 
 /**
  * Change which board controller handles Maker Toolkit commands.
- * @param {CircuitPlaygroundBoard | MicrobitBoard} boardController
+ * @param {CircuitPlaygroundBoard | MicroBitBoard} boardController
  */
 export function injectBoardController(boardController) {
   board = boardController;
