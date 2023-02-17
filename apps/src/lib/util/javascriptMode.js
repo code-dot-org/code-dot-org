@@ -65,31 +65,29 @@ export function apiValidateType(
           typeof varValue === 'boolean';
         break;
       case 'pinid':
-        var validPins, reservedPins;
+        // Assign pins for Circuit Playground as default.
+        var validPins = [
+          'A0',
+          'A1',
+          'A2',
+          'A3',
+          'A4',
+          'A5',
+          'A6',
+          'A7',
+          0,
+          1,
+          2,
+          3,
+          6,
+          9,
+          10,
+          12
+        ];
+        var reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
         if (isMicroBitBoard) {
           validPins = [0, 1, 2];
           reservedPins = [];
-        } else {
-          // board is a Circuit Playground.
-          validPins = [
-            'A0',
-            'A1',
-            'A2',
-            'A3',
-            'A4',
-            'A5',
-            'A6',
-            'A7',
-            0,
-            1,
-            2,
-            3,
-            6,
-            9,
-            10,
-            12
-          ];
-          reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
         }
         properType =
           validPins.includes(varValue) && !reservedPins.includes(varValue);
