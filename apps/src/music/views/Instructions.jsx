@@ -4,6 +4,9 @@ import classNames from 'classnames';
 import moduleStyles from './instructions.module.scss';
 import {AnalyticsContext} from '../context';
 
+/**
+ * Renders the Music Lab instructions component.
+ */
 const Instructions = ({instructions, baseUrl, vertical, right}) => {
   const [currentPanel, setCurrentPanel] = useState(0);
   const [showBigImage, setShowBigImage] = useState(false);
