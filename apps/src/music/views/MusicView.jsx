@@ -79,7 +79,7 @@ class UnconnectedMusicView extends React.Component {
       currentPlayheadPosition: 0,
       updateNumber: 0,
       timelineAtTop: false,
-      showInstructions: true,
+      showInstructions: false,
       instructionsPosIndex
     };
   }
@@ -114,12 +114,15 @@ class UnconnectedMusicView extends React.Component {
       Globals.setPlayer(this.player);
     });
 
-    this.loadInstructions().then(instructions => {
-      this.setState({
-        instructions: instructions,
-        showInstructions: !!instructions
+    // Only attempt to load instructions if configured to.
+    if (AppConfig.getValue('show-instructions') === 'true') {
+      this.loadInstructions().then(instructions => {
+        this.setState({
+          instructions: instructions,
+          showInstructions: !!instructions
+        });
       });
-    });
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -185,6 +188,12 @@ class UnconnectedMusicView extends React.Component {
     // It's possible that other events should similarly be ignored here.
     if (e.type === Blockly.Events.BLOCK_DRAG) {
       this.player.stopAndCancelPreviews();
+      return;
+    }
+
+    // Prevent a rapid cycle of workspace resizing from occurring when
+    // dragging a block near the bottom of the workspace.
+    if (e.type === Blockly.Events.VIEWPORT_CHANGE) {
       return;
     }
 
@@ -352,6 +361,7 @@ class UnconnectedMusicView extends React.Component {
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
+          instructionsAvailable={!!this.state.instructions}
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />

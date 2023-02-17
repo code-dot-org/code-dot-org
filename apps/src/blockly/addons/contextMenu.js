@@ -175,7 +175,7 @@ const registerCdoTheme = function() {
       }
     },
     callback: function(scope) {
-      localStorage.setItem(BLOCKLY_THEME, Themes.MODERN);
+      localStorage.setItem(BLOCKLY_THEME, Themes.Themes.MODERN);
       scope.workspace.setTheme(Blockly.themes[Themes.MODERN]);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -207,7 +207,7 @@ const registerDarkTheme = function() {
       }
     },
     callback: function(scope) {
-      localStorage.setItem(BLOCKLY_THEME, Themes.DARK);
+      localStorage.setItem(BLOCKLY_THEME, Themes.Themes.DARK);
       scope.workspace.setTheme(Blockly.themes[Themes.DARK]);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,

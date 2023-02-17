@@ -3,8 +3,9 @@ import React from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
-import {getBlockMode} from '../appConfig';
 import TimelineTrackEvents from './TimelineTrackEvents';
+import TimelineSimple2Events from './TimelineSimple2Events';
+import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 
 const barWidth = 60;
@@ -75,6 +76,8 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
         <div className={moduleStyles.soundsArea}>
           {getBlockMode() === BlockMode.TRACKS ? (
             <TimelineTrackEvents {...timelineElementProps} />
+          ) : getBlockMode() === BlockMode.SIMPLE2 ? (
+            <TimelineSimple2Events {...timelineElementProps} />
           ) : (
             <TimelineSampleEvents {...timelineElementProps} />
           )}

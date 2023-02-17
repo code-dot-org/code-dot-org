@@ -322,10 +322,12 @@ export function getToolbox() {
     case BlockMode.SIMPLE2:
       return generateToolbox(
         {
-          Simple2: [
-            BlockTypes.TRIGGERED_AT_SIMPLE2,
+          Play: [
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
+          ],
+          Control: [
+            BlockTypes.TRIGGERED_AT_SIMPLE2,
             BlockTypes.PLAY_SOUNDS_TOGETHER,
             BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
             'controls_repeat_ext'

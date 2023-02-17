@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2023-02-09T20:30:57.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -24,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**The guide visits and explains the landmark!**\r\n- Add a `when sprite touches sprite` block anywhere in the workspace.\r\n- Connect a sprite `say` block under this new event block. \r\n- Make sure the guide is saying something about the landmark.\r\n- Click run and use the arrow keys to move the guide to the first landmark.\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "**What should the tour guide say when they visit your landmark?** \r\n- Add a `when sprite touches` event to your workspace \r\n- Add a `say` block to that event \r\n- Type in what the guide will say about the landmark\r\n- Click “Run” and test your code\r\n\r\n\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -50,10 +46,17 @@
     "validation_code": "//validation\r\n\r\n//Check that a touching event happened\r\n//Check that a sprite started speaking\r\n\r\n//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  turnOnDebugging(); //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(360); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  \r\n  //Check for touch event\r\n  addCriteria(function() {\r\n    return checkUniqueTouchEvents(1, 200);\r\n  }, \"cscLandmarkTouchAllSprites\");  // include i18n feedback string\r\n  \r\n  //addCriteria(function() {\r\n    //return anySpritesTouched();\r\n  //}, \"cscLandmarkMissingEvent\"); // will check if \r\n  \r\n  //check that there is a new speech event\r\n  addCriteria(function() {\r\n    var sprites = getSpritesThatTouched();\r\n    if(sprites != -1) {\r\n      if(strictSpriteSpeechRenderedThisFrame(sprites[0])) {\r\n        return true;\r\n      }\r\n    }\r\n    return false;\r\n  }, \"cscLandmarkTouchButNoSpeech\");  // include i18n feedback string\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();\r\nvalidationProps.previous.speechBubble = getSpeechForSpriteId(0);",
     "standalone_app_name": "spritelab",
     "name_suffix": "_2023",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-02-09T20:30:57.539+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches1\\\"\"],\"cloned_from\":\"csc_landmarks_touches1\"}]",
+  "created_at": "2023-02-09T20:30:57.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2023-02-09T20:30:57.539+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches1\\\"\"],\"cloned_from\":\"csc_landmarks_touches1\"},{\"changed_at\":\"2023-02-17 00:02:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

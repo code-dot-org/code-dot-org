@@ -20,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "<img src=\"https://images.code.org/0bc859afe4e0556491d4fee0dbf072f3-image-1676503090043.png\" style=\"width: 15%; float: right; padding-top: 20px\">\r\n\r\n**Click “Run” and move the tour guide to visit each landmark.**\r\n\r\nUse the arrow keys to move your tour guide. \r\n- What do you notice? \r\n- What do you wonder? \r\n- What do you like about the project? \r\n\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/0bc859afe4e0556491d4fee0dbf072f3-image-1676503090043.png\" style=\"width: 15%; float: right; padding-top: 20px\">\r\n\r\n**This is an example project!**\r\n\r\nUse the arrow keys to move your tour guide. \r\n- What do you notice? \r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -46,17 +46,14 @@
     ],
     "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(360); // Frames to wait before failing student\r\n  setDelayTime(150); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  \r\n  //Checks that the user touched the statue of liberty\r\n  \r\n  //Check that the user touched both sprites\r\n  addCriteria(function() {\r\n    return checkUniqueTouchEvents(1);\r\n  }, \"cscLandmarkTouchAllSprites\");\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-02-09T20:30:55.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-02-09T20:30:55.000Z",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2023-02-09T20:30:55.362+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_demo_usa_map\\\"\"],\"cloned_from\":\"csc_landmarks_demo_usa_map\"},{\"changed_at\":\"2023-02-15 23:20:33 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:21:30 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:23:41 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:32:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:32:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:34:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:34:51 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:36:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:36:50 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:40:59 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-02-09T20:30:55.362+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_demo_usa_map\\\"\"],\"cloned_from\":\"csc_landmarks_demo_usa_map\"},{\"changed_at\":\"2023-02-15 23:20:33 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:21:30 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:23:41 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:32:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:32:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:34:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:34:51 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:36:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:36:50 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-15 23:40:59 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:10:36 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:22:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:24:09 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 01:00:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -65,10 +62,10 @@
       <xml>
         <block type="when_run" deletable="false" movable="false" editable="false">
           <next>
-            <block type="gamelab_setBackgroundImageAs" can_disconnect_from_parent="false">
+            <block type="gamelab_setBackgroundImageAs" movable="false">
               <field name="IMG">"map_usa-01"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
+                <block type="gamelab_makeNewSpriteAnon" movable="false">
                   <field name="ANIMATION_NAME">"red_shirt_wave2"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
@@ -76,7 +73,7 @@
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
+                    <block type="gamelab_makeNewSpriteAnon" movable="false">
                       <field name="ANIMATION_NAME">"golden_gate_bridge"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
@@ -84,48 +81,48 @@
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_spriteSay">
+                        <block type="gamelab_spriteSay" movable="false">
                           <field name="SPEECH">Use the arrow keys to move me!</field>
                           <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                            <block type="gamelab_allSpritesWithAnimation" movable="false">
                               <field name="ANIMATION">"red_shirt_wave2"</field>
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_addBehaviorSimple" can_disconnect_from_parent="false">
+                            <block type="gamelab_addBehaviorSimple" movable="false">
                               <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                <block type="gamelab_allSpritesWithAnimation" movable="false">
                                   <field name="ANIMATION">"red_shirt_wave2"</field>
                                 </block>
                               </value>
                               <value name="BEHAVIOR">
-                                <block type="gamelab_behavior_get" can_disconnect_from_parent="false">
+                                <block type="gamelab_behavior_get" movable="false">
                                   <mutation/>
                                   <field name="VAR" id="moving NESW with arrow keys">moving NESW with arrow keys</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_setProp" can_disconnect_from_parent="false">
+                                <block type="gamelab_setProp" movable="false">
                                   <field name="PROPERTY">"scale"</field>
                                   <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                    <block type="gamelab_allSpritesWithAnimation" movable="false">
                                       <field name="ANIMATION">"golden_gate_bridge"</field>
                                     </block>
                                   </value>
                                   <value name="VAL">
-                                    <block type="math_number" can_disconnect_from_parent="false">
+                                    <block type="math_number" movable="false">
                                       <field name="NUM">75</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="gamelab_addBehaviorSimple" can_disconnect_from_parent="false">
+                                    <block type="gamelab_addBehaviorSimple" movable="false">
                                       <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                        <block type="gamelab_allSpritesWithAnimation" movable="false">
                                           <field name="ANIMATION">"golden_gate_bridge"</field>
                                         </block>
                                       </value>
                                       <value name="BEHAVIOR">
-                                        <block type="gamelab_behavior_get" can_disconnect_from_parent="false">
+                                        <block type="gamelab_behavior_get" movable="false">
                                           <mutation/>
                                           <field name="VAR" id="jittering">jittering</field>
                                         </block>
@@ -148,20 +145,20 @@
         <block type="gamelab_checkTouching" deletable="false" movable="false" editable="false">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+            <block type="gamelab_allSpritesWithAnimation" movable="false">
               <field name="ANIMATION">"red_shirt_wave2"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+            <block type="gamelab_allSpritesWithAnimation" movable="false">
               <field name="ANIMATION">"golden_gate_bridge"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_spriteSay">
+            <block type="gamelab_spriteSay" movable="false">
               <field name="SPEECH">The Golden Gate Bridge was built during the Great Depression.</field>
               <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <block type="gamelab_allSpritesWithAnimation" movable="false">
                   <field name="ANIMATION">"red_shirt_wave2"</field>
                 </block>
               </value>

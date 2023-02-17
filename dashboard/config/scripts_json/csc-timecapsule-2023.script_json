@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-02-10 21:37:00 UTC",
+    "serialized_at": "2023-02-16 19:44:46 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -873,6 +873,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_info_2023"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -1865,7 +1868,19 @@
       }
     },
     {
-      "name": "Write Your Own Time Capsule Poem",
+      "name": "Write Your Own Time Capsule Poem - Question Grab Bag",
+      "url": "https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview",
+      "key": "write_your_own_time_capsule_poem_-_question_grab_bag",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "write_your_own_time_capsule_poem_-_question_grab_bag"
+      }
+    },
+    {
+      "name": "Write Your Own Time Capsule Poem - Sentence Stems",
       "url": "https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview",
       "key": "write_your_own_time_capsule_story",
       "properties": {
@@ -1912,6 +1927,12 @@
       "seeding_key": {
         "lesson.key": "My Time Capsule Story (pilot)",
         "resource.key": "time_capsule_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Time Capsule Story (pilot)",
+        "resource.key": "write_your_own_time_capsule_poem_-_question_grab_bag"
       }
     },
     {
