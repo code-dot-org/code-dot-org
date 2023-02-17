@@ -193,6 +193,7 @@ class ShareAllowedDialog extends React.Component {
       hideBackdrop,
       isAbusive,
       isUnpublishPending,
+      onClickPopup,
       exportApp,
       channelId
     } = this.props;
@@ -204,7 +205,7 @@ class ShareAllowedDialog extends React.Component {
     let image;
     let modalClass = 'modal-content';
     if (icon) {
-      image = <img className="modal-image" src={this.props.icon} />;
+      image = <img className="modal-image" src={icon} />;
     } else {
       modalClass += ' no-modal-icon';
     }
@@ -382,7 +383,7 @@ class ShareAllowedDialog extends React.Component {
                     </a>
                   )}
                   {/* prevent buttons from overlapping when unpublish is pending */}
-                  {socialShareAllowed && !this.props.isUnpublishPending && (
+                  {socialShareAllowed && !isUnpublishPending && (
                     <span>
                       {this.state.isFacebookAvailable && (
                         <a
@@ -390,7 +391,7 @@ class ShareAllowedDialog extends React.Component {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
-                            this.props.onClickPopup.bind(this),
+                            onClickPopup.bind(this),
                             'facebook'
                           )}
                         >
@@ -403,7 +404,7 @@ class ShareAllowedDialog extends React.Component {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
-                            this.props.onClickPopup.bind(this),
+                            onClickPopup.bind(this),
                             'twitter'
                           )}
                         >
@@ -418,17 +419,14 @@ class ShareAllowedDialog extends React.Component {
                     <div style={styles.sendToPhoneContainer}>
                       <div style={styles.sendToPhoneLeft}>
                         <SendToPhone
-                          channelId={this.props.channelId}
-                          appType={this.props.appType}
+                          channelId={channelId}
+                          appType={appType}
                           isLegacyShare={false}
                         />
                       </div>
                       <div style={styles.sendToPhoneRight}>
                         <label>{i18n.scanQRCode()}</label>
-                        <QRCode
-                          value={this.props.shareUrl + '?qr=true'}
-                          size={90}
-                        />
+                        <QRCode value={shareUrl + '?qr=true'} size={90} />
                       </div>
                     </div>
                     <div style={{clear: 'both'}} />
