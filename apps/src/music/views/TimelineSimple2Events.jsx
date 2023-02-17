@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useContext} from 'react';
+import React, {useContext, useMemo} from 'react';
 import {PlayerUtilsContext} from '../context';
 import TimelineElement from './TimelineElement';
 
@@ -15,29 +15,31 @@ const TimelineSimple2Events = ({
   const playerUtils = useContext(PlayerUtilsContext);
   const soundEvents = playerUtils.getSoundEvents();
 
-  const getVerticalOffsetForEventId = id => {
-    return (
-      getUniqueIndexForEventId(id) * getEventHeight(currentUniqueSounds.length)
-    );
-  };
+  // useMemo() compares dependency using Object.is() comparison, which won't work correctly
+  // for arrays and objects, as it will consider object/arrays with different contents the same
+  // if they are the same object/array reference. These values are relatively small and simple
+  // so convert to JSON strings to get around this.
+  const soundEventsJson = JSON.stringify(playerUtils.getSoundEvents());
 
-  const getUniqueIndexForEventId = id => {
-    return currentUniqueSounds.indexOf(id);
+  const getVerticalOffsetForEventId = (currentUniqueSounds, id) => {
+    return (
+      currentUniqueSounds.indexOf(id) *
+      getEventHeight(currentUniqueSounds.length)
+    );
   };
 
   // Generate a list of unique sounds, with uniqueness being a combination of
   // the function name and the sound ID.
-  // Let's cache the value of currentUniqueSounds so that the various helpers
-  // we call during render don't need to recalculate it.  This also ensures
-  // that we recalculate unique sounds, even when there are no entries to
-  // render.
-  const currentUniqueSounds = [];
-  for (const songEvent of soundEvents) {
-    const id = songEvent.functionContext.name + ' ' + songEvent.id;
-    if (currentUniqueSounds.indexOf(id) === -1) {
-      currentUniqueSounds.push(id);
+  const getCurrentUniqueSounds = soundEvents => {
+    const currentUniqueSounds = [];
+    for (const songEvent of soundEvents) {
+      const id = songEvent.functionContext.name + ' ' + songEvent.id;
+      if (currentUniqueSounds.indexOf(id) === -1) {
+        currentUniqueSounds.push(id);
+      }
     }
-  }
+    return currentUniqueSounds;
+  };
 
   // Next, go through all sound events, and for each unique function that
   // is involved, adjust the boundaries of timeline space if necessary.
@@ -45,42 +47,56 @@ const TimelineSimple2Events = ({
   // timeline boundaries for each.
   // Each timeline boundary has left/right position in measures, and
   // top/bottom position in pixels.
-  const uniqueFunctionExtents = [];
-  for (const soundEvent of soundEvents) {
-    const soundId = soundEvent.id;
-    const functionName = soundEvent.functionContext.name;
-    const length = playerUtils.getLengthForId(soundId);
-    const positionLeft = soundEvent.when;
-    const positionRight = positionLeft + length;
-    const positionTop = getVerticalOffsetForEventId(
-      functionName + ' ' + soundId
-    );
-    const positionBottom =
-      positionTop + getEventHeight(currentUniqueSounds.length);
+  const getUniqueFunctionExtents = soundEventsJson => {
+    const soundEvents = JSON.parse(soundEventsJson);
+    const currentUniqueSounds = getCurrentUniqueSounds(soundEvents);
 
-    const uniqueFunctionIndex = uniqueFunctionExtents.findIndex(
-      item =>
-        item.id === functionName + soundEvent.functionContext.uniqueInvocationId
-    );
-    if (uniqueFunctionIndex === -1) {
-      uniqueFunctionExtents.push({
-        id: functionName + soundEvent.functionContext.uniqueInvocationId,
-        positionLeft: positionLeft,
-        positionRight: positionRight,
-        positionTop: positionTop,
-        positionBottom: positionBottom
-      });
-    } else {
-      const item = uniqueFunctionExtents[uniqueFunctionIndex];
-      uniqueFunctionExtents[uniqueFunctionIndex] = {
-        id: item.id,
-        positionLeft: Math.min(item.positionLeft, positionLeft),
-        positionRight: Math.max(item.positionRight, positionRight),
-        positionTop: Math.min(item.positionTop, positionTop),
-        positionBottom: Math.max(item.positionBottom, positionBottom)
-      };
+    const uniqueFunctionExtents = [];
+    for (const soundEvent of soundEvents) {
+      const soundId = soundEvent.id;
+      const functionName = soundEvent.functionContext.name;
+      const length = playerUtils.getLengthForId(soundId);
+      const positionLeft = soundEvent.when;
+      const positionRight = positionLeft + length;
+      const positionTop = getVerticalOffsetForEventId(
+        currentUniqueSounds,
+        functionName + ' ' + soundId
+      );
+      const positionBottom =
+        positionTop + getEventHeight(currentUniqueSounds.length);
+
+      const uniqueFunctionIndex = uniqueFunctionExtents.findIndex(
+        item =>
+          item.id ===
+          functionName + soundEvent.functionContext.uniqueInvocationId
+      );
+      if (uniqueFunctionIndex === -1) {
+        uniqueFunctionExtents.push({
+          id: functionName + soundEvent.functionContext.uniqueInvocationId,
+          positionLeft: positionLeft,
+          positionRight: positionRight,
+          positionTop: positionTop,
+          positionBottom: positionBottom
+        });
+      } else {
+        const item = uniqueFunctionExtents[uniqueFunctionIndex];
+        uniqueFunctionExtents[uniqueFunctionIndex] = {
+          id: item.id,
+          positionLeft: Math.min(item.positionLeft, positionLeft),
+          positionRight: Math.max(item.positionRight, positionRight),
+          positionTop: Math.min(item.positionTop, positionTop),
+          positionBottom: Math.max(item.positionBottom, positionBottom)
+        };
+      }
     }
-  }
+
+    return [currentUniqueSounds, uniqueFunctionExtents];
+  };
+
+  const [currentUniqueSounds, uniqueFunctionExtents] = useMemo(
+    () => getUniqueFunctionExtents(soundEventsJson),
+    [soundEventsJson]
+  );
 
   return (
     <div style={{position: 'relative'}}>
@@ -119,6 +135,7 @@ const TimelineSimple2Events = ({
             top={
               20 +
               getVerticalOffsetForEventId(
+                currentUniqueSounds,
                 eventData.functionContext.name + ' ' + eventData.id
               )
             }
