@@ -38,7 +38,6 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType, Themes} from './constants';
-import {ToolboxType, Themes} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
