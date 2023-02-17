@@ -6,7 +6,7 @@ import {
 import {BOARD_EVENT_ALIASES} from './boards/circuitPlayground/PlaygroundConstants';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
 
-/** @private {CircuitPlaygroundBoard, MicroBitBoard} */
+/** @private {CircuitPlaygroundBoard | MicroBitBoard} */
 let board;
 
 /**
