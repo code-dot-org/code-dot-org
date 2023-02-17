@@ -176,7 +176,7 @@ const registerCdoTheme = function() {
     },
     callback: function(scope) {
       localStorage.setItem(BLOCKLY_THEME, Themes.MODERN);
-      scope.workspace.setTheme(Blockly.themes.modern);
+      scope.workspace.setTheme(Blockly.themes[Themes.MODERN]);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'defaultTheme',
@@ -208,7 +208,7 @@ const registerDarkTheme = function() {
     },
     callback: function(scope) {
       localStorage.setItem(BLOCKLY_THEME, Themes.DARK);
-      scope.workspace.setTheme(Blockly.themes.dark);
+      scope.workspace.setTheme(Blockly.themes[Themes.DARK]);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'darkTheme',
@@ -240,13 +240,45 @@ const registerHighContrastTheme = function() {
     },
     callback: function(scope) {
       localStorage.setItem(BLOCKLY_THEME, Themes.HIGH_CONTRAST);
-      scope.workspace.setTheme(Blockly.themes.highContrast);
+      scope.workspace.setTheme(Blockly.themes[Themes.HIGH_CONTRAST]);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'highContrastTheme',
     weight: 14
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(highContrastThemeOption);
+};
+
+/**
+ * Change workspace theme to CdoAccessibleTheme
+ */
+const registerAccessibleTheme = function() {
+  const accessibleThemeOption = {
+    displayText: function(scope) {
+      return (
+        (isCurrentTheme(Themes.ACCESSIBLE, scope.workspace)
+          ? '✓ '
+          : `${msg.enable()} `) + msg.blocklyAccessibleTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return MenuOptionStates.HIDDEN;
+      } else if (isCurrentTheme(Themes.ACCESSIBLE, scope.workspace)) {
+        return MenuOptionStates.DISABLED;
+      } else {
+        return MenuOptionStates.ENABLED;
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem(BLOCKLY_THEME, Themes.ACCESSIBLE);
+      scope.workspace.setTheme(Blockly.themes[Themes.ACCESSIBLE]);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'accessibleTheme',
+    weight: 15
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(accessibleThemeOption);
 };
 
 const registerAllContextMenuItems = function() {
@@ -259,6 +291,7 @@ const registerAllContextMenuItems = function() {
   registerCdoTheme();
   registerDarkTheme();
   registerHighContrastTheme();
+  registerAccessibleTheme();
 };
 
 function canBeShadow(block) {
