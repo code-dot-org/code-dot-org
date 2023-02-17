@@ -36,7 +36,7 @@ import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused from './addons/blockSvgUnused';
-import {ToolboxType} from './constants';
+import {ToolboxType, Themes} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
@@ -291,10 +291,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   // Allows for dynamically setting the workspace theme with workspace.setTheme()
   blocklyWrapper.themes = {
-    modern: CdoTheme,
-    dark: CdoDarkTheme,
-    highContrast: CdoHighContrastTheme,
-    music: MusicLabTheme
+    [Themes.MODERN]: CdoTheme,
+    [Themes.DARK]: CdoDarkTheme,
+    [Themes.HIGH_CONTRAST]: CdoHighContrastTheme,
+    [Themes.MUSICLAB_DARK]: MusicLabTheme
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();

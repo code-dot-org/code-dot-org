@@ -2,7 +2,7 @@ import {makeEnum} from '@cdo/apps/utils';
 
 export const ToolboxType = makeEnum('CATEGORIZED', 'UNCATEGORIZED', 'NONE');
 export const BLOCKLY_THEME = 'blocklyTheme';
-export const ThemeOptions = {
+export const MenuOptionStates = {
   ENABLED: 'enabled',
   DISABLED: 'disabled',
   HIDDEN: 'hidden'

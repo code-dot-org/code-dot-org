@@ -1,7 +1,7 @@
 import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 
-import {Themes, ThemeOptions, BLOCKLY_THEME} from '../constants.js';
+import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants.js';
 
 const registerDeletable = function() {
   const deletableOption = {
@@ -14,9 +14,9 @@ const registerDeletable = function() {
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return ThemeOptions.ENABLED;
+        return MenuOptionStates.ENABLED;
       }
-      return ThemeOptions.HIDDEN;
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.setDeletable(!scope.block.isDeletable());
@@ -39,9 +39,9 @@ const registerMovable = function() {
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return ThemeOptions.ENABLED;
+        return MenuOptionStates.ENABLED;
       }
-      return ThemeOptions.HIDDEN;
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.setMovable(!scope.block.isMovable());
@@ -64,9 +64,9 @@ const registerEditable = function() {
     },
     preconditionFn: function() {
       if (Blockly.isStartMode) {
-        return ThemeOptions.ENABLED;
+        return MenuOptionStates.ENABLED;
       }
-      return ThemeOptions.HIDDEN;
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.setEditable(!scope.block.isEditable());
@@ -85,9 +85,9 @@ const registerShadow = function() {
       if (Blockly.isStartMode && canBeShadow(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return ThemeOptions.ENABLED;
+        return MenuOptionStates.ENABLED;
       }
-      return ThemeOptions.HIDDEN;
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.setShadow(true);
@@ -114,9 +114,9 @@ const registerUnshadow = function() {
       if (Blockly.isStartMode && hasShadowChildren(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
         // is a shadow or not.
-        return ThemeOptions.ENABLED;
+        return MenuOptionStates.ENABLED;
       }
-      return ThemeOptions.HIDDEN;
+      return MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       scope.block.getChildren().forEach(child => child.setShadow(false));
@@ -137,8 +137,8 @@ const registerKeyboardNavigation = function() {
     },
     preconditionFn: function() {
       return Blockly.navigationController
-        ? ThemeOptions.ENABLED
-        : ThemeOptions.HIDDEN;
+        ? MenuOptionStates.ENABLED
+        : MenuOptionStates.HIDDEN;
     },
     callback: function(scope) {
       const controller = Blockly.navigationController;
@@ -167,11 +167,11 @@ const registerCdoTheme = function() {
     },
     preconditionFn: function(scope) {
       if (isMusicLabTheme(scope.workspace)) {
-        return ThemeOptions.HIDDEN;
+        return MenuOptionStates.HIDDEN;
       } else if (isCurrentTheme(Themes.MODERN, scope.workspace)) {
-        return ThemeOptions.DISABLED;
+        return MenuOptionStates.DISABLED;
       } else {
-        return ThemeOptions.ENABLED;
+        return MenuOptionStates.ENABLED;
       }
     },
     callback: function(scope) {
@@ -199,11 +199,11 @@ const registerDarkTheme = function() {
     },
     preconditionFn: function(scope) {
       if (isMusicLabTheme(scope.workspace)) {
-        return ThemeOptions.HIDDEN;
+        return MenuOptionStates.HIDDEN;
       } else if (isCurrentTheme(Themes.DARK, scope.workspace)) {
-        return ThemeOptions.DISABLED;
+        return MenuOptionStates.DISABLED;
       } else {
-        return ThemeOptions.ENABLED;
+        return MenuOptionStates.ENABLED;
       }
     },
     callback: function(scope) {
@@ -231,11 +231,11 @@ const registerHighContrastTheme = function() {
     },
     preconditionFn: function(scope) {
       if (isMusicLabTheme(scope.workspace)) {
-        return ThemeOptions.HIDDEN;
+        return MenuOptionStates.HIDDEN;
       } else if (isCurrentTheme(Themes.HIGH_CONTRAST, scope.workspace)) {
-        return ThemeOptions.DISABLED;
+        return MenuOptionStates.DISABLED;
       } else {
-        return ThemeOptions.ENABLED;
+        return MenuOptionStates.ENABLED;
       }
     },
     callback: function(scope) {
