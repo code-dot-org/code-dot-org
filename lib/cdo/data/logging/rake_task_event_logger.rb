@@ -6,6 +6,7 @@ class RakeTaskEventLogger
   STUDY_TABLE = 'rake_performance'.freeze
   CURRENT_LOGGING_VERSION = 'v1'.freeze
   @@depth = 0
+
   def initialize(rake_task)
     @start_time = 0
     @end_time = 0
@@ -47,7 +48,6 @@ class RakeTaskEventLogger
   end
 
   def task_chain
-    #pre_requisites_split = @rake_task.inspect.split('=>')
     @rake_task.prerequisites.join(', ')
   end
 
@@ -84,22 +84,19 @@ class RakeTaskEventLogger
     end
   end
 
-  def log_cloud_watch(event, duration_ms, exception = nil)
+  def log_cloud_watch(event, duration_ms)
     unless @enable_cloudwatch
       return
     end
     begin
-      metrics = {
-        metric_name: event,
-        value: duration_ms.nil? ? 1 : duration_ms,
-        dimensions: {name: "rake_performance",
-                     environment: rack_env,
+      metric_name = "#{CLOUD_WATCH_NAMESPACE}/#{event}"
+      metric_value = duration_ms.nil? ? 1 : duration_ms.to_i
+      dimensions = {environment: rack_env,
                      commit_hash: RakeUtils.git_revision,
                      task_name: @rake_task.name,
                      depth: @@depth,
-                     is_drone_run: ENV['CI'] ? true : false}
-      }
-      Cdo::Metrics.push(CLOUD_WATCH_NAMESPACE, metrics)
+                     is_continuous_integration_run: ENV['CI'] ? true : false}
+      Cdo::Metrics.put(metric_name, metric_value, dimensions)
       Cdo::Metrics.flush!
     rescue => e
       Honeybadger.notify(
@@ -114,6 +111,6 @@ class RakeTaskEventLogger
 
   def log_event(event, duration = nil, exception = nil)
     log_firehose(event, duration, exception)
-    log_cloud_watch(event, duration, exception)
+    log_cloud_watch(event, duration)
   end
 end
