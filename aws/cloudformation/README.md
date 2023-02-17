@@ -24,6 +24,7 @@ To validate the "iam.yml.erb" template:
 
 ```
 export AWS_PROFILE=codeorg-admin
+# optionally prefix the following with VERBOSE=1
 bundle exec rake stack:iam:validate RAILS_ENV=production
 unset AWS_PROFILE
 ```

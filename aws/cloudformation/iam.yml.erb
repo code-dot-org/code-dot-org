@@ -432,7 +432,7 @@ Resources:
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
 
-  BillingRole
+  BillingRole:
     Type: AWS::IAM::Role
     Properties:
       RoleName: Billing
@@ -453,7 +453,7 @@ Resources:
               StringEquals:
                 accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
               ForAnyValue:StringEquals:
-                accounts.google.com:sub: !GetAtt BillingGoogleIDs.value
+                accounts.google.com:sub: !GetAtt BillingGoogleIds.value
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
 
