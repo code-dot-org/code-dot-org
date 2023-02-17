@@ -18,7 +18,7 @@ import experiments from '@cdo/apps/util/experiments';
  */
 class AnimationTab extends React.Component {
   static propTypes = {
-    channelId: PropTypes.string.isRequired,
+    channelId: PropTypes.string,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
@@ -63,6 +63,7 @@ class AnimationTab extends React.Component {
       labType !== P5LabType.GAMELAB && experiments.isEnabled('backgroundsTab')
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;
+
     return (
       <div>
         <ResizablePanes
