@@ -4,8 +4,8 @@
   "category": "csf",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
-  "grade_levels": null,
-  "header": null
+  "curriculum_type": "Course",
+  "marketing_initiative": "CSF",
+  "grade_levels": "5",
+  "header": "CS Fundamentals"
 }
