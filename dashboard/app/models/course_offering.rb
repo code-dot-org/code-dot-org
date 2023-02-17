@@ -26,7 +26,7 @@ class CourseOffering < ApplicationRecord
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
-  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES, message: "must be one of the course offering headers. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUMU_TYPES}. Got: \"%{value}\"."}
+  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES, message: "must be one of the course offering headers. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES}. Got: \"%{value}\"."}
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES, message: "must be one of the course offering headers. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES}. Got: \"%{value}\"."}
 
   KEY_CHAR_RE = /[a-z0-9\-]/
