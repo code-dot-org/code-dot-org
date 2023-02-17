@@ -5,18 +5,18 @@ Description: >-
   Note: Admin permissions are required to manage some admin-only resources in this stack.
 Parameters:
   # Google ID parameters are defined in this template, use String placeholder during initial stack creation.
-  GoogleDeveloperIDs:
+  DeveloperGoogleIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleDeveloperIDs
-    Description: List of Google ID's for users granted Developer access.
-  GoogleContributorIds:
+    Description: SSM Parameter with a list of Google ID's for users granted Developer access.
+  ContributorGoogleIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleContributorIds
-    Description: List of Google ID's for users granted Contributor access.
-  GoogleBillingIDs:
+    Description: SSM Parameter with a list of Google ID's for users granted Contributor access.
+  BillingGoogleIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleBillingIDs
-    Description: List of Google ID's for users granted Billing access.
+    Description: SSM Parameter with a list of Google ID's for users granted Billing access.
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -167,7 +167,7 @@ Resources:
             StringEquals:
               accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
             ForAnyValue:StringEquals:
-              accounts.google.com:sub: !Ref GoogleDeveloperIDs
+              accounts.google.com:sub: !Ref DeveloperGoogleIDs
         - Effect: Allow
           Principal: {Service: ec2.amazonaws.com}
           Action: sts:AssumeRole
@@ -334,7 +334,7 @@ Resources:
               StringEquals:
                 accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
               ForAnyValue:StringEquals:
-                accounts.google.com:sub: '{{resolve:ssm:/IAM/GoogleContributorIds}}'
+                accounts.google.com:sub: !Ref ContributorGoogleIDs
       ManagedPolicyArns:
         - !Ref ContributorS3Policy
         - !Ref ContributorSecretsPolicy
@@ -465,7 +465,7 @@ Resources:
               StringEquals:
                 accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
               ForAnyValue:StringEquals:
-                accounts.google.com:sub: '{{resolve:ssm:/IAM/GoogleBillingIDs}}'
+                accounts.google.com:sub: !Ref BillingGoogleIDs
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
 
