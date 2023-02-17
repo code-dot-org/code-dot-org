@@ -109,15 +109,15 @@ class UnconnectedMusicView extends React.Component {
       Globals.setPlayer(this.player);
     });
 
-    // Disable instructions for now.
-    /*
+    // Only attempt to load instructions if configured to.
+    if (AppConfig.getValue('show-instructions') === 'true') {
       this.loadInstructions().then(instructions => {
         this.setState({
           instructions: instructions,
           showInstructions: !!instructions
         });
       });
-    */
+    }
   }
 
   componentDidUpdate(prevProps) {
