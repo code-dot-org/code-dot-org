@@ -47,7 +47,7 @@ process_list = execute_system_command("ps -C sh -o pid,pgid,args")
 # Remove the first line of output (column headers) and find the line representing the parent build process.
 build_process_info = process_list.lines.drop(1).select {|line| line.include? BUILD_COMMAND}.first
 raise "The aws/ci_build process is not currently running" unless build_process_info
-process_id, process_group_id = build_process_info.delete_suffix(BUILD_COMMAND + "\n").split(' ')
+process_id, process_group_id = build_process_info.delete_suffix(BUILD_COMMAND + "\n").split
 raise "Process ID of the parent build process - #(process_id} - should be the same as the Process Group ID - #{process_group_id}" unless process_id == process_group_id
 
 CDO.log.info 'Killing the following aws/ci_build process and all of its child processes:'

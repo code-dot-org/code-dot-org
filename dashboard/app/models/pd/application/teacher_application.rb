@@ -277,7 +277,7 @@ module Pd::Application
         {
           country: 'US',
           # Take the first word in school type, downcased. E.g. "Public school" -> "public"
-          school_type: hash[:school_type].split(' ').first.downcase,
+          school_type: hash[:school_type].split.first.downcase,
           state: hash[:school_state],
           zip: hash[:school_zip_code],
           school_name: hash[:school_name],
