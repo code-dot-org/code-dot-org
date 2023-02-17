@@ -305,11 +305,16 @@ module SharedConstants
       "var mySensor = createCapacitiveTouchSensor": null,
 
       // Circuit Playground
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "__.on": null,
+      "__.off": null,
+      "__.toggle": null,
+      "__.blink": null,
+      "__.pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "stop": null,
       "color": null,
       "intensity": null,
@@ -341,9 +346,6 @@ module SharedConstants
       "onBoardEvent": null,
 
       // micro:bit
-      "on": null,
-      "off": null,
-      "toggle": null,
       "ledScreen.on": null,
       "ledScreen.off": null,
       "ledScreen.toggle": null,
