@@ -305,7 +305,8 @@ Resources:
   ContributorRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: Developer
+      RoleName: Contributor
+      Description: Google-federated AWS Role for contributors, granting minimal access for local development.
       Path: /engineering/
       AssumeRolePolicyDocument:
         Version: 2012-10-17
@@ -323,11 +324,11 @@ Resources:
               StringEquals:
                 accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
               ForAnyValue:StringEquals:
-                accounts.google.com:sub: !GetAtt ContributorGoogleIDs.value
+                accounts.google.com:sub: !GetAtt ContributorGoogleIDs.Value
       ManagedPolicyArns:
         - !Ref ContributorS3Policy
         - !Ref ContributorSecretsPolicy
-  
+
   ContributorGoogleIDs:
     Type: AWS::SSM::Parameter
     Properties:
@@ -436,6 +437,7 @@ Resources:
     Type: AWS::IAM::Role
     Properties:
       RoleName: Billing
+      Description: Google-federated AWS Role for finance, granting limited access to the Billing console.
       Path: /admin/
       AssumeRolePolicyDocument:
         Version: 2012-10-17
@@ -453,7 +455,7 @@ Resources:
               StringEquals:
                 accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
               ForAnyValue:StringEquals:
-                accounts.google.com:sub: !GetAtt BillingGoogleIds.value
+                accounts.google.com:sub: !GetAtt BillingGoogleIds.Value
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
 
