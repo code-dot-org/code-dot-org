@@ -288,7 +288,7 @@ class LevelsController < ApplicationController
     @level.log_changes(current_user)
 
     if @level.save
-      reset = !!params["reset"]
+      reset = !!params[:reset]
       redirect = if reset
                    params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
                  else
