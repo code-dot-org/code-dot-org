@@ -188,6 +188,12 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
+    // Prevent a rapid cycle of workspace resizing from occurring when
+    // dragging a block near the bottom of the workspace.
+    if (e.type === Blockly.Events.VIEWPORT_CHANGE) {
+      return;
+    }
+
     // Stop all when_run sounds that are still to play, because if they
     // are still valid after the when_run code is re-executed, they
     // will be scheduled again.
