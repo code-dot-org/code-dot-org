@@ -200,7 +200,7 @@ class LevelsController < ApplicationController
     should_use_solution_blocks = ['required_blocks', 'recommended_blocks'].include?(type)
     if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
-      toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
+      toolbox_blocks = "<xml>#{blocks.join}</xml>"
     end
 
     validation = @level.respond_to?(:validation) ? @level.validation : nil

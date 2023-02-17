@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2023-02-09T20:30:58.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -50,14 +46,19 @@
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-02-09T20:30:58.000Z",
+  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-02-09T20:30:58.367+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_freeplay\\\"\"],\"cloned_from\":\"csc_landmarks_freeplay\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-09T20:30:58.367+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_freeplay\\\"\"],\"cloned_from\":\"csc_landmarks_freeplay\"},{\"changed_at\":\"2023-02-16 19:50:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-16 19:52:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-16 19:52:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-16 19:53:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-16 19:54:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="when_run" deletable="false" movable="false"/>
         <block type="behavior_definition" editable="false" uservisible="false" usercreated="true">
           <mutation>
             <arg name="this sprite" type="Sprite"/>
@@ -179,149 +180,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"map_usa-01"</field>
-              <next>
-                <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"pink_shirt_wave3"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":46,"y":326}</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="gamelab_setProp">
-                      <field name="PROPERTY">"scale"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"pink_shirt_wave3"</field>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="math_number">
-                          <field name="NUM">75</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"statue_of_liberty2"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":360,"y":130}</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_setProp">
-                              <field name="PROPERTY">"scale"</field>
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"statue_of_liberty2"</field>
-                                </block>
-                              </value>
-                              <value name="VAL">
-                                <block type="math_number">
-                                  <field name="NUM">75</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_makeNewSpriteAnon">
-                                  <field name="ANIMATION_NAME">"golden_gate_bridge"</field>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":56,"y":181}</field>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="gamelab_setProp">
-                                      <field name="PROPERTY">"scale"</field>
-                                      <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation">
-                                          <field name="ANIMATION">"golden_gate_bridge"</field>
-                                        </block>
-                                      </value>
-                                      <value name="VAL">
-                                        <block type="math_number">
-                                          <field name="NUM">75</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_addBehaviorSimple">
-                                          <value name="SPRITE">
-                                            <block type="gamelab_allSpritesWithAnimation">
-                                              <field name="ANIMATION">"pink_shirt_wave3"</field>
-                                            </block>
-                                          </value>
-                                          <value name="BEHAVIOR">
-                                            <block type="gamelab_behavior_get">
-                                              <mutation/>
-                                              <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"pink_shirt_wave3"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"statue_of_liberty2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay">
-              <field name="SPEECH">The Statue of Liberty is a symbol of freedom.</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"pink_shirt_wave3"</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"pink_shirt_wave3"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"golden_gate_bridge"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay">
-              <field name="SPEECH">The Golden Gate Bridge was built during the Great Depression and is a symbol of ingenuity and determination.</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"pink_shirt_wave3"</field>
-                </block>
-              </value>
-            </block>
-          </next>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>
@@ -1650,9 +1508,12 @@
           </value>
           <value name="SPRITE2">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"red_shirt_wave2"</field>
+              <field name="ANIMATION">"grand_canyon"</field>
             </block>
           </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"map_old_blank"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
           <field name="ANIMATION_NAME">"grand_canyon"</field>
@@ -1667,6 +1528,23 @@
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
               <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSayTime">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+          <value name="TEXT1">
+            <block type="text">
+              <field name="TEXT">The Grand Canyon is a national park.</field>
+            </block>
+          </value>
+          <value name="NUM">
+            <block type="math_number">
+              <field name="NUM">6</field>
             </block>
           </value>
         </block>
