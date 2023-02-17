@@ -4,9 +4,19 @@ Description: >-
   IAM layer including global/shared roles and access permissions for Code.org infrastructure.
   Note: Admin permissions are required to manage some admin-only resources in this stack.
 Parameters:
+  # Google ID parameters are defined in this template, use String placeholder during initial stack creation.
   GoogleDeveloperIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleDeveloperIDs
+    Description: List of Google ID's for users granted Developer access.
+  GoogleContributorIds:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleContributorIds
+    Description: List of Google ID's for users granted Contributor access.
+  GoogleBillingIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleBillingIDs
+    Description: List of Google ID's for users granted Billing access.
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -324,15 +334,15 @@ Resources:
               StringEquals:
                 accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
               ForAnyValue:StringEquals:
-                accounts.google.com:sub: !GetAtt ContributorGoogleIDs.Value
+                accounts.google.com:sub: '{{resolve:ssm:/IAM/GoogleContributorIds}}'
       ManagedPolicyArns:
         - !Ref ContributorS3Policy
         - !Ref ContributorSecretsPolicy
 
-  ContributorGoogleIDs:
+  GoogleContributorIds:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: /IAM/ContributorGoogleIDs
+      Name: /IAM/GoogleContributorIds
       Type: StringList
       Value: initial,value
       Description: List of Google IDs of people being granted contributor access.
@@ -455,14 +465,14 @@ Resources:
               StringEquals:
                 accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
               ForAnyValue:StringEquals:
-                accounts.google.com:sub: !GetAtt BillingGoogleIds.Value
+                accounts.google.com:sub: '{{resolve:ssm:/IAM/GoogleBillingIDs}}'
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
 
-  BillingGoogleIds:
+  GoogleBillingIDs:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: /IAM/BillingGoogleIds
+      Name: /IAM/GoogleBillingIDs
       Type: StringList
       Value: initial,value
       Description: List of Google IDs of people being granted billing access.
