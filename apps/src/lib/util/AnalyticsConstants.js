@@ -13,7 +13,8 @@ const EVENTS = {
 
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_EVENT: 'Course Overview Page Visited',
-  UNIT_OVERVIEW_PAGE_VISITED_EVENT: 'Unit Overview Page Visited',
+  UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
+    'Unit Overview Page Visited By Teacher',
   TRY_NOW_BUTTON_CLICK_EVENT: 'Try Now Button Clicked',
 
   // Lesson info
