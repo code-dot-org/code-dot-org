@@ -37,14 +37,6 @@ We get data from some states that list which schools teach which Computer Scienc
 
 [bin/oneoff/census/state_data](https://github.com/code-dot-org/code-dot-org/tree/staging/bin/oneoff/census/state-data) has scripts that were used to work with state data.
 
-## Inaccuracy Investigations and Overrides
-
-If somebody submits a survey indicating that they think the data we have is wrong then that reported inaccuracy will appear for review at https://studio.code.org/census/review (you need to have `census_reviewer` permissions to view that page.) After reviewing the report, a row will be created in `census_inaccuracy_investigations`. The reviewer can choose to override the summary for the school as part of the review process. In that case we will also create a row in the `census_overrides` table. That row will be referenced by the `census_inaccuracy_investigations` row.
-
-See also:
-* [The controller for the review page](https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/controllers/census_reviewers_controller.rb)
-* [The react component for the  review page](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/templates/census2017/CensusInaccuracyReview.jsx)
-
 # Summarization
 
 Each school may have multiple data points for the same school year. All of that data is aggregated into a simple summary that says if we believe the school teaches/taught Computer Science in a given year. The possible values are:
