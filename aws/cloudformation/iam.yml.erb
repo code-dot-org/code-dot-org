@@ -11,7 +11,7 @@ Parameters:
     Description: SSM Parameter with a list of Google ID's for users granted Developer access.
   ContributorGoogleIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
-    Default: /IAM/GoogleContributorIds
+    Default: /IAM/GoogleContributorIDs
     Description: SSM Parameter with a list of Google ID's for users granted Contributor access.
   BillingGoogleIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
@@ -339,10 +339,10 @@ Resources:
         - !Ref ContributorS3Policy
         - !Ref ContributorSecretsPolicy
 
-  GoogleContributorIds:
+  GoogleContributorIDs:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: /IAM/GoogleContributorIds
+      Name: /IAM/GoogleContributorIDs
       Type: StringList
       Value: initial,value
       Description: List of Google IDs of people being granted contributor access.
