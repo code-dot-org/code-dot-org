@@ -530,11 +530,6 @@ Style/RedundantRegexpEscape:
 Style/RedundantSelfAssignment:
   Enabled: false
 
-# Offense count: 8
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/RedundantSort:
-  Enabled: false
-
 # Offense count: 118
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle, AllowInnerSlashes.
