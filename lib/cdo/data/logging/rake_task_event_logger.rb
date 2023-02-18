@@ -94,10 +94,11 @@ class RakeTaskEventLogger
       dimensions = {environment: rack_env,
                      commit_hash: RakeUtils.git_revision,
                      task_name: @rake_task.name,
-                     depth: @@depth,
-                     is_continuous_integration_run: ENV['CI'] ? true : false}
+                     depth: @@depth.to_s,
+                     is_continuous_integration_run: ENV['CI'] ? 'true' : 'false'}
       Cdo::Metrics.put(metric_name, metric_value, dimensions)
       Cdo::Metrics.flush!
+      puts "Metric flushed ------------------------------------"
     rescue => e
       Honeybadger.notify(
         e,
