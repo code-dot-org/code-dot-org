@@ -30,34 +30,4 @@ class Census::CensusSummary < ApplicationRecord
   enum teaches_cs: TEACHES
 
   validates_presence_of :audit_data
-
-  # High schools need to teach a 20 hour course with either
-  # block- or text-based programming for it to count as CS.
-  # Other schools can teach any 10 or 20 hour courses.
-  # Schools that are a mix of K8 and high school use the K8 logic.
-  # The teacher banner does not have the topic check boxes
-  # so we count those submissions even though they don't have
-  # those options checked.
-  def self.submission_teaches_cs?(submission, is_high_school:, is_k8_school:)
-    if is_high_school && !is_k8_school
-      (
-        (
-          submission.how_many_20_hours_some? ||
-          submission.how_many_20_hours_all?
-        ) &&
-        (
-          submission.type == "Census::CensusTeacherBannerV1" ||
-          submission.topic_text ||
-          submission.topic_blocks
-        )
-      )
-    else
-      (
-        submission.how_many_10_hours_some? ||
-        submission.how_many_10_hours_all? ||
-        submission.how_many_20_hours_some? ||
-        submission.how_many_20_hours_all?
-      )
-    end
-  end
 end
