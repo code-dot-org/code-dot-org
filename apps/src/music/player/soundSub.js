@@ -105,7 +105,7 @@ WebAudio.prototype.PlaySoundByBuffer = function(
 
   if (effects.volume === 'low') {
     const volume = audioContext.createGain();
-    volume.gain.value = 0.2;
+    volume.gain.value = 0.4;
 
     // Connect the last node to this one.
     lastNode.connect(volume);
@@ -117,7 +117,7 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   if (effects.filter === 'on') {
     const filter = audioContext.createBiquadFilter();
     filter.type = 'lowpass';
-    filter.frequency.value = 400;
+    filter.frequency.value = 800;
 
     // Connect the last node to this one.
     lastNode.connect(filter);
