@@ -12,6 +12,8 @@ export const BlockTypes = {
     'play_sound_at_current_location_simple2',
   PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2:
     'play_rest_at_current_location_simple2',
+  SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2:
+    'set_effect_at_current_location_simple2',
   PLAY_SOUNDS_TOGETHER: 'play_sounds_together',
   PLAY_SOUNDS_SEQUENTIAL: 'play_sounds_sequential',
   NEW_TRACK_AT_START: 'new_track_at_start',
