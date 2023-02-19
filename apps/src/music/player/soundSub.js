@@ -101,15 +101,33 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   var source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
 
-  if (effects['volume'] === 'low') {
+  let lastNode = source;
+
+  if (effects.volume === 'low') {
     const volume = audioContext.createGain();
     volume.gain.value = 0.2;
-    volume.connect(audioContext.destination);
-    source.connect(volume);
-  } else {
-    // connect the source direct to the destination
-    source.connect(audioContext.destination);
+
+    // Connect the last node to this one.
+    lastNode.connect(volume);
+
+    // This is now the last node.
+    lastNode = volume;
   }
+
+  if (effects.filter === 'on') {
+    const filter = audioContext.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = 400;
+
+    // Connect the last node to this one.
+    lastNode.connect(filter);
+
+    // This is now the last node.
+    lastNode = filter;
+  }
+
+  // Connect the last node to output.
+  lastNode.connect(audioContext.destination);
 
   source.onended = callback.bind(this, id);
 

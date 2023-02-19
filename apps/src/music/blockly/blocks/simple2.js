@@ -199,8 +199,8 @@ export const setEffectAtCurrentLocationSimple2 = {
         options: [
           ['low volume', 'volume_low'],
           ['normal volume', 'volume_normal'],
-          ['some reverb', 'reverb_some'],
-          ['no revert', 'reverb_none']
+          ['some filtering', 'filter_on'],
+          ['no filtering', 'filter_off']
         ]
       }
     ],
