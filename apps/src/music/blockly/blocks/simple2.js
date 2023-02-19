@@ -21,6 +21,7 @@ export class GeneratorHelpersSimple2 {
         name: '${functionName}',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __effects = {};
       ProgramSequencer.playSequential();
       ${functionCode}
       ProgramSequencer.endSequential();
@@ -42,6 +43,7 @@ export class GeneratorHelpersSimple2 {
       name: 'when_run',
       uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
     };
+    var __effects = {};
     ProgramSequencer.init();
     ProgramSequencer.playTogether();
     ${functionCallsCode}
@@ -85,6 +87,7 @@ export const whenRunSimple2 = {
         name: 'when_run',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __effects = {};
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
     `
@@ -145,7 +148,8 @@ export const playSoundAtCurrentLocationSimple2 = {
         ProgramSequencer.getCurrentMeasure(),
         __insideWhenRun,
         null,
-        __currentFunction
+        __currentFunction,
+        __effects
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
@@ -182,6 +186,39 @@ export const playRestAtCurrentLocationSimple2 = {
         )}
       );
     `
+};
+
+export const setEffectAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: 'set effect %1 at current measure',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'EFFECT',
+        options: [
+          ['low volume', 'volume_low'],
+          ['normal volume', 'volume_normal'],
+          ['some reverb', 'reverb_some'],
+          ['no revert', 'reverb_none']
+        ]
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'music_blocks',
+    tooltip: 'set effect',
+    helpUrl: ''
+  },
+  generator: block => {
+    const fieldValues = block.getFieldValue('EFFECT').split('_');
+    const effectName = fieldValues[0];
+    const effectValue = fieldValues[1];
+    return `
+      __effects.${effectName} = '${effectValue}';
+    `;
+  }
 };
 
 export const playSoundsTogether = {

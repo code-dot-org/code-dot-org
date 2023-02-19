@@ -95,13 +95,21 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   id,
   when,
   loop,
+  effects,
   callback
 ) {
   var source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
 
-  // connect the source direct to the destination
-  source.connect(audioContext.destination);
+  if (effects['volume'] === 'low') {
+    const volume = audioContext.createGain();
+    volume.gain.value = 0.2;
+    volume.connect(audioContext.destination);
+    source.connect(volume);
+  } else {
+    // connect the source direct to the destination
+    source.connect(audioContext.destination);
+  }
 
   source.onended = callback.bind(this, id);
 
