@@ -1598,8 +1598,14 @@
         "e4c8ad1e-3f96-4fbf-9078-c569f5ef247c": {
           "description": "Aportar y recibir comentarios"
         },
+        "1f78c6a5-ed31-43ec-b895-c6a8e229ffaa": {
+          "description": "Describe las repercusiones del dispositivo en la sociedad"
+        },
         "3f866c04-e2cf-4699-9575-cce49347325a": {
           "description": "Identifica las innovaciones informáticas en un campo determinado"
+        },
+        "4f3e3425-fbaf-46ed-a48b-1a3c14c5e784": {
+          "description": "Describe las entradas y salidas de un dispositivo"
         },
         "0f02698b-9d9b-490c-8823-ee026fad162d": {
           "description": "Encender y apagar un LED con un código"
@@ -1607,8 +1613,23 @@
         "2ec25831-a76d-4ea0-903c-3083f9308f66": {
           "description": "Conectar y solucionar problemas de dispositivos externos"
         },
+        "9947690d-e911-421e-aa62-8121dc0fd1a9": {
+          "description": "Controla el zumbador con código"
+        },
+        "3962774f-cd16-47f7-9420-a055b3719c0f": {
+          "description": "Responder a las entradas del usuario mediante manejadores de eventos"
+        },
+        "730b8299-5c8e-416d-8d6f-e1aaadd69907": {
+          "description": "Cambiar el texto de la pantalla mediante código"
+        },
         "ce118709-28f6-4348-9a5e-a7376dc85e5c": {
           "description": "Configurar las propiedades de los elementos de la interfaz de usuario mediante código"
+        },
+        "10fe1c8a-7919-47df-af4c-41263be5cb17": {
+          "description": "Utiliza un manejador de eventos de placa para controlar los botones del Circuit Playground."
+        },
+        "a1bcaaff-4c0b-4c36-9760-21b7fa57dd62": {
+          "description": "Utiliza un controlador de eventos de placa para controlar el interruptor de palanca en el Circuit Playground."
         },
         "78d91696-530a-4830-bbdc-3a45ff7bb276": {
           "description": "Escalar un rango de números para satisfacer una necesidad específica"
