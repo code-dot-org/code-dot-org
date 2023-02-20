@@ -78,6 +78,7 @@ ko:
       Cake Survey: 케이크 설문조사
       Challenge: 도전
       Challenge Levels: 도전 레벨
+      Challenge/Practice: 도전/연습
       'Challenge: Lists': '도전: 목록'
       'Challenge: RGB Colors': '도전: RGB 색상'
       Challenges: 도전
@@ -160,6 +161,7 @@ ko:
       Expanding Your Website: Expanding Your Website
       Experiment with Web Lab: 웹 연구소와 함께 실험
       Exploration: 탐구
+      'Exploration: Clicker Game': '탐험: 클리커 게임'
       'Exploration: For Loops': '탐구: For 루프'
       'Exploration: Rikki''s Poster': '탐구: 리키의 포스터'
       'Exploration: Sample Apps': '탐구: 샘플 앱'
@@ -259,11 +261,14 @@ ko:
       'Mini-Project: About Me': 스프라이트 랩으로 자기 소개
       'Mini-Project: Alien Dance Moves': '미니 프로젝트: 에일리언 댄스 무브스'
       'Mini-Project: Alien Dance Party': '미니 프로젝트: 에일리언 댄스 파티'
+      'Mini-Project: Clicker Game': '미니 프로젝트: 클리커 게임'
+      'Mini-Project: Collector Game': '미니 프로젝트: 컬렉터 게임'
       'Mini-Project: Create a Virtual Pet': '미니 프로젝트: 가상 팻 만들기'
       'Mini-Project: Outbreak Simulator': '미니 프로젝트: 발생 시뮬레이터'
       'Mini-Project: Royal Battle': '미니 프로젝트: 로열 배틀'
       'Mini-Project: Snowflake #1': '미니 프로젝트: 눈송이 #1'
       'Mini-Project: Snowflake #2': '미니 프로젝트: 눈송이 #2'
+      'Mini-Project: Sticker Art': '미니 프로젝트: 스티커 아트'
       'Mini-Project: Swimming Fish': '미니 프로젝트: 수영하는 물고기'
       'Mini-Project: Swimming Fish (continued)': '미니 프로젝트: 수영하는 물고기 (계속하기)'
       'Mini-Project: User Input Programs': 챗봇 만들기
@@ -462,6 +467,9 @@ ko:
       'Video: Getting Loopy': '동영상: 게팅 루피 (Getting Loopy)'
       'Video: Happy Maps - Unplugged Activity': '동영상: 해피 맵 - 언플러그드 활동'
       'Video: Harvesting with Conditionals': '동영상: 조건문으로 수확'
+      'Video: Hello World: Do What You Want': '동영상: 헬로 월드: 하고 싶은 일을 하세요'
+      'Video: Hello World: Programming with Events': '동영상: 헬로 월드: 이벤트 프로그래밍'
+      'Video: Hello World: Welcome to Sprite Lab': '동영상: 헬로 월드: 스프라이트 랩에 오신 것을 환영합니다'
       'Video: How Search Works': '동영상: 검색 작동방법'
       'Video: How to Create a Simple Function': '동영상: 단순 함수를 만드는 방법'
       'Video: How to Make a Sprite': '동영상: 스프라이트 만드는 방법'
@@ -479,6 +487,7 @@ ko:
       'Video: Introduction to Variables': '동영상: 변수 소개'
       'Video: Loops in Artist': '동영상: 아티스트 내 루프'
       'Video: Loops with the Artist': '동영상: 아티스트와의 루프'
+      'Video: Lots of Sprites': '동영상: 많은 스프라이트'
       'Video: Managing Disagreement': '동영상: 의견 충돌 관리'
       'Video: Maze Intro - Programming with Blocks': '동영상: 미로 소개  - 블록으로 프로그래밍'
       'Video: Maze Intro - Programming with Blocks ': '동영상: 미로 소개 - 블록으로 프로그래밍 '
@@ -495,7 +504,11 @@ ko:
       'Video: Nested Loops': '동영상: 중첩 루프'
       'Video: Nested Loops with the Bee': '동영상: 벌과 함께 중첩 루프'
       'Video: Netflix and Data': 동영상:넷플릭스와 데이터
+      'Video: Outbreak Simulator: Events': '동영상: 아웃브레이크 시뮬레이터: 이벤트'
+      'Video: Outbreak Simulator: Free Play': '동영상: 아웃브레이크 시뮬레이터: 무료 플레이'
       'Video: Outbreak Simulator: Introduction': '동영상: 발생 시뮬레이션: 개요'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': '동영상: 아웃브레이크 시뮬레이터:
+        과학자처럼 생각하기'
       'Video: Pair Programming': '동영상: 페어 프로그래밍'
       'Video: Pair Programming ': '동영상: 페어 프로그래밍 '
       'Video: Problem Solving Process': '영상: 문제 해결 과정'
