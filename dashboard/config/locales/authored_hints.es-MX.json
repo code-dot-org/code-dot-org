@@ -3518,20 +3518,20 @@
           "courseC_PlayLab_events3_c": "Añade este bloque al bloque `cuando se ejecuta`:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events4_2018": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events4_2019": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events4_2020": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events5": {
           "courseC_PlayLab_events5_a": "Deberás hacer clic en el menú desplegable en el bloque `actor decir` para encontrar el texto\" ¿Qué hay de nuevo",
@@ -9547,8 +9547,8 @@
           "courseC_PlayLab_events3_c": "Añade este bloque al bloque `cuando se ejecuta`:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4_2021": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberás adjuntar un bloque \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events5_2021": {
           "courseC_PlayLab_events5_a": "Deberás hacer clic en el menú desplegable en el bloque `actor decir` para encontrar el texto\" ¿Qué hay de nuevo",
@@ -9597,12 +9597,12 @@
           "courseC_artist_loops1b_a": "Este es el primer bloque que necesitarás:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nPuedes elegir tanto izquierda como derecha y cualquier número de grados."
         },
         "courseC_artist_loops2a_2021": {
-          "courseC_artist_loops2a_a": "Dentro de tu bucle (loop), querrás saltar al centro, luego girar, y después dibujar una pegatina (sticker).",
+          "courseC_artist_loops2a_a": "Dentro del loop, querrás saltar a 200 más de 200, luego dibuja la calcomanía del pájaro, y luego gira 30 grados.",
           "courseC_artist_loops2a_b": "Haga clic en el número en la parte superior del bucle (loop) de \"repetir\" para modificar las veces que se repite."
         },
         "courseC_artist_loops3a_2021": {
           "courseC_artist_loops3a_a": "Deberás agregar un bloque dentro de su bucle (loop), después de la primera pegatina (sticker).",
-          "courseC_artist_loops3a_b": "Tu programa debería tener el siguiente aspecto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\n¡Puedes usar los stickers que quieras!"
+          "courseC_artist_loops3a_b": "Use el menú desplegable en el bloque \"dibujar calcomanía\" para encontrar la calcomanía del murciélago."
         },
         "courseC_artist_loops4a_2021": {
           "courseC_artist_loops4a_a": "Usa este bloque para saltar hacia adelante:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\n¡No te olvides de cambiar la distancia!",
@@ -9621,20 +9621,20 @@
         },
         "courseC_artist_prog2_2021": {
           "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">avanzar</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea\"*",
-          "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_b": "¿Tienes problemas girando la esquina? Usa el bloque `girar a la derecha 90 grados`."
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "Para crear esta ventana, dibuja un cuadrado de 100 pixeles de lado.\n\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar\n-   girar\n-   avanzar",
-          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un bucle (loop) en este rompecabezas"
+          "courseC_artist_prog3_b": "¿Quieres hacer el programa más corto? Intenta usar un bucle (loop) en este rompecabeza."
         },
         "courseC_artist_prog4_2021": {
           "courseC_artist_prog4_a": "Para terminar el cohete, ¡simplemente dibuja el triángulo en la parte superior!",
-          "courseC_artist_prog4_b": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
+          "courseC_artist_prog4_b": "¡Puedes utilizar el menú desplegable en los bloques de 'girar' para ver qué ángulo necesitas!",
           "courseC_artist_prog4_c": "Para dibujar un triángulo, deberás:\n\n-   avanzar \n-   girar 120 grados a la izquierda \n-   avanzar \n-   girar 120 grados a la izquierda \n-   avanzar"
         },
         "courseC_artist_prog5_2021": {
           "courseC_artist_prog5_a": "Reduce la velocidad del deslizador hasta que puedas ejecutar tu código línea por línea para ver dónde van las cosas mal.",
-          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas.",
+          "courseC_artist_prog5_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabeza.",
           "courseC_artist_prog5_c": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
           "courseC_artist_prog5_d": "Cada giro debe ser de 90 grados a la derecha."
         },
@@ -9648,7 +9648,7 @@
           "courseC_artist_prog7_b": "¿Funciona en el primer paso?\\\\ \n¿Y en el segundo?\\\\ \n¿Dónde está el error?",
           "courseC_artist_prog7_c": "¡Puedes usar el menú desplegable en los bloques girar para ver qué ángulo necesitas!",
           "courseC_artist_prog7_d": "Tendrás que: \n\n-   avanzar \n-   girar 45 grados a la derecha \n-   avanzar \n-   girar 90 grados a la derecha \n-   avanzar \n-   girar 45 grados a la derecha \n\n¡Repite este patrón 2 veces!",
-          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas."
+          "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabeza."
         },
         "courseC_artist_prog_challenge1_2021": {
           "courseC_artist_prog_challenge1_a": "¡Puedes dibujar esto como un rectángulo con una línea en el medio o dos cuadrados diferentes!"
@@ -9666,16 +9666,16 @@
         },
         "courseC_collector_prog2_2021": {
           "courseC_collector_prog2_a": "Puedes utilizar cuatro bloques <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> o utilizar el bloque <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> para que tu programa sea más corto.",
-          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas."
+          "courseC_collector_prog2_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabeza."
         },
         "courseC_collector_prog3_2021": {
           "courseC_collector_prog3_a": "El programa solo ejecutará los bloques que están conectados al bloque <xml><block type=\"when_run\"/></xml>.",
           "courseC_collector_prog3_b": "Prueba a usar el botón de \"Paso\" para ejecutar tu código línea a línea. ¿Ves dónde falla el código?",
-          "courseC_collector_prog3_c": "Si tienes problemas para resolver este rompecabezas, prueba escribiendo los movimientos en un trozo de papel."
+          "courseC_collector_prog3_c": "Si tienes problemas para resolver este rompecabeza, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_collector_prog4_2021": {
           "courseC_collector_prog4_a": "Si te quedas atascado/a, intenta escribir los pasos en una hoja de papel.",
-          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas.",
+          "courseC_collector_prog4_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabeza.",
           "courseC_collector_prog4_c": "Pruebe esta opción para un camino."
         },
         "courseC_collector_prog5_2021": {
@@ -9689,7 +9689,7 @@
           "courseC_collector_prog6_b": "¿Atascado/a? Prueba este camino para recoger el tesoro."
         },
         "courseC_collector_prog7_2021": {
-          "courseC_collector_prog7_a": "Ya hay mucho código bueno en el área de trabajo. No necesitas eliminar nada para resolver este rompecabezas. ",
+          "courseC_collector_prog7_a": "Ya hay mucho código bien hecho en el espacio de trabajo. No necesitas borrar nada para solucionar este rompecabeza.  ",
           "courseC_collector_prog7_b": "¿No ves el bloque que necesitas para que la aventurera se mueva en la dirección correcta? Saca uno de la caja de herramientas.",
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
@@ -9776,16 +9776,16 @@
         },
         "courseC_maze_debugging1_2021": {
           "courseC_maze_debugging1_a": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging1_b": "Hay 1 bloque que necesitas agregar para completar este rompecabezas."
+          "courseC_maze_debugging1_b": "Necesitas añadir un bloque para completar este rompecabeza."
         },
         "courseC_maze_debugging2_2021": {
           "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comiences de nuevo!",
           "courseC_maze_debugging2_b": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging2_c": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
+          "courseC_maze_debugging2_c": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging3_2021": {
           "courseC_maze_debugging3_a": "Para eliminar un bloque en el medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde pertenecen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
+          "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseC_maze_debugging4_2021": {
           "courseC_maze_debugging4_a": "Usa el botón de \"Paso\" para ejecutar las instrucciones una a una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
@@ -9793,7 +9793,7 @@
         },
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón de \"Paso\" para recorrer el código y averiguar donde deja de funcionar.",
-          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de giro haciendo clic en el menú desplegable.",
+          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de turno haciendo clic en el menú desplegable.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging6_2021": {
@@ -9839,35 +9839,35 @@
           "courseC_maze_programming5_c": "La solución tendrá dos bloques \"avanzar\", un giro, y dos bloques más \"avanzar\"."
         },
         "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "¡Hay dos maneras de resolver este rompecabezas!",
+          "courseC_maze_programming6_a": "¡Hay dos formas de resolver este rompecabezas!",
           "courseC_maze_programming6_b": "Sigue con tu dedo el camino del pájaro al cerdo ¿Qué pasos tomó? ",
           "courseC_maze_programming6_c": "Recuerda que debes girar primero, ya que el pájaro empieza mirando a una pared.",
-          "courseC_maze_programming6_d": "¿Atascado/a? ¡Mira este camino!"
+          "courseC_maze_programming6_d": "¿Atascado? ¡Mira este camino!"
         },
         "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_a": "No te olvides de utilizar el botón \"Paso\" para ir bloque por bloque buscando errores.",
-          "courseC_maze_programming7_b": "Si tienes problemas para resolver este rompecabezas, prueba escribiendo los movimientos en un trozo de papel."
+          "courseC_maze_programming7_a": "No te olvides de utilizar el botón de \"Paso\" para ir bloque por bloque buscando errores.",
+          "courseC_maze_programming7_b": "Si tienes problemas para resolver este rompecabeza, prueba escribiendo los movimientos en un trozo de papel."
         },
         "courseC_maze_programming8_2021": {
-          "courseC_maze_programming8_a": "Recuerda que puedes usar el botón de \"Paso\" para revisar tu código línea por línea si te quedas atascado/a.",
-          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas."
+          "courseC_maze_programming8_a": "Recuerda que puedes usar el botón de \"Paso\" para revisar tu código línea por línea si te quedas atascado /a.",
+          "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabeza."
         },
         "courseC_maze_programming_challenge1_2021": {
           "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego programarlo!"
         },
         "courseC_maze_programming_challenge2_2021": {
           "courseC_maze_programming_challenge2_a": "_\"Si me envías hacia atrás, ¡ten mucho cuidado de que gire en la dirección correcta!\"_",
-          "courseC_maze_programming_challenge2_b": "La solución más corta utiliza sólo 5 bloques, pero utiliza este bloque:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "La solución más corta usa solo 5 bloques, pero usa este bloque:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "¿Este patrón no te parece una escalera gigante? Intenta usar lo que aprendiste de los rompecabezas anteriores para lograr todos los giros.",
-          "courseC_starWars_loops10_b": "Si deseas utilizar menos código, ¡puedes poner un bucle (loop) de `repetir'`dentro de otro!\\\\ \nA esto se le llama **bucle anidado** (nested loop).",
+          "courseC_starWars_loops10_b": "Si deseas utilizar menos código, ¡puedes poner un bucle (loop) de `repetir'`dentro de otro!\\\\ \nA esto se lo llama **bucle anidado** (nested loop)",
           "courseC_starWars_loops10_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops1_2021": {
           "courseC_starWars_loops1_a": "Cuando BB-8 pasa por encima de la chatarra, la recoge automáticamente.",
           "courseC_starWars_loops1_b": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas.",
-          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabezas."
+          "courseC_starWars_loops1_c": "Tendrás que 'avanzar' cinco veces para resolver este rompecabeza."
         },
         "courseC_starWars_loops2_2021": {
           "courseC_starWars_loops2_a": "Para repetir código, arrastra un bucle (loop) de ´repetir´ y luego coloca el bloque que quieres repetir dentro."
@@ -9902,7 +9902,7 @@
         },
         "courseC_starWars_loops7_2021": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
-          "courseC_starWars_loops7_b": ".Si tienes problemas con este rompecabezas, intenta escribir todos los movimientos en un papel y buscar un patrón.",
+          "courseC_starWars_loops7_b": ".Si tienes problemas con este rompecabeza, intenta escribir todos los movimientos en un papel y buscar un patrón.",
           "courseC_starWars_loops7_c": "¡No tengas miedo de cometer un error! Ejecuta el código para ver qué sucede, incluso si aún no has resuelto el rompecabezas."
         },
         "courseC_starWars_loops7_dani": {
@@ -9922,7 +9922,7 @@
         },
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle (loop) de`repetir`.",
-          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabezas. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_c": "No necesitas girar a la izquierda para resolver este rompecabeza. Todos tus giros pueden ser a la derecha.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseD_artist_1_2021": {
           "courseD_artist_project1_a": "¡Puedes utilizar el menú desplegable en los bloques 'girar' para ver qué ángulo necesitas!",
@@ -11628,8 +11628,8 @@
           "courseC_PlayLab_events3_c": "Añade este bloque al bloque `cuando se ejecuta`:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events42022": {
-          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
+          "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha **100** píxeles para llegar al gato.",
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de `actor __ dice` al evento `cuando el actor toca` para resolver este rompecabezas."
         },
         "courseC_PlayLab_events52022": {
           "courseC_PlayLab_events5_a": "Deberás hacer clic en el menú desplegable en el bloque `actor decir` para encontrar el texto\" ¿Qué hay de nuevo",

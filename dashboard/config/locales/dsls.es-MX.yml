@@ -11703,7 +11703,7 @@ es-MX:
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
-            "avanzar".
+            "avance".
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -11717,8 +11717,8 @@ es-MX:
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: El pájaro se quedará a un paso atras del cerdo.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
