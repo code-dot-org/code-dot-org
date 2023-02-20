@@ -216,7 +216,7 @@ const customInputTypes = {
         getStore().getState().pageConstants &&
         getStore().getState().pageConstants.showAnimationMode
       ) {
-        buttons = experiments.isEnabled('backgroundsTab')
+        buttons = experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
           ? [
               {
                 text: i18n.backgroundMode(),
