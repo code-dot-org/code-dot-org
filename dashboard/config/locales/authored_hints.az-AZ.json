@@ -1473,15 +1473,15 @@
           "courseA_collector_loops_challenge2_a": "Cənuba hərəkət etməzdən əvvəl ikinci dəfə yolun üzərindən geriyə hərəkət edə bilərsiniz."
         },
         "courseA_maze_seq5_2021": {
-          "1": "Bir həll tapmaq üçün addımları kağız üzərində yazmağa çalışın! ",
-          "2": "Bu blokdan istifadə etməlisiniz:\n\n[bloklu blok] [0] "
+          "1": "Bir həll tapmaq üçün addımları kağız üzərində yazmağa çalış! ",
+          "2": "Bu bloktan istifadə etməlisiniz:\n[bloklu blok] [0]"
         },
         "courseA_maze_seq5a_2021": {
-          "1": "Addımları yüksək səslə söyləyin və cavabı anlamağa kömək edib -etmədiyini görün. "
+          "1": "Addımları yüksək səslə söylə və cavabın tapılmasına kömək edib -etmədiyini gör. "
         },
         "courseB_Scrat_ramp1_2021": {
-          "2": "Səhv etməkdən qorxma! Bir şey sınayın və nəticə vermirsə başqa bir şey sınayın! ",
-          "1": "Scrat istədiyinizi etmirsə, hər iki blokun bir -birinə tam basıldığından əmin olun və yenidən \"Çalış\" düyməsini basın. "
+          "2": "Səhv etməkdən qorxmayın! Bir şey sınayın və nəticə vermirsə, başqa bir şey sınayın!",
+          "1": "Scrat istədiyinizi etmirsə, hər iki blokun bir -birinə tam basıldığından əmin olun, sonra yenidən \"Çalış\" düyməsini basın."
         },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_a": "'Təkrar et' komandasından istifadə edin , sonra başqa blokları içinə yerləşdirin. Bunu neçə dəfə təkrarlamalısınız?"
@@ -1883,26 +1883,35 @@
           "mc_2_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
         },
         "Overworld Chop Trees": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld Chop Trees_2019": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld Chop Trees_2020": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld Chop Trees_2021": {
           "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
           "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz. Ən az sayda blok hansı yoldan keçir?"
         },
         "Overworld House Frame Chosen": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld House Frame Chosen_2019": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld House Frame Chosen_2020": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Move to Sheep": {
           "mc_1_a": "`İrəli get` bloku alətlər qutusunun başındadır.",
@@ -1921,13 +1930,19 @@
           "mc_1_b": "Hər iki `irəli get` blokunun `icra ediləndə` blokuna əlavə olunduğundan əmin olun."
         },
         "Overworld Place Wall": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Place Wall_2019": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Place Wall_2020": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Shear Sheep": {
           "mc_3_a": "`Qırx` bloku önündəki qoyunu götürür. Qoyunla üz-üzəsən?",
@@ -2031,7 +2046,7 @@
         },
         "courseA_harvester_seq3_2021": {
           "courseA_harvester_seq3_a": "Bu blokdan istifadə etməyi xatırladınızmı?\n\n<xml><block type=\"harvester_corn\"/></xml> ",
-          "courseA_harvester_seq3_b": "Addımları yüksək səslə söyləyin və cavabı anlamağa kömək edib -etmədiyini görün. "
+          "courseA_harvester_seq3_b": "Addımları yüksək səslə söylə və cavabın tapılmasına kömək edib -etmədiyini gör. "
         },
         "courseA_harvester_seq4_2021": {
           "courseA_harvester_seq4_a": "Harvester və qarğıdalı arasında neçə boşluq var? İş sahənizdə artıq neçə blok var? ",
@@ -2094,14 +2109,14 @@
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "Lazım olan yol aydın deyilsə, barmağınızla quşdan donuza gedən yolu izləyin. ",
           "courseA_maze_seq13_b": "Səhv etməkdən qorxma! Nə olacağını görmək üçün bloklar əlavə etməyi və kodu işləməyi sınayın. ",
-          "courseA_maze_seq13_c": "Bunlar [bloklu blok] [0]\n\n[bloklu blok] [1]\n\nbloklar donuza yaxınlaşmağa kömək edəcək. "
+          "courseA_maze_seq13_c": "Donuza yaxınlaşmaq üçün [bloklu blok] [0]  [bloklu blok] [1] blokları sizə kömək edəcək."
         },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_a": "Quşu hərəkət etdirməkdə çətinlik çəkirsinizsə, blokların [bloklu blok] [0] altına yerləşdirildiyinə əmin olun. ",
-          "courseA_maze_seq1_b": "Donuza getmək üçün quş 3 dəfə Qərbə doğru hərəkət etməlidir. Bu blokdan istifadə edin:\n\n[bloklu blok] [0] "
+          "courseA_maze_seq1_b": "Quşun donuza çatmağı üçün Qərbə 3 dəfə hərəkət etdirilməlidir. Bu bloktan istifadə edin:\n[bloklu blok] [0]"
         },
         "courseA_maze_seq6_2021": {
-          "courseA_maze_seq6_a": "Son kodunuzda 3 hərəkət bloku olmalıdır. ",
+          "courseA_maze_seq6_a": "Sizin son kodunuzda 3 dənə hərəkət bloku olmalıdır.",
           "courseA_maze_seq6_b": "Tıxanarsanız, tapmacanı bir hissəni küncdən əvvəl və bir hissəsini küncdən sonra 2 hissəyə həll etməyə çalışın. "
         },
         "courseA_maze_seq8_2021": {
@@ -2120,7 +2135,7 @@
           "courseA_maze_seq_challenge2_a": "Barmaqlarınızla yerləri saymağa çalışın. Başladığınız yeri saymaq lazım olmadığını unutmayın!"
         },
         "courseA_maze_seq_challenge2_2021": {
-          "courseA_maze_seq_challenge2_a": "Barmaqlarınızla yerləri saymağa çalışın. Başladığınız yeri saymamağı unutmayın! "
+          "courseA_maze_seq_challenge2_a": "Barmaqlarınızla yerləri saymağa çalışın. Başladığınız yeri saymaq lazım olmadığını unutmayın!"
         },
         "courseB_Scrat_ramp1_2018": {
           "2": "Səhv etməkdən qorxmayın! Bir şey sınayın və nəticə vermirsə, başqa bir şey sınayın!",
@@ -2135,7 +2150,7 @@
           "1": "Əgər Scrat istədiyinizi etmirsə, hər iki blokun tamamilə birlikdə çalışdığından əmin olun, sonra \"Başlat \" yenidən basın."
         },
         "courseB_Scrat_ramp2_2021": {
-          "1": "Kodunuz belə görünməlidir:\n\n[bloklu blok] [0] "
+          "1": "Kodunuz belə görünməlidir:\n\n[bloklu blok] [0]"
         },
         "courseB_Scrat_ramp3a_2021": {
           "1": "Kodunuz belə görünməlidir:\n\n[bloklu blok] [0] "
@@ -2147,7 +2162,7 @@
           "1": "Kodunuz belə görünməlidir:\n\n[bloklu blok] [0] "
         },
         "courseB_Scrat_ramp5a_2021": {
-          "1": "Kodunuz belə görünməlidir:\n\n[bloklu blok] [0] "
+          "1": "Kodunuz belə görünməlidir:\n\n[bloklu blok] [0]"
         },
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_a": "[Bloklu blok] [0] bloku, üstündə duranda xəzinə götürmək üçün istifadə edilə bilər. "
@@ -2157,37 +2172,35 @@
           "courseB_collector_loops2_b": "Xəzinə ilə bir yerə çatdıqda, onu almaq üçün [bloklu blok] [0] blokundan istifadə edin. "
         },
         "courseB_collector_loops4_2021": {
-          "courseB_collector_loops4_b": "Laurelin nə qədər irəli getdiyini dəyişdirmək üçün döngənin neçə dəfə işlədiyini dəyişdirin.",
-          "courseB_collector_loops4_a": "İşlərin səhv getdiyini anlamaq üçün addım düyməsini istifadə etməyə çalışın.",
-          "courseB_collector_loops4_c": "Laurel, \"təkrar\" [bloklu blok] [0] döngəsini bitirdikdən sonra aşağı gəzməli və xəzinəni toplamalıdır! "
+          "courseB_collector_loops4_b": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin."
         },
         "courseB_iceage_loops10_2021": {
-          "courseB_iceage_loops10_a": "Qırıq buzlara diqqət yetirin! Scrat suya düşəcək! ",
-          "courseB_iceage_loops10_b": "Addımları yüksək səslə söyləməyə və ya bir kağıza yazmağa çalışın. Hər hansı bir nümunə görürsünüzmü? ",
+          "courseB_iceage_loops10_a": "Qırıq buzlardan ehtiyaltlı olun! Scrat birbaşa ora düşəcək! ",
+          "courseB_iceage_loops10_b": "Addımları yüksək səslə deməyə və ya bir kağız parçasına yazmağa çalışın. Hər hansı bir nümunə görürsən?",
           "courseB_iceage_loops10_c": "Bu uzun bir tapmacadır! Bu yolu izləyin. "
         },
         "courseB_iceage_loops1_2021": {
-          "courseB_iceage_loops1_a": "Qırıq buzlara diqqət yetirin! Scrat dərhal düşəcək! ",
-          "courseB_iceage_loops1_b": "Bu blokdan istifadə etməli olacaqsınız:\n\n[bloklu blok] [0] "
+          "courseB_iceage_loops1_a": "Qırıq buzlardan ehtiyaltlı olun! Scrat birbaşa ora düşəcək! ",
+          "courseB_iceage_loops1_b": "Bu blokdan istifadə etməli olacaqsınız:"
         },
         "courseB_iceage_loops2_2021": {
-          "courseB_iceage_loops2_a": "Bu tapmacanı iki hissəyə bölün, biri küncdən əvvəl, biri də küncdən sonra. ",
-          "courseB_iceage_loops2_b": "Zorlandınızsa, addımları yüksək səslə söyləməyə çalışın. ",
-          "courseB_iceage_loops2_c": "Scrat -ı palamuta çatdırmaq üçün bu yolu izləyin. "
+          "courseB_iceage_loops2_a": "Bu puzzle-ı iki hissəyə böl, biri küncdən əvvəl, və biri küncdən sonra.",
+          "courseB_iceage_loops2_b": "Əgər çətinlik çəkirsənsə, addımları səsli deməyə cəhd göstər.",
+          "courseB_iceage_loops2_c": "Scrat-ı palıd qozasına çatdırmaq üçün bu yolu izlə."
         },
         "courseB_iceage_loops3_2021": {
-          "courseB_iceage_loops3_a": "Bu yeni blokdan istifadə edin!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml> ",
-          "courseB_iceage_loops3_b": "Kodu təkrar etmək üçün bir 'təkrar\\` [bloklu blok] [0] döngəsini sürükləyin, sonra istədiyiniz blokun içinə qoyun."
+          "courseB_iceage_loops3_a": "Bu yeni blokdan istifadə edin!  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Kodu təkrarlamaq üçün \"təkrarla\"-nı çıxart, daha sonra onu istədiyin blokun içinə yerləşdir."
         },
         "courseB_iceage_loops4_2021": {
-          "courseB_iceage_loops4_a": "Scrat'ın meşə palamuduna çatmaq üçün atacağı addımları yazmağa çalışın. Bir nümunə görürsən? ",
+          "courseB_iceage_loops4_a": "Scrat'ın palıd qozasına çatması üçün atacağı addımları yazmağa çalışın. Bir naxış görürsüz? ",
           "courseB_iceage_loops4_b": "Kodunuzu işə salmaqdan və nə olduğunu görməkdən qorxmayın!",
-          "courseB_iceage_loops4_c": "Bu, Scrat -ın keçməli olduğu yoldur. "
+          "courseB_iceage_loops4_c": "Bu, Scrat-ın keçməli olduğu yoldur."
         },
         "courseB_iceage_loops6_2021": {
-          "courseB_iceage_loops6_a": "Son kodunuzda \\*\\* üç \\*\\* hərəkət bloku olacaq.",
-          "courseB_iceage_loops6_b": "Yalnız \\*\\* bir \\*\\* daha çox döngə əlavə etməlisiniz! ",
-          "courseB_iceage_loops6_c": "Son yolunuz belə görünməlidir. "
+          "courseB_iceage_loops6_a": "Sizin axırıncı kodunuzda _üç_ hərəkət bloku olacaq.",
+          "courseB_iceage_loops6_b": "Yalnızca bir döngü daha artıq əlavə etməlisiniz!",
+          "courseB_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
         },
         "courseB_iceage_loops7_2021": {
           "courseB_iceage_loops7_a": "Tıxanmısınızsa, bir kağıza addımlar yazmağa çalışın. Bir nümunə görürsən?",
@@ -2201,7 +2214,7 @@
         "courseB_iceage_loops9_2021": {
           "courseB_iceage_loops9_a": "Çətinlik çəkmək? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanı işə salmaqdan qorxma! ",
           "courseB_iceage_loops9_b": "Son kodunuzda \\*\\* 4 \\*\\* döngə olmalıdır.",
-          "courseB_iceage_loops9_c": "Palıd qozasını almaq üçün Scrat bu yolu izləməlidir."
+          "courseB_iceage_loops9_c": "Scrat palamut almaq üçün bu yolu izləməlidir."
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "Scrat -ı hərəkət etdirmək üçün blokları [bloklu blok] [0] blokuna qoşun!",
@@ -2342,35 +2355,35 @@
           "courseB_maze_seq_challenge2_b": "Blokları yenidən düzəldin və pilləkən nümunəsi yolunu seçin. "
         },
         "courseB_starWars_prog1_2021": {
-          "courseB_starWars_prog1_a": "Blokları bir -bir əlavə etməyə çalışın, sonra nə olduğunu görmək üçün \"Çalış\" düyməsini basın. ",
+          "courseB_starWars_prog1_a": "Blokları bir-bir əlavə etməyə çalışın, sonra nə olduğunu görmək üçün \"Çalış\" düyməsini basın. ",
           "courseB_starWars_prog1_b": "Bu tapmacanı həll etmək üçün Şərqə hərəkət etmək istəyəcəksiniz. Nə qədər hərəkət etmək lazımdır?\n\n[bloklu blok] [0] "
         },
         "courseB_starWars_prog3_2021": {
           "courseB_starWars_prog3_a": "Bu tapmacanı həll etmək üçün 3 yolla hərəkət etməlisiniz. ",
-          "courseB_starWars_prog3_b": "Bir anda bir kod parçası yaradın. Oradan hara getmək lazım olduğunu anlamaq üçün onu işlədin. "
+          "courseB_starWars_prog3_b": "Bir anda bir kod parçası yaradın. Oradan hara getmək lazım olduğunu anlamaq üçün onu işlədin."
         },
         "courseB_starWars_prog4_2021": {
-          "courseB_starWars_prog4_a": "Bir anda bir kod parçası yaradın. Oradan hara getmək lazım olduğunu anlamaq üçün onu işlədin. ",
-          "courseB_starWars_prog4_b": "Daha qısa kod üçün \"təkrar\" blokundan istifadə etməyə çalışın.\n\n[bloklu blok] [0] "
+          "courseB_starWars_prog4_a": "Bir anda bir kod parçası yaradın. Oradan hara getmək lazım olduğunu anlamaq üçün onu işlədin.",
+          "courseB_starWars_prog4_b": "Daha qısa kod üçün `təkrar et` xanasını istifadə etməyə çalışın"
         },
         "courseB_starWars_prog5_2021": {
-          "courseB_starWars_prog5_a": "Bu model son tapmacaya bir az bənzəmir? ",
+          "courseB_starWars_prog5_a": "Bu model bir az puzzle-ın axırıncı parçasına bənzəmir?",
           "courseB_starWars_prog5_b": "BB-8, metalın üstünə yuvarlanarkən onu tutacaq. ",
           "courseB_starWars_prog5_c": "Bu nümunəni barmağınızla izləyin. Hərəkət edərkən metal parçalarını sayın. ",
-          "courseB_starWars_prog5_da": "Nərdivan tapmacası ilə eyni həlli istifadə etsəniz nə olacağına baxın:\n\n\\[] [0] "
+          "courseB_starWars_prog5_da": "Pilləkən tapmacası ilə eyni həlli istifadə etsəniz nə baş verdiyinə baxın:"
         },
         "courseB_starWars_prog6_2021": {
-          "courseB_starWars_prog6_a": "Bu model, hər istiqamətə iki hərəkət edən bir pilləkəndir! ",
-          "courseB_starWars_prog6_b": "Daha qısa kod üçün \"təkrar\" blokundan istifadə etməyə çalışın.\n\n[bloklu blok] [0] "
+          "courseB_starWars_prog6_a": "Bu modelləmə hər istiqamətdə iki hərəkətlə sadəcə bir pilləkən addımıdır!",
+          "courseB_starWars_prog6_b": "Daha qısa kod üçün `təkrar et` blokundan istifadə etməyə çalışın\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
-          "courseB_starWars_prog7_a": "Bu model son tapmacaya bir az bənzəmir? ",
+          "courseB_starWars_prog7_a": "Bu model bir az da sonuncu tapmacaya bənzəmirmi?",
           "courseB_starWars_prog7_b": "BB-8, metalın üstünə yuvarlanarkən onu tutacaq. ",
           "courseB_starWars_prog7_c": "Bu tapmacanın üzərinə böyük pilləkən pilləsi nümunəsi çəkməyə çalışın. Bütün metal qırıntılarını əhatə edirmi? "
         },
         "courseB_starWars_prog8_2021": {
-          "courseB_starWars_prog8_a": "Artıq səyahət etdiyiniz bir sıra boşluqlara qayıtmaq düzgün deyil. ",
-          "courseB_starWars_prog8_b": "İçəri qoyduğunuz kodun nə olduğunu görmək üçün \"təkrar\" blokunu istifadə etməyə çalışın.\n\n[bloklu blok] [0] "
+          "courseB_starWars_prog8_a": "Artıq səyahət etdiyiniz bir sıra boşluqların üzərindən bir də keçmək olar. ",
+          "courseB_starWars_prog8_b": "Daxilinə yerləşdirdiyin blokda nəyin baş verdiyini görmək üçün \"təkrarla\" blokunu istifadə etməyə çalış.\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
@@ -2382,9 +2395,9 @@
           "courseB_starWars_prog9_a": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "Səhv etməkdən qorxma! Hələ tapmacanı həll etməsəniz də, nə olduğunu görmək üçün kodu işlədin. ",
-          "courseB_starWars_prog9_b": "Bu tapmacanı həll etməyin bir çox yolu var.",
-          "courseB_starWars_prog9_c": "Burada 'təkrar' [bloklu blok] [0] döngəsi kömək edə bilərmi? "
+          "courseB_starWars_prog9_a": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "courseB_starWars_prog9_b": "Bu tapmacanı həll etməyin çoxlu yolları var",
+          "courseB_starWars_prog9_c": "`təkrar et`  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml>l dövrü burada kömək edə bilər?"
         },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge_a": "Siz personajları oyun əraszisində müxtəlif yerlərə hərəkət etdirmək üçün bu xanada istifadə edə bilərsiniz.\\\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
@@ -2923,22 +2936,34 @@
           "alternate": "Alternativ blok \"Rəqqasələr\" kateqoriyasındadır."
         },
         "Overworld Avoid Monsters": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Avoid Monsters_2019": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Avoid Monsters_2020": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Plant Crops": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Plant Crops_2019": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Plant Crops_2020": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Powered Minecart": {
           "mc_13_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. "
@@ -2998,10 +3023,11 @@
         },
         "courseA_artist_loops3_2021": {
           "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz.",
-          "courseA_artist_loops3_a": "Harada səhv getdiyini görmək üçün proqramı barmağınızla yavaş-yavaş izləyin."
+          "courseA_artist_loops3_a": "Səhvin harada olduğunu görmək üçün barmağınızı proqram boyunca yavaşca sürükləyin."
         },
         "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_a": "Döngünün 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+          "courseA_artist_loops4_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz.",
+          "courseA_artist_loops4_b": "Təkcə bir <xml><block type=\"simple_move_right\"/></xml> bloku istifadə edə bildiyinizə görə\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> döngüsünə yerləştirməyi sınayın."
         },
         "courseA_artist_loops5": {
           "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın.",
@@ -3021,7 +3047,8 @@
         },
         "courseA_artist_loops5_2021": {
           "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın.",
-          "courseA_artist_loops5_b": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+          "courseA_artist_loops5_b": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz.",
+          "courseA_artist_loops5_c": "Təkcə bir <xml><block type=\"simple_move_right\"/></xml> bloku istifadə edə bildiyinizə görə\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsünə yerləştirməyi sınayın."
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq.",
@@ -3041,7 +3068,7 @@
         },
         "courseA_artist_loops6_2021": {
           "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq.",
-          "courseA_artist_loops6_a": "Təpənin necə qurulacağını anlaya bilmirsiniz? Hər birinin nə çəkdiyini görmək üçün bloklarla bir az oynamağa çalışın."
+          "courseA_artist_loops6_a": "Təpəni necə düzəldəcəyinizi bilmirsiniz? Hər birinin nə çəkdiyini görmək üçün blokları bir balaca oynatmağa çalışın."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_b": "İlk öncə bir dalğa üçün kod yazmağa çalışın, sonra digər ikisini çəkmək üçün həmin kodu təkrar edin."
@@ -3056,7 +3083,9 @@
           "courseA_artist_loops7_b": "İlk öncə bir dalğa üçün kod yazmağa çalışın, sonra digər ikisini çəkmək üçün həmin kodu təkrar edin."
         },
         "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_b": "İlk öncə bir dalğa üçün kod yazmağa çalışın, sonra digər ikisini çəkmək üçün həmin kodu təkrar edin."
+          "courseA_artist_loops7_b": "İlk öncə bir dalğa üçün kod yazmağa çalışın, sonra digər ikisini çəkmək üçün həmin kodu təkrar edin.",
+          "courseA_artist_loops7_a": "Döngəni hara qoyacağınızı anlaya bilmirsinizsə, kodunuzu addım-addım yazmağa və nümunələri axtarmağa çalışın.",
+          "courseA_artist_loops7_c": "Bir döngənin içərisinə birdən çox blok qoya biləcəyini unutma."
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "Sizin üçün nə yazıldığını görmək üçün kodu işə salın.",
@@ -3344,8 +3373,7 @@
           "1": "Addımları yüksək səslə söylə və cavabın tapılmasına kömək edib -etmədiyini gör. "
         },
         "courseA_playLab_events2_2021": {
-          "courseA_playLab_events2_a": "İti nəsə deməyə məcbur edən bir blok axtarın.",
-          "courseA_playLab_events2_b": "Bu tapmacanı tamamlamaq üçün lazım olan kod budur:\n\"Blockly\"blok[0]"
+          "courseA_playLab_events2_a": "İtin nəsə deməsi üçün blok tap."
         },
         "courseA_playlab_events_challenge2": {
           "courseA_playlab_events_challenge2_a": "Quşu oxumağa məcbur edə bilərsən.\n\"Blockly\"blok[0]"
@@ -3360,7 +3388,9 @@
           "courseA_playlab_events_challenge2_a": "Quşu oxumağa məcbur edə bilərsən.\n\"Blockly\"blok[0]"
         },
         "courseA_playlab_events_challenge2_2021": {
-          "courseA_playlab_events_challenge2_a": "Quşu oxumağa məcbur edə bilərsən.\n\"Blockly\"blok[0]"
+          "courseA_playlab_events_challenge2_a": "Quşa mahnı oxutdura bilərsən",
+          "courseA_playlab_events_challenge2_b": "Bir ribita bip səsi çıxartdıra bilərsiniz.",
+          "courseA_playlab_events_challenge2_c": "Əsəbi bir canavar mırıltısı yarada bilərsiniz.\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseB_Scrat_ramp2_2018": {
           "1": "Sizin kodunuz buna oxşamalıdı:\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -3408,11 +3438,12 @@
           "1": "Sizin kodunuz buna oxşamalıdı:\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_b": "Sənətçi bu xətti çəkmək üçün cənuba hərəkət etmək istəyəcək."
+          "courseB_artist_loops3_a": "Daha yaxşı kod üçün \"təkrar\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> döngədən istifadə etməyi unutmayın!"
         },
         "courseB_artist_loops9_2021": {
           "courseB_artist_loops9_a": "Unutmayın ki, tullanma blokları  xətt çəkmədən hərəkət etmək üçün istifadə edilə bilər.",
-          "courseB_artist_loops9_b": "Bu tapmacanı həll etmək üçün W blokundan istifadə etmək istəyəcəksiniz."
+          "courseB_artist_loops9_b": "Bu tapmacanı həll etmək üçün W blokundan istifadə etmək istəyəcəksiniz.",
+          "courseB_artist_loops9_c": "Döngəni hara qoyacağını anlaya bilmirsən? Kodu kağız üzərində addım-addım yazmağa çalış və nümunə axtar."
         },
         "courseB_maze_seq1_2018": {
           "courseB_maze_seq1_a": "Scratı hərəkət etdirmək üçün blokları <xml><block type=\"when_run\"/></xml> blokuna birləşdirin!"
@@ -3448,13 +3479,12 @@
           "courseB_maze_seq8_a": "Tapmacanı həll edənə qədər hər dəfə bir blok əlavə etməyə çalışın."
         },
         "courseB_playlab_events7_2021": {
-          "courseB_playlab_events7_b": "Səsi oynatmaq üçün lazım olan blok budur.\n\"Blockly\"blok[0]",
-          "courseB_playlab_events7_c": "Cəngavəri yox etmək üçün lazım olan blok budur:\n\"Blockly\"blok[0]",
-          "courseB_playlab_events7_a": "Bu hadisə blokuna ehtiyacınız olacaq:\n\"Blockly\"blok[0]"
+          "courseB_playlab_events7_b": "Bu səsi oxutmaq üçün lazım olan blokdur:\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "Bu cəngavəri yoxa çıxartmaq üçün lazım olan blokdur:\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2021": {
-          "courseB_playlab_events_challenge1_a": "\"▼\" düyməsini basdığınız zaman digər heyvanların aşağı hərəkət etməsini təmin edin.\n\"Blockly\"blok[0]",
-          "courseB_playlab_events_challenge1_b": "Heyvanların sürətini bu bloku işlədərək dəyişdirin:\n\"Blockly\"blok[0]"
+          "courseB_playlab_events_challenge1_a": "`▼` buna basanda digər heyvanları aşağı apar.\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "Bu blokdan istifadə etmaklə heyvanların sürətini dəyiş:\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events8": {
           "courseC_PlayLab_events8_a": "Bunun düzgün baş verməsi üçün blokları \"aktyor toxunanda\" blokuna birləşdirməlisiniz.",
@@ -4859,62 +4889,11 @@
           "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
         },
         "courseA_playLab_events4_2021": {
-          "courseA_playLab_events4_a": "Jorge'nin sağa doğru hərəkət etməsini təmin etməyiniz üçün lazım olan hadisə bloku budur:\n\"Blockly\"blok[0]",
-          "courseA_playLab_events4_b": "Bu tapmacanı tamamlamaq üçün lazım olacaq kod budur:\n\"Blockly\"blok[0]"
-        },
-        "courseA_playLab_events7_2021": {
-          "courseA_playLab_events7_a": "Oyunçular toqquşanda nə olacağını idarə etmək üçün bu blokdan istifadə edin."
-        },
-        "courseB_artist_loops7_2021": {
-          "courseB_artist_loops7_a": "Bu problem bir -birinin ardınca \\*\\* 4 \\*\\* döngədən  istifadə edir!"
-        },
-        "courseB_collector_loops10_2021": {
-          "courseB_collector_loops10_b": "Hərəkətləri bir kağızın aşağısına yazmağa və nümunə axtarmağa çalışın."
-        },
-        "courseB_collector_loops3_2021": {
-          "courseB_collector_prog3_a": "Xəzinənizi toplamaq üçün [bloklu blok] [0] blokundan istifadə etməyə çalışın. ",
-          "courseB_collector_prog3_b": "Bir döngənin içərisinə birdən çox blok qoya biləcəyini unutma."
-        },
-        "courseB_collector_loops5_2021": {
-          "courseB_collector_loops5_a": "İşi yerinə yetirmək üçün birdən çox döngə istifadə edin. ",
-          "courseB_collector_loops5_b": "Nə baş verdiyini görmək üçün kodu bir neçə dəfə işə salın. "
-        },
-        "courseB_collector_loops6_2021": {
-          "courseB_collector_loops6_a": "İşlərin haradan getdiyini anlamırsınız? Proqramınızı bir blokdan keçmək üçün \"Addım\" düyməsini istifadə edin. ",
-          "courseB_collector_loops6_b": "\"3\" düyməsini basaraq və fərqli bir nömrə seçərək təkrar döngənin neçə dəfə işlədiyini dəyişə bilərsiniz. ",
-          "courseB_collector_loops6_c": "Bu tapmacanı həll etmək üçün 3 \"təkrar\" döngədən istifadə etmək istəyəcəksiniz.",
-          "courseB_collector_loops6_d": "Qarışıqsınızsa, bu tapmacanı 3 hissəyə bölməyə çalışın. "
-        },
-        "courseB_collector_loops7_2021": {
-          "courseB_collector_loops7_a": "Tapmacada çətinlik çəkirsinizsə, onu anlamağa kömək etmək üçün kağıza çəkməyə çalışın. ",
-          "courseB_collector_loops7_b": "Bu tapmacanı həll etmək üçün 3 təkrar döngəyə ehtiyacınız olacaq və sonunda əlavə xəzinəni unutmayın! "
-        },
-        "courseB_collector_loops8_2021": {
-          "courseB_collector_loops8_challenge_a": "Döngələri hara qoyacağını anlaya bilmirsən? Kodu kağız üzərində addım-addım yazmağa çalış və nümunə axtar."
-        },
-        "courseB_collector_loops9_2021": {
-          "courseB_collector_loops9_a": "Bu çox çətin görünür? Daha asan hiss edilməsi üçün 3 kiçik problemə bölün. ",
-          "courseB_collector_loops9_b": "Bu həll üçün bir-birinin ardınca 3 təkrar edən döngəyə ehtiyacınız olacaq."
+          "courseA_playLab_events4_a": "Budur, Jorge-nin sağa hərəkət etməsi üçün sizə lazım olacan hadisə bloku:\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "Bu kod bu tapmacanı tamamlamaq üçün sizə lazım olacaq: \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
         },
         "courseB_collector_loops_challenge2a_2021": {
-          "courseB_collector_loops_challenge2a_a": "Bir şey yolunda getməsə, onu düzəltməyə çalışın. Təslim olmayın!",
-          "courseB_collector_loops_challenge2a_b": "Labirintdən keçmək üçün bu varianta baxın. Təkrar edə biləcəyiniz bir nümunə görürsünüzmü?"
-        },
-        "courseB_playlab_events3_2021": {
-          "courseB_playlab_events3_a": "Bu hadisə əlavə etmək üçün istifadə etməli olduğunuz blokdur:\n\"Blockly\"blok[0]",
-          "courseB_playlab_events3_b": "Daisy-nin əhvalını dəyişdirmək üçün lazım olan blok budur:\n\"Blockly\"blok[0]"
-        },
-        "courseB_playlab_events4_2021": {
-          "courseB_playlab_events4_a": "Sol oxu idarə edən hadisə budur:\n\"Blockly\"blok[0]",
-          "courseB_playlab_events4_b": "Cəngavəri sola hərəkət etdirən blok budur.\n\"Blockly\"blok[0]"
-        },
-        "courseB_playlab_events5_2021": {
-          "courseB_playlab_events5_a": "Bu sağ oxu idarə edən hadisə blokudur:\n\"Blockly\"blok[0]",
-          "courseB_playlab_events5_b": "Cəngavərin qaçmağa məcbur edən  blok budur.\n\"Blockly\"blok[0]"
-        },
-        "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "Bu hadisə bloklarına ehtiyacınız olacaq:\n\"Blockly\"blok[0]",
-          "courseB_playlab_events6_c": "Keçmək üçün bütün bayraqları əldə edin!"
+          "courseB_collector_loops_challenge2a_a": "Əgər bir şey səhv gedirsə, onu sazlamağa çalışın. Təslim olmayın!"
         },
         "2-3 Maze 3": {
           "2-3_Maze_6_a": "Bu tapmacanı həll etmək üçün 2 yol var!"
@@ -5013,27 +4992,36 @@
           "MC_HOC_2017_08_RY_c": "Lavadan sadə bir yolla keçmək üçün nöqtəli xətti izləməyə çalışın."
         },
         "Overworld Avoid Monsters2022": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Chop Tree2022": {
           "mc_2_a": "Ağacın önündə durmaq üçün iki dəfə `irəli gedin`.",
           "mc_2_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
         },
         "Overworld Chop Trees2022": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld House Frame Chosen2022": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Move to Sheep2022": {
           "mc_1_a": "`İrəli get` bloku alətlər qutusunun başındadır.",
           "mc_1_b": "Hər iki `irəli get` blokunun `icra ediləndə` blokuna əlavə olunduğundan əmin olun."
         },
         "Overworld Place Wall2022": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Plant Crops2022": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Powered Minecart2022": {
           "mc_13_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. "
@@ -5791,8 +5779,8 @@
           "courseA_artist_loops2_b": "Bu tapmacanı həll etmək üçün bu blokdan <xml><block type=\"simple_move_right\"/></xml> istifadə edin."
         },
         "courseA_artist_loops2_2021": {
-          "courseA_artist_loops2_a": "Xəttin necə çəkiləcəyini anlaya bilmirsiniz? Nə baş verdiyini görmək üçün <xml><block type=\"when_run\"/></xml> blokuna bloklar əlavə etməyə başlayın.",
-          "courseA_artist_loops2_b": "Bu tapmacanı həll etmək üçün bu blokdan <xml><block type=\"simple_move_right\"/></xml> istifadə edin."
+          "courseA_artist_loops2_a": "Xətt çəkməyi bilmirsiz? Nə olduğunu görmək üçün [blokly blok] [0] blokuna bloklar əlavə etməyə başlayın.",
+          "courseA_artist_loops2_b": "Bu tapmacanı həll etmək üçün [blokly blok] [0]  blokubdan istifadə edin."
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
@@ -6138,6 +6126,117 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
+        },
+        "4-5 Nested Loops 12": {
+          "4-5_Nested_Loops_12_a": "\\*\\*360/36 =? \\*\\*"
+        },
+        "CourseD_Dance_2020_02": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_022022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_03": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_032022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_06": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_062022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_07": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_072022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_08": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_082022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_09": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Sadəcə \"Yekunlaşdır\" düyməsini basın!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Sadəcə \"Yekunlaşdır\" düyməsini basın!"
+        },
+        "Dance_2019_02": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
+        },
+        "Dance_2019_03": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "Dance_2019_06": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "Dance_2019_07": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "Dance_2019_08": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "Dance_2019_09": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Sadəcə \"Yekunlaşdır\" düyməsini basın!"
+        },
+        "Underground Mining Coal": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal2022": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal_2019": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal_2020": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "Nərdivanların qalan hissəsini çəkmək üçün verilən koda başqa bir blok əlavə edin.",
+          "courseA_artist_loops9_b": "Əlavə etdiyiniz blok\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n döngüsünə yerləşdirilməlidir.",
+          "courseA_artist_loops9_c": "Döngəni hara qoyacağınızı anlaya bilmirsinizsə, kodunuzu addım-addım yazmağa və nümunələri axtarmağa çalışın."
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "[Bloklu blok] [0] kimi bloklar rəssamın yamacda hərəkət etməsinə imkan verir!",
+          "courseA_artist_loops_challenge2_b": "Bir çadırı bitirdikdən sonra, digərinə keçmək üçün iki dəfə \"tullan\"!",
+          "courseA_artist_loops_challenge2_c": "tapmacanı bitirmək üçün bütün bloklarınız bir döngüdə olmalıdır."
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_d": "Canavara kliklədiyinizdə Spiff the Robot'un görünməsini təmin edin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "Nəhayət, Wendel the Wizard görünməsi üçün Spiff klikləyin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "'Təkrar et' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> komandasından istifadə edin , sonra başqa blokları içinə yerləşdirin. Bunu neçə dəfə təkrarlamalısınız?"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "Nərdivan düzəltmək düzəltmək üçün şablonu neçə dəfə təkrarlamalısan?",
+          "courseB_artist_loops8_b": "Quşun bundan sonra nə etməsi lazım olduğunu görmək üçün sizə verilən kodu işlədməyə çalışın."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_b": "Zərin birini tamamladıqdan sonra digərinə `hoppan`!"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Nəyisə yaratmaq üçün nəsə de , kod bloklarını bu şəkildə birləşdir :\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

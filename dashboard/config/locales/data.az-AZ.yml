@@ -954,6 +954,60 @@ az:
         csc_fm_pilot: Funksional Maşınlar (Pilot)
         csc_fm_pilot_v2: Funksional Maşınlar Girişi
         csc-sprite-lab-pixel-editor: Öz Sprite'ını(-zı) Çək(-in)
+        csa-pl-intro-to-strings: Java-da sətirlərə giriş
+        csa-pl-compareTo: CompareTo() metodu
+        csc-event-short-intro: Hadisələr Qısa Giriş
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Oyun Ərazisində Ümumi Baxış
+        csa-day-in-pm-pl: Lahiyə meneceri nə edir?
+        csa-pl-intro-to-pm: Lahiyənin İdarə Edilməsinə Giriş
+        PL_CSD_CircuitPlayground_Setup: 'Oyun Meydançası Quraşdırma
+
+'
+        csa_object_oriented_programming: 'CSA: Obyekt-Orientasiya Proqramlaşdırması'
+        csa_creating_objects: 'Kompüter Elmlərinin Assosiasiyası: Obyektlərin Yaradılması'
+        csa_calling_methods: 'CSA: Çağırış Üsulları'
+        csa_while_loops: 'CSA: While Loops'
+        csa_inheritance: 'CSA: Miras'
+        csa_writing_a_method: 'CSA: Metodun yazılması'
+        csa_software_engineering_code_reviews: 'CSA: Proqram Mühəndisliyi - Kod Baxışları'
+        csa_conditional_statements: 'CSA: Şərti operatorlar'
+        csa_printing_in_java: |2-
+
+          CSA: Java-da çap
+        csa_two_way_selection_and_not: 'CSA: İki Yönlü Seçim və DEYİL'
+        csa-pl-intro-to-oop: |-
+          Obyekt Yönümlü Proqramlaşdırmaya Giriş
+          Obyekt Yönlü Proqramlaşdırmaya Giriş
+        csa-pl-welcome-to-Neighborhood: Qonşuluğa Xoş Gəlmisiniz
+        csa-pl-calling-methods: Javada Çağırış Üsulları
+        csa-pl-creating-objects: Obyektlərin yaradılması
+        csa_accessor_methods: 'CSA: Aksesuar Üsulları'
+        csa_constructors: 'CSA: İnşaatçılar'
+        csa_creating_a_scanner_object: |2-
+
+          CSA: Skaner Obyektinin yaradılması
+        csa_creating_variables: Dəyişənlərin yaradılması
+        csa_instance_variables_and_attributes: 'CSA: Nümunə Dəyişənləri və Atributları'
+        csa_mutator_methods: 'CSA: Mutator üsulları'
+        csa_overloaded_constructors: 'CSA: Həddindən Artıq Yüklənmiş Konstruktorlar'
+        csa_the_tostring_method: |-
+          CSA: ToString () Metodu
+          CSA: ToString () Üsulu
+        csa_scanner_class_methods: 'CSA: Skaner Sinif Üsulları'
+        csa_for_loops: |-
+          CSA: For Döngələri
+          CSA: For Loops
+        csa_enhanced_for_loops: |-
+          CSA: Gücləndirilmiş For Döngələri
+          CSA: Gücləndirilmiş For Lopps
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D Arrayda Dəyərlər Modifikası'
+        csa_nested_loops: |-
+          CSA: Nested Loops
+          CSA: İç-içə Döngələr
+        csa_one_dimensional_arrays: |-
+          CSA: Bir Ölçülü (1D) Massivlər
+          CSA: Bir Ölçülü (1D) Arrays
+        csa_polymorphism: 'CSA: Polimorfizm'
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına

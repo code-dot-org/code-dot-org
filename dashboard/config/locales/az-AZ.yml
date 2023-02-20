@@ -329,6 +329,7 @@ az:
   teacher_mailer:
     new_teacher_subject: Code.org-a xoş gəlmisiniz!
     delete_teacher_subject: 'Code.org bildirişi: Sizin hesabınız ləğv olunub'
+    verified_teacher_subject: Code.org Müəllim Təstiqləməsi - Uğur
   section:
     your_section:
       one: 'Sizin Bölməniz:'
@@ -878,6 +879,8 @@ az:
       image_alt: Code.org tapmacasını göstərən laptopun ekranına işarə edən uşaq.
     elementary:
       image_alt: Eşşək arısı və tarlada göyqurşağının qarşısında duran dələ.
+    express:
+      image_alt: Bitkilər Zombilərə qarşı zombi və Flappy Bird-in yanında duran bitki.
     flappy:
       title: Qanadlı Kod
       body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod
@@ -911,10 +914,13 @@ az:
       title: Minecraft
       body: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a
         səyahət.
+      image_alt: Minecraftdan Dəmir Qolem Annanın həll etdiyi tapmacanın yuxarı görünüşünün
+        qarşısında dayanır.
     hoc-encryption:
       title: Sadə Şifrələmə
       body: Tələbələr şifrələnmiş mesajların yaradılması və sındırılması üsullarını
         öyrənəcəklər.
+      image_alt: İngilis dilində hərf tezliklərinin histoqramı.
     hoc:
       title: Ənənəvi labirint
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
@@ -929,24 +935,59 @@ az:
       title: Infinity oyun laboratoriyası
       body: Disney Infinity personajlarının oynadığı hekayə və ya oyun yaratmaq üçün
         Play Lab-dan istifadə edin.
+      image_alt: Frozen, Rapunzel və Böyük Qəhrəman 6`dan 5 dayanan personaj.
+    map:
+      image_alt: Birləşmiş Ştatların təxminən 20 bənövşəyi rəngdə vurğulanmış ştatlarının  boz
+        şəkli.
+    mc_escape:
+      image_alt: Zümrüdlərlə dolu xəzinə sandığını açarkən üst papaq və monokl taxan
+        Minecraft personajı.
+    mc:
+      image_alt: Minecraft-dan Anna və Stiv Code.org Minecraft tapmacasının qarşısında
+        dayanırlar.
     minecraft:
       title: Minecraft
       body: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
+      image_alt: Minecraft-dan Anna və Stiv Code.org Minecraft tapmacasının qarşısında
+        dayanırlar.
     minecraft2016:
       title: Minecraft
       body: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını
         proqramlaşdırın.
+    oceans:
+      image_alt: Okeanda müxtəlif dəniz canlılarını skan edən robot.
+    playlab:
+      image_alt: Mavi pişik, axmaq it və tarix öncəsi mışovul göstərən bir şəkil kolajı.
     poem-art:
       body: Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.
+      image_alt: Səhnədə çıxış edən hipster kalamar.
+    pre-express-2017:
+      image_alt: Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu
+        at.
+    pre-express-2018:
+      image_alt: Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu
+        at.
+    pre-express-2019:
+      image_alt: Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu
+        at.
+    pre-express:
+      image_alt: Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu
+        at.
     sports:
       title: İdman
       body: Basketbol oyunu hazırlayın və ya idman növlərini qarışdırın və uyğunlaşdırın.
+      image_alt: NBA və WNBA loqoları futbol topu, amerikan futbol topu, xokkey diski
+        və basketbol topunun yanında göstərilir.
     starwars:
       title: Star Wars
+      image_alt: R2-D2, Leia, Rey və BB-8 səhrada dayanır.
     text-compression:
       title: Mətnin sıxılması
       body: Bu dərsdə şagirdlər nümunələri simvollarla əvəz edərək mətni sıxmaq üçün
         Mətn Sıxılma Vidcetindən istifadə edəcəklər.
+      image_alt: |-
+        Bütün sözlər sadə simvolla əvəz etməklə mətn sıxılır.
+        Bütün sözlər bir simvolla əvəz etməklə kompres olunur.
     weblab:
       title: veb-laboratoriya (beta)
       body: Web Laboratoriyası HTML və CSS-dən istifadə edərək sadə veb səhifələr
@@ -954,6 +995,7 @@ az:
         və saytınızı saniyələr ərzində paylaşın.
       audience: 13+ yaş
       cta: Öyrənin necə
+      image_alt: HTML kodunu göstərən kompüter ekranı.
     widgets:
       title: Vidjetlər
       body: Tələbələr bu rəqəmsal alətlərdən istifadə edərək, Kompüter Elmləri Prinsipləri
@@ -1529,7 +1571,10 @@ az:
       forbidden: İstifadəçi tələbənin kilidlənən vəziyyətini yeniləyə bilməz
   reset_predict_progress_button: Cavabı Sil
   pixelation:
+    raw_format: İbtidai format
+    raw_format_alt: Heç bir formatlaşdırmadan bitlərə baxın
     readable_format: Oxunabilən Format
+    readable_format_alt: Piksellərə ayrılmış bitlərə bax(-ın)
     save_image: Şəkli saxla (-yın)
     actual_size: Hazırki/həqiqi ölçü
     image_file_format_header: Şəklin Fayl Formatı.

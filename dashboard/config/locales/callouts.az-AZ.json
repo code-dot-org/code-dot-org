@@ -960,7 +960,7 @@
           "courseC_maze_programming2_1": "Bu alət qutusudur. Tapmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "Kömək lazım olanda lampaya tosun!"
+          "courseA_maze_seq1_1": "Köməyə ehtiyacınız olduğunda lampaya basın!"
         },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
@@ -972,13 +972,13 @@
           "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
         },
         "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlamaq üçün \"Çalış\" düyməsini basın. "
+          "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlamaq üçün \"Çalış\" düyməsini basın"
         },
         "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Tapmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur."
         },
         "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "Xəzinə toplamaq üçün bu blokdan istifadə edin. "
+          "courseB_collector_loops1_1": "Xəzinəni yığmaq üçün bu blokdan istifadə et."
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "Köməyə ehtiyacınız olduğu zaman lampaya basın!"
@@ -1248,7 +1248,7 @@
           "craft_what_is_iron": "Bu dəmir mənimdir!"
         },
         "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "Bu rəqəm bu tapmacada bu blokların neçəsini istifadə edə biləcəyinizi söyləyir."
+          "courseA_artist_loops4_1": "Bu rəqəm bu problemin içərisində nə qədər blokdan istifadə edə biləcəyinizi göstərir."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_1": "Bu rəqəm o deməkdir ki, son cavabda bu tip blokdan yalnız biri istifadə oluna bilər."
@@ -1287,7 +1287,7 @@
           "courseA_maze_seq1_1": "Bir işarəyə ehtiyacınız olduğu zaman lampaya basın!"
         },
         "courseA_playLab_events4_2021": {
-          "courseA_playlab_events4_callout1": "Bu bir çağırışdır"
+          "courseA_playlab_events4_callout1": "Bu çağırışdır"
         },
         "courseB_Scrat_ramp3a_2019": {
           "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
@@ -2420,6 +2420,18 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Yeni blok!"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "ər dəfə ehtiyacınız olduqda bir sətirin üzərinə yenidən daxil ola biləcəyinizi bilirdinizmi?"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Hadisə oxunun istiqamətini dəyişmək üçün bura klikləyin."
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "İstiqamətləri dəyişmək üçün yaşıl aşağı sal oxundan istifadə edin. "
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "birinci bura basın"
         }
       }
     }
