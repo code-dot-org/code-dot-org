@@ -7,6 +7,74 @@
       "path": "all",
       "folders": [
         {
+          "name": "Dance",
+          "path": "dance",
+          "imageSrc": "thumbnail.png",
+          "sounds": [
+            {
+              "name": "Disco Beat",
+              "src": "disco_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Funky Bass",
+              "src": "funky_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Groovy Beat",
+              "src": "groovy_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Lucky Guitar",
+              "src": "lucky_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {"name": "Swish", "src": "swish", "length": 2, "type": "fx"},
+            {
+              "name": "Groovy Beat 2",
+              "src": "groovy_alternate_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Reggaeton Beat",
+              "src": "reggaeton_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Syncopated Beat",
+              "src": "syncopated_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Reggaeton Bass",
+              "src": "reggaeton_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Reggaeton Bass 2",
+              "src": "reggaeton_alternate_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Reggaeton Beat 2",
+              "src": "reggaeton_alternate_beat",
+              "length": 2,
+              "type": "beat"
+            }
+          ]
+        },
+        {
           "name": "Pop",
           "path": "pop",
           "imageSrc": "thumbnail.png",
@@ -77,74 +145,6 @@
             {
               "name": "Sugar Beat 2",
               "src": "sugar_alternate_beat",
-              "length": 2,
-              "type": "beat"
-            }
-          ]
-        },
-        {
-          "name": "Dance",
-          "path": "dance",
-          "imageSrc": "thumbnail.png",
-          "sounds": [
-            {
-              "name": "Disco Beat",
-              "src": "disco_beat",
-              "length": 2,
-              "type": "beat"
-            },
-            {
-              "name": "Funky Bass",
-              "src": "funky_bass",
-              "length": 2,
-              "type": "bass"
-            },
-            {
-              "name": "Groovy Beat",
-              "src": "groovy_beat",
-              "length": 2,
-              "type": "beat"
-            },
-            {
-              "name": "Lucky Guitar",
-              "src": "lucky_guitar",
-              "length": 2,
-              "type": "lead"
-            },
-            {"name": "Swish", "src": "swish", "length": 2, "type": "fx"},
-            {
-              "name": "Groovy Beat 2",
-              "src": "groovy_alternate_beat",
-              "length": 2,
-              "type": "beat"
-            },
-            {
-              "name": "Reggaeton Beat",
-              "src": "reggaeton_beat",
-              "length": 2,
-              "type": "beat"
-            },
-            {
-              "name": "Syncopated Beat",
-              "src": "syncopated_beat",
-              "length": 2,
-              "type": "beat"
-            },
-            {
-              "name": "Reggaeton Bass",
-              "src": "reggaeton_bass",
-              "length": 2,
-              "type": "bass"
-            },
-            {
-              "name": "Reggaeton Bass 2",
-              "src": "reggaeton_alternate_bass",
-              "length": 2,
-              "type": "bass"
-            },
-            {
-              "name": "Reggaeton Beat 2",
-              "src": "reggaeton_alternate_beat",
               "length": 2,
               "type": "beat"
             }
