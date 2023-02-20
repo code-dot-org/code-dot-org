@@ -38,7 +38,7 @@
                       "name": "إنشاء موسيقى"
                     }
                   },
-                  "short_description": "شغِّل ملف الصوت بصيغة MP3 من الرابط المحدد."
+                  "short_description": "شغِّل ملف الصوت بصيغة MP3 من الرابط المحدد.\n"
                 }
               }
             },
@@ -55,7 +55,7 @@
               }
             },
             "groups": {
-              "name": "مجموعات",
+              "name": "مجموعات\n",
               "expressions": {
                 "add": {
                   "palette_params": {
