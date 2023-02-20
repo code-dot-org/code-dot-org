@@ -3,7 +3,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Debug: Missing Paragraph and List\r\n\r\n\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n\r\n::: details [**What is a bug?**]\r\nBugs are mistakes in code which causes it not to work as planned.\r\n:::\r\n\r\n\r\n::: details [**What is debugging?**]\r\nDebugging is the process of finding and fixing bugs.  Debugging is a problem solving process so use your problem solving steps as you try to debug. \r\n:::\r\n\r\n\r\n::: details [**What are some examples of bugs?**]\r\n\r\nBugs can be anything that causes code not to work as planned.  Some examples are misspelling, putting code in the wrong place, using the wrong tag, or forgetting to close a tag.\r\n\r\n\r\n:::\r\n\r\n::: details [**Why does the code sometimes turn pink?**]\r\n\r\nWeb Lab is programmed to automatically detect some mistakes in HTML.  When it notices a mistake, it turns that code pink.  The mistake might be in pink, or it might be somewhere before the pink code.  You'll need to carefully debug to find your mistake.\r\n\r\n:::\r\n\r\n::: details [**Why does HTML seem to work even when it's broken?**]\r\n\r\nHTML is read by your web browser to generate web pages. Since people often make little mistakes when writing their web pages, browsers are programmed to make a best guess of what you intended to do. Sometimes different browsers are even programmed to make different guesses! The only way to ensure your code looks like you intend is make sure you're always using tags correctly.\r\n\r\n:::\r\n</div>\r\n\r\nIt looks like a paragraph is missing from the preview and the lists aren't quite right. Can you find and fix the bugs? \r\n \r\n# Do this\r\n\r\n * Find and fix the problems that are causing the bugs.",
+    "long_instructions": "# Debug: Missing Paragraph and List\r\n\r\n\r\nIt looks like a paragraph is missing from the preview and the lists aren't quite right. Can you find and fix the bugs? \r\n \r\n# Do this\r\n\r\n1) Find and fix the problems that are causing the bugs.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -12,13 +12,16 @@
     "bubble_choice_description": "Use your debugging skills to figure out why the paragraph has disappeared.",
     "encrypted_examples": "JK/iw0hJ8AbhrDwAn5IN86jirtgJbSTLMjH77OneepnW1kOYxz4kH1EkBhEX\nn/UZAwncROxof1P7pdbU3LbdEg==\n",
     "reference_links": [
+      "/courses/csd-2022/guides/html-tags",
       "/courses/csd-2022/guides/headings-and-paragraphs",
-      "/courses/csd-2022/guides/html-tags"
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/debugging-html"
     ],
     "parent_level_id": 22999,
     "thumbnail_url": "https://images.code.org/83b9723f9f3389674374366a73e59d06-image-1585676172131.png",
     "name_suffix": "_2023",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "map_reference": "/courses/csd-2022/guides/web-lab"
   },
   "game_id": 58,
   "published": true,
@@ -26,6 +29,6 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "Need to change the exemplar",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:14.982+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev choice level p tag 3_2022\\\"\"],\"cloned_from\":\"CSD Web Dev choice level p tag 3_2022\"},{\"changed_at\":\"2022-09-20 19:48:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 19:59:44 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 20:09:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 20:33:34 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 20:35:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:14.982+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev choice level p tag 3_2022\\\"\"],\"cloned_from\":\"CSD Web Dev choice level p tag 3_2022\"},{\"changed_at\":\"2022-09-20 19:48:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 19:59:44 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 20:09:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 20:33:34 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 20:35:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-17 23:27:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
