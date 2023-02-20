@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-02-13 20:14:07 UTC",
+    "serialized_at": "2023-02-17 21:27:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -53,14 +53,14 @@
     },
     {
       "key": "Local Landmarks - Unplugged Project Planning",
-      "name": "Local Landmarks - Unplugged Project Planning",
+      "name": "Mapping Landmarks - Unplugged Planning",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
         "overview": "In this **unplugged** lesson, students will create a plan for their digital mapping landmarks project. There is a lot of room for choice in this lesson and the instructor can select the area of focus for the student’s projects. \nFocus ideas:\n* Students can create a map of a very local area such as their classroom, school, or city. \n* Students can create a map to show state-wide historical landmarks, and regional, or national landmarks. \n* The instructor can link the mapping project to another particular area of study or research. \n",
-        "preparation": "* Choose a focus for student mapping landmarks projects.\n* Print an [Activity Guide](https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/edit?usp=sharing) for each student\n* Review [Activity Guide Teacher Key](https://docs.google.com/document/d/1cWsERLbWga8sO4STIPCoU2tMhTQTJeQa_A1jAASuI1c/edit?usp=sharing)",
+        "preparation": "* Choose a focus for student mapping landmarks projects.\n* Print an [Activity Guide](https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview) for each student\n* Review [Activity Guide - Teacher Key](https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview)",
         "student_overview": "In this lesson, you will make a plan for your mapping landmarks project. Next lesson you will code the project. First, you’ll work with your classmates to make a list of important landmarks. Then, you’ll decide which sprite costume you’ll use and what the tour guide will say when they visit each landmark in your project. At the end of this lesson, you will make a plan to interview someone in your community or research an important person so that you can add stories to your map. \n"
       },
       "seeding_key": {
@@ -71,7 +71,7 @@
     },
     {
       "key": "Local Landmarks - Coding Your Project",
-      "name": "Local Landmarks - Coding Your Project",
+      "name": "Mapping Landmarks - Coding Your Project",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -603,7 +603,7 @@
       "key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Local Landmarks Planning handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Mapping Landmarks Planning handout."
       },
       "seeding_key": {
         "activity_section.key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
@@ -801,7 +801,7 @@
       "key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 1-4\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Return student’s Local Landmarks Map Planning handout if they were collected in the previous lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 1-4\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Return student’s Mapping Landmarks Planning handout if they were collected in the previous lesson.",
         "duration": "10",
         "name": "Map Set Up",
         "progression_name": "Skill Building"
@@ -1960,11 +1960,11 @@
   "resources": [
     {
       "name": "Activity Guide Planning",
-      "url": "https://docs.google.com/document/d/1GU8rxIGl4rwscTtKqDlqp6eiazLltvzha8VT3Btv-2U/template/preview",
+      "url": "https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview",
       "key": "activity_guide_planning",
       "properties": {
         "audience": "Verified Teacher",
-        "download_url": "https://docs.google.com/document/d/1GU8rxIGl4rwscTtKqDlqp6eiazLltvzha8VT3Btv-2U/export/pdf",
+        "download_url": "https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/export/pdf",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -1999,11 +1999,11 @@
     },
     {
       "name": "Local Landmarks Map Reflection & Observation",
-      "url": "https://docs.google.com/document/d/1EBmhoM1MaBAhb46T7LKx2gFktTxxniZJJkNzZd0iXYc/template/preview",
+      "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview",
       "key": "local_landmarks_map_reflection_observation",
       "properties": {
         "audience": "Student",
-        "download_url": "https://docs.google.com/document/d/1EBmhoM1MaBAhb46T7LKx2gFktTxxniZJJkNzZd0iXYc/export/pdf",
+        "download_url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/export/pdf",
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -2176,7 +2176,7 @@
     {
       "key": "289e9e5b-9e48-4eef-b0fa-d7a5c4ac4482",
       "properties": {
-        "description": "Students will brainstorm a list of local landmarks and key storytellers."
+        "description": "Students will brainstorm a list of landmarks and key storytellers."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
