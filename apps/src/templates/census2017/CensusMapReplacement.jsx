@@ -111,17 +111,6 @@ class CensusMapInfoWindow extends Component {
             </a>
           </div>
         </div>
-        {!missingCensusData && (
-          <div className="inaccuracy-link">
-            <a
-              onClick={() =>
-                this.props.onTakeSurveyClick(schoolDropdownOption, true)
-              }
-            >
-              I believe that the categorization for this school is inaccurate.
-            </a>
-          </div>
-        )}
       </div>
     );
   }

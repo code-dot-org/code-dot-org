@@ -705,17 +705,25 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Removed 1 CensusSubmissionFormMap"
   end
 
-  test "deletes census_inaccuracy_investigation associated census_submissions associated with user email" do
-    census_inaccuracy_investigation = create :census_inaccuracy_investigation
-    id = census_inaccuracy_investigation.id
-    user = census_inaccuracy_investigation.user
-    refute_empty Census::CensusInaccuracyInvestigation.where(id: id),
-      "Expected at least one CensusInaccuracyInvestigation under this email"
+  test "deletes census_inaccuracy_investigations associated census_submissions associated with user email" do
+    teacher = create :teacher
+    submission = create :census_your_school2017v0, submitter_email_address: teacher.email
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `census_inaccuracy_investigations` (user_id, census_submission_id, notes, created_at, updated_at)
+        VALUES (#{teacher.id}, #{submission.id}, '', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+      SQL
+    )
 
-    purge_user user
+    assert_equal ActiveRecord::Base.connection.exec_query(
+      "SELECT id from `census_inaccuracy_investigations` WHERE `census_inaccuracy_investigations`.`user_id` = #{teacher.id}"
+    ).length, 1
 
-    assert_empty Census::CensusInaccuracyInvestigation.where(id: id),
-      "Rows are actually gone, not just anonymized"
+    purge_user teacher
+
+    assert_equal ActiveRecord::Base.connection.exec_query(
+      "SELECT id from `census_inaccuracy_investigations` WHERE `census_inaccuracy_investigations`.`user_id` = #{teacher.id}"
+    ).length, 0
 
     assert_logged "Removed 1 CensusInaccuracyInvestigation"
   end
