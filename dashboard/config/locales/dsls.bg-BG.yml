@@ -2647,6 +2647,7 @@ bg-BG:
         - {}
         - {}
         - {}
+        title: Въпрос 2
       CSD U1 IOSP match_2021:
         answers:
         - {}
@@ -2658,6 +2659,7 @@ bg-BG:
         - {}
         - {}
         - {}
+        title: Въпрос 2
       CSD U1 IOSP match_2022:
         answers:
         - {}
@@ -2669,6 +2671,7 @@ bg-BG:
         - {}
         - {}
         - {}
+        title: Въпрос 2
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -2680,6 +2683,7 @@ bg-BG:
         - {}
         - {}
         - text: Дефиниране
+        title: Въпрос 2
       CSD U1 Test PSP match_2021:
         answers:
         - {}
@@ -2691,6 +2695,7 @@ bg-BG:
         - {}
         - {}
         - text: Дефиниране
+        title: Въпрос 2
       CSD U1 Test PSP match_2022:
         answers:
         - {}
@@ -2702,6 +2707,7 @@ bg-BG:
         - {}
         - {}
         - text: Дефиниране
+        title: Въпрос 2
       CSD U1 Test define a computer:
         answers:
         - {}
@@ -2737,6 +2743,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 4
       CSD U1 Test define problem_2021:
         answers:
         - {}
@@ -2745,6 +2752,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 4
       CSD U1 Test define problem_2022:
         answers:
         - {}
@@ -2753,6 +2761,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 4
       CSD U2 Image challenge_pilot_2022:
         display_name: Добавяне на Снимки
       CSD U2 Image practice_pilot_2022:
@@ -2766,6 +2775,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 3
       CSD U2 Test Classes_pilot_2021:
         answers:
         - {}
@@ -2775,6 +2785,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 3
       CSD U2 Test Classes_pilot_2022:
         answers:
         - {}
@@ -2784,6 +2795,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 3
       CSD U2 Test ContentStructureStyle:
         answers:
         - {}
@@ -2793,6 +2805,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 2
       CSD U2 Test ContentStructureStyle_pilot_2021:
         answers:
         - {}
@@ -2802,6 +2815,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 2
       CSD U2 Test ContentStructureStyle_pilot_2022:
         answers:
         - {}
@@ -2811,6 +2825,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 2
       CSD U2 Test Copyright:
         answers:
         - {}
@@ -2841,24 +2856,27 @@ bg-BG:
       CSD U2 Test Debug:
         answers:
         - {}
+        - text: само 3
         - {}
         - {}
-        - {}
-        - {}
+        - text: 1, 2 и 3
+        title: Въпрос 4
       CSD U2 Test Debug_pilot_2021:
         answers:
         - {}
+        - text: само 3
         - {}
         - {}
-        - {}
-        - {}
+        - text: 1, 2 и 3
+        title: Въпрос 4
       CSD U2 Test Debug_pilot_2022:
         answers:
         - {}
+        - text: само 3
         - {}
         - {}
-        - {}
-        - {}
+        - text: 1, 2 и 3
+        title: Въпрос 4
       CSD U2 Test HTML Usage:
         answers:
         - {}
@@ -2895,6 +2913,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 6
       CSD U2 Test code styles_pilot_2021:
         answers:
         - {}
@@ -2904,6 +2923,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 6
       CSD U2 Test code styles_pilot_2022:
         answers:
         - {}
@@ -2913,40 +2933,58 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 6
       CSD U2 Test code stylesheet:
         answers:
+        - text: 1 и 3
+        - {}
+        - text: 2 и 3
         - {}
         - {}
-        - {}
-        - {}
-        - {}
+        title: Въпрос 5
       CSD U2 Test code stylesheet_pilot_2021:
         answers:
+        - text: 1 и 3
+        - {}
+        - text: 2 и 3
         - {}
         - {}
-        - {}
-        - {}
-        - {}
+        title: Въпрос 5
       CSD U2 Test code stylesheet_pilot_2022:
         answers:
+        - text: 1 и 3
+        - {}
+        - text: 2 и 3
         - {}
         - {}
-        - {}
-        - {}
-        - {}
+        title: Въпрос 5
       CSD U2 image debug match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/9e5367ff3c78372af28a4518cfb3aaa8-image-1648053867494.png
+        - text: https://images.code.org/993c973fa31b14cb6827eb7cb6d53c40-image-1648053902975.png
+        - text: https://images.code.org/41b12f31a9084638e4625fecaff916d5-image-1648054026831.png
+        - text: https://images.code.org/030d30152c42faf0891259af025b9884-image-1648054068540.png
+        - text: https://images.code.org/eb2e2f9a15688cc4b2d80f4c401223b1-image-1648054098000.png
         questions:
         - {}
         - {}
         - {}
+        - text: Тагът за снимка е направилен и му липсва атрибут `src`.
         - {}
-        - {}
+        markdown: |-
+          # Свързване
+
+          **Всяко от нещата долу има грешка. Свържете описанието към правилната грешка.**
+
+          ## A: ![](https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47%20PM.png)
+
+          ## B: ![](https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40%20PM.png)
+
+          ## C: ![](https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01%20PM.png)
+
+          ## D: ![](https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24%20PM.png)
+
+          ## E: ![](https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png)
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: описание тук
       CSD U3 - conditionals - Matching_2018_2019_pilot_2022:
@@ -3014,64 +3052,70 @@ bg-BG:
         - {}
       CSD U3 Test comment:
         answers:
-        - {}
+        - text: Дайте на балона контур
         - {}
         - {}
         - {}
         - {}
         questions:
         - text: Линия 5
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ред 11
+        - text: Ред 14
+        - text: Ред 17
+        - text: Ред 19
+        title: Въпрос 6
       CSD U3 Test comment_pilot_2021:
         answers:
-        - {}
+        - text: Дайте на балона контур
         - {}
         - {}
         - {}
         - {}
         questions:
         - text: Линия 5
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ред 11
+        - text: Ред 14
+        - text: Ред 17
+        - text: Ред 19
+        title: Въпрос 6
       CSD U3 Test comment_pilot_2022:
         answers:
-        - {}
+        - text: Дайте на балона контур
         - {}
         - {}
         - {}
         - {}
         questions:
         - text: Линия 5
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ред 11
+        - text: Ред 14
+        - text: Ред 17
+        - text: Ред 19
+        title: Въпрос 6
       CSD U3 Test debugging:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: само 3
+        - text: 1 и 2
+        - text: 1 и 3
+        - text: 2 и 3
+        - text: 1, 2 и 3
+        title: Въпрос 5
       CSD U3 Test debugging_pilot_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: само 3
+        - text: 1 и 2
+        - text: 1 и 3
+        - text: 2 и 3
+        - text: 1, 2 и 3
+        title: Въпрос 5
       CSD U3 Test debugging_pilot_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: само 3
+        - text: 1 и 2
+        - text: 1 и 3
+        - text: 2 и 3
+        - text: 1, 2 и 3
+        title: Въпрос 5
       CSD U3 Test functions:
         answers:
         - {}
@@ -3081,6 +3125,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 2
       CSD U3 Test functions_pilot_2021:
         answers:
         - {}
@@ -3090,6 +3135,7 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 2
       CSD U3 Test functions_pilot_2022:
         answers:
         - {}
@@ -3099,60 +3145,67 @@ bg-BG:
         - {}
         questions:
         - {}
+        title: Въпрос 2
       CSD U3 Test planning:
         answers:
+        - text: Общата цел и дизайн на програмата.
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Как потребителя ще взаимодейства с програмата.
+        - text: Колко реда код желаете да напишете.
         - {}
         questions:
         - {}
+        title: Въпрос 4
       CSD U3 Test planning_pilot_2021:
         answers:
+        - text: Общата цел и дизайн на програмата.
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Как потребителя ще взаимодейства с програмата.
+        - text: Колко реда код желаете да напишете.
         - {}
         questions:
         - {}
+        title: Въпрос 4
       CSD U3 Test planning_pilot_2022:
         answers:
+        - text: Общата цел и дизайн на програмата.
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Как потребителя ще взаимодейства с програмата.
+        - text: Колко реда код желаете да напишете.
         - {}
         questions:
         - {}
+        title: Въпрос 4
       CSD U3 Test variables:
         answers:
         - text: '20'
-        - {}
-        - {}
+        - text: '90'
+        - text: '110'
         - {}
         - {}
         questions:
         - {}
+        title: Въпрос 3
       CSD U3 Test variables_pilot_2021:
         answers:
         - text: '20'
-        - {}
-        - {}
+        - text: '90'
+        - text: '110'
         - {}
         - {}
         questions:
         - {}
+        title: Въпрос 3
       CSD U3 Test variables_pilot_2022:
         answers:
         - text: '20'
-        - {}
-        - {}
+        - text: '90'
+        - text: '110'
         - {}
         - {}
         questions:
         - {}
+        title: Въпрос 3
       CSD U3 drawSprites placement match_2022:
         answers:
         - {}
@@ -3164,6 +3217,7 @@ bg-BG:
         - {}
         - {}
         - {}
+        content1: Свържете снимката към кода, който ще създаде.
       CSD U3 drawing practice choice_2022:
         display_name: Упражнение
       CSD U3 platform intro_2018_2019_pilot_2022:
@@ -9472,12 +9526,17 @@ bg-BG:
         - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Спрайтът, който натиснете, ще стане по-голям.
+          feedback: Правилно! Спрайтът, който натиснете, ще стане по-голям.
+        - text: Спрайтът, който натиснете, ще стане по-малък.
+          feedback: Неправилно. Спрайтът, който натиснете, ще стане по-голям.
+        - text: Всички спрайтове ще станат по-големи.
+          feedback: Неправилно. Спрайтът, който натиснете, ще стане по-голям.
+        - text: Всички спрайтове ще станат по-малки.
+          feedback: Неправилно. Спрайтът, който натиснете, ще стане по-голям.
         questions:
-        - {}
+        - text: 'Направете предположение: След като натиснете Старт, какво ще се случи,
+            когато натиснете на някой от спрайтовете?'
       courseF_intro_apps2022_2022_pilot_-2022-2:
         display_name: Sprite Lab Приложения
         description: Всички тези проекти са създадени със Sprite Lab. Изпробвайте
@@ -9854,6 +9913,7 @@ bg-BG:
         display_name: Проект за Края на Курса
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Проект за Края на Курса
+        description: Стигнахте края на Курс F! Изберете проект да разгледате.
       courseF_EOC_examples_2021:
         description: Стигнахте края на Курс F! Избере проект, който да създадете.
         display_name: Проект за Края на Курса
@@ -9912,3 +9972,24 @@ bg-BG:
         description: Ще създавате игра за събиране. Преди да започнете, разгледайте
           примерните проекти отдолу. Натиснете \"Край\" когато сте готови да започнете
           да планирате своята програма.
+      CSD U3 - Interactive Card - ExampleChoice_2022:
+        description: В следващите няколко нива ще завършите своя собствена интерактивна
+          карта. Ето няколко примера да ви дадат идеи.
+        display_name: Вашата Интерактивна Карта
+      CSD web mouse practice choice_2022:
+        description: Упражнявайте въвеждане от клаиватурата и използването на условни
+          оператори с тези дейности.
+      Student End of Unit Survey - Intro+TeacherMD_csd2-2022:
+        teacher_markdown: |-
+          **Анкет за Учителите в Края на Урока:** Докато учениците ви попълват анкетата, ще ви бъдем благодарни, ако попълните кратка анкета за учителите.
+
+          ## [Натиснете Тук за Анкета на Учителя](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)
+      courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: Сега можете да използвате наученето, за да създадете каквото
+          пожелаете! Създайте интерактивна програма с много спрайтове!
+        display_name: Много Спрайтове - Свободна Игра
+      courseF_groups_practice_2022_pilot_-2022-2:
+        description: Добра работа досега! Изберете следващата си дейност. Завършете
+          колкото се може повече. Продължете да се упражнявате със събития и групи
+          от спрайтове!
+        display_name: Много Спрайтове Упражнение
