@@ -201,6 +201,8 @@ ca:
         desc: Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres.
       MoveItMoveIt_2018:
         title: A moure's!
+      courseE_unplugged_CnC_2018:
+        title: Compartir continguts digitals
       RelayProgramming_2018:
         title: Programació amb relleus
       courseB_unplugged_MRF_2019:
@@ -220,6 +222,10 @@ ca:
       BinaryImages_2019:
         title: Imatges binàries
         desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament, els cursos anteriors ens han ensenyat que aquesta informació pot ser representada en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més informació complexa (com ara imatges i colors) en binari, també.
+      courseE_unplugged_privateInformation_2019:
+        title: Informació privada i personal
+      courseE_unplugged_CnC_2019:
+        title: Compartir continguts digitals
       GettingLoopy_2019:
         title: Fent bucles
         desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies senzilles i, a continuació, aprendran a repetir-ho.
