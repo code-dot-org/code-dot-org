@@ -7411,15 +7411,18 @@ pl:
               display_name: Ankieta
             csp_unit1_2020:
               display_name: 'Jednostka 1: Informacje cyfrowe'
+          name: csp1-2023
         csp2-2023:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
           title: Internet ('21-'22)
+          name: csp2-2023
         csp3-2023:
           lesson_groups:
             csp_unit3_2020:
               display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
+          name: csp3-2023
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -7430,6 +7433,7 @@ pl:
               display_name: Funkcje
             csp_project:
               display_name: Projekt
+          name: csp4-2023
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -7469,6 +7473,7 @@ pl:
               display_name: Biblioteki
             lessonGroup-3:
               display_name: Ankieta po odbyciu kursu
+          name: csp7-2023
         csp8-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7636,3 +7641,22 @@ pl:
               display_name: Budowanie fizycznych prototypów
           name: mikrobit-temp
           title: 'Micro: Bit Temp'
+        csc-timecapsule-2023:
+          name: csc-timecapsule-2023
+          title: Kapsuła czasu (2023)
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Planowanie na przyszły rok
+            lesson-4:
+              name: Bez konferencji
+          name: vpl-csd7-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 7
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-3:
+              name: Zobowiązanie się do sprawiedliwych praktyk dydaktycznych
+            lesson-4:
+              name: Łączenie się ze społecznością w przyszłości
+          name: vpl-csd8-ayw-pilot-2022
+          title: Odkrycia Informatyki wirtualny moduł 8
