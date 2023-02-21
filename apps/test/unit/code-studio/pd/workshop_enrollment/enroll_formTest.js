@@ -427,7 +427,7 @@ describe('Enroll Form', () => {
     });
   });
 
-  describe('Enroll Form', () => {
+  describe('All Enroll Forms', () => {
     const requiredParams = {
       ...baseParams,
       ...pick(extraParams, ['role', 'grades_teaching'])
@@ -445,7 +445,7 @@ describe('Enroll Form', () => {
       );
     });
 
-    it('submits other school_info fields when no school_id', () => {
+    it('submit other school_info fields when no school_id', () => {
       const school_info_without_id = {
         school_name: 'Hogwarts School of Witchcraft and Wizardry',
         school_state: 'Washington',
@@ -470,7 +470,7 @@ describe('Enroll Form', () => {
       );
     });
 
-    it("doesn't submit other school_info fields when school_id is selected", () => {
+    it('do not submit other school_info fields when school_id is selected', () => {
       enrollForm.setState(requiredParams);
       enrollForm.find('#submit').simulate('click');
 
@@ -481,7 +481,7 @@ describe('Enroll Form', () => {
       });
     });
 
-    it('disables submit button after submit', () => {
+    it('disable submit button after submit', () => {
       enrollForm.setState(omit(requiredParams, 'role'));
 
       // Submit button should stay enabled if invalid data was provided.
@@ -496,7 +496,7 @@ describe('Enroll Form', () => {
       expect(enrollForm.find('#submit').prop('disabled')).to.be.true;
     });
 
-    it('first name is set when rendered as a student', () => {
+    it('set first name when rendered as a student', () => {
       // Sometimes a teacher has a student account and fills out this
       // form.  That's fine; they'll be upgraded to a teacher account
       // later.
@@ -505,7 +505,6 @@ describe('Enroll Form', () => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
-          workshop_course="CS Fundamentals"
           first_name={'Student'}
           email={''}
           previous_courses={props.previous_courses}
@@ -526,13 +525,13 @@ describe('Enroll Form', () => {
     // first name and email fields are set as props on page load
     // the user needs to explicitly set them blank for errors to appear
     ['first_name', 'email'].forEach(param => {
-      it(`does not submit when user sets blank ${param}`, () => {
+      it(`do not submit when user sets blank ${param}`, () => {
         testValidateFields(enrollForm, {...requiredParams, [param]: ''}, param);
       });
     });
 
     ['last_name', 'school_info'].forEach(param => {
-      it(`does not submit when user does not input ${param}`, () => {
+      it(`do not submit when user does not input ${param}`, () => {
         testValidateFields(
           enrollForm,
           omit(requiredParams, param),
