@@ -451,6 +451,18 @@ class CourseOfferingTest < ActiveSupport::TestCase
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
   end
 
+  test "validates curriculum_type value" do
+    assert_raises do
+      CourseOffering.create!(key: 'test-key', curriculum_type: 'Invalid Curriculum Type')
+    end
+  end
+
+  test "validates marketing_initiative value" do
+    assert_raises do
+      CourseOffering.create!(key: 'test-key', marketing_initiative: 'Invalid Marketing Initiative')
+    end
+  end
+
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)
     create :course_offering do |offering|
       create_list :course_version, num_versions, content_root_trait, course_offering: offering
