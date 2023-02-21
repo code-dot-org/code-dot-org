@@ -142,6 +142,15 @@ class CourseOffering < ApplicationRecord
     ]
   end
 
+  def summarize_for_quick_assign(user, locale_code)
+    {
+      id: id,
+      key: key,
+      display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
+      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_quick_assign(user, locale_code)}
+    }
+  end
+
   def localized_display_name
     localized_name = I18n.t(
       key,
