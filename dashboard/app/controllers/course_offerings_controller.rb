@@ -27,70 +27,17 @@ class CourseOfferingsController < ApplicationController
 
     offerings = {}
 
-    offerings[:elementary] = {
-      Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.course => {
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.csf => [
-          CourseOffering.find_by_key('coursea').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('courseb').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('coursec').summarize_for_quick_assign(current_user, request.locale)
-        ],
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.express => [
-          CourseOffering.find_by_key('express').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('pre-express').summarize_for_quick_assign(current_user, request.locale)
-        ]
-      },
-      Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.module => {
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.csc => [
-          CourseOffering.find_by_key('poetry').summarize_for_quick_assign(current_user, request.locale)
-        ]
-      }
-    }
+    assignable_offerings = CourseOffering.assignable_course_offerings(current_user)
+    puts assignable_offerings.length
 
-    offerings[:middle] = {
-      Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.course => {
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.express => [
-          CourseOffering.find_by_key('express').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('pre-express').summarize_for_quick_assign(current_user, request.locale)
-        ],
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.year_long => [
-          CourseOffering.find_by_key('csd').summarize_for_quick_assign(current_user, request.locale)
-        ]
-      },
-      Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.standalone_unit => {
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.self_paced => [
-          CourseOffering.find_by_key('csd3-virtual').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('csp3-virtual').summarize_for_quick_assign(current_user, request.locale)
-        ],
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.teacher_led => [
-          CourseOffering.find_by_key('aiml').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('devices').summarize_for_quick_assign(current_user, request.locale)
-        ]
-      }
-    }
+    assignable_elementary_offerings = assignable_offerings.filter(&:elementary_school_level?)
+    assignable_middle_offerings = assignable_offerings.filter(&:middle_school_level?)
+    assignable_high_offerings = assignable_offerings.filter(&:high_school_level?)
+    puts assignable_elementary_offerings.length
 
-    offerings[:high] = {
-      Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.course => {
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.year_long => [
-          CourseOffering.find_by_key('csa').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('csd').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('csp').summarize_for_quick_assign(current_user, request.locale)
-        ]
-      },
-      Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.standalone_unit => {
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.csa_labs => [
-          CourseOffering.find_by_key('csa-collegeboard-labs').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('csa-data-lab').summarize_for_quick_assign(current_user, request.locale)
-        ],
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.self_paced => [
-          CourseOffering.find_by_key('csd3-virtual').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('csp3-virtual').summarize_for_quick_assign(current_user, request.locale)
-        ],
-        Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.teacher_led => [
-          CourseOffering.find_by_key('aiml').summarize_for_quick_assign(current_user, request.locale),
-          CourseOffering.find_by_key('devices').summarize_for_quick_assign(current_user, request.locale)
-        ]
-      }
-    }
+    offerings[:elementary] = group_offerings_for_quick_assign(assignable_elementary_offerings)
+    offerings[:middle] = group_offerings_for_quick_assign(assignable_middle_offerings)
+    offerings[:high] = group_offerings_for_quick_assign(assignable_high_offerings)
 
     render :ok, json: offerings.to_json
   end
@@ -99,5 +46,18 @@ class CourseOfferingsController < ApplicationController
 
   def course_offering_params
     params.permit(:display_name, :is_featured, :category, :assignable, :grade_levels, :curriculum_type, :header, :marketing_initiative).to_h
+  end
+
+  def group_offerings_for_quick_assign(course_offerings)
+    data = {}
+    course_offerings.each do |co|
+      next if co.header.blank? || co.curriculum_type.blank?
+
+      data[co.curriculum_type] ||= {}
+      data[co.curriculum_type][co.header] ||= []
+      data[co.curriculum_type][co.header].append(co.summarize_for_quick_assign(current_user, request.locale))
+    end
+
+    data
   end
 end
