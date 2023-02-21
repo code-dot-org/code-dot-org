@@ -26,7 +26,7 @@ module Cdo
         # which periods in a key name can be mistakenly interpreted as separators
         if options.key?(:scope) && !options.key?(:separator)
           combined_key = [key] + options.fetch(:scope, [])
-          options[:separator] = get_valid_separator(combined_key.join(""))
+          options[:separator] = get_valid_separator(combined_key.join)
         end
 
         options
