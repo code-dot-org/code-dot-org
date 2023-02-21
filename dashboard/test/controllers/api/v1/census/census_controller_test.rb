@@ -24,7 +24,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusHoc2017v3',
         nces_school_s: '60000113717',
-        school_year: 2017,
         submitter_email_address: "fake@email.address",
         submitter_name: "Somebody",
         opt_in: true
@@ -39,7 +38,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusHoc2017v3',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         school_name_s:  "Brooklyn Heights",
         submitter_email_address: "fake@email.address",
@@ -56,7 +54,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '60000113717',
-        school_year: 2017,
         submitter_email_address: "fake@email.address",
         submitter_name: "Somebody",
         submitter_role: 'OTHER',
@@ -76,7 +73,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         school_name_s: "Philly High",
         submitter_email_address: "fake@email.address",
@@ -98,7 +94,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         school_name_s: "Rushmore",
         submitter_email_address: "rushmore@email.address",
@@ -115,7 +110,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         school_name_s: "Rushmore",
         submitter_email_address: "rushmore@email.address",
@@ -137,7 +131,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         submitter_email_address: "fake@email.address",
         submitter_name: "Somebody",
@@ -158,7 +151,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusTeacherBannerV1',
         nces_school_s: '60000113717',
-        school_year: 2017,
         submitter_email_address: "fake@email.address",
         submitter_name: "Somebody",
         submitter_role: 'TEACHER',
@@ -175,7 +167,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '60000113717',
-        school_year: 2017,
         submitter_email_address: "fake\u{1F600}@email.address",
         submitter_name: "Somebody\u{1F600}",
         submitter_role: 'OTHER',
