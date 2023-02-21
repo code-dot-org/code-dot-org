@@ -28,12 +28,9 @@ class CourseOfferingsController < ApplicationController
     offerings = {}
 
     assignable_offerings = CourseOffering.assignable_course_offerings(current_user)
-    puts assignable_offerings.length
-
     assignable_elementary_offerings = assignable_offerings.filter(&:elementary_school_level?)
     assignable_middle_offerings = assignable_offerings.filter(&:middle_school_level?)
     assignable_high_offerings = assignable_offerings.filter(&:high_school_level?)
-    puts assignable_elementary_offerings.length
 
     offerings[:elementary] = group_offerings_for_quick_assign(assignable_elementary_offerings)
     offerings[:middle] = group_offerings_for_quick_assign(assignable_middle_offerings)
@@ -56,6 +53,13 @@ class CourseOfferingsController < ApplicationController
       data[co.curriculum_type] ||= {}
       data[co.curriculum_type][co.header] ||= []
       data[co.curriculum_type][co.header].append(co.summarize_for_quick_assign(current_user, request.locale))
+    end
+
+    data.keys.each do |curriculum_type|
+      data[curriculum_type].keys.each do |header|
+        data[curriculum_type][header].sort_by! {|co| co[:display_name]}
+      end
+      data[curriculum_type] = data[curriculum_type].sort.to_h
     end
 
     data
