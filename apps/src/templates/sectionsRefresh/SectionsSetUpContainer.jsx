@@ -45,7 +45,7 @@ export default function SectionsSetUpContainer() {
         section={sections[0]}
         updateSection={(key, val) => updateSection(0, key, val)}
       />
-      <CurriculumQuickAssign getOfferings={() => {}} />
+      <CurriculumQuickAssign />
       <div className={moduleStyles.buttonsContainer}>
         <Button
           icon="plus"

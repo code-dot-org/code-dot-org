@@ -1,24 +1,36 @@
 import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 
-export default function SingleSectionSetUp(getOfferings) {
-  const [offerings, setOfferings] = useState('Here are the courses');
-  const [marketingAudience, setMarketingAudience] = useState('elementary');
+export default function SingleSectionSetUp() {
+  const [courseOfferings, setCourseOfferings] = useState(null);
+  const [decideLater, setDecideLater] = useState(false);
+  const [marketingAudience, setMarketingAudience] = useState(null);
 
-  // Retrieve course offerings on mount
+  // Retrieve course offerings on mount and convert to JSON
   useEffect(() => {
-    const courses = getOfferings;
-    setOfferings(courses);
+    fetch('/course_offerings/quick_assign_course_offerings')
+      .then(response => response.json())
+      .then(data => setCourseOfferings(data));
   }, []);
 
-  const toggleMarketingAudience = () => {
+  /*
+  When toggling 'decide later', clear out marketing audience or assign one to make
+  the table appear again automatically.
+  */
+  const toggleDecideLater = () => {
+    setDecideLater(!decideLater);
     if (marketingAudience !== '') {
       setMarketingAudience('');
     } else {
       setMarketingAudience('elementary');
     }
+  };
+
+  // When selecting a marketing audience, ensure 'decide later' is unchecked
+  const updateMarketingAudience = marketingAudience => {
+    setMarketingAudience(marketingAudience);
+    setDecideLater(false);
   };
 
   return (
@@ -35,7 +47,7 @@ export default function SingleSectionSetUp(getOfferings) {
             icon={
               marketingAudience === 'elementary' ? 'caret-up' : 'caret-down'
             }
-            onClick={() => setMarketingAudience('elementary')}
+            onClick={() => updateMarketingAudience('elementary')}
           />
           <Button
             id={'uitest-middle-button'}
@@ -43,7 +55,7 @@ export default function SingleSectionSetUp(getOfferings) {
             text={i18n.courseBlocksGradeBandsMiddle()}
             size={Button.ButtonSize.large}
             icon={marketingAudience === 'middle' ? 'caret-up' : 'caret-down'}
-            onClick={() => setMarketingAudience('middle')}
+            onClick={() => updateMarketingAudience('middle')}
           />
           <Button
             id={'uitest-high-button'}
@@ -51,7 +63,7 @@ export default function SingleSectionSetUp(getOfferings) {
             text={i18n.courseBlocksGradeBandsHigh()}
             size={Button.ButtonSize.large}
             icon={marketingAudience === 'high' ? 'caret-up' : 'caret-down'}
-            onClick={() => setMarketingAudience('high')}
+            onClick={() => updateMarketingAudience('high')}
           />
           <Button
             id={'uitest-hoc-button'}
@@ -59,25 +71,27 @@ export default function SingleSectionSetUp(getOfferings) {
             text={i18n.courseOfferingHOC()}
             size={Button.ButtonSize.large}
             icon={marketingAudience === 'hoc' ? 'caret-up' : 'caret-down'}
-            onClick={() => setMarketingAudience('hoc')}
+            onClick={() => updateMarketingAudience('hoc')}
           />
           <input
+            checked={decideLater}
             style={styles.inputStyle}
             type="checkbox"
             id={'decide-later'}
-            onChange={toggleMarketingAudience}
+            onChange={toggleDecideLater}
           />
           <h5>{i18n.decideLater()}</h5>
         </div>
       </div>
-      {marketingAudience === 'high' && [offerings]}
+      {marketingAudience && (
+        <div>
+          <h5>{marketingAudience}</h5>
+          {JSON.stringify(courseOfferings[marketingAudience])}
+        </div>
+      )}
     </div>
   );
 }
-
-SingleSectionSetUp.propTypes = {
-  getOfferings: PropTypes.func.isRequired
-};
 
 const styles = {
   buttonRow: {
