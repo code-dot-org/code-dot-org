@@ -2,10 +2,21 @@
 #
 # Originally, we needed some complex logic to accommodate the use of Varnish
 # alongside several other caching and delivery layers in our system. We no
-# longer rely on Varnish, but we do rely on some of that old logic in some
-# places in the codebase.
+# longer rely on Varnish, but we do use some of that old logic in some places
+# in the codebase.
 #
-# This module contains the subset of that logic that we still depend on.
+# This module contains the subset of that logic that we still use, but it's
+# also the case that it's not at all clear how much of this logic we still
+# actually *depend* on. This code was written to support Varnish alongside our
+# other services, but now that it no longer needs to support Varnish it's
+# entirely possible that much of this logic could be simplified or removed.
+#
+# We preserve it here so that we can continue to maintain existing
+# functionality, but do note that this module should not be expanded or added
+# to, and the code it contains should not be used to build out any new
+# functionality. In the long run, ideally this entire module will either be
+# deprecated or be rewritten and integrated into other, more-permanent
+# libraries.
 module LegacyVarnishHelpers
   # Basic regex matcher for an optional query part of a URL followed by end-of-string anchor.
   END_URL_REGEX = "(\\?.*)?$".freeze
