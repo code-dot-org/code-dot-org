@@ -45,7 +45,6 @@
 #
 class Census::CensusSubmission < ApplicationRecord
   has_and_belongs_to_many :school_infos
-  has_many :census_inaccuracy_investigations, class_name: 'Census::CensusInaccuracyInvestigation'
 
   validates :school_infos, presence: true
   validates_email_format_of :submitter_email_address
@@ -108,12 +107,6 @@ class Census::CensusSubmission < ApplicationRecord
         }
       )
     end
-  end
-
-  def self.unresolved_reported_inaccuracies
-    left_joins(:census_inaccuracy_investigations).
-      where(inaccuracy_reported: true).
-      where('census_inaccuracy_investigations.id is null')
   end
 
   def submitter_email_address=(value)

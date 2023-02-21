@@ -438,7 +438,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed course offerings" do
-    course_offering = create :course_offering, key: 'course-offering-1'
+    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media'
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
     course_offering.destroy!
@@ -449,6 +449,18 @@ class CourseOfferingTest < ActiveSupport::TestCase
     new_course_offering = CourseOffering.find_by(key: new_course_offering_key)
     assert_equal previous_course_offering.attributes.except('id', 'created_at', 'updated_at'),
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
+  end
+
+  test "validates curriculum_type value" do
+    assert_raises do
+      CourseOffering.create!(key: 'test-key', curriculum_type: 'Invalid Curriculum Type')
+    end
+  end
+
+  test "validates marketing_initiative value" do
+    assert_raises do
+      CourseOffering.create!(key: 'test-key', marketing_initiative: 'Invalid Marketing Initiative')
+    end
   end
 
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)

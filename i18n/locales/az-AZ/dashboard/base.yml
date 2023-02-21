@@ -378,6 +378,7 @@ az:
       help_us: "Bizə kömək edin"
       teach: "Öyrədin"
       about: "Haqqımızda"
+      incubator: "İnkubator"
       legal: "Məxfilik və Hüquq"
       legal_privacy: "Məxfilik siyasəti"
       legal_cookie_notice: "Kuki Xəbərdarlığı"
@@ -609,6 +610,7 @@ az:
     store: 'Mağaza'
     cookie_notice: 'Kuki Xəbərdarlığı'
     view_code: 'Koda Baxın'
+    locale_select: "Dili seç (-in)"
   reference_area:
     title: 'Kömək lazımdır?'
     subtitle: 'Bu videolara və məsləhətlərə baxın'
@@ -671,8 +673,18 @@ az:
       body_short: "Tətbiq dizayn edin, onu işləməsi üçün bloklar və ya JavaScript ilə kodlayın, sonra tətbiqinizi saniyələr ərzində paylaşın."
       audience: '13+ yaş'
       cta: 'Öyrənin necə'
+      image_alt: 'Raketlə işləyən bel çantasını taxan bənövşəyi dovşan.'
+    applab-intro:
+      image_alt: 'Əl telefon ekranının ortasına tıklayır. Ekran işıltı və parıldama saçır.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Minecraft''dan Stiv və Aleks sənə baxırlar.'
+    artist:
+      image_alt: 'Böyük qələmi tutub və üçbucaq çəkən cizgi filmi personajı.'
+    conditionals:
+      image_alt: 'Oyun kartı göyərtəsini qarışdıran iki əl.'
+    course1:
+      image_alt: 'Hansısa kodun qarşısında duran Code.org''dən eşşəkarısı və narıncı balıq.'
     dance-2019:
       title: 'Rəqs şənliyi'
     dance:
@@ -1163,4 +1175,5 @@ az:
       forbidden: "İstifadəçi tələbənin kilidlənən vəziyyətini yeniləyə bilməz"
   reset_predict_progress_button: "Cavabı Sil"
   pixelation:
+    save_image: "Şəkli saxla (-yın)"
     binary: "İkilik"

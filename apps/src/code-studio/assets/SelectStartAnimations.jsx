@@ -116,7 +116,6 @@ export default class SelectStartAnimations extends React.Component {
               hideAnimationNames={false}
               navigable
               hideBackgrounds={false}
-              canDraw={false}
               pickerType={PICKER_TYPE.spritelab}
               selectedAnimations={[]}
             />
@@ -136,7 +135,6 @@ export default class SelectStartAnimations extends React.Component {
             hideAnimationNames={false}
             navigable
             hideBackgrounds={false}
-            canDraw={false}
             pickerType={PICKER_TYPE.spritelab}
             selectedAnimations={[]}
           />

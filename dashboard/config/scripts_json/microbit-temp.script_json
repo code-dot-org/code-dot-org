@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "microbit-temp",
-    "serialized_at": "2023-02-01 12:33:59 UTC",
+    "serialized_at": "2023-02-14 23:42:44 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -86,7 +86,6 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "1. **Identify computing innovations within a given field**\n\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\n\n2. **Describe the inputs and outputs of a device**\n\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\n\n3. **Describe the impacts of the device on society**\n\n\tActivity Guide, page 2: The description of the impact should identify the people who are impacted and either positive or negative effects of that impact.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
         "preparation": "* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student\n* Decide how you would like to distribute the Computing Innovations Research Areas, and if you would like to make any edits to the document to add or remove websites.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -100,7 +99,7 @@
     },
     {
       "key": "The Circuit Playground",
-      "name": "The Micro:bit",
+      "name": "The Micro:bit [Giles Lesson]",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -108,9 +107,7 @@
       "properties": {
         "assessment_opportunities": "1. **Connect and troubleshoot external devices**\n\n\tAt the beginning of the online activity, students should connect the boards themselves, using the setup page to troubleshoot common problems.\n\n2. **Turn on and off an LED with code**\n\n\tCode Studio: See rubric on level 9.\n\n3. **Control the buzzer with code**\n\n\tCode Studio: see rubric on level 9.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.\n\n**Question of the Day:** What outputs can I control on the circuit playground?",
-        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\n* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. "
+        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\n* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers"
       },
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
@@ -120,16 +117,15 @@
     },
     {
       "key": "Updating Screen Elements",
-      "name": "Updating Screen Elements",
+      "name": "Updating Screen Elements [MB Levels]",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "1. **Set the properties of UI elements using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Change text on the screen using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Respond to user input using event handlers**\n\n\tCode Studio: See the rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen\n\n**Question of the Day:** How can you update design elements of an app?",
-        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices to avoid distractions\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Students do _not_ need devices for this lesson, and we recommend teaching the lesson without devices to avoid distractions\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will start to build apps that allow for lots of user interaction and functionality"
       },
       "seeding_key": {
@@ -140,17 +136,16 @@
     },
     {
       "key": "Board Events",
-      "name": "Board Events",
+      "name": "Board Events [MB Levels]",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "1. **Use a board event handler to control buttons on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use a board event handler to control the toggle switch on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
+        "overview": "This lesson transitions students from considering the micro:bit as strictly an output device and instead introduces the buttons as tools for input. Starting with the hardware buttons, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their micro:bit.\n\n**Question of the Day:** How can the user interact with the micro:bit for input?",
         "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
+        "student_overview": "In this lesson, you will learn how to use the micro:bit's hardware buttons which will give the micro:bit input."
       },
       "seeding_key": {
         "lesson.key": "Board Events",
@@ -160,14 +155,13 @@
     },
     {
       "key": "Variables and If Statements",
-      "name": "Variables and If Statements",
+      "name": "Variables and If Statements [MB Levels]",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "1. **Use variables to store information when creating apps**\n\n\tCode Studio: Levels 3-4, and see rubric on the assessment level\n\n1. **Use the counter pattern to update variables when creating apps**\n\n\tCode Studio: Levels 6-7, and see rubric on the assessment level\n\n1. **Use if-statements to make decisions when creating apps**\n\n\tCode Studio: Levels 10-11, and see rubric on the assessment level",
-        "overview": "In this lesson, students are introduced to variables, the counter pattern, and if-statements. Students will use these concepts in the context of programming the circuit playground and creating more complex input/output behaviors, such as counting the number of button presses before having the circuit playground make a noise. The concepts in this lesson are used to make more complex and fulfilling apps in future lessons, and students may need to refer back to the videos and examples in this lesson as they continue to master these concepts.\n\n**Question of the Day:** How can I create more complex programs that keep track of information and make decisions?",
+        "overview": "In this lesson, students are introduced to variables, the counter pattern, and if-statements. Students will use these concepts in the context of programming the micro:bit and creating more complex input/output behaviors, such as counting the number of button presses before having the micro:bit light up. The concepts in this lesson are used to make more complex and fulfilling apps in future lessons, and students may need to refer back to the videos and examples in this lesson as they continue to master these concepts.\n\n**Question of the Day:** How can I create more complex programs that keep track of information and make decisions?",
         "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn to make more complex programs that keep track of information and make decisions, using variables and if-statements."
       },
@@ -179,7 +173,7 @@
     },
     {
       "key": "Problem Solving Process with Programming",
-      "name": "Problem Solving Process with Programming",
+      "name": "Problem Solving Process with Programming [MB Levels]",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -197,16 +191,15 @@
     },
     {
       "key": "Mini-Project: Field Collector App",
-      "name": "Mini-Project: Field Collector App",
+      "name": "Mini-Project: Field Collector App [MB Levels]",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "overview": "In this mini-project, students will use the Circuit Playground to collect data, then use App Lab to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps where a person collects data on a device \"in the field\", then returns to a central location to view and analyze the data (such as cataloguing endangered species in the wild). Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
+        "overview": "In this mini-project, students will use the micro:bit to collect data, then use App Lab to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps where a person collects data on a device \"in the field\", then returns to a central location to view and analyze the data (such as cataloguing endangered species in the wild). Students will use variables and events to collect data from the micro:bit, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-field-collector-app-physical-computing-lesson-6/36200) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "Create an app that uses the Circuit Playground to collect data for a specific purpose, then has an app to analyze the data that was collected"
+        "student_overview": "Create an app that uses the micro:bit to collect data for a specific purpose, then has an app to analyze the data that was collected"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Field Collector App",
@@ -215,32 +208,16 @@
       }
     },
     {
-      "key": "lesson-11",
-      "name": "LED Screen",
+      "key": "Getting Screen Inputs",
+      "name": "Getting Screen Inputs [MB Levels]",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "microbit-temp"
-      }
-    },
-    {
-      "key": "Getting Screen Inputs",
-      "name": "Getting Screen Inputs",
-      "absolute_position": 10,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 10,
-      "properties": {
-        "assessment_opportunities": "1. **Design apps using the text input, dropdown, and slider design elements**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use getProperty and getText to access user input on the screen**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use user input to update elements on the screen using code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn to use several new design elements - text inputs, dropdowns, and sliders - so they can get user input from the screen of their apps. This lesson also introduces students to the getProperty and getText blocks, which allow them to access their user input in their code. Students first practice using these tools to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new event trigger, change, is also introduced to represent when a dropdown or slider changes values.\n\n**Question of the Day:** How can we use the app screen for user input?",
-        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Students do _not_ need micro:bits for this lesson, and we recommend teaching the lesson without devices.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will learn how to use design elements like textboxes or dropdowns to get user input from the screen"
       },
       "seeding_key": {
@@ -251,16 +228,15 @@
     },
     {
       "key": "Combining Inputs and Outputs",
-      "name": "Combining Inputs and Outputs",
-      "absolute_position": 11,
+      "name": "Combining Inputs and Outputs [MB Levels]",
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
-        "assessment_opportunities": "1. **Use inputs from app design elements to update screen elements or produce output on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use inputs from the circuit playground to update screen elements or produce output on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use variables and if-statements for complex user interaction**\n\n\tCode Studio: see rubric on the assessment level",
-        "overview": "In this lesson, students combine inputs and outputs across both the circuit playground and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the circuit playground change. Or, students may use the buttons on the circuit playground to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or circuit playground features in this lesson, but students are combining many elements from previous lessons in new ways.\n\n**Question of the Day:** How can I use inputs and outputs from both the circuit playground and the app screen?",
+        "overview": "In this lesson, students combine inputs and outputs across both the micro:bit and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the micro:bit change. Or, students may use the buttons on the micro:bit to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or micro:bit features in this lesson, but students are combining many elements from previous lessons in new ways.\n\n**Question of the Day:** How can I use inputs and outputs from both the micro:bit and the app screen?",
         "preparation": "- Prepare a board and USB cable for each pair of students\n- (Optional) consider preparing external reference materials from previous lessons for students, such as a Word Wall or Reference Packet, that students can access.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "Combine inputs and outputs from the screen and Circuit Playground to make complex apps"
+        "student_overview": "Combine inputs and outputs from the screen and micro:bit to make complex apps"
       },
       "seeding_key": {
         "lesson.key": "Combining Inputs and Outputs",
@@ -270,13 +246,13 @@
     },
     {
       "key": "Project: Human Device Interaction",
-      "name": "Project: Human Device Interaction",
-      "absolute_position": 12,
+      "name": "Project: Human Device Interaction [MB Levels]",
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
-        "overview": "In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. ",
+        "overview": "In this project, students create an app that controls the micro:bit so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. ",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-human-device-interaction-physical-computing-lesson-10/36216) forum for verified teachers to find additional strategies or resources shared by fellow teachers"
       },
       "seeding_key": {
@@ -287,17 +263,16 @@
     },
     {
       "key": "Board Sensors",
-      "name": "Board Sensors",
-      "absolute_position": 13,
+      "name": "Board Sensors [MB Levels]",
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
-        "assessment_opportunities": "1. **Develop programs that respond to sensor input**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Scale a range of numbers to meet a specific need**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, students explore how the three sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all or may interact without actually realizing they are doing so.\n\n**Question of the Day:** How can I use sensors to detect changes in the environment?",
-        "preparation": "- Prepare a board and USB cable for each pair of students\n* Consider having some flashlights or other light sources on hand for testing the light sensor\n- Consider having noisemakers or whistles or small instruments on hand for testing the sound sensor\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "Explore the sensors on the Circuit Playground and write programs that respond to the environment.\n"
+        "overview": "In this lesson, students explore how the two sensors (light and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all or may interact without actually realizing they are doing so.\n\n**Question of the Day:** How can I use sensors to detect changes in the environment?",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n- Consider having some flashlights or other light sources on hand for testing the light sensor\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Explore the sensors on the micro:bit and write programs that respond to the environment.\n"
       },
       "seeding_key": {
         "lesson.key": "Board Sensors",
@@ -307,13 +282,12 @@
     },
     {
       "key": "Accelerometer",
-      "name": "Accelerometer",
-      "absolute_position": 14,
+      "name": "Accelerometer [MB Levels]",
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
-        "assessment_opportunities": "1. **Use accelerometer orientation (pitch and roll) when creating apps**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use the data event to continually update an element's properties.**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.\n\n**Question of the Day:** How can I use the accelerometer to create apps?",
         "preparation": "* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -327,15 +301,15 @@
     },
     {
       "key": "Functions",
-      "name": "Functions",
-      "absolute_position": 15,
+      "name": "Functions [MB Levels]",
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "assessment_opportunities": "1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson introduces students to functions as way to organize and group repeated blocks of code together, such as changing all of the LEDs to red or blue. Then, students learn how to use parameters in their functions as a way to generalize behaviors to work for different contexts - for example, changing all the LEDs to a certain color rather than always changing them red or blue. Students will use these concepts in future lessons, and it may be necessary to return to this lesson to reference the resources and videos.\n\n**Question of the Day:** How can I use functions to organize and simplify my code?",
+        "overview": "This lesson introduces students to functions as way to organize and group repeated blocks of code together. Then, students learn how to use parameters in their functions as a way to generalize behaviors to work for different contexts. Students will use these concepts in future lessons, and it may be necessary to return to this lesson to reference the resources and videos.\n\n**Question of the Day:** How can I use functions to organize and simplify my code?",
         "preparation": "* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will learn how to create and call functions, then learn how to use parameters to make functions useful across many different situations\n"
       },
@@ -347,16 +321,15 @@
     },
     {
       "key": "Mini-Project: Interactive Art",
-      "name": "Mini-Project: Interactive Art",
-      "absolute_position": 16,
+      "name": "Mini-Project: Interactive Art [MB Levels]",
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "overview": "In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.",
+        "overview": "In this lesson, students create a piece of interactive artwork using the sensors on the micro:bit and physical materials. Students explore how the micro:bit can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-interactive-art-physical-computing-lesson-15/36217) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "Create a piece of interactive artwork using a Circuit Playground and physical materials"
+        "student_overview": "Create a piece of interactive artwork using a micro:bit and physical materials"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Interactive Art",
@@ -367,10 +340,10 @@
     {
       "key": "Physical Outputs and LEDs",
       "name": "Physical Outputs and LEDs",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
         "assessment_opportunities": "1. **Create and debug a circuit with an LED**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that control an LED with code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -387,10 +360,10 @@
     {
       "key": "Physical Inputs and Buttons",
       "name": "Physical Inputs and Buttons",
-      "absolute_position": 18,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
         "assessment_opportunities": "1. **Create and debug a circuit with a button**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that use an external button for input**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -406,17 +379,16 @@
     },
     {
       "key": "Project - Prototype an Innovation",
-      "name": "Project - Prototype an Innovation",
-      "absolute_position": 19,
+      "name": "Project - Prototype an Innovation [MB Levels]",
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 18,
       "properties": {
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
+        "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the micro:bit. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
         "preparation": "* Collect materials for physical prototyping, eg.\n\t* Cardboard\n\t* Scissors\n\t* Tape\n\t* Glue\n\t* Foil\n* Print a copy of the project guide for each pair of students\n* Print a copy of the peer review sheet for each student\n* Print a copy of the rubric for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-prototype-an-innovation-physical-computing-lesson-18/36218) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. "
+        "student_overview": "In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions."
       },
       "seeding_key": {
         "lesson.key": "Project - Prototype an Innovation",
@@ -1390,7 +1362,7 @@
       "key": "0b27aa78-fd28-477f-abd5-bae0e96056a5",
       "position": 1,
       "properties": {
-        "description": "**code.org/applab:** At the end of the lesson encourage students to head to the App Lab home page where they can get ideas for more ways to keep their adventure with App Lab going.\n\n**Exit Ticket:** Distribute the Exit Tickets to collect feedback on how the day felt for students.\n\n**(Optional) Certificates:** You may decide to print certificates to celebrate students who completed the entire tutorial - printable certificates can be found here: http://code.org/certificates",
+        "description": "**Exit Ticket:** Distribute the Exit Tickets to collect feedback on how the day felt for students.\n\n**(Optional) Certificates:** You may decide to print certificates to celebrate students who completed the entire tutorial - printable certificates can be found here: http://code.org/certificates",
         "name": "Celebrate and Keep Going!\r"
       },
       "seeding_key": {
@@ -1402,7 +1374,7 @@
       "key": "2d2c98fd-7c1f-4167-89fb-17bb7f7b241f",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -1514,7 +1486,13 @@
       "position": 5,
       "properties": {
         "description": "Give groups a minute each to share their findings. See the extension activities for alternate ways to share.",
-        "name": "Share Out"
+        "name": "Share Out",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Activity Guide:** You can use the responses on page 2 of the activity guide to assess the objectives from today's lesson. In particular:\n- The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\n- The description of the user interaction should identify multiple possible inputs and outputs for the device.\n- The description of the impact should identify the people who are impacted and either positive or negative effects of that impact."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c66c9085-833b-402b-9980-3f775d4c8100",
@@ -1530,7 +1508,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Limor Fried and Adafruit Industries:** Limor Fried (pronounced like \"freed\", rhymes with \"speed\") is the founder and CEO of Adafruit Industries, which produces the Circuit Playground used in this unit. For students looking for role models that apply computer science in creative or entrepreneurial ways, consider sharing more about Limor with your students throughout the unit such as [this interview with Limor from 2021](https://codeorg.medium.com/5-questions-with-adafruits-limor-fried-f727dd4a8cd0)"
+            "markdown": "**Limor Fried and Adafruit Industries:** Limor Fried (pronounced like \"freed\", rhymes with \"speed\") is the founder and CEO of Adafruit Industries. For students looking for role models that apply computer science in creative or entrepreneurial ways, consider sharing more about Limor with your students throughout the unit such as [this interview with Limor from 2021](https://codeorg.medium.com/5-questions-with-adafruits-limor-fried-f727dd4a8cd0)"
           }
         ]
       },
@@ -1838,7 +1816,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -1928,7 +1906,7 @@
       "key": "e96f75e4-8408-452c-83f1-63da4ae66727",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Imagine you were creating an app and needed to represent an “error” to the user. Thinking about today’s lesson and yesterday’s lesson, how could we show an “error” to the user on both the screen and circuit playground?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Imagine you were creating an app and needed to represent an “error” to the user. Thinking about today’s lesson and yesterday’s lesson, how could we show an “error” to the user on both the screen and micro:bit?_"
       },
       "seeding_key": {
         "activity_section.key": "e96f75e4-8408-452c-83f1-63da4ae66727",
@@ -1950,7 +1928,7 @@
       "key": "822f78e9-7715-405e-8f3f-690948f9ddef",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Students should brainstorm a variety of options they can use to represent an error to users. For example:\n- Changing the text or background color red\n- Having the circuit playground buzz\n- Having the red LED on the circuit playground light up\n- Changing the text on the screen to say “Error!”\n"
+        "description": "**Discussion Goal:** Students should brainstorm a variety of options they can use to represent an error to users. For example:\n- Changing the text or background color red\n- Having the LEDs light up red or display an \"X\"\n- Scrolling \"Error\" across the micro:bit\n- Changing the text on the screen to say “Error!”\n"
       },
       "seeding_key": {
         "activity_section.key": "822f78e9-7715-405e-8f3f-690948f9ddef",
@@ -1971,7 +1949,7 @@
       "key": "c903bd33-7461-4d8c-be4f-a4976c9d8e8f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the micro:bit. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the bottom of the micro:bit, or they may notice the wording on the back of the micro:bit saying \"accelerometer\" and other sensors. These sensors are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.",
         "name": "Board Inspection: Inputs\r"
       },
       "seeding_key": {
@@ -1983,7 +1961,7 @@
       "key": "6b929122-7dc0-4ff7-b7a1-e1fd2c5cad80",
       "position": 2,
       "properties": {
-        "description": "So far, we've only learned how to control the **output** from the Circuit Playground. Today, we'll learn how to use the **inputs** on the Circuit Playground, like the buttons and toggle switch. Inputs are how the device gets information from the user.",
+        "description": "So far, we've only learned how to control the **output** from the miocro:bit. Today, we'll learn how to use the **inputs** on the micro:bit, like the buttons. Inputs are how the device gets information from the user.",
         "remarks": true
       },
       "seeding_key": {
@@ -2010,7 +1988,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2027,7 +2005,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "This code uses an event to detect user input, but it waits for an event on the circuit playground instead of the screen. When students run the code, nothing will happen until they press the left button on their circuit playground. Once they do, the red LED will light up. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook."
+            "markdown": "This code uses an event to detect user input, but it waits for an event on the micro:bit instead of the screen. When students run the code, nothing will happen until they press the A button on their micro:bit. Once they do, the an LED on the `ledScreen` will light up. If student’s boards aren’t working, have them visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup)."
           }
         ]
       },
@@ -2090,7 +2068,7 @@
       "key": "6e114d86-8f4c-4a94-ae3d-3f01005a8fa2",
       "position": 1,
       "properties": {
-        "description": "1. What are three types of board events you have seen so far?\n2. Describe two different situations and how they would need two **different** events.\n3. What's one other event you haven't learned yet, but you think might exist?",
+        "description": "1. What are two types of board events you have seen so far?\n2. Describe two different situations and how they would need two **different** events.\n3. What's one other event you haven't learned yet, but you think might exist?",
         "name": "Journal 3-2-1"
       },
       "seeding_key": {
@@ -2145,7 +2123,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -2788,7 +2766,7 @@
       "key": "1c2e9696-e50f-4453-9a86-c3df2c2ce416",
       "position": 5,
       "properties": {
-        "description": "Today, we're going to complete a project where we design an app that uses the circuit playground to collect data, and then uses an app to make a decision or recommendation based on that data. ",
+        "description": "Today, we're going to complete a project where we design an app that uses the micro:bit to collect data, and then uses an app to make a decision or recommendation based on that data. ",
         "remarks": true
       },
       "seeding_key": {
@@ -2800,7 +2778,7 @@
       "key": "e28e5ff0-e157-4e0f-a279-628aaab11564",
       "position": 6,
       "properties": {
-        "description": "**Example Apps:** Demonstrate for students one or two of the exemplar apps as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices. Since students begin this project by sketching their ideas on paper, we do not recommend passing out circuit playgrounds and having students experiment yet - instead, it can be better to demonstrate as a full-class and discuss the apps together.",
+        "description": "**Example Apps:** Demonstrate for students one or two of the exemplar apps as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices. Since students begin this project by sketching their ideas on paper, we do not recommend passing out micro:bits and having students experiment yet - instead, it can be better to demonstrate as a full-class and discuss the apps together.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2891,13 +2869,7 @@
       "position": 5,
       "properties": {
         "name": "Code Studio",
-        "progression_name": "Field Collector App",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Viewing Exemplars:** The last level in this sequence includes 3 exemplar projects in the \"For Teachers Only\" section of the level. Because these project use the Circuit Playground, they need to be run in the Maker App on Windows and Mac computers. If you'd like to see these examples working with a circuit playground, we recommend visiting these levels and clicking the links within the Maker App rather than viewing them from the lesson plan."
-          }
-        ]
+        "progression_name": "Field Collector App"
       },
       "seeding_key": {
         "activity_section.key": "13d67a60-f445-4748-b709-796c7bb9ef47",
@@ -2960,7 +2932,7 @@
       "key": "33dae5ad-594f-421a-acee-7629e2196030",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** \n\n1) _What are all the ways we can get input from the user on a circuit playground?_\n2) _What are some ways you’ve seen where you can get input from the user in an app?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** \n\n1) _What are all the ways we can get input from the user on a micro:bit?_\n2) _What are some ways you’ve seen where you can get input from the user in an app?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -2983,7 +2955,7 @@
       "key": "65b42a80-61d9-49d4-9c9d-fdb35962403a",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Students should recall that they can use button presses and the toggle switch to get input from the user on the circuit playground. For apps, they may bring up text inputs or dropdowns or buttons. They may also bring up checkboxes or sliders as other forms of inputs."
+        "description": "**Discussion Goal:** Students should recall that they can use button presses to get input from the user on the micro:bit. For apps, they may bring up text inputs or dropdowns or buttons. They may also bring up checkboxes or sliders as other forms of inputs."
       },
       "seeding_key": {
         "activity_section.key": "65b42a80-61d9-49d4-9c9d-fdb35962403a",
@@ -2994,7 +2966,7 @@
       "key": "33e56b2f-b09d-49f9-8015-e6d0316b488a",
       "position": 4,
       "properties": {
-        "description": "So far we've only explored how to use the Circuit Playground for user input. Today we're going to look at more ways that we can get information from the screen of our app.",
+        "description": "So far we've only explored how to use the micro:bit for user input. Today we're going to look at more ways that we can get information from the screen of our app.",
         "remarks": true
       },
       "seeding_key": {
@@ -3010,7 +2982,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3090,7 +3062,7 @@
       "key": "9d35fe42-38f5-45e4-84cc-be35b74d6b3a",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**  So far, you've seen several different types of input, some from the screen, and some from the circuit playground.  Choose one type of input and answer the following questions about it."
+        "description": "**Prompt:**  So far, you've seen several different types of input, some from the screen, and some from the micro:bit. Choose one type of input and answer the following questions about it."
       },
       "seeding_key": {
         "activity_section.key": "9d35fe42-38f5-45e4-84cc-be35b74d6b3a",
@@ -3134,7 +3106,7 @@
       "key": "8cdc8406-8785-44eb-be82-2a66582db536",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Create a chart like the one below. Write down all the design elements or circuit playground components that go in each box_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Create a chart like the one below. Write down all the design elements or micro:bit components that go in each box_"
       },
       "seeding_key": {
         "activity_section.key": "8cdc8406-8785-44eb-be82-2a66582db536",
@@ -3216,7 +3188,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3233,7 +3205,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "Student responses may include:\n- The screen is using a dropdown menu and a `getProperty` block for input to see whether the LED should blink or pulse\n- The screen is using a label and a `setText` block for output to display whether the light is on or off\n- The circuit playground is using the buttons and an `onBoardEvent` block for input to turn on or off the lights\n- The circuit playground is using the `colorLEDs` blocks as output to turn on the lights\n\nStudents will also need their circuit playgrounds for this level. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook."
+            "markdown": "Student responses may include:\n- The screen is using a dropdown menu and a `getProperty` block for input to see whether the LED should turn on or off\n- The screen is using a label and a `setText` block for output to display whether the light is on or off\n- The micro:bit is using the buttons and an `onBoardEvent` block for input to turn on or off the lights\n- The micro:bit is using the `ledScreen` blocks as output to turn on the lights\n\nStudents will also need their micro:bits for this level. If student’s boards aren’t working, have them visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup)."
           }
         ]
       },
@@ -3336,7 +3308,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Example App:** You may decide to show one of the exemplar apps and videos as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices."
+            "markdown": "**Example App:** You may decide to show one of the exemplar app videos as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices."
           }
         ]
       },
@@ -3430,7 +3402,7 @@
       "key": "ee44975e-2473-4f44-b3ec-92f746c34f3b",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Allow students to access the construction materials you've collected, such as paper and cardboard and any other supplies. \n\nStudents will spend most of the class period building their physical devices and testing how it will integrate with the circuit playground.",
+        "description": "**Distribute:** Allow students to access the construction materials you've collected, such as paper and cardboard and any other supplies. \n\nStudents will spend most of the class period building their physical devices and testing how it will integrate with the micro:bit.",
         "duration": "30",
         "name": "Build Your Device"
       },
@@ -3491,13 +3463,7 @@
         "description": "**Transition:** Send students to Code Studio to begin coding their devices.",
         "duration": "25",
         "name": "Start Coding",
-        "progression_name": "Human Device Interaction",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Viewing Exemplars:** The last level in this sequence includes 3 exemplar projects in the \"For Teachers Only\" section of the level. Because these project use the Circuit Playground, they need to be run in the Maker App on Windows and Mac computers. If you'd like to see these examples working with a circuit playground, we recommend visiting these levels and clicking the links within the Maker App rather than viewing them from the lesson plan."
-          }
-        ]
+        "progression_name": "Human Device Interaction"
       },
       "seeding_key": {
         "activity_section.key": "d8bec57c-c9c3-4018-a8c9-7a267ef51828",
@@ -3630,7 +3596,7 @@
       "key": "22678376-d60a-4393-ad35-49180ab2d5cd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out Circuit Playgrounds to each pair of students "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out micro:bits to each pair of students "
       },
       "seeding_key": {
         "activity_section.key": "22678376-d60a-4393-ad35-49180ab2d5cd",
@@ -3641,7 +3607,7 @@
       "key": "b9cca8b0-951c-4740-b29b-a3cc9590fb6d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Humans have 5 senses - touch, taste, sight, smell, and hearing. Which of these senses do you think the Circuit Playground has? Are there any that you think the Circuit Playground has that we don’t?_\n\nAs students consider this question, encourage them to look at the markings on the Circuit Playground for clues (for example: there are eye and ear icons on the circuit playground that can give clues)\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Humans have 5 senses - touch, taste, sight, smell, and hearing. Which of these senses do you think the micro:bit has? Are there any that you think the micro:bit has that we don’t?_\n\nAs students consider this question, encourage them to look at the markings on the micro:bit for clues (for example: there are eye and ear icons on the micro:bit that can give clues)\n"
       },
       "seeding_key": {
         "activity_section.key": "b9cca8b0-951c-4740-b29b-a3cc9590fb6d",
@@ -3663,7 +3629,7 @@
       "key": "baee275a-2bd4-4097-bba3-0921d3e6b81c",
       "position": 4,
       "properties": {
-        "description": "**Discussion Goal:** Using the markings on the circuit playground, students may predict that there are visual and auditory sensors, but they might not be able to describe exactly what they do - for example, does the visual sensor “see” objects, or detect distance, or detect colors, or detect light? Students may also predict that there is a temperature sensor based on the thermometer icon on the circuit playground. Students may also predict sensors that the circuit playground does not have, like humidity or heart-beat sensors, but it’s fine to list them for now as part of the brainstorm discussion."
+        "description": "**Discussion Goal:** Using the markings on the micro:bit, students may predict that there are visual and auditory sensors, but they might not be able to describe exactly what they do - for example, does the visual sensor “see” objects, or detect distance, or detect colors, or detect light? Students may also predict that there is a temperature sensor based on the thermometer icon on the micro:bit. Students may also predict sensors that the micro:bit does not have, like humidity or heart-beat sensors, but it’s fine to list them for now as part of the brainstorm discussion."
       },
       "seeding_key": {
         "activity_section.key": "baee275a-2bd4-4097-bba3-0921d3e6b81c",
@@ -3674,7 +3640,7 @@
       "key": "2d77f376-1ef6-4835-9981-4ca8e0a2313a",
       "position": 5,
       "properties": {
-        "description": "Today we’re going to learn about the different sensors that the Circuit Playground has and how they can be used for input.",
+        "description": "Today we’re going to learn about the different sensors that the micro:bit has and how they can be used for input.",
         "remarks": true
       },
       "seeding_key": {
@@ -3701,7 +3667,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3718,7 +3684,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, what happens when we show or hide things from the circuit playground? What happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
+            "markdown": "There are two sensors on the micro:bit: a light sensor and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the micro:bit that way - for example, what happens when we show or hide things from the micro:bit?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
           }
         ]
       },
@@ -3859,7 +3825,7 @@
       "key": "82fd116a-8fe4-4a4f-ae32-5b1ad7935332",
       "position": 4,
       "properties": {
-        "description": "Humans can detect when we’re off-balance, and we can make adjustments to stay balanced. Our Circuit Playground can also detect when it’s off balance and tilted, so that it can try and correct itself. It uses a sensor called an **accelerometer** to detect its position and keep track of how tilted or off-balance it is. Other devices, like automated drones or robotic vacuums, use an accelerometer to level themselves so they can move automatically without falling over.",
+        "description": "Humans can detect when we’re off-balance, and we can make adjustments to stay balanced. Our micro:bit can also detect when it’s off balance and tilted, so that it can try and correct itself. It uses a sensor called an **accelerometer** to detect its position and keep track of how tilted or off-balance it is. Other devices, like automated drones or robotic vacuums, use an accelerometer to level themselves so they can move automatically without falling over.",
         "remarks": true
       },
       "seeding_key": {
@@ -3875,7 +3841,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -3892,7 +3858,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "The accelerometer has two properties: the `roll` and `pitch`. The `roll` corresponds to tilting left and right, and `pitch` corresponds to tilting forwards and backwards. Students should notice this if they're holding their circuit playground level to the ground with the USB cable pointing away from them so all the lettering appears correctly. Students may also experiment with moving their circuit playground in the physical space - moving it up and down or left and right - but this doesn't affect the accelerometer. Only rotating and tilting the circuit playground will change the roll and pitch."
+            "markdown": "The accelerometer has two properties: the `roll` and `pitch`. The `roll` corresponds to tilting left and right, and `pitch` corresponds to tilting forwards and backwards. Students should notice this if they're holding their micro:bit level to the ground with the USB cable pointing away from them so all the lettering appears correctly. Students may also experiment with moving their miocro:bit in the physical space - moving it up and down or left and right - but this doesn't affect the accelerometer. Only rotating and tilting the micro:bit will change the roll and pitch."
           }
         ]
       },
@@ -4010,7 +3976,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
           }
         ]
       },
@@ -4654,7 +4620,7 @@
       "key": "fc7963fc-4067-4131-ba3c-e4a16f325fdf",
       "position": 1,
       "properties": {
-        "description": "**Brainstorm:** Students should spend the first 15-20 minutes brainstorming ideas for innovative devices built around the features of the Circuit Playground. Encourage students to review their prior work in this unit as well as the real world innovations they researched earlier for inspiration.",
+        "description": "**Brainstorm:** Students should spend the first 15-20 minutes brainstorming ideas for innovative devices built around the features of the micro:bit. Encourage students to review their prior work in this unit as well as the real world innovations they researched earlier for inspiration.",
         "name": "Define - Scope Innovation\r"
       },
       "seeding_key": {
@@ -4824,6 +4790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Getting Started_mb2022"
+        ],
         "progression": "App Lab Intro - Video"
       },
       "bonus": false,
@@ -4846,6 +4815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color_mb2022"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -4868,6 +4840,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2_mb2022"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -4890,6 +4865,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text_mb2022"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -4912,6 +4890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_mb2022"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -4934,6 +4915,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro_mb2022"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -4956,6 +4940,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_mb2022"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -4978,6 +4965,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_mb2022"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -5000,6 +4990,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound_mb2022"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -5022,6 +5015,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5044,6 +5040,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5066,6 +5065,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5088,6 +5090,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_mb2022"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5110,6 +5115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App_mb2022"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -5132,6 +5140,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_mb2022"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -5154,6 +5165,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "devices-pre-survey-levelgroup_mb2022"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -5176,6 +5190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 Circuit Playground Test_mb2022"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -5198,6 +5215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5220,6 +5240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5242,12 +5265,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB3v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB2_mb2022"
+          "CSD U6 - Board Outputs - SB3v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
@@ -5255,29 +5281,32 @@
         "activity_section.key": "115f42ec-99b1-46b7-b9bb-0d93b734cd4e"
       },
       "level_keys": [
-        "CSD U6 - Board Outputs - SB2_mb2022"
+        "CSD U6 - Board Outputs - SB3v2_mb2022"
       ]
     },
     {
       "chapter": 21,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Predict"
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB4v2_mb2022"
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - P2_mb2022"
+          "CSD U6 - Board Outputs - SB4v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "microbit-temp",
-        "activity_section.key": "92173873-11de-40cb-99a4-10e9a76bf7e7"
+        "activity_section.key": "115f42ec-99b1-46b7-b9bb-0d93b734cd4e"
       },
       "level_keys": [
-        "CSD U6 - Board Outputs - P2_mb2022"
+        "CSD U6 - Board Outputs - SB4v2_mb2022"
       ]
     },
     {
@@ -5286,34 +5315,40 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "level_keys": [
+          "CSD U6 - Board Outputs - P2v2_mb2022"
+        ],
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB3_mb2022"
+          "CSD U6 - Board Outputs - P2v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "microbit-temp",
-        "activity_section.key": "0efc223f-8343-4e98-8cd0-be6e0aa7ab7a"
+        "activity_section.key": "92173873-11de-40cb-99a4-10e9a76bf7e7"
       },
       "level_keys": [
-        "CSD U6 - Board Outputs - SB3_mb2022"
+        "CSD U6 - Board Outputs - P2v2_mb2022"
       ]
     },
     {
       "chapter": 23,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - SB6v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB4_mb2022"
+          "CSD U6 - Board Outputs - SB6v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
@@ -5321,7 +5356,7 @@
         "activity_section.key": "0efc223f-8343-4e98-8cd0-be6e0aa7ab7a"
       },
       "level_keys": [
-        "CSD U6 - Board Outputs - SB4_mb2022"
+        "CSD U6 - Board Outputs - SB6v2_mb2022"
       ]
     },
     {
@@ -5330,6 +5365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5352,6 +5390,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5374,6 +5415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5396,6 +5440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5418,6 +5465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5440,6 +5490,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5462,6 +5515,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5484,6 +5540,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5506,6 +5565,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5528,6 +5590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5550,6 +5615,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - ChalB_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5572,6 +5640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5594,6 +5665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5616,6 +5690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5638,6 +5715,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5660,6 +5740,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5682,12 +5765,15 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - PracB_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Board Inputs - A_mb2022"
+          "CSD U6 - Board Inputs - PracB_mb2022"
         ],
         "lesson.key": "Board Events",
         "lesson_group.key": "lessonGroup-3",
@@ -5695,7 +5781,7 @@
         "activity_section.key": "427bbb2c-beb9-49c0-94ef-81005e4256f0"
       },
       "level_keys": [
-        "CSD U6 - Board Inputs - A_mb2022"
+        "CSD U6 - Board Inputs - PracB_mb2022"
       ]
     },
     {
@@ -5704,6 +5790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5726,6 +5815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5748,6 +5840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB0_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5770,6 +5865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables  - Vid_mb2022"
+        ],
         "progression": "Video - Variables"
       },
       "bonus": false,
@@ -5792,6 +5890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5814,6 +5915,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5836,6 +5940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables  - Vid2_mb2022"
+        ],
         "progression": "Video - The Counter Pattern"
       },
       "bonus": false,
@@ -5858,6 +5965,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5880,6 +5990,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB5_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5902,6 +6015,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables  - Vid3_mb2022"
+        ],
         "progression": "Video - If Statements"
       },
       "bonus": false,
@@ -5924,6 +6040,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P2_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5946,6 +6065,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB7_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5968,6 +6090,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB6_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5990,6 +6115,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6012,6 +6140,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6034,6 +6165,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_mb2022"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -6056,6 +6190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB1_mb2022"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -6078,6 +6215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_mb2022"
+        ],
         "progression": "Create a Trivia Game"
       },
       "bonus": false,
@@ -6100,6 +6240,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC1_mb2022"
+        ],
         "progression": "Create a Trivia Game"
       },
       "bonus": false,
@@ -6122,6 +6265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Design_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6144,6 +6290,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Events_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6166,6 +6315,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Logic_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6188,6 +6340,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Review_mb2022"
+        ],
         "progression": "Field Collector App"
       },
       "bonus": false,
@@ -6210,6 +6365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6232,6 +6390,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6254,6 +6415,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6276,6 +6440,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6298,6 +6465,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6320,6 +6490,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6342,6 +6515,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB5_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6364,6 +6540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6386,6 +6565,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6408,6 +6590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6430,6 +6615,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6452,6 +6640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6474,6 +6665,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6496,12 +6690,15 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB4v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Combine Inputs - SB3_mb2022"
+          "CSD U6 - Combine Inputs - SB4v2_mb2022"
         ],
         "lesson.key": "Combining Inputs and Outputs",
         "lesson_group.key": "lessonGroup-3",
@@ -6509,7 +6706,7 @@
         "activity_section.key": "d0964652-afed-4a4f-9d45-0de6c417d820"
       },
       "level_keys": [
-        "CSD U6 - Combine Inputs - SB3_mb2022"
+        "CSD U6 - Combine Inputs - SB4v2_mb2022"
       ]
     },
     {
@@ -6518,12 +6715,15 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB5v2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Combine Inputs - SB4_mb2022"
+          "CSD U6 - Combine Inputs - SB5v2_mb2022"
         ],
         "lesson.key": "Combining Inputs and Outputs",
         "lesson_group.key": "lessonGroup-3",
@@ -6531,15 +6731,43 @@
         "activity_section.key": "d0964652-afed-4a4f-9d45-0de6c417d820"
       },
       "level_keys": [
-        "CSD U6 - Combine Inputs - SB4_mb2022"
+        "CSD U6 - Combine Inputs - SB5v2_mb2022"
       ]
     },
     {
       "chapter": 79,
       "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB6_mb2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB6_mb2022"
+        ],
+        "lesson.key": "Combining Inputs and Outputs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "microbit-temp",
+        "activity_section.key": "d0964652-afed-4a4f-9d45-0de6c417d820"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - SB6_mb2022"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6557,11 +6785,14 @@
       ]
     },
     {
-      "chapter": 80,
-      "position": 7,
+      "chapter": 81,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6579,11 +6810,14 @@
       ]
     },
     {
-      "chapter": 81,
-      "position": 8,
+      "chapter": 82,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6601,11 +6835,14 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Design_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6623,11 +6860,14 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Events_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6645,11 +6885,14 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Logic_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6667,11 +6910,14 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Review_mb2022"
+        ],
         "progression": "Human Device Interaction"
       },
       "bonus": false,
@@ -6689,11 +6935,14 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_mb2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -6711,11 +6960,14 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6733,11 +6985,14 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6755,11 +7010,14 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - P2_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6777,11 +7035,14 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6799,11 +7060,14 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB4.1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6821,11 +7085,14 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6843,11 +7110,14 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6865,11 +7135,14 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6887,11 +7160,14 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6909,11 +7185,14 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6931,11 +7210,14 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6953,11 +7235,14 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6975,11 +7260,14 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6997,11 +7285,14 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PC_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7019,11 +7310,14 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - PB_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7041,11 +7335,14 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7063,11 +7360,14 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7085,11 +7385,14 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7107,11 +7410,14 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7129,11 +7435,14 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - Functions Video_mb2022"
+        ],
         "progression": "Video - Functions"
       },
       "bonus": false,
@@ -7151,11 +7460,14 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7173,11 +7485,14 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7195,11 +7510,14 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7217,11 +7535,14 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7239,11 +7560,14 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - P2_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7261,11 +7585,14 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - Parameters Video_mb2022"
+        ],
         "progression": "Video - Parameters"
       },
       "bonus": false,
@@ -7283,11 +7610,14 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB5_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7305,11 +7635,14 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB6_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7327,11 +7660,14 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - SB7_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7349,11 +7685,14 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7371,11 +7710,14 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7393,11 +7735,14 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Interactive Art - Events_mb2022"
+        ],
         "progression": "Interactive Art"
       },
       "bonus": false,
@@ -7415,11 +7760,14 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Interactive Art - Logic_mb2022"
+        ],
         "progression": "Interactive Art"
       },
       "bonus": false,
@@ -7437,11 +7785,14 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Interactive Art - Review_mb2022"
+        ],
         "progression": "Interactive Art"
       },
       "bonus": false,
@@ -7459,11 +7810,14 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Setup_mb2022"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -7481,11 +7835,14 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - P_mb2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7503,11 +7860,14 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB1_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7525,11 +7885,14 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7547,11 +7910,14 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - SB2.2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7569,11 +7935,14 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7591,11 +7960,14 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7613,11 +7985,14 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7635,11 +8010,14 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB1_mb2022"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -7657,11 +8035,14 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB2_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7679,11 +8060,14 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB3_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7701,11 +8085,14 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB4_mb2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7723,11 +8110,14 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - Prac_mb2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7745,11 +8135,14 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - A_mb2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7767,11 +8160,14 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - Chal_mb2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7789,11 +8185,14 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Prototype Innovation - Design_mb2022"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -7811,11 +8210,14 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Prototype Innovation - Events_mb2022"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -7833,11 +8235,14 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Innovations - Logic_mb2022"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -7855,11 +8260,14 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 140,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Innovations - Review_mb2022"
+        ],
         "progression": "Prototype an Innovation"
       },
       "bonus": false,
@@ -7877,11 +8285,14 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 141,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "devices-post-survey-levelgroup_mb2022"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -8130,9 +8541,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Board Outputs - SB2_mb2022",
+        "level.key": "CSD U6 - Board Outputs - SB3v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB2_mb2022"
+          "CSD U6 - Board Outputs - SB3v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
@@ -8142,9 +8553,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Board Outputs - P2_mb2022",
+        "level.key": "CSD U6 - Board Outputs - SB4v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - P2_mb2022"
+          "CSD U6 - Board Outputs - SB4v2_mb2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "microbit-temp",
+        "activity_section.key": "115f42ec-99b1-46b7-b9bb-0d93b734cd4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - P2v2_mb2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - P2v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
@@ -8154,21 +8577,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Board Outputs - SB3_mb2022",
+        "level.key": "CSD U6 - Board Outputs - SB6v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB3_mb2022"
-        ],
-        "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "microbit-temp",
-        "activity_section.key": "0efc223f-8343-4e98-8cd0-be6e0aa7ab7a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U6 - Board Outputs - SB4_mb2022",
-        "script_level.level_keys": [
-          "CSD U6 - Board Outputs - SB4_mb2022"
+          "CSD U6 - Board Outputs - SB6v2_mb2022"
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-3",
@@ -8370,9 +8781,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Board Inputs - A_mb2022",
+        "level.key": "CSD U6 - Board Inputs - PracB_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Board Inputs - A_mb2022"
+          "CSD U6 - Board Inputs - PracB_mb2022"
         ],
         "lesson.key": "Board Events",
         "lesson_group.key": "lessonGroup-3",
@@ -8814,9 +9225,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Combine Inputs - SB3_mb2022",
+        "level.key": "CSD U6 - Combine Inputs - SB4v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Combine Inputs - SB3_mb2022"
+          "CSD U6 - Combine Inputs - SB4v2_mb2022"
         ],
         "lesson.key": "Combining Inputs and Outputs",
         "lesson_group.key": "lessonGroup-3",
@@ -8826,9 +9237,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Combine Inputs - SB4_mb2022",
+        "level.key": "CSD U6 - Combine Inputs - SB5v2_mb2022",
         "script_level.level_keys": [
-          "CSD U6 - Combine Inputs - SB4_mb2022"
+          "CSD U6 - Combine Inputs - SB5v2_mb2022"
+        ],
+        "lesson.key": "Combining Inputs and Outputs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "microbit-temp",
+        "activity_section.key": "d0964652-afed-4a4f-9d45-0de6c417d820"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - SB6_mb2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB6_mb2022"
         ],
         "lesson.key": "Combining Inputs and Outputs",
         "lesson_group.key": "lessonGroup-3",
@@ -9609,7 +10032,7 @@
     },
     {
       "name": "Accelerometer",
-      "url": "https://docs.google.com/presentation/d/1pQEx8R31vJZlV3ckidxebh-0OO42GuH5HD90escA8J0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1V0MnN-LeOoyZw08DUDLzf5oGBmOb5hqxxjQG2xywnG0/template/preview",
       "key": "accelerometer",
       "properties": {
         "audience": "Teacher",
@@ -9620,44 +10043,8 @@
       }
     },
     {
-      "name": "Accelerometer Events",
-      "url": "https://drive.google.com/file/d/1nxKyWBb_zuIrAJ9hSFc6t3vsa1tJkeKF/view?usp=sharing",
-      "key": "accelerometer_events",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "accelerometer_events"
-      }
-    },
-    {
-      "name": "Analog Sensors",
-      "url": "https://drive.google.com/file/d/11XwNv2922DAvixhreVXgfxnTS9SHa8ds/view?usp=sharing",
-      "key": "analog_sensors",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "analog_sensors"
-      }
-    },
-    {
       "name": "Board Events",
-      "url": "https://drive.google.com/file/d/1XvRUPOeqLcQonhk1Sq9FYkIv_DAwx6aR/view?usp=sharing",
-      "key": "board_events",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "board_events"
-      }
-    },
-    {
-      "name": "Board Events",
-      "url": "https://docs.google.com/presentation/d/12BYgwlmDdzQUSWJmWVHQ1wHmsdx-A6PO4m141_LvMOo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Q_oDTT2Wcd1dZOFOb4aDTwsKIHLMTHN8IB-qf_5Z28Q/template/preview",
       "key": "board_events_1",
       "properties": {
         "audience": "Teacher",
@@ -9669,7 +10056,7 @@
     },
     {
       "name": "Board Sensors",
-      "url": "https://docs.google.com/presentation/d/16KpFvmEtPBYtIxBNg62b2ZVh2RlTxOAwmFxVxcTPC9c/template/preview",
+      "url": "https://docs.google.com/presentation/d/1E535RsY9XFDgMijU2huDu7_ZyRF49ZKkxPdqMBGAi5c/template/preview",
       "key": "board_sensors",
       "properties": {
         "audience": "Teacher",
@@ -9677,18 +10064,6 @@
       },
       "seeding_key": {
         "resource.key": "board_sensors"
-      }
-    },
-    {
-      "name": "Changing Sensor Scale",
-      "url": "https://drive.google.com/file/d/1jGo7RH3_BiZwBBXNaOCVco-okqRRkSdC/view?usp=sharing",
-      "key": "changing_sensor_scale",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "changing_sensor_scale"
       }
     },
     {
@@ -9701,30 +10076,6 @@
       },
       "seeding_key": {
         "resource.key": "circuit_playground"
-      }
-    },
-    {
-      "name": "Circuits and Buttons",
-      "url": "https://drive.google.com/file/d/12z50tIYpRJ2LFUlpYJYcKQ6I_qMk6g5p/view?usp=sharing",
-      "key": "circuits_and_buttons",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "circuits_and_buttons"
-      }
-    },
-    {
-      "name": "Circuits and LEDs",
-      "url": "https://drive.google.com/file/d/1uRQsBQna07gfhhqlIz6mgX56fki8n_-d/view?usp=sharing",
-      "key": "circuits_and_leds",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "circuits_and_leds"
       }
     },
     {
@@ -9741,7 +10092,7 @@
     },
     {
       "name": "Combining Inputs and Outputs",
-      "url": "https://docs.google.com/presentation/d/1EEH-I0aWBq1YfNoSjYr1gl0CSb9bma2kAFIF2QSq52o/template/preview",
+      "url": "https://docs.google.com/presentation/d/1DwdVM5oFfl7r7t3w2vJdGZOAVAOl0jOsLgtPOlxyeLc/template/preview",
       "key": "combining_inputs_and_outputs",
       "properties": {
         "audience": "Teacher",
@@ -9788,18 +10139,6 @@
       },
       "seeding_key": {
         "resource.key": "computing_innovations_research_areas"
-      }
-    },
-    {
-      "name": "Date and Change Events",
-      "url": "https://drive.google.com/file/d/1t7EKjtcgISbHz_REmaCrcgPb_lArGkUJ/view?usp=sharing",
-      "key": "date_and_change_events",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "date_and_change_events"
       }
     },
     {
@@ -9936,7 +10275,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/11F4bz3z-BA03DnAZUMOTHhf5asm5DU2pbmZdtRShDfI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Wl8SYLVhPeFlUKF1rINefVKxHl-KR48POPpG4eqMRiA/template/preview",
       "key": "functions",
       "properties": {
         "audience": "Teacher",
@@ -9984,7 +10323,7 @@
     },
     {
       "name": "Getting Screen Inputs",
-      "url": "https://docs.google.com/presentation/d/1ewK1w0Dbgp494hY2Qjk0Wgy3Wd_bW8hULhV0b-xSqLQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1kOuNsrHcsJ-u4xnjDUC9M_L4URMQP-tMy-29FOldeIc/template/preview",
       "key": "getting_screen_inputs",
       "properties": {
         "audience": "Teacher",
@@ -10020,7 +10359,7 @@
     },
     {
       "name": "Innovations in Computing",
-      "url": "https://docs.google.com/presentation/d/15_aGseM8ZOSeKthJUV6h3VPQQujMPBtCl_3hXxz2NnA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1vbvZL_EzmJIbGvxtcMBSh9Gz1F-u_ZOcZzRo6Pv4DeM/template/preview",
       "key": "innovations_in_computing",
       "properties": {
         "audience": "Teacher",
@@ -10044,7 +10383,7 @@
     },
     {
       "name": "Mini-Project: Field Collector App",
-      "url": "https://docs.google.com/presentation/d/18rBvNTZUFMvGkDuB2X7dWlvo18eyqK4oIT5QgwYFWsE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1cAzWPIsJ3xlJypJ__PpC85oab4ou287vKmxiFY6f38g/template/preview",
       "key": "mini-project_field_collector_app",
       "properties": {
         "audience": "Teacher",
@@ -10056,7 +10395,7 @@
     },
     {
       "name": "Mini-Project: Interactive Art",
-      "url": "https://docs.google.com/presentation/d/1Q4Eqleujq5kRIwMUqfxEmSYJYBAPhHTYPAjaey86dEM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ho2cU7mQIPHNZ2HpULzlxeXIZ5wLtcilSNp3rnzXhnU/template/preview",
       "key": "mini-project_interactive_art",
       "properties": {
         "audience": "Teacher",
@@ -10093,20 +10432,8 @@
       }
     },
     {
-      "name": "Physical Input",
-      "url": "https://drive.google.com/file/d/1TNz91ENBLt-SG1L0459YR9X5yLjQNuSc/view?usp=sharing",
-      "key": "physical_input",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "physical_input"
-      }
-    },
-    {
       "name": "Physical Inputs and Buttons",
-      "url": "https://docs.google.com/presentation/d/1sUA5k7GlQaq6S5XrZaVy9mr_zTr6wHd6P6r3yKU-Kkg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1m2i8Wmynhanm4fDZwoLCff0Ad1uFcXUVw6HznAKlmKQ/template/preview",
       "key": "physical_inputs_and_buttons",
       "properties": {
         "audience": "Teacher",
@@ -10130,7 +10457,7 @@
     },
     {
       "name": "Physical Outputs and LEDs",
-      "url": "https://docs.google.com/presentation/d/1NcHtTjkHb8F95xuL3kwonH6Z-k1Ew96QemQucOOFV6A/template/preview",
+      "url": "https://docs.google.com/presentation/d/1jIusEvaliAbQrCaGKpUpr9n9OFcunHaATRPik4TnXkw/template/preview",
       "key": "physical_outputs_and_leds",
       "properties": {
         "audience": "Teacher",
@@ -10142,7 +10469,7 @@
     },
     {
       "name": "Programming and the Problem Solving Process",
-      "url": "https://docs.google.com/presentation/d/1ELPTi2de6-sPPdR-VkIRiM2IlbbKmzxpLtcPfnyP85M/template/preview",
+      "url": "https://docs.google.com/presentation/d/1KDtYe15MSuLP6kQ2GklQkCIy_jlbS5T6ZxpX5PFI1yw/template/preview",
       "key": "programming_and_the_problem_solving_process",
       "properties": {
         "audience": "Teacher",
@@ -10206,7 +10533,7 @@
     },
     {
       "name": "Project: Human Device Interaction",
-      "url": "https://docs.google.com/presentation/d/1lMH25Ql3FuMfb16hSPRfu6lo-qWjVvBM7ugiJconlrg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ulDC3qzvAbPFQSZs4L9LU0PdHCTFpadXqzdmrtvRFcw/template/preview",
       "key": "project_human_device_interaction",
       "properties": {
         "audience": "Teacher",
@@ -10218,7 +10545,7 @@
     },
     {
       "name": "Project: Prototype an Innovation",
-      "url": "https://docs.google.com/presentation/d/1dDl3drqq0ANcRfsBo4dDYHl4l5aiQLX_coiHr_L2XEA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1tkW1J5JeylpE5D13x7gVDXep-Tx6NBmJJvVhXjsaueU/template/preview",
       "key": "project_prototype_an_innovation",
       "properties": {
         "audience": "Teacher",
@@ -10405,20 +10732,8 @@
       }
     },
     {
-      "name": "The Accelerometer",
-      "url": "https://drive.google.com/file/d/1L7NhIsMI70GpuA5_gsF-M8VfJPY6Ld3Q/view?usp=sharing",
-      "key": "the_accelerometer",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "the_accelerometer"
-      }
-    },
-    {
       "name": "The Circuit Playground",
-      "url": "https://docs.google.com/presentation/d/1J0Puy3cFsHquXytoOm-5rh8S7hoBypkNAKqxHYiVHmo/template/preview",
+      "url": "https://docs.google.com/presentation/d/10qobA00l2_N57wlVNOcODj9319NQiWu-iaY9uU1GnaQ/template/preview",
       "key": "the_circuit_playground",
       "properties": {
         "audience": "Teacher",
@@ -10492,7 +10807,7 @@
     },
     {
       "name": "Updating Screen Elements",
-      "url": "https://docs.google.com/presentation/d/1yRqNV4TPoJj7BWDQutXy80j8HudLVKne8ieaxsZt2Z8/template/preview",
+      "url": "https://docs.google.com/presentation/d/16nGbEQJGFkFSQvw1G_cqi7a0Y04fO-eP0eK2XG4nojs/template/preview",
       "key": "updating_screen_elements",
       "properties": {
         "audience": "Teacher",
@@ -10528,7 +10843,7 @@
     },
     {
       "name": "Variables and If Statements",
-      "url": "https://docs.google.com/presentation/d/1cf6oxKt0X2eOvEBa_-zi1v3nxYaofi8ZhGRegX6Lx78/template/preview",
+      "url": "https://docs.google.com/presentation/d/1nxYAq5N0SUwIjMXI7DANtbPf0HbxKNt8sga0FbDA2cg/template/preview",
       "key": "variables_and_if_statements",
       "properties": {
         "audience": "Teacher",
@@ -10548,56 +10863,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Accelerometer",
-        "resource.key": "accelerometer_events"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accelerometer",
-        "resource.key": "the_accelerometer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Events",
-        "resource.key": "board_events"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Board Events",
         "resource.key": "board_events_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Board Events",
-        "resource.key": "physical_input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Sensors",
-        "resource.key": "analog_sensors"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Board Sensors",
         "resource.key": "board_sensors"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Sensors",
-        "resource.key": "changing_sensor_scale"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Sensors",
-        "resource.key": "date_and_change_events"
       }
     },
     {
@@ -10765,19 +11038,7 @@
     {
       "seeding_key": {
         "lesson.key": "Physical Inputs and Buttons",
-        "resource.key": "circuits_and_buttons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Physical Inputs and Buttons",
         "resource.key": "physical_inputs_and_buttons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Physical Outputs and LEDs",
-        "resource.key": "circuits_and_leds"
       }
     },
     {
@@ -11124,21 +11385,7 @@
       "seeding_key": {
         "lesson.key": "Board Events",
         "programming_environment.name": "applab",
-        "programming_expression.key": "buttons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Events",
-        "programming_environment.name": "applab",
         "programming_expression.key": "onBoardEvent"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Events",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "toggleSwitch"
       }
     },
     {
@@ -11160,27 +11407,6 @@
         "lesson.key": "Board Sensors",
         "programming_environment.name": "applab",
         "programming_expression.key": "lightSensor.value"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Sensors",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "soundSensor"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Sensors",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "soundSensor.setScale"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Sensors",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "soundSensor.value"
       }
     },
     {
@@ -11417,7 +11643,7 @@
     {
       "key": "13cc5526-a071-4372-8ca5-865e0351f501",
       "properties": {
-        "description": "Use a board event handler to control buttons on the circuit playground"
+        "description": "Use a board event handler to control buttons on the micro:bit"
       },
       "seeding_key": {
         "lesson.key": "Board Events",
@@ -11427,7 +11653,7 @@
     {
       "key": "140b6f84-159e-46be-b263-d109a8d640b5",
       "properties": {
-        "description": "Create a project that combines output from the circuit playground with physical materials"
+        "description": "Create a project that combines output from the micro:bit with physical materials"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Interactive Art",
@@ -11447,7 +11673,7 @@
     {
       "key": "24d8cf15-f865-48ba-9e00-0a94739b4bc4",
       "properties": {
-        "description": "Use inputs from the circuit playground to update screen elements or produce output on the circuit playground"
+        "description": "Use inputs from the micro:bit to update screen elements or produce output on the micro:bit"
       },
       "seeding_key": {
         "lesson.key": "Combining Inputs and Outputs",
@@ -11467,7 +11693,7 @@
     {
       "key": "2d8dd253-5bc2-4bf0-915d-91dfb1a965ac",
       "properties": {
-        "description": "Use inputs from app design elements to update screen elements or produce output on the circuit playground"
+        "description": "Use inputs from app design elements to update screen elements or produce output on the micro:bit"
       },
       "seeding_key": {
         "lesson.key": "Combining Inputs and Outputs",
@@ -11605,16 +11831,6 @@
       }
     },
     {
-      "key": "822745e5-f95a-42a0-acd0-953e8b4c5179",
-      "properties": {
-        "description": "Use a board event handler to control the toggle switch on the circuit playground"
-      },
-      "seeding_key": {
-        "lesson.key": "Board Events",
-        "objective.key": "822745e5-f95a-42a0-acd0-953e8b4c5179"
-      }
-    },
-    {
       "key": "855ea4d8-dea6-47f0-8430-080e2ee875a5",
       "properties": {
         "description": "Identify useful strategies within each step of the problem solving process"
@@ -11727,7 +11943,7 @@
     {
       "key": "ce7e9f63-664b-4604-9410-297d9cf6d3c0",
       "properties": {
-        "description": "Create a project that incorporates inputs from the circuit playground"
+        "description": "Create a project that incorporates inputs from the micro:bit"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Field Collector App",
@@ -11757,7 +11973,7 @@
     {
       "key": "e4339ba5-cb12-49b8-9a05-3ff51ef18b44",
       "properties": {
-        "description": "Create a project that uses a variety of inputs and outputs from the circuit playground and app screen"
+        "description": "Create a project that uses a variety of inputs and outputs from the micro:bit and app screen"
       },
       "seeding_key": {
         "lesson.key": "Project: Human Device Interaction",
@@ -11767,7 +11983,7 @@
     {
       "key": "e6e0b6c4-3fc8-4656-853d-095f53fa5ed7",
       "properties": {
-        "description": "Create a project that seamlessly integrates the circuit playground with physical materials"
+        "description": "Create a project that seamlessly integrates the micro:bit with physical materials"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Interactive Art",

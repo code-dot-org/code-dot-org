@@ -15,9 +15,11 @@
   allowing each section to be full-width.
 */
 
-
+/* Removes the gap between the top nav bar and page content if
+  there's a hero banner; if there's no hero banner, the section
+  element has top-padding that will add white space */
 #pageheader-wrapper #pageheader {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .container_responsive_full_width {
@@ -29,7 +31,7 @@
 /* This is better for accessibility */
 section {
   width: 100%;
-  padding: 3em 1em;
+  padding: 4em 2em;
 }
 
 /* Use class="wrapper" to house a section's content */

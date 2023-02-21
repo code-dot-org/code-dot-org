@@ -6,6 +6,8 @@ import {connect} from 'react-redux';
 import {setCurrentView} from './sectionProgressRedux';
 import {ViewType} from './sectionProgressConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import i18n from '@cdo/locale';
 
 /**
@@ -37,6 +39,11 @@ class SectionProgressToggle extends React.Component {
       },
       {includeUserId: true}
     );
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_TOGGLE, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+      newView: selectedToggle
+    });
     this.props.setCurrentView(selectedToggle);
   };
 

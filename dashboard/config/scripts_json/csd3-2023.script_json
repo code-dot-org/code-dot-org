@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-02-01 18:17:44 UTC",
+    "serialized_at": "2023-02-15 23:58:20 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2263,7 +2263,18 @@
       "key": "06a8e7d0-bcf6-462e-ad1c-811252e94962",
       "position": 3,
       "properties": {
-        "progression_name": "Introduction to Game Lab",
+        "progression_name": "Predict - Introduction to Game Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "06a8e7d0-bcf6-462e-ad1c-811252e94962",
+        "lesson_activity.key": "412d5111-3a47-4ba3-8537-fa8500f5c6c4"
+      }
+    },
+    {
+      "key": "2ef19cd2-87ef-4290-a62a-8026acca3296",
+      "position": 4,
+      "properties": {
+        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2272,15 +2283,15 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "06a8e7d0-bcf6-462e-ad1c-811252e94962",
+        "activity_section.key": "2ef19cd2-87ef-4290-a62a-8026acca3296",
         "lesson_activity.key": "412d5111-3a47-4ba3-8537-fa8500f5c6c4"
       }
     },
     {
       "key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n"
+        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n"
       },
       "seeding_key": {
         "activity_section.key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
@@ -2289,9 +2300,9 @@
     },
     {
       "key": "43092a5a-ca50-4794-8818-894953630692",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "progression_name": "Using the Grid",
+        "progression_name": "Skill Building",
         "tips": [
           {
             "type": "teachingTip",
@@ -2306,7 +2317,7 @@
     },
     {
       "key": "eae3f1fc-9263-4892-a141-6c50d1f3b3de",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_2/csd3/2023] video in the slides.\n**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.\n"
       },
@@ -2317,7 +2328,7 @@
     },
     {
       "key": "cc4314cc-601c-4bc7-ba2c-6be8a445814a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Skill Building",
         "tips": [
@@ -2334,7 +2345,7 @@
     },
     {
       "key": "782c502a-6195-4c3f-8019-0d82460a1c8a",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Practice",
         "tips": [
@@ -2351,7 +2362,7 @@
     },
     {
       "key": "7d43db9c-6c40-4846-bb22-e01e9b1532f3",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2372,7 +2383,7 @@
     },
     {
       "key": "c556208c-2fe3-45ed-a6eb-3b0cea37ae75",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Challenges",
         "tips": [
@@ -2389,7 +2400,7 @@
     },
     {
       "key": "af528304-71d4-40f8-b611-eb3bab25c387",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "**Share:** Once students have completed their drawings, have them share them with the class. One way to do this is with a gallery walk.",
         "name": "Share Drawings\r"
@@ -4986,12 +4997,7 @@
       "position": 2,
       "properties": {
         "description": "**Transition:**  Move students to Code Studio",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "a1b92792-5036-45e8-8313-b0d2b679696e",
@@ -5002,7 +5008,7 @@
       "key": "abb8365c-303e-410d-a30b-a54115599db1",
       "position": 3,
       "properties": {
-        "description": "**Circulate:** These levels introduce the velocityX, velocityY, and rotationSpeed properties that you just discussed with students.  Check in with students to see how they are doing and keep track of when everyone has made it to the end of level 10.",
+        "description": "**Discussion Goal:** Student predictions will vary but some may predict that the new [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block might make the sprite move faster than the counter pattern. Once they run the program, students will see that the two lines of code cause the same sprite movement - the difference being the  [`velocity`(#f78183)](/docs/ide/gamelab/expressions/velocityX) block hides the details of the counter pattern *and* happens *outside* the draw loop.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -5026,8 +5032,13 @@
       "key": "345c6438-5484-47f2-a8ba-2d8c0a02773b",
       "position": 5,
       "properties": {
+        "description": "**Circulate:** These levels introduce the velocityX, velocityY, and rotationSpeed properties that you just discussed with students.  Check in with students to see how they are doing and keep track of when everyone has made it to the end of level 10.",
         "progression_name": "Skill Building",
         "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          },
           {
             "type": "teachingTip",
             "markdown": "**Inside versus outside the draw loop**\n\nThis is a good time to remind students that code outside the draw loop is used to set up the program. It is for how you want your program to start. Code inside the draw loop is for things that are changing as the program is running, user interaction.\n\nThere may be some confusion that the new blocks are animation (changing position) and yet have gone outside the draw loop up until this point. That is because up until this point, the velocity has been set at the beginning of the program and not changed. When students want the velocity to change during the program, it will need to go inside the draw loop."
@@ -7090,14 +7101,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U3 rect_2023"
+          "CSD U3L3 rect_2023"
         ],
-        "progression": "Introduction to Game Lab"
+        "progression": "Predict - Introduction to Game Lab"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 rect_2023"
+          "CSD U3L3 rect_2023"
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "lessonGroup-2",
@@ -7105,7 +7116,7 @@
         "activity_section.key": "06a8e7d0-bcf6-462e-ad1c-811252e94962"
       },
       "level_keys": [
-        "CSD U3 rect_2023"
+        "CSD U3L3 rect_2023"
       ]
     },
     {
@@ -7115,9 +7126,34 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSD U3 rect_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 rect_2023"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "43092a5a-ca50-4794-8818-894953630692"
+      },
+      "level_keys": [
+        "CSD U3 rect_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSD U3 Drawing Squares to Corners_2023"
         ],
-        "progression": "Using the Grid"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -7134,8 +7170,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 3,
+      "chapter": 9,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7159,8 +7195,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 4,
+      "chapter": 10,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -7184,8 +7220,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 5,
+      "chapter": 11,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -7209,8 +7245,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 6,
+      "chapter": 12,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7234,8 +7270,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 7,
+      "chapter": 13,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -7259,8 +7295,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 8,
+      "chapter": 14,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7284,7 +7320,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7309,7 +7345,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7334,7 +7370,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7359,7 +7395,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7384,7 +7420,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7409,7 +7445,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -7434,7 +7470,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7459,7 +7495,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7484,7 +7520,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7509,7 +7545,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7534,7 +7570,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7559,7 +7595,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7584,7 +7620,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7609,7 +7645,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7634,7 +7670,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7659,7 +7695,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7684,7 +7720,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7709,7 +7745,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7734,7 +7770,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7759,7 +7795,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7784,7 +7820,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7809,7 +7845,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7834,7 +7870,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7859,7 +7895,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7884,7 +7920,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7909,7 +7945,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7934,7 +7970,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7959,7 +7995,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7984,7 +8020,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8009,7 +8045,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8034,7 +8070,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -8059,7 +8095,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -8084,7 +8120,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8109,7 +8145,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8134,7 +8170,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -8159,7 +8195,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8184,7 +8220,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8209,7 +8245,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8234,7 +8270,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8259,7 +8295,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8284,7 +8320,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8309,7 +8345,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8334,7 +8370,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8359,7 +8395,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8384,7 +8420,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8409,7 +8445,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8434,7 +8470,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8459,7 +8495,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8484,7 +8520,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8509,7 +8545,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8534,7 +8570,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8559,7 +8595,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8584,7 +8620,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8609,7 +8645,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8634,7 +8670,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8659,7 +8695,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8684,7 +8720,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8709,7 +8745,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8734,7 +8770,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8759,7 +8795,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8784,7 +8820,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8809,7 +8845,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8834,7 +8870,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8859,7 +8895,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8884,7 +8920,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8909,7 +8945,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8934,7 +8970,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8959,7 +8995,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8984,7 +9020,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9009,7 +9045,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9034,7 +9070,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9059,7 +9095,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9084,7 +9120,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9109,7 +9145,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9134,7 +9170,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9159,7 +9195,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9184,7 +9220,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9209,7 +9245,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9234,7 +9270,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9259,7 +9295,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9284,7 +9320,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9309,7 +9345,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9334,7 +9370,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9359,7 +9395,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9384,7 +9420,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9409,7 +9445,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9434,7 +9470,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9459,7 +9495,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9484,7 +9520,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9509,7 +9545,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -9534,7 +9570,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9559,7 +9595,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9584,7 +9620,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9609,7 +9645,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9634,7 +9670,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9659,7 +9695,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -9684,7 +9720,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9709,7 +9745,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9734,7 +9770,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9759,7 +9795,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9784,7 +9820,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9809,7 +9845,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9834,7 +9870,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9859,7 +9895,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9884,7 +9920,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9909,7 +9945,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9934,7 +9970,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -9959,8 +9995,33 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 L18 Predict_2023"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 L18 Predict_2023"
+        ],
+        "lesson.key": "Velocity",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3-2023",
+        "activity_section.key": "a1b92792-5036-45e8-8313-b0d2b679696e"
+      },
+      "level_keys": [
+        "CSD U3 L18 Predict_2023"
+      ]
+    },
+    {
+      "chapter": 123,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9977,16 +10038,16 @@
         "lesson.key": "Velocity",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "abb8365c-303e-410d-a30b-a54115599db1"
+        "activity_section.key": "345c6438-5484-47f2-a8ba-2d8c0a02773b"
       },
       "level_keys": [
         "CSD U3 abstraction velocityX_2023"
       ]
     },
     {
-      "chapter": 122,
-      "position": 2,
-      "activity_section_position": 1,
+      "chapter": 124,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -10009,9 +10070,9 @@
       ]
     },
     {
-      "chapter": 123,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 125,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -10034,9 +10095,9 @@
       ]
     },
     {
-      "chapter": 124,
-      "position": 4,
-      "activity_section_position": 3,
+      "chapter": 126,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -10059,9 +10120,9 @@
       ]
     },
     {
-      "chapter": 125,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 127,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -10084,9 +10145,9 @@
       ]
     },
     {
-      "chapter": 126,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 128,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -10109,8 +10170,8 @@
       ]
     },
     {
-      "chapter": 127,
-      "position": 7,
+      "chapter": 129,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -10134,8 +10195,8 @@
       ]
     },
     {
-      "chapter": 128,
-      "position": 8,
+      "chapter": 130,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -10159,8 +10220,8 @@
       ]
     },
     {
-      "chapter": 129,
-      "position": 9,
+      "chapter": 131,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -10184,7 +10245,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 132,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10209,7 +10270,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 133,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10234,7 +10295,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 134,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10259,7 +10320,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 135,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10284,7 +10345,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 136,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10309,7 +10370,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 137,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10334,7 +10395,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 138,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10359,7 +10420,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 139,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10384,7 +10445,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 140,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10409,7 +10470,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 141,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10434,7 +10495,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 142,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10459,7 +10520,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 143,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10484,7 +10545,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 144,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10509,7 +10570,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 145,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10534,7 +10595,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 146,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10559,7 +10620,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 147,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10584,7 +10645,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 148,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10609,7 +10670,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 149,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10634,7 +10695,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 150,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10659,7 +10720,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 151,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10684,7 +10745,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 152,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10709,7 +10770,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 153,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -10734,7 +10795,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 154,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10759,7 +10820,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 155,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10784,7 +10845,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 156,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10809,7 +10870,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 157,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10834,7 +10895,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 158,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10859,7 +10920,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 159,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10884,7 +10945,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 160,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10909,7 +10970,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 161,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10934,7 +10995,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 162,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10959,7 +11020,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 163,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10984,7 +11045,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 164,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11009,7 +11070,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 165,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11034,7 +11095,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 166,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11059,7 +11120,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 167,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11084,7 +11145,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 168,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11109,7 +11170,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 169,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11134,7 +11195,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 170,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11159,7 +11220,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 171,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11184,7 +11245,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 172,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11209,7 +11270,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 173,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11234,7 +11295,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 174,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -11259,7 +11320,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 175,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11284,7 +11345,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 176,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11309,7 +11370,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 177,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -11334,7 +11395,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 178,
       "position": 8,
       "activity_section_position": 3,
       "assessment": true,
@@ -11359,7 +11420,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 179,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -11384,7 +11445,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 180,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11409,7 +11470,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 181,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11434,7 +11495,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 182,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11459,7 +11520,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 183,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11484,7 +11545,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 184,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11509,7 +11570,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 185,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -11534,7 +11595,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 186,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -11559,7 +11620,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 187,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11584,7 +11645,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 188,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -11609,7 +11670,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 189,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -11634,7 +11695,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 190,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -11659,7 +11720,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 191,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -11684,7 +11745,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 192,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -11709,7 +11770,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 193,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11734,7 +11795,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 194,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11759,7 +11820,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 195,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11784,7 +11845,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 196,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11809,7 +11870,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 197,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11834,7 +11895,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 198,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -11859,7 +11920,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 199,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11884,7 +11945,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 200,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -11909,7 +11970,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 201,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -11934,7 +11995,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 202,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11959,7 +12020,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 203,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -11984,7 +12045,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 204,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12009,7 +12070,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 205,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12034,7 +12095,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 206,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12059,7 +12120,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 207,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -12084,7 +12145,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 208,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -12109,7 +12170,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 209,
       "position": 17,
       "activity_section_position": 1,
       "assessment": true,
@@ -12134,7 +12195,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 210,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -12159,7 +12220,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 211,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12184,7 +12245,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 212,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12209,7 +12270,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 213,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12234,7 +12295,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 214,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12259,7 +12320,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 215,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12284,7 +12345,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 216,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12309,7 +12370,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 217,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12334,7 +12395,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 218,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12359,7 +12420,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 219,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -12384,7 +12445,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 220,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -12409,7 +12470,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 221,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12434,7 +12495,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 222,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -12459,7 +12520,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 223,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12546,6 +12607,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U3L3 rect_2023",
+        "script_level.level_keys": [
+          "CSD U3L3 rect_2023"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "06a8e7d0-bcf6-462e-ad1c-811252e94962"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U3 rect_2023",
         "script_level.level_keys": [
           "CSD U3 rect_2023"
@@ -12553,7 +12626,7 @@
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "06a8e7d0-bcf6-462e-ad1c-811252e94962"
+        "activity_section.key": "43092a5a-ca50-4794-8818-894953630692"
       }
     },
     {
@@ -13926,6 +13999,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U3 L18 Predict_2023",
+        "script_level.level_keys": [
+          "CSD U3 L18 Predict_2023"
+        ],
+        "lesson.key": "Velocity",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3-2023",
+        "activity_section.key": "a1b92792-5036-45e8-8313-b0d2b679696e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U3 abstraction velocityX_2023",
         "script_level.level_keys": [
           "CSD U3 abstraction velocityX_2023"
@@ -13933,7 +14018,7 @@
         "lesson.key": "Velocity",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
-        "activity_section.key": "abb8365c-303e-410d-a30b-a54115599db1"
+        "activity_section.key": "345c6438-5484-47f2-a8ba-2d8c0a02773b"
       }
     },
     {

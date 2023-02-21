@@ -1,5 +1,5 @@
 import {expect} from '../../../util/reconfiguredChai';
-import {sprites} from '@cdo/apps/p5lab/spritelab/blocks';
+import {costumeList} from '@cdo/apps/p5lab/spritelab/blocks';
 import {
   registerReducers,
   stubRedux,
@@ -14,7 +14,7 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 
 describe('Gamelab blocks', () => {
-  describe('sprites()', () => {
+  describe('costumeList()', () => {
     let animationList = {
       orderedKeys: ['1', '2'],
       propsByKey: {
@@ -54,7 +54,7 @@ describe('Gamelab blocks', () => {
     });
 
     it('returns sourceUrl array for both library and drawn costumes', () => {
-      let items = sprites();
+      let items = costumeList();
       expect(items.length).to.equal(2);
       expect(items[0]).to.deep.equal([
         animationSourceUrl(
