@@ -1,7 +1,7 @@
 import GoogleBlockly from 'blockly/core';
 
 // Intentionally overriden styles from Google Blockly.
-// We do not override list, math, text, or variable blocks.
+// We do not override list, logic, math, text, or variable blocks.
 const coreBlocklyOverrides = {
   colour_blocks: {
     colourPrimary: '#0093c9'
