@@ -53,6 +53,11 @@ export default class SetupGuide extends React.Component {
           imgStyle: style.circuitPlaygroundImg,
           alt: applabI18n.makerSetupCircuitPlaygroundImageAltText()
         };
+      case 'general':
+        return {
+          id: 'general-description',
+          description: applabI18n.makerSetupGeneralDescription()
+        };
     }
   };
 
@@ -85,15 +90,20 @@ export default class SetupGuide extends React.Component {
         )}
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
         {isMicrobit ? (
-          <div style={style.twoColumns}>
-            <DescriptionCard
-              {...this.setupGuideContent('circuitPlayground')}
-              divStyle={style.descriptionFlexCard}
-            />
-            <DescriptionCard
-              {...this.setupGuideContent('microbit')}
-              divStyle={style.descriptionFlexCard}
-            />
+          <div>
+            <div style={style.oneColumn}>
+              <DescriptionCard {...this.setupGuideContent('general')} />
+            </div>
+            <div style={style.twoColumns}>
+              <DescriptionCard
+                {...this.setupGuideContent('circuitPlayground')}
+                divStyle={style.descriptionFlexCard}
+              />
+              <DescriptionCard
+                {...this.setupGuideContent('microbit')}
+                divStyle={style.descriptionFlexCard}
+              />
+            </div>
           </div>
         ) : (
           <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
