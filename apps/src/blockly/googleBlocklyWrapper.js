@@ -24,6 +24,7 @@ import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
+import CdoHighContrastTheme from './themes/cdoHighContrast';
 import MusicLabTheme from './themes/musicLabDark';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
@@ -34,12 +35,20 @@ import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
-import {ToolboxType} from './constants';
+import {ToolboxType, Themes} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
+
+const options = {
+  contextMenu: true,
+  shortcut: true
+};
+
+const plugin = new CrossTabCopyPaste();
+plugin.init(options);
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -249,7 +258,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     true /* opt_allowOverrides */
   );
   registerAllContextMenuItems();
-  registerAllShortcutItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
@@ -283,9 +291,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   // Allows for dynamically setting the workspace theme with workspace.setTheme()
   blocklyWrapper.themes = {
-    modern: CdoTheme,
-    dark: CdoDarkTheme,
-    music: MusicLabTheme
+    [Themes.MODERN]: CdoTheme,
+    [Themes.DARK]: CdoDarkTheme,
+    [Themes.HIGH_CONTRAST]: CdoHighContrastTheme,
+    [Themes.MUSICLAB_DARK]: MusicLabTheme
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
@@ -477,7 +486,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
-        theme: CdoTheme,
+        theme: options.theme || CdoTheme,
         plugins: {},
         RTL: options.rtl
       });
@@ -547,7 +556,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
       renderer: opt_options.renderer || 'cdo_renderer',
       comments: false
     };
-
+    // Users can change their active theme using the context menu. Use this setting, if present.
+    // Music Lab doesn't look good without its custom theme, so we prevent others from being used.
+    if (localStorage.blocklyTheme && options.theme.name !== 'musiclabdark') {
+      options.theme = this.themes[localStorage.blocklyTheme] || options.theme;
+    }
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
     blocklyWrapper.assetUrl = opt_options.assetUrl || (path => `./${path}`);

@@ -1,12 +1,12 @@
 import {BlockTypes} from '../blockTypes';
 import Globals from '../../globals';
 import {
-  DEFAULT_SOUND,
   TRIGGER_FIELD,
   DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
   FIELD_SOUNDS_TYPE
 } from '../constants';
+import {DEFAULT_SOUND} from '../../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -17,6 +17,10 @@ export class GeneratorHelpersSimple2 {
   static getFunctionImplementation(functionName, functionCode) {
     const actualFunctionName = this.getSafeFunctionName(functionName);
     return `function ${actualFunctionName}() {
+      var __currentFunction = {
+        name: '${functionName}',
+        uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
+      };
       ProgramSequencer.playSequential();
       ${functionCode}
       ProgramSequencer.endSequential();
@@ -34,6 +38,10 @@ export class GeneratorHelpersSimple2 {
   ) {
     return `
     var __insideWhenRun = true;
+    var __currentFunction = {
+      name: 'when_run',
+      uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
+    };
     ProgramSequencer.init();
     ProgramSequencer.playTogether();
     ${functionCallsCode}
@@ -73,6 +81,10 @@ export const whenRunSimple2 = {
   generator: () =>
     `
       var __insideWhenRun = true;
+      var __currentFunction = {
+        name: 'when_run',
+        uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
+      };
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
     `
@@ -94,8 +106,12 @@ export const triggeredAtSimple2 = {
     tooltip: 'at trigger',
     extensions: [DYNAMIC_TRIGGER_EXTENSION]
   },
-  generator: () =>
+  generator: block =>
     ` var __insideWhenRun = false;
+      var __currentFunction = {
+        name: '${block.getFieldValue(TRIGGER_FIELD)}',
+        uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
+      };
       ProgramSequencer.playSequentialWithMeasure(
         Math.ceil(
           MusicPlayer.getCurrentPlayheadPosition()
@@ -131,7 +147,9 @@ export const playSoundAtCurrentLocationSimple2 = {
       MusicPlayer.playSoundAtMeasureById(
         "${block.getFieldValue(FIELD_SOUNDS_NAME)}",
         ProgramSequencer.getCurrentMeasure(),
-        __insideWhenRun
+        __insideWhenRun,
+        null,
+        __currentFunction
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(

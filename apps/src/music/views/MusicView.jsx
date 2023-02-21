@@ -12,7 +12,7 @@ import {Triggers} from '../constants';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import moduleStyles from './music.module.scss';
+import moduleStyles from './music-view.module.scss';
 import {AnalyticsContext, PlayerUtilsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
@@ -34,6 +34,13 @@ const instructionPositionOrder = [
   InstructionsPositions.RIGHT
 ];
 
+/**
+ * Top-level container for Music Lab. Manages all views on the page as well as the
+ * Blockly workspace and music player.
+ *
+ * TODO: Split up this component into a pure view and class/component that manages
+ * application state.
+ */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
     // populated by Redux
@@ -48,7 +55,6 @@ class UnconnectedMusicView extends React.Component {
     this.player = new MusicPlayer();
     this.programSequencer = new ProgramSequencer();
     this.analyticsReporter = new AnalyticsReporter();
-    this.codeHooks = {};
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     // Increments every time a trigger is pressed;
@@ -70,11 +76,10 @@ class UnconnectedMusicView extends React.Component {
     this.state = {
       instructions: null,
       isPlaying: false,
-      startPlayingAudioTime: null,
       currentPlayheadPosition: 0,
       updateNumber: 0,
       timelineAtTop: false,
-      showInstructions: true,
+      showInstructions: false,
       instructionsPosIndex
     };
   }
@@ -109,12 +114,15 @@ class UnconnectedMusicView extends React.Component {
       Globals.setPlayer(this.player);
     });
 
-    this.loadInstructions().then(instructions => {
-      this.setState({
-        instructions: instructions,
-        showInstructions: !!instructions
+    // Only attempt to load instructions if configured to.
+    if (AppConfig.getValue('show-instructions') === 'true') {
+      this.loadInstructions().then(instructions => {
+        this.setState({
+          instructions: instructions,
+          showInstructions: !!instructions
+        });
       });
-    });
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -180,6 +188,12 @@ class UnconnectedMusicView extends React.Component {
     // It's possible that other events should similarly be ignored here.
     if (e.type === Blockly.Events.BLOCK_DRAG) {
       this.player.stopAndCancelPreviews();
+      return;
+    }
+
+    // Prevent a rapid cycle of workspace resizing from occurring when
+    // dragging a block near the bottom of the workspace.
+    if (e.type === Blockly.Events.VIEWPORT_CHANGE) {
       return;
     }
 
@@ -347,6 +361,7 @@ class UnconnectedMusicView extends React.Component {
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
+          instructionsAvailable={!!this.state.instructions}
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />

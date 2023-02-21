@@ -10,6 +10,7 @@ export const SENSOR_CHANNELS = {
 export const EXTERNAL_PINS = [0, 1, 2];
 
 export const MB_API = 'microbit';
+export const FIRMWARE_VERSION_TIMEOUT = 'firmwareVersionTimeout';
 
 export function roundToHundredth(rawValue) {
   return Math.floor(rawValue * 100) / 100;

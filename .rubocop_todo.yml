@@ -478,12 +478,6 @@ Style/OptionalBooleanParameter:
 Style/QuotedSymbols:
   Enabled: false
 
-# Offense count: 17
-# This cop supports unsafe auto-correction (--auto-correct-all).
-# Configuration parameters: Methods.
-Style/RedundantArgument:
-  Enabled: false
-
 # Offense count: 14
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantAssignment:
