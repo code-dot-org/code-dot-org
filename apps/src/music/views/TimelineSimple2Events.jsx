@@ -87,6 +87,7 @@ const TimelineSimple2Events = ({
       <div style={{position: 'absolute'}}>
         {uniqueFunctionExtents.map((uniqueFunction, index) => (
           <div
+            key={index}
             style={{
               position: 'absolute',
               backgroundColor: 'rgba(115 115 115 / 0.7)',

@@ -106,8 +106,12 @@ export const triggeredAtSimple2 = {
     tooltip: 'at trigger',
     extensions: [DYNAMIC_TRIGGER_EXTENSION]
   },
-  generator: () =>
+  generator: block =>
     ` var __insideWhenRun = false;
+      var __currentFunction = {
+        name: '${block.getFieldValue(TRIGGER_FIELD)}',
+        uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
+      };
       ProgramSequencer.playSequentialWithMeasure(
         Math.ceil(
           MusicPlayer.getCurrentPlayheadPosition()
