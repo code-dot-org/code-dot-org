@@ -8,7 +8,7 @@ linters:
       - 'pegasus/**/*.haml'
 
   # Custom rule
-  ConsistentQuotationMark:
+  OnlyAllowedCharacters:
     enabled: true
     include:
       - '/**/*mailer*/**/*.haml'
@@ -16,4 +16,4 @@ exclude:
 - '/**/pegasus/test/fixtures/**/*.haml'
 - 'pegasus/test/fixtures/**/*.haml'
 require:
-- './tools/customLinters/haml_lint_consistent_quotation_mark.rb'
+- './tools/customLinters/haml_lint_only_allowed_characters.rb'

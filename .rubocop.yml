@@ -7,7 +7,7 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rails-accessibility
-  - './tools/customLinters/rubocop_consistent_quotation_mark.rb'
+  - './tools/customLinters/rubocop_only_allowed_characters.rb'
 
 AllCops:
   SuggestExtensions: false
@@ -27,7 +27,7 @@ Rails:
 
 # BEGIN CODE.ORG OVERRIDES
 
-CustomCops/ConsistentQuotationMark:
+CustomCops/OnlyAllowedCharacters:
   Include:
     - '**/*_mailer.rb'
 
