@@ -45,3 +45,7 @@ export const BlockMode = {
 };
 
 export const DEFAULT_SOUND = 'dance/groovy_beat';
+export const DEFAULT_PATTERN = {
+  kit: 'glitch',
+  events: [{src: 'glitch_1', tick: 3}]
+};

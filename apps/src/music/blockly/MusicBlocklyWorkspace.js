@@ -4,6 +4,7 @@ import {MUSIC_BLOCKS} from './musicBlocks';
 import musicLabDarkTheme from '@cdo/apps/blockly/themes/musicLabDark';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
+import FieldPattern from './FieldPattern';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import {
@@ -65,6 +66,7 @@ export default class MusicBlocklyWorkspace {
     }
 
     Blockly.fieldRegistry.register('field_sounds', FieldSounds);
+    Blockly.fieldRegistry.register('field_pattern', FieldPattern);
 
     this.workspace = Blockly.inject(container, {
       toolbox: getToolbox(),

@@ -84,6 +84,44 @@ export default class MusicPlayer {
     }
   }
 
+  playPatternAtMeasureById(
+    pattern,
+    measure,
+    insideWhenRun,
+    trackId,
+    functionContext
+  ) {
+    if (!this.isInitialized) {
+      console.log('MusicPlayer not initialized');
+      return;
+    }
+    if (
+      !pattern ||
+      //this.soundList.indexOf(`${this.groupPrefix}/${id}`) === -1 ||
+      !measure
+    ) {
+      console.log(`Invalid input. pattern: ${pattern} measure: ${measure}`);
+      return;
+    }
+
+    for (let patternEvent of pattern.events) {
+      const soundEvent = {
+        type: EventType.PLAY,
+        id: pattern.kit + '/' + patternEvent.src,
+        insideWhenRun,
+        when: measure + patternEvent.tick / 16,
+        trackId,
+        functionContext
+      };
+
+      this.soundEvents.push(soundEvent);
+
+      if (this.isPlaying) {
+        this.playSoundEvent(soundEvent);
+      }
+    }
+  }
+
   playSoundAtMeasureByName(name, measure, insideWhenRun) {
     this.playSoundAtMeasureById(
       this.getIdForSoundName(name),

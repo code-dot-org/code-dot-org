@@ -37,6 +37,10 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2
   },
+  [BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2
+  },
   [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
@@ -324,6 +328,7 @@ export function getToolbox() {
         {
           Play: [
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
           ],
           Control: [
