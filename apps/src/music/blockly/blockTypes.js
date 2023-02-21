@@ -10,6 +10,8 @@ export const BlockTypes = {
   SET_CURRENT_LOCATION_NEXT_MEASURE: 'set_current_location_next_measure',
   PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2:
     'play_sound_at_current_location_simple2',
+  PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2:
+    'play_pattern_at_current_location_simple2',
   PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2:
     'play_rest_at_current_location_simple2',
   PLAY_SOUNDS_TOGETHER: 'play_sounds_together',

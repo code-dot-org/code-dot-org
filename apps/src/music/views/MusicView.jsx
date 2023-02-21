@@ -149,6 +149,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadLibrary = async () => {
+    const defaultLibraryFilename = 'music-library';
+    const defaultCode = require(`@cdo/static/music/${defaultLibraryFilename}.json`);
+    return defaultCode;
+    /*
     const libraryParameter = AppConfig.getValue('library');
     const libraryFilename = libraryParameter
       ? `music-library-${libraryParameter}.json`
@@ -156,6 +160,7 @@ class UnconnectedMusicView extends React.Component {
     const response = await fetch(baseUrl + libraryFilename);
     const library = await response.json();
     return library;
+    */
   };
 
   loadInstructions = async () => {

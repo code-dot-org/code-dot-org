@@ -7,6 +7,94 @@
       "path": "all",
       "folders": [
         {
+          "id": "glitch",
+          "name": "Glitch",
+          "path": "glitch",
+          "type": "kit",
+          "sounds": [
+            {
+              "name": "Glitch 1",
+              "src": "glitch_1",
+              "length": 0.0625
+            },
+            {
+              "name": "Glitch 2",
+              "src": "glitch_2",
+              "length": 0.0625
+            },
+            {
+              "name": "Glitch 3",
+              "src": "glitch_3",
+              "length": 0.0625
+            },
+            {
+              "name": "Glitch 4",
+              "src": "glitch_4",
+              "length": 0.0625
+            },
+            {
+              "name": "Glitch 5",
+              "src": "glitch_5",
+              "length": 0.0625
+            },
+            {
+              "name": "Glitch 6",
+              "src": "glitch_6",
+              "length": 0.0625
+            },
+            {
+              "name": "Glitch 7",
+              "src": "glitch_7",
+              "length": 0.0625
+            },
+            {
+              "name": "Glitch 8",
+              "src": "glitch_8",
+              "length": 0.0625
+            }
+          ]
+        },
+        {
+          "name": "Machine",
+          "path": "kits",
+          "type": "kit",
+          "sounds": [
+            {
+              "name": "Machine 1",
+              "src": "machine_1"
+            },
+            {
+              "name": "Machine 2",
+              "src": "machine_2"
+            },
+            {
+              "name": "Machine 3",
+              "src": "machine_3"
+            },
+            {
+              "name": "Machine 4",
+              "src": "machine_4"
+            },
+            {
+              "name": "Machine 5",
+              "src": "machine_5"
+            },
+            {
+              "name": "Machine 6",
+              "src": "machine_6"
+            },
+            {
+              "name": "Machine 7",
+              "src": "machine_7"
+            },
+            {
+              "name": "Machine 8",
+              "src": "machine_8"
+            }
+          ]
+        },
+
+        {
           "name": "Dance",
           "path": "dance",
           "imageSrc": "thumbnail.png",

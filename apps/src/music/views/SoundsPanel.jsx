@@ -89,26 +89,28 @@ const SoundsPanel = ({
 
   return (
     <div className={styles.soundsPanel}>
-      {group.folders.map((folder, folderIndex) => {
-        return (
-          <div className={styles.folder} key={folderIndex}>
-            <div className={styles.folderName}>{folder.name}</div>
-            {folder.sounds.map((sound, soundIndex) => {
-              return (
-                <SoundsPanelRow
-                  key={soundIndex}
-                  currentValue={currentValue}
-                  playingPreview={playingPreview}
-                  folder={folder}
-                  sound={sound}
-                  onSelect={onSelect}
-                  onPreview={onPreview}
-                />
-              );
-            })}
-          </div>
-        );
-      })}
+      {group.folders
+        .filter(folder => folder.type !== 'kit')
+        .map((folder, folderIndex) => {
+          return (
+            <div className={styles.folder} key={folderIndex}>
+              <div className={styles.folderName}>{folder.name}</div>
+              {folder.sounds.map((sound, soundIndex) => {
+                return (
+                  <SoundsPanelRow
+                    key={soundIndex}
+                    currentValue={currentValue}
+                    playingPreview={playingPreview}
+                    folder={folder}
+                    sound={sound}
+                    onSelect={onSelect}
+                    onPreview={onPreview}
+                  />
+                );
+              })}
+            </div>
+          );
+        })}
     </div>
   );
 };
