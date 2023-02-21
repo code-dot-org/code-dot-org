@@ -2,11 +2,11 @@ require_relative 'linter_constants'
 
 module CustomCops
   class ConsistentQuotationMark < RuboCop::Cop::Base
-    MSG = "Do not use left/right quotation mark – use \' or \" instead.".freeze
+    include LinterConstants
 
     def on_str(node)
       string = node.source
-      return unless string.match?(LinterConstants::NOT_ALLOWED_REGEX)
+      return unless string.match?(NOT_ALLOWED_REGEX)
 
       add_offense(node)
     end

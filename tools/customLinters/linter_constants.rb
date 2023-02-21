@@ -7,4 +7,6 @@ module LinterConstants
   ].freeze
 
   NOT_ALLOWED_REGEX = /[#{NOT_ALLOWED_CHARACTERS.join}]/
+
+  MSG = "Do not use left/right quotation mark. Use \' or \" instead.".freeze
 end
