@@ -84,7 +84,7 @@ var ALLOWED_KEYS = new Set([
   'aiEnabled',
   'aiModelId',
   'aiModelName',
-  'isValidationEnabled'
+  'isCurriculumLevel'
 ]);
 
 const initialState = {
