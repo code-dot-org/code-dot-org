@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGroup';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
@@ -11,9 +11,6 @@ export default function SingleSectionSetUp({
   updateSection
 }) {
   const options = StudentGradeLevels.map(g => ({label: g, value: g}));
-  const [grades, setGrades] = useState(
-    Object.fromEntries(options.map(o => [o.value, false]))
-  );
 
   return (
     <div>
@@ -32,11 +29,7 @@ export default function SingleSectionSetUp({
         name="grades"
         required={true}
         options={options}
-        values={grades}
-        setValues={g => {
-          updateSection('grades', g);
-          setGrades(g);
-        }}
+        setSelected={g => updateSection('grades', g)}
       />
       <hr />
     </div>

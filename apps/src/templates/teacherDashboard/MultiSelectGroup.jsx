@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
@@ -14,10 +14,13 @@ export default function MultiSelectGroup({
   name,
   required,
   options,
-  values,
-  setValues
+  setSelected
 }) {
   const inputName = `${name}[]`;
+
+  const [values, setValues] = useState(
+    Object.fromEntries(options.map(o => [o.value, false]))
+  );
 
   return (
     <div className={styles.multiSelectGroup}>
@@ -37,10 +40,12 @@ export default function MultiSelectGroup({
             // `checked`.
             required={required ? !Object.values(values).some(v => !!v) : false}
             onCheckedChange={checked => {
-              setValues({
+              const newValues = {
                 ...values,
                 [option.value]: checked
-              });
+              };
+              setValues(newValues);
+              setSelected(Object.keys(newValues).filter(k => newValues[k]));
             }}
           />
         ))}
@@ -84,8 +89,7 @@ MultiSelectGroup.propTypes = {
   name: PropTypes.string.isRequired,
   required: PropTypes.bool,
   options: PropTypes.arrayOf(multiSelectOptionShape).isRequired,
-  values: PropTypes.object.isRequired,
-  setValues: PropTypes.func.isRequired
+  setSelected: PropTypes.func.isRequired
 };
 
 MultiSelectButton.propTypes = {
