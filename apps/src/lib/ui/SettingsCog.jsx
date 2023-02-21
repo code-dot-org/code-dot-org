@@ -94,7 +94,8 @@ export class SettingsCog extends Component {
   }
 
   isCurriculumLevel() {
-    // isValidationEnabled is only defined for App Lab curriculum levels
+    // isValidationEnabled is only defined for App Lab curriculum levels to help determine
+    // if Maker Toolkit Toggle is displayed
     return this.getPageConstants()?.isValidationEnabled !== undefined;
   }
 

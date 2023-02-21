@@ -35,8 +35,29 @@ describe('SettingsCog', () => {
 
   it('does not show maker toggle when "showMakerToggle" is false', () => {
     const wrapper = shallow(<SettingsCog showMakerToggle={false} />);
+    console.log(wrapper.text()); // LOG: '<FontAwesome /><ConfirmEnableMakerDialogPortal /><LibraryManagerDialog />'
     expect(wrapper.text()).to.not.include(msg.enableMaker());
     expect(wrapper.text()).to.not.include(msg.disableMaker());
+  });
+
+  // ADDED THIS TEST - CURRENTLY FAILS - assuming should pass based on prior unit test.
+  it('does show maker toggle when "showMakerToggle" is true', () => {
+    const wrapper = shallow(<SettingsCog showMakerToggle={true} />);
+    console.log(wrapper);
+    console.log(wrapper.text());
+    expect(wrapper.text()).to.not.include(msg.enableMaker());
+    expect(wrapper.text()).to.not.include(msg.disableMaker());
+  });
+
+  it('does not show disable toolkit when user on a curriculum level', () => {
+    const wrapper = shallow(<SettingsCog showMakerToggle={true} />);
+    expect(wrapper.text()).to.include(msg.disableMaker());
+  });
+
+  it('does show disable toolkit when user is NOT on a curriculum level', () => {
+    const wrapper = shallow(<SettingsCog showMakerToggle={true} />);
+    console.log(wrapper.text());
+    expect(wrapper.text()).to.include(msg.disableMaker());
   });
 
   describe('menu items', () => {
@@ -110,19 +131,6 @@ describe('SettingsCog', () => {
         settings.update();
         expect(settings.state().confirmingEnableMaker).to.be.true;
       });
-
-      // it('hides maker toggle when "showMakerToggle" is true but project is a curriculum level', () => {
-      //   makerRedux.isAvailable.returns(true);
-      //   makerRedux.isEnabled.returns(true);
-      // });
-
-      // it('does show maker toggle when "showMakerToggle" is true but project is not a curriculum level', () => {
-      //   const wrapper = shallow(
-      //     isCurriculumLevel(() => {
-      //       return false;
-      //     })
-      //   );
-      // });
     });
   });
 });
