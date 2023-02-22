@@ -4487,6 +4487,13 @@ fr:
               display_name: Enquête
         coursea-2021:
           title: Cours A (2021)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs
+            débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
+            en utilisant des commandes telles que les boucles et les événements. Les
+            leçons qui se trouvent dans ce cours enseigneront également aux élèves
+            à collaborer sérieusement les uns avec les autres, différentes techniques
+            de résolution de problèmes, à persister face aux tâches plus exigeantes,
+            et comment naviguer l''internet en toute sécurité. '
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
           lesson_groups:
@@ -4505,6 +4512,15 @@ fr:
             que tu peux partager.
         courseb-2021:
           title: Cours B (2021)
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si
+            les notions présentées dans le Cours B suivent de près celles du Cours
+            A, les élèves découvriront néanmoins des activités déconnectées plus complexes
+            et travailleront avec une plus grande variété de casse-têtes. Les élèves
+            apprendront les bases de la programmation, des techniques de collaboration,
+            développeront des compétences d'investigation et leur esprit critique,
+            et apprendront à persévérer face aux difficultés et à naviguer l'internet
+            en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres
+            jeux dans l'environnement Labo Jeux.
           description_short: Une introduction à l'informatique pour les pré-lecteurs.
             Similaire au cours A, mais avec une profondeur de concept accrue.
           description_audience: 'Âges : 5 à 8 ans'
@@ -5222,6 +5238,13 @@ fr:
             lessonGroup-5:
               display_name: Projet de fin de cours
           title: Cours A (2022)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs
+            débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
+            en utilisant des commandes telles que les boucles et les événements. Les
+            leçons qui se trouvent dans ce cours enseigneront également aux élèves
+            à collaborer sérieusement les uns avec les autres, différentes techniques
+            de résolution de problèmes, à persister face aux tâches plus exigeantes,
+            et comment naviguer l''internet en toute sécurité. '
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5313,6 +5336,15 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Projet de fin de cours
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si
+            les notions présentées dans le Cours B suivent de près celles du Cours
+            A, les élèves découvriront néanmoins des activités déconnectées plus complexes
+            et travailleront avec une plus grande variété de casse-têtes. Les élèves
+            apprendront les bases de la programmation, des techniques de collaboration,
+            développeront des compétences d'investigation et leur esprit critique,
+            et apprendront à persévérer face aux difficultés et à naviguer l'internet
+            en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres
+            jeux dans l'environnement Labo Jeux.
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5884,6 +5916,15 @@ fr:
               name: Tableaux unidimensionnels (1D)
             lesson-3:
               name: Les Boucles « Pour »
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Random
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
