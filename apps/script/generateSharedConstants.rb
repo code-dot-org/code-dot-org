@@ -89,6 +89,7 @@ def main
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
     ABUSE_CONSTANTS
     ERROR_SEVERITY_LEVELS
+    RESTRICTED_PUBLISH_PROJECT_TYPES
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
