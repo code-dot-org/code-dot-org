@@ -18,6 +18,7 @@ export default function SingleSectionSetUp({
       <label>
         {i18n.className()}
         <input
+          required
           type="text"
           className={moduleStyles.classNameTextField}
           value={section.name}

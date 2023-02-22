@@ -5,6 +5,8 @@ import CurriculumQuickAssign from './CurriculumQuickAssign';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 
+const FORM_ID = 'sections-set-up-container';
+
 // Custom hook to update the list of sections to create
 // Currently, this hook returns two things:
 //   - sections: list of objects that represent the sections to create
@@ -29,8 +31,15 @@ const useSections = () => {
   return [sections, updateSection];
 };
 
-const saveSection = section => {
+const saveSection = (e, section) => {
+  e.preventDefault();
   console.log('Save class sections clicked');
+
+  const form = document.querySelector(`#${FORM_ID}`);
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
 
   fetch('/sections', {
     method: 'POST',
@@ -41,13 +50,18 @@ const saveSection = section => {
     body: JSON.stringify({section})
   })
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => {
+      // Redirect to the sections list.
+      console.log(window.location);
+      window.location.href = window.location.origin + '/home';
+    })
+    .catch(err => console.error(err));
 };
 
 export default function SectionsSetUpContainer() {
   const [sections, updateSection] = useSections();
   return (
-    <div>
+    <form id={FORM_ID}>
       <h1>{i18n.setUpClassSectionsHeader()}</h1>
       <p>{i18n.setUpClassSectionsSubheader()}</p>
       <p>
@@ -71,9 +85,9 @@ export default function SectionsSetUpContainer() {
         <Button
           text={i18n.saveClassSections()}
           color="purple"
-          onClick={() => saveSection(sections[0])}
+          onClick={e => saveSection(e, sections[0])}
         />
       </div>
-    </div>
+    </form>
   );
 }
