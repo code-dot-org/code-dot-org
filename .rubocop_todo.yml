@@ -147,12 +147,6 @@ Naming/MemoizedInstanceVariableName:
 Naming/MethodParameterName:
   Enabled: false
 
-# Offense count: 72
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: PreferredName.
-Naming/RescuedExceptionsVariableName:
-  Enabled: false
-
 # Offense count: 661
 # Configuration parameters: EnforcedStyle, CheckMethodNames, CheckSymbols, AllowedIdentifiers.
 # SupportedStyles: snake_case, normalcase, non_integer

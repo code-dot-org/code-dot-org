@@ -9,8 +9,8 @@ module CustomRake
       logger.start_task_logging
       begin
         puts "Finished #{name} (#{distance_of_time_in_words(Benchmark.realtime {super}.to_f)})"
-      rescue => exception
-        logger.exception_task_logging(exception)
+      rescue => e
+        logger.exception_task_logging(e)
         raise
       end
       logger.end_task_logging

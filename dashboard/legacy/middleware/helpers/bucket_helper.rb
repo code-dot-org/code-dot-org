@@ -401,9 +401,9 @@ class BucketHelper
         version_restored = true
       rescue Aws::S3::Errors::NoSuchVersion
         # Do nothing - we'll attempt the fallback below.
-      rescue Aws::S3::Errors::InvalidArgument => err
+      rescue Aws::S3::Errors::InvalidArgument => e
         # On invalid version, try the fallback - otherwise reraise.
-        raise unless invalid_version_id?(err)
+        raise unless invalid_version_id?(e)
       end
     end
 

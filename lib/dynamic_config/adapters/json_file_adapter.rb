@@ -24,8 +24,8 @@ class JSONFileDatastoreAdapter
     load_from_file
     begin
       return Oj.load(@hash[key])
-    rescue => exc
-      Honeybadger.notify(exc)
+    rescue => e
+      Honeybadger.notify(e)
     end
     nil
   end
@@ -37,8 +37,8 @@ class JSONFileDatastoreAdapter
     @hash.each do |k, v|
       begin
         value = Oj.load(v)
-      rescue => exc
-        Honeybadger.notify(exc)
+      rescue => e
+        Honeybadger.notify(e)
         nil
       end
       ret[k] = value

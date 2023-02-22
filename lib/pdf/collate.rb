@@ -48,9 +48,9 @@ module PDF
       next filename unless string_is_url(filename)
       begin
         local_file = Tempfile.from_url(filename)
-      rescue Exception => msg
+      rescue Exception => e
         puts "Error downloading PDF file #{filename} for output file #{output_file}. Aborting"
-        puts "Error message: #{msg}"
+        puts "Error message: #{e}"
         raise
       end
       temp_file_handles << local_file
