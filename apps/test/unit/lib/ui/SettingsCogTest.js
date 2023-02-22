@@ -123,7 +123,7 @@ describe('SettingsCog', () => {
       });
     });
 
-    describe('maker toggle - curriculum level vs standalone project', () => {
+    describe('curriculum level vs standalone project - maker toolkit enabled', () => {
       beforeEach(() => {
         sinon.stub(makerRedux, 'isAvailable');
         sinon.stub(makerRedux, 'isEnabled');
@@ -139,7 +139,7 @@ describe('SettingsCog', () => {
         restoreRedux();
       });
 
-      it('does not display maker toggle if a curriculum level and Maker toolkit is enabled', () => {
+      it('does not display maker toggle if a curriculum level', () => {
         getStore().dispatch(
           setPageConstants({
             isCurriculumLevel: true
@@ -156,7 +156,7 @@ describe('SettingsCog', () => {
         expect(settings.text()).to.not.include(msg.disableMaker());
       });
 
-      it('does display maker toggle if not a curriculum level and Maker toolkit is enabled', () => {
+      it('does display maker toggle if not a curriculum level (standalone project)', () => {
         getStore().dispatch(
           setPageConstants({
             isCurriculumLevel: false
