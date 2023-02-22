@@ -7,6 +7,7 @@ import {renderMakerButton, SettingsCog} from '@cdo/apps/lib/ui/SettingsCog';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
+// import * as pageConstants from '@cdo/apps/redux/pageConstants';
 import * as assets from '@cdo/apps/code-studio/assets';
 
 describe('SettingsCog', () => {
@@ -111,6 +112,19 @@ describe('SettingsCog', () => {
         settings.instance().toggleMakerToolkit();
         settings.update();
         expect(settings.state().confirmingEnableMaker).to.be.true;
+      });
+
+      it('does not display maker toggle if a curriculum level', () => {
+        makerRedux.isAvailable.returns(true);
+        makerRedux.isEnabled.returns(true);
+        // sinon.stub(pageConstants, 'isCurriculumLevel'); //  TypeError: Cannot stub non-existent property isCurriculumLevel
+        // pageConstants.isCurriculumLevel.returns(true);
+        // getStore().getState().pageConstants - stub getStore.getState?
+        var settings = mount(<SettingsCog showMakerToggle={true} />);
+        settings.instance().open();
+        settings.update();
+        console.log('settings.text()', settings.text());
+        expect(settings.text()).to.not.include(msg.disableMaker());
       });
     });
   });
