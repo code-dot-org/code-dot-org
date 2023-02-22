@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
@@ -60,7 +60,15 @@ function MultiSelectButton({
   required,
   onCheckedChange
 }) {
-  const uniqueId = _.uniqueId();
+  const uniqueId = `multi-${_.uniqueId()}`;
+
+  useEffect(() => {
+    // Reset validity on every render so it gets checked again.
+    // Otherwise, removing the `required` attribute doesn't work as expected.
+    const input = document.querySelector(`input#${uniqueId}`);
+    input.setCustomValidity('');
+  });
+
   return (
     <div>
       <input
