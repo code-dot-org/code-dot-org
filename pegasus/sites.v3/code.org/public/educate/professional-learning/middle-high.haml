@@ -5,6 +5,9 @@ theme: responsive_full_width
 
 %link{href: "/shared/css/design-system-pegasus.css", rel: "stylesheet"}
 
+-# Import FontAwesome Pro
+%script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
+
 %section.hero-banner-basic{style: "background: #FFDFA1"}
   .wrapper
     .text-wrapper
@@ -18,7 +21,7 @@ theme: responsive_full_width
   .wrapper
     %h2 Why Code.org professional learning?
     %div.col-50{style: "margin-bottom: 1em"}
-      %p Our engaging workshops are for new and experienced computer science teachers! In this program, you will:
+      %p <strong>Our engaging workshops are for new and experienced computer science teachers! In this program, you will:</strong>
       %ul
         %li Explore the curriculum and learning tools
         %li Experience the course as a teacher and a learner
@@ -32,7 +35,10 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2 Carousel
+    .quotes-wrapper
+      .quotes-image.col-33{style: "background-image: url(/images/professional-learning-carousel.png); min-height: 299px;"}
+      %div.col-66
+        = view :pl_middle_high_carousel
   .clear
 
 %section

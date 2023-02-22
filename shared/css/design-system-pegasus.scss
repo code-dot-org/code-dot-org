@@ -583,3 +583,92 @@ form {
     }
   }
 }
+
+// Quotes carousel
+.quotes-wrapper {
+
+  // Apply background-image: url('') inline on this element
+  // to show desired image next to quotes
+  // — see code.org/educate/professional-learning/middle-high for an example
+  .quotes-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: $width-md) {
+      display: none;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: block;
+    }
+  }
+
+  // Uses the carouFredSel jQuery plugin
+  // https://github.com/nzy/carouFredSel
+
+  // Set a min-height inline on the .carousel div to account
+  // for varying quote length and prevent vertical height changes
+  // — see /views/pl_middle_high_carousel.haml
+  .carousel-wrapper {
+    font-family: $barlowSemiCondensed-medium, sans-serif;
+    background: $neutral_dark;
+    padding: 2em 2em 1.5em;
+
+    @media screen and (max-width: $width-sm) {
+      padding-bottom: 1em;
+    }
+
+    p {
+      font-size: 1.25em;
+      color: $neutral_light;
+
+      &.quote-text {
+        font-size: 1.75em;
+        line-height: 1.2;
+
+        &:before, &:after {
+          font: var(--fa-font-solid);
+          color: $brand_primary_default;
+        }
+
+        &::before {
+          content: "\f10d";
+          margin: 0 8px 0 0;
+        }
+
+        &::after {
+          content: "\f10e";
+          margin: 0 0 0 8px;
+        }
+      }
+    }
+
+    span {
+      color: $brand_accent_default;
+    }
+
+    .pagination {
+      position: absolute;
+      right: 1em;
+      bottom: 1em;
+
+      @media screen and (max-width: $width-sm) {
+        position: relative;
+        right: unset;
+        left: unset;
+        margin-top: 3em;
+      }
+
+      // Using !important tags here to override the common style .css styles
+      // until the Phase II rebrand implementation.
+      a{
+        background: $brand_primary_light !important;
+
+        &.selected {
+          background: $brand_primary_default !important;
+        }
+      }
+    }
+  }
+}
