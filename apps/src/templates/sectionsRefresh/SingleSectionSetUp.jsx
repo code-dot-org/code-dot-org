@@ -10,7 +10,7 @@ export default function SingleSectionSetUp({
   section,
   updateSection
 }) {
-  const options = StudentGradeLevels.map(g => ({label: g, value: g}));
+  const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
 
   return (
     <div>
@@ -28,7 +28,7 @@ export default function SingleSectionSetUp({
         label="Grade (choose at least one)"
         name="grades"
         required={true}
-        options={options}
+        options={gradeOptions}
         values={section.grades || []}
         setValues={g => updateSection('grades', g)}
       />
