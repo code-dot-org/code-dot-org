@@ -35,7 +35,7 @@ export default function CurriculumQuickAssign() {
 
   return (
     <div>
-      <h2>{i18n.assignACurriculum()}</h2>
+      <h3>{i18n.assignACurriculum()}</h3>
       <h5>{i18n.useDropdownMessage()}</h5>
       <div style={styles.buttonRow} className="quick-assign-top-row">
         <div style={styles.buttonsInRow}>
@@ -77,10 +77,12 @@ export default function CurriculumQuickAssign() {
             checked={decideLater}
             style={styles.inputStyle}
             type="checkbox"
-            id={'decide-later'}
+            id="decide-later"
             onChange={toggleDecideLater}
           />
-          <h5>{i18n.decideLater()}</h5>
+          <label style={styles.decideLaterStyle} htmlFor="decide-later">
+            {i18n.decideLater()}
+          </label>
         </div>
       </div>
       {marketingAudience && courseOfferings && (
@@ -113,6 +115,9 @@ const styles = {
     fontSize: 14
   },
   inputStyle: {
-    margin: '0px 5px 0px 150px'
+    margin: '0px 5px 0px 200px'
+  },
+  decideLaterStyle: {
+    marginTop: '5px'
   }
 };
