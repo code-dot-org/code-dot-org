@@ -66,15 +66,15 @@ module Pd
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
            If so, mark the programs you've participated in."
-        ),
-        csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
-        csa_phone_screen: clean_multiline(
-          'Are you able to independently write a function (or procedure) with one or more
-          parameters and that uses conditional logic, loops, and an array (or list)?'
         )
       },
       additional_demographic_information: {
         current_role: 'What is your current role at your school?',
+        csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
+        csa_phone_screen: clean_multiline(
+          'Are you able to independently write a function (or procedure) with one or more
+          parameters and that uses conditional logic, loops, and an array (or list)?'
+        ),
         gender_identity: 'Gender identity:',
         race: 'Race or ethnicity:',
       },
