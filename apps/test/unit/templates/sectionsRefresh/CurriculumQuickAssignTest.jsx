@@ -9,7 +9,7 @@ describe('CurriculumQuickAssign', () => {
     const wrapper = shallow(<CurriculumQuickAssign />);
 
     expect(wrapper.find('h3').length).to.equal(1);
-    expect(wrapper.find('h5').length).to.equal(2);
+    expect(wrapper.find('h5').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(4);
     expect(
       wrapper
