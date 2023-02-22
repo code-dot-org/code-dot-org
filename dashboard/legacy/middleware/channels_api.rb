@@ -92,8 +92,7 @@ class ChannelsApi < Sinatra::Base
 
     if data['shouldPublish']
       project_type = data['projectType']
-      bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-      forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+      check_can_publish(channel_id, project_type)
 
       # The client decides whether to publish the project, but we rely on the
       # server to generate the timestamp. Remove shouldPublish from the project
@@ -201,9 +200,7 @@ class ChannelsApi < Sinatra::Base
   # Marks the specified channel as published.
   #
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
-    not_authorized unless owns_channel?(channel_id)
-    bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    check_can_publish(channel_id, project_type)
 
     # Once we have back-filled the project_type column for all channels,
     # it will no longer be necessary to specify the project type here.
@@ -356,5 +353,19 @@ class ChannelsApi < Sinatra::Base
 
   def verified_teacher?
     has_permission?("authorized_teacher")
+  end
+
+  def check_can_publish(channel_id, project_type)
+    not_authorized unless owns_channel?(channel_id)
+    bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    return unless RESTRICTED_PUBLISH_PROJECT_TYPES.include?(project_type)
+
+    # Check for restricted share mode. If we are in restricted share mode, it means we cannot publish.
+    source_data = SourceBucket.new.get(channel_id, "main.json")
+    return unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
+    source_body = source_data[:body].string
+    project_src = ProjectSourceJson.new(source_body)
+    forbidden if project_src.in_restricted_share_mode?
   end
 end
