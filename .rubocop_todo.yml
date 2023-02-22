@@ -129,10 +129,6 @@ Lint/UnreachableCode:
 Lint/UnusedMethodArgument:
   Enabled: false
 
-# Offense count: 3
-Lint/UriEscapeUnescape:
-  Enabled: false
-
 # Offense count: 42
 # Configuration parameters: ForbiddenDelimiters.
 # ForbiddenDelimiters: (?-mix:(^|\s)(EO[A-Z]{1}|END)(\s|$))
@@ -528,11 +524,6 @@ Style/RedundantRegexpEscape:
 # Offense count: 4
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Style/RedundantSelfAssignment:
-  Enabled: false
-
-# Offense count: 8
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/RedundantSort:
   Enabled: false
 
 # Offense count: 118
