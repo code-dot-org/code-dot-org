@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-18 16:37:52 UTC",
+    "serialized_at": "2023-02-21 22:20:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3237,7 +3237,7 @@
       "key": "b8c68a92-c676-4cf2-be59-8ec67f45c1ce",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***De Morgan's Laws** and introduce the rules.\n\n**Do This:** Click through the animated slides to demonstrate simplifying the Boolean expressions:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `A`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Changing the AND ( `&&` ) to OR ( `||` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `B`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `A`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Changing the AND ( `&&` ) to OR ( `||` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `B`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use truth tables to prove the Boolean expressions `!(A || B)` and `!A && !B` are equivalent."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***De Morgan's Laws*** and introduce the rules.\n\n**Do This:** Click through the animated slides to demonstrate simplifying the Boolean expressions:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `A`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Changing the AND ( `&&` ) to OR ( `||` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `B`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `A`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Changing the AND ( `&&` ) to OR ( `||` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `B`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use truth tables to prove the Boolean expressions `!(A || B)` and `!A && !B` are equivalent."
       },
       "seeding_key": {
         "activity_section.key": "b8c68a92-c676-4cf2-be59-8ec67f45c1ce",
@@ -3522,7 +3522,7 @@
       "key": "ed743833-7b60-4fb3-8387-39fdc156bead",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***multi-selection statement**.\n\n**Do This:** Explain the flowchart for a multi-selection statement:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain each branch of the flowchart\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If the condition is `false`, we move to the next condition\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If the condition is `true`, its task is execute"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***multi-selection statement***.\n\n**Do This:** Explain the flowchart for a multi-selection statement:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain each branch of the flowchart\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If the condition is `false`, we move to the next condition\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If the condition is `true`, its task is execute"
       },
       "seeding_key": {
         "activity_section.key": "ed743833-7b60-4fb3-8387-39fdc156bead",
@@ -3693,6 +3693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L1_2023"
+        ],
         "progression": "Predict and Run: The Theater"
       },
       "bonus": false,
@@ -3715,6 +3718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L2_2023"
+        ],
         "progression": "Investigate and Modify: The Theater"
       },
       "bonus": false,
@@ -3737,6 +3743,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L3_2023"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -3759,6 +3768,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L4_2023"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -3781,6 +3793,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L5_2023"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -3803,6 +3818,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L6_2023"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -3825,6 +3843,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3847,6 +3868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_2023"
+        ],
         "progression": "Predict and Run: Static Variables and Methods"
       },
       "bonus": false,
@@ -3869,6 +3893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_2023"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -3891,6 +3918,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_2023"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -3913,6 +3943,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_2023"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -3935,6 +3968,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_2023"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -3957,6 +3993,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6_2023"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -3979,6 +4018,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7_2023"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -4001,6 +4043,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L8_2023"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -4023,6 +4068,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L9_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4045,6 +4093,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L1_2023"
+        ],
         "progression": "Predict and Run: The Math Class"
       },
       "bonus": false,
@@ -4067,6 +4118,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L2_2023"
+        ],
         "progression": "Investigate and Modify: The Math Class"
       },
       "bonus": false,
@@ -4089,6 +4143,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L3_2023"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -4111,6 +4168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L4_2023"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -4133,6 +4193,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L5_2023"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -4155,6 +4218,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L6_2023"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -4177,6 +4243,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L7_2023"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -4199,6 +4268,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4221,6 +4293,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L1_2023"
+        ],
         "progression": "Investigate and Modify: Casting"
       },
       "bonus": false,
@@ -4243,6 +4318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L2_2023"
+        ],
         "progression": "Investigate and Modify: Division"
       },
       "bonus": false,
@@ -4265,6 +4343,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L3_2023"
+        ],
         "progression": "Investigate and Modify: Rounding"
       },
       "bonus": false,
@@ -4287,6 +4368,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4309,6 +4393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L1_2023"
+        ],
         "progression": "Predict and Run: Random Numbers"
       },
       "bonus": false,
@@ -4331,6 +4418,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L2_2023"
+        ],
         "progression": "Investigate and Modify: Random Numbers"
       },
       "bonus": false,
@@ -4353,6 +4443,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L3_2023"
+        ],
         "progression": "Investigate and Modify: Random Numbers"
       },
       "bonus": false,
@@ -4375,6 +4468,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L4_2023"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -4397,6 +4493,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L5_2023"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -4419,6 +4518,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L6_2023"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -4441,6 +4543,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4463,6 +4568,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1_2023"
+        ],
         "progression": "Predict and Run: Comparing Objects"
       },
       "bonus": false,
@@ -4485,6 +4593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2_2023"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -4507,6 +4618,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3_2023"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -4529,6 +4643,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4_2023"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -4551,6 +4668,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5_2023"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -4573,6 +4693,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6_2023"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -4595,6 +4718,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L7_2023"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -4617,6 +4743,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4639,6 +4768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L1_2023"
+        ],
         "progression": "Predict and Run: Nested if Statements"
       },
       "bonus": false,
@@ -4661,6 +4793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L2_2023"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -4683,6 +4818,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L3_2023"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -4705,6 +4843,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L4_2023"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -4727,6 +4868,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L5_2023"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -4749,6 +4893,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L6_2023"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -4771,6 +4918,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4793,6 +4943,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L1_2023"
+        ],
         "progression": "Predict and Run: Logical Operators"
       },
       "bonus": false,
@@ -4815,6 +4968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L2_2023"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -4837,6 +4993,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L3_2023"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -4859,6 +5018,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L4_2023"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -4881,6 +5043,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L5_2023"
+        ],
         "progression": "Finding Patterns"
       },
       "bonus": false,
@@ -4903,6 +5068,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L6_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4925,6 +5093,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4947,6 +5118,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L1_2023"
+        ],
         "progression": "Predict and Run: Multi-Selection Statements"
       },
       "bonus": false,
@@ -4969,6 +5143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L2_2023"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -4991,6 +5168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L3_2023"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -5013,6 +5193,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L4_2023"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -5035,6 +5218,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L5_2023"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -5057,6 +5243,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L6_2023"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -5079,6 +5268,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L7_2023"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -5101,6 +5293,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5123,6 +5318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5144,6 +5342,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 4 Assessment_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5165,6 +5366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
