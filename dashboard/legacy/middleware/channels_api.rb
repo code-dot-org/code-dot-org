@@ -410,7 +410,8 @@ class ChannelsApi < Sinatra::Base
     # Check for restricted share mode. If we are in restricted share mode, it means we cannot publish.
     source_data = SourceBucket.new.get(channel_id, "main.json")
     return unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
-    source_body = JSON.parse(source_data[:body].string)
-    forbidden if source_body["inRestrictedShareMode"]
+    source_body = source_data[:body].string
+    project_src = ProjectSourceJson.new(source_body)
+    forbidden if project_src.in_restricted_share_mode?
   end
 end
