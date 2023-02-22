@@ -129,10 +129,6 @@ Lint/UnreachableCode:
 Lint/UnusedMethodArgument:
   Enabled: false
 
-# Offense count: 3
-Lint/UriEscapeUnescape:
-  Enabled: false
-
 # Offense count: 42
 # Configuration parameters: ForbiddenDelimiters.
 # ForbiddenDelimiters: (?-mix:(^|\s)(EO[A-Z]{1}|END)(\s|$))
