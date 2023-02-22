@@ -4019,6 +4019,15 @@ zh-CN:
               display_name: 内容
             lessonGroup-4:
               display_name: 替补课程
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: 随机
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: 替补课程
         hello-world-space-2022:
           title: 你好世界：太空
         hello-world-soccer-2022:
