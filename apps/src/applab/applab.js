@@ -304,7 +304,7 @@ function handleExecutionError(err, lineNumber, outputString, libraryName) {
 }
 
 function isCurriculumLevel(validationEnabled) {
-  return validationEnabled !== undefined ? true : false;
+  return validationEnabled === undefined ? false : true;
 }
 
 Applab.getCode = function() {
