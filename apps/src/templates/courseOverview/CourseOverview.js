@@ -218,7 +218,7 @@ class CourseOverview extends Component {
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             id={id}
-            title={title}
+            courseName={title}
             teacherResources={teacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}

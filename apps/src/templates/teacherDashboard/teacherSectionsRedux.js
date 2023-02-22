@@ -72,8 +72,6 @@ const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
 const CREATE_SECION_BEGIN = 'teacherDashboard/CREATE_SECION_BEGIN';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
-/** Opens section edit UI, might load all exisiting sections */
-const EDIT_SECTION_ASSIGN = 'teacherDashboard/EDIT_SECTION_ASSIGN';
 /** Makes staged changes to section being edited */
 const EDIT_SECTION_PROPERTIES = 'teacherDashboard/EDIT_SECTION_PROPERTIES';
 /** Abandons changes to section being edited, closes UI */
@@ -895,30 +893,6 @@ export default function teacherSections(state = initialState, action) {
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
-  }
-
-  if (action.type === EDIT_SECTION_ASSIGN) {
-    return {
-      ...state,
-      showSectionEditDialog: !action.silent
-    };
-    // const initialParticipantType =
-    //   state.availableParticipantTypes.length === 1
-    //     ? state.availableParticipantTypes[0]
-    //     : undefined;
-    // const initialSectionData = action.sectionId
-    //   ? {...state.sections[action.sectionId]}
-    //   : newSectionData(initialParticipantType);
-    // return {
-    //   ...state,
-    //   initialCourseId: initialSectionData.courseId,
-    //   initialUnitId: initialSectionData.unitId,
-    //   initialCourseOfferingId: initialSectionData.courseOfferingId,
-    //   initialCourseVersionId: initialSectionData.courseVersionId,
-    //   initialLoginType: initialSectionData.loginType,
-    //   sectionBeingEdited: initialSectionData,
-    //   showSectionEditDialog: !action.silent
-    // };
   }
 
   if (action.type === EDIT_SECTION_PROPERTIES) {

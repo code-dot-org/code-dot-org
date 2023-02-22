@@ -7,23 +7,15 @@ export default class TeacherSectionOption extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
     onChange: PropTypes.func.isRequired,
-    isChecked: PropTypes.bool,
-    assignedSections: PropTypes.arrayOf(sectionForDropdownShape)
+    isChecked: PropTypes.bool
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      updatedAssignedSections: this.props.assignedSections
-    };
-  }
-
-  renderCheckbox = () => {
+  renderCheckbox = id => {
     const {isChecked, onChange} = this.props;
     return (
       <input
         type="checkbox"
+        id={id}
         checked={isChecked}
         onChange={onChange}
         style={styles.checkbox}
@@ -37,8 +29,10 @@ export default class TeacherSectionOption extends Component {
       <div>
         <span>
           <div style={styles.sectionOptionContainer}>
-            <div>{this.renderCheckbox()}</div>
-            <label style={styles.sectionOptionLabel}>{section.name}</label>
+            <div>{this.renderCheckbox(section.id)}</div>
+            <label htmlFor={section.id} style={styles.sectionOptionLabel}>
+              {section.name}
+            </label>
           </div>
         </span>
       </div>

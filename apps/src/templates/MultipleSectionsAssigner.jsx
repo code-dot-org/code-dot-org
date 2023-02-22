@@ -74,10 +74,6 @@ class MultipleSectionsAssigner extends Component {
     };
   }
 
-  chooseMenuItem = section => {
-    console.log(section + 'was clicked');
-  };
-
   handleChangedCheckbox = currentSection => {
     const isUnchecked = !!this.state.currentSectionsAssigned.some(
       s => s.code === currentSection.code

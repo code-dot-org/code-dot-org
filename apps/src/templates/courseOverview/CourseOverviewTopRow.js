@@ -15,7 +15,7 @@ export default class CourseOverviewTopRow extends Component {
     studentResources: PropTypes.arrayOf(resourceShape),
     showAssignButton: PropTypes.bool,
     isInstructor: PropTypes.bool,
-    title: PropTypes.string,
+    courseName: PropTypes.string,
     participantAudience: PropTypes.string
   };
 
@@ -29,7 +29,7 @@ export default class CourseOverviewTopRow extends Component {
       showAssignButton,
       sectionsForDropdown,
       isInstructor,
-      title,
+      courseName,
       participantAudience
     } = this.props;
 
@@ -46,7 +46,7 @@ export default class CourseOverviewTopRow extends Component {
             isOnCoursePage={true}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
-            assignmentName={title}
+            assignmentName={courseName}
             participantAudience={participantAudience}
           />
         )}

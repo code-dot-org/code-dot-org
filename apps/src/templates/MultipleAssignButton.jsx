@@ -5,12 +5,10 @@ import Button from './Button';
 import i18n from '@cdo/locale';
 import {
   assignToSection,
-  testingFunction,
   unassignSection,
   sectionsForDropdown
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
-import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 class MultipleAssignButton extends React.Component {
@@ -28,10 +26,7 @@ class MultipleAssignButton extends React.Component {
     participantAudience: PropTypes.string,
     // Redux
     assignToSection: PropTypes.func.isRequired,
-    hiddenLessonState: PropTypes.object,
-    updateHiddenScript: PropTypes.func.isRequired,
     isRtl: PropTypes.bool,
-    testingFunction: PropTypes.func.isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
@@ -51,7 +46,6 @@ class MultipleAssignButton extends React.Component {
     this.setState({
       assignmentChoiceDialogOpen: true
     });
-    console.log('Handler activated!');
   };
 
   render() {
@@ -124,7 +118,6 @@ export const UnconnectedMultipleAssignButton = MultipleAssignButton;
 
 export default connect(
   (state, ownProps) => ({
-    hiddenLessonState: state.hiddenLesson,
     isRtl: state.isRtl,
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
@@ -135,8 +128,6 @@ export default connect(
   }),
   {
     assignToSection,
-    updateHiddenScript,
-    testingFunction,
     unassignSection
   }
 )(MultipleAssignButton);
