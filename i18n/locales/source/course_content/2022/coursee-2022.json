@@ -797,7 +797,7 @@
         "display_name": "Squares",
         "bubble_choice_description": "Use what you've learned to make this drawing of squares.",
         "short_instructions": "Use what you've learned to make this drawing.",
-        "long_instructions": "Use what you've learned to make this drawing.\r\n\r\n- The squares each have **100 pixel sides** and **90 degree angles**\r\n- You will need to turn **60 degrees between each square**. Why? Because there are 6 squares, and 360 degrees (a full turn around) divided by 6 is 60 degrees.\r\n- Make sure you jump **50 pixels to get to the next square**",
+        "long_instructions": "Use what you've learned to make this drawing.\r\n\r\n- The squares each have **100 pixel sides** and **90 degree angles**\r\n- Next, make sure you jump **50 pixels to get to the next square**\r\n- Finally, you will need to turn **60 degrees between each square**. Why? Because there are 6 squares, and 360 degrees (a full turn around) divided by 6 is 60 degrees.\r\n",
         "authored_hints": {
           "courseD_artist_nestedLoops7_a": "You'll need to use nested loops here. First, use a loop to draw a square. What will the outer loop do if the inner loop draws a square?",
           "courseD_artist_nestedLoops7_b": "Use a nested loop, where the inner loop is the code for a square.\n\n- repeat 6 times\n  - make square\n  - jump forward by **50 pixels**\n  - turn **60 degrees**"
