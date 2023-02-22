@@ -66,7 +66,9 @@ function MultiSelectButton({
     // Reset validity on every render so it gets checked again.
     // Otherwise, removing the `required` attribute doesn't work as expected.
     const input = document.querySelector(`input#${uniqueId}`);
-    input.setCustomValidity('');
+    if (input) {
+      input.setCustomValidity('');
+    }
   });
 
   return (
