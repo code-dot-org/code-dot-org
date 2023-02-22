@@ -10,8 +10,6 @@ steps:
   - name: clone
     image: docker:git
     commands:
-      - which curl
-      - which wget
       - IMDS_TOKEN=$(curl -s -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 300")
       - hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)
       - echo "Running on $hostname"
@@ -50,8 +48,6 @@ steps:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - which curl
-      - which wget
       - IMDS_TOKEN=$(curl -s -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 300")
       - hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)
       - echo "Running on $hostname"
@@ -156,8 +152,6 @@ steps:
         from_secret: SAUCE_ACCESS_KEY
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - which curl
-      - which wget
       - IMDS_TOKEN=$(curl -s -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 300")
       - hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)
       - echo "Running on $hostname"
