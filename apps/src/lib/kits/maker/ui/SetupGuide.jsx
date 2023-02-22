@@ -56,6 +56,7 @@ export default class SetupGuide extends React.Component {
       case 'general':
         return {
           id: 'general-description',
+          title: applabI18n.makerSetupGeneralTitle(),
           description: applabI18n.makerSetupGeneralDescription()
         };
     }
@@ -106,7 +107,10 @@ export default class SetupGuide extends React.Component {
             </div>
           </div>
         ) : (
-          <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
+          <div>
+            <DescriptionCard {...this.setupGuideContent('general')} />
+            <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
+          </div>
         )}
         <div id="setup-status-mount">
           <SetupInstructions />
