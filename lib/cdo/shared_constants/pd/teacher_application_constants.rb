@@ -62,14 +62,14 @@ module Pd
         city: 'Home city',
         state: 'Home state',
         zip_code: 'Home zip code',
-        how_heard: 'How did you hear about this program?',
-        previous_yearlong_cdo_pd: clean_multiline(
-          "Have you participated in previous yearlong Code.org Professional Learning Programs?
-           If so, mark the programs you've participated in."
-        )
+        how_heard: 'How did you hear about this program?'
       },
       additional_demographic_information: {
         current_role: 'What is your current role at your school?',
+        previous_yearlong_cdo_pd: clean_multiline(
+          "Have you participated in previous yearlong Code.org Professional Learning Programs?
+           If so, mark the programs you've participated in."
+        ),
         csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
         csa_phone_screen: clean_multiline(
           'Are you able to independently write a function (or procedure) with one or more
