@@ -483,7 +483,7 @@ class UnitGroup < ApplicationRecord
     all_courses.select do |course|
       course.family_name == family_name &&
         course.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    end.sort_by(&:version_year).last
+    end.max_by(&:version_year)
   end
 
   # @param family_name [String] The family name for a course family.
@@ -496,7 +496,7 @@ class UnitGroup < ApplicationRecord
     all_courses.select do |course|
       assigned_course_ids.include?(course.id) &&
         course.family_name == family_name
-    end.sort_by(&:version_year).last
+    end.max_by(&:version_year)
   end
 
   # @param user [User]
