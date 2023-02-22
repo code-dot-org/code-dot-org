@@ -22,18 +22,20 @@ describe('SingleSectionSetUp', () => {
     expect(updateSectionSpy).to.have.been.calledOnce;
   });
 
-  it('renders the grade options', () => {
-    const updateSectionSpy = sinon.spy();
-    const wrapper = mount(
+  it('renders MultiSelectGroup with expected props', () => {
+    const wrapper = shallow(
       <SingleSectionSetUp
         sectionNum={1}
         section={{}}
-        updateSection={updateSectionSpy}
+        updateSection={() => {}}
       />
     );
 
-    const checkbox = wrapper.find('MultiSelectButton[value="K"]');
-    expect(checkbox.length).to.equal(1);
+    const multiSelectGroup = wrapper.find('MultiSelectGroup');
+    expect(multiSelectGroup.prop('name')).to.eq('grades');
+    expect(multiSelectGroup.prop('required')).to.eq(true);
+    expect(multiSelectGroup.prop('options').length).to.eq(14); // K + 12 + Other
+    expect(multiSelectGroup.prop('values')).to.eql([]);
   });
 
   it('calls updateSection when grade selection is updated', () => {
