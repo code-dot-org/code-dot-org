@@ -83,7 +83,7 @@ export default function CurriculumQuickAssign() {
           <h5>{i18n.decideLater()}</h5>
         </div>
       </div>
-      {marketingAudience && (
+      {marketingAudience && courseOfferings && (
         <div>
           <h5>{marketingAudience}</h5>
           {JSON.stringify(courseOfferings[marketingAudience])}

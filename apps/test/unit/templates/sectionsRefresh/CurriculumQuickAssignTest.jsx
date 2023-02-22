@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
@@ -7,8 +7,6 @@ import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/Curriculu
 describe('CurriculumQuickAssign', () => {
   it('renders headers and the top row of buttons', () => {
     const wrapper = shallow(<CurriculumQuickAssign />);
-
-    console.log(wrapper.debug());
 
     expect(wrapper.find('h2').length).to.equal(1);
     expect(wrapper.find('h5').length).to.equal(2);
@@ -30,6 +28,7 @@ describe('CurriculumQuickAssign', () => {
 
   it('updates caret direction when clicked', () => {
     const wrapper = shallow(<CurriculumQuickAssign />);
+
     expect(
       wrapper
         .find('Button')
@@ -46,5 +45,20 @@ describe('CurriculumQuickAssign', () => {
         .at(0)
         .props().icon
     ).to.equal('caret-up');
+  });
+
+  it('clears decide later when marketing audience selected', () => {
+    const wrapper = mount(<CurriculumQuickAssign />);
+
+    expect(wrapper.find('input').props().checked).to.equal(false);
+    wrapper.find('input').simulate('change');
+    expect(wrapper.find('input').props().checked).to.equal(true);
+
+    // Now, click on elementary school button and verify checkbox is deselected
+    wrapper
+      .find('Button')
+      .at(0)
+      .simulate('click');
+    expect(wrapper.find('input').props().checked).to.equal(false);
   });
 });
