@@ -28,6 +28,6 @@ class PdRegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
 
   def build_form_data(contact_factory, **factory_options)
     contact = build contact_factory, factory_options
-    contact.sanitize_and_trim_form_data_hash
+    contact.sanitized_and_trimmed_form_data_hash
   end
 end
