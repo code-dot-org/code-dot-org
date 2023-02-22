@@ -392,7 +392,7 @@ class ProjectsController < ApplicationController
       return head :bad_request
     end
     project_type = params[:key]
-    check_can_remix_project(project_type, src_channel_id)
+    return head :forbidden unless can_remix_project(project_type, src_channel_id)
 
     new_channel_id = ChannelToken.create_channel(
       request.ip,
@@ -516,16 +516,14 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def check_can_remix_project(project_type, channel_id)
-    return unless RESTRICTED_PUBLISH_PROJECT_TYPES.include?(project_type)
+  def can_remix_project(project_type, channel_id)
+    return true unless RESTRICTED_PUBLISH_PROJECT_TYPES.include?(project_type)
 
     # Check for restricted share mode. If we are in restricted share mode, it means we cannot remix.
     source_data = SourceBucket.new.get(channel_id, "main.json")
-    puts "got source data"
     return unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
     source_body = source_data[:body].string
     project_src = ProjectSourceJson.new(source_body)
-    return head :forbidden if project_src.in_restricted_share_mode?
-    puts "ok to remix"
+    return !project_src.in_restricted_share_mode?
   end
 end
