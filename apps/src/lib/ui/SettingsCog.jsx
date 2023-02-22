@@ -85,6 +85,7 @@ export class SettingsCog extends Component {
   getPageConstants() {
     return getStore().getState().pageConstants;
   }
+
   areLibrariesEnabled() {
     return this.getPageConstants()?.librariesEnabled;
   }

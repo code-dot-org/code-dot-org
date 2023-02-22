@@ -115,7 +115,7 @@ describe('SettingsCog', () => {
       it('asks for confirmation when clicked', () => {
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(false);
-        var settings = shallow(<SettingsCog showMakerToggle={true} />);
+        let settings = shallow(<SettingsCog showMakerToggle={true} />);
         expect(settings.state().confirmingEnableMaker).to.be.false;
         settings.instance().toggleMakerToolkit();
         settings.update();
@@ -123,7 +123,7 @@ describe('SettingsCog', () => {
       });
     });
 
-    describe('maker toggle - curriculum level vs standalone project when maker is available and enabled', () => {
+    describe('maker toggle - curriculum level vs standalone project', () => {
       beforeEach(() => {
         sinon.stub(makerRedux, 'isAvailable');
         sinon.stub(makerRedux, 'isEnabled');
@@ -138,13 +138,14 @@ describe('SettingsCog', () => {
         makerRedux.isAvailable.restore();
         restoreRedux();
       });
-      it('does not display maker toggle if a curriculum level', () => {
+
+      it('does not display maker toggle if a curriculum level and Maker toolkit is enabled', () => {
         getStore().dispatch(
           setPageConstants({
             isCurriculumLevel: true
           })
         );
-        var wrapper = mount(
+        let wrapper = mount(
           <Provider store={getStore()}>
             <SettingsCog showMakerToggle={true} />
           </Provider>
@@ -155,13 +156,13 @@ describe('SettingsCog', () => {
         expect(settings.text()).to.not.include(msg.disableMaker());
       });
 
-      it('does display maker toggle if not a curriculum level', () => {
+      it('does display maker toggle if not a curriculum level and Maker toolkit is enabled', () => {
         getStore().dispatch(
           setPageConstants({
             isCurriculumLevel: false
           })
         );
-        var wrapper = mount(
+        let wrapper = mount(
           <Provider store={getStore()}>
             <SettingsCog showMakerToggle={true} />
           </Provider>
