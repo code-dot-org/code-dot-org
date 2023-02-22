@@ -29,7 +29,8 @@ export default function SingleSectionSetUp({
         name="grades"
         required={true}
         options={options}
-        setSelected={g => updateSection('grades', g)}
+        values={section.grades || []}
+        setValues={g => updateSection('grades', g)}
       />
       <hr />
     </div>
