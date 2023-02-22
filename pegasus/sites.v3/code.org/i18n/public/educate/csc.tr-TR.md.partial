@@ -77,3 +77,5 @@ Hızlı Aktivitelerimiz, bilgisayar bilimi ve diğer konular arasında bağlant�
 {{ clearfix }}
 
 <em>Bir BB Bağlantısı etkinliğini bitirdiniz ve/veya sınıfınız için daha fazla seçenek mi arıyorsunuz? Daha fazla ders için lütfen <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">geri bildiriminizi paylaşın</a> ve fikirlerinizi iletin!</em>
+
+{{ visit_partial_event_logger }}
