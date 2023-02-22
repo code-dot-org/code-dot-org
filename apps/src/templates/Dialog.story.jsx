@@ -102,7 +102,7 @@ export const NoTitleOnlyConfirm = () => (
 
 export const FullWidth = () => (
   <ExampleDialogButton>
-    <Dialog fullWidth={true}>
+    <Dialog fullWidth={true} hideCloseButton={false} uncloseable={false}>
       <Icon src="https://studio.code.org/blockly/media/skins/flappy/static_avatar.png" />
       <Title>Puzzle 3 of 10</Title>
       <Body>

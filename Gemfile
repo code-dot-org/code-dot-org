@@ -98,8 +98,8 @@ group :development, :test do
   gem 'timecop'
 
   # For UI testing.
-  gem 'cucumber'
-  gem 'eyes_selenium', '3.18.4'
+  gem 'cucumber', require: false
+  gem 'eyes_selenium', '3.18.4', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
