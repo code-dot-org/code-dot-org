@@ -11,7 +11,7 @@ steps:
     image: docker:git
     commands:
       - "IMDS_TOKEN=$(wget -qO- --header 'X-aws-ec2-metadata-token-ttl-seconds: 300' --method=PUT 'http://169.254.169.254/latest/api/token')"
-      - "hostname=$(wget -qO- --header 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')
+      - "hostname=$(wget -qO- --header 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
       - echo "Running on $hostname"
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git reset --hard $DRONE_COMMIT
@@ -105,7 +105,7 @@ steps:
     commands:
       # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(wget -qO- --header 'X-aws-ec2-metadata-token-ttl-seconds: 300' --method=PUT 'http://169.254.169.254/latest/api/token')"
-      - "hostname=$(wget -qO- --header 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')
+      - "hostname=$(wget -qO- --header 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
       - echo "Running on $hostname"
       # Clone
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
