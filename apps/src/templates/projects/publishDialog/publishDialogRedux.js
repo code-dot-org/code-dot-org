@@ -18,7 +18,8 @@ const initialState = {
   projectType: null,
   isPublishPending: false,
   lastPublishedAt: null,
-  lastPublishedProjectData: null
+  lastPublishedProjectData: null,
+  publishFailedStatus: null
 };
 
 export default function reducer(state = initialState, action) {
@@ -28,17 +29,20 @@ export default function reducer(state = initialState, action) {
         ...state,
         isOpen: true,
         projectId: action.projectId,
-        projectType: action.projectType
+        projectType: action.projectType,
+        publishFailedStatus: null
       };
     case HIDE_PUBLISH_DIALOG:
       return {
         ...state,
-        isOpen: false
+        isOpen: false,
+        publishFailedStatus: null
       };
     case PUBLISH_REQUEST:
       return {
         ...state,
-        isPublishPending: true
+        isPublishPending: true,
+        publishFailedStatus: null
       };
     case PUBLISH_SUCCESS:
       // Keep projectId and projectType fields, as these may be used by
@@ -48,12 +52,14 @@ export default function reducer(state = initialState, action) {
         isOpen: false,
         isPublishPending: false,
         lastPublishedAt: action.lastPublishedAt,
-        lastPublishedProjectData: action.lastPublishedProjectData
+        lastPublishedProjectData: action.lastPublishedProjectData,
+        publishFailedStatus: null
       };
     case PUBLISH_FAILURE:
       return {
         ...state,
-        isPublishPending: false
+        isPublishPending: false,
+        publishFailedStatus: action.status
       };
     default:
       return state;
@@ -101,7 +107,7 @@ export function publishProject(projectId, projectType) {
           resolve();
         },
         err => {
-          dispatch({type: PUBLISH_FAILURE});
+          dispatch({type: PUBLISH_FAILURE, status: err.status});
           reject(err);
         },
         null

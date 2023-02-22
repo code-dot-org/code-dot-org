@@ -7,6 +7,8 @@ import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
 import i18n from '@cdo/locale';
 import {hidePublishDialog, publishProject} from './publishDialogRedux';
+import {RestrictedPublishProjectTypes} from '../../../util/sharedConstants';
+import color from '../../../util/color';
 
 class PublishDialog extends Component {
   static propTypes = {
@@ -15,6 +17,7 @@ class PublishDialog extends Component {
     isPublishPending: PropTypes.bool.isRequired,
     projectId: PropTypes.string,
     projectType: PropTypes.string,
+    publishFailedStatus: PropTypes.number,
 
     // from redux dispatch
     onClose: PropTypes.func.isRequired,
@@ -41,9 +44,18 @@ class PublishDialog extends Component {
   close = () => this.props.onClose();
 
   render() {
+    const {
+      projectType,
+      publishFailedStatus,
+      isOpen,
+      isPublishPending
+    } = this.props;
+    const showRestrictedShareError =
+      publishFailedStatus === 403 &&
+      RestrictedPublishProjectTypes.includes(projectType);
     return (
       <BaseDialog
-        isOpen={this.props.isOpen}
+        isOpen={isOpen}
         handleClose={this.close}
         useUpdatedStyles
         style={styles.dialog}
@@ -54,6 +66,9 @@ class PublishDialog extends Component {
         <div style={{marginBottom: 10}}>
           {i18n.publishToPublicGalleryWarning()}
         </div>
+        {showRestrictedShareError && (
+          <div style={styles.error}>{i18n.publishFailedRestrictedShare()}</div>
+        )}
         <DialogFooter>
           <Button
             text={i18n.dialogCancel()}
@@ -67,7 +82,7 @@ class PublishDialog extends Component {
             onClick={this.confirm}
             color={Button.ButtonColor.orange}
             className="no-mc"
-            isPending={this.props.isPublishPending}
+            isPending={isPublishPending}
             pendingText={i18n.publishPending()}
             style={{margin: 0}}
             id="publish-dialog-publish-button"
@@ -83,6 +98,9 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
+  },
+  error: {
+    color: color.red
   }
 };
 
@@ -93,7 +111,8 @@ export default connect(
     isOpen: state.publishDialog.isOpen,
     isPublishPending: state.publishDialog.isPublishPending,
     projectId: state.publishDialog.projectId,
-    projectType: state.publishDialog.projectType
+    projectType: state.publishDialog.projectType,
+    publishFailedStatus: state.publishDialog.publishFailedStatus
   }),
   dispatch => ({
     onClose() {

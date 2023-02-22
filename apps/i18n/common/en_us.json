@@ -1730,6 +1730,7 @@
   "provideEmail": "Please provide an email address",
   "providerManagedSection": "This section is managed by {provider}. Add students there, then re-sync this section.",
   "publish": "Publish",
+  "publishFailedRestrictedShare": "Publish failed. Projects with uploaded images cannot be published.",
   "publishPending": "Publishing...",
   "publishToClassGallery": "Publish to Class Gallery",
   "publishToPublicGallery": "Publish to Public Gallery",
