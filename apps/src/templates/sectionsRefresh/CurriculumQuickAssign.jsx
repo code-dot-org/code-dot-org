@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 
-export default function SingleSectionSetUp() {
+export default function CurriculumQuickAssign() {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
