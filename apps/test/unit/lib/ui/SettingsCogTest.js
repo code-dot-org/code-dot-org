@@ -123,7 +123,7 @@ describe('SettingsCog', () => {
       });
     });
 
-    describe('maker toggle - curricum level vs stand alone project when maker is available and enabled', () => {
+    describe('maker toggle - curriculum level vs standalone project when maker is available and enabled', () => {
       beforeEach(() => {
         sinon.stub(makerRedux, 'isAvailable');
         sinon.stub(makerRedux, 'isEnabled');
