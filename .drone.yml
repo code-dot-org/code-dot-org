@@ -47,10 +47,6 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(curl -s -X PUT 'http://169.254.169.254/latest/api/token' -H 'X-aws-ec2-metadata-token-ttl-seconds: 300')"
-      - "hostname=$(curl -s -H 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
-      - echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -107,6 +103,11 @@ steps:
   - name: clone
     image: docker:git
     commands:
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT 'http://169.254.169.254/latest/api/token' -H 'X-aws-ec2-metadata-token-ttl-seconds: 300')"
+      - "hostname=$(curl -s -H 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
+      - echo "Running on $hostname"
+      # Clone
       - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
       - git reset --hard $DRONE_COMMIT
       # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
@@ -151,10 +152,6 @@ steps:
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(curl -s -X PUT 'http://169.254.169.254/latest/api/token' -H 'X-aws-ec2-metadata-token-ttl-seconds: 300')"
-      - "hostname=$(curl -s -H 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
-      - echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
