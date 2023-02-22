@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-02-17 21:27:38 UTC",
+    "serialized_at": "2023-02-21 18:16:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1985,7 +1985,20 @@
       }
     },
     {
-      "name": "Lesson Slides",
+      "name": "Helpful Hints",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "name": "Mapping Landmarks",
       "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
       "key": "lesson_slides",
       "properties": {
@@ -2021,6 +2034,12 @@
     {
       "seeding_key": {
         "lesson.key": "Local Landmarks - Coding Your Project",
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
         "resource.key": "lesson_slides"
       }
     },
@@ -2039,7 +2058,19 @@
     {
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "resource.key": "helpful_hints"
       }
     },
     {
@@ -2052,6 +2083,12 @@
       "seeding_key": {
         "lesson.key": "Project Share Out",
         "resource.key": "local_landmarks_map_reflection_observation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "resource.key": "helpful_hints"
       }
     },
     {
