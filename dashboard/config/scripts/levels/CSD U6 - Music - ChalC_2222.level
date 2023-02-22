@@ -28,11 +28,11 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "stop": null,
       "color": null,
       "intensity": null,
@@ -92,7 +92,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "display_name": "Alarm Clock Version 3",
     "parent_level_id": 20537,
     "name_suffix": "_2222",
@@ -114,13 +114,13 @@
     "encrypted_examples": "v7IpwEMDQhdhZUqQfHl1r6Vdl6oDOxkIwnokDXK8ojohb78JuQdZK3hXU9kL\n670G8eOE0fMcfy1bPkEUEKbQAw==\n",
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 41,
-  "created_at": "2022-04-08T17:07:38.000Z",
-  "user_id": 568,
   "published": true,
+  "created_at": "2022-04-08T17:07:38.000Z",
+  "level_num": "custom",
+  "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:07:38.060+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - ChalC_2022\"},{\"changed_at\":\"2022-04-08 22:47:39 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:07:38.060+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - ChalC_2022\"},{\"changed_at\":\"2022-04-08 22:47:39 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-17 21:24:44 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

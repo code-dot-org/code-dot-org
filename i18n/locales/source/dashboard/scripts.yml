@@ -4653,6 +4653,7 @@ en:
           description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           name: outbreak
           student_description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          lessons: {}
         apps-for-good:
           lesson_groups: {}
           title: Apps for Good
@@ -8582,14 +8583,48 @@ en:
           description: "This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to store multiple related values while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, students identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. Students continue to develop software engineering skills as they learn to make design decisions and use 1D arrays to store and analyze data.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, students will be able to . . ._\n\n-   Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n-   Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n-   Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n-   Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n-   Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n-   Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n    :::\n     \n\n::: details [**✅ AP Classroom Personal Progress Checks**]\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 4\n-   Personal Progress Check 6\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
           student_description: "This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to store multiple related values while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, you identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. You continue to develop software engineering skills as you learn to make design decisions and use 1D arrays to store and analyze data.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, you will be able to . . ._\n\n-   Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n-   Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n-   Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n-   Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n-   Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n-   Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n    :::"
         csa4-2023:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-2:
+              name: Abstract Data Art Project
+            lesson-3:
+              name: BingoCaller FRQ
+            lesson-4:
+              name: Unit 4 Assessment
+            lesson-1:
+              name: Abstract Data Art Project [1-Day Version]
+            lesson-5:
+              name: The Theater
+            lesson-6:
+              name: Static Variables and Methods
+            lesson-7:
+              name: The Math Class
+            lesson-8:
+              name: Casting and Rounding
+            lesson-9:
+              name: Random
+            lesson-10:
+              name: Object Aliases and Equality
+            lesson-11:
+              name: Nested If Statements
+            lesson-12:
+              name: Logical Operators
+            lesson-13:
+              name: De Morgan's Laws
+            lesson-14:
+              name: Multi-Selection Statements
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Alternate Lessons
           name: csa4-2023
           title: Conditions and Logic
           description_audience: ''
           description_short: Students improve decision-making in their programs using relational and logical operators to evaluate primitive values and object references and use the Math class to perform calculations and generate random numbers.
-          description: "This unit revisits the use of packages to access existing functionalities in their programs, such as The Neighborhood, to expand their knowledge of APIs and libraries and explore The Theater. With The Theater, students learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, students expand their knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, students use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan’s Laws and learn how to evaluate truth tables.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 3\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
-          student_description: This unit revisits the use of packages to access existing functionalities in your programs, such as The Neighborhood, to expand your knowledge of APIs and libraries and explore The Theater. With The Theater, you learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, you expand your knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, you use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and learn how to evaluate truth tables.
+          description: "This unit revisits the use of packages to access existing functionalities in their programs, such as The Neighborhood, to expand their knowledge of APIs and libraries and explore The Theater. With The Theater, students learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, students expand their knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, students use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan’s Laws and learn how to evaluate truth tables.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, students will be able to . . ._\n\n-   Use the `static` keyword to to create static variables and methods in a class\n\n-   Call `Math` class methods and constants to perform calculations and generate random numbers\n\n-   Use casting operators to assign a value of one type to another\n\n-   Explain the difference between `==` and `equals()`\n\n-   Write nested `if` statements to test a combination of conditions\n\n-   Construct a conditional statement involving logical operators\n\n-   Evaluate compound Boolean expressions for equivalence\n\n-   Write multi-selection statements to test multiple conditions\n    :::\n     \n\n::: details [**✅ AP Classroom Personal Progress Checks**]\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 3\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit revisits the use of packages to access existing functionalities in your programs, such as The Neighborhood, to expand your knowledge of APIs and libraries and explore The Theater. With The Theater, you learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, you expand your knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, you use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and learn how to evaluate truth tables.\n\n::: details [**\U0001F3AF Unit Objectives**]\n\n### _By the end of this unit, you will be able to . . ._\n\n-   Use the `static` keyword to to create static variables and methods in a class\n\n-   Call `Math` class methods and constants to perform calculations and generate random numbers\n\n-   Use casting operators to assign a value of one type to another\n\n-   Explain the difference between `==` and `equals()`\n\n-   Write nested `if` statements to test a combination of conditions\n\n-   Construct a conditional statement involving logical operators\n\n-   Evaluate compound Boolean expressions for equivalence\n\n-   Write multi-selection statements to test multiple conditions\n    :::"
         csa5-2023:
           lessons: {}
           lesson_groups: {}
@@ -9039,29 +9074,35 @@ en:
               display_name: Survey
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
-          title: Digital Information ('22-'23)
+          title: Digital Information ('23-'24)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description_audience: ''
+          lessons: {}
+          name: csp1-2023
         csp2-2023:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: The Internet'
-          title: The Internet ('22-'23)
+          title: The Internet ('23-'24)
           description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           description_short: Build the internet from the ground up using the Internet Simulator.
           description_audience: ''
+          lessons: {}
+          name: csp2-2023
         csp3-2023:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unit 3: Intro to App Design'
-          title: Intro to App Design ('22-'23)
+          title: Intro to App Design ('23-'24)
           description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
           description_audience: ''
+          lessons: {}
+          name: csp3-2023
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -9072,11 +9113,13 @@ en:
               display_name: Functions
             csp_project:
               display_name: Project
-          title: Variables, Conditionals, and Functions ('22-'23)
+          title: Variables, Conditionals, and Functions ('23-'24)
           description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description_audience: ''
+          lessons: {}
+          name: csp4-2023
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -9129,11 +9172,13 @@ en:
               display_name: Libraries
             lessonGroup-3:
               display_name: Post-Course Survey
-          title: Parameters, Return, and Libraries ('22-'23)
+          title: Parameters, Return, and Libraries ('23-'24)
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
           description_audience: ''
+          lessons: {}
+          name: csp7-2023
         csp8-2023:
           lesson_groups:
             lessonGroup-2:
@@ -9242,7 +9287,7 @@ en:
             -   Access and modify elements in arrays
             -   Traverse arrays
 
-            **Estimated Time:** 7.5 hours
+            **Estimated Time:** 5.5 hours
           student_description: |-
             This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
 
@@ -9259,9 +9304,12 @@ en:
             -   Access and modify elements in arrays
             -   Traverse arrays
 
-            **Estimated Time:** 7.5 hours
+            **Estimated Time:** 5.5 hours
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa3-2023
         csa-examples-22:
           lessons:
             lesson-1:
@@ -9465,20 +9513,32 @@ en:
               name: Exploring the Painter class
           lesson_groups: {}
           name: self-paced-pl-csa4-2023
-          title: ''
+          title: Getting to know the Painter class
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |-
+            This module is for any teacher who is familiar with Java OR has done Module 3, but who want introduction to the student-facing tools Code.org's in CSA Curriculum.
+
+            **You will:**
+
+            -   Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            -   Learn how to use UML diagrams
+            -   Call methods from the `Painter` class
+            -   Instantiate an object
+
+            **Estimated Time:** ~2 hours
           student_description: |-
             This module is for any teacher who is:
 
             -   Experienced in using variables, conditionals, loops and arrays in other programming languages
             -   Has finished Module 3 in this set of Modules
             -   Is new to Java
+            -   Want an introduction to the student-facing tools in Code.org's tools in CSA Curriculum.
 
             **You will:**
 
             -   Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            -   Learn how to use UML diagrams
             -   Call methods from the `Painter` class
             -   Instantiate an object
 
@@ -9494,3 +9554,153 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        microbit-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+            lessonGroup-4:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+          name: microbit-2022
+          title: Creating Apps with Devices (Micro:bit)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        microbit-temp:
+          lessons:
+            lesson-11:
+              name: LED Screen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Intro to App Lab
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+            lessonGroup-4:
+              display_name: Building Physical Prototypes
+          name: microbit-temp
+          title: Micro:bit Temp
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-timecapsule-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-timecapsule-2023
+          title: Time Capsule (2023)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-2:
+              name: Content Workshop
+            lesson-1:
+              name: Workshop Opener
+            lesson-3:
+              name: Planning for Next Year
+            lesson-4:
+              name: Unconference
+            lesson-5:
+              name: Closing
+            lesson-6:
+              name: Asynchronous Curriculum Investigation
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-2:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd7-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 7
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **Participants will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Reflect on their previous year of teaching CS Discoveries by naming successes and challenges.
+            -   Determine which units they will teach and in what order for the following year of CS Discoveries.
+            -   Collaborate and share ideas with other teachers.
+          student_description: |-
+            **You will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Reflect on your previous year of teaching CS Discoveries by naming successes and challenges.
+            -   Determine which units you will teach and in what order for the following year of CS Discoveries.
+            -   Collaborate and share ideas with other teachers.
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Committing to Equitable Teaching Practices
+            lesson-4:
+              name: Connecting to the Community Going Forward
+            lesson-5:
+              name: Closing
+            lesson-6:
+              name: Asynchronous Curriculum Investigation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Part 1: Synchronous Session'
+            lessonGroup-3:
+              display_name: 'Part 2: Asynchronous Post-Work'
+          name: vpl-csd8-ayw-pilot-2022
+          title: CS Discoveries Virtual Module 8
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **Participants will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Describe the commitment they will continue to pursue in support of equity in CS, and the strategies they will use to support that commitment.
+            -   Make a plan to continuously develop new skills after this workshop.
+          student_description: |-
+            **You will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Describe the commitment you will continue to pursue in support of equity in CS, and the strategies you will use to support that commitment.
+            -   Make a plan to continuously develop new skills after this workshop.
+        csc-mappinglandmarks-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-mappinglandmarks-2023
+          title: Mapping Landmarks (2023)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        blockchain-2023:
+          lessons:
+            lesson-1:
+              name: Blockchain Overview
+            lesson-2:
+              name: Applied Blockchain & Bitcoin
+            lesson-3:
+              name: Beyond Currencies
+            lesson-4:
+              name: Value on the Blockchain
+            lesson-5:
+              name: Societal Impact
+          lesson_groups: {}
+          name: blockchain-2023
+          title: Blockchain
+          description_audience: ''
+          description_short: ''
+          description: This is the unit on Blockchain!
+          student_description: ''
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Artificial Intelligence and Machine Learning
+          title: Teaching AI and Machine Learning
+          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to artificial intelligence and machine learning. \n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects. \n-   Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          description_short: ''
+          description_audience: ''

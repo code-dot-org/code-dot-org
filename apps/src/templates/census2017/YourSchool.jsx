@@ -27,16 +27,12 @@ class YourSchool extends Component {
   };
 
   state = {
-    schoolDropdownOption: undefined,
-    showExistingInaccuracy: false,
-    existingInaccuracy: false
+    schoolDropdownOption: undefined
   };
 
-  handleTakeSurveyClick = (schoolDropdownOption, existingInaccuracy) => {
+  handleTakeSurveyClick = schoolDropdownOption => {
     this.setState({
-      schoolDropdownOption: schoolDropdownOption,
-      showExistingInaccuracy: existingInaccuracy,
-      existingInaccuracy: existingInaccuracy
+      schoolDropdownOption: schoolDropdownOption
     });
     adjustScroll('form');
   };
@@ -50,15 +46,7 @@ class YourSchool extends Component {
 
   handleSchoolDropdownChange = option => {
     this.setState({
-      schoolDropdownOption: option,
-      showExistingInaccuracy: false,
-      existingInaccuracy: false
-    });
-  };
-
-  handleExistingInaccuracyChange = option => {
-    this.setState({
-      existingInaccuracy: option
+      schoolDropdownOption: option
     });
   };
 
@@ -75,8 +63,6 @@ class YourSchool extends Component {
     if (schoolDropdownOption && schoolId !== '-1') {
       schoolForMap = schoolDropdownOption.school;
     }
-    const showExistingInaccuracy = this.state.showExistingInaccuracy;
-    const existingInaccuracy = this.state.existingInaccuracy;
 
     // Hide the special announcement.
     const showSpecialAnnouncement = false;
@@ -107,9 +93,12 @@ class YourSchool extends Component {
               Does your school teach Computer Science?
             </h1>
             <h3 style={styles.description}>
-              Find your school on the map to see if computer science is already
-              being offered. Can't find your school on the map?{' '}
-              <a href="#form">Fill out the survey below</a>.
+              Find your school on the map to see if computer science was offered
+              during the {this.props.currentCensusYear - 1}-
+              {this.props.currentCensusYear} school year. Then{' '}
+              <a href="#form">fill out the survey below</a> to make sure your
+              school is accurately represented for{' '}
+              {this.props.currentCensusYear}-{this.props.currentCensusYear + 1}.
             </h3>
             <SchoolAutocompleteDropdown
               value={
@@ -133,9 +122,6 @@ class YourSchool extends Component {
           prefillData={this.props.prefillData}
           schoolDropdownOption={schoolDropdownOption}
           onSchoolDropdownChange={this.handleSchoolDropdownChange}
-          showExistingInaccuracy={showExistingInaccuracy}
-          existingInaccuracy={existingInaccuracy}
-          onExistingInaccuracyChange={this.handleExistingInaccuracyChange}
           initialSchoolYear={this.props.currentCensusYear}
         />
       </div>

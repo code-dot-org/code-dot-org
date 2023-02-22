@@ -1,4 +1,4 @@
-{{ featured_tutorial, title: "ஹலோ வேர்ல்ட்: சாக்கர்", body: "நீங்கள் கால்பந்து ஆடுகளத்தில் ஊடாடும் காட்சிகளைக் குறிப்பதால் நீங்கள் அணியின் கேப்டன். GOOOAALLL!" ,image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset "}}
+{{ featured_tutorial, title: "ஹலோ வேர்ல்ட்: சாக்கர்", body: "நீங்கள் கால்பந்து ஆடுகளத்தில் ஊடாடும் காட்சிகளைக் குறிப்பதால் நீங்கள் அணியின் கேப்டன். GOOOAALLL!” ,image: "/images/hoc2022-hello-world-soccer.png“, url: "https://studio.code.org/s/hello-world-soccer-2022/reset "}}
 
 {{ featured_tutorial, title: "விளையாட்டு", body: "ஒரு கூடைப்பந்து விளையாட்டை உருவாக்கவும் அல்லது விளையாட்டு முழுவதும் கலக்கவும்.", image"/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
 

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-02-01T10:47:11.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -22,16 +18,25 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "buzzer.frequency": null,
-      "onBoardEvent": null,
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonA",
+            "buttonB"
+          ],
+          "1": [
+            "\"down\"",
+            "\"up\""
+          ]
+        }
+      },
       "setProperty": null,
       "setText": null,
       "randomNumber_min_max": null,
-      "led.on": null,
-      "led.off": null,
-      "led.pulse": null,
-      "led.blink": null,
-      "led.toggle": null
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
+      "ledScreen.clear": null
     },
     "edit_code": true,
     "embed": "false",
@@ -71,7 +76,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "microbit",
     "long_instructions": "<img src=\"https://images.code.org/077ce11891f3966e1564cdb7083bad4f-image-1645641750329.png\" style=\"width: 250px; margin: 10px; float: right\" />\r\n\r\n# Text Message Design\r\n\r\nUse variables to change the background color and text color of the text exchange below so it looks similar to the picture to the right. It's okay if the colors don't match exactly as long as each group of messages has the same color scheme. \r\n\r\nYou should use variables to keep the colors consistent between messages from the same person.",
     "parent_level_id": 20595,
     "name_suffix": "_mb2022",
@@ -84,10 +89,7 @@
     "reference_links": [
       "/courses/csd-2022/guides/if-statements",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/physical-input",
-      "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/booleans-and-comparison-operators"
     ],
     "callout_json": "[]",
     "display_name": "Text Message Design",
@@ -98,9 +100,13 @@
     "encrypted_examples": "TPoPVJGNFzO13C8oQC9HkBjXHyS05biysXpbA4IqwYGWhrMec4/lZmdor0RD\n06U7mL4SlXj5Q2LXAGoLHjhxtg==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-02-01T10:47:11.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:11.586+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalA_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:11.586+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalA_2222\"},{\"changed_at\":\"2023-02-07 22:20:38 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

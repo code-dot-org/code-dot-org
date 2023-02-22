@@ -79,6 +79,10 @@ $full-width: 900px;
           background-color: yellow;
           border-color: brown;
         }
+
+        &Playing {
+          box-shadow: 0 0 10px rgba(255 255 255 / 0.5);
+        }
       }
 
       .tracksContainer {
