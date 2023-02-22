@@ -85,30 +85,6 @@ class Census::CensusSubmission < ApplicationRecord
   validates :submitter_name, length: {maximum: 255}
   validates :topic_other_description, length: {maximum: 255}
 
-  def inaccuracy_review_data
-    school_infos.map do |si|
-      next unless si.school
-      current_summary = si.school.census_summaries.find {|s| s.school_year == school_year}
-      stats = si.school.school_stats_by_year.try(:sort).try(:last)
-      high_school = stats.try(:has_high_school_grades?)
-      k8_school = stats.try(:has_k8_grades?)
-      attributes.merge(
-        {
-          school:  Api::V1::SchoolAutocomplete::Serializer.new(si.school).attributes,
-          high_school: high_school,
-          k8_school: k8_school,
-          current_summary: current_summary.teaches_cs.try(:titleize),
-          summary_audit: JSON.parse(current_summary.audit_data),
-          teaches_cs: Census::CensusSummary.submission_teaches_cs?(
-            self,
-            is_high_school: high_school,
-            is_k8_school: k8_school,
-          )
-        }
-      )
-    end
-  end
-
   def submitter_email_address=(value)
     super(value&.strip&.downcase)
   end
