@@ -11,7 +11,7 @@ class AdminNpsController < ApplicationController
     audience = params[:audience]
     if ['all', 'even', 'odd', 'none'].include? audience
       DCDO.set('nps_audience', audience)
-      flash[:notice] = "Survey audience updated TRIGGER DRONE BUILD"
+      flash[:notice] = "Survey audience updated"
     else
       flash[:alert] = "Invalid audience type"
     end
