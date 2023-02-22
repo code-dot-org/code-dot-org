@@ -107,6 +107,8 @@
   "animationCategory_video_games": "Video Games",
   "animationMode": "Animation",
   "animationPicker_allCategories": "All categories",
+  "animationPicker_cannotUploadHeader": "Cannot Upload Images",
+  "animationPicker_cannotUploadIfPublished": "You project is published. In order to upload images you must unpublish your project.",
   "animationPicker_confirmNoPII": "I will not upload images with personal information.",
   "animationPicker_confirmRestrictedShare": "This project can not be published or remixed.",
   "animationPicker_discardSelection": "Discard selection",

@@ -16,7 +16,11 @@ export function UnconnectedAnimationUploadButton({
   inRestrictedShareMode,
   refreshInRestrictedShareMode
 }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
+  const [
+    isPublishedWarningModalOpen,
+    setIsPublishedWarningModalOpen
+  ] = useState(false);
   const [noPIIConfirmed, setNoPIIConfirmed] = useState(false);
   const [restrictedShareConfirmed, setRestrictedShareConfirmed] = useState(
     false
@@ -31,7 +35,9 @@ export function UnconnectedAnimationUploadButton({
         icon="upload"
         onClick={
           showRestrictedUploadWarning
-            ? () => setIsModalOpen(true)
+            ? project.isPublished()
+              ? () => setIsPublishedWarningModalOpen(true)
+              : () => setIsUploadModalOpen(true)
             : onUploadClick
         }
         isBackgroundsTab={isBackgroundsTab}
@@ -42,8 +48,8 @@ export function UnconnectedAnimationUploadButton({
   function renderUploadModal() {
     return (
       <BaseDialog
-        isOpen={isModalOpen}
-        handleClose={() => setIsModalOpen(false)}
+        isOpen={isUploadModalOpen}
+        handleClose={() => setIsUploadModalOpen(false)}
       >
         <div>
           <h1 className={styles.modalHeader}>
@@ -92,9 +98,34 @@ export function UnconnectedAnimationUploadButton({
     );
   }
 
+  function renderPublishedWarningModal() {
+    return (
+      <BaseDialog
+        isOpen={isPublishedWarningModalOpen}
+        handleClose={() => setIsPublishedWarningModalOpen(false)}
+      >
+        <div>
+          <h1 className={styles.modalHeader}>
+            {msg.animationPicker_cannotUploadHeader()}
+          </h1>
+          <p>{msg.animationPicker_cannotUploadIfPublished()}</p>
+        </div>
+        <div className={styles.modalButtonRow}>
+          <button
+            className={classNames(styles.modalButton, styles.confirmButton)}
+            type="button"
+            onClick={() => setIsPublishedWarningModalOpen(false)}
+          >
+            {msg.dialogOK()}
+          </button>
+        </div>
+      </BaseDialog>
+    );
+  }
+
   function confirmRestrictedUpload() {
     project.setInRestrictedShareMode(true);
-    setIsModalOpen(false);
+    setIsUploadModalOpen(false);
     // redux setting, for use in share/remix
     refreshInRestrictedShareMode();
     onUploadClick();
@@ -103,12 +134,13 @@ export function UnconnectedAnimationUploadButton({
   function cancelUpload() {
     setRestrictedShareConfirmed(false);
     setNoPIIConfirmed(false);
-    setIsModalOpen(false);
+    setIsUploadModalOpen(false);
   }
 
   return (
     <>
       {renderUploadModal()}
+      {renderPublishedWarningModal()}
       {renderUploadButton()}
     </>
   );
