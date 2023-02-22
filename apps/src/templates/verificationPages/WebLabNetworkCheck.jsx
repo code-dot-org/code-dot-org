@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {BRAMBLE_READY_STATE, FILE_SYSTEM_ERROR} from '../../weblab/constants';
+import {
+  BRAMBLE_READY_STATE,
+  FILE_SYSTEM_ERROR,
+  SUPPORT_ARTICLE_URL
+} from '../../weblab/constants';
 import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
 
@@ -174,9 +178,9 @@ class WebLabNetworkCheck extends Component {
         </li>,
         <li key="reset-indexed-db">
           Web Lab depends on a browser feature called the IndexedDB API.
-          Occasionally this feature gets "stuck" and must be reset. We've added
-          a button to the Web Lab error dialog that reads "Reset Web Lab." Try
-          performing this reset and then reloading the page.
+          Occasionally this feature gets "stuck" and must be reset. Try loading
+          a Web Lab level, and if you see an error dialog, click the button that
+          says "Reset Web Lab."
         </li>
       );
     }
@@ -212,10 +216,8 @@ class WebLabNetworkCheck extends Component {
           )}
           <p>
             For more troubleshooting information, see our support article on{' '}
-            <a href="https://support.code.org/hc/en-us/articles/360016804871-Troubleshooting-Web-Lab-problems">
-              Troubleshooting Web Lab problems
-            </a>
-            . You may also contact our Support Team (
+            <a href={SUPPORT_ARTICLE_URL}>Troubleshooting Web Lab problems</a>.
+            You may also contact our Support Team (
             <a href="mailto:support@code.org">support@code.org</a>) for further
             assistance.
           </p>
