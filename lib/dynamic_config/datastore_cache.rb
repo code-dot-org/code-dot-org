@@ -32,9 +32,9 @@ class DatastoreCache
   def notify_change_listeners
     @listeners.each do |listener|
       listener.on_change
-    rescue => exception
-      Rails.logger.warn("Error calling listener: #{exception.message}")
-      Honeybadger.notify(exception)
+    rescue => e
+      Rails.logger.warn("Error calling listener: #{e.message}")
+      Honeybadger.notify(e)
     end
   end
 
@@ -86,9 +86,9 @@ class DatastoreCache
         updated = true if value != old_value
       end
       notify_change_listeners if updated
-    rescue => exc
+    rescue => e
       retry unless (tries -= 1).zero?
-      Honeybadger.notify(exc)
+      Honeybadger.notify(e)
     end
   end
 

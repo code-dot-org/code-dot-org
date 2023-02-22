@@ -19,9 +19,9 @@ def backfill_script_announcement_keys
     end
     begin
       script.save!
-    rescue Exception => err
+    rescue Exception => e
       puts "Skipping #{script.id} - #{script.name} because of error:"
-      puts err.message
+      puts e.message
       next
     end
 

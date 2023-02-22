@@ -142,8 +142,8 @@ class RedshiftImport
       ALTER TABLE #{current_table_name} RENAME TO #{new_table_name};
     SQL
     redshift_client.exec(query)
-  rescue PG::UndefinedTable => undefined_table_error
-    CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{undefined_table_error}"
+  rescue PG::UndefinedTable => e
+    CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{e}"
   end
 
   # Get name and columns of primary key constraint for a specific table, if constraint exists.

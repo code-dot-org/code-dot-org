@@ -55,8 +55,8 @@ def upload_log_and_get_link(key, body, metadata)
         {metadata: metadata}
       )
   " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+rescue Exception => e
+  ChatClient.log "Uploading log to S3 failed: #{e}"
   return ''
 end
 
@@ -272,9 +272,9 @@ def emit_deploy_metric(deployment_stage, successful)
       }]
     }
   )
-rescue => error
+rescue => e
   ChatClient.log 'Unable to emit metrics', color: 'red'
-  ChatClient.log "/quote #{error}", color: 'gray', message_format: 'text'
+  ChatClient.log "/quote #{e}", color: 'gray', message_format: 'text'
 end
 
 main

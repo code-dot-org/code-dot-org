@@ -154,8 +154,8 @@ class LessonsController < ApplicationController
       copied_lesson = @lesson.copy_to_unit(destination_script, new_level_suffix)
       render(status: :ok, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
     end
-  rescue => err
-    render(json: {error: err.message}.to_json, status: :not_acceptable)
+  rescue => e
+    render(json: {error: e.message}.to_json, status: :not_acceptable)
   end
 
   # Return true if request is one that can be publicly cached.

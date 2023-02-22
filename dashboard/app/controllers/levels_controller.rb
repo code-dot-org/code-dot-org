@@ -366,8 +366,8 @@ class LevelsController < ApplicationController
       @level = type_class.create_from_level_builder(params, create_level_params)
     rescue ArgumentError => e
       render(status: :not_acceptable, plain: e.message) && return
-    rescue ActiveRecord::RecordInvalid => invalid
-      render(status: :not_acceptable, plain: invalid) && return
+    rescue ActiveRecord::RecordInvalid => e
+      render(status: :not_acceptable, plain: e) && return
     end
     if params[:do_not_redirect]
       render json: @level
@@ -446,8 +446,8 @@ class LevelsController < ApplicationController
     end
   rescue ArgumentError => e
     render(status: :not_acceptable, plain: e.message)
-  rescue ActiveRecord::RecordInvalid => invalid
-    render(status: :not_acceptable, plain: invalid)
+  rescue ActiveRecord::RecordInvalid => e
+    render(status: :not_acceptable, plain: e)
   end
 
   # GET /levels/:id/embed_level

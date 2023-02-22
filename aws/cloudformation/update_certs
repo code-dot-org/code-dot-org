@@ -29,7 +29,7 @@ common_name = ARGV[0]
 required_certs = ARGV.dup
 begin
   Acmesmith::Command.start ['current', common_name]
-rescue => _
+rescue => _e
   CDO.log.info "Authorizing SSL certificates for #{common_name}"
   required_certs.each do |auth|
     Acmesmith::Command.start ['authorize', auth]

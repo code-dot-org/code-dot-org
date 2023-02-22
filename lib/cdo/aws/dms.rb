@@ -181,9 +181,9 @@ module Cdo
         end
 
         CDO.log.info "DMS Task Completed Successfully: #{@arn}"
-      rescue StandardError => error
-        CDO.log.info "Error executing DMS Replication Task #{@arn} - #{error.message}"
-        raise error
+      rescue StandardError => e
+        CDO.log.info "Error executing DMS Replication Task #{@arn} - #{e.message}"
+        raise e
       end
 
       # Check periodically until replication task has completed and then validate that it was successful.

@@ -125,8 +125,8 @@ class ProgrammingExpressionsController < ApplicationController
     begin
       new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
       render(status: :ok, json: {editUrl: edit_programming_expression_path(new_exp)})
-    rescue => err
-      render(json: {error: err.message}.to_json, status: :not_acceptable)
+    rescue => e
+      render(json: {error: e.message}.to_json, status: :not_acceptable)
     end
   end
 

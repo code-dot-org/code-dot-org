@@ -287,8 +287,8 @@ def upload_log_and_get_public_link(filename, metadata)
   return '' unless $options.html
   log_url = LOG_UPLOADER.upload_file(filename, {metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+rescue Exception => e
+  ChatClient.log "Uploading log to S3 failed: #{e}"
   return ''
 end
 

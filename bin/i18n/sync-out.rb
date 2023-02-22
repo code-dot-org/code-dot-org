@@ -585,15 +585,15 @@ def restore_markdown_headers
     end
     begin
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-    rescue Exception => err
+    rescue Exception => e
       puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
-      raise err
+      raise e
     end
     begin
       header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-    rescue Exception => err
+    rescue Exception => e
       puts "Error parsing yaml header path=#{path}"
-      raise err
+      raise e
     end
     I18nScriptUtils.sanitize_header!(header)
     restored_header = source_header.merge(header)
