@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org kurslaridan butun dunyo bo'ylab o'n millionlab talabalar va milliondan ziyod o'qituvchilar foydalanadilar.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Tarix
 
 2013 yilda Code.org egizak aka-uka Hadi va Ali Partovi tomonidan [informatika fanini targ'ib qiluvchi videofilm](https://www.youtube.com/watch?v=nKIu9yen5nc) taqdim etish bilan ishga tushirildi. Ushbu video YouTubeda kukn videosi bo'ldi va 15000 ta maktab bizga yordam so'rab murojaat qildi. O'shandan beri biz ko'ngillilar jamoasidan umumjahon harakatni qo'llab-quvvatlovchi to'liq tashkilotgacha o'sdik. Biz ishonamizki, informatika fani bo'yicha sifatli ta'lim faqatgina omadlilarda emas, har bir bolada bo'lishi kerak.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Biz nima qilamiz
 

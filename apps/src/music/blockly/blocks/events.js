@@ -1,4 +1,5 @@
 import {BlockTypes} from '../blockTypes';
+import {TRIGGER_FIELD} from '../constants';
 
 export const whenRun = {
   definition: {
@@ -21,7 +22,7 @@ export const triggeredAt = {
     args0: [
       {
         type: 'input_dummy',
-        name: 'trigger'
+        name: TRIGGER_FIELD
       },
       {
         type: 'field_variable',
@@ -40,7 +41,7 @@ export const triggeredAt = {
       Blockly.Names.NameType.VARIABLE
     );
     return `
-      ${varName} = MusicPlayer.getPlayheadPosition();
+      ${varName} = MusicPlayer.getCurrentPlayheadPosition();
       \n`;
   }
 };
@@ -52,7 +53,7 @@ export const triggeredAtSimple = {
     args0: [
       {
         type: 'input_dummy',
-        name: 'trigger'
+        name: TRIGGER_FIELD
       }
     ],
     inputsInline: true,
@@ -67,7 +68,7 @@ export const triggeredAtSimple = {
       Blockly.Names.NameType.VARIABLE
     );
     return (
-      `${varName} = MusicPlayer.getPlayheadPosition();\n` +
+      `${varName} = MusicPlayer.getCurrentPlayheadPosition();\n` +
       `currentMeasureLocation = Math.ceil(${varName});\n`
     );
   }

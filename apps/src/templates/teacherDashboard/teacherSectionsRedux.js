@@ -251,6 +251,7 @@ export const assignToSection = (
     // We need an OR here because unitId will be null for standalone units
     if (
       (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||
+      (courseVersionId && section.courseVersionId !== courseVersionId) ||
       (unitId && section.unitId !== unitId)
     ) {
       analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
@@ -259,8 +260,10 @@ export const assignToSection = (
         sectionLoginType: section.loginType,
         previousUnitId: section.unitId,
         previousCourseId: section.courseOfferingId,
+        previousCourseVersionId: section.courseVersionId,
         newUnitId: unitId,
-        newCourseId: courseOfferingId
+        newCourseId: courseOfferingId,
+        newCourseVersionId: courseVersionId
       });
     }
 

@@ -3239,7 +3239,13 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-        csa4-2023: {}
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Aleatoriu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa5-2023: {}
         csa6-2023: {}
         csa7-2023: {}
@@ -3376,3 +3382,11 @@ ro:
         vpl-csd6-ayw-pilot-2022: {}
         self-paced-pl-csa4-2023: {}
         katies-playground: {}
+        microbit-2022: {}
+        microbit-temp: {}
+        csc-timecapsule-2023: {}
+        vpl-csd7-ayw-pilot-2022: {}
+        vpl-csd8-ayw-pilot-2022: {}
+        csc-mappinglandmarks-2023: {}
+        blockchain-2023: {}
+        self-paced-pl-csc-2023: {}

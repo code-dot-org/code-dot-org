@@ -849,6 +849,30 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Нов блок!"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Това число ви казва колко от тези блокове можете да използвате в този пъзел."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Натиснете крушката, ако ви трябва съвет!"
+        },
+        "Luigi's Pizza 1": {
+          "luigi's pizza 1": "Опитайте да поръчате пица с пеперони"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Това число означава, че само един вид от тези блокове може да бъде използван във финалния отговор."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Това е кутията с инструменти. Тя е откъдето ще намерите допълнителни блокове, за да завършите пъзелите си."
+        },
+        "courseF_collector_items_-2022-2": {
+          "costumes_tab_callout": "Раздел костюми"
+        },
+        "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Раздел костюми"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Натиснете синия бутон, за да отворите или затворите."
         }
       }
     }

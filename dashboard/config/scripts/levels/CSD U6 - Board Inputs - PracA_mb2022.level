@@ -1,23 +1,22 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-02-01T10:46:52.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "onEvent": null,
-      "led.on": null,
-      "led.off": null,
-      "led.blink": null,
-      "led.toggle": null,
-      "led.pulse": null,
-      "buzzer.frequency": null,
-      "onBoardEvent": null,
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonA",
+            "buttonB"
+          ],
+          "1": [
+            "\"down\"",
+            "\"up\""
+          ]
+        }
+      },
       "setProperty": null,
-      "setText": null,
-      "randomNumber_min_max": null
+      "setText": null
     },
     "edit_code": true,
     "embed": "false",
@@ -57,7 +56,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "microbit",
     "long_instructions": "# Debugging\r\n\r\nThe app below is meant to update based on how the user interacts with the board. However, the wrong events are displaying. Can you fix the errors so the correct text appears with the correct event?",
     "parent_level_id": 20595,
     "name_suffix": "_mb2022",
@@ -67,25 +66,24 @@
     "libraries_enabled": "false",
     "widget_mode": "false",
     "ai_enabled": "false",
-    "reference_links": [
-      "/courses/csd-2022/guides/circuit-playground",
-      "/courses/csd-2022/guides/physical-input",
-      "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
-    ],
-    "palette_category_at_start": "Circuit",
-    "start_blocks": "onBoardEvent(buttonL, \"down\", function() {\r\n  setText(\"thisLabel\", \"The toggle switch is open\");\r\n});\r\nonBoardEvent(buttonL, \"up\", function() {\r\n  setText(\"thisLabel\", \"The right button is down\");\r\n});\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  setText(\"thisLabel\", \"The right button is up\");\r\n});\r\nonBoardEvent(buttonR, \"up\", function() {\r\n  setText(\"thisLabel\", \"The left button is up\");\r\n});\r\nonBoardEvent(toggleSwitch, \"open\", function() {\r\n  setText(\"thisLabel\", \"The left button is down\");\r\n});\r\nonBoardEvent(toggleSwitch, \"close\", function() {\r\n  setText(\"thisLabel\", \"The toggle switch is close\");\r\n});\r\n",
+    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\r\n  setText(\"thisLabel\", \"The B button is down\");\r\n});\r\nonBoardEvent(buttonA, \"up\", function() {\r\n  setText(\"thisLabel\", \"The A button is down\");\r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  setText(\"thisLabel\", \"The B button is up\");\r\n});\r\nonBoardEvent(buttonB, \"up\", function() {\r\n  setText(\"thisLabel\", \"The A button is up\");\r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 24px; padding: 2px 15px; width: 315px; height: 70px; position: absolute; left: 5px; top: 125px; text-align: center;\" id=\"thisLabel\">This is a Label</label></div></div>",
     "display_name": "Debugging",
-    "bubble_choice_description": "Find the bugs to make the app display the correct information!",
-    "thumbnail_url": "https://images.code.org/31f18a56e31a6f5318f625d50efb8074-image-1650057083558.gif",
-    "encrypted_examples": "g8saxuHY/IqCfXlPuadywsx6iVg5LBqbDxa4C2f2otXjFHrdbgbzqxX1gV9+\ncMctcFztitIDH1vlLQMoySpVfQ==\n",
+    "thumbnail_url": "https://images.code.org/6e48d333c2a750f2038147fd373a046a-mb-Practice.png",
+    "encrypted_examples": [
+
+    ],
     "video_key": "csd_debugging",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "bubble_choice_description": "Find the bugs to make the app display the correct information!"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-02-01T10:46:52.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:52.541+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracA_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:46:52.541+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracA_2222\"},{\"changed_at\":\"2023-02-03 21:04:21 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"palette_category_at_start\",\"start_blocks\",\"bubble_choice_description\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-03 21:36:22 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

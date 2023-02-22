@@ -3,6 +3,7 @@ import {assert, expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import jQuery from 'jquery';
+import {pick, omit} from 'lodash';
 import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
@@ -11,11 +12,14 @@ const refute = p => assert.isNotOk(p);
 describe('Enroll Form', () => {
   // We aren't testing server responses, but have a fake server to handle calls and suppress warnings
   let server;
-  before(() => {
+  let enrollForm;
+  beforeEach(() => {
     server = sinon.fakeServer.create();
+    sinon.spy(jQuery, 'ajax');
   });
-  after(() => {
+  afterEach(() => {
     server.restore();
+    jQuery.ajax.restore();
   });
 
   const props = {
@@ -26,9 +30,55 @@ describe('Enroll Form', () => {
     onSubmissionComplete: () => {}
   };
 
+  const school_id = '60001411118';
+  const school_info = {
+    school_id: school_id,
+    school_name: 'Summit Leadership Academy High Desert',
+    school_state: 'CA',
+    school_type: 'charter',
+    school_zip: '92345'
+  };
+
+  const baseParams = {
+    first_name: 'Rubeus',
+    last_name: 'Hagrid',
+    email: props.email,
+    school_info: school_info
+  };
+
+  const extraParams = {
+    role: 'Classroom Teacher',
+    grades_teaching: ['Pre-K'],
+    csf_intro_intent: 'Yes',
+    attended_csf_intro_workshop: 'Yes',
+    csf_has_physical_curriculum_guide: 'Yes',
+    years_teaching: '10',
+    years_teaching_cs: '5',
+    taught_ap_before: 'Yes',
+    planning_to_teach_ap: 'Yes'
+  };
+
+  const testValidateFields = (form, params, errorProperty) => {
+    form.setState(params);
+    form.find('#submit').simulate('click');
+    expect(form.state('errors')).to.have.property(errorProperty);
+    expect(jQuery.ajax.called).to.be.false;
+  };
+
+  const testSuccessfulSubmit = (form, params) => {
+    form.setState(params);
+    form.find('#submit').simulate('click');
+    expect(form.state('errors')).to.be.empty;
+    expect(jQuery.ajax.called).to.be.true;
+  };
+
   describe('CSF Enroll Form', () => {
-    let enrollForm;
-    before(() => {
+    const extraRequiredParams = ['role', 'grades_teaching'];
+    const requiredParams = {
+      ...baseParams,
+      ...pick(extraParams, extraRequiredParams)
+    };
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -55,11 +105,29 @@ describe('Enroll Form', () => {
       enrollForm.setState({role: 'Librarian'});
       refute(enrollForm.exists('#describe_role'));
     });
+
+    extraRequiredParams.forEach(requiredParam => {
+      it(`does not submit when ${requiredParam} is missing`, () => {
+        testValidateFields(
+          enrollForm,
+          omit(requiredParams, requiredParam),
+          requiredParam
+        );
+      });
+    });
+
+    it('submits when all required params are present', () => {
+      testSuccessfulSubmit(enrollForm, requiredParams);
+    });
   });
 
   describe('CSF Intro Enroll Form', () => {
-    let enrollForm;
-    before(() => {
+    const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
+    const requiredParams = {
+      ...baseParams,
+      ...pick(extraParams, extraRequiredParams)
+    };
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -80,11 +148,29 @@ describe('Enroll Form', () => {
     it('displays other factors question', () => {
       assert(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
     });
+
+    extraRequiredParams.forEach(requiredParam => {
+      it(`does not submit when ${requiredParam} is missing`, () => {
+        testValidateFields(
+          enrollForm,
+          omit(requiredParams, requiredParam),
+          requiredParam
+        );
+      });
+    });
+
+    it('submits when all required params are present', () => {
+      testSuccessfulSubmit(enrollForm, requiredParams);
+    });
   });
 
   describe('CSF District Enroll Form', () => {
-    let enrollForm;
-    before(() => {
+    const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
+    const requiredParams = {
+      ...baseParams,
+      ...pick(extraParams, extraRequiredParams)
+    };
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -105,11 +191,34 @@ describe('Enroll Form', () => {
     it('displays other factors question', () => {
       assert(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
     });
+
+    extraRequiredParams.forEach(requiredParam => {
+      it(`does not submit when ${requiredParam} is missing`, () => {
+        testValidateFields(
+          enrollForm,
+          omit(requiredParams, requiredParam),
+          requiredParam
+        );
+      });
+    });
+
+    it('submits when all required params are present', () => {
+      testSuccessfulSubmit(enrollForm, requiredParams);
+    });
   });
 
   describe('CSF Deep Dive Enroll Form', () => {
-    let enrollForm;
-    before(() => {
+    const extraRequiredParams = [
+      'role',
+      'grades_teaching',
+      'attended_csf_intro_workshop',
+      'csf_has_physical_curriculum_guide'
+    ];
+    const requiredParams = {
+      ...baseParams,
+      ...pick(extraParams, extraRequiredParams)
+    };
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -130,11 +239,27 @@ describe('Enroll Form', () => {
     it('does not display other factors question', () => {
       refute(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
     });
+
+    extraRequiredParams.forEach(requiredParam => {
+      it(`does not submit when ${requiredParam} is missing`, () => {
+        testValidateFields(
+          enrollForm,
+          omit(requiredParams, requiredParam),
+          requiredParam
+        );
+      });
+    });
+
+    it('submits when all required params are present', () => {
+      testSuccessfulSubmit(enrollForm, requiredParams);
+    });
   });
 
   describe('CSP Enroll Form', () => {
-    let enrollForm;
-    before(() => {
+    const requiredParams = {
+      ...baseParams
+    };
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -167,11 +292,14 @@ describe('Enroll Form', () => {
     it('does not display other factors question', () => {
       refute(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
     });
+
+    it('submits when all required params are present', () => {
+      testSuccessfulSubmit(enrollForm, requiredParams);
+    });
   });
 
   describe('CSP Enroll Form with demographics', () => {
-    let enrollForm;
-    before(() => {
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -192,11 +320,24 @@ describe('Enroll Form', () => {
     it('does display replace existing question', () => {
       assert(enrollForm.exists('#replace_existing'));
     });
+
+    it('submits when all required params are present', () => {
+      testSuccessfulSubmit(enrollForm, baseParams);
+    });
   });
 
   describe('CSP Returning Teachers Form', () => {
-    let enrollForm;
-    before(() => {
+    const extraRequiredParams = [
+      'years_teaching',
+      'years_teaching_cs',
+      'taught_ap_before',
+      'planning_to_teach_ap'
+    ];
+    const requiredParams = {
+      ...baseParams,
+      ...pick(extraParams, extraRequiredParams)
+    };
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -234,11 +375,24 @@ describe('Enroll Form', () => {
         refute(enrollForm.exists({groupName: question}));
       });
     });
+
+    extraRequiredParams.forEach(requiredParam => {
+      it(`does not submit when ${requiredParam} is missing`, () => {
+        testValidateFields(
+          enrollForm,
+          omit(requiredParams, requiredParam),
+          requiredParam
+        );
+      });
+    });
+
+    it('submits when all required params are present', () => {
+      testSuccessfulSubmit(enrollForm, requiredParams);
+    });
   });
 
   describe('Admin/Counselor Enroll Form', () => {
-    let enrollForm;
-    before(() => {
+    beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -255,6 +409,10 @@ describe('Enroll Form', () => {
       assert(enrollForm.exists('#role'));
     });
 
+    it('does not display grades_teaching question', () => {
+      assert(!enrollForm.exists('#grades_teaching'));
+    });
+
     it('displays describe role question after answered as other', () => {
       enrollForm.setState({role: 'Other'});
       expect(enrollForm.find('#describe_role')).to.have.length(1);
@@ -267,18 +425,18 @@ describe('Enroll Form', () => {
       enrollForm.setState({role: 'Counselor'});
       expect(enrollForm.find('#describe_role')).to.have.length(0);
     });
+
+    it('submits when all required params are present', () => {
+      testSuccessfulSubmit(enrollForm, baseParams);
+    });
   });
 
-  describe('Enroll Form', () => {
-    let enrollForm;
+  describe('All Enroll Forms', () => {
+    const requiredParams = {
+      ...baseParams,
+      ...pick(extraParams, ['role', 'grades_teaching'])
+    };
     beforeEach(() => {
-      sinon.spy(jQuery, 'ajax');
-    });
-    afterEach(() => {
-      jQuery.ajax.restore();
-    });
-
-    function renderForm() {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -289,30 +447,24 @@ describe('Enroll Form', () => {
           onSubmissionComplete={props.onSubmissionComplete}
         />
       );
-    }
+    });
 
-    it('submits other school_info fields when no school_id', () => {
-      renderForm();
-
-      const school_info = {
+    it('submit other school_info fields when no school_id', () => {
+      const school_info_without_id = {
         school_name: 'Hogwarts School of Witchcraft and Wizardry',
         school_state: 'Washington',
         school_zip: '12345',
         school_type: 'Private school'
       };
-
-      const params = {
-        first_name: 'Rubeus',
-        last_name: 'Hagrid',
-        email: props.email,
-        school_info: school_info,
-        role: 'Librarian',
-        grades_teaching: ['Kindergarten']
+      const expectedSchoolInfo = {
+        ...school_info_without_id,
+        school_type: 'private'
       };
-      enrollForm.setState(params);
-
-      const expectedSchoolInfo = {...school_info, school_type: 'private'};
-      let expectedData = {...params, school_info: expectedSchoolInfo};
+      let expectedData = {...requiredParams, school_info: expectedSchoolInfo};
+      enrollForm.setState({
+        ...requiredParams,
+        school_info: school_info_without_id
+      });
 
       enrollForm.find('#submit').simulate('click');
 
@@ -322,51 +474,19 @@ describe('Enroll Form', () => {
       );
     });
 
-    it("doesn't submit other school_info fields when school_id is selected", () => {
-      renderForm();
-
-      const params = {
-        first_name: 'Rubeus',
-        last_name: 'Hagrid',
-        email: props.email,
-        school_info: {
-          school_id: '60001411118',
-          school_name: 'Summit Leadership Academy High Desert',
-          school_state: 'CA',
-          school_type: 'charter',
-          school_zip: '92345'
-        },
-        role: 'Librarian',
-        grades_teaching: ['Kindergarten']
-      };
-      const expectedData = {...params, school_info: {school_id: '60001411118'}};
-
-      enrollForm.setState(params);
+    it('do not submit other school_info fields when school_id is selected', () => {
+      enrollForm.setState(requiredParams);
       enrollForm.find('#submit').simulate('click');
 
       expect(jQuery.ajax.calledOnce).to.be.true;
-      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal(
-        expectedData
-      );
+      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal({
+        ...requiredParams,
+        school_info: {school_id: school_id}
+      });
     });
 
-    it('disables submit button after submit', () => {
-      renderForm();
-
-      const params = {
-        first_name: 'Rubeus',
-        last_name: 'Hagrid',
-        email: props.email,
-        school_info: {
-          school_id: '60001411118',
-          school_name: 'Summit Leadership Academy High Desert',
-          school_state: 'CA',
-          school_type: 'charter',
-          school_zip: '92345'
-        },
-        grades_teaching: ['Kindergarten']
-      };
-      enrollForm.setState(params);
+    it('disable submit button after submit', () => {
+      enrollForm.setState(omit(requiredParams, 'role'));
 
       // Submit button should stay enabled if invalid data was provided.
       // In this case, no "role" was included, which is a required field.
@@ -380,7 +500,7 @@ describe('Enroll Form', () => {
       expect(enrollForm.find('#submit').prop('disabled')).to.be.true;
     });
 
-    it('first name is set when rendered as a student', () => {
+    it('set first name when rendered as a student', () => {
       // Sometimes a teacher has a student account and fills out this
       // form.  That's fine; they'll be upgraded to a teacher account
       // later.
@@ -389,7 +509,6 @@ describe('Enroll Form', () => {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
-          workshop_course="CS Fundamentals"
           first_name={'Student'}
           email={''}
           previous_courses={props.previous_courses}
@@ -405,6 +524,24 @@ describe('Enroll Form', () => {
       expect(jQuery.ajax.called).to.be.false;
       expect(enrollForm.state('errors')).to.have.property('email');
       expect(enrollForm.state('errors')).not.to.have.property('first_name');
+    });
+
+    // first name and email fields are set as props on page load
+    // the user needs to explicitly set them blank for errors to appear
+    ['first_name', 'email'].forEach(param => {
+      it(`do not submit when user sets blank ${param}`, () => {
+        testValidateFields(enrollForm, {...requiredParams, [param]: ''}, param);
+      });
+    });
+
+    ['last_name', 'school_info'].forEach(param => {
+      it(`do not submit when user does not input ${param}`, () => {
+        testValidateFields(
+          enrollForm,
+          omit(requiredParams, param),
+          param === 'school_info' ? 'school_id' : param
+        );
+      });
     });
   });
 });

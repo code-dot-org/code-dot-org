@@ -12,10 +12,11 @@ import {
   setAnimationLooping,
   isNameUnique
 } from '../redux/animationList';
-import {selectAnimation} from '../redux/animationTab';
+import {selectAnimation, selectBackground} from '../redux/animationTab';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 import _ from 'lodash';
+import {P5LabInterfaceMode} from '../constants';
 
 /**
  * A single list item representing an animation.  Displays an animated
@@ -29,8 +30,11 @@ class AnimationListItem extends React.Component {
     animationList: shapes.AnimationList.isRequired,
     columnWidth: PropTypes.number.isRequired,
     cloneAnimation: PropTypes.func.isRequired,
+    interfaceMode: PropTypes.oneOf(Object.values(P5LabInterfaceMode))
+      .isRequired,
     deleteAnimation: PropTypes.func.isRequired,
     selectAnimation: PropTypes.func.isRequired,
+    selectBackground: PropTypes.func.isRequired,
     setAnimationName: PropTypes.func.isRequired,
     setAnimationLooping: PropTypes.func.isRequired,
     setAnimationFrameDelay: PropTypes.func.isRequired,
@@ -80,15 +84,28 @@ class AnimationListItem extends React.Component {
     }, 200);
   }
 
-  onSelect = () => this.props.selectAnimation(this.props.animationKey);
+  onSelect = () => {
+    if (this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND) {
+      this.props.selectBackground(this.props.animationKey);
+    } else {
+      this.props.selectAnimation(this.props.animationKey);
+    }
+  };
 
   cloneAnimation = evt => {
-    this.props.cloneAnimation(this.props.animationKey);
+    this.props.cloneAnimation(
+      this.props.animationKey,
+      this.props.interfaceMode
+    );
     evt.stopPropagation();
   };
 
   deleteAnimation = () => {
-    this.props.deleteAnimation(this.props.animationKey, this.props.isSpriteLab);
+    this.props.deleteAnimation(
+      this.props.animationKey,
+      this.props.isSpriteLab,
+      this.props.interfaceMode
+    );
   };
 
   setAnimationLooping = looping => {
@@ -164,6 +181,13 @@ class AnimationListItem extends React.Component {
   };
 
   render() {
+    const {
+      allAnimationsSingleFrame,
+      isSelected,
+      isSpriteLab,
+      labType,
+      style
+    } = this.props;
     const animationProps = Object.assign(
       {},
       this.getAnimationProps(this.props),
@@ -171,7 +195,7 @@ class AnimationListItem extends React.Component {
     );
     const name = this.state.name;
     let animationName;
-    if (this.props.isSelected) {
+    if (isSelected) {
       let invalidNameStyle = this.state.isNameValid
         ? {}
         : {backgroundColor: color.lightest_red};
@@ -189,10 +213,10 @@ class AnimationListItem extends React.Component {
       animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
-    const selectedStyle = this.props.isSelected ? styles.selectedTile : {};
-    const tileStyle = {...styles.tile, ...selectedStyle, ...this.props.style};
+    const selectedStyle = isSelected ? styles.selectedTile : {};
+    const tileStyle = {...styles.tile, ...selectedStyle, ...style};
 
-    const arrowStyle = this.props.isSelected ? styles.rightArrow : {};
+    const arrowStyle = isSelected ? styles.rightArrow : {};
 
     return (
       <button style={tileStyle} onClick={this.onSelect} type="button">
@@ -200,11 +224,11 @@ class AnimationListItem extends React.Component {
         <ListItemThumbnail
           ref="thumbnail"
           animationProps={animationProps}
-          isSelected={this.props.isSelected}
-          singleFrameAnimation={this.props.allAnimationsSingleFrame}
+          isSelected={isSelected}
+          singleFrameAnimation={allAnimationsSingleFrame}
         />
-        {!this.props.isSpriteLab && animationName}
-        {this.props.isSelected && (
+        {!isSpriteLab && animationName}
+        {isSelected && (
           <ListItemButtons
             onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
@@ -214,8 +238,8 @@ class AnimationListItem extends React.Component {
             frameDelay={this.convertFrameDelayToLockedValues(
               this.state.frameDelay
             )}
-            singleFrameAnimation={this.props.allAnimationsSingleFrame}
-            labType={this.props.labType}
+            singleFrameAnimation={allAnimationsSingleFrame}
+            labType={labType}
           />
         )}
       </button>
@@ -278,6 +302,7 @@ const styles = {
 };
 export default connect(
   state => ({
+    interfaceMode: state.interfaceMode,
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
       state.pageConstants.allAnimationsSingleFrame || false,
@@ -285,14 +310,17 @@ export default connect(
   }),
   dispatch => {
     return {
-      cloneAnimation(animationKey) {
-        dispatch(cloneAnimation(animationKey));
+      cloneAnimation(animationKey, type) {
+        dispatch(cloneAnimation(animationKey, type));
       },
-      deleteAnimation(animationKey, isSpriteLab) {
-        dispatch(deleteAnimation(animationKey, isSpriteLab));
+      deleteAnimation(animationKey, isSpriteLab, type) {
+        dispatch(deleteAnimation(animationKey, isSpriteLab, type));
       },
       selectAnimation(animationKey) {
         dispatch(selectAnimation(animationKey));
+      },
+      selectBackground(animationKey) {
+        dispatch(selectBackground(animationKey));
       },
       setAnimationName(animationKey, newName) {
         dispatch(setAnimationName(animationKey, newName));

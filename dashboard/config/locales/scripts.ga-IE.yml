@@ -2750,6 +2750,15 @@ ga:
               display_name: Ábhar
             lessonGroup-4:
               display_name: Ceachtanna Malartacha
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Randamach
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Ceachtanna Malartacha
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2848,3 +2857,11 @@ ga:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Buneolas ar an tSaotharlann Aipeanna
