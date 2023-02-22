@@ -246,14 +246,14 @@ class CourseOffering < ApplicationRecord
   end
 
   def elementary_school_level?
-    !ELEMENTARY_SCHOOL_GRADES.intersection(grade_levels_list).empty?
+    grade_levels_list.any? {|g| ELEMENTARY_SCHOOL_GRADES.include?(g)}
   end
 
   def middle_school_level?
-    !MIDDLE_SCHOOL_GRADES.intersection(grade_levels_list).empty?
+    grade_levels_list.any? {|g| MIDDLE_SCHOOL_GRADES.include?(g)}
   end
 
   def high_school_level?
-    !HIGH_SCHOOL_GRADES.intersection(grade_levels_list).empty?
+    grade_levels_list.any? {|g| HIGH_SCHOOL_GRADES.include?(g)}
   end
 end
