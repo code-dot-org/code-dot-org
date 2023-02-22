@@ -781,6 +781,9 @@ describe('utils modules', () => {
       result = stripEncapsulatingDoubleQuotes('"blah"');
       expect(result).to.equal('blah');
 
+      result = stripEncapsulatingDoubleQuotes('""blah""');
+      expect(result).to.equal('"blah"');
+
       result = stripEncapsulatingDoubleQuotes('" "');
       expect(result).to.equal(' ');
     });

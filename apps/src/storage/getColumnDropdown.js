@@ -42,7 +42,7 @@ function getTableNameFromColumnSocket(socket, editor) {
   const paramValue = getFirstParam('getColumn', socket.parent, editor);
 
   // The socket value (ex. the table name) has an extra set of double quotes in Droplet mode but not in text mode
-  // N.B. formatParamString is what removes the double quotes before we get here in text mode
+  // Note: formatParamString is what removes the double quotes before we get here in text mode
   return stripEncapsulatingDoubleQuotes(paramValue);
 }
 
