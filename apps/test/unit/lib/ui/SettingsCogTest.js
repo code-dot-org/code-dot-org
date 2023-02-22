@@ -7,8 +7,17 @@ import {renderMakerButton, SettingsCog} from '@cdo/apps/lib/ui/SettingsCog';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
-// import * as pageConstants from '@cdo/apps/redux/pageConstants';
 import * as assets from '@cdo/apps/code-studio/assets';
+import pageConstantsReducer, {
+  setPageConstants
+} from '@cdo/apps/redux/pageConstants';
+import {Provider} from 'react-redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
@@ -38,7 +47,6 @@ describe('SettingsCog', () => {
     const wrapper = mount(<SettingsCog showMakerToggle={false} />);
     wrapper.instance().open();
     wrapper.update();
-    console.log('wrapper.text()', wrapper.text());
     expect(wrapper.text()).to.not.include(msg.enableMaker());
   });
 
@@ -113,18 +121,55 @@ describe('SettingsCog', () => {
         settings.update();
         expect(settings.state().confirmingEnableMaker).to.be.true;
       });
+    });
 
-      it('does not display maker toggle if a curriculum level', () => {
+    describe('maker toggle - curricum level vs stand alone project when maker is available and enabled', () => {
+      beforeEach(() => {
+        sinon.stub(makerRedux, 'isAvailable');
+        sinon.stub(makerRedux, 'isEnabled');
+        stubRedux();
+        registerReducers({pageConstants: pageConstantsReducer});
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(true);
-        // sinon.stub(pageConstants, 'isCurriculumLevel'); //  TypeError: Cannot stub non-existent property isCurriculumLevel
-        // pageConstants.isCurriculumLevel.returns(true);
-        // getStore().getState().pageConstants - stub getStore.getState?
-        var settings = mount(<SettingsCog showMakerToggle={true} />);
+      });
+
+      afterEach(() => {
+        makerRedux.isEnabled.restore();
+        makerRedux.isAvailable.restore();
+        restoreRedux();
+      });
+      it('does not display maker toggle if a curriculum level', () => {
+        getStore().dispatch(
+          setPageConstants({
+            isCurriculumLevel: true
+          })
+        );
+        var wrapper = mount(
+          <Provider store={getStore()}>
+            <SettingsCog showMakerToggle={true} />
+          </Provider>
+        );
+        let settings = wrapper.find('SettingsCog');
         settings.instance().open();
         settings.update();
-        console.log('settings.text()', settings.text());
         expect(settings.text()).to.not.include(msg.disableMaker());
+      });
+
+      it('does display maker toggle if not a curriculum level', () => {
+        getStore().dispatch(
+          setPageConstants({
+            isCurriculumLevel: false
+          })
+        );
+        var wrapper = mount(
+          <Provider store={getStore()}>
+            <SettingsCog showMakerToggle={true} />
+          </Provider>
+        );
+        let settings = wrapper.find('SettingsCog');
+        settings.instance().open();
+        settings.update();
+        expect(settings.text()).to.include(msg.disableMaker());
       });
     });
   });
