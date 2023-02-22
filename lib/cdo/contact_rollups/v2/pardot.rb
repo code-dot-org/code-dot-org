@@ -352,7 +352,7 @@ class PardotV2
   # @param [Array<Hash>] prospects an array of prospect data
   # @return [String] a URL
   def self.build_batch_url(api_endpoint, prospects)
-    prospects_payload_json_encoded = URI.encode({prospects: prospects}.to_json)
+    prospects_payload_json_encoded = URI::DEFAULT_PARSER.escape({prospects: prospects}.to_json)
 
     # Encode plus signs in email addresses because it is invalid in a query string
     # (even though it is valid in the base of a URL).
