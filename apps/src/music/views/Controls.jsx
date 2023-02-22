@@ -16,6 +16,7 @@ const Controls = ({
   setPlaying,
   playTrigger,
   top,
+  instructionsAvailable,
   toggleInstructions,
   instructionsOnRight
 }) => {
@@ -68,7 +69,9 @@ const Controls = ({
     });
     setBeatPadShowing(!isShowingBeatPad);
   });
-  const infoIconSection = renderIconButton('info-circle', toggleInstructions);
+  const infoIconSection = instructionsAvailable
+    ? renderIconButton('info-circle', toggleInstructions)
+    : null;
 
   const [leftIcon, rightIcon] = instructionsOnRight
     ? [beatPadIconSection, infoIconSection]
@@ -97,6 +100,7 @@ Controls.propTypes = {
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,
+  instructionsAvailable: PropTypes.bool.isRequired,
   toggleInstructions: PropTypes.func.isRequired,
   instructionsOnRight: PropTypes.bool.isRequired
 };

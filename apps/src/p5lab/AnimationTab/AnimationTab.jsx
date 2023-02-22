@@ -18,7 +18,7 @@ import experiments from '@cdo/apps/util/experiments';
  */
 class AnimationTab extends React.Component {
   static propTypes = {
-    channelId: PropTypes.string.isRequired,
+    channelId: PropTypes.string,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
     // TODO: When we remove the backgrounds_and_upload experiment we can get rid of hideUploadOption
@@ -67,6 +67,7 @@ class AnimationTab extends React.Component {
       experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;
+
     return (
       <div>
         <ResizablePanes

@@ -317,75 +317,77 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize(include_students: true)
-    base_url = CDO.studio_url('/teacher_dashboard/sections/')
+    ActiveRecord::Base.connected_to(role: :reading) do
+      base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
-    title = ''
-    link_to_assigned = base_url
-    title_of_current_unit = ''
-    link_to_current_unit = ''
-    course_version_name = nil
+      title = ''
+      link_to_assigned = base_url
+      title_of_current_unit = ''
+      link_to_current_unit = ''
+      course_version_name = nil
 
-    if unit_group
-      title = unit_group.localized_title
-      link_to_assigned = course_path(unit_group)
-      course_version_name = unit_group.name
-      if script_id
-        title_of_current_unit = script.title_for_display
-        link_to_current_unit = script_path(script)
+      if unit_group
+        title = unit_group.localized_title
+        link_to_assigned = course_path(unit_group)
+        course_version_name = unit_group.name
+        if script_id
+          title_of_current_unit = script.title_for_display
+          link_to_current_unit = script_path(script)
+        end
+      elsif script_id
+        title = script.title_for_display
+        link_to_assigned = script_path(script)
+        course_version_name = script.name
       end
-    elsif script_id
-      title = script.title_for_display
-      link_to_assigned = script_path(script)
-      course_version_name = script.name
+
+      # Remove ordering from scope when not including full
+      # list of students, in order to improve query performance.
+      unique_students = include_students ?
+        students.distinct(&:id) :
+        students.unscope(:order).distinct(&:id)
+      num_students = unique_students.size
+
+      {
+        id: id,
+        name: name,
+        createdAt: created_at,
+        teacherName: teacher.name,
+        linkToProgress: "#{base_url}#{id}/progress",
+        assignedTitle: title,
+        linkToAssigned: link_to_assigned,
+        currentUnitTitle: title_of_current_unit,
+        linkToCurrentUnit: link_to_current_unit,
+        courseVersionName: course_version_name,
+        numberOfStudents: num_students,
+        linkToStudents: "#{base_url}#{id}/manage_students",
+        code: code,
+        lesson_extras: lesson_extras,
+        pairing_allowed: pairing_allowed,
+        tts_autoplay_enabled: tts_autoplay_enabled,
+        sharing_disabled: sharing_disabled?,
+        login_type: login_type,
+        participant_type: participant_type,
+        course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
+        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+        unit_id: unit_group ? script_id : nil,
+        course_id: course_id,
+        script: {
+          id: script_id,
+          name: script.try(:name),
+          project_sharing: script.try(:project_sharing)
+        },
+        studentCount: num_students,
+        grade: grade,
+        providerManaged: provider_managed?,
+        hidden: hidden,
+        students: include_students ? unique_students.map(&:summarize) : nil,
+        restrict_section: restrict_section,
+        is_assigned_csa: assigned_csa?,
+        # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
+        post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
+        code_review_expires_at: code_review_expires_at
+      }
     end
-
-    # Remove ordering from scope when not including full
-    # list of students, in order to improve query performance.
-    unique_students = include_students ?
-      students.distinct(&:id) :
-      students.unscope(:order).distinct(&:id)
-    num_students = unique_students.size
-
-    {
-      id: id,
-      name: name,
-      createdAt: created_at,
-      teacherName: teacher.name,
-      linkToProgress: "#{base_url}#{id}/progress",
-      assignedTitle: title,
-      linkToAssigned: link_to_assigned,
-      currentUnitTitle: title_of_current_unit,
-      linkToCurrentUnit: link_to_current_unit,
-      courseVersionName: course_version_name,
-      numberOfStudents: num_students,
-      linkToStudents: "#{base_url}#{id}/manage_students",
-      code: code,
-      lesson_extras: lesson_extras,
-      pairing_allowed: pairing_allowed,
-      tts_autoplay_enabled: tts_autoplay_enabled,
-      sharing_disabled: sharing_disabled?,
-      login_type: login_type,
-      participant_type: participant_type,
-      course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
-      course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
-      unit_id: unit_group ? script_id : nil,
-      course_id: course_id,
-      script: {
-        id: script_id,
-        name: script.try(:name),
-        project_sharing: script.try(:project_sharing)
-      },
-      studentCount: num_students,
-      grade: grade,
-      providerManaged: provider_managed?,
-      hidden: hidden,
-      students: include_students ? unique_students.map(&:summarize) : nil,
-      restrict_section: restrict_section,
-      is_assigned_csa: assigned_csa?,
-      # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
-      post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
-      code_review_expires_at: code_review_expires_at
-    }
   end
 
   def provider_managed?

@@ -101,7 +101,7 @@ Wir betten die Videos mit [YouTube](https://www.youtube.com) in Code.org und uns
 
 Testen Sie die Wiedergabe des Videos unten, bevor Sie die Online-Kurse von Code.org beginnen, um zu sehen, ob alles funktioniert.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Das ist der Player, der währende des gesamten Lehrplans verwendet wird. Er wird versuchen, das Video über YouTube wiederzugeben, und wenn YouTube gesperrt ist, wird das von Code.org gehostete Video mit unserem eigenen Player angezeigt.
 

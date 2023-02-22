@@ -71,10 +71,13 @@ class P5LabView extends React.Component {
   }
 
   getChannelId() {
+    let channelId;
+
     if (dashboard && dashboard.project) {
-      return dashboard.project.getCurrentId();
+      channelId = dashboard.project.getCurrentId();
     }
-    return undefined;
+
+    return channelId;
   }
 
   componentDidMount() {
@@ -145,6 +148,8 @@ class P5LabView extends React.Component {
     // We don't want to show backgrounds if we're looking for costumes in Sprite Lab.
     const hideBackgrounds = !this.props.isBackground && this.props.isBlockly;
     const hideCostumes = this.props.isBackground && this.props.isBlockly;
+    const channelId = this.getChannelId();
+
     return (
       <div style={codeModeStyle}>
         <div
@@ -159,9 +164,9 @@ class P5LabView extends React.Component {
             hidePauseButton={this.props.hidePauseButton}
             onPromptAnswer={this.props.onPromptAnswer}
           />
-          {this.getChannelId() && (
+          {channelId && (
             <AnimationPicker
-              channelId={this.getChannelId()}
+              channelId={channelId}
               libraryManifest={this.state.libraryManifest}
               hideUploadOption={this.shouldHideAnimationUpload()}
               shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}

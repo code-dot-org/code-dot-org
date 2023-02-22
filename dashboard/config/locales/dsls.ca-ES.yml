@@ -1517,40 +1517,84 @@ ca-ES:
           correct: true
           feedback: Correcte!
         - text: B
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - text: C
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - {}
         questions:
-        - {}
+        - text: Fixa't bé en el codi següent. Quin dibuix farà aquest programa quan
+            facis clic a "Executar"?
+        markdown: |
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
           feedback: Correcte!
         - text: B
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - text: C
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - {}
         questions:
-        - {}
+        - text: Fixa't bé en el codi següent. Quin dibuix farà aquest programa quan
+            facis clic a "Executar"?
+        markdown: |
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
           feedback: Correcte!
         - text: B
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - text: C
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - {}
         questions:
-        - {}
+        - text: Fixa't bé en el codi següent. Quin dibuix farà aquest programa quan
+            facis clic a "Executar"?
+        markdown: |
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
           correct: true
           feedback: Correcte!
         - text: B
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - text: C
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - {}
         questions:
-        - {}
+        - text: Fixa't bé en el codi següent. Quin dibuix farà aquest programa quan
+            facis clic a "Executar"?
+        markdown: |
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: 'L''abella mourà el núvol i intentarà recollir el nèctar, passi el
@@ -2492,8 +2536,8 @@ ca-ES:
         - feedback: Incorrecte. El bucle "for" farà que l'abella reculli la quantitat
             correcta de nèctar, però només està establert perquè arribi a 4 flors.
         questions:
-        - text: Llegeix els codis que hi ha a continuació. Què passarà quan facis
-            clic a "Executar"?
+        - text: Llegeix el codi que hi ha a continuació. Què passarà quan facis clic
+            a "Executar"?
         markdown: Que bé! Amb els bucles "for", resoldre aquest trencaclosques és
           molt més fàcil!
       courseF_multi_bee_for3_predict1_2018:
@@ -2510,8 +2554,8 @@ ca-ES:
             correcta de nèctar, però només està establert perquè arribi a 4 flors.
         - {}
         questions:
-        - text: Llegeix els codis que hi ha a continuació. Què passarà quan facis
-            clic a "Executar"?
+        - text: Llegeix el codi que hi ha a continuació. Què passarà quan facis clic
+            a "Executar"?
         markdown: Que bé! Amb els bucles "for", resoldre aquest trencaclosques és
           molt més fàcil!
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -2528,8 +2572,8 @@ ca-ES:
             correcta de nèctar, però només està establert perquè arribi a 4 flors.
         - {}
         questions:
-        - text: Llegeix els codis que hi ha a continuació. Què passarà quan facis
-            clic a "Executar"?
+        - text: Llegeix el codi que hi ha a continuació. Què passarà quan facis clic
+            a "Executar"?
         markdown: Que bé! Amb els bucles "for", resoldre aquest trencaclosques és
           molt més fàcil!
       courseF_multi_bee_for3_predict1_2018_2019_2020:
@@ -2546,8 +2590,8 @@ ca-ES:
             correcta de nèctar, però només està establert perquè arribi a 4 flors.
         - {}
         questions:
-        - text: Llegeix els codis que hi ha a continuació. Què passarà quan facis
-            clic a "Executar"?
+        - text: Llegeix el codi que hi ha a continuació. Què passarà quan facis clic
+            a "Executar"?
         markdown: Que bé! Amb els bucles "for", resoldre aquest trencaclosques és
           molt més fàcil!
       courseF_multi_bee_fwp9_predict1:
@@ -2624,8 +2668,24 @@ ca-ES:
         - text: Què passarà quan facis clic al botó "Executar"?
       csf_be_a_super_digital_citizen:
         content1: Descripció aquí
+        markdown: |-
+          # Un ciutadà digital de primera
+
+          ## Com ens podem convertir en defensors si veiem situacions de ciberassetjament?
       csf_password_power-up:
         content1: Descripció aquí
+        markdown: |-
+          #  Reforça la teva contrasenya
+
+          ## Consells per crear una contrasenya
+
+          * Comença amb una **frase** fàcil de recordar.
+          * Els teus **pares** són els únics que han de saber la teva contrasenya.
+          * Mai hi incloguis cap informació **privada** relacionada amb la teva identitat.
+          * Crea contrasenyes que tinguin **vuit** caràcters com a mínim.
+          * Fes servir lletres, números i **símbols**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: Descripció aquí
         markdown: |-
@@ -2902,8 +2962,8 @@ ca-ES:
           feedback: Incorrecte. El bucle "for" farà que l'abella reculli la quantitat
             correcta de nèctar, però només està establert perquè arribi a 4 flors.
         questions:
-        - text: Llegeix els codis que hi ha a continuació. Què passarà quan facis
-            clic a "Executar"?
+        - text: Llegeix el codi que hi ha a continuació. Què passarà quan facis clic
+            a "Executar"?
         markdown: Que bé! Amb els bucles "for", resoldre aquest trencaclosques és
           molt més fàcil!
       courseF_sprites_predict_multi:
@@ -2979,10 +3039,23 @@ ca-ES:
           correct: true
           feedback: Correcte!
         - text: B
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - text: C
-        - {}
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
+        - text: Cap de les anteriors
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         questions:
-        - {}
+        - text: Fixa't bé en el codi següent. Quin dibuix farà aquest programa quan
+            facis clic a "Executar"?
+        markdown: |
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
         - text: 'L''abella mourà el núvol i intentarà recollir el nèctar, passi el
@@ -3153,12 +3226,20 @@ ca-ES:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: No passarà res.
-        - {}
-        - correct: true
+          feedback: Incorrecte. L'alienígena començarà a moure's amunt i avall per
+            la pantalla.
+        - text: L'alienígena començarà a rondar de dreta a esquerra.
+          feedback: Incorrecte. L'alienígena començarà a moure's amunt i avall per
+            la pantalla.
+        - text: L'alienígena començarà a moure's amunt i avall per la pantalla.
+          correct: true
           feedback: Correcte!
-        - {}
+        - text: L'alienígena desapareixerà per la part superior de la pantalla.
+          feedback: Incorrecte. L'alienígena blau començarà a moure's amunt i avall
+            per la pantalla.
         questions:
-        - {}
+        - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
+            clic a l'alienígena?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: L'agricultora collirà dues carabasses.
@@ -3220,8 +3301,24 @@ ca-ES:
         - text: Què passarà quan facis clic al botó "Executar"?
       csf_be_a_super_digital_citizen_2021:
         content1: Descripció aquí
+        markdown: |-
+          # Un ciutadà digital de primera
+
+          ## Com ens podem convertir en defensors si veiem situacions de ciberassetjament?
       csf_password_power-up_2021:
         content1: Descripció aquí
+        markdown: |-
+          #  Reforça la teva contrasenya
+
+          ## Consells per crear una contrasenya
+
+          * Comença amb una **frase** fàcil de recordar.
+          * Els teus **pares** són els únics que han de saber la teva contrasenya.
+          * Mai hi incloguis cap informació **privada** relacionada amb la teva identitat.
+          * Crea contrasenyes que tinguin **vuit** caràcters com a mínim.
+          * Fes servir lletres, números i **símbols**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -3400,7 +3497,7 @@ ca-ES:
         - {}
         - {}
         - {}
-        - {}
+        - text: Cap de les anteriors
       CSD Games Properties multi predict_2022:
         answers:
         - {}
@@ -9812,7 +9909,8 @@ ca-ES:
         - correct: true
         - text: Altres
           correct: true
-        - correct: true
+        - text: N/A
+          correct: true
         questions:
         - {}
       pre-assessment survey q28:
@@ -10207,10 +10305,23 @@ ca-ES:
           correct: true
           feedback: Correcte!
         - text: B
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         - text: C
-        - {}
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
+        - text: Cap de les anteriors
+          feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
         questions:
-        - {}
+        - text: Fixa't bé en el codi següent. Quin dibuix farà aquest programa quan
+            facis clic a "Executar"?
+        markdown: |
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
       courseD_multi_bee_conditionals1_predict12022:
         answers:
         - text: 'L''abella mourà el núvol i intentarà recollir el nèctar, passi el
@@ -10482,8 +10593,8 @@ ca-ES:
           feedback: Incorrecte. El bucle "for" farà que l'abella reculli la quantitat
             correcta de nèctar, però només està establert perquè arribi a 4 flors.
         questions:
-        - text: Llegeix els codis que hi ha a continuació. Què passarà quan facis
-            clic a "Executar"?
+        - text: Llegeix el codi que hi ha a continuació. Què passarà quan facis clic
+            a "Executar"?
         markdown: Que bé! Amb els bucles "for", resoldre aquest trencaclosques és
           molt més fàcil!
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
@@ -10554,8 +10665,24 @@ ca-ES:
         - text: Què passarà quan facis clic al botó "Executar"?
       csf_be_a_super_digital_citizen2022:
         content1: Descripció aquí
+        markdown: |-
+          # Un ciutadà digital de primera
+
+          ## Com ens podem convertir en defensors si veiem situacions de ciberassetjament?
       csf_password_power-up2022:
         content1: Descripció aquí
+        markdown: |-
+          #  Reforça la teva contrasenya
+
+          ## Consells per crear una contrasenya
+
+          * Comença amb una **frase** fàcil de recordar.
+          * Els teus **pares** són els únics que han de saber la teva contrasenya.
+          * Mai hi incloguis cap informació **privada** relacionada amb la teva identitat.
+          * Crea contrasenyes que tinguin **vuit** caràcters com a mínim.
+          * Fes servir lletres, números i **símbols**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness2022:
         content1: Descripció aquí
         markdown: |-
@@ -10773,17 +10900,23 @@ ca-ES:
         display_name: Projecte de final de curs
       courseD_EOC2022:
         display_name: Projecte de final de curs
+        description: Has arribat a l'última lliçó del Curs D! Tria el projecte que
+          vols crear.
       courseD_EOC_2020:
         display_name: Projecte de final de curs
+        description: Has arribat a l'última lliçó del Curs D! Tria el projecte que
+          vols crear.
       courseD_EOC_2021:
         display_name: Projecte de final de curs
+        description: Has arribat a l'última lliçó del Curs D! Tria el projecte que
+          vols crear.
       courseD_EOC_examples2022:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
-          dona un cop d'ulls als projectes d'exemple.
+          dona un cop d'ull als projectes d'exemple.
         display_name: Projectes d'exemple
       courseD_EOC_examples_2021:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
-          dona un cop d'ulls als projectes d'exemple.
+          dona un cop d'ull als projectes d'exemple.
         display_name: Projectes d'exemple
       courseE_EOC2022:
         description: 'Has arribat al final del Curs E! Tria el projecte que vols crear:'
@@ -10802,6 +10935,8 @@ ca-ES:
         display_name: Projecte de final de curs
       courseExpress_EOC_2020:
         display_name: Projecte de final de curs
+        description: Has arribat a l'última lliçó del Curs Exprés! Tria el projecte
+          que vols crear.
       courseF_EOC_2020:
         display_name: Projecte de final de curs
       courseF_EOC_2021:
@@ -10812,11 +10947,11 @@ ca-ES:
         display_name: Projecte de final de curs
       courseF_EOC_samples2022:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
-          dona un cop d'ulls als projectes d'exemple.
+          dona un cop d'ull als projectes d'exemple.
         display_name: Projecte de final de curs
       courseF_EOC_samples_2021:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
-          dona un cop d'ulls als projectes d'exemple.
+          dona un cop d'ull als projectes d'exemple.
         display_name: Projecte de final de curs
       csf_digital_trails:
         markdown: |-
@@ -10856,11 +10991,11 @@ ca-ES:
         display_name: Projecte de final de curs
       express_EOC_examples2022:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
-          dona un cop d'ulls als projectes d'exemple.
+          dona un cop d'ull als projectes d'exemple.
         display_name: Projectes d'exemple
       express_EOC_examples_2021:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
-          dona un cop d'ulls als projectes d'exemple.
+          dona un cop d'ull als projectes d'exemple.
         display_name: Projectes d'exemple
       BinaryBracelets-Unplugged:
         markdown: |-
@@ -10930,3 +11065,163 @@ ca-ES:
           # Els meus amics robòtics
 
           Aprèn a programar escrivint codi per als teus amics!
+      ConditionalsWithCards-Unplugged:
+        markdown: |-
+          # Condicionals amb cartes
+
+          Juga a un joc de cartes i inventa't normes com "si trec una carta vermella, guanyo un punt" i "si en trec una de negra, el punt el guanyes tu".
+      ConditionalsWithCards-Unplugged2022:
+        markdown: |-
+          # Condicionals amb cartes
+
+          Juga a un joc de cartes i inventa't normes com "si trec una carta vermella, guanyo un punt" i "si en trec una de negra, el punt el guanyes tu".
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |-
+          # Condicionals amb cartes
+
+          Juga a un joc de cartes i inventa't normes com "si trec una carta vermella, guanyo un punt" i "si en trec una de negra, el punt el guanyes tu".
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |-
+          # Condicionals amb cartes
+
+          Juga a un joc de cartes i inventa't normes com "si trec una carta vermella, guanyo un punt" i "si en trec una de negra, el punt el guanyes tu".
+      DesigningForAccessibilityMarkdownLevel2022:
+        markdown: |-
+          # Dissenyar per garantir l'accessibilitat
+
+          * En el món de la informàtica, **l’accessibilitat** té a veure amb crear tecnologia per persones que tenen discapacitats.
+          * Les discapacitats inclouen problemes físics, d’oïda, de vista, i de molts altres tipus.
+          * Hi ha molts tipus de discapacitats, i afecten les persones de maneres diferents. Això inclou també com cadascú fa servir la tecnologia, com ara les **aplicacions de mòbil*.
+          * Dissenyar aplicacions de manera que siguin accessibles per les persones amb discapacitats també fa que les aplicacions siguin millors per tothom en general!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |-
+          # Dissenyar per garantir l'accessibilitat
+
+          * En el món de la informàtica, **l’accessibilitat** té a veure amb crear tecnologia per persones que tenen discapacitats.
+          * Les discapacitats inclouen problemes físics, d’oïda, de vista, i de molts altres tipus.
+          * Hi ha molts tipus de discapacitats, i afecten les persones de maneres diferents. Això inclou també com cadascú fa servir la tecnologia, com ara les **aplicacions de mòbil*.
+          * Dissenyar aplicacions de manera que siguin accessibles per les persones amb discapacitats també fa que les aplicacions siguin millors per tothom en general!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |-
+          # Dissenyar per garantir l'accessibilitat
+
+          * En el món de la informàtica, **l’accessibilitat** té a veure amb crear tecnologia per persones que tenen discapacitats.
+          * Les discapacitats inclouen problemes físics, d’oïda, de vista, i de molts altres tipus.
+          * Hi ha molts tipus de discapacitats, i afecten les persones de maneres diferents. Això inclou també com cadascú fa servir la tecnologia, com ara les **aplicacions de mòbil*.
+          * Dissenyar aplicacions de manera que siguin accessibles per les persones amb discapacitats també fa que les aplicacions siguin millors per tothom en general!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |-
+          # Dissenyar per garantir l'accessibilitat
+
+          * En el món de la informàtica, **l’accessibilitat** té a veure amb crear tecnologia per persones que tenen discapacitats.
+          * Les discapacitats inclouen problemes físics, d’oïda, de vista, i de molts altres tipus.
+          * Hi ha molts tipus de discapacitats, i afecten les persones de maneres diferents. Això inclou també com cadascú fa servir la tecnologia, com ara les **aplicacions de mòbil*.
+          * Dissenyar aplicacions de manera que siguin accessibles per les persones amb discapacitats també fa que les aplicacions siguin millors per tothom en general!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged:
+        markdown: |-
+          # Compartir continguts digitals
+
+          En aquesta lliçó reflexionaràs sobre els problemes i beneficis de respectar la propietat intel·lectual i els drets d'autor, especialment en entorns digitals.
+      DigitalSharing-Unplugged2022:
+        markdown: |-
+          # Compartir continguts digitals
+
+          En aquesta lliçó reflexionaràs sobre els problemes i beneficis de respectar la propietat intel·lectual i els drets d'autor, especialment en entorns digitals.
+      DigitalSharing-Unplugged_2020:
+        markdown: |-
+          # Compartir continguts digitals
+
+          En aquesta lliçó reflexionaràs sobre els problemes i beneficis de respectar la propietat intel·lectual i els drets d'autor, especialment en entorns digitals.
+      DigitalSharing-Unplugged_2021:
+        markdown: |-
+          # Compartir continguts digitals
+
+          En aquesta lliçó reflexionaràs sobre els problemes i beneficis de respectar la propietat intel·lectual i els drets d'autor, especialment en entorns digitals.
+      GraphPaperProgramming-Unplugged:
+        markdown: |-
+          # Programació amb paper quadriculat
+
+          Escriu algorismes perquè els teus companys els segueixin per fer dibuixos.
+      GraphPaperProgramming-Unplugged2022:
+        markdown: |-
+          # Programació amb paper quadriculat
+
+          Escriu algorismes perquè els teus companys els segueixin per fer dibuixos.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |-
+          # Programació amb paper quadriculat
+
+          Escriu algorismes perquè els teus companys els segueixin per fer dibuixos.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |-
+          # Programació amb paper quadriculat
+
+          Escriu algorismes perquè els teus companys els segueixin per fer dibuixos.
+      PrivatePersonalInformation-Unplugged2022:
+        markdown: |
+          # Informació privada i personal
+
+          ## Quina informació sobre tu pots compartir a internet?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |
+          # Informació privada i personal
+
+          ## Quina informació sobre tu pots compartir a internet?
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |
+          # Informació privada i personal
+
+          ## Quina informació sobre tu pots compartir a internet?
+      RelayProgramming-Unplugged:
+        markdown: |-
+          # Programació amb relleus
+
+          Feu equips i col·laboreu per escriure programes i fer dibuixos.
+      RelayProgramming-Unplugged2022:
+        markdown: |-
+          # Programació amb relleus
+
+          Feu equips i col·laboreu per escriure programes i fer dibuixos.
+      RelayProgramming-Unplugged_2020:
+        markdown: |-
+          # Programació amb relleus
+
+          Feu equips i col·laboreu per escriure programes i fer dibuixos.
+      RelayProgramming-Unplugged_2021:
+        markdown: |-
+          # Programació amb relleus
+
+          Feu equips i col·laboreu per escriure programes i fer dibuixos.
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Segueix l'algorisme
+
+          Juga a un joc i pensa quines ordres necessites per aconeguir el resultat correcte.
+      Songwriting-Unplugged:
+        markdown: |-
+          # Composició de cançons
+
+          Fes servir el concepte de la tornada d'una cançó per aprendre a definir i cridar funcions.
+      Songwriting-Unplugged2022:
+        markdown: |-
+          # Composició de cançons
+
+          Fes servir el concepte de la tornada d'una cançó per aprendre a definir i cridar funcions.
+      Songwriting-Unplugged_2020:
+        markdown: |-
+          # Composició de cançons
+
+          Fes servir el concepte de la tornada d'una cançó per aprendre a definir i cridar funcions.
+      Songwriting-Unplugged_2021:
+        markdown: |-
+          # Composició de cançons
+
+          Fes servir el concepte de la tornada d'una cançó per aprendre a definir i cridar funcions.

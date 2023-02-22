@@ -61,7 +61,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   end
 
   def listify(user_list)
-    user_list.map {|user| "<li>#{user}</li>"}.join ''
+    user_list.map {|user| "<li>#{user}</li>"}.join
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

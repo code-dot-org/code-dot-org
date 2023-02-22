@@ -26,6 +26,8 @@ class CourseOffering < ApplicationRecord
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
+  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
+  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -142,6 +144,15 @@ class CourseOffering < ApplicationRecord
     ]
   end
 
+  def summarize_for_quick_assign(user, locale_code)
+    {
+      id: id,
+      key: key,
+      display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
+      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_quick_assign(user, locale_code)}
+    }
+  end
+
   def localized_display_name
     localized_name = I18n.t(
       key,
@@ -157,7 +168,11 @@ class CourseOffering < ApplicationRecord
       is_featured: is_featured?,
       category: category,
       display_name: display_name,
-      assignable: assignable?
+      assignable: assignable?,
+      curriculum_type: curriculum_type,
+      marketing_initiative:  marketing_initiative,
+      grade_levels: grade_levels,
+      header: header
     }
   end
 

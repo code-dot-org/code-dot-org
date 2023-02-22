@@ -2,23 +2,32 @@
 bg:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: движене СИЮЗ със стрелеките
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}казва{TEXT1}"
+      BadGuys_makeNewBadGuysSprite:
+        text: създай нов {ANIMATION_NAME} спрайт на {LOCATION}
       BadGuys_setSizeAll_dropdown:
+        text: задайте размера на всички спрайтове на {SIZE}
         options:
           SIZE:
             '0.50': много малко
             '0.75': малко
             '1.00': средно
             '2.00': голямо
-            '3.00': extra large
+            '3.00': много голям
       BadGuys_setSize_dropdown:
+        text: задай размера на {SPRITE} към {SIZE}
         options:
           SIZE:
             '0.50': много малко
             '0.75': малко
             '1.00': средно
             '2.00': голямо
-            '3.00': extra large
+            '3.00': много голям
       Dancelab_alternateMoves:
+        text: "{GROUP} редува всеки {N} такта \nмежду {MOVE1} и {MOVE2}"
         options:
           GROUP:
             sprites: всички
@@ -32,6 +41,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           MOVE1:
             MOVES.ClapHigh: Пляскай високо
@@ -83,6 +93,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           MOVE:
             '"next"': "(Следващ)"
@@ -147,6 +158,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
@@ -170,6 +182,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           MOVE:
             '"rand"': "(Случаен)"
@@ -309,6 +322,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           LOCATION:
             "{x: 200, y: 100}": горе
@@ -335,6 +349,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           FORMAT:
             '"border"': рамка
@@ -484,6 +499,8 @@ bg:
             '"random"': случаен
       Dancelab_mixColors:
         text: смеси {COLOR1} и {COLOR2}
+      Dancelab_nMeasures:
+        text: "{N} такта"
       Dancelab_onPointerDown:
         text: когато показалеца долу
       Dancelab_onPointerDrag:
@@ -501,9 +518,31 @@ bg:
         options:
           EFFECT:
             '"none"': Без
+            '"circles"': Кръгове
             '"color_cycle"': Цветове
             '"diamonds"': Диаманти
+            '"disco_ball"': Диско Топка
+            '"fireworks"': Фойерверки
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерен Дансинг
+            '"rainbow"': Дъга
+            '"snowflakes"': Сняг
+            '"text"': Имена на Песни
+            '"galaxy"': Космос
+            '"sparkles"': Искри
+            '"spiral"': Спирала
             '"disco"': Квадрати
+            '"stars"': Звезди
+          PALETTE:
+            '"rave"': Черно и Бяло
+            '"cool"': Готино
+            '"electronic"': Електроннен
+            '"iceCream"': Сладолед
+            '"default"': Светъл
+            '"neon"': Неон
+            '"tropical"': Тропичен
+            '"vintage"': Ретро
+            '"warm"': Топъл
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           задай фоннов ефект
@@ -512,9 +551,38 @@ bg:
           EFFECT:
             '"none"': Без
             '"rand"': "(Случаен)"
+            '"circles"': Кръгове
+            '"quads"': Ъгли
             '"color_cycle"': Цветове
             '"diamonds"': Диаманти
+            '"disco_ball"': Диско Топка
+            '"fireworks"': Фойерверки
+            '"flowers"': Цветя
+            '"growing_stars"': Порастващи Звезди
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерен Дансинг
+            '"rainbow"': Дъга
+            '"ripples_random"': Слуачйни Вълни
+            '"ripples"': Вълни
+            '"snowflakes"': Сняг
+            '"text"': Имена на Песни
+            '"squiggles"': Драскулки
+            '"galaxy"': Космос
+            '"sparkles"': Искри
+            '"spiral"': Спирала
             '"disco"': Квадрати
+            '"stars"': Звезди
+            '"music_wave"': Вълни
+          PALETTE:
+            '"rave"': Черно и Бяло
+            '"cool"': Готино
+            '"electronic"': Електроннен
+            '"iceCream"': Сладолед
+            '"default"': Светъл
+            '"neon"': Неон
+            '"tropical"': Тропичен
+            '"vintage"': Ретро
+            '"warm"': Топъл
       Dancelab_setDanceSpeed:
         text: задай танцовата скорост на {SPRITE} към {SPEED}
         options:
@@ -525,6 +593,7 @@ bg:
             '0.5': бавно
             '0.25': много бавно
       Dancelab_setDanceSpeedEach:
+        text: задай тазновата скорост на [GROUP][GROUP] към {SPEED}
         options:
           GROUP:
             sprites: всички
@@ -538,6 +607,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           SPEED:
             '1': нормално
@@ -550,6 +620,7 @@ bg:
           EFFECT:
             '"none"': Без
             '"bubbles"': Балончета
+            '"confetti"': Конфети
             '"pineapples"': Ананаси
             '"pizzas"': Пици
             '"smiling_poop"': Ако
@@ -566,6 +637,7 @@ bg:
             '"rand"': "(Случаен)"
             '"bubbles"': Балончета
             '"hearts_colorful"': Цветни Сърца
+            '"confetti"': Конфети
             '"emojis"': Емотикони
             '"pineapples"': Ананаси
             '"pizzas"': Пици
@@ -601,6 +673,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
@@ -636,6 +709,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
@@ -659,6 +733,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
       Dancelab_setTintEachInline:
         options:
@@ -674,6 +749,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
       Dancelab_setVisible:
         text: задай видимостта на {SPRITE} към {VISIBILITY}
@@ -695,6 +771,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           VISIBILITY:
             'true': видим
@@ -726,6 +803,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
@@ -766,6 +844,7 @@ bg:
             '"PINEAPPLE"': ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': акули
+            '"SLOTH"': ленивци
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
@@ -782,6 +861,13 @@ bg:
       Dancelab_translateStrings:
         options:
           STRING:
+            '"music_wave"': Вълни
+            '"ripples"': Вълни
+            '"ripples_random"': Слуачйни Вълни
+            '"quads"': Ъгли
+            '"flowers"': Цветя
+            '"squiggles"': Драскулки
+            '"growing_stars"': Порастващи Звезди
             '"emojis"': Емотикони
             '"row_top"': най-горен ред
             '"row_bottom"': най-долен ред
@@ -869,19 +955,37 @@ bg:
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
       DansBlocks_setForegroundEffect2:
+        text: направи {EFFECT} ефект
         options:
           EFFECT:
             '"bubbles"': Балончета
+            '"confetti"': конфети
             '"hearts"': сърца
+            '"emojis"': щастливи емоджита
             '"rain"': дъжд
+            '"glass"': счупено стъкло
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}казва{TEXT1}"
       gamelab_addBehaviorSimple:
         text: спрайт {SPRITE} започва да {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': избягвай
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: на {N} {UNIT}
         options:
           UNIT:
             '"seconds"': секунди
+            '"frames"': кадри
+      gamelab_avoidingTargets:
+        text: избягване на цели
+      gamelab_beginCollectingData:
+        text: започни да събираш данни {BREAK} стойност {VALUE} с етикет {LABEL}
+      gamelab_bounceOff:
+        text: "{SPRITE} отскача от {TARGET}"
       gamelab_changePropBy:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
@@ -892,14 +996,20 @@ bg:
             '"y"': y позиция
             '"direction"': посока на движение
             '"speed"': скорост
+      gamelab_changeVarBy:
+        text: промени {VARIABLE} с {VAL}
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} докосва {SPRITE2}"
         options:
           CONDITION:
             '"when"': когато
             '"while"': докато
+      gamelab_clickedOn:
+        text: когато {SPRITE} е натиснат
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
       gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(spinning_right, []): въртене надясно
@@ -913,15 +1023,30 @@ bg:
             new Behavior(moving_east_and_looping, []): движение на изток и циклене
             new Behavior(moving_north_and_looping, []): движение на север и циклене
             new Behavior(moving_south_and_looping, []): движение на юг и циклене
+      gamelab_comment:
+        text: 'коментар: {COMMENT}'
       gamelab_costumeImage:
         text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: брой {SPRITE}
+      gamelab_createNewSprite:
+        text: "създайте нов спрайт \n наречен {NAME} \n с костюм {COSTUME} \n на {LOCATION}"
+      gamelab_destroy:
+        text: премахни {THIS}
       gamelab_draggable:
         text: може да се мести
+      gamelab_drawLine:
+        text: нарисувай линия {COLOR}  {LOC1}  {LOC2}
       gamelab_everyInterval:
         text: 'всеки {N} {UNIT} '
         options:
           UNIT:
             '"seconds"': секунди
+            '"frames"': кадри
+      gamelab_followingTargets:
+        text: следване на цели
+      gamelab_getAllSprites:
+        text: всички спрайтове
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -933,13 +1058,27 @@ bg:
             '"direction"': посока на движение
             '"tint"': оттенък
             '"speed"': скорост
+      gamelab_getThisSprite:
+        text: "{CHOICE} спрайт"
+        options:
+          CHOICE:
+            '"this"': това
       gamelab_getTime:
+        text: време в {UNIT}
         options:
           UNIT:
             '"seconds"': секунди
+            '"frames"': кадри
+      gamelab_glideTo:
+        text: "{SPRITE} се плъзга до {LOCATION}"
       gamelab_hideTitleScreen:
         text: скрива заглавния екран
+      gamelab_ifVarEquals:
+        text: |-
+          ако {NUM} ={VAL}
+          {STATEMENT}
       gamelab_int10:
+        text: "{VALUE}"
         options:
           VALUE:
             '1': '1'
@@ -1033,6 +1172,8 @@ bg:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_locationAt:
+        text: 'местоположение х: {X} у: {Y}'
       gamelab_locationModifier:
         text: "{DISTANCE} писела {DIRECTION} от {LOCATION}"
         options:
@@ -1055,6 +1196,10 @@ bg:
             '"pop"': пук
             '"rain"': дъжд
             '"spiral"': спирала
+      gamelab_makeNewSpriteAnon:
+        text: създай нов {ANIMATION_NAME} спрайт на {LOCATION}
+      gamelab_makeNumSprites:
+        text: създай {NUM} нови {ANIMATION_NAME} спрайтове
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1063,12 +1208,14 @@ bg:
             '180': наляво
             '270': нагоре
       gamelab_makeSpritesWithSize:
+        text: създай {NUM} нови {SIZE} {COSTUME} спрайтове
         options:
           SIZE:
             '30': малко
             '50': средно
             '100': голямо
       gamelab_mirrorSprite:
+        text: "{SPRITE} е обърнат на {DIRECTION}"
         options:
           DIRECTION:
             '"right"': надясно
@@ -1087,10 +1234,14 @@ bg:
             '"East"': Изток
             '"South"': Юг
             '"West"': Запад
+      gamelab_moveToward:
+        text: премести {SPRITE} пиксела {DISTANCE} към {TARGET}
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: патрулиране нагоре и надолу
       gamelab_playSound:
         text: пускане на звук {SOUND}
       gamelab_playSoundOptions:
@@ -1098,6 +1249,7 @@ bg:
         options:
           SOUND:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": акцент
+            "'sound://category_digital/boing_2.mp3'": боинг
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": пук
             "'sound://category_app/app_button_1.mp3'": бутон
             "'sound://category_collect/clicky_crunch.mp3'": криза
@@ -1122,7 +1274,14 @@ bg:
             "'sound://category_instrumental/harpe_pluck_1.mp3'": арфа
             "'sound://category_transition/trippy_robotic_transition.mp3'": роботски
               преход
+            "'sound://category_transition/star_dust_particle_10.mp3'": звезден прах
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": извънземен
+              кораб
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": магическо
+              заклинание
             "'sound://category_retro/retro_game_ui_select_6.mp3'": изберете
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": странен
+              бас
             "'sound://category_digital/jump_7.mp3'": скок
       gamelab_playSoundOptionsSoccer:
         text: пускане на звук {SOUND}
@@ -1130,6 +1289,8 @@ bg:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": сирена
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": аплодисменти
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": ритник
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": две свирки
             "'sound://category_sports/One_Whistle_SFX.mp3'": свиркане
       gamelab_playSoundOptionsSpace:
         text: пускане на звук {SOUND}
@@ -1137,6 +1298,7 @@ bg:
           SOUND:
             "'sound://category_space/Blackhole_SFX.mp3'": черна дупка
       gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): местене със стрелките
@@ -1262,6 +1424,8 @@ bg:
             '"Hmm..."': Хмм...
             '"I''m feeling sleepy."': Спи ми се.
             '"No one could ever beat me."': Никой не би могъл да ме победи.
+            '"My feet are bigger than Turtle''s feet."': Краката ми са по-големи от
+              тези на Костенурката.
       gamelab_spriteThink_fables4:
         text: "{SPRITE} мисли {THOUGHT}"
         options:
@@ -1277,10 +1441,16 @@ bg:
         text: "{SPRITE} започва да избягва {TARGET}"
       gamelab_startFollowing:
         text: "{SPRITE} започва да следва {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} започва да се плъзга"
       gamelab_stopAvoiding:
         text: "{SPRITE} спира да избягва други спрайтове"
+      gamelab_stopCollectingData:
+        text: спри да събираш данни
       gamelab_stopFollowing:
         text: "{SPRITE} спира да следва други спрайтове"
+      gamelab_stopGliding:
+        text: "{SPRITE} спира да се плъзга"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_textJoin:
@@ -1293,6 +1463,10 @@ bg:
           DIRECTION:
             '"right"': надясно
             '"left"': наляво
+      gamelab_updateTitleWithColor:
+        text: покажи заглавен екран {BREAK} заглавие {TITLE} цвят {COLOR}
+      gamelab_whenDownArrow:
+        text: когато дясната стрелка е натисната
       gamelab_whenKey:
         text: когато {KEY} е натиснат
         options:
@@ -1306,7 +1480,22 @@ bg:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenLeftArrow:
+        text: когато лявата стрелка е натисната
+      gamelab_whenPromptAnswered:
+        text: когато {VAR} е отговорен
+      gamelab_whenRightArrow:
+        text: когато дясната стрелка е натисната
+      gamelab_whenSpriteCreated:
+        text: когато {SPRITE} е създаден
+      gamelab_whenTouching:
+        text: когато {SPRITE1} докосва {SPRITE2}
+      gamelab_whenUpArrow:
+        text: когато горната стрелка е натисната
+      gamelab_whileDownArrow:
+        text: докато долната стрелка е натисната
       gamelab_whileKey:
+        text: докато {KEY} е натиснат
         options:
           KEY:
             '"up"': нагоре
@@ -1318,8 +1507,45 @@ bg:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whileLeftArrow:
+        text: докато лявата стрелка е натисната
+      gamelab_whileRightArrow:
+        text: докато дясната стрелка е натисната
+      gamelab_whileTouching:
+        text: докато {SPRITE1} докосва {SPRITE2}
+      gamelab_whileUpArrow:
+        text: докато горната стрелка е натисната
+      gamelab_withPercentChance:
+        text: |-
+          ако {NUM}% шанс
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} шанс
+           {STATEMENT}
+        options:
+          NUM:
+            '10': много нисък
+            '25': нисък
+            '50': 50/50
+            '75': висок
+            '90': много висок
+      gamelab_xLocationOf:
+        text: х координат на {SPRITE}
+      gamelab_yLocationOf:
+        text: y координат на {SPRITE}
       Mikelab_addBehaviorSimple:
         text: спрайт {SPRITE} започва да {BEHAVIOR}
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 201, y: 100}": обект
+            "{x: 200, y: 100}": риба
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": риба
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": не риба
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": мой-етикет
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": не е мой-етикет
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_changePropBy:
@@ -1357,11 +1583,13 @@ bg:
         options:
           SELECT:
             '"all"': всички
+            '"this"': това
       Mikelab_groupChangePropBy:
         text: промени {PROPERTY} на {SELECT} {COSTUME} с {VAL}
         options:
           SELECT:
             '"all"': всички
+            '"this"': това
           PROPERTY:
             '"scale"': размер
             '"rotation"': въртене
@@ -1387,8 +1615,17 @@ bg:
         options:
           SELECT:
             '"all"': всички
+            '"this"': това
+      Mikelab_groupDisplace:
+        text: всички {COSTUME} блокират {COSTUME2} от движение
+      Mikelab_groupEdgesDisplace:
+        text: ръбовете блократ {COSTUME} от движение
       Mikelab_groupGetProp:
+        text: "{SELECT} на {COSTUME} {PROPERTY}"
         options:
+          SELECT:
+            '"average"': средно
+            '"this"': това
           PROPERTY:
             '"scale"': размер
             '"rotation"': въртене
@@ -1396,22 +1633,29 @@ bg:
             '"y"': y позиция
             '"direction"': посока на движение
       Mikelab_groupRemoveAllBehaviors:
+        text: спри {SELECT} {COSTUME} поведения
         options:
           SELECT:
             '"all"': всички
+            '"this"': това
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} спира {BEHAVIOR}"
         options:
           SELECT:
             '"all"': всички
+            '"this"': това
       Mikelab_groupRemoveTint:
+        text: премахни цвят от {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': всички
+            '"this"': това
       Mikelab_groupSetProp:
         text: задай {PROPERTY} на {SELECT} {COSTUME} към {VAL}
         options:
           SELECT:
             '"all"': всички
+            '"this"': това
           PROPERTY:
             '"scale"': размер
             '"rotation"': въртене
@@ -1419,17 +1663,29 @@ bg:
             '"y"': y позиция
             '"direction"': посока на движение
       Mikelab_groupSetTint:
+        text: смени цвета на {SELECT} {COSTUME} към {COLOR}
         options:
           SELECT:
             '"all"': всички
+            '"this"': това
       Mikelab_groupWhenClickedOn:
         text: когато {COSTUME} е натиснат
       Mikelab_groupWhenXTouchesY:
         text: когато {COSTUME} докосва {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: докато натиснат {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          докато{COSTUME} докосва {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} в момента {BEHAVIOR}"
       Mikelab_hideFish:
         text: премахни {TRASH}
+        options:
+          TRASH:
+            object: обект
+            fish: риба
       Mikelab_ifDanceIs:
         text: |-
           ако {SPRITE} танцува {DANCE}
@@ -1450,8 +1706,30 @@ bg:
         text: |-
           ако {DANCE}
           прави {DO1} иначе {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: риба
+            MOVES.Clown: мой-етикет
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          ако разпознава обект като {DANCE}
+          прави {DO1} иначе {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: риба
+            MOVES.Clown: мой-етикет
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          ако разпознава обект като {DANCE}
+          прави {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: риба
+            MOVES.Clown: не е мой-етикет
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
+      Mikelab_locationAt:
+        text: 'местоположение х: {X} у: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_poemTextJoin:
@@ -1462,6 +1740,7 @@ bg:
             '"A chubby cat "': "„Дебеличка котка“"
           TEXT2:
             '" fence"': '" ограда"'
+            '""': '""'
       Mikelab_randomColor:
         text: случаен цвят
       Mikelab_removeBehaviorSimple:
@@ -1510,6 +1789,8 @@ bg:
             "{x: 100, y: 300}": долу вляво
             "{x: 300, y: 300}": долу вдясно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
+      Mikelab_whenClickedOn:
+        text: когато {SPRITE} е натиснат
       Mikelab_whenKeyPressed:
         text: когато {KEY} е натиснат
         options:
@@ -1549,6 +1830,12 @@ bg:
             '"left"': лява стрелка
             '"right"': стрелка надясно
             '"space"': интервал
+      Mikelab_xLocationOf:
+        text: х координат на {SPRITE}
+      Mikelab_yLocationOf:
+        text: y координат на {SPRITE}
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1566,6 +1853,8 @@ bg:
         text: анимиране на текст
       Poetry_destroy:
         text: премахни {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE} се плъзга до {LOCATION}"
       Poetry_hideText:
         text: скрий текст
       Poetry_makeBurst:
@@ -1576,6 +1865,10 @@ bg:
             '"pop"': пук
             '"rain"': дъжд
             '"spiral"': спирала
+      Poetry_makeNewSpriteAnon:
+        text: създай нов {ANIMATION_NAME} спрайт на {LOCATION}
+      Poetry_makeNumSprites:
+        text: създай {NUM} нови {ANIMATION_NAME} спрайтове
       Poetry_playMusic:
         text: пусни музика {SOUND}
         options:
@@ -1604,6 +1897,7 @@ bg:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': камбана
             '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': счупване
+            '"sound://category_digital/boing_2.mp3"': боинг
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': балон
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': бърборене
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': провал
@@ -1618,11 +1912,15 @@ bg:
             "'sound://category_space/Blackhole_SFX.mp3'": черна дупка
       Poetry_setAuthor:
         text: задай автор {AUTHOR}
+      Poetry_setBackground:
+        text: задай фон на {COLOR}
       Poetry_setBackgroundEffect:
+        text: задай фон на {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"bubbles"': Балончета
             '"clouds"': облачен
+            '"confetti"': конфети
             '"hearts"': сърца
             '"space"': хипер скорост
             '"rain"': дъжд
@@ -1630,6 +1928,8 @@ bg:
             '"stars"': звезден
           PALETTE:
             '"autumn"': есен
+            '"sunset"': здрач
+            '"grayscale"': сиви
             '"ocean"': океан
             '"rainbow"': дъга
             '"roses"': рози
@@ -1644,13 +1944,25 @@ bg:
             '"Arial"': Ариал
             '"Arial Black"': Arial Black
             '"Courier"': Courier
+            '"Cursive"': Ръкопис
+      Poetry_setFontColor:
+        text: задай цвят на текст {FILL}
       Poetry_setForegroundEffect:
+        text: направи {EFFECT} ефект
         options:
           EFFECT:
             '"bubbles"': Балончета
+            '"confetti"': конфети
             '"hearts"': сърца
+            '"emojis"': щастливи емоджита
             '"rain"': дъжд
+            '"glass"': счупено стъкло
+      Poetry_setTextEffect:
+        text: задай текстов ефект {EFFECT}
+      Poetry_showText:
+        text: покажи текст
       Poetry_startBehavior:
+        text: 'спрайт {ANIMATION_NAME} започва {BEHAVIOR} '
         options:
           BEHAVIOR:
             '"fluttering"': пърхане
@@ -1698,6 +2010,8 @@ bg:
             '13': '13'
             '14': '14'
             '15': '15'
+      Poetry_whenPromptAnswered:
+        text: когато {VAR} е отговорен
       RyanLab_moveForward:
         text: върви напред
       RyanLab_turnLeft:
@@ -1737,6 +2051,7 @@ bg:
             '0': преминава
             '3': провал
       aalab_someGraduallyStartIntervention:
+        text: "{PORTION} чудовища {RATE} започват {BEHAVIOR}"
         options:
           PORTION:
             '1': всички
@@ -1749,8 +2064,11 @@ bg:
             '"gradually"': постепенно
             '"slowly"': бавно
           BEHAVIOR:
+            '"wandering"': блуждаене случайно
             '"avoiding"': социална дистанция
+            '"none"': стоене намясто
       aalab_someStartIntervention:
+        text: "{PORTION} чудовища започват {BEHAVIOR}"
         options:
           PORTION:
             '1': всички
@@ -1758,11 +2076,15 @@ bg:
             '0.5': половината
             '0.25': няколко
           BEHAVIOR:
+            '"wandering"': блуждаене случайно
             '"avoiding"': социална дистанция
+            '"none"': стоене намясто
       aalab_spriteSayChoices:
         text: "{SPRITE} казва {SPEECH}"
         options:
           SPEECH:
+            '"I have spoken."': Аз проговорих.
+            '"I will initiate self-destruct."': Ще започна самоунищожение.
             '"This is the way."': Това е посоката.
             '"You don’t need a mirror to look good. You’re beautiful on the inside."': Не
               ти трябва огледало, за да изглеждаш добре. Ти си красив отвътре.
@@ -1770,7 +2092,13 @@ bg:
               животът е страшен и мрачен. Затова понякога трябва да намерим светлината.
             '"Everything small is just a smaller version of something big."': Всичко
               малко е просто малка версия на нещо голямо.
+            '"Suckin’ at something is the first step to being sorta good at something."': Да
+              си слаб в нещо е първата стъпка към това да си добър в нещо.
+            '"Life happens wherever you are, whether you make it or not."': Животът
+              се случва навсякъде, където и да се намирате, независимо дали го правите
+              или не.
             '"You can’t knock me down!"': Не можеш да ме бутнеш!
+            '"Roar!"': Рев!
             '"My first girlfriend turned into the moon."': Първото ми гадже се превърна
               в луната.
             '"True humility is the only antidote to shame."': Истинското смирение
@@ -1781,17 +2109,31 @@ bg:
               да се опитваш всеки път. Не можеш да се откажеш, само защото те е страх,
               че можеш да се провалиш.
       aalab_startIntervention:
+        text: чудовища започват {BEHAVIOR}
         options:
           BEHAVIOR:
+            wandering: блуждаене случайно
             '"avoiding"': социална дистанция
+            '"none"': стоене намясто
       binary_drawBinScreen:
         text: рисуване на екран
       binary_drawPixelHere:
+        text: задай пиксел {VAL}
         options:
           VAL:
             '0': изключен
             '1': включен
+            '"toggle"': включване
+      binary_drawString:
+        text: нарисувай низ {STR}
+      binary_goTo:
+        text: скочи до {LOC}
+      binary_goToHome:
+        text: скочи наляво
+      binary_gridSize:
+        text: задай размера на мрежата {SIZE}
       binary_move:
+        text: премести {DIR}
         options:
           DIR:
             '"up"': нагоре
@@ -1896,9 +2238,19 @@ bg:
           DIR:
             right: дясно ↻
             left: ляво ↺
+      storylab_clearHeadings:
+        text: изчисти заглавия
       storylab_setForegroundEffect2:
+        text: направи {EFFECT} ефект
         options:
           EFFECT:
             '"bubbles"': Балончета
+            '"confetti"': конфети
             '"hearts"': сърца
             '"rain"': дъжд
+      storylab_setHeading:
+        text: задай заглавие {HEADING}
+      storylab_setSubheading:
+        text: задай подзаглавие {SUBHEADING}
+      validation_validatedSound:
+        text: ПУСНИзвук {SOUND}
