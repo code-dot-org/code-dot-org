@@ -82,22 +82,6 @@ class Section < ApplicationRecord
 
   validates :participant_type, acceptance: {accept: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
-  # Custom CSV serializer for the grades array.
-  class GradesArray
-    def self.dump(grades)
-      unless grades.is_a?(Array) || grades.nil?
-        raise ArgumentError, "Grades must be an array"
-      end
-      grades ? grades.uniq.join(',') : nil
-    end
-
-    def self.load(grades)
-      grades ? grades.split(',').uniq.sort_by do |grade|
-        SharedConstants::STUDENT_GRADE_LEVELS.index(grade) ||
-          Float::INFINITY
-      end : nil
-    end
-  end
   serialize :grade, GradesArray
   # Allow accessing section.grades, without a costly column rename.
   alias_attribute :grades, :grade
