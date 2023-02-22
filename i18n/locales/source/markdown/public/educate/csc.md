@@ -65,3 +65,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Finished a CS Connection activity and/or looking for more options for your classroom? Please <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">share your feedback</a> and ideas for more lessons here!</em>
+
+{{ visit_partial_event_logger }}
