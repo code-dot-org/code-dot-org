@@ -9020,6 +9020,17 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Rastgele
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-3:
+              display_name: Bildiklerini Göster
+            lessonGroup-4:
+              display_name: Alternatif Dersler
         csa6-2023:
           description: |-
             Bu ünite, öğrencilere 'ArrayList' sınıfını kullanarak liste oluşturmayı öğretmek için veri yapılarını genişletmeye devam ediyor. Bu süreçte öğrenciler "Tamsayı" ve "Double" sınıflarını öğrenirler ve yöntemlerini metin dosyalarından verileri ayrıştırmak ve tamsayı değerlerinin sınırlarını keşfetmek için kullanırlar. Öğrenciler, bir "ArrayList"in yapısını ve işlevselliğini öğrenirken, her bir veri yapısının ne zaman kullanılacağını ayırt eder. Öğrenciler, sayısal ve nesne verilerinden oluşan bir "ArrayList" içindeki verileri bulmak ve işlemek için standart algoritmaları uygular. Ünite boyunca öğrenciler, temel doğal dil işleme tekniklerini ve uygulamalarını öğrenirken, bir kullanıcıdan ve dosya girişinden elde edilen metni analiz etmek ve işlemek için 'String' sınıfını kullanmayı öğrenirler. Ayrıca öğrenciler, programları için API belgeleri oluşturmak üzere Javadoc yorumları yazarak yazılım mühendisliği becerilerini daha da geliştirirler.
@@ -9409,3 +9420,29 @@ tr:
               display_name: Uygulama Labına Giriş
             lessonGroup-3:
               display_name: Girdiler ve çıktılar
+        self-paced-pl-csc-2023:
+          title: Yapay zeka ve makine öğrenimini öğretmek
+          description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Yapay zeka ve makine öğrenimine giriş yapın.
+            -   Ünitede yer alan temel kavramları uygulayın.
+            -   AI Lab ve App Lab ile etkileşime geçin.
+            -   Bölüm sonu projelerini keşfedin.
+            -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
+
+            **Önerilen Süre:** 120 dakika
+          student_description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Yapay zeka ve makine öğrenimine giriş yapın.
+            -   Ünitede yer alan temel kavramları uygulayın.
+            -   AI Lab ve App Lab ile etkileşime geçin.
+            -   Bölüm sonu projelerini keşfedin.
+            -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
+
+            **Önerilen Süre:** 120 dakika

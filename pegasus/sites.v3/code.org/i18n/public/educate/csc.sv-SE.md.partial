@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Avslutade en Datavetenskap sammanhang aktivitet och/eller letar efter mer alternativ för ditt klassrum? Vänligen <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">dela din feedback</a> och idéer för mer lektioner här!</em>
+
+{{ visit_partial_event_logger }}

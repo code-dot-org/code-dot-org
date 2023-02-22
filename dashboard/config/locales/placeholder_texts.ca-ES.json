@@ -21,10 +21,12 @@
           "ed076287532e86365e841e92bfc50d8c": "Hola món!"
         },
         "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!"
         },
         "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!"
         },
         "courseF_playlab_variables2b": {
           "48d6215903dff56238e52e8891380c8f": "blau",
@@ -232,7 +234,8 @@
           "ed076287532e86365e841e92bfc50d8c": "Hola món!"
         },
         "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!"
         },
         "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
@@ -265,7 +268,8 @@
           "ed076287532e86365e841e92bfc50d8c": "Hola món!"
         },
         "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!"
         },
         "courseF_apps_collector2022": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!"
@@ -579,6 +583,23 @@
         "courseE_playLab_scaffold5": {
           "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
           "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "Aquesta soc jo! La Rikki! M'agrada programar, passar l'estona amb la Thuy i els gelats!",
+          "810896b14fc6615f0c76628b9b6a727e": "Aquesta és la meva millor amiga, la Thuy! És molt bona esportista!",
+          "6f97975a0bda0c9219915161149cbb26": "Aquest és el meu ordinador. M'encanta fer-lo servir per programar!"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "Aquesta soc jo! La Rikki! M'agrada programar, passar l'estona amb la Thuy i els gelats!",
+          "810896b14fc6615f0c76628b9b6a727e": "Aquesta és la meva millor amiga, la Thuy! És molt bona esportista!",
+          "6f97975a0bda0c9219915161149cbb26": "Aquest és el meu ordinador. M'encanta fer-lo servir per programar!"
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "Aquesta soc jo! La Rikki! M'agrada programar, passar l'estona amb el Thuy i els gelats!",
+          "810896b14fc6615f0c76628b9b6a727e": "Aquesta és la meva millor amiga, la Thuy! És molt bona esportista!",
+          "8e985f60f328934accd78e7649584840": "M'encanten els gelats!",
+          "31ba97bb501bb1f5b448221be09bad32": "Aquesta és la meva gosseta, la Lollipop! Li hauria d'ensenyar a programar!",
+          "6f97975a0bda0c9219915161149cbb26": "Aquest és el meu ordinador. M'encanta fer-lo servir per programar!"
         }
       }
     }

@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>کیا آپ کمپیوٹر سائنس کنکشنز کی سرگرمی ختم کر لی ہے اور/یا اپنے کلاس روم کے لیے مزید آپشنز ڈھونڈ رہے ہیں؟ مہربانی کر کے<a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">اپنی رائے </a> اور مزید اسباق کے لیے اپنے افکار شریک کریں!</em>
+
+{{ visit_partial_event_logger }}
