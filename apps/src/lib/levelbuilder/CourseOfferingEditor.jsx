@@ -201,7 +201,7 @@ export default function CourseOfferingEditor(props) {
       <label>
         Marketing Initiative
         <select
-          value={courseOffering.marketingInitiative}
+          value={courseOffering.marketing_initiative}
           style={styles.dropdown}
           onChange={e =>
             updateCourseOffering('marketing_initiative', e.target.value)
