@@ -7,6 +7,7 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rails-accessibility
+  - './tools/customLinters/rubocop_only_allowed_characters.rb'
 
 AllCops:
   SuggestExtensions: false
@@ -25,6 +26,10 @@ Rails:
     - dashboard/legacy/**/*
 
 # BEGIN CODE.ORG OVERRIDES
+
+CustomCops/OnlyAllowedCharacters:
+  Include:
+    - '**/*_mailer.rb'
 
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
@@ -65,7 +70,7 @@ Style/WordArray:
 
 # END CODE.ORG OVERRIDES
 
-# BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
+# BEGIN BLOCKLIST: Below are rules we don't plan to enable in the forseeable
 # future. Rules we plan to fix (but are currently failing) belong in
 # .rubocop_todo.yml.
 Metrics/BlockLength:
@@ -122,4 +127,4 @@ Style/SymbolArray:
 Style/ClassAndModuleChildren:
   Enabled: false
 
-# END BLACKLIST
+# END BLOCKLIST
