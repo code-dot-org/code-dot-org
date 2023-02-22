@@ -29,6 +29,21 @@ const useSections = () => {
   return [sections, updateSection];
 };
 
+const saveSection = section => {
+  console.log('Save class sections clicked');
+
+  fetch('/sections', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+    },
+    body: JSON.stringify({section})
+  })
+    .then(response => response.json())
+    .then(data => console.log(data));
+};
+
 export default function SectionsSetUpContainer() {
   const [sections, updateSection] = useSections();
   return (
@@ -56,7 +71,7 @@ export default function SectionsSetUpContainer() {
         <Button
           text={i18n.saveClassSections()}
           color="purple"
-          onClick={() => console.log('Save class sections clicked')}
+          onClick={() => saveSection(sections[0])}
         />
       </div>
     </div>

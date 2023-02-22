@@ -106,7 +106,7 @@ Dashboard::Application.routes.draw do
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
     # User-facing section routes
-    resources :sections, only: [:show, :new] do
+    resources :sections, only: [:show, :new, :create] do
       member do
         post 'log_in'
       end
