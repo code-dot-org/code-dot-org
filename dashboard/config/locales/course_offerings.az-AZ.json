@@ -9,6 +9,7 @@
         "coursee": "E Kursu",
         "coursef": "F Kursu",
         "express": "Ekspress Kursu",
+        "pre-express": "Öncədən Oxucu Ekspres Kursu",
         "csd": "İnformatika Kəşfləri",
         "csp": "İnformatikanın Əsasları",
         "csa": "Kompüter Elmləri A",
@@ -19,8 +20,10 @@
         "algebraa": "Cəbrdə Kompüter Elmləri: Kurs A",
         "algebrab": "Cəbrdə Kompüter Elmləri: Kurs B",
         "algebra": "Cəbrdə Kompüter Elmləri ",
+        "applab-intro": "Proqram laboratoriyasına giriş",
         "aquatic": "Minecraft: Voyage Aquatic",
         "artist": "Rəssam",
+        "basketball": "Komandanızı seçin və basketbol oynamağa başlayın",
         "course1": "Kurs 1",
         "course2": "Kurs 2",
         "course3": "Kurs 3",
@@ -28,9 +31,11 @@
         "frozen": "Anna və Elza ilə proqramlaşdır",
         "gumball": "Gumball Play Laboratoriyası",
         "hero": "Maynkraft: Cəngavərin səyahəti",
+        "hoc-encryption": "Kodlama Saatı : Sadə Şifrələmə",
         "hourofcode": "Ənənəvi labirint",
         "infinity": "Disney Sonsuz Oyun Labaratoriyası",
         "mc": "Maynkraft Kod Saatı",
+        "minecraft": "Maynkraft kodlaşdırma saatı - Dizayner",
         "oceans": "\nOkeanlar üçün AI",
         "pixelation": "Pikselləmə",
         "playlab": "Oyun labı",
@@ -250,6 +255,7 @@
         "other-plc-course": "digər-plc-kursu",
         "teachercon": "müəlliməcon",
         "facilitators-in-training-summer-2019": "vasitəçilər-yay-hazırlıqda-2019",
+        "csp-pre-survey": "csp öncəsi sorğu",
         "frozen-2018-test-b": "buz-2018-test-b",
         "grade5": "sinif5",
         "denny-science": "denni-elmi",
@@ -277,7 +283,8 @@
         "csd2": "csd2",
         "csd1": "csd1",
         "csd4": "csd4",
-        "hello-world-space": "salam-dünya-sahəsi"
+        "hello-world-space": "salam-dünya-sahəsi",
+        "playground": "oyun meydançası"
       }
     }
   }
