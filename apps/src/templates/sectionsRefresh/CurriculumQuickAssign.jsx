@@ -110,15 +110,16 @@ export default function CurriculumQuickAssign() {
           </label>
         </div>
       </div>
-      {marketingAudience && courseOfferings && (
-        <div>
-          <h5>{marketingAudience}</h5>
-          <QuickAssignTable
-            marketingAudience={marketingAudience}
-            courseOfferings={courseOfferings}
-          />
-        </div>
-      )}
+      {marketingAudience &&
+        marketingAudience !== MARKETING_AUDIENCE.HOC &&
+        courseOfferings && (
+          <div>
+            <QuickAssignTable
+              marketingAudience={marketingAudience}
+              courseOfferings={courseOfferings}
+            />
+          </div>
+        )}
     </div>
   );
 }
