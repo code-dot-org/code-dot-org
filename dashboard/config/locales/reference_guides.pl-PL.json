@@ -8,6 +8,9 @@
         "csd-2022/ai-lab": {
           "display_name": "AI Lab"
         },
+        "csd-2022/animation-tab": {
+          "display_name": "Karta Animacja"
+        },
         "csd-2022/app-lab": {
           "display_name": "App Lab"
         },
@@ -129,6 +132,9 @@
         },
         "csd-2022/velocity": {
           "display_name": "Prędkość"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
         },
         "csd-2022/when-to-make-a-function": {
           "display_name": "Kiedy utworzyć funkcję?",

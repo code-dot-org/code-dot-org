@@ -1,2 +1,11 @@
 {
+  "az-AZ": {
+    "data": {
+      "frameworks": {
+        "ccmath": {
+          "name": "Ümumi Əsas Riyaziyyat Standartları"
+        }
+      }
+    }
+  }
 }
