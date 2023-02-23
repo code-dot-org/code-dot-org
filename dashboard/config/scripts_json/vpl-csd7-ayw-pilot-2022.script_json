@@ -13,8 +13,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-15 22:15:40 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-02-22 20:38:42 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -293,6 +293,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M7+8-Async"
+        ]
       },
       "bonus": false,
       "seeding_key": {
