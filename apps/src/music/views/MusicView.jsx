@@ -219,6 +219,8 @@ class UnconnectedMusicView extends React.Component {
       // the timeline.
       this.setState({updateNumber: this.state.updateNumber + 1});
     }
+
+    // Save the workspace.
     this.musicBlocklyWorkspace.saveCode();
   };
 
