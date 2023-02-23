@@ -1,7 +1,7 @@
 <Weblab>
   <config><![CDATA[{
   "properties": {
-    "long_instructions": "\r\n# Background Color\r\n\r\n# Do This\r\n\r\n1) Find the code in the style sheet that is making the background of the entire page light blue.\r\n* Change the code to make the page a different color.\r\n* Try to change the background color of just the paragraphs.",
+    "long_instructions": "# Background Color\r\n\r\n# Do This\r\n\r\n1) Find the code in the style sheet that is making the background of the entire page light blue.\r\n* Change the code to make the page a different color.\r\n* Try to change the background color of just the paragraphs.\r\n\r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/21bb8db7bbf2e1898873794497e5528f-image-1677104615356.gif\" style=\"width:500px\">\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
     "instructions_important": "false",
     "project_template_level_name": "CSDU2 - layout style template_2023",
     "encrypted_examples": "DqA3EKFLVb3Pn0xtFMWgnOY7lE6OFT+DWW+KkCUdyYQKQt+HLKhEVIBR3PoH\nHyeSrpMiX1kjYTynoJPFm6ex+w==\n",
@@ -33,6 +33,6 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:23:40.817+00:00\",\"changed\":[\"cloned from \\\"CSD U2 layout style bgcolor_2022\\\"\"],\"cloned_from\":\"CSD U2 layout style bgcolor_2022\"},{\"changed_at\":\"2023-02-21 23:53:57 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:23:40.817+00:00\",\"changed\":[\"cloned from \\\"CSD U2 layout style bgcolor_2022\\\"\"],\"cloned_from\":\"CSD U2 layout style bgcolor_2022\"},{\"changed_at\":\"2023-02-21 23:53:57 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 22:24:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
