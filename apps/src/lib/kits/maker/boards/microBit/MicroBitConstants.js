@@ -10,6 +10,7 @@ export const SENSOR_CHANNELS = {
 export const EXTERNAL_PINS = [0, 1, 2];
 
 export const MB_API = 'microbit';
+export const FIRMWARE_VERSION_TIMEOUT = 'firmwareVersionTimeout';
 
 export function roundToHundredth(rawValue) {
   return Math.floor(rawValue * 100) / 100;
@@ -32,7 +33,8 @@ export const MB_COMPONENTS = [
 ];
 
 export const MB_BUTTON_VARS = ['buttonA', 'buttonB'];
-export const MB_SENSOR_VARS = ['lightSensor', 'tempSensor', 'compass'];
+export const MB_SENSOR_VARS = ['lightSensor', 'tempSensor'];
+export const MB_ACCELEROMETER_VAR = 'accelerometer';
 
 // milliseconds between samples for sensors
 export const SAMPLE_INTERVAL = 50;

@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
 import {
   getChannelIdFromUrl,
@@ -6,7 +5,7 @@ import {
 } from '@cdo/apps/reportAbuse';
 
 export const initHamburger = function() {
-  $(function() {
+  $(document).ready(function() {
     $('#hamburger-icon').click(function(e) {
       $(this).toggleClass('active');
       $('#hamburger').removeClass('user-is-tabbing');

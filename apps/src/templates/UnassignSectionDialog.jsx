@@ -43,14 +43,12 @@ class UnassignSectionDialog extends Component {
         </div>
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={cancelUnassign}
             color={Button.ButtonColor.gray}
             className="ui-unassign-cancel-button"
           />
           <Button
-            __useDeprecatedTag
             text={i18n.unassignConfirm()}
             onClick={this.unassign}
             color={Button.ButtonColor.orange}

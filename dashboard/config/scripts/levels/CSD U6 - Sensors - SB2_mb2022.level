@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-02-01T10:50:30.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -13,7 +9,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Light Sensor Updates\r\n\r\nThis app is very similar to the last, but we've added a button with the ID \"updateButton\". Write a program that displays the current value of the light sensor every time the update button is clicked.\r\n\r\n# Do This\r\n\r\n1) Inside the [`onEvent()`(#fff176)](/docs/applab/onEvent/) block, update the text of the `lightValue` element using the [`lightSensor.value`(#f78183)](/docs/applab/lightSensor.value/) block.\r\n\r\n**Run Your Code!** Try covering the circuit playground and updating the screen, then try shining a flashlight on the circuit playground and updating the screen!",
+    "long_instructions": "# Light Sensor Updates\r\n\r\nThis app is very similar to the last, but we've added a button with the ID \"updateButton\". Write a program that displays the current value of the light sensor every time the update button is clicked.\r\n\r\n# Do This\r\n\r\n1) Inside the [`onEvent()`(#fff176)](/docs/applab/onEvent/) block, update the text of the `lightValue` element using the [`lightSensor.value`(#f78183)](/docs/applab/lightSensor.value/) block.\r\n\r\n**Run Your Code!** Try covering the micro:bit and updating the screen, then try shining a flashlight on the micro:bit and updating the screen!",
     "instructions_important": "false",
     "start_blocks": "// Show the current value of the light sensor\r\n// every time the button \"updateButton\" is clicked\r\nonEvent(\"updateButton\", \"click\", function() {\r\n  \r\n});",
     "is_k1": "false",
@@ -50,14 +46,15 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "microbit",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 33px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 71px; position: absolute; left: 2.22045e-16px; top: 20px; text-align: center;\" id=\"lightLabel\">Light Sensor Reading</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 100px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 105px; position: absolute; left: -2.22045e-16px; top: 150px; text-align: center;\" id=\"lightValue\" class=\"\">value</label><button id=\"updateButton\" style=\"padding: 0px; margin: 0px; height: 112px; width: 320px; font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 0px; top: 340px;\">Update</button></div></div>",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "encrypted_examples": "zzBQgHIICH0VRb7V1NxWCLrlFBA+fw/GF7Rz/OvPyb75BMsREA9QoCNm6vpw\nysci1O9Uztu+xRl5XboxuBupYQ==\n",
+    "encrypted_examples": [
+
+    ],
     "parent_level_id": 20452,
     "name_suffix": "_mb2022",
-    "map_reference": "/courses/csd-2022/guides/analog-sensors",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -65,9 +62,13 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-02-01T10:50:30.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:50:30.243+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB2_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:50:30.243+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB2_2222\"},{\"changed_at\":\"2023-02-09 17:23:49 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

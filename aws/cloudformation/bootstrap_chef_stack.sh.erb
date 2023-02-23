@@ -89,8 +89,10 @@ FIRST_BOOT=/etc/chef/first-boot.json
 mkdir -p $(dirname $FIRST_BOOT)
 cat <<JSON > $FIRST_BOOT
 {
-<% unless load_balancer -%>
   "cdo-nginx": {
+    "dashboard_hostname": "$DASHBOARD_DOMAIN_NAME",
+    "pegasus_hostname": "$PEGASUS_DOMAIN_NAME",
+<% unless load_balancer -%>
     "ssl_cert": {
       "content": "$CERT"
     },
@@ -100,8 +102,8 @@ cat <<JSON > $FIRST_BOOT
     "ssl_key": {
       "content": "$KEY"
     }
-  },
 <% end -%>
+  },
   "cdo-repository": {
     <% if commit %>
       "revision": "<%=commit%>",
@@ -153,6 +155,10 @@ JSON
 # Bootstrap Chef configuration: Install Chef, run chef-client with empty run-list to create node with first-boot config.
 OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '' -e $ENVIRONMENT -v $CHEF_VERSION"
 sudo -u ubuntu bash -c "aws s3 cp <%=bootstrap_script_path%> - | sudo bash -s -- $OPTIONS"
+
+# Ensure Chef Client is using an up to date TLS/SSL root certificate store (that we periodically fetch from a trusted
+# source (Mozilla via curl.se) and commit to our repository).
+sudo curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${!BRANCH}/cookbooks/cacert.pem
 
 CHEF_CDO_APP=<%=CdoApp::CHEF_BIN%>
 cat <<SH > $CHEF_CDO_APP

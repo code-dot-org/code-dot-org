@@ -1,5 +1,5 @@
 require 'json'
-require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+require_relative 'http_cache'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
@@ -307,11 +307,16 @@ module SharedConstants
       "var mySensor = createCapacitiveTouchSensor": null,
 
       // Circuit Playground
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "__.on": null,
+      "__.off": null,
+      "__.toggle": null,
+      "__.blink": null,
+      "__.pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "stop": null,
       "color": null,
       "intensity": null,
@@ -343,9 +348,6 @@ module SharedConstants
       "onBoardEvent": null,
 
       // micro:bit
-      "on": null,
-      "off": null,
-      "toggle": null,
       "ledScreen.on": null,
       "ledScreen.off": null,
       "ledScreen.toggle": null,

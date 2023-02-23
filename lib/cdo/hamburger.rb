@@ -30,9 +30,10 @@ class Hamburger
       # The header is taken over by level-related UI, so we need the hamburger
       # to show whatever would show up in the header at desktop (and mobile) widths.
 
-      if options[:user_type] == "teacher"
+      case options[:user_type]
+      when 'teacher'
         show_teacher_options = SHOW_ALWAYS
-      elsif options[:user_type] == "student"
+      when 'student'
         show_student_options = SHOW_ALWAYS
       else
         show_signed_out_options = SHOW_ALWAYS
@@ -48,9 +49,10 @@ class Hamburger
 
       # The header is available for showing whichever options we want, but they should
       # appear in the hamburger at mobile widths.
-      if options[:user_type] == "teacher"
+      case options[:user_type]
+      when 'teacher'
         show_teacher_options = SHOW_MOBILE
-      elsif options[:user_type] == "student"
+      when 'student'
         show_student_options = SHOW_MOBILE
       else
         show_signed_out_options = SHOW_MOBILE
@@ -196,10 +198,11 @@ class Hamburger
 
     # user_type-specific.
 
-    if options[:user_type] == "teacher"
+    case options[:user_type]
+    when 'teacher'
       entries = entries.concat teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]}
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_help_options]), id: "after-teacher"}
-    elsif options[:user_type] == "student"
+    when 'student'
       entries = entries.concat student_entries.each {|e| e[:class] = visibility[:show_student_options]}
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
     else

@@ -92,7 +92,8 @@ class ChannelsApi < Sinatra::Base
 
     if data['shouldPublish']
       project_type = data['projectType']
-      check_can_publish(channel_id, project_type)
+      bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+      forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
 
       # The client decides whether to publish the project, but we rely on the
       # server to generate the timestamp. Remove shouldPublish from the project
@@ -303,52 +304,20 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
-  #
   # GET /v3/channels/<channel-id>/abuse
   #
   # Get an abuse score.
   #
-  get %r{/v3/channels/([^/]+)/abuse$} do |id|
-    dont_cache
-    content_type :json
-    begin
-      value = Projects.get_abuse(id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {abuse_score: value}.to_json
-  end
+  # Moved to ReportAbuseController.
+  #
 
   #
   # POST /v3/channels/<channel-id>/abuse
   #
   # Increment an abuse score
   #
-  post %r{/v3/channels/([^/]+)/abuse$} do |id|
-    dont_cache
-    content_type :json
-    # Reports of abuse from verified teachers are more reliable than reports
-    # from students so we increase the abuse score enough to block the project
-    # with only one report from a verified teacher.
-    #
-    # Temporarily ignore anonymous reports and only allow verified teachers
-    # and signed in users to report.
-    restrict_reporting_to_verified_users = DCDO.get('restrict-abuse-reporting-to-verified', true)
-    amount =
-      if verified_teacher?
-        20
-      elsif current_user && !restrict_reporting_to_verified_users
-        10
-      else
-        0
-      end
-    begin
-      value = Projects.new(get_storage_id).increment_abuse(id, amount)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {abuse_score: value}.to_json
-  end
+  # API endpoint removed. Functionality moved to ReportAbuseController.
+  #
 
   #
   # POST /v3/channels/<channel-id>/buffer_abuse_score
@@ -375,22 +344,8 @@ class ChannelsApi < Sinatra::Base
   #
   # Clear an abuse score. Requires project_validator permission
   #
-  delete %r{/v3/channels/([^/]+)/abuse$} do |id|
-    # UserPermission::PROJECT_VALIDATOR
-    not_authorized unless project_validator?
-
-    dont_cache
-    content_type :json
-    begin
-      value = Projects.new(get_storage_id).reset_abuse(id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {abuse_score: value}.to_json
-  end
-  post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
-    call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
-  end
+  # Moved to ReportAbuseController.
+  #
 
   # This method is included here so that it can be stubbed in tests.
   def project_validator?
@@ -405,13 +360,6 @@ class ChannelsApi < Sinatra::Base
     not_authorized unless owns_channel?(channel_id)
     bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
     forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    return unless RESTRICTED_PUBLISH_PROJECT_TYPES.include?(project_type)
-
-    # Check for restricted share mode. If we are in restricted share mode, it means we cannot publish.
-    source_data = SourceBucket.new.get(channel_id, "main.json")
-    return unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
-    source_body = source_data[:body].string
-    project_src = ProjectSourceJson.new(source_body)
-    forbidden if project_src.in_restricted_share_mode?
+    forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
   end
 end

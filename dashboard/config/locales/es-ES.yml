@@ -3,8 +3,8 @@ es:
   errors:
     messages:
       not_saved: 'Corrige los siguientes errores:'
-      too_young: Este contenido tiene restricciones de edad establecidas y no está
-        disponible para estudiantes jóvenes.
+      too_young: Este contenido tiene restricciones de edad y no está disponible para
+        los alumnos más jóvenes.
       teacher_must_accept_terms: Este contenido tiene restricciones de edad establecidas
         y no está disponible para estudiantes jóvenes. Pídele a tu docente que acepte
         los Términos de Servicio actualizados para darte acceso a este contenido.
@@ -163,13 +163,13 @@ es:
       [Puedes explorar varias etapas y desafíos](/) sin una cuenta, pero deberás registrarte
       para guardar tu progreso y tus proyectos.
     hoc_already_signed_up_heading: Empezar sin iniciar sesión
-    hoc_already_signed_up_content: ¡Te has registrado para enseñar en la Hora del
-      Código! Tú y tus estudiantes no necesitan iniciar sesión en Code Studio para
-      participar en este evento. Para comenzar, <a href="%{learn_url}">selecciona
-      un tutorial</a> para tus estudiantes y comparte el enlace con ellos.<br/><br/>Si
-      te ha gustado la Hora del Código y quieres seguir avanzando, puedes establecer
-      una contraseña y crear una cuenta de Code Studio debajo para inscribir a tus
-      estudiantes en cualquiera de nuestros <a href="%{educate_url}">cursos largos</a>.
+    hoc_already_signed_up_content: ¡Te has registrado para enseñar una Hora del Código!
+      No es necesario que tú y tus alumnos os registréis en Code Studio para participar
+      en este evento. Para empezar, <a href="%{learn_url}">elige un tutorial</a> para
+      tu clase y comparte el enlace con ellos.<br/><br/>Si te ha gustado la Hora del
+      Código y quieres ir más allá, puedes introducir una contraseña y crear una cuenta
+      de Code Studio a continuación para inscribir a tus alumnos en cualquiera de
+      nuestros <a href="%{educate_url}">cursos más largos</a>.
     hoc_already_signed_up_content_post_hoc: Gracias por apoyar la Hora del Código.
       Para ingresar en Code Studio, tienes que establecer una contraseña para tu cuenta.
       Así podrás guardar tu progreso y administrar tu clase. Podrás asignar cursos
@@ -899,8 +899,8 @@ es:
       title: Star Wars
     text-compression:
       title: Compresión de Texto
-      body: En esta lección, los estudiantes usarán el Widget de Comprensión de Textos
-        para comprimir texto mediante el reemplazo de patrones con símbolos.
+      body: En esta lección, los alumnos utilizarán el Widget de Compresión de Texto
+        para comprimir texto sustituyendo patrones por símbolos.
     weblab:
       title: Laboratorio web (beta)
       body: El Laboratorio web es un ambiente de programación en el que puedes crear
@@ -1215,8 +1215,8 @@ es:
       no podrán iniciar sesión en Code Studio, guardar su progreso o imprimir certificados.
       Los docentes pueden imprimir los certificados por adelantado [here](%{url}).'
     minecraft_name: Hora del Código de Minecraft
-    starwars_blocks_name: 'Star Wars: cómo crear una galaxia con el código (bloques)'
-    starwars_javascript_name: 'Star Wars: cómo crear una galaxia con el código (JavaScript)'
+    starwars_blocks_name: 'Star Wars: Construyendo una galaxia con código (Bloques)'
+    starwars_javascript_name: 'Star Wars: Construyendo una galaxia con código (JavaScript)'
     download_message: Descargar %{app_name} para su uso sin conexión (136 MB)
     download_in_Albanian: 'Descargar en albanés:'
     download_in_Arabic: 'Descargar en árabe:'
