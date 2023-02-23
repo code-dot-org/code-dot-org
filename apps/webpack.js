@@ -259,6 +259,18 @@ if (envConstants.COVERAGE) {
   });
 }
 
+if (process.env.DEV) {
+  // Use Blockly sourcemaps for easier debugging.
+  baseConfig.module.rules.push({
+    test: /(blockly\/.*\.js)$/,
+    use: [require.resolve('source-map-loader')],
+    enforce: 'pre'
+  });
+  // Ignore spurious warnings from source-map-loader
+  // It can't find source maps for some Blockly files and that is expected
+  baseConfig.ignoreWarnings = [/Failed to parse source map/];
+}
+
 function devtool(options) {
   if (process.env.CI) {
     return 'eval';
