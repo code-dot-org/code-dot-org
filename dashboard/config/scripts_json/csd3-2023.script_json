@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-02-22 01:11:52 UTC",
+    "serialized_at": "2023-02-22 18:48:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6106,7 +6106,6 @@
       "key": "1693c6a1-f3db-4262-a4ba-99e228c5a39d",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Move students into Code Studio where they will learn to create and call functions."
       },
       "seeding_key": {
         "activity_section.key": "1693c6a1-f3db-4262-a4ba-99e228c5a39d",
@@ -6126,8 +6125,20 @@
       }
     },
     {
-      "key": "6e07750a-04dc-4de5-86dd-a840e18a36d2",
+      "key": "d11d117e-695b-4e36-bb74-e0a13e6bcf51",
       "position": 3,
+      "properties": {
+        "description": "**Transition:** Move students into Code Studio where they will learn to create and call functions.\n\nThe first prediction level program is the first time they will see functions in action.\n\n**Discuss:** Students should consider and discuss:\n\n* What will be drawn on the screen and why?\n\n**Discussion Goal:** Predictions will vary but after viewing the Functions video, students should be able to predict that the program will draw what is inside the `drawBackground` and `drawPlanet` blocks of code. It is important to point out that the `drawPlanet` function was called twice which is why there are two planets drawn on the screen, each one a different color and location. Students should also notice the `drawStar` function being called *within* the `drawBackground` function multiple times rather than at the top of the program like the other function calls. You can take this opportunity to discuss how this helped organize and simplify the code since the stars are part of the background.",
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "d11d117e-695b-4e36-bb74-e0a13e6bcf51",
+        "lesson_activity.key": "3e4fd589-8142-4553-bdc1-c638fcd49f28"
+      }
+    },
+    {
+      "key": "6e07750a-04dc-4de5-86dd-a840e18a36d2",
+      "position": 4,
       "properties": {
         "progression_name": "Skill Building",
         "tips": [
@@ -6144,7 +6155,7 @@
     },
     {
       "key": "aa9eab21-b631-4e4c-ad93-2ba5490d8935",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Predict"
       },
@@ -6155,7 +6166,7 @@
     },
     {
       "key": "c7fce9a0-de92-4137-aa81-06129f0620fe",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice",
         "tips": [
@@ -6172,7 +6183,7 @@
     },
     {
       "key": "aa7225f3-c8e4-4daf-a0d1-af4feb4092d2",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Quick Check"
       },
@@ -6183,7 +6194,7 @@
     },
     {
       "key": "7039da6c-5a5b-4daf-a691-4e6879886527",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Collector Game",
         "tips": [
@@ -6204,7 +6215,7 @@
     },
     {
       "key": "7c0a28d4-c595-473f-9ba7-16d3ea417161",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -8651,6 +8662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop predict 1_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -11223,6 +11237,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD_U3L24 Prediction"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3-2023",
+        "activity_section.key": "d11d117e-695b-4e36-bb74-e0a13e6bcf51"
+      },
+      "level_keys": [
+        "CSD_U3L24 Prediction"
+      ]
+    },
+    {
+      "chapter": 172,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSD U3 Functions Call Function_2023"
         ],
@@ -11243,8 +11279,8 @@
       ]
     },
     {
-      "chapter": 172,
-      "position": 2,
+      "chapter": 173,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -11268,8 +11304,8 @@
       ]
     },
     {
-      "chapter": 173,
-      "position": 3,
+      "chapter": 174,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11293,8 +11329,8 @@
       ]
     },
     {
-      "chapter": 174,
-      "position": 4,
+      "chapter": 175,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11318,8 +11354,8 @@
       ]
     },
     {
-      "chapter": 175,
-      "position": 5,
+      "chapter": 176,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11343,8 +11379,8 @@
       ]
     },
     {
-      "chapter": 176,
-      "position": 6,
+      "chapter": 177,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11368,8 +11404,8 @@
       ]
     },
     {
-      "chapter": 177,
-      "position": 7,
+      "chapter": 178,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -11393,8 +11429,8 @@
       ]
     },
     {
-      "chapter": 178,
-      "position": 8,
+      "chapter": 179,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
@@ -11418,8 +11454,8 @@
       ]
     },
     {
-      "chapter": 179,
-      "position": 9,
+      "chapter": 180,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11443,7 +11479,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 181,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11468,7 +11504,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 182,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11493,7 +11529,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 183,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11518,7 +11554,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 184,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11543,7 +11579,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 185,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11568,7 +11604,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 186,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -11593,7 +11629,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 187,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -11618,7 +11654,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 188,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11643,7 +11679,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 189,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -11668,7 +11704,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 190,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -11693,7 +11729,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 191,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -11718,7 +11754,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 192,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -11743,7 +11779,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 193,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -11768,7 +11804,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 194,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11793,7 +11829,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 195,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11818,7 +11854,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 196,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11843,7 +11879,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 197,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11868,7 +11904,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 198,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11893,7 +11929,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 199,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -11918,7 +11954,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 200,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11943,7 +11979,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 201,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -11968,7 +12004,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 202,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -11993,7 +12029,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 203,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12018,7 +12054,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 204,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12043,7 +12079,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 205,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12068,7 +12104,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 206,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12093,7 +12129,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 207,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12118,7 +12154,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 208,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -12143,7 +12179,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 209,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -12168,7 +12204,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 210,
       "position": 17,
       "activity_section_position": 1,
       "assessment": true,
@@ -12193,7 +12229,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 211,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -12218,7 +12254,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 212,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12243,7 +12279,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 213,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12268,7 +12304,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 214,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12293,7 +12329,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 215,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12318,7 +12354,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 216,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12343,7 +12379,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 217,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12368,7 +12404,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 218,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12393,7 +12429,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 219,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12418,7 +12454,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 220,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -12443,7 +12479,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 221,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -12468,7 +12504,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 222,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12493,7 +12529,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 223,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -12518,7 +12554,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 224,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -14581,6 +14617,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2023",
         "activity_section.key": "8132afd2-391e-4945-804c-75dc8a2a62d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD_U3L24 Prediction",
+        "script_level.level_keys": [
+          "CSD_U3L24 Prediction"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3-2023",
+        "activity_section.key": "d11d117e-695b-4e36-bb74-e0a13e6bcf51"
       }
     },
     {
