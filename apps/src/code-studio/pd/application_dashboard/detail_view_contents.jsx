@@ -720,7 +720,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderDetailViewTableLayout = () => {
-    const questionsToRemove = ['genderIdentity', 'race', 'currentRole'];
+    const questionsToRemove = ['genderIdentity', 'race'];
 
     return (
       <div>
