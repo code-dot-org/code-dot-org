@@ -1,6 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
+import moduleStyles from './sections-refresh.module.scss';
+import QuickAssignTable from './QuickAssignTable';
+
+export const MARKETING_AUDIENCE = {
+  ELEMENTARY: 'elementary',
+  MIDDLE: 'middle',
+  HIGH: 'high',
+  HOC: 'hoc'
+};
 
 export default function CurriculumQuickAssign() {
   const [courseOfferings, setCourseOfferings] = useState(null);
@@ -23,7 +32,7 @@ export default function CurriculumQuickAssign() {
     if (marketingAudience !== '') {
       setMarketingAudience('');
     } else {
-      setMarketingAudience('elementary');
+      setMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY);
     }
   };
 
@@ -37,41 +46,57 @@ export default function CurriculumQuickAssign() {
     <div>
       <h3>{i18n.assignACurriculum()}</h3>
       <h5>{i18n.useDropdownMessage()}</h5>
-      <div style={styles.buttonRow} className="quick-assign-top-row">
-        <div style={styles.buttonsInRow}>
+      <div className={moduleStyles.buttonRow}>
+        <div className={moduleStyles.buttonsInRow}>
           <Button
             id={'uitest-elementary-button'}
             style={styles.buttonStyle}
             text={i18n.courseBlocksGradeBandsElementary()}
             size={Button.ButtonSize.large}
             icon={
-              marketingAudience === 'elementary' ? 'caret-up' : 'caret-down'
+              marketingAudience === MARKETING_AUDIENCE.ELEMENTARY
+                ? 'caret-up'
+                : 'caret-down'
             }
-            onClick={() => updateMarketingAudience('elementary')}
+            onClick={() =>
+              updateMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY)
+            }
           />
           <Button
             id={'uitest-middle-button'}
             style={styles.buttonStyle}
             text={i18n.courseBlocksGradeBandsMiddle()}
             size={Button.ButtonSize.large}
-            icon={marketingAudience === 'middle' ? 'caret-up' : 'caret-down'}
-            onClick={() => updateMarketingAudience('middle')}
+            icon={
+              marketingAudience === MARKETING_AUDIENCE.MIDDLE
+                ? 'caret-up'
+                : 'caret-down'
+            }
+            onClick={() => updateMarketingAudience(MARKETING_AUDIENCE.MIDDLE)}
           />
           <Button
             id={'uitest-high-button'}
             style={styles.buttonStyle}
             text={i18n.courseBlocksGradeBandsHigh()}
             size={Button.ButtonSize.large}
-            icon={marketingAudience === 'high' ? 'caret-up' : 'caret-down'}
-            onClick={() => updateMarketingAudience('high')}
+            icon={
+              marketingAudience === MARKETING_AUDIENCE.HIGH
+                ? 'caret-up'
+                : 'caret-down'
+            }
+            onClick={() => updateMarketingAudience(MARKETING_AUDIENCE.HIGH)}
           />
           <Button
             id={'uitest-hoc-button'}
             style={styles.buttonStyle}
             text={i18n.courseOfferingHOC()}
             size={Button.ButtonSize.large}
-            icon={marketingAudience === 'hoc' ? 'caret-up' : 'caret-down'}
-            onClick={() => updateMarketingAudience('hoc')}
+            icon={
+              marketingAudience === MARKETING_AUDIENCE.HOC
+                ? 'caret-up'
+                : 'caret-down'
+            }
+            onClick={() => updateMarketingAudience(MARKETING_AUDIENCE.HOC)}
           />
           <input
             checked={decideLater}
@@ -88,7 +113,10 @@ export default function CurriculumQuickAssign() {
       {marketingAudience && courseOfferings && (
         <div>
           <h5>{marketingAudience}</h5>
-          {JSON.stringify(courseOfferings[marketingAudience])}
+          <QuickAssignTable
+            marketingAudience={marketingAudience}
+            courseOfferings={courseOfferings}
+          />
         </div>
       )}
     </div>
@@ -96,17 +124,6 @@ export default function CurriculumQuickAssign() {
 }
 
 const styles = {
-  buttonRow: {
-    // ensure we have height when we only have our toggle (which is floated)
-    minHeight: 50,
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  buttonsInRow: {
-    display: 'flex',
-    alignItems: 'center'
-  },
   buttonStyle: {
     backgroundColor: 'white',
     padding: 10,
