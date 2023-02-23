@@ -108,7 +108,7 @@ module SharedConstants
     gamelab
   ).freeze
 
-  # For privacy reasons, sprite lab projects can only be published if they are not is "restricted share mode".
+  # For privacy reasons, sprite lab projects can only be published if they are not in "restricted share mode".
   # This mode is triggered if the user is a student and has uploaded an image to their project.
   RESTRICTED_PUBLISH_PROJECT_TYPES = %w(spritelab).freeze
 
