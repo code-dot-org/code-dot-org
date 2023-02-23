@@ -17,6 +17,7 @@ theme: responsive_full_width
       %p Find your local professional learning workshops for middle and high school and apply today!
     .clear
     %img{src: "/images/pl-superhero-girl-crop.png", alt: ""}
+
 -#
   %section
     .wrapper
@@ -28,13 +29,12 @@ theme: responsive_full_width
             %li Explore the curriculum and learning tools
             %li Experience the course as a teacher and a learner
             %li Collaborate with fellow teachers
-          %a{href: CDO.hourofcode_url('/pd/application/teacher'), class: 'link-button'} Apply now
+          %a{href: CDO.studio_url("/pd/application/teacher"), class: "link-button"} Apply now
         %div.col-50
           %figure.video-responsive
             %div
-              %iframe{src: 'https://www.youtube-nocookie.com/embed/dScOdk0yY38', title: 'YouTube video player', allowfullscreen: 'true', frameborder: '0'}
+              %iframe{src: "https://www.youtube-nocookie.com/embed/dScOdk0yY38", title: "YouTube video player", allowfullscreen: "true", frameborder: "0"}
       .clear
-
 
 %section
   .wrapper
@@ -46,11 +46,11 @@ theme: responsive_full_width
         %li Explore the curriculum and learning tools
         %li Experience the course as a teacher and a learner
         %li Collaborate with fellow teachers
-      %a{href: CDO.hourofcode_url('/pd/application/teacher'), class: 'link-button'} Apply now
+      %a{href: CDO.studio_url("/pd/application/teacher"), class: "link-button"} Apply now
     %div.col-50{style: "float: right"}
       %figure.video-responsive{style: "margin-top: 5px; max-width: unset"}
         %div
-          %iframe{src: 'https://www.youtube-nocookie.com/embed/dScOdk0yY38', title: 'YouTube video player', allowfullscreen: 'true', frameborder: '0'}
+          %iframe{src: "https://www.youtube-nocookie.com/embed/dScOdk0yY38", title: "YouTube video player", allowfullscreen: "true", frameborder: "0"}
     .clear
 
 %section.bg-neutral-light
@@ -62,15 +62,6 @@ theme: responsive_full_width
         %h2 What teachers are saying about Code.org professional learning:
         = view :pl_middle_high_carousel
   .clear
-
--#
-  %section
-    .wrapper
-      .quotes-wrapper
-        .quotes-image.col-33{style: "background-image: url(/images/professional-learning-carousel.png); min-height: 299px;"}
-        %div.col-66
-          = view :pl_middle_high_carousel
-    .clear
 
 %section
   .wrapper
@@ -88,7 +79,7 @@ theme: responsive_full_width
           %li No computer science experience required
           %li Based in United States
           %li Teaching 25+ hours of course to a class in next school year
-        %a{href: "https://studio.code.org/pd/application/teacher", class: "link-button"} Apply now
+        %a{href: CDO.studio_url("/pd/application/teacher") , class: "link-button"} Apply now
         %a{href: "/educate/professional-learning/program-information", class: "link-button secondary"} Learn more
       .action-block.action-block--one-col
         %p.overline Beginner
@@ -102,7 +93,7 @@ theme: responsive_full_width
           %li Based in United States
           %li Teaching 100+ hours of course to a class in next school year
           %li Teach AP or non-AP course
-        %a{href: "https://studio.code.org/pd/application/teacher", class: "link-button"} Apply now
+        %a{href: CDO.studio_url("/pd/application/teacher"), class: "link-button"} Apply now
         %a{href: "/educate/professional-learning/program-information", class: "link-button secondary"} Learn more
       .action-block.action-block--one-col
         %p.overline Intermediate
@@ -116,7 +107,7 @@ theme: responsive_full_width
           %li Based in United States
           %li Teaching 140+ hours of course to a class  in next school year
           %li Teach AP or non-AP course
-        %a{href: "https://studio.code.org/pd/application/teacher", class: "link-button"} Apply now
+        %a{href: CDO.studio_url("/pd/application/teacher"), class: "link-button"} Apply now
         %a{href: "/educate/professional-learning/program-information", class: "link-button secondary"} Learn more
   .clear
 
@@ -134,7 +125,7 @@ theme: responsive_full_width
       %li{style: "width: 32%"}
         %h3 Community Support
         %p Collaborate with your regional cohort of teachers and get the support of a nationwide online teacher community
-    %a{href: '/educate/professional-learning/program-information'} Find out more about the program specifics in your region.
+    %a{href: "/educate/professional-learning/program-information"} Find out more about the program specifics in your region.
 
 %section.bg-neutral-light
   .wrapper
@@ -145,7 +136,7 @@ theme: responsive_full_width
           %span 1
         %h4 Apply
         %p Fill out an application with information about you, your school and the course you're teaching
-        %a{href: 'https://studio.code.org/pd/application/teacher', class: 'link-button'} Apply now
+        %a{href: CDO.studio_url("/pd/application/teacher"), class: "link-button"} Apply now
       %li
         %h3
           %span 2
@@ -170,11 +161,11 @@ theme: responsive_full_width
   .wrapper
     %h2 What does the program cost?
     .action-block.action-block--two-col
-      %img{src: '/images/professional-learning/pl-teacher-group.png', alt: '', class: 'col-50'}
+      %img{src: "/images/professional-learning/pl-teacher-group.png", alt: "", class: "col-50"}
       .text-wrapper.col-50
         %p <strong>The cost of the program varies by region.</strong>
         %p You may be eligible for a scholarship to cover the cost of your program.
-        %a{href: '/educate/professional-learning/program-information', class: 'link-button'} Learn more about the program in your region
+        %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more about the program in your region
   .clear
 
 %section
@@ -202,6 +193,6 @@ theme: responsive_full_width
       .text-wrapper.col-50
         %p Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!
         = view :professional_development_workshops_regional_partner_search
-        %a{href: 'https://support.code.org/', class: 'link-button secondary'}Visit our support center
-      %img{src: '/images/professional-learning/pl-teachers-talking.png', alt: '', class: 'col-50'}
+        %a{href: "https://support.code.org/", class: "link-button secondary"} Visit our support center
+      %img{src: "/images/professional-learning/pl-teachers-talking.png", alt: "", class: "col-50"}
   .clear
