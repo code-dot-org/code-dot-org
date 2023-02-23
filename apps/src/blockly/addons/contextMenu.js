@@ -2,7 +2,6 @@ import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 
 import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants.js';
-
 const registerDeletable = function() {
   const deletableOption = {
     displayText: function(scope) {
@@ -175,7 +174,7 @@ const registerCdoTheme = function() {
       }
     },
     callback: function(scope) {
-      localStorage.setItem(BLOCKLY_THEME, Themes.Themes.MODERN);
+      localStorage.setItem(BLOCKLY_THEME, Themes.MODERN);
       scope.workspace.setTheme(Blockly.themes[Themes.MODERN]);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -207,7 +206,7 @@ const registerDarkTheme = function() {
       }
     },
     callback: function(scope) {
-      localStorage.setItem(BLOCKLY_THEME, Themes.Themes.DARK);
+      localStorage.setItem(BLOCKLY_THEME, Themes.DARK);
       scope.workspace.setTheme(Blockly.themes[Themes.DARK]);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
