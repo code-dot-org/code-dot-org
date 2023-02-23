@@ -27,6 +27,8 @@ import {GeneratorHelpersSimple2} from './blocks/simple2';
 export default class MusicBlocklyWorkspace {
   constructor() {
     this.codeHooks = {};
+    this.compiledEvents = null;
+    this.lastExecutedEvents = null;
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -119,10 +121,10 @@ export default class MusicBlocklyWorkspace {
    *
    * @param {*} scope Global scope to provide the execution runtime
    */
-  executeSong(scope) {
+  compileSong(scope) {
     Blockly.getGenerator().init(this.workspace);
 
-    const events = {};
+    this.compiledEvents = {};
 
     const topBlocks = this.workspace.getTopBlocks();
 
@@ -164,7 +166,7 @@ export default class MusicBlocklyWorkspace {
       if (
         !topBlocks.some(block => block.type === BlockTypes.WHEN_RUN_SIMPLE2)
       ) {
-        events.whenRunButton = {
+        this.compiledEvents.whenRunButton = {
           code: GeneratorHelpersSimple2.getDefaultWhenRunImplementation(
             functionCallsCode,
             functionImplementationsCode
@@ -176,13 +178,13 @@ export default class MusicBlocklyWorkspace {
     topBlocks.forEach(block => {
       if (getBlockMode() !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
-          events.whenRunButton = {
+          this.compiledEvents.whenRunButton = {
             code: Blockly.JavaScript.blockToCode(block)
           };
         }
       } else {
         if (block.type === BlockTypes.WHEN_RUN_SIMPLE2) {
-          events.whenRunButton = {
+          this.compiledEvents.whenRunButton = {
             code:
               Blockly.JavaScript.blockToCode(block) +
               functionImplementationsCode
@@ -196,10 +198,12 @@ export default class MusicBlocklyWorkspace {
           BlockTypes.NEW_TRACK_AT_MEASURE
         ].includes(block.type)
       ) {
-        if (!events.tracks) {
-          events.tracks = {code: ''};
+        if (!this.compiledEvents.tracks) {
+          this.events.tracks = {code: ''};
         }
-        events.tracks.code += Blockly.JavaScript.blockToCode(block);
+        this.compiledEvents.tracks.code += Blockly.JavaScript.blockToCode(
+          block
+        );
       }
 
       if (
@@ -211,22 +215,37 @@ export default class MusicBlocklyWorkspace {
         ].includes(block.type)
       ) {
         const id = block.getFieldValue(TRIGGER_FIELD);
-        events[this.triggerIdToEvent(id)] = {
+        this.compiledEvents[this.triggerIdToEvent(id)] = {
           code:
             Blockly.JavaScript.blockToCode(block) + functionImplementationsCode
         };
       }
     });
 
+    const currentEventsJson = JSON.stringify(this.compiledEvents);
+    const lastExecutedEventsJson = JSON.stringify(this.lastExecutedEvents);
+
+    if (currentEventsJson === lastExecutedEventsJson) {
+      console.log("Code hasn't changed since last execute.");
+      return false;
+    }
+
+    console.log('Compiled song.', this.compiledEvents);
+
+    return true;
+  }
+
+  executeCompiledSong(scope) {
+    console.log('Executing compiled song.');
+
     this.codeHooks = {};
 
-    console.log('executeSong', events);
-
-    CustomMarshalingInterpreter.evalWithEvents(scope, events).hooks.forEach(
-      hook => {
-        this.codeHooks[hook.name] = hook.func;
-      }
-    );
+    CustomMarshalingInterpreter.evalWithEvents(
+      scope,
+      this.compiledEvents
+    ).hooks.forEach(hook => {
+      this.codeHooks[hook.name] = hook.func;
+    });
 
     if (this.codeHooks.whenRunButton) {
       this.callUserGeneratedCode(this.codeHooks.whenRunButton);
@@ -235,6 +254,8 @@ export default class MusicBlocklyWorkspace {
     if (this.codeHooks.tracks) {
       this.callUserGeneratedCode(this.codeHooks.tracks);
     }
+
+    this.lastExecutedEvents = this.compiledEvents;
   }
 
   /**
