@@ -45,7 +45,7 @@ h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
 
-// Use these classes to change a section's background color
+// Use these classes to change a section's background color.
 section.bg-neutral-light { background-color: $neutral_light; }
 section.bg-neutral-dark { background-color: $neutral_dark; }
 section.bg-primary { background-color: rgba($brand_primary_light, .5); }
@@ -56,7 +56,7 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 
 // Removes the bottom margin —
 // often helpful on a last paragraphs or list elements
-// to maintain consistent white space between sections
+// to maintain consistent white space between sections.
 .no-margin-bottom { margin-bottom: 0 !important;}
 
 // FontAwesome icon defaults
@@ -74,12 +74,12 @@ p {
   margin-bottom: 1em;
 
   // For use on course block descriptions or anywhere
-  // else that needs smaller paragraph text
+  // else that needs smaller paragraph text.
   &.body-two {
     font-size: .875em;
   }
 
-  // For use on a section w/ a single message and call-to-action
+  // For use on a section w/ a single message and call-to-action.
   &.callout {
     font-size: 1.25em;
     font-family: $gotham-bold;
@@ -89,6 +89,7 @@ p {
     font-size: .75em;
     font-family: $gotham-bold;
     text-transform: uppercase;
+    letter-spacing: .5px;
   }
 }
 
@@ -136,10 +137,11 @@ input[type=submit] {
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   border-radius: $border-radius;
-  padding: .5em 1em;
+  padding: .625em 1em;
   margin: 0.5em 0;
   font-size: 1em;
   font-family: 'Gotham 5r', sans-serif;
+  line-height: 1.2;
   text-decoration: none;
   text-align: center;
   transition: all ease-in-out .2s;
@@ -367,7 +369,7 @@ ol.steps-list {
 
       // This creates the light blue border around the
       // charcoal border — would prefer to use the outline
-      // attribute but it doesn't work in Safari
+      // attribute but it doesn't work in Safari.
       &::before {
         content: "";
         position: absolute;
@@ -432,7 +434,7 @@ details {
   }
 
   // Uses FontAwesome arrow icons to
-  // denote open and close states
+  // denote open and close states.
   & summary::after {
     font: var(--fa-font-solid);
     content: "\f107";
@@ -551,7 +553,7 @@ form {
 
 // Single column action blocks
 // Note: set the height of the <p> tag inline to maintain
-// height consistency between cards in a wrapper
+// height consistency between cards in a wrapper.
 .action-block--one-col {
   flex-wrap: wrap;
   padding: 1em 1.5em;
@@ -576,6 +578,15 @@ form {
     padding: 1em 1.5em;
   }
 
+  figure.video-responsive {
+    margin: 0 !important;
+    max-width: unset;
+
+    & > div {
+      border: 0;
+    }
+  }
+
   @media screen and (max-width: $width-sm) {
     a.link-button, button {
       width: 100%;
@@ -585,15 +596,14 @@ form {
 }
 
 // Quotes carousel
+// See code.org/educate/professional-learning/middle-high
+// and /views/pl_middle_high_carousel.haml for an example.
+// Uses the carouFredSel jQuery plugin - https://github.com/nzy/carouFredSel
 .quotes-wrapper {
 
-  // Apply background-image: url('') inline on this element
-  // to show desired image next to quotes
-  // — see code.org/educate/professional-learning/middle-high for an example
-  .quotes-image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  img {
+    border-radius: $border-radius;
+    width: 100%;
 
     @media screen and (max-width: $width-md) {
       display: none;
@@ -601,30 +611,34 @@ form {
 
     @media screen and (max-width: $width-sm) {
       display: block;
+      margin-bottom: 2em;
     }
   }
 
-  // Uses the carouFredSel jQuery plugin
-  // https://github.com/nzy/carouFredSel
-
-  // Set a min-height inline on the .carousel div to account
-  // for varying quote length and prevent vertical height changes
-  // — see /views/pl_middle_high_carousel.haml
   .carousel-wrapper {
     font-family: $barlowSemiCondensed-medium, sans-serif;
-    background: $neutral_dark;
-    padding: 2em 2em 1.5em;
+    margin: 2em 0 0;
 
     @media screen and (max-width: $width-sm) {
       padding-bottom: 1em;
     }
 
+    // Set a min-height inline on the .carousel div inside .carousel-wrapper
+    // to account for varying quote lengths and prevent vertical height changes.
+    .carousel {
+      overflow: hidden;
+
+      @media screen and (max-width: $width-md) {
+        height: unset !important;
+        overflow: unset;
+      }
+    }
+
     p {
       font-size: 1.25em;
-      color: $neutral_light;
 
       &.quote-text {
-        font-size: 1.75em;
+        font-size: 1.5em;
         line-height: 1.2;
 
         &:before, &:after {
@@ -646,29 +660,30 @@ form {
 
     span {
       color: $brand_accent_default;
+      margin: 0 2px;
     }
 
     .pagination {
-      position: absolute;
-      right: 1em;
-      bottom: 1em;
+      text-align: left;
+      margin: 1em 0 0 0;
 
       @media screen and (max-width: $width-sm) {
-        position: relative;
-        right: unset;
-        left: unset;
         margin-top: 3em;
       }
 
-      // Using !important tags here to override the common style .css styles
-      // until the Phase II rebrand implementation.
       a{
-        background: $brand_primary_light !important;
+        background: $brand_primary_light;
+
+        &:first-child {
+          margin-left: 0;
+        }
 
         &.selected {
-          background: $brand_primary_default !important;
+          background: $brand_primary_default;
         }
       }
     }
   }
 }
+
+

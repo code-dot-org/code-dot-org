@@ -4,6 +4,7 @@ theme: responsive_full_width
 ---
 
 %link{href: "/shared/css/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/pl-middle-high-styles.css", rel: "stylesheet"}
 
 -# Import FontAwesome Pro
 %script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
@@ -16,36 +17,66 @@ theme: responsive_full_width
       %p Find your local professional learning workshops for middle and high school and apply today!
     .clear
     %img{src: "/images/pl-superhero-girl-crop.png", alt: ""}
+-#
+  %section
+    .wrapper
+      %h2 Why Code.org professional learning?
+      .action-block.action-block--two-col
+        .text-wrapper.col-50
+          %p <strong>Our engaging workshops are for new and experienced computer science teachers! In this program, you will:</strong>
+          %ul
+            %li Explore the curriculum and learning tools
+            %li Experience the course as a teacher and a learner
+            %li Collaborate with fellow teachers
+          %a{href: CDO.hourofcode_url('/pd/application/teacher'), class: 'link-button'} Apply now
+        %div.col-50
+          %figure.video-responsive
+            %div
+              %iframe{src: 'https://www.youtube-nocookie.com/embed/dScOdk0yY38', title: 'YouTube video player', allowfullscreen: 'true', frameborder: '0'}
+      .clear
+
 
 %section
   .wrapper
     %h2 Why Code.org professional learning?
-    %div.col-50{style: "margin-bottom: 1em"}
-      %p <strong>Our engaging workshops are for new and experienced computer science teachers! In this program, you will:</strong>
+    %div.col-45{style: "margin-bottom: 1em"}
+      %p Our engaging workshops are for new and experienced computer science teachers!
+      %p <strong>In this program, you will:</strong>
       %ul
         %li Explore the curriculum and learning tools
         %li Experience the course as a teacher and a learner
         %li Collaborate with fellow teachers
       %a{href: CDO.hourofcode_url('/pd/application/teacher'), class: 'link-button'} Apply now
-    %div.col-50
+    %div.col-50{style: "float: right"}
       %figure.video-responsive{style: "margin-top: 5px; max-width: unset"}
         %div
           %iframe{src: 'https://www.youtube-nocookie.com/embed/dScOdk0yY38', title: 'YouTube video player', allowfullscreen: 'true', frameborder: '0'}
     .clear
 
-%section
+%section.bg-neutral-light
   .wrapper
     .quotes-wrapper
-      .quotes-image.col-33{style: "background-image: url(/images/professional-learning-carousel.png); min-height: 299px;"}
-      %div.col-66
+      %figure.col-33
+        %img{src: "/images/professional-learning-carousel.png", alt: ""}
+      %div.col-60{style: "float: right"}
+        %h2 What teachers are saying about Code.org professional learning:
         = view :pl_middle_high_carousel
   .clear
+
+-#
+  %section
+    .wrapper
+      .quotes-wrapper
+        .quotes-image.col-33{style: "background-image: url(/images/professional-learning-carousel.png); min-height: 299px;"}
+        %div.col-66
+          = view :pl_middle_high_carousel
+    .clear
 
 %section
   .wrapper
     %h2 Professional learning programs specific to the course
     %p Join one of our professional learning programs in your area. The programs are designed to prepare you before and during your first year teaching <a href="/educate/csd">CS Discoveries</a>, <a href="/educate/csp">CS Principles</a>, or <a href="/educate/csa">CSA</a>.
-    .action-block__wrapper.action-block__wrapper--three-col
+    .action-block__wrapper.action-block__wrapper--three-col{style: "margin-top: 2em"}
       .action-block.action-block--one-col
         %p.overline Beginner
         %h3 CS Discoveries
