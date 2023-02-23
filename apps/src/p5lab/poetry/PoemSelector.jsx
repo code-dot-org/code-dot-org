@@ -12,8 +12,8 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
-import {POEMS, PoetryStandaloneApp} from './constants';
-import {getPoem} from './poem';
+import {PoetryStandaloneApp} from './constants';
+import {getPoem, getPoems} from './poem';
 import * as utils from '@cdo/apps/utils';
 
 const poemShape = PropTypes.shape({
@@ -139,7 +139,7 @@ PoemEditor.defaultProps = {
 function PoemSelector(props) {
   const [isOpen, setIsOpen] = useState(false);
 
-  if (appOptions.level.standaloneAppName !== PoetryStandaloneApp.PoetryHoc) {
+  if (appOptions.level.standaloneAppName === PoetryStandaloneApp.Poetry) {
     return null;
   }
 
@@ -178,7 +178,7 @@ function PoemSelector(props) {
   };
 
   const getPoemOptions = () => {
-    const options = Object.keys(POEMS)
+    const options = Object.keys(getPoems())
       .map(poemKey => getPoem(poemKey))
       .filter(poem => !poem.locales || poem.locales.includes(appOptions.locale))
       .sort((a, b) => (a.title > b.title ? 1 : -1))

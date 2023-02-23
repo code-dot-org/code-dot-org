@@ -43,6 +43,8 @@
   "noEffects": "You're missing some code. Add a background or text effect block under `when run`.",
   "noTextEffect": "Try adding a text color block under `when run`.",
   "oneTextEffect": "Great work! You added one text effect. Try adding another.",
+  "patLines": "I love to ride my skateboard all around\nWith my Walkman blasting, I don't hear a sound\nI just learned how to do a sweet new trick\nIt's called the kickflip and it's really sick\n\nSomething happening right now is Yo MTV Raps\nWatching Salt-N-Pepa and LL Cool J, mad snaps\nSlap bracelets are something cool\nAnd neon colors, they totally rule.",
+  "patTitle": "1990 - My Poem 1",
   "poLines": "The birds have vanished into the sky,\nAnd now the last cloud drains away.\nWe sit together, the mountain and me,\nUntil only the mountain remains.",
   "poTitle": "Mountain",
   "poem": "Poem:",

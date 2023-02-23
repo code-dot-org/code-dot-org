@@ -1,6 +1,7 @@
 export const PoetryStandaloneApp = {
   Poetry: 'poetry',
-  PoetryHoc: 'poetry_hoc'
+  PoetryHoc: 'poetry_hoc',
+  TimeCapsule: 'time_capsule'
 };
 
 export const PALETTES = {
@@ -281,4 +282,8 @@ export const POEMS = {
       "com'esuli pensieri, nel vespero migrar."
     ]
   }
+};
+
+export const TIME_CAPSULE_POEMS = {
+  pat: {author: 'Pat Y.'}
 };
