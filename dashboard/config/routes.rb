@@ -327,7 +327,11 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :course_offerings, only: [:edit, :update], param: 'key'
+    resources :course_offerings, only: [:edit, :update], param: 'key' do
+      collection do
+        get 'quick_assign_course_offerings'
+      end
+    end
 
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
