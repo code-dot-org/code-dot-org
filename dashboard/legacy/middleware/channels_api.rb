@@ -92,7 +92,8 @@ class ChannelsApi < Sinatra::Base
 
     if data['shouldPublish']
       project_type = data['projectType']
-      check_can_publish(channel_id, project_type)
+      bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+      forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
 
       # The client decides whether to publish the project, but we rely on the
       # server to generate the timestamp. Remove shouldPublish from the project
