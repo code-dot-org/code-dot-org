@@ -2018,6 +2018,7 @@
   "standardsReportHeader": "Raport standardów klasy",
   "standardsReportNoUnpluggedLessons": "W ramach tego kursu nie ma lekcji w trybie bez komputera.",
   "standardsReportLessonLengthInfo": "*45 - 65 minut lekcji w tym kursie poświęca się na instrukcje",
+  "startBlocksTemplateWarning": "OSTRZEŻENIE: Edytujesz bloki początkowe dla poziomu z szablonem. Bloki początkowe powinny być zdefiniowane na poziomie szablonu.",
   "startLearning": "Rozpocznij naukę",
   "startOver": "Zacznij od nowa",
   "startOverTitle": "Czy na pewno chcesz zacząć od nowa?",
