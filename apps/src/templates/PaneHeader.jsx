@@ -101,6 +101,9 @@ export const PaneButton = Radium(function(props) {
     isMinecraft,
     headerHasFocus,
     isDisabled,
+    ariaLabel,
+    onClick,
+    id,
     style,
     className
   } = props;
@@ -157,22 +160,23 @@ export const PaneButton = Radium(function(props) {
   }
 
   return (
-    <div
+    <button
       className={divClassNames}
-      role="button"
+      type="button"
+      disabled={isDisabled}
       tabIndex="0"
-      id={props.id}
+      id={id}
       style={style}
-      onKeyDown={props.isDisabled ? () => {} : onKeyDownWrapper}
-      onClick={props.isDisabled ? () => {} : props.onClick}
-      aria-label={props.ariaLabel}
+      onKeyDown={onKeyDownWrapper}
+      onClick={onClick}
+      aria-label={ariaLabel}
     >
       <span className={moduleStyles.headerButtonSpan}>
-        {props.hiddenImage}
+        {hiddenImage}
         {renderIcon()}
         <span style={styles.noPadding}>{label}</span>
       </span>
-    </div>
+    </button>
   );
 });
 PaneButton.propTypes = {
