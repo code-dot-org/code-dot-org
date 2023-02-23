@@ -3,7 +3,7 @@
   "properties": {
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <p>Gymnastics involves balance, strength, flexibility, and coordination. Events for women include the vault, uneven bars, balance beam, and floor. Events for men are vault, parallel bars, floor, pummel horse, and still rings. <br> <br>\\r\\nImage by Rolf Dober from German Wikipedia<\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    },\r\n{\r\n      \"name\": \"gymnast.gif\",\r\n      \"url\": \"https://images.code.org/a630b7919c4daac3965bc03959aa74f6-image-1568307036084.gif\"\r\n    }\r\n  ]\r\n}",
     "instructions_important": "false",
-    "long_instructions": "\r\n# Add Image Link\r\n\r\nAn image has already been uploaded for you. The next step is to link it to the web page.\r\n\r\n# Do This\r\n1) Add an image link for the image \"gymnast.gif\".\r\n",
+    "long_instructions": "# Add Image Link\r\n\r\nAn image has already been uploaded for you. The next step is to link it to the web page.\r\n\r\n# Do This\r\n1) Add an image link for the image \"gymnast.gif\".\r\n\r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/de0868aea055a3c42a4a4371892c2b93-image-1677104053660.gif\" style=\"width:500px\">\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
     "hide_share_and_remix": "true",
     "submittable": "false",
     "encrypted_examples": "e2pShcMeTBIbw1ydaH/n4V5D6mxbp+gfQh1s0K8c6OOoaaHITQeOpqyvLRQ5\n0+0OdpcYX1hRId2a9nFlQERUUQ==\n",
@@ -34,6 +34,6 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:23:06.108+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag Add Image Link_2022\\\"\"],\"cloned_from\":\"CSD U2 Image Tag Add Image Link_2022\"},{\"changed_at\":\"2023-02-21 23:42:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:23:06.108+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag Add Image Link_2022\\\"\"],\"cloned_from\":\"CSD U2 Image Tag Add Image Link_2022\"},{\"changed_at\":\"2023-02-21 23:42:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 22:14:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
