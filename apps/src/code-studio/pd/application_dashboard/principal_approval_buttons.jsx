@@ -24,11 +24,7 @@ export default class PrincipalApprovalButtons extends React.Component {
   constructor(props) {
     super(props);
 
-    const appStatusesForSendingEmail = [
-      'awaiting_admin_approval',
-      'pending',
-      'waitlisted'
-    ];
+    const appStatusesForSendingEmail = ['awaiting_admin_approval'];
 
     this.state = {
       sendEmailRequest: null,
