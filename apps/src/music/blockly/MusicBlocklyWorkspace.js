@@ -239,6 +239,11 @@ export default class MusicBlocklyWorkspace {
    * @param {*} scope Global scope to provide the execution runtime
    */
   executeCompiledSong(scope) {
+    if (this.compiledEvents === null) {
+      console.warn('executeCompiledSong called before compileSong.');
+      return;
+    }
+
     console.log('Executing compiled song.');
 
     this.codeHooks = {};
