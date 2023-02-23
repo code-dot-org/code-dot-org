@@ -589,6 +589,20 @@ StudioApp.prototype.init = function(config) {
     this.addChangeHandler(this.editDuringRunAlertHandler.bind(this));
   }
 
+  // If url contains `reset=true`, clear the version history of the puzzle, reload page,
+  // and remove `reset` from the url params
+  const url = new URL(document.URL);
+  const params = new URLSearchParams(url.search);
+  if (params.get('reset')) {
+    params.delete('reset');
+    url.search = params.toString();
+
+    let handler = this.handleClearPuzzle.bind(this, config);
+    handler()
+      .then(project.save(true))
+      .then(window.location.replace(url.toString()));
+  }
+
   this.emit('afterInit');
 };
 

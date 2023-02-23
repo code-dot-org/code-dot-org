@@ -218,6 +218,15 @@
         "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
           "description": "Crear animacions de ball amb codi"
         },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Parlar de la influència de la intel·ligència artificial en les seves vides."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
+        },
         "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
           "description": ""
         },
@@ -359,11 +368,35 @@
         "d13ed164-0cf7-4bb3-882a-69ed146aeb9f": {
           "description": "Crear una animació interactiva fent servir esdeveniments."
         },
+        "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
+          "description": "Parlar de la influència de la intel·ligència artificial en les seves vides."
+        },
+        "9ec60d3b-ddcc-479c-9e4d-220ff3d8a10a": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "ba631251-039e-4f7a-9320-158390f318c2": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
+        },
+        "0265cc40-2950-42f3-a457-7b967fa9c0d9": {
+          "description": "Explicar la diferència entre informació privada i personal."
+        },
+        "16baead5-8507-4681-94b1-0314783a5418": {
+          "description": "Explicar per què és arriscat compartir informació privada a internet."
+        },
+        "d4c584f8-36e7-471a-9b83-713ca5e4711a": {
+          "description": "Identificar les raons per les quals les persones comparteixen informació sobre si mateixes en línia."
+        },
         "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
           "description": "Crear sprites nous i assignar-los vestits i comportaments."
         },
         "bf11a11b-35be-4fdc-a266-9f192e141760": {
           "description": "Definir un \"sprite\" com un caràcter o objecte que apareix a la pantalla i que poden moure i modificar."
+        },
+        "41232751-173e-4eaa-9bc4-bb5b65957d03": {
+          "description": "Triar quina informació sobre si mateixos és segura de compartir a internet."
+        },
+        "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
+          "description": "Crear un programa informàtic interactiu que expressi qui són amb text i imatges personalitzades."
         },
         "62ffafea-c5f4-4942-b283-9462c41d52cd": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
@@ -377,6 +410,9 @@
         "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
           "description": "Desglossar tasques complexes en seccions repetibles més petites."
         },
+        "e4a76fad-2750-4f3b-8138-0e0a932b5e2b": {
+          "description": "Combinar formes senzilles per formar dissenys complexos amb bucles imbricats."
+        },
         "2cae95f3-a3dc-4541-8b5c-43d876d26ce3": {
           "description": "Explicar quan cal utilitzar un bucle, un bucle imbricat, o cap bucle."
         },
@@ -385,6 +421,15 @@
         },
         "feae5f14-f531-4db9-b746-9582df08da12": {
           "description": "Desglossar el codi en les seqüències repetibles més grans fent servir bucles i bucles imbricats."
+        },
+        "020afd03-339c-4b70-af23-62f495f2088f": {
+          "description": "Identificar seccions d'una cançó per incloure-les en una funció."
+        },
+        "386901b7-db20-4705-90ee-391a42d76d3a": {
+          "description": "Explicar en quin sentit les funcions poden fer que els programes siguin més fàcils d'escriure."
+        },
+        "887412d7-6f80-42df-98b4-6ef39bb4f09c": {
+          "description": "Trobar les frases que es repeteixen a les lletres de les cançons."
         },
         "50d6d0ce-0013-47e4-9f0b-ac6bca5d4a30": {
           "description": "Fer servir funcions predeterminades per duur a terme tasques que es repeteixen habitualment."
@@ -415,6 +460,24 @@
         },
         "b92ee5de-79d3-4fd6-8bf6-e86e3dad779a": {
           "description": "Fer servir funcions predeterminades per duur a terme tasques que es repeteixen habitualment."
+        },
+        "5fb6d430-a2bf-4d0b-b128-5592afc2d856": {
+          "description": "Millorar el disseny d'aplicacions existents tenint en compte les necessitats d'accessibilitat dels usuaris."
+        },
+        "bb1f6fd9-3327-411d-b91e-d3b4e756fff3": {
+          "description": "Explicar per què l'accessibilitat és una part important del disseny d'una aplicació de cara als usuaris."
+        },
+        "fcecef31-84d0-4df2-80cd-f8641b06c24f": {
+          "description": "Descriure l'impacte de les aplicacions mòbils en el món modern."
+        },
+        "2c0ee6b8-608a-47b6-9093-dbab81b92cbf": {
+          "description": "Entendre els seus drets pel que fa als materials de creació pròpia"
+        },
+        "a8686006-16c5-4b08-94d2-32430cd6d77f": {
+          "description": "Distingir quan l'intercanvi de continguts protegits per drets d'autor és ètic i quan no ho és"
+        },
+        "0c9da891-a9a1-4747-a7da-dc2c76462eb4": {
+          "description": "Explicar com les limitacions del sistema poden afectar el disseny del projecte."
         },
         "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
           "description": "Aprendre que la informació que comparteixen a internet deixa una petjada digital o \"rastre\"."
@@ -977,6 +1040,12 @@
         "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
           "description": "Fer servir un disseny planificat com a plànol per crear projectes."
         },
+        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
+        },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Desenvolupar programes que responguin a esdeveniments cronometrats."
         },
@@ -1021,6 +1090,15 @@
         },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
+        },
+        "f748f186-f152-468e-9f51-48bee23c44db": {
+          "description": "Parlar de la influència de la intel·ligència artificial en les seves vides."
+        },
+        "82bb0282-0550-4779-9a86-a15fbb93215f": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "6638c886-891e-4d59-820a-227e37274e49": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
           "description": "Aprendre que la informació que comparteixen a internet deixa una petjada digital o \"rastre\"."
@@ -1703,6 +1781,9 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartir un artefacte creatiu amb els companys."
         },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "Començar a establir connexions sobre una forma nova d'escriure programes"
+        },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "Definir un \"sprite\" com un caràcter o objecte que apareix a la pantalla i que poden moure i modificar."
         },
@@ -1712,11 +1793,38 @@
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
         },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Crear una animació interactiva utilitzant sprites, comportaments i esdeveniments."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Identificar les raons per les quals les persones comparteixen informació sobre si mateixes en línia."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Explicar la diferència entre informació privada i personal."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Explicar per què és arriscat compartir informació privada a internet."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Triar quina informació sobre si mateixos és segura de compartir a internet."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Crear un programa informàtic interactiu que expressi qui són amb text i imatges personalitzades."
+        },
+        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
+          "description": "Distingir quan l'intercanvi de continguts protegits per drets d'autor és ètic i quan no ho és"
+        },
+        "0709575a-e9e6-4856-a4f4-02b290f86975": {
+          "description": "Entendre els seus drets pel que fa als materials de creació pròpia"
+        },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
         },
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
           "description": "Diferenciar entre les ordres que s'han de repetir en bucles i les ordres que s'han de fer servir per si soles."
+        },
+        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
+          "description": "Combinar formes senzilles per formar dissenys complexos amb bucles imbricats."
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
           "description": "Comptar quantes vegades s'hauria de repetir una acció i representar-la en forma de bucle."
@@ -1732,6 +1840,15 @@
         },
         "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
           "description": "Desglossar el codi en les seqüències repetibles més grans fent servir bucles i bucles imbricats."
+        },
+        "e26d818e-81fd-43c6-8558-fc69835e693a": {
+          "description": "Trobar les frases que es repeteixen a les lletres de les cançons."
+        },
+        "815c91bc-4848-43ba-a234-d1b184ab120b": {
+          "description": "Identificar seccions d'una cançó per incloure-les en una funció."
+        },
+        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
+          "description": "Explicar en quin sentit les funcions poden fer que els programes siguin més fàcils d'escriure."
         },
         "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
           "description": "Fer servir funcions per simplificar programes complexos."
@@ -1762,6 +1879,24 @@
         },
         "cff52f84-5090-495e-a37b-02cf8b666ad6": {
           "description": "Fer servir funcions predeterminades per duur a terme tasques que es repeteixen habitualment."
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Descriure l'impacte de les aplicacions mòbils en el món modern."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Explicar per què l'accessibilitat és una part important del disseny d'una aplicació de cara als usuaris."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Millorar el disseny d'aplicacions existents tenint en compte les necessitats d'accessibilitat dels usuaris."
+        },
+        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
+          "description": "Explicar com les limitacions del sistema poden afectar el disseny del projecte."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
         }
       }
     }
