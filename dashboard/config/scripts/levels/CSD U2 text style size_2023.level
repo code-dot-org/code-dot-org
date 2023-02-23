@@ -18,7 +18,7 @@
     "map_reference": "/courses/csd-2022/guides/style-sheets",
     "video_key": "csd_weblab_css_1",
     "submittable": "false",
-    "long_instructions": "\r\n# Changing text size\r\n\r\nYou can control other things besides colors by using other properties.\r\n\r\n# Do This\r\n\r\n1) Find the CSS rule-set in the style sheet that determines the style for the paragraph tag.\r\n* Change the text size of the paragraphs and the headings.",
+    "long_instructions": "# Changing text size\r\n\r\nYou can control other things besides colors by using other properties.\r\n\r\n# Do This\r\n\r\n1) Find the CSS rule-set in the style sheet that determines the style for the paragraph tag.\r\n* Change the text size of the paragraphs and the headings.\r\n\r\n\r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/434c688b4a14001191f2b0b4ca1a3427-image-1677100717309.gif\" style=\"width:500px\">\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
     "encrypted": "false",
     "validation_enabled": "true",
     "mini_rubric": "false"
@@ -29,6 +29,6 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:50.293+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style size_2022\\\"\"],\"cloned_from\":\"CSD U2 text style size_2022\"},{\"changed_at\":\"2023-02-17 23:41:56 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:50.293+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style size_2022\\\"\"],\"cloned_from\":\"CSD U2 text style size_2022\"},{\"changed_at\":\"2023-02-17 23:41:56 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 21:18:57 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -10178,3 +10178,21 @@ en:
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
           description_short: ''
           description_audience: ''
+        csc-ecosystems-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-ecosystems-2023
+          title: Sustainable Ecosystems
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-adaptations-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-adaptations-2023
+          title: Animal Adaptations
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
