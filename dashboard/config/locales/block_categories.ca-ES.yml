@@ -3,6 +3,7 @@ ca:
   data:
     block_categories:
       Actions: Accions
+      Behaviors: Comportaments
       Category: Categoria
       Color: Color
       Conditionals: Condicionals
@@ -12,6 +13,7 @@ ca:
       Functions: Funcions
       'Functions ': 'Funcions '
       Groups: Grups
+      Locations: Ubicacions
       Logic: Lògica
       Loops: Bucles
       Math: Matemàtiques

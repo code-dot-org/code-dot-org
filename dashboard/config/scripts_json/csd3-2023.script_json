@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2023-02-15 23:58:20 UTC",
+    "serialized_at": "2023-02-22 01:11:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3752,7 +3752,8 @@
       "key": "da217e24-6e2b-49a8-9e43-a6e3938fde30",
       "position": 4,
       "properties": {
-        "progression_name": "Exploration",
+        "description": "**Do This:** Send students to Code Studio. \n\nThe first prediction level program is the first time they will see the \"draw loop\" in action. \n\n**Discuss:** Students should consider and discuss:\n* What will be drawn on the screen do and why? \n\n**Discussion Goal:** Predictions will vary but after viewing the Draw Loop video, students should be able to predict that the program will draw an ellipse over and over and over to the screen. Students may also predict and should notice once they run the program that the ellipse is drawn in random locations on the screen. One last thing to point out is the fact that the code to give the ellipse a color is *outside* the draw loop and runs *before* the program enters the draw loop. ",
+        "progression_name": "Predict",
         "tips": [
           {
             "type": "teachingTip",
@@ -3780,8 +3781,8 @@
       "key": "5b1985f6-d193-4456-865e-344495f2d52d",
       "position": 6,
       "properties": {
-        "description": "The prediction level program has one small difference that will make it run a little differently. \n\n**Discuss:** Students should consider and discuss:\n* What will this program do? \n\n**Discussion Goal:** Notice that the blue background is never visible because it is immediately drawn over by the red background. Also, there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds.\n",
-        "progression_name": "Prediction"
+        "description": "The second prediction level program has one small difference that will make it run a little differently. \n\n**Discuss:** Students should consider and discuss:\n* What will this program do? \n\n**Discussion Goal:** Notice that the blue background is never visible because it is immediately drawn over by the red background. Also, there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds.\n",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "5b1985f6-d193-4456-865e-344495f2d52d",
@@ -8650,15 +8651,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Draw Loop Plugged predict 1_2023"
-        ],
-        "progression": "Exploration"
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Draw Loop Plugged predict 1_2023"
+          "CSD U3 Draw Loop predict 1_2023"
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "lessonGroup-2",
@@ -8666,7 +8664,7 @@
         "activity_section.key": "da217e24-6e2b-49a8-9e43-a6e3938fde30"
       },
       "level_keys": [
-        "CSD U3 Draw Loop Plugged predict 1_2023"
+        "CSD U3 Draw Loop predict 1_2023"
       ]
     },
     {
@@ -8703,7 +8701,7 @@
         "level_keys": [
           "CSD U3 Draw Loop Plugged predict 2_2023"
         ],
-        "progression": "Prediction"
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
@@ -13351,9 +13349,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Draw Loop Plugged predict 1_2023",
+        "level.key": "CSD U3 Draw Loop predict 1_2023",
         "script_level.level_keys": [
-          "CSD U3 Draw Loop Plugged predict 1_2023"
+          "CSD U3 Draw Loop predict 1_2023"
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "lessonGroup-2",

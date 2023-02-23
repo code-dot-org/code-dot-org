@@ -34,9 +34,9 @@ module Rack
         l.split(';q=')
       end
 
-      lang = languages_and_qvalues.sort_by do |(_locale, qvalue)|
+      lang = languages_and_qvalues.max_by do |(_locale, qvalue)|
         qvalue.to_f
-      end.last.first
+      end.first
 
       lang == '*' ? nil : lang
     end
