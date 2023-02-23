@@ -33,8 +33,8 @@ function Odometer(config) {
       var current = value.toString(config.radix).toUpperCase();
       var next = (value + 1).toString(config.radix).toUpperCase();
       for (var i = 0; i < config.digits; i++) {
-        var currentText = current[i - (config.digits - current.length)] || ' ';
-        var nextText = next[i - (config.digits - next.length)] || ' ';
+        var currentText = current[i - (config.digits - current.length)] || 0;
+        var nextText = next[i - (config.digits - next.length)] || 0;
         digits[i].find('.digit-current').text(currentText);
         digits[i].find('.digit-next').text(nextText);
         digits[i].css('top', 0);
