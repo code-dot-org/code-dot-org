@@ -89,7 +89,9 @@ class CourseOffering < ApplicationRecord
   end
 
   def any_versions_launched?
-    course_versions.any?(&:launched?)
+    Rails.cache.fetch("#{cache_key}/any_versions_launched", force: !CourseOffering.should_cache?) do
+      course_versions.any?(&:launched?)
+    end
   end
 
   def any_versions_in_development?
@@ -105,7 +107,8 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.assignable_course_offerings(user)
-    CourseOffering.all.select {|co| co.can_be_assigned?(user)}
+    course_offerings = CourseOffering.all.includes(course_versions: :content_root)
+    course_offerings.select {|co| co.can_be_assigned?(user)}
   end
 
   def self.assignable_course_offerings_info(user, locale_code = 'en-us')
