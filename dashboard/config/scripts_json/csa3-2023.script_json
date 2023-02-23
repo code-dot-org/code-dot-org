@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-17 19:27:41 UTC",
+    "serialized_at": "2023-02-22 18:30:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3896,7 +3896,7 @@
       "key": "8fba9041-9190-40de-b809-b91229519b46",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the program requirements and rubric on the Data for Social Good Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Store Management Project Planning Guide based on the feedback they received from the code review.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the program requirements and rubric on the Data for Social Good Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Data for Social Good Project Planning Guide based on the feedback they received from the code review.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3998,7 +3998,7 @@
       "key": "8ab98164-0738-43a8-85d5-f3df7a1252ed",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Store Management Project Planning Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Data for Social Good Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "8ab98164-0738-43a8-85d5-f3df7a1252ed",
@@ -4009,7 +4009,7 @@
       "key": "a26f69c8-a231-41dc-879a-0d5ba55d8726",
       "position": 6,
       "properties": {
-        "description": "Use the feedback you received from your code review and self-assessment to finalize your Store Management Project.",
+        "description": "Use the feedback you received from your code review and self-assessment to finalize your Data for Social Good Project.",
         "remarks": true
       },
       "seeding_key": {

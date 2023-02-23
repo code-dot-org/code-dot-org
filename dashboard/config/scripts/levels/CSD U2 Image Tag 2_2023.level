@@ -1,7 +1,7 @@
 <Weblab>
   <config><![CDATA[{
   "properties": {
-    "long_instructions": "\r\n# Uploading Images\r\n\r\nYou can upload images that you've found elsewhere using the **Add Image** button. Go find an image of a different type of pet that you like and download it to your computer (using right-click \"Save As\").\r\n\r\nOnce you have your images, click ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png) and upload the image from your computer into your project, where you can then use it in your page.\r\n\r\n# Do This\r\n\r\n1) Find an image you are allowed to use and upload it to this project.\r\n* Make sure the file name follows your naming rules.\r\n* Use the `<img>` tag to display the image(s) in your website.\r\n    * Make sure to add an `alt` attribute!\r\n* Add the attribution information below the image.\r\n",
+    "long_instructions": "# Uploading Images\r\n\r\nYou can upload images that you've found elsewhere using the **Add Image** button. Go find an image of a different type of pet that you like and download it to your computer (using right-click \"Save As\").\r\n\r\nOnce you have your images, click ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png) and upload the image from your computer into your project, where you can then use it in your page.\r\n\r\n# Do This\r\n\r\n1) Find an image you are allowed to use and upload it to this project.\r\n* Make sure the file name follows your naming rules.\r\n* Use the `<img>` tag to display the image(s) in your website.\r\n    * Make sure to add an `alt` attribute!\r\n* Add the attribution information below the image.\r\n\r\n::: details [**Show Me How to Upload**]\r\n\r\n<img src=\"https://images.code.org/f1a3996ea260e0874669f232988d64ec-image-1677103155741.gif\" style=\"width:500px\">\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
     "project_template_level_name": "CSDU2 - Images Template_2023",
     "instructions_important": "false",
     "encrypted_examples": "QN8odnvt87AWZ3ZZ+5IHZi97UVfVeKG/0rQlgDghTFE0aLFKTs1VlHQmastS\nHQzQyDni750m1fVKyoVIzuhp2w==\n",
@@ -36,6 +36,6 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:23:04.588+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag 2_2022\\\"\"],\"cloned_from\":\"CSD U2 Image Tag 2_2022\"},{\"changed_at\":\"2023-02-21 23:38:56 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:23:04.588+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag 2_2022\\\"\"],\"cloned_from\":\"CSD U2 Image Tag 2_2022\"},{\"changed_at\":\"2023-02-21 23:38:56 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 22:00:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
