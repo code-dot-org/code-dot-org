@@ -25,7 +25,7 @@ export default function SingleSectionSetUp({
         />
       </label>
       <MultiSelectGroup
-        label="Grade (choose at least one)"
+        label={i18n.chooseGrades()}
         name="grades"
         required={true}
         options={gradeOptions}
