@@ -119,6 +119,9 @@
         "csd-2022/velocity": {
           "display_name": "Tezlik"
         },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
+        },
         "csd-2022/which-type-of-chart": {
           "content": "\\[] [0]"
         }

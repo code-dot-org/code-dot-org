@@ -137,7 +137,7 @@
   "craft17-kiki": "craft17-kiki",
   "new-d": "new-d",
   "all-the-plc-things": "all-the-plc-things",
-  "self-paced-pl-csp-2021": "self-paced-pl-csp-2021",
+  "self-paced-pl-csp-2021": "Teaching CS Principles",
   "virtual-holding-place": "virtual-holding-place",
   "fit-weekend-in-person": "fit-weekend-in-person",
   "cspunit2": "cspunit2",
@@ -304,7 +304,7 @@
   "test-wednesday": "test-wednesday",
   "time4cs-experiment": "time4cs-experiment",
   "pwc": "pwc",
-  "self-paced-pl-csd-2021": "self-paced-pl-csd-2021",
+  "self-paced-pl-csd-2021": "Teaching CS Discoveries",
   "course4pre": "course4pre",
   "cspunit6draft": "cspunit6draft",
   "cs-in-algebra-support": "cs-in-algebra-support",
@@ -382,7 +382,7 @@
   "csd5": "csd5",
   "csc-landmarks-pilot": "csc-landmarks-pilot",
   "csc-bookcover": "csc-bookcover",
-  "self-paced-pl-physical-computing": "self-paced-pl-physical-computing",
+  "self-paced-pl-physical-computing": "Teaching Creating Apps with Devices",
   "amys-playground": "amys-playground",
   "csc-function-machines-pilot": "csc-function-machines-pilot",
   "emmas-playground": "emmas-playground",
@@ -396,5 +396,10 @@
   "csc-pilot-fa2022-particles": "csc-pilot-fa2022-particles",
   "devices": "Creating Apps for Devices",
   "allthevalidation": "allthevalidation",
-  "katies-playground": "katies-playground"
+  "katies-playground": "katies-playground",
+  "microbit": "microbit",
+  "microbit-temp": "microbit-temp",
+  "csc-mappinglandmarks": "csc-mappinglandmarks",
+  "blockchain": "Blockchain",
+  "self-paced-pl-csc": "self-paced-pl-csc"
 }

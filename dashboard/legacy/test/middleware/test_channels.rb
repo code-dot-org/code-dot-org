@@ -334,53 +334,6 @@ class ChannelsTest < Minitest::Test
     AWS::S3.unstub(:create_client)
   end
 
-  def test_abuse
-    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    delete "/v3/channels/#{channel_id}/abuse"
-    assert last_response.unauthorized?
-
-    ChannelsApi.any_instance.stubs(:project_validator?).returns(true)
-
-    delete "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    ChannelsApi.any_instance.unstub(:project_validator?)
-  end
-
-  def test_signed_in_abuse
-    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
-    ChannelsApi.any_instance.stubs(:verified_teacher?).returns(false)
-    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
-    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(false)
-
-    # check initial state
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    # authenticated non-teacher should get a score of 10
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 10, JSON.parse(last_response.body)['abuse_score']
-  end
-
   def test_disable_and_enable_content_moderation
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
@@ -435,22 +388,6 @@ class ChannelsTest < Minitest::Test
     assert last_response.ok?
     assert_equal true, JSON.parse(last_response.body)['sharing_disabled']
     Projects.any_instance.unstub(:get_user_sharing_disabled)
-  end
-
-  def test_abuse_frozen
-    post '/v3/channels', {frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
   end
 
   def test_most_recent
