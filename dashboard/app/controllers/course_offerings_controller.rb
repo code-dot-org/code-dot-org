@@ -25,7 +25,7 @@ class CourseOfferingsController < ApplicationController
   def quick_assign_course_offerings
     return head :forbidden unless current_user
 
-    offerings = CourseOffering.quick_assign_course_offerings(current_user, request.locale)
+    offerings = QuickAssignHelper.course_offerings(current_user, request.locale)
     render :ok, json: offerings.to_json
   end
 
