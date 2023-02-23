@@ -303,6 +303,10 @@ function handleExecutionError(err, lineNumber, outputString, libraryName) {
   }
 }
 
+function isCurriculumLevel(validationEnabled) {
+  return validationEnabled === undefined ? false : true;
+}
+
 Applab.getCode = function() {
   return studioApp().getCode();
 };
@@ -677,7 +681,8 @@ Applab.init = function(config) {
     showMakerToggle:
       !!config.level.isProjectLevel || config.level.makerlabEnabled,
     validationEnabled: !!config.level.validationEnabled,
-    widgetMode: config.level.widgetMode
+    widgetMode: config.level.widgetMode,
+    isCurriculumLevel: isCurriculumLevel(config.level.validationEnabled)
   });
 
   config.dropletConfig = dropletConfig;
