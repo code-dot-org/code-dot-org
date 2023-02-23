@@ -23,6 +23,8 @@ module Pd
       SUBJECT_VIRTUAL_KICKOFF => 'surveys/pd/ayw_kickoff_call'
     }
 
+    FACILITATOR_POST_SURVEY_CONFIG_PATH = 'surveys/pd/csd_csp_facilitator_post_survey'
+
     PRE_SURVEY_CONFIG_PATHS = {
       SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_pre_survey',
       SUBJECT_CSF_201 => 'surveys/pd/csf_deep_dive_pre',
