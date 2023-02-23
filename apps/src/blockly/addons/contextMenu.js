@@ -1,11 +1,14 @@
 import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
-
 import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants.js';
+
+// Some options are only available to levelbuilders via start mode.
+// Literal strings are used for display text instead of translatable strings
+// as Levelbuilder can only be used in English.
 const registerDeletable = function() {
   const deletableOption = {
     displayText: function(scope) {
-      // isDeletale is a built in Blockly function that checks whether the block
+      // isDeletable is a built in Blockly function that checks whether the block
       // is deletable, is not a shadow, and if the workspace is readonly.
       return scope.block.isDeletable()
         ? 'Make Undeletable to Users'
@@ -206,6 +209,38 @@ function registerThemes(themes) {
     registerTheme(theme.name, theme.label, index);
   });
 }
+
+/**
+ * Change workspace theme to CdoAccessibleTheme
+ */
+const registerAccessibleTheme = function() {
+  const accessibleThemeOption = {
+    displayText: function(scope) {
+      return (
+        (isCurrentTheme(Themes.ACCESSIBLE, scope.workspace)
+          ? '✓ '
+          : `${msg.enable()} `) + msg.blocklyAccessibleTheme()
+      );
+    },
+    preconditionFn: function(scope) {
+      if (isMusicLabTheme(scope.workspace)) {
+        return MenuOptionStates.HIDDEN;
+      } else if (isCurrentTheme(Themes.ACCESSIBLE, scope.workspace)) {
+        return MenuOptionStates.DISABLED;
+      } else {
+        return MenuOptionStates.ENABLED;
+      }
+    },
+    callback: function(scope) {
+      localStorage.setItem(BLOCKLY_THEME, Themes.ACCESSIBLE);
+      scope.workspace.setTheme(Blockly.themes[Themes.ACCESSIBLE]);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'accessibleTheme',
+    weight: 15
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(accessibleThemeOption);
+};
 
 const registerAllContextMenuItems = function() {
   registerDeletable();

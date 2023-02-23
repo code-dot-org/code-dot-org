@@ -2,7 +2,7 @@ require_relative '../../../deployment'
 require 'digest'
 require 'securerandom'
 require 'cdo/http_cache'
-require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
+require 'cdo/legacy_varnish_helpers'
 require 'active_support/core_ext/object/try'
 
 # Manages application-specific configuration of AWS CloudFront distributions.
@@ -234,7 +234,7 @@ module AWS
       behaviors = config[:behaviors].map do |behavior|
         paths = behavior[:path]
         paths = [paths] unless paths.is_a? Array
-        validate_paths paths
+        LegacyVarnishHelpers.validate_paths paths
         paths.map do |path|
           cache_behavior(behavior, path)
         end

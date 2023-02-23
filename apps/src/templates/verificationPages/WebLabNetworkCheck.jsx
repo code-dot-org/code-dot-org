@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {
+  BRAMBLE_READY_STATE,
+  FILE_SYSTEM_ERROR,
+  SUPPORT_ARTICLE_URL
+} from '../../weblab/constants';
 import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
 
@@ -27,6 +32,7 @@ class WebLabNetworkCheck extends Component {
       [STATUS_CODE_PROJECTS]: Status.WAITING,
       [STATUS_COMPUTING_IN_THE_CORE]: Status.WAITING,
       [STATUS_BRAMBLE_MOUNTABLE]: Status.WAITING,
+      encounteredFileSystemError: false,
       runButtonDisabled: false,
       renderCallToAction: false,
       iframeSrc: 'about:blank'
@@ -46,19 +52,30 @@ class WebLabNetworkCheck extends Component {
   };
 
   updateBrambleStatus = (event = {}) => {
-    let message;
+    // Only react to events if we're attempting the Bramble test
+    // and we receive and event from the appropriate origin
+    if (
+      !event.origin === this.props.studioUrl ||
+      !this.state[STATUS_BRAMBLE_MOUNTABLE] === Status.ATTEMPTING
+    ) {
+      return;
+    }
+
+    let data;
     try {
-      message = JSON.parse(event.data);
+      data = JSON.parse(event.data);
     } catch (err) {
       console.log(err);
     }
 
-    if (
-      event.origin === this.props.studioUrl &&
-      message?.type === 'bramble:readyToMount' &&
-      this.state[STATUS_BRAMBLE_MOUNTABLE] === Status.ATTEMPTING
-    ) {
-      this.setState({[STATUS_BRAMBLE_MOUNTABLE]: Status.SUCCEEDED});
+    // These two are mutually exclusive -- if there's a filesystem
+    // error, Bramble will not reach the ready state
+    if (data?.msg === FILE_SYSTEM_ERROR) {
+      this.setState({encounteredFileSystemError: true});
+    } else if (data?.msg === BRAMBLE_READY_STATE) {
+      this.setState({
+        [STATUS_BRAMBLE_MOUNTABLE]: Status.SUCCEEDED
+      });
     }
   };
 
@@ -100,6 +117,7 @@ class WebLabNetworkCheck extends Component {
         [STATUS_COMPUTING_IN_THE_CORE]: Status.ATTEMPTING,
         [STATUS_CODE_PROJECTS]: Status.ATTEMPTING,
         [STATUS_BRAMBLE_MOUNTABLE]: Status.ATTEMPTING,
+        encounteredFileSystemError: false,
         runButtonDisabled: true,
         renderCallToAction: false,
         iframeSrc: WEBLAB_URL
@@ -133,6 +151,43 @@ class WebLabNetworkCheck extends Component {
     }`}</p>
   );
 
+  listActionItems = () => {
+    let actionItems = [];
+
+    if (
+      [
+        this.state[STATUS_CODE_PROJECTS],
+        this.state[STATUS_COMPUTING_IN_THE_CORE]
+      ].includes(Status.FAILED)
+    ) {
+      actionItems.push(
+        <li key="domain-access">
+          Please work with your IT department to ensure your devices allow full
+          access (including cookies) for https://codeprojects.org/ and
+          https://downloads.computinginthecore.org/.
+        </li>
+      );
+    }
+
+    if (this.state.encounteredFileSystemError) {
+      actionItems.push(
+        <li key="private-browsing">
+          Please make sure you are not using private browsing/incognito mode to
+          access Web Lab. Web Lab is known not to work in these modes for most
+          browsers.
+        </li>,
+        <li key="reset-indexed-db">
+          Web Lab depends on a browser feature called the IndexedDB API.
+          Occasionally this feature gets "stuck" and must be reset. Try loading
+          a Web Lab level, and if you see an error dialog, click the button that
+          says "Reset Web Lab."
+        </li>
+      );
+    }
+
+    return actionItems;
+  };
+
   renderCallToAction = () => {
     const testFailed = [
       STATUS_CODE_PROJECTS,
@@ -140,18 +195,31 @@ class WebLabNetworkCheck extends Component {
       STATUS_BRAMBLE_MOUNTABLE
     ].some(test => this.state[test] !== Status.SUCCEEDED);
 
+    const actionItems = this.listActionItems();
+
     if (testFailed) {
       return (
         <div>
           <p>
             <strong>Error. One or more checks failed.</strong>
           </p>
+          {!!actionItems.length && (
+            <React.Fragment>
+              <p>
+                <strong>
+                  Based on the results of this test, we recommend the following
+                  steps:{' '}
+                </strong>
+              </p>
+              <ul>{actionItems}</ul>
+            </React.Fragment>
+          )}
           <p>
-            <strong>Action required: </strong>
-            Please contact your IT department to update your school’s firewall
-            settings or device policies. Contact our Support Team (
-            <a href="mailto:support@code.org">support@code.org</a>) if you have
-            any questions.
+            For more troubleshooting information, see our support article on{' '}
+            <a href={SUPPORT_ARTICLE_URL}>Troubleshooting Web Lab problems</a>.
+            You may also contact our Support Team (
+            <a href="mailto:support@code.org">support@code.org</a>) for further
+            assistance.
           </p>
         </div>
       );
@@ -182,9 +250,11 @@ class WebLabNetworkCheck extends Component {
             When checking network support, try to meet as many of these criteria
             as possible:
           </p>
-          <li>Use your school's internet connection</li>
-          <li>Use a student computer</li>
-          <li>Log into the computer with a student account</li>
+          <ul>
+            <li>Use your school's internet connection</li>
+            <li>Use a student computer</li>
+            <li>Log into the computer with a student account</li>
+          </ul>
           <br />
           <p>
             Note: You do not need to be logged in to Code.org for this test to

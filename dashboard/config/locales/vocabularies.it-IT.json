@@ -844,8 +844,17 @@
           "word": "Binario",
           "definition": "Un modo di rappresentare i dati usando solo due opzioni."
         },
+        "computer/csd/2022": {
+          "word": "Computer",
+          "definition": "Una macchina che elabora dati."
+        },
         "input/csd/2022": {
-          "word": "Input"
+          "word": "Input",
+          "definition": "i dati che i computer ricevono da utenti, dispositivi o altri computer"
+        },
+        "output/csd/2022": {
+          "word": "Output",
+          "definition": "i dati che i computer mettono a disposizione di utenti, dispositivi o altri computer"
         },
         "processing/csd/2022": {
           "word": "Elaborazione"
@@ -1493,8 +1502,17 @@
         "function/csd/2021": {
           "word": "Funzione"
         },
+        "computer/csd/2021": {
+          "word": "Computer",
+          "definition": "Una macchina che elabora dati."
+        },
         "input/csd/2021": {
-          "word": "Input"
+          "word": "Input",
+          "definition": "i dati che i computer ricevono da utenti, dispositivi o altri computer"
+        },
+        "output/csd/2021": {
+          "word": "Output",
+          "definition": "i dati che i computer mettono a disposizione di utenti, dispositivi o altri computer"
         },
         "processing/csd/2021": {
           "word": "Elaborazione"
