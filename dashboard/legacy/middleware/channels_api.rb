@@ -406,13 +406,6 @@ class ChannelsApi < Sinatra::Base
     not_authorized unless owns_channel?(channel_id)
     bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
     forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    return unless RESTRICTED_PUBLISH_PROJECT_TYPES.include?(project_type)
-
-    # Check for restricted share mode. If we are in restricted share mode, it means we cannot publish.
-    source_data = SourceBucket.new.get(channel_id, "main.json")
-    return unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
-    source_body = source_data[:body].string
-    project_src = ProjectSourceJson.new(source_body)
-    forbidden if project_src.in_restricted_share_mode?
+    forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
   end
 end
