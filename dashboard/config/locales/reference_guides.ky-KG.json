@@ -19,6 +19,9 @@
         },
         "csd-2022/variables": {
           "display_name": "Өзгөрмөлөр"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
         }
       }
     }

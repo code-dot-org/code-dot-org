@@ -288,7 +288,12 @@ class LevelsController < ApplicationController
     @level.log_changes(current_user)
 
     if @level.save
-      redirect = params["redirect"] || level_url(@level, show_callouts: 1)
+      reset = !!params[:reset]
+      redirect = if reset
+                   params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+                 else
+                   params["redirect"] || level_url(@level, show_callouts: 1)
+                 end
       render json: {redirect: redirect}
     else
       log_save_error(@level)

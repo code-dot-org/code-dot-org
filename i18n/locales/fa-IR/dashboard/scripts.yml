@@ -1420,6 +1420,10 @@ fa:
           lessons:
             lesson-3:
               name: حلقه های "برای"
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: تصادفی
         hello-world-space-2022:
           title: 'سلام دنیا: فضا'
         hello-world-soccer-2022:
@@ -1456,3 +1460,5 @@ fa:
               display_name: حلقه‌ها
             lessonGroup-5:
               display_name: پروژه
+        self-paced-pl-csc-2023:
+          title: آموزش هوش مصنوعی و یادگیری ماشینی

@@ -3306,6 +3306,12 @@ sk:
               display_name: Obsah
             lessonGroup-4:
               display_name: Alternatívne lekcie
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-4:
+              display_name: Alternatívne lekcie
         hello-world-space-2022:
           title: 'Ahoj Svet: Vesmír'
         hello-world-soccer-2022:

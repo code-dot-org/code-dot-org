@@ -2,8 +2,8 @@ name 'CSA U5 Assessment 2022 q02'
 
 wrong '`2`'
 wrong '`3`'
-wrong '`4`'
-right '`5`'
+right '`4`'
+wrong '`5`'
 wrong '`6`'
 
 markdown <<MARKDOWN
@@ -16,7 +16,6 @@ public static int mystery(int[][] arr) {
   for (int j = 0; j < arr[0].length; j++) {
     for (int i = 0; i < arr.length; i++) {
       if ((arr[i][j] / 2) % 2 == 0) {
-        return arr[i][j];
         count++;
       }
     }
