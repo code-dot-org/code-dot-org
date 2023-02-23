@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import SingleSectionSetUp from './SingleSectionSetUp';
+import CurriculumQuickAssign from './CurriculumQuickAssign';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 
@@ -44,6 +45,7 @@ export default function SectionsSetUpContainer() {
         section={sections[0]}
         updateSection={(key, val) => updateSection(0, key, val)}
       />
+      <CurriculumQuickAssign />
       <div className={moduleStyles.buttonsContainer}>
         <Button
           icon="plus"

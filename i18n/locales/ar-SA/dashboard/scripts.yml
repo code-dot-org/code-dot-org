@@ -4166,6 +4166,12 @@ ar:
               display_name: محتوى
             lessonGroup-4:
               display_name: دروس بديلة
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-4:
+              display_name: دروس بديلة
         hello-world-space-2022:
           title: 'مرحبا بالعالم: الفضاء'
         hello-world-soccer-2022:

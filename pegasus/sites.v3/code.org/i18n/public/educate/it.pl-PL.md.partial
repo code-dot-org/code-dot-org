@@ -101,7 +101,7 @@ Korzystamy z [YouTube](https://www.youtube.com), aby umieszczać filmy w Code.or
 
 Zanim rozpoczniesz kursy online Code.org, przetestuj odtwarzanie poniższego filmu, aby upewnić się, że jesteś gotowy do pracy.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Jest to odtwarzacz używany w całym programie nauczania. Spróbuje wyświetlić wideo przez YouTube, a jeśli YouTube jest zablokowany, pokaże wideo hostowane na Code.org, korzystając z naszego odtwarzacza „zastępczego”.
 
