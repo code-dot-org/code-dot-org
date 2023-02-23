@@ -1,16 +1,37 @@
 import GoogleBlockly from 'blockly/core';
 
+// The colors here come Martin Krzywinski's 24-color palette for colorblindness:
+// http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#15-color-palette-for-colorbliness
+// http://mkweb.bcgsc.ca/colorblind/palettes/24.color.blindness.palette.txt
+// Each color in our standard palette was mapped to a new "nearest" color from the safe palette.
+// For now, this is a manual process but we could also automate this using:
+// https://github.com/dtao/nearest-color
+
 // Intentionally overriden styles from Google Blockly.
-// We do not override list, logic math, text, or variable blocks.
 const coreBlocklyOverrides = {
   colour_blocks: {
     colourPrimary: '#009FFA'
   },
+  list_blocks: {
+    colourPrimary: '#6B069F'
+  },
+  logic_blocks: {
+    colourPrimary: '#005FCC'
+  },
   loop_blocks: {
     colourPrimary: '#FF2E95'
   },
+  math_blocks: {
+    colourPrimary: '#00489E'
+  },
   procedure_blocks: {
     colourPrimary: '#009503'
+  },
+  text_blocks: {
+    colourPrimary: '#009175'
+  },
+  variable_blocks: {
+    colourPrimary: '#AB0D61'
   }
 };
 
