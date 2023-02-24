@@ -56,13 +56,28 @@ class PublishDialog extends Component {
     this.setState({publishFailedStatus: err.status});
   };
 
-  render() {
-    const {projectType, isOpen, isPublishPending} = this.props;
+  getErrorMessage = () => {
     const {publishFailedStatus} = this.state;
-    const showRestrictedShareError =
+    const {projectType} = this.props;
+    if (!publishFailedStatus) {
+      return null;
+    } else if (
       publishFailedStatus === 403 &&
-      RestrictedPublishProjectTypes.includes(projectType);
-    const showGenericError = !showRestrictedShareError && publishFailedStatus;
+      RestrictedPublishProjectTypes.includes(projectType)
+    ) {
+      return i18n.publishFailedRestrictedShare();
+    } else if (publishFailedStatus === 403) {
+      return i18n.publishFailedForbidden();
+    } else if (publishFailedStatus === 400 || publishFailedStatus === 401) {
+      return i18n.publishFailedNotAllowed();
+    } else {
+      return i18n.publishFailedError();
+    }
+  };
+
+  render() {
+    const {isOpen, isPublishPending} = this.props;
+    const errorMessage = this.getErrorMessage();
     return (
       <BaseDialog
         isOpen={isOpen}
@@ -76,12 +91,7 @@ class PublishDialog extends Component {
         <div style={{marginBottom: 10}}>
           {i18n.publishToPublicGalleryWarning()}
         </div>
-        {showRestrictedShareError && (
-          <div style={styles.error}>{i18n.publishFailedRestrictedShare()}</div>
-        )}
-        {showGenericError && (
-          <div style={styles.error}>{i18n.publishFailedError()}</div>
-        )}
+        {errorMessage && <div style={styles.error}>{errorMessage}</div>}
         <DialogFooter>
           <Button
             text={i18n.dialogCancel()}
