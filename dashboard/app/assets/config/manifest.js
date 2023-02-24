@@ -6,3 +6,11 @@
 //= link application.css
 //= link application.js
 //= link_tree ../images
+
+//= link_tree ../../../public/blockly/js
+//= link_tree ../../../public/blockly/css .css
+//= link_directory ../stylesheets/levels .css
+//= link jquery.handsontable.full.css
+//= link emulate-print-media.js
+//= link jquery.handsontable.full.js
+//= link_directory ../../../public/blockly/video-js .css
