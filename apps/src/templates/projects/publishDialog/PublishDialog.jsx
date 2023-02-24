@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import BaseDialog from '../../BaseDialog';
-import DialogFooter from '../../teacherDashboard/DialogFooter';
-import Button from '../../Button';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {hidePublishDialog, publishProject} from './publishDialogRedux';
-import {RestrictedPublishProjectTypes} from '../../../util/sharedConstants';
-import color from '../../../util/color';
+import {RestrictedPublishProjectTypes} from '@cdo/apps/util/sharedConstants';
+import color from '@cdo/apps/util/color';
 
 class PublishDialog extends Component {
   static propTypes = {
@@ -31,28 +31,38 @@ class PublishDialog extends Component {
     afterPublish: PropTypes.func
   };
 
+  state = {
+    publishFailedStatus: null
+  };
+
   confirm = () => {
+    this.setState({publishFailedStatus: null});
     if (this.props.onConfirmPublishOverride) {
       this.props.onConfirmPublishOverride();
       return;
     }
     this.props
       .onConfirmPublish(this.props.projectId, this.props.projectType)
-      .then(this.props.afterPublish);
+      .then(this.props.afterPublish)
+      .catch(this.onPublishError);
   };
 
-  close = () => this.props.onClose();
+  close = () => {
+    this.setState({publishFailedStatus: null});
+    this.props.onClose();
+  };
+
+  onPublishError = err => {
+    this.setState({publishFailedStatus: err.status});
+  };
 
   render() {
-    const {
-      projectType,
-      publishFailedStatus,
-      isOpen,
-      isPublishPending
-    } = this.props;
+    const {projectType, isOpen, isPublishPending} = this.props;
+    const {publishFailedStatus} = this.state;
     const showRestrictedShareError =
       publishFailedStatus === 403 &&
       RestrictedPublishProjectTypes.includes(projectType);
+    const showGenericError = !showRestrictedShareError && publishFailedStatus;
     return (
       <BaseDialog
         isOpen={isOpen}
@@ -68,6 +78,9 @@ class PublishDialog extends Component {
         </div>
         {showRestrictedShareError && (
           <div style={styles.error}>{i18n.publishFailedRestrictedShare()}</div>
+        )}
+        {showGenericError && (
+          <div style={styles.error}>{i18n.publishFailedError()}</div>
         )}
         <DialogFooter>
           <Button

@@ -1738,6 +1738,7 @@
   "provideEmail": "Please provide an email address",
   "providerManagedSection": "This section is managed by {provider}. Add students there, then re-sync this section.",
   "publish": "Publish",
+  "publishFailedError": "We could not save your project. Please try again.",
   "publishFailedRestrictedShare": "Publish failed. Projects with uploaded images cannot be published.",
   "publishPending": "Publishing...",
   "publishToClassGallery": "Publish to Class Gallery",
