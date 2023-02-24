@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-02-22 23:05:19 UTC",
+    "serialized_at": "2023-02-24 00:56:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1114,6 +1114,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_behavior_2023"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1261,15 +1264,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_landmarks_makesprite_2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_landmarks_makesprite_2023"
+          "csc_landmarks_tourguide_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
@@ -1277,7 +1277,7 @@
         "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
       },
       "level_keys": [
-        "csc_landmarks_makesprite_2023"
+        "csc_landmarks_tourguide_2023"
       ]
     },
     {
@@ -1286,15 +1286,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_landmarks_location_2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_landmarks_location_2023"
+          "csc_landmarks_behaviors_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
@@ -1302,7 +1299,7 @@
         "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
       },
       "level_keys": [
-        "csc_landmarks_location_2023"
+        "csc_landmarks_behaviors_2023"
       ]
     },
     {
@@ -1311,15 +1308,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_landmarks_place1_2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_landmarks_place1_2023"
+          "student_sprite_management"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
@@ -1327,161 +1321,77 @@
         "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
       },
       "level_keys": [
-        "csc_landmarks_place1_2023"
+        "student_sprite_management"
       ]
     },
     {
       "chapter": 15,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_landmarks_place2_2023"
-        ],
-        "progression": "Landmarks & Events"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_landmarks_place2_2023"
+          "csc_landmarks_places1_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
       },
       "level_keys": [
-        "csc_landmarks_place2_2023"
+        "csc_landmarks_places1_2023"
       ]
     },
     {
       "chapter": 16,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_landmarks_touches1_2023"
-        ],
-        "progression": "Landmarks & Events"
+        "progression": "Student Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_landmarks_touches1_2023"
+          "csc_landmarks_events_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
       },
       "level_keys": [
-        "csc_landmarks_touches1_2023"
+        "csc_landmarks_events_2023"
       ]
     },
     {
       "chapter": 17,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_landmarks_touches2_2023"
-        ],
-        "progression": "Landmarks & Events"
+        "progression": "Student Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_landmarks_touches2_2023"
+          "csc_landmarks_finalproject_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
       },
       "level_keys": [
-        "csc_landmarks_touches2_2023"
+        "csc_landmarks_finalproject_2023"
       ]
     },
     {
       "chapter": 18,
-      "position": 8,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_makesprite3_2023"
-        ],
-        "progression": "Landmarks & Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_makesprite3_2023"
-        ],
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "lesson_group.key": "",
-        "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
-      },
-      "level_keys": [
-        "csc_landmarks_makesprite3_2023"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 9,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_touches3_2023"
-        ],
-        "progression": "Landmarks & Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_touches3_2023"
-        ],
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "lesson_group.key": "",
-        "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
-      },
-      "level_keys": [
-        "csc_landmarks_touches3_2023"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 10,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_freeplay_2023"
-        ],
-        "progression": "Landmarks & Events"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_freeplay_2023"
-        ],
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "lesson_group.key": "",
-        "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
-      },
-      "level_keys": [
-        "csc_landmarks_freeplay_2023"
-      ]
-    },
-    {
-      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1641,9 +1551,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_landmarks_makesprite_2023",
+        "level.key": "csc_landmarks_tourguide_2023",
         "script_level.level_keys": [
-          "csc_landmarks_makesprite_2023"
+          "csc_landmarks_tourguide_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
@@ -1653,9 +1563,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_landmarks_location_2023",
+        "level.key": "csc_landmarks_behaviors_2023",
         "script_level.level_keys": [
-          "csc_landmarks_location_2023"
+          "csc_landmarks_behaviors_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
@@ -1665,9 +1575,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_landmarks_place1_2023",
+        "level.key": "student_sprite_management",
         "script_level.level_keys": [
-          "csc_landmarks_place1_2023"
+          "student_sprite_management"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
@@ -1677,74 +1587,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_landmarks_place2_2023",
+        "level.key": "csc_landmarks_places1_2023",
         "script_level.level_keys": [
-          "csc_landmarks_place2_2023"
+          "csc_landmarks_places1_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
       }
     },
     {
       "seeding_key": {
-        "level.key": "csc_landmarks_touches1_2023",
+        "level.key": "csc_landmarks_events_2023",
         "script_level.level_keys": [
-          "csc_landmarks_touches1_2023"
+          "csc_landmarks_events_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
       }
     },
     {
       "seeding_key": {
-        "level.key": "csc_landmarks_touches2_2023",
+        "level.key": "csc_landmarks_finalproject_2023",
         "script_level.level_keys": [
-          "csc_landmarks_touches2_2023"
+          "csc_landmarks_finalproject_2023"
         ],
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_makesprite3_2023",
-        "script_level.level_keys": [
-          "csc_landmarks_makesprite3_2023"
-        ],
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "lesson_group.key": "",
-        "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_touches3_2023",
-        "script_level.level_keys": [
-          "csc_landmarks_touches3_2023"
-        ],
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "lesson_group.key": "",
-        "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_freeplay_2023",
-        "script_level.level_keys": [
-          "csc_landmarks_freeplay_2023"
-        ],
-        "lesson.key": "Local Landmarks - Coding Your Project",
-        "lesson_group.key": "",
-        "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "61029c87-095e-46cf-8cd6-f6f4d8146372"
+        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
       }
     },
     {
