@@ -21,13 +21,13 @@ describe('SectionsSetUpContainer', () => {
         .find('Button')
         .at(0)
         .props().text
-    ).to.equal('Add Another Class Section');
+    ).to.equal('Save and add another class section');
     expect(
       wrapper
         .find('Button')
         .at(1)
         .props().text
-    ).to.equal('Save class sections');
+    ).to.equal('Finish creating sections');
   });
 
   it('renders curriculum quick assign', () => {
