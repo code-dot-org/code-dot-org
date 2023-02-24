@@ -3,7 +3,7 @@ import msg from '@cdo/poetry/locale';
 import {POEMS, PoetryStandaloneApp, TIME_CAPSULE_POEMS} from './constants';
 
 export function getPoem(key) {
-  const poemList = getPoems(appOptions.level.standaloneAppName);
+  const poemList = getPoems();
   if (!key || !poemList[key]) {
     return undefined;
   }
