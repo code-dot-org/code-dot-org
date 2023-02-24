@@ -462,7 +462,10 @@ class Blockly < Level
       element.content = localized_text if localized_text
     end
 
-    start_html_xml.serialize(save_with: XML_OPTIONS).strip
+    start_html_xml.serialize(
+      save_with: XML_OPTIONS | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS,
+      encoding: 'UTF-8'
+    ).strip
   end
 
   def localized_authored_hints
