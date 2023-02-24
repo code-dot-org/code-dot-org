@@ -25,12 +25,6 @@ DialogOpenPublishPending.args = {
   isPublishPending: true
 };
 
-export const DialogOpenPublishForbidden = Template.bind({});
-DialogOpenPublishForbidden.args = {
-  publishFailedStatus: 403,
-  projectType: 'spritelab'
-};
-
 export default {
   title: 'PublishDialog',
   component: PublishDialog
