@@ -720,69 +720,65 @@ export class DetailViewContents extends React.Component {
   };
 
   renderDetailViewTableLayout = () => {
-    const sectionsToRemove = ['additionalDemographicInformation'];
     const questionsToRemove = ['genderIdentity', 'race'];
 
     return (
       <div>
-        {_.pull(Object.keys(this.sectionHeaders), ...sectionsToRemove).map(
-          (header, i) => (
-            <div key={i}>
-              <h3>{this.sectionHeaders[header]}</h3>
-              {header === 'administratorInformation' &&
-                this.renderModifyPrincipalApprovalSection()}
-              <Table style={styles.detailViewTable} striped bordered>
-                <tbody>
-                  {_.pull(
-                    Object.keys(this.pageLabels[header]),
-                    ...questionsToRemove
-                  ).map((key, j) => {
-                    // If the enoughCourseHours question, insert variable values.
-                    // Otherwise, just show the question's label.
-                    const questionLabel =
-                      key === 'enoughCourseHours'
-                        ? this.labelOverrides[key]
-                            .replace(
-                              '{{CS program}}',
-                              getProgramInfo(
-                                PROGRAM_MAP[this.props.applicationData.course]
-                              ).name
-                            )
-                            .replace(
-                              '{{min hours}}',
-                              getProgramInfo(
-                                PROGRAM_MAP[this.props.applicationData.course]
-                              ).minCourseHours
-                            )
-                        : this.labelOverrides[key] ||
-                          this.pageLabels[header][key];
-                    return (
-                      // For most fields, render them only when they have values.
-                      // For explicitly listed fields, render them regardless of their values.
-                      (this.props.applicationData.form_data[key] ||
-                        key === 'alternateEmail' ||
-                        header ===
-                          'schoolStatsAndPrincipalApprovalSection') && (
-                        <tr key={j}>
-                          <td style={styles.questionColumn}>
-                            <InlineMarkdown markdown={questionLabel} />
-                          </td>
-                          <td style={styles.answerColumn}>
-                            {this.renderAnswer(
-                              key,
-                              this.props.applicationData.form_data[key]
-                            )}
-                          </td>
-                          {this.renderScoringSection(key)}
-                        </tr>
-                      )
-                    );
-                  })}
-                </tbody>
-              </Table>
-            </div>
-          )
-        )}
+        {Object.keys(this.sectionHeaders).map((header, i) => (
+          <div key={i}>
+            <h3>{this.sectionHeaders[header]}</h3>
+            {header === 'administratorInformation' &&
+              this.renderModifyPrincipalApprovalSection()}
+            <Table style={styles.detailViewTable} striped bordered>
+              <tbody>
+                {_.pull(
+                  Object.keys(this.pageLabels[header]),
+                  ...questionsToRemove
+                ).map((key, j) => {
+                  // If the enoughCourseHours question, insert variable values.
+                  // Otherwise, just show the question's label.
+                  const questionLabel =
+                    key === 'enoughCourseHours'
+                      ? this.labelOverrides[key]
+                          .replace(
+                            '{{CS program}}',
+                            getProgramInfo(
+                              PROGRAM_MAP[this.props.applicationData.course]
+                            ).name
+                          )
+                          .replace(
+                            '{{min hours}}',
+                            getProgramInfo(
+                              PROGRAM_MAP[this.props.applicationData.course]
+                            ).minCourseHours
+                          )
+                      : this.labelOverrides[key] ||
+                        this.pageLabels[header][key];
+                  return (
+                    // For most fields, render them only when they have values.
+                    // For explicitly listed fields, render them regardless of their values.
+                    (this.props.applicationData.form_data[key] ||
+                      key === 'alternateEmail' ||
+                      header === 'schoolStatsAndPrincipalApprovalSection') && (
+                      <tr key={j}>
+                        <td style={styles.questionColumn}>
+                          <InlineMarkdown markdown={questionLabel} />
+                        </td>
+                        <td style={styles.answerColumn}>
+                          {this.renderAnswer(
+                            key,
+                            this.props.applicationData.form_data[key]
+                          )}
+                        </td>
+                        {this.renderScoringSection(key)}
+                      </tr>
+                    )
+                  );
+                })}
+              </tbody>
+            </Table>
+          </div>
+        ))}
       </div>
     );
   };
