@@ -1187,122 +1187,163 @@ tr-TR:
         - {}
         title: Bir Tahminde Bulun
       Dance_Party_extras_intro:
-        markdown: "# Dans etmeye devam edin!\n\n2. Bölüm için kendi projenizi oluşturacaksınız.Burada
-          bulmaca yok - bunun yerine daha karmaşık dans partileri yapmanın farklı
-          yollarını gösteren bir sürü proje var.\n\nHerhangi bir sırada bu seviyeleri
-          yapabilirsiniz.Önceki seviyede bir şeyin nasıl yapıldığına bakmak için etrafa
-          bakın veya projeler arasında kavramları birleştirin.Hepsini deneyin, favorilerinizi
-          seçin ve zamanınızı kendiniz harcamak için o projeye eklemeye çalışarak
-          geçirin.\n\n<a class=\"btn btn-large btn-primary next-stage submitButton
-          pull-right\">Devam</a> \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float:
-          left; margin:10px\">\n <a href=\"2\"> \n<h2>\n Geri ve İleri \n</h2> \n\n<img
-          src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>
-          \n\n</div>\n\n <div style=\"float: left; margin:10px\">\n <a href=\"3\">
-          \n<h2> \nDaha fazla düğme \n</h2> \n\n<img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>\n\n
-          </div>\n\n <div style=\"float: left; margin:10px\"> \n<a href=\"4\">\n <h2>
-          \nFormasyona Girin \n</h2>\n\n <img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
-          </div> \n\n<div style=\"float: left; margin:10px\"> \n<a href=\"5\">\n <h2>\n
-          Nereye gittiler?\n</h2>\n\n <img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
-          \n\n</div>\n\n <div style=\"float: left; margin:10px\"> \n<a href=\"6\">
-          \n<h2>\n Dans Ekipleri \n</h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n
-          </div> \n\n<div style=\"float: left; margin:10px\">\n <a href=\"7\">\n <h2>
-          \nÇeyrek Notları\n </h2> \n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
-          \n\n</div> \n\n<div style=\"float: left; margin:10px\">\n <a href=\"8\">\n
-          <h2> \nBas, Orta, Tiz \n</h2> \n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>
-          \n\n</div>\n\n <div style=\"float: left; margin:10px\"> \n\n<a href=\"9\">\n
-          <h2> \nHızlandırın, Yavaşlatın \n</h2>\n\n <img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>
-          \n\n</div>\n"
+        markdown: |-
+          # Dans etmeye devam edin!
+
+          2. Bölüm için kendi projenizi oluşturacaksınız.Burada bulmaca yok - bunun yerine daha karmaşık dans partileri yapmanın farklı yollarını gösteren bir sürü proje var.
+
+          Herhangi bir sırada bu seviyeleri yapabilirsiniz.Önceki seviyede bir şeyin nasıl yapıldığına bakmak için etrafa bakın veya projeler arasında kavramları birleştirin.Hepsini deneyin, favorilerinizi seçin ve zamanınızı kendi kendinize o projeye ekleme yaparak geçirin.
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Duruşa geçin
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Nereye gidecekler?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Dans grupları
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Çeyrek notları
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Bas, orta, tiz
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Hızlandır, yavaşlat.
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Dance_Party_extras_intro_2019:
         markdown: |
           "# Dans etmeye devam edin!
 
           Bölüm 2 için kendi projenizi oluşturacaksınız. Burada bulmaca yoktur - bunun yerine daha karmaşık dans partileri yapmanın farklı yollarını gösteren bir sürü proje vardır.
 
-          Herhangi bir sırada bu seviyeleri yapabilirsiniz. Önceki seviyede bir şeyin nasıl yapıldığına bakmak için etrafa atlayın veya projeler arasında kavramları birleştirin. Hepsini deneyin, favorilerinizi seçin ve zamanınızı kendiniz yapmak için o projeye eklemeye çalışarak geçirin.
+          Herhangi bir sırada bu seviyeleri yapabilirsiniz. Önceki seviyede bir şeyin nasıl yapıldığına bakmak için etrafa bakın veya projeler arasında kavramları birleştirin. Hepsini deneyin, favorilerinizi seçin ve zamanınızı kendiniz yapmak için o projeye eklemeye çalışarak geçirin.
 
-          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">Devam Et</a>
-
-          <div class=""clearfix""></div>
+          <div class="clearfix"></div>
 
 
-          <div style=""float: left; margin: 10px"">
-          <a href=""2"">
+          <div style="float: left; margin: 10px">
+          <a href="2">
           <h2>
           Geri ve İleri
           </h2>
 
-          <img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a>
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
 
           </div>
 
-          <div style=""float: left; margin: 10px"">
-          <a href=""3"">
+          <div style="float: left; margin: 10px">
+          <a href="3">
           <h2>
-          Daha Fazla Düğme
+          Daha çok düğmeler
           </h2>
 
-          <img src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a>
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
 
           </div>
-          <div style=""float: left; margin: 10px"">
-          <a href=""4"">
+          <div style="float: left; margin: 10px">
+          <a href="4">
           <h2>
-          Formasyona Girin
+          Hazır olun!
           </h2>
 
-          <img src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a>
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
 
           </div>
 
-          <div style=""float: left; margin: 10px"">
-          <a href=""5"">
+          <div style="float: left; margin: 10px">
+          <a href="5">
           <h2>
           Nereye gittiler?
           </h2>
 
-          <img src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a>
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
 
           </div>
 
-          <div style=""float: left; margin: 10px"">
-          <a href=""6"">
+          <div style="float: left; margin: 10px">
+          <a href="6">
           <h2>
           Dans Ekipleri
           </h2>
 
-          <img src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a>
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
 
           </div>
 
-          <div style=""float: left; margin: 10px"">
-          <a href=""7"">
+          <div style="float: left; margin: 10px">
+          <a href="7">
           <h2>
           Çeyrek Notları
           </h2>
 
-          <img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a>
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
 
           </div>
 
-          <div style=""float: left; margin: 10px"">
-          <a href=""8"">
+          <div style="float: left; margin: 10px">
+          <a href="8">
           <h2>
-          Bas, Orta, Tiz
+          Bas,Orta,Tiz
           </h2>
 
-          <img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a>
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
 
           </div>
 
-          <div style=""float: left; margin: 10px"">
-          <a href=""9"">
+          <div style="float: left; margin: 10px">
+          <a href="9">
           <h2>
-          Hızlandırın, Yavaşlatın
+          Hızlandır, Yavaşlat
           </h2>
 
-          <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
-          </div>"
+          </div>
       Internet Simulator Setup:
         content1: açıklama buraya
         markdown: "# Code.org'un İnternet Simülatörü\n\n_Not: Bu öğreticide listelenen
@@ -4149,7 +4190,7 @@ tr-TR:
         markdown: |-
           # Süper Dijital Vatandaş
 
-          ## Siber zorbalık gördüğümüzde nasıl karşı çıkabiliriz?
+          ## Siber zorbalık gördüğümüzde nasıl dik durabiliriz?
       csf_password_power-up:
         content1: açıklama buraya
         markdown: |-
@@ -4167,7 +4208,7 @@ tr-TR:
       csf_putting_a_stop_to_online_meanness:
         content1: açıklama buraya
         markdown: |
-          # STOP Kötülüğe DUR de
+          # Zorbalığı DURDUR
 
           ## İnternette biri sana kötü davranıyorsa ne yapmalısın?
 
@@ -5745,7 +5786,7 @@ tr-TR:
         markdown: |-
           # Dijital İzi Takip Edin
 
-          ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
+          ## Dijital ayak izinizde hangi bilgiler olması doğrudur?
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           # Çevrimiçi Komşum
@@ -5908,7 +5949,7 @@ tr-TR:
         markdown: |-
           #Grafik Kağıdı Programlama
 
-          Sınıf arkadaşlarınızı resimleri çizmek için kullanabileceği algoritmaları yazın.
+          Sınıf arkadaşlarınızın resimleri çizmek için kullanabileceği algoritmaları yazın.
       HappyMaps-Unplugged_2021:
         markdown: |-
           # Mutlu Haritalar
@@ -6000,8 +6041,7 @@ tr-TR:
           correct: true
           feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
             kadar yeterli sayıda ileri gitmiyor.
-        - text: Scrat palamuda ulaşmayacak çünkü yeteri kadar "ileri hareket" bloğu
-            yok.
+        - text: Scrat palamuda ulaşmayacak çünkü yeteri kadar "ilerle" bloğu yok.
           correct: true
           feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
             kadar yeterli sayıda ileri gitmiyor.
@@ -6033,7 +6073,7 @@ tr-TR:
         - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
           correct: true
           feedback: Doğru!
-        - text: BB-8 yalnızca 3 birim ilerler.
+        - text: BB-8 sadece 3 boşluk hareket edecek.
           feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
         questions:
         - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
@@ -6250,7 +6290,7 @@ tr-TR:
         - text: Kuş ilerleyecek ve TNT'ye çarpacak.
           feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
             dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
-        - text: Kuşlar yanlış yere dönüyor.
+        - text: Kuş yanlış yere döner.
           feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
             Bunu, domuza ulaşana kadar yapmaya devam eder!
         questions:
@@ -6355,8 +6395,8 @@ tr-TR:
           correct: true
           feedback: Doğru! İki davranış aynı anda olacak.
         - text: Hareketli nesne önce dönecek, sonra hareket edecek.
-          feedback: Yanlış. Hareketli Nesne Laboratuvarında bağlı bloklar, birbiri
-            ardından gerçekleşir. Dolayısıyla iki davranış aynı anda olacak.
+          feedback: Yanlış. Sprite Lab'ta bağlı bloklar, birbiri ardından gerçekleşir.
+            Dolayısıyla iki davranış aynı anda olacak.
         questions:
         - text: Kodu oku, sonra da bir tahminde bulun.
       courseF_labels_predict_multi:
@@ -6364,10 +6404,10 @@ tr-TR:
         - text: '"Bir pizza hemen geliyor!"'
           feedback: Yanlış. Değişken etiketleri eşleşmiyor.
         - text: '"Bir yemek hemen geliyor!"'
-          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
+          feedback: Yanlış. Değişkenin etiketi asla yazdırılmaz.
         - text: '"Bir yiyecek hemen geliyor!"'
-          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
-        - text: '"Bir  hemen geliyor!"'
+          feedback: Yanlış. Değişkenin etiketi asla yazdırılmaz.
+        - text: '"Biri  hemen geliyor!"'
           correct: true
           feedback: Doğru! Değişken etiketleri eşleşmiyor.
         - text: Hiçbir şey yazdırılmayacak.
@@ -6481,12 +6521,12 @@ tr-TR:
         markdown: |-
           # Süper Dijital Vatandaş
 
-          ## Siber zorbalık gördüğümüzde nasıl karşı çıkabiliriz?
+          ## Siber zorbalık gördüğümüzde nasıl dik durabiliriz?
       csf_digital_trails_2021:
         markdown: |-
           # Dijital İzi Takip Edin
 
-          ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
+          ## Dijital ayak izinizde hangi bilgiler olması doğrudur?
       csf_password_power-up_2021:
         content1: açıklama buraya
         markdown: |-
@@ -6540,11 +6580,11 @@ tr-TR:
         questions:
         - text: Bu koda dikkatlice bakın. Sizce program çalıştığında ne olacak?
       courseF_intro_apps:
-        description: Bilgisayar Bilimi Temelleri'ne hoş geldiniz! Bu projelerin tamamı
-          Hareketli Nesne Laboratuvarı ile hazırlandı. Neler mümkün olduğunu görmek
+        description: Bilgisayar Bilimi Temelleri(CS Fundamentals)'ne hoş geldiniz!
+          Bu projelerin tamamı SpriteLab ile hazırlandı. Neler mümkün olduğunu görmek
           için hemen deneyin. Bu kursu tamamladığınızda bunun gibi ve daha birçok
           proje yapabileceksiniz.
-        display_name: Hareketli Nesne Laboratuvarı Uygulamaları
+        display_name: SpriteLab Uygulamaları
         teacher_markdown: |-
           # Tercih Seviyesine Genel Bakış
           Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
@@ -6575,7 +6615,7 @@ tr-TR:
 
           Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Fırlat!|Uçmayı öğrenme|Fıçı tono yap|Küçült ve Büyüt|Balığı şişir!|Penguen hareket halinde|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Fırlat!|Uçmayı öğrenme|Fıçı dönüşü yap|Küçült ve Büyüt|Balığı şişir!|Penguen hareket halinde|
           |-|-|-|-|-|
           | ***Tür*** |**İnceleme**|**Debug**|**Hata Ayıklama**|**Debug**|**İsteğe Bağlı İçerik**|**İsteğe Bağlı İçerik**
           | ***Kavram***|*events, behaviors*|*olaylar, davranışlar*|*events, behaviors*|*olaylar, davranışlar*|*when/while events*|*when/while olayları*|
@@ -6621,12 +6661,12 @@ tr-TR:
         markdown: |-
           # Özel ve Kişisel Bilgiler
 
-          ## Kendinizle ilgili hangi bilgileri İnternette paylaşmak uygun?
+          ## Kendinizle ilgili hangi bilgileri çevrimiçi paylaşmak uygun?
       SimonSays-Unplugged_2021:
         markdown: |-
           # Algoritmayı İzle
 
-          Bir oyun oynayın ve doğru sonu elde etmek için hangi komutların gerektiğini düşünün
+          Bir oyun oynayın ve doğru sonuça ulaşmak için hangi komutların gerektiğini düşünün
       courseD_EOC_examples_2021:
         description: Son projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere
           bakmak için biraz zaman ayırın.
@@ -6651,7 +6691,7 @@ tr-TR:
         display_name: Arı Alıştırması
       courseF_variables_projects:
         description: Bir tebrik kartı, bir sohbet robotu veya bir boş alan hikayesi
-          oluşturacaksınız. Projenizin \"1. Kısmını\" bitirdiyseniz \"2. Kısmına\"
+          oluşturacaksınız. Projenizin \"Kısım 1\"'i bitirdiyseniz \"Kısım 2\"'ye
           gidin.
         display_name: Proje Seç
         teacher_markdown: |-
@@ -6837,7 +6877,7 @@ tr-TR:
         - {}
         - {}
       CSD U3 drawing practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: açıklama buraya
       CSD U3 platform intro_2018_2019_pilot_2021:
@@ -6864,21 +6904,21 @@ tr-TR:
         - {}
         title: Bir Tahminde Bulun
       CSD games cake challenge choice_2021:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD games functions practice choice_2021:
         display_name: Fonksiyonları Uygulama
       CSD games platform challenge choice_2021:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD web conditionals practice choice_2021:
         display_name: 'Koşulları Uygulama
 
 '
       CSD web draw loop practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web movement practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web text practice choice_2021:
-        display_name: Egzersizler
+        display_name: Alıştırma
       csd-pre-survey-levelgroup_21_22:
         title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi
       PowerOfWords-Unplugged_2020:
@@ -7008,7 +7048,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - text: Giriş
+        - text: Girdi
         - {}
         - text: Depolama
         - text: İşleme
@@ -7019,7 +7059,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - text: Giriş
+        - text: Girdi
         - {}
         - text: Depolama
         - text: İşleme
@@ -7030,7 +7070,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - text: Giriş
+        - text: Girdi
         - {}
         - text: Depolama
         - text: İşleme
@@ -7533,7 +7573,7 @@ tr-TR:
         - {}
         - {}
       CSD U3 drawing practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: açıklama buraya
       CSD U4 test feature match:
@@ -7825,29 +7865,29 @@ tr-TR:
         questions:
         - {}
       CSD U6 - Accelerometer - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Board Inputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Board Outputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Color LEDs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Combine Inputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - If Variables - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Music - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Physical Input - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Physical Output - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Screen Inputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Screen Outputs - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 - Sensors - Chal_2222:
-        display_name: Zorluk Düzeyleri
+        display_name: Mücadele Düzeyleri
       CSD U6 setProperty predict multi_2222:
         answers:
         - {}
@@ -7984,21 +8024,21 @@ tr-TR:
         questions:
         - {}
       CSD games cake challenge choice_2022:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD games functions practice choice_2022:
         display_name: Fonksiyonları Uygulama
       CSD games platform challenge choice_2022:
-        display_name: Meydan okuma
+        display_name: Mücadeleler
       CSD web conditionals practice choice_2022:
         display_name: 'Koşulları Uygulama
 
 '
       CSD web draw loop practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web movement practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSD web text practice choice_2022:
-        display_name: Egzersizler
+        display_name: Alıştırma
       CSP PD Example Question 1:
         answers:
         - {}
@@ -8873,7 +8913,7 @@ tr-TR:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Web Geliştirme
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -13500,7 +13540,7 @@ tr-TR:
         - correct: true
         - text: Asyalı
           correct: true
-        - text: Siyahi veya Afrika kökenli Amerikalı
+        - text: Siyah veya Afrikalı Amerikalı
           correct: true
         - correct: true
         - correct: true
@@ -13802,7 +13842,7 @@ tr-TR:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nBir gün canavarlardan biri kendini hasta hissetmeye
           başladı. Canavar bir **virüs** kapmış! Virüs, sizi hasta edebilecek küçük
-          bir mikroptur. Diğer canavarlar çok endişelenmediler ve arkadaşlarını ziyaret
+          bir mikroptur. Diğer canavarlar çok endişelenmediler. Arkadaşlarını ziyaret
           etmeye devam ettiler.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -14018,20 +14058,12 @@ tr-TR:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat, palamuda ulaşacak. Kodda hata yok.
-          feedback: Yanlış. Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
-            kadar yeterli sayıda ileri gitmiyor.
         - text: Scrat, palamuda ulaşmayacak çünkü yanlış yöne dönüyor.
           correct: true
-          feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
-            kadar yeterli sayıda ileri gitmiyor.
         - text: Scrat palamuda ulaşmayacak çünkü yeteri kadar "ileri hareket" bloğu
             yok.
-          correct: true
-          feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
-            kadar yeterli sayıda ileri gitmiyor.
         - text: Scrat, birinci bloktan hareket etmeyecek.
-          feedback: Bu kodda iki hata var. Scrat önce yanlış yöne dönüyor, sonra da
-            palamuda ulaşacak kadar yeterli sayıda ileri gitmiyor.
+          feedback: Scrat, palamuda ulaşmayacak çünkü yanlış yöne dönüyor.
         questions:
         - text: Bu koddaki hataları bulun. Scrat, palamuda ulaşacak mı yoksa bir sorun
             mu var?
@@ -14057,7 +14089,7 @@ tr-TR:
         - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
           correct: true
           feedback: Doğru!
-        - text: BB-8 yalnızca 3 birim ilerler.
+        - text: BB-8 sadece 3 boşluk hareket edecek.
           feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
         questions:
         - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
@@ -14253,7 +14285,7 @@ tr-TR:
         - text: Kuş ilerleyecek ve TNT'ye çarpacak.
           feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
             dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
-        - text: Kuşlar yanlış yere dönüyor.
+        - text: Kuş yanlış yere döner.
           feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
             Bunu, domuza ulaşana kadar yapmaya devam eder!
         questions:
@@ -14337,8 +14369,8 @@ tr-TR:
           correct: true
           feedback: Doğru! İki davranış aynı anda olacak.
         - text: Hareketli nesne önce dönecek, sonra hareket edecek.
-          feedback: Yanlış. Hareketli Nesne Laboratuvarında bağlı bloklar, birbiri
-            ardından gerçekleşir. Dolayısıyla iki davranış aynı anda olacak.
+          feedback: Yanlış. Sprite Lab'ta bağlı bloklar, birbiri ardından gerçekleşir.
+            Dolayısıyla iki davranış aynı anda olacak.
         questions:
         - text: Kodu oku, sonra da bir tahminde bulun.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
@@ -14350,16 +14382,16 @@ tr-TR:
         questions:
         - {}
       courseF_intro_apps2022_2022_pilot_-2022-2:
-        display_name: Hareketli Nesne Laboratuvarı Uygulamaları
+        display_name: SpriteLab Uygulamaları
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - text: '"Bir pizza hemen geliyor!"'
           feedback: Yanlış. Değişken etiketleri eşleşmiyor.
         - text: '"Bir yemek hemen geliyor!"'
-          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
+          feedback: Yanlış. Değişkenin etiketi asla yazdırılmaz.
         - text: '"Bir yiyecek hemen geliyor!"'
-          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
-        - text: '"Bir  hemen geliyor!"'
+          feedback: Yanlış. Değişkenin etiketi asla yazdırılmaz.
+        - text: '"Biri  hemen geliyor!"'
           correct: true
           feedback: Doğru! Değişken etiketleri eşleşmiyor.
         - text: Hiçbir şey yazdırılmayacak.
@@ -14464,7 +14496,7 @@ tr-TR:
             ne olacak?'
       courseF_variables_projects2022_2022_pilot_-2022-2:
         description: Bir tebrik kartı, bir sohbet robotu veya bir boş alan hikayesi
-          oluşturacaksınız. Projenizin \"1. Kısmını\" bitirdiyseniz \"2. Kısmına\"
+          oluşturacaksınız. Projenizin \"Kısım 1\"'i bitirdiyseniz \"Kısım 2\"'ye
           gidin.
         display_name: Proje Seç
       courseF_variables_samples2022_2022_pilot_-2022-2:
@@ -14512,12 +14544,12 @@ tr-TR:
         markdown: |-
           # Süper Dijital Vatandaş
 
-          ## Siber zorbalık gördüğümüzde nasıl karşı çıkabiliriz?
+          ## Siber zorbalık gördüğümüzde nasıl dik durabiliriz?
       csf_digital_trails2022:
         markdown: |-
           # Dijital İzi Takip Edin
 
-          ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
+          ## Dijital ayak izinizde hangi bilgiler olması doğrudur?
       csf_password_power-up2022:
         content1: açıklama buraya
         markdown: |-
@@ -14535,7 +14567,7 @@ tr-TR:
       csf_putting_a_stop_to_online_meanness2022:
         content1: açıklama buraya
         markdown: |
-          # STOP Kötülüğe DUR de
+          # Zorbalığı DURDUR
 
           ## İnternette biri sana kötü davranıyorsa ne yapmalısın?
 

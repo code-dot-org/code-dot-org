@@ -4,6 +4,8 @@ zh-TW:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: 提示用戶{QUESTION}變量{VAR}，選項{A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}說{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -250,20 +252,12 @@ zh-TW:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_everyMeasuresRange:
-        text: '每 {N} 小節重複，開始於 {START} '
       Dancelab_everySeconds:
         text: '每隔 {N} {UNIT} '
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
-      Dancelab_everySecondsRange:
-        text: '從 {START} 到 {STOP} 的每個 {N} {UNIT} '
-        options:
-          UNIT:
-            measures: 小節
-            seconds: 秒
       Dancelab_everyVerseChorus:
         text: 每隔 {UNIT}
         options:
@@ -1013,6 +1007,39 @@ zh-TW:
         text: 設定
       Dancelab_whenSetup2:
         text: 設定
+      DansBlocks_getMicroscope:
+        text: 顯微鏡有{INPUT1}
+        options:
+          INPUT1:
+            '1': 檸檬汁
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: 製作{EFFECT}效果
+        options:
+          EFFECT:
+            '"bubbles"': 氣泡
+            '"confetti"': 紙屑
+            '"hearts"': 愛心
+            '"emojis"': 快樂表情
+            '"rain"': 下雨
+            '"starburst"': 星爆
+            '"glass"': 破碎玻璃
+            '"twinkling"': 閃爍
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': 檸檬汁
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: 讓{VAR1}與{SPRITE1COSTUME}交流
+      FunctionBlocks_makeManipulative2:
+        text: 製作{NUM}個新{ANIMATION_NAME}精靈圖{BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: 展現{NUM}個新{ANIMATION_NAME}精靈圖[BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}說{TEXT1}"
       gamelab_addBehaviorSimple:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
       gamelab_addTarget:
@@ -1332,8 +1359,30 @@ zh-TW:
             "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_playSoundOptionsSoccer:
         text: 播放音效 {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": 氣笛
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": 掌聲
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": 頌歌
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": 歡呼
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": 踢
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": 雙哨聲
+            "'sound://category_sports/One_Whistle_SFX.mp3'": 口哨
       gamelab_playSoundOptionsSpace:
         text: 播放音效 {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": 黑洞
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": 子彈星系團
+            "'sound://category_space/Carina_SFX.mp3'": 船底座
+            "'sound://category_space/Cassiopeia_SFX.mp3'": 仙后座
+            "'sound://category_space/Crab_nebula_SFX.mp3'": 蟹狀星雲
+            "'sound://category_space/Launch_SFX.mp3'": 發射
+            "'sound://category_space/Lift_Off.mp3'": 起飛
+            "'sound://category_space/Pillars_SFX.mp3'": 創生之柱
+            "'sound://category_space/Southern_ring_SFX.mp3'": 南環星雲
+            "'sound://category_space/Supernova_SFX.mp3'": 超新星
+            "'sound://category_space/Tycho_SFX.mp3'": 第谷
       gamelab_playSpeech:
         text: 游戲言語{SOUND}
       gamelab_playerBehaviors:
@@ -1987,6 +2036,39 @@ zh-TW:
         text: 隨機佈局怪物
       Outbreak_stopMoving:
         text: 怪物停止移動
+      ParticlesBlocks_getMicroscope:
+        text: 顯微鏡有{INPUT1}
+        options:
+          INPUT1:
+            '1': 檸檬汁
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': 檸檬汁
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): 固體
+            new Behavior(liquid, []): 液體
+            new Behavior(wandering, []): 氣體
+      ParticlesBlocks_statesOfMatter2:
+        text: 設定{COSTUME}為{BEHAVIOR}行為
+        options:
+          BEHAVIOR:
+            '"solid"': '固體顆粒 '
+            '"liquid"': 液體顆粒
+            '"gas"': 氣體顆粒
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': '固體顆粒 '
+            '"liquid"': 液體顆粒
+            '"gas"': 氣體顆粒
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2052,6 +2134,21 @@ zh-TW:
             '"sound://category_achievements/peaceful_win_1.mp3"': 成功
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 漩渦
             '"sound://category_achievements/peaceful_win_6.mp3"': 風鈴
+      Poetry_playSoundOptionsSpace:
+        text: 播放音效 {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": 黑洞
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": 子彈星系團
+            "'sound://category_space/Carina_SFX.mp3'": 船底座
+            "'sound://category_space/Cassiopeia_SFX.mp3'": 仙后座
+            "'sound://category_space/Crab_nebula_SFX.mp3'": 蟹狀星雲
+            "'sound://category_space/Launch_SFX.mp3'": 發射
+            "'sound://category_space/Lift_Off.mp3'": 起飛
+            "'sound://category_space/Pillars_SFX.mp3'": 創生之柱
+            "'sound://category_space/Southern_ring_SFX.mp3'": 南環星雲
+            "'sound://category_space/Supernova_SFX.mp3'": 超新星
+            "'sound://category_space/Tycho_SFX.mp3'": 第谷
       Poetry_setAuthor:
         text: 設定作者{AUTHOR}
       Poetry_setBackground:
@@ -2385,5 +2482,19 @@ zh-TW:
           DIR:
             right: 右方 ↻
             left: 左方 ↺
+      storylab_setForegroundEffect2:
+        text: 製作{EFFECT}效果
+        options:
+          EFFECT:
+            '"bubbles"': 氣泡
+            '"confetti"': 紙屑
+            '"hearts"': 愛心
+            '"rain"': 下雨
+            '"starburst"': 星爆
+            '"twinkling"': 閃爍
+      storylab_setHeading:
+        text: 設置標題 {HEADING}
+      storylab_setSubheading:
+        text: 設置副標題 {SUBHEADING}
       validation_validatedBackground:
         text: 背景設為 {IMG}

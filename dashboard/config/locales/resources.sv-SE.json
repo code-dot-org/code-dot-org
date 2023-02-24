@@ -87,6 +87,9 @@
         "teacher_forum/coursed/2022": {
           "type": "Resurs"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Resurs"
+        },
         "password_power-up_lesson_quiz/coursed/2022": {
           "type": "Resurs"
         },
@@ -190,6 +193,9 @@
         "teacher_forum/coursef/2022": {
           "type": "Resurs"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Resurs"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "type": "Resurs"
         },
@@ -255,6 +261,9 @@
           "type": "Resurs"
         },
         "teacher_forum/coursee/2022": {
+          "type": "Resurs"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
           "type": "Resurs"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2022": {
@@ -338,9 +347,6 @@
         },
         "drag_and_drop_practice/courseb/2022": {
           "url": "https://studio.code.org/s/jigsaw"
-        },
-        "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "pair_programming/courseb/2022": {
           "name": "Par-programmering",
@@ -567,6 +573,9 @@
           "type": "Resurs"
         },
         "teacher_forum/coursec/2022": {
+          "type": "Resurs"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
           "type": "Resurs"
         },
         "my_robotic_friends/coursec/2022": {
@@ -1540,7 +1549,8 @@
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Lista över dikter",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
         },
         "2021_change_log/coursef/2021": {
           "type": "Resurs"

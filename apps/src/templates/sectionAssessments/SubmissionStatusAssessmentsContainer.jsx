@@ -9,6 +9,8 @@ import {
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {CSVLink} from 'react-csv';
+import moduleStyles from '@cdo/apps/templates/button.module.scss';
+import classNames from 'classnames';
 import Button from '../Button';
 
 export const studentExportableDataPropType = PropTypes.shape({
@@ -39,22 +41,27 @@ class SubmissionStatusAssessmentsContainer extends Component {
   };
 
   render() {
+    // These allow the CSVLink to be styled as a button
+    let className = classNames(
+      moduleStyles.main,
+      moduleStyles[Button.ButtonColor.gray],
+      moduleStyles['default']
+    );
+
     return (
       <div>
         <div style={styles.buttonContainer}>
           <h2>{i18n.studentOverviewTableHeader()}</h2>
           <CSVLink
+            role="button"
             filename="assessments-submission-status.csv"
             data={this.props.studentExportableData}
             headers={CSV_SUBMISSION_STATUS_HEADERS}
             onClick={this.props.onClickDownload}
+            style={styles.button}
+            className={className}
           >
-            <Button
-              __useDeprecatedTag
-              text={i18n.downloadCSV()}
-              onClick={() => {}}
-              color={Button.ButtonColor.gray}
-            />
+            {i18n.downloadCSV()}
           </CSVLink>
         </div>
         <SubmissionStatusAssessmentsTable
@@ -72,6 +79,11 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end'
+  },
+  button: {
+    padding: '12px 24px',
+    lineHeight: '10px',
+    marginBottom: '5px'
   }
 };
 

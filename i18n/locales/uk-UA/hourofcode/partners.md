@@ -2,37 +2,37 @@
 title: Партнери
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Година коду проводиться за участю Наглядового комітету Години коду.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+У [Наглядовий комітет]({{ urls/review_committee }}) входять 12 діючих і колишніх вчителів 1–12 класів, які оцінюють та рекомендують заняття з використанням рубрики, визначеної дорадчим комітетом. Ці педагоги переглядають вправи для самостійного опанування та плани уроків під проводом учителя, представлені сотнями партнерів, оцінюючи освітню цінність заняття, здатність захоплювати учнів та потенційну привабливість для різних груп учнів.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Праця та самовідданість комітету сприяла успіхові Години коду та досягненню її місії – знайомства з інформатикою кожного учня.
 
-# Major Partners and Corporate Supporters
+# Основні партнери та корпоративні спонсори
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Міжнародні партнери
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Партнери з навчальних програм і посібників
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Партнери із забезпечення інфраструктури та інструментів
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Додаткові партнери
 
 {{ partners/additional_partners }}
 

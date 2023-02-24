@@ -228,20 +228,12 @@ fi:
             MOVES.XArmsUp: Venytys
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-      Dancelab_everyMeasuresRange:
-        text: 'toista joka {N} tahdin jälkeen {START} '
       Dancelab_everySeconds:
         text: 'joka {N} {UNIT} '
         options:
           UNIT:
             '"measures"': tahdit
             '"seconds"': sekuntia
-      Dancelab_everySecondsRange:
-        text: 'joka {N} {UNIT} alusta {START} loppuun {STOP} '
-        options:
-          UNIT:
-            measures: Tahdit
-            seconds: Sekunnit
       Dancelab_everyVerseChorus:
         text: 'Joka {UNIT} '
         options:
@@ -983,6 +975,14 @@ fi:
         text: asetukset
       Dancelab_whenSetup2:
         text: asetukset
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Kuplat
+            '"confetti"': Konfetti
+            '"hearts"': sydämet
+            '"rain"': sade
+            '"starburst"': Tähtisäteet
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} alkaa {BEHAVIOR}
       gamelab_addTarget:
@@ -1690,6 +1690,8 @@ fi:
           SOUND:
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': kupla
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hyppää
+      Poetry_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       Poetry_setBackground:
         text: aseta taustaväri {COLOR}
       Poetry_setBackgroundEffect:
@@ -1931,5 +1933,13 @@ fi:
           DIR:
             right: oikea ↻
             left: vasen ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Kuplat
+            '"confetti"': Konfetti
+            '"hearts"': sydämet
+            '"rain"': sade
+            '"starburst"': Tähtisäteet
       validation_validatedBackground:
         text: aseta tausta {IMG}

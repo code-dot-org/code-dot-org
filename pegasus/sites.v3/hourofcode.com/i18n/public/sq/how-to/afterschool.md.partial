@@ -1,92 +1,92 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Guida e ores se kodimit per mesim jashte oreve mesimore!
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Si te ligjerosh nje ore kodi ne aktivitete pas-shkollore dhe klube
 
 ### Bashkohuni me lëvizjen dhe prezantojini studentët tuaj në shkencat kompjuterike me këto hapa.
 
 Të menduarit llogaritës ndihmon në rritjen e aftësive për zgjidhjen e problemeve, logjikës dhe krijimtarisë Teknologjia po transformon çdo industri në planet. Studentët sot duhet të mësojnë se si të krijojnë teknologji, jo vetëm ta përdorin atë. Duke filluar herët, ata do të kenë një themel për sukses në çdo rrugë karriere të shekullit 21.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Provimi i ores se kodit eshte nje menyre e thjeshte dhe zbavitese t'i njoftoni studentet me shkencat kompjuterike, ndoshta edhe per heren e pare. Nese keni nevoje per ndihme shtese, mund te gjeni nje vullnetar loal te te ju ndihmoje rreth ekzekutimit te ores se kodit ne klasen tuaj.
 
-### Një orë kod mund të organizohet gjithashtu në distancë! Për të filluar, shikoni këshillat tona [ për mbajtjen e një ngjarjeje Hour of Code ](https://hourofcode.com/us/how-to/virtual).
+### Një orë kod mund të organizohet gjithashtu në distancë! Për të filluar, shikoni këshillat tona [ për mbajtjen e një ngjarjeje Hour of Code ](https://hourofcode.com/us/how-to/virtual)..
 
 * * *
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-## 2. Choose a tutorial
+## Zgjedhni nje tutorial
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Ne sjellim nje perzgjedhje te aktiviteteve nje oreseh, zbavitese per pjesemarresit e te gjitha moshave, te krijuar nga nje perzgjedhje e partnereve. Provoni! 
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+Te gjitha tutorialet e ores se kodit kerkojne kohe minimale te pergaditjes dhe jane te pergaditura ne stilin autodidakt, qe i mundeson femijeve te punojne ne tempon e tyer dhe nivelin e aftesive te tyre. 
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+Te duhet nje plan mesimore per aktivitetet pas shkollore te ores se kodit? Shiko kete
 
-## 3. Promote your Hour of Code
+## Rreklamo oren tende te kodit 
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Rreklamo oren tende te kodit, permes ketyre veglave dhe inkurajo te tjeret te mbajne oret e tyre te kodimit. 
 
-## 4. Plan your technology needs - computers are optional
+## Planifiko nevojat tuaja teknologjike - kompjuteret jane opsional.
 
-Përvoja më e mirë e Orës së Kodimit përfshin kompjutera të lidhur me internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Përvoja më e mirë e Orës së Kodimit përfshin kompjutera të lidhur me internet. Por ju nuk keni nevoje te keni kompjuter per cdo pjesemarres, poashtu mund ta zhvilloni orent tuaj te kodit pa kompjuter fare. 
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Sigurohuni qe ti testoni tutoarialet paraprakisht ne kompjuterat e sutdeteve ose edhe pajsisjet e tyre ne menyre qe te siguroheni se ato funksionojne mire me ze dhe video ne shfletuesit e interenetit. Keni lidhje te dobet? Planifiko te shfaqesh video perpara te gjithe klases, ne menyre qe cdo studente mos te shkarkoje videot e tyre. Ose provoni tutorialet te cilet jane te qasshem edhe oflline.
 
 Në rast se tutoriali juaj funksionon më mirë me zë, vini në dizpozicion kufje për klasën tuaj, ose kërkoni nga studentët t'i kenë me vete kufjet e tyre.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Kur pjesëmarrësit bashkëpunojnë, ata ndihmojnë njëri-tjetrin dhe mbështeten më pak tek mësuesi. Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
+Nuk keni pajisje te mjaftueshme, perdorni programimin qiftor. Kur pjesëmarrësit bashkëpunojnë, ata ndihmojnë njëri-tjetrin dhe mbështeten më pak tek mësuesi. Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Filloni oren tuaj te kodimit me nje video inspiruese
 
 Planifiko Orën tënde të Kodimit duke inspiruar fëmijët dhe diskutoni se si shkenca kompjuterike ka impakt në çdo pjesë të jetës.
 
 **Trego një video frymëzuese:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
+- Video origjinale te code.org e cila perfshine BIll Gates, Mark Zuckerberg, dhe yllin e NBA Chris Bosh - ekzistojne dy versione te videos, ajo 1 minuteshe dhe 5 minuta.
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- [Presidenti Obama duke i bere thirrje nxenesve qe te mesojne shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Gjej me shume video inspiruese [ketu](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Eshte ne rregull nese jeni teresi i ri ne fushen e shkencave kompjuterike. ketu mund t'i gjeni disa ide te menyrave te ndryshme te shfaqjes se aktiviteteve tua ne oren e kodit. **
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Shpjego menyrat ne te cilat teknologjia i afekton jeterat tona, me shembuj qe do te jene te kuptueshem per te dy gjinite. (Flisni per aplikacionet dhe teknoligjine qe po perdoret per te shpetuar jeterat, per ti lidhur njerezit me njeri tjetrin etj)
 - Listo gjërat që përdorin kodim në jetën e përditëshme.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Shihni menyra se si ti beni vajzat me te interesuara ne shkenca kompjuterike mund te shihen [ketu]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Te duhet me shume udheheqje?** Shkarko kete [shabllon te planit mesimor](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## 6. Code!
+## 6. Kodo!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Pjesemarresit direkt te aktivitetit** - Shkruani linkun e tutorialit ne drrasen e bardhe. Gjeni linkun informacionin per tutorialin qe keni perzgjedhur, ner numrin e pjesmarresve. 
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**Kur dikush po perballet me veshitersi eshte ne rregull te pergjigjeni me:** - “Nuk e di . Le ta mesojme se bashku." - Teknologjia nuk funksionon gjithmone ashtu sic duam ne" - Te mesosh te programosh eshte njejte sikur te mesosh nje gjuhe te re, nuk do ta flisni rrjedhshem menjehere.
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Cfare te bejme nese dikush perfundon me heret?** -Inkurajo pjesemarresit te perfundojne aktivitete te tjera te ores se kodit [hourofcode.com/learn]({{ urls/learn }}) - Ose kerko nga ata qe kane perfunduar me heret te ndihmojne ata qe po kane veshtiresi.
 
-## 7. Celebrate
+## 7. Festo
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Printo certifikata]({{ urls/certificates }}) per nxenesit tuaj. 
+- Pritoni stiker me mbishkrimin "Kam kryer nje ore kodimi"
+- [Porosisni maica te personalizuara](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per pjesemarresit.
 - Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
-## Other Hour of Code resources for educators
+## Burime te tjera te ores se kodimit per mesimdhenes
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- Shikoni [praktikat me te mira](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) nga organizator te kaluar te ores se kodit.
+- Shihni videon [Guida e mesimdhenesit ](https://youtu.be/EJeMeSW2-Mw).
+- Vizito [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) tte marresh pergjigje dhe mbeshtetije nga organizatoret e tjere.
 - Shiko [FAQ e Orës së Kodimit](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Çfarë vjen pas Orës së Kodimit?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Ora e Kodimit eshte vetem hapi juaj i pare ne nje udhetim te te mesuarit se si funksionon teknologjia dhe se si te krijojme aplikacione softuverik Ndihmoni studentet te vazhdojne udhetimin e tyre duke i inkurajuar te mesojne me shume online.
 
 {{ signup_button }}

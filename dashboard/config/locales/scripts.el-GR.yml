@@ -1232,11 +1232,16 @@ el:
             required:
               display_name: Επισκόπηση
         dance-2019:
+          title: Πάρτι Χορού
+          description_short: Κωδικοποιήστε ένα Dance Party για να το μοιραστείτε με
+            τους φίλους και την οικογένεια. Οι Beyoncé, Harry Styles, Lizzo, Lil Nas
+            X, Selena Gomez, μουσική από το «Encanto» της Disney και πολλά άλλα!
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
           student_description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
         dance-extras-2019:
+          title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
           student_description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για
             πρότζεκτ.
@@ -2013,5 +2018,55 @@ el:
           lesson_groups:
             lessonGroup-2:
               display_name: Έρευνα
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Μεταβλητές
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Βρόχοι Για
+        hello-world-space-2022:
+          title: 'Γεια σας κόσμο: Διάστημα'
+        hello-world-soccer-2022:
+          title: 'Γεια σας κόσμο: Ποδόσφαιρο'
         csd1-2023:
           title: Επίλυση Προβλημάτων
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Τι είναι αυτός ο ήχος;
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Μεταβλητές
+            csp_conditionals:
+              display_name: Συνθήκες
+            csp_functions:
+              display_name: Συναρτήσεις
+            csp_project:
+              display_name: Έργο
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Δεδομένα
+            csp_loops:
+              display_name: Βρόχοι
+            csp_project:
+              display_name: Έργο
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Λίστες
+            lessonGroup-3:
+              display_name: Βρόχοι
+            lessonGroup-5:
+              display_name: Έργο
+        csp7-2023:
+          lesson_groups:
+            csp_libraries:
+              display_name: Βιβλιοθήκες

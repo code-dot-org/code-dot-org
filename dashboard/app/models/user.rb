@@ -121,6 +121,25 @@ class User < ApplicationRecord
     share_teacher_email_regional_partner_opt_in
   )
 
+  attr_accessor(
+    :login,
+    :email_preference_opt_in_required,
+    :email_preference_opt_in,
+    :email_preference_request_ip,
+    :email_preference_source,
+    :email_preference_form_kind,
+    :parent_email_update_only,
+    :parent_email_preference_opt_in_required,
+    :parent_email_preference_opt_in,
+    :parent_email_preference_email,
+    :parent_email_preference_request_ip,
+    :parent_email_preference_source,
+    :share_teacher_email_reg_partner_opt_in_radio_choice,
+    :data_transfer_agreement_required,
+    :raw_token,
+    :child_users
+  )
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
@@ -225,6 +244,10 @@ class User < ApplicationRecord
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
   before_destroy :soft_delete_channels
+
+  before_validation on: :create, if: -> {gender.present?} do
+    self.gender = Policies::Gender.normalize gender
+  end
 
   def save_email_preference
     if teacher?
@@ -396,24 +419,6 @@ class User < ApplicationRecord
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
   ].freeze
-
-  attr_accessor :login
-  attr_accessor :email_preference_opt_in_required
-  attr_accessor :email_preference_opt_in
-  attr_accessor :email_preference_request_ip
-  attr_accessor :email_preference_source
-  attr_accessor :email_preference_form_kind
-
-  attr_accessor :parent_email_update_only
-  attr_accessor :parent_email_preference_opt_in_required
-  attr_accessor :parent_email_preference_opt_in
-  attr_accessor :parent_email_preference_email
-  attr_accessor :parent_email_preference_request_ip
-  attr_accessor :parent_email_preference_source
-
-  attr_accessor :share_teacher_email_reg_partner_opt_in_radio_choice
-
-  attr_accessor :data_transfer_agreement_required
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -1240,7 +1245,7 @@ class User < ApplicationRecord
       script_level_index = last_script_level.chapter - 1 if last_script_level
     end
 
-    next_unpassed = script.script_levels[script_level_index..-1].try(:detect) do |script_level|
+    next_unpassed = script.script_levels[script_level_index..].try(:detect) do |script_level|
       user_levels = script_level.level_ids.map {|id| ul_with_sl[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
@@ -1510,8 +1515,6 @@ class User < ApplicationRecord
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
-  attr_accessor :raw_token
-
   def self.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
@@ -1524,8 +1527,6 @@ class User < ApplicationRecord
     associated_users = User.associated_users(email)
     return User.new(email: email).send_reset_password_for_users(email, associated_users)
   end
-
-  attr_accessor :child_users
 
   def send_reset_password_for_users(email, users)
     if users.empty?
@@ -1933,7 +1934,7 @@ class User < ApplicationRecord
       # We only lock levels of type LevelGroup
       # When the student submits an assessment, lock the level so they no
       # longer have access for the remainder of the autolock period
-      is_level_group = user_level.level.type === 'LevelGroup'
+      is_level_group = user_level.level.type == 'LevelGroup'
       if submitted && is_level_group
         user_level.locked = true
       end

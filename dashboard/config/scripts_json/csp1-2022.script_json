@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-06 22:57:52 UTC",
+    "serialized_at": "2022-12-06 15:27:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5704,11 +5704,10 @@
     },
     {
       "name": "Athletes Don't Own Their Tattoos",
-      "url": "https://www.todayonline.com/world/athletes-dont-own-their-tattoos-thats-problem-video-game-developers",
+      "url": "https://www.nytimes.com/2018/12/27/style/tattoos-video-games.html?smid=url-share",
       "key": "athletes_don_t_own_their_tattoos",
       "properties": {
-        "audience": "Student",
-        "type": "Article"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "athletes_don_t_own_their_tattoos"

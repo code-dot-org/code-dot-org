@@ -37,17 +37,17 @@ Etkinliğinizden resimleri, Facebook ve Twitter'da **#HourOfCode** etiketiyle pa
 
 * * *
 
-## Example plan for a school assembly or event
+## Okul toplantısı veya etkinliği için örnek plan
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Etkinlik:** Okul geneli Bilgisayar Bilimleri Eğitim Haftası başlangıç toplantısı
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Tarih:** {{ campaign_date/start_short }} (Bilgisayar Bilimi Eğitim Haftası başlangıcı)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Saat:** Okul zamanı. Tercihen sabah vakti. Yaklaşık 1 saat.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Yer:** Okul toplantı salonu (tiyatro, spor salonu, kafeterya gibi)
 
-## Run of Show
+## Etkinlik Programı
 
 | Saat          | Etkinlik                                                                                                                                                          |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |

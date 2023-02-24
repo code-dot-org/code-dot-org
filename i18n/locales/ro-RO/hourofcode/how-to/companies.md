@@ -26,31 +26,31 @@ Verificați pașii de mai jos pentru a începe și citiți ghidul nostru [pentru
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Conectați-vă cu o școală locală
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Întotdeauna este mai bine să începeți la nivel local, cu școlile cu care dumneavoastră sau angajații dumneavoastră aveți o legătură puternică, cum ar fi un alma mater (universitate, școală sau colegiu urmate anterior), școala unui copil sau o organizație locală ori o școală care susține o populație subreprezentată din punct de vedere istoric, in domeniul IT.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+De acolo, puteți vizita site-ul web al școlii pentru a găsi persoanele de contact adecvate cărora să vă adresați, cum ar fi directorul, directorul adjunct, profesorii de tehnologie, de informatică sau chiar asociației de părinți, elevi și profesori a școlii. Puteți, de asemenea, să vă asociați cu organizații precum Boys & Girls Clubs of America, o filială YMCA și multe altele pentru a găzdui împreună un eveniment.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Dacă nu reușiți să vă conectați cu o școală, vă rugăm să accesați [contactați-ne](https://support.code.org/hc/en-us/requests/new) și vă vom pune în legătură cu unul dintre partenerii noștri locali, dacă este posibil.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Încurajați angajații să facă voluntariat la o clasă
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Una dintre cele mai satisfăcătoare modalități de a participa la Hour of Code este de a fi voluntar la o clasă locală, fie în persoană, fie virtual. Cel mai bun lucru este că nu trebuie să fiți inginer pentru a fi voluntar. Puteți oferi în continuare o experiență semnificativă studenților prin împărtășirea propriei experiențe profesionale și a modului în care CS sau tehnologia a influențat rolul dumneavoastră.
 
 [<button>Înscrie-te ca voluntar</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Odată ce un voluntar se înregistrează, profesorul îi poate examina profilul pe harta noastră [carta voluntarilor](https://code.org/volunteer/local) - astfel încât profilurile ar trebui să fie trimise cât mai complete posibil. Dacă vă potriviți clasei lor, un profesor vă va contacta prin intermediul platformei (nu vom împărtăși niciodată adresa dvs. de e-mail cu profesorul). Apoi puteți stabili detaliile direct cu profesorul în legătură cu [cum să vă oferiți cel mai bine ca voluntar în clasa lor](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Pentru mai multe detalii privind voluntariatul și exemple de mesaje pentru a vă entuziasma compania cu privire la Hour of Code, consultați [ghidul pentru partenerii corporativi]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 

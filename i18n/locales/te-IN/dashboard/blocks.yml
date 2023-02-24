@@ -2,6 +2,8 @@
 te:
   data:
     blocks:
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}చెప్పండి{TEXT1}"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -206,12 +208,6 @@ te:
           UNIT:
             '"measures"': మెజర్స్
             '"seconds"': సెకండ్లు
-      Dancelab_everySecondsRange:
-        text: 'ప్రతిదీ {N} {UNIT} నుండి {START} వరకు {STOP} '
-        options:
-          UNIT:
-            measures: మెజర్స్
-            seconds: సెకండ్లు
       Dancelab_everyVerseChorus:
         text: 'ప్రతి {UNIT} '
         options:
@@ -845,6 +841,32 @@ te:
         text: సెటప్
       Dancelab_whenSetup2:
         text: సెటప్
+      DansBlocks_getMicroscope:
+        text: సూక్ష్మదర్శిని {INPUT1}కలిగి ఉంది
+        options:
+          INPUT1:
+            '1': నిమ్మ రసం
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': నిమ్మ రసం
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "[SPRITE1COSTUME] తో [VAR1] కమ్యూనికేట్ చేయండి"
+      FunctionBlocks_makeManipulative2:
+        text: "{NUM} కొత్త {ANIMATION_NAME} స్ప్రిట్‌లు  {BEHAVIOR} తయారు చేయండి"
+      FunctionBlocks_representManipulative:
+        text: "{NUM} కొత్త {ANIMATION_NAME} స్ప్రిట్‌లకు [BEHAVIOR][2] ప్రాతినిధ్యం వహించండి"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}చెప్పండి{TEXT1}"
       gamelab_atTime:
         options:
           UNIT:
@@ -974,6 +996,30 @@ te:
           SOUND:
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": బబ్బుల్స్
             "'sound://category_animals/bear.mp3'": బేర్
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": ఎయిర్ హారన్
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": ప్రశంసలు
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": శ్లోకం
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ఉల్లాసం
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": మత్తు
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": రెండు ఈలలు
+            "'sound://category_sports/One_Whistle_SFX.mp3'": ఈల
+      gamelab_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": నలుపు రంధ్రం
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": బుల్లెట్ క్లస్టర్
+            "'sound://category_space/Carina_SFX.mp3'": కరీనా
+            "'sound://category_space/Cassiopeia_SFX.mp3'": కాసియోపియా
+            "'sound://category_space/Crab_nebula_SFX.mp3'": క్రాబ్ నెబ్యూలా
+            "'sound://category_space/Launch_SFX.mp3'": ప్రారంభం
+            "'sound://category_space/Lift_Off.mp3'": ఎత్తివేయండి
+            "'sound://category_space/Pillars_SFX.mp3'": స్తంభాలు
+            "'sound://category_space/Southern_ring_SFX.mp3'": దక్షిణ వలయం
+            "'sound://category_space/Supernova_SFX.mp3'": సూపర్‌నోవా
+            "'sound://category_space/Tycho_SFX.mp3'": టైకో
       gamelab_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       gamelab_setBackgroundImage:
@@ -1149,6 +1195,38 @@ te:
           KEY:
             '"yes"': అవును
             '"no"': లేదు
+      ParticlesBlocks_getMicroscope:
+        text: సూక్ష్మదర్శిని {INPUT1}కలిగి ఉంది
+        options:
+          INPUT1:
+            '1': నిమ్మ రసం
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': నిమ్మ రసం
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): ఘనపదార్థం
+            new Behavior(liquid, []): ద్రవము
+            new Behavior(wandering, []): వాయువు
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME} నుండి {BEHAVIOR} ప్రవర్తనను ఏర్పరచండి"
+        options:
+          BEHAVIOR:
+            '"solid"': ఘన రేణువు
+            '"liquid"': ద్రవ రేణువు
+            '"gas"': వాయు రేణువు
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': ఘన రేణువు
+            '"liquid"': ద్రవ రేణువు
+            '"gas"': వాయు రేణువు
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1181,6 +1259,20 @@ te:
             '"sound://category_achievements/peaceful_win_1.mp3"': విన్
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': విర్ల్
             '"sound://category_achievements/peaceful_win_6.mp3"': విండ్ చిమ్స్
+      Poetry_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": నలుపు రంధ్రం
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": బుల్లెట్ క్లస్టర్
+            "'sound://category_space/Carina_SFX.mp3'": కరీనా
+            "'sound://category_space/Cassiopeia_SFX.mp3'": కాసియోపియా
+            "'sound://category_space/Crab_nebula_SFX.mp3'": క్రాబ్ నెబ్యూలా
+            "'sound://category_space/Launch_SFX.mp3'": ప్రారంభం
+            "'sound://category_space/Lift_Off.mp3'": ఎత్తివేయండి
+            "'sound://category_space/Pillars_SFX.mp3'": స్తంభాలు
+            "'sound://category_space/Southern_ring_SFX.mp3'": దక్షిణ వలయం
+            "'sound://category_space/Supernova_SFX.mp3'": సూపర్‌నోవా
+            "'sound://category_space/Tycho_SFX.mp3'": టైకో
       Poetry_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       Poetry_setBackgroundEffect:
@@ -1241,3 +1333,12 @@ te:
             '"w"': w
             '"s"': s
             '"d"': d
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+      storylab_setHeading:
+        text: శీర్షిక సమకూర్చండి {HEADING}
+      storylab_setSubheading:
+        text: ఉపశీర్షికను సమకూర్చండి {SUBHEADING}

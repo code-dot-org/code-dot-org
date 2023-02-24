@@ -4,6 +4,8 @@ ms:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: pengguna prom {QUESTION} untuk pembolehubah {VAR} dengan pilihan {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}katakan{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -230,20 +232,12 @@ ms:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-      Dancelab_everyMeasuresRange:
-        text: 'ulangi setiap {N} corak berirama selepas {START} '
       Dancelab_everySeconds:
         text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
             '"measures"': corak berirama
             '"seconds"': saat
-      Dancelab_everySecondsRange:
-        text: 'setiap {N} {UNIT} dari {START} hingga {STOP} '
-        options:
-          UNIT:
-            measures: Corak Berirama
-            seconds: Saat
       Dancelab_everyVerseChorus:
         text: 'setiap {UNIT} '
         options:
@@ -995,6 +989,39 @@ ms:
         text: persediaan
       Dancelab_whenSetup2:
         text: persediaan
+      DansBlocks_getMicroscope:
+        text: Mikroskop mempunyai {INPUT1}
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: lakukan {EFFECT} kesan
+        options:
+          EFFECT:
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': hati
+            '"emojis"': Emoji gembira
+            '"rain"': hujan
+            '"starburst"': Pecahan Cahaya
+            '"glass"': Kaca Pecah
+            '"twinkling"': Berkelip
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Berkomunikasi {VAR1} dengan {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: membuat {NUM} baru {ANIMATION_NAME} sprites  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: mewakili {NUM} baru {ANIMATION_NAME} sprites [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}katakan{TEXT1}"
       gamelab_addBehaviorSimple:
         text: bidadari {SPRITE} bermula {BEHAVIOR}
       gamelab_addTarget:
@@ -1319,8 +1346,29 @@ ms:
             "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_playSoundOptionsSoccer:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": tanduk udara
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": bertepuk tangan
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": laung
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": bunyi bersorak
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": bunyi sepakan
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": two whistles
+            "'sound://category_sports/One_Whistle_SFX.mp3'": wisel
       gamelab_playSoundOptionsSpace:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Launch_SFX.mp3'": launch
+            "'sound://category_space/Lift_Off.mp3'": lift off
+            "'sound://category_space/Pillars_SFX.mp3'": pillars
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: bermain ucapan {SOUND}
       gamelab_playerBehaviors:
@@ -1921,6 +1969,39 @@ ms:
         text: raksasa mula memakai pelitup muka
       Outbreak_stopMoving:
         text: raksasa berhenti bergerak
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskop mempunyai {INPUT1}
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': jus lemon
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): pepejal
+            new Behavior(liquid, []): cecair
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Tetapkan {COSTUME} hingga {BEHAVIOR} tingkah laku
+        options:
+          BEHAVIOR:
+            '"solid"': 'zarah pepejal '
+            '"liquid"': zarah cecair
+            '"gas"': zarah gas
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'zarah pepejal '
+            '"liquid"': zarah cecair
+            '"gas"': zarah gas
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1991,6 +2072,20 @@ ms:
             '"sound://category_achievements/peaceful_win_1.mp3"': Menang
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Pusar
             '"sound://category_achievements/peaceful_win_6.mp3"': Loceng Angin
+      Poetry_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Launch_SFX.mp3'": launch
+            "'sound://category_space/Lift_Off.mp3'": lift off
+            "'sound://category_space/Pillars_SFX.mp3'": pillars
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setAuthor:
         text: set pengarang {AUTHOR}
       Poetry_setBackground:
@@ -2284,5 +2379,19 @@ ms:
           DIR:
             right: kanan?
             left: kiri
+      storylab_setForegroundEffect2:
+        text: lakukan {EFFECT} kesan
+        options:
+          EFFECT:
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': hati
+            '"rain"': hujan
+            '"starburst"': Pecahan Cahaya
+            '"twinkling"': Berkelip
+      storylab_setHeading:
+        text: tetapkan tajuk {HEADING}
+      storylab_setSubheading:
+        text: tetapkan subtajuk {SUBHEADING}
       validation_validatedBackground:
         text: tetapkan latar belakang ke {IMG}

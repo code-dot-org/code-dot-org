@@ -600,7 +600,7 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Panimula",
-          "description": "**Talakayin:**\n\n-   _Ano ang alam natin tungkol sa kung paano kumakalat ang isang virus?_\n-   _Ano ang maaaring maging sanhi ng pagkalat ng virus sa isang bayan nang mas mabilis?_\n-   _Ano ang makakatulong na mapabagal ang pagkalat ng virus?_\n\nAng layunin ng talakayang ito ay magkaroon ng pagkakataon ang mga mag-aaral na maisaaktibo ang dating kaalaman at makita ang kanilang mga ideya sa pisara. Isa rin itong pagkakataon upang siyasatin ang ilang maling kuru-kuro tungkol sa kung paano kumalat ang mga virus."
+          "description": "**Talakayin:**\n\n- _Ano ang alam natin tungkol sa kung paano kumakalat ang isang virus?_\n- _Ano ang maaaring maging sanhi ng pagkalat ng virus sa isang bayan nang mas mabilis?_\n- _Ano ang makakatulong na mapabagal ang pagkalat ng virus?_\n\nAng layunin ng talakayang ito ay magkaroon ng pagkakataon ang mga mag-aaral na maisaaktibo ang dating kaalaman at makita ang kanilang mga ideya sa pisara. Isa rin itong pagkakataon upang siyasatin ang ilang maling kuru-kuro tungkol sa kung paano kumalat ang mga virus."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Pagsiklab",
@@ -632,11 +632,11 @@
           "description": "_Ang mga simulation ay isang mahusay na paraan upang matutunan ang mga bagay na maaaring mahirap obserbahan sa totoong mundo. Tinutulungan nila ang mga siyentipiko na malutas ang mga problema, mahulaan kung paano lutasin ang problema, at subukan ang mga bagong ideya nang ligtas at mahusay. Ang iyong simulation ay isang paraan upang ipakita kung ano ang hitsura ng isang virus outbreak sa Monster Town._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Talakayin:**\n\n-   Paano makakatulong ang mga simulation sa totoong mundo?\n-   Paano tayo matutulungan ng mga simulation na maunawaan ang mundo natin?\n-   Paano mapapabuti ng mga simulation ang paraan ng pagsubok ng mga ideya?\n\nAng layunin ng talakayan ay para sa mga mag-aaral na maunawaan na ang mga simulation ay isang paraan upang magmodelo ng mga kumplikadong sistema sa isang interactive na paraan. Dapat din nilang makita kung paano hinahayaan ng mga simulation ang mga tao na subukan ang mga ideya nang mabilis, mura at ligtas."
+          "description": "**Talakayin:**\n\n- Paano makakatulong ang mga simulation sa totoong mundo?\n- Paano tayo matutulungan ng mga simulation na maunawaan ang mundo natin?\n- Paano mapapabuti ng mga simulation ang paraan ng pagsubok ng mga ideya?\n\nAng layunin ng talakayan ay para sa mga mag-aaral na maunawaan na ang mga simulation ay isang paraan upang magmodelo ng mga kumplikadong sistema sa isang interactive na paraan. Dapat din nilang makita kung paano hinahayaan ng mga simulation ang mga tao na subukan ang mga ideya nang mabilis, mura at ligtas.\n"
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Pagmumuni-muni",
-          "description": "**Mga Prompt:**\n\n-   Paano ang simulation na ito ay katulad ng totoong mundo? Paano ito naiiba?\n-   Ano ang gusto mong baguhin/idagdag sa iyong simulation?"
+          "description": "**Mga Prompt:**\n\n- Paano ang simulation na ito ay katulad ng totoong mundo? Paano ito naiiba?\n- Ano ang gusto mong baguhin/idagdag sa iyong simulation?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Panimula",
@@ -801,6 +801,10 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Tapusin Na"
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
           "tips": [
@@ -808,13 +812,14 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming][0].\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
+          "name": "",
+          "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n- **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming][0].\n\n- **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n**Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n- **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Hello World"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Kung maagang natapos ang isang grupo o indibidwal, hikayatin silang ipagpatuloy ang pagbuo ng proyekto sa huling antas. Kung hindi sigurado ang mga mag-aaral kung ano pa ang gagawin, maaari mo silang i-prompt ng mga tanong: \n\n-   Anong iba pang mga tiyanak ang maaari mong idagdag sa proyekto mo?\n-   Tumingin ka na ba sa library ng kasuotan o sinubukan mong gumuhit ng sarili mong kasuotan ng tiyanak?\n-   Ano pa ang maaaring sabihin ng mga tiyanak mo?\n-   Ano ang dapat gawin ng mga tiyanak mo kapag na-click sila?\n-   Anyayahan ang mga estudyante na magbahagi ng mga ideya at matuto sa isa't isa. Maaari din nilang subukan ang isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn][0]."
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, hikayatin silang ipagpatuloy ang pagbuo ng proyekto sa huling antas. Kung hindi sigurado ang mga mag-aaral kung ano pa ang gagawin, maaari mo silang i-prompt ng mga tanong: \n\n- Anong iba pang mga tiyanak ang maaari mong idagdag sa proyekto mo?\n- Tumingin ka na ba sa library ng kasuotan o sinubukan mong gumuhit ng sarili mong kasuotan ng tiyanak?\n- Ano pa ang maaaring sabihin ng mga tiyanak mo?\n- Ano ang dapat gawin ng mga tiyanak mo kapag na-click sila?\n- Anyayahan ang mga estudyante na magbahagi ng mga ideya at matuto sa isa't isa. Maaari din nilang subukan ang isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn][0]."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Pagmumuni-muni",
@@ -1049,6 +1054,9 @@
         },
         "bcde2562-834f-4054-9106-c9f0ff082258": {
           "name": "Introduksyon sa mga Loops"
+        },
+        "23874ed2-c11c-4626-93ce-738a948d9467": {
+          "name": "Mga loop sa panahon ng yelo"
         },
         "d9fbe733-657b-4504-8dbb-eab8104168aa": {
           "progression_name": "Pagbuo ng Kasanayan"
@@ -1325,6 +1333,7 @@
           ]
         },
         "a4614b34-d679-47a0-b4b3-36a360f0336d": {
+          "name": "Ipinapakilala ang Sprite Lab",
           "progression_name": "Video: Ipinapakilala ang Sprite Lab"
         },
         "6e47923a-1f07-4c2d-a55a-c45a35a823e9": {
@@ -1375,6 +1384,7 @@
           ]
         },
         "3aa37d43-0bc2-433c-9fdd-59a704d6d5f8": {
+          "name": "Sprites sa aksyon",
           "progression_name": "Prediksiyon"
         },
         "fa8242f4-3cba-4a2c-bd5b-069a58450349": {
@@ -1660,6 +1670,9 @@
           "tips": [
             null
           ]
+        },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "Tumuklas"
         },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "Mga halimbawa ng proyekto"
@@ -2034,6 +2047,9 @@
         },
         "26e345f8-d754-44a5-9197-e0554116562e": {
           "name": "Pagmumuni-muni"
+        },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "Tumuklas"
         },
         "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8": {
           "progression_name": "Mga Halimbawa ng Proyekto"
@@ -2504,6 +2520,7 @@
           ]
         },
         "fcfb7745-6451-4f94-a9c1-23d681360aac": {
+          "name": "Sprites sa aksyon",
           "progression_name": "Prediksiyon"
         },
         "cc8e4408-1488-4da7-be3f-abc39f349b23": {
@@ -2888,6 +2905,9 @@
         },
         "d2c0374f-fce3-4290-9058-8a47a9b14357": {
           "name": "Panimula"
+        },
+        "e0582255-a83c-4278-8b18-9ce09ac1118d": {
+          "progression_name": "Ang Taga-Ani"
         },
         "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f": {
           "progression_name": "Pagsasanay"
@@ -3371,6 +3391,9 @@
         },
         "7f9c451a-0554-4989-b7c8-506ea91062ba": {
           "name": "Pagmumuni-muni"
+        },
+        "7a945439-a8e0-438c-a2a3-7e81b6832618": {
+          "progression_name": "Aking Online Na Kapitbahay"
         },
         "5e98b1b4-ab1d-4607-8234-fb70c37ae557": {
           "name": "Panimula"
@@ -8278,6 +8301,7 @@
           ]
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Mga model card sa Ai Lab",
           "tips": [
             null
           ]
@@ -9261,6 +9285,9 @@
         "af8ecf2c-ca6a-4d48-a1be-783adf975f27": {
           "progression_name": "Pagsasanay"
         },
+        "42a28a6d-b136-4659-bdbd-5caed86947d3": {
+          "progression_name": "Gamit ang paulit-ulit na bloke"
+        },
         "93ea2ce1-2886-47f0-a9cc-702b4c5969ce": {
           "progression_name": "Pagsasanay"
         },
@@ -9322,6 +9349,9 @@
         "938a26ab-bd9c-44b8-8cb9-63da1bcf591b": {
           "progression_name": "Pagsasanay"
         },
+        "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
+          "progression_name": "Ang Taga-Ani"
+        },
         "027a43ed-b9d6-48af-acb0-40514f563a5a": {
           "progression_name": "Pagsasanay"
         },
@@ -9359,6 +9389,9 @@
         },
         "3d19ddeb-ca0c-4e1e-9af0-cd5cc2a5eabe": {
           "progression_name": "Pagsasanay"
+        },
+        "1509114f-e57a-4100-b4ec-665739adf403": {
+          "progression_name": "Gamit ang paulit-ulit na bloke"
         },
         "f86d1539-d7e0-4872-997d-5064553f90ca": {
           "progression_name": "Pagsasanay"
@@ -9444,6 +9477,9 @@
         },
         "e2314a32-dd2f-4699-9f77-a5398fd0a9f2": {
           "progression_name": "Pagsasanay"
+        },
+        "f0c21fc1-b243-411a-b177-99f07b95acf3": {
+          "progression_name": "Gamit ang paulit-ulit na bloke"
         },
         "e49641c5-0812-46d3-9bae-93e4c933e04e": {
           "progression_name": "Pagsasanay"
@@ -9562,6 +9598,9 @@
           "name": "Prediksiyon",
           "progression_name": "Prediksiyon"
         },
+        "502e09e6-3af3-43cb-ae96-e44507f1250c": {
+          "progression_name": "Ang Taga-Ani"
+        },
         "95928265-96cb-467e-9d34-0e1bbe203c3c": {
           "progression_name": "Pagsasanay"
         },
@@ -9597,11 +9636,17 @@
           "name": "Libreng Laro",
           "progression_name": "Libreng Laro"
         },
+        "d72f7249-432e-4ae6-b265-c1fe66a6150d": {
+          "progression_name": "Ipinapakilala ang Sprite Lab"
+        },
         "d3c1d307-bc5d-4e96-b82e-d5ec9d39748c": {
           "progression_name": "Prediksiyon"
         },
         "659719ac-9bcf-4ed4-891b-1a4a37a3ac22": {
           "progression_name": "Mini-Project: Lumalangoy na Isda"
+        },
+        "ee39051b-426b-40d9-b61f-1f180cae8717": {
+          "progression_name": "Paano Gumawa ng Sprite"
         },
         "9c484311-a0f9-4660-9bc7-a13b03e87d58": {
           "progression_name": "Mini-Project: Lumalangoy na Isda (ipinagpatuloy)"
@@ -9833,11 +9878,17 @@
           "name": "Pagsasanay",
           "progression_name": "Pagsasanay"
         },
+        "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
+          "progression_name": "Ipinapakilala ang Sprite Lab"
+        },
         "d4e37aa1-3f91-4ec0-bc8f-bf64b461ad99": {
           "progression_name": "Prediksiyon"
         },
         "61942940-a071-4c23-9fbc-6632ec70ed93": {
           "progression_name": "Mini-Project: Lumalangoy na Isda"
+        },
+        "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
+          "progression_name": "Paano Gumawa ng Sprite"
         },
         "0ab3565a-6d5b-4555-adf0-2133008ae1fa": {
           "progression_name": "Mini-Project: Lumalangoy na Isda (ipinagpatuloy)"
@@ -9921,6 +9972,9 @@
         "55bf14c5-94b0-4b92-91b6-f49a15ed6342": {
           "name": "Libreng Laro",
           "progression_name": "Libreng Laro"
+        },
+        "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
+          "progression_name": "Ang Taga-Ani"
         },
         "52c49228-8221-4b46-9f42-81a5f1abf27f": {
           "progression_name": "Pagsasanay"
@@ -10075,6 +10129,9 @@
         },
         "0e8985cd-34d0-4ffe-b0f0-53fb0e9bd874": {
           "progression_name": "Pagsasanay"
+        },
+        "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
+          "progression_name": "Ang Taga-Ani"
         },
         "4bde879a-5158-461f-9d04-3000cc8992a2": {
           "progression_name": "Pagsasanay"
@@ -11385,12 +11442,38 @@
           "progression_name": "Pagmumuni-muni"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": ""
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": ""
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": ""
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": ""
+        },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Sining ng Tula"
+          "name": "Sining ng Tula",
+          "description": ""
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": ""
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": ""
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": ""
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": ""
         },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
           "description": "#### Naihanda ang Kalagayan\n\nI-welcome ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon.\n\nSabihin: _Ngayon ay gumugugol tayo ng isang oras sa pagtatrabaho sa ilang mga online na puzzle at pag-aaral ng mga kaugalian sa computer lab._\nAng layunin ng talakayang ito ay turuan ang mga mag-aaral kung ano ang aasahan at kung paano kumilos kapag pumasok sila sa computer lab."
@@ -11448,6 +11531,7 @@
           ]
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
+          "name": "Ipinapakilala ang Sprite Lab",
           "progression_name": "Video: Ipinapakilala ang Sprite Lab"
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
@@ -11501,6 +11585,7 @@
           ]
         },
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
+          "name": "Sprites sa aksyon",
           "progression_name": "Prediksiyon"
         },
         "275316f1-8a17-411e-881a-0841ede9cd01": {
@@ -12169,6 +12254,9 @@
           "tips": [
             null
           ]
+        },
+        "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
+          "progression_name": "Aking Online Na Kapitbahay"
         },
         "5cd698e0-d82e-4e9d-af4f-1923b453d12b": {
           "name": "Panimula"
@@ -12989,6 +13077,9 @@
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Introduksyon sa mga Loops"
         },
+        "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
+          "name": "Mga loop sa panahon ng yelo"
+        },
         "dad54c78-6c91-4ba8-bb15-eff5861db842": {
           "progression_name": "Pagbuo ng Kasanayan"
         },
@@ -13402,6 +13493,7 @@
           ]
         },
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
+          "name": "Sprites sa aksyon",
           "progression_name": "Prediksiyon"
         },
         "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
@@ -13814,6 +13906,9 @@
         },
         "efc04a38-eabb-4c39-8ba5-571b966a2bd7": {
           "name": "Panimula"
+        },
+        "cbe7cad1-610d-4da8-9af6-fceb37bdeeed": {
+          "progression_name": "Ang Taga-Ani"
         },
         "d505ce63-802f-4f28-bc12-8274cd540d14": {
           "progression_name": "Pagsasanay"
@@ -14907,6 +15002,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Mga model card sa Ai Lab",
           "tips": [
             null
           ]
@@ -18786,6 +18882,9 @@
         "b2137d87-9fc7-451a-aa66-5e88991ec216": {
           "progression_name": "Pagsasanay"
         },
+        "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
+          "progression_name": "Ang Taga-Ani"
+        },
         "e0c060eb-1f06-4f1d-a91e-edd961631883": {
           "progression_name": "Pagsasanay"
         },
@@ -18823,6 +18922,9 @@
         },
         "4a6e59ba-cdbe-4532-9b2e-d878f550ad8e": {
           "progression_name": "Pagsasanay"
+        },
+        "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
+          "progression_name": "Gamit ang paulit-ulit na bloke"
         },
         "b2a36927-a878-4885-b769-ee48fec75770": {
           "progression_name": "Pagsasanay"
@@ -18929,6 +19031,9 @@
         },
         "dbe9dad9-78fd-4f1c-8778-79bec55d6fc1": {
           "progression_name": "Pagsasanay"
+        },
+        "e2a14e5d-ab2d-41ae-ab3f-133d89bc51f1": {
+          "progression_name": "Gamit ang paulit-ulit na bloke"
         },
         "94134ae8-5a03-4079-a051-0538b5db4a77": {
           "progression_name": "Pagsasanay"
@@ -19046,6 +19151,9 @@
         "26f9de85-21ff-409d-893a-7ffc454e167a": {
           "name": "Prediksiyon",
           "progression_name": "Prediksiyon"
+        },
+        "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
+          "progression_name": "Ang Taga-Ani"
         },
         "86188817-4050-4ffc-8321-67eb22cc7438": {
           "progression_name": "Pagsasanay"
@@ -19172,6 +19280,9 @@
         "02a6c863-7f2e-4e81-97fb-247b72930518": {
           "progression_name": "Pagsasanay"
         },
+        "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
+          "progression_name": "Ang Taga-Ani"
+        },
         "fe170410-de6e-4d52-8cd2-62ceb9a8b808": {
           "progression_name": "Pagsasanay"
         },
@@ -19296,11 +19407,17 @@
           "name": "Pagsasanay",
           "progression_name": "Pagsasanay"
         },
+        "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
+          "progression_name": "Ipinapakilala ang Sprite Lab"
+        },
         "a580d0a5-1b2f-49ae-9722-5b9471367307": {
           "progression_name": "Prediksiyon"
         },
         "bcccd594-04be-4289-bd38-c3e08ca13d89": {
           "progression_name": "Mini-Project: Lumalangoy na Isda"
+        },
+        "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
+          "progression_name": "Paano Gumawa ng Sprite"
         },
         "bde1e72a-f2b7-494c-99be-1736a8653391": {
           "progression_name": "Mini-Project: Lumalangoy na Isda (ipinagpatuloy)"
@@ -19383,6 +19500,9 @@
         "f578d2c6-5557-4872-8505-2ee73c254d6e": {
           "name": "Libreng Laro",
           "progression_name": "Libreng Laro"
+        },
+        "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
+          "progression_name": "Ang Taga-Ani"
         },
         "8c92f401-dd45-4021-a38f-b410d49f7195": {
           "progression_name": "Pagsasanay"
@@ -19492,6 +19612,9 @@
         "a42584dc-7fb5-4988-97da-96177da8a05b": {
           "progression_name": "Pagsasanay"
         },
+        "d3456f8d-c77d-4ac0-bc57-d6b0f7adee00": {
+          "progression_name": "Gamit ang paulit-ulit na bloke"
+        },
         "f7863404-2557-401b-9c80-dd660b885dad": {
           "progression_name": "Pagsasanay"
         },
@@ -19541,11 +19664,17 @@
           "name": "Libreng Laro",
           "progression_name": "Libreng Laro"
         },
+        "72c41db7-4475-47f2-8d3b-62a5bc7e082e": {
+          "progression_name": "Ipinapakilala ang Sprite Lab"
+        },
         "edf7ac2a-9715-494a-99b2-8ee7e088394e": {
           "progression_name": "Prediksiyon"
         },
         "38099bbe-ac85-43ba-9087-19fdf9e613b5": {
           "progression_name": "Mini-Project: Lumalangoy na Isda"
+        },
+        "51a140d6-441e-487b-9e1f-313e842b78c3": {
+          "progression_name": "Paano Gumawa ng Sprite"
         },
         "6187ab8b-2e80-4e5c-bd96-16747d3deea8": {
           "progression_name": "Mini-Project: Lumalangoy na Isda (ipinagpatuloy)"

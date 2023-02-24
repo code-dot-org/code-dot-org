@@ -221,20 +221,12 @@ nn:
             MOVES.XArmsUp: Strekke
             MOVES.ThisOrThat: Dette eller dette
             MOVES.Rest: Ingen
-      Dancelab_everyMeasuresRange:
-        text: 'gjenta kvart {N} taktslag etter{START} '
       Dancelab_everySeconds:
         text: 'gjenta kvar {N} {UNIT} '
         options:
           UNIT:
             '"measures"': taktar
             '"seconds"': sekund
-      Dancelab_everySecondsRange:
-        text: 'kvar {N} {UNIT} frå {START} til {STOP} '
-        options:
-          UNIT:
-            measures: Taktar
-            seconds: Sekunder
       Dancelab_everyVerseChorus:
         text: 'kvar {UNIT} '
         options:
@@ -949,6 +941,13 @@ nn:
         text: oppsett
       Dancelab_whenSetup2:
         text: oppsett
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} startar {BEHAVIOR}
       gamelab_addTarget:
@@ -1597,6 +1596,8 @@ nn:
             '"sound://category_bell/long_bell_notification.mp3"': Bjelle
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bobble
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hopp
+      Poetry_playSoundOptionsSpace:
+        text: spillLyd {SOUND}
       Poetry_setBackground:
         text: vel bakgrunnsfarge {COLOR}
       Poetry_setBackgroundEffect:
@@ -1791,3 +1792,10 @@ nn:
           DIR:
             right: høgre ↻
             left: venstre ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn

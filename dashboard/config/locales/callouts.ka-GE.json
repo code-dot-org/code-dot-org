@@ -1167,6 +1167,178 @@
         },
         "courseE_farmer_functions12022": {
           "courseE_farmer_functions1_2": "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ."
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "courseE_aboutme_22022": {
+          "": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "სანიშნეს ეს ღონისძიება ბლოკი თქვენი სამუშაო გარემოს."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი.",
+          "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "დააწკაპუნეთ აქ კოდის გასაშვებად."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "სანიშნეს ეს ღონისძიება ბლოკი თქვენი სამუშაო გარემოს."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "helloworld_animals_location": {
+          "pin": "pin"
+        },
+        "helloworld_animals_multi": {
+          "pin": "pin"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი.",
+          "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite."
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new_block": "ახალი ბლოკი!!!!"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "დააწკაპუნეთ აქ კოდის გასაშვებად."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "სანიშნეს ეს ღონისძიება ბლოკი თქვენი სამუშაო გარემოს."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "helloworld_emoji_location": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი.",
+          "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "დააწკაპუნეთ აქ კოდის გასაშვებად."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "დააწკაპუნეთ აქ კოდის გასაშვებად."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "დააწკაპუნეთ აქ პირველი!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "სანიშნეს ეს ღონისძიება ბლოკი თქვენი სამუშაო გარემოს."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "სანიშნეს ეს ღონისძიება ბლოკი თქვენი სამუშაო გარემოს."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "სანიშნეს ეს ღონისძიება ბლოკი თქვენი სამუშაო გარემოს."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "helloworld_food_location": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი.",
+          "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი.",
+          "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი.",
+          "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "დააწკაპუნეთ აქ კოდის გასაშვებად."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "სანიშნეს ეს ღონისძიება ბლოკი თქვენი სამუშაო გარემოს."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
+        "helloworld_retro_location": {
+          "pin": "pin"
+        },
+        "helloworld_retro_multi": {
+          "pin": "pin"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი.",
+          "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite."
         }
       }
     }

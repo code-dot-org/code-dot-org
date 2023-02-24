@@ -2329,6 +2329,13 @@ hu-HU:
   hoc_overview_dance_2019_subtitle: 'Programozz le egy Táncos bulit, és oszd meg barátaiddal.
     Közreműködik Katy Perry, Shawn Mendes, Panic! A diszkóban: Lil Nas X, Jonas Brothers,
     Nicki Minaj és még 34-en!'
+  hoc_overview_dance_2022_subtitle: 'Kódolj egy Táncos bulit, és oszd meg a barátaiddal.
+    Fellépnek: Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, zene a Disney
+    "Encanto" c. filmjéből stb!'
+  hoc_overview_hello_world_2022_subtitle: Válassz a négy szórakoztató téma közül,
+    ha interaktív karaktereket akarsz kódolni az általad létrehozott világban.
+  hoc_overview_hello_world_2022_alt_text: Animált űrhajós- és állatfigurák lebegnek
+    a Föld képe körül
   hoc_overview_title: Óra Kódolás Tevékenységek a Code.org
   hoc_overview_subtitle: A <a href="https://hourofcode.com">Hour of Code</a> egy globális
     mozgalom, amely több tízmillió diák jut el 180+ országban. Bárki, bárhol szervezhet
@@ -2403,10 +2410,21 @@ hu-HU:
   hoc2018_mc_educators_box3_desc: Látogasson el egy Microsoft Store-ba egy ingyenes
     Code Óra műhelyhez. A résztvevők minden képzettségi szint, korosztály hat és legfeljebb.
   hoc2018_mc_educators_box3_button: Keressen egy műhelyt
+  hoc2022_mc_educators_box3_desc_markdown: Vedd igénybe ezt az [ingyenes tanfolyamot]
+    (%{free_course_link}) vagy regisztráld az osztályod, és egy vendégtanár közreműködésével
+    vegyetek részt egy élő Kódolás óráján. Több alkalommal is elérhető a Számítástechnikai
+    oktatás hetén, december 6-11 között.
+  hoc2022_mc_educators_box3_button: Regisztrálj most!
   hoc2018_mc_educators_box4_title: További számítástechnikai erőforrások elérése
   hoc2018_mc_educators_box4_desc: Változtatást hozhat létre közösségében a Microsoft
     digitális készségeivel és számítástechnika oktatási erőforrásaival.
   hoc2018_mc_educators_box4_button: Források felfedezése
+  hoc2022_mc_educators_box4_desc: '200 órányi informatikai tananyag segítségével ébreszd
+    fel a K-12-es tanulók lelkesedését a STEM iránt, amely szakmai támogatással megerősítve
+    elvezet a blokkoktól a Python-programozásig.
+
+'
+  hoc2022_mc_educators_box4_button: Tanulás folytatása
   hoc2018_mc_watch_videos: Mielőtt elkezdenéd, nézd meg az egyik inspiráló videót
   hoc2018_mc_videos_more: Több <a href='%{inspiring_videos_playlist}'>inspiráló videók</a>
     példaképek és hírességek
@@ -2581,6 +2599,15 @@ hu-HU:
   hoc2021_mc_mee_ai_title: Mesterséges intelligencia jó célokra
   hoc2021_mc_mee_ai_description: Fedezd fel a mesterséges intelligenciát a diákjaiddal,
     és tanulj meg kódolni a Minecraft Oktatási kiadásában.
+  hoc2022_mc_mee_title: Minecraft szabadulószoba
+  hoc2022_mc_mee_description: 'Szökj meg még hajnal előtt a titokzatos kastélyból,
+    és keress egymillió smaragdot!  A tananyag az új Minecraft Kódolás órájához már
+    elérhető a Minecraftban: Oktatási változat Windowsra, Macre, Chromebookra, Ipadre
+    és mobileszközökre. Kezdd el, és használd az oktatók számára ingyenesen elérhető
+    erőforrásokat, képzéseket és videókat.'
+  hoc2022_mc_mee_timecraft_description: 'Utazz vissza a múltba, és mentsd meg a jövőt
+    a Minecraftnak ebben az ingyenesen hozzáférhető kódolási leckéjében: Oktatási
+    kiadás.'
   footer_powered_by_aws: 'Az Amazon Web Services és a  “Powered by AWS” logo az Amazon.com,
     Inc. és leányvállalatainak védjegyei az Egyesült Államokban és/vagy más országokban. '
   footer_built_on_github: A Microsoft GitHubra épül
@@ -2680,4 +2707,21 @@ hu-HU:
     táblagéphez ér, csillagokat és fénysugarakat bocsát ki kék háttér előtt.
   minecraft_tile_alt: Két Minecraft karakter, Steve és Alex, egy Minecraft vizes jelenetet
     ábrázoló háttér előtt, korallokkal, delfinekkel és hínárral.
-  hoc2022_landing_page_create_title: Létrehoz
+  hoc2022_banner_title: Fedezd fel, játssz és alkoss!
+  hoc2022_banner_description: Fedezd fel az univerzumot, lőj célba, mozogj - az informatika
+    kipróbálásának sokféle útja-módja van!
+  hoc2022_cta_primary: Újdonságok megtekintése
+  hoc2022_cta_secondary: Próbálj ki még több tevékenységet!
+  hoc2022_landing_page_explore_title: Felfedezés
+  hoc2022_landing_page_explore_description: Fedezz fel új világokat az informatikával!
+  hoc2022_landing_page_play_title: Lejátszás
+  hoc2022_landing_page_play_description: Tiéd a pálya, rúgj gólt!
+  hoc2022_landing_page_create_title: Alkoss
+  hoc2022_landing_page_create_description: Készíts valami izgalmasat és csodálatosat!
+  hoc2022_landing_page_banner_alt_left: Egy földönkívüli táncol az űrben, a Szaturnusz
+    közelében
+  hoc2022_landing_page_banner_alt_right: Egy robot egy focilabdával cselez az űrben,
+    egy felszállásra készülő rakéta előtt.
+  hoc2022_nasa_banner_heading: Csatlakozzon a NASA-hoz egy különleges Hour of Code
+    programhoz, amely az űrbeli számítástechnikáról szól!
+  hoc2022_nasa_banner_description: Premier 10AM ET, december 5-én a NASA STEM YouTube-csatornáján.

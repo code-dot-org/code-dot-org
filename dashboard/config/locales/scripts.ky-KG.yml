@@ -554,3 +554,25 @@ ky:
           lessons:
             lesson-6:
               name: Циклдер
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Өзгөрмөлөр
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Циклдер
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Тизмелер
+            lessonGroup-3:
+              display_name: Циклдер

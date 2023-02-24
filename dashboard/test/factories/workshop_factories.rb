@@ -210,6 +210,22 @@ FactoryGirl.define do
         subject Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
       end
       factory(:csd_academic_year_workshop) {csd}
+
+      # CSA Academic Year Workshops
+      trait :csa do
+        course Pd::Workshop::COURSE_CSA
+        location_name 'Greendale Community College'
+
+        # Possible subjects:
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_1
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_2
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_3
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_4
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_1_2 (2-day)
+        # Pd::Workshop::SUBJECT_CSA_WORKSHOP_3_4 (2-day)
+        subject Pd::Workshop::SUBJECT_CSA_WORKSHOP_1
+      end
+      factory(:csa_academic_year_workshop) {csa}
     end
 
     # 5-day local summer workshops

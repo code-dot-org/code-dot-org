@@ -4,6 +4,8 @@ de:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: Frage Benutzer {QUESTION} für Variable {VAR} mit Auswahl {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE} sagt {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -248,20 +250,12 @@ de:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_everyMeasuresRange:
-        text: 'wiederholen Sie alle {N} Takte nach {START} '
       Dancelab_everySeconds:
         text: 'jede {N} {UNIT} '
         options:
           UNIT:
             '"measures"': Takte
             '"seconds"': Sekunden
-      Dancelab_everySecondsRange:
-        text: 'jede {N} {UNIT} von {START} bis {STOP} '
-        options:
-          UNIT:
-            measures: Takte
-            seconds: Sekunden
       Dancelab_everyVerseChorus:
         text: 'jede {UNIT} '
         options:
@@ -1014,6 +1008,39 @@ de:
         text: Setup
       Dancelab_whenSetup2:
         text: Setup
+      DansBlocks_getMicroscope:
+        text: Mikroskop hat {INPUT1}
+        options:
+          INPUT1:
+            '1': Zitronensaft
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: führe {EFFECT} aus
+        options:
+          EFFECT:
+            '"bubbles"': Blasen
+            '"confetti"': Konfetti
+            '"hearts"': Herzen
+            '"emojis"': Fröhliche Emojis
+            '"rain"': Regen
+            '"starburst"': Starburst
+            '"glass"': Zerbrochenes Glas
+            '"twinkling"': Zwinkern
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': Zitronensaft
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Kommuniziere {VAR1} mit {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: erstelle {NUM} neue {ANIMATION_NAME} Sprites  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: repräsentieren {NUM} neue {ANIMATION_NAME} Sprites [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE} sagt {TEXT1}"
       gamelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"
       gamelab_addTarget:
@@ -1345,8 +1372,30 @@ de:
             "'sound://category_digital/jump_7.mp3'": springen
       gamelab_playSoundOptionsSoccer:
         text: spieleTon {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": Lufthupe
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": Beifall
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": Gesang
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": Jubel
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": Kick
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": zwei Pfeifen
+            "'sound://category_sports/One_Whistle_SFX.mp3'": Pfeife
       gamelab_playSoundOptionsSpace:
         text: spieleTon {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": Schwarzes Loch
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Geschosshaufen
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Krabbennebel
+            "'sound://category_space/Launch_SFX.mp3'": Start
+            "'sound://category_space/Lift_Off.mp3'": Abheben
+            "'sound://category_space/Pillars_SFX.mp3'": Säulen
+            "'sound://category_space/Southern_ring_SFX.mp3'": Südring
+            "'sound://category_space/Supernova_SFX.mp3'": Supernova
+            "'sound://category_space/Tycho_SFX.mp3'": Tycho
       gamelab_playSpeech:
         text: Sprache wiedergeben {SOUND}
       gamelab_playerBehaviors:
@@ -1991,6 +2040,38 @@ de:
         text: Monster Town mit {COUNT}Monstern einrichten
       Outbreak_stopMoving:
         text: Monster hören auf, sich zu bewegen
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskop hat {INPUT1}
+        options:
+          INPUT1:
+            '1': Zitronensaft
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': Zitronensaft
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): Solid
+            new Behavior(liquid, []): flüssig
+            new Behavior(wandering, []): Gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Setze {COSTUME} auf {BEHAVIOR} Verhalten
+        options:
+          BEHAVIOR:
+            '"solid"': Feststoff-Partikel
+            '"liquid"': flüssige Partikel
+            '"gas"': Gaspartikel
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': Feststoff-Partikel
+            '"liquid"': flüssige Partikel
+            '"gas"': Gaspartikel
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2061,6 +2142,21 @@ de:
             '"sound://category_achievements/peaceful_win_1.mp3"': Gewinnen
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wirbel
             '"sound://category_achievements/peaceful_win_6.mp3"': Windspiel
+      Poetry_playSoundOptionsSpace:
+        text: spieleTon {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": Schwarzes Loch
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Geschosshaufen
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Krabbennebel
+            "'sound://category_space/Launch_SFX.mp3'": Start
+            "'sound://category_space/Lift_Off.mp3'": Abheben
+            "'sound://category_space/Pillars_SFX.mp3'": Säulen
+            "'sound://category_space/Southern_ring_SFX.mp3'": Südring
+            "'sound://category_space/Supernova_SFX.mp3'": Supernova
+            "'sound://category_space/Tycho_SFX.mp3'": Tycho
       Poetry_setAuthor:
         text: lege für Autor {AUTHOR} fest
       Poetry_setBackground:
@@ -2470,5 +2566,19 @@ de:
           DIR:
             right: rechts ↻
             left: links ↺
+      storylab_setForegroundEffect2:
+        text: führe {EFFECT} aus
+        options:
+          EFFECT:
+            '"bubbles"': Blasen
+            '"confetti"': Konfetti
+            '"hearts"': Herzen
+            '"rain"': Regen
+            '"starburst"': Starburst
+            '"twinkling"': Zwinkern
+      storylab_setHeading:
+        text: Überschrift festlegen {HEADING}
+      storylab_setSubheading:
+        text: Unterüberschrift festlegen {SUBHEADING}
       validation_validatedBackground:
         text: setze Hintergund auf {IMG}

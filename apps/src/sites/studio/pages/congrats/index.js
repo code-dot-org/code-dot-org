@@ -32,7 +32,8 @@ $(document).ready(function() {
   try {
     const params = queryString.parse(window.location.search);
     certificateId = params['i'] && params['i'].replace(/[^a-z0-9_]/g, '');
-    tutorial = atob(params['s']).replace(/[^A-Za-z0-9_\- ]/g, '');
+    const s = params['s'];
+    tutorial = s ? atob(s).replace(/[^A-Za-z0-9_\- ]/g, '') : 'hourofcode';
   } catch (e) {}
 
   const mcShareLink = tryGetLocalStorage('craftHeroShareLink', '');

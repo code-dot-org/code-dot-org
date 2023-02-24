@@ -3,16 +3,23 @@ ca:
   data:
     block_categories:
       Actions: Accions
+      Behaviors: Comportaments
+      Category: Categoria
       Color: Color
       Conditionals: Condicionals
-      Dancers: Dansaires
+      Dancers: Ballarins
+      Effects: Efectes
       Events: Esdeveniments
       Functions: Funcions
       'Functions ': 'Funcions '
       Groups: Grups
-      Logic: Lògic
+      Locations: Ubicacions
+      Logic: Lògica
       Loops: Bucles
       Math: Matemàtiques
-      Text: text
+      Numbers: Números
+      Properties: Propietats
+      Text: Text
       Variables: Variables
       'Variables ': 'Variables '
+      World: Món

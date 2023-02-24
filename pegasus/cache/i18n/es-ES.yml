@@ -1390,7 +1390,7 @@ es-ES:
   pre-express-2020_name: Curso Exprés para pre-lectores (2020)
   express-2021_name: Curso Exprés (2021)
   pre-express-2021_name: Curso Exprés para pre-lectores (2021)
-  express-2022_name: Curso Exprés (2021)
+  express-2022_name: Curso Exprés (2022)
   pre-express-2022_name: Curso Exprés para Pre-lectores (2022)
   csd2_name: 'Unidad 2: Desarrollo Web'
   csd3_name: 'Unidad 3: Animación y Juegos'
@@ -2442,6 +2442,13 @@ es-ES:
   hoc_overview_dance_2019_subtitle: Programa una Fiesta de baile para compartir con
     tus amigos. Con Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas
     Brothers, ¡y muchos más!
+  hoc_overview_dance_2022_subtitle: Programa una fiesta de baile y compártela con
+    tus amigos. ¡Con música de Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
+    la película de Disney «Encanto» y más!
+  hoc_overview_hello_world_2022_subtitle: Elige entre cuatro temas divertidos para
+    codificar personajes interactivos en un mundo creado por ti.
+  hoc_overview_hello_world_2022_alt_text: Personajes animados de astronautas y animalitos
+    alrededor de una ilustración de la tierra
   hoc_overview_title: Actividades de la Hora del Código de Code.org
   hoc_overview_subtitle: La <a href="https://hourofcode.com">Hora del Código</a> es
     un movimiento global que llega a decenas de millones de estudiantes en más 180
@@ -2520,10 +2527,19 @@ es-ES:
     un taller gratis de la Hora del Código. Para participantes de todos los niveles,
     mayores de 6 años.
   hoc2018_mc_educators_box3_button: Encuentra un taller
+  hoc2022_mc_educators_box3_desc_markdown: 'Utilice este [curso gratuito] bajo demanda
+    (%{free_course_link}) o registre a toda su clase para asistir a un taller en vivo
+    de la Hora del código con un profesor invitado. Se ofrece en varias ocasiones
+    durante el CSEW, del 6 al 11 de diciembre. '
+  hoc2022_mc_educators_box3_button: Regístrate ahora
   hoc2018_mc_educators_box4_title: Accede a más recursos sobre ciencias de la computación
   hoc2018_mc_educators_box4_desc: Haz una diferencia en tu comunidad con las habilidades
     digitales y la enseñanza de ciencias de la computación de Microsoft.
   hoc2018_mc_educators_box4_button: Explorar recursos
+  hoc2022_mc_educators_box4_desc: Inspire la pasión por STEM en los estudiantes de
+    K-12 con 200 horas de plan de estudios de ciencias de la computación, desde block
+    hasta python, respaldado por el desarrollo profesional.
+  hoc2022_mc_educators_box4_button: Sigue aprendiendo
   hoc2018_mc_watch_videos: Antes de empezar, ve uno de estos videos inspiradores
   hoc2018_mc_videos_more: Más <a href='%{inspiring_videos_playlist}'>videos inspiradores</a>
     con la participación de expertos y personajes famosos
@@ -2709,6 +2725,14 @@ es-ES:
   hoc2021_mc_mee_ai_title: Inteligencia Artificial para el Bienestar
   hoc2021_mc_mee_ai_description: 'Explora la Inteligencia Artificial con tus alumnos
     y aprende a codificar en Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: Finca de escape de Minecraft
+  hoc2022_mc_mee_description: "¡Escapa de la misteriosa mansión al amanecer y gana
+    un millón de esmeraldas! El nuevo tutorial de la Hora del código de Minecraft
+    ya está disponible en Minecraft: Education Edition para Windows, Mac, Chromebook,
+    iPad y dispositivos móviles. Comience con recursos, capacitaciones y videos gratuitos
+    para educadores. "
+  hoc2022_mc_mee_timecraft_description: 'Viaja en el tiempo para salvar el futuro
+    en esta lección de programación gratuita en Minecraft: Education Edition.'
   footer_powered_by_aws: Impulsado por Amazon Web Services
   footer_built_on_github: Creado en GitHub de Microsoft
   codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras
@@ -2822,5 +2846,26 @@ es-ES:
     tableta de pantalla táctil que emite estrellas y rayos de luz sobre un fondo azul
   minecraft_tile_alt: Dos personajes de Minecraft, Steve y Alex, sobre un fondo que
     muestra una escena acuática de Minecraft con corales, delfines y algas
+  hoc2022_banner_title: "¡Explora, Juega, Crea!"
+  hoc2022_banner_description: 'Explorar el universo, marcar un gol, hacer un movimiento:
+    ¡hay muchas maneras de probar la informática!'
+  hoc2022_cta_primary: Ver lo nuevo
+  hoc2022_cta_secondary: Prueba más actividades
+  hoc2022_landing_page_explore_title: Explorar
+  hoc2022_landing_page_explore_description: "¡Abre las puertas a nuevos mundos con
+    la informática!"
+  hoc2022_landing_page_play_title: Jugar
+  hoc2022_landing_page_play_description: "¡Sal al campo y marca!"
   hoc2022_landing_page_create_title: Crear
+  hoc2022_landing_page_create_description: "¡Haz algo raro y maravilloso!"
+  hoc2022_landing_page_banner_alt_left: Un extraterrestre bailando junto a Saturno
+    en el espacio
+  hoc2022_landing_page_banner_alt_right: Un robot regateando un balón de fútbol en
+    el espacio frente a un cohete que despega
   try_it_yourself: "¡Inténtalo tú mismo!"
+  try_an_activity: Prueba una actividad
+  see_more_activities: Ver más actividades
+  hoc2022_nasa_banner_heading: "¡Aprende sobre las ciencias de la computación en el
+    espacio con la NASA en esta función especial de la Hora del Código!"
+  hoc2022_nasa_banner_description: Sintonízate a las 10AM EST el 5 de Diciembre via
+    el canal de YouTube de NASA STEM.

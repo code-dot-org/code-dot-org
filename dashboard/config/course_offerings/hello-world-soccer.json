@@ -1,7 +1,11 @@
 {
   "key": "hello-world-soccer",
-  "display_name": "hello-world-soccer",
+  "display_name": "Hello World: Soccer",
   "category": "hoc",
   "is_featured": true,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": null,
+  "marketing_initiative": "HOC",
+  "grade_levels": null,
+  "header": "Hello World"
 }

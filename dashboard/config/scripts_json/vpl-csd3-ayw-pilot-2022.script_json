@@ -13,8 +13,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-13 05:18:09 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-11-28 20:20:27 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -57,7 +57,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Overview**: This session provides a space for participants to reconnect with their cohort and check in about CS Discoveries implementation. They will also review the norms, goals, theme, and agenda for the workshop, including the continuing focus on debugging.\n\n**Participants will:**\n\n* Be aware of the norms, goals, theme, and agenda for the workshop.\n* Build community by celebrating successes, venting frustrations, and troubleshooting roadblocks with fellow cohort members in small groups.\n\n**Suggested time:** 15 minutes",
+        "overview": "**Overview**: This session provides a space for participants to reconnect with their cohort and check in about CS Discoveries implementation. They will also review the norms, goals, theme, and agenda for the workshop, including the continuing focus on assessment.\n\n**Participants will:**\n\n* Be aware of the norms, goals, theme, and agenda for the workshop.\n* Build community by celebrating successes, venting frustrations, and troubleshooting roadblocks with fellow cohort members in small groups.\n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Be aware of the norms, goals, theme, and agenda for the workshop.\n* Build community by celebrating successes, venting frustrations, and troubleshooting roadblocks with fellow cohort members in small groups."
       },
       "seeding_key": {
@@ -133,6 +133,21 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd3-ayw-pilot-2022"
       }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Module 3 Asynchronous Work",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022"
+      }
     }
   ],
   "lesson_activities": [
@@ -195,6 +210,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd3-ayw-pilot-2022"
       }
+    },
+    {
+      "key": "2228c107-ba81-422a-9e21-bc6866f37798",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2228c107-ba81-422a-9e21-bc6866f37798",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -222,6 +249,7 @@
       "key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be",
       "position": 1,
       "properties": {
+        "progression_name": "Student Samples"
       },
       "seeding_key": {
         "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be",
@@ -247,22 +275,554 @@
         "activity_section.key": "d5a61987-54b8-4804-aba0-50479373f63c",
         "lesson_activity.key": "cc147418-95c5-4b22-93a1-da30ee2cc922"
       }
+    },
+    {
+      "key": "4caf9c93-ae5d-4945-8a9b-368600ab25a9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 3 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "4caf9c93-ae5d-4945-8a9b-368600ab25a9",
+        "lesson_activity.key": "2228c107-ba81-422a-9e21-bc6866f37798"
+      }
+    },
+    {
+      "key": "604b30bd-db7f-4681-be92-c041b034e0cd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Reviewing Formative Assessments"
+      },
+      "seeding_key": {
+        "activity_section.key": "604b30bd-db7f-4681-be92-c041b034e0cd",
+        "lesson_activity.key": "2228c107-ba81-422a-9e21-bc6866f37798"
+      }
+    },
+    {
+      "key": "88ba7ba8-131e-4cba-974a-1ff0dd01539d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Planning Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "88ba7ba8-131e-4cba-974a-1ff0dd01539d",
+        "lesson_activity.key": "2228c107-ba81-422a-9e21-bc6866f37798"
+      }
+    },
+    {
+      "key": "1a3f413f-3599-4567-b493-fc838ac864ca",
+      "position": 4,
+      "properties": {
+        "progression_name": "Module 3 Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a3f413f-3599-4567-b493-fc838ac864ca",
+        "lesson_activity.key": "2228c107-ba81-422a-9e21-bc6866f37798"
+      }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Samples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-ProblemSolvingSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-ProblemSolvingSample"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Samples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-WebDevSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-WebDevSample"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Samples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-AnimGamesSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-AnimGamesSample"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Samples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-DesignProcessSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-DesignProcessSample"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Samples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-DataSocietySample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-DataSocietySample"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Samples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-PhysCompSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-PhysCompSample"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Samples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-AIMLSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-AIMLSample"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-Module 3 Overview"
+        ],
+        "progression": "Module 3 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-Module 3 Overview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "4caf9c93-ae5d-4945-8a9b-368600ab25a9"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-Module 3 Overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview"
+        ],
+        "progression": "Reviewing Formative Assessments"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "604b30bd-db7f-4681-be92-c041b034e0cd"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview1"
+        ],
+        "progression": "Reviewing Formative Assessments"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "604b30bd-db7f-4681-be92-c041b034e0cd"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview1"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps"
+        ],
+        "progression": "Planning Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "88ba7ba8-131e-4cba-974a-1ff0dd01539d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps1"
+        ],
+        "progression": "Planning Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "88ba7ba8-131e-4cba-974a-1ff0dd01539d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps1"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-WrapUp"
+        ],
+        "progression": "Module 3 Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-WrapUp"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "1a3f413f-3599-4567-b493-fc838ac864ca"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M3-WrapUp"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-ProblemSolvingSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-ProblemSolvingSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-WebDevSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-WebDevSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-AnimGamesSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-AnimGamesSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-DesignProcessSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-DesignProcessSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-DataSocietySample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-DataSocietySample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-PhysCompSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-PhysCompSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-AIMLSample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-AIMLSample"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "ec473c1f-a898-4b17-9e05-1bb93a38f5be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-Module 3 Overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-Module 3 Overview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "4caf9c93-ae5d-4945-8a9b-368600ab25a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "604b30bd-db7f-4681-be92-c041b034e0cd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "604b30bd-db7f-4681-be92-c041b034e0cd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "88ba7ba8-131e-4cba-974a-1ff0dd01539d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "88ba7ba8-131e-4cba-974a-1ff0dd01539d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-WrapUp",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-WrapUp"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-ayw-pilot-2022",
+        "activity_section.key": "1a3f413f-3599-4567-b493-fc838ac864ca"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "CSD 2022 M3 Pilot Slides",
+      "url": "https://docs.google.com/presentation/d/1kXeXVJRodVDJxyJdS3QPrFcG6ughmNG5TDfOiuipVQ4/edit?usp=sharing",
+      "key": "csd_2022_m3_pilot_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_2022_m3_pilot_slides"
+      }
+    },
+    {
+      "name": "CSD 2022 M3 Pilot Agenda",
+      "url": "https://docs.google.com/document/d/1TctttIoUFmLU3u3H3dfYSgZf33JS4fevCp4d8fHeLb4/edit?usp=sharing",
+      "key": "csd_22_m3_pilot_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_22_m3_pilot_agenda"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_2022_m3_pilot_slides",
+        "script.name": "vpl-csd3-ayw-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_22_m3_pilot_agenda",
+        "script.name": "vpl-csd3-ayw-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 

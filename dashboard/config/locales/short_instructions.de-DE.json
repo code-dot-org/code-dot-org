@@ -2490,7 +2490,7 @@
         "courseE_artist_functions10_2018": "Verwende diesmal Reihen von 8 Sechsecken mit 25 Pixel langen Seiten.",
         "courseE_artist_functions10_2019": "Verwende diesmal Reihen von 8 Sechsecken mit 25 Pixel langen Seiten.",
         "courseE_artist_functions10_2020": "Verwende diesmal Reihen von 8 Sechsecken mit 25 Pixel langen Seiten.",
-        "courseE_artist_functions1_copy": "Hilf dem Zombie dabei, eine Brille mithilfe von quadratischen Feldern mit einer Seitenlänge von 100 Pixeln zu zeichnen.\\\\ Die Brücke zwischen den Gläsern ist 75 Pixel lang.",
+        "courseE_artist_functions1_copy": "Hilf dem Zombie dabei, eine Brille mithilfe von quadratischen Feldern mit einer Seitenlänge von 100 Pixeln zu zeichnen.\\ Die Brücke zwischen den Gläsern ist 75 Pixel lang.",
         "courseE_artist_functions2": "Verwende jetzt die Funktion `ein Quadrat zeichnen`, um die Brille zu zeichnen.",
         "courseE_artist_functions2_2018": "Verwende die Funktion `Zeichne ein Quadrat`, um die Brille zu zeichnen. ",
         "courseE_artist_functions2_2019": "Verwende die Funktion `Zeichne ein Quadrat`, um die Brille zu zeichnen. ",
@@ -4408,7 +4408,15 @@
         "helloworld_food_sizes_soccer-2022": "Lass uns lernen, wie du die Größe von Sprites änderst.",
         "helloworld_food_sizes_space-2022": "Lass uns lernen, wie du die Größe von Sprites änderst.",
         "helloworld_food_sounds_soccer-2022": "Lass uns lernen, wie Töne wiedergegeben werden.",
-        "helloworld_food_sounds_space-2022": "Lass uns lernen, wie Töne wiedergegeben werden."
+        "helloworld_food_sounds_space-2022": "Lass uns lernen, wie Töne wiedergegeben werden.",
+        "courseF_clicker_finish_-2022-2": "Beende dein Clicker-Spiel.",
+        "courseF_clicker_remove_-2022-2": "Verwenden Sie eine Variable, um die Punktzahl des Spielers zu Beginn des Spiels festzulegen und ihm jedes Mal Punkte zu geben, wenn er auf ein Sprite klickt.",
+        "courseF_clicker_score_-2022-2": "Wenn genügend Zeit vergangen ist, beenden Sie dieses Spiel, indem Sie das Endergebnis des Spielers ausdrucken.",
+        "courseF_clicker_sprites_-2022-2": "Erstelle eine Gruppe von Sprites mit demselben Kostüm.",
+        "courseF_clicker_variable_-2022-2": "Verwenden Sie eine Variable, um die Punktzahl des Spielers zu Beginn des Spiels festzulegen und ihm jedes Mal Punkte zu geben, wenn er auf ein Sprite klickt.",
+        "courseF_variables2_change_-2022-2": "Erstellen Sie ein Programm, das den Wert einer Variablen im Laufe der Zeit ändert. Lassen Sie das Sprite den neuen Wert sagen, wenn er sich ändert.",
+        "courseF_variables2_click_-2022-2": "Ändern Sie den Wert einer Variablen jedes Mal, wenn auf ein Sprite geklickt wird. Lassen Sie das Sprite jedes Mal den neuen Wert sagen, wenn er sich ändert.",
+        "courseF_variables2_set_-2022-2": "Setze eine Variable auf eine beliebige Zahl und lass dein Sprite diese gespeicherte Zahl sagen."
       }
     }
   }

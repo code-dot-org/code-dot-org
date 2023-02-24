@@ -228,20 +228,12 @@ da:
             MOVES.XArmsUp: Stræk
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
-      Dancelab_everyMeasuresRange:
-        text: 'gentag hver {N} takt efter {START} '
       Dancelab_everySeconds:
         text: 'gentag hver {N} {UNIT} '
         options:
           UNIT:
             '"measures"': målt
             '"seconds"': sekunder
-      Dancelab_everySecondsRange:
-        text: 'hver {N} {UNIT} fra {START} til {STOP} '
-        options:
-          UNIT:
-            measures: Takt
-            seconds: Sekunder
       Dancelab_everyVerseChorus:
         text: 'hver {UNIT} '
         options:
@@ -993,6 +985,14 @@ da:
         text: opret
       Dancelab_whenSetup2:
         text: opret
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn
+            '"starburst"': Starburst
       gamelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
       gamelab_addTarget:
@@ -1623,6 +1623,8 @@ da:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': klokke
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hop
+      Poetry_playSoundOptionsSpace:
+        text: afspil lyd {SOUND}
       Poetry_setBackground:
         text: indstil baggrundsfarve {COLOR}
       Poetry_setBackgroundEffect:
@@ -1886,5 +1888,13 @@ da:
           DIR:
             right: til højre ↻
             left: til venstre ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': hjerter
+            '"rain"': regn
+            '"starburst"': Starburst
       validation_validatedBackground:
         text: sæt baggrund til {IMG}

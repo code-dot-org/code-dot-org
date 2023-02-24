@@ -197,19 +197,11 @@ se:
             MOVES.Kick: Násti
             MOVES.XArmsUp: Faŋut
             MOVES.ThisOrThat: Dát vai Duot
-      Dancelab_everyMeasuresRange:
-        text: gearddut juohke {N} távtta maŋŋil {START}
       Dancelab_everySeconds:
         text: gearddut juohke {N} {UNIT}
         options:
           UNIT:
             '"measures"': távttat
-      Dancelab_everySecondsRange:
-        text: juohke {N} {UNIT} dán rájes {START} dása {STOP}
-        options:
-          UNIT:
-            measures: Távttat
-            seconds: Sekunddat
       Dancelab_everyVerseChorus:
         text: juohke {UNIT}
         options:
@@ -888,6 +880,13 @@ se:
         text: setup
       Dancelab_whenSetup2:
         text: setup
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bulljarasat
+            '"confetti"': Konfetti
+            '"hearts"': váimmut
+            '"starburst"': Starburst
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} álgá {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -1435,6 +1434,8 @@ se:
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': njozet
       Poetry_playSound:
         text: čuojatJiena {SOUND}
+      Poetry_playSoundOptionsSpace:
+        text: čuojatJiena {SOUND}
       Poetry_setBackground:
         text: bija duogábeal-ivnni {COLOR}
       Poetry_setBackgroundEffect:
@@ -1632,5 +1633,12 @@ se:
           DIR:
             right: olgeš ↻
             left: gurut ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bulljarasat
+            '"confetti"': Konfetti
+            '"hearts"': váimmut
+            '"starburst"': Starburst
       validation_validatedBackground:
         text: bija duogábeali dása {IMG}

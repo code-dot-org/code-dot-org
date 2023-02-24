@@ -63,31 +63,28 @@ module Pd::Application
     # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
     # In these decision emails, status and email_type are the same.
     AUTO_EMAIL_STATUSES = %w(
-      accepted_no_cost_registration
+      accepted
       declined
-      waitlisted
-      registration_sent
     )
 
     # If the regional partner's emails are SENT_BY_SYSTEM, the application must
     # have an assigned workshop to be set to one of these statuses because they
     # trigger emails with a link to the workshop registration form
     WORKSHOP_REQUIRED_STATUSES = %w(
-      accepted_no_cost_registration
-      registration_sent
+      accepted
     )
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
     before_validation :set_course_from_program, if: -> {form_data_changed?}
+    before_validation :set_status_from_admin_approval, if: -> {properties_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
-    before_save :set_total_course_hours, if: -> {form_data_changed?}
     before_save :update_user_school_info!, if: -> {form_data_changed?}
-    before_save :log_status, if: -> {status_changed?}
+    before_save :log_status, if: -> {status_changed? || form_data_changed?}
 
     serialized_attrs %w(
       pd_workshop_id
@@ -138,67 +135,67 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    def set_total_course_hours
-      hash = sanitize_form_data_hash
-      minutes = hash[:cs_how_many_minutes]
-      days_per_week = hash[:cs_how_many_days_per_week]
-      weeks_per_year = hash[:cs_how_many_weeks_per_year]
+    def set_status_from_admin_approval
+      # Do not modify status is application is not incomplete.
+      return if status == 'incomplete'
 
-      if minutes && days_per_week && weeks_per_year
-        update_form_data_hash(
-          {
-            cs_total_course_hours: [minutes, days_per_week, weeks_per_year].map(&:to_i).reduce(:*) / 60
-          }
-        )
-      else
-        update_form_data_hash(
-          {
-            cs_total_course_hours: nil
-          }
-        )
+      # Do not modify status if admin approval status has not changed.
+      # Since principal_approval_not_required is a serialized attribute, we cannot use the Dirty
+      # API easily –– instead, use the Dirty API to look at the properties attribute.
+      return if properties_change.include?(nil)
+      return unless properties_change.map(&:keys)&.flatten&.include?('principal_approval_not_required')
+
+      # Do not modify status if the principal approval has already been completed.
+      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
+
+      if !principal_approval_not_required && status != 'awaiting_admin_approval'
+        self.status = 'awaiting_admin_approval'
+        queue_email(:needs_admin_approval, deliver_now: true)
+      elsif principal_approval_not_required && status == 'awaiting_admin_approval'
+        self.status = 'unreviewed'
       end
     end
 
     def save_partner
-      self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
+      self.regional_partner_id = sanitized_form_data_hash[:regional_partner_id]
     end
 
     def program
-      sanitize_form_data_hash[:program]
+      sanitized_form_data_hash[:program]
     end
 
     def zip_code
-      sanitize_form_data_hash[:zip_code]
+      sanitized_form_data_hash[:zip_code]
     end
 
     def state_name
-      sanitize_form_data_hash[:state]
+      sanitized_form_data_hash[:state]
     end
 
     def district_name
       school ?
         school.try(:school_district).try(:name).try(:titleize) :
-        sanitize_form_data_hash[:school_district_name]
+        sanitized_form_data_hash[:school_district_name]
     end
 
     def school_name
-      school ? school.name.try(:titleize) : sanitize_form_data_hash[:school_name]
+      school ? school.name.try(:titleize) : sanitized_form_data_hash[:school_name]
     end
 
     def school_zip_code
-      school ? school.zip : sanitize_form_data_hash[:zip_code]
+      school ? school.zip : sanitized_form_data_hash[:zip_code]
     end
 
     def school_state
       if school
         school.state.try(:upcase)
       else
-        STATE_ABBR_WITH_DC_HASH.key(sanitize_form_data_hash[:state]).try(:to_s)
+        STATE_ABBR_WITH_DC_HASH.key(sanitized_form_data_hash[:state]).try(:to_s)
       end
     end
 
     def school_city
-      school ? school.city.try(:titleize) : sanitize_form_data_hash[:city]
+      school ? school.city.try(:titleize) : sanitized_form_data_hash[:city]
     end
 
     def school_address
@@ -215,22 +212,22 @@ module Pd::Application
         end
         address.titleize
       else
-        sanitize_form_data_hash[:address]
+        sanitized_form_data_hash[:address]
       end
     end
 
     def school_type
-      school ? school.try(:school_type).try(:titleize) : sanitize_form_data_hash[:school_type]
+      school ? school.try(:school_type).try(:titleize) : sanitized_form_data_hash[:school_type]
     end
 
     def first_name
-      hash = sanitize_form_data_hash
+      hash = sanitized_form_data_hash
       hash[:preferred_first_name] || hash[:first_name]
     end
     alias_method :teacher_first_name, :first_name
 
     def last_name
-      sanitize_form_data_hash[:last_name]
+      sanitized_form_data_hash[:last_name]
     end
 
     def state_code
@@ -242,12 +239,12 @@ module Pd::Application
     end
 
     def principal_email
-      sanitize_form_data_hash[:principal_email]
+      sanitized_form_data_hash[:principal_email]
     end
 
     # Title & last name, or full name if no title was provided.
     def principal_greeting
-      hash = sanitize_form_data_hash
+      hash = sanitized_form_data_hash
       title = hash[:principal_title]
       "#{title.presence || hash[:principal_first_name]} #{hash[:principal_last_name]}"
     end
@@ -258,12 +255,12 @@ module Pd::Application
 
     # @override
     # Add account_email (based on the associated user's email) to the sanitized form data hash
-    def sanitize_form_data_hash
+    def sanitized_form_data_hash
       super.merge(account_email: user.email)
     end
 
     def school_id
-      raw_school_id = sanitize_form_data_hash[:school]
+      raw_school_id = sanitized_form_data_hash[:school]
 
       # -1 designates custom school info, in which case return nil
       raw_school_id.to_i == -1 ? nil : raw_school_id
@@ -275,12 +272,12 @@ module Pd::Application
           school_id: school_id
         }
       else
-        hash = sanitize_form_data_hash
+        hash = sanitized_form_data_hash
         return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
         {
           country: 'US',
           # Take the first word in school type, downcased. E.g. "Public school" -> "public"
-          school_type: hash[:school_type].split(' ').first.downcase,
+          school_type: hash[:school_type].split.first.downcase,
           state: hash[:school_state],
           zip: hash[:school_zip_code],
           school_name: hash[:school_name],
@@ -296,7 +293,7 @@ module Pd::Application
     end
 
     def get_first_selected_workshop
-      hash = sanitize_form_data_hash
+      hash = sanitized_form_data_hash
       return nil if hash[:teachercon]
 
       workshop_ids = hash[:regional_partner_workshop_ids]
@@ -350,14 +347,11 @@ module Pd::Application
         unreviewed
         incomplete
         reopened
+        awaiting_admin_approval
         pending
-        waitlisted
+        pending_space_availability
         declined
-        accepted_not_notified
-        accepted_notified_by_partner
-        accepted_no_cost_registration
-        registration_sent
-        paid
+        accepted
         withdrawn
       )
     end
@@ -402,9 +396,9 @@ module Pd::Application
     # Otherwise return nil.
     def principal_approval_state
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      return PRINCIPAL_APPROVAL_STATE[:complete] + response.full_answers[:do_you_approve] if response
+      return "#{PRINCIPAL_APPROVAL_STATE[:complete]}Admin said #{response.full_answers[:do_you_approve]} on #{response.applied_at&.strftime('%b %-d')}" if response
 
-      principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
+      principal_approval_email = emails.where(email_type: 'admin_approval').order(:created_at).last
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
         return PRINCIPAL_APPROVAL_STATE[:in_progress] + principal_approval_email.sent_at&.strftime('%b %-d')
@@ -421,10 +415,6 @@ module Pd::Application
 
     def effective_regional_partner_name
       regional_partner&.name || 'Code.org'
-    end
-
-    def accepted?
-      status.start_with? 'accepted'
     end
 
     # @override
@@ -501,16 +491,10 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
-        previous_used_curriculum: [
-          'CS Discoveries',
-          'CS Principles',
-          'Both',
-          'Neither'
-        ],
-
         previous_yearlong_cdo_pd: [
           'CS Discoveries',
           'CS Principles',
+          'Computer Science A (CSA)',
           'Exploring Computer Science',
           'CS in Algebra',
           'CS in Science',
@@ -611,10 +595,10 @@ module Pd::Application
           'We will offer both non-AP Java introductory and AP-level courses'
         ],
 
-        plan_to_teach: [
-          "Yes, I plan to teach this course this year (#{year})",
-          "No, I don’t plan to teach this course this year (#{year})",
-          TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
+        enough_course_hours: [
+          YES,
+          NO,
+          "I don't know yet."
         ],
 
         pay_fee: [
@@ -629,8 +613,9 @@ module Pd::Application
           'Regional Partner website',
           'Regional Partner email',
           'Regional Partner event or workshop',
-          'From a teacher',
-          'From an administrator',
+          'Teacher',
+          'District administrator',
+          'Conference',
           TEXT_FIELDS[:other_with_text]
         ],
 
@@ -649,25 +634,6 @@ module Pd::Application
           "No, this course will be added to the schedule in addition to an existing computer science course",
           "No, computer science is new to my school",
           TEXT_FIELDS[:i_dont_know_explain]
-        ],
-        replace_which_course: [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
         ]
       }
     end
@@ -684,6 +650,7 @@ module Pd::Application
         city
         state
         zip_code
+        principal_role
         principal_first_name
         principal_last_name
         principal_email
@@ -691,14 +658,10 @@ module Pd::Application
         principal_phone_number
         completing_on_behalf_of_someone_else
         current_role
-        previous_used_curriculum
         previous_yearlong_cdo_pd
 
         program
-        cs_how_many_minutes
-        cs_how_many_days_per_week
-        cs_how_many_weeks_per_year
-        plan_to_teach
+        enough_course_hours
         replace_existing
 
         gender_identity
@@ -730,6 +693,8 @@ module Pd::Application
         elsif hash[:program] == PROGRAMS[:csa]
           required << :csa_which_grades
           required << :csa_how_offer
+          required << :csa_already_know
+          required << :csa_phone_screen
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -755,13 +720,10 @@ module Pd::Application
         [:cs_offered_at_school, TEXT_FIELDS[:other_please_list]],
         [:cs_opportunities_at_school, TEXT_FIELDS[:other_please_list]],
         [:csd_course_hours_per_week, TEXT_FIELDS[:other_please_list]],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_other],
         [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
         [:committed, TEXT_FIELDS[:no_explain], :committed_other],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
-        [:replace_which_course, TEXT_FIELDS[:other_please_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
@@ -785,13 +747,13 @@ module Pd::Application
 
     def allow_sending_principal_email?
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
+      last_principal_approval_email = emails.where(email_type: 'admin_approval').order(:created_at).last
       last_principal_approval_email_created_at = last_principal_approval_email&.created_at
 
       # Do we allow manually sending/resending the principal email?
 
-      # Only if this teacher application is currently unreviewed, pending, or waitlisted.
-      return false unless unreviewed? || pending? || waitlisted?
+      # Only if this teacher application is currently awaiting_admin_approval, pending, or pending_space_availability.
+      return false unless awaiting_admin_approval? || pending? || pending_space_availability?
 
       # Only if the principal approval is required.
       return false if principal_approval_not_required
@@ -805,20 +767,20 @@ module Pd::Application
       true
     end
 
-    def allow_sending_principal_approval_teacher_reminder_email?
-      reminder_emails = emails.where(email_type: 'principal_approval_teacher_reminder')
+    def allow_sending_admin_approval_teacher_reminder_email?
+      reminder_emails = emails.where(email_type: 'admin_approval_teacher_reminder')
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
-      # Only if this teacher application is currently unreviewed or pending.
-      # (Unlike allow_sending_principal_email?, don't allow for waitlisted.)
-      return false unless unreviewed? || pending?
+      # Only if this teacher application is currently awaiting_admin_approval or pending.
+      # (Unlike allow_sending_principal_email?, don't allow for pending_space_availability.)
+      return false unless awaiting_admin_approval? || pending?
 
       # Only if we haven't already sent one.
       return false if reminder_emails.any?
 
       # Only if we've sent at least one principal approval email before.
-      return false unless emails.where(email_type: 'principal_approval').exists?
+      return false unless emails.exists?(email_type: 'admin_approval')
 
       # If it's valid to send another principal email at this time.
       return allow_sending_principal_email?
@@ -827,7 +789,8 @@ module Pd::Application
     # memoize in a hash, per course
     FILTERED_LABELS = Hash.new do |h, key|
       labels_to_remove = (
-      if key == 'csd'
+      case key
+      when 'csd'
         [
           :csp_which_grades,
           :csp_how_offer,
@@ -837,7 +800,7 @@ module Pd::Application
           :csa_already_know,
           :csa_phone_screen
         ]
-      elsif key == 'csp'
+      when 'csp'
         [
           :csd_which_grades,
           :csa_which_grades,
@@ -845,7 +808,7 @@ module Pd::Application
           :csa_already_know,
           :csa_phone_screen
         ]
-      elsif key == 'csa'
+      when 'csa'
         [
           :csp_which_grades,
           :csp_how_offer,
@@ -872,7 +835,8 @@ module Pd::Application
 
     # List of columns to be filtered out based on selected program (course)
     def self.columns_to_remove(course)
-      if course == 'csd'
+      case course
+      when 'csd'
         {
           teacher: [
             :csp_which_grades,
@@ -884,13 +848,11 @@ module Pd::Application
           ],
           principal: [
             :share_ap_scores,
-            :replace_which_course_csp,
-            :replace_which_course_csa,
             :csp_implementation,
             :csa_implementation
           ]
         }
-      elsif course == 'csp'
+      when 'csp'
         {
           teacher: [
             :csd_which_grades,
@@ -900,13 +862,11 @@ module Pd::Application
             :csa_phone_screen
           ],
           principal: [
-            :replace_which_course_csd,
-            :replace_which_course_csa,
             :csd_implementation,
             :csa_implementation
           ]
         }
-      elsif course == 'csa'
+      when 'csa'
         {
           teacher: [
             :csp_which_grades,
@@ -914,9 +874,7 @@ module Pd::Application
             :csd_which_grades
           ],
           principal: [
-            :replace_which_course_csp,
             :csp_implementation,
-            :replace_which_course_csd,
             :csd_implementation
           ]
         }
@@ -1011,7 +969,7 @@ module Pd::Application
     # principal approval application. It is idempotent, and will not override existing
     # scores on this application
     def auto_score!
-      responses = sanitize_form_data_hash
+      responses = sanitized_form_data_hash
 
       options = self.class.options(year)
       principal_options = Pd::Application::PrincipalApprovalApplication.options(year)
@@ -1019,42 +977,36 @@ module Pd::Application
       meets_minimum_criteria_scores = {}
       meets_scholarship_criteria_scores = {}
 
-      # Section 2
-      if course == 'csd'
+      # Section 4
+      if course == 'csa'
+        meets_minimum_criteria_scores[:csa_already_know] = responses[:csa_already_know] == options[:csa_already_know].first ? YES : NO
+        meets_minimum_criteria_scores[:csa_phone_screen] = responses[:csa_phone_screen] == options[:csa_phone_screen].first ? YES : NO
+      end
+
+      # Section 6
+      case course
+      when 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] =
           (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
-      elsif course == 'csp'
-        meets_minimum_criteria_scores[:csp_which_grades] =
-          (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
-      elsif course == 'csa'
-        meets_minimum_criteria_scores[:csa_which_grades] =
-          (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
-      end
-
-      if responses[:plan_to_teach].in? options[:plan_to_teach].first(2)
-        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(1)) ? YES : NO
-      end
-
-      meets_minimum_criteria_scores[:replace_existing] =
-        if responses[:replace_existing] == YES
-          NO
-        elsif responses[:replace_existing] == TEXT_FIELDS[:i_dont_know_explain]
-          nil
-        else
-          YES
-        end
-
-      # Section 3
-      if course == 'csd'
         took_csd_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
-      elsif course == 'csp'
-        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
-          responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
+      when 'csp'
+        meets_minimum_criteria_scores[:csp_which_grades] =
+          (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
+        took_csp_course =
+          responses[:previous_yearlong_cdo_pd].include?('CS Principles')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csp_course ? NO : YES
+      when 'csa'
+        meets_minimum_criteria_scores[:csa_which_grades] =
+          (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
+        took_csa_course = responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csa_course ? NO : YES
       end
 
-      # Section 4
+      meets_minimum_criteria_scores[:enough_course_hours] = responses[:enough_course_hours] == options[:enough_course_hours].first ? YES : NO
+
+      # Section 7
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
 
       # Principal Approval
@@ -1071,21 +1023,19 @@ module Pd::Application
             nil
           end
 
-        meets_minimum_criteria_scores[:replace_existing] =
-          if responses[:principal_wont_replace_existing_course].start_with?(YES)
-            NO
-          elsif responses[:principal_wont_replace_existing_course] == TEXT_FIELDS[:i_dont_know_explain]
-            nil
-          else
-            YES
-          end
-
         school_stats = get_latest_school_stats(school_id)
 
         free_lunch_percent = responses[:principal_free_lunch_percent].present? ?
                                responses[:principal_free_lunch_percent].to_i :
                                school_stats&.frl_eligible_percent
-        free_lunch_percent_cutoff = school_stats&.rural_school? ? 40 : 50
+        free_lunch_percent_cutoff =
+          if regional_partner&.frl_guardrail_percent
+            regional_partner&.frl_guardrail_percent.to_i
+          elsif school_stats&.rural_school?
+            REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_rural]
+          else
+            REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural]
+          end
 
         meets_scholarship_criteria_scores[:free_lunch_percent] =
           if free_lunch_percent
@@ -1097,10 +1047,13 @@ module Pd::Application
         urg_percent = responses[:principal_underrepresented_minority_percent].present? ?
                         responses[:principal_underrepresented_minority_percent].to_i :
                         school_stats&.urm_percent
+        urg_percent_cutoff = regional_partner&.urg_guardrail_percent ?
+                              regional_partner&.urg_guardrail_percent.to_i :
+                              REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg]
 
         meets_scholarship_criteria_scores[:underrepresented_minority_percent] =
           if urg_percent
-            urg_percent >= 50 ? YES : NO
+            urg_percent >= urg_percent_cutoff ? YES : NO
           else
             nil
           end
@@ -1156,14 +1109,15 @@ module Pd::Application
     end
 
     # Called after the application is created. Do any manipulation needed for the form data
-    # hash here, as well as send emails
+    # hash here, as well as send emails and set principal_approval_not_required state based on RP info
     def on_successful_create
       return if status == 'incomplete'
 
       queue_email :confirmation, deliver_now: true
       auto_score!
+      self.principal_approval_not_required = regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        queue_email :principal_approval, deliver_now: true
+        queue_email :admin_approval, deliver_now: true
       end
       save
     end
@@ -1172,18 +1126,16 @@ module Pd::Application
     # form data has here, as well as send emails
     def on_successful_principal_approval_create(principal_approval)
       # Approval application created, now score corresponding teacher application
-      principal_response = principal_approval.sanitize_form_data_hash
+      principal_response = principal_approval.sanitized_form_data_hash
 
-      response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
-      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd, :replace_which_course_csa).compact.join(', ')
-      # Sub out :: for : because "I don't know:" has a colon on the end
-      replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
+      replace_course_string = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ").gsub('::', ':')
 
       principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
           principal_response_first_name: principal_response[:first_name],
           principal_response_last_name: principal_response[:last_name],
+          principal_response_role: principal_response[:role],
           principal_response_email: principal_response[:email],
           principal_school_name: principal_school.try(:name) || principal_response[:school_name],
           principal_school_type: principal_school.try(:school_type),
@@ -1192,8 +1144,6 @@ module Pd::Application
           principal_schedule_confirmed:
             principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_total_enrollment: principal_response[:total_student_enrollment],
-          principal_diversity_recruitment:
-            principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent:
             principal_response[:free_lunch_percent] ? format("%0.02f%%", principal_response[:free_lunch_percent]) : nil,
           principal_underrepresented_minority_percent:
@@ -1218,8 +1168,9 @@ module Pd::Application
       )
       save!
       auto_score!
-      queue_email(:principal_approval_completed, deliver_now: true)
-      queue_email(:principal_approval_completed_partner, deliver_now: true)
+      queue_email(:admin_approval_completed, deliver_now: true)
+      queue_email(:admin_approval_completed_partner, deliver_now: true)
+      queue_email(:admin_approval_completed_teacher_receipt, deliver_now: true)
     end
 
     # @override

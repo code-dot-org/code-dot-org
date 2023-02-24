@@ -5,7 +5,7 @@ title: Kako organizirati Sat kodiranja - za tvrtke
 {{ signup_button }}
 
 # How to bring the Hour of Code to your company
-### Find out how you and your employees can inspire students to try computer science!
+### Saznajte kako vi i vaši zaposlenici možete inspirirati studente da isprobaju informatiku!
 
 ***
 

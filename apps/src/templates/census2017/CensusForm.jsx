@@ -14,8 +14,6 @@ import {
 import SchoolAutocompleteDropdownWithLabel from './SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ReactTooltip from 'react-tooltip';
 import {styles} from './censusFormStyles';
 
 export const censusFormPrefillDataShape = PropTypes.shape({
@@ -35,10 +33,7 @@ class CensusForm extends Component {
     prefillData: censusFormPrefillDataShape,
     initialSchoolYear: PropTypes.number,
     schoolDropdownOption: PropTypes.object,
-    onSchoolDropdownChange: PropTypes.func,
-    showExistingInaccuracy: PropTypes.bool,
-    existingInaccuracy: PropTypes.bool,
-    onExistingInaccuracyChange: PropTypes.func
+    onSchoolDropdownChange: PropTypes.func
   };
 
   constructor(props) {
@@ -74,8 +69,7 @@ class CensusForm extends Component {
         followUpMore: '',
         acceptedPledge: false,
         share: '',
-        optIn: '',
-        existingInaccuracyReason: ''
+        optIn: ''
       },
       errors: {
         invalidEmail: false
@@ -276,13 +270,6 @@ class CensusForm extends Component {
     );
   }
 
-  validateExistingInaccuracyReason() {
-    return (
-      this.props.existingInaccuracy &&
-      this.validateNotBlank(this.state.submission.existingInaccuracyReason)
-    );
-  }
-
   validateSubmission() {
     this.setState(
       {
@@ -300,8 +287,7 @@ class CensusForm extends Component {
           tenHours: this.validateNotBlank(this.state.submission.tenHours),
           twentyHours: this.validateNotBlank(this.state.submission.twentyHours),
           share: this.validateNotBlank(this.state.submission.share),
-          optIn: this.validateNotBlank(this.state.submission.optIn),
-          existingInaccuracyReason: this.validateExistingInaccuracyReason()
+          optIn: this.validateNotBlank(this.state.submission.optIn)
         }
       },
       this.censusFormSubmit
@@ -323,8 +309,7 @@ class CensusForm extends Component {
       !errors.twentyHours &&
       !errors.country &&
       !errors.share &&
-      !errors.optIn &&
-      !errors.existingInaccuracyReason
+      !errors.optIn
     ) {
       $.ajax({
         url: '/dashboardapi/v1/census/CensusYourSchool2017v7',
@@ -367,8 +352,7 @@ class CensusForm extends Component {
       errors.country ||
       errors.nces ||
       errors.share ||
-      errors.optIn ||
-      errors.existingInaccuracyReason
+      errors.optIn
     );
     const US = submission.country === 'United States';
     const prefillData = this.props.prefillData || {};
@@ -381,7 +365,6 @@ class CensusForm extends Component {
       US &&
       (schoolId === '-1' ||
         (schoolDropdownOption && schoolDropdownOption.value === '-1'));
-    const showExistingInaccuracy = this.props.showExistingInaccuracy;
 
     return (
       <div id="form">
@@ -579,74 +562,6 @@ class CensusForm extends Component {
             </label>
           </div>
 
-          {showExistingInaccuracy && (
-            <div>
-              <div style={styles.checkboxLine}>
-                <label style={styles.clickable}>
-                  <input
-                    type="checkbox"
-                    name="inaccuracy_reported"
-                    checked={this.props.existingInaccuracy}
-                    onChange={event =>
-                      this.props.onExistingInaccuracyChange(
-                        event.target.checked
-                      )
-                    }
-                  />
-                  <span style={styles.existingInaccuracy}>
-                    {i18n.censusExistingInaccuracy()}
-                  </span>
-                </label>
-                <span data-tip data-for="existing-inaccuracy">
-                  <FontAwesome icon="question-circle" />
-                </span>
-              </div>
-
-              <ReactTooltip
-                id="existing-inaccuracy"
-                class="react-tooltip-hover-stay"
-                role="tooltip"
-                effect="solid"
-                place="bottom"
-                offset={{bottom: 23, right: 7}}
-                delayHide={1000}
-              >
-                <div style={styles.existingInaccuracyTooltip}>
-                  {i18n.censusExistingInaccuracyTip()}
-                  &nbsp;
-                  <a href="/yourschool/about" target="_blank">
-                    {i18n.censusExistingInaccuracyTipLink()}
-                  </a>
-                </div>
-              </ReactTooltip>
-            </div>
-          )}
-
-          {this.props.existingInaccuracy && (
-            <div>
-              <label>
-                <div style={styles.question}>
-                  {i18n.censusExistingInaccuracyReason()}
-                </div>
-                {errors.existingInaccuracyReason && (
-                  <div style={styles.errors}>
-                    {i18n.censusRequiredExistingInaccuracyReason()}
-                  </div>
-                )}
-                <textarea
-                  type="text"
-                  name="inaccuracy_comment"
-                  value={this.state.submission.existingInaccuracyReason}
-                  onChange={this.handleChange.bind(
-                    this,
-                    'existingInaccuracyReason'
-                  )}
-                  style={styles.textArea}
-                />
-              </label>
-            </div>
-          )}
-
           {showFollowUp && (
             <div>
               <div style={styles.question}>
@@ -843,7 +758,6 @@ class CensusForm extends Component {
             <div style={styles.errors}>{i18n.censusRequired()}</div>
           )}
           <Button
-            __useDeprecatedTag
             id="submit-button"
             onClick={() => this.validateSubmission()}
             color={Button.ButtonColor.orange}

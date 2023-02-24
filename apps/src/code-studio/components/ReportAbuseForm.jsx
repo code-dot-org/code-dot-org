@@ -27,8 +27,25 @@ export default class ReportAbuseForm extends React.Component {
     abuseUrl: PropTypes.string.isRequired,
     name: PropTypes.string,
     email: PropTypes.string,
-    age: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    requireCaptcha: PropTypes.bool,
+    captchaSiteKey: PropTypes.string
   };
+
+  componentDidMount() {
+    // Add reCaptcha. https://developers.google.com/recaptcha/docs/display
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.id = 'captcha';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }
+
+  componentWillUnmount() {
+    const captchaScript = document.getElementById('captcha');
+    captchaScript.remove();
+  }
 
   /**
    * Extracts a channel id from the given abuse url
@@ -118,6 +135,7 @@ export default class ReportAbuseForm extends React.Component {
             style={{width: INPUT_WIDTH}}
             defaultValue={this.props.abuseUrl}
             name="abuse_url"
+            id="uitest-abuse-url"
           />
 
           <div>
@@ -147,7 +165,15 @@ export default class ReportAbuseForm extends React.Component {
             ref="abuse_detail"
             id="uitest-abuse-detail"
           />
-
+          {this.props.requireCaptcha && (
+            <div>
+              <p>{msg.verifyNotBot()}</p>
+              <div
+                className="g-recaptcha"
+                data-sitekey={this.props.captchaSiteKey}
+              />
+            </div>
+          )}
           <div>
             <SafeMarkdown
               markdown={msg.abuseFormAcknowledge({

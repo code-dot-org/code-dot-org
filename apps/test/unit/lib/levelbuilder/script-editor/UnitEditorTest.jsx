@@ -173,26 +173,6 @@ describe('UnitEditor', () => {
       expect(wrapper.find('UnitCard').length).to.equal(1);
     });
 
-    it('maker unit checkbox shows for CSD course offering', () => {
-      const wrapper = createWrapper({
-        isMigrated: true,
-        initialCourseVersionId: 1,
-        isCSDCourseOffering: true
-      });
-
-      expect(wrapper.find('.maker-unit-checkbox').length).to.equal(1);
-    });
-
-    it('maker unit checkbox does not show for non-CSD course offering', () => {
-      const wrapper = createWrapper({
-        isMigrated: true,
-        initialCourseVersionId: 1,
-        isCSDCourseOffering: false
-      });
-
-      expect(wrapper.find('.maker-unit-checkbox').length).to.equal(0);
-    });
-
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
       const wrapper = createWrapper({
         initialPublishedState: 'stable',

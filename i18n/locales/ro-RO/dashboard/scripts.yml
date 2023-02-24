@@ -1646,12 +1646,15 @@ ro:
             required:
               display_name: Prezentare generală
         denny-science-8: {}
-        dance-2019: {}
+        dance-2019:
+          title: Petrecere dansantă
+          description_short: Codifică o Petrecere Dansantă pe care să le-o trimiți prietenilor. Cu participarea artiștilor Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzică de la Disney „Encanto” și multe altele!
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
               display_name: Pașii următori
         dance-extras-2019:
+          title: Continuă să dansezi
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
           student_description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         csp10-pilot: {}
@@ -3220,9 +3223,29 @@ ro:
               display_name: Sondaj
             lessonGroup-3:
               display_name: Conţinut
-        csa2-2023: {}
-        csa3-2023: {}
-        csa4-2023: {}
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variabile
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Matrice Uni-Dimensionale (1D)
+            lesson-3:
+              name: Bucle Pentru
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Aleatoriu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         csa5-2023: {}
         csa6-2023: {}
         csa7-2023: {}
@@ -3233,8 +3256,10 @@ ro:
         emma: {}
         csa-consumer-review-lab: {}
         csa-data-lab: {}
-        hello-world-space-2022: {}
-        hello-world-soccer-2022: {}
+        hello-world-space-2022:
+          title: 'Bunā Lume: Spațiu'
+        hello-world-soccer-2022:
+          title: 'Bunā Lume: Fotbal'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3281,4 +3306,87 @@ ro:
         self-paced-pl-physical-computing2: {}
         emmas-playground: {}
         amys-playground: {}
-        csc-function-machines-pilot: {}
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Ce este Acel Sunet?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csp_unit1_2020:
+              display_name: "(vechi) Unitatea 1: Informaţii digitale"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(vechi) Unitatea 2: Internet"
+        csp3-2023: {}
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Date
+            csp_loops:
+              display_name: Bucle
+            lessonGroup-5:
+              display_name: Chestionar după curs
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-2:
+              display_name: Chestionar după curs
+            lessonGroup-3:
+              display_name: Bucle
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Chestionar după curs
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(vechi) Unitatea 9: date"
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp-post-survey-2023: {}
+        self-paced-pl-csa1-2023: {}
+        self-paced-pl-csa2-2023: {}
+        self-paced-pl-csa3-2023: {}
+        csa-examples-22: {}
+        amy-playground: {}
+        angelina-playground: {}
+        csc-pilot-fa2022-timecapsule: {}
+        csc-pilot-fa2022-ecosystem: {}
+        csp-playground:
+          description_audience: Scriitori de Curriculum
+          description_short: Pentru actualizările pe stadii ale lecțiilor sau nivelurile dintre versiunile planului curicular
+        csc-pilot-fa2022-particles: {}
+        devices-2022: {}
+        allthevalidation: {}
+        vpl-csd5-ayw-pilot-2022: {}
+        vpl-csd6-ayw-pilot-2022: {}
+        self-paced-pl-csa4-2023: {}
+        katies-playground: {}
+        microbit-2022: {}
+        microbit-temp: {}
+        csc-timecapsule-2023: {}
+        vpl-csd7-ayw-pilot-2022: {}
+        vpl-csd8-ayw-pilot-2022: {}
+        csc-mappinglandmarks-2023: {}
+        blockchain-2023: {}
+        self-paced-pl-csc-2023: {}

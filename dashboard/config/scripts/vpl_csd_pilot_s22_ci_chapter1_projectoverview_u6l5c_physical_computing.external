@@ -3,11 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Chapter 1 project: Human Device Interaction
+# Chapter 1 Project: Human Device Interaction
+
+##### The activities you completed in the previous levels were a selection of activities from Chapter 1 of the Creating Apps with Devices unit. These levels were intended to give you an overview of the skills students will building as they work towards the end of chapter project. 
 
 ## Project overview
 
-##### Chapter 1 of the Physical Computing unit concludes with students designing and creating a game that uses hardware for input and output using the circuit board and event handlers to respond to a user interaction. Students start by exploring some projects they have seen so far and demo a Bug Grab game to get some ideas. They then start brainstorming for an idea, draw out their screens and determine what components of the circuit playground they will need they need for their program. Next they will need to figure out what events they will need to respond to and which functions they can use to break down their code in to more manageable parts. The project concludes with students sharing their projects and self reflection on their project and attitude toward computer science.
+##### In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings.
 
 ## Sample student projects
 
@@ -24,10 +26,10 @@ markdown <<MARKDOWN
 
 ## Pacing recommendation
 
-##### If you are short on time, this project can be used as way to wrap up the unit. This project can also be expanded out to include a student presentation if you have the time available. 
+##### If you you do not have enough time for Chapter 2, this project can be used as way to wrap up the unit. This project can also be expanded to include a student presentation if you have the time available. 
 
 ## Project resources
-* ##### <a href="https://studio.code.org/s/csd6-2022/lessons/10" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://studio.code.org/s/devices-2022lessons/12" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
 * ##### <a href="https://docs.google.com/document/d/1qCzlxKJQ4gdYDS2LufqLYugiFKYbs3O5v5q_jufBR70/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
 * ##### <a href="https://docs.google.com/document/d/1IVZIVUMyq0FxmA9mX-H3LXo12Blvi2NzDg7vZ2dLbLA/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
 * ##### <a href="https://docs.google.com/document/d/1GqR49vQTEirALh2c7pIDoGugJD3WqX-sEYygPQ2vlhQ/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 

@@ -10,14 +10,14 @@ title: Guida pratica all'Ora del Codice per le aziende
 
 * * *
 
-Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando tutti i settore del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
+Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando ogni azienda del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
 
-Durante la campagna dell'Ora del Codice, la tua azienda può aiutare a sensibilizzare il movimento dell'informatica. Che tu faccia volontariato come individuo o pianifichi un evento per la tua azienda, tutti i tuoi sforzi possono avere un enorme impatto sul modo in cui giovani donne e studenti di gruppi etnici e razziali emarginati vedono l'informatica e il proprio potenziale.
+Durante la campagna dell'Ora del Codice, la tua azienda può contribuire ad aumentare la consapevolezza della necessità di insegnare l'informatica nelle scuole. Che tu faccia volontariato come individuo o pianifichi un evento per la tua azienda, tutti i tuoi sforzi possono avere un enorme impatto sul modo in cui giovani donne e studenti di gruppi etnici e razziali emarginati vedono l'informatica e il proprio potenziale.
 
-Per iniziare, dai un'occhiata ai passaggi elencati di seguito e consulta la nostra [guida per i partner aziendali](/files/hoc-corporate-toolkit.pdf) per scoprire ulteriori informazioni su come rendere la tua azienda entusiasta dell'Ora del codice.
+Per iniziare, dai un'occhiata ai passaggi elencati di seguito e consulta la nostra [guida per i partner aziendali](/files/hoc-corporate-toolkit.pdf) per scoprire ulteriori informazioni su come rendere la tua azienda entusiasta dell'Ora del Codice.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Contatta una scuola locale](#connect-with-a-school)
+- [Incoraggia i dipendenti a fare volontariato in una classe](#encourage-employees)
 - [Ospita il tuo evento Ora del Codice](#host-hour-of-code)
 - [Promuovi l'Ora del Codice](#promote-hour-of-code)
 - [Altri modi per supportare l'Ora del Codice](#support-hour-of-code)
@@ -26,31 +26,31 @@ Per iniziare, dai un'occhiata ai passaggi elencati di seguito e consulta la nost
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Contatta una scuola locale
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+È sempre meglio partire dalle scuole con cui tu o i tuoi dipendenti avete un forte legame, come la tua università, la scuola di un bambino, un'organizzazione o una scuola che si concentra sul servire una popolazione che è stata storicamente sotto-rappresentata in informatica.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Puoi visitare il sito web della scuola per trovare contatti appropriati a cui rivolgerti, ad esempio amministratori come un preside o un vice preside, insegnanti di tecnologia o informatica o persino il consiglio d'istituto della scuola. È possibile collaborare anche con organizzazioni giovanili per ospitare insieme un evento.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Se non ti è possibile con una scuola, [contattaci](https://support.code.org/hc/en-us/requests/new) e se possibile, ti metteremo in contatto con uno dei nostri partner locali.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Incoraggia i dipendenti a fare volontariato in una classe
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Uno dei modi più soddisfacenti per partecipare all'Ora del Codice è fare volontariato con una classe locale, di persona o virtualmente. Soprattutto, non è necessario essere un ingegnere per fare volontariato. Puoi comunque fornire un'esperienza significativa agli studenti condividendo la tua esperienza professionale e il modo in cui l'informatica o la tecnologia hanno influenzato il tuo ruolo.
 
 [<button>Iscriviti come volontario</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Una volta che un volontario si registra, un insegnante può visualizzare il suo profilo sulla nostra [mappa dei volontari](https://code.org/volunteer/local) - quindi i profili dovrebbero essere il più completi possibile. Se sei adatto alla loro classe, un insegnante ti contatterà tramite la piattaforma (non condivideremo mai il tuo indirizzo email con l'insegnante). È quindi possibile concordare i dettagli direttamente con l'insegnante per[fare volontariato al meglio con la sua classe](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Per ulteriori indicazioni sul volontariato e messaggi di esempio che rendano la tua azienda entusiasta dell'Ora del Codice, consulta la nostra [ guida per i partner aziendali ]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -76,8 +76,7 @@ Come abbiamo visto gli eventi sono [virtual](https://hourofcode.com/us/how-to/vi
 
 #### Agenda di esempio:
 
-|Orario | Voce dell'ordine del giorno | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minuti | Mostra un [video ispiratore](https://hourofcode.com/us/promote/resources#videos)|  
-|5-10 minuti | Presentati e conosci gli studenti: dove lavori, cosa fai e cosa ami di più del tuo lavoro? Che cosa o chi ti ha ispirato? Come ti è nata la passione per l'informatica? Hai avuto un mentore? Poni domande agli studenti e lascia del tempo per loro domande e relative risposte. | |30-60 minuti | Programma! Se il tuo evento è in presenza, questo è il momento di rispondere alle domande e guidare gli studenti attraverso esercizi difficili. Cerca di non dare loro la soluzione in modo definitivo, invece, prova a porre loro domande in modo che possano rispondere da soli cosa non ha funzionato e incoraggia gli studenti a confrontarsi l'un l'altro se hanno domande. Se fai volontariato virtualmente, lavora con l'insegnante su quale potrebbe essere l'approccio migliore. Potrebbe essere più proficuo tornare alla fine della sessione per vedere quali progressi hanno fatto gli studenti. | | |1-3 minuti | Ringrazia tutti e condividi parole di buon auspicio. Distribuisci i gadget della tua azienda ([gli adesivi](#celebrate) sono fantastici)! | | <br />
+|Orario | Attività | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minuti | Mostra un [video motivazionale](https://hourofcode.com/us/promote/resources#videos)| |5-10 minuti | Presentati e conosci gli studenti: dove lavori, cosa fai e cosa ami di più del tuo lavoro? Che cosa o chi ti ha ispirato? Come ti è nata la passione per l'informatica? Hai avuto un mentore? Poni domande agli studenti e lascia del tempo per loro domande e relative risposte. | |30-60 minuti | Programma! Se il tuo evento è in presenza, questo è il momento di rispondere alle domande e guidare gli studenti attraverso esercizi difficili. Cerca di non dare loro la soluzione in modo definitivo, invece, prova a porre loro domande in modo che possano rispondere da soli cosa non ha funzionato e incoraggia gli studenti a confrontarsi l'un l'altro se hanno domande. Se fai volontariato virtualmente, lavora con l'insegnante su quale potrebbe essere l'approccio migliore. Potrebbe essere più proficuo tornare alla fine della sessione per vedere quali progressi hanno fatto gli studenti. | | |1-3 minuti | Ringrazia tutti e condividi parole di buon auspicio. Distribuisci i gadget della tua azienda ([gli adesivi](#celebrate) sono fantastici)! | | <br />
 
 #### Altre idee da aggiungere al tuo evento
 
@@ -104,7 +103,7 @@ Se il tuo evento sarà virtuale, ti consigliamo di decidere quale la piattaforma
 
 ### 4. Scegli un'attività
 
-Forniamo una varietà di esercitazioni divertenti e guidate dagli studenti per tutte le età e livelli di esperienza. È popolare tra gli studenti provare esercitazioni autogestite, anche se potresti iniziare l'evento con un [ video di ispirazione ](https://hourofcode.com/us/promote/resources#videos) per tutti da vedere insieme.
+Forniamo una varietà di esercitazioni divertenti e guidate dagli studenti per tutte le età e livelli di esperienza. È popolare tra gli studenti provare esercitazioni autogestite, anche se potresti iniziare l'evento con un [ video motivazionale](https://hourofcode.com/us/promote/resources#videos) per tutti da vedere insieme.
 
 <a href="https://hourofcode.com/us/learn">Esplora le attività</a> e decidi prima se scegliere un'esercitazione specifica da assegnare a tutti i tuoi studenti o se lasciarli liberi di scegliere ognuno la sua. **Tutte le esercitazioni dell'Ora del Codice** richiedono un tempo di preparazione minimo e sono autogestite consentendo ai partecipanti di lavorare seguendo il proprio ritmo e livello di abilità.
 
@@ -163,7 +162,7 @@ Aiuta ad aumentare la consapevolezza del movimento dell'informatica con questo c
 - Se la tua prima riga di codice ti ha cambiato la vita, aiuta gli studenti vicino a te a scrivere la loro prima #HourOfCode https://code.org/volunteer
 - Se hai imparato a programmare, qual è la tua storia? Ispira uno studente vicino a te attraverso la prima #HourOfCode https://code.org/volunteer 
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Ulteriori informazioni </a> su poster, video, adesivi e altri modi per promuovere il tuo evento nella tua comunità.
 
 * * *
 

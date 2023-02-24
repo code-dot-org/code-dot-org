@@ -67,35 +67,56 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     const blockWidth = blocks[0]
       ? blocks[0].blockly_block.getHeightWidth().width
       : 0;
-    const padding = 16;
+    // Add padding if we are in a workspace.
+    const padding = viewWidth ? 16 : 0;
     const verticalSpaceBetweenBlocks = 10;
 
+    // The cursor is used to position blocks that don't have explicit x/y coordinates
     let cursor = {
-      x: blockSpace.RTL
-        ? viewWidth
-          ? viewWidth - padding
-          : blockWidth + padding
-        : padding,
+      x: padding,
       y: padding
     };
+    if (blockSpace.RTL && viewWidth) {
+      // Position the cursor from the right of the workspace.
+      cursor.x = viewWidth - padding;
+    } else if (blockSpace.RTL && !viewWidth) {
+      // Position the cursor from the right of the block.
+      cursor.x = blockWidth - padding;
+    }
 
     const positionBlock = function(block) {
       const heightWidth = block.blockly_block.getHeightWidth();
+      const hasFrameSvg = !!block.blockly_block.functionalSvg_;
+      const frameSvgSize = hasFrameSvg ? 40 : 0;
+      const frameSvgTop = hasFrameSvg ? 35 : 0;
+      const frameSvgMargin = hasFrameSvg ? 16 : 0;
 
+      // If the block doesn't already have coordinates, use the cursor.
       if (isNaN(block.x)) {
         block.x = cursor.x;
+      } else if (blockSpace.RTL) {
+        // Position RTLs with coordinates from the left.
+        block.x = viewWidth - block.x;
+      }
+      // Adjust for Svg Frames for function definition blocks
+      if (!blockSpace.RTL) {
+        block.x += frameSvgMargin;
       } else {
-        block.x = blockSpace.RTL ? viewWidth - block.x : block.x;
+        block.x -= frameSvgMargin;
       }
 
       if (isNaN(block.y)) {
-        block.y = cursor.y;
-        cursor.y += heightWidth.height + verticalSpaceBetweenBlocks;
+        block.y = cursor.y + frameSvgTop;
+        cursor.y +=
+          heightWidth.height + verticalSpaceBetweenBlocks + frameSvgSize;
       }
+
       block.blockly_block.moveTo(
         new Blockly.utils.Coordinate(block.x, block.y)
       );
     };
+
+    blocks.sort(reorderBlocks);
 
     blocks
       .filter(function(block) {
@@ -117,4 +138,21 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
   // We don't want to save absolute position in the block XML
   blocklyWrapper.Xml.blockToDomWithXY = blocklyWrapper.Xml.blockToDom;
+}
+
+// Compare function - Moves functional definitions to the end of a block list.
+function reorderBlocks(a, b) {
+  if (
+    a.blockly_block.type === 'procedures_defnoreturn' &&
+    b.blockly_block.type !== 'procedures_defnoreturn'
+  ) {
+    return 1; // Sort a after b.
+  } else if (
+    b.blockly_block.type === 'procedures_defnoreturn' &&
+    a.blockly_block.type !== 'procedures_defnoreturn'
+  ) {
+    return -1; // Sort a before b.
+  } else {
+    return 0; // Keep original order.
+  }
 }

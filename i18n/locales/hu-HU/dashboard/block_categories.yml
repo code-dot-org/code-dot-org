@@ -4,6 +4,8 @@ hu:
       Actions: Műveletek
       Advanced: Haladó
       Behaviors: Viselkedések
+      'Behaviors ': 'Viselkedések '
+      Boolean: Logikai
       Brushes: Ecsetek
       Category: Kategória
       Color: Szín
@@ -12,21 +14,27 @@ hu:
       Conditionals: Feltételek
       Dancers: Táncosok
       Default: Alapértelmezett
+      Effects: Effektek
       Events: Események
       Functions: funkciók
       'Functions ': 'Függvények '
       Game/Score: Játék/pontszám
       Games/Score: Játékok/pontszám
       Groups: Csoportok
+      Image: Kép
       Input: Bemenet
       Location: Pozíció
       Locations: Helyek
       Logic: Logika
       Loops: hurkok
       Math: Matematika
+      Number: Szám
       Numbers: Számok
+      Picker: Választó
+      Prebuilt: Előre elkészített
       Properties: Tulajdonságok
       Sprites: sprite-ok
+      String: Karakterlánc
       Text: szöveg
       Variables: változók
       'Variables ': 'Változók '

@@ -7,11 +7,15 @@ import {CourseBlocksIntl} from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import SpecialAnnouncement from './SpecialAnnouncement';
 import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import shapes from './shapes';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import color from '../../util/color';
 
 class Courses extends Component {
   static propTypes = {
@@ -41,13 +45,14 @@ class Courses extends Component {
       buttonText: i18n.coursesLearnHeroButton()
     };
 
-    // Apply overrides if this is the "Teach" view
+    // Apply overrides if this is the "Teach" view and log teacher visiting this page.
     if (isTeacher) {
       heroStrings = {
         headingText: i18n.coursesTeachHeroHeading(),
         subHeadingText: i18n.coursesTeachHeroSubHeading(),
         buttonText: i18n.coursesTeachHeroButton()
       };
+      analyticsReporter.sendEvent(EVENTS.TEACH_PAGE_VISITED_EVENT);
     }
 
     // We show a long version of the banner when you're signed out,
@@ -94,7 +99,9 @@ class Courses extends Component {
             <Button
               __useDeprecatedTag
               href="/users/sign_up"
+              className="bannerContentButton"
               color={Button.ButtonColor.gray}
+              style={styles.headerButton}
               text={buttonText}
             />
           )}
@@ -118,6 +125,7 @@ class Courses extends Component {
             {/* English, student.  (Also the default to be shown when signed out.) */}
             {isEnglish && !isTeacher && (
               <div className={'announcements'}>
+                <SpecialAnnouncement isTeacher={isTeacher} />
                 <CoursesStudentEnglish />
               </div>
             )}
@@ -139,6 +147,13 @@ class Courses extends Component {
 const styles = {
   content: {
     maxWidth: styleConstants['content-width']
+  },
+  headerButton: {
+    margin: 'unset',
+    backgroundColor: color.white,
+    borderColor: color.white,
+    color: color.neutral_dark,
+    fontFamily: `"Gotham 5r", sans-serif`
   }
 };
 

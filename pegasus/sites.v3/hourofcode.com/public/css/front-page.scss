@@ -1,4 +1,4 @@
-@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
 
 html, body {
   height: 100%;
@@ -96,10 +96,28 @@ section.join-us {
     max-width: 820px;
   }
 
+  p.signup-closed {
+    font-size: 18px;
+    font-family: $gotham-bold;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 820px;
+
+    @media screen and (max-width: $width-sm){
+      font-size: 16px;
+    }
+  }
+
   .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
     & > div:first-child {
       margin: 0 auto;
+      float: none;
 
       h2 {
         margin: 0 0 1em;

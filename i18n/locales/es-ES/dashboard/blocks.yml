@@ -6,6 +6,8 @@ es:
         text: moviendo NESW con las teclas de flecha
       AmysBlocks_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}dice{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -234,20 +236,12 @@ es:
             MOVES.XArmsUp: Estirar
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
-      Dancelab_everyMeasuresRange:
-        text: 'repetir cada {N} compaces después de {START} '
       Dancelab_everySeconds:
         text: 'repetir cada {N} {UNIT} '
         options:
           UNIT:
             '"measures"': compaces
             '"seconds"': segundos
-      Dancelab_everySecondsRange:
-        text: 'cada {N} {UNIT} desde {START} hasta {STOP} '
-        options:
-          UNIT:
-            measures: Compases
-            seconds: Segundos
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
         options:
@@ -1007,6 +1001,39 @@ es:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: El microscopio tiene {INPUT1}
+        options:
+          INPUT1:
+            '1': jugo de limón
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: hacer efecto de {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Burbujas
+            '"confetti"': Confeti
+            '"hearts"': corazones
+            '"emojis"': Emoji Feliz
+            '"rain"': lluvia
+            '"starburst"': Explosión de estrellas
+            '"glass"': Rompiendo vidrio
+            '"twinkling"': Parpadeante
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': jugo de limón
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Comunicarse {VAR1} con {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: hacer {NUM} nuevos {ANIMATION_NAME} sprites  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: representar {NUM} nuevos {ANIMATION_NAME} sprites [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}dice{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_addTarget:
@@ -1337,8 +1364,32 @@ es:
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_playSoundOptionsSoccer:
         text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": bocina
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": canto
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": patear
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dos silbatos
+            "'sound://category_sports/One_Whistle_SFX.mp3'": silbato
       gamelab_playSoundOptionsSpace:
         text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": agujero negro
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": cúmulo bala
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": casiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cangrejo
+            "'sound://category_space/Galactic_center_SFX.mp3'": centro galáctico
+            "'sound://category_space/Launch_SFX.mp3'": lanzar
+            "'sound://category_space/Lift_Off.mp3'": despegar
+            "'sound://category_space/Pillars_SFX.mp3'": pilares
+            "'sound://category_space/Southern_ring_SFX.mp3'": anillo del sur
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaxia espiral
       gamelab_playSpeech:
         text: reproducir grabación {SOUND}
       gamelab_playerBehaviors:
@@ -1987,6 +2038,39 @@ es:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
+      ParticlesBlocks_getMicroscope:
+        text: El microscopio tiene {INPUT1}
+        options:
+          INPUT1:
+            '1': jugo de limón
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': jugo de limón
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): sólido
+            new Behavior(liquid, []): líquido
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Establecer [COSTUME],[0] al comportamiento [BEHAVIOR],[1]
+        options:
+          BEHAVIOR:
+            '"solid"': 'partícula sólida '
+            '"liquid"': partícula líquida
+            '"gas"': partícula de gas
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'partícula sólida '
+            '"liquid"': partícula líquida
+            '"gas"': partícula de gas
       Poetry_addFrame:
         text: establecer marco {BRUSH}
         options:
@@ -2077,6 +2161,23 @@ es:
             '"sound://category_achievements/peaceful_win_1.mp3"': Ganar
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Remolino
             '"sound://category_achievements/peaceful_win_6.mp3"': Campanas al viento
+      Poetry_playSoundOptionsSpace:
+        text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": agujero negro
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": cúmulo bala
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": casiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cangrejo
+            "'sound://category_space/Galactic_center_SFX.mp3'": centro galáctico
+            "'sound://category_space/Launch_SFX.mp3'": lanzar
+            "'sound://category_space/Lift_Off.mp3'": despegar
+            "'sound://category_space/Pillars_SFX.mp3'": pilares
+            "'sound://category_space/Southern_ring_SFX.mp3'": anillo del sur
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaxia espiral
       Poetry_setAuthor:
         text: establecer autor {AUTHOR}
       Poetry_setBackground:
@@ -2473,6 +2574,20 @@ es:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      storylab_setForegroundEffect2:
+        text: hacer efecto de {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Burbujas
+            '"confetti"': Confeti
+            '"hearts"': corazones
+            '"rain"': lluvia
+            '"starburst"': Explosión de estrellas
+            '"twinkling"': Parpadeante
+      storylab_setHeading:
+        text: establecer encabezado {HEADING}
+      storylab_setSubheading:
+        text: establecer sub-encabezado {SUBHEADING}
       validation_validatedBackground:
         text: establecer fondo a {IMG}
       validation_validatedSound:

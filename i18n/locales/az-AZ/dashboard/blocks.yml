@@ -234,20 +234,12 @@ az:
             MOVES.XArmsUp: Dartmaq
             MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
-      Dancelab_everyMeasuresRange:
-        text: "{START} sonra hər {N} ölçünü təkrarlayın"
       Dancelab_everySeconds:
         text: 'təkrarla hər '
         options:
           UNIT:
             '"measures"': Ölçülər
             '"seconds"': saniyələr
-      Dancelab_everySecondsRange:
-        text: hər {N} {UNIT} {START} ilə {STOP} arasında
-        options:
-          UNIT:
-            measures: Ölçülər
-            seconds: Saniyələr
       Dancelab_everyVerseChorus:
         text: hər {UNIT}
         options:
@@ -1005,6 +997,18 @@ az:
             '"macklemore90"': Macklemore - Bizi tuta bilməz
             '"hammer"': MC Hammer - Buna toxuna bilməzsiniz.
             '"peas"': hiss etdim
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} effekti elə"
+        options:
+          EFFECT:
+            '"bubbles"': Köpük
+            '"confetti"': konfeti (rəngli bəzəklər)
+            '"hearts"': ürəklər
+            '"emojis"': Xoşbəxt Emojilər
+            '"rain"': yağış
+            '"starburst"': Ulduz partlaması
+            '"glass"': Şüşə sındırmaq
+            '"twinkling"': parıldayan
       gamelab_addBehaviorSimple:
         text: sprayt {SPRITE} başlayır {BEHAVIOR}
       gamelab_addTarget:
@@ -1951,6 +1955,8 @@ az:
         text: bədheybətin sürətini təyin et
       Outbreak_stopMoving:
         text: canavarlar hərəkət etməyi dayandırırlar
+      ParticlesBlocks_statesOfMatter:
+        text: davranış
       Poetry_addFrame:
         text: "{BRUSH} çərçivə təyin edin"
         options:
@@ -2039,6 +2045,8 @@ az:
             '"sound://category_achievements/peaceful_win_1.mp3"': uduş
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': burulğan
             '"sound://category_achievements/peaceful_win_6.mp3"': külək cingiltisi
+      Poetry_playSoundOptionsSpace:
+        text: oynat
       Poetry_setAuthor:
         text: müəllifi təyin et {AUTHOR}
       Poetry_setBackground:
@@ -2395,6 +2403,16 @@ az:
             left: sola
       storylab_clearHeadings:
         text: başlıqları təmizlə
+      storylab_setForegroundEffect2:
+        text: "{EFFECT} effekti elə"
+        options:
+          EFFECT:
+            '"bubbles"': Köpük
+            '"confetti"': konfeti (rəngli bəzəklər)
+            '"hearts"': ürəklər
+            '"rain"': yağış
+            '"starburst"': Ulduz partlaması
+            '"twinkling"': parıldayan
       validation_validatedBackground:
         text: fonu {IMG} təyin edin
       validation_validatedSound:

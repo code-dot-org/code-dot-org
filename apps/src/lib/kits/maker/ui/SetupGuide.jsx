@@ -1,441 +1,138 @@
-import _ from 'lodash';
 import React from 'react';
-import yaml from 'js-yaml';
-import SetupChecklist from './SetupChecklist';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import i18n from '@cdo/locale';
-import applabI18n from '@cdo/applab/locale';
-import {
-  isCodeOrgBrowser,
-  isOSX,
-  isWindows,
-  isLinux,
-  isChromeOS
-} from '../util/browserChecks';
-import Button from '../../../../templates/Button';
-import ToggleGroup from '../../../../templates/ToggleGroup';
-import FontAwesome from '../../../../templates/FontAwesome';
-import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
-import {Provider} from 'react-redux';
+import PropTypes from 'prop-types';
 import experiments from '@cdo/apps/util/experiments';
-import {
-  WEB_SERIAL_FILTERS,
-  shouldUseWebSerial
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import {getStore} from '@cdo/apps/redux';
-
-const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
-const WINDOWS = 'windows';
-const MAC = 'mac';
-const LINUX = 'linux';
-const CHROMEBOOK = 'chromebook';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
+import applabI18n from '@cdo/applab/locale';
+import i18n from '@cdo/locale';
+import {MAKER_DEPRECATION_SUPPORT_URL} from '../util/makerConstants';
 
 const style = {
-  icon: {
-    float: 'left',
-    padding: '5px'
+  twoColumns: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  descriptionFlexCard: {
+    width: '45%'
+  },
+  circuitPlaygroundImg: {
+    float: 'right',
+    margin: '0 0 15px 10px',
+    borderRadius: '50%'
+  },
+  microbitImg: {
+    float: 'right',
+    margin: '0 0 15px 10px'
   }
 };
 
 export default class SetupGuide extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {webSerialPort: null};
-  }
-
-  webSerialButtonRender = () => {
-    // WebSerial requires user input for user to select port.
-    // Add a button for user interaction before initiated Setup Checklist
-    return (
-      <div>
-        <input
-          style={{margin: 15, marginBottom: 25}}
-          className="btn"
-          type="button"
-          value={'Connect to Board'}
-          onClick={() => {
-            navigator.serial
-              .requestPort({filters: WEB_SERIAL_FILTERS})
-              .then(port => {
-                this.setState({webSerialPort: port});
-              });
-          }}
-        />
-      </div>
-    );
-  };
-
-  webSerialSetupChecklist = (webSerialPort, shouldDisplaySupport) => {
-    return (
-      <SetupChecklist
-        webSerialPort={webSerialPort}
-        displaySupport={shouldDisplaySupport}
-      />
-    );
+  setupGuideContent = content => {
+    switch (content) {
+      case 'microbit':
+        return {
+          id: 'microbit-description',
+          title: applabI18n.makerSetupMicrobitTitle(),
+          href: 'https://microbit.org/',
+          imgSrc: '/blockly/media/maker/microbit-drawing-green.png',
+          description: applabI18n.makerSetupMicrobitDescription(),
+          imgStyle: style.microbitImg,
+          alt: applabI18n.makerSetupMicrobitImageAltText()
+        };
+      case 'circuitPlayground':
+        return {
+          id: 'circuit-playground-description',
+          title: applabI18n.makerSetupCircuitPlaygroundTitle(),
+          href:
+            'https://learn.adafruit.com/introducing-circuit-playground/overview',
+          imgSrc: '/blockly/media/maker/circuit-playground-x-1.png',
+          description: applabI18n.makerSetupCircuitPlaygroundDescription(),
+          imgStyle: style.circuitPlaygroundImg,
+          alt: applabI18n.makerSetupCircuitPlaygroundImageAltText()
+        };
+    }
   };
 
   render() {
-    const {webSerialPort} = this.state;
+    // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
+    const isMicrobit = experiments.isEnabled('microbit');
+    const chromeVersion = getChromeVersion();
 
-    // Chromebooks, render a webSerial selection button on load
-    if (isChromeOS() && shouldUseWebSerial() && !webSerialPort) {
-      return this.webSerialButtonRender();
-    }
-
-    // In the Maker App and in Chromebooks when a webSerial connection has been selected,
-    // skip the download instructions and display y checklist
-    if (isCodeOrgBrowser() || (isChromeOS() && shouldUseWebSerial())) {
-      return this.webSerialSetupChecklist(webSerialPort, true);
-    }
-
-    // In Mac/PC browsers, display download instructions and, when webSerial is expected,
-    // the selection button or checklist
-    const webSerialRender = webSerialPort
-      ? this.webSerialSetupChecklist(webSerialPort, false)
-      : this.webSerialButtonRender();
-    return (
-      <Provider store={getStore()}>
-        <div>
-          <Downloads />
-          {shouldUseWebSerial() && (
-            <div>
-              <p>{i18n.makerConnectExplanation()}</p>
-              {webSerialRender}
-            </div>
-          )}
-          <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
-        </div>
-      </Provider>
-    );
-  }
-}
-
-class Downloads extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {platform: Downloads.platformFromHash()};
-  }
-
-  componentDidMount() {
-    window.addEventListener('hashchange', this.onHashChange);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('hashchange', this.onHashChange);
-  }
-
-  static platformFromHash() {
-    const hash = window.location.hash.slice(1);
-    if ([WINDOWS, MAC, LINUX, CHROMEBOOK].includes(hash)) {
-      return hash;
-    } else if (isWindows()) {
-      return WINDOWS;
-    } else if (isOSX()) {
-      return MAC;
-    } else if (isLinux()) {
-      return LINUX;
-    }
-    return WINDOWS;
-  }
-
-  onHashChange = () => {
-    this.setState({platform: Downloads.platformFromHash()});
-  };
-
-  onPlatformChange = platform => {
-    window.location.hash = '#' + platform;
-    this.setState({platform});
-  };
-
-  render() {
-    const {platform} = this.state;
     return (
       <div>
-        <ToggleGroup selected={platform} onChange={this.onPlatformChange}>
-          <button type="button" value={WINDOWS}>
-            <FontAwesome icon="windows" /> {i18n.windows()}
-          </button>
-          <button type="button" value={MAC}>
-            <FontAwesome icon="apple" /> {i18n.mac()}
-          </button>
-          <button type="button" value={LINUX}>
-            <FontAwesome icon="linux" /> {i18n.linux()}
-          </button>
-          <button type="button" value={CHROMEBOOK}>
-            <FontAwesome icon="chrome" /> {i18n.chromebook()}
-          </button>
-        </ToggleGroup>
-        {WINDOWS === platform && <WindowsDownloads />}
-        {MAC === platform && <MacDownloads />}
-        {LINUX === platform && <LinuxDownloads />}
-        {CHROMEBOOK === platform && <ChromebookInstructions />}
-        <h2>{i18n.support()}</h2>
-        <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
-      </div>
-    );
-  }
-}
-
-const downloadButtonStyle = {
-  minWidth: 400,
-  textAlign: 'center'
-};
-
-class WindowsDownloads extends React.Component {
-  state = {installer: null, error: null};
-
-  componentDidMount() {
-    latestWindowsInstaller()
-      .then(installer => this.setState({installer}))
-      .catch(error => this.setState({error}));
-  }
-
-  render() {
-    const {installer, error} = this.state;
-    return (
-      <div>
-        <h2>{applabI18n.makerSetupMakerAppForWindows()}</h2>
-        {!installer && !error && <FetchingLatestVersionMessage />}
-        {installer && !error && (
-          <Button
-            __useDeprecatedTag
-            text={`Download Code.org Maker App for Windows (${
-              installer.version
-            })`}
-            icon="download"
-            color={Button.ButtonColor.orange}
-            size={Button.ButtonSize.large}
-            style={downloadButtonStyle}
-            href={DOWNLOAD_PREFIX + installer.filename}
+        {isCodeOrgBrowser() && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.makerSetupDeprecationWarningAppTitle()}
+            details={i18n.makerSetupDeprecationWarningAppDetails()}
+            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+            dismissible
           />
         )}
-        {error && <FetchingLatestVersionError />}
-        <div>
-          <h4>{i18n.instructionsWithColon()}</h4>
-          <ol>
-            <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
-            <li>
-              <SafeMarkdown markdown={applabI18n.makerSetupWindows7Drivers()} />
-            </li>
-            <li>{applabI18n.makerSetupSignIn()}</li>
-            <li>{applabI18n.makerSetupPlugInBoard()}</li>
-          </ol>
-        </div>
-      </div>
-    );
-  }
-}
-
-class MacDownloads extends React.Component {
-  state = {installer: null, error: null};
-
-  componentDidMount() {
-    latestMacInstaller()
-      .then(installer => this.setState({installer}))
-      .catch(error => this.setState({error}));
-  }
-
-  render() {
-    const {installer, error} = this.state;
-    return (
-      <div>
-        <h2>{applabI18n.makerSetupMakerAppForMac()}</h2>
-        {!installer && !error && <FetchingLatestVersionMessage />}
-        {installer && !error && (
-          <Button
-            __useDeprecatedTag
-            text={`Download Code.org Maker App for Mac (${installer.version})`}
-            icon="download"
-            color={Button.ButtonColor.orange}
-            size={Button.ButtonSize.large}
-            style={downloadButtonStyle}
-            href={DOWNLOAD_PREFIX + installer.filename}
+        {chromeVersion && chromeVersion <= 90 && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.makerSetupDeprecationWarningOldChromeTitle()}
+            details={i18n.makerSetupDeprecationWarningOldChromeDetails()}
+            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+            dismissible
           />
         )}
-        {error && <FetchingLatestVersionError />}
-        <SetupInstructions />
-      </div>
-    );
-  }
-}
-
-class LinuxDownloads extends React.Component {
-  state = {installer: null, error: null};
-
-  componentDidMount() {
-    latestLinuxInstaller()
-      .then(installer => this.setState({installer}))
-      .catch(error => this.setState({error}));
-  }
-
-  debFile() {
-    if (!this.state.installer) {
-      return null;
-    }
-    return null; // TODO - derive from latest-linux.yml correctly
-  }
-
-  render() {
-    const {installer, error} = this.state;
-    const debFile = this.debFile();
-    return (
-      <div>
-        <h2>{applabI18n.makerSetupMakerAppForLinux()}</h2>
-        {!installer && !error && <FetchingLatestVersionMessage />}
-        {installer && !error && (
-          <Button
-            __useDeprecatedTag
-            text={`Download Code.org Maker App for Linux (${
-              installer.version
-            })`}
-            icon="download"
-            color={Button.ButtonColor.orange}
-            size={Button.ButtonSize.large}
-            style={downloadButtonStyle}
-            href={DOWNLOAD_PREFIX + installer.filename}
-          />
-        )}
-        {error && <FetchingLatestVersionError />}
-        <div>
-          <SetupInstructions />
-          <h4>{applabI18n.makerSetupLinuxAlternative()}</h4>
-          <ul>
-            {debFile && (
-              <li>
-                <a href={DOWNLOAD_PREFIX + debFile}>{debFile}</a>
-              </li>
-            )}
-            <li>
-              <FontAwesome style={style.icon} icon="external-link" />
-              <SafeMarkdown
-                markdown={applabI18n.makerSetupLinuxAlternativeInstall()}
-              />
-            </li>
-          </ul>
-        </div>
-      </div>
-    );
-  }
-}
-
-const FETCH_STATUS_STYLE = {
-  fontSize: 'large',
-  margin: '0.5em 0'
-};
-
-const FetchingLatestVersionMessage = () => (
-  <div style={FETCH_STATUS_STYLE}>
-    <FontAwesome icon="spinner" className="fa-fw fa-spin" />{' '}
-    <em>{applabI18n.makerSetupFetchingVersion()}</em>
-  </div>
-);
-
-const FetchingLatestVersionError = () => (
-  <div>
-    <div style={FETCH_STATUS_STYLE}>
-      <FontAwesome
-        icon="times-circle"
-        className="fa-fw"
-        style={{color: 'darkred'}}
-      />{' '}
-      <strong>{applabI18n.makerSetupDownloadProblem()}</strong>
-    </div>
-    <div>
-      <SafeMarkdown markdown={applabI18n.makerSetupCheckInternetConnection()} />
-    </div>
-  </div>
-);
-
-const SetupInstructions = () => (
-  <div>
-    <h4>{i18n.instructionsWithColon()}</h4>
-    <ol>
-      <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
-      <li>{applabI18n.makerSetupSignIn()}</li>
-      <li>{applabI18n.makerSetupPlugInBoard()}</li>
-    </ol>
-  </div>
-);
-
-const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
-
-class ChromebookInstructions extends React.Component {
-  webSerialSetupInstructions() {
-    return (
-      <div>
-        {applabI18n.makerSetupChromebook()}
-        <h4>{applabI18n.note()}</h4>
-        {applabI18n.makerSetupChromebookHistoricalNote()}
-      </div>
-    );
-  }
-
-  chromeAppSetupInstructions() {
-    return (
-      <div>
-        <SafeMarkdown
-          markdown={applabI18n.makerSetupSerialConnector({
-            webstoreURL: CHROME_APP_WEBSTORE_URL
-          })}
-        />
-        <h4>{i18n.instructions()}</h4>
-        <ol>
-          <li>
-            <SafeMarkdown
-              markdown={applabI18n.makerSetupChromebookPage({
-                makerSetupPage: MAKER_SETUP_PAGE_URL
-              })}
+        <h1>{applabI18n.makerSetupPageTitle()}</h1>
+        {isMicrobit ? (
+          <div style={style.twoColumns}>
+            <DescriptionCard
+              {...this.setupGuideContent('circuitPlayground')}
+              divStyle={style.descriptionFlexCard}
             />
-          </li>
-          <li>{applabI18n.makerSetupFollowInstructions()}</li>
-          <li>{applabI18n.makerSetupPlugInBoard()}</li>
-        </ol>
-      </div>
-    );
-  }
-
-  render() {
-    return (
-      <div>
-        <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
-        {experiments.isEnabled('webserial')
-          ? this.webSerialSetupInstructions()
-          : this.chromeAppSetupInstructions()}
+            <DescriptionCard
+              {...this.setupGuideContent('microbit')}
+              divStyle={style.descriptionFlexCard}
+            />
+          </div>
+        ) : (
+          <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
+        )}
+        <div id="setup-status-mount">
+          <SetupInstructions />
+        </div>
       </div>
     );
   }
 }
 
-/** @returns {Promise<string>} Resolves to Windows installer info. */
-function latestWindowsInstaller() {
-  return latestInstaller(DOWNLOAD_PREFIX + 'latest.yml');
+function DescriptionCard(props) {
+  return (
+    <div id={props.id} style={props.divStyle}>
+      <h2>{props.title}</h2>
+      <center>
+        <a href={props.href}>
+          <img
+            src={props.imgSrc}
+            width={200}
+            style={props.imgStyle}
+            alt={props.alt}
+          />
+        </a>
+      </center>
+      <div className="description-content">
+        <SafeMarkdown markdown={props.description} />
+      </div>
+    </div>
+  );
 }
-
-/** @returns {Promise<string>} Resolves to Mac installer info. */
-function latestMacInstaller() {
-  return latestInstaller(DOWNLOAD_PREFIX + 'latest-mac.yml').then(metadata => ({
-    ...metadata,
-    filename: metadata.filename.replace('zip', 'dmg')
-  }));
-}
-
-function latestLinuxInstaller() {
-  return latestInstaller(DOWNLOAD_PREFIX + 'latest-linux.yml');
-}
-
-/**
- * Retrieve installer metadata from a yaml file on the server.
- * Memoized so any particular file is requested only once per page load.
- * @param {string} latestYamlUrl - fully-qualified URL to YAML metadata file
- *   specifying the latest available version.
- * @returns {Promise<string>} Resolves to application installer info.
- */
-const latestInstaller = _.memoize(latestYamlUrl => {
-  return fetch(latestYamlUrl, {mode: 'cors'})
-    .then(response => response.text())
-    .then(text => yaml.safeLoad(text))
-    .then(datum => ({
-      filename: datum.path,
-      version: datum.version
-    }));
-});
+DescriptionCard.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  imgStyle: PropTypes.object,
+  description: PropTypes.string.isRequired,
+  divStyle: PropTypes.object,
+  alt: PropTypes.string.isRequired
+};

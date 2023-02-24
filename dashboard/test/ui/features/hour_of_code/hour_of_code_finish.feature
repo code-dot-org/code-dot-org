@@ -56,6 +56,20 @@ Scenario: Pegasus share page preserves certificate when redirecting
   And I wait to see an image "/certificate_images/"
   And I see custom certificate image with name "Robo Coder" and course "mc"
 
+@no_safari
+Scenario: non-mee 3rd party tutorial redirects to congrats page with params
+  Given I am on "http://studio.code.org/congrats"
+  And I wait until element "#uitest-certificate" is visible
+
+  When I am on "http://code.org/api/hour/finish/kodable"
+  And I wait until current URL contains "http://studio.code.org/congrats"
+  Then my query params match "\?i\=.*\&s\=a29kYWJsZQ=="
+
+  When I wait to see element with ID "uitest-certificate"
+  And I type "Robo Coder" into "#name"
+  And I press "button:contains(Submit)" using jQuery
+  Then I wait to see element with ID "uitest-thanks"
+
 Scenario: Oceans uncustomized dashboard certificate pages
   Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
@@ -83,6 +97,25 @@ Scenario: Course A 2017 uncustomized dashboard certificate pages
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
   And I wait to see an image "/certificate_images/"
+
+  When I press the first "#uitest-certificate img" element to load a new page
+  And I wait until current URL contains "/certificates/"
+  Then I wait to see an image "/certificate_images/"
+
+  When I press the first "#certificate-share img" element to load a new page
+  And I wait until current URL contains "/print_certificates/"
+  Then I wait to see an image "/certificate_images/"
+
+Scenario: customized dashboard certificate pages with no course name
+  Given I am on "http://studio.code.org/congrats"
+  And I wait to see element with ID "uitest-certificate"
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
+  Then I wait to see an image "/images/hour_of_code_certificate.jpg"
+
+  When I type "Robo Códer" into "#name"
+  And I press "button:contains(Submit)" using jQuery
+  And I wait to see element with ID "uitest-thanks"
+  Then I wait to see an image "/certificate_images/"
 
   When I press the first "#uitest-certificate img" element to load a new page
   And I wait until current URL contains "/certificates/"

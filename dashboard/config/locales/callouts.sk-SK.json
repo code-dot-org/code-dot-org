@@ -2689,6 +2689,87 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nový blok!"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Sem pridaj blok „playSound“"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "Sem pridaj blok „playSound“"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "Sem pridaj svoj príkaz if"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "Sem pridaj svoj príkaz if"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Kliknite sem ako prvý!"
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "Sem pridaj svoj príkaz if"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "Sem pridaj svoj príkaz if"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "Sem pridaj svoj príkaz if"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "Sem pridaj svoj príkaz if"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "Sem pridaj svoj príkaz if"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Sem pridaj svoj príkaz if"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "Sem pridaj svoj príkaz if"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "Sem pridaj svoj príkaz if"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "Toto je vlastnosť teploty"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "Toto je vlastnosť teploty"
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "Toto je vlastnosť času dňa"
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Toto je vlastnosť času dňa"
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "Toto je vlastnosť počtu áut"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "Toto je vlastnosť počtu áut"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "Toto je vlastnosť počasia"
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Toto je vlastnosť počasia"
         }
       }
     }

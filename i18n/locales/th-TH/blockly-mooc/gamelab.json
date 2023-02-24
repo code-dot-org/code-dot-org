@@ -1,4 +1,10 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "ความกว้าง",
+  "dropletBlock_createSprite_param3": "ความสูง",
+  "dropletBlock_setCollider_param0": "ชนิด",
+  "dropletBlock_setCollider_param4": "ความสูง",
+  "dropletBlock_setColliderEach_param0": "ชนิด",
+  "dropletBlock_setColliderEach_param4": "ความสูง",
+  "reinfFeedbackMsg": "เสร็จเรียบร้อย! คลิก \"ไปต่อ\" เพื่อไปที่เลเวลต่อไป",
+  "shareGame": "แบ่งปันเกมของคุณ:"
 }

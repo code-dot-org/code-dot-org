@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-07-22 18:24:08 UTC",
+    "serialized_at": "2022-11-30 15:22:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -739,6 +739,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-48",
+      "name": "Poetry",
+      "absolute_position": 48,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 45,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1351,6 +1366,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "bd958217-a2d9-423d-a515-78757692b268",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd958217-a2d9-423d-a515-78757692b268",
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -1822,6 +1849,16 @@
       "seeding_key": {
         "activity_section.key": "6f0eab1f-82d4-469a-8a61-11c5d7780734",
         "lesson_activity.key": "afb69493-76c4-4ae5-919e-8ddf15331820"
+      }
+    },
+    {
+      "key": "b68acb29-b590-46e0-82a1-ade0d51c420f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f",
+        "lesson_activity.key": "bd958217-a2d9-423d-a515-78757692b268"
       }
     }
   ],
@@ -5714,6 +5751,102 @@
       "level_keys": [
         "allthethings-example-csp-assessment"
       ]
+    },
+    {
+      "chapter": 160,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "New Poetry HOC Project"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "New Poetry HOC Project"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      },
+      "level_keys": [
+        "New Poetry HOC Project"
+      ]
+    },
+    {
+      "chapter": 161,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "New Poetry Project"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "New Poetry Project"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      },
+      "level_keys": [
+        "New Poetry Project"
+      ]
+    },
+    {
+      "chapter": 162,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_no_modal_function_editor"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_no_modal_function_editor"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      },
+      "level_keys": [
+        "poetry_no_modal_function_editor"
+      ]
+    },
+    {
+      "chapter": 163,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_modal_function_editor"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_modal_function_editor"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      },
+      "level_keys": [
+        "poetry_modal_function_editor"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7095,7 +7228,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 2",
+        "level.key": "ramp_video_loopsArtist",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -7108,7 +7241,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_loopsArtist",
+        "level.key": "2-3 Artist Loops 2",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -7147,7 +7280,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 4",
+        "level.key": "4-5 Maze 1",
         "script_level.level_keys": [
           "4-5 Maze 1",
           "4-5 Maze 4"
@@ -7160,7 +7293,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 1",
+        "level.key": "4-5 Maze 4",
         "script_level.level_keys": [
           "4-5 Maze 1",
           "4-5 Maze 4"
@@ -7749,6 +7882,54 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "6f0eab1f-82d4-469a-8a61-11c5d7780734"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "New Poetry HOC Project",
+        "script_level.level_keys": [
+          "New Poetry HOC Project"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "New Poetry Project",
+        "script_level.level_keys": [
+          "New Poetry Project"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_no_modal_function_editor",
+        "script_level.level_keys": [
+          "poetry_no_modal_function_editor"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_modal_function_editor",
+        "script_level.level_keys": [
+          "poetry_modal_function_editor"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
       }
     }
   ],

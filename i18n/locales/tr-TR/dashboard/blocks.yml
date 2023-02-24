@@ -2,26 +2,32 @@
 tr:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: ok tuşlarıyla KDGB (Kuzey-Doğu-Güney-Batı) yönünde hareket ettirmek
       AmysBlocks_setPromptWithChoices:
         text: "{VAR} değişkeni için {A}{B}{C} seçenekleriyle {QUESTION} sorusunu kullanıcıya sor"
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}, {TEXT1} der"
       BadGuys_makeNewBadGuysSprite:
-        text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
+        text: " {LOCATION} de yeni hareket yap {ANIMATION_NAME} "
       BadGuys_setSizeAll_dropdown:
+        text: tüm hareketli nesnelerin boyutunu {SIZE} olarak ayarla
         options:
           SIZE:
             '0.50': çok küçük
             '0.75': Küçük
             '1.00': orta
             '2.00': Büyük
-            '3.00': extra large
+            '3.00': ekstra büyük
       BadGuys_setSize_dropdown:
+        text: "{SPRITE} boyutunu {SIZE} olarak ayarlayın"
         options:
           SIZE:
             '0.50': çok küçük
             '0.75': Küçük
             '1.00': orta
             '2.00': Büyük
-            '3.00': extra large
+            '3.00': ekstra büyük
       Dancelab_alternateMoves:
         text: "{MOVE1} ve {MOVE2} arasındaki her {N} ölçümünde  {GROUP} değiştirilir"
         options:
@@ -33,43 +39,44 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           MOVE1:
-            MOVES.Roll: Vücut Rulo
+            MOVES.Roll: Body roll
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
-            MOVES.Floss: Diş ipi
+            MOVES.Floss: Floss
             MOVES.Fresh: Taze
             MOVES.Clown: Gangnam
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           MOVE2:
-            MOVES.Roll: Vücut Rulo
+            MOVES.Roll: Body roll
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
-            MOVES.Floss: Diş ipi
+            MOVES.Floss: Floss
             MOVES.Fresh: Taze
             MOVES.Clown: Gangnam
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
       Dancelab_atTimestamp:
-        text: "{TIMESTAMP} {UNIT} sonra"
+        text: "{TIMESTAMP} {UNIT} den sonra"
         options:
           UNIT:
-            '"measures"': ölçü
+            '"measures"': ölçüler
             '"seconds"': saniye
       Dancelab_changeColorBy:
-        text: "{COLOR} {METHOD}’i {AMOUNT} kadar değiştir"
+        text: "{COLOR} {METHOD}’i {AMOUNT} ile değiştir"
         options:
           METHOD:
             '"hue"': renk tonu
@@ -86,21 +93,22 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           MOVE:
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
             '"rand"': "(Rastgele)"
-            MOVES.Roll: Vücut Rulo
+            MOVES.Roll: Body roll
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
-            MOVES.Floss: Diş ipi
+            MOVES.Floss: Floss
             MOVES.Fresh: Taze
             MOVES.Clown: Gangnam
             MOVES.Kick: Yıldız
@@ -113,25 +121,25 @@ tr:
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
             '"rand"': "(Rastgele)"
-            MOVES.Roll: Vücut Rulo
+            MOVES.Roll: Body roll
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
-            MOVES.Floss: Diş ipi
+            MOVES.Floss: Floss
             MOVES.Fresh: Taze
             MOVES.Clown: Gangnam
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
       Dancelab_changePropBy:
-        text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
+        text: "{SPRITE} {PROPERTY}’i {VAL} ile değiştir"
         options:
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
       Dancelab_changePropEachBy:
@@ -145,16 +153,17 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
       Dancelab_doMoveEachLR:
@@ -168,22 +177,23 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           MOVE:
             '"rand"': "(Rastgele)"
-            MOVES.XBend: Kıvır
-            MOVES.Roll: Vücut Rulo
+            MOVES.XBend: Eğil
+            MOVES.Roll: Body roll
             MOVES.XClapSide: Alkışla
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.XFever: Disko
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
-            MOVES.Floss: Diş ipi
+            MOVES.Floss: Floss
             MOVES.Fresh: Taze
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Baş + Kalçalar
@@ -192,10 +202,10 @@ tr:
             MOVES.XKnee: Diz
             MOVES.XKneel: Diz çök
             MOVES.XOle: Ole
-            MOVES.XArmsSide: Ulaş
+            MOVES.XArmsSide: Uzan
             MOVES.XSlide: Kay
             MOVES.Kick: Yıldız
-            MOVES.XArmsUp: Gerink
+            MOVES.XArmsUp: Gerin
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
       Dancelab_doMoveLR:
@@ -203,15 +213,15 @@ tr:
         options:
           MOVE:
             '"rand"': "(Rastgele)"
-            MOVES.XBend: Kıvır
-            MOVES.Roll: Vücut Rulo
+            MOVES.XBend: Eğil
+            MOVES.Roll: Body roll
             MOVES.XClapSide: Alkışla
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.XFever: Disko
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
-            MOVES.Floss: Diş ipi
+            MOVES.Floss: Floss
             MOVES.Fresh: Taze
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Baş + Kalçalar
@@ -220,26 +230,18 @@ tr:
             MOVES.XKnee: Diz
             MOVES.XKneel: Diz çök
             MOVES.XOle: Ole
-            MOVES.XArmsSide: Ulaş
+            MOVES.XArmsSide: Uzan
             MOVES.XSlide: Kay
             MOVES.Kick: Yıldız
-            MOVES.XArmsUp: Gerink
+            MOVES.XArmsUp: Gerin
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
-      Dancelab_everyMeasuresRange:
-        text: "{N} ölçütünü her {START} sonrasında tekrarlayın "
       Dancelab_everySeconds:
         text: 'her {N} {UNIT}’de bir '
         options:
           UNIT:
-            '"measures"': ölçü
+            '"measures"': ölçüler
             '"seconds"': saniye
-      Dancelab_everySecondsRange:
-        text: "{START}’den {STOP}’e her {N} {UNIT}’de bir "
-        options:
-          UNIT:
-            measures: Ölçü
-            seconds: Saniye
       Dancelab_everyVerseChorus:
         text: 'her {UNIT}’de bir '
         options:
@@ -260,15 +262,15 @@ tr:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
             '"tint"': renk tonu
       Dancelab_getTime:
-        text: "{UNIT} geçti"
+        text: "{UNIT} geçerli zaman"
         options:
           UNIT:
-            '"measures"': ölçü
+            '"measures"': ölçüler
             '"seconds"': saniye
       Dancelab_ifDanceIs:
         text: |-
@@ -281,9 +283,9 @@ tr:
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
-            MOVES.Floss: Diş ipi
+            MOVES.Floss: Floss
             MOVES.Fresh: Taze
-            MOVES.Roll: Vücut Rulo
+            MOVES.Roll: Body roll
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
@@ -291,7 +293,7 @@ tr:
         text: "eğer {UNIT} {OP} {N} \n{DO1} {DO2} ise"
         options:
           UNIT:
-            '"measures"': ölçü
+            '"measures"': ölçüler
             '"seconds"': saniye
           OP:
             '">"': ">"
@@ -322,10 +324,11 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           LOCATION:
             "{x: 200, y: 100}": üst
@@ -349,19 +352,24 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           FORMAT:
-            '"border"': kenarlık
+            '"border"': sınır
             '"inner"': iç kare
             '"diamond"': elmas
             '"circle"': çember
             '"grid"': ızgara
-            '"row"': sınıf
+            '"top"': üst satır
+            '"row"': satır
+            '"bottom"': alt satır
+            '"left"': sol sütun
             '"column"': sütun
+            '"right"': sağ sütun
             '"x"': çapraz geçiş
             '"plus"': artı
             '"spiral"': sarmal
@@ -377,11 +385,11 @@ tr:
             '"DOG"': köpek
             '"DUCK"': ördek
             '"FROG"': Kurbağa
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Köpek balığı
-            '"SLOTH"': miskinlik
+            '"SLOTH"': tembel hayvan
             '"UNICORN"': Tek boynuzlu
           LOCATION:
             "{x: 200, y: 100}": üst
@@ -397,7 +405,7 @@ tr:
       Dancelab_makeNewDanceSprite:
         text: |-
           yeni bir {COSTUME} yap
-          {LOCATION}’de {NAME} çağrıldı
+          {LOCATION}’de {NAME} olarak adlandır
         options:
           COSTUME:
             '"ALIEN"': Uzaylı
@@ -406,11 +414,11 @@ tr:
             '"DOG"': köpek
             '"DUCK"': ördek
             '"FROG"': Kurbağa
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Köpek balığı
-            '"SLOTH"': miskinlik
+            '"SLOTH"': tembel hayvan
             '"UNICORN"': Tek boynuzlu
           LOCATION:
             "{x: 200, y: 100}": üst
@@ -475,19 +483,24 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           LAYOUT:
-            '"border"': kenarlık
+            '"border"': sınır
             '"inner"': iç kare
             '"diamond"': elmas
             '"circle"': çember
             '"grid"': ızgara
-            '"row"': sınıf
+            '"top"': üst satır
+            '"row"': satır
+            '"bottom"': alt satır
+            '"left"': sol sütun
             '"column"': sütun
+            '"right"': sağ sütun
             '"x"': çapraz geçiş
             '"plus"': artı
             '"spiral"': sarmal
@@ -512,44 +525,45 @@ tr:
         options:
           EFFECT:
             '"none"': Hiçbiri
-            '"circles"': Tünel
+            '"circles"': Çemberler
             '"color_cycle"': Renkler
-            '"diamonds"': Karolar
+            '"diamonds"': Elmaslar
             '"disco_ball"': Disko Topu
-            '"fireworks"': Havai fişek
+            '"fireworks"': Havai fişekler
             '"swirl"': Hipnozcu
             '"kaleidoscope"': Kaleydoskop
             '"lasers"': Lazer Dans Pisti
             '"splatter"': Boya Lekesi
             '"rainbow"': Gökkuşağı
             '"snowflakes"': Kar
-            '"text"': Şarkı Adı
+            '"text"': Şarkı Adları
             '"galaxy"': Uzay
             '"sparkles"': Kıvılcımlar
+            '"spiral"': Sarmal
             '"disco"': Kareler
             '"stars"': Yıldızlar
           PALETTE:
             '"rave"': Siyah Beyaz
-            '"cool"': Maviler
+            '"cool"': Havalı
             '"electronic"': Elektronik
             '"iceCream"': Dondurma
-            '"default"': Aydınlık
+            '"default"': Işık
             '"neon"': Neon
-            '"tropical"': Tropikal
-            '"vintage"': Bağbozumu
-            '"warm"': Kırmızılar
+            '"tropical"': Tropik
+            '"vintage"': Eski tip
+            '"warm"': Sıcak
       Dancelab_setBackgroundEffectWithPalette:
         text: arka plan efektini {PALETTE} {EFFECT} olarak ayarla
         options:
           EFFECT:
             '"none"': Hiçbiri
             '"rand"': "(Rastgele)"
-            '"circles"': Tünel
+            '"circles"': Çemberler
             '"quads"': Açılar
             '"color_cycle"': Renkler
-            '"diamonds"': Karolar
+            '"diamonds"': Elmaslar
             '"disco_ball"': Disko Topu
-            '"fireworks"': Havai fişek
+            '"fireworks"': Havai fişekler
             '"flowers"': Çiçekler
             '"growing_stars"': Büyüyen Yıldızlar
             '"higher_power"': Higher Power
@@ -559,25 +573,26 @@ tr:
             '"splatter"': Boya Lekesi
             '"rainbow"': Gökkuşağı
             '"ripples_random"': Rastgele Dalgalar
-            '"ripples"': Dalgaları
+            '"ripples"': Dalgalar
             '"snowflakes"': Kar
-            '"text"': Şarkı Adı
+            '"text"': Şarkı Adları
             '"squiggles"': Karalamalar
             '"galaxy"': Uzay
             '"sparkles"': Kıvılcımlar
+            '"spiral"': Sarmal
             '"disco"': Kareler
             '"stars"': Yıldızlar
             '"music_wave"': Dalgalar
           PALETTE:
             '"rave"': Siyah Beyaz
-            '"cool"': Maviler
+            '"cool"': Havalı
             '"electronic"': Elektronik
             '"iceCream"': Dondurma
-            '"default"': Aydınlık
+            '"default"': Işık
             '"neon"': Neon
-            '"tropical"': Tropikal
-            '"vintage"': Bağbozumu
-            '"warm"': Kırmızılar
+            '"tropical"': Tropik
+            '"vintage"': Eski tip
+            '"warm"': Sıcak
       Dancelab_setDanceSpeed:
         text: "{SPRITE} dans hızını {SPEED} olarak değiştir"
         options:
@@ -598,10 +613,11 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           SPEED:
             '1': normal
@@ -619,11 +635,13 @@ tr:
             '"hearts_red"': Kalpler
             '"music_notes"': Müzik Notaları
             '"pineapples"': Ananaslar
+            '"pizzas"': Pizzalar
             '"smiling_poop"': Kaka
             '"rain"': Yağmur
-            '"floating_rainbows"': Gökkuşağı
+            '"floating_rainbows"': Gökkuşakları
             '"smile_face"': Gülümsemeler
             '"spotlight"': Spot
+            '"color_lights"': Sahne Işıkları
             '"raining_tacos"': Tacolar
       Dancelab_setForegroundEffectExtended:
         text: ön plan efektini {EFFECT} olarak ayarla
@@ -637,12 +655,16 @@ tr:
             '"emojis"': Emojiler
             '"hearts_red"': Kalpler
             '"music_notes"': Müzik Notaları
+            '"paint_drip"': Boya damlası
             '"pineapples"': Ananaslar
+            '"pizzas"': Pizzalar
             '"smiling_poop"': Kaka
             '"rain"': Yağmur
-            '"floating_rainbows"': Gökkuşağı
+            '"floating_rainbows"': Gökkuşakları
             '"smile_face"': Gülümsemeler
             '"spotlight"': Spot
+            '"color_lights"': Sahne Işıkları
+            '"exploding_stars"': Yıldız patlaması
             '"raining_tacos"': Tacolar
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
@@ -651,7 +673,7 @@ tr:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
       Dancelab_setPropEach:
@@ -665,16 +687,17 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
             '"tint"': renk tonu
@@ -685,12 +708,12 @@ tr:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
             '"tint"': renk tonu
       Dancelab_setPropRandomEach:
-        text: "{GROUP} {PROPERTY} öğesini randomize edin"
+        text: "{GROUP} {PROPERTY} öğesini rastgele yapın"
         options:
           GROUP:
             sprites: tüm
@@ -700,16 +723,17 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
             '"tint"': renk tonu
@@ -726,10 +750,11 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
       Dancelab_setTintEachInline:
         text: "{THIS} renk tonu {VAL} olarak ayarlayın"
@@ -742,10 +767,11 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
       Dancelab_setTintInline:
         text: "{SPRITE} renk tonunu {VAL} olarak ayarla"
@@ -766,10 +792,11 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           VISIBILITY:
             'true': görünür
@@ -781,7 +808,7 @@ tr:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
             '"tint"': renk tonu
@@ -790,7 +817,7 @@ tr:
             '"mid"': orta
             '"treble"': tiz
       Dancelab_startMappingEach:
-        text: "{GROUP} {PROPERTY} aşağıdaki {RANGE} başlar"
+        text: "{GROUP} {PROPERTY} aşağıdaki {RANGE} 'yi takiben başlar"
         options:
           GROUP:
             sprites: tüm
@@ -800,16 +827,17 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
             '"tint"': renk tonu
@@ -824,7 +852,7 @@ tr:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
             '"direction"': hareket yönü
@@ -834,7 +862,7 @@ tr:
             '"mid"': orta
             '"treble"': tiz
       Dancelab_stopMappingEach:
-        text: "{GROUP} Durdurur {PROPERTY} Aşağıdaki {RANGE}"
+        text: "{GROUP} {RANGE}’i takiben {PROPERTY}’i durdurur"
         options:
           GROUP:
             sprites: tüm
@@ -844,16 +872,17 @@ tr:
             '"DOG"': köpekler
             '"DUCK"': ördekler
             '"FROG"': kurbağalar
-            '"MOOSE"': tüm geyikler
+            '"MOOSE"': geyik
             '"PINEAPPLE"': ananaslar
-            '"ROBOT"': tüm robotlar
+            '"ROBOT"': robotlar
             '"SHARK"': köpek balıkları
+            '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': yatay konum
             '"y"': dikey konum
             '"direction"': hareket yönü
@@ -867,7 +896,7 @@ tr:
         options:
           STRING:
             '"music_wave"': Dalgalar
-            '"ripples"': Dalgaları
+            '"ripples"': Dalgalar
             '"ripples_random"': Rastgele Dalgalar
             '"quads"': Açılar
             '"flowers"': Çiçekler
@@ -876,7 +905,20 @@ tr:
             '"growing_stars"': Büyüyen Yıldızlar
             '"emojis"': Emojiler
             '"hearts_colorful"': Kalpler
+            '"paint_drio"': Boya damlası
+            '"exploding_stars"': Yıldız patlaması
+            '"row_top"': üst satır
+            '"row_bottom"': alt satır
+            '"column_left"': sol sütun
+            '"column_right"': sağ sütun
             '"diamond"': elmas
+            '"mural"': Duvar
+            '"safari"': Safari
+            '"network"': Bağlantılar
+            '"highway"': Otoyol
+            '"stream"': Akış
+            '"tile"': Karo
+            '"shadow"': Gölge
             '"s"': s
             '"t"': t
             '"u"': u
@@ -904,11 +946,22 @@ tr:
             '"down"': aşağı
             '"right"': sağ
             '"space"': uzay
-            '"enter"': girin
+            '"enter"': giriş tuşu
             '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
             '"f"': f
             '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
             '"p"': p
             '"q"': q
             '"r"': r
@@ -941,10 +994,72 @@ tr:
         text: kurulum
       Dancelab_whenSetup2:
         text: kurulum
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Mikroskopta {INPUT1} var
+        options:
+          INPUT1:
+            '1': limon suyu
+            '3': kabartma tozu
+            '5': her ikisi
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} efekti yap"
+        options:
+          EFFECT:
+            '"bubbles"': Baloncuklar
+            '"confetti"': Konfeti
+            '"hearts"': kalpler
+            '"emojis"': Mutlu Emojiler
+            '"rain"': yağmur
+            '"starburst"': yıldız patlaması
+            '"glass"': Parçalanan Cam
+            '"twinkling"': Parıldama
+      DansBlocks_setMicroscope:
+        text: Mikroskobu {INPUT1} olarak ayarlayın
+        options:
+          INPUT1:
+            '1': limon suyu
+            '3': kabartma tozu
+            '5': her ikisi
+      DansBlocks_testRectangle:
+        text: 'dikdörtgen yap x: {X} y: {Y} w: {W} h: {H} renk: {COLOR}'
+      FunctionBlocks_addEightBlock:
+        text: Sekizekle
+      FunctionBlocks_addFiveBlock:
+        text: Beşekle
+      FunctionBlocks_addFourBlock:
+        text: Dörtekle
+      FunctionBlocks_addNineBlock:
+        text: Dokuzekle
+      FunctionBlocks_addOneBlock:
+        text: Birekle
+      FunctionBlocks_addSevenBlock:
+        text: Yediekle
+      FunctionBlocks_addSixBlock:
+        text: Altıekle
+      FunctionBlocks_addThreeBlock:
+        text: Üçekle
+      FunctionBlocks_addTwoBlock:
+        text: İkiekle
+      FunctionBlocks_communicate:
+        text: "{SPRITE1COSTUME} ile {VAR1} konusunu konuş"
+      FunctionBlocks_makeManipulative2:
+        text: "{BEHAVIOR} yapan {NUM} yeni {ANIMATION_NAME} hareketli nesne yap"
+      FunctionBlocks_representManipulative:
+        text: "{NUM} yeni {ANIMATION_NAME} karakteri temsil ediyor"
+      FunctionBlocks_representManipulative_test:
+        text: "[test], {NUM} yeni {ANIMATION_NAME} hareketli nesneyi temsil ediyor"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}, {TEXT1} der"
       gamelab_addBehaviorSimple:
-        text: sprite {SPRITE} Başlar {BEHAVIOR}
+        text: hareket {SPRITE} Başlar {BEHAVIOR}
       gamelab_addTarget:
-        text: "{SPRITE}, {TARGET}'e erişir."
+        text: "{SPRITE},   {OPT} ile {TARGET} 'e erişir."
         options:
           OPT:
             '"follow"': takip et
@@ -964,17 +1079,19 @@ tr:
       gamelab_bounceOff:
         text: "{TARGET}'in {SPRITE} sekmeleri"
       gamelab_changePropBy:
-        text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
+        text: "{SPRITE} {PROPERTY}’i {VAL} ile değiştir"
         options:
           PROPERTY:
             '"scale"': boyut
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
             '"speed"': hız
+      gamelab_changeVarBy:
+        text: "{VARIABLE} {VAL} ile değiştir"
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} dokunuşlar {SPRITE2}"
+        text: "{CONDITION} {SPRITE1} {SPRITE2} ' ye dokunduğunda"
         options:
           CONDITION:
             '"when"': Ne zaman
@@ -989,7 +1106,7 @@ tr:
           BEHAVIOR:
             new Behavior(spinning_right, []): sağa dönme
             new Behavior(spinning_left, []): sola dönme
-            new Behavior(fluttering, []): fluttering
+            new Behavior(fluttering, []): çırpınma
             new Behavior(jittering, []): kararsızlık
             new Behavior(wobbling, []): sallanma
             new Behavior(wandering, []): gezinme
@@ -1005,7 +1122,7 @@ tr:
       gamelab_countByAnimation:
         text: "{SPRITE} sayısı"
       gamelab_createNewSprite:
-        text: "yeni bir sprite yapmak \n Denilen {NAME} \n kostümlü {COSTUME} \n at {LOCATION}"
+        text: "yeni bir hareket yapmak \n  {NAME} isminde \n  {COSTUME} kostümünde \n {LOCATION} yerinde"
       gamelab_destroy:
         text: "{THIS} kaldır"
       gamelab_draggable:
@@ -1029,14 +1146,14 @@ tr:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
             '"tint"': renk tonu
             '"speed"': hız
       gamelab_getThisSprite:
-        text: "{CHOICE} sprite"
+        text: "{CHOICE} hareketli nesnesi"
         options:
           CHOICE:
             '"this"': bu
@@ -1081,9 +1198,20 @@ tr:
             '"right"': sağ
             '"space"': uzay
             '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
             '"f"': f
             '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
             '"p"': p
             '"q"': q
             '"r"': r
@@ -1102,7 +1230,7 @@ tr:
       gamelab_jumpTo:
         text: "{SPRITE} {LOCATION}’a atla"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} preslenmiş"
+        text: "{CONDITION} {KEY} basıldığında"
         options:
           CONDITION:
             '"when"': Ne zaman
@@ -1114,9 +1242,20 @@ tr:
             '"right"': sağ
             '"space"': uzay
             '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
             '"f"': f
             '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
             '"p"': p
             '"q"': q
             '"r"': r
@@ -1128,10 +1267,12 @@ tr:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutGrid:
+        text: hareketli nesneleri ızgara şeklinde yerleştir
       gamelab_locationAt:
         text: 'konum x: {X} y: {Y}'
       gamelab_locationModifier:
-        text: "{LOCATION} konumun {DIRECTION} yönüne {DISTANCE} pixel"
+        text: "{LOCATION} konumunun {DIRECTION} yönüne {DISTANCE} piksel uzunluğunda"
         options:
           DIRECTION:
             '"North"': Kuzey
@@ -1141,7 +1282,7 @@ tr:
       gamelab_locationMouse:
         text: fare konumu
       gamelab_locationOf:
-        text: konumu {SPRITE}
+        text: "{SPRITE} konumu "
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
@@ -1153,13 +1294,11 @@ tr:
             '"rain"': yağmur
             '"spiral"': sarmal
       gamelab_makeNewSpriteAnon:
-        text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
+        text: " {LOCATION} de yeni hareket yap {ANIMATION_NAME} "
       gamelab_makeNumSprites:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
       gamelab_makeProjectile:
-        text: |-
-          mermi oluştur
-          {ANIMATION_NAME}, {LOCATION} konumundan {DIRECTION} yönüne {SPEED} hızıyla
+        text: "{ANIMATION_NAME} adında roket oluştur, {LOCATION} konumundan {DIRECTION} yönüne {SPEED} hızıyla"
         options:
           DIRECTION:
             '0': sağ
@@ -1184,9 +1323,9 @@ tr:
       gamelab_moveBackward:
         text: "{SPRITE}{DISTANCE} pikselleri arkaya taşı"
       gamelab_moveForward:
-        text: hareket {SPRITE} {DISTANCE} piksel ileri
+        text: " {SPRITE} hareket etsin {DISTANCE} piksel ileri"
       gamelab_moveInDirection:
-        text: hareket {SPRITE} {DISTANCE} piksel {DIRECTION}
+        text: " {SPRITE} hareket etsin {DISTANCE} piksel ileri {DIRECTION} yönünde"
         options:
           DIRECTION:
             '"North"': Kuzey
@@ -1194,7 +1333,7 @@ tr:
             '"South"': Güney
             '"West"': Batı
       gamelab_moveToward:
-        text: "{SPRITE} piksel {DISTANCE} doğru hareket {TARGET}"
+        text: "{SPRITE} {TARGET} e doğru {DISTANCE} piksel ileri hareket etsin "
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
@@ -1202,9 +1341,9 @@ tr:
       gamelab_patrollingUpDown:
         text: yukarı ve aşağı kontrol sağla
       gamelab_playSound:
-        text: playSound {SOUND}
+        text: " {SOUND} sesini çal"
       gamelab_playSoundOptions:
-        text: playSound {SOUND}
+        text: " {SOUND} sesini çal"
         options:
           SOUND:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": aksan
@@ -1244,9 +1383,33 @@ tr:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tuhaf bas
             "'sound://category_digital/jump_7.mp3'": zıpla
       gamelab_playSoundOptionsSoccer:
-        text: playSound {SOUND}
+        text: " {SOUND} sesini çal"
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": havalı korna
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": alkış
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": marş
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": tezahürat
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": tekme
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": iki ıslık
+            "'sound://category_sports/One_Whistle_SFX.mp3'": düdük
       gamelab_playSoundOptionsSpace:
-        text: playSound {SOUND}
+        text: " {SOUND} sesini çal"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": kara delik
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": kurşun kümesi
+            "'sound://category_space/Carina_SFX.mp3'": karina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": kraliçe takımyıldızı
+            "'sound://category_space/Crab_nebula_SFX.mp3'": yengeç bulutsusu
+            "'sound://category_space/Galactic_center_SFX.mp3'": galaktik merkez
+            "'sound://category_space/Launch_SFX.mp3'": fırlatma
+            "'sound://category_space/Lift_Off.mp3'": kalkış
+            "'sound://category_space/Pillars_SFX.mp3'": sütunlar
+            "'sound://category_space/Southern_ring_SFX.mp3'": güney halka bulutsusu
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": girdap galaksisi
       gamelab_playSpeech:
         text: konuşmayı çal {SOUND}
       gamelab_playerBehaviors:
@@ -1257,7 +1420,7 @@ tr:
             new Behavior(driving_with_arrow_keys, []): ok tuşları ile hareket
             draggable(): sürüklenebilir olmak
       gamelab_pointInDirection:
-        text: point {SPRITE} {DIRECTION}
+        text: " {SPRITE} {DIRECTION} işaretle"
         options:
           DIRECTION:
             '"North"': Kuzey
@@ -1265,7 +1428,7 @@ tr:
             '"South"': Güney
             '"West"': Batı
       gamelab_printText:
-        text: yazdırma {TEXT}
+        text: "{TEXT} yazdır"
       gamelab_randColor:
         text: rastgele renk
       gamelab_randomColor:
@@ -1283,7 +1446,7 @@ tr:
       gamelab_resetTimer:
         text: zamanlayıcıyı sıfırla
       gamelab_setAnimation:
-        text: "{THIS} kostüm {ANIMATION} değiştirmek"
+        text: "{THIS} kostümünü {ANIMATION} ile değiştirmek"
       gamelab_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       gamelab_setBackgroundImage:
@@ -1292,7 +1455,7 @@ tr:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': mağara
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şehir
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': devam eden çim
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': sürekli çim
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': mahkeme
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': çöl
             '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': çöl yolu
@@ -1323,7 +1486,7 @@ tr:
       gamelab_setBackgroundImageAs:
         text: arka planı {IMG} olarak ayarlayın
       gamelab_setDefaultSpriteSize:
-        text: yeni hareketli şekil varsayılan boyutunu {SIZE} olarak ayarla
+        text: yeni hareketli şeklin varsayılan boyutunu {SIZE} olarak ayarla
         options:
           SIZE:
             '25': çok küçük
@@ -1332,6 +1495,8 @@ tr:
             '100': Büyük
       gamelab_setPrompt:
         text: "{VAR} değişkeni için {QUESTION} sorusunu kullanıcıya sor"
+      gamelab_setPromptWith2Choices:
+        text: "{QUESTION} kullanıcısına {VAR} değişkeni için {A}{B} seçenekleriyle sor"
       gamelab_setPromptWithChoices:
         text: "{VAR} değişkeni için {A}{B}{C} seçenekleriyle {QUESTION} sorusunu kullanıcıya sor"
       gamelab_setProp:
@@ -1339,7 +1504,7 @@ tr:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
@@ -1355,22 +1520,23 @@ tr:
             '75': orta
             '100': Büyük
       gamelab_setSizes:
-        text: "{SPRITE} {PROPERTY}‘yi % {N} olarak ayarla"
+        text: " {SPRITE} {PROPERTY}‘yi  {N}% olarak ayarla"
         options:
           PROPERTY:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
       gamelab_setSpeed_dropdown:
+        text: "{SPRITE} boyutunu {SIZE} olarak ayarla"
         options:
           SIZE:
-            '1': extra slow
+            '1': fazla yavaş
             '3': yavaş
             '5': normal
             '7': hızlı
-            '9': extra fast
+            '9': fazla hızlı
       gamelab_setTint:
-        text: renk değiştirme {THIS} Hedef {COLOR}
+        text: "{THIS} rengini {COLOR} olarak değiştir"
       gamelab_setupScoreboard:
         text: |-
           skor tahtası çiz
@@ -1383,9 +1549,9 @@ tr:
           Toplama
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: başlık ekran {BREAK} başlık {TITLE} metin {SUBTITLE}
+        text: " {BREAK} ekran başlığını {TITLE} metin {SUBTITLE} alt metin olarak göster"
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} tıklama"
+        text: "{CONDITION} {SPRITE} tıklandığında"
         options:
           CONDITION:
             '"when"': Ne zaman
@@ -1403,7 +1569,7 @@ tr:
         options:
           THOUGHT:
             '"Hmm..."': Hmmm...
-            '"Time to make friends with the sheep."': Koyunla arkadaş olma zamanı.
+            '"Time to make friends with the sheep."': Koyunla arkadaş edinme zamanı.
             '"She''ll never recognize me now."': Şimdi beni asla tanıyamayacak.
             '"This costume keeps me warm."': Bu kostüm beni sıcak tutuyor.
             '"I am actually a wolf."': Ben aslında kurtum.
@@ -1412,7 +1578,7 @@ tr:
         options:
           THOUGHT:
             '"Hmm..."': Hmmm...
-            '"I''m feeling sleepy."': Uykum var.
+            '"I''m feeling sleepy."': Uykulu hissediyorum.
             '"No one could ever beat me."': Beni asla kimse yenemez.
             '"I''ve done this race before."': Bu yarışa daha önce girdim.
             '"My feet are bigger than Turtle''s feet."': Ayaklarım kaplumbağanın ayaklarından daha büyük.
@@ -1422,7 +1588,7 @@ tr:
           THOUGHT:
             '"Hmm..."': Hmmm...
             '"I''m so hungry."': Çok açım.
-            '"I''m a visitor in this town."': Bu kasabayı ziyarete geldim.
+            '"I''m a visitor in this town."': Bu kasabanın ziyaretçisiyim.
             '"If we share, we''ll all have something to eat. "': Paylaşırsak herkesin yiyecek bir şeyleri olur.
             '"I''ll trick everyone into giving me their food."': Herkesi kandırıp bana yemek vermelerini sağlayacağım.
       gamelab_startAvoiding:
@@ -1448,7 +1614,7 @@ tr:
       gamelab_tumbling:
         text: karıştır
       gamelab_turn:
-        text: "{SPRITE} {DIRECTION} {N} derece dönüş"
+        text: "{SPRITE} {DIRECTION} {N} derece döndür"
         options:
           DIRECTION:
             '"right"': sağ
@@ -1471,6 +1637,7 @@ tr:
             '"a"': a
             '"w"': w
             '"s"': s
+            '"d"': d
       gamelab_whenLeftArrow:
         text: sol ok basıldığında
       gamelab_whenPromptAnswered:
@@ -1480,13 +1647,13 @@ tr:
       gamelab_whenSpriteCreated:
         text: "{SPRITE} oluşturulduğunda"
       gamelab_whenTouching:
-        text: "{SPRITE1} [SPRITE2]dokunduğunda[1]"
+        text: "{SPRITE1} {SPRITE2}'ye dokunduğunda"
       gamelab_whenUpArrow:
         text: yukarı ok basıldığında
       gamelab_whileDownArrow:
         text: aşağı ok basıldığında
       gamelab_whileKey:
-        text: "{KEY} basılırken"
+        text: "{KEY} basıldığında"
         options:
           KEY:
             '"up"': yukarı
@@ -1497,17 +1664,18 @@ tr:
             '"a"': a
             '"w"': w
             '"s"': s
+            '"d"': d
       gamelab_whileLeftArrow:
         text: sol ok basıldığında
       gamelab_whileRightArrow:
-        text: sağ ok basılırken
+        text: sağ ok basıldığında
       gamelab_whileTouching:
-        text: Süre {SPRITE1} dokunuyor {SPRITE2}
+        text: "{SPRITE1}  {SPRITE2} 'e dokunduğu sürece"
       gamelab_whileUpArrow:
         text: yukarı ok basıldığında
       gamelab_withPercentChance:
         text: |-
-          eğer % {NUM} şans varsa
+          eğer  {NUM} % şans varsa
           {STATEMENT}
       gamelab_withPercentChanceDropdown:
         text: |-
@@ -1521,22 +1689,22 @@ tr:
             '75': yüksek
             '90': çok yüksek
       gamelab_xLocationOf:
-        text: x {SPRITE} koordinatı
+        text: "{SPRITE} 'ın x koordinatı"
       gamelab_yLocationOf:
-        text: y koordinatı {SPRITE}
+        text: "{SPRITE} 'ın y koordinatı "
       Mikelab_addBehaviorSimple:
-        text: sprite {SPRITE} Başlar {BEHAVIOR}
+        text: hareket {SPRITE} Başlar {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 'eğitim verileri ekleyin: {NAME},{LOCATION}'
         options:
           NAME:
             "{x: 201, y: 100}": nesne
-            "{x: 200, y: 100}": balıklar
+            "{x: 200, y: 100}": balık
           LOCATION:
-            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": balıklar
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": balık
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": Balık değil.
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": benim etiket
-            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": benim etiketimi değil
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": benim etiketim değil
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_beginDataCollection:
@@ -1545,7 +1713,7 @@ tr:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
@@ -1561,13 +1729,14 @@ tr:
             "{x: 300, y: 100}": sağ üst
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Rastgele
       Mikelab_getNext:
         text: sonraki nesneyi al
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
@@ -1578,14 +1747,14 @@ tr:
             '"all"': tüm
             '"this"': bu
       Mikelab_groupChangePropBy:
-        text: Değiştirmek {PROPERTY} onun {SELECT} {COSTUME} Tarafından {VAL}
+        text: "{SELECT} {COSTUME} 'ı {VAL} olarak  {PROPERTY} 'ını değiştirin"
         options:
           SELECT:
             '"all"': tüm
             '"this"': bu
           PROPERTY:
             '"scale"': boyut
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
@@ -1602,6 +1771,7 @@ tr:
             "{x: 300, y: 100}": sağ üst
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Rastgele
       Mikelab_groupDestroy:
         text: "{SELECT} {COSTUME} kaldır"
         options:
@@ -1609,52 +1779,53 @@ tr:
             '"all"': tüm
             '"this"': bu
       Mikelab_groupDisplace:
-        text: tüm {COSTUME} blok [COSTUME2]hareket eden[1]
+        text: tüm {COSTUME}, {COSTUME2}'in hareket etmesini engelliyor
       Mikelab_groupEdgesDisplace:
-        text: kenarları blok {COSTUME} hareket
+        text: kenarlar  {COSTUME} 'ın hareket etmesini engelliyor
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME}'s {PROPERTY}"
+        text: "{SELECT} {COSTUME}'nın {PROPERTY}"
         options:
           SELECT:
+            '"average"': ortalama
             '"this"': bu
           PROPERTY:
             '"scale"': boyut
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
       Mikelab_groupRemoveAllBehaviors:
-        text: Durdurmak {SELECT} {COSTUME} Davranış
+        text: "{SELECT} {COSTUME} davranışlarını durdur"
         options:
           SELECT:
             '"all"': tüm
             '"this"': bu
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} {COSTUME} durur {BEHAVIOR}"
+        text: "{SELECT} {COSTUME}  {BEHAVIOR} 'yi durdurur"
         options:
           SELECT:
             '"all"': tüm
             '"this"': bu
       Mikelab_groupRemoveTint:
-        text: "{SELECT} {COSTUME} gelen rengi kaldır"
+        text: "{SELECT} {COSTUME} 'dan rengi kaldır"
         options:
           SELECT:
             '"all"': tüm
             '"this"': bu
       Mikelab_groupSetProp:
-        text: "{PROPERTY} {SELECT} {COSTUME} {VAL} 123_321"
+        text: "{SELECT} {COSTUME} 'nin {PROPERTY} 'ını {VAL} olarak değiştir"
         options:
           SELECT:
             '"all"': tüm
             '"this"': bu
           PROPERTY:
             '"scale"': boyut
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
       Mikelab_groupSetTint:
-        text: renk değiştirme {SELECT} {COSTUME} Hedef {COLOR}
+        text: " {SELECT} {COSTUME} rengini {COLOR} olarak değiştir"
         options:
           SELECT:
             '"all"': tüm
@@ -1662,21 +1833,21 @@ tr:
       Mikelab_groupWhenClickedOn:
         text: "{COSTUME} tıklandığında"
       Mikelab_groupWhenXTouchesY:
-        text: "{COSTUME} [COSTUME2]dokunduğunda[1]"
+        text: "{COSTUME} {COSTUME2} 'e dokunduğunda"
       Mikelab_groupWhileClicked:
         text: "{COSTUME} üzerine tıklanırken"
       Mikelab_groupWhileTouchingAny:
         text: |-
           {COSTUME} {COSTUME2}
-          {STATEMENT} dokunuyor iken
+          {STATEMENT} 'ye dokunuyor iken
       Mikelab_hasBehavior:
-        text: "{SPRITE} şu anda {BEHAVIOR} olduğunu"
+        text: "{SPRITE} şu anda {BEHAVIOR} "
       Mikelab_hideFish:
-        text: "{TRASH} kaldır"
+        text: "{TRASH} 'ı kaldır"
         options:
           TRASH:
             object: nesne
-            fish: balıklar
+            fish: balık
       Mikelab_ifDanceIs:
         text: |-
           eğer {SPRITE} {DANCE} yapıyorsa
@@ -1688,42 +1859,53 @@ tr:
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
-            MOVES.Floss: Diş ipi
+            MOVES.Floss: Floss
             MOVES.Fresh: Taze
-            MOVES.Roll: Vücut Rulo
+            MOVES.Roll: Body roll
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
       Mikelab_ifLabel:
         text: |-
-          eğer {DANCE}
-          yapmak {DO1} Başka {DO2}
+          {DANCE} ise
+          {DO1} yap yoksa {DO2}
         options:
           DANCE:
-            MOVES.ClapHigh: balıklar
+            MOVES.ClapHigh: balık
             MOVES.Clown: benim etiket
       Mikelab_ifRecognizeLabel:
         text: |-
-          olarak nesneyi tanıyorsanız {DANCE}
-          yapmak {DO1} Başka {DO2}
+          {DANCE}  olarak nesneyi tanıyorsanız
+           {DO1} yap  yoksa {DO2}
         options:
           DANCE:
-            MOVES.ClapHigh: balıklar
+            MOVES.ClapHigh: balık
             MOVES.Clown: benim etiket
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          {DANCE}
-          123_321 {DO1}
+          {DANCE}  olarak nesneyi tanıyorsanız
+           {DO1} yap
         options:
           DANCE:
-            MOVES.ClapHigh: balıklar
-            MOVES.Clown: benim etiketimi değil
+            MOVES.ClapHigh: balık
+            MOVES.Clown: benim etiketim değil
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'konum x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
+        options:
+          TEXT1:
+            '"Balancing on the "': "“Dengeleme”"
+            '"A chubby cat "': "“Tombul bir kedi”"
+            '"The "': "“The”"
+          TEXT2:
+            '" fence"': "“çit”"
+            '""': '""'
+            '" breeze blows"': '"rüzgar esiyor"'
       Mikelab_randomColor:
         text: rastgele renk
       Mikelab_removeBehaviorSimple:
@@ -1738,7 +1920,7 @@ tr:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şehir
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': devam eden çim
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': sürekli çim
             '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': çöl yolu
             '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': çiftlik arazisi
             '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': kayan çimen
@@ -1760,10 +1942,17 @@ tr:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"rotation"': yön
+            '"rotation"': dönüş
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+      Mikelab_setupLevel:
+        text: |-
+          kurulum seviyesi ile
+          {A1}{A2}{A3}{A4}
+          {A5}{A6}{A7}{A8}
+          {B1}{B2}{B3}{B4}
+          {B5}{B6}{B7}{B8}
       Mikelab_setupOutbreak:
         text: |-
           salgın düzeni
@@ -1784,9 +1973,10 @@ tr:
       Mikelab_showText:
         options:
           PREPOSITION:
+            '"above"': yukarıda
             '"below"': aşağıda
       Mikelab_sprite:
-        text: yeni {COSTUME} [LOCATION]de sprite[1]
+        text: yeni {COSTUME} hareketli nesne {LOCATION}de
         options:
           LOCATION:
             "{x: 200, y: 100}": üst
@@ -1798,6 +1988,7 @@ tr:
             "{x: 300, y: 100}": sağ üst
             "{x: 100, y: 300}": sol alt
             "{x: 300, y: 300}": sağ alt
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Rastgele
       Mikelab_whenClickedOn:
         text: "{SPRITE} tıklandığında"
       Mikelab_whenKeyPressed:
@@ -1808,6 +1999,7 @@ tr:
             '"down"': aşağı ok
             '"left"': sol ok
             '"right"': sağ ok
+            '"space"': boşluk çubuğu
             '"w"': B
             '"a"': A
             '"s"': G
@@ -1819,6 +2011,7 @@ tr:
             '"down"': aşağı ok
             '"left"': sol ok
             '"right"': sağ ok
+            '"space"': boşluk çubuğu
             '"w"': B
             '"a"': A
             '"s"': G
@@ -1838,10 +2031,11 @@ tr:
             '"down"': aşağı ok
             '"left"': sol ok
             '"right"': sağ ok
+            '"space"': boşluk çubuğu
       Mikelab_xLocationOf:
-        text: x {SPRITE} koordinatı
+        text: "{SPRITE} 'ın x koordinatı"
       Mikelab_yLocationOf:
-        text: y koordinatı {SPRITE}
+        text: "{SPRITE} 'ın y koordinatı "
       Outbreak_beginCongregating:
         text: canavarlar toplanmaya başlar
       Outbreak_beginQuarantining:
@@ -1860,30 +2054,82 @@ tr:
         text: canavarları ızgara şeklinde yerleştir
       Outbreak_layoutRandom:
         text: canavarları rastgele yerleştir
+      Outbreak_setSpeed:
+        text: canavar hızını {VAL} olarak ayarla
+      Outbreak_setupOutbreak:
+        text: "{COUNT}canavarla Monster Town'ı kur"
       Outbreak_stopMoving:
         text: canavarlar hareket etmeyi bırakıyor
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskopta {INPUT1} var
+        options:
+          INPUT1:
+            '1': limon suyu
+            '3': kabartma tozu
+            '5': her ikisi
+      ParticlesBlocks_setMicroscope:
+        text: Mikroskobu {INPUT1} olarak ayarlayın
+        options:
+          INPUT1:
+            '1': limon suyu
+            '3': kabartma tozu
+            '5': her ikisi
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): katı
+            new Behavior(liquid, []): sıvı
+            new Behavior(wandering, []): gaz
+      ParticlesBlocks_statesOfMatter2:
+        text: "{BEHAVIOR} davranışı için {COSTUME} kostümünü ayarla"
+        options:
+          BEHAVIOR:
+            '"solid"': 'katı parçacık '
+            '"liquid"': sıvı parçacık
+            '"gas"': gaz parçacığı
+      ParticlesBlocks_statesOfMatter_testing:
+        text: "[Test] {COSTUME} davranışını {BEHAVIOR} olarak ayarlayın"
+        options:
+          BEHAVIOR:
+            '"solid"': 'katı parçacık '
+            '"liquid"': sıvı parçacık
+            '"gas"': gaz parçacığı
       Poetry_addFrame:
+        text: "{BRUSH} a çerceveyi ayarla"
         options:
           BRUSH:
+            '"bamboo"': bambu
+            '"beaded"': boncuklu
             '"brick"': tuğla
+            '"decorative"': dekoratif
+            '"donuts"': çörekler
             '"fire"': ateş
             '"flowers"': Çiçekler
+            '"gilded"': yaldızlı
             '"hearts"': kalpler
             '"iceCream"': Dondurma
             '"leaves"': yapraklar
+            '"metal"': metal çerçeve
+            '"pawPrints"': pati izleri
             '"rainbow"': gökkuşağı
             '"stars"': yıldızlar
-            '"waves"': dalga
+            '"swirls"': girdaplar
+            '"waves"': dalgalar
+            '"wood"': ahşap çerçeve
+            '"zigzag"': zik zak
       Poetry_addLine:
-        text: satır ekle {LINE}
+        text: " {LINE} satırı ekle"
+      Poetry_addTextHighlight:
+        text: "{COLOR} yazı rengini ekle"
       Poetry_animateText:
-        text: metni canlandır
+        text: metni canlandırma
       Poetry_destroy:
-        text: kaldır {ANIMATION_NAME}
+        text: " {ANIMATION_NAME} 'ı kaldır"
       Poetry_glideTo:
         text: "{SPRITE}, {LOCATION} konumuna süzülür"
       Poetry_hideText:
-        text: metni gizle
+        text: metni gizleme
       Poetry_makeBurst:
         text: "{NUM} {ANIMATION_NAME} hareketli grafiğiyle {EFFECT} efekti oluşturun"
         options:
@@ -1893,30 +2139,37 @@ tr:
             '"rain"': yağmur
             '"spiral"': sarmal
       Poetry_makeNewSpriteAnon:
-        text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
+        text: " {LOCATION} de yeni hareket yap {ANIMATION_NAME} "
       Poetry_makeNumSprites:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
       Poetry_playMusic:
+        text: "{SOUND} müziğini çal"
         options:
           SOUND:
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': parlak
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Sakin
             '"sound://category_nature/steady_campfire_loop.mp3"': Kamp ateşi
             '"sound://category_nature/rain_loop.mp3"': Çiseleyen yağmur
+            '"sound://category_background/fire_burning.mp3"': ocak başı
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': Orman
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': arplar
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Lanetli
             '"sound://category_background/inside_plane.mp3"': Uğultu
             '"sound://category_loops/red_flag_loop1.mp3"': Misyon
             '"sound://category_nature/summer_night_loop.mp3"': gece
             '"sound://category_background/ocean_waves.mp3"': okyanus
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': yağmurlu
             '"sound://category_background/rainforest_ambient_sound.mp3"': yağmur ormanı
             '"sound://category_background/repitition.mp3"': Binme
             '"sound://category_background/wavering_wind.mp3"': uykulu
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Yavaş
+            '"sound://category_background/waterfall.mp3"': Şelale
       Poetry_playSound:
-        text: playSound {SOUND}
+        text: " {SOUND} sesini çal"
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': zil
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': mola
             '"sound://category_digital/boing_2.mp3"': boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Kabarcık
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Sohbet
@@ -1932,8 +2185,25 @@ tr:
             '"sound://category_achievements/peaceful_win_1.mp3"': Kazanma
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Koşuşturma
             '"sound://category_achievements/peaceful_win_6.mp3"': Rüzgar Çanları
+      Poetry_playSoundOptionsSpace:
+        text: " {SOUND} sesini çal"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": kara delik
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": kurşun kümesi
+            "'sound://category_space/Carina_SFX.mp3'": karina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": kraliçe takımyıldızı
+            "'sound://category_space/Crab_nebula_SFX.mp3'": yengeç bulutsusu
+            "'sound://category_space/Galactic_center_SFX.mp3'": galaktik merkez
+            "'sound://category_space/Launch_SFX.mp3'": fırlatma
+            "'sound://category_space/Lift_Off.mp3'": kalkış
+            "'sound://category_space/Pillars_SFX.mp3'": sütunlar
+            "'sound://category_space/Southern_ring_SFX.mp3'": güney halka bulutsusu
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": girdap galaksisi
       Poetry_setAuthor:
-        text: yazar ayarla {AUTHOR}
+        text: " {AUTHOR} yazarı ayarla"
       Poetry_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       Poetry_setBackgroundEffect:
@@ -1945,22 +2215,22 @@ tr:
             '"clouds"': Bulutlu
             '"confetti"': Konfeti
             '"darkCircles"': Solma
-            '"fadeColors"': Buzlu
+            '"fadeColors"': donmuş
             '"hearts"': kalpler
-            '"space"': Uzay
+            '"space"': hiper hız
             '"rain"': yağmur
-            '"ripples"': Dalgaları
-            '"colors"': Renkler
-            '"stars"': Yıldızlar
-            '"squiggles"': Karalamalar
+            '"ripples"': dalgalanan
+            '"colors"': değişiyor
+            '"stars"': yıldızlı
+            '"squiggles"': dalgalı
           PALETTE:
-            '"autumn"': Güz
+            '"autumn"': Sonbahar
             '"sunrise"': Şafak
             '"sunset"': Alacakaranlık
             '"grayscale"': Gri tonlama
             '"ocean"': okyanus
             '"rainbow"': gökkuşağı
-            '"roses"': Gül
+            '"roses"': Güller
             '"sky"': Gökyüzü
             '"spring"': Bahar
             '"summer"': Yaz
@@ -1968,18 +2238,18 @@ tr:
       Poetry_setBackgroundImageAs:
         text: arka planı {IMG} olarak ayarlayın
       Poetry_setFont:
-        text: yazı tipini ayarlar {FONT}
+        text: " {FONT} yazı tipini ayarlar"
         options:
           FONT:
             '"Arial"': Arial
-            '"Arial Black"': Arial Black
+            '"Arial Black"': Arial Siyah
             '"Courier"': Courier
             '"Cursive"': El yazısı
-            '"Impact"': Impact
+            '"Impact"': Etki
             '"Georgia"': Georgia
             '"Times"': Times
       Poetry_setFontColor:
-        text: metin rengini ayarlar {FILL}
+        text: " {FILL} metin rengini ayarlar"
       Poetry_setForegroundEffect:
         text: "{EFFECT} efekti yap"
         options:
@@ -1989,6 +2259,7 @@ tr:
             '"hearts"': kalpler
             '"emojis"': Mutlu Emojiler
             '"rain"': yağmur
+            '"starburst"': yıldız patlaması
             '"glass"': Parçalanan Cam
             '"twinkling"': Parıldama
       Poetry_setPrompt:
@@ -1998,19 +2269,30 @@ tr:
       Poetry_setSize:
         text: "{SPRITE} boyutunu {VAL} olarak ayarla"
       Poetry_setTextEffect:
-        text: metin efektini ayarla {EFFECT}
+        text: "{EFFECT} metin efektini ayarla "
         options:
           EFFECT:
             '"fade"': soldur
+            '"flyLeft"': soldan uç
+            '"flyRight"': sağdan uç
+            '"flyTop"': yukarıdan uç
+            '"flyBottom"': aşağıdan uç
             '"typewriter"': Daktilo
+      Poetry_setTitle:
+        text: " {TITLE} olarak başlığı ayarla"
       Poetry_showText:
         text: metni göster
       Poetry_startBehavior:
+        text: "{ANIMATION_NAME} hareketli nesnesi {BEHAVIOR} ile başlar"
         options:
           BEHAVIOR:
-            '"fluttering"': fluttering
+            '"fluttering"': çırpınma
             '"growing"': büyüme
             '"jittering"': kararsızlık
+            '"moving_north_and_looping"': kuzeye ilerleme
+            '"moving_south_and_looping"': güneye ilerleme
+            '"moving_east_and_looping"': doğuya ilerleme
+            '"moving_west_and_looping"': batıya ilerleme
             '"shrinking"': küçülme
             '"spinning_left"': sola dönme
             '"spinning_right"': sağa dönme
@@ -2018,20 +2300,31 @@ tr:
             '"wandering"': gezinme
             '"wobbling"': sallanma
       Poetry_stopBehavior:
+        text: "{ANIMATION_NAME} hareketli nesnesi {BEHAVIOR} ile durur"
         options:
           BEHAVIOR:
-            '"fluttering"': fluttering
+            '"fluttering"': çırpınma
             '"growing"': büyüme
             '"jittering"': kararsızlık
+            '"moving_north_and_looping"': kuzeye ilerleme
+            '"moving_south_and_looping"': güneye ilerleme
+            '"moving_east_and_looping"': doğuya ilerleme
+            '"moving_west_and_looping"': batıya ilerleme
             '"shrinking"': küçülme
             '"spinning_left"': sola dönme
             '"spinning_right"': sağa dönme
             '"swimming_left_and_right"': yüzme
             '"wandering"': gezinme
             '"wobbling"': sallanma
+            '"all"': "--tüm davranışlar--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: "{N} satırı gösterdiğinde"
         options:
           'N':
             '0': "???"
@@ -2059,55 +2352,110 @@ tr:
       RyanLab_turnRight:
         text: sağa dön
       SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} {TEXT} saniye için [SECONDS]de[2] saniye
+        text: hareketli nesne {SPRITE} {TEXT} 'i {SECONDS} saniye söyler
       Vector_createSpriteWith:
-        text: |-
-          sprite oluşturmak
-          yapmak{STATEMENT}
+        text: "{STATEMENT} ı yapmak için hareketli nesne oluştur"
       Vector_log:
         text: günlük mesajı {MESSAGE}
       Vector_positionCenter:
         text: merkez
       Vector_push:
-        text: set hızı {VECTOR}
+        text: hızı {VECTOR} olarak ayarla
       Vector_randomLocation:
         text: rastgele konum
       Vector_setColor:
         text: rengi {COLOR} olarak ayarlayın
       Vector_setSize:
-        text: set genişliği {WIDTH} yüksekliği {HEIGHT}
+        text: genişliği {WIDTH} yüksekliği {HEIGHT} olarak ayarla
       Vector_teleportTo:
-        text: "{POSITION} konumunu ayarla"
+        text: "{POSITION} olarak konumunu ayarla"
       Vector_vectorNorth:
-        text: kuzeye
+        text: kuzey
       Vector_where:
-        text: her sprite nerede {PROPERTY} bir {VALUE} yapmak{STATEMENT}
+        text: "{PROPERTY} daki her hareketli nesne {VALUE} kadar {STATEMENT} yapar"
         options:
           PROPERTY:
             "'shapeColor'": renk
       aalab_layoutSprites:
+        text: "{FORMAT}olarak canavarları yerleştir"
         options:
           FORMAT:
             '"grid"': ızgara
-            '"border"': kenarlık
-            '"row"': sınıf
+            '"border"': sınır
+            '"row"': satır
             '"random"': gelişigüzel
+      aalab_levelFailure:
+        text: öğrenci {STATE} tuşu {KEY} ile
+        options:
+          STATE:
+            '0': geçer
+            '3': başarısız olur
+      aalab_setSpeed:
+        text: canavar hızını {VAL} olarak ayarla
+      aalab_setupSim:
+        text: "{COUNT}canavarla Monster Town'ı kur"
       aalab_someGraduallyStartIntervention:
+        text: "{PORTION} canavar {RATE}  {BEHAVIOR}'ye başlar"
         options:
           PORTION:
             '1': tüm
-            '0.75': most
-            '0.5': half of
-            '0.25': few
+            '0.75': Çoğu
+            '0.5': yarısı
+            '0.25': bir kaç
+          RATE:
+            '"immediately"': hemen
+            '"quickly"': acele
+            '"gradually"': kademeli olarak
+            '"slowly"': yavaşça
+          BEHAVIOR:
+            '"wandering"': rastgele dolaşmak
+            '"congregating"': toplanma
+            '"quarantining"': hasta olduğunda karantinaya
+            '"avoiding"': sosyal mesafeli
+            '"none"': hala kalıyor
       aalab_someStartIntervention:
+        text: "{PORTION} canavarları {BEHAVIOR} yapmaya başlar"
         options:
           PORTION:
             '1': tüm
-            '0.75': most
-            '0.5': half of
-            '0.25': few
+            '0.75': Çoğu
+            '0.5': yarısı
+            '0.25': bir kaç
+          BEHAVIOR:
+            '"wandering"': rastgele dolaşmak
+            '"congregating"': toplanma
+            '"quarantining"': hasta olduğunda karantinaya
+            '"avoiding"': sosyal mesafeli
+            '"none"': hala kalıyor
       aalab_spriteSayChoices:
         text: "{SPRITE}, {SPEECH} der"
+        options:
+          SPEECH:
+            '"I have spoken."': Ben konuştum.
+            '"Bounty hunting is a complicated profession."': Ödül avı karmaşık bir meslektir.
+            '"I will initiate self-destruct."': Kendi kendini yok etmeyi başlatacağım.
+            '"This is the way."': Bu yol.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': İnsanlar farklı yaratılmıştır. Anlamamıza gerek yok, sadece saygı duymamız gerekiyor.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': İyi görünmek için aynaya ihtiyacın yok. İçeride çok güzelsin.
+            '"Sometimes life is scary and dark. That is why we must find the light."': Bazen hayat korkutucu ve karanlıktır. Bu yüzden ışığı bulmalıyız.
+            '"Everything small is just a smaller version of something big."': Küçük olan her şey büyük bir şeyin daha küçük bir versiyonudur.
+            '"Suckin’ at something is the first step to being sorta good at something."': Bir şeyi emmek, bir şeyde iyi olmanın ilk adımıdır.
+            '"Life happens wherever you are, whether you make it or not."': Hayat sen nerede olursan ol, başarsan da başaramasan da akıp gidiyor.
+            '"You can’t knock me down!"': Beni yere seremezsin!
+            '"Roar!"': Kükreme!
+            '"My first girlfriend turned into the moon."': İlk kız arkadaşım aya dönüştü.
+            '"True humility is the only antidote to shame."': Gerçek tevazu, utancın tek panzehiridir.
+            '"You are stronger and wiser and freer than you have ever been."': Hiç olmadığı kadar güçlü, daha akıllı ve özgürsün.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': Her seferinde denemelisin. Bırakamazsın çünkü başarısız olabileceğinden korkuyorsun.
+      aalab_startIntervention:
+        text: canavarlar {BEHAVIOR} yapmaya başlar
+        options:
+          BEHAVIOR:
+            wandering: rastgele dolaşmak
+            '"congregating"': toplanma
+            '"quarantining"': hasta olduğunda karantinaya
+            '"avoiding"': sosyal mesafeli
+            '"none"': hala kalıyor
       binary_drawBin:
         text: ikili {BIN} çizmek
       binary_drawBinScreen:
@@ -2122,23 +2470,24 @@ tr:
           {B7}
           {B8}
       binary_drawDec:
-        text: ondalık {DEC} çizmek
+        text: "{DEC} ondalığını çiz"
       binary_drawPixelHere:
-        text: piksel ayarla {VAL}
+        text: pikseli {VAL} olarak ayarla
         options:
           VAL:
             '0': kapalı
-            '1': üzerinde
+            '1': Açık
+            '"toggle"': geçiş
       binary_drawString:
-        text: dizge {STR} çizmek
+        text: " {STR} dizgesini çiz"
       binary_goTo:
         text: "{LOC}'e atla"
       binary_goToHome:
         text: Sol üst tarafa atla
       binary_gridSize:
-        text: set ızgara boyutu {SIZE}
+        text: ızgara boyutunu {SIZE} olarak ayarla
       binary_move:
-        text: hareket {DIR}
+        text: "{DIR} hareket et"
         options:
           DIR:
             '"up"': yukarı
@@ -2157,6 +2506,7 @@ tr:
             '"a"': a
             '"w"': w
             '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           eğer yol {DIR}
@@ -2164,20 +2514,20 @@ tr:
         options:
           DIR:
             "'ahead'": ileri
-            "'right'": sağa giderse
-            "'left'": sola giderse
+            "'right'": sağa doğru
+            "'left'": sola doğru
       craft_ifStandingOn:
         text: |-
           eğer altındaki blok {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": mavi mercan ise
-            "'redCoralBlock'": kırmızı mercan ise
+            "'blueCoralBlock'": mavi mercan
+            "'redCoralBlock'": kırmızı mercan
             "'sand'": kum
-            "'wool_blue'": derin su ise
+            "'wool_blue'": derin su
             "'planksOak'": meşe kalaslar
-            "'seaLantern'": deniz ışığı ise
+            "'seaLantern'": deniz feneri
       craft_ifStandingOnLimit:
         text: |-
           eğer altındaki blok {TYPE}
@@ -2185,8 +2535,8 @@ tr:
         options:
           TYPE:
             "'sand'": kum
-            "'darkPrismarine'": koyu prizmarin ise
-            "'seaLantern'": deniz ışığı ise
+            "'darkPrismarine'": koyu prizmarin
+            "'seaLantern'": deniz feneri
       craft_log:
         text: günlük mesajı {MESSAGE}
       craft_moveForward:
@@ -2212,12 +2562,13 @@ tr:
             '"readDeadCoralBlock"': kırmızı ölü mercan blok
             '"yellowDeadCoralBlock"': sarı ölü mercan blok
             '"prismarine"': prizmarin
-            '"darkPrismarine"': koyu prizmarin ise
-            '"seaLantern"': deniz ışığı ise
-            '"packedIce"': sıkıştırılmış buz
+            '"darkPrismarine"': koyu prizmarin
+            '"seaLantern"': deniz feneri
+            '"packedIce"': paketli buz
             '"blueIce"': mavi buz
             '"blackConcrete"': siyah beton
-            '"seaGrass"': deniz çayırı
+            '"seaGrass"': deniz otu
+            '"kelp"': yosun
             '"polishedGranite"': cilalı granit
       craft_placePrismarine:
         text: prizmarini yerleştir
@@ -2235,7 +2586,7 @@ tr:
         text: 'oluştur: {ENTITY}'
         options:
           ENTITY:
-            '"cod"': morina
+            '"cod"': morina balığı
             '"dolphin"': yunus
             '"salmon"': somon
             '"seaTurtle"': deniz kaplumbağası
@@ -2247,5 +2598,25 @@ tr:
           DIR:
             right: sağa ↻
             left: sola ↺
+      storylab_clearHeadings:
+        text: başlıkları temizle
+      storylab_setForegroundEffect2:
+        text: "{EFFECT} efekti yap"
+        options:
+          EFFECT:
+            '"bubbles"': Baloncuklar
+            '"confetti"': Konfeti
+            '"hearts"': kalpler
+            '"rain"': yağmur
+            '"starburst"': yıldız patlaması
+            '"twinkling"': Parıldama
+      storylab_setHeading:
+        text: "{HEADING} başlığını ayarlayın"
+      storylab_setPromptWithChoice:
+        text: kullanıcıya {QUESTION} sorusunu {VAR} değişkeni için {A} seçeneğiyle sor
+      storylab_setSubheading:
+        text: "{SUBHEADING} alt başlığını ayarlayın"
       validation_validatedBackground:
         text: arka planı {IMG} olarak ayarlayın
+      validation_validatedSound:
+        text: " {SOUND} Sesini çal"

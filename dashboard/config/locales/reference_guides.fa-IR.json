@@ -3,7 +3,7 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
-          "display_name": "",
+          "display_name": "رویدادهای شتاب سنج",
           "content": ""
         },
         "csd-2022/accuracy-in-ai-lab": {
@@ -34,7 +34,7 @@
           "content": ""
         },
         "csd-2022/board-events": {
-          "display_name": "",
+          "display_name": "رویدادهای بورد",
           "content": ""
         },
         "csd-2022/body-styling": {
@@ -74,7 +74,7 @@
           "content": ""
         },
         "csd-2022/collision-detection": {
-          "display_name": "",
+          "display_name": "تشخیص تصادم",
           "content": ""
         },
         "csd-2022/color-lights": {
@@ -102,6 +102,10 @@
           "content": ""
         },
         "csd-2022/data-and-change-events": {
+          "display_name": "",
+          "content": ""
+        },
+        "csd-2022/debugging-html": {
           "display_name": "",
           "content": ""
         },
@@ -230,7 +234,7 @@
           "content": ""
         },
         "csd-2022/maker-toolkit": {
-          "display_name": "",
+          "display_name": "جعبه ابزار Maker",
           "content": ""
         },
         "csd-2022/maker-toolkit-overview": {
@@ -282,7 +286,7 @@
           "content": ""
         },
         "csd-2022/playing-notes": {
-          "display_name": "",
+          "display_name": "نکات بازی",
           "content": ""
         },
         "csd-2022/producing-output": {
@@ -322,7 +326,7 @@
           "content": ""
         },
         "csd-2022/sprite-properties": {
-          "display_name": "",
+          "display_name": "ویژگی‌های اسپرایت",
           "content": ""
         },
         "csd-2022/sprites": {
@@ -394,7 +398,11 @@
           "content": ""
         },
         "csd-2022/velocity-and-the-counter-pattern": {
-          "display_name": "",
+          "display_name": "الگوی شمارشگر و سرعت",
+          "content": ""
+        },
+        "csd-2022/web-lab": {
+          "display_name": "آزمایشگاه شبکه",
           "content": ""
         },
         "csd-2022/when-to-make-a-function": {

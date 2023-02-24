@@ -3,101 +3,161 @@ import {
   track,
   Identify,
   identify,
-  setUserId,
-  setSessionId
+  setSessionId,
+  flush
 } from '@amplitude/analytics-browser';
 import {BlockTypes} from '@cdo/apps/music/blockly/blockTypes';
+import {FIELD_SOUNDS_NAME} from '../blockly/constants';
 
-const API_KEY = '12345';
+const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
+/**
+ * An analytics reporter specifically used for the Music Lab prototype, which logs analytics
+ * to Amplitude. For the more general Amplitude Analytics Reporter used across the application
+ * outside of Music Lab, check {@link apps/src/lib/util/AnalyticsReporter}.
+ */
 export default class AnalyticsReporter {
   constructor() {
-    // TODO: API Key
-    init(API_KEY);
+    this.sessionInProgress = false;
+
+    this.identifyObj = new Identify();
     this.sessionStartTime = null;
     this.maxInstructionsSeen = 1;
     this.currentInstructionsPage = 1;
-    this.blockStats = {};
+    this.soundsUsed = new Set();
+    this.blockStats = {
+      endingBlockCount: 0,
+      endingTriggerBlockCount: 0,
+      endingTriggerBlocksWithCode: 0,
+      maxBlockCount: 0,
+      maxTriggerBlockCount: 0,
+      maxTriggerBlocksWithCode: 0
+    };
+  }
+
+  async startSession() {
+    // Capture start time before making init call
+    this.sessionStartTime = Date.now();
+
+    await this.initialize();
+    setSessionId(this.sessionStartTime);
+
+    this.log(`Session start. Session ID: ${this.sessionStartTime}`);
+    this.sessionInProgress = true;
+  }
+
+  async initialize() {
+    const response = await fetch(API_KEY_ENDPOINT);
+    const responseJson = await response.json();
+    return init(responseJson.key, undefined, {minIdLength: 1}).promise;
   }
 
   setUserProperties(userId, userType, signInState) {
-    const identifyObj = new Identify();
-    setUserId(userId || 'none');
-    identifyObj.set('userType', userType);
-    identifyObj.set('signInState', signInState);
+    if (!this.sessionInProgress) {
+      this.log('No session in progress');
+      return;
+    }
+
+    // Temporarily disabled, pending user privacy compliance discussions.
+    // if (userId) {
+    //   setUserId(hashString(userId));
+    // }
+
+    this.identifyObj.set('userType', userType);
+    this.identifyObj.set('signInState', signInState);
 
     this.log(
       `User properties: userId: ${userId}, userType: ${userType}, signInState: ${signInState}`
     );
-    identify(identifyObj);
   }
 
-  onButtonClicked(buttonName) {
-    track('Button clicked', {buttonName});
-    this.log(`Button clicked. Payload: ${JSON.stringify({buttonName})}`);
+  onButtonClicked(buttonName, properties) {
+    if (!this.sessionInProgress) {
+      this.log('No session in progress');
+      return;
+    }
+
+    this.log(
+      `Button clicked. Payload: ${JSON.stringify({buttonName, ...properties})}`
+    );
+    track('Button clicked', {buttonName, ...properties}).promise;
   }
 
   onInstructionsVisited(page) {
+    if (!this.sessionInProgress) {
+      this.log('No session in progress');
+      return;
+    }
+
     this.currentInstructionsPage = page;
     this.maxInstructionsSeen = Math.max(this.maxInstructionsSeen, page);
   }
 
   onBlocksUpdated(blocks) {
+    if (!this.sessionInProgress) {
+      this.log('No session in progress');
+      return;
+    }
+
     const totalBlockCount = blocks.length;
     let triggerBlocksCount = 0;
     let triggerBlocksWithCode = 0;
-    const soundsUsed = [];
     blocks.forEach(block => {
-      if (block.type === BlockTypes.TRIGGERED_AT) {
+      if (
+        [
+          BlockTypes.TRIGGERED_AT,
+          BlockTypes.TRIGGERED_AT_SIMPLE,
+          BlockTypes.TRIGGERED_AT_SIMPLE2,
+          BlockTypes.NEW_TRACK_ON_TRIGGER
+        ].includes(block.type)
+      ) {
         triggerBlocksCount++;
         if (block.getChildren().length > 0) {
           triggerBlocksWithCode++;
         }
       }
 
-      if (
-        block.type === BlockTypes.PLAY_SOUND ||
-        block.type === BlockTypes.PLAY_SAMPLE
-      ) {
-        // Name of the sound is the third input
-        soundsUsed.push(
-          block
-            .getInput('sound')
-            .getFieldRow()[2]
-            .getValue()
-        );
+      if (block.getField(FIELD_SOUNDS_NAME)) {
+        this.soundsUsed.add(block.getFieldValue(FIELD_SOUNDS_NAME));
       }
     });
 
     this.blockStats = {
-      totalBlockCount,
-      triggerBlocksCount,
-      triggerBlocksWithCode,
-      soundsUsed
+      endingBlockCount: totalBlockCount,
+      endingTriggerBlockCount: triggerBlocksCount,
+      endingTriggerBlocksWithCode: triggerBlocksWithCode,
+      maxBlockCount: Math.max(this.blockStats.maxBlockCount, totalBlockCount),
+      maxTriggerBlockCount: Math.max(
+        this.blockStats.maxTriggerBlockCount,
+        triggerBlocksCount
+      ),
+      maxTriggerBlocksWithCode: Math.max(
+        this.blockStats.maxTriggerBlocksWithCode,
+        triggerBlocksWithCode
+      )
     };
   }
 
-  onSessionStart() {
-    this.sessionStartTime = Date.now();
-    setSessionId(this.sessionStartTime);
-
-    this.log(`Session start. Session ID: ${this.sessionStartTime}`);
-  }
-
-  onSessionEnd() {
-    if (this.sessionStartTime === null) {
+  endSession() {
+    if (!this.sessionInProgress) {
+      this.log('No session in progress');
       return;
     }
     const duration = Date.now() - this.sessionStartTime;
-    // report duration event, and instructions seen events
     this.sessionStartTime = null;
+    this.sessionInProgress = false;
+
+    identify(this.identifyObj);
+
     const payload = {
       durationSeconds: duration / 1000,
       mostInstructionsVisited: this.maxInstructionsSeen,
       lastInstructionsVisited: this.currentInstructionsPage,
+      soundsUsed: Array.from(this.soundsUsed),
       blockStats: this.blockStats
     };
     track('Session end', payload);
+    flush();
     this.log(`Session end. Payload: ${JSON.stringify(payload)}`);
   }
 

@@ -125,8 +125,11 @@ $(document).ready(function() {
       $('#hoc-entire-school').show();
       $('#continue-btn').hide();
       $('#submit-btn').show();
-    } else if ($('#hoc-event-type').val() === 'out_of_school') {
-      // out of school, either US or non-US
+    } else if (
+      ['out_of_school', 'after_school'].includes($('#hoc-event-type').val())
+    ) {
+      // out of school (Organization/Company) and after school (After School Program),
+      // either US or non-US, require the same fields
       $('#school-autocomplete').hide();
       $('#organization-name-field').show();
       $('#hoc-event-location-field').show();
@@ -241,7 +244,7 @@ function validateFields() {
     $('#event-type-error').hide();
   }
 
-  if ($('#hoc-event-type').val() === 'out_of_school') {
+  if (['out_of_school', 'after_school'].includes($('#hoc-event-type').val())) {
     if ($('#organization-name').val() === '') {
       $('#organization-name-error').show();
       return false;

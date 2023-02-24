@@ -1094,6 +1094,17 @@ ru-RU:
         - {}
       CSD U3 combining rep:
         content1: пояснение
+        markdown: |+
+          ### Сможете декодировать эту двоичную строку?
+
+
+
+          # 1000011
+
+
+
+          ### Какая информация нужна, чтобы помочь вам ее декодировать?
+
       CSD U3 combining rep_2018:
         content1: пояснение
       CSD U3 combining rep_2018_2019:
@@ -1146,6 +1157,16 @@ ru-RU:
         content1: пояснение
       CSD U5 L13 SFLP Interpreting Data:
         content1: пояснение
+        markdown: |
+          # Обзор
+
+          Углубитесь в интерпретацию данных, изучив взаимосвязи между двумя различными типами данных. Посмотрите, как поиск взаимосвязей может помочь решать проблемы.
+
+          ## Ресурсы
+
+          * [Интерпретация Данных](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Руководство к Действию
+          * [Интерпретация Данных](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Ресурсы
+        teacher_markdown: "* Интерпретация Данных - Экземпляр ([PDF](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))\n"
       CSD U5 crosstab warmup:
         content1: пояснение
       CSD U5 crosstab warmup_2018:
@@ -2795,29 +2816,26 @@ ru-RU:
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - text: Скрат доберется до желудя. В коде нет ошибок.
-          feedback: Неправильно. Сначала Скрат поворачивается не в ту сторону, затем
-            Скрат не продвигается вперед достаточное количество раз, чтобы добраться
-            до желудя.
-        - text: Скрат не доберется до желудя, потому что он повернулся не в ту сторону.
+          feedback: Неправильно. Сначала Скрат повернется не в ту сторону, затем Скрат
+            не продвинется вперед достаточное количество раз, чтобы добраться до желудя.
+        - text: Скрат не доберется до желудя, потому что он повернется не в ту сторону.
           correct: true
-          feedback: Правильно. Сначала Скрат поворачивается не в ту сторону, затем
-            Скрат не продвигается вперед достаточное количество раз, чтобы добраться
-            до желудя.
-        - text: Скрат не доберется до желудя, потому что не хватает блоков «двигаться
-            вперед».
+          feedback: Правильно. Сначала Скрат повернется не в ту сторону, затем Скрат
+            не продвинется вперед достаточное количество раз, чтобы добраться до желудя.
+        - text: Скрат не доберется до желудя, потому что в коде не хватает блоков
+            `двигаться вперед`.
           correct: true
-          feedback: Правильно. Сначала Скрат поворачивается не в ту сторону, затем
-            Скрат не продвигается вперед достаточное количество раз, чтобы добраться
-            до желудя.
+          feedback: Правильно. Сначала Скрат повернется не в ту сторону, затем Скрат
+            не продвинется вперед достаточное количество раз, чтобы добраться до желудя.
         - text: 'Не знаю.
 
 '
-          feedback: В этом коде есть две ошибки. Сначала Скрат поворачивается не в
-            ту сторону, затем Скрат не продвигается вперед достаточное количество
-            раз, чтобы добраться до желудя.
+          feedback: В этом коде есть две ошибки. Сначала Скрат повернется не в ту
+            сторону, затем Скрат не продвинется вперед достаточное количество раз,
+            чтобы добраться до желудя.
         questions:
-        - text: Найдите ошибки в этом коде. Доберется ли Скрат до желудя или здесь
-            имеется проблема?
+        - text: Найдите и устраните ошибки в этом коде, если они есть. Доберется ли
+            Скрат до желудя или с этим будет проблема?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: В итоге птичка не дойдет до свинки на один шаг.
@@ -5959,6 +5977,7 @@ ru-RU:
           ## Ресурсы
 
           * [Алюминиевые лодки](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        title: Опрос студентов перед курсом Открытия в Информатике
       csf_be_a_super_digital_citizen:
         content1: пояснение
         markdown: |
@@ -6524,18 +6543,83 @@ ru-RU:
         content1: 'Тестирование страницы учебника по Markdown
 
 '
+        markdown: |+
+          # Примеры Проектов
+
+          Скоро вы начнете делать свой итоговый проект. Прежде чем начать, потратьте некоторое время на изучение примеров проектов.
+
+
+          | Случайная Скорость при Отскоке (Баскетбол) | Размножающиеся Штурмовики (Звездные Войны) |
+          |---|---|
+          | [![Случайная Скорость при Отскоке (Баскетбол)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Случайная Скорость при Отскоке (Баскетбол)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Размножающиеся Штурмовики (Звездные Войны)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Размножающиеся Штурмовики (Звездные Войны)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | Мяч меняет скорость, когда он отскакивает! | Сторонитесь штурмовиков, иначе они размножатся! |
+
+
+          | Паника! на Дискотеке (Танцевальная Вечеринка) | Пляжная Сцена (Художник) |
+          |---|---|
+          | [![Узор (Художник)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Узор (Художник)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Цветы-снежинки (Мороз)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Цветы-снежинки (Мороз)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Ваши подтанцовщики продолжают менять свои движения! | Попробуйте добавить больше цвета и фона к этой сцене! |
+
       courseE_project_exemplars_2019_2020:
         content1: 'Тестирование страницы учебника по Markdown
 
 '
+        markdown: |
+          # Примеры Проектов
+
+          Скоро вы начнете делать свой итоговый проект. Прежде чем начать, потратьте некоторое время на изучение примеров проектов.
+
+          ## Спрайт Лаб
+
+          | Танец чудовища (Спрайт Лаб) | Кекс Игра (Спрайт Лаб) |
+          |---|---|
+          | [![Танец чудовища (Спрайт Лаб)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Танец чудовища (Спрайт Лаб)")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Кекс Игра (Спрайт Лаб)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Кекс Игра (Спрайт Лаб)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Попробуйте добавить в этой игре текст или счет! | Попробуйте добавить в этой игре текст или счет! |
+
+          ## Художник
+
+          | Узор (Художник) | Цветы-снежинки (Мороз) |
+          |---|---|
+          | [![Узор (Художник)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Узор (Художник)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Цветы-снежинки (Мороз)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Цветы-снежинки (Мороз)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Используйте творчески вложенные циклы! | Используйте творчески функции! |
       courseExpress_project_exemplars_2019_2020:
         content1: 'Тестирование страницы учебника по Markdown
 
 '
+        markdown: |+
+          # Примеры проектов
+
+          Скоро вы начнете делать свой итоговый проект. Прежде чем начать, потратьте некоторое время на изучение примеров проектов.
+
+          | Паника! на дискотеке (Танцевальная Вечеринка) | Пляжная сцена (Художник) |
+          |---|---|
+          | [![Узор (Художник)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Узор (Художник)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Цветы-снежинки (Мороз)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Цветы-снежинки (Мороз)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Посмотрите дискотеку, когда ваша подтанцовка участвует в ней! | Добавьте больше цвета и фона к этой сцене! |
+
+          | Цветы-снежинки (Мороз) | Аэроплан Игра (Спрайт Лаб) |
+          |---|---|
+          | [![Цветы-снежинки (Мороз)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Цветы-снежинки (Мороз)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Аэроплан Игра (Спрайт Лаб)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Аэроплан Игра (Спрайт Лаб)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Подойдите творчески к функциям! | Добавьте текст или счет в эту игру! |
+
       courseF_project_exemplars_2019_2020:
         content1: 'Тестирование страницы учебника по Markdown
 
 '
+        markdown: "# Примеры Проектов\n\nСкоро вы начнете делать свой итоговый проект.
+          Прежде чем начать, потратьте некоторое время на изучение примеров проектов.\n\n##
+          Спрайт Лаб\n\n| Кекс Игра (Спрайт Лаб) | \tСамолет Игра (Спрайт Лаб) |\n|---|---|\n|
+          [![Кекс Игра (Спрайт Лаб)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Кекс Игра (Спрайт Лаб)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          | [![Самолет Игра (Спрайт Лаб)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
+          \"Самолет Игра (Спрайт Лаб)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          |\n| Попробуйте добавить текст или счет в эту игру! | Попробуйте добавить
+          текст или счет в эту игру! |\n\n## Художник\n\n| Цветы (Художник) | Спираль
+          (Художник) |\n|---|---|\n| [![Цветы (Художник)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
+          \"Цветы (Художник)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          | [![Спираль (Художник)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
+          \"Спираль (Художник)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |\n| Подойдите творчески к переменным! | Подойдите творчески к Циклам
+          For! |\n\n"
       Unit 1 Lesson 1 Overview:
         markdown: |
           Класс разбивается на группы, чтобы проектировать лодки из алюминиевой фольги, которые должны выдержать как можно больше копеек. В конце урока группы размышляют над своим опытом в этой деятельности и устанавливают связи с типами решения проблем, с которыми он будут сталкиваться до конца курса.
@@ -10582,25 +10666,27 @@ ru-RU:
         display_name: Свойства спрайтов
       PowerOfWords-Unplugged_2020:
         markdown: |-
-          # Сила слов
+          # Сила Слов
 
-          ## Что тебе следует сделать, когда кто-то использует грубые или оскорбительные слова в Интернете?
+          ## Что вам следует сделать, когда кто-то использует грубые или оскорбительные слова в Интернете?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |
-          # Конфиденциальная и персональная информация
+          # Частная и Персональная Информация
 
           ## Какой информацией о себе можно делиться в Интернете?
       courseD_EOC_2020:
-        description: Ты закончил последний урок курса D! Выбери проект для создания.
-        display_name: Конец проекта курса
+        description: Вы закончили последний урок курса D! Выберите проект для создания.
+        display_name: Завершение Курсового Проекта
       courseE_EOC_2020:
-        description: Ты завершил курс E! Выбери проект для создания.
-        display_name: Конец проекта курса
+        description: Вы завершили курс E! Выберите проект для создания.
+        display_name: Завершение Курсового Проекта
       courseExpress_EOC_2020:
-        display_name: Конец проекта курса
+        display_name: Завершение Курсового Проекта
+        description: Вы дошли до последнего урока Экспресс-Курса! Выберите проект
+          для создания.
       courseF_EOC_2020:
-        description: Ты завершил курс F! Выбери проект для создания.
-        display_name: Конец проекта курса
+        description: Вы завершили курс F! Выберите проект для создания.
+        display_name: Завершение Курсового Проекта
       csf_digital_trails:
         markdown: |
           # Идите по Цифровому следу
@@ -11415,7 +11501,10 @@ ru-RU:
         - {}
         - {}
         questions:
-        - {}
+        - text: В классе был проведен опрос для выяснения того, куда классу отправиться
+            в путешествие. Теперь нужно составить диаграмму, чтобы увидеть, насколько
+            популярным был каждый выбор. Нужно ли студентам внести какие-либо изменения
+            в данные перед созданием диаграммы?
       CSD U5 test crosstab multi:
         answers:
         - text: собака
@@ -11565,22 +11654,32 @@ ru-RU:
         title: Сделай прогноз
       CSD U6 test algorithms multi2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: обработчик событий
+        - text: циклы for и массивы
+          correct: true
+        - text: функции с параметрами
+        - text: getters/getProperty
+          correct: true
+        - text: аналого-цифровое преобразование
         questions:
-        - {}
+        - text: Классу нужно создать программу, которая каждому студенту будет показывать
+            на экране "Доброе утро". Например, “Доброе утро, Дуэйн!”, “Доброе утро,
+            Мари!”. Какие ДВА инструмента программирования будут наиболее полезны
+            при написании этой программы?
       CSD U6 test algorithms multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: обработчик событий
+        - text: циклы for и массивы
+          correct: true
+        - text: функции с параметрами
+        - text: getters/getProperty
+          correct: true
+        - text: аналого-цифровое преобразование
         questions:
-        - {}
+        - text: Классу нужно создать программу, которая каждому студенту будет показывать
+            на экране "Доброе утро". Например, “Доброе утро, Дуэйн!”, “Доброе утро,
+            Мари!”. Какие ДВА инструмента программирования будут наиболее полезны
+            при написании этой программы?
       CSD U6 test debugging multi:
         answers:
         - correct: true
@@ -12133,7 +12232,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 'Я думаю, что информатика - это интересно. '
       csd-post-survey-2017-q13_2018:
         answers:
         - correct: true
@@ -12166,7 +12265,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо разбираться в информатике.
       csd-post-survey-2017-q17_2018:
         answers:
         - correct: true
@@ -12177,7 +12276,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Такие, как я, занимаются информатикой.
       csd-post-survey-2017-q18_2018:
         answers:
         - correct: true
@@ -12188,7 +12287,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что однажды я стану специалистом по информатике.
       csd-post-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -12199,7 +12298,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я очень хорошо учусь в школе.
       csd-post-survey-2017-q22_2018:
         answers:
         - correct: true
@@ -12265,7 +12364,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Информатика важна для моего будущего.
       csd-post-survey-2017-q2_2018:
         answers:
         - correct: true
@@ -12276,7 +12375,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Когда я сталкиваюсь с задачей, на которую нет очевидного ответа, я
+            всегда могу найти какой-то способ ее решения.
       csd-post-survey-2017-q30_2018:
         answers:
         - correct: true
@@ -12287,7 +12387,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я ожидаю, что буду использовать информатику в своей работе.
       csd-post-survey-2017-q3_2018:
         answers:
         - correct: true
@@ -12298,7 +12398,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что моя школьная работа интересна.
       csd-post-survey-2017-q4_2018:
         answers:
         - correct: true
@@ -12309,7 +12409,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо выполнять свою школьную работу.
       csd-post-survey-2017-q6_2018:
         answers:
         - correct: true
@@ -12320,7 +12420,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Таким как я, трудно быть принятым в моей школе.
       csd-post-survey-2017-q8_2018:
         answers:
         - correct: true
@@ -12331,7 +12431,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Ко мне относятся с таким же уважением, как и к другим студентам в
+            моей школе.
       csd-post-survey-2017-q9_2018:
         answers:
         - correct: true
@@ -12342,7 +12443,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я действительно могу быть в школе самим собой.
       csd-post-survey-2018-U1-I-learned:
         answers:
         - correct: true
@@ -12355,10 +12456,12 @@ ru-RU:
       csd-post-survey-2018-U1-I-liked:
         answers:
         - correct: true
+        - text: Не все
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
         - correct: true
         questions:
         - {}
@@ -12374,10 +12477,12 @@ ru-RU:
       csd-post-survey-2018-U2-I-liked:
         answers:
         - correct: true
+        - text: Не все
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
         - correct: true
         questions:
         - {}
@@ -12393,10 +12498,12 @@ ru-RU:
       csd-post-survey-2018-U3-I-liked:
         answers:
         - correct: true
+        - text: Не все
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
         - correct: true
         questions:
         - {}
@@ -12412,10 +12519,12 @@ ru-RU:
       csd-post-survey-2018-U4-I-liked:
         answers:
         - correct: true
+        - text: Не все
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
         - correct: true
         questions:
         - {}
@@ -12431,10 +12540,12 @@ ru-RU:
       csd-post-survey-2018-U5-I-liked:
         answers:
         - correct: true
+        - text: Не все
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
         - correct: true
         questions:
         - {}
@@ -12450,10 +12561,12 @@ ru-RU:
       csd-post-survey-2018-U6-I-liked:
         answers:
         - correct: true
+        - text: Не все
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
         - correct: true
         questions:
         - {}
@@ -15265,7 +15378,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я очень хорошо учусь в школе.
       csp-post-survey-2017-q10_2018:
         answers:
         - correct: true
@@ -15287,7 +15400,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 'Я думаю, что информатика - это интересно. '
       csp-post-survey-2017-q12_2018:
         answers:
         - correct: true
@@ -15298,7 +15411,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 'У меня есть способность изучать информатику. '
       csp-post-survey-2017-q13:
         answers:
         - correct: true
@@ -15353,7 +15466,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо разбираться в информатике.
       csp-post-survey-2017-q17:
         answers:
         - correct: true
@@ -15364,7 +15477,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Такие, как я, занимаются информатикой.
       csp-post-survey-2017-q17_2018:
         answers:
         - correct: true
@@ -15375,7 +15488,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Такие, как я, занимаются информатикой.
       csp-post-survey-2017-q18:
         answers:
         - correct: true
@@ -15386,7 +15499,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что однажды я стану специалистом по информатике.
       csp-post-survey-2017-q18_2018:
         answers:
         - correct: true
@@ -15397,7 +15510,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что однажды я стану специалистом по информатике.
       csp-post-survey-2017-q19_2018:
         answers:
         - correct: true
@@ -15419,7 +15532,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я очень хорошо учусь в школе.
       csp-post-survey-2017-q2:
         answers:
         - correct: true
@@ -15430,7 +15543,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Когда я сталкиваюсь с задачей, на которую нет очевидного ответа, я
+            всегда могу найти какой-то способ ее решения.
       csp-post-survey-2017-q20_2018:
         answers:
         - correct: true
@@ -15562,7 +15676,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Информатика важна для моего будущего.
       csp-post-survey-2017-q29_2018:
         answers:
         - correct: true
@@ -15573,7 +15687,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Информатика важна для моего будущего.
       csp-post-survey-2017-q3:
         answers:
         - correct: true
@@ -15584,7 +15698,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что моя школьная работа интересна.
       csp-post-survey-2017-q30:
         answers:
         - correct: true
@@ -15595,7 +15709,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я ожидаю, что буду использовать информатику в своей работе.
       csp-post-survey-2017-q33_2018:
         answers:
         - correct: true
@@ -15609,9 +15723,12 @@ ru-RU:
         - {}
       csp-post-survey-2017-q36-a_2018:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
+        - text: Немного
+          correct: true
+        - text: Не все
+          correct: true
         questions:
         - {}
       csp-post-survey-2017-q4:
@@ -15624,7 +15741,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо выполнять свою школьную работу.
       csp-post-survey-2017-q4_2018:
         answers:
         - correct: true
@@ -15635,7 +15752,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо выполнять свою школьную работу.
       csp-post-survey-2017-q6:
         answers:
         - correct: true
@@ -15646,7 +15763,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Таким как я, трудно быть принятым в моей школе.
       csp-post-survey-2017-q8:
         answers:
         - correct: true
@@ -15657,7 +15774,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Ко мне относятся с таким же уважением, как и к другим студентам в
+            моей школе.
       csp-post-survey-2017-q9:
         answers:
         - correct: true
@@ -15668,7 +15786,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я действительно могу быть в школе самим собой.
       csp-post-survey-2018-topics-preamble:
         content1: пояснение
       csp-post-survey-2018-unit-feedback-preamble:
@@ -15707,7 +15825,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я очень хорошо учусь в школе.
       csp-pre-survey-2017-q10:
         answers:
         - correct: true
@@ -15762,7 +15880,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 'Я думаю, что информатика - это интересно. '
       csp-pre-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -15773,7 +15891,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 'Я думаю, что информатика - это интересно. '
       csp-pre-survey-2017-q12:
         answers:
         - correct: true
@@ -15784,7 +15902,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 'У меня есть способность изучать информатику. '
       csp-pre-survey-2017-q12_2018:
         answers:
         - correct: true
@@ -15795,7 +15913,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: 'У меня есть способность изучать информатику. '
       csp-pre-survey-2017-q13:
         answers:
         - correct: true
@@ -15806,7 +15924,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что буду лучше разбираться в информатике, чем другие студенты
+            в моей школе.
       csp-pre-survey-2017-q13_2018:
         answers:
         - correct: true
@@ -15817,7 +15936,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что буду лучше разбираться в информатике, чем другие студенты
+            в моей школе.
       csp-pre-survey-2017-q13_2021:
         answers:
         - correct: true
@@ -15828,7 +15948,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что буду лучше разбираться в информатике, чем другие студенты
+            в моей школе.
       csp-pre-survey-2017-q13_2022:
         answers:
         - correct: true
@@ -15839,7 +15960,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что буду лучше разбираться в информатике, чем другие студенты
+            в моей школе.
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -15850,7 +15972,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Когда я сталкиваюсь с проблемой в информатике, у которой нет очевидного
+            ответа, я всегда могу найти какой-нибудь способ ее решения.
       csp-pre-survey-2017-q14_2018:
         answers:
         - correct: true
@@ -15861,7 +15984,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Когда я сталкиваюсь с проблемой в информатике, у которой нет очевидного
+            ответа, я всегда могу найти какой-нибудь способ ее решения.
       csp-pre-survey-2017-q16:
         answers:
         - correct: true
@@ -15872,7 +15996,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо разбираться в информатике.
       csp-pre-survey-2017-q16_2018:
         answers:
         - correct: true
@@ -15883,7 +16007,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо разбираться в информатике.
       csp-pre-survey-2017-q16_2021:
         answers:
         - correct: true
@@ -15894,7 +16018,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо разбираться в информатике.
       csp-pre-survey-2017-q16_2022:
         answers:
         - correct: true
@@ -15905,7 +16029,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо разбираться в информатике.
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -15916,7 +16040,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Такие, как я, занимаются информатикой.
       csp-pre-survey-2017-q17_2018:
         answers:
         - correct: true
@@ -15927,7 +16051,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Такие, как я, занимаются информатикой.
       csp-pre-survey-2017-q17_2021:
         answers:
         - correct: true
@@ -15938,7 +16062,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Такие, как я, занимаются информатикой.
       csp-pre-survey-2017-q17_2022:
         answers:
         - correct: true
@@ -15949,7 +16073,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Такие, как я, занимаются информатикой.
       csp-pre-survey-2017-q18:
         answers:
         - correct: true
@@ -15960,7 +16084,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что однажды я стану специалистом по информатике.
       csp-pre-survey-2017-q18_2018:
         answers:
         - correct: true
@@ -15971,7 +16095,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что однажды я стану специалистом по информатике.
       csp-pre-survey-2017-q19:
         answers:
         - correct: true
@@ -15982,7 +16106,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Мне понравится этот класс информатики.
       csp-pre-survey-2017-q19_2018:
         answers:
         - correct: true
@@ -15993,7 +16117,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Мне понравится этот класс информатики.
       csp-pre-survey-2017-q19_2021:
         answers:
         - correct: true
@@ -16004,7 +16128,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Мне понравится этот класс информатики.
       csp-pre-survey-2017-q19_2022:
         answers:
         - correct: true
@@ -16015,7 +16139,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Мне понравится этот класс информатики.
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -16026,7 +16150,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я очень хорошо учусь в школе.
       csp-pre-survey-2017-q2:
         answers:
         - correct: true
@@ -16037,7 +16161,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Когда я сталкиваюсь с задачей, на которую нет очевидного ответа, я
+            всегда могу найти какой-то способ ее решения.
       csp-pre-survey-2017-q20:
         answers:
         - correct: true
@@ -16048,7 +16173,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я буду чувствовать себя комфортно в этом классе информатики.
       csp-pre-survey-2017-q20_2018:
         answers:
         - correct: true
@@ -16059,7 +16184,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я буду чувствовать себя комфортно в этом классе информатики.
       csp-pre-survey-2017-q20_2021:
         answers:
         - correct: true
@@ -16070,7 +16195,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я буду чувствовать себя комфортно в этом классе информатики.
       csp-pre-survey-2017-q20_2022:
         answers:
         - correct: true
@@ -16081,7 +16206,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я буду чувствовать себя комфортно в этом классе информатики.
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
@@ -16092,7 +16217,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я знаю, что нужно делать, чтобы получать хорошие оценки в этом классе
+            информатики.
       csp-pre-survey-2017-q21_2018:
         answers:
         - correct: true
@@ -16103,7 +16229,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я знаю, что нужно делать, чтобы получать хорошие оценки в этом классе
+            информатики.
       csp-pre-survey-2017-q22:
         answers:
         - correct: true
@@ -16114,7 +16241,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Мне кажется, что иногда я буду чувствовать себя неуверенно, находясь
+            в этом классе.
       csp-pre-survey-2017-q22_2018:
         answers:
         - correct: true
@@ -16125,7 +16253,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Мне кажется, что иногда я буду чувствовать себя неуверенно, находясь
+            в этом классе.
       csp-pre-survey-2017-q22_2021:
         answers:
         - correct: true
@@ -16136,7 +16265,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Мне кажется, что иногда я буду чувствовать себя неуверенно, находясь
+            в этом классе.
       csp-pre-survey-2017-q22_2022:
         answers:
         - correct: true
@@ -16147,7 +16277,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Мне кажется, что иногда я буду чувствовать себя неуверенно, находясь
+            в этом классе.
       csp-pre-survey-2017-q23:
         answers:
         - correct: true
@@ -16158,7 +16289,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что ко мне будут относиться с таким же уважением, как и к
+            другим студентам в этом классе информатики.
       csp-pre-survey-2017-q23_2018:
         answers:
         - correct: true
@@ -16169,7 +16301,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что ко мне будут относиться с таким же уважением, как и к
+            другим студентам в этом классе информатики.
       csp-pre-survey-2017-q24:
         answers:
         - correct: true
@@ -16180,7 +16313,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что почувствую, что могу быть самим собой в этом классе информатики.
       csp-pre-survey-2017-q24_2018:
         answers:
         - correct: true
@@ -16191,7 +16324,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что почувствую, что могу быть самим собой в этом классе информатики.
       csp-pre-survey-2017-q25:
         answers:
         - correct: true
@@ -16202,7 +16335,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я чувствую, что мое мнение будет восприниматься серьезно в этом классе
+            информатики.
       csp-pre-survey-2017-q25_2018:
         answers:
         - correct: true
@@ -16213,7 +16347,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я чувствую, что мое мнение будет восприниматься серьезно в этом классе
+            информатики.
       csp-pre-survey-2017-q26:
         answers:
         - correct: true
@@ -16224,7 +16359,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я чувствую, что таким, как я, будет трудно быть принятым в этот класс
+            информатики.
       csp-pre-survey-2017-q26_2018:
         answers:
         - correct: true
@@ -16235,7 +16371,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я чувствую, что таким, как я, будет трудно быть принятым в этот класс
+            информатики.
       csp-pre-survey-2017-q27:
         answers:
         - correct: true
@@ -16246,7 +16383,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я занимаюсь информатикой в свободное время.
       csp-pre-survey-2017-q27_2018:
         answers:
         - correct: true
@@ -16257,7 +16394,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я занимаюсь информатикой в свободное время.
       csp-pre-survey-2017-q28:
         answers:
         - correct: true
@@ -16268,7 +16405,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Изучение информатики помогает мне изучать другие школьные предметы.
       csp-pre-survey-2017-q28_2018:
         answers:
         - correct: true
@@ -16279,7 +16416,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Изучение информатики помогает мне изучать другие школьные предметы.
       csp-pre-survey-2017-q29:
         answers:
         - correct: true
@@ -16290,7 +16427,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Информатика важна для моего будущего.
       csp-pre-survey-2017-q29_2018:
         answers:
         - correct: true
@@ -16301,7 +16438,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Информатика важна для моего будущего.
       csp-pre-survey-2017-q2_2018:
         answers:
         - correct: true
@@ -16312,7 +16449,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Когда я сталкиваюсь с задачей, на которую нет очевидного ответа, я
+            всегда могу найти какой-то способ ее решения.
       csp-pre-survey-2017-q3:
         answers:
         - correct: true
@@ -16323,7 +16461,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что моя школьная работа интересна.
       csp-pre-survey-2017-q30:
         answers:
         - correct: true
@@ -16334,7 +16472,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я ожидаю, что буду использовать информатику в своей работе.
       csp-pre-survey-2017-q30_2018:
         answers:
         - correct: true
@@ -16345,7 +16483,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я ожидаю, что буду использовать информатику в своей работе.
       csp-pre-survey-2017-q30_2021:
         answers:
         - correct: true
@@ -16356,7 +16494,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я ожидаю, что буду использовать информатику в своей работе.
       csp-pre-survey-2017-q30_2022:
         answers:
         - correct: true
@@ -16367,7 +16505,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я ожидаю, что буду использовать информатику в своей работе.
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
@@ -16422,7 +16560,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я беспокоюсь, что преподаватель или студенты в этом классе могут подумать,
+            что я не так хорошо разбираюсь в информатике, как другие студенты.
       csp-pre-survey-2017-q35_2018:
         answers:
         - correct: true
@@ -16433,21 +16572,28 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я беспокоюсь, что преподаватель или студенты в этом классе могут подумать,
+            что я не так хорошо разбираюсь в информатике, как другие студенты.
       csp-pre-survey-2017-q36-b:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
+        - text: Немного
+          correct: true
+        - text: Не все
+          correct: true
         questions:
-        - {}
+        - text: Я волнуюсь, потому что у меня мало опыта в информатике.
       csp-pre-survey-2017-q36-b_2018:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
+        - text: Немного
+          correct: true
+        - text: Не все
+          correct: true
         questions:
-        - {}
+        - text: Я волнуюсь, потому что у меня мало опыта в информатике.
       csp-pre-survey-2017-q37:
         answers:
         - text: да
@@ -16455,7 +16601,8 @@ ru-RU:
         - text: нет
           correct: true
         questions:
-        - {}
+        - text: До нынешнего урока информатики посещали ли вы какие-либо другие уроки
+            информатики в школе?
       csp-pre-survey-2017-q37_2018:
         answers:
         - text: да
@@ -16463,7 +16610,8 @@ ru-RU:
         - text: нет
           correct: true
         questions:
-        - {}
+        - text: До нынешнего урока информатики посещали ли вы какие-либо другие уроки
+            информатики в школе?
       csp-pre-survey-2017-q39:
         answers:
         - text: да
@@ -16471,7 +16619,9 @@ ru-RU:
         - text: нет
           correct: true
         questions:
-        - {}
+        - text: Участвовали ли вы когда-нибудь в мероприятиях или занятиях по информатике
+            где-либо вне школьных часов (например, на внеклассных занатиях, онлайн,
+            в лагере или летних занатиях)?
       csp-pre-survey-2017-q39_2018:
         answers:
         - text: да
@@ -16479,7 +16629,9 @@ ru-RU:
         - text: нет
           correct: true
         questions:
-        - {}
+        - text: Участвовали ли вы когда-нибудь в мероприятиях или занятиях по информатике
+            где-либо вне школьных часов (например, на внеклассных занатиях, онлайн,
+            в лагере или летних занатиях)?
       csp-pre-survey-2017-q3_2018:
         answers:
         - correct: true
@@ -16490,7 +16642,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что моя школьная работа интересна.
       csp-pre-survey-2017-q3_2021:
         answers:
         - correct: true
@@ -16501,7 +16653,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что моя школьная работа интересна.
       csp-pre-survey-2017-q3_2022:
         answers:
         - correct: true
@@ -16512,7 +16664,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что моя школьная работа интересна.
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -16523,29 +16675,43 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо выполнять свою школьную работу.
       csp-pre-survey-2017-q40:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Внеклассное занятие в моей школе
+          correct: true
+        - text: Внеклассное занятие в другом месте (например, кружок и т.д.)
+          correct: true
+        - text: Онлайн-занятие
+          correct: true
+        - text: Летнее занятие/лагерь
+          correct: true
         - text: Другое
           correct: true
-        - correct: true
+        - text: У меня не было занятий по информатике вне школы
+          correct: true
         questions:
-        - {}
+        - text: Если да, то где вы ранее посещали занятия или курсы во внеклассное
+            время по информатике? Если вы посетили больше одного курса, пожалуйста,
+            укажите курс, в котором вы провели большую часть своего времени.
       csp-pre-survey-2017-q40_2018:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Внеклассное занятие в моей школе
+          correct: true
+        - text: Внеклассное занятие в другом месте (например, кружок и т.д.)
+          correct: true
+        - text: Онлайн-занятие
+          correct: true
+        - text: Летнее занятие/лагерь
+          correct: true
         - text: Другое
           correct: true
-        - correct: true
+        - text: У меня не было занятий по информатике вне школы
+          correct: true
         questions:
-        - {}
+        - text: Если да, то где вы ранее посещали занятия или курсы во внеклассное
+            время по информатике? Если вы посетили больше одного курса, пожалуйста,
+            укажите курс, в котором вы провели большую часть своего времени.
       csp-pre-survey-2017-q4_2018:
         answers:
         - correct: true
@@ -16556,7 +16722,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо выполнять свою школьную работу.
       csp-pre-survey-2017-q4_2021:
         answers:
         - correct: true
@@ -16567,7 +16733,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо выполнять свою школьную работу.
       csp-pre-survey-2017-q4_2022:
         answers:
         - correct: true
@@ -16578,7 +16744,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо выполнять свою школьную работу.
       csp-pre-survey-2017-q5:
         answers:
         - correct: true
@@ -16589,7 +16755,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: В моей школе всегда замечают, когда я что-нибудь хорошо делаю.
       csp-pre-survey-2017-q5_2018:
         answers:
         - correct: true
@@ -16600,7 +16766,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: В моей школе всегда замечают, когда я что-нибудь хорошо делаю.
       csp-pre-survey-2017-q6:
         answers:
         - correct: true
@@ -16611,7 +16777,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Таким как я, трудно быть принятым в моей школе.
       csp-pre-survey-2017-q6_2018:
         answers:
         - correct: true
@@ -16622,7 +16788,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Таким как я, трудно быть принятым в моей школе.
       csp-pre-survey-2017-q7:
         answers:
         - correct: true
@@ -16633,7 +16799,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Другие студенты в моей школе серьезно относятся к моему мнению.
       csp-pre-survey-2017-q7_2018:
         answers:
         - correct: true
@@ -16644,7 +16810,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Другие студенты в моей школе серьезно относятся к моему мнению.
       csp-pre-survey-2017-q8:
         answers:
         - correct: true
@@ -16655,7 +16821,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Ко мне относятся с таким же уважением, как и к другим студентам в
+            моей школе.
       csp-pre-survey-2017-q8_2018:
         answers:
         - correct: true
@@ -16666,7 +16833,8 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Ко мне относятся с таким же уважением, как и к другим студентам в
+            моей школе.
       csp-pre-survey-2017-q9:
         answers:
         - correct: true
@@ -16677,7 +16845,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я действительно могу быть в школе самим собой.
       csp-pre-survey-2017-q9_2018:
         answers:
         - correct: true
@@ -16688,7 +16856,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я действительно могу быть в школе самим собой.
       csp-pre-survey-2017-q9_2021:
         answers:
         - correct: true
@@ -16699,7 +16867,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я действительно могу быть в школе самим собой.
       csp-pre-survey-2017-q9_2022:
         answers:
         - correct: true
@@ -16710,7 +16878,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я действительно могу быть в школе самим собой.
       csp_unit_assessment_overview:
         content1: пояснение
       curriculum-how-challenging:
@@ -16724,10 +16892,12 @@ ru-RU:
         - {}
       curriculum-how-did-you-like-lessons:
         answers:
+        - text: Не все
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Много
+          correct: true
         - correct: true
         questions:
         - {}
@@ -17042,7 +17212,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Для меня важно хорошо разбираться в информатике.
       pre-assessment survey q17:
         answers:
         - correct: true
@@ -17072,7 +17242,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что однажды я стану специалистом по информатике.
       pre-assessment survey q2:
         answers:
         - correct: true
@@ -17092,7 +17262,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я занимаюсь информатикой в свободное время.
       pre-assessment survey q21:
         answers:
         - correct: true
@@ -17130,7 +17300,8 @@ ru-RU:
         - text: Нет
           correct: true
         questions:
-        - {}
+        - text: До нынешнего урока информатики посещали ли вы какие-либо другие уроки
+            информатики в школе?
       pre-assessment survey q26:
         answers:
         - text: Да
@@ -17138,19 +17309,27 @@ ru-RU:
         - text: Нет
           correct: true
         questions:
-        - {}
+        - text: Участвовали ли вы когда-нибудь в мероприятиях или занятиях по информатике
+            где-либо вне школьных часов (например, на внеклассных занатиях, онлайн,
+            в лагере или летних занатиях)?
       pre-assessment survey q27:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Внеклассное занятие в моей школе
+          correct: true
+        - text: Внеклассное занятие в другом месте (например, кружок и т.д.)
+          correct: true
+        - text: Онлайн-занятие
+          correct: true
+        - text: Летнее занятие/лагерь
+          correct: true
         - text: Другое
           correct: true
         - text: Недоступно
           correct: true
         questions:
-        - {}
+        - text: Если да, то где вы ранее посещали занятия или курсы во внеклассное
+            время по информатике? Если вы посетили больше одного курса, пожалуйста,
+            укажите курс, в котором вы провели большую часть своего времени.
       pre-assessment survey q28:
         answers:
         - text: '8'
@@ -17188,7 +17367,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я очень хорошо учусь в школе.
       pre-assessment survey q30:
         answers:
         - correct: true
@@ -17236,7 +17415,7 @@ ru-RU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Я думаю, что моя школьная работа интересна.
       pre-assessment survey q7:
         answers:
         - correct: true
@@ -17475,8 +17654,13 @@ ru-RU:
         display_name: Практика с художником
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Практика с художником
+        description: Пока что все идет отлично! Выберите следующее задание. Выполните
+          как можно больше заданий. Продолжайте упражняться с фукциями в Художнике!
       CourseE_Lesson_7_Artist_Practice_2022:
         display_name: Практика с художником
+        description: Пока что все идет отлично! Выберите следующее задание. Выполните
+          как можно больше заданий. Продолжайте упражняться с вложенными циклами в
+          Художнике!
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: пояснение
         markdown: "# Эпидемия: cоздайте свой собственный симулятор\n\n## Добро пожаловать
@@ -17645,12 +17829,12 @@ ru-RU:
            Учитесь программировать, создавая код для своих друзей!
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: |-
-          # Сила слов
+          # Сила Слов
 
-          ## Что тебе следует сделать, когда кто-то использует грубые или оскорбительные слова в Интернете?
+          ## Что вам следует сделать, когда кто-то использует грубые или оскорбительные слова в Интернете?
       PrivatePersonalInformation-Unplugged2022:
         markdown: |
-          # Конфиденциальная и персональная информация
+          # Частная и Персональная Информация
 
           ## Какой информацией о себе можно делиться в Интернете?
       RelayProgramming-Unplugged2022:
@@ -17671,10 +17855,10 @@ ru-RU:
           важно понимать нужды других людей и иметь их в виду при разработке приложений!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseAB_EOC2022:
         description: Ты закончил последний урок! Выбери проект для создания.
-        display_name: Конец проекта курса
+        display_name: Завершение Курсового Проекта
       courseB_EOC2022:
         description: Ты закончил последний урок! Выбери проект для создания.
-        display_name: Конец проекта курса
+        display_name: Завершение Курсового Проекта
       courseC_multi_artist_prog6_predict12022:
         answers:
         - text: Художник нарисует равносторонний треугольник.
@@ -17713,27 +17897,16 @@ ru-RU:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Скрат доберется до желудя. В коде нет ошибок.
-          feedback: Неправильно. Сначала Скрат поворачивается не в ту сторону, затем
-            Скрат не продвигается вперед достаточное количество раз, чтобы добраться
-            до желудя.
-        - text: Скрат не доберется до желудя, потому что он повернулся не в ту сторону.
+        - text: Скрат не доберется до желудя, потому что он повернется не в ту сторону.
           correct: true
-          feedback: Правильно. Сначала Скрат поворачивается не в ту сторону, затем
-            Скрат не продвигается вперед достаточное количество раз, чтобы добраться
-            до желудя.
-        - text: Скрат не доберется до желудя, потому что не хватает блоков «двигаться
-            вперед».
-          correct: true
-          feedback: Правильно. Сначала Скрат поворачивается не в ту сторону, затем
-            Скрат не продвигается вперед достаточное количество раз, чтобы добраться
-            до желудя.
+        - text: Скрат не доберется до желудя, потому что в коде не хватает блоков
+            `двигаться вперед`.
         - text: Скрат не сдвинется с первого блока.
-          feedback: В этом коде есть две ошибки. Сначала Скрат поворачивается не в
-            ту сторону, затем Скрат не продвигается вперед достаточное количество
-            раз, чтобы добраться до желудя.
+          feedback: Скрат не доберется до желудя, потому что он повернется не в ту
+            сторону.
         questions:
-        - text: Найдите ошибки в этом коде. Доберется ли Скрат до желудя или здесь
-            имеется проблема?
+        - text: Найдите и устраните ошибки в этом коде, если они есть. Доберется ли
+            Скрат до желудя или с этим будет проблема?
       courseC_multi_maze_programming8_predict12022:
         answers:
         - text: В итоге птичка не дойдет до свинки на один шаг.
@@ -17827,8 +18000,8 @@ ru-RU:
 
 '
       courseD_EOC2022:
-        description: Ты закончил последний урок курса D! Выбери проект для создания.
-        display_name: Конец проекта курса
+        description: Вы закончили последний урок курса D! Выберите проект для создания.
+        display_name: Завершение Курсового Проекта
       courseD_EOC_examples2022:
         description: Ты собираешься начать работу над своим последним проектом. Прежде
           чем приступить к работе, потрать некоторое время на изучение примеров проектов.
@@ -18112,11 +18285,11 @@ ru-RU:
         - text: Посмотри внимательно на приводимый ниже код. Что, по-твоему, произойдет,
             когда ты нажмешь на "Выполнить"?
       courseE_EOC2022:
-        description: Ты завершил курс E! Выбери проект для создания.
-        display_name: Конец проекта курса
+        description: Вы завершили курс E! Выберите проект для создания.
+        display_name: Завершение Курсового Проекта
       courseE_EOC_examples2022:
-        description: Ты завершил курс E! Выбери проект для создания.
-        display_name: Конец проекта курса
+        description: Вы завершили курс E! Выберите проект для создания.
+        display_name: Завершение Курсового Проекта
       courseE_multi_farmer_functions11_predict2022:
         answers:
         - text: 'Сборщица соберет две тыквы.
@@ -18207,11 +18380,11 @@ ru-RU:
 
 '
       courseF_EOC_examples2022_2022_pilot_-2022-2:
-        display_name: Конец проекта курса
+        display_name: Завершение Курсового Проекта
       courseF_EOC_samples2022:
         description: Ты собираешься начать работу над своим последним проектом. Прежде
           чем приступить к работе, потрать некоторое время на изучение примеров проектов.
-        display_name: Конец проекта курса
+        display_name: Завершение Курсового Проекта
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: Исследование - Программы-примеры
       courseF_events_freeplay2022_2022_pilot_-2022-2:
@@ -18496,8 +18669,8 @@ ru-RU:
 
           ## Как обеспечить свою безопасность в Интернете?
       express_EOC2022:
-        description: Ты завершил курс E! Выбери проект для создания.
-        display_name: Конец проекта курса
+        description: Вы завершили курс E! Выберите проект для создания.
+        display_name: Завершение Курсового Проекта
       express_EOC_examples2022:
         description: Ты собираешься начать работу над своим последним проектом. Прежде
           чем приступить к работе, потрать некоторое время на изучение примеров проектов.
@@ -18877,3 +19050,714 @@ ru-RU:
           * Вернуться на [уровень 12](12), чтобы продолжить работу над анимацией рыбы. Попробуйте случайным образом изменить вращение рыб, чтобы они выглядели так, как будто они плавают.
           * Вернуться на [уровень 13](13), чтобы продолжить работу над анимацией шестеренок. Попробуйте добавить больше шестеренок разных размеров и настроить скорость каждого вращения, чтобы убедиться, что шестерни правильно зацеплены
           * Перейдите в [полная Игра Лаб](/projects/gamelab/new), чтобы создать новую анимацию с нуля.
+      CSD U3 Defender SFLP:
+        markdown: |
+          # Обзор
+
+          Этот урок знакомит с процессом, который класс будет использовать для разработки игр для оставшейся части учебного блока. Класс пройдет через этот процесс в несколько уровней. В рамках этого урока класс также кратко научится использовать многокадровую анимацию в Игра Лаб. В конце урока появиться возможность внести изменения, чтобы сделать свою собственную игру.
+
+
+          ## Ресурсы
+
+          * [Руководство по Проекту - Игра в Защитника - Руководство по Проекту](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
+      CSD U3 Lesson Overview 12:
+        markdown: |
+          # Обзор
+
+          После ознакомления с логическими (булевыми) значениями и операторами if на предыдущем уроке студенты познакомятся с новым блоком под названием keyDown(), который возвращает логическое значение и может использоваться в операторах условных выражений для перемещения спрайтов по экрану. К концу этого урока студенты напишут программы, которые принимают ввод с клавиатуры от пользователя для управления спрайтами на экране.
+
+          ## Вводимый Код
+
+          * [keyDown()](//studio.code.org/docs/gamelab/keyDown/)
+
+          ## Ресурсы
+
+          * [Логические Выражения](https://youtu.be/y3rCKJNOwpA) - Видео ([скачать](https://videos.code.org/2015/csp/applab/conditionals_1.mp4))
+      CSD U3 Lesson Overview 13:
+        markdown: |+
+          # Обзор
+
+          Класс продолжит изучать способы использования условных операторов для получения пользовательского ввода. В дополнение к простой команде keyDown(), изученной ранее, класс узнает о некоторых других командах ввода с клавиатуры, а также о способах ввода с помощью мыши.
+          ## Терминология
+
+          * **Условные операторы** - Операторы, которые выполняются только при определенных условиях.
+
+          ## Вводимый Код
+
+          * [keyWentUp()](//studio.code.org/docs/gamelab/keyWentUp/)
+          * [mouseWentDown()](//studio.code.org/docs/gamelab/mouseWentDown/)
+          * [mouseWentUp()](//studio.code.org/docs/gamelab/mouseWentUp/)
+          * [keyWentDown()](//studio.code.org/docs/gamelab/keyWentDown/)
+          * [mouseDown()](//studio.code.org/docs/gamelab/mouseDown/)
+          * [mouseDidMove()](//studio.code.org/docs/gamelab/mouseDidMove/)
+          * [sprite.visible](//studio.code.org/docs/gamelab/visible/)
+          * [Оператор If/else](//studio.code.org/docs/gamelab/ifElseBlock/)
+
+      CSD U3 Lesson Overview 14:
+        markdown: |
+          # Обзор
+
+          В этом общем проекте для Главы 1 класс спланирует и разработает интерактивную поздравительную открытку, используя все методы программирования, которые были изучены на данный момент.
+
+
+          ## Ресурсы
+
+          * [Интерактивная Карта - Руководство по Проекту](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)
+          * [Интерактивная Карта - Рубрика](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
+          * [Интерактивная Карта - Экспертная Оценка](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
+        teacher_markdown: |
+          * [Интерактивная Карта](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Экземпляр Руководства по Проекту([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))
+          * [Интерактивная Карта](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Экземпляр Экспертной Оценки ([PDF](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
+      CSD U3 Project Build a Game SFLP:
+        markdown: |
+          # Обзор
+
+          Класс спланирует и создаст оригинальные игры, используя руководство по проекту из предыдущих двух уроков. Работая индивидуально или в парах, студенты спланируют, разовьют и дадут отзыв по играм. После учета отзывов сверстников студенты поделятся завершенными играми.
+
+
+          ## Ресурсы
+
+          * [Создание Собственной Игры - Руководство по Проекту](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)
+          * [Создание Собственной Игры - Рубрика](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)
+          * [Создание Собственной Игры - Взаимная Оценка](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)
+        teacher_markdown: |
+          * [Создание Собственной Игры](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing) - Экземпляр Руководства по Проекту ([PDF](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=doc))
+          * [Создание Собственной Игры](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/edit) - Экземпляр Взаимной Оценки ([PDF](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=doc))
+      CSD U3 SFLP Velocity:
+        markdown: |
+          # Обзор
+
+          После краткого обзора того, как шаблон счетчика используется для перемещения спрайтов, класс познакомится со свойствами, которые непосредственно задают скорость движения и скорость вращения. По мере того, как они по-разному будут использовать эти новые свойства, они получат навыки, необходимые для создания базовой сайд-скроллер игры.
+
+          ## Вводимый Код
+
+          * [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)
+          * [sprite.velocityX](//studio.code.org/docs/gamelab/velocityX/)
+          * [sprite.rotationSpeed](//studio.code.org/docs/gamelab/rotationSpeed/)
+      CSD U3 Using the Game Design Process SLFP:
+        markdown: |
+          # Обзор
+
+          В этом многодневном уроке класс воспользуется процессом решения проблем из учебного блока 1 для создания игры платформеного прыгуна. После просмотра образца игры студенты определят, как будут выглядеть их игры, и применят структурированный процесс для их создания. В заключение, класс подумает над тем, как можно было бы улучшить игры, и внедрит улучшающие изменения.
+
+
+          ## Ресурсы
+
+          * [Планирование Платформенной Игры - Руководство по Проекту](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
+        teacher_markdown: "* [Планирование Платформенной Игры](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit)
+          - Руководство по Проекту ([PDF](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))\n"
+      CSD U4L01 SFLP:
+        markdown: |
+          # Обзор
+
+          На этом уроке вы узнаете, что эмпатия (сочувствие) к потребностям пользователя является важнейшим компонентом процесса разработки. Затем вы изучите и рассмотрите набор программных продуктов и подвергните критике то, насколько хорошо они отвечают различным потребностям.
+
+          ## Терминология
+
+          * **Критика** - Критическая оценка в детальной и конструктивной манере.
+          * **Эмпатия** - В процессе разработки - обращение внимания на чувства и потребности пользователя при разработке программного продукта.
+          * **Пользователь** - Тот, кто использует объект, включая программное и аппаратное обеспечение.
+
+          ## Ресурсы
+
+          * [Определение Пользователя](https://docs.google.com/document/d/1X0qwGigSXa1hq6Q6dws3PxHryGhEyCgkaEHyJCMgvj4/export?format=pdf) - Руководство к действию
+          * [Процесс Решения Проблем с помощью Эмпатии](https://staging.code.org/curriculum/docs/csd/PSPE.png) - Изображение
+      CSD U4L02 SFLP:
+        markdown: |
+          # Обзор
+
+          Разработчики должны понимать потребности своих пользователей. В этом уроке вы подумаете о том, как создавать программный продукт для другого человека, разыгрывая роль пользователя, который реагирует на серию программных продуктов.
+
+          ## Терминология
+
+          * **Удобство использования** - Насколько легко, эффективно и удовлетворительно использовать созданный разработчиком объект или устройство (включая программное обеспечение).
+
+          ## Ресурсы
+
+          * [Реагирование как у Пользователя](https://docs.google.com/document/d/1cQXtr4zj3LEuOMoOYJf8KtBUl9ge3qmwBBzEBv8GixA/export?format=pdf) - Руководство к Действию
+
+
+          * [Профиль 1](https://docs.google.com/document/d/1N6Ks8rp6YoLgsbA3FE0x9RatJY3znevnMkMyUN3yRE8/export?format=pdf) - Профиль Пользователя
+          * [Профиль 2](https://docs.google.com/document/d/14nHf-TzkKBUC0hvYlcviVe-S9wDdo1TqPUIcnTcHMzw/export?format=pdf) - Профиль Пользователя
+          * [Профиль 3](https://docs.google.com/document/d/1Nw_0v_uGCe4J_tcimhyJiWKYgw4jhNgg8qP1zo4GddE/export?format=pdf) - Профиль Пользователя
+          * [Профиль 4](https://docs.google.com/document/d/1kRKQYsomhS9UakiDazQ9dXNk8AIWHaq082Y4wBflK34/export?format=pdf) - Профиль Пользователя
+      CSD U4L03 SFLP:
+        markdown: |
+          # Обзор
+
+          В этом уроке вы разработаете программный продукт с нуля, чтобы он соответствовал потребностям пользователя. Попутно вы узнаете, что брейнсторминг (генерация идей) и последующая классификация идей - полезный навык, когда есть много потенциальных вариантов, которые можно было бы выбрать.
+
+          ## Ресурсы
+
+          * [Разработка, Ориентированная на Пользователя](https://docs.google.com/document/d/1HxcW76EFNVIJykCVELgjr4WRpFjPgrVvz9tURRR1gWY/export?format=pdf) - Руководство к Действию
+      CSD U4L04 SFLP:
+        markdown: |
+          # Обзор
+
+          В этом уроке вы узнаете, что такое приложения и как они удовлетворяют потребностям пользователя. Вы также узнаете, как прототипы (опытные образцы) используются для создания чернового варианта программного обеспечения.
+
+          ## Терминология
+
+          * **Прототип** - Первая или ранняя модель продукта, которая позволяет вам проверить предположения перед разработкой окончательной версии.
+          * **Пользовательский Интерфейс** - Визуальные элементы программы, с помощью которых пользователь управляет приложением или взаимодействует с ним. Часто используется сокращение UI (User Interface - Пользовательский Интерфейс).
+
+
+          ## Ресурсы
+
+          * [Экраны Пользовательского Интерфейса](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Руководство к Действию
+          * [Пользовательское Тестирование (Компьютер)](https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/export?format=pdf) - Руководство к Действию
+          * [Пользовательское Тестирование (Пользователь)](https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/export?format=pdf) - Руководство к Действию
+      CSD U4L05 SFLP:
+        markdown: |
+          # Обзор
+
+          На этом уроке вы узнаете, как внимательно читать отзывы о продукте, чтобы определить требуемые потребности. Затем вы обновите бумажный прототип, чтобы лучше удовлетворить эти потребности.
+
+          ## Ресурсы
+
+          * [Экраны Пользовательского Интерфейса](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Руководство к Действию
+          * [Отзыв о Прототипе](https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/export?format=pdf) - Руководство к Действию
+          * [Улучшение Экрана](https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/export?format=pdf) - Руководство к Действию
+      CSD U4L06 SFLP:
+        markdown: |
+          # Обзор
+
+          До этого момента мы фокусировались на разработке для пользователей, которые в какой-то степени удалены от нас. Будь то брейнсторминг, профили или текстовый отзыв, связь с конечным пользователем никогда не была прямой. На этом уроке вы непосредственно возьмете интервью у одного из своих одноклассников, чтобы разработать приложение, отвечающее потребностям однокласников.
+
+          ## Ресурсы
+
+          * [Пользовательское Интервью](https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/export?format=pdf) - Руководство к Действию
+          * [Проект - Бумажный Прототип](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Руководство к Действию
+      CSD U4L07 SFLP:
+        markdown: |
+          # Обзор
+
+          Основываясь на интервью, которое вы провели на последнем уроке, разработайте приложение, которое могло бы помочь вашему однокласснику преодолеть некоторые препятствия на пути к изучению чего-то нового.
+
+
+          ## Ресурсы
+
+          * [Рубрика Бумажного Прототипа](https://docs.google.com/document/d/16llO0PF7rJhz_ImtNDAxG3MAt9vU6QVGpDSPGoi_-04/export?format=pdf) - Рубрика
+          * [Проект - Бумажный Прототип](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Руководство к Действию
+      CSD U4L08 SFLP:
+        markdown: |+
+          # Обзор
+
+          Чтобы начать разработку проекта приложения, студенты в классе объединяются в команды и начинают изучать темы приложений. Вдохновением для проекта послужат несколько примеров социально значимых приложений.
+
+
+          ## Ресурсы
+
+          * [Начало Разработки Приложения](https://docs.google.com/document/d/1u5oTuQcEV0sweTA6bEER_wZT6FKoX7EqX8JdiY8YCAA/export?format=pdf) - Руководство к Действию
+
+      CSD U4L09 SFLP:
+        markdown: |
+          # Обзор
+
+          Погрузитесь в разработку приложений, изучив существующие приложения, которые могут обслуживать однотипных пользователей. Каждая группа студентов определяет несколько приложений, которые затрагивают ту же тему, над которой группа работает, и использует эти приложения, чтобы помочь усовершенствовать идею приложения, которую группа будет развивать.
+
+
+          ## Ресурсы
+
+          * [Исследование Рынка](https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/export?format=pdf) - Руководство к Действию
+      CSD U4L10 SFLP:
+        markdown: |
+          # Обзор
+
+          Бумажные прототипы позволяют разработчикам быстро тестировать идеи, прежде чем тратить много времени на написание кода. В этом уроке группы изучат некоторые примеры приложений, созданных в Приложения Лаб, используя эти приложения для создания первых бумажных прототипов своих приложений.
+          ## Терминология
+
+          * **Прототип** - Первая или ранняя модель продукта, которая позволяет вам проверить предположения перед разработкой окончательной версии.
+
+
+          ## Ресурсы
+
+          * [Бумажный Прототип Телефона](https://drive.google.com/open?id=0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE) - Модель
+          * [Меню](https://docs.google.com/drawings/d/12qoCyr8ApVLVT9OlnHpDX7qM5mVopbw7w-0TcxlQd2k) - Прототип
+          * [Брейнсторминг Прототипа](https://docs.google.com/document/d/1t6pRCn-oSUsuQ2rog24KzbbZ7iORothH_Gp1i3Hm8A4/export?format=pdf) - Руководство к Действию
+      CSD U4L11 SFLP:
+        markdown: |
+          # Обзор
+
+          На этом уроке группы тестируют свои бумажные прототипы вместе с другими студентами класса. Когда один студент играет роль компьютера, другой рассказывает, а остальные наблюдают, команды получат немедленную обратную связь о разработке своих приложений, которая послужит основой для следующей версии прототипов приложений.
+
+
+          ## Ресурсы
+
+          * [Пользовательское Тестирование Бумажного Прототипа](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=pdf) - Руководство к Действию
+          * [Тест Меню](https://drive.google.com/open?id=0BxKeX2-Lg_EYUTBNbnMyUENFcGs) - Видео
+      CSD U4L12 SFLP:
+        markdown: |
+          # Обзор
+
+          Разработав, протестировав и собрав отзывы о бумажном прототипе, группы перейдут в Приложение Лаб для создания следующего этапа своих приложений. Используя перетаскивания в Дизайн Режиме, каждый студент создаст по крайней мере одну страницу приложения своей группы, учитывая отзывы, полученные на предыдущей ступене тестирования.
+
+
+          ## Ресурсы
+
+          * [Экранное Обладание](https://docs.google.com/document/d/1eAl3Gpi1iLLOMjaO44-w2dUuJvHEzGVPrIDxpP4rkW4/export?format=pdf) - Руководство к Действию
+          * [Экранный Дизайн](https://docs.google.com/document/d/1dtMInlgLRk_DUZwpqF6KF8TvGUJNp-vWFYYU4wG-ZLc/export?format=pdf) - Руководство к Действию
+      CSD U4L13 SFLP:
+        markdown: |+
+          # Обзор
+
+          Опираясь на экраны, разработанные на предыдущем уроке, группы объединят экраны в единое приложение. Затем можно будет добавить простой код, чтобы при нажатии кнопки отображался соответствующий экран.
+
+          ## Вводимый Код
+
+          * [onEvent](//studio.code.org/docs/applab/onEvent/)
+          * [setScreen](//studio.code.org/docs/applab/setScreen/)
+
+      CSD U4L15 SFLP:
+        markdown: |
+          # Обзор
+
+          Группы проводят еще один тур пользовательского тестирования, на этот раз с помощью своего интерактивного прототипа. Отзывы, полученные в результате этого тура тестирования, будут использованы при создании финальных версий прототипов приложений.
+
+
+          ## Ресурсы
+
+          * [Тестирование Приложений Пользователя](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) - Руководство к Действию
+      CSD U4L16 SFLP:
+        markdown: |
+          # Обзор
+
+          Используя отзывы на последнем туре тестирования, группы внедрят изменения, отвечающие потребностям пользователей. Каждая группа отслеживает и определяет приоритеты возможностей, которые следует добавить, и багов, которые необходимо исправить.
+          ## Терминология
+
+          * **Баг  (Bug)** - Часть программы, которая работает неправильно.
+          * **Возможность** - Отдельный функциональный элемент программного продукта. Это может быть способность делать что-то новое, работать на нескольких платформах или работать более эффективно.
+
+
+          ## Ресурсы
+
+          * [Анализ Тестирования Приложений Пользователя](https://docs.google.com/document/d/1Y7cri91LU_70n6CrIGnUSedPwA_TMfYCkyhCjfpfTns/export?format=pdf) - Руководство к Действию
+      CSD U4L17 SFLP:
+        markdown: |
+          # Обзор
+
+          Каждая группа подготовит презентацию, чтобы "представить" разработанное ими приложение. Это время, чтобы поделиться друг с другом будущими схватками, победами и планами.
+
+
+          ## Ресурсы
+
+          * [Образец Презентации Приложения](https://docs.google.com/presentation/d/19KVEybGqu6pdFB3QwjvJNA_VTM5W5Kxy3fUlxf1xnc4/edit) - Слайды
+          * [Презентация Приложения](https://docs.google.com/presentation/d/1qRbnSABMrfeZHUiQ_mGdhzW7UIGuiGiWyMcQK_pH-tY/edit) - Экземпляр
+          * [Презентация приложения](https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - Рубрика
+      CSD U5 test:
+        title: Постпроектное Тестирование Данных и Общества
+      CSD U5 test_2021:
+        title: Постпроектное Тестирование Данных и Общества
+      CSD U5 test_2022:
+        title: Постпроектное Тестирование Данных и Общества
+      CSD User Centered Design Post-Project Test:
+        title: 'Разработка, Ориентированная на Пользователя: Постпроектное Тестирование'
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Разработка, Ориентированная на Пользователя: Постпроектное Тестирование'
+      CSD User Centered Design Post-Project Test_2022:
+        title: 'Разработка, Ориентированная на Пользователя: Постпроектное Тестирование'
+      CSD-U5-SFLP ASCII and Binary Representation:
+        markdown: "# Обзор\n\nУзнайте, как система ASCII использует шаблоны включения-выключения
+          для представления алфавита, а затем используйте ее для создания собственной
+          двоичной системы представления алфавита. \n\n## Терминология\n\n* **ASCII**
+          - ASCII - American Standard Code for Information Interchange (американский
+          стандартный код для обмена информацией). ASCII - это общепризнанный формат
+          необработанного текста, понятный любому компьютеру.\n* **Двоичный код  (Binary)**
+          - Это способ представления информации, использующий только два варианта.\n*
+          **Бит  (Bit)** - Сокращение от \"Binary Digit\" (двоичное число).  Бит -
+          это единственная единица информации в компьютере, обычно представленная
+          в виде 0 или 1.\n\n\n## Ресурсы\n\n* [ASCII - Руководство к Действию](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)\n"
+        teacher_markdown: "* [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing)
+          - Экземпляр ([PDF](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))\n"
+      CSD-U5-SFLP Automating Data Decisions:
+        markdown: |
+          # Обзор
+
+          Вы увидите пример того, как компьютер может быть использован для выполнения практически каждого этапа процесса решения проблем с помощью данных. Вы создадите правила или алгоритм, которые компьютер мог бы использовать для автоматического принятия решения.
+
+          ## Ресурсы
+
+          * [Автоматизация Принятия решений с помощью Данных](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Ресурсы (copy as [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
+          * [Автоматизация Принятия решений с помощью Данных](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Руководство к Действию (copy as [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+        teacher_markdown: "* Автоматизация Принятия решений с помощью Данных - Экземпляр
+          ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))\n"
+      CSD-U5-SFLP Combining Representations:
+        markdown: |
+          # Обзор
+
+          Этот урок объединит все три типа двоичных систем представления информации (символы ASCII, двоичные числа и изображения), чтобы обеспечить возможность кодирования в записи информации, состоящей из более сложных типов данных. После просмотра серии битов и получения задачи на их декодирование класс узнает, что понимание двоичной информации требует понимания как используемой системы, так и значения закодированной информации.
+
+
+          ## Ресурсы
+
+          * [Записи о Питомцах - Руководство к Действию](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
+          * [Таблица ASCII - Ссылка](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+        teacher_markdown: "* [Записи о Питомцах](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/)
+          - Экземпляр ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))\n"
+      CSD-U5-SFLP Create a Representation:
+        markdown: |
+          # Обзор
+
+          Разработайте структуру для представления вашего идеального дня, используя двоичные системы представления информации, которые были изучены в этом учебном разделе. При разработке вида перфокарточки вам нужно будет использовать ASCII, двоичные числа и изображения.
+
+          ## Ресурсы
+
+          * [Создание Представления - Руководство по Проекту](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+        teacher_markdown: "* Создание Представления - Руководство по Проекту ([Google
+          Doc](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit)
+          | [PDF](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))\n\n"
+      CSD-U5-SFLP Interpreting Data:
+        markdown: |
+          # Обзор
+
+          Углубитесь в структурирование данных путем отбора и визуализации необработанных наборов данных. Посмотрите, как визуализации меняют то, как вы понимаете данные и принимаете по ним решения.
+
+          ## Ресурсы
+
+          * [Структурирование Данных](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Руководство к Действию
+        teacher_markdown: "* Структурирование Данных - Экземпляр ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))\n"
+      CSD-U5-SFLP Making Decisions with Data:
+        markdown: |
+          # Обзор
+
+          В этом уроке вы получите некоторую практику принятия решений с использованием данных по некоторым проблемам, которые могут показаться обычными.
+
+          ## Ресурсы
+
+          * [Принятие Решений с использованием Данных](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Руководство к Действию
+        teacher_markdown: "* [Принятие Решений с использованием Данных](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing)
+          - Экземпляр ([PDF](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))\n"
+      CSD-U5-SFLP Patterns and Representation:
+        markdown: |
+          # Обзор
+
+          В этом уроке более подробно будет рассмотрено то, что необходимо для создания системы представления информации. Группы создадут системы, которые представляют любую букву алфавита, используя только одну стопку карточек, затем создадут сообщения со своими системами и обменяются ими с другими группами, чтобы убедиться, что система работает должным образом. На занятии будут обсуждаться общие черты между рабочими системами, при этом признается, что существует множество возможных рабочих решений.
+          ## Терминология
+
+          * **Декодирование  (Decode)** - изменение способа представления информации таким образом, чтобы она могла быть прочитана человеком
+          * **Кодирование  (Encode)** - изменение способа представления информации таким образом, чтобы она могла быть прочитана компьютером
+
+
+          ## Ресурсы
+
+          * [Представление Информации](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Руководство к Действию (copy as [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+        teacher_markdown: |+
+          * [Представление Информации](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Экземпляр 1 ([PDF](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf))
+          * [Представление Информации](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Экземпляр 2 ([PDF](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf))
+
+      CSD-U5-SFLP Problem Solving and Data:
+        markdown: |
+          # Обзор
+
+          Вы будете использовать процесс решения проблем, чтобы помочь решить проблему с данными.
+
+          ## Ресурсы
+
+          * [Решение Проблем с использованием Данных](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Руководство к Действию
+        teacher_markdown: "* Решение Проблем с использованием Данных - Экземпляр ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))\n"
+      CSD-U5-SFLP Problem Solving with Big Data:
+        markdown: |
+          # Обзор
+
+          В этом уроке рассказывается о том, как организации собирают и используют данные для решения проблем в реальном мире. Класс рассмотрит три проблемных сценария, которые можно было бы решить с помощью данных, и обсудит какие для этого типы данных необходимы и как эти данные собрать. Каждый сценарий также включает в себя видео о реальном сервисе, который решил аналогичную проблему используя данные.
+
+
+          ## Ресурсы
+
+          * [Данные в Реальном Мире](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - Руководство по Проекту
+      CSD-U5-SFLP Representation Matters:
+        markdown: |
+          # Обзор
+
+          Приобретите начальное понимание о важности того, как представлена информация и как это влияет на то, как людьми принимаются решения. Помогите нескольким людям решить, какое блюдо им следует заказать.
+
+          ## Ресурсы
+
+          * [Вопросы Представления Информации - Руководство к Действию](https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
+        teacher_markdown: |
+          [key]
+
+          * [Вопросы Представления Информации](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) - Экземпляр ([PDF](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))
+          * [Данные о Кушаньях](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Ресурсы ([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+          [/key]
+      CSD-U5-SFLP Representing Images:
+        markdown: |+
+          # Обзор
+
+          Узнайте, как шаблоны включения-выключения, о которых вы узнали на предыдущем уроке, можно использовать для представления изображений. По пути вы узнаете, как некоторые свойства систем представления, которые вы уже видели, применимы и к изображениям.
+
+          ## Терминология
+
+          * **пиксель  (pixel)** - сокращение от "picture element" (элемент изображения) - это основная единица цифрового изображения, обычно крошечный квадрат или точка, которая содержит одну цветную точку более крупного изображения.
+
+
+      CSD-U5-SFLP Representing Numbers Part 1:
+        markdown: |
+          # Обзор
+
+          Этот урок знакомит с двоичной системой счисления. С набором карточек, представляющих значения мест в двоичной системе счисления (основание-2), класс будет включать или выключать биты, переворачивая карточки лицевой стороной вверх либо вниз, а затем будет наблюдать за числами, которые будут получаются в результате этих манипуляций. В конце концов, разрядность числа расширется до универсальной 4-битной системы.
+
+          ## Ресурсы
+          * [Представление Чисел - Руководство к Действию](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
+          * [Числовые Карточки - Манипуляция](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+        teacher_markdown: |
+          [key]
+
+          * Представление Чисел - Экземпляр ([Google Doc](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+          [/key]
+      CSD-U5-SFLP Representing Numbers Part 2:
+        markdown: |
+          # Обзор
+
+          В этом уроке будет рассмотрено, как люди могут хранить данные в секрете, даже если другие люди могут их видеть. Класс рассмотрит метод кодирования эмодзи (смайликов), а затем изучит способ шифрования своих сообщений с эмодзи с помощью ключевого слова.
+
+
+          ## Ресурсы
+
+          * [Хранение Данных в Секрете - Руководство к Действию](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+        teacher_markdown: "* Хранение Данных в Секрете - Экземпляр ([PDF](https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))\n"
+      CSD-U5-SFLP Solve a Data Problem:
+        markdown: |
+          # Обзор
+
+          В заключение этого учебного блока вы разработаете способ использования данных для составления рекомендации или прогноза, которые помогут решить выбранную вами проблему.
+
+          ## Ресурсы
+
+          * [Создание Рекомендации](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Руководство к Действию
+          * [Создание Рекомендации](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Взаимная Оценка
+        teacher_markdown: |
+          * Создание Рекомендации - Экземпляр Проектного Руководства ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
+          * Создание Рекомендации - Экземпляр Взаимной Оценки ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        markdown: |+
+          # Изучение Открытий в Информатике после окончания Курса
+
+          **Ваши предложения и отзыв очень важны для нас!** Мы пользуемся ими для:
+
+          * внесения улучшения в курс
+          * изучения вашего опыта
+          * сообщите нам, о чем вам хотелось бы узнать в будущем
+
+          Спасибо, что нашли время, чтобы помочь сделать Открытия в Информатике еще лучше!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/lessons/1/levels/1/page/1" target="top">Нажмите здесь, чтобы заполнить анкету Открытия в Информатике после окончания курса!!!</a>
+
+          (откроется в новой вкладке)
+
+          <br>
+
+
+
+
+
+        teacher_markdown: |
+          **Пожалуйста, попросите ваших студентов заполнить этот опрос!!!**
+
+          * Вы увидите анонимные результаты опроса на вашей панели управления преподавателя.
+          * Результаты очень важны для нас (code.org ), чтобы поддерживать наши курсы и вносить улучшения.
+          * Также будет проведен опрос преподавателей, в ходе которого вы сможете внести свой собственный вклад, о чем вы будете уведомлены по электронной почте.
+
+          **Примечание:**
+
+          * Кнопка на этой странице перенаправляет на [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Если хотите, можете устроить "Опрос учащихся после окончания курса" в качестве текущего учебного блока в вашем разделе с помощью выпадающего меню на панели управления преподавателя.
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Опрос студентов перед курсом Открытия в Информатике
+      csd-pre-survey-levelgroup_2019:
+        title: Опрос студентов перед курсом Открытия в Информатике
+      csd-pre-survey-levelgroup_21_22:
+        title: Опрос студентов перед курсом Открытия в Информатике
+      csd-pre-survey-levelgroup_21_22_2022:
+        title: Опрос студентов перед курсом Открытия в Информатике
+      csp-pre-survey-2017 preamble 1:
+        markdown: "### **Это анонимный опрос** \n\n* Этот опрос состоит из 5 коротких
+          частей.  \n* Этот опрос займет **не более10 минут**.\n\n*Code.org очень
+          серьезно относится к вашей приватности.* Ваши ответы здесь будут сохранены
+          **анонимными**. Никто, даже ваш преподаватель, не сможет связать ваши ответы
+          с вами как с личностью.\n\nМы делаем так, потому что хотим, чтобы вы **были
+          максимально открытыми и честными** . Мы учтем ваши впечатления при прохождении
+          курса и внесем улучшения, основываясь на том, что вы нам сообщите.\n\n***\n\n###
+          Часть 1: Школа в целом\n\n#### *Во-первых, мы хотим узнать ваши мысли и
+          чувства по поводу школы в целом.*\n"
+        teacher_markdown: |
+          Лучше всего дать студентам заполнить этот опрос **перед тем**, как начать в какие-либо занятия в классе. Большинство преподавателей делают это в рамках дня начальной технической настройки класса.
+
+          Вы сможете увидеть анонимные результаты опроса ваших студентов.
+
+          Почему здесь проводится этот опрос?
+          * Основной целью курса Открытия в Информатике является расширение участия в компьютерных науках.
+          * Поэтому крайне важно получить представление об отношении и убеждениях студентов к информатике до начала курса, чтобы можно было узнать изменения, произошедшие после окончания курса.
+          * Ответы в опросе помогут нам сделать важные улучшения, которые мы можем внести в учебную программу, чтобы улучшить взаимодействие преподавателя и студентов.
+
+
+          * Пожалуйста, помогите нам, попросив ваших студентов передать нам важные сведения. Их мнения имеют значение!
+      csp-pre-survey-2017 preamble 1_2018:
+        markdown: "### **Это анонимный опрос** \n\n* Этот опрос состоит из 5 коротких
+          частей.  \n* Этот опрос займет **не более10 минут**.\n\n*Code.org очень
+          серьезно относится к вашей приватности.* Ваши ответы здесь будут сохранены
+          **анонимными**. Никто, даже ваш преподаватель, не сможет связать ваши ответы
+          с вами как с личностью.\n\nМы делаем так, потому что хотим, чтобы вы **были
+          максимально открытыми и честными** . Мы учтем ваши впечатления при прохождении
+          курса и внесем улучшения, основываясь на том, что вы нам сообщите.\n\n***\n\n###
+          Часть 1: Школа в целом\n\n#### *Во-первых, мы хотим узнать ваши мысли и
+          чувства по поводу школы в целом.*\n"
+        teacher_markdown: |
+          Лучше всего дать студентам заполнить этот опрос **перед тем**, как начать в какие-либо занятия в классе. Большинство преподавателей делают это в рамках дня начальной технической настройки класса.
+
+          Вы сможете увидеть анонимные результаты опроса ваших студентов.
+
+          Почему здесь проводится этот опрос?
+          * Основной целью курса Открытия в Информатике является расширение участия в компьютерных науках.
+          * Поэтому крайне важно получить представление об отношении и убеждениях студентов к информатике до начала курса, чтобы можно было узнать изменения, произошедшие после окончания курса.
+          * Ответы в опросе помогут нам сделать важные улучшения, которые мы можем внести в учебную программу, чтобы улучшить взаимодействие преподавателя и студентов.
+
+
+          * Пожалуйста, помогите нам, попросив ваших студентов передать нам важные сведения. Их мнения имеют значение!
+      csp-pre-survey-2017 preamble 2 cs in general_2018:
+        markdown: |
+          # Информатика в целом
+
+          ### *Далее мы спросим вас о ваших мыслях и чувствах по поводу информатики в целом.*
+
+          ***
+      csp-pre-survey-2017 preamble 3 this class:
+        markdown: "### Часть 3: Вы и информатика\n\n#### *Далее мы попросим вас высказать
+          свое мнение об информатике и вашем будущем.* \n\n***\n"
+      csp-pre-survey-2017 preamble 3 this class_2018:
+        markdown: "### Часть 3: Вы и информатика\n\n#### *Далее мы попросим вас высказать
+          свое мнение об информатике и вашем будущем.* \n\n***\n"
+      csp-pre-survey-2017 preamble 3 this class_2019:
+        markdown: "### Часть 3: Вы и информатика\n\n#### *Далее мы попросим вас высказать
+          свое мнение об информатике и вашем будущем.* \n\n***\n"
+      csp-pre-survey-2017 preamble 4 the future:
+        markdown: |
+          ### Часть 4: Ваше будущее и прочее
+
+          #### *Далее мы попросим вас поделиться своими мыслями и чувствами о будущем и о прочих начинаниях в информатике*
+
+          ***
+      csp-pre-survey-2017 preamble 4 the future_2018:
+        markdown: |
+          ### Часть 4: Ваше будущее и прочее
+
+          #### *Далее мы попросим вас поделиться своими мыслями и чувствами о будущем и о прочих начинаниях в информатике*
+
+          ***
+      csp-pre-survey-2017 preamble 5 demographics:
+        markdown: |
+          ### Часть 5: Подведение итогов
+
+          #### *В заключение, у нас есть несколько кратких вопросов о вашем опыте работы в информатике*
+
+          ***
+      csp-pre-survey-2017 preamble 5 demographics_2018:
+        markdown: |
+          ### Часть 5: Подведение итогов
+
+          #### *В заключение, у нас есть несколько кратких вопросов о вашем опыте работы в информатике*
+
+          ***
+      csp-pre-survey-2017-q36-preamble:
+        markdown: |
+          ***
+
+          #### Если вы беспокоитесь о том, что вас сочтут менее способным к информатики, что заставляет вас так думать?
+      csp-pre-survey-2017-q36-preamble_2018:
+        markdown: |
+          ***
+
+          #### Если вы беспокоитесь о том, что вас сочтут менее способным к информатики, что заставляет вас так думать?
+      CSDU6 Innovation_2021:
+        markdown: |
+          # Инновационные Исследования
+
+          Выберите одну из нижеследующих тем для изучения. Вы найдете информацию о некоторых самых последних инновационных вычислительных устройствах, относящихся к вашей квалификации.
+
+          ## Носимые Технологии
+          Носимая технология включает в себя любую форму вычислительных устройств, пригодную для ношения пользователем, независимо от того, встроена ли она в одежду или используется в качестве аксессуара. Многие носимые устройства, такие как интеллектуальные шагомеры, в некоторой степени можно отнести к теме здоровье и безопасность, поскольку они одновременно являются носимыми и предназначены для улучшения вашего личного здоровья.
+
+          ## Здоровье и Безопасность
+          Тема широкого спектра включает в себя как потребительские технологии (вещи, которые вы можете использовать для улучшения своего здоровья или безопасности), так и профессиональные технологии (оборудование, которое может использовать врач или другой специалист).
+
+          ## Сельское хозяйство
+          Сельское хозяйство, возможно, не является очевидной темой, но технологические инновации оказали огромное влияние на сельское хозяйство. Это такие инновации как внедрение компьютеров в существующее сельскохозяйственное оборудование, использование датчиков и робототехники для мониторинга урожая, а также анализ данных для повышения эффективности и устойчивости.
+
+          ## Производство
+          Достижения в области быстрого создания прототипов, промышленной робототехники и автоматизации оказали большое влияние на то, как производятся товары. Будь то технология, обеспечивающая доступное мелкосерийное производство (например, 3D-принтеры и лазерные резаки), или интеграция компьютеров в работу фабрики, здесь есть много интересных областей для исследования.
+
+          ## Искусство и Дизайн
+          Пересечение художественного самовыражения и вычислительной техники может привести к впечатляющим и неожиданным результатам. В то время как вероятность найти коммерчески доступные продукты, связанные с искусством и дизайном, довольно низкая, можно найти большое разнообразие частных и творений, которые творчески и выразительно используют все виды компьютерных устройств.
+
+          ## Умный Дом
+          Мечта о доме, который понимает и даже предвосхищает ваши потребности, стала ближе, чем когда-либо. Устройства "умного дома" справляются с любым количеством рутинных или повторяющихся задач по дому независимо от того, управляются ли они явно с помощью голосовых команд или с помощью датчиков для мониторинга изменяющихся условий и реагирования на них.
+
+
+          # Исследовательские Рассуждения
+
+          Исследуя устройства по выбранной теме, имейте в виду следующие:
+
+          * Сосредоточьтесь на аппаратных, а не на программных решениях
+          * Сосредоточьтесь на последних инновациях, а не на старых новостях
+          * Отслеживайте то, что вас интересует
+
+          # Начало Вашего Исследования
+
+          Проконсультируйтесь со своим преподавателем о веб-сайтах, с изучения которых начнете исследование. Вы также можете использовать некоторые из приведенных выше ключевых слов, чтобы начать поиск конкретных идей в Интернете. Например, можете заглянуть на различные сайты краудфандинга (такие как Kickstarter и Indiegogo), чтобы увидеть продукты, которые еще не совсем вышли на рынок.
+        teacher_markdown: |+
+          Ниже приведены несколько веб-сайтов, которые студенты могут использовать для начала своих исследований. Мы не предоставили их непосредственно студентам, потому что иногда эти сайты блокируются местными программами фильтрации, или последние инновации, достойные для исследования, могут не подходить для средней школы. **Мы настоятельно рекомендуем вам проверить каждый сайт на наличие неприемлемого контента и убедиться, что он загрузится на компьютеры в классе, прежде чем рекоммендовать его студентам**.
+
+          Используя приведенный ниже список в качестве отправной точки, мы рекомендуем предоставить студентам цифровой список исследовательских веб-сайтов. Он может включать в себя приведенные ниже веб-сайты и любые дополнительные ресурсы, которые вы можете найти самостоятельно.
+
+          ### Носимые Технологии
+
+          * [Wareable.com](https://www.wareable.com/)
+
+          ### Здоровье и Безопасность
+
+          * [Современное Здравоохранение](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Сельское хозяйство
+
+          * [Национальный Институт Продовольствия и Сельского хозяйства](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Новости Сельскохозяйственной Отрасли](http://www.farmindustrynews.com/technology)
+
+          ### Производство
+
+          * [Неделя Индустрии](https://www.industryweek.com/technology-and-iiot)
+          * [3D-Печать](https://3dprinting.com/)
+
+          ### Искусство и Дизайн
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Обучающие материалы](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Умный Дом
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [Интернет Вещей (IoT) Эволюция](http://www.iotevolutionworld.com/smart-home/)
+
+
+      CSD End of Unit Survey - Unit 1 - IntroMD_2022:
+        teacher_markdown: |
+          **Опрос в Конце учебного Блока для Преподавателей:** Пока ваши студенты заполняют анкету, мы были бы признательны, если бы вы заполнили краткий опрос для преподавателей
+
+          ## [Нажмите Здесь, чтобы начать Заполнять Опрос для Преподавателей](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+      CSD Student End of Unit Survey - Unit 1_2022:
+        title: Опрос в Конце учебного Блока на CS Discoveries!
+      Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
+        teacher_markdown: |
+          **Опрос в Конце учебного Блока для Преподавателей:** Пока ваши студенты заполняют анкету, мы были бы признательны, если бы вы заполнили краткий опрос для преподавателей
+
+          ## [Нажмите Здесь, чтобы начать Заполнять Опрос для Преподавателей](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+      Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
+        teacher_markdown: |
+          **Опрос в Конце учебного Блока для Преподавателей:** Пока ваши студенты заполняют анкету, мы были бы признательны, если бы вы заполнили краткий опрос для преподавателей
+
+          ## [Нажмите Здесь, чтобы начать Заполнять Опрос для Преподавателей](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)

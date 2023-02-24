@@ -599,6 +599,7 @@
   volunteer_engineer_submission_distance_16: "10 英里"
   volunteer_engineer_submission_distance_24: "15 英里"
   volunteer_engineer_submission_distance_32: "20 英里"
+  volunteer_engineer_submission_distance_80: "50英里"
   volunteer_engineer_submission_num_volunteers_5: "5 名志愿者"
   volunteer_engineer_submission_num_volunteers_10: "10 名志愿者"
   volunteer_engineer_submission_num_volunteers_25: "25 名志愿者"
@@ -1575,6 +1576,9 @@
   hoc_overview_dance_title: "舞蹈派对"
   hoc_overview_dance_subtitle: "写出你自己的舞会代码，分享给你的朋友们。精选 Katy Perry、Madonna、J. Balvin、Sia、Keith Urban、Ciara 等 25 个！"
   hoc_overview_dance_2019_subtitle: "编写舞蹈派对，并与朋友分享。精选了 Katy Perry、Shawn Mendes、Panic! At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj，以及其他 34 名明星的豪华阵容！"
+  hoc_overview_dance_2022_subtitle: "编写一个舞蹈派对与你的朋友分享。里面有碧昂丝、哈利·史泰尔斯、丽佐、纳斯小子、塞莱娜·戈麦斯、迪士尼魔法满屋的音乐等等！"
+  hoc_overview_hello_world_2022_subtitle: "从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。"
+  hoc_overview_hello_world_2022_alt_text: "动画化漂浮在地球插图周围的宇航员和动物角色"
   hoc_overview_title: "来自 Code.org 的编程一小时活动"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">编程一小时</a>是一个全球性的活动，在全球 180 多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试有 500 多个、支持45种语言的编程一小时教程。"
   hoc_overview_subtitle_markdown: "[编程一小时](https://hourofcode.com)是一个全球性的活动，在全球 180 多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试支持45种语言的500+多个编程一小时课程。"
@@ -1620,9 +1624,13 @@
   hoc2018_mc_educators_box3_title: "参加免费的学生工场"
   hoc2018_mc_educators_box3_desc: "加入你附近微软商店的免费编程一小时工场。所有技能级别，年龄在6岁以上。"
   hoc2018_mc_educators_box3_button: "找到工场"
+  hoc2022_mc_educators_box3_desc_markdown: '使用这个按需提供的[免费课程](%{free_course_link})或为整个班级注册与客座老师一起进行的实时编程一小时研讨会。在12月6日至11日的CSEW期间多次提供。 '
+  hoc2022_mc_educators_box3_button: "马上注册 "
   hoc2018_mc_educators_box4_title: "更多计算机科学资源"
   hoc2018_mc_educators_box4_desc: "从微软带来改变社区的数字技能和计算机科学教育资源。"
   hoc2018_mc_educators_box4_button: "探索资源"
+  hoc2022_mc_educators_box4_desc: "在专业开发的支持下，通过200小时的计算机科学课程（从模块到python），激发K-12学生对STEM的热情。"
+  hoc2022_mc_educators_box4_button: "继续学习"
   hoc2018_mc_watch_videos: "在开始之前，看一段鼓舞人心的视频"
   hoc2018_mc_videos_more: "更多由榜样人物和明星出演的<a href='%{inspiring_videos_playlist}'>鼓舞人心的视频</a>"
   hoc2018_mc_careers_more: "更多由科技人士拍摄的的<a href='%{careers_url}' target='_blank'>鼓舞人心的视频</a>"
@@ -1738,6 +1746,10 @@
   hoc2021_mc_mee_villages_description: '在 Minecraft：教育版中学习编程基础知识，与学生一起探索多样性和包容性。'
   hoc2021_mc_mee_ai_title: "人工智能为行善"
   hoc2021_mc_mee_ai_description: '与学生一起探索 AI，并在 Minecraft：教育版中学习编程。'
+  hoc2022_mc_mee_title: "我的世界逃生庄园"
+  hoc2022_mc_mee_description: '在黎明前逃离神秘的豪宅，赚取一百万颗翡翠！新鲜出炉的我的世界编程一小时教程现已在《我的世界：教育版》中推出，适用于Windows、Mac、Chromebook、Ipad和移动设备。开始使用免费的教育工作者资源、培训和视频。 '
+  hoc2022_mc_mee_timecraft_description: '在《我的世界：教育版》的这个免费编程课中，进行时间旅行，拯救未来。'
+  footer_powered_by_aws: "亚马逊网络服务（Amazon Web Services）和“由AWS提供支持”徽标是Amazon.com，Inc.，或者其在美国/其他国家内的附属公司的商标。"
   footer_built_on_github: "在微软的 GitHub 上构建"
   codebytes_skinny_banner_title: "加入我们12月7-11日的 CodeBytes 直播迷你课程！"
   codebytes_skinny_banner_description: '加入我们 CodeBytes 计算机科学教育周的每日课程，20分钟的交互式计算机科学课程。每天两次流媒体直播，CodeBytes 是学生参与虚拟 #HourOfCode 的好方法！'
@@ -1794,6 +1806,8 @@
   ai_ibm_machine_learning_for_kids: 'IBM：面向儿童的机器学习'
   ai_ecs: 'ECS：人工智能 (AI)'
   ai_ecs_description: "探索计算机科学（ECS）课程的新的替代课程单元。"
+  ai_aiedu_intro: 'aiEDU：人工智能简介'
+  ai_aiedu_intro_description: "AI入门是一个免费、创新、与文化相关的课程，学生可以在其中培养关于人工智能的概念，以及如何在现实生活中使用它。"
   ai_elements: "人工智能的要素"
   ai_elements_description: "Reaktor 和赫尔辛基大学创建的一系列免费在线课程。"
   ai_cognimates: "Cognimates"
@@ -1805,5 +1819,21 @@
   footer_cookie_notice: "Cookie通知"
   top_hoc_tutorial_applab_alt_text: "一只用食指触碰触屏平板电脑的棕色手，在蓝色背景下发射星星和光线"
   minecraft_tile_alt: "《我的世界》中的两个角色：史蒂夫和亚历克斯，背景是一个带珊瑚、海豚和海带的水生我的世界场景"
+  hoc2022_banner_title: "探索，玩耍，创造！"
+  hoc2022_banner_description: "探索宇宙，进球得分，跳舞 — 尝试计算机科学的方法如此之多！"
+  hoc2022_cta_primary: "看看有什么新内容"
+  hoc2022_cta_secondary: "尝试更多活动"
+  hoc2022_landing_page_explore_title: "发现"
+  hoc2022_landing_page_explore_description: "用计算机科学打开通往新世界的大门！"
+  hoc2022_landing_page_play_title: "玩"
+  hoc2022_landing_page_play_description: "上场得分！"
   hoc2022_landing_page_create_title: "创建"
+  hoc2022_landing_page_create_description: "做一些怪异而美妙的东西！"
+  hoc2022_landing_page_banner_alt_left: "一个外星人在太空中的土星旁跳舞"
+  hoc2022_landing_page_banner_alt_right: "一个机器人在太空中起飞的火箭前盘带足球"
   try_it_yourself: "自己试一试！"
+  try_an_activity: "尝试一个活动"
+  see_more_activities: "尝试更多活动"
+  hoc2022_nasa_webb_alt_text: "NASA詹姆斯·韦伯望远镜的插图"
+  hoc2022_nasa_banner_heading: "加入NASA并观看关于太空计算机科学的《编程一小时》特别节目！"
+  hoc2022_nasa_banner_description: "美国东部时间12月5日上午10点，在NASA STEM的YouTub频道上首播。"

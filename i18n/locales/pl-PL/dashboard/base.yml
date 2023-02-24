@@ -270,6 +270,7 @@ pl:
   teacher_mailer:
     new_teacher_subject: 'Witaj na Code.org!'
     delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
+    verified_teacher_subject: 'Weryfikacja nauczyciela Code.org — sukces'
   section:
     your_section:
       one: 'Twoja sekcja:'
@@ -377,6 +378,7 @@ pl:
       help_us: "Pomóż nam"
       teach: "Ucz"
       about: "O programie"
+      incubator: "Inkubator"
       legal: "Prywatność i legalność"
       legal_privacy: "Polityka prywatności"
       legal_cookie_notice: "Informacja o plikach cookie"
@@ -609,6 +611,7 @@ pl:
     store: 'Skład'
     cookie_notice: 'Informacja o plikach cookie'
     view_code: 'Obejrzyj kod'
+    locale_select: "Wybierz język"
   reference_area:
     title: 'Czy potrzebujesz pomocy?'
     subtitle: 'Zobacz te filmiki i wskazówki'
@@ -633,6 +636,8 @@ pl:
       applab_unsupported_tablet: "App Lab działa najlepiej na komputerze stacjonarnym lub laptopie z myszką i klawiaturą. W przypadku korzystania z tych narzędzi na obecnym urządzeniu, mogą wystąpić problemy."
       gamelab_unsupported_tablet: "Game Lab działa najlepiej na komputerze stacjonarnym lub laptopie z myszką i klawiaturą. W przypadku korzystania z tych narzędzi na obecnym urządzeniu, mogą wystąpić problemy."
       weblab_unsupported_locale_storage: "Mogą wystąpić problemy w czasie używania Web Lab w trybie prywatnego przeglądania. Prosimy o przeładowanie projektu w zwykłym trybie przeglądarki. Przepraszamy za niedogodności."
+  deprecation:
+    algebra_lab: "Program nauczania i treści informatyki w algebrze są przestarzałe. W ciągu najbliższych kilku miesięcy, to laboratorium nie będzie już dostępne. Proszę sprawdzić zamiast tego [Bootstrap: Algebra] (%{bootstrap_algebra_url}). [Dowiedz się więcej] (%{cs_algebra_url})."
   slow_loading: 'To trwa dłużej niż zwykle...'
   try_reloading: 'Spróbuj odświeżyć stronę'
   next_stage: 'Skończyłeś! Przejdź do następnego etapu'
@@ -671,82 +676,156 @@ pl:
       body_short: "Zaprojektuj aplikację i zakoduj za pomocą bloków lub JavaScript, aby działała, następnie natychmiast udostępnij swoją aplikację."
       audience: 'Wiek 13+'
       cta: 'Zobacz instrukcję'
-    dance:
-      title: 'Potańcówka'
+      image_alt: 'Fioletowy króliczek ubrany w plecak zasilany rakietą.'
+    applab-intro:
+      image_alt: 'Ręka dotykająca środka ekranu smartfona. Światło i błyskotki wychodzce z ekranu.'
+    aquatic:
+      title: "Minecraft"
+      image_alt: 'Steve i Alex z Minecrafta patrzą na ciebie.'
+    artist:
+      image_alt: 'Kreskówkowa osoba trzymająca ogromny ołówek i rysująca trójkąt.'
+    conditionals:
+      image_alt: 'Dwie ręce tasujące talię kart do gry.'
+    course1:
+      image_alt: 'Trzmiel Code.org i pomarańczowa ryba stojące przed jakimś kodem.'
+    course2:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających zielonego czarodzieja, artystę i pomarańczową rybę.'
+    course3:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających grę, zombie i ninja.'
+    course4:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających piłkę nożną, zwierzęta domowe i artystę.'
+    coursea:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających słonia i wiewiórkę.'
+    courseb:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających odkrywcę, klejnoty i kwiat.'
+    coursec:
+      image_alt: 'Kolaż łamigłówek Code.org pokazujących wiewiórkę, liczby binarne i czerwonego ptaka z gry Angry Birds.'
+    coursed:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających pszczołę, kwiaty, miód i zieloną świnię z gry Angry Birds.'
+    coursee:
+      image_alt: 'Kolaż łamigłówek Code.org przedstawiających osobę trzymającą łopatę, dynię, sad i krowę.'
+    coursef:
+      image_alt: 'Kolaż łamigłówek Code.org ukazujących kolorowe geometryczne kształty, czerwonego pirata i artystę.'
     dance-2019:
       title: 'Potańcówka'
-    hello-world:
-      title: 'Witaj świecie'
-      body: 'Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne postacie w tworzonym przez siebie świecie.'
-    poem-art:
-      title: 'Sztuka poezji '
-      body: 'Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.'
-    hoc:
-      title: 'Klasyczny labirynt'
-      body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'
+      image_alt: 'Szczęśliwy kot, leniwiec, i taniec rekina.'
+    dance-2022:
+      image_alt: 'Zielony kosmita i robot tańczący z Saturnem w tle.'
+    dance:
+      title: 'Potańcówka'
+      image_alt: 'Fajny kot i szczęśliwy rekin tańczący na imprezie.'
+    donate:
+      image_alt: 'Dziecko wskazujące na ekran laptopa pokazujący łamigłówkę Code.org.'
+    elementary:
+      image_alt: 'Trzmiel i wiewiórka stojące na polu przed tęczą.'
+    express:
+      image_alt: 'Plants vs Zombies zombi i roślina stojąca obok Flappy Bird.'
     flappy:
       title: 'Kod Flappiego'
       body: 'Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz samouczek dla kodowania Flappiego!'
-    20-hour:
-      title: 'Przyspieszony kurs'
-      body: 'Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18 lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!'
-      body_short: 'Poznaj podstawy informatyki w przyspieszonej wersji kursów 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji beta'
-      try_frozen: 'Artysta z Anną i Elsą, z Frozen'
+      image_alt: 'Żółty ptak latający między zielonymi rurami.'
+    frozen:
+      title: "Kraina lodu (Frozen)"
+      image_alt: 'Anna i Elsa z filmu Kraina lodu. Pomiędzy nimi jest obraz Anny rysującej łyżwami ładny kształt na lodzie.'
     gallery:
       title: "Galeria"
       body: "Zobacz galerię aplikacji i artystycznych obrazów utworzonych przez naszych użytkowników"
+      image_alt: 'Artysta rysujący wiele okręgów i kota, nietoperza i ducha stojących w krainie zimowych wakacji.'
     gamelab:
       title: "Laboratorium Gier (Game Lab)"
       body: "Laboratorium Gier (Game Lab) jest środowiskiem programistycznym, w którym możesz wykonać proste animacje i gry używając obiektów i postaci, które współdziałają ze sobą."
       audience: "Wiek 13+"
       cta: "Zobacz instrukcję"
+      image_alt: 'Wiele kreskówek ludzi i zwierząt stojących na chodniku i uśmiechniętych.'
+    hello-world-food:
+      image_alt: 'Wiele zwierząt, kosmitów i emotikonów krążących wokół Ziemi.'
+    hello-world:
+      title: 'Witaj świecie'
+      body: 'Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne postacie w tworzonym przez siebie świecie.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu."
+      image_alt: 'Żelazny Golem z Minecrafta stojący przed widokiem Anny rozwiązującej łamigłówkę.'
     hoc-encryption:
       title: "Proste szyfrowanie"
       body: "Uczniowie poznają techniki tworzenia i łamania zaszyfrowanych wiadomości."
+      image_alt: 'Wykres słupkowy częstotliwości liter w języku angielskim.'
+    hoc:
+      title: 'Klasyczny labirynt'
+      body: 'Wypróbuj podstawy informatyki. Miliony dały im już szansę.'
+      image_alt: 'Kolaż obrazów przedstawiających kod, Marka Zuckerberga i Angry Birds.'
+    hourofcode:
+      image_alt: 'Kolaż obrazów przedstawiających kod, Marka Zuckerberga i Angry Birds.'
+    hoc2014:
+      try_new_tutorial: 'Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji beta'
+      try_frozen: 'Artysta z Anną i Elsą, z Frozen'
+    infinity:
+      title: "Infinity Play Lab"
+      body: "Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych."
+      image_alt: 'Pięć postaci z Krainy Lodu, Splątany i Big Hero 6 stojących razem.'
+    map:
+      image_alt: 'Szary obraz Stanów Zjednoczonych z około 20 stanami podświetlonymi na fioletowo.'
+    mc_escape:
+      image_alt: 'Postać z Minecrafta w cylindrze i monoklu otwierająca skrzynię skarbów pełną szmaragdów.'
+    mc:
+      image_alt: 'Anna i Steve z Minecrafta stojący przed łamigłówką Code.org Minecraft.'
+    minecraft:
+      title: "Minecraft"
+      body: "Odkrywaj świat Minecraft poprzez kodowanie."
+      image_alt: 'Anna i Steve z Minecrafta stojący przed łamigłówką Code.org Minecraft.'
+    minecraft2016:
+      title: "Minecraft"
+      body: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecrafta."
+    oceans:
+      image_alt: 'Robot w oceanie skanujący różne stworzenia morskie.'
+    playlab:
+      image_alt: 'Kolaż zdjęć przedstawiających niebieskiego kota, głupkowatego psa i prehistoryczną łasic.ę'
+    poem-art:
+      title: 'Sztuka poezji '
+      body: 'Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.'
+      image_alt: 'Hipsterska kałamarnica występująca na scenie.'
+    pre-express-2017:
+      image_alt: 'Pies i jednorożec stojący przed drzewem z puzzli.'
+    pre-express-2018:
+      image_alt: 'Pies i jednorożec stojący przed drzewem z puzzli.'
+    pre-express-2019:
+      image_alt: 'Pies i jednorożec stojący przed drzewem z puzzli.'
+    pre-express:
+      image_alt: 'Pies i jednorożec stojący przed drzewem z puzzli.'
+    sports:
+      title: "Zawody"
+      body: "Stwórz grę w koszykówkę lub mieszankę różnych sportów."
+      image_alt: 'Logo NBA i WNBA wyświetlane obok piłki nożnej, piłki nożnej, krążka hokejowego i koszykówki.'
+    starwars:
+      title: "Gwiezdne Wojny"
+      image_alt: 'R2-D2, Leia, Rey i BB-8 stojący na pustyni.'
+    text-compression:
+      title: "Kompresja tekstu"
+      body: "Na tej lekcji uczniowie użyją Widżetu Kompresji Tekstu, by skompresować tekst, zastępując wzorce symbolami."
+      image_alt: 'Tekst skompresowany przez zastąpienie całych słów jednym symbolem.'
     weblab:
       title: "Laboratorium Sieci (beta)"
       body: "Web Lab (Laboratorium sieci) to środowisko programowania, w którym możesz tworzyć proste strony internetowe za pomocą HTML i CSS. Zaprojektuj swoją stronę i udostępnij ją natychmiast."
       audience: "Wiek 13+"
       cta: "Zobacz instrukcję"
-    frozen:
-      title: "Kraina lodu (Frozen)"
-    starwars:
-      title: "Gwiezdne Wojny"
-    infinity:
-      title: "Infinity Play Lab"
-      body: "Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych."
-    minecraft:
-      title: "Minecraft"
-      body: "Odkrywaj świat Minecraft poprzez kodowanie."
-    minecraft2016:
-      title: "Minecraft"
-      body: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecrafta."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu."
-    sports:
-      title: "Zawody"
-      body: "Stwórz grę w koszykówkę lub mieszankę różnych sportów."
-    text-compression:
-      title: "Kompresja tekstu"
-      body: "Na tej lekcji uczniowie użyją Widżetu Kompresji Tekstu, by skompresować tekst, zastępując wzorce symbolami."
-    unplugged:
-      title: "Lekcje nie wymagające komputera"
-      audience: "Wiek 4+"
-      body: "Przygotowaliśmy zestaw lekcji do użytku w Twojej klasie, niewymagających użycia komputera, Teraz możesz uczyć podstaw informatyki bez względu na to, czy masz komputery w swojej klasie, czy nie! Możesz użyć tych lekcji w samodzielnym kursie lub jako dodatku w jakimkolwiek kursie."
-      body_short: "Jeżeli nie macie dostępu do komputerów, to wypróbujcie w klasie te lekcje bez komputerów."
-    unplugged_conditionals:
-      title: "Zdania z warunkami"
-      body: "Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera, przy użyciu talii kart."
+      image_alt: 'Ekran komputera wyświetlający kod HTML.'
     widgets:
       title: "Widżety"
       body: "Uczniowie mogą odkrywać pojęcia z naszego kursu Zasady Informatyki w praktyczny sposób, za pomocą tych narzędzi cyfrowych. Użyj samych widżetów lub stwórz jednowymiarową lekcję dla swojej klasy."
       audience: "W wieku 14+"
       cta: "Zobacz instrukcję"
+    unplugged_conditionals:
+      title: "Zdania z warunkami"
+      body: "Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera, przy użyciu talii kart."
+    unplugged:
+      title: "Lekcje nie wymagające komputera"
+      audience: "Wiek 4+"
+      body: "Przygotowaliśmy zestaw lekcji do użytku w Twojej klasie, niewymagających użycia komputera, Teraz możesz uczyć podstaw informatyki bez względu na to, czy masz komputery w swojej klasie, czy nie! Możesz użyć tych lekcji w samodzielnym kursie lub jako dodatku w jakimkolwiek kursie."
+      body_short: "Jeżeli nie macie dostępu do komputerów, to wypróbujcie w klasie te lekcje bez komputerów."
+    20-hour:
+      title: 'Przyspieszony kurs'
+      body: 'Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18 lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!'
+      body_short: 'Poznaj podstawy informatyki w przyspieszonej wersji kursów 2-4.'
   landing:
     prerelease_tutorial: "Ten poradnik występuje w wersji **beta**. Podlega on weryfikacji w oparciu o otrzymane informacje zwrotne i wprowadzane są poprawki."
     report_bug: "Zgłoś błędy"
@@ -1162,8 +1241,21 @@ pl:
       forbidden: "Użytkownik nie może zaktualizować stanu blokady ucznia"
   reset_predict_progress_button: "Usuń odpowiedź"
   pixelation:
+    raw_format: "Format wiersza"
+    raw_format_alt: "Wyświetl bity bez formatowania"
+    readable_format: "Czytelny format"
+    readable_format_alt: "Wyświetl bity oddzielone pikselami"
     save_image: "Zapisz obraz"
+    actual_size: "Aktualny rozmiar"
+    image_file_format_header: "Format pliku obrazu"
+    image_file_format_width: "Szerokość: 1 bajt"
+    image_file_format_height: "Wysokość: 1 bajt"
+    image_file_format_bits_per_pixel: "Bity na piksel: 1 bajt"
+    image_file_format_data_a: "n bitów danych pikseli"
+    image_file_format_data_b: "n = Szerokość * Wysokość * Bity na piksel"
     image_width: "Szerokość obrazu"
     image_height: "Wysokość obrazu"
+    bits_per_pixel_header: "Bity na piksel"
     binary: "Binarny"
     hexadecimal: "Szesnastkowy"
+    pixel_format_header: "Format pikseli"

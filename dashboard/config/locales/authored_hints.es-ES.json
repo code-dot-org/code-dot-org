@@ -896,7 +896,7 @@
           "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos puentes para que Alex o Steve puedan caminar más allá de los límites del mapa."
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
@@ -906,7 +906,7 @@
           "courseC_flappy_events3_a": "Si algo no está funcionando correctamente, asegúrate de que tus bloques estén conectados a los eventos correctos en el espacio de trabajo."
         },
         "OPD-K5-events-5": {
-          "courseC_flappy_events4_a": "Conecta el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este desafío."
+          "courseC_flappy_events4_a": "Conecta el bloque `final del juego` a` cuando golpee un obstáculo` para resolver este desafío."
         },
         "OPD-K5-events-6": {
           "courseC_flappy_events5_a": "Deberás usar el bloque `marcar un punto` para pasar este nivel."
@@ -927,7 +927,7 @@
         "OPD-K5-forloops-6": {
           "courseF_bee_for6_a": "No te olvides de utilizar una variable 'contador' dentro de tu bucle ´repetir´,",
           "courseF_bee_for6_b": "Dentro de tu bucle 'desde', tendrás que tener un comando 'avanzar' y un bucle para recolectar néctar.",
-          "courseF_bee_for6_c": "Tu bucle debe contar \\*\\* de 5 a 1 \\*\\*."
+          "courseF_bee_for6_c": "Tu bucle debe contar ** de 5 a 1 **."
         },
         "OPD-K5-forloops-7": {
           "courseF_bee_for7_a": "Tu loop 'desde' deberá contar de 1 a 7 en incrementos de 2.",
@@ -940,12 +940,12 @@
           "courseE_playLab_scaffold1_c": "Usa ¨set ??? Fondo¨para elegir un fondo para tu escena."
         },
         "OPD-K5-projects-3": {
-          "courseE_playLab_scaffold1_a": "Abre el menú desplegable del evento 'cuando \\_\\_\\_ flecha' para cambiar la dirección de los controles de bloqueo.",
+          "courseE_playLab_scaffold1_a": "Abre el menú desplegable del evento 'cuando ___ flecha' para cambiar la dirección de los controles de bloqueo.",
           "courseE_playLab_scaffold1_b": "Debes tener cuatro 'cuando flecha' bloques de eventos, con una dirección para abrir debajo de cada uno.",
           "courseE_playLab_scaffold1_c": "Cuando hayas terminado, ¡podrás mover a tu héroe con las teclas de flecha!"
         },
         "OPD-K5-projects-5": {
-          "courseE_playLab_scaffold4_a": "Usa `anotar punto` para agregar un punto, y`quitar punto` para restar uno."
+          "courseE_playLab_scaffold4_a": "Usa `anotar punto` para agregar un punto, y` quitar punto` para restar uno."
         },
         "OPD-K5-variables-1": {
           "grade5_artist_variables_triangles1_a": "Para hacer un ángulo interior de 60 grados en este triángulo, recuerda girar al artista 120 grados.",
@@ -962,14 +962,14 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "El código no será muy diferente de lo que fue en el último desafío, excepto que tendrás que girar al artista para saltar hacia abajo, y luego hacerlo dar la vuelta para estar listo para saltar hacia adelante otra vez.",
-          "courseF_artist_variables4_c": "Este es el patrón que seguirá tu artista:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_c": "Este es el patrón que seguirá tu artista:\n\n[][0]",
+          "courseF_artist_variables4_b": "[bloque de bloques][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "La segunda mitad de tu código debe tener casi el mismo aspecto que la primera mitad, salvo que girarás a la _izquierda_, saltarás y girarás a la _derecha_.",
           "courseF_artist_variables5_b": "La primera mitad de tu código dibujará tres triángulos, y la segunda mitad dibujará los otros tres.",
           "courseF_artist_variables5_c": "Comienza por duplicar el código en la primera mitad de tu programa, luego modifícalo para que se muestre el dibujo.",
-          "courseF_artist_variables5_d": "Este es el patrón que seguirá tu artista:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "Este es el patrón que seguirá tu artista:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?",
@@ -4892,7 +4892,7 @@
         },
         "courseC_starWars_loops5_copy": {
           "courseC_starWars_loops5_b": "Para moverte hacia abajo, debes girar y luego avanzar.",
-          "courseC_starWars_loops5_a": "La mejor solución utiliza un giro, luego solo un \\`avanzar ', otro giro y luego un bucle."
+          "courseC_starWars_loops5_a": "La mejor solución utiliza un giro, luego solo un `avanzar ', otro giro y luego un bucle."
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "Intenta escribir todos los movimientos en un papel y busca un patrón.",
@@ -4912,7 +4912,7 @@
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "Intenta escribir todos los movimientos en un papel y busca un patrón.",
-          "courseC_starWars_loops6_b": "Si deseas utilizar menos código, ¡puedes poner un bucle `repetir'`dentro de otro!\\\\ \nA esto se le llama **bucle anidado**."
+          "courseC_starWars_loops6_b": "Si deseas utilizar menos código, ¡puedes poner un bucle `repetir'`dentro de otro!\\ \nA esto se le llama **bucle anidado**."
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "¡Este patrón parece más difícil de lo que es! Comienza con un simple escalón. ¿Eso cubre toda la chatarra?",
@@ -4962,7 +4962,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "Trata de pensar sobre este problema en pequeñas partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!",
           "course_starWars_loops8_b": "Piensa en la primera parte de este problema como un problema del escalón. ¿Cómo resolviste eso antes?",
-          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "Puedes poner más de un bloque dentro de un bucle `repetir`.",
@@ -5570,7 +5570,7 @@
           "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals1_predict1_copy": {
-          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque ` si ` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
@@ -5655,8 +5655,8 @@
         "courseD_bee_conditionals4_copy": {
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
-          "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
+          "courseD_bee_conditionals4_b": "Usa una afirmación `si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
+          "courseD_bee_conditionals4_c": "Usa un bloque [bloque blockly][0] para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
           "courseD_bee_conditionals4_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals5": {
@@ -5676,7 +5676,7 @@
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Crea un bucle anidado con un bloque `repetir` en el exterior y un bucle`mientras haya camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
-          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá avanzar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras recorre el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`recoger néctar`.",
+          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá avanzar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras recorre el camino, la abeja tiene que comprobar si hay una flor. ` si hay una flor`, la abeja debería` recoger néctar`.",
           "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que haya un camino delante` tendrás que avanzar y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
           "courseD_bee_conditionals5_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
@@ -7110,7 +7110,7 @@
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "La función que escribes no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixeles.",
           "courseD_artist_functions2_c": "Utiliza el bloque verde 'dibujar un cuadrado' para \"llamar\" a tu función debajo del bloque 'cuando ejecutar'. De lo contrario, el código en la función no se ejecutará.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "El programa debe:\n\n-   Usar la función\n-   Avanzar 100 + 75 pixeles\n-   Usar la función"
+          "courseD_artist_functions2_a": "El programa debe:\n\n- Usar la función\n- Avanzar 100 + 75 pixeles\n- Usar la función"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Para resolver este desafío, sólo necesitas agregar un loop que repita el código de inicio 8 veces.\n\nSi no puedes recordar cuál era el código de inicio, haz clic en \"comenzar de nuevo\" en la esquina superior derecha del espacio de trabajo.",
@@ -12768,6 +12768,12 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Para configurar el tamaño de un sprite una sola vez, puedes utilizar este bloque:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Si quieres cambiar el tamaño de un sprite una y otra vez (con eventos), utiliza este bloque:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Para hacer que el sprite diga algo, conecta los bloques de código así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Para hacer que el sprite diga algo, conecta los bloques de código así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

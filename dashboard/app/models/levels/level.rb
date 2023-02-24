@@ -91,6 +91,7 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
+    start_html
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -380,7 +381,7 @@ class Level < ApplicationRecord
 
   def self.where_we_want_to_calculate_ideal_level_source
     where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-    where('ideal_level_source_id is null').
+    where(ideal_level_source_id: nil).
     to_a.reject {|level| level.try(:free_play)}
   end
 

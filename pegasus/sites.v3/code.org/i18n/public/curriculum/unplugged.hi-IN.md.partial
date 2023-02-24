@@ -20,8 +20,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## Unplugged lessons in CS Fundamentals 2022-23
-The following lessons can be found in <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
+## CS Fundamentals पर अनप्लग्ड पाठ 2022-23
+निम्नलिखित पाठ यहाँ मिल सकते हैं: <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -103,29 +103,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. किसी प्रोग्राम को लिखते वक्त हमारे पास हमेशा सभी जानकारियां नहीं होती है। कभी-कभी आप को अलग-अलग परिस्थितियों में अलग कार्य करना पड़ता है, भले ही आपको पता न हो कि आपका कोड रन होने पर कौन सी स्थिति सही होगी। ऐसे मामलों में कंडीशनल्स काम आता है। Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. किसी प्रोग्राम को लिखते वक्त हमारे पास हमेशा सभी जानकारियां नहीं होती है। कभी-कभी आप को अलग-अलग परिस्थितियों में अलग कार्य करना पड़ता है, भले ही आपको पता न हो कि आपका कोड रन होने पर कौन सी स्थिति सही होगी। ऐसे मामलों में कंडीशनल्स काम आता है। कंडीशनल कंप्यूटर को उस जानकारी के आधार पर निर्णय लेने की अनुमति देते हैं जो किसी भी समय आपका कोड चलाए जाने पर सही होती है.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
   </tr>
   <tr>
     <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. फ़ंक्शंस (कभी-कभी प्रक्रियाएँ कहा जाता है) छोटे प्रोग्राम हैं जिनका उपयोग आप अपने बड़े प्रोग्राम के अंदर बार-बार कर सकते हैं। This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>कंप्यूटर विज्ञान की दुनिया में सबसे शानदार संरचनाओं में से एक फंक्शन है। फ़ंक्शंस (कभी-कभी प्रक्रियाएँ कहा जाता है) छोटे प्रोग्राम हैं जिनका उपयोग आप अपने बड़े प्रोग्राम के अंदर बार-बार कर सकते हैं। इस पाठ से छात्र सहज रूप से यह समझ सकेंगे कि कोड के टुकड़ों को कार्यों में जोड़ना इतना उपयोगी अभ्यास क्यों हो सकता है।</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - अभिगम्यता के लिए डिजाइनिंग</a><br><small>इस पाठ में, छात्र विचार-मंथन के माध्यम से अभिगम्यता और सहानुभूति के मूल्य के बारे में जानेंगे और काल्पनिक ऐप्स के लिए सुलभ समाधान तैयार करेंगे।</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - डिजिटल शेयरिंग</a><br><i>*आपूर्ति: स्मार्टफोन या टैबलेट</i><br><small>कॉपीराइट और रचनात्मकता पर टीम द्वारा कंप्यूटर विज्ञान की बुनियादी बातें बताई गई, यह पाठ छात्रों को स्वामित्व और कॉपीराइट का सम्मान करने की चुनौतियों और लाभों को समझने में मदद करने के लिए मौजूद है, विशेष रूप से डिजिटल वातावरण में। नैतिक डिजिटल नागरिक होने के एक महत्वपूर्ण हिस्से के रूप में छात्रों को कलाकारों के अधिकारों का सम्मान करने के लिए प्रोत्साहित किया जाना चाहिए।</td><td>डिजिटल नागरिकता</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
     <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*आपूर्ति: 6 लिफाफे (यह भी उपयुक्त: कागज या इंडेक्स कार्ड, आधा मुड़ा हुआ;)</i><br><small>कंप्यूटर उपयोगकर्ता से इनपुट कैसे लेते और संग्रहीत करते हैं, यह समझने के लिए छात्र एक संदर्भ के रूप में खाली स्थान भरने वाली खाली कहानियों (Mad Libs® के समान) का उपयोग करेंगे, फिर बाद में प्रोग्राम चलाने के रूप में इसका उपयोग करेंगे।
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. ये नई संरचनाएं छात्रों को अधिक शक्तिशाली और गतिशील कोड बनाने की अनुमति देगी।</td><td>फॉर लूप (For Loop) </td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. इस पाठ में, छात्र कनेक्शन, URLs, IP पते और DNS के बारे में सीखते हुए इंटरनेट के माध्यम से बहने का ढोंग करेंगे।</td><td>डेटा</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15- इंटरनेट</a><br><small>भले ही बहुत से लोग प्रतिदिन इंटरनेट का उपयोग करते हैं, लेकिन बहुत से लोग यह नहीं जानते कि यह कैसे काम करता है। इस पाठ में, छात्र कनेक्शन, URLs, IP पते और DNS के बारे में सीखते हुए इंटरनेट के माध्यम से बहने का ढोंग करेंगे।</td><td>डेटा</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
 <p style="clear:both"></p>

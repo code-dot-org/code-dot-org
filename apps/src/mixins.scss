@@ -1,0 +1,33 @@
+// Removes (most) default button styling. Useful for retaining a clickable component's
+// original presentation when converting it to a <button>
+@mixin remove-button-styles(
+  $color: false,
+  $font-size: false,
+  $line-height: false
+) {
+  @if $color {
+    color: $color;
+  }
+
+  @if $font-size {
+    font-size: $font-size;
+  }
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:active {
+    border: none !important;
+  }
+}

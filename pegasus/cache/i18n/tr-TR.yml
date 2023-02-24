@@ -814,6 +814,7 @@ tr-TR:
   volunteer_engineer_submission_distance_16: 10 mil
   volunteer_engineer_submission_distance_24: 15 mil
   volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_distance_80: 50 mil
   volunteer_engineer_submission_num_volunteers_5: 5 gönüllü
   volunteer_engineer_submission_num_volunteers_10: 10 gönüllü
   volunteer_engineer_submission_num_volunteers_25: 25 gönüllü
@@ -941,9 +942,9 @@ tr-TR:
   dashboard_progress_not_started: Başlatılmadı
   dashboard_progress_in_progress: İşlem devam ediyor
   dashboard_progress_not_completed: tamamlanmadı
-  dashboard_progress_completed_too_many_blocks: tamamlanmadı, fazla blok var
+  dashboard_progress_completed_too_many_blocks: tamamlandı, fazla blok var
   dashboard_progress_completed_perfect: tamamlandı, harika
-  dashboard_progress_furthest_level_attempted: denenen en yüksek seviye
+  dashboard_progress_furthest_level_attempted: en yüksek seviye denendi
   dashboard_progress_submitted: gönderildi
   dashboard_progress_view: İlerlemeyi Görüntüle
   dashboard_progress_student_in_script: İlerleme bilgilerini %{script_name} %{student_name}
@@ -1164,7 +1165,7 @@ tr-TR:
   hoc2014_try_new_tutorials: Yeni Kod Saati eğitimlerimizi deneyin
   hoc2014_try_new_tutorial: Yeni Kod Saati eğitimimizi beta halinde deneyin
   hoc2014_try_scrat: Angry Birds, PvZ  ve Scrat
-  hoc2014_try_frozen: Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı
+  hoc2014_try_frozen: Frozen'dan Anna ve Elsa ile birlikte bir sanatçı
   carousel_heading_codeorg: Code.org eğitimleri
   carousel_heading_codeorg_any_device: Code.org tarafından (bütün cihazlar için) eğitimler
   carousel_heading_3rd_party: Üçüncü taraf eğitimleri
@@ -1249,7 +1250,7 @@ tr-TR:
   projguts_name: Taş,Kağıt, Makas
   hourofcode_name: Klasik Labirent
   playlab_name: Oyun Laboratuvarı
-  infinity_name: Sınırsız oyun laboratuarı
+  infinity_name: Infinity Play Lab
   artist_name: Sanatçı
   monstercoding_name: Gizemli Ada Kodlama Macerası
   allcancode_name: Çalış Maco!
@@ -1297,15 +1298,26 @@ tr-TR:
   coursed-2020_name: Kurs D (2020)
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
+  coursea-2021_name: Kurs A (2021)
+  courseb-2021_name: Kurs B (2021)
+  coursec-2021_name: Kurs C (2021)
   coursed-2021_name: Kurs D (2021)
-  coursed-2022_name: Kurs D (2021)
+  coursee-2021_name: Kurs E (2021)
+  coursef-2021_name: Kurs F (2021)
+  coursea-2022_name: Kurs A (2022)
+  courseb-2022_name: Kurs B (2022)
+  coursed-2022_name: Kurs D (2022)
+  coursee-2022_name: Kurs E (2022)
+  coursef-2022_name: Kurs F (2022)
   express-2018_name: Hızlı Kurs
   pre-express-2018_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2018)
   express-2019_name: Hızlandırılmış Kurs (2019)
   pre-express-2019_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2019)
   express-2020_name: Hızlandırılmış Kurs (2020)
   pre-express-2020_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2020)
+  express-2021_name: Hızlandırılmış Kurs (2021)
   pre-express-2021_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2021)
+  express-2022_name: Hızlandırılmış Kurs (2022)
   pre-express-2022_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2022)
   csd2_name: Ünite 2 - Ağ Geliştirme
   csd3_name: Ünite 3 - Animasyonlar ve Oyunlar
@@ -1329,7 +1341,7 @@ tr-TR:
   gamelab_name: Oyun Laboratuvarı
   basketball_name: Basketbol oyunu kodla
   sports_name: Kendi Spor Oyununu Kodla
-  applab_gradelevel: 13 + Yaş grubu
+  applab_gradelevel: 13 + Yaşlar
   applab_shortdescription_congrats: App Lab basit uygulamalar yapabileceğiniz bir
     uygulama geliştirme ortamıdır. Kod blokları ya da JavaScript ile bir uygulama
     yapın ve saniyeler içinde paylaşın
@@ -2154,7 +2166,7 @@ tr-TR:
   header_about_team: Tam takım
   header_about_news: Haber odası
   header_about_evaluation: Değerlendirme
-  header_about_jobs: İş Olanakları
+  header_about_jobs: Kariyer
   header_about_contact: Bize Ulaşın
   header_about_faqs: SSS
   header_learn: Öğren
@@ -2257,7 +2269,8 @@ tr-TR:
   applab_tile_teacher_guide: Öğretmen kılavuzunu görüntüle
   aquatic_name: 'Minecraft: Su Yolculuğu'
   account_sign_up_email_opt_in: Size kurslarımızdaki yenilikler, yerel fırsatlar veya
-    diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
+    diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz? (kabaca
+    ayda bir)
   account_sign_up_child_accept_terms: Code.org hizmetlerini kullanmam için ebeveynlerimin
     veya yasal vasimin izni olduğunu onaylıyorum.
   hoc_overview_dance_title: Dans Partisi
@@ -2266,6 +2279,13 @@ tr-TR:
   hoc_overview_dance_2019_subtitle: Arkadaşlarınızla paylaşmak için bir Dans Partisi
     kodlayın. Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Nicki Minaj ve 34 daha fazlası!
+  hoc_overview_dance_2022_subtitle: Arkadaşlarınızla paylaşmak için bir Dans Partisi
+    kodlayın. Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Disney'in “Encanto”
+    müzikleri ve dahası ile!
+  hoc_overview_hello_world_2022_subtitle: Yarattığınız bir dünyada etkileşimli karakterleri
+    kodlamak için dört eğlenceli temadan birini seçin.
+  hoc_overview_hello_world_2022_alt_text: Hareketli astronot ve hayvan karakterleri,
+    dünya illüstrasyonu etrafında uçuşuyor
   hoc_overview_title: Code.org'dan Kod Saati Aktiviteleri
   hoc_overview_subtitle: <a href="https://hourofcode.com">Kod Saati</a>, 180 ülkede
     milyonlaca öğrenciye ulaşan küresel bir harekettir. Herhangi bir kişi, herhangi
@@ -2339,10 +2359,19 @@ tr-TR:
     Microsoft Mağazasını ziyaret edin. Tüm beceri seviyeleri için katılımcılar en
     az altı yaşında olmalıdır.
   hoc2018_mc_educators_box3_button: Bir dükkan bul
+  hoc2022_mc_educators_box3_desc_markdown: Bunu talep üzerine [ücretsiz kurs](%{free_course_link})
+    kullanın veya konuk bir öğretmenin yürüttüğü canlı bir Hour of Code atölyesine
+    katılmak için tüm sınıfınızı kaydettirin. 6-11 Aralık CSEW sırasında birkaç kez
+    sunulur.
+  hoc2022_mc_educators_box3_button: Şimdi kayıt olun
   hoc2018_mc_educators_box4_title: Daha fazla bilgisayar bilimi kaynağına eriş
   hoc2018_mc_educators_box4_desc: Dijital beceriler ve Microsoft'tan bilgisayar bilimi
     eğitim kaynakları ile topluluğunuzda değişikli yaratın.
   hoc2018_mc_educators_box4_button: Kaynakları keşfet
+  hoc2022_mc_educators_box4_desc: Mesleki gelişimden destek alarak bloktan python'a
+    kadar pek çok konu içeren 200 saatlik bilgisayar bilimleri müfredatı ile K-12
+    öğrencilerinin STEM tutkusuna ilham verin.
+  hoc2022_mc_educators_box4_button: Öğrenmeye Devam Et
   hoc2018_mc_watch_videos: Başlamadan önce ilham veren bu videolardan birini izle
   hoc2018_mc_videos_more: Ünlülerin ve rol modellerinin bulunduğu ilham verici daha
     başka <a href='%{inspiring_videos_playlist}'>videolar</a>
@@ -2375,7 +2404,7 @@ tr-TR:
   hoc2018_mc_teacher_guide: Öğretmen kılavuzunu görüntüle
   hoc2018_mc_minecraft_education: Minecraft eğitim
   hoc2018_mc_continue_learning: Minecraft'la öğrenin.
-  hoc2018_mc_go_to_mc_education: Minecraft Eğitime gidin
+  hoc2018_mc_go_to_mc_education: Minecraft Education'a gidin
   hoc2018_mc_short_description: Kod gücü ile hazine bulmak  ve sualtı dünyalarını
     keşfetmek için yaratıcılığınızı ve problem çözme becerilerinizi kullanın.
   hoc2018_mc_short_description_shorter: Minecraft, Kodlama Saati için yepyeni bir
@@ -2463,8 +2492,8 @@ tr-TR:
   hoc2018_aquatic_video3: Minecraft Su Yolculuğu - Koşullar
   hoc2018_aquatic_video4: Minecraft Su Yolculuğu - Tebrikler
   hoc2018_dance_video1: Dans Kutlaması - Tanıtım
-  hoc2018_dance_video2: Dans Kutlaması - Etkinlikler
-  hoc2018_dance_video3: Dans Kutlaması - Özellikler
+  hoc2018_dance_video2: Dans Partisi - Etkinlikler
+  hoc2018_dance_video3: Dans Partisi - Özellikler
   hoc2018_dance_video4: Dans Kutlaması - Tebrikler
   dance_box_higher_power_line_1: Coldplay'in "Higher Power" şarkısına bir dans kodlayın
     ve grubu canlı izleme şansı yakalayın!
@@ -2517,7 +2546,16 @@ tr-TR:
   hoc2021_mc_mee_ai_title: İyilik İçin Yapay Zeka
   hoc2021_mc_mee_ai_description: 'Öğrencilerinizle yapay zekayı keşfedin ve Minecraft:
     Eğitim Sürümünde kodlamayı öğrenin.'
-  footer_powered_by_aws: Amazon Web Services tarafından desteklenmektedir
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'Şafak vakti gizemli malikaneden kaçın ve bir milyon
+    zümrüt kazanın! Yeni Minecraft Hour of Code eğitimi artık Windows, Mac, Chromebook,
+    Ipad ve Mobil için Minecraft: Education Edition''da. Ücretsiz eğitimci kaynakları,
+    eğitimler ve videolar ile başlayın.'
+  hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition''daki bu ücretsiz
+    kodlama dersinde geleceği kurtarmak için zamanda geriye yolculuk yapın.'
+  footer_powered_by_aws: Amazon Web Services ve "Powered by AWS" logoları Amazon.com,
+    Inc. ve Amerika Birleşik Devletleri ve/veya başka ülkelerdeki uzantılarının tescilli
+    markasıdır.
   footer_built_on_github: Microsoft'tan GitHub üzerinde oluşturuldu
   codebytes_skinny_banner_title: CodeBytes canlı mini derslerimiz için 7-11 Aralık
     tarihlerinde bize katılın!
@@ -2534,7 +2572,7 @@ tr-TR:
   footer_blog: Blog
   footer_donate: Bağış Yap
   footer_store: Mağaza
-  footer_support: Yardım ve Topluluk
+  footer_support: Destek
   footer_terms: Koşullar
   ai_for_oceans: 'Okyanuslar için Yapay Zeka
 
@@ -2603,6 +2641,10 @@ tr-TR:
   ai_ecs: 'ECS: Yapay Zeka'
   ai_ecs_description: Bilgisayar Bilimini Keşif (ECS) müfredatı için yeni ve alternatif
     bir müfredat ünitesi.
+  ai_aiedu_intro: 'AiEdu: Yapay Zekaya Giriş'
+  ai_aiedu_intro_description: Yapay zekaya giriş, öğrencilerin yapay zekanın ne olduğu
+    ve gerçek dünyada nasıl kullanıldığı hakkında kavramsal bilgiler geliştirdikleri
+    ücretsiz, yenilikçi, kültürel açıdan alakalı bir müfredattır.
   ai_elements: Yapay Zeka Unsurları
   ai_elements_description: Reaktor ve Helsinki Üniversitesi'nin hazırladığı bir dizi
     ücretsiz çevrimiçi ders.
@@ -2620,5 +2662,26 @@ tr-TR:
     yayan bir dokunmatik tablete dokunan işaret parmağı olan kahverengi bir el
   minecraft_tile_alt: İki Minecraft karakteri, Steve ve Alex, mercan, yunuslar ve
     yosun ile sulu bir Minecraft sahnesini gösteren bir arka planda
+  hoc2022_banner_title: Keşfet, Oyna, Yarat!
+  hoc2022_banner_description: 'Evreni keşfedin, bir gol atın, bir hamle yapın: Bilgisayar
+    bilimini denemenin pek çok yolu var!'
+  hoc2022_cta_primary: Yeniliklere bakın
+  hoc2022_cta_secondary: Daha fazla aktivite deneyin
+  hoc2022_landing_page_explore_title: Keşfet
+  hoc2022_landing_page_explore_description: Bilgisayar bilimi ile yeni dünyaların
+    kapılarını açın!
+  hoc2022_landing_page_play_title: Oyna
+  hoc2022_landing_page_play_description: Sahaya çık ve puan al!
   hoc2022_landing_page_create_title: Oluştur
+  hoc2022_landing_page_create_description: Tuhaf ve muhteşem bir şey yap!
+  hoc2022_landing_page_banner_alt_left: Uzayda Satürn'ün yanında dans eden bir uzaylı
+  hoc2022_landing_page_banner_alt_right: Uzayda, kalkış modundaki bir roketin önünde
+    futbol topu süren bir robot
   try_it_yourself: Kendiniz deneyin!
+  try_an_activity: Bir aktivite deneyin
+  see_more_activities: Daha fazla etkinlik gör
+  hoc2022_nasa_webb_alt_text: NASA'nın James Webb teleskopunun çizimi
+  hoc2022_nasa_banner_heading: Uzayda bilgisayar bilimi hakkında özel bir Hour of
+    Code özelliği için NASA'ya katılın!
+  hoc2022_nasa_banner_description: 5 Aralık saat 10:00 ET(Eastern Time)  NASA STEM'in
+    YouTube kanalında ilk gösterim.

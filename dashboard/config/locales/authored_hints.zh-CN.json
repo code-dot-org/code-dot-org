@@ -896,7 +896,7 @@
           "MC_HOC_2017_13_Cole_a": "尝试让代理人建造一些桥梁，这样艾莉克斯和史蒂夫就可以在地图边缘以外的地区走动了。"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "您需要添加的模块称为`设置速度`。 ",
@@ -927,7 +927,7 @@
         "OPD-K5-forloops-6": {
           "courseF_bee_for6_a": "不要忘记在`重复`循环中使用`counter`（计数器）变量。",
           "courseF_bee_for6_b": "在`计数循环`循环中，你需要一个`向前移动` 指令，和一个循环来收集花蜜。",
-          "courseF_bee_for6_c": "你的循环应该数 \\*\\* 从5到1 \\*\\*。"
+          "courseF_bee_for6_c": "你的循环应该数 ** 从5到1 **。"
         },
         "OPD-K5-forloops-7": {
           "courseF_bee_for7_a": "`计数循环`循环需要从1到7，增量为2。",
@@ -962,14 +962,14 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "你的代码不会和上一关有太大的不同，除了你需要让艺术家转弯往下跳，然后把他转回来准备再次往前跳。",
-          "courseF_artist_variables4_c": "这是你的艺术家将遵循的模式:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_c": "这是你的艺术家将遵循的模式:\n\n[][0]",
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
-          "courseF_artist_variables5_a": "你的代码的后半部分应该看起来和上半部差不多, 除了你会向_左_转，跳跃, 然后向_右_转。",
+          "courseF_artist_variables5_a": "你的代码的后半部分应该看起来和上半部差不多, 除了你会向*左*转，跳跃, 然后向*右*转。",
           "courseF_artist_variables5_b": "代码的前半部分将绘制三个三角形, 而第二部分将绘制其他的三个三角形。",
           "courseF_artist_variables5_c": "首先复制程序的前半部分代码, 然后修改它以使设计能够正确显示。",
-          "courseF_artist_variables5_d": "这是你的艺术家将遵循的模式:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "这是你的艺术家将遵循的模式:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "你可以走几条路径。哪一条最短？",
@@ -4868,7 +4868,7 @@
           "courseC_starWars_loops2_a": "要重复代码, 拖出一个`重复`循环, 然后把它放在你想要的模块里面。"
         },
         "courseC_starWars_loops2_copy": {
-          "courseC_starWars_loops2_a": "要重复代码, 拖出一个`重复`循环, 然后把它放在你想要的模块里面。"
+          "courseC_starWars_loops2_a": "要重复代码, 拖出一个`重复 `循环, 然后把它放在你想要的模块里面。"
         },
         "courseC_starWars_loops4": {
           "courseC_starWars_loops4_c": "点击 \"左\" 在转向模块旁边的小箭头可以让你把它改成 \"右\"。",
@@ -4930,7 +4930,7 @@
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "试着在一张纸上写下移动的情况, 来寻找模式。",
-          "courseC_starWars_loops6_b": "如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 \\*\\* 嵌套循环 \\*\\*。"
+          "courseC_starWars_loops6_b": "如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 ** 嵌套循环 **。"
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "这个图案看起来比实际更难! 从一个简单的楼梯步进开始。这是否涵盖了所有的废旧金属？",
@@ -4980,7 +4980,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "试着将问题分成更小的部分来思考。别着急。你不需要第一次就全做对！",
           "course_starWars_loops8_b": "把这个问题的前半部分看成是台阶步进问题。你以前是怎么解决的？",
-          "course_starWars_loops8_c": "看看这条路。\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "看看这条路。\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "您可以在`重复`循环中放置多个模块。",
@@ -5588,7 +5588,7 @@
           "courseD_bee_conditionals1_a": "在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。"
         },
         "courseD_bee_conditionals1_predict1_copy": {
-          "courseD_bee_conditionals1_a": "在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。"
+          "courseD_bee_conditionals1_a": "在您尝试获取花蜜之前，您将需要使用“if”（如果）模块来查看是否有一朵花在云下面。\n"
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "需要入门帮助吗？ 看视频!",
@@ -5674,7 +5674,7 @@
           "courseD_bee_conditionals4_hintVid1": "需要入门帮助吗？ 看视频!",
           "courseD_bee_conditionals4_a": "哪怕可以看到整条路径，仍然可以当作每个空间上面有朵云来处理。",
           "courseD_bee_conditionals4_b": "在循环中使用`如果`语句检查每个空间是否有花蜜。 ",
-          "courseD_bee_conditionals4_c": "使用<xml><block type=\"maze_untilBlocked\"/></xml>模块，您应该向前移动并找一朵花。如果有一朵花, 蜜蜂该怎么办？",
+          "courseD_bee_conditionals4_c": "使用[blockly block][0]模块，您应该向前移动并找一朵花。如果有一朵花, 蜜蜂该怎么办？",
           "courseD_bee_conditionals4_hintVid2": "观看此视频帮助解决这个难题。"
         },
         "courseD_bee_conditionals5": {
@@ -7136,7 +7136,7 @@
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "您编写的函数不应包含整个程序, 只需绘制一个具有100像素边的正方形的部分。",
           "courseD_artist_functions2_c": "使用绿色`draw a square`（画一个正方形）模块，在`当运行时`模块下\"调用\"函数。否则，函数中的代码将不会运行。\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "你的程序应该：\n\n-   使用函数\n-   向前移动 100+75像素\n-   使用函数"
+          "courseD_artist_functions2_a": "你的程序应该：\n- 使用函数\n- 向前移动 100+75像素\n- 使用函数"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "为了通过这关，你只需要添加一个循环来重复初始的代码8次。\n\n如果你不记得初始代码是什么样了，点击工作区右上角\"重新开始\"。",
@@ -12006,18 +12006,22 @@
           "courseD_artist_nestedLoops4_c": "使用嵌套循环来画4 次圆圈。"
         },
         "courseD_artist_nestedLoops52022": {
-          "courseD_artist_nestedLoops5_b": "要做一个圆圈, 你需要设置一个重复循环重复360次。在循环中, 向前移动1像素, 然后转1度。"
+          "courseD_artist_nestedLoops5_b": "要做一个圆圈, 你需要设置一个重复循环重复360次。在循环中, 向前移动1像素, 然后转1度。",
+          "courseD_artist_nestedLoops5_a": "要轻松做到这一点：\n\n-重复 4 次\n  -画一个圆圈\n  -向前跳 50 像素\n  -向右转 90 度"
         },
         "courseD_artist_nestedLoops72022": {
-          "courseD_artist_nestedLoops7_a": "你需要在这里使用嵌套循环。首先，使用循环来画一个正方形。如果内循环画一个正方形那么外循环将做什么？"
+          "courseD_artist_nestedLoops7_a": "你需要在这里使用嵌套循环。首先，使用循环来画一个正方形。如果内循环画一个正方形那么外循环将做什么？",
+          "courseD_artist_nestedLoops7_b": "使用嵌套循环，其中内部循环是画正方形的代码。\n\n-重复 6 次\n  -画正方形\n  -向前跳动 **50 像素**\n  -转 **60 度**"
         },
         "courseD_artist_nestedLoops82022": {
           "courseD_artist_nestedLoops8_a": "要画出8个六边形，你需要在每个图形之间转 **45 度**。为什么？因为360度（一整圈）除以 8（六边形的数量）是45度。",
-          "courseD_artist_nestedLoops8_b": "如果你被难住了，先看上一个关卡, 然后改变那些不一样的东西。"
+          "courseD_artist_nestedLoops8_b": "如果你被难住了，先看上一个关卡, 然后改变那些不一样的东西。",
+          "courseD_artist_nestedLoops8_c": "使用嵌套循环：\n\n  -重复 8 次\n    -画一个六边形\n    -向前跳 50 像素\n    -向右转 45 度"
         },
         "courseD_artist_nestedLoops92022": {
           "courseD_artist_nestedLoops9_a": "从之前用过嵌套循环来开始，但这次用正方形。",
-          "courseD_artist_nestedLoops9_b": "将第二组嵌套循环添加到第一组的末尾, 但这一次使用三角形。"
+          "courseD_artist_nestedLoops9_b": "将第二组嵌套循环添加到第一组的末尾, 但这一次使用三角形。",
+          "courseD_artist_nestedLoops9_c": "使用两个嵌套循环：\n  -重复 8 次\n    -画一个正方形\n    -向前跳 50 像素\n    -向右转 45 度\n  -重复 8 次\n    -画一个三角形\n    -向前跳 50 像素\n    -向右转 45 度"
         },
         "courseD_artist_nestedLoopsFP2022": {
           "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\n此图片是一个嵌套循环，它重复画了六边形（边长50像素）15次，每次转向48度。",
@@ -12708,6 +12712,15 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "若要一次性设置精灵图的大小，你可以使用这个代码模块：\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "如果你想反复改变精灵图的大小（通过事件），请使用这个代码模块：\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "要让精灵说些什么，可以像这样连接代码块：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "要让精灵说些什么，可以像这样连接代码块：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "一个圆有360度。将转动的度数乘以重复的次数。它是否等于360？\n检查一下建议的旋转，看看这个方法是否可行。\n\n有一些例子，你可以开始试试。\n\n-   试着转60度，共转6次\n-   试着转45度，共转8次\n-   试着转30度，共转12次"
         }
       }
     }

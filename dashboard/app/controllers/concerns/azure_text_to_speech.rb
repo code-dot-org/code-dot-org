@@ -51,7 +51,7 @@ module AzureTextToSpeech
     http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
     http_request.read_timeout = speech_timeout
     headers = {
-      'Authorization': 'Bearer ' + token,
+      Authorization: 'Bearer ' + token,
       'Content-Type': 'application/ssml+xml',
       'X-Microsoft-OutputFormat': 'audio-16khz-32kbitrate-mono-mp3'
     }
@@ -77,7 +77,7 @@ module AzureTextToSpeech
       voice_http_request.use_ssl = true
       voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
       voice_http_request.read_timeout = default_timeout
-      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
+      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {Authorization: 'Bearer ' + token})
 
       response = voice_http_request.request(voice_request)&.body
       voices = response.length > 2 ? JSON.parse(response) : nil

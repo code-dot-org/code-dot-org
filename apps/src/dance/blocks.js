@@ -338,5 +338,7 @@ export default {
       },
       addDefaultVar: false
     });
+    delete blockly.Blocks.procedures_defreturn;
+    delete blockly.Blocks.procedures_ifreturn;
   }
 };

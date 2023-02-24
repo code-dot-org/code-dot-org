@@ -17,8 +17,16 @@ class StorybookHarness extends React.Component {
   }
 }
 
-export default storybook => {
-  return storybook
-    .storiesOf('PaginationWrapper', module)
-    .add('Default', () => <StorybookHarness />);
+export default {
+  title: 'PaginationWrapper',
+  component: PaginationWrapper
+};
+
+const Template = args => {
+  return <StorybookHarness />;
+};
+
+export const BasicExample = Template.bind({});
+BasicExample.args = {
+  currentPage: 1
 };

@@ -1,0 +1,26 @@
+{
+  "id-ID": {
+    "data": {
+      "frameworks": {
+        "csta": {
+          "name": "Standar Ilmu Komputer CSTA K-12 (2017)"
+        },
+        "csp2021": {
+          "name": "Kerangka Konseptual CSP"
+        },
+        "csta2011": {
+          "name": "CSTA Standar Ilmu Komputer K-12 (2011)"
+        },
+        "ccela": {
+          "name": "Standar Seni Bahasa Inggris Common Core"
+        },
+        "ccmath": {
+          "name": "Standar Matematika Inti Umum"
+        },
+        "iste": {
+          "name": "Standar ISTE untuk Murid"
+        }
+      }
+    }
+  }
+}

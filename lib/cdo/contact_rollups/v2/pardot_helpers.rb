@@ -54,13 +54,13 @@ module PardotHelpers
     # build token payload
     payload = {
       # connected app client id
-      "iss": "3MVG9fMtCkV6eLhej.9tKBIE6OLmMCsxJAqIfy_eeSC1UaUR4rL0jkzUQOSRAhzfpHmUxUcuBp2JabX1ZOl2p",
+      iss: "3MVG9fMtCkV6eLhej.9tKBIE6OLmMCsxJAqIfy_eeSC1UaUR4rL0jkzUQOSRAhzfpHmUxUcuBp2JabX1ZOl2p",
       # always login.salesforce.com
-      "aud": "https://login.salesforce.com",
+      aud: "https://login.salesforce.com",
       # pardot account email
-      "sub": "plc-emails@code.org",
+      sub: "plc-emails@code.org",
       # less than 3 minutes after now
-      "exp": (Time.now + 2.minutes).to_i
+      exp: (Time.now + 2.minutes).to_i
     }
 
     # encrypt payload with certificate (the certificate is uploaded to the connected app config)

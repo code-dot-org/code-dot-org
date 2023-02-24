@@ -4,7 +4,7 @@
       "vocabularies": {
         "code/dance-extras/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "event/dance-extras/unversioned": {
           "word": "Etkinlik",
@@ -16,7 +16,7 @@
         },
         "code/minecraft/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/minecraft/unversioned": {
           "word": "Hata Ayıklama",
@@ -36,7 +36,7 @@
         },
         "code/hero/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/hero/unversioned": {
           "word": "Hata Ayıklama",
@@ -72,7 +72,7 @@
         },
         "code/flappy/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/flappy/unversioned": {
           "word": "Hata Ayıklama",
@@ -84,7 +84,7 @@
         },
         "code/hourofcode/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/hourofcode/unversioned": {
           "word": "Hata Ayıklama",
@@ -96,7 +96,7 @@
         },
         "code/frozen/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/frozen/unversioned": {
           "word": "Hata Ayıklama",
@@ -108,7 +108,7 @@
         },
         "code/iceage/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/iceage/unversioned": {
           "word": "Hata Ayıklama",
@@ -120,7 +120,7 @@
         },
         "code/artist/unversioned": {
           "word": "Kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/artist/unversioned": {
           "word": "Hata Ayıklama",
@@ -132,7 +132,7 @@
         },
         "code/gumball/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/gumball/unversioned": {
           "word": "Hata Ayıklama",
@@ -144,7 +144,7 @@
         },
         "code/dance/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "event/dance/unversioned": {
           "word": "Etkinlik",
@@ -156,7 +156,7 @@
         },
         "code/aquatic/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "condition/aquatic/unversioned": {
           "word": "Koşul",
@@ -204,7 +204,7 @@
         },
         "code/starwars/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/starwars/unversioned": {
           "word": "Hata Ayıklama",
@@ -216,7 +216,7 @@
         },
         "code/mc/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/mc/unversioned": {
           "word": "Hata Ayıklama",
@@ -228,7 +228,7 @@
         },
         "code/playlab/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/playlab/unversioned": {
           "word": "Hata Ayıklama",
@@ -240,7 +240,7 @@
         },
         "code/starwarsblocks/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Hata Ayıklama",
@@ -280,7 +280,7 @@
         },
         "code/infinity/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/infinity/unversioned": {
           "word": "Hata Ayıklama",
@@ -292,7 +292,7 @@
         },
         "code/basketball/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/basketball/unversioned": {
           "word": "Hata Ayıklama",
@@ -308,7 +308,7 @@
         },
         "code/dance-extras-2019/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "event/dance-extras-2019/unversioned": {
           "word": "Etkinlik",
@@ -320,7 +320,7 @@
         },
         "code/dance-2019/unversioned": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "event/dance-2019/unversioned": {
           "word": "Etkinlik",
@@ -372,7 +372,7 @@
         },
         "code/coursed/2022": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "repeat/coursed/2022": {
           "word": "Tekrarla",
@@ -434,7 +434,7 @@
           "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
         },
         "input/coursef/2022": {
-          "word": "Giriş",
+          "word": "Girdi",
           "definition": "Bilgisayarların kullanıcılardan aldıkları bilgiler."
         },
         "models_and_simulations/coursef/2022": {
@@ -846,7 +846,7 @@
           "definition": "Yalnız iki seçenek kullanarak bilgileri temsil etmenin bir yolu."
         },
         "input/csd/2022": {
-          "word": "Giriş"
+          "word": "Girdi"
         },
         "processing/csd/2022": {
           "word": "İşleme"
@@ -953,7 +953,7 @@
           "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
         },
         "input/coursef/2021": {
-          "word": "Giriş",
+          "word": "Girdi",
           "definition": "Bilgisayarların kullanıcılardan aldıkları bilgiler."
         },
         "loop/coursef/2021": {
@@ -1206,7 +1206,7 @@
         },
         "code/coursed/2021": {
           "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayar için talimat yazmak için."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "repeat/coursed/2021": {
           "word": "Tekrarla",
@@ -1495,7 +1495,7 @@
           "word": "Fonksiyon"
         },
         "input/csd/2021": {
-          "word": "Giriş"
+          "word": "Girdi"
         },
         "processing/csd/2021": {
           "word": "İşleme"

@@ -155,7 +155,13 @@ class ProjectsController < ApplicationController
     },
     thebadguys: {
       name: 'New The Bad Guys Project'
-    }
+    },
+    story: {
+      name: 'New Story Project'
+    },
+    science: {
+      name: 'New Science Project'
+    },
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
@@ -333,7 +339,8 @@ class ProjectsController < ApplicationController
       game_display_name: data_t("game.name", @game.name),
       app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
-      disallowed_html_tags: disallowed_html_tags
+      disallowed_html_tags: disallowed_html_tags,
+      blocklyVersion: params[:blocklyVersion]
     )
 
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
@@ -385,6 +392,8 @@ class ProjectsController < ApplicationController
       return head :bad_request
     end
     project_type = params[:key]
+    return head :forbidden if Projects.in_restricted_share_mode(src_channel_id, project_type)
+
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),

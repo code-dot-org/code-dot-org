@@ -148,7 +148,10 @@ class EmailLogins extends React.Component {
               url: `${studioUrlPrefix}/users/sign_up`
             })}
             <br />
-            <img src={oauthSignInButtons} />
+            <img
+              src={oauthSignInButtons}
+              alt={i18n.loginInfo_joinStep1Buttons()}
+            />
           </li>
           <li>{i18n.loginInfo_joinStep2()}</li>
           <li>
@@ -332,6 +335,7 @@ class LoginCard extends React.Component {
             <br />
             <img
               src={pegasus(`/images/${student.secretPicturePath}`)}
+              alt={student.secretPictureName}
               style={styles.img}
             />
             <br />

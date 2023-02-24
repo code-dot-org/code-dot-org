@@ -8,10 +8,10 @@ import teacherSections, {
 } from '../teacherDashboard/teacherSectionsRedux';
 import TeacherSections from './TeacherSections';
 
-export default storybook =>
-  storybook
-    .storiesOf('Homepages/Teachers/TeacherSections', module)
-    .addStoryTable(storyTable);
+export default {
+  title: 'TeacherSections',
+  component: TeacherSections
+};
 
 const sections = [
   {
@@ -59,38 +59,28 @@ const sections = [
 ];
 const serverSections = sections.map(serverSectionFromSection);
 
-const storyTable = [
-  {
-    name: 'teacher at least one section',
-    description: 'shows a table of sections on the teacher homepage',
-    story: () => {
-      withFakeServer({sections: serverSections});
-      registerReducers({teacherSections});
-      const store = createStoreWithReducers();
-      store.dispatch(setSections(serverSections));
-      return (
-        <Provider store={store}>
-          <TeacherSections />
-        </Provider>
-      );
-    }
-  },
-  {
-    name: 'teacher, no sections yet',
-    description:
-      'shows a set up message if the teacher does not have any sections yet',
-    story: () => {
-      withFakeServer();
-      registerReducers({teacherSections});
-      const store = createStoreWithReducers();
-      return (
-        <Provider store={store}>
-          <TeacherSections />
-        </Provider>
-      );
-    }
-  }
-];
+export const TeacherAtLeastOneSection = () => {
+  withFakeServer({sections: serverSections});
+  registerReducers({teacherSections});
+  const store = createStoreWithReducers();
+  store.dispatch(setSections(serverSections));
+  return (
+    <Provider store={store}>
+      <TeacherSections />
+    </Provider>
+  );
+};
+
+export const TeacherNoSections = () => {
+  withFakeServer();
+  registerReducers({teacherSections});
+  const store = createStoreWithReducers();
+  return (
+    <Provider store={store}>
+      <TeacherSections />
+    </Provider>
+  );
+};
 
 function withFakeServer({courses = [], sections = []} = {}) {
   const server = sinon.fakeServer.create({

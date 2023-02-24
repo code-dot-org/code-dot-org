@@ -175,19 +175,11 @@ dv:
             MOVES.Kick: ސްޓަރ - ތަރި
             MOVES.XArmsUp: ސްޓްރެޗް
             MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
-      Dancelab_everyMeasuresRange:
-        text: "{START} އަށް ފަހު، ކޮންމެ {N} މެޝަރސް އަކަށް ރިޕީޓްކުރޭ"
       Dancelab_everySeconds:
         text: ކޮންމެ {N} {UNIT} އަކަށް ރިޕީޓްކުރޭ
         options:
           UNIT:
             '"measures"': މެޝަރސް
-      Dancelab_everySecondsRange:
-        text: ކޮންމެ {N} {UNIT} ފެށެނީ {START} އިން {STOP} އަށް
-        options:
-          UNIT:
-            measures: މެޝަރސް
-            seconds: ސިކުންތު
       Dancelab_everyVerseChorus:
         text: ކޮންމެ {UNIT}
         options:
@@ -784,6 +776,12 @@ dv:
             '"macklemore90"': މެކްލްމޯ - ކާންޓް ހޯލްޑް އަސް
             '"hammer"': އެމްސީ ހެމަރ - ޔު ކާންޓް ޓަޗް ދިސް
             '"peas"': ބްލެކް އައިޑް ޕީސް - އައި ގޮޓް އަ ފީލިންގ
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': ބަބްލްސް
+            '"confetti"': ކޮންފެޓީ
+            '"starburst"': ސްޓަރ ބަރސްޓް
       gamelab_changePropBy:
         text: "{VAL} އަދަދަށް {SPRITE} {PROPERTY} ބަދަލުކުރޭ"
         options:
@@ -1029,3 +1027,9 @@ dv:
             '"w"': w
             '"s"': s
             '"d"': d
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': ބަބްލްސް
+            '"confetti"': ކޮންފެޓީ
+            '"starburst"': ސްޓަރ ބަރސްޓް

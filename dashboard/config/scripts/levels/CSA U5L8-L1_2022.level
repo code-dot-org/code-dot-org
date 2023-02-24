@@ -44,13 +44,17 @@
         "isVisible": true,
         "tabOrder": 2
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "1. The `makeSepia()`(#e7e8ea) method in the `SepiaImage`(#e7e8ea) class iterates over the whole array of pixels that are saved as an instance variable of the class. It pulls the red, green, and blue values from each pixel sequentially, and multiplies those values by a specific ratio of the other color values. The last step is to take these new values and to save them back into the pixel array by using the `setPixels()`(#e7e8ea) method that is extended from the original Image class.\r\n\r\n2. When we change these ratio values, it changes the output of the filter. It becomes no longer sepia, but a user-defined image filter instead.\r\n\r\n3. When we change each of the new color variables to equal that of `newRed`(#e7e8ea), the output that is produced is a greyscale image.\r\n"
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-04-12T19:28:53.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T19:28:52.990+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L3d_2022\\\"\"],\"cloned_from\":\"CSA U5L6-L3d_2022\"},{\"changed_at\":\"2022-04-12 19:28:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 15:51:23 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 16:27:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 16:30:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 16:44:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 18:38:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 13:12:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-11 19:26:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-12T19:28:52.990+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L3d_2022\\\"\"],\"cloned_from\":\"CSA U5L6-L3d_2022\"},{\"changed_at\":\"2022-04-12 19:28:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 15:51:23 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 16:27:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 16:30:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 16:44:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 18:38:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 13:12:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-11 19:26:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-24 15:04:24 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -515,7 +515,7 @@ sk:
         C1_moveitmoveit_unplugged: Pohni sa, pohni sa
         C1_bigevent_unplugged: Veľká udalosť
         C1_getting_loopy: Cykly sa zacykľujú
-        C1_pair_programming: Programovanie v páre
+        C1_pair_programming: Párové programovanie
         C1_maze_intro_sequencing: Úvod do bludiska
         C1_maze_debugging: 'Bludisko: ladenie'
         C1_bee_level_intro: Úlohy s včelami - Úvod
@@ -713,8 +713,8 @@ sk:
         csd_gamelab_if_else: Podmienkové príkazy (if/else)
         CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
-        CDEF_Video_SpritesInAction: Postavy v akcii
-        CSF_SpriteLab_SpritesInAction_CDEF: Postavy v akcii
+        CDEF_Video_SpritesInAction: Sprajty v akcii
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprajty v akcii
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         mc_2018_intro: 'Minecraft: Vodné Dobrodružstvo - Úvod'
         MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj pokiaľ neplatí"'
@@ -742,7 +742,7 @@ sk:
         teaching_cs_pair_programming: 'Vyučujeme Základy informatiky: Párové programovanie'
         teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
         csd_applab_designmode: 'Objavujeme informatiku : App Lab - dizajnový mód'
-        csd_pair_programming: Programovanie v páre
+        csd_pair_programming: Párové programovanie
         csd_gamelab_functions: Volanie a definovanie funkcií
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
@@ -750,7 +750,7 @@ sk:
         CSF_Going_Places_Safely: Moja online štvrť
         CSF_SpriteLab_Intro_v2: Predstavenie Sprite Labu
         CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
-        CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
+        CSF_SpriteLab_SpritesInAction_v2: Sprajty v akcii
         csd_debugging: Ladenie
         csd_applab_designmode_short: App Lab  - Dizajnový mód
         csp-pd-welcome: Vitaj v rodine!

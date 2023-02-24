@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-10-18 22:43:56 UTC",
+    "serialized_at": "2023-02-20 20:21:29 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -85,42 +85,12 @@
       }
     },
     {
-      "key": "Book Cover ",
-      "name": "Book Cover ",
+      "key": "Wonder Book Cover ",
+      "name": "Wonder Book Cover ",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground"
-      }
-    },
-    {
-      "key": "US Landmarks",
-      "name": "U.S. Landmarks",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground"
-      }
-    },
-    {
-      "key": "Wonder Book Cover ",
-      "name": "Wonder Book Cover ",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -132,10 +102,10 @@
     {
       "key": "Sprites",
       "name": "Sprites",
-      "absolute_position": 7,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 5,
       "properties": {
         "assessment_opportunities": "1. **Create and use a sprite**\n\n\tSee levels 10 and 11 on Code Studio.\n\n2. **Use dot notation to update a sprite's properties**\n\n\tSee level 11 on Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -153,14 +123,65 @@
     {
       "key": "lesson-8",
       "name": "Physical Computing PSP",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Code Your Own Book Cover ",
+      "name": "Code Your Own Book Cover ",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "In this lesson, students will use the skills they learned in the previous lesson to make a book cover for a book of their choice. First, they will warm up by drafting a scene between two main characters. When students get on computers, they will select their background and sprites and then add in dialogue and a book synopsis to feature in their scene. Next class, students will present their work to their classmates.",
+        "purpose": "- Play through the levels and review the lesson slides.\n- Print out copies of the [Book Cover rubric](https://docs.google.com/document/d/1fEHKtMFE_uLJEP6YScvXV-LfOEqBz9QyW1NlKTQzveM/template/preview) and [Code Your Own Book Cover handout](https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview) for each student.\n- It may be helpful to make your own book cover to share with students.\n- Make sure each student has chosen a book for this activity.\n",
+        "student_overview": "In this lesson, you will code your own digital book cover. First, you will select the background and characters. Then, you will program the characters to have a short conversation. Next class, you will present your work."
+      },
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Physical Changes",
+      "name": "Chemical Changes",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "In this lesson, students will explore how an object make go through a physical change, but the state of matter (solid, liquid, or gas) stays the same. First students will observe these changes in a widget (a level without code). Then students will code their own version of the app in a step-by-step process. ",
+        "preparation": "- Review and complete the online tutorial yourself. \n- Review the lesson plan and find places you want to direct your class whole group and where independent or pair work should happen.\n",
+        "student_overview": "In this lesson, you’ll look at physical changes for different objects and inspect whether the state of matter changed. Is it still a solid or did it change into a gas? "
       },
       "seeding_key": {
-        "lesson.key": "lesson-8",
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Microbit Playground",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -366,30 +387,6 @@
       }
     },
     {
-      "key": "a8a98b19-c6a3-47f1-9a43-edb2022275d7",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a8a98b19-c6a3-47f1-9a43-edb2022275d7",
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground"
-      }
-    },
-    {
-      "key": "bf1c1853-c613-4ef0-9d4c-41eca073f25e",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bf1c1853-c613-4ef0-9d4c-41eca073f25e",
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground"
-      }
-    },
-    {
       "key": "5c165f8c-5ee0-45e4-9483-0f582fb6621d",
       "position": 1,
       "properties": {
@@ -472,6 +469,154 @@
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
+    },
+    {
+      "key": "1d04bbc0-ab2d-4d40-816e-81fd6113b885",
+      "position": 4,
+      "properties": {
+        "name": "Delete Later"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d04bbc0-ab2d-4d40-816e-81fd6113b885",
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "afcb50a4-f4ab-42f6-8a11-cf6eeff6e941",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "afcb50a4-f4ab-42f6-8a11-cf6eeff6e941",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "1e5d0764-1d22-4713-a4de-3a3da309de50",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e5d0764-1d22-4713-a4de-3a3da309de50",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "38b1bc55-cbb2-434f-bbe1-0fa5df1aa189",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38b1bc55-cbb2-434f-bbe1-0fa5df1aa189",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "518e094a-1505-45eb-8ba5-9040b1f3e04b",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "518e094a-1505-45eb-8ba5-9040b1f3e04b",
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "71051eef-2554-4a56-827b-402c47567325",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71051eef-2554-4a56-827b-402c47567325",
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "10abfe89-1bd4-498d-8633-80b75af85a89",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10abfe89-1bd4-498d-8633-80b75af85a89",
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "7b6fff69-c55b-484b-9666-a593e70f0e98",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b6fff69-c55b-484b-9666-a593e70f0e98",
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "24956274-d378-4033-893b-414337e2d680",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680",
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "d543629a-7749-41b5-87af-89ec7499181a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d543629a-7749-41b5-87af-89ec7499181a",
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "e6b2171c-3646-449d-8e8c-7bbb2df34db5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6b2171c-3646-449d-8e8c-7bbb2df34db5",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
     }
   ],
   "activity_sections": [
@@ -491,7 +636,7 @@
       "key": "61b713d2-7a27-4104-93ef-75b49ef93741",
       "position": 2,
       "properties": {
-        "description": "[`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock)\n\n\n[`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown)\n\n[`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation)\n\n[`visible`(#f78183)](/docs/ide/gamelab/expressions/visible)\n\n[`keyWentDown()`(#fff176)](/docs/ide/gamelab/expressions/keyWentDown)\n\n[`sprite.x`(#f78183)](/docs/ide/gamelab/expressions/x)\n\n[`sprite.velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX)\n\n[`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect)\n\n[`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse)\n\n[`point()`(#4dd0e1)](/docs/ide/gamelab/expressions/point)\n\n[`strokeWeight()`(#4dd0e1)](/docs/ide/gamelab/expressions/strokeWeight)\n\n[`noFill()`(#4dd0e1)](/docs/ide/gamelab/expressions/noFill)\n\n[`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill)\n\n[`background()`(#4dd0e1)](/docs/ide/gamelab/expressions/background)\n\n[`regularPolygon()`(#4dd0e1)](/docs/ide/gamelab/expressions/regularPolygon)\n\n[`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber)\n\n[`rgb()`(#4dd0e1)](/docs/ide/gamelab/expressions/rgb)"
+        "description": "[`if / else`(#64B5F6)](/docs/ide/gamelab/expressions/ifElseBlock)\n\n\n[`mouseDown()`(#fff176)](/docs/ide/gamelab/expressions/mouseDown)\n\n[`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation)\n\n[`visible`(#f78183)](/docs/ide/gamelab/expressions/visible)\n\n[`keyWentDown()`(#fff176)](/docs/ide/gamelab/expressions/keyWentDown)\n\n[`sprite.x`(#f78183)](/docs/ide/gamelab/expressions/x)\n\n[`sprite.velocityX`(#f78183)](/docs/ide/gamelab/expressions/velocityX)\n\n[`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect)\n\n[`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse)\n\n[`point()`(#4dd0e1)](/docs/ide/gamelab/expressions/point)\n\n[`strokeWeight()`(#4dd0e1)](/docs/ide/gamelab/expressions/strokeWeight)\n\n[`noFill()`(#4dd0e1)](/docs/ide/gamelab/expressions/noFill)\n\n[`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill)\n\n[`background()`(#4dd0e1)](/docs/ide/gamelab/expressions/background)\n\n[`regularPolygon()`(#4dd0e1)](/docs/ide/gamelab/expressions/regularPolygon)\n\n[`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber)\n\n[`rgb()`(#4dd0e1)](/docs/ide/gamelab/expressions/rgb)\n\n[`ledScreen.clear()`(#f78183)](/docs/ide/applab/expressions/ledScreen.clear)\n\n[`ledScreen.display()`(#f78183)](/docs/ide/applab/expressions/ledScreen.display)\n\n[`ledScreen.scrollString()`(#f78183)](/docs/ide/applab/expressions/ledScreen.scrollString)\n\n[`<`(#FFB74D)](/docs/ide/applab/expressions/lessThanOperator)\n\n[`lightSensor.value`(#f78183)](/docs/ide/applab/expressions/lightSensor.value)\n\n[`accelerometer.getOrientation()`(#f78183)](/docs/ide/applab/expressions/accelerometer.getOrientation)\n\n[`onEvent()`(#fff176)](/docs/ide/applab/expressions/onEvent)\n\n[`playSound()`(#fff176)](/docs/ide/applab/expressions/playSound)"
       },
       "seeding_key": {
         "activity_section.key": "61b713d2-7a27-4104-93ef-75b49ef93741",
@@ -786,26 +931,6 @@
       }
     },
     {
-      "key": "07afb91c-d108-4f16-b122-6b0e3ade117d",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d",
-        "lesson_activity.key": "a8a98b19-c6a3-47f1-9a43-edb2022275d7"
-      }
-    },
-    {
-      "key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303",
-        "lesson_activity.key": "bf1c1853-c613-4ef0-9d4c-41eca073f25e"
-      }
-    },
-    {
       "key": "ec95fa0f-6078-4560-a2ff-3e2b4bd5d6d1",
       "position": 1,
       "properties": {
@@ -1055,8 +1180,19 @@
       }
     },
     {
-      "key": "3277e18b-36c4-496a-b791-bc83fb14bbb0",
+      "key": "7665729b-4d3c-4d09-9bac-85f280ff79a6",
       "position": 5,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "7665729b-4d3c-4d09-9bac-85f280ff79a6",
+        "lesson_activity.key": "de298556-12b3-4d64-a858-c3584776e448"
+      }
+    },
+    {
+      "key": "3277e18b-36c4-496a-b791-bc83fb14bbb0",
+      "position": 6,
       "properties": {
         "progression_name": "Video: The Animation Tab",
         "tips": [
@@ -1073,7 +1209,7 @@
     },
     {
       "key": "ecc3381d-71d5-41f5-a8c6-3742b4545243",
-      "position": 6,
+      "position": 7,
       "properties": {
         "name": "Skill Building",
         "progression_name": "Skill Building"
@@ -1084,8 +1220,19 @@
       }
     },
     {
+      "key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2",
+      "position": 8,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2",
+        "lesson_activity.key": "de298556-12b3-4d64-a858-c3584776e448"
+      }
+    },
+    {
       "key": "dcab4160-65fd-41d0-bbc3-6faa2904bf7d",
-      "position": 7,
+      "position": 9,
       "properties": {
         "name": "Practice",
         "progression_name": "Practice"
@@ -1097,7 +1244,7 @@
     },
     {
       "key": "cacc0409-8250-4f30-9149-0b8141dd673e",
-      "position": 8,
+      "position": 10,
       "properties": {
         "name": "Assessment",
         "progression_name": "Assessment",
@@ -1115,7 +1262,7 @@
     },
     {
       "key": "41db2bdf-8eea-45a4-a2df-c92f3b9c7d27",
-      "position": 9,
+      "position": 11,
       "properties": {
         "name": "Challenges",
         "progression_name": "Challenges",
@@ -1169,6 +1316,502 @@
       "seeding_key": {
         "activity_section.key": "f52ed5fb-871b-4dce-8265-2b40c76cabed",
         "lesson_activity.key": "151461c0-13e4-4dd3-b36a-f27d3595d5b0"
+      }
+    },
+    {
+      "key": "7827b0c1-39d6-49dd-b97b-ad2e50392868",
+      "position": 1,
+      "properties": {
+        "progression_name": "Not Used Anymore"
+      },
+      "seeding_key": {
+        "activity_section.key": "7827b0c1-39d6-49dd-b97b-ad2e50392868",
+        "lesson_activity.key": "1d04bbc0-ab2d-4d40-816e-81fd6113b885"
+      }
+    },
+    {
+      "key": "bca97b3f-1554-4da7-9135-641101c9278d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bca97b3f-1554-4da7-9135-641101c9278d",
+        "lesson_activity.key": "afcb50a4-f4ab-42f6-8a11-cf6eeff6e941"
+      }
+    },
+    {
+      "key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025",
+      "position": 1,
+      "properties": {
+        "description": "This first problem will be guided by the teacher with probing questions to help students complete each step in Challenge 1 of the activity guide.",
+        "progression_name": "The Clicker Game Problem"
+      },
+      "seeding_key": {
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025",
+        "lesson_activity.key": "1e5d0764-1d22-4713-a4de-3a3da309de50"
+      }
+    },
+    {
+      "key": "910739ed-74c4-49b7-b640-3286ab03d06e",
+      "position": 2,
+      "properties": {
+        "description": "The second challenge could be used as an assessment of students' understanding of how to use the PSP.",
+        "progression_name": "(Optional) The Trivia Game Problem"
+      },
+      "seeding_key": {
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e",
+        "lesson_activity.key": "1e5d0764-1d22-4713-a4de-3a3da309de50"
+      }
+    },
+    {
+      "key": "74dffe62-0725-4f9c-a51d-4c87c6829b61",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "74dffe62-0725-4f9c-a51d-4c87c6829b61",
+        "lesson_activity.key": "38b1bc55-cbb2-434f-bbe1-0fa5df1aa189"
+      }
+    },
+    {
+      "key": "afcce76c-0a65-4919-9c6e-4b7df4111ac1",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: _Think of a book you read this year. Imagine you are trying to get your classmates to read that book. How would you design the book cover to capture their attention?_\n\n**Do This**: Have students pair up and answer the Discussion question.\n\n**Discussion Goal**: The purpose of this discussion is for students to begin thinking about how they will design their book cover. They should think about which characters they want to feature, the background for the scene, and the brief dialogue. \n\nStudents should understand that their classmates may not have any prior knowledge of the book so their digital book covers will feature a brief plot synopsis.\n\nStudents should also try to represent the genre of the book. For example, if a student designed a book cover for a book in the Percy Jackson fantasy-adventure series, then their target audience would be interested in seeing elements of magic. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary:**\n- **Synopsis** - A brief summary of something, for example, the plot of a book\n- **Program** - A series of steps that have been coded into something that can be run by a machine.",
+        "duration": "5",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "afcce76c-0a65-4919-9c6e-4b7df4111ac1",
+        "lesson_activity.key": "518e094a-1505-45eb-8ba5-9040b1f3e04b"
+      }
+    },
+    {
+      "key": "c80073ae-5048-49bf-8a0c-92ce2b7ce8c8",
+      "position": 2,
+      "properties": {
+        "description": "**Do This**: Hand out a [rubric](https://docs.google.com/document/d/1fEHKtMFE_uLJEP6YScvXV-LfOEqBz9QyW1NlKTQzveM/template/preview\t\n) and a [graphic organizer](https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview\t\n) to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Rubric” slide\n\n**Say:** Before you begin coding your own book cover, we are going to plan out what we want to animate. Let’s take a look at the rubric to see what your project will include.\n\n",
+        "duration": "10",
+        "name": "Plan Your Book Cover"
+      },
+      "seeding_key": {
+        "activity_section.key": "c80073ae-5048-49bf-8a0c-92ce2b7ce8c8",
+        "lesson_activity.key": "518e094a-1505-45eb-8ba5-9040b1f3e04b"
+      }
+    },
+    {
+      "key": "23335e33-1070-4778-b1b7-9fef504d45bd",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students can be given the option to complete the assignment in pairs. Make sure that if students pair up to complete the graphic organizer, they have both read the same book and they understand that they will be programming the book cover together as well."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "23335e33-1070-4778-b1b7-9fef504d45bd",
+        "lesson_activity.key": "518e094a-1505-45eb-8ba5-9040b1f3e04b"
+      }
+    },
+    {
+      "key": "b1032ce9-52e0-434e-bc33-2fd5fb5a1b4c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Code Your Own Book Cover Handout” slide\n\n**Say:** Start your planning by choosing the book that you’re going to use. On this handout, you will choose to feature two or more main characters having a conversation with each other. Make sure to draw the dialogue using speech bubbles and include a brief synopsis, which is a description of the plot.\n\n**Do This**: Give students about 10 minutes to plan their book cover. Circulate the room to support students in their brainstorming and planning. Remind students that the purpose of the book covers is to pique their classmates interest and motivate them to want to read the book based on the sprite’s dialogue and synopsis.\n\nPrompt students to ask themselves “Do my characters say or think something that represents a scene in the book?” Encourage students to include dialogue that reveals to the reader what the character is like, or how their actions lead to big events in the story. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b1032ce9-52e0-434e-bc33-2fd5fb5a1b4c",
+        "lesson_activity.key": "518e094a-1505-45eb-8ba5-9040b1f3e04b"
+      }
+    },
+    {
+      "key": "4adc3cb2-8060-4449-94e3-c5eb078874c0",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have a sample completed handout ready to show students. There is one provided for you based on the book Wonder in the [Code Your Own Book Cover [Key]](https://docs.google.com/document/d/11cRlovf2Q27LjtYTUWXgbvTz5Lhj6CXawxJTaAvL8ZE/template/preview\t\n). You are also encouraged to create your own example to show students. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4adc3cb2-8060-4449-94e3-c5eb078874c0",
+        "lesson_activity.key": "518e094a-1505-45eb-8ba5-9040b1f3e04b"
+      }
+    },
+    {
+      "key": "bd1da05f-e538-4cef-b631-9610c70b19ea",
+      "position": 1,
+      "properties": {
+        "description": "Now you will code your own book cover. As you work through these levels, refer back to your planning work in your handout. If you need to review any skills from the previous lesson, you are able to go back and visit Lesson One to practice those skill building levels. ",
+        "name": "Code Your Own Book Cover ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bd1da05f-e538-4cef-b631-9610c70b19ea",
+        "lesson_activity.key": "71051eef-2554-4a56-827b-402c47567325"
+      }
+    },
+    {
+      "key": "644c08ab-9fa1-4dc7-b88c-9d3885a5e3d5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-8” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. Students should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level."
+      },
+      "seeding_key": {
+        "activity_section.key": "644c08ab-9fa1-4dc7-b88c-9d3885a5e3d5",
+        "lesson_activity.key": "71051eef-2554-4a56-827b-402c47567325"
+      }
+    },
+    {
+      "key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17",
+        "lesson_activity.key": "71051eef-2554-4a56-827b-402c47567325"
+      }
+    },
+    {
+      "key": "d43f731b-3575-4161-8e66-d4dc0e8b9453",
+      "position": 4,
+      "properties": {
+        "progression_name": "Extend Your Book Cover!"
+      },
+      "seeding_key": {
+        "activity_section.key": "d43f731b-3575-4161-8e66-d4dc0e8b9453",
+        "lesson_activity.key": "71051eef-2554-4a56-827b-402c47567325"
+      }
+    },
+    {
+      "key": "8e98f4f4-e89f-40a5-b1ad-02594fb4b95e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Free Play - Level 9” slide\n\n**Do This:** If a student finishes early, encourage them to show their work to a partner. Invite students to share ideas and to learn from each other. After a brief discussion, students have the opportunity to finish their book cover and make any last revisions before next class.\n",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e98f4f4-e89f-40a5-b1ad-02594fb4b95e",
+        "lesson_activity.key": "71051eef-2554-4a56-827b-402c47567325"
+      }
+    },
+    {
+      "key": "ca79d50f-f05d-43c7-88e4-80a8c416ab95",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _Who is the target audience for your book cover app?_\n- _What visual or text effects does your Book Cover use to accomplish that goal?_\n",
+        "duration": "5",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca79d50f-f05d-43c7-88e4-80a8c416ab95",
+        "lesson_activity.key": "10abfe89-1bd4-498d-8633-80b75af85a89"
+      }
+    },
+    {
+      "key": "e89257c5-3b4c-4a64-a7f8-b0f58f5c1a10",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Slides ‘Vanishing Act Part 1 & 2’, or display Level 1 on Code Studio to the class.",
+        "name": "Vanishing Act",
+        "progression_name": "Vanishing Act"
+      },
+      "seeding_key": {
+        "activity_section.key": "e89257c5-3b4c-4a64-a7f8-b0f58f5c1a10",
+        "lesson_activity.key": "7b6fff69-c55b-484b-9666-a593e70f0e98"
+      }
+    },
+    {
+      "key": "5537ff5c-ee27-43d2-8334-2a433f595aa9",
+      "position": 2,
+      "properties": {
+        "description": "Let’s read this comic together. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5537ff5c-ee27-43d2-8334-2a433f595aa9",
+        "lesson_activity.key": "7b6fff69-c55b-484b-9666-a593e70f0e98"
+      }
+    },
+    {
+      "key": "3cf6fe0f-9345-47d0-bd8b-a9b694f8c405",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Either choose to do a dramatic reading or call on volunteers in the class to play the role of Maestro the Wizard and the Scientist. "
+      },
+      "seeding_key": {
+        "activity_section.key": "3cf6fe0f-9345-47d0-bd8b-a9b694f8c405",
+        "lesson_activity.key": "7b6fff69-c55b-484b-9666-a593e70f0e98"
+      }
+    },
+    {
+      "key": "c7389703-56f2-4307-858c-70ef495749a4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Slide “Level 2 - Wood” \n\n**Do This:** Show Level 2 to the class and either follow along with you on their own devices or engage the class in whole group observation. ",
+        "duration": "10",
+        "name": "Physical Changes",
+        "progression_name": "Investigate: Wood"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7389703-56f2-4307-858c-70ef495749a4",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "8363490a-bcde-44f8-9225-107cd1bddc7b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1)  There was a physical change when the log was cut up into kindle (the wood got smaller) **but** \n2) the state of matter didn’t change at all. The wood and kindle are still solid matter under the microscope. "
+      },
+      "seeding_key": {
+        "activity_section.key": "8363490a-bcde-44f8-9225-107cd1bddc7b",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "15e5c8f0-dc50-4f0f-940a-1f89a735c622",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Slides ‘Other Physical Changes’, or display Level 3 on Code Studio to the class.",
+        "progression_name": "Physical Changes"
+      },
+      "seeding_key": {
+        "activity_section.key": "15e5c8f0-dc50-4f0f-940a-1f89a735c622",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "ddfa2263-f039-4134-ad5b-800da9791e60",
+      "position": 4,
+      "properties": {
+        "description": "[Remarks about Other Physical Changes]",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ddfa2263-f039-4134-ad5b-800da9791e60",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "9100def6-1484-4325-bc47-2bfeaefadf79",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Slide “Level 4 - Water”\n\n**Do This:** Show Level 4 on the board and follow the directions. Have students either follow along with you on their own devices or engage in whole group observation. ",
+        "progression_name": "Investigate: Water"
+      },
+      "seeding_key": {
+        "activity_section.key": "9100def6-1484-4325-bc47-2bfeaefadf79",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "a89f7986-7b21-434e-b72b-a657871f1921",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1) There was a physical change in the water when it heat was applied (the water disappeared) **and**\n2) the state of matter changed when heat was applied (liquid to gas). "
+      },
+      "seeding_key": {
+        "activity_section.key": "a89f7986-7b21-434e-b72b-a657871f1921",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "bb50b97a-2106-4ee8-af4a-274f1ed12bd5",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Functions” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb50b97a-2106-4ee8-af4a-274f1ed12bd5",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "f3de0c04-bf20-4e42-b76d-1598d4fcc5cf",
+      "position": 8,
+      "properties": {
+        "description": "Let’s talk about functions in code. You will be working with some new functions today. \n\nFirst, let’s remember that code is a set of instructions you give the computer. \n\nFunctions are chunks of code that get reused over and over in a program. Usually, you have to define your own functions, but since we’re still learning, these functions are defined for you. That’s a lot of code ready for you! \n\nWhen you drag this block _(point to the green LabSetup block)_ to your workspace, all the code inside it will run _(point to the code nested inside the LabSetup function on the right of the slide)_.\n\nThere are other functions that you’ll use for this project. Let’s take a closer look at this one. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f3de0c04-bf20-4e42-b76d-1598d4fcc5cf",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "a331672a-3dd5-4437-ad86-6bfcc6b1e5e1",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:** Read the code in the LabSetup function from top to bottom with the class. For each block of code (i.e. “remove all sprites” or “set background to”), ask students what they think that chunk of code does. "
+      },
+      "seeding_key": {
+        "activity_section.key": "a331672a-3dd5-4437-ad86-6bfcc6b1e5e1",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "b8bad47c-63c7-4698-a599-1a469a90d2b7",
+      "position": 10,
+      "properties": {
+        "description": "**Discuss:** In your own words, explain what this code does? Why would we use a function called LabSetup with all this code in it? "
+      },
+      "seeding_key": {
+        "activity_section.key": "b8bad47c-63c7-4698-a599-1a469a90d2b7",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "8f11207c-d3a0-470a-92d2-0e4fa1d10f7f",
+      "position": 11,
+      "properties": {
+        "description": "**Discussion Goal:** Students should notice that “remove all sprites” comes first in the function, which wipes the playspace clean of sprites. Then the function tells the computer to make a new background and reset all the sprites in the Lab setting: the cat, microscope, water and wood. The yellow location block sets where each sprite should be. All sprites are set to draggable. This function will come in handy when students create code that moves from the microscope view back to the lab view.  ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can choose to have students “Think, Pair, Share” while reading all the code in the LabSetup function. Then come together and discuss whole group some interesting noticings they had. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8f11207c-d3a0-470a-92d2-0e4fa1d10f7f",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "c8cbafa8-930f-4aa2-82a1-e2e0b32f7ec9",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Create Your Own Model Slide” ",
+        "duration": "20",
+        "name": "Create Your Own Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8cbafa8-930f-4aa2-82a1-e2e0b32f7ec9",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "92e7b8d7-5855-4e56-b080-c31b11aee04a",
+      "position": 13,
+      "properties": {
+        "description": "**Do This:** Read the directions on the slide and allow students independent time or pair programming time to complete the rest of the level progression. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Here are a few tips that should help students regardless of the level they're working on\n\n- Collaborate with Neighbors: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- Read the Instructions: The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- Stuck? Look for hints: Each level includes a hint with advice for how to pass a level, including which blocks of code to try out.\n- Take your time and experiment. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92e7b8d7-5855-4e56-b080-c31b11aee04a",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "da79d695-67b3-4ede-9f3f-99877b38e3e0",
+      "position": 14,
+      "properties": {
+        "progression_name": "Setup Your Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "da79d695-67b3-4ede-9f3f-99877b38e3e0",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "67c755f3-01d9-4da8-9924-dc5a8a7cd62c",
+      "position": 15,
+      "properties": {
+        "progression_name": "Video: Events in Sprite Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "67c755f3-01d9-4da8-9924-dc5a8a7cd62c",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4",
+      "position": 16,
+      "properties": {
+        "progression_name": "Create Your Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "d33a9b58-bdce-4c98-9fa4-c1a59981928e",
+      "position": 17,
+      "properties": {
+        "progression_name": "Check In: Physical Change"
+      },
+      "seeding_key": {
+        "activity_section.key": "d33a9b58-bdce-4c98-9fa4-c1a59981928e",
+        "lesson_activity.key": "24956274-d378-4033-893b-414337e2d680"
+      }
+    },
+    {
+      "key": "093f4d43-8789-4875-a6cb-48b39fe8ddac",
+      "position": 1,
+      "properties": {
+        "description": "Great work, scientists! Let’s revisit the magic trick we saw at the beginning of the lesson. ",
+        "name": "Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "093f4d43-8789-4875-a6cb-48b39fe8ddac",
+        "lesson_activity.key": "d543629a-7749-41b5-87af-89ec7499181a"
+      }
+    },
+    {
+      "key": "5cc342b8-d928-45e9-a227-a90ee6eb0ef9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Is it magic? Is it science?” "
+      },
+      "seeding_key": {
+        "activity_section.key": "5cc342b8-d928-45e9-a227-a90ee6eb0ef9",
+        "lesson_activity.key": "d543629a-7749-41b5-87af-89ec7499181a"
+      }
+    },
+    {
+      "key": "76645583-8f90-4073-8472-ba318ff3843c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Turn to a partner and explain what happens in the “magic box.” When you’re ready, raise your hand to volunteer your explanation. "
+      },
+      "seeding_key": {
+        "activity_section.key": "76645583-8f90-4073-8472-ba318ff3843c",
+        "lesson_activity.key": "d543629a-7749-41b5-87af-89ec7499181a"
+      }
+    },
+    {
+      "key": "3318b092-1b9b-4f29-aefe-f3c4b20e67ba",
+      "position": 4,
+      "properties": {
+        "description": "**Discussion Goal:** Students should use the Word Bank to help them explain what happens in the magic box. Have students rephrase their explanations so they practice using the new vocabulary. "
+      },
+      "seeding_key": {
+        "activity_section.key": "3318b092-1b9b-4f29-aefe-f3c4b20e67ba",
+        "lesson_activity.key": "d543629a-7749-41b5-87af-89ec7499181a"
+      }
+    },
+    {
+      "key": "d900e8cd-0704-4c10-b765-16f567905128",
+      "position": 1,
+      "properties": {
+        "progression_name": "Microbit Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "d900e8cd-0704-4c10-b765-16f567905128",
+        "lesson_activity.key": "e6b2171c-3646-449d-8e8c-7bbb2df34db5"
       }
     }
   ],
@@ -1730,630 +2373,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CourseF_video_introSpriteLab_2021"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_video_introSpriteLab_2021"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "CourseF_video_introSpriteLab_2021"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_title"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_title"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_title"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_background"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_background"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_background"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_say"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_say"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_say"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_location"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_location"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_location"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_say2"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_say2"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_say2"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_prop"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_prop"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_prop"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_print"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_print"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_print"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "helloworld_food_click"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "helloworld_food_click"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "helloworld_food_click"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "coursee_helloworld_eventsvideo_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "coursee_helloworld_eventsvideo_2022"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "coursee_helloworld_eventsvideo_2022"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_clicksay"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_clicksay"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_clicksay"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 12,
-      "activity_section_position": 12,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_prompt"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_prompt"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_prompt"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 13,
-      "activity_section_position": 13,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_promptanswered"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_promptanswered"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_promptanswered"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 14,
-      "activity_section_position": 14,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_freeplay"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_freeplay"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      },
-      "level_keys": [
-        "csc_bookcover_freeplay"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "coursee_helloworld_introtosprites_hello-world"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_hello-world"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "coursee_helloworld_introtosprites_hello-world"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_makesprite"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_makesprite"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmarks_makesprite"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_location"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_location"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmarks_location"
-      ]
-    },
-    {
-      "chapter": 40,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_size"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_size"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmarks_size"
-      ]
-    },
-    {
-      "chapter": 41,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmark_explain"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmark_explain"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmark_explain"
-      ]
-    },
-    {
-      "chapter": 42,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_place1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_place1"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmarks_place1"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_place2"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_place2"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmarks_place2"
-      ]
-    },
-    {
-      "chapter": 44,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_behavior"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_behavior"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmarks_behavior"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "coursee_helloworld_eventsvideo_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "coursee_helloworld_eventsvideo_2022"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "coursee_helloworld_eventsvideo_2022"
-      ]
-    },
-    {
-      "chapter": 46,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_touches1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_touches1"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmarks_touches1"
-      ]
-    },
-    {
-      "chapter": 47,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_touches2"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_touches2"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmarks_touches2"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 12,
-      "activity_section_position": 12,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_landmarks_freeplay"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_landmarks_freeplay"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      },
-      "level_keys": [
-        "csc_landmarks_freeplay"
-      ]
-    },
-    {
-      "chapter": 49,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "csc_bookcover_widget_-book-recommendation"
         ],
         "progression": "Exploration"
@@ -2373,7 +2392,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2398,7 +2417,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2423,7 +2442,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2448,7 +2467,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2473,7 +2492,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -2498,7 +2517,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 29,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -2523,7 +2542,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 30,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2548,7 +2567,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 31,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -2573,7 +2592,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 32,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -2598,7 +2617,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 33,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -2623,7 +2642,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 34,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -2648,7 +2667,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 35,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -2673,7 +2692,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 36,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -2698,7 +2717,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 37,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -2723,7 +2742,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2748,7 +2767,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2773,8 +2792,83 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 40,
       "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites_2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro sprites_2023"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro debug_2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro debug_2023"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Animation Tab_2023"
+        ],
+        "progression": "Video: The Animation Tab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Animation Tab_2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3277e18b-36c4-496a-b791-bc83fb14bbb0"
+      },
+      "level_keys": [
+        "CSD: Animation Tab_2023"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2791,44 +2885,19 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       },
       "level_keys": [
         "CSD U3 Sprites Exploration_test2023"
       ]
     },
     {
-      "chapter": 67,
-      "position": 4,
+      "chapter": 44,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U3 Sprites intro debug_test2023"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 Sprites intro debug_test2023"
-        ],
-        "lesson.key": "Sprites",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
-      },
-      "level_keys": [
-        "CSD U3 Sprites intro debug_test2023"
-      ]
-    },
-    {
-      "chapter": 68,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "CSD U3 Sprites intro sprites_test2023"
         ],
         "progression": "Skill Building"
@@ -2841,16 +2910,16 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       },
       "level_keys": [
         "CSD U3 Sprites intro sprites_test2023"
       ]
     },
     {
-      "chapter": 69,
-      "position": 6,
-      "activity_section_position": 4,
+      "chapter": 45,
+      "position": 8,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2866,16 +2935,16 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       },
       "level_keys": [
         "CSD U3 Sprites anitab 1_test2023"
       ]
     },
     {
-      "chapter": 70,
-      "position": 7,
-      "activity_section_position": 1,
+      "chapter": 46,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2898,15 +2967,15 @@
       ]
     },
     {
-      "chapter": 71,
-      "position": 8,
-      "activity_section_position": 2,
+      "chapter": 47,
+      "position": 10,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U3 drawSprites placement match_test2023"
         ],
-        "progression": "Skill Building"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -2916,15 +2985,15 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
+        "activity_section.key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2"
       },
       "level_keys": [
         "CSD U3 drawSprites placement match_test2023"
       ]
     },
     {
-      "chapter": 72,
-      "position": 9,
+      "chapter": 48,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2948,8 +3017,8 @@
       ]
     },
     {
-      "chapter": 73,
-      "position": 10,
+      "chapter": 49,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -2973,8 +3042,8 @@
       ]
     },
     {
-      "chapter": 74,
-      "position": 11,
+      "chapter": 50,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2995,6 +3064,581 @@
       },
       "level_keys": [
         "CSD Games Sprites Challenges_test2023"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predictv2_test2023"
+        ],
+        "progression": "Not Used Anymore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L7 - Predictv2_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7827b0c1-39d6-49dd-b97b-ad2e50392868"
+      },
+      "level_keys": [
+        "CSD U3L7 - Predictv2_test2023"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
+        "progression": "The Clicker Game Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallB_2023"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB1_2023"
+        ],
+        "progression": "The Clicker Game Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB1_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallB1_2023"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_2023"
+        ],
+        "progression": "(Optional) The Trivia Game Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallC_2023"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC1_2023"
+        ],
+        "progression": "(Optional) The Trivia Game Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC1_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallC1_2023"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_title"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_title"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17"
+      },
+      "level_keys": [
+        "csc_bookcover_title"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_background"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_background"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17"
+      },
+      "level_keys": [
+        "csc_bookcover_background"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_say"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_say"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17"
+      },
+      "level_keys": [
+        "csc_bookcover_say"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_say2"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_say2"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17"
+      },
+      "level_keys": [
+        "csc_bookcover_say2"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_extensions_choice"
+        ],
+        "progression": "Extend Your Book Cover!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_extensions_choice"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d43f731b-3575-4161-8e66-d4dc0e8b9453"
+      },
+      "level_keys": [
+        "csc_bookcover_extensions_choice"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8e98f4f4-e89f-40a5-b1ad-02594fb4b95e"
+      },
+      "level_keys": [
+        "csc_bookcover_freeplay"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "cdc_particles_physical_intro2_chem"
+        ],
+        "progression": "Vanishing Act"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cdc_particles_physical_intro2_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e89257c5-3b4c-4a64-a7f8-b0f58f5c1a10"
+      },
+      "level_keys": [
+        "cdc_particles_physical_intro2_chem"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_observe2_chem"
+        ],
+        "progression": "Investigate: Wood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_observe2_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c7389703-56f2-4307-858c-70ef495749a4"
+      },
+      "level_keys": [
+        "csc_particles_phys_observe2_chem"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_physical change_chem"
+        ],
+        "progression": "Physical Changes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_physical change_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "15e5c8f0-dc50-4f0f-940a-1f89a735c622"
+      },
+      "level_keys": [
+        "csc_particles_physical change_chem"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_observer_chem"
+        ],
+        "progression": "Investigate: Water"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_observer_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9100def6-1484-4325-bc47-2bfeaefadf79"
+      },
+      "level_keys": [
+        "csc_particles_phys_observer_chem"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_setup1_chem"
+        ],
+        "progression": "Setup Your Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_setup1_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "da79d695-67b3-4ede-9f3f-99877b38e3e0"
+      },
+      "level_keys": [
+        "csc_particles_phys_setup1_chem"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events_chem"
+        ],
+        "progression": "Video: Events in Sprite Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_pilotVideo_events_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "67c755f3-01d9-4da8-9924-dc5a8a7cd62c"
+      },
+      "level_keys": [
+        "courseF_pilotVideo_events_chem"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_experimentEvent_chem"
+        ],
+        "progression": "Create Your Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4"
+      },
+      "level_keys": [
+        "csc_particles_phys_experimentEvent_chem"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_MicroscopeView_chem"
+        ],
+        "progression": "Create Your Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_MicroscopeView_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4"
+      },
+      "level_keys": [
+        "csc_particles_phys_MicroscopeView_chem"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_beforeChange_chem"
+        ],
+        "progression": "Create Your Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_beforeChange_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4"
+      },
+      "level_keys": [
+        "csc_particles_phys_beforeChange_chem"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_afterChange_chem"
+        ],
+        "progression": "Create Your Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_afterChange_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4"
+      },
+      "level_keys": [
+        "csc_particles_phys_afterChange_chem"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csc_physical_change_chem"
+        ],
+        "progression": "Check In: Physical Change"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_physical_change_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d33a9b58-bdce-4c98-9fa4-c1a59981928e"
+      },
+      "level_keys": [
+        "csc_physical_change_chem"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "microbit test v1"
+        ],
+        "progression": "Microbit Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "microbit test v1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d900e8cd-0704-4c10-b765-16f567905128"
+      },
+      "level_keys": [
+        "microbit test v1"
       ]
     }
   ],
@@ -3265,318 +3909,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CourseF_video_introSpriteLab_2021",
-        "script_level.level_keys": [
-          "CourseF_video_introSpriteLab_2021"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_title",
-        "script_level.level_keys": [
-          "csc_bookcover_title"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_background",
-        "script_level.level_keys": [
-          "csc_bookcover_background"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_say",
-        "script_level.level_keys": [
-          "csc_bookcover_say"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_location",
-        "script_level.level_keys": [
-          "csc_bookcover_location"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_say2",
-        "script_level.level_keys": [
-          "csc_bookcover_say2"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_prop",
-        "script_level.level_keys": [
-          "csc_bookcover_prop"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_print",
-        "script_level.level_keys": [
-          "csc_bookcover_print"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "helloworld_food_click",
-        "script_level.level_keys": [
-          "helloworld_food_click"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "coursee_helloworld_eventsvideo_2022",
-        "script_level.level_keys": [
-          "coursee_helloworld_eventsvideo_2022"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_clicksay",
-        "script_level.level_keys": [
-          "csc_bookcover_clicksay"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_prompt",
-        "script_level.level_keys": [
-          "csc_bookcover_prompt"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_promptanswered",
-        "script_level.level_keys": [
-          "csc_bookcover_promptanswered"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_freeplay",
-        "script_level.level_keys": [
-          "csc_bookcover_freeplay"
-        ],
-        "lesson.key": "Book Cover ",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "07afb91c-d108-4f16-b122-6b0e3ade117d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "coursee_helloworld_introtosprites_hello-world",
-        "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_hello-world"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_makesprite",
-        "script_level.level_keys": [
-          "csc_landmarks_makesprite"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_location",
-        "script_level.level_keys": [
-          "csc_landmarks_location"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_size",
-        "script_level.level_keys": [
-          "csc_landmarks_size"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmark_explain",
-        "script_level.level_keys": [
-          "csc_landmark_explain"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_place1",
-        "script_level.level_keys": [
-          "csc_landmarks_place1"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_place2",
-        "script_level.level_keys": [
-          "csc_landmarks_place2"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_behavior",
-        "script_level.level_keys": [
-          "csc_landmarks_behavior"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "coursee_helloworld_eventsvideo_2022",
-        "script_level.level_keys": [
-          "coursee_helloworld_eventsvideo_2022"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_touches1",
-        "script_level.level_keys": [
-          "csc_landmarks_touches1"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_touches2",
-        "script_level.level_keys": [
-          "csc_landmarks_touches2"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_landmarks_freeplay",
-        "script_level.level_keys": [
-          "csc_landmarks_freeplay"
-        ],
-        "lesson.key": "US Landmarks",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "e3d52b52-49b6-43cf-9ed4-5be69a62d303"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csc_bookcover_widget_-book-recommendation",
         "script_level.level_keys": [
           "csc_bookcover_widget_-book-recommendation"
@@ -3781,9 +4113,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites Exploration_test2023",
+        "level.key": "CSD U3 Sprites intro sprites_2023",
         "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_test2023"
+          "CSD U3 Sprites intro sprites_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
@@ -3793,14 +4125,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites intro debug_test2023",
+        "level.key": "CSD U3 Sprites intro debug_2023",
         "script_level.level_keys": [
-          "CSD U3 Sprites intro debug_test2023"
+          "CSD U3 Sprites intro debug_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Animation Tab_2023",
+        "script_level.level_keys": [
+          "CSD: Animation Tab_2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3277e18b-36c4-496a-b791-bc83fb14bbb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites Exploration_test2023",
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       }
     },
     {
@@ -3812,7 +4168,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       }
     },
     {
@@ -3824,7 +4180,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       }
     },
     {
@@ -3848,7 +4204,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
+        "activity_section.key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2"
       }
     },
     {
@@ -3886,6 +4242,282 @@
         "script.name": "csd-playground",
         "activity_section.key": "41db2bdf-8eea-45a4-a2df-c92f3b9c7d27"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3L7 - Predictv2_test2023",
+        "script_level.level_keys": [
+          "CSD U3L7 - Predictv2_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7827b0c1-39d6-49dd-b97b-ad2e50392868"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallB_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallB1_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB1_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallC_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallC1_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC1_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_title",
+        "script_level.level_keys": [
+          "csc_bookcover_title"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_background",
+        "script_level.level_keys": [
+          "csc_bookcover_background"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_say",
+        "script_level.level_keys": [
+          "csc_bookcover_say"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_say2",
+        "script_level.level_keys": [
+          "csc_bookcover_say2"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cca0e135-30a3-4d01-bd40-6a8cb9308d17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_extensions_choice",
+        "script_level.level_keys": [
+          "csc_bookcover_extensions_choice"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d43f731b-3575-4161-8e66-d4dc0e8b9453"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_freeplay",
+        "script_level.level_keys": [
+          "csc_bookcover_freeplay"
+        ],
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "8e98f4f4-e89f-40a5-b1ad-02594fb4b95e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cdc_particles_physical_intro2_chem",
+        "script_level.level_keys": [
+          "cdc_particles_physical_intro2_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "e89257c5-3b4c-4a64-a7f8-b0f58f5c1a10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_observe2_chem",
+        "script_level.level_keys": [
+          "csc_particles_phys_observe2_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c7389703-56f2-4307-858c-70ef495749a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_physical change_chem",
+        "script_level.level_keys": [
+          "csc_particles_physical change_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "15e5c8f0-dc50-4f0f-940a-1f89a735c622"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_observer_chem",
+        "script_level.level_keys": [
+          "csc_particles_phys_observer_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9100def6-1484-4325-bc47-2bfeaefadf79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_setup1_chem",
+        "script_level.level_keys": [
+          "csc_particles_phys_setup1_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "da79d695-67b3-4ede-9f3f-99877b38e3e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_pilotVideo_events_chem",
+        "script_level.level_keys": [
+          "courseF_pilotVideo_events_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "67c755f3-01d9-4da8-9924-dc5a8a7cd62c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_experimentEvent_chem",
+        "script_level.level_keys": [
+          "csc_particles_phys_experimentEvent_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_MicroscopeView_chem",
+        "script_level.level_keys": [
+          "csc_particles_phys_MicroscopeView_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_beforeChange_chem",
+        "script_level.level_keys": [
+          "csc_particles_phys_beforeChange_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_afterChange_chem",
+        "script_level.level_keys": [
+          "csc_particles_phys_afterChange_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "243d0b35-c6fb-422d-9b93-cf2b123dc4e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_physical_change_chem",
+        "script_level.level_keys": [
+          "csc_physical_change_chem"
+        ],
+        "lesson.key": "Physical Changes",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d33a9b58-bdce-4c98-9fa4-c1a59981928e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "microbit test v1",
+        "script_level.level_keys": [
+          "microbit test v1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d900e8cd-0704-4c10-b765-16f567905128"
+      }
     }
   ],
   "resources": [
@@ -3899,6 +4531,31 @@
       },
       "seeding_key": {
         "resource.key": "animation_tab"
+      }
+    },
+    {
+      "name": "Book Cover",
+      "url": "https://docs.google.com/presentation/d/1otbPjtIoZag8Qlp8ogc8tYwbW1j2UgLkU00pSiUD0Ag/template/preview",
+      "key": "book_cover",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1otbPjtIoZag8Qlp8ogc8tYwbW1j2UgLkU00pSiUD0Ag/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "book_cover"
+      }
+    },
+    {
+      "name": "Book Cover",
+      "url": "https://docs.google.com/document/d/1fEHKtMFE_uLJEP6YScvXV-LfOEqBz9QyW1NlKTQzveM/template/preview",
+      "key": "book_cover_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "book_cover_1"
       }
     },
     {
@@ -3941,6 +4598,30 @@
       }
     },
     {
+      "name": "Create Your Own Book Cover",
+      "url": "https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview",
+      "key": "create_your_own_book_cover",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "create_your_own_book_cover"
+      }
+    },
+    {
+      "name": "Create Your Own Book Cover [Key]",
+      "url": "https://docs.google.com/document/d/11cRlovf2Q27LjtYTUWXgbvTz5Lhj6CXawxJTaAvL8ZE/template/preview",
+      "key": "create_your_own_book_cover_key_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "create_your_own_book_cover_key_"
+      }
+    },
+    {
       "name": "Innovations in Computing",
       "url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/template/preview",
       "key": "innovations_in_computing",
@@ -3964,6 +4645,18 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "name": "Lesson Slides ",
+      "url": "https://docs.google.com/presentation/d/1QhkLmvbGn84F8SnGaI47tWNrxZxQuErFfdvKXgtPbaY/template/preview",
+      "key": "lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_slides"
       }
     },
     {
@@ -4015,9 +4708,57 @@
       "seeding_key": {
         "resource.key": "the_internet_of_things"
       }
+    },
+    {
+      "name": "The Problem Solving Process",
+      "url": "https://docs.google.com/document/d/15XGBsO_8flWsXo6iiq3NdI5iS2YB8SddAV9N1lx_5X4/view",
+      "key": "the_problem_solving_process",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process"
+      }
+    },
+    {
+      "name": "The Problem Solving Process Handout",
+      "url": "https://docs.google.com/document/d/1JxUYKFQWHSrp-UROJt31xQLUwZPOKQYcsxiHpu5K0hA/view",
+      "key": "the_problem_solving_process_handout",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_handout"
+      }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "resource.key": "book_cover"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "resource.key": "book_cover_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "resource.key": "create_your_own_book_cover"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "resource.key": "create_your_own_book_cover_key_"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
@@ -4050,6 +4791,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprites",
         "resource.key": "animation_tab"
       }
@@ -4076,6 +4823,18 @@
       "seeding_key": {
         "lesson.key": "Sprites",
         "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "the_problem_solving_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "the_problem_solving_process_handout"
       }
     }
   ],
@@ -4107,6 +4866,16 @@
       }
     },
     {
+      "key": "program",
+      "word": "Program",
+      "definition": "A series of steps that have been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
       "key": "property",
       "word": "Property",
       "definition": "A label for a characteristic of a sprite, such as its location and appearance",
@@ -4125,9 +4894,31 @@
       "seeding_key": {
         "vocabulary.key": "sprite"
       }
+    },
+    {
+      "key": "synopsis",
+      "word": "Synopsis",
+      "definition": "A brief summary of something, for example, the plot of a book.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "synopsis"
+      }
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "vocabulary.key": "synopsis"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
@@ -4171,6 +4962,26 @@
   ],
   "objectives": [
     {
+      "key": "17752d0f-7b2d-43ac-91f2-0fd8b3d28540",
+      "properties": {
+        "description": "Students will be able to simulate that a physical change occurs but the state of matter stays the same."
+      },
+      "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "objective.key": "17752d0f-7b2d-43ac-91f2-0fd8b3d28540"
+      }
+    },
+    {
+      "key": "3d3c2349-4f54-4581-b901-92703059c164",
+      "properties": {
+        "description": "Animate their Book Cover using blocks that set background, text, sprites, and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "objective.key": "3d3c2349-4f54-4581-b901-92703059c164"
+      }
+    },
+    {
       "key": "43157d11-cd32-45a6-bf01-a58915905177",
       "properties": {
         "description": "Describe the impacts of the device on society"
@@ -4178,6 +4989,16 @@
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "objective.key": "43157d11-cd32-45a6-bf01-a58915905177"
+      }
+    },
+    {
+      "key": "774018c4-98ee-4e54-a91c-6246e5932961",
+      "properties": {
+        "description": "Students will be able to create a model to show a physical change of an object "
+      },
+      "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "objective.key": "774018c4-98ee-4e54-a91c-6246e5932961"
       }
     },
     {
@@ -4201,6 +5022,16 @@
       }
     },
     {
+      "key": "db62fc1b-bbef-44d3-bb1a-6632ebdd24f4",
+      "properties": {
+        "description": "Use events and the Sprite “say” block to depict character dialogue between two main characters in their book"
+      },
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "objective.key": "db62fc1b-bbef-44d3-bb1a-6632ebdd24f4"
+      }
+    },
+    {
       "key": "dc85b9c2-e023-4f28-8b13-8009de75b832",
       "properties": {
         "description": "Create and use a sprite"
@@ -4217,6 +5048,55 @@
         "lesson.key": "Innovations in Computing",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "5-PS1-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Changes",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "5-PS1-4"
       }
     },
     {

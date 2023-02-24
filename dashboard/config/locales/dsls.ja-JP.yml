@@ -5725,7 +5725,7 @@ ja-JP:
 
           > **注**：学習計画を立てるのに役立つ推奨時間は上記のとおりです。 これまでに持っている知識、興味、能力に応じて、特定のステージで費やす時間が長かったり短かったりする場合がありますが、このコースは完全に自分のペースで進められます。いつでもコースを離れたり、コースに戻ったり、任意のステージやレベルを再訪したりすることができます。
       OPD-K5 Participation:
-        markdown: |+
+        markdown: |-
           ＃はじめに > 参加の計画
 
           開始前に、特に、これが初めてのオンラインコースの受講であれば、学習のニーズ、目標、およびオンラインの自習型環境での学習という独特な経験について、じっくりと考えてください！
@@ -5737,13 +5737,13 @@ ja-JP:
           ## つながる
 
           学習全体を通じてモチベーションと集中力を維持する1つの方法は、<a href="http://forum.code.org/c/plc" target="_new">専門学習コミュニティ（PLC）フォーラム</a>に積極的に参加することです。
-          まず、<ahref = "http://forum.code.org/t/welcome-please-introduce-yourself/410" target = "_new">「自己紹介」スレッド</a>で自己紹介をしましょう。コース全体を通じてフォーラムを使用し、内容に取り組んでいる他のユーザーと非同期で考え方や重要点、質問を分かち合えます。
+          まず、<a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">「自己紹介」スレッド</a>で自己紹介をしましょう。コース全体を通じてフォーラムを使用し、内容に取り組んでいる他のユーザーと非同期で考え方や重要点、質問を分かち合えます。
 
           <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank" rel="noopener noreferrer">今すぐ自己紹介をする>></button></a><br>
 
           ## 必要なときに助けを得る
 
-          コース中に行き詰まった場合はいつでも、[support.code.org]（http://support.code.org）にアクセスして、[コミュニティフォーラム]（https://support.code.org/hc/communities/public/topics）をチェックしてください。 / hc / communitys / public / topics）。おそらく、ここであなたの疑問に対する答えが見つかるでしょう。答えが見つからない場合や、まだ困ったことがある場合は、[teacher@code.org]（mailto:teacher@code.org）までメールご連絡ください。Code.orgのスタッフが出来る限り迅速にお答えします。
+          コース中に行き詰まった場合はいつでも、[support.code.org](http://support.code.org）にアクセスして、[コミュニティフォーラム]（https://support.code.org/hc/communities/public/topics）をチェックしてください。 / hc / communitys / public / topics）。おそらく、ここであなたの疑問に対する答えが見つかるでしょう。答えが見つからない場合や、まだ困ったことがある場合は、[teacher@code.org]（mailto:teacher@code.org）までメールご連絡ください。Code.orgのスタッフが出来る限り迅速にお答えします。
 
           ## 仲間と組む！
 
@@ -5763,8 +5763,9 @@ ja-JP:
 
           ここで少し時間を取って、このオンラインコースをいつどのように完了するかを検討して、この経験から、確実に最大限の成果が得られるようにしてください。望ましい計画が建てられたら、ステージ1をさらに深く探っていきましょう。
 
+          <a href="http://forum.code.org/c/plc" target="_new">
       OPD-K5 Participation_dani:
-        markdown: |+
+        markdown: |-
           ＃はじめに > 参加の計画
 
           開始前に、特に、これが初めてのオンラインコースの受講であれば、学習のニーズ、目標、およびオンラインの自習型環境での学習という独特な経験について、じっくりと考えてください！
@@ -5776,13 +5777,13 @@ ja-JP:
           ## つながる
 
           学習全体を通じてモチベーションと集中力を維持する1つの方法は、<a href="http://forum.code.org/c/plc" target="_new">専門学習コミュニティ（PLC）フォーラム</a>に積極的に参加することです。
-          まず、<ahref = "http://forum.code.org/t/welcome-please-introduce-yourself/410" target = "_new">「自己紹介」スレッド</a>で自己紹介をしましょう。コース全体を通じてフォーラムを使用し、内容に取り組んでいる他のユーザーと非同期で考え方や重要点、質問を分かち合えます。
+          まず、<a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">「自己紹介」スレッド</a>で自己紹介をしましょう。コース全体を通じてフォーラムを使用し、内容に取り組んでいる他のユーザーと非同期で考え方や重要点、質問を分かち合えます。
 
           <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank" rel="noopener noreferrer">今すぐ自己紹介をする>></button></a><br>
 
           ## 必要なときに助けを得る
 
-          コース中に行き詰まった場合はいつでも、[support.code.org]（http://support.code.org）にアクセスして、[コミュニティフォーラム]（https://support.code.org/hc/communities/public/topics）をチェックしてください。 / hc / communitys / public / topics）。おそらく、ここであなたの疑問に対する答えが見つかるでしょう。答えが見つからない場合や、まだ困ったことがある場合は、[teacher@code.org]（mailto:teacher@code.org）までメールご連絡ください。Code.orgのスタッフが出来る限り迅速にお答えします。
+          コース中に行き詰まった場合はいつでも、[support.code.org](http://support.code.org）にアクセスして、[コミュニティフォーラム]（https://support.code.org/hc/communities/public/topics）をチェックしてください。 / hc / communitys / public / topics）。おそらく、ここであなたの疑問に対する答えが見つかるでしょう。答えが見つからない場合や、まだ困ったことがある場合は、[teacher@code.org]（mailto:teacher@code.org）までメールご連絡ください。Code.orgのスタッフが出来る限り迅速にお答えします。
 
           ## 仲間と組む！
 
@@ -5802,6 +5803,7 @@ ja-JP:
 
           ここで少し時間を取って、このオンラインコースをいつどのように完了するかを検討して、この経験から、確実に最大限の成果が得られるようにしてください。望ましい計画が建てられたら、ステージ1をさらに深く探っていきましょう。
 
+          <a href="http://forum.code.org/c/plc" target="_new">
       OPD-K5 Welcome 2:
         markdown: |-
           # はじめに > コンピュータサイエンス入門
@@ -14547,15 +14549,11 @@ ja-JP:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: スクラットはどんぐりにとうちゃくする。コードにバグはない。
-          feedback: ふせいかい。 まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
         - text: スクラットはまちがった方に曲がるため、ドングリにとうちゃくしない。
           correct: true
-          feedback: せいかい！まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
         - text: "「まえにすすむ」ブロックがじゅうぶんでないため、スクラットはドングリにとうちゃくしません。"
-          correct: true
-          feedback: せいかい！まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
         - text: スクラットはさいしょのブロックから動かない。
-          feedback: このコードには2つのバグがあります。まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
+          feedback: スクラットはまちがった方に曲がるため、ドングリにとうちゃくしない。
         questions:
         - text: このコードにあるバグを見つけましょう。スクラットはドングリにとうちゃくしますか、それとも、まだ問題がありますか？
       courseC_multi_maze_programming8_predict12022:

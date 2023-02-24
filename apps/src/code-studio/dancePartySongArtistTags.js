@@ -90,5 +90,13 @@ export const SongTitlesToArtistTwitterHandle = {
   levitating_dualipa: 'DUALIPA',
   stay_thekidlaroi: 'TheKidLaroi',
   watermelonsugar_harrystyles: 'Harry_Styles',
-  higherpower_coldplay: 'Coldplay'
+  higherpower_coldplay: 'Coldplay',
+  // 2022 Songs
+  '2beloved_lizzo': 'Lizzo',
+  asitwas_harrystyles: 'Harry_Styles',
+  breakmysoul_beyonce: 'Beyonce',
+  sunflower_postmaloneftswaelee: 'PostMalone',
+  sunroof_nickyoureanddazy: 'Nicky_Youre',
+  taconesrojos_sebastianyatra: 'SebastianYatra',
+  wedonttalkaboutbruno_encanto: 'EncantoMovie'
 };

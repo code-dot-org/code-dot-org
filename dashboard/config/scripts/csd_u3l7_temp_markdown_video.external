@@ -3,23 +3,5 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# [Watch This Video (Click Here)](https://www.kapwing.com/videos/63489e66f7a15e00ee50ab32)
-
-- I _think_ the audio sync is off - don't let that distract you.
-- If you have a Kapwing account, you might be able to leave comments within Kapwing. If so, that'd be great!
-
-## Context
-
-- This lesson used to have 2 videos:
-	- [Introduction to Sprites](https://youtu.be/aUHzpGt9nso), which appeared in this spot
-    - [The Animation Tab](https://youtu.be/DQPruYTJ0Fk), which appeared 4 levels later
-- I noticed that a lot of the content in the first video (Intro to Sprites) isn't covered in this lesson anymore - sprite properties have been moved to the next lesson. Instead, this lesson is pretty much exclusively about adding animations to the screen, but the animations tab is delayed for several levels.
-- There are also some bad shots in the video, specifically:
-	- In one spot, `drawSprites` appears as a green block when really it's yellow now
-    - The Animations video ends by showing the draw loop, which isn't introduced for 4 more lessons. That's  not cool
-- **What I did instead:**
-	- Re-recorded my own intro to sprites, then edited and added the Animations video to the end of it. That's the video at the top of this page
-    	- If this seems like a good move, then I'll figure out a way to have someone else more professionally record that intro
-    - I also edited down the first video to focus on properties ([link here](https://www.kapwing.com/videos/6349c62462ecfa126190b496)) and am planning to start the next lesson with this trimmed-down video
-    - I also edited the levels to include animations earlier, since there didn't seem to be a compelling reason to delay them
+# [Watch This Video (Click Here)](https://www.kapwing.com/videos/6351b7da32b8aa0070e676c7)
 MARKDOWN

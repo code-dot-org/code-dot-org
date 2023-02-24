@@ -31,7 +31,6 @@
           "name": "Gumball Play Lab"
         },
         "dance/Dance Party": {
-          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "aquatic/Aquatic": {
@@ -49,6 +48,12 @@
         "text-compression/Text Compression": {
           "name": "Text komprimering"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab"
         },
@@ -59,6 +64,7 @@
           "name": "Timme av Kod 2013"
         },
         "dance-2019/Dance Party": {
+          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "k5-onlinepd-2019/Loops": {
@@ -854,6 +860,9 @@
         },
         "allthethings/Web Lab": {
           "name": "Web Lab"
+        },
+        "allthethings/lesson-48": {
+          "name": "Poesi"
         },
         "coursef-2021/For Loop Fun": {
           "name": "'För' loop skoj"

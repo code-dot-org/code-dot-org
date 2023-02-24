@@ -5017,6 +5017,17 @@
           "move and get nectar with counter": {
             "name": "mover y obtener néctar con contador"
           }
+        },
+        "2-3 Artist Loops 2": {
+          "draw 3 hexagons": {
+            "name": "dibuja 3 hexágonos"
+          },
+          "draw 4 hexagons": {
+            "name": "dibuja 4 hexágonos"
+          },
+          "draw 5 hexagons": {
+            "name": "dibuja 5 hexágonos"
+          }
         }
       }
     }

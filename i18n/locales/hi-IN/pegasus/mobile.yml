@@ -598,6 +598,7 @@
   volunteer_engineer_submission_distance_16: "10 मील"
   volunteer_engineer_submission_distance_24: "15 मील"
   volunteer_engineer_submission_distance_32: "20 मील"
+  volunteer_engineer_submission_distance_80: "50 मील"
   volunteer_engineer_submission_num_volunteers_5: "5 स्वयं सेवक"
   volunteer_engineer_submission_num_volunteers_10: "10 स्वयं सेवक"
   volunteer_engineer_submission_num_volunteers_25: "25 स्वयं सेवक"
@@ -990,6 +991,7 @@
   express-2020_name: एक्सप्रेस कोर्स (2019)
   pre-express-2020_name: पूर्व-पाठक एक्सप्रेस कोर्स (2020)
   pre-express-2021_name: पूर्व-पाठक एक्सप्रेस कोर्स (2021)
+  pre-express-2022_name: पूर्व-पाठक एक्सप्रेस कोर्स (2022)
   csd2_name: 'यूनिट 2: वेब डेवलपमेंट'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "त्वरित पाठ्यक्रम"
@@ -1573,6 +1575,9 @@
   hoc_overview_dance_title: "डांस पार्टी"
   hoc_overview_dance_subtitle: "अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी को कोड करें। इसमें कैटी पेरी, मैडोना, जे, बाल्विन, सिया, कीथ अर्बन, कियारा और 25 और को पेश करें!"
   hoc_overview_dance_2019_subtitle: "अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी को कोड करें।पेश करते हैं कैटी पेरी, शॉन मेंडेस, पैनिक को! डिस्को, लिल नास एक्स, जोनास ब्रदर्स, निकी मिनाज और 34 और में!"
+  hoc_overview_dance_2022_subtitle: "अपने दोस्तों के साथ साझा करने के लिए एक डांस पार्टी को कोड करें। जिसमें बेयोंसे, हैरी स्टाइल्स, लिज़ो, लिल नैस एक्स, सेलेना गोमेज़, डिज्नी के “एनकैंटो” के संगीत और बहुत कुछ शामिल हैं!"
+  hoc_overview_hello_world_2022_subtitle: "आपके द्वारा बनाई गई दुनिया में इंटरैक्टिव वर्णों को कोड करने के लिए चार मज़ेदार थीम्स में से चुनें।"
+  hoc_overview_hello_world_2022_alt_text: "पृथ्वी के एक चित्रण के चारों ओर तैरते एनिमेटेड अंतरिक्ष यात्री और पशु पात्र"
   hoc_overview_title: "ऑवर ऑफ़ कोड गतिविधियां code.org के तरफ से"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">आवर ऑफ़ कोड</a> एक वैश्विक अभियान है, जो 180 से अधिक देशों में लाखों छात्रों तक पहुंच रहा है। कोई भी, कहीं भी आवर ऑफ़ कोड इवेंट आयोजित कर सकता है या 200 से अधिक एक-घंटे के ट्यूटोरिल्स को आजमा सकता है, जो 45 से अधिक भाषाओं में उपलब्ध हैं।"
   hoc_overview_subtitle_markdown: "[आवर ऑफ कोड] (https://hourofcode.com) एक वैश्विक आंदोलन है जो 180+ देशों में लाखों छात्रों तक पहुंचता है। कोई भी, कहीं भी ऑवर ऑफ़ कोड इवेंट को व्यवस्थित कर सकता है या 45 से अधिक भाषाओं में उपलब्ध 500+ एक घंटे के ट्यूटोरियल में से किसी एक को आज़मा सकता है।"
@@ -1617,9 +1622,13 @@
   hoc2018_mc_educators_box3_title: "निशुल्क छात्र वर्कशॉप में शामिल हों"
   hoc2018_mc_educators_box3_desc: "निशुल्क आवर ऑफ़ कोड वर्कशॉप के लिए अपने क्षेत्र में Microsoft स्टोर पर जाएं। हर कौशल स्तरों, छह वर्ष और इससे अधिक के आयु वर्ग के भागीदारों के लिए।"
   hoc2018_mc_educators_box3_button: "वर्कशॉप ढूंढें"
+  hoc2022_mc_educators_box3_desc_markdown: 'डिमांड [फ्री कोर्स](%{free_course_link}) पर इसका उपयोग करें या एक अतिथि शिक्षक के साथ लाइव ऑवर ऑफ कोड वर्कशॉप में भाग लेने के लिए अपनी पूरी कक्षा को पंजीकृत करें। CSEW, 6 - 11 दिसंबर के दौरान कई बार पेश किया गया। '
+  hoc2022_mc_educators_box3_button: "अब रजिस्टर करें"
   hoc2018_mc_educators_box4_title: "कंप्यूटर साइंस के और संसाधनों तक पहुंच प्राप्त करें"
   hoc2018_mc_educators_box4_desc: "Microsoft से डिजीटल कौशलों और कंप्यूटर साइंस शिक्षा संसाधनों के साथ अपने समुदाय में बदलाव लाएं।"
   hoc2018_mc_educators_box4_button: "संसाधनों की पड़ताल करें"
+  hoc2022_mc_educators_box4_desc: "पेशेवर विकास द्वारा समर्थित ब्लॉक से अजगर तक 200 घंटे के कंप्यूटर विज्ञान पाठ्यक्रम के साथ K-12 शिक्षार्थियों में STEM जुनून को प्रेरित करें।"
+  hoc2022_mc_educators_box4_button: "सीखना जारी रखें"
   hoc2018_mc_watch_videos: "शुरुआत करने से पहले, इनमें से एक प्रेरित वीडियो देखें"
   hoc2018_mc_videos_more: "रोल मॉडल्स और जानी-मानी हस्तियों के और <a href='%{inspiring_videos_playlist}'>प्रेरणादायक वीडियो</a>"
   hoc2018_mc_careers_more: "प्रौद्योगिकी क्षेत्रों में पेशेवरों के और <a href='%{careers_url}' target='_blank'>प्रेरणादायक वीडियो</a>"
@@ -1735,6 +1744,9 @@
   hoc2021_mc_mee_villages_description: 'Minecraft में अपने छात्रों के साथ कोडिंग के बेसिक्स सीखें और विविधता एवं समावेशन को एक्सप्लोर करें: एजुकेशन एडमिशन। '
   hoc2021_mc_mee_ai_title: "भलाई के लिए AI"
   hoc2021_mc_mee_ai_description: 'AI को एक्सप्लोर करें और Minecraft में कोड करना सीखें: एजुकेशन एडिशन। '
+  hoc2022_mc_mee_title: "Minecraft: एस्केप एस्टेट"
+  hoc2022_mc_mee_description: 'भोर तक रहस्यमयी हवेली से भागें और एक लाख पन्ने कमाएँ! नया Minecraft ऑवर ऑफ़ कोड ट्यूटोरियल अब Minecraft: Education Edition for Windows, Mac, Chromebook, Ipad और Mobile में उपलब्ध है। निःशुल्क शिक्षक संसाधनों, प्रशिक्षणों और वीडियो के साथ शुरुआत करें।'
+  hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition में इस निःशुल्क कोडिंग पाठ में भविष्य को सेव करने के लिए समय पर वापस यात्रा करें।'
   footer_powered_by_aws: "अमेज़ॅन वेब सर्विसेज द्वारा संचालित"
   footer_built_on_github: "माइक्रोसॉफ्ट से गिटहब पर बनाया गया"
   codebytes_skinny_banner_title: "हमारे CodeBytes लाइव मिनी-पाठ के लिए 7-11 दिसंबर को हमसे जुड़ें!"
@@ -1803,5 +1815,18 @@
   footer_cookie_notice: "कुकी नोटिस"
   top_hoc_tutorial_applab_alt_text: "एक नीली पृष्ठभूमि के विरुद्ध सितारों और प्रकाश की किरणों को उत्सर्जित करने वाली टच स्क्रीन टैबलेट को छूने वाली तर्जनी वाला एक भूरा हाथ"
   minecraft_tile_alt: "दो माइनक्राफ्ट वर्ण, Steve और Alex, कोरल, डॉल्फ़िन्स, और केल्प के साथ एक जलीय माइनक्राफ्ट दृश्य दिखाती एक पृष्ठभूमि के विरुद्ध"
+  hoc2022_banner_title: "खोज करें, खेलें, बनाएं!"
+  hoc2022_banner_description: "ब्रह्मांड में खोज करें, लक्ष्य हासिल करें, परिवर्तन का तोड़ करें - कंप्यूटर विज्ञान को आज़माने के कई तरीके हैं!"
+  hoc2022_cta_primary: "देखें, क्या नया है"
+  hoc2022_cta_secondary: "अधिक गतिविधियां आज़माएँ"
+  hoc2022_landing_page_explore_title: "अन्वेषण करें"
+  hoc2022_landing_page_explore_description: "कंप्यूटर विज्ञान के साथ नई दुनिया के लिए द्वार खोलें!"
+  hoc2022_landing_page_play_title: "चलाओ"
+  hoc2022_landing_page_play_description: "मैदान में आएं और स्कोर करें!"
   hoc2022_landing_page_create_title: "बनाए"
+  hoc2022_landing_page_create_description: "कुछ अजीब और अद्भुत बनाओ!"
+  hoc2022_landing_page_banner_alt_left: "अंतरिक्ष में शनि के बगल में एक विदेशी नाचता है"
+  hoc2022_landing_page_banner_alt_right: "एक रोबोट एक रॉकेट के सामने अंतरिक्ष में एक सॉकर बॉल को ड्रिबल करता है"
   try_it_yourself: "इसे खुद आजमाएं!"
+  try_an_activity: "कोई गतिविधि आज़माएं"
+  see_more_activities: "और गतिविधियाँ देखें"

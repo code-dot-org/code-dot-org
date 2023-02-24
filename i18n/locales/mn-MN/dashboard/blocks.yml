@@ -228,20 +228,12 @@ mn:
             MOVES.XArmsUp: Сунгах
             MOVES.ThisOrThat: Энэ эсвэл тэр
             MOVES.Rest: Байхгүй
-      Dancelab_everyMeasuresRange:
-        text: "{START}-н дараа {N} арга хэмжээ бүрийг давтах "
       Dancelab_everySeconds:
         text: "{N} {UNIT} бүрийг давтах "
         options:
           UNIT:
             '"measures"': арга хэмжээ
             '"seconds"': секундууд
-      Dancelab_everySecondsRange:
-        text: "{N} {UNIT} бүр нь {START}-с {STOP} хүртгэл байна"
-        options:
-          UNIT:
-            measures: Арга хэмжээ
-            seconds: Секунд
       Dancelab_everyVerseChorus:
         text: "{UNIT} бүр "
         options:
@@ -989,6 +981,14 @@ mn:
         text: тохиргоо
       Dancelab_whenSetup2:
         text: тохиргоо
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Хөөс
+            '"confetti"': Конфетти
+            '"hearts"': зүрхнүүд
+            '"rain"': бороотой
+            '"starburst"': Оддын тэсрэлт
       gamelab_addBehaviorSimple:
         text: шидтэн {SPRITE} нь {BEHAVIOR}-г эхлүүлнэ
       gamelab_allSpritesWithAnimation:
@@ -1705,6 +1705,8 @@ mn:
         options:
           SOUND:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': үсрэх
+      Poetry_playSoundOptionsSpace:
+        text: хөгжимтоглох {SOUND}
       Poetry_setBackground:
         text: суурь өнгийг тохируулах {COLOR}
       Poetry_setBackgroundEffect:
@@ -1949,5 +1951,13 @@ mn:
           DIR:
             right: баруун гар тийш ↻
             left: зүүн гар тийш ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Хөөс
+            '"confetti"': Конфетти
+            '"hearts"': зүрхнүүд
+            '"rain"': бороотой
+            '"starburst"': Оддын тэсрэлт
       validation_validatedBackground:
         text: суурь өнгийг {IMG} руу тохируулах

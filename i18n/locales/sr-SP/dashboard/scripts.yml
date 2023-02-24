@@ -581,6 +581,7 @@ sr:
             required:
               display_name: Преглед
         dance-extras-2019:
+          title: Настави плес
           description: Иди даље од првог часа са новим идејама за пројекте.
           student_description: Иди даље од првог часа са новим идејама за пројекте.
         csp4-preview:
@@ -939,3 +940,29 @@ sr:
           lessons:
             lesson-6:
               name: Петље
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Променљиве
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Бројачке петље
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Променљиве
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Петље
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Листе
+            lessonGroup-3:
+              display_name: Петље

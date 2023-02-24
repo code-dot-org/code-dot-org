@@ -1,4 +1,4 @@
-import {ToolboxType} from '../constants';
+import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
 
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
@@ -19,9 +19,11 @@ export function getToolboxType() {
   if (!workspace) {
     return;
   }
-  if (workspace.flyout_) {
+  // True is passed so we only get the flyout directly owned by the workspace.
+  // Otherwise getFlyout will return the flyout for the toolbox if it has categories.
+  if (workspace.getFlyout(true)) {
     return ToolboxType.UNCATEGORIZED;
-  } else if (workspace.toolbox_) {
+  } else if (workspace.getToolbox()) {
     return ToolboxType.CATEGORIZED;
   } else {
     return ToolboxType.NONE;
@@ -65,4 +67,27 @@ export function blockLimitExceeded() {
 
 export function getBlockLimit(blockType) {
   return 0;
+}
+
+/**
+ * Returns a new Field object,
+ * conditional on the type of block we're trying to create.
+ * @param {string} type
+ * @returns {?Blockly.Field}
+ */
+export function getField(type) {
+  let field;
+  if (type === Blockly.BlockValueType.NUMBER) {
+    field = new Blockly.FieldNumber();
+  } else if (type.includes('ClampedNumber')) {
+    const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+    if (clampedNumberMatch) {
+      const min = parseFloat(clampedNumberMatch[1]);
+      const max = parseFloat(clampedNumberMatch[2]);
+      field = new Blockly.FieldNumber(0, min, max);
+    }
+  } else {
+    field = new Blockly.FieldTextInput();
+  }
+  return field;
 }

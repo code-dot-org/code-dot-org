@@ -416,7 +416,7 @@ levelbuilder_mode:
 # make it easier to tell the difference
 use_local_header_color:
 
-default_hoc_mode: soon-hoc   # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_mode: post-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
 
 # teacher_application_mode values: 'open', 'closing-soon', 'closed'
@@ -459,7 +459,7 @@ image_optim: <%=chef_managed && !ci_test%>
 # Used to export data on professional learning to gsheets
 enrollments_summer_2020_gsheet_key:
 csf_workshop_attendance_gsheet_key: !Secret
-applications_2022_2023_gsheet_key:
+applications_gsheet_key:
 eir_teacher_enrollments_gsheet_key: !Secret
 
 # Referenced in Chef config, but not sure if they are still used anywhere?
@@ -574,3 +574,10 @@ open_weather_api_key: !Secret
 # instance of Javabuilder. This will likely be 'javabuilder-adhoc-your_branch_name'
 use_localhost_javabuilder:
 local_javabuilder_stack_name:
+
+# Amplitude keys
+
+# Music lab key
+amplitude_api_key: !Secret
+# General CDO key
+cdo_amplitude_api_key:

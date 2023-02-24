@@ -17,12 +17,17 @@ fa:
       length: طول
       name: نام
       nectar: شهد
+      object: شیء
+      planet: سیاره
+      points: امتیازات
       random: در هم
       repeat: تکرار کن
       right: سمت راست
       score: امتیاز
+      shout: فریاد
       size: اندازه
       speed: سرعت
       type: نوع
       variable: متغیر
+      wizard: جادوگر
       x: طول (x)

@@ -14,6 +14,7 @@ import {connect} from 'react-redux';
 import TableDescription from './TableDescription';
 import classNames from 'classnames';
 import style from './data-table-view.module.scss';
+import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
   showDebugView: false
@@ -22,6 +23,7 @@ const INITIAL_STATE = {
 class DataTableView extends React.Component {
   static propTypes = {
     // from redux state
+    isRtl: PropTypes.bool.isRequired,
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
     tableListMap: PropTypes.object.isRequired,
@@ -96,7 +98,8 @@ class DataTableView extends React.Component {
       tableListMap,
       tableName,
       onViewChange,
-      libraryManifest
+      libraryManifest,
+      isRtl
     } = this.props;
     const visible = DataView.TABLE === view;
     const debugDataStyle = {
@@ -122,20 +125,23 @@ class DataTableView extends React.Component {
               onClick={() => onViewChange(DataView.OVERVIEW)}
             >
               <FontAwesome icon="arrow-circle-left" />
-              &nbsp;Back to data
+              &nbsp;{msg.backToData()}
             </a>
           </span>
-          <span className={style.debugLink}>
+          <span className={isRtl ? style.debugLinkRtl : style.debugLink}>
             <a
               id="uitest-tableDebugLink"
               className={dataStyles.link}
               onClick={this.toggleDebugView}
             >
-              {this.state.showDebugView ? 'Table view' : 'Debug view'}
+              {this.state.showDebugView
+                ? msg.dataTableTableView()
+                : msg.dataTableDebugView()}
             </a>
           </span>
         </div>
         <TableControls
+          isRtl={isRtl}
           clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
@@ -160,6 +166,7 @@ class DataTableView extends React.Component {
 export const UnconnectedDataTableView = DataTableView;
 export default connect(
   state => ({
+    isRtl: state.isRtl,
     view: state.data.view,
     tableColumns: state.data.tableColumns || [],
     tableRecords: state.data.tableRecords || [],

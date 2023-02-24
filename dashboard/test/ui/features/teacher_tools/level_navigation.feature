@@ -3,6 +3,7 @@ Feature: Continue button on levels
 Scenario: External Video Level
   Given I am a teacher
   Given I am on "http://studio.code.org/s/coursec-2019/lessons/14/levels/1"
+  And I wait until element "#teacher-panel-container" is visible
   And I dismiss the teacher panel
   And I wait to see ".video-download"
   And I wait to see ".submitButton"

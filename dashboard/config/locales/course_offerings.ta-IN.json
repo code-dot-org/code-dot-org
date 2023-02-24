@@ -42,7 +42,10 @@
         "halloween": "ஹாரோவீன்",
         "step": "அடி",
         "csa5-exemplars": "csa5- முன்மாதிரிகள்",
-        "soccer": "காற்பந்து"
+        "soccer": "காற்பந்து",
+        "hello-world-space": "வணக்கம் உலகம்: விண்வெளி",
+        "hello-world-soccer": "வணக்கம் உலகம்: சாக்கர்",
+        "playground": "ஆடுகளம்"
       }
     }
   }

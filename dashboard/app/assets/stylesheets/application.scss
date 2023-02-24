@@ -21,6 +21,7 @@
  *= require_directory .
  *
  * Shared
+ *= require barlow-semi-condensed-font
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -231,7 +232,7 @@ img.video_thumbnail {
     }
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1100px) {
     .create_menu {
       display: none !important;
     }
@@ -409,6 +410,11 @@ img.video_thumbnail {
 
 #header-banner-overflow {
   margin: 16px;
+
+  .bannerContentButton {
+    // !important is used here to overwrite inline styles of button.
+    border-color: $neutral_dark !important;
+  }
 }
 
 #header-banner, #header-banner-overflow {
@@ -420,9 +426,11 @@ img.video_thumbnail {
 .bannerContentContainer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin: 16px;
 }
+
 #courses-container {
   #header-banner {
     background-position: 75% 40%;
@@ -465,10 +473,12 @@ img.video_thumbnail {
   a:link, a:visited, a:hover, a:active {
     font-family: $gotham-extra-bold;
     font-weight: normal;
-    color: $cyan;
+    color: $brand_secondary_default;
     background-color: transparent;
+    text-decoration: underline;
   }
   a:hover {
+    color: $brand_secondary_dark;
     text-decoration: underline;
   }
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
@@ -501,7 +511,7 @@ html, body {
   min-height: $footer_min_height;
   padding-top: $footer_padding-top;
   font-size: 14px;
-  background-color: $dark_color;
+  background-color: $darkest_gray;
   color: $header_text;
   a:link, a:visited, a:hover, a:active {
     font-family: $gotham-regular;
@@ -530,7 +540,7 @@ html, body {
   }
   .dim {
     display: inline-block;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   .container {
@@ -853,6 +863,11 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
+  @media screen and (max-height: 600px) {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
   a:hover:not(.btn) {
     color: $red;
     background-color: $white;
@@ -1237,6 +1252,7 @@ input.header_input {
 
 #codeApp {
   position: relative;
+  margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 
   .loading {
     height: 520px;
@@ -1694,6 +1710,17 @@ a.download-video {
       height: 40px;
       padding: 0 6px;
     }
+    input {
+      background-color: $neutral_light;
+    }
+
+    label {
+      color: $neutral_dark;
+      font-size: 1em;
+      max-width: 20%;
+      line-height: 1.2;
+      font-family: $gotham-bold;
+    }
   }
 
   .field-aligned {
@@ -1702,7 +1729,10 @@ a.download-video {
   }
 
   #forgot-password {
-    font-family: $gotham-extra-bold;
+    color: $neutral_dark;
+    font-size: 1em;
+    line-height: 1.2;
+    font-family: $gotham-bold;
   }
 
   #password_field, #new_user {
@@ -1715,22 +1745,64 @@ a.download-video {
 
   button {
     align-self: flex-end;
-    background-color: $orange;
-    border: 1px solid $orange;
-    color: $white;
+    background-color: $brand_secondary_default;
+    border: 2px solid $brand_secondary_default;
+    color: $neutral_white;
     font-family: $gotham-bold;
     margin: 5px 0;
     width: $button-width;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_white;
+      border-color: $neutral_dark20;
+      background-color: $neutral_dark20;
+      @include box-shadow(none);
+      cursor: not-allowed;
+    }
   }
 
   .blue-button {
     background-color: $blue;
     border: 1px solid $blue;
   }
+  .neutral-button {
+    background-color: $neutral_white;
+    border: 2px solid $neutral_dark;
+    color: $neutral_dark;
+
+    &:hover {
+      background-color: $neutral_dark10;
+      border-color: $neutral_dark;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_dark20;
+      border-color: $neutral_dark20;
+      background-color: $neutral_white;
+      @include box-shadow(none);
+      cursor: not-allowed;
+    }
+  }
 }
 
 #code_without_signing_in {
   margin-top: 80px;
+  margin-bottom: 0;
 }
 
 #signup, #school-info-modal {
@@ -1745,7 +1817,6 @@ a.download-video {
   .oauth-links {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10px;
   }
 
   .more-details {
@@ -1820,7 +1891,6 @@ a.download-video {
   .signup-header {
     margin: 0;
     flex-grow: 1;
-    text-align: center;
   }
 
   .signup, .finish-signup {
@@ -2120,6 +2190,10 @@ a.download-video {
     display: flex;
     align-items: center;
 
+    input {
+      background-color: $neutral_light;
+    }
+
     input[type=text] {
       flex-grow: 2;
       height: 40px;
@@ -2129,40 +2203,80 @@ a.download-video {
     }
 
     button {
-      background-color: $orange;
-      border: 1px solid $orange;
-      color: $white;
       font-family: $gotham-bold;
       padding: 10px 20px;
       margin-right: 0;
-    }
-  }
+      background-color: $brand_secondary_default;
+      border: 2px solid $brand_secondary_default;
+      color: $neutral_white;
 
-  .oauth-sign-in {
-    color: $white;
-    font-family: $gotham-bold;
-    width: 100%;
-    margin: 5px 0;
+      &:hover {
+        background-color: $brand_secondary_dark;
+        border-color: $brand_secondary_dark;
+        box-shadow: none;
+      }
+      &:focus {
+        border-color: $brand_primary_default;
+      }
 
-    &.with-google_oauth2 {
-      background-color: $google_red;
-      border: 1px solid $google_red;
       &:disabled {
-        border: 1px solid $lighter_gray;
-        background-color: $lighter_gray;
+        color: $neutral_white;
+        border-color: $neutral_dark20;
+        background-color: $neutral_dark20;
         @include box-shadow(none);
         cursor: not-allowed;
       }
     }
+  }
+
+  .oauth-sign-in {
+    font-family: $gotham-bold;
+    width: 100%;
+    margin: 5px 0;
+    color: $neutral_dark;
+    background-color: $neutral_white;
+    border: 2px solid $neutral_dark;
+    border-radius: 4px;
+    line-height: 18px;
+
+    &:hover {
+      background-color: $neutral_dark10;
+      box-shadow: none;
+    }
+
+    img {
+      opacity: unset;
+      float: left;
+      margin-left: 24px;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_dark20;
+      border-color: $neutral_dark20;
+      background-color: $neutral_white;
+      @include box-shadow(none);
+      cursor: not-allowed;
+    }
+
+    &.with-google_oauth2 {
+      background-color: $google_brand_color;
+      border-color: $google_brand_color;
+      color: $neutral_white;
+    }
 
     &.with-facebook {
-      background-color: $facebook_blue;
-      border: 1px solid $facebook_blue;
+      background-color: $facebook_brand_color;
+      border-color: $facebook_brand_color;
+      color: $neutral_white;
     }
 
     &.with-microsoft_v2_auth {
-      background-color: $microsoft_blue;
-      border: 1px solid $microsoft_blue;
+      background-color: $microsoft_brand_color;
+      border-color: $microsoft_brand_color;
     }
   }
 }

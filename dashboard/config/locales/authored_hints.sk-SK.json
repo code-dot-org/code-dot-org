@@ -570,14 +570,14 @@
         },
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "Tvoj kód nebude veľmi odlišný od toho v poslednej úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom ho otočiť späť, aby bol pripravený znovu skočiť dopredu.",
-          "courseF_artist_variables4_c": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_c": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n[][0]",
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "Druhá polovica tvojho kódu by mala vyzerať takmer rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať, a potom otáčať _vpravo_.",
           "courseF_artist_variables5_b": "Prvá polovica tvojho kódu nakreslí prvé tri trojuholníky a druhá polovica nakreslí zvyšné tri.",
           "courseF_artist_variables5_c": "Začni zduplikovaním kódu z prvej polovice tvojho programu, potom ho uprav a vyrob si daný vzor.",
-          "courseF_artist_variables5_d": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "Toto je vzor, ktorého sa bude držať tvoj umelec:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Je viacero ciest, ktorými môžeš ísť. Ktorá je tá najkratšia?",
@@ -4816,7 +4816,7 @@
         },
         "courseD_bee_conditionals3_copy": {
           "courseD_bee_conditionals3_a": "Použi podmienku `ak`, skontroluj každé miesto a zisti, či sa tam nachádza kvet, alebo nič.",
-          "courseD_bee_conditionals3_b": "Môžeš použiť cyklus `opakuj` alebo \\`pokiaľ, aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!",
+          "courseD_bee_conditionals3_b": "Môžeš použiť cyklus `opakuj` alebo `pokiaľ, aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!",
           "courseD_bee_conditionals3_c": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "courseD_bee_conditionals4": {
@@ -4840,7 +4840,7 @@
         "courseD_bee_conditionals4_copy": {
           "courseD_bee_conditionals4_a": "Ku každému políčku pristupuj tak, akoby bol nad ním oblak, napriek tomu, že vidíš celú cestu.",
           "courseD_bee_conditionals4_b": "V cykle použi podmienku  `ak` a skontroluj každé pole, či sa tam nachádza nektár.",
-          "courseD_bee_conditionals4_c": "Použitím  bloku <xml><block type=\"maze_untilBlocked\"/></xml> by si sa mal posunúť vpred a skontrolovať kvet. Ak je tam kvet, čo by mala včela spraviť?"
+          "courseD_bee_conditionals4_c": "Použitím  bloku [blockly block][0] by si sa mal posunúť vpred a skontrolovať kvet. Ak je tam kvet, čo by mala včela spraviť?"
         },
         "courseD_bee_conditionals5_2018": {
           "courseD_bee_conditionals5_a": "Predstav si každú stranu obdĺžnika ako samostatnú cestu. Nastav zvonku vnorený cyklus s blokom `opakuj` a zvnútra cyklus `ak je tam ceste vpred`. Koľko ciest musí včela preletieť, ak musí preletieť každú stranu s kvetom?",
@@ -7311,7 +7311,7 @@
         },
         "OPD-K5-projects-2": {
           "courseE_playLab_scaffold1_a": "Blok `nastav postavu 1 na obrázok ???` môžeš použiť na pridanie postavy na scénu.",
-          "courseE_playLab_scaffold1_b": "Ak chceš, aby sa tvoja postava objavila na začiatku programu, vlož blok `nastav postavu` pod blok  `pri spustení`.",
+          "courseE_playLab_scaffold1_b": "Ak chceš, aby sa tvoja postava objavila na začiatku programu, vlož blok `nastav postavu ` pod blok  `pri spustení `.",
           "courseE_playLab_scaffold1_c": "Použi blok `nastav pozadie ???` a vyber si pozadie pre svoju scénu."
         },
         "courseC19_playLab_EOC1": {
@@ -9587,7 +9587,7 @@
           "4-5_Artist_1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",
@@ -11466,6 +11466,12 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Ak chceš nastaviť veľkosť postavičky len raz, môžeš použiť tento blok:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Ak chceš zmeniť veľkosť postavičky opakovane (s udalosťami), použi tento blok:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Ak chcete, aby sprite niečo povedať, pripojte bloky kódu takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Ak chcete, aby sprite niečo povedať, pripojte bloky kódu takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

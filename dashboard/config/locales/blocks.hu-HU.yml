@@ -5,6 +5,8 @@ hu:
       AmysBlocks_setPromptWithChoices:
         text: felhasználó megadja {QUESTION} kérdésre a {VAR} változót a {A}{B}{C}
           lehetőségek közül
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE} mondja: {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       BadGuys_setSizeAll_dropdown:
@@ -231,20 +233,12 @@ hu:
             MOVES.XArmsUp: Kinyújt
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
-      Dancelab_everyMeasuresRange:
-        text: 'ismételd meg {N} ütemenként {START} után '
       Dancelab_everySeconds:
         text: 'ismételd meg minden {N} {UNIT} után '
         options:
           UNIT:
             '"measures"': ütem
             '"seconds"': másodperc
-      Dancelab_everySecondsRange:
-        text: 'minden {N} {UNIT} ettől: {START}, eddig: {STOP} '
-        options:
-          UNIT:
-            measures: Ütem
-            seconds: Másodperc
       Dancelab_everyVerseChorus:
         text: 'minden {UNIT} '
         options:
@@ -994,6 +988,39 @@ hu:
         text: beállítás
       Dancelab_whenSetup2:
         text: beállítás
+      DansBlocks_getMicroscope:
+        text: 'Mikroszkóp rendelkezik a következővel: {INPUT1}'
+        options:
+          INPUT1:
+            '1': citromlé
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: készítsen {EFFECT} effektet
+        options:
+          EFFECT:
+            '"bubbles"': Buborékok
+            '"confetti"': Konfetti
+            '"hearts"': szívek
+            '"emojis"': Boldog emojik
+            '"rain"': esős
+            '"starburst"': Csillagrobbanás
+            '"glass"': Üvegtörés
+            '"twinkling"': Csillogás
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': citromlé
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "{VAR1} kommunikál [SPRITE1COSTUME] Sprite-tal"
+      FunctionBlocks_makeManipulative2:
+        text: készíts {NUM} új {ANIMATION_NAME} spite-ot {BEHAVIOR} viselkedéssel
+      FunctionBlocks_representManipulative:
+        text: ábrázolj {NUM} új {ANIMATION_NAME} sprite-ot [BEHAVIOR][2] viselkedéssel
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE} mondja: {TEXT1}"
       gamelab_addBehaviorSimple:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}
       gamelab_addTarget:
@@ -1320,8 +1347,30 @@ hu:
             "'sound://category_digital/jump_7.mp3'": Ugorj
       gamelab_playSoundOptionsSoccer:
         text: játszd le a {SOUND} hangot
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": kürt
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": taps
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": kántálás
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": éljenzés
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": rúgás
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": két sípszó
+            "'sound://category_sports/One_Whistle_SFX.mp3'": síp
       gamelab_playSoundOptionsSpace:
         text: játszd le a {SOUND} hangot
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": fekete lyuk
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Bullet klaszter
+            "'sound://category_space/Carina_SFX.mp3'": Carina csillagkép
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Rák-köd
+            "'sound://category_space/Launch_SFX.mp3'": kilövés
+            "'sound://category_space/Lift_Off.mp3'": felszállás
+            "'sound://category_space/Pillars_SFX.mp3'": Teremtés Oszlopai
+            "'sound://category_space/Southern_ring_SFX.mp3'": Déli Gyűrűs-köd
+            "'sound://category_space/Supernova_SFX.mp3'": szupernova
+            "'sound://category_space/Tycho_SFX.mp3'": Tycho
       gamelab_playSpeech:
         text: "{SOUND} beszéd eljátszása"
       gamelab_playerBehaviors:
@@ -1896,9 +1945,9 @@ hu:
             '"down"': lefelé nyíl
             '"left"': balra nyíl
             '"right"': jobbra nyíl
-            '"w"': Nyugat
+            '"w"': Ny
             '"a"': A
-            '"s"': Dél
+            '"s"': D
             '"d"': D
       Mikelab_whenKeyReleased:
         options:
@@ -1907,9 +1956,9 @@ hu:
             '"down"': lefelé nyíl
             '"left"': balra nyíl
             '"right"': jobbra nyíl
-            '"w"': Nyugat
+            '"w"': Ny
             '"a"': A
-            '"s"': Dél
+            '"s"': D
             '"d"': D
       Mikelab_whenMouseClicked:
         text: egérgomb megnyomásakor
@@ -1930,6 +1979,38 @@ hu:
         text: "{SPRITE} x koordinátája"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinátája"
+      ParticlesBlocks_getMicroscope:
+        text: 'Mikroszkóp rendelkezik a következővel: {INPUT1}'
+        options:
+          INPUT1:
+            '1': citromlé
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': citromlé
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): szilárd
+            new Behavior(liquid, []): folyékony
+            new Behavior(wandering, []): gáznemű
+      ParticlesBlocks_statesOfMatter2:
+        text: Tegyél {COSTUME} kosztümöt a(z) {BEHAVIOR} viselkedésre
+        options:
+          BEHAVIOR:
+            '"solid"': 'szilárd részecske '
+            '"liquid"': folyékony részecske
+            '"gas"': gáznemű részecske
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'szilárd részecske '
+            '"liquid"': folyékony részecske
+            '"gas"': gáznemű részecske
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2000,6 +2081,21 @@ hu:
             '"sound://category_achievements/peaceful_win_1.mp3"': Nyerés
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Örvény
             '"sound://category_achievements/peaceful_win_6.mp3"': Szélcsengettyű
+      Poetry_playSoundOptionsSpace:
+        text: játszd le a {SOUND} hangot
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": fekete lyuk
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Bullet klaszter
+            "'sound://category_space/Carina_SFX.mp3'": Carina csillagkép
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Rák-köd
+            "'sound://category_space/Launch_SFX.mp3'": kilövés
+            "'sound://category_space/Lift_Off.mp3'": felszállás
+            "'sound://category_space/Pillars_SFX.mp3'": Teremtés Oszlopai
+            "'sound://category_space/Southern_ring_SFX.mp3'": Déli Gyűrűs-köd
+            "'sound://category_space/Supernova_SFX.mp3'": szupernova
+            "'sound://category_space/Tycho_SFX.mp3'": Tycho
       Poetry_setAuthor:
         text: szerző megadása {AUTHOR}
       Poetry_setBackground:
@@ -2334,5 +2430,19 @@ hu:
           DIR:
             right: jobbra ↻
             left: balra ↺
+      storylab_setForegroundEffect2:
+        text: készítsen {EFFECT} effektet
+        options:
+          EFFECT:
+            '"bubbles"': Buborékok
+            '"confetti"': Konfetti
+            '"hearts"': szívek
+            '"rain"': esős
+            '"starburst"': Csillagrobbanás
+            '"twinkling"': Csillogás
+      storylab_setHeading:
+        text: "{HEADING} címsor beállítása"
+      storylab_setSubheading:
+        text: "{SUBHEADING} alcím beállítása"
       validation_validatedBackground:
         text: háttér beállítása {IMG}

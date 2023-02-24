@@ -2,26 +2,32 @@
 it:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: muovi NESW con i tasti freccia
       AmysBlocks_setPromptWithChoices:
         text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE} dice {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       BadGuys_setSizeAll_dropdown:
+        text: imposta la dimensione di tutti i personagi a  {SIZE}
         options:
           SIZE:
             '0.50': extra piccolo
             '0.75': piccolo
             '1.00': mediamente
             '2.00': grande
-            '3.00': extra large
+            '3.00': Extra Large
       BadGuys_setSize_dropdown:
+        text: imposta la dimensione di {SPRITE} a {SIZE}
         options:
           SIZE:
             '0.50': extra piccolo
             '0.75': piccolo
             '1.00': mediamente
             '2.00': grande
-            '3.00': extra large
+            '3.00': Extra Large
       Dancelab_alternateMoves:
         text: "{GROUP} alternano ogni {N} battute \ntra {MOVE1} e {MOVE2}"
         options:
@@ -69,7 +75,7 @@ it:
         text: dopo {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': misure
+            '"measures"': battute
             '"seconds"': secondi
       Dancelab_changeColorBy:
         text: modifica {COLOR} {METHOD} di {AMOUNT}
@@ -236,20 +242,12 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
-      Dancelab_everyMeasuresRange:
-        text: 'ripeti ogni {N} battute dopo {START} '
       Dancelab_everySeconds:
         text: 'ripeti ogni {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': misure
+            '"measures"': battute
             '"seconds"': secondi
-      Dancelab_everySecondsRange:
-        text: 'ogni {N} {UNIT} da {START} fino a {STOP} '
-        options:
-          UNIT:
-            measures: Battute
-            seconds: Secondi
       Dancelab_everyVerseChorus:
         text: 'ogni {UNIT} '
         options:
@@ -278,7 +276,7 @@ it:
         text: "{UNIT} trascorse/i"
         options:
           UNIT:
-            '"measures"': misure
+            '"measures"': battute
             '"seconds"': secondi
       Dancelab_ifDanceIs:
         text: |-
@@ -304,8 +302,12 @@ it:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': misure
+            '"measures"': battute
             '"seconds"': secondi
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} salta {LOCATION}"
         options:
@@ -1005,6 +1007,39 @@ it:
         text: quando si clicca su "Esegui"
       Dancelab_whenSetup2:
         text: quando si clicca su "Esegui"
+      DansBlocks_getMicroscope:
+        text: Il microscopio ha {INPUT1}
+        options:
+          INPUT1:
+            '1': succo di limone
+            '3': bicarbonato di sodio
+            '5': entrambi
+      DansBlocks_setForegroundEffect2:
+        text: crea effetto {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bolle
+            '"confetti"': Coriandoli
+            '"hearts"': cuori
+            '"emojis"': Emojis Allegre
+            '"rain"': pioggia
+            '"starburst"': Esplosione di stelle
+            '"glass"': Vetro infranto
+            '"twinkling"': Scintillante
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': succo di limone
+            '3': bicarbonato di sodio
+            '5': entrambi
+      FunctionBlocks_communicate:
+        text: Comunica {VAR1} con {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: crea {NUM} nuovi personaggi {ANIMATION_NAME} con comportamento {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: rappresenta {NUM} nuovo/ personaggio/i {ANIMATION_NAME} con comportamento [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE} dice {TEXT1}"
       gamelab_addBehaviorSimple:
         text: il personaggio {SPRITE} inizia {BEHAVIOR}
       gamelab_addTarget:
@@ -1012,7 +1047,7 @@ it:
         options:
           OPT:
             '"follow"': segui
-            '"avoid"': evitare
+            '"avoid"': evita
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -1037,6 +1072,8 @@ it:
             '"y"': posizione y
             '"direction"': direzione del movimento
             '"speed"': velocità
+      gamelab_changeVarBy:
+        text: modifica {VARIABLE} di {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} tocca {SPRITE2}"
         options:
@@ -1075,7 +1112,7 @@ it:
       gamelab_draggable:
         text: trascinabile
       gamelab_drawLine:
-        text: Disegna la linea {COLOR} {LOC1} {LOC2}
+        text: disegna linea {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: i bordi impediscono a {SPRITE} di muoversi
       gamelab_everyInterval:
@@ -1134,7 +1171,7 @@ it:
             '9': '9'
             '10': '10'
       gamelab_isCostumeEqual:
-        text: Il costume di {SPRITE} è {COSTUME}
+        text: assegna il costume {COSTUME} a {SPRITE}
       gamelab_isKeyPressed:
         text: "{KEY} è premuto"
         options:
@@ -1217,7 +1254,7 @@ it:
       gamelab_locationAt:
         text: 'posizione x: {X} y: {Y}'
       gamelab_locationModifier:
-        text: "{DISTANCE} pixel {DIRECTION} di {LOCATION}"
+        text: "{DISTANCE} pixel a {DIRECTION} di {LOCATION}"
         options:
           DIRECTION:
             '"North"': Nord
@@ -1241,7 +1278,7 @@ it:
       gamelab_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       gamelab_makeNumSprites:
-        text: crea {NUM} nuovi sprite {ANIMATION_NAME}
+        text: crea {NUM} nuovi personaggi {ANIMATION_NAME}
       gamelab_makeProjectile:
         text: "crea un proiettile \n{ANIMATION_NAME} proveniente da {LOCATION} con una velocità di {SPEED}in direzione di{DIRECTION}"
         options:
@@ -1257,7 +1294,7 @@ it:
             '50': mediamente
             '100': grande
       gamelab_mirrorSprite:
-        text: Orienta {SPRITE} verso {DIRECTION}
+        text: orienta {SPRITE} verso {DIRECTION}
         options:
           DIRECTION:
             '"right"': a destra
@@ -1328,8 +1365,30 @@ it:
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_playSoundOptionsSoccer:
         text: riproduci il suono {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": sirena
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": applauso
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": cantilena
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": tifare
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": calcio
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": due fischi
+            "'sound://category_sports/One_Whistle_SFX.mp3'": fischio
       gamelab_playSoundOptionsSpace:
         text: riproduci il suono {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": buco nero
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": ammasso proiettile
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del granchio
+            "'sound://category_space/Launch_SFX.mp3'": lancio
+            "'sound://category_space/Lift_Off.mp3'": decollo
+            "'sound://category_space/Pillars_SFX.mp3'": pilastri
+            "'sound://category_space/Southern_ring_SFX.mp3'": anello sud
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: riproduci discorso {SOUND}
       gamelab_playerBehaviors:
@@ -1364,7 +1423,7 @@ it:
       gamelab_repeatForever:
         text: ripeti per sempre
       gamelab_resetTimer:
-        text: Azzera il timer
+        text: azzera il timer
       gamelab_setAnimation:
         text: "{THIS} usa il costume {ANIMATION}"
       gamelab_setBackground:
@@ -1472,9 +1531,9 @@ it:
             '"when"': quando
             '"while"': mentre
       gamelab_spriteSay:
-        text: "{SPRITE} dicono {SPEECH}"
+        text: "{SPRITE} dice {SPEECH}"
       gamelab_spriteSayTime:
-        text: "{SPRITE}dicono{TEXT1}per{NUM} secondi"
+        text: "{SPRITE}dice{TEXT1}per{NUM}secondi"
       gamelab_startAvoiding:
         text: "{SPRITE} inizia ad evitare {TARGET}"
       gamelab_startFollowing:
@@ -1506,7 +1565,7 @@ it:
       gamelab_updateTitleWithColor:
         text: mostra schermata del titolo {BREAK} titolo {TITLE} colore {COLOR}
       gamelab_whenAllPromptsAnswered:
-        text: quando tutti i comandi hanno dato una risposta
+        text: quando tutte le richieste hanno ricevuto risposta
       gamelab_whenDownArrow:
         text: quando viene premuta la freccia in giù
       gamelab_whenKey:
@@ -1899,6 +1958,39 @@ it:
         text: coordinata x di {SPRITE}
       Mikelab_yLocationOf:
         text: coordinata y di {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: Il microscopio ha {INPUT1}
+        options:
+          INPUT1:
+            '1': succo di limone
+            '3': bicarbonato di sodio
+            '5': entrambi
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': succo di limone
+            '3': bicarbonato di sodio
+            '5': entrambi
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): solido
+            new Behavior(liquid, []): liquido
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Imposta [COSTUME]a[0] a comportamento {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': 'particella solida '
+            '"liquid"': particella liquida
+            '"gas"': particella di gas
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'particella solida '
+            '"liquid"': particella liquida
+            '"gas"': particella di gas
       Poetry_addFrame:
         text: imposta la cornice a {BRUSH}
         options:
@@ -1945,7 +2037,7 @@ it:
       Poetry_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       Poetry_makeNumSprites:
-        text: crea {NUM} nuovi sprite {ANIMATION_NAME}
+        text: crea {NUM} nuovi personaggi {ANIMATION_NAME}
       Poetry_playMusic:
         text: riproduci musica {SOUND}
         options:
@@ -1988,6 +2080,21 @@ it:
             '"sound://category_achievements/peaceful_win_1.mp3"': Vittoria
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Vortice
             '"sound://category_achievements/peaceful_win_6.mp3"': Campane a vento
+      Poetry_playSoundOptionsSpace:
+        text: riproduci il suono {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": buco nero
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": ammasso proiettile
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del granchio
+            "'sound://category_space/Launch_SFX.mp3'": lancio
+            "'sound://category_space/Lift_Off.mp3'": decollo
+            "'sound://category_space/Pillars_SFX.mp3'": pilastri
+            "'sound://category_space/Southern_ring_SFX.mp3'": anello sud
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setAuthor:
         text: imposta autore {AUTHOR}
       Poetry_setBackground:
@@ -2178,7 +2285,7 @@ it:
             '0.5': half of
             '0.25': few
       aalab_spriteSayChoices:
-        text: "{SPRITE} dicono {SPEECH}"
+        text: "{SPRITE} dice {SPEECH}"
       binary_drawBin:
         text: disegna in binario {BIN}
       binary_drawBinScreen:
@@ -2321,5 +2428,19 @@ it:
           DIR:
             right: destra ↻
             left: sinistra ↺
+      storylab_setForegroundEffect2:
+        text: crea effetto {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bolle
+            '"confetti"': Coriandoli
+            '"hearts"': cuori
+            '"rain"': pioggia
+            '"starburst"': Esplosione di stelle
+            '"twinkling"': Scintillante
+      storylab_setHeading:
+        text: imposta intestazione {HEADING}
+      storylab_setSubheading:
+        text: imposta intestazione secondaria {SUBHEADING}
       validation_validatedBackground:
         text: imposta lo sfondo {IMG}

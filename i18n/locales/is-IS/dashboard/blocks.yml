@@ -231,20 +231,12 @@ is:
             MOVES.XArmsUp: Teygja
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
-      Dancelab_everyMeasuresRange:
-        text: 'endurtaka hverja {N} takta eftir {START} '
       Dancelab_everySeconds:
         text: 'á {N} {UNIT} fresti '
         options:
           UNIT:
             '"measures"': takta
             '"seconds"': sekúndur
-      Dancelab_everySecondsRange:
-        text: 'á {N} {UNIT} fresti frá {START} til {STOP} '
-        options:
-          UNIT:
-            measures: Taktar
-            seconds: Sekúndur
       Dancelab_everyVerseChorus:
         text: 'á {UNIT} fresti '
         options:
@@ -992,6 +984,14 @@ is:
         text: uppstilling
       Dancelab_whenSetup2:
         text: uppstilling
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Sápukúlur
+            '"confetti"': Skraut
+            '"hearts"': hjörtu
+            '"rain"': regn
+            '"starburst"': Stjörnublossi
       gamelab_addBehaviorSimple:
         text: vera {SPRITE} byrjar {BEHAVIOR}
       gamelab_addTarget:
@@ -1267,6 +1267,10 @@ is:
             "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_playSoundOptionsSoccer:
         text: spilaHljóð {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": loftlúður
+            "'sound://category_sports/One_Whistle_SFX.mp3'": flauta
       gamelab_playSoundOptionsSpace:
         text: spilaHljóð {SOUND}
       gamelab_playerBehaviors:
@@ -1803,6 +1807,8 @@ is:
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': bóla
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hoppa
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ljós
+      Poetry_playSoundOptionsSpace:
+        text: spilaHljóð {SOUND}
       Poetry_setBackground:
         text: stilla bakgrunnslitinn {COLOR}
       Poetry_setBackgroundEffect:
@@ -2062,5 +2068,13 @@ is:
           DIR:
             right: hægri ↻
             left: vinstri ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Sápukúlur
+            '"confetti"': Skraut
+            '"hearts"': hjörtu
+            '"rain"': regn
+            '"starburst"': Stjörnublossi
       validation_validatedBackground:
         text: stilla bakgrunn á {IMG}

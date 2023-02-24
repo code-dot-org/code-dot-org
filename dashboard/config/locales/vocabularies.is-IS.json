@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Villuleit"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kóði"
         },
@@ -237,7 +245,24 @@
           "word": "Vélarnám"
         },
         "code/poem-art/unversioned": {
-          "word": "Kóði"
+          "word": "Kóði",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "Kviki"

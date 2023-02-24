@@ -477,9 +477,9 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csp-online-test:
           lesson_groups:
             required:
@@ -1197,9 +1197,9 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -1394,10 +1394,13 @@ it:
             content:
               display_name: Contenuto
         dance:
+          title: Ballando col codice (2018)
           description_short: Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
             Ciara e altri 25 artisti!
-          description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
-          student_description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
+          description: Crea un progetto in "Ballando col codice" da condividere con
+            i tuoi amici
+          student_description: Crea un progetto in "Ballando col codice" da condividere
+            con i tuoi amici
           name: danza
         aquatic:
           title: 'Minecraft: Viaggio Acquatico'
@@ -1464,8 +1467,8 @@ it:
             scegli la versione 2018, è la più aggiornata in italiano ==>'
         dance-low:
           title: Ballando col codice (versione per connessioni lente)
-          description_short: Crea un ballo tutto tuo e condividilo con i tuoi amici!
-            (Versione per connessioni lente)
+          description_short: Crea un progetto in "Ballando col codice" da condividere
+            con i tuoi amici! (Versione per connessioni lente)
         coursed-2019:
           title: Corso D (2019)
           description: 'Gli studenti sviluppano la comprensione dei cicli annidati,
@@ -1562,9 +1565,9 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         andrea-test:
           lesson_groups:
             required:
@@ -1947,9 +1950,9 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csd2-pilot:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo
             Web."
@@ -2047,7 +2050,7 @@ it:
         csd4-pilot:
           lesson_groups:
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csp2-pilot:
           lesson_groups:
             content:
@@ -2061,10 +2064,13 @@ it:
             required:
               display_name: Panoramica
         dance-2019:
+          title: Ballando col codice (2019)
           description_short: Con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
             Nas X, Jonas Brothers, Nicki Minaj e altri 34 artisti!
-          description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
-          student_description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
+          description: Crea un progetto in "Ballando col codice" da condividere con
+            i tuoi amici
+          student_description: Crea un progetto in "Ballando col codice" da condividere
+            con i tuoi amici
         k5-onlinepd-2019:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: 'Guida online gratuita per imparare autonomamente come insegnare
@@ -2206,9 +2212,11 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            csd1_3:
+              display_name: Lezioni alternative
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -2605,13 +2613,16 @@ it:
             debugging:
               display_name: Correzione errori (debugging)
         csd1-2021:
+          title: Risoluzione dei problemi e informatica ('21-'22)
           lesson_groups:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            csd1_3:
+              display_name: Lezioni alternative
         csd2-2021:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo
             Web."
@@ -2719,12 +2730,12 @@ it:
         coursea-2021:
           title: Corso A (2021)
           description: 'Il corso A offre un piano di studi di informatica per i bambini
-            che hanno appena iniziato a leggere, inclusi gli alunni della scuola materna.
-            Gli alunni impareranno a programmare usando comandi come cicli ed eventi.
+            che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell''infanzia.
+            Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi.
             Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare
             in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione
-            dei problemi, persistere di fronte a compiti impegnativi e conoscere le
-            questioni di sicurezza legate a Internet. '
+            dei problemi, perseverare di fronte a compiti impegnativi e conoscere
+            le questioni di sicurezza legate a Internet. '
           description_short: Introduzione all'informatica per bambini che non leggono
             ancora.
           description_audience: 'Età: da 4 a 7 anni'
@@ -2748,7 +2759,7 @@ it:
           description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe
             della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso
             A, ma offre lezioni tradizionali più complesse e una maggiore varietà
-            di esercizi. Gli alunni impareranno le basi della programmazione, tecniche
+            di esercizi. Gli alunni imparano le basi della programmazione, tecniche
             di collaborazione, indagine e pensiero critico, perseveranza di fronte
             alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso
             gli alunni possono condividere con un link il proprio gioco personalizzato
@@ -2777,11 +2788,11 @@ it:
         coursec-2021:
           title: Corso C (2021)
           description: Abbiamo realizzato il Corso C per gli alunni della seconda
-            elementare. Gli alunni creeranno programmi con sequenze di istruzioni,
-            cicli ed eventi. Indagheranno tecniche di risoluzione dei problemi e svilupperanno
-            strategie per sviluppare comunità costruttive sia online che offline.
-            Entro la fine del corso, gli alunni creeranno giochi interattivi che potranno
-            condividere.
+            primaria. Gli alunni creano programmi con sequenze di istruzioni, cicli
+            ed eventi. Indagano tecniche di risoluzione dei problemi e sviluppano
+            strategie per collaborare positivamente sia online che offline. Entro
+            la fine del corso, gli alunni creano giochi interattivi da condividere
+            con amici e conoscenti.
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
           description_audience: Da 6 a 10 anni
@@ -2808,11 +2819,10 @@ it:
             è la più aggiornata in italiano ==>'
         coursed-2021:
           title: Corso D (2021)
-          description: 'Abbiamo creato il corso D per gli alunni della terza elementare.
+          description: 'Abbiamo creato il corso D per gli alunni della terza primaria.
             Il corso inizia con una rassegna dei concetti trovati nei corsi precedenti,
-            inclusi cicli ed eventi. In seguito, gli alunni svilupperanno la loro
-            comprensione di algoritmi, cicli annidati, cicli, istruzioni condizionali
-            e altro ancora. '
+            inclusi cicli ed eventi. In seguito, gli alunni sviluppano la loro comprensione
+            di algoritmi, cicli annidati, cicli, istruzioni condizionali e altro ancora. '
           description_audience: Da 7 a 11 anni
           lesson_groups:
             csf_sequencing:
@@ -2835,16 +2845,16 @@ it:
             e gli eventi. Oltre alla programmazione, scopri la cittadinanza digitale.
         coursee-2021:
           title: Corso E (2021)
-          description: Abbiamo creato il Corso E per gli alunni della quarta elementare.
-            Il corso inizia con un'introduzione allo strumento di programmazione Laboratorio
-            dei personaggi. Gli alunni impareranno a realizzare divertenti progetti
-            interattivi che consolidano ciò che hanno imparerato sulla sicurezza online.
-            Dopo queste lezioni, gli alunni si impegneranno in una programmazione
-            più complessa. Gli alunni impareranno a conoscere i cicli annidati, le
-            funzioni e le istruzioni condizionali. Entro la fine del corso, gli alunni
-            uniranno questi concetti per risolvere esercizi impegnativi. Il corso
-            si conclude con un progetto senza limiti di tempo in cui gli alunni creano
-            un gioco o un disegno.
+          description: Abbiamo creato il Corso E per gli alunni della quarta primaria.
+            Il corso inizia con un'introduzione allo ambiente di programmazione denominato
+            Laboratorio dei personaggi. Gli alunni imparano a realizzare divertenti
+            progetti interattivi che consolidano ciò che hanno imparato sulla sicurezza
+            online. Dopo queste lezioni, gli alunni si impegnano in una programmazione
+            più complessa. Gli alunni imparano i cicli annidati, le funzioni e le
+            istruzioni condizionali. Entro la fine del corso, gli alunni uniscono
+            questi concetti per risolvere esercizi impegnativi. Il corso si conclude
+            con un progetto senza limiti di tempo in cui gli alunni creano un gioco
+            o un disegno.
           description_audience: Da 8 a 12 anni
           lesson_groups:
             ramp_up:
@@ -2868,15 +2878,15 @@ it:
             e crea un gioco o un disegno da condividere con amici e parenti.
         coursef-2021:
           title: Corso F (2021)
-          description: Abbiamo elaborato il Corso F per gli alunni della quinta elementare.
+          description: Abbiamo elaborato il Corso F per gli alunni della quinta primaria.
             Il corso inizia esaminando il modo in cui gli utenti effettuano le scelte
             nelle app che utilizzano. Gli alunni imparano quindi a realizzare una
             varietà di app del Laboratorio dei personaggi, che consentono all'utente
-            anche di operare delle scelte. Nelle prossime lezioni del corso, gli alunni
-            apprenderanno concetti più avanzati, tra cui variabili e cicli con contatore
-            "per". Durante questo corso viene concessa agli alunni una maggiore autonomia
-            e più scelte. Entro la fine del corso, gli alunni avranno creato progetti
-            interattivi e opere d'arte da condividere con amici e parenti.
+            anche di operare delle scelte. Nelle successive lezioni del corso, gli
+            alunni apprendono concetti più avanzati, tra cui le variabili e i cicli
+            con contatore. Durante questo corso viene concessa agli alunni una maggiore
+            autonomia e più scelte. Entro la fine del corso, gli alunni avranno creato
+            progetti interattivi e opere d'arte da condividere con amici e parenti.
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica
             e crea disegni, storie o giochi interattivi.
           description_audience: Da 9 a 13 anni
@@ -3096,7 +3106,7 @@ it:
             insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica"
             (titolo originale: CSF - Computer Science Fundamentals).'
         outbreak-module:
-          title: Epidemia
+          title: Simulazione di epidemia
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3144,7 +3154,7 @@ it:
             lessonGroup-4:
               display_name: Dimostrazioni e risorse
         hello-world-draft:
-          title: '"Ciao a tutti!"'
+          title: Ciao mondo!
         csa-self-paced-pl:
           title: Navigare nel sito Code.org per gli Insegnanti di CSA Pilota
           description: "Questo modulo è progettato per orientarti agli strumenti che
@@ -3208,6 +3218,7 @@ it:
             Dan Schneider se hai domande
         hello-world-food:
           name: ciao-mondo-cibo
+          title: Ciao mondo - Cibo
         csa-u7-dev:
           lesson_groups:
             lessonGroup-2:
@@ -3218,8 +3229,14 @@ it:
               display_name: Dimostrazioni e risorse
         tesstest921:
           name: tesstest921
+        hello-world-animals:
+          title: Ciao mondo - Animali
+        hello-world-emoji:
+          title: Ciao mondo - Emoji
+        hello-world-retro:
+          title: Ciao mondo - Retrò
         hello-world-batman:
-          title: Ciao Mondo
+          title: Ciao mondo
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -3230,6 +3247,8 @@ it:
               display_name: Contenuto
             lessonGroup-2:
               display_name: Contenuto
+        dance-unplugged:
+          title: Ora del Codice - Ballando col codice - Lezione tradizionale
         csc-things:
           name: oggetti-csc
           title: 'Spazio della mente dedicato alle idee interdisciplinari '
@@ -3264,7 +3283,7 @@ it:
           title: Ape Sapiente
         outbreak-csc:
           name: csc-epidemia
-          title: Epidemia
+          title: Simulazione di epidemia
         explore-data-1:
           name: dati-esplorazione-1
           title: Scatola di esplorazione - Trame e istogrammi
@@ -3309,6 +3328,14 @@ it:
         poetry-2021:
           title: Informatica e poesia
           name: poesia-2021
+        hello-world-food-2021:
+          title: Ciao mondo - Cibo
+        hello-world-emoji-2021:
+          title: Ciao mondo - Emoji
+        hello-world-animals-2021:
+          title: Ciao mondo - Animali
+        hello-world-retro-2021:
+          title: Ciao mondo - Retrò
         explore-data-1-2021:
           title: Visualizzazione dei Dati
         counting-csc-2021:
@@ -3375,12 +3402,12 @@ it:
               display_name: Progetto di fine corso
           title: Corso A (2022)
           description: 'Il corso A offre un piano di studi di informatica per i bambini
-            che hanno appena iniziato a leggere, inclusi gli alunni della scuola materna.
-            Gli alunni impareranno a programmare usando comandi come cicli ed eventi.
+            che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell''infanzia.
+            Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi.
             Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare
             in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione
-            dei problemi, persistere di fronte a compiti impegnativi e conoscere le
-            questioni di sicurezza legate a Internet. '
+            dei problemi, perseverare di fronte a compiti impegnativi e conoscere
+            le questioni di sicurezza legate a Internet. '
           student_description: 'Impara le basi dell''informatica e della sicurezza
             su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
             storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
@@ -3474,7 +3501,7 @@ it:
           description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe
             della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso
             A, ma offre lezioni tradizionali più complesse e una maggiore varietà
-            di esercizi. Gli alunni impareranno le basi della programmazione, tecniche
+            di esercizi. Gli alunni imparano le basi della programmazione, tecniche
             di collaborazione, indagine e pensiero critico, perseveranza di fronte
             alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso
             gli alunni possono condividere con un link il proprio gioco personalizzato
@@ -3502,11 +3529,11 @@ it:
               display_name: Progetto di fine corso
           title: Corso C (2022)
           description: Abbiamo realizzato il Corso C per gli alunni della seconda
-            elementare. Gli alunni creeranno programmi con sequenze di istruzioni,
-            cicli ed eventi. Indagheranno tecniche di risoluzione dei problemi e svilupperanno
-            strategie per sviluppare comunità costruttive sia online che offline.
-            Entro la fine del corso, gli alunni creeranno giochi interattivi che potranno
-            condividere.
+            primaria. Gli alunni creano programmi con sequenze di istruzioni, cicli
+            ed eventi. Indagano tecniche di risoluzione dei problemi e sviluppano
+            strategie per collaborare positivamente sia online che offline. Entro
+            la fine del corso, gli alunni creano giochi interattivi da condividere
+            con amici e conoscenti.
           student_description: 'Crea programmi con sequenze di istruzioni, cicli ed
             eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
             di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
@@ -3558,11 +3585,10 @@ it:
             end_of_course_project:
               display_name: Progetto di fine corso
           title: Corso D (2022)
-          description: 'Abbiamo creato il corso D per gli alunni della terza elementare.
+          description: 'Abbiamo creato il corso D per gli alunni della terza primaria.
             Il corso inizia con una rassegna dei concetti trovati nei corsi precedenti,
-            inclusi cicli ed eventi. In seguito, gli alunni svilupperanno la loro
-            comprensione di algoritmi, cicli annidati, cicli, istruzioni condizionali
-            e altro ancora. '
+            inclusi cicli ed eventi. In seguito, gli alunni sviluppano la loro comprensione
+            di algoritmi, cicli annidati, cicli, istruzioni condizionali e altro ancora. '
           student_description: Impara di più sui cicli, le istruzioni condizionali
             e gli eventi. Oltre alla programmazione, scopri la cittadinanza digitale.
           description_audience: Da 7 a 11 anni
@@ -3583,16 +3609,16 @@ it:
             end_of_course_project:
               display_name: Progetto di fine corso
           title: Corso E (2022)
-          description: Abbiamo creato il Corso E per gli alunni della quarta elementare.
-            Il corso inizia con un'introduzione allo strumento di programmazione Laboratorio
-            dei personaggi. Gli alunni impareranno a realizzare divertenti progetti
-            interattivi che consolidano ciò che hanno imparerato sulla sicurezza online.
-            Dopo queste lezioni, gli alunni si impegneranno in una programmazione
-            più complessa. Gli alunni impareranno a conoscere i cicli annidati, le
-            funzioni e le istruzioni condizionali. Entro la fine del corso, gli alunni
-            uniranno questi concetti per risolvere esercizi impegnativi. Il corso
-            si conclude con un progetto senza limiti di tempo in cui gli alunni creano
-            un gioco o un disegno.
+          description: Abbiamo creato il Corso E per gli alunni della quarta primaria.
+            Il corso inizia con un'introduzione allo ambiente di programmazione denominato
+            Laboratorio dei personaggi. Gli alunni imparano a realizzare divertenti
+            progetti interattivi che consolidano ciò che hanno imparato sulla sicurezza
+            online. Dopo queste lezioni, gli alunni si impegnano in una programmazione
+            più complessa. Gli alunni imparano i cicli annidati, le funzioni e le
+            istruzioni condizionali. Entro la fine del corso, gli alunni uniscono
+            questi concetti per risolvere esercizi impegnativi. Il corso si conclude
+            con un progetto senza limiti di tempo in cui gli alunni creano un gioco
+            o un disegno.
           student_description: Inizia a programmare con algoritmi, eventi, cicli,
             istruzioni condizionali e funzioni! Alla fine di questo corso, progetta
             e crea un gioco o un disegno da condividere con amici e parenti.
@@ -3843,7 +3869,7 @@ it:
             l'implementazione dell'unità con i tuoi studenti.\n\n**Tempo stimato:**
             120 minuti"
         hello-world-csc:
-          title: Ciao Mondo
+          title: Ciao mondo
         csd-playground:
           name: csd-playground
           title: Alla Scoperta dell'informatica Parco giochi
@@ -3860,9 +3886,11 @@ it:
             cspSurvey:
               display_name: Sondaggio
             csd1_1:
-              display_name: 'Capitolo 1: il Problem Solving'
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             csd1_2:
-              display_name: 'Capitolo 2: Computers e Problem Solvig'
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            csd1_3:
+              display_name: Lezioni alternative
         csd2-2022:
           lesson_groups:
             cspSurvey:
@@ -3975,6 +4003,41 @@ it:
               display_name: Sondaggio
             lessonGroup-3:
               display_name: Contenuto
+            lessonGroup-5:
+              display_name: Lezioni alternative
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variabili
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Array unidimensionale (1D)
+            lesson-3:
+              name: Cicli con contatore
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Casuale
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-4:
+              display_name: Lezioni alternative
+        hello-world-space-2022:
+          title: Ciao mondo - Spazio
+        hello-world-soccer-2022:
+          title: Ciao mondo - Calcio
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4016,3 +4079,96 @@ it:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Capitolo 2: Input Hardware'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Cos'è questo rumore?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csp_unit1_2020:
+              display_name: Princìpi dell'Informatica - Unità 1
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: Princìpi dell'Informatica - Unità 2
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Dati
+            csp_loops:
+              display_name: Cicli
+            csp_traversals:
+              display_name: Traversali
+            csp_project:
+              display_name: Progetto
+            lessonGroup-5:
+              display_name: Sondaggio Post-corso
+          title: Dati ('22-'23)
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
+            lessonGroup-3:
+              display_name: Cicli
+            lessonGroup-4:
+              display_name: Traversali
+            lessonGroup-5:
+              display_name: Progetto
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametri e Valori di Ritorno
+            csp_libraries:
+              display_name: Librerie
+            lessonGroup-3:
+              display_name: Sondaggio Post-corso
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sondaggio Post-corso
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: Princìpi dell'Informatica - Unità 9
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio Post-corso
+        csp-playground:
+          description_audience: Scrittori di curriculum
+          description_short: Per allestire gli aggiornamenti nelle lezioni o nei livelli
+            tra le versioni del curriculum
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+            lessonGroup-4:
+              display_name: 'Capitolo 2: Input Hardware'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduzione a Sviluppo App
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+        self-paced-pl-csc-2023:
+          title: Insegnare IA e Apprendimento Automatico

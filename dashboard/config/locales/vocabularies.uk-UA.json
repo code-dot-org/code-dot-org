@@ -189,6 +189,10 @@
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
         },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Код"
         },
@@ -457,14 +461,24 @@
           "word": "Машинне навчання"
         },
         "code/poem-art/unversioned": {
-          "word": "Код"
+          "word": "Код",
+          "definition": ""
         },
         "event/poem-art/unversioned": {
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
         },
         "program/poem-art/unversioned": {
-          "word": "Програма"
+          "word": "Програма",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Поведінка"

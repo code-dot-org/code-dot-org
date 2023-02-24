@@ -684,7 +684,7 @@
   dashboard_sections_table_secret: "Spôsob prihlásenia"
   dashboard_sections_table_grade: "Ročník"
   dashboard_sections_table_course: "Kurz"
-  dashboard_sections_table_pairing_allowed: "Programovanie v páre"
+  dashboard_sections_table_pairing_allowed: "Párové programovanie"
   dashboard_sections_table_stage_extras: "Extra úlohy"
   dashboard_sections_table_students: "Študenti"
   dashboard_sections_table_code: "Kód triedy"
@@ -1503,6 +1503,8 @@
   account_sign_up_child_accept_terms: "Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať stránkua služby Code.org."
   hoc_overview_dance_title: "Tanečná Párty"
   hoc_overview_dance_subtitle: "Nakóduj si vlastnú Tanečnú párty a zdieľaj ju kamarátmi! Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 ďalších!"
+  hoc_overview_dance_2022_subtitle: "Nakódujte tanečnú párty a zdieľajte ju so svojimi priateľmi. Vystupujú Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba z Disney rozprávky „Encanto“ atď.!"
+  hoc_overview_hello_world_2022_alt_text: "Animované postavičky astronautov a zvierat vznášajúce sa okolo obrázku Zeme"
   hoc_overview_title: "Hodina Kódu s Code.org"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Hodina Kódu</a> je celosvetové hnutie, ktorého sa zúčastňujú desiatky miliónov študentov z viac ako 180 krajín. Ktokoľvek, kdekoľvek môže zorganizovať svoju Hodinu Kódu a vyskúšať jeden z viac ako 200 jednohodinových kurzov vo viac ako 45 jazykoch."
   hoc_overview_partner_activities_title: "Viac aktivít od našich partnerov"
@@ -1546,9 +1548,13 @@
   hoc2018_mc_educators_box3_title: "Zúčastniť sa workshopu pre študentov"
   hoc2018_mc_educators_box3_desc: "Navštívte Microsoft obchod vo Vašej oblasti a vyhľadajte workshop pre Hodinu Kódu. Pre účastníkov od 6 rokov."
   hoc2018_mc_educators_box3_button: "Nájsť workshop"
+  hoc2022_mc_educators_box3_desc_markdown: 'Využite tento [bezplatný kurz] na požiadanie (%{free_course_link}) alebo zaregistrujte celú svoju triedu a zúčastnite sa živého workshopu Hodina kódu s hosťujúcim učiteľom. Dostupné niekoľkokrát počas CSEW, 6. – 11. decembra.'
+  hoc2022_mc_educators_box3_button: "Zaregistrujte sa teraz"
   hoc2018_mc_educators_box4_title: "Viac materiálov pre výučbu informatiky"
   hoc2018_mc_educators_box4_desc: "Rozšírte Vašu výučbu digitálnych zručností a informatiky s týmito materiálmi od Microsoftu."
   hoc2018_mc_educators_box4_button: "Preskúmať materiály"
+  hoc2022_mc_educators_box4_desc: "Inšpirujte STEM vášeň u študentov K-12 s 200 hodinovým učebným plánom informatiky, od bloku po python, podporovaného profesionálnym rozvojom."
+  hoc2022_mc_educators_box4_button: "Pokračujte v učení"
   hoc2018_mc_watch_videos: "Skôr ako začneš, pozri si jedno z týchto inšpiratívnych videí"
   hoc2018_mc_videos_more: "Viac <a href='%{inspiring_videos_playlist}'>inšpiratívnych videí</a>, v ktorých vystupujú známe osobnosti"
   hoc2018_mc_careers_more: "Viac <a href='%{careers_url}' target='_blank'>inšpiratívnych videí</a>, ktoré predstavujú odborníkov z technologických oblastí"
@@ -1634,6 +1640,9 @@
   hoc2021_mc_mee_villages_description: 'Naučte sa základy programovania a objavte diverzitu a inklúziu so svojimi žiakmi v hre Minecraft: vzdelávacie vydanie'
   hoc2021_mc_mee_ai_title: "Umelá inteligencia pre dobro"
   hoc2021_mc_mee_ai_description: 'Objavte AI so svojimi žiakmi a naučte sa programovať v hre Minecraft: vzdelávacie vydanie'
+  hoc2022_mc_mee_title: "Minecraft Escape Estate"
+  hoc2022_mc_mee_description: 'Utečte z tajomného sídla do úsvitu a zarobte milión smaragdov! Nový tutoriál Minecraft Hodina kódu je teraz dostupný v hre Minecraft: Vzdelávacie vydanie pre Windows, Mac, Chromebook, Ipad a mobil. Začnite s bezplatnými zdrojmi, školeniami a videami pre pedagógov.'
+  hoc2022_mc_mee_timecraft_description: 'Cestujte späť v čase, aby ste zachránili budúcnosť v tejto bezplatnej hodine kódovania v Minecraft: vzdelávacie vydanie.'
   footer_powered_by_aws: "Poháňaný službami Amazon Web Services"
   codebytes_skinny_banner_english_only: "Len v anglickom jazyku"
   footer_privacy_policy: "Zásady ochrany súkromia"
@@ -1655,5 +1664,16 @@
   ai_ibm_machine_learning_for_kids: 'IBM: strojové učenie pre deti'
   outbreak_tile_title: "Nákaza"
   outbreak_tile_subtitle: "Mesto Monster Town napadol vírus! Naprogramujte simulátor ohniska a skúste urobiť predpovede, čo sa stane so susedmi mesta Monster Town."
+  hoc2022_banner_title: "Skúmajte, hrajte sa, tvorte!"
+  hoc2022_banner_description: "Skúmajte vesmír, streľte gól, prelomte pohyb – existuje tak veľa spôsobov, ako vyskúšať informatiku!"
+  hoc2022_cta_primary: "Zobraziť novinky"
+  hoc2022_cta_secondary: "Vyskúšajte ďalšie aktivity"
+  hoc2022_landing_page_explore_title: "Preskúmať"
+  hoc2022_landing_page_explore_description: "Otvorte dvere do nových svetov s informatikou!"
+  hoc2022_landing_page_play_description: "Choďte na ihrisko a skórujte!"
   hoc2022_landing_page_create_title: "Vytvoriť"
+  hoc2022_landing_page_create_description: "Urobte niečo zvláštne a úžasné!"
+  hoc2022_landing_page_banner_alt_left: "Mimozemšťan tancujúci vedľa Saturna vo vesmíre"
+  hoc2022_landing_page_banner_alt_right: "Robot driblujúci s futbalovou loptou vo vesmíre pred štartujúcou raketou"
   try_it_yourself: "Vyskúšaj to samostatne!"
+  try_an_activity: "Vyskúšajte aktivitu"

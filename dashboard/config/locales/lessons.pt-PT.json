@@ -116,6 +116,12 @@
           "name": "Compressão de texto",
           "student_overview": "Em algum ponto, atingiremos o limite físico da velocidade com que podemos enviar bits, e se quisermos enviar um grande volume de informações mais rapidamente, teremos de encontrar um meio de representar essas informações com menos bits – teremos de compactar os dados. "
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "sports/Sports": {
           "overview": "Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.",
           "student_overview": "Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!"
@@ -136,7 +142,7 @@
           "name": "Hora do Código 2013"
         },
         "dance-2019/Dance Party": {
-          "name": "Festa de dança (2019)",
+          "name": "Festa dançante",
           "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.",
           "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos).",
           "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música."
@@ -4050,6 +4056,9 @@
         },
         "allthethings/ML Fish": {
           "name": "ML Fish"
+        },
+        "allthethings/lesson-48": {
+          "name": "Poesia"
         },
         "coursef-2021/lesson-6": {
           "name": "Introdução ao Sprite Lab",

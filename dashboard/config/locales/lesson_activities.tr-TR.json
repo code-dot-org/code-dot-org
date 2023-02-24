@@ -21,7 +21,7 @@
           "name": "Genişletilmiş Öğrenim"
         },
         "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff": {
           "name": "Etkinlik (30-45 dakika)"
@@ -60,7 +60,7 @@
           "name": "Özet"
         },
         "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "3ff80342-0510-45ed-bf69-4cf19ebaf5c1": {
           "name": "Etkinlik (30-45 dakika)"
@@ -84,7 +84,7 @@
           "name": "Özet"
         },
         "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0": {
           "name": "Etkinlik (30-45 dakika)"
@@ -117,7 +117,7 @@
           "name": "Genişletilmiş Öğrenim"
         },
         "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "b3fd8108-41b8-46f8-9382-f19c73c597cb": {
           "name": "Etkinlik (30-45 dakika)"
@@ -153,7 +153,7 @@
           "name": "Genişletilmiş Öğrenim"
         },
         "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "d31e813b-9457-415f-8632-009132bb5e48": {
           "name": "Etkinlik (30-45 dakika)"
@@ -168,7 +168,7 @@
           "name": "Genişletilmiş Öğrenim"
         },
         "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "0f404bbf-d9f1-45c9-a496-271179254aed": {
           "name": "Seviyeler"
@@ -195,7 +195,7 @@
           "name": "Özet"
         },
         "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
           "name": "Etkinlik (30-45 dakika)"
@@ -210,7 +210,7 @@
           "name": "Genişletilmiş Öğrenim"
         },
         "d42497ec-48f5-404c-90b9-2133dd4759cc": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
           "name": "Etkinlik"
@@ -255,7 +255,7 @@
           "name": "Değerlendirme (2 dakika)"
         },
         "37f266a7-4b80-449e-805a-4a06aad37292": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "301e5420-a6e3-46c3-a76f-c2e042652974": {
           "name": "Etkinlik (30-45 dakika)"
@@ -270,7 +270,7 @@
           "name": "Genişletilmiş Öğrenim"
         },
         "f266050e-62e6-415d-8735-b80cb922587d": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "974b1dfa-682c-4556-89d8-af3f0d0a9d69": {
           "name": "Etkinlik (30-45 dakika)"
@@ -318,7 +318,7 @@
           "name": "Değerlendirme (2 dakika)"
         },
         "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "8b8d6959-c861-4474-950b-b097aaa9fae3": {
           "name": "Etkinlik"
@@ -618,7 +618,7 @@
           "name": "Oluştur: Şifrenizi Güçlendirme"
         },
         "f7bf636d-a952-4d38-9eea-a4c76532eb8e": {
-          "name": "Wrap Up: Parola İpuçları Notları"
+          "name": "Özet: Parola İpuçları Notları"
         },
         "dd936731-be2e-45f8-ba99-0dff9935b299": {
           "name": "Genişletilmiş Öğrenim"
@@ -699,7 +699,7 @@
           "name": "Özet"
         },
         "f4151504-1d9a-4bf3-9d39-94f6fd1e142a": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "cab760ed-3878-474c-a0f0-e9392b4bb0b5": {
           "name": "Etkinlik"
@@ -806,6 +806,9 @@
         "a54509a7-dac6-4985-830d-91272c3de923": {
           "name": "Özet"
         },
+        "f7559bae-c62e-4cc6-94a2-26b09e8c1eed": {
+          "name": "Genişletilmiş Öğrenim"
+        },
         "4297e4f8-df09-4a0f-a1f1-6eebb5fb75b3": {
           "name": "Isınma: Aynı kelime. Farklı bir anlam."
         },
@@ -816,7 +819,7 @@
           "name": "Soruşturma: Sorun Nedir?"
         },
         "13324f62-aa57-47e7-a446-9f26c40da904": {
-          "name": "Sarma: Çizgiyi Geçme"
+          "name": "Özet: Çizgiyi Geçme"
         },
         "06eca5a9-6166-4def-972b-ecf15e73ee59": {
           "name": "Genişletilmiş Öğrenim"
@@ -981,13 +984,13 @@
           "name": "Isınma: Gizli Süper Kahraman"
         },
         "0ead3881-08bc-4d6c-9fda-5bd889adbb5f": {
-          "name": "Öğrenin: Karşı Duran Olmak"
+          "name": "Öğren: Dik Duran Olmak"
         },
         "069f8d26-8e31-484a-9e8c-3d67add0197d": {
-          "name": "Oluşturun: Kendi Dijital Vatandaş Süper Kahramanınızı"
+          "name": "Oluştur: Kendi Dijital Vatandaş Süper Kahramanınız"
         },
         "da7bb20b-3692-45ca-a939-6b44411eea77": {
-          "name": "Toparlama: Günü Kurtar! Karikatürü"
+          "name": "Özet: Günü Kurtar! Çizgi Roman"
         },
         "02ff6b22-0825-41c1-9e77-721f5801fede": {
           "name": "Genişletilmiş Öğrenim"
@@ -1193,17 +1196,20 @@
         "f4c94b25-e0f0-4caa-bebd-1557f771a849": {
           "name": "Gün 5 & 6 - Projenizi Sunun"
         },
+        "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af": {
+          "name": "Genişletilmiş Öğrenim"
+        },
         "5b342453-cd42-4221-8375-618cf1ddb41b": {
-          "name": "İzle: Dijital Yolu Takip Edin"
+          "name": "İzle: Dijital İzi Takip Edin"
         },
         "133dbbe7-859c-4ce7-a0e4-34d1212dd07b": {
           "name": "Oyun: Hayvan Parçaları"
         },
         "ac5b3240-5c06-438d-b651-7ba0caa67c28": {
-          "name": "İnceleme: Paylaşmak Tamam mı?"
+          "name": "İnceleme: Paylaşmak için Uygun mu?"
         },
         "e0e795f5-7368-4341-ac98-2b68aa5a26a0": {
-          "name": "Sarma: Anı Duraklat ve Düşün"
+          "name": "Sarma: Dur ve Anı Düşün"
         },
         "15846b35-8b6d-4970-87a4-cc861b66e9cb": {
           "name": "Genişletilmiş Öğrenim"
@@ -1806,7 +1812,7 @@
           "name": "Keşfet: İnternet Saha Gezisi"
         },
         "98b13493-1a10-4d3a-9a35-ec61a319bb48": {
-          "name": "Anı Duraklat ve Düşün"
+          "name": "Dur ve Bir an Düşün"
         },
         "217dee7e-80c0-40a2-b56e-e4df0c5805c6": {
           "name": "Genişletilmiş Öğrenim"
@@ -1965,16 +1971,16 @@
           "name": "Özet"
         },
         "6496f3a3-d253-44df-9139-7b3870eee21f": {
-          "name": "Öğrenin: Anlık Nedir?"
+          "name": "Öğrenin: Kabalık Nedir?"
         },
         "fd9e26a9-0627-4359-8a36-25bd9dc888c1": {
           "name": "Gerçekleştir: Çevrimiçi ve Yüz Yüze"
         },
         "5bcbf42e-64db-4405-a738-1d5ade6478dc": {
-          "name": "Keşfet: STOP Meanness"
+          "name": "Keşfet: Kabalığı DURDUR"
         },
         "e5ba459e-982e-4b0f-a102-e300300f9d8a": {
-          "name": "Sarma: Anı Duraklat ve Düşün"
+          "name": "Sarma: Dur ve Anı Düşün"
         },
         "f32ea3e2-2c77-4d9e-81f2-f062dcc62831": {
           "name": "Genişletilmiş Öğrenim"
@@ -2176,6 +2182,9 @@
         },
         "74e2ce00-926c-4dff-9ffe-161c3e10e05e": {
           "name": "Özet"
+        },
+        "b351a875-cdc3-4da8-a2c0-fb84cee29102": {
+          "name": "Genişletilmiş Öğrenim"
         },
         "e756dd3c-ceff-4018-ae32-e393404279eb": {
           "name": "Isınmak"
@@ -6222,7 +6231,7 @@
           "name": "Soruşturma: Sorun Nedir?"
         },
         "f747c55f-efbf-41df-809a-2f2620917e1f": {
-          "name": "Sarma: Çizgiyi Geçme"
+          "name": "Özet: Çizgiyi Geçme"
         },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Genişletilmiş Öğrenim"
@@ -6396,16 +6405,16 @@
           "name": "Genişletilmiş Öğrenim"
         },
         "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
-          "name": "İzle: Dijital Yolu Takip Edin"
+          "name": "İzle: Dijital İzi Takip Edin"
         },
         "a9572124-af86-4d97-b4a8-929d761473af": {
           "name": "Oyun: Hayvan Parçaları"
         },
         "de382430-d529-490d-b4fd-a7f020c4802b": {
-          "name": "İnceleme: Paylaşmak Tamam mı?"
+          "name": "İnceleme: Paylaşmak için Uygun mu?"
         },
         "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
-          "name": "Sarma: Anı Duraklat ve Düşün"
+          "name": "Sarma: Dur ve Anı Düşün"
         },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Genişletilmiş Öğrenim"
@@ -6585,7 +6594,7 @@
           "name": "Keşfet: İnternet Saha Gezisi"
         },
         "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
-          "name": "Anı Duraklat ve Düşün"
+          "name": "Dur ve Bir an Düşün"
         },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
           "name": "Genişletilmiş Öğrenim"
@@ -6744,16 +6753,16 @@
           "name": "Özet"
         },
         "5feda2e8-7d86-483b-9e66-959252a75a9a": {
-          "name": "Öğrenin: Anlık Nedir?"
+          "name": "Öğrenin: Kabalık Nedir?"
         },
         "78358409-25ec-4e4f-92d7-b69ff300191a": {
           "name": "Gerçekleştir: Çevrimiçi ve Yüz Yüze"
         },
         "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
-          "name": "Keşfet: STOP Meanness"
+          "name": "Keşfet: Kabalığı DURDUR"
         },
         "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
-          "name": "Sarma: Anı Duraklat ve Düşün"
+          "name": "Sarma: Dur ve Anı Düşün"
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Genişletilmiş Öğrenim"
@@ -6969,7 +6978,7 @@
           "name": "Oluştur: Şifrenizi Güçlendirme"
         },
         "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
-          "name": "Wrap Up: Parola İpuçları Notları"
+          "name": "Özet: Parola İpuçları Notları"
         },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Genişletilmiş Öğrenim"
@@ -7053,7 +7062,7 @@
           "name": "Özet"
         },
         "235b3b14-975a-43b6-93bc-d386b857fd6b": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
           "name": "Etkinlik"
@@ -7608,13 +7617,13 @@
           "name": "Isınma: Gizli Süper Kahraman"
         },
         "f642093a-def9-467e-a8cc-8950b21d62c8": {
-          "name": "Öğrenin: Karşı Duran Olmak"
+          "name": "Öğren: Dik Duran Olmak"
         },
         "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
-          "name": "Oluşturun: Kendi Dijital Vatandaş Süper Kahramanınızı"
+          "name": "Oluştur: Kendi Dijital Vatandaş Süper Kahramanınız"
         },
         "7d491d29-d496-450c-aece-a776f7fbd3d3": {
-          "name": "Toparlama: Günü Kurtar! Karikatürü"
+          "name": "Özet: Günü Kurtar! Çizgi Roman"
         },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Genişletilmiş Öğrenim"

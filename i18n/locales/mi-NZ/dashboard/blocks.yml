@@ -228,20 +228,12 @@ mi:
             MOVES.XArmsUp: Totoro
             MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
-      Dancelab_everyMeasuresRange:
-        text: 'māhia ia wāhanga e {N} a muri i te {START} '
       Dancelab_everySeconds:
         text: 'māhia ia {N} {UNIT} '
         options:
           UNIT:
             '"measures"': wāhanga
             '"seconds"': ngā hēkona
-      Dancelab_everySecondsRange:
-        text: 'ia {N} {UNIT} mai i te {START} ki te {STOP} '
-        options:
-          UNIT:
-            measures: Wāhanga
-            seconds: Hēkona
       Dancelab_everyVerseChorus:
         text: 'ia {UNIT} '
         options:
@@ -982,6 +974,14 @@ mi:
         text: tatūnga
       Dancelab_whenSetup2:
         text: tatūnga
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"rain"': ua
+            '"starburst"': Pāpahu Whetū
       gamelab_addBehaviorSimple:
         text: parehe {SPRITE} ka {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -1624,3 +1624,11 @@ mi:
           DIR:
             right: matau ↻
             left: maui ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"rain"': ua
+            '"starburst"': Pāpahu Whetū

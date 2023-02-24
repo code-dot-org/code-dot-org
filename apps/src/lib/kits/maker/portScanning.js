@@ -4,7 +4,10 @@ import DCDO from '@cdo/apps/dcdo';
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
 import applabI18n from '@cdo/applab/locale';
-import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
+import {
+  getChromeVersion,
+  isChromeOS
+} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -60,7 +63,10 @@ export function findPortWithViableDevice() {
  * @returns {Promise} Resolves if installed, rejects if not.
  */
 export function ensureAppInstalled() {
-  if (!isChromeOS() || !!DCDO.get('webserial-on-chromeos', true)) {
+  if (
+    !isChromeOS() ||
+    (!!DCDO.get('webserial-on-chromeos', true) && getChromeVersion() >= 90)
+  ) {
     return Promise.resolve();
   }
 

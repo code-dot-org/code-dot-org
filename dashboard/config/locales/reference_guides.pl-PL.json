@@ -8,6 +8,9 @@
         "csd-2022/ai-lab": {
           "display_name": "AI Lab"
         },
+        "csd-2022/animation-tab": {
+          "display_name": "Karta Animacja"
+        },
         "csd-2022/app-lab": {
           "display_name": "App Lab"
         },
@@ -54,10 +57,12 @@
           "display_name": "Nagłówki i akapity"
         },
         "csd-2022/html": {
-          "display_name": "HTML"
+          "display_name": "HTML",
+          "content": "HTML (Hypertext Markup Language) to język używany do definiowania zawartości stron internetowych. Więcej informacji na temat tagów i atrybutów HTML można znaleźć na stronie [Dokumentacja Web Lab](/docs/weblab/)."
         },
         "csd-2022/html-overview": {
-          "display_name": "Streszczenie"
+          "display_name": "Streszczenie",
+          "content": "HTML (Hypertext Markup Language) to język używany do definiowania zawartości stron internetowych. Więcej informacji na temat tagów i atrybutów HTML można znaleźć na stronie [Dokumentacja Web Lab](/docs/weblab/)."
         },
         "csd-2022/html-tags": {
           "display_name": "Tagi HTML"
@@ -128,7 +133,15 @@
         "csd-2022/velocity": {
           "display_name": "Prędkość"
         },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
+        },
+        "csd-2022/when-to-make-a-function": {
+          "display_name": "Kiedy utworzyć funkcję?",
+          "content": "Ważnym pytaniem dla nowych programistów jest „Kiedy powinienem zdecydować się na funkcję”. Ogólnie rzecz biorąc, im wcześniej zdasz sobie sprawę, że potrzebujesz funkcji, tym lepiej. To umiejętność, w której będziesz lepiej ćwiczyć. **Pod koniec tego kursu powinieneś dążyć do znalezienia się w rzędach W trakcie lub Przed.**\n\n| Kiedy tworzysz funkcje | Opis                                                                                                                                                                                   | Komentarze                                                                                                                                                                                                                                                                                           |\n| :--------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n|          Nigdy         | Nigdy nie tworzysz funkcji w ogóle.                                                                                                                                                    | Twój kod będzie trudny do odczytania i debugowania i będzie miał dużo powtarzającego się kodu. Postaraj się przejść przynajmniej do kroku „Po”.                                                                                                                                                      |\n|           Po           | Piszesz cały program bez funkcji. Gdy skończysz, szukasz powtarzającego się fragmentu kodu i przenosisz go do funkcji.                                                                 | Twój kod jest teraz znacznie łatwiejszy do odczytania i debugowania. Coraz lepiej widzisz, jak zorganizowany jest Twój program. Gdy poczujesz się bardziej komfortowo, spróbuj przejść do „Podczas” lub „Przed”.                                                                                     |\n|         Podczas        | Pisząc kod zauważasz, że masz zamiar przepisać kod, który już napisałeś gdzieś indziej w swoim programie. Przed przejściem dalej, deklarujesz funkcję i wywołujesz tę funkcję zamiast. | Dobrze rozumiesz swój program i potrafisz go uporządkować w trakcie jego opracowywania. Sprawdź, czy czasami możesz przejść do „Przed”.                                                                                                                                                              |\n|          Przed         | Zanim napiszesz swój program, tworzysz plan i identyfikujesz miejsca, w których prawdopodobnie użyjesz powtarzającego się kodu. Tworzysz swoją funkcję na początku                     | Ten poziom odzwierciedla silne zrozumienie, w jaki sposób Twój program zostanie zaprojektowany. Możesz prawie „zobaczyć to w swojej głowie”, zanim zaczniesz pisać. To znaczy, jest OK, jeśli czasami zdasz sobie sprawę, że potrzebujesz funkcji podczas programowania i pracy na etapie „Podczas”. |"
+        },
         "csd-2022/which-type-of-chart": {
+          "display_name": "Jaki typ wykresu?",
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         }
       }

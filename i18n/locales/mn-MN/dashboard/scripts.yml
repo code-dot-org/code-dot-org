@@ -3074,6 +3074,14 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: Судалгаа
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Хувьсагчууд
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Гогцоонд зориулав
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3099,3 +3107,89 @@ mn:
           lesson_groups:
             lessonGroup-3:
               display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csp_unit1_2020:
+              display_name: '1-р нэгж: Дижитал мэдээлэл'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Нэгж 2: Интернэт'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Гогцоонууд
+            csp_traversals:
+              display_name: Нэвтрэлтүүд
+            csp_project:
+              display_name: Төсөл
+            lessonGroup-5:
+              display_name: Хичээлийн дараах судалгаа
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Жагсаалтууд
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
+            lessonGroup-3:
+              display_name: Гогцоонууд
+            lessonGroup-4:
+              display_name: Нэвтрэлтүүд
+            lessonGroup-5:
+              display_name: Төсөл
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметрүүд ба буцаах утгууд
+            csp_libraries:
+              display_name: Номын сангууд
+            lessonGroup-3:
+              display_name: Хичээлийн дараах судалгаа
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: РТ-г үүсгэх
+            lessonGroup-3:
+              display_name: Хичээлийн дараах судалгаа
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Нэгж 9: Өгөгдөл'
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Хичээлийн дараах судалгаа
+        csp-post-survey-2023:
+          title: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+        csp-playground:
+          title: CSP тоглоомын талбай
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Апп Лаб-н танилцуулга
+            lessonGroup-3:
+              display_name: Оролт ба гаралт

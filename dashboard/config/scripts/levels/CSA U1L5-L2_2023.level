@@ -4,11 +4,8 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
-    "encrypted_examples": [
-
-    ],
     "serialized_maze": [
       [
         {
@@ -755,14 +752,21 @@
         }
       ]
     ],
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\n✅ **TO DO:** Experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. Find the documentation for `while`(#e7e8ea) loops in the **Documentation** tab ⬆️ under **Control Structures**. What does it do? How does it work?\r\n\r\n2. Find the documentation for the `canMove()`(#e7e8ea), `isOnBucket()`(#e7e8ea), and `hasPaint()`(#e7e8ea) methods in the `Painter`(#e7e8ea) class. What do each of these methods do? What information do they give when these methods are called?\r\n\r\n3. Change the condition for the second `while`(#e7e8ea) loop on **Line 16** to `jesse.canMove()`(#e7e8ea) then run the program to observe the results. What happens when you run the program? Why do you think this happened?\r\n\r\n4. Change the condition for the last `while`(#e7e8ea) loop on **Line 34** to `jesse.hasPaint()`(#e7e8ea) then run the program to observe the results. What happens when you run the program? Why do you think this happened?",
-    "project_template_level_name": "CSA U1L5-Loops PBT_2023"
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Go to the **Help & Tips** tab ⬆️ and find the documentation for `while`(#e7e8ea) loops. What does it do? How does it work?",
+    "project_template_level_name": "CSA U1L5-Loops PBT_2023",
+    "reference_links": [
+      "/courses/csa-2023/guides/while-loops"
+    ],
+    "teacher_markdown": "A `while` loop repeats a block of code as long as the condition is `true`.",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-10-13T19:15:12.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-10-13T19:15:12.893+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L1_2023\\\"\"],\"cloned_from\":\"CSA U1L5-L1_2023\"},{\"changed_at\":\"2022-10-13 19:15:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:16:15 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:18:34 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:19:24 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:26:20 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:35:00 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-13T19:15:12.893+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L1_2023\\\"\"],\"cloned_from\":\"CSA U1L5-L1_2023\"},{\"changed_at\":\"2022-10-13 19:15:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:16:15 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:18:34 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:19:24 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:26:20 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-14 00:35:00 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-26 14:59:54 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-04 13:23:05 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-13 16:41:00 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-22 15:47:11 +0000\",\"changed\":[\"serialized_maze\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

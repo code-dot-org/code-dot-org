@@ -713,9 +713,11 @@ da:
             required:
               display_name: Oversigt
         dance-2019:
+          title: Dance Party
           description: Lav din egen dansefest sammen med dine venner.
           student_description: Lav din egen dansefest sammen med dine venner.
         dance-extras-2019:
+          title: Bliv ved med at danse
           description: Overskrid den første time med udvidede projektideer.
           student_description: Overskrid den første time med udvidede projektideer.
         csp4-preview:
@@ -1162,3 +1164,29 @@ da:
           lessons:
             lesson-6:
               name: Løkker
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variabler
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For Loops
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Løkker
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lister
+            lessonGroup-3:
+              display_name: Løkker

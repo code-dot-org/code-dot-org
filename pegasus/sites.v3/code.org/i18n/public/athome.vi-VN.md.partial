@@ -39,7 +39,7 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Bữa tiệc khiêu vũ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Lập trình Bữa tiệc khiêu vũ để chia sẻ với bạn bè và gia đình. Với sự tham gia của Katy Perry, Shawn Mendes, Panic! Ở vũ trường, Lil Nas X, Jonas Brothers, Nicki Minaj, và 34 ngôi sao khác!</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Lập trình Bữa tiệc khiêu vũ để chia sẻ với bạn bè và gia đình. Với sự tham gia của Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, âm nhạc từ Disney “Encanto” và nhiều nghệ sĩ khác!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Thử hoạt động</button></a>
     </span>
   </div>

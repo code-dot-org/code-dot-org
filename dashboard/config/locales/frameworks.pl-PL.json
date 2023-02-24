@@ -1,0 +1,29 @@
+{
+  "pl-PL": {
+    "data": {
+      "frameworks": {
+        "csta": {
+          "name": "Normy informatyczne CSTA K-12 (2017)"
+        },
+        "csp2021": {
+          "name": "Ramy koncepcyjne \"Programu nauki informatyki\" (CSP)"
+        },
+        "csta2011": {
+          "name": "Standardy Informatyki CSTA dla K-12 (2011)"
+        },
+        "ccela": {
+          "name": "Standardy Common Core English Language Arts"
+        },
+        "ngss": {
+          "name": "Standardy przyrody nowej generacji"
+        },
+        "ccmath": {
+          "name": "Standardy matematyczne Common Core"
+        },
+        "iste": {
+          "name": "Standardy ISTE dla uczniów"
+        }
+      }
+    }
+  }
+}

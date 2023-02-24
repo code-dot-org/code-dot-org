@@ -83,6 +83,21 @@
         "884d4f4c-abd4-493c-8029-cde7399519f4": {
           "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
         },
+        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
+          "description": "Annak megtanulása, hogy a diákok azzal, hogy online információt osztanak meg magukról, digitális lábnyomot vagy „nyomvonalat” hagynak."
+        },
+        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
+          "description": "Fordítsd le a lépések listáját egy sor fizikai cselekvésre"
+        },
+        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
+          "description": "Azonosítsd és javítsd ki az algoritmus végrehajtásának hibáit"
+        },
+        "ae6f9158-191c-458c-9850-331faf94b567": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
         "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
           "description": "Időzített eseményekre reagáló programok fejlesztése"
         },
@@ -98,11 +113,20 @@
         "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
           "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
         },
+        "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
         "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
           "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
         },
         "d386bcb1-393c-46bc-8524-7380583d6ebb": {
           "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
+        "1e020282-115c-4c09-877d-5003b8eb49a6": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": ""
         },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
           "description": "Egy vers hangulatváltozásának illusztrálása."
@@ -116,11 +140,26 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
         },
+        "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
+          "description": "Annak megtanulása, hogy a diákok azzal, hogy online információt osztanak meg magukról, digitális lábnyomot vagy „nyomvonalat” hagynak."
+        },
+        "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
+          "description": "Fordítsd le a lépések listáját egy sor fizikai cselekvésre"
+        },
+        "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
+          "description": "Azonosítsd és javítsd ki az algoritmus végrehajtásának hibáit"
+        },
+        "d5f927b9-727a-423e-90d3-80faad21aa34": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
         },
         "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
           "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
+        "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
         },
         "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
           "description": "Időzített eseményekre reagáló programok fejlesztése"
@@ -130,6 +169,9 @@
         },
         "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
           "description": "Táncanimációk készítése kóddal"
+        },
+        "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Időzített eseményekre reagáló programok fejlesztése"
@@ -145,6 +187,9 @@
         },
         "d1485387-01e4-484d-9935-75f7c14b9d76": {
           "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
+        "adabe26f-78e0-47f4-92b2-535a38f53f15": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
         }
       }
     }

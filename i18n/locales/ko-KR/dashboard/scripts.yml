@@ -2264,6 +2264,7 @@ ko:
           title: 충돌 감지기
         dance-2019:
           title: 댄스 파티 (2019)
+          description_short: 댄스 파티를 코딩해서 친구들과 공유하세요. 비욘세, 해리 스타일스, 리조, 릴 나스 엑스, 셀레나 고메즈, 디즈니의 “엔칸토” 음악 등이 등장합니다!
           description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
           student_description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
         k5-onlinepd-2019:
@@ -3084,6 +3085,7 @@ ko:
           name: csp10-2021
         coursea-2021:
           title: 과정 A (2021)
+          description: '코스 A는 유치원 학생을 포함한 초보 독자를 위한 컴퓨터 공학 커리큘럼을 제공합니다.학생들은 루프 및 이벤트와 같은 명령을 사용하여 프로그래밍하는 방법을 배웁니다.이 과정에서 제공되는 수업은 또한 학생들이 다른 사람들과 의미 있게 협업하고, 다양한 문제 해결 기술을 연구하고, 어려운 과제에 직면하여 끈질기게 대처하고, 인터넷 안전에 대해 배우도록 가르칩니다. '
           description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
           description_audience: '나이: 4-7'
           lesson_groups:
@@ -3100,6 +3102,7 @@ ko:
           name: coursea-2021
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
         courseb-2021:
+          description: 우리는 1학년생을 염두에 두고 코스 B를 개발했습니다.코스 B의 개념은 코스 A의 개념과 유사하지만, 학생들은 보다 정교한 언플러그드 활동을 배우고 더 다양한 퍼즐을 풀게 됩니다.학생들은 프로그래밍, 협업 기술, 조사 및 비판적 사고 기술, 어려움에 직면한 끈기, 인터넷 안전의 기초를 배우게 됩니다.이 강좌를 마치면 학생들은 Play Lab 프로그래밍 환경에서 게임을 제작하게 됩니다.
           description_short: 아직 읽지 못하는 이들을 위한 컴퓨터 과학 소개. 과정 A와 유사하지만 개념의 깊이가 추가되었습니다.
           description_audience: '나이: 5-8'
           lesson_groups:
@@ -3118,6 +3121,7 @@ ko:
           name: 과정 b-2021
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
         coursec-2021:
+          description: 우리는 2학년 학생들을 위해 코스 C를 개발했습니다.학생들은 시퀀싱, 루프 및 이벤트가 포함된 프로그램을 만들 것입니다.문제 해결 기법을 연구하고 온라인과 오프라인 모두에서 긍정적인 커뮤니티를 구축하기 위한 전략을 개발할 것입니다.강좌를 마치면 학생들은 공유할 수 있는 인터랙티브 게임을 만들게 됩니다.
           description_short: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
           description_audience: '나이: 6-10'
           lesson_groups:
@@ -3139,6 +3143,7 @@ ko:
           student_description: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을 조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
         coursed-2021:
           title: 과정 D (2021)
+          description: '3학년 학생들을 위해 코스 D를 만들었습니다.이 강좌는 루프와 이벤트를 포함하여 이전 강좌에서 찾은 개념에 대한 복습으로 시작됩니다.그 후 학생들은 알고리즘, 중첩 루프, while 루프, 조건문 등에 대한 이해를 발전시킬 것입니다. '
           description_short: 조건문에 대해 배우세요. 자신의 아트와 게임, 심지어 댄스 파티를 만드세요.
           description_audience: '나이: 7-11'
           lesson_groups:
@@ -3160,6 +3165,7 @@ ko:
               display_name: 디지털 시민의식
           name: 과정 d-2021
         coursee-2021:
+          description: 4학년 학생들을 위해 코스 E를 만들었습니다.이 과정은 Sprite Lab 프로그래밍 도구에 대한 소개로 시작됩니다.학생들은 온라인 안전에 대해 배우게 될 내용을 강화하는 재미있고 인터랙티브한 프로젝트를 만드는 방법을 배우게 됩니다.이 수업을 마친 후 학생들은 더 복잡한 코딩에 참여하게 됩니다.학생들은 중첩 루프, 함수 및 조건문에 대해 배우게 됩니다.강좌를 마치면 학생들은 이러한 개념을 결합하여 어려운 퍼즐을 풀게 됩니다.이 과정은 학생들이 게임이나 그림을 만드는 개방형 프로젝트로 끝납니다.
           description_audience: '나이: 8-12'
           lesson_groups:
             ramp_up:
@@ -3189,6 +3195,8 @@ ko:
               display_name: 디지털 시민의식
             csf_variables:
               display_name: 반복을 위한
+            csf_data:
+              display_name: 데이터 및 시뮬레이션
             csf_for_loops:
               display_name: 반복을 위한
             csf_sprites:
@@ -3408,6 +3416,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 환영합니다
+        outbreak-module:
+          title: 아웃브레이크
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3578,6 +3588,7 @@ ko:
           title: 말하는 꿀벌
         outbreak-csc:
           name: outbreak-csc
+          title: 아웃브레이크
         explore-data-1:
           name: explore-data-1
           title: 상자 그림과  히스토그램 탐구
@@ -3682,7 +3693,8 @@ ko:
               display_name: 이벤트
             lessonGroup-5:
               display_name: 과정말 프로젝트
-          title: 과정 A (2021)
+          title: 과정 A (2022)
+          description: '코스 A는 유치원 학생을 포함한 초보 독자를 위한 컴퓨터 공학 커리큘럼을 제공합니다.학생들은 루프 및 이벤트와 같은 명령을 사용하여 프로그래밍하는 방법을 배웁니다.이 과정에서 제공되는 수업은 또한 학생들이 다른 사람들과 의미 있게 협업하고, 다양한 문제 해결 기술을 연구하고, 어려운 과제에 직면하여 끈질기게 대처하고, 인터넷 안전에 대해 배우도록 가르칩니다. '
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
           description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
           description_audience: '나이: 4-7'
@@ -3761,6 +3773,8 @@ ko:
               display_name: 이벤트
             lessonGroup-6:
               display_name: 과정말 프로젝트
+          title: 과정 B (2022)
+          description: 우리는 1학년생을 염두에 두고 코스 B를 개발했습니다.코스 B의 개념은 코스 A의 개념과 유사하지만, 학생들은 보다 정교한 언플러그드 활동을 배우고 더 다양한 퍼즐을 풀게 됩니다.학생들은 프로그래밍, 협업 기술, 조사 및 비판적 사고 기술, 어려움에 직면한 끈기, 인터넷 안전의 기초를 배우게 됩니다.이 강좌를 마치면 학생들은 Play Lab 프로그래밍 환경에서 게임을 제작하게 됩니다.
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
           description_short: 아직 읽지 못하는 이들을 위한 컴퓨터 과학 소개. 과정 A와 유사하지만 개념의 깊이가 추가되었습니다.
           description_audience: '나이: 5-8'
@@ -3778,6 +3792,8 @@ ko:
               display_name: 데이터
             end_of_course_project:
               display_name: 과정말 프로젝트
+          title: 과정 C (2022)
+          description: 우리는 2학년 학생들을 위해 코스 C를 개발했습니다.학생들은 시퀀싱, 루프 및 이벤트가 포함된 프로그램을 만들 것입니다.문제 해결 기법을 연구하고 온라인과 오프라인 모두에서 긍정적인 커뮤니티를 구축하기 위한 전략을 개발할 것입니다.강좌를 마치면 학생들은 공유할 수 있는 인터랙티브 게임을 만들게 됩니다.
           student_description: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을 조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
           description_short: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
           description_audience: '나이: 6-10'
@@ -3827,7 +3843,8 @@ ko:
               display_name: 조건
             end_of_course_project:
               display_name: 과정말 프로젝트
-          title: 과정 D (2021)
+          title: 과정 D (2022)
+          description: '3학년 학생들을 위해 코스 D를 만들었습니다.이 강좌는 루프와 이벤트를 포함하여 이전 강좌에서 찾은 개념에 대한 복습으로 시작됩니다.그 후 학생들은 알고리즘, 중첩 루프, while 루프, 조건문 등에 대한 이해를 발전시킬 것입니다. '
           description_short: 조건문에 대해 배우세요. 자신의 아트와 게임, 심지어 댄스 파티를 만드세요.
           description_audience: '나이: 7-11'
         coursee-2022:
@@ -3846,6 +3863,8 @@ ko:
               display_name: 컴퓨팅의 영향
             end_of_course_project:
               display_name: 과정말 프로젝트
+          title: 과정 E (2022)
+          description: 4학년 학생들을 위해 코스 E를 만들었습니다.이 과정은 Sprite Lab 프로그래밍 도구에 대한 소개로 시작됩니다.학생들은 온라인 안전에 대해 배우게 될 내용을 강화하는 재미있고 인터랙티브한 프로젝트를 만드는 방법을 배우게 됩니다.이 수업을 마친 후 학생들은 더 복잡한 코딩에 참여하게 됩니다.학생들은 중첩 루프, 함수 및 조건문에 대해 배우게 됩니다.강좌를 마치면 학생들은 이러한 개념을 결합하여 어려운 퍼즐을 풀게 됩니다.이 과정은 학생들이 게임이나 그림을 만드는 개방형 프로젝트로 끝납니다.
           description_audience: '나이: 8-12'
         coursef-2022:
           lesson_groups:
@@ -3855,8 +3874,12 @@ ko:
               display_name: 디지털 시민의식
             lessonGroup-8:
               display_name: 변수
+            csf_data:
+              display_name: 데이터 및 시뮬레이션
             end_of_course_project:
               display_name: 과정말 프로젝트
+          title: 과정 F (2022)
+          description: 5학년 학생들을 위해 코스 F를 만들었습니다.이 강좌는 사용자들이 사용하는 앱에서 어떤 선택을 하는지 살펴보는 것으로 시작됩니다.그런 다음 학생들은 사용자가 선택할 수 있는 다양한 Sprite Lab 앱을 만드는 방법을 배웁니다.이 과정의 후반부 수업에서 학생들은 다양한 상황에서의 변수에 대해 배우게 됩니다.학생들은 이 과정을 통해 더 큰 자율성과 더 많은 선택권을 갖게 됩니다.강좌를 마치면 학생들은 대화형 프로젝트를 만들어 친구 및 가족과 공유할 수 있습니다.
           description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
           description_audience: '나이: 9-13'
         csp-post-survey-2021:
@@ -3927,8 +3950,11 @@ ko:
               display_name: 스프라이트
             lessonGroup-8:
               display_name: 변수
+            csf_data:
+              display_name: 데이터 및 시뮬레이션
             end_of_course_project:
               display_name: 과정말 프로젝트
+          title: 과정 F (2022)
           description_audience: '나이: 9-13'
           description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
         csa6-2022:
@@ -4136,6 +4162,38 @@ ko:
               display_name: 설문조사
             lessonGroup-3:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: 변수
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: 1차원 (1D) 어레이
+            lesson-3:
+              name: 반복을 위한
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-4:
+              display_name: 대체 레슨
+        hello-world-space-2022:
+          title: '헬로 월드: 스페이스'
+        hello-world-soccer-2022:
+          title: '헬로 월드: 축구'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4185,3 +4243,103 @@ ko:
           lesson_groups:
             lessonGroup-3:
               display_name: '챕터 2: 물리적 프로토타입 만들기'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: 무슨 소리죠?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: 설문조사
+            csp_unit1_2020:
+              display_name: '단원 1: 디지털 정보'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '단원 2: 인터넷'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 단원 1 - 앱 설계 소개
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: 변수
+            csp_conditionals:
+              display_name: 조건
+            csp_functions:
+              display_name: 함수
+            csp_project:
+              display_name: 프로젝트
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: 데이터
+            csp_loops:
+              display_name: 반복
+            csp_traversals:
+              display_name: " 트래버스"
+            csp_project:
+              display_name: 프로젝트
+            lessonGroup-5:
+              display_name: 과정 후 설문조사
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 리스트
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+            lessonGroup-3:
+              display_name: 반복
+            lessonGroup-4:
+              display_name: " 트래버스"
+            lessonGroup-5:
+              display_name: 프로젝트
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 매개변수 및 반환값
+            csp_libraries:
+              display_name: 라이브러리
+            lessonGroup-3:
+              display_name: 과정 후 설문조사
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT 만들기
+            lessonGroup-3:
+              display_name: 과정 후 설문조사
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '단원 9: 데이터'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '단원 10: 사이버보안 및 세계적 영향'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+        csp-post-survey-2023:
+          title: CS 원리 과정 후 설문 조사
+        csp-playground:
+          title: CSP 플레이그라운드
+          description_audience: 커리큘럼 작성자
+          description_short: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋
+            lessonGroup-4:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 앱 랩 소개
+            lessonGroup-3:
+              display_name: 인풋 및 아웃풋

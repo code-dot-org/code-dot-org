@@ -1,0 +1,20 @@
+{
+  "he-IL": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "חשיבה חישובית"
+        },
+        "L": {
+          "description": "שפה"
+        },
+        "C": {
+          "description": "מעגלים"
+        },
+        "F": {
+          "description": "פונקציות"
+        }
+      }
+    }
+  }
+}

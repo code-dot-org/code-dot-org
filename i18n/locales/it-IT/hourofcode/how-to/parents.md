@@ -24,13 +24,13 @@ Puoi provare l'ora del codice con un computer, un tablet, uno smartphone o compl
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Ci sono innumerevoli attività nell' [Ora del codice](https://hourofcode.com/us/learn) disponibile se lavori su un computer con accesso a internet. Ti invitiamo a dare un'occhiata ad alcune delle tue opzioni in anticipo, in modo che tu possa guidare il tuo bambino verso esercizi che gli piaceranno.
+Sono disponibili innumerevoli attività nell'[Ora del codice](https://hourofcode.com/us/learn) se lavori su un computer con accesso a internet. Ti invitiamo a dare un'occhiata ad alcune delle tue opzioni in anticipo, in modo che tu possa guidare il tuo bambino verso esercizi che gli piaceranno.
 
 Tutte le nostre attività integrano la risoluzione dei problemi e il pensiero critico con il divertimento e la creatività, ma ecco alcune preferite dagli studenti:
 
 - Per i bambini che amano giocare: [Minecraft](https://code.org/minecraft) o [Dance Party](https://code.org/dance)
-- Per i bambini che amano la Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), o [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
-- Per i bambini che amano imparare: [IA per il mare](https://code.org/oceans) o [Crea musica con Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
+- Per i bambini che amano la Disney: [Star Wars](https://code.org/starwars), [Programma con Anna ed Elsa (Frozen)](https://studio.code.org/s/frozen/lessons/1/levels/1), o [Oceania](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Per i bambini che amano imparare: [L'Intelligenza Artificiale per il mare](https://code.org/oceans) o [Crea musica con Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>Poca o nessuna tecnologia?</h3>
 
@@ -71,9 +71,9 @@ Non preoccuparti se sia tu che i tuoi bambini siete inesperti in informatica. Qu
 
 [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-<h3>Hai giovani donne a casa?</h3>
+<h3>Ci sono delle ragazze in casa?</h3>
 
-<a href="https://code.org/girls">Ecco i nostri consigli</a> per stimolare il loro interesse verso l'informatica. **Suggerimento-Pro**: Puoi iniziare dicendogli semplicemente che sarebbero bravi!
+<a href="https://code.org/girls">Ecco i nostri consigli</a> per stimolare il loro interesse verso l'informatica. **Super suggerimento**: puoi iniziare dicendo semplicemente loro che sarebbero brave!
 
 <h3>Risolvete insieme i problemi</h3>
 
