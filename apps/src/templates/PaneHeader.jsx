@@ -117,7 +117,7 @@ export const PaneButton = Radium(function(props) {
     iconOrLabelHidden && moduleStyles.headerButtonIconOrLabelHidden
   );
 
-  const divClassNames = classNames(
+  const buttonClassNames = classNames(
     moduleStyles.headerButton,
     isRtl !== !!leftJustified && moduleStyles.headerButtonRtl,
     isMinecraft && moduleStyles.headerButtonMinecraft,
@@ -161,7 +161,7 @@ export const PaneButton = Radium(function(props) {
 
   return (
     <button
-      className={divClassNames}
+      className={buttonClassNames}
       type="button"
       disabled={isDisabled}
       tabIndex="0"
