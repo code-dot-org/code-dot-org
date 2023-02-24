@@ -10,6 +10,7 @@ steps:
   - name: info
     image: curlimages/curl
     commands:
+      # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(curl -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - echo "Running on $hostname"
@@ -51,10 +52,6 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(wget -qO- --header 'X-aws-ec2-metadata-token-ttl-seconds: 300' --method=PUT 'http://169.254.169.254/latest/api/token')"
-      - "hostname=$(wget -qO- --header 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
-      - echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -111,8 +108,9 @@ steps:
   - name: info
     image: curlimages/curl
     commands:
-      - "IMDS_TOKEN=$(curl -X PUT 'http://169.254.169.254/latest/api/token' -H 'X-aws-ec2-metadata-token-ttl-seconds: 21600')"
-      - "hostname=$(curl -s -H 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - echo "Running on $hostname"
 
   - name: clone
@@ -162,10 +160,6 @@ steps:
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(wget -qO- --header 'X-aws-ec2-metadata-token-ttl-seconds: 300' --method=PUT 'http://169.254.169.254/latest/api/token')"
-      - "hostname=$(wget -qO- --header 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
-      - echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
