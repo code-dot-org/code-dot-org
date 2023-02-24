@@ -12,7 +12,8 @@ import {personalProjectDataPropType} from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
 import {
   AlwaysPublishableProjectTypes,
-  ConditionallyPublishableProjectTypes
+  ConditionallyPublishableProjectTypes,
+  RestrictedPublishProjectTypes
 } from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
@@ -60,7 +61,9 @@ class PersonalProjectsTable extends React.Component {
     const {canShare} = this.props;
     const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
-      (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+      (ConditionallyPublishableProjectTypes.includes(rowData.type) &&
+        canShare) ||
+      RestrictedPublishProjectTypes.includes(rowData.type);
 
     return (
       <PersonalProjectsPublishedCell
