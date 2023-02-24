@@ -210,38 +210,6 @@ function registerThemes(themes) {
   });
 }
 
-/**
- * Change workspace theme to CdoAccessibleTheme
- */
-const registerAccessibleTheme = function() {
-  const accessibleThemeOption = {
-    displayText: function(scope) {
-      return (
-        (isCurrentTheme(Themes.ACCESSIBLE, scope.workspace)
-          ? '✓ '
-          : `${msg.enable()} `) + msg.blocklyAccessibleTheme()
-      );
-    },
-    preconditionFn: function(scope) {
-      if (isMusicLabTheme(scope.workspace)) {
-        return MenuOptionStates.HIDDEN;
-      } else if (isCurrentTheme(Themes.ACCESSIBLE, scope.workspace)) {
-        return MenuOptionStates.DISABLED;
-      } else {
-        return MenuOptionStates.ENABLED;
-      }
-    },
-    callback: function(scope) {
-      localStorage.setItem(BLOCKLY_THEME, Themes.ACCESSIBLE);
-      scope.workspace.setTheme(Blockly.themes[Themes.ACCESSIBLE]);
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
-    id: 'accessibleTheme',
-    weight: 15
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(accessibleThemeOption);
-};
-
 const registerAllContextMenuItems = function() {
   registerDeletable();
   registerMovable();
