@@ -19,3 +19,11 @@ System.out.println(y + " " + z);
 
 What is printed as a result of executing the code segment?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The variable `y` is assigned the value `2`. The `(int)` casting operator is applied to the value assigned to `x`, so `1` is used instead of `1.5` for `x`. The `int` value is then multiplied by `2`, resulting in `1 * 2`, or `2`, being assigned to `y`.
+
+The line `double z = y;` then widens the value assigned to `y` to a `double` value, so `z` is assigned the value `2.0`.
+
+As a result, `2` is printed for `y` and `2.0` is printed for `z`.
+MARKDOWN
