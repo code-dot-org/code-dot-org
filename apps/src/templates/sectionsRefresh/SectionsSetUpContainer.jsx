@@ -6,6 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 
 const FORM_ID = 'sections-set-up-container';
+const SECTIONS_API = '/sections';
 
 // Custom hook to update the list of sections to create
 // Currently, this hook returns two things:
@@ -33,7 +34,6 @@ const useSections = () => {
 
 const saveSection = (e, section) => {
   e.preventDefault();
-  console.log('Save class sections clicked');
 
   const form = document.querySelector(`#${FORM_ID}`);
   if (!form.checkValidity()) {
@@ -41,7 +41,7 @@ const saveSection = (e, section) => {
     return;
   }
 
-  fetch('/sections', {
+  fetch(SECTIONS_API, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -52,10 +52,12 @@ const saveSection = (e, section) => {
     .then(response => response.json())
     .then(data => {
       // Redirect to the sections list.
-      console.log(window.location);
       window.location.href = window.location.origin + '/home';
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: Design how we want to show errors.
+      console.error(err);
+    });
 };
 
 export default function SectionsSetUpContainer() {
@@ -80,7 +82,10 @@ export default function SectionsSetUpContainer() {
           icon="plus"
           text={i18n.addAnotherClassSection()}
           color="white"
-          onClick={() => console.log('Add Another Class Section clicked')}
+          onClick={e => {
+            e.preventDefault();
+            console.log('Add Another Class Section clicked');
+          }}
         />
         <Button
           text={i18n.saveClassSections()}
