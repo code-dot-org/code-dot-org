@@ -41,11 +41,14 @@ const saveSection = (e, section) => {
     return;
   }
 
+  const csrfToken = document.querySelector('meta[name="csrf-token"]')
+    .attributes['content'].value;
+
   fetch(SECTIONS_API, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+      'X-CSRF-Token': csrfToken
     },
     body: JSON.stringify({section})
   })
