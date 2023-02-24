@@ -44,6 +44,7 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
+      # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(wget -qO- --header 'X-aws-ec2-metadata-token-ttl-seconds: 300' --method=PUT 'http://169.254.169.254/latest/api/token')"
       - "hostname=$(wget -qO- --header 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
       - echo "Running on $hostname"
