@@ -12,6 +12,7 @@ steps:
     commands:
       - "IMDS_TOKEN=$(curl -X PUT 'http://169.254.169.254/latest/api/token' -H 'X-aws-ec2-metadata-token-ttl-seconds: 21600')"
       - echo "token is $IMDS_TOKEN"
+      - "curl -H 'X-aws-ec2-metadata-token: $IMDS_TOKEN' http://169.254.169.254/latest/meta-data/public-hostname"
       - "hostname=$(curl -s -H 'X-aws-ec2-metadata-token: $IMDS_TOKEN' 'http://169.254.169.254/latest/meta-data/public-hostname')"
       - echo "Running on $hostname"
 
