@@ -9,7 +9,9 @@ $border-radius: 4px;
   outline-offset: 2px;
 }
 
-@mixin h3-style {
+// Use this to maintain proper heading hierarchy
+// if the design calls for an h5 style
+@mixin h5-lookalike-style {
   font-family: $gotham-bold, sans-serif;
   font-size: 1.25em;
 }
@@ -240,7 +242,7 @@ ul {
       }
 
       h3 {
-        @include h3-style;
+        @include h5-lookalike-style;
       }
     }
   }
@@ -273,7 +275,7 @@ ul {
       }
 
       h3 {
-        @include h3-style;
+        @include h5-lookalike-style;
       }
 
       &:after {
@@ -390,7 +392,7 @@ ol.steps-list {
   }
 
   h4 {
-    @include h3-style;
+    @include h5-lookalike-style;
     width: 100%;
   }
 }
