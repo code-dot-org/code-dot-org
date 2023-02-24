@@ -21,6 +21,7 @@ export default class ExternalLed {
   }
 
   blink(delay) {
+    this.off();
     setInterval(this.toggle_.bind(this), delay);
   }
 
