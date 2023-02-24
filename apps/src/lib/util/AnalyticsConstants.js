@@ -13,7 +13,8 @@ const EVENTS = {
 
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_EVENT: 'Course Overview Page Visited',
-  UNIT_OVERVIEW_PAGE_VISITED_EVENT: 'Unit Overview Page Visited',
+  UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
+    'Unit Overview Page Visited By Teacher',
   TRY_NOW_BUTTON_CLICK_EVENT: 'Try Now Button Clicked',
 
   // Lesson info
@@ -47,7 +48,8 @@ const EVENTS = {
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
-  RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed'
+  RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
+  TEACHER_VIEWING_STUDENT_WORK: 'Teacher Viewing Student Work'
 };
 
 export {EVENTS};

@@ -3,8 +3,9 @@ import React from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
-import {getBlockMode} from '../appConfig';
 import TimelineTrackEvents from './TimelineTrackEvents';
+import TimelineSimple2Events from './TimelineSimple2Events';
+import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 
 const barWidth = 60;
@@ -12,6 +13,9 @@ const numMeasures = 30;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
 
+/**
+ * Renders the music playback timeline.
+ */
 const Timeline = ({isPlaying, currentPlayheadPosition}) => {
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
     // While we might not actually have this many rows to show,
@@ -72,6 +76,8 @@ const Timeline = ({isPlaying, currentPlayheadPosition}) => {
         <div className={moduleStyles.soundsArea}>
           {getBlockMode() === BlockMode.TRACKS ? (
             <TimelineTrackEvents {...timelineElementProps} />
+          ) : getBlockMode() === BlockMode.SIMPLE2 ? (
+            <TimelineSimple2Events {...timelineElementProps} />
           ) : (
             <TimelineSampleEvents {...timelineElementProps} />
           )}

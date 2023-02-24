@@ -12,7 +12,7 @@ In U.S. high schools, the Advanced Placement exam in Computer Science has histor
 <p>
 While things are starting to move in the right direction, we have a long way to go to reach a balanced population in computer science. Code.org focuses on K-12 learning because data shows that experiences in K-12 directly impact students’ future in computer science. <strong>Among young women, those who try AP Computer Science in high school are 10 times more likely to major in computer science.</strong>
 <p><br>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br></center><Br>
+<center><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br></center><Br>
 
 <h1>How You Can Help</h1>
 
@@ -148,25 +148,25 @@ Take a look at some <a href="https://code.org/careers-in-tech">great examples</a
 
 [col-50]
 
-<center><iframe width="368" height="207" src="https://www.youtube.com/embed/FBTWICxTG08" title="YouTube video player" frameborder="0" allowfullscreen></iframe><br><br>
+<center><iframe width="368" height="207" src="https://www.youtube-nocookie.com/embed/FBTWICxTG08" title="YouTube video player" frameborder="0" allowfullscreen></iframe><br><br>
 
 [/col-50]
 
 [col-50]
 
-<center><iframe width="368" height="207" src="https://www.youtube.com/embed/2uXTNK9W-gQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe><br><br>
+<center><iframe width="368" height="207" src="https://www.youtube-nocookie.com/embed/2uXTNK9W-gQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe><br><br>
 
 [/col-50]
 
 [col-50]
 
-<center><iframe width="368" height="207" src="https://www.youtube.com/embed/t0-Z_LfGwUM" frameborder="0" allowfullscreen></iframe><br><br>
+<center><iframe width="368" height="207" src="https://www.youtube-nocookie.com/embed/t0-Z_LfGwUM" frameborder="0" allowfullscreen></iframe><br><br>
 
 [/col-50]
 
 [col-50]
 
-<center><iframe width="368" height="207" src="https://www.youtube.com/embed/RfbbDgx6l1g" frameborder="0" allowfullscreen></iframe><br><br>
+<center><iframe width="368" height="207" src="https://www.youtube-nocookie.com/embed/RfbbDgx6l1g" frameborder="0" allowfullscreen></iframe><br><br>
 
 [/col-50]
 

@@ -105,7 +105,7 @@ Our Hour of Code activities and CS Fundamentals courses can be completed on mobi
 
 .شروع کنید، بازپخش ویدئوی زیرا را آزمایش کنید تا مطمئن شوید آماده هستید Code.org قبل از اینکه دوره آنلاین خود در.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe> 
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe> 
 
 .این پخش کننده ویدئویی است که در طول برنامه از آن استفاده می شود It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
