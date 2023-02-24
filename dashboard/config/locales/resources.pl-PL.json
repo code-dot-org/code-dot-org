@@ -122,12 +122,15 @@
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursed/2022": {
+          "name": "Wszystkie zasoby",
           "url": "/s/coursed-2022/resources"
         },
         "all_standards/coursed/2022": {
+          "name": "Wszystkie standardy",
           "url": "/s/coursed-2022/standards"
         },
         "all_vocabulary/coursed/2022": {
+          "name": "Całe słownictwo",
           "url": "/s/coursed-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursed/2022": {
@@ -366,12 +369,15 @@
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursef/2022": {
+          "name": "Wszystkie zasoby",
           "url": "/s/coursef-2022/resources"
         },
         "all_standards/coursef/2022": {
+          "name": "Wszystkie standardy",
           "url": "/s/coursef-2022/standards"
         },
         "all_vocabulary/coursef/2022": {
+          "name": "Całe słownictwo",
           "url": "/s/coursef-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursef/2022": {
@@ -560,12 +566,15 @@
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursee/2022": {
+          "name": "Wszystkie zasoby",
           "url": "/s/coursee-2022/resources"
         },
         "all_standards/coursee/2022": {
+          "name": "Wszystkie standardy",
           "url": "/s/coursee-2022/standards"
         },
         "all_vocabulary/coursee/2022": {
+          "name": "Całe słownictwo",
           "url": "/s/coursee-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
@@ -735,12 +744,15 @@
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/courseb/2022": {
+          "name": "Wszystkie zasoby",
           "url": "/s/courseb-2022/resources"
         },
         "all_standards/courseb/2022": {
+          "name": "Wszystkie standardy",
           "url": "/s/courseb-2022/standards"
         },
         "all_vocabulary/courseb/2022": {
+          "name": "Całe słownictwo",
           "url": "/s/courseb-2022/vocab"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
@@ -948,12 +960,15 @@
           "type": "Klucz odpowiedzi"
         },
         "all_resources/express/2022": {
+          "name": "Wszystkie zasoby",
           "url": "/s/express-2022/resources"
         },
         "all_standards/express/2022": {
+          "name": "Wszystkie standardy",
           "url": "/s/express-2022/standards"
         },
         "all_vocabulary/express/2022": {
+          "name": "Całe słownictwo",
           "url": "/s/express-2022/vocab"
         },
         "debugging_guide/express/2022": {
@@ -1057,12 +1072,15 @@
           "type": "Przewodnik projektu"
         },
         "all_resources/pre-express/2022": {
+          "name": "Wszystkie zasoby",
           "url": "/s/pre-express-2022/resources"
         },
         "all_standards/pre-express/2022": {
+          "name": "Wszystkie standardy",
           "url": "/s/pre-express-2022/standards"
         },
         "all_vocabulary/pre-express/2022": {
+          "name": "Całe słownictwo",
           "url": "/s/pre-express-2022/vocab"
         },
         "debugging_guide/pre-express/2022": {
@@ -1109,12 +1127,15 @@
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursea/2022": {
+          "name": "Wszystkie zasoby",
           "url": "/s/coursea-2022/resources"
         },
         "all_standards/coursea/2022": {
+          "name": "Wszystkie standardy",
           "url": "/s/coursea-2022/standards"
         },
         "all_vocabulary/coursea/2022": {
+          "name": "Całe słownictwo",
           "url": "/s/coursea-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
@@ -1314,12 +1335,15 @@
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursec/2022": {
+          "name": "Wszystkie zasoby",
           "url": "/s/coursec-2022/resources"
         },
         "all_standards/coursec/2022": {
+          "name": "Wszystkie standardy",
           "url": "/s/coursec-2022/standards"
         },
         "all_vocabulary/coursec/2022": {
+          "name": "Całe słownictwo",
           "url": "/s/coursec-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
@@ -1534,6 +1558,15 @@
         },
         "teacher_forum/csd/2022": {
           "name": "Forum Nauczycieli"
+        },
+        "all_resources_3/csd/2022": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_3/csd/2022": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_3/csd/2022": {
+          "name": "Całe słownictwo"
         },
         "meals_data/csd/2022": {
           "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
@@ -1780,6 +1813,15 @@
           "name": "Projekt - zarekomenduj",
           "type": "Slajdy"
         },
+        "all_resources_5/csd/2022": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_5/csd/2022": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_5/csd/2022": {
+          "name": "Całe słownictwo"
+        },
         "aluminum_boats/csd/2022": {
           "type": "Wzór"
         },
@@ -1950,6 +1992,24 @@
         "exploring_problem_solving_games_/csd/2022": {
           "type": "Slajdy"
         },
+        "csd_guide_to_debugging/csd/2022": {
+          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+        },
+        "csd_guide_to_differentiation/csd/2022": {
+          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+        },
+        "all_code_1/csd/2022": {
+          "name": "Cały kod"
+        },
+        "all_resources_1/csd/2022": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_1/csd/2022": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_1/csd/2022": {
+          "name": "Całe słownictwo"
+        },
         "cs_in_entertainment/csd/2022": {
           "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
           "type": "Przewodnik po zajęciach"
@@ -2027,6 +2087,7 @@
           "type": "Slajdy"
         },
         "animation_tab/csd/2022": {
+          "name": "Karta Animacja",
           "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
           "type": "Zasoby"
         },
@@ -2307,6 +2368,18 @@
         "project_-_design_a_game/csd/2022": {
           "name": "Projekt - Zaprojektuj grę",
           "type": "Slajdy"
+        },
+        "all_code/csd/2022": {
+          "name": "Cały kod"
+        },
+        "all_resources/csd/2022": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards/csd/2022": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary/csd/2022": {
+          "name": "Całe słownictwo"
         },
         "exploring_web_pages/csd/2022": {
           "name": "Badanie stron internetowych",
@@ -2635,6 +2708,18 @@
           "name": "Weryfikacja krzyżowa i ostatnie wykończenia",
           "type": "Slajdy"
         },
+        "all_code_2/csd/2022": {
+          "name": "Cały kod"
+        },
+        "all_resources_2/csd/2022": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_2/csd/2022": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_2/csd/2022": {
+          "name": "Całe słownictwo"
+        },
         "designing_with_empathy/csd/2022": {
           "name": "Projektowanie z empatią",
           "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
@@ -2913,6 +2998,18 @@
           "name": "Projekt - Prezentacja aplikacji",
           "type": "Slajdy"
         },
+        "all_code_4/csd/2022": {
+          "name": "Cały kod"
+        },
+        "all_resources_6/csd/2022": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_6/csd/2022": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_6/csd/2022": {
+          "name": "Całe słownictwo"
+        },
         "computer_science_is_changing_everything/csd/2022": {
           "name": "Informatyka zmienia wszystko",
           "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
@@ -3162,6 +3259,18 @@
         },
         "prototype_an_innovation_example_3/csd/2022": {
           "type": "Wzór"
+        },
+        "all_code_3/csd/2022": {
+          "name": "Cały kod"
+        },
+        "all_resources_4/csd/2022": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_4/csd/2022": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_4/csd/2022": {
+          "name": "Całe słownictwo"
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
@@ -3514,7 +3623,8 @@
           "url": "https://curriculum.code.org/csd-18/unit3/standards/"
         },
         "teacher_forum_2/csd/2018": {
-          "name": "Forum Nauczycieli"
+          "name": "Forum Nauczycieli",
+          "url": "https://forum.code.org/c/csd3"
         },
         "vocabulary_2/csd/2018": {
           "name": "Słownik",
@@ -3852,7 +3962,8 @@
           "url": "https://curriculum.code.org/csd/unit3/standards/"
         },
         "teacher_forum_2/csd/2017": {
-          "name": "Forum Nauczycieli"
+          "name": "Forum Nauczycieli",
+          "url": "https://forum.code.org/c/csd3"
         },
         "vocabulary_2/csd/2017": {
           "name": "Słownik",
@@ -5526,10 +5637,30 @@
           "type": "Kategoria"
         },
         "csd_curriculum_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
           "type": "Zasoby"
         },
         "csd_implementation_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
           "type": "Zasoby"
+        },
+        "csd_guide_to_debugging/csd/2021": {
+          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+        },
+        "csd_guide_to_differentiation/csd/2021": {
+          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+        },
+        "all_code_5/csd/2021": {
+          "name": "Cały kod"
+        },
+        "all_resources_7/csd/2021": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_7/csd/2021": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_7/csd/2021": {
+          "name": "Całe słownictwo"
         },
         "classifying_fish/csd/2021": {
           "type": "Przewodnik po zajęciach"
@@ -5754,6 +5885,18 @@
         "teacher_forum/csd/2021": {
           "name": "Forum Nauczycieli"
         },
+        "all_code_3/csd/2021": {
+          "name": "Cały kod"
+        },
+        "all_resources_4/csd/2021": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_4/csd/2021": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_4/csd/2021": {
+          "name": "Całe słownictwo"
+        },
         "unit-4-the-design-process/csd/2021": {
           "type": "Slajdy"
         },
@@ -5963,6 +6106,18 @@
         "peer_review_2/csd/2021": {
           "type": "Wzór"
         },
+        "all_code_4/csd/2021": {
+          "name": "Cały kod"
+        },
+        "all_resources_6/csd/2021": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_6/csd/2021": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_6/csd/2021": {
+          "name": "Całe słownictwo"
+        },
         "circuit_playground_1/csd/2021": {
           "type": "Zasoby"
         },
@@ -6117,12 +6272,15 @@
           "type": "Wzór"
         },
         "all_resources_5/csd/2021": {
+          "name": "Wszystkie zasoby",
           "url": "/s/csd5-2021/resources"
         },
         "all_standards_5/csd/2021": {
+          "name": "Wszystkie standardy",
           "url": "/s/csd5-2021/standards"
         },
         "all_vocabulary_5/csd/2021": {
+          "name": "Całe słownictwo",
           "url": "/s/csd5-2021/vocab"
         },
         "unit-5-data-society/csd/2021": {
@@ -6317,7 +6475,24 @@
           "type": "Wzór"
         },
         "teacher_forum_1/csd/2021": {
-          "name": "Forum Nauczycieli"
+          "name": "Forum Nauczycieli",
+          "url": "https://forum.code.org/c/csd3"
+        },
+        "all_code_1/csd/2021": {
+          "name": "Cały kod",
+          "url": "/s/csd3-2021/code"
+        },
+        "all_resources_2/csd/2021": {
+          "name": "Wszystkie zasoby",
+          "url": "/s/csd3-2021/resources"
+        },
+        "all_standards_2/csd/2021": {
+          "name": "Wszystkie standardy",
+          "url": "/s/csd3-2021/standards"
+        },
+        "all_vocabulary_2/csd/2021": {
+          "name": "Całe słownictwo",
+          "url": "/s/csd3-2021/vocab"
         },
         "cs-entertainment-activity/csd/2021": {
           "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
@@ -6389,6 +6564,7 @@
           "type": "Wideo"
         },
         "animation_tab/csd/2021": {
+          "name": "Karta Animacja",
           "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
           "type": "Zasoby"
         },
@@ -6704,6 +6880,18 @@
         },
         "solving-problems-activity-guide-game-2020/csd/2021": {
           "type": "Przewodnik po zajęciach"
+        },
+        "all_code_2/csd/2021": {
+          "name": "Cały kod"
+        },
+        "all_resources_3/csd/2021": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_3/csd/2021": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_3/csd/2021": {
+          "name": "Całe słownictwo"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
           "name": "Badanie stron internetowych",

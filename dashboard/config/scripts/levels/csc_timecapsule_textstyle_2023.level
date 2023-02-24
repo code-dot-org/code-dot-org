@@ -1,9 +1,5 @@
 <Poetry>
   <config><![CDATA[{
-  "game_id": 69,
-  "created_at": "2023-02-06T19:26:02.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -20,9 +16,9 @@
     "use_modal_function_editor": "true",
     "standalone_app_name": "poetry",
     "embed": "false",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Use the dropdown to choose from different colors and effects.\\n\\n![](https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png)\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b17ee248bc7a65d4263a344ff00a64a7/csc_timecapsule_textstyle_2022.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"You can change anything you coded from the last level, too! \\n\\n![](https://images.code.org/0bd6718dba465175ff618468503a3e04-image-1660769835958.57.10 PM.png)\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/93dab15cf6fd271f4907a7a60f08b8ef/csc_timecapsule_textstyle_2022.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Use the dropdown to choose from different colors and effects.\\n\\n![](https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png)\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b17ee248bc7a65d4263a344ff00a64a7/csc_timecapsule_textstyle_2023.mp3\"}]",
     "instructions_important": "false",
-    "long_instructions": "**Next, practice adding style to the text.** \r\n\r\nChoose a **text effect** and **text color** that matches the **mood and imagery** of this time capsule.\r\n",
+    "long_instructions": "**Next, practice adding style to the text.** \r\n\r\nChoose a `text effect`(#B3B2FB) and `text color`(#B3B2FB) that matches the **mood and imagery** of this time capsule poem.\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "validation_enabled": "false",
@@ -42,8 +38,12 @@
     "preload_asset_list": null,
     "default_poem": null
   },
+  "game_id": 69,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-02-06T19:26:02.458+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_textstyle_lesson1\\\"\"],\"cloned_from\":\"csc_timecapsule_textstyle_lesson1\"}]",
+  "created_at": "2023-02-06T19:26:02.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2023-02-06T19:26:02.458+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_textstyle_lesson1\\\"\"],\"cloned_from\":\"csc_timecapsule_textstyle_lesson1\"},{\"changed_at\":\"2023-02-17 22:22:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-22 19:57:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-22 20:21:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

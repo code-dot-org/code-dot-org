@@ -200,7 +200,7 @@ class LevelsController < ApplicationController
     should_use_solution_blocks = ['required_blocks', 'recommended_blocks'].include?(type)
     if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
-      toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
+      toolbox_blocks = "<xml>#{blocks.join}</xml>"
     end
 
     validation = @level.respond_to?(:validation) ? @level.validation : nil
@@ -288,7 +288,12 @@ class LevelsController < ApplicationController
     @level.log_changes(current_user)
 
     if @level.save
-      redirect = params["redirect"] || level_url(@level, show_callouts: 1)
+      reset = !!params[:reset]
+      redirect = if reset
+                   params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+                 else
+                   params["redirect"] || level_url(@level, show_callouts: 1)
+                 end
       render json: {redirect: redirect}
     else
       log_save_error(@level)

@@ -5201,6 +5201,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         hello-world-space-2022:
           title: 'Salom Dunyo: Kosmik'
         hello-world-soccer-2022:

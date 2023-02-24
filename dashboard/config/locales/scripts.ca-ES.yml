@@ -65,7 +65,7 @@ ca:
           student_description: Prova els bàsics de la informàtica amb els personatges
             d'Angry Birds, Plants vs. Zombies, i Scrat de Ice Age!
         frozen:
-          title: Codi amb Anna i Elsa
+          title: Programa amb l'Anna i l'Elsa
           description: Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren
             la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge
             sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir
@@ -165,6 +165,8 @@ ca:
           description_short: Explora el món de Minecraft a través del codi
           student_description: Fes servir blocs de codi per portar al Steve o l'Alex
             a una aventura a través d'aquest món de Minecraft
+        oceans:
+          title: IA per l'oceà
         CSDU3-Draft:
           description_short: Programació
         TEMP CSD Unit 3:
@@ -640,6 +642,8 @@ ca:
           lesson_groups:
             csf_digcit:
               display_name: Ciutadania digital
+            csf_impacts:
+              display_name: Els impactes de la informàtica
             csf_nested_loops:
               display_name: Bucles imbricats
             csf_functions:
@@ -738,6 +742,8 @@ ca:
               display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
+            csf_impacts:
+              display_name: Els impactes de la informàtica
             csf_events:
               display_name: Esdeveniments
           student_description: Aprèn els fonaments de la informàtica i de la seguretat
@@ -991,6 +997,8 @@ ca:
               display_name: Esdeveniments
             csf_digcit:
               display_name: Ciutadania digital
+            csf_impacts:
+              display_name: Els impactes de la informàtica
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -1003,6 +1011,8 @@ ca:
               display_name: Esdeveniments
             csf_digcit:
               display_name: Ciutadania digital
+            csf_impacts:
+              display_name: Els impactes de la informàtica
         csp7-pilot:
           lesson_groups:
             required:
@@ -1053,6 +1063,8 @@ ca:
               display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
+            csf_impacts:
+              display_name: Els impactes de la informàtica
             csf_events:
               display_name: Esdeveniments
           student_description: Aprèn els fonaments de la informàtica i de la seguretat
@@ -1109,6 +1121,8 @@ ca:
               display_name: Bucles imbricats
             csf_functions:
               display_name: Funcions
+            csf_impacts:
+              display_name: Els impactes de la informàtica
             end_of_course_project:
               display_name: Projecte de final de curs
         coursef-2020:
@@ -1238,6 +1252,8 @@ ca:
               display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
+            csf_impacts:
+              display_name: Els impactes de la informàtica
             csf_events:
               display_name: Esdeveniments
             lessonGroup-6:
@@ -1287,7 +1303,10 @@ ca:
               display_name: Projecte de final de curs
             lessonGroup-6:
               display_name: Ciutadania digital
+          student_description: Aquí aprendràs sobre bucles, condicionals i esdeveniments.
+            I, a més de programació, aprendràs què és la ciutadania digital.
         coursee-2021:
+          title: Curs E (2021)
           description_audience: De 8 a 12 anys
           lesson_groups:
             ramp_up:
@@ -1298,8 +1317,16 @@ ca:
               display_name: Condicionals
             csf_functions:
               display_name: Funcions
+            csf_impacts:
+              display_name: Els impactes de la informàtica
             end_of_course_project:
               display_name: Projecte de final de curs
+            lessonGroup-7:
+              display_name: Els impactes de la informàtica
+          student_description: Comença a programar amb algorismes, esdeveniments,
+            bucles, condicionals i funcions! Quan arribis al final del curs, podràs
+            dissenyar i crear un joc o un dibuix per compartir-lo amb els amics i
+            la família.
         coursef-2021:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica
             i creeu el vostre propi art, històries i jocs.
@@ -1311,6 +1338,8 @@ ca:
               display_name: Bucles "for"
             csf_for_loops:
               display_name: Bucles "for"
+            csf_sprites:
+              display_name: Els impactes de la informàtica
             end_of_course_project:
               display_name: Projecte de final de curs
             lessonGroup-8:
@@ -1509,6 +1538,8 @@ ca:
               display_name: Seqüenciació
             csf_loops:
               display_name: Bucles
+            csf_impacts:
+              display_name: Els impactes de la informàtica
             csf_events:
               display_name: Esdeveniments
             lessonGroup-6:
@@ -1550,6 +1581,8 @@ ca:
               display_name: Condicionals
             end_of_course_project:
               display_name: Projecte de final de curs
+          student_description: Aquí aprendràs sobre bucles, condicionals i esdeveniments.
+            I, a més de programació, aprendràs què és la ciutadania digital.
           description_audience: De 7 a 11 anys
         coursee-2022:
           lesson_groups:
@@ -1561,8 +1594,14 @@ ca:
               display_name: Funcions
             csf_nested_loops:
               display_name: Condicionals
+            lessonGroup-7:
+              display_name: Els impactes de la informàtica
             end_of_course_project:
               display_name: Projecte de final de curs
+          student_description: Comença a programar amb algorismes, esdeveniments,
+            bucles, condicionals i funcions! Quan arribis al final del curs, podràs
+            dissenyar i crear un joc o un dibuix per compartir-lo amb els amics i
+            la família.
           description_audience: De 8 a 12 anys
         coursef-2022:
           lesson_groups:

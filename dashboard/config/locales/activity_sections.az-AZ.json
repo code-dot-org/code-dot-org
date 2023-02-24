@@ -81,6 +81,7 @@
           ]
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
+          "name": "Minecraft: Dizayner",
           "description": "Bu [Minecraft: Dizayner](http://studio.code.org/s/minecraft/lessons/1/levels/1) fəaliyyətini tamamlamaq üçün tələbələrinizə çağırış edin.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə bölmənizi və hər qrupdan [qoşa proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Minecraftla maraqlanmırlarsa, onlar [Anna və Elza ilə kod](https://studio.code.org/s/frozen/stage/1/puzzle/1) və ya [Ulduz Döyüşləri](https://code.org/starwars) dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya yetkin öyrənənlər üçün [Minecraft: Dizayner](http://studio.code.org/s/minecraft/lessons/1/levels/1) dərsliyi ya müstəqil problem və ya cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
@@ -968,6 +969,7 @@
           "progression_name": "Tətbiq Laboratoriyasına Giriş - Video"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
+          "name": "Proqram laboratoriyasına giriş",
           "description": "**Ümumi Dəstək:** Müəllim kimi sizin rolunuz ilk növbədə tələbələrə dərslikdən keçərkən onlara dəstək olmaqdır. Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Düzgünlüyün yoxlanılması:** Bu dərslik tələbələrə səviyyəni düzgün başa vurub-yatırmadıqları barədə məlumat verməyəcək. Tələbələri düzgün yolda olub-olmadıqlarını bilmək üçün hər səviyyədə təqdim olunan hədəf şəkilləri və istiqamətlərdən istifadə etməyə təşviq edin. Tələbələr xüsusilə çətin səviyyəni keçmək istəyirlərsə, sadəcə olaraq \"Bitir\" düyməsini sıxıb davam edə bilərlər.\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Bu təlimata videolar daxil olduğu və tələbələr qulaqlıq taxdıqları üçün \"köpükə girmək\" asanlaşa bilər. Tələbələrin köməyə ehtiyacı varsa, onları aktiv şəkildə cütləşdirməklə bu maneələri aşmağa kömək edin.\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Bir tələbə üçün səviyyəni tamamlamazdan əvvəl onların hədəf şəklinə diqqətlə baxdıqlarından və oradakı bütün mətni oxuduqlarından əmin olun.\n-   \\*\\* ilişib? Bura klikləyin:\\*\\* Hər bir səviyyəyə səviyyəni tam olaraq necə başa çatdırmağı göstərən GIF daxildir. Tələbələr kömək istəsələr, bu GIF-lərdən istifadə edə bilərlər və etməlidirlər. Onlardan yalnız bir ipucu kimi istifadə etmək istəyirlərsə, birinci hissəni gördükdən sonra onlara GIF-i bağlamağınız kifayətdir.\n-   **Hərəkət edin və Geri qayıdın:** Bəzən tələbələr çətin səviyyəyə qayıtmaqdan daha çox faydalanacaqlar. \"Dizayn rejimi\" ardıcıllığı istisna olmaqla, bütün səviyyələr bir-birindən müstəqildir, baxmayaraq ki, onlar müəyyən dərəcədə əvvəllər təqdim edilmiş anlayışlara əsaslanırlar."
         },
         "11f7be58-02e1-4667-84e4-6310924c189d": {
@@ -1923,6 +1925,9 @@
         },
         "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a": {
           "progression_name": "Çətin tapşırıq"
+        },
+        "c892041f-8717-4cbf-b00b-9d0b5faaf3f5": {
+          "progression_name": "Video: Təbriklər"
         },
         "268e56b4-6f3e-4a44-8383-2e538ae1ab72": {
           "progression_name": "Azad Oyna"
@@ -4441,6 +4446,7 @@
           "description": "-   Kompüter laboratoriyasına hazırlıq ardıcıllığını çəkə bilərsinizmi?\n-   \"Bəli\" və \"Xeyr\" kompüter laboratoriyasını çəkin.\n-   Jurnal səhifənizin küncündə bugünkü dərsə münasibətinizi göstərən bir üz çəkin."
         },
         "312dff10-c9dd-416d-8ef0-210bcb685fa8": {
+          "name": "Sərbəst Fond",
           "tips": [
             "Sinifiniz artıq əsas istiqamətləri öyrənibsə, \"Yuxarı\" və \"Aşağı\" sözlərini \"Şimal\" və \"Cənub\"a dəyişmək problem yaratmamalıdır. Əgər onlar yoxdursa, biz tələbələri gəmiyə almaq üçün istifadə edə biləcəyiniz Code.org Compass Rose ilə lazımlı iş vərəqini təqdim etmişik. Bu çevrilmə uşaq bağçası və birinci sinfə yönəlmiş demək olar ki, bütün onlayn tapmacalar üçün faydalı olacaq.\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\nTələbələrə bildirin ki, onlar həmin hərfləri onlayn proqramlarında istiqamət oxlarının yanında görəcəklər"
           ]
@@ -4520,6 +4526,7 @@
           "description": "Şagirdlərin öyrənməsini təkmilləşdirmək üçün bu hərəkətlərdən istifadə edin. Onlar dərsdənkənar fəaliyyət və ya digər zənginləşdirmə kimi istifadə edilə bilər.\n\n-   Xalçaya lentlə real ölçülü şəbəkə çəkin və şagirdinizdən məktəbə doldurulmuş heyvanlar gətirməsini xahiş edin. Tələbələr artıq proqramlarda göstərildiyi kimi öz real oyuncaqlarını hərəkət etdirmək üçün dostlarını proqramlaşdıra bilərlər.\n-   Tələbələri öz xəritələrini yaratmağa dəvət edin ki, digər tələbələr onları döngələrdən istifadə edərək həll edə bilsinlər.\n-   Çoxlu təkrarlanan əmrlər dəstindən istifadə edən lövhədə proqram çəkin və təkrarlanan dövrlər üçün simvolları dəyişmək üçün tələbələrdən növbə ilə irəli gəlsinlər."
         },
         "17baac3e-ab60-45f1-9dea-6fb6e3c0431f": {
+          "name": "Sərbəst Fond",
           "description": "Bu dərs tələbələrin əvvəlki oflayn fəaliyyətdə, “Xoşbəxt Döngələr”də öyrəndikləri “təkrarlanan” döngələr konsepsiyasına əsaslanır. Şagirdlərin tapşırığı dəfələrlə təkrarlamaq üçün Blockly bloklarından necə istifadə etməyi başa düşmələri üçün bu ideyanı real dünyadan rəqəmsal dünyaya köçürmək vacibdir.",
           "tips": [
             "Sinifiniz artıq əsas istiqamətləri öyrənibsə, \"Yuxarı\" və \"Aşağı\" sözlərini \"Şimal\" və \"Cənub\"a dəyişmək problem yaratmamalıdır. Əgər onlar yoxdursa, biz tələbələri gəmiyə almaq üçün istifadə edə biləcəyiniz Code.org Compass Rose ilə lazımlı iş vərəqini təqdim etmişik. Bu çevrilmə uşaq bağçası və birinci sinfə yönəlmiş demək olar ki, bütün onlayn tapmacalar üçün faydalı olacaq.\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\nTələbələrə bildirin ki, onlar həmin hərfləri onlayn proqramlarında istiqamət oxlarının yanında görəcəklər"
@@ -5623,6 +5630,9 @@
           "tips": [
             null
           ]
+        },
+        "f2080a46-283c-4dce-924f-cf21e474f07e": {
+          "name": "Kurs sorğusunun sonu"
         },
         "03be329c-2229-48ad-8fac-33cc0bb896bb": {
           "tips": [
@@ -7102,6 +7112,9 @@
         "c87e787e-1579-4250-80f8-6e8e434a3a2e": {
           "progression_name": "Əngəllər"
         },
+        "75417c05-297f-4479-80ad-512b5ad09467": {
+          "name": "Paylaş"
+        },
         "e6250418-b491-436b-993c-02db6b0115bc": {
           "tips": [
             null
@@ -7143,6 +7156,9 @@
         },
         "f5d590b3-559c-47e9-9222-72691313c104": {
           "name": "Bölüş"
+        },
+        "fc3f8fce-d1cd-4f76-a0ba-ff6014b6b78e": {
+          "name": "Kurs sorğusunun sonu"
         },
         "1aa3af1b-96de-45d7-9726-1af4861f2d87": {
           "tips": [
@@ -7323,6 +7339,9 @@
             null
           ],
           "progression_name": "Səhifənizi kodlayın"
+        },
+        "473ecda6-e252-46f2-a88e-ca95cc87be54": {
+          "name": "Dost Rəyi"
         },
         "cb9326d3-237f-4e7e-9dcc-659a0699d870": {
           "tips": [
@@ -7829,6 +7848,9 @@
           "tips": [
             null
           ]
+        },
+        "6dcffd20-f9fd-45a2-b864-237a4b513b91": {
+          "name": "Kurs sorğusunun sonu"
         },
         "801caf59-c280-4c39-bc79-d24845df960b": {
           "tips": [
@@ -8388,10 +8410,16 @@
             null
           ]
         },
+        "efa0a609-ffec-4ca4-81b8-c245f0383e9c": {
+          "name": "Kurs sorğusunun sonu"
+        },
         "365a0eca-9dfd-4e14-81ef-e8af8530b6b2": {
           "tips": [
             null
           ]
+        },
+        "758cad5b-546e-4cb1-bdad-b0427a309361": {
+          "name": "Dərsə hazırlıq"
         },
         "debe9954-34ec-44d2-96c4-69f46dc1bca8": {
           "name": "ilhamlanmaq"
@@ -8727,11 +8755,13 @@
           "name": "Yekun"
         },
         "e2e83de3-7f19-4af1-816a-e8e685a1f6f7": {
+          "name": "Cihazınızı tamamlayın",
           "tips": [
             null
           ]
         },
         "7757e358-925f-460e-8204-919de76b3d9f": {
+          "name": "Kodlaşdırmağa başlayın",
           "tips": [
             null
           ]
@@ -8739,11 +8769,20 @@
         "2e59bfde-65a5-450d-9701-426f7353a617": {
           "name": "Yekun"
         },
+        "9cb6319c-b099-455a-9d78-d51e44477ec1": {
+          "name": "Kodlaşdırma və Test etmə"
+        },
         "4c4844c5-1cfc-4e21-b5fe-688b84f55ab3": {
           "name": "Yekun",
           "tips": [
             null
           ]
+        },
+        "18c69bef-2643-411a-b6b1-28e47b62f5da": {
+          "name": "Cihazı nəzərdən keçirmə"
+        },
+        "c711b9a3-60a5-4808-8747-76223c45783d": {
+          "name": "Nümayişlər"
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Yekun",
@@ -9391,6 +9430,9 @@
             null
           ]
         },
+        "2ec19797-3426-461d-aac6-3e9af661f97b": {
+          "name": "Süni intellektdə etika"
+        },
         "57237d92-5953-446d-8fec-776fd8590795": {
           "tips": [
             null
@@ -9408,6 +9450,9 @@
         },
         "543c1356-b50b-4776-9462-4fabd0ab7f28": {
           "progression_name": "Tətbiq Laboratoriyasında Tətbiq yaradın"
+        },
+        "ff053302-162f-4845-96d0-e9004d617308": {
+          "name": "(Könüllü) Süni intellekt nə üçün vacibdir?"
         },
         "b436503e-9da5-42d9-b82b-ffd4344044ec": {
           "name": "Əksetmə",
@@ -14680,6 +14725,7 @@
           "description": "-   Kompüter laboratoriyasına hazırlıq ardıcıllığını çəkə bilərsinizmi?\n-   \"Bəli\" və \"Xeyr\" kompüter laboratoriyasını çəkin.\n-   Jurnal səhifənizin küncündə bugünkü dərsə münasibətinizi göstərən bir üz çəkin."
         },
         "7119f518-386e-44e7-893d-eff0fbc5a87d": {
+          "name": "Sərbəst Fond",
           "tips": [
             "Sinifiniz artıq əsas istiqamətləri öyrənibsə, \"Yuxarı\" və \"Aşağı\" sözlərini \"Şimal\" və \"Cənub\"a dəyişmək problem yaratmamalıdır. Əgər onlar yoxdursa, biz tələbələri gəmiyə almaq üçün istifadə edə biləcəyiniz Code.org Compass Rose ilə lazımlı iş vərəqini təqdim etmişik. Bu çevrilmə uşaq bağçası və birinci sinfə yönəlmiş demək olar ki, bütün onlayn tapmacalar üçün faydalı olacaq.\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\nTələbələrə bildirin ki, onlar həmin hərfləri onlayn proqramlarında istiqamət oxlarının yanında görəcəklər"
           ]
@@ -14759,6 +14805,7 @@
           "description": "Şagirdlərin öyrənməsini təkmilləşdirmək üçün bu hərəkətlərdən istifadə edin. Onlar dərsdənkənar fəaliyyət və ya digər zənginləşdirmə kimi istifadə edilə bilər.\n\n-   Xalçaya lentlə real ölçülü şəbəkə çəkin və şagirdinizdən məktəbə doldurulmuş heyvanlar gətirməsini xahiş edin. Tələbələr artıq proqramlarda göstərildiyi kimi öz real oyuncaqlarını hərəkət etdirmək üçün dostlarını proqramlaşdıra bilərlər.\n-   Tələbələri öz xəritələrini yaratmağa dəvət edin ki, digər tələbələr onları döngələrdən istifadə edərək həll edə bilsinlər.\n-   Çoxlu təkrarlanan əmrlər dəstindən istifadə edən lövhədə proqram çəkin və təkrarlanan dövrlər üçün simvolları dəyişmək üçün tələbələrdən növbə ilə irəli gəlsinlər."
         },
         "cb522975-96ad-44b4-942c-601fc373771c": {
+          "name": "Sərbəst Fond",
           "description": "Bu dərs tələbələrin əvvəlki oflayn fəaliyyətdə, “Xoşbəxt Döngələr”də öyrəndikləri “təkrarlanan” döngələr konsepsiyasına əsaslanır. Şagirdlərin tapşırığı dəfələrlə təkrarlamaq üçün Blockly bloklarından necə istifadə etməyi başa düşmələri üçün bu ideyanı real dünyadan rəqəmsal dünyaya köçürmək vacibdir.",
           "tips": [
             "Sinifiniz artıq əsas istiqamətləri öyrənibsə, \"Yuxarı\" və \"Aşağı\" sözlərini \"Şimal\" və \"Cənub\"a dəyişmək problem yaratmamalıdır. Əgər onlar yoxdursa, biz tələbələri gəmiyə almaq üçün istifadə edə biləcəyiniz Code.org Compass Rose ilə lazımlı iş vərəqini təqdim etmişik. Bu çevrilmə uşaq bağçası və birinci sinfə yönəlmiş demək olar ki, bütün onlayn tapmacalar üçün faydalı olacaq.\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\nTələbələrə bildirin ki, onlar həmin hərfləri onlayn proqramlarında istiqamət oxlarının yanında görəcəklər"
@@ -18498,6 +18545,9 @@
         "cbd1e24c-3232-42ff-bd52-2725517f8697": {
           "progression_name": "Əksetmə"
         },
+        "c2f5a5f0-aacc-4987-8912-4cd1f2fa34a6": {
+          "name": "Kurs sorğusunun sonu"
+        },
         "b5282123-46f9-411e-ba2c-d6f5ab3b4ea7": {
           "tips": [
             null
@@ -18910,6 +18960,9 @@
           "tips": [
             null
           ]
+        },
+        "922f7ee7-26d6-4588-a84e-870d628b3ed5": {
+          "name": "Kurs sorğusunun sonu"
         },
         "a237ce6e-b99e-4117-afee-b384cfd9fc4f": {
           "tips": [
@@ -19364,6 +19417,9 @@
         },
         "22ca7a0f-899a-4cd3-8fbd-14afbf396317": {
           "progression_name": "Əksetmə"
+        },
+        "ac2ae502-b0a1-4567-b8aa-c1704881a91c": {
+          "name": "Kurs sorğusunun sonu"
         },
         "ec94d489-2b99-408d-bcce-782db2cdba44": {
           "tips": [
@@ -20224,6 +20280,9 @@
         "3732107f-02cf-4117-941b-725824574e50": {
           "progression_name": "Əngəllər"
         },
+        "3374a11f-81e5-4cdb-bbcb-f58cb3f30c33": {
+          "name": "Paylaş"
+        },
         "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
           "tips": [
             null
@@ -20250,6 +20309,9 @@
         },
         "2d58346e-e123-4477-8995-fefc448b3fe3": {
           "progression_name": "Əksetmə"
+        },
+        "8d6f1928-a54c-4009-838f-aba09ad0d38c": {
+          "name": "Kurs sorğusunun sonu"
         },
         "b44faa8f-43ae-4899-b299-888d85f57d48": {
           "tips": [

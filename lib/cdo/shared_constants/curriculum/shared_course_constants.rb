@@ -77,15 +77,6 @@ module Curriculum
       other
     ).freeze
 
-    # The grade bands used to represent course offering audience
-    COURSE_OFFERING_GRADE_BANDS = OpenStruct.new(
-      {
-        elementary: 'Elementary',
-        middle: 'Middle',
-        high: 'High'
-      }
-    ).freeze
-
     # The curriculum types used in curriculum quick assign
     COURSE_OFFERING_CURRICULUM_TYPES = OpenStruct.new(
       {
