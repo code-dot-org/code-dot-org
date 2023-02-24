@@ -19,4 +19,12 @@ export default class ExternalLed {
   toggle() {
     return this.isOn ? this.off() : this.on();
   }
+
+  blink(delay) {
+    setInterval(this.toggle_.bind(this), delay);
+  }
+
+  toggle_() {
+    return this.isOn ? this.off() : this.on();
+  }
 }
