@@ -24,21 +24,21 @@ theme: responsive
           Browser
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
@@ -78,6 +78,7 @@ Para sa pinakamagandang karanasan sa lahat ng nilalaman ng Code.org, inirerekume
 | **Upang gamitin ang Internet Simulator**                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Upang gamitin ang Web Lab**                                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Para gamitin ang Google Classroom Share na Button**                                       | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                                 | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Mga Detalye ng Suporta sa Mobile at Tablet
 
@@ -100,7 +101,7 @@ Gumagamit kami ng [YouTube](https://www.youtube.com) upang mag-embed ng mga vide
 
 Bago mo simulan ang mga online na kurso ng Code.org, subukan ang pag-playback ng video sa ibaba upang matiyak na handa ka nang magsimula.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Ito ang player na ginagamit sa buong kurikulum. Susubukan nitong ipakita ang video sa pamamagitan ng YouTube at, kung naka-block ang YouTube, ipakita sa halip ang Code.org na naka-host na video gamit ang "fallback" player namin.
 

@@ -28,9 +28,12 @@ def sync_in
   localize_docs
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  localize_external_sources
   redact_level_content
   redact_block_content
+  redact_docs
   redact_script_and_course_content
+  redact_labs_content
   localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
@@ -79,33 +82,144 @@ def localize_standards
 
   # Then, for each framework, generate a file for it.
   frameworks.keys.each do |framework|
-    File.open(File.join(standards_content_path, "#{framework}.json"), "w") do |file|
-      file.write(JSON.pretty_generate(frameworks[framework]))
-    end
+    File.write(File.join(standards_content_path, "#{framework}.json"), JSON.pretty_generate(frameworks[framework]))
   end
 end
 
-# This function localizes all content in studio.code.org/docs
+# This function localizes content in studio.code.org/docs
 def localize_docs
-  puts "Preparing docs content"
-  docs_content_file = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
-  programming_env_docs = {}
-  ProgrammingEnvironment.all.each do |env|
-    name = env.name
-    programming_env_docs[name] = {
+  puts "Preparing /docs content"
+
+  # TODO: Adding spritelab and Javalab to translation pipeline
+  # Currently supporting translations for applab, gamelab and weblab. NOT translating javalab and spritelab.
+  # Javalab documentations exists in a different table because it has a different structure, more align with java.
+  # Spritelab uses translatable block names, unlike JavaScript blocks.
+  localized_environments = %w(applab gamelab weblab)
+
+  ### Localize Programming Environments
+  # For each programming environment, name is used as key, title is used as name
+  ProgrammingEnvironment.all.sort.each do |env|
+    next unless localized_environments.include?(env.name)
+
+    # In the sync-in, each environment is store in an individual file.
+    # Files are merged during the sync-out in programming_environments.{locale}.json
+    docs_content_file = File.join(I18N_SOURCE_DIR, "docs", env.name + ".json")
+
+    programming_env_docs = {}
+    programming_env_docs[env.name] = {
       'name' => env.properties["title"],
       'description' => env.properties["description"],
       'categories' => {},
     }
-    env.categories_for_navigation.each do |category|
-      programming_env_docs[name]["categories"].store(
-        category[:key], {'name' => category[:name]}
+    ### Localize Categories for Navigation
+    # Programming environment has a method defined in the programming_environment model that returns the
+    # categories for navigation. The method is used to obtain the current categories existing in the database.
+    categories_data = programming_env_docs[env.name]["categories"]
+    env.categories_for_navigation.each do |category_for_navigation|
+      category_key = category_for_navigation[:key]
+      categories_data.store(
+        category_key, {
+          'name' => category_for_navigation[:name],
+          'expressions' => {}
+        }
       )
+
+      ### localize Programming Expressions
+      # expression_docs.properties["syntax"] is not translated as it is the JavaScript expression syntax
+      expressions_data = categories_data[category_key]["expressions"]
+      category_for_navigation[:docs].each do |expression|
+        expression_key = expression[:key]
+        expression_docs = ProgrammingExpression.find_by_id(expression[:id])
+        expressions_data.store(
+          expression_key, {
+            'content' => expression_docs.properties["content"],
+            'examples' => ({} unless expression_docs.properties["examples"].nil?),
+            'palette_params' => ({} unless expression_docs.properties["palette_params"].nil?),
+            'return_value' => expression_docs.properties["return_value"],
+            'short_description' => expression_docs.properties["short_description"],
+            'tips' => expression_docs.properties["tips"]
+          }.compact
+        )
+
+        ### Localize Examples
+        # Programming expressions may have 0 or more examples.
+        # Only example["name"] and example["description"] are translated. example["code"] is NOT translated.
+        example_docs = expressions_data[expression_key]["examples"]
+        expression_docs.properties["examples"]&.each do |example|
+          unless example["name"].nil_or_empty? && example["description"].nil_or_empty?
+            example_docs.store(
+              example["name"], {
+                'name' => (example["name"] if example["name"]),
+                'description' => (example["description"] if example["description"]),
+              }.compact
+            )
+          end
+        end
+
+        ### localize Parameters
+        # Programming expresions may have 0 or more parameters.
+        # Parameter name (param["name"]) is not translated as it needs to match the JavaScript expression syntax.
+        param_docs = expressions_data[expression_key]["palette_params"]
+        expression_docs.properties["palette_params"]&.each do |param|
+          param_docs.store(
+            param["name"], {
+              'type' => (param["type"] if param["type"]),
+              'description' => (param["description"] if param["description"])
+            }.compact
+          )
+        end
+      end
     end
+    # Generate a file containing the string of each Programming Environment.
+    FileUtils.mkdir_p(File.dirname(docs_content_file))
+    File.write(docs_content_file, JSON.pretty_generate(programming_env_docs.compact))
   end
-  FileUtils.mkdir_p(File.dirname(docs_content_file))
-  File.open(docs_content_file, "w") do |file|
-    file.write(JSON.pretty_generate(programming_env_docs))
+end
+
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def localize_external_sources
+  puts "Preparing external sources"
+  external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
+
+  # ml-playground (AI Lab) files
+
+  # Get the display names of the datasets stored in the dataset manifest file.
+  # manifest = File.join(external_sources_dir, 'ml-playground', 'datasets-manifest.json')
+  manifest = "apps/node_modules/@code-dot-org/ml-playground/public/datasets-manifest.json"
+  manifest_datasets = JSON.parse(File.read(manifest))['datasets']
+  dataset_names = manifest_datasets.map {|dataset| [dataset['id'], dataset['name']]}.to_h
+
+  # These are overwritten in this format so the properties that use
+  # arrays have unique identifiers for translation.
+  dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
+  Dir.glob(dataset_files).each do |dataset_file|
+    original_dataset = JSON.parse(File.read(dataset_file))
+
+    # Converts array to map and uses the field id as a unique identifier.
+    fields_as_hash = original_dataset["fields"].map do |field|
+      [
+        field["id"],
+        {
+          "id" => field["id"],
+          "description" => field["description"]
+        }
+      ]
+    end.to_h
+
+    final_dataset = {
+      "fields" => fields_as_hash,
+      "card" => {
+        "description" => original_dataset.dig("card", "description"),
+        "context" => {
+          "potentialUses" => original_dataset.dig("card", "context", "potentialUses"),
+          "potentialMisuses" => original_dataset.dig("card", "context", "potentialMisuses")
+        }
+      }
+    }
+    dataset_name = dataset_names[original_dataset['name']]
+    final_dataset["name"] = dataset_name if dataset_name
+
+    File.write(dataset_file, JSON.pretty_generate(final_dataset))
   end
 end
 
@@ -121,10 +235,11 @@ end
 def get_i18n_strings(level)
   i18n_strings = {}
 
-  if level.is_a?(DSLDefined)
+  case level
+  when DSLDefined
     text = level.dsl_text
     i18n_strings["dsls"] = level.class.dsl_class.parse(text, '')[1] if text
-  elsif level.is_a?(Level)
+  when Level
     %w(
       display_name
       bubble_choice_description
@@ -201,6 +316,17 @@ def get_i18n_strings(level)
       i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
     end
 
+    # start_html
+    if level.start_html
+      start_html = Nokogiri::XML(level.start_html, &:noblanks)
+      i18n_strings['start_html'] = Hash.new unless level.start_html.empty?
+
+      # match any element that contains text
+      start_html.xpath('//*[text()[normalize-space()]]').each do |element|
+        i18n_strings['start_html'][element.text] = element.text
+      end
+    end
+
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
     blocks = level_xml.xpath('//blocks').first
     if blocks
@@ -217,12 +343,14 @@ def get_i18n_strings(level)
       i18n_strings['function_definitions'] = Hash.new unless functions.empty?
       functions.each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
+        # The name is used to uniquely identify the function. Skip if there is no name.
+        next unless name
         description = function.at_xpath('./mutation/description')
         parameters = function.xpath('./mutation/arg').map do |parameter|
           [parameter["name"], parameter["name"]]
         end.to_h
         function_definition = Hash.new
-        function_definition["name"] = name.content if name
+        function_definition["name"] = name.content
         function_definition["description"] = description.content if description
         function_definition["parameters"] = parameters unless parameters.empty?
         i18n_strings['function_definitions'][name.content] = function_definition
@@ -342,9 +470,7 @@ def localize_project_content(variable_strings, parameter_strings)
     end
     project_strings.delete_if {|_, value| value.blank?}
 
-    File.open(project_content_file, "w") do |file|
-      file.write(JSON.pretty_generate(project_strings))
-    end
+    File.write(project_content_file, JSON.pretty_generate(project_strings))
   end
 end
 
@@ -458,9 +584,7 @@ def localize_block_content
     blocks[name]['options'] = args_with_options unless args_with_options.empty?
   end
 
-  File.open("dashboard/config/locales/blocks.en.yml", "w+") do |f|
-    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
-  end
+  File.write("dashboard/config/locales/blocks.en.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
 end
 
 def localize_animation_library
@@ -480,9 +604,7 @@ def localize_shared_functions
   shared_functions.sort.each do |func|
     hash[func] = func
   end
-  File.open("i18n/locales/source/dashboard/shared_functions.yml", "w+") do |f|
-    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
-  end
+  File.write("i18n/locales/source/dashboard/shared_functions.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
 end
 
 # Aggregate every CourseOffering record's `key` as the translation key, and
@@ -498,9 +620,7 @@ def localize_course_offerings
 end
 
 def write_dashboard_json(location, hash)
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), "w+") do |f|
-    f.write(JSON.pretty_generate(hash))
-  end
+  File.write(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), JSON.pretty_generate(hash))
 end
 
 def select_redactable(i18n_strings)
@@ -539,14 +659,21 @@ def redact_level_file(source_path)
 
   backup_path = source_path.sub("source", "original")
   FileUtils.mkdir_p File.dirname(backup_path)
-  File.open(backup_path, "w") do |file|
-    file.write(JSON.pretty_generate(redactable_data))
-  end
+  File.write(backup_path, JSON.pretty_generate(redactable_data))
 
   redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly'])
 
-  File.open(source_path, 'w') do |source_file|
-    source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
+  File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
+end
+
+def redact_docs
+  puts "Redacting /docs content"
+
+  Dir.glob(File.join(I18N_SOURCE_DIR, "docs", "*.json")).each do |source|
+    backup = source.sub("source", "original")
+    FileUtils.mkdir_p(File.dirname(backup))
+    FileUtils.cp(source, backup)
+    RedactRestoreUtils.redact(source, source, ['visualCodeBlock', 'link', 'resourceLink'])
   end
 end
 
@@ -555,6 +682,23 @@ def redact_level_content
 
   Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
     redact_level_file(source_path)
+  end
+end
+
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def redact_labs_content
+  puts "Redacting *labs content"
+
+  # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
+  # strings existing in crowdin already
+  redactable_labs = %w(applab gamelab weblab)
+
+  redactable_labs.each do |lab_name|
+    source_path = File.join(I18N_SOURCE_DIR, "blockly-mooc", lab_name + ".json")
+    backup_path = source_path.sub("source", "original")
+    FileUtils.mkdir_p(File.dirname(backup_path))
+    FileUtils.cp(source_path, backup_path)
+    RedactRestoreUtils.redact(source_path, source_path, ['link'])
   end
 end
 
@@ -617,12 +761,19 @@ def localize_markdown_content
     hourofcode/unplugged-conditionals-with-cards.md.partial
     international/about.md.partial
     poetry.md.partial
+    ../views/hoc2022_create_activities.md.partial
+    ../views/hoc2022_play_activities.md.partial
+    ../views/hoc2022_explore_activities.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)
     original_path_exists = File.exist?(original_path)
     puts "#{original_path} does not exist" unless original_path_exists
     next unless original_path_exists
+    # This reforms the `../` relative paths so they appear as though they are
+    # within the `public` path. This is a legacy solution to keep things clean
+    # when viewed by the translators in crowdin.
+    path = path[3...] if path.start_with? "../"
     # Remove the .partial if it exists
     source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
     FileUtils.mkdir_p(File.dirname(source_path))

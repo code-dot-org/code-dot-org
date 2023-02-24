@@ -68,21 +68,21 @@ class ConfirmImportButton extends React.Component {
         />
         <Dialog
           body={msg.confirmImportOverwrite()}
-          cancelText="Cancel"
-          confirmText="Overwrite"
+          cancelText={msg.cancel()}
+          confirmText={msg.yes()}
           confirmType="danger"
           isOpen={!!this.state.isConfirmDialogOpen}
           handleClose={this.handleClose}
           onCancel={this.handleClose}
           onConfirm={this.handleConfirm}
-          title="Overwrite existing data"
+          title={msg.confirmImportOverwriteTitle()}
         />
         <PendingButton
           isPending={this.state.isImporting}
           onClick={() => this.importFileInput.click()}
-          pendingText="Importing..."
+          pendingText={msg.importingWithEllipsis()}
           className={classNames(dataStyles.button, dataStyles.buttonWhite)}
-          text="Import csv"
+          text={msg.importCSV()}
         />
       </span>
     );

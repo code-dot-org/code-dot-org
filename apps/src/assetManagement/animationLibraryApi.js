@@ -10,9 +10,11 @@ export const UploadType = {
  * @param locale {String} language locale, defaults to 'en_us'
  */
 export function getManifest(appType, locale = 'en_us') {
-  return fetch(`/api/v1/animation-library/manifest/${appType}/${locale}`).then(
-    response => response.json()
-  );
+  return fetch(`/api/v1/animation-library/manifest/${appType}/${locale}`)
+    .then(response => response.json())
+    .catch(err => {
+      return Promise.reject(err);
+    });
 }
 
 /* Returns the metadata for a specific animation library file
@@ -24,28 +26,24 @@ export function getAnimationLibraryFile(filename) {
   );
 }
 
-// Returns the list of default sprites in SpriteLab in English
-export function getDefaultList() {
-  return fetch('/api/v1/animation-library/default-spritelab').then(response =>
-    response.json()
-  );
-}
-
-/* Returns the list of default sprites in SpriteLab in English
+/* Uploads given list as default sprites in SpriteLab in English
  * @param listData {Object} JSON object to upload
  */
-export function updateDefaultList(listData) {
-  return fetch(`/api/v1/animation-library/default-spritelab`, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify(listData)
-  })
+export function uploadDefaultListMetadata(metadata, environment) {
+  return fetch(
+    `/api/v1/animation-library/default-spritelab-metadata/${environment}`,
+    {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(metadata)
+    }
+  )
     .then(response => {
       if (!response.ok) {
         throw new Error(
-          `Default List Upload Error(${response.status}: ${
+          `Default Sprite Metadata Upload Error(${response.status}: ${
             response.statusText
           })`
         );
@@ -58,45 +56,34 @@ export function updateDefaultList(listData) {
 }
 
 // Returns the metadata of the list of default sprites in SpriteLab in English
-export function getDefaultListMetadata() {
-  return fetch('/api/v1/animation-library/default-spritelab-metadata')
+export function getDefaultListMetadata(environment = 'production') {
+  return fetch(
+    `/api/v1/animation-library/default-spritelab-metadata/${environment}`
+  )
     .then(response => response.json())
     .catch(err => {
       return Promise.reject(err);
     });
 }
 
-export function createDefaultSpriteMetadata(listData) {
-  let orderedKeys = [];
-  let propsByKey = {};
-  return getManifest('spritelab').then(manifest => {
-    const animations = JSON.parse(manifest)['metadata'];
-    for (let sprite of listData.default_sprites) {
-      const {
-        sourceUrl,
-        frameSize,
-        frameCount,
-        looping,
-        frameDelay,
-        version,
-        categories
-      } = animations[sprite.key];
-      const props = {
-        name: sprite.name,
-        sourceUrl: `https://studio.code.org${sourceUrl}`,
-        frameSize,
-        frameCount,
-        looping,
-        frameDelay,
-        version,
-        categories
-      };
-      const key = createUuid();
-      orderedKeys.push(key);
-      propsByKey[key] = props;
-    }
-    return {orderedKeys, propsByKey};
-  });
+export function moveDefaultSpriteMetadataToProduction() {
+  // Get metadata from levelbuilder
+  return getDefaultListMetadata()
+    .then(metadata => {
+      // Put metadata on production
+      return uploadDefaultListMetadata(metadata, 'production');
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
+}
+
+export function getSourceUrlForLevelAnimation(
+  versionId,
+  filename,
+  extension = ''
+) {
+  return `/api/v1/animation-library/level_animations/${versionId}/${filename}${extension}`;
 }
 
 export function generateAnimationMetadataForFile(fileObject) {
@@ -110,9 +97,11 @@ export function generateAnimationMetadataForFile(fileObject) {
         jsonLastModified: json.last_modified,
         pngLastModified: png.last_modified,
         version: png.version_id,
-        sourceUrl: `/api/v1/animation-library/level_animations/${
-          png.version_id
-        }/${metadata.name}.png`,
+        sourceUrl: getSourceUrlForLevelAnimation(
+          png.version_id,
+          metadata.name,
+          '.png'
+        ),
         sourceSize: png.source_size
       };
       return Promise.resolve(combinedMetadata);
@@ -206,28 +195,16 @@ export function generateLevelAnimationsManifest() {
   });
 }
 
-// Regenerates the metadata for the default list of sprites in SpriteLab
-export function regenerateDefaultSpriteMetadata(listData) {
-  return createDefaultSpriteMetadata(listData).then(defaultMetadata => {
-    return fetch(`/api/v1/animation-library/default-spritelab-metadata`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify(defaultMetadata)
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(
-            `Default Sprite Metadata Upload Error(${response.status}: ${
-              response.statusText
-            })`
-          );
-        }
-        return Promise.resolve();
-      })
-      .catch(err => Promise.reject(err));
-  });
+// Regenerates the metadata for the default list of sprites in SpriteLab and uploads it to S3
+export function regenerateDefaultSpriteMetadata(spritesProps) {
+  let orderedKeys = [];
+  let propsByKey = {};
+  for (let sprite of spritesProps) {
+    const key = createUuid();
+    orderedKeys.push(key);
+    propsByKey[key] = sprite;
+  }
+  return uploadDefaultListMetadata({orderedKeys, propsByKey}, 'levelbuilder');
 }
 
 /* Uploads the given sprite to the animation library at the specified path. On success

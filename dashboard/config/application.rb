@@ -11,7 +11,6 @@ require 'shared_resources'
 require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
 require_relative '../legacy/middleware/animation_library_api'
-require_relative '../legacy/script_constants'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -42,7 +41,7 @@ module Dashboard
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/allowlist'
-      require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+      require 'cdo/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Allowlist::Downstream,
         HttpCache.config(rack_env)[:dashboard]
 

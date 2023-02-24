@@ -74,13 +74,6 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     assert user.verified_teacher?
   end
 
-  test 'census_reviewer?' do
-    user = create :teacher
-    refute user.census_reviewer?
-    user.permission = UserPermission::CENSUS_REVIEWER
-    assert user.census_reviewer?
-  end
-
   test 'facilitator?' do
     user = create :teacher
     refute user.facilitator?
@@ -221,5 +214,12 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
   test 'grant admin permission does not call mailer' do
     TeacherMailer.expects(:verified_teacher_email).never
     create :admin
+  end
+
+  test 'cannot grant permission to student user' do
+    student = create :student
+    assert_raises do
+      student.permission = UserPermission::AUTHORIZED_TEACHER
+    end
   end
 end

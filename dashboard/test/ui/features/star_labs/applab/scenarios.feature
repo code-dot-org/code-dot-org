@@ -9,10 +9,6 @@ Feature: App Lab Scenarios
     # Project Template Workspace Icon should not appear since this is not a project template backed level
     Then element ".projectTemplateWorkspaceIcon" is not visible
 
-  # (brad) Disabled because it appears to be hanging on test after attempting to
-  # fix an IE-specific issue this morning.  I'm on the hook to re-enable by
-  # Thursday, Nov 16th 2017.
-  @no_ie
   Scenario: App Lab Http Image
     # Create an app with an http image.
     When I ensure droplet is in text mode

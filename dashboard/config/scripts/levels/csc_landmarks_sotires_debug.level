@@ -28,7 +28,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "false",
     "start_in_animation_tab": "false",
@@ -62,50 +62,54 @@
       "csc_landmarks_stories_predict_mc2"
     ],
     "long_instructions": "Debugging Challenge!",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "standalone_app_name": "spritelab"
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-10-13T21:07:16.000Z",
-  "user_id": 182,
   "published": true,
+  "created_at": "2022-10-13T21:07:16.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-13T21:07:16.023+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_stories_predict\\\"\"],\"cloned_from\":\"csc_landmarks_stories_predict\"},{\"changed_at\":\"2022-10-13 21:07:37 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:15:26 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:17:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:17:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:18:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-13T21:07:16.023+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_stories_predict\\\"\"],\"cloned_from\":\"csc_landmarks_stories_predict\"},{\"changed_at\":\"2022-10-13 21:07:37 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:15:26 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:17:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:17:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:18:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-19 18:35:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-09 19:13:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:07:10 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" uservisible="false">
+        <block type="when_run">
           <next>
-            <block type="gamelab_setBackgroundImageAs" uservisible="false">
+            <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"map_usa-01"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon" uservisible="false">
+                <block type="gamelab_makeNewSpriteAnon">
                   <field name="ANIMATION_NAME">"pink_shirt_wave3"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker" uservisible="false">
+                    <block type="gamelab_location_picker">
                       <field name="LOCATION">{"x":141,"y":336}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon" uservisible="false">
+                    <block type="gamelab_makeNewSpriteAnon">
                       <field name="ANIMATION_NAME">"kidportrait_12"</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker" uservisible="false">
+                        <block type="gamelab_location_picker">
                           <field name="LOCATION">{"x":46,"y":159}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_addBehaviorSimple" uservisible="false">
+                        <block type="gamelab_addBehaviorSimple">
                           <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation" uservisible="false">
+                            <block type="gamelab_allSpritesWithAnimation">
                               <field name="ANIMATION">"pink_shirt_wave3"</field>
                             </block>
                           </value>
                           <value name="BEHAVIOR">
-                            <block type="gamelab_behavior_get" uservisible="false">
+                            <block type="gamelab_behavior_get">
                               <mutation/>
                               <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
                             </block>
@@ -136,7 +140,7 @@
               <field name="IMG">"sandy_beach_waves"</field>
               <next>
                 <block type="gamelab_spriteSay">
-                  <field name="SPEECH">I live in California on the coast. The ocean is where my family gathers together.</field>
+                  <field name="SPEECH">I live on the beach in California. The ocean is where my family gathers together.</field>
                   <value name="SPRITE">
                     <block type="gamelab_allSpritesWithAnimation">
                       <field name="ANIMATION">"kidportrait_05"</field>

@@ -14,6 +14,7 @@ import style from './table-controls.module.scss';
 
 class TableControls extends React.Component {
   static propTypes = {
+    isRtl: PropTypes.bool.isRequired,
     clearTable: PropTypes.func.isRequired,
     exportCsv: PropTypes.func.isRequired,
     importCsv: PropTypes.func.isRequired,
@@ -33,11 +34,11 @@ class TableControls extends React.Component {
           {!this.props.readOnly && (
             <ConfirmDeleteButton
               body={msg.confirmClearTable()}
-              buttonText="Clear table"
+              buttonText={msg.clearTable()}
               containerStyle={{width: 103, marginLeft: 10}}
               buttonId="clearTableButton"
               onConfirmDelete={this.props.clearTable}
-              title="Clear table"
+              title={msg.clearTable()}
             />
           )}
 
@@ -54,10 +55,11 @@ class TableControls extends React.Component {
             className={classNames(
               style.exportButton,
               dataStyles.button,
-              dataStyles.buttonWhite
+              dataStyles.buttonWhite,
+              this.props.isRtl ? style.exportButtonRtl : {}
             )}
           >
-            Export to csv
+            {msg.exportToCSV()}
           </button>
         </div>
         {/* help make the "text-align: justify;" trick work */}

@@ -33,7 +33,7 @@ function Certificate(props) {
   const nameInputRef = useRef(null);
 
   const personalizeCertificate = session => {
-    if (isHocTutorial) {
+    if (isHocTutorial && session) {
       personalizeHocCertificate(session);
     } else {
       setStudentName(nameInputRef.current.value);
@@ -94,7 +94,6 @@ function Certificate(props) {
     isHocTutorial
   } = props;
 
-  const certificate = certificateId || 'blank';
   const personalizedCertificate = getCertificateImagePath();
   const imgSrc = personalized
     ? personalizedCertificate
@@ -149,7 +148,7 @@ function Certificate(props) {
             <button
               type="button"
               style={styles.submit}
-              onClick={personalizeCertificate.bind(this, certificate)}
+              onClick={personalizeCertificate.bind(this, certificateId)}
             >
               {i18n.submit()}
             </button>

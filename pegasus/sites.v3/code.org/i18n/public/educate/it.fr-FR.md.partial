@@ -24,21 +24,21 @@ theme: responsive
           Navigateur
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
@@ -78,6 +78,7 @@ Pour une meilleure utilisation de tout le contenu de Code.org, nous vous recomma
 | **Pour utiliser le simulateur de réseau**                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Pour utiliser Web Lab**                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Pour utiliser la fonction de partage de Google Classroom**                          | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                           | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Détails relatifs à la prise en charge des appareils mobiles et tablettes
 
@@ -100,7 +101,7 @@ Nous utilisons [YouTube](https://www.youtube.com) pour intégrer des vidéos dan
 
 Avant de commencer les cours en ligne de Code.org, essayez de lire la vidéo ci-dessous pour être sûr d'être prêt.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 C'est le lecteur qui sera utilisé tout au long de la formation. Il vous permettra de lire la vidéo sur YouTube et, si YouTube est bloqué, il vous affichera la vidéo hébergée par Code.org en utilisant notre lecteur "de secours" en lieu et place.
 

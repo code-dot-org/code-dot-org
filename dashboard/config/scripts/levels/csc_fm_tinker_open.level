@@ -5,10 +5,12 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
+      "FunctionBlocks",
       "GamelabJr"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zFunctionMachine"
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
@@ -42,7 +44,7 @@
   "created_at": "2022-10-12T22:58:49.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-12T22:58:49.181+00:00\",\"changed\":[\"cloned from \\\"csc_fm_tinker_123\\\"\"],\"cloned_from\":\"csc_fm_tinker_123\"},{\"changed_at\":\"2022-10-12 22:59:10 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-12T22:58:49.181+00:00\",\"changed\":[\"cloned from \\\"csc_fm_tinker_123\\\"\"],\"cloned_from\":\"csc_fm_tinker_123\"},{\"changed_at\":\"2022-10-12 22:59:10 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-27 20:26:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

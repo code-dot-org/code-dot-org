@@ -24,21 +24,21 @@ theme: responsive
           Tarayıcı
         </th>
         <tr>
-          <td>Chrome 87.x</td>
+          <td>Chrome 96.x</td>
         </tr>
         <tr>
           <td>Safari 13.x</td>
         </tr>
         <tr>
-          <td>Mobile Safari 11.x</td>
+          <td>Mobile Safari 13.x</td>
         </tr>
         <tr>
-          <td>Edge 87.x</td>
+          <td>Edge 94.x</td>
         </tr>
         <tr>
           <td>Firefox 91.x</td>
         </tr>
-      </table>    
+      </table>
   </td>
   <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
@@ -78,6 +78,7 @@ Tüm Code.org içeriklerinde en iyi deneyimi yaşamak için, aşağıdaki sitele
 | **İnternet simülatörü kullanmak için**                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Web Laboratuvarı kullanmak için**                                | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Classroom Paylaş Butonunu kullanmak için**                | `https://apis.google.com`                                                                                  |
+| **App Lab veri kümelerini kullanmak için**                         | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Mobil ve Tablet Destek detayları
 
@@ -90,7 +91,7 @@ K-5 kursları (Bilgisayar Bilimi Temelleri) ve Kodlama Saati etkinlikleri gibi d
 
 ### Cep Telefonları
 
-Kodlama Saati etkinliklerimiz ce Bilgisayar Bilimi Temelleri kurslarımız cep telefonlarından tamamlanabilir. Bu etkinlikler kullanılabilir olsa da, bir cep telefonu deneyimi için optimize edilmemiştir ve bazı sınırlamaları vardır (örneğin, dokunma hedefleri küçük olabilir, aksesuar öğeleri ekran dışında görüntülenebilir ve ekran klavyesini kullanarak metin girmek zor olabilir). Bilgisayar Bilimi Keşifleri, Bilgisayar Bilimi İlkeleri ve Uygulama Laboratuvarına Giriş kursları cep telefonlarında kullanılamaz.
+Kodlama Saati etkinliklerimiz ve Bilgisayar Bilimi Temelleri kurslarımız cep telefonlarından tamamlanabilir. Bu etkinlikler kullanılabilir olsa da, bir cep telefonu deneyimi için optimize edilmemiştir ve bazı sınırlamaları vardır (örneğin, dokunma hedefleri küçük olabilir, aksesuar öğeleri ekran dışında görüntülenebilir ve ekran klavyesini kullanarak metin girmek zor olabilir). Bilgisayar Bilimi Keşifleri, Bilgisayar Bilimi İlkeleri ve Uygulama Laboratuvarına Giriş kursları cep telefonlarında kullanılamaz.
 
 ## Videolar
 
@@ -100,7 +101,7 @@ Code.org ce [online eğitim platformlarına](https://studio.code.org) video yük
 
 Code.org'un online kurslarına başlamadan önce, hazır olduğunuzdan emin olmak için aşağıdaki videoyu oynatmayı test edin.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Bu, müfredat boyunca kullanılan video oynatıcıdır. Videoyu YouTube üzerinden göstermeye çalışacak ve YouTube engellendiyse bunun yerine Code.org'da barındırılan videoyu "yedek" oynatıcımızı kullanarak gösterecektir.
 

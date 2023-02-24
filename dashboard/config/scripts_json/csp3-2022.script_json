@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-06 22:58:19 UTC",
+    "serialized_at": "2022-12-06 15:28:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4432,7 +4432,7 @@
     {
       "key": "83010a59-0e11-47a9-a4ca-124c18fb013c",
       "properties": {
-        "description": "Use the speed slider, break points, and documentation as part of the debugging process"
+        "description": "Use the speed slider, error messages, and documentation as part of the debugging process"
       },
       "seeding_key": {
         "lesson.key": "Debugging",

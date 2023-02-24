@@ -1,0 +1,323 @@
+@import "color.scss";
+@import "font.scss";
+
+// Note: Keep these constants in sync with Button.jsx.
+$button-height-default: 34px;
+$button-height-large: 40px;
+$button-height-narrow: 40px;
+$button-height-small: 20px;
+
+/* stylelint-disable selector-pseudo-class-no-unknown */
+div,
+button,
+a,
+a:link,
+a:visited,
+// Global .header a styles override application.scss.
+:global(.header) a:link,
+:global(.header) a:visited {
+  /* stylelint-enable selector-pseudo-class-no-unknown */
+  &.main {
+    display: inline-block;
+    font-size: 12px;
+    font-family: "Gotham 4r", sans-serif;
+    border: 1px solid $border_gray;
+    border-radius: 3px;
+    text-decoration: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: $white;
+      cursor: pointer;
+    }
+
+    &:disabled,
+    &[disabled] {
+      // Override the cursor:pointer on disabled elements.
+      cursor: auto;
+    }
+  }
+
+  // Note no "&" on these two, since they'll be on child elements.
+  .icon {
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+  }
+
+  .textSpan {
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+  }
+
+  // Button colors.
+  &.orange {
+    color: $white;
+    background-color: $orange;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.63);
+
+    &:hover {
+      color: $orange;
+      border-color: $orange;
+    }
+
+    &:disabled,
+    &[disabled] {
+      // This color is in Mikes styleguide, but we dont use it anywhere else;
+      // and it might be changed by Mark soon - so just hard-coding the string.
+      background-color: #ffd27f;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &.gray {
+    color: $charcoal;
+    background-color: $lightest_gray;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.73);
+
+    &:disabled,
+    &[disabled] {
+      background-color: $lighter_gray;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &.blue {
+    color: $white;
+    background-color: $cyan;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $cyan;
+      border-color: $cyan;
+      background-color: $lightest_cyan;
+    }
+
+    &:disabled,
+    &[disabled] {
+      color: $lighter_cyan;
+      background-color: $lightest_cyan;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &.teal {
+    color: $white;
+    background-color: $teal;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $teal;
+      border-color: $teal;
+      background-color: $lightest_teal;
+    }
+
+    &:disabled,
+    &[disabled] {
+      color: $lighter_cyan;
+      background-color: $lightest_cyan;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &.white {
+    color: $charcoal;
+    background-color: $white;
+    box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.06);
+
+    &:hover {
+      box-shadow: none;
+      background-color: $lightest_gray;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: $lightest_gray;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &.red {
+    color: $white;
+    background-color: $red;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $red;
+      border-color: $red;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: $lightest_red;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &.purple {
+    color: $white;
+    background-color: $purple;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $purple;
+      border-color: $purple;
+      background-color: $lightest_purple;
+    }
+
+    &:disabled,
+    &[disabled] {
+      color: $lighter_purple;
+      background-color: $lightest_purple;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &.green {
+    color: $white;
+    background-color: $level_perfect;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $charcoal;
+      border-color: $lightest_gray;
+      background-color: $lightest_gray;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: $lightest_gray;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  // Phase 1 of Code.org Redesign - Colors
+  &.brandSecondaryDefault {
+    color: $neutral_white;
+    background-color: $brand_secondary_default;
+    border-color: $brand_secondary_default;
+    border-radius: 4px;
+    border-width: 2px;
+    line-height: 30px;
+
+    &:hover {
+      box-shadow: none;
+      color: $white;
+      border-color: $brand_secondary_dark;
+      background-color: $brand_secondary_dark;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: $brand_secondary_light;
+      border: none;
+    }
+  }
+
+  &.neutralDark {
+    color: $neutral_dark;
+    background-color: $neutral_white;
+    border: 2px solid $neutral_dark;
+    border-radius: 4px;
+    line-height: 30px;
+
+    &:hover {
+      background-color: $neutral_dark10;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_dark20;
+      border-color: $neutral_dark20;
+      background-color: $neutral_white;
+      cursor: not-allowed;
+    }
+  }
+
+  &.neutralDark,
+  &.brandSecondaryDefault {
+    &.default {
+      padding-left: 16px;
+      padding-right: 16px;
+      font-family: $gotham-bold;
+    }
+  }
+
+  // Button sizes.
+  &.default {
+    height: $button-height-default;
+    padding-left: 24px;
+    padding-right: 24px;
+    line-height: 34px;
+  }
+
+  &.large {
+    height: $button-height-large;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 40px;
+  }
+
+  &.narrow {
+    height: $button-height-narrow;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 40px;
+  }
+
+  &.small {
+    height: $button-height-small;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 20px;
+    position: relative;
+    top: 4px;
+
+    .icon {
+      font-size: 12px;
+      top: 0;
+    }
+  }
+
+  // Must be below sizes, since we want it to have precedence for line-height.
+  &.updated {
+    line-height: 12px;
+  }
+
+  &.phase1Updated {
+    line-height: 30px;
+  }
+
+  &.textButton {
+    color: $teal;
+    border-width: 0;
+    background-color: unset;
+    font-family: "Gotham 5r", sans-serif;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+}

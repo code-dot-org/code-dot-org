@@ -20,8 +20,8 @@ describe('block utils', () => {
       cleanDom = parseElement(`
         <xml>
           <block type="jump_to_xy">
-            <title name="XPOS">64</title>
-            <title name="YPOS">42</title>
+            <field name="XPOS">64</field>
+            <field name="YPOS">42</field>
           </block>
         </xml>`).ownerDocument;
     });
@@ -38,8 +38,8 @@ describe('block utils', () => {
       const blocksDom = parseElement(`
         <xml>
           <block type="jump_to_xy" uservisible="false">
-            <title name="XPOS">64</title>
-            <title name="YPOS">42</title>
+            <field name="XPOS">64</field>
+            <field name="YPOS">42</field>
           </block>
         </xml>`).ownerDocument;
 
@@ -728,11 +728,11 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getFieldValue: title =>
+          getFieldValue: field =>
             ({
               NAME1: 'a',
               NAME2: 'b'
-            }[title])
+            }[field])
         };
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('a = b = foo(a, b);\n');

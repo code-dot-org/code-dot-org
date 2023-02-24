@@ -32,7 +32,8 @@
   "parameters": [
     "separator"
   ],
+  "return_value": "The list (array) as a single string, connected by the given separator.",
   "short_description": "Returns the array as a string with elements joined by an optional separator",
-  "syntax": "The list (array) as a single string, connected by the given separator.",
+  "syntax": "[list].join(\"separator\")",
   "tips": "- If you use the newline character `\"\\n\"` as your separator you can create a list in which each element prints on a different line.\n"
 }

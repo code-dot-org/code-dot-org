@@ -3,7 +3,7 @@
   "content": "",
   "examples": "[]",
   "external_documentation": "",
-  "fields": "[{\"name\":\"xLocation\",\"type\":\"int\",\"description\":\"the x coordinate of the `Painter` object\"},{\"name\":\"yLocation\",\"type\":\"int\",\"description\":\"the y coordinate of the `Painter` object\"},{\"name\":\"direction\",\"type\":\"Direction\",\"description\":\"the direction the `Painter` object is facing (`\\\"North\\\"`, `\\\"South\\\"`, `\\\"East\\\"`, or `\\\"West\\\"`)\"},{\"name\":\"remainingPaint\",\"type\":\"int\",\"description\":\"the number of units of paint the `Painter` object has in their paint bucket\"}]",
+  "fields": "[{\"name\":\"xLocation\",\"type\":\"int\",\"description\":\"the x coordinate of the `Painter` object\"},{\"name\":\"yLocation\",\"type\":\"int\",\"description\":\"the y coordinate of the `Painter` object\"},{\"name\":\"direction\",\"type\":\"String\",\"description\":\"the direction the `Painter` object is facing (`\\\"North\\\"`, `\\\"South\\\"`, `\\\"East\\\"`, or `\\\"West\\\"`)\"},{\"name\":\"remainingPaint\",\"type\":\"int\",\"description\":\"the number of units of paint the `Painter` object has in their paint bucket\"}]",
   "key": "Painter",
   "name": "Painter",
   "syntax": "",

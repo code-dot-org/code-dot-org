@@ -8,11 +8,16 @@ import {
   CscInfoActionBlock
 } from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
-import CourseBlocksTools from './CourseBlocksTools';
-import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import CsaSkinnyBanner from '../CsaSkinnyBanner';
+import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 import i18n from '@cdo/locale';
+import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
+import {
+  TeacherGradeBandCards,
+  ToolsAIExtrasCard,
+  ToolsWidgetsCard,
+  ToolsCards
+} from '@cdo/apps/util/courseBlockCardsConstants';
 
 /**
  * This is the main content for the Courses page for a teacher using English,
@@ -34,7 +39,7 @@ class CoursesTeacherEnglish extends Component {
     return (
       <div>
         <div>
-          <CsaSkinnyBanner />
+          <ProfessionalLearningSkinnyBanner />
 
           <ContentContainer
             heading={i18n.courseExplorerHeading()}
@@ -45,13 +50,27 @@ class CoursesTeacherEnglish extends Component {
             <ProtectedStatefulDiv ref="courseExplorer" />
           </ContentContainer>
 
-          <CourseBlocksTeacherGradeBands />
+          <CourseBlocksWrapper
+            heading={i18n.courseBlocksGradeBandsContainerHeading()}
+            description={i18n.courseBlocksGradeBandsContainerDescription()}
+            cards={TeacherGradeBandCards}
+          />
 
           <CscInfoActionBlock />
 
           <CourseBlocksHoc />
 
-          <CourseBlocksTools isEnglish showAiCard={this.props.showAiCard} />
+          <div id="uitest-course-blocks-tools">
+            <CourseBlocksWrapper
+              heading={i18n.courseBlocksToolsTitleTeacher()}
+              description={i18n.standaloneToolsDescription()}
+              cards={
+                this.props.showAiCard
+                  ? ToolsCards.concat(ToolsAIExtrasCard)
+                  : ToolsCards.concat(ToolsWidgetsCard)
+              }
+            />
+          </div>
 
           <AdministratorResourcesActionBlock />
         </div>

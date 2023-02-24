@@ -580,10 +580,12 @@ describe('entry tests', () => {
     'courses/standards': './src/sites/studio/pages/courses/standards.js',
     'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
     'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
+    'incubator/index': './src/sites/studio/pages/incubator/index.js',
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
+    'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
@@ -594,6 +596,11 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':
       './src/sites/studio/pages/programming_expressions/show.js',
+    'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
+    'devise/registrations/_sign_up':
+      './src/sites/studio/pages/devise/registrations/_sign_up.js',
+    'devise/shared/_oauth_links':
+      './src/sites/studio/pages/devise/shared/_oauth_links.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'devise/registrations/edit':
@@ -612,6 +619,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_small_footer.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'layouts/_initial_section_creation_interstitial':
+      './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -663,7 +672,9 @@ describe('entry tests', () => {
       './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
     'teacher_feedbacks/index':
       './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js'
+    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
+    'weblab_host/network_check':
+      './src/sites/studio/pages/weblab_host/network_check.js'
   };
 
   var internalEntries = {
@@ -735,6 +746,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'programming_expressions/index':
       './src/sites/studio/pages/programming_expressions/index.js',
+    'sections/new': './src/sites/studio/pages/sections/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -746,6 +758,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
     'sprite_management/default_sprites_editor':
       './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
+    'sprite_management/release_default_sprites_to_production':
+      './src/sites/studio/pages/sprite_management/release_default_sprites_to_production.js',
     'sprite_management/select_start_animations':
       './src/sites/studio/pages/sprite_management/select_start_animations.js'
   };
@@ -775,6 +789,9 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/amazon_future_engineer.js',
     'code.org/views/amazon_future_engineer_eligibility':
       './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
+    'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
+    'code.org/views/analytics_event_log_helper':
+      './src/sites/code.org/pages/views/analytics_event_log_helper.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -791,30 +808,22 @@ describe('entry tests', () => {
   var professionalDevelopmentEntries = {
     'code.org/public/learn/local':
       './src/sites/code.org/pages/public/learn/local.js',
-    'code.org/views/professional_learning_apply_banner':
-      './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 
     'pd/workshop_dashboard/index':
       './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/workshop_survey/new':
-      './src/sites/studio/pages/pd/workshop_survey/new.js',
     'pd/pre_workshop_survey/new':
       './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
     'pd/teachercon_survey/new':
       './src/sites/studio/pages/pd/teachercon_survey/new.js',
     'pd/application_dashboard/index':
       './src/sites/studio/pages/pd/application_dashboard/index.js',
-    'pd/application/facilitator_application/new':
-      './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new':
       './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new':
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-    'pd/fit_weekend_registration/new':
-      './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
     'pd/workshop_daily_survey/new_general_foorm':
       './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':
@@ -874,9 +883,6 @@ describe('entry tests', () => {
     'applab-api': './src/applab/api-entry.js',
     'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
-    'census_reviewers/review_reported_inaccuracies':
-      './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
-
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
   };
@@ -921,11 +927,21 @@ describe('entry tests', () => {
       ],
       mode: minify ? 'production' : 'development',
       optimization: {
+        minimize: minify,
         minimizer: [
           new TerserPlugin({
+            parallel: 4,
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
-            exclude: [/\/blockly.js$/, /\/brambleHost.js$/]
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+            terserOptions: {
+              sourceMap: envConstants.DEBUG_MINIFIED,
+              // Handle Safari 10.x issues: [See FND-2108 / FND-2109]
+              // Can remove when we can safely drop support for older iPad/iOS.
+              mangle: {
+                safari10: true
+              }
+            }
           })
         ],
 

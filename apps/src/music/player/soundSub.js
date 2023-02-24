@@ -74,6 +74,22 @@ WebAudio.prototype.LoadSound = function(url, callback) {
   request.send();
 };
 
+WebAudio.prototype.LoadSoundFromBuffer = function(buffer, callback) {
+  try {
+    audioContext.decodeAudioData(
+      buffer,
+      function(buffer) {
+        callback(buffer);
+      },
+      function(e) {
+        console.log('error ', e);
+      }
+    );
+  } catch (e) {
+    console.log('failed to decode', e);
+  }
+};
+
 WebAudio.prototype.PlaySoundByBuffer = function(
   audioBuffer,
   id,

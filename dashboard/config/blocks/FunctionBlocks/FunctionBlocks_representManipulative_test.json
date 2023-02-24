@@ -1,0 +1,22 @@
+{
+  "category": "",
+  "config": {
+    "func": "representManipulative_test",
+    "inline": true,
+    "blockText": "[testing] represent {NUM} new {ANIMATION_NAME} sprites",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "NUM"
+      },
+      {
+        "name": "ANIMATION_NAME",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

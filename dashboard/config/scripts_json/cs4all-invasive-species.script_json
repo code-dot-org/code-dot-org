@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "cs4all-invasive-species",
-    "serialized_at": "2022-10-13 20:41:17 UTC",
+    "serialized_at": "2022-10-25 16:11:43 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -92,7 +92,7 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**IMPORTANT:** Click here to access **[Lesson 0](https://docs.google.com/document/d/1EROJbMkqi-cs8grmyre5cgv91jCcerF2oVNEXgSNL6I/edit?usp=sharing)** to learn about the module before starting Lesson 1.\n\nAfter reviewing Lesson 0, continue to **[Lesson 1]((https://docs.google.com/document/d/155tzR7eSCGxLB9lij88CGZjOSJLd03FJ/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true)).**  \n\n\n"
+        "overview": "**IMPORTANT:** Click here to access **[Lesson 0](https://docs.google.com/document/d/1EROJbMkqi-cs8grmyre5cgv91jCcerF2oVNEXgSNL6I/edit?usp=sharing)** to learn about the module before starting Lesson 1.\n\nAfter reviewing Lesson 0, continue to **[Lesson 1](https://docs.google.com/document/d/155tzR7eSCGxLB9lij88CGZjOSJLd03FJ/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true).**  \n\n\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -188,7 +188,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/16kKfuEg555xVIoF-sTS3luZpC6-M1MDK/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/u/1/d/1BPmFSMBVPR8fHdwVwCFyt2Ye9A7ei5Kv/edit) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -2952,13 +2952,27 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson 0",
+      "url": "https://docs.google.com/document/u/1/d/1EROJbMkqi-cs8grmyre5cgv91jCcerF2oVNEXgSNL6I/edit",
+      "key": "lesson_0",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "lesson_0"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_0",
+        "script.name": "cs4all-invasive-species"
+      }
+    }
   ],
   "scripts_student_resources": [
 

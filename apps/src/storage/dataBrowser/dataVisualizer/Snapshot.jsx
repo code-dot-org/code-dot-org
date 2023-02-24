@@ -25,6 +25,7 @@ const INITIAL_STATE = {
 class Snapshot extends React.Component {
   static propTypes = {
     chartType: PropTypes.oneOf(Object.values(ChartType)).isRequired,
+    chartTypeName: PropTypes.string.isRequired,
     chartTitle: PropTypes.string.isRequired,
     selectedOptions: PropTypes.string.isRequired,
     // Provided via Redux
@@ -136,7 +137,15 @@ class Snapshot extends React.Component {
         >
           <div ref="snapshot">
             <h1>{this.props.chartTitle}</h1>
-            <img style={{maxHeight: '50vh'}} src={this.state.imageSrc} />
+            <img
+              style={{maxHeight: '50vh'}}
+              src={this.state.imageSrc}
+              alt={msg.dataVisualizerAltText({
+                chartType: this.props.chartTypeName,
+                values: this.props.selectedOptions,
+                title: this.props.chartTitle
+              })}
+            />
             <p>
               {msg.dataVisualizerSnapshotDescription({
                 date: moment().format('YYYY/MM/DD'),

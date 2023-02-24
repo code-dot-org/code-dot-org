@@ -3,8 +3,10 @@ class LessonsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
+  before_action :disable_session_for_cached_pages, only: [:show]
 
   include LevelsHelper
+  include CachedUnitHelper
 
   # Unit levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
@@ -154,6 +156,13 @@ class LessonsController < ApplicationController
     end
   rescue => err
     render(json: {error: err.message}.to_json, status: :not_acceptable)
+  end
+
+  # Return true if request is one that can be publicly cached.
+  def cachable_request?(request)
+    script = Unit.get_from_cache(request.params[:script_id])
+    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
+      !ScriptConfig.uncached_script_level_path?(request.path)
   end
 
   private

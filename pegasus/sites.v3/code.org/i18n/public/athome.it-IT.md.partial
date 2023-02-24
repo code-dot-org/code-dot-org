@@ -39,8 +39,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Codifica un Dance Party da condividere con amici e familiari. Con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj e altri 34!</div>
-        <a class="linktag" id="danceparty" href="/dance" target=”_blank”><button>Prova attività</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Codifica un Dance Party da condividere con amici e familiari. Con Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musica da "Encanto" della Disney e molto altro!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Prova questa attività</button></a>
     </span>
   </div>
 </div>

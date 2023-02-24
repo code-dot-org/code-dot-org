@@ -1,7 +1,6 @@
 /** @file Playground Component setup tests */
-import five from '@code-dot-org/johnny-five-deprecated';
+import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
@@ -19,6 +18,12 @@ import {
   CP_COMMAND,
   TOUCH_PINS
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import {
+  newBoard,
+  setSensorAnalogValue,
+  stubComponentInitialization,
+  restoreComponentInitialization
+} from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
@@ -41,20 +46,14 @@ describe('Circuit Playground Components', () => {
     // Our sensors and thermometer block initialization until they receive data
     // over the wire.  That's not great for unit tests, so here we stub waiting
     // for data to resolve immediately.
-    sinon.stub(EventEmitter.prototype, 'once');
-    EventEmitter.prototype.once
-      .withArgs('data')
-      .callsFake(function(_, callback) {
-        // Pretend we got a real analog value back on the component's pin.
-        setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
-        callback();
-      });
-    EventEmitter.prototype.once.callThrough();
+    stubComponentInitialization(five.Sensor);
+    stubComponentInitialization(five.Thermometer);
   });
 
   afterEach(() => {
-    EventEmitter.prototype.once.restore();
     clock.restore();
+    restoreComponentInitialization(five.Sensor);
+    restoreComponentInitialization(five.Thermometer);
   });
 
   describe(`createCircuitPlaygroundComponents()`, () => {
@@ -923,51 +922,4 @@ describe('Circuit Playground Components', () => {
       });
     });
   });
-
-  /**
-   * Simulate a raw value coming back from the board on the given component's pin.
-   * @param {five.Sensor|five.Thermometer} component
-   * @param {number} rawValue - usually in range 0-1023.
-   * @throws if nothing is monitoring the given analog pin
-   */
-  function setSensorAnalogValue(component, rawValue) {
-    const {board, pin} = component;
-    const readCallback = board.io.analogRead.args.find(
-      callArgs => callArgs[0] === pin
-    )[1];
-    readCallback(rawValue);
-  }
 });
-
-/**
- * Generate a test board object.
- * From rwaldron/johnny-five's newBoard() test helper:
- * https://github.com/rwaldron/johnny-five/blob/dd47719/test/common/bootstrap.js#L83
- * @returns {*}
- */
-function newBoard() {
-  // We use real playground-io, but our test configuration swaps in mock-firmata
-  // for real firmata (see webpack.js) changing Playground's parent class.
-  const io = new Playground({});
-
-  io.SERIAL_PORT_IDs.DEFAULT = 0x08;
-
-  // mock-firmata doesn't implement these (yet) - and we want to monitor how
-  // they get called.
-  io.sysexCommand = sinon.spy();
-  io.sysexResponse = sinon.spy();
-
-  // Spy on this so we can retrieve and use the registered callbacks if needed
-  sinon.spy(io, 'analogRead');
-
-  const board = new five.Board({
-    io: io,
-    debug: false,
-    repl: false
-  });
-
-  io.emit('connect');
-  io.emit('ready');
-
-  return board;
-}

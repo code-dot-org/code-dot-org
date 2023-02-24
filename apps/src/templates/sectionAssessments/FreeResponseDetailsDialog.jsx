@@ -33,7 +33,6 @@ class FreeResponseDetailsDialog extends Component {
         </div>
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             text={i18n.done()}
             onClick={this.props.closeDialog}
             color={Button.ButtonColor.gray}

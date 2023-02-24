@@ -21,8 +21,8 @@ Lekce bez počítačů se hodí zejména k budování a udržování ducha spolu
 <div style="clear: both;"></div>
 
 ***
-## Unplugged lessons in CS Fundamentals 2022-23
-The following lessons can be found in <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
+## Offline lekce ze Základů počítačových věd 2022-23
+Následující lekce lze najít v <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">Základech počítačových věd 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -104,29 +104,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Při psaní programu nemáme pokaždé k dispozici všechny potřebné informace. Někdy chcete v jedné situaci udělat něco jiného než v jiné situaci, i když nevíte, jaká situace nastane, až se váš kód spustí. Právě k tomu jsou určené podmínky. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Při psaní programu nemáme pokaždé k dispozici všechny potřebné informace. Někdy chcete v jedné situaci udělat něco jiného než v jiné situaci, i když nevíte, jaká situace nastane, až se váš kód spustí. Právě k tomu jsou určené podmínky. Podmínky umožňují počítači udělat pokaždé, když je Váš kód spuštěn, rozhodnutí na základě nějaké informace, která je pravdivá.+</td><td>Podmínky</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
   </tr>
   <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Funkce (někdy také označované jako procedury) jsou malé programy, které můžete ve svém velkém programu používat stále znovu a znovu. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">Kurz E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 – Psaní písní</a><br><small>Jednou z nejnádhernějších konstrukcí v počítačové vědě je funkce. Funkce (někdy také označované jako procedury) jsou malé programy, které můžete ve svém velkém programu používat stále znovu a znovu. Tato lekce studentům pomůže intuitivně pochopit, proč může být sdružování úseků kódu do funkcí tak užitečné.</td><td>Funkce</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 – Navrhování pro přístup</a><br><small>V této lekci se studenti budou formou brainstormingu a navrhování přístupných řešení pro hypotetické aplikace učit o přístupu a o hodnotě empatie.</td><td>Dopady strojového zpracování informací</td><td><img src="/images/e18.png" width="90%"></td>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 – Digitální sdílení</a><br><i>*Vybavení: Chytrý telefon nebo tablet</i><br><small>Tato lekce, zapůjčená Základům počítačových věd týmem Autorských práv a kreativity odvedle, existuje proto, aby studentům pomohla pochopit problémy a přínosy respektování vlastnictví a autorských práv, zejména v digitálních prostředích. Studenti by měli být vybídnuti, aby respektovali autorská práva umělců, což by mělo být důležitou součástí jejich etiky jako digitálních občanů.</td><td>Digitální občanství</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+    <th rowspan="3" id="t06">Kurz F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 – Příběhy na prázdné místo</a><br><i>*Vybavení: 6 obálek (vhodné je také: papír nebo kartotékové karty přeložené napůl)</i><br><small>Studenti budou používat příběhy vyplňované do prázdného místa (podobně jako v Mad Libs®) jako kontext k pochopení toho, jak počítače přebírají vstupní informace od uživatele a ukládají je a potom později, když už je program spuštěn, je používají.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. Tyto nové konstrukce umožní studentům vytvořit kód, který je výkonnější a dynamický.</td><td>Cykly FOR</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. IV této lekci budou studenti dělat, že putují internetem, a přitom se naučí něco o spojeních a pojmech, jako jsou URL, DNS a IP adresy.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 – Internet</a><br><small>I když internet využívá každodenně mnoho lidí, není velmi mnoho těch, kteří vědí, jak funguje. IV této lekci budou studenti dělat, že putují internetem, a přitom se naučí něco o spojeních a pojmech, jako jsou URL, DNS a IP adresy.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 

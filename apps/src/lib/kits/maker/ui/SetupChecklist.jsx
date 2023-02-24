@@ -17,7 +17,7 @@ import {
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import experiments from '@cdo/apps/util/experiments';
-import {BOARD_TYPE, shouldUseWebSerial} from '../util/boardUtils';
+import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
@@ -50,8 +50,7 @@ export default class SetupChecklist extends Component {
 
   static propTypes = {
     webSerialPort: PropTypes.object,
-    stepDelay: PropTypes.number,
-    displaySupport: PropTypes.bool
+    stepDelay: PropTypes.number
   };
 
   fail(selector) {
@@ -140,6 +139,7 @@ export default class SetupChecklist extends Component {
         )
       )
       .then(() => setupChecker.celebrate())
+      .then(() => delayPromise(3000)) // allow 3 seconds for 'celebrate' on Micro:Bit before disconnecting
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
 
@@ -365,13 +365,6 @@ export default class SetupChecklist extends Component {
             </ValidationStep>
           )}
         </div>
-        {this.props.displaySupport && (
-          <div>
-            <h2>{i18n.support()}</h2>
-            <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
-            {this.contactSupport()}
-          </div>
-        )}
       </div>
     );
   }

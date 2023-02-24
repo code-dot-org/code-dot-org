@@ -433,7 +433,7 @@ module Pd
       end
     end
 
-    def sanitize_form_data_hash
+    def sanitized_form_data_hash
       @sanitized_form_data_hash ||=
         form_data_hash.transform_keys {|key| key.underscore.to_sym}
     end

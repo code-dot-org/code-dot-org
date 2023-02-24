@@ -72,6 +72,7 @@ ur-PK:
   california_heading: اپنے اسکول سے کمپیوٹر پڑھانے کے سلسلے میں بات کیجئے۔
   california_button: مزید سیکھے
   view_english_site: انگریزی ویب سائٹ دیکھئں
+  non_english_tutorials: 'ایک سے زیادہ زبانوں میں ترجمہ سبق:'
   write_your_first_program: Apna pehla Computer ka Program likhiye
   all_ages: Her umer k log
   beginner: ibtydai
@@ -272,6 +273,7 @@ ur-PK:
   homepage_slot_text_link_buy: شامل ہو جایئے
   homepage_slot_text_link_donate: عطیہ کریں
   homepage_slot_text_link_shop: ٹی شرٹس، ٹوپیاں اور بہت کچھ
+  homepage_slot_text_link_thebadguys: برے لوگوں کے ساتھ کوڈ کریں
   homepage_gallery_header: "%{project_count} ملین سے زیادہ Code.org پراجیکٹ بنائے
     جا چکے ہیں"
   homepage_header_donors: Code.org کے حمایتیوں کا شکریہ
@@ -759,6 +761,11 @@ ur-PK:
   hoc_overview_dance_2019_subtitle: اپنے دوستوں کے ساتھ اشتراک کرنے کیلئے ڈانس پارٹی
     کوڈ کریں۔ کیٹی پیری، شان مینڈس، پینک کی خاصیت بنانا ڈسکو میں، لِل ناس ایکس، جوناس
     برادرز، نکی میناج، اور 34 مزید!
+  hoc_overview_dance_2022_subtitle: اپنے دوستوں کے ساتھ شیئر کرنے کے لیے ایک ڈانس
+    پارٹی کو کوڈ کریں۔ جس میں Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez،
+    Disney کے "Encanto" کی موسیقی اور مزید شامل ہیں!
+  hoc_overview_hello_world_2022_alt_text: اینیمیٹ کیا ہوا خلاباز اور جانوروں کے کردار
+    زمین کی ایک تصویر کے ارد گرد تیر رہے ہیں
   hoc_overview_start_tutorial: شروع کریں
   hoc_overview_more_resources: اپنے آنلائن کلاس روم میں دلچسپی بڑھانے کے لئے مزید
     وسائل [مجازی یعنی آنلائن آور آف کوڈ](https://hourofcode.com/us/how-to/virtual)
@@ -771,6 +778,15 @@ ur-PK:
     کورسز</a> کے ساتھ مزید آگے بڑھیں
   hoc2018_mc_start: شروع کریں
   hoc2018_mc_educators_box2_button: ڈاؤن لوڈ، اتارنا
+  hoc2022_mc_educators_box3_desc_markdown: اس آن ڈیمانڈ [free course](%{free_course_link})
+    کا استعمال کریں یا ایک مہمان استاد کے ساتھ لائیو آور آف کوڈ ورکشاپ میں شرکت کے
+    لیے اپنی پوری کلاس کو رجسٹر کرائیں۔ یہ ورکشاپ CSEW، دسمبر 6 – 11 کے دوران متعدد
+    بار منعقد کیا جائے گا۔
+  hoc2022_mc_educators_box3_button: ابھی رجسٹر کروائیں
+  hoc2022_mc_educators_box4_desc: بلاک سے پائیتھن تک پروفیشنل ڈویلپمنٹ کی جانب سے
+    تائید یافتہ کمپیوٹر سائنس کے 200 گھنٹے کے نصاب کے ساتھ K-12 کے طلباء میں STEM
+    کے جذبے کو ابھاریں۔
+  hoc2022_mc_educators_box4_button: تعلیم جاری رکھیں
   hoc2018_mc_video_1min: 1 منٹ
   hoc2018_mc_video_2min: 2 منٹ
   hoc2018_mc_video_5min: 5 منٹ
@@ -802,6 +818,14 @@ ur-PK:
   hoc2021_mc_mee_ai_title: AI ہمیشہ کے لیے
   hoc2021_mc_mee_ai_description: 'اپنے طلباء کے ساتھ AI کو دریافت کریں اور Minecraft
     میں کوڈ سیکھیں: تعلیمی ایڈیشن۔'
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'صبح تک پراسرار حویلی سے بچ کر نکلیں اور ایک ملین ایمرلڈ
+    کمائیں! نیا Minecraft Hour of Code ٹیوٹوریل اب مائن کرافٹ: ایجوکیشن ایڈیشن برائے
+    ونڈوز، میک، کروم بک، آئی پیڈ اور موبائل میں دستیاب ہے۔ مفت معلم وسائل، تربیت،
+    اور ویڈیوز کے ساتھ شروع کریں۔'
+  hoc2022_mc_mee_timecraft_description: 'مائن کرافٹ: تعلیمی ایڈیشن (Minecraft: Education
+    Edition) میں کوڈنگ کے اس مفت سبق میں اپنے مستقبل کو بچانے کے لیے وقت میں واپس
+    سفر کریں۔'
   codebytes_skinny_banner_english_only: صرف انگریزی
   footer_privacy_policy: رازداری کی پالیسی
   footer_about: متعلق
@@ -816,4 +840,21 @@ ur-PK:
   outbreak_tile_subtitle: ایک وائرس نے مونسٹر ٹاؤن کو متاثر کیا ہے! ایک وبا پھیلنے
     کا سمیولیٹر کوڈ کریں اور اس بارے میں پیشین گوئیاں کریں کہ مونسٹر ٹاؤن کے پڑوسیوں
     کے ساتھ کیا ہوگا۔
+  hoc2022_banner_title: تحقیق کریں، کھیلیں، تخلیق کریں!
+  hoc2022_banner_description: کائنات کی تحقیق کریں، گول اسکور کریں، خود کو کسی پریشان
+    کن صورتحال سے بچائیں - کمپوٹر سائنس آزمانے کے ایسے کئی طریقے ہیں!
+  hoc2022_cta_primary: دیکھیں کیا نیا ہے
+  hoc2022_cta_secondary: مزید سرگرمیاں آزمائیں
+  hoc2022_landing_page_explore_title: دریافت کریں
+  hoc2022_landing_page_explore_description: کمپیوٹر سائنس کے ساتھ نئی دنیاؤں کے دروازے
+    کھولیں!
+  hoc2022_landing_page_play_title: چلائیں
+  hoc2022_landing_page_play_description: میدان ماریں اور اسکور کریں!
   hoc2022_landing_page_create_title: بنائیں
+  hoc2022_landing_page_create_description: کچھ عجیب اور حیرت انگیز بنائیں!
+  hoc2022_landing_page_banner_alt_left: خلا میں زحل سیارے کے ساتھ ایک خلائی مخلوق
+    رقص کرتی ہوئی
+  hoc2022_landing_page_banner_alt_right: خلا میں ایک روبوٹ ایک اڑتے ہوئے راکٹ کے سامنے
+    فٹ بال کی گیند کو (اچھالتے) ڈرِبّل کرتے ہوئے
+  try_an_activity: ایک سرگرمی آزمائیں
+  see_more_activities: مزید سرگرمیاں آزمائیں

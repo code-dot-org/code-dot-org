@@ -806,6 +806,7 @@ cs-CZ:
   volunteer_engineer_submission_distance_16: 10 mil
   volunteer_engineer_submission_distance_24: 15 mil
   volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_distance_80: 50 mil
   volunteer_engineer_submission_num_volunteers_5: 5 dobrovolníků
   volunteer_engineer_submission_num_volunteers_10: 10 dobrovolníků
   volunteer_engineer_submission_num_volunteers_25: 25 dobrovolníků
@@ -2268,6 +2269,13 @@ cs-CZ:
   hoc_overview_dance_2019_subtitle: Naprogramuj Dance Party a sdílej ji s kamarády.
     Vystupují Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Nicki Minaj a dalších 34 umělců!
+  hoc_overview_dance_2022_subtitle: Naprogramujte si taneční párty ke sdílení se svými
+    přáteli. K vidění a slyšení bude Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, hudba z Disneyho „Encanto,“ a další!
+  hoc_overview_hello_world_2022_subtitle: Vyberte si jeden ze čtyř zábavných motivů
+    a naprogramujte interaktivní postavičky ve světě, co si sami vytvoříte.
+  hoc_overview_hello_world_2022_alt_text: Animovaní astronauti a zvířecí postavičky
+    plovoucí kolem ilustrace země
   hoc_overview_title: Aktivity pro Hodinu kódu od Code.org
   hoc_overview_subtitle: Hodina <a href="https://hourofcode.com">Hour of Code</a>
     je globální hnutí, které dosahuje desítek milionů studentů v 180 a více zemích.
@@ -2341,11 +2349,20 @@ cs-CZ:
     bezplatnou dílnu „Hodiny programování“. Pro účastníky na všech úrovních dovedností,
     od 6 let výše.
   hoc2018_mc_educators_box3_button: Najdi workshop
+  hoc2022_mc_educators_box3_desc_markdown: 'Použijte tento [bezplatný kurz](%{free_course_link})
+    na vyžádání nebo zaregistrujte celou svou třídu k účasti na živém workshopu Hodiny
+    programování s pozvaným učitelem. Nabízeno několikrát během Týdne vzdělávání v počítačové
+    vědě, od 6. do 11. prosince. '
+  hoc2022_mc_educators_box3_button: Zaregistrujte se teď
   hoc2018_mc_educators_box4_title: Získejte přístup k dalším prostředkům pro počítačové
     vědy
   hoc2018_mc_educators_box4_desc: Vytvořte změny ve své komunitě pomocí digitálních
     dovedností a zdrojů pro vzdělávání informatiky od Microsoftu.
   hoc2018_mc_educators_box4_button: Prozkoumávejte prostředky
+  hoc2022_mc_educators_box4_desc: Inspirujte u studentů K-12 vášeň pro STEM pomocí
+    200 hodin osnov počítačové vědy, od bloků po python, za podpory profesionálního
+    rozvoje.
+  hoc2022_mc_educators_box4_button: Pokračovat v učení
   hoc2018_mc_watch_videos: Než začnete, podívejte se na jedno z následujících inspirativních
     videí
   hoc2018_mc_videos_more: Více <a href='%{inspiring_videos_playlist}'> inspirativních
@@ -2517,6 +2534,13 @@ cs-CZ:
   hoc2021_mc_mee_ai_title: Umělá inteligence Pro Dobro
   hoc2021_mc_mee_ai_description: 'Prozkoumejte se svými studenty umělou inteligenci
     a naučte se kódovat ve hře Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'Uprchněte před rozbřeskem ze záhadného sídla a vydělejte
+    si milion smaragdů! Nový výukový kurz Hodiny programování Minecraft je teď k dostání
+    na Minecraft: Education Edition pro Windows, Mac, Chromebook, iPad a mobily. Začněte
+    s bezplatnými zdroji, školeními a videy pro vzdělavatele. '
+  hoc2022_mc_mee_timecraft_description: 'Cestujte zpět v čase, abyste zachránili budoucnost
+    v této bezplatné lekci programování ve hře Minecraft: Education Edition.'
   footer_powered_by_aws: Poháněn Amazon Web Services
   footer_built_on_github: Postavený na GitHubu od Microsoftu
   codebytes_skinny_banner_title: Přidejte se k nám 7.-11. prosince pro naše CodeBytes
@@ -2617,5 +2641,24 @@ cs-CZ:
     pozadí
   minecraft_tile_alt: Dvě postavičky z Minecraftu, Steve a Alex. Na pozadí se zobrazuje
     vodní scéna z Minecraftu s korály, delfíny a chaluhami.
+  hoc2022_banner_title: Bádejte, hrajte si, tvořte!
+  hoc2022_banner_description: Probádejte vesmír, vstřelte branku, dejte ránu — je
+    tolik způsobů, jak si vyzkoušet počítačovou vědu!
+  hoc2022_cta_primary: Podívejte se, co je nového
+  hoc2022_cta_secondary: Vyzkoušejte další aktivity
+  hoc2022_landing_page_explore_title: Bádejte
+  hoc2022_landing_page_explore_description: Otevřete dveře novým světům s počítačovou
+    vědou!
+  hoc2022_landing_page_play_title: Hrát
+  hoc2022_landing_page_play_description: Převezměte pole a skórujte!
   hoc2022_landing_page_create_title: Vytvořit
+  hoc2022_landing_page_create_description: Udělejte něco podivného a zázračného!
+  hoc2022_landing_page_banner_alt_left: Vetřelec tančící ve vesmíru poblíž Saturnu
+  hoc2022_landing_page_banner_alt_right: Robot driblující fotbalovým míčem ve vesmíru
+    před odlétající raketou
   try_it_yourself: Vyzkoušejte to sami!
+  try_an_activity: Vyzkoušejte nějakou aktivitu
+  hoc2022_nasa_banner_heading: Připojte se k NASA a zúčastněte se speciálního pořadu
+    Hour of Code o počítačové vědě ve vesmíru!
+  hoc2022_nasa_banner_description: Premiéra 5. prosince v 10:00 SELČ na kanálu NASA
+    STEM na YouTube.

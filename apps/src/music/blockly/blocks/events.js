@@ -1,26 +1,28 @@
 import {BlockTypes} from '../blockTypes';
+import {TRIGGER_FIELD} from '../constants';
 
 export const whenRun = {
   definition: {
     type: BlockTypes.WHEN_RUN,
+    style: 'setup_blocks',
     message0: 'when run',
     inputsInline: true,
     nextStatement: null,
-    colour: 230,
     tooltip: 'when run',
     helpUrl: ''
   },
-  generator: () => '\n'
+  generator: () => 'var currentMeasureLocation = 1;\n'
 };
 
 export const triggeredAt = {
   definition: {
     type: BlockTypes.TRIGGERED_AT,
-    message0: '%1 triggered at time %2',
+    style: 'event_blocks',
+    message0: '%1 triggered at %2',
     args0: [
       {
         type: 'input_dummy',
-        name: 'trigger'
+        name: TRIGGER_FIELD
       },
       {
         type: 'field_variable',
@@ -28,15 +30,8 @@ export const triggeredAt = {
         variable: 'currentTime'
       }
     ],
-    message1: '%1',
-    args1: [
-      {
-        type: 'input_statement',
-        name: 'code'
-      }
-    ],
     inputsInline: true,
-    colour: 230,
+    nextStatement: null,
     tooltip: 'at trigger',
     extensions: ['dynamic_trigger_extension']
   },
@@ -45,12 +40,36 @@ export const triggeredAt = {
       ctx.getFieldValue('var'),
       Blockly.Names.NameType.VARIABLE
     );
-    const triggerId = ctx.getFieldValue('trigger');
     return `
-      ${varName} = MusicPlayer.getPlayheadPosition();
-      if ('${triggerId}' === InputContext.getCurrentTriggerId()) { 
-        ${Blockly.JavaScript.statementToCode(ctx, 'code')}
-      }
+      ${varName} = MusicPlayer.getCurrentPlayheadPosition();
       \n`;
+  }
+};
+
+export const triggeredAtSimple = {
+  definition: {
+    type: BlockTypes.TRIGGERED_AT_SIMPLE,
+    message0: '%1 triggered',
+    args0: [
+      {
+        type: 'input_dummy',
+        name: TRIGGER_FIELD
+      }
+    ],
+    inputsInline: true,
+    nextStatement: null,
+    style: 'event_blocks',
+    tooltip: 'at trigger',
+    extensions: ['dynamic_trigger_extension']
+  },
+  generator: ctx => {
+    const varName = Blockly.JavaScript.nameDB_.getDistinctName(
+      'eventTime',
+      Blockly.Names.NameType.VARIABLE
+    );
+    return (
+      `${varName} = MusicPlayer.getCurrentPlayheadPosition();\n` +
+      `currentMeasureLocation = Math.ceil(${varName});\n`
+    );
   }
 };

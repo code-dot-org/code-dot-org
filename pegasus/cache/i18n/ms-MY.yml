@@ -836,6 +836,7 @@ ms-MY:
   volunteer_engineer_submission_distance_16: 10 batu
   volunteer_engineer_submission_distance_24: 15 batu
   volunteer_engineer_submission_distance_32: 20 batu
+  volunteer_engineer_submission_distance_80: 50 batu
   volunteer_engineer_submission_num_volunteers_5: 5 sukarelawan
   volunteer_engineer_submission_num_volunteers_10: 10 sukarelawan
   volunteer_engineer_submission_num_volunteers_25: 25 sukarelawan
@@ -2390,6 +2391,13 @@ ms-MY:
   hoc_overview_dance_2019_subtitle: Kod Majlis Tari-Menari untuk berkongsi dengan
     rakan anda. Menampilkan Katy Perry, Shawn Mendes, Panic! Di Disko, Lil Nas X,
     Jonas Brothers, Nicki Minaj, dan 34 lagi!
+  hoc_overview_dance_2022_subtitle: Kod Majlis Tari-Menari untuk berkongsi dengan
+    rakan anda. Menampilkan Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
+    muzik dari “Encanto,” dan banyak lagi!
+  hoc_overview_hello_world_2022_subtitle: Pilih daripada empat tema yang menyeronokkan
+    untuk mengekodkan aksara interaktif dalam dunia yang anda cipta.
+  hoc_overview_hello_world_2022_alt_text: Angkasawan animasi dan watak-watak haiwan
+    terapung di sekitar ilustrasi bumi
   hoc_overview_title: Aktiviti Jam Kod daripada Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hour of Code</a> ialah pergerakan
     global yang menjangkau berpuluh juta pelajar di 180+ negara. Sesiapa sahaja, di
@@ -2466,10 +2474,19 @@ ms-MY:
     Jam Kod percuma. Dibuka kepada peserta daripada semua peringkat kemahiran, yang
     berumur enam tahun dan ke atas.
   hoc2018_mc_educators_box3_button: Cari bengkel
+  hoc2022_mc_educators_box3_desc_markdown: 'Gunakan ini atas permintaan [kursus percuma](%{free_course_link})
+    atau daftarkan seluruh kelas anda untuk menghadiri bengkel Hour of Code secara
+    langsung dengan guru tetamu. Ditawarkan pada beberapa kali semasa CSEW, 6 Dis
+    - 11. '
+  hoc2022_mc_educators_box3_button: Daftar sekarang
   hoc2018_mc_educators_box4_title: Akses lebih banyak sumber sains komputer
   hoc2018_mc_educators_box4_desc: Buat perubahan dalam komuniti anda dengan kemahiran
     digital dan sumber pendidikan sains komputer daripada Microsoft.
   hoc2018_mc_educators_box4_button: Terokai sumber
+  hoc2022_mc_educators_box4_desc: Memberi inspirasi semangat STEM dalam pelajar K-12
+    dengan 200 jam kurikulum sains komputer, dari blok ke python, disokong oleh pembangunan
+    profesional.
+  hoc2022_mc_educators_box4_button: Teruskan pembelajaran
   hoc2018_mc_watch_videos: Sebelum anda memulakan, sila tonton satu daripada video
     yang memberikan inspirasi ini
   hoc2018_mc_videos_more: Lebih banyak video yang memberikan inspirasi <a href='%{inspiring_videos_playlist}'></a>
@@ -2647,6 +2664,13 @@ ms-MY:
   hoc2021_mc_mee_ai_title: AI untuk Kebaikan
   hoc2021_mc_mee_ai_description: 'Terokai AI dengan pelajar anda dan belajar mengekod
     dalam Minecraft: Edisi Pendidikan.'
+  hoc2022_mc_mee_title: Hartanah Melepas Minecraft
+  hoc2022_mc_mee_description: 'Lepaskan diri dari rumah misteri menjelang subuh dan
+    dapat satu juta zamrud! Tutorial Minecraft Hour of Code yang baru kini boleh didapati
+    di Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook, Ipad dan Mobile.
+    Mulakan dengan sumber pendidik, latihan, dan video percuma. '
+  hoc2022_mc_mee_timecraft_description: 'Perjalanan kembali ke masa untuk menyelamatkan
+    masa depan dalam pelajaran pengekodan percuma ini di Minecraft: Edisi Pendidikan.'
   footer_powered_by_aws: Perkhidmatan Web Amazon dan logo "Powered by AWS" ialah tanda
     dagangan Amazon.com, Inc. atau ahli gabungannya di Amerika Syarikat dan/atau negara
     lain.
@@ -2732,6 +2756,10 @@ ms-MY:
   ai_ecs: 'ECS: Kecerdasan Buatan (AI)'
   ai_ecs_description: Unit kurikulum berselang-seli yang baharu untuk kurikulum Meneroka
     Sains Komputer (ECS).
+  ai_aiedu_intro: 'AiEdu: Pengenalan kepada Kecerdasan Buatan'
+  ai_aiedu_intro_description: Pengenalan kepada AI adalah kurikulum percuma, inovatif,
+    berkaitan dengan budaya di mana pelajar mengembangkan pengetahuan konseptual mengenai
+    apa itu AI dan bagaimana ia digunakan di dunia nyata.
   ai_elements: Elemen AI
   ai_elements_description: Siri kursus dalam talian percuma yang dicipta oleh Reaktor
     dan Universiti Helsinki.
@@ -2749,5 +2777,22 @@ ms-MY:
   minecraft_tile_alt: Dua watak Minecraft, Steve dan Alex, dengan latar belakang yang
     menunjukkan adegan Minecraft akuatik dengan batu karang, ikan lumba-lumba, dan
     kelpa
+  hoc2022_banner_title: Meneroka, Bermain, Mencipta!
+  hoc2022_banner_description: Terokai alam semesta, capai kejayaan, bertindak — terdapat
+    banyak cara untuk mencuba sains komputer!
+  hoc2022_cta_primary: Lihat yang terbaharu
+  hoc2022_cta_secondary: Cuba lebih banyak aktiviti
+  hoc2022_landing_page_explore_title: Teroka
+  hoc2022_landing_page_explore_description: Buka pintu ke dunia baru dengan sains
+    komputer!
+  hoc2022_landing_page_play_title: Main
+  hoc2022_landing_page_play_description: Ambil bahagian dan skor!
   hoc2022_landing_page_create_title: Buat
+  hoc2022_landing_page_create_description: Buat sesuatu yang pelik dan indah!
+  hoc2022_landing_page_banner_alt_left: Makhluk asing menari di sebelah Zuhrah di
+    angkasa
+  hoc2022_landing_page_banner_alt_right: Robot menggelecek bola sepak di angkasa di
+    hadapan roket yang berlepas
   try_it_yourself: Cubalah sendiri!
+  try_an_activity: Cuba satu aktiviti
+  see_more_activities: Cuba lebih banyak aktiviti

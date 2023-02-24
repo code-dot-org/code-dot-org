@@ -14,6 +14,7 @@ import Button from './Button';
 
 class VerticalImageResourceCard extends Component {
   static propTypes = {
+    altText: PropTypes.string,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
@@ -26,6 +27,7 @@ class VerticalImageResourceCard extends Component {
 
   render() {
     const {
+      altText,
       title,
       description,
       link,
@@ -84,7 +86,7 @@ class VerticalImageResourceCard extends Component {
       <div style={cardStyle}>
         <div style={imageStyle}>
           <a href={link}>
-            <img src={imgSrc} alt={title} />
+            <img src={imgSrc} alt={altText} />
           </a>
         </div>
         <div>
@@ -106,13 +108,17 @@ class VerticalImageResourceCard extends Component {
             href={link}
             color={Button.ButtonColor.gray}
             text={buttonText}
-            style={[styles.button]}
+            style={{...styles.button}}
           />
         </div>
       </div>
     );
   }
 }
+
+VerticalImageResourceCard.defaultProps = {
+  altText: ''
+};
 
 const styles = {
   card: {

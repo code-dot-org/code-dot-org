@@ -1,7 +1,7 @@
 /** @file Board controller for Adafruit Circuit Playground */
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import five from '@code-dot-org/johnny-five-deprecated';
+import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import experiments from '@cdo/apps/util/experiments';
 import Firmata from 'firmata';
@@ -407,7 +407,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise<SerialPort>}
    */
   static openSerialPortWebSerial(port) {
-    return port.open().then(() => {
+    return port.openCPPort().then(() => {
       this.createPendingQueue(port);
       return port;
     });

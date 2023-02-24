@@ -50,7 +50,7 @@ module Cdo
                 'schema-name': schema,
                 'table-name': table,
               },
-              'value': RedshiftImport::TEMP_TABLE_PREFIX
+              value: RedshiftImport::TEMP_TABLE_PREFIX
             }
           end
 
@@ -80,7 +80,7 @@ module Cdo
             'rule-action': 'add-suffix',
             'rule-target': 'schema',
             'object-locator': {'schema-name': '%'},
-            'value': '_pii'
+            value: '_pii'
           }
         end
 

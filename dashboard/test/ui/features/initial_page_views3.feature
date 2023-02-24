@@ -32,7 +32,6 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
       | url                                               | test_name                  |
       | http://studio.code.org/                           | logged out studio homepage |
       | http://studio.code.org/s/allthethings             | logged out script progress |
-      | http://code.org/educate/regional-partner/playbook | regional partner playbook  |
 
   @no_circle
   Scenario Outline: Temporarily eyes disabled simple page view without instructions dialog

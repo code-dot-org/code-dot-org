@@ -37,7 +37,7 @@ def sync_down
       # download strings not in the regular codeorg project to
       # a specific subdirectory within the locale directory
       case name.to_s
-      when "codeorg-markdown"
+      when "codeorg-markdown-testing", "codeorg-markdown"
         options[:locale_subdir] = "codeorg-markdown"
       when "hour-of-code"
         options[:locale_subdir] = "hourofcode"

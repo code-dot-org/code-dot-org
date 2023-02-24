@@ -66,7 +66,7 @@ class Poetry < GamelabJr
           use_default_sprites: true,
           hide_animation_mode: true,
           show_type_hints: true,
-          use_modal_function_editor: true,
+          use_modal_function_editor: false,
           standalone_app_name: 'poetry'
         }
       )

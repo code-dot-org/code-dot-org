@@ -15,7 +15,7 @@ style_min: true
 <div style="float: left; width: 280px; margin-right: 5%;">
 
 <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
-<% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{CdoDonor.get_random_donor_twitter} for supporting @codeorg)"} %>
+<% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{PegasusCdoDonor.get_random_donor_twitter} for supporting @codeorg)"} %>
 
 <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
 
@@ -74,8 +74,6 @@ See all past [news and announcements](/about/news).
 <div style="clear: both;"></div>
 
 ## Our goals and metrics
-
-For a closer look at our goals in closing gaps and increasing opportunity, you can review the ambitious [2025 goals](/files/2025goals.pdf) we've detailed and how we determined those goals. We've also identified a number of large-scale, multiyear projects that would enable Code.org to reach an even greater scale in making CS a standard in education globally. Read about them in our [Big Bets in Computer Science Education](/files/bigbets.pdf) summary.
 
 | Code.org Goal | Accomplishment                                                                                                                                                                                                                                                                              |
 |------| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

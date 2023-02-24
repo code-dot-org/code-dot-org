@@ -3,6 +3,7 @@ import {BlockTypes} from '../blockTypes';
 export const loopFromTo = {
   definition: {
     type: BlockTypes.LOOP_FROM_TO,
+    style: 'loop_blocks',
     message0: 'loop %1 from %2 to %3',
     args0: [
       {
@@ -33,7 +34,6 @@ export const loopFromTo = {
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
     tooltip: 'loop from a number to another number',
     helpUrl: ''
   },
@@ -56,7 +56,7 @@ export const forLoop = {
       {
         type: 'field_variable',
         name: 'VAR',
-        variable: null
+        variable: 'i'
       },
       {
         type: 'input_value',
@@ -109,12 +109,18 @@ export const forLoop = {
         'TO',
         Blockly.JavaScript.ORDER_ASSIGNMENT
       ) || '0';
+
+    // + is used to convert this value to a number.
+    // Useful if the field is blank, because '0' will
+    // be returned, and in that case we need the fallback
+    // to '1' to occur.
     const increment =
-      Blockly.JavaScript.valueToCode(
+      +Blockly.JavaScript.valueToCode(
         ctx,
         'BY',
         Blockly.JavaScript.ORDER_ASSIGNMENT
       ) || '1';
+
     let branch = Blockly.JavaScript.statementToCode(ctx, 'DO');
     branch = Blockly.JavaScript.addLoopTrap(branch, ctx);
     let code;

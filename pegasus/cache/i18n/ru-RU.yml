@@ -824,6 +824,7 @@ ru-RU:
   volunteer_engineer_submission_distance_16: 16 км
   volunteer_engineer_submission_distance_24: 24 км
   volunteer_engineer_submission_distance_32: 32 км
+  volunteer_engineer_submission_distance_80: 50 миль
   volunteer_engineer_submission_num_volunteers_5: 5 волонтёров
   volunteer_engineer_submission_num_volunteers_10: 10 волонтёров
   volunteer_engineer_submission_num_volunteers_25: 25 волонтёров
@@ -2371,6 +2372,13 @@ ru-RU:
   hoc_overview_dance_2019_subtitle: Напиши программу танцевальной вечеринки и поделись
     ей с друзьями. С участием Кэти Перри, Шона Мендес, группы Panic! At The Disco,
     группы Lil Nas X, братьев Джонас, Никки Минаж и еще 34 артистов!
+  hoc_overview_dance_2022_subtitle: Создайте танцевальную вечеринку, чтобы поделиться
+    ею с друзьями. Вы можете использовать треки Бейонсе, Гарри Стайлза, Лиззо, Лил
+    Нас Икс, Селены Гомес, музыку из диснеевского «Энканто» и многое другое!
+  hoc_overview_hello_world_2022_subtitle: Выберите одну из четырех забавных тем для
+    программирования интерактивных персонажей в создаваемом вами мире.
+  hoc_overview_hello_world_2022_alt_text: Анимированные персонажи астронавтов и животных,
+    плавающие вокруг иллюстрации земли
   hoc_overview_title: Занятия Часа кода от Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Час кода</a> – международное
     движение, объединяющее десятки миллионов учащихся более чем из 180 стран. Стать
@@ -2445,12 +2453,21 @@ ru-RU:
     бесплатный семинар в рамках Часа кода. Для участников любого уровня подготовки
     и возраста 6 лет и старше.
   hoc2018_mc_educators_box3_button: Найти семинар
+  hoc2022_mc_educators_box3_desc_markdown: 'Воспользуйтесь этим по запросу [бесплатный
+    курс] (%{free_course_link}) или зарегистрируйте весь класс для участия в живом
+    семинаре «Час кода» с приглашенным преподавателем. Предлагается несколько раз
+    во время CSEW с 6 по 11 декабря. '
+  hoc2022_mc_educators_box3_button: Регистрация
   hoc2018_mc_educators_box4_title: Получите доступ к дополнительным ресурсам по компьютерным
     наукам
   hoc2018_mc_educators_box4_desc: Способствуйте переменам в своем местном сообществе,
     используя ресурсы для приобретения цифровых навыков и образования в сфере компьютерных
     наук от компании Microsoft.
   hoc2018_mc_educators_box4_button: Изучить ресурсы
+  hoc2022_mc_educators_box4_desc: Вдохновите учащихся K-12 на изучение STEM с помощью
+    200-часовой учебной программы по информатике, от программирования блоками до python,
+    с поддержкой профессиональным обучением.
+  hoc2022_mc_educators_box4_button: Продолжить обучение
   hoc2018_mc_watch_videos: Посмотрите до начала работы один из этих вдохновляющих
     роликов
   hoc2018_mc_videos_more: Больше <a href='%{inspiring_videos_playlist}'>вдохновляющего
@@ -2633,6 +2650,13 @@ ru-RU:
   hoc2021_mc_mee_ai_title: ИИ навсегда!
   hoc2021_mc_mee_ai_description: 'Изучайте ИИ со своими учениками и учитесь программировать
     код в Minecraft: Education Edition.'
+  hoc2022_mc_mee_title: Майнкрафт Побег из Особняка
+  hoc2022_mc_mee_description: 'Сбегите из таинственного особняка к рассвету и заработайте
+    миллион изумрудов! Новое учебное пособие по Часу Кода Майнкрафт теперь доступно
+    в Майнкрафт: обучающий выпуск для Windows, Mac, Chromebook, Ipad и мобильных устройств.
+    Начните с бесплатных ресурсов для преподавателей, тренингов и видеороликов. '
+  hoc2022_mc_mee_timecraft_description: 'Путешествуйте в прошлое, чтобы спасти будущее
+    в этом бесплатном уроке программирования Minecraft: обучающий выпуск.'
   footer_powered_by_aws: Создано с помощью Amazon Web Services
   footer_built_on_github: Построен на GitHub от Microsoft
   codebytes_skinny_banner_title: Присоединяйтесь к нам 7-11 декабря к нашим мини-урокам
@@ -2739,5 +2763,25 @@ ru-RU:
     к планшету с сенсорным экраном, излучающему звезды и лучи света на синем фоне
   minecraft_tile_alt: Два персонажа Майнкрафта, Стив и Алекс, на фоне водной сцены
     Майнкрафта с кораллами, дельфинами и водорослями
+  hoc2022_banner_title: Учитесь, играйте, творите!
+  hoc2022_banner_description: Исследуйте всселенную, достигайте целей, двигайтесь
+    вперед — информатика открывает для вас множество новых возможностей!
+  hoc2022_cta_primary: Посмотрите, что нового
+  hoc2022_cta_secondary: Попробуйте другие занятия
+  hoc2022_landing_page_explore_title: исследовать
+  hoc2022_landing_page_explore_description: Откройте двери в новые миры с помощью
+    информатики!
+  hoc2022_landing_page_play_title: Играть
+  hoc2022_landing_page_play_description: Выходите на поле и забивайте!
   hoc2022_landing_page_create_title: Создать
+  hoc2022_landing_page_create_description: Сделайте что-нибудь необычное и удивительное!
+  hoc2022_landing_page_banner_alt_left: Инопланетянин танцует рядом с Сатурном в космосе
+  hoc2022_landing_page_banner_alt_right: Робот ведет футбольный мяч в космосе перед
+    взлетом ракеты
   try_it_yourself: Попробуй сам!
+  try_an_activity: Попробовать занятие
+  see_more_activities: Смотреть другие занятия
+  hoc2022_nasa_banner_heading: Присоединяйтесь к НАСА для участия в специальной программе
+    "Час кода", посвященной компьютерным наукам в космосе!
+  hoc2022_nasa_banner_description: Премьера в 10 утра по восточному времени 5 декабря
+    на YouTube-канале NASA STEM.

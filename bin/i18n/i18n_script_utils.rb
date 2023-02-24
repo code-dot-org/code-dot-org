@@ -9,7 +9,7 @@ require 'psych'
 I18N_SOURCE_DIR = "i18n/locales/source"
 
 CROWDIN_PROJECTS = {
-  "codeorg": {
+  codeorg: {
     config_file: File.join(File.dirname(__FILE__), "codeorg_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_etags.json"),
@@ -41,6 +41,12 @@ CROWDIN_TEST_PROJECTS = {
     identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
     etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_etags.json"),
     files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_files_to_sync_out.json")
+  },
+  "codeorg-markdown-testing": {
+    config_file: File.join(File.dirname(__FILE__), "codeorg-testing_markdown_crowdin.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
+    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_etags.json"),
+    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_files_to_sync_out.json")
   }
 }
 

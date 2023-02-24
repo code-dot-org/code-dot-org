@@ -27,7 +27,10 @@ export default class InlineMarkdown extends React.Component {
   };
 
   render() {
-    const rendered = markdownToReact.processSync(this.props.markdown).result;
+    // trim() is used here to prevent a crash that occurs when a newline is at
+    // the end of the string. See discussion in https://github.com/code-dot-org/code-dot-org/pull/49585
+    const rendered = markdownToReact.processSync(this.props.markdown.trim())
+      .result;
     // rendered will be a paragraph element because we kept the 'paragraph'
     // block method enabled in the parser above for structural reasons; we want
     // to simply swap that out for a span element.

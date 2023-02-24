@@ -241,16 +241,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @enrollment = enrollment
     @survey_url = enrollment.exit_survey_url
 
-    # Don't send if there's no associated survey
-    return unless @survey_url
-
     content_type = 'text/html'
     if @workshop.course == Pd::Workshop::COURSE_CSF
       attachments['certificate.jpg'] = generate_csf_certificate
       content_type = 'multipart/mixed'
     end
-
-    @enrollment.update!(survey_sent_at: Time.zone.now)
 
     mail content_type: content_type,
       from: from_survey,
@@ -324,7 +319,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
         "See you soon for your upcoming #{workshop.course} workshop!"
       else
         # This is sent for the first enrollment, and also for the 3-day reminder.
-        "You’re enrolled! View details for your upcoming #{workshop.course} workshop"
+        "You're enrolled! View details for your upcoming #{workshop.course} workshop"
       end
     else
       'Your upcoming Code.org workshop and next steps'

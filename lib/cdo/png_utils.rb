@@ -22,7 +22,7 @@ module PngUtils
     # IHDR Chunk Layout
     # http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html#C.IHDR
     dimensions = png_body[0x10..0x18].unpack('NN')
-    {'x': dimensions[0], 'y': dimensions[1]}
+    {x: dimensions[0], y: dimensions[1]}
   end
   module_function :dimensions_from_png
 end

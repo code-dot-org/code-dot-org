@@ -92,8 +92,8 @@ def handler(event:, context:)
             text: username
           },
           {
-            'type': 'mrkdwn',
-            'text': ip
+            type: 'mrkdwn',
+            text: ip
           }
         ]
       }
