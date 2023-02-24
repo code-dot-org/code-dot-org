@@ -91,7 +91,7 @@ export default function SectionsSetUpContainer() {
           }}
         />
         <Button
-          text={i18n.saveClassSections()}
+          text={i18n.finishCreatingSections()}
           color="purple"
           onClick={e => saveSection(e, sections[0])}
         />
