@@ -6,3 +6,16 @@
   display: flex;
   justify-content: space-between;
 }
+
+.buttonRow {
+  // ensure we have height when we only have our toggle (which is floated)
+  min-height: 50;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonsInRow {
+  display: flex;
+  align-items: center;
+}
