@@ -29,7 +29,6 @@ class SectionAssigner extends Component {
     this.props.selectSection(sectionId);
   };
 
-  // Added this section
   state = {
     confirmationMessageOpen: false
   };

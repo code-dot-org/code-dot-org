@@ -31,13 +31,11 @@ class MultipleAssignButton extends React.Component {
   };
 
   state = {
-    confirmationDialogOpen: false,
     assignmentChoiceDialogOpen: false
   };
 
   onCloseDialog = () => {
     this.setState({
-      confirmationDialogOpen: false,
       assignmentChoiceDialogOpen: false
     });
   };
@@ -62,7 +60,6 @@ class MultipleAssignButton extends React.Component {
       participantAudience,
       isOnCoursePage
     } = this.props;
-    console.log('MultipleAssignButtonRendered');
 
     // Adjust styles if locale is RTL
     const buttonMarginStyle = isRtl

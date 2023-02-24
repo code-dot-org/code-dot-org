@@ -15,7 +15,7 @@ export default class TeacherSectionOption extends Component {
     return (
       <input
         type="checkbox"
-        id={id}
+        id={`teachersectionoption-${id}`}
         checked={isChecked}
         onChange={onChange}
         style={styles.checkbox}
@@ -30,7 +30,10 @@ export default class TeacherSectionOption extends Component {
         <span>
           <div style={styles.sectionOptionContainer}>
             <div>{this.renderCheckbox(section.id)}</div>
-            <label htmlFor={section.id} style={styles.sectionOptionLabel}>
+            <label
+              htmlFor={`teachersectionoption-${section.id}`}
+              style={styles.sectionOptionLabel}
+            >
               {section.name}
             </label>
           </div>

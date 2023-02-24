@@ -1,19 +1,14 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-//import {assert} from '../../util/reconfiguredChai';
 import {expect} from 'chai';
-//import i18n from '@cdo/locale';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   assignToSection,
   testingFunction
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {UnconnectedMultipleAssignButton as MultipleAssignButton} from '@cdo/apps/templates/MultipleAssignButton';
-//import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
-// import MultipleAssignButton from '../../../src/templates/MultipleAssignButton';
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
 
-// from SectionAssignerTest
 describe('MultipleAssignButtonTest', () => {
   const defaultProps = {
     sectionId: 0,

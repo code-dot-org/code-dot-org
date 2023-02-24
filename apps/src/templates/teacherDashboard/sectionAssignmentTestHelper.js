@@ -22,7 +22,6 @@ export const fakeTeacherSectionsForDropdown = [
     participantType: 'student'
   },
   {
-    // review the courseId and courseofferings onward
     name: 'Unassigned Section',
     id: 3,
     isAssigned: false,

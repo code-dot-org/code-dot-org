@@ -9,7 +9,6 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import TeacherSectionOption from './TeacherSectionOption';
 import {
   assignToSection,
-  testingFunction,
   unassignSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -32,7 +31,6 @@ class MultipleSectionsAssigner extends Component {
     unassignSection: PropTypes.func.isRequired,
     assignToSection: PropTypes.func.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
-    testingFunction: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number
   };
 
@@ -70,12 +68,12 @@ class MultipleSectionsAssigner extends Component {
 
     this.state = {
       currentSectionsAssigned: initialSectionsAssignedToCourseList,
-      initialSectionsAssigned: initialSectionsAssignedToCourseList // I am wondering if this should be passed in through props bc it never changes.
+      initialSectionsAssigned: initialSectionsAssignedToCourseList
     };
   }
 
   handleChangedCheckbox = currentSection => {
-    const isUnchecked = !!this.state.currentSectionsAssigned.some(
+    const isUnchecked = this.state.currentSectionsAssigned.some(
       s => s.code === currentSection.code
     );
     if (isUnchecked) {
@@ -132,7 +130,6 @@ class MultipleSectionsAssigner extends Component {
 
       if (isSectionToBeRemoved) {
         // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
-        // note, I don't know of a better way to check if it is on a course landing page
         isOnCoursePage || this.props.isStandAloneUnit
           ? this.props.unassignSection(
               this.state.initialSectionsAssigned[i].id,
@@ -153,8 +150,7 @@ class MultipleSectionsAssigner extends Component {
       courseVersionId,
       scriptId,
       assignToSection,
-      updateHiddenScript,
-      testingFunction
+      updateHiddenScript
     } = this.props;
     const sectionId = section.id;
     updateHiddenScript(sectionId, scriptId, false);
@@ -165,34 +161,18 @@ class MultipleSectionsAssigner extends Component {
       courseVersionId,
       scriptId
     );
-    testingFunction(
-      sectionId,
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      scriptId
-    );
   };
 
-  // this is the same as the above function but just has null as the scriptId
-  // not sure if this should be its own function or not
+  // this is identical to unhideAndAssignUnit above but just has null as the scriptId
   assignCourseWithoutUnit = section => {
     const {
       courseId,
       courseOfferingId,
       courseVersionId,
-      assignToSection,
-      testingFunction
+      assignToSection
     } = this.props;
     const sectionId = section.id;
     assignToSection(
-      sectionId,
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      null
-    );
-    testingFunction(
       sectionId,
       courseId,
       courseOfferingId,
@@ -330,7 +310,6 @@ const styles = {
   }
 };
 
-// Export unconnected dialog for unit testing - KT note, don't know why I need this...
 export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;
 
 export default connect(
@@ -340,7 +319,6 @@ export default connect(
   {
     assignToSection,
     updateHiddenScript,
-    testingFunction,
     unassignSection
   }
 )(MultipleSectionsAssigner);

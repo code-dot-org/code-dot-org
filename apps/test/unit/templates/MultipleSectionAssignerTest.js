@@ -5,7 +5,6 @@ import {UnconnectedMultipleSectionsAssigner as MultipleSectionsAssigner} from '@
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
 import {
   assignToSection,
-  testingFunction,
   unassignSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -24,7 +23,6 @@ describe('MultipleSectionsAssigner', () => {
     unassignSection: unassignSection,
     assignToSection: assignToSection,
     updateHiddenScript: updateHiddenScript,
-    testingFunction: testingFunction,
     participantAudience: 'student'
   };
   const setUp = (overrideProps = {}) => {
@@ -181,7 +179,6 @@ describe('MultipleSectionsAssigner', () => {
   it('unassigns a unit but keeps the course assignment on the UNIT landing page of a non-standalone course when checkbox is unchecked', () => {
     let assignToSection = sinon.fake();
     let reassignConfirm = sinon.fake();
-    let testingFunction = sinon.fake();
 
     const wrapper = setUp({
       isOnCoursePage: false,
@@ -189,7 +186,6 @@ describe('MultipleSectionsAssigner', () => {
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       assignToSection,
-      testingFunction,
       reassignConfirm,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
       courseVersionId: assignedCourseANDUnitSection.courseVersionId
@@ -216,7 +212,6 @@ describe('MultipleSectionsAssigner', () => {
     wrapper.find('#confirm-assign').simulate('click');
 
     expect(assignToSection).to.have.been.calledOnce;
-    expect(testingFunction).to.have.been.calledOnce;
     expect(reassignConfirm).to.have.been.calledOnce;
     expect(assignToSection).to.have.been.calledWith(
       assignedCourseANDUnitSection.id,
@@ -230,7 +225,6 @@ describe('MultipleSectionsAssigner', () => {
     let assignToSection = sinon.fake();
     let reassignConfirm = sinon.fake();
     let updateHiddenScript = sinon.fake();
-    let testingFunction = sinon.fake();
 
     const wrapper = setUp({
       isOnCoursePage: false,
@@ -240,7 +234,6 @@ describe('MultipleSectionsAssigner', () => {
       assignToSection,
       reassignConfirm,
       updateHiddenScript,
-      testingFunction,
       courseOfferingId: assigedStandaloneUnitSection.courseOfferingId,
       courseVersionId: assigedStandaloneUnitSection.courseVersionId
     });
@@ -263,7 +256,6 @@ describe('MultipleSectionsAssigner', () => {
 
     expect(updateHiddenScript).to.have.been.calledOnce;
     expect(assignToSection).to.have.been.calledOnce;
-    expect(testingFunction).to.have.been.calledOnce;
     expect(assignToSection).to.have.been.calledWith(
       unassignedSection.id,
       assigedStandaloneUnitSection.courseId,
@@ -318,7 +310,6 @@ describe('MultipleSectionsAssigner', () => {
   it('assigns a unit on the UNIT landing page of non-standalone course when checkbox is checked', () => {
     let reassignConfirm = sinon.fake();
     let assignToSection = sinon.fake();
-    let testingFunction = sinon.fake();
     let updateHiddenScript = sinon.fake();
 
     const wrapper = setUp({
@@ -328,7 +319,6 @@ describe('MultipleSectionsAssigner', () => {
       scriptId: assignedCourseANDUnitSection.unitId,
       reassignConfirm,
       assignToSection,
-      testingFunction,
       updateHiddenScript,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
       courseVersionId: assignedCourseANDUnitSection.courseVersionId
@@ -352,7 +342,6 @@ describe('MultipleSectionsAssigner', () => {
 
     expect(updateHiddenScript).to.have.been.calledOnce;
     expect(assignToSection).to.have.been.calledOnce;
-    expect(testingFunction).to.have.been.calledOnce;
     expect(reassignConfirm).to.have.been.calledOnce;
     expect(assignToSection).to.have.been.calledWith(
       unassignedSection.id,

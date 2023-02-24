@@ -7,21 +7,11 @@ import TeacherSectionOption from '@cdo/apps/templates/TeacherSectionOption';
 
 describe('TeacherSectionOption', () => {
   const assignedCourseANDUnitSection = fakeTeacherSectionsForDropdown[5];
-  const allAssignedSections = [];
-  // I don't actually need to make this list for testing.
-  // check with team on best approach here.
-  for (let i = 0; i < fakeTeacherSectionsForDropdown.length; i++) {
-    fakeTeacherSectionsForDropdown[i].isAssigned &&
-    fakeTeacherSectionsForDropdown[i].courseId === 43
-      ? allAssignedSections.push(fakeTeacherSectionsForDropdown[i])
-      : null;
-  }
   const changeFunction = sinon.fake();
 
   const defaultProps = {
     section: assignedCourseANDUnitSection,
     onChange: changeFunction,
-    assignedSections: allAssignedSections,
     isChecked: true
   };
   const setUp = (overrideProps = {}) => {

@@ -211,30 +211,6 @@ function removeNullValues(key, val) {
   return val;
 }
 
-// Let's see if I can get this function to run.
-export const testingFunction = (
-  sectionId,
-  courseId,
-  courseOfferingId,
-  courseVersionId,
-  unitId,
-  pageType
-) => {
-  console.log('RunningFunctionFromRedux');
-  return (dispatch, getState) => {
-    dispatch(beginEditingSection(sectionId, true));
-    dispatch(
-      editSectionProperties({
-        courseId: courseId,
-        courseOfferingId: courseOfferingId,
-        courseVersionId: courseVersionId,
-        unitId: unitId
-      })
-    );
-    return dispatch(finishEditingSection(pageType));
-  };
-};
-
 /**
  * Assigns a course to a given section, persisting these changes to
  * the server
