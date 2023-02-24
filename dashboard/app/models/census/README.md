@@ -37,14 +37,6 @@ We get data from some states that list which schools teach which Computer Scienc
 
 [bin/oneoff/census/state_data](https://github.com/code-dot-org/code-dot-org/tree/staging/bin/oneoff/census/state-data) has scripts that were used to work with state data.
 
-## Inaccuracy Investigations and Overrides
-
-If somebody submits a survey indicating that they think the data we have is wrong then that reported inaccuracy will appear for review at https://studio.code.org/census/review (you need to have `census_reviewer` permissions to view that page.) After reviewing the report, a row will be created in `census_inaccuracy_investigations`. The reviewer can choose to override the summary for the school as part of the review process. In that case we will also create a row in the `census_overrides` table. That row will be referenced by the `census_inaccuracy_investigations` row.
-
-See also:
-* [The controller for the review page](https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/controllers/census_reviewers_controller.rb)
-* [The react component for the  review page](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/templates/census2017/CensusInaccuracyReview.jsx)
-
 # Summarization
 
 Each school may have multiple data points for the same school year. All of that data is aggregated into a simple summary that says if we believe the school teaches/taught Computer Science in a given year. The possible values are:
@@ -58,11 +50,11 @@ Each school may have multiple data points for the same school year. All of that 
 * **Null** - We did not have any data to process for this school
 
 Historical values are only used when we don't have data for the current year. The summaries are stored in the `census_summaries` table. There should be a row for each school in the `schools` table for each school year that we've computed summaries.
-Summaries are recomputed every night via a [cron job](https://github.com/code-dot-org/code-dot-org/blob/staging/bin/cron/update_census_mapbox) which uploads the current year's summaries to a public MapBox layer and powers the map shown on /yourschool.
+
+As of 2023, the RED team provides the engineering team with a csv file containing the full list of census summaries. The engineering team uses that file to update the public MapBox layer which powers the map shown on /yourschool.
 
 # Mapping from `census_submissions` column names to census questions
 Topic questions only show up for those who indicated that their school has a 10 or 20 hr class.
-INACCURACY_REPORTED and INACCURACY_COMMENT only show when the user clicks the "I believe that the categorization for this school is inaccurate" link from the map info window.
 
 | Column Name | Question |
 | ----------- | -------- |
@@ -87,10 +79,12 @@ INACCURACY_REPORTED and INACCURACY_COMMENT only show when the user clicks the "I
 | TELL_US_MORE | "Please tell us more about this course." |
 | PLEDGED | "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all." |
 | SHARE_WITH_REGIONAL_PARTNERS | "Share my contact information with the Code.org regional partner in my state so I can be contacted about local professional learning, resources and events." |
-| INACCURACY_REPORTED | "I believe that the computer science categorization for this school is inaccurate" |
-| INACCURACY_COMMENT | "Explain why you think that the categorization for this school is inaccurate" |
+
+The census_submissions table is replicated into Redshift via [dms task](https://github.com/code-dot-org/code-dot-org/blob/80777d646a9351de59404fbd173c67799c43dbda/aws/dms/tasks.yml#L2), where the RED uses it as an input to compute whether a school teaches CS.
 
 # Historic Notes
+
+Before 2022, census summaries were computed via a nightly [cron job](https://github.com/code-dot-org/code-dot-org/blob/80777d646a9351de59404fbd173c67799c43dbda/bin/cron/update_census_mapbox) by an algorithm maintained by the engineering team.
 
 Originally, the Hour of Code and /yourschool census form submissions were written to the Pegasus `forms` table. That data was migrated into `census_submissions` and the mapping between the original `forms` row and the `census_submissions` row is stored in `census_submission_form_maps`. The old Pegasus form handlers are [here](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/forms/census.rb) and [here](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/forms/hoc_census.rb) and the script used to migrate the data is [here](https://github.com/code-dot-org/code-dot-org/blob/staging/bin/oneoff/move_census_data.rb). 
 

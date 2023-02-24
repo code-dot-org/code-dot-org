@@ -883,9 +883,6 @@ describe('entry tests', () => {
     'applab-api': './src/applab/api-entry.js',
     'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
-    'census_reviewers/review_reported_inaccuracies':
-      './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
-
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
   };

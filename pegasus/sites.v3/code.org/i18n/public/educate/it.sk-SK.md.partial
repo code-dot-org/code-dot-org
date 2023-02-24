@@ -101,7 +101,7 @@ Na vkladanie videí do Code.org a do [vzdelávacej platformy online](https://stu
 
 Pred začatím kurzov na stránke Code.org, si skúste prehrať video zobrazené nižšie a uistite sa, že všetko prebieha v poriadku.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Tento prehrávač sa používa v celom učebnom pláne. Pokúsi sa vám zobraziť video prostredníctvom služby YouTube a v prípade, že je táto služba zablokovaná, zobrazí video zo „záložného“ prehrávača od Code.org.
 

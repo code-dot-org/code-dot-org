@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>CS कनेक्शन क्रियाकलाप पूर्ण केला आणि/किंवा आपल्या वर्गासाठी अधिक पर्याय शोधत आहात? कृपया येथे अधिक धड्यांसाठी <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">तुमचा अभिप्राय आणि कल्पना शेअर करा</a>!</em>
+
+{{ visit_partial_event_logger }}

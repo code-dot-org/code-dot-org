@@ -108,8 +108,12 @@ export const triggeredAtSimple2 = {
     tooltip: 'at trigger',
     extensions: [DYNAMIC_TRIGGER_EXTENSION]
   },
-  generator: () =>
+  generator: block =>
     ` var __insideWhenRun = false;
+      var __currentFunction = {
+        name: '${block.getFieldValue(TRIGGER_FIELD)}',
+        uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
+      };
       ProgramSequencer.playSequentialWithMeasure(
         Math.ceil(
           MusicPlayer.getCurrentPlayheadPosition()
@@ -270,4 +274,72 @@ export const playSoundsSequential = {
       ${Blockly.JavaScript.statementToCode(block, 'code')}
       ProgramSequencer.endSequential();
       `
+};
+
+export const repeatSimple2 = {
+  definition: {
+    type: BlockTypes.REPEAT_SIMPLE2,
+    message0: 'repeat %1 times',
+    args0: [
+      {
+        type: 'input_value',
+        name: 'times'
+      }
+    ],
+    message1: 'do %1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'code'
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'loop_blocks',
+    tooltip: 'repeat',
+    helpUrl: ''
+  },
+  generator: block => {
+    const repeats =
+      Blockly.JavaScript.valueToCode(
+        block,
+        'times',
+        Blockly.JavaScript.ORDER_ASSIGNMENT
+      ) || 0;
+
+    let branch = Blockly.JavaScript.statementToCode(block, 'code');
+    branch = Blockly.JavaScript.addLoopTrap(branch, block);
+    let code = '';
+    const loopVar = Blockly.JavaScript.nameDB_.getDistinctName(
+      'count',
+      Blockly.Names.NameType.VARIABLE
+    );
+    let endVar = repeats;
+    if (!repeats.match(/^\w+$/) && !Blockly.utils.string.isNumber(repeats)) {
+      endVar = Blockly.JavaScript.nameDB_.getDistinctName(
+        'repeat_end',
+        Blockly.Names.NameType.VARIABLE
+      );
+      code += 'var ' + endVar + ' = ' + repeats + ';\n';
+    }
+    code +=
+      'for (var ' +
+      loopVar +
+      ' = 0; ' +
+      loopVar +
+      ' < ' +
+      endVar +
+      '; ' +
+      loopVar +
+      '++) {\n' +
+      branch +
+      '}\n';
+
+    return `
+      ProgramSequencer.playSequential();
+      ${code}
+      ProgramSequencer.endSequential();
+      `;
+  }
 };
