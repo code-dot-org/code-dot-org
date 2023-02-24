@@ -370,7 +370,7 @@
       }
 
       if ($.contains(document, target)) {
-        this.simulateEvent(target, "pointerup", eventOptions);
+        this.simulateEvent(target.ownerDocument, "pointerup", eventOptions);
         this.simulateEvent(target, "click", eventOptions);
       } else {
         this.simulateEvent(document, "pointerup", eventOptions);
