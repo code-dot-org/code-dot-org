@@ -1,6 +1,6 @@
 require pegasus_dir('router')
 require 'cdo/http_cache'
-require cookbooks_dir('cdo-varnish/libraries/helpers')
+require 'cdo/legacy_varnish_helpers'
 
 # Simple Rack middleware that forwards requests to Pegasus or Dashboard where appropriate.
 # Matches `Host` HTTP request headers against standard Pegasus hosts.
@@ -17,7 +17,7 @@ class PegasusSites
       hourofcode.com
       advocacy.code.org
     ).concat(CDO.partners.map {|partner| "#{partner}.code.org"})
-    @pegasus_hosts = pegasus_domains.map {|i| canonical_hostname(i)}
+    @pegasus_hosts = pegasus_domains.map {|i| CDO.canonical_hostname(i)}
     @config = HttpCache.config(rack_env)
   end
 
@@ -34,7 +34,7 @@ class PegasusSites
 
     # Process HTTP-cache `proxy` values for path-specific behavior.
     config = @config[backend][:behaviors] + [@config[backend][:default]]
-    behavior = behavior_for_path(config, path)
+    behavior = LegacyVarnishHelpers.behavior_for_path(config, path)
     if (proxy = behavior[:proxy])
       if proxy == 'pegasus'
         backend = :pegasus

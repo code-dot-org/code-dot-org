@@ -327,7 +327,11 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :course_offerings, only: [:edit, :update], param: 'key'
+    resources :course_offerings, only: [:edit, :update], param: 'key' do
+      collection do
+        get 'quick_assign_course_offerings'
+      end
+    end
 
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
@@ -564,8 +568,6 @@ Dashboard::Application.routes.draw do
     put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
     get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
     post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
-    get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
-    post '/census/review', to: 'census_reviewers#create'
 
     get '/admin/styleguide', to: redirect('/styleguide/')
 

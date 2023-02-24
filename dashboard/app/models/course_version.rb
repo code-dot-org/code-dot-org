@@ -184,6 +184,20 @@ class CourseVersion < ApplicationRecord
     ]
   end
 
+  def summarize_for_quick_assign(user, locale_code)
+    {
+      id: id,
+      key: key,
+      version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
+      name: content_root.localized_title,
+      path: content_root.link,
+      type: content_root_type,
+      is_stable: stable?,
+      is_recommended: recommended?(locale_code),
+      locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names
+    }
+  end
+
   def self.unit_group_course_versions_with_units(unit_ids)
     CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
   end
