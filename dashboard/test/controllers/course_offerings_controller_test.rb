@@ -51,19 +51,4 @@ class CourseOfferingsControllerTest < ActionController::TestCase
     assert_equal 'full_course', course_offering.category
     assert_equal false, course_offering.is_featured
   end
-
-  test 'quick_assign_course_offerings returns offerings for elementary, middle, and high' do
-    user = create :user
-    sign_in user
-
-    create :course_offering, grade_levels: 'K,1,2,3,4,5', curriculum_type: 'Course', header: 'Test'
-    create :course_offering, grade_levels: '6,7,8', curriculum_type: 'Course', header: 'Test'
-    create :course_offering, grade_levels: '9,10,11,12', curriculum_type: 'Course', header: 'Test'
-
-    get :quick_assign_course_offerings
-
-    quick_assign_blob = JSON.parse(@response.body)
-
-    puts quick_assign_blob.inspect
-  end
 end

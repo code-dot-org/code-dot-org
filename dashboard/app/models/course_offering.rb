@@ -35,15 +35,9 @@ class CourseOffering < ApplicationRecord
     with: KEY_RE,
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
 
-<<<<<<< HEAD
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
-=======
-  ES_GRADES = %w[K 1 2 3 4 5].freeze
-  MS_GRADES = %w[6 7 8].freeze
-  HS_GRADES = %w[9 10 11 12].freeze
->>>>>>> Dynamically fetch the course offerings for quick assign
 
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
