@@ -463,8 +463,7 @@ class Blockly < Level
     end
 
     start_html_xml.serialize(
-      save_with: XML_OPTIONS | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS,
-      encoding: 'UTF-8'
+      save_with: XML_OPTIONS | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS
     ).strip
   end
 
