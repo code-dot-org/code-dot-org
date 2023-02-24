@@ -19,7 +19,10 @@ const coreBlocklyStyles = {
   }
 };
 
-const blockStyles = {...coreBlocklyStyles, ...cdoBlockStyles};
+const blockStyles = {
+  ...coreBlocklyStyles,
+  ...JSON.parse(JSON.stringify(cdoBlockStyles))
+};
 
 var accessiblePalette = {
   // The colors here come Martin Krzywinski's 24-color palette for colorblindness:
