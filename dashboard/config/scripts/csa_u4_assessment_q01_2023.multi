@@ -18,3 +18,11 @@ System.out.print(val + " ");
 
 What is printed as a result of executing the code segment?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The first line assigns the value `1.0` to `val`. The expression `3 / 2` consists of two `int` values, so it the decimal portion is truncated (dropped), resulting in `1`. Since `val` is a `double`, the result is widened to a `double`, becoming `1.0`. This results in `1.0 ` being printed in the second line.
+
+The third line uses the `(int)` casting operator to cast the value assigned to `val` as an `int` value. This results in `1` being printed, but the value assigned to `val` is still `1.0`.
+
+The final line prints the value assigned to `val` again, which is still `1.0`. Casting a value does not change the original value.
+MARKDOWN

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-02-22 21:05:23 UTC",
+    "serialized_at": "2023-02-23 21:29:40 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -586,6 +586,30 @@
       },
       "seeding_key": {
         "activity_section.key": "58a6d761-adad-465f-b191-8bbdf1d41872",
+        "lesson_activity.key": "15eaf8a7-b87e-4855-a66f-f762fe1796b0"
+      }
+    },
+    {
+      "key": "00266aab-3a03-48ad-b46e-b148c8cb071c",
+      "position": 8,
+      "properties": {
+        "description": "See below:",
+        "name": "[TESTING]"
+      },
+      "seeding_key": {
+        "activity_section.key": "00266aab-3a03-48ad-b46e-b148c8cb071c",
+        "lesson_activity.key": "15eaf8a7-b87e-4855-a66f-f762fe1796b0"
+      }
+    },
+    {
+      "key": "fc8dfdf1-43ae-416c-a132-b0459f760fba",
+      "position": 9,
+      "properties": {
+        "description": "This lesson is designed for students to write a time capsule from their own point of view, and can easily be adapted for students to write from another’s perspective. You may choose to have students write a time capsule from the point of view of a local or national historical figure, another student their own age living in a different region, or a character from a book. We encourage you to choose the option that aligns best with your content area standards.",
+        "name": "[Optional] Extension Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc8dfdf1-43ae-416c-a132-b0459f760fba",
         "lesson_activity.key": "15eaf8a7-b87e-4855-a66f-f762fe1796b0"
       }
     },
