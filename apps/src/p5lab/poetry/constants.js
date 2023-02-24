@@ -285,5 +285,14 @@ export const POEMS = {
 };
 
 export const TIME_CAPSULE_POEMS = {
-  pat: {author: 'Pat Y.'}
+  pat: {author: 'Pat Y.'},
+  erin: {author: 'Erin P.'},
+  aryanna: {author: 'Aryanna T.'},
+  tj: {author: 'TJ'},
+  erik: {author: 'Erik D.'},
+  aaron: {author: 'Aaron H.'},
+  noemi: {author: 'Noemi R.'},
+  ken: {author: 'Ken A.'},
+  mike: {author: 'Mike H.'},
+  jess: {author: 'Jess B.'}
 };
