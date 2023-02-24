@@ -19,26 +19,8 @@
   border-radius: 4px;
   font-family: "Gotham 5r", sans-serif;
   line-height: 18px;
-  padding: 0;
-  border: 0;
-
   &:hover {
-    box-shadow: none;
     background-color: color.$cyan;
-  }
-
-  &:disabled {
-    background-color: color.$light_gray;
-    cursor: default;
-    border: 0;
-    &:hover {
-      background-color: color.$cyan;
-    }
-  }
-
-  span {
-    color: color.$neutral_white;
-    font-size: 13px;
   }
 
   &Rtl {
