@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Spinner from '../components/spinner.jsx';
-import ConfirmationDialog from '../components/confirmation_dialog';
 import $ from 'jquery';
 import {Button} from 'react-bootstrap';
+import Spinner from '../components/spinner.jsx';
+import ConfirmationDialog from '../components/confirmation_dialog';
+import {SendAdminApprovalEmailStatuses} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 
 export default class PrincipalApprovalButtons extends React.Component {
   static propTypes = {
@@ -13,7 +14,6 @@ export default class PrincipalApprovalButtons extends React.Component {
       PropTypes.string,
       PropTypes.number
     ]).isRequired,
-    showSendEmailButton: PropTypes.bool,
     showResendEmailButton: PropTypes.bool,
     showChangeRequirementButton: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
@@ -24,14 +24,12 @@ export default class PrincipalApprovalButtons extends React.Component {
   constructor(props) {
     super(props);
 
-    const appStatusesForSendingEmail = ['awaiting_admin_approval'];
-
     this.state = {
       sendEmailRequest: null,
       notRequiredRequest: null,
-      showSendEmailButton:
-        appStatusesForSendingEmail.includes(this.props.applicationStatus) &&
-        (this.props.showSendEmailButton || this.props.showResendEmailButton),
+      showResendEmailButton:
+        SendAdminApprovalEmailStatuses.includes(this.props.applicationStatus) &&
+        this.props.showResendEmailButton,
       showChangeRequirementButton: this.props.showChangeRequirementButton,
       showResendEmailConfirmation: false,
       approvalRequired: this.props.approvalRequired
@@ -57,7 +55,7 @@ export default class PrincipalApprovalButtons extends React.Component {
       this.props.onChange(this.props.applicationId, data.principal_approval);
       this.setState({
         sendEmailRequest: null,
-        showSendEmailButton: false
+        showResendEmailButton: false
       });
     });
 
@@ -101,17 +99,13 @@ export default class PrincipalApprovalButtons extends React.Component {
     this.setState({changeRequirementRequest});
   };
 
-  renderSendEmailButton() {
+  renderResendEmailButton() {
     if (this.state.sendEmailRequest) {
       return <Spinner size="small" />;
     }
 
-    const buttonOnClick = this.props.showResendEmailButton
-      ? this.handleResendEmailClick
-      : this.handleSendEmailClick;
-    const buttonText = this.props.showResendEmailButton
-      ? 'Resend request'
-      : 'Send email';
+    const buttonOnClick = this.handleResendEmailClick;
+    const buttonText = 'Resend request';
 
     return (
       <div>
@@ -163,7 +157,7 @@ export default class PrincipalApprovalButtons extends React.Component {
         <div style={styles.element}>
           {this.state.approvalRequired ? 'Is Required' : 'Not Required'}
         </div>
-        {this.state.showSendEmailButton && this.renderSendEmailButton()}
+        {this.state.showResendEmailButton && this.renderResendEmailButton()}
         {this.state.showChangeRequirementButton &&
           this.renderChangeRequirementButton()}
       </div>

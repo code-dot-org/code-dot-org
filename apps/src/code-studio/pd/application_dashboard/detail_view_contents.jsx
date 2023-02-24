@@ -878,7 +878,6 @@ export class DetailViewContents extends React.Component {
                 }
                 onChange={this.handlePrincipalApprovalChange}
                 showChangeRequirementButton={true}
-                showSendEmailButton={false}
                 applicationStatus={this.props.applicationData.status}
                 approvalRequired={this.state.principalApprovalIsRequired}
               />
@@ -900,7 +899,6 @@ export class DetailViewContents extends React.Component {
           )}
           <PrincipalApprovalButtons
             applicationId={this.props.applicationId}
-            showSendEmailButton={false}
             showChangeRequirementButton={true}
             onChange={this.handlePrincipalApprovalChange}
             applicationStatus={this.props.applicationData.status}
