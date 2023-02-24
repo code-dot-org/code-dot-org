@@ -45,7 +45,7 @@ h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
 
-// Use these classes to change a section's background color.
+// Use these classes to change a section's background color
 section.bg-neutral-light { background-color: $neutral_light; }
 section.bg-neutral-dark { background-color: $neutral_dark; }
 section.bg-primary { background-color: rgba($brand_primary_light, .5); }
@@ -56,7 +56,7 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 
 // Removes the bottom margin —
 // often helpful on a last paragraphs or list elements
-// to maintain consistent white space between sections.
+// to maintain consistent white space between sections
 .no-margin-bottom { margin-bottom: 0 !important;}
 
 // FontAwesome icon defaults
@@ -74,12 +74,12 @@ p {
   margin-bottom: 1em;
 
   // For use on course block descriptions or anywhere
-  // else that needs smaller paragraph text.
+  // else that needs smaller paragraph text
   &.body-two {
     font-size: .875em;
   }
 
-  // For use on a section w/ a single message and call-to-action.
+  // For use on a section w/ a single message and call-to-action
   &.callout {
     font-size: 1.25em;
     font-family: $gotham-bold;
@@ -351,6 +351,12 @@ ol.steps-list {
     @media screen and (max-width: $width-sm) {
       width: 100%;
     }
+
+    a.link-button,
+    button,
+    .btn {
+      min-width: unset;
+    }
   }
 
   h3 {
@@ -369,7 +375,7 @@ ol.steps-list {
 
       // This creates the light blue border around the
       // charcoal border — would prefer to use the outline
-      // attribute but it doesn't work in Safari.
+      // attribute but it doesn't work in Safari
       &::before {
         content: "";
         position: absolute;
@@ -434,7 +440,7 @@ details {
   }
 
   // Uses FontAwesome arrow icons to
-  // denote open and close states.
+  // denote open and close states
   & summary::after {
     font: var(--fa-font-solid);
     content: "\f107";
@@ -553,7 +559,7 @@ form {
 
 // Single column action blocks
 // Note: set the height of the <p> tag inline to maintain
-// height consistency between cards in a wrapper.
+// height consistency between cards in a wrapper
 .action-block--one-col {
   flex-wrap: wrap;
   padding: 1em 1.5em;
@@ -597,8 +603,8 @@ form {
 
 // Quotes carousel
 // See code.org/educate/professional-learning/middle-high
-// and /views/pl_middle_high_carousel.haml for an example.
-// Uses the carouFredSel jQuery plugin - https://github.com/nzy/carouFredSel
+// and /views/pl_middle_high_carousel.haml for an example
+// – uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
 .quotes-wrapper {
 
   img {
@@ -623,8 +629,9 @@ form {
       padding-bottom: 1em;
     }
 
-    // Set a min-height inline on the .carousel div inside .carousel-wrapper
-    // to account for varying quote lengths and prevent vertical height changes.
+    // Set a min-height inline on the .carousel div
+    // inside .carousel-wrapper to account for varying
+    // quote lengths and prevent vertical height changes
     .carousel {
       overflow: hidden;
 
