@@ -6,10 +6,12 @@ module QuickAssignHelper
     assignable_elementary_offerings = assignable_offerings.filter(&:elementary_school_level?)
     assignable_middle_offerings = assignable_offerings.filter(&:middle_school_level?)
     assignable_high_offerings = assignable_offerings.filter(&:high_school_level?)
+    assignable_hoc_offerings = assignable_offerings.filter(&:hoc?)
 
     offerings[:elementary] = group_offerings(assignable_elementary_offerings, user, locale)
     offerings[:middle] = group_offerings(assignable_middle_offerings, user, locale)
     offerings[:high] = group_offerings(assignable_high_offerings, user, locale)
+    offerings[:hoc] = group_hoc_offerings(assignable_hoc_offerings, user, locale)
 
     offerings
   end
@@ -37,6 +39,22 @@ module QuickAssignHelper
       data[curriculum_type] = data[curriculum_type].sort.to_h
     end
 
+    data
+  end
+
+  def self.group_hoc_offerings(course_offerings, user, locale)
+    data = {}
+    course_offerings.each do |co|
+      next if co.header.blank?
+
+      data[co.header] ||= []
+      data[co.header].append(co.summarize_for_quick_assign(user, locale))
+    end
+
+    data.keys.each do |header|
+      data[header].sort_by! {|co| co[:display_name]}
+    end
+    data = data.sort.to_h
     data
   end
 end
