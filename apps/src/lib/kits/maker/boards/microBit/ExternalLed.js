@@ -1,6 +1,5 @@
 export default class ExternalLed {
   constructor(opts) {
-    //TODO - limit to the GPIO pins on MB?
     this.board = opts.board;
     this.pin = opts.pin;
     this.isOn = false;
