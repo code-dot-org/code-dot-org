@@ -324,6 +324,7 @@
   "chromebook": "Chromebook",
   "className": "Class Name",
   "classProgress": "Class Progress",
+  "classSection": "Class Section",
   "classSectionNum": "Class Section #{num}",
   "clearTable": "Clear table",
   "clearPuzzle": "Start Over",
