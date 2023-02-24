@@ -18,8 +18,7 @@ const initialState = {
   projectType: null,
   isPublishPending: false,
   lastPublishedAt: null,
-  lastPublishedProjectData: null,
-  publishFailedStatus: null
+  lastPublishedProjectData: null
 };
 
 export default function reducer(state = initialState, action) {

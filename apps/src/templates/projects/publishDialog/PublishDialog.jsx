@@ -17,7 +17,6 @@ class PublishDialog extends Component {
     isPublishPending: PropTypes.bool.isRequired,
     projectId: PropTypes.string,
     projectType: PropTypes.string,
-    publishFailedStatus: PropTypes.number,
 
     // from redux dispatch
     onClose: PropTypes.func.isRequired,
@@ -134,8 +133,7 @@ export default connect(
     isOpen: state.publishDialog.isOpen,
     isPublishPending: state.publishDialog.isPublishPending,
     projectId: state.publishDialog.projectId,
-    projectType: state.publishDialog.projectType,
-    publishFailedStatus: state.publishDialog.publishFailedStatus
+    projectType: state.publishDialog.projectType
   }),
   dispatch => ({
     onClose() {
