@@ -7,7 +7,7 @@ Scenario: Teacher submits inline mini-contact form after adding zip
   Given I create a teacher named "Severus"
 
   # By using a teacher account, the email field will be prepopulated.
-  And I am on "https://code.org/educate/professional-learning/contact-regional-partner"
+  And I am on "http://code.org/educate/professional-learning/contact-regional-partner"
   And I wait until element "#regional-partner-mini-contact-form-contact-regional-partner" is visible
   And I press "#submit" using jQuery
 
@@ -24,7 +24,7 @@ Scenario: Teacher submits inline mini-contact form after adding zip
 
 Scenario: Teacher submits inline mini-contact form after adding zip and email
   Given I create a teacher named "Severus"
-  And I am on "https://code.org/educate/professional-learning/contact-regional-partner"
+  And I am on "http://code.org/educate/professional-learning/contact-regional-partner"
   And I wait until element "#regional-partner-mini-contact-form-contact-regional-partner" is visible
   And I dismiss the language selector
 
