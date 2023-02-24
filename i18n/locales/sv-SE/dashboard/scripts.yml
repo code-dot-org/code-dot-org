@@ -1900,6 +1900,10 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

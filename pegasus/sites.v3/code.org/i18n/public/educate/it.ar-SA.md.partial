@@ -101,7 +101,7 @@ theme: responsive
 
 قبل أن تبدأ دورات منصة Code.org عبر الإنترنت، اختبر تشغيل الفيديو أدناه للتأكد من أنك جاهز للبدء.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 هذا هو مشغل الفيديو المستخدم في المنهج. سيحاول عرض الفيديو عبر يوتيوب، وإذا تم حظر موقع يوتيوب، يمكنك إظهار الفيديو المستضاف على منصة Code.org باستخدام المشغل "الاحتياطي" بدلاً من ذلك.
 

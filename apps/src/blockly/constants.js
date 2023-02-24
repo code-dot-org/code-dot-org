@@ -11,7 +11,8 @@ export const Themes = {
   MODERN: 'modern',
   DARK: 'dark',
   MUSICLAB_DARK: 'musiclabdark',
-  HIGH_CONTRAST: 'highContrast'
+  HIGH_CONTRAST: 'highContrast',
+  ACCESSIBLE: 'accessible'
 };
 
 // Used for custom field type ClampedNumber(,)

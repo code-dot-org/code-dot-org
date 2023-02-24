@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org-kurs blir brukt av mange millionar av elevar og av ein million lærarar over heile verda.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Historikk
 
 I 2013 vart Code.org lansert av tvillingbrødrene Hadi og Ali Partovi med ein [video som fremma programmering](https://www.youtube.com/watch?v=nKIu9yen5nc). Denne videoen vart #1 på YouTube for ein dag og 15.000 skular tok kontakt med oss for å få hjelp. Sidan då har vi vokst frå frivillige til å byggje ein stor organisasjon som støtter ei verdsomfattande rørsle. Vi trur at ei god utdanning i programmering skal vere tilgjengeleg for kvart barn, ikkje berre nokre heldige få.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Dette gjer vi
 
