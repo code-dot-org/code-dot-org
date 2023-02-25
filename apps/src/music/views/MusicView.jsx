@@ -253,28 +253,29 @@ class UnconnectedMusicView extends React.Component {
   };
 
   compileSong = () => {
-    return this.musicBlocklyWorkspace.compileSong();
-  };
-
-  executeCompiledSong = () => {
-    this.musicBlocklyWorkspace.executeCompiledSong({
+    return this.musicBlocklyWorkspace.compileSong({
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
       getTriggerCount: () => this.triggerCount
     });
   };
 
+  executeCompiledSong = () => {
+    this.musicBlocklyWorkspace.executeCompiledSong();
+  };
+
   playSong = () => {
     this.player.stopSong();
 
-    const codeChanged = this.compileSong();
-    if (codeChanged) {
-      // Clear the events list of when_run sounds, because it will be
-      // populated next.
-      this.player.clearWhenRunEvents();
+    //const codeChanged =
+    this.compileSong();
+    //if (codeChanged) {
+    // Clear the events list of when_run sounds, because it will be
+    // populated next.
+    this.player.clearWhenRunEvents();
 
-      this.executeCompiledSong();
-    }
+    this.executeCompiledSong();
+    //}
 
     this.player.playSong();
 

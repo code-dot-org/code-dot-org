@@ -42,6 +42,7 @@ export class GeneratorHelpersSimple2 {
       name: 'when_run',
       uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
     };
+    var __skipSound = false;
     ProgramSequencer.init();
     ProgramSequencer.playTogether();
     ${functionCallsCode}
@@ -85,6 +86,7 @@ export const whenRunSimple2 = {
         name: 'when_run',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __skipSound = false;
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
     `
@@ -112,6 +114,7 @@ export const triggeredAtSimple2 = {
         name: '${block.getFieldValue(TRIGGER_FIELD)}',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __skipSound = false;
       ProgramSequencer.playSequentialWithMeasure(
         Math.ceil(
           MusicPlayer.getCurrentPlayheadPosition()
@@ -144,13 +147,15 @@ export const playSoundAtCurrentLocationSimple2 = {
   },
   generator: block =>
     `
-      MusicPlayer.playSoundAtMeasureById(
-        "${block.getFieldValue(FIELD_SOUNDS_NAME)}",
-        ProgramSequencer.getCurrentMeasure(),
-        __insideWhenRun,
-        null,
-        __currentFunction
-      );
+      if (!__skipSound) {
+        MusicPlayer.playSoundAtMeasureById(
+          "${block.getFieldValue(FIELD_SOUNDS_NAME)}",
+          ProgramSequencer.getCurrentMeasure(),
+          __insideWhenRun,
+          null,
+          __currentFunction
+        );
+      }
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
           "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
@@ -239,6 +244,111 @@ export const playSoundsSequential = {
       ProgramSequencer.endSequential();
       `
 };
+
+export const playSoundsRandom = {
+  definition: {
+    type: BlockTypes.PLAY_SOUNDS_RANDOM,
+    message0: 'play random',
+    args0: [],
+    message1: '%1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'code'
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'flow_blocks',
+    tooltip: 'play sound randomly',
+    helpUrl: ''
+  },
+  generator: block => {
+    const resultArray = [];
+    let currentBlock = block.getInputTargetBlock('code');
+    while (currentBlock) {
+      const codeForBlock = getCodeForSingleBlock(currentBlock);
+      resultArray.push(codeForBlock);
+      currentBlock = currentBlock.getNextBlock();
+    }
+    // Do stuff with resultArray.
+    //console.log(resultArray);
+    const randomVar = Blockly.JavaScript.nameDB_.getDistinctName(
+      'random',
+      Blockly.Names.NameType.VARIABLE
+    );
+
+    const code =
+      `
+      var ${randomVar} = Math.floor(Math.random() * ${resultArray.length});
+    ` +
+      resultArray
+        .map(
+          (result, resultIndex) => `
+      __skipSound = ${randomVar} !== ${resultIndex};
+      ${result}
+      __skipSound = false;
+    `
+        )
+        .join('\n');
+
+    return ` ProgramSequencer.playTogether();
+      ${code}
+      ProgramSequencer.endTogether();
+      `;
+  }
+};
+
+/**
+ * Generate code for the specified block but not following blocks.
+ * Adapted from this thread: https://groups.google.com/g/blockly/c/uXewhtr-mvM
+ * @param {Blockly.Block} block The block to generate code for.
+ * @return {string|!Array} For statement blocks, the generated code.
+ *     For value blocks, an array containing the generated code and an
+ *     operator order value.  Returns '' if block is null.
+ */
+function getCodeForSingleBlock(block) {
+  if (!block) {
+    return '';
+  }
+  if (block.disabled) {
+    // Skip past this block if it is disabled.
+    return getCodeForSingleBlock(block.getNextBlock());
+  }
+
+  var func = Blockly.JavaScript[block.type];
+  if (typeof func !== 'function') {
+    throw Error(
+      'Language "JavaScript" does not know how to generate ' +
+        'code for block type: ' +
+        block.type
+    );
+  }
+  // First argument to func.call is the value of 'this' in the generator.
+  // Prior to 24 September 2013 'this' was the only way to access the block.
+  // The current preferred method of accessing the block is through the second
+  // argument to func.call, which becomes the first parameter to the generator.
+  var code = func.call(block, block);
+  if (Array.isArray(code)) {
+    // Value blocks return tuples of code and operator order.
+    if (!block.outputConnection) {
+      throw Error('Expecting string from statement block: ' + block.type);
+    }
+    return [code[0], code[1]];
+  } else if (typeof code === 'string') {
+    //var id = block.id.replace(/\$/g, '$$$$'); // Issue 251.
+    //if (this.STATEMENT_PREFIX) {
+    //  code = this.STATEMENT_PREFIX.replace(/%1/g, "'" + id + "'") + code;
+    //}
+    return code;
+  } else if (code === null) {
+    // Block has handled code generation itself.
+    return '';
+  } else {
+    throw Error('Invalid code generated: ' + code);
+  }
+}
 
 export const repeatSimple2 = {
   definition: {

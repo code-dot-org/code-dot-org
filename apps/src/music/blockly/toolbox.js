@@ -59,6 +59,10 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL
   },
+  [BlockTypes.PLAY_SOUNDS_RANDOM]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_RANDOM
+  },
   [BlockTypes.REPEAT_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.REPEAT_SIMPLE2,
@@ -344,6 +348,7 @@ export function getToolbox() {
             BlockTypes.TRIGGERED_AT_SIMPLE2,
             BlockTypes.PLAY_SOUNDS_TOGETHER,
             BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+            BlockTypes.PLAY_SOUNDS_RANDOM,
             BlockTypes.REPEAT_SIMPLE2
           ]
         },
