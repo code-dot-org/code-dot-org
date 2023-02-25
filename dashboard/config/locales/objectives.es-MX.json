@@ -1814,8 +1814,14 @@
         "9cffd1e7-8cf5-43a8-800e-2aab85f50f5b": {
           "description": "Presentar claramente información técnica a usuarios no técnicos"
         },
+        "1f78c6a5-ed31-43ec-b895-c6a8e229ffaa": {
+          "description": "Describe las repercusiones del dispositivo en la sociedad"
+        },
         "3f866c04-e2cf-4699-9575-cce49347325a": {
           "description": "Identificar las innovaciones en computación dentro de un ámbito específico"
+        },
+        "4f3e3425-fbaf-46ed-a48b-1a3c14c5e784": {
+          "description": "Describe las entradas y salidas de un dispositivo"
         },
         "0f02698b-9d9b-490c-8823-ee026fad162d": {
           "description": "Encender y apagar un LED utilizando código"
@@ -1823,8 +1829,62 @@
         "2ec25831-a76d-4ea0-903c-3083f9308f66": {
           "description": "Conectar y resolver problemas de dispositivos externos"
         },
+        "9947690d-e911-421e-aa62-8121dc0fd1a9": {
+          "description": "Controla el zumbador con código"
+        },
+        "3962774f-cd16-47f7-9420-a055b3719c0f": {
+          "description": "Responder a las entradas del usuario mediante manejadores de eventos"
+        },
+        "730b8299-5c8e-416d-8d6f-e1aaadd69907": {
+          "description": "Cambiar el texto de la pantalla mediante código"
+        },
         "ce118709-28f6-4348-9a5e-a7376dc85e5c": {
           "description": "Establecer las propiedades de los elementos de interfaz de usuario utilizando código"
+        },
+        "10fe1c8a-7919-47df-af4c-41263be5cb17": {
+          "description": "Utiliza un manejador de eventos de placa para controlar los botones del Circuit Playground."
+        },
+        "a1bcaaff-4c0b-4c36-9760-21b7fa57dd62": {
+          "description": "Utiliza un controlador de eventos de placa para controlar el interruptor de palanca en el Circuit Playground."
+        },
+        "4bb96cf0-81a4-4e02-a2cd-0bc3580dd98c": {
+          "description": "Utiliza variables para almacenar información al crear aplicaciones"
+        },
+        "76a6fe19-0c71-476a-96f9-700c0d6cfb97": {
+          "description": "Utiliza el patrón contador para actualizar variables al crear aplicaciones"
+        },
+        "bbbcb76a-3382-4462-af4e-22626e23fd47": {
+          "description": "Utiliza sentencias `if` para tomar decisiones al crear aplicaciones"
+        },
+        "49e90a99-f9de-46ef-99a7-2eaf55f2d453": {
+          "description": "Crea un proyecto que incorpore salidas de la pantalla de la aplicación"
+        },
+        "64bb39dd-fe82-4f01-ba0e-12e572301189": {
+          "description": "Crea un proyecto que incorpore variables y sentencias `if`"
+        },
+        "da9fca62-351d-4ba4-bf3e-a65bb33aeda6": {
+          "description": "Crea un proyecto que incorpore las entradas del Circuit Playground"
+        },
+        "c708b942-1da9-4d34-ad8e-e1dfed292704": {
+          "description": "Utiliza el bloque de LED de colores para controlar individualmente cada LED."
+        },
+        "59aee898-09e3-47ae-a2bc-30e5ab7a0e4d": {
+          "description": "Utiliza la entrada del usuario para actualizar elementos de la pantalla mediante código"
+        },
+        "dc0488da-8121-47f5-b94d-daa73fdb1d0e": {
+          "description": "Diseña aplicaciones utilizando los elementos de diseño de entrada de texto, desplegable y deslizante."
+        },
+        "dddc6f9a-d84a-4217-ae7f-86dd244ac4d7": {
+          "description": "Utiliza getProperty y getText para acceder a la entrada del usuario en la pantalla"
+        },
+        "7dd4e20b-3a70-4cab-8a36-494560bfbfe3": {
+          "description": "Utiliza las entradas del circuito para actualizar los elementos de la pantalla o producir salidas en el Circuit Playground."
+        },
+        "d6a096c7-7f32-4787-b0dd-8dd3ce85ab65": {
+          "description": "Uso de variables y sentencias `if` para interacciones complejas con el usuario"
+        },
+        "ecea80e7-e990-44d4-96e2-7523c983847a": {
+          "description": "Utiliza las entradas de los elementos de diseño de la aplicación para actualizar los elementos de la pantalla o producir una salida en el Circuit Playground."
         },
         "78d91696-530a-4830-bbdc-3a45ff7bb276": {
           "description": "Escalar un rango de números para satisfacer una necesidad específica"

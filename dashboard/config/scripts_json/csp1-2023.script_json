@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-12 22:23:21 UTC",
+    "serialized_at": "2023-02-24 00:06:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1903,6 +1903,19 @@
       }
     },
     {
+      "key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e",
+      "position": 2,
+      "properties": {
+        "description": "\n**Question:** Each time we add another bit, what happens to the amount of numbers we can make?\n\n**Question:** Two schools are merging and to adapt to the increased size of the student body, the school is changing its system for keeping track of all student IDs from a system that uses 4-bit binary numbers to one that uses 8-bit binary numbers (AKA 1 byte). Which of the following best describes what effect this change will have?",
+        "name": "Peer Instruction",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e",
+        "lesson_activity.key": "8e68bdb3-3d9a-4a98-94be-686af315d54d"
+      }
+    },
+    {
       "key": "a4beb150-d403-4c67-988c-26f3b8522dda",
       "position": 1,
       "properties": {
@@ -1963,7 +1976,7 @@
       "key": "7077e810-a7b2-4b13-8e7b-49b66a9ae441",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How many bits would be needed to count all of the students in class today?\r\n\r\n**Question:** Each time we add another bit, what happens to the amount of numbers we can make?\r\n\r\n**Question:** What are the similarities and differences between the binary and decimal systems?",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** How many bits would be needed to count all of the students in class today?\n\n**Question:** What are the similarities and differences between the binary and decimal systems?",
         "name": "Assessment: Check For Understanding\r",
         "progression_name": "Check for Understanding"
       },
@@ -4267,6 +4280,50 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Binary 4bit to 8bit CFU 2023"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2023",
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e"
+      },
+      "level_keys": [
+        "CSP Binary 4bit to 8bit CFU 2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 CFU adding bits_2023"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2023",
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e"
+      },
+      "level_keys": [
+        "U1L5 CFU adding bits_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
         "level_keys": [
           "U1L5 CFU how many bits_2023"
         ],
@@ -4287,34 +4344,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 2,
+      "chapter": 8,
+      "position": 4,
       "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U1L5 CFU adding bits_2023"
-        ],
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U1L5 CFU adding bits_2023"
-        ],
-        "lesson.key": "Binary Numbers",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2023",
-        "activity_section.key": "7077e810-a7b2-4b13-8e7b-49b66a9ae441"
-      },
-      "level_keys": [
-        "U1L5 CFU adding bits_2023"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 3,
-      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -4337,7 +4369,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4362,7 +4394,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4387,7 +4419,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4412,7 +4444,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4437,7 +4469,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4462,7 +4494,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4487,7 +4519,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4512,7 +4544,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4537,7 +4569,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4562,7 +4594,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4587,7 +4619,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 2,
       "assessment": true,
@@ -4612,7 +4644,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 3,
       "assessment": true,
@@ -4637,7 +4669,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4662,7 +4694,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4687,7 +4719,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4712,7 +4744,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4737,7 +4769,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4762,7 +4794,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4787,7 +4819,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4812,7 +4844,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -4837,7 +4869,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 9,
       "activity_section_position": 2,
       "assessment": true,
@@ -4862,7 +4894,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4887,7 +4919,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4912,7 +4944,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4937,7 +4969,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4962,7 +4994,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4987,7 +5019,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5012,7 +5044,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5037,7 +5069,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -5062,7 +5094,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5087,7 +5119,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5112,7 +5144,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5137,7 +5169,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5213,14 +5245,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "U1L5 CFU how many bits_2023",
+        "level.key": "CSP Binary 4bit to 8bit CFU 2023",
         "script_level.level_keys": [
-          "U1L5 CFU how many bits_2023"
+          "CSP Binary 4bit to 8bit CFU 2023"
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2023",
-        "activity_section.key": "7077e810-a7b2-4b13-8e7b-49b66a9ae441"
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e"
       }
     },
     {
@@ -5228,6 +5260,18 @@
         "level.key": "U1L5 CFU adding bits_2023",
         "script_level.level_keys": [
           "U1L5 CFU adding bits_2023"
+        ],
+        "lesson.key": "Binary Numbers",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2023",
+        "activity_section.key": "9c61a65a-90bc-435b-b6cd-23a2cb00ec7e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 CFU how many bits_2023",
+        "script_level.level_keys": [
+          "U1L5 CFU how many bits_2023"
         ],
         "lesson.key": "Binary Numbers",
         "lesson_group.key": "csp_unit1_2020",

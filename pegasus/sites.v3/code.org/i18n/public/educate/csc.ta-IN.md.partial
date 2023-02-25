@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>CS இணைப்புச் செயல்பாட்டை முடித்துவிட்டீர்களா மற்றும்/அல்லது உங்கள் வகுப்பறைக்கான கூடுதல் விருப்பங்களைத் தேடுகிறீர்களா? மேலும் பாடங்களுக்கான <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">உங்கள் கருத்தையும்</a> யோசனைகளையும் இங்கே பகிர்ந்துகொள்ளவும்!</em>
+
+{{ visit_partial_event_logger }}

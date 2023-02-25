@@ -51,7 +51,7 @@
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
         "code/poem-art/2021": {
-          "word": "ModeCodi"
+          "word": "Codi"
         },
         "event/poem-art/2021": {
           "word": "Esdeveniment",
@@ -109,7 +109,7 @@
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
         "code/artist/unversioned": {
-          "word": "ModeCodi",
+          "word": "Codi",
           "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
         },
         "debugging/artist/unversioned": {
@@ -225,7 +225,7 @@
           "definition": ""
         },
         "code/sports/unversioned": {
-          "word": "ModeCodi"
+          "word": "Codi"
         },
         "debugging/sports/unversioned": {
           "word": "Depuració",
@@ -291,6 +291,10 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
+        "machine_learning/oceans/unversioned": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
+        },
         "algorithm/coursed/2022": {
           "word": "Algorisme",
           "definition": "Llista de passos necessaris per fer una tasca."
@@ -315,8 +319,12 @@
           "word": "Programació",
           "definition": "L'art de crear un programa."
         },
+        "frustrated/coursed/2022": {
+          "word": "Frustrat",
+          "definition": "Sentir-se irritat o enfadat perquè alguna cosa no va com voldries."
+        },
         "persistence/coursed/2022": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "event/coursed/2022": {
@@ -339,6 +347,10 @@
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
         },
+        "pseudocode/coursed/2022": {
+          "word": "pseudocodi",
+          "definition": "Un descripció en llenguatge planer dels passos d'un algorisme"
+        },
         "condition/coursed/2022": {
           "word": "Condició",
           "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
@@ -348,7 +360,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/coursed/2022": {
-          "word": "Until"
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
         },
         "sprite/coursef/2022": {
           "word": "Sprite",
@@ -370,6 +383,10 @@
         },
         "variable/coursef/2022": {
           "word": "Variable"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
         },
         "internet/coursef/2022": {
           "word": "Internet"
@@ -408,7 +425,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "copyright/coursee/2022": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         },
         "define/coursee/2022": {
           "word": "Defineix"
@@ -450,7 +468,7 @@
           "definition": "L'art de crear un programa."
         },
         "persistence/courseb/2022": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "loop/courseb/2022": {
@@ -530,7 +548,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/express/2022": {
-          "word": "Until"
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
         },
         "function/express/2022": {
           "word": "Funció",
@@ -582,7 +601,7 @@
           "definition": "L'art de crear un programa."
         },
         "persistence/pre-express/2022": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "loop/pre-express/2022": {
@@ -666,7 +685,7 @@
           "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
         },
         "persistence/coursec/2022": {
-          "word": "Perseverança"
+          "word": "Persistència"
         },
         "programming/coursec/2022": {
           "word": "Programació",
@@ -719,10 +738,15 @@
           "word": "Funció"
         },
         "copyright/csd/2022": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
         },
         "code/poem-art/unversioned": {
-          "word": "ModeCodi",
+          "word": "Codi",
           "definition": ""
         },
         "event/poem-art/unversioned": {
@@ -771,6 +795,10 @@
           "word": "Repetir",
           "definition": "Tornar a fer alguna cosa."
         },
+        "machine_learning/coursef/2021": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
         },
@@ -814,7 +842,7 @@
           "definition": "L'art de crear un programa."
         },
         "persistence/courseb/2021": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "loop/courseb/2021": {
@@ -941,8 +969,12 @@
           "word": "Programació",
           "definition": "L'art de crear un programa."
         },
+        "frustrated/coursed/2021": {
+          "word": "Frustrat",
+          "definition": "Sentir-se irritat o enfadat perquè alguna cosa no va com voldries."
+        },
         "persistence/coursed/2021": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "event/coursed/2021": {
@@ -965,6 +997,10 @@
           "word": "Condicionals",
           "definition": "Sentències que només funcionen si es donen unes condicions determinades."
         },
+        "pseudocode/coursed/2021": {
+          "word": "pseudocodi",
+          "definition": "Un descripció en llenguatge planer dels passos d'un algorisme"
+        },
         "condition/coursed/2021": {
           "word": "Condició",
           "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
@@ -974,7 +1010,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/coursed/2021": {
-          "word": "Until"
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
         },
         "algorithm/express/2021": {
           "word": "Algorisme",
@@ -1041,7 +1078,8 @@
           "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
         },
         "until/express/2021": {
-          "word": "Until"
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
         },
         "function/express/2021": {
           "word": "Funció",
@@ -1093,7 +1131,7 @@
           "definition": "L'art de crear un programa."
         },
         "persistence/pre-express/2021": {
-          "word": "Perseverança",
+          "word": "Persistència",
           "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
         },
         "loop/pre-express/2021": {
@@ -1108,6 +1146,10 @@
           "word": "Esdeveniment",
           "definition": "Una acció que fa que passi alguna cosa."
         },
+        "algorithm/coursee/2021": {
+          "word": "algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca"
+        },
         "behavior/coursee/2021": {
           "word": "Comportament",
           "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
@@ -1121,7 +1163,8 @@
           "definition": "Una acció que fa que passi alguna cosa."
         },
         "copyright/coursee/2021": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         },
         "loop/coursee/2021": {
           "word": "Bucle",
@@ -1149,6 +1192,10 @@
         },
         "define/coursee/2021": {
           "word": "Defineix"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
         },
         "bug/csd/2021": {
           "word": "Bug / error",
@@ -1181,7 +1228,8 @@
           "word": "Funció"
         },
         "copyright/csd/2021": {
-          "word": "Copyright"
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         }
       }
     }

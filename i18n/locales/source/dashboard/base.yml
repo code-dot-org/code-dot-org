@@ -393,6 +393,7 @@ en:
       help_us: "Help Us"
       teach: "Teach"
       about: "About"
+      incubator: "Incubator"
       legal: "Privacy & Legal"
       legal_privacy: "Privacy Policy"
       legal_cookie_notice: "Cookie Notice"
@@ -1010,6 +1011,7 @@ en:
           age: 'Please specify an age'
           abuse_type: 'Please answer how this content violates the Terms of Service'
           abuse_detail: 'Please provide details regarding the content you are reporting'
+          captcha: 'Please fill out the CAPTCHA to report this content.'
         abusive_url: 'URL of the content being reported'
         abuse_type:
           question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'

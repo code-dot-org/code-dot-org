@@ -419,8 +419,14 @@
         "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
           "name": "Activitat"
         },
+        "b304de28-91d8-4215-a853-27f5a3f8a157": {
+          "name": "Celebrem-ho i seguim avançant!"
+        },
         "04400eef-5989-4325-a801-ab4ad451f130": {
           "name": "Ampliació de l'aprenentatge"
+        },
+        "422a9a0d-186b-4332-93a8-8ccc5c407ec6": {
+          "name": "Aprofundim en la visualització d'informació"
         },
         "899fd6a9-1214-43ec-a159-77c421de2c8a": {
           "name": "Nivells"
@@ -602,6 +608,9 @@
         "e708101d-3a86-4ff0-85a9-f5ec782683fe": {
           "name": "Escalfament: Ei, què és una contrasenya?"
         },
+        "e285d097-bd01-4c40-a00c-068a9ace8e8d": {
+          "name": "Valoració: Oh, oh! Si... Llavors..."
+        },
         "56a66744-0946-4350-9942-07e1ed1e0d85": {
           "name": "Crea: Reforça la teva contrasenya"
         },
@@ -652,6 +661,9 @@
         },
         "e982d792-ed3f-403f-8782-58d0e74eb342": {
           "name": "Escalfament"
+        },
+        "4960fdd0-1478-40e5-af70-efab13ddd070": {
+          "name": "Activitats pont - Trieu-ne una"
         },
         "f2cc2200-d1d2-4bb2-8b5c-84628e8c42c0": {
           "name": "Activitat principal"
@@ -724,6 +736,9 @@
         },
         "b287fad2-713e-44c7-9f5a-969089dbbd93": {
           "name": "Recapitulació"
+        },
+        "91d98159-1f12-468b-acf3-5e44b885c44b": {
+          "name": "Escalfament "
         },
         "e019b34b-4c36-4f63-9059-e7cdc4b6d36f": {
           "name": "Activitat principal"
@@ -938,8 +953,32 @@
         "6683243e-d006-4ef6-9f65-a53b80a1ecf6": {
           "name": "Ampliació de l'aprenentatge"
         },
+        "457f5ed8-0041-4bd5-b6e6-800291ae5cf5": {
+          "name": "Escalfament: Superheroi secret"
+        },
+        "0ead3881-08bc-4d6c-9fda-5bd889adbb5f": {
+          "name": "Aprèn: Sigues un defensor"
+        },
+        "069f8d26-8e31-484a-9e8c-3d67add0197d": {
+          "name": "Crea: el teu ciutadà digital superheroi"
+        },
+        "da7bb20b-3692-45ca-a939-6b44411eea77": {
+          "name": "Recapitulació: Còmic \"Missió complida!\""
+        },
         "02ff6b22-0825-41c1-9e77-721f5801fede": {
           "name": "Ampliació de l'aprenentatge"
+        },
+        "01746bcd-3c02-43f5-8a35-0a775acc2095": {
+          "name": "Escalfament: ara t'aixeques, ara seus"
+        },
+        "6114e1af-1c83-4f1f-add9-a97c2523b343": {
+          "name": "Analitza: per què compartim informació?"
+        },
+        "d1c5ae68-dd15-4aec-aff6-44d0ea484781": {
+          "name": "Analitza: privat o personal?"
+        },
+        "776101b2-57fc-4032-b1b3-1ec318adfbb2": {
+          "name": "Recapitulació: tiquet de sortida"
         },
         "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
           "name": "Ampliació de l'aprenentatge"
@@ -1102,6 +1141,9 @@
         },
         "52ef41bf-9fcf-4c7d-8fec-dbf7d244859b": {
           "name": "Recapitulació"
+        },
+        "74d92853-37dc-4cd5-9d69-087420e81160": {
+          "name": "Escalfament (opcional)"
         },
         "3df49bdd-03d3-4d4e-aa6a-7df0588bb582": {
           "name": "Activitat principal"
@@ -3046,6 +3088,9 @@
         },
         "5c53e3df-2b36-46c8-9cce-d849e378f4e5": {
           "name": "Recapitulació"
+        },
+        "7b73b3f1-50b0-43a0-b986-6ca761f73d6f": {
+          "name": "Escalfament "
         },
         "fb244265-6cd6-459d-bc88-e056d9902b8d": {
           "name": "Activitat"
@@ -6797,6 +6842,9 @@
         "aebca980-e26c-4993-b001-dc20e492f04e": {
           "name": "Escalfament: Ei, què és una contrasenya?"
         },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Valoració: Oh, oh! Si... Llavors..."
+        },
         "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
           "name": "Crea: Reforça la teva contrasenya"
         },
@@ -6850,6 +6898,9 @@
         },
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Escalfament"
+        },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Activitats pont - Trieu-ne una"
         },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Activitat principal"
@@ -6919,6 +6970,9 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Recapitulació"
+        },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Escalfament "
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Activitat principal"
@@ -7430,8 +7484,32 @@
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Recapitulació"
         },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Escalfament: Superheroi secret"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "Aprèn: Sigues un defensor"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Crea: el teu ciutadà digital superheroi"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Recapitulació: Còmic \"Missió complida!\""
+        },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Ampliació de l'aprenentatge"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Escalfament: ara t'aixeques, ara seus"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Analitza: per què compartim informació?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Analitza: privat o personal?"
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": "Recapitulació: tiquet de sortida"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Ampliació de l'aprenentatge"
@@ -7450,6 +7528,9 @@
         },
         "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
           "name": "Oportunitat multidisciplinària"
+        },
+        "077242ad-8c8a-4b24-a139-a5e198abd405": {
+          "name": "Escalfament (opcional)"
         },
         "7ccdedb5-15bf-4d75-9efb-e65349644266": {
           "name": "Activitat principal"
@@ -7582,6 +7663,9 @@
         },
         "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
           "name": "Projecte de final de curs"
+        },
+        "e8be4727-c687-43bb-a1be-e1b3da780020": {
+          "name": "Dies 4 i 5 - Presentació de projectes"
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Ampliació de l'aprenentatge"
@@ -8050,6 +8134,9 @@
         },
         "c4a019fc-d25b-486f-adec-c33a5b86ba5d": {
           "name": "Recapitulació"
+        },
+        "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
+          "name": "Escalfament "
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Activitat"
