@@ -44,7 +44,12 @@ Parameters:
     Type: String
 <% end -%>
 Resources:
-  # Stack-specific IAM permissions applied to both daemon and frontends.
+
+  # ---------------------------------------------
+  # Stack-specific IAM permissions
+  # applied to both daemon and frontends.
+  # ---------------------------------------------
+
   CDOPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -135,6 +140,11 @@ Resources:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
+
+  # ---------------------------------------------
+  # Frontend Servers
+  # ---------------------------------------------
+
 <% if frontends -%>
 <%=  component 'ami', ami: (ami = commit[0..4]),
   image_id: IMAGE_ID,
@@ -158,8 +168,15 @@ Resources:
   )
 %>
 <% end -%>
+
+
 <% if load_balancer -%>
-  # TODO hourofcode.com and csedweek.org load balancers should be added to this template.
+  # ---------------------------------------------
+  # Load Balancers
+  #
+  # TODO
+  # - hourofcode.com and csedweek.org load balancers should be added to this template.
+  # ---------------------------------------------
 <% raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
 
   ALB:
@@ -241,8 +258,12 @@ Resources:
 <%  end -%>
 <% end -%>
 
-# Route53 (DNS) and CloudFront (CDN) resources:
-# TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
+  # ---------------------------------------------
+  # Route53 (DNS) and CloudFront (CDN) resources
+  #
+  # TODO
+  # - hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
+  # ---------------------------------------------
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = app == 'Dashboard' ? studio_subdomain : subdomain
@@ -298,9 +319,17 @@ Resources:
 <%   end -%>
 <% end -%>
 
+
 <% if frontends-%>
+  # ---------------------------------------------
+  # Elasticache
+  # ---------------------------------------------
 <%=  component 'cache'%>
 <% end -%>
+
+  # ---------------------------------------------
+  # Daemon Server
+  # ---------------------------------------------
 
   DaemonRole:
     Type: AWS::IAM::Role
@@ -527,6 +556,10 @@ Resources:
 <% end -%>
 <%end-%>
 
+  # ---------------------------------------------
+  # Console Server
+  # ---------------------------------------------
+
 <% if options.console -%>
   Console:
     Type: AWS::EC2::Instance
@@ -571,23 +604,43 @@ Resources:
 <%   end -%>
 <% end-%>
 
+
 <% if alarms-%>
+  # ---------------------------------------------
+  # CloudWatch Alarms
+  # ---------------------------------------------
 <%=  component 'alarms'%>
 <% end -%>
 
+
+
 <% if database-%>
+  # ---------------------------------------------
+  # Database
+  # ---------------------------------------------
 <%=  component 'database'%>
 <% end -%>
 
+  # ---------------------------------------------
+  # Codeprojects Resources
+  # ---------------------------------------------
 <%= resource_component 'codeprojects_resources' %>
+
+  # ---------------------------------------------
+  # Custom Chef Configuration Secret
+  #
+  # Update this secret string manually after the
+  # stack is created to customize Chef
+  # configuration. The value should never be
+  # changed in the stack itself, since it would
+  # clobber all other changes.
+  # ---------------------------------------------
 
   ChefConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: !Sub "Custom Chef attributes for ${AWS::StackName} CloudFormation stack"
       Name: !Sub "CfnStack/${AWS::StackName}/chef"
-      # Update this secret manually after the stack is created to customize Chef configuration.
-      # The value should never be changed in the stack itself, since it would clobber all other changes.
       SecretString: '{}'
 
 Outputs:
