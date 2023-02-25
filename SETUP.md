@@ -48,7 +48,17 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     <details>
       <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` </summary>
 
-      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for AWS account access in our "Getting Started As A Developer" doc. External contributors can supply alternative values for secrets normally retrieved from AWS Secrets Manager by modifying ["locals.yml"](locals.yml) (generated in the next step, or via `bundle exec rake install:locals_yml`)
+      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for AWS account access in our "Getting Started As A Developer" doc. External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a ["locals.yml"] file using ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
+          - slack_bot_token: localoverride
+          - pardot_private_key: localoverride
+          - firebase_secret: localoverride
+          - firebase_shared_secret: localoverride
+          - properties_encryption_key: localoverride
+    </details>
+    <details>
+      <summary>Troubleshoot: `WSL: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'` </summary>
+
+      - This is an issue specific to Windows System for Linux (WSL) OS configuration where connection to mysql without sudo would fail with the above error. This can be rectified with some permission updates on mysql files and updating SQL client side configuration as called out [in this SO post](https://stackoverflow.com/a/66949451)
     </details>
 
 1. `bundle exec rake install`
@@ -352,15 +362,15 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
-
-* `chromium-browser` might not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`. You can instead install chrome by running the following:
-   1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
-   2. `sudo apt install ./google-chrome-stable_current_amd64.deb`
-   3. modify step 8 of the Ubuntu instructions to read `export CHROME_BIN=$(which google-chrome)`
-* Before step 9, you may have to restart MySQL using `sudo /etc/init.d/mysql restart`
-
-...followed by the [overview instructions](#overview), _with the following observation_:
-* Before running `bundle exec rake install`, you may have to start the mysql service: `sudo service mysql start`
+1. Ensure chromium-browser or alternatively google-chrome is installed
+    * Try running `chromium-browser`. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`. You can instead install chrome by running the following:
+        1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+        2. `sudo apt install ./google-chrome-stable_current_amd64.deb`
+1. Followed by the [Ubuntu instructions](#overview) to install required tools on teh Ubuntu instance, _with the following observations_:
+* If google-chrome was installed in the last step, update CHROME_BIN variable to point to google chrome (in step 9), `export CHROME_BIN=$(which google-chrome)`
+* Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
+1. Followed by the [overview instructions](#overview), _with the following observations_:
+* Before running `bundle exec rake install`, restart the mysql service: `sudo service mysql start`
 
 ### Alternative: Use an Ubuntu VM
 
@@ -391,6 +401,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
        Host yourname-ec2
          Hostname <public-dns-name>
          User ubuntu
+         PreferredAuthentications publickey
          PreferredAuthentications publickey
          IdentityFile ~/.ssh/<keyname>.pem
        ```
@@ -645,7 +656,6 @@ Where [VERSION] is the current version of eventmachine in Gemfile.lock. For exam
 
 #### Xcode Set Up
 
-OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
   <https://github.com/nodejs/node-gyp/issues/569>): `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
 
 ### Recommended hardware
