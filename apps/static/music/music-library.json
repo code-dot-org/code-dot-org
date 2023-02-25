@@ -7,89 +7,96 @@
       "path": "all",
       "folders": [
         {
-          "id": "glitch",
           "name": "Glitch",
           "path": "glitch",
           "type": "kit",
           "sounds": [
             {
               "name": "Glitch 1",
-              "src": "glitch_1",
+              "src": "sound_1",
               "length": 0.0625
             },
             {
               "name": "Glitch 2",
-              "src": "glitch_2",
+              "src": "sound_2",
               "length": 0.0625
             },
             {
               "name": "Glitch 3",
-              "src": "glitch_3",
+              "src": "sound_3",
               "length": 0.0625
             },
             {
               "name": "Glitch 4",
-              "src": "glitch_4",
+              "src": "sound_4",
               "length": 0.0625
             },
             {
               "name": "Glitch 5",
-              "src": "glitch_5",
+              "src": "sound_5",
               "length": 0.0625
             },
             {
               "name": "Glitch 6",
-              "src": "glitch_6",
+              "src": "sound_6",
               "length": 0.0625
             },
             {
               "name": "Glitch 7",
-              "src": "glitch_7",
+              "src": "sound_7",
               "length": 0.0625
             },
             {
               "name": "Glitch 8",
-              "src": "glitch_8",
+              "src": "sound_8",
               "length": 0.0625
             }
           ]
         },
         {
           "name": "Machine",
-          "path": "kits",
+          "path": "machine",
           "type": "kit",
           "sounds": [
             {
               "name": "Machine 1",
-              "src": "machine_1"
+              "src": "sound_1",
+              "length": 0.0625
             },
             {
               "name": "Machine 2",
-              "src": "machine_2"
+              "src": "sound_2",
+              "length": 0.0625
             },
             {
               "name": "Machine 3",
-              "src": "machine_3"
+              "src": "sound_3",
+              "length": 0.0625
             },
             {
               "name": "Machine 4",
-              "src": "machine_4"
+              "src": "sound_4",
+              "length": 0.0625
             },
             {
               "name": "Machine 5",
-              "src": "machine_5"
+              "src": "sound_5",
+              "length": 0.0625
             },
             {
               "name": "Machine 6",
-              "src": "machine_6"
+              "src": "sound_6",
+              "length": 0.0625
             },
             {
               "name": "Machine 7",
-              "src": "machine_7"
+              "src": "sound_7",
+              "length": 0.0625
             },
             {
               "name": "Machine 8",
-              "src": "machine_8"
+              "src": "sound_8",
+              "length": 0.0625
             }
           ]
         },
