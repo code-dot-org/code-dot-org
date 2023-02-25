@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import moduleStyles from './sections-refresh.module.scss';
 
 export default function QuickAssignTable({marketingAudience, courseOfferings}) {
   const TABLE_COUNT = Object.keys(courseOfferings[marketingAudience]).length;
 
   const renderTable = headerIndex => {
     return (
-      <table style={styles.table}>
+      <table className={moduleStyles.table}>
         <thead>
-          <tr style={styles.headerRow}>
-            <td style={styles.headerCell}>
+          <tr className={moduleStyles.headerRow}>
+            <td className={moduleStyles.headerCell}>
               <div>
                 {Object.keys(courseOfferings[marketingAudience])[headerIndex]}
               </div>
@@ -27,7 +27,7 @@ export default function QuickAssignTable({marketingAudience, courseOfferings}) {
   };
 
   return (
-    <div style={styles.multiTables}>
+    <div className={moduleStyles.multiTables}>
       {0 < TABLE_COUNT && renderTable(0)}
       {1 < TABLE_COUNT && renderTable(1)}
       {2 < TABLE_COUNT && renderTable(2)}
@@ -39,23 +39,4 @@ export default function QuickAssignTable({marketingAudience, courseOfferings}) {
 QuickAssignTable.propTypes = {
   courseOfferings: PropTypes.object.isRequired,
   marketingAudience: PropTypes.string.isRequired
-};
-
-const styles = {
-  multiTables: {
-    display: 'flex'
-  },
-  table: {
-    backgroundColor: color.neutral_dark10,
-    margin: '4px'
-  },
-  headerRow: {
-    backgroundColor: color.brand_primary_default,
-    color: color.white
-  },
-  headerCell: {
-    fontWeight: 500,
-    fontSize: '24px',
-    padding: '12px'
-  }
 };
