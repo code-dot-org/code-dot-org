@@ -54,10 +54,11 @@ class ActivitiesController < ApplicationController
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
+        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => e
           # If WebPurify or Geocoder fail, the program will be allowed, and we
           # retain the share_filtering_error to log it alongside the level_source
           # ID below.
+          share_filtering_error = e
         end
       end
 

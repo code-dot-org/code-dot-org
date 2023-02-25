@@ -29,7 +29,8 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
         request.locale,
         PROFANITY_FILTER_REPLACE_TEXT_LIST
       )
-    rescue OpenURI::HTTPError
+    rescue OpenURI::HTTPError => e
+      share_filtering_error = e
     end
     if share_filtering_error
       FirehoseClient.instance.put_record(
