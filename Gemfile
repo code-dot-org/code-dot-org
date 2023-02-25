@@ -18,7 +18,7 @@ end
 gem 'rails', '6.0.6'
 gem 'rails-controller-testing', '~> 1.0.5'
 
-gem 'sprockets', '4.0.3'
+gem 'sprockets', '~> 4.1.1'
 gem 'sprockets-rails', '3.3.0'
 
 # provide `respond_to` methods
