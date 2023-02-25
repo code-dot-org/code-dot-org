@@ -90,7 +90,7 @@ class FieldPattern extends GoogleBlockly.Field {
     ReactDOM.render(
       <PatternPanel
         library={this.options.getLibrary()}
-        currentValue={this.getValue()}
+        initValue={this.getValue()}
         playingPreview={this.playingPreview}
         onPreview={value => {
           this.playingPreview = value;
@@ -109,9 +109,8 @@ class FieldPattern extends GoogleBlockly.Field {
             this.renderContent();
           });
         }}
-        onSelect={value => {
+        onChange={value => {
           this.setValue(value);
-          this.hide_();
         }}
       />,
       this.newDiv_
@@ -130,6 +129,10 @@ class FieldPattern extends GoogleBlockly.Field {
   render_() {
     super.render_();
     this.renderContent();
+  }
+
+  getText() {
+    return this.getValue().kit;
   }
 }
 

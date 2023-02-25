@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './soundsPanel.module.scss';
 //import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -10,14 +10,19 @@ import styles from './soundsPanel.module.scss';
 
 const PatternPanel = ({
   library,
-  currentValue,
+  initValue,
   playingPreview,
-  onSelect,
+  onChange,
   onPreview
 }) => {
-  const [count, setCount] = useState(0);
+  // Make a copy of the value object so that we don't overwrite Blockly's
+  // data.
+  const currentValue = {...initValue};
 
   const group = library.groups[0];
+  const currentFolder = library.groups[0].folders.find(
+    folder => folder.path === currentValue.kit
+  );
 
   const toggleGridPoint = (sound, tick) => {
     console.log(sound.src, tick);
@@ -33,7 +38,7 @@ const PatternPanel = ({
       currentValue.events.push({src: sound.src, tick});
     }
 
-    setCount(count + 1);
+    onChange(currentValue);
   };
 
   const getGridPointSet = (sound, tick) => {
@@ -43,20 +48,29 @@ const PatternPanel = ({
     return index !== -1;
   };
 
+  const handleFolderChange = event => {
+    const value = event.target.value;
+    const folder = library.groups[0].folders.find(
+      folder => folder.path === value
+    );
+    currentValue.kit = folder.path;
+    onChange(currentValue);
+  };
+
   // Generate an array containing tick numbers from 1..16.
   const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
-  const currentFolder = group.folders[0];
-
-  //const events = [];
 
   return (
     <div className={styles.soundsPanel}>
-      {group.folders
-        .filter(folder => folder.type === 'kit')
-        .map((folder, folderIndex) => {
-          return <div key={folderIndex}>{folder.name}</div>;
-        })}
-
+      <select value={currentValue.kit} onChange={handleFolderChange}>
+        {group.folders
+          .filter(folder => folder.type === 'kit')
+          .map((folder, folderIndex) => (
+            <option key={folderIndex} value={folder.path}>
+              {folder.name}
+            </option>
+          ))}
+      </select>
       {currentFolder.sounds.map((sound, soundIndex) => {
         return (
           <div key={soundIndex}>
@@ -81,9 +95,9 @@ const PatternPanel = ({
 
 PatternPanel.propTypes = {
   library: PropTypes.object.isRequired,
-  currentValue: PropTypes.object.isRequired,
+  initValue: PropTypes.object.isRequired,
   playingPreview: PropTypes.string,
-  onSelect: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   onPreview: PropTypes.func.isRequired
 };
 
