@@ -13,6 +13,18 @@
     = f.label :default_poem, 'Default Poem'
     = f.select :default_poem, options_for_select(@level.class.poems_for_subtype(@level.standalone_app_name), @level.default_poem)
 
+
+  #dropdownPoems{class: ('collapse' if @level.standalone_app_name == 'poetry')}
+    = f.label :dropdown_poems, 'Available Poems'
+    %p If you would like to customize the available poems in the level, select poems here. Otherwise, all poems will be available.
+    %p
+      Select
+      %a.select_all{href: '#'} all
+      \/
+      %a.select_none{href: '#'} none
+      (shift-click or cmd-click to select multiple).
+    = f.select :dropdown_poems, (@level.class.poems_for_subtype(@level.standalone_app_name) + (@level.dropdown_poems || [])).uniq.sort, {}, {multiple: true}
+
 :javascript
   function toggleFields(val) {
     const defaultPoem = document.getElementById('defaultPoem');

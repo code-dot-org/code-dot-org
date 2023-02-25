@@ -508,6 +508,9 @@ class LevelsController < ApplicationController
       {if_block_options: []},
       {place_block_options: []},
       {play_sound_options: []},
+
+      # Poetry-specific
+      {dropdown_poems: []},
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
@@ -520,6 +523,7 @@ class LevelsController < ApplicationController
       :play_sound_options,
       :helper_libraries,
       :block_pools,
+      :dropdown_poems
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array

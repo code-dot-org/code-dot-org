@@ -26,14 +26,20 @@
 
 class Poetry < GamelabJr
   before_save :check_default_poem
+  before_save :check_dropdown_poems
 
   serialized_attrs %w(
     default_poem
     standalone_app_name
+    dropdown_poems
   )
 
   def check_default_poem
     self.default_poem = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
+  end
+
+  def check_dropdown_poems
+    self.dropdown_poems = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
   end
 
   # Poetry levels use the same shared_functions as GamelabJr
@@ -84,7 +90,12 @@ class Poetry < GamelabJr
   def common_blocks(type)
   end
 
-  # Used by levelbuilders to set a default poem on a Poetry level.
+  def available_poems
+    return dropdown_poems unless dropdown_poems
+    return Poetry.poems_for_subtype(standalone_app_name)
+  end
+
+  # Used to get all available poems for a Poetry level.
   def self.poems_for_subtype(subtype)
     case subtype
     when 'poetry_hoc'
