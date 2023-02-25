@@ -71,17 +71,6 @@ class S3Packaging
     @logger.info "Decompressed"
   end
 
-  private def s3_key
-    "#{@package_name}/#{@commit_hash}.tar.gz"
-  end
-
-  # The hash of the package at the given location (or nil if there is no package there)
-  private def target_commit_hash(location)
-    filename = "#{location}/commit_hash"
-    return nil unless File.exist?(filename)
-    File.read(filename)
-  end
-
   # Creates a zipped package of the provided assets folder
   # @param sub_path [String] Path to built assets, relative to source_location
   # @param expected_commit_hash [String] optional, when specified an error will be raised
@@ -127,7 +116,20 @@ class S3Packaging
     warn 'Proceeding with build...'
   end
 
-  private def ensure_updated_package
+  private
+
+  def s3_key
+    "#{@package_name}/#{@commit_hash}.tar.gz"
+  end
+
+  # The hash of the package at the given location (or nil if there is no package there)
+  def target_commit_hash(location)
+    filename = "#{location}/commit_hash"
+    return nil unless File.exist?(filename)
+    File.read(filename)
+  end
+
+  def ensure_updated_package
     if commit_hash == target_commit_hash(@target_location)
       @logger.info "Package is current: #{@commit_hash}"
     else
@@ -137,7 +139,7 @@ class S3Packaging
 
   # Uploads package to S3
   # @param package File object of local zipped up package.
-  private def upload_package(package)
+  def upload_package(package)
     @logger.info "Uploading: #{s3_key}"
     File.open(package, 'rb') do |file|
       client.put_object(bucket: BUCKET_NAME, key: s3_key, body: file, acl: 'public-read')
@@ -152,7 +154,7 @@ class S3Packaging
   # its own). This validates that the one we created is identical to the one
   # that was uploaded.
   # @return [Boolean] True unless we have an existing package and it's different
-  private def package_matches_download(package)
+  def package_matches_download(package)
     begin
       old_package = download_package
     rescue Aws::S3::Errors::NoSuchKey
@@ -167,7 +169,7 @@ class S3Packaging
   # Checks to see if two packages are equivalent by unpacking them into tempfiles
   # and comparing the results. Simply comparing the packages themselves is not
   # sufficient, because they can contain metadata.
-  private def packages_equivalent(package1, package2)
+  def packages_equivalent(package1, package2)
     diff = Dir.mktmpdir do |dir1|
       RakeUtils.system "tar -zxf #{package1.path} -C #{dir1}"
       Dir.mktmpdir do |dir2|
@@ -182,7 +184,7 @@ class S3Packaging
   # Downloads package from S3.
   # Throws a NoSuchKey error if given package doesn't exist on s3, or if the object is private.
   # @return tempfile for the downloaded package
-  private def download_package
+  def download_package
     package = Tempfile.new(@commit_hash)
 
     @logger.info "Attempting to download: #{s3_key}\nto #{package.path}"

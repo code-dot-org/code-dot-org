@@ -165,7 +165,9 @@ class AuthenticationOption < ApplicationRecord
     update(data: new_data.to_json)
   end
 
-  private def email_must_be_unique
+  private
+
+  def email_must_be_unique
     # skip the db lookup if possible
     return unless email_changed? && email.present? && errors.blank?
 
@@ -175,7 +177,7 @@ class AuthenticationOption < ApplicationRecord
     end
   end
 
-  private def hashed_email_must_be_unique
+  def hashed_email_must_be_unique
     # skip the db lookup if possible
     return unless hashed_email_changed? && hashed_email.present? && errors.blank?
 

@@ -112,6 +112,20 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
     render json: responses_by_student
   end
 
+  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
+  # At least five students in the section must have submitted answers.  The answers for each contained
+  # sublevel are shuffled randomly.
+  # GET '/dashboardapi/assessments/section_surveys'
+  def section_surveys
+    render json: LevelGroup.get_summarized_survey_results(@script, @section)
+  end
+
+  def section_feedback
+    render json: @script.get_feedback_for_section(@section)
+  end
+
+  private
+
   # Retrieve UserLevel and associated LevelSource objects associated with the
   # given students and assessment script levels. The return value is a nested
   # hash with the following structure:
@@ -125,7 +139,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
   # LevelGroup representing the assessment as well as UserLevels associated with
   # each sublevel that the user has completed.  UserLevel objects are sorted in
   # descending order by updated_at.
-  private def get_assessment_progress_data(student_batch, script_id, assessment_script_levels)
+  def get_assessment_progress_data(student_batch, script_id, assessment_script_levels)
     student_ids = student_batch.pluck(:id)
     progress_data = {}
 
@@ -146,7 +160,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
   # Helper function that builds the part of the section_responses response
   # corresponding to a given user and assessment. The third parameter is expected
   # to be the array of UserLevel objects returned by get_assessment_progress_data.
-  private def summarize_assessment_response(student_id, script_level, student_progress)
+  def summarize_assessment_response(student_id, script_level, student_progress)
     # Find the UserLevel that represents overall progress of the LevelGroup.
     # This logic is analogous to User#last_attempt_for_any.
     # Note: we intentionally no longer use the aggregated answers stored on
@@ -200,7 +214,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
 
   # Summarizes the given level and student answer into the format expected by
   # section_responses. Also updates the relevant counts in the given stats hash.
-  private def summarize_level_result(level, student_answer, stats)
+  def summarize_level_result(level, student_answer, stats)
     level_result = {}
 
     case level
@@ -263,17 +277,5 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
     end
 
     level_result
-  end
-
-  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
-  # At least five students in the section must have submitted answers.  The answers for each contained
-  # sublevel are shuffled randomly.
-  # GET '/dashboardapi/assessments/section_surveys'
-  def section_surveys
-    render json: LevelGroup.get_summarized_survey_results(@script, @section)
-  end
-
-  def section_feedback
-    render json: @script.get_feedback_for_section(@section)
   end
 end

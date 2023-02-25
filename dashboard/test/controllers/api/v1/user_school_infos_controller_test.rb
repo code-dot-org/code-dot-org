@@ -354,10 +354,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_equal new_tenure.school_info.school_name, old_tenure.school_info.school_name
   end
 
-  private def assert_same_date(expected, actual)
-    assert_equal expected.utc.to_date, actual.utc.to_date
-  end
-
   test 'confirmation, partial previous, blank, manual' do
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     assert @teacher.update(school_info: complete_school_info)
@@ -555,7 +551,13 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal @teacher.school_info.id, school_info.id
   end
 
-  private def partial_manual_school_info
+  private
+
+  def assert_same_date(expected, actual)
+    assert_equal expected.utc.to_date, actual.utc.to_date
+  end
+
+  def partial_manual_school_info
     SchoolInfo.create(
       country: 'United States',
       school_type: 'public',
@@ -565,7 +567,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     )
   end
 
-  private def submit_blank_school_info
+  def submit_blank_school_info
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {
@@ -576,7 +578,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
-  private def submit_partial_school_info
+  def submit_partial_school_info
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {
@@ -589,7 +591,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
-  private def submit_complete_school_info_from_dropdown(school)
+  def submit_complete_school_info_from_dropdown(school)
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {school_id: school.id}
@@ -597,7 +599,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
-  private def submit_complete_school_info_manual
+  def submit_complete_school_info_manual
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {
@@ -610,7 +612,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
-  private def submit_complete_school_info_manual_no_school_params
+  def submit_complete_school_info_manual_no_school_params
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {
@@ -623,7 +625,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
-  private def submit_unchanged_school_info(school_info)
+  def submit_unchanged_school_info(school_info)
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {

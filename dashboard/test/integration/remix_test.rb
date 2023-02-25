@@ -217,14 +217,16 @@ class RemixTest < ActionDispatch::IntegrationTest
     assert_response :forbidden
   end
 
-  private def stub_project_level(type)
+  private
+
+  def stub_project_level(type)
     factory = FactoryGirl.factories.registered?(type) ? type : :level
     level = FactoryGirl.create(factory)
     ProjectsController.any_instance.stubs(:get_from_cache).returns(level)
   end
 
   # @return [String] encrypted channel id of new project
-  private def create_a_new_project(type)
+  def create_a_new_project(type)
     get "/projects/#{type}/new"
     assert_response :redirect, "Wrong response: #{response.body}"
     project_type, channel_id, action = unpack response.headers['Location']
@@ -237,7 +239,7 @@ class RemixTest < ActionDispatch::IntegrationTest
   end
 
   # @return [String] encrypted channel id of new project
-  private def remix_a_project(type, channel_id)
+  def remix_a_project(type, channel_id)
     get "/projects/#{type}/#{channel_id}/remix"
     assert_response :redirect, "Wrong response: #{response.body}"
     project_type, new_channel_id, action = unpack response.headers['Location']
@@ -249,18 +251,18 @@ class RemixTest < ActionDispatch::IntegrationTest
     new_channel_id
   end
 
-  private def unpack(location)
+  def unpack(location)
     /\/projects\/(?<project_type>\w+)\/(?<channel_id>[^\\]*)\/(?<action>\w+)$/ =~ location
     [project_type, channel_id, action]
   end
 
-  private def stub_project_body(should_restrict_share)
+  def stub_project_body(should_restrict_share)
     sample_project = StringIO.new
     sample_project.puts "{\"inRestrictedShareMode\": #{should_restrict_share}}"
     SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
   end
 
-  private def unstub_project_body
+  def unstub_project_body
     SourceBucket.any_instance.unstub(:get)
   end
 end

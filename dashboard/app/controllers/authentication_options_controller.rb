@@ -24,7 +24,9 @@ class AuthenticationOptionsController < ApplicationController
     redirect_to edit_user_registration_path
   end
 
-  private def email_option_from_deleted_option(deleted_option)
+  private
+
+  def email_option_from_deleted_option(deleted_option)
     AuthenticationOption.new(
       user: deleted_option.user,
       email: deleted_option.email,

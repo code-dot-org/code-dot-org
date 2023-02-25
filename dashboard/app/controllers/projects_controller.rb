@@ -281,16 +281,6 @@ class ProjectsController < ApplicationController
     render partial: 'projects/weblab_footer'
   end
 
-  private def initial_data
-    data = {
-      name: 'Untitled Project',
-      level: polymorphic_url([params[:key].to_sym, :project_projects])
-    }
-    default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
-    data[:thumbnailUrl] = default_image_url if default_image_url
-    data
-  end
-
   def show
     if params.key?(:nosource)
       # projects can optionally be embedded without making their source
@@ -409,22 +399,6 @@ class ProjectsController < ApplicationController
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 
-  private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab javalab).include? project_type
-  end
-
-  private def uses_animation_bucket?(project_type)
-    %w(gamelab spritelab).include? project_type
-  end
-
-  private def uses_file_bucket?(project_type)
-    %w(weblab).include? project_type
-  end
-
-  private def uses_starter_assets?(project_type)
-    %w(javalab applab).include? project_type
-  end
-
   def export_create_channel
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
@@ -475,6 +449,32 @@ class ProjectsController < ApplicationController
   end
 
   private
+
+  def initial_data
+    data = {
+      name: 'Untitled Project',
+      level: polymorphic_url([params[:key].to_sym, :project_projects])
+    }
+    default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
+    data[:thumbnailUrl] = default_image_url if default_image_url
+    data
+  end
+
+  def uses_asset_bucket?(project_type)
+    %w(applab makerlab gamelab spritelab javalab).include? project_type
+  end
+
+  def uses_animation_bucket?(project_type)
+    %w(gamelab spritelab).include? project_type
+  end
+
+  def uses_file_bucket?(project_type)
+    %w(weblab).include? project_type
+  end
+
+  def uses_starter_assets?(project_type)
+    %w(javalab applab).include? project_type
+  end
 
   # @param iframe_embed [Boolean] Whether the project view event was via iframe.
   # @param sharing [Boolean] Whether the project view event was via share page.

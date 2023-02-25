@@ -29,7 +29,9 @@ class Api::V1::Pd::RegionalPartnerMiniContactsControllerTest < ActionDispatch::I
     assert_equal ['zip'], response_body['errors']['form_data']
   end
 
-  private def assert_valid_form(form_data)
+  private
+
+  def assert_valid_form(form_data)
     assert_creates Pd::RegionalPartnerMiniContact do
       post '/api/v1/pd/regional_partner_mini_contacts',
         as: :json,
@@ -38,7 +40,7 @@ class Api::V1::Pd::RegionalPartnerMiniContactsControllerTest < ActionDispatch::I
     assert_response :created
   end
 
-  private def refute_valid_form(form_data)
+  def refute_valid_form(form_data)
     assert_does_not_create Pd::RegionalPartnerMiniContact do
       post '/api/v1/pd/regional_partner_mini_contacts',
         as: :json,

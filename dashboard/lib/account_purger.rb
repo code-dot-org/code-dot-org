@@ -54,7 +54,9 @@ class AccountPurger
     raise 'Not implemented' unless @dry_run
   end
 
-  private def really_purge_data_for_account(user)
+  private
+
+  def really_purge_data_for_account(user)
     ActiveRecord::Base.transaction do
       PEGASUS_DB.transaction do
         DASHBOARD_DB.transaction do

@@ -2372,25 +2372,6 @@ class User < ApplicationRecord
     SingleUserExperiment.enabled?(user: self, experiment_name: pilot_name)
   end
 
-  # Called before_destroy.
-  # Soft-deletes any projects and other channel-backed progress belonging to
-  # this user.  Unfeatures any featured projects belonging to this user.
-  private def soft_delete_channels
-    return unless user_storage_id
-
-    project = Projects.new(user_storage_id)
-    project_ids = project.get_all_project_ids
-
-    # Unfeature any featured projects owned by the user
-    FeaturedProject.
-      where(project_id: project_ids, unfeatured_at: nil).
-      where.not(featured_at: nil).
-      update_all(unfeatured_at: Time.now)
-
-    # Soft-delete all of the user's projects
-    project.soft_delete_all
-  end
-
   def user_storage_id
     @user_storage_id ||= storage_id_for_user_id(id)
   end
@@ -2500,6 +2481,25 @@ class User < ApplicationRecord
   end
 
   private
+
+  # Called before_destroy.
+  # Soft-deletes any projects and other channel-backed progress belonging to
+  # this user.  Unfeatures any featured projects belonging to this user.
+  def soft_delete_channels
+    return unless user_storage_id
+
+    project = Projects.new(user_storage_id)
+    project_ids = project.get_all_project_ids
+
+    # Unfeature any featured projects owned by the user
+    FeaturedProject.
+      where(project_id: project_ids, unfeatured_at: nil).
+      where.not(featured_at: nil).
+      update_all(unfeatured_at: Time.now)
+
+    # Soft-delete all of the user's projects
+    project.soft_delete_all
+  end
 
   def account_age_in_years
     ((Time.now - created_at.to_time) / 1.year).round
