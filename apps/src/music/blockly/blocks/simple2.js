@@ -272,26 +272,28 @@ export const playSoundsRandom = {
       resultArray.push(codeForBlock);
       currentBlock = currentBlock.getNextBlock();
     }
-    // Do stuff with resultArray.
-    //console.log(resultArray);
+
     const randomVar = Blockly.JavaScript.nameDB_.getDistinctName(
       'random',
       Blockly.Names.NameType.VARIABLE
     );
 
-    const code =
-      `
-      var ${randomVar} = Math.floor(Math.random() * ${resultArray.length});
-    ` +
-      resultArray
-        .map(
-          (result, resultIndex) => `
-      __skipSound = ${randomVar} !== ${resultIndex};
-      ${result}
-      __skipSound = false;
-    `
-        )
-        .join('\n');
+    let code = `var ${randomVar} = Math.floor(Math.random() * ${
+      resultArray.length
+    });`;
+
+    for (const [resultIndex, result] of resultArray.entries()) {
+      const lastSkipSoundVar = Blockly.JavaScript.nameDB_.getDistinctName(
+        '__lastSkipSound',
+        Blockly.Names.NameType.VARIABLE
+      );
+      code += `
+        ${lastSkipSoundVar} = __skipSound;
+        __skipSound = __skipSound || ${randomVar} !== ${resultIndex};
+        ${result}
+        __skipSound = ${lastSkipSoundVar};
+        `;
+    }
 
     return ` ProgramSequencer.playTogether();
       ${code}
