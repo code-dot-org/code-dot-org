@@ -73,7 +73,7 @@ def main
     end
     ChatClient.message 'infra-production', 'Done finding and restarting front end services with high memory utilization'
   rescue StandardError => e
-    ChatClient.message 'infra-production', "Error finding/restarting frond end services with high memory utilization - #{e.message}"
+    ChatClient.message 'infra-production', "Error finding/restarting frond end services with high memory utilization - #{e}"
   end
 end
 

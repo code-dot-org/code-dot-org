@@ -470,7 +470,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # This can happen if the account being taken over is already invalid
       Honeybadger.notify(
         error_class: error_class,
-        error_message: e.to_s,
+        error_message: e.message,
         context: {
           user_id: lookup_user.id,
           tags: 'accounts'

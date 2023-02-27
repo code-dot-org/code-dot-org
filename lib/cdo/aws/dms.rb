@@ -182,7 +182,7 @@ module Cdo
 
         CDO.log.info "DMS Task Completed Successfully: #{@arn}"
       rescue StandardError => e
-        CDO.log.info "Error executing DMS Replication Task #{@arn} - #{e.message}"
+        CDO.log.info "Error executing DMS Replication Task #{@arn} - #{e}"
         raise e
       end
 

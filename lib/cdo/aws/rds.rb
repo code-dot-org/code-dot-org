@@ -72,7 +72,7 @@ module Cdo
           {max_attempts: max_attempts, delay: delay}
         )
       rescue Aws::Waiters::Errors::WaiterFailed => e
-        CDO.log.info "Error waiting for cluster clone instance to become available. #{e.message}"
+        CDO.log.info "Error waiting for cluster clone instance to become available. #{e}"
       end
       CDO.log.info "Done creating database cluster - #{clone_cluster_id}"
     end
@@ -115,7 +115,7 @@ module Cdo
           )
         end
       rescue Aws::RDS::Errors::DBClusterNotFoundFault => e
-        CDO.log.info "Cluster #{cluster_id} does not exist. #{e.message}.  No need to delete it."
+        CDO.log.info "Cluster #{cluster_id} does not exist. #{e}.  No need to delete it."
       end
     end
 
@@ -134,7 +134,7 @@ module Cdo
             status
         rescue Aws::RDS::Errors::DBClusterNotFoundFault => e
           cluster_state = 'deleted'
-          CDO.log.info "Database Cluster #{db_cluster_id} has been deleted. #{e.message}"
+          CDO.log.info "Database Cluster #{db_cluster_id} has been deleted. #{e}"
         end
         attempts += 1
         sleep delay

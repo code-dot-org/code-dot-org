@@ -320,7 +320,7 @@ class ActiveSupport::TestCase
     assert_raises do
       yield
     rescue => e
-      assert_match matcher, e.to_s
+      assert_match matcher, e.message
       raise e
     end
   end
