@@ -6408,38 +6408,108 @@
             "Usa questa attività riepilogativa per valutare in che modo gli studenti hanno compreso il ruolo de i dati in ingresso e in uscita in alcune attività comuni su un computer. Ad esempio:\n\n-   Digitando su una tastiera (ingresso) le lettere compaiono sullo schermo (uscita)\n-   Spostando il mouse o il touch screen (ingresso) si modifica ciò che appare sullo schermo (uscita)\n-   Premendo play su un touchscreen (ingresso) si fa riprodurre una canzone attraverso gli altoparlanti (uscita)\n\nSe necessario, fornisci agli studenti questo o altri esempi così da richiedere altri esempi"
           ]
         },
+        "7e98a10f-cf10-42fa-aa50-2fe5f52eb606": {
+          "name": "Analisi di un'app (app di compleanno)",
+          "description": "**Diario di bordo**: vai su Code Studio per provare l'app per il compleanno. Ha tre uscite possibili.  Prova a trovarle tutte.\n\n1.  Qual è l'ingresso (input) dell'app?  \n2.  Qual è l'uscita (output)?  \n3.  Come pensi che l'app stabilisca quale uscita restituire all'utente?",
+          "progression_name": "App: è il tuo compleanno?"
+        },
         "882f981d-2626-4015-b120-77d51c804232": {
+          "description": "**Girando tra i banchi:** la prima parte di questa riflessione è un ripasso degli ingressi e delle uscite (input e output). Mentre gli studenti ragionano sullla discussione, controlla le loro risposte per assicurarti che comprendano come vengono utilizzati ingressi e uscite nell'app.",
           "tips": [
-            null
+            "Gli studenti possono individuare la data di nascita dell'utente come un ingresso e possibilmente la data corrente come un altro ingresso. Il messaggio che indica se è o meno il compleanno è l'uscita. La decisione del messaggio da inviare dipende dal fatto che la data corrente corrisponda alla data inserita dall'utente. "
           ]
         },
         "464bae28-22a6-48de-b523-4977dc1c02c5": {
+          "description": "Chiedi agli studenti di spiegare come pensano che l'app abbia elaborato la sua decisione.",
           "tips": [
-            null
+            "Gli studenti potrebbero avere difficoltà a spiegare esattamente come l'app prende la propria decisione. Incoraggia la discussione ed evidenzia implicazioni dei concetti di «corrispondenza» e di quello di «se/allora» nel processo decisionale. (ad esempio «L'app **confronta** la data di nascita con la data odierna.» /**Se** la data di nascita è la stessa della data odierna, **allora** visualizza «Buon compleanno!»)"
           ]
+        },
+        "baffb4df-38d9-46df-a581-650858680dbb": {
+          "description": "Nelle ultime lezioni, abbiamo imparato che i computer sono macchine che ci aiutano a pensare a lavorare trasformando i dati in ingresso (input) in dati in uscita (output). Ad esempio, il ragionamento svolto da questa app è stato quello di confrontare la data di nascita con la data odierna e utilizzare tali dati per decidere cosa visualizzare sullo schermo. Questi tipi di pensiero che i computer svolgono sono chiamati «elaborazione». Oggi esamineremo alcuni diversi tipi di elaborazione."
+        },
+        "6cc1658c-ca13-41c5-97b8-3fd0941fc232": {
+          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Elaborazione** - il lavoro di pensiero svolto dai computer per trasformare dati in ingresso (input) in dati in uscita (output)\n\n**Domanda del giorno: quali sono i diversi modi in cui i computer possono elaborare i dati?**"
+        },
+        "19b1f80d-8699-449e-b23d-eb15d1b9045d": {
+          "name": "Tipologie di elaborazione",
+          "description": "Abbiamo già visto due diversi tipi di elaborazione nell'app del compleanno: confronto e se/allora. Esamineremo un paio di altre app e vedremo quali tipi di elaborazione potrebbero utilizzare."
+        },
+        "1c949e6e-20aa-4799-8eba-39d904bc433b": {
+          "description": "**Dimostrazione:** mostra l'app «Parco nazionale» nella parte anteriore della stanza o consenti agli studenti di esplorarla in autonomia.",
+          "progression_name": "App: Parchi nazionali"
         },
         "e3bc06a4-b5cf-409a-a1cf-b417e716b696": {
+          "description": "**Richiesta:** in che modo questa app utilizza il \"se/allora\" e il \"confronto\" per trasformare gli ingressi in uscite?",
           "tips": [
-            null
+            "Dai modo agli studenti di condividere le loro risposte e ribadisci che il \"confronto\" non riguarda solo i numeri ma può significare decidere se due cose sono uguali."
           ]
+        },
+        "7dd6fa02-5826-4473-b57a-6ed6cf47f6f8": {
+          "description": "**Dimostrazione:** mostra l'app «Quanti paesi» nella parte anteriore della stanza o consenti agli studenti di esplorarla in autonomia.",
+          "progression_name": "App: quanti paesi"
         },
         "7b25ed70-f14d-4b51-afff-cd67b4b56e83": {
+          "description": "**Richiesta:** questa app utilizza diversi tipi di elaborazione per prendere decisioni. Che tipo di elaborazione potrebbe utilizzare?",
           "tips": [
-            null
+            "Consenti agli studenti di condividere le loro risposte, ma fai in modo che «conteggio» e «ricerca di una corrispondenza» vengano evidenziati durante la discussione."
           ]
+        },
+        "04529d95-26df-48be-b118-a43abd3fe6d9": {
+          "description": "Esistono molti tipi diversi di elaborazione che i computer possono effettuare. Oggi ci concentreremo su quattro tipi fondamentali: se/allora, confronto, ricerca di una corrispondenza e conteggio."
+        },
+        "e45701fe-cea5-4268-911a-c2f17bce9c75": {
+          "description": "**Dimostrazione:** visualizza i quattro tipi di elaborazione e le relative definizioni nella parte anteriore della stanza e rivedi le informazioni con gli studenti.\n\n**Gruppo:** disponi gli studenti a gruppi di 2-3. Ogni gruppo avrà bisogno di accedere a un computer per questa attività.\n\n**Distribuzione:** consegna a ogni gruppo una copia della guida alle attività."
+        },
+        "b10c4e3e-c4c9-4454-b776-0aef0a13b474": {
+          "name": "App ed elaborazione",
+          "description": "Come classe, completa le prime tre righe della guida alle attività, che fanno riferimento alle tre app che gli studenti hanno già visto."
         },
         "568bff09-545b-4abd-b341-07f263dbf0ba": {
+          "description": "**Girando tra i banchi:** fai in modo che gli studenti completino il resto della tabella nei loro gruppi. Mentre compilano i grafici, chiedi loro di approfondire come funziona l'app e cosa rende utile quel particolare tipo di elaborazione.",
           "tips": [
-            null
+            "Poiché quasi tutte le app utilizzano più di una forma di elaborazione, gli studenti possono identificare aspetti inaspettati delle app. La parte più importante è la loro spiegazione. Dovrebbero ragionare su come gli ingressi vengono utilizzati per generare le uscite dell'app."
           ]
+        },
+        "260e39c6-bbec-4951-a85d-be5257e787df": {
+          "description": "**Il mio compleanno famoso**\n\nQuesta app chiede agli utenti di inserire la propria data di nascita, quindi dice loro il giorno della settimana in cui sono nati e uno scrittore famoso nato lo stesso giorno. Il tipo di elaborazione è incluso nelle note dell'esercizio «solo per insegnanti».",
+          "progression_name": "App: Il mio compleanno famoso"
+        },
+        "dd956117-4160-4bac-93f1-2fc1ca0737d3": {
+          "description": "**Quaderno dei timbri**\n\nQuesta app consente agli utenti di fare clic su un'icona e «timbrare» sullo schermo con quell'icona. Per modificare il colore del timbro basta cliccare più volte sull'icona.",
+          "progression_name": "App: quaderno dei timbri"
+        },
+        "81e3a17d-8f3a-4be9-93ad-123e262a5e41": {
+          "name": "Altre elaborazioni",
+          "description": "Il grafico successivo richiede agli studenti di trovare due tipi di elaborazione per ogni app. Le spiegazioni per l'elaborazione sono incluse nella sezione \"Per soli insegnanti\" di Code Studio. Questa sezione chiede agli studenti di valutare app più complesse, il che può essere difficile per gli studenti più giovani. Sentiti libero di saltare questa sezione più impegnativa e passare direttamente alla sezione «app per studenti».\n\n**Il dito più veloce**\n\nQuesta app mostra quale tasto viene premuto più velocemente, il tasto 's' o il tasto 'k'. \n\n**Indovina il numero**\n\nQuesta app chiede agli utenti di indovinare un numero compreso tra uno e cento e mostra se l'ipotesi è troppo alta, troppo bassa o corretta.\n\n\\*\\*Dove dovrei andare a vivere? \\*\\*\n\nQuesta app fornisce all'utente consigli su dove vivere in base alle risposte ad alcune domande.",
+          "progression_name": "App per altre elaborazioni"
+        },
+        "fd51d043-b16c-41a2-8c01-550b31c8100b": {
+          "progression_name": "App: il dito più veloce"
+        },
+        "5a010975-342e-485a-8be9-6e534ed26b49": {
+          "progression_name": "App: indovina il numero"
+        },
+        "9e7b45ea-2521-47bc-a453-0c522fe52ec3": {
+          "progression_name": "App: dove dovrei andare a vivere?"
+        },
+        "55908067-c782-46d6-9b52-6d6721c46b59": {
+          "name": "App per gli studenti",
+          "description": "Gli studenti escogitano le proprie idee per le app, utilizzando l'app precedente della lezione \"Ingressi e uscite\" o inventandone una nuova. Quindi pensano ai tipi di elaborazione che sarebbero necessari per quelle app.\n\n**Condivisione:** cfai in modo che gli studenti espongano le proprie idee per l'app e l'elaborazione di cui avrebbero bisogno."
         },
         "3512ec2a-1235-4d27-b0f7-a6659d3ece45": {
-          "name": "Quali dati in ingresso e in uscita devo usare?"
+          "name": "Quali dati in ingresso e in uscita devo usare?",
+          "description": "**Richiesta:** oggi abbiamo visto quattro diversi tipi di elaborazione, ma ce ne sono molti altri.  \n\n1.  Qual è un altro tipo di elaborazione che ritieni possa essere utile?  \n2.  Che tipo di app potrebbe utilizzarla?\n\n**Girando tra i banchi:** chiedi agli studenti di fare individualmente una libera riflessione e di annotare le loro idee sulle loro guide o sui diari delle attività."
         },
         "b6585ef3-4af7-48a9-af73-5033c10af0f0": {
+          "description": "**Discussione:** in classe, discutete degli esempi che gli studenti hanno raccolto.",
           "tips": [
-            null
+            "Le risposte degli studenti possono variare, ma assicurati che stiano usando ragionevolmente l'elaborazione per trasformare un ingresso in un'uscita."
           ]
+        },
+        "562abbaf-9fb5-42a3-8451-6dd77ea03954": {
+          "name": "Analisi di un'app (Scelta di abiti)",
+          "description": "**Diario di bordo**: vai su Code Studio per guardare l'app per la scelta di abiti. Qual è un ingresso, un uscita e un tipo di elaborazione che potrebbe utilizzare? Supponiamo che tu abbia usato questa app ogni giorno. Quali dati vorresti che questa app ricordasse?"
         },
         "f4a0fbbd-2d29-4de8-b325-f08c12c9abcf": {
           "tips": [
@@ -6458,6 +6528,17 @@
           "tips": [
             null
           ]
+        },
+        "286386cc-e586-4d44-bf85-60c800773505": {
+          "name": "App: scelta di abiti",
+          "progression_name": "App: scelta di abiti"
+        },
+        "e6e2ba98-c7fc-428e-9a47-f22073547f0c": {
+          "name": "Il trovamico",
+          "progression_name": "App: il trovamico"
+        },
+        "6b3b1859-20d3-4a4f-b929-8336e5c63082": {
+          "progression_name": "App: scegli un film per bambini"
         },
         "8712d7ff-7061-43ef-ba2c-cde28fac3fcf": {
           "tips": [
@@ -22414,41 +22495,111 @@
         "5e3a206e-5fdc-4d0b-94ce-84c83313ccce": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1JGA6VwPGMtfZDgyiDnpXFFQtGoHclsNGkcLuwTe7wLU/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
         },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "name": "Analisi di un'app (app di compleanno)",
+          "description": "**Diario di bordo**: vai su Code Studio per provare l'app per il compleanno. Ha tre uscite possibili.  Prova a trovarle tutte.\n\n1.  Qual è l'ingresso (input) dell'app?  \n2.  Qual è l'uscita (output)?  \n3.  Come pensi che l'app stabilisca quale uscita restituire all'utente?",
+          "progression_name": "App: è il tuo compleanno?"
+        },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
+          "description": "**Girando tra i banchi:** la prima parte di questa riflessione è un ripasso degli ingressi e delle uscite (input e output). Mentre gli studenti ragionano sullla discussione, controlla le loro risposte per assicurarti che comprendano come vengono utilizzati ingressi e uscite nell'app.",
           "tips": [
-            null
+            "Gli studenti possono individuare la data di nascita dell'utente come un ingresso e possibilmente la data corrente come un altro ingresso. Il messaggio che indica se è o meno il compleanno è l'uscita. La decisione del messaggio da inviare dipende dal fatto che la data corrente corrisponda alla data inserita dall'utente. "
           ]
         },
         "4d905d80-5cc4-4017-88ab-904e5092fe0c": {
+          "description": "Chiedi agli studenti di spiegare come pensano che l'app abbia elaborato la sua decisione.",
           "tips": [
-            null
+            "Gli studenti potrebbero avere difficoltà a spiegare esattamente come l'app prende la propria decisione. Incoraggia la discussione ed evidenzia implicazioni dei concetti di «corrispondenza» e di quello di «se/allora» nel processo decisionale. (ad esempio «L'app **confronta** la data di nascita con la data odierna.» /**Se** la data di nascita è la stessa della data odierna, **allora** visualizza «Buon compleanno!»)"
           ]
+        },
+        "db018d57-7aa0-4395-b16a-8649a1e291c1": {
+          "description": "Nelle ultime lezioni, abbiamo imparato che i computer sono macchine che ci aiutano a pensare a lavorare trasformando i dati in ingresso (input) in dati in uscita (output). Ad esempio, il ragionamento svolto da questa app è stato quello di confrontare la data di nascita con la data odierna e utilizzare tali dati per decidere cosa visualizzare sullo schermo. Questi tipi di pensiero che i computer svolgono sono chiamati «elaborazione». Oggi esamineremo alcuni diversi tipi di elaborazione."
+        },
+        "4c64e5b5-a49e-4fbf-874c-e8de24a9277f": {
+          "description": "\\*\\*Glossario delle parole chiave: \\*\\*\n\n-   **Elaborazione** - il lavoro di pensiero svolto dai computer per trasformare dati in ingresso (input) in dati in uscita (output)\n\n**Domanda del giorno: quali sono i diversi modi in cui i computer possono elaborare i dati?**"
+        },
+        "dd302238-9da9-4598-a9ad-346d80a7ca0f": {
+          "name": "Tipologie di elaborazione",
+          "description": "Abbiamo già visto due diversi tipi di elaborazione nell'app del compleanno: confronto e se/allora. Esamineremo un paio di altre app e vedremo quali tipi di elaborazione potrebbero utilizzare."
+        },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "description": "**Dimostrazione:** mostra l'app «Parco nazionale» nella parte anteriore della stanza o consenti agli studenti di esplorarla in autonomia.",
+          "progression_name": "App: Parchi nazionali"
         },
         "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
+          "description": "**Richiesta:** in che modo questa app utilizza il \"se/allora\" e il \"confronto\" per trasformare gli ingressi in uscite?",
           "tips": [
-            null
+            "Dai modo agli studenti di condividere le loro risposte e ribadisci che il \"confronto\" non riguarda solo i numeri ma può significare decidere se due cose sono uguali."
           ]
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "description": "**Dimostrazione:** mostra l'app «Quanti paesi» nella parte anteriore della stanza o consenti agli studenti di esplorarla in autonomia.",
+          "progression_name": "App: quanti paesi"
         },
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
+          "description": "**Richiesta:** questa app utilizza diversi tipi di elaborazione per prendere decisioni. Che tipo di elaborazione potrebbe utilizzare?",
           "tips": [
-            null
+            "Consenti agli studenti di condividere le loro risposte, ma fai in modo che «conteggio» e «ricerca di una corrispondenza» vengano evidenziati durante la discussione."
           ]
+        },
+        "58559ae7-ea27-45aa-ba26-1fdc3758d9a0": {
+          "description": "Esistono molti tipi diversi di elaborazione che i computer possono effettuare. Oggi ci concentreremo su quattro tipi fondamentali: se/allora, confronto, ricerca di una corrispondenza e conteggio."
+        },
+        "ffa29e42-7efc-41b6-ba23-b18391cd1041": {
+          "description": "**Dimostrazione:** visualizza i quattro tipi di elaborazione e le relative definizioni nella parte anteriore della stanza e rivedi le informazioni con gli studenti.\n\n**Gruppo:** disponi gli studenti a gruppi di 2-3. Ogni gruppo avrà bisogno di accedere a un computer per questa attività.\n\n**Distribuzione:** consegna a ogni gruppo una copia della guida alle attività."
+        },
+        "0cba3d63-aa17-4e9e-b3e0-91330dc94748": {
+          "name": "App ed elaborazione",
+          "description": "Come classe, completa le prime tre righe della guida alle attività, che fanno riferimento alle tre app che gli studenti hanno già visto."
         },
         "95323c16-49dc-4c54-9bf5-c351b458beb7": {
+          "description": "**Girando tra i banchi:** fai in modo che gli studenti completino il resto della tabella nei loro gruppi. Mentre compilano i grafici, chiedi loro di approfondire come funziona l'app e cosa rende utile quel particolare tipo di elaborazione.",
           "tips": [
-            null
+            "Poiché quasi tutte le app utilizzano più di una forma di elaborazione, gli studenti possono identificare aspetti inaspettati delle app. La parte più importante è la loro spiegazione. Dovrebbero ragionare su come gli ingressi vengono utilizzati per generare le uscite dell'app."
           ]
         },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "description": "**Il mio compleanno famoso**\n\nQuesta app chiede agli utenti di inserire la propria data di nascita, quindi dice loro il giorno della settimana in cui sono nati e uno scrittore famoso nato lo stesso giorno. Il tipo di elaborazione è incluso nelle note dell'esercizio «solo per insegnanti».",
+          "progression_name": "App: Il mio compleanno famoso"
+        },
+        "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "description": "**Quaderno dei timbri**\n\nQuesta app consente agli utenti di fare clic su un'icona e «timbrare» sullo schermo con quell'icona. Per modificare il colore del timbro basta cliccare più volte sull'icona.",
+          "progression_name": "App: quaderno dei timbri"
+        },
+        "30a5ba05-3776-4be9-b6d5-66df2e579294": {
+          "name": "Altre elaborazioni",
+          "description": "Il grafico successivo richiede agli studenti di trovare due tipi di elaborazione per ogni app. Le spiegazioni per l'elaborazione sono incluse nella sezione \"Per soli insegnanti\" di Code Studio. Questa sezione chiede agli studenti di valutare app più complesse, il che può essere difficile per gli studenti più giovani. Sentiti libero di saltare questa sezione più impegnativa e passare direttamente alla sezione «app per studenti».\n\n**Il dito più veloce**\n\nQuesta app mostra quale tasto viene premuto più velocemente, il tasto 's' o il tasto 'k'. \n\n**Indovina il numero**\n\nQuesta app chiede agli utenti di indovinare un numero compreso tra uno e cento e mostra se l'ipotesi è troppo alta, troppo bassa o corretta.\n\n\\*\\*Dove dovrei andare a vivere? \\*\\*\n\nQuesta app fornisce all'utente consigli su dove vivere in base alle risposte ad alcune domande.",
+          "progression_name": "App per altre elaborazioni"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "App: il dito più veloce"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "App: indovina il numero"
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "App: dove dovrei andare a vivere?"
+        },
+        "b8be58da-51d2-44de-8fd8-f136b1604f84": {
+          "name": "App per gli studenti",
+          "description": "Gli studenti escogitano le proprie idee per le app, utilizzando l'app precedente della lezione \"Ingressi e uscite\" o inventandone una nuova. Quindi pensano ai tipi di elaborazione che sarebbero necessari per quelle app.\n\n**Condivisione:** cfai in modo che gli studenti espongano le proprie idee per l'app e l'elaborazione di cui avrebbero bisogno."
+        },
         "dd0a4480-2ff7-407b-be56-5a7ff2df932e": {
-          "name": "Quali dati in ingresso e in uscita devo usare?"
+          "name": "Quali dati in ingresso e in uscita devo usare?",
+          "description": "**Richiesta:** oggi abbiamo visto quattro diversi tipi di elaborazione, ma ce ne sono molti altri.  \n\n1.  Qual è un altro tipo di elaborazione che ritieni possa essere utile?  \n2.  Che tipo di app potrebbe utilizzarla?\n\n**Girando tra i banchi:** chiedi agli studenti di fare individualmente una libera riflessione e di annotare le loro idee sulle loro guide o sui diari delle attività."
         },
         "ed3fc57d-be54-4625-bae7-5cac4680d615": {
+          "description": "**Discussione:** in classe, discutete degli esempi che gli studenti hanno raccolto.",
           "tips": [
-            null
+            "Le risposte degli studenti possono variare, ma assicurati che stiano usando ragionevolmente l'elaborazione per trasformare un ingresso in un'uscita."
           ]
         },
         "e6ecc76e-b9cd-4936-a8eb-2a365597bf3a": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attenzione, insegnanti!** Se state insegnando virtualmente o in una classe soggetta a distanziamento sociale, [cliccate qui](https://docs.google.com/document/d/1tsaiEHbxGmt6TCd15_OaKqqbafJIlEILY9N0GKgvg14/edit) per accedere alle variazioni che possono essere effettuate durante questa lezione. "
+        },
+        "49fca890-c067-42b3-9982-6a30352b21d3": {
+          "name": "Analisi di un'app (Scelta di abiti)",
+          "description": "**Diario di bordo**: vai su Code Studio per guardare l'app per la scelta di abiti. Qual è un ingresso, un uscita e un tipo di elaborazione che potrebbe utilizzare? Supponiamo che tu abbia usato questa app ogni giorno. Quali dati vorresti che questa app ricordasse?"
         },
         "071466cb-7d6b-4e91-93bb-261e508f89dc": {
           "tips": [
@@ -22467,6 +22618,17 @@
           "tips": [
             null
           ]
+        },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "name": "App: scelta di abiti",
+          "progression_name": "App: scelta di abiti"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "name": "Il trovamico",
+          "progression_name": "App: il trovamico"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "progression_name": "App: scegli un film per bambini"
         },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
           "tips": [
