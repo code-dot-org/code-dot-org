@@ -4,7 +4,6 @@ class Api::V1::Census::CensusController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   CENSUS_FIELDS = [
-    :school_year,
     :submitter_email_address,
     :submitter_name,
     :submitter_role,
