@@ -27,7 +27,10 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "true",
-    "encrypted_examples": "BV8lQR1iJY64JmS+vXI1BD5Bsb9+pMOyvCUUdcLmhIrkX7ymF67y8lJSXkKC\nOBa1X+RbhA4TXrSpBu95kHouSg==\n"
+    "encrypted_examples": "BV8lQR1iJY64JmS+vXI1BD5Bsb9+pMOyvCUUdcLmhIrkX7ymF67y8lJSXkKC\nOBa1X+RbhA4TXrSpBu95kHouSg==\n",
+    "display_name": "Navigation Bar",
+    "bubble_choice_description": "Add a navigation bar to all of the web pages.",
+    "thumbnail_url": "https://images.code.org/019391a6ee2a5fda8ae6f21e3f513a3e-lists.png"
   },
   "game_id": 58,
   "published": true,
@@ -35,6 +38,6 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:27:28.207+00:00\",\"changed\":[\"cloned from \\\"CSD U2 nav bar_2022\\\"\"],\"cloned_from\":\"CSD U2 nav bar_2022\"},{\"changed_at\":\"2023-02-22 00:12:58 +0000\",\"changed\":[\"long_instructions\",\"reference_links\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:27:28.207+00:00\",\"changed\":[\"cloned from \\\"CSD U2 nav bar_2022\\\"\"],\"cloned_from\":\"CSD U2 nav bar_2022\"},{\"changed_at\":\"2023-02-22 00:12:58 +0000\",\"changed\":[\"long_instructions\",\"reference_links\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-24 21:52:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

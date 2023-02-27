@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-02-24 00:56:07 UTC",
+    "serialized_at": "2023-02-24 16:00:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -826,10 +826,20 @@
       "key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78",
       "position": 6,
       "properties": {
-        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78",
+        "lesson_activity.key": "dd4c7a94-832a-473c-9131-47babf72bb0b"
+      }
+    },
+    {
+      "key": "123608f5-5e7f-43b1-9770-455286cece18",
+      "position": 7,
+      "properties": {
+        "progression_name": "Final Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "123608f5-5e7f-43b1-9770-455286cece18",
         "lesson_activity.key": "dd4c7a94-832a-473c-9131-47babf72bb0b"
       }
     },
@@ -1264,6 +1274,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_tourguide_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1286,6 +1299,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_behaviors_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1308,6 +1324,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student_sprite_management"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1330,6 +1349,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_places1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1349,10 +1371,10 @@
     {
       "chapter": 16,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Student Survey"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1362,7 +1384,7 @@
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
       },
       "level_keys": [
         "csc_landmarks_events_2023"
@@ -1371,10 +1393,10 @@
     {
       "chapter": 17,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Student Survey"
+        "progression": "Final Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -1384,7 +1406,7 @@
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
+        "activity_section.key": "123608f5-5e7f-43b1-9770-455286cece18"
       },
       "level_keys": [
         "csc_landmarks_finalproject_2023"
@@ -1606,7 +1628,7 @@
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
+        "activity_section.key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8"
       }
     },
     {
@@ -1618,7 +1640,7 @@
         "lesson.key": "Local Landmarks - Coding Your Project",
         "lesson_group.key": "",
         "script.name": "csc-mappinglandmarks-2023",
-        "activity_section.key": "f6388f6f-24f2-40e7-99aa-753ca3c08e78"
+        "activity_section.key": "123608f5-5e7f-43b1-9770-455286cece18"
       }
     },
     {
