@@ -302,7 +302,22 @@ export const TIME_CAPSULE_POEMS = {
     ]
   },
   erin: {author: 'Erin P.'},
-  aryanna: {author: 'Aryanna T.'},
+  aryanna: {
+    locales: ['en_us'],
+    author: 'Aryanna T.',
+    title: '2021 - My Poem 3',
+    linesSplit: [
+      "Today in 2021, I'm cool as can be,",
+      "I love to dance, and listen to music that's so me.",
+      "I just learned to skateboard, and it's rad,",
+      "I'm thinking about trying out for the cheer squad.",
+      '\n',
+      'In my neighborhood, we all have our own flair,',
+      'People I know like to ride bikes, and style their hair.',
+      "Something fun right now is TikTok, can't you see?",
+      'Dancing is popular, and I love the energy.'
+    ]
+  },
   tj: {author: 'TJ'},
   erik: {author: 'Erik D.'},
   aaron: {author: 'Aaron H.'},
