@@ -289,6 +289,7 @@ class UnconnectedMusicView extends React.Component {
     this.player.stopSong();
 
     // reset the timeline view.
+    this.player.clearWhenRunEvents();
     this.isExecutingPlay = false;
     this.executeCompiledSong();
 
