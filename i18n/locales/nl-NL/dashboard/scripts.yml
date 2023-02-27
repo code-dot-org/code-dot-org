@@ -2454,6 +2454,10 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         hello-world-space-2022:
           title: 'Hallo World: Space'
         hello-world-soccer-2022:

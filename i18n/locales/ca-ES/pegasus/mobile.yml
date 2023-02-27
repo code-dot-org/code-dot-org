@@ -583,7 +583,7 @@
   older_systems: "Tutorials que funcionen en sistemes més vells"
   older_systems_subheading: "Aquestes hauria de funcionar en navegadors antics. Per accedir a totes les classes, actualitza't a un <a href=\"http://browsehappy.com/\" target=\"_blank\"> navegador Web modern.</a>"
   mobile_devices: "Tutorials per a dispositius mòbils"
-  frozen_name: "Codi amb Anna i Elsa"
+  frozen_name: "Programa amb l'Anna i l'Elsa"
   codeorg_name: "Laberint clàssic"
   codeintl_name: "Laberint clàssic"
   khan_name: "Una introducció a JavaScript"
@@ -637,6 +637,7 @@
   courseb-2021_name: Curs B (2021)
   coursec-2021_name: Curs C (2021)
   coursed-2021_name: Curs D (2021)
+  coursee-2021_name: Curs E (2021)
   express-2021_name: Curs exprés (2021)
   accelerated_name: "Curs accelerat"
   express_name: "Curs exprés"
@@ -1089,7 +1090,7 @@
   header_teach: "Ensenya"
   header_stats: "Estadístiques"
   header_help_us: "Ajuda'ns"
-  header_about: "Quant a"
+  header_about: "Qui som"
   header_help_support: 'Ajuda i suport '
   header_report_bug: "Informar d'un problema"
   header_legal_privacy: "Política de privadesa"
@@ -1207,7 +1208,7 @@
   footer_powered_by_aws: "Funciona amb Amazon Web Services"
   footer_built_on_github: "Fet amb GitHub de Microsoft"
   footer_privacy_policy: "Política de privadesa"
-  footer_about: "Quant a"
+  footer_about: "Qui som"
   footer_partners: "Socis"
   footer_donate: "Feu una donació"
   footer_store: "Botiga"

@@ -1,7 +1,7 @@
 <Weblab>
   <config><![CDATA[{
   "properties": {
-    "long_instructions": "\r\n\r\n# Adding a Style Sheet\r\n\r\nThis developer has been working on some style for the page, but has forgotten to add the stylesheet so none of them work!\r\n\r\n# Do This\r\n\r\n1) Inside the HTML page, add the code that will link the style sheet to the web page: `<link rel=\"stylesheet\" href=\"style.css\">`\r\n\r\n<img src=\"https://images.code.org/8547566ed80fc36c7184d1bf16578e99-image-1636648304895.png\" style=\" max-width:500px\">\r\n\r\n2) Verify that the website updates to include new colors and fonts from the `style.css` file",
+    "long_instructions": "# Adding a Style Sheet\r\n\r\nThis developer has been working on some style for the page, but has forgotten to add the stylesheet so none of them work!\r\n\r\n# Do This\r\n\r\n1) Inside the HTML page, add the code that will link the style sheet to the web page: `<link rel=\"stylesheet\" href=\"style.css\">`\r\n\r\n<img src=\"https://images.code.org/8547566ed80fc36c7184d1bf16578e99-image-1636648304895.png\" style=\" max-width:500px\">\r\n\r\n2) Verify that the website updates to include new colors and fonts from the `style.css` file\r\n\r\n\r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/585bc3c637b6bf4adfec724ad0ec0754-image-1677100862427.gif\" style=\"width:500px\">\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
     "instructions_important": "false",
     "encrypted_examples": "SVHBLHjdTDKgu5L74vP23OoAX0dIiEYN32xJZQD4UspkokdjmHP5v1kdiyH9\nn8EQOB2IVVh/dnpoiiQ1UpUhAQ==\n",
     "hide_share_and_remix": "false",
@@ -29,6 +29,6 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:50.651+00:00\",\"changed\":[\"cloned from \\\"CSD U2 add file_2022\\\"\"],\"cloned_from\":\"CSD U2 add file_2022\"},{\"changed_at\":\"2022-09-30 03:24:51 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-17 23:52:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:50.651+00:00\",\"changed\":[\"cloned from \\\"CSD U2 add file_2022\\\"\"],\"cloned_from\":\"CSD U2 add file_2022\"},{\"changed_at\":\"2022-09-30 03:24:51 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-17 23:52:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 21:21:20 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

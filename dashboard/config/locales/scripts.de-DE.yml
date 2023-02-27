@@ -5867,6 +5867,12 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         hello-world-space-2022:
           title: 'Hello World: Weltraum'
         hello-world-soccer-2022:

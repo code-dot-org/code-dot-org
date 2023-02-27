@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2023-02-03 19:05:32 UTC",
+    "serialized_at": "2023-02-24 21:53:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -59,9 +59,9 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Every website has a purpose, a reason someone created it and others use it. In this lesson, students will start to consider the purposes a website might serve and how they are useful tools for both the users and the creators. Students will explore some sample websites and discuss the purpose they serve for their creators. They are then asked to reflect on reasons that someone might want to create websites.\n\n**Question of the Day:**  Why do people create web pages?\n",
+        "overview": "**Question of the Day:** How can we choose websites based on the needs of a user?\n\nTo kick off a unit devoted to group problem solving and developing websites for other users, students begin by investigating the design of different websites. Students look at a variety of websites and attempt to match each design with a potential user. Then students choose a user and attempt to prototype a website design for them on paper or in a digital template. To conclude the activity, students consider what it means to be a web designer and create resources for other users.",
         "preparation": "* Print a copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "student_overview": "**Question of the Day:**  Why do people create web pages?\n\nIn this lesson, you will explore the various purposes that web pages serve users and creators. \n"
+        "student_overview": "**Question of the Day: How can we choose websites based on the needs of a user?**\n\nIn this lesson, you will explore the relationship between users, their needs, and the design of websites that meet their needs."
       },
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
@@ -481,7 +481,7 @@
       "key": "fb4a44ae-9f33-4c95-9932-899369d8064b",
       "position": 1,
       "properties": {
-        "name": "Before the Lesson"
+        "name": "Before the Lesson [TODO]"
       },
       "seeding_key": {
         "lesson_activity.key": "fb4a44ae-9f33-4c95-9932-899369d8064b",
@@ -495,7 +495,7 @@
       "position": 2,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Warm Up [TODO]"
       },
       "seeding_key": {
         "lesson_activity.key": "1fd11786-b963-4aa8-8e60-aa2b98f72c56",
@@ -1404,7 +1404,7 @@
       "key": "583a241f-beb0-4bd6-9df2-1fd0cb495005",
       "position": 1,
       "properties": {
-        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current Code.org teachers.",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -1462,8 +1462,8 @@
       "key": "7947d574-147f-455f-9b4d-c60aa074362e",
       "position": 1,
       "properties": {
-        "description": "Most of the web pages that we visit are created by large organizations that have a lot of people working on them.  But anyone can create their own personal web page and publish it to the Internet.  Today, we're going to look at some personal web pages.  These pages were created by a single person who had something that they wanted to share with the world.",
-        "name": "Personal Web Pages\r",
+        "description": "This unit we are going to learn how to create websites, which starts with thinking about who we're creating a website for. Sometimes we make websites about our own personal interests, but we can also think about designing websites for other people. We'll learn how to apply the problem solving process when designing a website to meet the needs of our users and ourselves.",
+        "name": "Recommending Websites",
         "remarks": true
       },
       "seeding_key": {
@@ -1489,8 +1489,19 @@
       }
     },
     {
-      "key": "c255a733-9244-48ed-a227-eee0659fa4a5",
+      "key": "27814e82-3758-492e-ad9b-18bb7bc28fcd",
       "position": 3,
+      "properties": {
+        "description": "**Overview:** Have students read through the directions on the first page of the activity guide. The first part of this activity asks students to match different users to a website template that suits their needs. Students will need to visit Code Studio to view the website templates."
+      },
+      "seeding_key": {
+        "activity_section.key": "27814e82-3758-492e-ad9b-18bb7bc28fcd",
+        "lesson_activity.key": "071058b3-b0e0-4a0c-b0e3-5f2bb9c94f14"
+      }
+    },
+    {
+      "key": "c255a733-9244-48ed-a227-eee0659fa4a5",
+      "position": 4,
       "properties": {
         "description": "\n**Code Studio:** Direct students to the \"Sample Web Pages\" level on Code Studio.",
         "progression_name": "Sample Personal Web Pages"
@@ -1502,14 +1513,13 @@
     },
     {
       "key": "82054fb4-f288-4bac-9d26-3e6673de54ee",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "This activity guide asks students to consider why people make personal web pages and what sorts of interests can be expressed on them.",
-        "name": "Exploring Websites",
+        "description": "**Circulate:** Have students work through this activity in pairs, encouraging discussion about why exactly they are choosing to make each template. This is a great place to discuss different website designs and the needs of each user.\n\nThis activity guide asks students to consider why people make personal web pages and what sorts of interests can be expressed on them.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students don't need to get it \"right\" for each site, but they should demonstrate that they have considered the reasons someone might make a web page. If students struggle to identify the purpose a site serves its creator, consider asking the following prompts:\r\n\r\n* Does the website creator want the user to do something?\r\n* Does the website try to convince the user of something in particular?\r\n* Does the website serve as a form of personal expression for the creator?\r\n\r\nThe sites are intentionally simple, to help set expectations about the websites that students will be creating over the course of the unit.\r\n\r\n"
+            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe sites are intentionally simple, to help set expectations about the websites that students will be creating over the course of the unit.\n\n"
           }
         ]
       },
@@ -1520,9 +1530,15 @@
     },
     {
       "key": "af2ab7ed-ffa5-42ba-967c-b621e258591d",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "* What is this person sharing with the world?\r\n* Why is it important to them?\r\n\r\nEncourage students to be as detailed as possible when brainstorming the purposes of these sites."
+        "description": "**Share Out:** Have students discuss the following questions in small groups before bringing to a full class discussion:\n\n- Which users were the easiest to find matches for?\n- Which users were the hardest to find matches for?\n\nBased on your observations while circulating, you should also identify a few specific users to ask the class to discuss, especially users where multiple students chose different websites. Encourage students to hear different justifications for their choices, emphasizing that the rationale is more important than the choice itself.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "As students discuss their reasoning for their choices, check to ensure that they are identifying the particular user's needs and characteristics, rather than general reasons to prefer a certain website. You may want to challenge students to distinguish their own needs and preferences from those of the described users."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "af2ab7ed-ffa5-42ba-967c-b621e258591d",
@@ -1530,30 +1546,54 @@
       }
     },
     {
-      "key": "9038a911-9332-4574-b629-868d066b6622",
-      "position": 6,
+      "key": "20ff45fc-855e-4cdd-a9db-6001cbafd618",
+      "position": 7,
       "properties": {
-        "description": "**Share:** Once everyone has had a chance to brainstorm about their sites, give students a chance to share out their thoughts about each site."
+        "description": "Now we've been asked to design a website ourself for a client. We can create our own design, but it should meet the needs of our user.",
+        "name": "Designing a Website",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "9038a911-9332-4574-b629-868d066b6622",
+        "activity_section.key": "20ff45fc-855e-4cdd-a9db-6001cbafd618",
         "lesson_activity.key": "071058b3-b0e0-4a0c-b0e3-5f2bb9c94f14"
       }
     },
     {
-      "key": "94c720e9-9316-4464-9243-dc72cac11fa5",
-      "position": 7,
+      "key": "304c8cc2-2414-445e-abc5-6a0edec43bd3",
+      "position": 8,
       "properties": {
-        "description": "**Discuss:** Give students a chance to share out their responses to the activity guide reflection questions in addition to an opportunity to ask questions about these example sites. Make sure they understand how a small site that is primarily a tool for individual self-expression can also be a useful site for other people.\n\n**Discussion Goal:** The goal of this discussion is to prepare students to think of themselves as potential website creators.  As students discuss the prompt, encourage them to imagine why they might create a site similar to those in the examples, and what their motivations might be.  Remind them that they will have an opportunity in this unit to create a website that will be shared with the entire world.",
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic website design for, following the Problem Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their design."
+      },
+      "seeding_key": {
+        "activity_section.key": "304c8cc2-2414-445e-abc5-6a0edec43bd3",
+        "lesson_activity.key": "071058b3-b0e0-4a0c-b0e3-5f2bb9c94f14"
+      }
+    },
+    {
+      "key": "4a4c8c43-6a1c-4078-8594-a06e5a6aff41",
+      "position": 9,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they complete this activity, ensuring that students are creating designs that match the needs of the user they chose. Monitor student conversations as well to make sure both voices are being heard during discussions and decisions. Students will be working in teams later in the unit to create websites, so it can be good to intervene early to reinforce good collaboration habits."
+      },
+      "seeding_key": {
+        "activity_section.key": "4a4c8c43-6a1c-4078-8594-a06e5a6aff41",
+        "lesson_activity.key": "071058b3-b0e0-4a0c-b0e3-5f2bb9c94f14"
+      }
+    },
+    {
+      "key": "5a8761ea-662e-410d-b4d4-88bccaf3e1d6",
+      "position": 10,
+      "properties": {
+        "description": "**(Optional) Share Out:** Depending on how much time is left in class, allow students to trade with other groups and share their designs. Encourage students to share with another group who picked the same user so they can see similarities and differences in their designs.",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The reflection questions on the activity guide may be an opportunity to assess student preparedness to think of themselves as potential website creators. In addition, the questions can be used to assess student understanding of why they might create a site similar to those in the examples, and what their own motivations might be. "
+            "markdown": "**Following the Problem Solving Process:** You can use student responses on the activity guide to determine how well they followed each step of the problem-solving process. This process will be reinforced throughout the unit, especially on projects."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "94c720e9-9316-4464-9243-dc72cac11fa5",
+        "activity_section.key": "5a8761ea-662e-410d-b4d4-88bccaf3e1d6",
         "lesson_activity.key": "071058b3-b0e0-4a0c-b0e3-5f2bb9c94f14"
       }
     },
@@ -1561,11 +1601,21 @@
       "key": "efd0748a-7c45-47c5-bfe8-c7ce193e05d8",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day:  Why do people create web pages?**\r\n\r\n\r\n**Journal 3-2-1:**\r\n\r\n3 - What are three topics you might be interested in creating a website about?\r\n\r\n2 - What are two reasons you think someone might visit a website that you create?\r\n\r\n1 - What's one thing you're most interested in learning about creating websites?",
-        "name": "Web Development Goals\r"
+        "description": "**Prompt:** Reflect - What was one thing that you think your design does well and really meets the need of the user? What’s an area that you think can still be improved to meet the needs of your user? \n\n**Circulate:** Students can answer these prompts on their activity guide in the Reflect section of the Problem Solving Process.\n\n**Share Out:** Have students share their responses, highlighting similarities between responses even when the users were different."
       },
       "seeding_key": {
         "activity_section.key": "efd0748a-7c45-47c5-bfe8-c7ce193e05d8",
+        "lesson_activity.key": "8e229ab1-1ff5-42c4-a57d-9e05f7ce317e"
+      }
+    },
+    {
+      "key": "cb88b39c-cbf2-4823-8b02-a569635b6dc5",
+      "position": 2,
+      "properties": {
+        "description": "**Question of the Day:  Why do people create web pages?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb88b39c-cbf2-4823-8b02-a569635b6dc5",
         "lesson_activity.key": "8e229ab1-1ff5-42c4-a57d-9e05f7ce317e"
       }
     },
@@ -7227,14 +7277,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U2 classes humors_2023"
+          "CSD U2 classes pac man_2023"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 classes humors_2023"
+          "CSD U2 classes pac man_2023"
         ],
         "lesson.key": "CSS Classes",
         "lesson_group.key": "lessonGroup-3",
@@ -7242,12 +7292,37 @@
         "activity_section.key": "8ee9d453-3063-443a-ac0d-75bb21080ca0"
       },
       "level_keys": [
-        "CSD U2 classes humors_2023"
+        "CSD U2 classes pac man_2023"
       ]
     },
     {
       "chapter": 66,
       "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD classes novels_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD classes novels_2023"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2023",
+        "activity_section.key": "8ee9d453-3063-443a-ac0d-75bb21080ca0"
+      },
+      "level_keys": [
+        "CSD classes novels_2023"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7271,8 +7346,8 @@
       ]
     },
     {
-      "chapter": 67,
-      "position": 5,
+      "chapter": 68,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -7296,8 +7371,8 @@
       ]
     },
     {
-      "chapter": 68,
-      "position": 6,
+      "chapter": 69,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7321,7 +7396,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7346,7 +7421,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7371,7 +7446,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7396,7 +7471,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7421,7 +7496,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7446,20 +7521,17 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 nav bar_2023"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 nav bar_2023"
+          "CSD U2 hyperlinks practice_2023"
         ],
         "lesson.key": "Linking Pages",
         "lesson_group.key": "lessonGroup-3",
@@ -7467,11 +7539,11 @@
         "activity_section.key": "f9b4a79c-8ed0-458f-97ce-fe2006992287"
       },
       "level_keys": [
-        "CSD U2 nav bar_2023"
+        "CSD U2 hyperlinks practice_2023"
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -7496,7 +7568,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7521,7 +7593,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7546,7 +7618,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7571,7 +7643,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7596,7 +7668,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7621,7 +7693,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7646,7 +7718,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7671,7 +7743,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7696,7 +7768,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -7721,7 +7793,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8516,9 +8588,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 classes humors_2023",
+        "level.key": "CSD U2 classes pac man_2023",
         "script_level.level_keys": [
-          "CSD U2 classes humors_2023"
+          "CSD U2 classes pac man_2023"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2023",
+        "activity_section.key": "8ee9d453-3063-443a-ac0d-75bb21080ca0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD classes novels_2023",
+        "script_level.level_keys": [
+          "CSD classes novels_2023"
         ],
         "lesson.key": "CSS Classes",
         "lesson_group.key": "lessonGroup-3",
@@ -8624,9 +8708,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 nav bar_2023",
+        "level.key": "CSD U2 hyperlinks practice_2023",
         "script_level.level_keys": [
-          "CSD U2 nav bar_2023"
+          "CSD U2 hyperlinks practice_2023"
         ],
         "lesson.key": "Linking Pages",
         "lesson_group.key": "lessonGroup-3",
@@ -8892,20 +8976,8 @@
       }
     },
     {
-      "name": "Exploring Web Pages",
-      "url": "https://docs.google.com/document/d/1GA2EgOPfE5_XBcUmehKxE7kOQ_s2rZwxWtDZ8asQBWw/view",
-      "key": "exploring_web_pages",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_web_pages"
-      }
-    },
-    {
-      "name": "Exploring Web Pages",
-      "url": "https://docs.google.com/document/d/1GM6hJfEb-78DePB8tISOjc5jy5HRZlTGQCtEy66hMII/view",
+      "name": "Web Design for Users (A)",
+      "url": "https://docs.google.com/document/d/1IuppZwMZZ0SEMbj0SVI17vXrnWa_hTsGR9C-BLvu1s4/view",
       "key": "exploring_web_pages_1",
       "properties": {
         "audience": "Student",
@@ -8917,7 +8989,7 @@
       }
     },
     {
-      "name": "Exploring Web Pages",
+      "name": "[TODO] Exploring Web Pages",
       "url": "https://docs.google.com/presentation/d/1rNhplmXtb_pkCBQ9PwLE7-Fb30LPr9QDjMbYV5m0L38/template/preview",
       "key": "exploring_web_pages_2",
       "properties": {
@@ -9731,6 +9803,31 @@
       }
     },
     {
+      "name": "Web Design for Users (B)",
+      "url": "https://docs.google.com/document/d/1vkubXei6_E1XZyjqiEDaEG7MEPViHamjkZ_IBCJyi8c/view",
+      "key": "web_design_for_users_b_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "web_design_for_users_b_"
+      }
+    },
+    {
+      "name": "Web Design Template",
+      "url": "https://docs.google.com/presentation/d/1L7BgZu3XJVajibAfhK4c9o2R1_-nMC0ND_R3mXgN2wg/edit",
+      "key": "web_design_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "web_design_template"
+      }
+    },
+    {
       "name": "Website for a Purpose",
       "url": "https://docs.google.com/document/d/19ObCznDrFTz93q15fq3SMUkURiVgTuchLbFninlj3ww/edit",
       "key": "website_for_a_purpose",
@@ -9944,12 +10041,6 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
-        "resource.key": "exploring_web_pages"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Web Pages",
         "resource.key": "exploring_web_pages_1"
       }
     },
@@ -9957,6 +10048,18 @@
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
         "resource.key": "exploring_web_pages_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "resource.key": "web_design_for_users_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "resource.key": "web_design_template"
       }
     },
     {

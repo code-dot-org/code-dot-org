@@ -101,7 +101,7 @@ Kami menggunakan [YouTube](https://www.youtube.com) untuk menetapkan video ke da
 
 Sebelum anda memulakan kursus dalam talian Code.org, uji main balik untuk video di bawah untuk memastikan anda boleh pergi.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 Ini adalah pemain yang digunakan sepanjang kurikulum. Pemain akan cuba menunjukkan video melalui YouTube dan, jika YouTube disekat, tunjukkan video yang dihoskan Code.org menggunakan pemain "sandaran" kami.
 

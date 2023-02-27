@@ -114,3 +114,5 @@ Ang mga antas 2-4 ay gumagamit ng isang naunang sinanay na modelo na ibinigay ng
 Antas 6-8 gumamit ng isang \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Tinitingnan namin ang bawat bahagi ng isda (tulad ng mga mata, bibig, katawan) at pinagsama-sama ang lahat ng metadata para sa mga bahagi (tulad ng bilang ng mga ngipin, hugis ng katawan) sa isang vector ng mga numero para sa bawat isda. Ginagamit namin ang mga vector na ito para sanayin ang SVM. Batay sa data ng pagsasanay, pinaghihiwalay ng SVM ang "espasyo" ng lahat ng posibleng isda sa dalawang bahagi, na tumutugma sa mga klase na sinusubukan naming matutunan (tulad ng "asul" o "hindi asul").
 
 [[Bumalik sa itaas]](#top)
+
+{{ visit_partial_event_logger }}

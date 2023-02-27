@@ -18,7 +18,7 @@
     ],
     "map_reference": "/courses/csd-2022/guides/style-sheets",
     "video_key": "csd_weblab_css_1",
-    "long_instructions": "# CSS and Text Color\r\n\r\nThis HTML file uses a style sheet (\"style.css\") to give the page a particular style.  The style sheet contains information about what each of the HTML elements should look like.\r\n\r\n# Do this\r\n\r\n1) Find the code in the style sheet (click on \"style.css\" in the files list) that is making the h1 heading red.\r\n* Change the code for the color of the h1 heading from `red` to a different color.",
+    "long_instructions": "# CSS and Text Color\r\n\r\nThis HTML file uses a style sheet (\"style.css\") to give the page a particular style.  The style sheet contains information about what each of the HTML elements should look like.\r\n\r\n# Do this\r\n\r\n1) Find the code in the style sheet (click on \"style.css\" in the files list) that is making the h1 heading red.\r\n* Change the code for the color of the h1 heading from `red` to a different color.\r\n\r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/52d3ecf74984a32f497e02bb06d2d046-image-1677099970107.gif\" style=\"width:500px\">\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::",
     "encrypted": "false",
     "validation_enabled": "true",
     "mini_rubric": "false"
@@ -29,6 +29,6 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:49.852+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style h1_2022\\\"\"],\"cloned_from\":\"CSD U2 text style h1_2022\"},{\"changed_at\":\"2023-02-17 23:36:05 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:49.852+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style h1_2022\\\"\"],\"cloned_from\":\"CSD U2 text style h1_2022\"},{\"changed_at\":\"2023-02-17 23:36:05 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 21:07:41 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 21:11:16 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

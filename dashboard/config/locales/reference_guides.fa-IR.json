@@ -105,6 +105,10 @@
           "display_name": "",
           "content": ""
         },
+        "csd-2022/debugging-html": {
+          "display_name": "",
+          "content": ""
+        },
         "csd-2022/debugging-variable-scope-functions": {
           "display_name": "",
           "content": ""
@@ -395,6 +399,10 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "الگوی شمارشگر و سرعت",
+          "content": ""
+        },
+        "csd-2022/web-lab": {
+          "display_name": "آزمایشگاه شبکه",
           "content": ""
         },
         "csd-2022/when-to-make-a-function": {

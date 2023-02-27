@@ -1883,7 +1883,7 @@
         "coursee_helloworld_events": "Használd az \"amikor kattintás” eseményt, hogy a sprite mondjon valamit.",
         "coursee_helloworld_freeplay": "Itt az ideje, hogy azt hozz létre, amit csak akarsz!",
         "coursee_helloworld_say": "Használd a `mondja` blokkot, hogy azt mondjak, amit csak szeretnél!",
-        "express_maze_debugging92022": "Használd az eszköztár blokkjait a programhoz. Vidd a madarat a malachoz.",
+        "express_maze_debugging92022": "Használd az eszköztár blokkjait a programhoz! Vidd a Motkányt a makkhoz!",
         "grade2_collector_102022": "Majdnem készen vagyunk! Gyűjts annyi kincset, amennyit csak tudsz!",
         "grade2_collector_A2022": "Segíts Laurelnek begyűjteni az összes kincset.",
         "ramp_artist_loops12022": "Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.",
@@ -2171,7 +2171,19 @@
         "courseE_bee_functions_challenge1": "Próbáld meg egyedül megoldani a feladatot. \"Méh\" annál is nehezebb lehet, mint amilyennek látszik!",
         "courseE_playLab_challenge1": "Történjen valami, ha a pontszám elér egy szintet, vagy elfogy. Adj hozzá néhány kódot a `nyertes játék` és a `vesztes játék` függvényekhez, hogy a játék úgy működjön, ahogy kellene. \nKattints az ötletekért!",
         "courseF_bee_functions_challenge2": "Használj mindent, amit eddig tanultál, és meg tudod csinálni a feladatot!",
-        "course4_artist_variables_challenge1": "Már mindent tudsz, ami egy ilyen minta elkészítéséhez szükséges! A feladat nehéz, de talál rá fogsz jönni a megoldásra!"
+        "course4_artist_variables_challenge1": "Már mindent tudsz, ami egy ilyen minta elkészítéséhez szükséges! A feladat nehéz, de talál rá fogsz jönni a megoldásra!",
+        "Course 4 Play Lab Params 1": "Itt egy `Ugorj` nevű függvény, aminek a hatására a fő szereplőd 100 képpontnyit ugrik. Futtasd a programot, és használd ezt a függvényt, hogy minden zászlót megszerezd. Közben persze a nyilakkal a kutyát is mozgatnod kell.",
+        "Course 4 Play Lab Params 10": "Létrehoztunk számodra még egy utolsó függvényt. \n\nHasználd a \"Ha\" utasítást a \"level\\_up\" (szintlépés) függvény meghívására, amikor a játékos pontszáma (player\\_score) nagyobb lesz egy adott számnál.\n\nPéldául: \"player\\_score\" > 6\n\nIndítsd el a játékot, és juss el a harmadik szintre a következő feladványra ugráshoz. ",
+        "Course 4 Play Lab Params 2": "Most már vannak olyan zászlók is, amik túl magasan vannak a jelenlegi ugrási képességünkhöz képest! Használjuk a \"fel\" és \"le\" nyilakat, hogy többféle ugrási magasságot érhessünk el.  \n\nHozzá kell adnunk egy paramétert az \"Ugorj\" függvényünkhöz. Legyen a neve \"height\" (magasság). A fel nyíl lenyomására a kutya ugorjon 200 képpontot, míg a le nyíl lenyomására csak 100-at.",
+        "Course 4 Play Lab Params 3": "Hozzáadtunk még egy paramétert az ugrás függvényhez, hogy több szereplő esetén is használni tudjuk. Minden szereplőt egy számmal jelölünk eggyel kezdődően. Szerkeszd a \"Ugorj\" függvényt, hogy használja az \"actor\" (szereplő) paramétert is, hogy a megfelelő szereplő ugorjon fel. ",
+        "Course 4 Play Lab Params 7": "Szórakozzunk kicsit! Nézd meg az általunk megírt kódot, és próbáld meg kitalálni, hogy mit csinálnak a blokkok.\\\nAmikor végeztél, használd a nyílbillentyűket a Kutya irányítására, és gyűjtsd be az összes zászlót.\nMEGJEGYZÉS: Nem kell semmit sem változtatnod a programban",
+        "Course 4 Play Lab Params 8": "Használd az \"amikor a szereplő megérinti\" blokkot, és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a Kutya megérint más szereplőket.",
+        "Course 4 Play Lab Params 9": "Itt van egy játékunk egy korábbi pályáról, de most a kód nagy része rejtett. Van egy új függvényünk: `score_points` a neve.\n\nSzerkeszd a függvényt, hogy egy új, `points` (pontok) nevű paramétert adhassunk a `player_score` mellé.\n\nA `player_score` változó növekedjen minden alkalommal, amikor a Kutya eltalálja a Macskát egy pitével, és csökkenjen, amikor a Macska eltalálja a Kutyát egy szendviccsel.\n\nMegjegyzés: Amikor végeztél, kattints a \"Futtatás\" gombra a játék indításához. Amikor a Kutya eléri a 6 pontot, továbblépsz a következő feladványra. ",
+        "NEW Course 4 Artist Functions 1": "Tudsz rajzolni egy 100 képpont oldalhosszúságú négyzetet ciklus használatával?",
+        "NEW Course 4 Artist Functions 2": "Tudsz rajzolni 3 négyzetet egymástól 20 képpontra? Mindegyik négyzet 100 képpont oldalhosszúságú.",
+        "NEW Course 4 Play Lab Params 11": "Szabad játék! Csinálj bármit a rendelkezésre álló blokkokkal! ",
+        "course4_bee_for_challenge1": "Az összes nektár összegyűjtéséhez használj ciklust. Van néhány művelet, amelyet az érdemes pontosan `counter` alkalommal ismételned.",
+        "course4_playlab_variables_challenge1": "Ezekkel a blokkokkal a szereplők kopogtatós viccet tudnak mesélni. Ha módosítod a kérdéseket és a poént, a saját viccedet is elmondhatják!"
       }
     }
   }
