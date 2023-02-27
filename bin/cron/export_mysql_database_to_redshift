@@ -59,7 +59,7 @@ def main
     ChatClient.message 'data', "Completed weekly export from Aurora MySQL database to Redshift."
   end
 rescue StandardError => e
-  ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{e.message}", color: 'red'
+  ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{e}", color: 'red'
   raise e
 ensure
   Cdo::RDS.delete_cluster(RedshiftImport::CLONE_CLUSTER_ID)
