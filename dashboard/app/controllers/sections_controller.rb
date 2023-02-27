@@ -9,8 +9,6 @@ class SectionsController < ApplicationController
   def create
     return head :forbidden unless current_user&.admin
 
-    return head :bad_request unless section_params[:grades]
-
     section = Section.new(section_params)
     section.user = current_user
     section.save!
