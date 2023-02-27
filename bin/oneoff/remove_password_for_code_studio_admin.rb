@@ -70,5 +70,5 @@ ADMIN_IDS.each do |admin_id|
     puts "Admin password updated - #{admin_id}"
   end
 rescue StandardError => e
-  puts "Error, admin password is not updated - #{admin_id} / #{e.message}"
+  puts "Error, admin password is not updated - #{admin_id} / #{e}"
 end

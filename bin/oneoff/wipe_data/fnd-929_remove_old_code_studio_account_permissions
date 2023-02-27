@@ -122,5 +122,5 @@ USERS_TO_REVOKE.each do |user_id|
     puts "User ID successfully revoked - #{user_id}"
   end
 rescue StandardError => e
-  puts "Error revoking User ID - #{user_id} / #{e.message}"
+  puts "Error revoking User ID - #{user_id} / #{e}"
 end

@@ -31,7 +31,7 @@ class SchoolTest < ActiveSupport::TestCase
     begin
       School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true)
     rescue => e
-      assert_includes e.to_s, 'This was a dry run'
+      assert_includes e.message, 'This was a dry run'
       assert_equal 0, School.count
     end
   end
@@ -57,7 +57,7 @@ class SchoolTest < ActiveSupport::TestCase
     begin
       School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true, &parse_row)
     rescue => e
-      assert_includes e.to_s, 'This was a dry run'
+      assert_includes e.message, 'This was a dry run'
       assert_equal before_count, School.count
     end
   end
