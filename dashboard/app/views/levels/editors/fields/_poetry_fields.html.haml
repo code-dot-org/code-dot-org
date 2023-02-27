@@ -4,7 +4,7 @@
 #poetry_fields
   .field
     = f.label :standalone_app_name, 'Level Subtype'
-    %p Poetry HOC levels have a poem dropdown above the playspace and auto-animate the poem.
+    %p Poetry HOC and Time Capsule levels have a poem dropdown above the playspace and auto-animate the poem.
     - if local_assigns[:warning]
       %p= "WARNING: #{warning}"
     = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name), {}, onchange: 'toggleFields(this.value);'
@@ -28,7 +28,7 @@
 :javascript
   function toggleFields(val) {
     const defaultPoem = document.getElementById('defaultPoem');
-    if (val.toLowerCase() === 'poetry_hoc') {
+    if (val.toLowerCase() !== 'poetry') {
       defaultPoem.classList.remove('collapse');
     } else {
       defaultPoem.classList.add('collapse');

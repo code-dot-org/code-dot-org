@@ -1759,6 +1759,9 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Bagong block!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Mag-click muna dito!"
         }
       }
     }
