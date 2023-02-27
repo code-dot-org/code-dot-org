@@ -1236,10 +1236,19 @@
           "description": "Elementi per stabilire se determinati oggetti sono o non sono computer."
         },
         "79703655-22be-4793-9467-645a51036c6e": {
-          "description": "Seleziona i dati in ingresso e in uscita utilizzati per eseguire le attività informatiche più comuni"
+          "description": "Seleziona gli ingressi e le uscite utilizzati per eseguire le attività informatiche più comuni"
         },
         "c7d19ce4-de97-45e9-9eca-24091cf33f2e": {
-          "description": "Spiegare il ruolo che i dati in ingresso e in uscita assumono, quando i computer vengono utilizzati per risolvere problemi basati sui dati."
+          "description": "Spiegare il ruolo che ingressi e uscite (input e output) assumono, quando i computer vengono utilizzati per risolvere problemi basati sui dati."
+        },
+        "562b0b01-1b21-4c50-a63f-8d749d32f9de": {
+          "description": "identificare diversi tipi comuni di elaborazione utilizzati nell'informatica."
+        },
+        "653717aa-11b9-45b1-b2c8-fac35c18feea": {
+          "description": "determinare quali tipi di elaborazione sono appropriati per un particolare problema informatico."
+        },
+        "b2463106-01c4-42ed-a732-46be3ca3191f": {
+          "description": "definire l'elaborazione come il lavoro svolto (possibilmente da un computer) per trasformare dati in ingresso in dati in uscita"
         },
         "2ebd7cbf-186c-4685-966c-0bff0c440c41": {
           "description": "  Comunica e collabora con i compagni di classe per risolvere un problema "
@@ -2310,10 +2319,19 @@
           "description": "Individua i problemi che possono essere risolti con l'informatica e motiva queste scelte."
         },
         "b77ee6ff-2558-4b8a-b835-6cc16409602f": {
-          "description": "Seleziona i dati in ingresso e in uscita utilizzati per eseguire le attività informatiche più comuni"
+          "description": "Seleziona gli ingressi e le uscite utilizzati per eseguire le attività informatiche più comuni"
         },
         "372ca368-9509-4398-b84c-21ac4c890a1d": {
-          "description": "Spiegare il ruolo che i dati in ingresso e in uscita assumono, quando i computer vengono utilizzati per risolvere problemi basati sui dati."
+          "description": "Spiegare il ruolo che ingressi e uscite (input e output) assumono, quando i computer vengono utilizzati per risolvere problemi basati sui dati."
+        },
+        "36878c76-5f41-4efb-bba1-e9ca4a2e32fa": {
+          "description": "definire l'elaborazione come il lavoro svolto (possibilmente da un computer) per trasformare dati in ingresso in dati in uscita"
+        },
+        "dd98dbf4-2b0d-4d8b-be4e-4807c06de0a0": {
+          "description": "identificare diversi tipi comuni di elaborazione utilizzati nell'informatica."
+        },
+        "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
+          "description": "determinare quali tipi di elaborazione sono appropriati per un particolare problema informatico."
         },
         "07998a0e-1ef2-4bc0-af59-5278007a0058": {
           "description": "  Comunica e collabora con i compagni di classe per risolvere un problema "

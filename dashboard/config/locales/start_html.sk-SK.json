@@ -1539,6 +1539,12 @@
           "night": "noc",
           "dusk": "Súmrak",
           "Predict": "Predpoveď"
+        },
+        "CSD U1 processing countries_2021": {
+          "How Many Countries...": "Koľko krajín..."
+        },
+        "CSD U1 processing countries_2022": {
+          "How Many Countries...": "Koľko krajín..."
         }
       }
     }

@@ -279,6 +279,18 @@
           "purpose": "Aquesta lliçó dona als alumnes l'oportunitat de crear un projecte de disseny propi, utilitzant un procés pas a pas que requereix planificació però que també fomenta la creativitat.",
           "student_overview": "Prepara les mans per posar-te a programar! És hora de començar a crear el teu projecte."
         },
+        "coursef-2022/The Power of Words": {
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó és una creació original de Common Sense Education. [Més informació.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nA mesura que vagin creixent, els nens i nenes començaran a comunicar-se més per internet. Malauradament, algunes de les coses que es trobaran podran fer que se sentin dolguts, tristos, enfadats o fins i tot espantats. Ajudeu-los a desenvolupar empatia de cara als altres i doneu-los estratègies que puguin fer servir quan es topin amb casos de ciberassetjament.",
+          "preparation": "-   Repasseu els materials didàctics.\n-   Imprimiu una o diverses fitxes per cada alumne.\n-   Tingueu un cordó llarg (o corda) i fulls a punt pels alumnes.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i tecnologia. Aquesta lliçó se centra en el ciberassetjament, el drama digital i el discurs d’odi. Els alumnes reflexionaran sobre aquests temes tan conflictius per lluitar-hi, promoure unes comunitats positives i de suport i plantar cara als comportaments cruels a internet.",
+          "student_overview": "L'assetjament mai és acceptable. Amb aquesta lliçó aprendreu què es pot i què no es pot dir per internet."
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "overview": "En aquesta lliçó **d’establiment de context**, els alumnes comentaran el paper dels ordinadors i de la tecnologia a les seves vides, i especialment com les aplicacions i les eines donen opcions al usuaris sobre el seu ús. També es fixaran en aplicacions semblants a les quals crearan ells mateixos més endavant.",
+          "preparation": "-   Determineu com els alumnes iniciaran sessió a Code.org.\n-   Si cal, creeu comptes de Code.org per als alumnes.\n-   Assigneu la tasca Introducció al Laboratori d’Sprites als alumnes.\n-   Imprimiu còpies de la fitxa de treball **\\*Explorem aplicacions** (o pengeu-ne la versió digital a la intranet de l’alumne).",
+          "purpose": "La primera lliçó consisteix a fer que els alumnes tinguin ganes de fer el curs i a relacionar els seus interessos personals amb la informàtica.",
+          "student_overview": "Comentareu el paper dels ordinadors i la tecnologia en les vostres vides, i especialment com les aplicacions i les eines ofereixen als usuaris diferents opcions d'ús."
+        },
         "coursef-2022/Making Sprites": {
           "name": "Creació d'sprites",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes completaran una sèrie de nivells de programació a l'ordinador i acabaran amb una tasca de joc lliure en què podran construir el que vulguin. Escriuran programes i aprendran sobre els dos conceptes prinicpals del Laboratori d'Sprites: els sprites i els comportaments.",
@@ -290,6 +302,7 @@
           "name": "Sprites en acció",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes completaran una sèrie de nivells de programació a l'ordinador i acabaran amb una tasca de joc lliure en què podran construir el que vulguin. Escriuran programes que responguin a successos cronometrats i a les entrades de l'usuari.",
           "preparation": "Repasseu els nivells i les diapositives de la lliçó.",
+          "purpose": "Aquesta lliçó està pensada per reforçar les habilitats de la lliçó anterior i introduir els alumnes a la programació amb esdeveniments. En aquest curs, els esdeveniments seran el recurs principal que faran servir per canviar com s'executen els seus programes, tant al llarg del temps com en resposta a l'usuari.",
           "student_overview": "Fareu nivells de programació i acabareu amb una tasca de joc lliure en què podreu crear el que vulgueu."
         },
         "coursef-2022/Mini-Project: Virtual Pet": {
@@ -319,6 +332,7 @@
           "name": "Sigues un ciutadà digital de primera",
           "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó és una creació original de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nLes eines d'internet donen molta autonomia als nens, i també comporten grans responsabilitats. Però saben què han de fer si es troben davant de situacions de ciberassetjament? Aquí els ensenyareu com prendre mesures i resoldre conflictes, de manera que a més de plantar-hi cara, també ajudin a qui ho necessita.",
           "preparation": "-   Repasseu els materials didàctics.\n-   Imprimiu una o diverses fitxes per cada alumne.\n-   Tingueu llapis o retoladors de colors a punt pels alumnes.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i tecnologia. Aquesta lliçó se centra en el ciberassetjament, el drama digital i el discurs d’odi. Els alumnes reflexionaran sobre aquests temes tan conflictius per lluitar-hi, promoure unes comunitats positives i de suport i plantar cara als comportaments cruels a internet.",
           "student_overview": "Aprèn a plantar cara al ciberassetjament."
         },
         "coursee-2022/Private and Personal Information": {
@@ -863,6 +877,7 @@
           "name": "Aturem la crueltat a internet",
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó és una creació original de Common Sense Education. [Més informació.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInternet està ple de persones molt interessants, però de vegades, hi ha qui es comporta de manera cruel. Amb aquest joc de rol, ajudareu els alumnes a entendre per què resulta més fàcil ser cruel a internet que en persona, i els ensenyareu què poden fer quan vegin que algú es comporta d’aquesta al món virtual.",
           "preparation": "-   Repasseu els materials didàctics.\n-   Imprimiu una o diverses fitxes per cada alumne.\n-   Porteu un peluix o joguina a classe.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i tecnologia. Aquesta lliçó se centra en el ciberassetjament, el drama digital i el discurs d’odi. Els alumnes reflexionaran sobre aquests temes tan conflictius per lluitar-hi, promoure unes comunitats positives i de suport i plantar cara als comportaments cruels a internet.",
           "student_overview": "En aquesta lliçó, aprendreu què és la crueltat i què podeu fer quan us la trobeu a internet."
         },
         "coursec-2022/My Robotic Friends Jr": {
@@ -2175,6 +2190,12 @@
         "allthethings/Sprite Lab": {
           "name": "Laboratori de personatges"
         },
+        "coursef-2021/lesson-6": {
+          "overview": "En aquesta lliçó **d’establiment de context**, els alumnes comentaran el paper dels ordinadors i de la tecnologia a les seves vides, i especialment com les aplicacions i les eines donen opcions al usuaris sobre el seu ús. També es fixaran en aplicacions semblants a les quals crearan ells mateixos més endavant.",
+          "preparation": "-   Determineu com els alumnes iniciaran sessió a Code.org.\n-   Si cal, creeu comptes de Code.org per als alumnes.\n-   Assigneu la tasca Introducció al Laboratori d’Sprites als alumnes.\n-   Imprimiu còpies de la fitxa de treball **\\*Explorem aplicacions** (o pengeu-ne la versió digital a la intranet de l’alumne).",
+          "purpose": "La primera lliçó consisteix a fer que els alumnes tinguin ganes de fer el curs i a relacionar els seus interessos personals amb la informàtica.",
+          "student_overview": "Comentareu el paper dels ordinadors i la tecnologia en les vostres vides, i especialment com les aplicacions i les eines ofereixen als usuaris diferents opcions d'ús."
+        },
         "coursef-2021/lesson-7": {
           "name": "Creació d'sprites",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes completaran una sèrie de nivells de programació a l'ordinador i acabaran amb una tasca de joc lliure en què podran construir el que vulguin. Escriuran programes i aprendran sobre els dos conceptes prinicpals del Laboratori d'Sprites: els sprites i els comportaments.",
@@ -2186,6 +2207,7 @@
           "name": "Sprites en acció",
           "overview": "En aquesta lliçó de **desenvolupament d'habilitats**, els alumnes completaran una sèrie de nivells de programació a l'ordinador i acabaran amb una tasca de joc lliure en què podran construir el que vulguin. Escriuran programes que responguin a successos cronometrats i a les entrades de l'usuari.",
           "preparation": "Repasseu els nivells i les diapositives de la lliçó.",
+          "purpose": "Aquesta lliçó està pensada per reforçar les habilitats de la lliçó anterior i introduir els alumnes a la programació amb esdeveniments. En aquest curs, els esdeveniments seran el recurs principal que faran servir per canviar com s'executen els seus programes, tant al llarg del temps com en resposta a l'usuari.",
           "student_overview": "Fareu nivells de programació i acabareu amb una tasca de joc lliure en què podreu crear el que vulgueu."
         },
         "coursef-2021/Virtual Pet": {
@@ -2193,6 +2215,12 @@
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "Aquesta lliçó permet als estudiants aplicar conceptes de programació de lliçons anteriors en un context creatiu diferent. ",
           "student_overview": "Crea una mascota virtual interactiva que tingui l'aspecte i el comportament que vulguis! Dona vida pròpia a la teva mascota!"
+        },
+        "coursef-2021/lesson-2": {
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó és una creació original de Common Sense Education. [Més informació.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nA mesura que vagin creixent, els nens i nenes començaran a comunicar-se més per internet. Malauradament, algunes de les coses que es trobaran podran fer que se sentin dolguts, tristos, enfadats o fins i tot espantats. Ajudeu-los a desenvolupar empatia de cara als altres i doneu-los estratègies que puguin fer servir quan es topin amb casos de ciberassetjament.",
+          "preparation": "-   Repasseu els materials didàctics.\n-   Imprimiu una o diverses fitxes per cada alumne.\n-   Tingueu un cordó llarg (o corda) i fulls a punt pels alumnes.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i tecnologia. Aquesta lliçó se centra en el ciberassetjament, el drama digital i el discurs d’odi. Els alumnes reflexionaran sobre aquests temes tan conflictius per lluitar-hi, promoure unes comunitats positives i de suport i plantar cara als comportaments cruels a internet.",
+          "student_overview": "L'assetjament mai és acceptable. Amb aquesta lliçó aprendreu què es pot i què no es pot dir per internet."
         },
         "coursef-2021/lesson-10": {
           "name": "Text i preguntes",
@@ -2930,6 +2958,7 @@
           "name": "Sigues un ciutadà digital de primera",
           "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAquesta lliçó és una creació original de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nLes eines d'internet donen molta autonomia als nens, i també comporten grans responsabilitats. Però saben què han de fer si es troben davant de situacions de ciberassetjament? Aquí els ensenyareu com prendre mesures i resoldre conflictes, de manera que a més de plantar-hi cara, també ajudin a qui ho necessita.",
           "preparation": "-   Repasseu els materials didàctics.\n-   Imprimiu una o diverses fitxes per cada alumne.\n-   Tingueu llapis o retoladors de colors a punt pels alumnes.",
+          "purpose": "El pla d'estudis de Ciutadania Digital de Common Sense toca sis temes centrals fonamentats en els estudis més recents sobre infants, mitjans i tecnologia. Aquesta lliçó se centra en el ciberassetjament, el drama digital i el discurs d’odi. Els alumnes reflexionaran sobre aquests temes tan conflictius per lluitar-hi, promoure unes comunitats positives i de suport i plantar cara als comportaments cruels a internet.",
           "student_overview": "Aprèn a plantar cara al ciberassetjament."
         },
         "coursee-2021/Private and Personal Information": {
