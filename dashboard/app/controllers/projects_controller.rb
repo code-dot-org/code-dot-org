@@ -395,6 +395,8 @@ class ProjectsController < ApplicationController
       return head :bad_request
     end
     project_type = params[:key]
+    return head :forbidden if Projects.in_restricted_share_mode(src_channel_id, project_type)
+
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),
