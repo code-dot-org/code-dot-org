@@ -84,10 +84,10 @@ class CertificateImage
       # Free the memory in order to avoid memory leaks (images are stored in /tmp
       # until destroyed)
       text_overlay.destroy!
-    rescue Magick::ImageMagickError => e
+    rescue Magick::ImageMagickError => exception
       # We want to know what kinds of text we are failing to render.
       Honeybadger.notify(
-        e,
+        exception,
         context: {
           text: text,
         }

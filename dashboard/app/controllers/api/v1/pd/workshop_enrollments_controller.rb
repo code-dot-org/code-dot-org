@@ -72,8 +72,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
         }
       rescue ActiveRecord::ValueTooLong
         render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: 'a response is too long'}
-      rescue ActiveRecord::RecordInvalid => e
-        render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: e.message}
+      rescue ActiveRecord::RecordInvalid => exception
+        render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: exception.message}
       end
     end
   end

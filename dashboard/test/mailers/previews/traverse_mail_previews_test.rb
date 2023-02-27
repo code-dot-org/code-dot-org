@@ -16,8 +16,8 @@ class TraverseMailPreviewsTest < ActiveSupport::TestCase
         # Call each method on each mailer preview class. For now its enough to make sure
         # that the mailer preview can successfully run
         klass.new.send(method.to_sym)
-      rescue Exception => e
-        puts e
+      rescue Exception => exception
+        puts exception
         failed_runs << "#{klass}: #{method}"
       end
 

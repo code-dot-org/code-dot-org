@@ -254,10 +254,10 @@ class Slack
         Honeybadger.notify_cronjob_error opts
         response = false
       end
-    rescue Exception => e
+    rescue Exception => exception
       opts = {
         error_class: "Slack integration [error]",
-        error_message: e,
+        error_message: exception,
         context: {url: url, payload: payload}
       }
       Honeybadger.notify_cronjob_error opts
