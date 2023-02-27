@@ -58,9 +58,10 @@ export default function CurriculumQuickAssign() {
                 ? 'caret-up'
                 : 'caret-down'
             }
-            onClick={() =>
-              updateMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY)
-            }
+            onClick={e => {
+              e.preventDefault();
+              updateMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY);
+            }}
           />
           <Button
             id={'uitest-middle-button'}
@@ -72,7 +73,10 @@ export default function CurriculumQuickAssign() {
                 ? 'caret-up'
                 : 'caret-down'
             }
-            onClick={() => updateMarketingAudience(MARKETING_AUDIENCE.MIDDLE)}
+            onClick={e => {
+              e.preventDefault();
+              updateMarketingAudience(MARKETING_AUDIENCE.MIDDLE);
+            }}
           />
           <Button
             id={'uitest-high-button'}
@@ -84,7 +88,10 @@ export default function CurriculumQuickAssign() {
                 ? 'caret-up'
                 : 'caret-down'
             }
-            onClick={() => updateMarketingAudience(MARKETING_AUDIENCE.HIGH)}
+            onClick={e => {
+              e.preventDefault();
+              updateMarketingAudience(MARKETING_AUDIENCE.HIGH);
+            }}
           />
           <Button
             id={'uitest-hoc-button'}
@@ -96,7 +103,10 @@ export default function CurriculumQuickAssign() {
                 ? 'caret-up'
                 : 'caret-down'
             }
-            onClick={() => updateMarketingAudience(MARKETING_AUDIENCE.HOC)}
+            onClick={e => {
+              e.preventDefault();
+              updateMarketingAudience(MARKETING_AUDIENCE.HOC);
+            }}
           />
           <input
             checked={decideLater}
