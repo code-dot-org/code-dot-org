@@ -367,8 +367,13 @@
           "word": "Sprite",
           "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
         },
+        "user/coursef/2022": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
         "algorithm/coursef/2022": {
-          "word": "Algorisme"
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
         },
         "behavior/coursef/2022": {
           "word": "Comportament"
@@ -741,6 +746,10 @@
           "word": "Copyright",
           "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         },
+        "user/csd/2022": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
         "machine_learning/csd/2022": {
           "word": "Aprenentatge automàtic",
           "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
@@ -769,8 +778,13 @@
           "word": "Sprite",
           "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
         },
+        "user/coursef/2021": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
         "algorithm/coursef/2021": {
-          "word": "Algorisme"
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
         },
         "behavior/coursef/2021": {
           "word": "Comportament",
@@ -1196,6 +1210,10 @@
         "machine_learning/csd/2021": {
           "word": "Aprenentatge automàtic",
           "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
+        },
+        "user/csd/2021": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
         },
         "bug/csd/2021": {
           "word": "Bug / error",

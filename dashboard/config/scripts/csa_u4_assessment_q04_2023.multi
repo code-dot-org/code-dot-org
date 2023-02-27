@@ -10,13 +10,20 @@ markdown <<MARKDOWN
 Consider the following code segment
 
 ```
-int[] ar = {8,9,10,11};
-if(ar.length > 3) {
-  if (ar[2] > 9) {
-    System.out.println(ar[2]);
+int[] numbers = {8, 9, 10, 11};
+
+if (numbers.length > 3) {
+  if (numbers[2] > 9) {
+    System.out.println(numbers[2]);
   }
 }
 ```
 
 What is printed as a result of executing the code segment?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In this code segment, the length of `numbers` is `4`, so the first `if` statement would evaluate to `true` because the length is greater than `3`.
+
+The inner `if` statement is then evaluated to check if the value at index `2` in `numbers` is greater than `9`. The value at index `2` is `10`, so the condition is `true`. The value at index `2` in `numbers` is then printed, so `10` is printed to the console.
 MARKDOWN

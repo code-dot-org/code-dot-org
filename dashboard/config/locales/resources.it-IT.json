@@ -1700,12 +1700,17 @@
           "type": "Diapositive"
         },
         "apps_with_processing/csd/2022": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
           "type": "Modello"
         },
         "apps_with_processing_1/csd/2022": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
           "type": "Guida alle attività"
         },
         "apps_with_processing_2/csd/2022": {
+          "name": "App con elaborazione",
           "type": "Diapositive"
         },
         "apps_with_storage/csd/2022": {
@@ -6055,9 +6060,13 @@
           "type": "Guida alle attività"
         },
         "processing-2020/csd/2021": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
           "type": "Modello"
         },
         "apps-with-processing/csd/2021": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
           "type": "Guida alle attività"
         },
         "what-do-computers-do/csd/2021": {

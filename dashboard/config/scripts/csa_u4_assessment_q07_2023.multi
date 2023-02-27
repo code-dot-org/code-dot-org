@@ -22,3 +22,9 @@ else {
 
 What is printed when this code segment is run?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The `Math.pow()` method is used to calculate exponents. The first argument is raised to the power of the second argument.
+
+In this code segment, the variable `a` is assigned the result of `-2.0` raised to the power of `3.0`. This evaluates to `-8`, so the `if` statement is `false` because the value is negative. This results in `"The output is negative!"` being printed to the console.
+MARKDOWN
