@@ -42,7 +42,8 @@ class QuickAssignHelperTest < ActionController::TestCase
     course_offering1 = create :course_offering, curriculum_type: 'Course', header: 'Header 1'
     course_offering2 = create :course_offering, curriculum_type: 'Course', header: 'Header 2'
     course_offering3 = create :course_offering, curriculum_type: 'Standalone Unit', header: 'Header 1'
-    course_offering4 = create :course_offering, curriculum_type: 'Standalone Unit', header: 'Header 2', display_name: 'A'
+    # course_offering4 and course_offering5 should be grouped together, with course_offering5 being first in the resulting list.
+    course_offering4 = create :course_offering, curriculum_type: 'Standalone Unit', header: 'Header 2', display_name: 'Z'
     course_offering5 = create :course_offering, curriculum_type: 'Standalone Unit', header: 'Header 2', display_name: 'B'
 
     teacher = create :teacher
@@ -55,7 +56,7 @@ class QuickAssignHelperTest < ActionController::TestCase
     assert_equal 1, grouped_offerings['Standalone Unit']['Header 1'].length
     assert_equal course_offering3.id, grouped_offerings['Standalone Unit']['Header 1'][0][:id]
     assert_equal 2, grouped_offerings['Standalone Unit']['Header 2'].length
-    assert_equal course_offering4.id, grouped_offerings['Standalone Unit']['Header 2'][0][:id]
-    assert_equal course_offering5.id, grouped_offerings['Standalone Unit']['Header 2'][1][:id]
+    assert_equal course_offering5.id, grouped_offerings['Standalone Unit']['Header 2'][0][:id]
+    assert_equal course_offering4.id, grouped_offerings['Standalone Unit']['Header 2'][1][:id]
   end
 end

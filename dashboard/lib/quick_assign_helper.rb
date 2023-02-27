@@ -14,6 +14,11 @@ module QuickAssignHelper
     offerings
   end
 
+  # We want to organize the course offerings in a very specific format.
+  # In particular, we want to group by curriculum_type then header within each curriculum_type.
+  # The headers within each curriculum_type will be sorted alphabetically.
+  # The offerings within a header will be sorted alphabetically by display_name.
+  # Any course_offerings that do not have a curriculum_type and a header will be ignored.
   def self.group_offerings(course_offerings, user, locale)
     data = {}
     course_offerings.each do |co|
@@ -24,6 +29,7 @@ module QuickAssignHelper
       data[co.curriculum_type][co.header].append(co.summarize_for_quick_assign(user, locale))
     end
 
+    # Sort the headers and the course offerings
     data.keys.each do |curriculum_type|
       data[curriculum_type].keys.each do |header|
         data[curriculum_type][header].sort_by! {|co| co[:display_name]}
