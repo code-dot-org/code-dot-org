@@ -358,11 +358,4 @@ class ChannelsApi < Sinatra::Base
   def verified_teacher?
     has_permission?("authorized_teacher")
   end
-
-  def check_can_publish(channel_id, project_type)
-    not_authorized unless owns_channel?(channel_id)
-    bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
-  end
 end

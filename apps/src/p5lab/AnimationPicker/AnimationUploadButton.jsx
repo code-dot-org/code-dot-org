@@ -3,12 +3,19 @@ import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import project from '@cdo/apps/code-studio/initApp/project';
-import BaseDialog from '../../templates/BaseDialog.jsx';
+import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import classNames from 'classnames';
 import styles from './animation-upload-button.module.scss';
 import {connect} from 'react-redux';
-import {refreshInRestrictedShareMode} from '../../code-studio/projectRedux.js';
+import {refreshInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux.js';
 
+/**
+ * Render the animation upload button. If the project should restrict uploads
+ * (which occurs for student Sprite Lab projects), and the project has not already seen
+ * the warning (which is tracked with inRestrictedShareMode), we show a warning modal
+ * before allowing uploads. If the project should restrict uploads and is already
+ * published, we will not allow uploads until the project is un-published.
+ */
 export function UnconnectedAnimationUploadButton({
   onUploadClick,
   shouldRestrictAnimationUpload,
@@ -45,6 +52,8 @@ export function UnconnectedAnimationUploadButton({
     );
   }
 
+  // Warning dialog that says if you upload, you can no longer share and remix,
+  // and you confirm you will not upload PII.
   function renderUploadModal() {
     return (
       <BaseDialog
@@ -98,6 +107,7 @@ export function UnconnectedAnimationUploadButton({
     );
   }
 
+  // Warning dialog that you cannot upload until you un-publish your project.
   function renderPublishedWarningModal() {
     return (
       <BaseDialog

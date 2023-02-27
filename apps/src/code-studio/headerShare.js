@@ -35,7 +35,7 @@ export function shareProject(shareUrl) {
 
     // Allow publishing for any project type that students can publish.
     // Younger students can now get to the share dialog if their teacher allows
-    // it. ShareAllowedDialog will disabled publishing, even if canPublish is true,
+    // it. ShareAllowedDialog will disable publishing, even if canPublish is true,
     // if the project is in restricted share mode.
     const canPublish =
       !!appOptions.isSignedIn && AllPublishableProjectTypes.includes(appType);

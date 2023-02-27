@@ -89,10 +89,11 @@ class P5LabView extends React.Component {
     });
   }
 
-  // TODO: When we remove the backgrounds_and_upload experiment we can get rid of hideUploadOption
+  // TODO: When we remove the backgrounds_and_upload experiment
+  // we can get rid of hideUploadOption
   shouldHideAnimationUpload() {
-    // Teachers should always be allowed to upload animations, and we are currently
-    // enabling it for students under an experiment flag.
+    // Teachers should always be allowed to upload animations,
+    // and we are currently enabling it for students under an experiment flag.
     if (
       this.props.currentUserType === 'teacher' ||
       experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
