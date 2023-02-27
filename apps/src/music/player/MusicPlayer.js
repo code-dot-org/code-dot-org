@@ -54,7 +54,14 @@ export default class MusicPlayer {
     LoadSoundFromBuffer(id, buffer);
   }
 
-  playSoundAtMeasureById(id, measure, insideWhenRun, trackId, functionContext) {
+  playSoundAtMeasureById(
+    id,
+    measure,
+    insideWhenRun,
+    trackId,
+    functionContext,
+    skipContext
+  ) {
     if (!this.isInitialized) {
       console.log('MusicPlayer not initialized');
       return;
@@ -74,7 +81,8 @@ export default class MusicPlayer {
       insideWhenRun,
       when: measure,
       trackId,
-      functionContext
+      functionContext,
+      skipContext
     };
 
     this.soundEvents.push(soundEvent);

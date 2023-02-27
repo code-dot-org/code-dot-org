@@ -22,6 +22,7 @@ const TimelineElement = ({
   top,
   left,
   when,
+  skipContext,
   currentPlayheadPosition
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
@@ -32,6 +33,9 @@ const TimelineElement = ({
     currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&
     currentPlayheadPosition < when + length;
+
+  const isMaybeSkipping = skipContext?.maybeSkipSound;
+  const isSkipping = skipContext?.skipSound;
 
   return (
     <div
@@ -44,7 +48,9 @@ const TimelineElement = ({
         width: barWidth * length - 4,
         height,
         top,
-        left
+        left,
+        ...(isMaybeSkipping && {borderColor: '#a1a1a1'}),
+        ...(isSkipping && {backgroundColor: '#808080'})
       }}
     >
       &nbsp;
@@ -59,6 +65,7 @@ TimelineElement.propTypes = {
   top: PropTypes.number.isRequired,
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
+  skipContext: PropTypes.object,
   currentPlayheadPosition: PropTypes.number.isRequired
 };
 

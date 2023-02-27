@@ -42,6 +42,7 @@ export class GeneratorHelpersSimple2 {
       name: 'when_run',
       uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
     };
+    var __maybeSkipSound = false;
     var __skipSound = false;
     ProgramSequencer.init();
     ProgramSequencer.playTogether();
@@ -86,6 +87,7 @@ export const whenRunSimple2 = {
         name: 'when_run',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __maybeSkipSound = false;
       var __skipSound = false;
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
@@ -114,6 +116,7 @@ export const triggeredAtSimple2 = {
         name: '${block.getFieldValue(TRIGGER_FIELD)}',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __maybeSkipSound = false;
       var __skipSound = false;
       ProgramSequencer.playSequentialWithMeasure(
         Math.ceil(
@@ -147,15 +150,16 @@ export const playSoundAtCurrentLocationSimple2 = {
   },
   generator: block =>
     `
-      if (!__skipSound) {
-        MusicPlayer.playSoundAtMeasureById(
-          "${block.getFieldValue(FIELD_SOUNDS_NAME)}",
-          ProgramSequencer.getCurrentMeasure(),
-          __insideWhenRun,
-          null,
-          __currentFunction
-        );
-      }
+      //if (!__skipSound) {
+      MusicPlayer.playSoundAtMeasureById(
+        "${block.getFieldValue(FIELD_SOUNDS_NAME)}",
+        ProgramSequencer.getCurrentMeasure(),
+        __insideWhenRun,
+        null,
+        __currentFunction,
+        {maybeSkipSound: __maybeSkipSound, skipSound: __skipSound}
+      );
+      //}
       ProgramSequencer.updateMeasureForPlayByLength(
         MusicPlayer.getLengthForId(
           "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
@@ -283,14 +287,21 @@ export const playSoundsRandom = {
     });`;
 
     for (const [resultIndex, result] of resultArray.entries()) {
+      const lastMaybeSkipSoundVar = Blockly.JavaScript.nameDB_.getDistinctName(
+        '__lastMaybeSkipSound',
+        Blockly.Names.NameType.VARIABLE
+      );
       const lastSkipSoundVar = Blockly.JavaScript.nameDB_.getDistinctName(
         '__lastSkipSound',
         Blockly.Names.NameType.VARIABLE
       );
       code += `
+        ${lastMaybeSkipSoundVar} = __maybeSkipSound;
         ${lastSkipSoundVar} = __skipSound;
+        __maybeSkipSound = true;
         __skipSound = __skipSound || ${randomVar} !== ${resultIndex};
         ${result}
+        __maybeSkipSound = ${lastMaybeSkipSoundVar};
         __skipSound = ${lastSkipSoundVar};
         `;
     }
