@@ -23,7 +23,7 @@
       \/
       %a.select_none{href: '#'} none
       (shift-click or cmd-click to select multiple).
-    = f.select :dropdown_poems, (@level.class.poems_for_subtype(@level.standalone_app_name) + (@level.dropdown_poems || [])).uniq.sort, {}, {multiple: true}
+    = f.select :dropdown_poems, (@level.class.poems_for_subtype(@level.standalone_app_name)), {}, {multiple: true}
 
 :javascript
   function toggleFields(val) {

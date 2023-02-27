@@ -9,7 +9,7 @@ const SET_POEM_LIST = 'poetry/SET_POEM_LIST';
 
 const initialState = {
   selectedPoem: {key: '', title: '', author: '', lines: []},
-  poemList: []
+  poemList: {}
 };
 
 /**

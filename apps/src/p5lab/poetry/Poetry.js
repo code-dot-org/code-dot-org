@@ -5,7 +5,7 @@ import {setPoem, hasSelectedPoemChanged, setPoemList} from '../redux/poetry';
 import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
-import {getPoem, getPoems} from './poem';
+import {getPoem, getPoemsFromListOrDefault} from './poem';
 
 export default class Poetry extends SpriteLab {
   init(config) {
@@ -14,11 +14,10 @@ export default class Poetry extends SpriteLab {
     if (poem) {
       getStore().dispatch(setPoem(poem));
     }
-    // need to do something like this, but convert dropdown poems to poem format
-    // const poemList = config.level.dropdownPoems || getPoems();
-    // if (poemList) {
-    //   getStore().dispatch(setPoemList(poemList));
-    // }
+
+    const poemList = getPoemsFromListOrDefault(config.level.dropdownPoems);
+    console.log(poemList);
+    getStore().dispatch(setPoemList(poemList));
     return loader;
   }
 
