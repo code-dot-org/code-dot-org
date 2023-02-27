@@ -78,14 +78,14 @@ class MultipleSectionsAssigner extends Component {
     );
     if (isUnchecked) {
       this.setState(state => {
-        let newList = state.currentSectionsAssigned.filter(
+        const newList = state.currentSectionsAssigned.filter(
           s => s.code !== currentSection.code
         );
         return {currentSectionsAssigned: newList};
       });
     } else {
       this.setState(state => {
-        let newList = [...state.currentSectionsAssigned];
+        const newList = [...state.currentSectionsAssigned];
         newList.push(currentSection);
         return {currentSectionsAssigned: newList};
       });
@@ -193,7 +193,7 @@ class MultipleSectionsAssigner extends Component {
       );
       if (isSectionToBeAssigned) {
         this.setState(state => {
-          let newList = [...state.currentSectionsAssigned];
+          const newList = [...state.currentSectionsAssigned];
           newList.push(this.props.sections[i]);
           return {currentSectionsAssigned: newList};
         });
@@ -313,9 +313,7 @@ const styles = {
 export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;
 
 export default connect(
-  state => ({
-    // add code here
-  }),
+  state => ({}),
   {
     assignToSection,
     updateHiddenScript,

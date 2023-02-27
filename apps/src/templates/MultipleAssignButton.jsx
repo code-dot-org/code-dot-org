@@ -58,7 +58,8 @@ class MultipleAssignButton extends React.Component {
       isRtl,
       sectionsForDropdown,
       participantAudience,
-      isOnCoursePage
+      isOnCoursePage,
+      reassignConfirm
     } = this.props;
 
     // Adjust styles if locale is RTL
@@ -87,7 +88,7 @@ class MultipleAssignButton extends React.Component {
             courseOfferingId={courseOfferingId}
             scriptId={scriptId}
             courseVersionId={courseVersionId}
-            reassignConfirm={this.props.reassignConfirm}
+            reassignConfirm={reassignConfirm}
             isOnCoursePage={isOnCoursePage}
             isStandAloneUnit={isStandAloneUnit}
             participantAudience={participantAudience}
