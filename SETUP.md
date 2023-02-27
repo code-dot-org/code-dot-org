@@ -292,7 +292,8 @@ These steps may need to change over time as 3rd party tools update to have versi
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
-### Ubuntu 18.04 ([Download iso][ubuntu-iso-url])
+### Ubuntu 18.04
+[Ubuntu 18.04 iso download][ubuntu-iso-url]
 
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
@@ -366,7 +367,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     * Try running `chromium-browser`. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`. You can instead install google chrome by running the following:
         1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
         2. `sudo apt install ./google-chrome-stable_current_amd64.deb`
-1. Followed by the [Ubuntu instructions](### Ubuntu 18.04) to install required tools on the Ubuntu instance, _with the following observations_:
+1. Followed by the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following observations_:
     * If google-chrome was installed in the last step, update CHROME_BIN variable to point to google chrome (in step 9), `export CHROME_BIN=$(which google-chrome)`
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
 1. Followed by the [overview instructions](#overview), _with the following observations_:
