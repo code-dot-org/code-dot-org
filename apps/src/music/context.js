@@ -9,5 +9,6 @@ export const PlayerUtilsContext = React.createContext({
   convertMeasureToSeconds: () => 0,
   getTracksMetadata: () => {},
   getLengthForId: () => 0,
-  getTypeForId: () => ''
+  getTypeForId: () => '',
+  getIsExecutingPlay: () => {}
 });

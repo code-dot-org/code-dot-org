@@ -50,7 +50,8 @@ const TimelineElement = ({
         top,
         left,
         ...(isMaybeSkipping && {borderColor: '#a1a1a1'}),
-        ...(isSkipping && {backgroundColor: '#808080'})
+        ...(playerUtils.getIsExecutingPlay() &&
+          isSkipping && {backgroundColor: '#808080'})
       }}
     >
       &nbsp;

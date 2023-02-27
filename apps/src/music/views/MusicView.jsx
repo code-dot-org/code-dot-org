@@ -61,6 +61,8 @@ class UnconnectedMusicView extends React.Component {
     // used to differentiate tracks created on the same trigger
     this.triggerCount = 0;
 
+    this.isExecutingPlay = false;
+
     // Set default for instructions position.
     let instructionsPosIndex = 1;
     const defaultInstructionsPos = AppConfig.getValue(
@@ -209,6 +211,7 @@ class UnconnectedMusicView extends React.Component {
       // re-executed.
       this.player.clearWhenRunEvents();
 
+      this.isExecutingPlay = false;
       this.executeCompiledSong();
 
       this.analyticsReporter.onBlocksUpdated(
@@ -264,18 +267,18 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.executeCompiledSong();
   };
 
+  getIsExecutingPlay = () => {
+    return this.isExecutingPlay;
+  };
+
   playSong = () => {
     this.player.stopSong();
 
-    //const codeChanged =
     this.compileSong();
-    //if (codeChanged) {
-    // Clear the events list of when_run sounds, because it will be
-    // populated next.
     this.player.clearWhenRunEvents();
 
+    this.isExecutingPlay = true;
     this.executeCompiledSong();
-    //}
 
     this.player.playSong();
 
@@ -284,6 +287,10 @@ class UnconnectedMusicView extends React.Component {
 
   stopSong = () => {
     this.player.stopSong();
+
+    // reset the timeline view.
+    this.isExecutingPlay = false;
+    this.executeCompiledSong();
 
     // Clear the events list, and hence the visual timeline, of any
     // user-triggered sounds.
@@ -398,7 +405,8 @@ class UnconnectedMusicView extends React.Component {
               this.player.convertMeasureToSeconds(measure),
             getTracksMetadata: () => this.player.getTracksMetadata(),
             getLengthForId: id => this.player.getLengthForId(id),
-            getTypeForId: id => this.player.getTypeForId(id)
+            getTypeForId: id => this.player.getTypeForId(id),
+            getIsExecutingPlay: () => this.getIsExecutingPlay()
           }}
         >
           <div id="music-lab-container" className={moduleStyles.container}>
