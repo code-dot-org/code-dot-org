@@ -19,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Let's learn to change the size of sprites.**\r\n- Use the new block in the toolbox to change the size of a sprite.\r\n- Make sure to choose a size other than `100`.\r\n\r\n\r\n",
+    "long_instructions": "**Let's learn to change the size of sprites.**\r\n- Use the new `set size`(#5ED5DD) block to change the size of a sprite.\r\n- Make sure to choose a size other than `100`.\r\n\r\n*Bonus: Move the eagle so it is North of the tour guide.*\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -45,14 +45,17 @@
     "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(90); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  \r\n  //Check that the sprite changes size (ie: the scale is not 100 anymore)\r\n  addCriteria(function() {\r\n      return checkNotDefaultSize(spriteIds[0]);\r\n    }, \"useSetpropBlock\");  // include i18n feedback string\r\n  }\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
     "standalone_app_name": "spritelab",
     "name_suffix": "_2023",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2023-02-09T20:30:56.000Z",
-  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-02-09T20:30:56.031+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_size\\\"\"],\"cloned_from\":\"csc_landmarks_size\"},{\"changed_at\":\"2023-02-17 00:32:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:34:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:35:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:36:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:41:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-22 22:20:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-22 22:20:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-22 22:21:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-22 22:56:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "created_at": "2023-02-09T20:30:56.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2023-02-09T20:30:56.031+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_size\\\"\"],\"cloned_from\":\"csc_landmarks_size\"},{\"changed_at\":\"2023-02-17 00:32:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:34:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:35:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:36:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-17 00:41:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-22 22:20:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-22 22:20:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-22 22:21:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-22 22:56:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-23 17:56:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-23 22:43:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-23 22:43:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-23 22:46:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -81,10 +84,10 @@
                       </value>
                       <next>
                         <block type="gamelab_spriteSay" deletable="false" movable="false">
-                          <field name="SPEECH">I should be smaller than a human.</field>
+                          <field name="SPEECH">I should be bigger than the eagle.</field>
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation" movable="false">
-                              <field name="ANIMATION">"eagle"</field>
+                              <field name="ANIMATION">"green_sweater_hands_in_hoodie"</field>
                             </block>
                           </value>
                         </block>
@@ -109,7 +112,7 @@
           </value>
         </block>
         <block type="gamelab_spriteSay">
-          <field name="SPEECH">Schreeeeech!</field>
+          <field name="SPEECH">Screeeeech!</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" movable="false">
               <field name="ANIMATION">"eagle"</field>

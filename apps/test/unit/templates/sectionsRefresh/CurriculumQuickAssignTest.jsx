@@ -18,11 +18,8 @@ describe('CurriculumQuickAssign', () => {
         .props().text
     ).to.equal(i18n.courseBlocksGradeBandsElementary());
     expect(
-      wrapper
-        .find('Button')
-        .at(1)
-        .props().text
-    ).to.equal(i18n.courseBlocksGradeBandsMiddle());
+      wrapper.find('Button[id="uitest-high-button"]').props().text
+    ).to.equal(i18n.courseBlocksGradeBandsHigh());
     expect(wrapper.find('input').length).to.equal(1);
   });
 
