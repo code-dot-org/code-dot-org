@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2023-02-24 01:00:31 UTC",
+    "serialized_at": "2023-02-24 21:53:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -7301,6 +7301,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD classes novels_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7523,15 +7526,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 nav bar_2023"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 nav bar_2023"
+          "CSD U2 hyperlinks practice_2023"
         ],
         "lesson.key": "Linking Pages",
         "lesson_group.key": "lessonGroup-3",
@@ -7539,7 +7539,7 @@
         "activity_section.key": "f9b4a79c-8ed0-458f-97ce-fe2006992287"
       },
       "level_keys": [
-        "CSD U2 nav bar_2023"
+        "CSD U2 hyperlinks practice_2023"
       ]
     },
     {
@@ -8708,9 +8708,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 nav bar_2023",
+        "level.key": "CSD U2 hyperlinks practice_2023",
         "script_level.level_keys": [
-          "CSD U2 nav bar_2023"
+          "CSD U2 hyperlinks practice_2023"
         ],
         "lesson.key": "Linking Pages",
         "lesson_group.key": "lessonGroup-3",
