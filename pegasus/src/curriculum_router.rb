@@ -364,8 +364,8 @@ module Pegasus
         content_type :json
         cache_control :private, :must_revalidate, max_age: 0
         kind.submit(request, params).to_json
-      rescue FormError => e
-        halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
+      rescue FormError => exception
+        halt 400, {'Content-Type' => 'text/json'}, exception.errors.to_json
       end
     end
   end

@@ -60,6 +60,6 @@ USERS_TO_DELETE.each do |user_id|
 
     puts "User ID successfully destroyed - #{user_id}"
   end
-rescue StandardError => e
-  puts "Error destroying User ID - #{user_id} / #{e}"
+rescue StandardError => exception
+  puts "Error destroying User ID - #{user_id} / #{exception}"
 end

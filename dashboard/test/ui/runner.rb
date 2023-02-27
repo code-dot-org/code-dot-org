@@ -64,8 +64,8 @@ def main(options)
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
-  rescue => e
-    ChatClient.log "Exception: #{e.message}", color: 'red'
+  rescue => exception
+    ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
   end
 
@@ -287,8 +287,8 @@ def upload_log_and_get_public_link(filename, metadata)
   return '' unless $options.html
   log_url = LOG_UPLOADER.upload_file(filename, {metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => e
-  ChatClient.log "Uploading log to S3 failed: #{e}"
+rescue Exception => exception
+  ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''
 end
 
@@ -473,8 +473,8 @@ end
 def flakiness_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_flakiness, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating flakiness: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating flakiness: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -483,8 +483,8 @@ end
 def estimate_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_estimate, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating estimate: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating estimate: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
