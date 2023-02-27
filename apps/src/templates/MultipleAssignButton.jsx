@@ -71,7 +71,6 @@ class MultipleAssignButton extends React.Component {
       <div>
         <div style={buttonMarginStyle}>
           <Button
-            __useDeprecatedTag
             color={Button.ButtonColor.orange}
             text={i18n.assignToMultipleSections()}
             icon="plus"
