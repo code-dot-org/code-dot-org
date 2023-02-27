@@ -29,13 +29,14 @@ const TimelineElement = ({
 
   const length = playerUtils.getLengthForId(soundId);
 
+  const isMaybeSkipping = skipContext?.maybeSkipSound;
+  const isSkipping = playerUtils.getIsExecutingPlay() && skipContext?.skipSound;
+
   const isCurrentlyPlaying =
+    !isSkipping &&
     currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&
     currentPlayheadPosition < when + length;
-
-  const isMaybeSkipping = skipContext?.maybeSkipSound;
-  const isSkipping = skipContext?.skipSound;
 
   return (
     <div
@@ -50,8 +51,7 @@ const TimelineElement = ({
         top,
         left,
         ...(isMaybeSkipping && {borderColor: '#a1a1a1'}),
-        ...(playerUtils.getIsExecutingPlay() &&
-          isSkipping && {backgroundColor: '#808080'})
+        ...(isSkipping && {backgroundColor: '#808080'})
       }}
     >
       &nbsp;
