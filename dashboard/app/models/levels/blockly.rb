@@ -462,6 +462,9 @@ class Blockly < Level
       element.content = localized_text if localized_text
     end
 
+    # NO_EMPTY_TAGS used because <element /> blocks fail to render correctly but
+    # <element></element> works, see: https://codedotorg.atlassian.net/browse/SL-528.
+    # TODO: Should we add UTF-8 encoding? We have it here: https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/models/levels/blockly.rb#L520.
     start_html_xml.serialize(
       save_with: XML_OPTIONS | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS
     ).strip
