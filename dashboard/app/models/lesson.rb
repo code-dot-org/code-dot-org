@@ -454,7 +454,7 @@ class Lesson < ApplicationRecord
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_instructor: script.can_be_instructor?(user),
-      assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
+      assessmentOpportunities: render_property(:assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedInstructor: user&.verified_instructor?,

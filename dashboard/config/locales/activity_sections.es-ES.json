@@ -5700,13 +5700,16 @@
           "description": "A continuación se presentan recursos adicionales que puedes proporcionar a los alumnos para mejorar su aprendizaje:\n\n-   [Actividad Familiar](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8) \n-   [Consejos Familiares](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
         },
         "5fc2cc60-64ea-4c01-8c9e-21280799d17b": {
-          "name": "Reflexionar"
+          "name": "Reflexionar",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Reflexionar\"\n\n**Reflexionar:** _¿Cuándo necesitarías completar una lista de pasos en orden?_"
         },
         "9f5921d9-6813-471c-8c16-40e622971021": {
-          "name": "Vocabulario"
+          "name": "Vocabulario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Vocabulario\"\n\n-   **Algoritmo** - Lista de pasos para terminar una tarea.\n\n-   **Error** - Parte de un programa que no funciona correctamente.\n\n-   **Depuración** - Encontrar y corregir errores en un algoritmo o programa.\n\n-   **Programa** - Un algoritmo que ha sido codificado en algo que puede ser ejecutado por una máquina."
         },
         "a37ca2d2-fd44-4b34-ad75-d6caf1c8fffa": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "#### Hablando con Robots\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Introducción\"\n\nMuestra uno de los vídeos siguientes para que los alumnos conozcan los tipos de cosas que pueden hacer los robots:\n\n-   [Asimo by Honda](https://youtu.be/QdQL11uWWcI) (3:58)\n-   [Egg Drawing Robot](https://youtu.be/slh5vMIc33I) (3:15)\n-   [Dancing Lego Robot](https://youtu.be/NPIq5qldbio) (1:35)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Mostrar**: Muestra la diapositiva \"Debatir\"\n\n**Debatir:** Comenta el vídeo que has elegido y pregunta a los alumnos:\n\n-   ¿Cómo crees que el robot sabía lo que tenía que hacer?\n-   ¿Realmente \"entiende\" un robot lo que le dices? \n-   ¿Le preocupa meterse en líos si no hace lo que se le ordena?\n\nEl objetivo de este rápido debate es señalar que, aunque parezca que los robots se comportan como personas, en realidad sólo responden a su programación. Es probable que los alumnos se refieran a los robots de las películas y la televisión que se comportan más como humanos. Pídeles que piensen en robots que han visto o de los que han oído hablar en la vida real, como _Roombas_, o incluso asistentes digitales como _Amazon Alexa_."
         },
         "cc4be77d-c35b-4bd7-9a84-ba4caf731e76": {
           "description": "**Diles:** _Los robots sólo pueden hacer lo que se les ha dicho que hagan, pero no se lo decimos sólo con palabras. Para hacer algo, un robot necesita tener una lista de pasos que pueda leer. Hoy vamos a aprender lo que hace falta para que eso ocurra._"
@@ -5723,6 +5726,9 @@
           "tips": [
             "### Reglas Prácticas:\n\n-   **Arriba** significa que la copa sube automáticamente todo lo que necesita.\n-   **Abajo** significa que baja automáticamente hasta que se posa sobre algo.\n    -   La mano vuelve automáticamente a la pila de vasos después de dejar un vaso.\n-   **Adelante** significa que el robot se mueve un paso (1/2 ancho de taza) hacia adelante.\n-   **Atrás** significa que el robot se mueve un paso (1/2 ancho de taza) hacia atrás.\n    -   Nota: Los estudiantes no pueden usar el retroceso a esta edad a menos que quieran construir las pilas de vasos en reversa (lo cual también está bien).\n-   Los programadores no pueden hablar cuando el robot está funcionando. Esto incluye soltar respuestas o señalar cuando el robot ha hecho algo mal.\n-   Los programadores deben levantar la mano si ven un error.\n\n* * *\n\n### Opciones de Diferenciación:\n\n**Simplificar:** ¿Todo esto parece un poco complicado para tus alumnos?  \n\nNo olvides modelar esto delante de la clase hasta que los alumnos entiendan todas las reglas. ¡Si sigue siendo confuso, intenta llevar a cabo toda la actividad juntos en el aula utilizando voluntarios como robots, en lugar de dividirlos en grupos!\n\n**Intensificar:** ¿Tus alumnos son más avanzados? ¿Quieres que esta lección se relacione más con los rompecabezas en línea? Aquí tienes algunas modificaciones que puedes hacer:\n\n-   Una flecha corresponde a un movimiento:\n    -   Cuando se retira un vaso de la pila, vuelve al nivel de la mesa antes de moverse.\n    -   Los alumnos deben utilizar varias flechas \"arriba\" para elevar la taza varios niveles.\n    -   Los alumnos tienen que utilizar varias flechas de \"abajo\" para bajar las tazas varios niveles.\n    -   Los alumnos tienen que utilizar las flechas de \"atrás\" para volver a la pila de vasos."
           ]
+        },
+        "825e27c2-a198-45fc-9d3b-d262577a3bc7": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Clave de Símbolos\"\n\n**Muestra:** **\\*Clave de Símbolos** o escribe las acciones permitidas en la pizarra, asegúrate de que estén en un lugar donde se puedan ver durante toda la actividad. Explica a la clase que éstas serán las únicas cuatro acciones que podrán utilizar en este ejercicio. Para esta tarea, darán instrucciones a su amigo \"robot\" para que construya una pila de vasos específica utilizando únicamente los comandos que aparecen en la clave.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Patrón de Tres Tazas\"\n\n**Modelo:** Para explicar el funcionamiento de las instrucciones, demuestra a la clase cómo crear y seguir un algoritmo para reproducir un patrón sencillo. Coloca una pila de vasos delante de ti para empezar.\n\n**Muestra:** Levanta el patrón que vas a representar. Un patrón sencillo de tres tazas es un buen punto de partida.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/image_29uZ9YD.png\" style=\"max-width: 300px; margin: 10px;\">\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Lista de Pasos\"\n\n**Preguntar:** Pregunta a la clase cuál debe ser la primera instrucción, utilizando sólo las cuatro instrucciones permitidas. El primer paso debe ser \"recoger la taza\". Si los alumnos sugieren otra cosa de la lista, realiza esa acción y permíteles ver su error.  Si sugieren algo que no esté en la lista, haz una reacción clara de mal funcionamiento y hazles saber que no se ha entendido la orden.\n\nCon la taza en la mano, pide a la clase que siga dándote instrucciones hasta que coloquen la primera taza. Este es un buen momento para aclarar que \"paso adelante\" y \"paso atrás\" implican cada uno mover medio ancho de taza. Véase la imagen siguiente como referencia.\n\n![patrón de 3 tazas](https://curriculum.code.org/media/uploads/image_d0bGRBl.png)\n\nContinúa pidiendo instrucciones a la clase hasta que hayas completado todo el diseño.\n\nUna vez que tu pila esté completa, señala que acaban de darte una lista de pasos para completar una tarea. Eso es un algoritmo.  Los algoritmos son estupendos para compartir ideas, pero deletrearlos palabra por palabra puede llevar mucho tiempo. Para eso están los símbolos.  Cuando transformas un algoritmo en símbolos que un robot (o un ordenador) entiende, eso se llama programación.\n\nPide a la clase que te ayude a escribir el \"programa\" de ese primer movimiento transformando el texto en una flecha. Después, trabaja con ellos para escribir el resto de movimientos necesarios para completar el patrón. Dependiendo de la confianza de tus alumnos, puedes alternar con frecuencia entre actuar como el \"robot\" y escribir el código, o puedes pedirles que escriban todo el programa antes de ponerlo en práctica. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Clave de Respuestas\"\n\n**Di:** _Una posible solución se parece a esto:_\n\n![solución de 3 tazas](https://curriculum.code.org/media/uploads/image_xmBkoQZ_0OrQqsy.png)\n\n**Voluntario:** Una vez que la clase haya completado el programa de ejemplo, pide a uno de los alumnos que se acerque y actúe como \"robot\" para asegurarse de que el programa funciona realmente. Anímales a decir las instrucciones en voz alta mientras \"ejecutan\" el código."
         },
         "e24379b7-bf97-4179-948d-ea5af39d8089": {
           "name": "Reflexión",
@@ -12382,20 +12388,27 @@
           ]
         },
         "1df32546-96d2-4c31-b178-09563c056870": {
-          "name": "Construye tu Dispositivo"
+          "name": "Construye tu Dispositivo",
+          "description": "**Distribuye:** Permite a los estudiantes acceder a los materiales de construcción que has reunido, como papel y cartón y cualquier otro material. \n\nLos estudiantes pasarán la mayor parte del período de clase construyendo sus dispositivos físicos y probando cómo se integrarán con el Circuit Playground."
         },
         "3a7eb86f-0db6-4e77-b6ae-b126fb389834": {
-          "name": "Actividad de cierre"
+          "name": "Actividad de cierre",
+          "description": "**Recoger:** Proporciona un espacio para que los alumnos guarden sus proyectos. Es posible que quieras proporcionar tiempo extra para que los estudiantes organicen sus materiales, los guarden de forma segura y luego limpien su espacio de trabajo.\n\nPuedes echar un vistazo a los dispositivos y hacer algún apunte de los estudiantes que quieras revisar mañana."
         },
         "f0da6b6d-7815-4cb8-bb39-ebca0481b983": {
-          "name": "Calentamiento"
+          "name": "Calentamiento",
+          "description": "**Distribuye:** Permite que los alumnos recojan de nuevo sus dispositivos y empiecen a trabajar. Permite que los estudiantes accedan a los materiales de construcción que has reunido, como papel y cartón y cualquier otro material. "
         },
         "e2e83de3-7f19-4af1-816a-e8e685a1f6f7": {
+          "name": "Completa tu Dispositivo",
+          "description": "**Circula:** Acompaña a los estudiantes cuando empiecen a terminar sus dispositivos. A medida que se vayan acercando, pueden pasar a Code Studio y empezar a codificar.",
           "tips": [
-            null
+            "**Ayudando a los alumnos a avanzar:** Algunos alumnos pueden tener dificultades para encontrar un buen punto de parada en su proyecto; si se les dejara a su aire, seguirían perfeccionando hasta el último detalle de su proyecto y nunca llegarían a la codificación. Si esto ocurre, recuérdales que, por definición, un **prototipo** es un primer borrador del producto, no el producto final. Los prototipos se diseñan para que sean ligeramente desordenados, de modo que se puedan modificar rápidamente, y nunca serán perfectos. Una vez que se han construido lo suficiente como para poner a prueba la idea general, los alumnos pueden pasar a la fase de codificación."
           ]
         },
         "7757e358-925f-460e-8204-919de76b3d9f": {
+          "name": "Empezar a Codificar",
+          "description": "**Transición:** Envía a los alumnos a Code Studio para que empiecen a codificar sus dispositivos.",
           "tips": [
             "**Viendo Ejemplos:** El último nivel de esta secuencia incluye 3 proyectos de ejemplo en la sección \"Sólo para Profesores\" del nivel. Dado que estos proyectos utilizan el Circuit Playground, deben ejecutarse en la Aplicación Maker en ordenadores Windows y Mac. Si quieres ver estos ejemplos funcionando con un Circuit Playground, te recomendamos que visites estos niveles y hagas clic en los enlaces dentro de la Aplicación Maker en lugar de verlos desde el plan de la lección."
           ],
@@ -12405,23 +12418,58 @@
           "description": "**Estrategias de Depuración:** A medida que los alumnos diseñan e implementan sus propias ideas de proyecto, pueden encontrarse con nuevos errores que necesitan solucionar y tú puedes encontrarte mirando código completamente desconocido mientras los alumnos buscan ayuda para solucionar sus errores. Para ayudar a suavizar la experiencia de depuración, considera las siguientes estrategias:\n\n-   Revisa la [Guía del Docente para la Depuración](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) para ver algunas preguntas comunes y estrategias para ayudar a los alumnos a depurar su código.\n-   Pide a los alumnos que sigan los pasos de la [Guía del Alumno para la Depuración](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) y que utilicen las [Hojas de Informe de Fallos](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) como paso inicial en el proceso de depuración. Esto ayuda a los alumnos a preparar y comunicar su problema antes de pedir ayuda.\n-   Si los alumnos aún no lo han visto, considera la posibilidad de mostrar a la clase el [Vídeo de Depuración](https://www.youtube.com/watch?v=auv10y-dN4s) para reforzar las mejores prácticas de depuración.\n\n**Profundizar:** Considera la posibilidad de proporcionar a los alumnos un objeto con el que hablar como parte del proceso de depuración. Esto se conoce a veces como \"Depuración de Patos de Goma\" (Rubber Duck Debugging); puedes obtener más información en el sitio web <https://rubberduckdebugging.com/>"
         },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
-          "name": "Actividad de cierre"
+          "name": "Actividad de cierre",
+          "description": "**Recoger:** Proporciona un espacio para que los alumnos guarden sus proyectos. Es posible que quieras proporcionar tiempo extra para que los alumnos organicen sus materiales, los guarden de forma segura y luego limpien su espacio de trabajo.\n\nPuedes revisar el código de los estudiantes en Code Studio para ver cuánto están progresando y decidir si hay algún estudiante con el que sea conveniente reunirse mañana."
         },
         "a26024c1-74e8-4da6-81b3-b0f43b4a9df3": {
-          "name": "Calentamiento"
+          "name": "Calentamiento",
+          "description": "**Distribuye:** Permite que los estudiantes recojan de nuevo sus dispositivos y empiecen a trabajar. Puedes decidir limitar el acceso a materiales de construcción adicionales, ya que los estudiantes deben centrarse en la codificación de sus dispositivos en este momento."
+        },
+        "9cb6319c-b099-455a-9d78-d51e44477ec1": {
+          "name": "Codificación y Pruebas",
+          "description": "**Transición:** Envía a los alumnos a Code Studio para que sigan codificando sus dispositivos. Deben probar sus dispositivos y realizar cambios en su prototipo si es necesario."
         },
         "4c4844c5-1cfc-4e21-b5fe-688b84f55ab3": {
           "name": "Actividad de cierre",
+          "description": "**Recoger:** Proporciona un espacio para que los alumnos guarden sus proyectos. Es posible que quieras dejar tiempo extra para que los alumnos organicen sus materiales, los guarden de forma segura y luego limpien su espacio de trabajo.",
           "tips": [
-            null
+            "**Demostraciones:** La lección de mañana ofrece un espacio para que los estudiantes celebren y demuestren sus proyectos. Proporcionamos algunas opciones de cómo puede ser, pero el formato de estas demostraciones se deja abierto para que puedas decidir la mejor manera de que los alumnos compartan sus proyectos. Asegúrate de tomar una decisión sobre cómo presentarán los alumnos su trabajo y ten en cuenta cualquier planificación adicional que los alumnos puedan necesitar antes de mañana para tener éxito."
           ]
         },
         "61b7da2d-8df0-408c-8e32-3e4c2d0b749f": {
-          "name": "Calentamiento"
+          "name": "Calentamiento",
+          "description": "**Distribuir:** Permitir que los alumnos recojan de nuevo sus dispositivos."
+        },
+        "18c69bef-2643-411a-b6b1-28e47b62f5da": {
+          "name": "Revisión del Dispositivo",
+          "description": "**Revisión:** Los estudiantes deben asegurarse de que sus dispositivos funcionan como se espera de ellos como preparación para presentar su trabajo a otros estudiantes."
+        },
+        "c711b9a3-60a5-4808-8747-76223c45783d": {
+          "name": "Demostraciones",
+          "description": "Proporciona un espacio para que los estudiantes demuestren lo que han construido a otros estudiantes. Algunas opciones son:\n\n-   **Paseo por la Galería:** Permite a los estudiantes circular e interactuar con los dispositivos que han construido.\n-   **Presentación del Dispositivo:** Pide a los alumnos que presenten su dispositivo como si lo estuvieran presentando a inversores. Los alumnos pueden preparar material adicional, como una breve presentación de diapositivas.\n-   **Galería de Vídeo Digital:** Pide a los alumnos que graben vídeos de sí mismos utilizando los dispositivos. Los estudiantes pueden decidir construir su vídeo como un anuncio, haciendo hincapié en cómo el dispositivo puede ayudar a resolver un problema."
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
           "name": "Actividad de cierre",
+          "description": "**Recoger:** Haz que los estudiantes envíen sus prototipos y presenten sus aplicaciones en el Laboratorio de Aplicaciones. \n\n**Reflexionar:** Pide a los estudiantes que completen una encuesta rápida de 5 preguntas en Code Studio. Podrás ver los resultados anónimos en el panel del profesor.",
           "progression_name": "Reflexión"
+        },
+        "016c41f7-549a-4037-be5f-704e76a82685": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribuir:** Reparte los Circuit Playgrounds a cada pareja de alumnos. "
+        },
+        "dfbaa5f7-a0e8-42f5-901d-3432a4d6eb66": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Sugerencia:** Los humanos tenemos 5 sentidos: tacto, gusto, vista, olfato y oído. ¿Cuáles de estos sentidos crees que tiene el Circuit Playground? ¿Crees que el Circuit Playground tiene alguno que nosotros no tengamos?\n\nMientras los alumnos reflexionan sobre esta pregunta, anímales a fijarse en las marcas del circuito para buscar pistas (por ejemplo, hay iconos de ojos y oídos en el circuito que pueden dar pistas)."
+        },
+        "b1b4151c-82a9-49d9-a3b8-14285347ccc2": {
+          "description": "**Compartir:** Pide a los alumnos que compartan con un compañero y, a continuación, dirige un debate con toda la clase. Toma notas en la parte delantera de la clase."
+        },
+        "716eb150-abbb-4125-945d-7b4d386d3e29": {
+          "description": "\\*\\*Utilizando las marcas del Circuit Playground, los alumnos pueden predecir que hay sensores visuales y auditivos, pero puede que no sean capaces de describir exactamente lo que hacen, por ejemplo, ¿el sensor visual \"ve\" objetos, o detecta la distancia, o detecta colores, o detecta la luz? Los alumnos también pueden predecir que hay un sensor de temperatura basándose en el icono del termómetro del Circuit Playground. Los alumnos también pueden predecir sensores que el circuito no tenga, como sensores de humedad o de latidos del corazón, pero está bien enumerarlos por ahora como parte de la lluvia de ideas."
+        },
+        "0bd6a833-a7d2-4430-bcc1-8d15a3b98b7b": {
+          "description": "Hoy vamos a aprender sobre los diferentes sensores que tiene el Circuit Playground y cómo se pueden utilizar para la entrada de datos."
+        },
+        "d9bf1eac-89e2-4067-b465-e64824139119": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pregunta del día:** ¿Cómo puedo utilizar sensores para detectar cambios en el entorno?"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transición:** Cambia los alumnos a Code Studio",
@@ -12457,7 +12505,23 @@
           "progression_name": "Desafío"
         },
         "bf6abe53-60e7-4f2c-b6ab-88516663778e": {
-          "name": "Sensores por todas partes"
+          "name": "Sensores por todas partes",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diario:** Teniendo en cuenta todos los dispositivos informáticos con los que interactúas habitualmente, anota todos los sensores potenciales que puedas. ¿Con qué tipo de sensor crees que interactúas más?"
+        },
+        "39d44cea-9b11-4e48-ad61-da8f10095944": {
+          "description": "**Objetivo del debate:** Los alumnos pueden repetir las ideas del debate de calentamiento, pero anímales a establecer conexiones con otros dispositivos del mundo real. Haz hincapié en que pueden pensar en situaciones en las que los dispositivos deban tener en cuenta un rango de valores como hemos visto con estos sensores."
+        },
+        "e3511503-36b7-42bf-b889-919cff249429": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pregunta:** _¿Has intentado alguna vez caminar por una plataforma estrecha y elevada, con un pie delante del otro? ¿Cómo mantienes el equilibrio y evitas caerte?_"
+        },
+        "3adcc7f4-8fcc-4738-88c5-a621ff09cb08": {
+          "description": "**Compartir:** Pide a los alumnos que compartan con un compañero y, a continuación, con todo el grupo."
+        },
+        "ad6388a1-f265-4aab-a98e-70179b5b5e52": {
+          "description": "**Objetivo del debate:** Orienta el debate hacia la comprensión de nuestro sentido del equilibrio: cómo podemos detectar cuándo estamos a punto de caernos y las estrategias que utilizamos para evitarlo (como mantener los brazos extendidos). Enfatiza que, de alguna manera, nuestro \"sentido del equilibrio\" es como otro de nuestros sentidos, similar a lo comentado ayer."
+        },
+        "5306b327-e7f9-4ac2-bbf1-333b7c66a163": {
+          "description": "Los humanos podemos detectar cuándo estamos desequilibrados y hacer ajustes para mantener el equilibrio. Nuestro Circuit Playground también puede detectar cuándo está desequilibrado e inclinado, para intentar corregirse. Utiliza un sensor llamado **acelerómetro** para detectar su posición y hacer un seguimiento de lo inclinado o desequilibrado que está. Otros dispositivos, como los drones automatizados o las aspiradoras robóticas, utilizan un acelerómetro para nivelarse y poder moverse automáticamente sin caerse."
         },
         "b8a6fe12-b039-4ae6-b8af-7ca83f2cf8f4": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transición:** Envía a los alumnos a Code Studio.",
@@ -12487,7 +12551,17 @@
           "progression_name": "Desafío"
         },
         "7fe79fa5-dc50-4ddc-b145-f8630bde9143": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pregunta:** _¿Cuáles son algunos usos del cabeceo y balanceo en una aplicación cotidiana?_"
+        },
+        "14b6051d-5a9b-4840-b6ba-85dc9840446a": {
+          "description": "**Objetivo del debate:** Los alumnos deben pensar en varias aplicaciones para el acelerómetro, explicando cómo podría ser útil conocer el cabeceo y el balanceo. Sus respuestas pueden ser similares a los ejemplos del precalentamiento, como los vehículos autónomos, pero anima a los alumnos a pensar más allá de esos usos."
+        },
+        "d1a51864-499c-47ef-bf86-9d401dcd748a": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Sugerencia:** _Hemos estado utilizando el zumbador para hacer sonidos, pero esos zumbidos no siempre sonaban demasiado bien.  ¿Qué crees que necesitas para hacer música de verdad con el zumbador?_"
+        },
+        "44f8c565-1e77-4747-9a8c-884b39d7f738": {
+          "description": "**Objetivo del debate:** Los alumnos pueden aportar muchas ideas diferentes, pero hay dos aspectos de este problema que conviene destacar antes de que los alumnos pasen a la actividad.  En primer lugar, especificar frecuencias no es la mejor manera de indicar notas musicales, ya que la música sólo utiliza determinados tonos y la mayoría de las demás frecuencias se consideran \"desafinadas\". En segundo lugar, los alumnos necesitarán una forma de encadenar sonidos, o notas, para componer una canción en lugar de utilizar bloques individuales `buzzer.frequency()`."
         },
         "b29096d1-be92-43d1-b40d-48dc44779fcb": {
           "name": "Crear música",
@@ -12533,12 +12607,20 @@
           "progression_name": "Desafío"
         },
         "eb5e220c-7b46-48e3-a1a3-37e1b101cfbe": {
-          "name": "Diario "
+          "name": "Diario ",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pregunta:** \\_¿En qué se parecen los arrays que usamos para las canciones a los arrays que usamos para los `colorLEDs`? ¿En qué se diferencian?"
         },
         "c2319cff-c3de-4c7d-80bf-09adf28bee6f": {
           "description": "**Compartir** Después de dar a los alumnos tiempo para reflexionar en sus propios diarios, pídeles que compartan con un compañero o en pequeños grupos."
         },
+        "9526ea6c-fcc4-4a6b-97c0-b413f654262b": {
+          "description": "**Objetivo del debate:** Los alumnos deben observar que en ambas situaciones se representa una lista de elementos, por lo que los arrays tienen más sentido. Los alumnos pueden notar alguna de las siguientes diferencias:\n\n-   Podemos acceder a cada LED individualmente si queremos con un array, pero con canciones es mejor acceder a toda la lista junta para reproducirlas en secuencia.\n-   Siempre hay 10 LEDs, pero el número de notas de una canción puede crecer o decrecer.\n-   Cuando reproducimos una canción con tempo, podemos tener arrays dentro de arrays. Esto no ocurre con los LEDs."
+        },
+        "cbfba406-1357-4e91-8fe3-f262878a72dc": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribuir:** Reparte una placa y un cable USB a cada pareja de alumnos."
+        },
         "db3d71d9-35eb-4f9d-bcde-2f799683ab8b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transición a Code Studio:** Pide a los estudiantes que accedan a Code Studio de inmediato.",
           "tips": [
             "**Empezando ahora mismo:** Esta lección está repleta de nuevos contenidos e incluye varios vídeos que ayudan a introducir a los alumnos en estas nuevas ideas. Con el fin de dar a los estudiantes la mayor cantidad de tiempo para practicar estos nuevos conceptos, se recomienda saltar directamente a Code Studio y comenzar la lección allí."
           ]
@@ -12589,19 +12671,29 @@
           "progression_name": "Evaluación"
         },
         "f97cde59-b600-4d0d-8588-7d0c91c17b3e": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pregunta:** \\_Piensa en algunos de los programas que has hecho antes.  ¿En qué ocasión podrías haber utilizado funciones con parámetros?  ¿Cuál sería el parámetro?  ¿Cómo debería cambiar el comportamiento de la función cuando cambia el parámetro?"
         },
         "75a70150-4ec4-45d8-a90d-d8942a6221b3": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pregunta:** Responde a las siguientes preguntas sobre este vídeo:\n\n1.  ¿Cómo interactúa el usuario con la obra de arte y los dispositivos electrónicos?\n2.  ¿Cómo mejoran los dispositivos electrónicos la obra de arte?"
         },
         "d7f3a348-1beb-464f-9cc7-54d4d6101d4d": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vídeo:** Muestra el vídeo [Pu Gong Ying Tu (Dandelion Painting)](https://www.youtube.com/watch?v=C1-pdgGn0SI) del artista Jie Qi.",
           "tips": [
-            null
+            "**Profundiza:** Si quieres profundizar en esta obra de arte y en el arte de Ji Qie, [haz clic aquí para visitar el sitio web del artista](http://technolojie.com/pu-gong-ying-tu-dandelion-painting/). Puedes decidir explorar esto con tus alumnos como una clase completa, o bien ofrecerlo como una exploración independiente si así lo deseas."
           ]
         },
+        "2d5d2ab9-36ed-4036-9f54-6e6ece7de94f": {
+          "description": "**Compartir:** Pide a los alumnos que compartan sus ideas con la clase."
+        },
+        "6ea9cef2-8e5f-4e4c-b37f-f2d4512484be": {
+          "description": "**Objetivo del debate:** Los alumnos deben darse cuenta de que el usuario interactúa con la obra de arte soplando sobre el cuadro. Los alumnos pueden describir esta interacción como el uso de un sensor para detectar cambios de temperatura o sonido. Los alumnos también deben comentar cómo los LED de los dispositivos mejoran la obra de arte al contribuir al diseño de las flores. Los alumnos pueden establecer conexiones con otras obras de arte que hayan visto, especialmente pinturas que utilicen LED como parte del diseño."
+        },
         "1c670d85-bbc6-4d02-a12f-a8767dbeef65": {
+          "description": "Hoy vamos a crear nuestro propio arte interactivo. Utilizaremos materiales físicos para construir una obra de arte de tu elección, y usaremos los sensores del Circuit Playground para detectar las entradas del usuario y reaccionar. Tu dispositivo no utilizará ninguna pantalla, excepto para ayudar a depurar, el usuario sólo interactuará con tu dispositivo físico.",
           "tips": [
-            null
+            "**Ejemplo de Aplicación:** Puedes decidir mostrar a los estudiantes los ejemplos de aplicaciones y sus vídeos como ejemplos de lo que los estudiantes pueden crear en este proyecto. Esto puede ayudar a generar ideas, y dar a los alumnos un modelo de cómo trabajar al hacer sus propios dispositivos.\n\nTambién hay varios vídeos de proyectos de estudiantes disponibles para profesores verificados, [r student_example_projects/csd/2022]. Estos videos fueron creados durante el piloto de este curso por un profesor participante con sus alumnos, y se utilizan con su permiso.\n\n**Otros Ejemplos:** Las experiencias artísticas interactivas pueden encontrarse en espectáculos en vivo, exposiciones en museos o muestras artísticas especializadas. Puedes decidir mostrar otros ejemplos a los alumnos, como:\n\n-   [Otherworld](https://otherworldohio.com/), una instalación artística inmersiva\n-   [Meow Wolf](https://meowwolf.com/), una comunidad interactiva de artistas\n-   [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), un grupo de danza que utiliza la electrónica al ritmo de sus bailes."
           ]
         },
         "e5f4b521-ba78-4410-9629-f6a72ecb4114": {
@@ -12614,6 +12706,9 @@
           "tips": [
             "**Facilitando Proyectos en Grupo:** Si los alumnos trabajan en parejas o en pequeños equipos para completar proyectos, considera la posibilidad de mostrar estos dos vídeos a la clase:\n\n-   [Cómo funciona el trabajo en equipo](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Cómo afrontar los desacuerdos](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nEn función de los objetivos que persigas con este proyecto, considera la posibilidad de que los equipos completen una [Guía del Alumno para la Planificación en Equipo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que refuerza el mensaje del vídeo"
           ]
+        },
+        "528d5cd8-aa69-4be6-814f-81f9dc22401d": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Diapositivas:** Presenta una visión general del proyecto y los pasos que seguirán los alumnos para llevarlo a cabo."
         },
         "228be993-4e4a-4861-a78b-056cd0055159": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transición:** Envía a los alumnos a Code Studio.",
@@ -12634,6 +12729,21 @@
         "04f9d7e1-c590-4d22-ab74-069209762be4": {
           "name": "Reflexión",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Sugerencia:** _¿Cuál ha sido tu parte favorita de la aplicación que has creado? ¿Qué te gustaría mejorar?_"
+        },
+        "9b0bcfaa-cc39-4658-ad15-7b4ebfeef2a3": {
+          "description": "Puedes decidir que los alumnos las compartan con un compañero o que mantengan sus respuestas en privado. En cualquier caso, el objetivo del ejercicio es que los alumnos reflexionen sobre las aplicaciones que han creado y celebren lo que ha ido bien y reconozcan lo que podrían mejorar para la próxima vez."
+        },
+        "732a32ea-4bed-4925-a6d4-444ccb69e5fe": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Sugerencia:** _Si pudieras crear cualquier tipo de dispositivo computacional, ¿cuál sería? ¿Qué haría? ¿Cómo interactuaría la gente con él?_"
+        },
+        "c434ef84-71cf-4cb8-aaa4-a11c2aa8aea4": {
+          "description": "**Compartir:** Tras unos minutos de reflexión, pide a los alumnos que compartan sus ideas. Lleva un registro de las ideas en la parte delantera de la clase."
+        },
+        "d8b507cf-9b4e-42fb-a685-5722fa2dc1cb": {
+          "description": "**Objetivo del debate:** Los alumnos tendrán una gran variedad de ideas. A medida que las compartan, haz hincapié en los componentes de sus ideas que implican el Circuit Playground o una aplicación, que son dos cosas que ya sabemos cómo utilizar. Sin embargo, es probable que muchas ideas de los alumnos incluyan algún tipo de componente externo desconectado del resto del Circuit Playground, por ejemplo, luces adicionales o botones en diferentes lugares del dispositivo. Lleva un registro de cuándo los alumnos mencionan este tipo de componentes en su dispositivo."
+        },
+        "c160b13e-8435-4faf-b2c4-66aaf959c444": {
+          "description": "Esta es una gran lista de dispositivos, y una cosa que noto es como muchos de ellos implican la necesidad de algo más de lo que ofrece el Circuit Playground. En los próximos días vamos a aprender a conectar componentes externos al Circuit Playground para poder crear prototipos de dispositivos como éste y añadirles funciones adicionales. Hoy aprenderemos a añadir LEDs adicionales a nuestros dispositivos utilizando cables y electricidad."
         },
         "c960fb55-e814-4e24-a9d4-07f5875c76f9": {
           "description": "**Transición:** Envía a los estudiantes a Code Studio",
@@ -12665,6 +12775,18 @@
         "5d0032fb-a971-483f-9be3-bad5e1a0d7de": {
           "progression_name": "Desafío"
         },
+        "52499dd0-0df4-4eec-90ef-d794b8655d2f": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pregunta:** _¿Cuál es el nuevo tipo de dispositivo que puedes crear ahora que sabes cómo cablear LEDs externos y que no habrías podido crear antes de esta lección?_"
+        },
+        "bfba76c0-3ffa-403b-b4d0-9e962d6b85ca": {
+          "description": "**Objetivo del debate:** Los alumnos deben tener una variedad de respuestas, mientras los alumnos explican sus respuestas, presta atención a los lugares en los que un componente externo es útil en el dispositivo. No hay una única respuesta correcta a esta pregunta; en su lugar, anima a los alumnos a escuchar las ideas de sus compañeros para conocer los distintos tipos de dispositivos en los que piensan los demás. Esto puede ser útil para el proyecto de fin de unidad, cuando los alumnos tengan que idear su propio dispositivo para crear un prototipo y desarrollarlo."
+        },
+        "a98ae999-f790-4536-b636-063170f6b369": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Sugerencia:** _Ayer utilizamos la electricidad para crear un circuito para encender un LED. Hoy vamos a explorar cómo utilizar la electricidad para representar la pulsación de un botón que podamos utilizar como entrada. ¿Cómo crees que será ese circuito? ¿Qué materiales crees que necesitaremos?_"
+        },
+        "2fdeb504-ec46-4094-9219-c22ad046043b": {
+          "description": "**Objetivo del debate:** En este debate se pide a los alumnos que establezcan conexiones entre los conocimientos de electricidad que desarrollaron en la lección anterior y que los relacionen con la lección de hoy. Los alumnos pueden sugerir que necesitarán conectar cables a una de las patillas y a una patilla GND para representar el flujo de electricidad. Es posible que no estén tan seguros de lo que ocurre entre esas dos patillas y que sugieran diferentes materiales que necesitaremos. Observa sus respuestas, pero no valides todavía ninguna como correcta o incorrecta. En su lugar, los alumnos descubrirán cómo funcionan los botones en el primer nivel de Code Studio"
+        },
         "9cc97556-4746-41d2-aacd-4520dec3be96": {
           "description": "**Transición:** Envía a los estudiantes a Code Studio",
           "tips": [
@@ -12689,13 +12811,21 @@
         "1583a972-df35-4d3b-90b9-da0436506e8b": {
           "progression_name": "Desafío"
         },
+        "30534f9b-69fa-44d4-987f-9ee0b46cc9b6": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Sugerencia:** \\_Piensa en la lista de dispositivos que te gustaría poder desarrollar y cómo lo utilizaría la gente. Utilizando lo que hemos aprendido en las últimas lecciones, describe con más detalles cómo podrías empezar a crear un dispositivo así. ¿Cómo conectarías los cables? ¿Qué componentes externos utilizarías?"
+        },
+        "b2063825-3f6c-4e22-85b9-0ff9361206b8": {
+          "description": "**Objetivo del debate:** Este ejercicio pide a los alumnos que recuerden sus respuestas al precalentamiento de la lección anterior. Basándose en lo que han aprendido, es de esperar que los alumnos puedan describir sus dispositivos con más detalle, explicando cómo utilizarían los cables y los LED para crear los efectos que están imaginando. Anima a los alumnos a compartir sus ideas entre ellos, lo que les ayudará a prepararse para el proyecto de la siguiente lección."
+        },
         "b06fecf3-f666-4d47-97ed-0f43e2bd6781": {
           "name": "Revisión de la Guía de Proyecto",
+          "description": "**Grupo:** Coloca a los estudiantes en grupos de 2-4 para este proyecto. A tu criterio, puedes optar por que los alumnos formen grupos más grandes o trabajen de forma independiente.",
           "tips": [
             "**Facilitando Proyectos en Grupo:** Si los alumnos trabajan en parejas o en pequeños equipos para completar proyectos, considera la posibilidad de mostrar estos dos vídeos a la clase:\n\n-   [Cómo funciona el trabajo en equipo](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Cómo afrontar los desacuerdos](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nEn función de los objetivos que persigas con este proyecto, considera la posibilidad de que los equipos completen una [Guía del Alumno para la Planificación en Equipo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que refuerza el mensaje del vídeo"
           ]
         },
         "d85819c8-89bd-4bb9-9be5-a76d07025949": {
+          "description": "**Reparte:** Entrega una copia de la guía de proyecto a cada grupo. Como clase, revisa los diferentes pasos del proyecto y dónde aparecen en la guía del proyecto. \n\nDistribuye la rúbrica o la lista de control a cada alumno. Pídeles que repasen este recurso para que sepan desde el principio qué componentes del proyecto se van a tener en cuenta.",
           "tips": [
             "**Rúbrica y Lista de Control:** Los alumnos disponen de dos recursos que pueden utilizar para la autorreflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos. Puedes ver ejemplos de esto con el recurso Ejemplo de Rúbricas Marcadas en la parte superior del plan de la lección (sólo visible para los profesores verificados)"
           ]
@@ -12726,7 +12856,8 @@
           "description": "\\*\\* Distribuye:\\*\\* Entrega a cada estudiante una copia de la guía de revisión por pares. Los alumnos deben dedicar 15 minutos a revisar el proyecto del otro grupo y a rellenar la guía de revisión por pares."
         },
         "2c89f55b-648b-4564-9df9-24f3eb75a6c8": {
-          "name": "Repetir - Revisión de Prototipos"
+          "name": "Repetir - Revisión de Prototipos",
+          "description": "**Circular:** Los alumnos deben completar el reverso de la guía de revisión por pares, donde deciden cómo responder a los comentarios recibidos. A continuación, deben utilizar esos comentarios para mejorar su innovación."
         },
         "7388bea7-d580-4ea6-bbc2-3e43b0686080": {
           "name": "Compartir",
@@ -12736,6 +12867,7 @@
           ]
         },
         "266e20ca-98da-4140-80a3-b88831c809bc": {
+          "description": "-   La innovación original que se propusieron construir\n-   Una descripción del proceso de programación que incluya al menos un reto al que se enfrentaron y una nueva función que decidieron añadir.\n-   Una descripción del fragmento de código más interesante o complejo que hayan escrito.\n-   Una demostración en directo de la innovación real\n\nEnvía a los alumnos a Code Studio para que completen una encuesta al final de la unidad. Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para el docente una vez que al menos cinco estudiantes hayan completado la encuesta.",
           "progression_name": "Encuesta Final de la Unidad"
         },
         "b48419ef-e168-48e0-9f73-5f0a9f7cbba4": {
@@ -12747,6 +12879,7 @@
           "description": "**Pruebas post-proyecto** se incluyen al final de cada unidad. Incluyen varias preguntas de opción múltiple y de emparejamiento, así como reflexiones abiertas sobre el proyecto final de la unidad. Estas pruebas están alineadas con el [marco de aprendizaje](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) de cada unidad y están diseñadas para evaluar partes del marco que pueden no haber sido cubiertas por las rúbricas del proyecto. Para evaluar holísticamente los objetivos de aprendizaje de la unidad, la prueba posterior al proyecto debe emparejarse con el proyecto de fin de unidad, que es la principal evaluación del estudiante en cada unidad.\n\n**Desbloqueo de las pruebas:** Esta prueba está bloqueada y oculta a la vista de los alumnos por defecto.  Para que los alumnos puedan ver y realizar esta prueba, tendrás que desbloquearla pulsando el botón \"Bloquear Configuración\" y siguiendo las instrucciones que aparecen. [Pulsa aquí para obtener más información sobre el desbloqueo y la admisión de evaluaciones](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
         },
         "a8d4bd5e-402c-4246-a5fb-ffb3bc312ff3": {
+          "name": "Encuesta Fin de Curso",
           "description": "Si esta es la última unidad de Descubrimientos de Informática que está enseñando, pide también a los estudiantes que realicen la encuesta de fin de curso. Consulta el [recurso Instrucciones de CSD](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) para obtener más información sobre la encuesta de fin de curso y cómo asignar y ver los resultados. "
         },
         "682102ce-ee52-40fa-af6f-f291d63d954b": {
@@ -13595,6 +13728,7 @@
           "description": "También disponemos de una encuesta de fin de unidad para docentes con el fin de saber más sobre cómo os ha ido la unidad a ti y a tus alumnos. Mientras los alumnos rellenan su encuesta, [por favor, rellene también esta encuesta de final de unidad para docentes](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7). ¡Tu opinión es muy valiosa y apreciada!"
         },
         "59cdc0f2-e2ce-4747-8835-c29df9131892": {
+          "name": "Encuesta Fin de Curso",
           "description": "Si esta es la última unidad de Descubrimientos de Informática que está enseñando, pide también a los estudiantes que realicen la encuesta de fin de curso. Consulta el [recurso Instrucciones de CSD](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) para obtener más información sobre la encuesta de fin de curso y cómo asignar y ver los resultados. "
         },
         "d1b8559e-ee84-4203-bed9-7674842fb791": {
