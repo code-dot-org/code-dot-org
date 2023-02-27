@@ -2657,6 +2657,8 @@ fil:
               name: Mga variable
         csa3-2023:
           lessons:
+            lesson-1:
+              name: Isang-Dimensiyonal (1D) na Pagkakaayos
             lesson-3:
               name: For Loops
         hello-world-space-2022:
@@ -2695,6 +2697,7 @@ fil:
               display_name: Kabanata 1
             lessonGroup-3:
               display_name: Kabanata 2
+          title: Pisikal na Pagkalkula
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
