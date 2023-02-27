@@ -221,6 +221,10 @@ export default class MusicPlayer {
         this.startPlayingAudioTime +
         this.convertPlayheadPositionToSeconds(soundEvent.when);
 
+      if (soundEvent.skipContext?.skipSound) {
+        return;
+      }
+
       const currentAudioTime = GetCurrentAudioTime();
 
       // Triggered sounds might have a target play time that is very slightly in
