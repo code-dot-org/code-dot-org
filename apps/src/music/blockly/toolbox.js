@@ -342,9 +342,9 @@ export function getToolbox() {
         {
           Play: [
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2
+            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2
           ],
+          Effects: [BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2],
           Control: [
             BlockTypes.TRIGGERED_AT_SIMPLE2,
             BlockTypes.PLAY_SOUNDS_TOGETHER,
