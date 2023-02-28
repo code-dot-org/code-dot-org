@@ -1,4 +1,9 @@
-import {cdoBlockStyles} from './cdoTheme';
+import cdoBlockStyles from './cdoBlockStyles.mjs';
+import nearestColor from 'nearest-color';
+
+if (!nearestColor) {
+  console.log('Try: yarn add nearest-color');
+}
 
 // These are the core Blockly styles that we have historically never overridden.
 const coreBlocklyStyles = {
@@ -58,12 +63,22 @@ var accessiblePalette = {
   color_FF4235: '#FF4235'
 };
 
+console.log(
+  '\x1b[33m%s\x1b[0m',
+  'Copy the following values into cdoAccessible.js:'
+);
+
 // Each color in our standard palette is mapped to a new "nearest" color from the accesible palette.
 for (const [, value] of Object.entries(blockStyles)) {
-  const nearestColor = require('nearest-color').from(accessiblePalette);
-  value.colourPrimary = nearestColor(value.colourPrimary).value;
+  const nearestAvailableColor = nearestColor.from(accessiblePalette);
+  value.colourPrimary = nearestAvailableColor(value.colourPrimary).value;
   // Remove the color from the available palette so we don't assign it twice.
   delete accessiblePalette['color_' + value.colourPrimary.slice(1)];
 }
 
-export default blockStyles;
+console.log(blockStyles);
+console.log(
+  '\x1b[33m%s\x1b[0m',
+  'After copying, enter:',
+  'yarn remove nearest-color'
+);
