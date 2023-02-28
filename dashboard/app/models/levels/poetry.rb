@@ -25,9 +25,7 @@
 #
 
 class Poetry < GamelabJr
-  before_save :check_default_poem
-  before_save :check_dropdown_poems
-  validate :check_default_poem_in_dropdown
+  validate :validate_default_poem_and_dropdown_poems
 
   serialized_attrs %w(
     default_poem
@@ -35,15 +33,21 @@ class Poetry < GamelabJr
     dropdown_poems
   )
 
-  def check_default_poem
-    self.default_poem = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
+  def sanitize_default_poem
+    self.default_poem = nil if !Poetry.subtypes_with_poems.include?(standalone_app_name) ||
+      !Poetry.poem_keys_for_subtype(standalone_app_name).include?(default_poem)
   end
 
-  def check_dropdown_poems
+  def sanitize_dropdown_poems
     self.dropdown_poems = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
+    return if !Poetry.subtypes_with_poems.include?(standalone_app_name) || dropdown_poems.empty?
+    # filter out any invalid poems from dropdown_poems
+    self.dropdown_poems = dropdown_poems & Poetry.poem_keys_for_subtype(standalone_app_name)
   end
 
-  def check_default_poem_in_dropdown
+  def validate_default_poem_and_dropdown_poems
+    sanitize_default_poem
+    sanitize_dropdown_poems
     if default_poem.present? && Poetry.subtypes_with_poems.include?(standalone_app_name) &&
       dropdown_poems && !dropdown_poems.empty? && !dropdown_poems.include?(default_poem)
       errors.add(:default_poem, "is not in dropdown poem list")
@@ -98,21 +102,22 @@ class Poetry < GamelabJr
   def common_blocks(type)
   end
 
-  def available_poems
-    return dropdown_poems unless dropdown_poems
-    return Poetry.poems_for_subtype(standalone_app_name)
-  end
-
   # Used to get all available poems for a Poetry level.
-  def self.poems_for_subtype(subtype)
+  def self.poem_keys_for_subtype(subtype)
     case subtype
     when 'poetry_hoc'
-      hoc_poems
+      poem_key_filter(hoc_poems)
     when 'time_capsule'
-      time_capsule_poems
+      poem_key_filter(time_capsule_poems)
     else
       []
     end
+  end
+
+  def self.poem_key_filter(poem_list)
+    # get the keys out of a poem list. Assumes each entry
+    # in the list is a 2 element array
+    poem_list.map {|poem| poem[1]}
   end
 
   def self.hoc_poems

@@ -10,7 +10,7 @@
     = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name), {}, onchange: 'toggleFields(this.value);'
 
   #hocPoems{class: ('collapse' if @level.standalone_app_name != 'poetry_hoc')}
-    = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.hoc_poems}
+    = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.hoc_poems.sort}
 
   #timeCapsulePoems{class: ('collapse' if @level.standalone_app_name != 'time_capsule')}
     = render partial: 'levels/editors/fields/poetry_poems', locals: {f: f, poems: @level.class.time_capsule_poems}
