@@ -69,7 +69,6 @@ function checkImageReachability(imageUrl, callback) {
 class ShareAllowedDialog extends React.Component {
   static propTypes = {
     exportApp: PropTypes.func,
-    icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
     selectedSong: PropTypes.string,
@@ -183,7 +182,6 @@ class ShareAllowedDialog extends React.Component {
       canPublish,
       isPublished,
       canShareSocial,
-      icon,
       appType,
       selectedSong,
       shareUrl,
@@ -196,13 +194,7 @@ class ShareAllowedDialog extends React.Component {
       channelId
     } = this.props;
 
-    let image;
-    let modalClass = 'modal-content';
-    if (icon) {
-      image = <img className="modal-image" src={icon} />;
-    } else {
-      modalClass += ' no-modal-icon';
-    }
+    const modalClass = 'modal-content no-modal-icon';
 
     const isDroplet = appType === 'applab' || appType === 'gamelab';
     const artistTwitterHandle = SongTitlesToArtistTwitterHandle[selectedSong];
@@ -280,7 +272,6 @@ class ShareAllowedDialog extends React.Component {
           )}
           {!this.sharingDisabled() && (
             <div>
-              {image}
               <div
                 id="project-share"
                 className={modalClass}

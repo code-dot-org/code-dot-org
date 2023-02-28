@@ -1,4 +1,9 @@
-interface SampleEvent {
+import MusicLibrary from './MusicLibrary';
+
+// Using require() to import JS in TS files
+const soundApi = require('./sound');
+
+export interface SampleEvent {
   offsetSeconds: number;
   sampleId: string;
   triggered: boolean;
@@ -10,11 +15,6 @@ interface PlayingSample {
   uniqueId: number;
   triggered: boolean;
 }
-
-import MusicLibrary from './MusicLibrary';
-
-// Using require() to import JS in TS files
-const soundApi = require('./sound');
 
 const MAIN_AUDIO_GROUP = 'mainaudio';
 const PREVIEW_GROUP = 'preview';
