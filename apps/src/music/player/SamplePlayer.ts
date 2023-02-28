@@ -2,6 +2,7 @@ interface SampleEvent {
   offsetSeconds: number;
   sampleId: string;
   triggered: boolean;
+  effects: any;
 }
 
 interface PlayingSample {
@@ -120,7 +121,8 @@ export default class SamplePlayer {
         const uniqueId = soundApi.PlaySound(
           GROUP_PREFIX + '/' + sampleEvent.sampleId,
           MAIN_AUDIO_GROUP,
-          eventStart
+          eventStart,
+          sampleEvent.effects
         );
 
         this.playingSamples.push({
