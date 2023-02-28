@@ -12,7 +12,6 @@ dashboard/brakeman_security_report.htm
 .dropbox
 .tmputils
 .rakeTasks
-.tscache/
 .idea/
 .irb_history
 jsconfig.json

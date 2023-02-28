@@ -77,7 +77,7 @@ const nodePolyfillConfig = {
 var baseConfig = {
   plugins: [...nodePolyfillConfig.plugins],
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx'],
     fallback: {...nodePolyfillConfig.resolve.fallback},
     alias: {
       '@cdo/locale': path.resolve(
@@ -225,11 +225,6 @@ var baseConfig = {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }
-      },
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
       }
     ],
     noParse: [/html2canvas/]

@@ -37,9 +37,7 @@
   },
   "resolutions": {
     "uglifyjs-webpack-plugin/uglify-js": "3.5.1",
-    "firmata": "^2.2.0",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11"
+    "firmata": "^2.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -257,14 +255,11 @@
     "@dsco_/link": "^1.1.2",
     "@lezer/highlight": "^1.0.0",
     "@microsoft/immersive-reader-sdk": "^1.1.0",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
     "ace-builds": "^1.4.12",
     "blockly": "~9.1.1",
     "crypto-js": "^3.1.9-1",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "filesaver.js": "0.2.0",
-    "grunt-ts": "^6.0.0-beta.22",
     "is-hotkey": "^0.2.0",
     "jshint": "^2.9.5",
     "jszip": "3.10.0",
@@ -296,8 +291,6 @@
     "stream-browserify": "^3.0.0",
     "survey-react": "^1.9.28",
     "timers-browserify": "^2.0.12",
-    "ts-loader": "^9.4.2",
-    "typescript": "^4.9.5",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }
