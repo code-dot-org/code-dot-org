@@ -122,6 +122,8 @@ export default class SamplePlayer {
           GROUP_PREFIX + '/' + sampleEvent.sampleId,
           MAIN_AUDIO_GROUP,
           eventStart,
+          null,
+          false,
           sampleEvent.effects
         );
 

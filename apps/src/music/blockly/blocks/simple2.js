@@ -204,7 +204,9 @@ export const setEffectAtCurrentLocationSimple2 = {
           ['low volume', 'volume_low'],
           ['normal volume', 'volume_normal'],
           ['some filtering', 'filter_on'],
-          ['no filtering', 'filter_off']
+          ['no filtering', 'filter_off'],
+          ['some delay', 'delay_on'],
+          ['no delay', 'delay_off']
         ]
       }
     ],
