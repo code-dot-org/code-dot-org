@@ -1246,4 +1246,18 @@ class BlocklyTest < ActiveSupport::TestCase
     parsed_xml = Nokogiri::XML(localized_block_xml, &:noblanks)
     assert_equal parsed_xml.at_xpath('//block[@type="studio_ask"]/*[@name="VAR"]').content, localized_variable_str
   end
+
+  test 'keeps tags expanded when localizing start_html' do
+    level = create(
+      :level,
+      :blockly,
+      name: 'test localized_start_html',
+    )
+    start_html = '<div><button id="leftBottomButton" style="padding: 0px; margin: 0px; border-style: solid; background-color: rgb(68, 44, 46); border-radius: 20px; border-width: 0px; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); font-family: Verdana, Geneva, sans-serif; font-size: 15px; position: absolute; left: 10px; top: 250px; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; width: 45px; height: 190px;" data-canonical-image-url="icon://fa-long-arrow-left" data-icon-color="#ffffff"></button><label style="margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; background-color: rgb(254, 234, 230); border-width: 0px; border-color: rgb(255, 255, 255); color: rgb(68, 44, 46); font-family: Arial, Helvetica, sans-serif; position: absolute; left: 0px; top: 4.44089e-16px; border-radius: 4px; height: 40px; width: 320px; font-size: 36px; text-rendering: optimizespeed;" id="appName"> &nbsp;Outfit Picker</label></div>'
+    localized_start_html = level.localized_start_html(start_html)
+
+    # Output should use <button></button> instead of <button />
+    expected_output = '<div><button id="leftBottomButton" style="padding: 0px; margin: 0px; border-style: solid; background-color: rgb(68, 44, 46); border-radius: 20px; border-width: 0px; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); font-family: Verdana, Geneva, sans-serif; font-size: 15px; position: absolute; left: 10px; top: 250px; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; width: 45px; height: 190px;" data-canonical-image-url="icon://fa-long-arrow-left" data-icon-color="#ffffff"></button><label style="margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; background-color: rgb(254, 234, 230); border-width: 0px; border-color: rgb(255, 255, 255); color: rgb(68, 44, 46); font-family: Arial, Helvetica, sans-serif; position: absolute; left: 0px; top: 4.44089e-16px; border-radius: 4px; height: 40px; width: 320px; font-size: 36px; text-rendering: optimizespeed;" id="appName"> Outfit Picker</label></div>'
+    assert_equal expected_output, localized_start_html
+  end
 end
