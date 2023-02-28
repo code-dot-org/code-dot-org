@@ -353,6 +353,12 @@
         "bbd1a283-a817-4fd2-9335-651b698f63d2": {
           "description": "Superar obstacles, com ara restriccions de temps o errors."
         },
+        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
+          "description": "Descriure la importància de l'usuari en el procés de disseny."
+        },
+        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
+          "description": "Identificar els sprites d'un programa d'ordinador en execució."
+        },
         "3be6fc2a-7c73-4ff2-b8b6-10639f40e6ad": {
           "description": "Crear una animació fent sprites i comportaments."
         },
@@ -367,6 +373,12 @@
         },
         "d13ed164-0cf7-4bb3-882a-69ed146aeb9f": {
           "description": "Crear una animació interactiva fent servir esdeveniments."
+        },
+        "8b5814c2-524a-4871-ae01-bba3f6bce488": {
+          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la."
+        },
+        "cf3f971b-43c5-4cb5-beeb-d23c903e1752": {
+          "description": "Crear una mascota virtual interactiva utilitzant esdeveniments, comportaments i elements gràfics personalitzats."
         },
         "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
           "description": "Parlar de la influència de la intel·ligència artificial en les seves vides."
@@ -639,7 +651,7 @@
           "description": "Crear una mascota virtual interactiva utilitzant esdeveniments, comportaments, variables i elements gràfics personalitzats."
         },
         "eb7e84c2-0694-4b77-90a0-747270409a09": {
-          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la o controlar que estigui contenta-"
+          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la o controlar que estigui contenta."
         },
         "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
           "description": "Desenvolupar programes que responguin a esdeveniments cronometrats"
@@ -1061,6 +1073,12 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Fer servir la terminologia correcta per referir-se al ratolí, al ratolí tàctil o a la pantalla tàctil."
         },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Descriure la importància de l'usuari en el procés de disseny."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Identificar els sprites d'un programa d'ordinador en execució."
+        },
         "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
           "description": "Crear sprites nous i assignar-los vestits i comportaments."
         },
@@ -1075,6 +1093,12 @@
         },
         "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
           "description": "Crear una animació interactiva fent servir esdeveniments."
+        },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Crear una mascota virtual interactiva utilitzant esdeveniments, comportaments i elements gràfics personalitzats."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "Identificar els beneficis de fer servir una estructura de bucles en lloc de la repetició manual."
@@ -1596,7 +1620,7 @@
           "description": "Crear una mascota virtual interactiva utilitzant esdeveniments, comportaments, variables i elements gràfics personalitzats."
         },
         "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
-          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la o controlar que estigui contenta-"
+          "description": "Programar solucions als problemes que sorgeixen a l'hora de dissenyar una mascota virtual, com haver d'alimentar-la o controlar que estigui contenta."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Desenvolupar programes que responguin a esdeveniments cronometrats"
