@@ -19,6 +19,10 @@
     %p Optional solution markdown to display to teachers.
     = f.text_area :solution, rows: 3, class: "input-block-level"
   .field
+    = f.label :num_attempts_allowed, "Number of Attempts Allowed"
+    %p Number of attempts students are allowed. Default is one for contained levels and infinite for standalone levels. It will not apply for levels in level groups.
+    = f.number_field :num_attempts_allowed
+  .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :peer_reviewable, description: "Is peer reviewable"}
     %p
       If checked, students that submit a solution for grading can have their

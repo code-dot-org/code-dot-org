@@ -36,6 +36,7 @@ class FreeResponse < Level
     submittable
     peer_reviewable
     optional
+    num_attempts_allowed
   )
 
   before_validation do

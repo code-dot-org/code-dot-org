@@ -25,6 +25,10 @@
 #
 
 class Match < DSLDefined
+  serialized_attrs %w(
+    num_attempts_allowed
+  )
+
   def dsl_default
     <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
