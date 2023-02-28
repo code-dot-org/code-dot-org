@@ -522,13 +522,13 @@ db_writer_endpoint: !Secret
 
 # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
-db_credential_admin: !Secret
+db_credential_admin: !StackSecret
 db_admin_user: master
 db_admin_password: !Secret
-db_credential_writer: !Secret
+db_credential_writer: !StackSecret
 db_writer_user: application-writer
 db_writer_password: !Secret
-db_credential_reader: !Secret
+db_credential_reader: !StackSecret
 db_reader_user: readonly
 db_reader_password: !Secret
 
