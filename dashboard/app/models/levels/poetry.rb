@@ -50,7 +50,7 @@ class Poetry < GamelabJr
     sanitize_dropdown_poems
     if default_poem.present? && Poetry.subtypes_with_poems.include?(standalone_app_name) &&
       dropdown_poems && !dropdown_poems.empty? && !dropdown_poems.include?(default_poem)
-      errors.add(:default_poem, "is not in dropdown poem list")
+      errors.add(:default_poem, "selected default poem is not in dropdown poem list")
     end
   end
 
