@@ -136,6 +136,16 @@ module Dashboard
     # Generate digests for assets URLs which do not contain webpack hashes.
     config.assets.digest = CDO.optimize_rails_assets
 
+    config.assets.precompile += %w(
+      js/*
+      css/*.css
+      levels/*.css
+      jquery.handsontable.full.css
+      emulate-print-media.js
+      jquery.handsontable.full.js
+      video-js/*.css
+    )
+
     # Support including code from directories outside of the normal Rails directory
     # structure. Specifically, include a couple of directories for misc library code, as
     # well as some subdirectories of the models dir that we use for organization.

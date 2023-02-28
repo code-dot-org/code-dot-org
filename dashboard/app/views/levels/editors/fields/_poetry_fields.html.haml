@@ -9,16 +9,26 @@
       %p= "WARNING: #{warning}"
     = f.select :standalone_app_name, options_for_select(@level.class.standalone_app_names, @level.standalone_app_name), {}, onchange: 'toggleFields(this.value);'
 
-  #defaultPoem{class: ('collapse' if @level.standalone_app_name == 'poetry')}
+  #defaultPoemHoc{class: ('collapse' if @level.standalone_app_name != 'poetry_hoc')}
     = f.label :default_poem, 'Default Poem'
-    = f.select :default_poem, options_for_select(@level.class.poems_for_subtype(@level.standalone_app_name), @level.default_poem)
+    = f.select :default_poem, options_for_select(@level.class.hoc_poems, @level.default_poem)
+
+  #defaultPoemTimeCapsule{class: ('collapse' if @level.standalone_app_name != 'time_capsule')}
+    = f.label :default_poem, 'Default Poem'
+    = f.select :default_poem, options_for_select(@level.class.time_capsule_poems, @level.default_poem)
 
 :javascript
   function toggleFields(val) {
-    const defaultPoem = document.getElementById('defaultPoem');
-    if (val.toLowerCase() !== 'poetry') {
-      defaultPoem.classList.remove('collapse');
-    } else {
-      defaultPoem.classList.add('collapse');
+    const defaultPoemHoc = document.getElementById('defaultPoemHoc');
+    const defaultPoemTimeCapsule = document.getElementById('defaultPoemTimeCapsule');
+    if (val.toLowerCase() === 'poetry') {
+      defaultPoemHoc.classList.add('collapse');
+      defaultPoemTimeCapsule.classList.add('collapse');
+    } else if (val.toLowerCase() === 'poetry_hoc') {
+      defaultPoemTimeCapsule.classList.add('collapse');
+      defaultPoemHoc.classList.remove('collapse');
+    } else if (val.toLowerCase() === 'time_capsule') {
+      defaultPoemTimeCapsule.classList.remove('collapse');
+      defaultPoemHoc.classList.add('collapse');
     }
   }
