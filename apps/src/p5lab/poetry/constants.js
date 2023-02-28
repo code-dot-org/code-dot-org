@@ -285,9 +285,39 @@ export const POEMS = {
 };
 
 export const TIME_CAPSULE_POEMS = {
-  pat: {author: 'Pat Y.'},
+  pat: {
+    locales: ['en_us'],
+    author: 'Pat Y.',
+    title: '1990 - My Poem 1',
+    linesSplit: [
+      'I love to ride my skateboard all around',
+      "With my Walkman blasting, I don't hear a sound",
+      'I just learned how to do a sweet new trick',
+      "It's called the kickflip and it's really sick",
+      '\n',
+      'Something happening right now is Yo MTV Raps',
+      'Watching Salt-N-Pepa and LL Cool J, mad snaps',
+      'Slap bracelets are something cool',
+      'And neon colors, they totally rule.'
+    ]
+  },
   erin: {author: 'Erin P.'},
-  aryanna: {author: 'Aryanna T.'},
+  aryanna: {
+    locales: ['en_us'],
+    author: 'Aryanna T.',
+    title: '2021 - My Poem 3',
+    linesSplit: [
+      "Today in 2021, I'm cool as can be,",
+      "I love to dance, and listen to music that's so me.",
+      "I just learned to skateboard, and it's rad,",
+      "I'm thinking about trying out for the cheer squad.",
+      '\n',
+      'In my neighborhood, we all have our own flair,',
+      'People I know like to ride bikes, and style their hair.',
+      "Something fun right now is TikTok, can't you see?",
+      'Dancing is popular, and I love the energy.'
+    ]
+  },
   tj: {author: 'TJ'},
   erik: {author: 'Erik D.'},
   aaron: {author: 'Aaron H.'},
