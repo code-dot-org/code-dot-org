@@ -8,10 +8,10 @@ module QuickAssignHelper
     assignable_high_offerings = assignable_offerings.filter(&:high_school_level?)
     assignable_hoc_offerings = assignable_offerings.filter(&:hoc?)
 
-    offerings[:elementary] = group_offerings(assignable_elementary_offerings, user, locale)
-    offerings[:middle] = group_offerings(assignable_middle_offerings, user, locale)
-    offerings[:high] = group_offerings(assignable_high_offerings, user, locale)
-    offerings[:hoc] = group_hoc_offerings(assignable_hoc_offerings, user, locale)
+    offerings[:elementary] = group_grade_level_offerings(assignable_elementary_offerings, user, locale)
+    offerings[:middle] = group_grade_level_offerings(assignable_middle_offerings, user, locale)
+    offerings[:high] = group_grade_level_offerings(assignable_high_offerings, user, locale)
+    offerings[:hoc] = group_hoc_and_pl_offerings(assignable_hoc_offerings, user, locale)
 
     offerings
   end
@@ -21,7 +21,7 @@ module QuickAssignHelper
   # The headers within each curriculum_type will be sorted alphabetically.
   # The offerings within a header will be sorted alphabetically by display_name.
   # Any course_offerings that do not have a curriculum_type and a header will be ignored.
-  def self.group_offerings(course_offerings, user, locale)
+  def self.group_grade_level_offerings(course_offerings, user, locale)
     data = {}
     course_offerings.each do |co|
       next if co.header.blank? || co.curriculum_type.blank?
@@ -42,7 +42,13 @@ module QuickAssignHelper
     data
   end
 
-  def self.group_hoc_offerings(course_offerings, user, locale)
+  def self.compare_headers(h1, h2)
+    return -1 if h1 == Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.favorites
+    return 1 if h2 == Curriculum::SharedCourseConstants::COURSE_OFFERING_HEADERS.favorites
+    h1 <=> h2
+  end
+
+  def self.group_hoc_and_pl_offerings(course_offerings, user, locale)
     data = {}
     course_offerings.each do |co|
       next if co.header.blank?
@@ -54,7 +60,6 @@ module QuickAssignHelper
     data.keys.each do |header|
       data[header].sort_by! {|co| co[:display_name]}
     end
-    data = data.sort.to_h
-    data
+    data.sort {|(h1, _), (h2, _)| compare_headers(h1, h2)}.to_h
   end
 end
