@@ -271,5 +271,7 @@
   "cscBookcoverMatchSpriteSpeech": "Make sure all your sprite costumes match.",
   "cscBookcoverPromptNotInEvent": "You added a prompt block to your code, but you didn't attach it to an event block.\nMake sure the prompt block is attached under a `when sprite clicked` event block.",
   "cscBookcoverPrintNotInEvent": "You added a print block to your code, but you didn't attach it to an event block.\nMake sure the print block is attached under a `when prompt answered` event block.",
-  "moveAndSpeak": "Make sure the speech block is connected under the `when up pressed` event block."
+  "moveAndSpeak": "Make sure the speech block is connected under the `when up pressed` event block.",
+  "cscLandmarkTouchSprite": "Use the arrow keys to move the tour guide to the landmarks.",
+  "cscLandmarkMissing": "You're missing a landmark."
 }
