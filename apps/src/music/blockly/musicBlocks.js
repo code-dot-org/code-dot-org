@@ -18,7 +18,8 @@ import {
   playRestAtCurrentLocationSimple2,
   setEffectAtCurrentLocationSimple2,
   playSoundsTogether,
-  playSoundsSequential
+  playSoundsSequential,
+  repeatSimple2
 } from './blocks/simple2';
 
 // All blocks
@@ -36,6 +37,7 @@ const blockList = [
   setEffectAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
+  repeatSimple2,
   forLoop,
   newTrackAtStart,
   newTrackAtMeasure,

@@ -17,11 +17,22 @@ export class MicrobitStubBoard {
     this.updateListeners = [];
     this.analogChannel = new Array(16).fill(0);
     this.myPort = null;
+    this.boardClient_ = null;
+  }
+
+  boardClient_() {
+    this.boardClient_ = {};
   }
 
   connect() {
     this.myPort = true;
   }
+
+  /**
+   * @param {number} pin
+   * @param {number} modeConstant
+   */
+  pinMode(pin, modeConstant) {}
 
   setPinMode(pinNum, mode) {}
 

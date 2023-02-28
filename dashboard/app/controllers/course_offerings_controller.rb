@@ -1,7 +1,7 @@
 class CourseOfferingsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource except: [:quick_assign_course_offerings]
 
-  before_action :require_levelbuilder_mode
+  before_action :require_levelbuilder_mode, except: [:quick_assign_course_offerings]
   before_action :authenticate_user!
 
   def edit
@@ -20,6 +20,13 @@ class CourseOfferingsController < ApplicationController
     render json: @course_offering.summarize_for_edit
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
     render(status: :not_acceptable, plain: e.message)
+  end
+
+  def quick_assign_course_offerings
+    return head :forbidden unless current_user
+
+    offerings = QuickAssignHelper.course_offerings(current_user, request.locale)
+    render :ok, json: offerings.to_json
   end
 
   private

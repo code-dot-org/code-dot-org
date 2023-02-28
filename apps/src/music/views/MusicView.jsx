@@ -175,8 +175,6 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.resetCode();
 
     this.setPlaying(false);
-
-    this.player.clearAllSoundEvents();
   };
 
   onBlockSpaceChange = e => {
@@ -187,7 +185,7 @@ class UnconnectedMusicView extends React.Component {
     // usable then.
     // It's possible that other events should similarly be ignored here.
     if (e.type === Blockly.Events.BLOCK_DRAG) {
-      this.player.stopAndCancelPreviews();
+      this.player.cancelPreviews();
       return;
     }
 
@@ -197,26 +195,30 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    // Stop all when_run sounds that are still to play, because if they
-    // are still valid after the when_run code is re-executed, they
-    // will be scheduled again.
-    this.stopAllSoundsStillToPlay();
+    const codeChanged = this.compileSong();
+    if (codeChanged) {
+      // Stop all when_run sounds that are still to play, because if they
+      // are still valid after the when_run code is re-executed, they
+      // will be scheduled again.
+      this.stopAllSoundsStillToPlay();
 
-    // Also clear all when_run sounds from the events list, because it
-    // will be recreated in its entirely when the when_run code is
-    // re-executed.
-    this.player.clearWhenRunEvents();
+      // Also clear all when_run sounds from the events list, because it
+      // will be recreated in its entirely when the when_run code is
+      // re-executed.
+      this.player.clearWhenRunEvents();
 
-    this.executeSong();
+      this.executeCompiledSong();
 
-    this.analyticsReporter.onBlocksUpdated(
-      this.musicBlocklyWorkspace.getAllBlocks()
-    );
+      this.analyticsReporter.onBlocksUpdated(
+        this.musicBlocklyWorkspace.getAllBlocks()
+      );
 
-    // This is a way to tell React to re-render the scene, notably
-    // the timeline.
-    this.setState({updateNumber: this.state.updateNumber + 1});
+      // This is a way to tell React to re-render the scene, notably
+      // the timeline.
+      this.setState({updateNumber: this.state.updateNumber + 1});
+    }
 
+    // Save the workspace.
     this.musicBlocklyWorkspace.saveCode();
   };
 
@@ -248,8 +250,12 @@ class UnconnectedMusicView extends React.Component {
     });
   };
 
-  executeSong = () => {
-    this.musicBlocklyWorkspace.executeSong({
+  compileSong = () => {
+    return this.musicBlocklyWorkspace.compileSong();
+  };
+
+  executeCompiledSong = () => {
+    this.musicBlocklyWorkspace.executeCompiledSong({
       MusicPlayer: this.player,
       ProgramSequencer: this.programSequencer,
       getTriggerCount: () => this.triggerCount
@@ -259,11 +265,14 @@ class UnconnectedMusicView extends React.Component {
   playSong = () => {
     this.player.stopSong();
 
-    // Clear the events list of when_run sounds, because it will be
-    // populated next.
-    this.player.clearWhenRunEvents();
+    const codeChanged = this.compileSong();
+    if (codeChanged) {
+      // Clear the events list of when_run sounds, because it will be
+      // populated next.
+      this.player.clearWhenRunEvents();
 
-    this.executeSong();
+      this.executeCompiledSong();
+    }
 
     this.player.playSong();
 
@@ -381,7 +390,7 @@ class UnconnectedMusicView extends React.Component {
       <AnalyticsContext.Provider value={this.analyticsReporter}>
         <PlayerUtilsContext.Provider
           value={{
-            getSoundEvents: () => this.player.getSoundEvents(),
+            getPlaybackEvents: () => this.player.getPlaybackEvents(),
             convertMeasureToSeconds: measure =>
               this.player.convertMeasureToSeconds(measure),
             getTracksMetadata: () => this.player.getTracksMetadata(),

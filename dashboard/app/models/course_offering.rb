@@ -26,12 +26,18 @@ class CourseOffering < ApplicationRecord
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
+  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
+  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key,
     with: KEY_RE,
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
+
+  ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
+  MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
+  HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
 
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
@@ -142,6 +148,15 @@ class CourseOffering < ApplicationRecord
     ]
   end
 
+  def summarize_for_quick_assign(user, locale_code)
+    {
+      id: id,
+      key: key,
+      display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
+      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_quick_assign(user, locale_code)}
+    }
+  end
+
   def localized_display_name
     localized_name = I18n.t(
       key,
@@ -223,5 +238,22 @@ class CourseOffering < ApplicationRecord
 
   def csd?
     key == 'csd'
+  end
+
+  def grade_levels_list
+    return [] if grade_levels.nil?
+    grade_levels.strip.split(',')
+  end
+
+  def elementary_school_level?
+    grade_levels_list.any? {|g| ELEMENTARY_SCHOOL_GRADES.include?(g)}
+  end
+
+  def middle_school_level?
+    grade_levels_list.any? {|g| MIDDLE_SCHOOL_GRADES.include?(g)}
+  end
+
+  def high_school_level?
+    grade_levels_list.any? {|g| HIGH_SCHOOL_GRADES.include?(g)}
   end
 end

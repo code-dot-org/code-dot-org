@@ -326,6 +326,13 @@ describe('entry tests', () => {
     }
   };
 
+  config.ts = {
+    default: {
+      tsconfig: './tsconfig.json',
+      src: ['./src/**/*.ts', './src/**/*.tsx']
+    }
+  };
+
   config.sass = {
     all: {
       options: {
@@ -883,9 +890,6 @@ describe('entry tests', () => {
     'applab-api': './src/applab/api-entry.js',
     'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
-    'census_reviewers/review_reported_inaccuracies':
-      './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
-
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
   };
@@ -1246,6 +1250,7 @@ describe('entry tests', () => {
     watch: {
       tasks: [
         'watch',
+        'ts',
         envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'
       ],
       options: {

@@ -3,7 +3,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "## Predict\r\n\r\nRead this poem that captures a moment in time. Type an answer to the following questions in the text box below then click Run.\r\n\r\n- When is this time capsule from?\r\n- What did the author of the Time Capsule enjoy doing? \r\n- What was an important world event at the time of this time capsule?\r\n- What has changed since this time?\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "## Predict\r\n\r\nRead this poem that captures a moment in time. Type an answer to the following questions in the text box below then click Run.\r\n\r\n- When is this time capsule from?\r\n- What did the author of the time capsule poem enjoy doing? \r\n- What was an important world event at the time of this time capsule?\r\n- What has changed since this time?\r\n\r\n\r\n\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,7 +20,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-06T19:25:38.106+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_predict_child_lesson1\\\"\"],\"cloned_from\":\"csc_timecapsule_predict_child_lesson1\"},{\"changed_at\":\"2023-02-15 18:41:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-02-06T19:25:38.106+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_predict_child_lesson1\\\"\"],\"cloned_from\":\"csc_timecapsule_predict_child_lesson1\"},{\"changed_at\":\"2023-02-15 18:41:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-02-17 22:21:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
