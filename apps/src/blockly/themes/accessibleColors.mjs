@@ -1,10 +1,6 @@
 import cdoBlockStyles from './cdoBlockStyles.mjs';
 import nearestColor from 'nearest-color';
 
-if (!nearestColor) {
-  console.log('Try: yarn add nearest-color');
-}
-
 // These are the core Blockly styles that we have historically never overridden.
 const coreBlocklyStyles = {
   list_blocks: {
