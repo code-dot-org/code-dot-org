@@ -3,9 +3,17 @@
 // Variables
 $border-radius: 4px;
 
+// Mixins
 @mixin focus-outline {
   outline: $brand_primary_default solid 2px;
   outline-offset: 2px;
+}
+
+// Use this to maintain proper heading hierarchy
+// if the design calls for an h5 style
+@mixin h5-lookalike-style {
+  font-family: $gotham-bold, sans-serif;
+  font-size: 1.25em;
 }
 
 // Start styles
@@ -78,6 +86,13 @@ p {
     font-size: 1.25em;
     font-family: $gotham-bold;
   }
+
+  &.overline {
+    font-size: .75em;
+    font-family: $gotham-bold;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
 }
 
 strong {
@@ -124,11 +139,13 @@ input[type=submit] {
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   border-radius: $border-radius;
-  padding: .5em 1em;
+  padding: .625em 1em;
   margin: 0.5em 0;
   font-size: 1em;
   font-family: 'Gotham 5r', sans-serif;
+  line-height: 1.2;
   text-decoration: none;
+  text-align: center;
   transition: all ease-in-out .2s;
 
   &:hover {
@@ -225,9 +242,80 @@ ul {
       }
 
       h3 {
-        font-family: $gotham-bold, sans-serif;
-        font-size: 1.25em;
-        margin-bottom: 0.5em;
+        @include h5-lookalike-style;
+      }
+    }
+  }
+
+  // Lists that have an arrow shape as li backgrounds
+  &.arrow-list {
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+      height: 12em;
+      background: $brand_primary_light;
+      position: relative;
+      padding: 1.5em 2.5em;
+      text-indent: 0 !important;
+      display: flex;
+      align-content: start;
+      flex-wrap: wrap;
+      margin: 1.5em 0;
+
+      @media screen and (max-width: $width-md) {
+        padding: 1em 1em 1em 2em;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        width: 100% !important;
+        margin-bottom: 0;
+      }
+
+      h3 {
+        @include h5-lookalike-style;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 1em solid $neutral_white;
+        border-top: calc(12em / 2) solid transparent;
+        border-bottom: calc(12em / 2) solid transparent;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: -1em;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 1em solid $brand_primary_light;
+        border-top: calc(12em / 2) solid transparent;
+        border-bottom: calc(12em / 2) solid transparent;
+      }
+
+      &:nth-child(1) {
+        background: rgba($brand_primary_light, .4);
+
+        &:before {
+          border-left: 1em solid rgba($brand_primary_light, .4);
+        }
+      }
+
+      &:nth-child(2) {
+        background: rgba($brand_primary_light, .6);
+
+        &:before {
+          border-left: 1em solid rgba($brand_primary_light, .6);
+        }
       }
     }
   }
@@ -265,6 +353,12 @@ ol.steps-list {
     @media screen and (max-width: $width-sm) {
       width: 100%;
     }
+
+    a.link-button,
+    button,
+    .btn {
+      min-width: unset;
+    }
   }
 
   h3 {
@@ -298,10 +392,7 @@ ol.steps-list {
   }
 
   h4 {
-    font-family: $gotham-bold, sans-serif;
-    font-size: 1.25em;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
+    @include h5-lookalike-style;
     width: 100%;
   }
 }
@@ -444,6 +535,28 @@ form {
   border-radius: $border-radius;
   display: flex;
   align-content: baseline;
+
+  p.overline {
+    color: $brand_primary_default;
+    width: 100%;
+  }
+
+  figure.video-responsive {
+    margin-bottom: 1em;
+  }
+
+  ul {
+    margin: 0 1em 1em;
+  }
+
+  &.secondary {
+
+    h3 {
+      font-family: $gotham-bold, sans-serif;
+      font-size: 1.25em;
+      margin-bottom: 0.5em;
+    }
+  }
 }
 
 // Single column action blocks
@@ -466,8 +579,132 @@ form {
 
 // Two column action block
 .action-block--two-col {
+  flex-wrap: wrap;
+  overflow: hidden;
 
   .text-wrapper {
     padding: 1em 1.5em;
+  }
+
+  figure.video-responsive {
+    margin: 0 !important;
+    max-width: unset;
+
+    & > div {
+      border: 0;
+    }
+  }
+
+  @media screen and (max-width: $width-sm) {
+    a.link-button, button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// Quotes carousel
+// See code.org/educate/professional-learning/middle-high
+// and /views/pl_middle_high_carousel.haml for an example
+// – uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
+.quotes-wrapper {
+
+  img {
+    border-radius: $border-radius;
+    width: 100%;
+
+    @media screen and (max-width: $width-md) {
+      display: none;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: block;
+      margin-bottom: 2em;
+    }
+  }
+
+  .carousel-wrapper {
+    font-family: $barlowSemiCondensed-medium, sans-serif;
+    margin: 2em 0 0;
+
+    @media screen and (max-width: $width-sm) {
+      padding-bottom: 1em;
+    }
+
+    // Set a min-height inline on the .carousel div
+    // inside .carousel-wrapper to account for varying
+    // quote lengths and prevent vertical height changes
+    .carousel {
+      overflow: hidden;
+
+      @media screen and (max-width: $width-md) {
+        height: unset !important;
+        overflow: unset;
+      }
+    }
+
+    p {
+      font-size: 1.25em;
+
+      &.quote-text {
+        font-size: 1.5em;
+        line-height: 1.2;
+
+        &:before, &:after {
+          font: var(--fa-font-solid);
+          color: $brand_primary_default;
+        }
+
+        &::before {
+          content: "\f10d";
+          margin: 0 8px 0 0;
+        }
+
+        &::after {
+          content: "\f10e";
+          margin: 0 0 0 8px;
+        }
+      }
+    }
+
+    span {
+      color: $brand_accent_default;
+      margin: 0 2px;
+    }
+
+    .pagination {
+      text-align: left;
+      margin: 1em 0 0 0;
+
+      @media screen and (max-width: $width-sm) {
+        margin-top: 3em;
+      }
+
+      a{
+        background: $brand_primary_light;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &.selected {
+          background: $brand_primary_default;
+        }
+      }
+    }
+  }
+}
+
+// Modals
+.modal-header {
+
+  button.close {
+    min-width: unset;
+    margin-top: 2px;
+
+    &:hover {
+      background: none;
+      border: none;
+    }
   }
 }
