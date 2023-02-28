@@ -18,7 +18,7 @@ describe('QuickAssignTable', () => {
     );
 
     expect(wrapper.find('table').length).to.equal(1);
-    expect(wrapper.contains('Course')).to.be.true;
+    expect(wrapper.contains('Courses')).to.be.true;
   });
 
   it('renders two tables with correct headers', () => {
@@ -29,7 +29,7 @@ describe('QuickAssignTable', () => {
       />
     );
     expect(wrapper.find('table').length).to.equal(2);
-    expect(wrapper.contains('Course')).to.be.true;
-    expect(wrapper.contains('Standalone Unit')).to.be.true;
+    expect(wrapper.contains('Courses')).to.be.true;
+    expect(wrapper.contains('Standalone Units')).to.be.true;
   });
 });
