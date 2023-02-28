@@ -17,18 +17,36 @@
       Parameters: <%=values.compact.to_json%>
 <%end -%>
 
-<%  db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
-  DatabaseSecret<%=secret = user&.underscore&.camelcase%>:
+  DatabaseSecretAdmin:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: !Sub "Secrets for accessing database<%user ? " user #{user}" : ''%> from ${AWS::StackName} CloudFormation stack"
+      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
       GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "<%=user || '${DatabaseUsername}'%>"}'
+        SecretStringTemplate: !Sub '{"username": "${DatabaseUsername}"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
-      Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
-<%  secret; end -%>
+      Name: !Sub "CfnStack/${AWS::StackName}/db_credential_admin"
+  DatabaseSecretWriter:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "application-writer"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
+      Name: !Sub "CfnStack/${AWS::StackName}/db_credential_writer"
+  DatabaseSecretReader:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "readonly"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
+      Name: !Sub "CfnStack/${AWS::StackName}/db_credential_reader"
 
   DBProxyRole:
     Type: AWS::IAM::Role
@@ -38,9 +56,9 @@
         - PolicyName: RDSProxy
           PolicyDocument:
             Statement:
-<%  db_secrets.each do |secret| -%>
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret<%=secret%>}
-<%  end -%>
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretAdmin}
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretWriter}
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretReader}
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   ReportingDBProxy:
     Type: AWS::RDS::DBProxy
@@ -49,7 +67,7 @@
       EngineFamily: MYSQL
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
-        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%='readonly'&.underscore&.camelcase%>, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   ReportingDBDomainName:
@@ -129,8 +147,8 @@
       # Each Database Instance in the cluster is restarted.
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
       EngineVersion: 5.7.mysql_aurora.2.10.2
-      MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
-      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
+      MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
+      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
       EnableIAMDatabaseAuthentication: true
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
@@ -164,9 +182,9 @@
       EngineFamily: MYSQL
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
-<%  db_secrets.each do |secret| -%>
-        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
-<%  end -%>
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretAdmin, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretWriter, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   ReaderDBProxyEndpoint:
