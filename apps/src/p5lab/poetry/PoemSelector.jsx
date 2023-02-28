@@ -13,7 +13,7 @@ import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {PoetryStandaloneApp} from './constants';
-import {getPoem, getPoems} from './poem';
+import {getPoem, getPoems, shouldAlphabetizePoems} from './poem';
 import * as utils from '@cdo/apps/utils';
 
 const poemShape = PropTypes.shape({
@@ -178,11 +178,16 @@ function PoemSelector(props) {
   };
 
   const getPoemOptions = () => {
-    const options = Object.keys(getPoems())
+    let options = Object.keys(getPoems())
       .map(poemKey => getPoem(poemKey))
-      .filter(poem => !poem.locales || poem.locales.includes(appOptions.locale))
-      .sort((a, b) => (a.title > b.title ? 1 : -1))
-      .map(poem => ({value: poem.key, label: poem.title}));
+      .filter(
+        poem => !poem.locales || poem.locales.includes(appOptions.locale)
+      );
+
+    if (shouldAlphabetizePoems()) {
+      options.sort((a, b) => (a.title > b.title ? 1 : -1));
+    }
+    options = options.map(poem => ({value: poem.key, label: poem.title}));
     // Add option to create your own poem to the top of the dropdown.
     options.unshift({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
     // Add blank option that just says "Choose a Poem" to the top of the dropdown.

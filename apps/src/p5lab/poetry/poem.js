@@ -26,3 +26,9 @@ export function getPoems() {
       return {};
   }
 }
+
+// Don't alphabetize time capsule poems, they should remain in their
+// original order.
+export function shouldAlphabetizePoems() {
+  return appOptions.level.standaloneAppName !== PoetryStandaloneApp.TimeCapsule;
+}
