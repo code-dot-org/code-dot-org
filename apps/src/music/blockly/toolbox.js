@@ -63,6 +63,20 @@ const toolboxBlocks = {
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL
   },
+  [BlockTypes.REPEAT_SIMPLE2]: {
+    kind: 'block',
+    type: BlockTypes.REPEAT_SIMPLE2,
+    inputs: {
+      times: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1
+          }
+        }
+      }
+    }
+  },
   [BlockTypes.PLAY_SOUND_IN_TRACK]: {
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_IN_TRACK,
@@ -335,7 +349,7 @@ export function getToolbox() {
             BlockTypes.TRIGGERED_AT_SIMPLE2,
             BlockTypes.PLAY_SOUNDS_TOGETHER,
             BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
-            'controls_repeat_ext'
+            BlockTypes.REPEAT_SIMPLE2
           ]
         },
         {includeFunctions: true}

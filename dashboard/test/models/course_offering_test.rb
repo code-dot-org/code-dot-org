@@ -451,6 +451,72 @@ class CourseOfferingTest < ActiveSupport::TestCase
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
   end
 
+  test "validates curriculum_type value" do
+    assert_raises do
+      CourseOffering.create!(key: 'test-key', curriculum_type: 'Invalid Curriculum Type')
+    end
+  end
+
+  test "validates marketing_initiative value" do
+    assert_raises do
+      CourseOffering.create!(key: 'test-key', marketing_initiative: 'Invalid Marketing Initiative')
+    end
+  end
+
+  test "elementary_school_level?" do
+    course1 = create :course_offering, grade_levels: 'K,1'
+    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
+    course3 = create :course_offering, grade_levels: '5,6,7'
+    course4 = create :course_offering, grade_levels: '6,7,8'
+    course5 = create :course_offering, grade_levels: '8,9,10'
+    course6 = create :course_offering, grade_levels: '9,10,11,12'
+    course7 = create :course_offering, grade_levels: '11,12'
+
+    assert course1.elementary_school_level?
+    assert course2.elementary_school_level?
+    assert course3.elementary_school_level?
+    refute course4.elementary_school_level?
+    refute course5.elementary_school_level?
+    refute course6.elementary_school_level?
+    refute course7.elementary_school_level?
+  end
+
+  test "middle_school_level?" do
+    course1 = create :course_offering, grade_levels: 'K,1'
+    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
+    course3 = create :course_offering, grade_levels: '5,6,7'
+    course4 = create :course_offering, grade_levels: '6,7,8'
+    course5 = create :course_offering, grade_levels: '8,9,10'
+    course6 = create :course_offering, grade_levels: '9,10,11,12'
+    course7 = create :course_offering, grade_levels: '11,12'
+
+    refute course1.middle_school_level?
+    refute course2.middle_school_level?
+    assert course3.middle_school_level?
+    assert course4.middle_school_level?
+    assert course5.middle_school_level?
+    refute course6.middle_school_level?
+    refute course7.middle_school_level?
+  end
+
+  test "high_school_level?" do
+    course1 = create :course_offering, grade_levels: 'K,1'
+    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
+    course3 = create :course_offering, grade_levels: '5,6,7'
+    course4 = create :course_offering, grade_levels: '6,7,8'
+    course5 = create :course_offering, grade_levels: '8,9,10'
+    course6 = create :course_offering, grade_levels: '9,10,11,12'
+    course7 = create :course_offering, grade_levels: '11,12'
+
+    refute course1.high_school_level?
+    refute course2.high_school_level?
+    refute course3.high_school_level?
+    refute course4.high_school_level?
+    assert course5.high_school_level?
+    assert course6.high_school_level?
+    assert course7.high_school_level?
+  end
+
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)
     create :course_offering do |offering|
       create_list :course_version, num_versions, content_root_trait, course_offering: offering

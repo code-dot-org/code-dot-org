@@ -4244,6 +4244,13 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: СлучайноеЗначение
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
         hello-world-space-2022:
           title: 'Привет, мир: космос'
         hello-world-soccer-2022:

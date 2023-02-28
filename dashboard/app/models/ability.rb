@@ -450,10 +450,6 @@ class Ability
       can :update_file_abuse, :all
     end
 
-    if user.permission?(UserPermission::CENSUS_REVIEWER)
-      can :manage, Census::CensusInaccuracyInvestigation
-    end
-
     if user.admin?
       can :manage, :all
 

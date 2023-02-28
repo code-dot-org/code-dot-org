@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Dokončili jste aktivitu Napojení na počítačovou vědu nebo hledáte další možnosti pro svou třídu? <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Svou zpětnou vazbu</a> a nápady na další lekce sdílejte prosím tady!</em>
+
+{{ visit_partial_event_logger }}
