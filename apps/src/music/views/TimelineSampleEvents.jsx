@@ -14,7 +14,7 @@ const TimelineSampleEvents = ({
   getEventHeight
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getPlaybackEvents();
+  const soundEvents = playerUtils.getSoundEvents();
 
   const uniqueSoundsRef = useRef(new UniqueSounds());
   // Let's cache the value of getUniqueSounds() so that the various helpers
