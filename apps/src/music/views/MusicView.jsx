@@ -391,8 +391,6 @@ class UnconnectedMusicView extends React.Component {
         <PlayerUtilsContext.Provider
           value={{
             getPlaybackEvents: () => this.player.getPlaybackEvents(),
-            convertMeasureToSeconds: measure =>
-              this.player.convertMeasureToSeconds(measure),
             getTracksMetadata: () => this.player.getTracksMetadata(),
             getLengthForId: id => this.player.getLengthForId(id),
             getTypeForId: id => this.player.getTypeForId(id)
