@@ -35,6 +35,7 @@ class Multi < Match
       question 'Question'
       wrong 'wrong answer'
       right 'right answer'
+      num_attempts_allowed nil
     RUBY
   end
 
