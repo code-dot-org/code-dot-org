@@ -4,7 +4,7 @@ export default interface MusicLibrary {
 
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx';
 
-interface SoundData {
+export interface SoundData {
   name: string;
   src: string;
   length: number;
