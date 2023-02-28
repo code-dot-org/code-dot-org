@@ -7,6 +7,7 @@ import {
   elementarySchoolCourseOffering,
   highSchoolCourseOfferings
 } from './CourseOfferingsTestData';
+import i18n from '@cdo/locale';
 
 describe('QuickAssignTable', () => {
   it('renders Course as the first and only table/column header', () => {
@@ -18,7 +19,7 @@ describe('QuickAssignTable', () => {
     );
 
     expect(wrapper.find('table').length).to.equal(1);
-    expect(wrapper.contains('Courses')).to.be.true;
+    expect(wrapper.contains(i18n.courses())).to.be.true;
   });
 
   it('renders two tables with correct headers', () => {
@@ -29,7 +30,7 @@ describe('QuickAssignTable', () => {
       />
     );
     expect(wrapper.find('table').length).to.equal(2);
-    expect(wrapper.contains('Courses')).to.be.true;
-    expect(wrapper.contains('Standalone Units')).to.be.true;
+    expect(wrapper.contains(i18n.courses())).to.be.true;
+    expect(wrapper.contains(i18n.standaloneUnits())).to.be.true;
   });
 });
