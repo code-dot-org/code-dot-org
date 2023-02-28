@@ -445,10 +445,9 @@ class Ability
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
-    end
-
-    if user.permission?(UserPermission::CENSUS_REVIEWER)
-      can :manage, Census::CensusInaccuracyInvestigation
+      # let them change abuse scores
+      can :destroy_abuse, :all
+      can :update_file_abuse, :all
     end
 
     if user.admin?

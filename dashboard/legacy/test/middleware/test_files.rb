@@ -689,7 +689,8 @@ class FilesTest < FilesApiTestBase
     post_file_data(src_api, sound_filename, sound_body, 'audio/mpeg')
     assert_equal escaped_sound_filename, JSON.parse(last_response.body)['filename']
 
-    src_api.patch_abuse(10)
+    # Can't test abuse score functionality, since it's been moved to Rails.
+    #src_api.patch_abuse(10)
 
     expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
     expected_sound_info = {'filename' =>  escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
@@ -711,13 +712,14 @@ class FilesTest < FilesApiTestBase
     assert_equal sound_body, last_response.body
 
     # abuse score didn't carry over
+    # note: these assertions aren't verifying anything, since the abuse score functionality
+    # got moved to Rails, so we can't actually increase the abuse score in this test.
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, CGI.escape(image_filename.downcase))
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, escaped_sound_filename.downcase)
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
-      Custom/ListRequests/FileBucket/BucketHelper.list
       Custom/ListRequests/FileBucket/BucketHelper.copy_files
     )
 

@@ -1,6 +1,7 @@
 export const PoetryStandaloneApp = {
   Poetry: 'poetry',
-  PoetryHoc: 'poetry_hoc'
+  PoetryHoc: 'poetry_hoc',
+  TimeCapsule: 'time_capsule'
 };
 
 export const PALETTES = {
@@ -279,6 +280,25 @@ export const POEMS = {
       "sta il cacciator fischiando sull'uscio a rimirar",
       "tra le rossastre nubi stormi d'uccelli neri,",
       "com'esuli pensieri, nel vespero migrar."
+    ]
+  }
+};
+
+export const TIME_CAPSULE_POEMS = {
+  pat: {
+    locales: ['en_us'],
+    author: 'Pat Y.',
+    title: '1990 - My Poem 1',
+    linesSplit: [
+      'I love to ride my skateboard all around',
+      "With my Walkman blasting, I don't hear a sound",
+      'I just learned how to do a sweet new trick',
+      "It's called the kickflip and it's really sick",
+      '\n',
+      'Something happening right now is Yo MTV Raps',
+      'Watching Salt-N-Pepa and LL Cool J, mad snaps',
+      'Slap bracelets are something cool',
+      'And neon colors, they totally rule.'
     ]
   }
 };

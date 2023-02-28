@@ -77,3 +77,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Bạn đã hoàn thành hoạt động Kết nối KHMT và/hoặc đang tìm thêm lựa chọn cho lớp của mình? Vui lòng <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">chia sẻ góp ý</a> và ý tưởng cho các bài học tại đây!</em>
+
+{{ visit_partial_event_logger }}

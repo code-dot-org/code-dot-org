@@ -447,19 +447,19 @@ es:
         mc_2016_intro: Hora del Código de Minecraft - Introducción
         mc_2016_loops: Hora del Código de Minecraft - Bucles
         mc_2016_events: Hora del Código de Minecraft - Eventos
-        mc_2016_spawn: Hora del Código de Minecraft - Generar
-        mc_2016_congrats: Hora del Código de Minecraft - Felicitaciones
+        mc_2016_spawn: Hora del Código de Minecraft - Spawn
+        mc_2016_congrats: Hora del código de Minecraft - Enhorabuena
         applab_hoc_welcome: Hora del Código del Laboratorio de aplicaciones - Bienvenidos
         applab_hoc_setproperty: Hora del Código del Laboratorio de aplicaciones - setProperty
         applab_hoc_onevent: Hora del Código del Laboratorio de aplicaciones - onEvent
         applab_hoc_designmode: Hora del Código del Laboratorio de aplicaciones - Modo de diseño
         applab_hoc_share: Hora del Código del Laboratorio de aplicaciones - Compartir
         mc_2017_agent_intro: Hora del Código de Minecraft - El Agente
-        mc_2017_repeat: Hora del Código de Minecraft - Bucles repetir
+        mc_2017_repeat: Hora del Código de Minecraft - Bucles de repetición
         mc_2017_functions: Hora del Código de Minecraft - Funciones
-        mc_2017_congratulations: Hora del Código de Minecraft - Felicitaciones
+        mc_2017_congratulations: Hora del código de Minecraft - Enhorabuena
         mc_2017_puzzle_1: Hora del Código de Minecraft - El Agente
-        mc_2017_puzzle_3: Hora del Código de Minecraft - Bucles repetir
+        mc_2017_puzzle_3: Hora del Código de Minecraft - Bucles de repetición
         mc_2017_puzzle_8: Hora del Código de Minecraft - Funciones
         mc_2017_puzzle_12: Hora del Código de Minecraft - Juego Libre
         hint_videos_d_11_3_first: 'Videos sugeridos: D.11.3 Primero'

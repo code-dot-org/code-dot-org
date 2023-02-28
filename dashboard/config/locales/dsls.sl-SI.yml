@@ -4,14 +4,18 @@ sl-SI:
     dsls:
       2-3 Algorithms Multi 1:
         answers:
-        - text: Začni s kvadratom<br/>Postavi trikotnik nad kvadrat<br/>Postavi trikotnik
-            pod kvadrat
-        - text: Začni s kvadratom<br/>Postavi trikotnik desno od kvadrata<br/>Postavi
-            paralelogram pod kvadrat<br/>Postavi trikotnik desno od paralelograma
-        - text: Začni s kvadratom<br/>Postavi paralelogram nad kvadrat<br/>Postavi
-            trikotnik desno od paralelograma
-        - text: Začni s kvadratom<br/>Postavi trikotnik pod kvadrat<br/>Postavi paralelogram
-            desno od trikotnika
+        - text: "Začni s kvadratom. \nPostavi trikotnik nad kvadrat. \nPostavi trikotnik
+            pod kvadrat."
+        - text: "Začni s kvadratom. \nPostavi trikotnik desno od kvadrata. \nPostavi
+            paralelogram pod kvadrat. \nPostavi trikotnik desno od paralelograma."
+        - text: |-
+            Začni s kvadratom.
+            Postavi paralelogram nad kvadrat.
+            Postavi trikotnik desno od paralelograma.
+        - text: |
+            Začni s kvadratom.
+            Postavi trikotnik pod kvadrat.
+            Postavi paralelogram desno od trikotnika.
         questions:
         - text: Izberi algoritem za dano sliko.
         title: Izbirno vprašanje
@@ -21,8 +25,10 @@ sl-SI:
         - {}
         - {}
         - {}
-        content1: Začni s trikotnikom<br/>Postavi kvadrat pod trikotnik<br/>Postavi
-          še en trikotnik pod kvadrat
+        content1: |-
+          Začni s trikotnikom.
+          Postavi kvadrat pod trikotnik.
+          Postavi še en trikotnik pod kvadrat.
         questions:
         - text: Katera slika <em>ne</em> ustreza algoritmu?
         title: Izbirno vprašanje

@@ -1648,9 +1648,13 @@
           "type": "Diapositive"
         },
         "solving_problems/csd/2022": {
+          "name": "Risolvere problemi",
+          "url": "https://docs.google.com/document/d/11Gy--8a7-BPT0uMa3ME23nI1FxPKrodORRbb3oc7vsY/",
           "type": "Soluzione"
         },
         "solving_problems_1/csd/2022": {
+          "name": "Risolvere problemi",
+          "url": "https://docs.google.com/document/d/1HUE7g2tqk-_3wiOU4cEFfE4CoOQ5kMzZQc-BTXdco5E/edit",
           "type": "Guida alle attività"
         },
         "exploring_problem_solving/csd/2022": {
@@ -1658,27 +1662,37 @@
           "type": "Diapositive"
         },
         "what_is_a_computer/csd/2022": {
+          "name": "Cos'è un computer",
+          "url": "https://youtu.be/AG7VeCkT9qA",
           "type": "Video"
         },
         "what_is_a_computer_/csd/2022": {
           "name": "Cos'è un computer?",
+          "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing",
           "type": "Modello"
         },
         "what_is_a_computer_version_a_/csd/2022": {
+          "name": "Cos'è un computer (versione A)",
+          "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
           "type": "Guida alle attività"
         },
         "what_is_a_computer_version_b_/csd/2022": {
+          "name": "Cos'è un computer (versione B)",
+          "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
           "type": "Guida alle attività"
         },
         "what_is_a_computer_1/csd/2022": {
+          "name": "Cos'è un computer",
           "type": "Diapositive"
         },
         "input_and_output/csd/2022": {
           "name": "Ingressi e uscite",
+          "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing",
           "type": "Modello"
         },
         "input_and_output_1/csd/2022": {
           "name": "Ingressi e uscite",
+          "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
           "type": "Guida alle attività"
         },
         "input_and_output_2/csd/2022": {
@@ -1686,12 +1700,17 @@
           "type": "Diapositive"
         },
         "apps_with_processing/csd/2022": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
           "type": "Modello"
         },
         "apps_with_processing_1/csd/2022": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
           "type": "Guida alle attività"
         },
         "apps_with_processing_2/csd/2022": {
+          "name": "App con elaborazione",
           "type": "Diapositive"
         },
         "apps_with_storage/csd/2022": {
@@ -1762,6 +1781,7 @@
           "type": "Modello"
         },
         "solving_problems_2/csd/2022": {
+          "name": "Risolvere problemi",
           "type": "Guida alle attività"
         },
         "tangrams/csd/2022": {
@@ -1774,6 +1794,7 @@
           "type": "Modello"
         },
         "solving_problems_3/csd/2022": {
+          "name": "Risolvere problemi",
           "type": "Guida alle attività"
         },
         "exploring_problem_solving_games_/csd/2022": {
@@ -5999,36 +6020,53 @@
           "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4aC1DVGdWU19hZkE/view?usp=sharing&resourcekey=0-1I3oX1C8Q_P1YAV15vJfOw"
         },
         "solving-problems-exemplar-2020/csd/2021": {
+          "name": "Risolvere problemi",
+          "url": "https://docs.google.com/document/d/11Gy--8a7-BPT0uMa3ME23nI1FxPKrodORRbb3oc7vsY/",
           "type": "Soluzione"
         },
         "solving-problems-activity-guide-2020/csd/2021": {
+          "name": "Risolvere problemi",
+          "url": "https://docs.google.com/document/d/1HUE7g2tqk-_3wiOU4cEFfE4CoOQ5kMzZQc-BTXdco5E/edit",
           "type": "Guida alle attività"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Cos'è un computer?",
+          "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing",
           "type": "Modello"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
+          "name": "Cos'è un computer",
+          "url": "https://youtu.be/AG7VeCkT9qA",
           "type": "Video"
         },
         "what-is-a-computer-version-b/csd/2021": {
+          "name": "Cos'è un computer (versione B)",
+          "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
           "type": "Guida alle attività"
         },
         "what-is-a-computer-version-a/csd/2021": {
+          "name": "Cos'è un computer (versione A)",
+          "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
           "type": "Guida alle attività"
         },
         "input-and-output-2020/csd/2021": {
           "name": "Ingressi e uscite",
+          "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing",
           "type": "Modello"
         },
         "input-and-output-1/csd/2021": {
           "name": "Ingressi e uscite",
+          "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
           "type": "Guida alle attività"
         },
         "processing-2020/csd/2021": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
           "type": "Modello"
         },
         "apps-with-processing/csd/2021": {
+          "name": "App con elaborazione",
+          "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
           "type": "Guida alle attività"
         },
         "what-do-computers-do/csd/2021": {
@@ -6083,12 +6121,14 @@
           "type": "Risorse"
         },
         "solving-problems-activity-guide-animal-2020/csd/2021": {
+          "name": "Risolvere problemi",
           "type": "Guida alle attività"
         },
         "exploring-problem-solving-games-theme-2020/csd/2021": {
           "type": "Modello"
         },
         "solving-problems-activity-guide-game-2020/csd/2021": {
+          "name": "Risolvere problemi",
           "type": "Guida alle attività"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {

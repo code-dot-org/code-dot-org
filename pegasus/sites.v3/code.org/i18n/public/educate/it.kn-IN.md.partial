@@ -101,7 +101,7 @@ Code.org ಮತ್ತು ನಮ್ಮ [ಆನ್‌ಲೈನ್ ಕಲಿಕೆ 
 
 ನೀವು Code.org ನ ಆನ್‌ಲೈನ್ ಕೋರ್ಸ್‌ಗಳನ್ನು ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು, ನೀವು ಹೋಗಲು ಉತ್ತಮವಾಗಿರುವಿರಿ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಕೆಳಗಿನ ವೀಡಿಯೊದ ಪ್ಲೇಬ್ಯಾಕ್ ಅನ್ನು ಪರೀಕ್ಷಿಸಿ.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen></iframe>
+<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
 ಪಠ್ಯಕ್ರಮದ ಉದ್ದಕ್ಕೂ ಬಳಸುವ ಪ್ಲೇಯರ್ ಇದು. ಇದು YouTube ಮೂಲಕ ವೀಡಿಯೊವನ್ನು ತೋರಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತದೆ ಮತ್ತು YouTube ಅನ್ನು ನಿರ್ಬಂಧಿಸಿದರೆ, ಬದಲಿಗೆ ನಮ್ಮ "ಫಾಲ್‌ಬ್ಯಾಕ್" ಪ್ಲೇಯರ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು Code.org ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊವನ್ನು ತೋರಿಸುತ್ತದೆ.
 

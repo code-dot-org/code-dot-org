@@ -78,6 +78,7 @@ az-AZ:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         title: Cütləşdirmə
+        content1: Şəffaflığı proqrama görə uyğunlaşdırın.
       2-3 Graph Paper Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
@@ -291,7 +292,7 @@ az-AZ:
         title: Çoxlu seçim
       4-5 Crowdsourcing Multi 2:
         answers:
-        - {}
+        - text: Otaqlarınn təmizlənməsi
         - text: Şirniyyatını yemək
         - text: Saçını daramaq
         - text: Üzünü yumaq
@@ -1889,7 +1890,8 @@ az-AZ:
         - text: 'Heç nə baş verməyəcək. '
           feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
-        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+        - text: Fermer heç vaxt çirki təmizləməyi dayandırmayacaq.
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1900,7 +1902,8 @@ az-AZ:
         - text: 'Heç nə baş verməyəcək. '
           feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
-        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+        - text: Fermer heç vaxt çirki təmizləməyi dayandırmayacaq.
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1911,7 +1914,8 @@ az-AZ:
         - text: 'Heç nə baş verməyəcək. '
           feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
-        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+        - text: Fermer heç vaxt çirki təmizləməyi dayandırmayacaq.
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1922,7 +1926,8 @@ az-AZ:
         - text: 'Heç nə baş verməyəcək. '
           feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
-        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+        - text: Fermer heç vaxt çirki təmizləməyi dayandırmayacaq.
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -2285,7 +2290,7 @@ az-AZ:
         - {}
         - feedback: Düzgün!
         - {}
-        - {}
+        - text: 'Bilmirəm. '
         questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -2293,7 +2298,7 @@ az-AZ:
         - {}
         - feedback: Düzgün!
         - {}
-        - {}
+        - text: 'Bilmirəm. '
         questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019_2020:
@@ -2301,7 +2306,7 @@ az-AZ:
         - {}
         - feedback: Düzgün!
         - {}
-        - {}
+        - text: 'Bilmirəm. '
         questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -2625,6 +2630,7 @@ az-AZ:
           feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
         - text: on iki
+          correct: true
           feedback: Düzgün!
         - text: on beş
           feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
@@ -2743,7 +2749,7 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: Heçnə çap olunmayacaq.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2021:
@@ -3851,7 +3857,8 @@ az-AZ:
         - text: 'Heç nə baş verməyəcək. '
           feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
-        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+        - text: Fermer heç vaxt çirki təmizləməyi dayandırmayacaq.
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
         - correct: true
           feedback: Düzgün!
@@ -5795,17 +5802,22 @@ az-AZ:
         - text: 7 bit
         - text: 12 bit
         questions:
-        - {}
+        - text: |-
+            Standart QWERTY klaviaturasında simvolları ekranda yerləşdirməyə imkan verən 47 düymə var. Bu düymələrin hər biri eyni zamanda "Shift" düyməsini basıb ikinci bir simvol göstərə bilər (Bu məsələdə bütün digər düymələrin nəzərə alınmadığını düşünək).
+
+            Bu klaviaturada yaza biləcəyiniz hər şeyi kodlaşdırmaq üçün neçə bit lazımdır?
+        title: 'Qiymətləndirmə: Mətnin kodlanması'
       Submittable Multi:
         answers:
         - text: mavi
         - text: yaşıl
-        - {}
+        - text: firuzəyi
         - text: sarı
         - {}
         - text: qırmızı
         questions:
         - text: Sənin sevimli rəngin hansıdır?
+        title: Birdən çox göndərmə variantları daxil edilə bilər
       Test Contained Multi:
         answers:
         - text: '0'
@@ -5850,9 +5862,9 @@ az-AZ:
         title: Çoxlu seçim
       test questionless single multi:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "Funksiya parametrlərinə zəng edin  \n ! [] (https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)"
+        - text: "Funksiya parametrlərinə zəng edin  \n ! [] (https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)"
+        - text: "Ekranın ətrfında tısbağanı hərəkət etdirin  \n ! [] (https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)"
         - {}
         - {}
         - text: Yuxarıdakılardan heç biri
@@ -6048,7 +6060,7 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: A və C
         - {}
         questions:
         - {}
@@ -6057,7 +6069,7 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: A və C
         - {}
         questions:
         - {}
@@ -6066,7 +6078,7 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: A və C
         - {}
         questions:
         - {}
@@ -6099,21 +6111,21 @@ az-AZ:
         - {}
       CSD U2 Test Debug:
         answers:
-        - {}
+        - text: Ancaq 1
         - {}
         - {}
         - {}
         - {}
       CSD U2 Test Debug_pilot_2021:
         answers:
-        - {}
+        - text: Ancaq 1
         - {}
         - {}
         - {}
         - {}
       CSD U2 Test Debug_pilot_2022:
         answers:
-        - {}
+        - text: Ancaq 1
         - {}
         - {}
         - {}
@@ -6606,8 +6618,9 @@ az-AZ:
         - {}
       CSD U5 test clean multi:
         answers:
-        - {}
-        - {}
+        - text: Xeyr, məlumatları bir qrafikə qoymadan əvvəl dəyişdirmək vicdansızlıqdır.
+        - text: Bəli, onlar səhv yazıları düzəltməlidirlər və adları standartlaşdırın
+            ki, diaqram daha dəqiq olsun.
         - {}
         - {}
         - {}
@@ -6615,8 +6628,9 @@ az-AZ:
         - {}
       CSD U5 test clean multi_2021:
         answers:
-        - {}
-        - {}
+        - text: Xeyr, məlumatları bir qrafikə qoymadan əvvəl dəyişdirmək vicdansızlıqdır.
+        - text: Bəli, onlar səhv yazıları düzəltməlidirlər və adları standartlaşdırın
+            ki, diaqram daha dəqiq olsun.
         - {}
         - {}
         - {}
@@ -6624,8 +6638,9 @@ az-AZ:
         - {}
       CSD U5 test clean multi_2022:
         answers:
-        - {}
-        - {}
+        - text: Xeyr, məlumatları bir qrafikə qoymadan əvvəl dəyişdirmək vicdansızlıqdır.
+        - text: Bəli, onlar səhv yazıları düzəltməlidirlər və adları standartlaşdırın
+            ki, diaqram daha dəqiq olsun.
         - {}
         - {}
         - {}
@@ -7267,7 +7282,7 @@ az-AZ:
         - {}
       asked-to-problem-solve:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7306,7 +7321,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Əminəm ki, kompüter elmlərini öyrənmək bacarığım var.
       confident-ability-to-learn_2022:
         answers:
         - {}
@@ -7317,19 +7332,21 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Əminəm ki, kompüter elmlərini öyrənmək bacarığım var.
       counselor_encourage:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Məktəbdə məsləhətçi və ya məsləhətçi sizi bu dərsi keçməyə təşviq
+            etdi?
       counselor_encourage_2022:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Məktəbdə məsləhətçi və ya məsləhətçi sizi bu dərsi keçməyə təşviq
+            etdi?
       csd-post-survey-2017-q11_2018:
         answers:
         - {}
@@ -7669,91 +7686,91 @@ az-AZ:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Süni İntellekt və Maşın Öyrənməsini araşdırın
       csd-post-survey-2018-topic-cryptocurrency:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Kriptovalyuta
       csd-post-survey-2018-topic-cybersecurity:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
         - text: Kiber  Təhlükəsizlik
       csd-post-survey-2018-topic-databases:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Verilənlər bazası
       csd-post-survey-2018-topic-datascience:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Məlumat Elmi
       csd-post-survey-2018-topic-gamedev:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Oyun inkişafı
       csd-post-survey-2018-topic-hardware:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Avadanlıq
       csd-post-survey-2018-topic-internet:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Şəbəkə və İnternet
       csd-post-survey-2018-topic-mobile:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Mobil Tətbiq Dizaynı
       csd-post-survey-2018-topic-parallel:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Paralel və Paylanmış Hesablama
       csd-post-survey-2018-topic-programming:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Kompüter Proqramlaşdırması
       csd-post-survey-2018-topic-robotics:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
         - text: Robotlar
       csd-post-survey-2018-topic-web:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Bunun nə olduğuna əmin deyiləm
         questions:
         - {}
       csd-post-survey-2019-I like cs:
@@ -7813,7 +7830,7 @@ az-AZ:
         - {}
       csd-post-survey-q26:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7822,7 +7839,7 @@ az-AZ:
         - {}
       csd-post-survey-q26_2018:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7831,7 +7848,7 @@ az-AZ:
         - {}
       csd-post-survey-q27:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7840,7 +7857,7 @@ az-AZ:
         - {}
       csd-post-survey-q27_2018:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7849,7 +7866,7 @@ az-AZ:
         - {}
       csd-post-survey-q28:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7858,7 +7875,7 @@ az-AZ:
         - {}
       csd-post-survey-q28_2018:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7867,7 +7884,7 @@ az-AZ:
         - {}
       csd-post-survey-q29:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7876,7 +7893,7 @@ az-AZ:
         - {}
       csd-post-survey-q29_2018:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7885,7 +7902,7 @@ az-AZ:
         - {}
       csd-post-survey-q30:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7894,7 +7911,7 @@ az-AZ:
         - {}
       csd-post-survey-q30_2018:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7903,7 +7920,7 @@ az-AZ:
         - {}
       csd-post-survey-q31:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7912,7 +7929,7 @@ az-AZ:
         - {}
       csd-post-survey-q31_2018:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7921,7 +7938,7 @@ az-AZ:
         - {}
       csd-post-survey-q32:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -7930,7 +7947,7 @@ az-AZ:
         - {}
       csd-post-survey-q32_2018:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -11943,51 +11960,55 @@ az-AZ:
         - {}
       ever-learned-cs:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Bəli, dərs aldım
+        - text: Bəli, bəzi fəaliyyətlər, lakin tam sinif deyil
+        - text: Əmin deyiləm
+        - text: Qətiyyən yox
         questions:
-        - {}
+        - text: Əvvəllər heç <em>məktəbdə</em> kompüter elmlərini öyrənmisiniz?
       ever-learned-cs-outside-school:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Bəli, məktəbdən sonra proqram
+        - text: Bəli, müstəqil onlayn fəaliyyətlər
+        - text: Bəli, düşərgə və ya yay proqramı
+        - text: Xeyr, mən heç vaxt məktəbdən kənar kompüter elmləri ilə məşğul olmamışam
         questions:
-        - {}
+        - text: Əvvəllər heç <em>məktəbdən kənar</em> hər hansı kompüter elmini öyrənmisiniz?
+            (əgər belədirsə, ən son təcrübənizi seçin)
       ever-learned-cs-outside-school_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Bəli, məktəbdən sonra proqram
+        - text: Bəli, müstəqil onlayn fəaliyyətlər
+        - text: Bəli, düşərgə və ya yay proqramı
+        - text: Xeyr, mən heç vaxt məktəbdən kənar kompüter elmləri ilə məşğul olmamışam
         questions:
-        - {}
+        - text: Əvvəllər heç <em>məktəbdən kənar</em> hər hansı kompüter elmini öyrənmisiniz?
+            (əgər belədirsə, ən son təcrübənizi seçin)
       ever-learned-cs_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Bəli, dərs aldım
+        - text: Bəli, bəzi fəaliyyətlər, lakin tam sinif deyil
+        - text: Əmin deyiləm
+        - text: Qətiyyən yox
         questions:
-        - {}
+        - text: Əvvəllər heç <em>məktəbdə</em> kompüter elmlərini öyrənmisiniz?
       family_encourage:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Valideyn, bacı və ya əmisi oğlu kimi bir ailə üzvü sizi bu dərsi keçməyə
+            təşviq etdi?
       family_encourage_2022:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Valideyn, bacı və ya əmisi oğlu kimi bir ailə üzvü sizi bu dərsi keçməyə
+            təşviq etdi?
       how-often-consider-alternative-approaches-2019:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -11996,7 +12017,7 @@ az-AZ:
         - {}
       how-often-explain-why-disagree-2019:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12005,7 +12026,7 @@ az-AZ:
         - {}
       how-often-failure-prob-solve-prcess-2019:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12014,7 +12035,7 @@ az-AZ:
         - {}
       how-often-journal-2019:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12023,7 +12044,7 @@ az-AZ:
         - {}
       how-often-pair-programming-2019:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12032,7 +12053,7 @@ az-AZ:
         - {}
       how-often-peer-feedback-2019:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12041,7 +12062,7 @@ az-AZ:
         - {}
       how-often-share-ideas-2019:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12050,7 +12071,7 @@ az-AZ:
         - {}
       how-often-tried-knowing-would-fail-2019:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12059,7 +12080,7 @@ az-AZ:
         - {}
       how-often-tried-new-unsure-how-2019:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12079,7 +12100,7 @@ az-AZ:
         - {}
       interest-connected-to-life:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12096,7 +12117,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
       interested-in-learning-cs_2022:
         answers:
         - {}
@@ -12107,10 +12128,10 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
       made-choices-about-assignments:
         answers:
-        - {}
+        - text: Heç vaxt
         - {}
         - {}
         - {}
@@ -12157,9 +12178,9 @@ az-AZ:
       outside-school-cs:
         answers:
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Məktəbdən sonra proqramı
+        - text: Müstəqil onlayn fəaliyyətlər
+        - text: Düşərgə və ya yay proqramı
         questions:
         - {}
       post-assessment survey q31-a-2017b:
@@ -12519,13 +12540,13 @@ az-AZ:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Məktəbdə başqa biri sizi bu sinfə getməyə təşviq etdi?
       someone_else_encourage_2022:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Məktəbdə başqa biri sizi bu sinfə getməyə təşviq etdi?
       taken-other-code-org:
         answers:
         - text: Bəli
@@ -12536,23 +12557,23 @@ az-AZ:
       taken-other-cs:
         answers:
         - text: Xeyr
-        - {}
-        - {}
-        - {}
+        - text: Bəli, bir az başqa sinifdə
+        - text: Bəli, bir semestrlik dərs
+        - text: Bəli, bir illik sinif
         questions:
-        - {}
+        - text: Məktəbdə kompüter elmləri dərsləri götürübsən?
       teacher_encourage:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Məktəbdə müəllim sizi bu dərsi keçməyə təşviq etdi?
       teacher_encourage_2022:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Məktəbdə müəllim sizi bu dərsi keçməyə təşviq etdi?
       test anonymous student survey educational:
         answers:
         - text: Bəli
@@ -12624,7 +12645,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu sinifdə başqaları tərəfindən daha az bacarıqlı görünəcəyimdən narahatam.
       worried-seen-incapable_2022:
         answers:
         - {}
@@ -12635,7 +12656,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu sinifdə başqaları tərəfindən daha az bacarıqlı görünəcəyimdən narahatam.
       ConditionalsWithCards-Unplugged2022:
         markdown: |-
           # Kartlarla  Şərtlər
@@ -12856,7 +12877,8 @@ az-AZ:
         - text: 'Heç nə baş verməyəcək. '
           feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
-        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+        - text: Fermer heç vaxt çirki təmizləməyi dayandırmayacaq.
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
@@ -12969,7 +12991,7 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: Heçnə çap olunmayacaq.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
@@ -13030,7 +13052,7 @@ az-AZ:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: Yanlış. Mətn ekrana çap olunur.
         - text: Kompüter başqa sual soruşacaq.
         questions:
         - {}
@@ -13291,6 +13313,7 @@ az-AZ:
         description: Siz kolleksiyası oyun yaratmaq olacaq. Başlamadan əvvəl aşağıda
           göstərilən layihələrin nümunələri ilə tanış olun. Öz proqram planlaşdırma
           başlamaq üçün hazır olduğunuzda "Finish" düyməsinə basın.
+        display_name: Tədqiqat - Nümunə Proqramlar
       courseF_groups_freeplay_2022_pilot_-2022-2:
         description: İndi istədiyiniz hər şeyi etmək üçün öyrəndiklərinizi istifadə
           edə bilərsiniz! Sprites bir çox interaktiv proqram yaradın!
@@ -13298,3 +13321,86 @@ az-AZ:
       pre-assessment survey heading1:
         markdown: Birincisi, ümumi olaraq məktəb işinizlə bağlı sizə bəzi suallarımız
           var.
+      HappyMaps-Unplugged:
+        markdown: |-
+          # Xoş Xəritələr
+
+          Bir xarakteri labirentdən keçmək üçün bir alqoritm yaradın.
+      HappyMaps-Unplugged2022:
+        markdown: |-
+          # Xoş Xəritələr
+
+          Bir xarakteri labirentdən keçmək üçün bir alqoritm yaradın.
+      HappyMaps-Unplugged_2020:
+        markdown: |-
+          # Xoş Xəritələr
+
+          Bir xarakteri labirentdən keçmək üçün bir alqoritm yaradın.
+      courseF_beeVar_practice:
+        display_name: Arı Təcrübə
+      courseF_variables_projects:
+        display_name: Bir layihə seçin
+      courseF_variables_projects2022_2022_pilot_-2022-2:
+        display_name: Bir layihə seçin
+      courseF_variables_samples:
+        display_name: Tədqiqat - Nümunə Proqramlar
+      courseF_variables_samples2022_2022_pilot_-2022-2:
+        display_name: Tədqiqat - Nümunə Proqramlar
+      csp-pre-survey-2017 preamble 1_2021:
+        markdown: |-
+          ### **Bu sorğu anonimdir**
+
+          * Bu qısa sorğunun tamamlanması **10 dəqiqə və ya daha az** çəkməlidir.
+          * Code.org məxfiliyinizə çox ciddi yanaşır.
+          * Buradakı cavablarınız **anonim** saxlanılacaq.
+
+          Müəlliminiz bütün sinif üçün ümumi cavabları görəcək, lakin sizin fərdi cavablarınızı müəyyən edə bilməyəcək/ nBiz bunu edirik, çünki sizdən **mümkün qədər açıq və dürüst olmanızı istəyirik** . Kursdakı təcrübənizə əhəmiyyət veririk və dediklərinizə əsasən təkmilləşdirmələr edirik.
+
+          ***
+          ### Ümumilikdə məktəb###
+        teacher_markdown: |-
+          Ən yaxşı təcrübə tələbələrə hər hansı sinif fəaliyyəti ilə məşğul olmamışdan **əvvəl** bu sorğunu doldurmaq imkanı verməkdir. Əksər müəllimlər bunu ilkin sinif texnologiyasının qurulması gününün bir hissəsi kimi edirlər.
+
+          Siz tələbələriniz üçün sorğunun anonim nəticələrini görə biləcəksiniz.
+
+          Bu sorğu niyə buradadır?
+          * Bu kursun əsas məqsədi kompüter elmində iştirakın genişləndirilməsidir.
+          * Tələbələrin kompüter elmlərinə münasibət və inanclarının kursdan əvvəl və sonrakı sorğular vasitəsilə necə dəyişə biləcəyini ölçməyə çalışırıq.
+          * Onu tamamlamaq həm də müəllim və tələbə təcrübəsini təkmilləşdirmək üçün kurrikulumda edə biləcəyimiz mühüm təkmilləşdirmələri anlamağa kömək edir.
+      csp-pre-survey-2017 preamble 1_2022:
+        markdown: |-
+          ### **Bu sorğu anonimdir**
+
+          * Bu qısa sorğunun tamamlanması **10 dəqiqə və ya daha az** çəkməlidir.
+          * Code.org məxfiliyinizə çox ciddi yanaşır.
+          * Buradakı cavablarınız **anonim** saxlanılacaq.
+
+          Müəlliminiz bütün sinif üçün ümumi cavabları görəcək, lakin sizin fərdi cavablarınızı müəyyən edə bilməyəcək/ nBiz bunu edirik, çünki sizdən **mümkün qədər açıq və dürüst olmanızı istəyirik** . Kursdakı təcrübənizə əhəmiyyət veririk və dediklərinizə əsasən təkmilləşdirmələr edirik.
+
+          ***
+          ### Ümumilikdə məktəb###
+        teacher_markdown: |-
+          Ən yaxşı təcrübə tələbələrə hər hansı sinif fəaliyyəti ilə məşğul olmamışdan **əvvəl** bu sorğunu doldurmaq imkanı verməkdir. Əksər müəllimlər bunu ilkin sinif texnologiyasının qurulması gününün bir hissəsi kimi edirlər.
+
+          Siz tələbələriniz üçün sorğunun anonim nəticələrini görə biləcəksiniz.
+
+          Bu sorğu niyə buradadır?
+          * Bu kursun əsas məqsədi kompüter elmində iştirakın genişləndirilməsidir.
+          * Tələbələrin kompüter elmlərinə münasibət və inanclarının kursdan əvvəl və sonrakı sorğular vasitəsilə necə dəyişə biləcəyini ölçməyə çalışırıq.
+          * Onu tamamlamaq həm də müəllim və tələbə təcrübəsini təkmilləşdirmək üçün kurrikulumda edə biləcəyimiz mühüm təkmilləşdirmələri anlamağa kömək edir.
+      csp-pre-survey-2017 preamble 2 cs in general_2021:
+        markdown: "## Ümumilikdə Kompüter Elmləri"
+      csp-pre-survey-2017 preamble 2 cs in general_2022:
+        markdown: "## Ümumilikdə Kompüter Elmləri"
+      csp-pre-survey-2017 preamble 3 this class_2021:
+        markdown: "### Kompüter Elmində gələcəyiniz"
+      csp-pre-survey-2017 preamble 3 this class_2022:
+        markdown: "### Kompüter Elmində gələcəyiniz"
+      csp-pre-survey-2017 preamble 4 the future_2021:
+        markdown: "### Kompüter Elmində gələcəyiniz"
+      csp-pre-survey-2017 preamble 4 the future_2022:
+        markdown: "### Kompüter Elmində gələcəyiniz"
+      csp-pre-survey-2017 preamble 5 demographics_2021:
+        markdown: "### Kompüter elmində keçmişiniz"
+      csp-pre-survey-2017 preamble 5 demographics_2022:
+        markdown: "### Kompüter elmində keçmişiniz"

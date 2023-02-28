@@ -639,6 +639,9 @@ bg:
         csd_concept_computer: 'Как работят компютрите: Какво прави един компютър,
           компютър?'
         csd_concept_binary_data: 'Как компютрите работят: Двоичен код & данни'
+        csd_concept_circuits_logic: 'Как Компютрите Работят: Вериги & Логика'
+        csd_concept_memory_cpu_input_output: 'Как Компютрите Работят: Памет, CPU,
+          Вход & Изход'
         csd_concept_hardware_software: 'Как Компютрите Работят: Хардуер и Софтуер'
         csd_concept_search: Как работи търсенето
         csd_external_netflix_data: Как Netflix Показва Предложения за Предавания и
@@ -766,6 +769,8 @@ bg:
         mc_2018_conditionals: 'Minecraft: Подводното Пътешествие Условия'
         mc_2018_closing: 'Minecraft: Подводното Пътешествие Поздравления'
         hoc_dance_warmup: Танцово Парти - Загрявка
+        hoc_dance_events: Танцово Парти - Събития
+        hoc_dance_properties: Танцово Парти - Характеристики
         teaching_csf_how_it_works: 'Преподаване на CS основи: Как Курсът Работи'
         what_is_cs: Какво са компютърните науки?
         repeat_block: Използване на Блокчето Повтаряй
@@ -788,6 +793,8 @@ bg:
         oceans_machine_learning: Машинно Обучение
         oceans_training_data: Данни за Обучение
         hoc_dance_warmup_2019: Танцово Парти - Загрявка
+        hoc_dance_events_2019: Танцово Парти - Събития
+        hoc_dance_properties_2019: Танцово Парти - Характеристики
         csd_what_computers_do: Какво Правят Компютрите?
         csf_my_online_neighborhood_2020: Моят Онлайн Квартал
         csf_private_and_personal_information: Лична Информация
@@ -807,6 +814,7 @@ bg:
         csd_ml_intro_ai_lab_july2021: Въведение в AI Lab
         csd_ml_training_testing_ai_lan: Обучение и Тестване в AI Lab
         Gettting_Started_ClassSection: Създаване на Клас Секция
+        Gettting_Started_StudentExperience: Ученическото Преживяване
         Getting_Started_BasicFeatures: Базови Функции на Code.org
         PL_CSD_TeacherTips_Advise: Съвети за Учители - Съвет към Нови Учители
         PL_CSD_TeacherTips_IntroToCSD: Съвети за Учители - Въведение в Открития по
@@ -825,9 +833,17 @@ bg:
         outbreak_scientist: 'Симулатор на Епидемия: Мисли Като Учен'
         outbreak_outro: 'Симулатор на Епидемия: Свободна Игра'
         PL_overview_CSP: Какви са Принципите на Компютърните Науки?
+        CSA-PL-for-loops: For цикли в Java
+        CSA-PL-variables: Създаване на Променливи в Java
         PL_CS_Journeys_Overview: CS Пътешествия
+        CSA-PL-first-program: Писане на Програма в Java
+        csc-poem-art-outro: Outro Видео
         csp_applab_parameters: Функции с параметри
+        CSA-PL-intro-to-arrays: Едномерни (1D) Масиви
+        CSA-PL-Printing-in-Java: Изписване в Java
         CS_Changing_Everything: Компютърните Науки Променят Всичко
+        csa-day-in-pm-pl: Какво прави мениджърът на проекта?
+        csa-pl-creating-objects: Създаване на Обекти
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

@@ -7,10 +7,182 @@
           "description": "Veb əsaslı HTML/CSS redaktoru.",
           "categories": {
             "html_tags": {
-              "name": "HTML teqlər"
+              "name": "HTML teqlər",
+              "expressions": {
+                "A": {
+                  "examples": {
+                    "Links as References": {
+                      "name": "Referanslar kimi linklər"
+                    },
+                    "External Website": {
+                      "name": "Xarici Veb səhifə",
+                      "description": "Xarici veb səhifəyə keçid üçün `<a>`-dan istifadə edin."
+                    },
+                    "Page on the Same Website": {
+                      "name": "Eyni Saytda Səhifə",
+                      "description": "Eyni veb-saytda fərdi HTML sənədlərini əlaqələndirmək üçün `<a>`-dan istifadə edin"
+                    }
+                  }
+                },
+                "img": {
+                  "examples": {
+                    "Using Images With Text": {
+                      "name": "Şəkillərin mətnlə istifadəsi",
+                      "description": "Təsvir etdiyinizi vizuallaşdırmaq üçün şəkillərdən istifadə edə bilərsiniz. Bu nümunədə, çəyirtkə tərəfindən aşkar edilmiş ilk kompüter səhvini göstərmək üçün bir şəkil istifadə olunur"
+                    },
+                    " Local Image": {
+                      "name": " Yerli Şəkil",
+                      "description": "Şəkili veb səhifəyə yerləşdirmək üçün `<img>`-dən istifadə edin"
+                    },
+                    "Image on Another Website": {
+                      "name": "Başqa bir veb saytda şəkil",
+                      "description": "Şəklin mənbəyi URL olduqda `<img>`-dən istifadə edin"
+                    }
+                  }
+                },
+                "link": {
+                  "content": "# Link\n\nBu keçid teqi `<link>` adətən xarici üslub cədvəlləri üçün CSS-ni HTML ilə əlaqələndirmək üçün istifadə olunur. Link etiketi HTML sənədi ilə xarici resurs arasında əlaqəni müəyyən etmək üçün istifadə olunur.",
+                  "examples": {
+                    "Linking to a Stylesheet": {
+                      "name": "Stil cədvəlinə keçid"
+                    }
+                  },
+                  "tips": "-   `<link>` keçid teqi `<head>` teqinin içərisinə daxil olur.\n-   `<link>` keçid teqi bütün veb səhifələrin görünüşünü idarə etmək üçün HTML sənədinizə üslub cədvəlini idxal etməyə imkan verir."
+                },
+                "li": {
+                  "examples": {
+                    "Ordered List": {
+                      "name": "Sifarişli Siyahı",
+                      "description": "Sıralanmış siyahıda `<li>`-dən istifadə"
+                    },
+                    "Unordered List": {
+                      "name": "Sifariş olunmamış siyahı",
+                      "description": "Sıralanmamış siyahıda `<li>`-dən istifadə"
+                    }
+                  }
+                },
+                "meta": {
+                  "examples": {
+                    "Web Page Description": {
+                      "name": "Veb səhifə təsviri"
+                    },
+                    "Revision Details": {
+                      "name": "Reviziya məlumatları"
+                    }
+                  }
+                },
+                "ol": {
+                  "examples": {
+                    "Ordered List": {
+                      "name": "Sifarişli Siyahı",
+                      "description": "Sıralı siyahı yaratmaq üçün `<ol>` -dan istifadə edin"
+                    },
+                    "Steps to Make Horchata": {
+                      "name": "Horchata etmək üçün addımlar"
+                    }
+                  }
+                },
+                "P": {
+                  "content": "# Paraqraf\n\n`<p>` teqi mətnin paraqrafını təyin etmək üçün istifadə olunur.",
+                  "examples": {
+                    "Multiple Short Paragraphs": {
+                      "name": "Birdən çox qısa paraqraf",
+                      "description": "Paraqrafı müəyyən etmək üçün `<p>` istifadə edin"
+                    },
+                    "Single Longer Paragraph": {
+                      "name": "Tək daha uzun paraqraf",
+                      "description": "Çox sətirdən ibarət paraqrafı təyin etmək üçün `<p>`-dan istifadə edin."
+                    }
+                  },
+                  "short_description": "Paraqraf\n\\<p> teqi mətnin paraqrafını təyin etmək üçün istifadə olunur.",
+                  "tips": "-   Bir neçə abzas yazmaq üçün `<p>` teqindən istifadə edə bilərik.\n-   Çox sətirdən ibarət abzas yazmaq üçün `<p>` teqindən istifadə edə bilərik."
+                },
+                "ul": {
+                  "examples": {
+                    "Unordered List": {
+                      "name": "Sifariş olunmamış siyahı"
+                    }
+                  }
+                }
+              }
             },
             "css_properties": {
-              "name": "CSS Xüsusiyyətləri"
+              "name": "CSS Xüsusiyyətləri",
+              "expressions": {
+                "background-color": {
+                  "examples": {
+                    "Background Color in RGB": {
+                      "name": "RGB-də arxa plan rəngi",
+                      "description": "Arka plan rəngini RGB dəyəri ilə təyin etmək."
+                    },
+                    "Background Color in Hex": {
+                      "name": "Hex-də arxa plan rəngi",
+                      "description": "Arka plan rəngini HEX dəyəri ilə təyin etmək."
+                    }
+                  }
+                },
+                "border-color": {
+                  "examples": {
+                    "Red Borders": {
+                      "name": "Qırmızı sərhədlər"
+                    },
+                    "Different Border Colors": {
+                      "name": "Müxtəlif Sərhəd Rəngləri"
+                    }
+                  }
+                },
+                "border-style": {
+                  "examples": {
+                    "Different Border Styles": {
+                      "name": "Müxtəlif sərhəd üslubları"
+                    }
+                  }
+                },
+                "color": {
+                  "examples": {
+                    "Color in HEX": {
+                      "name": "HEX-də rəng"
+                    },
+                    "RGB Color": {
+                      "name": "RGB Rəng"
+                    },
+                    "Color Name": {
+                      "name": "Rəng Adı"
+                    }
+                  }
+                },
+                "height": {
+                  "examples": {
+                    " Height in pixels": {
+                      "name": "Pikseldəki hündürlük"
+                    }
+                  }
+                },
+                "pseudo-classes": {
+                  "examples": {
+                    "Unvisited Link": {
+                      "name": "Ziyarət edilməmiş Link"
+                    },
+                    "Visited Link": {
+                      "name": "Ziyarət edilən link"
+                    }
+                  }
+                },
+                "rgb-color": {
+                  "examples": {
+                    "RGB Color": {
+                      "name": "RGB Rəng"
+                    }
+                  }
+                },
+                "width": {
+                  "examples": {
+                    "Width in pixels": {
+                      "name": "Pikseldə en"
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -901,7 +1073,8 @@
                       "type": "nömrə"
                     },
                     "radius": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "Dairənin radiusu, pikseldə."
                     }
                   }
                 },
@@ -958,6 +1131,11 @@
                   }
                 },
                 "getGreen": {
+                  "examples": {
+                    "Example: Not So Green": {
+                      "name": "Misal: O qədər də Yaşıl deyil"
+                    }
+                  },
                   "palette_params": {
                     "imageData": {
                       "type": "əşya"
@@ -1045,6 +1223,11 @@
                   }
                 },
                 "setAlpha": {
+                  "examples": {
+                    "Example: single pixel": {
+                      "name": "Məsələn: tək piksel"
+                    }
+                  },
                   "palette_params": {
                     "imageData": {
                       "type": "əşya"
@@ -1195,6 +1378,11 @@
                   }
                 },
                 "getColumn": {
+                  "examples": {
+                    "US States": {
+                      "name": "ABŞ Ştatları"
+                    }
+                  },
                   "palette_params": {
                     "table": {
                       "type": "Simli"
@@ -1251,7 +1439,8 @@
                     "radius": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Tısbağanı hamar dairəvi qövsdə irəli və sola doğru hərəkət etdirir."
                 },
                 "arcRight": {
                   "palette_params": {
@@ -1342,6 +1531,11 @@
                   }
                 },
                 "turnLeft": {
+                  "examples": {
+                    "Example: House": {
+                      "name": "Nümunə: Ev"
+                    }
+                  },
                   "palette_params": {
                     "angle": {
                       "type": "nömrə"
@@ -1349,6 +1543,20 @@
                   }
                 },
                 "turnRight": {
+                  "examples": {
+                    "Example: Turn Right": {
+                      "name": "Nümunə: Sağa dönün"
+                    },
+                    "Example: Step": {
+                      "name": "Nümunə: Addım"
+                    },
+                    "Example: Letter W": {
+                      "name": "Məsələn: W hərfi"
+                    },
+                    "Example: Star": {
+                      "name": "Nümunə: Ulduz"
+                    }
+                  },
                   "palette_params": {
                     "angle": {
                       "type": "nömrə"
@@ -1367,7 +1575,19 @@
             "control": {
               "name": "Nəzarət",
               "expressions": {
+                "ifBlock": {
+                  "examples": {
+                    "Example: Overtime": {
+                      "name": "Misal: Əlavə iş vaxtı"
+                    }
+                  }
+                },
                 "clearInterval": {
+                  "examples": {
+                    "Countdown Timer": {
+                      "name": "Geri sayım taymeri"
+                    }
+                  },
                   "palette_params": {
                     "interval": {
                       "type": "nömrə"
@@ -1375,9 +1595,15 @@
                   }
                 },
                 "clearTimeout": {
+                  "examples": {
+                    "Example: Clear Immediately": {
+                      "name": "Nümunə: Dərhal təmizlə"
+                    }
+                  },
                   "palette_params": {
                     "timeout": {
-                      "type": "nömrə"
+                      "type": "nömrə",
+                      "description": "SetTimeout funksiyası ləğv etmək üçün qaytarılan nəticə."
                     }
                   }
                 },
@@ -1389,6 +1615,11 @@
                   }
                 },
                 "setTimeout": {
+                  "examples": {
+                    "Example: Set Timeout": {
+                      "name": "Nümunə: Vaxt aşımını təyin edin"
+                    }
+                  },
                   "palette_params": {
                     "ms": {
                       "type": "nömrə"
@@ -1396,6 +1627,15 @@
                   }
                 },
                 "stopTimedLoop": {
+                  "examples": {
+                    "Countdown": {
+                      "name": "Geri sayma",
+                      "description": "0-a çatdıqdan sonra vaxtlı geri saymanı dayandırın"
+                    },
+                    "Stop the Presses!": {
+                      "name": "Pressləri dayandırın!"
+                    }
+                  },
                   "palette_params": {
                     "loop": {
                       "type": "Nömrə"
@@ -1403,6 +1643,11 @@
                   }
                 },
                 "timedLoop": {
+                  "examples": {
+                    "Seconds Elapsed": {
+                      "name": "Saniyələr keçdi"
+                    }
+                  },
                   "palette_params": {
                     "ms": {
                       "type": "Nömrə"
@@ -1417,7 +1662,43 @@
             "math": {
               "name": "Riyaziyyat",
               "expressions": {
+                "divideOperator": {
+                  "examples": {
+                    "Example: Divide Two Numbers": {
+                      "name": "Nümunə: İki ədədi bölün"
+                    }
+                  }
+                },
+                "equalityOperator": {
+                  "examples": {
+                    "Example: Basic numeric equality check": {
+                      "name": "Nümunə: Əsas ədədi bərabərliyin yoxlanılması"
+                    }
+                  }
+                },
+                "greaterThanOrEqualOperator": {
+                  "examples": {
+                    "Example: basics": {
+                      "name": "Nümunə: əsaslar"
+                    },
+                    "Example: comparing \"apples\" to \"Apples\"": {
+                      "name": "Məsələn: “alma” ilə “Almalar”-ı müqayisə etmək"
+                    }
+                  }
+                },
+                "lessThanOrEqualOperator": {
+                  "examples": {
+                    "Example: Basic comparison": {
+                      "name": "Misal: Əsas müqayisə"
+                    }
+                  }
+                },
                 "mathAbs": {
+                  "examples": {
+                    "Example: Typical usage": {
+                      "name": "Nümunə: Tipik istifadə"
+                    }
+                  },
                   "palette_params": {
                     "x": {
                       "type": "nömrə"
@@ -1425,6 +1706,14 @@
                   }
                 },
                 "mathMax": {
+                  "examples": {
+                    "Example: Typical usage": {
+                      "name": "Nümunə: Tipik istifadə"
+                    },
+                    "Example: Many values": {
+                      "name": "Misal: çoxlu dəyərlər"
+                    }
+                  },
                   "palette_params": {
                     "n1, n2,..., nX": {
                       "type": "nömrə"
@@ -1432,6 +1721,14 @@
                   }
                 },
                 "mathMin": {
+                  "examples": {
+                    "Example: Typical usage": {
+                      "name": "Nümunə: Tipik istifadə"
+                    },
+                    "Example: Many values": {
+                      "name": "Misal: çoxlu dəyərlər"
+                    }
+                  },
                   "palette_params": {
                     "n1, n2,..., nX": {
                       "type": "nömrə"
@@ -1439,6 +1736,11 @@
                   }
                 },
                 "mathPow": {
+                  "examples": {
+                    "Area of a Circle": {
+                      "name": "Çevrənin Sahəsi"
+                    }
+                  },
                   "palette_params": {
                     "x": {
                       "type": "Nömrə"
@@ -1449,6 +1751,11 @@
                   }
                 },
                 "mathRound": {
+                  "examples": {
+                    "Example: Typical usage": {
+                      "name": "Nümunə: Tipik istifadə"
+                    }
+                  },
                   "palette_params": {
                     "x": {
                       "type": "nömrə"
@@ -1456,6 +1763,11 @@
                   }
                 },
                 "mathSqrt": {
+                  "examples": {
+                    "Pythagorean Theorem": {
+                      "name": "Pifaqor teoremi"
+                    }
+                  },
                   "palette_params": {
                     "x": {
                       "type": "Nömrə"
@@ -1463,6 +1775,11 @@
                   }
                 },
                 "moduloOperator": {
+                  "examples": {
+                    "Odd or Even?": {
+                      "name": "Tək və ya Cüt?"
+                    }
+                  },
                   "palette_params": {
                     "x": {
                       "type": "Nömrə"
@@ -1470,9 +1787,36 @@
                     "y": {
                       "type": "Nömrə"
                     }
+                  },
+                  "return_value": "x / y- nin bölünməsindəki qalıq "
+                },
+                "notOperator": {
+                  "examples": {
+                    "Example: Typical usage": {
+                      "name": "Nümunə: Tipik istifadə"
+                    }
+                  },
+                  "short_description": "Operator deyil\nKateqoriya: Riyaziyyat"
+                },
+                "subtractOperator": {
+                  "examples": {
+                    "Example: Subtract two numbers": {
+                      "name": "Misal: İki ədədi çıxarın"
+                    }
                   }
                 },
                 "randomNumber_min_max": {
+                  "examples": {
+                    "Example: Generate random number in range": {
+                      "name": "Misal: Aralıqda təsadüfi ədəd yaradın"
+                    },
+                    "Example: Random Walk": {
+                      "name": "Misal: Təsadüfi Yürüş"
+                    },
+                    "Example: Clouds": {
+                      "name": "Misal: Buludlar"
+                    }
+                  },
                   "palette_params": {
                     "min": {
                       "type": "nömrə",
@@ -1485,6 +1829,17 @@
                   }
                 },
                 "randomNumber": {
+                  "examples": {
+                    "Example: Generate random number in range": {
+                      "name": "Misal: Aralıqda təsadüfi ədəd yaradın"
+                    },
+                    "Example: Random Walk": {
+                      "name": "Misal: Təsadüfi Yürüş"
+                    },
+                    "Example: Clouds": {
+                      "name": "Misal: Buludlar"
+                    }
+                  },
                   "palette_params": {
                     "min": {
                       "type": "nömrə",
@@ -1501,14 +1856,116 @@
             "variables": {
               "name": "dəyişənlər",
               "expressions": {
+                "accessListItem": {
+                  "return_value": "Siyahıdakı element."
+                },
+                "assign_x": {
+                  "examples": {
+                    "Fibonacci": {
+                      "name": "Fibonaççi"
+                    },
+                    "Message Board": {
+                      "name": "Mesaj lövhəsi"
+                    }
+                  },
+                  "short_description": "Bir dəyişənə bir dəyər təyin edin"
+                },
+                "declareNoAssign_x": {
+                  "content": "Verilmiş adla dəyişəni elan edir.\n\nBir çox proqram məlumatları emal edir. Məlumatları emal edə bilmək üçün proqramlarınız yaddaşda olan məlumatları izləməlidir. Dəyişənlər sadəcə olaraq tətbiqlərinizdə saxlanılan məlumatlara istinad etmək üçün istifadə etdiyiniz adlardır. Siz dəyişənlərinizi istədiyiniz kimi adlandıra bilərsiniz, çünki ad sistem tərəfindən artıq istifadə olunmur. Dəyişən adlarında boşluq və ya xüsusi simvol ola bilməz. Praktikada dəyişənlərinizi saxladıqları dəyəri təsvir edəcək şəkildə adlandırmaq faydalıdır. Məsələn, yaratdığınız dəyişən şəxsin adını saxlamaq üçündürsə, həmin dəyişənə personName adını verə bilərsiniz.",
+                  "examples": {
+                    "Count Sixes": {
+                      "name": "Altıları say"
+                    },
+                    "Simple Average": {
+                      "name": "Sadə Orta"
+                    }
+                  }
+                },
                 "declareAssign_object": {
                   "examples": {
+                    "Profile Object": {
+                      "name": "Profil obyekti"
+                    },
                     "Choose Your Own Adventure": {
                       "name": "Öz macəranızı seçin"
+                    }
+                  },
+                  "short_description": "Obyekti elan et"
+                },
+                "declareAssign_str_hello_world": {
+                  "palette_params": {
+                    "\"___\"": {
+                      "type": "bir şey"
+                    }
+                  }
+                },
+                "declareAssign_list_123": {
+                  "palette_params": {
+                    "[1,2,3]": {
+                      "type": "tam ədədlər massivi"
+                    }
+                  }
+                },
+                "declareAssign_x_promptNum": {
+                  "examples": {
+                    "Example: Change Counter": {
+                      "name": "Misal: Sayğacı dəyişdirin"
+                    }
+                  }
+                },
+                "declareAssign_x_prompt": {
+                  "examples": {
+                    "Example: Change Counter": {
+                      "name": "Misal: Sayğacı dəyişdirin"
+                    }
+                  }
+                },
+                "join": {
+                  "examples": {
+                    "Example: Simple Join": {
+                      "name": "Məsələn: Sadə Qoşulma"
+                    },
+                    "Example: Multiline-String": {
+                      "name": "Misal: Çoxsətirli-String"
+                    }
+                  }
+                },
+                "listLength": {
+                  "examples": {
+                    "Example: Pick a Day": {
+                      "name": "Nümunə: Bir gün seçin"
+                    },
+                    "Example: Make Change": {
+                      "name": "Nümunə: Dəyişiklik edin"
+                    }
+                  }
+                },
+                "includes": {
+                  "examples": {
+                    "Example: See if a Sentence is a Question": {
+                      "name": "Nümunə: Cümlənin bir sual olub-olmağına baxın"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "examples": {
+                    "Example: Question Check": {
+                      "name": "Nümunə: Sualın yoxlanılması"
+                    },
+                    "Example: Parse Comma-Delimited Data": {
+                      "name": "Nümunə: vergüllə ayrılmış məlumatları təhlil edin"
                     }
                   }
                 },
                 "substring": {
+                  "examples": {
+                    "Example: First and Last": {
+                      "name": "Məsələn: Birinci və Axırıncı"
+                    },
+                    "Example: Palindrome": {
+                      "name": "Misal: Palindrom"
+                    }
+                  },
                   "palette_params": {
                     "start": {
                       "type": "nömrə"
@@ -1518,7 +1975,36 @@
                     }
                   }
                 },
+                "toLowerCase": {
+                  "examples": {
+                    "Example: Basic Conversion": {
+                      "name": "Misal: Əsas Konversiya"
+                    },
+                    "Example: Colors of Fruits": {
+                      "name": "Məsələn: Meyvələrin rəngləri"
+                    }
+                  }
+                },
+                "toUpperCase": {
+                  "examples": {
+                    "Example: Basic Conversion": {
+                      "name": "Misal: Əsas Konversiya"
+                    },
+                    "Example: Colors of Fruits": {
+                      "name": "Məsələn: Meyvələrin rəngləri"
+                    }
+                  }
+                },
                 "addPair": {
+                  "examples": {
+                    "Add A Phone Number": {
+                      "name": "Telefon nömrəsi əlavə edin",
+                      "description": "Əlaqə siyahısına yeni bir nömrə əlavə edin"
+                    },
+                    "Abbreviation Dictionary": {
+                      "name": "Qısaltma Lüğəti"
+                    }
+                  },
                   "palette_params": {
                     "key": {
                       "type": "Simli"
@@ -1526,7 +2012,39 @@
                   },
                   "return_value": "Heç biri"
                 },
+                "appendItem": {
+                  "examples": {
+                    "Example: Fibonacci": {
+                      "description": "Fibonacci ardıcıllığının ilk 10 rəqəmlər silsiləsini yaradın."
+                    }
+                  }
+                },
+                "console.log": {
+                  "examples": {
+                    "Example: It's Alive": {
+                      "name": "Misal: Bu canlıdır"
+                    },
+                    "Example: Random Thought": {
+                      "name": "Misal: Təsadüfi düşüncə"
+                    },
+                    "Example: Checkbox Value": {
+                      "name": "Misal: Yoxlama qutusu dəyəri"
+                    }
+                  }
+                },
                 "getValue": {
+                  "examples": {
+                    "Dictionary Lookup": {
+                      "name": "Lüğət Axtarış"
+                    },
+                    "Phone Number Lookup": {
+                      "name": "Telefon nömrəsi axtarışı",
+                      "description": "Kiminsə telefon nömrəsini axtarmaq üçün lüğətdən istifadə edin"
+                    },
+                    "Abbreviation Dictionary": {
+                      "name": "Qısaltma Lüğəti"
+                    }
+                  },
                   "palette_params": {
                     "key": {
                       "type": "Simli"
@@ -1534,13 +2052,42 @@
                   }
                 },
                 "insertItem": {
+                  "examples": {
+                    "Example: Favorite Foods": {
+                      "name": "Məsələn: Sevimli Yeməklər"
+                    },
+                    "Example: Fibonacci": {
+                      "description": "Fibonacci ardıcıllığının ilk 10 rəqəmlər silsiləsini yaradın."
+                    }
+                  },
                   "palette_params": {
                     "index": {
                       "type": "nömrə"
                     }
                   }
                 },
+                "length": {
+                  "examples": {
+                    "Example: Basic length": {
+                      "name": "Misal: Əsas uzunluq"
+                    },
+                    "Example: First and Last": {
+                      "name": "Məsələn: Birinci və Axırıncı"
+                    },
+                    "Example: Palindrome": {
+                      "name": "Misal: Palindrom"
+                    }
+                  }
+                },
                 "removeItem": {
+                  "examples": {
+                    "Example: List of favorite foods": {
+                      "name": "Məsələn: Sevimli qidaların siyahısı"
+                    },
+                    "Example: Queue Up": {
+                      "name": "Misal: növbəyə dur"
+                    }
+                  },
                   "palette_params": {
                     "index": {
                       "type": "nömrə"
@@ -1550,12 +2097,54 @@
               }
             },
             "functions": {
-              "name": "Funksiyalar"
+              "name": "Funksiyalar",
+              "expressions": {
+                "callMyFunction_n": {
+                  "examples": {
+                    "Example: Circle With Radius": {
+                      "name": "Misal: Radiuslu Dairə"
+                    }
+                  }
+                },
+                "comment": {
+                  "examples": {
+                    "Example: It's Alive": {
+                      "name": "Misal: Bu canlıdır"
+                    }
+                  }
+                },
+                "functionParams_n": {
+                  "examples": {
+                    "Example: Rectangle": {
+                      "name": "Misal: Düzbucaq"
+                    }
+                  }
+                },
+                "return": {
+                  "examples": {
+                    "Example: Return Roll": {
+                      "name": "Nümunə: Qaytarma rulonu"
+                    },
+                    "Example: Return Area of Circle": {
+                      "name": "Misal: Dairənin Qayıdış Sahəsi"
+                    }
+                  }
+                }
+              }
             },
             "advanced": {
               "name": "Qabaqcıl",
               "expressions": {
                 "setStyle": {
+                  "examples": {
+                    "Fancy Button": {
+                      "name": "Fantastik Düymə",
+                      "description": "Bir elementə bir neçə fərqli üslub tətbiq edin"
+                    },
+                    "Big and Bold": {
+                      "name": "Böyük və qalın"
+                    }
+                  },
                   "palette_params": {
                     "id": {
                       "type": "Simli"
@@ -1582,9 +2171,15 @@
                     "Pin": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "return_value": "Yeni LED obyekti"
                 },
                 "pinMode": {
+                  "examples": {
+                    "Red LED on": {
+                      "name": "Qırmızı LED yanır"
+                    }
+                  },
                   "palette_params": {
                     "pin": {
                       "type": "Nömrə"
@@ -1612,14 +2207,23 @@
                   }
                 },
                 "buzzer.note": {
+                  "examples": {
+                    "Circuit Piano ": {
+                      "name": "Dövrə Pianosu"
+                    }
+                  },
                   "palette_params": {
                     "duration": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "Siqnalda xüsusi qeydləri çalır."
                 },
                 "buzzer.play": {
                   "palette_params": {
+                    "notes": {
+                      "type": "Siyahı"
+                    },
                     "tempo": {
                       "type": "Nömrə"
                     }
@@ -1627,6 +2231,9 @@
                 },
                 "buzzer.playNotes": {
                   "palette_params": {
+                    "notes": {
+                      "type": "Siyahı"
+                    },
                     "tempo": {
                       "type": "Nömrə"
                     }
@@ -1634,8 +2241,18 @@
                 },
                 "buzzer.playSong": {
                   "palette_params": {
+                    "notes": {
+                      "type": "Siyahı"
+                    },
                     "tempo": {
                       "type": "Nömrə"
+                    }
+                  }
+                },
+                "colorLeds": {
+                  "examples": {
+                    "Example: On and Off Button": {
+                      "name": "Nümunə: Açma və söndürmə düyməsi"
                     }
                   }
                 },
@@ -1647,6 +2264,15 @@
                   }
                 },
                 "color": {
+                  "examples": {
+                    "Example: Random Lights": {
+                      "name": "Nümunə: Təsadüfi işıqlar"
+                    },
+                    "Example: Rainbow Lights": {
+                      "name": "Məsələn: Göy qurşağı işıqları",
+                      "description": "İşıqları göy qurşağı modelinə çevirir"
+                    }
+                  },
                   "palette_params": {
                     "red": {
                       "type": "nömrə"
@@ -1664,7 +2290,30 @@
                     "brightness": {
                       "type": "nömrə"
                     }
-                  }
+                  },
+                  "short_description": "LED rənginin parlaqlığını dəyişir"
+                },
+                "off": {
+                  "examples": {
+                    "Alternating Lights": {
+                      "name": "Alternativ İşıqlar"
+                    },
+                    "Alternating Lights with For Loops": {
+                      "name": "Döngələr üçün alternativ işıqlar"
+                    }
+                  },
+                  "short_description": "Göstərilən colorLED-i söndürür."
+                },
+                "on": {
+                  "examples": {
+                    "Alternating Lights": {
+                      "name": "Alternativ İşıqlar"
+                    },
+                    "Alternating Lights with For Loops": {
+                      "name": "Döngələr üçün alternativ işıqlar"
+                    }
+                  },
+                  "short_description": "Göstərilən colorLED-i yandırır."
                 },
                 "pulse": {
                   "palette_params": {
@@ -1673,17 +2322,56 @@
                     }
                   }
                 },
+                "led": {
+                  "examples": {
+                    "Toggle: Button Lightswitch": {
+                      "name": "Düymə: İşıq açarı"
+                    },
+                    "On and Off: Lightswitch": {
+                      "name": "Yandırmaq və söndürmək: İşıq açarı"
+                    }
+                  }
+                },
                 "led.blink": {
+                  "examples": {
+                    "Blink Buttons": {
+                      "name": "Yanıp Söndürmə Düymələri"
+                    },
+                    "Stop the Madness!": {
+                      "name": "Dəliliyi dayandırın!"
+                    }
+                  },
+                  "palette_params": {
+                    "interval": {
+                      "type": "nömrə"
+                    }
+                  },
+                  "short_description": "Qırmızı LED-in yanıb-sönməsinə səbəb olur."
+                },
+                "led.off": {
+                  "short_description": "Qırmızı LED-i söndürür."
+                },
+                "led.on": {
+                  "short_description": "Qırmızı LED-i işə salır."
+                },
+                "led.pulse": {
                   "palette_params": {
                     "interval": {
                       "type": "nömrə"
                     }
                   }
                 },
-                "led.pulse": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "nömrə"
+                "led.toggle": {
+                  "examples": {
+                    "Extreme Toggle": {
+                      "name": "Ekstremal keçid"
+                    }
+                  }
+                },
+                "tempSensor": {
+                  "examples": {
+                    "Thermometer": {
+                      "name": "Termometr"
                     }
                   }
                 },

@@ -3,6 +3,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions
 } from '@blockly/plugin-scroll-options';
+import {NavigationController} from '@blockly/keyboard-navigation';
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
@@ -21,7 +22,11 @@ import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
-import CdoTheme from './addons/cdoTheme';
+import CdoTheme from './themes/cdoTheme';
+import CdoDarkTheme from './themes/cdoDark';
+import CdoHighContrastTheme from './themes/cdoHighContrast';
+import cdoAccessibleTheme from './themes/cdoAccessible';
+import MusicLabTheme from './themes/musicLabDark';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -31,12 +36,20 @@ import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
-import {ToolboxType} from './constants';
+import {ToolboxType, Themes} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
+
+const options = {
+  contextMenu: true,
+  shortcut: true
+};
+
+const plugin = new CrossTabCopyPaste();
+plugin.init(options);
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -246,7 +259,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     true /* opt_allowOverrides */
   );
   registerAllContextMenuItems();
-  registerAllShortcutItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
@@ -278,7 +290,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
 
+  // Allows for dynamically setting the workspace theme with workspace.setTheme()
+  blocklyWrapper.themes = {
+    [Themes.MODERN]: CdoTheme,
+    [Themes.ACCESSIBLE]: cdoAccessibleTheme,
+    [Themes.DARK]: CdoDarkTheme,
+    [Themes.HIGH_CONTRAST]: CdoHighContrastTheme,
+    [Themes.MUSICLAB_DARK]: MusicLabTheme
+  };
   blocklyWrapper.JavaScript = javascriptGenerator;
+  blocklyWrapper.navigationController = new NavigationController();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -467,7 +488,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
-        theme: CdoTheme,
+        theme: options.theme || CdoTheme,
         plugins: {},
         RTL: options.rtl
       });
@@ -537,7 +558,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
       renderer: opt_options.renderer || 'cdo_renderer',
       comments: false
     };
-
+    // Users can change their active theme using the context menu. Use this setting, if present.
+    // Music Lab doesn't look good without its custom theme, so we prevent others from being used.
+    if (localStorage.blocklyTheme && options.theme.name !== 'musiclabdark') {
+      options.theme = this.themes[localStorage.blocklyTheme] || options.theme;
+    }
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
     blocklyWrapper.assetUrl = opt_options.assetUrl || (path => `./${path}`);
@@ -554,6 +579,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    // Initialize plugin.
+    blocklyWrapper.navigationController.init();
+    blocklyWrapper.navigationController.addWorkspace(workspace);
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
       workspace.addChangeListener(Blockly.Events.disableOrphans);

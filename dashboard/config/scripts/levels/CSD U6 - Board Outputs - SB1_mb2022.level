@@ -1,18 +1,10 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2023-02-01T10:45:13.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
       "onEvent": null,
-      "led.on": null,
-      "led.off": null,
-      "led.toggle": null,
-      "led.blink": null,
-      "led.pulse": null
+      "ledScreen.on": null
     },
     "edit_code": true,
     "embed": "false",
@@ -44,26 +36,26 @@
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
+    "hide_design_mode": "true",
     "beginner_mode": "false",
     "hide_view_data_button": "true",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "palette_category_at_start": "Circuit",
-    "start_blocks": "//This code turns the LED on\r\nonEvent(\"LEDon\", \"click\", function() {\r\n  led.on();\r\n});\r\nonEvent(\"LEDoff\", \"click\", function() {\r\n  //Add code so that the LED turns off\r\n  \r\n});\r\n\r\n",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"LEDon\" style=\"padding: 0px; margin: 0px; height: 130px; width: 175px; font-size: 38px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 65px; top: 35px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\">ON</button><button id=\"LEDoff\" style=\"padding: 0px; margin: 0px; height: 130px; width: 175px; font-size: 38px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 65px; top: 230px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\">OFF</button></div><div class=\"screen\" tabindex=\"1\" id=\"success\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 40px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 45px; position: absolute; left: 0px; top: 15px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"label3\">Success!</label><img src=\"//curriculum.code.org/images/circuitplayground/cp_board.png\" data-canonical-image-url=\"//curriculum.code.org/images/circuitplayground/cp_board.png\" id=\"image4\" style=\"height: 210.986px; width: 210px; position: absolute; left: 55px; top: 135px; margin: 0px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-image-type=\"file\"></div><div class=\"screen\" tabindex=\"1\" id=\"error\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 40px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 85px; position: absolute; left: 0px; top: 60px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"label4\">Board Not Detected!</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 125px; height: 19px; position: absolute; left: 35px; top: 190px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"label5\">Try the following:</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 222px; height: 19px; position: absolute; left: 50px; top: 215px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"label6\">Refresh this page and try again</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 249px; height: 19px; position: absolute; left: 50px; top: 235px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"label7\">Plug the board into a different USB</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 240px; height: 19px; position: absolute; left: 50px; top: 255px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"label8\">Visit studio.code.org/maker/setup</label></div></div>",
-    "long_instructions": "# Using Events\r\n\r\nThis program has two buttons.  The \"on\" button works, but the \"off\" button still needs to be programmed.\r\n\r\n# Do This\r\n1) Add code so that the second button turns the LED off.",
+    "makerlab_enabled": "microbit",
+    "start_blocks": "//This code turns on the left eye\r\nonEvent(\"leftButton\", \"click\", function( ) {\r\n  ledScreen.on(1, 1);\r\n});\r\n//1) Add code to turn on another LED on the right side of the ledScreen\r\nonEvent(\"rightButton\", \"click\", function( ) {\r\n  \r\n});\r\n\r\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"leftButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 100px; width: 100px; background-color: rgb(0, 200, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 23px; position: absolute; left: 35px; top: 100px;\">Left</button><button id=\"rightButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 100px; width: 100px; background-color: rgb(0, 200, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 23px; position: absolute; left: 180px; top: 100px;\">Right</button></div></div>",
+    "long_instructions": "<div style=\"float:right;\" markdown=1> \r\n\r\n![expandable](https://images.code.org/126cab46e3188fc496d4c618e8cfee03-image-1676328086265.png) \r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Using Events\r\n\r\nThis program has two buttons. The \"left eye\" button works, but the \"right eye\" button still needs to be programmed.\r\n\r\n# Do This\r\n1) Add code to turn on another LED on the right side of the `ledScreen`\r\n\t- Drag out an [`ledScreen.on()`(#f78183)](/docs/ide/applab/expressions/ledScreen.on) block and change the values to `(1, 3)`.\r\n\r\n**Run your code!** Pressing the buttons should turn on two LEDs, as if they're the eyes of your micro:bit. In the next few levels, we'll add a mouth to the micro:bit!",
     "top_level_procedure_autopopulate": "false",
-    "encrypted_examples": "v5poNds8JMhLr7TkyYf4LAcYuIu40lXitL92kKlKvksmuyOp5RHA/J2zb2/A\nQ1RTBYfr7PsyMk7rbXuDGxXguA==\n",
+    "encrypted_examples": [
+
+    ],
     "parent_level_id": 20398,
     "name_suffix": "_mb2022",
     "reference_links": [
       "/courses/csd-2022/guides/responding-to-user-input"
     ],
-    "map_reference": "/courses/csd-2022/guides/circuit-playground",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -72,9 +64,13 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2023-02-01T10:45:13.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:45:13.017+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB1_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:45:13.017+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB1_2222\"},{\"changed_at\":\"2023-02-13 22:55:23 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"palette_category_at_start\",\"start_blocks\",\"start_html\",\"long_instructions\",\"encrypted_examples\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -2186,6 +2186,9 @@
         "b351a875-cdc3-4da8-a2c0-fb84cee29102": {
           "name": "Ampliación del aprendizaje"
         },
+        "9299d981-71c8-4dfb-a0b7-3f994bd62bbf": {
+          "name": "Antes de la Lección"
+        },
         "e756dd3c-ceff-4018-ae32-e393404279eb": {
           "name": "Calentamiento"
         },
@@ -2329,6 +2332,9 @@
         },
         "f8be9839-437c-4dc5-8668-54b3f62acfc3": {
           "name": "Actividad de cierre"
+        },
+        "fd12f2a9-cedd-4a08-8af2-5d04b110c8ee": {
+          "name": "Después de la Lección"
         },
         "bc687e20-23c5-4c35-8a58-ab03724de645": {
           "name": "Configuración Técnica"
@@ -2482,6 +2488,9 @@
         },
         "e5bf694c-478b-4bc2-a602-3124d9a8530b": {
           "name": "Actividad de cierre"
+        },
+        "0754806a-e34d-4891-a471-399122e56ac9": {
+          "name": "Antes de la Lección"
         },
         "29c29273-e188-41d0-8559-b9048c892737": {
           "name": "Calentamiento"
@@ -2726,6 +2735,12 @@
         "4eecc1fe-e2fa-4c11-90f8-2a10eee72aa5": {
           "name": "Actividad de cierre"
         },
+        "367760dc-695e-4391-acd6-d0f12787bc0e": {
+          "name": "Después de la Lección"
+        },
+        "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566": {
+          "name": "Antes de la Lección"
+        },
         "3bdeb93a-6ace-48f2-940e-594eb4fa00d4": {
           "name": "Calentamiento"
         },
@@ -2914,6 +2929,12 @@
         },
         "cb6bf053-345c-47af-a7b9-39a67a9c70fa": {
           "name": "Presentación"
+        },
+        "305d1465-9166-4ac4-a4e2-bc3bb6d1478e": {
+          "name": "Después de la Lección"
+        },
+        "efd63a8a-28a5-4796-bb80-b3203ee15b9a": {
+          "name": "Antes de la Lección"
         },
         "554b4180-2899-4be8-a390-3e108705d899": {
           "name": "Calentamiento"
@@ -3104,6 +3125,12 @@
         "36b07898-2f7d-4b48-a979-d2f46cef659b": {
           "name": "Actividad de cierre"
         },
+        "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795": {
+          "name": "Después de la Lección"
+        },
+        "7e0487d6-0de0-461b-b6b8-bae53fff3c55": {
+          "name": "Antes de la Lección"
+        },
         "b863b736-7488-420c-84c2-e9ff135ac7fb": {
           "name": "Calentamiento"
         },
@@ -3272,8 +3299,14 @@
         "ef0f2f8a-5694-4406-9357-17f0d20037e3": {
           "name": "Actividad de cierre"
         },
+        "d383eef2-e74d-4993-b0f3-cbd6fc216128": {
+          "name": "Después de la Lección"
+        },
         "0e3432dd-ba1d-4c56-a446-81c419bd6db9": {
           "name": "Extensiones"
+        },
+        "92ecc06f-cf07-4550-9f9f-1fc435c8a453": {
+          "name": "Antes de la Lección"
         },
         "af36124c-854d-449a-b766-4edfec01a4b2": {
           "name": "Calentamiento"
@@ -3466,6 +3499,9 @@
         },
         "dd1aa855-e178-45eb-b96b-3df170abed34": {
           "name": "Día 4"
+        },
+        "63251396-7213-40ae-84c7-2ea28f359d4c": {
+          "name": "Después de la Lección"
         },
         "dde1ab27-53a2-4c39-a80e-317f9df72651": {
           "name": "Niveles"
