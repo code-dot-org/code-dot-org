@@ -44,11 +44,8 @@ export default function CurriculumQuickAssign() {
   };
 
   // To distinguish between types of tables: HOC & PL vs Grade Bands
-  const isGradeBand = () => {
-    return (
-      marketingAudience !== (MARKETING_AUDIENCE.HOC || MARKETING_AUDIENCE.PL)
-    );
-  };
+  const isGradeBand =
+    marketingAudience !== (MARKETING_AUDIENCE.HOC || MARKETING_AUDIENCE.PL);
 
   return (
     <div>
